@@ -1,7 +1,8 @@
 {
-  "name": "@sb1/ffe-framework",
+  "name": "sb1-ffe-framework",
   "version": "1.0.0",
   "description": "Rammeverk for Felles Front End",
+  "less": "ffe.less",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -21,6 +22,10 @@
     "design",
     "javascript"
   ],
+  "files": [
+    "fonts",
+    "less/*.less"
+  ],  
   "author": "Glenn A. Brownlee",
   "license": "ISC"
 }
