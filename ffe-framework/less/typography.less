@@ -1,0 +1,365 @@
+@import 'fonts';
+@import 'variables';
+
+/* Mobile typography */
+
+/***** Headings *****/
+h1, h2, h3, h4, h5 {
+    text-align: center;
+    font-weight: normal;
+}
+
+//And for the record the progression is: 1st = primary, 2nd = secondary, 3rd = tertiary, 4th = quaternary,
+//5th = quinary, 6th = senary, 7th = septenary, 8th = octonary, 9th = nonary, 10th = denary,
+//12th = duodenary and 20th = vigenary
+.heading-type {
+    margin-bottom: 10px;
+
+    &.-with-border {
+        border-bottom: 1px solid @grey-light;
+        padding-bottom: 10px;
+    }
+}
+
+.primary-heading {
+    &:extend(.primary-text all);
+    &:extend(.heading-type all);
+}
+
+.secondary-heading {
+    &:extend(.secondary-text all);
+    &:extend(.heading-type all);
+}
+
+.tertiary-heading {
+    &:extend(.tertiary-text all);
+    &:extend(.heading-type all);
+}
+
+.quaternary-heading {
+    &:extend(.quaternary-text all);
+    &:extend(.heading-type all);
+}
+
+.quinary-heading {
+    &:extend(.quinary-text all);
+    &:extend(.heading-type all);
+}
+
+// "Unofficial", but perhaps a candidate? Design team is working on it.
+.light-heading {
+    &:extend(.quaternary-text all);
+    font-family: "MuseoSansRounded-300", arial, sans-serif;
+}
+
+// Error variant
+.primary-heading,
+.secondary-heading,
+.tertiary-heading,
+.quaternary-heading,
+.quinary-heading,
+.primary-text,
+.secondary-text,
+.tertiary-text,
+.quaternary-text,
+.quinary-text,
+.lead-paragraph,
+.body-text,
+.small-text,
+.micro-text {
+    &.-error{
+        color: @orange-wcag;
+    }
+}
+
+.form-heading {
+    font-family: "MuseoSansRounded-700",arial,sans-serif;
+    font-size: 20px;
+    color: @blue-royal;
+    line-height: 1;
+    text-align: left;
+}
+
+/***** Body Copy *****/
+body,
+.body-text {
+    color: @black;
+    font-family: "MuseoSans-500", arial, sans-serif;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+}
+
+a {
+    font-family: "MuseoSansRounded-500", arial, sans-serif;
+    font-size: 18px;
+    color: @blue-royal-light;
+    line-height: 30px;
+    text-decoration: none;
+    word-wrap: break-word;
+
+    &:hover {
+        text-decoration: none;
+        color: @blue-flat;
+
+    }
+
+    &.small{
+        font-family: "MuseoSans-300", arial, sans-serif;
+        font-size: 16px;
+    }
+}
+
+a.link {
+    border-bottom: solid 1px @blue-royal-light;
+    padding-bottom: 5px;
+
+    &:hover {
+        border-bottom: solid 1px @blue-flat;
+    }
+}
+
+.lead-paragraph {
+    color: @blue-royal;
+    font-family: "MuseoSansRounded-500", arial, sans-serif;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.primary-text, {
+    color: @blue-royal;
+    font-family: "MuseoSansRounded-700", arial, sans-serif;
+    font-size: 28px;
+    line-height: 36px;
+}
+
+.secondary-text, {
+    color: @blue-royal;
+    font-family: "MuseoSansRounded-700", arial, sans-serif;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.tertiary-text, {
+    color: @blue-royal;
+    font-family: "MuseoSansRounded-700", arial, sans-serif;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.quaternary-text, {
+    color: @blue-royal;
+    font-family: "MuseoSansRounded-700", arial, sans-serif;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.quinary-text, {
+    color: @blue-royal-light;
+    font-family: "MuseoSans-700", arial, sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.small-text {
+    color: @grey-dark;
+    font-family: "MuseoSans-500", arial, sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.micro-text {
+    color: @grey-dark;
+    font-family: "MuseoSans-500", arial, sans-serif;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+hr {
+    border: none;
+    border-bottom: solid 2px  @grey-light;
+}
+
+strong {
+    font-weight: normal;
+    font-family: "MuseoSansRounded-700", arial, sans-serif;
+}
+
+.subtle-text {
+    color: @grey-dark;
+    font-family: "MuseoSans-300", arial, sans-serif;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: left;
+    margin: 20px 0;
+}
+
+
+.big-number {
+    font-family: "MuseoSansRounded-700", arial, sans-serif;
+    font-size: 144px;
+    color: @blue-royal;
+    line-height: 172px;
+}
+
+.medium-number {
+    font-family: "MuseoSansRounded-700", arial, sans-serif;
+    font-size: 60px;
+    color: @blue-royal;
+    line-height: 72px;
+}
+
+.small-number {
+    font-family: "MuseoSansRounded-700", arial, sans-serif;
+    font-size: 24px;
+    color: @blue-royal;
+}
+
+.summary {
+    border-top: 1px solid @grey-light;
+
+    .summary-header {
+        color: @grey-dark;
+        margin-bottom: 0;
+    }
+
+    .summary-content {
+        margin-top: 5px;
+        font-size: 24px;
+    }
+}
+
+.bullet-list {
+    margin-left: 10px;
+    list-style-type: disc;
+    text-align: left;
+
+    &.-no-margin {
+        > li {
+            margin-left: 0;
+        }
+    }
+
+    > li {
+        margin-top: 10px;
+        margin-left: 15px;
+    }
+}
+
+.text-paragraph {
+    text-align: left;
+    margin: 30px 0;
+}
+
+.-text-left {
+    text-align: left;
+}
+
+/* Desktop */
+@media screen and (min-width: @breakpoint-md) {
+    /***** Headings *****/
+    .primary-heading {
+        &:extend(.primary-text all);
+        margin-bottom: 15px;
+    }
+    .secondary-heading {
+        &:extend(.secondary-text all);
+        margin-bottom: 15px;
+    }
+
+    .tertiary-heading {
+        &:extend(.tertiary-text all);
+        margin-bottom: 15px;
+    }
+
+    .quaternary-heading {
+        &:extend(.quaternary-text all);
+        margin-bottom: 15px;
+    }
+
+    .quinary-heading {
+        &:extend(.quinary-text all);
+        margin-bottom: 15px;
+    }
+
+    /***** Body Copy *****/
+    body,
+    .body-text {
+        font-size: 18px;
+        font-family: "MuseoSans-300", arial, sans-serif;
+    }
+
+    .primary-text, {
+        font-size: 48px;
+        line-height: 58px;
+    }
+
+    .secondary-text, {
+        font-size: 32px;
+        line-height: 44px;
+    }
+
+    .tertiary-text, {
+        font-size: 28px;
+        line-height: 38px;
+    }
+
+    .quaternary-text, {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .quinary-text, {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .lead-paragraph {
+        font-size: 22px;
+        line-height: 32px;
+    }
+
+    .small-text {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .micro-text {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .subtle-text {
+        font-family: "MuseoSans-500", arial, sans-serif;
+    }
+
+    .medium-number {
+        font-family: "MuseoSansRounded-700", arial, sans-serif;
+        font-size: 60px;
+        color: @blue-royal;
+        line-height: 72px;
+    }
+
+    .small-number {
+        font-family: "MuseoSansRounded-700", arial, sans-serif;
+        font-size: 20px;
+        color: @blue-royal;
+    }
+
+    .bullet-list {
+        margin-left: 20px;
+        list-style-type: disc;
+
+        &.-no-margin {
+            > li {
+                margin-left: 0;
+            }
+        }
+
+        > li {
+            margin-top: 20px;
+            margin-left: 30px;
+        }
+    }
+}
+

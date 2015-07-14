@@ -1,0 +1,26 @@
+{
+  "name": "@sb1/ffe-framework",
+  "version": "1.0.0",
+  "description": "Rammeverk for Felles Front End",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "***REMOVED***"
+  },
+  "keywords": [
+    "frontend",
+    "front",
+    "end",
+    "style",
+    "guide",
+    "sb1",
+    "styling",
+    "design",
+    "javascript"
+  ],
+  "author": "Glenn A. Brownlee",
+  "license": "ISC"
+}
