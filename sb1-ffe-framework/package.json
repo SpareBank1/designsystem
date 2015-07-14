@@ -1,6 +1,6 @@
 {
   "name": "sb1-ffe-framework",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Rammeverk for Felles Front End",
   "less": "ffe.less",
   "main": "index.js",
