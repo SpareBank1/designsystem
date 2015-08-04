@@ -3,12 +3,6 @@
 
 /* Mobile typography */
 
-/***** Headings *****/
-h1, h2, h3, h4, h5 {
-    text-align: center;
-    font-weight: normal;
-}
-
 //And for the record the progression is: 1st = primary, 2nd = secondary, 3rd = tertiary, 4th = quaternary,
 //5th = quinary, 6th = senary, 7th = septenary, 8th = octonary, 9th = nonary, 10th = denary,
 //12th = duodenary and 20th = vigenary
@@ -87,7 +81,6 @@ body,
     font-family: "MuseoSans-500", arial, sans-serif;
     font-size: 16px;
     line-height: 26px;
-    text-align: center;
 }
 
 a {
@@ -177,12 +170,29 @@ a.link {
 
 hr {
     border: none;
-    border-bottom: solid 2px  @grey-light;
+    border-bottom: solid 1px @grey-light;
 }
 
 strong {
     font-weight: normal;
     font-family: "MuseoSansRounded-700", arial, sans-serif;
+}
+
+em {
+    font-style: italic;
+}
+
+pre {
+    font-family: consolas, menlo, monaco, monospace;
+    text-align: left;
+    background-color: @sand-50;
+}
+
+table th,
+table td {
+    padding: .25rem;
+    word-wrap: none;
+    line-height: 1;
 }
 
 .subtle-text {
@@ -253,6 +263,22 @@ strong {
 
 .-text-left {
     text-align: left;
+}
+
+.body-paragraph {
+    margin: 1em 0;
+
+    &.-left {
+        text-align: left;
+    }
+
+    &.-center {
+        text-align: center;
+    }
+}
+
+.inline-separator {
+    margin: 0 4px 0 4px;
 }
 
 /* Desktop */
