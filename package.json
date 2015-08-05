@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git@stash.intern.sparebank1.no:22/ffe/felles-front-end.git"
+    "url": "ssh://git@stash.intern.sparebank1.no:22/ffe/sb1-ffe-framework.git"
   },
   "keywords": [
     "frontend",
@@ -26,6 +26,6 @@
     "fonts",
     "less/*.less"
   ],
-  "author": "Glenn A. Brownlee",
+  "author": "Glenn A. Brownlee <glenn.brownlee@sparebank1.no>",
   "license": "ISC"
 }
