@@ -26,6 +26,6 @@
     "fonts",
     "less/*.less"
   ],
-  "author": "Glenn A. Brownlee",
+  "author": "Glenn A. Brownlee <glenn.brownlee@sparebank1.no>",
   "license": "ISC"
 }

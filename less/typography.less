@@ -40,12 +40,6 @@
     &:extend(.heading-type all);
 }
 
-// "Unofficial", but perhaps a candidate? Design team is working on it.
-.light-heading {
-    &:extend(.quaternary-text all);
-    font-family: "MuseoSansRounded-300", arial, sans-serif;
-}
-
 // Error variant
 .primary-heading,
 .secondary-heading,
@@ -64,14 +58,6 @@
     &.-error{
         color: @orange-wcag;
     }
-}
-
-.form-heading {
-    font-family: "MuseoSansRounded-700",arial,sans-serif;
-    font-size: 20px;
-    color: @blue-royal;
-    line-height: 1;
-    text-align: left;
 }
 
 /***** Body Copy *****/
@@ -188,51 +174,6 @@ pre {
     background-color: @sand-50;
 }
 
-
-.subtle-text {
-    color: @grey-dark;
-    font-family: "MuseoSans-300", arial, sans-serif;
-    font-size: 14px;
-    line-height: 17px;
-    text-align: left;
-    margin: 20px 0;
-}
-
-
-.big-number {
-    font-family: "MuseoSansRounded-700", arial, sans-serif;
-    font-size: 144px;
-    color: @blue-royal;
-    line-height: 172px;
-}
-
-.medium-number {
-    font-family: "MuseoSansRounded-700", arial, sans-serif;
-    font-size: 60px;
-    color: @blue-royal;
-    line-height: 72px;
-}
-
-.small-number {
-    font-family: "MuseoSansRounded-700", arial, sans-serif;
-    font-size: 24px;
-    color: @blue-royal;
-}
-
-.summary {
-    border-top: 1px solid @grey-light;
-
-    .summary-header {
-        color: @grey-dark;
-        margin-bottom: 0;
-    }
-
-    .summary-content {
-        margin-top: 5px;
-        font-size: 24px;
-    }
-}
-
 .bullet-list {
     margin-left: 10px;
     list-style-type: disc;
@@ -248,15 +189,6 @@ pre {
         margin-top: 10px;
         margin-left: 15px;
     }
-}
-
-.text-paragraph {
-    text-align: left;
-    margin: 30px 0;
-}
-
-.-text-left {
-    text-align: left;
 }
 
 .body-paragraph {
@@ -347,23 +279,6 @@ pre {
     .micro-text {
         font-size: 12px;
         line-height: 20px;
-    }
-
-    .subtle-text {
-        font-family: "MuseoSans-500", arial, sans-serif;
-    }
-
-    .medium-number {
-        font-family: "MuseoSansRounded-700", arial, sans-serif;
-        font-size: 60px;
-        color: @blue-royal;
-        line-height: 72px;
-    }
-
-    .small-number {
-        font-family: "MuseoSansRounded-700", arial, sans-serif;
-        font-size: 20px;
-        color: @blue-royal;
     }
 
     .bullet-list {
