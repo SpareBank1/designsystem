@@ -5,7 +5,8 @@
   "less": "ffe.less",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "examples": "lessc examples/examples.less examples/examples.css \n\nNow open /examples/index.html to see styleguide."
   },
   "repository": {
     "type": "git",
@@ -27,5 +28,8 @@
     "less/*.less"
   ],
   "author": "Glenn A. Brownlee <glenn.brownlee@sparebank1.no>",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "less": "2.5.1"
+  }
 }

@@ -1,0 +1,55 @@
+@base-url: "../";
+
+@import "../less/ffe.less";
+
+.content-container {
+    width: 100%;
+    margin: @app-vertical-margin/2 auto;
+    padding: 0 @app-margin;
+    max-width: @app-width;
+    text-align: center;
+
+    &.-left {
+        text-align: left;
+    }
+}
+
+.color-patch {
+    display: inline-block;
+    width: 270px;
+    height: 220px;
+    border: solid 1px @grey-light;
+    border-radius: 4px;
+    margin: 10px;
+
+    .patch-descr {
+        .small-text();
+        padding: 15px;
+    }
+    
+    .color-box {
+        height: 170px;
+    }
+
+    .color-box.-blue-royal              { background-color: @blue-royal; }
+    .color-box.-blue-flat               { background-color: @blue-flat; }
+    .color-box.-blue-royal-light        { background-color: @blue-royal-light; }
+    .color-box.-blue-royal-light-wcag   { background-color: @blue-royal-light-wcag; }
+    .color-box.-blue-royal-light-50     { background-color: @blue-royal-light-50; }
+    .color-box.-green-wcag              { background-color: @green-wcag; }
+    .color-box.-sand                    { background-color: @sand; }
+    .color-box.-sand-50                 { background-color: @sand-50; }
+    .color-box.-black                   { background-color: @black; }
+    .color-box.-grey-dark               { background-color: @grey-dark; }
+    .color-box.-grey                    { background-color: @grey; }
+    .color-box.-grey-light              { background-color: @grey-light; }
+    .color-box.-grey-light-bg           { background-color: @grey-light-bg; }
+    .color-box.-white                   { background-color: @white; }
+
+    .color-box.-green                   { background-color: @green; }
+    .color-box.-purple                  { background-color: @purple; }
+    .color-box.-purple-wcag             { background-color: @purple-wcag; }
+    .color-box.-orange                  { background-color: @orange; }
+    .color-box.-orange-wcag             { background-color: @orange-wcag; }
+    .color-box.-red                     { background-color: @red; }
+}

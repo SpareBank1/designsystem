@@ -1,12 +1,12 @@
 #Felles Front End Framework
 ##Intro
-Inneholder generell styling for bruk utenom komponenter. F.eks. typografi, knapper, farger, o.l.
+Inneholder generell styling for bruk utenom komponenter. F.eks. typografi, knapper, farger, o.l. 
 
 ##Kom i gang
 
 Konfigurer npm til å bruke SB1's lokale og private repo (proxy med cache til NPM public).
 
-    npm set registry http://ntadc1.test.sparebank1.no:4873
+    npm set registry http://ntadc1.test.sparebank1.no:4873
 
 Installer som vanlig
 
@@ -25,7 +25,6 @@ Det er forventet at det defineres en LESS-variabel som inneholder rot-pathen til
 SpareBank 1's profil-font er også inkludert i OpenType format og må kopieres fra node_modules.
 Dette kan f.eks. gjøres via en Grunt task.
  
-    ```javascript
     copy: {
         fonts: {
             files: [
@@ -33,4 +32,7 @@ Dette kan f.eks. gjøres via en Grunt task.
             ]
         }
     }
-    ```
+    
+Klargjør stilguide ved å kjøre følgende kommando:
+    
+    npm run examples
