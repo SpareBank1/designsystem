@@ -1,300 +1,186 @@
-@import 'fonts';
-@import 'variables';
-
 /* Mobile typography */
-
-//And for the record the progression is: 1st = primary, 2nd = secondary, 3rd = tertiary, 4th = quaternary,
-//5th = quinary, 6th = senary, 7th = septenary, 8th = octonary, 9th = nonary, 10th = denary,
-//12th = duodenary and 20th = vigenary
-.heading-type {
-    margin-bottom: 10px;
-
-    &.-with-border {
-        border-bottom: 1px solid @grey-light;
-        padding-bottom: 10px;
-    }
+h1, .h1, {
+  color: @blue-royal;
+  font-family: "MuseoSansRounded-700", arial, sans-serif;
+  font-size: 28px;
+  line-height: 36px;
 }
 
-.primary-heading {
-    &:extend(.primary-text all);
-    &:extend(.heading-type all);
+h2, .h2, {
+  color: @blue-royal;
+  font-family: "MuseoSansRounded-700", arial, sans-serif;
+  font-size: 24px;
+  line-height: 32px;
 }
 
-.secondary-heading {
-    &:extend(.secondary-text all);
-    &:extend(.heading-type all);
+h3, .h3, {
+  color: @blue-royal;
+  font-family: "MuseoSansRounded-700", arial, sans-serif;
+  font-size: 20px;
+  line-height: 28px;
 }
 
-.tertiary-heading {
-    &:extend(.tertiary-text all);
-    &:extend(.heading-type all);
+h4, .h4, {
+  color: @blue-royal;
+  font-family: "MuseoSansRounded-700", arial, sans-serif;
+  font-size: 18px;
+  line-height: 26px;
 }
 
-.quaternary-heading {
-    &:extend(.quaternary-text all);
-    &:extend(.heading-type all);
-}
-
-.quinary-heading {
-    &:extend(.quinary-text all);
-    &:extend(.heading-type all);
-}
-
-// Error variant
-.primary-heading,
-.secondary-heading,
-.tertiary-heading,
-.quaternary-heading,
-.quinary-heading,
-.primary-text,
-.secondary-text,
-.tertiary-text,
-.quaternary-text,
-.quinary-text,
-.lead-paragraph,
-.body-text,
-.small-text,
-.micro-text {
-    &.-error{
-        color: @orange-wcag;
-    }
-}
-
-/***** Body Copy *****/
-body,
-.body-text {
-    color: @black;
-    font-family: "MuseoSans-500", arial, sans-serif;
-    font-size: 16px;
-    line-height: 26px;
-}
-
-a {
-    font-family: "MuseoSansRounded-500", arial, sans-serif;
-    font-size: 18px;
-    color: @blue-royal-light;
-    line-height: 30px;
-    text-decoration: none;
-    word-wrap: break-word;
-
-    &:hover {
-        text-decoration: none;
-        color: @blue-flat;
-
-    }
-
-    &.small{
-        font-family: "MuseoSans-300", arial, sans-serif;
-        font-size: 16px;
-    }
-}
-
-a.link {
-    border-bottom: solid 1px @blue-royal-light;
-    padding-bottom: 5px;
-
-    &:hover {
-        border-bottom: solid 1px @blue-flat;
-    }
-}
-
-.lead-paragraph {
-    color: @blue-royal;
-    font-family: "MuseoSansRounded-500", arial, sans-serif;
-    font-size: 18px;
-    line-height: 28px;
-}
-
-.primary-text, {
-    color: @blue-royal;
-    font-family: "MuseoSansRounded-700", arial, sans-serif;
-    font-size: 28px;
-    line-height: 36px;
-}
-
-.secondary-text, {
-    color: @blue-royal;
-    font-family: "MuseoSansRounded-700", arial, sans-serif;
-    font-size: 24px;
-    line-height: 32px;
-}
-
-.tertiary-text, {
-    color: @blue-royal;
-    font-family: "MuseoSansRounded-700", arial, sans-serif;
-    font-size: 20px;
-    line-height: 28px;
-}
-
-.quaternary-text, {
-    color: @blue-royal;
-    font-family: "MuseoSansRounded-700", arial, sans-serif;
-    font-size: 18px;
-    line-height: 26px;
-}
-
-.quinary-text, {
-    color: @blue-royal-light;
-    font-family: "MuseoSans-700", arial, sans-serif;
-    font-size: 16px;
-    line-height: 22px;
+h5, .h5, {
+  color: @blue-royal;
+  font-family: "MuseoSans-700", arial, sans-serif;
+  font-size: 16px;
+  line-height: 22px;
 }
 
 .small-text {
-    color: @grey-dark;
-    font-family: "MuseoSans-500", arial, sans-serif;
-    font-size: 14px;
-    line-height: 22px;
+  color: @grey-dark;
+  font-family: "MuseoSans-500", arial, sans-serif;
+  font-size: 14px;
+  line-height: 22px;
 }
 
 .micro-text {
-    color: @grey-dark;
-    font-family: "MuseoSans-500", arial, sans-serif;
-    font-size: 12px;
-    line-height: 20px;
+  color: @grey-dark;
+  font-family: "MuseoSans-500", arial, sans-serif;
+  font-size: 12px;
+  line-height: 20px;
 }
 
-hr {
-    border: none;
-    border-bottom: solid 1px @grey-light;
+.h1,.h2,.h3,.h4,.h5 {
+  margin-bottom: 10px;
+
+  &.-error{
+    color: @orange-wcag;
+  }
+
+  &.-with-border {
+    border-bottom: 1px solid @grey-light;
+    padding-bottom: 10px;
+  }
+
+  &.-no-margin {
+    margin: 0;
+  }
 }
 
-strong {
-    font-weight: normal;
-    font-family: "MuseoSansRounded-700", arial, sans-serif;
-}
-
-em {
-    font-style: italic;
-}
-
-pre {
-    font-family: consolas, menlo, monaco, monospace;
-    text-align: left;
-    background-color: @sand-50;
-}
-
-.bullet-list {
-    margin-left: 10px;
-    list-style-type: disc;
-    text-align: left;
-
-    &.-no-margin {
-        > li {
-            margin-left: 0;
-        }
-    }
-
-    > li {
-        margin-top: 10px;
-        margin-left: 15px;
-    }
+body,
+.body-text {
+  color: @black;
+  font-family: "MuseoSans-500", arial, sans-serif;
+  font-size: 16px;
+  line-height: 26px;
 }
 
 .body-paragraph {
-    margin: 1em 0;
+  margin: 1em 0;
 
-    &.-left {
-        text-align: left;
-    }
+  &.-left {
+    text-align: left;
+  }
 
-    &.-center {
-        text-align: center;
-    }
+  &.-center {
+    text-align: center;
+  }
+}
+
+.lead-paragraph {
+  color: @blue-royal;
+  font-family: "MuseoSansRounded-500", arial, sans-serif;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+a {
+  font-family: "MuseoSansRounded-500", arial, sans-serif;
+  font-size: 18px;
+  color: @blue-royal-light-wcag;
+  line-height: 30px;
+  text-decoration: none;
+  word-wrap: break-word;
+
+  &:hover {
+    text-decoration: none;
+    color: @blue-flat;
+
+  }
+}
+
+hr {
+  border: none;
+  border-bottom: solid 1px @grey-light;
+}
+
+strong {
+  font-weight: normal;
+  font-family: "MuseoSansRounded-700", arial, sans-serif;
+}
+
+em {
+  font-style: italic;
+}
+
+pre {
+  font-family: consolas, menlo, monaco, monospace;
+  text-align: left;
+  background-color: @sand-50;
 }
 
 .inline-separator {
-    margin: 0 4px 0 4px;
+  margin: 0 4px 0 4px;
 }
+
 
 /* Desktop */
 @media screen and (min-width: @breakpoint-md) {
-    /***** Headings *****/
-    .primary-heading {
-        &:extend(.primary-text all);
-        margin-bottom: 15px;
-    }
-    .secondary-heading {
-        &:extend(.secondary-text all);
-        margin-bottom: 15px;
-    }
 
-    .tertiary-heading {
-        &:extend(.tertiary-text all);
-        margin-bottom: 15px;
-    }
+  h1, h2, h3, h4, h5,
+  .h1,.h2,.h3,.h4,.h5 {
+    margin-bottom: 15px;
+  }
 
-    .quaternary-heading {
-        &:extend(.quaternary-text all);
-        margin-bottom: 15px;
-    }
+  body, .body-text {
+    font-size: 18px;
+    font-family: "MuseoSans-300", arial, sans-serif;
+  }
 
-    .quinary-heading {
-        &:extend(.quinary-text all);
-        margin-bottom: 15px;
-    }
+  h1, .h1, {
+    font-size: 48px;
+    line-height: 58px;
+  }
 
-    /***** Body Copy *****/
-    body,
-    .body-text {
-        font-size: 18px;
-        font-family: "MuseoSans-300", arial, sans-serif;
-    }
+  h2, .h2, {
+    font-size: 32px;
+    line-height: 44px;
+  }
 
-    .primary-text, {
-        font-size: 48px;
-        line-height: 58px;
-    }
+  h3, .h3, {
+    font-size: 28px;
+    line-height: 38px;
+  }
+  h4, .h4, {
+    font-size: 20px;
+    line-height: 28px;
+  }
 
-    .secondary-text, {
-        font-size: 32px;
-        line-height: 44px;
-    }
+  h5, .h5, {
+    font-size: 16px;
+    line-height: 24px;
+  }
 
-    .tertiary-text, {
-        font-size: 28px;
-        line-height: 38px;
-    }
+  .lead-paragraph {
+    font-size: 22px;
+    line-height: 32px;
+  }
 
-    .quaternary-text, {
-        font-size: 20px;
-        line-height: 28px;
-    }
+  .small-text {
+    font-size: 14px;
+    line-height: 22px;
+  }
 
-    .quinary-text, {
-        font-size: 16px;
-        line-height: 24px;
-    }
-
-    .lead-paragraph {
-        font-size: 22px;
-        line-height: 32px;
-    }
-
-    .small-text {
-        font-size: 14px;
-        line-height: 22px;
-    }
-
-    .micro-text {
-        font-size: 12px;
-        line-height: 20px;
-    }
-
-    .bullet-list {
-        margin-left: 20px;
-        list-style-type: disc;
-
-        &.-no-margin {
-            > li {
-                margin-left: 0;
-            }
-        }
-
-        > li {
-            margin-top: 20px;
-            margin-left: 30px;
-        }
-    }
+  .micro-text {
+    font-size: 12px;
+    line-height: 20px;
+  }
 }
-
