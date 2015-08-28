@@ -1,0 +1,13 @@
+.action-button {
+    &:extend(.primary-button all);
+    background-color: @green-wcag;
+
+    &:focus,
+    &:hover {
+      background-color: darken(@green-wcag, 5%);
+    }
+    &:active,
+    &.-loading {
+      background-color: darken(@green-wcag, 10%);
+    }
+}

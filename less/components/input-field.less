@@ -1,0 +1,30 @@
+.input-field {
+  display: inline-block;
+  height: 45px;
+  padding: 13px;
+  font-family: MuseoSans-300, arial, sans-serif;
+  font-size: 18px;
+  border-radius: 6px;
+  border: 1px solid @grey-light;
+  transition: all 0.15s ease-in-out;
+  box-shadow: 0 1px 2px @grey inset;
+
+  &:hover {
+    border-color: @blue-royal-light-wcag;
+  }
+  &:focus, &:active {
+    border-color: @blue-royal-light-wcag;
+    box-shadow: 0 0 0 2px @blue-focus;
+    outline: none;
+  }
+  &.-small {
+    width: 95px;
+  }
+  &.-medium {
+    width: 130px;
+  }
+  &.-large {
+    width: 160px;
+  }
+
+}
