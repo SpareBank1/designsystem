@@ -1,0 +1,50 @@
+.sb1-radioblob() {
+  content: '';
+  background-color: @white;
+  border: 2px solid @grey;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  pointer-events: none;
+}
+.sb1-radioblob-active() {
+  background-color: @white;
+  border: 7px solid @blue-royal-light-wcag;
+}
+
+.sb1-spinner(@color: @blue-royal-light, @size: 20px) {
+  content: ' ';
+  display: inline-block;
+  position: relative;
+  width: @size;
+  height: @size;
+  border: 3px solid @color;
+  border-top-color: transparent;
+  border-radius: 50%;
+  visibility: visible;
+  animation: spindindust 1s linear infinite;
+
+  @keyframes spindindust {
+    0% { transform: rotate(0); }
+    100% { transform: rotate(360deg); }
+  }
+
+}
+
+
+.shadow() {
+  box-shadow: 0 1px 2px @grey;
+}
+.shadow-inset() {
+  box-shadow: 0 1px 2px @grey inset;
+}
+.shadow-buttons() {
+  box-shadow: 0 1px 2px 1px rgba(0,0,0,0.05);
+}
+.shadow-buttons-hover() {
+  box-shadow: 0 1px 2px 1px rgba(0,0,0,0.15);
+}
+.shadow-buttons-active() {
+  box-shadow: inset 0 1px 1px 0 rgba(0,0,0,0.25);
+}
