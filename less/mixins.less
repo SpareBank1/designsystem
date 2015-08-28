@@ -1,3 +1,6 @@
+/*
+    Radioblob: Small design element on "radio button"-like elements
+*/
 .sb1-radioblob() {
   content: '';
   background-color: @white;
@@ -8,11 +11,18 @@
   position: absolute;
   pointer-events: none;
 }
+
+/*
+    Radioblob: Active state of the blob
+*/
 .sb1-radioblob-active() {
   background-color: @white;
   border: 7px solid @blue-royal-light-wcag;
 }
 
+/*
+    Spinner: Commonly found on buttons and loading pages
+*/
 .sb1-spinner(@color: @blue-royal-light, @size: 20px) {
   content: ' ';
   display: inline-block;
@@ -32,13 +42,9 @@
 
 }
 
-
-.shadow() {
-  box-shadow: 0 1px 2px @grey;
-}
-.shadow-inset() {
-  box-shadow: 0 1px 2px @grey inset;
-}
+/*
+    Shadow for buttons: Commonly found on elements supposed to be buttons
+*/
 .shadow-buttons() {
   box-shadow: 0 1px 2px 1px rgba(0,0,0,0.05);
 }
