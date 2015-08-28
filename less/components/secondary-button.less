@@ -1,0 +1,15 @@
+.secondary-button {
+    &:extend(.primary-button all);
+    color: @blue-royal-light-wcag;
+    background-color: @white;
+    border: solid 2px @grey-light;
+
+  &:hover, &:focus,&:active {
+    border-color: @blue-royal-light-wcag;
+    background-color: @white;
+  }
+
+  &.-loading {
+    background-color: @blue-royal;
+  }
+}

@@ -1,0 +1,44 @@
+.radio-switch {
+    padding: 8px 20px 8px 50px;
+    position: relative;
+    border: 1px solid @grey-light;
+    border-radius: 30px;
+    display: inline-block;
+    min-width: 100px;
+    margin-right: 10px;
+    text-align: left;
+    color: @blue-royal-light;
+    font-family: "MuseoSansRounded-700", arial, sans-serif;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+   .shadow-buttons();
+
+    &:before {
+      .sb1-radioblob();
+      left: 12px;
+      top: 11px;
+    }
+}
+
+.radio-input {
+
+    &:checked + .radio-switch {
+        border-color: @blue-royal;
+        background-color: @blue-royal;
+        color: @white;
+    }
+
+    &:hover + .radio-switch{
+        border-color: @blue-royal-light-wcag;
+    }
+
+    &:focus + .radio-switch {
+        border-color: @blue-focus;
+        box-shadow: 0 0 0 1px @blue-focus;
+    }
+
+    &:checked + .radio-switch:before {
+        .sb1-radioblob-active();
+    }
+
+}
