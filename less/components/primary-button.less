@@ -1,0 +1,78 @@
+.primary-button {
+  font-family: 'MuseoSans-500', arial, sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0 30px;
+  border-radius: 4px;
+  color: @white;
+  background-color: @blue-flat;
+  border: 2px solid transparent;
+  display: block;
+  line-height: 41;
+  width: 100%;
+  overflow: hidden;
+   .shadow-buttons();
+  transition: all 0.2s;
+  outline: none;
+
+  &:focus {
+    box-shadow: 0 0 0 2px @blue-focus;
+    background-color: darken(@blue-flat,5%);
+  }
+
+  &:hover {
+    .shadow-buttons-hover();
+    background-color: darken(@blue-flat,5%);
+  }
+  &:active {
+    .shadow-buttons-active();
+    background-color: darken(@blue-flat,10%);
+  }
+  > .icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  > .label {
+    overflow: hidden;
+    position: relative;
+
+    > .label-text {
+      position: relative;
+      bottom: 0;
+      transition: bottom 0.2s;
+    }
+
+    > .label-spinner {
+      .sb1-spinner(@white,22px);
+      position: absolute;
+      bottom: -40px;
+      left: ~"calc(50% - 11px)";
+      transition: bottom 0.2s;
+    }
+  }
+
+  &.-loading {
+    pointer-events: none;
+    background-color: darken(@blue-royal-light-wcag,10%);
+    > .label {
+      > .label-text {
+        bottom: 50px;
+      }
+
+      > .label-spinner {
+        bottom: 0;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: @breakpoint-sm) {
+  .primary-button {
+    display: inline-block;
+    width: auto;
+  }
+}

@@ -1,0 +1,64 @@
+.radio-block {
+  margin: 10px 0;
+  max-width: 600px;
+  min-width: 260px;
+  transition: width 0.3s ease-in-out;
+
+  .content {
+    width: 100%;
+    position: relative;
+    border: 2px solid @grey-light;
+    border-radius: 5px;
+    display: inline-block;
+    margin-right: 10px;
+    color: @black;
+    background-color: white;
+    cursor: pointer;
+
+    &:before {
+      .sb1-radioblob();
+      left: 18px;
+      top: 14px;
+    }
+
+    > .header {
+      display: block;
+      padding: 10px 60px;
+      cursor: pointer;
+    }
+
+    > .wrapper {
+      padding: 10px 0 25px 60px;
+      cursor: auto;
+    }
+  }
+
+  .radio-input {
+    & + .content > .wrapper {
+      display: none;
+    }
+
+    & + .content > .wrapper.-visible {
+      display: block;
+    }
+
+    &:checked + .content {
+        border: 2px solid @blue-royal;
+        > .header {
+          background-color: @blue-royal;
+          color: white;
+        }
+        > .wrapper {
+          display: block;
+        }
+    }
+
+    &:checked + .content:before {
+        .sb1-radioblob-active();
+      }
+
+    &:focus + .content {
+      box-shadow: 0 0 0 2px @blue-focus;
+    }
+  }
+}
