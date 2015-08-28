@@ -1,0 +1,20 @@
+.shortcut-button {
+  &:extend(.secondary-button all);
+  padding-right: 35px;
+
+  > .icon-chevron {
+    width: 16px;
+    height: 16px;
+    position: relative;
+    left: 15px;
+    bottom: 2px;
+    transition: left 0.1s;
+  }
+
+  &:hover, &:active, &:focus {
+
+    > .icon-chevron {
+      left: 20px;
+    }
+  }
+}

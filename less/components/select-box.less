@@ -1,0 +1,43 @@
+@select-box-height: 45px;
+
+.select-box,
+select {
+    padding: 10px 32px 10px 10px;
+    height: @select-box-height;
+    border: 1px solid @grey-light;
+    background-image: url('/sfo-client/open/images/chevron-royal-light.svg');
+    background-color: #FFF;
+    background-size: 18px 18px;
+    background-repeat: no-repeat;
+    background-position: 94% 50%;
+    line-height: 20px;
+    font-size: 18px;
+    border-radius: 4px;
+    font-family: MuseoSans-300,arial,sans-serif;
+    min-width: 175px;
+    transition: all 0.15s ease-in-out;
+    .shadow();
+
+    &:hover {
+      border-color: @blue-royal-light-wcag;
+    }
+    &:focus, &:active {
+      border-color: @blue-royal-light-wcag;
+      box-shadow: 0 0 0 2px @blue-focus;
+      outline: none;
+    }
+
+    &::-ms-expand {
+        display: none;
+    }
+
+    &.error {
+        border-color: @orange-wcag;
+        border-style: solid;
+        margin-bottom: 5px;
+
+        &:focus {
+            outline-color: #fff;
+        }
+    }
+}
