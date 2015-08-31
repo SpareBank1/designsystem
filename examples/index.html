@@ -125,11 +125,11 @@
         <p>To allow for accessibility while maintaining flexibility in design, we have chosen to use the semantically correct
         header tags (h1, h2, h3, etc.) combined with styling classes. This means that in a situation where structure and design diverge, it is possible to override the default header.</p>
         <code class="code-block">
-            &#x3C;h1 class=&#x22;h1&#x22;&#x3E;First Heading&#x3C;/h1&#x3E;<br>
-            &#x3C;p class=&#x22;lead-paragraph&#x22;&#x3E;Some leading text&#x3C;/p&#x3E;<br>
-            <br>
-            &#x3C;h2 class=&#x22;h3&#x22;&#x3E;Second Heading&#x3C;/h2&#x3E;<br>
-            &#x3C;p&#x3E;This one is an h2 with h3 styling.&#x3C;/p&#x3E;
+&#x3C;h1 class=&#x22;h1&#x22;&#x3E;First Heading&#x3C;/h1&#x3E;
+&#x3C;p class=&#x22;lead-paragraph&#x22;&#x3E;Some leading text&#x3C;/p&#x3E;
+
+&#x3C;h2 class=&#x22;h3&#x22;&#x3E;Second Heading&#x3C;/h2&#x3E;
+&#x3C;p&#x3E;This one is an h2 with h3 styling.&#x3C;/p&#x3E;
         </code>
     </div>
 
@@ -178,6 +178,69 @@
                 Integer <em>eget sodales</em> ante. Pellentesque tempor pulvinar pretium. Morbi vestibulum nisi vel maximus cursus.
                 Duis at lorem massa.</p>
         </div>
+    </div>
+
+    <div class="content-container -left">
+        <h2>Buttons</h2>
+        <p>Buttons bla bla bla bla</p>
+
+        <div class="small-text">ACTION BUTTON</div>
+        <div class="button-group">
+            <button class="action-button">Kjøp nå!</button>
+            <button class="action-button -loading">
+            <span class="label">
+                <span class="label-text">Kjøp nå!</span>
+                <span class="label-spinner"></span>
+            </span>
+            </button>
+        </div>
+
+        <div class="small-text">PRIMARY BUTTON</div>
+        <div class="button-group">
+            <button class="primary-button">Neste</button>
+            <button class="primary-button -loading">
+            <span class="label">
+                <span class="label-text">NEste</span>
+                <span class="label-spinner"></span>
+            </span>
+            </button>
+        </div>
+
+        <div class="small-text">SECONDARY BUTTON</div>
+        <div class="button-group">
+            <button class="secondary-button">Avbryt</button>
+            <button class="secondary-button -loading">
+            <span class="label">
+                <span class="label-text">Avbryt</span>
+                <span class="label-spinner"></span>
+            </span>
+            </button>
+        </div>
+
+        <div class="small-text">SHORTCUT BUTTON</div>
+        <div class="button-group">
+            <button class="shortcut-button">Se dine ting
+                <span class="icon-chevron -right -light-blue"></span>
+            </button>
+        </div>
+
+
+
+        <h3>Example code</h3>
+        <code class="code-block">
+&lt;button class="action-button"&gt;Action button&lt;/button&gt;
+
+&lt;button class="action-button -loading"&gt;
+    &lt;span class="label"&gt;
+        &lt;span class="label-text"&gt;Action button&lt;/span&gt;
+        &lt;span class="label-spinner"&gt;&lt;/span&gt;
+    &lt;/span&gt;
+&lt;/button&gt;
+
+&lt;button class="action-button -loading"&gt;Se dine ting
+    &lt;span class="icon-chevron -right -light-blue"&gt;&lt;/span&gt;
+&lt;/button&gt;
+        </code>
     </div>
 </div>
 
