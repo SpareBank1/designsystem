@@ -5,11 +5,14 @@
     background-color: @white;
     cursor: pointer;
     margin: 10px 0;
-    max-width: 600px;
-    min-width: 260px;
     transition: width 0.15s ease-in-out;
     text-align: left;
     padding-left: 40px;
+
+    &.-inline {
+      display: inline-block;
+      margin-right: 20px;
+    }
 
     &:before {
       .sb1-radioblob();
