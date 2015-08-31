@@ -8,7 +8,7 @@
     max-width: 768px;
     text-align: center;
 
-    &.-left {
+    &.-text-left {
         text-align: left;
     }
 
@@ -73,13 +73,15 @@
 
 .code-block {
     font-family: consolas, menlo, monaco, monospace;
-    font-size: 16px;
+    font-size: 12px;
     background-color: @grey-light-bg;
     border: solid 1px @grey-light;
-    display: block;
-    padding: 10px;
+    padding: 0 20px;
     white-space: pre;
-    word-wrap: break-word;
+    line-height: 1;
+    display: block;
+    overflow-y: hidden;
+    overflow-x: auto;
 }
 
 .button-group {
@@ -104,4 +106,14 @@
       }
     }
   }
+}
+
+.input-group {
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  &:extend(h4);
+  display: block;
+  margin-bottom: 1rem;
 }
