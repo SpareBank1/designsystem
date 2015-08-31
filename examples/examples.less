@@ -18,13 +18,15 @@
 
     &.-color-info {
       background-color: @sand-25;
+      width: 100%;
       max-width: none;
       margin: 0 auto;
       padding: 60px 0;
     }
 
-  @media screen and (min-width: @breakpoint-sm) {
-    padding: 0
+  @media screen and (min-width: @breakpoint-md) {
+    padding: 0;
+    width: 90%;
   }
 
 }
@@ -76,4 +78,30 @@
     border: solid 1px @grey-light;
     display: block;
     padding: 10px;
+    white-space: pre;
+    word-wrap: break-word;
+}
+
+.button-group {
+  padding: 20px 0;
+
+  > button {
+    margin: 0 auto 10px auto;
+  }
+
+  &.-thin {
+    padding: 0;
+  }
+
+  @media screen and (min-width: @breakpoint-sm) {
+    > button {
+      display: inline-block;
+      margin: 0 0 10px 10px;
+      width: auto;
+
+      &:first-child {
+        margin: 0 0 10px 0;
+      }
+    }
+  }
 }
