@@ -1,32 +1,48 @@
-@base-url: "../";
-
 @import "../less/ffe.less";
+@base-url: "../";
 
 .content-container {
     width: 100%;
-    margin: 20px/2 auto;
+    margin: 60px auto;
     padding: 0 20px;
-    max-width: @app-width;
+    max-width: 768px;
     text-align: center;
 
-    &.-left {
+    &.-text-left {
         text-align: left;
     }
+
+    &.-wrapped {
+        margin: 0 auto;
+    }
+
+    &.-color-info {
+      background-color: @sand-25;
+      width: 100%;
+      max-width: none;
+      margin: 0 auto;
+      padding: 60px 0;
+    }
+
+  @media screen and (min-width: @breakpoint-md) {
+    padding: 0;
+    width: 90%;
+  }
+
 }
 
 .color-patch {
     display: inline-block;
-    width: 270px;
-    height: 220px;
+    width: 222px;
     border: solid 1px @grey-light;
     border-radius: 4px;
-    margin: 10px;
+    margin: 8px;
 
     .patch-descr {
         .small-text();
         padding: 15px;
     }
-    
+
     .color-box {
         height: 170px;
     }
@@ -39,6 +55,7 @@
     .color-box.-green-wcag              { background-color: @green-wcag; }
     .color-box.-sand                    { background-color: @sand; }
     .color-box.-sand-50                 { background-color: @sand-50; }
+    .color-box.-sand-25                 { background-color: @sand-25; }
     .color-box.-black                   { background-color: @black; }
     .color-box.-grey-dark               { background-color: @grey-dark; }
     .color-box.-grey                    { background-color: @grey; }
@@ -56,9 +73,47 @@
 
 .code-block {
     font-family: consolas, menlo, monaco, monospace;
-    font-size: 14px;
+    font-size: 12px;
     background-color: @grey-light-bg;
     border: solid 1px @grey-light;
+    padding: 0 20px;
+    white-space: pre;
+    line-height: 1;
     display: block;
-    padding: 10px;
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+
+.button-group {
+  padding: 20px 0;
+
+  > button {
+    margin: 0 auto 10px auto;
+  }
+
+  &.-thin {
+    padding: 0;
+  }
+
+  @media screen and (min-width: @breakpoint-sm) {
+    > button {
+      display: inline-block;
+      margin: 0 0 10px 10px;
+      width: auto;
+
+      &:first-child {
+        margin: 0 0 10px 0;
+      }
+    }
+  }
+}
+
+.input-group {
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  &:extend(h4);
+  display: block;
+  margin-bottom: 1rem;
 }

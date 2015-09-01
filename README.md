@@ -1,7 +1,7 @@
 #Felles Front End Framework
 ##Intro
 Inneholder generell styling for bruk utenom komponenter. F.eks. typografi, knapper, farger, o.l. Vi følger 
-[Reasonable System for CSS Stylesheet System](https://github.com/rstacruz/rscss) for å sørge for god organisasjon av CSS-koden.
+[Reasonable System for CSS Stylesheet Structure](https://github.com/rstacruz/rscss) for å sørge for god organisasjon av CSS-koden.
 
 ##Kom i gang
 
