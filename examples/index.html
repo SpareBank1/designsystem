@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Felles Frontend Style Guide</title>
+    <title>Felles Frontend Style guide</title>
 
     <link rel="stylesheet" type="text/css" href="examples.css">
 
@@ -12,147 +12,560 @@
 <body>
 
 <div id="appContainer">
+
     <div class="content-container">
-        <h1 class="h1">Felles Frontend Style Guide</h1>
+        <h1>Felles FrontEnd <span class="h3">Style guide</span></h1>
+        <p>
+            Inneholder generell styling for bruk utenom komponenter. F.eks. typografi, knapper, farger, o.l. <strong>FFE</strong> følger
+            <a href="https://github.com/rstacruz/rscss">Reasonable System for CSS Stylesheet Structure</a> for å sørge for god organisasjon av CSS-koden.
+        </p>
     </div>
 
     <div class="content-container">
-        <h2 class="h2">Primary Color Pallette</h2>
-        <h3 class="lead-paragraph">Used in core elements  - e.g. typography, buttons & boxes</h3>
+        <h2>Primary Color Palette</h2>
+        <p class="lead-paragraph">Used in core elements  - e.g. typography, buttons & boxes</p>
         <ul>
             <li class="color-patch">
                 <div class="color-box -blue-royal"></div>
-                <div class="patch-descr">Blue-royal #002776</div>
+                <div class="patch-descr">Blue-royal<br>#002776</div>
             </li>
             <li class="color-patch">
                 <div class="color-box -blue-flat"></div>
-                <div class="patch-descr">Blue-flat #005AA4</div>
+                <div class="patch-descr">Blue-flat<br>#005AA4</div>
             </li>
             <li class="color-patch">
                 <div class="color-box -blue-royal-light"></div>
-                <div class="patch-descr">Blue-royal-light #008ED2</div>
+                <div class="patch-descr">Blue-royal-light<br>#008ED2</div>
             </li>
             <li class="color-patch">
                 <div class="color-box -blue-royal-light-wcag"></div>
-                <div class="patch-descr">Blue-royal-light-WCAG #0075D2</div>
+                <div class="patch-descr">Blue-royal-light-WCAG<br>#0075D2</div>
             </li>
             <li class="color-patch">
                 <div class="color-box -blue-royal-light-50"></div>
-                <div class="patch-descr">Blue-royal-light-50% #7FC6E8</div>
+                <div class="patch-descr">Blue-royal-light-50%<br>#7FC6E8</div>
             </li>
             <li class="color-patch">
                 <div class="color-box -green-wcag"></div>
-                <div class="patch-descr">Green-WCAG #008A00</div>
+                <div class="patch-descr">Green-WCAG<br>#008A00</div>
             </li>
             <li class="color-patch">
                 <div class="color-box -sand"></div>
-                <div class="patch-descr">Sand #F0EAD7</div>
+                <div class="patch-descr">Sand<br>#F0EAD7</div>
             </li>
             <li class="color-patch">
                 <div class="color-box -sand-50"></div>
-                <div class="patch-descr">Sand-50% #F7F4EB</div>
+                <div class="patch-descr">Sand-50%<br>#F7F4EB</div>
+            </li>
+            <li class="color-patch">
+                <div class="color-box -sand-25"></div>
+                <div class="patch-descr">Sand-25%<br>#F7F4EB</div>
             </li>
             <li class="color-patch">
                 <div class="color-box -black"></div>
-                <div class="patch-descr">Black #262626</div>
+                <div class="patch-descr">Black<br>#262626</div>
             </li>
             <li class="color-patch">
                 <div class="color-box -grey-dark"></div>
-                <div class="patch-descr">Grey-dark #676767</div>
+                <div class="patch-descr">Grey-dark<br>#676767</div>
             </li>
             <li class="color-patch">
                 <div class="color-box -grey"></div>
-                <div class="patch-descr">Grey #ADADAD</div>
+                <div class="patch-descr">Grey<br>#ADADAD</div>
             </li>
             <li class="color-patch">
                 <div class="color-box -grey-light"></div>
-                <div class="patch-descr">Grey-light #D8D8D8</div>
+                <div class="patch-descr">Grey-light<br>#D8D8D8</div>
             </li>
             <li class="color-patch">
                 <div class="color-box -grey-light-bg"></div>
-                <div class="patch-descr">Grey-light-bg #f3f3f3</div>
+                <div class="patch-descr">Grey-light-bg<br>#f3f3f3</div>
             </li>
             <li class="color-patch">
                 <div class="color-box -white"></div>
-                <div class="patch-descr">White #FFFFFF</div>
+                <div class="patch-descr">White<br>#FFFFFF</div>
             </li>
         </ul>
     </div>
 
     <div class="content-container">
-        <h2 class="h2">Secondary Color Pallette</h2>
-        <h3 class="lead-paragraph">Used in secondary elements - Infographics, tools, illustrations</h3>
+        <h2>Secondary Color Palette</h2>
+        <p class="lead-paragraph">Used in secondary elements - Infographics, tools, illustrations</p>
         <ul>
             <li class="color-patch">
                 <div class="color-box -green"></div>
-                <div class="patch-descr">Green #37B441</div>
+                <div class="patch-descr">Green<br>#37B441</div>
             </li>
             <li class="color-patch">
                 <div class="color-box -purple"></div>
-                <div class="patch-descr">Purple #C94096</div>
+                <div class="patch-descr">Purple<br>#C94096</div>
             </li>
             <li class="color-patch">
                 <div class="color-box -purple-wcag"></div>
-                <div class="patch-descr">Purple-WCAG #A20076</div>
+                <div class="patch-descr">Purple-WCAG<br>#A20076</div>
             </li>
             <li class="color-patch">
                 <div class="color-box -orange"></div>
-                <div class="patch-descr">Orange #E19100</div>
+                <div class="patch-descr">Orange<br>#E19100</div>
             </li>
             <li class="color-patch">
                 <div class="color-box -orange-wcag"></div>
-                <div class="patch-descr">Orange-WCAG #DA3D00</div>
+                <div class="patch-descr">Orange-WCAG<br>#DA3D00</div>
             </li>
             <li class="color-patch">
                 <div class="color-box -red"></div>
-                <div class="patch-descr">Red #E60000</div>
+                <div class="patch-descr">Red<br>#E60000</div>
             </li>
         </ul>
     </div>
 
-    <div class="content-container -left">
-        <h2 class="h2">Typography</h2>
-        <h3 class="h3">Heading Strategy</h3>
+    <div class="content-container -text-left">
+        <h2>Typography</h2>
+        <h3>Heading Strategy</h3>
         <p>To allow for accessibility while maintaining flexibility in design, we have chosen to use the semantically correct
-        header tags (H1, H2, H3, etc.) combined with styling classes. In other words, we do not style the HTML tags,
-        but rather decorate the appropriate tag with the desired design.</p>
+        header tags (h1, h2, h3, etc.) combined with styling classes. This means that in a situation where structure and design diverge, it is possible to override the default header.</p>
+
+        <h4>Example code</h4>
         <code class="code-block">
-            &#x3C;h1 class=&#x22;h1&#x22;&#x3E;First Heading&#x3C;/h1&#x3E;<br>
-            &#x3C;p class=&#x22;lead-paragraph&#x22;&#x3E;Some leading text&#x3C;/p&#x3E;<br>
-            <br>
-            &#x3C;h2 class=&#x22;h3&#x22;&#x3E;Second Heading&#x3C;/h2&#x3E;<br>
-            &#x3C;p&#x3E;This one is an H2 with H3 styling.&#x3C;/p&#x3E;
+&#x3C;h1 class=&#x22;h1&#x22;&#x3E;First Heading&#x3C;/h1&#x3E;
+&#x3C;p class=&#x22;lead-paragraph&#x22;&#x3E;Some leading text&#x3C;/p&#x3E;
+
+&#x3C;h2 class=&#x22;h3&#x22;&#x3E;Second Heading&#x3C;/h2&#x3E;
+&#x3C;p&#x3E;This one is an h2 with h3 styling.&#x3C;/p&#x3E;
         </code>
     </div>
 
-    <div class="content-container -left">
-        <p class="small-text">HEADING 1</p>
-        <h1 class="h1">Aa Zz</h1>
+    <div class="content-container -color-info">
+        <div class="content-container -wrapped -text-left">
+            <div class="small-text">HEADING 1</div>
+            <p class="h1">Integer mollis ut est in mollis.</p>
 
-        <p class="small-text">HEADING 2</p>
-        <h2 class="h2">Aa Zz</h2 >
+            <div class="small-text">HEADING 2</div>
+            <p class="h2">Integer mollis ut est in mollis.</p>
 
-        <p class="small-text">HEADING 3</p>
-        <h3 class="h3">Aa Zz</h3>
+            <div class="small-text">HEADING 3</div>
+            <p class="h3">Integer mollis ut est in mollis.</p>
 
-        <p class="small-text">HEADING 4</p>
-        <h4 class="h4">Aa Zz</h4>
+            <div class="small-text">HEADING 4</div>
+            <p class="h4">Integer mollis ut est in mollis.</p>
 
-        <p class="small-text">HEADING 5</p>
-        <h5 class="h5">Aa Zz</h5>
+            <div class="small-text">HEADING 5</div>
+            <p class="h5">Integer mollis ut est in mollis.</p>
+
+            <div class="small-text">LEAD PARAGRAPH</div>
+            <p class="lead-paragraph">Integer <em>mollis</em> ut est in <em>mollis</em>. Morbi sodales ex nec orci imperdiet auctor.
+                Nam diam enim, <a href="#">gravida id libero sit amet</a>, placerat fringilla mi. <strong>Nullam consequat</strong> metus nec lacinia consectetur.
+                <strong>Nullam filibus</strong> et odio eu congue. Aliquam sit amet gravida massa. Proin id tortor vitae nulla interdum varius.
+                Integer <em>eget sodales</em> ante. Pellentesque tempor pulvinar pretium. Morbi vestibulum nisi vel maximus cursus.
+                Duis at lorem massa.</p>
+
+            <div class="small-text">BODY TEXT</div>
+            <p class="body-text">Integer <em>mollis</em> ut est in <em>mollis</em>. Morbi sodales ex nec orci imperdiet auctor.
+                Nam diam enim, <a href="#">gravida id libero sit amet</a>, placerat fringilla mi. <strong>Nullam consequat</strong> metus nec lacinia consectetur.
+                <strong>Nullam filibus</strong> et odio eu congue. Aliquam sit amet gravida massa. Proin id tortor vitae nulla interdum varius.
+                Integer <em>eget sodales</em> ante. Pellentesque tempor pulvinar pretium. Morbi vestibulum nisi vel maximus cursus.
+                Duis at lorem massa.</p>
+
+            <div class="small-text">SMALL TEXT</div>
+            <p class="small-text">Integer <em>mollis</em> ut est in <em>mollis</em>. Morbi sodales ex nec orci imperdiet auctor.
+                Nam diam enim, <a href="#">gravida id libero sit amet</a>, placerat fringilla mi. <strong>Nullam consequat</strong> metus nec lacinia consectetur.
+                <strong>Nullam filibus</strong> et odio eu congue. Aliquam sit amet gravida massa. Proin id tortor vitae nulla interdum varius.
+                Integer <em>eget sodales</em> ante. Pellentesque tempor pulvinar pretium. Morbi vestibulum nisi vel maximus cursus.
+                Duis at lorem massa.</p>
+
+            <div class="small-text">MICRO TEXT</div>
+            <p class="micro-text">Integer <em>mollis</em> ut est in <em>mollis</em>. Morbi sodales ex nec orci imperdiet auctor.
+                Nam diam enim, <a href="#">gravida id libero sit amet</a>, placerat fringilla mi. <strong>Nullam consequat</strong> metus nec lacinia consectetur.
+                <strong>Nullam filibus</strong> et odio eu congue. Aliquam sit amet gravida massa. Proin id tortor vitae nulla interdum varius.
+                Integer <em>eget sodales</em> ante. Pellentesque tempor pulvinar pretium. Morbi vestibulum nisi vel maximus cursus.
+                Duis at lorem massa.</p>
+        </div>
     </div>
 
-    <hr class="inline-seperator" />
+    <div class="content-container -text-left">
+        <h2>Input elements</h2>
+        <p>Buttons bla bla bla bla</p>
+    </div>
 
-    <div class="content-container -left">
-        <p class="lead-paragraph">Lead paragraph. Integer mollis ut est in mollis.</p>
-        <p class="body-text">Body text. Integer mollis ut est in mollis. Morbi sodales ex nec orci imperdiet auctor.
-            Nam diam enim, <a href="#">gravida id libero sit amet</a>, placerat fringilla mi. Nullam consequat metus nec lacinia consectetur.
-            Nullam finibus et odio eu congue. Aliquam sit amet gravida massa. Proin id tortor vitae nulla interdum varius.
-            Integer eget sodales ante. Pellentesque tempor pulvinar pretium. Morbi vestibulum nisi vel maximus cursus.
-            Duis at lorem massa.</p>
-        <p class="small-text">Small text</p>
-        <p class="micro-text">Micro text</p>
+    <div class="content-container -text-left">
+        <h2>Regular buttons</h2>
+        <div class="small-text">ACTION BUTTON</div>
+        <div class="button-group">
+            <button class="action-button">Kjøp nå!</button>
+            <button class="action-button -loading">
+            <span class="label">
+                <span class="label-text">Kjøp nå!</span>
+                <span class="label-spinner"></span>
+            </span>
+            </button>
+        </div>
+
+        <div class="small-text">PRIMARY BUTTON</div>
+        <div class="button-group">
+            <button class="primary-button">Neste</button>
+            <button class="primary-button -loading">
+            <span class="label">
+                <span class="label-text">NEste</span>
+                <span class="label-spinner"></span>
+            </span>
+            </button>
+        </div>
+
+        <div class="small-text">SECONDARY BUTTON</div>
+        <div class="button-group">
+            <button class="secondary-button">Avbryt</button>
+            <button class="secondary-button -loading">
+            <span class="label">
+                <span class="label-text">Avbryt</span>
+                <span class="label-spinner"></span>
+            </span>
+            </button>
+        </div>
+
+        <div class="small-text">SHORTCUT BUTTON</div>
+        <div class="button-group">
+            <button class="shortcut-button">Se dine ting
+                <span class="icon-chevron -right -light-blue"></span>
+            </button>
+        </div>
+
+        <h4>Example code</h4>
+        <code class="code-block">
+&lt;button class="action-button"&gt;Action button&lt;/button&gt;
+
+&lt;button class="action-button -loading"&gt;
+    &lt;span class="label"&gt;
+        &lt;span class="label-text"&gt;Action button&lt;/span&gt;
+        &lt;span class="label-spinner"&gt;&lt;/span&gt;
+    &lt;/span&gt;
+&lt;/button&gt;
+
+&lt;button class="action-button -loading"&gt;Se dine ting
+    &lt;span class="icon-chevron -right -light-blue"&gt;&lt;/span&gt;
+&lt;/button&gt;
+        </code>
+    </div>
+
+    <div class="content-container -text-left">
+        <h3>Input field</h3>
+        <p>Has three size variants -small, -medium and -large</p>
+        <div class="input-group">
+            <label id="ssn-label" class="form-label" for="ssn">
+                Norwegian social security number
+            </label>
+            <input  id="ssn"
+                    class="input-field -medium"
+                    name="ssn"
+                    type="text"
+                    maxlength="11"
+                    autocomplete="off">
+            <strong>(11 digits)</strong>
+        </div>
+
+
+        <h4>Example code</h4>
+        <code class="code-block">
+&lt;input  id=&quot;ssn&quot;
+    class=&quot;input-field -medium&quot;
+    name=&quot;ssn&quot;
+    type=&quot;text&quot;
+    maxlength=&quot;11&quot;
+    autocomplete=&quot;off&quot;&gt;
+        </code>
+    </div>
+
+    <div class="content-container -text-left">
+        <h3>Select box</h3>
+        <p>Nothing much to say bout this</p>
+        <div class="input-group">
+            <label id="month-label" class="form-label" for="month">
+                Choose month
+            </label>
+            <select class="select-box" id="month" >
+                <option value="0">January</option>
+                <option value="1">February</option>
+                <option value="2">Mars</option>
+                <option value="3">April</option>
+            </select>
+        </div>
+
+
+        <h4>Example code</h4>
+        <code class="code-block">
+&lt;select class=&quot;select-box&quot; id=&quot;month&quot; &gt;
+    &lt;option value=&quot;0&quot;&gt;January&lt;/option&gt;
+    &lt;option value=&quot;1&quot;&gt;February&lt;/option&gt;
+    &lt;option value=&quot;2&quot;&gt;Mars&lt;/option&gt;
+    &lt;option value=&quot;3&quot;&gt;April&lt;/option&gt;
+&lt;/select&gt;
+        </code>
+    </div>
+
+    <div class="content-container -text-left">
+        <h3>Check box</h3>
+        <p>Used when there are several possible options, have a regular and an -inline variant</p>
+        <div class="input-group">
+            <label id="checkbox-ibf-label" class="form-label" for="checkbox-ibf1">
+                What colors do you like on unicorns?
+            </label>
+            <fieldset id="checkbox-ibf1">
+                <input  class="input-field"
+                        type="checkbox"
+                        name="unicorncolors"
+                        value="yellow"
+                        id="unicorncolors-1"
+                        checked>
+                <label id="unicorncolors-1-label" class="check-box" for="unicorncolors-1">Yellow</label>
+                <input  class="input-field"
+                        type="checkbox"
+                        name="unicorncolors"
+                        value="purple"
+                        id="unicorncolors-2">
+                <label id="unicorncolors-2-label" class="check-box" for="unicorncolors-2">Purple</label>
+                <input  class="input-field"
+                        type="checkbox"
+                        name="unicorncolors"
+                        value="white"
+                        id="unicorncolors-3">
+                <label id="unicorncolors-3-label" class="check-box" for="unicorncolors-3">White</label>
+            </fieldset>
+        </div>
+
+        <div class="input-group">
+            <label id="checkbox-inline-ibf-label" class="form-label" for="checkbox-inline-ibf1">
+                Favorite unicorn foods?
+            </label>
+            <fieldset id="checkbox-inline-ibf1">
+                <input  class="input-field"
+                        type="checkbox"
+                        name="unicornfood"
+                        value="apples"
+                        id="unicornfood-1"
+                        checked>
+                <label id="unicornfood-1-label" class="check-box -inline" for="unicornfood-1">Apples</label>
+                <input  class="input-field"
+                        type="checkbox"
+                        name="unicornfood"
+                        value="banans"
+                        id="unicornfood-2">
+                <label id="unicornfood-2-label" class="check-box -inline" for="unicornfood-2">Bananas</label>
+                <input  class="input-field"
+                        type="checkbox"
+                        name="unicornfood"
+                        value="oatmeal"
+                        id="unicornfood-3">
+                <label id="unicornfood-3-label" class="check-box -inline" for="unicornfood-3">Oatmeal</label>
+            </fieldset>
+        </div>
+
+        <h4>Example code</h4>
+        <code class="code-block">
+&lt;input  class=&quot;input-field&quot;
+    type=&quot;checkbox&quot;
+    name=&quot;unicornfood&quot;
+    value=&quot;apples&quot;
+    id=&quot;unicornfood-1&quot;
+    checked&gt;
+&lt;label id=&quot;unicornfood-1-label&quot; class=&quot;check-box -inline&quot; for=&quot;unicornfood-1&quot;&gt;Apples&lt;/label&gt;
+        </code>
+    </div>
+
+    <div class="content-container -text-left">
+        <h3>Radio button</h3>
+        <p>A standard type of radio button. They have a regular and an -inline variant</p>
+        <div class="input-group">
+            <label id="radio-ibf-label" class="form-label" for="radio-ibf1">
+                Which unicorn do you like most?
+            </label>
+            <fieldset id="radio-ibf1">
+                <input  class="radio-input"
+                        type="radio"
+                        name="unicorns"
+                        value="applejack"
+                        id="unicorns-1"
+                        checked>
+                <label id="unicorns-1-label" class="radio-button" for="unicorns-1">Applejack</label>
+                <input  class="radio-input"
+                        type="radio"
+                        name="unicorns"
+                        value="starlet"
+                        id="unicorns-2">
+                <label id="unicorns-2-label" class="radio-button" for="unicorns-2">Starlet</label>
+                <input  class="radio-input"
+                        type="radio"
+                        name="unicorns"
+                        value="trixie"
+                        id="unicorns-3">
+                <label id="unicorns-3-label" class="radio-button" for="unicorns-3">Trixie</label>
+            </fieldset>
+        </div>
+
+        <div class="input-group">
+            <label id="radio-inline-ibf-label" class="form-label" for="radio-inline-ibf1">
+                Are there unicorns with wings?
+            </label>
+            <fieldset id="radio-inline-ibf1">
+                <input  class="radio-input"
+                        type="radio"
+                        name="unicornwings"
+                        value="yes"
+                        id="unicornwings-1"
+                        checked>
+                <label id="unicornwings-1-label" class="radio-button -inline" for="unicornwings-1">Yes</label>
+                <input  class="radio-input"
+                        type="radio"
+                        name="unicornwings"
+                        value="no"
+                        id="unicornwings-2">
+                <label id="unicornwings-2-label" class="radio-button -inline" for="unicornwings-2">No</label>
+                <input  class="radio-input"
+                        type="radio"
+                        name="unicornwings"
+                        value="dunno"
+                        id="unicornwings-3">
+                <label id="unicornwings-3-label" class="radio-button -inline" for="unicornwings-3">I do not know!</label>
+            </fieldset>
+        </div>
+        <h4>Example code</h4>
+        <code class="code-block">
+&lt;input  class=&quot;radio-input&quot;
+    type=&quot;radio&quot;
+    name=&quot;unicornwings&quot;
+    value=&quot;yes&quot;
+    id=&quot;unicornwings-1&quot;
+    checked&gt;
+&lt;label id=&quot;unicornwings-1-label&quot; class=&quot;radio-button -inline&quot; for=&quot;unicornwings-1&quot;&gt;Yes&lt;/label&gt;
+        </code>
+    </div>
+
+
+    <div class="content-container -text-left">
+        <h3>Radio switch</h3>
+        <p>Intended for cases with only two mutually exclusive options</p>
+        <div class="input-group">
+            <label id="switch-ibf-label" class="form-label" for="switch-ibf1">
+                Do you like unicorns at all?
+            </label>
+            <fieldset id="switch-ibf1">
+                <input  class="radio-input"
+                        type="radio"
+                        name="unicornslike"
+                        value="yes"
+                        id="unicornslike-1"
+                        checked>
+                <label id="unicornslike-1-label" class="radio-switch" for="unicornslike-1">Ja</label>
+
+                <input  class="radio-input"
+                        type="radio"
+                        name="unicornslike"
+                        value="no"
+                        id="unicornslike-2">
+                <label id="unicornslike-2-label" class="radio-switch" for="unicornslike-2">Nei</label>
+            </fieldset>
+        </div>
+
+        <h4>Example code</h4>
+        <code class="code-block">
+&lt;input  class=&quot;radio-input&quot;
+    type=&quot;radio&quot;
+    name=&quot;unicornslike&quot;
+    value=&quot;yes&quot;
+    id=&quot;unicornslike-1&quot;
+    checked&gt;
+&lt;label id=&quot;unicornslike-1-label&quot; class=&quot;radio-switch&quot; for=&quot;unicornslike-1&quot;&gt;Ja&lt;/label&gt;
+        </code>
+    </div>
+
+
+    <div class="content-container -text-left">
+        <h3>Radio block</h3>
+        <p>Radio blocks are perfect when there is a great need to present contextual relevant information to the user regarding the current choice without overwhelming them</p>
+        <div class="input-group">
+            <label id="block-ibf-label" class="form-label" for="block-ibf1">
+                Hva ønsker du å gjøre?
+            </label>
+            <fieldset id="block-ibf1">
+                <div class="radio-block">
+                    <input class="radio-input" type="radio" name="action" id="action-newcar" value="newcar" checked />
+                    <div class="content">
+                        <label class="header" id="action-newcar-label" for="action-newcar">Forsikre ny bil</label>
+                        <div class="wrapper">
+                            <p>
+                                Jeg skal forsikre en ny bil og overføre bonus fra en forsikring som er avsluttet, eller som jeg skal avslutte.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="radio-block">
+                    <input class="radio-input" type="radio" name="action" id="action-secondarycar" value="secondarycar">
+                    <div class="content">
+                        <label class="header" id="action-secondarycar-label" for="action-secondarycar">Forsikre bil nummer 2 eller 3</label>
+                        <div class="wrapper">
+                            <p>
+                                Jeg skal forsikre en ny bil og kopiere bonus fra en aktiv forsikring i Sparebank&nbsp;1.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="radio-block">
+                    <input class="radio-input" type="radio" name="action" id="action-transfer" value="transfer">
+                    <div class="content">
+                        <label class="header" id="action-transfer-label" for="action-transfer">Bytte forsikringsselskap</label>
+                        <div class="wrapper">
+                            <p>
+                                Jeg skal flytte min forsikring fra et annet forsikringsselskap.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+
+        <h4>Example code</h4>
+        <code class="code-block">
+&lt;div class=&quot;radio-block&quot;&gt;
+    &lt;input class=&quot;radio-input&quot; type=&quot;radio&quot; name=&quot;action&quot; id=&quot;action-newcar&quot; value=&quot;newcar&quot; checked /&gt;
+    &lt;div class=&quot;content&quot;&gt;
+        &lt;label class=&quot;header&quot; id=&quot;action-newcar-label&quot; for=&quot;action-newcar&quot;&gt;Bytte forsikringsselskap&lt;/label&gt;
+        &lt;div class=&quot;wrapper&quot;&gt;
+            Jeg skal flytte min forsikring fra et annet forsikringsselskap.
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+        </code>
+
+    </div>
+
+    <div class="content-container -text-left">
+        <h2>General components</h2>
+        <p>Practical things to use throughout an application</p>
+    </div>
+
+    <div class="content-container -text-left">
+        <h3>Loading spinner</h3>
+        <p>
+            The spinner in itself is just a class that does not contain any positioning styles which gives much freedom.
+            It does hovever come in two sizes that can be mixed and used with other elements as one see fit.
+        </p>
+        <p class="small-text">LOADING SPINNER</p>
+        <p class="body-paragraph">
+            <span class="loading-spinner"></span> Loading...
+        </p>
+        <div class="small-text">LOADING SPINNER -LARGE (centered layout not included)</div>
+    </div>
+    <div class="content-container">
+        <div class="loading-spinner -large"></div>
+        <p>
+            Loading...
+        </p>
+    </div>
+    <div class="content-container -text-left">
+        <h4>Example code</h4>
+        <code class="code-block">
+&lt;div class=&quot;loading-spinner -large&quot;&gt;&lt;/div&gt;
+        </code>
     </div>
 </div>
 

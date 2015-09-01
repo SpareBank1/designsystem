@@ -15,3 +15,19 @@
 
 /* Other*/
 @import 'loading-spinner';
+
+input,
+select,
+textarea {
+  appearance: none;
+  /*
+      Yes, we have a plugins for vendor prefixes.
+      No, it doesn't work for appearance.
+
+      https://github.com/postcss/autoprefixer/commit/ee40885a5dc50932d34d5e9a579fe27ef32d78bb
+  */
+  -ms-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+}
