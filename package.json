@@ -25,7 +25,9 @@
   ],
   "files": [
     "fonts",
-    "less/*.less"
+    "less",
+    "examples",
+    "icons"
   ],
   "author": "Glenn A. Brownlee <glenn.brownlee@sparebank1.no>",
   "license": "ISC",
