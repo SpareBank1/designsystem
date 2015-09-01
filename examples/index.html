@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Felles Frontend Style guide</title>
+    <title>Felles Frontend Style Guide</title>
 
     <link rel="stylesheet" type="text/css" href="examples.css">
 
@@ -14,16 +14,16 @@
 <div id="appContainer">
 
     <div class="content-container">
-        <h1>Felles FrontEnd <span class="h3">Style guide</span></h1>
+        <h1>Felles Frontend Style Guide</h1>
         <p>
-            Inneholder generell styling for bruk utenom komponenter. F.eks. typografi, knapper, farger, o.l. <strong>FFE</strong> følger
+            Inneholder generell styling for bruk utenfor komponenter. F.eks. typografi, knapper, farger, o.l. <strong>FFE</strong> følger
             <a href="https://github.com/rstacruz/rscss">Reasonable System for CSS Stylesheet Structure</a> for å sørge for god organisasjon av CSS-koden.
         </p>
     </div>
 
     <div class="content-container">
-        <h2>Primary Color Palette</h2>
-        <p class="lead-paragraph">Used in core elements  - e.g. typography, buttons & boxes</p>
+        <h2>Primær Fargepalett</h2>
+        <p class="lead-paragraph">Brukt i basiselementer - f.eks. typografi, knapper og bokser.</p>
         <ul>
             <li class="color-patch">
                 <div class="color-box -blue-royal"></div>
@@ -89,8 +89,8 @@
     </div>
 
     <div class="content-container">
-        <h2>Secondary Color Palette</h2>
-        <p class="lead-paragraph">Used in secondary elements - Infographics, tools, illustrations</p>
+        <h2>Sekundær Fargepalett</h2>
+        <p class="lead-paragraph">Brukt i sekundærelementer - Infografikk, verktøy, illustrasjoner, o.l.</p>
         <ul>
             <li class="color-patch">
                 <div class="color-box -green"></div>
@@ -120,12 +120,12 @@
     </div>
 
     <div class="content-container -text-left">
-        <h2>Typography</h2>
-        <h3>Heading Strategy</h3>
-        <p>To allow for accessibility while maintaining flexibility in design, we have chosen to use the semantically correct
-        header tags (h1, h2, h3, etc.) combined with styling classes. This means that in a situation where structure and design diverge, it is possible to override the default header.</p>
+        <h2>Typografi</h2>
+        <h3>Overskriftstrategi</h3>
+        <p>Vi har valgt å bruke semtisk korrekte overskrifts-tagger kombinert med klasser for å kunne holde oss innenfor UU-krav og samtidig
+        ha fleksibilitet i design. Dette betyr at i de tilfeller hvor struktur og design fraviker er det mulig å overstyre default-overskriften.</p>
 
-        <h4>Example code</h4>
+        <h4>Eksempelkode</h4>
         <code class="code-block">
 &#x3C;h1 class=&#x22;h1&#x22;&#x3E;First Heading&#x3C;/h1&#x3E;
 &#x3C;p class=&#x22;lead-paragraph&#x22;&#x3E;Some leading text&#x3C;/p&#x3E;
@@ -183,12 +183,11 @@
     </div>
 
     <div class="content-container -text-left">
-        <h2>Input elements</h2>
-        <p>Buttons bla bla bla bla</p>
+        <h2>Input-elementer</h2>
     </div>
 
     <div class="content-container -text-left">
-        <h2>Regular buttons</h2>
+        <h3>Knapper</h3>
         <div class="small-text">ACTION BUTTON</div>
         <div class="button-group">
             <button class="action-button">Kjøp nå!</button>
@@ -229,7 +228,7 @@
             </button>
         </div>
 
-        <h4>Example code</h4>
+        <h4>Eksempelkode</h4>
         <code class="code-block">
 &lt;button class="action-button"&gt;Action button&lt;/button&gt;
 
@@ -247,11 +246,11 @@
     </div>
 
     <div class="content-container -text-left">
-        <h3>Input field</h3>
-        <p>Has three size variants -small, -medium and -large</p>
+        <h3>Input-felt</h3>
+        <p>Har tre størrelsesvarianter: -small, -medium og -large</p>
         <div class="input-group">
             <label id="ssn-label" class="form-label" for="ssn">
-                Norwegian social security number
+                Norsk fødselsnummer
             </label>
             <input  id="ssn"
                     class="input-field -medium"
@@ -259,11 +258,11 @@
                     type="text"
                     maxlength="11"
                     autocomplete="off">
-            <strong>(11 digits)</strong>
+            <strong>(11 siffer)</strong>
         </div>
 
 
-        <h4>Example code</h4>
+        <h4>Eksempelkode</h4>
         <code class="code-block">
 &lt;input  id=&quot;ssn&quot;
     class=&quot;input-field -medium&quot;
@@ -276,21 +275,20 @@
 
     <div class="content-container -text-left">
         <h3>Select box</h3>
-        <p>Nothing much to say bout this</p>
         <div class="input-group">
             <label id="month-label" class="form-label" for="month">
-                Choose month
+                Velg måned
             </label>
             <select class="select-box" id="month" >
-                <option value="0">January</option>
-                <option value="1">February</option>
+                <option value="0">Januar</option>
+                <option value="1">Februar</option>
                 <option value="2">Mars</option>
                 <option value="3">April</option>
             </select>
         </div>
 
 
-        <h4>Example code</h4>
+        <h4>Eksempelkode</h4>
         <code class="code-block">
 &lt;select class=&quot;select-box&quot; id=&quot;month&quot; &gt;
     &lt;option value=&quot;0&quot;&gt;January&lt;/option&gt;
@@ -303,7 +301,7 @@
 
     <div class="content-container -text-left">
         <h3>Check box</h3>
-        <p>Used when there are several possible options, have a regular and an -inline variant</p>
+        <p>Brukes når det er flere mulige valg. Har en standard og en -inline variant.</p>
         <div class="input-group">
             <label id="checkbox-ibf-label" class="form-label" for="checkbox-ibf1">
                 What colors do you like on unicorns?
@@ -358,7 +356,7 @@
             </fieldset>
         </div>
 
-        <h4>Example code</h4>
+        <h4>Eksempelkode</h4>
         <code class="code-block">
 &lt;input  class=&quot;input-field&quot;
     type=&quot;checkbox&quot;
@@ -372,7 +370,7 @@
 
     <div class="content-container -text-left">
         <h3>Radio button</h3>
-        <p>A standard type of radio button. They have a regular and an -inline variant</p>
+        <p>En standard type radio-knapp. Har en standard og en -inline variant.</p>
         <div class="input-group">
             <label id="radio-ibf-label" class="form-label" for="radio-ibf1">
                 Which unicorn do you like most?
@@ -426,7 +424,7 @@
                 <label id="unicornwings-3-label" class="radio-button -inline" for="unicornwings-3">I do not know!</label>
             </fieldset>
         </div>
-        <h4>Example code</h4>
+        <h4>Eksempelkode</h4>
         <code class="code-block">
 &lt;input  class=&quot;radio-input&quot;
     type=&quot;radio&quot;
@@ -441,7 +439,7 @@
 
     <div class="content-container -text-left">
         <h3>Radio switch</h3>
-        <p>Intended for cases with only two mutually exclusive options</p>
+        <p>Brukes der det kun er to motstridende valg.</p>
         <div class="input-group">
             <label id="switch-ibf-label" class="form-label" for="switch-ibf1">
                 Do you like unicorns at all?
@@ -464,7 +462,7 @@
             </fieldset>
         </div>
 
-        <h4>Example code</h4>
+        <h4>Eksempelkode</h4>
         <code class="code-block">
 &lt;input  class=&quot;radio-input&quot;
     type=&quot;radio&quot;
@@ -479,7 +477,7 @@
 
     <div class="content-container -text-left">
         <h3>Radio block</h3>
-        <p>Radio blocks are perfect when there is a great need to present contextual relevant information to the user regarding the current choice without overwhelming them</p>
+        <p>Radio blocks brukes når det er viktig å presentere kontekstuelt relevant informasjon om valgene til brukeren uten å overvelde.</p>
         <div class="input-group">
             <label id="block-ibf-label" class="form-label" for="block-ibf1">
                 Hva ønsker du å gjøre?
@@ -523,7 +521,7 @@
             </fieldset>
         </div>
 
-        <h4>Example code</h4>
+        <h4>Eksempelkode</h4>
         <code class="code-block">
 &lt;div class=&quot;radio-block&quot;&gt;
     &lt;input class=&quot;radio-input&quot; type=&quot;radio&quot; name=&quot;action&quot; id=&quot;action-newcar&quot; value=&quot;newcar&quot; checked /&gt;
@@ -539,15 +537,15 @@
     </div>
 
     <div class="content-container -text-left">
-        <h2>General components</h2>
-        <p>Practical things to use throughout an application</p>
+        <h2>Generelle komponenter</h2>
+        <p>Praktiske elementer å bruke forskjellige steder i en applikasjon</p>
     </div>
 
     <div class="content-container -text-left">
         <h3>Loading spinner</h3>
         <p>
-            The spinner in itself is just a class that does not contain any positioning styles which gives much freedom.
-            It does hovever come in two sizes that can be mixed and used with other elements as one see fit.
+            Spinneren er kun en klasse som ikke inneholder noen posisjoneringskode; dette gir mye fleksibilitet.
+            Den finnes i to størrelser og kan blandes med andre elementer.
         </p>
         <p class="small-text">LOADING SPINNER</p>
         <p class="body-paragraph">
@@ -562,7 +560,7 @@
         </p>
     </div>
     <div class="content-container -text-left">
-        <h4>Example code</h4>
+        <h4>Eksempelkode</h4>
         <code class="code-block">
 &lt;div class=&quot;loading-spinner -large&quot;&gt;&lt;/div&gt;
         </code>
