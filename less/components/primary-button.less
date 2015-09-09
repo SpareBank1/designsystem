@@ -1,74 +1,79 @@
 .primary-button {
-  font-family: 'MuseoSans-500', arial, sans-serif;
-  font-size: 18px;
-  text-decoration: none;
-  cursor: pointer;
-  text-align: center;
-  vertical-align: middle;
-  padding: 0 30px;
-  border-radius: 4px;
-  color: @white;
-  background-color: @blue-flat;
-  border: 2px solid transparent;
-  display: block;
-  line-height: 41px;
-  width: 100%;
-  overflow: hidden;
-   .shadow-buttons();
-  transition: all 0.2s;
-  outline: none;
-
-  &:focus {
-    box-shadow: 0 0 0 2px @blue-focus;
-    background-color: darken(@blue-flat,5%);
-  }
-
-  &:hover {
-    .shadow-buttons-hover();
-    background-color: darken(@blue-flat,5%);
-  }
-  &:active {
-    .shadow-buttons-active();
-    background-color: darken(@blue-flat,10%);
-  }
-
-  > .label {
+    font-family: 'MuseoSans-500', arial, sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0 30px;
+    border-radius: 4px;
+    color: @white;
+    background-color: @blue-flat;
+    border: 2px solid transparent;
+    display: block;
+    line-height: 41px;
+    width: 100%;
     overflow: hidden;
-    position: relative;
+    .shadow-buttons();
+    transition: all 0.2s;
+    outline: none;
 
-    > .label-text {
-      position: relative;
-      bottom: 0;
-      transition: bottom 0.2s;
+    &:focus {
+        box-shadow: 0 0 0 2px @blue-focus;
+        background-color: darken(@blue-flat,5%);
     }
 
-    > .label-spinner {
-      .sb1-spinner(@white,22px);
-      position: absolute;
-      bottom: -40px;
-      left: ~"calc(50% - 11px)";
-      transition: bottom 0.2s;
+    &:hover {
+        .shadow-buttons-hover();
+        background-color: darken(@blue-flat,5%);
     }
-  }
 
-  &.-loading {
-    pointer-events: none;
-    background-color: darken(@blue-royal-light-wcag,10%);
+    &:active {
+        .shadow-buttons-active();
+        background-color: darken(@blue-flat,10%);
+    }
+
     > .label {
-      > .label-text {
-        bottom: 50px;
-      }
+        overflow: hidden;
+        position: relative;
 
-      > .label-spinner {
-        bottom: 0;
-      }
+        > .label-text {
+            position: relative;
+            bottom: 0;
+            transition: bottom 0.2s;
+        }
+
+        > .label-spinner {
+            .sb1-spinner(@white,22px);
+            opacity: 0;
+            position: absolute;
+            bottom: -40px;
+            left: ~"calc(50% - 11px)";
+            transition: bottom 0.2s;
+        }
     }
-  }
+
+    &.-loading {
+        pointer-events: none;
+        background-color: darken(@blue-royal-light-wcag,10%);
+
+        > .label {
+
+            > .label-text {
+                bottom: 50px;
+            }
+
+            > .label-spinner {
+                opacity: 1;
+                bottom: 0;
+            }
+        }
+    }
 }
 
 @media screen and (min-width: @breakpoint-sm) {
-  .primary-button {
-    display: inline-block;
-    width: auto;
-  }
+    .primary-button {
+        display: inline-block;
+        width: auto;
+    }
 }
