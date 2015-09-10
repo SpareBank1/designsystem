@@ -543,6 +543,82 @@
     </div>
 
     <div class="content-container -text-left">
+        <h2>Skjemavalidering</h2>
+        <p>Design for feilmeldinger i skjema</p>
+    </div>
+
+    <div class="content-container -text-left">
+        <h3>Oppsummering av feil i skjema</h3>
+        <p class="body-paragraph">
+            Det skal plasseres en oppsummering av skjemafeil over skjemaet. Det skal også scrolles
+            til dette elemementet når valideringen skjer. Normalt vil dette være etter submit av skjemaet.
+        </p>
+
+        <div class="error-message-summary">
+            <span class="icon icon-info-error"></span>
+            <span class="title">Du må rette opp disse feilene i skjemaet</span>
+            <ul class="summary-list">
+                <li>Vennligst velg en bonus</li>
+                <li>Vennligst fyll inn "Fødselsnummer"</li>
+                <li>Vennligst fyll inn "Fornavn"</li>
+                <li>Vennligst fyll inn "Etternavn"</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="content-container -text-left">
+        <h3>Feilmeldinger på skjemaelementene</h3>
+        <p class="body-paragraph">
+            Alle skjemaelementer må wrappes i en 'input-group'. Denne har en -error-variant som styler alle skjemaelementer
+            med passende utseende for feil.
+        </p>
+
+        <div class="input-group -error">
+            <label for="ssn-invalid" class="form-label">Fødselsnummer</label>
+            <input class="input-field" name="ssn" id="ssn-invalid" type="tel" maxlength="11" autocomplete="off" aria-labelledby="ssn-label">
+            <div class="info-message -error">Vennligst fyll inn "Fødselsnummer"</div>
+        </div>
+
+        <div class="input-group -error">
+            <label class="form-label" for="radio-inline-ibf1-invalid">
+                Are there unicorns with wings?
+            </label>
+            <fieldset id="radio-inline-ibf1-invalid">
+                <input  class="radio-input"
+                        type="radio"
+                        name="unicornwings"
+                        value="yes"
+                        id="unicornwings-1-invalid"
+                        checked>
+                <label class="radio-button -inline" for="unicornwings-1-invalid">Yes</label>
+                <input  class="radio-input"
+                        type="radio"
+                        name="unicornwings"
+                        value="no"
+                        id="unicornwings-2-invalid">
+                <label class="radio-button -inline" for="unicornwings-2-invalid">No</label>
+                <input  class="radio-input"
+                        type="radio"
+                        name="unicornwings"
+                        value="dunno"
+                        id="unicornwings-3-invalid">
+                <label class="radio-button -inline" for="unicornwings-3-invalid">I do not know!</label>
+            </fieldset>
+            <div class="info-message -error">Ta våre fabeldyr på alvor.</div>
+        </div>
+
+        <h4>Eksempelkode</h4>
+        <code class="code-block">
+&lt;div class=&quot;input-group -error&quot;&gt;
+    &lt;label for=&quot;ssn-invalid&quot; class=&quot;form-label&quot;&gt;F&#248;dselsnummer&lt;/label&gt;
+    &lt;input class=&quot;input-field&quot; id=&quot;ssn-invalid&quot; type=&quot;tel&quot; maxlength=&quot;11&quot; aria-labelledby=&quot;ssn-label&quot;&gt;
+    &lt;div class=&quot;info-message -error&quot;&gt;Vennligst fyll inn &quot;F&#248;dselsnummer&quot;&lt;/div&gt;
+&lt;/div&gt;
+        </code>
+    </div>
+
+    <div class="content-container -text-left">
         <h2>Generelle komponenter</h2>
         <p>Praktiske elementer å bruke forskjellige steder i en applikasjon</p>
     </div>
