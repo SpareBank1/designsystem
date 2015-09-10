@@ -37,3 +37,13 @@ Dette kan f.eks. gjøres via en Grunt task.
 Klargjør stilguide ved å kjøre følgende kommando:
 
     npm run examples
+
+
+##Publisering
+
+Ved lansering av ny versjon må disse stegen følges (`minor` og `major` er også gyldige valg):
+
+- Oppdatere `CHANGELOG.md`
+- `npm version patch`
+- `git push && git push --tags`
+- `npm publish`
