@@ -2,9 +2,7 @@
 
 ## v2.0.3 (10.09.2015)
 
-### Bugs
-
-* Spinner på knapper er ikke lenger alltid synlig på Chrome på Android
+Spinner på knapper er ikke lenger alltid synlig på Chrome på Android
 
 
 ## v2.0.2 (08.09.2015)
