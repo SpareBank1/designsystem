@@ -1,0 +1,54 @@
+.error-message-summary {
+    color: @orange-wcag;
+    border-top: 2px solid @grey-light;
+    border-bottom: 2px solid @grey-light;
+    padding: 20px 0;
+    text-align: left;
+
+    > .title {
+        padding-left: 5px;
+        font-size: 18px;
+        line-height: 26px;
+        margin-bottom: 10px;
+        font-family: "MuseoSansRounded-700", arial, sans-serif;
+    }
+
+    > .icon {
+        height: 30px;
+        width: 30px;
+    }
+
+
+    > ul {
+        font-size: 16px;
+        line-height: 2;
+        list-style: disc;
+        margin-top: 10px;
+
+        > li {
+            margin-left: 30px;
+        }
+    }
+}
+
+
+@media screen and (min-width: @breakpoint-md) {
+
+    .error-message-summary {
+        border: 2px solid @grey-light;
+        padding: 30px 60px;
+        max-width: 620px;
+        margin: auto;
+
+
+        > .title {
+            font-size: 20px;
+            line-height: 26px;
+            padding-left: 5px;
+        }
+        > .icon {
+            height: 50px;
+            width: 50px;
+        }
+    }
+}
