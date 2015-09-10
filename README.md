@@ -1,11 +1,11 @@
 #Felles Front End Framework
 ##Intro
-Inneholder generell styling for bruk utenom komponenter. F.eks. typografi, knapper, farger, o.l. Vi følger 
-[Reasonable System for CSS Stylesheet Structure](https://github.com/rstacruz/rscss) for å sørge for god organisasjon av CSS-koden.
+Inneholder generell styling for bruk utenom komponenter. F.eks. typografi, knapper, farger, o.l. Vi fÃ¸lger
+[Reasonable System for CSS Stylesheet Structure](https://github.com/rstacruz/rscss) for Ã¥ sÃ¸rge for god organisasjon av CSS-koden.
 
 ##Kom i gang
 
-Konfigurer npm til å bruke SB1's lokale og private repo (proxy med cache til NPM public).
+Konfigurer npm til Ã¥ bruke SB1's lokale og private repo (proxy med cache til NPM public).
 
     npm set registry http://ntadc1.test.sparebank1.no:4873
 
@@ -22,10 +22,10 @@ Modulen inneholder LESS-filer som kan importeres direkte fra node_modules til pr
 Det er forventet at det defineres en LESS-variabel som inneholder rot-pathen til applikasjonen.
 
     @base-url: '/my-project/app/';
-    
-SpareBank 1's profil-font er også inkludert i OpenType format og må kopieres fra node_modules.
-Dette kan f.eks. gjøres via en Grunt task.
- 
+
+SpareBank 1's profil-font er ogsÃ¥ inkludert i OpenType format og mÃ¥ kopieres fra node_modules.
+Dette kan f.eks. gjÃ¸res via en Grunt task.
+
     copy: {
         fonts: {
             files: [
@@ -33,7 +33,7 @@ Dette kan f.eks. gjøres via en Grunt task.
             ]
         }
     }
-    
-Klargjør stilguide ved å kjøre følgende kommando:
-    
+
+KlargjÃ¸r stilguide ved Ã¥ kjÃ¸re fÃ¸lgende kommando:
+
     npm run examples
