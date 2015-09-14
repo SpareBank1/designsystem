@@ -1,0 +1,37 @@
+.info-message {
+    font-size: 16px;
+    color: @blue-royal;
+    margin: 5px 0 10px;
+    display: none;
+
+    &:before {
+        content: 'i';
+        color: @white;
+        background-color: @blue-royal;
+        border-radius: 50%;
+        width: 18px;
+        height: 18px;
+        display: inline-block;
+        line-height: 19px;
+        margin-right: 5px;
+        text-align: center;
+    }
+
+    &.-error {
+        color: @orange-wcag;
+
+        &:before {
+            content: '!';
+            background-color: @orange-wcag;
+        }
+    }
+
+    &.-success {
+        color: @green-wcag;
+
+        &:before {
+            content: '\2713';
+            background-color: @green-wcag;
+        }
+    }
+}

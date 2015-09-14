@@ -1,0 +1,32 @@
+.input-group {
+    position: relative;
+
+    > p {
+        margin-bottom: 20px;
+    }
+
+    &.-error > input,
+    &.-error > select,
+    &.-error > input-typeahead > .container > .control {
+        border-color: @orange-wcag;
+        color: @orange-wcag;
+        border-style: solid;
+
+        &:focus {
+            outline-color: @white;
+        }
+    }
+
+    &.-error > fieldset > .radio-input:checked + .radio-button:before {
+        border-color: @orange-wcag;
+    }
+
+    &.-error > .info-message.-error {
+        display: block;
+
+        &:before {
+            display: inline-block;
+        }
+    }
+
+}
