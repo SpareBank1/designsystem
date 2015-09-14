@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.0.5 (14.09.2015)
+
+Legger til button-group for knapp-layout. Legger til form-label for generelle skjema-labels.
+
 ## v2.0.4 (14.09.2015)
 
 Valideringsstyling inkludert. Checkbokser krever nå en `hidden-checkbox`-klasse i tillegg til label. 
