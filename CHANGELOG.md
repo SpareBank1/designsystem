@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.0.4 (14.09.2015)
+
+Valideringsstyling inkludert. Checkbokser krever n� en `hidden-checkbox`-klasse i tillegg til label. 
+
 ## v2.0.3 (10.09.2015)
 
 Spinner på knapper er ikke lenger alltid synlig på Chrome på Android
