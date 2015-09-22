@@ -1,6 +1,6 @@
 {
-  "name": "sb1-ffe-framework",
-  "version": "2.0.5",
+  "name": "ffe-core",
+  "version": "0.0.0",
   "description": "Rammeverk for Felles Front End",
   "less": "ffe.less",
   "main": "index.js",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git@stash.intern.sparebank1.no:22/ffe/sb1-ffe-framework.git"
+    "url": "ssh://git@stash.intern.sparebank1.no:22/ffe/ffe-core.git"
   },
   "keywords": [
     "frontend",
