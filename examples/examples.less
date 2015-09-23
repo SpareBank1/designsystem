@@ -16,7 +16,7 @@
         margin: 0 auto;
     }
 
-    &.-color-info {
+    &.-subtle {
       background-color: @sand-25;
       width: 100%;
       max-width: none;
@@ -71,12 +71,45 @@
     .color-box.-red                     { background-color: @red; }
 }
 
+.collapse-link {
+    color: @blue-royal-light;
+    cursor: pointer;
+    font-family: "MuseoSansRounded-500", Arial, sans-serif;
+
+    &:before {
+        display: inline-block;
+        content: '+';
+        border: solid 2px @blue-royal-light;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+        padding: 0 5px;
+        color: @blue-royal-light;
+        font-size: 28px;
+        line-height: 23px;
+        transition: transform 0.2s;
+    }
+
+    &.-open:before {
+        transform: rotateZ(45deg);
+    }
+}
+
+.collapse-link + .code-block {
+    display: none;
+}
+
+.collapse-link.-open + .code-block {
+    display: block;
+}
+
 .code-block {
     font-family: consolas, menlo, monaco, monospace;
-    font-size: 12px;
+    font-size: 14px;
     background-color: @grey-light-bg;
-    border: solid 1px @grey-light;
-    padding: 0 20px;
+    border-left: solid 10px lightgray;
+    padding: 40px;
     white-space: pre;
     line-height: 1;
     display: block;
@@ -112,4 +145,38 @@
   &:extend(h4);
   display: block;
   margin-bottom: 1rem;
+}
+
+// Navigation
+.navigation-bar {
+    text-align: center;
+    border-top: solid 1px @grey-light;
+    border-bottom: solid 1px @grey-light;
+
+    > .link {
+        display: inline-block;
+        margin: 0 50px;
+        padding: 10px 0;
+        font-family: "MuseoSansRounded-500", arial, sans-serif;
+    }
+
+    > .link.-active {
+        border-bottom: solid 4px @blue-royal;
+        color: @blue-royal;
+        padding-bottom: 6px;
+        font-family: "MuseoSans-500", arial, sans-serif;
+    }
+}
+
+// Typography
+.page-title {
+    padding-top: 10px;
+}
+
+h1, h2, h3, h4, h5,
+.h1,.h2,.h3,.h4,.h5,
+.small-text, .micro-text, .lead-paragraph, .body-text {
+    &.-spaced {
+        margin-bottom: 40px;
+    }
 }
