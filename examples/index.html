@@ -11,82 +11,77 @@
 </head>
 <body>
 
-<section id="appContainer">
-
-    <section class="content-container">
+    <header class="layout-container">
         <h1>Felles Frontend Style Guide</h1>
-        <p class="lead-paragraph">Inneholder generell styling for bruk utenfor komponenter. F.eks. typografi, knapper, farger, o.l. <strong>FFE</strong> følger
+        <p class="lead-paragraph">Inneholder generell styling for bruk utenfor komponenter. F.eks. typografi, knapper, farger, o.l. FFE følger
             <a href="https://github.com/rstacruz/rscss">Reasonable System for CSS Stylesheet Structure</a> for å sørge for god organisasjon av CSS-koden.
         </p>
-    </section>
+    </header>
 
-    <nav>
+    <nav class="layout-container -lg">
         <ul class="navigation-bar">
-            <li class="link -active">Typografi</li>
-            <li class="link">Farger</li>
-            <li class="link">Skjema</li>
-            <li class="link">Knapper</li>
+            <li class="link -active"><a href="index.html">Typografi</a></li>
+            <li class="link"><a href="colors.html">Farger</a></li>
+            <li class="link"><a href="form.html">Skjema</a></li>
+            <li class="link"><a href="buttons.html">Knapper</a></li>
         </ul>
     </nav>
 
-    <div class="content-container">
+    <div class="layout-container">
         <h2 class="page-title">Typografi</h2>
     </div>
 
-    <div class="content-container -text-left">
+    <div class="layout-container -text-left">
         <h3>Overskriftstrategi</h3>
         <p>Vi har valgt å bruke semtisk korrekte overskrifts-tagger kombinert med klasser for å kunne holde oss innenfor UU-krav og samtidig
         ha fleksibilitet i design. Dette betyr at i de tilfeller hvor struktur og design fraviker er det mulig å overstyre default-overskriften.</p>
     </div>
 
-    <div class="content-container -subtle">
-        <div class="content-container -wrapped -text-left">
+    <div class="layout-container -subtle">
+        <div class="layout-container -wrapped -text-left">
             <div class="small-text">HEADING 1</div>
-            <p class="h1 -spaced">Integer mollis ut est in mollis.</p>
+            <p class="h1 -spaced">Litt sparing er bedre enn...</p>
 
             <div class="small-text">HEADING 2</div>
-            <p class="h2 -spaced">Integer mollis ut est in mollis.</p>
+            <p class="h2 -spaced">Ok, neste måned skal jeg spare!</p>
 
             <div class="small-text">HEADING 3</div>
-            <p class="h3 -spaced">Integer mollis ut est in mollis.</p>
+            <p class="h3 -spaced">Bruker du sparepengene innen måneden er slutt?</p>
 
             <div class="small-text">HEADING 4</div>
-            <p class="h4 -spaced">Integer mollis ut est in mollis.</p>
+            <p class="h4 -spaced">Ofte stilte spørsmål</p>
 
             <div class="small-text">HEADING 5</div>
-            <p class="h5 -spaced">Integer mollis ut est in mollis.</p>
+            <p class="h5 -spaced">Er det en grense for hvor lite jeg kan spare når jeg bruker kortet?</p>
 
             <div class="small-text">LEAD PARAGRAPH</div>
-            <p class="lead-paragraph -spaced">Integer <em>mollis</em> ut est in <em>mollis</em>. Morbi sodales ex nec orci imperdiet auctor.
-                Nam diam enim, <a href="#">gravida id libero sit amet</a>, placerat fringilla mi. <strong>Nullam consequat</strong> metus nec lacinia consectetur.
-                <strong>Nullam filibus</strong> et odio eu congue. Aliquam sit amet gravida massa. Proin id tortor vitae nulla interdum varius.
-                Integer <em>eget sodales</em> ante. Pellentesque tempor pulvinar pretium. Morbi vestibulum nisi vel maximus cursus.
-                Duis at lorem massa.</p>
+            <p class="lead-paragraph -spaced">
+                Det kan være vanskelig å spare, men å bruke penger går ofte helt av seg selv. Men, hva hvis du kunne spart litt
+                hver gang du bruker kortet? Da hadde det kanskje vært litt lettere?
+            </p>
 
             <div class="small-text">BODY TEXT</div>
-            <p class="body-text -spaced">Integer <em>mollis</em> ut est in <em>mollis</em>. Morbi sodales ex nec orci imperdiet auctor.
-                Nam diam enim, <a href="#">gravida id libero sit amet</a>, placerat fringilla mi. <strong>Nullam consequat</strong> metus nec lacinia consectetur.
-                <strong>Nullam filibus</strong> et odio eu congue. Aliquam sit amet gravida massa. Proin id tortor vitae nulla interdum varius.
-                Integer <em>eget sodales</em> ante. Pellentesque tempor pulvinar pretium. Morbi vestibulum nisi vel maximus cursus.
-                Duis at lorem massa.</p>
+            <p class="body-text">
+                De fleste av oss legger ikke merke til alle kronene som fyker ut av kontoen, og plutselig står vi igjen med litt lite
+                mot slutten av måneden. Da er det lett å ta av sparepengene...
+            </p>
+            <p class="body-text  -spaced">
+                Visste du at du kan ta bort sparekontoen fra oversikten i nettbanken? Da er det lettere å ikke bli fristet
+                til å bruke penger du sparer.
+            </p>
 
             <div class="small-text">SMALL TEXT</div>
-            <p class="small-text -spaced">Integer <em>mollis</em> ut est in <em>mollis</em>. Morbi sodales ex nec orci imperdiet auctor.
-                Nam diam enim, <a href="#">gravida id libero sit amet</a>, placerat fringilla mi. <strong>Nullam consequat</strong> metus nec lacinia consectetur.
-                <strong>Nullam filibus</strong> et odio eu congue. Aliquam sit amet gravida massa. Proin id tortor vitae nulla interdum varius.
-                Integer <em>eget sodales</em> ante. Pellentesque tempor pulvinar pretium. Morbi vestibulum nisi vel maximus cursus.
-                Duis at lorem massa.</p>
+            <p class="small-text -spaced">
+                Om du velger å spare i prosent eller et fast beløp, er minste beløp 2 kroner per
+                hendelse. all sparing vil være i hele kroner. vi sjekker at det er dekning for beløpet før spareingen utføres.
+            </p>
 
             <div class="small-text">MICRO TEXT</div>
-            <p class="micro-text">Integer <em>mollis</em> ut est in <em>mollis</em>. Morbi sodales ex nec orci imperdiet auctor.
-                Nam diam enim, <a href="#">gravida id libero sit amet</a>, placerat fringilla mi. <strong>Nullam consequat</strong> metus nec lacinia consectetur.
-                <strong>Nullam filibus</strong> et odio eu congue. Aliquam sit amet gravida massa. Proin id tortor vitae nulla interdum varius.
-                Integer <em>eget sodales</em> ante. Pellentesque tempor pulvinar pretium. Morbi vestibulum nisi vel maximus cursus.
-                Duis at lorem massa.</p>
+            <p class="micro-text">&copy; SpareBank 1 | Personvern og sikkerhet | Informasjonskapsler</p>
         </div>
     </div>
 
-    <section class="content-container -text-left">
+    <section class="layout-container -text-left">
         <div class="collapse-link">Vis kode</div>
         <code class="code-block">&#x3C;h1 class=&#x22;h1&#x22;&#x3E;First Heading&#x3C;/h1&#x3E;
 &#x3C;p class=&#x22;lead-paragraph&#x22;&#x3E;Some leading text&#x3C;/p&#x3E;
@@ -95,479 +90,8 @@
 &#x3C;p&#x3E;This one is an h2 with h3 styling.&#x3C;/p&#x3E;</code>
     </section>
 
-    <div class="content-container -text-left">
-        <h2>Input-elementer</h2>
-    </div>
 
-    <div class="content-container -text-left">
-        <h3>Knapper</h3>
-        <div class="small-text">ACTION BUTTON</div>
-        <div class="button-group">
-            <button class="action-button">Kjøp nå!</button>
-            <button class="action-button -loading">
-            <span class="label">
-                <span class="label-text">Kjøp nå!</span>
-                <span class="label-spinner"></span>
-            </span>
-            </button>
-        </div>
-
-        <div class="small-text">PRIMARY BUTTON</div>
-        <div class="button-group">
-            <button class="primary-button">Neste</button>
-            <button class="primary-button -loading">
-            <span class="label">
-                <span class="label-text">NEste</span>
-                <span class="label-spinner"></span>
-            </span>
-            </button>
-        </div>
-
-        <div class="small-text">SECONDARY BUTTON</div>
-        <div class="button-group">
-            <button class="secondary-button">Avbryt</button>
-            <button class="secondary-button -loading">
-            <span class="label">
-                <span class="label-text">Avbryt</span>
-                <span class="label-spinner"></span>
-            </span>
-            </button>
-        </div>
-
-        <div class="small-text">SHORTCUT BUTTON</div>
-        <div class="button-group">
-            <button class="shortcut-button">Se dine ting
-                <span class="icon-chevron -right -light-blue"></span>
-            </button>
-        </div>
-
-        <h4>Eksempelkode</h4>
-        <code class="code-block">
-&lt;button class="action-button"&gt;Action button&lt;/button&gt;
-
-&lt;button class="action-button -loading"&gt;
-    &lt;span class="label"&gt;
-        &lt;span class="label-text"&gt;Action button&lt;/span&gt;
-        &lt;span class="label-spinner"&gt;&lt;/span&gt;
-    &lt;/span&gt;
-&lt;/button&gt;
-
-&lt;button class="action-button -loading"&gt;Se dine ting
-    &lt;span class="icon-chevron -right -light-blue"&gt;&lt;/span&gt;
-&lt;/button&gt;
-        </code>
-    </div>
-
-    <div class="content-container -text-left">
-        <h3>Input-felt</h3>
-        <p>Har tre størrelsesvarianter: -small, -medium og -large</p>
-        <div class="input-group">
-            <label id="ssn-label" class="form-label" for="ssn">
-                Norsk fødselsnummer
-            </label>
-            <input  id="ssn"
-                    class="input-field -medium"
-                    name="ssn"
-                    type="text"
-                    maxlength="11"
-                    autocomplete="off">
-            <strong>(11 siffer)</strong>
-        </div>
-
-
-        <h4>Eksempelkode</h4>
-        <code class="code-block">
-&lt;input  id=&quot;ssn&quot;
-    class=&quot;input-field -medium&quot;
-    name=&quot;ssn&quot;
-    type=&quot;text&quot;
-    maxlength=&quot;11&quot;
-    autocomplete=&quot;off&quot;&gt;
-        </code>
-    </div>
-
-    <div class="content-container -text-left">
-        <h3>Select box</h3>
-        <div class="input-group">
-            <label id="month-label" class="form-label" for="month">
-                Velg måned
-            </label>
-            <select class="select-box" id="month" >
-                <option value="0">Januar</option>
-                <option value="1">Februar</option>
-                <option value="2">Mars</option>
-                <option value="3">April</option>
-            </select>
-        </div>
-
-
-        <h4>Eksempelkode</h4>
-        <code class="code-block">
-&lt;select class=&quot;select-box&quot; id=&quot;month&quot; &gt;
-    &lt;option value=&quot;0&quot;&gt;January&lt;/option&gt;
-    &lt;option value=&quot;1&quot;&gt;February&lt;/option&gt;
-    &lt;option value=&quot;2&quot;&gt;Mars&lt;/option&gt;
-    &lt;option value=&quot;3&quot;&gt;April&lt;/option&gt;
-&lt;/select&gt;
-        </code>
-    </div>
-
-    <div class="content-container -text-left">
-        <h3>Check box</h3>
-        <p>Brukes når det er flere mulige valg. Har en standard og en -inline variant.</p>
-        <div class="input-group">
-            <label id="checkbox-ibf-label" class="form-label" for="checkbox-ibf1">
-                What colors do you like on unicorns?
-            </label>
-            <fieldset id="checkbox-ibf1">
-                <input  class="hidden-checkbox"
-                        type="checkbox"
-                        name="unicorncolors"
-                        value="yellow"
-                        id="unicorncolors-1"
-                        checked>
-                <label class="check-box" for="unicorncolors-1">Yellow</label>
-                <input  class="hidden-checkbox"
-                        type="checkbox"
-                        name="unicorncolors"
-                        value="purple"
-                        id="unicorncolors-2">
-                <label class="check-box" for="unicorncolors-2">Purple</label>
-                <input  class="hidden-checkbox"
-                        type="checkbox"
-                        name="unicorncolors"
-                        value="white"
-                        id="unicorncolors-3">
-                <label class="check-box" for="unicorncolors-3">White</label>
-            </fieldset>
-        </div>
-
-        <div class="input-group">
-            <label id="checkbox-inline-ibf-label" class="form-label" for="checkbox-inline-ibf1">
-                Favorite unicorn foods?
-            </label>
-            <fieldset id="checkbox-inline-ibf1">
-                <input  class="hidden-checkbox"
-                        type="checkbox"
-                        name="unicornfood"
-                        value="apples"
-                        id="unicornfood-1"
-                        checked>
-                <label class="check-box -inline" for="unicornfood-1">Apples</label>
-                <input  class="hidden-checkbox"
-                        type="checkbox"
-                        name="unicornfood"
-                        value="banans"
-                        id="unicornfood-2">
-                <label class="check-box -inline" for="unicornfood-2">Bananas</label>
-                <input  class="hidden-checkbox"
-                        type="checkbox"
-                        name="unicornfood"
-                        value="oatmeal"
-                        id="unicornfood-3">
-                <label class="check-box -inline" for="unicornfood-3">Oatmeal</label>
-            </fieldset>
-        </div>
-
-        <h4>Eksempelkode</h4>
-        <code class="code-block">
-&lt;input  class=&quot;hidden-checkbox&quot;
-    type=&quot;checkbox&quot;
-    name=&quot;unicornfood&quot;
-    value=&quot;apples&quot;
-    id=&quot;unicornfood-1&quot;
-    checked&gt;
-&lt;label class=&quot;check-box -inline&quot; for=&quot;unicornfood-1&quot;&gt;Apples&lt;/label&gt;
-        </code>
-    </div>
-
-    <div class="content-container -text-left">
-        <h3>Radio button</h3>
-        <p>En standard type radio-knapp. Har en standard og en -inline variant.</p>
-        <div class="input-group">
-            <label id="radio-ibf-label" class="form-label" for="radio-ibf1">
-                Which unicorn do you like most?
-            </label>
-            <fieldset id="radio-ibf1">
-                <input  class="radio-input"
-                        type="radio"
-                        name="unicorns"
-                        value="applejack"
-                        id="unicorns-1"
-                        checked>
-                <label class="radio-button" for="unicorns-1">Applejack</label>
-                <input  class="radio-input"
-                        type="radio"
-                        name="unicorns"
-                        value="starlet"
-                        id="unicorns-2">
-                <label class="radio-button" for="unicorns-2">Starlet</label>
-                <input  class="radio-input"
-                        type="radio"
-                        name="unicorns"
-                        value="trixie"
-                        id="unicorns-3">
-                <label class="radio-button" for="unicorns-3">Trixie</label>
-            </fieldset>
-        </div>
-
-        <div class="input-group">
-            <label id="radio-inline-ibf-label" class="form-label" for="radio-inline-ibf1">
-                Are there unicorns with wings?
-            </label>
-            <fieldset id="radio-inline-ibf1">
-                <input  class="radio-input"
-                        type="radio"
-                        name="unicornwings"
-                        value="yes"
-                        id="unicornwings-1"
-                        checked>
-                <label class="radio-button -inline" for="unicornwings-1">Yes</label>
-                <input  class="radio-input"
-                        type="radio"
-                        name="unicornwings"
-                        value="no"
-                        id="unicornwings-2">
-                <label class="radio-button -inline" for="unicornwings-2">No</label>
-                <input  class="radio-input"
-                        type="radio"
-                        name="unicornwings"
-                        value="dunno"
-                        id="unicornwings-3">
-                <label class="radio-button -inline" for="unicornwings-3">I do not know!</label>
-            </fieldset>
-        </div>
-        <h4>Eksempelkode</h4>
-        <code class="code-block">
-&lt;input  class=&quot;radio-input&quot;
-    type=&quot;radio&quot;
-    name=&quot;unicornwings&quot;
-    value=&quot;yes&quot;
-    id=&quot;unicornwings-1&quot;
-    checked&gt;
-&lt;label class=&quot;radio-button -inline&quot; for=&quot;unicornwings-1&quot;&gt;Yes&lt;/label&gt;
-        </code>
-    </div>
-
-
-    <div class="content-container -text-left">
-        <h3>Radio switch</h3>
-        <p>Brukes der det kun er to motstridende valg.</p>
-        <div class="input-group">
-            <label id="switch-ibf-label" class="form-label" for="switch-ibf1">
-                Do you like unicorns at all?
-            </label>
-            <fieldset id="switch-ibf1">
-                <input  class="radio-input"
-                        type="radio"
-                        name="unicornslike"
-                        value="yes"
-                        id="unicornslike-1"
-                        checked>
-                <label class="radio-switch" for="unicornslike-1">Ja</label>
-
-                <input  class="radio-input"
-                        type="radio"
-                        name="unicornslike"
-                        value="no"
-                        id="unicornslike-2">
-                <label class="radio-switch" for="unicornslike-2">Nei</label>
-            </fieldset>
-        </div>
-
-        <h4>Eksempelkode</h4>
-        <code class="code-block">
-&lt;input  class=&quot;radio-input&quot;
-    type=&quot;radio&quot;
-    name=&quot;unicornslike&quot;
-    value=&quot;yes&quot;
-    id=&quot;unicornslike-1&quot;
-    checked&gt;
-&lt;label class=&quot;radio-switch&quot; for=&quot;unicornslike-1&quot;&gt;Ja&lt;/label&gt;
-        </code>
-    </div>
-
-
-    <div class="content-container -text-left">
-        <h3>Radio block</h3>
-        <p>Radio blocks brukes når det er viktig å presentere kontekstuelt relevant informasjon om valgene til brukeren uten å overvelde.</p>
-        <div class="input-group">
-            <label id="block-ibf-label" class="form-label" for="block-ibf1">
-                Hva ønsker du å gjøre?
-            </label>
-            <fieldset id="block-ibf1">
-                <div class="radio-block">
-                    <input class="radio-input" type="radio" name="block" id="block-one" value="one">
-                    <div class="content -visible">
-                        <label class="header" for="block-one">Blokk 1</label>
-                        <div class="wrapper">
-                            <p>
-                                Blokk 1.<br>
-                                Denne teksten er alltid synlig.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="radio-block">
-                    <input class="radio-input" type="radio" name="block" id="block-two" value="two">
-                    <div class="content -visible">
-                        <label class="header" for="block-two">Blokk 2</label>
-                        <div class="wrapper">
-                            <p>
-                                Blokk 2.<br>
-                                Denne teksten er alltid synlig.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="radio-block">
-                    <input class="radio-input" type="radio" name="block" id="block-three" value="three">
-                    <div class="content">
-                        <label class="header" for="block-three">Blokk 3</label>
-                        <div class="wrapper">
-                            <p>
-                                Blokk 3.<br>
-                                Denne teksten er synlig bare når radioknappen er valgt.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </fieldset>
-        </div>
-
-        <h4>Eksempelkode</h4>
-        <code class="code-block">
-&lt;div class="radio-block"&gt;
-    &lt;input class="radio-input" type="radio" name="block" id="block-three" value="three"&gt;
-    &lt;div class="content"&gt;
-        &lt;label class="header" for="block-three"&gt;Blokk 3&lt;/label&gt;
-        &lt;div class="wrapper"&gt;
-            &lt;p&gt;
-                Blokk 3.&lt;br&gt;
-                Denne teksten er synlig bare når radioknappen er valgt.
-            &lt;/p&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-        </code>
-
-    </div>
-
-    <div class="content-container -text-left">
-        <h2>Skjemavalidering</h2>
-        <p>Design for feilmeldinger i skjema</p>
-    </div>
-
-    <div class="content-container -text-left">
-        <h3>Oppsummering av feil i skjema</h3>
-        <p class="body-paragraph">
-            Det skal plasseres en oppsummering av skjemafeil over skjemaet. Det skal også scrolles
-            til dette elemementet når valideringen skjer. Normalt vil dette være etter submit av skjemaet.
-        </p>
-
-        <div class="error-summary">
-            <span class="icon icon-info-error"></span>
-            <span class="title">Du må rette opp disse feilene i skjemaet</span>
-            <ul class="summary-list">
-                <li>Vennligst velg en bonus</li>
-                <li>Vennligst fyll inn "Fødselsnummer"</li>
-                <li>Vennligst fyll inn "Fornavn"</li>
-                <li>Vennligst fyll inn "Etternavn"</li>
-            </ul>
-        </div>
-
-    </div>
-
-    <div class="content-container -text-left">
-        <h3>Feilmeldinger på skjemaelementene</h3>
-        <p class="body-paragraph">
-            Alle skjemaelementer må wrappes i en 'input-group'. Denne har en -error-variant som styler alle skjemaelementer
-            med passende utseende for feil.
-        </p>
-
-        <div class="input-group -error">
-            <label for="ssn-invalid" class="form-label">Fødselsnummer</label>
-            <input class="input-field" name="ssn" id="ssn-invalid" type="tel" maxlength="11" autocomplete="off" aria-labelledby="ssn-label">
-            <div class="info-message -error">Vennligst fyll inn "Fødselsnummer"</div>
-        </div>
-
-        <div class="input-group -error">
-            <label class="form-label" for="radio-inline-ibf1-invalid">
-                Are there unicorns with wings?
-            </label>
-            <fieldset id="radio-inline-ibf1-invalid">
-                <input  class="radio-input"
-                        type="radio"
-                        name="unicornwings"
-                        value="yes"
-                        id="unicornwings-1-invalid"
-                        checked>
-                <label class="radio-button -inline" for="unicornwings-1-invalid">Yes</label>
-                <input  class="radio-input"
-                        type="radio"
-                        name="unicornwings"
-                        value="no"
-                        id="unicornwings-2-invalid">
-                <label class="radio-button -inline" for="unicornwings-2-invalid">No</label>
-                <input  class="radio-input"
-                        type="radio"
-                        name="unicornwings"
-                        value="dunno"
-                        id="unicornwings-3-invalid">
-                <label class="radio-button -inline" for="unicornwings-3-invalid">I do not know!</label>
-            </fieldset>
-            <div class="info-message -error">Ta våre fabeldyr på alvor.</div>
-        </div>
-
-        <h4>Eksempelkode</h4>
-        <code class="code-block">
-&lt;div class=&quot;input-group -error&quot;&gt;
-    &lt;label for=&quot;ssn-invalid&quot; class=&quot;form-label&quot;&gt;F&#248;dselsnummer&lt;/label&gt;
-    &lt;input class=&quot;input-field&quot; id=&quot;ssn-invalid&quot; type=&quot;tel&quot; maxlength=&quot;11&quot; aria-labelledby=&quot;ssn-label&quot;&gt;
-    &lt;div class=&quot;info-message -error&quot;&gt;Vennligst fyll inn &quot;F&#248;dselsnummer&quot;&lt;/div&gt;
-&lt;/div&gt;
-        </code>
-    </div>
-
-    <div class="content-container -text-left">
-        <h2>Generelle komponenter</h2>
-        <p>Praktiske elementer å bruke forskjellige steder i en applikasjon</p>
-    </div>
-
-    <div class="content-container -text-left">
-        <h3>Loading spinner</h3>
-        <p>
-            Spinneren er kun en klasse som ikke inneholder noen posisjoneringskode; dette gir mye fleksibilitet.
-            Den finnes i to størrelser og kan blandes med andre elementer.
-        </p>
-        <p class="small-text">LOADING SPINNER</p>
-        <p class="body-paragraph">
-            <span class="loading-spinner"></span> Loading...
-        </p>
-        <div class="small-text">LOADING SPINNER -LARGE (centered layout not included)</div>
-    </div>
-    <div class="content-container">
-        <div class="loading-spinner -large"></div>
-        <p>
-            Loading...
-        </p>
-    </div>
-    <div class="content-container -text-left">
-        <h4>Eksempelkode</h4>
-        <code class="code-block">
-&lt;div class=&quot;loading-spinner -large&quot;&gt;&lt;/div&gt;
-        </code>
-    </div>
-</section>
-
-<script>
-    document.querySelector('.collapse-link').addEventListener('click', function() {
-        this.classList.toggle('-open');
-        this.innerText = this.classList.contains('-open') ? 'Skjul kode' : 'Vis kode';
-    });
-</script>
+    <script src="examples.js"></script>
 
 </body>
 </html>
