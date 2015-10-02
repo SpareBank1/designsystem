@@ -1,5 +1,5 @@
 {
-  "name": "ffe-icons",
+  "name": "sfo-icons",
   "version": "1.0.0",
   "description": "Felles Front End Icons",
   "main": "index.js",
@@ -14,6 +14,9 @@
   "license": "ISC",
   "devDependencies": {
     "gulp": "^3.9.0",
-    "gulp-concat": "^2.6.0"
+    "gulp-concat": "^2.6.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-replace": "^0.5.4",
+    "gulp-svg-sprite": "^1.2.10"
   }
 }
