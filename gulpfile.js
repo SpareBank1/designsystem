@@ -12,7 +12,7 @@ var gulp         = require('gulp'),
         },
         "shape": {
             dimension       : {                         // Dimension related options
-                maxWidth    : 100,                     // Max. shape width
+                maxWidth    : 150,                     // Max. shape width
                 precision   : 2,                        // Floating point precision
                 attributes  : false                    // Width and height attributes on embedded shapes
             }
