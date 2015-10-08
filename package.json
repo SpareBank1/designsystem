@@ -4,7 +4,8 @@
   "description": "Felles Front End Icons",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sb1-icons": "gulp sb1-icons",
+    "sfo-icons": "gulp sfo-icons"
   },
   "repository": {
     "type": "git",
