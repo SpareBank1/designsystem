@@ -2,7 +2,11 @@
     font-size: 16px;
     color: @blue-royal;
     margin: 5px 0 10px;
-    display: none;
+    display: block;
+
+    &[aria-hidden="true"] {
+        display: none;
+    }
 
     &:before {
         content: 'i';
