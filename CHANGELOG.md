@@ -1,5 +1,9 @@
 # Changelog
 
+## v.1.0.0 (XX.YY.ZZZZ)
+
+Bruk av `aria-hidden` og `aria-invalid` for å style skjemafeil, erstatter `-error`
+
 ## v.0.0.2 (29.09.2015)
 
 Omstrukturering og design av eksempelsiden (stilguide)
