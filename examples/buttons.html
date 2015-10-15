@@ -29,35 +29,45 @@
 
     <section class="layout-container -text-left">
         <h3 class="h3 -spaced">Knapper</h3>
+
+        <p>
+            For å endre state på en knapp fra vanlig til "spinner" må følgende gjøres:
+            <ul>
+                <li>Sett klassen <code class="code-inline">-loading</code> på selve knappen
+                <li>Sett <code class="code-inline">aria-hidden="false"</code> på <code class="code-inline">.label-spinner</code>
+                <li>Optional: Legg til <code class="code-inline">disabled</code> attributt på knappen
+            </ul>
+        </p>
+
         <div class="small-text">ACTION BUTTON</div>
-        <div class="button-group">
+        <div class="button-group" aria-live="polite">
             <button class="action-button">Action button</button>
             <button class="action-button -loading">
                 <span class="label">
                     <span class="label-text">Action button</span>
-                    <span class="label-spinner"></span>
+                    <span class="label-spinner" aria-hidden="false">Spinner-tekst</span>
                 </span>
             </button>
         </div>
 
         <div class="small-text">PRIMARY BUTTON</div>
-        <div class="button-group">
+        <div class="button-group" aria-live="polite">
             <button class="primary-button">Primary button</button>
             <button class="primary-button -loading">
                 <span class="label">
                     <span class="label-text">Primary button</span>
-                    <span class="label-spinner"></span>
+                    <span class="label-spinner" aria-hidden="false">Spinner-tekst</span>
                 </span>
             </button>
         </div>
 
         <div class="small-text">SECONDARY BUTTON</div>
-        <div class="button-group">
+        <div class="button-group" aria-live="polite">
             <button class="secondary-button">Secondary button</button>
             <button class="secondary-button -loading">
                 <span class="label">
                     <span class="label-text">Secondary button</span>
-                    <span class="label-spinner"></span>
+                    <span class="label-spinner" aria-hidden="false">Spinner-tekst</span>
                 </span>
             </button>
         </div>
@@ -73,12 +83,11 @@
     <section class="layout-container -text-left">
         <div class="collapse-link">Vis kode</div>
         <code class="code-block">
-&lt;button class="action-button"&gt;Action button&lt;/button&gt;
-
-&lt;button class="action-button -loading"&gt;
-    &lt;span class="label"&gt;
-        &lt;span class="label-text"&gt;Action button&lt;/span&gt;
-        &lt;span class="label-spinner"&gt;&lt;/span&gt;
+&lt;button class=&quot;action-button&quot;&gt;Action button&lt;/button&gt;
+&lt;button class=&quot;action-button -loading&quot;&gt;
+    &lt;span class=&quot;label&quot;&gt;
+        &lt;span class=&quot;label-text&quot;&gt;Action button&lt;/span&gt;
+        &lt;span class=&quot;label-spinner&quot; aria-hidden=&quot;true&quot;&gt;Spinner-tekst&lt;/span&gt;
     &lt;/span&gt;
 &lt;/button&gt;
         </code>
