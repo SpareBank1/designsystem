@@ -46,10 +46,16 @@
         > .label-spinner {
             .sb1-spinner(@white,22px);
             opacity: 0;
+            color: transparent;
             position: absolute;
             bottom: -40px;
             left: ~"calc(50% - 11px)";
             transition: bottom 0.2s;
+
+            &[aria-hidden="false"] {
+                opacity: 1;
+                bottom: 0;
+            }
         }
     }
 
@@ -63,10 +69,6 @@
                 bottom: 50px;
             }
 
-            > .label-spinner {
-                opacity: 1;
-                bottom: 0;
-            }
         }
     }
 }
