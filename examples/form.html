@@ -294,7 +294,14 @@
 
     <div class="layout-container -text-left">
         <h3 class="h3 -spaced">Radio block</h3>
-        <p>Radio blocks brukes når det er viktig å presentere kontekstuelt relevant informasjon om valgene til brukeren uten å overvelde.</p>
+        <p>
+            Radio blocks brukes når det er viktig å presentere kontekstuelt relevant informasjon om valgene til brukeren uten å overvelde.
+        </p>
+        <p>
+            De kan brukes både som vanlige radio-knapper med synlig kontekst eller som en liten "meny" der kontekst bare er synlig for det til en hver tid aktive valget
+        </p>
+
+        <h4 class="h3">- Alltid synlig kontekst</h4>
         <div class="input-group" aria-live="polite">
             <label id="block-ibf-label" class="form-label" for="block-ibf1">
                 Hva ønsker du å gjøre?
@@ -325,35 +332,103 @@
                         </div>
                     </div>
                 </div>
+            </fieldset>
+        </div>
+        <div class="layout-container -text-left">
+            <div class="collapse-link">Vis kode</div>
+            <code class="code-block">
+&lt;div class=&quot;radio-block&quot;&gt;
+    &lt;input class=&quot;radio-input&quot; type=&quot;radio&quot; name=&quot;block&quot; id=&quot;block-two&quot; value=&quot;two&quot;&gt;
+    &lt;div class=&quot;content -visible&quot;&gt;
+        &lt;label class=&quot;header&quot; for=&quot;block-two&quot;&gt;Blokk 2&lt;/label&gt;
+        &lt;div class=&quot;wrapper&quot;&gt;
+            &lt;p&gt;
+                Denne teksten er alltid synlig.
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            </code>
+        </div>
 
-                <div class="radio-block">
-                    <input class="radio-input" type="radio" name="block" id="block-three" value="three">
-                    <div class="content">
-                        <label class="header" for="block-three">Blokk 3</label>
-                        <div class="wrapper">
+        <h4 class="h3">- Kontekst kun synlig for aktivt valg</h4>
+
+        <p>
+            Når en radio-knapp blir valgt må følgende gjøres i Javascript:
+            <ul>
+                <li>Sett <code class="code-inline">aria-selected="false"</code> på alle andre inputs</li>
+                <li>Sett <code class="code-inline">aria-selected="true"</code> på aktiv input</li>
+                <li>Sett <code class="code-inline">aria-hidden="true"</code> på alle <code class="code-inline">.wrapper</code> elementer som tilhører et inaktivt valg</li>
+                <li>Sett <code class="code-inline">aria-hidden="false"</code> på <code class="code-inline">.wrapper</code> elementet som tilhører aktivt valg</li>
+            </ul>
+        </p>
+
+        <div class="input-group" aria-live="polite" role="tablist">
+            <label id="block-ibf-label" class="form-label" for="tab-set">
+                Hva ønsker du å gjøre?
+            </label>
+            <fieldset id="tab-set">
+                <div class="radio-block" role="presentation">
+                    <input class="radio-input" type="radio" name="tab" id="tab-one" aria-labelledby="tab-one-label" value="one" tabindex="0" role="tab" aria-controls="content-one" aria-selected="true" checked>
+                    <div class="content" role="presentation">
+                        <label class="header" id="tab-one-label" for="tab-one">Block one</label>
+                        <div class="wrapper" id="content-one" role="tabpanel" aria-labelledby="tab-one-label">
                             <p>
-                                Blokk 3.<br>
-                                Denne teksten er synlig bare når radioknappen er valgt.
+                                Denne teksten er synlig fordi valget er aktivt.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="radio-block" role="presentation">
+                    <input class="radio-input" type="radio" name="tab" id="tab-two" aria-labelledby="tab-two-label" value="two" tabindex="0" role="tab" aria-controls="content-two" aria-selected="false">
+                    <div class="content" role="presentation">
+                        <label class="header" id="tab-two-label" for="tab-two">Block two</label>
+                        <div class="wrapper" id="content-two" role="tabpanel" aria-labelledby="tab-two-label" aria-hidden="true">
+                            <p>
+                                Denne teksten er ikke synlig.
                             </p>
                         </div>
                     </div>
                 </div>
             </fieldset>
         </div>
-    </div>
-    <div class="layout-container -text-left">
-        <div class="collapse-link">Vis kode</div>
-        <code class="code-block">
-&lt;div class="radio-block"&gt;
-    &lt;input class="radio-input" type="radio" name="block" id="block-three" value="three"&gt;
-    &lt;div class="content"&gt;
-        &lt;label class="header" for="block-three"&gt;Blokk 3&lt;/label&gt;
-        &lt;div class="wrapper"&gt;
-            &lt;p&gt;Blokk 3.&lt;br&gt;Denne teksten er synlig bare når radioknappen er valgt.&lt;/p&gt;
+
+        <div class="layout-container -text-left">
+            <div class="collapse-link">Vis kode</div>
+            <code class="code-block">
+&lt;div class=&quot;input-group&quot; aria-live=&quote;polite&quote; role=&quot;tablist&quot;&gt;
+    &lt;label id=&quot;block-ibf-label&quot; class=&quot;form-label&quot; for=&quot;tab-set&quot;&gt;
+        Hva ønsker du å gjøre?
+    &lt;/label&gt;
+    &lt;fieldset id=&quot;tab-set&quot;&gt;
+        &lt;div class=&quot;radio-block&quot; role=&quot;presentation&quot;&gt;
+            &lt;input class=&quot;radio-input&quot; type=&quot;radio&quot; name=&quot;tab&quot; id=&quot;tab-one&quot; aria-labelledby=&quot;tab-one-label&quot; value=&quot;one&quot; tabindex=&quot;0&quot; role=&quot;tab&quot; aria-controls=&quot;content-one&quot; aria-selected=&quot;true&quot; checked&gt;
+            &lt;div class=&quot;content&quot; role=&quot;presentation&quot;&gt;
+                &lt;label class=&quot;header&quot; id=&quot;tab-one-label&quot; for=&quot;tab-one&quot;&gt;Block one&lt;/label&gt;
+                &lt;div class=&quot;wrapper&quot; id=&quot;content-one&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;tab-one-label&quot;&gt;
+                    &lt;p&gt;
+                        Denne teksten er synlig fordi valget er aktivt.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
         &lt;/div&gt;
-    &lt;/div&gt;
+        &lt;div class=&quot;radio-block&quot; role=&quot;presentation&quot;&gt;
+            &lt;input class=&quot;radio-input&quot; type=&quot;radio&quot; name=&quot;tab&quot; id=&quot;tab-two&quot; aria-labelledby=&quot;tab-two-label&quot; value=&quot;two&quot; tabindex=&quot;0&quot; role=&quot;tab&quot; aria-controls=&quot;content-two&quot; aria-selected=&quot;false&quot;&gt;
+            &lt;div class=&quot;content&quot; role=&quot;presentation&quot;&gt;
+                &lt;label class=&quot;header&quot; id=&quot;tab-two-label&quot; for=&quot;tab-two&quot;&gt;Block two&lt;/label&gt;
+                &lt;div class=&quot;wrapper&quot; id=&quot;content-two&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;tab-two-label&quot; aria-hidden=&quot;true&quot;&gt;
+                    &lt;p&gt;
+                        Denne teksten er ikke synlig.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/fieldset&gt;
 &lt;/div&gt;
-        </code>
+            </code>
+        </div>
+
+
     </div>
 
     <div class="layout-container">

@@ -31,19 +31,20 @@
         > .wrapper {
             padding: 20px 20px 30px 20px;
             cursor: auto;
+
+            &.-empty {
+                padding: 0;
+            }
+
+            &[aria-hidden="true"] {
+                display: none;
+            }
         }
     }
 
     .radio-input {
-        & + .content > .wrapper {
-            display: none;
-        }
 
-        & + .content.-visible  > .wrapper {
-            display: block;
-        }
-
-        & + .content.-visible > .header {
+        & + .content > .header {
             border-bottom: thin solid @grey-light;
         }
 
@@ -55,9 +56,6 @@
                 color: white;
             }
 
-            > .wrapper {
-                display: block;
-            }
         }
 
         &:checked + .content:before {
