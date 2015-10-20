@@ -7,11 +7,11 @@ Inneholder generell styling for bruk utenom komponenter. F.eks. typografi, knapp
 
 Konfigurer npm til å bruke SB1's lokale og private repo (proxy med cache til NPM public).
 
-    npm set registry http://ntadc1.test.sparebank1.no:4873
+    npm set registry https://nexus.intern.sparebank1.no/nexus/content/groups/npmgroup/
 
 Installer som vanlig
 
-    npm install sb1-ffe-framework --save-dev
+    npm install ffe-core --save-dev
 
 ##Bruk
 
@@ -29,7 +29,7 @@ Dette kan f.eks. gjøres via en Grunt task.
     copy: {
         fonts: {
             files: [
-                { cwd: 'node_modules/sb1-ffe-framework/fonts', expand: true, src: ['*.otf'], dest: 'app/open/fonts/' }
+                { cwd: 'node_modules/ffe-core/fonts', expand: true, src: ['*.otf'], dest: 'app/open/fonts/' }
             ]
         }
     }
@@ -41,9 +41,11 @@ Klargjør stilguide ved å kjøre følgende kommando:
 
 ##Publisering
 
-Ved lansering av ny versjon må disse stegen følges (`minor` og `major` er også gyldige valg):
+Ved hver major release lages en ny branch (f.eks. release/02-wistful-wizard) som kan vedlikeholdes ved siden av master. Master har da kun ikke lanserte endringer
+
+Ved lansering av ny versjon må i tillegg disse stegene følges (`minor` og `major` er også gyldige valg):
 
 - Oppdatere `CHANGELOG.md`
 - `npm version patch`
 - `git push && git push --tags`
-- `npm publish`
+- `npm publish --registry https://nexus.intern.sparebank1.no/nexus/content/repositories/npm-internal`
