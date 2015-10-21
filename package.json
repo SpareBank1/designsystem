@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "examples": "lessc examples/examples.less examples/examples.css \n\nNow open /examples/index.html to see styleguide."
+    "examples": "lessc examples/examples.less examples/examples.css && echo Now open /examples/index.html to see styleguide."
   },
   "repository": {
     "type": "git",
