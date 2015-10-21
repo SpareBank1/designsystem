@@ -1,6 +1,6 @@
 # Changelog
 
-## v.1.0.0 (XX.YY.ZZZZ)
+## v.1.0.0 (21.10.2015)
 
 Bruk av `aria-hidden` og `aria-invalid` for å style skjemafeil, erstatter `-error`
 Bruk av `aria-hidden` for å skjule innhold i radio-blocks, erstatter `-visible`
