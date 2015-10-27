@@ -12,7 +12,7 @@
     "url": "***REMOVED***"
   },
   "publishConfig" : {
-    "registry" : "http://localhost:8081/nexus/content/repositories/npm-internal/"
+    "registry" : "***REMOVED***"
   },
   "keywords": [
     "frontend",
