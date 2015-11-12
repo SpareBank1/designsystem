@@ -42,9 +42,12 @@ Klargjør stilguide ved å kjøre følgende kommando:
 
 Gjøres mot master. Endringer som skal ut på tidligere `major` releases må portes til aktuell branch.
 
+Squash alle commits til en enkelt commit.
+
 ##Publisering
 
 Ved hver major release lages en ny branch (f.eks. release/02-wistful-wizard) som kan vedlikeholdes ved siden av master. Master har da kun ikke lanserte endringer.
+
 
 Ved lansering av ny versjon må i tillegg disse stegene følges (`minor` og `major` er også gyldige valg):
 
