@@ -26,8 +26,8 @@ Hvis du har konflikt med legacysystemer, er det også mulig å velge import uten
 
 Det er også mulig å importere enkelte filer etter behov.
 
-    @colors.less
-    @radio-button.less
+    @import colors.less
+    @import radio-button.less
 
 ###Variabler
 Det er forventet at det defineres en LESS-variabel som inneholder rot-pathen til applikasjonen.
