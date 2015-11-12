@@ -1,33 +1,33 @@
 /* Mobile typography */
-h1, .h1, {
+.h1, {
   color: @blue-royal;
   font-family: "MuseoSansRounded-700", arial, sans-serif;
   font-size: 28px;
   line-height: 36px;
 }
 
-h2, .h2, {
+.h2, {
   color: @blue-royal;
   font-family: "MuseoSansRounded-700", arial, sans-serif;
   font-size: 24px;
   line-height: 32px;
 }
 
-h3, .h3, {
+.h3, {
   color: @blue-royal;
   font-family: "MuseoSansRounded-700", arial, sans-serif;
   font-size: 20px;
   line-height: 28px;
 }
 
-h4, .h4, {
+.h4, {
   color: @blue-royal;
   font-family: "MuseoSansRounded-700", arial, sans-serif;
   font-size: 18px;
   line-height: 26px;
 }
 
-h5, .h5, {
+.h5, {
   color: @blue-royal;
   font-family: "MuseoSans-700", arial, sans-serif;
   font-size: 16px;
@@ -48,7 +48,6 @@ h5, .h5, {
   line-height: 20px;
 }
 
-h1, h2, h3, h4, h5,
 .h1,.h2,.h3,.h4,.h5 {
   margin-bottom: 10px;
 
@@ -66,7 +65,6 @@ h1, h2, h3, h4, h5,
   }
 }
 
-body,
 .body-text {
   color: @black;
   font-family: "MuseoSans-500", arial, sans-serif;
@@ -74,7 +72,6 @@ body,
   line-height: 26px;
 }
 
-p,
 .body-paragraph {
   margin-bottom: 1em;
 
@@ -94,7 +91,7 @@ p,
   line-height: 28px;
 }
 
-a {
+.link-text {
   font-family: "MuseoSansRounded-500", arial, sans-serif;
   color: @blue-royal-light-wcag;
   text-decoration: none;
@@ -106,21 +103,21 @@ a {
   }
 }
 
-hr {
+.divider-line {
   border: none;
   border-bottom: solid 1px @grey-light;
 }
 
-strong {
+.strong-text {
   font-weight: normal;
   font-family: "MuseoSansRounded-700", arial, sans-serif;
 }
 
-em {
+.em-text {
   font-style: italic;
 }
 
-pre {
+.pre-text {
   font-family: consolas, menlo, monaco, monospace;
   text-align: left;
   background-color: @sand-50;
@@ -133,31 +130,30 @@ pre {
 /* tablet/medium typography */
 @media screen and (min-width: @breakpoint-sm) {
 
-    h1, .h1 {
+    .h1 {
         font-size: 48px;
         line-height: 58px;
     }
-    h2, .h2 {
+    .h2 {
         font-size: 32px;
         line-height: 44px;
     }
 
-    h3, .h3 {
+    .h3 {
         font-size: 28px;
         line-height: 38px;
     }
 
-    h4, .h4 {
+    .h4 {
         font-size: 20px;
         line-height: 28px;
     }
 
-    h5, .h5 {
+    .h5 {
         font-size: 16px;
         line-height: 24px;
     }
 
-    h1, h2, h3, h4, h5,
     .h1,.h2,.h3,.h4,.h5 {
         margin-bottom: 15px;
     }
@@ -167,7 +163,6 @@ pre {
         line-height: 32px;
     }
 
-    body,
     .body-text {
         font-size: 16px;
         line-height: 26px;
@@ -187,37 +182,36 @@ pre {
 /* Desktop */
 @media screen and (min-width: @breakpoint-md) {
 
-  h1, h2, h3, h4, h5,
   .h1,.h2,.h3,.h4,.h5 {
     margin-bottom: 20px;
   }
 
-  body, .body-text {
+  .body-text {
     font-size: 18px;
     line-height: 28px;
     font-family: "MuseoSans-300", arial, sans-serif;
   }
 
-  h1, .h1, {
+  .h1, {
     font-size: 54px;
     line-height: 64px;
   }
 
-  h2, .h2, {
+  .h2, {
     font-size: 32px;
     line-height: 44px;
   }
 
-  h3, .h3, {
+  .h3, {
     font-size: 28px;
     line-height: 38px;
   }
-  h4, .h4, {
+  .h4, {
     font-size: 22px;
     line-height: 28px;
   }
 
-  h5, .h5, {
+  .h5, {
     font-size: 16px;
     line-height: 24px;
   }
