@@ -63,7 +63,7 @@ Ved lansering av ny versjon må i tillegg disse stegene følges (`minor` og `maj
 
 - Oppdatere `CHANGELOG.md`
 - Skift til branchen det skal releases fra
-- Backport endringene som skal leveres og endringen i Changelog.
+- Backport endringene som skal leveres og endringen i CHANGELOG.md.
 - `npm version [patch|minor|major]`
 - `git push && git push --tags`
 - `npm publish --registry ***REMOVED***`
