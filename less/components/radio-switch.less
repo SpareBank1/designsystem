@@ -1,31 +1,30 @@
 .radio-switch {
-    padding: 8px 20px 8px 50px;
+    padding: 6px 20px 6px 50px;
     position: relative;
-    border: 1px solid @grey-light;
-    border-radius: 30px;
+    border: 2px solid @grey-light;
+    border-radius: 22px;
     display: inline-block;
     min-width: 100px;
-    margin: 10px 0 10px 10px;
     text-align: left;
-    color: @blue-royal-light;
+    color: @blue-royal-light-wcag;
     font-family: "MuseoSansRounded-700", arial, sans-serif;
     cursor: pointer;
     transition: all 0.15s ease-in-out;
-   .shadow-buttons();
+    box-shadow: 0 1px 2px 1px rgba(0,0,0,0.05);
 
     &:before {
       .sb1-radioblob();
       left: 12px;
-      top: 11px;
+      top: 10px;
     }
 }
 
 .radio-input {
 
     &:checked + .radio-switch {
-        border-color: @blue-royal;
-        background-color: @blue-royal;
-        color: @white;
+        border-color: @blue-flat;
+        background-color: @white;
+        color: @blue-flat;
     }
 
     &:hover + .radio-switch{
@@ -33,8 +32,8 @@
     }
 
     &:focus + .radio-switch {
-        border-color: @blue-focus;
-        box-shadow: 0 0 0 1px @blue-focus;
+        border-color: @blue-flat;
+        box-shadow: 0 0 0 2px @blue-focus;
     }
 
     &:checked + .radio-switch:before {
