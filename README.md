@@ -38,14 +38,19 @@ Klargjør stilguide ved å kjøre følgende kommando:
 
     npm run examples
 
+##Pull Requests
+
+Gjøres mot master. Endringer som skal ut på tidligere `major` releases må portes til aktuell branch.
 
 ##Publisering
 
-Ved hver major release lages en ny branch (f.eks. release/02-wistful-wizard) som kan vedlikeholdes ved siden av master. Master har da kun ikke lanserte endringer
+Ved hver major release lages en ny branch (f.eks. release/02-wistful-wizard) som kan vedlikeholdes ved siden av master. Master har da kun ikke lanserte endringer.
 
 Ved lansering av ny versjon må i tillegg disse stegene følges (`minor` og `major` er også gyldige valg):
 
 - Oppdatere `CHANGELOG.md`
-- `npm version patch`
+- Skift til branchen det skal releases fra
+- Backport endringene som skal leveres og endringen i Changelog.
+- `npm version [patch|minor|major]`
 - `git push && git push --tags`
 - `npm publish --registry https://nexus.intern.sparebank1.no/nexus/content/repositories/npm-internal`
