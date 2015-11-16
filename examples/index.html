@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Eksempelside for Felles Header</title>
+
+    <link href="examples.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<header id="header" class="header-wrapper">
+    <div class="main-header">
+        <div class="mobile-header-elements">
+            <a href="/#">
+                <img height="30px" class="logo" src="../images/logo.svg" alt="SpareBank 1 Logo">
+            </a>
+            <img height="30px" data-action="user-menu-trigger" class="icon-user" src="../images/person.svg"
+                 alt="User menu">
+        </div>
+        <div class="desktop-header-elements">
+            <div class="header-element">
+                <a href="/#">
+                    <img height="40px" class="logo" src="../images/logo.svg" alt="SpareBank 1 Logo">
+                </a>
+            </div>
+            <div class="header-element" id="mainHeading"><h1 class="heading">Forsikringsoversikt</h1></div>
+            <div class="header-element">
+                <span class="profile-type"></span>
+
+                <a class="profile-name" href="#kunde">Foo Bar</a>
+                <button class="secondary-button" data-action="logout">Logg ut</button>
+            </div>
+        </div>
+    </div>
+</header>
+
+</body>
+</html>
