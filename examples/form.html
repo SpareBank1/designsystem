@@ -391,6 +391,19 @@
                     </div>
                 </div>
             </fieldset>
+            <script>
+                var tabRadios = Array.prototype.slice.call(document.querySelectorAll('[name="tab"]'), 0);
+                tabRadios.forEach(function(radioTab) {
+                    radioTab.addEventListener('click', function(e) {
+                        tabRadios.forEach(function(toDisable) {
+                            toDisable.setAttribute('aria-selected', 'false');
+                            toDisable.nextElementSibling.querySelector('.wrapper').setAttribute('aria-hidden', 'true');
+                        });
+                        e.target.setAttribute('aria-selected', 'true');
+                        e.target.nextElementSibling.querySelector('.wrapper').setAttribute('aria-hidden', 'false');
+                    });
+                });
+            </script>
         </div>
 
         <div class="layout-container -text-left">
