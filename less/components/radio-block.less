@@ -48,6 +48,10 @@
             border-bottom: thin solid @grey-light;
         }
 
+        & + .content[role="presentation"] > .header {
+            border-bottom: none;
+        }
+
         &:checked + .content {
             border: 2px solid @blue-royal;
 
