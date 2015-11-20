@@ -1,5 +1,9 @@
 # Changelog
 
+## v.1.0.3 (20.11.2015)
+
+* IE-fix. Legger til z-index på radioknapp for at den ikke skal skjules under header ved re-rendring. 
+
 ## v.1.0.2 (12.11.2015)
 
 * Styling direkte på elementer er nå optional
