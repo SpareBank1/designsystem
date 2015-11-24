@@ -14,16 +14,16 @@
     <header class="layout-container">
         <h1>Felles Frontend Style Guide</h1>
         <p class="lead-paragraph">Inneholder generell styling for bruk utenfor komponenter. F.eks. typografi, knapper, farger, o.l. FFE følger
-            <a href="https://github.com/rstacruz/rscss">Reasonable System for CSS Stylesheet Structure</a> for å sørge for god organisasjon av CSS-koden.
+            <a href="https://en.bem.info">BEM</a> for å sørge for god organisasjon av CSS-koden.
         </p>
     </header>
 
-    <nav class="layout-container -lg">
+    <nav class="layout-container layout-container_lg">
         <ul class="navigation-bar">
-            <li class="link -active"><a href="index.html">Typografi</a></li>
-            <li class="link"><a href="colors.html">Farger</a></li>
-            <li class="link"><a href="form.html">Skjema</a></li>
-            <li class="link"><a href="buttons.html">Knapper</a></li>
+            <li class="navigation-bar__link navigation-bar__link_active"><a href="index.html">Typografi</a></li>
+            <li class="navigation-bar__link"><a href="colors.html">Farger</a></li>
+            <li class="navigation-bar__link"><a href="form.html">Skjema</a></li>
+            <li class="navigation-bar__link"><a href="buttons.html">Knapper</a></li>
         </ul>
     </nav>
 
@@ -31,31 +31,31 @@
         <h2 class="page-title">Typografi</h2>
     </div>
 
-    <div class="layout-container -text-left">
+    <div class="layout-container layout-container_text-left">
         <h3>Overskriftstrategi</h3>
         <p>Vi har valgt å bruke semtisk korrekte overskrifts-tagger kombinert med klasser for å kunne holde oss innenfor UU-krav og samtidig
         ha fleksibilitet i design. Dette betyr at i de tilfeller hvor struktur og design fraviker er det mulig å overstyre default-overskriften.</p>
     </div>
 
-    <div class="layout-container -subtle">
-        <div class="layout-container -wrapped -text-left">
+    <div class="layout-container layout-container_subtle">
+        <div class="layout-container layout-container_wrapped -text-left">
             <div class="small-text">HEADING 1</div>
-            <p class="h1 -spaced">Litt sparing er bedre enn...</p>
+            <p class="h1 h1_spaced">Litt sparing er bedre enn...</p>
 
             <div class="small-text">HEADING 2</div>
-            <p class="h2 -spaced">Ok, neste måned skal jeg spare!</p>
+            <p class="h2 h2_spaced">Ok, neste måned skal jeg spare!</p>
 
             <div class="small-text">HEADING 3</div>
-            <p class="h3 -spaced">Bruker du sparepengene innen måneden er slutt?</p>
+            <p class="h3 h3_spaced">Bruker du sparepengene innen måneden er slutt?</p>
 
             <div class="small-text">HEADING 4</div>
-            <p class="h4 -spaced">Ofte stilte spørsmål</p>
+            <p class="h4 h4_spaced">Ofte stilte spørsmål</p>
 
             <div class="small-text">HEADING 5</div>
-            <p class="h5 -spaced">Er det en grense for hvor lite jeg kan spare når jeg bruker kortet?</p>
+            <p class="h5 h5_spaced">Er det en grense for hvor lite jeg kan spare når jeg bruker kortet?</p>
 
             <div class="small-text">LEAD PARAGRAPH</div>
-            <p class="lead-paragraph -spaced">
+            <p class="lead-paragraph lead-paragraph_spaced">
                 Det kan være vanskelig å spare, men å bruke penger går ofte helt av seg selv. Men, hva hvis du kunne spart litt
                 hver gang du bruker kortet? Da hadde det kanskje vært litt lettere?
             </p>
@@ -65,13 +65,13 @@
                 De fleste av oss legger ikke merke til alle kronene som fyker ut av kontoen, og plutselig står vi igjen med litt lite
                 mot slutten av måneden. Da er det lett å ta av sparepengene...
             </p>
-            <p class="body-text  -spaced">
+            <p class="body-text body-text_spaced">
                 Visste du at du kan ta bort sparekontoen fra oversikten i nettbanken? Da er det lettere å ikke bli fristet
                 til å bruke penger du sparer.
             </p>
 
             <div class="small-text">SMALL TEXT</div>
-            <p class="small-text -spaced">
+            <p class="small-text small-text_spaced">
                 Om du velger å spare i prosent eller et fast beløp, er minste beløp 2 kroner per
                 hendelse. all sparing vil være i hele kroner. vi sjekker at det er dekning for beløpet før spareingen utføres.
             </p>
@@ -81,7 +81,7 @@
         </div>
     </div>
 
-    <section class="layout-container -text-left">
+    <section class="layout-container layout-container_text-left">
         <div class="collapse-link">Vis kode</div>
         <code class="code-block">&#x3C;h1 class=&#x22;h1&#x22;&#x3E;First Heading&#x3C;/h1&#x3E;
 &#x3C;p class=&#x22;lead-paragraph&#x22;&#x3E;Some leading text&#x3C;/p&#x3E;
