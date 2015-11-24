@@ -4,7 +4,7 @@
     min-width: 260px;
     transition: width 0.3s ease-in-out;
 
-    .content {
+    &__content {
         width: 100%;
         position: relative;
         border: 2px solid @grey-light;
@@ -21,68 +21,64 @@
             top: 10px;
             z-index: 1;
         }
+    }
 
-        > .header {
-            display: block;
-            padding: 0 60px;
-            line-height: 40px;
-            cursor: pointer;
-        }
+    &__header {
+        display: block;
+        padding: 0 60px;
+        line-height: 40px;
+        cursor: pointer;
+    }
 
-        > .wrapper {
+    &__wrapper {
             padding: 20px 20px 30px 20px;
             cursor: auto;
 
-            &.-empty {
-                padding: 0;
-            }
+        &_empty {
+            padding: 0;
+        }
 
-            &[aria-hidden="true"] {
-                display: none;
-            }
+        &[aria-hidden="true"] {
+            display: none;
         }
     }
+}
 
-    .radio-input {
 
-        & + .content > .header {
-            border-bottom: thin solid @grey-light;
-        }
+// Weakness: Requires specific dom structure to work. Rewrite?
+.radio-input {
 
-        & + .content[role="presentation"] > .header {
+    & + .radio-block__content > .radio-block__header {
+        border-bottom: thin solid @grey-light;
+    }
+
+    & + .radio-block__content[role="presentation"] > .radio-block__header {
+        border-bottom: none;
+    }
+
+    &:checked + .radio-block__content {
+        border: 2px solid @blue-royal;
+
+        > .radio-block__header {
             border-bottom: none;
+            background-color: @blue-royal;
+            color: white;
         }
 
-        &:checked + .content {
-            border: 2px solid @blue-royal;
+    }
 
-            > .header {
-                border-bottom: none;
-                background-color: @blue-royal;
-                color: white;
-            }
+    &:checked + .radio-block__content:before {
+        .sb1-radioblob-active();
+    }
 
-        }
-
-        &:checked + .content:before {
-            .sb1-radioblob-active();
-        }
-
-        &:focus + .content {
-            box-shadow: 0 0 0 2px @blue-focus;
-        }
+    &:focus + .radio-block__content {
+        box-shadow: 0 0 0 2px @blue-focus;
     }
 }
 
 @media screen and (min-width: @breakpoint-sm) {
 
-    .radio-block {
-
-        .content {
-
-            > .wrapper {
-                padding-left: 60px;
-            }
-        }
+    .radio-block__wrapper {
+        padding-left: 60px;
     }
 }
