@@ -7,8 +7,8 @@
     }
 
     function toggleCollapseLink() {
-        this.classList.toggle('-open');
-        this.innerText = this.classList.contains('-open') ? 'Skjul kode' : 'Vis kode';
+        this.classList.toggle('collapse-link_open');
+        this.innerText = this.classList.contains('collapse-link_open') ? 'Skjul kode' : 'Vis kode';
     }
 
 })();
