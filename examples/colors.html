@@ -14,16 +14,16 @@
     <header class="layout-container">
         <h1>Felles Frontend Style Guide</h1>
         <p class="lead-paragraph">Inneholder generell styling for bruk utenfor komponenter. F.eks. typografi, knapper, farger, o.l. FFE følger
-            <a href="https://github.com/rstacruz/rscss">Reasonable System for CSS Stylesheet Structure</a> for å sørge for god organisasjon av CSS-koden.
+            <a href="https://en.bem.info">BEM</a> for å sørge for god organisasjon av CSS-koden.
         </p>
     </header>
 
-    <nav class="layout-container -lg">
+    <nav class="layout-container layout-container--lg">
         <ul class="navigation-bar">
-            <li class="link"><a href="index.html">Typografi</a></li>
-            <li class="link -active"><a href="colors.html">Farger</a></li>
-            <li class="link"><a href="form.html">Skjema</a></li>
-            <li class="link"><a href="buttons.html">Knapper</a></li>
+            <li class="navigation-bar__link"><a href="index.html">Typografi</a></li>
+            <li class="navigation-bar__link navigation-bar__link--active"><a href="colors.html">Farger</a></li>
+            <li class="navigation-bar__link"><a href="form.html">Skjema</a></li>
+            <li class="navigation-bar__link"><a href="buttons.html">Knapper</a></li>
         </ul>
     </nav>
 
@@ -31,71 +31,71 @@
         <h2 class="page-title">Farger</h2>
     </div>
 
-    <div class="layout-container -text-left">
+    <div class="layout-container layout-container--text-left">
         <h3>Primær Fargepalett</h3>
         <p>Brukt i basiselementer - f.eks. typografi, knapper og bokser.</p>
     </div>
     <div class="layout-container">
         <ul>
             <li class="color-patch">
-                <div class="color-box -blue-royal"></div>
-                <div class="patch-descr">Blue-royal<br>#002776</div>
+                <div class="color-patch__color-box color-patch__color-box--blue-royal"></div>
+                <div class="color-patch__patch-descr">Blue-royal<br>#002776</div>
             </li>
             <li class="color-patch">
-                <div class="color-box -blue-flat"></div>
-                <div class="patch-descr">Blue-flat<br>#005AA4</div>
+                <div class="color-patch__color-box color-patch__color-box--blue-flat"></div>
+                <div class="color-patch__patch-descr">Blue-flat<br>#005AA4</div>
             </li>
             <li class="color-patch">
-                <div class="color-box -blue-royal-light"></div>
-                <div class="patch-descr">Blue-royal-light<br>#008ED2</div>
+                <div class="color-patch__color-box color-patch__color-box--blue-royal-light"></div>
+                <div class="color-patch__patch-descr">Blue-royal-light<br>#008ED2</div>
             </li>
             <li class="color-patch">
-                <div class="color-box -blue-royal-light-wcag"></div>
-                <div class="patch-descr">Blue-royal-light-WCAG<br>#0075D2</div>
+                <div class="color-patch__color-box color-patch__color-box--blue-royal-light-wcag"></div>
+                <div class="color-patch__patch-descr">Blue-royal-light-WCAG<br>#0075D2</div>
             </li>
             <li class="color-patch">
-                <div class="color-box -blue-royal-light-50"></div>
-                <div class="patch-descr">Blue-royal-light-50%<br>#7FC6E8</div>
+                <div class="color-patch__color-box color-patch__color-box--blue-royal-light-50"></div>
+                <div class="color-patch__patch-descr">Blue-royal-light-50%<br>#7FC6E8</div>
             </li>
             <li class="color-patch">
-                <div class="color-box -green-wcag"></div>
-                <div class="patch-descr">Green-WCAG<br>#008A00</div>
+                <div class="color-patch__color-box color-patch__color-box--green-wcag"></div>
+                <div class="color-patch__patch-descr">Green-WCAG<br>#008A00</div>
             </li>
             <li class="color-patch">
-                <div class="color-box -sand"></div>
-                <div class="patch-descr">Sand<br>#E1D5AF</div>
+                <div class="color-patch__color-box color-patch__color-box--sand"></div>
+                <div class="color-patch__patch-descr">Sand<br>#E1D5AF</div>
             </li>
             <li class="color-patch">
-                <div class="color-box -sand-50"></div>
-                <div class="patch-descr">Sand-50%<br>#F0EAD7</div>
+                <div class="color-patch__color-box color-patch__color-box--sand-50"></div>
+                <div class="color-patch__patch-descr">Sand-50%<br>#F0EAD7</div>
             </li>
             <li class="color-patch">
-                <div class="color-box -sand-25"></div>
-                <div class="patch-descr">Sand-25%<br>#F7F4EB</div>
+                <div class="color-patch__color-box color-patch__color-box--sand-25"></div>
+                <div class="color-patch__patch-descr">Sand-25%<br>#F7F4EB</div>
             </li>
             <li class="color-patch">
-                <div class="color-box -black"></div>
-                <div class="patch-descr">Black<br>#262626</div>
+                <div class="color-patch__color-box color-patch__color-box--black"></div>
+                <div class="color-patch__patch-descr">Black<br>#262626</div>
             </li>
             <li class="color-patch">
-                <div class="color-box -grey-dark"></div>
-                <div class="patch-descr">Grey-dark<br>#676767</div>
+                <div class="color-patch__color-box color-patch__color-box--grey-dark"></div>
+                <div class="color-patch__patch-descr">Grey-dark<br>#676767</div>
             </li>
             <li class="color-patch">
-                <div class="color-box -grey"></div>
-                <div class="patch-descr">Grey<br>#ADADAD</div>
+                <div class="color-patch__color-box color-patch__color-box--grey"></div>
+                <div class="color-patch__patch-descr">Grey<br>#ADADAD</div>
             </li>
             <li class="color-patch">
-                <div class="color-box -grey-light"></div>
-                <div class="patch-descr">Grey-light<br>#D8D8D8</div>
+                <div class="color-patch__color-box color-patch__color-box--grey-light"></div>
+                <div class="color-patch__patch-descr">Grey-light<br>#D8D8D8</div>
             </li>
             <li class="color-patch">
-                <div class="color-box -grey-light-bg"></div>
-                <div class="patch-descr">Grey-light-bg<br>#F1F1EF</div>
+                <div class="color-patch__color-box color-patch__color-box--grey-light-bg"></div>
+                <div class="color-patch__patch-descr">Grey-light-bg<br>#F1F1EF</div>
             </li>
             <li class="color-patch">
-                <div class="color-box -white"></div>
-                <div class="patch-descr">White<br>#FFFFFF</div>
+                <div class="color-patch__color-box color-patch__color-box--white"></div>
+                <div class="color-patch__patch-descr">White<br>#FFFFFF</div>
             </li>
         </ul>
     </div>
@@ -105,28 +105,28 @@
         <p>Brukt i sekundærelementer - Infografikk, verktøy, illustrasjoner, o.l.</p>
         <ul>
             <li class="color-patch">
-                <div class="color-box -green"></div>
-                <div class="patch-descr">Green<br>#37B441</div>
+                <div class="color-patch__color-box color-patch__color-box--green"></div>
+                <div class="color-patch__patch-descr">Green<br>#37B441</div>
             </li>
             <li class="color-patch">
-                <div class="color-box -purple"></div>
-                <div class="patch-descr">Purple<br>#C94096</div>
+                <div class="color-patch__color-box color-patch__color-box--purple"></div>
+                <div class="color-patch__patch-descr">Purple<br>#C94096</div>
             </li>
             <li class="color-patch">
-                <div class="color-box -purple-wcag"></div>
-                <div class="patch-descr">Purple-WCAG<br>#A20076</div>
+                <div class="color-patch__color-box color-patch__color-box--purple-wcag"></div>
+                <div class="color-patch__patch-descr">Purple-WCAG<br>#A20076</div>
             </li>
             <li class="color-patch">
-                <div class="color-box -orange"></div>
-                <div class="patch-descr">Orange<br>#E19100</div>
+                <div class="color-patch__color-box color-patch__color-box--orange"></div>
+                <div class="color-patch__patch-descr">Orange<br>#E19100</div>
             </li>
             <li class="color-patch">
-                <div class="color-box -orange-wcag"></div>
-                <div class="patch-descr">Orange-WCAG<br>#DA3D00</div>
+                <div class="color-patch__color-box color-patch__color-box--orange-wcag"></div>
+                <div class="color-patch__patch-descr">Orange-WCAG<br>#DA3D00</div>
             </li>
             <li class="color-patch">
-                <div class="color-box -red"></div>
-                <div class="patch-descr">Red<br>#E60000</div>
+                <div class="color-patch__color-box color-patch__color-box--red"></div>
+                <div class="color-patch__patch-descr">Red<br>#E60000</div>
             </li>
         </ul>
     </div>

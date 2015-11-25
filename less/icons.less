@@ -19,20 +19,25 @@
   &:extend(.icon-base all);
   background: url("@{icon-url}/chevron-royal.svg");
 
-  &.-light-blue {
+  &--light-blue {
     background: url("@{icon-url}/chevron-royal-light.svg");
   }
-  &.-white {
+  &--white {
     background: url("@{icon-url}/chevron-white.svg");
   }
 
-  &.-up {
+  &--up {
     transform: rotate(180deg);
   }
-  &.-left {
+  &--left {
     transform: rotate(90deg);
   }
-  &.-right {
+  &--right {
     transform: rotate(-90deg);
   }
+}
+
+.icon-info-error {
+  &:extend(.icon-base all);
+  background-image: url("@{icon-url}/info-red.svg");
 }
