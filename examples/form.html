@@ -14,16 +14,16 @@
     <header class="layout-container">
         <h1>Felles Frontend Style Guide</h1>
         <p class="lead-paragraph">Inneholder generell styling for bruk utenfor komponenter. F.eks. typografi, knapper, farger, o.l. FFE følger
-            <a href="https://github.com/rstacruz/rscss">Reasonable System for CSS Stylesheet Structure</a> for å sørge for god organisasjon av CSS-koden.
+            <a href="https://en.bem.info">BEM</a> for å sørge for god organisasjon av CSS-koden.
         </p>
     </header>
 
-    <nav class="layout-container -lg">
+    <nav class="layout-container layout-container--lg">
         <ul class="navigation-bar">
-            <li class="link"><a href="index.html">Typografi</a></li>
-            <li class="link"><a href="colors.html">Farger</a></li>
-            <li class="link -active"><a href="form.html">Skjema</a></li>
-            <li class="link"><a href="buttons.html">Knapper</a></li>
+            <li class="navigation-bar__link"><a href="index.html">Typografi</a></li>
+            <li class="navigation-bar__link"><a href="colors.html">Farger</a></li>
+            <li class="navigation-bar__link navigation-bar__link--active"><a href="form.html">Skjema</a></li>
+            <li class="navigation-bar__link"><a href="buttons.html">Knapper</a></li>
         </ul>
     </nav>
 
@@ -31,7 +31,7 @@
         <h2 class="page-title">Skjemaelementer</h2>
     </div>
 
-    <div class="layout-container -text-left">
+    <div class="layout-container layout-container--text-left">
         <!-- aria-hidden="true" kan brukes for å skjule feilmeldinger som ikke skal vises -->
         <div class="error-summary" aria-hidden="true" role="alert" aria-live="assertive">
             <span class="icon icon-info-error"></span>
@@ -42,30 +42,30 @@
         </div>
     </div>
 
-    <div class="layout-container -text-left">
-        <h3 class="h3 -spaced">Input-felt</h3>
+    <div class="layout-container layout-container--text-left">
+        <h3 class="h3 h3--spaced">Input-felt</h3>
         <p>Har tre størrelsesvarianter: -small, -medium og -large</p>
         <div class="input-group" aria-live="polite">
             <label id="ssn-label" class="form-label" for="ssn">
                 Norsk fødselsnummer
             </label>
             <input  id="ssn"
-                    class="input-field -medium"
+                    class="input-field input-field--medium"
                     name="ssn"
                     type="text"
                     maxlength="11"
                     autocomplete="off">
             <strong>(11 siffer)</strong>
             <!-- aria-hidden="true" kan brukes for å skjule feilmeldinger som ikke skal vises -->
-            <div class="info-message -error" aria-hidden="true">Vennligst fyll inn "Fødselsnummer"</div>
+            <div class="info-message info-message--error" aria-hidden="true">Vennligst fyll inn "Fødselsnummer"</div>
         </div>
     </div>
 
-    <div class="layout-container -text-left">
+    <div class="layout-container layout-container--text-left">
         <div class="collapse-link">Vis kode</div>
         <code class="code-block">
 &lt;input id=&quot;ssn&quot;
-    class=&quot;input-field -medium&quot;
+    class=&quot;input-field input-field--medium&quot;
     name=&quot;ssn&quot;
     type=&quot;text&quot;
     maxlength=&quot;11&quot;
@@ -75,8 +75,8 @@
 
     <div class="layout-container"><hr></div>
 
-    <div class="layout-container -text-left">
-        <h3 class="h3 -spaced">Select box</h3>
+    <div class="layout-container layout-container--text-left">
+        <h3 class="h3 h3--spaced">Select box</h3>
         <div class="input-group" aria-live="polite">
             <label id="month-label" class="form-label" for="month">
                 Velg måned
@@ -91,7 +91,7 @@
 
 
     </div>
-    <div class="layout-container -text-left">
+    <div class="layout-container layout-container--text-left">
         <div class="collapse-link">Vis kode</div>
         <code class="code-block">
 &lt;select class=&quot;select-box&quot; id=&quot;month&quot; &gt;
@@ -105,9 +105,9 @@
 
     <div class="layout-container"><hr></div>
 
-    <div class="layout-container -text-left">
-        <h3 class="h3 -spaced">Check box</h3>
-        <p>Brukes når det er flere mulige valg. Har en standard og en -inline variant.</p>
+    <div class="layout-container layout-container--text-left">
+        <h3 class="h3 h3--spaced">Check box</h3>
+        <p>Brukes når det er flere mulige valg. Har en standard og en inline variant.</p>
         <div class="input-group" aria-live="polite">
             <label id="checkbox-ibf-label" class="form-label" for="checkbox-ibf1">
                 What colors do you like on unicorns?
@@ -146,24 +146,24 @@
                         value="apples"
                         id="unicornfood-1"
                         checked>
-                <label class="check-box -inline" for="unicornfood-1">Apples</label>
+                <label class="check-box check-box--inline" for="unicornfood-1">Apples</label>
                 <input  class="hidden-checkbox"
                         type="checkbox"
                         name="unicornfood"
                         value="banans"
                         id="unicornfood-2">
-                <label class="check-box -inline" for="unicornfood-2">Bananas</label>
+                <label class="check-box check-box--inline" for="unicornfood-2">Bananas</label>
                 <input  class="hidden-checkbox"
                         type="checkbox"
                         name="unicornfood"
                         value="oatmeal"
                         id="unicornfood-3">
-                <label class="check-box -inline" for="unicornfood-3">Oatmeal</label>
+                <label class="check-box check-box--inline" for="unicornfood-3">Oatmeal</label>
             </fieldset>
         </div>
 
     </div>
-    <div class="layout-container -text-left">
+    <div class="layout-container layout-container--text-left">
         <div class="collapse-link">Vis kode</div>
         <code class="code-block">
 &lt;input  class=&quot;hidden-checkbox&quot;
@@ -172,14 +172,14 @@
     value=&quot;apples&quot;
     id=&quot;unicornfood-1&quot;
     checked&gt;
-&lt;label class=&quot;check-box -inline&quot; for=&quot;unicornfood-1&quot;&gt;Apples&lt;/label&gt;
+&lt;label class=&quot;check-box check-box--inline&quot; for=&quot;unicornfood-1&quot;&gt;Apples&lt;/label&gt;
         </code>
     </div>
 
     <div class="layout-container"><hr></div>
 
-    <div class="layout-container -text-left">
-        <h3 class="h3 -spaced">Radio button</h3>
+    <div class="layout-container layout-container--text-left">
+        <h3 class="h3 h3--spaced">Radio button</h3>
         <p>En standard type radio-knapp. Har en standard og en -inline variant.</p>
         <div class="input-group" aria-live="polite">
             <label id="radio-ibf-label" class="form-label" for="radio-ibf1">
@@ -219,24 +219,24 @@
                         value="yes"
                         id="unicornwings-1"
                         checked>
-                <label class="radio-button -inline" for="unicornwings-1">Yes</label>
+                <label class="radio-button radio-button--inline" for="unicornwings-1">Yes</label>
                 <input  class="radio-input"
                         type="radio"
                         name="unicornwings"
                         value="no"
                         id="unicornwings-2">
-                <label class="radio-button -inline" for="unicornwings-2">No</label>
+                <label class="radio-button radio-button--inline" for="unicornwings-2">No</label>
                 <input  class="radio-input"
                         type="radio"
                         name="unicornwings"
                         value="dunno"
                         id="unicornwings-3">
-                <label class="radio-button -inline" for="unicornwings-3">I do not know!</label>
+                <label class="radio-button radio-button--inline" for="unicornwings-3">I do not know!</label>
             </fieldset>
         </div>
 
     </div>
-    <div class="layout-container -text-left">
+    <div class="layout-container layout-container--text-left">
         <div class="collapse-link">Vis kode</div>
         <code class="code-block">
 &lt;input  class=&quot;radio-input&quot;
@@ -245,14 +245,14 @@
     value=&quot;yes&quot;
     id=&quot;unicornwings-1&quot;
     checked&gt;
-&lt;label class=&quot;radio-button -inline&quot; for=&quot;unicornwings-1&quot;&gt;Yes&lt;/label&gt;
+&lt;label class=&quot;radio-button radio-button--inline&quot; for=&quot;unicornwings-1&quot;&gt;Yes&lt;/label&gt;
         </code>
     </div>
 
     <div class="layout-container"><hr></div>
 
-    <div class="layout-container -text-left">
-        <h3 class="h3 -spaced">Radio switch</h3>
+    <div class="layout-container layout-container--text-left">
+        <h3 class="h3 h3--spaced">Radio switch</h3>
         <p>Brukes der det kun er to motstridende valg.</p>
         <div class="input-group" aria-live="polite">
             <label id="switch-ibf-label" class="form-label" for="switch-ibf1">
@@ -277,7 +277,7 @@
         </div>
 
     </div>
-    <div class="layout-container -text-left">
+    <div class="layout-container layout-container--text-left">
         <div class="collapse-link">Vis kode</div>
         <code class="code-block">
 &lt;input  class=&quot;radio-input&quot;
@@ -292,8 +292,8 @@
 
     <div class="layout-container"><hr></div>
 
-    <div class="layout-container -text-left">
-        <h3 class="h3 -spaced">Radio block</h3>
+    <div class="layout-container layout-container--text-left">
+        <h3 class="h3 h3--spaced">Radio block</h3>
         <p>
             Radio blocks brukes når det er viktig å presentere kontekstuelt relevant informasjon om valgene til brukeren uten å overvelde.
         </p>
@@ -303,15 +303,15 @@
 
         <h4 class="h3">- Alltid synlig kontekst</h4>
         <div class="input-group" aria-live="polite">
-            <label id="block-ibf-label" class="form-label" for="block-ibf1">
+            <label class="form-label" for="block-ibf1">
                 Hva ønsker du å gjøre?
             </label>
             <fieldset id="block-ibf1">
                 <div class="radio-block">
                     <input class="radio-input" type="radio" name="block" id="block-one" value="one">
-                    <div class="content -visible">
-                        <label class="header" for="block-one">Blokk 1</label>
-                        <div class="wrapper">
+                    <div class="radio-block__content">
+                        <label class="radio-block__header" for="block-one">Blokk 1</label>
+                        <div class="radio-block__wrapper">
                             <p>
                                 Blokk 1.<br>
                                 Denne teksten er alltid synlig.
@@ -322,9 +322,9 @@
 
                 <div class="radio-block">
                     <input class="radio-input" type="radio" name="block" id="block-two" value="two">
-                    <div class="content -visible">
-                        <label class="header" for="block-two">Blokk 2</label>
-                        <div class="wrapper">
+                    <div class="radio-block__content">
+                        <label class="radio-block__header" for="block-two">Blokk 2</label>
+                        <div class="radio-block__wrapper">
                             <p>
                                 Blokk 2.<br>
                                 Denne teksten er alltid synlig.
@@ -334,14 +334,14 @@
                 </div>
             </fieldset>
         </div>
-        <div class="layout-container -text-left">
+        <div class="layout-container layout-container--text-left">
             <div class="collapse-link">Vis kode</div>
             <code class="code-block">
 &lt;div class=&quot;radio-block&quot;&gt;
     &lt;input class=&quot;radio-input&quot; type=&quot;radio&quot; name=&quot;block&quot; id=&quot;block-two&quot; value=&quot;two&quot;&gt;
-    &lt;div class=&quot;content -visible&quot;&gt;
-        &lt;label class=&quot;header&quot; for=&quot;block-two&quot;&gt;Blokk 2&lt;/label&gt;
-        &lt;div class=&quot;wrapper&quot;&gt;
+    &lt;div class=&quot;radio-block__content&quot;&gt;
+        &lt;label class=&quot;radio-block__header&quot; for=&quot;block-two&quot;&gt;Blokk 2&lt;/label&gt;
+        &lt;div class=&quot;radio-block__wrapper&quot;&gt;
             &lt;p&gt;
                 Denne teksten er alltid synlig.
             &lt;/p&gt;
@@ -364,15 +364,15 @@
         </p>
 
         <div class="input-group" aria-live="polite" role="tablist">
-            <label id="block-ibf-label" class="form-label" for="tab-set">
+            <label class="form-label" for="tab-set">
                 Hva ønsker du å gjøre?
             </label>
             <fieldset id="tab-set">
                 <div class="radio-block" role="presentation">
                     <input class="radio-input" type="radio" name="tab" id="tab-one" aria-labelledby="tab-one-label" value="one" tabindex="0" role="tab" aria-controls="content-one" aria-selected="true" checked>
-                    <div class="content" role="presentation">
-                        <label class="header" id="tab-one-label" for="tab-one">Block one</label>
-                        <div class="wrapper" id="content-one" role="tabpanel" aria-labelledby="tab-one-label">
+                    <div class="radio-block__content" role="presentation">
+                        <label class="radio-block__header" id="tab-one-label" for="tab-one">Block one</label>
+                        <div class="radio-block__wrapper" id="content-one" role="tabpanel" aria-labelledby="tab-one-label">
                             <p>
                                 Denne teksten er synlig fordi valget er aktivt.
                             </p>
@@ -381,9 +381,9 @@
                 </div>
                 <div class="radio-block" role="presentation">
                     <input class="radio-input" type="radio" name="tab" id="tab-two" aria-labelledby="tab-two-label" value="two" tabindex="0" role="tab" aria-controls="content-two" aria-selected="false">
-                    <div class="content" role="presentation">
-                        <label class="header" id="tab-two-label" for="tab-two">Block two</label>
-                        <div class="wrapper" id="content-two" role="tabpanel" aria-labelledby="tab-two-label" aria-hidden="true">
+                    <div class="radio-block__content" role="presentation">
+                        <label class="radio-block__header" id="tab-two-label" for="tab-two">Block two</label>
+                        <div class="radio-block__wrapper" id="content-two" role="tabpanel" aria-labelledby="tab-two-label" aria-hidden="true">
                             <p>
                                 Denne teksten er ikke synlig.
                             </p>
@@ -397,28 +397,28 @@
                     radioTab.addEventListener('click', function(e) {
                         tabRadios.forEach(function(toDisable) {
                             toDisable.setAttribute('aria-selected', 'false');
-                            toDisable.nextElementSibling.querySelector('.wrapper').setAttribute('aria-hidden', 'true');
+                            toDisable.nextElementSibling.querySelector('.radio-block__wrapper').setAttribute('aria-hidden', 'true');
                         });
                         e.target.setAttribute('aria-selected', 'true');
-                        e.target.nextElementSibling.querySelector('.wrapper').setAttribute('aria-hidden', 'false');
+                        e.target.nextElementSibling.querySelector('.radio-block__wrapper').setAttribute('aria-hidden', 'false');
                     });
                 });
             </script>
         </div>
 
-        <div class="layout-container -text-left">
+        <div class="layout-container layout-container--text-left">
             <div class="collapse-link">Vis kode</div>
             <code class="code-block">
-&lt;div class=&quot;input-group&quot; aria-live=&quote;polite&quote; role=&quot;tablist&quot;&gt;
+&lt;div class=&quot;input-group&quot; aria-live=&quot;polite&quot; role=&quot;tablist&quot;&gt;
     &lt;label id=&quot;block-ibf-label&quot; class=&quot;form-label&quot; for=&quot;tab-set&quot;&gt;
         Hva ønsker du å gjøre?
     &lt;/label&gt;
     &lt;fieldset id=&quot;tab-set&quot;&gt;
         &lt;div class=&quot;radio-block&quot; role=&quot;presentation&quot;&gt;
             &lt;input class=&quot;radio-input&quot; type=&quot;radio&quot; name=&quot;tab&quot; id=&quot;tab-one&quot; aria-labelledby=&quot;tab-one-label&quot; value=&quot;one&quot; tabindex=&quot;0&quot; role=&quot;tab&quot; aria-controls=&quot;content-one&quot; aria-selected=&quot;true&quot; checked&gt;
-            &lt;div class=&quot;content&quot; role=&quot;presentation&quot;&gt;
-                &lt;label class=&quot;header&quot; id=&quot;tab-one-label&quot; for=&quot;tab-one&quot;&gt;Block one&lt;/label&gt;
-                &lt;div class=&quot;wrapper&quot; id=&quot;content-one&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;tab-one-label&quot;&gt;
+            &lt;div class=&quot;radio-block__content&quot; role=&quot;presentation&quot;&gt;
+                &lt;label class=&quot;radio-block__header&quot; id=&quot;tab-one-label&quot; for=&quot;tab-one&quot;&gt;Block one&lt;/label&gt;
+                &lt;div class=&quot;radio-block__wrapper&quot; id=&quot;content-one&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;tab-one-label&quot;&gt;
                     &lt;p&gt;
                         Denne teksten er synlig fordi valget er aktivt.
                     &lt;/p&gt;
@@ -427,9 +427,9 @@
         &lt;/div&gt;
         &lt;div class=&quot;radio-block&quot; role=&quot;presentation&quot;&gt;
             &lt;input class=&quot;radio-input&quot; type=&quot;radio&quot; name=&quot;tab&quot; id=&quot;tab-two&quot; aria-labelledby=&quot;tab-two-label&quot; value=&quot;two&quot; tabindex=&quot;0&quot; role=&quot;tab&quot; aria-controls=&quot;content-two&quot; aria-selected=&quot;false&quot;&gt;
-            &lt;div class=&quot;content&quot; role=&quot;presentation&quot;&gt;
-                &lt;label class=&quot;header&quot; id=&quot;tab-two-label&quot; for=&quot;tab-two&quot;&gt;Block two&lt;/label&gt;
-                &lt;div class=&quot;wrapper&quot; id=&quot;content-two&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;tab-two-label&quot; aria-hidden=&quot;true&quot;&gt;
+            &lt;div class=&quot;radio-block__content&quot; role=&quot;presentation&quot;&gt;
+                &lt;label class=&quot;radio-block__header&quot; id=&quot;tab-two-label&quot; for=&quot;tab-two&quot;&gt;Block two&lt;/label&gt;
+                &lt;div class=&quot;radio-block__wrapper&quot; id=&quot;content-two&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;tab-two-label&quot; aria-hidden=&quot;true&quot;&gt;
                     &lt;p&gt;
                         Denne teksten er ikke synlig.
                     &lt;/p&gt;
@@ -448,7 +448,7 @@
         <h2>Skjemavalidering</h2>
     </div>
 
-    <div class="layout-container -text-left">
+    <div class="layout-container layout-container--text-left">
         <h3>Oppsummering av feil i skjema</h3>
         <p class="body-paragraph">
             Det skal plasseres en oppsummering av skjemafeil over skjemaet. Det skal også scrolles
@@ -460,34 +460,34 @@
         </p>
 
         <div class="error-summary" aria-hidden="false" role="alert" aria-live="assertive">
-            <span class="icon icon-info-error"></span>
-            <span class="title">Du må rette opp disse feilene i skjemaet</span>
-            <ul class="summary-list">
-                <li>Vennligst velg en bonus</li>
-                <li>Vennligst fyll inn "Fødselsnummer"</li>
-                <li>Vennligst fyll inn "Fornavn"</li>
-                <li>Vennligst fyll inn "Etternavn"</li>
+            <span class="error-summary__icon icon-info-error"></span>
+            <span class="error-summary__title">Du må rette opp disse feilene i skjemaet</span>
+            <ul class="error-summary__list">
+                <li class="error-summary__list-item">Vennligst velg en bonus</li>
+                <li class="error-summary__list-item">Vennligst fyll inn "Fødselsnummer"</li>
+                <li class="error-summary__list-item">Vennligst fyll inn "Fornavn"</li>
+                <li class="error-summary__list-item">Vennligst fyll inn "Etternavn"</li>
             </ul>
         </div>
     </div>
 
-    <div class="layout-container -text-left">
+    <div class="layout-container layout-container--text-left">
         <div class="collapse-link">Vis kode</div>
         <code class="code-block">
 &lt;div class=&quot;error-summary&quot; aria-hidden=&quot;false&quot; role=&quot;alert&quot; aria-live=&quot;assertive&quot;&gt;
-    &lt;span class=&quot;icon icon-info-error&quot;&gt;&lt;/span&gt;
-    &lt;span class=&quot;title&quot;&gt;Du må rette opp disse feilene i skjemaet&lt;/span&gt;
-    &lt;ul class=&quot;summary-list&quot;&gt;
-        &lt;li&gt;Vennligst velg en bonus&lt;/li&gt;
-        &lt;li&gt;Vennligst fyll inn &quot;Fødselsnummer&quot;&lt;/li&gt;
-        &lt;li&gt;Vennligst fyll inn &quot;Fornavn&quot;&lt;/li&gt;
-        &lt;li&gt;Vennligst fyll inn &quot;Etternavn&quot;&lt;/li&gt;
+    &lt;span class=&quot;error-summary__icon icon-info-error&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;error-summary__title&quot;&gt;Du må rette opp disse feilene i skjemaet&lt;/span&gt;
+    &lt;ul class=&quot;error-summary__list&quot;&gt;
+        &lt;li class=&quot;error-summary__list-item&quot;&gt;Vennligst velg en bonus&lt;/li&gt;
+        &lt;li class=&quot;error-summary__list-item&quot;&gt;Vennligst fyll inn &quot;Fødselsnummer&quot;&lt;/li&gt;
+        &lt;li class=&quot;error-summary__list-item&quot;&gt;Vennligst fyll inn &quot;Fornavn&quot;&lt;/li&gt;
+        &lt;li class=&quot;error-summary__list-item&quot;&gt;Vennligst fyll inn &quot;Etternavn&quot;&lt;/li&gt;
     &lt;/ul&gt;
 &lt;/div&gt;
         </code>
     </div>
 
-    <div class="layout-container -text-left">
+    <div class="layout-container layout-container--text-left">
         <h3>Feilmeldinger på skjemaelementene</h3>
         <p class="body-paragraph">
             Alle skjemaelementer må wrappes i en 'input-group' med <code class="code-inline">aria-live="polite"</code> slik at skjermlesere plukker det opp og varsler brukeren når det vises en feilmelding.
@@ -508,7 +508,7 @@
                 maxlength="11"
                 autocomplete="off"
                 aria-invalid="true">
-            <div class="info-message -error">Vennligst fyll inn "Fødselsnummer"</div>
+            <div class="info-message info-message--error">Vennligst fyll inn "Fødselsnummer"</div>
         </div>
 
         <div class="input-group" aria-live="polite">
@@ -522,25 +522,25 @@
                         value="yes"
                         id="unicornwings-1-invalid"
                         checked>
-                <label class="radio-button -inline" for="unicornwings-1-invalid">Yes</label>
+                <label class="radio-button radio-button--inline" for="unicornwings-1-invalid">Yes</label>
                 <input  class="radio-input"
                         type="radio"
                         name="unicornwings-validation"
                         value="no"
                         id="unicornwings-2-invalid">
-                <label class="radio-button -inline" for="unicornwings-2-invalid">No</label>
+                <label class="radio-button radio-button--inline" for="unicornwings-2-invalid">No</label>
                 <input  class="radio-input"
                         type="radio"
                         name="unicornwings-validation"
                         value="dunno"
                         id="unicornwings-3-invalid">
-                <label class="radio-button -inline" for="unicornwings-3-invalid">I do not know!</label>
+                <label class="radio-button radio-button--inline" for="unicornwings-3-invalid">I do not know!</label>
             </fieldset>
-            <div class="info-message -error">Ta våre fabeldyr på alvor.</div>
+            <div class="info-message info-message--error">Ta våre fabeldyr på alvor.</div>
         </div>
 
     </div>
-    <div class="layout-container -text-left">
+    <div class="layout-container layout-container--text-left">
         <div class="collapse-link">Vis kode</div>
         <code class="code-block">
 &lt;div class=&quot;input-group&quot; aria-live=&quot;polite&quot;&gt;
@@ -552,17 +552,17 @@
         maxlength=&quot;11&quot;
         autocomplete=&quot;off&quot;
         aria-invalid=&quot;true&quot;&gt;
-    &lt;div class=&quot;info-message -error&quot;&gt;Vennligst fyll inn &quot;Fødselsnummer&quot;&lt;/div&gt;
+    &lt;div class=&quot;info-message info-message--error&quot;&gt;Vennligst fyll inn &quot;Fødselsnummer&quot;&lt;/div&gt;
 &lt;/div&gt;
         </code>
     </div>
 
-    <div class="layout-container -text-left">
+    <div class="layout-container layout-container--text-left">
         <h2>Generelle komponenter</h2>
         <p>Praktiske elementer å bruke forskjellige steder i en applikasjon</p>
     </div>
 
-    <div class="layout-container -text-left">
+    <div class="layout-container layout-container--text-left">
         <h3>Loading spinner</h3>
         <p>
             Spinneren er kun en klasse som ikke inneholder noen posisjoneringskode; dette gir mye fleksibilitet.
@@ -575,15 +575,15 @@
         <div class="small-text">LOADING SPINNER -LARGE (centered layout not included)</div>
     </div>
     <div class="layout-container">
-        <div class="loading-spinner -large"></div>
+        <div class="loading-spinner loading-spinner--large"></div>
         <p>
             Loading...
         </p>
     </div>
-    <div class="layout-container -text-left">
+    <div class="layout-container layout-container--text-left">
         <div class="collapse-link">Vis kode</div>
         <code class="code-block">
-&lt;div class=&quot;loading-spinner -large&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;loading-spinner loading-spinner--large&quot;&gt;&lt;/div&gt;
         </code>
     </div>
 

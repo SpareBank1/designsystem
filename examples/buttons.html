@@ -14,36 +14,37 @@
     <header class="layout-container">
         <h1>Felles Frontend Style Guide</h1>
         <p class="lead-paragraph">Inneholder generell styling for bruk utenfor komponenter. F.eks. typografi, knapper, farger, o.l. FFE følger
-            <a href="https://github.com/rstacruz/rscss">Reasonable System for CSS Stylesheet Structure</a> for å sørge for god organisasjon av CSS-koden.
+            <a href="https://en.bem.info">BEM</a> for å sørge for god organisasjon av CSS-koden.
         </p>
     </header>
 
-    <nav class="layout-container -lg">
+    <nav class="layout-container layout-container--lg">
         <ul class="navigation-bar">
-            <li class="link"><a href="index.html">Typografi</a></li>
-            <li class="link"><a href="colors.html">Farger</a></li>
-            <li class="link"><a href="form.html">Skjema</a></li>
-            <li class="link -active"><a href="buttons.html">Knapper</a></li>
+            <li class="navigation-bar__link"><a href="index.html">Typografi</a></li>
+            <li class="navigation-bar__link"><a href="colors.html">Farger</a></li>
+            <li class="navigation-bar__link"><a href="form.html">Skjema</a></li>
+            <li class="navigation-bar__link navigation-bar__link--active"><a href="buttons.html">Knapper</a></li>
         </ul>
     </nav>
 
-    <section class="layout-container -text-left">
-        <h3 class="h3 -spaced">Knapper</h3>
+    <section class="layout-container layout-container--text-left">
+        <h3 class="h3 h3--spaced">Knapper</h3>
 
         <p>For å endre state på en knapp fra vanlig til "spinner" må følgende gjøres:</p>
         <ul>
-            <li>Sett klassen <code class="code-inline">-loading</code> på selve knappen</li>
-            <li>Sett <code class="code-inline">aria-hidden="false"</code> på <code class="code-inline">.label-spinner</code></li>
+            <li>Legg til klassen <code class="code-inline">[knapp-variant]--loading</code> på selve knappen</li>
+            <li>Legg til klassen <code class="code-inline">[knapp-variant]__label-text--loading</code> på label-text-elementet</li>
+            <li>Sett <code class="code-inline">aria-hidden="false"</code> på <code class="code-inline">[knapp-variant]__label-spinner</code></li>
             <li>Optional: Legg til <code class="code-inline">disabled</code> attributt på knappen</li>
         </ul>
 
         <div class="small-text">ACTION BUTTON</div>
         <div class="button-group" aria-live="polite">
             <button class="action-button">Action button</button>
-            <button class="action-button -loading">
-                <span class="label">
-                    <span class="label-text">Action button</span>
-                    <span class="label-spinner" aria-hidden="false">Spinner-tekst</span>
+            <button class="action-button action-button--loading">
+                <span class="action-button__label">
+                    <span class="action-button__label-text action-button__label-text--loading">Action button</span>
+                    <span class="action-button__label-spinner" aria-hidden="false">Spinner-tekst</span>
                 </span>
             </button>
         </div>
@@ -51,10 +52,10 @@
         <div class="small-text">PRIMARY BUTTON</div>
         <div class="button-group" aria-live="polite">
             <button class="primary-button">Primary button</button>
-            <button class="primary-button -loading">
-                <span class="label">
-                    <span class="label-text">Primary button</span>
-                    <span class="label-spinner" aria-hidden="false">Spinner-tekst</span>
+            <button class="primary-button primary-button--loading">
+                <span class="primary-button__label">
+                    <span class="primary-button__label-text primary-button__label-text--loading">Primary button</span>
+                    <span class="primary-button__label-spinner" aria-hidden="false">Spinner-tekst</span>
                 </span>
             </button>
         </div>
@@ -62,10 +63,10 @@
         <div class="small-text">SECONDARY BUTTON</div>
         <div class="button-group" aria-live="polite">
             <button class="secondary-button">Secondary button</button>
-            <button class="secondary-button -loading">
-                <span class="label">
-                    <span class="label-text">Secondary button</span>
-                    <span class="label-spinner" aria-hidden="false">Spinner-tekst</span>
+            <button class="secondary-button secondary-button--loading">
+                <span class="secondary-button__label">
+                    <span class="secondary-button__label-text secondary-button__label-text--loading">Secondary button</span>
+                    <span class="secondary-button__label-spinner" aria-hidden="false">Spinner-tekst</span>
                 </span>
             </button>
         </div>
@@ -73,19 +74,19 @@
         <div class="small-text">SHORTCUT BUTTON</div>
         <div class="button-group">
             <button class="shortcut-button">Shortcut button
-                <span class="icon-chevron -right -light-blue"></span>
+                <span class="shortcut-button__icon-chevron icon-chevron icon-chevron--right icon-chevron--light-blue"></span>
             </button>
         </div>
     </section>
 
-    <section class="layout-container -text-left">
+    <section class="layout-container layout-container--text-left">
         <div class="collapse-link">Vis kode</div>
         <code class="code-block">
 &lt;button class=&quot;action-button&quot;&gt;Action button&lt;/button&gt;
-&lt;button class=&quot;action-button -loading&quot;&gt;
-    &lt;span class=&quot;label&quot;&gt;
-        &lt;span class=&quot;label-text&quot;&gt;Action button&lt;/span&gt;
-        &lt;span class=&quot;label-spinner&quot; aria-hidden=&quot;true&quot;&gt;Spinner-tekst&lt;/span&gt;
+&lt;button class=&quot;action-button&nbsp;action-button--loading&quot;&gt;
+    &lt;span class=&quot;action-button__label&quot;&gt;
+        &lt;span class=&quot;action-button__label-text&nbsp;action-button__label-text--loading&quot;&gt;Action button&lt;/span&gt;
+        &lt;span class=&quot;action-button__label-spinner&quot; aria-hidden=&quot;false&quot;&gt;Spinner-tekst&lt;/span&gt;
     &lt;/span&gt;
 &lt;/button&gt;
         </code>
