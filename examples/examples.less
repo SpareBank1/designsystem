@@ -8,23 +8,23 @@
     max-width: 768px;
     text-align: center;
 
-    &_sm {
+    &--sm {
         max-width: 550px;
     }
 
-    &_lg {
+    &--lg {
         max-width: 1280px;
     }
 
-    &_text-left {
+    &--text-left {
         text-align: left;
     }
 
-    &_wrapped {
+    &--wrapped {
         margin: 0 auto;
     }
 
-    &_subtle {
+    &--subtle {
       background-color: @sand-25;
       width: 100%;
       max-width: none;
@@ -35,7 +35,7 @@
 
 .color-patch {
     display: inline-block;
-    width: 244px;
+    width: 230px;
     border-radius: 4px;
     margin-right: 8px;
 
@@ -47,67 +47,67 @@
     &__color-box {
         height: 80px;
 
-        &_blue-royal {
+        &--blue-royal {
             background-color: @blue-royal;
         }
-        &_blue-flat {
+        &--blue-flat {
             background-color: @blue-flat;
         }
-        &_blue-royal-light {
+        &--blue-royal-light {
             background-color: @blue-royal-light;
         }
-        &_blue-royal-light-wcag {
+        &--blue-royal-light-wcag {
             background-color: @blue-royal-light-wcag;
         }
-        &_blue-royal-light-50 {
+        &--blue-royal-light-50 {
             background-color: @blue-royal-light-50;
         }
-        &_green-wcag {
+        &--green-wcag {
             background-color: @green-wcag;
         }
-        &_sand {
+        &--sand {
             background-color: @sand;
         }
-        &_sand-50 {
+        &--sand-50 {
             background-color: @sand-50;
         }
-        &_sand-25 {
+        &--sand-25 {
             background-color: @sand-25;
         }
-        &_black {
+        &--black {
             background-color: @black;
         }
-        &_grey-dark {
+        &--grey-dark {
             background-color: @grey-dark;
         }
-        &_grey {
+        &--grey {
             background-color: @grey;
         }
-        &_grey-light {
+        &--grey-light {
             background-color: @grey-light;
         }
-        &_grey-light-bg {
+        &--grey-light-bg {
             background-color: @grey-light-bg;
         }
-        &_white {
+        &--white {
             background-color: @white;
         }
-        &_green {
+        &--green {
             background-color: @green;
         }
-        &_purple {
+        &--purple {
             background-color: @purple;
         }
-        &_purple-wcag {
+        &--purple-wcag {
             background-color: @purple-wcag;
         }
-        &_orange {
+        &--orange {
             background-color: @orange;
         }
-        &_orange-wcag {
+        &--orange-wcag {
             background-color: @orange-wcag;
         }
-        &_red {
+        &--red {
             background-color: @red;
         }
     }
@@ -133,7 +133,7 @@
         transition: transform 0.2s;
     }
 
-    &_open:before {
+    &--open:before {
         transform: rotateZ(45deg);
     }
 }
@@ -142,7 +142,7 @@
     display: none;
 }
 
-.collapse-link_open + .code-block {
+.collapse-link--open + .code-block {
     display: block;
     margin-top: 20px;
 }
@@ -178,7 +178,7 @@
         color: @blue-royal;;
     }
 
-    &__link_active {
+    &__link--active {
         border-bottom: solid 4px @blue-royal;
         padding-bottom: 11px;
         font-family: "MuseoSans-500", arial, sans-serif;
@@ -193,7 +193,7 @@
 h1, h2, h3, h4, h5,
 .h1,.h2,.h3,.h4,.h5,
 .small-text, .micro-text, .lead-paragraph, .body-text {
-    &_spaced {
+    &--spaced {
         margin-bottom: 40px;
     }
 }
