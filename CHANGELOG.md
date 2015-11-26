@@ -1,5 +1,9 @@
 # Changelog
 
+## v.2.0.0 (26.11.2015)
+
+* Bytter fra RSCSS til BEM som kodestandard for CSS.
+
 ## v.1.0.3 (20.11.2015)
 
 * IE-fix. Legger til z-index på radioknapp for at den ikke skal skjules under header ved re-rendring. 
