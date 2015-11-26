@@ -9,30 +9,28 @@
         display: none;
     }
 
-    > .title {
+    &__title {
         &:extend(.h4);
         padding-left: 5px;
         margin-bottom: 10px;
         color: @orange-wcag;
     }
 
-    > .icon {
+    &__icon {
         height: 30px;
         width: 30px;
     }
 
-    > ul {
+    &__list {
         font-size: 16px;
         line-height: 2;
         list-style: disc;
         margin-top: 10px;
-
-        > li {
-            margin-left: 30px;
-        }
-
     }
 
+    &__list-item {
+        margin-left: 30px;
+    }
 }
 
 
@@ -44,13 +42,13 @@
         max-width: 620px;
         margin: auto;
 
-        > .title {
+        &__title {
             font-size: 20px;
             line-height: 26px;
             padding-left: 5px;
         }
 
-        > .icon {
+        &__icon {
             height: 50px;
             width: 50px;
         }
