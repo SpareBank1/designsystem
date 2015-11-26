@@ -59,11 +59,21 @@ Squash alle commits til en enkelt commit.
 ##Publisering
 Ved hver major release lages en ny branch (f.eks. release/02-wistful-wizard) som kan vedlikeholdes ved siden av master. Master har da kun ikke lanserte endringer.
 
-Ved lansering av ny versjon må i tillegg disse stegene følges (`minor` og `major` er også gyldige valg):
+Ved lansering av ny minor eller patch versjon må i tillegg disse stegene følges:
 
-- Oppdatere `CHANGELOG.md`
+- Oppdater `CHANGELOG.md`
 - Skift til branchen det skal releases fra
 - Backport endringene som skal leveres og endringen i CHANGELOG.md.
-- `npm version [patch|minor|major]`
+- `npm version [patch|minor]` (dette oppretter også en tag med versjonsnummeret)
 - `git push && git push --tags`
 - `npm publish --registry ***REMOVED***`
+
+Ved lansering av ny major versjon må disse stegene følges:
+
+- Oppdater `CHANGELOG.md` på master
+- Opprett release branch og skift til denne
+- Opprett en tag for den nye versjonen
+- `git push && git push --tags`
+- `npm publish --registry ***REMOVED***`
+- Bytt tilbake til master
+- Oppdater `package.json` med neste major versjonsummer for å tydeliggjøre at master ligger foran siste release.   
