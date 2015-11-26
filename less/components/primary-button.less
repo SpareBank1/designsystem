@@ -33,43 +33,39 @@
         background-color: darken(@blue-flat,10%);
     }
 
-    > .label {
+    &__label {
         overflow: hidden;
         position: relative;
+    }
 
-        > .label-text {
-            position: relative;
+    &__label-text {
+        position: relative;
+        bottom: 0;
+        transition: bottom 0.2s;
+    }
+
+    &__label-spinner {
+        .sb1-spinner(@white,22px);
+        opacity: 0;
+        color: transparent;
+        position: absolute;
+        bottom: -40px;
+        left: ~"calc(50% - 11px)";
+        transition: all 0.2s;
+
+        &[aria-hidden="false"] {
+            opacity: 1;
             bottom: 0;
-            transition: bottom 0.2s;
-        }
-
-        > .label-spinner {
-            .sb1-spinner(@white,22px);
-            opacity: 0;
-            color: transparent;
-            position: absolute;
-            bottom: -40px;
-            left: ~"calc(50% - 11px)";
-            transition: bottom 0.2s;
-
-            &[aria-hidden="false"] {
-                opacity: 1;
-                bottom: 0;
-            }
         }
     }
 
-    &.-loading {
+    &--loading {
         pointer-events: none;
-        background-color: darken(@blue-royal-light-wcag,10%);
+        background-color: darken(@blue-royal-light-wcag, 10%);
+    }
 
-        > .label {
-
-            > .label-text {
-                bottom: 50px;
-            }
-
-        }
+    &__label-text--loading {
+        bottom: 50px;
     }
 }
 

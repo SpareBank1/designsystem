@@ -8,74 +8,109 @@
     max-width: 768px;
     text-align: center;
 
-    &.-sm {
+    &--sm {
         max-width: 550px;
     }
 
-    &.-lg {
+    &--lg {
         max-width: 1280px;
     }
 
-    &.-text-left {
+    &--text-left {
         text-align: left;
     }
 
-    &.-wrapped {
+    &--wrapped {
         margin: 0 auto;
     }
 
-    &.-subtle {
+    &--subtle {
       background-color: @sand-25;
       width: 100%;
       max-width: none;
       margin: 0 auto;
       padding: 60px 0;
     }
-
-  @media screen and (min-width: @breakpoint-md) {
-    padding: 0;
-    width: 90%;
-  }
-
 }
 
 .color-patch {
     display: inline-block;
-    width: 244px;
+    width: 230px;
     border-radius: 4px;
     margin-right: 8px;
 
-    > .patch-descr {
+    &__patch-descr {
         .small-text();
         padding: 15px;
     }
 
-    > .color-box {
+    &__color-box {
         height: 80px;
+
+        &--blue-royal {
+            background-color: @blue-royal;
+        }
+        &--blue-flat {
+            background-color: @blue-flat;
+        }
+        &--blue-royal-light {
+            background-color: @blue-royal-light;
+        }
+        &--blue-royal-light-wcag {
+            background-color: @blue-royal-light-wcag;
+        }
+        &--blue-royal-light-50 {
+            background-color: @blue-royal-light-50;
+        }
+        &--green-wcag {
+            background-color: @green-wcag;
+        }
+        &--sand {
+            background-color: @sand;
+        }
+        &--sand-50 {
+            background-color: @sand-50;
+        }
+        &--sand-25 {
+            background-color: @sand-25;
+        }
+        &--black {
+            background-color: @black;
+        }
+        &--grey-dark {
+            background-color: @grey-dark;
+        }
+        &--grey {
+            background-color: @grey;
+        }
+        &--grey-light {
+            background-color: @grey-light;
+        }
+        &--grey-light-bg {
+            background-color: @grey-light-bg;
+        }
+        &--white {
+            background-color: @white;
+        }
+        &--green {
+            background-color: @green;
+        }
+        &--purple {
+            background-color: @purple;
+        }
+        &--purple-wcag {
+            background-color: @purple-wcag;
+        }
+        &--orange {
+            background-color: @orange;
+        }
+        &--orange-wcag {
+            background-color: @orange-wcag;
+        }
+        &--red {
+            background-color: @red;
+        }
     }
-
-    > .color-box.-blue-royal              { background-color: @blue-royal; }
-    > .color-box.-blue-flat               { background-color: @blue-flat; }
-    > .color-box.-blue-royal-light        { background-color: @blue-royal-light; }
-    > .color-box.-blue-royal-light-wcag   { background-color: @blue-royal-light-wcag; }
-    > .color-box.-blue-royal-light-50     { background-color: @blue-royal-light-50; }
-    > .color-box.-green-wcag              { background-color: @green-wcag; }
-    > .color-box.-sand                    { background-color: @sand; }
-    > .color-box.-sand-50                 { background-color: @sand-50; }
-    > .color-box.-sand-25                 { background-color: @sand-25; }
-    > .color-box.-black                   { background-color: @black; }
-    > .color-box.-grey-dark               { background-color: @grey-dark; }
-    > .color-box.-grey                    { background-color: @grey; }
-    > .color-box.-grey-light              { background-color: @grey-light; }
-    > .color-box.-grey-light-bg           { background-color: @grey-light-bg; }
-    > .color-box.-white                   { background-color: @white; }
-
-    > .color-box.-green                   { background-color: @green; }
-    > .color-box.-purple                  { background-color: @purple; }
-    > .color-box.-purple-wcag             { background-color: @purple-wcag; }
-    > .color-box.-orange                  { background-color: @orange; }
-    > .color-box.-orange-wcag             { background-color: @orange-wcag; }
-    > .color-box.-red                     { background-color: @red; }
 }
 
 .collapse-link {
@@ -98,7 +133,7 @@
         transition: transform 0.2s;
     }
 
-    &.-open:before {
+    &--open:before {
         transform: rotateZ(45deg);
     }
 }
@@ -107,7 +142,7 @@
     display: none;
 }
 
-.collapse-link.-open + .code-block {
+.collapse-link--open + .code-block {
     display: block;
     margin-top: 20px;
 }
@@ -131,19 +166,19 @@
     border-top: solid 1px @grey-light;
     border-bottom: solid 1px @grey-light;
 
-    > .link {
+    &__link {
         display: inline-block;
         font-size: 16px;
         margin: 0 50px;
         padding: 15px 0;
     }
 
-    > .link > a {
+    &__link > a {
         font-family: "MuseoSansRounded-500", arial, sans-serif;
         color: @blue-royal;;
     }
 
-    > .link.-active {
+    &__link--active {
         border-bottom: solid 4px @blue-royal;
         padding-bottom: 11px;
         font-family: "MuseoSans-500", arial, sans-serif;
@@ -158,7 +193,7 @@
 h1, h2, h3, h4, h5,
 .h1,.h2,.h3,.h4,.h5,
 .small-text, .micro-text, .lead-paragraph, .body-text {
-    &.-spaced {
+    &--spaced {
         margin-bottom: 40px;
     }
 }
