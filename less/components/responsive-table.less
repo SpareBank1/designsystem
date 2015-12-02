@@ -42,8 +42,7 @@
         display: block;
     }
 
-    > tbody > tr > td > .element-content,
-    > tfoot > tr > td > .element-content {
+    &_content {
         display: inline-block;
         vertical-align: top;
         max-width: ~"calc(100% - 105px)";
@@ -66,8 +65,8 @@
         }
     }
 
-    &.-small-header > tbody > tr > [data-th]:before,
-    &.-small-header > tfoot > tr > td:before {
+    &--small-header > tbody > tr > [data-th]:before,
+    &--small-header > tfoot > tr > td:before {
         width: 65px;
     }
 
