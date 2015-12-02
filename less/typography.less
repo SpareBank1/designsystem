@@ -127,8 +127,8 @@
   margin: 0 4px 0 4px;
 }
 
+.number-list,
 .bullet-list {
-    list-style-type: disc;
     text-align: left;
     margin: 0 0 20px 0;
 
@@ -136,6 +136,12 @@
         margin-top: 10px;
         margin-left: 15px;
     }
+}
+.number-list {
+    list-style-type: decimal;
+}
+.bullet-list {
+    list-style-type: disc;
 }
 
 /* tablet/medium typography */
@@ -189,6 +195,7 @@
         line-height: 20px;
     }
 
+    .number-list,
     .bullet-list {
         margin-left: 20px;
     }
@@ -246,6 +253,7 @@
     line-height: 20px;
   }
 
+  .number-list > li,
   .bullet-list > li {
     margin-left: 30px;
   }
