@@ -1,0 +1,91 @@
+.responsive-table {
+    margin: 20px 0;
+    min-width: 100%;
+    text-align: left;
+
+    > caption {
+        &:extend(.h4);
+    }
+
+    > thead {
+        display: none;
+
+        @media (min-width: @breakpoint-md) {
+            display: table-header-group;
+        }
+    }
+
+    > tfoot {
+        border-top: 2px solid @blue-royal;
+    }
+
+    > thead > tr,
+    > tbody > tr,
+    > tfoot > tr {
+        border-bottom: 1px solid @grey-light;
+        display: block;
+        padding: 10px 0;
+
+        @media (min-width: @breakpoint-md) {
+            display: table-row;
+        }
+    }
+
+    > thead > tr > th,
+    > tbody > tr > th,
+    > tfoot > tr > th {
+        font-weight: bold;
+    }
+
+    > tbody > tr > td,
+    > tfoot > tr > td {
+        display: block;
+    }
+
+    > tbody > tr > td > .element-content,
+    > tfoot > tr > td > .element-content {
+        display: inline-block;
+        vertical-align: top;
+        max-width: ~"calc(100% - 105px)";
+
+        @media (min-width: @breakpoint-md) {
+            display: block;
+            max-width: none;
+        }
+    }
+
+    > tbody > tr > td:before,
+    > tfoot > tr > td:before {
+        content: attr(data-th); // who knew you could do this? The internet, that's who.
+        font-weight: bold;
+        width: 100px;
+        display: inline-block;
+
+        @media (min-width: @breakpoint-md) {
+            display: none;
+        }
+    }
+
+    &.-no-header > tbody > tr > td:before,
+    &.-no-header > tfoot > tr > td:before {
+        display: none;
+    }
+
+    &.-small-header > tbody > tr > td:before,
+    &.-small-header > tfoot > tr > td:before {
+        width: 65px;
+    }
+
+    > thead > tr > th,
+    > thead > tr > td,
+    > tbody > tr > th,
+    > tbody > tr > td,
+    > tfoot > tr > th,
+    > tfoot > tr > td {
+
+        @media (min-width: @breakpoint-md) {
+            display: table-cell;
+            padding: 10px;
+        }
+    }
+}
