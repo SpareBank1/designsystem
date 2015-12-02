@@ -31,13 +31,6 @@
 </header>
 <section class="section-wrapper">
     <div class="content-container content-container--text-left">
-        <h2>Overskriftstrategi</h2>
-        <p>Vi har valgt å bruke semtisk korrekte overskrifts-tagger kombinert med klasser for å kunne holde oss innenfor UU-krav og samtidig
-        ha fleksibilitet i design. Dette betyr at i de tilfeller hvor struktur og design fraviker er det mulig å overstyre default-overskriften.</p>
-    </div>
-</section>
-<section class="section-wrapper">
-    <div class="content-container content-container--text-left">
         <h2>Responsive tables</h2>
         <p class="body-paragraph">The central to this concept is using <strong>data-th</strong> attributes on cells to show column names even in a collapsed state on small devices. Try it out!</p>
     </div>
@@ -178,23 +171,36 @@
     <div class="content-container content-container--text-left">
     <div class="collapse-link">Vis kode</div>
         <code class="code-block">
-&#x3C;h1 class=&#x22;h1&#x22;&#x3E;First Heading&#x3C;/h1&#x3E;
-&#x3C;p class=&#x22;lead-paragraph&#x22;&#x3E;Some leading text&#x3C;/p&#x3E;
-
-&#x3C;h2 class=&#x22;h3&#x22;&#x3E;Second Heading&#x3C;/h2&#x3E;
-&#x3C;p&#x3E;This one is an h2 with h3 styling.&#x3C;/p&#x3E;
+&lt;table class=&quot;responsive-table&quot;&gt;
+&lt;caption&gt;Norge GET-ligaen&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th scope=&quot;col&quot;&gt;Team&lt;/th&gt;
+&lt;th scope=&quot;col&quot;&gt;Spilt&lt;/th&gt;
+&lt;th scope=&quot;col&quot;&gt;Seiere&lt;/th&gt;
+&lt;th scope=&quot;col&quot;&gt;Poeng&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;th scope=&quot;row&quot;&gt;Stavanger&lt;/th&gt;
+&lt;td data-th=&quot;Spilt&quot;&gt;21&lt;/td&gt;&lt;td data-th=&quot;Seiere&quot;&gt;13&lt;/td&gt;&lt;td data-th=&quot;Poeng&quot;&gt;46&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th scope=&quot;row&quot;&gt;L&#248;renskog&lt;/th&gt;
+&lt;td data-th=&quot;Spilt&quot;&gt;20&lt;/td&gt;&lt;td data-th=&quot;Seiere&quot;&gt;13&lt;/td&gt;&lt;td data-th=&quot;Poeng&quot;&gt;44&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th scope=&quot;row&quot;&gt;Sparta Sarpsborg&lt;/th&gt;
+&lt;td data-th=&quot;Spilt&quot;&gt;21&lt;/td&gt;&lt;td data-th=&quot;Seiere&quot;&gt;12&lt;/td&gt;&lt;td data-th=&quot;Poeng&quot;&gt;43&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th scope=&quot;row&quot;&gt;Frisk Asker&lt;/th&gt;
+&lt;td data-th=&quot;Spilt&quot;&gt;21&lt;/td&gt;&lt;td data-th=&quot;Seiere&quot;&gt;10&lt;/td&gt;&lt;td data-th=&quot;Poeng&quot;&gt;42&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
         </code>
-    </div>
-</section>
-<section class="section-wrapper">
-    <div class="content-container content-container--text-left">
-        <h2>Lister</h2>
-        <p class="body-paragraph">Standard bullet list</p>
-        <ul class="bullet-list">
-            <li>Litt sparing er bedre enn...</li>
-            <li>Ok, neste måned skal jeg spare!</li>
-            <li>Bruker du sparepengene innen måneden er slutt?</li>
-        </ul>
     </div>
 </section>
 <footer class="section-wrapper">
