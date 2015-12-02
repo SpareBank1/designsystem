@@ -10,28 +10,28 @@
 
 </head>
 <body>
-
-    <header class="layout-container">
+<header class="section-wrapper">
+    <div class="content-container">
         <h1>Felles Frontend Style Guide</h1>
         <p class="lead-paragraph">Inneholder generell styling for bruk utenfor komponenter. F.eks. typografi, knapper, farger, o.l. FFE følger
             <a href="https://en.bem.info">BEM</a> for å sørge for god organisasjon av CSS-koden.
         </p>
-    </header>
+    </div>
 
-    <nav class="layout-container layout-container--lg">
+    <nav class="content-container content-container--lg">
         <ul class="navigation-bar">
             <li class="navigation-bar__link"><a href="index.html">Typografi</a></li>
             <li class="navigation-bar__link"><a href="colors.html">Farger</a></li>
             <li class="navigation-bar__link"><a href="form.html">Skjema</a></li>
             <li class="navigation-bar__link navigation-bar__link--active"><a href="buttons.html">Knapper</a></li>
+            <li class="navigation-bar__link"><a href="layout.html">Layout</a></li>
         </ul>
     </nav>
-
-    <section class="layout-container layout-container--text-left">
-        <h3 class="h3 h3--spaced">Knapper</h3>
-
+</header>
+<main class="section-wrapper">
+    <section class="content-container content-container--text-left">
         <p>For å endre state på en knapp fra vanlig til "spinner" må følgende gjøres:</p>
-        <ul>
+        <ul class="bullet-list">
             <li>Legg til klassen <code class="code-inline">[knapp-variant]--loading</code> på selve knappen</li>
             <li>Legg til klassen <code class="code-inline">[knapp-variant]__label-text--loading</code> på label-text-elementet</li>
             <li>Sett <code class="code-inline">aria-hidden="false"</code> på <code class="code-inline">[knapp-variant]__label-spinner</code></li>
@@ -79,7 +79,7 @@
         </div>
     </section>
 
-    <section class="layout-container layout-container--text-left">
+    <section class="content-container content-container--text-left">
         <div class="collapse-link">Vis kode</div>
         <code class="code-block">
 &lt;button class=&quot;action-button&quot;&gt;Action button&lt;/button&gt;
@@ -92,9 +92,15 @@
         </code>
     </section>
 
-    <div class="layout-container"><hr></div>
+    <div class="content-container"><hr></div>
 
-    <script src="examples.js"></script>
-
+</main>
+<footer class="section-wrapper">
+    <hr>
+    <div class="content-container">
+        <a href="#">© SpareBank 1</a>
+    </div>
+</footer>
+<script src="examples.js"></script>
 </body>
 </html>
