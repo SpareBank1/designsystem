@@ -11,85 +11,35 @@
 </head>
 <body>
 
-    <header class="layout-container">
-        <h1>Felles Frontend Style Guide</h1>
-        <p class="lead-paragraph">Inneholder generell styling for bruk utenfor komponenter. F.eks. typografi, knapper, farger, o.l. FFE følger
-            <a href="https://en.bem.info">BEM</a> for å sørge for god organisasjon av CSS-koden.
-        </p>
-    </header>
+	<div class="sidebar-open">
+		<button class="sidebar-open__button secondary-button"></button>
+	</div>
 
-    <nav class="layout-container layout-container--lg">
-        <ul class="navigation-bar">
-            <li class="navigation-bar__link navigation-bar__link--active"><a href="index.html">Typografi</a></li>
-            <li class="navigation-bar__link"><a href="colors.html">Farger</a></li>
-            <li class="navigation-bar__link"><a href="form.html">Skjema</a></li>
-            <li class="navigation-bar__link"><a href="buttons.html">Knapper</a></li>
-        </ul>
-    </nav>
+	<aside class="sidebar">
+		
+		<button class="sidebar__close-btn"></button>
+		
+		<h2 class="h4">Innhold</h2>
+		
+		<ul class="navigation-list">
+			<li class="navigation-list__link navigation-list__link--active"><a href="index.html">Hjem</a></li>
+			<li class="navigation-list__link"><a href="typo.html">Typografi</a></li>
+			<li class="navigation-list__link"><a href="colors.html">Farger</a></li>
+			<li class="navigation-list__link"><a href="form.html">Skjema</a></li>
+			<li class="navigation-list__link"><a href="buttons.html">Knapper</a></li>
+		</ul>
+	</aside>
 
-    <div class="layout-container">
-        <h2 class="page-title">Typografi</h2>
-    </div>
-
-    <div class="layout-container layout-container--text-left">
-        <h3>Overskriftstrategi</h3>
-        <p>Vi har valgt å bruke semtisk korrekte overskrifts-tagger kombinert med klasser for å kunne holde oss innenfor UU-krav og samtidig
-        ha fleksibilitet i design. Dette betyr at i de tilfeller hvor struktur og design fraviker er det mulig å overstyre default-overskriften.</p>
-    </div>
-
-    <div class="layout-container layout-container--subtle">
-        <div class="layout-container layout-container--wrapped layout-container--text-left">
-            <div class="small-text">HEADING 1</div>
-            <p class="h1 h1--spaced">Litt sparing er bedre enn...</p>
-
-            <div class="small-text">HEADING 2</div>
-            <p class="h2 h2--spaced">Ok, neste måned skal jeg spare!</p>
-
-            <div class="small-text">HEADING 3</div>
-            <p class="h3 h3--spaced">Bruker du sparepengene innen måneden er slutt?</p>
-
-            <div class="small-text">HEADING 4</div>
-            <p class="h4 h4--spaced">Ofte stilte spørsmål</p>
-
-            <div class="small-text">HEADING 5</div>
-            <p class="h5 h5--spaced">Er det en grense for hvor lite jeg kan spare når jeg bruker kortet?</p>
-
-            <div class="small-text">LEAD PARAGRAPH</div>
-            <p class="lead-paragraph lead-paragraph--spaced">
-                Det kan være vanskelig å spare, men å bruke penger går ofte helt av seg selv. Men, hva hvis du kunne spart litt
-                hver gang du bruker kortet? Da hadde det kanskje vært litt lettere?
-            </p>
-
-            <div class="small-text">BODY TEXT</div>
-            <p class="body-text">
-                De fleste av oss legger ikke merke til alle kronene som fyker ut av kontoen, og plutselig står vi igjen med litt lite
-                mot slutten av måneden. Da er det lett å ta av sparepengene...
-            </p>
-            <p class="body-text body-text--spaced">
-                Visste du at du kan ta bort sparekontoen fra oversikten i nettbanken? Da er det lettere å ikke bli fristet
-                til å bruke penger du sparer.
-            </p>
-
-            <div class="small-text">SMALL TEXT</div>
-            <p class="small-text small-text--spaced">
-                Om du velger å spare i prosent eller et fast beløp, er minste beløp 2 kroner per
-                hendelse. all sparing vil være i hele kroner. vi sjekker at det er dekning for beløpet før spareingen utføres.
-            </p>
-
-            <div class="small-text">MICRO TEXT</div>
-            <p class="micro-text">&copy; SpareBank 1 | Personvern og sikkerhet | Informasjonskapsler</p>
-        </div>
-    </div>
-
-    <section class="layout-container layout-container--text-left">
-        <div class="collapse-link">Vis kode</div>
-        <code class="code-block">&#x3C;h1 class=&#x22;h1&#x22;&#x3E;First Heading&#x3C;/h1&#x3E;
-&#x3C;p class=&#x22;lead-paragraph&#x22;&#x3E;Some leading text&#x3C;/p&#x3E;
-
-&#x3C;h2 class=&#x22;h3&#x22;&#x3E;Second Heading&#x3C;/h2&#x3E;
-&#x3C;p&#x3E;This one is an h2 with h3 styling.&#x3C;/p&#x3E;</code>
-    </section>
-
+	<article class="article-wrapper">
+		
+	    <header class="layout-container">
+	        <h1>Felles Frontend Style Guide</h1>
+	        <p class="lead-paragraph">Inneholder generell styling for bruk utenfor komponenter. F.eks. typografi, knapper, farger, o.l. FFE følger
+	            <a href="https://en.bem.info">BEM</a> for å sørge for god organisasjon av CSS-koden.
+	        </p>
+	    </header>
+	
+	</article>
 
     <script src="examples.js"></script>
 
