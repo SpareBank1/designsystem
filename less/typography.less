@@ -127,6 +127,17 @@
   margin: 0 4px 0 4px;
 }
 
+.bullet-list {
+    list-style-type: disc;
+    text-align: left;
+    margin: 0 0 20px 0;
+
+    > li {
+        margin-top: 10px;
+        margin-left: 15px;
+    }
+}
+
 /* tablet/medium typography */
 @media screen and (min-width: @breakpoint-sm) {
 
@@ -176,6 +187,10 @@
     .micro-text {
         font-size: 12px;
         line-height: 20px;
+    }
+
+    .bullet-list {
+        margin-left: 20px;
     }
 }
 
@@ -229,5 +244,9 @@
   .micro-text {
     font-size: 12px;
     line-height: 20px;
+  }
+
+  .bullet-list > li {
+    margin-left: 30px;
   }
 }
