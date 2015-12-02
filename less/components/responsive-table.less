@@ -34,7 +34,7 @@
     > thead > tr > th,
     > tbody > tr > th,
     > tfoot > tr > th {
-        font-weight: bold;
+        &:extend(.strong-text);
     }
 
     > tbody > tr > td,
@@ -54,24 +54,19 @@
         }
     }
 
-    > tbody > tr > td:before,
+    > tbody > tr > [data-th]:before,
     > tfoot > tr > td:before {
         content: attr(data-th); // who knew you could do this? The internet, that's who.
-        font-weight: bold;
         width: 100px;
         display: inline-block;
+        &:extend(.strong-text);
 
         @media (min-width: @breakpoint-md) {
             display: none;
         }
     }
 
-    &.-no-header > tbody > tr > td:before,
-    &.-no-header > tfoot > tr > td:before {
-        display: none;
-    }
-
-    &.-small-header > tbody > tr > td:before,
+    &.-small-header > tbody > tr > [data-th]:before,
     &.-small-header > tfoot > tr > td:before {
         width: 65px;
     }
