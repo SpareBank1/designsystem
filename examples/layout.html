@@ -8,586 +8,258 @@
 
     <link rel="stylesheet" type="text/css" href="examples.css">
 
+    <style>
+        .page {
+            margin-top: 65px;
+        }
+        .page .section-wrapper {
+            border: 2px dashed transparent;
+        }
+        .page.-guides .section-wrapper,
+        .page.-guides .content-container {
+            position: relative;
+        }
+        .page.-guides .section-wrapper {
+            border-color: rgba(47,79,79,0.65);
+        }
+        .page.-guides .content-container {
+            outline: 2px dashed rgba(255, 140, 0, 0.65);
+        }
+        .page.-guides .section-wrapper:before,
+        .page.-guides .content-container:before {
+            position: absolute;
+            content: attr(class);
+            color: white;
+            right: 0;
+            padding: 4px 10px;
+            font-size: 12px;
+            line-height: 1;
+        }
+        .page.-guides .section-wrapper:before {
+            background-color: rgba(47,79,79,0.65);
+            top: 0;
+        }
+        .page.-guides .content-container:before {
+            background-color: rgba(255, 140, 0, 0.65);
+            bottom: 0;
+        }
+        .page.-guides .-darkslategrey {
+            color: rgba(47,79,79,0.65);
+        }
+        .page.-guides .-darkorange {
+            color: rgba(255, 140, 0, 0.65);
+        }
+        .menu {
+            position: fixed;
+            height: 65px;
+            width: 100%;
+            top: 0;
+            z-index: 1;
+            padding: 10px;
+            background-color: white;
+        }
+
+    </style>
+    <script>
+        function toggleGuides() {
+            var elem = document.getElementsByTagName('body')[0];
+
+            if(elem.className.match(/(?:^|\s)-guides(?!\S)/)) {
+                elem.className = 'page';
+            } else {
+                elem.className = 'page -guides';
+            }
+        }
+    </script>
 </head>
-<body>
-
-    <header class="layout-container">
-        <h1>Felles Frontend Style Guide</h1>
-        <p class="lead-paragraph">Inneholder generell styling for bruk utenfor komponenter. F.eks. typografi, knapper, farger, o.l. FFE følger
-            <a href="https://en.bem.info">BEM</a> for å sørge for god organisasjon av CSS-koden.
-        </p>
-    </header>
-
-    <nav class="layout-container layout-container--lg">
-        <ul class="navigation-bar">
-            <li class="navigation-bar__link"><a href="index.html">Typografi</a></li>
-            <li class="navigation-bar__link"><a href="colors.html">Farger</a></li>
-            <li class="navigation-bar__link navigation-bar__link--active"><a href="form.html">Skjema</a></li>
-            <li class="navigation-bar__link"><a href="buttons.html">Knapper</a></li>
-        </ul>
+<body class="page -guides">
+    <nav class="menu">
+        <button class="action-button" onClick="javascript:toggleGuides()">Toggle guides</button>
     </nav>
+    <header class="section-wrapper">
+        <div class="content-container">
+            <h1>Felles Frontend Style Guide</h1>
+            <p class="lead-paragraph">Inneholder generell styling for bruk utenfor komponenter. F.eks. typografi, knapper, farger, o.l. FFE følger
+                <a href="https://en.bem.info">BEM</a> for å sørge for god organisasjon av CSS-koden.
+            </p>
+        </div>
 
-    <div class="layout-container">
-        <h2 class="page-title">Skjemaelementer</h2>
-    </div>
+        <nav class="content-container content-container--lg">
+            <ul class="navigation-bar">
+                <li class="navigation-bar__link"><a href="index.html">Typografi</a></li>
+                <li class="navigation-bar__link"><a href="colors.html">Farger</a></li>
+                <li class="navigation-bar__link"><a href="form.html">Skjema</a></li>
+                <li class="navigation-bar__link"><a href="buttons.html">Knapper</a></li>
+                <li class="navigation-bar__link navigation-bar__link--active"><a href="layout.html">Layout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="section-wrapper section-wrapper--bg-sand">
+        <div class="content-container">
+            <h2 class="h2">Hawaii Layout System</h2>
+            <p class="lead-paragraph">Layouts are composed of one or more sections wrapping content containers.</p>
+        </div>
 
-    <div class="layout-container layout-container--text-left">
-        <!-- aria-hidden="true" kan brukes for å skjule feilmeldinger som ikke skal vises -->
-        <div class="error-summary" aria-hidden="true" role="alert" aria-live="assertive">
-            <span class="icon icon-info-error"></span>
-            <span class="title">Du må rette opp disse feilene i skjemaet</span>
-            <ul class="summary-list">
-                <li>Vennligst fyll inn "Fødselsnummer"</li>
+        <div class="content-container content-container--text-left">
+            <ul class="bullet-list">
+                <li>Do not put any more classes on them (except modifiers)</li>
+                <li>Think separation of concerns, a section contains other things so they should not have any other responsibility</li>
+                <li>It should be a flexible system, but if you feel the need for more flags, consider making that behaviour part of a component instead</li>
             </ul>
         </div>
-    </div>
 
-    <div class="layout-container layout-container--text-left">
-        <h3 class="h3 h3--spaced">Input-felt</h3>
-        <p>Har tre størrelsesvarianter: -small, -medium og -large</p>
-        <div class="input-group" aria-live="polite">
-            <label id="ssn-label" class="form-label" for="ssn">
-                Norsk fødselsnummer
-            </label>
-            <input  id="ssn"
-                    class="input-field input-field--medium"
-                    name="ssn"
-                    type="text"
-                    maxlength="11"
-                    autocomplete="off">
-            <strong>(11 siffer)</strong>
-            <!-- aria-hidden="true" kan brukes for å skjule feilmeldinger som ikke skal vises -->
-            <div class="info-message info-message--error" aria-hidden="true">Vennligst fyll inn "Fødselsnummer"</div>
-        </div>
-    </div>
-
-    <div class="layout-container layout-container--text-left">
-        <div class="collapse-link">Vis kode</div>
-        <code class="code-block">
-&lt;input id=&quot;ssn&quot;
-    class=&quot;input-field input-field--medium&quot;
-    name=&quot;ssn&quot;
-    type=&quot;text&quot;
-    maxlength=&quot;11&quot;
-    autocomplete=&quot;off&quot;&gt;
-        </code>
-    </div>
-
-    <div class="layout-container"><hr></div>
-
-    <div class="layout-container layout-container--text-left">
-        <h3 class="h3 h3--spaced">Select box</h3>
-        <div class="input-group" aria-live="polite">
-            <label id="month-label" class="form-label" for="month">
-                Velg måned
-            </label>
-            <select class="select-box" id="month" >
-                <option value="0">Januar</option>
-                <option value="1">Februar</option>
-                <option value="2">Mars</option>
-                <option value="3">April</option>
-            </select>
-        </div>
-
-
-    </div>
-    <div class="layout-container layout-container--text-left">
-        <div class="collapse-link">Vis kode</div>
-        <code class="code-block">
-&lt;select class=&quot;select-box&quot; id=&quot;month&quot; &gt;
-    &lt;option value=&quot;0&quot;&gt;January&lt;/option&gt;
-    &lt;option value=&quot;1&quot;&gt;February&lt;/option&gt;
-    &lt;option value=&quot;2&quot;&gt;Mars&lt;/option&gt;
-    &lt;option value=&quot;3&quot;&gt;April&lt;/option&gt;
-&lt;/select&gt;
-        </code>
-    </div>
-
-    <div class="layout-container"><hr></div>
-
-    <div class="layout-container layout-container--text-left">
-        <h3 class="h3 h3--spaced">Check box</h3>
-        <p>Brukes når det er flere mulige valg. Har en standard og en inline variant.</p>
-        <div class="input-group" aria-live="polite">
-            <label id="checkbox-ibf-label" class="form-label" for="checkbox-ibf1">
-                What colors do you like on unicorns?
-            </label>
-            <fieldset id="checkbox-ibf1">
-                <input  class="hidden-checkbox"
-                        type="checkbox"
-                        name="unicorncolors"
-                        value="yellow"
-                        id="unicorncolors-1"
-                        checked>
-                <label class="check-box" for="unicorncolors-1">Yellow</label>
-                <input  class="hidden-checkbox"
-                        type="checkbox"
-                        name="unicorncolors"
-                        value="purple"
-                        id="unicorncolors-2">
-                <label class="check-box" for="unicorncolors-2">Purple</label>
-                <input  class="hidden-checkbox"
-                        type="checkbox"
-                        name="unicorncolors"
-                        value="white"
-                        id="unicorncolors-3">
-                <label class="check-box" for="unicorncolors-3">White</label>
-            </fieldset>
-        </div>
-
-        <div class="input-group" aria-live="polite">
-            <label id="checkbox-inline-ibf-label" class="form-label" for="checkbox-inline-ibf1">
-                Favorite unicorn foods?
-            </label>
-            <fieldset id="checkbox-inline-ibf1">
-                <input  class="hidden-checkbox"
-                        type="checkbox"
-                        name="unicornfood"
-                        value="apples"
-                        id="unicornfood-1"
-                        checked>
-                <label class="check-box check-box--inline" for="unicornfood-1">Apples</label>
-                <input  class="hidden-checkbox"
-                        type="checkbox"
-                        name="unicornfood"
-                        value="banans"
-                        id="unicornfood-2">
-                <label class="check-box check-box--inline" for="unicornfood-2">Bananas</label>
-                <input  class="hidden-checkbox"
-                        type="checkbox"
-                        name="unicornfood"
-                        value="oatmeal"
-                        id="unicornfood-3">
-                <label class="check-box check-box--inline" for="unicornfood-3">Oatmeal</label>
-            </fieldset>
-        </div>
-
-    </div>
-    <div class="layout-container layout-container--text-left">
-        <div class="collapse-link">Vis kode</div>
-        <code class="code-block">
-&lt;input  class=&quot;hidden-checkbox&quot;
-    type=&quot;checkbox&quot;
-    name=&quot;unicornfood&quot;
-    value=&quot;apples&quot;
-    id=&quot;unicornfood-1&quot;
-    checked&gt;
-&lt;label class=&quot;check-box check-box--inline&quot; for=&quot;unicornfood-1&quot;&gt;Apples&lt;/label&gt;
-        </code>
-    </div>
-
-    <div class="layout-container"><hr></div>
-
-    <div class="layout-container layout-container--text-left">
-        <h3 class="h3 h3--spaced">Radio button</h3>
-        <p>En standard type radio-knapp. Har en standard og en -inline variant.</p>
-        <div class="input-group" aria-live="polite">
-            <label id="radio-ibf-label" class="form-label" for="radio-ibf1">
-                Which unicorn do you like most?
-            </label>
-            <fieldset id="radio-ibf1">
-                <input  class="radio-input"
-                        type="radio"
-                        name="unicorns"
-                        value="applejack"
-                        id="unicorns-1"
-                        checked>
-                <label class="radio-button" for="unicorns-1">Applejack</label>
-                <input  class="radio-input"
-                        type="radio"
-                        name="unicorns"
-                        value="starlet"
-                        id="unicorns-2">
-                <label class="radio-button" for="unicorns-2">Starlet</label>
-                <input  class="radio-input"
-                        type="radio"
-                        name="unicorns"
-                        value="trixie"
-                        id="unicorns-3">
-                <label class="radio-button" for="unicorns-3">Trixie</label>
-            </fieldset>
-        </div>
-
-        <div class="input-group" aria-live="polite">
-            <label id="radio-inline-ibf-label" class="form-label" for="radio-inline-ibf1">
-                Are there unicorns with wings?
-            </label>
-            <fieldset id="radio-inline-ibf1">
-                <input  class="radio-input"
-                        type="radio"
-                        name="unicornwings"
-                        value="yes"
-                        id="unicornwings-1"
-                        checked>
-                <label class="radio-button radio-button--inline" for="unicornwings-1">Yes</label>
-                <input  class="radio-input"
-                        type="radio"
-                        name="unicornwings"
-                        value="no"
-                        id="unicornwings-2">
-                <label class="radio-button radio-button--inline" for="unicornwings-2">No</label>
-                <input  class="radio-input"
-                        type="radio"
-                        name="unicornwings"
-                        value="dunno"
-                        id="unicornwings-3">
-                <label class="radio-button radio-button--inline" for="unicornwings-3">I do not know!</label>
-            </fieldset>
-        </div>
-
-    </div>
-    <div class="layout-container layout-container--text-left">
-        <div class="collapse-link">Vis kode</div>
-        <code class="code-block">
-&lt;input  class=&quot;radio-input&quot;
-    type=&quot;radio&quot;
-    name=&quot;unicornwings&quot;
-    value=&quot;yes&quot;
-    id=&quot;unicornwings-1&quot;
-    checked&gt;
-&lt;label class=&quot;radio-button radio-button--inline&quot; for=&quot;unicornwings-1&quot;&gt;Yes&lt;/label&gt;
-        </code>
-    </div>
-
-    <div class="layout-container"><hr></div>
-
-    <div class="layout-container layout-container--text-left">
-        <h3 class="h3 h3--spaced">Radio switch</h3>
-        <p>Brukes der det kun er to motstridende valg.</p>
-        <div class="input-group" aria-live="polite">
-            <label id="switch-ibf-label" class="form-label" for="switch-ibf1">
-                Do you like unicorns at all?
-            </label>
-            <fieldset id="switch-ibf1">
-                <input  class="radio-input"
-                        type="radio"
-                        name="unicornslike"
-                        value="yes"
-                        id="unicornslike-1"
-                        checked>
-                <label class="radio-switch" for="unicornslike-1">Ja</label>
-
-                <input  class="radio-input"
-                        type="radio"
-                        name="unicornslike"
-                        value="no"
-                        id="unicornslike-2">
-                <label class="radio-switch" for="unicornslike-2">Nei</label>
-            </fieldset>
-        </div>
-
-    </div>
-    <div class="layout-container layout-container--text-left">
-        <div class="collapse-link">Vis kode</div>
-        <code class="code-block">
-&lt;input  class=&quot;radio-input&quot;
-    type=&quot;radio&quot;
-    name=&quot;unicornslike&quot;
-    value=&quot;yes&quot;
-    id=&quot;unicornslike-1&quot;
-    checked&gt;
-&lt;label class=&quot;radio-switch&quot; for=&quot;unicornslike-1&quot;&gt;Ja&lt;/label&gt;
-        </code>
-    </div>
-
-    <div class="layout-container"><hr></div>
-
-    <div class="layout-container layout-container--text-left">
-        <h3 class="h3 h3--spaced">Radio block</h3>
-        <p>
-            Radio blocks brukes når det er viktig å presentere kontekstuelt relevant informasjon om valgene til brukeren uten å overvelde.
-        </p>
-        <p>
-            De kan brukes både som vanlige radio-knapper med synlig kontekst eller som en liten "meny" der kontekst bare er synlig for det til en hver tid aktive valget
-        </p>
-
-        <h4 class="h3">- Alltid synlig kontekst</h4>
-        <div class="input-group" aria-live="polite">
-            <label class="form-label" for="block-ibf1">
-                Hva ønsker du å gjøre?
-            </label>
-            <fieldset id="block-ibf1">
-                <div class="radio-block">
-                    <input class="radio-input" type="radio" name="block" id="block-one" value="one">
-                    <div class="radio-block__content">
-                        <label class="radio-block__header" for="block-one">Blokk 1</label>
-                        <div class="radio-block__wrapper">
-                            <p>
-                                Blokk 1.<br>
-                                Denne teksten er alltid synlig.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="radio-block">
-                    <input class="radio-input" type="radio" name="block" id="block-two" value="two">
-                    <div class="radio-block__content">
-                        <label class="radio-block__header" for="block-two">Blokk 2</label>
-                        <div class="radio-block__wrapper">
-                            <p>
-                                Blokk 2.<br>
-                                Denne teksten er alltid synlig.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </fieldset>
-        </div>
-        <div class="layout-container layout-container--text-left">
-            <div class="collapse-link">Vis kode</div>
-            <code class="code-block">
-&lt;div class=&quot;radio-block&quot;&gt;
-    &lt;input class=&quot;radio-input&quot; type=&quot;radio&quot; name=&quot;block&quot; id=&quot;block-two&quot; value=&quot;two&quot;&gt;
-    &lt;div class=&quot;radio-block__content&quot;&gt;
-        &lt;label class=&quot;radio-block__header&quot; for=&quot;block-two&quot;&gt;Blokk 2&lt;/label&gt;
-        &lt;div class=&quot;radio-block__wrapper&quot;&gt;
-            &lt;p&gt;
-                Denne teksten er alltid synlig.
-            &lt;/p&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-            </code>
-        </div>
-
-        <h4 class="h3">- Kontekst kun synlig for aktivt valg</h4>
-
-        <p>
-            Når en radio-knapp blir valgt må følgende gjøres i Javascript:
-            <ul>
-                <li>Sett <code class="code-inline">aria-selected="false"</code> på alle andre inputs</li>
-                <li>Sett <code class="code-inline">aria-selected="true"</code> på aktiv input</li>
-                <li>Sett <code class="code-inline">aria-hidden="true"</code> på alle <code class="code-inline">.wrapper</code> elementer som tilhører et inaktivt valg</li>
-                <li>Sett <code class="code-inline">aria-hidden="false"</code> på <code class="code-inline">.wrapper</code> elementet som tilhører aktivt valg</li>
+        <div class="content-container content-container--text-left">
+            <h2 class="h2 -darkslategrey">.section-wrapper</h2>
+            <ul class="bullet-list">
+                <li>Responsible to uphold the standard layout rules concerning app gutters</li>
+                <li>Wrapper for content containers</li>
+                <li>Provides seamless stacking</li>
+                <li>Does not need to be of the HTML5 section tag, but could be a good semantic structure</li>
             </ul>
-        </p>
+            <table class="responsive-table">
+                <thead>
+                <tr>
+                    <th class="h4">Modifier</th>
+                    <th class="h4">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th data-th="Modifier">--bg-sand</th>
+                    <td data-th="Description">Setting background color to <em>Sand-25%</em></td>
+                </tr>
+                <tr>
+                    <th data-th="Modifier">--bg-grey</th>
+                    <td data-th="Description">Setting background color to <em>Grey-light-bg</em></td>
+                </tr>
+                </tbody>
+            </table>
 
-        <div class="input-group" aria-live="polite" role="tablist">
-            <label class="form-label" for="tab-set">
-                Hva ønsker du å gjøre?
-            </label>
-            <fieldset id="tab-set">
-                <div class="radio-block" role="presentation">
-                    <input class="radio-input" type="radio" name="tab" id="tab-one" aria-labelledby="tab-one-label" value="one" tabindex="0" role="tab" aria-controls="content-one" aria-selected="true" checked>
-                    <div class="radio-block__content" role="presentation">
-                        <label class="radio-block__header" id="tab-one-label" for="tab-one">Block one</label>
-                        <div class="radio-block__wrapper" id="content-one" role="tabpanel" aria-labelledby="tab-one-label">
-                            <p>
-                                Denne teksten er synlig fordi valget er aktivt.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="radio-block" role="presentation">
-                    <input class="radio-input" type="radio" name="tab" id="tab-two" aria-labelledby="tab-two-label" value="two" tabindex="0" role="tab" aria-controls="content-two" aria-selected="false">
-                    <div class="radio-block__content" role="presentation">
-                        <label class="radio-block__header" id="tab-two-label" for="tab-two">Block two</label>
-                        <div class="radio-block__wrapper" id="content-two" role="tabpanel" aria-labelledby="tab-two-label" aria-hidden="true">
-                            <p>
-                                Denne teksten er ikke synlig.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </fieldset>
-            <script>
-                var tabRadios = Array.prototype.slice.call(document.querySelectorAll('[name="tab"]'), 0);
-                tabRadios.forEach(function(radioTab) {
-                    radioTab.addEventListener('click', function(e) {
-                        tabRadios.forEach(function(toDisable) {
-                            toDisable.setAttribute('aria-selected', 'false');
-                            toDisable.nextElementSibling.querySelector('.radio-block__wrapper').setAttribute('aria-hidden', 'true');
-                        });
-                        e.target.setAttribute('aria-selected', 'true');
-                        e.target.nextElementSibling.querySelector('.radio-block__wrapper').setAttribute('aria-hidden', 'false');
-                    });
-                });
-            </script>
         </div>
 
-        <div class="layout-container layout-container--text-left">
-            <div class="collapse-link">Vis kode</div>
-            <code class="code-block">
-&lt;div class=&quot;input-group&quot; aria-live=&quot;polite&quot; role=&quot;tablist&quot;&gt;
-    &lt;label id=&quot;block-ibf-label&quot; class=&quot;form-label&quot; for=&quot;tab-set&quot;&gt;
-        Hva ønsker du å gjøre?
-    &lt;/label&gt;
-    &lt;fieldset id=&quot;tab-set&quot;&gt;
-        &lt;div class=&quot;radio-block&quot; role=&quot;presentation&quot;&gt;
-            &lt;input class=&quot;radio-input&quot; type=&quot;radio&quot; name=&quot;tab&quot; id=&quot;tab-one&quot; aria-labelledby=&quot;tab-one-label&quot; value=&quot;one&quot; tabindex=&quot;0&quot; role=&quot;tab&quot; aria-controls=&quot;content-one&quot; aria-selected=&quot;true&quot; checked&gt;
-            &lt;div class=&quot;radio-block__content&quot; role=&quot;presentation&quot;&gt;
-                &lt;label class=&quot;radio-block__header&quot; id=&quot;tab-one-label&quot; for=&quot;tab-one&quot;&gt;Block one&lt;/label&gt;
-                &lt;div class=&quot;radio-block__wrapper&quot; id=&quot;content-one&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;tab-one-label&quot;&gt;
-                    &lt;p&gt;
-                        Denne teksten er synlig fordi valget er aktivt.
-                    &lt;/p&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;radio-block&quot; role=&quot;presentation&quot;&gt;
-            &lt;input class=&quot;radio-input&quot; type=&quot;radio&quot; name=&quot;tab&quot; id=&quot;tab-two&quot; aria-labelledby=&quot;tab-two-label&quot; value=&quot;two&quot; tabindex=&quot;0&quot; role=&quot;tab&quot; aria-controls=&quot;content-two&quot; aria-selected=&quot;false&quot;&gt;
-            &lt;div class=&quot;radio-block__content&quot; role=&quot;presentation&quot;&gt;
-                &lt;label class=&quot;radio-block__header&quot; id=&quot;tab-two-label&quot; for=&quot;tab-two&quot;&gt;Block two&lt;/label&gt;
-                &lt;div class=&quot;radio-block__wrapper&quot; id=&quot;content-two&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;tab-two-label&quot; aria-hidden=&quot;true&quot;&gt;
-                    &lt;p&gt;
-                        Denne teksten er ikke synlig.
-                    &lt;/p&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/fieldset&gt;
-&lt;/div&gt;
-            </code>
-        </div>
-
-
-    </div>
-
-    <div class="layout-container">
-        <h2>Skjemavalidering</h2>
-    </div>
-
-    <div class="layout-container layout-container--text-left">
-        <h3>Oppsummering av feil i skjema</h3>
-        <p class="body-paragraph">
-            Det skal plasseres en oppsummering av skjemafeil over skjemaet. Det skal også scrolles
-            til dette elemementet når valideringen skjer. Normalt vil dette være etter submit av skjemaet.
-        </p>
-        <p>
-            Oppsummering kan skjules ved å sette <code class="code-inline">aria-hidden="true"</code>.
-            For å støtte skjermlesere er det viktig at det er satt <code class="code-inline">role="alert"</code> og <code class="code-inline">aria-live="assertive"</code> på elementet som wrapper feilmeldingene. Dette for at skjermleseren skal plukke det opp og varsle brukeren når det vises (eller fjernes) feilmeldinger fra listen.
-        </p>
-
-        <div class="error-summary" aria-hidden="false" role="alert" aria-live="assertive">
-            <span class="error-summary__icon icon-info-error"></span>
-            <span class="error-summary__title">Du må rette opp disse feilene i skjemaet</span>
-            <ul class="error-summary__list">
-                <li class="error-summary__list-item">Vennligst velg en bonus</li>
-                <li class="error-summary__list-item">Vennligst fyll inn "Fødselsnummer"</li>
-                <li class="error-summary__list-item">Vennligst fyll inn "Fornavn"</li>
-                <li class="error-summary__list-item">Vennligst fyll inn "Etternavn"</li>
+        <div class="content-container content-container--text-left">
+            <h2 class="h2 -darkorange">.content-container</h2>
+            <ul class="bullet-list">
+                <li>Manages the direct layout of content, text or components</li>
+                <li>Default centering of content</li>
+                <li>Provide horizontal spacing when stacked</li>
+                <li>Depending on breakpoints for dynamic vertical margins</li>
             </ul>
+            <table class="responsive-table">
+                <thead>
+                <tr>
+                    <th class="h4">Modifier</th>
+                    <th class="h4">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th data-th="Modifier">--sm</th>
+                    <td data-th="Description">Small container</td>
+                </tr>
+                <tr>
+                    <th data-th="Modifier">--lg</th>
+                    <td data-th="Description">Large container</td>
+                </tr>
+                <tr>
+                    <th data-th="Modifier">--text-left</th>
+                    <td data-th="Description">Align text to the left, instead of the default centering</td>
+                </tr>
+                <tr>
+                    <th data-th="Modifier">--no-space</th>
+                    <td data-th="Description">Removes default spacing</td>
+                </tr>
+                </tbody>
+            </table>
         </div>
-    </div>
+    </section>
 
-    <div class="layout-container layout-container--text-left">
-        <div class="collapse-link">Vis kode</div>
-        <code class="code-block">
-&lt;div class=&quot;error-summary&quot; aria-hidden=&quot;false&quot; role=&quot;alert&quot; aria-live=&quot;assertive&quot;&gt;
-    &lt;span class=&quot;error-summary__icon icon-info-error&quot;&gt;&lt;/span&gt;
-    &lt;span class=&quot;error-summary__title&quot;&gt;Du må rette opp disse feilene i skjemaet&lt;/span&gt;
-    &lt;ul class=&quot;error-summary__list&quot;&gt;
-        &lt;li class=&quot;error-summary__list-item&quot;&gt;Vennligst velg en bonus&lt;/li&gt;
-        &lt;li class=&quot;error-summary__list-item&quot;&gt;Vennligst fyll inn &quot;Fødselsnummer&quot;&lt;/li&gt;
-        &lt;li class=&quot;error-summary__list-item&quot;&gt;Vennligst fyll inn &quot;Fornavn&quot;&lt;/li&gt;
-        &lt;li class=&quot;error-summary__list-item&quot;&gt;Vennligst fyll inn &quot;Etternavn&quot;&lt;/li&gt;
-    &lt;/ul&gt;
-&lt;/div&gt;
-        </code>
-    </div>
+    <section class="section-wrapper">
 
-    <div class="layout-container layout-container--text-left">
-        <h3>Feilmeldinger på skjemaelementene</h3>
-        <p class="body-paragraph">
-            Alle skjemaelementer må wrappes i en 'input-group' med <code class="code-inline">aria-live="polite"</code> slik at skjermlesere plukker det opp og varsler brukeren når det vises en feilmelding.
-        </p>
-        <p>
-            Ved visning av feilmelding skal <code class="code-inline">aria-invalid="true"</code> settes på input elementet (eller nærmeste fieldset). Dette styler alle skjemaelementer med passende utseende for feil.
-        </p>
-        <p>
-            Feilmeldinger kan skjules ved å sette <code class="code-inline">aria-hidden="true"</code> på meldingselementet.
-        </p>
-
-        <div class="input-group" aria-live="polite">
-            <label for="ssn-invalid" class="form-label">Fødselsnummer</label>
-            <input class="input-field"
-                name="ssn"
-                id="ssn-invalid"
-                type="tel"
-                maxlength="11"
-                autocomplete="off"
-                aria-invalid="true">
-            <div class="info-message info-message--error">Vennligst fyll inn "Fødselsnummer"</div>
+        <div class="content-container">
+            <h2 class="h2">Default content container</h2>
+            <p class="lead-paragraph">Max width is 768px</p>
+            <p class="body-paragraph">Always centered</p>
         </div>
-
-        <div class="input-group" aria-live="polite">
-            <label class="form-label" for="radio-inline-ibf1-invalid">
-                Are there unicorns with wings?
-            </label>
-            <fieldset id="radio-inline-ibf1-invalid" aria-invalid="true">
-                <input  class="radio-input"
-                        type="radio"
-                        name="unicornwings-validation"
-                        value="yes"
-                        id="unicornwings-1-invalid"
-                        checked>
-                <label class="radio-button radio-button--inline" for="unicornwings-1-invalid">Yes</label>
-                <input  class="radio-input"
-                        type="radio"
-                        name="unicornwings-validation"
-                        value="no"
-                        id="unicornwings-2-invalid">
-                <label class="radio-button radio-button--inline" for="unicornwings-2-invalid">No</label>
-                <input  class="radio-input"
-                        type="radio"
-                        name="unicornwings-validation"
-                        value="dunno"
-                        id="unicornwings-3-invalid">
-                <label class="radio-button radio-button--inline" for="unicornwings-3-invalid">I do not know!</label>
-            </fieldset>
-            <div class="info-message info-message--error">Ta våre fabeldyr på alvor.</div>
+        <div class="content-container">
+            <h3 class="h3">Example header</h3>
+            <p class="body-paragraph">A paragraph demonstrating this type of container</p>
+            <p class="body-paragraph">A paragraph demonstrating this type of container</p>
+            <p class="body-paragraph">A paragraph demonstrating this type of container</p>
+        </div>
+        <div class="content-container content-container--text-left">
+            <h3 class="h3">Another header</h3>
+            <p class="body-paragraph">Another paragraph in a left aligned container</p>
+            <p class="body-paragraph">Another paragraph in a left aligned container</p>
+            <p class="body-paragraph">Another paragraph in a left aligned container</p>
         </div>
 
-    </div>
-    <div class="layout-container layout-container--text-left">
-        <div class="collapse-link">Vis kode</div>
-        <code class="code-block">
-&lt;div class=&quot;input-group&quot; aria-live=&quot;polite&quot;&gt;
-    &lt;label for=&quot;ssn-invalid&quot; class=&quot;form-label&quot;&gt;Fødselsnummer&lt;/label&gt;
-    &lt;input class=&quot;input-field&quot;
-        name=&quot;ssn&quot;
-        id=&quot;ssn-invalid&quot;
-        type=&quot;tel&quot;
-        maxlength=&quot;11&quot;
-        autocomplete=&quot;off&quot;
-        aria-invalid=&quot;true&quot;&gt;
-    &lt;div class=&quot;info-message info-message--error&quot;&gt;Vennligst fyll inn &quot;Fødselsnummer&quot;&lt;/div&gt;
-&lt;/div&gt;
-        </code>
-    </div>
+        <div class="content-container content-container--lg">
+            <h2 class="h2">Large content container</h2>
+            <p class="lead-paragraph">Max width is 1280px</p>
+            <p class="body-paragraph">Always centered</p>
+        </div>
+        <div class="content-container content-container--lg">
+            <h3 class="h3">Example header</h3>
+            <p class="body-paragraph">A paragraph demonstrating this type of container</p>
+            <p class="body-paragraph">A paragraph demonstrating this type of container</p>
+            <p class="body-paragraph">A paragraph demonstrating this type of container</p>
+        </div>
+        <div class="content-container content-container--lg content-container--text-left">
+            <h3 class="h3">Example header</h3>
+            <p class="body-paragraph">Another paragraph in a left aligned container</p>
+            <p class="body-paragraph">Another paragraph in a left aligned container</p>
+            <p class="body-paragraph">Another paragraph in a left aligned container</p>
+        </div>
 
-    <div class="layout-container layout-container--text-left">
-        <h2>Generelle komponenter</h2>
-        <p>Praktiske elementer å bruke forskjellige steder i en applikasjon</p>
-    </div>
+        <div class="content-container content-container--sm">
+            <h2 class="h2">Small content container</h2>
+            <p class="lead-paragraph">Max width is 480px</p>
+            <p class="body-paragraph">Always centered</p>
+        </div>
+        <div class="content-container content-container--sm">
+            <h3 class="h3">Example header</h3>
+            <p class="body-paragraph">A paragraph demonstrating this type of container</p>
+            <p class="body-paragraph">A paragraph demonstrating this type of container</p>
+            <p class="body-paragraph">A paragraph demonstrating this type of container</p>
+        </div>
+        <div class="content-container content-container--sm content-container--text-left">
+            <h3 class="h3">Another header</h3>
+            <p class="body-paragraph">Another paragraph in a left aligned container</p>
+            <p class="body-paragraph">Another paragraph in a left aligned container</p>
+            <p class="body-paragraph">Another paragraph in a left aligned container</p>
+        </div>
+    </section>
 
-    <div class="layout-container layout-container--text-left">
-        <h3>Loading spinner</h3>
-        <p>
-            Spinneren er kun en klasse som ikke inneholder noen posisjoneringskode; dette gir mye fleksibilitet.
-            Den finnes i to størrelser og kan blandes med andre elementer.
-        </p>
-        <p class="small-text">LOADING SPINNER</p>
-        <p class="body-paragraph">
-            <span class="loading-spinner"></span> Loading...
-        </p>
-        <div class="small-text">LOADING SPINNER -LARGE (centered layout not included)</div>
-    </div>
-    <div class="layout-container">
-        <div class="loading-spinner loading-spinner--large"></div>
-        <p>
-            Loading...
-        </p>
-    </div>
-    <div class="layout-container layout-container--text-left">
-        <div class="collapse-link">Vis kode</div>
-        <code class="code-block">
-&lt;div class=&quot;loading-spinner loading-spinner--large&quot;&gt;&lt;/div&gt;
-        </code>
-    </div>
+    <section>
+        <div class="content-container">
+            <h2 class="h2">Default content container without section wrapper</h2>
+            <p class="lead-paragraph">This is unfortunate, since there will be no gutters on before the 768px breakpoint</p>
+        </div>
+        <div class="content-container">
+            <h3 class="h3">Example header</h3>
+            <p class="body-paragraph">A paragraph demonstrating this type of container</p>
+            <p class="body-paragraph">A paragraph demonstrating this type of container</p>
+            <p class="body-paragraph">A paragraph demonstrating this type of container</p>
+        </div>
+        <div class="content-container content-container--text-left">
+            <h3 class="h3">Another header</h3>
+            <p class="body-paragraph">Another paragraph in a left aligned container</p>
+            <p class="body-paragraph">Another paragraph in a left aligned container</p>
+            <p class="body-paragraph">Another paragraph in a left aligned container</p>
+        </div>
+    </section>
 
-    <script src="examples.js"></script>
+    <section class="section-wrapper section-wrapper--bg-grey">
+        <div class="content-container content-container--text-left">
+            <h2 class="h2">Demo #1</h2>
+            <p class="lead-paragraph">Using the a colored background of the section: --bg-grey</p>
+        </div>
+    </section>
 
-</body>
+
+
+    <footer></footer>
+
+    </body>
 </html>
