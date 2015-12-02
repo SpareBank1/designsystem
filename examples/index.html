@@ -10,88 +10,260 @@
 
 </head>
 <body>
-
-    <header class="layout-container">
+<header class="section-wrapper">
+    <div class="content-container">
         <h1>Felles Frontend Style Guide</h1>
         <p class="lead-paragraph">Inneholder generell styling for bruk utenfor komponenter. F.eks. typografi, knapper, farger, o.l. FFE følger
             <a href="https://en.bem.info">BEM</a> for å sørge for god organisasjon av CSS-koden.
         </p>
-    </header>
+    </div>
 
-    <nav class="layout-container layout-container--lg">
+    <nav class="content-container content-container--lg">
         <ul class="navigation-bar">
             <li class="navigation-bar__link navigation-bar__link--active"><a href="index.html">Typografi</a></li>
             <li class="navigation-bar__link"><a href="colors.html">Farger</a></li>
             <li class="navigation-bar__link"><a href="form.html">Skjema</a></li>
             <li class="navigation-bar__link"><a href="buttons.html">Knapper</a></li>
+            <li class="navigation-bar__link"><a href="layout.html">Layout</a></li>
         </ul>
     </nav>
-
-    <div class="layout-container">
-        <h2 class="page-title">Typografi</h2>
-    </div>
-
-    <div class="layout-container layout-container--text-left">
-        <h3>Overskriftstrategi</h3>
+</header>
+<section class="section-wrapper">
+    <div class="content-container content-container--text-left">
+        <h2>Overskriftstrategi</h2>
         <p>Vi har valgt å bruke semtisk korrekte overskrifts-tagger kombinert med klasser for å kunne holde oss innenfor UU-krav og samtidig
         ha fleksibilitet i design. Dette betyr at i de tilfeller hvor struktur og design fraviker er det mulig å overstyre default-overskriften.</p>
     </div>
-
-    <div class="layout-container layout-container--subtle">
-        <div class="layout-container layout-container--wrapped layout-container--text-left">
-            <div class="small-text">HEADING 1</div>
-            <p class="h1 h1--spaced">Litt sparing er bedre enn...</p>
-
-            <div class="small-text">HEADING 2</div>
-            <p class="h2 h2--spaced">Ok, neste måned skal jeg spare!</p>
-
-            <div class="small-text">HEADING 3</div>
-            <p class="h3 h3--spaced">Bruker du sparepengene innen måneden er slutt?</p>
-
-            <div class="small-text">HEADING 4</div>
-            <p class="h4 h4--spaced">Ofte stilte spørsmål</p>
-
-            <div class="small-text">HEADING 5</div>
-            <p class="h5 h5--spaced">Er det en grense for hvor lite jeg kan spare når jeg bruker kortet?</p>
-
-            <div class="small-text">LEAD PARAGRAPH</div>
-            <p class="lead-paragraph lead-paragraph--spaced">
-                Det kan være vanskelig å spare, men å bruke penger går ofte helt av seg selv. Men, hva hvis du kunne spart litt
-                hver gang du bruker kortet? Da hadde det kanskje vært litt lettere?
-            </p>
-
-            <div class="small-text">BODY TEXT</div>
-            <p class="body-text">
-                De fleste av oss legger ikke merke til alle kronene som fyker ut av kontoen, og plutselig står vi igjen med litt lite
-                mot slutten av måneden. Da er det lett å ta av sparepengene...
-            </p>
-            <p class="body-text body-text--spaced">
-                Visste du at du kan ta bort sparekontoen fra oversikten i nettbanken? Da er det lettere å ikke bli fristet
-                til å bruke penger du sparer.
-            </p>
-
-            <div class="small-text">SMALL TEXT</div>
-            <p class="small-text small-text--spaced">
-                Om du velger å spare i prosent eller et fast beløp, er minste beløp 2 kroner per
-                hendelse. all sparing vil være i hele kroner. vi sjekker at det er dekning for beløpet før spareingen utføres.
-            </p>
-
-            <div class="small-text">MICRO TEXT</div>
-            <p class="micro-text">&copy; SpareBank 1 | Personvern og sikkerhet | Informasjonskapsler</p>
-        </div>
+</section>
+<section class="section-wrapper section-wrapper--bg-sand">
+    <div class="content-container content-container--text-left">
+        <div class="small-text">HEADING 1</div>
+        <p class="h1">Litt sparing er bedre enn...</p>
     </div>
-
-    <section class="layout-container layout-container--text-left">
-        <div class="collapse-link">Vis kode</div>
-        <code class="code-block">&#x3C;h1 class=&#x22;h1&#x22;&#x3E;First Heading&#x3C;/h1&#x3E;
+    <div class="content-container content-container--text-left">
+        <div class="small-text">HEADING 2</div>
+        <p class="h2">Ok, neste måned skal jeg spare!</p>
+    </div>
+    <div class="content-container content-container--text-left">
+        <div class="small-text">HEADING 3</div>
+        <p class="h3">Bruker du sparepengene innen måneden er slutt?</p>
+    </div>
+    <div class="content-container content-container--text-left">
+        <div class="small-text">HEADING 4</div>
+        <p class="h4">Ofte stilte spørsmål</p>
+    </div>
+    <div class="content-container content-container--text-left">
+        <div class="small-text">HEADING 5</div>
+        <p class="h5">Er det en grense for hvor lite jeg kan spare når jeg bruker kortet?</p>
+    </div>
+    <div class="content-container content-container--text-left">
+        <div class="small-text">LEAD PARAGRAPH</div>
+        <p class="lead-paragraph">
+            Det kan være vanskelig å spare, men å bruke penger går ofte helt av seg selv. Men, hva hvis du kunne spart litt
+            hver gang du bruker kortet? Da hadde det kanskje vært litt lettere?
+        </p>
+    </div>
+    <div class="content-container content-container--text-left">
+        <div class="small-text">BODY TEXT</div>
+        <p class="body-text">
+            De fleste av oss legger ikke merke til alle kronene som fyker ut av kontoen, og plutselig står vi igjen med litt lite
+            mot slutten av måneden. Da er det lett å ta av sparepengene...
+        </p>
+        <p class="body-text">
+            Visste du at du kan ta bort sparekontoen fra oversikten i nettbanken? Da er det lettere å ikke bli fristet
+            til å bruke penger du sparer.
+        </p>
+    </div>
+    <div class="content-container content-container--text-left">
+        <div class="small-text">BODY PARAGRAPH</div>
+        <p class="body-paragraph">
+            De fleste av oss legger ikke merke til alle kronene som fyker ut av kontoen, og plutselig står vi igjen med litt lite
+            mot slutten av måneden. Da er det lett å ta av sparepengene...
+        </p>
+        <p class="body-paragraph">
+            Visste du at du kan ta bort sparekontoen fra oversikten i nettbanken? Da er det lettere å ikke bli fristet
+            til å bruke penger du sparer.
+        </p>
+    </div>
+    <div class="content-container content-container--text-left">
+        <div class="small-text">SMALL TEXT</div>
+        <p class="small-text">
+            Om du velger å spare i prosent eller et fast beløp, er minste beløp 2 kroner per
+            hendelse. all sparing vil være i hele kroner. vi sjekker at det er dekning for beløpet før spareingen utføres.
+        </p>
+    </div>
+    <div class="content-container content-container--text-left">
+        <div class="small-text">MICRO TEXT</div>
+        <p class="micro-text">&copy; SpareBank 1 | Personvern og sikkerhet | Informasjonskapsler</p>
+    </div>
+</section>
+<section class="section-wrapper">
+    <div class="content-container content-container--text-left">
+    <div class="collapse-link">Vis kode</div>
+        <code class="code-block">
+&#x3C;h1 class=&#x22;h1&#x22;&#x3E;First Heading&#x3C;/h1&#x3E;
 &#x3C;p class=&#x22;lead-paragraph&#x22;&#x3E;Some leading text&#x3C;/p&#x3E;
 
 &#x3C;h2 class=&#x22;h3&#x22;&#x3E;Second Heading&#x3C;/h2&#x3E;
-&#x3C;p&#x3E;This one is an h2 with h3 styling.&#x3C;/p&#x3E;</code>
-    </section>
+&#x3C;p&#x3E;This one is an h2 with h3 styling.&#x3C;/p&#x3E;
+        </code>
+    </div>
+</section>
+<section class="section-wrapper">
+    <div class="content-container content-container--text-left">
+        <h2>Lister</h2>
+        <p class="body-paragraph">Standard bullet list</p>
+        <ul class="bullet-list">
+            <li>Litt sparing er bedre enn...</li>
+            <li>Ok, neste måned skal jeg spare!</li>
+            <li>Bruker du sparepengene innen måneden er slutt?</li>
+        </ul>
+    </div>
+</section>
+<section class="section-wrapper">
+    <div class="content-container content-container--text-left">
+        <h2>Responsive tables</h2>
+        <p class="body-paragraph">The central to this concept is using <strong>data-th</strong> attributes on cells to show column names even in a collapsed state on small devices. Try it out!</p>
+    </div>
+</section>
+<section class="section-wrapper section-wrapper--bg-sand">
+    <div class="content-container content-container--text-left">
 
+        <h3>Example 01</h3>
+        <p>This is a standard <strong>.responsive-table</strong>.</p>
+        <table class="responsive-table">
+            <thead>
+            <tr>
+                <th><span class="h4">Type</span></th>
+                <th><span class="h4">Byggeår</span></th>
+                <th><span class="h4">Bruttoareal</span></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td data-th="Type">
+                    <div class="element-content">Carport</div>
+                </td>
+                <td data-th="Byggeår">
+                    <div class="element-content">1985</div>
+                </td>
+                <td data-th="Bruttoareal">
+                    <div class="element-content">20</div>
+                </td>
+            </tr>
+            <tr>
+                <td data-th="Type">
+                    <div class="element-content">Uthus (uisolert)</div>
+                </td>
+                <td data-th="Byggeår">
+                    <div class="element-content">1990</div>
+                </td>
+                <td data-th="Bruttoareal">
+                    <div class="element-content">12</div>
+                </td>
+            </tr>
+            <tr>
+                <td data-th="Type">
+                    <div class="element-content">Annen type bygning (uisolert)</div>
+                </td>
+                <td data-th="Byggeår">
+                    <div class="element-content">2005</div>
+                </td>
+                <td data-th="Bruttoareal">
+                    <div class="element-content">45</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+<section class="section-wrapper">
+    <div class="content-container content-container--text-left">
+        <h3>Example 02</h3>
+        <p>Table with a shorter header in collapsed mode, <strong>-small-header</strong></p>
+        <table class="responsive-table -small-header">
+            <tbody>
+            <tr>
+                <td data-th="Type">
+                    <div class="element-content">Razer BlackWidow Ultimate Stealth Edition Elite Mechanical Gaming Keyboard</div>
+                </td>
+                <td data-th="Pris">
+                    <div class="element-content">798,-</div>
+                </td>
+            </tr>
+            <tr>
+                <td data-th="Type">
+                    <div class="element-content">Emporio Armani Klokke</div>
+                </td>
+                <td data-th="Pris">
+                    <div class="element-content">3424,-</div>
+                </td>
+            </tr>
+            <tr>
+                <td data-th="Type">
+                    <div class="element-content">QuietComfort® 25 Acoustic Noise Cancelling</div>
+                </td>
+                <td data-th="Pris">
+                    <div class="element-content">2640,-</div>
+                </td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <td>
+                    <span class="h4">Total</span>
+                </td>
+                <td>
+                    <span class="h4">6862,-</span>
+                </td>
+            </tr>
+            </tfoot>
+        </table>
+    </div>
+</section>
+<section class="section-wrapper section-wrapper--bg-grey">
+    <div class="content-container content-container--sm content-container--text-left">
+        <h3>Example 03</h3>
+        <p>Table with two axes</p>
 
-    <script src="examples.js"></script>
+        <table class="responsive-table">
+            <caption>Norge GET-ligaen</caption>
+            <thead>
+            <tr>
+                <th scope="col">Team</th>
+                <th scope="col">Spilt</th>
+                <th scope="col">Seiere</th>
+                <th scope="col">Poeng</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">Stavanger</th>
+                <td data-th="Spilt">21</td><td data-th="Seiere">13</td><td data-th="Poeng">46</td>
+            </tr>
+            <tr>
+                <th scope="row">Lørenskog</th>
+                <td data-th="Spilt">20</td><td data-th="Seiere">13</td><td data-th="Poeng">44</td>
+            </tr>
+            <tr>
+                <th scope="row">Sparta Sarpsborg</th>
+                <td data-th="Spilt">21</td><td data-th="Seiere">12</td><td data-th="Poeng">43</td>
+            </tr>
+            <tr>
+                <th scope="row">Frisk Asker</th>
+                <td data-th="Spilt">21</td><td data-th="Seiere">10</td><td data-th="Poeng">42</td>
+            </tr>
+            </tbody>
+        </table>
 
+    </div>
+</section>
+<footer class="section-wrapper">
+    <hr>
+    <div class="content-container">
+        <a href="#">© SpareBank 1</a>
+    </div>
+</footer>
+<script src="examples.js"></script>
 </body>
 </html>
