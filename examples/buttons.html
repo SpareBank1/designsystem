@@ -8,37 +8,36 @@
 
     <link rel="stylesheet" type="text/css" href="examples.css">
 
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
+
 </head>
 <body>
-<header class="section-wrapper">
-    <div class="content-container">
-        <h1>Felles Frontend Style Guide</h1>
-        <p class="lead-paragraph">Inneholder generell styling for bruk utenfor komponenter. F.eks. typografi, knapper, farger, o.l. FFE følger
-            <a href="https://en.bem.info">BEM</a> for å sørge for god organisasjon av CSS-koden.
-        </p>
-    </div>
 
-    <nav class="content-container content-container--lg">
-        <ul class="navigation-bar">
-            <li class="navigation-bar__link"><a href="index.html">Typografi</a></li>
-            <li class="navigation-bar__link"><a href="colors.html">Farger</a></li>
-            <li class="navigation-bar__link navigation-bar__link--active"><a href="buttons.html">Knapper</a></li>
-            <li class="navigation-bar__link"><a href="form.html">Skjema</a></li>
-            <li class="navigation-bar__link"><a href="layout.html">Layout</a></li>
-            <li class="navigation-bar__link"><a href="containers.html">Containers</a></li>
-        </ul>
-    </nav>
-</header>
+    <div class="sidebar-open">
+		<button class="sidebar-open__button secondary-button"></button>
+	</div>
+
+	<aside class="sidebar">
+
+		<button class="sidebar__close-btn"></button>
+
+		<h2 class="h4">Innhold</h2>
+
+		<ul class="navigation-list">
+			<li class="navigation-list__link"><a href="index.html">Hjem</a></li>
+			<li class="navigation-list__link"><a href="typo.html">Typografi</a></li>
+			<li class="navigation-list__link"><a href="colors.html">Farger</a></li>
+			<li class="navigation-list__link"><a href="form.html">Skjema</a></li>
+			<li class="navigation-list__link navigation-list__link--active"><a href="buttons.html">Knapper</a></li>
+		</ul>
+	</aside>
+
 <main class="section-wrapper">
-    <section class="content-container content-container--text-left">
-        <p>For å endre state på en knapp fra vanlig til "spinner" må følgende gjøres:</p>
-        <ul class="bullet-list">
-            <li>Legg til klassen <code class="code-inline">[knapp-variant]--loading</code> på selve knappen</li>
-            <li>Legg til klassen <code class="code-inline">[knapp-variant]__label-text--loading</code> på label-text-elementet</li>
-            <li>Sett <code class="code-inline">aria-hidden="false"</code> på <code class="code-inline">[knapp-variant]__label-spinner</code></li>
-            <li>Optional: Legg til <code class="code-inline">disabled</code> attributt på knappen</li>
-        </ul>
+	<div class="content-container">
+		<h2 class="page-title">Knapper</h2>
+	</div>
 
+    <section class="content-container content-container--text-left">
         <div class="small-text">ACTION BUTTON</div>
         <div class="button-group" aria-live="polite">
             <button class="action-button">Action button</button>
@@ -80,21 +79,47 @@
         </div>
     </section>
 
-    <section class="content-container content-container--text-left">
-        <div class="collapse-link">Vis kode</div>
-        <code class="code-block">
-&lt;button class=&quot;action-button&quot;&gt;Action button&lt;/button&gt;
-&lt;button class=&quot;action-button&nbsp;action-button--loading&quot;&gt;
-    &lt;span class=&quot;action-button__label&quot;&gt;
-        &lt;span class=&quot;action-button__label-text&nbsp;action-button__label-text--loading&quot;&gt;Action button&lt;/span&gt;
-        &lt;span class=&quot;action-button__label-spinner&quot; aria-hidden=&quot;false&quot;&gt;Spinner-tekst&lt;/span&gt;
-    &lt;/span&gt;
-&lt;/button&gt;
-        </code>
-    </section>
+	    <section class="content-container content-container--text-left">
+	        <div class="tabbed-panel">
+				<ul class="tabbed-panel__tablist">
+					<li class="tabbed-panel__tab tabbed-panel__tab--active">
+						<a class="tabbed-panel__tablink" href="#" rel="1">Teknisk</a>
+					</li>
+					<li class="tabbed-panel__tab">
+						<a class="tabbed-panel__tablink" href="#" rel="2">Design</a>
+					</li>
+				</ul>
+				<div class="tabbed-panel__display-frame">
+					<div class="tabbed-panel__content-pane tabbed-panel__content-pane--active" rel="1">
+						<h5>Generelt</h5>
 
-    <div class="content-container"><hr></div>
+						<div class="small-text">
+							<p>For å endre state på en knapp fra vanlig til "spinner" må følgende gjøres:</p>
+					        <ul class="bullet-list">
+					            <li>Legg til klassen <span class="inline-code">[knapp-variant]--loading</span> på selve knappen</li>
+					            <li>Legg til klassen <span class="inline-code">[knapp-variant]__label-text--loading</span> på label-text-elementet</li>
+					            <li>Sett <span class="inline-code">aria-hidden="false"</span> på <span class="inline-code">[knapp-variant]__label-spinner</span></li>
+					            <li>Optional: Legg til <span class="inline-code">disabled</span> attributt på knappen</li>
+				        	</ul>
+				        </div>
 
+				        <hr/>
+
+						<h5>Eksempelkode</h5>
+						<pre><code class="html">&lt;button&nbsp;class=&quot;action-button&quot;&gt;Action&nbsp;button&lt;/button&gt;
+&lt;button&nbsp;class=&quot;action-button action-button--loading&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;action-button__label&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;action-button__label-text action-button__label-text--loading&quot;&gt;Action&nbsp;button&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;action-button__label-spinner&quot;&nbsp;aria-hidden=&quot;false&quot;&gt;Spinner-tekst&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/span&gt;
+&lt;/button&gt;</code></pre>
+					</div>
+					<div class="tabbed-panel__content-pane" rel="2">
+						World
+					</div>
+				</div>
+			</div>
+	    </section>
 </main>
 <footer class="section-wrapper">
     <hr>
@@ -102,6 +127,13 @@
         <a href="#">© SpareBank 1</a>
     </div>
 </footer>
-<script src="examples.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+	<script>
+		hljs.configure({
+			tabReplace: '    ' // 2 spaces
+		})
+		hljs.initHighlightingOnLoad();
+	</script>
+    <script src="examples.js"></script>
 </body>
 </html>

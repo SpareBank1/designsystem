@@ -11,8 +11,8 @@
     "type": "git",
     "url": "ssh://git@stash.intern.sparebank1.no:22/ffe/ffe-core.git"
   },
-  "publishConfig" : {
-    "registry" : "https://nexus.intern.sparebank1.no/nexus/content/repositories/npm-internal"
+  "publishConfig": {
+    "registry": "https://nexus.intern.sparebank1.no/nexus/content/repositories/npm-internal"
   },
   "keywords": [
     "frontend",

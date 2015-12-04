@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Felles Frontend Style Guide</title>
+
+    <link rel="stylesheet" type="text/css" href="examples.css">
+	
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
+
+</head>
+<body>
+	
+	<div class="sidebar-open">
+		<button class="sidebar-open__button secondary-button"></button>
+	</div>
+
+	<aside class="sidebar">
+		
+		<button class="sidebar__close-btn"></button>
+
+		<h2 class="h4">Innhold</h2>
+		
+		<ul class="navigation-list">
+			<li class="navigation-list__link"><a href="index.html">Hjem</a></li>
+			<li class="navigation-list__link navigation-list__link--active"><a href="typo.html">Typografi</a></li>
+			<li class="navigation-list__link"><a href="colors.html">Farger</a></li>
+			<li class="navigation-list__link"><a href="form.html">Skjema</a></li>
+			<li class="navigation-list__link"><a href="buttons.html">Knapper</a></li>
+		</ul>
+	</aside>
+
+	<article class="article-wrapper">
+		
+	    <div class="layout-container">
+	        <h2 class="page-title">Typografi</h2>
+	    </div>
+
+	    <div class="layout-container layout-container--text-left">
+	        <h3>Overskriftstrategi</h3>
+	        <p>Vi har valgt å bruke semtisk korrekte overskrifts-tagger kombinert med klasser for å kunne holde oss innenfor UU-krav og samtidig
+	        ha fleksibilitet i design. Dette betyr at i de tilfeller hvor struktur og design fraviker er det mulig å overstyre default-overskriften.</p>
+	    </div>
+
+	    <div class="layout-container layout-container--wrapped layout-container--text-left">
+	            <div class="small-text">HEADING 1</div>
+	            <p class="h1 h1--spaced">Litt sparing er bedre enn...</p>
+
+	            <div class="tabbed-panel">
+					<ul class="tabbed-panel__tablist">
+						<li class="tabbed-panel__tab tabbed-panel__tab--active">
+							<a class="tabbed-panel__tablink" href="#" rel="1">Teknisk</a>
+						</li>
+						<li class="tabbed-panel__tab">
+							<a class="tabbed-panel__tablink" href="#" rel="2">Design</a>
+						</li>
+					</ul>
+					<div class="tabbed-panel__display-frame">
+						<div class="tabbed-panel__content-pane tabbed-panel__content-pane--active" rel="1">
+							<h5>Eksempelkode</h5>
+							<pre><code class="html">&lt;h1&gt;Litt sparing er bedre enn...&lt;/h1&gt;<br/>&lt;div class=&quot;h1&quot;&gt;Litt sparing er bedre enn...&lt;/div&gt;</code></pre>
+						</div>
+						<div class="tabbed-panel__content-pane" rel="2">
+							<div class="small-text">
+								Det bør kun finnes ett slikt element per side.
+							</div>
+						</div>
+					</div>
+				</div>
+
+	            <div class="small-text">HEADING 2</div>
+	            <p class="h2 h2--spaced">Ok, neste måned skal jeg spare!</p>
+
+	            <div class="tabbed-panel">
+					<ul class="tabbed-panel__tablist">
+						<li class="tabbed-panel__tab tabbed-panel__tab--active">
+							<a class="tabbed-panel__tablink" href="#" rel="1">Teknisk</a>
+						</li>
+						<li class="tabbed-panel__tab">
+							<a class="tabbed-panel__tablink" href="#" rel="2">Design</a>
+						</li>
+					</ul>
+					<div class="tabbed-panel__display-frame">
+						<div class="tabbed-panel__content-pane tabbed-panel__content-pane--active" rel="1">
+							<h5>Eksempelkode</h5>
+							<pre><code class="html">&lt;h2&gt;Ok, neste m&aring;ned skal jeg spare!&lt;/h2&gt;<br/>&lt;div class=&quot;h2&quot;&gt;Ok, neste m&aring;ned skal jeg spare!&lt;/div&gt;</code></pre>
+						</div>
+						<div class="tabbed-panel__content-pane" rel="2">
+							World
+						</div>
+					</div>
+				</div>
+
+	            <div class="small-text">HEADING 3</div>
+	            <p class="h3 h3--spaced">Bruker du sparepengene innen måneden er slutt?</p>
+
+	            <div class="tabbed-panel">
+					<ul class="tabbed-panel__tablist">
+						<li class="tabbed-panel__tab tabbed-panel__tab--active">
+							<a class="tabbed-panel__tablink" href="#" rel="1">Teknisk</a>
+						</li>
+						<li class="tabbed-panel__tab">
+							<a class="tabbed-panel__tablink" href="#" rel="2">Design</a>
+						</li>
+					</ul>
+					<div class="tabbed-panel__display-frame">
+						<div class="tabbed-panel__content-pane tabbed-panel__content-pane--active" rel="1">
+							<h5>Eksempelkode</h5>
+							<pre><code class="html">&lt;h3&gt;Bruker du sparepengene innen m&aring;neden er slutt?&lt;/h3&gt;<br/>&lt;div class=&quot;h3&quot;&gt;Bruker du sparepengene innen m&aring;neden er slutt?&lt;/div&gt;</code></pre>
+						</div>
+						<div class="tabbed-panel__content-pane" rel="2">
+							World
+						</div>
+					</div>
+				</div>
+
+	            <div class="small-text">HEADING 4</div>
+	            <p class="h4 h4--spaced">Ofte stilte spørsmål</p>
+
+	            <div class="tabbed-panel">
+					<ul class="tabbed-panel__tablist">
+						<li class="tabbed-panel__tab tabbed-panel__tab--active">
+							<a class="tabbed-panel__tablink" href="#" rel="1">Teknisk</a>
+						</li>
+						<li class="tabbed-panel__tab">
+							<a class="tabbed-panel__tablink" href="#" rel="2">Design</a>
+						</li>
+					</ul>
+					<div class="tabbed-panel__display-frame">
+						<div class="tabbed-panel__content-pane tabbed-panel__content-pane--active" rel="1">
+							<h5>Eksempelkode</h5>
+							<pre><code class="html">&lt;h4&gt;Ofte stilte sp&oslash;rsm&aring;l&lt;/h4&gt;<br/>&lt;div class=&quot;h4&quot;&gt;Ofte stilte sp&oslash;rsm&aring;l&lt;/div&gt;</code></pre>
+						</div>
+						<div class="tabbed-panel__content-pane" rel="2">
+							World
+						</div>
+					</div>
+				</div>
+
+	            <div class="small-text">HEADING 5</div>
+	            <p class="h5 h5--spaced">Er det en grense for hvor lite jeg kan spare når jeg bruker kortet?</p>
+					
+				<div class="tabbed-panel">
+					<ul class="tabbed-panel__tablist">
+						<li class="tabbed-panel__tab tabbed-panel__tab--active">
+							<a class="tabbed-panel__tablink" href="#" rel="1">Teknisk</a>
+						</li>
+						<li class="tabbed-panel__tab">
+							<a class="tabbed-panel__tablink" href="#" rel="2">Design</a>
+						</li>
+					</ul>
+					<div class="tabbed-panel__display-frame">
+						<div class="tabbed-panel__content-pane tabbed-panel__content-pane--active" rel="1">
+							<h5>Eksempelkode</h5>
+							<pre><code class="html">&lt;h5&gt;Er det en grense for hvor lite jeg kan spare n&aring;r jeg bruker kortet?&lt;/h5&gt;<br/>&lt;div class=&quot;h5&quot;&gt;Er det en grense for hvor lite jeg kan spare n&aring;r jeg bruker kortet?&lt;/div&gt;</code></pre>
+						</div>
+						<div class="tabbed-panel__content-pane" rel="2">
+							World
+						</div>
+					</div>
+				</div>
+
+	            <div class="small-text">LEAD PARAGRAPH</div>
+	            <p class="lead-paragraph lead-paragraph--spaced">
+	                Det kan være vanskelig å spare, men å bruke penger går ofte helt av seg selv. Men, hva hvis du kunne spart litt
+	                hver gang du bruker kortet? Da hadde det kanskje vært litt lettere?
+	            </p>
+
+	            <div class="tabbed-panel">
+					<ul class="tabbed-panel__tablist">
+						<li class="tabbed-panel__tab tabbed-panel__tab--active">
+							<a class="tabbed-panel__tablink" href="#" rel="1">Teknisk</a>
+						</li>
+						<li class="tabbed-panel__tab">
+							<a class="tabbed-panel__tablink" href="#" rel="2">Design</a>
+						</li>
+					</ul>
+					<div class="tabbed-panel__display-frame">
+						<div class="tabbed-panel__content-pane tabbed-panel__content-pane--active" rel="1">
+							<h5>Eksempelkode</h5>
+							<pre><code class="html">&lt;p class=&quot;lead-paragraph lead-paragraph--spaced&quot;&gt;<br/>&#9;Det kan v&aelig;re vanskelig &aring; spare, men &aring; bruke penger g&aring;r ofte helt av seg selv. Men, hva hvis <br/>&#9;du kunne spart litt hver gang du bruker kortet? Da hadde det kanskje v&aelig;rt litt lettere?<br/>&lt;/p&gt;</code></pre>
+						</div>
+						<div class="tabbed-panel__content-pane" rel="2">
+							World
+						</div>
+					</div>
+				</div>
+
+	            <div class="small-text">BODY TEXT</div>
+	            <p class="body-text">
+	                De fleste av oss legger ikke merke til alle kronene som fyker ut av kontoen, og plutselig står vi igjen med litt lite
+	                mot slutten av måneden. Da er det lett å ta av sparepengene...
+	            </p>
+	            <p class="body-text body-text--spaced">
+	                Visste du at du kan ta bort sparekontoen fra oversikten i nettbanken? Da er det lettere å ikke bli fristet
+	                til å bruke penger du sparer.
+	            </p>
+
+	            <div class="tabbed-panel">
+					<ul class="tabbed-panel__tablist">
+						<li class="tabbed-panel__tab tabbed-panel__tab--active">
+							<a class="tabbed-panel__tablink" href="#" rel="1">Teknisk</a>
+						</li>
+						<li class="tabbed-panel__tab">
+							<a class="tabbed-panel__tablink" href="#" rel="2">Design</a>
+						</li>
+					</ul>
+					<div class="tabbed-panel__display-frame">
+						<div class="tabbed-panel__content-pane tabbed-panel__content-pane--active" rel="1">
+							<h5>Eksempelkode</h5>
+							<pre><code class="html">&lt;p class=&quot;body-text&quot;&gt;<br/>&#9;De fleste av oss legger ikke merke til alle kronene som fyker ut av kontoen, og plutselig <br/>&#9;st&aring;r vi igjen med litt lite mot slutten av m&aring;neden. Da er det lett &aring; ta av sparepengene...<br/>&lt;/p&gt;<br/>&lt;p class=&quot;body-text body-text--spaced&quot;&gt;<br/>&#9;Visste du at du kan ta bort sparekontoen fra oversikten i nettbanken? Da er det lettere &aring; <br/>&#9;ikke bli fristet til &aring; bruke penger du sparer.<br/>&lt;/p&gt;</code></pre>
+						</div>
+						<div class="tabbed-panel__content-pane" rel="2">
+							World
+						</div>
+					</div>
+				</div>
+
+	            <div class="small-text">SMALL TEXT</div>
+	            <p class="small-text small-text--spaced">
+	                Om du velger å spare i prosent eller et fast beløp, er minste beløp 2 kroner per
+	                hendelse. All sparing vil være i hele kroner. Vi sjekker at det er dekning for beløpet før sparingen utføres.
+	            </p>
+
+	            <div class="tabbed-panel">
+					<ul class="tabbed-panel__tablist">
+						<li class="tabbed-panel__tab tabbed-panel__tab--active">
+							<a class="tabbed-panel__tablink" href="#" rel="1">Teknisk</a>
+						</li>
+						<li class="tabbed-panel__tab">
+							<a class="tabbed-panel__tablink" href="#" rel="2">Design</a>
+						</li>
+					</ul>
+					<div class="tabbed-panel__display-frame">
+						<div class="tabbed-panel__content-pane tabbed-panel__content-pane--active" rel="1">
+							<h5>Eksempelkode</h5>
+							<pre><code class="html">&lt;p class=&quot;small-text small-text--spaced&quot;&gt;<br/>&#9;Om du velger &aring; spare i prosent eller et fast bel&oslash;p, er minste bel&oslash;p 2 kroner per hendelse. <br/>&#9;All sparing vil v&aelig;re i hele kroner. vi sjekker at det er dekning for bel&oslash;pet f&oslash;r sparingen <br/>&#9;utf&oslash;res.<br/>&lt;/p&gt;</code></pre>
+						</div>
+						<div class="tabbed-panel__content-pane" rel="2">
+							World
+						</div>
+					</div>
+				</div>
+
+	            <div class="small-text">MICRO TEXT</div>
+	            <p class="micro-text">&copy; SpareBank 1 | Personvern og sikkerhet | Informasjonskapsler</p>
+
+	            <div class="tabbed-panel">
+					
+					<ul class="tabbed-panel__tablist">
+						<li class="tabbed-panel__tab tabbed-panel__tab--active">
+							<a class="tabbed-panel__tablink" href="#" rel="1">Teknisk</a>
+						</li>
+						<li class="tabbed-panel__tab">
+							<a class="tabbed-panel__tablink" href="#" rel="2">Design</a>
+						</li>
+					</ul>
+
+					<div class="tabbed-panel__display-frame">
+						<div class="tabbed-panel__content-pane tabbed-panel__content-pane--active" rel="1">
+							<h5>Eksempelkode</h5>
+							<pre><code class="html">&lt;p class=&quot;micro-text&quot;&gt;&amp;copy; SpareBank 1 | Personvern og sikkerhet | Informasjonskapsler&lt;/p&gt;</code></pre>
+						</div>
+						<div class="tabbed-panel__content-pane" rel="2">
+							World
+						</div>
+					</div>
+				</div>
+
+
+	        <!-- </div> -->
+	    </div>
+	
+		<!--
+	    <section class="layout-container layout-container--text-left">
+	        <div class="collapse-link">Vis kode</div>
+	    </section>
+	    -->
+	
+	</article>
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+	<script>
+		hljs.configure({
+		  tabReplace: '    ' // 2 spaces
+		})
+		hljs.initHighlightingOnLoad();
+	</script>
+
+    <script src="examples.js"></script>
+
+</body>
+</html>
