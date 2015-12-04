@@ -1,38 +1,6 @@
 @import "../less/ffe.less";
 @base-url: "../";
 
-.layout-container {
-    width: 100%;
-    margin: 60px auto;
-    padding: 0 20px;
-    max-width: 768px;
-    text-align: center;
-
-    &--sm {
-        max-width: 550px;
-    }
-
-    &--lg {
-        max-width: 1280px;
-    }
-
-    &--text-left {
-        text-align: left;
-    }
-
-    &--wrapped {
-        margin: 0 auto;
-    }
-
-    &--subtle {
-      background-color: @sand-25;
-      width: 100%;
-      max-width: none;
-      margin: 0 auto;
-      padding: 60px 0;
-    }
-}
-
 .color-patch {
     display: inline-block;
     width: 230px;
@@ -166,11 +134,20 @@
     border-top: solid 1px @grey-light;
     border-bottom: solid 1px @grey-light;
 
+    @media screen and (min-width: @breakpoint-sm) {
+        display: flex;
+        justify-content: center;
+    }
+
     &__link {
-        display: inline-block;
+        display: block;
         font-size: 16px;
-        margin: 0 50px;
         padding: 15px 0;
+
+        @media screen and (min-width: @breakpoint-sm) {
+            display: inline-block;
+            width: 120px;
+        }
     }
 
     &__link > a {
@@ -182,18 +159,23 @@
         border-bottom: solid 4px @blue-royal;
         padding-bottom: 11px;
         font-family: "MuseoSans-500", arial, sans-serif;
+        background: @blue-flat;
+
+        @media screen and (min-width: @breakpoint-sm) {
+            background: transparent;
+        }
     }
+
+    &__link--active > a {
+        color: @white;
+
+        @media screen and (min-width: @breakpoint-sm) {
+            color: @blue-royal;
+        }
+    }
+
 }
 
-// Typography
-.page-title {
-    padding-top: 10px;
-}
-
-h1, h2, h3, h4, h5,
-.h1,.h2,.h3,.h4,.h5,
-.small-text, .micro-text, .lead-paragraph, .body-text {
-    &--spaced {
-        margin-bottom: 40px;
-    }
+footer {
+    height: 200px;
 }
