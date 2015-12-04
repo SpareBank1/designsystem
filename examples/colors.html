@@ -10,32 +10,31 @@
 
 </head>
 <body>
-
-    <header class="layout-container">
+<header class="section-wrapper">
+    <div class="content-container">
         <h1>Felles Frontend Style Guide</h1>
         <p class="lead-paragraph">Inneholder generell styling for bruk utenfor komponenter. F.eks. typografi, knapper, farger, o.l. FFE følger
             <a href="https://en.bem.info">BEM</a> for å sørge for god organisasjon av CSS-koden.
         </p>
-    </header>
+    </div>
 
-    <nav class="layout-container layout-container--lg">
+    <nav class="content-container content-container--lg">
         <ul class="navigation-bar">
             <li class="navigation-bar__link"><a href="index.html">Typografi</a></li>
             <li class="navigation-bar__link navigation-bar__link--active"><a href="colors.html">Farger</a></li>
-            <li class="navigation-bar__link"><a href="form.html">Skjema</a></li>
             <li class="navigation-bar__link"><a href="buttons.html">Knapper</a></li>
+            <li class="navigation-bar__link"><a href="form.html">Skjema</a></li>
+            <li class="navigation-bar__link"><a href="layout.html">Layout</a></li>
+            <li class="navigation-bar__link"><a href="containers.html">Containers</a></li>
         </ul>
     </nav>
-
-    <div class="layout-container">
-        <h2 class="page-title">Farger</h2>
-    </div>
-
-    <div class="layout-container layout-container--text-left">
-        <h3>Primær Fargepalett</h3>
+</header>
+<main class="section-wrapper">
+    <div class="content-container content-container--text-left">
+        <h2>Primær Fargepalett</h2>
         <p>Brukt i basiselementer - f.eks. typografi, knapper og bokser.</p>
     </div>
-    <div class="layout-container">
+    <div class="content-container">
         <ul>
             <li class="color-patch">
                 <div class="color-patch__color-box color-patch__color-box--blue-royal"></div>
@@ -100,9 +99,11 @@
         </ul>
     </div>
 
-    <div class="layout-container">
-        <h3>Sekundær Fargepalett</h3>
+    <div class="content-container content-container--text-left">
+        <h2>Sekundær Fargepalett</h2>
         <p>Brukt i sekundærelementer - Infografikk, verktøy, illustrasjoner, o.l.</p>
+    </div>
+    <div class="content-container">
         <ul>
             <li class="color-patch">
                 <div class="color-patch__color-box color-patch__color-box--green"></div>
@@ -130,5 +131,13 @@
             </li>
         </ul>
     </div>
+
+</main>
+<footer class="section-wrapper">
+    <hr>
+    <div class="content-container">
+        <a href="#">© SpareBank 1</a>
+    </div>
+</footer>
 </body>
 </html>

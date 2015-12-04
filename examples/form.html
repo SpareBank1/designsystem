@@ -10,28 +10,27 @@
 
 </head>
 <body>
-
-    <header class="layout-container">
+<header class="section-wrapper">
+    <div class="content-container">
         <h1>Felles Frontend Style Guide</h1>
         <p class="lead-paragraph">Inneholder generell styling for bruk utenfor komponenter. F.eks. typografi, knapper, farger, o.l. FFE følger
             <a href="https://en.bem.info">BEM</a> for å sørge for god organisasjon av CSS-koden.
         </p>
-    </header>
+    </div>
 
-    <nav class="layout-container layout-container--lg">
+    <nav class="content-container content-container--lg">
         <ul class="navigation-bar">
             <li class="navigation-bar__link"><a href="index.html">Typografi</a></li>
             <li class="navigation-bar__link"><a href="colors.html">Farger</a></li>
-            <li class="navigation-bar__link navigation-bar__link--active"><a href="form.html">Skjema</a></li>
             <li class="navigation-bar__link"><a href="buttons.html">Knapper</a></li>
+            <li class="navigation-bar__link navigation-bar__link--active"><a href="form.html">Skjema</a></li>
+            <li class="navigation-bar__link"><a href="layout.html">Layout</a></li>
+            <li class="navigation-bar__link"><a href="containers.html">Containers</a></li>
         </ul>
     </nav>
-
-    <div class="layout-container">
-        <h2 class="page-title">Skjemaelementer</h2>
-    </div>
-
-    <div class="layout-container layout-container--text-left">
+</header>
+<main class="section-wrapper">
+    <div class="content-container content-container--text-left">
         <!-- aria-hidden="true" kan brukes for å skjule feilmeldinger som ikke skal vises -->
         <div class="error-summary" aria-hidden="true" role="alert" aria-live="assertive">
             <span class="icon icon-info-error"></span>
@@ -42,8 +41,8 @@
         </div>
     </div>
 
-    <div class="layout-container layout-container--text-left">
-        <h3 class="h3 h3--spaced">Input-felt</h3>
+    <div class="content-container content-container--text-left">
+        <h2 class="h2">Input-felt</h2>
         <p>Har tre størrelsesvarianter: -small, -medium og -large</p>
         <div class="input-group" aria-live="polite">
             <label id="ssn-label" class="form-label" for="ssn">
@@ -61,7 +60,7 @@
         </div>
     </div>
 
-    <div class="layout-container layout-container--text-left">
+    <div class="content-container content-container--text-left">
         <div class="collapse-link">Vis kode</div>
         <code class="code-block">
 &lt;input id=&quot;ssn&quot;
@@ -73,10 +72,10 @@
         </code>
     </div>
 
-    <div class="layout-container"><hr></div>
+    <div class="content-container"><hr></div>
 
-    <div class="layout-container layout-container--text-left">
-        <h3 class="h3 h3--spaced">Select box</h3>
+    <div class="content-container content-container--text-left">
+        <h2 class="h2">Select box</h2>
         <div class="input-group" aria-live="polite">
             <label id="month-label" class="form-label" for="month">
                 Velg måned
@@ -91,7 +90,7 @@
 
 
     </div>
-    <div class="layout-container layout-container--text-left">
+    <div class="content-container content-container--text-left">
         <div class="collapse-link">Vis kode</div>
         <code class="code-block">
 &lt;select class=&quot;select-box&quot; id=&quot;month&quot; &gt;
@@ -103,10 +102,10 @@
         </code>
     </div>
 
-    <div class="layout-container"><hr></div>
+    <div class="content-container"><hr></div>
 
-    <div class="layout-container layout-container--text-left">
-        <h3 class="h3 h3--spaced">Check box</h3>
+    <div class="content-container content-container--text-left">
+        <h2 class="h2">Check box</h2>
         <p>Brukes når det er flere mulige valg. Har en standard og en inline variant.</p>
         <div class="input-group" aria-live="polite">
             <label id="checkbox-ibf-label" class="form-label" for="checkbox-ibf1">
@@ -163,7 +162,7 @@
         </div>
 
     </div>
-    <div class="layout-container layout-container--text-left">
+    <div class="content-container content-container--text-left">
         <div class="collapse-link">Vis kode</div>
         <code class="code-block">
 &lt;input  class=&quot;hidden-checkbox&quot;
@@ -176,10 +175,10 @@
         </code>
     </div>
 
-    <div class="layout-container"><hr></div>
+    <div class="content-container"><hr></div>
 
-    <div class="layout-container layout-container--text-left">
-        <h3 class="h3 h3--spaced">Radio button</h3>
+    <div class="content-container content-container--text-left">
+        <h2 class="h2">Radio button</h2>
         <p>En standard type radio-knapp. Har en standard og en -inline variant.</p>
         <div class="input-group" aria-live="polite">
             <label id="radio-ibf-label" class="form-label" for="radio-ibf1">
@@ -236,7 +235,7 @@
         </div>
 
     </div>
-    <div class="layout-container layout-container--text-left">
+    <div class="content-container content-container--text-left">
         <div class="collapse-link">Vis kode</div>
         <code class="code-block">
 &lt;input  class=&quot;radio-input&quot;
@@ -249,10 +248,10 @@
         </code>
     </div>
 
-    <div class="layout-container"><hr></div>
+    <div class="content-container"><hr></div>
 
-    <div class="layout-container layout-container--text-left">
-        <h3 class="h3 h3--spaced">Radio switch</h3>
+    <div class="content-container content-container--text-left">
+        <h2 class="h2">Radio switch</h2>
         <p>Brukes der det kun er to motstridende valg.</p>
         <div class="input-group" aria-live="polite">
             <label id="switch-ibf-label" class="form-label" for="switch-ibf1">
@@ -277,7 +276,7 @@
         </div>
 
     </div>
-    <div class="layout-container layout-container--text-left">
+    <div class="content-container content-container--text-left">
         <div class="collapse-link">Vis kode</div>
         <code class="code-block">
 &lt;input  class=&quot;radio-input&quot;
@@ -290,10 +289,10 @@
         </code>
     </div>
 
-    <div class="layout-container"><hr></div>
+    <div class="content-container"><hr></div>
 
-    <div class="layout-container layout-container--text-left">
-        <h3 class="h3 h3--spaced">Radio block</h3>
+    <div class="content-container content-container--text-left">
+        <h2 class="h2">Radio block</h2>
         <p>
             Radio blocks brukes når det er viktig å presentere kontekstuelt relevant informasjon om valgene til brukeren uten å overvelde.
         </p>
@@ -301,19 +300,18 @@
             De kan brukes både som vanlige radio-knapper med synlig kontekst eller som en liten "meny" der kontekst bare er synlig for det til en hver tid aktive valget
         </p>
 
-        <h4 class="h3">- Alltid synlig kontekst</h4>
+        <h3 class="h3">Alltid synlig kontekst</h3>
         <div class="input-group" aria-live="polite">
             <label class="form-label" for="block-ibf1">
                 Hva ønsker du å gjøre?
             </label>
             <fieldset id="block-ibf1">
                 <div class="radio-block">
-                    <input class="radio-input" type="radio" name="block" id="block-one" value="one">
+                    <input class="radio-input" type="radio" name="block" id="block-one" value="one" checked>
                     <div class="radio-block__content">
-                        <label class="radio-block__header" for="block-one">Blokk 1</label>
+                        <label class="radio-block__header" for="block-one">Alternativ #1</label>
                         <div class="radio-block__wrapper">
                             <p>
-                                Blokk 1.<br>
                                 Denne teksten er alltid synlig.
                             </p>
                         </div>
@@ -323,10 +321,9 @@
                 <div class="radio-block">
                     <input class="radio-input" type="radio" name="block" id="block-two" value="two">
                     <div class="radio-block__content">
-                        <label class="radio-block__header" for="block-two">Blokk 2</label>
+                        <label class="radio-block__header" for="block-two">Alternativ #2</label>
                         <div class="radio-block__wrapper">
                             <p>
-                                Blokk 2.<br>
                                 Denne teksten er alltid synlig.
                             </p>
                         </div>
@@ -334,13 +331,13 @@
                 </div>
             </fieldset>
         </div>
-        <div class="layout-container layout-container--text-left">
+        <div class="content-container content-container--text-left">
             <div class="collapse-link">Vis kode</div>
             <code class="code-block">
 &lt;div class=&quot;radio-block&quot;&gt;
     &lt;input class=&quot;radio-input&quot; type=&quot;radio&quot; name=&quot;block&quot; id=&quot;block-two&quot; value=&quot;two&quot;&gt;
     &lt;div class=&quot;radio-block__content&quot;&gt;
-        &lt;label class=&quot;radio-block__header&quot; for=&quot;block-two&quot;&gt;Blokk 2&lt;/label&gt;
+        &lt;label class=&quot;radio-block__header&quot; for=&quot;block-two&quot;&gt;Alternativ #2&lt;/label&gt;
         &lt;div class=&quot;radio-block__wrapper&quot;&gt;
             &lt;p&gt;
                 Denne teksten er alltid synlig.
@@ -351,17 +348,18 @@
             </code>
         </div>
 
-        <h4 class="h3">- Kontekst kun synlig for aktivt valg</h4>
+        <h3 class="h3">Kontekst kun synlig for aktivt valg</h3>
 
         <p>
             Når en radio-knapp blir valgt må følgende gjøres i Javascript:
-            <ul>
-                <li>Sett <code class="code-inline">aria-selected="false"</code> på alle andre inputs</li>
-                <li>Sett <code class="code-inline">aria-selected="true"</code> på aktiv input</li>
-                <li>Sett <code class="code-inline">aria-hidden="true"</code> på alle <code class="code-inline">.wrapper</code> elementer som tilhører et inaktivt valg</li>
-                <li>Sett <code class="code-inline">aria-hidden="false"</code> på <code class="code-inline">.wrapper</code> elementet som tilhører aktivt valg</li>
-            </ul>
         </p>
+        <ul class="bullet-list">
+            <li>Sett <code class="code-inline">aria-selected="false"</code> på alle andre inputs</li>
+            <li>Sett <code class="code-inline">aria-selected="true"</code> på aktiv input</li>
+            <li>Sett <code class="code-inline">aria-hidden="true"</code> på alle <code class="code-inline">.wrapper</code> elementer som tilhører et inaktivt valg</li>
+            <li>Sett <code class="code-inline">aria-hidden="false"</code> på <code class="code-inline">.wrapper</code> elementet som tilhører aktivt valg</li>
+        </ul>
+
 
         <div class="input-group" aria-live="polite" role="tablist">
             <label class="form-label" for="tab-set">
@@ -371,7 +369,7 @@
                 <div class="radio-block" role="presentation">
                     <input class="radio-input" type="radio" name="tab" id="tab-one" aria-labelledby="tab-one-label" value="one" tabindex="0" role="tab" aria-controls="content-one" aria-selected="true" checked>
                     <div class="radio-block__content" role="presentation">
-                        <label class="radio-block__header" id="tab-one-label" for="tab-one">Block one</label>
+                        <label class="radio-block__header" id="tab-one-label" for="tab-one">Alternativ #1</label>
                         <div class="radio-block__wrapper" id="content-one" role="tabpanel" aria-labelledby="tab-one-label">
                             <p>
                                 Denne teksten er synlig fordi valget er aktivt.
@@ -382,10 +380,10 @@
                 <div class="radio-block" role="presentation">
                     <input class="radio-input" type="radio" name="tab" id="tab-two" aria-labelledby="tab-two-label" value="two" tabindex="0" role="tab" aria-controls="content-two" aria-selected="false">
                     <div class="radio-block__content" role="presentation">
-                        <label class="radio-block__header" id="tab-two-label" for="tab-two">Block two</label>
+                        <label class="radio-block__header" id="tab-two-label" for="tab-two">Alternativ #2</label>
                         <div class="radio-block__wrapper" id="content-two" role="tabpanel" aria-labelledby="tab-two-label" aria-hidden="true">
                             <p>
-                                Denne teksten er ikke synlig.
+                                Denne teksten er synlig nå!
                             </p>
                         </div>
                     </div>
@@ -406,7 +404,7 @@
             </script>
         </div>
 
-        <div class="layout-container layout-container--text-left">
+        <div class="content-container content-container--text-left">
             <div class="collapse-link">Vis kode</div>
             <code class="code-block">
 &lt;div class=&quot;input-group&quot; aria-live=&quot;polite&quot; role=&quot;tablist&quot;&gt;
@@ -417,7 +415,7 @@
         &lt;div class=&quot;radio-block&quot; role=&quot;presentation&quot;&gt;
             &lt;input class=&quot;radio-input&quot; type=&quot;radio&quot; name=&quot;tab&quot; id=&quot;tab-one&quot; aria-labelledby=&quot;tab-one-label&quot; value=&quot;one&quot; tabindex=&quot;0&quot; role=&quot;tab&quot; aria-controls=&quot;content-one&quot; aria-selected=&quot;true&quot; checked&gt;
             &lt;div class=&quot;radio-block__content&quot; role=&quot;presentation&quot;&gt;
-                &lt;label class=&quot;radio-block__header&quot; id=&quot;tab-one-label&quot; for=&quot;tab-one&quot;&gt;Block one&lt;/label&gt;
+                &lt;label class=&quot;radio-block__header&quot; id=&quot;tab-one-label&quot; for=&quot;tab-one&quot;&gt;Alternativ #1&lt;/label&gt;
                 &lt;div class=&quot;radio-block__wrapper&quot; id=&quot;content-one&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;tab-one-label&quot;&gt;
                     &lt;p&gt;
                         Denne teksten er synlig fordi valget er aktivt.
@@ -428,10 +426,10 @@
         &lt;div class=&quot;radio-block&quot; role=&quot;presentation&quot;&gt;
             &lt;input class=&quot;radio-input&quot; type=&quot;radio&quot; name=&quot;tab&quot; id=&quot;tab-two&quot; aria-labelledby=&quot;tab-two-label&quot; value=&quot;two&quot; tabindex=&quot;0&quot; role=&quot;tab&quot; aria-controls=&quot;content-two&quot; aria-selected=&quot;false&quot;&gt;
             &lt;div class=&quot;radio-block__content&quot; role=&quot;presentation&quot;&gt;
-                &lt;label class=&quot;radio-block__header&quot; id=&quot;tab-two-label&quot; for=&quot;tab-two&quot;&gt;Block two&lt;/label&gt;
+                &lt;label class=&quot;radio-block__header&quot; id=&quot;tab-two-label&quot; for=&quot;tab-two&quot;&gt;Alternativ #2&lt;/label&gt;
                 &lt;div class=&quot;radio-block__wrapper&quot; id=&quot;content-two&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;tab-two-label&quot; aria-hidden=&quot;true&quot;&gt;
                     &lt;p&gt;
-                        Denne teksten er ikke synlig.
+                        Denne teksten er synlig nå!
                     &lt;/p&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
@@ -444,11 +442,9 @@
 
     </div>
 
-    <div class="layout-container">
+    <div class="content-container content-container--text-left">
         <h2>Skjemavalidering</h2>
-    </div>
 
-    <div class="layout-container layout-container--text-left">
         <h3>Oppsummering av feil i skjema</h3>
         <p class="body-paragraph">
             Det skal plasseres en oppsummering av skjemafeil over skjemaet. Det skal også scrolles
@@ -471,7 +467,7 @@
         </div>
     </div>
 
-    <div class="layout-container layout-container--text-left">
+    <div class="content-container content-container--text-left">
         <div class="collapse-link">Vis kode</div>
         <code class="code-block">
 &lt;div class=&quot;error-summary&quot; aria-hidden=&quot;false&quot; role=&quot;alert&quot; aria-live=&quot;assertive&quot;&gt;
@@ -487,7 +483,7 @@
         </code>
     </div>
 
-    <div class="layout-container layout-container--text-left">
+    <div class="content-container content-container--text-left">
         <h3>Feilmeldinger på skjemaelementene</h3>
         <p class="body-paragraph">
             Alle skjemaelementer må wrappes i en 'input-group' med <code class="code-inline">aria-live="polite"</code> slik at skjermlesere plukker det opp og varsler brukeren når det vises en feilmelding.
@@ -540,7 +536,7 @@
         </div>
 
     </div>
-    <div class="layout-container layout-container--text-left">
+    <div class="content-container content-container--text-left">
         <div class="collapse-link">Vis kode</div>
         <code class="code-block">
 &lt;div class=&quot;input-group&quot; aria-live=&quot;polite&quot;&gt;
@@ -557,12 +553,12 @@
         </code>
     </div>
 
-    <div class="layout-container layout-container--text-left">
+    <div class="content-container content-container--text-left">
         <h2>Generelle komponenter</h2>
         <p>Praktiske elementer å bruke forskjellige steder i en applikasjon</p>
     </div>
 
-    <div class="layout-container layout-container--text-left">
+    <div class="content-container content-container--text-left">
         <h3>Loading spinner</h3>
         <p>
             Spinneren er kun en klasse som ikke inneholder noen posisjoneringskode; dette gir mye fleksibilitet.
@@ -574,13 +570,13 @@
         </p>
         <div class="small-text">LOADING SPINNER -LARGE (centered layout not included)</div>
     </div>
-    <div class="layout-container">
+    <div class="content-container">
         <div class="loading-spinner loading-spinner--large"></div>
         <p>
             Loading...
         </p>
     </div>
-    <div class="layout-container layout-container--text-left">
+    <div class="content-container content-container--text-left">
         <div class="collapse-link">Vis kode</div>
         <code class="code-block">
 &lt;div class=&quot;loading-spinner loading-spinner--large&quot;&gt;&lt;/div&gt;
@@ -588,6 +584,13 @@
     </div>
 
     <script src="examples.js"></script>
-
+</main>
+<footer class="section-wrapper">
+    <hr>
+    <div class="content-container">
+        <a href="#">© SpareBank 1</a>
+    </div>
+</footer>
+<script src="examples.js"></script>
 </body>
 </html>
