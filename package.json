@@ -11,8 +11,8 @@
     "type": "git",
     "url": "***REMOVED***"
   },
-  "publishConfig" : {
-    "registry" : "***REMOVED***"
+  "publishConfig": {
+    "registry": "***REMOVED***"
   },
   "keywords": [
     "frontend",
