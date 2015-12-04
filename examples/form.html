@@ -13,938 +13,1000 @@
 </head>
 <body>
 
-    <div class="sidebar-open">
-		<button class="sidebar-open__button secondary-button"></button>
-	</div>
+<div class="sidebar-open">
+    <button class="sidebar-open__button secondary-button"></button>
+</div>
 
-    <aside class="sidebar">
+<nav class="sidebar">
 
-        <button class="sidebar__close-btn"></button>
+    <button class="sidebar__close-btn"></button>
 
-        <h2 class="h4">Innhold</h2>
+    <h2 class="h4">Innhold</h2>
 
-        <ul class="navigation-list">
-            <li class="navigation-list__link"><a href="index.html">Hjem</a></li>
-            <li class="navigation-list__link"><a href="typo.html">Typografi</a></li>
-            <li class="navigation-list__link"><a href="colors.html">Farger</a></li>
-            <li class="navigation-list__link navigation-list__link--active"><a href="form.html">Skjema</a></li>
-            <li class="navigation-list__link"><a href="buttons.html">Knapper</a></li>
-        </ul>
-    </aside>
-<main class="section-wrapper">
-    <div class="content-container content-container--text-left">
-        <!-- aria-hidden="true" kan brukes for å skjule feilmeldinger som ikke skal vises -->
-        <div class="error-summary" aria-hidden="true" role="alert" aria-live="assertive">
-            <span class="icon icon-info-error"></span>
-            <span class="title">Du må rette opp disse feilene i skjemaet</span>
-            <ul class="summary-list">
-                <li>Vennligst fyll inn "Fødselsnummer"</li>
-            </ul>
-        </div>
-    </div>
+    <ul class="navigation-list">
+        <li class="navigation-list__link"><a href="index.html">Hjem</a></li>
+        <li class="navigation-list__link"><a href="typo.html">Typografi</a></li>
+        <li class="navigation-list__link"><a href="colors.html">Farger</a></li>
+        <li class="navigation-list__link navigation-list__link--active"><a href="form.html">Skjema</a></li>
+        <li class="navigation-list__link"><a href="buttons.html">Knapper</a></li>
+        <li class="navigation-list__link"><a href="layout.html">Layout</a></li>
+        <li class="navigation-list__link"><a href="containers.html">Containers</a></li>
+    </ul>
+</nav>
 
-    <div class="content-container content-container--text-left">
-        <h2 class="h2">Input-felt</h2>
-        <p>Har tre størrelsesvarianter: -small, -medium og -large</p>
-        <div class="input-group" aria-live="polite">
-            <label id="ssn-label" class="form-label" for="ssn">
-                Norsk fødselsnummer
-            </label>
-            <input  id="ssn"
-                    class="input-field input-field--medium"
-                    name="ssn"
-                    type="text"
-                    maxlength="11"
-                    autocomplete="off">
-            <strong>(11 siffer)</strong>
+<main class="styleguide-wrapper">
+    <section class="section-wrapper">
+        <div class="content-container content-container--text-left">
             <!-- aria-hidden="true" kan brukes for å skjule feilmeldinger som ikke skal vises -->
-            <div class="info-message info-message--error" aria-hidden="true">Vennligst fyll inn "Fødselsnummer"</div>
-        </div>
-    </div>
-
-	    <div class="content-container content-container--text-left">
-
-			<div class="tabbed-panel">
-				<ul class="tabbed-panel__tablist">
-					<li class="tabbed-panel__tab tabbed-panel__tab--active">
-						<a class="tabbed-panel__tablink" href="#" rel="1">Teknisk</a>
-					</li>
-					<li class="tabbed-panel__tab">
-						<a class="tabbed-panel__tablink" href="#" rel="2">Design</a>
-					</li>
-				</ul>
-				<div class="tabbed-panel__display-frame">
-					<div class="tabbed-panel__content-pane tabbed-panel__content-pane--active" rel="1">
-						<h5>Eksempelkode</h5>
-						<pre><code class="html">&lt;div&nbsp;class=&quot;input-group&quot;&nbsp;aria-live=&quot;polite&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;id=&quot;ssn-label&quot;&nbsp;class=&quot;form-label&quot;&nbsp;for=&quot;ssn&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Norsk&nbsp;f&oslash;dselsnummer
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;&nbsp;id=&quot;ssn&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;class=&quot;input-field&nbsp;input-field--medium&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name=&quot;ssn&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type=&quot;text&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maxlength=&quot;11&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;autocomplete=&quot;off&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;strong&gt;(11&nbsp;siffer)&lt;/strong&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;aria-hidden=&quot;true&quot;&nbsp;kan&nbsp;brukes&nbsp;for&nbsp;&aring;&nbsp;skjule&nbsp;feilmeldinger&nbsp;som&nbsp;ikke&nbsp;skal&nbsp;vises&nbsp;--&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;info-message&nbsp;info-message--error&quot;&nbsp;aria-hidden=&quot;true&quot;&gt;Vennligst&nbsp;fyll&nbsp;inn&nbsp;&quot;F&oslash;dselsnummer&quot;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-					</div>
-					<div class="tabbed-panel__content-pane" rel="2">
-						World
-					</div>
-				</div>
-			</div>
-
-    <div class="content-container"><hr></div>
-
-    <div class="content-container content-container--text-left">
-        <h2 class="h2">Select box</h2>
-        <div class="input-group" aria-live="polite">
-            <label id="month-label" class="form-label" for="month">
-                Velg måned
-            </label>
-            <select class="select-box" id="month" >
-                <option value="0">Januar</option>
-                <option value="1">Februar</option>
-                <option value="2">Mars</option>
-                <option value="3">April</option>
-            </select>
+            <div class="error-summary" aria-hidden="true" role="alert" aria-live="assertive">
+                <span class="icon icon-info-error"></span>
+                <span class="title">Du må rette opp disse feilene i skjemaet</span>
+                <ul class="summary-list">
+                    <li>Vennligst fyll inn "Fødselsnummer"</li>
+                </ul>
+            </div>
         </div>
 
+        <div class="content-container content-container--text-left">
+            <h2 class="h2">Input-felt</h2>
 
-	    </div>
-	    <div class="content-container content-container--text-left">
-	        <div class="tabbed-panel">
-				<ul class="tabbed-panel__tablist">
-					<li class="tabbed-panel__tab tabbed-panel__tab--active">
-						<a class="tabbed-panel__tablink" href="#" rel="1">Teknisk</a>
-					</li>
-					<li class="tabbed-panel__tab">
-						<a class="tabbed-panel__tablink" href="#" rel="2">Design</a>
-					</li>
-				</ul>
-				<div class="tabbed-panel__display-frame">
-					<div class="tabbed-panel__content-pane tabbed-panel__content-pane--active" rel="1">
-						<h5>Eksempelkode</h5>
-						<pre><code class="html">&lt;div&nbsp;class=&quot;input-group&quot;&nbsp;aria-live=&quot;polite&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;id=&quot;month-label&quot;&nbsp;class=&quot;form-label&quot;&nbsp;for=&quot;month&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Velg&nbsp;m&aring;ned
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;select&nbsp;class=&quot;select-box&quot;&nbsp;id=&quot;month&quot;&nbsp;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&nbsp;value=&quot;0&quot;&gt;Januar&lt;/option&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&nbsp;value=&quot;1&quot;&gt;Februar&lt;/option&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&nbsp;value=&quot;2&quot;&gt;Mars&lt;/option&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&nbsp;value=&quot;3&quot;&gt;April&lt;/option&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/select&gt;
-&lt;/div&gt;</code></pre>
-					</div>
-					<div class="tabbed-panel__content-pane" rel="2">
-						World
-					</div>
-				</div>
-			</div>
-	    </div>
+            <p>Har tre størrelsesvarianter: -small, -medium og -large</p>
 
-    <div class="content-container content-container--text-left">
-        <h2 class="h2">Check box</h2>
-        <p>Brukes når det er flere mulige valg. Har en standard og en inline variant.</p>
-        <div class="input-group" aria-live="polite">
-            <label id="checkbox-ibf-label" class="form-label" for="checkbox-ibf1">
-                What colors do you like on unicorns?
-            </label>
-            <fieldset id="checkbox-ibf1">
-                <input  class="hidden-checkbox"
-                        type="checkbox"
-                        name="unicorncolors"
-                        value="yellow"
-                        id="unicorncolors-1"
-                        checked>
-                <label class="check-box" for="unicorncolors-1">Yellow</label>
-                <input  class="hidden-checkbox"
-                        type="checkbox"
-                        name="unicorncolors"
-                        value="purple"
-                        id="unicorncolors-2">
-                <label class="check-box" for="unicorncolors-2">Purple</label>
-                <input  class="hidden-checkbox"
-                        type="checkbox"
-                        name="unicorncolors"
-                        value="white"
-                        id="unicorncolors-3">
-                <label class="check-box" for="unicorncolors-3">White</label>
-            </fieldset>
+            <div class="input-group" aria-live="polite">
+                <label id="ssn-label" class="form-label" for="ssn">
+                    Norsk fødselsnummer
+                </label>
+                <input id="ssn"
+                       class="input-field input-field--medium"
+                       name="ssn"
+                       type="text"
+                       maxlength="11"
+                       autocomplete="off">
+                <strong>(11 siffer)</strong>
+                <!-- aria-hidden="true" kan brukes for å skjule feilmeldinger som ikke skal vises -->
+                <div class="info-message info-message--error" aria-hidden="true">Vennligst fyll inn "Fødselsnummer"</div>
+            </div>
         </div>
 
-	        <div class="input-group" aria-live="polite">
-	            <label id="checkbox-inline-ibf-label" class="form-label" for="checkbox-inline-ibf1">
-	                Favorite unicorn foods?
-	            </label>
-	            <fieldset id="checkbox-inline-ibf1">
-	                <input  class="hidden-checkbox"
-	                        type="checkbox"
-	                        name="unicornfood"
-	                        value="apples"
-	                        id="unicornfood-1"
-	                        checked>
-	                <label class="check-box check-box--inline" for="unicornfood-1">Apples</label>
-	                <input  class="hidden-checkbox"
-	                        type="checkbox"
-	                        name="unicornfood"
-	                        value="banans"
-	                        id="unicornfood-2">
-	                <label class="check-box check-box--inline" for="unicornfood-2">Bananas</label>
-	                <input  class="hidden-checkbox"
-	                        type="checkbox"
-	                        name="unicornfood"
-	                        value="oatmeal"
-	                        id="unicornfood-3">
-	                <label class="check-box check-box--inline" for="unicornfood-3">Oatmeal</label>
-	            </fieldset>
-	        </div>
+        <div class="content-container content-container--text-left">
 
-	    </div>
-	    <div class="content-container content-container--text-left">
-	        <div class="tabbed-panel">
-				<ul class="tabbed-panel__tablist">
-					<li class="tabbed-panel__tab tabbed-panel__tab--active">
-						<a class="tabbed-panel__tablink" href="#" rel="1">Teknisk</a>
-					</li>
-					<li class="tabbed-panel__tab">
-						<a class="tabbed-panel__tablink" href="#" rel="2">Design</a>
-					</li>
-				</ul>
-				<div class="tabbed-panel__display-frame">
-					<div class="tabbed-panel__content-pane tabbed-panel__content-pane--active" rel="1">
-						<h5>Eksempelkode</h5>
-						<pre><code class="html">&lt;div&nbsp;class=&quot;input-group&quot;&nbsp;aria-live=&quot;polite&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;id=&quot;checkbox-ibf-label&quot;&nbsp;class=&quot;form-label&quot;&nbsp;for=&quot;checkbox-ibf1&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;What&nbsp;colors&nbsp;do&nbsp;you&nbsp;like&nbsp;on&nbsp;unicorns?
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;fieldset&nbsp;id=&quot;checkbox-ibf1&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;&nbsp;class=&quot;hidden-checkbox&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type=&quot;checkbox&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name=&quot;unicorncolors&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value=&quot;yellow&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id=&quot;unicorncolors-1&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;checked&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;check-box&quot;&nbsp;for=&quot;unicorncolors-1&quot;&gt;Yellow&lt;/label&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;&nbsp;class=&quot;hidden-checkbox&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type=&quot;checkbox&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name=&quot;unicorncolors&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value=&quot;purple&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id=&quot;unicorncolors-2&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;check-box&quot;&nbsp;for=&quot;unicorncolors-2&quot;&gt;Purple&lt;/label&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;&nbsp;class=&quot;hidden-checkbox&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type=&quot;checkbox&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name=&quot;unicorncolors&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value=&quot;white&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id=&quot;unicorncolors-3&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;check-box&quot;&nbsp;for=&quot;unicorncolors-3&quot;&gt;White&lt;/label&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/fieldset&gt;
-&lt;/div&gt;
+            <div class="tabbed-panel">
+                <ul class="tabbed-panel__tablist">
+                    <li class="tabbed-panel__tab tabbed-panel__tab--active">
+                        <a class="tabbed-panel__tablink" href="#" rel="1">Teknisk</a>
+                    </li>
+                    <li class="tabbed-panel__tab">
+                        <a class="tabbed-panel__tablink" href="#" rel="2">Design</a>
+                    </li>
+                </ul>
+                <div class="tabbed-panel__display-frame">
+                    <div class="tabbed-panel__content-pane tabbed-panel__content-pane--active" rel="1">
+                        <h5>Eksempelkode</h5>
+                            <pre><code class="html">&lt;div&nbsp;class=&quot;input-group&quot;&nbsp;aria-live=&quot;polite&quot;&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;id=&quot;ssn-label&quot;&nbsp;class=&quot;form-label&quot;&nbsp;for=&quot;ssn&quot;&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Norsk&nbsp;f&oslash;dselsnummer
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;&nbsp;id=&quot;ssn&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;class=&quot;input-field&nbsp;input-field--medium&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name=&quot;ssn&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type=&quot;text&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maxlength=&quot;11&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;autocomplete=&quot;off&quot;&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;strong&gt;(11&nbsp;siffer)&lt;/strong&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;aria-hidden=&quot;true&quot;&nbsp;kan&nbsp;brukes&nbsp;for&nbsp;&aring;&nbsp;skjule&nbsp;feilmeldinger&nbsp;som&nbsp;ikke&nbsp;skal&nbsp;vises&nbsp;--&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;info-message&nbsp;info-message--error&quot;&nbsp;aria-hidden=&quot;true&quot;&gt;Vennligst&nbsp;fyll&nbsp;inn&nbsp;&quot;F&oslash;dselsnummer&quot;&lt;/div&gt;
+                                &lt;/div&gt;</code></pre>
+                    </div>
+                    <div class="tabbed-panel__content-pane" rel="2">
+                        World
+                    </div>
+                </div>
+            </div>
 
-&lt;div&nbsp;class=&quot;input-group&quot;&nbsp;aria-live=&quot;polite&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;id=&quot;checkbox-inline-ibf-label&quot;&nbsp;class=&quot;form-label&quot;&nbsp;for=&quot;checkbox-inline-ibf1&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Favorite&nbsp;unicorn&nbsp;foods?
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;fieldset&nbsp;id=&quot;checkbox-inline-ibf1&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;&nbsp;class=&quot;hidden-checkbox&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type=&quot;checkbox&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name=&quot;unicornfood&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value=&quot;apples&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id=&quot;unicornfood-1&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;checked&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;check-box&nbsp;check-box--inline&quot;&nbsp;for=&quot;unicornfood-1&quot;&gt;Apples&lt;/label&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;&nbsp;class=&quot;hidden-checkbox&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type=&quot;checkbox&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name=&quot;unicornfood&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value=&quot;banans&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id=&quot;unicornfood-2&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;check-box&nbsp;check-box--inline&quot;&nbsp;for=&quot;unicornfood-2&quot;&gt;Bananas&lt;/label&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;&nbsp;class=&quot;hidden-checkbox&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type=&quot;checkbox&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name=&quot;unicornfood&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value=&quot;oatmeal&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id=&quot;unicornfood-3&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;check-box&nbsp;check-box--inline&quot;&nbsp;for=&quot;unicornfood-3&quot;&gt;Oatmeal&lt;/label&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/fieldset&gt;
-&lt;/div&gt;</code></pre>
-					</div>
-					<div class="tabbed-panel__content-pane" rel="2">
-						World
-					</div>
-				</div>
-			</div>
-	    </div>
+            <div class="content-container">
+                <hr>
+            </div>
 
-    <div class="content-container content-container--text-left">
-        <h2 class="h2">Radio button</h2>
-        <p>En standard type radio-knapp. Har en standard og en -inline variant.</p>
-        <div class="input-group" aria-live="polite">
-            <label id="radio-ibf-label" class="form-label" for="radio-ibf1">
-                Which unicorn do you like most?
-            </label>
-            <fieldset id="radio-ibf1">
-                <input  class="radio-input"
-                        type="radio"
-                        name="unicorns"
-                        value="applejack"
-                        id="unicorns-1"
-                        checked>
-                <label class="radio-button" for="unicorns-1">Applejack</label>
-                <input  class="radio-input"
-                        type="radio"
-                        name="unicorns"
-                        value="starlet"
-                        id="unicorns-2">
-                <label class="radio-button" for="unicorns-2">Starlet</label>
-                <input  class="radio-input"
-                        type="radio"
-                        name="unicorns"
-                        value="trixie"
-                        id="unicorns-3">
-                <label class="radio-button" for="unicorns-3">Trixie</label>
-            </fieldset>
-        </div>
+            <div class="content-container content-container--text-left">
+                <h2 class="h2">Select box</h2>
 
-	        <div class="input-group" aria-live="polite">
-	            <label id="radio-inline-ibf-label" class="form-label" for="radio-inline-ibf1">
-	                Are there unicorns with wings?
-	            </label>
-	            <fieldset id="radio-inline-ibf1">
-	                <input  class="radio-input"
-	                        type="radio"
-	                        name="unicornwings"
-	                        value="yes"
-	                        id="unicornwings-1"
-	                        checked>
-	                <label class="radio-button radio-button--inline" for="unicornwings-1">Yes</label>
-	                <input  class="radio-input"
-	                        type="radio"
-	                        name="unicornwings"
-	                        value="no"
-	                        id="unicornwings-2">
-	                <label class="radio-button radio-button--inline" for="unicornwings-2">No</label>
-	                <input  class="radio-input"
-	                        type="radio"
-	                        name="unicornwings"
-	                        value="dunno"
-	                        id="unicornwings-3">
-	                <label class="radio-button radio-button--inline" for="unicornwings-3">I do not know!</label>
-	            </fieldset>
-	        </div>
+                <div class="input-group" aria-live="polite">
+                    <label id="month-label" class="form-label" for="month">
+                        Velg måned
+                    </label>
+                    <select class="select-box" id="month">
+                        <option value="0">Januar</option>
+                        <option value="1">Februar</option>
+                        <option value="2">Mars</option>
+                        <option value="3">April</option>
+                    </select>
+                </div>
 
-	    </div>
-	    <div class="content-container content-container--text-left">
-	        <div class="tabbed-panel">
-				<ul class="tabbed-panel__tablist">
-					<li class="tabbed-panel__tab tabbed-panel__tab--active">
-						<a class="tabbed-panel__tablink" href="#" rel="1">Teknisk</a>
-					</li>
-					<li class="tabbed-panel__tab">
-						<a class="tabbed-panel__tablink" href="#" rel="2">Design</a>
-					</li>
-				</ul>
-				<div class="tabbed-panel__display-frame">
-					<div class="tabbed-panel__content-pane tabbed-panel__content-pane--active" rel="1">
-						<h5>Eksempelkode</h5>
-						<pre><code class="html">&lt;div&nbsp;class=&quot;input-group&quot;&nbsp;aria-live=&quot;polite&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;id=&quot;radio-ibf-label&quot;&nbsp;class=&quot;form-label&quot;&nbsp;for=&quot;radio-ibf1&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Which&nbsp;unicorn&nbsp;do&nbsp;you&nbsp;like&nbsp;most?
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;fieldset&nbsp;id=&quot;radio-ibf1&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;&nbsp;class=&quot;radio-input&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type=&quot;radio&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name=&quot;unicorns&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value=&quot;applejack&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id=&quot;unicorns-1&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;checked&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;radio-button&quot;&nbsp;for=&quot;unicorns-1&quot;&gt;Applejack&lt;/label&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;&nbsp;class=&quot;radio-input&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type=&quot;radio&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name=&quot;unicorns&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value=&quot;starlet&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id=&quot;unicorns-2&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;radio-button&quot;&nbsp;for=&quot;unicorns-2&quot;&gt;Starlet&lt;/label&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;&nbsp;class=&quot;radio-input&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type=&quot;radio&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name=&quot;unicorns&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value=&quot;trixie&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id=&quot;unicorns-3&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;radio-button&quot;&nbsp;for=&quot;unicorns-3&quot;&gt;Trixie&lt;/label&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/fieldset&gt;
-&lt;/div&gt;
 
-&lt;div&nbsp;class=&quot;input-group&quot;&nbsp;aria-live=&quot;polite&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;id=&quot;radio-inline-ibf-label&quot;&nbsp;class=&quot;form-label&quot;&nbsp;for=&quot;radio-inline-ibf1&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Are&nbsp;there&nbsp;unicorns&nbsp;with&nbsp;wings?
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;fieldset&nbsp;id=&quot;radio-inline-ibf1&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;&nbsp;class=&quot;radio-input&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type=&quot;radio&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name=&quot;unicornwings&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value=&quot;yes&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id=&quot;unicornwings-1&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;checked&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;radio-button&nbsp;radio-button--inline&quot;&nbsp;for=&quot;unicornwings-1&quot;&gt;Yes&lt;/label&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;&nbsp;class=&quot;radio-input&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type=&quot;radio&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name=&quot;unicornwings&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value=&quot;no&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id=&quot;unicornwings-2&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;radio-button&nbsp;radio-button--inline&quot;&nbsp;for=&quot;unicornwings-2&quot;&gt;No&lt;/label&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;&nbsp;class=&quot;radio-input&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type=&quot;radio&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name=&quot;unicornwings&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value=&quot;dunno&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id=&quot;unicornwings-3&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;radio-button&nbsp;radio-button--inline&quot;&nbsp;for=&quot;unicornwings-3&quot;&gt;I&nbsp;do&nbsp;not&nbsp;know!&lt;/label&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/fieldset&gt;
-&lt;/div&gt;
-</code></pre>
-					</div>
-					<div class="tabbed-panel__content-pane" rel="2">
-						World
-					</div>
-				</div>
-			</div>
-	    </div>
+            </div>
+            <div class="content-container content-container--text-left">
+                <div class="tabbed-panel">
+                    <ul class="tabbed-panel__tablist">
+                        <li class="tabbed-panel__tab tabbed-panel__tab--active">
+                            <a class="tabbed-panel__tablink" href="#" rel="1">Teknisk</a>
+                        </li>
+                        <li class="tabbed-panel__tab">
+                            <a class="tabbed-panel__tablink" href="#" rel="2">Design</a>
+                        </li>
+                    </ul>
+                    <div class="tabbed-panel__display-frame">
+                        <div class="tabbed-panel__content-pane tabbed-panel__content-pane--active" rel="1">
+                            <h5>Eksempelkode</h5>
+                            <pre><code class="html">&lt;div&nbsp;class=&quot;input-group&quot;&nbsp;aria-live=&quot;polite&quot;&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;id=&quot;month-label&quot;&nbsp;class=&quot;form-label&quot;&nbsp;for=&quot;month&quot;&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Velg&nbsp;m&aring;ned
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;select&nbsp;class=&quot;select-box&quot;&nbsp;id=&quot;month&quot;&nbsp;&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&nbsp;value=&quot;0&quot;&gt;Januar&lt;/option&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&nbsp;value=&quot;1&quot;&gt;Februar&lt;/option&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&nbsp;value=&quot;2&quot;&gt;Mars&lt;/option&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&nbsp;value=&quot;3&quot;&gt;April&lt;/option&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/select&gt;
+                                &lt;/div&gt;</code></pre>
+                        </div>
+                        <div class="tabbed-panel__content-pane" rel="2">
+                            World
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    <div class="content-container content-container--text-left">
-        <h2 class="h2">Radio switch</h2>
-        <p>Brukes der det kun er to motstridende valg.</p>
-        <div class="input-group" aria-live="polite">
-            <label id="switch-ibf-label" class="form-label" for="switch-ibf1">
-                Do you like unicorns at all?
-            </label>
-            <fieldset id="switch-ibf1">
-                <input  class="radio-input"
-                        type="radio"
-                        name="unicornslike"
-                        value="yes"
-                        id="unicornslike-1"
-                        checked>
-                <label class="radio-switch" for="unicornslike-1">Ja</label>
+            <div class="content-container content-container--text-left">
+                <h2 class="h2">Check box</h2>
 
-	                <input  class="radio-input"
-	                        type="radio"
-	                        name="unicornslike"
-	                        value="no"
-	                        id="unicornslike-2">
-	                <label class="radio-switch" for="unicornslike-2">Nei</label>
-	            </fieldset>
-	        </div>
+                <p>Brukes når det er flere mulige valg. Har en standard og en inline variant.</p>
 
-	    </div>
-	    <div class="content-container content-container--text-left">
-	        <div class="tabbed-panel">
-				<ul class="tabbed-panel__tablist">
-					<li class="tabbed-panel__tab tabbed-panel__tab--active">
-						<a class="tabbed-panel__tablink" href="#" rel="1">Teknisk</a>
-					</li>
-					<li class="tabbed-panel__tab">
-						<a class="tabbed-panel__tablink" href="#" rel="2">Design</a>
-					</li>
-				</ul>
-				<div class="tabbed-panel__display-frame">
-					<div class="tabbed-panel__content-pane tabbed-panel__content-pane--active" rel="1">
-						<h5>Eksempelkode</h5>
-						<pre><code class="html">&lt;div&nbsp;class=&quot;input-group&quot;&nbsp;aria-live=&quot;polite&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;id=&quot;switch-ibf-label&quot;&nbsp;class=&quot;form-label&quot;&nbsp;for=&quot;switch-ibf1&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do&nbsp;you&nbsp;like&nbsp;unicorns&nbsp;at&nbsp;all?
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;fieldset&nbsp;id=&quot;switch-ibf1&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;&nbsp;class=&quot;radio-input&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type=&quot;radio&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name=&quot;unicornslike&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value=&quot;yes&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id=&quot;unicornslike-1&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;checked&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;radio-switch&quot;&nbsp;for=&quot;unicornslike-1&quot;&gt;Ja&lt;/label&gt;
+                <div class="input-group" aria-live="polite">
+                    <label id="checkbox-ibf-label" class="form-label" for="checkbox-ibf1">
+                        What colors do you like on unicorns?
+                    </label>
+                    <fieldset id="checkbox-ibf1">
+                        <input class="hidden-checkbox"
+                               type="checkbox"
+                               name="unicorncolors"
+                               value="yellow"
+                               id="unicorncolors-1"
+                               checked>
+                        <label class="check-box" for="unicorncolors-1">Yellow</label>
+                        <input class="hidden-checkbox"
+                               type="checkbox"
+                               name="unicorncolors"
+                               value="purple"
+                               id="unicorncolors-2">
+                        <label class="check-box" for="unicorncolors-2">Purple</label>
+                        <input class="hidden-checkbox"
+                               type="checkbox"
+                               name="unicorncolors"
+                               value="white"
+                               id="unicorncolors-3">
+                        <label class="check-box" for="unicorncolors-3">White</label>
+                    </fieldset>
+                </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;&nbsp;class=&quot;radio-input&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type=&quot;radio&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name=&quot;unicornslike&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value=&quot;no&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id=&quot;unicornslike-2&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;radio-switch&quot;&nbsp;for=&quot;unicornslike-2&quot;&gt;Nei&lt;/label&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/fieldset&gt;
-&lt;/div&gt;</code></pre>
-					</div>
-					<div class="tabbed-panel__content-pane" rel="2">
-						World
-					</div>
-				</div>
-			</div>
-	    </div>
+                <div class="input-group" aria-live="polite">
+                    <label id="checkbox-inline-ibf-label" class="form-label" for="checkbox-inline-ibf1">
+                        Favorite unicorn foods?
+                    </label>
+                    <fieldset id="checkbox-inline-ibf1">
+                        <input class="hidden-checkbox"
+                               type="checkbox"
+                               name="unicornfood"
+                               value="apples"
+                               id="unicornfood-1"
+                               checked>
+                        <label class="check-box check-box--inline" for="unicornfood-1">Apples</label>
+                        <input class="hidden-checkbox"
+                               type="checkbox"
+                               name="unicornfood"
+                               value="banans"
+                               id="unicornfood-2">
+                        <label class="check-box check-box--inline" for="unicornfood-2">Bananas</label>
+                        <input class="hidden-checkbox"
+                               type="checkbox"
+                               name="unicornfood"
+                               value="oatmeal"
+                               id="unicornfood-3">
+                        <label class="check-box check-box--inline" for="unicornfood-3">Oatmeal</label>
+                    </fieldset>
+                </div>
 
-    <div class="content-container content-container--text-left">
-        <h2 class="h2">Radio block</h2>
-        <p>
-            Radio blocks brukes når det er viktig å presentere kontekstuelt relevant informasjon om valgene til brukeren uten å overvelde.
-        </p>
-        <p>
-            De kan brukes både som vanlige radio-knapper med synlig kontekst eller som en liten "meny" der kontekst bare er synlig for det til en hver tid aktive valget
-        </p>
+            </div>
+            <div class="content-container content-container--text-left">
+                <div class="tabbed-panel">
+                    <ul class="tabbed-panel__tablist">
+                        <li class="tabbed-panel__tab tabbed-panel__tab--active">
+                            <a class="tabbed-panel__tablink" href="#" rel="1">Teknisk</a>
+                        </li>
+                        <li class="tabbed-panel__tab">
+                            <a class="tabbed-panel__tablink" href="#" rel="2">Design</a>
+                        </li>
+                    </ul>
+                    <div class="tabbed-panel__display-frame">
+                        <div class="tabbed-panel__content-pane tabbed-panel__content-pane--active" rel="1">
+                            <h5>Eksempelkode</h5>
+                            <pre><code class="html">&lt;div&nbsp;class=&quot;input-group&quot;&nbsp;aria-live=&quot;polite&quot;&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;id=&quot;checkbox-ibf-label&quot;&nbsp;class=&quot;form-label&quot;&nbsp;for=&quot;checkbox-ibf1&quot;&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;What&nbsp;colors&nbsp;do&nbsp;you&nbsp;like&nbsp;on&nbsp;unicorns?
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;fieldset&nbsp;id=&quot;checkbox-ibf1&quot;&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;&nbsp;class=&quot;hidden-checkbox&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type=&quot;checkbox&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name=&quot;unicorncolors&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value=&quot;yellow&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id=&quot;unicorncolors-1&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;checked&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;check-box&quot;&nbsp;for=&quot;unicorncolors-1&quot;&gt;Yellow&lt;/label&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;&nbsp;class=&quot;hidden-checkbox&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type=&quot;checkbox&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name=&quot;unicorncolors&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value=&quot;purple&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id=&quot;unicorncolors-2&quot;&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;check-box&quot;&nbsp;for=&quot;unicorncolors-2&quot;&gt;Purple&lt;/label&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;&nbsp;class=&quot;hidden-checkbox&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type=&quot;checkbox&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name=&quot;unicorncolors&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value=&quot;white&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id=&quot;unicorncolors-3&quot;&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;check-box&quot;&nbsp;for=&quot;unicorncolors-3&quot;&gt;White&lt;/label&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/fieldset&gt;
+                                &lt;/div&gt;
 
-        <h3 class="h3">Alltid synlig kontekst</h3>
-        <div class="input-group" aria-live="polite">
-            <label class="form-label" for="block-ibf1">
-                Hva ønsker du å gjøre?
-            </label>
-            <fieldset id="block-ibf1">
-                <div class="radio-block">
-                    <input class="radio-input" type="radio" name="block" id="block-one" value="one" checked>
-                    <div class="radio-block__content">
-                        <label class="radio-block__header" for="block-one">Alternativ #1</label>
-                        <div class="radio-block__wrapper">
-                            <p>
-                                Denne teksten er alltid synlig.
-                            </p>
+                                &lt;div&nbsp;class=&quot;input-group&quot;&nbsp;aria-live=&quot;polite&quot;&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;id=&quot;checkbox-inline-ibf-label&quot;&nbsp;class=&quot;form-label&quot;&nbsp;for=&quot;checkbox-inline-ibf1&quot;&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Favorite&nbsp;unicorn&nbsp;foods?
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;fieldset&nbsp;id=&quot;checkbox-inline-ibf1&quot;&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;&nbsp;class=&quot;hidden-checkbox&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type=&quot;checkbox&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name=&quot;unicornfood&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value=&quot;apples&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id=&quot;unicornfood-1&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;checked&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;check-box&nbsp;check-box--inline&quot;&nbsp;for=&quot;unicornfood-1&quot;&gt;Apples&lt;/label&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;&nbsp;class=&quot;hidden-checkbox&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type=&quot;checkbox&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name=&quot;unicornfood&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value=&quot;banans&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id=&quot;unicornfood-2&quot;&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;check-box&nbsp;check-box--inline&quot;&nbsp;for=&quot;unicornfood-2&quot;&gt;Bananas&lt;/label&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;&nbsp;class=&quot;hidden-checkbox&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type=&quot;checkbox&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name=&quot;unicornfood&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value=&quot;oatmeal&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id=&quot;unicornfood-3&quot;&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;check-box&nbsp;check-box--inline&quot;&nbsp;for=&quot;unicornfood-3&quot;&gt;Oatmeal&lt;/label&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/fieldset&gt;
+                                &lt;/div&gt;</code></pre>
+                        </div>
+                        <div class="tabbed-panel__content-pane" rel="2">
+                            World
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-container content-container--text-left">
+                <h2 class="h2">Radio button</h2>
+
+                <p>En standard type radio-knapp. Har en standard og en -inline variant.</p>
+
+                <div class="input-group" aria-live="polite">
+                    <label id="radio-ibf-label" class="form-label" for="radio-ibf1">
+                        Which unicorn do you like most?
+                    </label>
+                    <fieldset id="radio-ibf1">
+                        <input class="radio-input"
+                               type="radio"
+                               name="unicorns"
+                               value="applejack"
+                               id="unicorns-1"
+                               checked>
+                        <label class="radio-button" for="unicorns-1">Applejack</label>
+                        <input class="radio-input"
+                               type="radio"
+                               name="unicorns"
+                               value="starlet"
+                               id="unicorns-2">
+                        <label class="radio-button" for="unicorns-2">Starlet</label>
+                        <input class="radio-input"
+                               type="radio"
+                               name="unicorns"
+                               value="trixie"
+                               id="unicorns-3">
+                        <label class="radio-button" for="unicorns-3">Trixie</label>
+                    </fieldset>
+                </div>
+
+                <div class="input-group" aria-live="polite">
+                    <label id="radio-inline-ibf-label" class="form-label" for="radio-inline-ibf1">
+                        Are there unicorns with wings?
+                    </label>
+                    <fieldset id="radio-inline-ibf1">
+                        <input class="radio-input"
+                               type="radio"
+                               name="unicornwings"
+                               value="yes"
+                               id="unicornwings-1"
+                               checked>
+                        <label class="radio-button radio-button--inline" for="unicornwings-1">Yes</label>
+                        <input class="radio-input"
+                               type="radio"
+                               name="unicornwings"
+                               value="no"
+                               id="unicornwings-2">
+                        <label class="radio-button radio-button--inline" for="unicornwings-2">No</label>
+                        <input class="radio-input"
+                               type="radio"
+                               name="unicornwings"
+                               value="dunno"
+                               id="unicornwings-3">
+                        <label class="radio-button radio-button--inline" for="unicornwings-3">I do not know!</label>
+                    </fieldset>
+                </div>
+
+            </div>
+            <div class="content-container content-container--text-left">
+                <div class="tabbed-panel">
+                    <ul class="tabbed-panel__tablist">
+                        <li class="tabbed-panel__tab tabbed-panel__tab--active">
+                            <a class="tabbed-panel__tablink" href="#" rel="1">Teknisk</a>
+                        </li>
+                        <li class="tabbed-panel__tab">
+                            <a class="tabbed-panel__tablink" href="#" rel="2">Design</a>
+                        </li>
+                    </ul>
+                    <div class="tabbed-panel__display-frame">
+                        <div class="tabbed-panel__content-pane tabbed-panel__content-pane--active" rel="1">
+                            <h5>Eksempelkode</h5>
+                            <pre><code class="html">&lt;div&nbsp;class=&quot;input-group&quot;&nbsp;aria-live=&quot;polite&quot;&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;id=&quot;radio-ibf-label&quot;&nbsp;class=&quot;form-label&quot;&nbsp;for=&quot;radio-ibf1&quot;&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Which&nbsp;unicorn&nbsp;do&nbsp;you&nbsp;like&nbsp;most?
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;fieldset&nbsp;id=&quot;radio-ibf1&quot;&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;&nbsp;class=&quot;radio-input&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type=&quot;radio&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name=&quot;unicorns&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value=&quot;applejack&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id=&quot;unicorns-1&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;checked&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;radio-button&quot;&nbsp;for=&quot;unicorns-1&quot;&gt;Applejack&lt;/label&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;&nbsp;class=&quot;radio-input&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type=&quot;radio&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name=&quot;unicorns&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value=&quot;starlet&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id=&quot;unicorns-2&quot;&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;radio-button&quot;&nbsp;for=&quot;unicorns-2&quot;&gt;Starlet&lt;/label&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;&nbsp;class=&quot;radio-input&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type=&quot;radio&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name=&quot;unicorns&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value=&quot;trixie&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id=&quot;unicorns-3&quot;&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;radio-button&quot;&nbsp;for=&quot;unicorns-3&quot;&gt;Trixie&lt;/label&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/fieldset&gt;
+                                &lt;/div&gt;
+
+                                &lt;div&nbsp;class=&quot;input-group&quot;&nbsp;aria-live=&quot;polite&quot;&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;id=&quot;radio-inline-ibf-label&quot;&nbsp;class=&quot;form-label&quot;&nbsp;for=&quot;radio-inline-ibf1&quot;&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Are&nbsp;there&nbsp;unicorns&nbsp;with&nbsp;wings?
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;fieldset&nbsp;id=&quot;radio-inline-ibf1&quot;&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;&nbsp;class=&quot;radio-input&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type=&quot;radio&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name=&quot;unicornwings&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value=&quot;yes&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id=&quot;unicornwings-1&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;checked&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;radio-button&nbsp;radio-button--inline&quot;&nbsp;for=&quot;unicornwings-1&quot;&gt;Yes&lt;/label&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;&nbsp;class=&quot;radio-input&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type=&quot;radio&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name=&quot;unicornwings&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value=&quot;no&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id=&quot;unicornwings-2&quot;&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;radio-button&nbsp;radio-button--inline&quot;&nbsp;for=&quot;unicornwings-2&quot;&gt;No&lt;/label&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;&nbsp;class=&quot;radio-input&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type=&quot;radio&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name=&quot;unicornwings&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value=&quot;dunno&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id=&quot;unicornwings-3&quot;&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;radio-button&nbsp;radio-button--inline&quot;&nbsp;for=&quot;unicornwings-3&quot;&gt;I&nbsp;do&nbsp;not&nbsp;know!&lt;/label&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/fieldset&gt;
+                                &lt;/div&gt;
+                            </code></pre>
+                        </div>
+                        <div class="tabbed-panel__content-pane" rel="2">
+                            World
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-container content-container--text-left">
+                <h2 class="h2">Radio switch</h2>
+
+                <p>Brukes der det kun er to motstridende valg.</p>
+
+                <div class="input-group" aria-live="polite">
+                    <label id="switch-ibf-label" class="form-label" for="switch-ibf1">
+                        Do you like unicorns at all?
+                    </label>
+                    <fieldset id="switch-ibf1">
+                        <input class="radio-input"
+                               type="radio"
+                               name="unicornslike"
+                               value="yes"
+                               id="unicornslike-1"
+                               checked>
+                        <label class="radio-switch" for="unicornslike-1">Ja</label>
+
+                        <input class="radio-input"
+                               type="radio"
+                               name="unicornslike"
+                               value="no"
+                               id="unicornslike-2">
+                        <label class="radio-switch" for="unicornslike-2">Nei</label>
+                    </fieldset>
+                </div>
+
+            </div>
+            <div class="content-container content-container--text-left">
+                <div class="tabbed-panel">
+                    <ul class="tabbed-panel__tablist">
+                        <li class="tabbed-panel__tab tabbed-panel__tab--active">
+                            <a class="tabbed-panel__tablink" href="#" rel="1">Teknisk</a>
+                        </li>
+                        <li class="tabbed-panel__tab">
+                            <a class="tabbed-panel__tablink" href="#" rel="2">Design</a>
+                        </li>
+                    </ul>
+                    <div class="tabbed-panel__display-frame">
+                        <div class="tabbed-panel__content-pane tabbed-panel__content-pane--active" rel="1">
+                            <h5>Eksempelkode</h5>
+                            <pre><code class="html">&lt;div&nbsp;class=&quot;input-group&quot;&nbsp;aria-live=&quot;polite&quot;&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;id=&quot;switch-ibf-label&quot;&nbsp;class=&quot;form-label&quot;&nbsp;for=&quot;switch-ibf1&quot;&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do&nbsp;you&nbsp;like&nbsp;unicorns&nbsp;at&nbsp;all?
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;fieldset&nbsp;id=&quot;switch-ibf1&quot;&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;&nbsp;class=&quot;radio-input&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type=&quot;radio&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name=&quot;unicornslike&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value=&quot;yes&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id=&quot;unicornslike-1&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;checked&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;radio-switch&quot;&nbsp;for=&quot;unicornslike-1&quot;&gt;Ja&lt;/label&gt;
+
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;&nbsp;class=&quot;radio-input&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type=&quot;radio&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name=&quot;unicornslike&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value=&quot;no&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id=&quot;unicornslike-2&quot;&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;radio-switch&quot;&nbsp;for=&quot;unicornslike-2&quot;&gt;Nei&lt;/label&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/fieldset&gt;
+                                &lt;/div&gt;</code></pre>
+                        </div>
+                        <div class="tabbed-panel__content-pane" rel="2">
+                            World
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-container content-container--text-left">
+                <h2 class="h2">Radio block</h2>
+
+                <p>
+                    Radio blocks brukes når det er viktig å presentere kontekstuelt relevant informasjon om valgene til
+                    brukeren uten å overvelde.
+                </p>
+
+                <p>
+                    De kan brukes både som vanlige radio-knapper med synlig kontekst eller som en liten "meny" der kontekst
+                    bare er synlig for det til en hver tid aktive valget
+                </p>
+
+                <h3 class="h3">Alltid synlig kontekst</h3>
+
+                <div class="input-group" aria-live="polite">
+                    <label class="form-label" for="block-ibf1">
+                        Hva ønsker du å gjøre?
+                    </label>
+                    <fieldset id="block-ibf1">
+                        <div class="radio-block">
+                            <input class="radio-input" type="radio" name="block" id="block-one" value="one" checked>
+
+                            <div class="radio-block__content">
+                                <label class="radio-block__header" for="block-one">Alternativ #1</label>
+
+                                <div class="radio-block__wrapper">
+                                    <p>
+                                        Denne teksten er alltid synlig.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="radio-block">
+                            <input class="radio-input" type="radio" name="block" id="block-two" value="two">
+
+                            <div class="radio-block__content">
+                                <label class="radio-block__header" for="block-two">Alternativ #2</label>
+
+                                <div class="radio-block__wrapper">
+                                    <p>
+                                        Denne teksten er alltid synlig.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+            <div class="content-container content-container--text-left">
+                <div class="tabbed-panel">
+                    <ul class="tabbed-panel__tablist">
+                        <li class="tabbed-panel__tab tabbed-panel__tab--active">
+                            <a class="tabbed-panel__tablink" href="#" rel="1">Teknisk</a>
+                        </li>
+                        <li class="tabbed-panel__tab">
+                            <a class="tabbed-panel__tablink" href="#" rel="2">Design</a>
+                        </li>
+                    </ul>
+                    <div class="tabbed-panel__display-frame">
+                        <div class="tabbed-panel__content-pane tabbed-panel__content-pane--active" rel="1">
+                            <h5>Eksempelkode</h5>
+                        <pre><code class="html">&lt;div&nbsp;class=&quot;input-group&quot;&nbsp;aria-live=&quot;polite&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;form-label&quot;&nbsp;for=&quot;block-ibf1&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hva&nbsp;&oslash;nsker&nbsp;du&nbsp;&aring;&nbsp;gj&oslash;re?
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;fieldset&nbsp;id=&quot;block-ibf1&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;radio-block&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;class=&quot;radio-input&quot;&nbsp;type=&quot;radio&quot;&nbsp;name=&quot;block&quot;&nbsp;id=&quot;block-one&quot;&nbsp;value=&quot;one&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;radio-block__content&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;radio-block__header&quot;&nbsp;for=&quot;block-one&quot;&gt;Blokk&nbsp;1&lt;/label&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;radio-block__wrapper&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Blokk&nbsp;1.&lt;br&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Denne&nbsp;teksten&nbsp;er&nbsp;alltid&nbsp;synlig.
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/p&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;radio-block&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;class=&quot;radio-input&quot;&nbsp;type=&quot;radio&quot;&nbsp;name=&quot;block&quot;&nbsp;id=&quot;block-two&quot;&nbsp;value=&quot;two&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;radio-block__content&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;radio-block__header&quot;&nbsp;for=&quot;block-two&quot;&gt;Blokk&nbsp;2&lt;/label&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;radio-block__wrapper&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Blokk&nbsp;2.&lt;br&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Denne&nbsp;teksten&nbsp;er&nbsp;alltid&nbsp;synlig.
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/p&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/fieldset&gt;
+                            &lt;/div&gt;</code></pre>
+                        </div>
+                        <div class="tabbed-panel__content-pane" rel="2">
+                            World
                         </div>
                     </div>
                 </div>
 
-	                <div class="radio-block">
-	                    <input class="radio-input" type="radio" name="block" id="block-two" value="two">
-	                    <div class="radio-block__content">
-	                        <label class="radio-block__header" for="block-two">Alternativ #2</label>
-	                        <div class="radio-block__wrapper">
-	                            <p>
-                                    Denne teksten er alltid synlig.
-	                            </p>
-	                        </div>
-	                    </div>
-	                </div>
-	            </fieldset>
-	        </div>
-	    </div>
+                <h3 class="h3">Kontekst kun synlig for aktivt valg</h3>
+
+                <div class="input-group" aria-live="polite" role="tablist">
+                    <label class="form-label" for="tab-set">
+                        Hva ønsker du å gjøre?
+                    </label>
+                    <fieldset id="tab-set">
+                        <div class="radio-block" role="presentation">
+                            <input class="radio-input" type="radio" name="tab" id="tab-one" aria-labelledby="tab-one-label"
+                                   value="one" tabindex="0" role="tab" aria-controls="content-one" aria-selected="true"
+                                   checked>
+
+                            <div class="radio-block__content" role="presentation">
+                                <label class="radio-block__header" id="tab-one-label" for="tab-one">Block one</label>
+
+                                <div class="radio-block__wrapper" id="content-one" role="tabpanel"
+                                     aria-labelledby="tab-one-label">
+                                    <p>
+                                        Denne teksten er synlig fordi valget er aktivt.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="radio-block" role="presentation">
+                            <input class="radio-input" type="radio" name="tab" id="tab-two" aria-labelledby="tab-two-label"
+                                   value="two" tabindex="0" role="tab" aria-controls="content-two" aria-selected="false">
+
+                            <div class="radio-block__content" role="presentation">
+                                <label class="radio-block__header" id="tab-two-label" for="tab-two">Block two</label>
+
+                                <div class="radio-block__wrapper" id="content-two" role="tabpanel"
+                                     aria-labelledby="tab-two-label" aria-hidden="true">
+                                    <p>
+                                        Denne teksten er ikke synlig.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <script>
+                        var tabRadios = Array.prototype.slice.call(document.querySelectorAll('[name="tab"]'), 0);
+                        tabRadios.forEach(function (radioTab) {
+                            radioTab.addEventListener('click', function (e) {
+                                tabRadios.forEach(function (toDisable) {
+                                    toDisable.setAttribute('aria-selected', 'false');
+                                    toDisable.nextElementSibling.querySelector('.radio-block__wrapper').setAttribute('aria-hidden', 'true');
+                                });
+                                e.target.setAttribute('aria-selected', 'true');
+                                e.target.nextElementSibling.querySelector('.radio-block__wrapper').setAttribute('aria-hidden', 'false');
+                            });
+                        });
+                    </script>
+                </div>
+            </div>
+
+            <div class="content-container content-container--text-left">
+
+                <div class="tabbed-panel">
+                    <ul class="tabbed-panel__tablist">
+                        <li class="tabbed-panel__tab tabbed-panel__tab--active">
+                            <a class="tabbed-panel__tablink" href="#" rel="1">Teknisk</a>
+                        </li>
+                        <li class="tabbed-panel__tab">
+                            <a class="tabbed-panel__tablink" href="#" rel="2">Design</a>
+                        </li>
+                    </ul>
+                    <div class="tabbed-panel__display-frame">
+                        <div class="tabbed-panel__content-pane tabbed-panel__content-pane--active" rel="1">
+                            <h5>Eksempelkode</h5>
+                            <pre><code class="html">&lt;div&nbsp;class=&quot;input-group&quot;&nbsp;aria-live=&quot;polite&quot;&nbsp;role=&quot;tablist&quot;&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;form-label&quot;&nbsp;for=&quot;tab-set&quot;&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hva&nbsp;&oslash;nsker&nbsp;du&nbsp;&aring;&nbsp;gj&oslash;re?
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;fieldset&nbsp;id=&quot;tab-set&quot;&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;radio-block&quot;&nbsp;role=&quot;presentation&quot;&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;class=&quot;radio-input&quot;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type=&quot;radio&quot;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name=&quot;tab&quot;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id=&quot;tab-one&quot;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aria-labelledby=&quot;tab-one-label&quot;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value=&quot;one&quot;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tabindex=&quot;0&quot;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;role=&quot;tab&quot;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aria-controls=&quot;content-one&quot;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aria-selected=&quot;true&quot;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;checked&gt;
+
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;radio-block__content&quot;&nbsp;role=&quot;presentation&quot;&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;radio-block__header&quot;&nbsp;id=&quot;tab-one-label&quot;&nbsp;for=&quot;tab-one&quot;&gt;Block&nbsp;one&lt;/label&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;radio-block__wrapper&quot;&nbsp;id=&quot;content-one&quot;&nbsp;role=&quot;tabpanel&quot;&nbsp;aria-labelledby=&quot;tab-one-label&quot;&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Denne&nbsp;teksten&nbsp;er&nbsp;synlig&nbsp;fordi&nbsp;valget&nbsp;er&nbsp;aktivt.
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/p&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;radio-block&quot;&nbsp;role=&quot;presentation&quot;&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;class=&quot;radio-input&quot;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type=&quot;radio&quot;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name=&quot;tab&quot;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id=&quot;tab-two&quot;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aria-labelledby=&quot;tab-two-label&quot;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value=&quot;two&quot;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tabindex=&quot;0&quot;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;role=&quot;tab&quot;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aria-controls=&quot;content-two&quot;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aria-selected=&quot;false&quot;&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;radio-block__content&quot;&nbsp;role=&quot;presentation&quot;&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;radio-block__header&quot;&nbsp;id=&quot;tab-two-label&quot;&nbsp;for=&quot;tab-two&quot;&gt;Block&nbsp;two&lt;/label&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;radio-block__wrapper&quot;&nbsp;id=&quot;content-two&quot;&nbsp;role=&quot;tabpanel&quot;&nbsp;aria-labelledby=&quot;tab-two-label&quot;&nbsp;aria-hidden=&quot;true&quot;&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Denne&nbsp;teksten&nbsp;er&nbsp;ikke&nbsp;synlig.
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/p&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/fieldset&gt;
+                                &lt;/div&gt;</code></pre>
+                            <br/>
+                            <pre><code class="javascript">var tabRadios =
+                                Array.prototype.slice.call(document.querySelectorAll('[name="tab"]'), 0);
+                                tabRadios.forEach(function(radioTab) {
+                                radioTab.addEventListener('click', function(e) {
+                                tabRadios.forEach(function(toDisable) {
+                                toDisable.setAttribute('aria-selected', 'false');
+                                toDisable.nextElementSibling.querySelector('.radio-block__wrapper').setAttribute('aria-hidden',
+                                'true');
+                                });
+                                e.target.setAttribute('aria-selected', 'true');
+                                e.target.nextElementSibling.querySelector('.radio-block__wrapper').setAttribute('aria-hidden',
+                                'false');
+                                });
+                                });</code></pre>
+                            <div class="important-notice">
+                                <h5>Merknader ang. tilgjengelighet</h5>
+
+                                <div class="small-text">
+                                    <p>
+                                        Når en radio-knapp blir valgt må følgende gjøres i Javascript:
+                                    <ul>
+                                        <li>Sett <span class="inline-code">aria-selected="false"</span> på alle andre inputs
+                                        </li>
+                                        <li>Sett <span class="inline-code">aria-selected="true"</span> på aktiv input</li>
+                                        <li>Sett <span class="inline-code">aria-hidden="true"</span> på alle .wrapper
+                                            elementer som tilhører et inaktivt valg
+                                        </li>
+                                        <li>Sett <span class="inline-code">aria-hidden="false"</span> på .wrapper elementet
+                                            som tilhører aktivt valg
+                                        </li>
+                                    </ul>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tabbed-panel__content-pane" rel="2">
+                            World
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="content-container content-container--text-left">
+            <h2>Skjemavalidering</h2>
+
+            <h3>Oppsummering av feil i skjema</h3>
+
+            <p class="body-paragraph">
+                Det skal plasseres en oppsummering av skjemafeil over skjemaet. Det skal også scrolles
+                til dette elemementet når valideringen skjer. Normalt vil dette være etter submit av skjemaet.
+            </p>
+
+            <p>
+                Oppsummering kan skjules ved å sette <code class="code-inline">aria-hidden="true"</code>.
+                For å støtte skjermlesere er det viktig at det er satt <code class="code-inline">role="alert"</code> og
+                <code class="code-inline">aria-live="assertive"</code> på elementet som wrapper feilmeldingene. Dette for at
+                skjermleseren skal plukke det opp og varsle brukeren når det vises (eller fjernes) feilmeldinger fra listen.
+            </p>
+
+            <div class="error-summary" aria-hidden="false" role="alert" aria-live="assertive">
+                <span class="error-summary__icon icon-info-error"></span>
+                <span class="error-summary__title">Du må rette opp disse feilene i skjemaet</span>
+                <ul class="error-summary__list">
+                    <li class="error-summary__list-item">Vennligst velg en bonus</li>
+                    <li class="error-summary__list-item">Vennligst fyll inn "Fødselsnummer"</li>
+                    <li class="error-summary__list-item">Vennligst fyll inn "Fornavn"</li>
+                    <li class="error-summary__list-item">Vennligst fyll inn "Etternavn"</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content-container content-container--text-left">
+
+            <div class="tabbed-panel">
+                <ul class="tabbed-panel__tablist">
+                    <li class="tabbed-panel__tab tabbed-panel__tab--active">
+                        <a class="tabbed-panel__tablink" href="#" rel="1">Teknisk</a>
+                    </li>
+                    <li class="tabbed-panel__tab">
+                        <a class="tabbed-panel__tablink" href="#" rel="2">Design</a>
+                    </li>
+                </ul>
+                <div class="tabbed-panel__display-frame">
+                    <div class="tabbed-panel__content-pane tabbed-panel__content-pane--active" rel="1">
+                        <h5>Eksempelkode</h5>
+                            <pre><code class="html">&lt;div&nbsp;class=&quot;error-summary&quot;&nbsp;aria-hidden=&quot;false&quot;&nbsp;role=&quot;alert&quot;&nbsp;aria-live=&quot;assertive&quot;&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;error-summary__icon&nbsp;icon-info-error&quot;&gt;&lt;/span&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;error-summary__title&quot;&gt;Du&nbsp;m&aring;&nbsp;rette&nbsp;opp&nbsp;disse&nbsp;feilene&nbsp;i&nbsp;skjemaet&lt;/span&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&nbsp;class=&quot;error-summary__list&quot;&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;error-summary__list-item&quot;&gt;Vennligst&nbsp;velg&nbsp;en&nbsp;bonus&lt;/li&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;error-summary__list-item&quot;&gt;Vennligst&nbsp;fyll&nbsp;inn&nbsp;&quot;F&oslash;dselsnummer&quot;&lt;/li&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;error-summary__list-item&quot;&gt;Vennligst&nbsp;fyll&nbsp;inn&nbsp;&quot;Fornavn&quot;&lt;/li&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;error-summary__list-item&quot;&gt;Vennligst&nbsp;fyll&nbsp;inn&nbsp;&quot;Etternavn&quot;&lt;/li&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;
+                                &lt;/div&gt;</code></pre>
+
+                        <div class="important-notice">
+                            <h5>Merknader ang. tilgjengelighet</h5>
+
+                            <div class="small-text">
+                                <p>
+                                    Oppsummering kan skjules ved å sette <span class="inline-code">aria-hidden="true"</span>.
+                                    For å støtte skjermlesere er det viktig at det er satt <span class="inline-code">role="alert"</span>
+                                    og <span class="inline-code">aria-live="assertive"</span> på elementet som wrapper
+                                    feilmeldingene. Dette for at skjermleseren skal plukke det opp og varsle brukeren når
+                                    det vises (eller fjernes) feilmeldinger fra listen.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="tabbed-panel__content-pane" rel="2">
+                        World
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="content-container content-container--text-left">
+            <h3>Feilmeldinger på skjemaelementene</h3>
+
+            <div class="input-group" aria-live="polite">
+                <label for="ssn-invalid" class="form-label">Fødselsnummer</label>
+                <input class="input-field"
+                       name="ssn"
+                       id="ssn-invalid"
+                       type="tel"
+                       maxlength="11"
+                       autocomplete="off"
+                       aria-invalid="true">
+
+                <div class="info-message info-message--error">Vennligst fyll inn "Fødselsnummer"</div>
+            </div>
+
+            <div class="input-group" aria-live="polite">
+                <label class="form-label" for="radio-inline-ibf1-invalid">
+                    Are there unicorns with wings?
+                </label>
+                <fieldset id="radio-inline-ibf1-invalid" aria-invalid="true">
+                    <input class="radio-input"
+                           type="radio"
+                           name="unicornwings-validation"
+                           value="yes"
+                           id="unicornwings-1-invalid"
+                           checked>
+                    <label class="radio-button radio-button--inline" for="unicornwings-1-invalid">Yes</label>
+                    <input class="radio-input"
+                           type="radio"
+                           name="unicornwings-validation"
+                           value="no"
+                           id="unicornwings-2-invalid">
+                    <label class="radio-button radio-button--inline" for="unicornwings-2-invalid">No</label>
+                    <input class="radio-input"
+                           type="radio"
+                           name="unicornwings-validation"
+                           value="dunno"
+                           id="unicornwings-3-invalid">
+                    <label class="radio-button radio-button--inline" for="unicornwings-3-invalid">I do not know!</label>
+                </fieldset>
+                <div class="info-message info-message--error">Ta våre fabeldyr på alvor.</div>
+            </div>
+
+        </div>
         <div class="content-container content-container--text-left">
             <div class="tabbed-panel">
-			<ul class="tabbed-panel__tablist">
-				<li class="tabbed-panel__tab tabbed-panel__tab--active">
-					<a class="tabbed-panel__tablink" href="#" rel="1">Teknisk</a>
-				</li>
-				<li class="tabbed-panel__tab">
-					<a class="tabbed-panel__tablink" href="#" rel="2">Design</a>
-				</li>
-			</ul>
-			<div class="tabbed-panel__display-frame">
-				<div class="tabbed-panel__content-pane tabbed-panel__content-pane--active" rel="1">
-					<h5>Eksempelkode</h5>
-					<pre><code class="html">&lt;div&nbsp;class=&quot;input-group&quot;&nbsp;aria-live=&quot;polite&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;form-label&quot;&nbsp;for=&quot;block-ibf1&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hva&nbsp;&oslash;nsker&nbsp;du&nbsp;&aring;&nbsp;gj&oslash;re?
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;fieldset&nbsp;id=&quot;block-ibf1&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;radio-block&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;class=&quot;radio-input&quot;&nbsp;type=&quot;radio&quot;&nbsp;name=&quot;block&quot;&nbsp;id=&quot;block-one&quot;&nbsp;value=&quot;one&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;radio-block__content&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;radio-block__header&quot;&nbsp;for=&quot;block-one&quot;&gt;Blokk&nbsp;1&lt;/label&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;radio-block__wrapper&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Blokk&nbsp;1.&lt;br&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Denne&nbsp;teksten&nbsp;er&nbsp;alltid&nbsp;synlig.
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/p&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+                <ul class="tabbed-panel__tablist">
+                    <li class="tabbed-panel__tab tabbed-panel__tab--active">
+                        <a class="tabbed-panel__tablink" href="#" rel="1">Teknisk</a>
+                    </li>
+                    <li class="tabbed-panel__tab">
+                        <a class="tabbed-panel__tablink" href="#" rel="2">Design</a>
+                    </li>
+                </ul>
+                <div class="tabbed-panel__display-frame">
+                    <div class="tabbed-panel__content-pane tabbed-panel__content-pane--active" rel="1">
+                        <h5>Eksempelkode</h5>
+                            <pre><code class="html">&lt;div&nbsp;class=&quot;input-group&quot;&nbsp;aria-live=&quot;polite&quot;&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;for=&quot;ssn-invalid&quot;&nbsp;class=&quot;form-label&quot;&gt;F&oslash;dselsnummer&lt;/label&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;class=&quot;input-field&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name=&quot;ssn&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id=&quot;ssn-invalid&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type=&quot;tel&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maxlength=&quot;11&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;autocomplete=&quot;off&quot;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aria-invalid=&quot;true&quot;&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;info-message&nbsp;info-message--error&quot;&gt;Vennligst&nbsp;fyll&nbsp;inn&nbsp;&quot;F&oslash;dselsnummer&quot;&lt;/div&gt;
+                                &lt;/div&gt;</code></pre>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;radio-block&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;class=&quot;radio-input&quot;&nbsp;type=&quot;radio&quot;&nbsp;name=&quot;block&quot;&nbsp;id=&quot;block-two&quot;&nbsp;value=&quot;two&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;radio-block__content&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;radio-block__header&quot;&nbsp;for=&quot;block-two&quot;&gt;Blokk&nbsp;2&lt;/label&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;radio-block__wrapper&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Blokk&nbsp;2.&lt;br&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Denne&nbsp;teksten&nbsp;er&nbsp;alltid&nbsp;synlig.
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/p&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/fieldset&gt;
-&lt;/div&gt;</code></pre>
-				</div>
-				<div class="tabbed-panel__content-pane" rel="2">
-					World
-				</div>
-			</div>
-		</div>
+                        <div class="important-notice">
+                            <h5>Merknader ang. tilgjengelighet</h5>
 
-        <h3 class="h3">Kontekst kun synlig for aktivt valg</h3>
+                            <div class="small-text">
+                                <p class="body-paragraph">
+                                    Alle skjemaelementer må wrappes i en 'input-group' med <span class="inline-code">aria-live="polite"</span>
+                                    slik at skjermlesere plukker det opp og varsler brukeren når det vises en feilmelding.
+                                </p>
 
-	        <div class="input-group" aria-live="polite" role="tablist">
-	            <label class="form-label" for="tab-set">
-	                Hva ønsker du å gjøre?
-	            </label>
-	            <fieldset id="tab-set">
-	                <div class="radio-block" role="presentation">
-	                    <input class="radio-input" type="radio" name="tab" id="tab-one" aria-labelledby="tab-one-label" value="one" tabindex="0" role="tab" aria-controls="content-one" aria-selected="true" checked>
-	                    <div class="radio-block__content" role="presentation">
-	                        <label class="radio-block__header" id="tab-one-label" for="tab-one">Block one</label>
-	                        <div class="radio-block__wrapper" id="content-one" role="tabpanel" aria-labelledby="tab-one-label">
-	                            <p>
-	                                Denne teksten er synlig fordi valget er aktivt.
-	                            </p>
-	                        </div>
-	                    </div>
-	                </div>
-	                <div class="radio-block" role="presentation">
-	                    <input class="radio-input" type="radio" name="tab" id="tab-two" aria-labelledby="tab-two-label" value="two" tabindex="0" role="tab" aria-controls="content-two" aria-selected="false">
-	                    <div class="radio-block__content" role="presentation">
-	                        <label class="radio-block__header" id="tab-two-label" for="tab-two">Block two</label>
-	                        <div class="radio-block__wrapper" id="content-two" role="tabpanel" aria-labelledby="tab-two-label" aria-hidden="true">
-	                            <p>
-	                                Denne teksten er ikke synlig.
-	                            </p>
-	                        </div>
-	                    </div>
-	                </div>
-	            </fieldset>
-	            <script>
-	                var tabRadios = Array.prototype.slice.call(document.querySelectorAll('[name="tab"]'), 0);
-	                tabRadios.forEach(function(radioTab) {
-	                    radioTab.addEventListener('click', function(e) {
-	                        tabRadios.forEach(function(toDisable) {
-	                            toDisable.setAttribute('aria-selected', 'false');
-	                            toDisable.nextElementSibling.querySelector('.radio-block__wrapper').setAttribute('aria-hidden', 'true');
-	                        });
-	                        e.target.setAttribute('aria-selected', 'true');
-	                        e.target.nextElementSibling.querySelector('.radio-block__wrapper').setAttribute('aria-hidden', 'false');
-	                    });
-	                });
-	            </script>
-	        </div>
-	    </div>
+                                <p>
+                                    Ved visning av feilmelding skal <span class="inline-code">aria-invalid="true"</span>
+                                    settes på input elementet (eller nærmeste fieldset). Dette styler alle skjemaelementer
+                                    med passende utseende for feil.
+                                </p>
+
+                                <p>
+                                    Feilmeldinger kan skjules ved å sette <span
+                                        class="inline-code">aria-hidden="true"</span> på meldingselementet.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="tabbed-panel__content-pane" rel="2">
+                        World
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="content-container content-container--text-left">
+            <h2>Generelle komponenter</h2>
 
+            <p>Praktiske elementer å bruke forskjellige steder i en applikasjon</p>
+        </div>
+
+        <div class="content-container content-container--text-left">
+            <h3>Loading spinner</h3>
+
+            <p>
+                Spinneren er kun en klasse som ikke inneholder noen posisjoneringskode; dette gir mye fleksibilitet.
+                Den finnes i to størrelser og kan blandes med andre elementer.
+            </p>
+
+            <p class="small-text">LOADING SPINNER</p>
+
+            <p class="body-paragraph">
+                <span class="loading-spinner"></span> Loading...
+            </p>
+
+            <div class="small-text">LOADING SPINNER -LARGE (centered layout not included)</div>
+        </div>
+        <div class="content-container">
+            <div class="loading-spinner loading-spinner--large"></div>
+            <p>
+                Loading...
+            </p>
+        </div>
+        <div class="content-container content-container--text-left">
             <div class="tabbed-panel">
-				<ul class="tabbed-panel__tablist">
-					<li class="tabbed-panel__tab tabbed-panel__tab--active">
-						<a class="tabbed-panel__tablink" href="#" rel="1">Teknisk</a>
-					</li>
-					<li class="tabbed-panel__tab">
-						<a class="tabbed-panel__tablink" href="#" rel="2">Design</a>
-					</li>
-				</ul>
-				<div class="tabbed-panel__display-frame">
-					<div class="tabbed-panel__content-pane tabbed-panel__content-pane--active" rel="1">
-						<h5>Eksempelkode</h5>
-						<pre><code class="html">&lt;div&nbsp;class=&quot;input-group&quot;&nbsp;aria-live=&quot;polite&quot;&nbsp;role=&quot;tablist&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;form-label&quot;&nbsp;for=&quot;tab-set&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hva&nbsp;&oslash;nsker&nbsp;du&nbsp;&aring;&nbsp;gj&oslash;re?
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;fieldset&nbsp;id=&quot;tab-set&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;radio-block&quot;&nbsp;role=&quot;presentation&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;class=&quot;radio-input&quot;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type=&quot;radio&quot;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name=&quot;tab&quot;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id=&quot;tab-one&quot;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aria-labelledby=&quot;tab-one-label&quot;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value=&quot;one&quot;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tabindex=&quot;0&quot;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;role=&quot;tab&quot;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aria-controls=&quot;content-one&quot;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aria-selected=&quot;true&quot;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;checked&gt;
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;radio-block__content&quot;&nbsp;role=&quot;presentation&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;radio-block__header&quot;&nbsp;id=&quot;tab-one-label&quot;&nbsp;for=&quot;tab-one&quot;&gt;Block&nbsp;one&lt;/label&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;radio-block__wrapper&quot;&nbsp;id=&quot;content-one&quot;&nbsp;role=&quot;tabpanel&quot;&nbsp;aria-labelledby=&quot;tab-one-label&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Denne&nbsp;teksten&nbsp;er&nbsp;synlig&nbsp;fordi&nbsp;valget&nbsp;er&nbsp;aktivt.
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/p&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;radio-block&quot;&nbsp;role=&quot;presentation&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;class=&quot;radio-input&quot;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type=&quot;radio&quot;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name=&quot;tab&quot;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id=&quot;tab-two&quot;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aria-labelledby=&quot;tab-two-label&quot;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value=&quot;two&quot;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tabindex=&quot;0&quot;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;role=&quot;tab&quot;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aria-controls=&quot;content-two&quot;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aria-selected=&quot;false&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;radio-block__content&quot;&nbsp;role=&quot;presentation&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;radio-block__header&quot;&nbsp;id=&quot;tab-two-label&quot;&nbsp;for=&quot;tab-two&quot;&gt;Block&nbsp;two&lt;/label&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;radio-block__wrapper&quot;&nbsp;id=&quot;content-two&quot;&nbsp;role=&quot;tabpanel&quot;&nbsp;aria-labelledby=&quot;tab-two-label&quot;&nbsp;aria-hidden=&quot;true&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Denne&nbsp;teksten&nbsp;er&nbsp;ikke&nbsp;synlig.
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/p&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/fieldset&gt;
-&lt;/div&gt;</code></pre><br/>
-						<pre><code class="javascript">var tabRadios = Array.prototype.slice.call(document.querySelectorAll('[name="tab"]'), 0);
-    tabRadios.forEach(function(radioTab) {
-        radioTab.addEventListener('click', function(e) {
-            tabRadios.forEach(function(toDisable) {
-                toDisable.setAttribute('aria-selected', 'false');
-                toDisable.nextElementSibling.querySelector('.radio-block__wrapper').setAttribute('aria-hidden', 'true');
-            });
-            e.target.setAttribute('aria-selected', 'true');
-            e.target.nextElementSibling.querySelector('.radio-block__wrapper').setAttribute('aria-hidden', 'false');
-        });
-    });</code></pre>
-    					<div class="important-notice">
-							<h5>Merknader ang. tilgjengelighet</h5>
-							<div class="small-text">
-		    					<p>
-						            Når en radio-knapp blir valgt må følgende gjøres i Javascript:
-						            <ul>
-						                <li>Sett <span class="inline-code">aria-selected="false"</span> på alle andre inputs</li>
-						                <li>Sett <span class="inline-code">aria-selected="true"</span> på aktiv input</li>
-						                <li>Sett <span class="inline-code">aria-hidden="true"</span> på alle .wrapper elementer som tilhører et inaktivt valg</li>
-						                <li>Sett <span class="inline-code">aria-hidden="false"</span> på .wrapper elementet som tilhører aktivt valg</li>
-						            </ul>
-						        </p>
-						    </div>
-						</div>
-					</div>
-					<div class="tabbed-panel__content-pane" rel="2">
-						World
-					</div>
-				</div>
-			</div>
-
+                <ul class="tabbed-panel__tablist">
+                    <li class="tabbed-panel__tab tabbed-panel__tab--active">
+                        <a class="tabbed-panel__tablink" href="#" rel="1">Teknisk</a>
+                    </li>
+                    <li class="tabbed-panel__tab">
+                        <a class="tabbed-panel__tablink" href="#" rel="2">Design</a>
+                    </li>
+                </ul>
+                <div class="tabbed-panel__display-frame">
+                    <div class="tabbed-panel__content-pane tabbed-panel__content-pane--active" rel="1">
+                        <h5>Eksempelkode</h5>
+                        <pre><code class="html">&lt;div&nbsp;class=&quot;loading-spinner&nbsp;loading-spinner--large&quot;&gt;&lt;/div&gt;</code></pre>
+                    </div>
+                    <div class="tabbed-panel__content-pane" rel="2">
+                        World
+                    </div>
+                </div>
+            </div>
         </div>
-
-
-	    </div>
-
-    <div class="content-container content-container--text-left">
-        <h2>Skjemavalidering</h2>
-
-        <h3>Oppsummering av feil i skjema</h3>
-        <p class="body-paragraph">
-            Det skal plasseres en oppsummering av skjemafeil over skjemaet. Det skal også scrolles
-            til dette elemementet når valideringen skjer. Normalt vil dette være etter submit av skjemaet.
-        </p>
-        <p>
-            Oppsummering kan skjules ved å sette <code class="code-inline">aria-hidden="true"</code>.
-            For å støtte skjermlesere er det viktig at det er satt <code class="code-inline">role="alert"</code> og <code class="code-inline">aria-live="assertive"</code> på elementet som wrapper feilmeldingene. Dette for at skjermleseren skal plukke det opp og varsle brukeren når det vises (eller fjernes) feilmeldinger fra listen.
-        </p>
-
-	        <div class="error-summary" aria-hidden="false" role="alert" aria-live="assertive">
-	            <span class="error-summary__icon icon-info-error"></span>
-	            <span class="error-summary__title">Du må rette opp disse feilene i skjemaet</span>
-	            <ul class="error-summary__list">
-	                <li class="error-summary__list-item">Vennligst velg en bonus</li>
-	                <li class="error-summary__list-item">Vennligst fyll inn "Fødselsnummer"</li>
-	                <li class="error-summary__list-item">Vennligst fyll inn "Fornavn"</li>
-	                <li class="error-summary__list-item">Vennligst fyll inn "Etternavn"</li>
-	            </ul>
-	        </div>
-	    </div>
-
-	    <div class="content-container content-container--text-left">
-
-			<div class="tabbed-panel">
-				<ul class="tabbed-panel__tablist">
-					<li class="tabbed-panel__tab tabbed-panel__tab--active">
-						<a class="tabbed-panel__tablink" href="#" rel="1">Teknisk</a>
-					</li>
-					<li class="tabbed-panel__tab">
-						<a class="tabbed-panel__tablink" href="#" rel="2">Design</a>
-					</li>
-				</ul>
-				<div class="tabbed-panel__display-frame">
-					<div class="tabbed-panel__content-pane tabbed-panel__content-pane--active" rel="1">
-						<h5>Eksempelkode</h5>
-						<pre><code class="html">&lt;div&nbsp;class=&quot;error-summary&quot;&nbsp;aria-hidden=&quot;false&quot;&nbsp;role=&quot;alert&quot;&nbsp;aria-live=&quot;assertive&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;error-summary__icon&nbsp;icon-info-error&quot;&gt;&lt;/span&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;error-summary__title&quot;&gt;Du&nbsp;m&aring;&nbsp;rette&nbsp;opp&nbsp;disse&nbsp;feilene&nbsp;i&nbsp;skjemaet&lt;/span&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&nbsp;class=&quot;error-summary__list&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;error-summary__list-item&quot;&gt;Vennligst&nbsp;velg&nbsp;en&nbsp;bonus&lt;/li&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;error-summary__list-item&quot;&gt;Vennligst&nbsp;fyll&nbsp;inn&nbsp;&quot;F&oslash;dselsnummer&quot;&lt;/li&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;error-summary__list-item&quot;&gt;Vennligst&nbsp;fyll&nbsp;inn&nbsp;&quot;Fornavn&quot;&lt;/li&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;error-summary__list-item&quot;&gt;Vennligst&nbsp;fyll&nbsp;inn&nbsp;&quot;Etternavn&quot;&lt;/li&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;
-&lt;/div&gt;</code></pre>
-
-						<div class="important-notice">
-							<h5>Merknader ang. tilgjengelighet</h5>
-							<div class="small-text">
-		    					<p>
-						            Oppsummering kan skjules ved å sette <span class="inline-code">aria-hidden="true"</span>.
-						            For å støtte skjermlesere er det viktig at det er satt <span class="inline-code">role="alert"</span> og <span class="inline-code">aria-live="assertive"</span> på elementet som wrapper feilmeldingene. Dette for at skjermleseren skal plukke det opp og varsle brukeren når det vises (eller fjernes) feilmeldinger fra listen.
-						        </p>
-						    </div>
-						</div>
-
-					</div>
-					<div class="tabbed-panel__content-pane" rel="2">
-						World
-					</div>
-				</div>
-			</div>
-
-	    </div>
-
-	    <div class="content-container content-container--text-left">
-	        <h3>Feilmeldinger på skjemaelementene</h3>
-
-        <div class="input-group" aria-live="polite">
-            <label for="ssn-invalid" class="form-label">Fødselsnummer</label>
-            <input class="input-field"
-                name="ssn"
-                id="ssn-invalid"
-                type="tel"
-                maxlength="11"
-                autocomplete="off"
-                aria-invalid="true">
-            <div class="info-message info-message--error">Vennligst fyll inn "Fødselsnummer"</div>
-        </div>
-
-        <div class="input-group" aria-live="polite">
-            <label class="form-label" for="radio-inline-ibf1-invalid">
-                Are there unicorns with wings?
-            </label>
-            <fieldset id="radio-inline-ibf1-invalid" aria-invalid="true">
-                <input  class="radio-input"
-                        type="radio"
-                        name="unicornwings-validation"
-                        value="yes"
-                        id="unicornwings-1-invalid"
-                        checked>
-                <label class="radio-button radio-button--inline" for="unicornwings-1-invalid">Yes</label>
-                <input  class="radio-input"
-                        type="radio"
-                        name="unicornwings-validation"
-                        value="no"
-                        id="unicornwings-2-invalid">
-                <label class="radio-button radio-button--inline" for="unicornwings-2-invalid">No</label>
-                <input  class="radio-input"
-                        type="radio"
-                        name="unicornwings-validation"
-                        value="dunno"
-                        id="unicornwings-3-invalid">
-                <label class="radio-button radio-button--inline" for="unicornwings-3-invalid">I do not know!</label>
-            </fieldset>
-            <div class="info-message info-message--error">Ta våre fabeldyr på alvor.</div>
-        </div>
-
-	    </div>
-	    <div class="content-container content-container--text-left">
-	        <div class="tabbed-panel">
-				<ul class="tabbed-panel__tablist">
-					<li class="tabbed-panel__tab tabbed-panel__tab--active">
-						<a class="tabbed-panel__tablink" href="#" rel="1">Teknisk</a>
-					</li>
-					<li class="tabbed-panel__tab">
-						<a class="tabbed-panel__tablink" href="#" rel="2">Design</a>
-					</li>
-				</ul>
-				<div class="tabbed-panel__display-frame">
-					<div class="tabbed-panel__content-pane tabbed-panel__content-pane--active" rel="1">
-						<h5>Eksempelkode</h5>
-						<pre><code class="html">&lt;div&nbsp;class=&quot;input-group&quot;&nbsp;aria-live=&quot;polite&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;for=&quot;ssn-invalid&quot;&nbsp;class=&quot;form-label&quot;&gt;F&oslash;dselsnummer&lt;/label&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;class=&quot;input-field&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name=&quot;ssn&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id=&quot;ssn-invalid&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type=&quot;tel&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maxlength=&quot;11&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;autocomplete=&quot;off&quot;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aria-invalid=&quot;true&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;info-message&nbsp;info-message--error&quot;&gt;Vennligst&nbsp;fyll&nbsp;inn&nbsp;&quot;F&oslash;dselsnummer&quot;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-
-						<div class="important-notice">
-							<h5>Merknader ang. tilgjengelighet</h5>
-							<div class="small-text">
-		    					<p class="body-paragraph">
-						            Alle skjemaelementer må wrappes i en 'input-group' med <span class="inline-code">aria-live="polite"</span> slik at skjermlesere plukker det opp og varsler brukeren når det vises en feilmelding.
-						        </p>
-						        <p>
-						            Ved visning av feilmelding skal <span class="inline-code">aria-invalid="true"</span> settes på input elementet (eller nærmeste fieldset). Dette styler alle skjemaelementer med passende utseende for feil.
-						        </p>
-						        <p>
-						            Feilmeldinger kan skjules ved å sette <span class="inline-code">aria-hidden="true"</span> på meldingselementet.
-						        </p>
-						    </div>
-						</div>
-
-					</div>
-					<div class="tabbed-panel__content-pane" rel="2">
-						World
-					</div>
-				</div>
-			</div>
-	    </div>
-
-    <div class="content-container content-container--text-left">
-        <h2>Generelle komponenter</h2>
-        <p>Praktiske elementer å bruke forskjellige steder i en applikasjon</p>
-    </div>
-
-	    <div class="content-container content-container--text-left">
-	        <h3>Loading spinner</h3>
-	        <p>
-	            Spinneren er kun en klasse som ikke inneholder noen posisjoneringskode; dette gir mye fleksibilitet.
-	            Den finnes i to størrelser og kan blandes med andre elementer.
-	        </p>
-	        <p class="small-text">LOADING SPINNER</p>
-	        <p class="body-paragraph">
-	            <span class="loading-spinner"></span> Loading...
-	        </p>
-	        <div class="small-text">LOADING SPINNER -LARGE (centered layout not included)</div>
-	    </div>
-	    <div class="layout-container">
-	        <div class="loading-spinner loading-spinner--large"></div>
-	        <p>
-	            Loading...
-	        </p>
-	    </div>
-	    <div class="layout-container layout-container--text-left">
-	        <div class="tabbed-panel">
-				<ul class="tabbed-panel__tablist">
-					<li class="tabbed-panel__tab tabbed-panel__tab--active">
-						<a class="tabbed-panel__tablink" href="#" rel="1">Teknisk</a>
-					</li>
-					<li class="tabbed-panel__tab">
-						<a class="tabbed-panel__tablink" href="#" rel="2">Design</a>
-					</li>
-				</ul>
-				<div class="tabbed-panel__display-frame">
-					<div class="tabbed-panel__content-pane tabbed-panel__content-pane--active" rel="1">
-						<h5>Eksempelkode</h5>
-						<pre><code class="html">&lt;div&nbsp;class=&quot;loading-spinner&nbsp;loading-spinner--large&quot;&gt;&lt;/div&gt;</code></pre>
-					</div>
-					<div class="tabbed-panel__content-pane" rel="2">
-						World
-					</div>
-				</div>
-			</div>
-	    </div>
-
-	</article>
-
-
+    </section>
 </main>
-<footer class="section-wrapper">
+
+<footer>
     <hr>
     <div class="content-container">
         <a href="#">© SpareBank 1</a>
     </div>
 </footer>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
-    <script>
-        hljs.configure({
-            tabReplace: '    ' // 2 spaces
-        })
-        hljs.initHighlightingOnLoad();
-    </script>
 
-    <script src="examples.js"></script>
-    <script src="examples.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+<script>
+    hljs.configure({
+        tabReplace: '    ' // 2 spaces
+    });
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="examples.js"></script>
 </body>
 </html>

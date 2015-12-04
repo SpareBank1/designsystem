@@ -9,9 +9,6 @@
     <link rel="stylesheet" type="text/css" href="examples.css">
 
     <style>
-        .page {
-            margin-top: 65px;
-        }
         .page .section-wrapper {
             border: 2px dashed transparent;
         }
@@ -49,15 +46,6 @@
         .page.-guides .-darkorange {
             color: rgba(255, 140, 0, 0.65);
         }
-        .menu {
-            position: fixed;
-            height: 65px;
-            width: 100%;
-            top: 0;
-            z-index: 1;
-            padding: 10px;
-            background-color: white;
-        }
 
     </style>
     <script>
@@ -73,28 +61,34 @@
     </script>
 </head>
 <body class="page -guides">
-    <nav class="menu">
-        <button class="action-button" onClick="javascript:toggleGuides()">Toggle guides</button>
-    </nav>
-    <header class="section-wrapper">
-        <div class="content-container">
-            <h1>Felles Frontend Style Guide</h1>
-            <p class="lead-paragraph">Inneholder generell styling for bruk utenfor komponenter. F.eks. typografi, knapper, farger, o.l. FFE følger
-                <a href="https://en.bem.info">BEM</a> for å sørge for god organisasjon av CSS-koden.
-            </p>
-        </div>
+<div class="sidebar-open">
+    <button class="sidebar-open__button secondary-button"></button>
+</div>
 
-        <nav class="content-container content-container--lg">
-            <ul class="navigation-bar">
-                <li class="navigation-bar__link"><a href="index.html">Typografi</a></li>
-                <li class="navigation-bar__link"><a href="colors.html">Farger</a></li>
-                <li class="navigation-bar__link"><a href="buttons.html">Knapper</a></li>
-                <li class="navigation-bar__link"><a href="form.html">Skjema</a></li>
-                <li class="navigation-bar__link navigation-bar__link--active"><a href="layout.html">Layout</a></li>
-                <li class="navigation-bar__link"><a href="containers.html">Containers</a></li>
-            </ul>
-        </nav>
-    </header>
+<nav class="sidebar">
+
+    <button class="sidebar__close-btn"></button>
+
+    <h2 class="h4">Innhold</h2>
+
+    <ul class="navigation-list">
+        <li class="navigation-list__link"><a href="index.html">Hjem</a></li>
+        <li class="navigation-list__link"><a href="typo.html">Typografi</a></li>
+        <li class="navigation-list__link"><a href="colors.html">Farger</a></li>
+        <li class="navigation-list__link"><a href="form.html">Skjema</a></li>
+        <li class="navigation-list__link"><a href="buttons.html">Knapper</a></li>
+        <li class="navigation-list__link navigation-list__link--active">
+            <a href="layout.html">Layout</a>
+            <ul class="navigation-list"><li class="navigation-list__link">
+                <input id="guidetoggle" type="checkbox" class="hidden-checkbox" onClick="javascript:toggleGuides()" checked />
+                <label for="guidetoggle" class="check-box">Toggle guides</label>
+            </li></ul>
+        </li>
+        <li class="navigation-list__link"><a href="containers.html">Containers</a></li>
+    </ul>
+</nav>
+
+<main class="styleguide-wrapper">
     <section class="section-wrapper section-wrapper--bg-sand">
         <div class="content-container">
             <h2 class="h2">Hawaii Layout System</h2>
@@ -259,8 +253,16 @@
     </section>
 
 
+</main>
 
-    <footer></footer>
+<footer>
+    <hr>
+    <div class="content-container">
+        <a href="#">© SpareBank 1</a>
+    </div>
+</footer>
 
-    </body>
+<script src="examples.js"></script>
+
+</body>
 </html>

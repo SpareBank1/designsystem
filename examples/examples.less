@@ -5,6 +5,7 @@
     position:absolute;
     top:10px;
     left:10px;
+    z-index: 9;
 
     &__button {
         padding: 0 15px;
@@ -146,35 +147,31 @@
 .navigation-list {
 
     &__link {
+        padding:10px;
+        padding-left:20px;
+        font-size:16px;
 
-        a {
-            display:block;
-            padding:10px;
-            padding-left:20px;
-            font-size:16px;
-
-            &:hover {
-                background: @white;
-                color: @blue-royal;
-            }
+        &:hover {
+            background: @white;
+            color: @blue-royal;
         }
 
         &--active {
-            a {
-                color: @blue-royal;
-                background: @white;
-            }
+            color: @blue-royal;
+            background: @white;
         }
     }
 }
 
-.article-wrapper {
-    margin-left:230px;
+.styleguide-wrapper {
+    margin-left: 230px;
+    width: ~"calc(100% - 230px)";
 }
 
 @media screen and (max-width: @breakpoint-lg) {
-    .article-wrapper {
-        margin-left:0px;
+    .styleguide-wrapper {
+        margin-left: 0;
+        width: 100%;
     }
 }
 
