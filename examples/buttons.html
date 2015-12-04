@@ -13,127 +13,139 @@
 </head>
 <body>
 
-    <div class="sidebar-open">
-		<button class="sidebar-open__button secondary-button"></button>
-	</div>
+<div class="sidebar-open">
+    <button class="sidebar-open__button secondary-button"></button>
+</div>
 
-	<aside class="sidebar">
+<nav class="sidebar">
 
-		<button class="sidebar__close-btn"></button>
+    <button class="sidebar__close-btn"></button>
 
-		<h2 class="h4">Innhold</h2>
+    <h2 class="h4">Innhold</h2>
 
-		<ul class="navigation-list">
-			<li class="navigation-list__link"><a href="index.html">Hjem</a></li>
-			<li class="navigation-list__link"><a href="typo.html">Typografi</a></li>
-			<li class="navigation-list__link"><a href="colors.html">Farger</a></li>
-			<li class="navigation-list__link"><a href="form.html">Skjema</a></li>
-			<li class="navigation-list__link navigation-list__link--active"><a href="buttons.html">Knapper</a></li>
-		</ul>
-	</aside>
+    <ul class="navigation-list">
+        <li class="navigation-list__link"><a href="index.html">Hjem</a></li>
+        <li class="navigation-list__link"><a href="typo.html">Typografi</a></li>
+        <li class="navigation-list__link"><a href="colors.html">Farger</a></li>
+        <li class="navigation-list__link"><a href="form.html">Skjema</a></li>
+        <li class="navigation-list__link navigation-list__link--active"><a href="buttons.html">Knapper</a></li>
+        <li class="navigation-list__link"><a href="layout.html">Layout</a></li>
+        <li class="navigation-list__link"><a href="containers.html">Containers</a></li>
+    </ul>
+</nav>
 
-<main class="section-wrapper">
-	<div class="content-container">
-		<h2 class="page-title">Knapper</h2>
-	</div>
+<main class="styleguide-wrapper">
+    <div class="section-wrapper">
+        <div class="content-container">
+            <h2 class="page-title">Knapper</h2>
+        </div>
 
-    <section class="content-container content-container--text-left">
-        <div class="small-text">ACTION BUTTON</div>
-        <div class="button-group" aria-live="polite">
-            <button class="action-button">Action button</button>
-            <button class="action-button action-button--loading">
+        <section class="content-container content-container--text-left">
+            <div class="small-text">ACTION BUTTON</div>
+            <div class="button-group" aria-live="polite">
+                <button class="action-button">Action button</button>
+                <button class="action-button action-button--loading">
                 <span class="action-button__label">
                     <span class="action-button__label-text action-button__label-text--loading">Action button</span>
                     <span class="action-button__label-spinner" aria-hidden="false">Spinner-tekst</span>
                 </span>
-            </button>
-        </div>
+                </button>
+            </div>
 
-        <div class="small-text">PRIMARY BUTTON</div>
-        <div class="button-group" aria-live="polite">
-            <button class="primary-button">Primary button</button>
-            <button class="primary-button primary-button--loading">
+            <div class="small-text">PRIMARY BUTTON</div>
+            <div class="button-group" aria-live="polite">
+                <button class="primary-button">Primary button</button>
+                <button class="primary-button primary-button--loading">
                 <span class="primary-button__label">
                     <span class="primary-button__label-text primary-button__label-text--loading">Primary button</span>
                     <span class="primary-button__label-spinner" aria-hidden="false">Spinner-tekst</span>
                 </span>
-            </button>
-        </div>
+                </button>
+            </div>
 
-        <div class="small-text">SECONDARY BUTTON</div>
-        <div class="button-group" aria-live="polite">
-            <button class="secondary-button">Secondary button</button>
-            <button class="secondary-button secondary-button--loading">
+            <div class="small-text">SECONDARY BUTTON</div>
+            <div class="button-group" aria-live="polite">
+                <button class="secondary-button">Secondary button</button>
+                <button class="secondary-button secondary-button--loading">
                 <span class="secondary-button__label">
                     <span class="secondary-button__label-text secondary-button__label-text--loading">Secondary button</span>
                     <span class="secondary-button__label-spinner" aria-hidden="false">Spinner-tekst</span>
                 </span>
-            </button>
-        </div>
+                </button>
+            </div>
 
-        <div class="small-text">SHORTCUT BUTTON</div>
-        <div class="button-group">
-            <button class="shortcut-button">Shortcut button
-                <span class="shortcut-button__icon-chevron icon-chevron icon-chevron--right icon-chevron--light-blue"></span>
-            </button>
-        </div>
-    </section>
+            <div class="small-text">SHORTCUT BUTTON</div>
+            <div class="button-group">
+                <button class="shortcut-button">Shortcut button
+                    <span class="shortcut-button__icon-chevron icon-chevron icon-chevron--right icon-chevron--light-blue"></span>
+                </button>
+            </div>
+        </section>
 
-	    <section class="content-container content-container--text-left">
-	        <div class="tabbed-panel">
-				<ul class="tabbed-panel__tablist">
-					<li class="tabbed-panel__tab tabbed-panel__tab--active">
-						<a class="tabbed-panel__tablink" href="#" rel="1">Teknisk</a>
-					</li>
-					<li class="tabbed-panel__tab">
-						<a class="tabbed-panel__tablink" href="#" rel="2">Design</a>
-					</li>
-				</ul>
-				<div class="tabbed-panel__display-frame">
-					<div class="tabbed-panel__content-pane tabbed-panel__content-pane--active" rel="1">
-						<h5>Generelt</h5>
+        <section class="content-container content-container--text-left">
+            <div class="tabbed-panel">
+                <ul class="tabbed-panel__tablist">
+                    <li class="tabbed-panel__tab tabbed-panel__tab--active">
+                        <a class="tabbed-panel__tablink" href="#" rel="1">Teknisk</a>
+                    </li>
+                    <li class="tabbed-panel__tab">
+                        <a class="tabbed-panel__tablink" href="#" rel="2">Design</a>
+                    </li>
+                </ul>
+                <div class="tabbed-panel__display-frame">
+                    <div class="tabbed-panel__content-pane tabbed-panel__content-pane--active" rel="1">
+                        <h5>Generelt</h5>
 
-						<div class="small-text">
-							<p>For å endre state på en knapp fra vanlig til "spinner" må følgende gjøres:</p>
-					        <ul class="bullet-list">
-					            <li>Legg til klassen <span class="inline-code">[knapp-variant]--loading</span> på selve knappen</li>
-					            <li>Legg til klassen <span class="inline-code">[knapp-variant]__label-text--loading</span> på label-text-elementet</li>
-					            <li>Sett <span class="inline-code">aria-hidden="false"</span> på <span class="inline-code">[knapp-variant]__label-spinner</span></li>
-					            <li>Optional: Legg til <span class="inline-code">disabled</span> attributt på knappen</li>
-				        	</ul>
-				        </div>
+                        <div class="small-text">
+                            <p>For å endre state på en knapp fra vanlig til "spinner" må følgende gjøres:</p>
+                            <ul class="bullet-list">
+                                <li>Legg til klassen <span class="inline-code">[knapp-variant]--loading</span> på selve
+                                    knappen
+                                </li>
+                                <li>Legg til klassen <span
+                                        class="inline-code">[knapp-variant]__label-text--loading</span>
+                                    på label-text-elementet
+                                </li>
+                                <li>Sett <span class="inline-code">aria-hidden="false"</span> på <span
+                                        class="inline-code">[knapp-variant]__label-spinner</span>
+                                </li>
+                                <li>Optional: Legg til <span class="inline-code">disabled</span> attributt på knappen
+                                </li>
+                            </ul>
+                        </div>
 
-				        <hr/>
+                        <hr/>
 
-						<h5>Eksempelkode</h5>
+                        <h5>Eksempelkode</h5>
 						<pre><code class="html">&lt;button&nbsp;class=&quot;action-button&quot;&gt;Action&nbsp;button&lt;/button&gt;
-&lt;button&nbsp;class=&quot;action-button action-button--loading&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;action-button__label&quot;&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;action-button__label-text action-button__label-text--loading&quot;&gt;Action&nbsp;button&lt;/span&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;action-button__label-spinner&quot;&nbsp;aria-hidden=&quot;false&quot;&gt;Spinner-tekst&lt;/span&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/span&gt;
-&lt;/button&gt;</code></pre>
-					</div>
-					<div class="tabbed-panel__content-pane" rel="2">
-						World
-					</div>
-				</div>
-			</div>
-	    </section>
+                            &lt;button&nbsp;class=&quot;action-button action-button--loading&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;action-button__label&quot;&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;action-button__label-text action-button__label-text--loading&quot;&gt;Action&nbsp;button&lt;/span&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;action-button__label-spinner&quot;&nbsp;aria-hidden=&quot;false&quot;&gt;Spinner-tekst&lt;/span&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/span&gt;
+                            &lt;/button&gt;</code></pre>
+                    </div>
+                    <div class="tabbed-panel__content-pane" rel="2">
+                        World
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 </main>
-<footer class="section-wrapper">
+<footer>
     <hr>
     <div class="content-container">
         <a href="#">© SpareBank 1</a>
     </div>
 </footer>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
-	<script>
-		hljs.configure({
-			tabReplace: '    ' // 2 spaces
-		})
-		hljs.initHighlightingOnLoad();
-	</script>
-    <script src="examples.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+<script>
+    hljs.configure({
+        tabReplace: '    ' // 2 spaces
+    });
+    hljs.initHighlightingOnLoad();
+</script>
+<script src="examples.js"></script>
 </body>
 </html>
