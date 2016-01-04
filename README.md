@@ -57,18 +57,19 @@ Gjøres mot master. Endringer som skal ut på tidligere `major` releases må por
 Squash alle commits til en enkelt commit.
 
 ##Publisering
-Ved hver major release lages en ny branch (f.eks. release/02-wistful-wizard) som kan vedlikeholdes ved siden av master. Master har da kun ikke lanserte endringer.
 
+###Minor og Patch release
 Ved lansering av ny minor eller patch versjon må i tillegg disse stegene følges:
 
 - Oppdater `CHANGELOG.md`
 - Skift til branchen det skal releases fra
-- Backport endringene som skal leveres og endringen i CHANGELOG.md.
+- Backport endringene som skal leveres og endringen i CHANGELOG.md ved å cherry picke endringene fra master
 - `npm version [patch|minor]` (dette oppretter også en tag med versjonsnummeret)
 - `git push && git push --tags`
 - `npm publish --registry https://nexus.intern.sparebank1.no/nexus/content/repositories/npm-internal`
 
-Ved lansering av ny major versjon må disse stegene følges:
+###Major release
+Ved hver major release lages en ny branch (f.eks. release/02-wistful-wizard) som kan vedlikeholdes ved siden av master. Master har da kun ikke lanserte endringer.
 
 - Oppdater `CHANGELOG.md` på master
 - Opprett release branch og skift til denne
