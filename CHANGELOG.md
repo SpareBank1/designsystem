@@ -1,5 +1,12 @@
 # Changelog
 
+## v.2.1.0 (04.01.2016)
+
+* FFE-3 Adding layout system
+* FFE-4 Using vendor fonts without hinting to avoid IE-issues and updated styleguide
+* FFE-4 Fikser strong og fjerner unødvendige kodeeksempler på typografi
+* Stilguide endringer (lagt til ny meny og ny struktur)
+
 ## v.2.0.0 (26.11.2015)
 
 * Bytter fra RSCSS til BEM som kodestandard for CSS.
