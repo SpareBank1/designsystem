@@ -10,45 +10,46 @@
         margin: 0 auto;
         display: table;
         border-bottom: 1px solid @grey-light;
+    }
 
-        > .ffe-header__container {
-          &--mobile {
-              padding: 10px 20px;
-              text-align: center;
+    &__branding-block {
+        height: 50px;
+        padding: 15px 0;
+        margin-top: 10px;
+    }
 
-              > img {
-                  height: 30px;
-              }
-              > .ffe-header__icon-burger {
-                  float: left;
-                  cursor: pointer;
-              }
-              > .ffe-header__icon-user {
-                  float: right;
-                  cursor: pointer;
-              }
-          }
-          &--desktop {
-              display: none;
-              max-width: @app-width;
-              min-width: 320px;
-              margin: auto;
-          }
+    &__branding-block-logo {
+        height: 20px;
+    }
+
+    &__container {
+        &--mobile {
+            padding: 10px 20px;
+            text-align: center;
+
+            img {
+                height: 30px;
+            }
         }
 
-        > .ffe-header__branding-block {
-            height: 50px;
-            padding: 15px 0;
-            margin-top: 10px;
-        }
-
-        > .ffe-header__branding-block > .logo {
-            height: 20px;
+        &--desktop {
+            display: none;
+            max-width: @app-width;
+            min-width: 320px;
+            margin: auto;
         }
     }
+
+    &__icon-burger {
+        float: left;
+        cursor: pointer;
+    }
+
+    &__icon-user {
+        float: right;
+        cursor: pointer;
+    }
 }
-
-
 
 
 @media screen and (min-width: @breakpoint-md) {
@@ -57,96 +58,96 @@
 
         &__section-wrapper {
             border-bottom: 2px solid @grey-light;
+        }
 
-            > .ffe-header__container {
-                &--mobile {
-                    display: none;
-                }
-                &--desktop {
-                    display: table;
-                    width: 100%;
-                    padding: 30px 20px;
-                    transition: padding 0.2s ease-in-out;
-
-                    > .ffe-header__component {
-                        display: table-cell;
-                        width: 33%;
-                        vertical-align: middle;
-
-                        &:first-child{
-                            text-align: left;
-                        }
-                        &:last-child{
-                            text-align: right;
-                        }
-
-                        a > .ffe-header__logo {
-                            height: 40px;
-                            margin: 0;
-                            transition: all .2s ease-in-out;
-                        }
-
-                        > .ffe-header__heading {
-                            font-size: 22px;
-                            font-family: MuseoSans-500,arial,sans-serif;
-                            line-height: 30px;
-                            transition: font-size .2s ease-in-out;
-                            margin: 0;
-                        }
-
-                        > .ffe-header__profile-type {
-                            font-size: 16px;
-                            font-family: MuseoSans-500,arial,sans-serif;
-                            margin-right: 8px;
-                        }
-
-                        > .ffe-header__profile-name {
-                            font-size: 16px;
-                            margin-right: 8px;
-                            display: inline-block;
-
-                            &:after {
-                                content:'\203A';
-                                font-size: 32px;
-                                vertical-align: sub;
-                                margin: 7px;
-
-                            }
-                        }
-                    }
-                }
+        &__container {
+            &--mobile {
+                display: none;
             }
-
-            > .ffe-header__branding-block {
-                height: 60px;
-                padding: 17px 0;
+            &--desktop {
+                display: table;
+                width: 100%;
+                padding: 30px 20px;
+                transition: padding 0.2s ease-in-out;
             }
+        }
 
-            > .ffe-header__branding-block > .ffe-header__logo {
-                height: 25px;
+        &__component {
+            display: table-cell;
+            width: 33%;
+            vertical-align: middle;
+
+            &:first-child{
+                text-align: left;
             }
+            &:last-child{
+                text-align: right;
+            }
+        }
+
+        &__logo {
+            height: 40px;
+            margin: 0;
+            transition: all .2s ease-in-out;
+        }
+
+        &__logo--sm {
+            height: 26px;
+            margin-top: 5px;
+        }
+
+        &__heading {
+            font-size: 22px;
+            font-family: MuseoSans-500,arial,sans-serif;
+            line-height: 30px;
+            transition: font-size .2s ease-in-out;
+            margin: 0;
+        }
+
+        &__heading--sm {
+            font-size: 18px;
+        }
+
+        &__profile-type {
+            font-size: 16px;
+            font-family: MuseoSans-500,arial,sans-serif;
+            margin-right: 8px;
+        }
+
+        &__profile-name {
+            font-size: 16px;
+            margin-right: 8px;
+            display: inline-block;
+
+            &:after {
+                content:'\203A';
+                font-size: 32px;
+                vertical-align: sub;
+                margin: 7px;
+
+            }
+        }
+
+        &__branding-block {
+            height: 60px;
+            padding: 17px 0;
+        }
+
+        &__branding-block-logo {
+            height: 25px;
         }
 
         &--thin {
             box-shadow: 0 0 10px rgba(0,0,0,0.2);
             border-bottom: none;
 
-            > .ffe-header-section-wrapper > .ffe-header__container--desktop {
-                padding: 5px 20px;
-                > .ffe-header__component{
-                    a > .ffe-header__logo {
-                        height: 26px;
-                        margin-top: 5px;
-                    }
-                    > .ffe-header__heading {
-                        font-size: 18px;
-                    }
-                }
-
-                > .ffe-header__component:last-child > * {
-                    display: none;
-                }
+            .ffe-header__component:last-child > * {
+                display: none;
             }
+        }
+
+        &__section-wrapper--thin {
+            padding: 5px 20px;
         }
     }
 }
