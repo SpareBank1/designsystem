@@ -6,7 +6,7 @@ Felles header-komponent for SpareBank 1.
 
 ## Bruk
 
-<code>@import ../node_modules/header-wrapper</code> i en less-fil i ditt prosjekt.
+<code>@import ../node_modules/ffe-header/ffe-header</code> i en less-fil i ditt prosjekt.
 
 Merk at ffe-core er en avhengighet for ffe-header (se peerDependencies i package.json).
 

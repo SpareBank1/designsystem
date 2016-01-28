@@ -4,7 +4,7 @@
   "description": "Felles header for SpareBank 1",
   "main": "index.js",
   "scripts": {
-    "examples": "lessc examples/examples.less examples/examples.css && cp -R node_modules/ffe-core/fonts/ /fonts/ && echo Now open /examples/index.html to see styleguide."
+    "examples": "lessc examples/examples.less examples/examples.css && cp -R node_modules/ffe-core/fonts/* fonts/ && echo Now open /examples/index.html to see styleguide."
   },
   "repository": {
     "type": "git",
@@ -16,7 +16,7 @@
   "author": "Glenn Brownlee <glenn.brownlee@sparebank1.no>",
   "license": "ISC",
   "peerDependencies": {
-    "ffe-core": "1.x"
+    "ffe-core": "2.x"
   },
   "devDependencies": {
     "less": "^2.5.3"
