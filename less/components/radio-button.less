@@ -15,9 +15,28 @@
     }
 
     &:before {
-      .sb1-radioblob();
+      content: '';
+      background-color: @white;
+      border: 2px solid @grey;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      position: absolute;
+      pointer-events: none;
       left: 0;
       top: 3px;
+    }
+
+    &:after {
+      content: '';
+      border: 2px solid transparent;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      position: absolute;
+      left: 0;
+      top: 3px;
+      pointer-events: none;
     }
   }
 
@@ -39,7 +58,12 @@
     }
 
     &:checked + .radio-button:before {
-      .sb1-radioblob-active();
+      background-color: @blue-royal-light-wcag;
+      border: 5px solid @white;
+    }
+
+    &:checked + .radio-button:after {
+      border-color: @blue-royal-light-wcag;
     }
 
     &:focus + .radio-button:before {

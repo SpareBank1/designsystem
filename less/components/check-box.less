@@ -60,13 +60,12 @@
 
     &:active + label:before,
     &:focus + label:before {
-        border-color: @blue-royal-light-wcag;
         box-shadow: 0 0 0 2px @blue-focus;
     }
 
     &:checked + label:before {
         border-color: @blue-royal-light-wcag;
-        background-color: @blue-royal-light-wcag;
+        background-color: @white;
     }
 
     &:focus + label:before {
@@ -75,7 +74,7 @@
 
     &:checked + label:after {
         animation: checkmark 0.4s;
-        border-color: white;
+        border-color: @blue-royal-light-wcag;
     }
 }
 
