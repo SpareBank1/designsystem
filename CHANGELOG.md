@@ -1,5 +1,13 @@
 # Changelog
 
+## v.2.1.1 (04.02.2016)
+
+* Fix: 0 vertikal margin for content-container--no-space regardless of screen size
+* Examples: it's better to use https:// URL than protocol relative
+* Styling changes for check-box
+* Styling changes for radio-button
+* Make sure --no-margin variants of headers are always valid
+
 ## v.2.1.0 (04.01.2016)
 
 * FFE-3 Adding layout system
