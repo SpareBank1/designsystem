@@ -53,6 +53,7 @@ if (argv.opts) {
 gulp.task('default', function () {
     return gulp.src(options.icons, {cwd: 'icons'})
         .pipe(plumber())
+        .pipe(replace(' fill="#002776"', '')) // Remove royal-blue. Instead, use CSS to give the SVG its primary color
         .pipe(svgSprite(options.config)).on('error', function (error) { console.log(error); })
         .pipe(gulp.dest(options.dest, { cwd: options.cwd }));
 });

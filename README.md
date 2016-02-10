@@ -11,7 +11,7 @@ Instead, ffe-icons should be used as a repository from where your build fetches 
 the sprite file size as low as possible.
 
 
-### Using ffe-icons
+### Including ffe-icons
 First add an _icons.json_ file to your project where you define what icons you want. Additionally, you can
 pass in options that [svg-sprite](https://github.com/jkphl/svg-sprite) support to override defaults.
 
@@ -20,7 +20,7 @@ Example _icons.json_:
 ```
 
 {
-    "dest": "app/images/",
+    "dest": "app/",
     "icons": [
         "1-2-3-sirkel-ikon",
         "bamse-ikon",
@@ -62,4 +62,36 @@ Then, in your terminal:
 A fresh SVG sprite should now have arrived at your destination.
 
 Note: **it is recommended that you _not_ check the generated sprite into source control, but instead let ffe-icons
-generate it at build-time.** This reduces the number of manual build steps, and keeps you up-to-date. 
+generate it at build-time.** This reduces the number of manual build steps, and keeps you up-to-date.
+
+### Using the ffe-icons sprite
+
+The primary color (royal blue) is removed from the SVG. This is so CSS can be used to override the color. To re-instate
+royal blue as the primary color, add the following to your global icon class:
+
+```
+.icon {
+    fill: "#002776"; // Or, even better:
+    fill: @royal-blue; // assuming use and import of ffe-core variables
+    
+    // To add alternatives, replace the fill attribute with whatever color you need
+    &--white {
+       fill: #fff;
+    }    
+    &--black {
+       fill: #000;    
+    }
+}
+```  
+
+Non-royal blue colors are left as-is, so details in other colors are left untouched.
+
+In your markup: 
+
+```
+<svg class="icon">
+    <use xmlns:xlink="http://www.w3.org/1999/xlink" 
+         xlink:href="/app/symbol/sb1-icons.svg#person-ikon"></use>
+    <!-- <desc>Alt text goes here</desc> -->
+</svg>
+```
