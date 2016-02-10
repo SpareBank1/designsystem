@@ -1,7 +1,8 @@
 # Felles Front End Icons
 
 This is a repository for sharing icon SVGs between projects. As long as a new icon fits in the mix of existing ones,
-feel free to add it. 
+feel free to add it. If only minor edits are needed (padding relative to ther icons for instance) you can try this 
+[web-based SVG editor](https://github.com/SVG-Edit/svgedit). 
 
 The package will build an SVG sprite with all icons and put it in _dist/sb1-icons/_, along with an HTML page where
 the different icons can be viewed. **This file should in most cases not be used directly!**
@@ -61,5 +62,4 @@ Then, in your terminal:
 A fresh SVG sprite should now have arrived at your destination.
 
 Note: **it is recommended that you _not_ check the generated sprite into source control, but instead let ffe-icons
-generate it at build-time.** This is to ensure that, in the event of an icon being altered, it is updated for all
-ffe-icons users.
+generate it at build-time.** This reduces the number of manual build steps, and keeps you up-to-date. 
