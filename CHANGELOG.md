@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 1.0.1
+* Added plaster-ikon
+![plaster-ikon](https://stash.intern.sparebank1.no/projects/FFE/repos/ffe-icons/browse/icons/plaster-ikon.svg?raw)
+
 ## Version 1.0.0
 * Renamed default sprite to ffe-icons.svg
 * Renamed desktop-ikon to laptop-ikon
