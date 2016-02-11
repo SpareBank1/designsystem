@@ -4,8 +4,8 @@
   "description": "Felles Front End Icons",
   "main": "index.js",
   "scripts": {
-    "sb1-icons": "gulp sb1-icons",
-    "sfo-icons": "gulp sfo-icons"
+    "postinstall": "npm start",
+    "start": "gulp"
   },
   "repository": {
     "type": "git",
@@ -15,9 +15,10 @@
   "license": "ISC",
   "devDependencies": {
     "gulp": "^3.9.0",
-    "gulp-concat": "^2.6.0",
     "gulp-plumber": "^1.0.1",
     "gulp-replace": "^0.5.4",
-    "gulp-svg-sprite": "^1.2.10"
+    "gulp-svg-sprite": "^1.2.10",
+    "object-assign": "^4.0.1",
+    "yargs": "^3.32.0"
   }
 }
