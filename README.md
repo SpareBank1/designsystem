@@ -1,10 +1,10 @@
 # Felles Front End Icons
 
 This is a repository for sharing icon SVGs between projects. As long as a new icon fits in the mix of existing ones,
-feel free to add it. If only minor edits are needed (padding relative to ther icons for instance) you can try this 
+feel free to add it. If only minor edits are needed (padding for instance) you can try this
 [web-based SVG editor](https://github.com/SVG-Edit/svgedit). 
 
-The package will build an SVG sprite with all icons and put it in _dist/sb1-icons/_, along with an HTML page where
+The package will build an SVG sprite with all icons and put it in _dist/ffe-icons/_, along with an HTML page where
 the different icons can be viewed. **This file should in most cases not be used directly!**
 
 Instead, ffe-icons should be used as a repository from where your build fetches only the icons that it needs, to keep
@@ -91,7 +91,7 @@ In your markup:
 ```
 <svg class="icon">
     <use xmlns:xlink="http://www.w3.org/1999/xlink" 
-         xlink:href="/app/symbol/sb1-icons.svg#person-ikon"></use>
+         xlink:href="/app/symbol/ffe-icons.svg#person-ikon"></use>
     <!-- <desc>Alt text goes here</desc> -->
 </svg>
 ```
