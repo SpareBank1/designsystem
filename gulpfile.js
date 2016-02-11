@@ -24,7 +24,7 @@ var gulp = require('gulp'),
             },
             'mode': {
                 symbol: {
-                    sprite: 'sb1-icons.svg',
+                    sprite: 'ffe-icons.svg',
                     example: true
                 }
             }
