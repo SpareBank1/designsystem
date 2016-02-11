@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 1.0.1
+* Added plaster-ikon
+![plaster-ikon](***REMOVED***)
+
 ## Version 1.0.0
 * Renamed default sprite to ffe-icons.svg
 * Renamed desktop-ikon to laptop-ikon
