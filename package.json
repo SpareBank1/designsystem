@@ -4,7 +4,6 @@
   "description": "Felles Front End Icons",
   "main": "index.js",
   "scripts": {
-    "postinstall": "npm start",
     "start": "gulp"
   },
   "repository": {
