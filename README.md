@@ -35,19 +35,16 @@ Example `icons.json`:
 
 ```
 
-Then start the build by running ffe-icons gulpfile. Pass in the path to your `icons.json` file as
-the `--opts` argument, here assuming `icons.json` is in the same directory as your `node_modules`:
-
-`$ cd ./node_modules/ffe-icons && node ./node_modules/gulp/bin/gulp --opts=../../icons.json && cd ../../`
-
-The command above is a typical npm script candidate. In your projects `package.json`:
+To have npm be able to find the gulp dependency of ffe-icons in node_modules gulp has to be started from npm.
+In your projects `package.json`:
 
 ```
 {
     "name": "awesome-client",
     "scripts": {
         ...
-        "ffe:icons": "cd ./node_modules/ffe-icons && node ./node_modules/gulp/bin/gulp --opts=../../icons.json && cd ../../",
+        "ffe:icons": "gulp --no-color --gulpfile node_modules/ffe-icons/gulpfile.js --opts=../../icons.json",
+        "#": "--gulpfile sets the cwd to be the dir containing the gulpfile, so --opts has to step up two dirs to find icons.json"
         ...
     }
 }
