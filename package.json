@@ -4,12 +4,11 @@
   "description": "Felles Front End Icons",
   "main": "index.js",
   "scripts": {
-    "postinstall": "npm start",
     "start": "gulp"
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git@stash.intern.sparebank1.no:22/sfo/sfo-icons.git"
+    "url": "ssh://git@stash.intern.sparebank1.no:22/ffe/ffe-icons.git"
   },
   "author": "",
   "license": "ISC",

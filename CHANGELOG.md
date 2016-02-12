@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 1.0.2
+* Removed postinstall script, since some build tools had trouble finding gulp at that stage
+* Updated package.json with the correct repository URL
+
 ## Version 1.0.1
 * Added plaster-ikon
 ![plaster-ikon](https://stash.intern.sparebank1.no/projects/FFE/repos/ffe-icons/browse/icons/plaster-ikon.svg?raw)
