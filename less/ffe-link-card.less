@@ -1,21 +1,7 @@
-/*
-.card-list {
-    > li {
-        display: inline-block;
-        width: 100%;
-
-        @media screen and (min-width: @breakpoint-sm) {
-            width: auto;
-        }
-
-    }
-
-}
-*/
+@import "animation.less";
 
 .ffe-link-card {
-    .card-sequential-animation();
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0 rgba(0,0,0,0.1);
     display: inline-block;
     margin: 5px 0;
     overflow: hidden;
@@ -33,78 +19,166 @@
     border-radius: 5px;
     cursor: pointer;
     transition: border-color 0.2s;
+    .card-sequential-animation();
     outline: none;
 
     &:focus {
         box-shadow: 0 0 0 2px @blue-focus;
     }
-
     &:focus,
     &:active,
     &:hover {
         border-color: @blue-royal-light-wcag;
     }
 
-    &__icon {
-        vertical-align: middle;
-        margin-right: 10px;
-        width: 50px;
-        height: 50px;
-        float: left;
-        margin: 0;
+
+    &__status {
+        animation: showCardNotification 0.3s 1s forwards;
+        transform: translateY(-38px);
+        background-color: @sand-25;
+        color: @blue-royal;
+        margin: 0 auto;
+        text-transform: uppercase;
+        padding: 0;
+        width: 75%;
+        font-size: 14px;
+        text-align: center;
+        position: relative;
+        top: -10px;
     }
 
     &__heading {
+        display: inline-block;
         vertical-align: middle;
         color: @blue-royal-light-wcag;
-        padding-left: 0;
+        max-width: 160px;
+    }
+
+    &__icon {
+        vertical-align: middle;
+        width: 60px;
+        height: 60px;
+        margin-right: 10px;
+    }
+
+    &--center {
+        text-align: center;
+    }
+    &--center > &__heading {
+        padding-top: 16px;
         max-width: 100%;
     }
 
-    &__sub-heading {
+    &--large > &__heading {
+        padding-left: 0;
+        max-width: 100%;
+    }
+    &--large > &__icon {
+        float: left;
+        width: 50px;
+        height: 50px;
+        margin: 0;
+    }
+    &--large > &__sub-heading {
         color: @blue-royal;
         line-height: 1.3;
     }
-
-    &__details {
+    &--large > &__price {
         color: @blue-royal;
         font-family: "MuseoSansRounded-700", arial, sans-serif;
         font-size: 20px;
         line-height: 2.2;
     }
+    &--large > p,
+    &--large-square > p {
+        display: block;
+        margin-left: 60px;
+    }
 
+    &--plain {
+        transform: none;
+        cursor: auto;
+        padding: 20px;
+    }
+    &--plain > &__number {
+        &:extend(.h1);
+        border: 2px solid #002776;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+        padding: 6px 15px;
+        float: left;
+    }
+    &--plain > p {
+        margin-left: 65px;
+    }
+    &--plain:focus,
+    &--plain:active,
+    &--plain:hover {
+        border-color: @grey-light;
+    }
 }
 
 @media screen and (min-width: @breakpoint-sm) {
-
     .ffe-link-card {
-        height: 366px;
         width: 280px;
-        min-width: 200px;
+        height: 100px;
         margin: 0 15px 30px;
-        text-align: center;
-        padding: 40px 10px;
+        padding: 18px;
+        min-width: 200px;
 
         &__icon {
+            width: 60px;
+            height: 60px;
+        }
+
+        &__illustration {
+            display: block;
+            max-height: 135px;
+            max-width: 100%;
+        }
+
+        &--medium,
+        &--large {
+            height: 366px;
+            width: 280px;
+            text-align: center;
+            padding: 40px 10px;
+        }
+        &--medium > &__status,
+        &--large > &__status {
+            margin: 0 auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 3px;
+            font-size: 16px;
+        }
+        &--medium > &__icon,
+        &--large > &__icon {
             float: none;
             width: 100px;
             height: 100px;
             margin: 0 auto 10px auto;
         }
-
-        &__heading {
+        &--medium > &__heading,
+        &--large > &__heading {
             font-family: "MuseoSansRounded-500", arial, sans-serif;
             font-size: 20px;
             margin-bottom: 20px;
             margin-top: 0;
-            max-width: 250px;
+            max-width: 100%;
         }
-
-        &__sub-heading {
+        &--medium > &__sub-heading,
+        &--large > &__sub-heading {
             font-size: 18px;
         }
-
-        &__details {
+        &--medium > &__price,
+        &--large > &__price {
+            color: @blue-royal;
+            font-family: "MuseoSansRounded-700", arial, sans-serif;
             font-size: 24px;
             line-height: 110px;
             position: absolute;
@@ -112,45 +186,31 @@
             right: 0;
             left: 0;
         }
+        &--medium > p,
+        &--large > p {
+            margin-left: 0;
+        }
 
+        &--medium {
+            height: 240px;
+        }
+        &--medium  > &__sfo-icon {
+            display: block;
+        }
+        &--medium  > &__heading {
+            display: block;
+            padding: 0;
+        }
 
+        &--plain > &__number {
+            width: 70px;
+            height: 70px;
+            padding: 0;
+            float: none;
+        }
+        &--plain > p {
+            margin: 30px 0;
+            padding: 0;
+        }
     }
-
-}
-
-
-@keyframes showInsuranceCards {
-    from {
-        opacity: 0;
-    }
-
-    30% {
-        box-shadow: 0 0 28px rgba(0,0,0,0.1);
-        transform: scale(1.02);
-        opacity: 1;
-    }
-
-    100% {
-        transform: scale(1);
-    }
-
-    to {
-        opacity: 1;
-    }
-
-}
-
-.card-sequential-animation {
-    &:nth-child(0) { animation: showInsuranceCards 0.5s 0 forwards ease-out; }
-    &:nth-child(1) { animation: showInsuranceCards 0.5s 0.1s forwards ease-out; }
-    &:nth-child(2) { animation: showInsuranceCards 0.5s 0.2s forwards ease-out; }
-    &:nth-child(3) { animation: showInsuranceCards 0.5s 0.3s forwards ease-out; }
-    &:nth-child(4) { animation: showInsuranceCards 0.5s 0.4s forwards ease-out; }
-    &:nth-child(5) { animation: showInsuranceCards 0.5s 0.5s forwards ease-out; }
-    &:nth-child(6) { animation: showInsuranceCards 0.5s 0.6s forwards ease-out; }
-    &:nth-child(7) { animation: showInsuranceCards 0.5s 0.7s forwards ease-out; }
-    &:nth-child(8) { animation: showInsuranceCards 0.5s 0.8s forwards ease-out; }
-    &:nth-child(9) { animation: showInsuranceCards 0.5s 0.9s forwards ease-out; }
-    &:nth-child(10) { animation: showInsuranceCards 0.5s 1s forwards ease-out; }
-    &:nth-child(n+11) { animation: showInsuranceCards 0.5s 1.1s forwards ease-out; }
 }
