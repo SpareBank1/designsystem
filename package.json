@@ -1,0 +1,28 @@
+{
+  "name": "ffe-details-list",
+  "version": "0.0.1",
+  "description": "Opplisting av attributter i en grid",
+  "main": "index.js",
+  "scripts": {
+    "examples": "lessc examples/examples.less examples/examples.css && mkdirp examples/fonts && cp -R node_modules/ffe-core/fonts/* examples/fonts/ && echo Now open /examples/index.html to see styleguide."
+  },
+  "repository": {
+    "type": "git",
+    "url": "***REMOVED***"
+  },
+  "publishConfig": {
+    "registry": "***REMOVED***"
+  },
+  "author": "Ivar Nilsen <ivar.nilsen@sparebank1.no>",
+  "license": "ISC",
+  "peerDependencies": {
+    "ffe-core": "2.x"
+  },
+  "devDependencies": {
+    "less": "^2.5.3"
+  },
+  "dependencies": {
+    "ffe-core": "^2.1.1",
+    "mkdirp": "^0.5.1"
+  }
+}
