@@ -1,5 +1,7 @@
 # Changelog
 
+For version 2.x, removed all existing icons and added _ICON_REQUIREMENTS.md to have a clean slate. Also updated README.
+
 ## Version 1.0.3
 * Made devDependencies actual dependencies so package consumers get them...
 * Re-added postinstall script
