@@ -1,7 +1,7 @@
 # Felles Front End Icons
 
 This is a repository for sharing icon SVGs between projects. When your project produces a new icon,
-please add it to ffe-icons as a patch to the current main version so other teams can make use of it.
+please add it to ffe-icons so other teams can make use of it.
 
 ffe-icons will build an SVG sprite with all icons and put it in `dist/symbol/`, along with an HTML page where
 the different icons can be viewed. **This file should in most cases not be used directly!**
@@ -103,9 +103,11 @@ See the current status on browser support for SVG fragments on [caniuse.com](can
 
 ## Adding a new icon to ffe-icons
 
-When your project produces a new icon, please add it to ffe-icons as a patch to the current main version so other teams
+When your project produces a new icon, please add it to ffe-icons as a minor update to the current main version so other teams
 can make use of it. To do that, follow the steps described below. Ask around in the HipChat room Alliansens Frontend-forum
 if you get stuck.
+
+Also before starting, verify your SVG meets the criteria listed in *icons/_ICON_REQUIREMENTS.md*
 
 If you haven't already, fork this repository and clone it on your machine.
 
@@ -116,7 +118,7 @@ If you haven't already, fork this repository and clone it on your machine.
 5. Commit your changes to the `master` branch, and push the changes to origin. Create a pull request from your repo to ffe.
 6. Checkout to the latest release branch (named something like "release/_version_-_version-name_")
 7. Cherry-pick the changes you made on `master` to the release branch
-8. Run `$ npm version patch` [^3].
+8. Run `$ npm version minor` [^3].
 9. Push the change and tag to origin: `$ git push && git push --tags`
 10. Publish the new version to Nexus: `$ npm publish --registry https://nexus.intern.sparebank1.no/nexus/content/repositories/npm-internal`
 
