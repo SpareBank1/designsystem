@@ -14,11 +14,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "deep-assign": "^2.0.0",
     "gulp": "^3.9.0",
     "gulp-plumber": "^1.0.1",
     "gulp-replace": "^0.5.4",
     "gulp-svg-sprite": "^1.2.10",
-    "object-assign": "^4.0.1",
     "yargs": "^3.32.0"
   }
 }
