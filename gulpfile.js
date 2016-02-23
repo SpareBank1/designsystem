@@ -4,7 +4,7 @@ var gulp = require('gulp'),
     svgSprite = require('gulp-svg-sprite'),
     plumber = require('gulp-plumber'),
     replace = require('gulp-replace'),
-    objectAssign = require('object-assign'),
+    deepAssign = require('deep-assign'),
 
     argv = require('yargs').argv,
 
@@ -33,10 +33,15 @@ var gulp = require('gulp'),
 
 
 if (argv.opts) {
-    var opts = require(argv.opts);
-    options = objectAssign(options, opts);
-
     options.cwd = '../../';
+    
+    var opts = require(argv.opts);
+    
+    // deepAssign does not handle arrays, so copy the icon array and delete it from opts before assigning the rest
+    options.icons = opts.icons.slice(0);
+    delete opts.icons;  
+    
+    options = deepAssign(options, opts);
 
     // convenience to avoid having file extension in config
     options.icons = options.icons.map(function (icon) {

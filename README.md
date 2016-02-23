@@ -26,10 +26,14 @@ Example `icons.json`:
         "flamme-ikon",
         "logo-sparebank1",
         "twitter-ikon"
-    }
-
+    ],
     "config": {
-        "log": "error"
+        "log": "error",
+        "mode": {
+            "symbol": {
+                "sprite": "awesome-icons.svg"
+            }
+        }
     }
 }
 
