@@ -71,7 +71,7 @@ royal blue as the primary color, add the following to your global icon class:
 ```
 .icon {
     fill: "#002776"; // Or, even better:
-    fill: @royal-blue; // assuming use and import of ffe-core variables
+    fill: @blue-royal; // assuming use and import of ffe-core variables
     
     // To add alternatives, replace the fill attribute with whatever color you need
     &--white {
