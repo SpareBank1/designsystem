@@ -1,0 +1,71 @@
+.ffe-message-box {
+    text-align: center;
+
+    &__box {
+        padding: @app-margin*2 @app-margin;
+
+        &--tips {
+            background-color: @sand-25;
+        }
+
+        &--info {
+            background-color: @blue-royal-light-wcag;
+        }
+
+        &--success {
+            background-color: @green;
+        }
+
+        &--warning {
+            background-color: @orange-wcag;
+        }
+
+        &--action {
+            background-color: @grey-light-bg;
+        }
+
+    }
+
+    &__icon {
+        margin-bottom: -20px;
+        background-color: #FFF;
+        fill: #002776;
+        border-radius: 50%;
+        padding: 10px;
+        height: 60px;
+        width: 60px;
+    }
+
+    @media screen and (min-width: @breakpoint-sm) {
+
+        &__icon {
+            height: 70px;
+            width: 70px;
+            margin-bottom: -25px;
+        }
+
+    }
+
+    @media screen and (min-width: @breakpoint-md) {
+
+        &__icon {
+            height: 80px;
+            width: 80px;
+            margin-bottom: -30px;
+        }
+
+    }
+
+    @media print {
+        &__box {
+            border: 2px dashed @black;
+        }
+
+        &__icon {
+            border-bottom: 2px dashed @black;
+            margin-bottom: -30px;
+        }
+
+    }
+
+}
