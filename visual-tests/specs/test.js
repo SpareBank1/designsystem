@@ -13,7 +13,7 @@ fs.readdirSync('./examples')
            .setCaptureElements('body')
            .before(function(actions, find) {
                 actions.executeJS(function(window) {
-                  Array.prototype.forEach.call(document.querySelectorAll(".loading-spinner,  .action-button__label-spinner, .primary-button__label-spinner, .secondary-button__label-spinner"), function(el) {
+                  Array.prototype.forEach.call(document.querySelectorAll(".ffe-loading-spinner,  .ffe-action-button__label-spinner, .ffe-primary-button__label-spinner, .ffe-secondary-button__label-spinner"), function(el) {
                      // Removes spinning/animation elements that impair test stability
                      el && el.parentNode.removeChild(el);
                   });

@@ -1,5 +1,10 @@
 # Changelog
 
+
+## v.3.0.0 (07.03.2016)
+* All css classes now prefixed with `ffe-`
+* All less color variables now prefixed with `ffe-`
+
 ## v.2.1.1 (04.02.2016)
 
 * Fix: 0 vertikal margin for content-container--no-space regardless of screen size

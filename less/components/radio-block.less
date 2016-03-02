@@ -1,4 +1,4 @@
-.radio-block {
+.ffe-radio-block {
     margin-top: 20px;
     max-width: 600px;
     min-width: 260px;
@@ -7,16 +7,16 @@
     &__content {
         width: 100%;
         position: relative;
-        border: 2px solid @grey-light;
+        border: 2px solid @ffe-grey-light;
         border-radius: 5px;
         display: inline-block;
         margin-right: 10px;
-        color: @black;
-        background-color: white;
+        color: @ffe-black;
+        background-color: @ffe-white;
         cursor: pointer;
 
         &:before {
-            .sb1-radioblob();
+            .ffe-sb1-radioblob();
             left: 20px;
             top: 10px;
             z-index: 1;
@@ -46,39 +46,39 @@
 
 
 // Weakness: Requires specific dom structure to work. Rewrite?
-.radio-input {
+.ffe-radio-input {
 
-    & + .radio-block__content > .radio-block__header {
-        border-bottom: thin solid @grey-light;
+    & + .ffe-radio-block__content > .ffe-radio-block__header {
+        border-bottom: thin solid @ffe-grey-light;
     }
 
-    & + .radio-block__content[role="presentation"] > .radio-block__header {
+    & + .ffe-radio-block__content[role="presentation"] > .ffe-radio-block__header {
         border-bottom: none;
     }
 
-    &:checked + .radio-block__content {
-        border: 2px solid @blue-royal;
+    &:checked + .ffe-radio-block__content {
+        border: 2px solid @ffe-blue-royal;
 
-        > .radio-block__header {
+        > .ffe-radio-block__header {
             border-bottom: none;
-            background-color: @blue-royal;
-            color: white;
+            background-color: @ffe-blue-royal;
+            color: @ffe-white;
         }
 
     }
 
-    &:checked + .radio-block__content:before {
-        .sb1-radioblob-active();
+    &:checked + .ffe-radio-block__content:before {
+        .ffe-sb1-radioblob-active();
     }
 
-    &:focus + .radio-block__content {
-        box-shadow: 0 0 0 2px @blue-focus;
+    &:focus + .ffe-radio-block__content {
+        box-shadow: 0 0 0 2px @ffe-blue-focus;
     }
 }
 
 @media screen and (min-width: @breakpoint-sm) {
 
-    .radio-block__wrapper {
+    .ffe-radio-block__wrapper {
         padding-left: 60px;
     }
 }
