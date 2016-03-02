@@ -1,4 +1,4 @@
-.check-box {
+.ffe-check-box {
     display: block;
     position: relative;
     margin: 10px 0;
@@ -12,7 +12,7 @@
     }
 
     &:before {
-        border: solid 2px @grey;
+        border: solid 2px @ffe-grey;
         border-radius: 2px;
         content: '';
         display: inline-block;
@@ -22,7 +22,7 @@
         top: 3px;
         transition: all 0.2s;
         width: 20px;
-        background-color: white;
+        background-color: @ffe-white;
     }
 
     &:after {
@@ -42,7 +42,7 @@
     }
 }
 
-.hidden-checkbox {
+.ffe-hidden-checkbox {
     position: absolute;
     opacity: 0;
     cursor: pointer;
@@ -55,26 +55,26 @@
     }
 
     &:hover + label:before {
-        border-color: @blue-royal-light-wcag;
+        border-color: @ffe-blue-royal-light-wcag;
     }
 
     &:active + label:before,
     &:focus + label:before {
-        box-shadow: 0 0 0 2px @blue-focus;
+        box-shadow: 0 0 0 2px @ffe-blue-focus;
     }
 
     &:checked + label:before {
-        border-color: @blue-royal-light-wcag;
-        background-color: @white;
+        border-color: @ffe-blue-royal-light-wcag;
+        background-color: @ffe-white;
     }
 
     &:focus + label:before {
-        box-shadow: 0 0 0 2px @blue-focus;
+        box-shadow: 0 0 0 2px @ffe-blue-focus;
     }
 
     &:checked + label:after {
         animation: checkmark 0.4s;
-        border-color: @blue-royal-light-wcag;
+        border-color: @ffe-blue-royal-light-wcag;
     }
 }
 

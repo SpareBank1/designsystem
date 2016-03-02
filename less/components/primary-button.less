@@ -1,4 +1,4 @@
-.primary-button {
+.ffe-primary-button {
     font-family: 'MuseoSans-500', arial, sans-serif;
     font-size: 18px;
     text-decoration: none;
@@ -7,30 +7,30 @@
     vertical-align: middle;
     padding: 0 30px;
     border-radius: 4px;
-    color: @white;
-    background-color: @blue-flat;
+    color: @ffe-white;
+    background-color: @ffe-blue-flat;
     border: 2px solid transparent;
     display: block;
     line-height: 41px;
     width: 100%;
     overflow: hidden;
-    .shadow-buttons();
+    .ffe-shadow-buttons();
     transition: all 0.2s;
     outline: none;
 
     &:focus {
-        box-shadow: 0 0 0 2px @blue-focus;
-        background-color: darken(@blue-flat,5%);
+        box-shadow: 0 0 0 2px @ffe-blue-focus;
+        background-color: darken(@ffe-blue-flat,5%);
     }
 
     &:hover {
-        .shadow-buttons-hover();
-        background-color: darken(@blue-flat,5%);
+        .ffe-shadow-buttons-hover();
+        background-color: darken(@ffe-blue-flat,5%);
     }
 
     &:active {
-        .shadow-buttons-active();
-        background-color: darken(@blue-flat,10%);
+        .ffe-shadow-buttons-active();
+        background-color: darken(@ffe-blue-flat,10%);
     }
 
     &__label {
@@ -45,7 +45,7 @@
     }
 
     &__label-spinner {
-        .sb1-spinner(@white,22px);
+        .ffe-sb1-spinner(@ffe-white,22px);
         opacity: 0;
         color: transparent;
         position: absolute;
@@ -61,7 +61,7 @@
 
     &--loading {
         pointer-events: none;
-        background-color: darken(@blue-royal-light-wcag, 10%);
+        background-color: darken(@ffe-blue-royal-light-wcag, 10%);
     }
 
     &__label-text--loading {
