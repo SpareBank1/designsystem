@@ -1,12 +1,27 @@
-#!/bin/bash
+#!/bin/bash -e
 
-set -e
+main() {
+    npm install
+    npm run examples
+
+    rm -rf target/
+    mkdir -p target/archive
+
+    ./run_visual-tests.sh
+
+    cp -R examples fonts icons target/archive
+}
 
 
-npm install
-npm run examples
+_move_gemini_files() {
+    testRes=$?
 
-rm -rf target/
-mkdir -p target/archive
-cp -R examples fonts icons target/archive
+    cp -R gemini-report/ target/archive
 
+    exit ${testRes}
+}
+
+trap "_move_gemini_files" INT TERM EXIT
+
+
+main "$@"
