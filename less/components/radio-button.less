@@ -1,8 +1,8 @@
-.radio-button {
+.ffe-radio-button {
     display: block;
     position: relative;
-    color: @black;
-    background-color: @white;
+    color: @ffe-black;
+    background-color: @ffe-white;
     cursor: pointer;
     margin: 10px 0;
     transition: width 0.15s ease-in-out;
@@ -16,8 +16,8 @@
 
     &:before {
       content: '';
-      background-color: @white;
-      border: 2px solid @grey;
+      background-color: @ffe-white;
+      border: 2px solid @ffe-grey;
       width: 20px;
       height: 20px;
       border-radius: 50%;
@@ -40,33 +40,33 @@
     }
   }
 
-.radio-input {
-    &:checked + .radio-button:before,
-    &:hover + .radio-button:before,
-    &:focus + .radio-button:before,
-    &:active + .radio-button:before {
+.ffe-radio-input {
+    &:checked + .ffe-radio-button:before,
+    &:hover + .ffe-radio-button:before,
+    &:focus + .ffe-radio-button:before,
+    &:active + .ffe-radio-button:before {
       outline: none;
     }
 
-    &:hover + .radio-button:before {
-      border-color: @blue-royal-light-wcag;
+    &:hover + .ffe-radio-button:before {
+      border-color: @ffe-blue-royal-light-wcag;
     }
 
-    &:active + .radio-button:before,
-    &:focus + .radio-button:before {
-      border-color: @blue-focus
+    &:active + .ffe-radio-button:before,
+    &:focus + .ffe-radio-button:before {
+      border-color: @ffe-blue-focus
     }
 
-    &:checked + .radio-button:before {
-      background-color: @blue-royal-light-wcag;
-      border: 5px solid @white;
+    &:checked + .ffe-radio-button:before {
+      background-color: @ffe-blue-royal-light-wcag;
+      border: 5px solid @ffe-white;
     }
 
-    &:checked + .radio-button:after {
-      border-color: @blue-royal-light-wcag;
+    &:checked + .ffe-radio-button:after {
+      border-color: @ffe-blue-royal-light-wcag;
     }
 
-    &:focus + .radio-button:before {
-      box-shadow: 0 0 0 2px @blue-focus;
+    &:focus + .ffe-radio-button:before {
+      box-shadow: 0 0 0 2px @ffe-blue-focus;
     }
 }
