@@ -1,10 +1,10 @@
-.responsive-table {
+.ffe-responsive-table {
     margin: 20px 0;
     min-width: 100%;
     text-align: left;
 
     > caption {
-        &:extend(.h4);
+        &:extend(.ffe-h4);
     }
 
     > thead {
@@ -16,13 +16,13 @@
     }
 
     > tfoot {
-        border-top: 2px solid @blue-royal;
+        border-top: 2px solid @ffe-blue-royal;
     }
 
     > thead > tr,
     > tbody > tr,
     > tfoot > tr {
-        border-bottom: 1px solid @grey-light;
+        border-bottom: 1px solid @ffe-grey-light;
         display: block;
         padding: 10px 0;
 
@@ -34,7 +34,7 @@
     > thead > tr > th,
     > tbody > tr > th,
     > tfoot > tr > th {
-        &:extend(.strong-text);
+        &:extend(.ffe-strong-text);
     }
 
     > tbody > tr > td,
@@ -58,7 +58,7 @@
         content: attr(data-th); // who knew you could do this? The internet, that's who.
         width: 100px;
         display: inline-block;
-        &:extend(.strong-text);
+        &:extend(.ffe-strong-text);
 
         @media (min-width: @breakpoint-md) {
             display: none;

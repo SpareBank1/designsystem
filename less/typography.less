@@ -1,74 +1,74 @@
 /* Mobile typography */
-.h1 {
-  color: @blue-royal;
+.ffe-h1 {
+  color: @ffe-blue-royal;
   font-family: "MuseoSansRounded-700", arial, sans-serif;
   font-size: 28px;
   line-height: 36px;
 }
 
-.h2 {
-  color: @blue-royal;
+.ffe-h2 {
+  color: @ffe-blue-royal;
   font-family: "MuseoSansRounded-700", arial, sans-serif;
   font-size: 24px;
   line-height: 32px;
 }
 
-.h3 {
-  color: @blue-royal;
+.ffe-h3 {
+  color: @ffe-blue-royal;
   font-family: "MuseoSansRounded-700", arial, sans-serif;
   font-size: 20px;
   line-height: 28px;
 }
 
-.h4 {
-  color: @blue-royal;
+.ffe-h4 {
+  color: @ffe-blue-royal;
   font-family: "MuseoSansRounded-700", arial, sans-serif;
   font-size: 18px;
   line-height: 26px;
 }
 
-.h5 {
-  color: @blue-royal;
+.ffe-h5 {
+  color: @ffe-blue-royal;
   font-family: "MuseoSansRounded-700", arial, sans-serif;
   font-size: 16px;
   line-height: 22px;
 }
 
-.small-text {
-  color: @grey-dark;
+.ffe-small-text {
+  color: @ffe-grey-dark;
   font-family: "MuseoSans-500", arial, sans-serif;
   font-size: 14px;
   line-height: 22px;
 }
 
-.micro-text {
-  color: @grey-dark;
+.ffe-micro-text {
+  color: @ffe-grey-dark;
   font-family: "MuseoSans-500", arial, sans-serif;
   font-size: 12px;
   line-height: 20px;
 }
 
-.h1,.h2,.h3,.h4,.h5 {
+.ffe-h1,.ffe-h2,.ffe-h3,.ffe-h4,.ffe-h5 {
   margin-bottom: 10px;
 
   &--error{
-    color: @orange-wcag;
+    color: @ffe-orange-wcag;
   }
 
   &--with-border {
-    border-bottom: 1px solid @grey-light;
+    border-bottom: 1px solid @ffe-grey-light;
     padding-bottom: 10px;
   }
 }
 
-.body-text {
-  color: @black;
+.ffe-body-text {
+  color: @ffe-black;
   font-family: "MuseoSans-500", arial, sans-serif;
   font-size: 16px;
   line-height: 26px;
 }
 
-.body-paragraph {
+.ffe-body-paragraph {
   margin-bottom: 1em;
 
   &--text-left {
@@ -80,50 +80,50 @@
   }
 }
 
-.lead-paragraph {
-  color: @blue-royal;
+.ffe-lead-paragraph {
+  color: @ffe-blue-royal;
   font-family: "MuseoSans-500", arial, sans-serif;
   font-size: 18px;
   line-height: 28px;
 }
 
-.link-text {
-  color: @blue-royal-light-wcag;
+.ffe-link-text {
+  color: @ffe-blue-royal-light-wcag;
   text-decoration: none;
   word-wrap: break-word;
 
   &:hover {
     text-decoration: none;
-    color: @blue-flat;
+    color: @ffe-blue-flat;
   }
 }
 
-.divider-line {
+.ffe-divider-line {
   border: none;
-  border-bottom: solid 1px @grey-light;
+  border-bottom: solid 1px @ffe-grey-light;
 }
 
-.strong-text {
+.ffe-strong-text {
   font-weight: normal;
   font-family: "MuseoSansRounded-700", arial, sans-serif;
 }
 
-.em-text {
+.ffe-em-text {
   font-style: italic;
 }
 
-.pre-text {
+.ffe-pre-text {
   font-family: consolas, menlo, monaco, monospace;
   text-align: left;
-  background-color: @sand-50;
+  background-color: @ffe-sand-50;
 }
 
-.inline-separator {
+.ffe-inline-separator {
   margin: 0 4px 0 4px;
 }
 
-.number-list,
-.bullet-list {
+.ffe-number-list,
+.ffe-bullet-list {
     text-align: left;
     margin: 0 0 20px 0;
 
@@ -132,66 +132,67 @@
         margin-left: 15px;
     }
 }
-.number-list {
+.ffe-number-list {
     list-style-type: decimal;
 }
-.bullet-list {
+.ffe-bullet-list {
     list-style-type: disc;
 }
 
 /* tablet/medium typography */
 @media screen and (min-width: @breakpoint-sm) {
 
-    .h1 {
+    .ffe-h1 {
         font-size: 48px;
         line-height: 58px;
     }
-    .h2 {
+
+    .ffe-h2 {
         font-size: 32px;
         line-height: 44px;
     }
 
-    .h3 {
+    .ffe-h3 {
         font-size: 28px;
         line-height: 38px;
     }
 
-    .h4 {
+    .ffe-h4 {
         font-size: 20px;
         line-height: 28px;
     }
 
-    .h5 {
+    .ffe-h5 {
         font-size: 16px;
         line-height: 24px;
     }
 
-    .h1,.h2,.h3,.h4,.h5 {
+    .ffe-h1,.ffe-h2,.ffe-h3,.ffe-h4,.ffe-h5 {
         margin-bottom: 15px;
     }
 
-    .lead-paragraph {
+    .ffe-lead-paragraph {
         font-size: 22px;
         line-height: 32px;
     }
 
-    .body-text {
+    .ffe-body-text {
         font-size: 16px;
         line-height: 26px;
     }
 
-    .small-text {
+    .ffe-small-text {
         font-size: 14px;
         line-height: 22px;
     }
 
-    .micro-text {
+    .ffe-micro-text {
         font-size: 12px;
         line-height: 20px;
     }
 
-    .number-list,
-    .bullet-list {
+    .ffe-number-list,
+    .ffe-bullet-list {
         margin-left: 20px;
     }
 }
@@ -199,61 +200,62 @@
 /* Desktop */
 @media screen and (min-width: @breakpoint-md) {
 
-  .h1,.h2,.h3,.h4,.h5 {
+  .ffe-h1,.ffe-h2,.ffe-h3,.ffe-h4,.ffe-h5 {
     margin-bottom: 20px;
   }
 
-  .body-text {
+  .ffe-body-text {
     font-size: 18px;
     line-height: 28px;
   }
 
-  .h1 {
+  .ffe-h1 {
     font-size: 54px;
     line-height: 64px;
   }
 
-  .h2 {
+  .ffe-h2 {
     font-size: 32px;
     line-height: 44px;
   }
 
-  .h3 {
+  .ffe-h3 {
     font-size: 28px;
     line-height: 38px;
   }
-  .h4 {
+
+  .ffe-h4 {
     font-size: 22px;
     line-height: 28px;
   }
 
-  .h5 {
+  .ffe-h5 {
     font-size: 16px;
     line-height: 24px;
   }
 
-  .lead-paragraph {
+  .ffe-lead-paragraph {
     font-size: 22px;
     line-height: 32px;
   }
 
-  .small-text {
+  .ffe-small-text {
     font-size: 14px;
     line-height: 22px;
   }
 
-  .micro-text {
+  .ffe-micro-text {
     font-size: 12px;
     line-height: 20px;
   }
 
-  .number-list > li,
-  .bullet-list > li {
+  .ffe-number-list > li,
+  .ffe-bullet-list > li {
     margin-left: 30px;
   }
 }
 
-.h1, .h2, .h3, .h4, .h5 {
+.ffe-h1, .ffe-h2, .ffe-h3, .ffe-h4, .ffe-h5 {
   &--no-margin {
     margin: 0;
   }
