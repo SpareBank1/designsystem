@@ -51,6 +51,10 @@ Klargjør stilguide ved å kjøre følgende kommando:
 
     npm run examples
 
+##Visuell regressionstestning
+Det utførs visuell regressiontestning av stilguiden på byggserver med Gemini. Vid ændringar som medfør att testerna
+brekker måste det aktuella baseline-screenshotet uppdateras, detta gørs med `./update_visual_tests-baslines.sh`.
+
 ##Pull Requests
 Gjøres mot master. Endringer som skal ut på tidligere `major` releases må portes til aktuell branch.
 
@@ -77,4 +81,4 @@ Ved hver major release lages en ny branch (f.eks. release/02-wistful-wizard) som
 - `git push && git push --tags`
 - `npm publish --registry https://nexus.intern.sparebank1.no/nexus/content/repositories/npm-internal`
 - Bytt tilbake til master
-- Oppdater `package.json` med neste major versjonsummer for å tydeliggjøre at master ligger foran siste release.   
+- Oppdater `package.json` med neste major versjonsummer for å tydeliggjøre at master ligger foran siste release.

@@ -5,7 +5,8 @@
   "less": "ffe.less",
   "main": "index.js",
   "scripts": {
-    "examples": "lessc examples/examples.less examples/examples.css && echo Now open /examples/index.html to see styleguide."
+    "examples": "lessc examples/examples.less examples/examples.css && echo Now open /examples/index.html to see styleguide.",
+    "test": "npm run examples && ./run_visual-tests.sh"
   },
   "repository": {
     "type": "git",
@@ -34,6 +35,7 @@
   "author": "Glenn A. Brownlee <glenn.brownlee@sparebank1.no>",
   "license": "ISC",
   "devDependencies": {
+    "gemini": "^2.1.1",
     "less": "2.5.1"
   }
 }
