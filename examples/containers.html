@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="examples.css">
 
 </head>
-<body>
+<body class="ffe-body-text">
 <div class="sidebar-open">
     <button class="sidebar-open__button ffe-secondary-button"></button>
 </div>
@@ -21,28 +21,28 @@
     <h2 class="ffe-h4">Innhold</h2>
 
     <ul class="navigation-list">
-        <li class="navigation-list__link"><a href="index.html">Hjem</a></li>
-        <li class="navigation-list__link"><a href="typo.html">Typografi</a></li>
-        <li class="navigation-list__link"><a href="colors.html">Farger</a></li>
-        <li class="navigation-list__link"><a href="form.html">Skjema</a></li>
-        <li class="navigation-list__link"><a href="buttons.html">Knapper</a></li>
-        <li class="navigation-list__link"><a href="layout.html">Layout</a></li>
-        <li class="navigation-list__link navigation-list__link--active"><a href="containers.html">Containers</a></li>
+        <li class="navigation-list__link"><a class="ffe-link-text" href="index.html">Hjem</a></li>
+        <li class="navigation-list__link"><a class="ffe-link-text" href="typo.html">Typografi</a></li>
+        <li class="navigation-list__link"><a class="ffe-link-text" href="colors.html">Farger</a></li>
+        <li class="navigation-list__link"><a class="ffe-link-text" href="form.html">Skjema</a></li>
+        <li class="navigation-list__link"><a class="ffe-link-text" href="buttons.html">Knapper</a></li>
+        <li class="navigation-list__link"><a class="ffe-link-text" href="layout.html">Layout</a></li>
+        <li class="navigation-list__link navigation-list__link--active"><a class="ffe-link-text" href="containers.html">Containers</a></li>
     </ul>
 </nav>
 
 <main class="styleguide-wrapper">
     <section class="ffe-section-wrapper">
         <div class="ffe-content-container ffe-content-container--text-left">
-            <h2>Responsive tables</h2>
-            <p class="ffe-body-paragraph">The central to this concept is using <strong>data-th</strong> attributes on cells to show column names even in a collapsed state on small devices. Try it out!</p>
+            <h2 class="ffe-h2">Responsive tables</h2>
+            <p class="ffe-body-paragraph">The central to this concept is using <strong class="ffe-strong-text">data-th</strong> attributes on cells to show column names even in a collapsed state on small devices. Try it out!</p>
         </div>
     </section>
     <section class="ffe-section-wrapper ffe-section-wrapper--bg-sand">
         <div class="ffe-content-container ffe-content-container--text-left">
 
-            <h3>Example 01</h3>
-            <p>This is a standard <strong>.responsive-table</strong>. Please note that the first two rows demonstrates the optional <strong>__content</strong> wrapper that adds an inline behavior to content on small devices.</p>
+            <h3 class="ffe-h3">Example 01</h3>
+            <p class="ffe-body-paragraph">This is a standard <strong class="ffe-strong-text">.responsive-table</strong>. Please note that the first two rows demonstrates the optional <strong class="ffe-strong-text">__content</strong> wrapper that adds an inline behavior to content on small devices.</p>
             <table class="ffe-responsive-table">
                 <thead>
                 <tr>
@@ -91,8 +91,8 @@
     </section>
     <section class="ffe-section-wrapper">
         <div class="ffe-content-container ffe-content-container--text-left">
-            <h3>Example 02</h3>
-            <p>Table with a shorter header in collapsed mode, <strong>--small-header</strong></p>
+            <h3 class="ffe-h3">Example 02</h3>
+            <p class="ffe-body-paragraph">Table with a shorter header in collapsed mode, <strong class="ffe-strong-text">--small-header</strong></p>
             <table class="ffe-responsive-table responsive-table--small-header">
                 <tbody>
                 <tr>
@@ -135,8 +135,8 @@
     </section>
     <section class="ffe-section-wrapper ffe-section-wrapper--bg-grey">
         <div class="ffe-content-container ffe-content-container--sm ffe-content-container--text-left">
-            <h3>Example 03</h3>
-            <p>Table with two axes, using the <strong>th</strong> element in different contexts.</p>
+            <h3 class="ffe-h3">Example 03</h3>
+            <p class="ffe-body-paragraph">Table with two axes, using the <strong class="ffe-strong-text">th</strong> element in different contexts.</p>
 
             <table class="ffe-responsive-table">
                 <caption>Norge GET-ligaen</caption>
@@ -172,9 +172,9 @@
     </section>
 </main>
 <footer>
-    <hr>
+    <hr class="ffe-divider-line" >
     <div class="ffe-content-container">
-        <a href="#">© SpareBank 1</a>
+        <a class="ffe-link-text" href="#">© SpareBank 1</a>
     </div>
 </footer>
 <script src="examples.js"></script>

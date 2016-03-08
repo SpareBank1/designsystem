@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
 
 </head>
-<body>
+<body class="ffe-body-text">
 
 <div class="sidebar-open">
     <button class="sidebar-open__button ffe-secondary-button"></button>
@@ -24,20 +24,20 @@
     <h2 class="ffe-h4">Innhold</h2>
 
     <ul class="navigation-list">
-        <li class="navigation-list__link"><a href="index.html">Hjem</a></li>
-        <li class="navigation-list__link"><a href="typo.html">Typografi</a></li>
-        <li class="navigation-list__link"><a href="colors.html">Farger</a></li>
-        <li class="navigation-list__link"><a href="form.html">Skjema</a></li>
-        <li class="navigation-list__link navigation-list__link--active"><a href="buttons.html">Knapper</a></li>
-        <li class="navigation-list__link"><a href="layout.html">Layout</a></li>
-        <li class="navigation-list__link"><a href="containers.html">Containers</a></li>
+        <li class="navigation-list__link"><a class="ffe-link-text" href="index.html">Hjem</a></li>
+        <li class="navigation-list__link"><a class="ffe-link-text" href="typo.html">Typografi</a></li>
+        <li class="navigation-list__link"><a class="ffe-link-text" href="colors.html">Farger</a></li>
+        <li class="navigation-list__link"><a class="ffe-link-text" href="form.html">Skjema</a></li>
+        <li class="navigation-list__link navigation-list__link--active"><a class="ffe-link-text" href="buttons.html">Knapper</a></li>
+        <li class="navigation-list__link"><a class="ffe-link-text" href="layout.html">Layout</a></li>
+        <li class="navigation-list__link"><a class="ffe-link-text" href="containers.html">Containers</a></li>
     </ul>
 </nav>
 
 <main class="styleguide-wrapper">
     <div class="ffe-section-wrapper">
         <div class="ffe-content-container">
-            <h2 class="page-title">Knapper</h2>
+            <h2 class="ffe-h2 page-title">Knapper</h2>
         </div>
 
         <section class="ffe-content-container ffe-content-container--text-left">
@@ -86,18 +86,18 @@
             <div class="tabbed-panel">
                 <ul class="tabbed-panel__tablist">
                     <li class="tabbed-panel__tab tabbed-panel__tab--active">
-                        <a class="tabbed-panel__tablink" href="#" rel="1">Teknisk</a>
+                        <a class="ffe-link-text tabbed-panel__tablink" href="#" rel="1">Teknisk</a>
                     </li>
                     <li class="tabbed-panel__tab">
-                        <a class="tabbed-panel__tablink" href="#" rel="2">Design</a>
+                        <a class="ffe-link-text tabbed-panel__tablink" href="#" rel="2">Design</a>
                     </li>
                 </ul>
                 <div class="tabbed-panel__display-frame">
                     <div class="tabbed-panel__content-pane tabbed-panel__content-pane--active" rel="1">
-                        <h5>Generelt</h5>
+                        <h5 class="ffe-h5">Generelt</h5>
 
                         <div class="ffe-small-text">
-                            <p>For å endre state på en knapp fra vanlig til "spinner" må følgende gjøres:</p>
+                            <p class="ffe-body-paragraph">For å endre state på en knapp fra vanlig til "spinner" må følgende gjøres:</p>
                             <ul class="ffe-bullet-list">
                                 <li>Legg til klassen <span class="inline-code">[knapp-variant]--loading</span> på selve
                                     knappen
@@ -114,10 +114,10 @@
                             </ul>
                         </div>
 
-                        <hr/>
+                        <hr class="ffe-divider-line" />
 
-                        <h5>Eksempelkode</h5>
-						<pre><code class="html">&lt;button&nbsp;class=&quot;action-button&quot;&gt;Action&nbsp;button&lt;/button&gt;
+                        <h5 class="ffe-h5">Eksempelkode</h5>
+						<pre class="ffe-pre-text"><code class="html">&lt;button&nbsp;class=&quot;action-button&quot;&gt;Action&nbsp;button&lt;/button&gt;
                             &lt;button&nbsp;class=&quot;action-button action-button--loading&quot;&gt;
                             &nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;action-button__label&quot;&gt;
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;action-button__label-text action-button__label-text--loading&quot;&gt;Action&nbsp;button&lt;/span&gt;
@@ -134,9 +134,9 @@
     </div>
 </main>
 <footer>
-    <hr>
+    <hr class="ffe-divider-line">
     <div class="ffe-content-container">
-        <a href="#">© SpareBank 1</a>
+        <a class="ffe-link-text" href="#">© SpareBank 1</a>
     </div>
 </footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
