@@ -20,7 +20,7 @@ Anbefalt er å importere gatewayfilen som i sin tur importerar alle de andre fil
 
     @import ffe.less
 
-Hvis du ønsker styling på elementer (body, a, p, h1-h5, etc. Se `element-map.less`) så ær dette muligt  æven om det ikke rekommenderas.
+Hvis du ønsker styling på elementer (body, a, p, h1-h5, etc. Se `element-map.less`) så ær dette muligt æven om det ikke rekommenderas.
 
     @import ffe-element-styling.less
 
@@ -30,8 +30,9 @@ Det er også mulig å importere enkelte filer etter behov.
     @import radio-button.less
 
 ###Variabler
-Det er forventet at det defineres en LESS-variabel som inneholder rot-pathen til applikasjonen.
+Det er forventet at det defineres en LESS-variabel som inneholder rot-pathen til FFE:s sina statiska resurser.
 
+    @import ffe.less
     @base-url: '/my-project/app/';
 
 ###Fonts
