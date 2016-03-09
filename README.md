@@ -20,9 +20,9 @@ Anbefalt er å importere gatewayfilen som i sin tur importerar alle de andre fil
 
     @import ffe.less
 
-Hvis du har konflikt med legacysystemer, er det også mulig å velge import uten styling på elementer (body, a, p, h1-h5, etc. Se `element-map.less`)
+Hvis du ønsker styling på elementer (body, a, p, h1-h5, etc. Se `element-map.less`) så ær dette muligt  æven om det ikke rekommenderas.
 
-    @import ffe-no-element-styling.less
+    @import ffe-element-styling.less
 
 Det er også mulig å importere enkelte filer etter behov.
 
