@@ -20,7 +20,11 @@ Anbefalt er å importere gatewayfilen som i sin tur importerar alle de andre fil
 
     @import ffe.less
 
-Hvis du ønsker styling på elementer (body, a, p, h1-h5, etc. Se `element-map.less`) så ær dette muligt æven om det ikke rekommenderas.
+Hvis du ønsker å bruke FFE i kombinasjon med eksisterende legacy CSS (e.g. common-ui) rekommenderes det å avstå fra FFE's sin CSS reset
+
+    @import ffe-no-reset.less
+
+Hvis du ønsker styling på elementer (body, a, p, h1-h5, etc. Se `element-map.less`) så ær dette muligt  æven om det ikke rekommenderas.
 
     @import ffe-element-styling.less
 
