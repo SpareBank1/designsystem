@@ -1,5 +1,7 @@
 # Changelog
 
+## v.4.0.0 (08.03.2016)
+* Element styling is now opt-in rather than default
 
 ## v.3.0.0 (07.03.2016)
 * All css classes now prefixed with `ffe-`
@@ -26,7 +28,7 @@
 
 ## v.1.0.3 (20.11.2015)
 
-* IE-fix. Legger til z-index på radioknapp for at den ikke skal skjules under header ved re-rendring. 
+* IE-fix. Legger til z-index på radioknapp for at den ikke skal skjules under header ved re-rendring.
 
 ## v.1.0.2 (12.11.2015)
 
