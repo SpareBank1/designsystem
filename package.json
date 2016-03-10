@@ -15,6 +15,10 @@
   "publishConfig": {
     "registry": "***REMOVED***"
   },
+  "sb1.StaticResources": [
+    "fonts/**",
+    "icons/**"
+  ],
   "keywords": [
     "frontend",
     "front",
