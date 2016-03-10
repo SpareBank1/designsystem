@@ -15,6 +15,10 @@
   "publishConfig": {
     "registry": "https://nexus.intern.sparebank1.no/nexus/content/repositories/npm-internal"
   },
+  "sb1.StaticResources": [
+    "fonts/**",
+    "icons/**"
+  ],
   "keywords": [
     "frontend",
     "front",
