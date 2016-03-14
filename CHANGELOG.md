@@ -1,5 +1,47 @@
 # Changelog
 
+## Version 2.1.0
+Added new icons and optimized some old ones for use in lo-kort.
+
+Optimized:
+
+* 1-2-3-sirkel
+* 1-2-3-understrek
+* atv
+* badekar-dusj
+* bamse
+* bat-liten
+* bat-stor
+* bestikk
+* betaling-100
+* betaling-kontaktlos
+* betaling-kontaktlos-info
+* betalingskort
+* betalingskort-innpakket
+* betalingskort-kryss
+* bil
+* faks-printer
+* kr-pil
+* kryss
+* laptop
+* mobil-a-b-c
+* mynter
+* person
+* tabell-kroner
+
+New:
+
+* betalingskort-globus
+* betalingskort-hand
+* betalingskort-kreditt
+* betalingskort-stjerne
+* dokument-med-test
+* faks-printer-2
+* mynter-2
+* pdf
+* piler-hoyre-venstre
+* xls-ikon
+
 ## Version 2.0.0
 For version 2.x, removed all existing icons and added _ICON_REQUIREMENTS.md to have a clean slate. Also updated README.
 
