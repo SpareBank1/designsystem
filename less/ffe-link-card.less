@@ -1,6 +1,7 @@
 @import "animation.less";
 
 .ffe-link-card {
+    &:extend(.ffe-link-text);
     box-shadow: 0 0 0 rgba(0,0,0,0.1);
     display: inline-block;
     margin: 5px 0;
@@ -15,7 +16,7 @@
     height: 100%;
     min-height: 80px;
     min-width: 260px;
-    border: 2px solid @grey-light;
+    border: 2px solid @ffe-grey-light;
     border-radius: 5px;
     cursor: pointer;
     transition: border-color 0.2s;
@@ -23,20 +24,20 @@
     outline: none;
 
     &:focus {
-        box-shadow: 0 0 0 2px @blue-focus;
+        box-shadow: 0 0 0 2px @ffe-blue-focus;
     }
     &:focus,
     &:active,
     &:hover {
-        border-color: @blue-royal-light-wcag;
+        border-color: @ffe-blue-royal-light-wcag;
     }
 
 
     &__status {
         animation: showCardNotification 0.3s 1s forwards;
         transform: translateY(-38px);
-        background-color: @sand-25;
-        color: @blue-royal;
+        background-color: @ffe-sand-25;
+        color: @ffe-blue-royal;
         margin: 0 auto;
         text-transform: uppercase;
         padding: 0;
@@ -50,7 +51,7 @@
     &__heading {
         display: inline-block;
         vertical-align: middle;
-        color: @blue-royal-light-wcag;
+        color: @ffe-blue-royal-light-wcag;
         max-width: 160px;
     }
 
@@ -80,11 +81,11 @@
         margin: 0;
     }
     &--large > &__sub-heading {
-        color: @blue-royal;
+        color: @ffe-blue-royal;
         line-height: 1.3;
     }
     &--large > &__details {
-        color: @blue-royal;
+        color: @ffe-blue-royal;
         font-family: "MuseoSansRounded-700", arial, sans-serif;
         font-size: 20px;
         line-height: 2.2;
@@ -101,7 +102,7 @@
         padding: 20px;
     }
     &--plain > &__number {
-        &:extend(.h1);
+        &:extend(.ffe-h1);
         border: 2px solid #002776;
         border-radius: 50%;
         width: 50px;
@@ -116,7 +117,7 @@
     &--plain:focus,
     &--plain:active,
     &--plain:hover {
-        border-color: @grey-light;
+        border-color: @ffe-grey-light;
     }
 }
 
@@ -177,7 +178,7 @@
         }
         &--medium > &__details,
         &--large > &__details {
-            color: @blue-royal;
+            color: @ffe-blue-royal;
             font-family: "MuseoSansRounded-700", arial, sans-serif;
             font-size: 24px;
             line-height: 110px;
