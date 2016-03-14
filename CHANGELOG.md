@@ -5,7 +5,21 @@ Added new icons and optimized some old ones for use in lo-kort.
 
 Optimized:
 
+* 1-2-3-sirkel
+* 1-2-3-understrek
+* atv
+* badekar-dusj
+* bamse
+* bat-liten
+* bat-stor
+* bestikk
+* betaling-100
+* betaling-kontaktlos
+* betaling-kontaktlos-info
 * betalingskort
+* betalingskort-innpakket
+* betalingskort-kryss
+* bil
 * faks-printer
 * kr-pil
 * kryss
