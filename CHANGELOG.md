@@ -1,5 +1,8 @@
 #CHANGELOG
 
+##Version 3.0.0
+* Klassen `ffe-header__profile-action` fjernet igjen, endringen i button gjort i core som førte til at den ble laget var en bug og ikke en feature
+
 ##Version 2.0.0
 * Oppdatert til å bruke v4.x av ffe-core
 * Klassen `ffe-header__profile-action` kan brukes for elementer som skal være inline
