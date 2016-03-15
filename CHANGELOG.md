@@ -1,5 +1,8 @@
 # Changelog
 
+## v.4.0.1
+* Fix: `ffe-` prefix for `@breakpoint-sm` was missing for `.primary-button` making buttons have width 100% on larger screens
+
 ## v.4.0.0 (08.03.2016)
 * Element styling is now opt-in rather than default
 
