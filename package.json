@@ -16,13 +16,13 @@
   "author": "Glenn Brownlee <glenn.brownlee@sparebank1.no>",
   "license": "ISC",
   "peerDependencies": {
-    "ffe-core": "2.x"
+    "ffe-core": "^4.0.0"
   },
   "devDependencies": {
-    "less": "^2.5.3"
+    "less": "^2.6.1"
   },
   "dependencies": {
-    "ffe-core": "^2.1.1",
+    "ffe-core": "^4.0.0",
     "mkdirp": "^0.5.1"
   }
 }
