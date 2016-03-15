@@ -1,6 +1,6 @@
 {
   "name": "ffe-cards",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Kort for bruk i oversikter",
   "main": "index.js",
   "scripts": {
