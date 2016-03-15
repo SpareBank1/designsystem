@@ -6,12 +6,12 @@
 
     <link href="examples.css" rel="stylesheet" type="text/css">
 </head>
-<body>
+<body class="ffe-body-text">
 
 <header id="header" class="ffe-header">
     <div class="ffe-header__section-wrapper">
         <div class="ffe-header__container ffe-header__container--mobile">
-            <a href="/#">
+            <a class="ffe-link-text" href="/#">
                 <img height="30px" class="ffe-header__logo" src="../images/logo.svg" alt="SpareBank 1 Logo">
             </a>
             <img height="30px" data-action="user-menu-trigger" class="ffe-header__icon-user" src="../images/person.svg"
@@ -19,7 +19,7 @@
         </div>
         <div class="ffe-header__container ffe-header__container--desktop">
             <div class="ffe-header__component">
-                <a href="/#">
+                <a class="ffe-link-text" href="/#">
                     <img height="40px" class="ffe-header__logo" src="../images/logo.svg" alt="SpareBank 1 Logo">
                 </a>
             </div>
@@ -27,8 +27,8 @@
             <div class="ffe-header__component">
                 <span class="ffe-header__profile-type"></span>
 
-                <a class="ffe-header__profile-name" href="#kunde">Foo Bar</a>
-                <button class="secondary-button" data-action="logout">Logg ut</button>
+                <a class="ffe-header__profile-name ffe-link-text" href="#kunde">Foo Bar</a>
+                <button class="ffe-header__profile-action ffe-secondary-button" data-action="logout">Logg ut</button>
             </div>
         </div>
     </div>
