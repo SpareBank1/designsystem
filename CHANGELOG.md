@@ -1,5 +1,8 @@
 # Changelog
 
+## Version 2.3.0
+Renamed lukk-ikon to kryss-sirkel-ikon and optimized it
+
 ## Version 2.2.0
 Optimized:
 
