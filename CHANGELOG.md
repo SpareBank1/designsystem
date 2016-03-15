@@ -1,5 +1,10 @@
 # Changelog
 
+## Version 2.2.0
+Optimized:
+
+* lyspare-ikon
+
 ## Version 2.1.0
 Added new icons and optimized some old ones for use in lo-kort.
 
