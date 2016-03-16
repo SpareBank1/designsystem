@@ -1,6 +1,6 @@
 {
   "name": "ffe-core",
-  "version": "4.0.1",
+  "version": "4.1.0",
   "description": "Rammeverk for Felles Front End",
   "less": "ffe.less",
   "main": "index.js",
@@ -15,6 +15,10 @@
   "publishConfig": {
     "registry": "https://nexus.intern.sparebank1.no/nexus/content/repositories/npm-internal"
   },
+  "sb1.StaticResources": [
+    "fonts/**",
+    "icons/**"
+  ],
   "keywords": [
     "frontend",
     "front",

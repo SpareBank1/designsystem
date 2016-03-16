@@ -1,5 +1,9 @@
 # Changelog
 
+## v.4.1.0
+* Introduce new gateway less-file: ffe-no-reset.less
+* Add property for static resources to package.json. Fascilitates tooling that copies static resources to output folder
+
 ## v.4.0.1
 * Fix: `ffe-` prefix for `@breakpoint-sm` was missing for `.primary-button` making buttons have width 100% on larger screens
 
