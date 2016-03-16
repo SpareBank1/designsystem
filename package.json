@@ -16,8 +16,7 @@
     "registry": "***REMOVED***"
   },
   "sb1.StaticResources": [
-    "fonts/**",
-    "icons/**"
+    "fonts/**"
   ],
   "keywords": [
     "frontend",
@@ -33,8 +32,7 @@
   "files": [
     "fonts",
     "less",
-    "examples",
-    "icons"
+    "examples"
   ],
   "author": "Glenn A. Brownlee <glenn.brownlee@sparebank1.no>",
   "license": "ISC",
