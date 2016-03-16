@@ -1,12 +1,13 @@
 {
   "name": "ffe-core",
-  "version": "4.2.0",
+  "version": "4.2.1",
   "description": "Rammeverk for Felles Front End",
   "less": "ffe.less",
   "main": "index.js",
   "scripts": {
     "examples": "lessc --source-map-map-inline --source-map-less-inline examples/examples.less examples/examples.css && echo Now open /examples/index.html to see styleguide.",
-    "test": "npm run examples && ./run_visual-tests.sh"
+    "test": "npm run examples && ./run_visual-tests.sh",
+    "has-published": "npm show . versions -s | grep -q ${npm_package_version}"
   },
   "repository": {
     "type": "git",
