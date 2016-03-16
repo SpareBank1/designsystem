@@ -1,5 +1,8 @@
 # Changelog
 
+## v.4.2.0 (16.03.2016)
+* Inlined svg-icons in less to avoid potential include-issues
+
 ## v.4.1.0
 * Introduce new gateway less-file: ffe-no-reset.less
 * Add property for static resources to package.json. Fascilitates tooling that copies static resources to output folder
