@@ -1,6 +1,7 @@
 @import "../less/ffe.less";
 @base-url: "../";
 
+
 .sidebar-open {
     position:absolute;
     top:10px;
@@ -23,6 +24,8 @@
         font-size:0px;
         position:relative;
         top:-2px;
+        list-style: none;
+        padding: 0;
 
         &:after {
             content:"";
@@ -348,4 +351,16 @@ pre {
 
 footer {
     height: 200px;
+}
+
+.example-color-palette {
+    padding: 0;
+}
+.example-unstyled-list {
+    padding: 0;
+    margin: 0;
+    list-style: none
+}
+.code-inline {
+    font: inherit;
 }
