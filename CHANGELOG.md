@@ -1,5 +1,8 @@
 # Changelog
 
+## v.4.1.1 (16.03.2016)
+* Inlined svg-icons in less to avoid potential include-issues
+
 ## v.4.0.1
 * Fix: `ffe-` prefix for `@breakpoint-sm` was missing for `.primary-button` making buttons have width 100% on larger screens
 
