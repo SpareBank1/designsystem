@@ -9,9 +9,21 @@ main() {
 
     ./run_visual-tests.sh
 
-    cp -R examples fonts icons target/archive
+    cp -R examples fonts target/archive
+
+    if should_publish; then
+        npm run has-published -s || npm publish
+    else
+        if npm run has-published -s; then
+            echo "ERR: You must bump the version number in package.json"
+            exit 1
+        fi
+    fi
 }
 
+function should_publish() {
+    [[ $GIT_BRANCH =~ ^(origin/)?master$ ]]
+}
 
 _move_gemini_files() {
     testRes=$?
@@ -22,6 +34,5 @@ _move_gemini_files() {
 }
 
 trap "_move_gemini_files" INT TERM EXIT
-
 
 main "$@"
