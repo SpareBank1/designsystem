@@ -35,6 +35,7 @@ Det er også mulig å importere enkelte filer etter behov.
 ### Variabler
 Det er forventet at det defineres en LESS-variabel som inneholder rot-pathen til applikasjonen.
 
+    @import ffe.less
     @base-url: '/my-project/app/';
 
 ### Fonts
