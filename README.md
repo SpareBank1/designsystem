@@ -2,6 +2,13 @@
 Inneholder generell styling for bruk utenom komponenter. F.eks. typografi, knapper, farger, o.l. Vi følger
 [BEM](https://en.bem.info/) for å sørge for god organisasjon av CSS-koden.
 
+FFE ivaratar færgkontrastkraven som specifiert i WCAG 2.0-standarden (AA-nivå).
+
+Nettleser som ikke støttes av FFE:
+
+ * Internet Explorer 8 og tidigare, Internet Explorer 9 kan brukas men begrænsade visuella avvik må accepteras.
+ * Android Browser-versioner tidligere æn 4.4
+
 ## Kom i gang
 Konfigurer npm til å bruke SB1's lokale og private repo (proxy med cache til NPM public).
 
