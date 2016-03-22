@@ -1,5 +1,12 @@
 # Changelog
 
+## Version 2.4.0
+Optimized:
+
+* boks-ikon
+* varebil-ikon
+* verktoy-skiftenokkel-ikon
+
 ## Version 2.3.0
 Renamed lukk-ikon to kryss-sirkel-ikon and optimized it
 
