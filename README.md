@@ -63,10 +63,10 @@ brekker måste det aktuella baseline-screenshotet uppdateras, detta gørs med `.
 Gjøres mot master.
 Squash alle commits til en enkelt commit.
 
-Alle pull-requests må oppdatere version i package.json.
-
 ## Publisering
+Projektet publiceras av byggserver vid bygg av master-branchen, om versionsnummer i `package.json` ikke
+er publisert tidligere.
 
-Alle commits på master blir publisert av jenkins. (dersom den ikke allerede er det)
+Før att trigga en release, lag PR till master med bumpat versionnummer och uppdaterat `CHANGELOG.md`.
 
 Backporting gjøres manuelt på release-branches ved behov, oppdateres ved cherry picke endringer fra master.

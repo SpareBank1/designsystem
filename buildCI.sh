@@ -13,11 +13,6 @@ main() {
 
     if should_publish; then
         npm run has-published -s || npm publish
-    else
-        if npm run has-published -s; then
-            echo "ERR: You must bump the version number in package.json"
-            exit 1
-        fi
     fi
 }
 
