@@ -1,6 +1,6 @@
 # Changelog
 
-## v.5.0.1
+## v.5.1.0
 * Implemented ghost- and tab-button
 
 ## v.4.2.1
