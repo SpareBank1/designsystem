@@ -1,10 +1,9 @@
 {
   "name": "ffe-icons",
-  "version": "2.3.0",
+  "version": "3.0.0",
   "description": "Felles Front End Icons",
   "main": "index.js",
   "scripts": {
-    "postinstall": "gulp",
     "start": "gulp"
   },
   "repository": {
