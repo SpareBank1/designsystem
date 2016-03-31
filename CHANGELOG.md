@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 3.0.0
+
+* Removed the postinstall script, since it created issues with builds on npm 2.x. See https://github.com/npm/npm/issues/8850
+
 ## Version 2.4.0
 Optimized:
 
