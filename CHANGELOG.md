@@ -1,5 +1,8 @@
 #CHANGELOG
 
+##Version 3.0.1
+Oppdatert til å bruke v4 eller høyere av ffe-core
+
 ##Version 2.0.0
 Oppdatert til å bruke v4.x av ffe-core
 
