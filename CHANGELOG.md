@@ -1,5 +1,9 @@
 # Changelog
 
+## v.5.2.0
+* Bugfix select box text foreground color
+* New component: expand button (for controlling collapsable containers)
+
 ## v.5.1.0
 * Implemented ghost- and tab-button
 
