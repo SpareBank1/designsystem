@@ -72,24 +72,24 @@ royal blue as the primary color, add the following to your global icon class:
 .icon {
     fill: "#002776"; // Or, even better:
     fill: @blue-royal; // assuming use and import of ffe-core variables
-    
+
     // To add alternatives, replace the fill attribute with whatever color you need
     &--white {
        fill: #fff;
-    }    
+    }
     &--black {
-       fill: #000;    
+       fill: #000;
     }
 }
-```  
+```
 
 Non-royal blue colors are left as-is, so details in other colors are left untouched.
 
-In your markup: 
+In your markup:
 
 ```
 <svg class="icon">
-    <use xmlns:xlink="http://www.w3.org/1999/xlink" 
+    <use xmlns:xlink="http://www.w3.org/1999/xlink"
          xlink:href="/app/symbol/ffe-icons.svg#person-ikon"></use>
     <!-- <desc>Alt text goes here</desc> -->
 </svg>
@@ -115,17 +115,21 @@ Also before starting, verify your SVG meets the criteria listed in *icons/_ICON_
 
 If you haven't already, fork this repository and clone it on your machine.
 
-1. Checkout to the `master` branch in ffe-icons
+1. Fetch the latest `master` branch in ffe-icons, and create a feature branch from there.
 2. Add the icon SVG to the `icons/` folder [^1].
 3. Verify that the icon looks OK relative to the others (padding etc) [^2].
-4. Update `CHANGELOG.md` with a new entry for the new patch that is going to be created.
-5. Commit your changes to the `master` branch, and push the changes to origin. Create a pull request from your repo to ffe.
-6. Checkout to the latest release branch (named something like "release/_version_-_version-name_")
-7. Cherry-pick the changes you made on `master` to the release branch
-8. Run `$ npm version minor` [^3].
-9. Push the change and tag to origin: `$ git push && git push --tags`
-10. Publish the new version to Nexus: `$ npm publish --registry ***REMOVED***`
+4. Update `CHANGELOG.md` with a new entry for the next version. Don't give it a version number just yet, that comes through a different pull request. Just add it under "Next version".
+5. Commit your changes to the feature branch, and push the changes to `origin`.
+6. Create a pull request from your repos feature branch to ffe-icons `master`.
 
+## Releasing a new version of ffe-icons
+1. Fetch the latest `master` branch in ffe-icons
+2. Update the changelog with the desired version number. Include whatever was under the "Next version" heading in the section for the new version.
+3. Run `$ npm version minor` [^3].
+4. Push the change and tag to `origin master`: `$ git push && git push --tags`
+5. Create a pull request from your repos `master` to ffe-icons `master`
+6. When merged OK, fetch the latest `master` branch and checkout to the tagged commit. Alternatively, if you have no local changes since the tag, go ahead to step 7.
+7. Publish the new version to Nexus: `$ npm publish --registry ***REMOVED***` [^4]
 
 
 ###### Footnotes
@@ -137,3 +141,8 @@ from app to app). I.e., call it flamme-ikon, not skade-ikon even though it might
 are needed (padding for instance) you can try this [web-based SVG editor](https://github.com/SVG-Edit/svgedit).
 
 [^3]: This bumps the version number in `package.json`, commits the change, and tags the commit with the version number.
+If you need to create a `patch` or a `major`, replace the last keyword of the command.
+
+[^4]: This step assumes you have set up your .npmrc with the correct email and _auth parameters, and that you have the
+proper permissions on Nexus (all developers should have permissions already, if not ask your team). For instructions on
+configuring npm for publishing to nexus, see https://books.sonatype.com/nexus-book/reference/npm-deploying-packages.html
