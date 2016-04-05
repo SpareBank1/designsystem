@@ -4,10 +4,19 @@
 
 Felles kort-komponent for SpareBank 1.
 
+![exempel](visual-tests/baseline-screenshots/index/plain/firefox.png)
+
 ##Bruk
 
 <code>@import ../node_modules/ffe-cards/less/[...]</code> i en less-fil i ditt prosjekt.
 
 Merk at ffe-core er en avhengighet for ffe-cards (se peerDependencies i package.json).
 
-se readme for ffe-core for øvrig informasjon.
+## Visuell regressionstestning
+Se [readme for ffe-core](https://stash.intern.sparebank1.no/projects/FFE/repos/ffe-core/browse/README.md).
+
+## Pull Requests
+Se [readme for ffe-core](https://stash.intern.sparebank1.no/projects/FFE/repos/ffe-core/browse/README.md).
+
+## Publisering
+Se [readme for ffe-core](https://stash.intern.sparebank1.no/projects/FFE/repos/ffe-core/browse/README.md).
