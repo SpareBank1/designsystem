@@ -4,7 +4,8 @@
   "description": "Felles Front End Icons",
   "main": "index.js",
   "scripts": {
-    "start": "gulp"
+    "start": "gulp",
+    "test": "npm run start && ./run_visual-tests.sh"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,9 @@
     "gulp-replace": "^0.5.4",
     "gulp-svg-sprite": "^1.2.10",
     "yargs": "^3.32.0"
+  },
+  "devDependencies": {
+    "gemini": "^3.0.2",
+    "gulp": "^3.9.1"
   }
 }
