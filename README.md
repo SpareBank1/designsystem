@@ -9,6 +9,9 @@ the different icons can be viewed. **This file should in most cases not be used 
 Instead, ffe-icons should be used as a repository from where your build fetches only the icons that it needs, to keep
 the sprite file size as low as possible. Read on to see how you can set up your build to do this.
 
+## Available icons
+![icons](visual-tests/baseline-screenshots/sprite.symbol/plain/firefox.png)
+
 ## Including ffe-icons in your app
 First add an `icons.json` file to your project where you define what icons you want. Additionally, you can
 pass in options that [svg-sprite](https://github.com/jkphl/svg-sprite) support to override defaults.
@@ -122,14 +125,14 @@ If you haven't already, fork this repository and clone it on your machine.
 5. Commit your changes to the feature branch, and push the changes to `origin`.
 6. Create a pull request from your repos feature branch to ffe-icons `master`.
 
-## Releasing a new version of ffe-icons
-1. Fetch the latest `master` branch in ffe-icons
-2. Update the changelog with the desired version number. Include whatever was under the "Next version" heading in the section for the new version.
-3. Run `$ npm version minor` [^3].
-4. Push the change and tag to `origin master`: `$ git push && git push --tags`
-5. Create a pull request from your repos `master` to ffe-icons `master`
-6. When merged OK, fetch the latest `master` branch and checkout to the tagged commit. Alternatively, if you have no local changes since the tag, go ahead to step 7.
-7. Publish the new version to Nexus: `$ npm publish --registry ***REMOVED***` [^4]
+## Visual regression testing
+See [readme for ffe-core](***REMOVED***).
+
+## Pull Requests
+See [readme for ffe-core](***REMOVED***).
+
+## Publishing
+See [readme for ffe-core](***REMOVED***).
 
 
 ###### Footnotes
@@ -139,10 +142,3 @@ from app to app). I.e., call it flamme-ikon, not skade-ikon even though it might
 
 [^2]: Run `$ npm start`, open the generated HTML (`dist/symbol/sprite.symbol.html`) and have a look. If only minor edits
 are needed (padding for instance) you can try this [web-based SVG editor](https://github.com/SVG-Edit/svgedit).
-
-[^3]: This bumps the version number in `package.json`, commits the change, and tags the commit with the version number.
-If you need to create a `patch` or a `major`, replace the last keyword of the command.
-
-[^4]: This step assumes you have set up your .npmrc with the correct email and _auth parameters, and that you have the
-proper permissions on Nexus (all developers should have permissions already, if not ask your team). For instructions on
-configuring npm for publishing to nexus, see https://books.sonatype.com/nexus-book/reference/npm-deploying-packages.html

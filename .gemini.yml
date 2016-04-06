@@ -1,0 +1,9 @@
+rootUrl: ***REMOVED***
+windowSize: 1030x1080
+screenshotsDir: './visual-tests/baseline-screenshots'
+browsers:
+  firefox:
+    gridUrl: http://0.0.0.0:32783/wd/hub
+    desiredCapabilities:
+      browserName: firefox
+
