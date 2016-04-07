@@ -1,5 +1,11 @@
 # Changelog
 
+## Version 3.1.0
+
+* New icons: hengelaas, pil-ned, tannhjul
+* Automatic publish and test
+* Screenshot in readme
+
 ## Version 3.0.0
 
 * Removed the postinstall script, since it created issues with builds on npm 2.x. See https://github.com/npm/npm/issues/8850
