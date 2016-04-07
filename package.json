@@ -11,6 +11,9 @@
     "type": "git",
     "url": "***REMOVED***"
   },
+  "publishConfig": {
+    "registry": "***REMOVED***"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
