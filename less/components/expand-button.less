@@ -1,3 +1,5 @@
+@ffe-expand-button-height: 45px;
+
 .ffe-expand-button {
   &:extend(.ffe-secondary-button all);
 
@@ -7,8 +9,8 @@
     background-repeat: no-repeat;
     background-size: 16px;
     background-position: center;
-    width: 45px;
-    height: 45px;
+    width: @ffe-expand-button-height;
+    height: @ffe-expand-button-height;
     padding: 0;
 
     @bare-color: replace(~`"@{ffe-blue-royal-light-wcag}"`, "#", "");
