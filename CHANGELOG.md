@@ -1,4 +1,6 @@
 # Changelog
+## UNRELEASED
+* Updated element mapping to include fieldsets. Fixes default styling set by normalize.
 
 ## v.5.2.0
 * Bugfix select box text foreground color
