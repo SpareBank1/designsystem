@@ -1,6 +1,8 @@
 # Changelog
-## UNRELEASED
+## v.5.3.0
+* Implemented Tertiary button
 * Updated element mapping to include fieldsets. Fixes default styling set by normalize.
+* Introduce less variable `ffe-expand-button-height`
 
 ## v.5.2.0
 * Bugfix select box text foreground color
