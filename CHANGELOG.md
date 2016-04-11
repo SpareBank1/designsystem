@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+* New icon: paraply-ikon
+
 ## Version 3.1.0
 
 * New icons: hengelaas, pil-ned, tannhjul
