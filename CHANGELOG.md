@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## Version 3.2.0
 
 * New icon: paraply-ikon
 
