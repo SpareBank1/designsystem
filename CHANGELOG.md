@@ -1,5 +1,8 @@
 #CHANGELOG
 
+## Version 4.0.0
+* Oppdatert til å bruke v5.x av ffe-core 
+
 ##Version 3.0.0
 * Klassen `ffe-header__profile-action` fjernet igjen, endringen i button gjort i core som førte til at den ble laget var en bug og ikke en feature
 
