@@ -1,0 +1,91 @@
+@import "../node_modules/ffe-core/less/ffe.less";
+
+.ffe-datepicker {
+  max-width: 450px;
+  border: solid 2px @ffe-grey-light;
+  border-radius: 4px;
+  padding: 0.25em;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.25em;
+    width: 100%;
+  }
+
+  &__next {
+    &:extend(.ffe-primary-button);
+    order: 3;
+
+    line-height: 1em;
+
+    &__icon {
+      height: 2em;
+      width: 2em;
+    }
+  }
+
+  &__previous {
+    &:extend(.ffe-primary-button);
+    order: 1;
+    line-height: 1em;
+
+    &__icon {
+      height: 2em;
+      width: 2em;
+    }
+  }
+
+  &__title {
+    &:extend(.ffe-h4);
+    order: 2;
+    margin: auto;
+  }
+
+  &__accessible-text {
+    position: absolute !important;
+    clip: rect(1px, 1px, 1px, 1px);
+  }
+
+  &__calendar {
+    width: 100%;
+    border-spacing: 0.5em 0;
+    border-collapse: separate;
+    color: @ffe-black;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px @ffe-blue-focus;
+      border-radius: 4px;
+    }
+  }
+
+  &__date {
+    &:extend(.ffe-shortcut-button);
+    padding: 0;
+    width: 100%;
+    margin: 0.15em;
+
+    &--today {
+      background: @ffe-grey-light;
+      color: @ffe-black;
+
+      &:hover {
+        background: @ffe-grey-light;
+      }
+    }
+
+    &--selected {
+      background: @ffe-blue-royal;
+      color: @ffe-white;
+
+      &:hover {
+        background: @ffe-blue-royal;
+      }
+    }
+
+    &--focus {
+      border-color: @ffe-blue-royal-light-wcag;
+    }
+  }
+}
