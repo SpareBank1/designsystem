@@ -66,6 +66,10 @@ Klargjør stilguide ved å kjøre følgende kommando:
 Det utførs visuell regressiontestning av stilguiden på byggserver med Gemini. Vid ændringar som medfør att testerna
 brekker måste det aktuella baseline-screenshotet uppdateras, detta gørs med `./update_visual_tests-baslines.sh`.
 
+Gemini bruker native-moduler varfør du bør ha g++-compiler tillgænglig innan du installerar detta paketet:
+
+    $ sudo apt-get install -y g++
+
 ## Pull Requests
 Gjøres mot master.
 Squash alle commits til en enkelt commit.
