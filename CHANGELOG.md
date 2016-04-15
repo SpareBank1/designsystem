@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 3.3.0
+
+* New icon: kontorbygg
+
 ## Version 3.2.0
 
 * New icon: paraply-ikon
