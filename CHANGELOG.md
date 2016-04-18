@@ -1,5 +1,8 @@
 #CHANGELOG
 
+##Version 3.1.0
+La til ffe-product-card
+
 ##Version 3.0.1
 Oppdatert til å bruke v4 eller høyere av ffe-core
 

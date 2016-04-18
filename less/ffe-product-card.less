@@ -1,0 +1,91 @@
+@import "animation.less";
+
+.ffe-product-card {
+    &:extend(.ffe-link-card);
+    .card-sequential-animation();
+
+    height: 100px;
+
+    &:focus {
+        box-shadow: 0 0 0 2px @ffe-blue-focus;
+    }
+    &:focus,
+    &:active,
+    &:hover {
+        border-color: @ffe-blue-royal-light-wcag;
+    }
+}
+
+.ffe-product-card__icon {
+    vertical-align: middle;
+    width: 60px;
+    height: 60px;
+    margin: 10px 2px 0 5px;
+    float: left;
+}
+
+.ffe-product-card__heading {
+    display: inline-block;
+    vertical-align: middle;
+    color: @ffe-blue-royal-light-wcag;
+    margin-top: 6px;
+    margin-bottom: 0;
+}
+
+.ffe-product-card__details {
+    &:extend(.ffe-body-text);
+    color: @ffe-blue-royal;
+    margin: 0;
+}
+
+.ffe-product-card__details,
+.ffe-product-card__heading {
+    margin-left: 90px;
+    display: block;
+}
+
+.ffe-product-card__status {
+    animation: showCardNotification 0.3s 1s forwards;
+    transform: translateY(-38px);
+    background-color: @ffe-sand-25;
+    color: @ffe-grey-dark;
+    margin: 0 auto;
+    text-transform: uppercase;
+    padding: 0;
+    max-width: 75%;
+    font-size: 14px;
+    text-align: center;
+    position: relative;
+    top: -10px;
+    margin-bottom: -18px;
+}
+
+@media screen and (min-width: @breakpoint-sm) {
+    .ffe-product-card {
+        height: 145px;
+    }
+
+    .ffe-product-card__icon {
+        margin-top: 18px;
+    }
+
+    .ffe-product-card__heading {
+        font-family: "MuseoSansRounded-500", arial, sans-serif;
+        font-size: 20px;
+        max-width: 100%;
+        margin-top: 17px;
+    }
+
+    .ffe-product-card__details,
+    .ffe-product-card__heading {
+        margin-left: 88px;
+        display: block;
+    }
+
+    .ffe-product-card__status {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+}
