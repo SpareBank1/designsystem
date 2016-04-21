@@ -1,5 +1,8 @@
 #CHANGELOG
 
+##Version 3.2.0
+Endret bredden på ffe-product-card til 320px
+
 ##Version 3.1.0
 La til ffe-product-card
 
