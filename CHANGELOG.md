@@ -1,5 +1,9 @@
 # Changelog
 
+## Next version
+
+* New icons: graf-opp, kake-kvart, person-slips-ikon, sparegris
+
 ## Version 3.3.0
 
 * New icon: kontorbygg
