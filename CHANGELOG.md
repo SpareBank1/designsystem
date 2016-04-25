@@ -1,5 +1,8 @@
 #CHANGELOG
 
+##Version 3.2.1
+Fiks plassering av statusbanner i Internet Explorer
+
 ##Version 3.2.0
 Endret bredden på ffe-product-card til 320px
 
