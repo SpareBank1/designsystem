@@ -2,7 +2,7 @@
 
 ## Next version
 
-* New icons: graf-opp-ikon, kake-kvart-ikon, person-slips-ikon, sparegris-ikon
+* New icons: graf-opp-ikon, kake-kvart-ikon, person-slips-ikon, sparegris-ikon, konvolutt-ikon
 
 ## Version 3.3.0
 
