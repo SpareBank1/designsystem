@@ -1,4 +1,7 @@
 # Changelog
+## v.5.3.1
+* Responsive table: Fix left-alignment of table headers in Internet Explorer
+
 ## v.5.3.0
 * Implemented Tertiary button
 * Updated element mapping to include fieldsets. Fixes default styling set by normalize.
