@@ -60,7 +60,7 @@ Klargjør stilguide ved å kjøre følgende kommando:
 
 ## Visuell regressionstestning
 Det utførs visuell regressiontestning av stilguiden på byggserver med Gemini. Vid ændringar som medfør att testerna
-brekker måste det aktuella baseline-screenshotet uppdateras, detta gørs med `./update_visual_tests-baslines.sh`.
+brekker måste det aktuella baseline-screenshotet uppdateras, detta gørs med `./update_visual-tests-baselines.sh`.
 
 Gemini bruker native-moduler varfør du bør ha g++-compiler tillgænglig innan du installerar detta paketet:
 
