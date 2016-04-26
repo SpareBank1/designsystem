@@ -1,4 +1,8 @@
 # Changelog
+
+## v.5.4.0
+* ffe-dropdown replaces ffe-select-box, while ffe-select-box is kept (but deprecated) until the next major release
+
 ## v.5.3.1
 * Responsive table: Fix left-alignment of table headers in Internet Explorer
 
