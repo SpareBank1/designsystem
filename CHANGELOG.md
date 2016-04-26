@@ -1,4 +1,14 @@
 # Changelog
+
+## v.5.5.1
+* Secondary button: Modified colors for the loading state
+
+## v.5.5.0
+* Layout: Support `--bg-sand` and `--bg-grey` modifiers on `ffe-content-container`
+
+## v.5.4.0
+* ffe-dropdown replaces ffe-select-box, while ffe-select-box is kept (but deprecated) until the next major release
+
 ## v.5.3.1
 * Responsive table: Fix left-alignment of table headers in Internet Explorer
 
