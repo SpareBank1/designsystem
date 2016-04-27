@@ -1,6 +1,6 @@
 {
   "name": "ffe-dropdown-react",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "main": "lib/dropdown.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/.",
@@ -13,6 +13,9 @@
   },
   "peerDependencies": {
     "ffe-core": "^5.0.0"
+  },
+  "dependencies": {
+    "nfe-hash": "^1.1.0"
   },
   "devDependencies": {
     "babel-cli": "6.7.5",
@@ -27,7 +30,6 @@
     "eslint-plugin-jsx-a11y": "^1.0.3",
     "eslint-plugin-react": "^4.2.2",
     "mocha": "^2.4.5",
-    "nfe-hash": "^1.1.0",
     "nsp": "^2.2.0",
     "react-addons-test-utils": "^15.0.1",
     "react-dom": "^15.0.1",
