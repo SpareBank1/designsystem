@@ -1,6 +1,5 @@
 # Changelog
 
-<<<<<<< HEAD
 ## v.5.5.1
 * Secondary button: Modified colors for the loading state
 
