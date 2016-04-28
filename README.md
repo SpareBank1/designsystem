@@ -1,4 +1,4 @@
-ffe-component# ffe-expandable-react
+# ffe-expandable-react
 
 ## Install
 
