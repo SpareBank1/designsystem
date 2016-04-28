@@ -16,13 +16,13 @@
   "author": "Ivar Nilsen <ivar.nilsen@sparebank1.no>",
   "license": "ISC",
   "peerDependencies": {
-    "ffe-core": "^4.0.0"
+    "ffe-core": "^5.0.0"
   },
   "devDependencies": {
     "less": "^2.6.1"
   },
   "dependencies": {
-    "ffe-core": "^4.0.0",
+    "ffe-core": "^5.0.0",
     "mkdirp": "^0.5.1"
   }
 }
