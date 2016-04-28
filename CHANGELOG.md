@@ -1,5 +1,8 @@
 # Changelog
 
+## v.5.5.1
+* Secondary button: Modified colors for the loading state
+
 ## v.5.5.0
 * Layout: Support `--bg-sand` and `--bg-grey` modifiers on `ffe-content-container`
 
