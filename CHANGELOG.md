@@ -1,6 +1,6 @@
 # Changelog
 
-## UNRELEASED
+## v.5.5.2
 * Fixed bug that vertically misalignes icon on info-messages. [Source of solution](http://stackoverflow.com/questions/11726442/font-rendering-line-height-issue-on-mac-pc-outside-of-element) 
 
 ## v.5.5.1
