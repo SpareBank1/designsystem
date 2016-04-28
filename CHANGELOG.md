@@ -1,6 +1,6 @@
 # Changelog
 
-## Next version
+## Version 3.4.0
 
 * New icons: graf-opp-ikon, kake-kvart-ikon, person-slips-ikon, sparegris-ikon, konvolutt-ikon
 
