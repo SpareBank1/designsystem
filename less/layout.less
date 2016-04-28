@@ -47,13 +47,24 @@
         text-align: left;
     }
 
+    &--no-space {
+        margin: 0 auto;
+    }
+
+    &--bg-sand {
+        background-color: @ffe-sand-25;
+        padding: @app-margin 0 @app-margin 0;
+    }
+
+    &--bg-grey {
+        background-color: @ffe-grey-light-bg;
+        padding: @app-margin 0 @app-margin 0;
+    }
+
     @media screen and (min-width: @breakpoint-md) {
         margin: @app-margin*1.5 auto @app-margin*1.5 auto;
     }
 
-    &--no-space {
-        margin: 0 auto;
-    }
 }
 
 .ffe-content-container[aria-hidden="true"] {
