@@ -11,22 +11,17 @@ $ npm install --save ffe-expandable-react
 ```javascript
 import ffeExpandableReact from 'ffe-expandable-react';
 
-ffeExpandableReact('ffe-component');
-//=> 'hello ffe-component'
+const isOpen = false;
+const RowFolded = element || string || array(element);
+const RowExpanded = element || string || array(element);
+const expandTime = 1;
+
+<Expandable
+    isOpen={ isOpen }
+    expandTime={ expandTime }
+    folded={ RowFolded }
+    expanded={ RowExpanded }
+/>
 ```
 
 ## Test
-
-# Local
-
-For å teste endringer lokalt kan man kjøre i dette prosjektes mappe:
-
-```
-sudo npm link
-```
-
-Og i prosjektet som skal bruke endringene gjort lokalt kan man kjøre:
-
-```
-npm link ffe-expandable-react
-```
