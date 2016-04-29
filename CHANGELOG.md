@@ -1,5 +1,8 @@
 # Changelog
 
+## Next version
+* New icons: blad-ikon, hake-sirkel-ikon, spire-ikon, tre-ikon
+
 ## Version 3.4.0
 
 * New icons: graf-opp-ikon, kake-kvart-ikon, person-slips-ikon, sparegris-ikon, konvolutt-ikon
