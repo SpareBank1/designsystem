@@ -1,6 +1,7 @@
 # Changelog
 
-## Next version
+## Version 3.5.0
+
 * New icons: blad-ikon, hake-sirkel-ikon, spire-ikon, tre-ikon
 
 ## Version 3.4.0
