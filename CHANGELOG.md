@@ -1,5 +1,9 @@
 # Changelog
 
+## UNRELEASED
+* Removing general positioning of spinner to fix layout bug when spinner is used on secondary buttons. 
+Bug happens because secondary-button reruns ffe-sb1-spinner-mixin after position is set in primary-button which it extends.
+
 ## v.5.5.2
 * Fixed bug that vertically misalignes icon on info-messages. [Source of solution](http://stackoverflow.com/questions/11726442/font-rendering-line-height-issue-on-mac-pc-outside-of-element) 
 
