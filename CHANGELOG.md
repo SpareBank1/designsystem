@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 3.6.0
+
+* New icons: hake-stjerne-ikon
+
 ## Version 3.5.0
 
 * New icons: blad-ikon, hake-sirkel-ikon, spire-ikon, tre-ikon
