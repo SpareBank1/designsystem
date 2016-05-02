@@ -1,15 +1,6 @@
 import React from 'react';
 import ComponentHeight from './ffe-component-height';
 
-const capitalize = str => str.charAt(0).toUpperCase() + str.slice(1);
-const prefixed = (attribute, value) => {
-    const capAttr = capitalize(attribute);
-    return ['Moz', 'Webkit', 'O']
-        .map(_ => _ + capAttr)
-        .concat([attribute])
-        .reduce((result, _) => (result[_] = value) && result, {});
-};
-
 class Expandable extends React.Component {
 
     constructor() {
@@ -31,8 +22,9 @@ class Expandable extends React.Component {
 
         const styles = Object.assign({
             maxHeight: isOpen ? height : 0,
-            overflow: 'hidden'
-        }, prefixed('transition', `all ${expandTime}s`));
+            overflow: 'hidden',
+            transition: `all ${expandTime}s`
+        });
 
         return (
             <div>
