@@ -1,5 +1,8 @@
 # Changelog
 
+## UNRELEASED
+* Adding 25% opaque green.
+
 ## v.5.5.3
 * Removing general positioning of spinner to fix layout bug when spinner is used on secondary buttons.
 Bug happens because secondary-button reruns ffe-sb1-spinner-mixin after position is set in primary-button which it extends.
