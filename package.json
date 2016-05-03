@@ -1,7 +1,8 @@
 {
   "name": "ffe-spinner-react",
-  "version": "0.0.0",
-  "main": "lib/ffe-spinner-react.js",
+  "version": "1.0.0",
+  "author": "Sparebank 1",
+  "main": "lib/index.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/.",
     "lint": "eslint src/.",
@@ -11,7 +12,7 @@
     "prepublish": "npm run build",
     "has-published": "npm show . versions -s | grep -q ${npm_package_version}"
   },
-  "devDependencies": { 
+  "devDependencies": {
     "eslint-plugin-react": "^4.2.2",
     "react": "^15.0.0",
     "react-addons-test-utils": "^15.0.0",
@@ -25,10 +26,12 @@
     "babel-register": "^6.4.3",
     "chai": "^3.5.0",
     "eslint": "^2.4.0",
-    "eslint-config-airbnb": "^6.1.0",
     "mocha": "^2.4.5",
     "mocha-tap13": "0.0.3",
     "nsp": "^2.2.0"
+  },
+  "peerDependencies": {
+      "ffe-core": "^5.5.3"
   },
   "publishConfig": {
     "registry": "***REMOVED***"
@@ -37,12 +40,6 @@
     "lib",
     "*.js"
   ],
-  "eslintConfig": {
-    "extends": "airbnb"
-  },
-  "repository": "",
-  "author": "",
-  "license": "",
   "babel": {
     "presets": [
       "react",
