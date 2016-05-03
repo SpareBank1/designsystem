@@ -48,10 +48,6 @@ module.exports = {
         // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/export.md
         'import/export': 2,
 
-        // disallow duplicate imports
-        // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-duplicates.md
-        'import/no-duplicates': 2,
-
         // disallow non-import statements appearing before import statements
         // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/imports-first.md
         'import/imports-first': 2,
