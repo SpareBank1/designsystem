@@ -15,10 +15,13 @@ class Expandable extends React.Component {
             folded,
             isOpen,
             customClass,
-            expandTime = 0.5
+            expandTime = 0.5,
+            isTable
         } = this.props;
 
         const { height } = this.state;
+        let ExpandableWrapperElementTag = 'div';
+        let ExpandedElementTag = 'div';
 
         const styles = Object.assign({
             maxHeight: isOpen ? height : 0,
@@ -26,10 +29,15 @@ class Expandable extends React.Component {
             transition: `all ${expandTime}s`
         });
 
+        if (isTable) {
+            ExpandableWrapperElementTag = 'tr';
+            ExpandedElementTag = 'td';
+        }
+
         return (
-            <div>
+            <ExpandableWrapperElementTag>
                 { folded || '' }
-                <div style={ styles } className={ customClass }>
+                <ExpandedElementTag style={ styles } className={ customClass }>
                     <ComponentHeight
                         onHeightReady={ value => {
                             this.setState({
@@ -37,10 +45,10 @@ class Expandable extends React.Component {
                             });
                         } }
                     >
-                            { expanded || children }
+                        { expanded || children }
                     </ComponentHeight>
-                </div>
-            </div>
+                </ExpandedElementTag>
+            </ExpandableWrapperElementTag>
         );
     }
 }
@@ -63,7 +71,8 @@ Expandable.propTypes = {
         React.PropTypes.string
     ]),
     customClass: React.PropTypes.string,
-    expandTime: React.PropTypes.number
+    expandTime: React.PropTypes.number,
+    isTable: React.PropTypes.bool
 };
 
 export default Expandable;
