@@ -16,7 +16,7 @@ class Expandable extends React.Component {
             isOpen,
             customClass,
             expandTime = 0.5,
-            isTable
+            isTableRow
         } = this.props;
 
         const { height } = this.state;
@@ -29,7 +29,7 @@ class Expandable extends React.Component {
             transition: `all ${expandTime}s`
         });
 
-        if (isTable) {
+        if (isTableRow) {
             ExpandableWrapperElementTag = 'tr';
             ExpandedElementTag = 'td';
         }
