@@ -3,8 +3,8 @@ import ComponentHeight from './ffe-component-height';
 
 class Expandable extends React.Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = { height: -1 };
     }
 
