@@ -2,6 +2,7 @@
 
 main() {
     npm install
+    npm run lint
 
     if should_publish; then
         npm run has-published -s || npm publish

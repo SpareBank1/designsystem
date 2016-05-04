@@ -4,11 +4,10 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
         "lint": "eslint ."
     },
-    "author": "",
-    "license": "ISC",
+    "author": "Sparebank 1",
+    "license": "",
     "peerDependencies": {
         "eslint": "^2.9.0",
         "eslint-plugin-import": "^1.6.1",

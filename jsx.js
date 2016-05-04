@@ -74,6 +74,10 @@ module.exports = {
 
         // Prevent extra closing tags for components without children
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/self-closing-comp.md
-        'react/self-closing-comp': 2
+        'react/self-closing-comp': 2,
+
+        // Prevent missing props validation in a React component definition
+        // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prop-types.md
+        'prop-types': 2
     }
 };
