@@ -1,8 +1,8 @@
 {
   "name": "ffe-button-react",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React implementation of ffe-button",
-  "main": "lib/FFEButton.js",
+  "main": "lib/index.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/.",
     "lint": "eslint src/.",
