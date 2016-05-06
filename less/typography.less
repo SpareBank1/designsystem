@@ -36,7 +36,7 @@
   font-family: "MuseoSansRounded-700", arial, sans-serif;
   font-size: 16px;
   font-weight: normal;
-  line-height: 22px;
+  line-height: 24px;
 }
 
 .ffe-small-text {
@@ -55,11 +55,11 @@
   line-height: 20px;
 }
 
-.ffe-h1,.ffe-h2,.ffe-h3,.ffe-h4,.ffe-h5 {
+.ffe-h1, .ffe-h2, .ffe-h3, .ffe-h4, .ffe-h5 {
   margin-top: 0;
   margin-bottom: 10px;
 
-  &--error{
+  &--error {
     color: @ffe-orange-wcag;
   }
 
@@ -89,12 +89,20 @@
   }
 }
 
-.ffe-lead-paragraph {
+.ffe-lead-paragraph, .ffe-sub-lead-paragraph {
   margin-top: 0;
   color: @ffe-blue-royal;
   font-family: "MuseoSans-500", arial, sans-serif;
+}
+
+.ffe-lead-paragraph {
   font-size: 18px;
   line-height: 28px;
+}
+
+.ffe-sub-lead-paragraph {
+  font-size: 16px;
+  line-height: 26px;
 }
 
 .ffe-link-text {
@@ -135,100 +143,101 @@
 
 .ffe-number-list,
 .ffe-bullet-list {
-    padding: 0;
-    text-align: left;
-    margin: 0 0 20px 0;
+  padding: 0;
+  text-align: left;
+  margin: 0 0 20px 0;
 
-    > li {
-        margin-top: 10px;
-        margin-left: 15px;
-    }
+  > li {
+    margin-top: 10px;
+    margin-left: 15px;
+  }
 }
+
 .ffe-number-list {
-    list-style-type: decimal;
+  list-style-type: decimal;
 }
+
 .ffe-bullet-list {
-    list-style-type: disc;
+  list-style-type: disc;
 }
 
 /* tablet/medium typography */
 @media screen and (min-width: @breakpoint-sm) {
 
-    .ffe-h1 {
-        font-size: 48px;
-        line-height: 58px;
-    }
-
-    .ffe-h2 {
-        font-size: 32px;
-        line-height: 44px;
-    }
-
-    .ffe-h3 {
-        font-size: 28px;
-        line-height: 38px;
-    }
-
-    .ffe-h4 {
-        font-size: 20px;
-        line-height: 28px;
-    }
-
-    .ffe-h5 {
-        font-size: 16px;
-        line-height: 24px;
-    }
-
-    .ffe-h1,.ffe-h2,.ffe-h3,.ffe-h4,.ffe-h5 {
-        margin-bottom: 15px;
-    }
-
-    .ffe-lead-paragraph {
-        font-size: 22px;
-        line-height: 32px;
-    }
-
-    .ffe-body-text {
-        font-size: 16px;
-        line-height: 26px;
-    }
-
-    .ffe-small-text {
-        font-size: 14px;
-        line-height: 22px;
-    }
-
-    .ffe-micro-text {
-        font-size: 12px;
-        line-height: 20px;
-    }
-
-    .ffe-number-list,
-    .ffe-bullet-list {
-        margin-left: 20px;
-    }
-}
-
-/* Desktop */
-@media screen and (min-width: @breakpoint-md) {
-
-  .ffe-h1,.ffe-h2,.ffe-h3,.ffe-h4,.ffe-h5 {
-    margin-bottom: 20px;
-  }
-
-  .ffe-body-text {
-    font-size: 18px;
-    line-height: 28px;
-  }
-
   .ffe-h1 {
-    font-size: 54px;
-    line-height: 64px;
+    font-size: 40px;
+    line-height: 60px;
   }
 
   .ffe-h2 {
     font-size: 32px;
     line-height: 44px;
+  }
+
+  .ffe-h3 {
+    font-size: 27px;
+    line-height: 38px;
+  }
+
+  .ffe-h4 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .ffe-h5 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .ffe-h1, .ffe-h2, .ffe-h3, .ffe-h4, .ffe-h5 {
+    margin-bottom: 15px;
+  }
+
+  .ffe-lead-paragraph {
+    font-size: 22px;
+    line-height: 34px;
+  }
+
+  .ffe-sub-lead-paragraph {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .ffe-small-text {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .ffe-micro-text {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .ffe-number-list,
+  .ffe-bullet-list {
+    margin-left: 20px;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: @breakpoint-md) {
+
+  .ffe-h1, .ffe-h2, .ffe-h3, .ffe-h4, .ffe-h5 {
+    margin-bottom: 20px;
+  }
+
+  .ffe-body-text {
+    line-height: 24px;
+  }
+
+  .ffe-h1 {
+    font-size: 46px;
+    line-height: 67px;
+  }
+
+  .ffe-h2 {
+    font-size: 36px;
+    line-height: 50px;
   }
 
   .ffe-h3 {
@@ -242,13 +251,13 @@
   }
 
   .ffe-h5 {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 24px;
   }
 
   .ffe-lead-paragraph {
     font-size: 22px;
-    line-height: 32px;
+    line-height: 34px;
   }
 
   .ffe-small-text {
