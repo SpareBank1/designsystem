@@ -30,7 +30,7 @@ export default function FFEShortcutButton(props) {
 FFEShortcutButton.propTypes = {
     action: PropTypes.string,
     ariaLoadingMessage: PropTypes.string,
-    children: PropTypes.node.isRequired,
+    children: PropTypes.node,
     id: PropTypes.string,
     isLoading: PropTypes.bool,
     label: PropTypes.string,
