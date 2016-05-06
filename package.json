@@ -6,6 +6,10 @@
     "scripts": {
         "lint": "eslint ."
     },
+    "repository": {
+        "type": "git",
+        "url": "***REMOVED***"
+    },
     "author": "Sparebank 1",
     "license": "",
     "peerDependencies": {
@@ -15,5 +19,8 @@
     },
     "files": [
         "*.js"
-    ]
+    ],
+    "publishConfig": {
+        "registry": "***REMOVED***"
+    }
 }
