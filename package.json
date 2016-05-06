@@ -1,0 +1,19 @@
+{
+    "name": "eslint-config-ffe",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "lint": "eslint ."
+    },
+    "author": "Sparebank 1",
+    "license": "",
+    "peerDependencies": {
+        "eslint": "^2.9.0",
+        "eslint-plugin-import": "^1.6.1",
+        "eslint-plugin-react": "^5.0.1"
+    },
+    "files": [
+        "*.js"
+    ]
+}
