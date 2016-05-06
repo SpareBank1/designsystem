@@ -1,5 +1,4 @@
 import React, { Children, PropTypes } from 'react';
-import hash from 'nfe-hash';
 import RadioButton from './radio-button';
 
 const nil = () => {};
@@ -20,8 +19,6 @@ const listenToChange = (process.env.NODE_ENV !== 'production') ? (groupOnChange,
                                                                : (groupOnChange, fieldOnChange) => fieldOnChange;
 
 const RadioButtonGroup = ({ label, name, inline, buttons, children, value, disabled, onChange }) => {
-
-    const id = `radio-button-group-${ hash({ label, name, inline }) }`;
 
     let overridden;
     if (buttons) {
@@ -44,12 +41,13 @@ const RadioButtonGroup = ({ label, name, inline, buttons, children, value, disab
 
     return (
         <div className="ffe-input-group" aria-live="polite">
-            { label ?
-                <label className="ffe-form-label" htmlFor={ id }>
-                    { label }
-                </label>
-            : '' }
-            <fieldset className="ffe-fieldset" id={ id } value={ value } onChange={ onChange }>
+            <fieldset className="ffe-fieldset" value={ value } onChange={ onChange }>
+                { label ?
+                    <legend className="ffe-form-label">
+                        { label }
+                    </legend>
+                : '' }
+
                 { overridden || children }
             </fieldset>
         </div>

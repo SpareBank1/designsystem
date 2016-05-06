@@ -23,23 +23,15 @@ describe('<RadioButtonGroup />', () => {
             expect(wrapper.find('fieldset')).to.have.lengthOf(1);
         });
 
-        it('should not render a label by default', () => {
-            expect(wrapper.find('label')).to.be.empty;
-        });
-    });
+        it('should not render a legend by default', () => {
+            expect(wrapper.find('legend')).to.be.empty;
 
-    describe('label rendering', () => {
-        const wrapper = shallow(<RadioButtonGroup label="Wazzup" />);
-
-        it('should render a label when specified', () => {
-            expect(wrapper.find('label')).to.have.lengthOf(1);
-        });
-
-        it('should apply the same id to <label> and <fieldset>', () => {
-            const htmlFor = wrapper.find('label').prop('htmlFor');
-            const id = wrapper.find('fieldset').prop('id');
-            expect(htmlFor).to.be.equal(id);
-        });
+        it('should render a legend when specified', () => {
+            const wrapper = shallow(<RadioButtonGroup label="Wazzup" />);
+            const legend = wrapper.find('legend');
+            expect(legend).to.have.lengthOf(1);
+            expect(legend.text()).to.be.equal('Wazzup');
+        });});
     });
 
     describe('rendering of children', () => {
