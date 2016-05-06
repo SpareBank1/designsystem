@@ -50,7 +50,7 @@ module.exports = {
 
         // Prevent multiple component definition per file
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-multi-comp.md
-        'react/no-multi-comp': 2,
+        'react/no-multi-comp': [2, {'ignoreStateless': true}],
 
         // Prevent usage of unknown DOM property
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unknown-property.md
