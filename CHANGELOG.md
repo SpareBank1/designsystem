@@ -1,7 +1,9 @@
 # Changelog
 
-## UNRELEASED
-* Adding 25% opaque green.
+## v.5.6.0
+* Adding 20% opaque green.
+* Adding 20% opaque orange.
+* Adding 20% opaque light royal blue.
 * Minor fixes to tertiary-button appearance.
 
 ## v.5.5.3
