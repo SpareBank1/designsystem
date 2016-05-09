@@ -1,11 +1,12 @@
 {
   "name": "ffe-icons",
-  "version": "3.6.0",
+  "version": "3.6.1",
   "description": "Felles Front End Icons",
   "main": "index.js",
   "scripts": {
     "start": "gulp",
     "test": "npm run start && ./run_visual-tests.sh",
+    "update-baseline": "./update_visual-tests-baselines.sh",
     "has-published": "npm show . versions -s | grep -q ${npm_package_version}"
   },
   "repository": {
