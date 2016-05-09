@@ -17,11 +17,17 @@
     "plugins": [
         "react"
     ],
+    "globals" : {
+        "describe": true,
+        "beforeEach": true,
+        "before": true,
+        "it": true
+    },
     "rules": {
         "arrow-spacing": 2,
         "brace-style": [2, "1tbs", { "allowSingleLine": true }],
         "block-scoped-var": 2,
-        "camelcase": 2,
+        "camelcase": 0,
         "comma-style": [2, "last"],
         "curly": [2, "multi-line"],
         "jsx-quotes": [2, "prefer-double"],
@@ -56,7 +62,7 @@
         "react/no-danger": 2,
         "react/no-did-update-set-state": 1,
         "react/no-direct-mutation-state": 2,
-        "react/no-multi-comp": 1,
+        "react/no-multi-comp": 0,
         "react/no-unknown-property": 2,
         "react/react-in-jsx-scope": 2,
         "react/self-closing-comp": 2,

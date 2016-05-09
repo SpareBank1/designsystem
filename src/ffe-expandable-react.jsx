@@ -16,20 +16,20 @@ class Expandable extends React.Component {
             isOpen,
             customClass,
             expandTime = 0.5,
-            isTableRow
+            isTable
         } = this.props;
 
         const { height } = this.state;
         let ExpandableWrapperElementTag = 'div';
         let ExpandedElementTag = 'div';
 
-        const styles = Object.assign({
+        const styles = {
             maxHeight: isOpen ? height : 0,
             overflow: 'hidden',
-            transition: `all ${expandTime}s`
-        });
+            transition: `max-height ${expandTime}s`
+        };
 
-        if (isTableRow) {
+        if (isTable) {
             ExpandableWrapperElementTag = 'tr';
             ExpandedElementTag = 'td';
         }
@@ -55,21 +55,9 @@ class Expandable extends React.Component {
 
 Expandable.propTypes = {
     isOpen: React.PropTypes.bool.isRequired,
-    expanded: React.PropTypes.oneOfType([
-        React.PropTypes.arrayOf(React.PropTypes.element),
-        React.PropTypes.element,
-        React.PropTypes.string
-    ]),
-    folded: React.PropTypes.oneOfType([
-        React.PropTypes.arrayOf(React.PropTypes.element),
-        React.PropTypes.element,
-        React.PropTypes.string
-    ]),
-    children: React.PropTypes.oneOfType([
-        React.PropTypes.arrayOf(React.PropTypes.element),
-        React.PropTypes.element,
-        React.PropTypes.string
-    ]),
+    expanded: React.PropTypes.node,
+    folded: React.PropTypes.node,
+    children: React.PropTypes.node,
     customClass: React.PropTypes.string,
     expandTime: React.PropTypes.number,
     isTable: React.PropTypes.bool
