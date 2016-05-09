@@ -9,7 +9,12 @@ mkdirp.sync('jsx');
  * */
 const createStandaloneJSX = icon => `
 import React from 'react';
-export default props => <svg className={props.className} {...${icons[icon]}.props}/>;
+const icon = props => <svg className={props.className} style={props.style} focusable="false" {...${icons[icon]}.props}/>;
+icon.propTypes = {
+    className: React.PropTypes.string,
+    style: React.PropTypes.object
+};
+export default icon;
 `;
 Object.keys(icons).map((icon) => fs.writeFileSync(`./jsx/${icon}.jsx`, createStandaloneJSX(icon)));
 
