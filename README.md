@@ -1,4 +1,4 @@
-# ffe-dropdown-react 
+# ffe-dropdown-react
 
 React implementation of the dropdown found in FFE.
 
@@ -18,11 +18,22 @@ import Dropdown from 'ffe-dropdown-react';
 ```
 
 ```javascript
-<Dropdown label={ string } onChange={ function }>
-    { cards.map(c => <option value={ c.id }>{ c.name  }</option>) }    
+<Dropdown label={ labelTextString } onChange={ function }>
+    { cards.map(c => <option value={ c.id }>{ c.name }</option>) }
 </Dropdown>
 ```
 
-The passed function will be called with the `SynthethicEvent` dispatched by `React`, 
+The passed function will be called with the `SynthethicEvent` dispatched by `React`,
 allowing access to the `value` property of the selected option through `e.target.value`, where `e` is the argument passed.
+
+
+If you need to render a label tag outside of the component and pass an id for the select as a parameter you can pass an id attribute.
+The label-attribute should then be omitted.
+
+```javascript
+<label for={ uniqueIdString }>{ labelTextString }</label>
+<Dropdown id={ uniqueIdString } onChange={ function }>
+    { cards.map(c => <option value={ c.id }>{ c.name }</option>) }
+</Dropdown>
+```
 

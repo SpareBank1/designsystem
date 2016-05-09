@@ -4,15 +4,17 @@ import { assert } from 'chai';
 import React from 'react';
 import Dropdown from './dropdown';
 
-const spy = sinon.spy();
-const dropdown = <Dropdown label="Favorite guitarist?" onChange={spy}>
-                    <option value="steve">Steve Vai</option>
-                    <option value="guthrie">Guthrie Govan</option>
-                    <option value="mateus">Mateus Asato</option>
-                </Dropdown>;
+
 
 describe('<Dropdown />', () => {
-   
+
+    const spy = sinon.spy();
+    const dropdown = <Dropdown label="Favorite guitarist?" onChange={ spy }>
+        <option value="steve">Steve Vai</option>
+        <option value="guthrie">Guthrie Govan</option>
+        <option value="mateus">Mateus Asato</option>
+    </Dropdown>;
+
     it('should render a select', () => {
         const wrapper = shallow(dropdown);
         assert.equal(wrapper.find('select').length, 1);
@@ -45,5 +47,38 @@ describe('<Dropdown />', () => {
             wrapper.find('label').prop('htmlFor'),
             wrapper.find('select').prop('id')
         );
-    });    
+    });
+});
+
+
+describe('<Dropdown /> with externally rendered label and id', () => {
+
+    const spy = sinon.spy();
+    const externallyGeneratedDropdownId = 'Dropdown--123456789';
+    const dropdown = <Dropdown id={ externallyGeneratedDropdownId } onChange={ spy }>
+        <option value="steve">Steve Vai</option>
+        <option value="guthrie">Guthrie Govan</option>
+        <option value="mateus">Mateus Asato</option>
+    </Dropdown>;
+
+
+
+    it('should render a select', () => {
+        const wrapper = shallow(dropdown);
+        assert.equal(wrapper.find('select').length, 1);
+    });
+
+    it('should not render its own label', () => {
+        const wrapper = shallow(dropdown);
+        assert.equal(wrapper.find('label').length, 0);
+    });
+
+    it('should apply the externally generated id to select', () => {
+        const wrapper = shallow(dropdown);
+
+        assert.equal(
+            externallyGeneratedDropdownId,
+            wrapper.find('select').prop('id')
+        );
+    });
 });
