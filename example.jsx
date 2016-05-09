@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Icon from './dist/ffe-icons-react';
+import Icon from './ffe-icons-react';
 import iconlist from 'json!./iconlist.json';
-import BilIkon from './dist/bil-ikon';
+import BilIkon from './bil-ikon';
 
 const style = {
     'width': '200px'
