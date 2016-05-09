@@ -1,5 +1,8 @@
 # Changelog
 
+## UNRELEASED
+* Minor form examples fix: prefixed info-message and info-message--error with ffe-
+
 ## v.6.0.0
 * Several changes to sizes and line-heights of the typography. Also added ffe-sub-lead-paragraph.
 
