@@ -6,6 +6,7 @@ export default function FFEPrimaryButton(props) {
         action,
         ariaLoadingMessage,
         children,
+        disableButton,
         id,
         isLoading,
         label,
@@ -16,6 +17,7 @@ export default function FFEPrimaryButton(props) {
         <FFEButton
             action={action}
             ariaLoadingMessage={ariaLoadingMessage}
+            disableButton={disableButton}
             id={id}
             isLoading={isLoading}
             label={label}
@@ -31,6 +33,7 @@ FFEPrimaryButton.propTypes = {
     action: PropTypes.string,
     ariaLoadingMessage: PropTypes.string,
     children: PropTypes.node,
+    disableButton: PropTypes.bool,
     id: PropTypes.string,
     isLoading: PropTypes.bool,
     label: PropTypes.string,

@@ -74,6 +74,48 @@ describe('Button components:', () => {
             .to.equal('false');
     });
 
+    it('buttons should not be disabled by default', () => {
+        const wrapper = shallow(<FFEButton onClick={() => ({})}>Hello</FFEButton>);
+        const button = wrapper.find('button');
+        expect(button.prop('disabled')).to.be.equal(undefined);
+        expect(button.prop('aria-disabled')).to.be.equal(undefined);
+    });
+
+    it('disableButton prop disables the button', () => {
+        const wrapper = shallow(<FFEButton disableButton onClick={() => ({})}>Hello</FFEButton>);
+        const button = wrapper.find('button');
+        expect(button.prop('disabled')).to.be.equal(true);
+        expect(button.prop('aria-disabled')).to.be.equal(true);
+    });
+
+    it('FFEActionButton passes disableButton on to FFEButton', () => {
+        const wrapper = shallow(
+            <FFEActionButton disableButton onClick={() => ({})}>Hello</FFEActionButton>
+        );
+        expect(wrapper.find('FFEButton').prop('disableButton')).to.be.equal(true);
+    });
+
+    it('FFEPrimaryButton passes disableButton on to FFEButton', () => {
+        const wrapper = shallow(
+            <FFEPrimaryButton disableButton onClick={() => ({})}>Hello</FFEPrimaryButton>
+        );
+        expect(wrapper.find('FFEButton').prop('disableButton')).to.be.equal(true);
+    });
+
+    it('FFESecondaryButton passes disableButton on to FFEButton', () => {
+        const wrapper = shallow(
+            <FFESecondaryButton disableButton onClick={() => ({})}>Hello</FFESecondaryButton>
+        );
+        expect(wrapper.find('FFEButton').prop('disableButton')).to.be.equal(true);
+    });
+
+    it('FFEShortcutButton passes disableButton on to FFEButton', () => {
+        const wrapper = shallow(
+            <FFEShortcutButton disableButton onClick={() => ({})}>Hello</FFEShortcutButton>
+        );
+        expect(wrapper.find('FFEButton').prop('disableButton')).to.be.equal(true);
+    });
+
     it('runs the function passed as onClick when clicked', () => {
         let onClick = spy();
         const wrapper = shallow(<FFEButton onClick={onClick}>Hello</FFEButton>);
