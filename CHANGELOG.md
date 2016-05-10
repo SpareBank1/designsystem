@@ -1,5 +1,8 @@
 # Changelog
 
+## Unreleased
+* Several changes to sizes and line-heights of the typography. Also added ffe-sub-lead-paragraph.
+
 ## v.5.6.0
 * Adding 20% opaque green.
 * Adding 20% opaque orange.
