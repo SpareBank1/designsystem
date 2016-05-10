@@ -1,0 +1,30 @@
+{
+  "name": "eslint-config-ffe-base",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "unused": "eslint-find-rules -u",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@stash.intern.sparebank1.no:22/ffe/eslint-config-ffe.git"
+  },
+  "author": "Sparebank 1",
+  "license": "",
+  "peerDependencies": {
+    "eslint": "^2.9.0",
+    "eslint-plugin-import": "^1.6.1"
+  },
+  "files": [
+    "*.js"
+    ],
+  "publishConfig": {
+    "registry": "https://nexus.intern.sparebank1.no/nexus/content/repositories/npm-internal"
+  },
+  "devDependencies": {
+    "eslint": "^2.9.0",
+    "eslint-find-rules": "^1.9.2"
+  }
+}
