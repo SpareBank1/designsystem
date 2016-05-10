@@ -1,26 +1,33 @@
 {
-    "name": "eslint-config-ffe",
-    "version": "1.0.1",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "lint": "eslint ."
-    },
-    "repository": {
-        "type": "git",
-        "url": "***REMOVED***"
-    },
-    "author": "Sparebank 1",
-    "license": "",
-    "peerDependencies": {
-        "eslint": "^2.9.0",
-        "eslint-plugin-import": "^1.6.1",
-        "eslint-plugin-react": "^5.0.1"
-    },
-    "files": [
-        "*.js"
-    ],
-    "publishConfig": {
-        "registry": "***REMOVED***"
-    }
+  "name": "eslint-config-ffe",
+  "version": "1.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "***REMOVED***"
+  },
+  "author": "Sparebank 1",
+  "license": "",
+  "peerDependencies": {
+    "eslint": "^2.9.0",
+    "eslint-plugin-import": "^1.6.1",
+    "eslint-plugin-react": "^5.0.1"
+  },
+  "files": [
+    "rules",
+    "*.js"
+  ],
+  "publishConfig": {
+    "registry": "***REMOVED***"
+  },
+  "devDependencies": {
+    "eslint": "^2.9.0"
+  },
+  "dependencies": {
+    "eslint-config-ffe-base": "^1.0.1"
+  }
 }
