@@ -1,11 +1,11 @@
 {
   "name": "ffe-icons-react",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "React komponent for ffe-icons",
-  "main": "dist/ffe-icons-react.js",
+  "main": "ffe-icons-react.js",
   "scripts": {
     "build": "npm run lint && npm run ffe:icons && npm run build:iconlist && npm run build:jsx-components && npm run lint:jsx && npm run build:babel",
-    "build:babel": "babel jsx -d dist",
+    "build:babel": "babel jsx -d .",
     "build:iconlist": "babel-node build-iconlist.js",
     "build:jsx-components": "babel-node build-jsx-components.js",
     "lint": "eslint build-iconlist.js build-jsx-components.js clean.js example.jsx webpack.config.js",
@@ -51,6 +51,6 @@
     "registry": "***REMOVED***"
   },
   "files": [
-    "dist/*.js"
+    "*.js"
   ]
 }
