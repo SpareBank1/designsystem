@@ -10,9 +10,9 @@ const style = {
 
 ReactDOM.render(
     <div>
-        <BilIkon style={style}/>
+        <BilIkon style={style} title="Bil ikon" desc="Bil ikonet er et fint ikon" focusable={true} tabindex={1}/>
         {iconlist.map((icon) => {
-            return <Icon key={icon} className="icon" iconName={icon}/>;
+            return <Icon key={icon} className="icon" iconName={icon} title={icon}/>;
         })}
     </div>,
     document.getElementById('app')
