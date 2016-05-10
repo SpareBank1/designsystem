@@ -9,10 +9,26 @@ mkdirp.sync('jsx');
  * */
 const createStandaloneJSX = icon => `
 import React from 'react';
-const icon = props => <svg className={props.className} style={props.style} focusable="false" {...${icons[icon]}.props}/>;
+const svg = ${icons[icon]};
+const createTitle = title => title ? <title>{title}</title> : null;
+const createDesc = desc => desc ? <desc>{desc}</desc> : null;
+const icon = ({className = '',
+              style = {},
+              focusable = false,
+              title = '',
+              desc = '',
+              tabindex}) => <svg className={className} style={style} focusable={focusable} tabIndex={tabindex} {...svg.props}>
+    {createTitle(title)}
+    {createDesc(desc)}
+    {svg.props.children}
+</svg>;
 icon.propTypes = {
     className: React.PropTypes.string,
-    style: React.PropTypes.object
+    style: React.PropTypes.object,
+    focusable: React.PropTypes.bool,
+    title: React.PropTypes.string,
+    desc: React.PropTypes.string,
+    tabindex: React.PropTypes.number
 };
 export default icon;
 `;
