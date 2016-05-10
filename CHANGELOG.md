@@ -1,5 +1,11 @@
 # Changelog
 
+## Deprecation notice
+The following classes are deprecated. Support for them will be dropped in a future major release:
+
+ * `ffe-check-box` (use `ffe-checkbox`)
+ * `ffe-select-box` (use `ffe-dropdown`)
+
 ## v.6.0.0
 * Several changes to sizes and line-heights of the typography. Also added ffe-sub-lead-paragraph.
 
