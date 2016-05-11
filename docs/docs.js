@@ -1,4 +1,4 @@
-import { renderToString } from 'react-dom/server';
+import { renderToStaticMarkup } from 'react-dom/server';
 import { Example } from './example-component';
 import React from 'react';
 
@@ -23,7 +23,7 @@ const example = (
         <span className="expanding-field__icon"></span>
         <div className="expanding-field__content">
                 <pre><code className="html hljs xml">
-                    { renderToString(Example) }
+                    { renderToStaticMarkup(Example) }
                 </code></pre>
             </div>
     </div>
@@ -33,7 +33,7 @@ const example = (
         <span className="expanding-field__icon"></span>
         <div className="expanding-field__content">
                 <pre>
-<code className="html hljs js">{ 
+<code className="html hljs js">{
 `<Dropdown label="Velg måned" id="month">
     <option value="0">Januar</option>
     <option value="1">Februar</option>
@@ -47,4 +47,4 @@ const example = (
 );
 
 
-export default renderToString(example);
+export default renderToStaticMarkup(example);
