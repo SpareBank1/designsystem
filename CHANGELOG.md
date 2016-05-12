@@ -1,5 +1,19 @@
 # Changelog
 
+## Version 3.7.0
+
+* Changed look of tannhjul-ikon 
+* Add old tannhjul-ikon.svg as tannhjul-solid-ikon.svg
+* Name change: dokument-med-test-ikon.svg -> dokument-med-tekst-ikon.svg
+* Name change: hengelas.svg -> hengelas-ikon.svg
+* Name change: kontorbygg.svg -> kontorbygg-ikon.svg
+* Name change: pil-ned.svg -> pil-ned-ikon.svg
+* New icon: utropstegn-ikon.svg
+* New icon: info-ikon.svg
+* New icon: dokument-efaktura-ikon.svg
+* New icon: kartmarkor-ikon.svg
+* New icon: kr-pil-solid-ikon.svg
+
 ## Version 3.6.0
 
 * New icons: hake-stjerne-ikon
