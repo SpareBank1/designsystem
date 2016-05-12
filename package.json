@@ -18,6 +18,7 @@
     "eslint-plugin-import": "^1.6.1"
   },
   "files": [
+    "rules",
     "*.js"
     ],
   "publishConfig": {
