@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 3.7.1
+
+* Quickfix for kartmarkor-ikon - Was not optimized correctly
+
 ## Version 3.7.0
 
 * Changed look of tannhjul-ikon 
