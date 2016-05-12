@@ -14,14 +14,8 @@ Create .eslintsrc and extend this config.
 
 ```json
 {
-    "extends": ["ffe"]
+    "extends": "ffe"
 }
 ```
 
-or if you are using react
-
-```json
-{
-    "extends": ["ffe/react"]
-}
-```
+if you are not using react see eslint-config-ffe-base
