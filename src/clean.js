@@ -1,4 +1,4 @@
-import iconlist from './iconlist.json';
+import iconlist from './../iconlist.json';
 import rimraf from 'rimraf';
 
 rimraf('temp', {}, () => {});

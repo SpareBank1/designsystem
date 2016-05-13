@@ -28,7 +28,25 @@ import ChevronIcon from 'ffe-icons-react/chevron-ikon';
 <ChevronIcon className="icon"/>
 ```
 
-Use css and className to change size and color. 
+### Available props
+
+```
+className: React.PropTypes.string,
+style: React.PropTypes.object,
+focusable: React.PropTypes.bool,
+title: React.PropTypes.string,
+desc: React.PropTypes.string,
+tabIndex: React.PropTypes.number
+```
+
+* Use css and `className` to change size and color, or use `style` and react inline styles.
+* Use `focusable` to make svg focusable on old IE. Default is false.
+* Use `title` to create a `<title></title>` element inside the icon. Default is `''`.
+* Use `desc` to create a `<desc></desc>` element inside the icon. Default is `''`.
+* Use `tabIndex` to set tabIndex of the icon. Default is undefined.
+
+
+
 
 ## Development
 
