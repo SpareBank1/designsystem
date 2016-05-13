@@ -14,6 +14,7 @@ ReactDOM.render(
         {iconlist.map((icon) => {
             return <Icon key={icon} className="icon" iconName={icon} title={icon}/>;
         })}
+        <Icon iconName="none-existing" />
     </div>,
     document.getElementById('app')
 );

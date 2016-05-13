@@ -1,3 +1,7 @@
+## v0.4.0
+
+* ffe-icons-react return `null` if iconName don't match any icon.
+
 ## v0.3.0
 
 * Added support for title, desc, tabIndex and focusable as props, increasing support for screen readers.
