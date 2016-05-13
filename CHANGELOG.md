@@ -1,5 +1,11 @@
 # Changelog
 
+## Deprecation notice
+The following classes are deprecated. Support for them will be dropped in a future major release:
+
+ * `ffe-check-box` (use `ffe-checkbox`)
+ * `ffe-select-box` (use `ffe-dropdown`)
+
 ## UNRELEASED
 * Minor form examples fix: prefixed info-message and info-message--error with ffe-
 
