@@ -6,6 +6,9 @@ The following classes are deprecated. Support for them will be dropped in a futu
  * `ffe-check-box` (use `ffe-checkbox`)
  * `ffe-select-box` (use `ffe-dropdown`)
 
+## UNRELEASED
+* Minor form examples fix: prefixed info-message and info-message--error with ffe-
+
 ## v.6.0.0
 * Several changes to sizes and line-heights of the typography. Also added ffe-sub-lead-paragraph.
 
