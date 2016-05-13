@@ -47,7 +47,7 @@ Object.keys(icons).map((iconName) => fs.writeFileSync(`./jsx/${iconName}.jsx`, c
  * */
 const createAllJSX = iconsObjectString => `
 const icons = {${iconsObjectString}};
-export default props => icons[props.iconName].default(props);
+export default props => icons[props.iconName] ? icons[props.iconName].default(props) : null;
 `;
 const iconsObjectString = Object.keys(icons).map(iconname => `'${iconname}': require('./${iconname}')`);
 fs.writeFileSync('./jsx/ffe-icons-react.jsx', createAllJSX(iconsObjectString));
