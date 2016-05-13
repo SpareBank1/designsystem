@@ -1,38 +1,44 @@
-import icons from './temp/icons';
+import icons from './../temp/icons';
 import fs from 'fs';
 import mkdirp from 'mkdirp';
 
-mkdirp.sync('jsx');
+mkdirp.sync('./jsx');
 
 /**
  * Creates a new React component and a corresponding .jsx file for each icon. .
  * */
-const createStandaloneJSX = icon => `
+const createStandaloneJSX = iconName => `
 import React from 'react';
-const svg = ${icons[icon]};
+
+const svg = ${icons[iconName]};
 const createTitle = title => title ? <title>{title}</title> : null;
 const createDesc = desc => desc ? <desc>{desc}</desc> : null;
-const icon = ({className = '',
-              style = {},
-              focusable = false,
-              title = '',
-              desc = '',
-              tabindex}) => <svg className={className} style={style} focusable={focusable} tabIndex={tabindex} {...svg.props}>
-    {createTitle(title)}
-    {createDesc(desc)}
-    {svg.props.children}
-</svg>;
-icon.propTypes = {
+
+const Icon = (
+    {className = '',
+    style = {},
+    focusable = false,
+    title = '',
+    desc = '',
+    tabIndex}) =>
+        <svg className={className} style={style} focusable={focusable} tabIndex={tabIndex} {...svg.props}>
+            {createTitle(title)}
+            {createDesc(desc)}
+            {svg.props.children}
+        </svg>;
+
+Icon.propTypes = {
     className: React.PropTypes.string,
     style: React.PropTypes.object,
     focusable: React.PropTypes.bool,
     title: React.PropTypes.string,
     desc: React.PropTypes.string,
-    tabindex: React.PropTypes.number
+    tabIndex: React.PropTypes.number
 };
-export default icon;
+
+export default Icon;
 `;
-Object.keys(icons).map((icon) => fs.writeFileSync(`./jsx/${icon}.jsx`, createStandaloneJSX(icon)));
+Object.keys(icons).map((iconName) => fs.writeFileSync(`./jsx/${iconName}.jsx`, createStandaloneJSX(iconName)));
 
 
 /**
