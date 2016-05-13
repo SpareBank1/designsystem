@@ -1,8 +1,8 @@
 buildCI.sh
-build-iconlist.js
-build-jsx-components.js
+src/build-iconlist.js
+src/build-jsx-components.js
 clean.js
-example.jsx
+src/example.jsx
 index.html
 iconlist.json
 svg.sprite.config.json
