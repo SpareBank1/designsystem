@@ -1,6 +1,6 @@
 {
   "name": "ffe-button-react",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "React implementation of ffe-button",
   "main": "lib/index.js",
   "scripts": {

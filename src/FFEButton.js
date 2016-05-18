@@ -5,6 +5,7 @@ export default function FFEButton(props) {
         action,
         ariaLoadingMessage = 'Vennligst vent',
         children,
+        disableButton,
         id,
         isLoading,
         label,
@@ -18,6 +19,8 @@ export default function FFEButton(props) {
             className={`ffe-${type}-button ${isLoading ? `ffe-${type}-button--loading` : ''}`}
             data-action={action}
             id={id}
+            disabled={disableButton}
+            aria-disabled={disableButton}
         >
             <span className={`ffe-${type}-button__label`}>
                 <span
@@ -41,6 +44,7 @@ FFEButton.propTypes = {
     action: PropTypes.string,
     ariaLoadingMessage: PropTypes.string,
     children: PropTypes.node,
+    disableButton: PropTypes.bool,
     id: PropTypes.string,
     isLoading: PropTypes.bool,
     label: PropTypes.string,
