@@ -74,3 +74,19 @@ If you need to change this text, override it with the `ariaLoadingMessage` prope
     ...
 </FFEPrimaryButton>
 ```
+
+
+### Disabled state
+
+Disabled buttons are not allowed in accordance to the FFE guidelines. However, in case you need
+to disable a button, you can do this as well by setting the `disableButton` property:
+
+```javascript
+<FFEPrimaryButton disableButton onClick={clickHandler}>...</FFEPrimaryButton>
+
+<FFEButton disableButton label="Hello" onClick={clickHandler} />
+
+<FFESecondaryButton disableButton onClick={clickHandler}>...</FFESecondaryButton>
+```
+
+This works for all button types, but make sure you have a really good reason for using it!
