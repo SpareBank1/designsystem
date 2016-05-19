@@ -1,6 +1,6 @@
 {
   "name": "ffe-checkbox-react",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "main": "lib/checkbox.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/.",
@@ -12,7 +12,7 @@
     "has-published": "npm show . versions -s | grep -q ${npm_package_version}"
   },
   "peerDependencies": {
-    "ffe-core": "^5.3.0"
+    "ffe-core": "^6.0.0"
   },
   "dependencies": {
     "nfe-hash": "^1.1.0"
