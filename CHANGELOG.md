@@ -7,6 +7,7 @@ The following classes are deprecated. Support for them will be dropped in a futu
  * `ffe-select-box` (use `ffe-dropdown`)
 
 ## UNRELEASED
+* Minor radio switch fix: adjusted vertical position of the label
 * Minor form examples fix: prefixed info-message and info-message--error with ffe-
 
 ## v.6.0.0
