@@ -12,7 +12,7 @@
     "has-published": "npm show . versions -s | grep -q ${npm_package_version}"
   },
   "peerDependencies": {
-    "ffe-core": "^5.0.0"
+    "ffe-core": "^6.0.0"
   },
   "dependencies": {
     "nfe-hash": "^1.1.0"
