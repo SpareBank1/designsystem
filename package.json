@@ -1,6 +1,6 @@
 {
   "name": "ffe-button-react",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "React implementation of ffe-button",
   "main": "lib/index.js",
   "scripts": {
@@ -24,7 +24,7 @@
     "url": "ssh://git@stash.intern.sparebank1.no:22/ffe/ffe-button-react.git"
   },
   "peerDependencies": {
-    "ffe-core": "5.x"
+    "ffe-core": "6.x"
   },
   "devDependencies": {
     "babel-cli": "^6.4.5",
