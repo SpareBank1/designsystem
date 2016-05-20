@@ -1,6 +1,6 @@
 {
   "name": "ffe-message-box",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Meldingsboks",
   "main": "index.js",
   "scripts": {
@@ -13,16 +13,16 @@
   "publishConfig": {
     "registry": "***REMOVED***"
   },
-  "author": "Ivar Nilsen <ivar.nilsen@sparebank1.no>",
+  "author": "SpareBank1",
   "license": "ISC",
   "peerDependencies": {
-    "ffe-core": "^5.3.0"
+    "ffe-core": "6.0.0"
   },
   "devDependencies": {
     "less": "^2.6.1"
   },
   "dependencies": {
-    "ffe-core": "^5.3.0",
+    "ffe-core": "6.0.0",
     "mkdirp": "^0.5.1"
   }
 }
