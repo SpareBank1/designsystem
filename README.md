@@ -10,11 +10,22 @@ $ npm install --save ffe-datepicker-react
 
 ```javascript
 import React from 'react';
-import Datepicker from 'ffe-datepicker-react';
+import Datepicker { DateInput } from 'ffe-datepicker-react';
 
 export default function Form() {
   return <form>
-    <Datepicker />
+    <Datepicker
+        value={ this.state.date }
+        onChange={this.handleChange}
+        language="nb"
+        minDate="01.01.2016"
+        maxDate="31.12.2016"
+    >
+        <DateInput
+            value={this.state.date}
+            onChange={(e) => this.handleChange(e.target.value)}
+        />
+    </Datepicker>
   </form>
 }
 ```
@@ -28,15 +39,15 @@ To view live example `npm start`
 ### Quality
 - Full test-coverage
 - Visual regression test
-- Better documentation
-- User-testing for a11y
+- ~~Better documentation
+- ~~User-testing for a11y
 
 ### Functionality
-- Ironing out focus- and dismiss-kinks
+- ~~Ironing out focus- and dismiss-kinks
 - Extracting styles to own package
-- Finalize design (pending approval from design)
+- ~~Finalize design (pending approval from design)
 - Use date-format from existing solution
-- Some way of handling formatting errors when inputting date manually
+- ~~Some way of handling formatting errors when inputting date manually
 - Pass max-width as a prop
 
 ### Nice-to-haves
@@ -47,8 +58,8 @@ To view live example `npm start`
 
 ## Requirements
 
-- i18n
-- Show calendar on focus
+- ~~i18n
+- ~~Show calendar on focus
 - Handle various input-formats (dd/mm yyyy, dd/mm, dd.mm.yyyy, dd.mm.yy etc)
 
 ### a11y

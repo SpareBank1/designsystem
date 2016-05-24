@@ -1,7 +1,7 @@
-import en_us from './en_us.js'; // eslint-disable-line camelcase
-import no_ny from './no_ny.js'; // eslint-disable-line camelcase
-import no_nb from './no_nb.js'; // eslint-disable-line camelcase
+import en from './en'; // eslint-disable-line camelcase
+import nn from './nn'; // eslint-disable-line camelcase
+import nb from './nb'; // eslint-disable-line camelcase
 
 export default {
-  no_nb, no_ny, en_us,
+  nb, nn, en,
 };

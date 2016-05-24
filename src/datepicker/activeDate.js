@@ -1,22 +1,63 @@
 import React, { PropTypes } from 'react';
 
-export default function ActiveDate({ date, datepickerId }) {
-  let className = 'ffe-datepicker__date';
-  className += date.isToday ? ' ffe-datepicker__date--today' : '';
-  className += date.isFocus ? ' ffe-datepicker__date--focus' : '';
-  className += date.isSelected ? ' ffe-datepicker__date--selected' : '';
+export default class ActiveDate extends React.Component {
 
-  const id = `${datepickerId}__${date.date}`;
+  componentDidMount() {
+    if (this.props.date.isFocus && this.props.setFocusOnInitialMount) {
+      this._datecell.focus();
+    }
+  }
 
-  return (<td id={ id } role="gridcell" aria-selected="false">
-    <button
-      className={ className } tabIndex="-1"
-      data-timestamp={ date.timestamp }
-    >{ date.date }</button>
-  </td>);
+  componentDidUpdate() {
+    if (this.props.date.isFocus && this.props.setFocusOnInitialMount) {
+      this._datecell.focus();
+    }
+  }
+
+  dateClassName() {
+    let className = 'ffe-datepicker__date';
+    className += this.props.date.isToday ? ' ffe-datepicker__date--today' : '';
+    className += this.props.date.isFocus ? ' ffe-datepicker__date--focus' : '';
+    className += this.props.date.isSelected ? ' ffe-datepicker__date--selected' : '';
+    className += !this.props.date.isEnabled ? ' ffe-datepicker__date--disabled' : '';
+    className +=
+      !this.props.date.isEnabled &&
+      this.props.date.isFocus ? ' ffe-datepicker__date--disabled-focus' : '';
+    return className;
+  }
+
+  dayClassName() {
+    let className = 'ffe-datepicker__day';
+    className += this.props.date.isFocus ? ' ffe-datepicker_date--focus' : '';
+    return className;
+  }
+
+  tabIndex() {
+    return this.props.date.isFocus ? 0 : -1;
+  }
+
+  render() {
+    return (
+      <td
+        className={ this.dayClassName() }
+        role="gridcell"
+        tabIndex={ this.tabIndex() }
+        ref={ c => (this._datecell = c) }
+        aria-selected={ this.props.date.isSelected }
+        aria-disabled={ !this.props.date.isEnabled }
+        onClick={ (event) => this.props.onClick(this.props.date) }
+        headers={ this.props.headers }
+      >
+        <span className={ this.dateClassName() }>
+          { this.props.date.date }
+        </span>
+      </td>);
+  }
 }
 
 ActiveDate.propTypes = {
   date: PropTypes.object.isRequired,
-  datepickerId: PropTypes.string.isRequired,
+  setFocusOnInitialMount: PropTypes.bool.isRequired,
+  onClick: PropTypes.func.isRequired,
+  headers: PropTypes.string.isRequired,
 };

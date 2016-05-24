@@ -7,7 +7,7 @@
     "build:watch": "onchange 'src/**/*.js' -- npm run build",
     "lint": "eslint src/.",
     "test:nsp": "nsp check",
-    "test:spec": "NODE_ENV=test && tape -r babel-register 'src/**/test/*.js' | tap-dot",
+    "test:spec": "mocha --require babel-register 'src/**/*.test.js'",
     "test:spec:watch": "onchange 'src/**/*.js' -- npm run test:spec",
     "test:readme": "readme-assert",
     "test": "npm run test:spec && npm run test:readme && npm run test:nsp",
@@ -23,14 +23,20 @@
     "babelify": "^7.2.0",
     "browserify": "^13.0.0",
     "budo": "^8.2.1",
+    "chai": "^3.5.0",
+    "enzyme": "^2.3.0",
     "eslint": "^2.4.0",
     "eslint-config-airbnb": "^6.1.0",
     "eslint-plugin-react": "^4.2.2",
+    "ffe-icons-react": "^0.4.1",
+    "mocha": "^2.5.3",
     "node-lessify": "^0.1.4",
     "nsp": "^2.2.0",
     "onchange": "^2.3.0",
+    "react-addons-test-utils": "^15.1.0",
     "react-dom": "^15.0.1",
-    "readme-assert": "^2.0.1",
+    "readme-assert": "^4.0.4",
+    "sinon": "^1.17.4",
     "tap-dot": "^1.0.5",
     "tape": "^4.5.1"
   },
@@ -41,9 +47,6 @@
     "lib",
     "*.js"
   ],
-  "eslintConfig": {
-    "extends": "airbnb"
-  },
   "babel": {
     "presets": [
       "es2015",

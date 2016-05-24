@@ -1,16 +1,10 @@
 import isDate from 'lodash.isdate';
 
-function SimpleDate(date, format) {
-  this.i18nFormat = format;
-  this.calendar = null; // TODO: i18n
+const dateRegex = /(\d{2})\.(\d{2})\.(\d{4})/;
 
+function SimpleDate(date) {
   if (typeof date === 'string') {
-    if (format) {
-      // TODO: Parse datestring
-      this.internalDate = new Date();
-    } else {
-      this.internalDate = new Date();
-    }
+    this.internalDate = new Date(date.replace(dateRegex, '$3-$2-$1'));
   } else if (isDate(date)) {
     this.internalDate = date;
   } else {
@@ -29,7 +23,7 @@ SimpleDateFactory.today = function today() {
 
 SimpleDateFactory.fromString = function fromString(string) {
   const newDate = new SimpleDate();
-  const match = /^(\d{1,2})\/(\d{1,2}) - (\d{4})$/.exec(string);
+  const match = dateRegex.exec(string);
 
   if (!match) {
     return null;
@@ -40,17 +34,17 @@ SimpleDateFactory.fromString = function fromString(string) {
   newDate.setYear(year);
   newDate.setMonth(month - 1); // Months are 0-indexed
   newDate.setDate(date); // Need to set date last, to avoid month-overflow
+  if (newDate.date() !== date * 1 ||
+    newDate.month() + 1 !== month * 1 ||
+    newDate.year() !== year * 1) {
+    return null;
+  }
 
   return newDate;
 };
 
 SimpleDateFactory.fromTimestamp = function fromTimestamp(timestamp) {
   return new SimpleDate(new Date(timestamp));
-};
-
-// Instance methods
-SimpleDate.prototype.setFormat = function setFormat(format) {
-  this.format = format;
 };
 
 SimpleDate.prototype.setTimestamp = function setTimestamp(timestamp) {
@@ -119,12 +113,21 @@ SimpleDate.prototype.equal = function equal(other) {
     && this.year() === other.year();
 };
 
+SimpleDate.prototype.isBefore = function isBefore(other) {
+  return this.timestamp() < other.timestamp();
+};
+
+SimpleDate.prototype.isAfter = function isAfter(other) {
+  return this.timestamp() > other.timestamp();
+};
+
 SimpleDate.prototype.clone = function clone() {
   const date = new Date(this.year(), this.month(), this.date());
   return new SimpleDate(date);
 };
 
 SimpleDate.prototype.format = function format() {
-  // TODO: Use this.format
-  return `${this.date()}/${this.month() + 1} - ${this.year()}`;
+  const day = this.date() < 10 ? `0${this.date()}` : this.date();
+  const month = this.month() + 1 < 10 ? `0${this.month() + 1}` : this.month();
+  return `${day}.${month}.${this.year()}`;
 };

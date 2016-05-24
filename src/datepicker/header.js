@@ -1,34 +1,61 @@
-import React, { PropTypes } from 'react';
+import React, { PropTypes, Component } from 'react';
+import ChevronIkon from 'ffe-icons-react/chevron-ikon';
 
-import ArrowLeft from '../icons/arrowLeft.js';
-import ArrowRight from '../icons/arrowRight.js';
+class Header extends Component {
 
-export default function Header({ calendar, datepickerId, previousHandler, nextHandler }) {
-  return (<div className="ffe-datepicker__header">
-    <button
-      className="ffe-datepicker__previous" title={ calendar.previousName() }
-      onClick={ previousHandler }
-    >
-      <ArrowLeft />
-    </button>
-    <button className="ffe-datepicker__next" title={ calendar.nextName() }
-      onClick={ nextHandler }
-    >
-      <ArrowRight />
-    </button>
-    <div role="header" id={`${datepickerId}-title`} className="ffe-datepicker__title">
-      <div id={ `${datepickerId}__month-label` }>
-        <span className="ffe-datepicker__month">{ calendar.focusedMonth() }</span>
-        <span className="ffe-datepicker__year">{ calendar.focusedYear() }</span>
+  constructor(props) {
+    super(props);
+
+    this.datepickerId = props.datepickerId;
+    this.previousHandler = props.previousMontHandler;
+    this.nextHandler = props.nextMontHandler;
+  }
+
+  render() {
+    return (
+      <div className="ffe-datepicker__header">
+        <div className="ffe-datepicker__header-inner-wrapper">
+          <button
+            tabIndex="-1"
+            className="ffe-datepicker__month-nav ffe-datepicker__previous"
+            title={ this.props.previousMonthLabel }
+            onClick={ this.previousHandler }
+          >
+            <ChevronIkon className="ffe-datepicker__icon-prev" />
+          </button>
+          <header
+            id={`${this.datepickerId}-title`}
+            className="ffe-datepicker__title"
+            aria-live="assertive"
+            aria-atomic="true"
+          >
+            <div id={ `${this.datepickerId}__month-label` }>
+              <span className="ffe-datepicker__month">{ this.props.month }</span>
+              <span className="ffe-datepicker__year">{ this.props.year }</span>
+            </div>
+          </header>
+          <button
+            tabIndex="-1"
+            className="ffe-datepicker__month-nav ffe-datepicker__next"
+            title={ this.props.nextMonthLabel }
+            onClick={ this.nextHandler }
+          >
+            <ChevronIkon className="ffe-datepicker__icon-next" />
+          </button>
+        </div>
       </div>
-      <span className="ffe-datepicker__accessible-text">, date picker</span>
-    </div>
-  </div>);
+    );
+  }
 }
 
 Header.propTypes = {
-  calendar: PropTypes.object.isRequired,
+  month: PropTypes.string.isRequired,
+  year: PropTypes.number.isRequired,
+  previousMonthLabel: PropTypes.string.isRequired,
+  nextMonthLabel: PropTypes.string.isRequired,
   datepickerId: PropTypes.string.isRequired,
-  previousHandler: PropTypes.func.isRequired,
-  nextHandler: PropTypes.func.isRequired,
+  previousMontHandler: PropTypes.func.isRequired,
+  nextMontHandler: PropTypes.func.isRequired,
 };
+
+export default Header;

@@ -1,10 +1,15 @@
-import i18n from '../i18n/i18n.js';
-import simpleDate from './simpledate.js';
+import i18n from '../i18n/i18n';
+import simpleDate from './simpledate';
 
-function SimpleCalendar(initialDate, locale) {
-  this.locale = locale;
+const msInADay = 86400000;
+const supportedLocales = ['nb', 'nn', 'en'];
+
+function SimpleCalendar(initialDate, minDate, maxDate, locale) {
+  this.locale = supportedLocales.indexOf(locale) !== -1 ? locale : 'nb';
   this.focusedDate = initialDate ? initialDate.clone() : simpleDate.today();
   this.selectedDate = initialDate ? initialDate.clone() : initialDate;
+  this.minDate = minDate ? simpleDate.fromString(minDate) : null;
+  this.maxDate = maxDate ? simpleDate.fromString(maxDate) : null;
 
   // Settings
   this.firstDay = i18n[this.locale].FIRST_DAY_OF_WEEK;
@@ -27,8 +32,7 @@ function iso8601Week(date) {
   checkDate.setMonth(0);
   checkDate.setDate(1);
 
-  // 86400000ms = 1 day
-  const daysSince1Jan = (time - checkDate.timestamp()) / 86400000;
+  const daysSince1Jan = (time - checkDate.timestamp()) / msInADay;
 
   // Return the correct weeknumber
   return Math.floor(Math.round(daysSince1Jan / 7) + 1);
@@ -38,6 +42,16 @@ function firstDayOfMonth(simpledate) {
   const clone = simpledate.clone();
   clone.setDate(1);
   return clone.day();
+}
+
+function isDateWithinMinMax(date, minDate, maxDate) {
+  if (minDate && date.isBefore(minDate)) {
+    return false;
+  }
+  if (maxDate && date.isAfter(maxDate)) {
+    return false;
+  }
+  return true;
 }
 
 SimpleCalendar.prototype.visibleDates = function visibleDates() {
@@ -66,6 +80,7 @@ SimpleCalendar.prototype.visibleDates = function visibleDates() {
         isToday: currentDate.equal(simpleDate.today()),
         isFocus: currentDate.equal(this.focusedDate),
         isSelected: this.hasSelected() && currentDate.equal(this.selectedDate),
+        isEnabled: isDateWithinMinMax(currentDate, this.minDate, this.maxDate),
       };
 
       week.dates.push(date);
@@ -155,10 +170,13 @@ SimpleCalendar.prototype.selectFocusedDate = function selectFocusedDate() {
   this.selectedDate = this.focusedDate.clone();
 };
 
+SimpleCalendar.prototype.isDateWithinDateRange = function isDateWithinDateRange(date) {
+  return isDateWithinMinMax(date, this.minDate, this.maxDate);
+};
+
 SimpleCalendar.prototype.selectTimestamp = function selectTimestamp(timestamp) {
-  const newDate = simpleDate.fromTimestamp(timestamp);
-  this.selectedDate = newDate.clone();
-  this.focusedDate = newDate.clone();
+  this.focusedDate = simpleDate.fromTimestamp(timestamp);
+  this.selectFocusedDate();
 };
 
 SimpleCalendar.prototype.selectDateString = function selectDateString(datestring) {
