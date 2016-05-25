@@ -6,9 +6,10 @@ The following classes are deprecated. Support for them will be dropped in a futu
  * `ffe-check-box` (use `ffe-checkbox`)
  * `ffe-select-box` (use `ffe-dropdown`)
 
-## UNRELEASED
+## v.6.0.1
 * Minor radio switch fix: adjusted vertical position of the label
 * Minor form examples fix: prefixed info-message and info-message--error with ffe-
+* Added display: inline-block to ffe-primary-button__label-text fix a bug in Safari. Label disappears if changing states from loading to normal.
 
 ## v.6.0.0
 * Several changes to sizes and line-heights of the typography. Also added ffe-sub-lead-paragraph.
