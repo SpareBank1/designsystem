@@ -6,6 +6,9 @@ The following classes are deprecated. Support for them will be dropped in a futu
  * `ffe-check-box` (use `ffe-checkbox`)
  * `ffe-select-box` (use `ffe-dropdown`)
 
+## UNRELEASED
+* Minor form examples fix: prefixed icon-info-error with ffe-
+
 ## v.6.0.1
 * Minor radio switch fix: adjusted vertical position of the label
 * Minor form examples fix: prefixed info-message and info-message--error with ffe-
