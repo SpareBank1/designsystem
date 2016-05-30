@@ -38,3 +38,5 @@ node_modules
 
 # intelliJ
 .idea
+
+docs/documentation.html
