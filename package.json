@@ -1,6 +1,6 @@
 {
   "name": "ffe-message-box",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Meldingsboks",
   "main": "index.js",
   "scripts": {
@@ -16,7 +16,7 @@
   "author": "SpareBank1",
   "license": "ISC",
   "peerDependencies": {
-    "ffe-core": "6.0.0"
+    "ffe-core": "^6.0.0"
   },
   "devDependencies": {
     "ffe-core": "6.0.0",
