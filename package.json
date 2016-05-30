@@ -1,0 +1,55 @@
+{
+  "name": "ffe-message-box-react",
+  "version": "0.1.0",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel -d lib/. --ignore=*.test.js src/.",
+    "watch": "onchange 'src/**.js' -- npm run build",
+    "lint": "eslint src/.",
+    "test:nsp": "nsp check",
+    "test:spec": "mocha --require babel-register src/**/*.test.js",
+    "tdd": "mocha --require babel-register src/**/*.test.js -w",
+    "test": "npm run test:spec && npm run test:nsp",
+    "docs": "babel-node docs/create-docs.js > docs/documentation.html",
+    "prepublish": "npm run build",
+    "has-published": "npm show . versions -s | grep -q ${npm_package_version}"
+  },
+  "peerDependencies": {
+    "ffe-message-box": "2.0.1",
+    "ffe-core": "*",
+    "ffe-icons-react": "0.4.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.4.5",
+    "babel-core": "^6.5.2",
+    "babel-plugin-transform-object-rest-spread": "^6.5.0",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.5.0",
+    "babel-register": "^6.4.3",
+    "chai": "^3.5.0",
+    "enzyme": "^2.0.0",
+    "eslint": "^2.4.0",
+    "eslint-config-airbnb": "^6.1.0",
+    "eslint-plugin-react": "^4.2.2",
+    "mocha": "^2.4.5",
+    "mocha-tap13": "0.0.3",
+    "nsp": "^2.2.0",
+    "onchange": "2.4.0",
+    "react": "^15.0.0",
+    "react-addons-test-utils": "^15.0.0",
+    "react-dom": "^15.0.0"
+  },
+  "publishConfig": {
+    "registry": "***REMOVED***"
+  },
+  "files": [
+    "lib",
+    "*.js"
+  ],
+  "repository": "",
+  "author": "SpareBank1",
+  "license": "",
+  "dependencies": {
+    "react-dom": "15.0.2"
+  }
+}
