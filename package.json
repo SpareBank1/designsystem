@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "main": "lib/index.js",
   "scripts": {
-    "build": "babel -d lib/. --ignore=*.test.js src/.",
+    "build": "babel -d lib/. --ignore=*.test.js src/. && npm run docs",
     "watch": "onchange 'src/**.js' -- npm run build",
     "lint": "eslint src/.",
     "test:nsp": "nsp check",
@@ -37,7 +37,7 @@
     "onchange": "2.4.0",
     "react": "^15.0.0",
     "react-addons-test-utils": "^15.0.0",
-    "react-dom": "^15.0.0"
+    "react-dom": "15.0.2"
   },
   "publishConfig": {
     "registry": "***REMOVED***"
@@ -48,8 +48,5 @@
   ],
   "repository": "",
   "author": "SpareBank1",
-  "license": "",
-  "dependencies": {
-    "react-dom": "15.0.2"
-  }
+  "license": ""
 }
