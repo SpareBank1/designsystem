@@ -1,5 +1,8 @@
 #CHANGELOG
 
+## Version 5.0.0
+* Oppdatert til å bruke v6.x av ffe-core
+
 ## Version 4.0.1
 * Sett font-weight til normal for `ffe-header__heading`
 
