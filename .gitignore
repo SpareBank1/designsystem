@@ -38,3 +38,6 @@ node_modules
 
 # intelliJ
 .idea
+
+docs
+example.html
