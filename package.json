@@ -1,14 +1,16 @@
 {
   "name": "ffe-dropdown-react",
-  "version": "1.3.1",
+  "version": "1.4.0",
   "main": "lib/dropdown.js",
   "scripts": {
-    "build": "babel -d lib/. --ignore=*.test.js src/.",
+    "build": "babel -d lib/. --ignore=*.test.js src/. && npm run docs",
     "lint": "eslint src/.",
     "test:nsp": "nsp check",
     "test:spec": "mocha --require babel-register src/**/*.test.js",
     "test": "npm run test:spec && npm run test:nsp",
+    "tdd": "mocha --require babel-register src/**/*.test.js -w",
     "prepublish": "npm run build",
+    "docs": "babel-node docs/create-docs.js > docs/documentation.html",
     "has-published": "npm show . versions -s | grep -q ${npm_package_version}"
   },
   "peerDependencies": {
@@ -31,8 +33,9 @@
     "eslint-plugin-react": "^4.2.2",
     "mocha": "^2.4.5",
     "nsp": "^2.2.0",
+    "react": "*",
+    "react-dom": "*",
     "react-addons-test-utils": "^15.0.1",
-    "react-dom": "^15.0.1",
     "sinon": "^1.17.3"
   },
   "publishConfig": {
@@ -40,6 +43,7 @@
   },
   "files": [
     "lib",
+    "docs",
     "*.js"
   ],
   "babel": {
