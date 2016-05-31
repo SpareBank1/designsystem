@@ -1,3 +1,7 @@
+## v0.4.1
+
+* Updated ffe-icons version to 3.7.2
+
 ## v0.4.0
 
 * ffe-icons-react return `null` if iconName don't match any icon.
