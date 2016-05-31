@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 3.7.2
+
+* New icon: kalender-ikon.svg
+
 ## Version 3.7.1
 
 * Quickfix for kartmarkor-ikon - Was not optimized correctly
