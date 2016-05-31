@@ -1,5 +1,8 @@
 #CHANGELOG
 
+##Version 4.0.0
+* Oppdatert til å bruke v6.x av ffe-core
+
 ##Version 3.0.0
 * Kolonner med `--last` modifier har fått `flex-grow: 2`. Dette gjør at man ikke trenger å ha 4 kolonner for å få høyrejustert innholdet i `--last` kolonnen siden den nå vil stjele det som måtte være til overs av plass.
 
