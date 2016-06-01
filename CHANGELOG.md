@@ -1,5 +1,8 @@
 #CHANGELOG
 
+## Version 6.0.0
+* Modified the profile name styling to not add single right-pointing angle quotation mark by default. Added modifier to be used if the profile name is a child element of an anchor tag, or to be used by an anchor directly.
+
 ## Version 5.0.0
 * Oppdatert til å bruke v6.x av ffe-core
 
