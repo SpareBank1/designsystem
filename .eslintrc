@@ -4,7 +4,7 @@
         "browser": true,
         "node": true
     },
-    "extends": "eslint:recommended",
+    "extends": "eslint-config-ffe",
     "parserOptions": {
         sourceType: "module",
         "ecmaFeatures": {
@@ -55,7 +55,6 @@
         "valid-typeof": 2,
         "dot-notation": [2, { "allowKeywords": true }],
         "eqeqeq": [2, "allow-null"],
-        "new-cap": 2,
         "quotes": [2, "single"],
 
         "react/jsx-curly-spacing": [0, "always"],
