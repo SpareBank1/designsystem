@@ -1,6 +1,6 @@
 {
   "name": "ffe-checkbox-react",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "main": "lib/checkbox.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/.",
