@@ -15,20 +15,20 @@ export default class ActiveDate extends React.Component {
   }
 
   dateClassName() {
-    let className = 'ffe-datepicker__date';
-    className += this.props.date.isToday ? ' ffe-datepicker__date--today' : '';
-    className += this.props.date.isFocus ? ' ffe-datepicker__date--focus' : '';
-    className += this.props.date.isSelected ? ' ffe-datepicker__date--selected' : '';
-    className += !this.props.date.isEnabled ? ' ffe-datepicker__date--disabled' : '';
+    let className = 'ffe-calendar__date';
+    className += this.props.date.isToday ? ' ffe-calendar__date--today' : '';
+    className += this.props.date.isFocus ? ' ffe-calendar__date--focus' : '';
+    className += this.props.date.isSelected ? ' ffe-calendar__date--selected' : '';
+    className += !this.props.date.isEnabled ? ' ffe-calendar__date--disabled' : '';
     className +=
       !this.props.date.isEnabled &&
-      this.props.date.isFocus ? ' ffe-datepicker__date--disabled-focus' : '';
+      this.props.date.isFocus ? ' ffe-calendar__date--disabled-focus' : '';
     return className;
   }
 
   dayClassName() {
-    let className = 'ffe-datepicker__day';
-    className += this.props.date.isFocus ? ' ffe-datepicker_date--focus' : '';
+    let className = 'ffe-calendar__day';
+    className += this.props.date.isFocus ? ' ffe-calendar_date--focus' : '';
     return className;
   }
 
@@ -45,7 +45,7 @@ export default class ActiveDate extends React.Component {
         ref={ c => (this._datecell = c) }
         aria-selected={ this.props.date.isSelected }
         aria-disabled={ !this.props.date.isEnabled }
-        onClick={ (event) => this.props.onClick(this.props.date) }
+        onClick={ () => this.props.onClick(this.props.date) }
         headers={ this.props.headers }
       >
         <span className={ this.dateClassName() }>

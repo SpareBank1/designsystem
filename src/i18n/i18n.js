@@ -1,6 +1,6 @@
-import en from './en'; // eslint-disable-line camelcase
-import nn from './nn'; // eslint-disable-line camelcase
-import nb from './nb'; // eslint-disable-line camelcase
+import en from './en';
+import nn from './nn';
+import nb from './nb';
 
 export default {
   nb, nn, en,

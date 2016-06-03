@@ -13,34 +13,34 @@ class Header extends Component {
 
   render() {
     return (
-      <div className="ffe-datepicker__header">
-        <div className="ffe-datepicker__header-inner-wrapper">
+      <div className="ffe-calendar__header">
+        <div className="ffe-calendar__header-inner-wrapper">
           <button
             tabIndex="-1"
-            className="ffe-datepicker__month-nav ffe-datepicker__previous"
+            className="ffe-calendar__month-nav ffe-calendar__previous"
             title={ this.props.previousMonthLabel }
             onClick={ this.previousHandler }
           >
-            <ChevronIkon className="ffe-datepicker__icon-prev" />
+            <ChevronIkon className="ffe-calendar__icon-prev" />
           </button>
           <header
             id={`${this.datepickerId}-title`}
-            className="ffe-datepicker__title"
+            className="ffe-calendar__title"
             aria-live="assertive"
             aria-atomic="true"
           >
             <div id={ `${this.datepickerId}__month-label` }>
-              <span className="ffe-datepicker__month">{ this.props.month }</span>
-              <span className="ffe-datepicker__year">{ this.props.year }</span>
+              <span className="ffe-calendar__month">{ this.props.month }</span>
+              <span className="ffe-calendar__year">{ this.props.year }</span>
             </div>
           </header>
           <button
             tabIndex="-1"
-            className="ffe-datepicker__month-nav ffe-datepicker__next"
+            className="ffe-calendar__month-nav ffe-calendar__next"
             title={ this.props.nextMonthLabel }
             onClick={ this.nextHandler }
           >
-            <ChevronIkon className="ffe-datepicker__icon-next" />
+            <ChevronIkon className="ffe-calendar__icon-next" />
           </button>
         </div>
       </div>

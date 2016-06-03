@@ -91,6 +91,10 @@ SimpleCalendar.prototype.visibleDates = function visibleDates() {
   return result;
 };
 
+SimpleCalendar.prototype.clone = function clone() {
+
+};
+
 SimpleCalendar.prototype.focusedMonth = function focusedMonth() {
   return i18n[this.locale][`MONTH_${this.focusedDate.month() + 1}`];
 };

@@ -1,3 +1,5 @@
+/* eslint-env mocha */
+
 import { shallow } from 'enzyme';
 import { assert } from 'chai';
 import React from 'react';

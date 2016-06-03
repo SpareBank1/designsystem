@@ -20,10 +20,9 @@ export default class Datepicker extends React.Component {
       ),
     };
 
-    this.datePicked = props.datePickedHandler;
     this.onBlur = props.onBlurHandler;
 
-    this.datepickerId = `ffe-datepicker-${Math.floor(Math.random() * 1000)}`;
+    this.datepickerId = `ffe-calendar-${Math.floor(Math.random() * 1000)}`;
     this.dateShouldSetFocusOnInitialMount = false;
 
     this.keyDown = this.keyDown.bind(this);
@@ -75,7 +74,7 @@ export default class Datepicker extends React.Component {
       case KeyCode.ENTER:
         if (calendar.isDateWithinDateRange(calendar.focusedDate)) {
           calendar.selectFocusedDate();
-          this.datePicked(calendar.selected());
+          this.props.onDatePicked(calendar.selected());
         }
         break;
       case KeyCode.TAB:
@@ -126,7 +125,7 @@ export default class Datepicker extends React.Component {
     const pickedDate = simpleDate.fromTimestamp(date.timestamp);
     if (this.state.calendar.isDateWithinDateRange(pickedDate)) {
       this.state.calendar.selectTimestamp(date.timestamp);
-      this.datePicked(this.state.calendar.selected());
+      this.props.onDatePicked(this.state.calendar.selected());
     }
   }
 
@@ -146,7 +145,7 @@ export default class Datepicker extends React.Component {
 
   renderDate(date, index) {
     if (date.isLead) {
-      return <LeadDate key={ date.date } date={ date }/>;
+      return <LeadDate key={ date.date } date={ date } />;
     }
     return (<ActiveDate
       key={ date.date }
@@ -164,7 +163,7 @@ export default class Datepicker extends React.Component {
   renderDay(day, index) {
     return (
       <th
-        className={ "ffe-datepicker__weekday" }
+        className={ "ffe-calendar__weekday" }
         key={ day.name }
         role="columnheader"
         abbr={ day.name }
@@ -178,7 +177,7 @@ export default class Datepicker extends React.Component {
 
   render() {
     return (<div
-      className="ffe-datepicker"
+      className={ this.props.calendarClassName || 'ffe-calendar' }
       aria-labelledby={`${this.datepickerId}-title`}
       onFocus={ this.focusHandler }
       role="region"
@@ -193,7 +192,7 @@ export default class Datepicker extends React.Component {
         nextMontHandler={ this.nextMonth }
       />
       <table
-        className="ffe-datepicker__calendar"
+        className="ffe-calendar__grid"
         role="grid"
         onKeyDown={ this.keyDown }
         aria-labelledby={`${this.datepickerId}__month-label`}
@@ -212,10 +211,11 @@ export default class Datepicker extends React.Component {
 }
 
 Datepicker.propTypes = {
-  datePickedHandler: PropTypes.func.isRequired,
-  onBlurHandler: PropTypes.func,
+  onDatePicked: PropTypes.func.isRequired,
   language: PropTypes.string.isRequired,
+  onBlurHandler: PropTypes.func,
   selectedDate: PropTypes.string,
   minDate: PropTypes.string,
   maxDate: PropTypes.string,
+  calendarClassName: PropTypes.string,
 };

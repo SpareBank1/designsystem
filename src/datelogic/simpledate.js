@@ -1,6 +1,9 @@
-import isDate from 'lodash.isdate';
-
 const dateRegex = /(\d{2})\.(\d{2})\.(\d{4})/;
+
+function isDate(date) {
+  return !!date && typeof date === 'object' &&
+    Object.prototype.toString.call(date) === '[object Date]';
+}
 
 function SimpleDate(date) {
   if (typeof date === 'string') {

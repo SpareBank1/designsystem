@@ -1,3 +1,5 @@
+/* eslint-env mocha */
+
 import { shallow } from 'enzyme';
 import { assert } from 'chai';
 import React from 'react';
@@ -17,7 +19,7 @@ describe('<ActiveDate />', () => {
 
   it('should render an active date', () => {
     const wrapper = shallow(activeDate);
-    assert.equal(wrapper.find('td.ffe-datepicker__day').length, 1);
+    assert.equal(wrapper.find('td.ffe-calendar__day').length, 1);
   });
 
   it('should have role gridcell', () => {

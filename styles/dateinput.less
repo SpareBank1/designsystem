@@ -1,5 +1,3 @@
-@import "../node_modules/ffe-core/less/ffe.less";
-
 .ffe-dateinput {
   position: relative;
   display: inline-block;
@@ -10,6 +8,10 @@
 
   &__field {
     min-width: 160px;
+
+    &::-ms-clear {
+      display: none;
+    }
   }
 
   &__icon {

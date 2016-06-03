@@ -11,9 +11,6 @@ function main() {
 
     if should_publish; then
         npm run has-published -s || npm publish
-    else
-        # must bump version number to succeed.
-        ! npm run has-published -s
     fi
 }
 
