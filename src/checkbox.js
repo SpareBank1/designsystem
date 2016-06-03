@@ -13,7 +13,7 @@ export default function CheckBox({ name, label, onChange, checked, children }) {
                     name={name}
                     id={id}
                 />
-                <label className="ffe-check-box ffe-check-box--inline" htmlFor={id}>
+                <label className="ffe-checkbox ffe-checkbox--inline" htmlFor={id}>
                     {label || children}
                 </label>
             </span>;
