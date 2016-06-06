@@ -7,7 +7,7 @@ export default function CheckBox({ name, label, onChange, checked, children, noM
     const classes = classNames({
         'ffe-checkbox': true,
         'ffe-checkbox--inline': true,
-        'ffe-checkbox--no-margins': noMargins
+        'ffe-checkbox--no-margin': noMargins
     });
 
     return  <span>

@@ -53,11 +53,11 @@ describe('<Checkbox />', () => {
 
     it('should support noMargins', () => {
         assert.equal(
-            shallow(CreateCheckbox({ noMargins: false })).find('.ffe-checkbox--no-margins').length,
+            shallow(CreateCheckbox({ noMargins: false })).find('.ffe-checkbox--no-margin').length,
             0);
 
         assert.equal(
-            shallow(CreateCheckbox({ noMargins: true })).find('.ffe-checkbox--no-margins').length,
+            shallow(CreateCheckbox({ noMargins: true })).find('.ffe-checkbox--no-margin').length,
             1);
     });
     
