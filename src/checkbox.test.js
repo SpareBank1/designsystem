@@ -50,5 +50,15 @@ describe('<Checkbox />', () => {
             wrapper.find('input').prop('id')
         );
     });
+
+    it('should support noMargins', () => {
+        assert.equal(
+            shallow(CreateCheckbox({ noMargins: false })).find('.ffe-checkbox--no-margins').length,
+            0);
+
+        assert.equal(
+            shallow(CreateCheckbox({ noMargins: true })).find('.ffe-checkbox--no-margins').length,
+            1);
+    });
     
 });

@@ -1,4 +1,4 @@
-import Checkbox from '../lib/checkbox';
+import Checkbox from '../src/checkbox';
 import React from 'react';
 
 export const MainExample = (
@@ -15,4 +15,5 @@ export default props => <Checkbox
                             checked={props.checked}
                             name={props.name}
                             label={props.label}
+                            noMargins={props.noMargins}
                         />;

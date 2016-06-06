@@ -1,8 +1,14 @@
 import React, { PropTypes } from 'react';
 import hash from 'nfe-hash';
+import classNames from 'classnames';
 
-export default function CheckBox({ name, label, onChange, checked, children }) {
+export default function CheckBox({ name, label, onChange, checked, children, noMargins }) {
     const id = `checkbox-${hash(name)}`;
+    const classes = classNames({
+        'ffe-checkbox': true,
+        'ffe-checkbox--inline': true,
+        'ffe-checkbox--no-margins': noMargins
+    });
 
     return  <span>
                 <input 
@@ -13,7 +19,7 @@ export default function CheckBox({ name, label, onChange, checked, children }) {
                     name={name}
                     id={id}
                 />
-                <label className="ffe-checkbox ffe-checkbox--inline" htmlFor={id}>
+                <label className={ classes } htmlFor={id}>
                     {label || children}
                 </label>
             </span>;
@@ -24,5 +30,6 @@ CheckBox.propTypes = {
     label: PropTypes.string.isRequired,
     onChange: PropTypes.func,
     checked: PropTypes.bool,
+    noMargins: PropTypes.bool,
     children: PropTypes.array
 };

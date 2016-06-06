@@ -1,6 +1,6 @@
 # ffe-checkbox-react 
 
-React implementation of the checkbox found in FFE.
+React implementation of the checkbox found in FFE
 
 ## Install
 
@@ -20,17 +20,15 @@ import Checkbox from 'ffe-checkbox-react';
         onChange={ function }
         checked={ boolean }
         name={ string }
-        label={ string } 
+        label={ string }
+        noMargins={ boolean} // disables top- and bottom margins, useful for use in tables etc
 />
 ```
 
-If you need a description thats more complex than just a string, use `children`:
+If you need a more complex description, use `children`:
 
 ```
-<Checkbox
-        onChange={ function }
-        checked={ boolean }
-        name={ string } >
+<Checkbox>
     <Icon />
     Some text
     <AnotherIcon />
