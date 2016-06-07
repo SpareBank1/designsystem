@@ -7,6 +7,7 @@ The following classes are deprecated. Support for them will be dropped in a futu
  * `ffe-select-box` (use `ffe-dropdown`)
 
 ## UNRELEASED
+* Patch --no-space on ffe-content-container to also work on larger screens
 * Minor form examples fix: prefixed icon-info-error with ffe-
 
 ## v.6.0.1
