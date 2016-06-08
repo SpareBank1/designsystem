@@ -4,7 +4,8 @@
   "description": "Felles header for SpareBank 1",
   "main": "index.js",
   "scripts": {
-    "examples": "lessc examples/examples.less examples/examples.css && mkdirp examples/fonts && cp -R node_modules/ffe-core/fonts/* examples/fonts/ && echo Now open /examples/index.html to see styleguide."
+    "examples": "lessc examples/examples.less examples/examples.css && mkdirp examples/fonts && cp -R node_modules/ffe-core/fonts/* examples/fonts/ && echo Now open /examples/index.html to see styleguide.",
+    "has-published": "npm show . versions -s | grep -q ${npm_package_version}"
   },
   "repository": {
     "type": "git",
