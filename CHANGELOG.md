@@ -1,5 +1,10 @@
 # Changelog
 
+## Version 4.0.0
+
+* Renamed: hake-sirkel-ikon.svg => hake-sirkel-solid-ikon.svg
+* Added a new hake-sirkel-ikon.svg that is not solid
+
 ## Version 3.7.2
 
 * New icon: kalender-ikon.svg
@@ -10,7 +15,7 @@
 
 ## Version 3.7.0
 
-* Changed look of tannhjul-ikon 
+* Changed look of tannhjul-ikon
 * Add old tannhjul-ikon.svg as tannhjul-solid-ikon.svg
 * Name change: dokument-med-test-ikon.svg -> dokument-med-tekst-ikon.svg
 * Name change: hengelas.svg -> hengelas-ikon.svg
