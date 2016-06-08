@@ -1,6 +1,6 @@
 {
   "name": "ffe-details-list",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "description": "Opplisting av attributter i en grid",
   "main": "index.js",
   "scripts": {

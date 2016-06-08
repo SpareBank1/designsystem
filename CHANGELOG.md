@@ -1,5 +1,8 @@
 #CHANGELOG
 
+##Version 5.0.0
+* Innført border-bottom på `__section-title` elementer
+
 ##Version 4.0.0
 * Oppdatert til å bruke v6.x av ffe-core
 
