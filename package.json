@@ -1,6 +1,6 @@
 {
   "name": "ffe-header",
-  "version": "5.0.0",
+  "version": "6.0.0",
   "description": "Felles header for SpareBank 1",
   "main": "index.js",
   "scripts": {
