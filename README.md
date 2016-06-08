@@ -134,4 +134,3 @@ Evaluated implementations:
 - Pickaday (or variants of it): Not a11y compliant. Lacks ARIA-roles and keyboard navigation
 - http://jquense.github.io/react-widgets/docs/#/datetime-picker : Lacks keyboard navigation
 - https://hacker0x01.github.io/react-datepicker/ : Lacks keyboard navigation
->>>>>>> Initial implementation

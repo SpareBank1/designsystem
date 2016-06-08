@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import classNames from 'classnames';
 
 export default class ActiveDate extends React.Component {
 
@@ -15,15 +16,14 @@ export default class ActiveDate extends React.Component {
   }
 
   dateClassName() {
-    let className = 'ffe-calendar__date';
-    className += this.props.date.isToday ? ' ffe-calendar__date--today' : '';
-    className += this.props.date.isFocus ? ' ffe-calendar__date--focus' : '';
-    className += this.props.date.isSelected ? ' ffe-calendar__date--selected' : '';
-    className += !this.props.date.isEnabled ? ' ffe-calendar__date--disabled' : '';
-    className +=
-      !this.props.date.isEnabled &&
-      this.props.date.isFocus ? ' ffe-calendar__date--disabled-focus' : '';
-    return className;
+    return classNames({
+      'ffe-calendar__date': true,
+      'ffe-calendar__date--today': this.props.date.isToday,
+      'ffe-calendar__date--focus': this.props.date.isFocus,
+      'ffe-calendar__date--disabled': !this.props.date.isEnabled,
+      'ffe-calendar__date--selected': this.props.date.isSelected,
+      'ffe-calendar__date--disabled-focus': !this.props.date.isEnabled && this.props.date.isFocus,
+    });
   }
 
   dayClassName() {

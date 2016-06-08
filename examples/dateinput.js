@@ -5,7 +5,7 @@ require('./example.less');
 
 const heading = document.createElement('h1');
 heading.textContent = 'FFE-Dateinput';
-heading.classList.add('ffe-h1');
+heading.className = 'ffe-h1';
 document.body.appendChild(heading);
 
 const dateinput = document.createElement('section');

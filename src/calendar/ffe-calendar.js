@@ -147,13 +147,15 @@ export default class Datepicker extends React.Component {
     if (date.isLead) {
       return <LeadDate key={ date.date } date={ date } />;
     }
-    return (<ActiveDate
-      key={ date.date }
-      date={ date }
-      setFocusOnInitialMount={ this.dateShouldSetFocusOnInitialMount }
-      onClick={ (clickedDate) => this.mouseClick(clickedDate) }
-      headers={ `header__${this.datepickerId}__${index}` }
-    />);
+    return (
+      <ActiveDate
+        key={ date.date }
+        date={ date }
+        setFocusOnInitialMount={ this.dateShouldSetFocusOnInitialMount }
+        onClick={ (clickedDate) => this.mouseClick(clickedDate) }
+        headers={ `header__${this.datepickerId}__${index}` }
+      />
+    );
   }
 
   renderWeek(week) {
@@ -163,7 +165,7 @@ export default class Datepicker extends React.Component {
   renderDay(day, index) {
     return (
       <th
-        className={ "ffe-calendar__weekday" }
+        className="ffe-calendar__weekday"
         key={ day.name }
         role="columnheader"
         abbr={ day.name }
@@ -188,8 +190,8 @@ export default class Datepicker extends React.Component {
         previousMonthLabel={ this.state.calendar.previousName() }
         nextMonthLabel={ this.state.calendar.nextName() }
         datepickerId={ this.datepickerId }
-        previousMontHandler={ this.previousMonth }
-        nextMontHandler={ this.nextMonth }
+        previousMonthHandler={ this.previousMonth }
+        nextMonthHandler={ this.nextMonth }
       />
       <table
         className="ffe-calendar__grid"

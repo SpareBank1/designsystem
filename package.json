@@ -26,15 +26,18 @@
     "browserify": "^13.0.0",
     "budo": "^8.2.1",
     "chai": "^3.5.0",
+    "classnames": "^2.2.5",
     "enzyme": "^2.3.0",
     "eslint": "^2.4.0",
     "eslint-config-airbnb": "^6.1.0",
     "eslint-plugin-react": "^4.2.2",
+    "ffe-core": "^6.2.0",
     "ffe-icons-react": "^0.4.1",
     "mocha": "^2.5.3",
     "node-lessify": "^0.1.4",
     "nsp": "^2.2.0",
     "onchange": "^2.3.0",
+    "react": "^15.0.1",
     "react-addons-test-utils": "^15.1.0",
     "react-dom": "^15.0.1",
     "sinon": "^1.17.4"
@@ -44,7 +47,8 @@
   },
   "files": [
     "lib",
-    "*.js"
+    "*.js",
+    "*.less"
   ],
   "babel": {
     "presets": [
@@ -56,9 +60,7 @@
     ]
   },
   "peerDependencies": {
-    "ffe-core": "^5.3.0"
-  },
-  "dependencies": {
+    "ffe-core": "^6.2.0",
     "react": "^15.0.1"
   }
 }
