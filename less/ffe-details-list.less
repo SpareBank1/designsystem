@@ -4,8 +4,8 @@
     &__section-title {
         text-align: left;
         border-bottom: 1px solid @ffe-grey-light;
-        margin: 0;
         padding: 10px 0;
+        margin: 0;
 
         &--no-border {
             border-bottom: none;
@@ -14,7 +14,6 @@
     }
 
     &__section-title {
-        border-bottom: none;
         margin-top: 60px;
     }
 
@@ -25,6 +24,10 @@
             flex-flow: row nowrap;
             justify-content: flex-start;
             box-sizing: border-box;
+            padding: 15px 0;
+        }
+
+        &__section-title {
             padding: 15px 0;
         }
 
@@ -57,7 +60,8 @@
 
     @media screen and (min-width: @breakpoint-lg) {
 
-        &__details-row {
+        &__details-row,
+        &__section-title {
             padding: 20px 0;
         }
 
