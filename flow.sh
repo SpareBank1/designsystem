@@ -7,7 +7,8 @@ set -E
 trap 'executionFailed ${LINENO}' ERR
 
 function main() {
-    ./build.sh
+    npm i
+    npm run examples
 
     if should_publish; then
         npm run has-published -s || npm publish
