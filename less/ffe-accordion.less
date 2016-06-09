@@ -1,0 +1,108 @@
+.ffe-accordion {
+    text-align: left;
+    margin: 0 auto;
+
+    &--white {
+        border-bottom: solid @ffe-grey-light 1px;
+    }
+}
+
+.ffe-accordion-item {
+    position: relative;
+
+    &--white {
+        border-top: solid @ffe-grey-light 1px;
+
+        &:last-of-type {
+            border-bottom: solid #d8d8d8 1px;
+        }
+    }
+
+    &--blue {
+        margin-bottom: 10px;
+    }
+
+    &--open {
+        margin-bottom: 20px;
+    }
+
+    &__icon {
+        width: 17px;
+        height: 17px;
+        position: absolute;
+        right: 20px;
+        top: 25px;
+        transition: transform .3s, fill .3s;
+
+        &--white {
+            fill: @ffe-grey-light;
+        }
+
+        &--blue {
+            fill: @ffe-blue-royal;
+        }
+
+        &--open {
+            transform: rotateX(180deg);
+            fill: @ffe-blue-royal;
+         
+        }
+        &--open&--blue {
+            fill: @ffe-white;
+        }
+
+    }
+
+    &__content {
+        padding-right: 40px;
+
+        &--blue {
+            padding: 10px 25px 0px;
+        }
+    }
+
+    &__toggler {
+        display: inline-block;
+        width: 100%;
+        padding: 20px 35px 20px 0;
+        transition: background-color .3s,color .3s;
+        
+        &--white {
+            color: @ffe-blue-royal-light-wcag;
+
+            &:hover, &:focus {
+                color: @ffe-blue-royal;
+            }
+        }
+        
+        &--open&--white {
+            color: @ffe-blue-royal;
+        }
+
+        &--blue {
+            color: @ffe-blue-royal;
+            background-color: @ffe-blue-royal-light-20;
+            padding-left: 20px;
+            border-radius: 3px;
+
+            &:hover, &:focus {
+                color: white;
+                background-color: @ffe-blue-royal;
+            }
+        }
+
+        &--open&--blue {
+            color: @ffe-white;
+            background-color: @ffe-blue-royal;
+        }
+
+        &:hover, &:focus {
+            .ffe-accordion-item__icon--white {
+                fill: @ffe-blue-royal;
+            }
+            .ffe-accordion-item__icon--blue {
+                fill: @ffe-white;                
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "ffe-accordion",
+  "version": "1.0.0",
+  "description": "Accordion component for FFE.",
+  "main": "index.js",
+  "keywords": [
+    "FFE",
+    "SpareBank1",
+    "Accordion"
+  ],
+  "publishConfig": {
+    "registry": "***REMOVED***"
+  },
+  "author": "SpareBank 1",
+  "peerDependencies": {
+    "ffe-core": "*"
+  }
+}
