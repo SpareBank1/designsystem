@@ -1,11 +1,13 @@
 import React, { PropTypes } from 'react';
+import classNames from 'classnames';
 import KalenderIkon from 'ffe-icons-react/kalender-ikon';
 
-function FFEDateInput(props) {
-  const defaultProps = props.inputProps || {};
-  const defaultClassName = defaultProps.className || '';
-  const inputProps = { ...defaultProps,
-    className: `ffe-dateinput__field ffe-input-field ${defaultClassName}`,
+export default function FFEDateInput(props) {
+  const givenInputProps = props.inputProps || {};
+
+  const inputProps = {
+    ...givenInputProps,
+    className: classNames('ffe-dateinput__field', 'ffe-input-field', givenInputProps.className),
   };
 
   return (
@@ -30,5 +32,3 @@ FFEDateInput.propTypes = {
   value: PropTypes.string.isRequired,
   inputProps: PropTypes.object,
 };
-
-export default FFEDateInput;
