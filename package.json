@@ -15,7 +15,7 @@
     "has-published": "npm show . versions -s | grep -q ${npm_package_version}"
   },
   "peerDependencies": {
-    "react": "^14.0.0",
+    "react": "^0.14.0",
     "ffe-core": "*"
   },
   "devDependencies": {
