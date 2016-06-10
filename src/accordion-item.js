@@ -13,8 +13,8 @@ const isIgnoredNode = (node, ignoredNodes) => ignoredNodes.some(name => name ===
 export default React.createClass({
     propTypes: {
         isOpen: PropTypes.bool,
-        type: PropTypes.oneOf(['white', 'blue']).isRequired,
-        index: PropTypes.number.isRequired,
+        type: PropTypes.oneOf(['white', 'blue']),
+        index: PropTypes.number,
         ignoredNodeNames: PropTypes.array,
         children: PropTypes.oneOfType([
             PropTypes.string,
