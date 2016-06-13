@@ -26,7 +26,6 @@
     "browserify": "^13.0.0",
     "budo": "^8.2.1",
     "chai": "^3.5.0",
-    "classnames": "^2.2.5",
     "enzyme": "^2.3.0",
     "eslint": "^2.4.0",
     "eslint-config-airbnb": "^6.1.0",
@@ -62,5 +61,8 @@
   "peerDependencies": {
     "ffe-core": "^6.2.0",
     "react": "^15.0.1"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5"
   }
 }
