@@ -31,7 +31,7 @@ Dropdown.propTypes = {
     label: PropTypes.string,
     onChange: PropTypes.func.isRequired,
     selectedValue: PropTypes.string,
-    children: PropTypes.array.isRequired
+    children: PropTypes.array
 };
 
 export default Dropdown;
