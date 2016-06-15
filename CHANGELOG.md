@@ -1,5 +1,8 @@
 #CHANGELOG
 
+##Version 2.0.2
+Fungerer nå på små flater
+
 ##Version 2.0.0
 Endret navn "warning" til "error" for å bedre reflektere faktisk bruk
 Endret html-struktur slik at innsnitt i bakgrunnsfargen ikke er avhengig av størrelsen på ikonet
