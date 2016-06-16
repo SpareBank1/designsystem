@@ -36,15 +36,15 @@
     }
 
     &__icon {
-        margin-bottom: -20px;
+        margin-bottom: -30px;
         background-color: #FFF;
         display: inline-block;
         fill: #002776;
         border-radius: 50%;
         padding: 10px;
         padding-top: 20px;
-        height: 60px;
-        width: 60px;
+        height: 80px;
+        width: 80px;
 
         &--error svg {
             fill: @ffe-orange-wcag;
@@ -56,31 +56,11 @@
 
         &--success svg {
             fill: @ffe-green-wcag;
-        }     
+        }
 
         &--tips svg {
             fill: @ffe-blue-royal;
-        }    
-    }
-
-    @media screen and (min-width: @breakpoint-sm) {
-
-        &__icon {
-            height: 70px;
-            width: 70px;
-            margin-bottom: -25px;
         }
-
-    }
-
-    @media screen and (min-width: @breakpoint-md) {
-
-        &__icon {
-            height: 80px;
-            width: 80px;
-            margin-bottom: -30px;
-        }
-
     }
 
     @media print {
