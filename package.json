@@ -1,0 +1,30 @@
+{
+  "name": "ffe-datepicker",
+  "version": "1.0.0",
+  "description": "Datepicker",
+  "main": "index.js",
+  "scripts": {
+    "compile": "lessc example/example.less example/example.css && cp -R node_modules/ffe-core/fonts/ fonts/ && echo \"$(date +%T): Updated example\"",
+    "lint": "lessc --lint example/example.less",
+    "start": "opn example/example.html & watch \"npm run -s compile\" less/",
+    "preversion": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "***REMOVED***"
+  },
+  "devDependencies": {
+    "ffe-core": "^6.2.0",
+    "less": "^2.6.1",
+    "mkdirp": "^0.5.1",
+    "opn-cli": "^3.1.0"
+  },
+  "peerDependencies": {
+    "ffe-core": "^6.2.0"
+  },
+  "publishConfig": {
+    "registry": "***REMOVED***"
+  },
+  "author": "SpareBank1",
+  "license": "ISC"
+}
