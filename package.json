@@ -38,7 +38,7 @@
   "author": "Glenn A. Brownlee <glenn.brownlee@sparebank1.no>",
   "license": "ISC",
   "devDependencies": {
-    "gemini": "^2.1.1",
+    "gemini": "4.3.0",
     "less": "2.5.1"
   }
 }
