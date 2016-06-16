@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
-import FFEButton from './FFEButton';
+import Button from './Button';
 
-export default function FFEShortcutButton(props) {
+export default function SecondaryButton(props) {
     const {
         action,
         ariaLoadingMessage,
@@ -11,10 +11,11 @@ export default function FFEShortcutButton(props) {
         isLoading,
         label,
         onClick,
+        isTabbable,
     } = props;
 
     return (
-        <FFEButton
+        <Button
             action={action}
             ariaLoadingMessage={ariaLoadingMessage}
             disableButton={disableButton}
@@ -22,14 +23,15 @@ export default function FFEShortcutButton(props) {
             isLoading={isLoading}
             label={label}
             onClick={onClick}
-            type="shortcut"
+            type="secondary"
+            isTabbable={isTabbable}
         >
             {children}
-        </FFEButton>
+        </Button>
     );
 }
 
-FFEShortcutButton.propTypes = {
+SecondaryButton.propTypes = {
     action: PropTypes.string,
     ariaLoadingMessage: PropTypes.string,
     children: PropTypes.node,
@@ -38,4 +40,5 @@ FFEShortcutButton.propTypes = {
     isLoading: PropTypes.bool,
     label: PropTypes.string,
     onClick: PropTypes.func.isRequired,
+    isTabbable: PropTypes.bool,
 };

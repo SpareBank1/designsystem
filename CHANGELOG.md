@@ -1,5 +1,10 @@
 # Changelog
 
+## v2.1.0
+
+* Deprecated the 'FFE' prefix in all button names.
+* Add 'isTabbable' support.
+
 ## v2.0.0
 
 * Bump `ffe-core` dependency to 6.x.
