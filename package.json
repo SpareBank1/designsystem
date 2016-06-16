@@ -1,6 +1,6 @@
 {
   "name": "ffe-dropdown-react",
-  "version": "1.4.3",
+  "version": "1.5.0",
   "main": "lib/dropdown.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/. && npm run example",

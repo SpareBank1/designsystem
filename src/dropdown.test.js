@@ -42,6 +42,17 @@ describe('<Dropdown />', () => {
             wrapper.find('select').prop('id')
         );
     });
+
+    it('should use the supplied defaultValue', () => {
+        const wrapper = shallow(
+            <Dropdown defaultValue="make_foo">
+                <option value="make_foo" disabled="true">Not Bar</option>
+                <option value="bar">Bar</option>
+            </Dropdown>
+        );
+
+        assert.equal(wrapper.find('select').prop('defaultValue'), 'make_foo');
+    });
 });
 
 

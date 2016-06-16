@@ -7,7 +7,7 @@ const createID = (label, options) => {
     return `Dropdown-${hash(label + stringifiedOptions)}`;
 };
 
-function Dropdown({ id,  label, onChange, selectedValue, children }) {
+function Dropdown({ id,  label, onChange, selectedValue, defaultValue, children }) {
     const domId = id || createID(label, children);
 
     return  <div className="ffe-input-group" aria-live="polite">
@@ -20,7 +20,8 @@ function Dropdown({ id,  label, onChange, selectedValue, children }) {
                         className="ffe-select-box"
                         id={ domId }
                         onChange={ onChange }
-                        value={ selectedValue }>
+                        value={ selectedValue }
+                        defaultValue={ defaultValue }>
                     { children }
                 </select>
             </div>;
@@ -31,6 +32,7 @@ Dropdown.propTypes = {
     label: PropTypes.string,
     onChange: PropTypes.func.isRequired,
     selectedValue: PropTypes.string,
+    defaultValue: PropTypes.string,
     children: PropTypes.array
 };
 
