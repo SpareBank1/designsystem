@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 
-export default function FFEButton(props) {
+export default function Button(props) {
     const {
         action,
         ariaLoadingMessage = 'Vennligst vent',
@@ -11,8 +11,9 @@ export default function FFEButton(props) {
         label,
         onClick,
         type = 'primary',
+        isTabbable,
         } = props;
-
+    const tabIndex = isTabbable ? 0 : -1;
     return (
         <button
             onClick={onClick}
@@ -21,6 +22,7 @@ export default function FFEButton(props) {
             id={id}
             disabled={disableButton}
             aria-disabled={disableButton}
+            tabIndex={tabIndex}
         >
             <span className={`ffe-${type}-button__label`}>
                 <span
@@ -40,7 +42,7 @@ export default function FFEButton(props) {
     );
 }
 
-FFEButton.propTypes = {
+Button.propTypes = {
     action: PropTypes.string,
     ariaLoadingMessage: PropTypes.string,
     children: PropTypes.node,
@@ -50,4 +52,5 @@ FFEButton.propTypes = {
     label: PropTypes.string,
     onClick: PropTypes.func.isRequired,
     type: PropTypes.string,
+    isTabbable: PropTypes.bool,
 };
