@@ -37,3 +37,4 @@ The label-attribute should then be omitted.
 </Dropdown>
 ```
 
+If you want to initialize the dropdown with a non-empty value, you can supply a `defaultValue` prop.
