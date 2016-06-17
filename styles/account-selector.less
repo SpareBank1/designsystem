@@ -1,0 +1,66 @@
+@import "../node_modules/ffe-core/less/ffe.less";
+@font-url: "../node_modules/ffe-core/fonts";
+
+.nfe-account-selector {
+  position: relative;
+  display: inline-block;
+
+  &__search {
+    width: 300px;
+    z-index: 10;
+
+    &::-ms-clear {
+      display: none;
+    }
+  }
+
+  &__output {
+    z-index: 0;
+    position: absolute;
+  }
+
+  &__reset-button {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 12px;
+    height: 12px;
+    background: transparent;
+    border: none;
+    padding: 0;
+    fill: @ffe-blue-royal;
+  }
+
+  &__reset-icon {
+    width: 100%;
+    height: 100%;
+    margin: 0 4px;
+  }
+
+  &__selected-account-details {
+    font-size: 14px;
+    padding: 10px 6px;
+    color: #262626;
+    .ffe-clearfix;
+  }
+
+  &__selected-account-details--left {
+    float: left;
+  }
+
+  &__selected-account-details--right {
+    float: right;
+  }
+
+  &__scroll {
+    position: absolute;
+    left: 0;
+    width: 300px;
+    margin-right: 10px;
+    top: 45px;
+    border: 2px solid @ffe-grey-light;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+}
+
