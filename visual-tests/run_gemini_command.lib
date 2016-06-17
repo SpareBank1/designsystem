@@ -13,7 +13,7 @@ run_gemini_command() {
 
     local -r wd_ip=$(docker inspect --format '{{ .NetworkSettings.IPAddress }}' ${WEBBROWSER})
 
-    node_modules/.bin/gemini $command_and_args --browsers-firefox-grid-url=http://$wd_ip:4444/wd/hub  visual-tests/
+    node_modules/.bin/gemini $command_and_args --grid-url=http://$wd_ip:4444/wd/hub  visual-tests/
 
 }
 
