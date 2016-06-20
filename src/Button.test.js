@@ -136,36 +136,36 @@ describe('Button components:', () => {
     });
 
     it('Set tabbable on Button', () => {
-        const wrapper = shallow(<Button onClick={() => ({})} isTabbable={true}>Hello</Button>);
+        const wrapper = shallow(<Button onClick={() => ({})} isTabbable>Hello</Button>);
         const button = wrapper.find('button');
         expect(button.prop('tabIndex')).to.be.equal(0);
     });
 
     it('ActionButton passes tabbability on to Button', () => {
         const wrapper = shallow(
-            <ActionButton disableButton onClick={() => ({})} isTabbable={true}>Hello</ActionButton>
+            <ActionButton disableButton onClick={() => ({})} isTabbable>Hello</ActionButton>
         );
-        expect(wrapper.find('Button').prop('isTabbable')).to.be.true;
+        expect(wrapper.find('Button').prop('isTabbable')).to.be.equal(true);
     });
 
     it('PrimaryButton passes tabbability on to Button', () => {
         const wrapper = shallow(
-            <PrimaryButton disableButton onClick={() => ({})} isTabbable={true}>Hello</PrimaryButton>
+            <PrimaryButton disableButton onClick={() => ({})} isTabbable>Hello</PrimaryButton>
         );
-        expect(wrapper.find('Button').prop('isTabbable')).to.be.true;
+        expect(wrapper.find('Button').prop('isTabbable')).to.be.equal(true);
     });
 
     it('SecondaryButton passes tabability on to Button', () => {
         const wrapper = shallow(
-            <SecondaryButton disableButton onClick={() => ({})} isTabbable={true}>Hello</SecondaryButton>
+            <SecondaryButton disableButton onClick={() => ({})} isTabbable>Hello</SecondaryButton>
         );
-        expect(wrapper.find('Button').prop('isTabbable')).to.be.true;
+        expect(wrapper.find('Button').prop('isTabbable')).to.be.equal(true);
     });
 
     it('ShortcutButton passes tabbability on to Button', () => {
         const wrapper = shallow(
-            <ShortcutButton disableButton onClick={() => ({})} isTabbable={true}>Hello</ShortcutButton>
+            <ShortcutButton disableButton onClick={() => ({})} isTabbable>Hello</ShortcutButton>
         );
-        expect(wrapper.find('Button').prop('isTabbable')).to.be.true;
+        expect(wrapper.find('Button').prop('isTabbable')).to.be.equal(true);
     });
 });
