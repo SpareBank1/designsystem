@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
-import FFEButton from './FFEButton';
+import Button from './Button';
 
-export default function FFEActionButton(props) {
+export default function PrimaryButton(props) {
     const {
         action,
         ariaLoadingMessage,
@@ -11,10 +11,11 @@ export default function FFEActionButton(props) {
         isLoading,
         label,
         onClick,
+        isTabbable,
     } = props;
 
     return (
-        <FFEButton
+        <Button
             action={action}
             ariaLoadingMessage={ariaLoadingMessage}
             disableButton={disableButton}
@@ -22,14 +23,15 @@ export default function FFEActionButton(props) {
             isLoading={isLoading}
             label={label}
             onClick={onClick}
-            type="action"
+            type="primary"
+            isTabbable={isTabbable}
         >
             {children}
-        </FFEButton>
+        </Button>
     );
 }
 
-FFEActionButton.propTypes = {
+PrimaryButton.propTypes = {
     action: PropTypes.string,
     ariaLoadingMessage: PropTypes.string,
     children: PropTypes.node,
@@ -38,4 +40,5 @@ FFEActionButton.propTypes = {
     isLoading: PropTypes.bool,
     label: PropTypes.string,
     onClick: PropTypes.func.isRequired,
+    isTabbable: PropTypes.bool,
 };

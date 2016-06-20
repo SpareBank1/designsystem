@@ -1,15 +1,22 @@
-import FFEActionButton from './FFEActionButton';
-import FFEButton from './FFEButton';
-import FFEPrimaryButton from './FFEPrimaryButton';
-import FFESecondaryButton from './FFESecondaryButton';
-import FFEShortcutButton from './FFEShortcutButton';
+import ActionButton from './ActionButton';
+import Button from './Button';
+import PrimaryButton from './PrimaryButton';
+import SecondaryButton from './SecondaryButton';
+import ShortcutButton from './ShortcutButton';
 
 export {
-    FFEActionButton,
-    FFEButton,
-    FFEPrimaryButton,
-    FFESecondaryButton,
-    FFEShortcutButton,
+    ActionButton,
+    Button,
+    PrimaryButton,
+    SecondaryButton,
+    ShortcutButton,
+
+    // DEPRECATED
+    ActionButton as FFEActionButton,
+    Button as FFEButton,
+    PrimaryButton as FFEPrimaryButton,
+    SecondaryButton as FFESecondaryButton,
+    ShortcutButton as FFEShortcutButton,
 };
 
-export default FFEButton;
+export default Button;
