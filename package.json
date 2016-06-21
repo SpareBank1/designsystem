@@ -1,7 +1,7 @@
 {
   "name": "nfe-account-selector-react",
-  "version": "0.0.1",
-  "main": "lib/nfe-account-selector-react.js",
+  "version": "1.0.0",
+  "main": "lib/account-selector.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/.",
     "lint": "eslint src/.",
@@ -24,9 +24,10 @@
     "budo": "^8.3.0",
     "chai": "^3.5.0",
     "enzyme": "^2.0.0",
-    "eslint": "^2.4.0",
-    "eslint-config-airbnb": "^6.1.0",
-    "eslint-plugin-react": "^4.2.2",
+    "eslint": "^2.13.0",
+    "eslint-config-ffe": "^2.0.0",
+    "eslint-plugin-import": "^1.8.1",
+    "eslint-plugin-react": "^5.2.2",
     "ffe-core": "^6.2.0",
     "ffe-icons-react": "^0.4.1",
     "mocha": "^2.4.5",
@@ -44,15 +45,18 @@
   "publishConfig": {
     "registry": "***REMOVED***"
   },
+  "repository": {
+    "type": "git",
+    "url": "***REMOVED***"
+  },
   "files": [
     "lib",
     "*.js",
-    "*.less"
+    "styles/"
   ],
   "eslintConfig": {
-    "extends": "airbnb"
+    "extends": "eslint-config-ffe"
   },
-  "repository": "",
   "author": "SpareBank1",
   "license": "",
   "babel": {

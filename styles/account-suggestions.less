@@ -1,0 +1,54 @@
+.nfe-account-suggestions {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid @ffe-grey-light;
+
+    &:first-child {
+      border-top: none;
+    }
+  }
+
+  &__account {
+    padding: 8px 16px 8px 21px;
+    background: #fff;
+
+    &:hover,
+    &:focus,
+    &--highligted {
+      cursor: pointer;
+      background: @ffe-blue-royal-light-wcag;
+
+      .nfe-account-suggestions__name,
+      .nfe-account-suggestions__details {
+        color: #fff;
+      }
+    }
+  }
+
+  &__name {
+    &:extend(.ffe-link-text);
+    line-height: 1;
+    font-size: 15px;
+    display: block;
+    padding-bottom: 6px;
+  }
+
+  &__details {
+    color: @ffe-grey-dark;
+    font-size: 12px;
+    .ffe-clearfix;
+  }
+
+  &__account-number {
+    float: left;
+  }
+
+  &__balance {
+    float: right;
+  }
+}
