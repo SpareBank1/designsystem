@@ -92,3 +92,11 @@ to disable a button, you can do this as well by setting the `disableButton` prop
 ```
 
 This works for all button types, but make sure you have a really good reason for using it!
+
+### Styling
+
+Any style attributes given to a button component will be passed on to the underlying html button element.
+
+```javascript
+<Button style={{transform: 'rotate(30deg)'}}>...</Button>
+```

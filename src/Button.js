@@ -12,9 +12,11 @@ export default function Button(props) {
         onClick,
         type = 'primary',
         simpleContent = false,
+        style = {},
         isTabbable,
     } = props;
     const tabIndex = isTabbable ? 0 : -1;
+
     return (
         <button
             onClick={onClick}
@@ -24,6 +26,7 @@ export default function Button(props) {
             disabled={disableButton}
             aria-disabled={disableButton}
             tabIndex={tabIndex}
+            style={style}
         >
             {simpleContent ?
                 (label || children) :
@@ -58,4 +61,5 @@ Button.propTypes = {
     type: PropTypes.string,
     simpleContent: PropTypes.bool,
     isTabbable: PropTypes.bool,
+    style: PropTypes.object
 };
