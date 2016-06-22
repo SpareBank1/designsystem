@@ -1,13 +1,14 @@
 {
   "name": "ffe-button-react",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "React implementation of ffe-button",
   "main": "lib/index.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/.",
     "lint": "eslint src/.",
     "test:nsp": "nsp check",
-    "test:spec": "mocha --require babel-register --reporter mocha-tap13 src/**/*.test.js",
+    "test:spec": "mocha --require babel-register src/**/*.test.js",
+    "tdd": "mocha --require babel-register src/**/*.test.js -w",
     "test": "npm run test:spec && npm run test:nsp",
     "prepublish": "npm run build",
     "has-published": "npm show . versions -s | grep -q ${npm_package_version}"
