@@ -2,7 +2,10 @@ import React, { PropTypes } from 'react';
 import ReactDOM from 'react-dom';
 import AccountSuggestionList from './account-suggestion-list';
 import AccountDetails from './account-details';
-import ScrollArea from 'react-scrollbar';
+
+// https://github.com/souhe/reactScrollbar/issues/35
+import ScrollArea from 'react-scrollbar/dist/no-css';
+
 import i18n from './i18n/i18n';
 import KryssIkon from 'ffe-icons-react/kryss-ikon';
 import KeyCode from './util/keyCode';
