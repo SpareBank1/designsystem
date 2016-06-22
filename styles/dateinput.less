@@ -1,0 +1,25 @@
+.ffe-dateinput {
+  position: relative;
+  display: inline-block;
+
+  &:hover {
+    color: @ffe-blue-royal-light-wcag;;
+  }
+
+  &__field {
+    min-width: 160px;
+
+    &::-ms-clear {
+      display: none;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    right: 12px;
+    top: 7px;
+    width: 26px;
+    height: 26px;
+    fill: @ffe-blue-royal-light-wcag;
+  }
+}

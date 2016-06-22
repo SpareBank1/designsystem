@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>Example page for date picker</title>
+        <link href="example.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body class="ffe-body-text">
+        <div>
+            <h2 class="ffe-h2">ffe-datepicker</h2>
+            <div class="ffe-dateinput">
+                <input class="ffe-dateinput__field ffe-input-field" type="text">
+                <svg y="450" x="900" height="150" width="150" viewBox="0 0 200 200" focusable="false"
+                     class="ffe-dateinput__icon">
+                    <path d="M56.3 46.3c5 0 7.5-2.5 7.5-6.3V6.3C63.8 2.5 60 0 56.3 0c-3.8 0-7.5 2.5-7.5 6.3v32.5c0 3.7 3.7 7.5 7.5 7.5zm87.5 0c5 0 7.5-2.5 7.5-6.3V6.3c0-3.8-2.5-6.3-6.3-6.3h-1.2c-3.8 0-6.3 2.5-6.3 6.3v32.5c-1.2 3.7 2.5 7.5 6.3 7.5z"></path>
+                    <path d="M85 118.8c2.5 2.5 3.8 2.5 6.3 0l1.2-1.3c1.3-1.2 1.3-2.5 1.3-2.5v27.5h-7.5c-2.5 0-3.8 1.3-3.8 3.8v3.7c0 2.5 1.3 3.8 3.8 3.8H115c2.5 0 3.8-1.3 3.8-3.8v-3.7c0-2.5-1.3-3.8-3.8-3.8h-7.5v-38.7c0-2.5-1.2-3.8-5-3.8h-3.7c-2.5 0-3.8 0-5 1.3l-10 10c-2.5 1.2-2.5 3.7 0 6.2l1.2 1.3zm101.3-95H170v15c0 13.7-11.2 25-25 25h-1.2c-13.8 0-25-11.3-25-25v-15H82.5v15c0 13.7-11.2 25-25 25h-1.2c-13.8 0-25-11.3-25-25v-15H13.8C6.3 23.8 0 30 0 37.5v148.8c0 7.5 6.3 13.7 13.8 13.7h172.5c7.5 0 13.7-6.2 13.7-13.7V37.5c0-7.5-6.2-13.7-13.7-13.7zm-2.5 160H16.3V80h166.2v103.8h1.3z"></path>
+                </svg>
+                <div role="region" aria-labelledby="ffe-calendar-499-title"
+                     class="ffe-calendar ffe-calendar--datepicker">
+                    <div class="ffe-calendar__header">
+                        <div class="ffe-calendar__header-inner-wrapper">
+                            <button title="Forrige" class="ffe-calendar__month-nav ffe-calendar__previous"
+                                    tabindex="-1">
+                                <svg y="600" x="150" height="150" width="150" viewBox="0 0 200 200" focusable="false"
+                                     class="ffe-calendar__icon-prev">
+                                    <path d="M16.171 42c-4.143 0-8.285 1.575-11.427 4.706-6.325 6.284-6.325 16.5 0 22.804l84.028 83.762c6.305 6.304 16.55 6.304 22.875 0l83.61-83.264c6.324-6.283 6.324-16.5 0-22.803-6.306-6.303-16.556-6.303-22.881 0L100.238 119.1 27.624 46.725C24.482 43.573 20.334 42 16.19 42h-.019z"></path>
+                                </svg>
+                            </button>
+                            <header aria-atomic="true" aria-live="assertive" class="ffe-calendar__title"
+                                    id="ffe-calendar-499-title">
+                                <div id="ffe-calendar-499__month-label">
+                                    <span class="ffe-calendar__month">Juni</span>
+                                    <span class="ffe-calendar__year">2016</span>
+                                </div>
+                            </header>
+                            <button title="Neste" class="ffe-calendar__month-nav ffe-calendar__next" tabindex="-1">
+                                <svg y="600" x="150" height="150" width="150" viewBox="0 0 200 200" focusable="false"
+                                     class="ffe-calendar__icon-next">
+                                    <path d="M16.171 42c-4.143 0-8.285 1.575-11.427 4.706-6.325 6.284-6.325 16.5 0 22.804l84.028 83.762c6.305 6.304 16.55 6.304 22.875 0l83.61-83.264c6.324-6.283 6.324-16.5 0-22.803-6.306-6.303-16.556-6.303-22.881 0L100.238 119.1 27.624 46.725C24.482 43.573 20.334 42 16.19 42h-.019z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <table aria-labelledby="ffe-calendar-499__month-label" role="grid" class="ffe-calendar__grid">
+                        <thead>
+                            <tr role="row">
+                                <th id="header__ffe-calendar-499__0" aria-label="Mandag" role="columnheader"
+                                    class="ffe-calendar__weekday">
+                                    <span title="Mandag">Man</span>
+                                </th>
+                                <th id="header__ffe-calendar-499__1" aria-label="Tirsdag" role="columnheader"
+                                    class="ffe-calendar__weekday">
+                                    <span title="Tirsdag">Tir</span>
+                                </th>
+                                <th id="header__ffe-calendar-499__2" aria-label="Onsdag" role="columnheader"
+                                    class="ffe-calendar__weekday">
+                                    <span title="Onsdag">Ons</span>
+                                </th>
+                                <th id="header__ffe-calendar-499__3" aria-label="Torsdag" role="columnheader"
+                                    class="ffe-calendar__weekday">
+                                    <span title="Torsdag">Tor</span>
+                                </th>
+                                <th id="header__ffe-calendar-499__4" aria-label="Fredag" role="columnheader"
+                                    class="ffe-calendar__weekday">
+                                    <span title="Fredag">Fre</span>
+                                </th>
+                                <th id="header__ffe-calendar-499__5" aria-label="Lørdag" role="columnheader"
+                                    class="ffe-calendar__weekday">
+                                    <span title="Lørdag">Lør</span>
+                                </th>
+                                <th id="header__ffe-calendar-499__6" aria-label="Søndag" role="columnheader"
+                                    class="ffe-calendar__weekday">
+                                    <span title="Søndag">Søn</span>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr role="row">
+                                <td aria-disabled="true" aria-selected="false" role="gridcell" class="ffe-calendar__day"
+                                ></td>
+                                <td aria-disabled="true" aria-selected="false" role="gridcell" class="ffe-calendar__day"
+                                ></td>
+                                <td headers="header__ffe-calendar-499__2" aria-disabled="false" aria-selected="false"
+                                    tabindex="-1" role="gridcell" class="ffe-calendar__day"><span
+                                        class="ffe-calendar__date">1</span></td>
+                                <td headers="header__ffe-calendar-499__3" aria-disabled="false" aria-selected="false"
+                                    tabindex="-1" role="gridcell" class="ffe-calendar__day"><span
+                                        class="ffe-calendar__date">2</span></td>
+                                <td headers="header__ffe-calendar-499__4" aria-disabled="false" aria-selected="false"
+                                    tabindex="-1" role="gridcell" class="ffe-calendar__day"><span
+                                        class="ffe-calendar__date">3</span></td>
+                                <td headers="header__ffe-calendar-499__5" aria-disabled="false" aria-selected="false"
+                                    tabindex="-1" role="gridcell" class="ffe-calendar__day"><span
+                                        class="ffe-calendar__date">4</span></td>
+                                <td headers="header__ffe-calendar-499__6" aria-disabled="false" aria-selected="false"
+                                    tabindex="-1" role="gridcell" class="ffe-calendar__day"><span
+                                        class="ffe-calendar__date">5</span></td>
+                            </tr>
+                            <tr role="row">
+                                <td headers="header__ffe-calendar-499__0" aria-disabled="false" aria-selected="false"
+                                    tabindex="-1" role="gridcell" class="ffe-calendar__day"><span
+                                        class="ffe-calendar__date">6</span></td>
+                                <td headers="header__ffe-calendar-499__1" aria-disabled="false" aria-selected="false"
+                                    tabindex="-1" role="gridcell" class="ffe-calendar__day"><span
+                                        class="ffe-calendar__date">7</span></td>
+                                <td headers="header__ffe-calendar-499__2" aria-disabled="false" aria-selected="false"
+                                    tabindex="-1" role="gridcell" class="ffe-calendar__day"><span
+                                        class="ffe-calendar__date">8</span></td>
+                                <td headers="header__ffe-calendar-499__3" aria-disabled="false" aria-selected="false"
+                                    tabindex="-1" role="gridcell" class="ffe-calendar__day"><span
+                                        class="ffe-calendar__date">9</span></td>
+                                <td headers="header__ffe-calendar-499__4" aria-disabled="false" aria-selected="false"
+                                    tabindex="-1" role="gridcell" class="ffe-calendar__day"><span
+                                        class="ffe-calendar__date">10</span></td>
+                                <td headers="header__ffe-calendar-499__5" aria-disabled="false" aria-selected="false"
+                                    tabindex="-1" role="gridcell" class="ffe-calendar__day"><span
+                                        class="ffe-calendar__date">11</span></td>
+                                <td headers="header__ffe-calendar-499__6" aria-disabled="false" aria-selected="false"
+                                    tabindex="-1" role="gridcell" class="ffe-calendar__day"><span
+                                        class="ffe-calendar__date">12</span></td>
+                            </tr>
+                            <tr role="row">
+                                <td headers="header__ffe-calendar-499__0" aria-disabled="false" aria-selected="false"
+                                    tabindex="-1" role="gridcell" class="ffe-calendar__day"><span
+                                        class="ffe-calendar__date ffe-calendar__date--focus">13</span></td>
+                                <td headers="header__ffe-calendar-499__1" aria-disabled="false" aria-selected="false"
+                                    tabindex="-1" role="gridcell" class="ffe-calendar__day"><span
+                                        class="ffe-calendar__date ffe-calendar__date--selected">14</span></td>
+                                <td headers="header__ffe-calendar-499__2" aria-disabled="false" aria-selected="false"
+                                    tabindex="-1" role="gridcell" class="ffe-calendar__day"><span
+                                        class="ffe-calendar__date">15</span></td>
+                                <td headers="header__ffe-calendar-499__3" aria-disabled="false" aria-selected="false"
+                                    tabindex="0" role="gridcell" class="ffe-calendar__day ffe-calendar_date--focus"
+                                ><span
+                                        class="ffe-calendar__date ffe-calendar__date--today"
+                                >16</span></td>
+                                <td headers="header__ffe-calendar-499__4" aria-disabled="false" aria-selected="false"
+                                    tabindex="-1" role="gridcell" class="ffe-calendar__day"><span
+                                        class="ffe-calendar__date">17</span></td>
+                                <td headers="header__ffe-calendar-499__5" aria-disabled="false" aria-selected="false"
+                                    tabindex="-1" role="gridcell" class="ffe-calendar__day"><span
+                                        class="ffe-calendar__date">18</span></td>
+                                <td headers="header__ffe-calendar-499__6" aria-disabled="false" aria-selected="false"
+                                    tabindex="-1" role="gridcell" class="ffe-calendar__day"><span
+                                        class="ffe-calendar__date">19</span></td>
+                            </tr>
+                            <tr role="row">
+                                <td headers="header__ffe-calendar-499__0" aria-disabled="false" aria-selected="false"
+                                    tabindex="-1" role="gridcell" class="ffe-calendar__day"><span
+                                        class="ffe-calendar__date">20</span></td>
+                                <td headers="header__ffe-calendar-499__1" aria-disabled="false" aria-selected="false"
+                                    tabindex="-1" role="gridcell" class="ffe-calendar__day"><span
+                                        class="ffe-calendar__date">21</span></td>
+                                <td headers="header__ffe-calendar-499__2" aria-disabled="false" aria-selected="false"
+                                    tabindex="-1" role="gridcell" class="ffe-calendar__day"><span
+                                        class="ffe-calendar__date">22</span></td>
+                                <td headers="header__ffe-calendar-499__3" aria-disabled="false" aria-selected="false"
+                                    tabindex="-1" role="gridcell" class="ffe-calendar__day"><span
+                                        class="ffe-calendar__date">23</span></td>
+                                <td headers="header__ffe-calendar-499__4" aria-disabled="false" aria-selected="false"
+                                    tabindex="-1" role="gridcell" class="ffe-calendar__day"><span
+                                        class="ffe-calendar__date">24</span></td>
+                                <td headers="header__ffe-calendar-499__5" aria-disabled="false" aria-selected="false"
+                                    tabindex="-1" role="gridcell" class="ffe-calendar__day"><span
+                                        class="ffe-calendar__date">25</span></td>
+                                <td headers="header__ffe-calendar-499__6" aria-disabled="false" aria-selected="false"
+                                    tabindex="-1" role="gridcell" class="ffe-calendar__day"><span
+                                        class="ffe-calendar__date">26</span></td>
+                            </tr>
+                            <tr role="row">
+                                <td headers="header__ffe-calendar-499__0" aria-disabled="false" aria-selected="false"
+                                    tabindex="-1" role="gridcell" class="ffe-calendar__day"><span
+                                        class="ffe-calendar__date">27</span></td>
+                                <td headers="header__ffe-calendar-499__1" aria-disabled="false" aria-selected="false"
+                                    tabindex="-1" role="gridcell" class="ffe-calendar__day"><span
+                                        class="ffe-calendar__date">28</span></td>
+                                <td headers="header__ffe-calendar-499__2" aria-disabled="false" aria-selected="false"
+                                    tabindex="-1" role="gridcell" class="ffe-calendar__day"><span
+                                        class="ffe-calendar__date">29</span></td>
+                                <td headers="header__ffe-calendar-499__3" aria-disabled="false" aria-selected="false"
+                                    tabindex="-1" role="gridcell" class="ffe-calendar__day"><span
+                                        class="ffe-calendar__date">30</span></td>
+                                <td aria-disabled="true" aria-selected="false" role="gridcell" class="ffe-calendar__day"
+                                ></td>
+                                <td aria-disabled="true" aria-selected="false" role="gridcell" class="ffe-calendar__day"
+                                ></td>
+                                <td aria-disabled="true" aria-selected="false" role="gridcell" class="ffe-calendar__day"
+                                ></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="calendar-states">
+                    <h3 class="ffe-h3">Calendar states</h3>
+                    <div class="ffe-calendar__day">
+                        <span class="ffe-calendar__date ffe-calendar__date--today">16</span> Todays date
+                    </div>
+                    <div class="ffe-calendar__day">
+                        <span class="ffe-calendar__date ffe-calendar__date--focus">13</span> Focused date
+                    </div>
+                    <div class="ffe-calendar__day">
+                        <span class="ffe-calendar__date ffe-calendar__date--selected">14</span> Selected date
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
