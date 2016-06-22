@@ -1,5 +1,10 @@
 # Changelog
 
+## Version 4.1.0
+* Added blyant-ikon.svg
+* Added person-pluss-ikon.svg
+* Added bsu-ikon.svg
+
 ## Version 4.0.0
 
 * Renamed: hake-sirkel-ikon.svg => hake-sirkel-solid-ikon.svg
