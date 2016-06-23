@@ -34,11 +34,6 @@ export default function Form() {
 * onChange: will be called with the new date string, picked from the calendar. format: dd.mm.yyyy
 * inputProps: props to set on the input field.
 
-You must also import the styles
-```css
-@import "node_modules/ffe-datepicker/styles/datepicker.less";
-```
-
 ### <DateInput />
 Use only the input field
 ```javascript
@@ -56,11 +51,6 @@ export default function Form() {
     />
   </form>
 }
-```
-
-And styles
-```css
-@import "node_modules/ffe-datepicker/styles/dateinput.less";
 ```
 
 ### <Calendar />
@@ -82,9 +72,10 @@ export default function Form() {
 }
 ```
 
+## Styles
 You must also import the styles
 ```css
-@import "node_modules/ffe-datepicker/styles/calendar.less";
+@import "node_modules/ffe-datepicker-react/index.less";
 ```
 
 ## Example

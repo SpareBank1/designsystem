@@ -10,6 +10,7 @@ export default class FFEDatepicker extends React.Component {
 
     this.state = {
       displayDatePicker: false,
+      openOnFocus: true,
     };
 
     this.openCalendar = this.openCalendar.bind(this);
@@ -21,10 +22,19 @@ export default class FFEDatepicker extends React.Component {
     this.blurHandler = this.blurHandler.bind(this);
     this.onInputKeydown = this.onInputKeydown.bind(this);
     this.onInputFocus = this.onInputFocus.bind(this);
+    this.onInputBlur = this.onInputBlur.bind(this);
   }
 
   onInputFocus() {
-    this.openCalendar();
+    if (this.state.openOnFocus) {
+      this.openCalendar();
+    }
+  }
+
+  onInputBlur() {
+    this.setState({
+      openOnFocus: true,
+    });
   }
 
   onInputKeydown(evt) {
@@ -59,8 +69,12 @@ export default class FFEDatepicker extends React.Component {
   }
 
   datePickedHandler(date) {
-    this.closeCalendar();
     this.props.onChange(date);
+    this.removeGlobalEventListeners();
+    this.setState({
+      openOnFocus: false,
+      displayDatePicker: false,
+    }, () => this.dateInputRef.focus());
   }
 
   openCalendar() {
@@ -94,10 +108,12 @@ export default class FFEDatepicker extends React.Component {
       >
         <DateInput
           onFocus={ this.onInputFocus }
+          onBlur={ this.onInputBlur }
           onChange={ (evt) => this.props.onChange(evt.target.value) }
           onKeyDown={ this.onInputKeydown }
           value={ this.props.value }
           inputProps={ this.props.inputProps }
+          ref={ c => (this.dateInputRef = c) }
         />
         { this.state.displayDatePicker ?
           <Calendar
