@@ -76,6 +76,7 @@ export default class Datepicker extends React.Component {
           calendar.selectFocusedDate();
           this.props.onDatePicked(calendar.selected());
         }
+        event.preventDefault();
         break;
       case KeyCode.TAB:
         if (this.onBlur) {
