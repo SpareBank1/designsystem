@@ -31,7 +31,6 @@
     "eslint-config-airbnb": "^6.1.0",
     "eslint-plugin-react": "^4.2.2",
     "ffe-core": "^6.2.0",
-    "ffe-datepicker": "^1.0.0",
     "ffe-icons-react": "^0.4.1",
     "mocha": "^2.5.3",
     "node-lessify": "^0.1.4",
@@ -47,7 +46,8 @@
   },
   "files": [
     "lib",
-    "*.js"
+    "*.js",
+    "*.less"
   ],
   "babel": {
     "presets": [
@@ -60,10 +60,10 @@
   },
   "peerDependencies": {
     "ffe-core": "^6.2.0",
-    "ffe-datepicker": "^1.0.0",
     "react": "^15.0.1"
   },
   "dependencies": {
-    "classnames": "^2.2.5"
+    "classnames": "^2.2.5",
+    "ffe-datepicker": "^1.0.0"
   }
 }
