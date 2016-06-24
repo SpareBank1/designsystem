@@ -10,14 +10,14 @@ $ npm install --save ffe-button-react
 
 ## Variants
 
-You are free to pick between using the base `FFEButton` component or any of the descriptive alias components:
+You are free to pick between using the base `Button` component or any of the descriptive alias components:
 
-* `FFEActionButton`
-* `FFEPrimaryButton`
-* `FFESecondaryButton`
-* `FFEShortcutButton`
+* `ActionButton`
+* `PrimaryButton`
+* `SecondaryButton`
+* `ShortcutButton`
 
-If no type property is given to `FFEButton` it defaults to `primary`.
+If no type property is given to `Button` it defaults to `primary`.
 
 ## Usage
 
@@ -25,31 +25,31 @@ The only strictly required property is the `onClick` function. Although not mark
 to give the button some content, either as `children` or by using the `label` property.
 
 ```javascript
-<FFEButton onClick={clickHandler}>
-    <FFECoolIcon /> Awesome
-</FFEButton>
+<Button onClick={clickHandler}>
+    <CoolIcon /> Awesome
+</Button>
 
-<FFEButton label="Hello" onClick={clickHandler} />
+<Button label="Hello" onClick={clickHandler} />
 ```
 
 There are components available for all the button types
 
 ```javascript
-<FFEActionButton onClick={clickHandler}>...</FFEActionButton>
-<FFEPrimaryButton onClick={clickHandler}>...</FFEPrimaryButton>
-<FFESecondaryButton onClick={clickHandler}>...</FFESecondaryButton>
-<FFEShortcutButton onClick={clickHandler}>...</FFEShortcutButton>
+<ActionButton onClick={clickHandler}>...</ActionButton>
+<PrimaryButton onClick={clickHandler}>...</PrimaryButton>
+<SecondaryButton onClick={clickHandler}>...</SecondaryButton>
+<ShortcutButton onClick={clickHandler}>...</ShortcutButton>
 ```
 
-If you want, you can use FFEButton directly, but you must provide the type property if you want anything other than `primary`:
+If you want, you can use Button directly, but you must provide the type property if you want anything other than `primary`:
 
 ```javascript
-<FFEButton
+<Button
     onClick={clickHandler}
     type="action"
 >
-    <FFECoolIcon /> Awesome
-</FFEButton>
+    <CoolIcon /> Awesome
+</Button>
 ```
 
 ### Loading state
@@ -57,36 +57,36 @@ If you want, you can use FFEButton directly, but you must provide the type prope
 For long-running operations you may want to put the button in a loading state.
 
 ```javascript
-<FFEPrimaryButton isLoading onClick={clickHandler}>...</FFEPrimaryButton>
+<PrimaryButton isLoading onClick={clickHandler}>...</PrimaryButton>
 
-<FFEPrimaryButton onClick={clickHandler}>...</FFEPrimaryButton>
+<PrimaryButton onClick={clickHandler}>...</PrimaryButton>
 ```
 
 The loading state reveals the text "Vennligst vent" to screen readers.
 If you need to change this text, override it with the `ariaLoadingMessage` property:
 
 ```javascript
-<FFEPrimaryButton
+<PrimaryButton
     ariaLoadingMessage="Please wait"
     isLoading
     onClick={clickHandler}
 >
     ...
-</FFEPrimaryButton>
+</PrimaryButton>
 ```
 
 
 ### Disabled state
 
-Disabled buttons are not allowed in accordance to the FFE guidelines. However, in case you need
+Disabled buttons are not allowed in accordance to the  guidelines. However, in case you need
 to disable a button, you can do this as well by setting the `disableButton` property:
 
 ```javascript
-<FFEPrimaryButton disableButton onClick={clickHandler}>...</FFEPrimaryButton>
+<PrimaryButton disableButton onClick={clickHandler}>...</PrimaryButton>
 
-<FFEButton disableButton label="Hello" onClick={clickHandler} />
+<Button disableButton label="Hello" onClick={clickHandler} />
 
-<FFESecondaryButton disableButton onClick={clickHandler}>...</FFESecondaryButton>
+<SecondaryButton disableButton onClick={clickHandler}>...</SecondaryButton>
 ```
 
 This works for all button types, but make sure you have a really good reason for using it!
