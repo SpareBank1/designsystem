@@ -131,6 +131,7 @@ SimpleDate.prototype.clone = function clone() {
 
 SimpleDate.prototype.format = function format() {
   const day = this.date() < 10 ? `0${this.date()}` : this.date();
-  const month = this.month() + 1 < 10 ? `0${this.month() + 1}` : this.month();
+  const normalizedMonthNumber = this.month() + 1;
+  const month = normalizedMonthNumber < 10 ? `0${normalizedMonthNumber}` : normalizedMonthNumber;
   return `${day}.${month}.${this.year()}`;
 };
