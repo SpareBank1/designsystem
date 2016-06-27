@@ -29,7 +29,6 @@
     "eslint-plugin-import": "^1.8.1",
     "eslint-plugin-react": "^5.2.2",
     "ffe-core": "^6.2.0",
-    "ffe-icons-react": "^0.4.1",
     "mocha": "^2.4.5",
     "mocha-tap13": "^1.0.4",
     "node-lessify": "^0.1.4",
