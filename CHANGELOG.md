@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.2.0
+
+* Added tertiary button
+
 ## v2.1.0
 
 * Deprecated the 'FFE' prefix in all button names.
