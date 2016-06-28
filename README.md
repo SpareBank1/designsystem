@@ -1,6 +1,6 @@
 # ffe-icons-react
 
-React component with all svg icons in ffe-icons inlined. 
+React component with all svg icons in ffe-icons inlined.
 
 ## Install
 
@@ -36,19 +36,20 @@ use are sent to the client.
 ### Available props
 
 ```
-className: React.PropTypes.string,
-style: React.PropTypes.object,
-focusable: React.PropTypes.bool,
-title: React.PropTypes.string,
-desc: React.PropTypes.string,
+className: React.PropTypes.string
+desc: React.PropTypes.string
+focusable: React.PropTypes.bool
+onClick: React.PropTypes.func
+style: React.PropTypes.object
 tabIndex: React.PropTypes.number
+title: React.PropTypes.string
 ```
 
 * Use css and `className` to change size and color, or use `style` and react inline styles.
-* Use `focusable` to make svg focusable on old IE. Default is false.
-* Use `title` to create a `<title></title>` element inside the icon. Default is `''`.
 * Use `desc` to create a `<desc></desc>` element inside the icon. Default is `''`.
+* Use `focusable` to make svg focusable on old IE. Default is false.
 * Use `tabIndex` to set tabIndex of the icon. Default is undefined.
+* Use `title` to create a `<title></title>` element inside the icon. Default is `''`.
 
 
 
