@@ -72,6 +72,7 @@ render(
       onChange={ onChange }
       onBlur={ onBlur }
       locale="nb"
+      placeholder="Velg Konto"
     />
   </div>
   , accountSelectorDOM);
