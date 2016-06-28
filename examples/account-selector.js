@@ -67,12 +67,14 @@ function onBlur() {
 
 render(
   <div>
+    <label htmlFor="custom-id" className="ffe-form-label">Velg konto</label>
     <AccountSelector
       accounts={ accounts }
       onChange={ onChange }
       onBlur={ onBlur }
       locale="nb"
       placeholder="Velg Konto"
+      id="custom-id"
     />
   </div>
   , accountSelectorDOM);

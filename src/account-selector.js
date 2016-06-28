@@ -253,6 +253,7 @@ export default class AccountSelector extends React.Component {
           onKeyDown={ this.onInputKeyDown }
           ref={ assignTo('_accountInput') }
           placeholder={this.props.placeholder}
+          id={ this.props.id }
           aria-autocomplete="inline"
         />
         {this.state.showResetButton ?
@@ -306,6 +307,7 @@ AccountSelector.propTypes = {
   locale: PropTypes.string,
   onBlur: PropTypes.func,
   placeholder : PropTypes.string,
+  id : PropTypes.string,
 };
 
 AccountSelector.defaultValues = {
