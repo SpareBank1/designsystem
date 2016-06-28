@@ -8,6 +8,7 @@ import Button from './Button';
 import PrimaryButton from './PrimaryButton';
 import SecondaryButton from './SecondaryButton';
 import ShortcutButton from './ShortcutButton';
+import TertiaryButton from './TertiaryButton';
 
 describe('Button components:', () => {
     it('Button by default renders a primary button', () => {
@@ -58,6 +59,16 @@ describe('Button components:', () => {
         wrapper = render(<ShortcutButton onClick={() => ({})} label="Hello" />);
         expect(wrapper.find('.ffe-shortcut-button')).to.have.length(1);
         expect(wrapper.find('.ffe-shortcut-button__label-text').text()).to.equal('Hello');
+    });
+
+    it('TertiaryButton renders a tertiary button', () => {
+        let wrapper = render(<TertiaryButton onClick={() => ({})}>Hello</TertiaryButton>);
+        expect(wrapper.find('.ffe-tertiary-button')).to.have.length(1);
+        expect(wrapper.find('.ffe-tertiary-button').text()).to.equal('Hello');
+
+        wrapper = render(<TertiaryButton onClick={() => ({})} label="Hello" />);
+        expect(wrapper.find('.ffe-tertiary-button')).to.have.length(1);
+        expect(wrapper.find('.ffe-tertiary-button').text()).to.equal('Hello');
     });
 
     it('isLoading prop toggles aria-hidden and classes with --loading modifier', () => {
@@ -116,6 +127,13 @@ describe('Button components:', () => {
         expect(wrapper.find('Button').prop('disableButton')).to.be.equal(true);
     });
 
+    it('TertiaryButton passes disableButton on to Button', () => {
+        const wrapper = shallow(
+            <TertiaryButton disableButton onClick={() => ({})}>Hello</TertiaryButton>
+        );
+        expect(wrapper.find('Button').prop('disableButton')).to.be.equal(true);
+    });
+
     it('runs the function passed as onClick when clicked', () => {
         let onClick = spy();
         const wrapper = shallow(<Button onClick={onClick}>Hello</Button>);
@@ -155,7 +173,7 @@ describe('Button components:', () => {
         expect(wrapper.find('Button').prop('isTabbable')).to.be.equal(true);
     });
 
-    it('SecondaryButton passes tabability on to Button', () => {
+    it('SecondaryButton passes tabbability on to Button', () => {
         const wrapper = shallow(
             <SecondaryButton disableButton onClick={() => ({})} isTabbable>Hello</SecondaryButton>
         );
@@ -165,6 +183,13 @@ describe('Button components:', () => {
     it('ShortcutButton passes tabbability on to Button', () => {
         const wrapper = shallow(
             <ShortcutButton disableButton onClick={() => ({})} isTabbable>Hello</ShortcutButton>
+        );
+        expect(wrapper.find('Button').prop('isTabbable')).to.be.equal(true);
+    });
+
+    it('TertiaryButton passes tabbability on to Button', () => {
+        const wrapper = shallow(
+            <TertiaryButton disableButton onClick={() => ({})} isTabbable>Hello</TertiaryButton>
         );
         expect(wrapper.find('Button').prop('isTabbable')).to.be.equal(true);
     });

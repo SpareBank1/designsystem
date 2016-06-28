@@ -11,8 +11,9 @@ export default function Button(props) {
         label,
         onClick,
         type = 'primary',
+        simpleContent = false,
         isTabbable,
-        } = props;
+    } = props;
     const tabIndex = isTabbable ? 0 : -1;
     return (
         <button
@@ -24,20 +25,23 @@ export default function Button(props) {
             aria-disabled={disableButton}
             tabIndex={tabIndex}
         >
-            <span className={`ffe-${type}-button__label`}>
-                <span
-                    className={`ffe-${type}-button__label-text
-                    ${isLoading ? `ffe-${type}-button__label-text--loading` : ''}`}
-                >
-                    {label || children}
+            {simpleContent ?
+                (label || children) :
+                <span className={`ffe-${type}-button__label`}>
+                    <span
+                        className={`ffe-${type}-button__label-text
+                        ${isLoading ? `ffe-${type}-button__label-text--loading` : ''}`}
+                    >
+                        {label || children}
+                    </span>
+                    <span
+                        className={`ffe-${type}-button__label-spinner`}
+                        aria-hidden={!isLoading}
+                    >
+                        {ariaLoadingMessage}
+                    </span>
                 </span>
-                <span
-                    className={`ffe-${type}-button__label-spinner`}
-                    aria-hidden={!isLoading}
-                >
-                    {ariaLoadingMessage}
-                </span>
-            </span>
+            }
         </button>
     );
 }
@@ -52,5 +56,6 @@ Button.propTypes = {
     label: PropTypes.string,
     onClick: PropTypes.func.isRequired,
     type: PropTypes.string,
+    simpleContent: PropTypes.bool,
     isTabbable: PropTypes.bool,
 };

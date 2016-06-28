@@ -16,6 +16,7 @@ You are free to pick between using the base `Button` component or any of the des
 * `PrimaryButton`
 * `SecondaryButton`
 * `ShortcutButton`
+* `TertiaryButton`
 
 If no type property is given to `Button` it defaults to `primary`.
 
@@ -39,6 +40,7 @@ There are components available for all the button types
 <PrimaryButton onClick={clickHandler}>...</PrimaryButton>
 <SecondaryButton onClick={clickHandler}>...</SecondaryButton>
 <ShortcutButton onClick={clickHandler}>...</ShortcutButton>
+<TertiaryButton onClick={clickHandler}>...</TertiaryButton>
 ```
 
 If you want, you can use Button directly, but you must provide the type property if you want anything other than `primary`:
