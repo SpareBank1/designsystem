@@ -1,6 +1,6 @@
 {
   "name": "ffe-message-box-react",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "main": "lib/index.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/. && npm run example",
@@ -17,12 +17,12 @@
   "peerDependencies": {
     "ffe-message-box": "^2.0.2",
     "ffe-core": "*",
-    "ffe-icons-react": "^0.4.1"
+    "ffe-icons-react": "^0.5.0"
   },
   "devDependencies": {
     "ffe-message-box": "^2.0.2",
     "ffe-core": "*",
-    "ffe-icons-react": "^0.4.1",
+    "ffe-icons-react": "^0.5.0",
     "babel-cli": "^6.10.1",
     "babel-core": "^6.9.1",
     "babel-plugin-transform-object-rest-spread": "^6.8.0",

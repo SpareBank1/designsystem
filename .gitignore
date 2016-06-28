@@ -1,6 +1,9 @@
 /lib
 # Created by https://www.gitignore.io/api/node
 
+#Editors
+*~
+
 ### Node ###
 # Logs
 logs
