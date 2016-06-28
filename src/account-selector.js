@@ -38,10 +38,10 @@ export default class AccountSelector extends React.Component {
     this.globalClickHandler = this.globalClickHandler.bind(this);
   }
 
-  componentWillReceiveProps(nextProps){
+  componentWillReceiveProps(nextProps) {
     this.setState({
       accounts : nextProps.accounts
-    })
+    });
   }
 
   onInputFocus() {
