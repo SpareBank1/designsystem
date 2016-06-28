@@ -246,6 +246,7 @@ export default class AccountSelector extends React.Component {
           className="ffe-input-field nfe-account-selector__search"
           onKeyDown={ this.onInputKeyDown }
           ref={ assignTo('_accountInput') }
+          placeholder={this.props.placeholder}
           aria-autocomplete="inline"
         />
         {this.state.showResetButton ?
@@ -298,6 +299,7 @@ AccountSelector.propTypes = {
   onChange: PropTypes.func.isRequired,
   locale: PropTypes.string,
   onBlur: PropTypes.func,
+  placeholder : PropTypes.string,
 };
 
 AccountSelector.defaultValues = {
