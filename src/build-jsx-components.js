@@ -20,8 +20,9 @@ const Icon = (
     focusable = false,
     title = '',
     desc = '',
+    onClick = f => f,
     tabIndex}) =>
-        <svg className={className} style={style} focusable={focusable} tabIndex={tabIndex} {...svg.props}>
+        <svg className={className} style={style} focusable={focusable} tabIndex={tabIndex} onClick={onClick} {...svg.props}>
             {createTitle(title)}
             {createDesc(desc)}
             {svg.props.children}
@@ -29,11 +30,12 @@ const Icon = (
 
 Icon.propTypes = {
     className: React.PropTypes.string,
-    style: React.PropTypes.object,
-    focusable: React.PropTypes.bool,
-    title: React.PropTypes.string,
     desc: React.PropTypes.string,
-    tabIndex: React.PropTypes.number
+    focusable: React.PropTypes.bool,
+    onClick: React.PropTypes.func,
+    style: React.PropTypes.object,
+    tabIndex: React.PropTypes.number,
+    title: React.PropTypes.string,
 };
 
 export default Icon;
