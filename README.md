@@ -18,6 +18,9 @@ import Icon from 'ffe-icons-react';
 
 <Icon className="icon" iconName="chevron-ikon"/>
 ```
+Note that doing this will inline every single icon we have
+available in your final bundle so you might want to avoid
+doing this for production code
 
 Alternatively import each icon as a sub module.
 
@@ -27,6 +30,8 @@ import ChevronIcon from 'ffe-icons-react/chevron-ikon';
 
 <ChevronIcon className="icon"/>
 ```
+Doing this will ensure that only the icons you actually
+use are sent to the client.
 
 ### Available props
 
