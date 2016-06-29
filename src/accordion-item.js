@@ -13,6 +13,8 @@ const isIgnoredNode = (node, ignoredNodes) => ignoredNodes.some(name => name ===
 export default React.createClass({
     propTypes: {
         isOpen: PropTypes.bool,
+        onOpen: PropTypes.func,
+        onClose: PropTypes.func,
         type: PropTypes.oneOf(['white', 'blue']),
         index: PropTypes.number,
         ignoredNodeNames: PropTypes.array,
@@ -33,6 +35,8 @@ export default React.createClass({
     }, 
 
     toggle() {
+        if (this.props.onClose && this.state.isOpen) this.props.onClose();
+        else if (this.props.onOpen && !this.state.isOpen) this.props.onOpen();
         this.setState({ isOpen: !this.state.isOpen });
     },
 
