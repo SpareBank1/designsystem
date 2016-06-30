@@ -254,6 +254,7 @@ export default class AccountSelector extends React.Component {
           ref={ assignTo('_accountInput') }
           placeholder={this.props.placeholder}
           aria-autocomplete="inline"
+          aria-invalid={this.props.inputError ? 'true' : 'false'}
         />
         {this.state.showResetButton ?
           <button
@@ -305,7 +306,12 @@ AccountSelector.propTypes = {
   onChange: PropTypes.func.isRequired,
   locale: PropTypes.string,
   onBlur: PropTypes.func,
-  placeholder : PropTypes.string,
+  placeholder: PropTypes.string,
+  inputError: PropTypes.bool,
+};
+
+AccountSelector.defaultProps = {
+  inputError: false
 };
 
 AccountSelector.defaultValues = {
