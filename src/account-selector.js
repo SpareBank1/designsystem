@@ -253,6 +253,7 @@ export default class AccountSelector extends React.Component {
           onKeyDown={ this.onInputKeyDown }
           ref={ assignTo('_accountInput') }
           placeholder={this.props.placeholder}
+          id={ this.props.id }
           aria-autocomplete="inline"
           aria-invalid={this.props.ariaInvalid}
         />
@@ -304,14 +305,16 @@ export default class AccountSelector extends React.Component {
 AccountSelector.propTypes = {
   accounts: PropTypes.array,
   onChange: PropTypes.func.isRequired,
-  locale: PropTypes.string,
+  locale: PropTypes.oneOf(["nb", "nn" ,"en"]),
   onBlur: PropTypes.func,
   placeholder: PropTypes.string,
   ariaInvalid: PropTypes.bool,
 };
 
 AccountSelector.defaultProps = {
-  ariaInvalid: false
+  ariaInvalid: false,
+  placeholder : PropTypes.string,
+  id : PropTypes.string,
 };
 
 AccountSelector.defaultValues = {
