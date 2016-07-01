@@ -309,6 +309,7 @@ AccountSelector.propTypes = {
   onBlur: PropTypes.func,
   placeholder: PropTypes.string,
   ariaInvalid: PropTypes.bool,
+  id: PropTypes.string,
 };
 
 AccountSelector.defaultProps = {
