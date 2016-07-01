@@ -27,6 +27,7 @@ const accounts = [
     onChange={ onChange }
     onBlur={ onBlur }
     locale="nb"
+    ariaInvalid={false}
     placeholder="Select account"
     id="custom-id"
 />
@@ -37,6 +38,7 @@ const accounts = [
 - locale: Either "nb", "nn" or "en". Defaults to "nb" if not set.
 - placeholder (optional): Set the placeholder attribute of the input field.
 - id (optional): Set the id attribute of the input field so a label can be associated with the field.
+- ariaInvalid: signifies validation errors.
 
 You must also import the styles
 ```css
