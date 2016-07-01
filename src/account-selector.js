@@ -304,7 +304,7 @@ export default class AccountSelector extends React.Component {
 AccountSelector.propTypes = {
   accounts: PropTypes.array,
   onChange: PropTypes.func.isRequired,
-  locale: PropTypes.string,
+  locale: PropTypes.oneOf(["nb", "nn" ,"en"]),
   onBlur: PropTypes.func,
   placeholder : PropTypes.string,
   id : PropTypes.string,
