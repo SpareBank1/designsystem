@@ -10,6 +10,9 @@
     "type": "git",
     "url": "***REMOVED***"
   },
+  "publishConfig": {
+    "registry": "***REMOVED***"
+  },
   "author": "SpareBank 1",
   "peerDependencies": {
     "ffe-core": "^6.2.0"
