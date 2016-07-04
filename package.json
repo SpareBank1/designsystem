@@ -1,10 +1,12 @@
 {
   "name": "ffe-system-message-react",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "SpareBank 1 System Message komponent",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
+    "build": "babel -d lib/. --ignore=src/test/ src/. && npm run example",
     "dev": "npm run ffe:fonts && hjs-dev-server",
+    "example": "babel-node example/create-example.js > example.html",
     "ffe:fonts": "mkdirp dev/ffe/fonts && cp node_modules/ffe-core/fonts/* dev/ffe/fonts",
     "lint": "eslint src/",
     "lint:fix": "eslint --fix src/",
@@ -24,9 +26,10 @@
   "peerDependencies": {
     "ffe-core": ">5.0.0",
     "ffe-icons-react": "^0.5.0",
-    "ffe-system-message": "^0.0.1"
+    "ffe-system-message": "^0.1.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.10.1",
     "babel-core": "^6.10.4",
     "babel-loader": "^6.2.4",
     "babel-polyfill": "^6.9.1",
@@ -43,7 +46,7 @@
     "expect.js": "^0.3.1",
     "ffe-core": "^6.2.0",
     "ffe-icons-react": "^0.5.0",
-    "ffe-system-message": "^0.0.1",
+    "ffe-system-message": "^0.1.0",
     "hjs-webpack": "^8.3.0",
     "jsdom": "^9.4.0",
     "less": "^2.7.1",
@@ -55,5 +58,8 @@
     "react-addons-test-utils": "^15.1.0",
     "react-dom": "^15.1.0",
     "style-loader": "^0.13.1"
+  },
+  "publishConfig": {
+    "registry": "***REMOVED***"
   }
 }
