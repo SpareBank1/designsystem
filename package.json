@@ -1,6 +1,6 @@
 {
   "name": "ffe-system-message",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "SpareBank1 System Message",
   "main": "index.js",
   "scripts": {
