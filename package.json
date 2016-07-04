@@ -1,0 +1,22 @@
+{
+  "name": "ffe-system-message",
+  "version": "0.0.1",
+  "description": "SpareBank1 System Message",
+  "main": "index.js",
+  "scripts": {
+    "examples": "lessc examples/examples.less examples/examples.css && mkdirp examples/fonts && cp -r node_modules/ffe-core/fonts/* examples/fonts && echo Now open /examples/index.html to see styleguide"
+  },
+  "repository": {
+    "type": "git",
+    "url": "***REMOVED***"
+  },
+  "author": "SpareBank 1",
+  "peerDependencies": {
+    "ffe-core": "^6.2.0"
+  },
+  "devDependencies": {
+    "ffe-core": "^6.2.0",
+    "less": "^2.7.1",
+    "mkdirp": "^0.5.1"
+  }
+}
