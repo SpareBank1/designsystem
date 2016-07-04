@@ -3,6 +3,7 @@ import { whiteAccordion, blueAccordion } from '../docs/example-component';
 import { AccordionItem } from '../src/';
 import { shallow, render } from 'enzyme';
 import React from 'react';
+import sinon from 'sinon';
 
 const wrapperHasContent = (wrapper, content) => new RegExp(content).test(wrapper.html());
 
@@ -64,5 +65,31 @@ describe('ffe-accordion-react', () => {
         assert.equal(
             wrapperHasContent(itemWrapper, 'ffe-accordion-item--open'),
             false);
+    });
+    
+    it('should call callback functions on open/closed-state', () => {
+      const onOpen = sinon.spy();
+      const onClose = sinon.spy();
+      const itemWrapper = shallow(<AccordionItem onOpen={ onOpen } onClose={ onClose } expandedContent={ "Expanded" } >Standard content</AccordionItem>);
+      
+      itemWrapper.find('.ffe-accordion-item__toggler').simulate('click');
+      
+      assert.equal(
+        onOpen.callCount,
+        1);
+        
+      assert.equal(
+        onClose.callCount,
+        0);
+          
+      itemWrapper.find('.ffe-accordion-item__toggler').simulate('click');
+      
+      assert.equal(
+        onOpen.callCount,
+        1);
+            
+      assert.equal(
+        onClose.callCount,
+        1);
     });
 });

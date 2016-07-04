@@ -1,6 +1,6 @@
 {
   "name": "ffe-accordion-react",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "main": "lib/index.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/. && npm run example",
@@ -35,7 +35,8 @@
     "onchange": "2.4.0",
     "react": "^15.0.0",
     "react-addons-test-utils": "^15.0.0",
-    "react-dom": "^15.0.0"
+    "react-dom": "^15.0.0",
+    "sinon": "^1.17.4"
   },
   "publishConfig": {
     "registry": "https://nexus.intern.sparebank1.no/nexus/content/repositories/npm-internal"
