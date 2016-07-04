@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { findDOMNode } from 'react-dom';
 
-import InfoIkon from 'ffe-icons-react/info-ikon';
 import KryssIkon from 'ffe-icons-react/kryss-ikon';
 
 export default class Base extends Component {
@@ -20,7 +19,12 @@ export default class Base extends Component {
     }
 
     render() {
-        const { modifier } = this.props;
+        const {
+            children,
+            header,
+            icon,
+            modifier,
+        } = this.props;
 
         return (
             <div
@@ -29,14 +33,14 @@ export default class Base extends Component {
             >
                 <div className={`ffe-system-message ffe-system-message--${modifier}`}>
                     <div className="ffe-system-message__icon">
-                        <InfoIkon />
+                        {icon}
                     </div>
                     <div className="ffe-system-message__content">
                         <div className="ffe-system-message__header">
-                            {this.props.header}
+                            {header}
                         </div>
                         <p className="ffe-system-message__text">
-                            {this.props.children}
+                            {children}
                         </p>
                     </div>
                     <div
@@ -57,6 +61,7 @@ export default class Base extends Component {
 
 Base.propTypes = {
     children: PropTypes.node.isRequired,
+    icon: PropTypes.node.isRequired,
     header: PropTypes.string.isRequired,
-    modifier: PropTypes.oneOf(['info']),
+    modifier: PropTypes.oneOf(['error', 'info', 'success']),
 };
