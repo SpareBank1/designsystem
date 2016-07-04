@@ -1,2 +1,12 @@
 #Editors
 *~
+
+#FFE fonts
+dev/ffe/*
+
+#Node
+node_modules
+
+#We're not using this but the precommit-hook keeps adding them
+.jshintrc
+.jshintignore
