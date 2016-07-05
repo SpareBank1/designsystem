@@ -1,6 +1,6 @@
 {
   "name": "ffe-system-message-react",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "SpareBank 1 System Message komponent",
   "main": "lib/index.js",
   "scripts": {
@@ -61,5 +61,10 @@
   },
   "publishConfig": {
     "registry": "***REMOVED***"
-  }
+  },
+  "files": [
+    "lib",
+    "example.html",
+    "*.js"
+  ]
 }
