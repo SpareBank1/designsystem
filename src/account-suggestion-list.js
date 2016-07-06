@@ -9,7 +9,7 @@ export default class AccountSuggestionList extends Component {
   }
 
   render() {
-    const { accounts, onSelect, selectedAccount } = this.props;
+    const { accounts, onSelect, selectedAccount, locale } = this.props;
 
     if (accounts.length === 0) {
       return null;
@@ -27,6 +27,7 @@ export default class AccountSuggestionList extends Component {
         {accounts.map((account, index) => (
           <li className="nfe-account-suggestions__item" key={ account.accountNumber }>
             <AccountSuggestion
+              locale={locale}
               account={ account }
               onSelect={ onSelect }
               ref={ refIfIsSelectedAccountIndex(index) }
@@ -43,6 +44,7 @@ AccountSuggestionList.propTypes = {
   accounts: PropTypes.array,
   onSelect: PropTypes.func,
   selectedAccount: PropTypes.object,
+  locale: PropTypes.oneOf(["nb", "nn" ,"en"]),
 };
 
 AccountSuggestionList.defaultValues = {

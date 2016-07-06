@@ -6,7 +6,7 @@ import KeyCode from './util/keyCode';
 export default class AccountSuggestion extends React.Component {
 
   render() {
-    const { account, onSelect, highlighted } = this.props;
+    const { account, onSelect, highlighted, locale } = this.props;
     const onSelectHandler = () => onSelect(account);
     const onKeyDownHandler = (evt) => {
       if (evt.which === KeyCode.ENTER) {
@@ -26,7 +26,7 @@ export default class AccountSuggestion extends React.Component {
 
     const balanceEl = account.balance !== undefined ?
       (<span className="nfe-account-suggestions__balance">
-        { amountFormatter(account.balance) } { currencyCode() }
+        { amountFormatter(account.balance, locale) } { currencyCode() }
       </span>) : null;
 
     return (
@@ -57,5 +57,6 @@ AccountSuggestion.propTypes = {
   }).isRequired,
   onSelect: PropTypes.func,
   highlighted: PropTypes.bool,
+  locale: PropTypes.oneOf(["nb", "nn" ,"en"]).isRequired,
 };
 
