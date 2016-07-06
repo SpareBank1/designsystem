@@ -2,12 +2,16 @@
 
 ## Intro
 
-Systemmeldinger for SpareBank 1.
+System messages for SpareBank 1.
 
-## Bruk
+## Usage
 
-<code>@import ../node_modules/ffe-system-message/less/ffe-system-message</code> i en less-fil i ditt prosjekt.
+<code>@import ../node_modules/ffe-system-message/less/ffe-system-message</code> in a less-file in your project.
 
-Merk at ffe-core er en avhengighet for ffe-system-message (se peerDependencies i package.json).
+Note that ffe-core is a dependency for ffe-system-message (ref peerDependencies in package.json).
+refer to to readme in ffe-core for more information.
 
-se readme for ffe-core for øvrig informasjon.
+## Development
+
+You can use the sibling react component, [ffe-system-message-react](***REMOVED***) (see instructions in its readme).
+
