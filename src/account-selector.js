@@ -20,6 +20,7 @@ export default class AccountSelector extends React.Component {
       showAccountSuggestions: false,
       showResetButton: false,
       value: '',
+      locale : 'nb',
       selectedAccount: null,
       accounts: props.accounts,
     };
@@ -39,8 +40,10 @@ export default class AccountSelector extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
+    const {accounts, locale} = nextProps;
     this.setState({
-      accounts : nextProps.accounts
+      locale,
+      accounts,
     });
   }
 
@@ -237,7 +240,7 @@ export default class AccountSelector extends React.Component {
 
   render() {
     const assignTo = name => component => { this[name] = component; };
-
+    const {locale, accounts} = this.state;
     return (
       <div
         className="nfe-account-selector"
@@ -269,8 +272,9 @@ export default class AccountSelector extends React.Component {
           </button> :
           null
         }
-        <AccountDetails account={ this.state.selectedAccount } />
-        { this.state.showAccountSuggestions && this.state.accounts.length ?
+        <AccountDetails account={ this.state.selectedAccount }
+                        locale={ locale } />
+        { this.state.showAccountSuggestions && accounts.length ?
           <ScrollArea
             speed={ 0.8 }
             className="nfe-account-selector__scroll"
@@ -290,7 +294,8 @@ export default class AccountSelector extends React.Component {
             }}
           >
             <AccountSuggestionList
-              accounts={ this.state.accounts }
+              locale={locale}
+              accounts={ accounts }
               onSelect={ this.onAccountSelect }
               selectedAccount={ this.state.selectedAccount }
               ref={ assignTo('_suggestionList') }
