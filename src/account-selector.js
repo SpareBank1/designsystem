@@ -52,8 +52,8 @@ export default class AccountSelector extends React.Component {
       showAccountSuggestions: true,
     };
 
-    if (this.state.value.length > 0) {
-      newState.selectedAccount = this.state.accounts[0];
+    if (this.state.value) {
+      newState.selectedAccount = this.props.accounts[0];
     }
     this.setState(newState);
     this.addGlobalEventListeners();
@@ -96,9 +96,6 @@ export default class AccountSelector extends React.Component {
       newState.value = this.state.selectedAccount.name;
     }
     this.setState(newState);
-    if (!this.state.showResetButton || evt.shiftKey) {
-      this.onBlur();
-    }
   }
 
   onResetButtonKeydown(evt) {
@@ -146,14 +143,16 @@ export default class AccountSelector extends React.Component {
   }
 
   highlightFirstAccount() {
-    if (this.state.accounts.length > 0) {
-      this.highlightAccount(this.state.accounts[0]);
+    const {accounts} = this.props;
+    if (accounts.length > 0) {
+      this.highlightAccount(accounts[0]);
     }
   }
 
   highlightLastAccount() {
-    if (this.state.accounts.length > 0) {
-      this.highlightAccount(this.state.accounts[this.state.accounts.length - 1]);
+    const {accounts} = this.props;
+    if (accounts.length > 0) {
+      this.highlightAccount(accounts[accounts.length - 1]);
     }
   }
 
@@ -196,19 +195,21 @@ export default class AccountSelector extends React.Component {
   }
 
   highlightNextAccount() {
-    let newAccountIndex = this.state.accounts.indexOf(this.state.selectedAccount) + 1;
-    if (newAccountIndex === this.state.accounts.length) {
+    const {accounts} = this.props;
+    let newAccountIndex = accounts.indexOf(this.state.selectedAccount) + 1;
+    if (newAccountIndex === accounts.length) {
       newAccountIndex = 0;
     }
-    this.highlightAccount(this.state.accounts[newAccountIndex]);
+    this.highlightAccount(accounts[newAccountIndex]);
   }
 
   highlightPrevAccount() {
-    let newAccountIndex = this.state.accounts.indexOf(this.state.selectedAccount) - 1;
+    const {accounts} = this.props;
+    let newAccountIndex = accounts.indexOf(this.state.selectedAccount) - 1;
     if (newAccountIndex < 0) {
-      newAccountIndex = this.state.accounts.length - 1;
+      newAccountIndex = accounts.length - 1;
     }
-    this.highlightAccount(this.state.accounts[newAccountIndex]);
+    this.highlightAccount(accounts[newAccountIndex]);
   }
 
   addGlobalEventListeners() {
@@ -257,6 +258,7 @@ export default class AccountSelector extends React.Component {
           ref={ assignTo('_accountInput') }
           placeholder={this.props.placeholder}
           id={ this.props.id }
+          onBlur={this.onBlur}
           aria-autocomplete="inline"
           aria-invalid={this.props.ariaInvalid}
         />
@@ -328,3 +330,4 @@ AccountSelector.defaultValues = {
   accounts: [],
   onBlur: () => {},
 };
+
