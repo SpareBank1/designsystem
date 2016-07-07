@@ -22,7 +22,6 @@ export default class AccountSelector extends React.Component {
       value: '',
       locale : 'nb',
       selectedAccount: null,
-      accounts: props.accounts,
     };
 
     this.onInputFocus = this.onInputFocus.bind(this);
@@ -37,14 +36,6 @@ export default class AccountSelector extends React.Component {
     this.highlightPrevAccount = this.highlightPrevAccount.bind(this);
     this.globalEscKeyHandler = this.globalEscKeyHandler.bind(this);
     this.globalClickHandler = this.globalClickHandler.bind(this);
-  }
-
-  componentWillReceiveProps(nextProps) {
-    const {accounts, locale} = nextProps;
-    this.setState({
-      locale,
-      accounts,
-    });
   }
 
   onInputFocus() {
@@ -241,7 +232,7 @@ export default class AccountSelector extends React.Component {
 
   render() {
     const assignTo = name => component => { this[name] = component; };
-    const {locale, accounts} = this.state;
+    const {locale, accounts} = this.props;
     return (
       <div
         className="nfe-account-selector"
@@ -322,12 +313,8 @@ AccountSelector.propTypes = {
 AccountSelector.defaultProps = {
   ariaInvalid: false,
   placeholder : PropTypes.string,
+  locale : 'nb',
+  accounts : [],
   id : PropTypes.string,
-};
-
-AccountSelector.defaultValues = {
-  locale: 'nb',
-  accounts: [],
-  onBlur: () => {},
 };
 
