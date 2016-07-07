@@ -265,8 +265,10 @@ export default class AccountSelector extends React.Component {
           </button> :
           null
         }
-        <AccountDetails account={ this.state.selectedAccount }
-                        locale={ locale } />
+        <AccountDetails
+          account={ this.state.selectedAccount }
+          locale={ locale }
+        />
         { this.state.showAccountSuggestions && accounts.length ?
           <ScrollArea
             speed={ 0.8 }
