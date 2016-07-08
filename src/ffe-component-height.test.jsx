@@ -12,7 +12,7 @@ class ChildElement extends React.Component {
 
     render() {
         return (
-            <div className="to-be-measured" style={ { height:'500px' } }>
+            <div className="to-be-measured" style={ { height:'500px', marginBottom:'20px' } }>
                 test
             </div>
         );
@@ -42,6 +42,6 @@ describe('ReactHeight', () => {
 
     it('calculates element height', () => {
         expect(height).to.be.a('number');
-        expect(height).to.equal(5000);
+        expect(height).to.equal(5020); // margins are included
     });
 });

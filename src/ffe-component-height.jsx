@@ -12,7 +12,15 @@ class ReactHeight extends React.Component {
     }
 
     componentDidMount() {
-        const height = this.wrapper.clientHeight;
+        let margins = 0;
+        if (this.wrapper.firstChild) {
+            const styles = window.getComputedStyle(this.wrapper.firstChild);
+            const marginTop = parseFloat(styles['marginTop'] || 0);
+            const marginBottom = parseFloat(styles['marginBottom'] || 0);
+            margins = Math.ceil(marginTop + marginBottom);
+        }
+
+        const height = this.wrapper.clientHeight + margins;
         if (height !== this.state.height) {
             this.setState({ height }, () => this.props.onHeightReady(this.state.height));
         }
