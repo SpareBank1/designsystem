@@ -1,4 +1,8 @@
 # Changelog
+## v1.0.4
+* Bugfix: Format account balance according to locale
+* Bugfix: Fixed onBlur firing onFocus
+* Better separation of state and props
 
 ## v1.0.3
 * Better prop validation
