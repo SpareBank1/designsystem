@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React, { PropTypes, Component } from 'react';
 import ReactDOM from 'react-dom';
 import AccountSuggestionList from './account-suggestion-list';
 import AccountDetails from './account-details';
@@ -11,7 +11,7 @@ import KryssIkon from 'ffe-icons-react/kryss-ikon';
 import KeyCode from './util/keyCode';
 import accountFilter from './account-filter';
 
-export default class AccountSelector extends React.Component {
+export default class AccountSelector extends Component {
 
   constructor(props) {
     super(props);
@@ -20,7 +20,6 @@ export default class AccountSelector extends React.Component {
       showAccountSuggestions: false,
       showResetButton: false,
       value: '',
-      locale : 'nb',
       selectedAccount: null,
     };
 
