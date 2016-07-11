@@ -1,12 +1,12 @@
 import React, { PropTypes } from 'react';
 
-import HakeIkon from 'ffe-icons-react/hake-ikon';
+import HakeSirkelIkon from 'ffe-icons-react/hake-sirkel-ikon';
 
 import Base from './base';
 
-export default function SystemSuccessMessage({ children, header }) {
+export default function SystemSuccessMessage({ children }) {
     return (
-        <Base header={header} modifier="success" icon={<HakeIkon />}>
+        <Base modifier="success" icon={<HakeSirkelIkon />}>
             {children}
         </Base>
     );
@@ -14,5 +14,4 @@ export default function SystemSuccessMessage({ children, header }) {
 
 SystemSuccessMessage.propTypes = {
     children: PropTypes.node.isRequired,
-    header: PropTypes.string.isRequired,
 };

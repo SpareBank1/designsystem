@@ -11,18 +11,14 @@ describe('when rendering', () => {
 
     beforeEach(() => {
         wrapper = mount(
-            <SystemInfoMessage header="Jeg er en test">
+            <SystemInfoMessage>
                 Blå sjiraff
             </SystemInfoMessage>
         );
     });
 
-    it('renders with provided header and body', () => {
-        const header = wrapper.find('.ffe-system-message__header');
-        expect(header.length).to.be(1);
-        expect(header.text()).to.be('Jeg er en test');
-
-        const text = wrapper.find('.ffe-system-message__text');
+    it('renders with provided body', () => {
+        const text = wrapper.find('.ffe-system-message__content');
         expect(text.length).to.be(1);
         expect(text.text()).to.be('Blå sjiraff');
     });
@@ -30,7 +26,7 @@ describe('when rendering', () => {
     it('closes itself after a click on the close container', done => {
         wrapper.find('.ffe-system-message__close').simulate('click');
         setTimeout(() => {
-            const component = wrapper.find('.ffe-system-message__wrapper');
+            const component = wrapper.find('.ffe-system-message-wrapper');
             expect(component.get(0).style.getPropertyValue('height')).to.be('0px');
             done();
         }, 100);
@@ -42,31 +38,31 @@ describe('for different types of message', () => {
 
     it('creates info-message', () => {
         wrapper = mount(
-            <SystemInfoMessage header="Jeg er en test">
+            <SystemInfoMessage>
                 Infomelding
             </SystemInfoMessage>
         );
-        const message = wrapper.find('.ffe-system-message');
-        expect(message.hasClass('ffe-system-message--info')).to.be(true);
+        const message = wrapper.find('.ffe-system-message-wrapper');
+        expect(message.hasClass('ffe-system-message-wrapper--info')).to.be(true);
     });
 
     it('creates error-message', () => {
         wrapper = mount(
-            <SystemErrorMessage header="Jeg er en test">
+            <SystemErrorMessage>
                 Feilmelding
             </SystemErrorMessage>
         );
-        const message = wrapper.find('.ffe-system-message');
-        expect(message.hasClass('ffe-system-message--error')).to.be(true);
+        const message = wrapper.find('.ffe-system-message-wrapper');
+        expect(message.hasClass('ffe-system-message-wrapper--error')).to.be(true);
     });
 
     it('create success-message', () => {
         wrapper = mount(
-            <SystemSuccessMessage header="Jeg er en test">
+            <SystemSuccessMessage>
                 Gladmelding
             </SystemSuccessMessage>
         );
-        const message = wrapper.find('.ffe-system-message');
-        expect(message.hasClass('ffe-system-message--success')).to.be(true);
+        const message = wrapper.find('.ffe-system-message-wrapper');
+        expect(message.hasClass('ffe-system-message-wrapper--success')).to.be(true);
     });
 });
