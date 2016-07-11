@@ -100,3 +100,9 @@ Any style attributes given to a button component will be passed on to the underl
 ```javascript
 <Button style={{transform: 'rotate(30deg)'}}>...</Button>
 ```
+
+Optionally, pass `className` to set a custom class on the button.
+
+```javascript
+<Button className="testClass">...</Button>
+```
