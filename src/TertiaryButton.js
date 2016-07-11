@@ -2,29 +2,9 @@ import React, { PropTypes } from 'react';
 import Button from './Button';
 
 export default function TertiaryButton(props) {
-    const {
-        action,
-        children,
-        disableButton,
-        id,
-        label,
-        onClick,
-        isTabbable = true,
-    } = props;
-    return (
-        <Button
-            action={action}
-            disableButton={disableButton}
-            id={id}
-            label={label}
-            onClick={onClick}
-            type="tertiary"
-            simpleContent
-            isTabbable={isTabbable}
-        >
-            {children}
-        </Button>
-    );
+    return <Button {...props} type="tertiary" simpleContent>
+                {props.children}
+            </Button>;
 }
 
 TertiaryButton.propTypes = {
