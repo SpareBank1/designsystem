@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.3.0
+
+* Buttons now accepts inline styles as a `style` prop
+
 ## v2.2.0
 
 * Added tertiary button
