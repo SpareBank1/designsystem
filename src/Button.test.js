@@ -193,4 +193,11 @@ describe('Button components:', () => {
         );
         expect(wrapper.find('Button').prop('isTabbable')).to.be.equal(true);
     });
+
+    it('Button sets class', () => {
+        const wrapper = shallow(
+            <Button className="testClass" onClick={() => {}}>Hello</Button>
+        );
+        expect(wrapper.find('button').hasClass('testClass')).to.be.equal(true);
+    });
 });

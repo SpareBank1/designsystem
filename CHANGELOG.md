@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.4.0
+
+* Buttons now accepts className from prop
+
 ## v2.3.0
 
 * Buttons now accepts inline styles as a `style` prop
