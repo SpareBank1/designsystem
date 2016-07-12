@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## Version 0.1.2
+Tidligere versjon var laget med utgangspunkt i feil designskisser
+
 ## Version 0.1.1
 Spesifiser filer som skal inkluderes i pakka
 

@@ -21,29 +21,30 @@ const example = (
         <h3 className="ffe-h4">Eksempler</h3>
 
         <div className="example-container">
-            <h4 className="example-container__header">Success</h4>
-            <SystemErrorMessage header="Feilmelding">
-                Bacon ipsum dolor amet lorem cupim pork belly jowl strip steak minim ham boudin nulla
-                incididunt shoulder. In meatball turkey, sed in strip steak enim rump cupidatat dolore
-                cupim sunt spare ribs labore short ribs.
+            <h4 className="example-container__header">Feil</h4>
+            <SystemErrorMessage>
+                Feilmelding :(
             </SystemErrorMessage>
         </div>
 
         <div className="example-container">
             <h4 className="example-container__header">Info</h4>
-            <SystemInfoMessage header="Informasjon">
-                Bacon ipsum dolor amet lorem cupim pork belly jowl strip steak minim ham boudin nulla
-                incididunt shoulder. In meatball turkey, sed in strip steak enim rump cupidatat dolore
-                cupim sunt spare ribs labore short ribs.
+            <SystemInfoMessage>
+                Informasjon
+            </SystemInfoMessage>
+        </div>
+
+        <div className="example-container">
+            <h4 className="example-container__header">News</h4>
+            <SystemInfoMessage>
+                Nyheter
             </SystemInfoMessage>
         </div>
 
         <div className="example-container">
             <h4 className="example-container__header">Success</h4>
-            <SystemSuccessMessage header="Gladmelding">
-                Bacon ipsum dolor amet lorem cupim pork belly jowl strip steak minim ham boudin nulla
-                incididunt shoulder. In meatball turkey, sed in strip steak enim rump cupidatat dolore
-                cupim sunt spare ribs labore short ribs.
+            <SystemSuccessMessage>
+                Gladmelding :)
             </SystemSuccessMessage>
         </div>
 
@@ -55,7 +56,7 @@ const example = (
                     <code className="html hljs xml">
                         {
                             renderToStaticMarkup(
-                                <SystemInfoMessage header="Headeren sendes inn her">
+                                <SystemInfoMessage>
                                     Send innholdet her. Alt pakkes i et &lt;p&gt; element så unngå bruk av
                                     feks &lt;div&gt;, &lt;p&gt; og &lt;ul&gt;.
                                 </SystemInfoMessage>

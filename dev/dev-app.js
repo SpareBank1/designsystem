@@ -7,30 +7,30 @@ import { render } from 'react-dom';
 import {
     SystemErrorMessage,
     SystemInfoMessage,
+    SystemNewsMessage,
     SystemSuccessMessage,
 } from '../src';
 
 render(
-    <div className="ffe-section-wrapper ffe-body-text">
-        <div className="ffe-content-container ffe-content-container--lg">
-            <SystemErrorMessage header="Dette er typen system-error-message">
-                Bacon ipsum dolor amet lorem cupim pork belly jowl strip steak minim ham boudin nulla
-                incididunt shoulder. In meatball turkey, sed in strip steak enim rump cupidatat dolore
-                cupim sunt spare ribs labore short ribs.
+    <div className="ffe-body-text">
+        <div style={{margin: '25px 0'}}>
+            <SystemErrorMessage>
+                Vi opplever for tiden problemer med nettbank og kortbetaling. Vi gir en lyd så snart dette er løst.
             </SystemErrorMessage>
         </div>
-        <div className="ffe-content-container ffe-content-container--lg">
-            <SystemInfoMessage header="Dette er typen system-info-message">
-                Bacon ipsum dolor amet lorem cupim pork belly jowl strip steak minim ham boudin nulla
-                incididunt shoulder. In meatball turkey, sed in strip steak enim rump cupidatat dolore
-                cupim sunt spare ribs labore short ribs.
+        <div style={{margin: '25px 0'}}>
+            <SystemInfoMessage>
+                Her kan det stå en nyhet eller informasjon som ikke er kritisk.
             </SystemInfoMessage>
         </div>
-        <div className="ffe-content-container ffe-content-container--lg">
-            <SystemSuccessMessage header="Dette er typen system-success-message">
-                Bacon ipsum dolor amet lorem cupim pork belly jowl strip steak minim ham boudin nulla
-                incididunt shoulder. In meatball turkey, sed in strip steak enim rump cupidatat dolore
-                cupim sunt spare ribs labore short ribs.
+        <div style={{margin: '25px 0'}}>
+            <SystemNewsMessage>
+                Vekommen til betaversjonen av nye Sparebank1.no
+            </SystemNewsMessage>
+        </div>
+        <div style={{margin: '25px 0'}}>
+            <SystemSuccessMessage>
+                En gladnyhet. Nå er nettbanken oppe og går igjen!
             </SystemSuccessMessage>
         </div>
     </div>,

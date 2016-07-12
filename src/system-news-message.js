@@ -4,17 +4,14 @@ import InfoSirkelIkon from 'ffe-icons-react/info-sirkel-ikon';
 
 import Base from './base';
 
-export default function SystemErrorMessage({ children }) {
-    const ikon = (
-        <InfoSirkelIkon style={{ transform: 'rotateX(180deg)' }} />
-    );
+export default function SystemNewsMessage({ children }) {
     return (
-        <Base modifier="error" icon={ikon}>
+        <Base modifier="news" icon={<InfoSirkelIkon />}>
             {children}
         </Base>
     );
 }
 
-SystemErrorMessage.propTypes = {
+SystemNewsMessage.propTypes = {
     children: PropTypes.node.isRequired,
 };

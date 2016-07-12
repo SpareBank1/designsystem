@@ -21,28 +21,27 @@ export default class Base extends Component {
     render() {
         const {
             children,
-            header,
             icon,
             modifier,
         } = this.props;
 
         return (
             <div
-                className="ffe-system-message__wrapper"
+                className={`ffe-system-message-wrapper ffe-system-message-wrapper--${modifier}`}
                 ref="self"
             >
-                <div className={`ffe-system-message ffe-system-message--${modifier}`}>
+                <div
+                    className={`
+                        ffe-system-message
+                        ffe-content-container
+                        ffe-content-container--lg`}
+                >
                     <div className="ffe-system-message__icon">
                         {icon}
                     </div>
-                    <div className="ffe-system-message__content">
-                        <div className="ffe-system-message__header">
-                            {header}
-                        </div>
-                        <p className="ffe-system-message__text">
-                            {children}
-                        </p>
-                    </div>
+                    <p className="ffe-system-message__content">
+                        {children}
+                    </p>
                     <div
                         className="ffe-system-message__close"
                         role="button"
@@ -62,6 +61,5 @@ export default class Base extends Component {
 Base.propTypes = {
     children: PropTypes.node.isRequired,
     icon: PropTypes.node.isRequired,
-    header: PropTypes.string.isRequired,
-    modifier: PropTypes.oneOf(['error', 'info', 'success']),
+    modifier: PropTypes.oneOf(['error', 'info', 'success', 'news']),
 };
