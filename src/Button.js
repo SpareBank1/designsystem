@@ -5,6 +5,7 @@ export default function Button(props) {
         action,
         ariaLoadingMessage = 'Vennligst vent',
         children,
+        className = '',
         disableButton,
         id,
         isLoading,
@@ -16,11 +17,12 @@ export default function Button(props) {
         isTabbable,
     } = props;
     const tabIndex = isTabbable ? 0 : -1;
+    const loadingClass = isLoading ? `ffe-${type}-button--loading` : '';
 
     return (
         <button
             onClick={onClick}
-            className={`ffe-${type}-button ${isLoading ? `ffe-${type}-button--loading` : ''}`}
+            className={`ffe-${type}-button ${loadingClass} ${className}`}
             data-action={action}
             id={id}
             disabled={disableButton}
@@ -53,6 +55,7 @@ Button.propTypes = {
     action: PropTypes.string,
     ariaLoadingMessage: PropTypes.string,
     children: PropTypes.node,
+    className: PropTypes.string,
     disableButton: PropTypes.bool,
     id: PropTypes.string,
     isLoading: PropTypes.bool,
