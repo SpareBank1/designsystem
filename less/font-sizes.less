@@ -1,0 +1,77 @@
+.ffe-fontsize(@minWidth, @rules) {
+    @media screen and (min-width: @minWidth) {
+        @rules();
+    }
+}
+
+.ffe-fontsize-h1() {
+    font-size: 28px; // Mobile
+
+    .ffe-fontsize(@breakpoint-sm, {
+      font-size: 40px; // Tablet
+    });
+
+    .ffe-fontsize(@breakpoint-md, {
+      font-size: 46px; // Desktop
+    });
+}
+
+.ffe-fontsize-h2() {
+    font-size: 24px;
+
+    .ffe-fontsize(@breakpoint-sm, {
+      font-size: 32px;
+    });
+
+    .ffe-fontsize(@breakpoint-md, {
+      font-size: 36px;
+    });
+}
+
+.ffe-fontsize-h3() {
+    font-size: 20px;
+
+    .ffe-fontsize(@breakpoint-sm, {
+      font-size: 27px;
+    });
+
+    .ffe-fontsize(@breakpoint-md, {
+      font-size: 28px;
+    });
+}
+
+.ffe-fontsize-h4() {
+    font-size: 18px;
+
+    .ffe-fontsize(@breakpoint-sm, {
+      font-size: 20px;
+    });
+
+    .ffe-fontsize(@breakpoint-md, {
+      font-size: 22px;
+    });
+}
+
+.ffe-fontsize-h5() {
+    font-size: 16px;
+
+    .ffe-fontsize(@breakpoint-sm, {
+      font-size: 16px;
+    });
+
+    .ffe-fontsize(@breakpoint-md, {
+      font-size: 18px;
+    });
+}
+
+.ffe-fontsize-h6() {
+    font-size: 16px;
+
+    .ffe-fontsize(@breakpoint-sm, {
+      font-size: 16px;
+    });
+
+    .ffe-fontsize(@breakpoint-md, {
+      font-size: 16px;
+    });
+}

@@ -2,41 +2,49 @@
 .ffe-h1 {
   color: @ffe-blue-royal;
   font-family: "MuseoSansRounded-700", arial, sans-serif;
-  font-size: 28px;
   font-weight: normal;
   line-height: 36px;
+  .ffe-fontsize-h1;
 }
 
 .ffe-h2 {
   color: @ffe-blue-royal;
   font-family: "MuseoSansRounded-700", arial, sans-serif;
-  font-size: 24px;
   font-weight: normal;
   line-height: 32px;
+  .ffe-fontsize-h2;
 }
 
 .ffe-h3 {
   color: @ffe-blue-royal;
   font-family: "MuseoSansRounded-700", arial, sans-serif;
-  font-size: 20px;
   font-weight: normal;
   line-height: 28px;
+  .ffe-fontsize-h3;
 }
 
 .ffe-h4 {
   color: @ffe-blue-royal;
   font-family: "MuseoSansRounded-700", arial, sans-serif;
-  font-size: 18px;
   font-weight: normal;
   line-height: 26px;
+  .ffe-fontsize-h4;
 }
 
 .ffe-h5 {
   color: @ffe-blue-royal;
   font-family: "MuseoSansRounded-700", arial, sans-serif;
-  font-size: 16px;
   font-weight: normal;
   line-height: 24px;
+  .ffe-fontsize-h5;
+}
+
+.ffe-h6 {
+  color: @ffe-blue-royal;
+  font-family: "MuseoSansRounded-700", arial, sans-serif;
+  font-weight: normal;
+  line-height: 24px;
+  .ffe-fontsize-h6;
 }
 
 .ffe-small-text {
@@ -55,7 +63,7 @@
   line-height: 20px;
 }
 
-.ffe-h1, .ffe-h2, .ffe-h3, .ffe-h4, .ffe-h5 {
+.ffe-h1, .ffe-h2, .ffe-h3, .ffe-h4, .ffe-h5, .ffe-h6 {
   margin-top: 0;
   margin-bottom: 10px;
 
@@ -163,33 +171,31 @@
 
 /* tablet/medium typography */
 @media screen and (min-width: @breakpoint-sm) {
-
   .ffe-h1 {
-    font-size: 40px;
     line-height: 60px;
   }
 
   .ffe-h2 {
-    font-size: 32px;
     line-height: 44px;
   }
 
   .ffe-h3 {
-    font-size: 27px;
     line-height: 38px;
   }
 
   .ffe-h4 {
-    font-size: 20px;
     line-height: 28px;
   }
 
   .ffe-h5 {
-    font-size: 16px;
     line-height: 24px;
   }
 
-  .ffe-h1, .ffe-h2, .ffe-h3, .ffe-h4, .ffe-h5 {
+  .ffe-h6 {
+    line-height: 24px;
+  }
+
+  .ffe-h1, .ffe-h2, .ffe-h3, .ffe-h4, .ffe-h5, .ffe-h6 {
     margin-bottom: 15px;
   }
 
@@ -221,8 +227,7 @@
 
 /* Desktop */
 @media screen and (min-width: @breakpoint-md) {
-
-  .ffe-h1, .ffe-h2, .ffe-h3, .ffe-h4, .ffe-h5 {
+  .ffe-h1, .ffe-h2, .ffe-h3, .ffe-h4, .ffe-h5, .ffe-h6 {
     margin-bottom: 20px;
   }
 
@@ -231,27 +236,26 @@
   }
 
   .ffe-h1 {
-    font-size: 46px;
     line-height: 67px;
   }
 
   .ffe-h2 {
-    font-size: 36px;
     line-height: 50px;
   }
 
   .ffe-h3 {
-    font-size: 28px;
     line-height: 38px;
   }
 
   .ffe-h4 {
-    font-size: 22px;
     line-height: 28px;
   }
 
   .ffe-h5 {
-    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .ffe-h6 {
     line-height: 24px;
   }
 
@@ -276,7 +280,7 @@
   }
 }
 
-.ffe-h1, .ffe-h2, .ffe-h3, .ffe-h4, .ffe-h5 {
+.ffe-h1, .ffe-h2, .ffe-h3, .ffe-h4, .ffe-h5, .ffe-h6 {
   &--no-margin {
     margin: 0;
   }
