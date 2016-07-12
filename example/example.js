@@ -4,6 +4,7 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import {
     SystemErrorMessage,
     SystemInfoMessage,
+    SystemNewsMessage,
     SystemSuccessMessage,
 } from '../lib';
 
@@ -36,9 +37,9 @@ const example = (
 
         <div className="example-container">
             <h4 className="example-container__header">News</h4>
-            <SystemInfoMessage>
+            <SystemNewsMessage>
                 Nyheter
-            </SystemInfoMessage>
+            </SystemNewsMessage>
         </div>
 
         <div className="example-container">
