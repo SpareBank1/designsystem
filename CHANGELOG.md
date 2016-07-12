@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## Version 0.1.1
+Tidligere versjon var laget med utgangspunkt i feil designskisser
+
 ## Version 0.1.0
 La til --success og --error modifiers
 

@@ -9,29 +9,23 @@
 <body class="ffe-body-text">
     <h3 class="ffe-h4">Eksempler</h3>
     <div class="example-container">
-        <p class="example-container__header">Info</p>
-        <div class="ffe-system-message__wrapper">
-            <div class="ffe-system-message ffe-system-message--info">
-                <div class="ffe-system-message__icon">
-                    <svg class="" focusable="false" viewBox="0 0 200 200" width="150" height="150"><path d="M96.19 199.99h7.846c7.154 0 11.308-4.398 11.308-11.805V85.195c0-7.407-4.154-11.805-11.308-11.805H96.19c-7.384 0-11.769 4.398-11.769 11.805v103C84.648 195.6 88.801 200 96.186 200zM116.5 11.805C116.5 4.398 112.35 0 105.19 0H94.808C87.65 0 83.5 4.398 83.5 11.805V26.85c0 7.407 3.923 11.342 11.308 11.342h10.385c7.384 0 11.308-3.935 11.308-11.342V11.805z"></path></svg>
-                </div>
-                <div class="ffe-system-message__content">
-                    <div class="ffe-system-message__header">
-                        Disse sidene er under utvikling
+        <p class="example-container__header">News</p>
+            <div class="ffe-system-message-wrapper ffe-system-message-wrapper--news">
+                <div class="ffe-system-message ffe-content-container ffe-content-container--lg">
+                    <div class="ffe-system-message__icon">
+                        <svg class="" focusable="false" viewBox="0 0 200 200" width="150" height="150" x="900" y="600"><path d="M101.8 89.83h-3.575c-3.799 0-6.257 2.346-6.257 6.257v46.26c0 3.799 2.346 6.257 6.257 6.257h3.575c3.799 0 6.034-2.346 6.034-6.257v-46.26c0-3.911-2.235-6.257-6.034-6.257zM102.3 56.87h-4.693c-3.799 0-6.034 2.346-6.034 6.257v6.704c0 3.799 2.235 6.034 6.034 6.034h4.693c3.799 0 6.034-2.235 6.034-6.034v-6.704c0-3.911-2.235-6.257-6.034-6.257z"></path><path d="M100 200C44.92 200 0 155.1 0 100 0 44.92 44.92 0 100 0c55.1 0 100 44.92 100 100s-44.92 100-100 100zm0-186.3c-47.6 0-86.26 38.66-86.26 86.26S52.4 186.22 100 186.22s86.26-38.66 86.26-86.26S147.6 13.7 100 13.7z"></path></svg>
                     </div>
-                    <p class="ffe-system-message__text">
-                        Alle detaljer er derfor ikke på plass enda. Om det er noe du savner finner du den gamle løsningen&nbsp;<a class="ffe-link-text" href="https://www.liv.sparebank1.no/lpt/secure/sb1/web/frontpage/FrontPage.xhtml" target="_blank">her</a>
-                    </p>
-                </div>
-                <div class="ffe-system-message__close" role="button" aria-label="Lukk" tabindex="0">
-                    <svg class="" focusable="false" viewBox="0 0 200 200" width="150" height="150" x="1050"><path d="M18.77 0c-3.562 0-7.125 1.347-9.834 4.044L4.507 8.483c-5.381 5.394-5.381 14.25 0 19.68l71.19 71.83-71.66 71.83c-5.381 5.394-5.381 14.25 0 19.68l4.429 4.439c5.381 5.394 14.22 5.394 19.64 0l71.66-71.83 71.65 71.83c5.381 5.394 14.23 5.394 19.65 0l4.429-4.439c5.381-5.394 5.381-14.25 0-19.68l-71.19-71.83 71.66-71.83c5.381-4.914 5.381-13.78 0-19.21l-4.429-4.423c-5.381-5.394-14.22-5.394-19.64 0l-72.13 71.34-71.17-71.83c-2.691-2.697-6.257-4.044-9.819-4.044z"></path></svg>
+                    <p class="ffe-system-message__content">Vekommen til betaversjonen av nye Sparebank1.no</p>
+                    <div class="ffe-system-message__close" role="button" aria-label="Lukk" tabindex="0">
+                        <svg class="" focusable="false" viewBox="0 0 200 200" width="150" height="150" x="1050"><path d="M18.77 0c-3.562 0-7.125 1.347-9.834 4.044L4.507 8.483c-5.381 5.394-5.381 14.25 0 19.68l71.19 71.83-71.66 71.83c-5.381 5.394-5.381 14.25 0 19.68l4.429 4.439c5.381 5.394 14.22 5.394 19.64 0l71.66-71.83 71.65 71.83c5.381 5.394 14.23 5.394 19.65 0l4.429-4.439c5.381-5.394 5.381-14.25 0-19.68l-71.19-71.83 71.66-71.83c5.381-4.914 5.381-13.78 0-19.21l-4.429-4.423c-5.381-5.394-14.22-5.394-19.64 0l-72.13 71.34-71.17-71.83c-2.691-2.697-6.257-4.044-9.819-4.044z"></path></svg>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <script>
         document.querySelector('.ffe-system-message__close').addEventListener('click', function() {
-            var element = document.querySelector('.ffe-system-message__wrapper');
+            var element = document.querySelector('.ffe-system-message-wrapper');
             element.style.height = element.offsetHeight + 'px';
             setTimeout(function() {
                 element.style.height = 0;
