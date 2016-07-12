@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## Version 0.1.3
+Oppdatert example.html til å inneholde alle meldingstyper
+
 ## Version 0.1.2
 Tidligere versjon var laget med utgangspunkt i feil designskisser
 
