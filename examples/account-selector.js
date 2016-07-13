@@ -57,6 +57,12 @@ const accounts = [
   },
 ];
 
+const value = '42010205683';
+
+function getAccount(accounts, accountNumber) {
+  return accounts.find(account => account.accountNumber === accountNumber);
+}
+
 function onChange(accountNumberOrUserInput) {
   console.log('account changed', accountNumberOrUserInput);
 }
@@ -75,6 +81,8 @@ render(
       locale="nb"
       placeholder="Velg Konto"
       id="custom-id"
+      value={  value ? getAccount(accounts, value).name : '' }
+      selectedAccount={ getAccount(accounts, value) }
     />
   </div>
   , accountSelectorDOM);
