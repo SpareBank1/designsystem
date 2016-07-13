@@ -30,6 +30,8 @@ const accounts = [
     ariaInvalid={false}
     placeholder="Select account"
     id="custom-id"
+    selectedAccount={ getAccount(accounts, value) }
+    value={ value ? getAccount(accounts, value).name : '' }
 />
 ```
 - accounts: Array of account objects where only "name" is a required prop.
@@ -39,6 +41,8 @@ const accounts = [
 - placeholder (optional): Set the placeholder attribute of the input field.
 - id (optional): Set the id attribute of the input field so a label can be associated with the field.
 - ariaInvalid: signifies validation errors.
+- selectedAccount: Sets the selected account number and balance under the selector box when for example navigating from summary page back to registration page.
+- value: Sets the selected value in the selector box when for example navigating from summary page back to registration page.
 
 You must also import the styles
 ```css
