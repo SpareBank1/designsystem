@@ -19,8 +19,8 @@ export default class AccountSelector extends React.Component {
     this.state = {
       showAccountSuggestions: false,
       showResetButton: false,
-      value: '',
-      selectedAccount: null,
+      value: props.value || '',
+      selectedAccount: props.selectedAccount,
       accounts: props.accounts,
     };
 
@@ -310,6 +310,8 @@ AccountSelector.propTypes = {
   placeholder: PropTypes.string,
   ariaInvalid: PropTypes.bool,
   id: PropTypes.string,
+  selectedAccount: PropTypes.object,
+  value: PropTypes.string,
 };
 
 AccountSelector.defaultProps = {
