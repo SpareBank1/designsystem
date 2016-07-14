@@ -11,14 +11,20 @@
       background-color: darken(@ffe-green-wcag, 10%);
     }
 
-  &--ghost {
+  &--ghost,
+  &--ghost:focus {
     background-color: transparent;
     color: @ffe-green-wcag;
     border: 2px solid @ffe-green-wcag;
   }
 
   &--ghost:hover {
-    background-color: @ffe-green-wcag;
+    background-color: darken(@ffe-green-wcag, 5%);
+    border-color: darken(@ffe-green-wcag, 5%);
     color: @ffe-white;
+  }
+
+  &--ghost:active {
+    background-color: darken(@ffe-green-wcag, 10%);
   }
 }
