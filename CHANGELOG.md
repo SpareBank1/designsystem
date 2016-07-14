@@ -7,7 +7,8 @@ The following classes are deprecated. Support for them will be dropped in a futu
  * `ffe-select-box` (use `ffe-dropdown`)
 
 ## Unreleased
-* Focus state styling for select element in IE
+* Focus state styling fix for select element in IE
+* Focus state styling fix for ghost action button
 
 ## v.6.3.0
 * Add description list component
