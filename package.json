@@ -39,6 +39,7 @@
   "license": "ISC",
   "devDependencies": {
     "gemini": "4.3.0",
-    "less": "2.5.1"
+    "less": "2.5.1",
+    "ffe-visual-tests-support": "1.0.0"
   }
 }
