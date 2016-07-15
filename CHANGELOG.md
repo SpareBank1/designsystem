@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.1.2
+
+* Added ariaInvalid to support validation errors
+
 ## v1.1.1
 
 * Fix month formatting bug which caused incorrect dates in certain cases

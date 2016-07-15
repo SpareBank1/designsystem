@@ -26,6 +26,7 @@ export default function Form() {
         minDate="01.01.2016"
         maxDate="31.12.2016"
         inputProps={ { className: 'customClass', id: 'custom-input-id' } }
+        ariaInvalid={ false }
     />
   </form>
 }
@@ -33,6 +34,7 @@ export default function Form() {
 * value: the input field value. Can be used to set an initial date.
 * onChange: will be called with the new date string, picked from the calendar. format: dd.mm.yyyy
 * inputProps: props to set on the input field.
+* ariaInvalid: signifies validation errors.
 
 ### <DateInput />
 Use only the input field
@@ -48,6 +50,7 @@ export default function Form() {
         onKeyDown={ this.onInputKeydown }
         value={ this.props.value }
         inputProps={ this.props.inputProps }
+        ariaInvalid={ false }
     />
   </form>
 }

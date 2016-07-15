@@ -34,6 +34,7 @@ class DatepickerExample extends React.Component {
         minDate="01.01.2016"
         maxDate="31.12.2016"
         inputProps={ { className: 'customClass', id: 'custom-input-id' } }
+        ariaInvalid={ false }
       />
     );
   }
