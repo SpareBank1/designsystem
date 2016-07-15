@@ -46,12 +46,24 @@ describe('<Dropdown />', () => {
     it('should use the supplied defaultValue', () => {
         const wrapper = shallow(
             <Dropdown defaultValue="make_foo">
-                <option value="make_foo" disabled="true">Not Bar</option>
+                <option value="make_foo" disabled={ true }>Not Bar</option>
                 <option value="bar">Bar</option>
             </Dropdown>
         );
 
         assert.equal(wrapper.find('select').prop('defaultValue'), 'make_foo');
+    });
+
+    it('should set aria-invalid="true" and render errorMessage if error', () => {
+        const wrapper = shallow(
+            <Dropdown defaultValue="make_foo" invalid={ true } errorMessage="test">
+                <option value="make_foo" disabled="true">Not Bar</option>
+                <option value="bar">Bar</option>
+            </Dropdown>
+        );
+        assert.equal(wrapper.find('select').prop('aria-invalid'), true);
+        assert.equal(wrapper.find('div.ffe-info-message').hasClass('ffe-info-message--error'), true);
+        assert.equal(wrapper.find('div.ffe-info-message').text(), 'test');
     });
 });
 
