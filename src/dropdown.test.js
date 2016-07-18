@@ -54,6 +54,16 @@ describe('<Dropdown />', () => {
         assert.equal(wrapper.find('select').prop('defaultValue'), 'make_foo');
     });
 
+    it('should use the supplied className', () => {
+        const wrapper = shallow(
+            <Dropdown className="testClass">
+                <option value="foo">Foo</option>
+                <option value="bar">Bar</option>
+            </Dropdown>
+        );
+        assert.equal(wrapper.find('select').hasClass('testClass'), true);
+    });
+
     it('should set aria-invalid="true" and render errorMessage if error', () => {
         const wrapper = shallow(
             <Dropdown defaultValue="make_foo" invalid={ true } errorMessage="test">
