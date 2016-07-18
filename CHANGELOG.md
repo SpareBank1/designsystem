@@ -1,4 +1,8 @@
 # Changelog
+
+## v1.1.0
+* Added optional prop for onAccountSelected
+
 ## v1.0.4
 * Bugfix: Format account balance according to locale
 * Bugfix: Fixed onBlur firing onFocus
