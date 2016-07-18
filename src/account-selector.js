@@ -19,8 +19,9 @@ export default class AccountSelector extends Component {
     this.state = {
       showAccountSuggestions: false,
       showResetButton: false,
-      value: '',
-      selectedAccount: null,
+      value: props.value || '',
+      selectedAccount: props.selectedAccount,
+      accounts: props.accounts,
     };
 
     this.onInputFocus = this.onInputFocus.bind(this);
@@ -309,6 +310,8 @@ AccountSelector.propTypes = {
   placeholder: PropTypes.string,
   ariaInvalid: PropTypes.bool,
   id: PropTypes.string,
+  selectedAccount: PropTypes.object,
+  value: PropTypes.string,
 };
 
 AccountSelector.defaultProps = {
