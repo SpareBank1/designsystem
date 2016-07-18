@@ -7,7 +7,17 @@ const createID = (label, options) => {
     return `Dropdown-${hash(label + stringifiedOptions)}`;
 };
 
-function Dropdown({ id,  label, onChange, selectedValue, defaultValue, children, invalid, errorMessage }) {
+function Dropdown({
+    id,
+    className = '',
+    label,
+    onChange,
+    selectedValue,
+    defaultValue,
+    children,
+    invalid,
+    errorMessage
+}) {
     const domId = id || createID(label, children);
 
     return  <div className="ffe-input-group" aria-live="polite">
@@ -17,7 +27,7 @@ function Dropdown({ id,  label, onChange, selectedValue, defaultValue, children,
                         </label>
                 }
                 <select
-                        className="ffe-dropdown"
+                        className={`ffe-dropdown ${className}`}
                         id={ domId }
                         onChange={ onChange }
                         value={ selectedValue }
