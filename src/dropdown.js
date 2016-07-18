@@ -7,7 +7,7 @@ const createID = (label, options) => {
     return `Dropdown-${hash(label + stringifiedOptions)}`;
 };
 
-function Dropdown({ id,  label, onChange, selectedValue, defaultValue, children }) {
+function Dropdown({ id,  label, onChange, selectedValue, defaultValue, children, invalid, errorMessage }) {
     const domId = id || createID(label, children);
 
     return  <div className="ffe-input-group" aria-live="polite">
@@ -17,13 +17,20 @@ function Dropdown({ id,  label, onChange, selectedValue, defaultValue, children 
                         </label>
                 }
                 <select
-                        className="ffe-select-box"
+                        className="ffe-dropdown"
                         id={ domId }
                         onChange={ onChange }
                         value={ selectedValue }
-                        defaultValue={ defaultValue }>
+                        defaultValue={ defaultValue }
+                        aria-invalid={ invalid }
+                >
                     { children }
                 </select>
+                {!errorMessage ? null :
+                    <div className="ffe-info-message ffe-info-message--error">
+                        { errorMessage }
+                    </div>
+                }
             </div>;
 }
 
@@ -33,7 +40,8 @@ Dropdown.propTypes = {
     onChange: PropTypes.func.isRequired,
     selectedValue: PropTypes.string,
     defaultValue: PropTypes.string,
-    children: PropTypes.array
+    children: PropTypes.array,
+    invalid: PropTypes.bool
 };
 
 export default Dropdown;

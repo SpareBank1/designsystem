@@ -38,3 +38,12 @@ The label-attribute should then be omitted.
 ```
 
 If you want to initialize the dropdown with a non-empty value, you can supply a `defaultValue` prop.
+
+To get an error message showing pass `error` and `errorMessage` to the `Dropdown`.
+
+```javascript
+<Dropdown defaultValue="foo" error="true" errorMessage="test">
+    <option value="make_foo" disabled="true">Not Bar</option>
+    <option value="bar">Bar</option>
+</Dropdown>
+```
