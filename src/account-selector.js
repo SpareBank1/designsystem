@@ -16,26 +16,30 @@ export default class AccountSelector extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      showAccountSuggestions: false,
-      showResetButton: false,
-      value: props.value || '',
-      selectedAccount: props.selectedAccount,
-      accounts: props.accounts,
-    };
+    this.state = this.getDefaultState(props);
 
     this.onInputFocus = this.onInputFocus.bind(this);
     this.onBlur = this.onBlur.bind(this);
     this.onResetButtonKeydown = this.onResetButtonKeydown.bind(this);
     this.onEscKeyPressed = this.onEscKeyPressed.bind(this);
     this.onInputChange = this.onInputChange.bind(this);
-    this.resetSearch = this.resetSearch.bind(this);
+    this.reset = this.reset.bind(this);
     this.onInputKeyDown = this.onInputKeyDown.bind(this);
     this.onAccountSelect = this.onAccountSelect.bind(this);
     this.highlightNextAccount = this.highlightNextAccount.bind(this);
     this.highlightPrevAccount = this.highlightPrevAccount.bind(this);
     this.globalEscKeyHandler = this.globalEscKeyHandler.bind(this);
     this.globalClickHandler = this.globalClickHandler.bind(this);
+  }
+
+  getDefaultState(props) {
+    return {
+      showAccountSuggestions: false,
+      showResetButton: false,
+      selectedAccount: null,
+      value: '',
+      accounts: props.accounts,
+    };
   }
 
   onInputFocus() {
@@ -156,15 +160,13 @@ export default class AccountSelector extends Component {
     }
   }
 
-  resetSearch() {
-    this.setState({
-      value: '',
-      accounts: this.props.accounts,
-      selectedAccount: null,
-      showAccountSuggestions: true,
-      showResetButton: false,
-    }, () => {
-      this._accountInput.focus();
+  reset(focus) {
+    const state = this.getDefaultState(this.props);
+    state.showAccountSuggestions = focus;
+    this.setState(state, () => {
+      if (focus) {
+        this._accountInput.focus();
+      }
       this.props.onChange(this.state.value);
     });
   }
@@ -258,7 +260,7 @@ export default class AccountSelector extends Component {
           <button
             aria-label={ i18n[this.props.locale].RESET_SEARCH }
             className="nfe-account-selector__reset-button"
-            onClick={ this.resetSearch }
+            onClick={ this.reset.bind(true) }
             onKeyDown={ this.onResetButtonKeydown }
             tabIndex="-1"
           >
@@ -312,8 +314,6 @@ AccountSelector.propTypes = {
   placeholder: PropTypes.string,
   ariaInvalid: PropTypes.bool,
   id: PropTypes.string,
-  selectedAccount: PropTypes.object,
-  value: PropTypes.string,
 };
 
 AccountSelector.defaultProps = {
