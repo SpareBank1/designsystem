@@ -234,7 +234,8 @@ export default class AccountSelector extends Component {
 
   render() {
     const assignTo = name => component => { this[name] = component; };
-    const {locale, accounts} = this.props;
+    const {locale} = this.props;
+    const {accounts} = this.state;
     return (
       <div
         className="nfe-account-selector"
