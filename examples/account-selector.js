@@ -71,17 +71,12 @@ function onBlur() {
   console.log('account selector lost focus');
 }
 
-function onAccountSelected(accountNumber) {
-  console.log(`account selected from dropdown: ${accountNumber}`);
-}
-
 render(
   <div>
     <label htmlFor="custom-id" className="ffe-form-label">Velg konto</label>
     <AccountSelector
       accounts={ accounts }
       onChange={ onChange }
-      onAccountSelected={ onAccountSelected }
       onBlur={ onBlur }
       locale="nb"
       placeholder="Velg Konto"

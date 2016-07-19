@@ -133,7 +133,7 @@ export default class AccountSelector extends Component {
         accounts: this.props.accounts.filter(accountFilter(account.accountNumber)),
         selectedAccount: account,
         showResetButton: true,
-      }, () => this.props.onAccountSelected(account.accountNumber));
+      }, () => this.props.onChange(account.accountNumber));
     }
   }
 
@@ -234,8 +234,7 @@ export default class AccountSelector extends Component {
 
   render() {
     const assignTo = name => component => { this[name] = component; };
-    const {locale} = this.props;
-    const {accounts} = this.state;
+    const {locale, accounts} = this.props;
     return (
       <div
         className="nfe-account-selector"
@@ -308,7 +307,6 @@ export default class AccountSelector extends Component {
 AccountSelector.propTypes = {
   accounts: PropTypes.array,
   onChange: PropTypes.func.isRequired,
-  onAccountSelected : PropTypes.func.isRequired,
   locale: PropTypes.oneOf(["nb", "nn" ,"en"]),
   onBlur: PropTypes.func,
   placeholder: PropTypes.string,
