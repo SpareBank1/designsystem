@@ -108,7 +108,12 @@ export default class AccountSelector extends Component {
 
   onBlur() {
     this.removeGlobalEventListeners();
-    this.props.onBlur(this.state.value);
+    const {selectedAccount, value}= this.state;
+    const {onBlur} = this.props;
+    if (selectedAccount) {
+      return onBlur(selectedAccount.accountNumber);
+    }
+    onBlur(value);
   }
 
   onInputChange(evt) {
@@ -321,5 +326,6 @@ AccountSelector.defaultProps = {
   locale : 'nb',
   accounts : [],
   id : PropTypes.string,
+  onBlur: () => {},
 };
 
