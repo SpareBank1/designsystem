@@ -25,6 +25,7 @@ const accounts = [
 <AccountSelector
     accounts={ accounts }
     onChange={ onChange }
+    onAccountSelected={ onAccountSelected }
     onBlur={ onBlur }
     locale="nb"
     ariaInvalid={false}
