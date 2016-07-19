@@ -308,7 +308,7 @@ export default class AccountSelector extends Component {
 AccountSelector.propTypes = {
   accounts: PropTypes.array,
   onChange: PropTypes.func.isRequired,
-  onAccountSelected : PropTypes.func,
+  onAccountSelected : PropTypes.func.isRequired,
   locale: PropTypes.oneOf(["nb", "nn" ,"en"]),
   onBlur: PropTypes.func,
   placeholder: PropTypes.string,
@@ -318,7 +318,6 @@ AccountSelector.propTypes = {
 
 AccountSelector.defaultProps = {
   ariaInvalid: false,
-  onAccountSelected : () => {},
   placeholder : PropTypes.string,
   locale : 'nb',
   accounts : [],
