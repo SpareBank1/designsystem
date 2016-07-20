@@ -16,7 +16,7 @@ export default class AccountSelector extends Component {
   constructor(props) {
     super(props);
 
-    this.state = this.getDefaultState(props);
+    this.state = this.getDefaultState();
 
     this.onInputFocus = this.onInputFocus.bind(this);
     this.onBlur = this.onBlur.bind(this);
@@ -30,25 +30,32 @@ export default class AccountSelector extends Component {
     this.highlightPrevAccount = this.highlightPrevAccount.bind(this);
     this.globalEscKeyHandler = this.globalEscKeyHandler.bind(this);
     this.globalClickHandler = this.globalClickHandler.bind(this);
+    this.filterAccounts = this.filterAccounts.bind(this);
   }
 
-  getDefaultState(props) {
+  getDefaultState() {
     return {
       showAccountSuggestions: false,
       showResetButton: false,
       selectedAccount: null,
       value: '',
-      accounts: props.accounts,
+      filteredAccounts: [],
     };
   }
 
+  componentWillReceiveProps({accounts}) {
+    const {value} = this.state;
+    this.setState({
+      filteredAccounts: this.filterAccounts(accounts, value),
+    });
+  }
   onInputFocus() {
     const newState = {
       showAccountSuggestions: true,
     };
 
     if (this.state.value) {
-      newState.selectedAccount = this.props.accounts[0];
+      newState.selectedAccount = this.state.filteredAccounts[0];
     }
     this.setState(newState);
     this.addGlobalEventListeners();
@@ -118,41 +125,45 @@ export default class AccountSelector extends Component {
 
   onInputChange(evt) {
     const value = evt.target.value;
-    const filteredAccounts = this.props.accounts.filter(accountFilter(value));
+    const {accounts} = this.props;
+    const filteredAccounts = this.filterAccounts(accounts, value);
     const selectedAccount =
       value.length > 0 && filteredAccounts.length > 0 ? filteredAccounts[0] : null;
     this.setState({
       value,
       selectedAccount,
-      accounts: filteredAccounts,
+      filteredAccounts,
       showResetButton: value.length > 0,
       showAccountSuggestions: true,
     }, () => this.props.onChange(this.state.value));
   }
 
   onAccountSelect(account) {
+    const {accounts} = this.props;
+    const {accountNumber} = account;
+    const filteredAccounts = this.filterAccounts(accounts, accountNumber);
     if (account) {
       this.setState({
         value: account.name,
         showAccountSuggestions: false,
-        accounts: this.props.accounts.filter(accountFilter(account.accountNumber)),
+        filteredAccounts,
         selectedAccount: account,
         showResetButton: true,
-      }, () => this.props.onChange(account.accountNumber));
+      }, () => this.props.onChange(accountNumber));
     }
   }
 
   highlightFirstAccount() {
-    const {accounts} = this.props;
-    if (accounts.length > 0) {
-      this.highlightAccount(accounts[0]);
+    const {filteredAccounts} = this.state;
+    if (filteredAccounts.length > 0) {
+      this.highlightAccount(filteredAccounts[0]);
     }
   }
 
   highlightLastAccount() {
-    const {accounts} = this.props;
-    if (accounts.length > 0) {
-      this.highlightAccount(accounts[accounts.length - 1]);
+    const {filteredAccounts} = this.state;
+    if (filteredAccounts.length > 0) {
+      this.highlightAccount(filteredAccounts[filteredAccounts.length - 1]);
     }
   }
 
@@ -166,7 +177,7 @@ export default class AccountSelector extends Component {
   }
 
   reset(focus) {
-    const state = this.getDefaultState(this.props);
+    const state = this.getDefaultState();
     state.showAccountSuggestions = focus;
     this.setState(state, () => {
       if (focus) {
@@ -193,21 +204,21 @@ export default class AccountSelector extends Component {
   }
 
   highlightNextAccount() {
-    const {accounts} = this.props;
-    let newAccountIndex = accounts.indexOf(this.state.selectedAccount) + 1;
-    if (newAccountIndex === accounts.length) {
+    const {filteredAccounts} = this.state;
+    let newAccountIndex = filteredAccounts.indexOf(this.state.selectedAccount) + 1;
+    if (newAccountIndex === filteredAccounts.length) {
       newAccountIndex = 0;
     }
-    this.highlightAccount(accounts[newAccountIndex]);
+    this.highlightAccount(filteredAccounts[newAccountIndex]);
   }
 
   highlightPrevAccount() {
-    const {accounts} = this.props;
-    let newAccountIndex = accounts.indexOf(this.state.selectedAccount) - 1;
+    const {filteredAccounts} = this.state;
+    let newAccountIndex = filteredAccounts.indexOf(this.state.selectedAccount) - 1;
     if (newAccountIndex < 0) {
-      newAccountIndex = accounts.length - 1;
+      newAccountIndex = filteredAccounts.length - 1;
     }
-    this.highlightAccount(accounts[newAccountIndex]);
+    this.highlightAccount(filteredAccounts[newAccountIndex]);
   }
 
   addGlobalEventListeners() {
@@ -237,10 +248,14 @@ export default class AccountSelector extends Component {
     }
   }
 
+  filterAccounts(accounts, value) {
+    return accounts.filter(accountFilter(value));
+  }
+
   render() {
     const assignTo = name => component => { this[name] = component; };
     const {locale} = this.props;
-    const {accounts} = this.state;
+    let {filteredAccounts} = this.state;
     return (
       <div
         className="nfe-account-selector"
@@ -277,7 +292,7 @@ export default class AccountSelector extends Component {
           account={ this.state.selectedAccount }
           locale={ locale }
         />
-        { this.state.showAccountSuggestions && accounts.length ?
+        { this.state.showAccountSuggestions && filteredAccounts.length ?
           <ScrollArea
             speed={ 0.8 }
             className="nfe-account-selector__scroll"
@@ -298,7 +313,7 @@ export default class AccountSelector extends Component {
           >
             <AccountSuggestionList
               locale={locale}
-              accounts={ accounts }
+              accounts={ filteredAccounts }
               onSelect={ this.onAccountSelect }
               selectedAccount={ this.state.selectedAccount }
               ref={ assignTo('_suggestionList') }
@@ -324,7 +339,6 @@ AccountSelector.defaultProps = {
   ariaInvalid: false,
   placeholder : PropTypes.string,
   locale : 'nb',
-  accounts : [],
   id : PropTypes.string,
   onBlur: () => {},
 };
