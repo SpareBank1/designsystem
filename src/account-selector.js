@@ -178,12 +178,12 @@ export default class AccountSelector extends Component {
 
   reset(focus) {
     const state = this.getDefaultState();
-    state.showAccountSuggestions = focus;
-    this.setState(state, () => {
+    const {onChange} = this.props;
+    this.setState({...state, showAccountSuggestions : focus}, () => {
       if (focus) {
         this._accountInput.focus();
       }
-      this.props.onChange(this.state.value);
+      onChange(this.state.value);
     });
   }
 
@@ -233,9 +233,7 @@ export default class AccountSelector extends Component {
 
   globalEscKeyHandler(evt) {
     if (evt.which === KeyCode.ESC) {
-      this.setState({
-        showAccountSuggestions: false,
-      });
+        this.reset(true);
     }
   }
 
