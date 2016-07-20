@@ -28,7 +28,6 @@ export default class AccountSelector extends Component {
     this.onAccountSelect = this.onAccountSelect.bind(this);
     this.highlightNextAccount = this.highlightNextAccount.bind(this);
     this.highlightPrevAccount = this.highlightPrevAccount.bind(this);
-    this.globalEscKeyHandler = this.globalEscKeyHandler.bind(this);
     this.globalClickHandler = this.globalClickHandler.bind(this);
     this.filterAccounts = this.filterAccounts.bind(this);
   }
@@ -107,10 +106,7 @@ export default class AccountSelector extends Component {
   }
 
   onEscKeyPressed() {
-    this.setState({
-      showAccountSuggestions: false,
-      selectedAccount: null,
-    });
+    this.reset(true);
   }
 
   onBlur() {
@@ -229,14 +225,6 @@ export default class AccountSelector extends Component {
   removeGlobalEventListeners() {
     window.removeEventListener('click', this.globalClickHandler);
     window.removeEventListener('keyup', this.globalEscKeyHandler);
-  }
-
-  globalEscKeyHandler(evt) {
-    if (evt.which === KeyCode.ESC) {
-      this.setState({
-        showAccountSuggestions: false,
-      });
-    }
   }
 
   globalClickHandler(evt) {
