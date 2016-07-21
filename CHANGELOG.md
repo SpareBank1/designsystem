@@ -9,6 +9,7 @@ The following classes are deprecated. Support for them will be dropped in a futu
 ## Unreleased
 * Focus state styling fix for select element in IE
 * Focus state styling fix for ghost action button
+* Breaking: removed `--inline` support from `.ffe-form-label`. It was just setting max-width to 100% which is not the same as inlining. Removed `max-width: 85%` from `ffe-form-label`. It's layout and doesn't belong in the component. It now defaults to browser default which should be `none`. If you were using `ffe-form-label ffe-form-label--inline` you can just use `ffe-form-label`. If you were relying on the max-width being 85% then action is required.
 
 ## v.6.3.0
 * Add description list component
