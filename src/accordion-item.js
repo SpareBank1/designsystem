@@ -18,21 +18,14 @@ export default React.createClass({
         type: PropTypes.oneOf(['white', 'blue']),
         index: PropTypes.number,
         ignoredNodeNames: PropTypes.array,
-        children: PropTypes.oneOfType([
-            PropTypes.string,
-            PropTypes.element,
-            PropTypes.array
-        ]).isRequired,
-        expandedContent: PropTypes.oneOfType([
-            PropTypes.string,
-            PropTypes.element,
-            PropTypes.array
-        ]).isRequired
+        children: PropTypes.node,
+        expandedContent: PropTypes.node,
+        ariaLabel: PropTypes.string
     },
 
     getInitialState() {
         return { isOpen: this.props.isOpen || false };
-    }, 
+    },
 
     toggle() {
         if (this.props.onClose && this.state.isOpen) this.props.onClose();
@@ -49,16 +42,17 @@ export default React.createClass({
 
     render(props) {
         const { isOpen } = this.state;
-        const { type, index } = this.props;
+        const { type, index, ariaLabel } = this.props;
 
-        return <li 
+        return <li
                     className={ createClasses('ffe-accordion-item', isOpen, type) } >
-                    <a 
+                    <a
                         id={`tab-${index}`}
-                        href="javascript:;" 
+                        href="javascript:;"
                         className={ createClasses('ffe-accordion-item__toggler', isOpen, type) }
                         onClick={ this.onClick }
-                        aria-expanded={ isOpen } 
+                        aria-expanded={ isOpen }
+                        aria-label={ ariaLabel }
                         role="tab"
                         aria-controls={`panel-${index}`}>
                         <Chevron className={ createClasses('ffe-accordion-item__icon', isOpen, type) } />
@@ -67,8 +61,8 @@ export default React.createClass({
                     <FFEExpandable
                                 isOpen={ isOpen }
                                 folded=""
-                                expanded={ 
-                                    <div className={ createClasses('ffe-accordion-item__content', isOpen, type) } 
+                                expanded={
+                                    <div className={ createClasses('ffe-accordion-item__content', isOpen, type) }
                                          role="tabpanel"
                                          id={`panel-${index}`}
                                          aria-hidden={ !isOpen }
