@@ -21,6 +21,17 @@ describe('<MessageBox />', () => {
             assert.equal(new RegExp(content).test(wrapper.text()), true);
         });
     });
+    
+    it('should not render title-element if title is not defined', () => {
+        const content = 'Dette er en melding til deg';
+        const types = ['success, error, info, tips'];
+
+        [SuccessMessage, ErrorMessage, InfoMessage, TipsMessage].map((Message, index) => {
+            const wrapper = shallow(<Message content={ content } />);
+            assert.equal(wrapper.find(`.ffe-message-box__title--${types[index]}`).length, 0,
+                `Unexpected css class .ffe-message-box__title--${types[index]} in component output`);
+        });
+    });
 
     it('should support HTML content', () => {
         const content = <p className="ninja">Swoosh!</p>;
@@ -45,9 +56,10 @@ describe('<MessageBox />', () => {
     }
 
     it('should use the correct CSS classes from FFE for the appropriate types', () => {
-        testClassnames(shallow(<InfoMessage />), 'info');
-        testClassnames(shallow(<TipsMessage />), 'tips');
-        testClassnames(shallow(<SuccessMessage />), 'success');
-        testClassnames(shallow(<ErrorMessage />), 'error');
+        const title = 'Title';
+        testClassnames(shallow(<InfoMessage title={ title } />), 'info');
+        testClassnames(shallow(<TipsMessage title={ title } />), 'tips');
+        testClassnames(shallow(<SuccessMessage title={ title } />), 'success');
+        testClassnames(shallow(<ErrorMessage title={ title } />), 'error');
     });
 });

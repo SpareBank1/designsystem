@@ -8,7 +8,7 @@ export default function MessageBox({ type, title, icon, content, children }) {
             { icon }
         </span>
         <div className={`ffe-message-box__box ffe-message-box__box--${type}`}>
-            <h4 className={`ffe-h4 ffe-message-box__title--${type}`}>{ title }</h4>
+            { title ? <div className={`ffe-h4 ffe-message-box__title--${type}`}>{ title }</div> : null }
             <p className="ffe-body-text">
                  { content || children }
             </p>
