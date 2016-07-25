@@ -1,7 +1,7 @@
 {
   "name": "ffe-datepicker",
-  "version": "1.0.0",
-  "description": "Datepicker",
+  "version": "1.0.1",
+  "description": "FFE Datepicker",
   "main": "index.js",
   "scripts": {
     "compile": "lessc example/example.less example/example.css && cp -R node_modules/ffe-core/fonts/ fonts/ && echo \"$(date +%T): Updated example\"",
@@ -13,6 +13,10 @@
     "type": "git",
     "url": "***REMOVED***"
   },
+  "documentation": [
+    { "type": "html", "file": "example/example.html", "select": "#ffedoc" },
+    { "type": "markdown", "file": "README.md" }
+  ],
   "devDependencies": {
     "ffe-core": "^6.2.0",
     "less": "^2.6.1",
