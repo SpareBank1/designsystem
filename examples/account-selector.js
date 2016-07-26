@@ -67,8 +67,8 @@ function onChange(accountNumberOrUserInput) {
   console.log('account changed', accountNumberOrUserInput);
 }
 
-function onBlur() {
-  console.log('account selector lost focus');
+function onBlur(value) {
+  console.log(`account selector lost focus, account number or input value: ${value}`);
 }
 
 render(
