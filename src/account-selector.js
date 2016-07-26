@@ -15,7 +15,6 @@ export default class AccountSelector extends Component {
 
   constructor(props) {
     super(props);
-
     this.state = this.getDefaultState();
 
     this.onInputFocus = this.onInputFocus.bind(this);
@@ -33,12 +32,15 @@ export default class AccountSelector extends Component {
   }
 
   getDefaultState() {
+    const {accounts} = this.props;
+    const value = '';
+    const filteredAccounts = this.filterAccounts(accounts, value);
     return {
       showAccountSuggestions: false,
       showResetButton: false,
       selectedAccount: null,
-      value: '',
-      filteredAccounts: [],
+      value,
+      filteredAccounts,
     };
   }
 
@@ -236,6 +238,7 @@ export default class AccountSelector extends Component {
     const assignTo = name => component => { this[name] = component; };
     const {locale, placeholder, id, ariaInvalid} = this.props;
     const {filteredAccounts, showAccountSuggestions, value, selectedAccount, showResetButton} = this.state;
+    debugger;
     return (
       <div
         className="nfe-account-selector"
