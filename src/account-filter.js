@@ -1,4 +1,4 @@
-export default function accountFilter(query) {
+export default function accountFilter(query = '') {
   const nameQuery = query.toLowerCase();
   const accountNumberQuery = query.replace(/[ .]/g, '');
 

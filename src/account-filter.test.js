@@ -42,6 +42,10 @@ describe('accountFilter', () => {
     assert.deepEqual(accounts.filter(accountFilter('')), accounts);
   });
 
+  it('should not filter with undefined query', () => {
+    assert.deepEqual(accounts.filter(accountFilter(undefined)), accounts);
+  });
+
   it('should filter by name', () => {
     assert.deepEqual(accounts.filter(accountFilter('Matvererkonto')), [accounts[1]]);
   });
