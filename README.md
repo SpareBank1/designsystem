@@ -51,6 +51,24 @@ You must also import the styles
 @import "node_modules/nfe-account-selector-react/styles/account-suggestions.less";
 ```
 
+## Reset Account Selector from parent component
+
+```
+class Parent extends Component {
+    resetForm(){
+        const {AccountSelectorRef} = this.refs;
+        AccountSelectorRef.reset(giveFocus = true | false)
+    }
+
+    render(){
+        return(l
+            <AccountSelector
+                ref="AccountSelectorRef"
+            />
+        )
+    }
+}
+```
 ## Example
 
 To view live example `npm start`
