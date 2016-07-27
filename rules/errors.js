@@ -177,6 +177,10 @@ module.exports = {
 
         // disallow declaring the same variable more then once
         // http://eslint.org/docs/rules/no-redeclare
-        'no-redeclare': 2
+        'no-redeclare': 2,
+
+        // disallow debugger statements
+        //http://eslint.org/docs/rules/no-debugger
+        'no-debugger' : 2
     }
 };
