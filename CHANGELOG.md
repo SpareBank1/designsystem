@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.2.0
+* Bugfix: Fixed various bugs related to filtered accounts becoming out of sync with AccountsSuggestions
+* Bugfix: return account number instead of name onBlur
+* Removed global Escape handler
+* Removed onAccountSelected prop
+
 ## v1.1.0
 * Added optional prop for onAccountSelected
 
