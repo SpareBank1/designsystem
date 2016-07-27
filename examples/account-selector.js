@@ -67,12 +67,8 @@ function onChange(accountNumberOrUserInput) {
   console.log('account changed', accountNumberOrUserInput);
 }
 
-function onBlur() {
-  console.log('account selector lost focus');
-}
-
-function onAccountSelected(accountNumber) {
-  console.log(`account selected from dropdown: ${accountNumber}`);
+function onBlur(value) {
+  console.log(`account selector lost focus, account number or input value: ${value}`);
 }
 
 render(
@@ -81,7 +77,6 @@ render(
     <AccountSelector
       accounts={ accounts }
       onChange={ onChange }
-      onAccountSelected={ onAccountSelected }
       onBlur={ onBlur }
       locale="nb"
       placeholder="Velg Konto"

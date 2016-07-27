@@ -15,8 +15,7 @@ export default class AccountSelector extends Component {
 
   constructor(props) {
     super(props);
-
-    this.state = this.getDefaultState(props);
+    this.state = this.getDefaultState();
 
     this.onInputFocus = this.onInputFocus.bind(this);
     this.onBlur = this.onBlur.bind(this);
@@ -28,29 +27,36 @@ export default class AccountSelector extends Component {
     this.onAccountSelect = this.onAccountSelect.bind(this);
     this.highlightNextAccount = this.highlightNextAccount.bind(this);
     this.highlightPrevAccount = this.highlightPrevAccount.bind(this);
-    this.globalEscKeyHandler = this.globalEscKeyHandler.bind(this);
     this.globalClickHandler = this.globalClickHandler.bind(this);
+    this.filterAccounts = this.filterAccounts.bind(this);
   }
 
-  getDefaultState(props) {
+  getDefaultState() {
+    const {accounts} = this.props;
+    const value = '';
+    const filteredAccounts = this.filterAccounts(accounts, value);
     return {
       showAccountSuggestions: false,
       showResetButton: false,
       selectedAccount: null,
-      value: '',
-      accounts: props.accounts,
+      value,
+      filteredAccounts,
     };
   }
 
+  componentWillReceiveProps({accounts}) {
+    const {value} = this.state;
+    this.setState({
+      filteredAccounts: this.filterAccounts(accounts, value),
+    });
+  }
   onInputFocus() {
-    const newState = {
+    const {value, filteredAccounts} = this.state;
+    const selectedAccount = value ? filteredAccounts[0] : null;
+    this.setState({
+      selectedAccount,
       showAccountSuggestions: true,
-    };
-
-    if (this.state.value) {
-      newState.selectedAccount = this.props.accounts[0];
-    }
-    this.setState(newState);
+    });
     this.addGlobalEventListeners();
   }
 
@@ -84,13 +90,12 @@ export default class AccountSelector extends Component {
   }
 
   onInputTab(evt) {
-    const newState = {
+    const {selectedAccount} = this.state;
+    const value = selectedAccount ? selectedAccount.name : '';
+    this.setState({
+      value,
       showAccountSuggestions: false,
-    };
-    if (this.state.selectedAccount) {
-      newState.value = this.state.selectedAccount.name;
-    }
-    this.setState(newState);
+    });
   }
 
   onResetButtonKeydown(evt) {
@@ -100,54 +105,55 @@ export default class AccountSelector extends Component {
   }
 
   onEscKeyPressed() {
-    this.setState({
-      showAccountSuggestions: false,
-      selectedAccount: null,
-    });
+    this.reset(true);
   }
 
   onBlur() {
     this.removeGlobalEventListeners();
-    this.props.onBlur(this.state.value);
+    const {selectedAccount, value}= this.state;
+    const {onBlur} = this.props;
+    onBlur(selectedAccount ? selectedAccount.accountNumber : value);
   }
 
   onInputChange(evt) {
     const value = evt.target.value;
-    const filteredAccounts = this.props.accounts.filter(accountFilter(value));
+    const {accounts} = this.props;
+    const filteredAccounts = this.filterAccounts(accounts, value);
     const selectedAccount =
       value.length > 0 && filteredAccounts.length > 0 ? filteredAccounts[0] : null;
     this.setState({
       value,
       selectedAccount,
-      accounts: filteredAccounts,
+      filteredAccounts,
       showResetButton: value.length > 0,
       showAccountSuggestions: true,
-    }, () => this.props.onChange(this.state.value));
+    }, () => this.props.onChange(value));
   }
 
   onAccountSelect(account) {
-    if (account) {
-      this.setState({
-        value: account.name,
-        showAccountSuggestions: false,
-        accounts: this.props.accounts.filter(accountFilter(account.accountNumber)),
-        selectedAccount: account,
-        showResetButton: true,
-      }, () => this.props.onAccountSelected(account.accountNumber));
-    }
+    const {accounts, onChange} = this.props;
+    const {accountNumber} = account;
+    const filteredAccounts = this.filterAccounts(accounts, accountNumber);
+    this.setState({
+      filteredAccounts,
+      value: account.name,
+      selectedAccount: account,
+      showAccountSuggestions: false,
+      showResetButton: true,
+    }, () => onChange(accountNumber));
   }
 
   highlightFirstAccount() {
-    const {accounts} = this.props;
-    if (accounts.length > 0) {
-      this.highlightAccount(accounts[0]);
+    const {filteredAccounts} = this.state;
+    if (filteredAccounts.length > 0) {
+      this.highlightAccount(filteredAccounts[0]);
     }
   }
 
   highlightLastAccount() {
-    const {accounts} = this.props;
-    if (accounts.length > 0) {
-      this.highlightAccount(accounts[accounts.length - 1]);
+    const {filteredAccounts} = this.state;
+    if (filteredAccounts.length > 0) {
+      this.highlightAccount(filteredAccounts[filteredAccounts.length - 1]);
     }
   }
 
@@ -161,13 +167,12 @@ export default class AccountSelector extends Component {
   }
 
   reset(focus) {
-    const state = this.getDefaultState(this.props);
+    const state = this.getDefaultState();
     state.showAccountSuggestions = focus;
     this.setState(state, () => {
       if (focus) {
         this._accountInput.focus();
       }
-      this.props.onChange(this.state.value);
     });
   }
 
@@ -188,21 +193,21 @@ export default class AccountSelector extends Component {
   }
 
   highlightNextAccount() {
-    const {accounts} = this.props;
-    let newAccountIndex = accounts.indexOf(this.state.selectedAccount) + 1;
-    if (newAccountIndex === accounts.length) {
+    const {filteredAccounts} = this.state;
+    let newAccountIndex = filteredAccounts.indexOf(this.state.selectedAccount) + 1;
+    if (newAccountIndex === filteredAccounts.length) {
       newAccountIndex = 0;
     }
-    this.highlightAccount(accounts[newAccountIndex]);
+    this.highlightAccount(filteredAccounts[newAccountIndex]);
   }
 
   highlightPrevAccount() {
-    const {accounts} = this.props;
-    let newAccountIndex = accounts.indexOf(this.state.selectedAccount) - 1;
+    const {filteredAccounts} = this.state;
+    let newAccountIndex = filteredAccounts.indexOf(this.state.selectedAccount) - 1;
     if (newAccountIndex < 0) {
-      newAccountIndex = accounts.length - 1;
+      newAccountIndex = filteredAccounts.length - 1;
     }
-    this.highlightAccount(accounts[newAccountIndex]);
+    this.highlightAccount(filteredAccounts[newAccountIndex]);
   }
 
   addGlobalEventListeners() {
@@ -215,14 +220,6 @@ export default class AccountSelector extends Component {
     window.removeEventListener('keyup', this.globalEscKeyHandler);
   }
 
-  globalEscKeyHandler(evt) {
-    if (evt.which === KeyCode.ESC) {
-      this.setState({
-        showAccountSuggestions: false,
-      });
-    }
-  }
-
   globalClickHandler(evt) {
     if ((this.state.showAccountSuggestions && !this._root.contains(evt.target))) {
       this.setState({
@@ -232,33 +229,37 @@ export default class AccountSelector extends Component {
     }
   }
 
+  filterAccounts(accounts, value) {
+    return accounts.filter(accountFilter(value));
+  }
+
   render() {
     const assignTo = name => component => { this[name] = component; };
-    const {locale} = this.props;
-    const {accounts} = this.state;
+    const {locale, placeholder, id, ariaInvalid} = this.props;
+    const {filteredAccounts, showAccountSuggestions, value, selectedAccount, showResetButton} = this.state;
     return (
       <div
         className="nfe-account-selector"
         role="combobox"
-        aria-expanded={ this.state.showAccountSuggestions }
+        aria-expanded={ showAccountSuggestions }
         ref={assignTo('_root')}
       >
         <input
           onFocus={ this.onInputFocus }
-          value={ this.state.value }
+          value={ value }
           onChange={ this.onInputChange }
           className="ffe-input-field nfe-account-selector__search"
           onKeyDown={ this.onInputKeyDown }
           ref={ assignTo('_accountInput') }
-          placeholder={this.props.placeholder}
-          id={ this.props.id }
+          placeholder={placeholder}
+          id={ id }
           onBlur={this.onBlur}
           aria-autocomplete="inline"
-          aria-invalid={this.props.ariaInvalid}
+          aria-invalid={ariaInvalid}
         />
-        {this.state.showResetButton ?
+        {showResetButton ?
           <button
-            aria-label={ i18n[this.props.locale].RESET_SEARCH }
+            aria-label={ i18n[locale].RESET_SEARCH }
             className="nfe-account-selector__reset-button"
             onClick={ this.reset.bind(true) }
             onKeyDown={ this.onResetButtonKeydown }
@@ -269,10 +270,10 @@ export default class AccountSelector extends Component {
           null
         }
         <AccountDetails
-          account={ this.state.selectedAccount }
+          account={ selectedAccount }
           locale={ locale }
         />
-        { this.state.showAccountSuggestions && accounts.length ?
+        { showAccountSuggestions && filteredAccounts.length ?
           <ScrollArea
             speed={ 0.8 }
             className="nfe-account-selector__scroll"
@@ -293,9 +294,9 @@ export default class AccountSelector extends Component {
           >
             <AccountSuggestionList
               locale={locale}
-              accounts={ accounts }
+              accounts={ filteredAccounts }
               onSelect={ this.onAccountSelect }
-              selectedAccount={ this.state.selectedAccount }
+              selectedAccount={ selectedAccount }
               ref={ assignTo('_suggestionList') }
             />
           </ScrollArea>
@@ -308,7 +309,6 @@ export default class AccountSelector extends Component {
 AccountSelector.propTypes = {
   accounts: PropTypes.array,
   onChange: PropTypes.func.isRequired,
-  onAccountSelected : PropTypes.func,
   locale: PropTypes.oneOf(["nb", "nn" ,"en"]),
   onBlur: PropTypes.func,
   placeholder: PropTypes.string,
@@ -318,10 +318,8 @@ AccountSelector.propTypes = {
 
 AccountSelector.defaultProps = {
   ariaInvalid: false,
-  onAccountSelected : () => {},
   placeholder : PropTypes.string,
   locale : 'nb',
-  accounts : [],
   id : PropTypes.string,
+  onBlur: () => {},
 };
-
