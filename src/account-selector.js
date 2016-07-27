@@ -173,7 +173,6 @@ export default class AccountSelector extends Component {
       if (focus) {
         this._accountInput.focus();
       }
-      this.props.onChange(this.state.value);
     });
   }
 
@@ -238,7 +237,6 @@ export default class AccountSelector extends Component {
     const assignTo = name => component => { this[name] = component; };
     const {locale, placeholder, id, ariaInvalid} = this.props;
     const {filteredAccounts, showAccountSuggestions, value, selectedAccount, showResetButton} = this.state;
-    debugger;
     return (
       <div
         className="nfe-account-selector"
