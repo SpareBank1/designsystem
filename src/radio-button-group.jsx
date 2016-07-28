@@ -39,11 +39,13 @@ const RadioButtonGroup = ({ label, name, inline, buttons, children, value, disab
         }));
     }
 
+    const labelStyle = inline ? { display: 'block' } : {};
+
     return (
         <div className="ffe-input-group" aria-live="polite">
             <fieldset className="ffe-fieldset" value={ value } onChange={ onChange }>
                 { label ?
-                    <legend className="ffe-form-label">
+                    <legend className="ffe-form-label" style={ labelStyle }>
                         { label }
                     </legend>
                 : '' }
