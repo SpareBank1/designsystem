@@ -1,5 +1,8 @@
 #CHANGELOG
 
+##UNRELEASED
+Modified the curvature below the svg
+
 ##Version 2.0.2
 Fungerer nå på små flater
 
