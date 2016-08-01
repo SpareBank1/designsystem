@@ -90,13 +90,15 @@ export default class AccountSelector extends Component {
   }
 
   onInputTab(evt) {
-    const {selectedAccount} = this.state;
-    const value = selectedAccount ? selectedAccount.name : '';
+    const {selectedAccount, value} = this.state;
+    const selectedValue = selectedAccount ? selectedAccount.name : value;
     this.setState({
-      value,
+      value : selectedValue,
       showAccountSuggestions: false,
     }, () => {
-      this.onAccountSelect(selectedAccount);
+      if (selectedAccount) {
+        this.onAccountSelect(selectedAccount);
+      }
     });
   }
 
