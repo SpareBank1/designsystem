@@ -95,6 +95,8 @@ export default class AccountSelector extends Component {
     this.setState({
       value,
       showAccountSuggestions: false,
+    }, () => {
+      this.onAccountSelect(selectedAccount);
     });
   }
 
