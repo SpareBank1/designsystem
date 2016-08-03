@@ -13,6 +13,7 @@
     "type": "git",
     "url": "***REMOVED***"
   },
+  "homepage": "***REMOVED***",
   "documentation": [
     { "type": "html", "file": "example/example.html", "select": "#ffedoc" },
     { "type": "markdown", "file": "README.md" }
