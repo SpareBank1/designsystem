@@ -1,5 +1,10 @@
 # Changelog
 
+## Version 4.2.0
+* Added graf-opp-enkel-ikon.svg
+* Added soylediagram-ikon.svg
+* Added pil-ut-av-boks-skraa-ikon.svg
+
 ## Version 4.1.0
 * Added blyant-ikon.svg
 * Added person-pluss-ikon.svg
