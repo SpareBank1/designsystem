@@ -1,4 +1,6 @@
 # Changelog
+# Unreleased
+* Bugfix: Select account on tab
 
 ## v1.2.0
 * Bugfix: Fixed various bugs related to filtered accounts becoming out of sync with AccountsSuggestions
