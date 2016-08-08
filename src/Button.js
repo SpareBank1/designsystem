@@ -16,7 +16,6 @@ export default function Button(props) {
         style = {},
         isTabbable,
     } = props;
-    const tabIndex = isTabbable ? 0 : -1;
     const loadingClass = isLoading ? `ffe-${type}-button--loading` : '';
 
     return (
@@ -27,7 +26,7 @@ export default function Button(props) {
             id={id}
             disabled={disableButton}
             aria-disabled={disableButton}
-            tabIndex={tabIndex}
+            {... isTabbable === false ? { tabIndex: -1 } : {}}
             style={style}
         >
             {simpleContent ?
