@@ -1,6 +1,6 @@
 # Changelog
 
-## Next Version
+## Version 4.3.0
 * Added person-rullestol-ikon.svg
 * Added hjerte-kardiograf-ikon.svg
 
