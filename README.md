@@ -93,6 +93,18 @@ to disable a button, you can do this as well by setting the `disableButton` prop
 
 This works for all button types, but make sure you have a really good reason for using it!
 
+### Tabbable
+
+Buttons are by default tabbable/allowed to gain keyboard focus. In the rare occurence this
+is not desired can the isTabbable attribute be utilized:
+
+```javascript
+<PrimaryButton isTabbable={false}>...</PrimaryButton>
+```
+
+This works for all button types, but make sure you have a really good reason for using it! 
+N.B. making it impossible to reach buttons with keyboard is an accessbility violation!
+
 ### Styling
 
 Any style attributes given to a button component will be passed on to the underlying html button element.

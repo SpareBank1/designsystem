@@ -1,5 +1,8 @@
 # Changelog
 
+## v2.4.1
+* Fix 'isTabbable' support: buttons are now tabbable by default if 'isTabbable' isn't specified.
+
 ## v2.4.0
 
 * Buttons now accepts className from prop
