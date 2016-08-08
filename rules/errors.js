@@ -141,10 +141,6 @@ module.exports = {
         // http://eslint.org/docs/rules/no-empty-pattern
         'no-empty-pattern': 2,
 
-        // disallow comparisons to null without a type-checking operator
-        // http://eslint.org/docs/rules/no-eq-null
-        'no-eq-null': 2,
-
         // disallow the use of leading or trailing decimal points in numeric literals
         // http://eslint.org/docs/rules/no-floating-decimal
         'no-floating-decimal': 2,
