@@ -141,57 +141,88 @@ describe('Button components:', () => {
         expect(onClick.calledOnce).to.equal(true);
     });
 
-    it('Button button should be tabbable by default', () => {
-        const wrapper = shallow(<Button onClick={() => ({})}>Hello</Button>);
-        const button = wrapper.find('button');
-        expect(button.prop('tabindex')).to.be.equal(undefined);
-    });
-
-    it('Button can be set to be non-tabbable', () => {
-        const wrapper = shallow(<Button onClick={() => ({})} isTabbable={false}>Hello</Button>);
-        const button = wrapper.find('button');
-        expect(button.prop('tabIndex')).to.be.equal(-1);
-    });
-
-    it('Set tabbable on Button', () => {
+    it('Set isTabbable={true} on Button does nothing', () => {
         const wrapper = shallow(<Button onClick={() => ({})} isTabbable>Hello</Button>);
         const button = wrapper.find('button');
-        expect(button.prop('tabIndex')).to.be.equal(0);
+        expect(button.prop('tabIndex')).to.be.equal(undefined);
     });
 
-    it('ActionButton passes tabbability on to Button', () => {
+    it('ActionButton is tabbable by default', () => {
         const wrapper = shallow(
-            <ActionButton disableButton onClick={() => ({})} isTabbable>Hello</ActionButton>
+            <ActionButton disableButton onClick={() => ({})}>Hello</ActionButton>
         );
-        expect(wrapper.find('Button').prop('isTabbable')).to.be.equal(true);
+        expect(wrapper.find('Button').prop('tabIndex')).to.be.equal(undefined);
     });
 
-    it('PrimaryButton passes tabbability on to Button', () => {
+    it('ActionButton passes isTabbable={false} on to Button', () => {
         const wrapper = shallow(
-            <PrimaryButton disableButton onClick={() => ({})} isTabbable>Hello</PrimaryButton>
+            <ActionButton disableButton onClick={() => ({})} isTabbable={false}>Hello</ActionButton>
         );
-        expect(wrapper.find('Button').prop('isTabbable')).to.be.equal(true);
+        expect(wrapper.find('Button').prop('isTabbable')).to.be.equal(false);
     });
 
-    it('SecondaryButton passes tabbability on to Button', () => {
+    it('PrimaryButton is tabbable by default', () => {
         const wrapper = shallow(
-            <SecondaryButton disableButton onClick={() => ({})} isTabbable>Hello</SecondaryButton>
+            <PrimaryButton disableButton onClick={() => ({})}>Hello</PrimaryButton>
         );
-        expect(wrapper.find('Button').prop('isTabbable')).to.be.equal(true);
+        expect(wrapper.find('Button').prop('tabIndex')).to.be.equal(undefined);
     });
 
-    it('ShortcutButton passes tabbability on to Button', () => {
+    it('PrimaryButton passes isTabbable={false} on to Button', () => {
         const wrapper = shallow(
-            <ShortcutButton disableButton onClick={() => ({})} isTabbable>Hello</ShortcutButton>
+            <PrimaryButton disableButton onClick={() => ({})} isTabbable={false}>
+                Hello
+            </PrimaryButton>
         );
-        expect(wrapper.find('Button').prop('isTabbable')).to.be.equal(true);
+        expect(wrapper.find('Button').prop('isTabbable')).to.be.equal(false);
     });
 
-    it('TertiaryButton passes tabbability on to Button', () => {
+    it('SecondaryButton is tabbable by default', () => {
         const wrapper = shallow(
-            <TertiaryButton disableButton onClick={() => ({})} isTabbable>Hello</TertiaryButton>
+            <SecondaryButton disableButton onClick={() => ({})}>Hello</SecondaryButton>
         );
-        expect(wrapper.find('Button').prop('isTabbable')).to.be.equal(true);
+        expect(wrapper.find('Button').prop('tabIndex')).to.be.equal(undefined);
+    });
+
+    it('SecondaryButton passes isTabbable={false} on to Button', () => {
+        const wrapper = shallow(
+            <SecondaryButton disableButton onClick={() => ({})} isTabbable={false}>
+                Hello
+            </SecondaryButton>
+        );
+        expect(wrapper.find('Button').prop('isTabbable')).to.be.equal(false);
+    });
+
+    it('ShortcutButton is tabbable by default', () => {
+        const wrapper = shallow(
+            <ShortcutButton disableButton onClick={() => ({})}>Hello</ShortcutButton>
+        );
+        expect(wrapper.find('Button').prop('tabIndex')).to.be.equal(undefined);
+    });
+
+    it('ShortcutButton passes isTabbable={false} on to Button', () => {
+        const wrapper = shallow(
+            <ShortcutButton disableButton onClick={() => ({})} isTabbable={false}>
+                Hello
+            </ShortcutButton>
+        );
+        expect(wrapper.find('Button').prop('isTabbable')).to.be.equal(false);
+    });
+
+    it('TertiaryButton is tabbable by default', () => {
+        const wrapper = shallow(
+            <TertiaryButton disableButton onClick={() => ({})}>Hello</TertiaryButton>
+        );
+        expect(wrapper.find('Button').prop('tabIndex')).to.be.equal(undefined);
+    });
+
+    it('TertiaryButton passes isTabbable={false} on to Button', () => {
+        const wrapper = shallow(
+            <TertiaryButton disableButton onClick={() => ({})} isTabbable={false}>
+                Hello
+            </TertiaryButton>
+        );
+        expect(wrapper.find('Button').prop('isTabbable')).to.be.equal(false);
     });
 
     it('Button sets class', () => {
