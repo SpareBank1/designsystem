@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 4.3.0
+* Added person-rullestol-ikon.svg
+* Added hjerte-kardiograf-ikon.svg
+
 ## Version 4.2.0
 * Added graf-opp-enkel-ikon.svg
 * Added soylediagram-ikon.svg
