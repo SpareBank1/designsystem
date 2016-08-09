@@ -1,5 +1,8 @@
 # Changelog
 
+## Version 4.4.0
+* Added snakkeboble-ikon.svg
+
 ## Version 4.3.0
 * Added person-rullestol-ikon.svg
 * Added hjerte-kardiograf-ikon.svg
