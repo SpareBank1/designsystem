@@ -1,3 +1,7 @@
+## v0.5.1 
+
+* Updated ffe-icons version to 4.3.0
+
 ## v0.5.0
 
 * Added support for `onClick` property on icons
