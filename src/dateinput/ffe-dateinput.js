@@ -18,6 +18,7 @@ export default class FFEDateInput extends React.Component {
       <div className="ffe-dateinput">
         <input
           type="text"
+          maxLength="10"
           value={ this.props.value }
           onFocus={ this.props.onFocus }
           onBlur={ this.props.onBlur }

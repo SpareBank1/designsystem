@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.1.3
+
+* Added max length for input
+
 ## v1.1.2
 
 * Added ariaInvalid to support validation errors
