@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-ffe-base",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git@stash.intern.sparebank1.no:22/ffe/eslint-config-ffe.git"
+    "url": "ssh://git@stash.intern.sparebank1.no:22/ffe/eslint-config-ffe-base.git"
   },
   "author": "Sparebank 1",
   "license": "",
