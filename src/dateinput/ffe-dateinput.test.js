@@ -17,6 +17,7 @@ describe('<FFEDateInput />', () => {
     onFocus={onFocus}
     onKeyDown={onKeyDown}
     value="2016-03-07"
+    ariaInvalid={false}
   />);
 
   it('should render a wrapper for the input field', () => {
@@ -40,6 +41,10 @@ describe('<FFEDateInput />', () => {
 
     it('should have property from input props', () => {
       assert.equal(input.prop('placeholder'), 'Given placeholder');
+    });
+
+    it('should have given aria-invalid', () => {
+      assert.equal(input.prop('aria-invalid'), false);
     });
 
     it('should have class name from input props', () => {

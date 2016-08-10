@@ -30,6 +30,7 @@ class DateInputExample extends React.Component {
       <DateInput
         onChange={ this.onChange }
         value={ this.state.date }
+        ariaInvalid={ false }
       />
     );
   }
