@@ -114,6 +114,7 @@ export default class FFEDatepicker extends React.Component {
           value={ this.props.value }
           inputProps={ this.props.inputProps }
           ref={ c => (this.dateInputRef = c) }
+          ariaInvalid={ this.props.ariaInvalid }
         />
         { this.state.displayDatePicker ?
           <Calendar
@@ -137,4 +138,5 @@ FFEDatepicker.propTypes = {
   minDate: PropTypes.string,
   maxDate: PropTypes.string,
   inputProps: PropTypes.object,
+  ariaInvalid: PropTypes.bool,
 };

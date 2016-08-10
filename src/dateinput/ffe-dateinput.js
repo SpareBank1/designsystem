@@ -25,6 +25,7 @@ export default class FFEDateInput extends React.Component {
           onChange={ this.props.onChange }
           onKeyPress={ this.props.onKeyDown }
           ref={ c => (this._input = c) }
+          aria-invalid={ this.props.ariaInvalid }
           { ...inputProps }
         />
         <KalenderIkon className="ffe-dateinput__icon" />
@@ -40,4 +41,5 @@ FFEDateInput.propTypes = {
   onKeyDown: PropTypes.func,
   value: PropTypes.string.isRequired,
   inputProps: PropTypes.object,
+  ariaInvalid: PropTypes.bool,
 };
