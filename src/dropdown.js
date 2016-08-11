@@ -16,6 +16,7 @@ function Dropdown({
     defaultValue,
     children,
     invalid,
+    isLoading,
     errorMessage
 }) {
     const domId = id || createID(label, children);
@@ -36,6 +37,11 @@ function Dropdown({
                 >
                     { children }
                 </select>
+                
+                {isLoading && 
+                    <div className="ffe-loading-spinner"></div>
+                }
+                
                 {!errorMessage ? null :
                     <div className="ffe-info-message ffe-info-message--error">
                         { errorMessage }
@@ -51,7 +57,8 @@ Dropdown.propTypes = {
     selectedValue: PropTypes.string,
     defaultValue: PropTypes.string,
     children: PropTypes.array,
-    invalid: PropTypes.bool
+    invalid: PropTypes.bool,
+    isLoading: PropTypes.bool
 };
 
 export default Dropdown;
