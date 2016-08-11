@@ -8,7 +8,7 @@ import Expandable from './ffe-expandable-react';
 class Folded extends React.Component {
     render() {
         return (<div className="folded">
-            test contet
+            test content
         </div>);
     }
 
@@ -22,7 +22,7 @@ class Expanded extends React.Component {
     render() {
         return (
             <div className="expanded">
-                test contet
+                test content
             </div>
         );
     }

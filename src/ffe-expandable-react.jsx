@@ -1,5 +1,5 @@
 import React from 'react';
-import ComponentHeight from './ffe-component-height';
+import ComponentHeight from 'react-height';
 
 class Expandable extends React.Component {
 
