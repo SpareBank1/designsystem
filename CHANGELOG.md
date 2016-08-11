@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.1.4
+
+* Fix tabbing bug which caused datepicker not to close
+
 ## v1.1.3
 
 * Added max length for input
