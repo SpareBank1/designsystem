@@ -1,6 +1,6 @@
 {
   "name": "ffe-dropdown-react",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "main": "lib/dropdown.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/. && npm run example",
@@ -14,7 +14,7 @@
     "has-published": "npm show . versions -s | grep -q ${npm_package_version}"
   },
   "peerDependencies": {
-    "ffe-core": "^6.0.0"
+    "ffe-core": "^6.3.1"
   },
   "dependencies": {
     "nfe-hash": "^1.1.0"

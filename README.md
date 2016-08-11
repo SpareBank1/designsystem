@@ -47,3 +47,11 @@ To get an error message showing pass `error` and `errorMessage` to the `Dropdown
     <option value="bar">Bar</option>
 </Dropdown>
 ```
+
+### Loading state
+
+Loading state can be indicated using `isLoading`. When this is set a loading spinner will be rendered next to the dropdown.
+
+```javascript
+<Dropdown isLoading={ true }>...</Dropdown>
+```

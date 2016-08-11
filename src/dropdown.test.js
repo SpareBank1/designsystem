@@ -77,6 +77,24 @@ describe('<Dropdown />', () => {
     });
 });
 
+describe('<Dropdown /> loading spinnner', () => {
+
+    it('should be shown when isLoading=true', () => {
+        const wrapper = shallow(<Dropdown id="1" isLoading={true}>
+            <option value="steve">Steve Vai</option>
+        </Dropdown>);
+
+        assert.equal(wrapper.find('.ffe-loading-spinner').length, 1);
+    });
+
+    it('should not be shown when isLoading is not set', () => {
+        const wrapper = shallow(<Dropdown id="1">
+            <option value="steve">Steve Vai</option>
+        </Dropdown>);
+
+        assert.equal(wrapper.find('.ffe-loading-spinner').length, 0);
+    });
+});
 
 describe('<Dropdown /> with externally rendered label and id', () => {
 
