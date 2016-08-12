@@ -51,11 +51,14 @@ export default class AccountSelector extends Component {
     });
   }
   onInputFocus() {
+    const {onFocus} = this.props;
     const {value, filteredAccounts} = this.state;
     const selectedAccount = value ? filteredAccounts[0] : null;
     this.setState({
       selectedAccount,
       showAccountSuggestions: true,
+    }, () => {
+        onFocus();
     });
     this.addGlobalEventListeners();
   }
@@ -171,12 +174,14 @@ export default class AccountSelector extends Component {
   }
 
   reset(focus) {
+    const {onChange} = this.props;
     const state = this.getDefaultState();
     state.showAccountSuggestions = focus;
     this.setState(state, () => {
       if (focus) {
         this._accountInput.focus();
       }
+      onChange(state.selectedAccount);
     });
   }
 
@@ -265,7 +270,7 @@ export default class AccountSelector extends Component {
           <button
             aria-label={ i18n[locale].RESET_SEARCH }
             className="nfe-account-selector__reset-button"
-            onClick={ this.reset.bind(true) }
+            onClick={ () => { this.reset(true); } }
             onKeyDown={ this.onResetButtonKeydown }
             tabIndex="-1"
           >
@@ -315,6 +320,7 @@ AccountSelector.propTypes = {
   onChange: PropTypes.func.isRequired,
   locale: PropTypes.oneOf(["nb", "nn" ,"en"]),
   onBlur: PropTypes.func,
+  onFocus: PropTypes.func,
   placeholder: PropTypes.string,
   ariaInvalid: PropTypes.bool,
   id: PropTypes.string,
@@ -322,8 +328,9 @@ AccountSelector.propTypes = {
 
 AccountSelector.defaultProps = {
   ariaInvalid: false,
-  placeholder : PropTypes.string,
+  placeholder : '',
   locale : 'nb',
   id : PropTypes.string,
   onBlur: () => {},
+  onFocus: () => {},
 };
