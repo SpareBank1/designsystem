@@ -1,6 +1,6 @@
 {
   "name": "ffe-expandable-react",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "lib/ffe-expandable-react.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/.",
@@ -51,5 +51,8 @@
       "react",
       "es2015"
     ]
+  },
+  "dependencies": {
+    "react-height": "^2.1.1"
   }
 }
