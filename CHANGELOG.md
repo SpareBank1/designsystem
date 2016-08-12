@@ -1,6 +1,8 @@
 # Changelog
-# Unreleased
+# v.1.3.0
 * Bugfix: Select account on tab
+* Fire onChange with null on AccountSelector reset
+* Added optional prop onFocus
 
 ## v1.2.0
 * Bugfix: Fixed various bugs related to filtered accounts becoming out of sync with AccountsSuggestions

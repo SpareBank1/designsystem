@@ -27,6 +27,7 @@ const accounts = [
     onChange={ onChange }
     onAccountSelected={ onAccountSelected }
     onBlur={ onBlur }
+    onFocus={ onFocus }
     locale="nb"
     ariaInvalid={false}
     placeholder="Select account"
@@ -38,6 +39,7 @@ const accounts = [
 - accounts: Array of account objects where only "name" is a required prop.
 - onChange: callback who will receive a string value with either the users typed value or the account number for the account the user selected.
 - onBlur: same as onChange, but called when the component looses focus.
+- onFocus: called when the component gains focus
 - locale: Either "nb", "nn" or "en". Defaults to "nb" if not set.
 - placeholder (optional): Set the placeholder attribute of the input field.
 - id (optional): Set the id attribute of the input field so a label can be associated with the field.
@@ -61,7 +63,7 @@ class Parent extends Component {
     }
 
     render(){
-        return(l
+        return(
             <AccountSelector
                 ref="AccountSelectorRef"
             />
