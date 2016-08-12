@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.1.4
+
+* Bumped version of ffe-datepicker dependency
+
 ## v1.1.3
 
 * Added max length for input
