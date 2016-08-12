@@ -1,6 +1,6 @@
 {
   "name": "ffe-datepicker",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "FFE Datepicker",
   "main": "index.js",
   "scripts": {

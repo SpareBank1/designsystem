@@ -1,5 +1,9 @@
 # Changelog
 
+## v.1.0.3
+
+* Fix calendar header title text width to avoid next/prev arrows moving on click (Jira: DIG-11736)
+
 ## v1.0.1 and v1.0.2
 
 * Add metadata for styleguide documentation
