@@ -71,6 +71,10 @@ function onBlur(value) {
   console.log(`account selector lost focus, account number or input value: ${value}`);
 }
 
+function onFocus() {
+  console.log('account selector gained focus');
+}
+
 render(
   <div>
     <label htmlFor="custom-id" className="ffe-form-label">Velg konto</label>
@@ -78,6 +82,7 @@ render(
       accounts={ accounts }
       onChange={ onChange }
       onBlur={ onBlur }
+      onFocus={ onFocus }
       locale="nb"
       placeholder="Velg Konto"
       id="custom-id"
