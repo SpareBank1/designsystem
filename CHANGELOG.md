@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## Version 1.2.2
+Updated ffe-expandable-react to use react-height to calculate panel height
+
 ## Version 1.2.1
 Updated ffe-expandable-react and ffe-icons-react to fix some bugs.
 
