@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-ffe",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -28,6 +28,6 @@
     "eslint": "^2.9.0"
   },
   "dependencies": {
-    "eslint-config-ffe-base": "^1.0.1"
+    "eslint-config-ffe-base": "^2.0.0"
   }
 }
