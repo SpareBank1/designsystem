@@ -1,4 +1,5 @@
 import React, { Children, PropTypes } from 'react';
+import RadioBase from './radio-base';
 import RadioButton from './radio-button';
 
 const nil = () => {};
@@ -29,6 +30,7 @@ const RadioButtonGroup = ({ label, name, inline, buttons, children, value, disab
                                                    disabled={ c.disabled || disabled }
                                                    onChange={ listenToChange(onChange, c.onChange) } /> );
     } else if (name || inline || value || disabled) {
+
         // Allow to default name & inline values for all children, as those are most often shared.
         overridden = Children.map(children, child => React.cloneElement(child, {
             name: child.props.name || name,
@@ -60,8 +62,11 @@ RadioButtonGroup.propTypes = {
     children: (props, name) => {
         const children = Children.toArray(props[name]);
         for (var n=0; n<children.length; ++n) {
-            if (children[n].type !== RadioButton) {
-                return new Error('Children of `RadioButtonGroup` is invalid as only `RadioButton`s are allowed.');
+            if (![RadioBase, RadioButton].includes(children[n].type)) {
+                return new Error(
+                    'Children of `RadioButtonGroup` is invalid as only ' +
+                    '`RadioBase`s and `RadioButton`s are allowed.'
+                );
             }
         }
     },
