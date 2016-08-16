@@ -14,7 +14,8 @@ CSS Object Model when using this component.
 
 ## Usage
 
-At it's simplest you can just use the RadioButton directly:
+### `<RadioButton />`
+At it's simplest you can just use the `RadioButton` directly:
 
 ```javascript
 import RadioButton from 'ffe-radio-button-react';
@@ -31,12 +32,15 @@ import RadioButton from 'ffe-radio-button-react';
 If you want to have a more complex label, you can use `children`:
 
 ```javascript
-<RadioButton value="whatever">
+<RadioButton value="...">
     <span>Look at me, I'm a super special label!</span>
 </RadioButton>
 ```
 
-However, the `RadioButton` becomes a bit more useful when combined with the `RadioButtonGroup`:
+### `<RadioButtonGroup />`
+
+However, the `RadioButton` becomes a bit more useful when combined with the
+`RadioButtonGroup`:
 
 ```javascript
 import { RadioButton, RadioButtonGroup } from 'ffe-radio-button-react';
@@ -47,12 +51,12 @@ import { RadioButton, RadioButtonGroup } from 'ffe-radio-button-react';
 </RadioButtonGroup>
 ```
 
-The `label` is optional. If `name` or `inline` is specified on the `RadioButtonGroup`, those
-values will be defaulted on the children (but not overriden, so you can create complex combinations
-if you need).
+The `label` is optional. If `name` or `inline` is specified on the
+`RadioButtonGroup`, those values will be defaulted on the children (but not
+overridden, so you can create complex combinations if you need).
 
-In case you don't want to explicitly declare `RadioButton` you can also pass an array of button
-configs:
+In case you don't want to explicitly declare `RadioButton` you can also pass an
+array of button configs:
 
 ```javascript
 import { RadioButton, RadioButtonGroup } from 'ffe-radio-button-react';
@@ -70,8 +74,8 @@ const buttonsConfig = [
 />
 ```
 
-Instead of marking an individual `RadioButton` as checked, you can also pass the selected
-value directly to the `RadioButtonGroup`:
+Instead of marking an individual `RadioButton` as checked, you can also pass
+the selected value directly to the `RadioButtonGroup`:
 
 ```javascript
 import { RadioButton, RadioButtonGroup } from 'ffe-radio-button-react';
@@ -82,5 +86,26 @@ import { RadioButton, RadioButtonGroup } from 'ffe-radio-button-react';
 </RadioButtonGroup>
 ```
 
-Remember that this creates a controlled React component, and you need to handle `onChange` appropriately,
-otherwise you've just created a read-only field.
+Remember that this creates a controlled React component, and you need to handle
+`onChange` appropriately, otherwise you've just created a read-only field.
+
+### `<RadioSwitch />`
+
+This package also provides a RadioSwitch component, which lets you specify two
+choices in a "switch" like design
+([see docs](***REMOVED***)):
+
+```javascript
+import { RadioSwitch } from 'ffe-radio-button-react';
+
+<RadioSwitch
+    name="some-setting"
+    label="En innstilling"
+    onChange={ function }
+    switch1Label="På"
+    switch1Value={ true }
+    switch2Label="Av"
+    switch2Value={ false }
+    value={ true }
+/>
+```
