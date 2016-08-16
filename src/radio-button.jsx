@@ -1,15 +1,23 @@
-import React, { PropTypes } from 'react';
+import React, { Component, PropTypes } from 'react';
 import hash from 'nfe-hash';
 
 import RadioBase from './radio-base';
 
-const RadioButton = (props) => {
-    const labelClasses = `ffe-radio-button ${ props.inline ? 'ffe-radio-button--inline' : '' }`;
+class RadioButton extends Component {
+    constructor(props) {
+        super(props);
 
-    return (
-        <RadioBase labelClasses={ labelClasses } {...props} />
-    );
-};
+        this.state = {
+            labelClasses: `ffe-radio-button ${props.inline ? 'ffe-radio-button--inline' : ''}`
+        };
+    }
+
+    render() {
+        return (
+            <RadioBase labelClasses={ this.state.labelClasses } {...this.props} />
+        );
+    }
+}
 
 RadioButton.propTypes = {
     checked: PropTypes.bool,
