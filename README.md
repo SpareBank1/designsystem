@@ -102,10 +102,8 @@ import { RadioSwitch } from 'ffe-radio-button-react';
     name="some-setting"
     label="En innstilling"
     onChange={ function }
-    switch1Label="På"
-    switch1Value={ true }
-    switch2Label="Av"
-    switch2Value={ false }
+    firstOption={ { label: 'På', value: true } }
+    lastOption={ { label: 'Av', value: false } }
     value={ true }
 />
 ```

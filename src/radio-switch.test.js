@@ -13,8 +13,8 @@ describe('<RadioSwitch />', () => {
         const checkedValue = 2;
         const wrapper = shallow(
             <RadioSwitch
-                switch1Label="one" switch2Label="two"
-                switch1Value={ 1 } switch2Value={ 2 }
+                firstOption={ { label: 'one', value: 1 } }
+                lastOption={ { label: 'two', value: 2 } }
                 value={ checkedValue }
             />
         );
