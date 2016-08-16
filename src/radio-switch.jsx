@@ -8,12 +8,10 @@ const RadioSwitch = (props) => {
         value,
         disabled,
         label,
-        switch1Label,
-        switch2Label,
+        firstOption,
+        lastOption,
         name,
         onChange,
-        switch1Value,
-        switch2Value,
     } = props;
 
     return (
@@ -25,17 +23,17 @@ const RadioSwitch = (props) => {
             onChange={onChange}
         >
             <RadioBase
-                checked={value === switch1Value}
-                label={switch1Label}
+                checked={value === firstOption.value}
+                label={firstOption.label}
                 labelClasses="ffe-radio-switch"
-                value={switch1Value}
+                value={firstOption.value}
             />
             <span> </span>
             <RadioBase
-                checked={value === switch2Value}
-                label={switch2Label}
+                checked={value === lastOption.value}
+                label={lastOption.label}
                 labelClasses="ffe-radio-switch"
-                value={switch2Value}
+                value={lastOption.value}
             />
         </RadioButtonGroup>
     );
@@ -44,13 +42,17 @@ const RadioSwitch = (props) => {
 RadioSwitch.propTypes = {
     value: PropTypes.string,
     disabled: PropTypes.bool,
+    firstOption: PropTypes.shape({
+        label: PropTypes.node.isRequired,
+        value: PropTypes.any.isRequired
+    }).isRequired,
     label: PropTypes.string,
-    switch1Label: PropTypes.any.isRequired,
-    switch2Label: PropTypes.any.isRequired,
+    lastOption: PropTypes.shape({
+        label: PropTypes.node.isRequired,
+        value: PropTypes.any.isRequired
+    }).isRequired,
     name: PropTypes.string,
     onChange: PropTypes.func,
-    switch1Value: PropTypes.any.isRequired,
-    switch2Value: PropTypes.any.isRequired,
 };
 
 export default RadioSwitch;
