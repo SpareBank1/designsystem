@@ -32,19 +32,14 @@ const RadioButtonGroup = ({ label, name, inline, buttons, children, value, disab
     } else if (name || inline || value || disabled) {
 
         // Allow to default name & inline values for all children, as those are most often shared.
-        overridden = Children.map(children, child => {
-            if(![RadioBase, RadioButton].includes(child.type)) {
-                return React.cloneElement(child, {});
-            }
-
-            return React.cloneElement(child, {
+        overridden = Children.map(children, child => React.cloneElement(child, {
                 name: child.props.name || name,
                 inline: defaultBoolean(child.props.inline, inline),
                 checked: isChecked(value, child.props.value, child.props.checked),
                 disabled: child.props.disabled || disabled,
                 onChange: listenToChange(onChange, child.props.onChange)
-            });
-        });
+            })
+        );
     }
 
     const labelStyle = inline ? { display: 'block' } : {};
@@ -65,7 +60,15 @@ const RadioButtonGroup = ({ label, name, inline, buttons, children, value, disab
 };
 
 RadioButtonGroup.propTypes = {
-    children: PropTypes.arrayOf(PropTypes.node).isRequired,
+    children: (props, name) => {
+        const children = Children.toArray(props[name]);
+        const allowedTypes = [ RadioButton, RadioBase ];
+        if (children.some(child => !allowedTypes.includes(child.type))) {
+            return new Error(
+                'Children of `RadioButtonGroup` is invalid as only `RadioBase`s and `RadioButton`s are allowed.'
+            );
+        }
+    },
     buttons: PropTypes.arrayOf(PropTypes.shape({
         value: PropTypes.string.isRequired,
         label: PropTypes.string.isRequired,

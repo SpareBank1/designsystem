@@ -27,8 +27,8 @@ const RadioSwitch = (props) => {
                 label={firstOption.label}
                 labelClasses="ffe-radio-switch"
                 value={firstOption.value}
+                style={ { marginRight: '5px' } }
             />
-            <span> </span>
             <RadioBase
                 checked={value === lastOption.value}
                 label={lastOption.label}
