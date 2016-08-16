@@ -64,6 +64,12 @@ brekker måste det aktuella baseline-screenshotet uppdateras, detta gørs med `.
 
 Gemini bruker native-moduler varfør du bør ha g++-compiler tillgænglig innan du kør tester i detta paketet:
 
+SpareBank1:s RHEL-baserade utvecklingsplattform:
+
+    $ sudo yum install gcc-c++
+
+Legacy Ubuntu-baserad virtuell utvecklingsmiljø:
+
     $ sudo apt-get install -y g++
 
 ## Pull Requests
