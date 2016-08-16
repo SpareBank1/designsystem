@@ -30,6 +30,7 @@ const RadioSwitch = (props) => {
                 labelClasses="ffe-radio-switch"
                 value={switch1Value}
             />
+            <span> </span>
             <RadioBase
                 checked={value === switch2Value}
                 label={switch2Label}
