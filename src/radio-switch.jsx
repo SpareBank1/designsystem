@@ -45,12 +45,12 @@ RadioSwitch.propTypes = {
     value: PropTypes.string,
     disabled: PropTypes.bool,
     label: PropTypes.string,
-    switch1Label: PropTypes.string.isRequired,
-    switch2Label: PropTypes.string.isRequired,
+    switch1Label: PropTypes.any.isRequired,
+    switch2Label: PropTypes.any.isRequired,
     name: PropTypes.string,
     onChange: PropTypes.func,
-    switch1Value: PropTypes.string.isRequired,
-    switch2Value: PropTypes.string.isRequired,
+    switch1Value: PropTypes.any.isRequired,
+    switch2Value: PropTypes.any.isRequired,
 };
 
 export default RadioSwitch;
