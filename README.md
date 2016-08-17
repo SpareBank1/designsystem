@@ -65,15 +65,3 @@ brekker måste det aktuella baseline-screenshotet uppdateras, detta gørs med `.
 Gemini bruker native-moduler varfør du bør ha g++-compiler tillgænglig innan du kør tester i detta paketet:
 
     $ sudo apt-get install -y g++
-
-## Pull Requests
-Gjøres mot master.
-Squash alle commits til en enkelt commit.
-
-## Publisering
-Projektet publiceras av byggserver vid bygg av master-branchen, om versionsnummer i `package.json` ikke
-er publisert tidligere.
-
-Før att trigga en release, lag PR till master med bumpat versionnummer och uppdaterat `CHANGELOG.md`.
-
-Backporting gjøres manuelt på release-branches ved behov, oppdateres ved cherry picke endringer fra master.

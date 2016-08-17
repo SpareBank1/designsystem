@@ -1,13 +1,10 @@
 # Changelog
 
-## Deprecation notice
-The following classes are deprecated. Support for them will be dropped in a future major release:
-
- * `ffe-check-box` (use `ffe-checkbox`)
- * `ffe-select-box` (use `ffe-dropdown`)
-
-## Unreleased
+## v.7.0.0
 * Breaking: removed `--inline` support from `.ffe-form-label`. It was just setting max-width to 100% which is not the same as inlining. Removed `max-width: 85%` from `ffe-form-label`. It's layout and doesn't belong in the component. It now defaults to browser default which should be `none`. If you were using `ffe-form-label ffe-form-label--inline` you can just use `ffe-form-label`. If you were relying on the max-width being 85% then action is required.
+* Breaking: removed support for deprecated `ffe-check-box` in favor of the arguably less aptly named `ffe-checkbox`. NOTE: Filename is also changed.
+* Breaking: removed support for deprecated `ffe-select-box` in favor of the arguably less aptly named `ffe-dropdown`.
+* Added CONTRIBUTE.md to clarify release procedures.
 
 ## v.6.3.2
 * Change background position of dropdown arrows from fluid to static

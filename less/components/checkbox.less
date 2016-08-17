@@ -1,4 +1,3 @@
-.ffe-check-box,  // DEPRICATED
 .ffe-checkbox {
     display: block;
     position: relative;
@@ -11,7 +10,7 @@
         margin-top: 0px;
         margin-bottom: 0px;
     }
-    
+
     &--inline {
         display: inline-block;
         margin-right: 20px;
@@ -53,41 +52,31 @@
     opacity: 0;
     cursor: pointer;
 
-    &:checked + .ffe-check-box:before,  // DEPRICATED
     &:checked + .ffe-checkbox:before,
-    &:hover + .ffe-check-box:before,  // DEPRICATED
     &:hover + .ffe-checkbox:before,
-    &:focus + .ffe-check-box:before,  // DEPRICATED
     &:focus + .ffe-checkbox:before,
-    &:active + .ffe-check-box:before,  // DEPRICATED
     &:active + .ffe-checkbox:before {
         outline: none;
     }
 
-    &:hover + .ffe-check-box:before,  // DEPRICATED
     &:hover + .ffe-checkbox:before {
         border-color: @ffe-blue-royal-light-wcag;
     }
 
-    &:active + .ffe-check-box:before,  // DEPRICATED
     &:active + .ffe-checkbox:before,
-    &:focus + .ffe-check-box:before,  // DEPRICATED
     &:focus + .ffe-checkbox:before {
         box-shadow: 0 0 0 2px @ffe-blue-focus;
     }
 
-    &:checked + .ffe-check-box:before,  // DEPRICATED
     &:checked + .ffe-checkbox:before {
         border-color: @ffe-blue-royal-light-wcag;
         background-color: @ffe-white;
     }
 
-    &:focus + .ffe-check-box:before,  // DEPRICATED
     &:focus + .ffe-checkbox:before {
         box-shadow: 0 0 0 2px @ffe-blue-focus;
     }
 
-    &:checked + .ffe-check-box:after,  // DEPRICATED
     &:checked + .ffe-checkbox:after {
         animation: checkmark 0.4s;
         border-color: @ffe-blue-royal-light-wcag;
