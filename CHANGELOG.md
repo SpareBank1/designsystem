@@ -1,5 +1,8 @@
 # Changelog
 
+## Version 4.5.0
+* Added forstorrelsesglass-ikon.svg
+
 ## Version 4.4.0
 * Added snakkeboble-ikon.svg
 
