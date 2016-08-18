@@ -112,6 +112,7 @@ To view live example `npm start`
 - ~~i18n
 - ~~Show calendar on focus
 - Handle various input-formats (dd/mm yyyy, dd/mm, dd.mm.yyyy, dd.mm.yy etc)
+- Validate on blur on the whole component (both the input and the calendar)
 
 ### a11y
 

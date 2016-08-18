@@ -2,7 +2,7 @@
 
 ## v1.1.4
 
-* Fix tabbing bug which caused datepicker not to close
+* Bumped version of ffe-datepicker dependency
 
 ## v1.1.3
 
