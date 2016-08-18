@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.3.0
+
+* Add `RadioSwitch` component
+* Internal refactor to reuse code in new component
+
 ## v0.2.1 (28.7.2016)
 
 * Change `legend` to be blocking when radio-buttons are inline.
