@@ -1,5 +1,8 @@
 #CHANGELOG
 
+## Version 1.2.0
+* Increased padding right for accordion-toggler to make sure arrow does end on top of toggler-content
+
 ## Version 1.1.1
 * Removed default padding from `<ul>` element as this counters the centering given by `margin: 0 auto;`
 
