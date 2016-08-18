@@ -15,6 +15,7 @@ export default class FFEDatepicker extends React.Component {
 
     this.openCalendar = this.openCalendar.bind(this);
     this.closeCalendar = this.closeCalendar.bind(this);
+    this.closeCalendarSetInputFocus = this.closeCalendarSetInputFocus.bind(this);
     this.clickHandler = this.clickHandler.bind(this);
     this.globalClickHandler = this.globalClickHandler.bind(this);
     this.escKeyHandler = this.escKeyHandler.bind(this);
@@ -40,12 +41,14 @@ export default class FFEDatepicker extends React.Component {
   onInputKeydown(evt) {
     if (!this.state.displayDatePicker && evt.which === KeyCode.ENTER) {
       this.openCalendar();
+    } else if (evt.shiftKey && evt.which === KeyCode.TAB) {
+      this.closeCalendarSetInputFocus();
     }
   }
 
   escKeyHandler(evt) {
     if (evt.which === KeyCode.ESC) {
-      this.closeCalendar();
+      this.closeCalendarSetInputFocus();
     }
   }
 
@@ -61,11 +64,13 @@ export default class FFEDatepicker extends React.Component {
     }
   }
 
-  blurHandler() {
-    this.removeGlobalEventListeners();
-    this.setState({
-      displayDatePicker: false,
-    });
+  blurHandler(evt) {
+    if (evt.shiftKey && evt.which === KeyCode.TAB) {
+      evt.preventDefault();
+      this.closeCalendarSetInputFocus();
+    } else if (evt.which === KeyCode.TAB) {
+      this.closeCalendarSetInputFocus();
+    }
   }
 
   datePickedHandler(date) {
@@ -87,6 +92,14 @@ export default class FFEDatepicker extends React.Component {
   closeCalendar() {
     this.removeGlobalEventListeners();
     this.setState({ displayDatePicker: false });
+  }
+
+  closeCalendarSetInputFocus() {
+    this.removeGlobalEventListeners();
+    this.setState({
+      openOnFocus: false,
+      displayDatePicker: false,
+    }, () => this.dateInputRef.focus());
   }
 
   addGlobalEventListeners() {
@@ -124,6 +137,7 @@ export default class FFEDatepicker extends React.Component {
             selectedDate={ this.props.value }
             minDate={ this.props.minDate }
             maxDate={ this.props.maxDate }
+            escKeyHandler={ this.escKeyHandler }
             calendarClassName="ffe-calendar ffe-calendar--datepicker"
           />
           : null }

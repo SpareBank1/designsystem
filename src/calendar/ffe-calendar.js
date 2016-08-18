@@ -83,6 +83,9 @@ export default class Datepicker extends React.Component {
           this.onBlur(event);
         }
         break;
+      case KeyCode.ESC:
+        this.props.escKeyHandler(event);
+        break;
       case KeyCode.PGUP:
         if (event.altKey) {
           calendar.previousYear();
@@ -217,6 +220,7 @@ Datepicker.propTypes = {
   onDatePicked: PropTypes.func.isRequired,
   language: PropTypes.string.isRequired,
   onBlurHandler: PropTypes.func,
+  escKeyHandler: PropTypes.func,
   selectedDate: PropTypes.string,
   minDate: PropTypes.string,
   maxDate: PropTypes.string,
