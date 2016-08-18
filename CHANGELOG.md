@@ -1,3 +1,7 @@
+## v0.5.2
+
+* Updated ffe-icons version to 4.5.0
+
 ## v0.5.1 
 
 * Updated ffe-icons version to 4.3.0
