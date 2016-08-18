@@ -4,15 +4,14 @@ import chaiEnzyme from 'chai-enzyme';
 import { shallow, mount } from 'enzyme';
 import sinon from 'sinon';
 import jsdom from 'jsdom';
-import RadioButton from './radio-button';
+import RadioBase from './radio-base';
 
 chai.use(chaiEnzyme());
 
-
-describe('<RadioButton />', () => {
+describe('<RadioBase />', () => {
 
     describe('rendering', () => {
-        const wrapper = shallow(<RadioButton value="shark" label="Kjempetorsk" />);
+        const wrapper = shallow(<RadioBase labelClasses="" value="shark" label="Kjempetorsk" />);
 
         it('should render an input with type radio', () => {
             expect(wrapper).to.have.exactly(1).descendants('input');
@@ -30,19 +29,24 @@ describe('<RadioButton />', () => {
         });
 
         it('should render a default value if passed', () => {
-            let wrapper = shallow(<RadioButton />);
+            let wrapper = shallow(<RadioBase labelClasses="" value="" />);
             expect(wrapper.find('input')).to.not.be.checked();
 
-            wrapper = shallow(<RadioButton checked={ true } />);
+            wrapper = shallow(<RadioBase checked={ true } labelClasses="" />);
             expect(wrapper.find('input')).to.be.checked();
         });
 
         it('should render the field disabled if specified', () => {
-            let wrapper = shallow(<RadioButton />);
+            let wrapper = shallow(<RadioBase labelClasses="" />);
             expect(wrapper.find('input').prop('disabled')).to.be.undefined;
 
-            wrapper = shallow(<RadioButton disabled={ true } />);
+            wrapper = shallow(<RadioBase labelClasses="" disabled={ true } />);
             expect(wrapper.find('input').prop('disabled')).to.be.true;
+        });
+
+        it('should apply labelClasses to the label', () => {
+            let wrapper = shallow(<RadioBase labelClasses="test-class" value="" />);
+            expect(wrapper.find('label').hasClass('test-class')).to.be.true;
         });
     });
 
@@ -55,7 +59,7 @@ describe('<RadioButton />', () => {
 
         it('should call onChange when clicked', () => {
             const spy = sinon.spy();
-            const wrapper = shallow(<RadioButton onChange={ spy } />);
+            const wrapper = shallow(<RadioBase onChange={ spy } labelClasses="" />);
             wrapper.find('input').simulate('change');
             expect(spy.calledOnce).to.be.true;
         });
@@ -64,8 +68,8 @@ describe('<RadioButton />', () => {
             const spy = sinon.spy();
             const wrapper = mount(
                 <fieldset>
-                    <RadioButton name="fish" value="hai" onChange={ spy } />
-                    <RadioButton name="fish" value="kjempetorsk" onChange={ spy } />
+                    <RadioBase name="fish" value="hai" onChange={ spy } labelClasses="" />
+                    <RadioBase name="fish" value="kjempetorsk" onChange={ spy } labelClasses="" />
                 </fieldset>
             );
             const shark = wrapper.find('input[value="hai"]');

@@ -1,4 +1,5 @@
 import React, { Children, PropTypes } from 'react';
+import RadioBase from './radio-base';
 import RadioButton from './radio-button';
 
 const nil = () => {};
@@ -29,14 +30,16 @@ const RadioButtonGroup = ({ label, name, inline, buttons, children, value, disab
                                                    disabled={ c.disabled || disabled }
                                                    onChange={ listenToChange(onChange, c.onChange) } /> );
     } else if (name || inline || value || disabled) {
+
         // Allow to default name & inline values for all children, as those are most often shared.
         overridden = Children.map(children, child => React.cloneElement(child, {
-            name: child.props.name || name,
-            inline: defaultBoolean(child.props.inline, inline),
-            checked: isChecked(value, child.props.value, child.props.checked),
-            disabled: child.props.disabled || disabled,
-            onChange: listenToChange(onChange, child.props.onChange)
-        }));
+                name: child.props.name || name,
+                inline: defaultBoolean(child.props.inline, inline),
+                checked: isChecked(value, child.props.value, child.props.checked),
+                disabled: child.props.disabled || disabled,
+                onChange: listenToChange(onChange, child.props.onChange)
+            })
+        );
     }
 
     const labelStyle = inline ? { display: 'block' } : {};
@@ -59,10 +62,11 @@ const RadioButtonGroup = ({ label, name, inline, buttons, children, value, disab
 RadioButtonGroup.propTypes = {
     children: (props, name) => {
         const children = Children.toArray(props[name]);
-        for (var n=0; n<children.length; ++n) {
-            if (children[n].type !== RadioButton) {
-                return new Error('Children of `RadioButtonGroup` is invalid as only `RadioButton`s are allowed.');
-            }
+        const allowedTypes = [ RadioButton, RadioBase ];
+        if (children.some(child => !allowedTypes.includes(child.type))) {
+            return new Error(
+                'Children of `RadioButtonGroup` is invalid as only `RadioBase`s and `RadioButton`s are allowed.'
+            );
         }
     },
     buttons: PropTypes.arrayOf(PropTypes.shape({
