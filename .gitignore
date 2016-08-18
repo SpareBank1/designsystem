@@ -2,3 +2,5 @@ node_modules/
 dist/
 .idea/
 gemini-report/
+
+npm-debug.log*
