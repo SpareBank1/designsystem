@@ -1,5 +1,9 @@
 # Changelog
-# v.1.3.0
+# v.1.4.0
+* Added optional prop onAccountSelected
+* Bugfix: onBlur will no longer select the highlighted account if value doesn't match an account
+
+## v.1.3.0
 * Bugfix: Select account on tab
 * Fire onChange with null on AccountSelector reset
 * Added optional prop onFocus

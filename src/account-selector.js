@@ -1,4 +1,4 @@
-import React, { PropTypes, Component } from 'react';
+import React, {PropTypes, Component} from 'react';
 import ReactDOM from 'react-dom';
 import AccountSuggestionList from './account-suggestion-list';
 import AccountDetails from './account-details';
@@ -32,15 +32,19 @@ export default class AccountSelector extends Component {
   }
 
   getDefaultState() {
-    const {accounts} = this.props;
-    const value = '';
+    const {accounts, selectedAccount, value} = {...this.defaultProps, ...this.props};
     const filteredAccounts = this.filterAccounts(accounts, value);
+    return {...this.getBlankState(), selectedAccount, value, filteredAccounts};
+  }
+
+  getBlankState() {
+    const {accounts} = this.props;
     return {
       showAccountSuggestions: false,
       showResetButton: false,
       selectedAccount: null,
-      value,
-      filteredAccounts,
+      value: '',
+      filteredAccounts: this.filterAccounts(accounts, '')
     };
   }
 
@@ -50,6 +54,7 @@ export default class AccountSelector extends Component {
       filteredAccounts: this.filterAccounts(accounts, value),
     });
   }
+
   onInputFocus() {
     const {onFocus} = this.props;
     const {value, filteredAccounts} = this.state;
@@ -58,7 +63,7 @@ export default class AccountSelector extends Component {
       selectedAccount,
       showAccountSuggestions: true,
     }, () => {
-        onFocus();
+      onFocus();
     });
     this.addGlobalEventListeners();
   }
@@ -96,7 +101,7 @@ export default class AccountSelector extends Component {
     const {selectedAccount, value} = this.state;
     const selectedValue = selectedAccount ? selectedAccount.name : value;
     this.setState({
-      value : selectedValue,
+      value: selectedValue,
       showAccountSuggestions: false,
     }, () => {
       if (selectedAccount) {
@@ -117,14 +122,28 @@ export default class AccountSelector extends Component {
 
   onBlur() {
     this.removeGlobalEventListeners();
-    const {selectedAccount, value}= this.state;
+    const {selectedAccount, value} = this.state;
     const {onBlur} = this.props;
-    onBlur(selectedAccount ? selectedAccount.accountNumber : value);
+    let blurReturn = value;
+    if (selectedAccount) {
+      const inputMatchesValidAccountName = value.toLowerCase() === selectedAccount.name.toLowerCase();
+      const inputMatchesValidAccountNumber = value === selectedAccount.accountNumber;
+      if (inputMatchesValidAccountName || inputMatchesValidAccountNumber) {
+        this.onAccountSelect(selectedAccount);
+        blurReturn = selectedAccount.accountNumber;
+      }
+      else {
+        this.setState({
+          selectedAccount: null
+        });
+      }
+    }
+    onBlur(blurReturn);
   }
 
   onInputChange(evt) {
     const value = evt.target.value;
-    const {accounts} = this.props;
+    const {accounts, onChange} = this.props;
     const filteredAccounts = this.filterAccounts(accounts, value);
     const selectedAccount =
       value.length > 0 && filteredAccounts.length > 0 ? filteredAccounts[0] : null;
@@ -134,11 +153,11 @@ export default class AccountSelector extends Component {
       filteredAccounts,
       showResetButton: value.length > 0,
       showAccountSuggestions: true,
-    }, () => this.props.onChange(value));
+    }, () => onChange(value));
   }
 
   onAccountSelect(account) {
-    const {accounts, onChange} = this.props;
+    const {accounts, onChange, onAccountSelected} = this.props;
     const {accountNumber} = account;
     const filteredAccounts = this.filterAccounts(accounts, accountNumber);
     this.setState({
@@ -147,7 +166,10 @@ export default class AccountSelector extends Component {
       selectedAccount: account,
       showAccountSuggestions: false,
       showResetButton: true,
-    }, () => onChange(accountNumber));
+    }, () => {
+      onChange(accountNumber);
+      onAccountSelected(accountNumber);
+    });
   }
 
   highlightFirstAccount() {
@@ -175,8 +197,7 @@ export default class AccountSelector extends Component {
 
   reset(focus) {
     const {onChange} = this.props;
-    const state = this.getDefaultState();
-    state.showAccountSuggestions = focus;
+    const state = {...this.getBlankState(), showAccountSuggestions: focus};
     this.setState(state, () => {
       if (focus) {
         this._accountInput.focus();
@@ -274,7 +295,7 @@ export default class AccountSelector extends Component {
             onKeyDown={ this.onResetButtonKeydown }
             tabIndex="-1"
           >
-            <KryssIkon className="nfe-account-selector__reset-icon" />
+            <KryssIkon className="nfe-account-selector__reset-icon"/>
           </button> :
           null
         }
@@ -288,7 +309,7 @@ export default class AccountSelector extends Component {
             className="nfe-account-selector__scroll"
             contentClassName="content"
             horizontal={ false }
-            style={{ maxHeight: '240px' }}
+            style={{maxHeight: '240px'}}
             ref={ assignTo('_scrollarea') }
             verticalScrollbarStyle={{
               background: '#676767',
@@ -318,19 +339,23 @@ export default class AccountSelector extends Component {
 AccountSelector.propTypes = {
   accounts: PropTypes.array,
   onChange: PropTypes.func.isRequired,
-  locale: PropTypes.oneOf(["nb", "nn" ,"en"]),
+  onAccountSelected: PropTypes.func,
+  locale: PropTypes.oneOf(["nb", "nn", "en"]),
   onBlur: PropTypes.func,
   onFocus: PropTypes.func,
   placeholder: PropTypes.string,
   ariaInvalid: PropTypes.bool,
   id: PropTypes.string,
+  selectedAccount: PropTypes.object,
+  value: PropTypes.string,
 };
 
 AccountSelector.defaultProps = {
   ariaInvalid: false,
-  placeholder : '',
-  locale : 'nb',
-  id : PropTypes.string,
+  placeholder: '',
+  locale: 'nb',
+  id: PropTypes.string,
+  onAccountSelected: () => {},
   onBlur: () => {},
   onFocus: () => {},
 };
