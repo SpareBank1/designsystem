@@ -1,5 +1,8 @@
 # Changelog
-# v.1.4.0
+# v.1.4.1
+* Added callback to onAccountSelected with null account when the input is reset by user
+
+## v.1.4.0
 * Added optional prop onAccountSelected
 * Bugfix: onBlur will no longer select the highlighted account if value doesn't match an account
 
