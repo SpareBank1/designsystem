@@ -38,7 +38,7 @@ const accounts = [
 ```
 - accounts: Array of account objects where only "name" is a required prop.
 - onChange: callback who will receive a string value with either the users typed value or the account number for the account the user selected.
-- onAccountSelected: callback who will receive a string value with the account number when a valid account from accounts is selected.
+- onAccountSelected: callback who will receive a string value with the account number when a valid account from accounts is selected, or null when field is reset by user.
 - onBlur: same as onChange, but called when the component looses focus.
 - onFocus: called when the component gains focus
 - locale: Either "nb", "nn" or "en". Defaults to "nb" if not set.
