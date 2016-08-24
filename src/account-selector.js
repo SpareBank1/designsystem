@@ -196,13 +196,14 @@ export default class AccountSelector extends Component {
   }
 
   reset(focus) {
-    const {onChange} = this.props;
+    const {onChange, onAccountSelected} = this.props;
     const state = {...this.getBlankState(), showAccountSuggestions: focus};
     this.setState(state, () => {
       if (focus) {
         this._accountInput.focus();
       }
       onChange(state.selectedAccount);
+      onAccountSelected(state.selectedAccount);
     });
   }
 
