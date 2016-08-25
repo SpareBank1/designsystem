@@ -1,5 +1,10 @@
 # Changelog
-# v.1.4.1
+# v.1.4.2
+* Bugfix: React warning when no selectedAccount or value props are given
+* Bugfix: Missing X (reset) when selectedAccount or value are given
+* UX: Focus will remain in the input when account is selected (except when tab is pressed)
+
+## v.1.4.1
 * Added callback to onAccountSelected with null account when the input is reset by user
 
 ## v.1.4.0

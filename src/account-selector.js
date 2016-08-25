@@ -34,7 +34,9 @@ export default class AccountSelector extends Component {
   getDefaultState() {
     const {accounts, selectedAccount, value} = {...this.defaultProps, ...this.props};
     const filteredAccounts = this.filterAccounts(accounts, value);
-    return {...this.getBlankState(), selectedAccount, value, filteredAccounts};
+    const showResetButton = !!(selectedAccount || value);
+    const showAccountSuggestions = false;
+    return {showAccountSuggestions, showResetButton, selectedAccount, value, filteredAccounts};
   }
 
   getBlankState() {
@@ -156,10 +158,13 @@ export default class AccountSelector extends Component {
     }, () => onChange(value));
   }
 
-  onAccountSelect(account) {
+  onAccountSelect(account, focus) {
     const {accounts, onChange, onAccountSelected} = this.props;
     const {accountNumber} = account;
     const filteredAccounts = this.filterAccounts(accounts, accountNumber);
+    if (focus) {
+      this._accountInput.focus();
+    }
     this.setState({
       filteredAccounts,
       value: account.name,
@@ -326,7 +331,7 @@ export default class AccountSelector extends Component {
             <AccountSuggestionList
               locale={locale}
               accounts={ filteredAccounts }
-              onSelect={ this.onAccountSelect }
+              onSelect={ (account) => this.onAccountSelect(account, true) }
               selectedAccount={ selectedAccount }
               ref={ assignTo('_suggestionList') }
             />
