@@ -356,6 +356,8 @@ AccountSelector.defaultProps = {
   placeholder: '',
   locale: 'nb',
   id: PropTypes.string,
+  selectedAccount: null,
+  value: '',
   onAccountSelected: () => {},
   onBlur: () => {},
   onFocus: () => {},
