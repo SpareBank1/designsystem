@@ -1,5 +1,9 @@
 # Changelog
 
+## v.7.0.1
+* Minor fix: make button texts of loading buttons unselectable, the text is only of interest for
+  screen readers and ought to remain invisible under all circumstances.
+
 ## v.7.0.0
 * Breaking: removed `--inline` support from `.ffe-form-label`. It was just setting max-width to 100% which is not the same as inlining. Removed `max-width: 85%` from `ffe-form-label`. It's layout and doesn't belong in the component. It now defaults to browser default which should be `none`. If you were using `ffe-form-label ffe-form-label--inline` you can just use `ffe-form-label`. If you were relying on the max-width being 85% then action is required.
 * Breaking: removed support for deprecated `ffe-check-box` in favor of the arguably less aptly named `ffe-checkbox`. NOTE: Filename is also changed.
