@@ -1,6 +1,6 @@
 {
   "name": "ffe-core",
-  "version": "7.0.1",
+  "version": "8.0.0",
   "description": "Rammeverk for Felles Front End",
   "less": "ffe.less",
   "main": "index.js",
@@ -40,6 +40,7 @@
   "devDependencies": {
     "gemini": "4.3.0",
     "less": "2.5.1",
-    "ffe-visual-tests-support": "1.0.1"
+    "ffe-visual-tests-support": "1.0.1",
+    "normalize.css": "4.2.0"
   }
 }
