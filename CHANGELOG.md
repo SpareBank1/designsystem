@@ -1,5 +1,8 @@
 # Changelog
 
+## Version 4.6.0
+* Added stetoskop-ikon.svg
+
 ## Version 4.5.0
 * Added forstorrelsesglass-ikon.svg
 
