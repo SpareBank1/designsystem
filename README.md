@@ -16,7 +16,7 @@ Merk at ffe-core er en avhengighet for ffe-cards (se peerDependencies i package.
 Se [readme for ffe-core](***REMOVED***).
 
 ## Pull Requests
-Se [readme for ffe-core](***REMOVED***).
+Se [contribute for ffe-core](***REMOVED***).
 
 ## Publisering
-Se [readme for ffe-core](***REMOVED***).
+Se [contribute for ffe-core](***REMOVED***).
