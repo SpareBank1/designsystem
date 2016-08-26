@@ -1,5 +1,8 @@
 #CHANGELOG
 
+##UNRELEASED
+Korrigerte README.md ift. pull requests og publisering
+
 ##Version 3.2.1
 Fiks plassering av statusbanner i Internet Explorer
 
@@ -24,4 +27,3 @@ Omskriving som tar utgangspunkt i en jobb som allerede var gjort for å få dett
 
 ##Versjon 0.0.1
 Første versjon av ffe-cards.
-
