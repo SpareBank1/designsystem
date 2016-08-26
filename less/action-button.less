@@ -1,0 +1,30 @@
+.ffe-action-button {
+    &:extend(.ffe-primary-button all);
+    background-color: @ffe-green-wcag;
+
+    &:focus,
+    &:hover {
+        background-color: darken(@ffe-green-wcag, 5%);
+    }
+    &:active,
+    &--loading {
+        background-color: darken(@ffe-green-wcag, 10%);
+    }
+
+    &--ghost,
+    &--ghost:focus {
+        background-color: transparent;
+        color: @ffe-green-wcag;
+        border: 2px solid @ffe-green-wcag;
+    }
+
+    &--ghost:hover {
+        background-color: darken(@ffe-green-wcag, 5%);
+        border-color: darken(@ffe-green-wcag, 5%);
+        color: @ffe-white;
+    }
+
+    &--ghost:active {
+        background-color: darken(@ffe-green-wcag, 10%);
+    }
+}

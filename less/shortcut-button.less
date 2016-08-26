@@ -1,0 +1,19 @@
+.ffe-shortcut-button {
+    &:extend(.ffe-secondary-button all);
+    padding-right: 35px;
+
+    &__icon-chevron {
+        width: 16px;
+        height: 16px;
+        position: relative;
+        left: 15px;
+        bottom: 2px;
+        transition: left 0.1s;
+    }
+
+    &:hover, &:active, &:focus {
+        .shortcut-button__icon-chevron {
+            left: 20px;
+        }
+    }
+}
