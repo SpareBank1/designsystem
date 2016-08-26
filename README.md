@@ -16,7 +16,7 @@ Merk at ffe-core er en avhengighet for ffe-cards (se peerDependencies i package.
 Se [readme for ffe-core](https://stash.intern.sparebank1.no/projects/FFE/repos/ffe-core/browse/README.md).
 
 ## Pull Requests
-Se [readme for ffe-core](https://stash.intern.sparebank1.no/projects/FFE/repos/ffe-core/browse/README.md).
+Se [contribute for ffe-core](https://stash.intern.sparebank1.no/projects/FFE/repos/ffe-core/browse/CONTRIBUTE.md).
 
 ## Publisering
-Se [readme for ffe-core](https://stash.intern.sparebank1.no/projects/FFE/repos/ffe-core/browse/README.md).
+Se [contribute for ffe-core](https://stash.intern.sparebank1.no/projects/FFE/repos/ffe-core/browse/CONTRIBUTE.md).
