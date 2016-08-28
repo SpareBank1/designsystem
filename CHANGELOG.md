@@ -1,6 +1,6 @@
 #CHANGELOG
 
-##UNRELEASED
+##Version 3.2.2
 Korrigerte README.md ift. pull requests og publisering
 
 ##Version 3.2.1
