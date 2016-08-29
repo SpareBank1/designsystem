@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!/bin/bash
 
 main() {
     npm install
@@ -10,15 +10,6 @@ main() {
     ./run_visual-tests.sh
 
     cp -R example target/archive
-
-    if should_publish; then
-        npm run has-published -s || npm publish
-        bob ci job build --jobname ffe-design-system_build_deploy
-    fi
-}
-
-function should_publish() {
-    [[ $GIT_BRANCH =~ ^(origin/)?master$ ]]
 }
 
 _move_gemini_files() {

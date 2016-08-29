@@ -4,9 +4,9 @@
   "description": "Form-/skjemapakke for Felles Front End",
   "main": "less/form.less",
   "scripts": {
-    "compile": "npm run lint && lessc example/example.less example/example.css && cp -R node_modules/ffe-core/fonts/ example/fonts/ && echo \"$(date +%T): Updated example\"",
-    "lint": "lessc --lint example/example.less",
-    "start": "opn examples/examples.html & watch \"npm run -s compile\" less/",
+    "compile": "npm run lint && lessc examples/example.less examples/example.css && cp -R node_modules/ffe-core/fonts/ examples/fonts/ && echo \"$(date +%T): Updated example\"",
+    "lint": "lessc --lint examples/example.less",
+    "start": "opn examples/example.html & watch \"npm run -s compile\" less/",
     "test:nsp": "nsp check",
     "test": "npm run lint && npm run test:nsp",
     "has-published": "npm show . versions -s | grep -q ${npm_package_version}",
@@ -20,7 +20,7 @@
   "documentation": [
     {
       "type": "html",
-      "file": "example/example.html",
+      "file": "examples/example.html",
       "select": "#ffedoc"
     },
     {
