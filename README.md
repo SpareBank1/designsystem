@@ -41,11 +41,10 @@ sudo npm link
 Og i prosjektet som skal bruke endringene gjort lokalt kan man kjøre:
 
 ```
-npm link ffe-buttons
+npm link ffe-form
 ```
 
-Når endringene dine er gjort må du oppdatere de visuelle regresjonstestene. Dette krever at Docker og
-[Gemini](https://github.com/gemini-testing/gemini) er installert på din maskin:
+Når endringene dine er gjort må du oppdatere de visuelle regresjonstestene (se Visuell regresjonstesting).
 
 ```
 ./update_visual_regression_test_baseline.sh
