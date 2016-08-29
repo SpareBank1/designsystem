@@ -1,0 +1,50 @@
+{
+  "name": "ffe-tables",
+  "version": "1.0.0",
+  "main": "less/tables.less",
+  "scripts": {
+    "compile": "npm run lint && lessc example/example.less example/example.css && cp -R node_modules/ffe-core/fonts/ example/fonts/ && echo \"$(date +%T): Updated example\"",
+    "lint": "lessc --lint example/example.less",
+    "start": "opn examples/examples.html & watch \"npm run -s compile\" less/",
+    "test:nsp": "nsp check",
+    "test": "npm run lint && npm run test:nsp",
+    "has-published": "npm show . versions -s | grep -q ${npm_package_version}",
+    "preversion": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@stash.intern.sparebank1.no:22/ffe/ffe-tables.git"
+  },
+  "homepage": "https://stash.intern.sparebank1.no/projects/FFE/repos/ffe-tables/browse",
+  "documentation": [
+    {
+      "type": "html",
+      "file": "example/example.html",
+      "select": "#ffedoc"
+    },
+    {
+      "type": "markdown",
+      "file": "README.md"
+    }
+  ],
+  "devDependencies": {
+    "ffe-core": "8.x",
+    "ffe-visual-tests-support": "1.0.1",
+    "gemini": "4.3.0",
+    "less": "^2.7.1",
+    "nsp": "^2.2.0",
+    "opn-cli": "^3.1.0",
+    "watch": "^0.19.2"
+  },
+  "peerDependencies": {
+    "ffe-core": "8.x"
+  },
+  "publishConfig": {
+    "registry": "https://nexus.intern.sparebank1.no/nexus/content/repositories/npm-internal"
+  },
+  "files": [
+    "less"
+  ],
+  "author": "SpareBank1",
+  "license": "UNLICENSED"
+}

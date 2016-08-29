@@ -1,0 +1,86 @@
+.ffe-responsive-table {
+    margin: 20px 0;
+    min-width: 100%;
+    text-align: left;
+
+    > caption {
+        &:extend(.ffe-h4);
+    }
+
+    > thead {
+        display: none;
+
+        @media (min-width: @breakpoint-md) {
+            display: table-header-group;
+        }
+    }
+
+    > tfoot {
+        border-top: 2px solid @ffe-blue-royal;
+    }
+
+    > thead > tr,
+    > tbody > tr,
+    > tfoot > tr {
+        border-bottom: 1px solid @ffe-grey-light;
+        display: block;
+        padding: 10px 0;
+
+        @media (min-width: @breakpoint-md) {
+            display: table-row;
+        }
+    }
+
+    > thead > tr > th,
+    > tbody > tr > th,
+    > tfoot > tr > th {
+        &:extend(.ffe-strong-text);
+        text-align: left;
+    }
+
+    > tbody > tr > td,
+    > tfoot > tr > td {
+        display: block;
+    }
+
+    &__content {
+        display: inline-block;
+        vertical-align: top;
+        max-width: ~"calc(100% - 105px)";
+
+        @media (min-width: @breakpoint-md) {
+            display: block;
+            max-width: none;
+        }
+    }
+
+    > tbody > tr > [data-th]:before,
+    > tfoot > tr > td:before {
+        content: attr(data-th); // who knew you could do this? The internet, that's who.
+        width: 100px;
+        display: inline-block;
+        &:extend(.ffe-strong-text);
+
+        @media (min-width: @breakpoint-md) {
+            display: none;
+        }
+    }
+
+    &--small-header > tbody > tr > [data-th]:before,
+    &--small-header > tfoot > tr > td:before {
+        width: 65px;
+    }
+
+    > thead > tr > th,
+    > thead > tr > td,
+    > tbody > tr > th,
+    > tbody > tr > td,
+    > tfoot > tr > th,
+    > tfoot > tr > td {
+
+        @media (min-width: @breakpoint-md) {
+            display: table-cell;
+            padding: 10px;
+        }
+    }
+}
