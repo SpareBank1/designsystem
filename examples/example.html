@@ -5,19 +5,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ffe-form - Felles Frontend Form Style Guide</title>
         <link rel="stylesheet" type="text/css" href="examples.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
     </head>
 
     <body class="ffe-body-text">
         <main class="styleguide-wrapper">
-            <section class="ffe-section-wrapper">
+            <section id="ffedoc" class="ffe-section-wrapper">
                 <div class="ffe-content-container ffe-content-container--text-left">
-                    <!-- aria-hidden="true" kan brukes for Ã¥ skjule feilmeldinger som ikke skal vises -->
+                    <!-- aria-hidden="true" kan brukes for å skjule feilmeldinger som ikke skal vises -->
                     <div class="ffe-error-summary" aria-hidden="true" role="alert" aria-live="assertive">
                         <span class="ffe-icon ffe-icon-info-error"></span>
-                        <span class="ffe-title">Du mÃ¥ rette opp disse feilene i skjemaet</span>
+                        <span class="ffe-title">Du må rette opp disse feilene i skjemaet</span>
                         <ul class="ffe-summary-list">
-                            <li>Vennligst fyll inn "FÃ¸dselsnummer"</li>
+                            <li>Vennligst fyll inn "Fødselsnummer"</li>
                         </ul>
                     </div>
                 </div>
@@ -25,11 +24,11 @@
                 <div class="ffe-content-container ffe-content-container--text-left">
                     <h2 class="ffe-h2">Input-felt</h2>
 
-                    <p class="ffe-body-paragraph">Har tre stÃ¸rrelsesvarianter: -small, -medium og -large</p>
+                    <p class="ffe-body-paragraph">Har tre størrelsesvarianter: -small, -medium og -large</p>
 
                     <div class="ffe-input-group" aria-live="polite">
                         <label id="ssn-label" class="ffe-form-label" for="ssn">
-                            Norsk fÃ¸dselsnummer
+                            Norsk fødselsnummer
                         </label>
                         <input id="ssn"
                                class="ffe-input-field ffe-input-field--medium"
@@ -38,8 +37,8 @@
                                maxlength="11"
                                autocomplete="off">
                         <strong class="ffe-strong-text">(11 siffer)</strong>
-                        <!-- aria-hidden="true" kan brukes for Ã¥ skjule feilmeldinger som ikke skal vises -->
-                        <div class="ffe-info-message ffe-info-message--error" aria-hidden="true">Vennligst fyll inn "FÃ¸dselsnummer"</div>
+                        <!-- aria-hidden="true" kan brukes for å skjule feilmeldinger som ikke skal vises -->
+                        <div class="ffe-info-message ffe-info-message--error" aria-hidden="true">Vennligst fyll inn "Fødselsnummer"</div>
                     </div>
                 </div>
 
@@ -87,7 +86,7 @@
 
                         <div class="ffe-input-group" aria-live="polite">
                             <label id="month-label" class="ffe-form-label" for="month">
-                                Velg mÃ¥ned
+                                Velg måned
                             </label>
                             <select class="ffe-dropdown" id="month">
                                 <option value="0">Januar</option>
@@ -134,7 +133,7 @@
                     <div class="ffe-content-container ffe-content-container--text-left">
                         <h2 class="ffe-h2">Check box</h2>
 
-                        <p class="ffe-body-paragraph">Brukes nÃ¥r det er flere mulige valg. Har en standard og en inline variant.</p>
+                        <p class="ffe-body-paragraph">Brukes når det er flere mulige valg. Har en standard og en inline variant.</p>
 
                         <div class="ffe-input-group" aria-live="polite">
                             <label id="checkbox-ibf-label" class="ffe-form-label" for="checkbox-ibf1">
@@ -474,12 +473,12 @@
                         <h2 class="ffe-h2">Radio block</h2>
 
                         <p class="ffe-body-paragraph">
-                            Radio blocks brukes nÃ¥r det er viktig Ã¥ presentere kontekstuelt relevant informasjon om valgene til
-                            brukeren uten Ã¥ overvelde.
+                            Radio blocks brukes når det er viktig å presentere kontekstuelt relevant informasjon om valgene til
+                            brukeren uten å overvelde.
                         </p>
 
                         <p class="ffe-body-paragraph">
-                            De kan brukes bÃ¥de som vanlige radio-knapper med synlig kontekst eller som en liten "meny" der kontekst
+                            De kan brukes både som vanlige radio-knapper med synlig kontekst eller som en liten "meny" der kontekst
                             bare er synlig for det til en hver tid aktive valget
                         </p>
 
@@ -487,7 +486,7 @@
 
                         <div class="ffe-input-group" aria-live="polite">
                             <label class="ffe-form-label" for="block-ibf1">
-                                Hva Ã¸nsker du Ã¥ gjÃ¸re?
+                                Hva ønsker du å gjøre?
                             </label>
                             <fieldset class="ffe-fieldset" id="block-ibf1">
                                 <div class="ffe-radio-block">
@@ -576,7 +575,7 @@
 
                         <div class="ffe-input-group" aria-live="polite" role="tablist">
                             <label class="ffe-form-label" for="tab-set">
-                                Hva Ã¸nsker du Ã¥ gjÃ¸re?
+                                Hva ønsker du å gjøre?
                             </label>
                             <fieldset class="ffe-fieldset" id="tab-set">
                                 <div class="ffe-radio-block" role="presentation">
@@ -710,16 +709,16 @@
                                         <h5 class="ffe-h5">Merknader ang. tilgjengelighet</h5>
 
                                         <div class="ffe-small-text">
-                                            <p class="ffe-body-paragraph">NÃ¥r en radio-knapp blir valgt mÃ¥ fÃ¸lgende gjÃ¸res i Javascript:</p>
+                                            <p class="ffe-body-paragraph">Når en radio-knapp blir valgt må følgende gjøres i Javascript:</p>
                                             <ul class="example-unstyled-list">
-                                                <li>Sett <span class="inline-code">aria-selected="false"</span> pÃ¥ alle andre inputs
+                                                <li>Sett <span class="inline-code">aria-selected="false"</span> på alle andre inputs
                                                 </li>
-                                                <li>Sett <span class="inline-code">aria-selected="true"</span> pÃ¥ aktiv input</li>
-                                                <li>Sett <span class="inline-code">aria-hidden="true"</span> pÃ¥ alle .wrapper
-                                                    elementer som tilhÃ¸rer et inaktivt valg
+                                                <li>Sett <span class="inline-code">aria-selected="true"</span> på aktiv input</li>
+                                                <li>Sett <span class="inline-code">aria-hidden="true"</span> på alle .wrapper
+                                                    elementer som tilhører et inaktivt valg
                                                 </li>
-                                                <li>Sett <span class="inline-code">aria-hidden="false"</span> pÃ¥ .wrapper elementet
-                                                    som tilhÃ¸rer aktivt valg
+                                                <li>Sett <span class="inline-code">aria-hidden="false"</span> på .wrapper elementet
+                                                    som tilhører aktivt valg
                                                 </li>
                                             </ul>
                                             <p class="ffe-body-paragraph"></p>
@@ -743,23 +742,23 @@
                     <h3 class="ffe-h3">Oppsummering av feil i skjema</h3>
 
                     <p class="ffe-body-paragraph" class="ffe-body-paragraph">
-                        Det skal plasseres en oppsummering av skjemafeil over skjemaet. Det skal ogsÃ¥ scrolles
-                        til dette elemementet nÃ¥r valideringen skjer. Normalt vil dette vÃ¦re etter submit av skjemaet.
+                        Det skal plasseres en oppsummering av skjemafeil over skjemaet. Det skal også scrolles
+                        til dette elemementet når valideringen skjer. Normalt vil dette være etter submit av skjemaet.
                     </p>
 
                     <p class="ffe-body-paragraph">
-                        Oppsummering kan skjules ved Ã¥ sette <code class="code-inline">aria-hidden="true"</code>.
-                        For Ã¥ stÃ¸tte skjermlesere er det viktig at det er satt <code class="code-inline">role="alert"</code> og
-                        <code class="code-inline">aria-live="assertive"</code> pÃ¥ elementet som wrapper feilmeldingene. Dette for at
-                        skjermleseren skal plukke det opp og varsle brukeren nÃ¥r det vises (eller fjernes) feilmeldinger fra listen.
+                        Oppsummering kan skjules ved å sette <code class="code-inline">aria-hidden="true"</code>.
+                        For å støtte skjermlesere er det viktig at det er satt <code class="code-inline">role="alert"</code> og
+                        <code class="code-inline">aria-live="assertive"</code> på elementet som wrapper feilmeldingene. Dette for at
+                        skjermleseren skal plukke det opp og varsle brukeren når det vises (eller fjernes) feilmeldinger fra listen.
                     </p>
 
                     <div class="ffe-error-summary" aria-hidden="false" role="alert" aria-live="assertive">
                         <span class="ffe-error-summary__icon ffe-icon-info-error"></span>
-                        <span class="ffe-error-summary__title">Du mÃ¥ rette opp disse feilene i skjemaet</span>
+                        <span class="ffe-error-summary__title">Du må rette opp disse feilene i skjemaet</span>
                         <ul class="ffe-error-summary__list">
                             <li class="ffe-error-summary__list-item">Vennligst velg en bonus</li>
-                            <li class="ffe-error-summary__list-item">Vennligst fyll inn "FÃ¸dselsnummer"</li>
+                            <li class="ffe-error-summary__list-item">Vennligst fyll inn "Fødselsnummer"</li>
                             <li class="ffe-error-summary__list-item">Vennligst fyll inn "Fornavn"</li>
                             <li class="ffe-error-summary__list-item">Vennligst fyll inn "Etternavn"</li>
                         </ul>
@@ -796,10 +795,10 @@
 
                                     <div class="ffe-small-text">
                                         <p class="ffe-body-paragraph">
-                                            Oppsummering kan skjules ved Ã¥ sette <span class="inline-code">aria-hidden="true"</span>.
-                                            For Ã¥ stÃ¸tte skjermlesere er det viktig at det er satt <span class="inline-code">role="alert"</span>
-                                            og <span class="inline-code">aria-live="assertive"</span> pÃ¥ elementet som wrapper
-                                            feilmeldingene. Dette for at skjermleseren skal plukke det opp og varsle brukeren nÃ¥r
+                                            Oppsummering kan skjules ved å sette <span class="inline-code">aria-hidden="true"</span>.
+                                            For å støtte skjermlesere er det viktig at det er satt <span class="inline-code">role="alert"</span>
+                                            og <span class="inline-code">aria-live="assertive"</span> på elementet som wrapper
+                                            feilmeldingene. Dette for at skjermleseren skal plukke det opp og varsle brukeren når
                                             det vises (eller fjernes) feilmeldinger fra listen.
                                         </p>
                                     </div>
@@ -815,10 +814,10 @@
                 </div>
 
                 <div class="ffe-content-container ffe-content-container--text-left">
-                    <h3 class="ffe-h3">Feilmeldinger pÃ¥ skjemaelementene</h3>
+                    <h3 class="ffe-h3">Feilmeldinger på skjemaelementene</h3>
 
                     <div class="ffe-input-group" aria-live="polite">
-                        <label for="ssn-invalid" class="ffe-form-label">FÃ¸dselsnummer</label>
+                        <label for="ssn-invalid" class="ffe-form-label">Fødselsnummer</label>
                         <input class="ffe-input-field"
                                name="ssn"
                                id="ssn-invalid"
@@ -827,7 +826,7 @@
                                autocomplete="off"
                                aria-invalid="true">
 
-                        <div class="ffe-info-message ffe-info-message--error">Vennligst fyll inn "FÃ¸dselsnummer"</div>
+                        <div class="ffe-info-message ffe-info-message--error">Vennligst fyll inn "Fødselsnummer"</div>
                     </div>
 
                     <div class="ffe-input-group" aria-live="polite">
@@ -855,7 +854,7 @@
                                    id="unicornwings-3-invalid">
                             <label class="ffe-radio-button ffe-radio-button--inline" for="unicornwings-3-invalid">I do not know!</label>
                         </fieldset>
-                        <div class="ffe-info-message ffe-info-message--error">Ta vÃ¥re fabeldyr pÃ¥ alvor.</div>
+                        <div class="ffe-info-message ffe-info-message--error">Ta våre fabeldyr på alvor.</div>
                     </div>
 
                 </div>
@@ -889,19 +888,19 @@
 
                                     <div class="ffe-small-text">
                                         <p class="ffe-body-paragraph">
-                                            Alle skjemaelementer mÃ¥ wrappes i en 'input-group' med <span class="inline-code">aria-live="polite"</span>
-                                            slik at skjermlesere plukker det opp og varsler brukeren nÃ¥r det vises en feilmelding.
+                                            Alle skjemaelementer må wrappes i en 'input-group' med <span class="inline-code">aria-live="polite"</span>
+                                            slik at skjermlesere plukker det opp og varsler brukeren når det vises en feilmelding.
                                         </p>
 
                                         <p class="ffe-body-paragraph">
                                             Ved visning av feilmelding skal <span class="inline-code">aria-invalid="true"</span>
-                                            settes pÃ¥ input elementet (eller nÃ¦rmeste fieldset). Dette styler alle skjemaelementer
+                                            settes på input elementet (eller nærmeste fieldset). Dette styler alle skjemaelementer
                                             med passende utseende for feil.
                                         </p>
 
                                         <p class="ffe-body-paragraph">
-                                            Feilmeldinger kan skjules ved Ã¥ sette <span
-                                                class="inline-code">aria-hidden="true"</span> pÃ¥ meldingselementet.
+                                            Feilmeldinger kan skjules ved å sette <span
+                                                class="inline-code">aria-hidden="true"</span> på meldingselementet.
                                         </p>
                                     </div>
                                 </div>
@@ -915,21 +914,5 @@
                 </div>
             </section>
         </main>
-
-        <footer>
-            <hr class="ffe-divider-line" >
-            <div class="ffe-content-container">
-                <a class="ffe-link-text" href="#">Â© SpareBank 1</a>
-            </div>
-        </footer>
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
-        <script>
-            hljs.configure({
-                tabReplace: '    ' // 2 spaces
-            });
-            hljs.initHighlightingOnLoad();
-        </script>
-        <script src="examples.js"></script>
     </body>
 </html>
