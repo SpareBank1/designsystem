@@ -1,6 +1,6 @@
 # Changelog
 
-## UNRELEASED
+## v1.0.4
 * Renamed styles folder to less
 
 ## v.1.0.3
