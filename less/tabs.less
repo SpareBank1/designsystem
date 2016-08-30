@@ -1,0 +1,48 @@
+.ffe-tab-button {
+  font-family: 'MuseoSansRounded-500', arial, sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0 30px;
+  display: block;
+  line-height: 41px;
+  width: 100%;
+  overflow: hidden;
+  transition: all 0.2s;
+  outline: none;
+  color: @ffe-grey-dark;
+  background-color: transparent;
+  border: solid 2px @ffe-grey-light;
+  border-radius: 100px;
+  box-shadow: 0 1px 2px 1px rgba(0,0,0,0.05);
+  font-size: 16px;
+  text-transform: uppercase;
+
+  &:hover, &:focus, &:active {
+    color: @ffe-blue-royal;
+    border-color: @ffe-blue-royal;
+  }
+
+  &:focus, &:active {
+    box-shadow: 0 0 0 2px @ffe-blue-focus;
+  }
+
+  &--selected {
+    color: @ffe-white;
+    background-color: @ffe-blue-royal;
+    border-color: @ffe-blue-royal;
+  }
+
+  &--selected:hover, &--selected:focus, &--selected:active {
+    color: @ffe-white;
+    border-color: @ffe-blue-royal;
+  }
+}
+
+@media screen and (min-width: @breakpoint-sm) {
+    .ffe-tab-button {
+        display: inline-block;
+        width: auto;
+    }
+}
