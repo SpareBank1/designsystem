@@ -39,7 +39,7 @@
   },
   "peerDependencies": {
     "ffe-core": "^6.2.0",
-    "react": "15.1.0"
+    "react": "^15.1.0"
   },
   "publishConfig": {
     "registry": "***REMOVED***"
