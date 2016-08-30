@@ -24,7 +24,7 @@ The styles for this package can be used in 3 different ways depending on what yo
 ### All styles
 You need styles for both the dateinput field and the calendar.
 ```css
-@import "node_modules/ffe-datepicker/styles/datepicker.less";
+@import "node_modules/ffe-datepicker/less/datepicker.less";
 ```
 Example HTML stucture with classes. (Aria-tags and other attributes have been removed for clarity)
 ```html
@@ -36,7 +36,7 @@ Example HTML stucture with classes. (Aria-tags and other attributes have been re
 
 ### Only date input styles
 ```css
-@import "node_modules/ffe-datepicker/styles/dateinput.less";
+@import "node_modules/ffe-datepicker/less/dateinput.less";
 ```
 Example HTML stucture with classes. (Aria-tags and other attributes have been removed for clarity)
 ```html
@@ -50,7 +50,7 @@ Example HTML stucture with classes. (Aria-tags and other attributes have been re
 
 ### Only the calendar styles
 ```css
-@import "node_modules/ffe-datepicker/styles/calendar.less";
+@import "node_modules/ffe-datepicker/less/calendar.less";
 ```
 Example HTML stucture with classes. (Aria-tags and other attributes have been removed for clarity)
 ```html
