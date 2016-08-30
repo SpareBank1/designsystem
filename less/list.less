@@ -1,0 +1,35 @@
+.ffe-number-list,
+.ffe-bullet-list {
+  padding: 0;
+  text-align: left;
+  margin: 0 0 20px 0;
+
+  > li {
+    margin-top: 10px;
+    margin-left: 15px;
+  }
+}
+
+.ffe-number-list {
+  list-style-type: decimal;
+}
+
+.ffe-bullet-list {
+  list-style-type: disc;
+}
+
+/* tablet/medium typography */
+@media screen and (min-width: @breakpoint-sm) {
+  .ffe-number-list,
+  .ffe-bullet-list {
+    margin-left: 20px;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: @breakpoint-md) {
+  .ffe-number-list > li,
+  .ffe-bullet-list > li {
+    margin-left: 30px;
+  }
+}
