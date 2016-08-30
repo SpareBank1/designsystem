@@ -5,6 +5,7 @@ gemini-report
 *.swp
 example/fonts
 example.css
+target
 
 # Created by https://www.gitignore.io/api/node
 
