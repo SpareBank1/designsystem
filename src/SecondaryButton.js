@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import Button from './Button';
 
 export default function SecondaryButton(props) {
-    return <Button {...props} type="secondary">
+    return <Button {...props} buttonType="secondary">
                 {props.children}
             </Button>;
 }
