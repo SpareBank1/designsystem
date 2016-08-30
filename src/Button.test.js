@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-expressions */
+
 import React from 'react';
 import { expect } from 'chai';
 import { render, shallow } from 'enzyme';
@@ -88,84 +90,84 @@ describe('Button components:', () => {
     it('buttons should not be disabled by default', () => {
         const wrapper = shallow(<Button onClick={() => ({})}>Hello</Button>);
         const button = wrapper.find('button');
-        expect(button.prop('disabled')).to.be.equal(undefined);
-        expect(button.prop('aria-disabled')).to.be.equal(undefined);
+        expect(button.prop('disabled')).to.be.undefined;
+        expect(button.prop('aria-disabled')).to.be.undefined;
     });
 
     it('disableButton prop disables the button', () => {
         const wrapper = shallow(<Button disableButton onClick={() => ({})}>Hello</Button>);
         const button = wrapper.find('button');
-        expect(button.prop('disabled')).to.be.equal(true);
-        expect(button.prop('aria-disabled')).to.be.equal(true);
+        expect(button.prop('disabled')).to.be.true;
+        expect(button.prop('aria-disabled')).to.be.true;
     });
 
     it('ActionButton passes disableButton on to Button', () => {
         const wrapper = shallow(
             <ActionButton disableButton onClick={() => ({})}>Hello</ActionButton>
         );
-        expect(wrapper.find('Button').prop('disableButton')).to.be.equal(true);
+        expect(wrapper.find('Button').prop('disableButton')).to.be.true;
     });
 
     it('PrimaryButton passes disableButton on to Button', () => {
         const wrapper = shallow(
             <PrimaryButton disableButton onClick={() => ({})}>Hello</PrimaryButton>
         );
-        expect(wrapper.find('Button').prop('disableButton')).to.be.equal(true);
+        expect(wrapper.find('Button').prop('disableButton')).to.be.true;
     });
 
     it('SecondaryButton passes disableButton on to Button', () => {
         const wrapper = shallow(
             <SecondaryButton disableButton onClick={() => ({})}>Hello</SecondaryButton>
         );
-        expect(wrapper.find('Button').prop('disableButton')).to.be.equal(true);
+        expect(wrapper.find('Button').prop('disableButton')).to.be.true;
     });
 
     it('ShortcutButton passes disableButton on to Button', () => {
         const wrapper = shallow(
             <ShortcutButton disableButton onClick={() => ({})}>Hello</ShortcutButton>
         );
-        expect(wrapper.find('Button').prop('disableButton')).to.be.equal(true);
+        expect(wrapper.find('Button').prop('disableButton')).to.be.true;
     });
 
     it('TertiaryButton passes disableButton on to Button', () => {
         const wrapper = shallow(
             <TertiaryButton disableButton onClick={() => ({})}>Hello</TertiaryButton>
         );
-        expect(wrapper.find('Button').prop('disableButton')).to.be.equal(true);
+        expect(wrapper.find('Button').prop('disableButton')).to.be.true;
     });
 
     it('runs the function passed as onClick when clicked', () => {
         let onClick = spy();
         const wrapper = shallow(<Button onClick={onClick}>Hello</Button>);
         wrapper.find('button').simulate('click');
-        expect(onClick.calledOnce).to.equal(true);
+        expect(onClick.calledOnce).to.true;
     });
 
     it('Set isTabbable={true} on Button does nothing', () => {
         const wrapper = shallow(<Button onClick={() => ({})} isTabbable>Hello</Button>);
         const button = wrapper.find('button');
-        expect(button.prop('tabIndex')).to.be.equal(undefined);
+        expect(button.prop('tabIndex')).to.be.undefined;
     });
 
     it('ActionButton is tabbable by default', () => {
         const wrapper = shallow(
             <ActionButton disableButton onClick={() => ({})}>Hello</ActionButton>
         );
-        expect(wrapper.find('Button').prop('tabIndex')).to.be.equal(undefined);
+        expect(wrapper.find('Button').prop('tabIndex')).to.be.undefined;
     });
 
     it('ActionButton passes isTabbable={false} on to Button', () => {
         const wrapper = shallow(
             <ActionButton disableButton onClick={() => ({})} isTabbable={false}>Hello</ActionButton>
         );
-        expect(wrapper.find('Button').prop('isTabbable')).to.be.equal(false);
+        expect(wrapper.find('Button').prop('isTabbable')).to.be.false;
     });
 
     it('PrimaryButton is tabbable by default', () => {
         const wrapper = shallow(
             <PrimaryButton disableButton onClick={() => ({})}>Hello</PrimaryButton>
         );
-        expect(wrapper.find('Button').prop('tabIndex')).to.be.equal(undefined);
+        expect(wrapper.find('Button').prop('tabIndex')).to.be.undefined;
     });
 
     it('PrimaryButton passes isTabbable={false} on to Button', () => {
@@ -174,14 +176,14 @@ describe('Button components:', () => {
                 Hello
             </PrimaryButton>
         );
-        expect(wrapper.find('Button').prop('isTabbable')).to.be.equal(false);
+        expect(wrapper.find('Button').prop('isTabbable')).to.be.false;
     });
 
     it('SecondaryButton is tabbable by default', () => {
         const wrapper = shallow(
             <SecondaryButton disableButton onClick={() => ({})}>Hello</SecondaryButton>
         );
-        expect(wrapper.find('Button').prop('tabIndex')).to.be.equal(undefined);
+        expect(wrapper.find('Button').prop('tabIndex')).to.be.undefined;
     });
 
     it('SecondaryButton passes isTabbable={false} on to Button', () => {
@@ -190,14 +192,14 @@ describe('Button components:', () => {
                 Hello
             </SecondaryButton>
         );
-        expect(wrapper.find('Button').prop('isTabbable')).to.be.equal(false);
+        expect(wrapper.find('Button').prop('isTabbable')).to.be.false;
     });
 
     it('ShortcutButton is tabbable by default', () => {
         const wrapper = shallow(
             <ShortcutButton disableButton onClick={() => ({})}>Hello</ShortcutButton>
         );
-        expect(wrapper.find('Button').prop('tabIndex')).to.be.equal(undefined);
+        expect(wrapper.find('Button').prop('tabIndex')).to.be.undefined;
     });
 
     it('ShortcutButton passes isTabbable={false} on to Button', () => {
@@ -206,14 +208,14 @@ describe('Button components:', () => {
                 Hello
             </ShortcutButton>
         );
-        expect(wrapper.find('Button').prop('isTabbable')).to.be.equal(false);
+        expect(wrapper.find('Button').prop('isTabbable')).to.be.false;
     });
 
     it('TertiaryButton is tabbable by default', () => {
         const wrapper = shallow(
             <TertiaryButton disableButton onClick={() => ({})}>Hello</TertiaryButton>
         );
-        expect(wrapper.find('Button').prop('tabIndex')).to.be.equal(undefined);
+        expect(wrapper.find('Button').prop('tabIndex')).to.be.undefined;
     });
 
     it('TertiaryButton passes isTabbable={false} on to Button', () => {
@@ -222,13 +224,37 @@ describe('Button components:', () => {
                 Hello
             </TertiaryButton>
         );
-        expect(wrapper.find('Button').prop('isTabbable')).to.be.equal(false);
+        expect(wrapper.find('Button').prop('isTabbable')).to.be.false;
     });
 
     it('Button sets class', () => {
         const wrapper = shallow(
             <Button className="testClass" onClick={() => {}}>Hello</Button>
         );
-        expect(wrapper.find('button').hasClass('testClass')).to.be.equal(true);
+        expect(wrapper.find('button').hasClass('testClass')).to.be.true;
+    });
+
+    it('Button are type="submit" by default', () => {
+        const wrapper = shallow(
+            <Button onClick={() => {}}>Hello</Button>
+        );
+
+        expect(wrapper.find('button').is('[type="submit"]')).to.be.true;
+    });
+
+    it('Button can be type="button" if specified', () => {
+        const wrapper = shallow(
+            <Button type="button">Hello</Button>
+        );
+
+        expect(wrapper.find('button').is('[type="button"]')).to.be.true;
+    });
+
+    it('Button can be type="reset" if specified', () => {
+        const wrapper = shallow(
+            <Button type="reset">Hello</Button>
+        );
+
+        expect(wrapper.find('button').is('[type="reset"]')).to.be.true;
     });
 });
