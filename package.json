@@ -1,11 +1,11 @@
 {
   "name": "ffe-buttons",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "less/buttons.less",
   "scripts": {
-    "compile": "npm run lint && lessc example/example.less example/example.css && cp -R node_modules/ffe-core/fonts/ example/fonts/ && echo \"$(date +%T): Updated example\"",
+    "compile": "npm run lint && lessc example/example.less example/example.css && cp -R node_modules/ffe-core/fonts/ example/ && echo \"$(date +%T): Updated example\"",
     "lint": "lessc --lint example/example.less",
-    "start": "opn examples/examples.html & watch \"npm run -s compile\" less/",
+    "start": "opn example/example.html & watch \"npm run -s compile\" less/",
     "test:nsp": "nsp check",
     "test": "npm run lint && npm run test:nsp",
     "has-published": "npm show . versions -s | grep -q ${npm_package_version}",
