@@ -1,32 +1,35 @@
 .ffe-tertiary-button {
-    color: @ffe-blue-royal-light-wcag;
     background-color: transparent;
-    font-family: MuseoSansRounded-700, arial, sans-serif;
-    font-size: 16px;
     border: none;
     border-radius: 6px;
+    color: @ffe-blue-royal-light-wcag;
+    font-family: "MuseoSansRounded-700", arial, sans-serif;
+    font-size: 16px;
     height: 26px;
     line-height: 20px;
-    padding: 0 4px;
     margin: 0 -4px; // Hack to allow box-shadow to float outside content on focus
+    padding: 0 4px;
 
     &:after {
-        content: ' ';
         border-bottom: solid 2px @ffe-blue-royal-light-wcag;
+        content: " ";
         display: block;
+    }
+
+    &:active,
+    &:focus {
+        box-shadow: 0 0 0 2px @ffe-blue-focus;
+        color: @ffe-blue-flat;
+        outline: none;
     }
 
     &:hover {
         color: @ffe-blue-flat;
     }
 
-    &:hover:after, &:focus:after, &:active:after {
+    &:active:after,
+    &:focus:after,
+    &:hover:after {
         border-color: @ffe-blue-flat;
-    }
-
-    &:focus, &:active {
-        box-shadow: 0 0 0 2px @ffe-blue-focus;
-        color: @ffe-blue-flat;
-        outline: none;
     }
 }

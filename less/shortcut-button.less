@@ -2,18 +2,20 @@
     &:extend(.ffe-secondary-button all);
     padding-right: 35px;
 
-    &__icon-chevron {
-        width: 16px;
-        height: 16px;
-        position: relative;
-        left: 15px;
-        bottom: 2px;
-        transition: left 0.1s;
-    }
-
-    &:hover, &:active, &:focus {
+    &:active,
+    &:focus,
+    &:hover {
         .shortcut-button__icon-chevron {
             left: 20px;
         }
+    }
+
+    &__icon-chevron {
+        bottom: 2px;
+        height: 16px;
+        left: 15px;
+        position: relative;
+        transition: left 0.1s;
+        width: 16px;
     }
 }
