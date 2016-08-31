@@ -1,13 +1,15 @@
 .ffe-secondary-button {
     &:extend(.ffe-primary-button all);
-    color: @ffe-blue-royal-light-wcag;
     background-color: @ffe-white;
     border: solid 2px @ffe-grey-light;
-    box-shadow: 0 1px 2px 1px rgba(0,0,0,0.05);
+    box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.05);
+    color: @ffe-blue-royal-light-wcag;
 
-    &:hover, &:focus,&:active {
-        border-color: @ffe-blue-royal-light-wcag;
+    &:active,
+    &:focus,
+    &:hover {
         background-color: @ffe-white;
+        border-color: @ffe-blue-royal-light-wcag;
     }
 
     &--loading {
@@ -15,6 +17,6 @@
     }
 
     &__label-spinner {
-        .ffe-sb1-spinner(@ffe-blue-royal-light-wcag, 22px);
+        .ffe-buttons-spinner(@ffe-blue-royal-light-wcag, 22px);
     }
 }
