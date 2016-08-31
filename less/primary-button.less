@@ -1,36 +1,36 @@
 .ffe-primary-button {
-    font-family: 'MuseoSansRounded-500', arial, sans-serif;
-    font-size: 18px;
-    text-decoration: none;
-    cursor: pointer;
-    text-align: center;
-    vertical-align: middle;
-    padding: 0 30px;
-    border-radius: 4px;
-    color: @ffe-white;
     background-color: @ffe-blue-flat;
     border: 2px solid transparent;
+    border-radius: 4px;
+    color: @ffe-white;
+    cursor: pointer;
     display: block;
+    .ffe-buttons-shadow();
+    font-family: "MuseoSansRounded-500", arial, sans-serif;
+    font-size: 18px;
     line-height: 41px;
-    width: 100%;
-    overflow: hidden;
-    .ffe-shadow-buttons();
-    transition: all 0.2s;
     outline: none;
+    overflow: hidden;
+    padding: 0 30px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.2s;
+    vertical-align: middle;
+    width: 100%;
 
     &:focus {
+        background-color: darken(@ffe-blue-flat, 5%);
         box-shadow: 0 0 0 2px @ffe-blue-focus;
-        background-color: darken(@ffe-blue-flat,5%);
     }
 
     &:hover {
-        .ffe-shadow-buttons-hover();
-        background-color: darken(@ffe-blue-flat,5%);
+        background-color: darken(@ffe-blue-flat, 5%);
+        .ffe-buttons-shadow-hover();
     }
 
     &:active {
-        .ffe-shadow-buttons-active();
-        background-color: darken(@ffe-blue-flat,10%);
+        background-color: darken(@ffe-blue-flat, 10%);
+        .ffe-buttons-shadow-active();
     }
 
     &__label {
@@ -39,36 +39,31 @@
     }
 
     &__label-text {
+        bottom: 0;
         display: inline-block;
         position: relative;
-        bottom: 0;
         transition: bottom 0.2s;
     }
 
     &__label-spinner {
-        .ffe-sb1-spinner(@ffe-white,22px);
-        opacity: 0;
-        color: transparent;
-        -webkit-touch-callout: none;
-        user-select: none;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        position: absolute;
         bottom: -40px;
+        color: transparent;
+        .ffe-buttons-spinner(@ffe-white, 22px);
         left: ~"calc(50% - 11px)";
+        opacity: 0;
+        position: absolute;
         transition: all 0.2s;
+        user-select: none;
 
         &[aria-hidden="false"] {
-            opacity: 1;
             bottom: 0;
+            opacity: 1;
         }
     }
 
     &--loading {
-        pointer-events: none;
         background-color: darken(@ffe-blue-royal-light-wcag, 10%);
+        pointer-events: none;
     }
 
     &__label-text--loading {
