@@ -1,5 +1,12 @@
 # Changelog
 
+## v.8.0.0
+* Removing components from ffe-core (new modules created for them in their respective repos).
+* Updating examples to only include new ffe-core elements.
+* Updated normalize.css and added it as an npm dependency. (see https://github.com/necolas/normalize.css/blob/master/CHANGELOG.md for changes since v.3.0.3)
+* Cleaned up example files. Removed navigation, javascript and unused styling.
+* Added a description for migrating to v8.0.0
+
 ## v.7.0.1
 * Minor fix: make button texts of loading buttons unselectable, the text is only of interest for
   screen readers and ought to remain invisible under all circumstances.

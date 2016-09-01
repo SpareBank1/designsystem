@@ -15,7 +15,6 @@
     width: 100%;
     padding: 0 @app-margin;
     margin: 0;
-    .ffe-clearfix;
 
     &--bg-sand {
         background-color: @ffe-sand-25;
@@ -75,4 +74,21 @@
 
 .ffe-content-container[aria-hidden="true"] {
     display: none;
+}
+
+.ffe-icon-base {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    background-size: cover;
+
+    @media screen and (min-width: @breakpoint-sm) {
+        height: 75px;
+        width: 75px;
+    }
+    @media screen and (min-width: @breakpoint-md) {
+        height: 90px;
+        width: 90px;
+    }
 }
