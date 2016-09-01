@@ -192,7 +192,7 @@ export default class AccountSelector extends Component {
   }
 
   highlightAccount(account) {
-    if (account) {
+    if (account && this.state.showAccountSuggestions) {
       this.setState({
         selectedAccount: account,
         value: account.name,
