@@ -1,5 +1,16 @@
 # Changelog
 
+## v3.0.0
+* (BREAKING): Button's `type` prop has been renamed to `buttonType`. This change
+will only be breaking for direct consumers of the `<Button />` component - not
+its specialized versions `<PrimaryButton />`, `<SecondaryButton />` etc.
+* Allow overriding a button's `type` prop with `type="button"` or `type="reset"`
+when needed - now the `<*Button />` components behave like regular HTML buttons.
+The default is still `type="submit"`.
+* Allow no `onClick` handler. Since the default type is `submit`, the default
+click handler will trigger a `submit` event, which can be handled elsewhere,
+rendering an `onClick` handler useless.
+
 ## v2.4.1
 * Fix 'isTabbable' support: buttons are now tabbable by default if 'isTabbable' isn't specified.
 

@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import Button from './Button';
 
 export default function ActionButton(props) {
-    return <Button {...props} type="action">
+    return <Button {...props} buttonType="action">
                 {props.children}
             </Button>;
 }

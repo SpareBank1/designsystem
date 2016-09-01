@@ -7,39 +7,41 @@ export default function Button(props) {
         children,
         className = '',
         disableButton,
+        type = 'submit',
         id,
         isLoading,
+        isTabbable,
         label,
         onClick,
-        type = 'primary',
         simpleContent = false,
         style = {},
-        isTabbable,
+        buttonType = 'primary',
     } = props;
-    const loadingClass = isLoading ? `ffe-${type}-button--loading` : '';
+    const loadingClass = isLoading ? `ffe-${buttonType}-button--loading` : '';
 
     return (
         <button
-            onClick={onClick}
-            className={`ffe-${type}-button ${loadingClass} ${className}`}
-            data-action={action}
-            id={id}
-            disabled={disableButton}
             aria-disabled={disableButton}
-            {... isTabbable === false ? { tabIndex: -1 } : {}}
+            className={`ffe-${buttonType}-button ${loadingClass} ${className}`}
+            data-action={action}
+            disabled={disableButton}
+            id={id}
+            onClick={onClick}
             style={style}
+            {... isTabbable === false ? { tabIndex: -1 } : {}}
+            type={type}
         >
             {simpleContent ?
                 (label || children) :
-                <span className={`ffe-${type}-button__label`}>
+                <span className={`ffe-${buttonType}-button__label`}>
                     <span
-                        className={`ffe-${type}-button__label-text
-                        ${isLoading ? `ffe-${type}-button__label-text--loading` : ''}`}
+                        className={`ffe-${buttonType}-button__label-text
+                        ${isLoading ? `ffe-${buttonType}-button__label-text--loading` : ''}`}
                     >
                         {label || children}
                     </span>
                     <span
-                        className={`ffe-${type}-button__label-spinner`}
+                        className={`ffe-${buttonType}-button__label-spinner`}
                         aria-hidden={!isLoading}
                     >
                         {ariaLoadingMessage}
@@ -56,12 +58,19 @@ Button.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
     disableButton: PropTypes.bool,
+    buttonType: PropTypes.oneOf([
+        'action',
+        'primary',
+        'secondary',
+        'shortcut',
+        'tertiary',
+    ]),
     id: PropTypes.string,
     isLoading: PropTypes.bool,
-    label: PropTypes.string,
-    onClick: PropTypes.func.isRequired,
-    type: PropTypes.string,
-    simpleContent: PropTypes.bool,
     isTabbable: PropTypes.bool,
-    style: PropTypes.object
+    label: PropTypes.string,
+    onClick: PropTypes.func,
+    simpleContent: PropTypes.bool,
+    style: PropTypes.object,
+    type: PropTypes.oneOf(['button', 'submit', 'reset']),
 };
