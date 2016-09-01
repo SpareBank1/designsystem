@@ -1,0 +1,19 @@
+@import 'mixins';
+.ffe-loading-spinner {
+    display: inline-block;
+    vertical-align: middle;
+
+    &:before {
+      .ffe-sb1-spinner();
+    }
+
+    &--stop-animation:before {
+        animation: none;
+    }
+
+    &--large:before {
+        border-width: 3px;
+        height: 40px;
+        width: 40px;
+    }
+}
