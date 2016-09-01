@@ -2,12 +2,12 @@
 Inneholder generell styling for bruk utenom komponenter. F.eks. typografi, knapper, farger, o.l. Vi følger
 [BEM](https://en.bem.info/) for å sørge for god organisasjon av CSS-koden.
 
-FFE ivaratar færgkontrastkraven som specifiert i WCAG 2.0-standarden (AA-nivå).
+FFE ivaretar fargekontrastkravene som spesifisert i WCAG 2.0-standarden (AA-nivå).
 
 Nettleser som ikke støttes av FFE:
 
- * Internet Explorer 8 og tidigare, Internet Explorer 9 kan brukas men begrænsade visuella avvik må accepteras.
- * Android Browser-versioner tidligere æn 4.4
+ * Internet Explorer 8 og tidligere; Internet Explorer 9 kan brukes, men begrensede visuelle avvik må aksepteres.
+ * Android Browser-versjoner tidligere enn 4.4
 
 ## Kom i gang
 Konfigurer npm til å bruke SB1's lokale og private repo (proxy med cache til NPM public).
@@ -17,6 +17,22 @@ Konfigurer npm til å bruke SB1's lokale og private repo (proxy med cache til NP
 Installer som vanlig
 
     npm install ffe-core --save-dev
+
+## Migrering til v.8.0.0
+
+I versjon 8.0.0 ble det gjort en større job ved å splitte ffe-core opp i mindre pakker. For å få samme styling som før 8.0.0 må man ha følgende pakker som en dependency.
+
+```
+ffe-core
+ffe-buttons
+ffe-form
+ffe-list
+ffe-tables
+ffe-tabs
+ffe-spinner
+```
+
+Man må også legge til tilsvarende `@import`'s i .less for prosjektet.
 
 ## Bruk
 Modulen inneholder LESS-filer som kan importeres direkte fra node_modules til prosjektets CSS/LESS.
