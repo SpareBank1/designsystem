@@ -1,5 +1,8 @@
 # Changelog
 
+## v.8.0.1
+* Readded normalize.css as a static file
+
 ## v.8.0.0
 * Removing components from ffe-core (new modules created for them in their respective repos).
 * Updating examples to only include new ffe-core elements.
