@@ -10,7 +10,7 @@
     "has-published": "npm show . versions -s | grep -q ${npm_package_version}"
   },
   "devDependencies": {
-    "ffe-core": "^7.0.1",
+    "ffe-core": "^8.0.2",
     "ffe-visual-tests-support": "1.0.1",
     "gemini": "4.3.0",
     "less": "^2.7.1",
@@ -18,7 +18,7 @@
     "watch": "^0.19.2"
   },
   "peerDependencies": {
-    "ffe-core": "^7.0.1"
+    "ffe-core": "^8.0.2"
   },
   "repository": {
     "type": "git",
