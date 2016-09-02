@@ -3,11 +3,10 @@
 ## Install
 
 ```
-$ npm install --save ffe-buttons-react
+$ npm install --save ffe-core ffe-buttons ffe-buttons-react
 ```
 
-`ffe-buttons-react` has a peer dependency on `ffe-core`. Make sure `ffe-core` is
-also part of your build.
+`ffe-buttons-react` has a peer dependency on `ffe-core` and `ffe-buttons`. Make sure they are also part of your build.
 
 ## Variants
 

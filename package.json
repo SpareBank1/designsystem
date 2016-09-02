@@ -1,7 +1,7 @@
 {
-  "name": "ffe-button-react",
-  "version": "3.0.0",
-  "description": "React implementation of ffe-button",
+  "name": "ffe-buttons-react",
+  "version": "4.0.0",
+  "description": "React implementation of ffe-buttons",
   "main": "lib/index.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/.",
@@ -22,10 +22,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "ssh://git@stash.intern.sparebank1.no:22/ffe/ffe-button-react.git"
+    "url": "ssh://git@stash.intern.sparebank1.no:22/ffe/ffe-buttons-react.git"
   },
   "peerDependencies": {
-    "ffe-core": "6.x"
+    "ffe-buttons": "^2.0.0",
+    "ffe-core": "^8.0.2"
   },
   "devDependencies": {
     "babel-cli": "^6.4.5",
