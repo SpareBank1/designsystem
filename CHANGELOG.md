@@ -1,5 +1,8 @@
 # Changelog
 
+## Version 4.7.0
+* Added bygning-pluss-ikon.svg
+
 ## Version 4.6.0
 * Added stetoskop-ikon.svg
 

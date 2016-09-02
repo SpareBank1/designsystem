@@ -119,11 +119,13 @@ Also before starting, verify your SVG meets the criteria listed in *icons/_ICON_
 If you haven't already, fork this repository and clone it on your machine.
 
 1. Fetch the latest `master` branch in ffe-icons, and create a feature branch from there.
-2. Add the icon SVG to the `icons/` folder [^1].
-3. Verify that the icon looks OK relative to the others (padding etc) [^2].
-4. Update `CHANGELOG.md` with a new entry for the next version. Don't give it a version number just yet, that comes through a different pull request. Just add it under "Next version".
-5. Commit your changes to the feature branch, and push the changes to `origin`.
-6. Create a pull request from your repos feature branch to ffe-icons `master`.
+2. Clean up the SVG markup [^3].
+3. Add the icon SVG to the `icons/` folder [^1].
+4. Verify that the icon looks OK relative to the others (padding etc) [^2].
+5. Update `CHANGELOG.md` with a new entry for the next version.
+6. Update package.json with the new version
+7. Commit your changes to the feature branch, and push the changes to `origin`.
+8. Create a pull request from your repos feature branch to ffe-icons `master`.
 
 ## Visual regression testing
 See [readme for ffe-core](***REMOVED***).
@@ -142,3 +144,16 @@ from app to app). I.e., call it flamme-ikon, not skade-ikon even though it might
 
 [^2]: Run `$ npm start`, open the generated HTML (`dist/symbol/sprite.symbol.html`) and have a look. If only minor edits
 are needed (padding for instance) you can try this [web-based SVG editor](https://github.com/SVG-Edit/svgedit).
+
+[^3]:
+Example using Inkscape:
+1. Open the SVG file in Inkscape
+2. SHIFT-CTRL-D Change the width and height to 200.
+3. CTRL-A Select all elements.
+4. SHIFT-CTRLl-G Remove groups, (<g> elements). Repeat until no more groups.
+5. CTRL-A and CTRL-'+' (Union) - Convert all elements to a single path. This may make the icon larger if the path is very complex.
+6. SHIFT-CTRL-M  Scale the icon until it fills the view box (vertical or horizontal)
+7. SHIFT-CTRL-S Save the icon as Optimized SVG
+8. Open the Icon in a text editor and check if it contains any transform attributes. If not, jump to 10.
+9. Open the icon in http://editor.method.ac/ CTRL-A and choose Object->Reorient Path - This usually removes transforms. Save the file to disk.
+10. Remove all metadata og unnecessary whitespace. The structure of the .svg file should be <svg viewBox="0 0 200 200" xmln"..."><path d="..."/></svg>
