@@ -1,0 +1,46 @@
+{
+  "name": "ffe-tabs",
+  "version": "1.0.0",
+  "main": "less/ffe-tabs.less",
+  "scripts": {
+    "lint": "lessc --lint example/example.less",
+    "compile": "npm run lint && lessc example/example.less example/example.css && cp -R node_modules/ffe-core/fonts/ example/fonts/ && echo \"$(date +%T): Updated example\"",
+    "start": "opn example/example.html & watch \"npm run -s compile\" less/",
+    "preversion": "npm run lint",
+    "has-published": "npm show . versions -s | grep -q ${npm_package_version}"
+  },
+  "devDependencies": {
+    "ffe-core": "^8.0.2",
+    "ffe-visual-tests-support": "1.0.1",
+    "gemini": "4.3.0",
+    "less": "^2.7.1",
+    "opn-cli": "^3.1.0",
+    "watch": "^0.19.2"
+  },
+  "peerDependencies": {
+    "ffe-core": "^8.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "***REMOVED***"
+  },
+  "homepage": "***REMOVED***",
+  "documentation": [
+    {
+      "type": "html",
+      "file": "example/example.html",
+      "select": "#ffedoc"
+    },
+    {
+      "type": "markdown",
+      "file": "README.md"
+    }
+  ],
+  "publishConfig": {
+    "registry": "***REMOVED***"
+  },
+  "files": [
+    "less"
+  ],
+  "author": "SpareBank1"
+}
