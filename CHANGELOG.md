@@ -1,6 +1,15 @@
 # Changelog
 
+## v4.0.0
+
+Package has been renamed to ffe-buttons-react (plural). Package
+ffe-button-react is now deprecated.
+
+ffe-buttons-react introduces a new peerDependency in ffe-buttons. It also
+bumps the peerDependency on ffe-core to ^8.0.1
+
 ## v3.0.0
+
 * (BREAKING): Button's `type` prop has been renamed to `buttonType`. This change
 will only be breaking for direct consumers of the `<Button />` component - not
 its specialized versions `<PrimaryButton />`, `<SecondaryButton />` etc.
@@ -12,6 +21,7 @@ click handler will trigger a `submit` event, which can be handled elsewhere,
 rendering an `onClick` handler useless.
 
 ## v2.4.1
+
 * Fix 'isTabbable' support: buttons are now tabbable by default if 'isTabbable' isn't specified.
 
 ## v2.4.0
