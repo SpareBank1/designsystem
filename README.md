@@ -19,6 +19,12 @@ $ npm install --save-dev ffe-core ffe-buttons
 
 ffe-buttons brukes på samme måte som ffe-core. Importer `ffe-buttons/less/buttons.less` for å ta i bruk alle knappene.
 
+## Migrering fra ffe-core 7.x
+
+`.ffe-button-group` er fjernet, siden den la føringer for layout som ikke alltid stemte overens med behovene.
+Om du er havengig av `.ffe-button-group` kan du selv legge den til i prosjektet ditt.
+[Koden finnes fremdeles her](https://stash.intern.sparebank1.no/projects/FFE/repos/ffe-core/commits/c90af0679cca5970ea7a2763e83b6ec8bca36743#less/components/button-group.less)
+
 ## Utvikling
 
 For å teste endringer i en reell app lokalt kan man kjøre i dette prosjektes mappe:
@@ -47,3 +53,6 @@ Verifiser ved å kjøre testene:
 ```
 
 Commit endringene med oppdaterte baselines og lag en pull request.
+
+## Screenshot
+![buttons](visual-tests/baseline-screenshots/example/plain/firefox-medium.png)

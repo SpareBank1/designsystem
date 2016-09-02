@@ -1,5 +1,10 @@
 # Changelog
 
+## v2.0.0
+
+* Bumpet ffe-core peerDependency til ny major ^8.0.2
+* Bumpet devDependency på ffe-core til ^8.0.2
+
 ## v1.0.1
 
 La til mixins.less med mixins som forsvinner fra ffe-core med version 8.0.0
