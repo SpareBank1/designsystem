@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>ffe-form</title>
+        <link href="examples.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body class="ffe-body-text">
+        <div class="ffe-section-wrapper">
+            <div class="ffe-content-container">
+                <h1 class="ffe-h1">Dropdown</h1>
+            </div>
+        </div>
+
+        <div id="ffedoc">
+            <div class="ffe-section-wrapper">
+                <div class="ffe-content-container ffe-content-container--text-left">
+
+                    <p class="ffe-body-paragraph visual-test-hidden">
+                        Select box bør brukes hvis man har et sett med predefinerte valg å velge fra. Radioknapper er et
+                        godt alternativ hvis det er få valg. Vi bruker native elementet slik at mobil/nettbrett får
+                        riktig GUI.
+                    </p>
+
+                    <div class="ffe-input-group" aria-live="polite">
+                        <label id="month-label" class="ffe-form-label" for="month">
+                            Velg måned
+                        </label>
+                        <select class="ffe-dropdown" id="month">
+                            <option value="0">Januar</option>
+                            <option value="1">Februar</option>
+                            <option value="2">Mars</option>
+                            <option value="3">April</option>
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>ffe-form</title>
+        <link href="examples.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body class="ffe-body-text">
+        <div class="ffe-section-wrapper">
+            <div class="ffe-content-container">
+                <h1 class="ffe-h1">Checkbox</h1>
+            </div>
+        </div>
+
+        <div id="ffedoc">
+            <div class="ffe-section-wrapper">
+                <div class="ffe-content-container ffe-content-container--text-left">
+
+                    <p class="ffe-body-paragraph visual-test-hidden">
+                        Brukes når det er flere mulige valg. Har en standard og en inline variant.
+                    </p>
+
+
+                    <div class="ffe-input-group" aria-live="polite">
+                        <label id="checkbox-ibf-label" class="ffe-form-label" for="checkbox-ibf1">
+                            What colors do you like on unicorns?
+                        </label>
+                        <fieldset class="ffe-fieldset" id="checkbox-ibf1">
+                            <input class="ffe-hidden-checkbox"
+                                   type="checkbox"
+                                   name="unicorncolors"
+                                   value="yellow"
+                                   id="unicorncolors-1"
+                                   checked>
+                            <label class="ffe-checkbox" for="unicorncolors-1">Yellow</label>
+                            <input class="ffe-hidden-checkbox"
+                                   type="checkbox"
+                                   name="unicorncolors"
+                                   value="purple"
+                                   id="unicorncolors-2">
+                            <label class="ffe-checkbox" for="unicorncolors-2">Purple</label>
+                            <input class="ffe-hidden-checkbox"
+                                   type="checkbox"
+                                   name="unicorncolors"
+                                   value="white"
+                                   id="unicorncolors-3">
+                            <label class="ffe-checkbox" for="unicorncolors-3">White</label>
+                        </fieldset>
+                    </div>
+
+                    <div class="ffe-input-group" aria-live="polite">
+                        <label id="checkbox-inline-ibf-label" class="ffe-form-label" for="checkbox-inline-ibf1">
+                            Favorite unicorn foods?
+                        </label>
+                        <fieldset class="ffe-fieldset" id="checkbox-inline-ibf1">
+                            <input class="ffe-hidden-checkbox"
+                                   type="checkbox"
+                                   name="unicornfood"
+                                   value="apples"
+                                   id="unicornfood-1"
+                                   checked>
+                            <label class="ffe-checkbox ffe-checkbox--inline" for="unicornfood-1">Apples</label>
+                            <input class="ffe-hidden-checkbox"
+                                   type="checkbox"
+                                   name="unicornfood"
+                                   value="banans"
+                                   id="unicornfood-2">
+                            <label class="ffe-checkbox ffe-checkbox--inline" for="unicornfood-2">Bananas</label>
+                            <input class="ffe-hidden-checkbox"
+                                   type="checkbox"
+                                   name="unicornfood"
+                                   value="oatmeal"
+                                   id="unicornfood-3">
+                            <label class="ffe-checkbox ffe-checkbox--inline" for="unicornfood-3">Oatmeal</label>
+                        </fieldset>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
