@@ -1,5 +1,9 @@
 # Changelog
 
+## v.8.0.2
+
+* Fixes a bug where `box-sizing: border-box;` went missing
+
 ## v.8.0.1
 * Readded normalize.css as a static file
 
