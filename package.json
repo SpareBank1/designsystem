@@ -28,7 +28,7 @@
     }
   ],
   "devDependencies": {
-    "ffe-core": "^7.0.1",
+    "ffe-core": "8.x",
     "ffe-visual-tests-support": "1.0.1",
     "gemini": "4.3.0",
     "less": "^2.7.1",
@@ -37,7 +37,7 @@
     "watch": "^0.19.2"
   },
   "peerDependencies": {
-    "ffe-core": "7.x"
+    "ffe-core": "8.x"
   },
   "publishConfig": {
     "registry": "***REMOVED***"
