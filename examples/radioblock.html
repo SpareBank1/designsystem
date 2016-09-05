@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>ffe-form</title>
+        <link href="examples.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body class="ffe-body-text">
+        <div class="ffe-section-wrapper">
+            <div class="ffe-content-container">
+                <h1 class="ffe-h1">Radio block</h1>
+            </div>
+        </div>
+
+        <div id="ffedoc">
+            <div class="ffe-section-wrapper">
+                <div class="ffe-content-container ffe-content-container--text-left">
+
+                    <p class="ffe-body-paragraph visual-test-hidden">
+                        Radio blocks brukes når det er viktig å presentere kontekstuelt relevant informasjon om valgene til brukeren uten å overvelde. De kan brukes både som vanlige radio-knapper med synlig kontekst eller som en liten meny der kontekst bare er synlig for det aktive valget.
+                    </p>
+
+                    <h3 class="ffe-h3">Alltid synlig kontekst</h3>
+
+                    <div class="ffe-input-group" aria-live="polite">
+                        <label class="ffe-form-label" for="block-ibf1">
+                            Hva ønsker du å gjøre?
+                        </label>
+                        <fieldset class="ffe-fieldset" id="block-ibf1">
+                            <div class="ffe-radio-block">
+                                <input class="ffe-radio-input" type="radio" name="block" id="block-one" value="one"
+                                       checked>
+
+                                <div class="ffe-radio-block__content">
+                                    <label class="ffe-radio-block__header" for="block-one">Alternativ #1</label>
+
+                                    <div class="ffe-radio-block__wrapper">
+                                        <p class="ffe-body-paragraph">
+                                            Denne teksten er alltid synlig.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="ffe-radio-block">
+                                <input class="ffe-radio-input" type="radio" name="block" id="block-two" value="two">
+
+                                <div class="ffe-radio-block__content">
+                                    <label class="ffe-radio-block__header" for="block-two">Alternativ #2</label>
+
+                                    <div class="ffe-radio-block__wrapper">
+                                        <p class="ffe-body-paragraph">
+                                            Denne teksten er alltid synlig.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <div class="ffe-content-container ffe-content-container--text-left">
+
+                        <h3 class="ffe-h3">Kontekst kun synlig for aktivt valg</h3>
+
+                        <div class="ffe-input-group" aria-live="polite" role="tablist">
+                            <label class="ffe-form-label" for="tab-set">
+                                Hva ønsker du å gjøre?
+                            </label>
+                            <fieldset class="ffe-fieldset" id="tab-set">
+                                <div class="ffe-radio-block" role="presentation">
+                                    <input class="ffe-radio-input" type="radio" name="tab" id="tab-one"
+                                           aria-labelledby="tab-one-label"
+                                           value="one" tabindex="0" role="tab" aria-controls="content-one"
+                                           aria-selected="true"
+                                           checked>
+
+                                    <div class="ffe-radio-block__content" role="presentation">
+                                        <label class="ffe-radio-block__header" id="tab-one-label" for="tab-one">Block
+                                            one</label>
+
+                                        <div class="ffe-radio-block__wrapper" id="content-one" role="tabpanel"
+                                             aria-labelledby="tab-one-label">
+                                            <p class="ffe-body-paragraph">
+                                                Denne teksten er synlig fordi valget er aktivt.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ffe-radio-block" role="presentation">
+                                    <input class="ffe-radio-input" type="radio" name="tab" id="tab-two"
+                                           aria-labelledby="tab-two-label"
+                                           value="two" tabindex="0" role="tab" aria-controls="content-two"
+                                           aria-selected="false">
+
+                                    <div class="ffe-radio-block__content" role="presentation">
+                                        <label class="ffe-radio-block__header" id="tab-two-label" for="tab-two">Block
+                                            two</label>
+
+                                        <div class="ffe-radio-block__wrapper" id="content-two" role="tabpanel"
+                                             aria-labelledby="tab-two-label" aria-hidden="true">
+                                            <p class="ffe-body-paragraph">
+                                                Denne teksten er ikke synlig.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,7 +1,7 @@
-ffe-field-error-message:extend(.ffe-field-info-message) {
+.ffe-field-error-message:extend(.ffe-field-info-message) {
   color: @ffe-orange-wcag;
 
-  &:before {
+  &:before:extend(.ffe-field-info-message:before) {
     content: '!';
     background-color: @ffe-orange-wcag;
   }

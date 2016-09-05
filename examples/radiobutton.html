@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>ffe-form</title>
+        <link href="examples.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body class="ffe-body-text">
+        <div class="ffe-section-wrapper">
+            <div class="ffe-content-container">
+                <h1 class="ffe-h1">Radio button</h1>
+            </div>
+        </div>
+
+        <div id="ffedoc">
+            <div class="ffe-section-wrapper">
+                <div class="ffe-content-container ffe-content-container--text-left">
+
+                    <p class="ffe-body-paragraph visual-test-hidden">
+                        En standard radio-knapp. Har en standard- og en inline-variant.
+                    </p>
+
+                    <div class="ffe-input-group" aria-live="polite">
+                        <label id="radio-ibf-label" class="ffe-form-label" for="radio-ibf1">
+                            Which unicorn do you like most?
+                        </label>
+                        <fieldset class="ffe-fieldset" id="radio-ibf1">
+                            <input class="ffe-radio-input"
+                                   type="radio"
+                                   name="unicorns"
+                                   value="applejack"
+                                   id="unicorns-1"
+                                   checked>
+                            <label class="ffe-radio-button" for="unicorns-1">Applejack</label>
+                            <input class="ffe-radio-input"
+                                   type="radio"
+                                   name="unicorns"
+                                   value="starlet"
+                                   id="unicorns-2">
+                            <label class="ffe-radio-button" for="unicorns-2">Starlet</label>
+                            <input class="ffe-radio-input"
+                                   type="radio"
+                                   name="unicorns"
+                                   value="trixie"
+                                   id="unicorns-3">
+                            <label class="ffe-radio-button" for="unicorns-3">Trixie</label>
+                        </fieldset>
+                    </div>
+
+                    <div class="ffe-input-group" aria-live="polite">
+                        <label id="radio-inline-ibf-label" class="ffe-form-label" for="radio-inline-ibf1">
+                            Are there unicorns with wings?
+                        </label>
+                        <fieldset class="ffe-fieldset" id="radio-inline-ibf1">
+                            <input class="ffe-radio-input"
+                                   type="radio"
+                                   name="unicornwings"
+                                   value="yes"
+                                   id="unicornwings-1"
+                                   checked>
+                            <label class="ffe-radio-button ffe-radio-button--inline"
+                                   for="unicornwings-1">Yes</label>
+                            <input class="ffe-radio-input"
+                                   type="radio"
+                                   name="unicornwings"
+                                   value="no"
+                                   id="unicornwings-2">
+                            <label class="ffe-radio-button ffe-radio-button--inline" for="unicornwings-2">No</label>
+                            <input class="ffe-radio-input"
+                                   type="radio"
+                                   name="unicornwings"
+                                   value="dunno"
+                                   id="unicornwings-3">
+                            <label class="ffe-radio-button ffe-radio-button--inline" for="unicornwings-3">I do not
+                                know!</label>
+                        </fieldset>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
