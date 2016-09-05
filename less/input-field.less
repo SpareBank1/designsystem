@@ -1,0 +1,35 @@
+.ffe-input-field {
+    display: inline-block;
+    height: 45px;
+    padding: 0 13px;
+    font-family: MuseoSans-300, arial, sans-serif;
+    font-size: 18px;
+    border-radius: 4px;
+    border: 2px solid @ffe-grey-light;
+    transition: all 0.15s ease-in-out;
+    box-shadow: 0 1px 2px 0 @ffe-grey-light-bg inset;
+
+
+    &:hover {
+        border-color: @ffe-blue-royal-light-wcag;
+    }
+
+    &:focus, &:active {
+        border-color: @ffe-blue-royal-light-wcag;
+        box-shadow: 0 0 0 2px @ffe-blue-focus;
+        outline: none;
+    }
+
+    &--small {
+        width: 95px;
+    }
+
+    &--medium {
+        width: 130px;
+    }
+
+    &--large {
+        width: 160px;
+    }
+
+}
