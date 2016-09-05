@@ -1,0 +1,48 @@
+{
+  "name": "ffe-lists",
+  "version": "1.0.0",
+  "description": "Lists in ffe",
+  "main": "less/list.less",
+  "scripts": {
+    "compile": "npm run lint && lessc examples/examples.less examples/examples.css && mkdirp examples/fonts && cp -R node_modules/ffe-core/fonts/* examples/fonts/ && echo Now open /examples/form.html to see styleguide.",
+    "lint": "lessc --lint examples/examples.less",
+    "start": "opn examples/examples.html & watch \"npm run -s compile\" less/",
+    "test": "npm run compile && ./run_visual-tests.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "***REMOVED***"
+  },
+  "publishConfig": {
+    "registry": "***REMOVED***"
+  },
+  "documentation": [
+    {
+      "type": "html",
+      "file": "examples/lists.html",
+      "select": "#ffedoc"
+    },
+    {
+      "type": "markdown",
+      "file": "README.md"
+    }
+  ],
+  "author": "",
+  "license": "",
+  "devDependencies": {
+    "ffe-core": "8.x",
+    "ffe-visual-tests-support": "1.0.1",
+    "gemini": "4.3.0",
+    "less": "2.7.1",
+    "opn-cli": "^3.1.0",
+    "mkdirp": "0.5.1"
+  },
+  "peerDependencies": {
+    "ffe-core": "8.x"
+  },
+  "files": [
+    "less",
+    "examples",
+    "ffe-lists.less"
+  ]
+}

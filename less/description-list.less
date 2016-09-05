@@ -1,0 +1,76 @@
+@description-list-vertical-seperation: 20px;
+
+.ffe-description-list {
+    dt {
+        color: @ffe-blue-royal;
+        &:extend(.ffe-strong-text);
+        .ffe-fontsize-h6;
+    }
+
+    /* Use padding rather than margin in bottom to avoid extra spacing overflowing to the top of the next column */
+    dd {
+        padding-bottom: @description-list-vertical-seperation;
+        margin-left: 0;
+        &:extend(.ffe-body-text);
+    }
+
+    &--flex {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+
+        dt {
+            flex: 0 0 35%;
+            overflow: hidden; /* Prevents long words in labels from causing layout to break */
+        }
+
+        dd {
+            flex: 65% 0 0;
+            padding-left: 20px;
+            max-width: 65%; /* Fix for IE issue in which box-sizing is not taken into account when using flex */
+        }
+
+        dd + dd {
+            margin-left: 35%; /* Keep left margin when using multiple dd's */
+        }
+
+        @media (min-width: @breakpoint-sm) {
+            dt {
+                flex: 0 0 20%;
+            }
+
+            dd {
+                flex: 80% 0 0;
+                max-width: 80%;
+            }
+
+            dd + dd {
+                margin-left: 20%;
+            }
+        }
+    }
+
+    &--multicolumn {
+        text-align: center;
+
+        dt {
+            break-inside: avoid;
+            break-after: avoid;
+        }
+
+        dd {
+            break-inside: avoid;
+            break-before: avoid;
+        }
+
+        @media (min-width: @breakpoint-sm) {
+            columns: 2;
+            column-gap: 20px;
+        }
+
+        /* Wrap dt and dd in a container to avoid breaking into new columns in between */
+        &__avoid-break {
+            break-inside: avoid-column;
+        }
+    }
+}
