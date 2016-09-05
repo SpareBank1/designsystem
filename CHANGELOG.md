@@ -1,5 +1,10 @@
 # Changelog
 
+## v4.1.0
+
+* Fix truly disabling button while `isLoading` (CSS `pointer-events:none` was an obscure and inefficient way to achieve this)
+* `isLoading` will also set the attribute `aria-busy=true` on the button 
+
 ## v4.0.0
 
 Package has been renamed to ffe-buttons-react (plural). Package
