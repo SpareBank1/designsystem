@@ -143,6 +143,14 @@ describe('Button components:', () => {
         expect(onClick.calledOnce).to.true;
     });
 
+    it('isLoading prop disables the button and marks it as aria-busy', () => {
+        const wrapper = shallow(<Button isLoading>Hello</Button>);
+        const button = wrapper.find('button');
+        expect(button.prop('disabled')).to.be.true;
+        expect(button.prop('aria-busy')).to.be.true;
+        expect(button.prop('aria-disabled')).to.be.undefined;
+    });
+
     it('Set isTabbable={true} on Button does nothing', () => {
         const wrapper = shallow(<Button onClick={() => ({})} isTabbable>Hello</Button>);
         const button = wrapper.find('button');

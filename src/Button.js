@@ -22,9 +22,10 @@ export default function Button(props) {
     return (
         <button
             aria-disabled={disableButton}
+            aria-busy={isLoading}
             className={`ffe-${buttonType}-button ${loadingClass} ${className}`}
             data-action={action}
-            disabled={disableButton}
+            disabled={disableButton || isLoading}
             id={id}
             onClick={onClick}
             style={style}

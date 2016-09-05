@@ -62,6 +62,7 @@ types.
 ### Loading state
 
 For long-running operations you may want to put the button in a loading state.
+While in this state, the button will be disabled and given the attribute `aria-busy=true`
 
 ```javascript
 <PrimaryButton isLoading onClick={clickHandler}>...</PrimaryButton>
