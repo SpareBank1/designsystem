@@ -1,4 +1,8 @@
 # Changelog
+#v1.4.3
+* Upgrade react dependencies to ^15.2.0 due to a bug with getNodeFromInstance in 15.1.0
+* Throw on blur only when leaving component, not when selecting account from dropdown or pressing reset-button
+
 # v.1.4.2
 * Bugfix: React warning when no selectedAccount or value props are given
 * Bugfix: Missing X (reset) when selectedAccount or value are given
