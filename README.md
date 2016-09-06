@@ -8,8 +8,8 @@ React implementation of the dropdown found in FFE.
 $ npm install --save ffe-dropdown-react
 ```
 
-`ffe-dropdown-react` depends on `ffe-core` being present and imported in your project.
-More specifically, the CSS classes related to dropdowns in ffe-core should be in your CSS Object Model when using this component.
+`ffe-dropdown-react` depends on `ffe-core`, `ffe-form`, `ffe-spinner` and `ffe-dropdown` being present and imported in your project.
+More specifically, the CSS classes related to dropdowns in those packages should be in your CSS Object Model when using this component.
 
 ## Usage
 
@@ -39,10 +39,11 @@ The label-attribute should then be omitted.
 
 If you want to initialize the dropdown with a non-empty value, you can supply a `defaultValue` prop.
 
-To get an error message showing pass `error` and `errorMessage` to the `Dropdown`.
+To get an error message showing pass `errorMessage` to the `Dropdown`.
+Passing `invalid` to the `Dropdown` will give a red color on the element.
 
 ```javascript
-<Dropdown defaultValue="foo" error="true" errorMessage="test">
+<Dropdown defaultValue="foo" invalid="true" errorMessage="test">
     <option value="make_foo" disabled="true">Not Bar</option>
     <option value="bar">Bar</option>
 </Dropdown>

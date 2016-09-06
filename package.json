@@ -1,10 +1,11 @@
 {
   "name": "ffe-dropdown-react",
-  "version": "1.8.0",
+  "version": "2.0.0",
   "main": "lib/dropdown.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/. && npm run example",
     "lint": "eslint src/.",
+    "start": "budo examples/dropdown.js --open --live --title \"FFE Dropdown React\" -- -t [ babelify --presets [ es2015 react ] ] -t node-lessify",
     "test:nsp": "nsp check",
     "test:spec": "mocha --require babel-register src/**/*.test.js",
     "test": "npm run test:spec && npm run test:nsp",
@@ -14,10 +15,14 @@
     "has-published": "npm show . versions -s | grep -q ${npm_package_version}"
   },
   "peerDependencies": {
-    "ffe-core": "^6.3.1"
+      "ffe-core": "^8.0.2",
+      "ffe-form": "^1.0.0",
+      "ffe-spinner": "^1.0.0",
+      "ffe-dropdown": "^2.0.0"
   },
   "dependencies": {
-    "nfe-hash": "^1.1.0"
+      "ffe-core": "^8.0.2",
+      "nfe-hash": "^1.1.0"
   },
   "devDependencies": {
     "babel-cli": "6.7.5",
@@ -36,7 +41,10 @@
     "react": "*",
     "react-dom": "*",
     "react-addons-test-utils": "^15.0.1",
-    "sinon": "^1.17.3"
+    "sinon": "^1.17.3",
+    "budo": "^8.3.0",
+    "babelify": "^7.3.0",
+    "node-lessify": "^0.1.4"
   },
   "publishConfig": {
     "registry": "***REMOVED***"
