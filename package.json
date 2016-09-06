@@ -33,13 +33,13 @@
     "mocha-tap13": "^1.0.4",
     "node-lessify": "^0.1.4",
     "nsp": "^2.2.0",
-    "react": "15.3.1",
-    "react-addons-test-utils": "15.1.0",
-    "react-dom": "15.1.0"
+    "react": "^15.2.0",
+    "react-addons-test-utils": "^15.2.0",
+    "react-dom": "^15.2.0"
   },
   "peerDependencies": {
     "ffe-core": "^6.2.0",
-    "react": "^15.1.0"
+    "react": "^15.2.0"
   },
   "publishConfig": {
     "registry": "***REMOVED***"
