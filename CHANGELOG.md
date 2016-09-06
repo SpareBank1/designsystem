@@ -1,5 +1,10 @@
 # Changelog
 
+## v.2.0.0
+* peerDependency on `ffe-core` bumped to `^8.0.2`
+* Added explicit dependency on `ffe-core` and `ffe-spinner`
+* Added a budo example page that can be launched with `npm start`
+
 ## v.1.0.2
 * peerDependency on `ffe-core` relaxed to `^6.0.0`
 
