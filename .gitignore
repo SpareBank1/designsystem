@@ -39,3 +39,8 @@ node_modules
 # IDEA
 .idea/
 
+# Fonts
+fonts/
+
+# Generated example.css
+example/example.css

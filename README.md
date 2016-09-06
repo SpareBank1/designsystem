@@ -20,11 +20,13 @@ npm link ffe-datepicker
 
 ## Usage
 The styles for this package can be used in 3 different ways depending on what you want.
+For All styles or Only date input you will need the `ffe-form` package in your project.
 
 ### All styles
 You need styles for both the dateinput field and the calendar.
 ```css
 @import "node_modules/ffe-datepicker/less/datepicker.less";
+@import "node_modules/ffe-form/less/form.less";
 ```
 Example HTML stucture with classes. (Aria-tags and other attributes have been removed for clarity)
 ```html
@@ -37,6 +39,7 @@ Example HTML stucture with classes. (Aria-tags and other attributes have been re
 ### Only date input styles
 ```css
 @import "node_modules/ffe-datepicker/less/dateinput.less";
+@import "node_modules/ffe-form/less/form.less";
 ```
 Example HTML stucture with classes. (Aria-tags and other attributes have been removed for clarity)
 ```html
