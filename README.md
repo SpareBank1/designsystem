@@ -51,7 +51,6 @@ const accounts = [
 You must also import the styles
 ```css
 @import "node_modules/nfe-account-selector-react/styles/account-selector.less";
-@import "node_modules/nfe-account-selector-react/styles/account-suggestions.less";
 ```
 
 ## Reset Account Selector from parent component
