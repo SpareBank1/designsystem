@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>ffe-form</title>
+        <link href="examples.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body class="ffe-body-text">
+        <div class="ffe-section-wrapper">
+            <div class="ffe-content-container">
+                <h1 class="ffe-h1">Validation</h1>
+            </div>
+        </div>
+
+        <div id="ffedoc">
+            <div class="ffe-section-wrapper">
+                <div class="ffe-content-container ffe-content-container--text-left">
+
+                    <p class="ffe-body-paragraph visual-test-hidden">
+                        Det skal plasseres en oppsummering av skjemafeil over skjemaet. Det skal også scrolles til dette
+                        elemementet når valideringen skjer. Normalt vil dette være etter submit av skjemaet.
+                        Oppsummering kan skjules ved å sette aria-hidden='true'. For å støtte skjermlesere er det viktig
+                        at det er satt role='alert' og aria-live='assertive' på elementet som wrapper feilmeldingene.
+                        Dette for at skjermleseren skal plukke det opp og varsle brukeren når det vises (eller fjernes)
+                        feilmeldinger fra listen.
+                    </p>
+
+                    <h3 class="ffe-h3">Oppsummering av feil i skjema</h3>
+
+
+                    <div class="ffe-error-summary" aria-hidden="false" role="alert" aria-live="assertive">
+                        <span class="ffe-error-summary__icon ffe-icon-info-error"></span>
+                        <span class="ffe-error-summary__title">Du må rette opp disse feilene i skjemaet</span>
+                        <ul class="ffe-error-summary__list">
+                            <li class="ffe-error-summary__list-item">Vennligst velg en bonus</li>
+                            <li class="ffe-error-summary__list-item">Vennligst fyll inn "Fødselsnummer"</li>
+                            <li class="ffe-error-summary__list-item">Vennligst fyll inn "Fornavn"</li>
+                            <li class="ffe-error-summary__list-item">Vennligst fyll inn "Etternavn"</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="ffe-content-container ffe-content-container--text-left">
+                    <h3 class="ffe-h3">Feilmeldinger på skjemaelementene</h3>
+
+                    <div class="ffe-input-group" aria-live="polite">
+                        <label for="ssn-invalid" class="ffe-form-label">Fødselsnummer</label>
+                        <input class="ffe-input-field" name="ssn" id="ssn-invalid" type="tel" maxlength="11"
+                               autocomplete="off" aria-invalid="true">
+
+                        <div class="ffe-field-error-message">Vennligst fyll inn "Fødselsnummer"</div>
+                    </div>
+
+                    <div class="ffe-input-group" aria-live="polite">
+                        <label class="ffe-form-label" for="radio-inline-ibf1-invalid">
+                            Are there unicorns with wings?
+                        </label>
+                        <fieldset class="ffe-fieldset" id="radio-inline-ibf1-invalid" aria-invalid="true">
+                            <input class="ffe-radio-input"
+                                   type="radio"
+                                   name="unicornwings-validation"
+                                   value="yes"
+                                   id="unicornwings-1-invalid"
+                                   checked>
+                            <label class="ffe-radio-button ffe-radio-button--inline"
+                                   for="unicornwings-1-invalid">Yes</label>
+                            <input class="ffe-radio-input"
+                                   type="radio"
+                                   name="unicornwings-validation"
+                                   value="no"
+                                   id="unicornwings-2-invalid">
+                            <label class="ffe-radio-button ffe-radio-button--inline"
+                                   for="unicornwings-2-invalid">No</label>
+                            <input class="ffe-radio-input"
+                                   type="radio"
+                                   name="unicornwings-validation"
+                                   value="dunno"
+                                   id="unicornwings-3-invalid">
+                            <label class="ffe-radio-button ffe-radio-button--inline" for="unicornwings-3-invalid">I do
+                                not know!</label>
+                        </fieldset>
+                        <div class="ffe-field-error-message">Ta våre fabeldyr på alvor.</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
