@@ -1,5 +1,13 @@
 # Changelog
 
+## v1.0.1
+* Add missing .ffe-sb1-radioblob mixin removed in ffe-core@8
+* Fix build commands
+* Fix class name for field-error-message
+* Fix extending field-info-message
+* Split example.html into smaller more manageable parts. Removed code snippets in the process.
+* Descriptions are hidden when visual tests run.
+
 ## v1.0.0
 * Første versjon av ffe-form-pakken
 * Less-filene er basert på ffe-core v7.0.1 (https://stash.intern.sparebank1.no/projects/FFE/repos/ffe-core/browse/) and kan brukes med ffe-core >= v8.0.0

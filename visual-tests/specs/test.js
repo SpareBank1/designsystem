@@ -16,7 +16,8 @@ fs.readdirSync('./examples')
                               '.ffe-loading-spinner, ' +
                               '.ffe-action-button__label-spinner, ' +
                               '.ffe-primary-button__label-spinner, ' +
-                              '.ffe-secondary-button__label-spinner'
+                              '.ffe-secondary-button__label-spinner, ' +
+                              '.visual-test-hidden'
                           ),
                           function(el) {
                               el && el.parentNode.removeChild(el);

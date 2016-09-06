@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>ffe-form</title>
+        <link href="examples.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body class="ffe-body-text">
+        <div class="ffe-section-wrapper">
+            <div class="ffe-content-container">
+                <h1 class="ffe-h1">Radio switch</h1>
+            </div>
+        </div>
+
+        <div id="ffedoc">
+            <div class="ffe-section-wrapper">
+                <div class="ffe-content-container ffe-content-container--text-left">
+
+                    <p class="ffe-body-paragraph visual-test-hidden">
+                        Brukes kun der det er to motstridende valg.
+                    </p>
+
+                    <div class="ffe-input-group" aria-live="polite">
+                        <label id="switch-ibf-label" class="ffe-form-label" for="switch-ibf1">
+                            Do you like unicorns at all?
+                        </label>
+                        <fieldset class="ffe-fieldset" id="switch-ibf1">
+                            <input class="ffe-radio-input"
+                                   type="radio"
+                                   name="unicornslike"
+                                   value="yes"
+                                   id="unicornslike-1"
+                                   checked>
+                            <label class="ffe-radio-switch" for="unicornslike-1">Ja</label>
+
+                            <input class="ffe-radio-input"
+                                   type="radio"
+                                   name="unicornslike"
+                                   value="no"
+                                   id="unicornslike-2">
+                            <label class="ffe-radio-switch" for="unicornslike-2">Nei</label>
+                        </fieldset>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
