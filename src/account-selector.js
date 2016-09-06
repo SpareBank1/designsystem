@@ -46,7 +46,8 @@ export default class AccountSelector extends Component {
       showResetButton: false,
       selectedAccount: null,
       value: '',
-      filteredAccounts: this.filterAccounts(accounts, '')
+      filteredAccounts: this.filterAccounts(accounts, ''),
+      accountSelectedFromDropdown: false,
     };
   }
 
@@ -89,7 +90,7 @@ export default class AccountSelector extends Component {
         break;
       case KeyCode.ENTER:
         evt.preventDefault();
-        this.onAccountSelect(this.state.selectedAccount);
+        this.onAccountSelect(this.state.selectedAccount, false);
         break;
       case KeyCode.TAB:
         this.onInputTab(evt);
@@ -107,7 +108,7 @@ export default class AccountSelector extends Component {
       showAccountSuggestions: false,
     }, () => {
       if (selectedAccount) {
-        this.onAccountSelect(selectedAccount);
+        this.onAccountSelect(selectedAccount, false);
       }
     });
   }
@@ -124,14 +125,14 @@ export default class AccountSelector extends Component {
 
   onBlur() {
     this.removeGlobalEventListeners();
-    const {selectedAccount, value} = this.state;
+    const {selectedAccount, value, accountSelectedFromDropdown, resetField} = this.state;
     const {onBlur} = this.props;
     let blurReturn = value;
     if (selectedAccount) {
       const inputMatchesValidAccountName = value.toLowerCase() === selectedAccount.name.toLowerCase();
       const inputMatchesValidAccountNumber = value === selectedAccount.accountNumber;
       if (inputMatchesValidAccountName || inputMatchesValidAccountNumber) {
-        this.onAccountSelect(selectedAccount);
+        this.onAccountSelect(selectedAccount, false);
         blurReturn = selectedAccount.accountNumber;
       }
       else {
@@ -140,6 +141,22 @@ export default class AccountSelector extends Component {
         });
       }
     }
+
+    // Prevent blur if an account is selected from the dropdown or if the reset button is pressed
+    if (accountSelectedFromDropdown || resetField) {
+      this._accountInput.focus();
+      this.setState({
+        accountSelectedFromDropdown: false,
+        showAccountSuggestions: resetField,
+        resetField: false,
+      });
+      return;
+    }
+
+    this.setState({
+      showAccountSuggestions: false,
+    });
+
     onBlur(blurReturn);
   }
 
@@ -158,19 +175,18 @@ export default class AccountSelector extends Component {
     }, () => onChange(value));
   }
 
-  onAccountSelect(account, focus) {
+  onAccountSelect(account, fromDropdown) {
     const {accounts, onChange, onAccountSelected} = this.props;
     const {accountNumber} = account;
     const filteredAccounts = this.filterAccounts(accounts, accountNumber);
-    if (focus) {
-      this._accountInput.focus();
-    }
+
     this.setState({
       filteredAccounts,
       value: account.name,
       selectedAccount: account,
       showAccountSuggestions: false,
       showResetButton: true,
+      accountSelectedFromDropdown: fromDropdown,
     }, () => {
       onChange(accountNumber);
       onAccountSelected(accountNumber);
@@ -192,7 +208,7 @@ export default class AccountSelector extends Component {
   }
 
   highlightAccount(account) {
-    if (account) {
+    if (account && this.state.showAccountSuggestions) {
       this.setState({
         selectedAccount: account,
         value: account.name,
@@ -200,13 +216,13 @@ export default class AccountSelector extends Component {
     }
   }
 
-  reset(focus) {
+  reset() {
+    // The inputfield looses focus when we click the reset button, so we need to give it back
+    this._accountInput.focus();
+
     const {onChange, onAccountSelected} = this.props;
-    const state = {...this.getBlankState(), showAccountSuggestions: focus};
+    const state = {...this.getBlankState(), showAccountSuggestions: true, resetField: true };
     this.setState(state, () => {
-      if (focus) {
-        this._accountInput.focus();
-      }
       onChange(state.selectedAccount);
       onAccountSelected(state.selectedAccount);
     });
@@ -292,12 +308,13 @@ export default class AccountSelector extends Component {
           onBlur={this.onBlur}
           aria-autocomplete="inline"
           aria-invalid={ariaInvalid}
+          autoComplete="off"
         />
         {showResetButton ?
           <button
             aria-label={ i18n[locale].RESET_SEARCH }
             className="nfe-account-selector__reset-button"
-            onClick={ () => { this.reset(true); } }
+            onMouseDown={ this.reset }
             onKeyDown={ this.onResetButtonKeydown }
             tabIndex="-1"
           >
@@ -331,7 +348,7 @@ export default class AccountSelector extends Component {
             <AccountSuggestionList
               locale={locale}
               accounts={ filteredAccounts }
-              onSelect={ (account) => this.onAccountSelect(account, true) }
+              onSelect={ (account, fromDropdown) => this.onAccountSelect(account, fromDropdown) }
               selectedAccount={ selectedAccount }
               ref={ assignTo('_suggestionList') }
             />

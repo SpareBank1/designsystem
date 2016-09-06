@@ -7,7 +7,7 @@ export default class AccountSuggestion extends React.Component {
 
   render() {
     const { account, onSelect, highlighted, locale } = this.props;
-    const onSelectHandler = () => onSelect(account);
+    const onSelectHandler = () => onSelect(account, true);
     const onKeyDownHandler = (evt) => {
       if (evt.which === KeyCode.ENTER) {
         onSelect(account);
@@ -33,7 +33,7 @@ export default class AccountSuggestion extends React.Component {
       <div
         className={ classNames() }
         role="option"
-        onClick={ onSelectHandler }
+        onMouseDown={ onSelectHandler }
         onKeyDown={ onKeyDownHandler }
       >
         <a className="nfe-account-suggestions__name">{ account.name }</a>
