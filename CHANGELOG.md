@@ -1,5 +1,11 @@
 # Changelog
 
+## v2.0.0
+* Bumped dependency on `ffe-core` to `^8.0.2`
+* Bumped dependency on `ffe-datepicker` to `^2.0.0`
+* Added peerDependency on `ffe-form` on `^1.0.1`
+* Updated path to datepicker.less
+
 ## v1.1.5
 
 * Fix tabbing bug which caused datepicker not to close

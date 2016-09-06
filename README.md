@@ -78,6 +78,7 @@ export default function Form() {
 ## Styles
 You must also import the styles
 ```css
+@import "node_modules/ffe-form/less/form.less";
 @import "node_modules/ffe-datepicker-react/index.less";
 ```
 
