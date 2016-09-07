@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 5.0.0
+
+* A vengeful lumberjack has swung the axe against tre-ikon, spire-ikon, and blad-ikon. It was decided the icons did not fit the brand and should not be used by anyone. 
+
 ## Version 4.7.0
 * Added bygning-pluss-ikon.svg
 
