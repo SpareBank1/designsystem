@@ -1,34 +1,13 @@
 #!/bin/bash -e
-
-main() {
-    npm install
-    npm run examples
-
-    rm -rf target/
-    mkdir -p target/archive
-
-    ./run_visual-tests.sh
-
-    cp -R examples fonts target/archive
-
-    if should_publish; then
-        npm run has-published -s || npm publish
-        bob ci job build --jobname ffe-design-system_build_deploy
-    fi
-}
+# Runs build.sh before checking should_publish
 
 function should_publish() {
     [[ $GIT_BRANCH =~ ^(origin/)?master$ ]]
 }
 
-_move_gemini_files() {
-    testRes=$?
+source build.sh
 
-    cp -R gemini-report/ target/archive
-
-    exit ${testRes}
-}
-
-trap "_move_gemini_files" INT TERM EXIT
-
-main "$@"
+if should_publish; then
+    npm run has-published -s || npm publish
+    bob ci job build --jobname ffe-design-system_build_deploy
+fi
