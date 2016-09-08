@@ -1,3 +1,9 @@
+# Changelog
+
+## v1.0.0
+
+* Updated ffe-icons to a new major: 5.0.0
+
 ## v0.5.4
 
 * Updated ffe-icons version to 4.6.0
