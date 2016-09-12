@@ -1,8 +1,12 @@
 # Changelog
 
+## v.8.1.0
+
+* Added a class, ffe-screenreader-only, and styles for hiding page elements visually, while retaining accessibility.
+
 ## v.8.0.3
 
-* VISUAL DIFF: @ffe-grey-light-bg changes from #F1F1EF to #F9F9F9. This change fixes problems with color contrast, and is considered a bugfix. 
+* VISUAL DIFF: @ffe-grey-light-bg changes from #F1F1EF to #F9F9F9. This change fixes problems with color contrast, and is considered a bugfix.
 
 ## v.8.0.2
 
