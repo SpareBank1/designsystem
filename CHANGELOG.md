@@ -1,7 +1,8 @@
 #CHANGELOG
 
-##UNRELEASED
+##Version 2.1.0
 Modified the curvature below the svg
+Bumped dependency on `ffe-core` to `^8.0.2`
 
 ##Version 2.0.2
 Fungerer nå på små flater
