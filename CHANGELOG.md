@@ -1,5 +1,8 @@
 #CHANGELOG
 
+## Version 1.3.0
+* Add visual tests and examples
+
 ## Version 1.2.0
 * Increased padding right for accordion-toggler to make sure arrow does end on top of toggler-content
 
