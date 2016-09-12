@@ -1,5 +1,8 @@
 #CHANGELOG
 
+##Version 2.1.1
+Rollback dependency on `ffe-core` to `^6.0.0` to avoid issues with peerDependency. This change requires new major version of this project. 
+
 ##Version 2.1.0
 Modified the curvature below the svg
 Bumped dependency on `ffe-core` to `^8.0.2`
