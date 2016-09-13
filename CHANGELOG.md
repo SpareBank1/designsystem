@@ -1,4 +1,7 @@
 # Changelog
+#v2.1.0
+* Added optional prop `noMatches` on `AccountSelector`
+
 #v2.0.0
 * Bumped dependency on `ffe-core` to `^8.0.2`
 * Added mixins.less containing `.ffe-clearfix`, which was removed from `ffe-core`

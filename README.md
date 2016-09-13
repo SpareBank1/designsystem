@@ -31,6 +31,7 @@ const accounts = [
     locale="nb"
     ariaInvalid={false}
     placeholder="Select account"
+    noMatches="No matches"
     id="custom-id"
     selectedAccount={ getAccount(accounts, value) }
     value={ value ? getAccount(accounts, value).name : '' }
@@ -43,6 +44,7 @@ const accounts = [
 - onFocus: called when the component gains focus
 - locale: Either "nb", "nn" or "en". Defaults to "nb" if not set.
 - placeholder (optional): Set the placeholder attribute of the input field.
+- noMatches (optional): String to be shown below the input field if the input doesn't match any accounts
 - id (optional): Set the id attribute of the input field so a label can be associated with the field.
 - ariaInvalid: signifies validation errors.
 - selectedAccount: Sets the selected account number and balance under the selector box when for example navigating from summary page back to registration page.

@@ -85,6 +85,7 @@ render(
       onFocus={ onFocus }
       locale="nb"
       placeholder="Velg Konto"
+      noMatches="Ingen kontoer"
       id="custom-id"
       value={  value ? getAccount(accounts, value).name : '' }
       selectedAccount={ getAccount(accounts, value) }
