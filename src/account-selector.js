@@ -1,6 +1,7 @@
 import React, {PropTypes, Component} from 'react';
 import ReactDOM from 'react-dom';
 import AccountSuggestionList from './account-suggestion-list';
+import AccountSuggestionsEmpty from './account-suggestions-empty';
 import AccountDetails from './account-details';
 
 // https://github.com/souhe/reactScrollbar/issues/35
@@ -287,7 +288,7 @@ export default class AccountSelector extends Component {
 
   render() {
     const assignTo = name => component => { this[name] = component; };
-    const {locale, placeholder, id, ariaInvalid} = this.props;
+    const {locale, placeholder, id, ariaInvalid, noMatches} = this.props;
     const {filteredAccounts, showAccountSuggestions, value, selectedAccount, showResetButton} = this.state;
     return (
       <div
@@ -326,7 +327,7 @@ export default class AccountSelector extends Component {
           account={ selectedAccount }
           locale={ locale }
         />
-        { showAccountSuggestions && filteredAccounts.length ?
+        { showAccountSuggestions && (filteredAccounts.length || noMatches) ?
           <ScrollArea
             speed={ 0.8 }
             className="nfe-account-selector__scroll"
@@ -345,13 +346,16 @@ export default class AccountSelector extends Component {
               opacity: '1',
             }}
           >
-            <AccountSuggestionList
-              locale={locale}
-              accounts={ filteredAccounts }
-              onSelect={ (account, fromDropdown) => this.onAccountSelect(account, fromDropdown) }
-              selectedAccount={ selectedAccount }
-              ref={ assignTo('_suggestionList') }
-            />
+            { filteredAccounts.length ?
+              <AccountSuggestionList
+                locale={locale}
+                accounts={ filteredAccounts }
+                onSelect={ (account, fromDropdown) => this.onAccountSelect(account, fromDropdown) }
+                selectedAccount={ selectedAccount }
+                ref={ assignTo('_suggestionList') }
+              />
+              : <AccountSuggestionsEmpty value={ noMatches }/>
+            }
           </ScrollArea>
           : null}
       </div>
@@ -367,6 +371,7 @@ AccountSelector.propTypes = {
   onBlur: PropTypes.func,
   onFocus: PropTypes.func,
   placeholder: PropTypes.string,
+  noMatches: PropTypes.string,
   ariaInvalid: PropTypes.bool,
   id: PropTypes.string,
   selectedAccount: PropTypes.object,
