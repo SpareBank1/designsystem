@@ -116,16 +116,16 @@ if you get stuck.
 
 Also before starting, verify your SVG meets the criteria listed in *icons/_ICON_REQUIREMENTS.md*
 
-If you haven't already, fork this repository and clone it on your machine.
-
 1. Fetch the latest `master` branch in ffe-icons, and create a feature branch from there.
 2. Clean up the SVG markup [^3].
 3. Add the icon SVG to the `icons/` folder [^1].
 4. Verify that the icon looks OK relative to the others (padding etc) [^2].
 5. Update `CHANGELOG.md` with a new entry for the next version.
 6. Update package.json with the new version
-7. Commit your changes to the feature branch, and push the changes to `origin`.
-8. Create a pull request from your repos feature branch to ffe-icons `master`.
+7. Update the baseline-screenshot so the visual regression testing doesn't fail (see below)
+8. Commit your changes to the feature branch, and push the changes to `origin`.
+9. Make sure you have at least one successful build on jenkins (feature branches are built automatically)
+10. Create a pull request from your repos feature branch to ffe-icons `master`.
 
 ## Visual regression testing
 See [readme for ffe-core](https://stash.intern.sparebank1.no/projects/FFE/repos/ffe-core/browse/README.md).
