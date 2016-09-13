@@ -1,11 +1,12 @@
 {
   "name": "ffe-icons",
-  "version": "5.0.0",
+  "version": "5.1.0",
   "description": "Felles Front End Icons",
   "main": "index.js",
   "scripts": {
-    "start": "gulp",
-    "test": "npm run start && ./run_visual-tests.sh",
+    "compile": "gulp",
+    "start": "npm run compile && opn dist/symbol/sprite.symbol.html",
+    "test": "npm run compile && ./run_visual-tests.sh",
     "update-baseline": "./update_visual-tests-baselines.sh",
     "has-published": "npm show . versions -s | grep -q ${npm_package_version}"
   },
@@ -29,6 +30,7 @@
   "devDependencies": {
     "ffe-visual-tests-support": "1.0.1",
     "gemini": "4.3.0",
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "opn-cli": "^3.1.0"
   }
 }

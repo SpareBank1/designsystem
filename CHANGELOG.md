@@ -1,5 +1,33 @@
 # Changelog
 
+## Version 5.1.0
+
+* Added a bunch of new icons
+     * campingbil-ikon
+     * fritidshus-ikon
+     * handlevogn-ikon
+     * hus-enebolig-ikon
+     * hus-horisontaldelt-ikon
+     * hus-ikon
+     * hus-kjedet-ikon
+     * hus-leilighet-ikon
+     * hus-rekkehus-ikon
+     * hus-vertikaldelt-ikon
+     * katt-ikon
+     * lommebok-ikon
+     * mobil-ikon
+     * motorsykkel-ikon
+     * nokkelhull-ikon
+     * person-brukket-arm-ikon
+     * robat-ikon
+     * seilbat-ikon
+     * snoscooter-ikon
+     * sofa-ikon
+     * sporsmalstegn-ikon
+     * sykebil-ikon
+     * traktor-ikon
+     * ung-caps-ikon
+
 ## Version 5.0.0
 
 * A vengeful lumberjack has swung the axe against tre-ikon, spire-ikon, and blad-ikon. It was decided the icons did not fit the brand and should not be used by anyone. 
