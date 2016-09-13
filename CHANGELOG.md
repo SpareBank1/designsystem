@@ -1,36 +1,40 @@
 # Changelog
 
+## Version 5.2.0
+* Added konfetti-ikon.svg
+* Added tommel-opp-ikong.svg
+
 ## Version 5.1.0
 
 * Added a bunch of new icons
-     * campingbil-ikon
-     * fritidshus-ikon
-     * handlevogn-ikon
-     * hus-enebolig-ikon
-     * hus-horisontaldelt-ikon
-     * hus-ikon
-     * hus-kjedet-ikon
-     * hus-leilighet-ikon
-     * hus-rekkehus-ikon
-     * hus-vertikaldelt-ikon
-     * katt-ikon
-     * lommebok-ikon
-     * mobil-ikon
-     * motorsykkel-ikon
-     * nokkelhull-ikon
-     * person-brukket-arm-ikon
-     * robat-ikon
-     * seilbat-ikon
-     * snoscooter-ikon
-     * sofa-ikon
-     * sporsmalstegn-ikon
-     * sykebil-ikon
-     * traktor-ikon
-     * ung-caps-ikon
+     * campingbil-ikon.svg
+     * fritidshus-ikon.svg
+     * handlevogn-ikon.svg
+     * hus-enebolig-ikon.svg
+     * hus-horisontaldelt-ikon.svg
+     * hus-ikon.svg
+     * hus-kjedet-ikon.svg
+     * hus-leilighet-ikon.svg
+     * hus-rekkehus-ikon.svg
+     * hus-vertikaldelt-ikon.svg
+     * katt-ikon.svg
+     * lommebok-ikon.svg
+     * mobil-ikon.svg
+     * motorsykkel-ikon.svg
+     * nokkelhull-ikon.svg
+     * person-brukket-arm-ikon.svg
+     * robat-ikon.svg
+     * seilbat-ikon.svg
+     * snoscooter-ikon.svg
+     * sofa-ikon.svg
+     * sporsmalstegn-ikon.svg
+     * sykebil-ikon.svg
+     * traktor-ikon.svg
+     * ung-caps-ikon.svg
 
 ## Version 5.0.0
 
-* A vengeful lumberjack has swung the axe against tre-ikon, spire-ikon, and blad-ikon. It was decided the icons did not fit the brand and should not be used by anyone. 
+* A vengeful lumberjack has swung the axe against tre-ikon, spire-ikon, and blad-ikon. It was decided the icons did not fit the brand and should not be used by anyone.
 
 ## Version 4.7.0
 * Added bygning-pluss-ikon.svg
