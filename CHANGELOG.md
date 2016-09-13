@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.0.0
+* Bumped dependency on `ffe-core` to `^8.0.2`
+* Added peerDependency on `ffe-form`, `ffe-spinner` and `ffe-dropdown`
+* Added a budo example page that can be launched with `npm start`
+* Fixed error message class by updating to `.ffe-field-error-message`
+
 ## 1.8.0
 
 * Add isLoading support

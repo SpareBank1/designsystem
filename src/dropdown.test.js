@@ -72,8 +72,7 @@ describe('<Dropdown />', () => {
             </Dropdown>
         );
         assert.equal(wrapper.find('select').prop('aria-invalid'), true);
-        assert.equal(wrapper.find('div.ffe-info-message').hasClass('ffe-info-message--error'), true);
-        assert.equal(wrapper.find('div.ffe-info-message').text(), 'test');
+        assert.equal(wrapper.find('div.ffe-field-error-message').text(), 'test');
     });
 });
 

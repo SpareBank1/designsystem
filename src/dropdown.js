@@ -37,13 +37,13 @@ function Dropdown({
                 >
                     { children }
                 </select>
-                
-                {isLoading && 
+
+                {isLoading &&
                     <div className="ffe-loading-spinner"></div>
                 }
-                
+
                 {!errorMessage ? null :
-                    <div className="ffe-info-message ffe-info-message--error">
+                    <div className="ffe-field-error-message">
                         { errorMessage }
                     </div>
                 }
