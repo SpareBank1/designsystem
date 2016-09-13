@@ -1,4 +1,9 @@
 # Changelog
+#v2.0.0
+* Bumped dependency on `ffe-core` to `^8.0.2`
+* Added mixins.less containing `.ffe-clearfix`, which was removed from `ffe-core`
+* Added `@import account-suggestions.less` in `account-selector.less`, to simplify import in other projects
+
 #v1.4.3
 * Upgrade react dependencies to ^15.2.0 due to a bug with getNodeFromInstance in 15.1.0
 * Throw on blur only when leaving component, not when selecting account from dropdown or pressing reset-button

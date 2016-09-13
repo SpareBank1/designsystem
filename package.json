@@ -1,6 +1,6 @@
 {
   "name": "nfe-account-selector-react",
-  "version": "1.4.3",
+  "version": "2.0.0",
   "main": "lib/account-selector.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/.",
@@ -28,7 +28,7 @@
     "eslint-config-ffe": "^2.0.0",
     "eslint-plugin-import": "^1.8.1",
     "eslint-plugin-react": "^5.2.2",
-    "ffe-core": "^6.2.0",
+    "ffe-core": "^8.0.2",
     "mocha": "^2.4.5",
     "mocha-tap13": "^1.0.4",
     "node-lessify": "^0.1.4",
@@ -38,7 +38,7 @@
     "react-dom": "^15.2.0"
   },
   "peerDependencies": {
-    "ffe-core": "^6.2.0",
+    "ffe-core": "^8.0.2",
     "react": "^15.2.0"
   },
   "publishConfig": {
@@ -67,6 +67,7 @@
   "dependencies": {
     "ffe-icons-react": "0.4.2",
     "nfe-amount-formatter": "^1.1.0",
-    "react-scrollbar": "0.4.1"
+    "react-scrollbar": "0.4.1",
+    "ffe-form": "^1.0.1"
   }
 }
