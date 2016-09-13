@@ -2,7 +2,7 @@
 
 This package contains styles for the ffe-datepicker.
 
-![Screenshot of component](screenshot.png)
+![Screenshot of component](visual-tests/baseline-screenshots/example/plain/firefox-small.png)
 
 ## Install
 

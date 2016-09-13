@@ -39,8 +39,9 @@ node_modules
 # IDEA
 .idea/
 
-# Fonts
-fonts/
+# examples
+examples/example.css
+examples/fonts
 
-# Generated example.css
-example/example.css
+# visual-tests
+gemini-report

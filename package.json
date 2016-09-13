@@ -1,12 +1,12 @@
 {
   "name": "ffe-datepicker",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "FFE Datepicker",
   "main": "index.js",
   "scripts": {
-    "compile": "lessc example/example.less example/example.css && cp -R node_modules/ffe-core/fonts/ fonts/ && echo \"$(date +%T): Updated example\"",
-    "lint": "lessc --lint example/example.less",
-    "start": "opn example/example.html & watch \"npm run -s compile\" less/",
+    "compile": "lessc examples/example.less examples/example.css && cp -R node_modules/ffe-core/fonts/ examples/fonts/ && echo \"$(date +%T): Updated examples\"",
+    "lint": "lessc --lint examples/example.less",
+    "start": "opn examples/example.html & watch \"npm run -s compile\" less/",
     "preversion": "npm run lint"
   },
   "repository": {
@@ -15,12 +15,21 @@
   },
   "homepage": "***REMOVED***",
   "documentation": [
-    { "type": "html", "file": "example/example.html", "select": "#ffedoc" },
-    { "type": "markdown", "file": "README.md" }
+    {
+      "type": "html",
+      "file": "examples/example.html",
+      "select": "#ffedoc"
+    },
+    {
+      "type": "markdown",
+      "file": "README.md"
+    }
   ],
   "devDependencies": {
     "ffe-core": "^8.0.2",
     "ffe-form": "^1.0.1",
+    "ffe-visual-tests-support": "1.0.1",
+    "gemini": "4.3.0",
     "less": "^2.6.1",
     "mkdirp": "^0.5.1",
     "opn-cli": "^3.1.0"
