@@ -1,10 +1,11 @@
 {
   "name": "ffe-icons",
-  "version": "5.1.0",
+  "version": "5.2.0",
   "description": "Felles Front End Icons",
   "main": "index.js",
   "scripts": {
     "compile": "gulp",
+    "postpublish": "git tag ${npm_package_version} && git push --tags",
     "start": "npm run compile && opn dist/symbol/sprite.symbol.html",
     "test": "npm run compile && ./run_visual-tests.sh",
     "update-baseline": "./update_visual-tests-baselines.sh",
