@@ -1,6 +1,6 @@
 {
   "name": "ffe-icons-react",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "React komponent for ffe-icons",
   "main": "ffe-icons-react.js",
   "scripts": {
