@@ -1,4 +1,8 @@
 # Changelog
+
+## v.2.1.0
+* Add visual tests
+
 ## v.2.0.0
 * Bumped dependency on `ffe-core` to `^8.0.2`
 * Added explicit dependency on `ffe-form`
