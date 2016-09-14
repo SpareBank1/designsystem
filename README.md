@@ -8,6 +8,9 @@ A React account selector with autocomplete in ffe styling.
 $ npm install --save nfe-account-selector-react
 ```
 
+`nfe-account-selector-react` depends on `ffe-core` and `ffe-form` being present and imported in your project.
+More specifically, the CSS classes related to dropdowns in those packages should be in your CSS Object Model when using this component.
+
 ## Usage
 
 ```javascript
