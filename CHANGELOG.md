@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.1.0
+
+* Update ffe-icons to `^5.2.0`, new icons are
+  * ffe-icons-react/konfetti-ikon
+  * ffe-icons-react/tommel-opp-ikon
+
 ## v1.0.0
 
 * Updated ffe-icons to a new major: 5.0.0
@@ -12,7 +18,7 @@
 
 * Updated ffe-icons version to 4.5.0
 
-## v0.5.1 
+## v0.5.1
 
 * Updated ffe-icons version to 4.3.0
 
