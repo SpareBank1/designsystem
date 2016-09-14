@@ -1,5 +1,8 @@
 # Changelog
 
+## Version 5.2.1
+* No change.
+
 ## Version 5.2.0
 * Added konfetti-ikon.svg
 * Added tommel-opp-ikong.svg
