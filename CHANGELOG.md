@@ -1,5 +1,13 @@
 # Changelog
 
+
+## Version 5.3.0
+
+* Added a few new icons
+    * hus-hake-ikon.svg
+    * hus-hjerte-ikon-svg
+    * kr-hake-ikon.svg
+
 ## Version 5.2.1
 * No change.
 
