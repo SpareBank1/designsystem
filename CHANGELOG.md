@@ -1,4 +1,7 @@
 # Changelog
+#v2.0.2
+* Do not call onChange when tabing out of the account-selector and the selected account has not changed
+
 #v2.0.1
 * Removed import of `form.less` from `ffe-form` in `account-selector.less`
 You will now need to install `ffe-form` and import `form.less` in your project's `.less`-file
