@@ -26,7 +26,7 @@ I versjon 8.0.0 ble det gjort en større job ved å splitte ffe-core opp i mindr
 ffe-core
 ffe-buttons
 ffe-form
-ffe-list
+ffe-lists
 ffe-tables
 ffe-tabs
 ffe-spinner
