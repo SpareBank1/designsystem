@@ -46,9 +46,9 @@ Om endringen krever en ny versjon av pakken på Nexus oppdaterer du versjonen i 
 
 Kort fortalt:
 
-    * Bugfixer er PATCH
-    * Nye features er MINOR
-    * En breaking change (endret klassenavn og liknende) er MAJOR
+* Bugfixer er PATCH
+* Nye features er MINOR
+* En breaking change (endret klassenavn og liknende) er MAJOR
 
 Oppdater `CHANGELOG.md` dersom endringen vil lage en ny versjon av pakken. Ved en MAJOR, skriv hvilke endringer en konsument må gjøre for å oppgradere.
 
