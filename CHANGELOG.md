@@ -99,10 +99,11 @@ If you want to keep using it and don't plan on upgrading to `ffe-buttons@2.1.0` 
 }
 ```
 
+If you have used any of the `.ffe-shadow-buttons-whatever()` mixins they are now `.ffe-buttons-shadow-whatever()`.
+
 #### "Gotchas"
 
 * `ffe-tab-button` is in `ffe-tabs`, not `ffe-buttons`
-
 
 ## v.7.0.1
 * Minor fix: make button texts of loading buttons unselectable, the text is only of interest for
