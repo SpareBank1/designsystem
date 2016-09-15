@@ -1,0 +1,21 @@
+.ffe-button-group {
+    padding: 40px 0;
+
+    &--thin {
+        padding: 0;
+    }
+}
+
+.ffe-button-group [class^="ffe-"][class$="-button"] {
+    margin: 0 auto 10px;
+
+    @media screen and (min-width: @breakpoint-sm) {
+        display: inline-block;
+        margin: 0 0 10px 10px;
+        width: auto;
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+}
