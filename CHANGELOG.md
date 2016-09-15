@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## Version 6.0.0
+* Bruker v8.x av ffe-core
+
 ## Version 5.1.0
 * Gjorde så elementer i en rad kan posisjoneres absolutt i forhold til raden
 
