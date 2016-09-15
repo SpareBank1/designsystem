@@ -2,6 +2,13 @@
 # v2.1.0
 * Added optional prop `noMatches` on `AccountSelector`
 
+## v2.0.2
+* Do not call onChange when tabing out of the account-selector and the selected account has not changed
+
+## v2.0.1
+* Removed import of `form.less` from `ffe-form` in `account-selector.less`
+You will now need to install `ffe-form` and import `form.less` in your project's `.less`-file
+
 ## v2.0.0
 * Bumped dependency on `ffe-core` to `^8.0.2`
 * Added mixins.less containing `.ffe-clearfix`, which was removed from `ffe-core`
