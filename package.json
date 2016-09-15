@@ -4,10 +4,13 @@
   "description": "Lists in ffe",
   "main": "less/list.less",
   "scripts": {
-    "compile": "npm run lint && lessc examples/examples.less examples/examples.css && mkdirp examples/fonts && cp -R node_modules/ffe-core/fonts/* examples/fonts/ && echo Now open /examples/form.html to see styleguide.",
+    "compile": "npm run lint && lessc examples/examples.less examples/examples.css && mkdirp examples/fonts && cp -R node_modules/ffe-core/fonts/* examples/fonts/ && echo \"$(date +%T): Updated example\"",
     "lint": "lessc --lint examples/examples.less",
-    "start": "opn examples/examples.html & watch \"npm run -s compile\" less/",
-    "test": "npm run compile && ./run_visual-tests.sh"
+    "start": "npm run compile && opn examples/lists.html & watch \"npm run -s compile\" less/",
+    "test:nsp": "nsp check",
+    "test": "npm run lint && npm run test:nsp",
+    "has-published": "npm show . versions -s | grep -q ${npm_package_version}",
+    "preversion": "npm run lint"
   },
   "repository": {
     "type": "git",
