@@ -180,6 +180,7 @@ export default class AccountSelector extends Component {
     const {accounts, onChange, onAccountSelected} = this.props;
     const {accountNumber} = account;
     const filteredAccounts = this.filterAccounts(accounts, accountNumber);
+    const changed = this.state.selectedAccount !== account;
 
     this.setState({
       filteredAccounts,
@@ -189,7 +190,9 @@ export default class AccountSelector extends Component {
       showResetButton: true,
       accountSelectedFromDropdown: fromDropdown,
     }, () => {
-      onChange(accountNumber);
+      if (changed) {
+        onChange(accountNumber);
+      }
       onAccountSelected(accountNumber);
     });
   }
