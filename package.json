@@ -5,9 +5,13 @@
   "less": "ffe.less",
   "main": "index.js",
   "scripts": {
-    "examples": "lessc --source-map-map-inline --source-map-less-inline examples/examples.less examples/examples.css && echo Now open /examples/index.html to see styleguide.",
-    "test": "npm run examples && ./run_visual-tests.sh",
-    "has-published": "npm show . versions -s | grep -q ${npm_package_version}"
+    "compile": "lessc examples/examples.less examples/examples.css && echo \"$(date +%T): Updated examples\"",
+    "lint": "lessc --lint examples/examples.less",
+    "start": "opn examples/colors.html & opn examples/layout.html & opn examples/typo.html & watch \"npm run -s compile\" less/",
+    "test": "npm run lint && npm run test:nsp && npm run compile && ./run_visual-tests.sh",
+    "test:nsp": "nsp check",
+    "has-published": "npm show . versions -s | grep -q ${npm_package_version}",
+    "preversion": "npm run lint"
   },
   "repository": {
     "type": "git",
@@ -38,8 +42,11 @@
   "author": "Glenn A. Brownlee <glenn.brownlee@sparebank1.no>",
   "license": "ISC",
   "devDependencies": {
+    "ffe-visual-tests-support": "1.0.1",
     "gemini": "4.3.0",
-    "less": "2.5.1",
-    "ffe-visual-tests-support": "1.0.1"
+    "less": "^2.7.1",
+    "nsp": "^2.6.1",
+    "opn-cli": "^3.1.0",
+    "watch": "^0.19.2"
   }
 }
