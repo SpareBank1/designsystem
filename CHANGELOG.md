@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.1.0
+
+La til `ffe-button-group` _by popular demand_
+
 ## v2.0.0
 
 * Bumpet ffe-core peerDependency til ny major ^8.0.2
