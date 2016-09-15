@@ -22,6 +22,88 @@
 * Cleaned up example files. Removed navigation, javascript and unused styling.
 * Added a description for migrating to v8.0.0
 
+### Migrating to v.8.0.0
+
+_ffe-core_ has been split in several packages, and a few things have been removed.
+
+#### Installing the latest FFE
+
+To upgrade from 7.x you will need to install these packages:
+
+```bash
+$ npm install --save ffe-core ffe-buttons ffe-form ffe-lists ffe-tables ffe-tabs ffe-spinner
+```
+
+Remember to also update your Less imports
+(example below is given [less-plugin-npm-import](https://github.com/less/less-plugin-npm-import) is used):
+
+```less
+@import "npm://ffe-core/less/ffe";
+@import "npm://ffe-buttons/less/buttons";
+@import "npm://ffe-form/less/form";
+@import "npm://ffe-lists/less/lists";
+@import "npm://ffe-tables/less/tables";
+@import "npm://ffe-tabs/less/tabs";
+@import "npm://ffe-spinner/less/spinner";
+```
+
+#### Other breaking changes
+
+`ffe-info-message` has been renamed to `ffe-field-info-message` (in `ffe-form`)
+`ffe-info-message--error` is now `ffe-field-error-message`
+`ffe-info-message--success` is now `ffe-field-success-message`
+
+`ffe-clearfix` has been removed, which has consequences for `ffe-section-wrapper`.
+
+If your design is dependent on the clearfix you must add it to your project yourself:
+
+ ```less
+ /* In your Less, after importing ffe-core */
+ .ffe-section-wrapper {
+     &:before,
+     &:after {
+         display: table;
+         content: "";
+     }
+     &:after {
+         clear: both;
+     }
+ }
+ ```
+
+`ffe-button-group` was removed, but has been reintroduced in `ffe-buttons@2.1.0`.
+
+If you want to keep using it and don't plan on upgrading to `ffe-buttons@2.1.0` soon you can add the following to your project:
+
+```less
+.ffe-button-group {
+    padding: 40px 0;
+
+    &--thin {
+        padding: 0;
+    }
+}
+
+.ffe-button-group [class^="ffe-"][class$="-button"] {
+    margin: 0 auto 10px;
+
+    @media screen and (min-width: @breakpoint-sm) {
+        display: inline-block;
+        margin: 0 0 10px 10px;
+        width: auto;
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+}
+```
+
+#### "Gotchas"
+
+* `ffe-tab-button` is in `ffe-tabs`, not `ffe-buttons`
+
+
 ## v.7.0.1
 * Minor fix: make button texts of loading buttons unselectable, the text is only of interest for
   screen readers and ought to remain invisible under all circumstances.
