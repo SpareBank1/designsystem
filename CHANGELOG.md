@@ -3,7 +3,6 @@
 ## v1.1.1
 
 * Update ffe-icons to version 5.3.0
-    * Dependency left alone due to hat ^
 
 ## v1.1.0
 
