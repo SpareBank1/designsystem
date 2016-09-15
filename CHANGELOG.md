@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.1.1
+
+* Update ffe-icons to version 5.3.0
+
 ## v1.1.0
 
 * Update ffe-icons to `^5.2.0`, new icons are
