@@ -61,9 +61,9 @@ Med andre ord vil du trenge ett eller flere byggsteg for å ta i bruk FFE, avhen
 Pakken du vil bruke har som oftest en fungerende konfigurasjon (for å kunne bygge eksempelsider) som du kan ta utgangspunkt i.
 Ellers kan du følge dokumentasjonen for de forskjellige verktøyene.
 
-    * Kompilering av [Less](http://lesscss.org/)
-    * Transpilering av [ES2015+ til ES5](https://babeljs.io/)
-    * Kompilering av [JSX](https://facebook.github.io/react/)
+* Kompilering av [Less](http://lesscss.org/)
+* Transpilering av [ES2015+ til ES5](https://babeljs.io/)
+* Kompilering av [JSX](https://facebook.github.io/react/)
 
 I koden vil du måtte `import`e Less og JavaScript fra de enkelte pakkene. Se pakkens README for hvordan dette bør gjøres.
 
@@ -77,6 +77,6 @@ FFE skal ivareta fargekontrastkravene som spesifisert i WCAG 2.0-standarden (AA-
 
 Nettleser som _ikke_ støttes av FFE:
 
-    * Internet Explorer 8 og tidligere; Internet Explorer 9 kan brukes, men begrensede visuelle avvik må aksepteres.
-    * Android Browser-versjoner tidligere enn 4.4
+* Internet Explorer 8 og tidligere; Internet Explorer 9 kan brukes, men begrensede visuelle avvik må aksepteres.
+* Android Browser-versjoner tidligere enn 4.4
 
