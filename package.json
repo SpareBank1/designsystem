@@ -18,12 +18,12 @@
   "peerDependencies": {
     "ffe-message-box": "^3.0.0",
     "ffe-core": "^8.0.2",
-    "ffe-icons-react": "^0.5.0"
+    "ffe-icons-react": "^1.1.0"
   },
   "devDependencies": {
     "ffe-message-box": "^3.0.0",
     "ffe-core": "^8.0.2",
-    "ffe-icons-react": "^0.5.0",
+    "ffe-icons-react": "^1.1.0",
     "babel-cli": "^6.10.1",
     "babel-core": "^6.9.1",
     "babel-plugin-transform-object-rest-spread": "^6.8.0",
