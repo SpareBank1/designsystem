@@ -42,14 +42,14 @@ describe('<MessageBox />', () => {
     });
 
 
-        it('should render children without a wrapper', () => {
-            const content = (<marquee>Dette er en melding til deg</marquee>);
+    it('should render children without a wrapper', () => {
+        const content = (<marquee>Dette er en melding til deg</marquee>);
 
-            const wrapper = shallow(<InfoMessage>{content}</InfoMessage>);
+        const wrapper = shallow(<InfoMessage>{content}</InfoMessage>);
 
-            assert.equal(wrapper.find('.ffe-body-text').length, false);
-            assert.equal(wrapper.contains(content), true);
-        });
+        assert.equal(wrapper.find('.ffe-body-text').length, false);
+        assert.equal(wrapper.contains(content), true);
+    });
 
 
     it('should support HTML content', () => {
