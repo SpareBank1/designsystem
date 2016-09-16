@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.0.2
+* `ffe-field-error-message` and `ffe-field-success-message` get `aria-hidden` styling
+
 ## v1.0.1
 * Add missing .ffe-sb1-radioblob mixin removed in ffe-core@8
 * Fix build commands

@@ -1,8 +1,12 @@
 .ffe-field-error-message:extend(.ffe-field-info-message) {
-  color: @ffe-orange-wcag;
+    color: @ffe-orange-wcag;
 
-  &:before:extend(.ffe-field-info-message:before) {
-    content: '!';
-    background-color: @ffe-orange-wcag;
-  }
+    &[aria-hidden="true"] {
+        display: none;
+    }
+
+    &:before:extend(.ffe-field-info-message:before) {
+        content: '!';
+        background-color: @ffe-orange-wcag;
+    }
 }
