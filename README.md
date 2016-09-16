@@ -6,7 +6,7 @@ Felles form-/skjemakomponentpakke for SpareBank 1. Inneholder styling for form-/
 
 ## Bruk
 Modulen inneholder LESS-filer som kan importeres direkte fra node_modules til prosjektets CSS/LESS.
-<code>@import ../node_modules/ffe-form/less/ffe-form</code> i en less-fil i ditt prosjekt.
+<code>@import ../node_modules/ffe-form/less/form.less</code> i en less-fil i ditt prosjekt.
 
 Merk at ffe-core er en avhengighet for ffe-cards (se peerDependencies i package.json). Installer begge for å bruke ffe-form.
 
