@@ -1,5 +1,9 @@
 # Changelog
 
+## v.2.0.1
+
+* Updated "main"-entry in package.json with correct path
+
 ## v.2.0.0
 * Breaking:
   * renamed `less/description-list.less` to `less/description-list.less`

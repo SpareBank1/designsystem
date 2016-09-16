@@ -1,8 +1,8 @@
 {
   "name": "ffe-lists",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Lists in ffe",
-  "main": "less/list.less",
+  "main": "less/lists.less",
   "scripts": {
     "compile": "npm run lint && lessc examples/examples.less examples/examples.css && mkdirp examples/fonts && cp -R node_modules/ffe-core/fonts/* examples/fonts/ && echo \"$(date +%T): Updated example\"",
     "lint": "lessc --lint examples/examples.less",
