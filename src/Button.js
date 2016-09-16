@@ -11,6 +11,7 @@ export default function Button(props) {
         id,
         isLoading,
         isTabbable,
+        autoFocus,
         label,
         onClick,
         simpleContent = false,
@@ -30,6 +31,7 @@ export default function Button(props) {
             onClick={onClick}
             style={style}
             {... isTabbable === false ? { tabIndex: -1 } : {}}
+            autoFocus={autoFocus}
             type={type}
         >
             {simpleContent ?
@@ -69,6 +71,7 @@ Button.propTypes = {
     id: PropTypes.string,
     isLoading: PropTypes.bool,
     isTabbable: PropTypes.bool,
+    autoFocus: PropTypes.bool,
     label: PropTypes.string,
     onClick: PropTypes.func,
     simpleContent: PropTypes.bool,

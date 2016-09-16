@@ -1,5 +1,8 @@
 # Changelog
 
+## v4.2.0
+* Added support for autoFocus (native React prop)
+
 ## v4.1.0
 
 * Fix truly disabling button while `isLoading` (CSS `pointer-events:none` was an obscure and inefficient way to achieve this)
