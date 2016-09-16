@@ -102,7 +102,9 @@ case you need to disable a button, you can do this as well by setting the
 This works for all button types, but make sure you have a really good reason for
 using it!
 
-### Tabbable
+### Tabbing and focus
+
+##### Tabbing
 
 Buttons are by default tabbable / allowed to gain keyboard focus. In the rare
 occurence this is not desired, the `isTabbable` attribute can be utilized:
@@ -114,6 +116,17 @@ occurence this is not desired, the `isTabbable` attribute can be utilized:
 This works for all button types, but make sure you have a really good reason for
 using it! N.B. making it impossible to reach buttons with keyboard is an
 accessibility violation!
+
+##### Focus
+
+In some situations where you remove a part of the DOM that contains the focused element (e.g after clicking a button), you might want to automatically set focus to a specific element.
+
+The `autoFocus`-prop may be used for this purpose. It will automatically focus the element after mounting. Please note that this only works on one element!
+
+```javascript
+<PrimaryButton autoFocus>...</PrimaryButton>
+```
+
 
 ### Styling
 
