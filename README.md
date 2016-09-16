@@ -9,13 +9,14 @@ typografi, farger, og liknende.
 
 ```
 $ npm install --save ffe-core
-$ npm install --save-dev less less-plugin-npm-import    # less-plugin er valgfri, men forenkler imports
+$ npm install --save-dev less less-plugin-npm-import    # less-plugin er valgfri, men kan forenkle imports
 ```
 
 ```less
 /* Ditt prosjekts .less */
 @import "npm://ffe-core/less/ffe";                      // med less-plugin
-@import "../path/to/node_modules/ffe-core/less/ffe";    // uten less-plugin
+@import "~ffe-core/less/ffe";                           // med webpack og less-loader
+@import "../path/to/node_modules/ffe-core/less/ffe";    // direkte referanse
 
 /* FFE trenger at det er definert en konstant 'base-url'. Denne må inneholde rot-pathen i appens URL */
 /* FFEs fonter må kopieres til en mappe 'fonts' som publiseres på denne pathen, f.eks. /privat/forsikring/fonts */
