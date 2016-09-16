@@ -265,4 +265,11 @@ describe('Button components:', () => {
 
         expect(wrapper.find('button').is('[type="reset"]')).to.be.true;
     });
+
+    it('Button can be autoFocused if specified', () => {
+        const wrapper = shallow(
+            <Button autoFocus>Hello</Button>
+        );
+        expect(wrapper.find('button').prop('autoFocus')).to.be.true;
+    });
 });

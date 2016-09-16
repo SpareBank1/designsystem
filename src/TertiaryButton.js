@@ -8,11 +8,5 @@ export default function TertiaryButton(props) {
 }
 
 TertiaryButton.propTypes = {
-    action: PropTypes.string,
-    children: PropTypes.node,
-    disableButton: PropTypes.bool,
-    id: PropTypes.string,
-    label: PropTypes.string,
-    onClick: PropTypes.func.isRequired,
-    isTabbable: PropTypes.bool,
+    children: PropTypes.node
 };
