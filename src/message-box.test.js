@@ -4,7 +4,7 @@ import React from 'react';
 import { SuccessMessage, InfoMessage, ErrorMessage, TipsMessage } from './index';
 
 describe('<MessageBox />', () => {
-   
+
     it('should render the proper wrapper element', () => {
         [SuccessMessage, ErrorMessage, InfoMessage, TipsMessage].map(Message => {
             assert.equal(shallow(<Message />).is('div.ffe-message-box'), true);
@@ -21,7 +21,7 @@ describe('<MessageBox />', () => {
             assert.equal(new RegExp(content).test(wrapper.text()), true);
         });
     });
-    
+
     it('should not render title-element if title is not defined', () => {
         const content = 'Dette er en melding til deg';
         const types = ['success, error, info, tips'];
@@ -33,8 +33,27 @@ describe('<MessageBox />', () => {
         });
     });
 
+    it('should render content prop inside a paragraph', () => {
+        const content = 'Dette er en melding til deg';
+
+        const wrapper = shallow(<InfoMessage content={content} />);
+
+        assert.equal(wrapper.find('.ffe-body-text').length, 1);
+    });
+
+
+        it('should render children without a wrapper', () => {
+            const content = (<marquee>Dette er en melding til deg</marquee>);
+
+            const wrapper = shallow(<InfoMessage content={content} />);
+
+            assert.equal(wrapper.contains('ffe-body-text'), false);
+            assert.equal(wrapper.contains(content), true);
+        });
+
+
     it('should support HTML content', () => {
-        const content = <p className="ninja">Swoosh!</p>;
+        const content = (<p className="ninja">Swoosh!</p>);
         const wrapper = shallow(<SuccessMessage title="" content={ content } />);
         assert.equal(wrapper.contains(content), true);
     });
@@ -43,7 +62,7 @@ describe('<MessageBox />', () => {
     it('should support HTML content as children', () => {
         const content = <p className="ninja">Swoosh!</p>;
         const wrapper = shallow(<SuccessMessage title="">{ content }</SuccessMessage>);
-        assert.equal(wrapper.contains(content), true); 
+        assert.equal(wrapper.contains(content), true);
     });
 
     function testClassnames(wrapper, type) {
@@ -52,7 +71,7 @@ describe('<MessageBox />', () => {
         assert.equal(wrapper.find(`.ffe-message-box__title--${type}`).length, 1,
             `Expected to find css class .ffe-message-box__title--${type} in component output`);
         assert.equal(wrapper.find(`.ffe-message-box__box--${type}`).length, 1,
-            `Expected to find css class .ffe-message-box__box--${type} in component output`);        
+            `Expected to find css class .ffe-message-box__box--${type} in component output`);
     }
 
     it('should use the correct CSS classes from FFE for the appropriate types', () => {
