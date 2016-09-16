@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## Version 1.0.0
+Bumped dependency on `ffe-core` to `^8.1.0`
+
 ## Version 0.1.1
 Tidligere versjon var laget med utgangspunkt i feil designskisser
 
