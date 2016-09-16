@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## Version 1.0.0
+Bumped dependency on 
+* `ffe-core` to `^8.1.0`
+* `ffe-icons-react` to `1.1.1`
+* `ffe-system-message` to `1.0.0`
+* Added implicit dependency on  mkdirp
+
 ## Version 0.1.3
 Oppdatert example.html til å inneholde alle meldingstyper
 
