@@ -1,5 +1,11 @@
 #CHANGELOG
 
+## Version 3.0.0
+ * No longer render children inside a `<p />`. This allows for several
+ paragraphs or other custom HTML structures. If you depend on this behavior,
+ either provide your content to the `content` attribute, or wrap your
+ children in a `<p className="ffe-body-text" />` tag.
+
 ## Version 2.0.0
  * Bumped dependency on `ffe-icons-react` to next major (`1.x`).
 

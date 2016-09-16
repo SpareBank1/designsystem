@@ -1,6 +1,6 @@
 {
   "name": "ffe-message-box-react",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "main": "lib/index.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/. && npm run example",
@@ -18,7 +18,7 @@
   "peerDependencies": {
     "ffe-message-box": "^3.0.0",
     "ffe-core": "^8.1.0",
-    "ffe-icons-react": "^1.1.0"
+    "ffe-icons-react": "^1.1.1"
   },
   "devDependencies": {
     "ffe-message-box": "^3.0.0",
