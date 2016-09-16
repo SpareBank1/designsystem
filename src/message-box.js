@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 function MessageBox(props) {
     const {
@@ -6,7 +6,7 @@ function MessageBox(props) {
         title,
         icon,
         content,
-        children
+        children,
     } = props;
 
     return (
@@ -40,5 +40,18 @@ function MessageBox(props) {
         </div>
     );
 }
+
+MessageBox.propTypes = {
+    children: PropTypes.any,
+    content: PropTypes.node,
+    icon: PropTypes.node.isRequired,
+    title: PropTypes.string,
+    type: PropTypes.oneOf([
+        'success',
+        'error',
+        'tips',
+        'info',
+    ]),
+};
 
 export default MessageBox;
