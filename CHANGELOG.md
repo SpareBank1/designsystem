@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## Version 1.0.1
+
+Update version number after build includes examples
+
 ## Version 1.0.0
 Bumped dependency on 
 * `ffe-core` to `^8.1.0`
