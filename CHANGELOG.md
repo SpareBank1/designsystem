@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.0
+* Removed dependency on ffe-dropdown - styling in ffe-dropdown has been moved to ffe-form
+* Bumped dependency on ffe-form
+
 ## 2.0.0
 * Bumped dependency on `ffe-core` to `^8.0.2`
 * Added peerDependency on `ffe-form`, `ffe-spinner` and `ffe-dropdown`
