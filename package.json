@@ -1,6 +1,6 @@
 {
   "name": "ffe-dropdown-react",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "main": "lib/dropdown.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/. && npm run example",
@@ -16,9 +16,8 @@
   },
   "peerDependencies": {
       "ffe-core": "^8.0.2",
-      "ffe-form": "^1.0.0",
-      "ffe-spinner": "^1.0.0",
-      "ffe-dropdown": "^2.0.0"
+      "ffe-form": "^1.1.0",
+      "ffe-spinner": "^1.0.0"
   },
   "dependencies": {
       "ffe-core": "^8.0.2",
