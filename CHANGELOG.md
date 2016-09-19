@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.1.0
+* Moved styling from ffe-dropdown into this package
+* Updated examples with dropdown in error state
+
 ## v1.0.2
 * `ffe-field-error-message` and `ffe-field-success-message` get `aria-hidden` styling
 
