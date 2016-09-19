@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.1.1
+
+Improve `.ffe-button-group` to use less fragile selectors
+
 ## v2.1.0
 
 La til `ffe-button-group` _by popular demand_
