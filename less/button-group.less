@@ -1,21 +1,33 @@
 .ffe-button-group {
     padding: 40px 0;
 
+    .ffe-action-button,
+    .ffe-primary-button,
+    .ffe-secondary-button,
+    .ffe-shortcut-button,
+    .ffe-tertiary-button,
+    .ffe-tab-button {
+        margin: 0 auto 10px auto;
+    }
+
     &--thin {
         padding: 0;
     }
-}
-
-.ffe-button-group [class^="ffe-"][class$="-button"] {
-    margin: 0 auto 10px;
 
     @media screen and (min-width: @breakpoint-sm) {
-        display: inline-block;
-        margin: 0 0 10px 10px;
-        width: auto;
+        .ffe-action-button,
+        .ffe-primary-button,
+        .ffe-secondary-button,
+        .ffe-shortcut-button,
+        .ffe-tertiary-button,
+        .ffe-tab-button {
+            display: inline-block;
+            margin: 0 0 10px 10px;
+            width: auto;
 
-        &:first-child {
-            margin-left: 0;
+            &:first-child {
+                margin: 0 0 10px 0;
+            }
         }
     }
 }
