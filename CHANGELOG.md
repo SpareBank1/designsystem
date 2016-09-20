@@ -1,5 +1,9 @@
 # Changelog
 
+## v.2.1.0
+* Added `ffe-check-list`
+* Added `ffe-stylized-number-list`
+
 ## v.2.0.1
 
 * Updated "main"-entry in package.json with correct path
