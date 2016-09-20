@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.1.2
+
+Add `cursor: pointer;` to `.ffe-tertiary-button`
+
 ## v2.1.1
 
 Improve `.ffe-button-group` to use less fragile selectors
