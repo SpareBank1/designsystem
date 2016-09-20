@@ -1,0 +1,46 @@
+.ffe-tooltip {
+
+    @ffe-tooltip-size: 25px;
+
+    &__icon {
+        background: @ffe-white;
+        border-radius: 50%;
+        border: 2px solid @ffe-grey-light;
+        color: @ffe-blue-royal-light-wcag;
+        cursor: help;
+        display: inline-block;
+        font-size: 18px;
+        height: @ffe-tooltip-size;
+        line-height: @ffe-tooltip-size;
+        margin: 0 0 4px 13px;
+        padding: 0 0 0 1px;
+        text-align: center;
+        vertical-align: middle;
+        width: @ffe-tooltip-size;
+
+        &:hover, &:focus {
+            border-color: @ffe-blue-royal-light-wcag;
+        }
+
+        &:focus {
+            box-shadow: 0 0 0 2px @ffe-blue-focus;
+            outline: none;
+        }
+
+        &:active, &--active {
+            border-color: @ffe-blue-royal;
+            color: @ffe-blue-royal;
+        }
+    }
+
+    &__text {
+        margin: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.3s ease-in-out;
+
+        &--active {
+            margin-bottom: 12px
+        }
+    }
+}
