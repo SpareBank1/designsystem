@@ -1,7 +1,9 @@
 # Changelog
 
-## v2.0.0
+## v2.0.1
+* Fix for ffe-dropdown to insure that the color and background color set correctly for a selected option in IE.
 
+## v2.0.0
 * **Potentially breaking change:** in order to support tooltips for form labels, the block-level relationship between labels and fields has been inverted:
     * `ffe-form-label` is now an `inline-block`. In order to keep the old behaviour add the new class `ffe-form-label--block` to your labels.
     * Input fields and dropdowns are now `block`s.In order to keep the old behaviour add the corresponding `--inline` modifier class, i.e.:
