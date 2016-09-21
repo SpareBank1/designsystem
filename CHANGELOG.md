@@ -1,5 +1,14 @@
 # Changelog
 
+## v2.0.0
+
+* **Potentially breaking change:** in order to support tooltips for form labels, the block-level relationship between labels and fields has been inverted:
+    * `ffe-form-label` is now an `inline-block`. In order to keep the old behaviour add the new class `ffe-form-label--block` to your labels.
+    * Input fields and dropdowns are now `block`s.In order to keep the old behaviour add the corresponding `--inline` modifier class, i.e.:
+        * `ffe-input-field` - `ffe-input-field--inline`
+        * `ffe-dropdown` - `ffe-dropdown--inline`
+* Added `ffe-tooltip` for form label tooltips.
+
 ## v1.1.0
 * Moved styling from ffe-dropdown into this package
 * Updated examples with dropdown in error state
