@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.2.0
+
+* Relaxing the peer dependency on `ffe-form` to allow both 1.x and 2.x
+
 ## 2.1.0
 * Removed dependency on ffe-dropdown - styling in ffe-dropdown has been moved to ffe-form
 * Bumped dependency on ffe-form
