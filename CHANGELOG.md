@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.1.0
+
+* Relaxing the peer dependency on `ffe-form` to allow both 1.x and 2.x
+
 ## v2.0.0
 
 * Upgraded `ffe-checkbox-react` to require a peer dependency of
