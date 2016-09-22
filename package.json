@@ -12,16 +12,17 @@
     "tdd": "mocha --require babel-register src/**/*.test.js -w",
     "prepublish": "npm run build",
     "example": "babel-node docs/create-docs.js > example.html",
-    "has-published": "npm show . versions -s | grep -q ${npm_package_version}"
+    "has-published": "npm show . versions -s | grep -q ${npm_package_version}",
+    "postpublish": "git tag ${npm_package_version} && git push --tags"
   },
   "peerDependencies": {
-      "ffe-core": "^8.0.2",
-      "ffe-form": "1.x || 2.x",
-      "ffe-spinner": "^1.0.0"
+    "ffe-core": "^8.0.2",
+    "ffe-form": "1.x || 2.x",
+    "ffe-spinner": "^1.0.0"
   },
   "dependencies": {
-      "ffe-core": "^8.0.2",
-      "nfe-hash": "^1.1.0"
+    "ffe-core": "^8.0.2",
+    "nfe-hash": "^1.1.0"
   },
   "devDependencies": {
     "babel-cli": "6.7.5",
