@@ -4,7 +4,8 @@
   "description": "SpareBank1 System Message",
   "main": "index.js",
   "scripts": {
-    "examples": "lessc examples/examples.less examples/examples.css && mkdirp examples/fonts && cp -r node_modules/ffe-core/fonts/* examples/fonts && echo Now open /examples/index.html to see styleguide"
+    "examples": "lessc examples/examples.less examples/examples.css && mkdirp examples/fonts && cp -r node_modules/ffe-core/fonts/* examples/fonts && echo Now open /examples/index.html to see styleguide",
+    "postpublish": "git tag ${npm_package_version} && git push --tags"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,7 @@
   "peerDependencies": {
     "ffe-core": "^8.1.0"
   },
-  "devDependencies": {    
+  "devDependencies": {
     "ffe-core": "^8.1.0",
     "less": "^2.7.1",
     "mkdirp": "^0.5.1"
