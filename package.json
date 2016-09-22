@@ -7,7 +7,8 @@
     "compile": "lessc examples/example.less examples/example.css && cp -R node_modules/ffe-core/fonts/ examples/fonts/ && echo \"$(date +%T): Updated examples\"",
     "lint": "lessc --lint examples/example.less",
     "start": "opn examples/example.html & watch \"npm run -s compile\" less/",
-    "preversion": "npm run lint"
+    "preversion": "npm run lint",
+    "postpublish": "git tag ${npm_package_version} && git push --tags"
   },
   "repository": {
     "type": "git",
