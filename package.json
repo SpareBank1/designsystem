@@ -13,7 +13,8 @@
     "test:nsp": "nsp check",
     "clean": "babel-node ./src/clean.js",
     "ffe:icons": "gulp --no-color --gulpfile node_modules/ffe-icons/gulpfile.js --opts=../../svg.sprite.config.json",
-    "server": "npm run build && npm run build:iconlist && webpack-dev-server"
+    "server": "npm run build && npm run build:iconlist && webpack-dev-server",
+    "postpublish": "git tag ${npm_package_version} && git push --tags"
   },
   "repository": {
     "type": "git",
