@@ -10,7 +10,8 @@
     "test:nsp": "nsp check",
     "test": "npm run lint && npm run test:nsp",
     "has-published": "npm show . versions -s | grep -q ${npm_package_version}",
-    "preversion": "npm run lint"
+    "preversion": "npm run lint",
+    "postpublish": "git tag ${npm_package_version} && git push --tags"
   },
   "keywords": [
     "FFE",
