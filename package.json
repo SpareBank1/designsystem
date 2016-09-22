@@ -1,6 +1,6 @@
 {
   "name": "ffe-message-box",
-  "version": "3.0.1",
+  "version": "3.0.22",
   "description": "Meldingsboks",
   "main": "index.js",
   "scripts": {
