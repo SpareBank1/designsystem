@@ -12,7 +12,8 @@
     "lint:fix": "eslint --fix src/",
     "test": "cross-env NODE_ENV=test mocha -G --compilers js:babel-core/register --require src/test/setup.js --recursive src/test",
     "test:watch": "npm test -- --watch",
-    "validate": "npm ls"
+    "validate": "npm ls",
+    "postpublish": "git tag ${npm_package_version} && git push --tags"
   },
   "repository": {
     "type": "git",
