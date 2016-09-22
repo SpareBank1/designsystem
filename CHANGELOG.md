@@ -1,5 +1,8 @@
 # Changelog
 
+## v2.0.2
+* Updated the active color of ffe-radio-switch to `ffe-blue-royal`
+
 ## v2.0.1
 * Fix for ffe-dropdown to insure that the color and background color set correctly for a selected option in IE.
 
