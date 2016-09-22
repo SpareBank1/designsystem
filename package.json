@@ -4,7 +4,8 @@
   "description": "Opplisting av attributter i en grid",
   "main": "index.js",
   "scripts": {
-    "examples": "lessc examples/examples.less examples/examples.css && mkdirp examples/fonts && cp -R node_modules/ffe-core/fonts/* examples/fonts/ && echo Now open /examples/index.html to see styleguide."
+    "examples": "lessc examples/examples.less examples/examples.css && mkdirp examples/fonts && cp -R node_modules/ffe-core/fonts/* examples/fonts/ && echo Now open /examples/index.html to see styleguide.",
+    "postpublish": "git tag ${npm_package_version} && git push --tags"
   },
   "repository": {
     "type": "git",
