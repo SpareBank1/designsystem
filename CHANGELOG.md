@@ -1,9 +1,8 @@
-# TO BE RELEASED
+#Changelog
 
+# v2.1.1 
 * Bugfix: Input field no longer steals focus onBlur
 
-
-# Changelog
 # v2.1.0
 * Added optional prop `noMatches` on `AccountSelector`
 
