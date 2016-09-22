@@ -9,7 +9,8 @@
     "test:spec": "mocha --compilers js:babel-core/register --require ./test.config.js  src/**/*.test.jsx",
     "test": "npm run test:spec && npm run test:nsp",
     "prepublish": "npm run build",
-    "has-published": "npm show . versions -s | grep -q ${npm_package_version}"
+    "has-published": "npm show . versions -s | grep -q ${npm_package_version}",
+    "postpublish": "git tag ${npm_package_version} && git push --tags"
   },
   "devDependencies": {
     "babel-cli": "^6.4.5",
