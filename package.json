@@ -13,7 +13,8 @@
     "has-published": "npm show . versions -s | grep -q ${npm_package_version}",
     "start": "budo examples/datepicker.js --open --live --title \"FFE Datepicker\" -- -t [ babelify --presets [ es2015 react ] ] -t node-lessify",
     "start:dateinput": "budo examples/dateinput.js --open --live --title \"FFE Dateinput\" -- -t [ babelify --presets [ es2015 react ] ] -t node-lessify",
-    "start:calendar": "budo examples/calendar.js --open --live --title \"FFE Calendar\" -- -t [ babelify --presets [ es2015 react ] ] -t node-lessify"
+    "start:calendar": "budo examples/calendar.js --open --live --title \"FFE Calendar\" -- -t [ babelify --presets [ es2015 react ] ] -t node-lessify",
+    "postpublish": "git tag ${npm_package_version} && git push --tags"
   },
   "devDependencies": {
     "babel-cli": "^6.4.5",
