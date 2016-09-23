@@ -145,8 +145,10 @@ export default class AccountSelector extends Component {
 
     // Prevent blur if an account is selected from the dropdown or if the reset button is pressed
     if (accountSelectedFromDropdown || resetField) {
+      this._accountInput.focus();
       this.setState({
         accountSelectedFromDropdown: false,
+        showAccountSuggestions: resetField,
         resetField: false,
       });
       return;
@@ -171,7 +173,6 @@ export default class AccountSelector extends Component {
       filteredAccounts,
       showResetButton: value.length > 0,
       showAccountSuggestions: true,
-      accountSelectedFromDropdown : false,
     }, () => onChange(value));
   }
 
@@ -214,7 +215,6 @@ export default class AccountSelector extends Component {
     if (account && this.state.showAccountSuggestions) {
       this.setState({
         selectedAccount: account,
-        showResetButton : true,
         value: account.name,
       }, this.scrollHighlightedAccountIntoView);
     }
@@ -287,14 +287,6 @@ export default class AccountSelector extends Component {
 
   filterAccounts(accounts, value) {
     return accounts.filter(accountFilter(value));
-  }
-
-  componentDidUpdate() {
-    const {accountSelectedFromDropdown, resetField} = this.state;
-    // Prevent blur if an account is selected from the dropdown or if the reset button is pressed
-    if (accountSelectedFromDropdown || resetField) {
-        this._accountInput.focus();
-    }
   }
 
   render() {
