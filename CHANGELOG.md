@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.0.3
+* Updated the focus state to have correct focus color and to not have an
+box-shadow
+
 ## v2.0.2
 * Updated the active color of ffe-radio-switch to `ffe-blue-royal`
 
