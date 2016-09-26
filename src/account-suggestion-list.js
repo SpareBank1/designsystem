@@ -9,15 +9,15 @@ export default class AccountSuggestionList extends Component {
   }
 
   render() {
-    const { accounts, onSelect, selectedAccount, locale } = this.props;
+    const { accounts, onSelect, highlightedAccount, locale } = this.props;
 
     if (accounts.length === 0) {
       return null;
     }
 
-    const selectedAccountIndex = accounts.indexOf(selectedAccount);
-    const refIfIsSelectedAccountIndex = index => component => {
-      if (selectedAccountIndex === index) {
+    const highlightedAccountIndex = accounts.indexOf(highlightedAccount);
+    const refIfIshighlightedAccountIndex = index => component => {
+      if (highlightedAccountIndex === index) {
         this._selectedElement = component;
       }
     };
@@ -30,8 +30,8 @@ export default class AccountSuggestionList extends Component {
               locale={locale}
               account={ account }
               onSelect={ onSelect }
-              ref={ refIfIsSelectedAccountIndex(index) }
-              highlighted={ selectedAccountIndex === index }
+              ref={ refIfIshighlightedAccountIndex(index) }
+              highlighted={ highlightedAccountIndex === index }
             />
           </li>
         ))}
@@ -43,7 +43,7 @@ export default class AccountSuggestionList extends Component {
 AccountSuggestionList.propTypes = {
   accounts: PropTypes.array,
   onSelect: PropTypes.func,
-  selectedAccount: PropTypes.object,
+  highlightedAccount: PropTypes.object,
   locale: PropTypes.oneOf(["nb", "nn" ,"en"]),
 };
 

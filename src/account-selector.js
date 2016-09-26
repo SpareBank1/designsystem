@@ -46,9 +46,9 @@ export default class AccountSelector extends Component {
       showAccountSuggestions: false,
       showResetButton: false,
       selectedAccount: null,
+      highlightedAccount: null,
       value: '',
       filteredAccounts: this.filterAccounts(accounts, ''),
-      accountSelectedFromDropdown: false,
     };
   }
 
@@ -91,7 +91,7 @@ export default class AccountSelector extends Component {
         break;
       case KeyCode.ENTER:
         evt.preventDefault();
-        this.onAccountSelect(this.state.selectedAccount, false);
+        this.onAccountSelect(this.state.highlightedAccount);
         break;
       case KeyCode.TAB:
         this.onInputTab(evt);
@@ -102,14 +102,14 @@ export default class AccountSelector extends Component {
   }
 
   onInputTab(evt) {
-    const {selectedAccount, value} = this.state;
-    const selectedValue = selectedAccount ? selectedAccount.name : value;
+    const {highlightedAccount, value} = this.state;
+    const selectedValue = highlightedAccount ? highlightedAccount.name : value;
     this.setState({
       value: selectedValue,
       showAccountSuggestions: false,
     }, () => {
-      if (selectedAccount) {
-        this.onAccountSelect(selectedAccount, false);
+      if (highlightedAccount) {
+        this.onAccountSelect(highlightedAccount);
       }
     });
   }
@@ -121,19 +121,19 @@ export default class AccountSelector extends Component {
   }
 
   onEscKeyPressed() {
-    this.reset(true);
+    this.reset();
   }
 
   onBlur() {
     this.removeGlobalEventListeners();
-    const {selectedAccount, value, accountSelectedFromDropdown, resetField} = this.state;
+    const {selectedAccount, value} = this.state;
     const {onBlur} = this.props;
     let blurReturn = value;
     if (selectedAccount) {
       const inputMatchesValidAccountName = value.toLowerCase() === selectedAccount.name.toLowerCase();
       const inputMatchesValidAccountNumber = value === selectedAccount.accountNumber;
       if (inputMatchesValidAccountName || inputMatchesValidAccountNumber) {
-        this.onAccountSelect(selectedAccount, false);
+        this.onAccountSelect(selectedAccount);
         blurReturn = selectedAccount.accountNumber;
       }
       else {
@@ -142,18 +142,6 @@ export default class AccountSelector extends Component {
         });
       }
     }
-
-    // Prevent blur if an account is selected from the dropdown or if the reset button is pressed
-    // if (accountSelectedFromDropdown || resetField) {
-    //   this._accountInput.focus();
-    //   this.setState({
-    //     accountSelectedFromDropdown: false,
-    //     showAccountSuggestions: resetField,
-    //     resetField: false,
-    //   });
-    //   console.log("called")
-    //   return false;
-    // }
 
     this.setState({
       showAccountSuggestions: false,
@@ -171,13 +159,14 @@ export default class AccountSelector extends Component {
     this.setState({
       value,
       selectedAccount,
+      highlightedAccount : selectedAccount,
       filteredAccounts,
       showResetButton: value.length > 0,
       showAccountSuggestions: true,
     }, () => onChange(value));
   }
 
-  onAccountSelect(account, fromDropdown) {
+  onAccountSelect(account) {
     const {accounts, onChange, onAccountSelected} = this.props;
     const {accountNumber} = account;
     const filteredAccounts = this.filterAccounts(accounts, accountNumber);
@@ -189,7 +178,6 @@ export default class AccountSelector extends Component {
       selectedAccount: account,
       showAccountSuggestions: false,
       showResetButton: true,
-      accountSelectedFromDropdown: fromDropdown,
     }, () => {
       if (changed) {
         onChange(accountNumber);
@@ -215,7 +203,7 @@ export default class AccountSelector extends Component {
   highlightAccount(account) {
     if (account && this.state.showAccountSuggestions) {
       this.setState({
-        selectedAccount: account,
+        highlightedAccount: account,
         value: account.name,
       }, this.scrollHighlightedAccountIntoView);
     }
@@ -227,7 +215,7 @@ export default class AccountSelector extends Component {
     }
     this._accountInput.focus();
     const { onChange, onAccountSelected } = this.props;
-    const state = { ...this.getBlankState(), showAccountSuggestions: true, resetField: true };
+    const state = { ...this.getBlankState(), showAccountSuggestions: true };
     this.setState(state, () => {
       onChange(state.selectedAccount);
       onAccountSelected(state.selectedAccount);
@@ -252,7 +240,7 @@ export default class AccountSelector extends Component {
 
   highlightNextAccount() {
     const {filteredAccounts} = this.state;
-    let newAccountIndex = filteredAccounts.indexOf(this.state.selectedAccount) + 1;
+    let newAccountIndex = filteredAccounts.indexOf(this.state.highlightedAccount) + 1;
     if (newAccountIndex === filteredAccounts.length) {
       newAccountIndex = 0;
     }
@@ -261,7 +249,7 @@ export default class AccountSelector extends Component {
 
   highlightPrevAccount() {
     const {filteredAccounts} = this.state;
-    let newAccountIndex = filteredAccounts.indexOf(this.state.selectedAccount) - 1;
+    let newAccountIndex = filteredAccounts.indexOf(this.state.highlightedAccount) - 1;
     if (newAccountIndex < 0) {
       newAccountIndex = filteredAccounts.length - 1;
     }
@@ -294,7 +282,7 @@ export default class AccountSelector extends Component {
   render() {
     const assignTo = name => component => { this[name] = component; };
     const {locale, placeholder, id, ariaInvalid, noMatches} = this.props;
-    const {filteredAccounts, showAccountSuggestions, value, selectedAccount, showResetButton} = this.state;
+    const {filteredAccounts, showAccountSuggestions, value, selectedAccount, highlightedAccount, showResetButton} = this.state;
     return (
       <div
         className="nfe-account-selector"
@@ -355,8 +343,8 @@ export default class AccountSelector extends Component {
               <AccountSuggestionList
                 locale={locale}
                 accounts={ filteredAccounts }
-                onSelect={ (account, fromDropdown) => this.onAccountSelect(account, fromDropdown) }
-                selectedAccount={ selectedAccount }
+                onSelect={ (account) => this.onAccountSelect(account) }
+                highlightedAccount={ highlightedAccount }
                 ref={ assignTo('_suggestionList') }
               />
               : <AccountSuggestionsEmpty value={ noMatches }/>
