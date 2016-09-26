@@ -26,6 +26,14 @@ import Dropdown from 'ffe-dropdown-react';
 The passed function will be called with the `SynthethicEvent` dispatched by `React`,
 allowing access to the `value` property of the selected option through `e.target.value`, where `e` is the argument passed.
 
+```javascript
+<Dropdown label={ labelTextString } onChange={ function } onBlur={ anotherFunction }>
+    { cards.map(c => <option value={ c.id }>{ c.name }</option>) }
+</Dropdown>
+```
+
+The passed 'anotherFunction' will be called on blur event, ie when user tabs out of the select element. Same usage as the onChange property.
+
 
 If you need to render a label tag outside of the component and pass an id for the select as a parameter you can pass an id attribute.
 The label-attribute should then be omitted.

@@ -35,10 +35,10 @@ describe('<Dropdown />', () => {
     });
 
     it('should call the passed function on blur', () => {
-    const spy = sinon.spy();
-    const wrapper = shallow(createDropdown({ onBlur: spy }));
-    wrapper.find('select').simulate('blur');
-    assert.equal(spy.calledOnce, true);
+        const spy = sinon.spy();
+        const wrapper = shallow(createDropdown({ onBlur: spy }));
+        wrapper.find('select').simulate('blur');
+        assert.equal(spy.calledOnce, true);
     });
 
     it('should apply the same id to <label> and <select>', () => {
