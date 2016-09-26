@@ -1,4 +1,4 @@
-import React, {PropTypes, Component} from 'react';
+import React, { PropTypes, Component } from 'react';
 import ReactDOM from 'react-dom';
 import AccountSuggestionList from './account-suggestion-list';
 import AccountSuggestionsEmpty from './account-suggestions-empty';
@@ -144,15 +144,16 @@ export default class AccountSelector extends Component {
     }
 
     // Prevent blur if an account is selected from the dropdown or if the reset button is pressed
-    if (accountSelectedFromDropdown || resetField) {
-      this._accountInput.focus();
-      this.setState({
-        accountSelectedFromDropdown: false,
-        showAccountSuggestions: resetField,
-        resetField: false,
-      });
-      return;
-    }
+    // if (accountSelectedFromDropdown || resetField) {
+    //   this._accountInput.focus();
+    //   this.setState({
+    //     accountSelectedFromDropdown: false,
+    //     showAccountSuggestions: resetField,
+    //     resetField: false,
+    //   });
+    //   console.log("called")
+    //   return false;
+    // }
 
     this.setState({
       showAccountSuggestions: false,
@@ -220,12 +221,13 @@ export default class AccountSelector extends Component {
     }
   }
 
-  reset() {
-    // The inputfield looses focus when we click the reset button, so we need to give it back
+  reset(e) {
+    if (e) {
+      e.preventDefault();
+    }
     this._accountInput.focus();
-
-    const {onChange, onAccountSelected} = this.props;
-    const state = {...this.getBlankState(), showAccountSuggestions: true, resetField: true };
+    const { onChange, onAccountSelected } = this.props;
+    const state = { ...this.getBlankState(), showAccountSuggestions: true, resetField: true };
     this.setState(state, () => {
       onChange(state.selectedAccount);
       onAccountSelected(state.selectedAccount);
