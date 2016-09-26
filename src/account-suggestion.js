@@ -9,7 +9,7 @@ export default class AccountSuggestion extends React.Component {
     const { account, onSelect, highlighted, locale } = this.props;
     const onSelectHandler = (e) => {
       e.preventDefault();
-      onSelect(account, true);
+      onSelect(account);
     };
     const onKeyDownHandler = (evt) => {
       if (evt.which === KeyCode.ENTER) {
