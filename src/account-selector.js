@@ -220,12 +220,17 @@ export default class AccountSelector extends Component {
     }
   }
 
-  reset() {
-    // The inputfield looses focus when we click the reset button, so we need to give it back
-    this._accountInput.focus();
-
+  reset(setFocus = true ) {
     const {onChange, onAccountSelected} = this.props;
-    const state = {...this.getBlankState(), showAccountSuggestions: true, resetField: true };
+    const state = {...this.getBlankState(), showAccountSuggestions: false, resetField: false };
+
+    if (setFocus) {
+      // The inputfield looses focus when we click the reset button, so we need to give it back
+      this._accountInput.focus();
+      state.showAccountSuggestions = true;
+      state.resetField = true;
+    }
+
     this.setState(state, () => {
       onChange(state.selectedAccount);
       onAccountSelected(state.selectedAccount);
@@ -301,6 +306,7 @@ export default class AccountSelector extends Component {
     const assignTo = name => component => { this[name] = component; };
     const {locale, placeholder, id, ariaInvalid, noMatches} = this.props;
     const {filteredAccounts, showAccountSuggestions, value, selectedAccount, showResetButton} = this.state;
+    console.log("show sugggestions?", showAccountSuggestions);
     return (
       <div
         className="nfe-account-selector"
