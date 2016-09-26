@@ -12,6 +12,7 @@ function Dropdown({
     className = '',
     label,
     onChange,
+    onBlur,
     selectedValue,
     defaultValue,
     children,
@@ -31,6 +32,7 @@ function Dropdown({
                         className={`ffe-dropdown ${className}`}
                         id={ domId }
                         onChange={ onChange }
+                        onBlur={ onBlur }
                         value={ selectedValue }
                         defaultValue={ defaultValue }
                         aria-invalid={ invalid }
@@ -54,6 +56,7 @@ Dropdown.propTypes = {
     id: PropTypes.string,
     label: PropTypes.string,
     onChange: PropTypes.func.isRequired,
+    onBlur: PropTypes.func,
     selectedValue: PropTypes.string,
     defaultValue: PropTypes.string,
     children: PropTypes.array,

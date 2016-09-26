@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.3.0
+
+* Added onBlur support
+
 ## 2.2.0
 
 * Relaxing the peer dependency on `ffe-form` to allow both 1.x and 2.x
