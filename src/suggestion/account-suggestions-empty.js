@@ -1,9 +1,9 @@
 import React, { PropTypes } from 'react';
 
-const AccountSuggestionsEmpty = ({value, onSelect}) =>
+const AccountSuggestionsEmpty = ({value}) =>
     <ul className="nfe-account-suggestions" role="listbox">
       <li className="nfe-account-suggestions__item">
-        <div className="nfe-account-suggestions__empty" onMouseDown={ onSelect }>
+        <div className="nfe-account-suggestions__empty">
           <span className="nfe-account-suggestions__name">{ value }</span>
         </div>
       </li>
