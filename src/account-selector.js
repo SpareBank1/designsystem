@@ -126,7 +126,7 @@ export default class AccountSelector extends Component {
 
   onBlur() {
     this.removeGlobalEventListeners();
-    const {selectedAccount, value, accountSelectedFromDropdown, resetField} = this.state;
+    const {selectedAccount, value, accountSelectedFromDropdown, resetField, emptySuggestionsField} = this.state;
     const {onBlur} = this.props;
     let blurReturn = value;
     if (selectedAccount) {
@@ -144,10 +144,11 @@ export default class AccountSelector extends Component {
     }
 
     // Prevent blur if an account is selected from the dropdown or if the reset button is pressed
-    if (accountSelectedFromDropdown || resetField) {
+    if (accountSelectedFromDropdown || resetField || emptySuggestionsField) {
       this.setState({
         accountSelectedFromDropdown: false,
         resetField: false,
+        emptySuggestionsField: false
       });
       return;
     }
@@ -290,9 +291,9 @@ export default class AccountSelector extends Component {
   }
 
   componentDidUpdate() {
-    const {accountSelectedFromDropdown, resetField} = this.state;
+    const {accountSelectedFromDropdown, resetField, emptySuggestionsField} = this.state;
     // Prevent blur if an account is selected from the dropdown or if the reset button is pressed
-    if (accountSelectedFromDropdown || resetField) {
+    if (accountSelectedFromDropdown || resetField || emptySuggestionsField) {
         this._accountInput.focus();
     }
   }
@@ -365,7 +366,10 @@ export default class AccountSelector extends Component {
                 selectedAccount={ selectedAccount }
                 ref={ assignTo('_suggestionList') }
               />
-              : <AccountSuggestionsEmpty value={ noMatches }/>
+              :
+              <AccountSuggestionsEmpty
+                value={ noMatches }
+                onSelect={ () => this.setState({ showAccountSuggestions: true, emptySuggestionsField: true }) } />
             }
           </ScrollArea>
           : null}
