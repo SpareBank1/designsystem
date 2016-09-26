@@ -1,8 +1,7 @@
 /* eslint-env mocha */
 
 import { assert } from 'chai';
-import accountFilter from './account-filter';
-
+import { accountFilter } from './filters';
 
 describe('accountFilter', () => {
   const accounts = [
