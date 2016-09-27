@@ -221,12 +221,19 @@ export default class AccountSelector extends Component {
     }
   }
 
-  reset() {
-    // The inputfield looses focus when we click the reset button, so we need to give it back
-    this._accountInput.focus();
-
+  reset(setFocus = true ) {
     const {onChange, onAccountSelected} = this.props;
-    const state = {...this.getBlankState(), showAccountSuggestions: true, resetField: true };
+    const state = {
+      ...this.getBlankState(),
+      showAccountSuggestions: true,
+      resetField: true
+    };
+
+    if (! setFocus) {
+      state.showAccountSuggestions = false;
+      state.resetField = false;
+    }
+
     this.setState(state, () => {
       onChange(state.selectedAccount);
       onAccountSelected(state.selectedAccount);
