@@ -52,4 +52,14 @@ describe('<AccountSelector>', () => {
     assert.equal(wrapper.find('.nfe-account-suggestions__empty').length, 1);
     assert.equal(wrapper.find('.nfe-account-suggestions__empty').text(), noMatches);
   });
+
+  it('should reset when reset is called', () => {
+    const el = <AccountSelector accounts={ accounts } onChange={ () => {} } noMatches={ noMatches } value="Sparekonto" id="custom-id1" />;
+    const wrapper = mount(el);
+    wrapper.find('button').simulate('click');
+
+    assert.isUndefined(wrapper.find('input').value);
+    assert.equal(wrapper.find('.nfe-account-suggestions__details').length, 0);
+
+  });
 });
