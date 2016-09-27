@@ -16,3 +16,5 @@ Importer LESS-filen i din main.less fil:
 ```
 
 Merk: Denne modulen har en `peerDependency` på `ffe-core@^8.1.0`.
+
+Link styling må settes eksplisitt: `<a href="http://www.sparebank1.no" class="ffe-message-box__link">En lenke</a>`

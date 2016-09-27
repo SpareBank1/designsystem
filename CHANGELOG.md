@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## Version 3.0.2
+- Added link styling
+
 ## Version 3.0.1
 - Fixed minor border overflow visual bug when `@media print`
 - Bumped dependency on `ffe-core` to `^8.1.0`
