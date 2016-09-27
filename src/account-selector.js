@@ -170,7 +170,8 @@ export default class AccountSelector extends Component {
     const {accounts, onChange, onAccountSelected} = this.props;
     const {accountNumber} = account;
     const filteredAccounts = this.filterAccounts(accounts, accountNumber);
-    const changed = this.state.selectedAccount !== account;
+    const {selectedAccount} = this.state;
+    const hasChanged = !selectedAccount || (selectedAccount.accountNumber !== account.accountNumber);
 
     this.setState({
       filteredAccounts,
@@ -179,7 +180,7 @@ export default class AccountSelector extends Component {
       showAccountSuggestions: false,
       showResetButton: true,
     }, () => {
-      if (changed) {
+      if (hasChanged) {
         onChange(accountNumber);
       }
       onAccountSelected(accountNumber);
