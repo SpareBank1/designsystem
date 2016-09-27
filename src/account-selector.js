@@ -348,7 +348,10 @@ export default class AccountSelector extends Component {
                 highlightedAccount={ highlightedAccount }
                 ref={ assignTo('_suggestionList') }
               />
-              : <AccountSuggestionsEmpty value={ noMatches }/>
+              :
+              <AccountSuggestionsEmpty
+                value={ noMatches }
+                onSelect={ () => this.setState({ showAccountSuggestions: true, emptySuggestionsField: true }) } />
             }
           </ScrollArea>
           : null}
