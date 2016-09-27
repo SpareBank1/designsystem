@@ -50,7 +50,6 @@ export default class AccountSelector extends Component {
       highlightedAccount: null,
       value: '',
       filteredAccounts: this.filterAccounts(accounts, ''),
-      accountSelectedFromDropdown: false,
     };
   }
 
@@ -229,7 +228,7 @@ export default class AccountSelector extends Component {
     });
   }
   
-  onReset(e){
+  onReset(e) {
     e.preventDefault();
     this.reset();
   }
