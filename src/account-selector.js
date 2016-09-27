@@ -1,4 +1,4 @@
-import React, { PropTypes, Component } from 'react';
+import React, {PropTypes, Component} from 'react';
 import ReactDOM from 'react-dom';
 import AccountSuggestionList from './account-suggestion-list';
 import AccountSuggestionsEmpty from './account-suggestions-empty';
@@ -30,6 +30,7 @@ export default class AccountSelector extends Component {
     this.highlightPrevAccount = this.highlightPrevAccount.bind(this);
     this.globalClickHandler = this.globalClickHandler.bind(this);
     this.filterAccounts = this.filterAccounts.bind(this);
+    this.onSelectAccountSuggestionsEmpty = this.onSelectAccountSuggestionsEmpty.bind(this);
     this.onReset = this.onReset.bind(this);
   }
 
@@ -188,6 +189,11 @@ export default class AccountSelector extends Component {
     });
   }
 
+  onSelectAccountSuggestionsEmpty(e) {
+    e.preventDefault();
+    this.setState({ showAccountSuggestions: true });
+  }
+  
   highlightFirstAccount() {
     const {filteredAccounts} = this.state;
     if (filteredAccounts.length > 0) {
@@ -361,7 +367,7 @@ export default class AccountSelector extends Component {
               :
               <AccountSuggestionsEmpty
                 value={ noMatches }
-                onSelect={ () => this.setState({ showAccountSuggestions: true, emptySuggestionsField: true }) } />
+                onSelect={ this.onSelectAccountSuggestionsEmpty } />
             }
           </ScrollArea>
           : null}
