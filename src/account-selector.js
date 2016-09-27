@@ -30,6 +30,7 @@ export default class AccountSelector extends Component {
     this.highlightPrevAccount = this.highlightPrevAccount.bind(this);
     this.globalClickHandler = this.globalClickHandler.bind(this);
     this.filterAccounts = this.filterAccounts.bind(this);
+    this.onReset = this.onReset.bind(this);
   }
 
   getDefaultState() {
@@ -49,6 +50,7 @@ export default class AccountSelector extends Component {
       highlightedAccount: null,
       value: '',
       filteredAccounts: this.filterAccounts(accounts, ''),
+      accountSelectedFromDropdown: false,
     };
   }
 
@@ -210,17 +212,26 @@ export default class AccountSelector extends Component {
     }
   }
 
-  reset(e) {
-    if (e) {
-      e.preventDefault();
+  reset(setFocus = true ) {
+    const {onChange, onAccountSelected} = this.props;
+    const state = {
+      ...this.getBlankState(),
+      showAccountSuggestions: true,
+    };
+
+    if (! setFocus) {
+      state.showAccountSuggestions = false;
     }
-    this._accountInput.focus();
-    const { onChange, onAccountSelected } = this.props;
-    const state = { ...this.getBlankState(), showAccountSuggestions: true };
+
     this.setState(state, () => {
       onChange(state.selectedAccount);
       onAccountSelected(state.selectedAccount);
     });
+  }
+  
+  onReset(e){
+    e.preventDefault();
+    this.reset();
   }
 
   scrollHighlightedAccountIntoView() {
@@ -309,7 +320,7 @@ export default class AccountSelector extends Component {
           <button
             aria-label={ i18n[locale].RESET_SEARCH }
             className="nfe-account-selector__reset-button"
-            onMouseDown={ this.reset }
+            onMouseDown={ this.onReset }
             onKeyDown={ this.onResetButtonKeydown }
             tabIndex="-1"
           >
