@@ -1,5 +1,8 @@
 #Changelog
 
+# v2.1.3
+* Bugfix: Fixed various bugs related to race conditions between events
+
 # v2.1.2
 * Bugfix: make noMatches-field persist when clicked
 * Bugfix: changed noMatches-text to be wrapped in `span` instead of `anchor` to avoid influences of external styles
