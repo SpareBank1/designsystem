@@ -1,9 +1,13 @@
 #Changelog
 
-# v2.1.1 
+# v2.1.2
+* Bugfix: make noMatches-field persist when clicked
+* Bugfix: changed noMatches-text to be wrapped in `span` instead of `anchor` to avoid influences of external styles
+
+## v2.1.1 
 * Bugfix: Input field no longer steals focus onBlur
 
-# v2.1.0
+## v2.1.0
 * Added optional prop `noMatches` on `AccountSelector`
 
 ## v2.0.2
