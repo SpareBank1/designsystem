@@ -1,12 +1,34 @@
 # Changelog
 
+## v.8.1.1
+
+This release changes `@ffe-sand` from `#E1D5AF` to `#F8F5EB`
+
+Since `@ffe-sand` after this change is more or less equal to the old
+`@ffe-sand-25`, `@ffe-sand-25` is now in effect an alias for `@ffe-sand`.
+This choice has been made to preserve backwards compatibility for the
+Less code. Consumers of `@ffe-sand-25` should see no perceivable change.
+
+The postfix usually indicates opacity relative to the base color, given
+a white background color. In this case `@ffe-sand-25` would have become
+too white, so it has been removed from the color palette.
+
+**Visual diff**
+
+Consumers of `@ffe-sand` and `@ffe-sand-50` will find the colors are
+significantly lighter. This is by design, and considered a bugfix.
+
 ## v.8.1.0
 
-* Added a class, ffe-screenreader-only, and styles for hiding page elements visually, while retaining accessibility.
+Added a class, ffe-screenreader-only, and styles for hiding page
+elements visually, while retaining accessibility.
 
 ## v.8.0.3
 
-* VISUAL DIFF: @ffe-grey-light-bg changes from #F1F1EF to #F9F9F9. This change fixes problems with color contrast, and is considered a bugfix.
+**Visual diff**
+
+`@ffe-grey-light-bg` changes from `#F1F1EF` to `#F9F9F9`. This change
+fixes problems with color contrast, and is considered a bugfix.
 
 ## v.8.0.2
 
