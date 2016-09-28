@@ -1,5 +1,8 @@
 #Changelog
 
+# v2.1.4
+* Bugfix: Give input field focus on reset button click
+
 # v2.1.3
 * Bugfix: Fixed various bugs related to race conditions between events
 
