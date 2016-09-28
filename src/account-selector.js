@@ -236,6 +236,7 @@ export default class AccountSelector extends Component {
   
   onReset(e) {
     e.preventDefault();
+    this._accountInput.focus();
     this.reset();
   }
 
