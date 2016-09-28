@@ -31,6 +31,10 @@ module.exports = {
         // Ensure correct position of the first property.
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-first-prop-new-line.md
         'react/jsx-first-prop-new-line' : [2, "multiline"],
+
+        // Enforce the closing bracket location for JSX multiline elements.
+        // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-bracket-location.md
+        'react/jsx-closing-bracket-location' : 2,
         
         // Prevent usage of dangerous JSX properties
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-danger.md
