@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.0.4
+* Gave radio switches a white background when not selected, so that they work
+correctly on non-white backgrounds as well
+
 ## v2.0.3
 * Updated the focus state to have correct focus color and to not have an
 box-shadow
