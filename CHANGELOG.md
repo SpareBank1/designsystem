@@ -1,5 +1,9 @@
 # Changelog
 
+## v.4.0.0 (20.09.2016)
+* (breaking) Enforce line brake after first prop in components if multiline props
+* (breaking) Enforce closing tag of components to be on new line if multiline props
+
 ## v.3.0.0 (10.08.2016)
 * (breaking) Add new version of eslint-config-ffe-base which removes the "no-eq-null"-rule
 
