@@ -1,5 +1,18 @@
 # Changelog
 
+## v.8.1.2
+
+This release changes the font size and / or line-height for h2, h4 and h6 for
+**desktop** users. In addition, the color of `.ffe-sub-lead-paragraph` has
+changed from `@ffe-blue-royal` to `@ffe-black`.
+
+**Visual diff**
+
+Consumers of `.ffe-h2`, `.ffe-h4`, `.ffe-h6` and `.ffe-sub-lead-paragraph`
+will have to update their visual baseline images. Since the actual changes will
+be small and have a very small chance of actually breaking a design, this
+change was introduced as a patch.
+
 ## v.8.1.1
 
 This release changes `@ffe-sand` from `#E1D5AF` to `#F8F5EB`
