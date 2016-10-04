@@ -55,6 +55,8 @@ function Dropdown({
 
 Dropdown.propTypes = {
     id: PropTypes.string,
+    className: PropTypes.string,
+    containerClassName: PropTypes.string,
     label: PropTypes.string,
     onChange: PropTypes.func.isRequired,
     onBlur: PropTypes.func,
