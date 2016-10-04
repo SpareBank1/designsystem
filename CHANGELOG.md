@@ -1,5 +1,10 @@
 # Changelog
 
+## v2.1.3
+
+* Add `fill: @ffe-blue-royal-light-wcag;` to `.ffe-shortcut-button__icon-chevron` so it's no longer black by default.
+* Fix broken selector for `:hover` state of `.ffe-shortcut-button__icon-chevron`.
+
 ## v2.1.2
 
 Add `cursor: pointer;` to `.ffe-tertiary-button`
