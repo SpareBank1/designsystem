@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 
 source node_modules/ffe-visual-tests-support/run_gemini_command.lib
 
