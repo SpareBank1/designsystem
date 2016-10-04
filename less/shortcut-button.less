@@ -5,17 +5,18 @@
     &:active,
     &:focus,
     &:hover {
-        .shortcut-button__icon-chevron {
+        .ffe-shortcut-button__icon-chevron {
             left: 20px;
         }
     }
 
     &__icon-chevron {
-        bottom: 2px;
+        bottom: -2px;
+        fill: @ffe-blue-royal-light-wcag;
         height: 16px;
         left: 15px;
         position: relative;
-        transition: left 0.1s;
+        transition: left 0.1s ease-in-out;
         width: 16px;
     }
 }
