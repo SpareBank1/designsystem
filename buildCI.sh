@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 # Runs build.sh before checking should_publish
 
 function should_publish() {
