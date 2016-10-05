@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-ffe-base",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -14,8 +14,8 @@
   "author": "Sparebank 1",
   "license": "",
   "peerDependencies": {
-    "eslint": "^2.9.0",
-    "eslint-plugin-import": "^1.6.1"
+    "eslint": "^2.0.0 || ^3.0.0",
+    "eslint-plugin-import": "^1.10.1"
   },
   "files": [
     "rules",
@@ -25,7 +25,7 @@
     "registry": "https://nexus.intern.sparebank1.no/nexus/content/repositories/npm-internal"
   },
   "devDependencies": {
-    "eslint": "^2.9.0",
+    "eslint": "^3.0.0",
     "eslint-find-rules": "^1.9.2"
   }
 }
