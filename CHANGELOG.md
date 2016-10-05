@@ -1,5 +1,10 @@
 # Changelog
 
+## v.5.0.0 (04.10.2016)
+* (patch) Add eslint@3.0.0 to peerDependencies
+* (patch) Update eslint-plugin-import to 1.10.1 to get updated peerDependencies
+* (breaking) Add elinst-plugin-react@6.0.0 to peerDependencies
+
 ## v.4.0.0 (20.09.2016)
 * (breaking) Enforce line brake after first prop in components if multiline props
 * (breaking) Enforce closing tag of components to be on new line if multiline props
