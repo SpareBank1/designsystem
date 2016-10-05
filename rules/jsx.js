@@ -42,11 +42,11 @@ module.exports = {
 
         // Prevent usage of setState in componentDidMount, except when inside a function
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-did-mount-set-state.md
-        'react/no-did-mount-set-state': [2, 'allow-in-func'],
+        'react/no-did-mount-set-state': 2,
 
         // Prevent usage of setState in componentDidUpdate
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-did-update-set-state.md
-        'react/no-did-update-set-state': [2, 'allow-in-func'],
+        'react/no-did-update-set-state': 2,
 
         // Prevent direct mutation of this.state
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-direct-mutation-state.md
