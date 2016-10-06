@@ -10,6 +10,7 @@ const createID = (label, options) => {
 function Dropdown({
     id,
     className = '',
+    containerClassName = '',
     label,
     onChange,
     onBlur,
@@ -22,14 +23,14 @@ function Dropdown({
 }) {
     const domId = id || createID(label, children);
 
-    return  <div className="ffe-input-group" aria-live="polite">
+    return  <div className={ `ffe-input-group ${containerClassName}` } aria-live="polite">
                 { label &&
                         <label className="ffe-form-label" htmlFor={ domId }>
                             { label }
                         </label>
                 }
                 <select
-                        className={`ffe-dropdown ${className}`}
+                        className={ `ffe-dropdown ${className}` }
                         id={ domId }
                         onChange={ onChange }
                         onBlur={ onBlur }
@@ -54,6 +55,8 @@ function Dropdown({
 
 Dropdown.propTypes = {
     id: PropTypes.string,
+    className: PropTypes.string,
+    containerClassName: PropTypes.string,
     label: PropTypes.string,
     onChange: PropTypes.func.isRequired,
     onBlur: PropTypes.func,

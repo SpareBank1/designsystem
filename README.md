@@ -57,6 +57,16 @@ Passing `invalid` to the `Dropdown` will give a red color on the element.
 </Dropdown>
 ```
 
+If you need to add styling to the outer div-container of the component and pass the attribute containerClassName.
+The containerClassName will be appended to the default class 'ffe-input-group'.
+
+```javascript
+<label for={ uniqueIdString }>{ labelTextString }</label>
+<Dropdown containerClassName={ myContainterClass }>
+    <option value="val1">Option text</option>
+</Dropdown>
+```
+
 ### Loading state
 
 Loading state can be indicated using `isLoading`. When this is set a loading spinner will be rendered next to the dropdown.

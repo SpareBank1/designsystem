@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.4.0
+
+* Added added support for css styling of container-div, using prop containerClassName
+
 ## 2.3.0
 
 * Added onBlur support
