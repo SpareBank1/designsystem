@@ -23,6 +23,7 @@ import Checkbox from 'ffe-checkbox-react';
         name={ string }
         label={ string }
         noMargins={ boolean } // disables top- and bottom margins, useful for use in tables etc
+        tabIndex={ number } // Set tabindex on input element if needed
 />
 ```
 

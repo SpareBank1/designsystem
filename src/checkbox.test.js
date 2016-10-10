@@ -4,7 +4,7 @@ import { assert } from 'chai';
 import CreateCheckbox from '../docs/example-component';
 
 describe('<Checkbox />', () => {
-   
+
     it('should render a input', () => {
         const wrapper = shallow(CreateCheckbox({}));
         assert.equal(wrapper.find('input').length, 1);
@@ -20,7 +20,7 @@ describe('<Checkbox />', () => {
 
     it('should call onChange with the correct parameter', () => {
         let spy = sinon.spy();
-        
+
         let wrapper = shallow(CreateCheckbox({ onChange: spy }));
 
         wrapper.find('input').simulate('change');
@@ -28,7 +28,7 @@ describe('<Checkbox />', () => {
 
         spy = sinon.spy();
         wrapper = shallow(CreateCheckbox({ onChange: spy, checked: true }));
-        
+
         wrapper.find('input').simulate('change');
         assert.equal(spy.args[0][0], false);
 
@@ -60,5 +60,11 @@ describe('<Checkbox />', () => {
             shallow(CreateCheckbox({ noMargins: true })).find('.ffe-checkbox--no-margin').length,
             1);
     });
-    
+
+    it('should support tabindex', () => {
+        const wrapper = shallow(CreateCheckbox({ tabIndex: '-1'}));
+        assert.equal(
+            wrapper.find('input').prop('tabIndex'), '-1')
+    });
+
 });
