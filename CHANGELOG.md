@@ -1,5 +1,8 @@
 # Changelog
 
+## v2.0.5
+* Better positioning of the Dropdown arrow down icon.
+
 ## v2.0.4
 * Gave radio switches a white background when not selected, so that they work
 correctly on non-white backgrounds as well
