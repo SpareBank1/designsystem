@@ -1,5 +1,13 @@
 # Changelog
 
+## v2.0.0
+
+* Update ffe-icons to a new major: 6.0.0.
+  * `ffe-icons-react/kontorbygg-ikon` renamed to `ffe-icons-react/kontorbygg-solid-ikon`
+  * `ffe-icons-react/skyskraper-ikon` added
+  * `ffe-icons-react/personer-ikon` added
+  * `ffe-icons-react/kontorbygg-ikon` added (in a non-solid version)
+
 ## v1.1.1
 
 * Update ffe-icons to version 5.3.0
