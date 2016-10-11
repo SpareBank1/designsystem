@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import hash from 'nfe-hash';
 import classNames from 'classnames';
 
-export default function CheckBox({ name, label, onChange, checked, children, noMargins, tabIndex }) {
+export default function CheckBox({ name, label, onChange, checked, children, noMargins, isTabbable }) {
     const id = `checkbox-${hash(name)}`;
     const classes = classNames({
         'ffe-checkbox': true,
@@ -18,7 +18,7 @@ export default function CheckBox({ name, label, onChange, checked, children, noM
                     checked={checked}
                     name={name}
                     id={id}
-                    tabIndex={tabIndex}
+                    {... isTabbable === false ? { tabIndex: '-1' } : {}}
                 />
                 <label className={ classes } htmlFor={id}>
                     {label || children}
@@ -33,5 +33,9 @@ CheckBox.propTypes = {
     checked: PropTypes.bool,
     noMargins: PropTypes.bool,
     children: PropTypes.array,
-    tabIndex: PropTypes.number
+    isTabbable: PropTypes.bool
+};
+
+CheckBox.defaultProps = {
+    isTabbable: true
 };

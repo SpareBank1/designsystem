@@ -61,10 +61,16 @@ describe('<Checkbox />', () => {
             1);
     });
 
-    it('should support tabindex', () => {
-        const wrapper = shallow(CreateCheckbox({ tabIndex: '-1'}));
+    it('should not set tabindex by default', () => {
+        const wrapper = shallow(CreateCheckbox({}));
         assert.equal(
-            wrapper.find('input').prop('tabIndex'), '-1')
+            wrapper.find('input').prop('tabIndex'), undefined);
+    });
+
+    it('should support removing input from taborder', () => {
+        const wrapper = shallow(CreateCheckbox({ isTabbable: false }));
+        assert.equal(
+            wrapper.find('input').prop('tabIndex'), -1);
     });
 
 });
