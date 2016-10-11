@@ -1,5 +1,8 @@
 # Changelog
 
+## v2.0.1
+* Remove abbr from th in datepicker as it is not a prop. Causing console error
+
 ## v2.0.0
 * Bumped dependency on `ffe-core` to `^8.0.2`
 * Bumped dependency on `ffe-datepicker` to `^2.0.0`
