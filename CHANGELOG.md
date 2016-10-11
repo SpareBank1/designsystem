@@ -1,5 +1,12 @@
 # Changelog
 
+## 6.0.0
+* Breaking: kontorbygg-ikon renamed to kontorbygg-solid-ikon in order to be consistent with how other icons are named. Anyone who where using the `kontorbygg-ikon` and wants to keep using the version with a fill should change to `kontorbygg-solid-ikon`.
+* Add new icons
+    * kontorbygg-ikon (replaces old solid one with a non-solid version)
+    * skyskraper-ikon
+    * personer-ikon
+
 ## 5.3.1
 * No change
 
