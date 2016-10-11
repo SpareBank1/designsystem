@@ -2,7 +2,7 @@
 
 ## v2.2.0
 
-* Add support for setting tabindex on the input field
+* Add support for removing checkbox from tab order via isTabbable prop
 
 ## v2.1.0
 
