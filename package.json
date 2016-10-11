@@ -29,7 +29,7 @@
     }
   ],
   "devDependencies": {
-    "ffe-core": "^8.0.2",
+    "ffe-core": "^8.1.2",
     "ffe-visual-tests-support": "1.0.1",
     "gemini": "4.3.0",
     "less": "^2.7.1",
