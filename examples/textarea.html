@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>ffe-form</title>
+    <link href="examples.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="ffe-body-text">
+<div class="ffe-section-wrapper">
+    <div class="ffe-content-container">
+        <h1 class="ffe-h1">Textarea</h1>
+    </div>
+</div>
+
+<div id="ffedoc">
+    <div class="ffe-section-wrapper">
+        <div class="ffe-content-container ffe-content-container--text-left">
+
+            <p class="ffe-body-paragraph visual-test-hidden">
+                Responsiv bredde som default. Høyden settes vha property rows, eller annen css.
+            </p>
+
+            <ul>
+                <li>100% bredde ved skjermbredde under 480px.</li>
+                <li>350px bredde ved skjermbredde opp til 768px.</li>
+                <li>350px bredde ved skjermbredde opp til 1024px.</li>
+                <li>500px bredde ved skjermbredde opp til 1280px.</li>
+            </ul>
+
+            <p>
+                Har mulighet til å overstyre dette ved bruk av modifier --inline. Denne vil rendre input inline-block,
+                og arve bredde fra cols property, eller eventuell annen styling.
+            </p>
+
+            <div class="ffe-input-group">
+                <label for="textarea-id" class="ffe-form-label">
+                    Textarea default
+                </label>
+                <textarea
+                        id="textarea-id"
+                        class="ffe-textarea"
+                        maxlength="150"
+                        aria-invalid="false"
+                        rows="5"
+                        cols="30"
+                >
+                    Innhold i textarea.
+                </textarea>
+            </div>
+
+            <div class="ffe-input-group">
+                <label for="textarea-inline-id" class="ffe-form-label">
+                    Textarea --inline
+                </label>
+                <textarea
+                        id="textarea-inline-id"
+                        class="ffe-textarea ffe-textarea--inline"
+                        maxlength="150"
+                        aria-invalid="false"
+                        rows="5"
+                        cols="30"
+                >
+                    Innhold i textarea --inline.
+                    Her benyttes verdien i property cols til å sette bredde.
+                </textarea>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
