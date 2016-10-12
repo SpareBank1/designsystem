@@ -9,6 +9,7 @@
     transition: all 0.15s ease-in-out;
     box-shadow: 0 1px 2px 0 @ffe-grey-light-bg inset;
 
+    width: 100%;
 
     &:hover {
         border-color: @ffe-blue-royal-light-wcag;
@@ -20,16 +21,21 @@
         outline: none;
     }
 
-    &--small {
-        width: 95px;
-    }
+    @media screen and (min-width: @breakpoint-sm) {
 
-    &--medium {
-        width: 130px;
-    }
+        width: auto;
 
-    &--large {
-        width: 160px;
+        &--small {
+            width: 95px;
+        }
+
+        &--medium {
+            width: 130px;
+        }
+
+        &--large {
+            width: 160px;
+        }
     }
 
     &--inline {
