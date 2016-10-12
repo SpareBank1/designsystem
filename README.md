@@ -128,7 +128,8 @@ Also before starting, verify your SVG meets the criteria listed in *icons/_ICON_
 10. Create a pull request from your repos feature branch to ffe-icons `master`.
 
 ## Visual regression testing
-See [readme for ffe-core](***REMOVED***).
+Det utføres visuell regresjonstestning på Jenkins med Gemini.
+Ved endringer som gjør at testene feiler må det aktuelle baseline-screenshotet oppdateres. Dette gjøres med scriptet ./update_visual-tests-baselines.sh.
 
 ## Pull Requests
 See [readme for ffe-core](***REMOVED***).

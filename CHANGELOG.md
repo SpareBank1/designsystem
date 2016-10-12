@@ -1,5 +1,8 @@
 # Changelog
 
+## 6.1.0
+* Added pose-i-haand-ikon.svg
+
 ## 6.0.0
 * Breaking: kontorbygg-ikon renamed to kontorbygg-solid-ikon in order to be consistent with how other icons are named. Anyone who where using the `kontorbygg-ikon` and wants to keep using the version with a fill should change to `kontorbygg-solid-ikon`.
 * Add new icons
