@@ -16,4 +16,5 @@ export default props => <Checkbox
                             name={props.name}
                             label={props.label}
                             noMargins={props.noMargins}
+                            isTabbable={props.isTabbable}
                         />;
