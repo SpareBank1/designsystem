@@ -172,7 +172,6 @@ export default class Datepicker extends React.Component {
         className="ffe-calendar__weekday"
         key={ day.name }
         role="columnheader"
-        abbr={ day.name }
         aria-label={ day.name }
         id={ `header__${this.datepickerId}__${index}` }
       >
