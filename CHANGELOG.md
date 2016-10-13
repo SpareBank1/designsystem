@@ -1,5 +1,8 @@
 # Changelog
 
+## v2.0.6
+* Changed font-size and line height of ffe-form-label.
+
 ## v2.0.5
 * Better positioning of the Dropdown arrow down icon.
 
