@@ -6,7 +6,7 @@
   "scripts": {
     "compile": "npm run lint && lessc examples/examples.less examples/examples.css && cp -R node_modules/ffe-core/fonts/ examples/fonts/ && echo \"$(date +%T): Updated example\"",
     "lint": "lessc --lint examples/examples.less",
-    "start": "opn examples/example.html & watch \"npm run -s compile\" less/",
+    "start": "watch \"npm run -s compile\" less/",
     "test:nsp": "nsp check",
     "test": "npm run lint && npm run test:nsp",
     "examples": "lessc examples/examples.less examples/examples.css && mkdirp examples/fonts && cp -R node_modules/ffe-core/fonts/* examples/fonts/ && echo Now open /examples/[component].html to see styleguide.",
@@ -22,7 +22,7 @@
   "documentation": [
     {
       "type": "html",
-      "file": "examples/example.html",
+      "file": "examples/validation.html",
       "select": "#ffedoc"
     },
     {
