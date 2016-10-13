@@ -1,7 +1,7 @@
 # Changelog
 
 ## v2.0.5
-* Changed font-size and line height of ffe-form-label.
+* Better positioning of the Dropdown arrow down icon.
 
 ## v2.0.4
 * Gave radio switches a white background when not selected, so that they work
