@@ -1,4 +1,13 @@
+/*
+ * Deprecation notice
+ *
+ * .ffe-number-list and .ffe-stylized-number-list are deprecated.
+ * Use .ffe-numbered-list and .ffe-stylized-numbered-list in stead.
+ *
+ */
+
 .ffe-number-list,
+.ffe-numbered-list,
 .ffe-bullet-list {
   padding: 0;
   text-align: left;
@@ -10,7 +19,8 @@
   }
 }
 
-.ffe-number-list {
+.ffe-number-list,
+.ffe-numbered-list {
   list-style-type: decimal;
 }
 
@@ -21,6 +31,7 @@
 /* tablet/medium typography */
 @media screen and (min-width: @breakpoint-sm) {
   .ffe-number-list,
+  .ffe-numbered-list,
   .ffe-bullet-list {
     margin-left: 20px;
   }
@@ -29,13 +40,15 @@
 /* Desktop */
 @media screen and (min-width: @breakpoint-md) {
   .ffe-number-list > li,
+  .ffe-numbered-list > li,
   .ffe-bullet-list > li {
     margin-left: 30px;
   }
 }
 
 .ffe-check-list,
-.ffe-stylized-number-list {
+.ffe-stylized-number-list,
+.ffe-stylized-numbered-list {
   padding: 0;
   text-align: left;
   margin: 0 0 20px 0;
@@ -71,7 +84,8 @@
   }
 }
 
-.ffe-stylized-number-list {
+.ffe-stylized-number-list,
+.ffe-stylized-numbered-list {
   > li {
     counter-increment: list-elements;
 
