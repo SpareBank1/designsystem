@@ -1,8 +1,13 @@
 # Changelog
 
+## v0.3.2 (13.10.2016)
+
+* Added "value" requirements to 'radio-button-group'
+* Removed with trailing slashes in array
+
 ## v0.3.1 (13.10.2016)
 
- * Enforce the same "value" requirements for all components
+* Enforce the same "value" requirements for all components
 
 ## v0.3.0
 

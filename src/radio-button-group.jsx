@@ -70,7 +70,11 @@ RadioButtonGroup.propTypes = {
         }
     },
     buttons: PropTypes.arrayOf(PropTypes.shape({
-        value: PropTypes.string.isRequired,
+        value: PropTypes.oneOfType([
+            PropTypes.string,
+            PropTypes.number,
+            PropTypes.boolean
+        ]).isRequired,
         label: PropTypes.string.isRequired,
         name: PropTypes.string,
         inline: PropTypes.bool,
