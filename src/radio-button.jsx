@@ -29,7 +29,7 @@ RadioButton.propTypes = {
     value: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.number,
-        PropTypes.boolean,
+        PropTypes.boolean
     ]).isRequired,
 };
 
