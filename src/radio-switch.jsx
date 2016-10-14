@@ -44,12 +44,20 @@ RadioSwitch.propTypes = {
     disabled: PropTypes.bool,
     firstOption: PropTypes.shape({
         label: PropTypes.node.isRequired,
-        value: PropTypes.any.isRequired
+        value: PropTypes.oneOfType([
+            PropTypes.string,
+            PropTypes.number,
+            PropTypes.boolean,
+        ]).isRequired,
     }).isRequired,
     label: PropTypes.string,
     lastOption: PropTypes.shape({
         label: PropTypes.node.isRequired,
-        value: PropTypes.any.isRequired
+        value: PropTypes.oneOfType([
+            PropTypes.string,
+            PropTypes.number,
+            PropTypes.boolean,
+        ]).isRequired,
     }).isRequired,
     name: PropTypes.string,
     onChange: PropTypes.func,
