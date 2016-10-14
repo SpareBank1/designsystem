@@ -60,7 +60,11 @@ RadioBase.propTypes = {
     name: PropTypes.string,
     onChange: PropTypes.func,
     style: PropTypes.object,
-    value: PropTypes.string.isRequired,
+    value: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number,
+        PropTypes.boolean,
+    ]).isRequired,
 };
 
 export default RadioBase;
