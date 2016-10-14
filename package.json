@@ -28,7 +28,7 @@
   ],
   "devDependencies": {
     "ffe-core": "^8.0.2",
-    "ffe-form": "^1.0.1",
+    "ffe-form": "2.x",
     "ffe-visual-tests-support": "1.0.1",
     "gemini": "4.3.0",
     "less": "^2.6.1",
@@ -37,7 +37,7 @@
   },
   "peerDependencies": {
     "ffe-core": "^8.0.2",
-    "ffe-form": "^1.0.1"
+    "ffe-form": "2.x"
   },
   "publishConfig": {
     "registry": "***REMOVED***"
