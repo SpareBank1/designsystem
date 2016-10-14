@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.3.3 (13.10.2016)
+
+* Fixed PropType mistake boolean -> bool
+
 ## v0.3.2 (13.10.2016)
 
 * Added "value" requirements to 'radio-button-group'
