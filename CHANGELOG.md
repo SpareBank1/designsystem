@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.1.0
+* Responsive implementation of ffe-input-field and ffe-dropdown.
+* Introduced new responsive class ffe-textarea.
+
 ## v2.0.6
 * Changed font-size and line height of ffe-form-label.
 
