@@ -1,5 +1,14 @@
 # Changelog
 
+## Deprecation notice
+The following classes are deprecated. Support will be dropped in a future major release:
+
+* `ffe-number-list` (use `ffe-numbered-list`)
+* `ffe-stylized-number-list` (use `ffe-stylized-numbered-list`)
+
+## v.2.2.0
+* Added aliases `.ffe-numbered-list` for `.ffe-number-list` and `ffe-stylized-numbered-list` for `ffe-stylized-number-list`
+
 ## v.2.1.0
 * Added `ffe-check-list`
 * Added `ffe-stylized-number-list`
