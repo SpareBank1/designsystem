@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.3.1 (13.10.2016)
+
+ * Enforce the same "value" requirements for all components
+
 ## v0.3.0
 
 * Add `RadioSwitch` component

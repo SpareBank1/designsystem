@@ -26,7 +26,11 @@ RadioButton.propTypes = {
     label: PropTypes.string,
     name: PropTypes.string,
     onChange: PropTypes.func,
-    value: PropTypes.string.isRequired,
+    value: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number,
+        PropTypes.boolean,
+    ]).isRequired,
 };
 
 export default RadioButton;
