@@ -73,7 +73,7 @@ RadioButtonGroup.propTypes = {
         value: PropTypes.oneOfType([
             PropTypes.string,
             PropTypes.number,
-            PropTypes.boolean
+            PropTypes.bool
         ]).isRequired,
         label: PropTypes.string.isRequired,
         name: PropTypes.string,
