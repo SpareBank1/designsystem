@@ -47,7 +47,7 @@ RadioSwitch.propTypes = {
         value: PropTypes.oneOfType([
             PropTypes.string,
             PropTypes.number,
-            PropTypes.boolean
+            PropTypes.bool
         ]).isRequired,
     }).isRequired,
     label: PropTypes.string,
@@ -56,7 +56,7 @@ RadioSwitch.propTypes = {
         value: PropTypes.oneOfType([
             PropTypes.string,
             PropTypes.number,
-            PropTypes.boolean
+            PropTypes.bool
         ]).isRequired,
     }).isRequired,
     name: PropTypes.string,

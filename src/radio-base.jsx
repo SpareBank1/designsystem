@@ -63,7 +63,7 @@ RadioBase.propTypes = {
     value: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.number,
-        PropTypes.boolean
+        PropTypes.bool
     ]).isRequired,
 };
 
