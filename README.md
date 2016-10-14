@@ -7,7 +7,7 @@ $ npm install --save ffe-message-box-react
 ```
 
 The package also has peer dependencies on `ffe-core@^8.1.0`,
-`ffe-icons-react@^1.1.1` and `ffe-message-box@^3.0.0`.
+`ffe-icons-react@^2.1.0` and `ffe-message-box@^3.0.0`.
 
 ## Usage
 

@@ -1,4 +1,6 @@
 #CHANGELOG
+## Version 3.0.1
+ * Use newer version of ffe-icons-react
 
 ## Version 3.0.0
  * No longer render children inside a `<p />`. This allows for several
