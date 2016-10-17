@@ -4,3 +4,4 @@ dist/symbol
 gemini-report/
 
 npm-debug.log*
+target
