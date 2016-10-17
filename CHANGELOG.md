@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.3.4 (17.10.2016)
+
+* Updated radio-switch with new value propType requirement
+
 ## v0.3.3 (13.10.2016)
 
 * Fixed PropType mistake boolean -> bool

@@ -20,7 +20,7 @@ At it's simplest you can just use the `RadioButton` directly:
 ```javascript
 import RadioButton from 'ffe-radio-button-react';
 
-<RadioButton value={ string }
+<RadioButton value={ string, boolean, number }
              label= { string }
              name={ string }
              inline={ boolean }
