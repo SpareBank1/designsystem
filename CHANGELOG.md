@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.4.1
+
+* Added support for ffe-form version 3.x.x
+
 ## 2.4.0
 
 * Added added support for css styling of container-div, using prop containerClassName
