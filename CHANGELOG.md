@@ -1,7 +1,8 @@
 # Changelog
 
-## v2.1.0
-* Responsive implementation of ffe-input-field and ffe-dropdown.
+## v3.0.0
+* **Potentially breaking change:** Responsive implementation of ffe-input-field and ffe-dropdown.
+* ffe-input-field and ffe-dropdown has now 100% width when rendered on mobile-size screen (less than 480px)
 * Introduced new responsive class ffe-textarea.
 
 ## v2.0.6

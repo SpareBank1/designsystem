@@ -1,6 +1,6 @@
 {
   "name": "ffe-form",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "description": "Form-/skjemapakke for Felles Front End",
   "main": "less/form.less",
   "scripts": {
@@ -31,7 +31,7 @@
     }
   ],
   "devDependencies": {
-    "ffe-core": "^8.0.2",
+    "ffe-core": "^8.1.2",
     "ffe-visual-tests-support": "1.0.1",
     "gemini": "4.3.0",
     "less": "^2.6.1",
