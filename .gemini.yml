@@ -3,7 +3,7 @@ gridUrl: 'overidden by test script to point towards dockerized browser'
 screenshotsDir: './visual-tests/baseline-screenshots'
 browsers:
   firefox:
-    windowSize: 1020x1080
+    windowSize: 1020x10000
     desiredCapabilities:
       browserName: firefox
 
