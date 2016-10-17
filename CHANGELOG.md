@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.2.1
+
+* Added support for ffe-form version 3.x.x
+
 ## v2.2.0
 
 * Add support for removing checkbox from tab order via isTabbable prop
