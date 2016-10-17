@@ -40,7 +40,11 @@ const RadioSwitch = (props) => {
 };
 
 RadioSwitch.propTypes = {
-    value: PropTypes.string,
+    value: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number,
+        PropTypes.bool
+    ]),
     disabled: PropTypes.bool,
     firstOption: PropTypes.shape({
         label: PropTypes.node.isRequired,
