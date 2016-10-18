@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-ffe-base",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,7 @@
   "license": "",
   "peerDependencies": {
     "eslint": "^2.0.0 || ^3.0.0",
-    "eslint-plugin-import": "^1.10.1"
+    "eslint-plugin-import": "^1.10.1 || ^2.0.1"
   },
   "files": [
     "rules",
@@ -26,6 +26,6 @@
   },
   "devDependencies": {
     "eslint": "^3.0.0",
-    "eslint-find-rules": "^1.9.2"
+    "eslint-find-rules": "^1.11.0"
   }
 }
