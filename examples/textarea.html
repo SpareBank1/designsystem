@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>ffe-form</title>
+    <link href="examples.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="ffe-body-text">
+<div class="ffe-section-wrapper">
+    <div class="ffe-content-container">
+        <h1 class="ffe-h1">Textarea</h1>
+    </div>
+</div>
+
+<div id="ffedoc">
+    <div class="ffe-section-wrapper">
+        <div class="ffe-content-container ffe-content-container--text-left">
+
+            <p class="ffe-body-paragraph visual-test-hidden">
+                Responsiv bredde som default. Høyden settes vha property rows, eller annen css.
+            </p>
+
+            <ul class="ffe-body-paragraph visual-test-hidden">
+                <li>100% bredde ved skjermbredde under 480px.</li>
+                <li>350px bredde ved skjermbredde opp til 768px.</li>
+                <li>350px bredde ved skjermbredde opp til 1024px.</li>
+                <li>500px bredde ved skjermbredde opp til 1280px.</li>
+            </ul>
+
+            <div class="ffe-input-group">
+                <label for="textarea-id" class="ffe-form-label">
+                    Textarea default
+                </label>
+                <textarea
+                        id="textarea-id"
+                        class="ffe-textarea"
+                        maxlength="150"
+                        aria-invalid="false"
+                        rows="5"
+                >
+                    Innhold i textarea.
+                </textarea>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

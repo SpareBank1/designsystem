@@ -18,6 +18,7 @@
     font-size: 18px;
     border-radius: 4px;
     font-family: MuseoSans-300,arial,sans-serif;
+    width: 100%;
     min-width: 175px;
     transition: all 0.15s ease-in-out;
     display: block;
@@ -48,9 +49,12 @@
 
     }
 
-    &--inline {
-        display: inline-block;
+    @media screen and (min-width: @breakpoint-sm) {
+        width: auto;
     }
 
+    &--inline {
+        width: auto;
+        display: inline-block;
+    }
 }
-

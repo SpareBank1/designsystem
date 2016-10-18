@@ -1,6 +1,6 @@
-.ffe-input-field {
+.ffe-textarea {
     display: block;
-    height: 45px;
+    width: 100%;
     padding: 0 13px;
     font-family: MuseoSans-300, arial, sans-serif;
     font-size: 18px;
@@ -8,8 +8,6 @@
     border: 2px solid @ffe-grey-light;
     transition: all 0.15s ease-in-out;
     box-shadow: 0 1px 2px 0 @ffe-grey-light-bg inset;
-
-    width: 100%;
 
     &:hover {
         border-color: @ffe-blue-royal-light-wcag;
@@ -22,25 +20,11 @@
     }
 
     @media screen and (min-width: @breakpoint-sm) {
-
-        width: auto;
-
-        &--small {
-            width: 95px;
-        }
-
-        &--medium {
-            width: 130px;
-        }
-
-        &--large {
-            width: 160px;
-        }
+        width: 350px;
     }
 
-    &--inline {
-        width: auto;
-        display: inline-block;
+    @media screen and (min-width: @breakpoint-lg) {
+        width: 500px;
     }
 
 }
