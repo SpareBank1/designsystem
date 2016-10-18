@@ -7,7 +7,8 @@ main() {
     ./run_visual-tests.sh
 
     if should_publish; then
-        npm publish
+        npm run has-published -s || npm publish
+    	bob ci job build --jobname ffe-design-system_build_deploy
     fi
 }
 
