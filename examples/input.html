@@ -16,7 +16,10 @@
         <div id="ffedoc">
             <div class="ffe-section-wrapper">
                 <div class="ffe-content-container ffe-content-container--text-left">
-
+                    <p class="ffe-body-paragraph visual-test-hidden">
+                        Responsiv oppførsel som default. 100% bredde ved skjermbredde under 480px.
+                        Har mulighet til å overstyre dette ved bruk av modifier --inline. Denne vil rendre input inline-block, og arve bredde fra annen styling.
+                    </p>
                     <p class="ffe-body-paragraph visual-test-hidden">Har tre størrelsesvarianter: --small, --medium og --large</p>
 
                     <div class="ffe-input-group" aria-live="polite">
@@ -49,6 +52,18 @@
                         </label>
                         <input id="ssn-large"
                                class="ffe-input-field ffe-input-field--large"
+                               name="ssn"
+                               type="text"
+                               maxlength="11"
+                               autocomplete="off">
+                    </div>
+
+                    <div class="ffe-input-group" aria-live="polite">
+                        <label id="ssn-label-inline" class="ffe-form-label" for="ssn-inline">
+                            --inline
+                        </label>
+                        <input id="ssn-inline"
+                               class="ffe-input-field ffe-input-field--inline"
                                name="ssn"
                                type="text"
                                maxlength="11"
