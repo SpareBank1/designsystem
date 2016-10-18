@@ -1,5 +1,8 @@
 # Changelog
 
+## v.5.0.1 (18.10.2016)
+* (patch) Remove eslint-plugin-import from peerDependencies, we get that from eslint-config-ffe-base. To avoid having to maintain the version number in two places.
+
 ## v.5.0.0 (04.10.2016)
 * (patch) Add eslint@3.0.0 to peerDependencies
 * (patch) Update eslint-plugin-import to 1.10.1 to get updated peerDependencies
