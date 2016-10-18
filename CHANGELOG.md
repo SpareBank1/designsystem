@@ -1,5 +1,9 @@
 # Changelog
 
+## v.2.0.2 (18.10.2016)
+* (patch) Update peerDependency plugin-import to include v2.0.1
+* (patch) Update devDependency eslint-find-rules to include v1.11.0 which includes eslint 3.0.0 as its peerDependency
+
 ## v.2.0.1 (04.10.2016)
 * (patch) Update peerDependencies to include eslint@3.0.0
 * (patch) Update eslint-plugin-import to 1.10.1 to get updated peerDependencies
