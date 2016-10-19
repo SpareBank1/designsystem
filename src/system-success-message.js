@@ -4,9 +4,9 @@ import HakeSirkelIkon from 'ffe-icons-react/hake-sirkel-ikon';
 
 import Base from './base';
 
-export default function SystemSuccessMessage({ children }) {
+export default function SystemSuccessMessage({ style, children }) {
     return (
-        <Base modifier="success" icon={<HakeSirkelIkon />}>
+        <Base modifier="success" icon={<HakeSirkelIkon />} style={style}>
             {children}
         </Base>
     );
@@ -14,4 +14,5 @@ export default function SystemSuccessMessage({ children }) {
 
 SystemSuccessMessage.propTypes = {
     children: PropTypes.node.isRequired,
+    style: PropTypes.object,
 };

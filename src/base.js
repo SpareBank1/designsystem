@@ -23,12 +23,14 @@ export default class Base extends Component {
             children,
             icon,
             modifier,
+            style,
         } = this.props;
 
         return (
             <div
                 className={`ffe-system-message-wrapper ffe-system-message-wrapper--${modifier}`}
                 ref="self"
+                style={style}
             >
                 <div
                     className={`
@@ -62,4 +64,5 @@ Base.propTypes = {
     children: PropTypes.node.isRequired,
     icon: PropTypes.node.isRequired,
     modifier: PropTypes.oneOf(['error', 'info', 'success', 'news']),
+    style: PropTypes.object,
 };

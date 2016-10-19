@@ -4,9 +4,9 @@ import InfoSirkelIkon from 'ffe-icons-react/info-sirkel-ikon';
 
 import Base from './base';
 
-export default function SystemInfoMessage({ children }) {
+export default function SystemInfoMessage({ style, children }) {
     return (
-        <Base modifier="info" icon={<InfoSirkelIkon />}>
+        <Base modifier="info" icon={<InfoSirkelIkon />} style={style}>
             {children}
         </Base>
     );
@@ -14,4 +14,5 @@ export default function SystemInfoMessage({ children }) {
 
 SystemInfoMessage.propTypes = {
     children: PropTypes.node.isRequired,
+    style: PropTypes.object,
 };

@@ -1,19 +1,20 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import {
     SystemErrorMessage,
     SystemInfoMessage,
     SystemSuccessMessage,
 } from '../';
+import Base from '../base';
 
 describe('when rendering', () => {
     let wrapper;
 
     beforeEach(() => {
         wrapper = mount(
-            <SystemInfoMessage>
+            <Base>
                 Blå sjiraff
-            </SystemInfoMessage>
+            </Base>
         );
     });
 
@@ -30,6 +31,11 @@ describe('when rendering', () => {
             expect(component.get(0).style.getPropertyValue('height')).to.be('0px');
             done();
         }, 100);
+    });
+
+    it('should accept style prop to apply styles to outermost container', () => {
+        const $ = shallow(<Base style={{ marginTop: '40px' }} />);
+        expect($.props().style.marginTop).to.be('40px');
     });
 });
 

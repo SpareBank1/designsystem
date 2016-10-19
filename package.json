@@ -1,6 +1,6 @@
 {
   "name": "ffe-system-message-react",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "SpareBank 1 System Message komponent",
   "main": "lib/index.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "lint": "eslint src/",
     "lint:fix": "eslint --fix src/",
     "test": "cross-env NODE_ENV=test mocha -G --compilers js:babel-core/register --require src/test/setup.js --recursive src/test",
-    "test:watch": "npm test -- --watch",
+    "tdd": "npm test -- --watch",
     "validate": "npm ls",
     "postpublish": "git tag ${npm_package_version} && git push --tags"
   },
@@ -26,7 +26,7 @@
   ],
   "peerDependencies": {
     "ffe-core": "^8.1.0",
-    "ffe-icons-react": "^1.1.1",
+    "ffe-icons-react": "^2.1.0",
     "ffe-system-message": "^1.0.0"
   },
   "devDependencies": {
@@ -46,7 +46,7 @@
     "eslint-plugin-react": "^5.2.2",
     "expect.js": "^0.3.1",
     "ffe-core": "^8.1.0",
-    "ffe-icons-react": "^1.1.1",
+    "ffe-icons-react": "^2.1.0",
     "ffe-system-message": "^1.0.0",
     "hjs-webpack": "^8.3.0",
     "jsdom": "^9.4.0",

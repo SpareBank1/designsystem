@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## Version 1.1.0
+* Added styling support for outer container using style prop
+* Bumped ffe-icons-react dependency
+
 ## Version 1.0.1
 
 Update version number after build includes examples
