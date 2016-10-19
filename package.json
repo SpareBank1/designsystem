@@ -1,6 +1,6 @@
 {
   "name": "ffe-message-box-react",
-  "version": "3.0.1",
+  "version": "3.1.0",
   "main": "lib/index.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/. && npm run example",

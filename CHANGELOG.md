@@ -1,4 +1,8 @@
 #CHANGELOG
+
+## Version 3.1.0
+* Added support for styling outer container using style prop
+
 ## Version 3.0.1
  * Use newer version of ffe-icons-react
 

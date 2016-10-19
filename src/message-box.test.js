@@ -81,4 +81,11 @@ describe('<MessageBox />', () => {
         testClassnames(shallow(<SuccessMessage title={ title } />), 'success');
         testClassnames(shallow(<ErrorMessage title={ title } />), 'error');
     });
+
+    it('should accept style prop to apply styles to outermost container', () => {
+        const wrapper = shallow(<SuccessMessage style={ { marginTop: '40px' } } />);
+
+        assert.ok(wrapper.props().style);
+        assert.equal(wrapper.props().style.marginTop, '40px');
+    });
 });
