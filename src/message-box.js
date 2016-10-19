@@ -6,11 +6,12 @@ function MessageBox(props) {
         title,
         icon,
         content,
+        style,
         children,
     } = props;
 
     return (
-        <div className="ffe-message-box">
+        <div className="ffe-message-box" style={ style }>
             <span
                 className={`
                     ffe-message-box__icon
@@ -46,6 +47,7 @@ MessageBox.propTypes = {
     content: PropTypes.node,
     icon: PropTypes.node.isRequired,
     title: PropTypes.string,
+    style: PropTypes.object,
     type: PropTypes.oneOf([
         'success',
         'error',

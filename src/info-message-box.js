@@ -7,11 +7,12 @@ const iconStyles = {
     height: '40px'
 };
 
-const InfoMessage = ({ title, content, children }) => MessageBox({
+const InfoMessage = ({ title, content, style, children }) => MessageBox({
     type: 'info',
     icon: <Icon style={ iconStyles }/>,
     title,
     content,
+    style,
     children
 });
 
