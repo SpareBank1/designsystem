@@ -38,3 +38,6 @@ node_modules
 
 # Ignore IntelliJ project files
 .idea/
+
+# Swap files
+*.swp
