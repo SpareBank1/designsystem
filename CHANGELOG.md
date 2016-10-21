@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.4.0 (20.10.2016)
+
+* Add `invalid` property to `RadioButtonGroup` and `RadioSwitch` for setting `aria-invalid` property
+
 ## v0.3.4 (17.10.2016)
 
 * Updated radio-switch with new value propType requirement

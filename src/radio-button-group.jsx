@@ -19,7 +19,7 @@ const isChecked = (groupValue, radioValue, radioChecked) => groupValue ? groupVa
 const listenToChange = (process.env.NODE_ENV !== 'production') ? (groupOnChange, fieldOnChange) => fieldOnChange || (groupOnChange && nil)
                                                                : (groupOnChange, fieldOnChange) => fieldOnChange;
 
-const RadioButtonGroup = ({ label, name, inline, buttons, children, value, disabled, onChange }) => {
+const RadioButtonGroup = ({ label, name, inline, invalid, buttons, children, value, disabled, onChange }) => {
 
     let overridden;
     if (buttons) {
@@ -46,7 +46,7 @@ const RadioButtonGroup = ({ label, name, inline, buttons, children, value, disab
 
     return (
         <div className="ffe-input-group" aria-live="polite">
-            <fieldset className="ffe-fieldset" value={ value } onChange={ onChange }>
+            <fieldset className="ffe-fieldset" value={ value } onChange={ onChange } aria-invalid={String(invalid)}>
                 { label ?
                     <legend className="ffe-form-label" style={ labelStyle }>
                         { label }
@@ -86,6 +86,7 @@ RadioButtonGroup.propTypes = {
     label: PropTypes.string,
     name: PropTypes.string,
     inline: PropTypes.bool,
+    invalid: PropTypes.bool,
     value: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.number,
