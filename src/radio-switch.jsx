@@ -7,8 +7,9 @@ const RadioSwitch = (props) => {
     const {
         value,
         disabled,
-        label,
         firstOption,
+        invalid,
+        label,
         lastOption,
         name,
         onChange,
@@ -18,6 +19,7 @@ const RadioSwitch = (props) => {
         <RadioButtonGroup
             disabled={disabled}
             inline={true}
+            invalid={invalid}
             name={name}
             label={label}
             onChange={onChange}
@@ -54,6 +56,7 @@ RadioSwitch.propTypes = {
             PropTypes.bool
         ]).isRequired,
     }).isRequired,
+    invalid: PropTypes.bool,
     label: PropTypes.string,
     lastOption: PropTypes.shape({
         label: PropTypes.node.isRequired,

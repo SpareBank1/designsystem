@@ -45,7 +45,13 @@ However, the `RadioButton` becomes a bit more useful when combined with the
 ```javascript
 import { RadioButton, RadioButtonGroup } from 'ffe-radio-button-react';
 
-<RadioButtonGroup label="Do not mix" name="fruit" inline={ true } onChange={ function }>
+<RadioButtonGroup
+    label="Do not mix"
+    name="fruit"
+    inline={ true }
+    invalid={ false }
+    onChange={ function }
+>
     <RadioButton value="apple" label="Apple" checked={ true } />
     <RadioButton value="orange" label="Orange" />
 </RadioButtonGroup>
@@ -102,6 +108,7 @@ import { RadioSwitch } from 'ffe-radio-button-react';
     name="some-setting"
     label="En innstilling"
     onChange={ function }
+    invalid={ false }
     firstOption={ { label: 'På', value: true } }
     lastOption={ { label: 'Av', value: false } }
     value={ true }
