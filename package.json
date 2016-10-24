@@ -43,8 +43,7 @@
   "author": "Glenn A. Brownlee <glenn.brownlee@sparebank1.no>",
   "license": "ISC",
   "devDependencies": {
-    "ffe-visual-tests-support": "1.0.1",
-    "gemini": "4.3.0",
+    "ffe-visual-tests-support": "2.0.0",
     "less": "^2.7.1",
     "nsp": "^2.6.1",
     "opn-cli": "^3.1.0",
