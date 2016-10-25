@@ -46,14 +46,18 @@ const RadioButtonGroup = ({ label, name, inline, invalid, buttons, children, val
 
     return (
         <div className="ffe-input-group" aria-live="polite">
-            <fieldset className="ffe-fieldset" value={ value } onChange={ onChange } aria-invalid={String(invalid)}>
-                { label ?
-                    <legend className="ffe-form-label" style={ labelStyle }>
-                        { label }
+            <fieldset
+                className="ffe-fieldset"
+                value={value}
+                onChange={onChange}
+                aria-invalid={invalid ? 'true' : 'false'}
+            >
+                {label &&
+                    <legend className="ffe-form-label" style={labelStyle}>
+                        {label}
                     </legend>
-                : '' }
-
-                { overridden || children }
+                }
+                {overridden || children}
             </fieldset>
         </div>
     );

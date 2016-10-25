@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.4.1 (24.10.2016)
+
+* Fix bug where `aria-invalid` was set to `undefined` if not provided, instead of `false`.
+
 ## v0.4.0 (20.10.2016)
 
 * Add `invalid` property to `RadioButtonGroup` and `RadioSwitch` for setting `aria-invalid` property
