@@ -58,6 +58,15 @@ Det utføres visuell regresjonstestning på Jenkins med Gemini.
 
 Ved endringer som gjør at testene feiler må det aktuelle baseline-screenshotet oppdateres. Dette gjøres med scriptet `./update_visual-tests-baselines.sh`.
 
+## Hvordan lage nytt repo/paket
+FFE består av ett antal paket med `ffe-` som paketnamnprefix. Paket består i regel av styling på less-format,
+før paket som innehåller ReactJS-komponenter brukas `-react` som utskiljande paketnamnsuffix. Det finnes en korrespondans
+mellan styling-paket och tillsvarande react-paket, e.g. innehåller `ffe-buttons-react` ReactJS-komponenter som
+brukar styling i `ffe-buttons`.
+
+Vid upprættelse av nytt paket och git-repo bør saken tas upp på `#Alliansens Frontend-forum` och åtminstone en
+Stash projekt-administratør från vardera Forsikring och Banksamarbeidet involveras i beslutet.
+
 ## Utviklermiljø
 
 Om du vil finnes det et ferdig miljø med alle avhengiheter satt opp som enkelt kan startes med Vagrant:
