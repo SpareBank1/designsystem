@@ -3,49 +3,71 @@
     min-width: 100%;
     text-align: left;
     border-collapse: collapse;
+}
 
-    caption {
-        &:extend(.ffe-h4);
+.ffe-responsive-table caption,
+.ffe-responsive-table__caption {
+    &:extend(.ffe-h4);
+}
+
+.ffe-responsive-table thead,
+.ffe-responsive-table__head {
+    display: none;
+
+    @media (min-width: @breakpoint-md) {
+        display: table-header-group;
     }
+}
 
-    thead {
-        display: none;
+.ffe-responsive-table tfoot,
+.ffe-responsive-table__footer {
+    border-top: 2px solid @ffe-blue-royal;
+}
 
-        @media (min-width: @breakpoint-md) {
-            display: table-header-group;
-        }
+.ffe-responsive-table tr,
+.ffe-responsive-table__row {
+    border-bottom: 1px solid @ffe-grey-light;
+    display: block;
+    padding: 10px 0;
+
+    @media (min-width: @breakpoint-md) {
+        display: table-row;
     }
+}
 
-    tfoot {
-        border-top: 2px solid @ffe-blue-royal;
+.ffe-responsive-table th,
+.ffe-responsive-table__heading {
+    &:extend(.ffe-strong-text);
+    text-align: left;
+}
+
+.ffe-responsive-table td,
+.ffe-responsive-table__cell {
+    display: block;
+}
+
+.ffe-responsive-table th,
+.ffe-responsive-table td,
+.ffe-responsive-table__heading,
+.ffe-responsive-table__cell {
+    @media (min-width: @breakpoint-md) {
+        display: table-cell;
+        padding: 10px;
     }
+}
 
-    tr {
-        border-bottom: 1px solid @ffe-grey-light;
+.ffe-responsive-table__content {
+    display: inline-block;
+    vertical-align: top;
+    max-width: ~"calc(100% - 105px)";
+
+    @media (min-width: @breakpoint-md) {
         display: block;
-        padding: 10px 0;
-
-        @media (min-width: @breakpoint-md) {
-            display: table-row;
-        }
+        max-width: none;
     }
+}
 
-    th {
-        &:extend(.ffe-strong-text);
-        text-align: left;
-    }
-
-    td {
-        display: block;
-    }
-
-    th, td {
-        @media (min-width: @breakpoint-md) {
-            display: table-cell;
-            padding: 10px;
-        }
-    }
-
+.ffe-responsive-table {
     [data-th]:before {
         content: attr(data-th);
         width: 100px;
@@ -59,16 +81,5 @@
 
     &--small-header [data-th]:before {
         width: 65px;
-    }
-}
-
-.ffe-responsive-table__content {
-    display: inline-block;
-    vertical-align: top;
-    max-width: ~"calc(100% - 105px)";
-
-    @media (min-width: @breakpoint-md) {
-        display: block;
-        max-width: none;
     }
 }

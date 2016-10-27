@@ -8,6 +8,13 @@ a `.ffe-responsive-table` table's children that has been overridden by this pack
 Hopefully such code does not exist in large quantities, but please check your implementations
 after upgrading.
 
+This release also introduces class names for all styled elements within a
+`.ffe-responsive-table` table. This way, we can do away with styling DOM-elements completely
+in a future major version. Please go through your implementations and add the appropriate
+class names (use the [less-file](less/responsive-table.less) for documentation).
+
+There are no visual or functional differences between 1.0.1 and 2.0.0.
+
 ## v.1.0.1
 
 This release has added `border-collapse: collapse` to `.ffe-responsive-table`.

@@ -13,6 +13,10 @@ ffe-tables brukes på samme måte som ffe-core. Importer `ffe-tables/less/tables
 Ta en titt i [examples-filen](examples/example.html) for markup og [less-filen](less/responsive-table.less) for
 tilgjengelige klasser og modifiers.
 
+## Bruk klassenavn på `.ffe-responsive-table` sine children!
+Fra og med versjon 2.0.0 oppfordres det til å bruke klassenavn på alle elementer, da styling direkte på DOM-struktur
+planlegges deprecated i fremtiden. Med andre ord - legg på klasser på alle tabell-relaterte tags.
+
 ## Screenshot
 ![icons](visual-tests/baseline-screenshots/example/plain/firefox-large.png)
 
