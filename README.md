@@ -3,18 +3,25 @@
 Pakken inneholder styling til ffe-tables
 
 ## Bruke
-ffe-tables har en peerDependency på ffe-core
+ffe-tables har en peerDependency på `ffe-core`
 
 ```
 $ npm install --save-dev ffe-core ffe-tables
 ```
 ffe-tables brukes på samme måte som ffe-core. Importer `ffe-tables/less/tables.less` for å ta i bruk alle listene.
 
+Ta en titt i [examples-filen](examples/example.html) for markup og [less-filen](less/responsive-table.less) for
+tilgjengelige klasser og modifiers.
+
 ## Screenshot
 ![icons](visual-tests/baseline-screenshots/example/plain/firefox-large.png)
 
 ## Utvikling
 
+```bash
+$ npm install
+$ npm start # starter en watch-task - åpne examples/example.html i nettleseren din for å se endringer
+```
 
 For å teste endringer i en reell app lokalt kan man kjøre i dette prosjektes mappe:
 
