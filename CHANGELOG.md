@@ -1,5 +1,8 @@
 #Changelog
 
+# v2.1.5
+* Bugfix: Bundle css from react-scrollbar instead of depending on it. Depending on relative dependencies does not work when using npm@3 og yarn.
+
 # v2.1.4
 * Bugfix: Give input field focus on reset button click
 
@@ -10,7 +13,7 @@
 * Bugfix: make noMatches-field persist when clicked
 * Bugfix: changed noMatches-text to be wrapped in `span` instead of `anchor` to avoid influences of external styles
 
-## v2.1.1 
+## v2.1.1
 * Bugfix: Input field no longer steals focus onBlur
 
 ## v2.1.0
