@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.4.2
+
+* Added ffe-form-label--block to label
+
 ## 2.4.1
 
 * Added support for ffe-form version 3.x.x
