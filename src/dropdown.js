@@ -25,7 +25,7 @@ function Dropdown({
 
     return  <div className={ `ffe-input-group ${containerClassName}` } aria-live="polite">
                 { label &&
-                        <label className="ffe-form-label" htmlFor={ domId }>
+                        <label className="ffe-form-label ffe-form-label--block" htmlFor={ domId }>
                             { label }
                         </label>
                 }
