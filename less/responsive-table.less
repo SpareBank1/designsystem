@@ -4,11 +4,11 @@
     text-align: left;
     border-collapse: collapse;
 
-    > caption {
+    caption {
         &:extend(.ffe-h4);
     }
 
-    > thead {
+    thead {
         display: none;
 
         @media (min-width: @breakpoint-md) {
@@ -16,13 +16,11 @@
         }
     }
 
-    > tfoot {
+    tfoot {
         border-top: 2px solid @ffe-blue-royal;
     }
 
-    > thead > tr,
-    > tbody > tr,
-    > tfoot > tr {
+    tr {
         border-bottom: 1px solid @ffe-grey-light;
         display: block;
         padding: 10px 0;
@@ -32,32 +30,24 @@
         }
     }
 
-    > thead > tr > th,
-    > tbody > tr > th,
-    > tfoot > tr > th {
+    th {
         &:extend(.ffe-strong-text);
         text-align: left;
     }
 
-    > tbody > tr > td,
-    > tfoot > tr > td {
+    td {
         display: block;
     }
 
-    &__content {
-        display: inline-block;
-        vertical-align: top;
-        max-width: ~"calc(100% - 105px)";
-
+    th, td {
         @media (min-width: @breakpoint-md) {
-            display: block;
-            max-width: none;
+            display: table-cell;
+            padding: 10px;
         }
     }
 
-    > tbody > tr > [data-th]:before,
-    > tfoot > tr > td:before {
-        content: attr(data-th); // who knew you could do this? The internet, that's who.
+    [data-th]:before {
+        content: attr(data-th);
         width: 100px;
         display: inline-block;
         &:extend(.ffe-strong-text);
@@ -67,21 +57,18 @@
         }
     }
 
-    &--small-header > tbody > tr > [data-th]:before,
-    &--small-header > tfoot > tr > td:before {
+    &--small-header [data-th]:before {
         width: 65px;
     }
+}
 
-    > thead > tr > th,
-    > thead > tr > td,
-    > tbody > tr > th,
-    > tbody > tr > td,
-    > tfoot > tr > th,
-    > tfoot > tr > td {
+.ffe-responsive-table__content {
+    display: inline-block;
+    vertical-align: top;
+    max-width: ~"calc(100% - 105px)";
 
-        @media (min-width: @breakpoint-md) {
-            display: table-cell;
-            padding: 10px;
-        }
+    @media (min-width: @breakpoint-md) {
+        display: block;
+        max-width: none;
     }
 }
