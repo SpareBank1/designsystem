@@ -3,61 +3,73 @@
     min-width: 100%;
     text-align: left;
     border-collapse: collapse;
+}
 
-    > caption {
-        &:extend(.ffe-h4);
+.ffe-responsive-table caption,
+.ffe-responsive-table__caption {
+    &:extend(.ffe-h4);
+}
+
+.ffe-responsive-table thead,
+.ffe-responsive-table__head {
+    display: none;
+
+    @media (min-width: @breakpoint-md) {
+        display: table-header-group;
     }
+}
 
-    > thead {
-        display: none;
+.ffe-responsive-table tfoot,
+.ffe-responsive-table__footer {
+    border-top: 2px solid @ffe-blue-royal;
+}
 
-        @media (min-width: @breakpoint-md) {
-            display: table-header-group;
-        }
+.ffe-responsive-table tr,
+.ffe-responsive-table__row {
+    border-bottom: 1px solid @ffe-grey-light;
+    display: block;
+    padding: 10px 0;
+
+    @media (min-width: @breakpoint-md) {
+        display: table-row;
     }
+}
 
-    > tfoot {
-        border-top: 2px solid @ffe-blue-royal;
+.ffe-responsive-table th,
+.ffe-responsive-table__heading {
+    &:extend(.ffe-strong-text);
+    text-align: left;
+}
+
+.ffe-responsive-table td,
+.ffe-responsive-table__cell {
+    display: block;
+}
+
+.ffe-responsive-table th,
+.ffe-responsive-table td,
+.ffe-responsive-table__heading,
+.ffe-responsive-table__cell {
+    @media (min-width: @breakpoint-md) {
+        display: table-cell;
+        padding: 10px;
     }
+}
 
-    > thead > tr,
-    > tbody > tr,
-    > tfoot > tr {
-        border-bottom: 1px solid @ffe-grey-light;
+.ffe-responsive-table__content {
+    display: inline-block;
+    vertical-align: top;
+    max-width: ~"calc(100% - 105px)";
+
+    @media (min-width: @breakpoint-md) {
         display: block;
-        padding: 10px 0;
-
-        @media (min-width: @breakpoint-md) {
-            display: table-row;
-        }
+        max-width: none;
     }
+}
 
-    > thead > tr > th,
-    > tbody > tr > th,
-    > tfoot > tr > th {
-        &:extend(.ffe-strong-text);
-        text-align: left;
-    }
-
-    > tbody > tr > td,
-    > tfoot > tr > td {
-        display: block;
-    }
-
-    &__content {
-        display: inline-block;
-        vertical-align: top;
-        max-width: ~"calc(100% - 105px)";
-
-        @media (min-width: @breakpoint-md) {
-            display: block;
-            max-width: none;
-        }
-    }
-
-    > tbody > tr > [data-th]:before,
-    > tfoot > tr > td:before {
-        content: attr(data-th); // who knew you could do this? The internet, that's who.
+.ffe-responsive-table {
+    [data-th]:before {
+        content: attr(data-th);
         width: 100px;
         display: inline-block;
         &:extend(.ffe-strong-text);
@@ -67,21 +79,7 @@
         }
     }
 
-    &--small-header > tbody > tr > [data-th]:before,
-    &--small-header > tfoot > tr > td:before {
+    &--small-header [data-th]:before {
         width: 65px;
-    }
-
-    > thead > tr > th,
-    > thead > tr > td,
-    > tbody > tr > th,
-    > tbody > tr > td,
-    > tfoot > tr > th,
-    > tfoot > tr > td {
-
-        @media (min-width: @breakpoint-md) {
-            display: table-cell;
-            padding: 10px;
-        }
     }
 }
