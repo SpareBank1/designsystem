@@ -50,6 +50,8 @@
         vertical-align: middle;
         margin: 0;
         padding: 0;
+        width: 75%;
+        font-size: 14px;
     }
 
     &__close {
@@ -69,7 +71,20 @@
     }
 }
 
-@media screen and (min-width: @breakpoint-md) {
+@media screen and (min-width: 460px) {
+    .ffe-system-message__content {
+        width: 84%;
+    }
+}
 
+@media screen and (min-width: 600px) {
+    .ffe-system-message__content {
+        font-size: 16px;
+    }
+}
 
+@media screen and (min-width: 720px) {
+    .ffe-system-message__content {
+        width: 90%;
+    }
 }

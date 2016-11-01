@@ -4,8 +4,10 @@
   "description": "SpareBank1 System Message",
   "main": "index.js",
   "scripts": {
-    "examples": "lessc examples/examples.less examples/examples.css && mkdirp examples/fonts && cp -r node_modules/ffe-core/fonts/* examples/fonts && echo Now open /examples/index.html to see styleguide",
-    "postpublish": "git tag ${npm_package_version} && git push --tags"
+    "examples": "lessc examples/examples.less examples/examples.css && mkdirp examples/fonts && cp -r node_modules/ffe-core/fonts/* examples/fonts && echo Now open /examples/ffe-system-message.html to see styleguide",
+    "postpublish": "git tag ${npm_package_version} && git push --tags",
+    "test": "./run_visual-tests.sh",
+    "update-baseline": "./update_visual-tests-baselines.sh"
   },
   "repository": {
     "type": "git",
@@ -16,11 +18,13 @@
   },
   "author": "SpareBank 1",
   "peerDependencies": {
-    "ffe-core": "^8.1.0"
+    "ffe-core": "8.x"
   },
   "devDependencies": {
-    "ffe-core": "^8.1.0",
-    "less": "^2.7.1",
-    "mkdirp": "^0.5.1"
+    "ffe-core": "8.1.0",
+    "ffe-visual-tests-support": "2.0.0",
+    "gemini": "4.12.2",
+    "less": "2.7.1",
+    "mkdirp": "0.5.1"
   }
 }
