@@ -7,3 +7,5 @@ examples/examples.css
 #Other
 node_modules
 examples/fonts
+*.swp
+.idea/
