@@ -1,5 +1,8 @@
 # Changelog
 
+## 6.1.1
+* Update design on faks-printer-solid-ikon [FFE-90](***REMOVED***)
+
 ## 6.1.0
 * Added pose-i-haand-ikon.svg
 
