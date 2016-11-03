@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "examples": "lessc examples/examples.less examples/examples.css && mkdirp examples/fonts && cp -r node_modules/ffe-core/fonts/* examples/fonts && echo Now open /examples/index.html to see styleguide",
-    "postpublish": "git tag ${npm_package_version} && git push --tags"
+    "postpublish": "git tag ${npm_package_version} && git push --tags",
+    "has-published": "npm show . versions -s | grep -q ${npm_package_version}"
   },
   "repository": {
     "type": "git",
