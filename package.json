@@ -1,11 +1,12 @@
 {
   "name": "ffe-system-message",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "SpareBank1 System Message",
   "main": "index.js",
   "scripts": {
     "examples": "lessc examples/examples.less examples/examples.css && mkdirp examples/fonts && cp -r node_modules/ffe-core/fonts/* examples/fonts && echo Now open /examples/ffe-system-message.html to see styleguide",
     "postpublish": "git tag ${npm_package_version} && git push --tags",
+    "has-published": "npm show . versions -s | grep -q ${npm_package_version}",
     "test": "./run_visual-tests.sh",
     "update-baseline": "./update_visual-tests-baselines.sh"
   },

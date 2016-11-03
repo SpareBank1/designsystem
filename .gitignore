@@ -7,5 +7,6 @@ examples/examples.css
 #Other
 node_modules
 examples/fonts
-.idea
+*.swp
+.idea/
 gemini-report
