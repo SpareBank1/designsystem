@@ -9,3 +9,4 @@ node_modules
 examples/fonts
 *.swp
 .idea/
+gemini-report
