@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 main() {
-    npm install
+    yarn install --ignore-engines
     npm run compile
 
     rm -rf target/
