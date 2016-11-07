@@ -1,0 +1,90 @@
+.ffe-system-message-wrapper {
+
+    transition: height 0.3s;
+    overflow: hidden;
+
+    &--error {
+        background-color: @ffe-orange-wcag-20;
+        fill: @ffe-black;
+    }
+
+    &--info {
+        background-color: @ffe-blue-royal-light-20;
+        fill: @ffe-black;
+    }
+
+    &--news {
+        color: @ffe-white;
+        background-color: @ffe-black;
+        fill: @ffe-white;
+    }
+
+    &--success {
+        background-color: @ffe-green-wcag-20;
+        fill: @ffe-black;
+    }
+}
+
+.ffe-system-message {
+
+    position: relative;
+    margin: 0 auto;
+    padding: 10px 20px;
+    text-align: left;
+
+    &__icon {
+        display: inline-block;
+        vertical-align: middle;
+        height: 1.7em;
+        width: 1.7em;
+        margin-right: 15px;
+
+        > svg {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    &__content {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0;
+        padding: 0;
+        width: 75%;
+        font-size: 14px;
+    }
+
+    &__close {
+        display: inline-block;
+        vertical-align: middle;
+        position: absolute;
+        right: 20px;
+        top: 13px;
+        cursor: pointer;
+        height: 14px;
+        width: 14px;
+
+        > svg {
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (min-width: 460px) {
+    .ffe-system-message__content {
+        width: 84%;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .ffe-system-message__content {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 720px) {
+    .ffe-system-message__content {
+        width: 90%;
+    }
+}
