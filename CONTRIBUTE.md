@@ -73,17 +73,18 @@ Om du vil finnes det et ferdig miljø med alle avhengiheter satt opp som enkelt 
 
 [vagrant-dev](***REMOVED***)
 
-De visuelle testene (Gemini) bruker native-moduler, så miljøet du bruker må ha g++-compiler tilgjengelig før du kjører testene:
+De visuelle testene (Gemini) bruker native-moduler, så miljøet du bruker må ha g++-compiler tilgjengelig før du kjører testene. Såväl SpareBank1s
+RHEL-baserte utviklerplatform (TUX) som den legacy Ubuntu-baserade ska få detta provisionerat automatiskt.
 
-SpareBank1s RHEL-baserte utviklerplatform:
+Om detta ændå inte verkar vara i ordning:
 
-`$ sudo yum install gcc-c++`
+`$ sudo yum install -y gcc-c++`
 
 Legacy Ubuntu-basert virtuell utviklerplatform:
 
-`$ sudo apt-get install -y g++`
+`$ sudo apt-get install -y build-essential`
 
-Du vil så klart også trenge Node og NPM installert.
+Du vil så klart også trenge Node, yarn og NPM installert.
 
 ## Tidligere releaseprosedyrer
 
