@@ -12,12 +12,12 @@ const PersonSelectorExample = () => {
     console.log('person selector gained focus');
   };
 
-  const renderPersonRow = ({item}) => {
+  const renderPersonRow = (person) => {
     return (
       <div className="person-suggestion">
-        <strong>{item.name}</strong>
+        <strong>{person.name}</strong>
         <p>
-          Alder: {item.age}
+          Alder: {person.age}
         </p>
       </div>
     );

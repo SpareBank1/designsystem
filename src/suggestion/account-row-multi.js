@@ -13,8 +13,7 @@ const AccountRowMulti = ({account, locale, selected}) => {
         <Checkbox
           checked={ selected }
           name="my-checkbox-label"
-          label=""
-          tabIndex="-1"
+          isTabbable={ false }
         />
       </div>
       <div className="nfe-account-suggestions__content-wrapper">

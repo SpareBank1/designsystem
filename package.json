@@ -73,8 +73,9 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
+    "ffe-checkbox-react": "^2.2.1",
     "ffe-icons-react": "0.4.2",
-    "nfe-amount-formatter": "^1.1.0",
+    "nfe-amount-formatter": "^2.0.1",
     "nfe-if": "^2.0.1",
     "react-scrollbar": "0.4.1"
   }

@@ -3,8 +3,9 @@ import { expect, assert } from 'chai';
 import sinon from 'sinon';
 import React from 'react';
 import BaseSelector from './base-selector';
-import DropDown from '../dropdown/dropdown';
+import Dropdown from '../dropdown/dropdown';
 import jsdom from 'jsdom';
+import KeyCode from '../util/keyCode';
 
 global.document = jsdom.jsdom('<!DOCTYPE html><html><body></body></html>');
 global.window = document.defaultView;
@@ -55,31 +56,28 @@ describe('<BaseSelector />', () => {
     it('should hide dropdown on input tab and shift+tab', () => {
       const wrapper = shallow(getSelector());
       const input = wrapper.find('input');
-      const keyCodeTab = 9;
-      const tabEvent = {which: keyCodeTab, shiftKey: false};
+      const tabEvent = {which: KeyCode.TAB, shiftKey: false};
       input.simulate('keydown', tabEvent);
-      expect(wrapper.find(DropDown)).to.have.length(0);
+      expect(wrapper.find(Dropdown)).to.have.length(0);
       input.simulate('focus');
-      const tabEventWithShift = {which: keyCodeTab, shiftKey: true};
+      const tabEventWithShift = {which: KeyCode.TAB, shiftKey: true};
       input.simulate('keydown', tabEventWithShift);
-      expect(wrapper.find(DropDown)).to.have.length(0);
+      expect(wrapper.find(Dropdown)).to.have.length(0);
     });
 
     it('Key Alt+Arrow Up/Down should close/open dropdown', () => {
       const wrapper = shallow(getSelector());
       const input = wrapper.find('input');
       input.simulate('focus');
-      expect(wrapper.find(DropDown)).to.have.length(1);
-      const arrowUpKeyCode = 38;
-      const arrowDownKeyCode = 40;
+      expect(wrapper.find(Dropdown)).to.have.length(1);
       const event = {
         altKey: true,
-        which: arrowUpKeyCode
+        which: KeyCode.UP
       };
       input.simulate('keydown', event);
-      expect(wrapper.find(DropDown)).to.have.length(0);
-      input.simulate('keydown', {...event, which: arrowDownKeyCode});
-      expect(wrapper.find(DropDown)).to.have.length(1);
+      expect(wrapper.find(Dropdown)).to.have.length(0);
+      input.simulate('keydown', {...event, which: KeyCode.DOWN});
+      expect(wrapper.find(Dropdown)).to.have.length(1);
     });
 
     it('should not select item until user navigates in list', () => {
@@ -101,10 +99,8 @@ describe('<BaseSelector />', () => {
       const input = wrapper.find('input');
       input.simulate('change', {target: {value: 'Ola'}});
       assert.equal(onItemSelectedSpy.callCount, 0);
-      const arrowDownKeyCode = 40;
-      const tabKeyCode = 9;
-      input.simulate('keydown', {which: arrowDownKeyCode});
-      wrapper.find('.nfe-account-suggestions__item--highlighted').simulate('keydown', {which: tabKeyCode});
+      input.simulate('keydown', {which: KeyCode.DOWN});
+      wrapper.find('.nfe-account-suggestions__item--highlighted').simulate('keydown', {which: KeyCode.TAB});
       assert.equal(onItemSelectedSpy.callCount, 1);
     });
 
@@ -127,10 +123,8 @@ describe('<BaseSelector />', () => {
       const input = wrapper.find('input');
       input.simulate('change', {target: {value: 'Ola'}});
       assert.equal(onItemSelectedSpy.callCount, 0);
-      const arrowDownKeyCode = 40;
-      const enterKeyCode = 13;
-      input.simulate('keydown', {which: arrowDownKeyCode});
-      wrapper.find('.nfe-account-suggestions__item--highlighted').simulate('keydown', {which: enterKeyCode});
+      input.simulate('keydown', {which: KeyCode.DOWN});
+      wrapper.find('.nfe-account-suggestions__item--highlighted').simulate('keydown', {which: KeyCode.ENTER});
       assert.equal(onItemSelectedSpy.callCount, 1);
       assert.equal(input.node === document.activeElement, true);
     });
@@ -153,12 +147,10 @@ describe('<BaseSelector />', () => {
       />
     );
     const input = wrapper.find('input');
-    const arrowDownKey = 40;
     input.simulate('focus');
-    input.simulate('keydown', {which: arrowDownKey});
+    input.simulate('keydown', {which: KeyCode.DOWN});
     assert.equal(onItemSelectedSpy.callCount, 0);
-    const escKeyCode = 27;
-    wrapper.find('.nfe-account-suggestions__item--highlighted').simulate('keydown', {which: escKeyCode});
+    wrapper.find('.nfe-account-suggestions__item--highlighted').simulate('keydown', {which: KeyCode.ESC});
     assert.equal(onItemSelectedSpy.callCount, 1);
     assert.equal(input.node === document.activeElement, true);
   });
@@ -172,7 +164,7 @@ describe('<BaseSelector />', () => {
     const wrapper = shallow(getSelector());
     const input = wrapper.find('.nfe-account-selector__search');
     input.simulate('focus');
-    expect(wrapper.find(DropDown)).to.have.length(1);
+    expect(wrapper.find(Dropdown)).to.have.length(1);
   });
 
   it('should show reset button when input field has a value', () => {
