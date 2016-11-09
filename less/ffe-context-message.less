@@ -2,9 +2,6 @@
 
   transition: height 0.3s;
   overflow: hidden;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
 
   &--info {
     background-color: @ffe-blue-royal-light-20;
@@ -19,11 +16,11 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  padding: 2.3em 0 1.3em 2.2em;
+  text-align: left;
 
   &__icon-wrapper {
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin-left: 2.5em;
+    padding-right: 2.2em;
   }
 
   &__icon {
@@ -41,24 +38,14 @@
     }
   }
 
-  &__content {
-    text-align: left;
-    justify-content: flex-end;
-    align-items: flex-end;
-    margin-left: 2.5em;
+  &__close {
+    fill: @ffe-grey-dark;
+    margin: -1.2em 1.1em 0 0;
+    cursor: pointer;
+    &-svg {
+      height: 0.8em;
+      width: 0.8em;
+    }
   }
 }
 
-.ffe-context-message__close {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  fill: @ffe-grey-dark;
-  margin: 1.1em 1.1em 0 0;
-  cursor: pointer;
-  &-svg {
-    height: 0.8em;
-    width: 0.8em;
-  }
-}
