@@ -1,7 +1,7 @@
 {
   "name": "ffe-context-message",
   "version": "0.0.1",
-  "description": "",
+  "description": "Messagebox showing non-critical tip or information about a page or product",
   "main": "index.js",
   "scripts": {
     "examples": "lessc examples/examples.less examples/examples.css && mkdirp examples/fonts && cp -r node_modules/ffe-core/fonts/* examples/fonts && echo Now open /examples/ffe-context-message.html to see styleguide",

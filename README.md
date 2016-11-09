@@ -1,5 +1,4 @@
 # ffe-context-message
 
-## Intro
+Messagebox showing non-critical tip or information about a page or product.
 
-System messages for SpareBank 1.
