@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.0.2
+* Updated peerDependency for ffe-form to 2.x.x or 3.x.x
+* Updated dependency for ffe-datepicker to 2.1.1
+
 ## v2.0.1
 * Remove abbr from th in datepicker as it is not a prop. Causing console error
 
