@@ -1,9 +1,9 @@
-# ffe-system-message-react
+# ffe-context-message-react
 
 ## Install
 
 ```
-$ npm install --save ffe-system-message-react
+$ npm install --save ffe-context-message-react
 ```
 
 ## Usage
@@ -13,7 +13,7 @@ Like all React packages in FFE, this package expects the package `ffe-system-mes
 Import one or more of the three predefined message types, passing a header as a prop and content as component children.
 
 ```javascript
-import { SystemInfoMessage, SystemErrorMessage } from 'ffe-system-message-react';
+import { SystemInfoMessage, SystemErrorMessage } from 'ffe-context-message-react';
 
 <SystemInfoMessage header="En nyttig beskjed">
     Alt du sender inn her rendres i et p-element

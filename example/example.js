@@ -1,11 +1,9 @@
 import React from 'react';
-import { renderToStaticMarkup } from 'react-dom/server';
+import {renderToStaticMarkup} from 'react-dom/server';
 
 import {
-    SystemErrorMessage,
-    SystemInfoMessage,
-    SystemNewsMessage,
-    SystemSuccessMessage,
+    ContextInfoMessage,
+    ContextTipMessage,
 } from '../lib';
 
 const example = (
@@ -14,40 +12,28 @@ const example = (
             <h2 className="component-intro__header">System Message</h2>
             <div className="lozenge lozenge-success">I PRODUKSJON</div>
             <p className="ffe-micro-text ffe-external-docs-text">
-                HENTET FRA <a href="https://stash.intern.sparebank1.no/projects/FFE/repos/ffe-system-message-react">STASH</a>
+                HENTET FRA <a href="https://stash.intern.sparebank1.no/projects/FFE/repos/ffe-context-message-react">STASH</a>
             </p>
-            <p>Systemmeldinger</p>
+            <p>Meldinger</p>
         </div>
 
         <h3 className="ffe-h4">Eksempler</h3>
 
         <div className="example-container">
-            <h4 className="example-container__header">Feil</h4>
-            <SystemErrorMessage>
-                Feilmelding :(
-            </SystemErrorMessage>
-        </div>
-
-        <div className="example-container">
             <h4 className="example-container__header">Info</h4>
-            <SystemInfoMessage>
+            <ContextInfoMessage>
                 Informasjon
-            </SystemInfoMessage>
+            </ContextInfoMessage>
         </div>
 
         <div className="example-container">
             <h4 className="example-container__header">News</h4>
-            <SystemNewsMessage>
+            <ContextTipMessage>
                 Nyheter
-            </SystemNewsMessage>
+            </ContextTipMessage>
         </div>
 
-        <div className="example-container">
-            <h4 className="example-container__header">Success</h4>
-            <SystemSuccessMessage>
-                Gladmelding :)
-            </SystemSuccessMessage>
-        </div>
+
 
         <div className="expanding-field">
             <button className="expanding-field__toggle">Vis kode</button>
@@ -57,10 +43,10 @@ const example = (
                     <code className="html hljs xml">
                         {
                             renderToStaticMarkup(
-                                <SystemInfoMessage>
+                                <ContextInfoMessage>
                                     Send innholdet her. Alt pakkes i et &lt;p&gt; element så unngå bruk av
                                     feks &lt;div&gt;, &lt;p&gt; og &lt;ul&gt;.
-                                </SystemInfoMessage>
+                                </ContextInfoMessage>
                             ).replace(/</, '\n<')
                         }
                     </code>
