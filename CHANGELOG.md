@@ -1,5 +1,8 @@
 # Changelog
 
+## v.2.1.1
+* Bumped dependency on ffe-form
+
 ## v.2.1.0
 * Add visual tests
 
