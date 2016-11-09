@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom';
 import ScrollArea from 'react-scrollbar/dist/no-css';
 import SuggestionList from '../suggestion/suggestion-list';
 import AccountSuggestionsEmpty from '../suggestion/account-suggestions-empty';
-import { If, Else, Then } from 'nfe-if';
-import DropdownStatusbar from './dropdownStatusbar';
+import { If } from 'nfe-if';
+import DropdownStatusBar from './dropdownStatusBar';
+import i18n from '../i18n/i18n';
 
-class DropDown extends React.Component {
+class Dropdown extends React.Component {
 
   constructor(props) {
     super(props);
@@ -14,26 +15,50 @@ class DropDown extends React.Component {
   }
 
   componentDidUpdate() {
-    this.scrollHighlightedItemIntoView();
+    if (this._suggestionList !== null && this.props.highlightedItem > -1) {
+      this.resetNativeScrollPosition();
+      this.scrollHighlightedItemIntoView();
+    }
+  }
+
+  verticalScrollBarStyle() {
+    return {
+      background: '#676767',
+      borderRadius: '4px',
+      width: '5px'
+    };
+  }
+
+  verticalContainerStyle() {
+    return {
+      width: '6px',
+      background: 'transparent',
+      opacity: '1'
+    };
+  }
+
+  scrollAreaStyle() {
+    return {maxHeight: '240px'};
+  }
+
+  resetNativeScrollPosition() {
+    if (this.state.nativeScrollContainer) {
+      const nativeScrollContainer = this.state.nativeScrollContainer;
+      nativeScrollContainer.scrollTop = 0;
+    }
   }
 
   scrollHighlightedItemIntoView() {
-    if (this._suggestionList !== null && this.props.highlightedItem > -1) {
-      const selectedItem = this._suggestionList.getSelectedDOM();
-      const itemRect = selectedItem.getBoundingClientRect();
+    const selectedItem = this._suggestionList.getSelectedDOM();
+    const itemRect = selectedItem.getBoundingClientRect();
 
-      const frame = ReactDOM.findDOMNode(this._scrollarea);
-      const frameRect = frame.getBoundingClientRect();
+    const scrollContainer = ReactDOM.findDOMNode(this._scrollarea);
+    const scrollContainerRect = scrollContainer.getBoundingClientRect();
 
-      if (this.state.naitiveScrollContainer) {
-        const naitiveScrollContainer = this.state.naitiveScrollContainer;
-        naitiveScrollContainer.scrollTop = 0;
-      }
-      if (itemRect.bottom > frameRect.bottom) {
-        this.scrollTo(selectedItem.offsetTop + selectedItem.offsetHeight - frame.offsetHeight);
-      } else if (itemRect.top < frameRect.top) {
-        this.scrollTo(selectedItem.offsetTop);
-      }
+    if (itemRect.bottom > scrollContainerRect.bottom) {
+      this.scrollTo(selectedItem.offsetTop + selectedItem.offsetHeight - scrollContainer.offsetHeight);
+    } else if (itemRect.top < scrollContainerRect.top) {
+      this.scrollTo(selectedItem.offsetTop);
     }
   }
 
@@ -42,29 +67,13 @@ class DropDown extends React.Component {
   }
 
   onScroll(evt) {
-    // Need reference to the naitive scroll container (div) to reset the naitive scroll position
+    // Need reference to the native scroll container (div) to reset the native scroll position
     this.setState({
-      naitiveScrollContainer: evt.target
+      nativeScrollContainer: evt.target
     });
   }
 
   render() {
-    const verticalScrollBarStyle = () => ({
-      background: '#676767',
-      borderRadius: '4px',
-      width: '5px',
-    });
-
-    const verticalContainerStyle = () => ({
-      width: '6px',
-      background: 'transparent',
-      opacity: '1',
-    });
-
-    const scrollAreaStyle = () => ({maxHeight: '240px'});
-
-    const assignTo = name => component => { this[name] = component; };
-
     return (
       <div className="nfe-account-selector__dropdown" onScroll={(evt) => this.onScroll(evt)}>
         <ScrollArea
@@ -72,33 +81,29 @@ class DropDown extends React.Component {
           className="nfe-account-selector__scroll"
           contentClassName="content"
           horizontal={ false }
-          style={scrollAreaStyle()}
-          ref={ assignTo('_scrollarea') }
-          verticalScrollbarStyle={verticalScrollBarStyle()}
-          verticalContainerStyle={verticalContainerStyle()}
+          style={ this.scrollAreaStyle() }
+          ref={ (el) => {this._scrollarea = el;} }
+          verticalScrollbarStyle={ this.verticalScrollBarStyle() }
+          verticalContainerStyle={ this.verticalContainerStyle() }
         >
-          <If condition={ this.props.items.length }>
-            <Then>
-              <SuggestionList
-                suggestions={ this.props.items }
-                selectedSuggestions={this.props.selectedItems}
-                highlightedItem={this.props.highlightedItem}
-                ref={ assignTo('_suggestionList') }
-                onSelect={this.props.onSelect}
-                onKeyDown={ (evt) => this.props.onKeyDown(evt) }
-                renderItemRow={this.props.renderItemRow}
-              />
-            </Then>
-            <Else>
-              <AccountSuggestionsEmpty value={ this.props.noMatches }/>
-            </Else>
-          </If>
+          {this.props.items.length ? (
+            <SuggestionList
+              suggestions={ this.props.items }
+              selectedSuggestions={this.props.selectedItems}
+              highlightedItem={this.props.highlightedItem}
+              ref={ (el) => {this._suggestionList = el;} }
+              onSelect={this.props.onSelect}
+              onKeyDown={ (evt) => this.props.onKeyDown(evt) }
+              renderItemRow={this.props.renderItemRow}
+            />)
+            : <AccountSuggestionsEmpty value={ this.props.noMatches }/>
+          }
         </ScrollArea>
         <If condition={this.props.multiSelect}>
-          <DropdownStatusbar
+          <DropdownStatusBar
             renderSelectionStatus={this.props.renderSelectionStatus}
             onDone={this.props.onMultiSelectDone}
-            locale={this.props.locale}
+            labelDoneButton={i18n[this.props.locale].DROPDOWN_MULTISELECT_DONE}
           />
         </If>
       </div>
@@ -106,7 +111,7 @@ class DropDown extends React.Component {
   }
 }
 
-DropDown.propTypes = {
+Dropdown.propTypes = {
   items: PropTypes.array.isRequired,
   selectedItems: PropTypes.array,
   highlightedItem: PropTypes.number,
@@ -121,10 +126,10 @@ DropDown.propTypes = {
   renderSelectionStatus: PropTypes.func
 };
 
-DropDown.defaultProps = {
+Dropdown.defaultProps = {
   multiSelect: false,
   selectedItems: []
 };
 
-export default DropDown;
+export default Dropdown;
 

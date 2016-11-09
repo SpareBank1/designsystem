@@ -4,7 +4,7 @@ import ChevronIkon from 'ffe-icons-react/chevron-ikon';
 import i18n from '../i18n/i18n';
 import KryssIkon from 'ffe-icons-react/kryss-ikon';
 
-import DropDown from '../dropdown/dropdown';
+import Dropdown from '../dropdown/dropdown';
 import KeyCode from '../util/keyCode';
 
 class BaseSelector extends Component {
@@ -85,8 +85,8 @@ class BaseSelector extends Component {
     });
   }
 
-  onItemSelectedFromDropdown(id) {
-    const itemIndex = this.state.filteredItems.findIndex(item => item.id === id);
+  onItemSelectedFromDropdown(selectedItem) {
+    const itemIndex = this.state.filteredItems.findIndex(item => item.id === selectedItem.id);
     this.onItemSelect(itemIndex);
   }
 
@@ -118,31 +118,31 @@ class BaseSelector extends Component {
     return items.filter(this.props.filter(query));
   }
 
-  closeDropDown() {
+  closeDropdown() {
     this.setState({
       showItemSuggestions: false
     });
   }
 
-  openDropDown() {
+  openDropdown() {
     this.setState({
       showItemSuggestions: true
     });
   }
 
-  onKeyDown(evt, originateFromDropDown = false) {
+  onKeyDown(evt, originateFromDropdown = false) {
     const altKey = evt.altKey;
     switch (evt.which) {
       case KeyCode.DOWN:
         if (altKey) {
-          this.openDropDown();
+          this.openDropdown();
         } else {
           this.highlightNextItem();
         }
         break;
       case KeyCode.UP:
         if (altKey) {
-          this.closeDropDown();
+          this.closeDropdown();
         } else {
           this.highlightPrevItem();
         }
@@ -154,14 +154,14 @@ class BaseSelector extends Component {
         this.highlightLastItem();
         break;
       case KeyCode.ESC:
-        if (originateFromDropDown) {
+        if (originateFromDropdown) {
           this.onDropdownEscape();
         } else {
           this.reset();
         }
         break;
       case KeyCode.ENTER:
-        if (originateFromDropDown) {
+        if (originateFromDropdown) {
           evt.preventDefault();
           this.onItemSelect(this.state.highlightedItem);
         }
@@ -384,13 +384,13 @@ class BaseSelector extends Component {
         </div>
         {this.props.renderDetails(this.state.selectedItems)}
         {this.state.showItemSuggestions && (this.state.filteredItems.length || this.props.noMatches) ?
-          <DropDown
+          <Dropdown
             items={this.state.filteredItems}
             selectedItems={this.state.selectedItems}
             highlightedItem={this.state.highlightedItem}
             locale={this.props.locale}
             noMatches={this.props.noMatches}
-            onSelect={ (id) => this.onItemSelectedFromDropdown(id) }
+            onSelect={ (item) => this.onItemSelectedFromDropdown(item) }
             onKeyDown={(evt) => this.onKeyDown(evt, true)}
             renderItemRow={this.props.renderItemRow}
             multiSelect={this.state.multiSelect}

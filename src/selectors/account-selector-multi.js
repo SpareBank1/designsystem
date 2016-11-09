@@ -10,9 +10,9 @@ class AccountSelectorMulti extends React.Component {
     this.renderItemRow = this.renderItemRow.bind(this);
   }
 
-  renderItemRow({item, selected}) {
+  renderItemRow(item, selected) {
     if (this.props.renderItemRow) {
-      return this.props.renderItemRow({item, selected});
+      return this.props.renderItemRow(item, selected);
     }
     return <AccountRowMulti account={item} selected={selected} locale={this.props.locale}/>;
   }

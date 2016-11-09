@@ -10,8 +10,7 @@ const AccountSuggestionsEmpty = ({value}) =>
     </ul>;
 
 AccountSuggestionsEmpty.propTypes = {
-  value: PropTypes.string,
-  onSelect: PropTypes.func
+  value: PropTypes.string
 };
 
 export default AccountSuggestionsEmpty;

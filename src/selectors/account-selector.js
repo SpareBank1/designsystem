@@ -14,9 +14,9 @@ class AccountSelector extends React.Component {
     this.renderDetails = this.renderDetails.bind(this);
   }
 
-  renderItemRow({item}) {
+  renderItemRow(item) {
     if (this.props.renderItemRow) {
-      return this.props.renderItemRow({item});
+      return this.props.renderItemRow(item);
     }
     return <AccountRowSingle account={item} locale={this.props.locale}/>;
   }
@@ -41,7 +41,7 @@ class AccountSelector extends React.Component {
     // To provide backwards compatibility
     const accounts = this.props.accounts.map( account => ({
         ...account,
-        id: account.id || account.accountNumber
+        id: account.id || parseInt(account.accountNumber, 10)
       })
     );
 
@@ -49,7 +49,6 @@ class AccountSelector extends React.Component {
       <BaseSelector
         items={ accounts }
         renderItemRow={ this.renderItemRow }
-        multiple={ false }
         onChange={ this.props.onChange }
         onBlur={this.onBlur}
         onFocus={this.props.onFocus}

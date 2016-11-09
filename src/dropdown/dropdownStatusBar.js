@@ -1,8 +1,7 @@
 import React, { PropTypes } from 'react';
 import KeyCode from '../util/keyCode';
-import i18n from '../i18n/i18n';
 
-const DropdownStatusbar = ({onDone, renderSelectionStatus, locale}) => {
+const DropdownStatusBar = ({onDone, renderSelectionStatus, labelDoneButton}) => {
 
   const onKeyDown = (evt) => {
     if (evt.which === KeyCode.TAB && !evt.shiftKey) {
@@ -19,16 +18,16 @@ const DropdownStatusbar = ({onDone, renderSelectionStatus, locale}) => {
         onClick={onDone}
         onKeyDown={onKeyDown}
       >
-        {i18n[locale].DROPDOWN_MULTISELECT_DONE}
+        {labelDoneButton}
       </button>
     </div>
   );
 };
 
-DropdownStatusbar.propTypes = {
+DropdownStatusBar.propTypes = {
   onDone: PropTypes.func.isRequired,
   renderSelectionStatus: PropTypes.func.isRequired,
-  locale: PropTypes.oneOf(["nb", "nn", "en"]).isRequired,
+  labelDoneButton: PropTypes.string.isRequired,
 };
 
-export default DropdownStatusbar;
+export default DropdownStatusBar;
