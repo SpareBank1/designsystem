@@ -1,5 +1,8 @@
 # Changelog
 
+## v3.0.1
+* Added padding for large text to checkbox label
+
 ## v3.0.0
 * **Potentially breaking change:** Responsive implementation of ffe-input-field and ffe-dropdown.
 * ffe-input-field and ffe-dropdown has now 100% width when rendered on mobile-size screen (less than 480px)
