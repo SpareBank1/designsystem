@@ -1,6 +1,6 @@
 {
-  "name": "ffe-system-message-react",
-  "version": "1.1.0",
+  "name": "ffe-context-message-react",
+  "version": "0.0.1",
   "description": "SpareBank 1 System Message komponent",
   "main": "lib/index.js",
   "scripts": {
@@ -21,14 +21,10 @@
     "url": "***REMOVED***"
   },
   "author": "SpareBank 1",
-  "pre-commit": [
-    "lint",
-    "test"
-  ],
   "peerDependencies": {
-    "ffe-core": "^8.1.0",
+    "ffe-core": "^8.1.2",
     "ffe-icons-react": "^2.1.0",
-    "ffe-system-message": "^1.0.0"
+    "ffe-context-message": "^0.0.1"
   },
   "devDependencies": {
     "babel-cli": "^6.10.1",
@@ -46,9 +42,9 @@
     "eslint-plugin-jsx-a11y": "^1.5.3",
     "eslint-plugin-react": "^5.2.2",
     "expect.js": "^0.3.1",
-    "ffe-core": "^8.1.0",
+    "ffe-context-message": "^0.0.1",
+    "ffe-core": "^8.1.2",
     "ffe-icons-react": "^2.1.0",
-    "ffe-system-message": "^1.0.0",
     "hjs-webpack": "^8.3.0",
     "jsdom": "^9.4.0",
     "less": "^2.7.1",

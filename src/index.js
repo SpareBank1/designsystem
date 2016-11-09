@@ -1,11 +1,7 @@
-import SystemErrorMessage from './system-error-message';
-import SystemInfoMessage from './system-info-message';
-import SystemNewsMessage from './system-news-message';
-import SystemSuccessMessage from './system-success-message';
+import ContextInfoMessage from './context-info-message';
+import ContextTipMessage from './context-tip-message';
 
 export {
-    SystemErrorMessage,
-    SystemInfoMessage,
-    SystemNewsMessage,
-    SystemSuccessMessage,
+    ContextInfoMessage,
+    ContextTipMessage,
 };
