@@ -77,7 +77,7 @@ function onFocus() {
 
 render(
   <div>
-    <label htmlFor="custom-id" className="ffe-form-label">Velg konto</label>
+    <label htmlFor="custom-id" className="ffe-form-label ffe-form-label--block">Velg konto</label>
     <AccountSelector
       accounts={ accounts }
       onChange={ onChange }
