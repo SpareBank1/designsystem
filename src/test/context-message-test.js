@@ -1,5 +1,5 @@
-import React, {cloneElement} from 'react';
-import {shallow, mount} from 'enzyme';
+import React, { cloneElement } from 'react';
+import { shallow, mount } from 'enzyme';
 import sinon from 'sinon';
 import {
     ContextInfoMessage,
@@ -23,7 +23,7 @@ describe('Test Base', () => {
             </Base>;
         wrapper = mount(
             element
-        )
+        );
     });
 
     it('renders with provided content', () => {
@@ -34,20 +34,20 @@ describe('Test Base', () => {
 
     it('renders with provided header', () => {
         const header = 'header';
-        wrapper = mount(cloneElement(element, {header}));
+        wrapper = mount(cloneElement(element, { header }));
         const headerText = wrapper.find('.ffe-context-message__content').find('header');
         expect(headerText.length).to.be(1);
         expect(headerText.text()).to.be(header);
     });
 
     it('renders provided styles to outermost container', () => {
-        const component = shallow(cloneElement(element, {style: {marginTop: '40px'}}));
+        const component = shallow(cloneElement(element, { style: { marginTop: '40px' } }));
         expect(component.props().style.marginTop).to.be('40px');
     });
 
     it('closes itself after a click on the close button', done => {
         const onClickSpy = sinon.spy();
-        wrapper = mount(cloneElement(element, {onClosed: onClickSpy}));
+        wrapper = mount(cloneElement(element, { onClose: onClickSpy }));
         wrapper.find('.ffe-context-message__close-button').simulate('click');
         setTimeout(() => {
             const component = wrapper.find('.ffe-context-message-wrapper');

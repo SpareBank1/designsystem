@@ -1,5 +1,9 @@
 # ffe-context-message-react
 
+##Intended Use
+
+Messagebox showing non-critical tip or information about a page or product.
+
 ## Install
 
 ```
@@ -18,7 +22,7 @@ import { ContextInfoMessage, ContextTipMessage } from 'ffe-context-message-react
         header='Content header'
         icon={<ThumbUpIcon />}  
         style={{width : '50%'}}
-        onClosed={() => { //Do something }
+        onClose={() => { //Do something }
     >
     <p>
        Info about something interesting
@@ -26,13 +30,13 @@ import { ContextInfoMessage, ContextTipMessage } from 'ffe-context-message-react
 </ContextInfoMessage>
 ```
 
+### Props
 ```javascript
-props : 
-    children: Content in the message. Required,
-    header : Content header,
-    icon : FFEIcon, 
-    style: Style object, overrides the styles of the outermost container,
-    onClosed: Callback that is called when the message is no longer visible, after close button press,
+children: Content in the message. Required,
+header : Content header,
+icon : FFEIcon, 
+style: Style object, overrides the styles of the outermost container,
+onClose: Callback that is called on close click,
 ```
 
 ## Examples

@@ -1,15 +1,15 @@
-import React, {PropTypes} from 'react';
+import React, { PropTypes } from 'react';
 import InfoIcon from 'ffe-icons-react/info-ikon';
 import Base from './base';
 
-export default function ContextInfoMessage({style, children, header, icon, onClosed}) {
+export default function ContextInfoMessage({ style, children, header, icon, onClose }) {
     return (
         <Base
             messageType='tip'
             icon={icon}
             header={header}
             style={style}
-            onCloseed={onClosed}
+            onCloseed={onClose}
         >
             {children}
         </Base>
@@ -18,13 +18,14 @@ export default function ContextInfoMessage({style, children, header, icon, onClo
 
 ContextInfoMessage.propTypes = {
     children: PropTypes.node.isRequired,
-    header : PropTypes.string,
+    header: PropTypes.string,
     style: PropTypes.object,
-    onClosed: PropTypes.func,
+    onClose: PropTypes.func,
+    icon: PropTypes.element,
 };
 
 ContextInfoMessage.defaultProps = {
     icon: <InfoIcon />,
-    onClosed: ()=> {
+    onClose: () => {
     },
 };
