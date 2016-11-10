@@ -9,15 +9,16 @@ export default class Base extends Component {
         this.close = this.close.bind(this);
     }
 
+    static closeDurationMs : 50;
+
     close() {
-        const {closeDurationMs, onCloseStart, onCloseEnd} = this.props;
+        const {onClosed} = this.props;
         const element = findDOMNode(this.refs.self);
         element.style.height = `${element.offsetHeight}px`;
-        onCloseStart();
         setTimeout(() => {
             element.style.height = 0;
-            onCloseEnd();
-        }, closeDurationMs);
+            onClosed();
+        }, Base.closeDurationMs);
     }
 
     render() {
@@ -45,20 +46,20 @@ export default class Base extends Component {
                         {header && <header className='ffe-h5'>{header}</header>}
                         {children}
                     </div>
-                    <div
-                        className='ffe-context-message__close'
-                        role='button'
-                        aria-label='Lukk'
-                        tabIndex='0'
-                        onClick={this.close}
-                    >
-                        <CloseIcon className='ffe-context-message__close-svg'/>
+                    <div className='ffe-context-message__close'>
+                        <button
+                            className='ffe-context-message__close-button'
+                            tabIndex='0'
+                            aria-label='Lukk'
+                            onClick={this.close}
+                        >
+                            <CloseIcon className='ffe-context-message__close-button-svg'/>
+                        </button>
                     </div>
                 </div>
             </div>
         );
     }
-
 }
 
 Base.propTypes = {
@@ -66,9 +67,7 @@ Base.propTypes = {
     header: PropTypes.string,
     messageType: PropTypes.oneOf(['info', 'tip']).isRequired,
     icon: PropTypes.element.isRequired,
-    // style: PropTypes.object,
-    closeDurationMs: PropTypes.number.isRequired,
-    onCloseStart: PropTypes.func.isRequired,
-    onCloseEnd: PropTypes.func.isRequired,
+    style: PropTypes.object,
+    onClosed: PropTypes.func,
 };
 

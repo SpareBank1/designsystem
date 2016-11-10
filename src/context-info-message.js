@@ -1,16 +1,15 @@
 import React, {PropTypes} from 'react';
-import InfoCircleIcon from 'ffe-icons-react/info-sirkel-ikon';
+import InfoIcon from 'ffe-icons-react/info-ikon';
 import Base from './base';
 
-export default function ContextInfoMessage({style, children, icon, closeDurationMs, onCloseStart, onCloseEnd}) {
+export default function ContextInfoMessage({style, children, header, icon, onClosed}) {
     return (
         <Base
             messageType='info'
             icon={icon}
+            header={header}
             style={style}
-            closeDurationMs={closeDurationMs}
-            onCloseStart={onCloseStart}
-            onCloseEnd={onCloseEnd}
+            onCloseed={onClosed}
         >
             {children}
         </Base>
@@ -19,17 +18,13 @@ export default function ContextInfoMessage({style, children, icon, closeDuration
 
 ContextInfoMessage.propTypes = {
     children: PropTypes.node.isRequired,
+    header : PropTypes.string,
     style: PropTypes.object,
-    closeDurationMs: PropTypes.number,
-    onCloseStart: PropTypes.func.isRequired,
-    onCloseEnd: PropTypes.func.isRequired,
+    onClosed: PropTypes.func,
 };
 
 ContextInfoMessage.defaultProps = {
-    icon: <InfoCircleIcon />,
-    closeDurationMs: 50,
-    onCloseStart: ()=> {
-    },
-    onCloseEnd: ()=> {
+    icon: <InfoIcon />,
+    onClosed: ()=> {
     },
 };

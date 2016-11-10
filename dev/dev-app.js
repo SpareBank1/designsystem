@@ -12,7 +12,9 @@ import {
 render(
     <div className="ffe-body-text">
         <div style={{margin: '25px 0'}}>
-            <ContextInfoMessage>
+            <ContextInfoMessage
+                header='Info'
+            >
                 Her kan det stå en nyhet eller informasjon som ikke er kritisk.
                 Her kan det stå en nyhet eller informasjon som ikke er kritisk.
                 Her kan det stå en nyhet eller informasjon som ikke er kritisk.
