@@ -1,6 +1,6 @@
 {
   "name": "nfe-account-selector-react",
-  "version": "2.1.5",
+  "version": "2.1.6",
   "main": "lib/account-selector.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/.",
@@ -40,7 +40,7 @@
   },
   "peerDependencies": {
     "ffe-core": "^8.0.2",
-    "ffe-form": "^1.0.1",
+    "ffe-form": "1.x || 2.x || 3.x",
     "react": "^15.2.0"
   },
   "publishConfig": {
