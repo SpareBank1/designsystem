@@ -35,9 +35,14 @@ describe('Test Base', () => {
     it('renders with provided header', () => {
         const header = 'header';
         wrapper = mount(cloneElement(element, { header }));
-        const headerText = wrapper.find('.ffe-context-message__content').find('header');
-        expect(headerText.length).to.be(1);
-        expect(headerText.text()).to.be(header);
+        const headerComponent = wrapper.find('.ffe-context-message__content').find('header');
+        expect(headerComponent.length).to.be(1);
+        expect(headerComponent.text()).to.be(header);
+    });
+
+    it('does not render header', () => {
+        const header = wrapper.find('.ffe-context-message__content').find('header');
+        expect(header.length).to.be(0);
     });
 
     it('renders provided styles to outermost container', () => {
