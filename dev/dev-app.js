@@ -1,9 +1,7 @@
 import 'babel-polyfill';
 import './styles.less';
-
 import React from 'react';
-import { render } from 'react-dom';
-
+import {render} from 'react-dom';
 import {
     ContextInfoMessage,
     ContextTipMessage,
@@ -27,8 +25,6 @@ render(
                 Vekommen til betaversjonen av nye Sparebank1.no.
             </ContextTipMessage>
         </div>
-    </div>
-
-    ,
+    </div>,
     document.getElementById('root')
 );
