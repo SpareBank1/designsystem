@@ -10,14 +10,29 @@ $ npm install --save ffe-context-message-react
 
 Like all React packages in FFE, this package expects the package `ffe-system-message` to be imported in your project's main css- or less-file.
 
-Import one or more of the three predefined message types, passing a header as a prop and content as component children.
 
 ```javascript
-import { SystemInfoMessage, SystemErrorMessage } from 'ffe-context-message-react';
+import { ContextInfoMessage, ContextTipMessage } from 'ffe-context-message-react';
 
-<SystemInfoMessage header="En nyttig beskjed">
-    Alt du sender inn her rendres i et p-element
-</SystemInfoMessage>
+<ContextInfoMessage 
+        header='Content header'
+        icon={<ThumbUpIcon />}  
+        style={{width : '50%'}}
+        onClosed={() => { //Do something }
+    >
+    <p>
+       Info about something interesting
+    </p>
+</ContextInfoMessage>
+```
+
+```javascript
+props : 
+    children: Content in the message. Required,
+    header : Content header,
+    icon : FFEIcon, 
+    style: Style object, overrides the styles of the outermost container,
+    onClosed: Callback that is called when the message is no longer visible, after close button press,
 ```
 
 ## Examples
