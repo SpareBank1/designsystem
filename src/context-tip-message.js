@@ -5,7 +5,7 @@ import Base from './base';
 export default function ContextInfoMessage({ style, children, header, icon, onClose }) {
     return (
         <Base
-            messageType='tip'
+            messageType="tip"
             icon={icon}
             header={header}
             style={style}
