@@ -8,3 +8,6 @@ node_modules/
 examples/fonts
 examples/examples.css
 gemini-report
+
+#npm
+npm-debug.log
