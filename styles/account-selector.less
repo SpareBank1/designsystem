@@ -4,10 +4,10 @@
 
 .nfe-account-selector {
   position: relative;
-  display: inline-block;
+  display: block;
 
   &__search {
-    width: 300px;
+    width: 100%;
     z-index: 10;
 
     &::-ms-clear {
@@ -57,7 +57,7 @@
   &__selected-account-details {
     font-size: 14px;
     padding: 10px 6px;
-    color: #262626;
+    color: @ffe-black;
     .ffe-clearfix;
   }
 
@@ -72,7 +72,7 @@
   &__dropdown {
     position: absolute;
     left: 0;
-    width: 300px;
+    width: 100%;
     margin-right: 10px;
     top: 45px;
     border: 2px solid @ffe-grey-light;
