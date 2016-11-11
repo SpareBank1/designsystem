@@ -74,6 +74,14 @@ class Dropdown extends React.Component {
   }
 
   render() {
+    const {
+      items: suggestions,
+      selectedItems: selectedSuggestions,
+      highlightedItem,
+      onSelect,
+      onKeyDown,
+      renderItemRow
+      } = this.props;
     return (
       <div className="nfe-account-selector__dropdown" onScroll={(evt) => this.onScroll(evt)}>
         <ScrollArea
@@ -87,15 +95,15 @@ class Dropdown extends React.Component {
           verticalContainerStyle={ this.verticalContainerStyle() }
         >
           {this.props.items.length ? (
-            <SuggestionList
-              suggestions={ this.props.items }
-              selectedSuggestions={this.props.selectedItems}
-              highlightedItem={this.props.highlightedItem}
-              ref={ (el) => {this._suggestionList = el;} }
-              onSelect={this.props.onSelect}
-              onKeyDown={ (evt) => this.props.onKeyDown(evt) }
-              renderItemRow={this.props.renderItemRow}
-            />)
+            <SuggestionList {...{
+              suggestions,
+              selectedSuggestions,
+              highlightedItem,
+              onSelect,
+              onKeyDown,
+              renderItemRow }}
+              ref={ (el) => {this._suggestionList = el;}
+            }/>)
             : <AccountSuggestionsEmpty value={ this.props.noMatches }/>
           }
         </ScrollArea>
