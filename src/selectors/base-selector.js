@@ -139,6 +139,7 @@ class BaseSelector extends Component {
         } else {
           this.highlightNextItem();
         }
+        evt.preventDefault();
         break;
       case KeyCode.UP:
         if (altKey) {
@@ -146,6 +147,7 @@ class BaseSelector extends Component {
         } else {
           this.highlightPrevItem();
         }
+        evt.preventDefault();
         break;
       case KeyCode.HOME:
         this.highlightFirstItem();
@@ -369,7 +371,7 @@ class BaseSelector extends Component {
           aria-invalid={ this.props.ariaInvalid }
           aria-autocomplete="list"
         />
-        { this.state.inputValue && this.state.inputValue.length > 0 ?
+        { this.state.inputValue && this.state.inputValue.length > 0 &&
           <button
             aria-label={ i18n[this.props.locale].RESET_SEARCH }
             className="nfe-account-selector__reset-button"
@@ -377,7 +379,7 @@ class BaseSelector extends Component {
             tabIndex="-1"
           >
             <KryssIkon className="nfe-account-selector__reset-icon"/>
-          </button> : null
+          </button>
         }
         <div onClick={() => this._inputField.focus()} className={dropdownIconClassName()} >
           <ChevronIkon focusable={ false }/>
