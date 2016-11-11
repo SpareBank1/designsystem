@@ -28,7 +28,7 @@ const AccountSelectorExample = () => {
 
   return (
     <div className="selector">
-      <label htmlFor="custom-id" className="ffe-form-label selector-label">Velg konto</label>
+      <label htmlFor="custom-id" className="ffe-form-label ffe-form-label--block selector-label">Velg konto</label>
       <AccountSelector
         accounts={ accountArray }
         onAccountSelected={ onAccountSelected }
