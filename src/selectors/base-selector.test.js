@@ -72,7 +72,8 @@ describe('<BaseSelector />', () => {
       expect(wrapper.find(Dropdown)).to.have.length(1);
       const event = {
         altKey: true,
-        which: KeyCode.UP
+        which: KeyCode.UP,
+        preventDefault: () => {}
       };
       input.simulate('keydown', event);
       expect(wrapper.find(Dropdown)).to.have.length(0);
