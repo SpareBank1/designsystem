@@ -1,6 +1,6 @@
 {
   "name": "ffe-buttons",
-  "version": "2.1.4",
+  "version": "2.2.0",
   "main": "less/buttons.less",
   "scripts": {
     "compile": "npm run lint && lessc example/example.less example/example.css && cp -R node_modules/ffe-core/fonts/ example/ && echo \"$(date +%T): Updated example\"",
