@@ -15,16 +15,17 @@
   overflow: hidden;
 
   &:focus {
-      background-color: transparent;
-      border-radius: 4px;
-      box-shadow: 0 0 0 2px @ffe-blue-focus;
+    background-color: transparent;
+    border-radius: 4px;
+    box-shadow: 0 0 0 2px @ffe-blue-focus;
   }
 
   &:hover {
-      background-color: transparent;
-      box-shadow: none;
-      span {
-        border-bottom: 1px solid @ffe-grey-dark;
-      }
-    }
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  &:hover &__label {
+    border-bottom: 1px solid @ffe-grey-dark;
+  }
 }
