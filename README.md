@@ -25,6 +25,14 @@ To render a list, use `<li>` as children:
 </BulletList>
 ```
 
+`bg-sand` is a modifier of `CheckList` and can be used by passing the correct className:
+
+```
+<CheckList className="ffe-check-list--bg-sand">
+  ...
+</CheckList>
+```
+
 To render a description list (i.e. `DescriptionListFlex` or `DescriptionListMultiCol`) make sure both `dt` and `dd` are present as children.
 
 ```

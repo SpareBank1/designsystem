@@ -1,6 +1,6 @@
 {
   "name": "ffe-lists-react",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "React implementation of ffe-lists",
   "main": "lib/index.js",
   "scripts": {
@@ -54,7 +54,7 @@
   },
   "peerDependencies": {
     "ffe-core": "^8.1.2",
-    "ffe-lists": "^2.2.0"
+    "ffe-lists": "^2.3.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
