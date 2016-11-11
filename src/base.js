@@ -35,26 +35,25 @@ export default class Base extends Component {
                 style={style}
             >
                 <div className="ffe-context-message">
-                    <div className="ffe-context-message__icon-wrapper">
-                        <div className="ffe-context-message__icon">
-                            {cloneElement(icon, { className: 'ffe-context-message__icon-svg' })}
+                    <div className="ffe-context-message__icon">
+                        {cloneElement(icon, { className: 'ffe-context-message__icon-svg' })}
+                    </div>
+
+                    <div>
+                        {header && <header className="ffe-h5">{header}</header>}
+                        <div className="ffe-body-text">
+                            {children}
                         </div>
                     </div>
-                    <div className="ffe-context-message__content">
-                        {header && <header className="ffe-h5">{header}</header>}
-                        {children}
-                    </div>
-                    <div className="ffe-context-message__close">
-                        <button
-                            className="ffe-context-message__close-button"
-                            tabIndex="0"
-                            aria-label="Lukk"
-                            onClick={this.close}
-                        >
-                            <CloseIcon className="ffe-context-message__close-button-svg" />
-                        </button>
-                    </div>
                 </div>
+                <button
+                    className="ffe-context-message__close-button"
+                    tabIndex="0"
+                    aria-label="Lukk"
+                    onClick={this.close}
+                >
+                    <CloseIcon className="ffe-context-message__close-button-svg" />
+                </button>
             </div>
         );
     }

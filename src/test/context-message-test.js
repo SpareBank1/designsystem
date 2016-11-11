@@ -15,19 +15,19 @@ describe('Test Base', () => {
 
     beforeEach(() => {
         element =
-            <Base
-                messageType='tip'
+            (<Base
+                messageType="tip"
                 icon={<InfoCircleIcon />}
             >
                 <p>content</p>
-            </Base>;
+            </Base>);
         wrapper = mount(
             element
         );
     });
 
     it('renders with provided content', () => {
-        const content = wrapper.find('.ffe-context-message__content').find('p');
+        const content = wrapper.find('.ffe-body-text').find('p');
         expect(content.length).to.be(1);
         expect(content.text()).to.be('content');
     });
@@ -35,7 +35,7 @@ describe('Test Base', () => {
     it('renders with provided header', () => {
         const header = 'header';
         wrapper = mount(cloneElement(element, { header }));
-        const headerComponent = wrapper.find('.ffe-context-message__content').find('header');
+        const headerComponent = wrapper.find('header');
         expect(headerComponent.length).to.be(1);
         expect(headerComponent.text()).to.be(header);
     });
