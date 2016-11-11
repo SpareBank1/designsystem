@@ -42,16 +42,18 @@
     top: 1em;
     right: 1em;
     cursor: pointer;
+    color: @ffe-grey-dark;
     fill: @ffe-grey-dark;
     border: none;
     padding: 0;
-    background-color: transparent;
     outline: none;
+    background-color: transparent;
     height: 1em;
     width: 1em;
-    &:active {
-      fill: @ffe-black;
+    &:focus {
+      outline: auto;
     }
+
     &-svg {
       height: 100%;
       width: 100%;
