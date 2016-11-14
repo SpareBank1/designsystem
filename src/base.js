@@ -1,6 +1,6 @@
 import React, { Component, PropTypes, cloneElement } from 'react';
-import { findDOMNode } from 'react-dom';
 import CloseIcon from 'ffe-icons-react/kryss-ikon';
+import texts from './locale/texts';
 
 export default class Base extends Component {
 
@@ -11,12 +11,12 @@ export default class Base extends Component {
 
     close() {
         const { onClose } = this.props;
-        const element = findDOMNode(this.refs.self);
+        const element = this.refs.self;
         element.style.height = `${element.offsetHeight}px`;
         setTimeout(() => {
             element.style.height = 0;
             onClose();
-        }, 50);
+        }, 0);
     }
 
     render() {
@@ -26,6 +26,7 @@ export default class Base extends Component {
             messageType,
             style,
             header,
+            locale,
         } = this.props;
 
         return (
@@ -49,10 +50,10 @@ export default class Base extends Component {
                 <button
                     className="ffe-context-message__close-button"
                     tabIndex="0"
-                    aria-label="Lukk"
+                    aria-label={texts[locale].CLOSE}
                     onClick={this.close}
                 >
-                    <CloseIcon className="ffe-context-message__close-button-svg" />
+                    <CloseIcon className="ffe-context-message__close-button-svg"/>
                 </button>
             </div>
         );
@@ -61,9 +62,10 @@ export default class Base extends Component {
 
 Base.propTypes = {
     children: PropTypes.node.isRequired,
-    header: PropTypes.string,
     messageType: PropTypes.oneOf(['info', 'tip']).isRequired,
+    locale: PropTypes.oneOf(['nb', 'ny', 'en']).isRequired,
     icon: PropTypes.element.isRequired,
+    header: PropTypes.string,
     style: PropTypes.object,
     onClose: PropTypes.func,
 };

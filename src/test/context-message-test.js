@@ -1,5 +1,5 @@
-import React, {cloneElement} from 'react';
-import {shallow, mount} from 'enzyme';
+import React, { cloneElement } from 'react';
+import { shallow, mount } from 'enzyme';
 import sinon from 'sinon';
 import {
     ContextInfoMessage,
@@ -17,6 +17,7 @@ describe('Test Base', () => {
         element = (
             <Base
                 messageType="tip"
+                locale='nb'
                 icon={<InfoCircleIcon />}
             >
                 <p>content</p>
@@ -35,7 +36,7 @@ describe('Test Base', () => {
 
     it('renders with provided header', () => {
         const header = 'header';
-        wrapper = mount(cloneElement(element, {header}));
+        wrapper = mount(cloneElement(element, { header }));
         const headerComponent = wrapper.find('header');
         expect(headerComponent.length).to.be(1);
         expect(headerComponent.text()).to.be(header);
@@ -47,13 +48,13 @@ describe('Test Base', () => {
     });
 
     it('renders provided styles to outermost container', () => {
-        const component = shallow(cloneElement(element, {style: {marginTop: '40px'}}));
+        const component = shallow(cloneElement(element, { style: { marginTop: '40px' } }));
         expect(component.props().style.marginTop).to.be('40px');
     });
 
     it('closes itself after a click on the close button', done => {
         const onClickSpy = sinon.spy();
-        wrapper = mount(cloneElement(element, {onClose: onClickSpy}));
+        wrapper = mount(cloneElement(element, { onClose: onClickSpy }));
         wrapper.find('.ffe-context-message__close-button').simulate('click');
         setTimeout(() => {
             const component = wrapper.find('.ffe-context-message-wrapper');
@@ -68,6 +69,7 @@ describe('Test ContextInfoMessage', () => {
     const wrapper = mount(
         <ContextInfoMessage
             icon={<InfoCircleIcon />}
+            locale='nb'
         >
             <p>content</p>
         </ContextInfoMessage>
@@ -83,6 +85,7 @@ describe('Test ContextTipMessage', () => {
     const wrapper = mount(
         <ContextTipMessage
             icon={<InfoCircleIcon />}
+            locale='nb'
         >
             <p>content</p>
         </ContextTipMessage>
