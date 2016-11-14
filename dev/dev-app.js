@@ -12,6 +12,7 @@ render(
         <div style={{margin: '25px 0'}}>
             <ContextInfoMessage
                 header='Info'
+                locale='nb'
             >
                 Her kan det stå en nyhet eller informasjon som ikke er kritisk.
                 Her kan det stå en nyhet eller informasjon som ikke er kritisk.
@@ -19,7 +20,9 @@ render(
             </ContextInfoMessage>
         </div>
         <div style={{margin: '25px 0'}}>
-            <ContextTipMessage>
+            <ContextTipMessage
+                locale='en'
+            >
                 Vekommen til betaversjonen av nye Sparebank1.no.
                 Vekommen til betaversjonen av nye Sparebank1.no.
                 Vekommen til betaversjonen av nye Sparebank1.no.

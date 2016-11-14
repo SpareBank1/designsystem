@@ -1,5 +1,5 @@
 import React from 'react';
-import {renderToStaticMarkup} from 'react-dom/server';
+import { renderToStaticMarkup } from 'react-dom/server';
 import ThumbUpIcon from 'ffe-icons-react/tommel-opp-ikon';
 import {
     ContextInfoMessage,
@@ -25,6 +25,7 @@ const example = (
             <h4 className="example-container__header">Info</h4>
             <ContextInfoMessage
                 header='Info'
+                locale='nb'
             >
                 Info om en spennede side eller produkt.
             </ContextInfoMessage>
@@ -34,6 +35,7 @@ const example = (
             <h4 className="example-container__header">Tips</h4>
             <ContextTipMessage
                 header='Tips'
+                locale='nb'
                 icon={<ThumbUpIcon />}
             >
                 Tips om en spenndee side eller produkt.
@@ -50,6 +52,7 @@ const example = (
                             renderToStaticMarkup(
                                 <ContextInfoMessage
                                     header='Info'
+                                    locale='nb'
                                 >
                                     Info om en spennede side eller produkt.
                                 </ContextInfoMessage>
