@@ -67,6 +67,7 @@ Button.propTypes = {
         'secondary',
         'shortcut',
         'tertiary',
+        'back',
     ]),
     id: PropTypes.string,
     isLoading: PropTypes.bool,

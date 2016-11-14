@@ -4,6 +4,7 @@ import PrimaryButton from './PrimaryButton';
 import SecondaryButton from './SecondaryButton';
 import ShortcutButton from './ShortcutButton';
 import TertiaryButton from './TertiaryButton';
+import BackButton from './BackButton';
 
 export {
     ActionButton,
@@ -12,6 +13,7 @@ export {
     SecondaryButton,
     ShortcutButton,
     TertiaryButton,
+    BackButton,
 
     // DEPRECATED
     ActionButton as FFEActionButton,
