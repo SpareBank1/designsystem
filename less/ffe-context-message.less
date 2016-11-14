@@ -1,90 +1,63 @@
-.ffe-system-message-wrapper {
+.ffe-context-message-wrapper {
 
-    transition: height 0.3s;
-    overflow: hidden;
+  transition: height 0.3s;
+  overflow: hidden;
+  position: relative;
 
-    &--error {
-        background-color: @ffe-orange-wcag-20;
-        fill: @ffe-black;
-    }
+  &--info {
+    background-color: @ffe-blue-royal-light-20;
+  }
 
-    &--info {
-        background-color: @ffe-blue-royal-light-20;
-        fill: @ffe-black;
-    }
-
-    &--news {
-        color: @ffe-white;
-        background-color: @ffe-black;
-        fill: @ffe-white;
-    }
-
-    &--success {
-        background-color: @ffe-green-wcag-20;
-        fill: @ffe-black;
-    }
+  &--tip {
+    background-color: @ffe-sand;
+  }
 }
 
-.ffe-system-message {
+.ffe-context-message {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: 2.3em 2em 2.3em 2.3em;
+  text-align: left;
 
-    position: relative;
-    margin: 0 auto;
-    padding: 10px 20px;
-    text-align: left;
+  &__icon {
+    display: flex;
+    flex-shrink: 0;
+    margin-right: 2.2em;
+    align-items: center;
+    justify-content: center;
+    background-color: @ffe-white;
+    border-radius: 50%;
+    height: 4em;
+    width: 4em;
+    &-svg {
+      height: 3em;
+      width: 3em;
+      fill: @ffe-blue-royal;
+    }
+  }
 
-    &__icon {
-        display: inline-block;
-        vertical-align: middle;
-        height: 1.7em;
-        width: 1.7em;
-        margin-right: 15px;
-
-        > svg {
-            height: 100%;
-            width: 100%;
-        }
+  &__close-button {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    cursor: pointer;
+    color: @ffe-grey-dark;
+    fill: @ffe-grey-dark;
+    border: none;
+    padding: 0;
+    outline: none;
+    background-color: transparent;
+    height: 1em;
+    width: 1em;
+    &:focus {
+      outline: auto;
     }
 
-    &__content {
-        display: inline-block;
-        vertical-align: middle;
-        margin: 0;
-        padding: 0;
-        width: 75%;
-        font-size: 14px;
+    &-svg {
+      height: 100%;
+      width: 100%;
     }
-
-    &__close {
-        display: inline-block;
-        vertical-align: middle;
-        position: absolute;
-        right: 20px;
-        top: 13px;
-        cursor: pointer;
-        height: 14px;
-        width: 14px;
-
-        > svg {
-            height: 100%;
-            width: 100%;
-        }
-    }
+  }
 }
 
-@media screen and (min-width: 460px) {
-    .ffe-system-message__content {
-        width: 84%;
-    }
-}
-
-@media screen and (min-width: 600px) {
-    .ffe-system-message__content {
-        font-size: 16px;
-    }
-}
-
-@media screen and (min-width: 720px) {
-    .ffe-system-message__content {
-        width: 90%;
-    }
-}

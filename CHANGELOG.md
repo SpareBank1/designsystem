@@ -1,4 +1,5 @@
 # CHANGELOG
 
-## Version 0.0.1
-First version. Ffe-system-message used as baseline.
+## Version 1.0.0
+First version
+

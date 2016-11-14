@@ -3,3 +3,11 @@
 
 #npm
 node_modules/
+
+#Generated files
+examples/fonts
+examples/examples.css
+gemini-report
+
+#npm
+npm-debug.log
