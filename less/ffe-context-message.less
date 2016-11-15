@@ -1,8 +1,17 @@
-.ffe-context-message-wrapper {
-
-  transition: height 0.3s;
-  overflow: hidden;
+.ffe-context-message {
+  display: flex;
+  padding: 2.3em;
   position: relative;
+
+  transition: transform 0.3s ease-in, opacity 0.15s 0.15s;
+  transform: scaleY(1);
+  opacity: 1;
+  transform-origin: top right;
+
+  &.isClosed {
+    transform: scaleY(0);
+    opacity: 0;
+  }
 
   &--info {
     background-color: @ffe-blue-royal-light-20;
@@ -11,14 +20,6 @@
   &--tip {
     background-color: @ffe-sand;
   }
-}
-
-.ffe-context-message {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  padding: 2.3em 2em 2.3em 2.3em;
-  text-align: left;
 
   &__icon {
     display: flex;
@@ -42,22 +43,21 @@
     top: 1em;
     right: 1em;
     cursor: pointer;
-    color: @ffe-grey-dark;
-    fill: @ffe-grey-dark;
     border: none;
     padding: 0;
     outline: none;
     background-color: transparent;
     height: 1em;
     width: 1em;
+
     &:focus {
       outline: auto;
     }
 
     &-svg {
+      fill: @ffe-grey-dark;
       height: 100%;
       width: 100%;
     }
   }
 }
-
