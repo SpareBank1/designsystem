@@ -1,9 +1,9 @@
 const nb = {};
-const ny = {};
+const nn = {};
 const en = {};
 
-nb.CLOSE = 'Lukk';
-ny.CLOSE = 'Lukk';
-en.CLOSE = 'Close';
+nb.FFE_CONTEXT_MESSAGE_CLOSE = 'Lukk';
+nn.FFE_CONTEXT_MESSAGE_CLOSE = 'Lukk';
+en.FFE_CONTEXT_MESSAGE_CLOSE = 'Close';
 
-export default { nb, ny, en };
+export default { nb, nn, en };

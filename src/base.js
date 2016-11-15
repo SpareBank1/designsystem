@@ -50,7 +50,7 @@ export default class Base extends Component {
                 <button
                     className="ffe-context-message__close-button"
                     tabIndex="0"
-                    aria-label={texts[locale].CLOSE}
+                    aria-label={texts[locale].FFE_CONTEXT_MESSAGE_CLOSE}
                     onClick={this.close}
                 >
                     <CloseIcon className="ffe-context-message__close-button-svg"/>
@@ -63,10 +63,14 @@ export default class Base extends Component {
 Base.propTypes = {
     children: PropTypes.node.isRequired,
     messageType: PropTypes.oneOf(['info', 'tip']).isRequired,
-    locale: PropTypes.oneOf(['nb', 'ny', 'en']).isRequired,
+    locale: PropTypes.oneOf(['nb', 'nn', 'en']),
     icon: PropTypes.element.isRequired,
     header: PropTypes.string,
     style: PropTypes.object,
     onClose: PropTypes.func,
+};
+
+Base.defaultProps = {
+    locale : 'nb'
 };
 
