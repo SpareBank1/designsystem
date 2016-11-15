@@ -1,7 +1,6 @@
-import React, { Component, PropTypes } from 'react';
-import { findDOMNode } from 'react-dom';
-
-import KryssIkon from 'ffe-icons-react/kryss-ikon';
+import React, { Component, PropTypes, cloneElement } from 'react';
+import CloseIcon from 'ffe-icons-react/kryss-ikon';
+import texts from './locale/texts';
 
 export default class Base extends Component {
 
@@ -11,58 +10,67 @@ export default class Base extends Component {
     }
 
     close() {
-        const element = findDOMNode(this.refs.self);
+        const { onClose } = this.props;
+        const element = this.refs.self;
         element.style.height = `${element.offsetHeight}px`;
-        window.setTimeout(() => {
+        setTimeout(() => {
             element.style.height = 0;
-        }, 50);
+            onClose();
+        }, 0);
     }
 
     render() {
         const {
             children,
             icon,
-            modifier,
+            messageType,
             style,
+            header,
+            locale,
         } = this.props;
 
         return (
             <div
-                className={`ffe-system-message-wrapper ffe-system-message-wrapper--${modifier}`}
+                className={`ffe-context-message ffe-context-message--${messageType}`}
                 ref="self"
                 style={style}
             >
-                <div
-                    className={`
-                        ffe-system-message
-                        ffe-content-container
-                        ffe-content-container--lg`}
-                >
-                    <div className="ffe-system-message__icon">
-                        {icon}
+                <div className="ffe-context-message-content">
+                    <div className="ffe-context-message-content__icon">
+                        {cloneElement(icon, { className: 'ffe-context-message-content__icon-svg' })}
                     </div>
-                    <p className="ffe-system-message__content">
-                        {children}
-                    </p>
-                    <div
-                        className="ffe-system-message__close"
-                        role="button"
-                        aria-label="Lukk"
-                        tabIndex="0"
-                        onClick={this.close}
-                    >
-                        <KryssIkon />
+
+                    <div>
+                        {header && <header className="ffe-h5">{header}</header>}
+                        <div className="ffe-body-text">
+                            {children}
+                        </div>
                     </div>
                 </div>
+                <button
+                    className="ffe-context-message-content__close-button"
+                    tabIndex="0"
+                    aria-label={texts[locale].FFE_CONTEXT_MESSAGE_CLOSE}
+                    onClick={this.close}
+                >
+                    <CloseIcon className="ffe-context-message-content__close-button-svg"/>
+                </button>
             </div>
         );
     }
-
 }
 
 Base.propTypes = {
     children: PropTypes.node.isRequired,
-    icon: PropTypes.node.isRequired,
-    modifier: PropTypes.oneOf(['error', 'info', 'success', 'news']),
+    messageType: PropTypes.oneOf(['info', 'tip']).isRequired,
+    locale: PropTypes.oneOf(['nb', 'nn', 'en']),
+    icon: PropTypes.element.isRequired,
+    header: PropTypes.string,
     style: PropTypes.object,
+    onClose: PropTypes.func,
 };
+
+Base.defaultProps = {
+    locale: 'nb'
+};
+
