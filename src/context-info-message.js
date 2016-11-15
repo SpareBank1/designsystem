@@ -10,7 +10,7 @@ export default function ContextInfoMessage({ style, children, header, icon, onCl
             icon={icon}
             header={header}
             style={style}
-            onCloseed={onClose}
+            onClose={onClose}
         >
             {children}
         </Base>
