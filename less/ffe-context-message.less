@@ -1,17 +1,8 @@
-.ffe-context-message {
-  display: flex;
-  padding: 2.3em;
+.ffe-context-message-wrapper {
+
+  transition: height 0.3s;
+  overflow: hidden;
   position: relative;
-
-  transition: transform 0.3s ease-in, opacity 0.15s 0.15s;
-  transform: scaleY(1);
-  opacity: 1;
-  transform-origin: top right;
-
-  &.isClosed {
-    transform: scaleY(0);
-    opacity: 0;
-  }
 
   &--info {
     background-color: @ffe-blue-royal-light-20;
@@ -20,13 +11,30 @@
   &--tip {
     background-color: @ffe-sand;
   }
+}
+
+.ffe-context-message {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: 2.3em 2em 2.3em 2.3em;
+  text-align: left;
 
   &__icon {
-    margin-right: 2.2em;
+    display: flex;
     flex-shrink: 0;
-    width: 4em;
+    margin-right: 2.2em;
+    align-items: center;
+    justify-content: center;
+    background-color: @ffe-white;
+    border-radius: 50%;
     height: 4em;
-    fill: @ffe-blue-royal;
+    width: 4em;
+    &-svg {
+      height: 3em;
+      width: 3em;
+      fill: @ffe-blue-royal;
+    }
   }
 
   &__close-button {
@@ -34,21 +42,22 @@
     top: 1em;
     right: 1em;
     cursor: pointer;
+    color: @ffe-grey-dark;
+    fill: @ffe-grey-dark;
     border: none;
     padding: 0;
     outline: none;
     background-color: transparent;
     height: 1em;
     width: 1em;
-
     &:focus {
       outline: auto;
     }
 
     &-svg {
-      fill: @ffe-grey-dark;
       height: 100%;
       width: 100%;
     }
   }
 }
+
