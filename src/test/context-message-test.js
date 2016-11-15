@@ -43,7 +43,7 @@ describe('Test Base', () => {
     });
 
     it('does not render header', () => {
-        const header = wrapper.find('.ffe-context-message__content').find('header');
+        const header = wrapper.find('.ffe-context-message-content').find('header');
         expect(header.length).to.be(0);
     });
 
@@ -55,9 +55,9 @@ describe('Test Base', () => {
     it('closes itself after a click on the close button', done => {
         const onClickSpy = sinon.spy();
         wrapper = mount(cloneElement(element, { onClose: onClickSpy }));
-        wrapper.find('.ffe-context-message__close-button').simulate('click');
+        wrapper.find('.ffe-context-message-content__close-button').simulate('click');
         setTimeout(() => {
-            const component = wrapper.find('.ffe-context-message-wrapper');
+            const component = wrapper.find('.ffe-context-message');
             expect(component.get(0).style.getPropertyValue('height')).to.be('0px');
             expect(onClickSpy.calledOnce);
             done();
@@ -76,8 +76,8 @@ describe('Test ContextInfoMessage', () => {
     );
 
     it('creates ContextInfoMessage', () => {
-        const component = wrapper.find('.ffe-context-message-wrapper');
-        expect(component.hasClass('ffe-context-message-wrapper--info')).to.be(true);
+        const component = wrapper.find('.ffe-context-message');
+        expect(component.hasClass('ffe-context-message--info')).to.be(true);
     });
 });
 
@@ -92,7 +92,7 @@ describe('Test ContextTipMessage', () => {
     );
 
     it('creates ContextInfoMessage', () => {
-        const component = wrapper.find('.ffe-context-message-wrapper');
-        expect(component.hasClass('ffe-context-message-wrapper--tip')).to.be(true);
+        const component = wrapper.find('.ffe-context-message');
+        expect(component.hasClass('ffe-context-message--tip')).to.be(true);
     });
 });

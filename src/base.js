@@ -31,13 +31,13 @@ export default class Base extends Component {
 
         return (
             <div
-                className={`ffe-context-message-wrapper ffe-context-message-wrapper--${messageType}`}
+                className={`ffe-context-message ffe-context-message--${messageType}`}
                 ref="self"
                 style={style}
             >
-                <div className="ffe-context-message">
-                    <div className="ffe-context-message__icon">
-                        {cloneElement(icon, { className: 'ffe-context-message__icon-svg' })}
+                <div className="ffe-context-message-content">
+                    <div className="ffe-context-message-content__icon">
+                        {cloneElement(icon, { className: 'ffe-context-message-content__icon-svg' })}
                     </div>
 
                     <div>
@@ -48,12 +48,12 @@ export default class Base extends Component {
                     </div>
                 </div>
                 <button
-                    className="ffe-context-message__close-button"
+                    className="ffe-context-message-content__close-button"
                     tabIndex="0"
                     aria-label={texts[locale].FFE_CONTEXT_MESSAGE_CLOSE}
                     onClick={this.close}
                 >
-                    <CloseIcon className="ffe-context-message__close-button-svg"/>
+                    <CloseIcon className="ffe-context-message-content__close-button-svg"/>
                 </button>
             </div>
         );
@@ -71,6 +71,6 @@ Base.propTypes = {
 };
 
 Base.defaultProps = {
-    locale : 'nb'
+    locale: 'nb'
 };
 

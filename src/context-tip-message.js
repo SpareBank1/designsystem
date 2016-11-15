@@ -19,7 +19,7 @@ export default function ContextInfoMessage({ style, children, header, icon, onCl
 
 ContextInfoMessage.propTypes = {
     children: PropTypes.node.isRequired,
-    locale : PropTypes.oneOf(['nb', 'ny', 'en']).isRequired,
+    locale : PropTypes.oneOf(['nb', 'nb', 'en']).isRequired,
     header: PropTypes.string,
     style: PropTypes.object,
     onClose: PropTypes.func,
