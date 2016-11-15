@@ -4,29 +4,31 @@
 }
 
 .ffe-dropdown {
-    padding: 0 32px 0 10px;
-    height: 44px;
-    color: @ffe-blue-royal-light-wcag;
-    border: 2px solid @ffe-grey-light;
-    box-shadow: 0 1px 1px 0 @ffe-grey-light-bg;
-    .ffe-chevron-icon-with-color();
     background-color: @ffe-white;
     background-size: 18px 18px;
     background-repeat: no-repeat;
     background-position: ~"calc(100% - 9px) 50%";
-    line-height: 20px;
-    font-size: 18px;
+    border: 2px solid @ffe-grey-light;
     border-radius: 4px;
-    font-family: MuseoSans-300,arial,sans-serif;
-    width: 100%;
+    box-shadow: 0 1px 1px 0 @ffe-grey-light-bg;
+    color: @ffe-blue-royal-light-wcag;
+    display: block;
+    .ffe-chevron-icon-with-color();
+    font-family: MuseoSans-300, arial, sans-serif;
+    font-size: 18px;
+    height: 44px;
+    padding: 0 32px 0 10px;
+    line-height: 20px;
     min-width: 175px;
     transition: all 0.15s ease-in-out;
-    display: block;
+    width: 100%;
 
     &:hover {
         border-color: @ffe-blue-royal-light-wcag;
     }
-    &:focus, &:active {
+
+    &:focus,
+    &:active {
         border-color: @ffe-blue-royal-light-wcag;
         box-shadow: 0 0 0 2px @ffe-blue-focus;
         outline: none;
@@ -43,7 +45,10 @@
 
     &[aria-invalid="true"] {
         .ffe-chevron-icon-with-color(@ffe-orange-wcag);
-        &:hover, &:focus, &:active {
+
+        &:hover,
+        &:focus,
+        &:active {
             border-color: @ffe-orange-wcag;
         }
 
@@ -54,7 +59,11 @@
     }
 
     &--inline {
-        width: auto;
         display: inline-block;
+        width: auto;
+    }
+
+    &--small {
+        min-width: auto;
     }
 }
