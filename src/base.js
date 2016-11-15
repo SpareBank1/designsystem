@@ -6,6 +6,7 @@ export default class Base extends Component {
 
     constructor(props) {
         super(props);
+        this.state = { hidden: false };
         this.close = this.close.bind(this);
     }
 
@@ -14,8 +15,10 @@ export default class Base extends Component {
         const element = this.refs.self;
         element.style.height = `${element.offsetHeight}px`;
         setTimeout(() => {
-            element.style.height = 0;
-            onClose();
+            this.setState({ hidden: true }, () => {
+                element.style.height = 0;
+                onClose();
+            });
         }, 0);
     }
 
@@ -28,11 +31,12 @@ export default class Base extends Component {
             header,
             locale,
         } = this.props;
-
+        const { hidden } = this.state;
         return (
             <div
                 className={`ffe-context-message ffe-context-message--${messageType}`}
                 ref="self"
+                aria-hidden={hidden}
                 style={style}
             >
                 <div className="ffe-context-message-content">

@@ -56,9 +56,11 @@ describe('Test Base', () => {
         const onClickSpy = sinon.spy();
         wrapper = mount(cloneElement(element, { onClose: onClickSpy }));
         wrapper.find('.ffe-context-message-content__close-button').simulate('click');
+        const component = wrapper.find('.ffe-context-message');
+        expect(component.props()['aria-hidden']).to.be(false);
         setTimeout(() => {
-            const component = wrapper.find('.ffe-context-message');
             expect(component.get(0).style.getPropertyValue('height')).to.be('0px');
+            expect(component.props()['aria-hidden']).to.be(true);
             expect(onClickSpy.calledOnce);
             done();
         }, 100);
