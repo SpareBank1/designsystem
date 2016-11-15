@@ -1,11 +1,12 @@
 {
-  "name": "ffe-system-message-react",
-  "version": "1.1.0",
+  "name": "ffe-context-message-react",
+  "version": "1.0.0",
   "description": "SpareBank 1 System Message komponent",
   "main": "lib/index.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=src/test/ src/. && npm run example",
     "dev": "npm run ffe:fonts && hjs-dev-server",
+    "watch" : "npm run dev",
     "example": "babel-node example/create-example.js > example.html",
     "ffe:fonts": "mkdirp dev/ffe/fonts && cp node_modules/ffe-core/fonts/* dev/ffe/fonts",
     "lint": "eslint src/",
@@ -14,21 +15,17 @@
     "tdd": "npm test -- --watch",
     "validate": "npm ls",
     "postpublish": "git tag ${npm_package_version} && git push --tags",
-    "has-published": "npm show . versions -s | grep -q ${npm_package_version}"
+    "has-published": "npm show . versions -s --json | grep -q ${npm_package_version}"
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git@stash.intern.sparebank1.no:22/ffe/ffe-system-message-react.git"
+    "url": "ssh://git@stash.intern.sparebank1.no:22/ffe/ffe-context-message-react.git"
   },
   "author": "SpareBank 1",
-  "pre-commit": [
-    "lint",
-    "test"
-  ],
   "peerDependencies": {
-    "ffe-core": "^8.1.0",
+    "ffe-core": "^8.1.2",
     "ffe-icons-react": "^2.1.0",
-    "ffe-system-message": "^1.0.0"
+    "ffe-context-message": "^1.0.2"
   },
   "devDependencies": {
     "babel-cli": "^6.10.1",
@@ -41,14 +38,14 @@
     "css-loader": "^0.23.1",
     "enzyme": "^2.3.0",
     "eslint": "^2.13.1",
-    "eslint-config-airbnb": "^9.0.1",
+    "eslint-config-ffe": "^5.0.1",
     "eslint-plugin-import": "^1.10.0",
     "eslint-plugin-jsx-a11y": "^1.5.3",
-    "eslint-plugin-react": "^5.2.2",
+    "eslint-plugin-react": "^6.6.0",
     "expect.js": "^0.3.1",
-    "ffe-core": "^8.1.0",
+    "ffe-context-message": "^1.0.2",
+    "ffe-core": "^8.1.2",
     "ffe-icons-react": "^2.1.0",
-    "ffe-system-message": "^1.0.0",
     "hjs-webpack": "^8.3.0",
     "jsdom": "^9.4.0",
     "less": "^2.7.1",
@@ -60,6 +57,7 @@
     "react": "^15.1.0",
     "react-addons-test-utils": "^15.1.0",
     "react-dom": "^15.1.0",
+    "sinon": "^1.17.6",
     "style-loader": "^0.13.1"
   },
   "publishConfig": {
@@ -69,5 +67,10 @@
     "lib",
     "example.html",
     "*.js"
+  ],
+  "pre-commit": [
+    "lint",
+    "validate",
+    "test"
   ]
 }
