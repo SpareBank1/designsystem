@@ -33,7 +33,7 @@ import { ContextInfoMessage, ContextTipMessage } from 'ffe-context-message-react
 ### Props
 ```javascript
 children: Content in the message. Required,
-locale : One of 'nb', 'ny' or 'en'. Required,
+locale : One of 'nb', 'ny' or 'en', Default value 'nb',
 header : Content header,
 icon : FFEIcon. A white background circle will automatically be set for the icon passed,
 style: Style object, overrides the styles of the outermost container,
