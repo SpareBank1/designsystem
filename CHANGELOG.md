@@ -1,5 +1,8 @@
 # Changelog
 
+## 6.2.0
+* Added mynter-to-stabler-pluss.svg
+
 ## 6.1.1
 * Update design on faks-printer-solid-ikon [FFE-90](https://jira.intern.sparebank1.no/browse/FFE-90)
 
