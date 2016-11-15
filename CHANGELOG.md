@@ -1,7 +1,10 @@
 # Changelog
 
+## v3.1.0
+* Added class `.ffe-dropdown--small` to support narrow dropdowns.
+
 ## v3.0.1
-* Added padding for large text to checkbox label
+* Added padding for large text to checkbox
 
 ## v3.0.0
 * **Potentially breaking change:** Responsive implementation of ffe-input-field and ffe-dropdown.
