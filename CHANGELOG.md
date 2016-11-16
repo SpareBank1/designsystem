@@ -1,8 +1,13 @@
 # CHANGELOG
 
-## Version 1.0.1
+## 1.0.2
+* Added showCloseButton prop. Defaults to true.
+* Removed default Icon. Icon is hidden if not provided.
+* Bugfix: removed required validation for locale.
+
+## 1.0.1
 * Bugfix: invalid prop name
 
-## Version 1.0.0
+## 1.0.0
 First version
 
