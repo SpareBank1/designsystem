@@ -1,5 +1,8 @@
 # Changelog
 
+## v2.2.0
+* Added ffe-back-button
+
 ## v2.1.4
 * Updated design of ffe-tertiary-button
 
