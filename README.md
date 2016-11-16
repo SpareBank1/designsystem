@@ -18,6 +18,7 @@ descriptive alias components:
 * `SecondaryButton`
 * `ShortcutButton`
 * `TertiaryButton`
+* `BackButton`
 
 If no `buttonType` property is given to `Button` it defaults to `primary`.
 
@@ -43,6 +44,7 @@ There are components available for all the button types
 <SecondaryButton onClick={clickHandler}>...</SecondaryButton>
 <ShortcutButton onClick={clickHandler}>...</ShortcutButton>
 <TertiaryButton onClick={clickHandler}>...</TertiaryButton>
+<BackButton onClick={clickHandler}>...</BackButton>
 ```
 
 If you want, you can use Button directly, but you must provide the `buttonType`
