@@ -1,5 +1,8 @@
 # Changelog
 
+## v4.3.0
+* Added back button
+
 ## v4.2.0
 * Added support for autoFocus (native React prop)
 
