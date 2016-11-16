@@ -17,8 +17,7 @@ describe('Test Base', () => {
         element = (
             <Base
                 messageType="tip"
-                locale='nb'
-                icon={<InfoCircleIcon />}
+                showCloseButton={true}
             >
                 <p>content</p>
             </Base>
@@ -42,7 +41,7 @@ describe('Test Base', () => {
         expect(headerComponent.text()).to.be(header);
     });
 
-    it('does not render header', () => {
+    it('renders without header', () => {
         const header = wrapper.find('.ffe-context-message-content').find('header');
         expect(header.length).to.be(0);
     });
@@ -52,7 +51,19 @@ describe('Test Base', () => {
         expect(component.props().style.marginTop).to.be('40px');
     });
 
-    it('closes itself after a click on the close button', done => {
+    it('renders with context icon', done => {
+        wrapper = mount(cloneElement(element, { icon: <InfoCircleIcon /> }));
+        expect(wrapper.find('.ffe-context-message-content__icon-svg').length).to.be(1);
+        done();
+    });
+
+    it('renders without close button', done => {
+        wrapper = mount(cloneElement(element, { showCloseButton: false }));
+        expect(wrapper.find('.ffe-context-message-content__close-button-svg').isEmpty()).to.be(true);
+        done();
+    });
+
+    it('closes itself on close click', done => {
         const onClickSpy = sinon.spy();
         wrapper = mount(cloneElement(element, { onClose: onClickSpy }));
         wrapper.find('.ffe-context-message-content__close-button').simulate('click');
@@ -71,13 +82,13 @@ describe('Test ContextInfoMessage', () => {
     const wrapper = mount(
         <ContextInfoMessage
             icon={<InfoCircleIcon />}
-            locale='nb'
+            showCloseButton={true}
         >
             <p>content</p>
         </ContextInfoMessage>
     );
 
-    it('creates ContextInfoMessage', () => {
+    it('renders ContextInfoMessage', () => {
         const component = wrapper.find('.ffe-context-message');
         expect(component.hasClass('ffe-context-message--info')).to.be(true);
     });
@@ -87,13 +98,13 @@ describe('Test ContextTipMessage', () => {
     const wrapper = mount(
         <ContextTipMessage
             icon={<InfoCircleIcon />}
-            locale='nb'
+            showCloseButton={true}
         >
             <p>content</p>
         </ContextTipMessage>
     );
 
-    it('creates ContextInfoMessage', () => {
+    it('renders ContextInfoMessage', () => {
         const component = wrapper.find('.ffe-context-message');
         expect(component.hasClass('ffe-context-message--tip')).to.be(true);
     });
