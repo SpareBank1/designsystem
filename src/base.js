@@ -22,6 +22,15 @@ export default class Base extends Component {
         }, 0);
     }
 
+    renderIcon() {
+        const {icon} = this.props;
+        return (
+            <div className="ffe-context-message-content__icon">
+                {cloneElement(icon, { className: 'ffe-context-message-content__icon-svg' })}
+            </div>
+        );
+    }
+
     render() {
         const {
             children,
@@ -30,6 +39,7 @@ export default class Base extends Component {
             style,
             header,
             locale,
+            showCloseButton
         } = this.props;
         const { hidden } = this.state;
         return (
@@ -40,9 +50,7 @@ export default class Base extends Component {
                 style={style}
             >
                 <div className="ffe-context-message-content">
-                    <div className="ffe-context-message-content__icon">
-                        {cloneElement(icon, { className: 'ffe-context-message-content__icon-svg' })}
-                    </div>
+                    {icon && this.renderIcon()}
 
                     <div>
                         {header && <header className="ffe-h5">{header}</header>}
@@ -57,7 +65,7 @@ export default class Base extends Component {
                     aria-label={texts[locale].FFE_CONTEXT_MESSAGE_CLOSE}
                     onClick={this.close}
                 >
-                    <CloseIcon className="ffe-context-message-content__close-button-svg"/>
+                    {showCloseButton && <CloseIcon className="ffe-context-message-content__close-button-svg"/>}
                 </button>
             </div>
         );
@@ -67,14 +75,17 @@ export default class Base extends Component {
 Base.propTypes = {
     children: PropTypes.node.isRequired,
     messageType: PropTypes.oneOf(['info', 'tip']).isRequired,
+    showCloseButton: PropTypes.bool.isRequired,
     locale: PropTypes.oneOf(['nb', 'nn', 'en']),
-    icon: PropTypes.element.isRequired,
+    icon: PropTypes.element,
     header: PropTypes.string,
     style: PropTypes.object,
     onClose: PropTypes.func,
 };
 
 Base.defaultProps = {
-    locale: 'nb'
+    locale: 'nb',
+    onClose: () => {
+    }
 };
 

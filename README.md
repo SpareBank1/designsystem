@@ -23,6 +23,8 @@ import { ContextInfoMessage, ContextTipMessage } from 'ffe-context-message-react
         icon={<ThumbUpIcon />}  
         style={{width : '50%'}}
         onClose={ () => {} }
+        showCloseButton={false}
+        locale='en'
     >
     <p>
        Info about something interesting
@@ -32,12 +34,13 @@ import { ContextInfoMessage, ContextTipMessage } from 'ffe-context-message-react
 
 ### Props
 ```javascript
-children: Content in the message. Required,
-locale : One of 'nb', 'ny' or 'en', Default value 'nb',
+children : Content in the message. Required,
+showCloseButton : Boolean. Required.
+locale : One of 'nb', 'ny' or 'en'. Default value 'nb',
 header : Content header,
 icon : FFEIcon. A white background circle will automatically be set for the icon passed,
-style: Style object, overrides the styles of the outermost container,
-onClose: Callback that is called on close click,
+style: Style object, sets styles of the outermost container,
+onClose : Callback that is called on close click,
 ```
 
 ## Examples
