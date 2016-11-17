@@ -1,6 +1,6 @@
 {
   "name": "ffe-context-message-react",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "SpareBank 1 System Message komponent",
   "main": "lib/index.js",
   "scripts": {
