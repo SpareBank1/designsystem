@@ -1,5 +1,8 @@
 # Changelog
 
+## v3.1.1
+* Adjusted the height of ffe-dropdown to match the height of ffe-input-field.
+
 ## v3.1.0
 * Added class `.ffe-dropdown--small` to support narrow dropdowns.
 
