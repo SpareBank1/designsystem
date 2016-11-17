@@ -56,6 +56,7 @@ class BaseSelector extends Component {
     const {inputValue} = this.state;
     this.setState({
       filteredItems: this.filterItems(props.items, inputValue),
+      selectedItems: props.selectedItems
     });
   }
 
@@ -104,6 +105,7 @@ class BaseSelector extends Component {
         showItemSuggestions: false,
       });
       this.removeGlobalEventListeners();
+      this.onBlur();
     }
   }
 
@@ -333,7 +335,7 @@ class BaseSelector extends Component {
       inputValue: '',
       filteredItems: this.filterItems(this.props.items, ''),
       highlightedItem: -1
-    });
+    }, () => this.props.onMultiSelectDone(this.state.selectedItems));
   }
 
   render() {

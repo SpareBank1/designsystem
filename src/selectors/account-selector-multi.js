@@ -37,6 +37,7 @@ class AccountSelectorMulti extends React.Component {
           multiSelect={true}
           selectedItems={this.props.selectedAccounts}
           renderMultiselectStatus={this.props.renderMultiselectStatus}
+          onMultiSelectDone={this.props.onMultiSelectDone}
         />
       </div>
     );
@@ -57,7 +58,8 @@ AccountSelectorMulti.propTypes = {
   ariaInvalid: PropTypes.bool,
   noMatches: PropTypes.string,
   renderMultiselectStatus: PropTypes.func.isRequired,
-  renderItemRow: PropTypes.func
+  renderItemRow: PropTypes.func,
+  onMultiSelectDone: PropTypes.func
 };
 
 AccountSelectorMulti.defaultProps = {
@@ -69,7 +71,8 @@ AccountSelectorMulti.defaultProps = {
   onAccountSelected: () => {},
   onBlur: () => {},
   onFocus: () => {},
-  onChange: () => {}
+  onChange: () => {},
+  onMultiSelectDone: () => {}
 };
 
 export default AccountSelectorMulti;
