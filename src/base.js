@@ -1,6 +1,7 @@
 import React, { Component, PropTypes, cloneElement } from 'react';
 import CloseIcon from 'ffe-icons-react/kryss-ikon';
 import texts from './locale/texts';
+import acceptedLocales from './locale/accepted-locales';
 
 export default class Base extends Component {
 
@@ -59,14 +60,15 @@ export default class Base extends Component {
                         </div>
                     </div>
                 </div>
+                { showCloseButton &&
                 <button
                     className="ffe-context-message-content__close-button"
                     tabIndex="0"
                     aria-label={texts[locale].FFE_CONTEXT_MESSAGE_CLOSE}
                     onClick={this.close}
                 >
-                    {showCloseButton && <CloseIcon className="ffe-context-message-content__close-button-svg"/>}
-                </button>
+                    <CloseIcon className="ffe-context-message-content__close-button-svg"/>
+                </button> }
             </div>
         );
     }
@@ -76,7 +78,7 @@ Base.propTypes = {
     children: PropTypes.node.isRequired,
     messageType: PropTypes.oneOf(['info', 'tip']).isRequired,
     showCloseButton: PropTypes.bool.isRequired,
-    locale: PropTypes.oneOf(['nb', 'nn', 'en']),
+    locale: PropTypes.oneOf(acceptedLocales),
     icon: PropTypes.element,
     header: PropTypes.string,
     style: PropTypes.object,

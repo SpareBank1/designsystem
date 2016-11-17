@@ -26,6 +26,7 @@ const example = (
             <ContextInfoMessage
                 header='Info'
                 locale='nb'
+                showCloseButton={true}
             >
                 Info om en spennede side eller produkt.
             </ContextInfoMessage>
@@ -37,6 +38,7 @@ const example = (
                 header='Tips'
                 locale='nb'
                 icon={<ThumbUpIcon />}
+                showCloseButton={true}
             >
                 Tips om en spenndee side eller produkt.
             </ContextTipMessage>
@@ -53,6 +55,7 @@ const example = (
                                 <ContextInfoMessage
                                     header='Info'
                                     locale='nb'
+                                    showCloseButton={true}
                                 >
                                     Info om en spennede side eller produkt.
                                 </ContextInfoMessage>
