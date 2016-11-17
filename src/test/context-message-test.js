@@ -60,6 +60,7 @@ describe('Test Base', () => {
     it('renders without close button', done => {
         wrapper = mount(cloneElement(element, { showCloseButton: false }));
         expect(wrapper.find('.ffe-context-message-content__close-button-svg').isEmpty()).to.be(true);
+        expect(wrapper.find('.ffe-context-message-content__close-button').isEmpty()).to.be(true);
         done();
     });
 

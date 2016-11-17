@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import Base from './base';
+import acceptedLocales from './locale/accepted-locales';
 
 export default function ContextInfoMessage({ style, children, header, icon, onClose, locale, showCloseButton }) {
     return (
@@ -20,7 +21,7 @@ export default function ContextInfoMessage({ style, children, header, icon, onCl
 ContextInfoMessage.propTypes = {
     children: PropTypes.node.isRequired,
     showCloseButton : PropTypes.bool.isRequired,
-    locale : PropTypes.oneOf(['nb', 'nb', 'en']),
+    locale : PropTypes.oneOf(acceptedLocales),
     header: PropTypes.string,
     style: PropTypes.object,
     onClose: PropTypes.func,
