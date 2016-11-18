@@ -1,0 +1,62 @@
+{
+  "name": "ffe-tables-react",
+  "version": "0.1.0",
+  "description": "React implementation of ffe-tables",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel -d lib/. --ignore=*.test.js src/.",
+    "watch": "onchange 'src/**/*.js' -- npm run build",
+    "pretest": "eslint src/.",
+    "test": "mocha --require babel-register 'src/**/*.test.js'",
+    "posttest": "nsp check",
+    "start": "budo examples/tables.js --open --live --title \"FFE Tables React\" -- -t [ babelify --presets [ es2015 react ] ] -t node-lessify",
+    "test:watch": "npm test -- -w",
+    "prepublish": "npm run build",
+    "has-published": "npm show . versions -s | grep -q ${npm_package_version}",
+    "postpublish": "git tag ${npm_package_version} && git push --tags"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.4.5",
+    "babel-eslint": "^6.0.4",
+    "babel-preset-es2015": "^6.6.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-register": "^6.4.3",
+    "babelify": "^7.2.0",
+    "budo": "^9.2.1",
+    "chai": "^3.5.0",
+    "enzyme": "^2.3.0",
+    "eslint": "^2.8.0",
+    "eslint-config-ffe": "^5.0.0",
+    "eslint-plugin-import": "^1.5.0",
+    "eslint-plugin-jsx-a11y": "^1.0.2",
+    "eslint-plugin-react": "^6.0.0",
+    "ffe-core": "^8.1.2",
+    "mocha": "^2.5.3",
+    "node-lessify": "^0.1.4",
+    "nsp": "^2.2.0",
+    "onchange": "^2.3.0",
+    "react": "^15.0.1",
+    "react-addons-test-utils": "^15.1.0",
+    "react-dom": "^15.0.1"
+  },
+  "publishConfig": {
+    "registry": "***REMOVED***"
+  },
+  "files": [
+    "lib",
+    "*.js"
+  ],
+  "babel": {
+    "presets": [
+      "es2015",
+      "react"
+    ]
+  },
+  "peerDependencies": {
+    "ffe-core": "^8.1.2",
+    "ffe-tables": "^2.0.0"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5"
+  }
+}
