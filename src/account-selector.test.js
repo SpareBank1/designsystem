@@ -19,14 +19,22 @@ const assert = require('chai').assert;
 const mount = require('enzyme').mount;
 
 const accounts = [
-  { name: 'Matvarerkonto', accountNumber: '42011841044', balance: 24566546.21 },
-  { name: 'Sparekonto', accountNumber: '42011841045', balance: 124566546.21 }
+  { id: 1, name: 'Matvarerkonto', accountNumber: '42011841044', balance: 24566546.21 },
+  { id: 2, name: 'Sparekonto', accountNumber: '42011841045', balance: 124566546.21 }
 ];
 const noMatches = 'Ingen treff';
 
 describe('<AccountSelector>', () => {
   it('should show match when match is found', () => {
-    const el = <AccountSelector accounts={ accounts } onChange={ () => {} } noMatches={ noMatches } value="Spare" id="custom-id1" />;
+    const el =
+      <AccountSelector
+        accounts={ accounts }
+        onChange={ () => {} }
+        noMatches={ noMatches }
+        value="Spare"
+        id="custom-id1"
+        onAccountSelected={ () => {} }
+      />;
     const wrapper = mount(el);
     wrapper.find('input').simulate('focus');
 
@@ -37,7 +45,14 @@ describe('<AccountSelector>', () => {
   });
 
   it('should show all accounts when nothing is searched for', () => {
-    const el = <AccountSelector accounts={ accounts } onChange={ () => {} } noMatches={ noMatches } id="custom-id2" />;
+    const el =
+      <AccountSelector
+        accounts={ accounts }
+        onChange={ () => {} }
+        noMatches={ noMatches }
+        id="custom-id2"
+        onAccountSelected={ () => {} }
+      />;
     const wrapper = mount(el);
     wrapper.find('input').simulate('focus');
 
@@ -45,7 +60,15 @@ describe('<AccountSelector>', () => {
   });
 
   it('should show no matches when no matches are found', () => {
-    const el = <AccountSelector accounts={ accounts } onChange={ () => {} } noMatches={ noMatches } value="Trololol" id="custom-id3" />;
+    const el =
+      <AccountSelector
+        accounts={ accounts }
+        onChange={ () => {} }
+        noMatches={ noMatches }
+        value="Trololol"
+        id="custom-id3"
+        onAccountSelected={ () => {} }
+      />;
     const wrapper = mount(el);
     wrapper.find('input').simulate('focus');
 
@@ -54,7 +77,15 @@ describe('<AccountSelector>', () => {
   });
 
   it('should reset when reset is called', () => {
-    const el = <AccountSelector accounts={ accounts } onChange={ () => {} } noMatches={ noMatches } value="Sparekonto" id="custom-id1" />;
+    const el =
+      <AccountSelector
+        accounts={ accounts }
+        onChange={ () => {} }
+        noMatches={ noMatches }
+        value="Sparekonto"
+        id="custom-id1"
+        onAccountSelected={ () => {} }
+      />;
     const wrapper = mount(el);
     wrapper.find('button').simulate('click');
 

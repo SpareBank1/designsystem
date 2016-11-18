@@ -7,32 +7,38 @@
     padding: 0;
     margin: 0;
     border-top: 1px solid @ffe-grey-light;
+    background: @ffe-white;
 
     &:first-child {
       border-top: none;
+    }
+
+    &:hover,
+    &:focus,
+    &--highlighted {
+      cursor: pointer;
+      background: @ffe-blue-royal-light-wcag;
+      color: @ffe-white;
+
+      .nfe-account-suggestions__name,
+      .nfe-account-suggestions__details {
+        color: @ffe-white;
+      }
     }
   }
 
   &__empty {
     padding: 16px 16px 8px 21px;
-    background: #fff;
+    background: @ffe-white;
   }
 
   &__account {
     padding: 8px 16px 8px 21px;
-    background: #fff;
+  }
 
-    &:hover,
-    &:focus,
-    &--highligted {
-      cursor: pointer;
-      background: @ffe-blue-royal-light-wcag;
-
-      .nfe-account-suggestions__name,
-      .nfe-account-suggestions__details {
-        color: #fff;
-      }
-    }
+  &__account--multi {
+    padding: 8px 16px 8px 10px;
+    overflow: hidden;
   }
 
   &__name {
@@ -55,5 +61,20 @@
 
   &__balance {
     float: right;
+  }
+
+  &__checkbox {
+    float: left;
+    width: 10%;
+  }
+
+  &__content-wrapper {
+    float: right;
+    width: 88%;
+  }
+
+  .ffe-checkbox {
+    margin: 0;
+    top: -3px;
   }
 }
