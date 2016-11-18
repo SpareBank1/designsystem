@@ -1,4 +1,9 @@
-#Changelog
+# Changelog
+
+# v3.0.0
+* Major underlying change in structure of code.
+* Add ability to more easily create custom selectors
+* Add a new multi-account selector
 
 # v2.1.6
 * Added support for ffe-form version 2.x.x and 3.x.x

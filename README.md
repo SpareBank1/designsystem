@@ -1,6 +1,10 @@
 # nfe-account-selector-react
 
-A React account selector with autocomplete in ffe styling.
+A combobox with autocomplete.
+This package consists of a base selector which can be wrapped to provide more specific features.
+Out of the box there are 2 selectors provided.
+1. account-selector (single account select). This was the default selector until 3.x release.
+2. account-selector-multi (multiple account select)
 
 ## Install
 
@@ -11,7 +15,30 @@ $ npm install --save nfe-account-selector-react
 `nfe-account-selector-react` depends on `ffe-core` and `ffe-form` being present and imported in your project.
 More specifically, the CSS classes related to dropdowns in those packages should be in your CSS Object Model when using this component.
 
-## Usage
+You must also import the styles
+```css
+@import "node_modules/nfe-account-selector-react/styles/account-selector.less";
+```
+
+## Upgrading from 2.x to 3.x
+There are some major changes in 3.x and so, the API has changed, but just a little bit.
+
+__accounts__
+The account objects in the accounts array must contain a unique key "id". This could be the account number.
+
+__onAccountSelected__
+Called with the selected account object as parameter instead of the account number.
+
+__onBlur__
+Called with 2 parameters. The first is the selected account object or null if none is selected.
+The second parameter is the input field value, e.g a user typed value or the selected account name.
+
+__onChange__
+Called with the input fields current value. It will no longer be called with the selected accounts account number.
+
+
+## Usage AccountSelector
+The AccountSelector is the default export of the package
 
 ```javascript
 import AccountSelector from 'nfe-account-selector-react';
@@ -19,7 +46,7 @@ import AccountSelector from 'nfe-account-selector-react';
 const accounts = [
 {
     name: 'Tax account',
-    accountNumber: '12345678912',
+    id: '12345678912',
     balance: 66546.99,
     currencyCode: 'USD',
   },
@@ -40,23 +67,46 @@ const accounts = [
     value={ value ? getAccount(accounts, value).name : '' }
 />
 ```
-- accounts: Array of account objects where only "name" is a required prop.
-- onChange: callback who will receive a string value with either the users typed value or the account number for the account the user selected.
-- onAccountSelected: callback who will receive a string value with the account number when a valid account from accounts is selected, or null when field is reset by user.
-- onBlur: same as onChange, but called when the component looses focus.
-- onFocus: called when the component gains focus
-- locale: Either "nb", "nn" or "en". Defaults to "nb" if not set.
-- placeholder (optional): Set the placeholder attribute of the input field.
-- noMatches (optional): String to be shown below the input field if the input doesn't match any accounts
-- id (optional): Set the id attribute of the input field so a label can be associated with the field.
-- ariaInvalid: signifies validation errors.
-- selectedAccount: Sets the selected account number and balance under the selector box when for example navigating from summary page back to registration page.
-- value: Sets the selected value in the selector box when for example navigating from summary page back to registration page.
 
-You must also import the styles
-```css
-@import "node_modules/nfe-account-selector-react/styles/account-selector.less";
-```
+### Props API
+
+__accounts (required)__
+Array of account objects where only "name" and "id" is required props.
+
+__onAccountSelected (required)__
+callback who will receive the selected account object or null if selection is reset/removed.
+
+__onChange__
+callback who will receive a string value with the input fields current value
+
+__onBlur__
+callback with 2 parameters. The first is the selected account object or null if none is selected.
+The second parameter is the input fields current value.
+
+__onFocus__
+called when the component gains focus
+
+__locale__
+Either "nb", "nn" or "en". Defaults to "nb" if not set.
+
+__placeholder__
+Set the placeholder attribute of the input field.
+
+__noMatches__
+String to be shown in the dropdown when input value doesn't match any of the accounts
+
+__id__
+The id attribute of the input field.
+
+__ariaInvalid__
+Mark input field as invalid. Defaults to false.
+
+__selectedAccount__
+Set the selected account object. Input field will be set with the correct value.
+
+__value__
+Sets the input field value.
+
 
 ## Reset Account Selector from parent component
 
@@ -79,4 +129,8 @@ class Parent extends Component {
 ## Example
 
 To view live example `npm start`
+
+## Creating a custom selector
+It's possible to create a custom selector by writing a wrapper around the BaseSelector.
+
 

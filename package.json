@@ -1,11 +1,11 @@
 {
   "name": "nfe-account-selector-react",
-  "version": "2.1.6",
+  "version": "3.0.0",
   "main": "lib/account-selector.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/.",
     "lint": "eslint src/.",
-    "start": "budo examples/account-selector.js --open --live --title \"Account Selector\" -- -t [ babelify --presets [ es2015 react ] ] -t node-lessify",
+    "start": "budo examples/index.js --open --live --title \"Account Selector\" -- -t [ babelify --presets [ es2015 react ] ] -t node-lessify",
     "pretest": "eslint src/.",
     "test": "mocha --require babel-register 'src/**/*.test.js'",
     "posttest": "nsp check",
@@ -28,17 +28,22 @@
     "eslint-config-ffe": "^2.0.0",
     "eslint-plugin-import": "^1.8.1",
     "eslint-plugin-react": "^5.2.2",
+    "ffe-buttons": "^2.1.2",
     "ffe-core": "^8.0.2",
-    "jsdom": "^9.5.0",
+    "ffe-form": "1.x || 2.x || 3.x",
+    "ffe-icons": "^6.1.0",
+    "jsdom": "^9.8.3",
     "mocha": "^2.4.5",
     "mocha-tap13": "^1.0.4",
     "node-lessify": "^0.1.4",
     "nsp": "^2.2.0",
     "react": "^15.2.0",
     "react-addons-test-utils": "^15.2.0",
-    "react-dom": "^15.2.0"
+    "react-dom": "^15.2.0",
+    "sinon": "^1.17.6"
   },
   "peerDependencies": {
+    "ffe-buttons": "^2.1.2",
     "ffe-core": "^8.0.2",
     "ffe-form": "1.x || 2.x || 3.x",
     "react": "^15.2.0"
@@ -67,8 +72,11 @@
     ]
   },
   "dependencies": {
+    "classnames": "^2.2.5",
+    "ffe-checkbox-react": "^2.2.1",
     "ffe-icons-react": "0.4.2",
-    "nfe-amount-formatter": "^1.1.0",
+    "nfe-amount-formatter": "^2.0.1",
+    "nfe-if": "^2.0.1",
     "react-scrollbar": "0.4.1"
   }
 }
