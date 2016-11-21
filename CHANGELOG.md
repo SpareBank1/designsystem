@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 2.0.2
+* Less margin between header and body text
+
 ## 2.0.1
 * Bugfix: close button is now properly removed when showCloseButton is true
 * Bugfix: context-tip-message now accepts `nn` as locale
