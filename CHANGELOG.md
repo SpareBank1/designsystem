@@ -1,5 +1,8 @@
 # Changelog
 
+## v2.3.0
+* Add compact variant of action, primary, secondary, tertiary and shortcut button (modifier `--condensed`).
+
 ## v2.2.0
 * Added ffe-back-button
 
