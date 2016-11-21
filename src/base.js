@@ -54,7 +54,7 @@ export default class Base extends Component {
                     {icon && this.renderIcon()}
 
                     <div>
-                        {header && <header className="ffe-h5">{header}</header>}
+                        {header && <header className="ffe-context-message-content__header">{header}</header>}
                         <div className="ffe-body-text">
                             {children}
                         </div>
