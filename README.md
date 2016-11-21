@@ -36,7 +36,7 @@ import { ContextInfoMessage, ContextTipMessage } from 'ffe-context-message-react
 ```javascript
 children : Content in the message. Required,
 showCloseButton : Boolean. Required.
-locale : One of 'nb', 'no_NO', 'nn', 'no_NO_NY' or 'en'. Default value 'nb',
+locale : One of 'nb', 'nn' or 'en'. Default value 'nb',
 header : Content header,
 icon : FFEIcon. A white background circle will automatically be set for the icon passed,
 style: Style object, sets styles of the outermost container,
