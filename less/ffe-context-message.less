@@ -4,10 +4,6 @@
   overflow: hidden;
   position: relative;
 
-  header {
-    margin-bottom: 5px;
-  }
-
   &--info {
     background-color: @ffe-blue-royal-light-20;
   }
@@ -23,6 +19,11 @@
   flex-wrap: nowrap;
   padding: 2.3em 2em 2.3em 2.3em;
   text-align: left;
+
+  &__header {
+    &:extend(.ffe-h5);
+    margin-bottom: 0.28em;
+  }
 
   &__icon {
     display: flex;
