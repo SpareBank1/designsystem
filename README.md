@@ -20,6 +20,8 @@ ffe-tabs brukes på samme måte som ffe-core. Importer `ffe-tabs/less/tabs.less`
 ## Innhold
 
 - `.ffe-tab-button`
+- `.ffe-tab-button--condensed`
+- `.ffe-tab-button--ghost`
 - `.ffe-tab-button--selected`
 
 ## Eksempeler
