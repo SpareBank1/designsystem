@@ -7,6 +7,10 @@ import accountFormatter from '../util/account-formatter';
 const AccountRowMulti = ({account, locale, selected}) => {
   const currencyCode = () => (account.currencyCode ? account.currencyCode : 'NOK');
 
+  const onCheckboxChange = (evt) => {
+    // Do nothing. Selections are handled in parent
+  };
+
   return (
     <div className="nfe-account-suggestions__account--multi">
       <div className="nfe-account-suggestions__checkbox">
@@ -14,6 +18,7 @@ const AccountRowMulti = ({account, locale, selected}) => {
           checked={ selected }
           name="my-checkbox-label"
           isTabbable={ false }
+          onChange={onCheckboxChange}
         />
       </div>
       <div className="nfe-account-suggestions__content-wrapper">

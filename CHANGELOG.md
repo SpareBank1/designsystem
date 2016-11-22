@@ -1,5 +1,8 @@
 # Changelog
 
+# v3.0.1
+* Add missing onChange to multiselect
+
 # v3.0.0
 * Major underlying change in structure of code.
 * Add ability to more easily create custom selectors
