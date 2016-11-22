@@ -1,11 +1,13 @@
 # CHANGELOG
 
-## Version 1.0.2
-Bruk `react-height` til å kalkulere høyde (for å inkludere marginer rekursivt
-nedover DOM-treet).
+## 1.0.3
+A third attempt at dealing with vertical margins, as well as a small refactor.
 
-## Version 1.0.1
-Patch: Dersom det wrappede elementet har margins så tas de med i beregningen av høyden.
+## 1.0.2
+Use `react-height` for calculating heights (for including margins recursively down the DOM tree).
 
-## Version 1.0.0
-"Første" versjon
+## 1.0.1
+If the wrapped element has margins, they are included in the height
+
+## 1.0.0
+Initial version
