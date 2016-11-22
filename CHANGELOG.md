@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.1.0
+
+Endringssuffikset `--condensed` kan brukes til kompaktknapper.
+
 ## v2.0.0
 
 BREAKING: `ffe-tab-button` får hvit bakgrunnsfarge, ikke gjennomsiktig
