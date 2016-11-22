@@ -1,5 +1,8 @@
 # Changelog
 
+## 6.3.0
+* Added p-pose-ikon.svg
+
 ## 6.2.0
 * Added mynter-to-stabler-pluss.svg
 
