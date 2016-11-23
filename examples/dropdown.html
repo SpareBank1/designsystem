@@ -18,7 +18,7 @@
                 <div class="ffe-content-container ffe-content-container--text-left">
 
                     <p class="ffe-body-paragraph visual-test-hidden">
-                        Select box bør brukes hvis man har et sett med predefinerte valg å velge fra. Radioknapper er et
+                        Dropdown bør brukes hvis man har et sett med predefinerte valg å velge fra. Radioknapper er et
                         godt alternativ hvis det er få valg. Vi bruker native elementet slik at mobil/nettbrett får
                         riktig GUI.
                     </p>
@@ -34,12 +34,37 @@
                             <option value="3">April</option>
                         </select>
                     </div>
-                    
+
                     <div class="ffe-input-group" aria-live="polite">
                         <label id="day-label" class="ffe-form-label" for="day">
                             Velg dag
                         </label>
-                        <select class="ffe-dropdown ffe-dropdown--small" id="day">
+                        <select class="ffe-dropdown" id="day">
+                            <option value="1">1.</option>
+                            <option value="5">5.</option>
+                            <option value="10">10.</option>
+                            <option value="15">15.</option>
+                            <option value="20">20.</option>
+                            <option value="25">25.</option>
+                            <option value="30">30.</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="ffe-content-container ffe-content-container--text-left">
+
+                    <p class="ffe-body-paragraph visual-test-hidden">
+                        Default tar dropdown hele bredden av containeren den ligger i men den kan også settes til
+                        å være<br />
+                        <em>--inline</em><br />
+                        og vil da både vises som et inline-block element og ha samme bredde som innholdet sitt.
+                    </p>
+
+                    <div class="ffe-input-group" aria-live="polite">
+                        <label id="day-label" class="ffe-form-label" for="day">
+                            Velg dag
+                        </label>
+                        <select class="ffe-dropdown ffe-dropdown--inline" id="day">
                             <option value="1">1.</option>
                             <option value="5">5.</option>
                             <option value="10">10.</option>

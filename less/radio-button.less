@@ -10,63 +10,64 @@
     padding-left: 30px;
 
     &--inline {
-      display: inline-block;
-      margin-right: 20px;
+        display: inline-block;
+        margin-right: 20px;
     }
 
     &:before {
-      content: '';
-      background-color: @ffe-white;
-      border: 2px solid @ffe-grey;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      position: absolute;
-      pointer-events: none;
-      left: 0;
-      top: 3px;
+        content: '';
+        background-color: @ffe-white;
+        border: 2px solid @ffe-grey;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        position: absolute;
+        pointer-events: none;
+        left: 0;
+        top: 3px;
     }
 
     &:after {
-      content: '';
-      border: 2px solid transparent;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      position: absolute;
-      left: 0;
-      top: 3px;
-      pointer-events: none;
+        content: '';
+        border: 2px solid transparent;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+        top: 3px;
+        pointer-events: none;
     }
-  }
+}
 
 .ffe-radio-input {
+
     &:checked + .ffe-radio-button:before,
     &:hover + .ffe-radio-button:before,
     &:focus + .ffe-radio-button:before,
     &:active + .ffe-radio-button:before {
-      outline: none;
+        outline: none;
     }
 
     &:hover + .ffe-radio-button:before {
-      border-color: @ffe-blue-royal-light-wcag;
+        border-color: @ffe-blue-royal-light-wcag;
     }
 
     &:active + .ffe-radio-button:before,
     &:focus + .ffe-radio-button:before {
-      border-color: @ffe-blue-focus
+        border-color: @ffe-blue-focus
     }
 
     &:checked + .ffe-radio-button:before {
-      background-color: @ffe-blue-royal-light-wcag;
-      border: 5px solid @ffe-white;
+        background-color: @ffe-blue-royal-light-wcag;
+        border: 5px solid @ffe-white;
     }
 
     &:checked + .ffe-radio-button:after {
-      border-color: @ffe-blue-royal-light-wcag;
+        border-color: @ffe-blue-royal-light-wcag;
     }
 
     &:focus + .ffe-radio-button:before {
-      box-shadow: 0 0 0 2px @ffe-blue-focus;
+        box-shadow: 0 0 0 2px @ffe-blue-focus;
     }
 }
