@@ -6,46 +6,43 @@ class Expandable extends React.Component {
     constructor(props) {
         super(props);
         this.state = { height: -1 };
+
+        this.onHeightReady = this.onHeightReady.bind(this);
+    }
+
+    onHeightReady(height) {
+        this.setState({ height });
     }
 
     render() {
         const {
             children,
-            expanded,
-            folded,
-            isOpen,
             customClass,
+            expanded,
             expandTime = 0.5,
-            isTable
+            folded = '',
+            isOpen,
+            isTable,
         } = this.props;
 
         const { height } = this.state;
-        let ExpandableWrapperElementTag = 'div';
-        let ExpandedElementTag = 'div';
+        const ExpandableWrapperElementTag = isTable ? 'tr' : 'div';
+        const ExpandedElementTag = isTable ? 'td' : 'div';
 
         const styles = {
             maxHeight: isOpen ? height : 0,
             overflow: 'hidden',
-            transition: `max-height ${expandTime}s`
+            transition: `max-height ${expandTime}s ease-out`,
         };
-
-        if (isTable) {
-            ExpandableWrapperElementTag = 'tr';
-            ExpandedElementTag = 'td';
-        }
 
         return (
             <ExpandableWrapperElementTag>
-                { folded || '' }
-                <ExpandedElementTag style={ styles } className={ customClass }>
-                    <ComponentHeight
-                        onHeightReady={ value => {
-                            this.setState({
-                                height: value
-                            });
-                        } }
-                    >
-                        { expanded || children }
+                {folded}
+                <ExpandedElementTag className={customClass} style={styles}>
+                    <ComponentHeight onHeightReady={this.onHeightReady}>
+                        <div style={{ display: 'inline-block' }}>
+                            { expanded || children }
+                        </div>
                     </ComponentHeight>
                 </ExpandedElementTag>
             </ExpandableWrapperElementTag>
@@ -54,12 +51,12 @@ class Expandable extends React.Component {
 }
 
 Expandable.propTypes = {
-    isOpen: React.PropTypes.bool.isRequired,
-    expanded: React.PropTypes.node,
-    folded: React.PropTypes.node,
     children: React.PropTypes.node,
     customClass: React.PropTypes.string,
+    expanded: React.PropTypes.node,
     expandTime: React.PropTypes.number,
+    folded: React.PropTypes.node,
+    isOpen: React.PropTypes.bool.isRequired,
     isTable: React.PropTypes.bool
 };
 

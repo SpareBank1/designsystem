@@ -5,47 +5,36 @@ import { mount } from 'enzyme';
 
 import Expandable from './ffe-expandable-react';
 
-class Folded extends React.Component {
-    render() {
-        return (<div className="folded">
-            test content
-        </div>);
-    }
+const FoldedContent = () => (
+    <div className="folded">
+        test content
+    </div>
+);
 
-}
-
-class Expanded extends React.Component {
-    componentDidMount() {
-        ReactDOM.findDOMNode(this).parentNode.clientHeight = 5000;
-    }
-
-    render() {
-        return (
-            <div className="expanded">
-                test content
-            </div>
-        );
-    }
-}
+const ExpandedContent = () => (
+    <div className="expanded">
+        test content
+    </div>
+);
 
 describe('ffe-expandable-react', () => {
-    let componentMounted, expanded;
+    let componentMounted;
 
     beforeEach('mount render component', () => {
-        expanded = <Expanded />;
         componentMounted = mount(
             <Expandable
-                isOpen={ true }
-                folded={ <Folded /> }
-                expanded={ expanded }
-                customClass={ 'expandable-wrapper' }
+                isOpen={true}
+                folded={<FoldedContent />}
+                expanded={<ExpandedContent />}
+                customClass="expandable-wrapper"
             />
         );
+        componentMounted.instance().onHeightReady(5000);
     });
 
     it('mounts children', () => {
-        expect(componentMounted).to.contain(<Folded />);
-        expect(componentMounted).to.contain(<Expanded />);
+        expect(componentMounted).to.contain(<FoldedContent />);
+        expect(componentMounted).to.contain(<ExpandedContent />);
     });
 
     it('has wrapped Expandable with max-height set to 5000', () => {
@@ -55,10 +44,10 @@ describe('ffe-expandable-react', () => {
     it('has wrapped Expandable with max-height set to 0 when isOpen is false', () => {
         componentMounted = mount(
             <Expandable
-                isOpen={ false }
-                folded={ <Folded /> }
-                expanded={ expanded }
-                customClass={ 'expandable-wrapper' }
+                isOpen={false}
+                folded={<FoldedContent />}
+                expanded={<ExpandedContent />}
+                customClass="expandable-wrapper"
             />
         );
         expect(componentMounted.find('.expandable-wrapper')).to.have.style('max-height', '0');
