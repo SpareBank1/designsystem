@@ -1,7 +1,6 @@
 .ffe-radio-block {
     margin-top: 20px;
-    max-width: 600px;
-    min-width: 260px;
+    width: 100%;
     transition: width 0.3s ease-in-out;
 
     &__content {
@@ -44,7 +43,6 @@
     }
 }
 
-
 // Weakness: Requires specific dom structure to work. Rewrite?
 .ffe-radio-input {
 
@@ -64,7 +62,6 @@
             background-color: @ffe-blue-royal;
             color: @ffe-white;
         }
-
     }
 
     &:checked + .ffe-radio-block__content:before {
