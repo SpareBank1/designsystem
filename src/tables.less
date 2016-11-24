@@ -1,0 +1,29 @@
+
+//TODO Flytt dette til ffe-tables
+.sort-table-header {
+  &:hover {
+    cursor: pointer;
+    border-bottom: solid 2px @ffe-blue-royal;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: -moz-none;
+    -o-user-select: none;
+    user-select: none;
+  }
+
+  &--active {
+    border-bottom: solid 2px @ffe-blue-royal;
+  }
+
+  &-pil {
+    height: 12px;
+    width: 12px;
+    vertical-align: middle;
+    fill: @ffe-blue-royal;
+    margin-left: 8px;
+    transform: rotate(180deg);
+    &--descending {
+      transform: none;
+    }
+  }
+}
