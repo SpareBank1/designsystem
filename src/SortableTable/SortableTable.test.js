@@ -34,10 +34,7 @@ const data = [
 
 const props = {
     columns,
-    data,
-    sortFunction: () => null,
-    sortBy: 0,
-    descending: false
+    data
 };
 
 describe('<SortableTable>', () => {
