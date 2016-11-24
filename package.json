@@ -59,7 +59,6 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "ffe-tables": "^2.0.0",
     "ffe-icons-react": "2.1.0"
   }
 }

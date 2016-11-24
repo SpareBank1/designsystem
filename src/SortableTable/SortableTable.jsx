@@ -36,11 +36,11 @@ class SortableTable extends React.Component {
                         scope="col"
                         aria-sort={ (this.state.sortBy === index) ? (this.state.descending ? 'descending' : 'ascending') : 'none' }>
                              <span
-                                 className={ classNames('ffe-h5 sort-table-header', { 'sort-table-header--active': this.state.sortBy === index })}
+                                 className={ classNames('sort-table-header', { 'sort-table-header--active': this.state.sortBy === index })}
                                  onClick={ () => this.sort(index) }>
                              { column.content }
                                  <PilNedIcon
-                                     className={ classNames('sort-table-header-pil icon', {'sort-table-header-pil--descending' : this.state.sortBy === index && this.state.descending }) }/>
+                                     className={ classNames('sort-table-header__arrow icon', {'sort-table-header__arrow--descending' : this.state.sortBy === index && this.state.descending }) }/>
                              </span>
                     </th>
                 )}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import ResponsiveTable from '../src/ResponsiveTable/ResponsiveTable';
-import SortableTable from '../src/SortableTable/SortableTable.jsx';
+import SortableTable from '../src/SortableTable/SortableTable';
 import { SIMPLE_TABLE } from './tables.data';
 
 require('./example.less');
