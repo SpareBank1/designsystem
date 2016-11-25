@@ -16,12 +16,12 @@ const props = {
 
 describe('<TableRowExpandable>', () => {
 
-    it('should only show one td if content is not expanded', () => {
+    it('should only show one tr if content is not expanded', () => {
         const wrapper = shallow(<TableRowExpandable { ...props }/>);
         assert.equal(wrapper.find('tbody tr').length, 1);
     });
 
-    it('should show two td if content is expanded', () => {
+    it('should show two tr if content is expanded', () => {
         const wrapper = shallow(<TableRowExpandable { ...props } expanded={ true }/>);
         assert.equal(wrapper.find('tbody tr').length, 2);
     });

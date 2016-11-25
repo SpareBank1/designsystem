@@ -1,27 +1,24 @@
 import React from 'react';
 import TableCell from './TableCell.jsx';
 
-const TableRow = ({ cells }) => {
+const TableRow = ({ cells, headers }) => {
     return <tr className="ffe-responsive-table__row">
-        { cells.map((cell, index) => {
-                if (cell === null) {
-                    return <td key={ index }></td>;
-                } else if (React.isValidElement(cell)) {
-                    return cell;
-                } else {
-                    return <TableCell key={ index }
-                                     dataHeader={ cell.dataHeader }
-                                     aligndfgdfgt={ cell.alignLeft }>
-                        { cell.content || cell }
-                    </TableCell>;
-                }
+        { headers.map((header, index) => {
+            return <TableCell
+                key={ index }
+                columnHeader={ header.content }
+                alignRight={ header.alignRight }
+            >
+                { cells[header.key] }
+            </TableCell>;
             }
         )}
     </tr>;
 };
 
 TableRow.propTypes = {
-    cells: React.PropTypes.array.isRequired
+    cells: React.PropTypes.object.isRequired,
+    headers: React.PropTypes.array.isRequired
 };
 
 export default TableRow;

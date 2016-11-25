@@ -33,7 +33,9 @@ class ResponsiveTable extends Component {
 
   renderTableBody() {
     const {
-      data
+      data,
+      headers,
+      headerData
     } = this.props;
 
     if (!data || !data.length) {
@@ -43,7 +45,7 @@ class ResponsiveTable extends Component {
     return (
       <tbody>
         {data.map((row, index) => (
-          <TableRow cells={ row } key={ index } />
+          <TableRow cells={ row } headers={ headerData || headers } key={ index } />
         ))}
       </tbody>
     );
@@ -63,10 +65,8 @@ class ResponsiveTable extends Component {
 ResponsiveTable.propTypes = {
   caption: PropTypes.string,
   data: PropTypes.arrayOf(
-    PropTypes.arrayOf(
-      PropTypes.node
-    )
-  ),
+    PropTypes.object
+  ).isRequired,
   headers: PropTypes.arrayOf(
     PropTypes.shape({
       content: PropTypes.node.isRequired,

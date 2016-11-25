@@ -1,5 +1,5 @@
 import React from 'react';
-import { assert } from 'chai';
+import { expect } from 'chai';
 import { shallow } from 'enzyme';
 import SortableTable from './SortableTable.jsx';
 
@@ -41,22 +41,22 @@ describe('<SortableTable>', () => {
     const wrapper = shallow(<SortableTable { ...props }  />);
 
     it('should show right amount of th tags', () => {
-        assert.equal(wrapper.find('th').length, columns.length);
+        expect(wrapper.find('th').to.have.length(columns.length));
     });
 
     it('should render a row for each data array entry' , () => {
-        assert.equal(wrapper.find('tbody tr').length, data.length);
+        expect(wrapper.find('tbody tr').to.have.length(data.length));
     });
 
     it('should mark the column heading currently being sorted by with a class `--active`' , () => {
-        assert.equal(wrapper.find('thead tr').childAt(0).find('span').hasClass('sort-table-header--active'), true);
+        expect(wrapper.find('thead tr').childAt(0).find('span').hasClass('sort-table-header--active')).to.equal(true);
     });
 
     it('should set data-th property on each cell rendered' , () => {
-        assert.equal(wrapper.find('[data-th=]').length, (data.length * columns.length));
+        expect(wrapper.find('[data-th=]').to.have.length((data.length * columns.length)));
     });
 
     it('should add `aria-sort` property' , () => {
-        assert.equal(wrapper.find('[aria-sort="ascending"]').length, 1);
+        expect(wrapper.find('[aria-sort="ascending"]').to.have.length(1));
     });
 });

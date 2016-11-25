@@ -16,10 +16,9 @@ render(
 		<div className="ffe-section-wrapper">
 			<div className="ffe-content-container">
 				<h2 className="ffe-h2">Responsive table</h2>
-				<ResponsiveTable headers={SIMPLE_TABLE.headers} data={SIMPLE_TABLE.data} />
+				<ResponsiveTable headers={SIMPLE_TABLE.headers} data={SIMPLE_TABLE.dataObject} />
 				<h2 className="ffe-h2">Sortable table</h2>
-				<SortableTable columns={SIMPLE_TABLE.tableColumns}
-                       data={SIMPLE_TABLE.dataObject}
+				<SortableTable headers={SIMPLE_TABLE.headers} data={SIMPLE_TABLE.dataObject}
         />
 			</div>
 		</div>

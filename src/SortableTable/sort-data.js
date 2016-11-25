@@ -2,12 +2,11 @@ export default (columns, data, sortBy, descending) => {
 
     var sortedData = [...data];
 
-    const sortByKey = columns[sortBy].dataKey;
     const compare = (data1, data2) => {
-        if (!isNaN(data1[sortByKey])) {
-            return data1[sortByKey] - data2[sortByKey];
+        if (!isNaN(data1[sortBy])) {
+            return data1[sortBy] - data2[sortBy];
         } else {
-            return data1[sortByKey].localeCompare(data2[sortByKey]);
+            return data1[sortBy].localeCompare(data2[sortBy]);
         }
     };
 
