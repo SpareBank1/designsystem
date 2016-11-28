@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## Version 1.0.4
+ * Add rounded corners
+
 ## Version 1.0.3
  * Reduce margin between header and body text.
  * Added padding to svg-icon.
