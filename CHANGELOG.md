@@ -1,5 +1,26 @@
 # Changelog
 
+## v4.0.0
+* Removed layout styles from `ffe-form`. In practice all width styling is now removed and
+  consumers must provide their own class on the form of
+  ```
+  [project-prefix]-input--[modifier] {
+      width: 120 px;
+  }
+  ```
+  Removed features:
+    * `dropdown` no longer supports `--small` modifier
+    * `dropdown` no longer has a `min-width`
+    * `error-summary` no longer has a `max-width`
+    * `input-field` no longer supports `--small`, `--medium` and `--large` modifiers
+    * `radio-block` no longer has a `min-width` or a `max-width`
+    * `radio-switch` no longer has a `min-width`
+    * `text-area` no longer uses media-queries, defaults to 100% width always
+
+It is recommended that each consumer set up their own regime for managing the width of
+input controls due to the distinct lack of a common set of requirements across platforms
+and organizations.
+
 ## v3.1.1
 * Adjusted the height of ffe-dropdown to match the height of ffe-input-field.
 

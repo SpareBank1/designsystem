@@ -16,61 +16,47 @@
         <div id="ffedoc">
             <div class="ffe-section-wrapper">
                 <div class="ffe-content-container ffe-content-container--text-left">
+
                     <p class="ffe-body-paragraph visual-test-hidden">
-                        Responsiv oppførsel som default. 100% bredde ved skjermbredde under 480px.
-                        Har mulighet til å overstyre dette ved bruk av modifier --inline. Denne vil rendre input inline-block, og arve bredde fra annen styling.
+                        Default tar input hele bredden av containeren den ligger i og vises som et block-element.
                     </p>
-                    <p class="ffe-body-paragraph visual-test-hidden">Har tre størrelsesvarianter: --small, --medium og --large</p>
 
                     <div class="ffe-input-group" aria-live="polite">
                         <label id="ssn-label-small" class="ffe-form-label" for="ssn-small">
-                            --small
+                            Avtalenummer
                         </label>
-                        <input id="ssn-small"
-                               class="ffe-input-field ffe-input-field--small"
-                               name="ssn"
-                               type="text"
-                               maxlength="11"
-                               autocomplete="off">
+                        <input
+                            id="ssn-small"
+                            class="ffe-input-field"
+                            name="ssn"
+                            type="text"
+                            maxlength="11"
+                        >
                     </div>
-
-                    <div class="ffe-input-group" aria-live="polite">
-                        <label id="ssn-label-medium" class="ffe-form-label" for="ssn-medium">
-                            --medium
-                        </label>
-                        <input id="ssn-medium"
-                               class="ffe-input-field ffe-input-field--medium"
-                               name="ssn"
-                               type="text"
-                               maxlength="11"
-                               autocomplete="off">
-                    </div>
-
-                    <div class="ffe-input-group" aria-live="polite">
-                        <label id="ssn-label-large" class="ffe-form-label" for="ssn-large">
-                            --large
-                        </label>
-                        <input id="ssn-large"
-                               class="ffe-input-field ffe-input-field--large"
-                               name="ssn"
-                               type="text"
-                               maxlength="11"
-                               autocomplete="off">
-                    </div>
-
-                    <div class="ffe-input-group" aria-live="polite">
-                        <label id="ssn-label-inline" class="ffe-form-label" for="ssn-inline">
-                            --inline
-                        </label>
-                        <input id="ssn-inline"
-                               class="ffe-input-field ffe-input-field--inline"
-                               name="ssn"
-                               type="text"
-                               maxlength="11"
-                               autocomplete="off">
-                    </div>
-
                 </div>
+
+                <div class="ffe-content-container ffe-content-container--text-left">
+
+                    <p class="ffe-body-paragraph visual-test-hidden">
+                        Input kan også settes til å være<br />
+                        <em>--inline</em><br />
+                        og vil da vises som et inline-block element.
+                    </p>
+
+                    <div class="ffe-input-group" aria-live="polite">
+                        <label id="ssn-label-small" class="ffe-form-label" for="ssn-small">
+                            Avtalenummer
+                        </label>
+                        <input
+                            id="ssn-small"
+                            class="ffe-input-field ffe-input-field--inline"
+                            name="ssn"
+                            type="text"
+                            maxlength="11"
+                        >
+                    </div>
+                </div>
+
             </div>
         </div>
     </body>
