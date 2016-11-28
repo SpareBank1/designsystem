@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.5.0
+
+* Added support for `name` property
+
 ## 2.4.2
 
 * Added ffe-form-label--block to label
@@ -45,4 +49,3 @@
 ## 1.5.0 (16.6.2016)
 
 * Add `defaultValue` property.
-
