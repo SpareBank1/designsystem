@@ -1,6 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { ResponsiveTable } from '../src';
+import ResponsiveTable from '../src/ResponsiveTable/ResponsiveTable';
+import SortableTable from '../src/SortableTable/SortableTable';
 import { SIMPLE_TABLE } from './tables.data';
 
 require('./example.less');
@@ -14,8 +15,11 @@ render(
 	<div className="ffe-body-text">
 		<div className="ffe-section-wrapper">
 			<div className="ffe-content-container">
-				<h1 className="ffe-h1">Responsive table</h1>
-				<ResponsiveTable headers={SIMPLE_TABLE.headers} data={SIMPLE_TABLE.data} />
+				<h2 className="ffe-h2">Responsive table</h2>
+				<ResponsiveTable headers={SIMPLE_TABLE.headers} data={SIMPLE_TABLE.dataObject} />
+				<h2 className="ffe-h2">Sortable table</h2>
+				<SortableTable headers={SIMPLE_TABLE.headers} data={SIMPLE_TABLE.dataObject}
+        />
 			</div>
 		</div>
 	</div>
