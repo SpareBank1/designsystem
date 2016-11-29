@@ -1,5 +1,8 @@
 # Changelog
 
+## v2.4.0
+* Icons can be nested inside secondary buttons with `.ffe-secondary-button__label-icon`.
+
 ## v2.3.0
 * Add compact variant of action, primary, secondary, tertiary and shortcut button (modifier `--condensed`).
 
