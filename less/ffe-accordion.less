@@ -9,16 +9,20 @@
 }
 
 .ffe-accordion-item {
-    margin-bottom: 10px;
     position: relative;
     list-style: none;
 
     &--white {
         border-top: solid @ffe-grey-light 1px;
+        margin-bottom: 0;
 
         &:last-of-type {
             border-bottom: solid @ffe-grey-light 1px;
         }
+    }
+
+    &--blue {
+        margin-bottom: 10px;
     }
 
     &--open {
@@ -54,7 +58,7 @@
         padding: 10px 25px 0px;
 
         &--white {
-            padding-top: 0;
+            padding: 10px 25px;
         }
     }
 

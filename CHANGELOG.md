@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## Version 1.3.2
+* Remove .accordion-item bottom margin for white accordions that was introduced in 1.3.1.
+
 ## Version 1.3.1
 * Design changes, including normalizing content and title padding, removing text-decoration and correcting colors
 
