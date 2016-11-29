@@ -4,7 +4,6 @@ import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 
 const TableHeaders = ({ headers }) => {
-        //const TableHeadingContent =
     return (
         <thead className="ffe-responsive-table__head">
             <tr className="ffe-responsive-table__row">
@@ -17,7 +16,11 @@ const TableHeaders = ({ headers }) => {
                                    aria-sort={ header.ariaSort }
                                    scope="col">
                             <span
-                                className={ classNames('ffe-responsive-table__content', { 'ffe-responsive-table__content--text-right' : header.alignRight })}>
+                                className={classNames(
+                                    'ffe-responsive-table__content',
+                                    { 'ffe-responsive-table__content--text-right' : header.alignRight }
+                                    )}
+                            >
                             { header.content }
                             </span>
                         </th>
