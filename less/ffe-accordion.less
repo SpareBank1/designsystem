@@ -9,6 +9,7 @@
 }
 
 .ffe-accordion-item {
+    margin-bottom: 10px;
     position: relative;
     list-style: none;
 
@@ -16,12 +17,8 @@
         border-top: solid @ffe-grey-light 1px;
 
         &:last-of-type {
-            border-bottom: solid #d8d8d8 1px;
+            border-bottom: solid @ffe-grey-light 1px;
         }
-    }
-
-    &--blue {
-        margin-bottom: 10px;
     }
 
     &--open {
@@ -37,7 +34,7 @@
         transition: transform .3s, fill .3s;
 
         &--white {
-            fill: @ffe-grey-light;
+            fill: @ffe-blue-royal-light-wcag;
         }
 
         &--blue {
@@ -54,18 +51,20 @@
     }
 
     &__content {
-        padding-right: 40px;
+        padding: 10px 25px 0px;
 
-        &--blue {
-            padding: 10px 25px 0px;
+        &--white {
+            padding-top: 0;
         }
     }
 
     &__toggler {
+        cursor: pointer;
         display: inline-block;
-        width: 100%;
-        padding: 20px 40px 20px 0;
+        padding: 20px 40px 20px 20px;
+        text-decoration: none;
         transition: background-color .3s,color .3s;
+        width: 100%;
 
         &--white {
             color: @ffe-blue-royal-light-wcag;
@@ -82,7 +81,6 @@
         &--blue {
             color: @ffe-blue-royal;
             background-color: @ffe-blue-royal-light-20;
-            padding-left: 20px;
             border-radius: 3px;
 
             &:hover, &:focus {

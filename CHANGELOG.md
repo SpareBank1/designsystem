@@ -1,4 +1,7 @@
-#CHANGELOG
+# CHANGELOG
+
+## Version 1.3.1
+* Design changes, including normalizing content and title padding, removing text-decoration and correcting colors
 
 ## Version 1.3.0
 * Add visual tests and examples
