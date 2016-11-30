@@ -1,5 +1,10 @@
 # Changelog
 
+## v2.5.0
+* Icons can be nested inside tertiary buttons with `.ffe-tertiary-button__label-icon`.
+This also requires `.ffe-tertiary-button--with-icon` on the button.
+* Adjust odd placement of icons in secondary buttons.
+
 ## v2.4.0
 * Icons can be nested inside secondary buttons with `.ffe-secondary-button__label-icon`.
 
