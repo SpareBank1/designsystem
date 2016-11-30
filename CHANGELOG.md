@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.5.1
+* Fix position of spinner in condensed buttons.
+* Minor placement adjustment of icons in secondary and tertiary buttons (this time with help from professionals).
+
 ## v2.5.0
 * Icons can be nested inside tertiary buttons with `.ffe-tertiary-button__label-icon`.
 This also requires `.ffe-tertiary-button--with-icon` on the button.
