@@ -34,7 +34,26 @@
         border-color: @ffe-blue-flat;
     }
 
+    &--with-icon {
+        padding-left: 30px;
+        position: relative;
+    }
+
+    &__label-icon {
+        position: absolute;
+        bottom: 4px;
+        left: 5px;
+        fill: @ffe-blue-royal;
+        height: 18px;
+        width: auto;
+    }
+
     &--condensed {
         font-size: 14px;
+        .ffe-tertiary-button__label-icon {
+            bottom: 7px;
+            left: 9px;
+            height: 14px;
+        }
     }
 }
