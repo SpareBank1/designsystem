@@ -1,11 +1,11 @@
 /* visually hides, but allows screen readers to see content */
 .ffe-screenreader-only {
-    position: absolute!important;
-    clip: rect(0,0,0,0);
-    width: 1px;
+    border: 0;
+    clip: rect(0, 0, 0, 0);
     height: 1px;
     margin: -1px;
-    padding: 0;
-    border: 0;
     overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    width: 1px;
 }
