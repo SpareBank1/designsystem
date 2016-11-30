@@ -1,7 +1,11 @@
 # Changelog
 
-## v2.5.1
+## v2.5.2
 * Add `outline: 0` to `.ffe-primary-button:focus` to avoid "double" focus in Firefox.
+
+## v2.5.1
+* Fix position of spinner in condensed buttons.
+* Minor placement adjustment of icons in secondary and tertiary buttons (this time with help from professionals).
 
 ## v2.5.0
 * Icons can be nested inside tertiary buttons with `.ffe-tertiary-button__label-icon`.
