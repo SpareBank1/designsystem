@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.1.1
+
+Lagt til `outline: 0` på focus og active for å unngå "dobbel" fokus i Firefox.
+
 ## v2.1.0
 
 Endringssuffikset `--condensed` kan brukes til kompaktknapper.
