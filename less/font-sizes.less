@@ -1,18 +1,20 @@
+/* stylelint-disable */
 .ffe-fontsize(@minWidth, @rules) {
     @media screen and (min-width: @minWidth) {
         @rules();
     }
 }
+/* stylelint-enable */
 
 .ffe-fontsize-h1() {
-    font-size: 28px; // Mobile
+    font-size: 28px;
 
     .ffe-fontsize(@breakpoint-sm, {
-      font-size: 40px; // Tablet
+        font-size: 40px;
     });
 
     .ffe-fontsize(@breakpoint-md, {
-      font-size: 46px; // Desktop
+        font-size: 46px;
     });
 }
 
@@ -20,11 +22,11 @@
     font-size: 24px;
 
     .ffe-fontsize(@breakpoint-sm, {
-      font-size: 32px;
+        font-size: 32px;
     });
 
     .ffe-fontsize(@breakpoint-md, {
-      font-size: 32px;
+        font-size: 32px;
     });
 }
 
@@ -32,11 +34,11 @@
     font-size: 20px;
 
     .ffe-fontsize(@breakpoint-sm, {
-      font-size: 27px;
+        font-size: 27px;
     });
 
     .ffe-fontsize(@breakpoint-md, {
-      font-size: 28px;
+        font-size: 28px;
     });
 }
 
@@ -44,11 +46,11 @@
     font-size: 18px;
 
     .ffe-fontsize(@breakpoint-sm, {
-      font-size: 20px;
+        font-size: 20px;
     });
 
     .ffe-fontsize(@breakpoint-md, {
-      font-size: 22px;
+        font-size: 22px;
     });
 }
 
@@ -56,11 +58,11 @@
     font-size: 16px;
 
     .ffe-fontsize(@breakpoint-sm, {
-      font-size: 16px;
+        font-size: 16px;
     });
 
     .ffe-fontsize(@breakpoint-md, {
-      font-size: 18px;
+        font-size: 18px;
     });
 }
 
@@ -68,10 +70,10 @@
     font-size: 16px;
 
     .ffe-fontsize(@breakpoint-sm, {
-      font-size: 16px;
+        font-size: 16px;
     });
 
     .ffe-fontsize(@breakpoint-md, {
-      font-size: 16px;
+        font-size: 16px;
     });
 }
