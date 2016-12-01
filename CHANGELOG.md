@@ -1,5 +1,8 @@
 # Changelog
 
+### v2.5.3
+* The chevron icon does not need to have the inline style `transform:rotate(-90deg)` anymore.
+
 ## v2.5.2
 * Add `outline: 0` to `.ffe-primary-button:focus` to avoid "double" focus in Firefox.
 
