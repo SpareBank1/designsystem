@@ -1,6 +1,9 @@
 # Changelog
 
-### v2.5.3
+## v2.5.4
+* Fix visual bug with icons in buttons in IE by explicitly setting label icon width.
+
+## v2.5.3
 * The chevron icon does not need to have the inline style `transform:rotate(-90deg)` anymore.
 
 ## v2.5.2
