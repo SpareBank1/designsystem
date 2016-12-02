@@ -1,5 +1,8 @@
 # Changelog
 
+## v5.0.0
+* Shortcut button includes the ChevronIcon by default (FFE-115).
+
 ## v4.3.0
 * Added back button
 
