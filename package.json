@@ -1,12 +1,12 @@
 {
   "name": "ffe-context-message-react",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "SpareBank 1 System Message komponent",
   "main": "lib/index.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=src/test/ src/. && npm run example",
     "dev": "npm run ffe:fonts && hjs-dev-server",
-    "watch" : "npm run dev",
+    "watch": "npm run dev",
     "example": "babel-node example/create-example.js > example.html",
     "ffe:fonts": "mkdirp dev/ffe/fonts && cp node_modules/ffe-core/fonts/* dev/ffe/fonts",
     "lint": "eslint src/",
@@ -31,6 +31,7 @@
     "babel-cli": "^6.10.1",
     "babel-core": "^6.10.4",
     "babel-loader": "^6.2.4",
+    "babel-plugin-transform-object-rest-spread": "^6.19.0",
     "babel-polyfill": "^6.9.1",
     "babel-preset-es2015": "^6.9.0",
     "babel-preset-react": "^6.11.1",

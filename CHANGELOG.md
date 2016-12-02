@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 2.0.3
+* Bugfix: Remove from element from DOM on animation end
+* Added optional prop to control animation length 
+* Improvements in universal accessibility 
+
 ## 2.0.2
 * Less margin between header and body text
 
