@@ -1,5 +1,10 @@
 # Changelog
 
+# v3.0.2
+* Fix compatability with IE.
+* Remove any implicit dependencies on polyfills by remomving array functions not supported in IE
+* Fix bug which prevented multiselect "Done" button from working in IE
+
 # v3.0.1
 * Add missing onChange to multiselect
 
