@@ -33,6 +33,16 @@
         outline: none;
     }
 
+    &:-moz-focusring {
+        color: transparent;
+        text-shadow: 0 0 0 @ffe-blue-royal-light-wcag;
+        transition: color 0ms;
+        option {
+            color: @ffe-blue-royal-light-wcag;
+            text-shadow: none;
+        }
+    }
+
     &:focus::-ms-value {
         background: @ffe-white;
         color: @ffe-blue-royal-light-wcag;
@@ -51,6 +61,13 @@
             border-color: @ffe-orange-wcag;
         }
 
+        &:-moz-focusring {
+            color: transparent;
+            text-shadow: 0 0 0 @ffe-orange-wcag;
+            option {
+                color: @ffe-orange-wcag;
+            }
+        }
     }
 
     &--inline {
