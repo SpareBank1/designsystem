@@ -5,6 +5,9 @@ import acceptedLocales from './locale/accepted-locales';
 
 export default class Base extends Component {
 
+    static headerId = 'headerId';
+    static contentId = 'contentId';
+
     constructor(props) {
         super(props);
         this.state = { hidden: false };
@@ -24,7 +27,7 @@ export default class Base extends Component {
     }
 
     renderIcon() {
-        const {icon} = this.props;
+        const { icon } = this.props;
         return (
             <div className="ffe-context-message-content__icon">
                 {cloneElement(icon, { className: 'ffe-context-message-content__icon-svg' })}
@@ -47,15 +50,22 @@ export default class Base extends Component {
             <div
                 className={`ffe-context-message ffe-context-message--${messageType}`}
                 ref="self"
-                aria-hidden={hidden}
                 style={style}
+                aria-hidden={hidden}
+                aria-describedby={Base.contentId}
+                aria-labelledby={Base.headerId}
             >
                 <div className="ffe-context-message-content">
                     {icon && this.renderIcon()}
-
                     <div>
-                        {header && <header className="ffe-context-message-content__header">{header}</header>}
-                        <div className="ffe-body-text">
+                        {header &&
+                        <header
+                            className="ffe-context-message-content__header" id={Base.headerId}
+                        >
+                            {header}
+                        </header>
+                        }
+                        <div className="ffe-body-text" id={Base.contentId}>
                             {children}
                         </div>
                     </div>
@@ -64,10 +74,10 @@ export default class Base extends Component {
                 <button
                     className="ffe-context-message-content__close-button"
                     tabIndex="0"
-                    aria-label={texts[locale].FFE_CONTEXT_MESSAGE_CLOSE}
+                    aria-label={`${texts[locale].FFE_CONTEXT_MESSAGE_CLOSE} ${header}`}
                     onClick={this.close}
                 >
-                    <CloseIcon className="ffe-context-message-content__close-button-svg"/>
+                    <CloseIcon className="ffe-context-message-content__close-button-svg" aria-hidden="true"/>
                 </button> }
             </div>
         );
