@@ -3,27 +3,28 @@ import CloseIcon from 'ffe-icons-react/kryss-ikon';
 import texts from './locale/texts';
 import acceptedLocales from './locale/accepted-locales';
 
+const headerId = 'headerId';
+const contentId = 'contentId';
+
 export default class Base extends Component {
-
-    static headerId = 'headerId';
-    static contentId = 'contentId';
-
     constructor(props) {
         super(props);
-        this.state = { hidden: false };
+        this.state = { closed: false };
         this.close = this.close.bind(this);
     }
 
     close() {
-        const { onClose } = this.props;
+        const { onClose, animationLengthMs } = this.props;
         const element = this.refs.self;
         element.style.height = `${element.offsetHeight}px`;
         setTimeout(() => {
-            this.setState({ hidden: true }, () => {
-                element.style.height = 0;
+            element.style.height = 0;
+        }, 0);
+        setTimeout(() => {
+            this.setState({ closed: true }, () => {
                 onClose();
             });
-        }, 0);
+        }, animationLengthMs);
     }
 
     renderIcon() {
@@ -43,29 +44,31 @@ export default class Base extends Component {
             style,
             header,
             locale,
-            showCloseButton
+            showCloseButton,
+            animationLengthMs,
         } = this.props;
-        const { hidden } = this.state;
+        if (this.state.closed) {
+            return null;
+        }
         return (
             <div
                 className={`ffe-context-message ffe-context-message--${messageType}`}
                 ref="self"
-                style={style}
-                aria-hidden={hidden}
-                aria-describedby={Base.contentId}
-                aria-labelledby={Base.headerId}
+                style={{ ...style, transition: `height ${animationLengthMs / 1000}s` }}
+                aria-describedby={contentId}
+                aria-labelledby={headerId}
             >
                 <div className="ffe-context-message-content">
                     {icon && this.renderIcon()}
                     <div>
                         {header &&
                         <header
-                            className="ffe-context-message-content__header" id={Base.headerId}
+                            className="ffe-context-message-content__header" id={headerId}
                         >
                             {header}
                         </header>
                         }
-                        <div className="ffe-body-text" id={Base.contentId}>
+                        <div className="ffe-body-text" id={contentId}>
                             {children}
                         </div>
                     </div>
@@ -93,11 +96,13 @@ Base.propTypes = {
     header: PropTypes.string,
     style: PropTypes.object,
     onClose: PropTypes.func,
+    animationLengthMs: PropTypes.number,
 };
 
 Base.defaultProps = {
     locale: 'nb',
-    onClose: () => {
-    }
+    onClose: () => {},
+    style: {},
+    animationLengthMs: 300,
 };
 
