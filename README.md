@@ -41,6 +41,7 @@ header : Content header,
 icon : FFEIcon. A white background circle will automatically be set for the icon passed,
 style: Style object, sets styles of the outermost container,
 onClose : Callback that is called on close click,
+animationLengthMs : Control close animation length. Default value 300,
 ```
 
 ## Examples
