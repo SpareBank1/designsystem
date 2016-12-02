@@ -10,7 +10,12 @@ export default class SuggestionList extends Component {
 
   isItemSelected(item) {
     if (this.props.selectedSuggestions.length > 0) {
-      return this.props.selectedSuggestions.findIndex(obj => item.id === obj.id) > -1;
+      for (let i = 0; i < this.props.selectedSuggestions.length; i++) {
+        if (this.props.selectedSuggestions[i].id === item.id) {
+          return true;
+        }
+      }
+      return false;
     }
   }
 

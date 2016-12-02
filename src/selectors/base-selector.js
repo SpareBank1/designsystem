@@ -87,8 +87,11 @@ class BaseSelector extends Component {
   }
 
   onItemSelectedFromDropdown(selectedItem) {
-    const itemIndex = this.state.filteredItems.findIndex(item => item.id === selectedItem.id);
-    this.onItemSelect(itemIndex);
+    for (let i = 0; i < this.state.filteredItems.length; i++) {
+      if (this.state.filteredItems[i].id === selectedItem.id) {
+        this.onItemSelect(i);
+      }
+    }
   }
 
   addGlobalEventListeners() {
@@ -285,7 +288,13 @@ class BaseSelector extends Component {
 
   handleItemSelectMulti(item) {
     const {selectedItems} = this.state;
-    const indexInSelectedItems = selectedItems.findIndex(obj => obj.id === item.id);
+    let indexInSelectedItems = -1;
+    for (let i = 0; i< selectedItems.length; i++) {
+      if (selectedItems[i].id === item.id) {
+        indexInSelectedItems = i;
+        break;
+      }
+    }
     if (indexInSelectedItems === -1) {
       selectedItems.push(item);
     } else {
@@ -330,12 +339,14 @@ class BaseSelector extends Component {
 
   onMultiSelectDone() {
     this._inputField.focus();
-    this.setState({
-      showItemSuggestions: false,
-      inputValue: '',
-      filteredItems: this.filterItems(this.props.items, ''),
-      highlightedItem: -1
-    }, () => this.props.onMultiSelectDone(this.state.selectedItems));
+    window.setTimeout(() => {
+      this.setState({
+        showItemSuggestions: false,
+        inputValue: '',
+        filteredItems: this.filterItems(this.props.items, ''),
+        highlightedItem: -1,
+      }, () => this.props.onMultiSelectDone(this.state.selectedItems));
+    },0);
   }
 
   render() {
