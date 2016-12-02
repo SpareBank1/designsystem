@@ -2,7 +2,9 @@
 
 ## 2.0.3
 * Bugfix: Remove from element from DOM on animation end
-* Added optional prop to control animation length 
+* Added optional prop `animationLengtMs` to control animation length 
+* Added optional prop `headerElementId` for better universal accessibility 
+* Added optional prop `contentElementId` for better universal accessibility 
 * Improvements in universal accessibility 
 
 ## 2.0.2

@@ -3,9 +3,6 @@ import CloseIcon from 'ffe-icons-react/kryss-ikon';
 import texts from './locale/texts';
 import acceptedLocales from './locale/accepted-locales';
 
-const headerId = 'headerId';
-const contentId = 'contentId';
-
 export default class Base extends Component {
     constructor(props) {
         super(props);
@@ -46,6 +43,8 @@ export default class Base extends Component {
             locale,
             showCloseButton,
             animationLengthMs,
+            contentElementId,
+            headerElementId,
         } = this.props;
         if (this.state.closed) {
             return null;
@@ -55,20 +54,20 @@ export default class Base extends Component {
                 className={`ffe-context-message ffe-context-message--${messageType}`}
                 ref="self"
                 style={{ ...style, transition: `height ${animationLengthMs / 1000}s` }}
-                aria-describedby={contentId}
-                aria-labelledby={headerId}
+                aria-describedby={contentElementId}
+                aria-labelledby={headerElementId}
             >
                 <div className="ffe-context-message-content">
                     {icon && this.renderIcon()}
                     <div>
                         {header &&
                         <header
-                            className="ffe-context-message-content__header" id={headerId}
+                            className="ffe-context-message-content__header" id={headerElementId}
                         >
                             {header}
                         </header>
                         }
-                        <div className="ffe-body-text" id={contentId}>
+                        <div className="ffe-body-text" id={contentElementId}>
                             {children}
                         </div>
                     </div>
@@ -97,6 +96,8 @@ Base.propTypes = {
     style: PropTypes.object,
     onClose: PropTypes.func,
     animationLengthMs: PropTypes.number,
+    contentElementId : PropTypes.string,
+    headerElementId : PropTypes.string,
 };
 
 Base.defaultProps = {
@@ -104,5 +105,8 @@ Base.defaultProps = {
     onClose: () => {},
     style: {},
     animationLengthMs: 300,
+    contentElementId : 'contentElementId',
+    headerElementId : 'headerElementId'
+
 };
 
