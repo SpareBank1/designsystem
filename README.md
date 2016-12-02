@@ -42,6 +42,8 @@ icon : FFEIcon. A white background circle will automatically be set for the icon
 style: Style object, sets styles of the outermost container,
 onClose : Callback that is called on close click,
 animationLengthMs : Control close animation length. Default value 300,
+contentElementId : String used to link 'children' for universal accessibility.
+headerElementId : String used to link 'header' for universal accessibility.
 ```
 
 ## Examples
