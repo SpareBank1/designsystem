@@ -7,7 +7,11 @@ const AccountSelectorExample = () => {
   const preSelectedAccountNumber = '42010205683';
 
   function getAccount(accounts, accountNumber) {
-    return accounts.find(account => account.accountNumber === accountNumber);
+    for (let i = 0; i < accounts.length; i++) {
+      if (accounts[i].accountNumber === accountNumber) {
+        return accounts[i];
+      }
+    }
   }
 
   function onChange(accountNumberOrUserInput) {
