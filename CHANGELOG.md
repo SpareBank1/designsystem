@@ -1,5 +1,8 @@
 # Changelog
 
+## v4.0.1
+* Remove Mozilla dropdown focus ring to fix double focus highlight on dropdown in Firefox
+
 ## v4.0.0
 * Removed layout styles from `ffe-form`. In practice all width styling is now removed and
   consumers must provide their own class on the form of
