@@ -66,16 +66,16 @@ describe('Test Base', () => {
 
     it('closes itself on close click', done => {
         const onClickSpy = sinon.spy();
-        wrapper = mount(cloneElement(element, { onClose: onClickSpy }));
+        wrapper = mount(cloneElement(element, { onClose: onClickSpy, animationLengthMs : 10 }));
+        let component = wrapper.find('.ffe-context-message');
+        expect(component.length).to.be(1);
         wrapper.find('.ffe-context-message-content__close-button').simulate('click');
-        const component = wrapper.find('.ffe-context-message');
-        expect(component.props()['aria-hidden']).to.be(false);
         setTimeout(() => {
-            expect(component.get(0).style.getPropertyValue('height')).to.be('0px');
-            expect(component.props()['aria-hidden']).to.be(true);
+            component = wrapper.find('.ffe-context-message');
+            expect(component.length).to.be(0);
             expect(onClickSpy.calledOnce);
             done();
-        }, 100);
+        }, 20);
     });
 });
 
