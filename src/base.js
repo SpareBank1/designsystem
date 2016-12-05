@@ -10,18 +10,19 @@ export default class Base extends Component {
         this.close = this.close.bind(this);
     }
 
-    close() {
+    close(event) {
         const { onClose, animationLengthMs } = this.props;
-        const element = this.refs.self;
+        const element = this.self;
         element.style.height = `${element.offsetHeight}px`;
         setTimeout(() => {
             element.style.height = 0;
         }, 0);
         setTimeout(() => {
             this.setState({ closed: true }, () => {
-                onClose();
+                onClose(event);
             });
         }, animationLengthMs);
+        return false;
     }
 
     renderIcon() {
@@ -52,7 +53,9 @@ export default class Base extends Component {
         return (
             <div
                 className={`ffe-context-message ffe-context-message--${messageType}`}
-                ref="self"
+                ref={(self) => {
+                    this.self = self;
+                }}
                 style={{ ...style, transition: `height ${animationLengthMs / 1000}s` }}
                 aria-describedby={contentElementId}
                 aria-labelledby={headerElementId}
@@ -74,6 +77,7 @@ export default class Base extends Component {
                 </div>
                 { showCloseButton &&
                 <button
+                    type="button"
                     className="ffe-context-message-content__close-button"
                     tabIndex="0"
                     aria-label={`${texts[locale].FFE_CONTEXT_MESSAGE_CLOSE} ${header}`}
@@ -96,8 +100,8 @@ Base.propTypes = {
     style: PropTypes.object,
     onClose: PropTypes.func,
     animationLengthMs: PropTypes.number,
-    contentElementId : PropTypes.string,
-    headerElementId : PropTypes.string,
+    contentElementId: PropTypes.string,
+    headerElementId: PropTypes.string,
 };
 
 Base.defaultProps = {
@@ -105,8 +109,8 @@ Base.defaultProps = {
     onClose: () => {},
     style: {},
     animationLengthMs: 300,
-    contentElementId : 'contentElementId',
-    headerElementId : 'headerElementId'
+    contentElementId: 'contentElementId',
+    headerElementId: 'headerElementId'
 
 };
 
