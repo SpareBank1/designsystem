@@ -4,7 +4,7 @@
   "description": "SpareBank 1 System Message komponent",
   "main": "lib/index.js",
   "scripts": {
-    "build": "babel -d lib/. --ignore=src/test/ src/. && npm run example",
+    "build": "babel -d lib/. --ignore=src/test/ src/.",
     "dev": "npm run ffe:fonts && hjs-dev-server",
     "watch": "npm run dev",
     "example": "babel-node example/create-example.js > example.html",
@@ -25,7 +25,9 @@
   "peerDependencies": {
     "ffe-core": "^8.1.2",
     "ffe-icons-react": "^2.1.0",
-    "ffe-context-message": "^1.0.3"
+    "ffe-context-message": "^1.0.3",
+    "react" : "^15.1.0",
+    "react-dom": "^15.1.0"
   },
   "devDependencies": {
     "babel-cli": "^6.10.1",
