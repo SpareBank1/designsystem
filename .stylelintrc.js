@@ -6,7 +6,6 @@ module.exports = {
         ],
         "at-rule-no-vendor-prefix": true,
         "color-hex-case": "upper",
-        "declaration-block-properties-order": "alphabetical",
         "indentation": [4, { "ignore": ["inside-parens"] }],
         "max-nesting-depth": 3,
         "media-feature-name-no-vendor-prefix": true,
