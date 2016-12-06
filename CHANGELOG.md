@@ -1,5 +1,8 @@
 # Changelog
 
+## 6.4.0
+* Added koffert-ikon.svg
+
 ## 6.3.0
 * Added p-pose-ikon.svg
 
