@@ -6,21 +6,7 @@
 $ npm install --save ffe-core ffe-buttons ffe-buttons-react
 ```
 
-`ffe-buttons-react` has a peer dependency on `ffe-core` and `ffe-buttons`. Make sure they are also part of your build.
-
-## Variants
-
-You are free to pick between using the base `Button` component or any of the
-descriptive alias components:
-
-* `ActionButton`
-* `PrimaryButton`
-* `SecondaryButton`
-* `ShortcutButton`
-* `TertiaryButton`
-* `BackButton`
-
-If no `buttonType` property is given to `Button` it defaults to `primary`.
+`ffe-buttons-react` has a peer dependency on `ffe-core` and `ffe-buttons`. 
 
 ## Usage
 
@@ -36,29 +22,29 @@ property:
 <ActionButton label="Hello" onClick={clickHandler} />
 ```
 
-There are components available for all the button types
+There are components available for all the button types:
 
 ```javascript
-<ActionButton onClick={clickHandler}>...</ActionButton>
-<PrimaryButton onClick={clickHandler}>...</PrimaryButton>
-<SecondaryButton onClick={clickHandler}>...</SecondaryButton>
-<ShortcutButton onClick={clickHandler}>...</ShortcutButton>
-<TertiaryButton onClick={clickHandler}>...</TertiaryButton>
-<BackButton onClick={clickHandler}>...</BackButton>
+<ActionButton>, <PrimaryButton>, <SecondaryButton>, <ShortcutButton>, <TertiaryButton>
 ```
 
-If you want, you can use Button directly, but you must provide the `buttonType`
-property if you want anything other than `primary`. However, this is discouraged
-as all other functionality is available through the more specialized button
-types.
+### Supported props
 
-```javascript
-<Button
-    onClick={clickHandler}
-    buttonType="action"
->
-    <CoolIcon /> Awesome
-</Button>
+```
+action: string,
+ariaLoadingMessage: string, (default: 'Vennligst vent')
+children: node,
+className: string,
+disableButton: bool,
+id: string,
+isLoading: bool,
+isTabbable: bool,
+autoFocus: bool,
+label: string,
+onClick: func,
+simpleContent: bool, (default: false)
+style: object,
+type: 'button' | 'submit' | 'reset' (default: 'submit')
 ```
 
 ### Loading state
