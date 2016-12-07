@@ -19,8 +19,8 @@ const items = [
 
 render(
     <div>
-        This is an example dropdown
-        <Dropdown id="myDropdown" onChange={ (e) => console.log("You chose " + items[e.target.value].name) } defaultValue="default">
+        This is an example dropdown, which is given a project-specific className in accordance with ffe-form 4.
+        <Dropdown id="myDropdown" onChange={ (e) => console.log("You chose " + items[e.target.value].name) } defaultValue="default" className="local-example-dropdown--medium">
             <option value="default" disabled="true">Choose</option>
             { items.map(i => <option key={ i.id } value={ i.id }>{ i.name }</option>) }
         </Dropdown>

@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.5.1
+
+* Added support for ffe-form version 4.x.x
+
 ## 2.5.0
 
 * Added support for `name` property
