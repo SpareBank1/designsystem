@@ -19,19 +19,13 @@ describe('<Checkbox />', () => {
     });
 
     it('should call onChange with the correct parameter', () => {
-        let spy = sinon.spy();
+        const mockEvent = { target: { value: true } };
+        const spy = sinon.spy();
 
-        let wrapper = shallow(CreateCheckbox({ onChange: spy }));
+        const wrapper = shallow(CreateCheckbox({ onChange: spy }));
 
-        wrapper.find('input').simulate('change');
-        assert.equal(spy.args[0][0], true);
-
-        spy = sinon.spy();
-        wrapper = shallow(CreateCheckbox({ onChange: spy, checked: true }));
-
-        wrapper.find('input').simulate('change');
-        assert.equal(spy.args[0][0], false);
-
+        wrapper.find('input').simulate('change', mockEvent);
+        assert.equal(spy.firstCall.args[0], mockEvent);
     });
 
     it('should render a default value if passed', () => {
@@ -61,16 +55,18 @@ describe('<Checkbox />', () => {
             1);
     });
 
-    it('should not set tabindex by default', () => {
-        const wrapper = shallow(CreateCheckbox({}));
-        assert.equal(
-            wrapper.find('input').prop('tabIndex'), undefined);
-    });
+    it('should set arbitrary props (rest) on input', () => {
+        const wrapper = shallow(CreateCheckbox({
+            name: 'checkbox',
+            iDontReallyDoAnything: 'false',
+            tabIndex: -1,
+            'aria-invalid': true,
+        }));
 
-    it('should support removing input from taborder', () => {
-        const wrapper = shallow(CreateCheckbox({ isTabbable: false }));
-        assert.equal(
-            wrapper.find('input').prop('tabIndex'), -1);
+        assert.equal(wrapper.find('input').prop('name'), 'checkbox');
+        assert.equal(wrapper.find('input').prop('aria-invalid'), true);
+        assert.equal(wrapper.find('input').prop('iDontReallyDoAnything'), 'false');
+        assert.equal(wrapper.find('input').prop('tabIndex'), -1);
     });
 
 });
