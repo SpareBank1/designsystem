@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.0.0
+
+* Added support for arbitrary props on the input
+* Breaking: Removed 'isTabbable' prop - use 'tabIndex' instead!
+* Breaking: onChange now returns the event instead of just returning the value of the checkbox.
+
 ## 2.2.1
 
 * Added support for ffe-form version 3.x.x
