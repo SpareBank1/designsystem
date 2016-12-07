@@ -1,5 +1,11 @@
 # Changelog
 
+## v.2.1.0
+
+Adds a `--vertical` modifier to `ffe-responsive-table__content` which makes the table-headers
+and table-cell stack vertically. This was implicitly supported and even documented in the
+example but this release gives that concept an explicit modifier.
+
 ## v.2.0.0
 
 This release removes a lot of specificity from the package, making it easier to override
