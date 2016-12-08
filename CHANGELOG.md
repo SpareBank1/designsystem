@@ -1,5 +1,8 @@
 # Changelog
 
+## v5.1.0
+* Add props drop-through to underlying `<Button>` component
+
 ## v5.0.0
 * Shortcut button includes the ChevronIcon by default (FFE-115).
 
