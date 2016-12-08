@@ -23,7 +23,6 @@ import Checkbox from 'ffe-checkbox-react';
         name={ string }
         label={ string }
         noMargins={ boolean } // disables top- and bottom margins, useful for use in tables etc
-        isTabbable={ false } // Remove checkbox from tab order by setting it to false. Defaults to true.
 />
 ```
 
