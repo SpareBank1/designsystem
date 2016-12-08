@@ -7,16 +7,12 @@ export default function Button(props) {
         children,
         className = '',
         disableButton,
-        type = 'submit',
-        id,
         isLoading,
         isTabbable,
-        autoFocus,
         label,
-        onClick,
         simpleContent = false,
-        style = {},
         buttonType = 'primary',
+        ...rest
     } = props;
     const loadingClass = isLoading ? `ffe-${buttonType}-button--loading` : '';
 
@@ -27,12 +23,8 @@ export default function Button(props) {
             className={`ffe-${buttonType}-button ${loadingClass} ${className}`}
             data-action={action}
             disabled={disableButton || isLoading}
-            id={id}
-            onClick={onClick}
-            style={style}
             {... isTabbable === false ? { tabIndex: -1 } : {}}
-            autoFocus={autoFocus}
-            type={type}
+            {...rest}
         >
             {simpleContent ?
                 (label || children) :
