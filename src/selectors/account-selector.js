@@ -12,6 +12,7 @@ class AccountSelector extends React.Component {
     this.renderItemRow = this.renderItemRow.bind(this);
     this.onBlur = this.onBlur.bind(this);
     this.renderDetails = this.renderDetails.bind(this);
+    this.reset = this.reset.bind(this);
   }
 
   renderItemRow(item) {
@@ -35,11 +36,15 @@ class AccountSelector extends React.Component {
     this.props.onBlur(selectedAccounts[0], inputValue);
   }
 
+  reset(inputFocus) {
+    this.baseSelector.reset(inputFocus);
+  }
+
   render() {
     const selectedItems = this.props.selectedAccount ? [this.props.selectedAccount] : [];
 
     // To provide backwards compatibility
-    const accounts = this.props.accounts.map( account => ({
+    const accounts = this.props.accounts.map(account => ({
         ...account,
         id: account.id || parseInt(account.accountNumber, 10)
       })
@@ -47,6 +52,7 @@ class AccountSelector extends React.Component {
 
     return (
       <BaseSelector
+        ref={baseSelector => this.baseSelector = baseSelector}
         items={ accounts }
         renderItemRow={ this.renderItemRow }
         onChange={ this.props.onChange }
