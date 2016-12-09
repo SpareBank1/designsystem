@@ -1,5 +1,8 @@
 # Changelog
 
+# v3.0.3
+* Fix svg caret that was jumping up and down due to it's (slightly bigger) container being rotated instead of the actual icon itself
+
 # v3.0.2
 * Fix compatability with IE.
 * Remove any implicit dependencies on polyfills by remomving array functions not supported in IE
