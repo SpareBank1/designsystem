@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import amountFormatter from 'nfe-amount-formatter';
 import accountFormatter from '../util/account-formatter';
 
-function AccountDetails({ account, locale }) {
+function AccountDetails({ account = {}, locale }) {
   const currencyCode = account.currencyCode ? account.currencyCode : 'NOK';
 
   const balanceEl = account.balance !== undefined ?
@@ -24,7 +24,7 @@ AccountDetails.propTypes = {
   account: PropTypes.shape({
     accountNumber: PropTypes.string,
     balance: PropTypes.number,
-  }).isRequired,
+  }),
   locale: PropTypes.oneOf(["nb", "nn", "en"]).isRequired,
 };
 
