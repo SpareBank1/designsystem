@@ -5,8 +5,9 @@
   "less": "ffe.less",
   "main": "index.js",
   "scripts": {
+    "precompile": "npm run lint",
     "compile": "lessc examples/examples.less examples/examples.css && echo \"$(date +%T): Updated examples\"",
-    "lint": "lessc --lint examples/examples.less",
+    "lint": "stylelint less{/**,}/*.less",
     "start": "opn examples/colors.html & opn examples/layout.html & opn examples/typo.html & watch \"npm run -s compile\" less/",
     "test": "npm run lint && npm run test:nsp && npm run compile && ./run_visual-tests.sh",
     "test:nsp": "nsp check",
@@ -47,6 +48,8 @@
     "less": "^2.7.1",
     "nsp": "^2.6.1",
     "opn-cli": "^3.1.0",
+    "stylelint": "^7.6.0",
+    "stylelint-config-standard": "^15.0.0",
     "watch": "^0.19.2"
   }
 }

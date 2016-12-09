@@ -10,11 +10,10 @@
 @app-width-min: 320px;
 @app-margin: 20px;
 
-
 .ffe-section-wrapper {
-    width: 100%;
-    padding: 0 @app-margin;
     margin: 0;
+    padding: 0 @app-margin;
+    width: 100%;
 
     &--bg-sand {
         background-color: @ffe-sand;
@@ -28,11 +27,11 @@
 }
 
 .ffe-content-container {
-    width: 100%;
-    padding: 0;
     margin: @app-margin auto @app-margin auto;
     max-width: @app-width * 0.6;
+    padding: 0;
     text-align: center;
+    width: 100%;
 
     &--sm {
         max-width: @app-width * 0.375;
@@ -61,15 +60,12 @@
     }
 
     @media screen and (min-width: @breakpoint-md) {
-
         margin: @app-margin*1.5 auto @app-margin*1.5 auto;
 
         &--no-space {
-                margin: 0 auto;
+            margin: 0 auto;
         }
-
     }
-
 }
 
 .ffe-content-container[aria-hidden="true"] {
@@ -77,16 +73,17 @@
 }
 
 .ffe-icon-base {
-    width: 50px;
-    height: 50px;
-    display: inline-block;
-    vertical-align: middle;
     background-size: cover;
+    display: inline-block;
+    height: 50px;
+    vertical-align: middle;
+    width: 50px;
 
     @media screen and (min-width: @breakpoint-sm) {
         height: 75px;
         width: 75px;
     }
+
     @media screen and (min-width: @breakpoint-md) {
         height: 90px;
         width: 90px;
