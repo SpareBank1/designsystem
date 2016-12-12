@@ -1,5 +1,10 @@
 # Changelog
 
+# v3.1.1
+* Expose reset method in AccountSelector
+* Fixed input field not clearing on ESC press
+* Fixed text disappearing on hover for no-matches list item
+
 # v3.1.0
 * You can now use the classes nfe-general-selector-suggestion, &__name and &__details to get the approximate appearence of the regular account selector without checkboxes ie with multiple=false
 * Bugfix: The noMatches-text no longer shows as clickable and white text on white background on hover.
