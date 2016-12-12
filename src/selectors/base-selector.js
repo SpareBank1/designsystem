@@ -1,5 +1,6 @@
 import React, {PropTypes, Component} from 'react';
 import classNames from 'classnames';
+import isEqual from 'lodash.isequal';
 import ChevronIkon from 'ffe-icons-react/chevron-ikon';
 import i18n from '../i18n/i18n';
 import KryssIkon from 'ffe-icons-react/kryss-ikon';
@@ -53,11 +54,26 @@ class BaseSelector extends Component {
   }
 
   componentWillReceiveProps(props) {
-    const {inputValue} = this.state;
-    this.setState({
-      filteredItems: this.filterItems(props.items, inputValue),
-      selectedItems: props.selectedItems
-    });
+    // If we happen to change props as a result of the input-value change callback
+    // then this function will be called right after onInputChange but the inputValue
+    // in the state will not have been updated yet. Wrapping the code in setTimeout
+    // ensures that setState will have updated the state before we use it to filter
+    // the selection.
+    window.setTimeout(() => {
+      const {inputValue} = this.state;
+
+      const nextState = {
+        filteredItems: this.filterItems(props.items, inputValue),
+      };
+
+      // Only update the selectedItems state if the props have actually changed
+      // to prevent accidentally reverting to the default selection.
+      if (!isEqual(props.selectedItems, this.props.selectedItems)) {
+        nextState.selectedItems = props.selectedItems;
+      }
+
+      this.setState(nextState);
+    },0);
   }
 
   onReset(evt) {
