@@ -1,5 +1,8 @@
 # Changelog
 
+# v3.0.4
+* Fix an esoteric bug that could cause the dropdown to display the wrong state if the value of the input was changed while the component was receiving a props-change
+
 # v3.0.3
 * Fix svg caret that was jumping up and down due to it's (slightly bigger) container being rotated instead of the actual icon itself
 
