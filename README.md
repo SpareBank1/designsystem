@@ -1,12 +1,12 @@
-#Felles Frontend Cards
+# Felles Frontend Cards
 
-##Intro
+## Intro
 
 Felles kort-komponent for SpareBank 1.
 
 ![exempel](visual-tests/baseline-screenshots/index/plain/firefox.png)
 
-##Bruk
+## Bruk
 
 <code>@import ../node_modules/ffe-cards/less/[...]</code> i en less-fil i ditt prosjekt.
 
