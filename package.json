@@ -1,6 +1,6 @@
 {
   "name": "ffe-cards",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "Kort for bruk i oversikter",
   "main": "index.js",
   "scripts": {
@@ -13,6 +13,14 @@
     "type": "git",
     "url": "***REMOVED***"
   },
+  "homepage": "***REMOVED***",
+  "documentation": [
+    {
+      "type": "html",
+      "file": "examples/index.html",
+      "select": "#ffedoc"
+    }
+  ],
   "publishConfig": {
     "registry": "***REMOVED***"
   },
