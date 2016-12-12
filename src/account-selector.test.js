@@ -72,8 +72,8 @@ describe('<AccountSelector>', () => {
     const wrapper = mount(el);
     wrapper.find('input').simulate('focus');
 
-    assert.equal(wrapper.find('.nfe-account-suggestions__empty').length, 1);
-    assert.equal(wrapper.find('.nfe-account-suggestions__empty').text(), noMatches);
+    assert.equal(wrapper.find('.nfe-account-suggestions__item-no-matches').length, 1);
+    assert.equal(wrapper.find('.nfe-account-suggestions__item-no-matches').text(), noMatches);
   });
 
   it('should reset when reset is called', () => {
