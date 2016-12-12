@@ -1,5 +1,8 @@
 # Changelog
 
+## 4.0.0
+* Added support for ffe-form version 4.x
+
 ## 3.0.0
 
 * Added support for arbitrary props on the input
