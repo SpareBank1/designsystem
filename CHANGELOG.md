@@ -1,5 +1,8 @@
 # Changelog
 
+## 3.0.0
+* Added support for ffe-form version 4.x
+
 ## v.2.1.1
 * Bumped dependency on ffe-form
 
