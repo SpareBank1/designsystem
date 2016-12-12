@@ -52,7 +52,7 @@ class AccountSelector extends React.Component {
 
     return (
       <BaseSelector
-        ref={baseSelector => this.baseSelector = baseSelector}
+        ref={baseSelector => {this.baseSelector = baseSelector;}}
         items={ accounts }
         renderItemRow={ this.renderItemRow }
         onChange={ this.props.onChange }
