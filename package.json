@@ -1,6 +1,6 @@
 {
   "name": "ffe-datepicker",
-  "version": "2.1.1",
+  "version": "3.0.0",
   "description": "FFE Datepicker",
   "main": "index.js",
   "scripts": {
@@ -36,7 +36,7 @@
   },
   "peerDependencies": {
     "ffe-core": "^8.0.2",
-    "ffe-form": "2.x || 3.x"
+    "ffe-form": "2.x || 3.x || 4.x"
   },
   "publishConfig": {
     "registry": "***REMOVED***"
