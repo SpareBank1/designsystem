@@ -1,5 +1,8 @@
 # Changelog
 
+## v4.0.2
+* Meta data for styleguide
+
 ## v4.0.1
 * Remove Mozilla dropdown focus ring to fix double focus highlight on dropdown in Firefox
 
