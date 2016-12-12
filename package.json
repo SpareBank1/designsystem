@@ -1,6 +1,6 @@
 {
   "name": "ffe-form",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "description": "Form-/skjemapakke for Felles Front End",
   "main": "less/form.less",
   "scripts": {
@@ -23,12 +23,48 @@
   "documentation": [
     {
       "type": "html",
-      "file": "examples/validation.html",
+      "file": "examples/input.html",
       "select": "#ffedoc"
     },
     {
-      "type": "markdown",
-      "file": "README.md"
+      "type": "html",
+      "file": "examples/checkbox.html",
+      "select": "#ffedoc"
+    },
+    {
+      "type": "html",
+      "file": "examples/dropdown.html",
+      "select": "#ffedoc"
+    },
+    {
+      "type": "html",
+      "file": "examples/radioblock.html",
+      "select": "#ffedoc"
+    },
+    {
+      "type": "html",
+      "file": "examples/radiobutton.html",
+      "select": "#ffedoc"
+    },
+    {
+      "type": "html",
+      "file": "examples/radioswitch.html",
+      "select": "#ffedoc"
+    },
+    {
+      "type": "html",
+      "file": "examples/textarea.html",
+      "select": "#ffedoc"
+    },
+    {
+      "type": "html",
+      "file": "examples/tooltip.html",
+      "select": "#ffedoc"
+    },
+    {
+      "type": "html",
+      "file": "examples/validation.html",
+      "select": "#ffedoc"
     }
   ],
   "devDependencies": {
@@ -47,7 +83,8 @@
     "registry": "https://nexus.intern.sparebank1.no/nexus/content/repositories/npm-internal"
   },
   "files": [
-    "less"
+    "less",
+    "examples"
   ],
   "keywords": [
     "frontend",
