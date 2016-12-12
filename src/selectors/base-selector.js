@@ -390,7 +390,7 @@ class BaseSelector extends Component {
         <input
           onFocus={ () => this.onInputFocus() }
           className={ inputClassName() }
-          onKeyDown={ this.onKeyDown }
+          onKeyDown={ (evt) => {this.onKeyDown(evt);} }
           ref={ assignTo('_inputField') }
           autoComplete="off"
           onChange={ this.onInputChange }
