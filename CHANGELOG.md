@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## Version 6.0.1
+* meta-data til styleguide
+
 ## Version 6.0.0
 * Bruker v8.x av ffe-core
 

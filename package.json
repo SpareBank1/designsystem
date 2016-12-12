@@ -1,6 +1,6 @@
 {
   "name": "ffe-details-list",
-  "version": "6.0.0",
+  "version": "6.0.1",
   "description": "Opplisting av attributter i en grid",
   "main": "index.js",
   "scripts": {
@@ -11,6 +11,14 @@
     "type": "git",
     "url": "***REMOVED***"
   },
+  "homepage": "***REMOVED***",
+  "documentation": [
+    {
+      "type": "html",
+      "file": "examples/index.html",
+      "select": "#ffedoc"
+    }
+  ],
   "publishConfig": {
     "registry": "***REMOVED***"
   },
