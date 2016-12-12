@@ -1,6 +1,6 @@
 {
   "name": "ffe-cards",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "Kort for bruk i oversikter",
   "main": "index.js",
   "scripts": {
@@ -13,6 +13,14 @@
     "type": "git",
     "url": "ssh://git@stash.intern.sparebank1.no:22/ffe/ffe-cards.git"
   },
+  "homepage": "https://stash.intern.sparebank1.no/projects/FFE/repos/ffe-cards/browse",
+  "documentation": [
+    {
+      "type": "html",
+      "file": "examples/index.html",
+      "select": "#ffedoc"
+    }
+  ],
   "publishConfig": {
     "registry": "https://nexus.intern.sparebank1.no/nexus/content/repositories/npm-internal"
   },
