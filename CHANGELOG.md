@@ -1,5 +1,10 @@
 # Changelog
 
+# v3.1.0
+* You can now use the classes nfe-general-selector-suggestion, &__name and &__details to get the approximate appearence of the regular account selector without checkboxes ie with multiple=false
+* Bugfix: The noMatches-text no longer shows as clickable and white text on white background on hover.
+* Bugfix: Silenced a react-warning regarding uncontrolled input turned controlled.
+
 # v3.0.4
 * Fix an esoteric bug that could cause the dropdown to display the wrong state if the value of the input was changed while the component was receiving a props-change
 
