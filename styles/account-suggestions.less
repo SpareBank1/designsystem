@@ -30,6 +30,15 @@
   &__empty {
     padding: 16px 16px 8px 21px;
     background: @ffe-white;
+    cursor: default;
+
+    &:hover,
+    &:focus,
+    &--highlighted {
+      .nfe-account-suggestions__name {
+        color: @ffe-blue-royal-light-wcag;
+      }
+    }
   }
 
   &__account {
