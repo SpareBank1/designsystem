@@ -1,5 +1,10 @@
 # Changelog
 
+# v4.0.0
+* Revert setTimeout on componentWillMount made in v3.0.4 causing unexpected behaviour
+* Expose reset method in AccountSelector
+* Fixed input field not clearing on ESC press
+
 # v3.1.0
 * You can now use the classes nfe-general-selector-suggestion, &__name and &__details to get the approximate appearence of the regular account selector without checkboxes ie with multiple=false
 * Bugfix: The noMatches-text no longer shows as clickable and white text on white background on hover.
