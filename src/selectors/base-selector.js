@@ -1,4 +1,4 @@
-import React, {PropTypes, Component} from 'react';
+import React, { PropTypes, Component } from 'react';
 import classNames from 'classnames';
 import isEqual from 'lodash.isequal';
 import ChevronIkon from 'ffe-icons-react/chevron-ikon';
@@ -43,7 +43,7 @@ class BaseSelector extends Component {
   }
 
   getBlankState() {
-    const {items, multiSelect} = this.props;
+    const { items, multiSelect } = this.props;
     return {
       showItemSuggestions: false,
       selectedItems: multiSelect ? this.state.selectedItems : [],
@@ -54,26 +54,17 @@ class BaseSelector extends Component {
   }
 
   componentWillReceiveProps(props) {
-    // If we happen to change props as a result of the input-value change callback
-    // then this function will be called right after onInputChange but the inputValue
-    // in the state will not have been updated yet. Wrapping the code in setTimeout
-    // ensures that setState will have updated the state before we use it to filter
-    // the selection.
-    window.setTimeout(() => {
-      const {inputValue} = this.state;
+    const { inputValue } = this.state;
 
-      const nextState = {
-        filteredItems: this.filterItems(props.items, inputValue),
-      };
+    const nextState = {
+      filteredItems: this.filterItems(props.items, inputValue),
+    };
 
-      // Only update the selectedItems state if the props have actually changed
-      // to prevent accidentally reverting to the default selection.
-      if (!isEqual(props.selectedItems, this.props.selectedItems)) {
-        nextState.selectedItems = props.selectedItems;
-      }
+    if (!isEqual(props.selectedItems, this.props.selectedItems)) {
+      nextState.selectedItems = props.selectedItems;
+    }
 
-      this.setState(nextState);
-    },0);
+    this.setState(nextState);
   }
 
   onReset(evt) {
@@ -82,8 +73,8 @@ class BaseSelector extends Component {
     this.reset();
   }
 
-  reset(setFocus = true ) {
-    const {onChange, onItemSelected} = this.props;
+  reset(setFocus = true) {
+    const { onChange, onItemSelected } = this.props;
     const nextState = {
       ...this.getBlankState(),
       showItemSuggestions: true,
@@ -214,7 +205,7 @@ class BaseSelector extends Component {
   }
 
   highlightNextItem() {
-    const {filteredItems} = this.state;
+    const { filteredItems } = this.state;
     let nextItemIndex = this.state.highlightedItem + 1;
     if (nextItemIndex === filteredItems.length) {
       nextItemIndex = 0;
@@ -223,7 +214,7 @@ class BaseSelector extends Component {
   }
 
   highlightPrevItem() {
-    const {filteredItems} = this.state;
+    const { filteredItems } = this.state;
     let prevItemIndex = this.state.highlightedItem - 1;
     if (prevItemIndex < 0) {
       prevItemIndex = filteredItems.length - 1;
@@ -232,14 +223,14 @@ class BaseSelector extends Component {
   }
 
   highlightFirstItem() {
-    const {filteredItems} = this.state;
+    const { filteredItems } = this.state;
     if (filteredItems.length > 0) {
       this.highlightItem(0);
     }
   }
 
   highlightLastItem() {
-    const {filteredItems} = this.state;
+    const { filteredItems } = this.state;
     if (filteredItems.length > 0) {
       this.highlightItem(filteredItems.length - 1);
     }
@@ -261,8 +252,8 @@ class BaseSelector extends Component {
   }
 
   onInputFocus() {
-    const {onFocus} = this.props;
-    const {inputValue} = this.state;
+    const { onFocus } = this.props;
+    const { inputValue } = this.state;
     const nextState = {
       showItemSuggestions: true,
       filteredItems: this.filterItems(this.props.items, inputValue)
@@ -303,9 +294,9 @@ class BaseSelector extends Component {
   }
 
   handleItemSelectMulti(item) {
-    const {selectedItems} = this.state;
+    const { selectedItems } = this.state;
     let indexInSelectedItems = -1;
-    for (let i = 0; i< selectedItems.length; i++) {
+    for (let i = 0; i < selectedItems.length; i++) {
       if (selectedItems[i].id === item.id) {
         indexInSelectedItems = i;
         break;
@@ -334,7 +325,7 @@ class BaseSelector extends Component {
 
   onInputChange(evt) {
     const searchQuery = evt.target.value;
-    const {items, onChange, multiSelect, onItemSelected} = this.props;
+    const { items, onChange, multiSelect, onItemSelected } = this.props;
     const filteredItems = this.filterItems(items, searchQuery);
     const hasSelectedItems = this.state.selectedItems.length > 0;
     const nextState = {
@@ -362,7 +353,7 @@ class BaseSelector extends Component {
         filteredItems: this.filterItems(this.props.items, ''),
         highlightedItem: -1,
       }, () => this.props.onMultiSelectDone(this.state.selectedItems));
-    },0);
+    }, 0);
   }
 
   render() {
@@ -370,13 +361,13 @@ class BaseSelector extends Component {
 
     const inputClassName = () => {
       return classNames('ffe-input-field nfe-account-selector__search',
-        {'nfe-account-selector__search--open': this.state.showItemSuggestions}
+        { 'nfe-account-selector__search--open': this.state.showItemSuggestions }
       );
     };
 
     const dropdownIconClassName = () => {
       return classNames('nfe-account-selector__dropdown-icon',
-        {'nfe-account-selector__dropdown-icon--reverse': this.state.showItemSuggestions}
+        { 'nfe-account-selector__dropdown-icon--reverse': this.state.showItemSuggestions }
       );
     };
 
@@ -401,16 +392,16 @@ class BaseSelector extends Component {
           aria-autocomplete="list"
         />
         { this.state.inputValue && this.state.inputValue.length > 0 &&
-          <button
-            aria-label={ i18n[this.props.locale].RESET_SEARCH }
-            className="nfe-account-selector__reset-button"
-            onMouseDown={ (evt) => this.onReset(evt) }
-            tabIndex="-1"
-          >
-            <KryssIkon className="nfe-account-selector__reset-icon"/>
-          </button>
+        <button
+          aria-label={ i18n[this.props.locale].RESET_SEARCH }
+          className="nfe-account-selector__reset-button"
+          onMouseDown={ (evt) => this.onReset(evt) }
+          tabIndex="-1"
+        >
+          <KryssIkon className="nfe-account-selector__reset-icon"/>
+        </button>
         }
-        <div onClick={() => this._inputField.focus()} className={dropdownIconClassName()} >
+        <div onClick={() => this._inputField.focus()} className={dropdownIconClassName()}>
           <ChevronIkon focusable={ false }/>
         </div>
         {this.props.renderDetails(this.state.selectedItems)}
