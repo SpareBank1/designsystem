@@ -26,7 +26,7 @@ class BaseSelector extends Component {
     const multiSelect = this.props.multiSelect;
     const selectedItems = this.props.selectedItems || [];
     const showItemSuggestions = false;
-    let inputValue = this.props.value;
+    let inputValue = this.props.value || '';
     if (!multiSelect && selectedItems.length > 0) {
       inputValue = selectedItems[0].name;
     }
