@@ -28,6 +28,10 @@ class ResponsiveTable extends Component {
             return null;
         }
 
+        if (this.props.expandable) {
+            headers.push({ key: 'expandIcon', content: '' });
+        }
+
         return <TableHeaders headers={ headers } />;
     }
 
@@ -42,6 +46,11 @@ class ResponsiveTable extends Component {
             return null;
         }
 
+      if(this.props.children) {
+        return this.props.children;
+      }
+
+
         return (
             <tbody>
                 {data.map((row, index) => (
@@ -52,7 +61,7 @@ class ResponsiveTable extends Component {
     }
 
     render() {
-        return (
+      return (
             <table className="ffe-responsive-table">
                 {this.renderTableCaption()}
                 {this.renderTableHeaders()}
@@ -64,6 +73,7 @@ class ResponsiveTable extends Component {
 
 ResponsiveTable.propTypes = {
     caption: PropTypes.string,
+    expandable: PropTypes.bool,
     data: PropTypes.arrayOf(
         PropTypes.object
     ).isRequired,

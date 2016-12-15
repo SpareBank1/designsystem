@@ -3,3 +3,26 @@
 .ffe-responsive-table__content--text-right {
   text-align: right;
 }
+
+.ffe-responsive-table__row-expandable {
+  cursor: pointer;
+  &:hover {
+    background-color: @ffe-blue-royal-light-20;
+  }
+  .expand-icon {
+    width: 17px;
+    height: inherit;
+    fill: @ffe-blue-royal;
+    transition: transform .2s, fill .2s;
+  }
+  &&.ffe-responsive-table__row-expanded {
+    .expand-icon {
+      transform: rotateX(180deg);
+    }
+  }
+}
+
+.ffe-responsive-table__row-expanded,
+.ffe-responsive-table__row-expanded-content {
+  background-color: @ffe-grey-light-bg;
+}
