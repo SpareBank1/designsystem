@@ -1,6 +1,6 @@
 {
   "name": "ffe-accordion-react",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "main": "lib/index.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/. && npm run example",
@@ -22,7 +22,8 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "ffe-expandable-react": "^1.0.3",
-    "ffe-icons-react": "^2.1.0"
+    "ffe-icons-react": "^2.1.0",
+    "nfe-hash": "^1.1.1"
   },
   "devDependencies": {
     "babel-cli": "^6.4.5",
@@ -59,11 +60,5 @@
   },
   "repository": "",
   "author": "SpareBank 1",
-  "license": "",
-  "babel": {
-    "presets": [
-      "react",
-      "es2015"
-    ]
-  }
+  "license": "ISC"
 }

@@ -1,15 +1,16 @@
 import React, { PropTypes, cloneElement } from 'react';
+import hash from 'nfe-hash';
 
 function Accordion(props) {
     return (
         <ul
             {...props}
+            aria-multiselectable="true"
             className="ffe-accordion"
             role="tablist"
-            aria-multiselectable="true"
         >
-            {React.Children.map(props.children, (ele, index) =>
-                cloneElement(ele, { type: props.type, index }))
+            { React.Children.map(props.children, (ele) =>
+                cloneElement(ele, { type: props.type, uuid: hash(props) }))
             }
         </ul>
     );

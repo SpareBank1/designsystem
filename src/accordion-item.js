@@ -12,7 +12,7 @@ class AccordionItem extends Component {
     constructor(props) {
         super();
         this.state = {
-            isOpen: props.isOpen,
+            isOpen: props.isOpen
         };
 
         this.onClick = this.onClick.bind(this);
@@ -44,18 +44,19 @@ class AccordionItem extends Component {
     renderExpandedContent() {
         const { isOpen } = this.state;
         const {
-            type,
-            index,
             expandedContent,
+            index,
+            type,
+            uuid,
         } = this.props;
 
         return (
             <div
                 className={ createClasses('ffe-accordion-item__content', isOpen, type) }
                 role="tabpanel"
-                id={ `panel-${index}` }
+                id={ `panel-${uuid}-${index}` }
                 aria-hidden={ !isOpen }
-                aria-labelledby={ `tab-${index}` }
+                aria-labelledby={ `tab-${uuid}-${index}` }
             >
                 { expandedContent }
             </div>
@@ -65,21 +66,22 @@ class AccordionItem extends Component {
     render(props) {
         const { isOpen } = this.state;
         const {
+            ariaLabel,
             children,
-            type,
             index,
-            ariaLabel
+            type,
+            uuid,
         } = this.props;
 
         return (
             <li className={ createClasses('ffe-accordion-item', isOpen, type) }>
                 <a
-                    aria-controls={ `panel-${index}` }
+                    aria-controls={ `panel--${uuid}-${index}` }
                     aria-expanded={ isOpen }
                     aria-label={ ariaLabel }
                     className={ createClasses('ffe-accordion-item__toggler', isOpen, type) }
                     href="javascript:;"
-                    id={`tab-${index}`}
+                    id={ `tab-${uuid}-${index}` }
                     onClick={ this.onClick }
                     role="tab"
                 >
@@ -100,11 +102,12 @@ AccordionItem.propTypes = {
     children: PropTypes.node,
     expandedContent: PropTypes.node,
     ignoredNodeNames: PropTypes.arrayOf(PropTypes.string),
-    index: PropTypes.number,
+    index: PropTypes.number.isRequired,
     isOpen: PropTypes.bool.isRequired,
     onClose: PropTypes.func,
     onOpen: PropTypes.func,
-    type: PropTypes.oneOf(['white', 'blue'])
+    type: PropTypes.oneOf(['white', 'blue']),
+    uuid: PropTypes.string.isRequired,
 };
 
 AccordionItem.defaultProps = {
