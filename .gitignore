@@ -34,6 +34,7 @@ node_modules
 
 # Copied files
 examples/fonts
+examples/examples.css
 
 # Generated report website
 gemini-report
