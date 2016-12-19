@@ -1,13 +1,16 @@
-# CHANGELOG
+# Changelog
 
-## Version 1.2.2
+## v1.2.3
+Make accordion items have globally unique IDs.
+
+## v1.2.2
 Updated ffe-expandable-react to use react-height to calculate panel height
 
-## Version 1.2.1
+## v1.2.1
 Updated ffe-expandable-react and ffe-icons-react to fix some bugs.
 
-## Version 1.2.0
+## v1.2.0
 Added aria-label-tag to be able to set text screen-readers read.
 
-## Version 1.0.0
-"First" version
+## v1.0.0
+"Initial" version
