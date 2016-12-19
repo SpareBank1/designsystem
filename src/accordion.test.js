@@ -8,8 +8,8 @@ import sinon from 'sinon';
 const wrapperHasContent = (wrapper, content) => new RegExp(content).test(wrapper.html());
 
 describe('ffe-accordion-react', () => {
-   
-    it('should render the proper amount of accordion items', () => { 
+
+    it('should render the proper amount of accordion items', () => {
         const wrapper = render(whiteAccordion);
 
         assert.equal(
@@ -48,12 +48,21 @@ describe('ffe-accordion-react', () => {
     });
 
     it('should toggle open/closed-state', () => {
-        const itemWrapper = shallow(<AccordionItem expandedContent={ "Expanded" } >Standard content</AccordionItem>);
+        const itemWrapper = shallow(
+            <AccordionItem
+                expandedContent="Expanded"
+                index={ 0 }
+                isOpen={ false }
+                uuid="some uuid"
+            >
+                Standard content
+            </AccordionItem>
+        );
 
         assert.equal(
             wrapperHasContent(itemWrapper, 'ffe-accordion-item--open'),
             false);
-    
+
         itemWrapper.find('.ffe-accordion-item__toggler').simulate('click');
 
         assert.equal(
@@ -66,28 +75,39 @@ describe('ffe-accordion-react', () => {
             wrapperHasContent(itemWrapper, 'ffe-accordion-item--open'),
             false);
     });
-    
+
     it('should call callback functions on open/closed-state', () => {
-      const onOpen = sinon.spy();
-      const onClose = sinon.spy();
-      const itemWrapper = shallow(<AccordionItem onOpen={ onOpen } onClose={ onClose } expandedContent={ "Expanded" } >Standard content</AccordionItem>);
-      
+        const onOpen = sinon.spy();
+        const onClose = sinon.spy();
+        const itemWrapper = shallow(
+            <AccordionItem
+                expandedContent="Expanded"
+                index={ 0 }
+                isOpen={ false }
+                onOpen={ onOpen }
+                onClose={ onClose }
+                uuid="some uuid"
+            >
+                Standard content
+            </AccordionItem>
+        );
+
       itemWrapper.find('.ffe-accordion-item__toggler').simulate('click');
-      
+
       assert.equal(
         onOpen.callCount,
         1);
-        
+
       assert.equal(
         onClose.callCount,
         0);
-          
+
       itemWrapper.find('.ffe-accordion-item__toggler').simulate('click');
-      
+
       assert.equal(
         onOpen.callCount,
         1);
-            
+
       assert.equal(
         onClose.callCount,
         1);

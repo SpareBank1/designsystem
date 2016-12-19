@@ -1,14 +1,24 @@
 import React, { PropTypes, cloneElement } from 'react';
+import hash from 'nfe-hash';
 
-export default function Accordion(props) {
-    return <ul {...props} className="ffe-accordion" role="tablist" aria-multiselectable="true">
-                { React.Children.map(props.children, 
-                    (ele, index) => cloneElement(ele, { type: props.type, index })) }
-            </ul>;
+function Accordion(props) {
+    return (
+        <ul
+            {...props}
+            aria-multiselectable="true"
+            className="ffe-accordion"
+            role="tablist"
+        >
+            { React.Children.map(props.children, (ele) =>
+                cloneElement(ele, { type: props.type, uuid: hash(props) }))
+            }
+        </ul>
+    );
 }
 
-
 Accordion.propTypes = {
-    children: PropTypes.array.isRequired,
+    children: PropTypes.node.isRequired,
     type: PropTypes.oneOf(['white', 'blue']).isRequired
 };
+
+export default Accordion;
