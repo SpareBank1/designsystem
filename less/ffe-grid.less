@@ -30,8 +30,6 @@
     flex: 0 1 auto;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-left: @ffe-grid-gutter-sm / 2 * -1;
-    margin-right: @ffe-grid-gutter-sm / 2 * -1;
 
     @media only screen and (min-width: @breakpoint-lg) {
         margin-left: @ffe-grid-gutter-lg / 2 * -1;
@@ -44,6 +42,8 @@
 }
 
 .ffe-grid__col {
+    display: flex;
+
     &--start {
         justify-content: flex-start;
         text-align: start;
@@ -79,6 +79,7 @@
         justify-content: space-between;
     }
 
+
     &--lg,
     &--md,
     &--sm,
@@ -88,7 +89,7 @@
         max-width: 100%;
 
         &,
-        -offset {
+        &-offset {
             &-1,
             &-10,
             &-11,
