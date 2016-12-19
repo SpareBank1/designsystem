@@ -1,0 +1,124 @@
+// Variables
+@ffe-grid-columns: 12;
+@ffe-grid-width: 1280px;
+@ffe-grid-gutter-sm: 20px;
+@ffe-grid-gutter-lg: 40px;
+
+// Mixins
+.create-column(@size, @total, @current: 1) when (@current <= @total) {
+    .ffe-grid__col--@{size}-@{current} {
+        flex-basis: (@current * 100%) / @total;
+        max-width: (@current * 100%) / @total;
+    }
+
+    .ffe-grid__col--@{size}-offset-@{current} {
+        margin-left: (@current * 100%) / @total;
+    }
+
+    .create-column(@size, @total, @current + 1);
+}
+
+.ffe-grid {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: @ffe-grid-width;
+}
+
+.ffe-grid__row {
+    display: flex;
+    flex: 0 1 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: @ffe-grid-gutter-sm / 2 * -1;
+    margin-right: @ffe-grid-gutter-sm / 2 * -1;
+
+    @media only screen and (min-width: @breakpoint-lg) {
+        margin-left: @ffe-grid-gutter-lg / 2 * -1;
+        margin-right: @ffe-grid-gutter-lg / 2 * -1;
+    }
+
+    &--reverse {
+        flex-direction: row-reverse;
+    }
+}
+
+.ffe-grid__col {
+    &--start {
+        justify-content: flex-start;
+        text-align: start;
+    }
+
+    &--center {
+        justify-content: center;
+        text-align: center;
+    }
+
+    &--end {
+        justify-content: flex-end;
+        text-align: end;
+    }
+
+    &--top {
+        align-items: flex-start;
+    }
+
+    &--middle {
+        align-items: center;
+    }
+
+    &--bottom {
+        align-items: flex-end;
+    }
+
+    &--around {
+        justify-content: space-around;
+    }
+
+    &--between {
+        justify-content: space-between;
+    }
+
+    &--lg,
+    &--md,
+    &--sm,
+    &--xl {
+        flex-grow: 1;
+        flex-basis: 0;
+        max-width: 100%;
+
+        &,
+        -offset {
+            &-1,
+            &-10,
+            &-11,
+            &-12,
+            &-2,
+            &-3,
+            &-4,
+            &-5,
+            &-6,
+            &-7,
+            &-8,
+            &-9 {
+                flex: 1 1 auto;
+                padding: 0 (@ffe-grid-gutter-sm / 2) @ffe-grid-gutter-sm;
+
+                @media only screen and (min-width: @breakpoint-lg) {
+                    padding: 0 (@ffe-grid-gutter-lg / 2) @ffe-grid-gutter-lg;
+                }
+            }
+        }
+    }
+}
+
+.create-column(sm, 12);
+@media only screen and (min-width: @breakpoint-md) {
+    .create-column(md, 12);
+}
+@media only screen and (min-width: @breakpoint-lg) {
+    .create-column(lg, 12);
+}
+@media only screen and (min-width: @breakpoint-xl) {
+    .create-column(xl, 12);
+}
