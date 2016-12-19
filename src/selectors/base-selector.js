@@ -412,7 +412,10 @@ class BaseSelector extends Component {
             highlightedItem={this.state.highlightedItem}
             locale={this.props.locale}
             noMatches={this.props.noMatches}
-            onSelect={ (item) => this.onItemSelectedFromDropdown(item) }
+            onSelect={ (item, event) => {
+              event.preventDefault();
+              this.onItemSelectedFromDropdown(item);
+            } }
             onKeyDown={(evt) => this.onKeyDown(evt, true)}
             renderItemRow={this.props.renderItemRow}
             multiSelect={this.state.multiSelect}
