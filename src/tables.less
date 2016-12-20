@@ -13,16 +13,31 @@
     width: 17px;
     height: inherit;
     fill: @ffe-blue-royal;
-    transition: transform .2s, fill .2s;
+    transition: transform .2s;
   }
   &&.ffe-responsive-table__row-expanded {
     .expand-icon {
-      transform: rotateX(180deg);
+      transform: rotate(180deg);
     }
   }
 }
 
 .ffe-responsive-table__row-expanded,
-.ffe-responsive-table__row-expanded-content {
+.ffe-responsive-table__row-expanded-content:not(.collapsed) {
   background-color: @ffe-grey-light-bg;
+}
+
+.ffe-responsive-table__row-expanded-content {
+  transition: transform .2s, background-color .2s .2s;
+  transform: translateY(0);
+  opacity: 1;
+
+  &.collapsed {
+    border-bottom: 0!important;
+    transform: translateY(-2em);
+    opacity: 0;
+    td {
+      padding: 0;
+    }
+  }
 }

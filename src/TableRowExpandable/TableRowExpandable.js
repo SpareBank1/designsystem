@@ -41,15 +41,22 @@ class TableRowExpandable extends Component {
     let expandedRow = (
       <tr role="presentation" className="ffe-responsive-table__row-expanded-content">
         <td
-          className="ffe-responsive-table__cell"
           colSpan={headers.length}
         >
-          { children }
+          <div>
+            { children }
+          </div>
         </td>
       </tr>
     );
 
-    let expandedContent = this.state.expanded ? expandedRow : null;
+    let expandedContent = this.state.expanded ? expandedRow : 
+      <tr role="presentation" className="ffe-responsive-table__row-expanded-content collapsed">
+        <td colSpan={headers.length}>
+          <div>
+          </div>
+        </td>
+      </tr>;
 
     return <tbody {...tabIndex} onKeyDown={this.handleKeyPress.bind(this)}>
       {clickableRow}

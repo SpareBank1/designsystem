@@ -20,7 +20,7 @@ export const SIMPLE_TABLE = {
       phone: '912 34 567',
       email: 'ola@normann.no',
       username: 'olli22',
-      bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi mollis aliquet pellentesque. Vivamus nec nulla nec lacus commodo aliquet ac ac sapien. Suspendisse mollis consectetur odio consequat accumsan. In at aliquet magna, at pharetra ligula. Mauris dictum malesuada eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+      bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi mollis aliquet pellentesque.'
     },
     {
       name: 'Sivert Svenska',
@@ -29,7 +29,7 @@ export const SIMPLE_TABLE = {
       phone: '+46 123 456 789',
       email: 'sivert@svenska.se',
       username: 'zlatan_2000',
-      bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi mollis aliquet pellentesque. Vivamus nec nulla nec lacus commodo aliquet ac ac sapien. Suspendisse mollis consectetur odio consequat accumsan. In at aliquet magna, at pharetra ligula. Mauris dictum malesuada eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+      bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi mollis aliquet pellentesque. Vivamus nec nulla nec lacus commodo aliquet ac ac sapien. Suspendisse mollis consectetur odio consequat accumsan. In at aliquet magna, at pharetra ligula. Mauris dictum malesuada eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi mollis aliquet pellentesque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi mollis aliquet pellentesque. Vivamus nec nulla nec lacus commodo aliquet ac ac sapien. Suspendisse mollis consectetur odio consequat accumsan. In at aliquet magna, at pharetra ligula. Mauris dictum malesuada eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi mollis aliquet pellentesque.'
     },
     {
       name: 'Daniel Dansk',
