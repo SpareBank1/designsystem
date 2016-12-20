@@ -2,7 +2,7 @@
 
 main() {
     npm install
-    npm run compile
+    npm run build
 
     rm -rf target/
     mkdir -p target/archive
