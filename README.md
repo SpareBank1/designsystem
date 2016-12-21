@@ -42,16 +42,15 @@ Example `icons.json`:
 
 ```
 
-To have npm be able to find the gulp dependency of ffe-icons in node_modules gulp has to be started from npm.
-In your projects `package.json`:
+To build your icon sprite, run the `ffe-icons` command using Node and pass the path to your `icons.json` as `--opts`. 
+It is recommended you add an npm-script to your `package.json` like so:
 
 ```
 {
     "name": "awesome-client",
     "scripts": {
         ...
-        "ffe:icons": "gulp --no-color --gulpfile node_modules/ffe-icons/gulpfile.js --opts=../../icons.json",
-        "#": "--gulpfile sets the cwd to be the dir containing the gulpfile, so --opts has to step up two dirs to find icons.json"
+        "ffe:icons": "ffe-icons --opts=icons.json",
         ...
     }
 }
