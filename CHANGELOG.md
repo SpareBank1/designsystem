@@ -1,21 +1,25 @@
 # Changelog
 
+## 7.0.1
+
+Changes the shebang so it works better on different flavours of Linux
+
 ## 7.0.0
 
 **Breaking changes**
 
-The Gulp dependency has been removed. Outdated packages that crash on 
-Node 7 deep in the dependency tree made it overdue 
- 
-*To migrate you need to update your npm-script*: 
+The Gulp dependency has been removed. Outdated packages that crash on
+Node 7 deep in the dependency tree made it overdue
+
+*To migrate you need to update your npm-script*:
 
 ```json
 "ffe:icons": "ffe-icons --opts=icons.json",
 ```
 
-Note that the `--opts` flag now assumes the base path for the location of `icons.json` is the directory 
-above `node_modules/` (the same directory as your apps `package.json`). So what used to be 
-`--opts=../../icons.json` is now just `--opts=icons.json`.  
+Note that the `--opts` flag now assumes the base path for the location of `icons.json` is the directory
+above `node_modules/` (the same directory as your apps `package.json`). So what used to be
+`--opts=../../icons.json` is now just `--opts=icons.json`.
 
 ## 6.4.0
 * Added koffert-ikon.svg
