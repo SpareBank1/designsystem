@@ -1,5 +1,8 @@
 # Changelog
 
+## 4.1.0
+* Option to remove `ffe-checkbox--inline` by adding the property `inline=false`.
+
 ## 4.0.0
 * Added support for ffe-form version 4.x
 
