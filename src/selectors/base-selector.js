@@ -20,6 +20,7 @@ class BaseSelector extends Component {
     this.onMultiSelectDone = this.onMultiSelectDone.bind(this);
     this.placeholderText = this.placeholderText.bind(this);
     this.globalClickHandler = this.globalClickHandler.bind(this);
+    this.onBlur = this.onBlur.bind(this);
   }
 
   getDefaultState() {
@@ -111,11 +112,10 @@ class BaseSelector extends Component {
 
   globalClickHandler(evt) {
     if ((this.state.showItemSuggestions && !this._root.contains(evt.target))) {
-      this.setState({
-        showItemSuggestions: false,
+      this.selectHighlightedAccount(() => {
+          this.removeGlobalEventListeners();
+          this.onBlur();
       });
-      this.removeGlobalEventListeners();
-      this.onBlur();
     }
   }
 
@@ -143,6 +143,7 @@ class BaseSelector extends Component {
   }
 
   onKeyDown(evt, originateFromDropdown = false) {
+    evt.stopPropagation();
     const altKey = evt.altKey;
     switch (evt.which) {
       case KeyCode.DOWN:
@@ -264,17 +265,21 @@ class BaseSelector extends Component {
 
   onInputTab(evt) {
     if (!this.state.multiSelect || evt.shiftKey) {
-      this.setState({
-        showItemSuggestions: false,
-        highlightedItem: -1,
-        selectedItems: this.state.highlightedItem > -1 ? [this.state.filteredItems[this.state.highlightedItem]] : this.state.selectedItems,
-      }, () => {
-        if (this.state.selectedItems.length > 0) {
-          this.props.onItemSelected(this.state.selectedItems[0]);
-        }
-        this.onBlur();
-      });
+      this.selectHighlightedAccount(this.onBlur);
     }
+  }
+
+  selectHighlightedAccount(cb){
+    this.setState({
+      showItemSuggestions: false,
+      highlightedItem: -1,
+      selectedItems: this.state.highlightedItem > -1 ? [this.state.filteredItems[this.state.highlightedItem]] : this.state.selectedItems,
+    }, () => {
+      if (this.state.selectedItems.length > 0) {
+        this.props.onItemSelected(this.state.selectedItems[0]);
+      }
+      cb();
+    });
   }
 
   onBlur() {
