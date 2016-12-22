@@ -1,7 +1,8 @@
 import React, { PropTypes, cloneElement } from 'react';
-import hash from 'nfe-hash';
+import uuid from 'uuid';
 
 function Accordion(props) {
+    const accordionId = uuid.v4();
     return (
         <ul
             {...props}
@@ -10,7 +11,7 @@ function Accordion(props) {
             role="tablist"
         >
             { React.Children.map(props.children, (ele) =>
-                cloneElement(ele, { type: props.type, uuid: hash(props) }))
+                cloneElement(ele, { type: props.type, uuid: accordionId }))
             }
         </ul>
     );
