@@ -144,7 +144,6 @@ class BaseSelector extends Component {
   }
 
   onKeyDown(evt, originateFromDropdown = false) {
-    evt.stopPropagation();
     const altKey = evt.altKey;
     switch (evt.which) {
       case KeyCode.DOWN:
@@ -270,7 +269,7 @@ class BaseSelector extends Component {
     }
   }
 
-  selectHighlightedAccount(cb){
+  selectHighlightedAccount(cb) {
     this.setState({
       showItemSuggestions: false,
       highlightedItem: -1,
@@ -288,7 +287,7 @@ class BaseSelector extends Component {
   }
 
   onInputBlur(event) {
-    if(!event.relatedTarget || !event.relatedTarget.className.match('nfe-account-suggestions__item')){
+    if (!event.relatedTarget || !event.relatedTarget.className.match('nfe-account-suggestions__item')) {
       this.setState({showItemSuggestions : false},() => {
         this.props.onBlur(this.state.selectedItems, this.state.inputValue);
        });
