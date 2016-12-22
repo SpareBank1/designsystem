@@ -55,6 +55,20 @@ describe('<Checkbox />', () => {
             1);
     });
 
+    it('should support inline', () => {
+        assert.equal(
+            shallow(CreateCheckbox()).find('.ffe-checkbox--inline').length,
+            1);
+
+        assert.equal(
+            shallow(CreateCheckbox({ inline: false })).find('.ffe-checkbox--inline').length,
+            0);
+
+        assert.equal(
+            shallow(CreateCheckbox({ inline: true })).find('.ffe-checkbox--inline').length,
+            1);
+    });
+
     it('should set arbitrary props (rest) on input', () => {
         const wrapper = shallow(CreateCheckbox({
             name: 'checkbox',

@@ -7,7 +7,7 @@ export default function CheckBox(props) {
         children,
         label,
         noMargins,
-        onChange,
+        inline,
         ...rest,
     } = props;
 
@@ -16,7 +16,6 @@ export default function CheckBox(props) {
     return (
         <span>
             <input
-                onChange={onChange || (f => f)}
                 className="ffe-hidden-checkbox"
                 id={id}
                 type="checkbox"
@@ -25,7 +24,7 @@ export default function CheckBox(props) {
             <label
                 className={classNames({
                     'ffe-checkbox': true,
-                    'ffe-checkbox--inline': true,
+                    'ffe-checkbox--inline': inline,
                     'ffe-checkbox--no-margin': noMargins
                 })}
                 htmlFor={id}
@@ -41,5 +40,11 @@ CheckBox.propTypes = {
     onChange: PropTypes.func,
     checked: PropTypes.bool,
     noMargins: PropTypes.bool,
+    inline: PropTypes.bool,
     children: PropTypes.array,
+};
+
+CheckBox.defaultProps = {
+    noMargins: false,
+    inline: true
 };
