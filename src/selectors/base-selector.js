@@ -21,6 +21,7 @@ class BaseSelector extends Component {
     this.placeholderText = this.placeholderText.bind(this);
     this.globalClickHandler = this.globalClickHandler.bind(this);
     this.onBlur = this.onBlur.bind(this);
+    this.onInputBlur = this.onInputBlur.bind(this);
   }
 
   getDefaultState() {
@@ -286,6 +287,14 @@ class BaseSelector extends Component {
     this.props.onBlur(this.state.selectedItems, this.state.inputValue);
   }
 
+  onInputBlur(event) {
+    if(!event.relatedTarget || !event.relatedTarget.className.match('nfe-account-suggestions__item')){
+      this.setState({showItemSuggestions : false},() => {
+        this.props.onBlur(this.state.selectedItems, this.state.inputValue);
+       });
+    }
+  }
+
   handleItemSelectSingle(item) {
     this._inputField.focus();
     this.setState({
@@ -385,6 +394,7 @@ class BaseSelector extends Component {
       >
         <input
           onFocus={ () => this.onInputFocus() }
+          onBlur={this.onInputBlur}
           className={ inputClassName() }
           onKeyDown={ (evt) => {this.onKeyDown(evt);} }
           ref={ assignTo('_inputField') }
