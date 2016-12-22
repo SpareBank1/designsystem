@@ -1,5 +1,8 @@
 # Changelog
 
+# v4.0.1
+* Fix misplaced checkboxes in AccountSelectorMulti.
+
 # v4.0.0
 * Revert setTimeout on componentWillMount made in v3.0.4 causing unexpected behaviour
 * Expose reset method in AccountSelector
