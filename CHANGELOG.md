@@ -8,6 +8,9 @@
 * Bugfix: give input field focus after dropdown item clicked
 * Bugfix: call onBlur prop when input field loses focus to another element than the dropdown list
 
+# v4.0.1
+* Fix misplaced checkboxes in AccountSelectorMulti.
+
 # 4.0.0 (Invalid version, missing dependency lodash.isequal)
 
 # v3.1.0

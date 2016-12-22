@@ -73,7 +73,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "ffe-checkbox-react": "^2.2.1",
+    "ffe-checkbox-react": "^4.1.0",
     "ffe-icons-react": "0.4.2",
     "lodash.isequal": "^4.4.0",
     "nfe-amount-formatter": "^2.0.1",
