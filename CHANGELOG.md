@@ -1,9 +1,14 @@
 # Changelog
 
-# v4.0.0
+# v4.1.0
 * Revert setTimeout on componentWillMount made in v3.0.4 causing unexpected behaviour
 * Expose reset method in AccountSelector
-* Fixed input field not clearing on ESC press
+* Same behaviour when tabbing and clicking away from input field
+* Bugfix: input field not clearing on ESC press
+* Bugfix: give input field focus after dropdown item clicked
+* Bugfix: call onBlur prop when input field loses focus to another element than the dropdown list
+
+# 4.0.0 (Invalid version, missing dependency lodash.isequal)
 
 # v3.1.0
 * You can now use the classes nfe-general-selector-suggestion, &__name and &__details to get the approximate appearence of the regular account selector without checkboxes ie with multiple=false
