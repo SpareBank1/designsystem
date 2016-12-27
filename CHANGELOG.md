@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.5.2
+
+* Use latest FFE eslint config
+
 ## 2.5.1
 
 * Added support for ffe-form version 4.x.x

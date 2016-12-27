@@ -47,7 +47,7 @@ function Dropdown(props) {
             </select>
 
             {isLoading &&
-                <div className="ffe-loading-spinner"></div>
+                <div className="ffe-loading-spinner"/>
             }
 
             {errorMessage &&
