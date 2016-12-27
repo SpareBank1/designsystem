@@ -1,5 +1,8 @@
 # Changelog
 
+## 4.1.1
+* Update eslint to latest ffe config
+
 ## 4.1.0
 * Option to remove `ffe-checkbox--inline` by adding the property `inline=false`.
 
