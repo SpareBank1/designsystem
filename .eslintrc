@@ -1,3 +1,3 @@
 {
-    "extends": "eslint-config-ffe/index"
+    "extends": "ffe"
 }
