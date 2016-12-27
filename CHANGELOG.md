@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## Version 1.1.1
+* Upgrade eslint to use ffe config
+
 ## Version 1.1.0
 * Added styling support for outer container using style prop
 * Bumped ffe-icons-react dependency
