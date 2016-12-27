@@ -26,7 +26,7 @@ function MessageBox(props) {
                     ffe-message-box__box--${type}
                     `}
             >
-                { title &&
+                {title &&
                     <div className={`ffe-h4 ffe-message-box__title--${type}`}>
                         { title }
                     </div>

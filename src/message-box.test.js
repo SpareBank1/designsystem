@@ -1,3 +1,4 @@
+/*eslint-env mocha*/
 import { shallow } from 'enzyme';
 import { assert } from 'chai';
 import React from 'react';
@@ -6,16 +7,16 @@ import { SuccessMessage, InfoMessage, ErrorMessage, TipsMessage } from './index'
 describe('<MessageBox />', () => {
 
     it('should render the proper wrapper element', () => {
-        [SuccessMessage, ErrorMessage, InfoMessage, TipsMessage].map(Message => {
+        [SuccessMessage, ErrorMessage, InfoMessage, TipsMessage].forEach(Message => {
             assert.equal(shallow(<Message />).is('div.ffe-message-box'), true);
-        })
+        });
     });
 
     it('should render title and content', () => {
         const title = 'Oppdateringen gikk bra';
         const content = 'Dette er en melding til deg';
 
-        [SuccessMessage, ErrorMessage, InfoMessage, TipsMessage].map(Message => {
+        [SuccessMessage, ErrorMessage, InfoMessage, TipsMessage].forEach(Message => {
             const wrapper = shallow(<Message title={ title } content={ content } />);
             assert.equal(new RegExp(title).test(wrapper.text()), true);
             assert.equal(new RegExp(content).test(wrapper.text()), true);
@@ -26,7 +27,7 @@ describe('<MessageBox />', () => {
         const content = 'Dette er en melding til deg';
         const types = ['success, error, info, tips'];
 
-        [SuccessMessage, ErrorMessage, InfoMessage, TipsMessage].map((Message, index) => {
+        [SuccessMessage, ErrorMessage, InfoMessage, TipsMessage].forEach((Message, index) => {
             const wrapper = shallow(<Message content={ content } />);
             assert.equal(wrapper.find(`.ffe-message-box__title--${types[index]}`).length, 0,
                 `Unexpected css class .ffe-message-box__title--${types[index]} in component output`);
