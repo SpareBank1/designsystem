@@ -4,13 +4,13 @@ module.exports = {
   "rules": {
     "at-rule-empty-line-before": [ "always", {
       except: [
-        "blockless-after-same-name-blockless",
-        "first-nested",
+        "blockless-after-same-name-blockless"
       ],
       ignore: ["after-comment"],
     } ],
     "at-rule-name-case": "lower",
     "at-rule-name-space-after": "always-single-line",
+    "at-rule-no-vendor-prefix": true,
     "at-rule-semicolon-newline-after": "always",
     "block-closing-brace-empty-line-before": "never",
     "block-closing-brace-newline-after": "always",
@@ -20,7 +20,7 @@ module.exports = {
     "block-opening-brace-newline-after": "always-multi-line",
     "block-opening-brace-space-after": "always-single-line",
     "block-opening-brace-space-before": "always",
-    "color-hex-case": "lower",
+    "color-hex-case": "upper",
     "color-hex-length": "short",
     "color-no-invalid-hex": true,
     "comment-empty-line-before": [ "always", {
@@ -75,14 +75,16 @@ module.exports = {
     "function-parentheses-newline-inside": "always-multi-line",
     "function-parentheses-space-inside": "never-single-line",
     "function-whitespace-after": "always",
-    "indentation": 2,
+    "indentation": [4, { "ignore": ["inside-parens"] }],
     "keyframe-declaration-no-important": true,
     "length-zero-no-unit": true,
     "max-empty-lines": 1,
+    "max-nesting-depth": 3,
     "media-feature-colon-space-after": "always",
     "media-feature-colon-space-before": "never",
     "media-feature-name-case": "lower",
     "media-feature-name-no-unknown": true,
+    "media-feature-name-no-vendor-prefix": true,
     "media-feature-parentheses-space-inside": "never",
     "media-feature-range-operator-space-after": "always",
     "media-feature-range-operator-space-before": "always",
@@ -98,6 +100,7 @@ module.exports = {
     "number-no-trailing-zeros": true,
     "property-case": "lower",
     "property-no-unknown": true,
+    "property-no-vendor-prefix": true,
     "rule-nested-empty-line-before": [ "always-multi-line", {
       except: ["first-nested"],
       ignore: ["after-comment"],
@@ -114,6 +117,8 @@ module.exports = {
     "selector-list-comma-newline-after": "always",
     "selector-list-comma-space-before": "never",
     "selector-max-empty-lines": 0,
+    "selector-max-specificity": "0,3,0",
+    "selector-no-vendor-prefix": true,
     "selector-pseudo-class-case": "lower",
     "selector-pseudo-class-no-unknown": true,
     "selector-pseudo-class-parentheses-space-inside": "never",
@@ -130,5 +135,6 @@ module.exports = {
     "value-list-comma-space-after": "always-single-line",
     "value-list-comma-space-before": "never",
     "value-list-max-empty-lines": 0,
+    "value-no-vendor-prefix": true,
   },
 }
