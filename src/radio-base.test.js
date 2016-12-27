@@ -1,3 +1,5 @@
+/*eslint-env mocha*/
+/*eslint no-unused-expressions:0*/
 import React from 'react';
 import chai, { expect } from 'chai';
 import chaiEnzyme from 'chai-enzyme';
@@ -11,21 +13,24 @@ chai.use(chaiEnzyme());
 describe('<RadioBase />', () => {
 
     describe('rendering', () => {
-        const wrapper = shallow(<RadioBase labelClasses="" value="shark" label="Kjempetorsk" />);
 
-        it('should render an input with type radio', () => {
-            expect(wrapper).to.have.exactly(1).descendants('input');
-            expect(wrapper.find('input').prop('type')).to.equal('radio');
-        });
+        describe('default', () => {
+          const wrapper = shallow(<RadioBase labelClasses="" value="shark" label="Kjempetorsk" />);
 
-        it('should render a label', () => {
-            expect(wrapper).to.have.exactly(1).descendants('label');
-        });
+          it('should render an input with type radio', () => {
+              expect(wrapper).to.have.exactly(1).descendants('input');
+              expect(wrapper.find('input').prop('type')).to.equal('radio');
+          });
 
-        it('should apply the same id to <label> and <input>', () => {
-            const htmlFor = wrapper.find('label').prop('htmlFor');
-            const id = wrapper.find('input').prop('id');
-            expect(htmlFor).to.be.equal(id);
+          it('should render a label', () => {
+              expect(wrapper).to.have.exactly(1).descendants('label');
+          });
+
+          it('should apply the same id to <label> and <input>', () => {
+              const htmlFor = wrapper.find('label').prop('htmlFor');
+              const id = wrapper.find('input').prop('id');
+              expect(htmlFor).to.be.equal(id);
+          });
         });
 
         it('should render a default value if passed', () => {
@@ -45,7 +50,7 @@ describe('<RadioBase />', () => {
         });
 
         it('should apply labelClasses to the label', () => {
-            let wrapper = shallow(<RadioBase labelClasses="test-class" value="" />);
+            const wrapper = shallow(<RadioBase labelClasses="test-class" value="" />);
             expect(wrapper.find('label').hasClass('test-class')).to.be.true;
         });
     });
