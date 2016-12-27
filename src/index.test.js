@@ -1,3 +1,5 @@
+/*eslint-env mocha*/
+/*eslint no-unused-expressions:0*/
 import { expect } from 'chai';
 import DefaultSpinner, { Spinner, InlineSpinner, LargeSpinner } from './index';
 

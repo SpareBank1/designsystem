@@ -1,5 +1,8 @@
 # Changelog
 
+## v.2.0.1
+* Upgrade eslint to use latest ffe config
+
 ## v.2.0.0
 * peerDependency on `ffe-core` bumped to `^8.0.2`
 * Added explicit dependency on `ffe-core` and `ffe-spinner`

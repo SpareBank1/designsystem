@@ -1,3 +1,5 @@
+/*eslint-env mocha*/
+/*eslint no-unused-expressions:0*/
 import React from 'react';
 import { expect } from 'chai';
 import { shallow } from 'enzyme';
