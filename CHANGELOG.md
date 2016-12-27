@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.0.4
+Use eslint with latest ffe configuration.
+
 ## 1.0.3
 A third attempt at dealing with vertical margins, as well as a small refactor.
 
