@@ -1,4 +1,3 @@
 {
-  "extends": "eslint-config-ffe",
-  "env": { "mocha": true }
+  "extends": "ffe"
 }
