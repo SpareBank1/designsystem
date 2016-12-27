@@ -25,7 +25,7 @@ export default class FFEDateInput extends React.Component {
           onChange={ this.props.onChange }
           onKeyPress={ this.props.onKeyDown }
           onKeyDown={ this.props.onKeyDown }
-          ref={ c => (this._input = c) }
+          ref={ c => { this._input = c; } }
           aria-invalid={ this.props.ariaInvalid }
           { ...inputProps }
         />

@@ -1,3 +1,4 @@
+/*eslint jsx-a11y/onclick-has-focus:1 jsx-a11y/onclick-has-role:1 */
 import React, { PropTypes } from 'react';
 import Calendar from '../calendar/ffe-calendar';
 import KeyCode from '../util/keyCode';
@@ -116,7 +117,7 @@ export default class FFEDatepicker extends React.Component {
     return (
       <div
         onClick={ this.clickHandler }
-        ref={ c => (this._datepickerNode = c) }
+        ref={ c => { this._datepickerNode = c; } }
         className="ffe-datepicker"
       >
         <DateInput
@@ -126,7 +127,7 @@ export default class FFEDatepicker extends React.Component {
           onKeyDown={ this.onInputKeydown }
           value={ this.props.value }
           inputProps={ this.props.inputProps }
-          ref={ c => (this.dateInputRef = c) }
+          ref={ c => { this.dateInputRef = c; } }
           ariaInvalid={ this.props.ariaInvalid }
         />
         { this.state.displayDatePicker ?

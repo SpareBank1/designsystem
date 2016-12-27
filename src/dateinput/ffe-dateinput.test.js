@@ -11,14 +11,16 @@ describe('<FFEDateInput />', () => {
   const onFocus = spy();
   const onKeyDown = spy();
 
-  const component = shallow(<FFEDateInput
-    inputProps={{ className: 'given-class-name', placeholder: 'Given placeholder' }}
-    onChange={onChange}
-    onFocus={onFocus}
-    onKeyDown={onKeyDown}
-    value="2016-03-07"
-    ariaInvalid={false}
-  />);
+  const component = shallow(
+    <FFEDateInput
+      inputProps={{ className: 'given-class-name', placeholder: 'Given placeholder' }}
+      onChange={onChange}
+      onFocus={onFocus}
+      onKeyDown={onKeyDown}
+      value="2016-03-07"
+      ariaInvalid={false}
+    />
+  );
 
   it('should render a wrapper for the input field', () => {
     assert.isTrue(component.is('.ffe-dateinput'));

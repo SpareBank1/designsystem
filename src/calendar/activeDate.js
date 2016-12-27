@@ -42,7 +42,7 @@ export default class ActiveDate extends React.Component {
         className={ this.dayClassName() }
         role="gridcell"
         tabIndex={ this.tabIndex() }
-        ref={ c => (this._datecell = c) }
+        ref={ c => { this._datecell = c; } }
         aria-selected={ this.props.date.isSelected }
         aria-disabled={ !this.props.date.isEnabled }
         onClick={ () => this.props.onClick(this.props.date) }
