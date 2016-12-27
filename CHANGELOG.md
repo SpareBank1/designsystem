@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.1.1
+
+* Upgrade eslint
+
 ## v1.1.0
 
 * Added className support for ffe-check-list
