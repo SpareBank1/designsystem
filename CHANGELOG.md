@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.2.5
+Update eslint configuration
+
 ## v1.2.4
 This release fixes a few issues from v1.2.3.
 - Use `uuid` instead of `nfe-hash` for unique IDs.
