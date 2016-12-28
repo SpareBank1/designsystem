@@ -18,4 +18,23 @@ Create .eslintsrc and extend this config.
 }
 ```
 
-if you are not using react see eslint-config-ffe-base
+If you are not using React see eslint-config-ffe-base.
+
+### jsx-a11y-plugin
+
+Additionally install the a11y-plugin:
+
+```bash
+npm i -D eslint-plugin-jsx-a11y
+```
+
+Include the rules in .eslintsrc:
+
+```json
+{
+    "extends": [
+        "ffe",
+        "ffe/rules/jsx-a11y"
+    ]
+}
+```
