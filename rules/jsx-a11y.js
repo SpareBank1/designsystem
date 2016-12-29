@@ -1,7 +1,4 @@
 module.exports = {
-  plugins: [
-    'jsx-a11y'
-  ],
   rules: {
       // Enforce all anchors to contain accessible content.
       // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/aria-props.md
