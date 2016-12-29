@@ -1,5 +1,8 @@
 # Changelog
 
+## v.5.1.0 (28.12.2016)
+* (feature) Include rules for eslint-plugin-jsx-a11y. Consumers must explicit included the rules.
+
 ## v.5.0.1 (18.10.2016)
 * (patch) Remove eslint-plugin-import from peerDependencies, we get that from eslint-config-ffe-base. To avoid having to maintain the version number in two places.
 
