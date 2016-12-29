@@ -1,5 +1,8 @@
 # Changelog
 
+## v.6.0.0 (29.12.2016)
+* (breaking) jsx-a11y rules are included by default and require eslint-plugin-jsx-a11y.
+
 ## v.5.1.0 (28.12.2016)
 * (feature) Include rules for eslint-plugin-jsx-a11y. Consumers must explicit included the rules.
 
