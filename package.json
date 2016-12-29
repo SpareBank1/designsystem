@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-ffe",
-  "version": "5.0.1",
+  "version": "5.1.2",
   "description": "",
   "main": "index.js",
   "scripts": {
