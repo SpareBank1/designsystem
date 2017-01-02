@@ -102,12 +102,12 @@ AccordionItem.propTypes = {
     children: PropTypes.node,
     expandedContent: PropTypes.node,
     ignoredNodeNames: PropTypes.arrayOf(PropTypes.string),
-    index: PropTypes.number.isRequired,
-    isOpen: PropTypes.bool.isRequired,
+    index: PropTypes.number,
+    isOpen: PropTypes.bool,
     onClose: PropTypes.func,
     onOpen: PropTypes.func,
     type: PropTypes.oneOf(['white', 'blue']),
-    uuid: PropTypes.string.isRequired,
+    uuid: PropTypes.string,
 };
 
 AccordionItem.defaultProps = {

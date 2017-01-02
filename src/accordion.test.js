@@ -1,6 +1,6 @@
 import { assert } from 'chai';
 import { whiteAccordion, blueAccordion } from '../docs/example-component';
-import { AccordionItem } from '../src/';
+import { AccordionItem, WhiteAccordion } from '../src/';
 import { shallow, render } from 'enzyme';
 import React from 'react';
 import sinon from 'sinon';
@@ -83,10 +83,8 @@ describe('ffe-accordion-react', () => {
             <AccordionItem
                 expandedContent="Expanded"
                 index={ 0 }
-                isOpen={ false }
                 onOpen={ onOpen }
                 onClose={ onClose }
-                uuid="some uuid"
             >
                 Standard content
             </AccordionItem>
@@ -111,5 +109,46 @@ describe('ffe-accordion-react', () => {
       assert.equal(
         onClose.callCount,
         1);
+    });
+
+    it('should provide a uuid for each accordion rendered', () => {
+        const wrapper = shallow(
+            <div>
+                <WhiteAccordion>
+                    <AccordionItem>Hello</AccordionItem>
+                    <AccordionItem>World</AccordionItem>
+                </WhiteAccordion>
+                <WhiteAccordion>
+                    <AccordionItem>Foo</AccordionItem>
+                    <AccordionItem>Bar</AccordionItem>
+                </WhiteAccordion>
+            </div>
+        );
+
+        const accordions = wrapper.find('WhiteAccordion');
+
+        const firstAccordion = accordions.first().dive().dive();
+        const secondAccordion = accordions.last().dive().dive();
+
+        assert.notEqual(
+            firstAccordion.find('AccordionItem').first().prop('uuid'),
+            secondAccordion.find('AccordionItem').first().prop('uuid')
+        );
+    });
+
+    it('should provide the same uuid to all AccordionItems in the same Accordion ', () => {
+        const wrapper = shallow(
+            <WhiteAccordion>
+                <AccordionItem>Hello</AccordionItem>
+                <AccordionItem>World</AccordionItem>
+            </WhiteAccordion>
+        );
+
+        const accordion = wrapper.dive();
+
+        assert.equal(
+            accordion.find('AccordionItem').first().prop('uuid'),
+            accordion.find('AccordionItem').last().prop('uuid')
+        );
     });
 });
