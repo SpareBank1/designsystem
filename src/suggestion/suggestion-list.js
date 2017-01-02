@@ -49,7 +49,7 @@ export default class SuggestionList extends Component {
             key={ item.id }
             onKeyDown={(evt) => onKeyDown(evt)}
             ref={refIfIshighlightedItemIndex(index)}
-            onMouseDown={() => onSelect(item)}
+            onMouseDown={(event) => onSelect(item, event)}
             tabIndex={highlightedItem === index ? 0 : -1}
           >
             <div role="option">
