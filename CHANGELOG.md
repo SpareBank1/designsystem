@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.2.4
+This release fixes a few issues from v1.2.3.
+- Use `uuid` instead of `nfe-hash` for unique IDs.
+- Make `uuid` and `isOpen` optional props.
+
 ## v1.2.3
 Make accordion items have globally unique IDs.
 

@@ -54,8 +54,6 @@ Some scenarios might involve having a form element (e.g a checkbox) inside the a
 
 ## Test
 
-# Local
-
 Use npm linking to test local changes in your own project
 
 ```
