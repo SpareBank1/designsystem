@@ -20,6 +20,8 @@ class BaseSelector extends Component {
     this.onMultiSelectDone = this.onMultiSelectDone.bind(this);
     this.placeholderText = this.placeholderText.bind(this);
     this.globalClickHandler = this.globalClickHandler.bind(this);
+    this.onBlur = this.onBlur.bind(this);
+    this.onInputBlur = this.onInputBlur.bind(this);
   }
 
   getDefaultState() {
@@ -111,11 +113,10 @@ class BaseSelector extends Component {
 
   globalClickHandler(evt) {
     if ((this.state.showItemSuggestions && !this._root.contains(evt.target))) {
-      this.setState({
-        showItemSuggestions: false,
+      this.selectHighlightedAccount(() => {
+          this.removeGlobalEventListeners();
+          this.onBlur();
       });
-      this.removeGlobalEventListeners();
-      this.onBlur();
     }
   }
 
@@ -264,21 +265,33 @@ class BaseSelector extends Component {
 
   onInputTab(evt) {
     if (!this.state.multiSelect || evt.shiftKey) {
-      this.setState({
-        showItemSuggestions: false,
-        highlightedItem: -1,
-        selectedItems: this.state.highlightedItem > -1 ? [this.state.filteredItems[this.state.highlightedItem]] : this.state.selectedItems,
-      }, () => {
-        if (this.state.selectedItems.length > 0) {
-          this.props.onItemSelected(this.state.selectedItems[0]);
-        }
-        this.onBlur();
-      });
+      this.selectHighlightedAccount(this.onBlur);
     }
+  }
+
+  selectHighlightedAccount(cb) {
+    this.setState({
+      showItemSuggestions: false,
+      highlightedItem: -1,
+      selectedItems: this.state.highlightedItem > -1 ? [this.state.filteredItems[this.state.highlightedItem]] : this.state.selectedItems,
+    }, () => {
+      if (this.state.selectedItems.length > 0) {
+        this.props.onItemSelected(this.state.selectedItems[0]);
+      }
+      cb();
+    });
   }
 
   onBlur() {
     this.props.onBlur(this.state.selectedItems, this.state.inputValue);
+  }
+
+  onInputBlur(event) {
+    if (!event.relatedTarget || !event.relatedTarget.className.match('nfe-account-suggestions__item')) {
+      this.setState({showItemSuggestions : false},() => {
+        this.props.onBlur(this.state.selectedItems, this.state.inputValue);
+       });
+    }
   }
 
   handleItemSelectSingle(item) {
@@ -380,6 +393,7 @@ class BaseSelector extends Component {
       >
         <input
           onFocus={ () => this.onInputFocus() }
+          onBlur={this.onInputBlur}
           className={ inputClassName() }
           onKeyDown={ (evt) => {this.onKeyDown(evt);} }
           ref={ assignTo('_inputField') }
@@ -412,7 +426,10 @@ class BaseSelector extends Component {
             highlightedItem={this.state.highlightedItem}
             locale={this.props.locale}
             noMatches={this.props.noMatches}
-            onSelect={ (item) => this.onItemSelectedFromDropdown(item) }
+            onSelect={ (item, event) => {
+              event.preventDefault();
+              this.onItemSelectedFromDropdown(item);
+            } }
             onKeyDown={(evt) => this.onKeyDown(evt, true)}
             renderItemRow={this.props.renderItemRow}
             multiSelect={this.state.multiSelect}
