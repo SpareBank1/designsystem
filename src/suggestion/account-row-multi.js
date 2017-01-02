@@ -18,7 +18,7 @@ const AccountRowMulti = ({account, locale, selected}) => {
           checked={ selected }
           name="my-checkbox-label"
           inline={ false }
-          isTabbable={ false }
+          tabIndex={ -1 }
           onChange={onCheckboxChange}
         />
       </div>

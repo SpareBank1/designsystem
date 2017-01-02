@@ -1,5 +1,8 @@
 # Changelog
 
+# v4.0.2
+* Fixes due to breaking changes in ffe-checkbox-react
+
 # v4.0.1
 * Fix misplaced checkboxes in AccountSelectorMulti.
 
