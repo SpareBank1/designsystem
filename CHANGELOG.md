@@ -1,5 +1,8 @@
 # Changelog
 
+# v4.1.1
+Bugfix: onBlur prop called twice on input field blur
+
 # v4.1.0
 * Revert setTimeout on componentWillMount made in v3.0.4 causing unexpected behaviour
 * Expose reset method in AccountSelector
