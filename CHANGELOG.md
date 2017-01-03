@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.0.3
+* Added type=button to header buttons which prevents a form submit
+* Updated peerDependency for ffe-form to 4.x.x
+
 ## v2.0.2
 * Updated peerDependency for ffe-form to 2.x.x or 3.x.x
 * Updated dependency for ffe-datepicker to 2.1.1

@@ -10,6 +10,7 @@ function Header(props) {
           className="ffe-calendar__month-nav ffe-calendar__previous"
           title={ props.previousMonthLabel }
           onClick={ props.previousMonthHandler }
+          type="button"
         >
           <ChevronIkon className="ffe-calendar__icon-prev" />
         </button>
@@ -29,6 +30,7 @@ function Header(props) {
           className="ffe-calendar__month-nav ffe-calendar__next"
           title={ props.nextMonthLabel }
           onClick={ props.nextMonthHandler }
+          type="button"
         >
           <ChevronIkon className="ffe-calendar__icon-next" />
         </button>
