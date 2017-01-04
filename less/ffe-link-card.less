@@ -2,7 +2,8 @@
 
 .ffe-link-card {
     &:extend(.ffe-link-text);
-    box-shadow: 0 0 0 rgba(0,0,0,0.1);
+
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
     display: inline-block;
     margin: 5px 0;
     overflow: hidden;
@@ -21,17 +22,18 @@
     cursor: pointer;
     transition: border-color 0.2s;
     .card-sequential-animation();
+
     outline: none;
 
     &:focus {
         box-shadow: 0 0 0 2px @ffe-blue-focus;
     }
+
     &:focus,
     &:active,
     &:hover {
         border-color: @ffe-blue-royal-light-wcag;
     }
-
 
     &__status {
         animation: showCardNotification 0.3s 1s forwards;
@@ -65,6 +67,7 @@
     &--center {
         text-align: center;
     }
+
     &--center > &__heading {
         padding-top: 16px;
         max-width: 100%;
@@ -74,22 +77,26 @@
         padding-left: 0;
         max-width: 100%;
     }
+
     &--large > &__icon {
         float: left;
         width: 50px;
         height: 50px;
         margin: 0;
     }
+
     &--large > &__sub-heading {
         color: @ffe-blue-royal;
         line-height: 1.3;
     }
+
     &--large > &__details {
         color: @ffe-blue-royal;
         font-family: "MuseoSansRounded-700", arial, sans-serif;
         font-size: 20px;
         line-height: 2.2;
     }
+
     &--large > p,
     &--large-square > p {
         display: block;
@@ -101,8 +108,10 @@
         cursor: auto;
         padding: 20px;
     }
+
     &--plain > &__number {
         &:extend(.ffe-h1);
+
         border: 2px solid #002776;
         border-radius: 50%;
         width: 50px;
@@ -111,9 +120,11 @@
         padding: 6px 15px;
         float: left;
     }
+
     &--plain > p {
         margin-left: 65px;
     }
+
     &--plain:focus,
     &--plain:active,
     &--plain:hover {
@@ -147,6 +158,7 @@
             text-align: center;
             padding: 40px 10px;
         }
+
         &--medium > &__status,
         &--large > &__status {
             margin: 0 auto;
@@ -157,13 +169,15 @@
             padding: 3px;
             font-size: 16px;
         }
+
         &--medium > &__icon,
         &--large > &__icon {
             float: none;
             width: 100px;
             height: 100px;
-            margin: 0 auto 10px auto;
+            margin: 0 auto 10px;
         }
+
         &--medium > &__heading,
         &--large > &__heading {
             font-family: "MuseoSansRounded-500", arial, sans-serif;
@@ -172,10 +186,12 @@
             margin-top: 0;
             max-width: 100%;
         }
+
         &--medium > &__sub-heading,
         &--large > &__sub-heading {
             font-size: 18px;
         }
+
         &--medium > &__details,
         &--large > &__details {
             color: @ffe-blue-royal;
@@ -187,6 +203,7 @@
             right: 0;
             left: 0;
         }
+
         &--medium > p,
         &--large > p {
             margin-left: 0;
@@ -195,10 +212,12 @@
         &--medium {
             height: 240px;
         }
-        &--medium  > &__sfo-icon {
+
+        &--medium > &__sfo-icon {
             display: block;
         }
-        &--medium  > &__heading {
+
+        &--medium > &__heading {
             display: block;
             padding: 0;
         }
@@ -209,6 +228,7 @@
             padding: 0;
             float: none;
         }
+
         &--plain > p {
             margin: 30px 0;
             padding: 0;
