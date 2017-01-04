@@ -1,5 +1,8 @@
 # Changelog
 
+## v2.0.4
+* Update eslint to use FFE eslint
+
 ## v2.0.3
 * Added type=button to header buttons which prevents a form submit
 * Updated peerDependency for ffe-form to 4.x.x

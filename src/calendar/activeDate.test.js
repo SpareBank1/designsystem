@@ -7,7 +7,7 @@ import ActiveDate from './activeDate';
 import simpleDate from '../datelogic/simpledate';
 
 describe('<ActiveDate />', () => {
-  let date = simpleDate.fromString('17.05.2016');
+  const date = simpleDate.fromString('17.05.2016');
   const activeDate = (
     <ActiveDate
       date={ date }

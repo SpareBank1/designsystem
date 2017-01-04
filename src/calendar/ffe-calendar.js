@@ -181,12 +181,13 @@ export default class Datepicker extends React.Component {
   }
 
   render() {
-    return (<div
-      className={ this.props.calendarClassName || 'ffe-calendar' }
-      aria-labelledby={`${this.datepickerId}-title`}
-      onFocus={ this.focusHandler }
-      role="region"
-    >
+    return (
+      <div
+        className={ this.props.calendarClassName || 'ffe-calendar' }
+        aria-labelledby={`${this.datepickerId}-title`}
+        onFocus={ this.focusHandler }
+        role="region"
+      >
       <Header
         month={ this.state.calendar.focusedMonth() }
         year={ this.state.calendar.focusedYear() }
