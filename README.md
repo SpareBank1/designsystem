@@ -55,7 +55,7 @@ devices, and 50 % on medium and large screens).
 
 ### Offset
 
-The pattern is like so: `ffe-grid__col-offset--{size}-{num-of-cols}`
+The pattern is like so: `ffe-grid__col--{size}-offset-{num-of-cols}`
 
 The offsets work in a similar fashion to the width specification modifiers. Each breakpoint
 can have its own offset if needed.
