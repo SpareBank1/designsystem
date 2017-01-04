@@ -27,11 +27,13 @@ class DateInputExample extends React.Component {
 
   render() {
     return (
-      <DateInput
-        onChange={ this.onChange }
-        value={ this.state.date }
-        ariaInvalid={ false }
-      />
+      <form>
+        <DateInput
+          onChange={ this.onChange }
+          value={ this.state.date }
+          ariaInvalid={ false }
+        />
+      </form>
     );
   }
 }

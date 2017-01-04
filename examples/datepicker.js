@@ -27,15 +27,17 @@ class DatepickerExample extends React.Component {
 
   render() {
     return (
-      <Datepicker
-        value={ this.state.date }
-        onChange={ this.onChange }
-        language="nb"
-        minDate="01.01.2016"
-        maxDate="31.12.2016"
-        inputProps={ { className: 'customClass', id: 'custom-input-id' } }
-        ariaInvalid={ false }
-      />
+      <form>
+        <Datepicker
+          value={ this.state.date }
+          onChange={ this.onChange }
+          language="nb"
+          minDate="01.01.2016"
+          maxDate="31.12.2016"
+          inputProps={ { className: 'customClass', id: 'custom-input-id' } }
+          ariaInvalid={ false }
+        />
+      </form>
     );
   }
 }

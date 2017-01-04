@@ -27,11 +27,13 @@ class CalendarExample extends React.Component {
 
   render() {
     return (
-      <Calendar
-        onDatePicked={ this.datePicked }
-        language="nb"
-        selectedDate={ this.state.selectedDate }
-      />
+      <form>
+        <Calendar
+          onDatePicked={ this.datePicked }
+          language="nb"
+          selectedDate={ this.state.selectedDate }
+        />
+      </form>
     );
   }
 }
