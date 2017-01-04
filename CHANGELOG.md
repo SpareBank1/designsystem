@@ -1,5 +1,8 @@
 # Changelog
 
+## v5.1.1
+* Upgrade eslint and fix linting errors.
+
 ## v5.1.0
 * Add props drop-through to underlying `<Button>` component
 
