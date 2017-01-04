@@ -29,7 +29,7 @@ class ResponsiveTable extends Component {
         }
 
         if (this.props.expandable) {
-            headers.push({ key: 'expandIcon', content: '' });
+            headers.push({ key: 'expandIcon', content: '' , alignRight: true });
         }
 
         return <TableHeaders headers={ headers } />;

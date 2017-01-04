@@ -12,6 +12,7 @@
   .expand-icon {
     width: 17px;
     height: inherit;
+    vertical-align: middle;
     fill: @ffe-blue-royal;
     transition: transform .2s;
   }
@@ -22,7 +23,9 @@
   }
 }
 
-.ffe-responsive-table__row-expanded,
+.ffe-responsive-table__row-expanded {
+  background-color: @ffe-blue-royal-light-20;
+}
 .ffe-responsive-table__row-expanded-content:not(.collapsed) {
   background-color: @ffe-grey-light-bg;
 }
