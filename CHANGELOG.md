@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 2.0.4
+* Upgrade eslint to use latest ffe config.
+
 ## 2.0.3
 * Bugfix: Remove from element from DOM on animation end
 * Added optional prop `animationLengtMs` to control animation length 
