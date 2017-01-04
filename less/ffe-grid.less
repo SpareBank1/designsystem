@@ -112,21 +112,26 @@
                 flex: 1 1 auto;
                 padding: 0 (@ffe-grid-gutter-sm / 2) @ffe-grid-gutter-sm;
 
+                /* stylelint-disable max-nesting-depth */
                 @media only screen and (min-width: @breakpoint-lg) {
                     padding: 0 (@ffe-grid-gutter-lg / 2) @ffe-grid-gutter-lg;
                 }
+                /* stylelint-enable max-nesting-depth */
             }
         }
     }
 }
 
 .create-column(sm, 12);
+
 @media only screen and (min-width: @breakpoint-md) {
     .create-column(md, 12);
 }
+
 @media only screen and (min-width: @breakpoint-lg) {
     .create-column(lg, 12);
 }
+
 @media only screen and (min-width: @breakpoint-xl) {
     .create-column(xl, 12);
 }
