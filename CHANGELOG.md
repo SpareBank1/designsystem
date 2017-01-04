@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.1.1
+
+* Update eslint configuration
+
 ## v2.0.0
 
 * Update ffe-icons to a new major: 6.0.0.
