@@ -4,7 +4,7 @@
     "description": "A grid component for use within the FFE framework",
     "scripts": {
         "compile": "lessc examples/examples.less examples/examples.css && cp -R node_modules/ffe-core/fonts/ examples/ && echo \"$(date +%T): Updated examples\"",
-        "lint": "lessc --lint examples/examples.less",
+        "lint": "lessc --lint examples/examples.less && stylelint less/*.less",
         "start": "opn examples/examples.html & watch \"npm run -s compile\" less/",
         "test": "npm run lint && npm run test:nsp && npm run compile && ./run_visual-tests.sh",
         "test:nsp": "nsp check",
@@ -36,6 +36,8 @@
         "less": "^2.7.1",
         "nsp": "^2.6.1",
         "opn-cli": "^3.1.0",
+        "stylelint": "^7.7.1",
+        "stylelint-config-ffe": "^0.2.0",
         "watch": "^0.19.2"
     }
 }
