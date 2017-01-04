@@ -84,7 +84,7 @@ Legacy Ubuntu-basert virtuell utviklerplatform:
 
 `$ sudo apt-get install -y build-essential`
 
-Du vil så klart også trenge Node, yarn og NPM installert.
+Du vil så klart også trenge Node og NPM installert.
 
 ## Tidligere releaseprosedyrer
 
