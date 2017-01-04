@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.4.2 (27.12.2016)
+
+* Update eslint configuraton to use latest ffe config.
+
 ## v0.4.1 (24.10.2016)
 
 * Fix bug where `aria-invalid` was set to `undefined` if not provided, instead of `false`.

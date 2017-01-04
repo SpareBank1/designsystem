@@ -1,3 +1,5 @@
+/*eslint no-unused-expressions:0*/
+/*eslint-env mocha*/
 import React from 'react';
 import chai, { expect } from 'chai';
 import chaiEnzyme from 'chai-enzyme';
@@ -27,8 +29,8 @@ describe('<RadioButtonGroup />', () => {
             expect(wrapper.find('legend')).to.be.empty;
 
         it('should render a legend when specified', () => {
-            const wrapper = shallow(<RadioButtonGroup label="Wazzup" />);
-            const legend = wrapper.find('legend');
+            const wrapperWithLabel = shallow(<RadioButtonGroup label="Wazzup" />);
+            const legend = wrapperWithLabel.find('legend');
             expect(legend).to.have.lengthOf(1);
             expect(legend.text()).to.be.equal('Wazzup');
         });});
