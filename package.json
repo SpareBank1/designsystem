@@ -1,6 +1,6 @@
 {
   "name": "ffe-accordion-react",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "main": "lib/index.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/. && npm run example",
@@ -35,9 +35,9 @@
     "chai": "^3.5.0",
     "enzyme": "^2.0.0",
     "eslint": "^3.12.2",
-    "eslint-config-ffe": "^5.0.1",
+    "eslint-config-ffe": "^6.0.0",
     "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "3.0.2",
+    "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^6.8.0",
     "mocha": "^3.2.0",
     "nsp": "^2.2.0",
@@ -55,9 +55,6 @@
     "example.html",
     "*.js"
   ],
-  "eslintConfig": {
-    "extends": "eslint-config-ffe"
-  },
   "repository": "",
   "author": "SpareBank 1",
   "license": "ISC"
