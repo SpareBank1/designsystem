@@ -8,8 +8,8 @@
     padding-left: 35px;
 
     &--no-margin {
-        margin-top: 0px;
-        margin-bottom: 0px;
+        margin-top: 0;
+        margin-bottom: 0;
     }
 
     &--inline {
@@ -35,10 +35,8 @@
     &:after {
         transform: scaleX(-1) rotate(180deg + -45deg);
         transform-origin: left top;
-
         border-right: 3px solid transparent;
         border-top: 3px solid transparent;
-
         content: '';
         display: block;
         height: 11px;
@@ -86,6 +84,13 @@
 }
 
 @keyframes checkmark {
-    0% { height: 0; width: 6px; }
-    50% { height: 11px; width: 6px; }
+    0% {
+      height: 0;
+      width: 6px;
+    }
+
+    50% {
+      height: 11px;
+      width: 6px;
+    }
 }
