@@ -1,3 +1,4 @@
+/*eslint-env mocha*/
 import sinon from 'sinon';
 import { shallow } from 'enzyme';
 import { assert } from 'chai';
