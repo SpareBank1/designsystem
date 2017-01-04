@@ -1,4 +1,5 @@
-/* eslint-disable no-unused-expressions */
+/*eslint-env mocha */
+/*eslint-disable no-unused-expressions */
 
 import React from 'react';
 import { expect } from 'chai';
@@ -164,7 +165,7 @@ describe('Button components:', () => {
     });
 
     it('runs the function passed as onClick when clicked', () => {
-        let onClick = spy();
+        const onClick = spy();
         const wrapper = shallow(<Button onClick={onClick}>Hello</Button>);
         wrapper.find('button').simulate('click');
         expect(onClick.calledOnce).to.true;
