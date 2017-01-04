@@ -1,3 +1,4 @@
+/*eslint-env mocha*/
 import { assert } from 'chai';
 import { whiteAccordion, blueAccordion } from '../docs/example-component';
 import { AccordionItem, WhiteAccordion } from '../src/';

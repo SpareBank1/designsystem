@@ -80,7 +80,7 @@ class AccordionItem extends Component {
                     aria-expanded={ isOpen }
                     aria-label={ ariaLabel }
                     className={ createClasses('ffe-accordion-item__toggler', isOpen, type) }
-                    href="javascript:;"
+                    href="javascript:;" // eslint-disable-line no-script-url
                     id={ `tab-${uuid}-${index}` }
                     onClick={ this.onClick }
                     role="tab"
