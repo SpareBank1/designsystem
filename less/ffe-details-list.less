@@ -1,5 +1,4 @@
 .ffe-details-list {
-
     &__details-row,
     &__section-title {
         text-align: left;
@@ -11,7 +10,6 @@
         &--no-border {
             border-bottom: none;
         }
-
     }
 
     &__section-title {
@@ -19,7 +17,6 @@
     }
 
     @media screen and (min-width: @breakpoint-md) {
-
         &__details-row {
             display: flex;
             flex-flow: row nowrap;
@@ -33,7 +30,6 @@
         }
 
         &__details-col {
-
             &:nth-child(1) {
                 min-width: 33.33%;
             }
@@ -54,26 +50,19 @@
                 flex-grow: 2;
                 text-align: right;
             }
-
         }
-
     }
 
     @media screen and (min-width: @breakpoint-lg) {
-
         &__details-row,
         &__section-title {
             padding: 20px 0;
         }
-
     }
-
 }
 
 .no-flexbox .ffe-details-list {
-
     @media screen and (min-width: @breakpoint-md) {
-
         &__details-row {
             display: block;
         }
@@ -81,7 +70,5 @@
         &__details-col {
             display: inline-block;
         }
-
     }
-
 }
