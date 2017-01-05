@@ -1,5 +1,8 @@
 # Changelog
 
+## v2.0.5
+* Update dependency ffe-datepicker to ^3.0.0
+
 ## v2.0.4
 * Update eslint to use FFE eslint
 
