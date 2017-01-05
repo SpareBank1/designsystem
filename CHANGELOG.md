@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## Version 3.0.3
+- Added border-radius
+
 ## Version 3.0.2
 - Added link styling
 
