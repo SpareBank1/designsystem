@@ -1,6 +1,6 @@
 {
   "name": "nfe-account-selector-react",
-  "version": "4.1.1",
+  "version": "4.1.0",
   "main": "lib/account-selector.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/.",
