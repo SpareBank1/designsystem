@@ -1,5 +1,8 @@
 # Changelog
 
+# v4.1.3
+* Bugfix: Blur prop not called when dropdown is not showing and input field loses focus
+
 # v4.1.2
 * Bugfix: Input blur not working for Firefox =< 45.02 and IE =< 11 because of reliance on event.relatedTarget (https://bugzilla.mozilla.org/show_bug.cgi?id=962251)
 
