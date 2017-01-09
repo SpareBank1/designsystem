@@ -1,5 +1,8 @@
 # Changelog
 
+# v4.1.4
+* Bugfix: onBlur called for click events when account selector not in focus
+
 # v4.1.3
 * Bugfix: Blur prop not called when dropdown is not showing and input field loses focus
 
