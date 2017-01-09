@@ -111,7 +111,7 @@ describe('<ResponsiveTable />', () => {
     it('renders content of each cell', () => {
       const wrapper = shallow(<ResponsiveTable data={data} />);
 
-      wrapper.everyWhere
+      wrapper.everyWhere();
 
       expect(
         wrapper.find('.ffe-responsive-table__content').at(0).text()

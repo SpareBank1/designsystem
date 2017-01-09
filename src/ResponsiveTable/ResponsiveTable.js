@@ -46,10 +46,9 @@ class ResponsiveTable extends Component {
             return null;
         }
 
-      if(this.props.children) {
-        return this.props.children;
-      }
-
+        if (this.props.children) {
+            return this.props.children;
+        }
 
         return (
             <tbody>
@@ -61,22 +60,26 @@ class ResponsiveTable extends Component {
     }
 
     render() {
-      return (
+        return (
             <table className="ffe-responsive-table">
                 {this.renderTableCaption()}
                 {this.renderTableHeaders()}
                 {this.renderTableBody()}
             </table>
-        );
+          );
     }
 }
 
 ResponsiveTable.propTypes = {
     caption: PropTypes.string,
     expandable: PropTypes.bool,
-    data: PropTypes.arrayOf(
+    children: PropTypes.node,
+    headerData: PropTypes.arrayOf(
         PropTypes.object
-    ).isRequired,
+    ),
+    data: PropTypes.arrayOf(
+            PropTypes.object
+        ).isRequired,
     headers: PropTypes.arrayOf(
         PropTypes.shape({
             content: PropTypes.node.isRequired,

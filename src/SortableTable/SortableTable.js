@@ -17,7 +17,7 @@ class SortableTable extends Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        if(nextProps !== this.props) {
+        if (nextProps !== this.props) {
             this.setState({
                 tableData: sortData(this.props.headers, this.props.data, this.state.sortBy, this.state.descending)
             });
@@ -48,7 +48,7 @@ class SortableTable extends Component {
     }
 
     decorateSortableTableHeader(header) {
-        let tabIndex = { tabIndex:'0' };
+        const tabIndex = { tabIndex:'0' };
         return (
             <span
                 {...tabIndex}
@@ -68,7 +68,7 @@ class SortableTable extends Component {
                 )}
                 />
           </span>
-        )
+        );
     }
 
     render() {
@@ -77,7 +77,7 @@ class SortableTable extends Component {
                 ...header,
                 ariaSort: this.getAriaSort(header),
                 content: this.decorateSortableTableHeader(header)
-            }
+            };
         });
 
         return (
@@ -87,8 +87,8 @@ class SortableTable extends Component {
 }
 
 SortableTable.propTypes = {
-    headers: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
-    data: React.PropTypes.arrayOf(React.PropTypes.object).isRequired
+    headers: PropTypes.arrayOf(PropTypes.object).isRequired,
+    data: PropTypes.arrayOf(PropTypes.object).isRequired
 };
 
 export default SortableTable;
