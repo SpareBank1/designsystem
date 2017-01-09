@@ -108,7 +108,7 @@ class BaseSelector extends Component {
   }
 
   removeGlobalEventListeners() {
-    window.removeEventListener('click', this.globalClickHandler);
+    window.removeEventListener('click', this.globalClickHandler, true);
   }
 
   globalClickHandler(evt) {
