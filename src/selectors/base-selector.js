@@ -112,11 +112,14 @@ class BaseSelector extends Component {
   }
 
   globalClickHandler(evt) {
-    if (this.state.showItemSuggestions && !this._root.contains(evt.target)) {
-      this.selectHighlightedAccount(() => {
-          this.removeGlobalEventListeners();
+    if (!this._root.contains(evt.target)) {
+      if (this.state.showItemSuggestions) {
+        this.selectHighlightedAccount(() => {
           this.onBlur();
-      });
+        });
+      } else {
+        this.onBlur();
+      }
     }
   }
 
@@ -283,6 +286,7 @@ class BaseSelector extends Component {
   }
 
   onBlur() {
+    this.removeGlobalEventListeners();
     this.props.onBlur(this.state.selectedItems, this.state.inputValue);
   }
 
