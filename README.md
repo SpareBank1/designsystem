@@ -68,6 +68,9 @@ to you.
 #### `.ffe-grid__row--reverse`
 Reverses the grid columns so that they're laid out right to left instead
 
+#### `.ffe-grid__row--bg-blue`
+Adds the `@ffe-blue-royal-light-20` color as a background for the row
+
 #### `.ffe-grid__col--start`
 Aligns the content of a cell to the left
 
@@ -91,6 +94,9 @@ Space the content out with space around each item
 
 #### `.ffe-grid__col--between`
 Space the content out with space between each item
+
+#### `.ffe-grid__col--no-bottom-padding`
+Remove the default bottom padding from the column
 
 ## Development
 
