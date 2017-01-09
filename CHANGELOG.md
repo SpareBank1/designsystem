@@ -1,7 +1,10 @@
 # Changelog
 
+# v4.1.2
+* Bugfix: Input blur not working for Firefox =< 45.02 and IE =< 11 because of reliance on event.relatedTarget (https://bugzilla.mozilla.org/show_bug.cgi?id=962251)
+
 # v4.1.1
-Bugfix: onBlur prop called twice on input field blur
+* Bugfix: onBlur prop called twice on input field blur
 
 # v4.1.0
 * Revert setTimeout on componentWillMount made in v3.0.4 causing unexpected behaviour
