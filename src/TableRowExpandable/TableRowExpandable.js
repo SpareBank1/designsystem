@@ -39,8 +39,6 @@ class TableRowExpandable extends Component {
             />
         );
 
-        console.log(children);
-
         const expandedRow = (
             <tr
                 role="presentation"
