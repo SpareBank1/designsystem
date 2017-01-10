@@ -10,8 +10,7 @@ describe('<DescriptionListMultiCol>', () => {
   it('should render a <dl> with the expected classes', () => {
     const wrapper = shallow(<DescriptionListMultiCol><dt>a</dt><dd>1</dd><dt>b</dt><dd>2</dd></DescriptionListMultiCol>);
 
-    assert.ok(wrapper.find('dl').hasClass('ffe-description-list'));
-    assert.ok(wrapper.find('dl').hasClass('ffe-description-list--multicolumn'));
+    assert.ok(wrapper.find('dl').hasClass('ffe-description-list-multicol'));
   });
 
   it('should render pairs of terms and descriptions', () => {
@@ -27,6 +26,6 @@ describe('<DescriptionListMultiCol>', () => {
   it('should render a fragment container div with expected class', () => {
     const wrapper = shallow(<DescriptionListMultiCol><dt>a</dt><dd>1</dd><dt>b</dt><dd>2</dd></DescriptionListMultiCol>);
 
-    assert.ok(wrapper.find('div').at(0).hasClass('ffe-description-list--multicolumn__avoid-break'));
+    assert.ok(wrapper.find('div').at(0).hasClass('ffe-description-list-multicol__avoid-break'));
   });
 });

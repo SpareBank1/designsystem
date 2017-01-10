@@ -11,10 +11,10 @@ const DescriptionListMultiCol = ({ children }) => {
   });
 
   return (
-    <dl className="ffe-description-list ffe-description-list--multicolumn">
+    <dl className="ffe-description-list-multicol">
       {
         pairs.map(pair => (
-          <div className="ffe-description-list--multicolumn__avoid-break" key={hash(pairs)}>
+          <div className="ffe-description-list-multicol__avoid-break" key={hash(pair)}>
             { pair[0] }
             { pair[1] }
           </div>
