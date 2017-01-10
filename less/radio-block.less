@@ -16,6 +16,7 @@
 
         &:before {
             .ffe-sb1-radioblob();
+
             left: 20px;
             top: 10px;
             z-index: 1;
@@ -30,7 +31,7 @@
     }
 
     &__wrapper {
-            padding: 20px 20px 30px 20px;
+            padding: 20px 20px 30px;
             cursor: auto;
 
         &--empty {
@@ -45,7 +46,6 @@
 
 // Weakness: Requires specific dom structure to work. Rewrite?
 .ffe-radio-input {
-
     & + .ffe-radio-block__content > .ffe-radio-block__header {
         border-bottom: thin solid @ffe-grey-light;
     }
@@ -74,7 +74,6 @@
 }
 
 @media screen and (min-width: @breakpoint-sm) {
-
     .ffe-radio-block__wrapper {
         padding-left: 60px;
     }
