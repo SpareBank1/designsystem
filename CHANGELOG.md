@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.2.6
+Update ffe-expandable-react to 1.0.5 or above
+
 ## v1.2.5
 Update eslint configuration
 
