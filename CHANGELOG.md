@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.0.5
+isOpen is no longer a required prop.
+
 ## 1.0.4
 Use eslint with latest ffe configuration.
 

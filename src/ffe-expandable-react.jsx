@@ -56,7 +56,7 @@ Expandable.propTypes = {
     expanded: React.PropTypes.node,
     expandTime: React.PropTypes.number,
     folded: React.PropTypes.node,
-    isOpen: React.PropTypes.bool.isRequired,
+    isOpen: React.PropTypes.bool,
     isTable: React.PropTypes.bool
 };
 
