@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-ffe",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "FFE shareable config for stylelint",
   "author": "SpareBank 1",
   "license": "ISC",
@@ -18,5 +18,8 @@
   },
   "files": [
     "index.js"
-  ]
+  ],
+  "dependencies": {
+    "stylelint-config-standard": "^15.0.1"
+  }
 }
