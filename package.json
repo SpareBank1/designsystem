@@ -4,7 +4,7 @@
   "main": "less/tables.less",
   "scripts": {
     "compile": "npm run lint && lessc example/example.less example/example.css && cp -R node_modules/ffe-core/fonts/ example/fonts/ && echo \"$(date +%T): Updated example\"",
-    "lint": "lessc --lint example/example.less",
+    "lint": "lessc --lint example/example.less && stylelint less/*.less",
     "start": "opn examples/examples.html & watch \"npm run -s compile\" less/",
     "test:nsp": "nsp check",
     "test": "npm run lint && npm run test:nsp",
@@ -34,6 +34,8 @@
     "less": "^2.7.1",
     "nsp": "^2.6.2",
     "opn-cli": "^3.1.0",
+    "stylelint": "^7.7.1",
+    "stylelint-config-ffe": "^0.2.0",
     "watch": "^1.0.1"
   },
   "peerDependencies": {
