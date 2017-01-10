@@ -1,6 +1,7 @@
 @description-list-vertical-seperation: 20px;
 
-.ffe-description-list {
+.ffe-description-list,
+.ffe-description-list-multicol {
     dt {
         color: @ffe-blue-royal;
         &:extend(.ffe-strong-text);
@@ -13,64 +14,87 @@
         margin-left: 0;
         &:extend(.ffe-body-text);
     }
+}
 
-    &--flex {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: flex-start;
+.ffe-description-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
 
+    dt {
+        flex: 0 0 35%;
+        overflow: hidden;
+    }
+
+    dd {
+        flex: 65% 0 0;
+        padding-left: 20px;
+        max-width: 65%; /* Fix for IE issue in which box-sizing is not taken into account when using flex */
+    }
+
+    dd + dd {
+        margin-left: 35%; /* Keep left margin when using multiple dd's */
+    }
+
+    @media (min-width: @breakpoint-sm) {
         dt {
-            flex: 0 0 35%;
-            overflow: hidden; /* Prevents long words in labels from causing layout to break */
+            flex: 0 0 20%;
         }
 
         dd {
-            flex: 65% 0 0;
-            padding-left: 20px;
-            max-width: 65%; /* Fix for IE issue in which box-sizing is not taken into account when using flex */
+            flex: 80% 0 0;
+            max-width: 80%;
         }
 
         dd + dd {
-            margin-left: 35%; /* Keep left margin when using multiple dd's */
-        }
-
-        @media (min-width: @breakpoint-sm) {
-            dt {
-                flex: 0 0 20%;
-            }
-
-            dd {
-                flex: 80% 0 0;
-                max-width: 80%;
-            }
-
-            dd + dd {
-                margin-left: 20%;
-            }
+            margin-left: 20%;
         }
     }
 
-    &--multicolumn {
-        text-align: center;
-
+    &--md {
         dt {
-            break-inside: avoid;
-            break-after: avoid;
+            flex: 0 0 40%;
         }
 
         dd {
-            break-inside: avoid;
-            break-before: avoid;
+            flex: 60% 0 0;
+            max-width: 60%;
         }
 
-        @media (min-width: @breakpoint-sm) {
-            columns: 2;
-            column-gap: 20px;
+        dd + dd {
+            margin-left: 40%;
+        }
+    }
+
+    &--lg {
+        dt {
+            flex: 0 0 50%;
         }
 
-        /* Wrap dt and dd in a container to avoid breaking into new columns in between */
+        dd {
+            flex: 50% 0 0;
+            max-width: 50%;
+        }
+
+        dd + dd {
+            margin-left: 50%;
+        }
+    }
+}
+
+.ffe-description-list-multicol {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+
+    &__avoid-break {
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    @media (min-width: @breakpoint-sm) {
         &__avoid-break {
-            break-inside: avoid-column;
+            flex-basis: 50%;
         }
     }
 }

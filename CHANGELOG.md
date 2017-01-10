@@ -1,10 +1,13 @@
 # Changelog
 
-## Deprecation notice
-The following classes are deprecated. Support will be dropped in a future major release:
-
-* `ffe-number-list` (use `ffe-numbered-list`)
-* `ffe-stylized-number-list` (use `ffe-stylized-numbered-list`)
+## v.3.0.0
+* Breaking:
+  * Refactored and renamed description lists in order to more correctly follow BEM naming convention
+  	* Renamed `ffe-description-list--flex` to `ffe-description-list`
+  	* Renamed `ffe-description-list--multicolumn` to `ffe-description-list-multicol`
+  * Removed `ffe-number-list` (use `ffe-numbered-list`)
+  * Removed `ffe-stylized-number-list` (use `ffe-stylized-numbered-list`)
+* Added `--md` and `--lg` modifiers for `ffe-description-list`
 
 ## v.2.3.0
 * Added `--bg-sand` modifier for `ffe-check-list`
