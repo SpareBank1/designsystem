@@ -5,6 +5,7 @@
   "style": "less/ffe-context-message.less",
   "scripts": {
     "examples": "lessc examples/examples.less examples/examples.css && mkdirp examples/fonts && cp -r node_modules/ffe-core/fonts/* examples/fonts && echo Now open /examples/ffe-context-message.html to see styleguide",
+    "lint": "lessc --lint examples/examples.less && stylelint less/*.less",
     "postpublish": "git tag ${npm_package_version} && git push --tags",
     "has-published": "npm show . versions -s | grep -q ${npm_package_version}",
     "test": "./run_visual-tests.sh",
@@ -26,6 +27,8 @@
     "ffe-visual-tests-support": "2.0.0",
     "gemini": "4.12.2",
     "less": "2.7.1",
-    "mkdirp": "0.5.1"
+    "mkdirp": "0.5.1",
+    "stylelint": "^7.7.1",
+    "stylelint-config-ffe": "^0.2.0"
   }
 }
