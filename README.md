@@ -51,7 +51,7 @@ Duration in seconds for the span of the expand / collapse animation
 Content to show above the expandable content.
 
 
-#### `isOpen`: PropTypes.bool.isRequired (default: false)
+#### `isOpen`: PropTypes.bool (default: false)
 
 Value deciding whether or not to render children.
 
