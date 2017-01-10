@@ -1,5 +1,8 @@
 # Changelog
 
+## v4.1.0
+* Remove vendor prefix on appearance property. Autoprefixer FTW!
+
 ## v4.0.2
 * Meta data for styleguide
 
