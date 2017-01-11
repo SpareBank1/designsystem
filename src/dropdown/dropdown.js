@@ -45,6 +45,7 @@ class Dropdown extends React.Component {
     if (this.state.nativeScrollContainer) {
       const nativeScrollContainer = this.state.nativeScrollContainer;
       nativeScrollContainer.scrollTop = 0;
+      this.ignoreScrollEvents = true;
     }
   }
 
@@ -67,10 +68,13 @@ class Dropdown extends React.Component {
   }
 
   onScroll(evt) {
-    // Need reference to the native scroll container (div) to reset the native scroll position
-    this.setState({
-      nativeScrollContainer: evt.target
-    });
+    if (!this.ignoreScrollEvents) {
+      // Need reference to the native scroll container (div) to reset the native scroll position
+      this.setState({
+        nativeScrollContainer: evt.target
+      });
+    }
+    this.ignoreScrollEvents = false;
   }
 
   render() {
