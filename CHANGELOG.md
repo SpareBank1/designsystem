@@ -1,5 +1,8 @@
 #CHANGELOG
 
+## Version 3.1.1
+* Bugfix: Stale version number of dependency react-dom caused peer dependency conflicts on npm install.
+
 ## Version 3.1.0
 * Added support for styling outer container using style prop
 
