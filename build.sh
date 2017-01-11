@@ -1,7 +1,7 @@
 #!/bin/bash -ex
 
 main() {
-    yarn install
+    npm install
     npm run compile
 
     rm -rf target/
