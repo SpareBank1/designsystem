@@ -4,7 +4,7 @@ import BulletList from '../src/BulletList';
 import CheckList from '../src/CheckList';
 import NumberedList from '../src/NumberedList';
 import StylizedNumberedList from '../src/StylizedNumberedList';
-import DescriptionListFlex from '../src/DescriptionListFlex';
+import DescriptionList from '../src/DescriptionList';
 import DescriptionListMultiCol from '../src/DescriptionListMultiCol';
 
 require('./example.less');
@@ -59,8 +59,8 @@ render(
 
 		<hr className="ffe-divider-line"/>
 
-		<h2 className="ffe-h4">Description list (Flex)</h2>
-		<DescriptionListFlex>
+		<h2 className="ffe-h4">Description list</h2>
+		<DescriptionList>
 			<dt>Term</dt>
 			<dd>Description</dd>
 
@@ -69,11 +69,39 @@ render(
 
 			<dt>Yet another term</dt>
 			<dd>Yet another description</dd>
-		</DescriptionListFlex>
+		</DescriptionList>
 
 		<hr className="ffe-divider-line"/>
 
-		<h2 className="ffe-h4">Description list (Multicolumn)</h2>
+		<h2 className="ffe-h4">Description list (medium)</h2>
+		<DescriptionList medium={true}>
+			<dt>Term</dt>
+			<dd>Description</dd>
+
+			<dt>Another term</dt>
+			<dd>Another description</dd>
+
+			<dt>Yet another term</dt>
+			<dd>Yet another description</dd>
+		</DescriptionList>
+
+		<hr className="ffe-divider-line"/>
+
+		<h2 className="ffe-h4">Description list (large)</h2>
+		<DescriptionList large={true}>
+			<dt>Term</dt>
+			<dd>Description</dd>
+
+			<dt>Another term</dt>
+			<dd>Another description</dd>
+
+			<dt>Yet another term</dt>
+			<dd>Yet another description</dd>
+		</DescriptionList>
+
+		<hr className="ffe-divider-line"/>
+
+		<h2 className="ffe-h4">Description list multicol</h2>
 		<DescriptionListMultiCol>
 			<dt>Term</dt>
 			<dd>Description</dd>
