@@ -1,5 +1,8 @@
 # Changelog
 
+# v4.1.5
+* Bugfix: IE11 freezes when navigating to the end of the dropdown using the keyboard
+
 # v4.1.4
 * Bugfix: onBlur called for click events when account selector not in focus
 
