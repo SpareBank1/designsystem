@@ -137,12 +137,14 @@ export default class Datepicker extends React.Component {
     this.dateShouldSetFocusOnInitialMount = true;
   }
 
-  nextMonth() {
+  nextMonth(evt) {
+    evt.preventDefault();
     this.state.calendar.nextMonth();
     this.forceUpdate();
   }
 
-  previousMonth() {
+  previousMonth(evt) {
+    evt.preventDefault();
     this.state.calendar.previousMonth();
     this.forceUpdate();
   }
