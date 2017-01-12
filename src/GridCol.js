@@ -42,7 +42,7 @@ const sizeClasses = (size, def) => {
 };
 
 const modifiers = props => Object.keys(props)
-        .filter(key => MODIFIER_LIST.includes(key) && !!props[key])
+        .filter(key => MODIFIER_LIST.indexOf(key) !== -1 && !!props[key])
         .map(key => `ffe-grid__col--${camelCaseToDashCase(key)}`)
         .join(' ');
 
