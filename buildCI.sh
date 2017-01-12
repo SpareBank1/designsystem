@@ -1,0 +1,13 @@
+#!/bin/bash -ex
+
+# Runs build.sh before checking should_publish
+
+function should_publish() {
+    [[ $GIT_BRANCH =~ ^(origin/)?master$ ]]
+}
+
+source build.sh
+
+if should_publish; then
+    npm run has-published -s || npm publish
+fi
