@@ -51,7 +51,6 @@
     }
 }
 
-
 @media screen and (min-width: @breakpoint-md) {
     .ffe-header {
         margin-bottom: 110px;
@@ -64,6 +63,7 @@
             &--mobile {
                 display: none;
             }
+
             &--desktop {
                 display: table;
                 width: 100%;
@@ -77,10 +77,11 @@
             width: 33%;
             vertical-align: middle;
 
-            &:first-child{
+            &:first-child {
                 text-align: left;
             }
-            &:last-child{
+
+            &:last-child {
                 text-align: right;
             }
         }
@@ -98,7 +99,7 @@
 
         &__heading {
             font-size: 22px;
-            font-family: MuseoSans-500,arial,sans-serif;
+            font-family: MuseoSans-500, arial, sans-serif;
             font-weight: normal;
             line-height: 30px;
             transition: font-size .2s ease-in-out;
@@ -111,7 +112,7 @@
 
         &__profile-type {
             font-size: 16px;
-            font-family: MuseoSans-500,arial,sans-serif;
+            font-family: MuseoSans-500, arial, sans-serif;
             margin-right: 8px;
         }
 
@@ -122,7 +123,7 @@
 
             &--link {
                 &:after {
-                    content:'\203A'; //single right-pointing angle quotation mark
+                    content: '\203A'; //single right-pointing angle quotation mark
                     font-size: 32px;
                     vertical-align: sub;
                     margin-left: 7px;
@@ -140,7 +141,7 @@
         }
 
         &--thin {
-            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
             border-bottom: none;
 
             .ffe-header__component:last-child > * {
