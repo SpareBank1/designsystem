@@ -13,6 +13,7 @@ const DropdownStatusBar = ({onDone, renderSelectionStatus, labelDoneButton}) => 
     <div className="nfe-account-selector__dropdown-statusbar">
       <div className="nfe-account-selector__selection-status">{renderSelectionStatus()}</div>
       <button
+        type="button"
         className="ffe-primary-button nfe-account-selector__statusbar-button"
         tabIndex="0"
         onClick={onDone}
