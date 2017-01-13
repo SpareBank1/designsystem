@@ -1,5 +1,8 @@
 # Changelog
 
+# v4.1.6
+* Bugfix: Prevent a possible form submission when clicking the "done" button on a multiselect
+
 # v4.1.5
 * Bugfix: IE11 freezes when navigating to the end of the dropdown using the keyboard
 
