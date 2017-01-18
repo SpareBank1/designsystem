@@ -31,6 +31,10 @@
 
         &__details-col {
             &:nth-child(1) {
+                // This approach was used, rather than just width: 33.33%;, because of weird behavior
+                // with four columns where the first column would only wrap its children, not take up
+                // its designated width.
+                max-width: 33.33%;
                 min-width: 33.33%;
             }
 
