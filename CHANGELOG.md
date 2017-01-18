@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## Version 7.0.0
+
+**Potentially breaking change:** The first column is now fixed at 33.33% width.
+
+This change was made so long titles in the column would wrap instead of creeping
+in on the space of the next column. If this - for some reason - is your desired
+behaviour you need to override the `max-width` attribute to `100%`.
+
 ## Version 6.0.1
 * meta-data til styleguide
 
