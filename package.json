@@ -78,6 +78,7 @@
     "lodash.isequal": "^4.4.0",
     "nfe-amount-formatter": "^2.0.1",
     "nfe-if": "^2.0.1",
+    "react-custom-scrollbars": "^4.0.1",
     "react-scrollbar": "0.4.1"
   }
 }

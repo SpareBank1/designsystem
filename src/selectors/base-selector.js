@@ -438,32 +438,18 @@ class BaseSelector extends Component {
 }
 
 BaseSelector.propTypes = {
-  items: PropTypes.array.isRequired,
-  renderItemRow: PropTypes.func.isRequired,
-  onItemSelected: PropTypes.func.isRequired,
-  filter: PropTypes.func.isRequired,
-  renderMultiselectStatus: PropTypes.func,
-  onChange: PropTypes.func,
+  onChange: PropTypes.func.isRequired,
   onBlur: PropTypes.func,
-  value: PropTypes.string,
-  inputId: PropTypes.string,
-  locale: PropTypes.oneOf(["nb", "nn", "en"]),
+  value: PropTypes.string.isRequired,
+  id: PropTypes.string,
   placeholder: PropTypes.string,
   onFocus: PropTypes.func,
-  ariaInvalid: PropTypes.bool,
-  noMatches: PropTypes.string,
-  multiSelect: PropTypes.bool,
-  selectedItems: PropTypes.array,
-  onMultiSelectDone: PropTypes.func,
-  renderDetails: PropTypes.func
+  ariaInvalid: PropTypes.bool
 };
 
 BaseSelector.defaultProps = {
-  multiSelect: false,
-  getRowId: (row) => row.id,
-  renderMultiselectStatus: () => {},
-  renderDetails: () => {},
-  onBlur: () => {}
+  onBlur: () => {},
+  onFocus: () => {}
 };
 
 export default BaseSelector;
