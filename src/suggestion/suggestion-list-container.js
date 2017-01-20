@@ -82,19 +82,29 @@ class SuggestionListContainer extends React.Component {
     };
   }
 
+  nextHighlightedIndex() {
+    return this.state.highlightedIndex === this.props.suggestions.length -1 ?
+      0 : this.state.highlightedIndex +1;
+  }
+
+  previousHighlightedIndex() {
+    return this.state.highlightedIndex === 0 ?
+      this.props.suggestions.length -1 : this.state.highlightedIndex -1;
+  }
+
   onKeyDown(evt) {
     switch (evt.which) {
       case KeyCode.DOWN:
-        this.setState({
-          highlightedIndex: this.state.highlightedIndex +1
-        });
         evt.preventDefault();
+        this.setState({
+          highlightedIndex: this.nextHighlightedIndex()
+        });
         break;
       case KeyCode.UP:
-          this.setState({
-            highlightedIndex: this.state.highlightedIndex -1
-          });
         evt.preventDefault();
+        this.setState({
+          highlightedIndex: this.previousHighlightedIndex()
+        });
         break;
       case KeyCode.HOME:
         this.setState({

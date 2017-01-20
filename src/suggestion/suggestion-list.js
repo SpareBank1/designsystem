@@ -68,7 +68,3 @@ SuggestionList.propTypes = {
   highlightedIndex: PropTypes.number,
   renderSuggestion: PropTypes.func.isRequired
 };
-
-SuggestionList.defaultProps = {
-
-};
