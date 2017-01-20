@@ -6,6 +6,8 @@ const suggestionItem = ({item, isHighlighted, render, onSelect}) => {
             role="option"
             onClick={(e) => onSelect(item)}
             className={isHighlighted && '--highlighted'}
+            tabIndex={isHighlighted ? 0 : -1}
+            ref={(element) => { if(isHighlighted && element) { element.focus(); }}}
         >
             {render(item)}
         </li>
