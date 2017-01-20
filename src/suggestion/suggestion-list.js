@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import ReactDOM from 'react-dom';
-import classNames from 'classnames';
+import Suggestion from './suggestion-item';
 
 export default class SuggestionList extends Component {
 
@@ -8,6 +8,7 @@ export default class SuggestionList extends Component {
     return ReactDOM.findDOMNode(this._selectedElement);
   }
 
+  /*
   isItemSelected(item) {
     if (this.props.selectedSuggestions.length > 0) {
       for (let i = 0; i < this.props.selectedSuggestions.length; i++) {
@@ -18,20 +19,23 @@ export default class SuggestionList extends Component {
       return false;
     }
   }
+  */
 
+  /*
   itemClassNames(highlighted) {
     return classNames('nfe-account-suggestions__item', {'nfe-account-suggestions__item--highlighted': highlighted});
   }
+  */
 
   render() {
 
     const {
       suggestions,
       onSelect,
-      highlightedItem,
-      onKeyDown
+      highlightedIndex,
+      renderSuggestion
       } = this.props;
-
+/*
     const refIfIshighlightedItemIndex = index => component => {
       if (highlightedItem === index) {
         this._selectedElement = component;
@@ -40,22 +44,18 @@ export default class SuggestionList extends Component {
         }
       }
     };
+    */
 
     return (
       <ul className="nfe-account-suggestions" role="listbox">
         {suggestions.map((item, index) => (
-          <li
-            className={this.itemClassNames(highlightedItem === index)}
-            key={ item.id }
-            onKeyDown={(evt) => onKeyDown(evt)}
-            ref={refIfIshighlightedItemIndex(index)}
-            onMouseDown={(event) => onSelect(item, event)}
-            tabIndex={highlightedItem === index ? 0 : -1}
-          >
-            <div role="option">
-              { this.props.renderItemRow(item, this.isItemSelected(item)) }
-            </div>
-          </li>
+          <Suggestion
+            key={index}
+            item={item}
+            isHighlighted={index === highlightedIndex}
+            render={renderSuggestion}
+            onSelect={onSelect}
+          />
         ))}
       </ul>
     );
@@ -63,17 +63,12 @@ export default class SuggestionList extends Component {
 }
 
 SuggestionList.propTypes = {
-  suggestions: PropTypes.arrayOf(React.PropTypes.shape({
-    id: React.PropTypes.number.isRequired,
-    name: React.PropTypes.string.isRequired
-  })).isRequired,
-  selectedSuggestions: PropTypes.array,
+  suggestions: PropTypes.arrayOf(React.PropTypes.object).isRequired,
   onSelect: PropTypes.func.isRequired,
-  onKeyDown: PropTypes.func.isRequired,
-  highlightedItem: PropTypes.number,
-  renderItemRow: PropTypes.func.isRequired
+  highlightedIndex: PropTypes.number,
+  renderSuggestion: PropTypes.func.isRequired
 };
 
 SuggestionList.defaultProps = {
-  selectedSuggestions: () => []
+
 };

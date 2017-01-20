@@ -1,8 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import PersonSelectorExample from './person-selector';
 import AccountSelectorExample from './account-selector';
-import AccountSelectorMultiExample from './account-selector-multi';
 
 require('./example.less');
 
@@ -17,7 +15,5 @@ document.body.appendChild(accountSelectorDOM);
 render(
   <div>
     <AccountSelectorExample />
-    <PersonSelectorExample />
-    <AccountSelectorMultiExample />
   </div>
   , accountSelectorDOM);
