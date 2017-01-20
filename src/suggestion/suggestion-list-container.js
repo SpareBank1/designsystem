@@ -1,13 +1,11 @@
-import React, { PropTypes } from 'react';
-import { Scrollbars } from 'react-custom-scrollbars';
-import SuggestionList from './suggestion-list';
+import React, {PropTypes} from "react";
+import {Scrollbars} from "react-custom-scrollbars";
+import SuggestionList from "./suggestion-list";
+import KeyCode from "../util/keyCode";
 
 class SuggestionListContainer extends React.Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
+
 
   /*
    componentDidUpdate() {
@@ -77,12 +75,63 @@ class SuggestionListContainer extends React.Component {
    }
    */
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      highlightedIndex: -1
+    };
+  }
+
+  onKeyDown(evt) {
+    switch (evt.which) {
+      case KeyCode.DOWN:
+        this.setState({
+          highlightedIndex: this.state.highlightedIndex +1
+        });
+        evt.preventDefault();
+        break;
+      case KeyCode.UP:
+          this.setState({
+            highlightedIndex: this.state.highlightedIndex -1
+          });
+        evt.preventDefault();
+        break;
+      case KeyCode.HOME:
+        this.setState({
+          highlightedIndex: 0
+        });
+        break;
+      case KeyCode.END:
+        this.setState({
+          highlightedIndex: this.props.suggestions.length - 1
+        });
+        break;
+      case KeyCode.ESC:
+        /*
+        this.props.onClose()
+       break;
+       */
+      case KeyCode.ENTER:
+      /*
+      this.props.onSelect(this.props.suggestions[this.state.highlightedIndex])
+       break;
+       */
+      case KeyCode.TAB:
+        /*
+        this.props.onBlur(this.props.suggestions[this.state.highlightedIndex])
+         */
+        break;
+      default:
+        return;
+    }
+  }
+
   render() {
     return (
-      <div className="nfe-account-selector__dropdown">
-        <Scrollbars style={{ width: 500, height: 300 }}>
+      <div className="nfe-account-selector__dropdown" onKeyDown={(evt) => this.onKeyDown(evt)}>
+        <Scrollbars style={{ width: '100%', height: 300 }}>
           {this.props.suggestions.length ? (
-              <SuggestionList highlightedIndex={-1} {...this.props}/>)
+              <SuggestionList highlightedIndex={this.state.highlightedIndex} {...this.props}/>)
             : null
           }
         </Scrollbars>
