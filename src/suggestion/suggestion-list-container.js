@@ -1,5 +1,5 @@
-import React, {PropTypes} from 'react';
-import {Scrollbars} from 'react-custom-scrollbars';
+import React, { PropTypes } from 'react';
+import { Scrollbars } from 'react-custom-scrollbars';
 import SuggestionList from './suggestion-list';
 import KeyCode from '../util/keyCode';
 
@@ -152,16 +152,14 @@ SuggestionListContainer.propTypes = {
   suggestions: PropTypes.array.isRequired,
   onSelect: PropTypes.func.isRequired,
   renderSuggestion: PropTypes.func.isRequired,
-  renderNoSuggestion : PropTypes.func.isRequired,
+  renderNoSuggestion: PropTypes.func.isRequired,
   onClose: PropTypes.func,
-  onBlur : PropTypes.func,
+  onBlur: PropTypes.func,
 };
 
 SuggestionListContainer.defaultProps = {
-  onClose: () => {
-  },
-  onBlur : ()=>{
-  }
+  onClose: () => {},
+  onBlur: () => {}
 };
 
 export default SuggestionListContainer;
