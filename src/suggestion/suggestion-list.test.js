@@ -1,5 +1,5 @@
-import {shallow} from 'enzyme';
-import {assert} from 'chai';
+import { shallow } from 'enzyme';
+import { assert } from 'chai';
 import sinon from 'sinon';
 import React from 'react';
 import  SuggestionList from './suggestion-list';
@@ -10,7 +10,7 @@ function suggestions() {
   return [
     {header: '1'},
     {header: '2'}
-  ]
+  ];
 }
 
 function renderSuggestion(suggestion) {
@@ -24,15 +24,12 @@ function renderNoSuggestion() {
 function propsSuggestionList(_suggestions = suggestions()) {
   return {
     suggestions: _suggestions,
-    onSelect: ()=> {
-    },
+    onSelect: () => {},
     highlightedIndex: 1,
     renderSuggestion,
     renderNoSuggestion,
-    onKeyDown: ()=> {
-    }
-  }
-
+    onKeyDown: () => {}
+  };
 }
 
 function shallowSuggestionList(props = propsSuggestionList()) {
@@ -45,11 +42,10 @@ function shallowSuggestionList(props = propsSuggestionList()) {
 function propsSuggestionListContainer(_suggestions = suggestions()) {
   return {
     suggestions: _suggestions,
-    onSelect: ()=> {
-    },
+    onSelect: () => {},
     renderSuggestion,
     renderNoSuggestion,
-  }
+  };
 }
 
 function shallowSuggestionListContainer(props = propsSuggestionListContainer()) {
@@ -70,7 +66,7 @@ describe('<SuggestionList />', () => {
     assert.isTrue(ul.childAt(1).props().isHighlighted);
   });
 
-  it('should renderNoSuggestions when suggestions is empty', ()=> {
+  it('should renderNoSuggestions when suggestions is empty', () => {
     const stubRenderNoSuggestion = sinon.stub().returns(renderNoSuggestion());
     const wrapper = shallowSuggestionList({...propsSuggestionList(), suggestions: [], renderNoSuggestion: stubRenderNoSuggestion});
     const ul = wrapper.find('ul');
@@ -91,7 +87,7 @@ describe('<SuggestionListContainer />', () => {
     assert.equal(wrapper.find('SuggestionList').length, 0);
   });
 
-  it('should increment highlightedIndex on keyboard.DOWN', ()=> {
+  it('should increment highlightedIndex on keyboard.DOWN', () => {
     const wrapper = shallowSuggestionListContainer();
     const spyPreventDefault = sinon.spy();
     wrapper.simulate('keydown', {which: keyCodes.DOWN, preventDefault: spyPreventDefault});
@@ -100,7 +96,7 @@ describe('<SuggestionListContainer />', () => {
     assert.isTrue(spyPreventDefault.calledOnce);
   });
 
-  it('should decrement highlightedIndex on keyboard.UP', ()=> {
+  it('should decrement highlightedIndex on keyboard.UP', () => {
     const wrapper = shallowSuggestionListContainer();
     wrapper.setState({highlightedIndex: 1});
     const spyPreventDefault = sinon.spy();
@@ -110,7 +106,7 @@ describe('<SuggestionListContainer />', () => {
     assert.isTrue(spyPreventDefault.calledOnce);
   });
 
-  it('should reset highlightedIndex on keyboard.HOME', ()=> {
+  it('should reset highlightedIndex on keyboard.HOME', () => {
     const wrapper = shallowSuggestionListContainer();
     wrapper.setState({highlightedIndex: 1});
     wrapper.simulate('keydown', {which: keyCodes.HOME});
@@ -118,14 +114,14 @@ describe('<SuggestionListContainer />', () => {
     assert.equal(wrapper.state('highlightedIndex'), 0);
   });
 
-  it('should set highlightedIndex to suggestions end on keyboard.END', ()=> {
+  it('should set highlightedIndex to suggestions end on keyboard.END', () => {
     const wrapper = shallowSuggestionListContainer();
     wrapper.simulate('keydown', {which: keyCodes.END});
 
     assert.equal(wrapper.state('highlightedIndex'), 1);
   });
 
-  it('should call onClose prop on keyboard.ESC', ()=> {
+  it('should call onClose prop on keyboard.ESC', () => {
     const spyOnClose = sinon.spy();
     const wrapper = shallowSuggestionListContainer({...propsSuggestionListContainer(), onClose: spyOnClose});
     wrapper.simulate('keydown', {which: keyCodes.ESC});
