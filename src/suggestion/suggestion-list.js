@@ -36,6 +36,7 @@ export default class SuggestionList extends Component {
       onSelect,
       highlightedIndex,
       renderSuggestion,
+      renderNoSuggestion,
       onKeyDown
     } = this.props;
     /*
@@ -48,18 +49,20 @@ export default class SuggestionList extends Component {
      }
      };
      */
-
     return (
       <ul className='nfe-account-suggestions' role='listbox' onKeyPress={onKeyDown} tabIndex={0}>
-        {suggestions.map((item, index) => (
-          <Suggestion
-            key={index}
-            item={item}
-            isHighlighted={index === highlightedIndex}
-            render={renderSuggestion}
-            onSelect={onSelect}
-          />
-        ))}
+        { suggestions.length > 0 ?
+          suggestions.map((item, index) => (
+            <Suggestion
+              key={index}
+              item={item}
+              isHighlighted={index === highlightedIndex}
+              render={renderSuggestion}
+              onSelect={onSelect}
+            />
+          )) :
+          renderNoSuggestion()
+        }
       </ul>
     );
   }
@@ -68,6 +71,7 @@ export default class SuggestionList extends Component {
 SuggestionList.propTypes = {
   suggestions: PropTypes.arrayOf(React.PropTypes.object).isRequired,
   renderSuggestion: PropTypes.func.isRequired,
+  renderNoSuggestion: PropTypes.func.isRequired,
   onSelect: PropTypes.func.isRequired,
   highlightedIndex: PropTypes.number,
 };

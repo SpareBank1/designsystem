@@ -17,21 +17,30 @@ function renderSuggestion(suggestion) {
   return <h1>{suggestion.header}</h1>;
 }
 
-function shallowSuggestionList() {
-  return shallow(
-    <SuggestionList
-      suggestions={suggestions()}
-      onSelect={()=> {
-      }}
-      highlightedIndex={1}
-      renderSuggestion={(suggestion)=> {
-        return <h1>{suggestion.header}</h1>;
-      }}
-      onKeyDown={()=> {
-      }}
-    />);
+function renderNoSuggestion() {
+  return <h2>No Match found</h2>;
 }
 
+function propsSuggestionList(_suggestions = suggestions()) {
+  return {
+    suggestions: _suggestions,
+    onSelect: ()=> {
+    },
+    highlightedIndex: 1,
+    renderSuggestion,
+    renderNoSuggestion,
+    onKeyDown: ()=> {
+    }
+  }
+
+}
+
+function shallowSuggestionList(props = propsSuggestionList()) {
+  return shallow(
+    <SuggestionList
+      {...props}
+    />);
+}
 
 function propsSuggestionListContainer(_suggestions = suggestions()) {
   return {
@@ -39,6 +48,7 @@ function propsSuggestionListContainer(_suggestions = suggestions()) {
     onSelect: ()=> {
     },
     renderSuggestion,
+    renderNoSuggestion,
   }
 }
 
@@ -55,8 +65,17 @@ describe('<SuggestionList />', () => {
     const wrapper = shallowSuggestionList();
     const ul = wrapper.find('ul');
 
+    assert.equal(ul.children().length, 2);
     assert.isFalse(ul.childAt(0).props().isHighlighted);
     assert.isTrue(ul.childAt(1).props().isHighlighted);
+  });
+
+  it('should renderNoSuggestions when suggestions is empty', ()=> {
+    const stubRenderNoSuggestion = sinon.stub().returns(renderNoSuggestion());
+    const wrapper = shallowSuggestionList({...propsSuggestionList(), suggestions: [], renderNoSuggestion: stubRenderNoSuggestion});
+    const ul = wrapper.find('ul');
+    assert.equal(ul.children().length, 1);
+    assert.isTrue(stubRenderNoSuggestion.calledOnce);
   });
 });
 
