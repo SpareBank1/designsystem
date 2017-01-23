@@ -69,6 +69,5 @@ SuggestionList.propTypes = {
   suggestions: PropTypes.arrayOf(React.PropTypes.object).isRequired,
   renderSuggestion: PropTypes.func.isRequired,
   onSelect: PropTypes.func.isRequired,
-  onKeyDown: PropTypes.func.isRequired,
   highlightedIndex: PropTypes.number,
 };
