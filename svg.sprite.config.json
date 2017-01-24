@@ -8,7 +8,7 @@
             "view": {
                 "prefix": ".icon.icon-",
                 "example": {
-                    "template": "./../../src/icons.js.mustache",
+                    "template": "./src/icons.js.mustache",
                     "dest": "../icons.js"
                 }
             }
