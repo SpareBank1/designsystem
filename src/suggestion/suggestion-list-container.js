@@ -1,7 +1,7 @@
-import React, {PropTypes} from "react";
-import {Scrollbars} from "react-custom-scrollbars";
-import SuggestionList from "./suggestion-list";
-import KeyCode from "../util/keyCode";
+import React, { PropTypes } from 'react';
+import { Scrollbars } from 'react-custom-scrollbars';
+import SuggestionList from './suggestion-list';
+import KeyCode from '../util/keyCode';
 
 class SuggestionListContainer extends React.Component {
 
@@ -83,16 +83,20 @@ class SuggestionListContainer extends React.Component {
   }
 
   nextHighlightedIndex() {
-    return this.state.highlightedIndex === this.props.suggestions.length -1 ?
-      0 : this.state.highlightedIndex +1;
+    return this.state.highlightedIndex === this.props.suggestions.length - 1 ?
+      0 : this.state.highlightedIndex + 1;
   }
 
   previousHighlightedIndex() {
     return this.state.highlightedIndex === 0 ?
-      this.props.suggestions.length -1 : this.state.highlightedIndex -1;
+    this.props.suggestions.length - 1 : this.state.highlightedIndex - 1;
   }
 
+
   onKeyDown(evt) {
+    const {suggestions, onClose, onBlur, onSelect} = this.props;
+    const {highlightedIndex} = this.state;
+
     switch (evt.which) {
       case KeyCode.DOWN:
         evt.preventDefault();
@@ -113,23 +117,17 @@ class SuggestionListContainer extends React.Component {
         break;
       case KeyCode.END:
         this.setState({
-          highlightedIndex: this.props.suggestions.length - 1
+          highlightedIndex: suggestions.length - 1
         });
         break;
       case KeyCode.ESC:
-        /*
-        this.props.onClose()
-       break;
-       */
+        onClose();
+        break;
       case KeyCode.ENTER:
-      /*
-      this.props.onSelect(this.props.suggestions[this.state.highlightedIndex])
-       break;
-       */
+        onSelect(suggestions[highlightedIndex]);
+        break;
       case KeyCode.TAB:
-        /*
-        this.props.onBlur(this.props.suggestions[this.state.highlightedIndex])
-         */
+        onBlur(suggestions[highlightedIndex]);
         break;
       default:
         return;
@@ -138,10 +136,10 @@ class SuggestionListContainer extends React.Component {
 
   render() {
     return (
-      <div className="nfe-account-selector__dropdown" onKeyDown={(evt) => this.onKeyDown(evt)}>
-        <Scrollbars style={{ width: '100%', height: 300 }}>
+      <div className='nfe-account-selector__dropdown' onKeyDown={(evt) => this.onKeyDown(evt)}>
+        <Scrollbars style={{width: '100%', height: 300}}>
           {this.props.suggestions.length ? (
-              <SuggestionList highlightedIndex={this.state.highlightedIndex} {...this.props}/>)
+            <SuggestionList highlightedIndex={this.state.highlightedIndex} {...this.props}/>)
             : null
           }
         </Scrollbars>
@@ -153,7 +151,15 @@ class SuggestionListContainer extends React.Component {
 SuggestionListContainer.propTypes = {
   suggestions: PropTypes.array.isRequired,
   onSelect: PropTypes.func.isRequired,
-  renderSuggestion: PropTypes.func.isRequired
+  renderSuggestion: PropTypes.func.isRequired,
+  renderNoSuggestion: PropTypes.func.isRequired,
+  onClose: PropTypes.func,
+  onBlur: PropTypes.func,
+};
+
+SuggestionListContainer.defaultProps = {
+  onClose: () => {},
+  onBlur: () => {}
 };
 
 export default SuggestionListContainer;
