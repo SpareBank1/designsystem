@@ -1,7 +1,6 @@
 import React, { PropTypes, Component } from 'react';
 import classNames from 'classnames';
 import ChevronIkon from 'ffe-icons-react/chevron-ikon';
-import i18n from '../i18n/i18n';
 import KryssIkon from 'ffe-icons-react/kryss-ikon';
 
 import KeyCode from '../util/keyCode';
@@ -11,8 +10,9 @@ class BaseSelector extends Component {
   constructor(props) {
     super(props);
     this.onKeyDown = this.onKeyDown.bind(this);
-  };
-
+    this.inputClassName = this.inputClassName.bind(this);
+    this.dropdownIconClassName = this.dropdownIconClassName.bind(this);
+  }
 
   onKeyDown({which, altKey}) {
     const {onShowSuggestions, onHideSuggestions} = this.props;
@@ -25,20 +25,31 @@ class BaseSelector extends Component {
     }
   }
 
+  inputClassName() {
+    return classNames('ffe-input-field nfe-account-selector__search',
+      {'nfe-account-selector__search--open': this.props.isSuggestionsShowing}
+    );
+  }
+
+  dropdownIconClassName() {
+    return classNames('nfe-account-selector__dropdown-icon',
+      {'nfe-account-selector__dropdown-icon--reverse': this.props.isSuggestionsShowing}
+    );
+  }
+
   render() {
-    const {onFocus, onChange, value, id, placeholder, isSuggestionsShowing, ariaInvalid} = this.props;
-
-    const inputClassName = () => { //TODO class function
-      return classNames('ffe-input-field nfe-account-selector__search',
-        {'nfe-account-selector__search--open': isSuggestionsShowing}
-      );
-    };
-
-    const dropdownIconClassName = () => { //TODO class function
-      return classNames('nfe-account-selector__dropdown-icon',
-        {'nfe-account-selector__dropdown-icon--reverse': isSuggestionsShowing}
-      );
-    };
+    const {
+      onFocus,
+      onChange,
+      value,
+      id,
+      placeholder,
+      isSuggestionsShowing,
+      ariaInvalid,
+      resetLabel,
+      onBlur,
+      onReset
+    } = this.props;
 
     return (
       <div
@@ -50,29 +61,30 @@ class BaseSelector extends Component {
           onFocus={ onFocus }
           onChange={ onChange }
           onBlur={ onBlur }
-          className={ inputClassName() }
+          className={ this.inputClassName() }
           onKeyDown={ this.onKeyDown }
           autoComplete='off'
           value={ value }
           id={ id }
           placeholder={ placeholder }
           ref={(el) => {
-            this.inputField = el
+            this.inputField = el;
           }}
           aria-invalid={ ariaInvalid } // add aria with hoc?
           aria-autocomplete='list'
         />
         { value.length > 0 &&
         <button
-          aria-label={ i18n[this.props.locale].RESET_SEARCH }
+          aria-label={ resetLabel }
           className='nfe-account-selector__reset-button'
-          onMouseDown={ () => onChange('') }
+          onClick={ onReset }
           tabIndex={-1}
+          type="button"
         >
           <KryssIkon className='nfe-account-selector__reset-icon'/>
         </button>
         }
-        <div onClick={() => this.inputField.focus()} className={dropdownIconClassName()}>
+        <div onClick={() => this.inputField.focus()} className={this.dropdownIconClassName()}>
           <ChevronIkon focusable={ false }/>
         </div>
       </div>
@@ -90,7 +102,9 @@ BaseSelector.propTypes = {
   placeholder: PropTypes.string,
   onBlur: PropTypes.func,
   onFocus: PropTypes.func,
-  ariaInvalid: PropTypes.bool
+  ariaInvalid: PropTypes.bool,
+  resetLabel: PropTypes.string.isRequired,
+  onReset: PropTypes.func.isRequired
 };
 
 BaseSelector.defaultProps = {

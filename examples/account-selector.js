@@ -36,10 +36,21 @@ const AccountSelectorExample = () => {
     );
   }
 
+  function renderNoSuggestion() {
+    return (
+      <h2>Ingen treff</h2>
+    );
+  }
+
   return (
     <div className="selector">
       <label htmlFor="custom-id" className="ffe-form-label ffe-form-label--block selector-label">Velg konto</label>
-      <SuggestionListContainer suggestions={accountArray} onSelect={onAccountSelected} renderSuggestion={(account) => renderAccount(account)}/>
+      <SuggestionListContainer
+        suggestions={accountArray}
+        onSelect={onAccountSelected}
+        renderSuggestion={(account) => renderAccount(account)}
+        renderNoSuggestion={() => renderNoSuggestion()}
+      />
     </div>
   );
 };
