@@ -1,3 +1,6 @@
 {
-    "extends": "ffe"
+    "extends": "ffe",
+    "rules": {
+        "react/no-unknown-property": 0
+    }
 }
