@@ -61,7 +61,7 @@ export default class SuggestionList extends Component {
               onSelect={onSelect}
             />
           )) :
-          renderNoSuggestion()
+          <li>{renderNoSuggestion()}</li>
         }
       </ul>
     );

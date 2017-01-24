@@ -138,10 +138,7 @@ class SuggestionListContainer extends React.Component {
     return (
       <div className='nfe-account-selector__dropdown' onKeyDown={(evt) => this.onKeyDown(evt)}>
         <Scrollbars style={{width: '100%', height: 300}}>
-          {this.props.suggestions.length ? (
-            <SuggestionList highlightedIndex={this.state.highlightedIndex} {...this.props}/>)
-            : null
-          }
+          <SuggestionList highlightedIndex={this.state.highlightedIndex} {...this.props}/>
         </Scrollbars>
       </div>
     );
