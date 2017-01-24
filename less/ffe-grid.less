@@ -124,14 +124,29 @@
 
 .create-column(sm, 12);
 
+@media only screen and (max-width: (@breakpoint-md - 1px)) {
+    .ffe-grid__col--sm-offset-0 {
+        margin-left: 0;
+    }
+}
+
 @media only screen and (min-width: @breakpoint-md) {
     .create-column(md, 12);
+    .ffe-grid__col--md-offset-0 {
+        margin-left: 0;
+    }
 }
 
 @media only screen and (min-width: @breakpoint-lg) {
     .create-column(lg, 12);
+    .ffe-grid__col--lg-offset-0 {
+        margin-left: 0;
+    }
 }
 
 @media only screen and (min-width: @breakpoint-xl) {
     .create-column(xl, 12);
+    .ffe-grid__col--xl-offset-0 {
+        margin-left: 0;
+    }
 }
