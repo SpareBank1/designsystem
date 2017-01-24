@@ -1,5 +1,9 @@
 # Changelog
 
+## 7.1.1
+
+Added handlevogn-pakker-ikon.svg, bil-camping-ikon.svg and hus-tre-ikon.svg
+
 ## 7.0.1
 
 Changes the shebang so it works better on different flavours of Linux
