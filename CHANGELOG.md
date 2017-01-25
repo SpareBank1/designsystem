@@ -1,5 +1,8 @@
 # Changelog
 
+## v2.0.7
+* Update dependency ffe-datepicker to ^3.0.1
+
 ## v2.0.6
 * Use event.preventDefault on buttons for navigating months
 
