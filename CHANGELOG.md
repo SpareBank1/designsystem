@@ -1,5 +1,8 @@
 # Changelog
 
+## 3.0.1
+* Fixed issue with the previous and next month buttons on iPhone(6)/Safari causing the datepicker not to work at all.
+
 ## 3.0.0
 * Added support for ffe-form version 4.x
 

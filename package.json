@@ -1,11 +1,12 @@
 {
   "name": "ffe-datepicker",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "FFE Datepicker",
   "main": "index.js",
   "scripts": {
     "compile": "lessc examples/example.less examples/example.css && cp -R node_modules/ffe-core/fonts/ examples/fonts/ && echo \"$(date +%T): Updated examples\"",
     "lint": "lessc --lint examples/example.less && stylelint less/*.less",
+    "has-published": "npm show . versions -s | grep -q ${npm_package_version}",
     "start": "opn examples/example.html & watch \"npm run -s compile\" less/",
     "preversion": "npm run lint",
     "postpublish": "git tag ${npm_package_version} && git push --tags"
