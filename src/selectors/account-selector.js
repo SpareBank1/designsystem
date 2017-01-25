@@ -1,75 +1,83 @@
 import React, { PropTypes } from 'react';
-import BaseSelector from './base-selector';
-import { accountFilter } from '../filter/filters';
-import AccountRowSingle from '../suggestion/account-row-single';
 import AccountDetails from '../details/account-details';
+
+import Input from './input-field';
+import SuggestionsList from '../suggestion/suggestion-list-container';
+import AccountSuggestionItem from '../account/account-suggestion-item';
+import AccountSuggestionEmpty from '../account/account-suggestion-empty-item';
+import { accountFilter } from '../filter/filters';
+import { Locale } from '../util/types';
+
 
 class AccountSelector extends React.Component {
 
   constructor(props) {
     super(props);
-
-    this.renderItemRow = this.renderItemRow.bind(this);
-    this.onBlur = this.onBlur.bind(this);
-    this.renderDetails = this.renderDetails.bind(this);
-    this.reset = this.reset.bind(this);
+    this.onInputChange = this.onInputChange.bind(this);
+    this.state = {showSuggestions: false};
   }
 
-  renderItemRow(item) {
-    if (this.props.renderItemRow) {
-      return this.props.renderItemRow(item);
-    }
-    return <AccountRowSingle account={item} locale={this.props.locale}/>;
+
+  // onBlur(selectedAccounts, inputValue) {
+  //   this.props.onBlur(selectedAccounts[0], inputValue);
+  // }
+
+  // reset(inputFocus) {
+  //   this.baseSelector.reset(inputFocus);
+  // }
+
+  onInputChange(input) {
+    const {onChange} = this.props;
+    this.setState({
+      showSuggestions: true,
+    });
+    onChange(input);
   }
 
-  renderDetails(selectedItems) {
-    if (selectedItems.length === 0) {
-      return null;
-    }
-    return (<AccountDetails
-      account={ selectedItems[0] }
-      locale={ this.props.locale }
-    />);
-  }
-
-  onBlur(selectedAccounts, inputValue) {
-    this.props.onBlur(selectedAccounts[0], inputValue);
-  }
-
-  reset(inputFocus) {
-    this.baseSelector.reset(inputFocus);
-  }
 
   render() {
-    const selectedItems = this.props.selectedAccount ? [this.props.selectedAccount] : [];
+    // const selectedItems = this.props.selectedAccount ? [this.props.selectedAccount] : [];
+
 
     // To provide backwards compatibility
-    const accounts = this.props.accounts.map(account => ({
-        ...account,
-        id: account.id || parseInt(account.accountNumber, 10)
-      })
-    );
-
+    // const accounts = this.props.accounts.map(account => ({
+    //     ...account,
+    //     id: account.id || parseInt(account.accountNumber, 10)
+    //   })
+    // );
+    const {onBlur, value, placeholder, accounts, locale, noMatches, onAccountSelected, selectedAccount} = this.props;
+    const {showSuggestions} = this.state;
     return (
-      <BaseSelector
-        ref={baseSelector => {this.baseSelector = baseSelector;}}
-        items={ accounts }
-        renderItemRow={ this.renderItemRow }
-        onChange={ this.props.onChange }
-        onBlur={this.onBlur}
-        onFocus={this.props.onFocus}
-        onItemSelected={this.props.onAccountSelected}
-        value={this.props.value}
-        filter={ accountFilter }
-        locale={ this.props.locale }
-        inputId={this.props.id}
-        placeholder={this.props.placeholder}
-        ariaInvalid={this.props.ariaInvalid}
-        noMatches={this.props.noMatches}
-        selectedItems={ selectedItems }
-        getRowId={(account) => account.id}
-        renderDetails={this.renderDetails}
-      />
+      <div
+        ref={(element)=> { this.self = element}}
+      >
+        <Input
+          value={value}
+          onChange={this.onInputChange}
+          onReset={() => {}}
+          resetLabel={''}
+          onShowSuggestions={()=> this.setState({showSuggestions: true})}
+          onHideSuggestions={()=> this.setState({showSuggestions: false})}
+          isSuggestionsShowing={showSuggestions}
+          id='id'
+          placeholder={placeholder}
+          onBlur={(event)=> {console.log("containers target",this.self.contains(event.target))}}
+        />
+        {selectedAccount &&
+        <AccountDetails account={selectedAccount} locale={locale}/> }
+        {showSuggestions &&
+        <SuggestionsList
+          suggestions={accounts.filter(() => accountFilter(value))}
+          renderSuggestion={(account)=> <AccountSuggestionItem account={account} locale={locale}/>}
+          renderNoSuggestion={()=> <AccountSuggestionEmpty value={noMatches}/>}
+          onSelect={onAccountSelected}
+          onClose={()=> this.setState({showSuggestions: false})}
+          onBlur={onBlur}
+        />}
+      </div>
+
+
+
     );
   }
 }
@@ -78,7 +86,7 @@ AccountSelector.propTypes = {
   accounts: PropTypes.array.isRequired,
   onAccountSelected: PropTypes.func.isRequired,
   onChange: PropTypes.func,
-  locale: PropTypes.oneOf(["nb", "nn", "en"]),
+  locale: Locale.isRequired,
   id: PropTypes.string,
   placeholder: PropTypes.string,
   onBlur: PropTypes.func,
