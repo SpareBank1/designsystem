@@ -1,31 +1,27 @@
 import React, { PropTypes } from 'react';
-import amountFormatter from 'nfe-amount-formatter';
 import accountFormatter from '../util/account-formatter';
+import { balanceWithCurrency } from '../util/format';
+import { Account, Locale } from '../util/types';
 
-function AccountDetails({ account = {}, locale }) {
-  const currencyCode = account.currencyCode ? account.currencyCode : 'NOK';
-
-  const balanceEl = account.balance !== undefined ?
-    (<div className="nfe-account-selector__selected-account-details--right">
-      { amountFormatter(account.balance, locale) } { currencyCode }
-    </div>) : null;
-
+function AccountDetails({account, locale}) {
+  const {balance, accountNumber} = account;
   return (
     <div className="nfe-account-selector__selected-account-details">
       <div className="nfe-account-selector__selected-account-details--left">
-        { accountFormatter(account.accountNumber) }
+        { accountFormatter(accountNumber) }
       </div>
-      { balanceEl }
+      { account.balance &&
+      <div className="nfe-account-selector__selected-account-details--right">
+        { balanceWithCurrency(balance, locale) }
+      </div>
+      }
     </div>
   );
 }
 
 AccountDetails.propTypes = {
-  account: PropTypes.shape({
-    accountNumber: PropTypes.string,
-    balance: PropTypes.number,
-  }),
-  locale: PropTypes.oneOf(["nb", "nn", "en"]).isRequired,
+  account: Account.isRequired,
+  locale: Locale.isRequired
 };
 
 export default AccountDetails;

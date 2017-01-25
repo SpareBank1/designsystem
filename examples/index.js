@@ -12,6 +12,7 @@ document.body.appendChild(heading);
 const accountSelectorDOM = document.createElement('section');
 document.body.appendChild(accountSelectorDOM);
 
+
 render(
   <div>
     <AccountSelectorExample />

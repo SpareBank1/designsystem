@@ -23,6 +23,13 @@ const AccountRowSingle = ({account, locale}) => {
   );
 };
 
+const AccountType = PropTypes.shape({
+  accountNumber : PropTypes.string.isRequired,
+  name : PropTypes.string.isRequired,
+  currencyCode : PropTypes.string,
+  balance : PropTypes.string,
+});
+
 AccountRowSingle.propTypes = {
   account: PropTypes.object.isRequired,
   locale: PropTypes.string.isRequired

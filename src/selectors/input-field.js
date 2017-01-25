@@ -5,7 +5,7 @@ import KryssIkon from 'ffe-icons-react/kryss-ikon';
 
 import KeyCode from '../util/keyCode';
 
-class BaseSelector extends Component {
+class Input extends Component {
 
   constructor(props) {
     super(props);
@@ -92,7 +92,7 @@ class BaseSelector extends Component {
   }
 }
 
-BaseSelector.propTypes = {
+Input.propTypes = {
   onChange: PropTypes.func.isRequired,
   value: PropTypes.string.isRequired,
   onShowSuggestions: PropTypes.func.isRequired,
@@ -107,10 +107,10 @@ BaseSelector.propTypes = {
   onReset: PropTypes.func.isRequired
 };
 
-BaseSelector.defaultProps = {
+Input.defaultProps = {
   onBlur: () => {},
   onFocus: () => {},
   value: '',
 };
 
-export default BaseSelector;
+export default Input;

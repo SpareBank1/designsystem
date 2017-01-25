@@ -1,6 +1,6 @@
 import React from 'react';
 import { accounts as accountArray } from './example-data';
-import SuggestionListContainer from '../src/suggestion/suggestion-list-container';
+import AccountSelector from '../src/selectors/account-selector';
 
 const AccountSelectorExample = () => {
 
@@ -45,11 +45,10 @@ const AccountSelectorExample = () => {
   return (
     <div className="selector">
       <label htmlFor="custom-id" className="ffe-form-label ffe-form-label--block selector-label">Velg konto</label>
-      <SuggestionListContainer
-        suggestions={accountArray}
-        onSelect={onAccountSelected}
-        renderSuggestion={(account) => renderAccount(account)}
-        renderNoSuggestion={() => renderNoSuggestion()}
+      <AccountSelector
+        accounts={accountArray}
+        onAccountSelected={onAccountSelected}
+
       />
     </div>
   );
