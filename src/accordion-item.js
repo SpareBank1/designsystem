@@ -76,7 +76,7 @@ class AccordionItem extends Component {
         return (
             <li className={ createClasses('ffe-accordion-item', isOpen, type) }>
                 <a
-                    aria-controls={ `panel--${uuid}-${index}` }
+                    aria-controls={ `panel-${uuid}-${index}` }
                     aria-expanded={ isOpen }
                     aria-label={ ariaLabel }
                     className={ createClasses('ffe-accordion-item__toggler', isOpen, type) }
