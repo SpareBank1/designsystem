@@ -3,8 +3,6 @@ import classNames from 'classnames';
 import ChevronIkon from 'ffe-icons-react/chevron-ikon';
 import KryssIkon from 'ffe-icons-react/kryss-ikon';
 
-import KeyCode from '../util/keyCode';
-
 class Input extends Component {
 
   constructor(props) {

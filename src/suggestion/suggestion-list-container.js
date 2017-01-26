@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import { Scrollbars } from 'react-custom-scrollbars';
 import SuggestionList from './suggestion-list';
-import KeyCode from '../util/keyCode';
+import { KeyCodes } from '../util/types';
 
 class SuggestionListContainer extends React.Component {
 
@@ -32,27 +32,27 @@ class SuggestionListContainer extends React.Component {
     const {suggestions, onClose, onBlur, onSelect} = this.props;
     const {highlightedIndex} = this.state;
     switch (evt.which) {
-      case KeyCode.DOWN:
+      case KeyCodes.DOWN:
         evt.preventDefault();
         this.setHiglightedIndex(this.nextHighlightedIndex());
         break;
-      case KeyCode.UP:
+      case KeyCodes.UP:
         evt.preventDefault();
         this.setHiglightedIndex(this.previousHighlightedIndex());
         break;
-      case KeyCode.HOME:
+      case KeyCodes.HOME:
         this.setHiglightedIndex(0);
         break;
-      case KeyCode.END:
+      case KeyCodes.END:
         this.setHiglightedIndex(suggestions.length - 1);
         break;
-      case KeyCode.ESC:
+      case KeyCodes.ESC:
         onClose();
         break;
-      case KeyCode.ENTER:
+      case KeyCodes.ENTER:
         onSelect(suggestions[highlightedIndex]);
         break;
-      case KeyCode.TAB:
+      case KeyCodes.TAB:
         onBlur(suggestions[highlightedIndex]);
         break;
       default:

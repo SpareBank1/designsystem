@@ -5,7 +5,7 @@ import React from 'react';
 import BaseSelector from './base-selector';
 import Dropdown from '../dropdown/dropdown';
 import jsdom from 'jsdom';
-import KeyCode from '../util/keyCode';
+import { KeyCodes } from '../util/types';
 
 global.document = jsdom.jsdom('<!DOCTYPE html><html><body></body></html>');
 global.window = document.defaultView;
@@ -19,8 +19,8 @@ Object.keys(window).forEach(key => {
 describe('<BaseSelector />', () => {
 
   const items = [
-    { id: 1, name: 'Ola Nordmann' },
-    { id: 2, name: 'kari Nordmann' }
+    {id: 1, name: 'Ola Nordmann'},
+    {id: 2, name: 'kari Nordmann'}
   ];
 
   const filter = () => sinon.stub().returns(items);
@@ -56,11 +56,11 @@ describe('<BaseSelector />', () => {
     it('should hide dropdown on input tab and shift+tab', () => {
       const wrapper = shallow(getSelector());
       const input = wrapper.find('input');
-      const tabEvent = {which: KeyCode.TAB, shiftKey: false};
+      const tabEvent = {which: KeyCodes.TAB, shiftKey: false};
       input.simulate('keydown', tabEvent);
       expect(wrapper.find(Dropdown)).to.have.length(0);
       input.simulate('focus');
-      const tabEventWithShift = {which: KeyCode.TAB, shiftKey: true};
+      const tabEventWithShift = {which: KeyCodes.TAB, shiftKey: true};
       input.simulate('keydown', tabEventWithShift);
       expect(wrapper.find(Dropdown)).to.have.length(0);
     });
@@ -72,12 +72,12 @@ describe('<BaseSelector />', () => {
       expect(wrapper.find(Dropdown)).to.have.length(1);
       const event = {
         altKey: true,
-        which: KeyCode.UP,
+        which: KeyCodes.UP,
         preventDefault: () => {}
       };
       input.simulate('keydown', event);
       expect(wrapper.find(Dropdown)).to.have.length(0);
-      input.simulate('keydown', {...event, which: KeyCode.DOWN});
+      input.simulate('keydown', {...event, which: KeyCodes.DOWN});
       expect(wrapper.find(Dropdown)).to.have.length(1);
     });
 
@@ -100,8 +100,8 @@ describe('<BaseSelector />', () => {
       const input = wrapper.find('input');
       input.simulate('change', {target: {value: 'Ola'}});
       assert.equal(onItemSelectedSpy.callCount, 0);
-      input.simulate('keydown', {which: KeyCode.DOWN});
-      wrapper.find('.nfe-account-suggestions__item--highlighted').simulate('keydown', {which: KeyCode.TAB});
+      input.simulate('keydown', {which: KeyCodes.DOWN});
+      wrapper.find('.nfe-account-suggestions__item--highlighted').simulate('keydown', {which: KeyCodes.TAB});
       assert.equal(onItemSelectedSpy.callCount, 1);
     });
 
@@ -124,8 +124,8 @@ describe('<BaseSelector />', () => {
       const input = wrapper.find('input');
       input.simulate('change', {target: {value: 'Ola'}});
       assert.equal(onItemSelectedSpy.callCount, 0);
-      input.simulate('keydown', {which: KeyCode.DOWN});
-      wrapper.find('.nfe-account-suggestions__item--highlighted').simulate('keydown', {which: KeyCode.ENTER});
+      input.simulate('keydown', {which: KeyCodes.DOWN});
+      wrapper.find('.nfe-account-suggestions__item--highlighted').simulate('keydown', {which: KeyCodes.ENTER});
       assert.equal(onItemSelectedSpy.callCount, 1);
       assert.equal(input.node === document.activeElement, true);
     });
@@ -149,9 +149,9 @@ describe('<BaseSelector />', () => {
     );
     const input = wrapper.find('input');
     input.simulate('focus');
-    input.simulate('keydown', {which: KeyCode.DOWN});
+    input.simulate('keydown', {which: KeyCodes.DOWN});
     assert.equal(onItemSelectedSpy.callCount, 0);
-    wrapper.find('.nfe-account-suggestions__item--highlighted').simulate('keydown', {which: KeyCode.ESC});
+    wrapper.find('.nfe-account-suggestions__item--highlighted').simulate('keydown', {which: KeyCodes.ESC});
     assert.equal(onItemSelectedSpy.callCount, 1);
     assert.equal(input.node === document.activeElement, true);
   });
@@ -195,7 +195,7 @@ describe('<BaseSelector />', () => {
     );
     assert.equal(filterSpy.callCount, 2);
     const input = wrapper.find('input');
-    input.simulate('change', { target: { value: 'Ola' }});
+    input.simulate('change', {target: {value: 'Ola'}});
     assert.equal(filterSpy.callCount, 4);
   });
 });

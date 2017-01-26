@@ -6,7 +6,7 @@ import i18n from '../i18n/i18n';
 import KryssIkon from 'ffe-icons-react/kryss-ikon';
 
 import Dropdown from '../dropdown/dropdown';
-import KeyCode from '../util/keyCode';
+import { KeyCodes } from '../util/types';
 
 class BaseSelector extends Component {
 
@@ -45,7 +45,7 @@ class BaseSelector extends Component {
   }
 
   getBlankState() {
-    const { items, multiSelect } = this.props;
+    const {items, multiSelect} = this.props;
     return {
       showItemSuggestions: false,
       selectedItems: multiSelect ? this.state.selectedItems : [],
@@ -56,7 +56,7 @@ class BaseSelector extends Component {
   }
 
   componentWillReceiveProps(props) {
-    const { inputValue } = this.state;
+    const {inputValue} = this.state;
 
     const nextState = {
       filteredItems: this.filterItems(props.items, inputValue),
@@ -76,7 +76,7 @@ class BaseSelector extends Component {
   }
 
   reset(setFocus = true) {
-    const { onChange, onItemSelected } = this.props;
+    const {onChange, onItemSelected} = this.props;
     const nextState = {
       ...this.getBlankState(),
       showItemSuggestions: true,
@@ -149,7 +149,7 @@ class BaseSelector extends Component {
   onKeyDown(evt, originateFromDropdown = false) {
     const altKey = evt.altKey;
     switch (evt.which) {
-      case KeyCode.DOWN:
+      case KeyCodes.DOWN:
         if (altKey) {
           this.openDropdown();
         } else {
@@ -157,7 +157,7 @@ class BaseSelector extends Component {
         }
         evt.preventDefault();
         break;
-      case KeyCode.UP:
+      case KeyCodes.UP:
         if (altKey) {
           this.closeDropdown();
         } else {
@@ -165,26 +165,26 @@ class BaseSelector extends Component {
         }
         evt.preventDefault();
         break;
-      case KeyCode.HOME:
+      case KeyCodes.HOME:
         this.highlightFirstItem();
         break;
-      case KeyCode.END:
+      case KeyCodes.END:
         this.highlightLastItem();
         break;
-      case KeyCode.ESC:
+      case KeyCodes.ESC:
         if (originateFromDropdown) {
           this.onDropdownEscape();
         } else {
           this.reset();
         }
         break;
-      case KeyCode.ENTER:
+      case KeyCodes.ENTER:
         if (originateFromDropdown) {
           evt.preventDefault();
           this.onItemSelect(this.state.highlightedItem);
         }
         break;
-      case KeyCode.TAB:
+      case KeyCodes.TAB:
         this.onInputTab(evt);
         break;
       default:
@@ -209,7 +209,7 @@ class BaseSelector extends Component {
   }
 
   highlightNextItem() {
-    const { filteredItems } = this.state;
+    const {filteredItems} = this.state;
     let nextItemIndex = this.state.highlightedItem + 1;
     if (nextItemIndex === filteredItems.length) {
       nextItemIndex = 0;
@@ -218,7 +218,7 @@ class BaseSelector extends Component {
   }
 
   highlightPrevItem() {
-    const { filteredItems } = this.state;
+    const {filteredItems} = this.state;
     let prevItemIndex = this.state.highlightedItem - 1;
     if (prevItemIndex < 0) {
       prevItemIndex = filteredItems.length - 1;
@@ -227,14 +227,14 @@ class BaseSelector extends Component {
   }
 
   highlightFirstItem() {
-    const { filteredItems } = this.state;
+    const {filteredItems} = this.state;
     if (filteredItems.length > 0) {
       this.highlightItem(0);
     }
   }
 
   highlightLastItem() {
-    const { filteredItems } = this.state;
+    const {filteredItems} = this.state;
     if (filteredItems.length > 0) {
       this.highlightItem(filteredItems.length - 1);
     }
@@ -256,8 +256,8 @@ class BaseSelector extends Component {
   }
 
   onInputFocus() {
-    const { onFocus } = this.props;
-    const { inputValue } = this.state;
+    const {onFocus} = this.props;
+    const {inputValue} = this.state;
     const nextState = {
       showItemSuggestions: true,
       filteredItems: this.filterItems(this.props.items, inputValue)
@@ -303,7 +303,7 @@ class BaseSelector extends Component {
   }
 
   handleItemSelectMulti(item) {
-    const { selectedItems } = this.state;
+    const {selectedItems} = this.state;
     let indexInSelectedItems = -1;
     for (let i = 0; i < selectedItems.length; i++) {
       if (selectedItems[i].id === item.id) {
@@ -334,7 +334,7 @@ class BaseSelector extends Component {
 
   onInputChange(evt) {
     const searchQuery = evt.target.value;
-    const { items, onChange, multiSelect, onItemSelected } = this.props;
+    const {items, onChange, multiSelect, onItemSelected} = this.props;
     const filteredItems = this.filterItems(items, searchQuery);
     const hasSelectedItems = this.state.selectedItems.length > 0;
     const nextState = {
@@ -370,13 +370,13 @@ class BaseSelector extends Component {
 
     const inputClassName = () => {
       return classNames('ffe-input-field nfe-account-selector__search',
-        { 'nfe-account-selector__search--open': this.state.showItemSuggestions }
+        {'nfe-account-selector__search--open': this.state.showItemSuggestions}
       );
     };
 
     const dropdownIconClassName = () => {
       return classNames('nfe-account-selector__dropdown-icon',
-        { 'nfe-account-selector__dropdown-icon--reverse': this.state.showItemSuggestions }
+        {'nfe-account-selector__dropdown-icon--reverse': this.state.showItemSuggestions}
       );
     };
 
