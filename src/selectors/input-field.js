@@ -9,21 +9,10 @@ class Input extends Component {
 
   constructor(props) {
     super(props);
-    this.onKeyDown = this.onKeyDown.bind(this);
     this.inputClassName = this.inputClassName.bind(this);
     this.dropdownIconClassName = this.dropdownIconClassName.bind(this);
   }
 
-  onKeyDown({which, altKey}) {
-    const {onShowSuggestions, onHideSuggestions} = this.props;
-    if (which === KeyCode.DOWN && altKey) {
-      return onShowSuggestions();
-    }
-
-    if (which === KeyCode.UP && altKey) {
-      onHideSuggestions();
-    }
-  }
 
   inputClassName() {
     return classNames('ffe-input-field nfe-account-selector__search',
@@ -41,6 +30,7 @@ class Input extends Component {
     const {
       onFocus,
       onChange,
+      onKeyDown,
       value,
       id,
       placeholder,
@@ -62,7 +52,7 @@ class Input extends Component {
         <input
           onChange={ (e) => {onChange(e.target.value)}}
           className={ this.inputClassName() }
-          onKeyDown={ this.onKeyDown }
+          onKeyDown={ onKeyDown }
           autoComplete='off'
           value={ value }
           id={ id }
@@ -92,9 +82,8 @@ class Input extends Component {
 
 Input.propTypes = {
   onChange: PropTypes.func.isRequired,
+  onKeyDown: PropTypes.func.isRequired,
   value: PropTypes.string.isRequired,
-  onShowSuggestions: PropTypes.func.isRequired,
-  onHideSuggestions: PropTypes.func.isRequired,
   isSuggestionsShowing: PropTypes.bool.isRequired,
   id: PropTypes.string,
   placeholder: PropTypes.string,
@@ -103,13 +92,13 @@ Input.propTypes = {
   ariaInvalid: PropTypes.bool,
   resetLabel: PropTypes.string.isRequired,
   onReset: PropTypes.func.isRequired,
-  inputFieldRef : PropTypes.func,
+  inputFieldRef: PropTypes.func,
 };
 
 Input.defaultProps = {
   onBlur: () => {},
   onFocus: () => {},
-  inputFieldRef : ()=>{},
+  inputFieldRef: ()=> {},
 };
 
 export default Input;
