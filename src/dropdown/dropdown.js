@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import ReactDOM from 'react-dom';
 import ScrollArea from 'react-scrollbar/dist/no-css';
 import SuggestionList from '../suggestion/suggestion-list';
-import AccountSuggestionsEmpty from '../suggestion/account-suggestions-empty';
+// import AccountSuggestionsEmpty from '../suggestion/account-suggestions-empty';
 import { If } from 'nfe-if';
 import DropdownStatusBar from './dropdownStatusBar';
 import i18n from '../i18n/i18n';

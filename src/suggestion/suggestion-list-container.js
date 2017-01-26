@@ -78,8 +78,6 @@ class SuggestionListContainer extends React.Component {
 SuggestionListContainer.propTypes = {
   suggestions: PropTypes.array.isRequired,
   onSelect: PropTypes.func.isRequired,
-  renderSuggestion: PropTypes.func.isRequired,
-  renderNoSuggestion: PropTypes.func.isRequired,
   onClose: PropTypes.func,
   onBlur: PropTypes.func,
 };
