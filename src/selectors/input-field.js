@@ -50,17 +50,16 @@ class Input extends Component {
       onBlur,
       onReset
     } = this.props;
-
     return (
       <div
         className='nfe-account-selector'
         role='combobox'
         aria-expanded={ isSuggestionsShowing }
+        onFocus={ onFocus }
+        onBlur={ onBlur }
       >
         <input
-          onFocus={ onFocus }
-          onChange={ onChange }
-          onBlur={ onBlur }
+          onChange={ (e) => {onChange(e.target.value)}}
           className={ this.inputClassName() }
           onKeyDown={ this.onKeyDown }
           autoComplete='off'
@@ -110,7 +109,6 @@ Input.propTypes = {
 Input.defaultProps = {
   onBlur: () => {},
   onFocus: () => {},
-  value: '',
 };
 
 export default Input;
