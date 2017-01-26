@@ -4,7 +4,7 @@ import sinon from 'sinon';
 import React from 'react';
 import  SuggestionList from './suggestion-list';
 import  SuggestionListContainer from './suggestion-list-container';
-import keyCodes from '../util/keyCode';
+import { KeyCodes } from '../util/types';
 
 function suggestions() {
   return [
@@ -85,7 +85,7 @@ describe('<SuggestionListContainer />', () => {
   it('should increment highlightedIndex on keyboard.DOWN', () => {
     const wrapper = shallowSuggestionListContainer();
     const spyPreventDefault = sinon.spy();
-    wrapper.simulate('keydown', {which: keyCodes.DOWN, preventDefault: spyPreventDefault});
+    wrapper.simulate('keydown', {which: KeyCodes.DOWN, preventDefault: spyPreventDefault});
 
     assert.equal(wrapper.state('highlightedIndex'), 0);
     assert.isTrue(spyPreventDefault.calledOnce);
@@ -95,7 +95,7 @@ describe('<SuggestionListContainer />', () => {
     const wrapper = shallowSuggestionListContainer();
     wrapper.setState({highlightedIndex: 1});
     const spyPreventDefault = sinon.spy();
-    wrapper.simulate('keydown', {which: keyCodes.UP, preventDefault: spyPreventDefault});
+    wrapper.simulate('keydown', {which: KeyCodes.UP, preventDefault: spyPreventDefault});
 
     assert.equal(wrapper.state('highlightedIndex'), 0);
     assert.isTrue(spyPreventDefault.calledOnce);
@@ -104,14 +104,14 @@ describe('<SuggestionListContainer />', () => {
   it('should reset highlightedIndex on keyboard.HOME', () => {
     const wrapper = shallowSuggestionListContainer();
     wrapper.setState({highlightedIndex: 1});
-    wrapper.simulate('keydown', {which: keyCodes.HOME});
+    wrapper.simulate('keydown', {which: KeyCodes.HOME});
 
     assert.equal(wrapper.state('highlightedIndex'), 0);
   });
 
   it('should set highlightedIndex to suggestions end on keyboard.END', () => {
     const wrapper = shallowSuggestionListContainer();
-    wrapper.simulate('keydown', {which: keyCodes.END});
+    wrapper.simulate('keydown', {which: KeyCodes.END});
 
     assert.equal(wrapper.state('highlightedIndex'), 1);
   });
@@ -119,7 +119,7 @@ describe('<SuggestionListContainer />', () => {
   it('should call onClose prop on keyboard.ESC', () => {
     const spyOnClose = sinon.spy();
     const wrapper = shallowSuggestionListContainer({...propsSuggestionListContainer(), onClose: spyOnClose});
-    wrapper.simulate('keydown', {which: keyCodes.ESC});
+    wrapper.simulate('keydown', {which: KeyCodes.ESC});
 
     assert.isTrue(spyOnClose.calledOnce);
   });
@@ -128,7 +128,7 @@ describe('<SuggestionListContainer />', () => {
     const spyOnSelect = sinon.spy();
     const wrapper = shallowSuggestionListContainer({...propsSuggestionListContainer(), onSelect: spyOnSelect});
     wrapper.setState({highlightedIndex: 1});
-    wrapper.simulate('keydown', {which: keyCodes.ENTER});
+    wrapper.simulate('keydown', {which: KeyCodes.ENTER});
     const item = suggestions()[1];
 
     assert.isTrue(spyOnSelect.calledWith(item));
@@ -138,7 +138,7 @@ describe('<SuggestionListContainer />', () => {
     const spyOnBlur = sinon.spy();
     const wrapper = shallowSuggestionListContainer({...propsSuggestionListContainer(), onBlur: spyOnBlur});
     wrapper.setState({highlightedIndex: 1});
-    wrapper.simulate('keydown', {which: keyCodes.TAB});
+    wrapper.simulate('keydown', {which: KeyCodes.TAB});
     const item = suggestions()[1];
 
     assert.isTrue(spyOnBlur.calledWith(item));

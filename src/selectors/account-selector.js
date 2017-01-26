@@ -7,7 +7,7 @@ import AccountSuggestionItem from '../account/account-suggestion-item';
 import AccountSuggestionEmpty from '../account/account-suggestion-empty-item';
 import { accountFilter } from '../filter/filters';
 import { Locale } from '../util/types';
-import KeyCode from '../util/keyCode';
+import { KeyCodes } from '../util/types';
 
 
 class AccountSelector extends React.Component {
@@ -87,7 +87,7 @@ class AccountSelector extends React.Component {
   onInputKeyDown({which, altKey}) {
     const {showSuggestions} = this.state;
     switch (which) {
-      case KeyCode.DOWN :
+      case KeyCodes.DOWN :
         if (altKey && !showSuggestions) {
           this.showHideSuggestions(true)()
         }
@@ -95,12 +95,12 @@ class AccountSelector extends React.Component {
           this.suggestionList.setHiglightedIndex(0);
         }
         break;
-      case KeyCode.UP :
+      case KeyCodes.UP :
         if (altKey && showSuggestions) {
           this.showHideSuggestions(false)()
         }
         break;
-      case KeyCode.ESC:
+      case KeyCodes.ESC:
         this.onInputReset();
         break;
     }

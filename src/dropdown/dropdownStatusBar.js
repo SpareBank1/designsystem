@@ -1,10 +1,10 @@
 import React, { PropTypes } from 'react';
-import KeyCode from '../util/keyCode';
+import { KeyCodes } from '../util/types';
 
 const DropdownStatusBar = ({onDone, renderSelectionStatus, labelDoneButton}) => {
 
   const onKeyDown = (evt) => {
-    if (evt.which === KeyCode.TAB && !evt.shiftKey) {
+    if (evt.which === KeyCodes.TAB && !evt.shiftKey) {
       onDone();
     }
   };
