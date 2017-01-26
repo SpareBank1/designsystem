@@ -1,455 +1,172 @@
-import React, { PropTypes, Component } from 'react';
-import classNames from 'classnames';
-import isEqual from 'lodash.isequal';
-import ChevronIkon from 'ffe-icons-react/chevron-ikon';
-import i18n from '../i18n/i18n';
-import KryssIkon from 'ffe-icons-react/kryss-ikon';
+import React, { PropTypes } from 'react';
+import Input from './input-field';
+import SuggestionsList from '../suggestion/suggestion-list-container';
+import { Locale, KeyCodes } from '../util/types';
 
-import Dropdown from '../dropdown/dropdown';
-import { KeyCodes } from '../util/types';
-
-class BaseSelector extends Component {
+class BaseSelector extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = this.getDefaultState();
-    this.onKeyDown = this.onKeyDown.bind(this);
-    this.onInputTab = this.onInputTab.bind(this);
-    this.onItemSelect = this.onItemSelect.bind(this);
     this.onInputChange = this.onInputChange.bind(this);
-    this.onMultiSelectDone = this.onMultiSelectDone.bind(this);
-    this.placeholderText = this.placeholderText.bind(this);
-    this.globalClickHandler = this.globalClickHandler.bind(this);
     this.onBlur = this.onBlur.bind(this);
-    this.onInputFocus = this.onInputFocus.bind(this);
-  }
+    this.onFocus = this.onFocus.bind(this);
+    this.showHideSuggestions = this.showHideSuggestions.bind(this);
+    this.onSelect = this.onSelect.bind(this);
+    this.onInputReset = this.onInputReset.bind(this);
+    this.onInputKeyDown = this.onInputKeyDown.bind(this);
 
-  getDefaultState() {
-    const multiSelect = this.props.multiSelect;
-    const selectedItems = this.props.selectedItems || [];
-    const showItemSuggestions = false;
-    let inputValue = this.props.value || '';
-    if (!multiSelect && selectedItems.length > 0) {
-      inputValue = selectedItems[0].name;
-    }
-    const highlightedItem = -1;
-    const filteredItems = this.filterItems(this.props.items, inputValue);
-    return {
-      selectedItems,
-      multiSelect,
-      showItemSuggestions,
-      highlightedItem,
-      filteredItems,
-      inputValue
+    this.state = {
+      showSuggestions: false,
+      hasFocus: false,
+      onFocusJustCalled: false,
     };
   }
 
-  getBlankState() {
-    const {items, multiSelect} = this.props;
-    return {
-      showItemSuggestions: false,
-      selectedItems: multiSelect ? this.state.selectedItems : [],
-      highlightedItem: -1,
-      inputValue: '',
-      filteredItems: this.filterItems(items, ''),
-    };
-  }
-
-  componentWillReceiveProps(props) {
-    const {inputValue} = this.state;
-
-    const nextState = {
-      filteredItems: this.filterItems(props.items, inputValue),
-    };
-
-    if (!isEqual(props.selectedItems, this.props.selectedItems)) {
-      nextState.selectedItems = props.selectedItems;
-    }
-
-    this.setState(nextState);
-  }
-
-  onReset(evt) {
-    evt.preventDefault();
-    this._inputField.focus();
-    this.reset();
-  }
-
-  reset(setFocus = true) {
-    const {onChange, onItemSelected} = this.props;
-    const nextState = {
-      ...this.getBlankState(),
-      showItemSuggestions: true,
-    };
-
-    if (!setFocus) {
-      nextState.showItemSuggestions = false;
-    }
-
-    const hadSelectedItems = this.state.selectedItems.length > 0;
-    this.setState(nextState, () => {
-      onChange(this.state.inputValue);
-      if (hadSelectedItems) {
-        onItemSelected(null);
-      }
-    });
-  }
-
-  onItemSelectedFromDropdown(selectedItem) {
-    for (let i = 0; i < this.state.filteredItems.length; i++) {
-      if (this.state.filteredItems[i].id === selectedItem.id) {
-        this.onItemSelect(i);
-      }
-    }
-  }
-
-  addGlobalEventListeners() {
-    window.addEventListener('click', this.globalClickHandler);
-  }
-
-  removeGlobalEventListeners() {
-    window.removeEventListener('click', this.globalClickHandler);
-  }
-
-  globalClickHandler(evt) {
-    if (!this._root.contains(evt.target)) {
-      if (this.state.showItemSuggestions) {
-        this.selectHighlightedAccount(() => {
-          this.onBlur();
-        });
-      } else {
-        this.onBlur();
-      }
-    }
-  }
-
-  placeholderText() {
-    if (this.props.renderMultiselectStatus && this.state.selectedItems.length > 0) {
-      return this.props.renderMultiselectStatus(this.state.selectedItems);
-    }
-    return this.props.placeholder;
-  }
-
-  filterItems(items, query) {
-    return items.filter(this.props.filter(query));
-  }
-
-  closeDropdown() {
+  onInputChange(input) {
+    const {onChange} = this.props;
     this.setState({
-      showItemSuggestions: false
+      showSuggestions: true,
     });
+    onChange(input);
   }
 
-  openDropdown() {
-    this.setState({
-      showItemSuggestions: true
-    });
-  }
-
-  onKeyDown(evt, originateFromDropdown = false) {
-    const altKey = evt.altKey;
-    switch (evt.which) {
-      case KeyCodes.DOWN:
-        if (altKey) {
-          this.openDropdown();
-        } else {
-          this.highlightNextItem();
-        }
-        evt.preventDefault();
-        break;
-      case KeyCodes.UP:
-        if (altKey) {
-          this.closeDropdown();
-        } else {
-          this.highlightPrevItem();
-        }
-        evt.preventDefault();
-        break;
-      case KeyCodes.HOME:
-        this.highlightFirstItem();
-        break;
-      case KeyCodes.END:
-        this.highlightLastItem();
-        break;
-      case KeyCodes.ESC:
-        if (originateFromDropdown) {
-          this.onDropdownEscape();
-        } else {
-          this.reset();
-        }
-        break;
-      case KeyCodes.ENTER:
-        if (originateFromDropdown) {
-          evt.preventDefault();
-          this.onItemSelect(this.state.highlightedItem);
-        }
-        break;
-      case KeyCodes.TAB:
-        this.onInputTab(evt);
-        break;
-      default:
-        return;
-    }
-  }
-
-  onDropdownEscape() {
-    this._inputField.focus();
-    const inputValue = this.state.inputValue;
-    const selectedItems = [this.state.filteredItems[this.state.highlightedItem]];
-    this.reset();
-    this.setState({
-      inputValue,
-      selectedItems,
-      showItemSuggestions: false
-    }, () => {
-      if (!this.state.multiSelect) {
-        this.props.onItemSelected(selectedItems[0]);
-      }
-    });
-  }
-
-  highlightNextItem() {
-    const {filteredItems} = this.state;
-    let nextItemIndex = this.state.highlightedItem + 1;
-    if (nextItemIndex === filteredItems.length) {
-      nextItemIndex = 0;
-    }
-    this.highlightItem(nextItemIndex);
-  }
-
-  highlightPrevItem() {
-    const {filteredItems} = this.state;
-    let prevItemIndex = this.state.highlightedItem - 1;
-    if (prevItemIndex < 0) {
-      prevItemIndex = filteredItems.length - 1;
-    }
-    this.highlightItem(prevItemIndex);
-  }
-
-  highlightFirstItem() {
-    const {filteredItems} = this.state;
-    if (filteredItems.length > 0) {
-      this.highlightItem(0);
-    }
-  }
-
-  highlightLastItem() {
-    const {filteredItems} = this.state;
-    if (filteredItems.length > 0) {
-      this.highlightItem(filteredItems.length - 1);
-    }
-  }
-
-  highlightItem(itemIndex) {
-    const item = this.state.filteredItems[itemIndex];
-    if (item && this.state.showItemSuggestions) {
-      const nextState = {
-        highlightedItem: itemIndex
-      };
-      if (!this.state.multiSelect) {
-        nextState.inputValue = item.name;
-      }
-      this.setState(nextState, () => {
-        this.props.onChange(this.state.inputValue);
+  onFocus(event) {
+    event.stopPropagation();
+    if (!this.state.hasFocus) {
+      this.setState({hasFocus: true}, ()=> {
+        this.props.onFocus();
       });
     }
+    this.setState({
+      onFocusJustCalled: true,
+    });
   }
 
-  onInputFocus() {
-    const {onFocus} = this.props;
-    const {inputValue} = this.state;
-    const nextState = {
-      showItemSuggestions: true,
-      filteredItems: this.filterItems(this.props.items, inputValue)
-    };
-    this.setState(nextState, onFocus);
-    this.addGlobalEventListeners();
+  onBlur(event) {
+    event.stopPropagation();
+    //In the case where onFocus is called right before onBlur, the timeout callback is executed when the onFocus is fully resolved.
+    //This insures that onBlur is not called when focus is moved within this component
+    setTimeout(()=> {
+      if (!this.state.onFocusJustCalled) {
+        this.setState({hasFocus: false, showSuggestions: false}, this.props.onBlur);
+      }
+    });
+
+    this.setState({
+      onFocusJustCalled: false,
+    });
   }
 
-  onInputTab(evt) {
-    if (!this.state.multiSelect || evt.shiftKey) {
-      this.selectHighlightedAccount(this.onBlur);
+  showHideSuggestions(show, cb = ()=> {}) {
+    this.setState({showSuggestions: show}, cb);
+  }
+
+  onSelect(suggestion) {
+    const {onSelect, giveInputFocusOnSelect} = this.props;
+    this.showHideSuggestions(false, ()=> {
+      onSelect(suggestion);
+      if (giveInputFocusOnSelect) {
+        this.input.focus();
+      }
+    });
+  }
+
+  onInputReset() {
+    const {onChange, giveInputFocusOnReset} = this.props;
+    onChange('');
+    if (giveInputFocusOnReset) {
+      this.input.focus();
     }
   }
 
-  selectHighlightedAccount(blur) {
-    this.setState({
-      showItemSuggestions: false,
-      highlightedItem: -1,
-      selectedItems: this.state.highlightedItem > -1 ? [this.state.filteredItems[this.state.highlightedItem]] : this.state.selectedItems,
-    }, () => {
-      if (this.state.selectedItems.length > 0) {
-        this.props.onItemSelected(this.state.selectedItems[0]);
-      }
-      blur();
-    });
-  }
-
-  onBlur() {
-    this.removeGlobalEventListeners();
-    this.props.onBlur(this.state.selectedItems, this.state.inputValue);
-  }
-
-  handleItemSelectSingle(item) {
-    this._inputField.focus();
-    this.setState({
-      inputValue: item.name,
-      selectedItems: [item],
-      showItemSuggestions: false,
-      filteredItems: [item],
-      highlightedItem: -1
-    });
-    this.props.onItemSelected(item);
-  }
-
-  handleItemSelectMulti(item) {
-    const {selectedItems} = this.state;
-    let indexInSelectedItems = -1;
-    for (let i = 0; i < selectedItems.length; i++) {
-      if (selectedItems[i].id === item.id) {
-        indexInSelectedItems = i;
+  onInputKeyDown({which, altKey}) {
+    const {showSuggestions} = this.state;
+    switch (which) {
+      case KeyCodes.DOWN :
+        if (altKey && !showSuggestions) {
+          this.showHideSuggestions(true);
+        }
+        if (showSuggestions) {
+          this.suggestionList.setHiglightedIndex(0);
+        }
         break;
-      }
-    }
-    if (indexInSelectedItems === -1) {
-      selectedItems.push(item);
-    } else {
-      selectedItems.splice(indexInSelectedItems, 1);
-    }
-    this.setState({
-      selectedItems,
-      showItemSuggestions: true
-    });
-    this.props.onItemSelected(selectedItems);
-  }
-
-  onItemSelect(index) {
-    const item = this.state.filteredItems[index];
-    if (this.state.multiSelect) {
-      this.handleItemSelectMulti(item);
-    } else {
-      this.handleItemSelectSingle(item);
+      case KeyCodes.UP :
+        if (altKey && showSuggestions) {
+          this.showHideSuggestions(false);
+        }
+        break;
+      case KeyCodes.ESC:
+        this.onInputReset();
+        break;
     }
   }
 
-  onInputChange(evt) {
-    const searchQuery = evt.target.value;
-    const {items, onChange, multiSelect, onItemSelected} = this.props;
-    const filteredItems = this.filterItems(items, searchQuery);
-    const hasSelectedItems = this.state.selectedItems.length > 0;
-    const nextState = {
-      inputValue: searchQuery,
-      filteredItems,
-      showItemSuggestions: true
-    };
-    if (!multiSelect) {
-      nextState.selectedItems = [];
-    }
-    this.setState(nextState, () => {
-      onChange(searchQuery);
-      if (hasSelectedItems && !multiSelect) {
-        onItemSelected(null);
-      }
-    });
-  }
-
-  onMultiSelectDone() {
-    this._inputField.focus();
-    window.setTimeout(() => {
-      this.setState({
-        showItemSuggestions: false,
-        inputValue: '',
-        filteredItems: this.filterItems(this.props.items, ''),
-        highlightedItem: -1,
-      }, () => this.props.onMultiSelectDone(this.state.selectedItems));
-    }, 0);
-  }
 
   render() {
-    const assignTo = name => component => { this[name] = component; };
-
-    const inputClassName = () => {
-      return classNames('ffe-input-field nfe-account-selector__search',
-        {'nfe-account-selector__search--open': this.state.showItemSuggestions}
-      );
-    };
-
-    const dropdownIconClassName = () => {
-      return classNames('nfe-account-selector__dropdown-icon',
-        {'nfe-account-selector__dropdown-icon--reverse': this.state.showItemSuggestions}
-      );
-    };
-
+    const {
+      value,
+      placeholder,
+      suggestions,
+      renderSuggestion,
+      renderNoMatches
+    } = this.props;
+    const {showSuggestions} = this.state;
     return (
-      <div
-        className="nfe-account-selector"
-        role="combobox"
-        aria-expanded={ this.state.showItemSuggestions }
-        ref={assignTo('_root')}
-      >
-        <input
-          onFocus={ this.onInputFocus }
-          className={ inputClassName() }
-          onKeyDown={ (evt) => {this.onKeyDown(evt);} }
-          ref={ assignTo('_inputField') }
-          autoComplete="off"
-          onChange={ this.onInputChange }
-          value={ this.state.inputValue }
-          id={ this.props.inputId }
-          placeholder={ this.placeholderText() }
-          aria-invalid={ this.props.ariaInvalid }
-          aria-autocomplete="list"
+      <div>
+        <Input
+          inputFieldRef={(input)=> {this.input = input}}
+          value={value}
+          onChange={this.onInputChange}
+          onReset={this.onInputReset}
+          resetLabel={''}
+          onKeyDown={this.onInputKeyDown}
+          isSuggestionsShowing={showSuggestions}
+          id='id'
+          placeholder={placeholder}
+          onBlur={this.onBlur}
+          onFocus={this.onFocus}
         />
-        { this.state.inputValue && this.state.inputValue.length > 0 &&
-        <button
-          aria-label={ i18n[this.props.locale].RESET_SEARCH }
-          className="nfe-account-selector__reset-button"
-          onMouseDown={ (evt) => this.onReset(evt) }
-          tabIndex="-1"
-        >
-          <KryssIkon className="nfe-account-selector__reset-icon"/>
-        </button>
-        }
-        <div onClick={() => this._inputField.focus()} className={dropdownIconClassName()}>
-          <ChevronIkon focusable={ false }/>
-        </div>
-        {this.props.renderDetails(this.state.selectedItems)}
-        {this.state.showItemSuggestions && (this.state.filteredItems.length || this.props.noMatches) ?
-          <Dropdown
-            items={this.state.filteredItems}
-            selectedItems={this.state.selectedItems}
-            highlightedItem={this.state.highlightedItem}
-            locale={this.props.locale}
-            noMatches={this.props.noMatches}
-            onSelect={ (item, event) => {
-              event.preventDefault();
-              this.onItemSelectedFromDropdown(item);
-            } }
-            onKeyDown={(evt) => this.onKeyDown(evt, true)}
-            renderItemRow={this.props.renderItemRow}
-            multiSelect={this.state.multiSelect}
-            onMultiSelectDone={this.onMultiSelectDone}
-            renderSelectionStatus={() => this.props.renderMultiselectStatus(this.state.selectedItems)}
-          /> : null
-        }
+        {showSuggestions &&
+        <SuggestionsList
+          ref={(suggestionList)=> {this.suggestionList = suggestionList}}
+          suggestions={suggestions}
+          renderSuggestion={renderSuggestion}
+          renderNoMatches={renderNoMatches}
+          onSelect={this.onSelect}
+          onClose={()=> this.showHideSuggestions(false)}
+          onBlur={this.onBlur}
+          onFocus={this.onFocus}
+        />}
       </div>
     );
   }
 }
 
 BaseSelector.propTypes = {
-  onChange: PropTypes.func.isRequired,
-  onBlur: PropTypes.func,
+  suggestions: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired,
+  onSelect: PropTypes.func.isRequired,
   value: PropTypes.string.isRequired,
+  renderSuggestion: PropTypes.func.isRequired,
+  renderNoMatches: PropTypes.func,
+  onChange: PropTypes.func,
+  locale: Locale.isRequired,
   id: PropTypes.string,
   placeholder: PropTypes.string,
+  onBlur: PropTypes.func,
   onFocus: PropTypes.func,
-  ariaInvalid: PropTypes.bool
+  ariaInvalid: PropTypes.bool,
+  selectedAccount: PropTypes.object,
+  giveInputFocusOnSelect: PropTypes.bool.isRequired,
+  giveInputFocusOnReset: PropTypes.bool.isRequired,
 };
 
 BaseSelector.defaultProps = {
+  onChange: () => {},
+  locale: 'nb',
   onBlur: () => {},
-  onFocus: () => {}
+  ariaInvalid: false,
+  value: '',
+  onFocus: () => {},
 };
 
 export default BaseSelector;
