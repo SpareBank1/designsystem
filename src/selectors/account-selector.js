@@ -7,6 +7,7 @@ import AccountSuggestionItem from '../account/account-suggestion-item';
 import AccountSuggestionEmpty from '../account/account-suggestion-empty-item';
 import { accountFilter } from '../filter/filters';
 import { Locale } from '../util/types';
+import KeyCode from '../util/keyCode';
 
 
 class AccountSelector extends React.Component {
@@ -19,22 +20,14 @@ class AccountSelector extends React.Component {
     this.showHideSuggestions = this.showHideSuggestions.bind(this);
     this.onAccountSelect = this.onAccountSelect.bind(this);
     this.onInputReset = this.onInputReset.bind(this);
+    this.onInputKeyDown = this.onInputKeyDown.bind(this);
 
     this.state = {
       showSuggestions: false,
       hasFocus: false,
-      onFocusJustCalled: false
+      onFocusJustCalled: false,
     };
   }
-
-
-  // onBlur(selectedAccounts, inputValue) {
-  //   this.props.onBlur(selectedAccounts[0], inputValue);
-  // }
-
-  // reset(inputFocus) {
-  //   this.baseSelector.reset(inputFocus);
-  // }
 
   onInputChange(input) {
     const {onChange} = this.props;
@@ -85,23 +78,37 @@ class AccountSelector extends React.Component {
     })();
   }
 
-  onInputReset(){
+  onInputReset() {
     const {onChange} = this.props;
     onChange('');
     this.input.focus();
   }
 
+  onInputKeyDown({which, altKey}) {
+    const {showSuggestions} = this.state;
+    switch (which) {
+      case KeyCode.DOWN :
+        if (altKey && !showSuggestions) {
+          this.showHideSuggestions(true)()
+        }
+        if (showSuggestions) {
+          this.suggestionList.setHiglightedIndex(0);
+        }
+        break;
+      case KeyCode.UP :
+        if (altKey && showSuggestions) {
+          this.showHideSuggestions(false)()
+        }
+        break;
+      case KeyCode.ESC:
+        this.onInputReset();
+        break;
+    }
+  }
+
+
   render() {
-    // const selectedItems = this.props.selectedAccount ? [this.props.selectedAccount] : [];
-
-
-    // To provide backwards compatibility
-    // const accounts = this.props.accounts.map(account => ({
-    //     ...account,
-    //     id: account.id || parseInt(account.accountNumber, 10)
-    //   })
-    // );
-    const {value, placeholder, accounts, locale, noMatches, onAccountSelected, selectedAccount, onChange} = this.props;
+    const {value, placeholder, accounts, locale, noMatches, selectedAccount} = this.props;
     const {showSuggestions} = this.state;
     return (
       <div>
@@ -111,8 +118,7 @@ class AccountSelector extends React.Component {
           onChange={this.onInputChange}
           onReset={this.onInputReset}
           resetLabel={''}
-          onShowSuggestions={this.showHideSuggestions(true)}
-          onHideSuggestions={this.showHideSuggestions(false)}
+          onKeyDown={this.onInputKeyDown}
           isSuggestionsShowing={showSuggestions}
           id='id'
           placeholder={placeholder}
@@ -123,6 +129,7 @@ class AccountSelector extends React.Component {
         <AccountDetails account={selectedAccount} locale={locale}/> }
         {showSuggestions &&
         <SuggestionsList
+          ref={(suggestionList)=> {this.suggestionList = suggestionList}}
           suggestions={accounts.filter(accountFilter(value))}
           renderSuggestion={(account)=> <AccountSuggestionItem account={account} locale={locale}/>}
           renderNoSuggestion={()=> <AccountSuggestionEmpty value={noMatches}/>}
