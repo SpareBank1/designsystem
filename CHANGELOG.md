@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.2.7
+Fixed bug in aria label id
+
 ## v1.2.6
 Update ffe-expandable-react to 1.0.5 or above
 
