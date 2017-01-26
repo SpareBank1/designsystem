@@ -1,6 +1,6 @@
 import React from 'react';
 import { people } from './example-data';
-import BaseSelector from '../src/selectors/base-selector';
+// import BaseSelector from '../src/selectors/base-selector';
 
 const PersonSelectorExample = () => {
 

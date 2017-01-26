@@ -69,6 +69,7 @@ class AccountSelectorExample extends Component {
           onFocus={this.onFocus}
           selectedAccount={this.state.selectedAccount}
           noMatches='Ingen'
+          locale='nb'
         />
       </div>
     );
