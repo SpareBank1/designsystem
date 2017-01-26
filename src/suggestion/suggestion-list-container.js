@@ -5,81 +5,12 @@ import KeyCode from '../util/keyCode';
 
 class SuggestionListContainer extends React.Component {
 
-
-
-  /*
-   componentDidUpdate() {
-   if (this._suggestionList !== null && this.props.highlightedItem > -1) {
-   this.resetNativeScrollPosition();
-   this.scrollHighlightedItemIntoView();
-   }
-   }
-   */
-
-  /*
-   verticalScrollBarStyle() {
-   return {
-   background: '#676767',
-   borderRadius: '4px',
-   width: '5px'
-   };
-   }
-
-   verticalContainerStyle() {
-   return {
-   width: '6px',
-   background: 'transparent',
-   opacity: '1'
-   };
-   }
-
-   scrollAreaStyle() {
-   return {maxHeight: '240px'};
-   }
-
-
-   resetNativeScrollPosition() {
-   if (this.state.nativeScrollContainer) {
-   const nativeScrollContainer = this.state.nativeScrollContainer;
-   nativeScrollContainer.scrollTop = 0;
-   this.ignoreScrollEvents = true;
-   }
-   }
-
-   scrollHighlightedItemIntoView() {
-   const selectedItem = this._suggestionList.getSelectedDOM();
-   const itemRect = selectedItem.getBoundingClientRect();
-
-   const scrollContainer = ReactDOM.findDOMNode(this._scrollarea);
-   const scrollContainerRect = scrollContainer.getBoundingClientRect();
-
-   if (itemRect.bottom > scrollContainerRect.bottom) {
-   this.scrollTo(selectedItem.offsetTop + selectedItem.offsetHeight - scrollContainer.offsetHeight);
-   } else if (itemRect.top < scrollContainerRect.top) {
-   this.scrollTo(selectedItem.offsetTop);
-   }
-   }
-
-   scrollTo(offsetYAxis) {
-   this._scrollarea.scrollArea.scrollYTo(offsetYAxis);
-   }
-
-   onScroll(evt) {
-   if (!this.ignoreScrollEvents) {
-   // Need reference to the native scroll container (div) to reset the native scroll position
-   this.setState({
-   nativeScrollContainer: evt.target
-   });
-   }
-   this.ignoreScrollEvents = false;
-   }
-   */
-
   constructor(props) {
     super(props);
     this.onKeyDown = this.onKeyDown.bind(this);
+    this.setHiglightedIndex = this.setHiglightedIndex.bind(this);
     this.state = {
-      highlightedIndex: -1
+      highlightedIndex: -1,
     };
   }
 
@@ -93,6 +24,9 @@ class SuggestionListContainer extends React.Component {
     this.props.suggestions.length - 1 : this.state.highlightedIndex - 1;
   }
 
+  setHiglightedIndex(highlightedIndex) {
+    this.setState({highlightedIndex})
+  }
 
   onKeyDown(evt) {
     const {suggestions, onClose, onBlur, onSelect} = this.props;
@@ -100,25 +34,17 @@ class SuggestionListContainer extends React.Component {
     switch (evt.which) {
       case KeyCode.DOWN:
         evt.preventDefault();
-        this.setState({
-          highlightedIndex: this.nextHighlightedIndex()
-        });
+        this.setHiglightedIndex(this.nextHighlightedIndex());
         break;
       case KeyCode.UP:
         evt.preventDefault();
-        this.setState({
-          highlightedIndex: this.previousHighlightedIndex()
-        });
+        this.setHiglightedIndex(this.previousHighlightedIndex());
         break;
       case KeyCode.HOME:
-        this.setState({
-          highlightedIndex: 0
-        });
+        this.setHiglightedIndex(0);
         break;
       case KeyCode.END:
-        this.setState({
-          highlightedIndex: suggestions.length - 1
-        });
+        this.setHiglightedIndex(suggestions.length - 1);
         break;
       case KeyCode.ESC:
         onClose();

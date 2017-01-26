@@ -82,11 +82,6 @@ describe('<SuggestionListContainer />', () => {
     assert.equal(wrapper.find('SuggestionList').length, 1);
   });
 
-  it('should not render <SuggestionsList> if no suggestions', () => {
-    const wrapper = shallowSuggestionListContainer({...propsSuggestionListContainer(), suggestions: []});
-    assert.equal(wrapper.find('SuggestionList').length, 0);
-  });
-
   it('should increment highlightedIndex on keyboard.DOWN', () => {
     const wrapper = shallowSuggestionListContainer();
     const spyPreventDefault = sinon.spy();
