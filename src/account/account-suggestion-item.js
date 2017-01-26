@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import accountFormatter from '../util/account-formatter';
+import { accountFormatter } from '../util/format';
 import { Account, Locale } from '../util/types';
 import { balanceWithCurrency } from '../util/format';
 

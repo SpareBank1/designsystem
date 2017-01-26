@@ -11,7 +11,7 @@ global.window = doc.defaultView;
 global.navigator = global.window.navigator;
 
 const AccountSelector = require('./account-selector').default;
-const accountFormatter = require('./util/account-formatter').default;
+const {accountFormatter} = require('./util/format');
 const amountFormatter = require('nfe-amount-formatter').default;
 
 const React = require('react');
@@ -19,8 +19,8 @@ const assert = require('chai').assert;
 const mount = require('enzyme').mount;
 
 const accounts = [
-  { id: 1, name: 'Matvarerkonto', accountNumber: '42011841044', balance: 24566546.21 },
-  { id: 2, name: 'Sparekonto', accountNumber: '42011841045', balance: 124566546.21 }
+  {id: 1, name: 'Matvarerkonto', accountNumber: '42011841044', balance: 24566546.21},
+  {id: 2, name: 'Sparekonto', accountNumber: '42011841045', balance: 124566546.21}
 ];
 const noMatches = 'Ingen treff';
 
