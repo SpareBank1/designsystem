@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import { If } from 'nfe-if';
 import amountFormatter from 'nfe-amount-formatter';
 import Checkbox from 'ffe-checkbox-react';
-import accountFormatter from '../util/account-formatter';
+import {accountFormatter} from '../util/format';
 
 const AccountRowMulti = ({account, locale, selected}) => {
   const currencyCode = () => (account.currencyCode ? account.currencyCode : 'NOK');

@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import accountFormatter, { isValidNorwegianAccountNumber } from './account-formatter';
+import { isValidNorwegianAccountNumber, accountFormatter } from './format';
 
 const validNorwegianAccountNumber = '42000231376';
 const inValidNorwegianAccountNumber = '42000231377';

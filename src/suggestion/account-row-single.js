@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import { If } from 'nfe-if';
 import amountFormatter from 'nfe-amount-formatter';
-import accountFormatter from '../util/account-formatter';
+import { accountFormatter } from '../util/format';
 
 const AccountRowSingle = ({account, locale}) => {
   const currencyCode = () => (account.currencyCode ? account.currencyCode : 'NOK');
@@ -24,10 +24,10 @@ const AccountRowSingle = ({account, locale}) => {
 };
 
 const AccountType = PropTypes.shape({
-  accountNumber : PropTypes.string.isRequired,
-  name : PropTypes.string.isRequired,
-  currencyCode : PropTypes.string,
-  balance : PropTypes.string,
+  accountNumber: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  currencyCode: PropTypes.string,
+  balance: PropTypes.string,
 });
 
 AccountRowSingle.propTypes = {
