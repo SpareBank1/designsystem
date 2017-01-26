@@ -77,6 +77,7 @@ class SuggestionListContainer extends React.Component {
 
   constructor(props) {
     super(props);
+    this.onKeyDown = this.onKeyDown.bind(this);
     this.state = {
       highlightedIndex: -1
     };
@@ -96,7 +97,6 @@ class SuggestionListContainer extends React.Component {
   onKeyDown(evt) {
     const {suggestions, onClose, onBlur, onSelect} = this.props;
     const {highlightedIndex} = this.state;
-
     switch (evt.which) {
       case KeyCode.DOWN:
         evt.preventDefault();
@@ -136,7 +136,11 @@ class SuggestionListContainer extends React.Component {
 
   render() {
     return (
-      <div className='nfe-account-selector__dropdown' onKeyDown={(evt) => this.onKeyDown(evt)}>
+      <div className='nfe-account-selector__dropdown'
+           onKeyDown={this.onKeyDown}
+           onFocus={ this.props.onFocus }
+           onBlur={ this.props.onBlur }
+      >
         <Scrollbars style={{width: '100%', height: 300}}>
           <SuggestionList highlightedIndex={this.state.highlightedIndex} {...this.props}/>
         </Scrollbars>

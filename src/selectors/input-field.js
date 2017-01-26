@@ -48,7 +48,8 @@ class Input extends Component {
       ariaInvalid,
       resetLabel,
       onBlur,
-      onReset
+      onReset,
+      inputFieldRef
     } = this.props;
     return (
       <div
@@ -66,9 +67,7 @@ class Input extends Component {
           value={ value }
           id={ id }
           placeholder={ placeholder }
-          ref={(el) => {
-            this.inputField = el;
-          }}
+          ref={inputFieldRef}
           aria-invalid={ ariaInvalid } // add aria with hoc?
           aria-autocomplete='list'
         />
@@ -83,7 +82,7 @@ class Input extends Component {
           <KryssIkon className='nfe-account-selector__reset-icon'/>
         </button>
         }
-        <div onClick={() => this.inputField.focus()} className={this.dropdownIconClassName()}>
+        <div className={this.dropdownIconClassName()}>
           <ChevronIkon focusable={ false }/>
         </div>
       </div>
@@ -103,12 +102,14 @@ Input.propTypes = {
   onFocus: PropTypes.func,
   ariaInvalid: PropTypes.bool,
   resetLabel: PropTypes.string.isRequired,
-  onReset: PropTypes.func.isRequired
+  onReset: PropTypes.func.isRequired,
+  inputFieldRef : PropTypes.func,
 };
 
 Input.defaultProps = {
   onBlur: () => {},
   onFocus: () => {},
+  inputFieldRef : ()=>{},
 };
 
 export default Input;
