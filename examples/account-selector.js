@@ -24,6 +24,7 @@ class AccountSelectorExample extends Component {
   constructor(props) {
     super(props);
     this.onChange = this.onChange.bind(this);
+    this.onAccountSelected = this.onAccountSelected.bind(this);
     this.state = {value: ''};
   }
 
@@ -40,8 +41,12 @@ class AccountSelectorExample extends Component {
     console.log('account selector gained focus');
   }
 
-  onAccountSelected(value) {
-    console.log('account selected', value.target.value);
+  onAccountSelected(account) {
+    console.log('account selected', account);
+    this.setState({
+      selectedAccount : account,
+      value : account.name,
+    });
   }
 
   renderAccount(account) {
@@ -51,16 +56,19 @@ class AccountSelectorExample extends Component {
   }
 
   render() {
+    const {selectedAccount, value} = this.state;
     return (
       <div className="selector">
         <label htmlFor="custom-id" className="ffe-form-label ffe-form-label--block selector-label">Velg konto</label>
         <AccountSelector
-          value={this.state.value}
+          value={value}
           accounts={accountArray}
           onAccountSelected={this.onAccountSelected}
           onChange={this.onChange}
           onBlur={this.onBlur}
           onFocus={this.onFocus}
+          selectedAccount={this.state.selectedAccount}
+          noMatches='Ingen'
         />
       </div>
     );
