@@ -108,7 +108,8 @@ class BaseSelector extends React.Component {
       placeholder,
       suggestions,
       renderSuggestion,
-      renderNoMatches
+      renderNoMatches,
+      id,
     } = this.props;
     const {showSuggestions} = this.state;
     return (
@@ -121,7 +122,7 @@ class BaseSelector extends React.Component {
           resetLabel={''}
           onKeyDown={this.onInputKeyDown}
           isSuggestionsShowing={showSuggestions}
-          id='id'
+          id={id}
           placeholder={placeholder}
           onBlur={this.onBlur}
           onFocus={this.onFocus}
@@ -143,29 +144,19 @@ class BaseSelector extends React.Component {
 }
 
 BaseSelector.propTypes = {
-  suggestions: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired,
   onSelect: PropTypes.func.isRequired,
-  value: PropTypes.string.isRequired,
-  renderSuggestion: PropTypes.func.isRequired,
-  renderNoMatches: PropTypes.func,
-  onChange: PropTypes.func,
-  locale: Locale.isRequired,
-  id: PropTypes.string,
-  placeholder: PropTypes.string,
-  onBlur: PropTypes.func,
-  onFocus: PropTypes.func,
-  ariaInvalid: PropTypes.bool,
-  selectedAccount: PropTypes.object,
   giveInputFocusOnSelect: PropTypes.bool.isRequired,
   giveInputFocusOnReset: PropTypes.bool.isRequired,
+  onChange: PropTypes.func,
+  id: PropTypes.string,
+  onBlur: PropTypes.func,
+  onFocus: PropTypes.func,
 };
 
 BaseSelector.defaultProps = {
   onChange: () => {},
-  locale: 'nb',
   onBlur: () => {},
   ariaInvalid: false,
-  value: '',
   onFocus: () => {},
 };
 

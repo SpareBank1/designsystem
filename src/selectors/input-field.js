@@ -4,13 +4,11 @@ import ChevronIkon from 'ffe-icons-react/chevron-ikon';
 import KryssIkon from 'ffe-icons-react/kryss-ikon';
 
 class Input extends Component {
-
   constructor(props) {
     super(props);
     this.inputClassName = this.inputClassName.bind(this);
     this.dropdownIconClassName = this.dropdownIconClassName.bind(this);
   }
-
 
   inputClassName() {
     return classNames('ffe-input-field nfe-account-selector__search',
@@ -82,14 +80,14 @@ Input.propTypes = {
   onChange: PropTypes.func.isRequired,
   onKeyDown: PropTypes.func.isRequired,
   value: PropTypes.string.isRequired,
+  resetLabel: PropTypes.string.isRequired,
+  onReset: PropTypes.func.isRequired,
   isSuggestionsShowing: PropTypes.bool.isRequired,
   id: PropTypes.string,
   placeholder: PropTypes.string,
   onBlur: PropTypes.func,
   onFocus: PropTypes.func,
   ariaInvalid: PropTypes.bool,
-  resetLabel: PropTypes.string.isRequired,
-  onReset: PropTypes.func.isRequired,
   inputFieldRef: PropTypes.func,
 };
 

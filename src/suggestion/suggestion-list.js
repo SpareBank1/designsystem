@@ -34,8 +34,10 @@ export default class SuggestionList extends Component {
 
 SuggestionList.propTypes = {
   suggestions: PropTypes.arrayOf(React.PropTypes.object).isRequired,
-  renderSuggestion: PropTypes.func.isRequired,
-  renderNoMatches: PropTypes.func.isRequired,
-  onSelect: PropTypes.func.isRequired,
+  renderNoMatches: PropTypes.func,
   highlightedIndex: PropTypes.number,
+};
+
+SuggestionList.defaultProps = {
+  renderNoSuggestion: ()=> {}
 };
