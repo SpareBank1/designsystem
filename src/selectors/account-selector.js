@@ -14,7 +14,9 @@ class AccountSelector extends React.Component {
   constructor(props) {
     super(props);
     this.onInputChange = this.onInputChange.bind(this);
-    this.state = {showSuggestions: false};
+    this.onBlur = this.onBlur.bind(this);
+    this.onFocus = this.onFocus.bind(this);
+    this.state = {showSuggestions: false, hasFocus: false, onFocusJustCalled: false};
   }
 
 
@@ -34,6 +36,33 @@ class AccountSelector extends React.Component {
     onChange(input);
   }
 
+  onFocus(event) {
+    event.stopPropagation();
+    if (!this.state.hasFocus) {
+      this.setState({hasFocus: true}, ()=> {
+        this.props.onFocus();
+      });
+    }
+    this.setState({
+      onFocusJustCalled: true,
+    });
+  }
+
+  onBlur(event) {
+    event.stopPropagation();
+    //In the case where onFocus is called right before onBlur, the timeout callback is executed when the onFocus is fully resolved.
+    // This insures that onBlur is not called when focus is moved within this component
+    setTimeout(()=> {
+      if (!this.state.onFocusJustCalled) {
+        this.setState({hasFocus: false}, this.props.onBlur);
+      }
+    });
+
+    this.setState({
+      onFocusJustCalled: false,
+    });
+  }
+
 
   render() {
     // const selectedItems = this.props.selectedAccount ? [this.props.selectedAccount] : [];
@@ -45,12 +74,10 @@ class AccountSelector extends React.Component {
     //     id: account.id || parseInt(account.accountNumber, 10)
     //   })
     // );
-    const {onBlur, value, placeholder, accounts, locale, noMatches, onAccountSelected, selectedAccount} = this.props;
+    const {value, placeholder, accounts, locale, noMatches, onAccountSelected, selectedAccount} = this.props;
     const {showSuggestions} = this.state;
     return (
-      <div
-        ref={(element)=> { this.self = element}}
-      >
+      <div>
         <Input
           value={value}
           onChange={this.onInputChange}
@@ -61,7 +88,8 @@ class AccountSelector extends React.Component {
           isSuggestionsShowing={showSuggestions}
           id='id'
           placeholder={placeholder}
-          onBlur={(event)=> {console.log("containers target",this.self.contains(event.target))}}
+          onBlur={this.onBlur}
+          onFocus={this.onFocus}
         />
         {selectedAccount &&
         <AccountDetails account={selectedAccount} locale={locale}/> }
@@ -72,12 +100,10 @@ class AccountSelector extends React.Component {
           renderNoSuggestion={()=> <AccountSuggestionEmpty value={noMatches}/>}
           onSelect={onAccountSelected}
           onClose={()=> this.setState({showSuggestions: false})}
-          onBlur={onBlur}
+          onBlur={this.onBlur}
+          onFocus={this.onFocus}
         />}
       </div>
-
-
-
     );
   }
 }
@@ -91,7 +117,7 @@ AccountSelector.propTypes = {
   placeholder: PropTypes.string,
   onBlur: PropTypes.func,
   onFocus: PropTypes.func,
-  value: PropTypes.string,
+  value: PropTypes.string.isRequired,
   ariaInvalid: PropTypes.bool,
   noMatches: PropTypes.string,
   selectedAccount: PropTypes.object,
