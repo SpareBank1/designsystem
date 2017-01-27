@@ -4,6 +4,7 @@ import AccountSuggestionItem from '../account/account-suggestion';
 import AccountNoMatch from '../account/account-nomatch';
 import AccountDetails from '../account/account-details';
 import {Account, Locale} from '../util/types';
+import {accountFilter} from '../filter/filters';
 
 
 class AccountSelector extends React.Component {
@@ -16,7 +17,9 @@ class AccountSelector extends React.Component {
           renderNoMatches={()=> <AccountNoMatch value={noMatches}/>}
           giveInputFocusOnSelect={true}
           giveInputFocusOnReset={true}
+          hideSuggestionsOnSelect={true}
           suggestions={accounts}
+          suggestionFilter={accountFilter}
           onSelect={onAccountSelected}
           {...this.props}
         />

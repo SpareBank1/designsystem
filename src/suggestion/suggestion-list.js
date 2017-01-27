@@ -10,22 +10,22 @@ export default class SuggestionList extends Component {
       onSelect,
       highlightedIndex,
       renderSuggestion,
-      renderNoSuggestion,
+      renderNoMatches,
       onKeyDown
     } = this.props;
     return (
       <ul className='nfe-account-suggestions' role='listbox' onKeyPress={onKeyDown} tabIndex={0}>
         { suggestions.length > 0 ?
-          suggestions.map((item, index) => {
-            return <Suggestion
+          suggestions.map((item, index) => (
+            <Suggestion
               key={index}
               item={item}
               isHighlighted={index === highlightedIndex}
               render={renderSuggestion}
               onSelect={onSelect}
             />
-          }) :
-          <li>{renderNoSuggestion()}</li>
+          )) :
+          <li>{renderNoMatches()}</li>
         }
       </ul>
     );
@@ -39,5 +39,5 @@ SuggestionList.propTypes = {
 };
 
 SuggestionList.defaultProps = {
-  renderNoSuggestion: ()=> {}
+  renderNoMatches: ()=> {}
 };

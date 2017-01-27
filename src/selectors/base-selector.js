@@ -62,13 +62,21 @@ class BaseSelector extends React.Component {
   }
 
   onSelect(suggestion) {
-    const {onSelect, giveInputFocusOnSelect} = this.props;
-    this.showHideSuggestions(false, ()=> {
+    const {onSelect, giveInputFocusOnSelect, hideSuggestionsOnSelect} = this.props;
+
+    const _onSelect = ()=> {
       onSelect(suggestion);
       if (giveInputFocusOnSelect) {
         this.input.focus();
       }
-    });
+    };
+
+    if (hideSuggestionsOnSelect) {
+      this.showHideSuggestions(false, _onSelect);
+      return;
+    }
+
+    _onSelect();
   }
 
   onInputReset() {
@@ -109,6 +117,7 @@ class BaseSelector extends React.Component {
       suggestions,
       renderSuggestion,
       renderNoMatches,
+      suggestionFilter,
       id,
     } = this.props;
     const {showSuggestions} = this.state;
@@ -130,7 +139,7 @@ class BaseSelector extends React.Component {
         {showSuggestions &&
         <SuggestionsList
           ref={(suggestionList)=> {this.suggestionList = suggestionList}}
-          suggestions={suggestions}
+          suggestions={suggestions.filter(suggestionFilter(value))}
           renderSuggestion={renderSuggestion}
           renderNoMatches={renderNoMatches}
           onSelect={this.onSelect}
@@ -144,9 +153,13 @@ class BaseSelector extends React.Component {
 }
 
 BaseSelector.propTypes = {
+  suggestions: PropTypes.arrayOf(PropTypes.object).isRequired,
+  suggestionFilter: PropTypes.func.isRequired,
   onSelect: PropTypes.func.isRequired,
+  value: PropTypes.string.isRequired,
   giveInputFocusOnSelect: PropTypes.bool.isRequired,
   giveInputFocusOnReset: PropTypes.bool.isRequired,
+  hideSuggestionsOnSelect: PropTypes.bool.isRequired,
   onChange: PropTypes.func,
   id: PropTypes.string,
   onBlur: PropTypes.func,
