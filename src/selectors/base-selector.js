@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import Input from './input-field';
 import SuggestionsList from '../suggestion/suggestion-list-container';
-import { Locale, KeyCodes } from '../util/types';
+import { KeyCodes } from '../util/types';
 
 class BaseSelector extends React.Component {
 
@@ -83,8 +83,8 @@ class BaseSelector extends React.Component {
   }
 
   onInputReset() {
-    const {onChange} = this.props;
-    onChange('');
+    const {onReset} = this.props;
+    onReset();
     this.input.focus();
   }
 
@@ -161,6 +161,7 @@ BaseSelector.propTypes = {
   onSelect: PropTypes.func.isRequired,
   onChange: PropTypes.func,
   onBlur: PropTypes.func,
+  onReset: PropTypes.func,
   value: PropTypes.string.isRequired,
   onFocus: PropTypes.func,
   shouldSetFocusToInputOnSelect: PropTypes.bool.isRequired,
@@ -171,8 +172,9 @@ BaseSelector.propTypes = {
 BaseSelector.defaultProps = {
   onChange: () => {},
   onBlur: () => {},
-  ariaInvalid: false,
   onFocus: () => {},
+  onReset : ()=> {},
+  ariaInvalid: false,
 };
 
 export default BaseSelector;

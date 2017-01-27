@@ -6,7 +6,6 @@ import AccountDetails from '../account/account-details';
 import {Account, Locale} from '../util/types';
 import {accountFilter} from '../filter/filters';
 
-
 class AccountSelector extends React.Component {
   render() {
     const {selectedAccount, locale, noMatches, accounts, onAccountSelected} = this.props;
