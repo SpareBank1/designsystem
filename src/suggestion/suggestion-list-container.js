@@ -62,19 +62,21 @@ class SuggestionListContainer extends React.Component {
           onSelect(suggestions[highlightedIndex]);
         }
         break;
-      default:
-        return;
     }
   }
 
   render() {
+    const {heightMax} = this.props;
     return (
       <div className='nfe-account-selector__dropdown'
            onKeyDown={this.onKeyDown}
            onFocus={ this.props.onFocus }
            onBlur={ this.props.onBlur }
       >
-        <Scrollbars style={{width: '100%', height: 300}}>
+        <Scrollbars
+          autoHeight={true}
+          autoHeightMax={heightMax}
+        >
           <SuggestionList highlightedIndex={this.state.highlightedIndex} {...this.props}/>
         </Scrollbars>
       </div>
@@ -87,11 +89,13 @@ SuggestionListContainer.propTypes = {
   onSelect: PropTypes.func.isRequired,
   onShiftTab: PropTypes.func.isRequired,
   onClose: PropTypes.func,
-  shouldSelectHighlightedSuggestionOnTab : PropTypes.bool
+  shouldSelectHighlightedSuggestionOnTab : PropTypes.bool,
+  heightMax : PropTypes.number
 };
 
 SuggestionListContainer.defaultProps = {
-  onClose: () => {}
+  onClose: () => {},
+  heightMax : 300
 };
 
 export default SuggestionListContainer;
