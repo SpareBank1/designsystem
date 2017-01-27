@@ -10,7 +10,7 @@ class AccountSelector extends React.Component {
   render() {
     const {selectedAccount, locale, noMatches, accounts, onAccountSelected} = this.props;
     return (
-      <div>
+      <div className='account-selector'>
         <BaseSelector
           renderSuggestion={(account)=> <AccountSuggestionItem account={account} locale={locale}/>}
           renderNoMatches={()=> <AccountNoMatch value={noMatches}/>}

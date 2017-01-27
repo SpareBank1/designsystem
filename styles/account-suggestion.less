@@ -1,29 +1,17 @@
-.nfe-account-suggestions {
-  margin: 0;
+.account-suggestion {
   padding: 0;
-  list-style: none;
+  margin: 0;
+  border-top: 1px solid @ffe-grey-light;
+  background: @ffe-white;
 
-  &__item {
-    padding: 0;
-    margin: 0;
-    border-top: 1px solid @ffe-grey-light;
-    background: @ffe-white;
-
-    &:first-child {
-      border-top: none;
-    }
-
-    &:hover,
-    &:focus,
-    &--highlighted {
-      cursor: pointer;
-      background: @ffe-blue-royal-light-wcag;
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    background: @ffe-blue-royal-light-wcag;
+    color: @ffe-white;
+    .account-suggestion__name,
+    .account-suggestion__details {
       color: @ffe-white;
-
-      .nfe-account-suggestions__name,
-      .nfe-account-suggestions__details {
-        color: @ffe-white;
-      }
     }
   }
 
@@ -31,14 +19,6 @@
     padding: 16px 16px 8px 21px;
     background: @ffe-white;
     cursor: default;
-
-    &:hover,
-    &:focus,
-    &--highlighted {
-      .nfe-account-suggestions__name {
-        color: @ffe-blue-royal-light-wcag;
-      }
-    }
   }
 
   &__account {
@@ -85,5 +65,9 @@
   .ffe-checkbox {
     margin: 0;
     top: -3px;
+  }
+
+  &:first-child {
+    border-top: none;
   }
 }

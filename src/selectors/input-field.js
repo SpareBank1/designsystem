@@ -6,19 +6,12 @@ import KryssIkon from 'ffe-icons-react/kryss-ikon';
 class Input extends Component {
   constructor(props) {
     super(props);
-    this.inputClassName = this.inputClassName.bind(this);
-    this.dropdownIconClassName = this.dropdownIconClassName.bind(this);
+    this.arrowIconClassName = this.arrowIconClassName.bind(this);
   }
 
-  inputClassName() {
-    return classNames('ffe-input-field nfe-account-selector__search',
-      {'nfe-account-selector__search--open': this.props.isSuggestionsShowing}
-    );
-  }
-
-  dropdownIconClassName() {
-    return classNames('nfe-account-selector__dropdown-icon',
-      {'nfe-account-selector__dropdown-icon--reverse': this.props.isSuggestionsShowing}
+  arrowIconClassName() {
+    return classNames('arrow-icon',
+      {'arrow-icon--up': this.props.isSuggestionsShowing}
     );
   }
 
@@ -39,7 +32,6 @@ class Input extends Component {
     } = this.props;
     return (
       <div
-        className='nfe-account-selector'
         role='combobox'
         aria-expanded={ isSuggestionsShowing }
         onFocus={ onFocus }
@@ -47,7 +39,7 @@ class Input extends Component {
       >
         <input
           onChange={ (e) => {onChange(e.target.value)}}
-          className={ this.inputClassName() }
+          className='ffe-input-field input-field'
           onKeyDown={ onKeyDown }
           autoComplete='off'
           value={ value }
@@ -60,15 +52,15 @@ class Input extends Component {
         { value.length > 0 &&
         <button
           aria-label={ resetLabel }
-          className='nfe-account-selector__reset-button'
+          className='reset-button'
           onClick={ onReset }
           tabIndex={-1}
           type="button"
         >
-          <KryssIkon className='nfe-account-selector__reset-icon'/>
+          <KryssIkon className='reset-button-icon'/>
         </button>
         }
-        <div className={this.dropdownIconClassName()}>
+        <div className={this.arrowIconClassName()}>
           <ChevronIkon focusable={ false }/>
         </div>
       </div>

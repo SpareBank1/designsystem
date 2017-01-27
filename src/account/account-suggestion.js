@@ -6,13 +6,13 @@ import { balanceWithCurrency } from '../util/format';
 const AccountSuggestionItem = ({account, locale}) => {
   const {accountNumber, balance, name}= account;
   return (
-    <div className='nfe-account-suggestions__account'>
-      <a className='nfe-account-suggestions__name'>{ name }</a>
-      <div className='nfe-account-suggestions__details'>
-        <span className='nfe-account-suggestions__account-number'>
+    <div className='account-suggestion__account'>
+      <a className='account-suggestion__name'>{ name }</a>
+      <div className='account-suggestion__details'>
+        <span className='account-suggestion__account-number'>
           { accountFormatter(accountNumber) }
         </span>
-        <span className='nfe-account-suggestions__balance'>
+        <span className='account-suggestion__balance'>
             { balanceWithCurrency(balance, locale)}
           </span>
       </div>
