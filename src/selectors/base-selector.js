@@ -33,7 +33,10 @@ class BaseSelector extends React.Component {
   onFocus(event) {
     event.stopPropagation();
     if (!this.state.hasFocus) {
-      this.setState({hasFocus: true}, ()=> {
+      this.setState({
+        hasFocus: true,
+        showSuggestions: true
+      }, ()=> {
         this.props.onFocus();
       });
     }
@@ -109,6 +112,10 @@ class BaseSelector extends React.Component {
     }
   }
 
+  onShiftTab(evt) {
+    this.input.focus();
+  }
+
 
   render() {
     const {
@@ -118,6 +125,7 @@ class BaseSelector extends React.Component {
       renderSuggestion,
       renderNoMatches,
       suggestionFilter,
+      shouldSelectOnTab,
       id,
     } = this.props;
     const {showSuggestions} = this.state;
@@ -144,8 +152,9 @@ class BaseSelector extends React.Component {
           renderNoMatches={renderNoMatches}
           onSelect={this.onSelect}
           onClose={()=> this.showHideSuggestions(false)}
-          onBlur={this.onBlur}
           onFocus={this.onFocus}
+          onShiftTab={(e) => this.onShiftTab(e)}
+          selectOnTab={selectOnTab}
         />}
       </div>
     );
@@ -158,12 +167,14 @@ BaseSelector.propTypes = {
   onSelect: PropTypes.func.isRequired,
   value: PropTypes.string.isRequired,
   giveInputFocusOnSelect: PropTypes.bool.isRequired,
+  shouldSetFocusToInputOnSelect: PropTypes.bool.isRequired,
   giveInputFocusOnReset: PropTypes.bool.isRequired,
   hideSuggestionsOnSelect: PropTypes.bool.isRequired,
   onChange: PropTypes.func,
   id: PropTypes.string,
   onBlur: PropTypes.func,
   onFocus: PropTypes.func,
+  shouldSelectOnTab: PropTypes.bool
 };
 
 BaseSelector.defaultProps = {

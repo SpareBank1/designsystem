@@ -53,7 +53,14 @@ class SuggestionListContainer extends React.Component {
         onSelect(suggestions[highlightedIndex]);
         break;
       case KeyCodes.TAB:
-        onBlur(suggestions[highlightedIndex]);
+        if (evt.shiftKey) {
+          evt.preventDefault();
+          this.setState({highlightedIndex : -1}, ()=>  this.props.onShiftTab(evt));
+          break;
+        }
+        if (this.props.selectOnTab) {
+          onSelect(suggestions[highlightedIndex]);
+        }
         break;
       default:
         return;
@@ -79,12 +86,12 @@ SuggestionListContainer.propTypes = {
   suggestions: PropTypes.array.isRequired,
   onSelect: PropTypes.func.isRequired,
   onClose: PropTypes.func,
-  onBlur: PropTypes.func,
+  selectOnTab: PropTypes.bool,
+  onShiftTab: PropTypes.func.isRequired
 };
 
 SuggestionListContainer.defaultProps = {
-  onClose: () => {},
-  onBlur: () => {}
+  onClose: () => {}
 };
 
 export default SuggestionListContainer;

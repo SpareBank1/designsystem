@@ -14,7 +14,7 @@ export default class SuggestionList extends Component {
       onKeyDown
     } = this.props;
     return (
-      <ul className='nfe-account-suggestions' role='listbox' onKeyPress={onKeyDown} tabIndex={0}>
+      <ul className='nfe-account-suggestions' role='listbox' onKeyPress={onKeyDown}>
         { suggestions.length > 0 ?
           suggestions.map((item, index) => (
             <Suggestion
