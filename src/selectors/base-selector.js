@@ -8,8 +8,8 @@ class BaseSelector extends React.Component {
   constructor(props) {
     super(props);
     this.onInputChange = this.onInputChange.bind(this);
-    this.onBlur = this.onBlur.bind(this);
-    this.onFocus = this.onFocus.bind(this);
+    this.onInputOrSuggestionsBlur = this.onInputOrSuggestionsBlur.bind(this);
+    this.onInputOrSuggestionsFocus = this.onInputOrSuggestionsFocus.bind(this);
     this.showHideSuggestions = this.showHideSuggestions.bind(this);
     this.onSelect = this.onSelect.bind(this);
     this.onInputReset = this.onInputReset.bind(this);
@@ -30,7 +30,7 @@ class BaseSelector extends React.Component {
     onChange(input);
   }
 
-  onFocus(event) {
+  onInputOrSuggestionsFocus(event) {
     event.stopPropagation();
     if (!this.state.hasFocus) {
       this.setState({
@@ -45,7 +45,7 @@ class BaseSelector extends React.Component {
     });
   }
 
-  onBlur(event) {
+  onInputOrSuggestionsBlur(event) {
     event.stopPropagation();
     //In the case where onFocus is called right before onBlur, the timeout callback is executed when the onFocus is fully resolved.
     //This insures that onBlur is not called when focus is moved within this component
@@ -65,16 +65,16 @@ class BaseSelector extends React.Component {
   }
 
   onSelect(suggestion) {
-    const {onSelect, giveInputFocusOnSelect, hideSuggestionsOnSelect} = this.props;
+    const {onSelect, shouldSetFocusToInputOnSelect, shouldHideSuggestionsOnSelect} = this.props;
 
     const _onSelect = ()=> {
       onSelect(suggestion);
-      if (giveInputFocusOnSelect) {
+      if (shouldSetFocusToInputOnSelect) {
         this.input.focus();
       }
     };
 
-    if (hideSuggestionsOnSelect) {
+    if (shouldHideSuggestionsOnSelect) {
       this.showHideSuggestions(false, _onSelect);
       return;
     }
@@ -83,11 +83,9 @@ class BaseSelector extends React.Component {
   }
 
   onInputReset() {
-    const {onChange, giveInputFocusOnReset} = this.props;
+    const {onChange} = this.props;
     onChange('');
-    if (giveInputFocusOnReset) {
-      this.input.focus();
-    }
+    this.input.focus();
   }
 
   onInputKeyDown({which, altKey}) {
@@ -112,11 +110,6 @@ class BaseSelector extends React.Component {
     }
   }
 
-  onShiftTab(evt) {
-    this.input.focus();
-  }
-
-
   render() {
     const {
       value,
@@ -125,7 +118,7 @@ class BaseSelector extends React.Component {
       renderSuggestion,
       renderNoMatches,
       suggestionFilter,
-      shouldSelectOnTab,
+      shouldSelectHighlightedSuggestionOnTab,
       id,
     } = this.props;
     const {showSuggestions} = this.state;
@@ -141,8 +134,8 @@ class BaseSelector extends React.Component {
           isSuggestionsShowing={showSuggestions}
           id={id}
           placeholder={placeholder}
-          onBlur={this.onBlur}
-          onFocus={this.onFocus}
+          onBlur={this.onInputOrSuggestionsBlur}
+          onFocus={this.onInputOrSuggestionsFocus}
         />
         {showSuggestions &&
         <SuggestionsList
@@ -152,9 +145,10 @@ class BaseSelector extends React.Component {
           renderNoMatches={renderNoMatches}
           onSelect={this.onSelect}
           onClose={()=> this.showHideSuggestions(false)}
-          onFocus={this.onFocus}
-          onShiftTab={(e) => this.onShiftTab(e)}
-          selectOnTab={selectOnTab}
+          onFocus={this.onInputOrSuggestionsFocus}
+          onBlur={this.onInputOrSuggestionsBlur}
+          onShiftTab={() => this.input.focus()}
+          shouldSelectHighlightedSuggestionOnTab={shouldSelectHighlightedSuggestionOnTab}
         />}
       </div>
     );
@@ -165,16 +159,13 @@ BaseSelector.propTypes = {
   suggestions: PropTypes.arrayOf(PropTypes.object).isRequired,
   suggestionFilter: PropTypes.func.isRequired,
   onSelect: PropTypes.func.isRequired,
-  value: PropTypes.string.isRequired,
-  giveInputFocusOnSelect: PropTypes.bool.isRequired,
-  shouldSetFocusToInputOnSelect: PropTypes.bool.isRequired,
-  giveInputFocusOnReset: PropTypes.bool.isRequired,
-  hideSuggestionsOnSelect: PropTypes.bool.isRequired,
   onChange: PropTypes.func,
-  id: PropTypes.string,
   onBlur: PropTypes.func,
+  value: PropTypes.string.isRequired,
   onFocus: PropTypes.func,
-  shouldSelectOnTab: PropTypes.bool
+  shouldSetFocusToInputOnSelect: PropTypes.bool.isRequired,
+  shouldHideSuggestionsOnSelect: PropTypes.bool.isRequired,
+  id: PropTypes.string,
 };
 
 BaseSelector.defaultProps = {

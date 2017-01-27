@@ -29,7 +29,7 @@ class SuggestionListContainer extends React.Component {
   }
 
   onKeyDown(evt) {
-    const {suggestions, onClose, onBlur, onSelect} = this.props;
+    const {suggestions, onClose, onSelect, shouldSelectHighlightedSuggestionOnTab} = this.props;
     const {highlightedIndex} = this.state;
     switch (evt.which) {
       case KeyCodes.DOWN:
@@ -58,7 +58,7 @@ class SuggestionListContainer extends React.Component {
           this.setState({highlightedIndex : -1}, ()=>  this.props.onShiftTab(evt));
           break;
         }
-        if (this.props.selectOnTab) {
+        if (shouldSelectHighlightedSuggestionOnTab) {
           onSelect(suggestions[highlightedIndex]);
         }
         break;
@@ -85,9 +85,9 @@ class SuggestionListContainer extends React.Component {
 SuggestionListContainer.propTypes = {
   suggestions: PropTypes.array.isRequired,
   onSelect: PropTypes.func.isRequired,
+  onShiftTab: PropTypes.func.isRequired,
   onClose: PropTypes.func,
-  selectOnTab: PropTypes.bool,
-  onShiftTab: PropTypes.func.isRequired
+  shouldSelectHighlightedSuggestionOnTab : PropTypes.bool
 };
 
 SuggestionListContainer.defaultProps = {

@@ -7,7 +7,6 @@ const SuggestionItem = ({item, isHighlighted, render, onSelect}) => {
       onClick={(e) => onSelect(item)}
       className={isHighlighted ? '--highlighted' : ''}
       tabIndex={isHighlighted ? 0 : -1}
-      onBlur={(e) => {e.stopPropagation();console.log('suggestion item blur stopped');}}
       ref={(element) => {
         if (isHighlighted && element) {
           element.focus();
