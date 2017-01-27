@@ -1,45 +1,45 @@
 
 //TODO Flytt dette til ffe-tables
+.ffe-responsive-table td.no-padding {
+  padding: 0;
+}
+.ffe-responsive-table tr.no-border {
+  border: 0;
+}
+
 .ffe-responsive-table__content--text-right {
   text-align: right;
 }
 
-.ffe-responsive-table__row-expandable {
-  cursor: pointer;
-  &:hover {
-    background-color: @ffe-blue-royal-light-20;
-  }
-  .expand-icon {
-    width: 17px;
-    height: inherit;
-    vertical-align: middle;
-    fill: @ffe-blue-royal;
-    transition: transform .2s;
-  }
-  &&.ffe-responsive-table__row-expanded {
+.ffe-responsive-table {
+  &__row-expandable {
+    cursor: pointer;
+    &:hover {
+      background-color: @ffe-blue-royal-light-20;
+    }
     .expand-icon {
-      transform: rotate(180deg);
+      width: 17px;
+      height: inherit;
+      vertical-align: middle;
+      fill: @ffe-blue-royal;
+      transition: transform .2s;
+    }
+    &--expanded {
+      background-color: @ffe-blue-royal-light-20;
+      .expand-icon {
+        transform: rotate(180deg);
+      }
     }
   }
-}
 
-.ffe-responsive-table__row-expanded {
-  background-color: @ffe-blue-royal-light-20;
-}
-.ffe-responsive-table__row-expanded-content:not(.collapsed) {
-  background-color: @ffe-grey-light-bg;
-}
-
-.ffe-responsive-table__row-expanded-content {
-  transition: transform .2s, background-color .2s .2s;
-  transform: translateY(0);
-  opacity: 1;
-
-  &.collapsed {
-    border-bottom: 0!important;
-    transform: translateY(-2em);
-    opacity: 0;
-    td {
+  &__row-expanded-content {
+    background-color: @ffe-grey-light-bg;
+    transition: transform .2s, background-color .2s .2s;
+    transform: translateY(0);
+    opacity: 1;
+    &--collapsed {
+      transform: translateY(-2em);
+      opacity: 0;
       padding: 0;
     }
   }

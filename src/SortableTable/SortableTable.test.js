@@ -12,10 +12,10 @@ describe('<SortableTable>', () => {
   ];
 
   const data = [
-    { name: 'Zombie Mountain', age: 36, id: 2 },
-    { name: 'Daenerys Targaryen', age: 16, id: 4 },
-    { name: 'Ned Stark', age: 48, id: 3 },
-    { name: 'Jon Snow', age: 20, id: 1 }
+    {name: 'Zombie Mountain', age: 36, id: 2},
+    {name: 'Daenerys Targaryen', age: 16, id: 4},
+    {name: 'Ned Stark', age: 48, id: 3},
+    {name: 'Jon Snow', age: 20, id: 1}
   ];
 
   const wrapper = render(<SortableTable headers={headers} data={data}/>);
