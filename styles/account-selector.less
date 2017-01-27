@@ -1,20 +1,13 @@
-@import (inline) 'scrollArea.css';
-@import "account-suggestions.less";
+@import "account-suggestion.less";
 @import "general-suggestions.less";
 @import "mixins.less";
+@import 'base-selector';
 
-.nfe-account-selector {
+
+.account-selector {
   position: relative;
   display: block;
 
-  &__search {
-    width: 100%;
-    z-index: 10;
-
-    &::-ms-clear {
-      display: none;
-    }
-  }
 
   &__dropdown-icon {
     position: absolute;
@@ -58,20 +51,19 @@
     margin: 0 4px;
   }
 
-  &__selected-account-details {
+  .highlighted-account-details {
     font-size: 14px;
     padding: 10px 6px;
     color: @ffe-black;
     .ffe-clearfix;
+    &--left {
+      float: left;
+    }
+    &--right {
+      float : right;
+    }
   }
 
-  &__selected-account-details--left {
-    float: left;
-  }
-
-  &__selected-account-details--right {
-    float: right;
-  }
 
   &__dropdown {
     left: 0;

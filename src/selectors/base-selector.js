@@ -124,7 +124,7 @@ class BaseSelector extends React.Component {
     } = this.props;
     const {showSuggestions} = this.state;
     return (
-      <div>
+      <div className='base-selector'>
         <Input
           inputFieldRef={(input)=> {this.input = input}}
           value={value}
