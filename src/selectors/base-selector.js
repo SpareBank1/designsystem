@@ -119,6 +119,7 @@ class BaseSelector extends React.Component {
       renderNoMatches,
       suggestionFilter,
       shouldSelectHighlightedSuggestionOnTab,
+      suggestionsHeightMax,
       id,
     } = this.props;
     const {showSuggestions} = this.state;
@@ -141,6 +142,7 @@ class BaseSelector extends React.Component {
         <SuggestionsList
           ref={(suggestionList)=> {this.suggestionList = suggestionList}}
           suggestions={suggestions.filter(suggestionFilter(value))}
+          heightMax={suggestionsHeightMax}
           renderSuggestion={renderSuggestion}
           renderNoMatches={renderNoMatches}
           onSelect={this.onSelect}
@@ -158,6 +160,7 @@ class BaseSelector extends React.Component {
 BaseSelector.propTypes = {
   suggestions: PropTypes.arrayOf(PropTypes.object).isRequired,
   suggestionFilter: PropTypes.func.isRequired,
+  suggestionsHeightMax : PropTypes.number,
   onSelect: PropTypes.func.isRequired,
   onChange: PropTypes.func,
   onBlur: PropTypes.func,

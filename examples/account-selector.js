@@ -53,6 +53,7 @@ class AccountSelectorExample extends Component {
           selectedAccount={selectedAccount}
           noMatches='Ingen'
           locale='nb'
+          suggestionsHeightMax={500}
         />
       </div>
     );
