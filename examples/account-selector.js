@@ -2,28 +2,11 @@ import React, { Component } from 'react';
 import { accounts as accountArray } from './example-data';
 import AccountSelector from '../src/selectors/account-selector';
 
-const preSelectedAccountNumber = '42010205683';
-
-function getAccount(accounts, accountNumber) {
-  for (let i = 0; i < accounts.length; i++) {
-    if (accounts[i].accountNumber === accountNumber) {
-      return accounts[i];
-    }
-  }
-}
-
-
-function renderNoSuggestion() {
-  return (
-    <h2>Ingen treff</h2>
-  );
-}
-
 class AccountSelectorExample extends Component {
-
   constructor(props) {
     super(props);
     this.onChange = this.onChange.bind(this);
+    this.onReset = this.onReset.bind(this);
     this.onAccountSelected = this.onAccountSelected.bind(this);
     this.state = {value: ''};
   }
@@ -33,12 +16,12 @@ class AccountSelectorExample extends Component {
     this.setState({value});
   }
 
-  onBlur(selectedAccount, inputvalue) {
-    console.log('account selector lost focus, selected account:', selectedAccount);
+  onBlur() {
+    console.log('onblur');
   }
 
   onFocus() {
-    console.log('account selector gained focus');
+    console.log('onfocus');
   }
 
   onAccountSelected(account) {
@@ -49,10 +32,9 @@ class AccountSelectorExample extends Component {
     });
   }
 
-  renderAccount(account) {
-    return (
-      <h2>{account.name}</h2>
-    );
+  onReset(){
+    console.log('onreset');
+    this.setState({value : '', selectedAccount : null});
   }
 
   render() {
@@ -65,9 +47,10 @@ class AccountSelectorExample extends Component {
           accounts={accountArray}
           onAccountSelected={this.onAccountSelected}
           onChange={this.onChange}
+          onReset={this.onReset}
           onBlur={this.onBlur}
           onFocus={this.onFocus}
-          selectedAccount={this.state.selectedAccount}
+          selectedAccount={selectedAccount}
           noMatches='Ingen'
           locale='nb'
         />
