@@ -6,12 +6,12 @@ import { Account, Locale } from '../util/types';
 function AccountDetails({account, locale}) {
   const {balance, accountNumber} = account;
   return (
-    <div className="highlighted-account-details">
-      <div className="highlighted-account-details--left">
+    <div className="account-details">
+      <div className="account-details--left">
         { accountFormatter(accountNumber) }
       </div>
       { account.balance &&
-      <div className="highlighted-account-details--right">
+      <div className="account-details--right">
         { balanceWithCurrency(balance, locale) }
       </div>
       }
