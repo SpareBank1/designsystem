@@ -8,7 +8,7 @@ React implementation of the dropdown found in FFE.
 $ npm install --save ffe-dropdown-react
 ```
 
-`ffe-dropdown-react` depends on `ffe-core`, `ffe-form`, `ffe-spinner` and `ffe-dropdown` being present and imported in your project.
+`ffe-dropdown-react` depends on `ffe-core`, `ffe-form` and `ffe-spinner` being present and imported in your project.
 More specifically, the CSS classes related to dropdowns in those packages should be in your CSS Object Model when using this component.
 
 ## Usage
