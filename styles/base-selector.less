@@ -45,16 +45,21 @@
     }
   }
 
-  .suggestion-list {
+  .container-suggestion {
+    position: absolute;
     left: 0;
-    width: 100%;
-    top: 45px;
-    border: 1px solid @ffe-grey-light;
-    border-radius: 2px;
-    box-sizing: border-box;
-    z-index: 100;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+    right: 0;
+    &-list {
+      left: 0;
+      width: 100%;
+      top: 45px;
+      border: 1px solid @ffe-grey-light;
+      border-radius: 2px;
+      box-sizing: border-box;
+      z-index: 100;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
   }
 }
