@@ -32,10 +32,12 @@ class TableRowExpandable extends Component {
                 <TableRow
                     cells={{
                         ...cells,
-                        expandIcon: <Chevron className={ classNames(
-                            'ffe-responsive-table__expand-icon',
-                            { 'ffe-responsive-table__expand-icon--expanded' : this.state.expanded }
-                        )}/>
+                        expandIcon: <Chevron
+                                        className={ classNames(
+                                            'ffe-responsive-table__expand-icon',
+                                            { 'ffe-responsive-table__expand-icon--expanded' : this.state.expanded }
+                                        )}
+                                    />
                     }}
                     trClasses={ classNames(
                         'ffe-responsive-table__row-expandable',
