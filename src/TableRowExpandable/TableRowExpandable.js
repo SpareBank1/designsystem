@@ -30,7 +30,13 @@ class TableRowExpandable extends Component {
         return (
             <tbody tabIndex="0" onKeyDown={ this.handleKeyPress }>
                 <TableRow
-                    cells={{ ...cells, expandIcon: <Chevron className='expand-icon'/> }}
+                    cells={{
+                        ...cells,
+                        expandIcon: <Chevron className={ classNames(
+                            'ffe-responsive-table__expand-icon',
+                            { 'ffe-responsive-table__expand-icon--expanded' : this.state.expanded }
+                        )}/>
+                    }}
                     trClasses={ classNames(
                         'ffe-responsive-table__row-expandable',
                         { 'ffe-responsive-table__row-expandable--expanded' : this.state.expanded }
@@ -43,14 +49,14 @@ class TableRowExpandable extends Component {
                     role="presentation"
                     aria-hidden={ this.state.expanded ? 'false' : 'true' }
                     className={ classNames(
-                        'no-border',
+                        'ffe-responsive-table__cell--no-border',
                         'ffe-responsive-table__row-expanded-content',
                          { 'ffe-responsive-table__row-expanded-content--expanded' : this.state.expanded }
                      )}
                 >
                     <td
                         className={ classNames(
-                            { 'no-padding' : !this.state.expanded }
+                            { 'ffe-responsive-table__cell--no-padding' : !this.state.expanded }
                         )}
                         colSpan={ headers.length }
                     >

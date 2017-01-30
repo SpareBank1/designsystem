@@ -1,10 +1,10 @@
 
 //TODO Flytt dette til ffe-tables
-.ffe-responsive-table td.no-padding {
-  padding: 0;
+.ffe-responsive-table__cell--no-padding {
+  padding: 0!important;
 }
-.ffe-responsive-table tr.no-border {
-  border: 0;
+.ffe-responsive-table__cell--no-border {
+  border: 0!important;
 }
 
 .ffe-responsive-table__content--text-right {
@@ -17,18 +17,19 @@
     &:hover {
       background-color: @ffe-blue-royal-light-20;
     }
-    .expand-icon {
-      width: 17px;
-      height: inherit;
-      vertical-align: middle;
-      fill: @ffe-blue-royal;
-      transition: transform .2s;
-    }
     &--expanded {
       background-color: @ffe-blue-royal-light-20;
-      .expand-icon {
-        transform: rotate(180deg);
-      }
+    }
+  }
+
+  &__expand-icon {
+    width: 17px;
+    height: inherit;
+    vertical-align: middle;
+    fill: @ffe-blue-royal;
+    transition: transform .2s;
+    &--expanded {
+      transform: rotate(180deg);
     }
   }
 
