@@ -14,7 +14,7 @@ export default class SuggestionList extends Component {
       onKeyDown
     } = this.props;
     return (
-      <ul className='suggestion-list' role='listbox' onKeyPress={onKeyDown}>
+      <ul className='container-suggestion-list' role='listbox' onKeyPress={onKeyDown}>
         { suggestions.length > 0 ?
           suggestions.map((item, index) => (
             <Suggestion

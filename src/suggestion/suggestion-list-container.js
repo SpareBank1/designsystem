@@ -68,7 +68,7 @@ class SuggestionListContainer extends React.Component {
   render() {
     const {heightMax} = this.props;
     return (
-      <div className='suggestion-list'
+      <div className='container-suggestion'
            onKeyDown={this.onKeyDown}
            onFocus={ this.props.onFocus }
            onBlur={ this.props.onBlur }
