@@ -33,14 +33,14 @@
   }
 
   &__row-expanded-content {
-    background-color: @ffe-grey-light-bg;
-    transition: transform .2s, background-color .2s .2s;
-    transform: translateY(0);
-    opacity: 1;
-    &--collapsed {
-      transform: translateY(-2em);
-      opacity: 0;
-      padding: 0;
+    transform: translateY(-2em);
+    opacity: 0;
+    padding: 0;
+    &--expanded {
+      transition: transform .2s, background-color .2s .2s;
+      background-color: @ffe-grey-light-bg;
+      transform: translateY(0);
+      opacity: 1;
     }
   }
 }

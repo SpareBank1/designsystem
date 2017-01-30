@@ -45,7 +45,7 @@ class TableRowExpandable extends Component {
                     className={ classNames(
                         'no-border',
                         'ffe-responsive-table__row-expanded-content',
-                         { 'ffe-responsive-table__row-expanded-content--collapsed' : !this.state.expanded }
+                         { 'ffe-responsive-table__row-expanded-content--expanded' : this.state.expanded }
                      )}
                 >
                     <td

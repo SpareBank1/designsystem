@@ -1,6 +1,6 @@
 import React from 'react';
 import { expect } from 'chai';
-import { shallow } from 'enzyme';
+import { shallow, render } from 'enzyme';
 import TableRowExpandable from './TableRowExpandable';
 
 const props = {
@@ -16,20 +16,37 @@ const props = {
 
 describe('<TableRowExpandable>', () => {
 
-  const wrapper = shallow(<TableRowExpandable { ...props }>
-                    <div>
-                      <p>The cake is a lie</p>
-                    </div>
-                  </TableRowExpandable>);
+  const wrapper = shallow(
+	  <TableRowExpandable { ...props }>
+		  <p>The cake is a lie</p>
+	  </TableRowExpandable>
+  );
 
   it('should be collapsed by default', () => {
       expect(wrapper.state().expanded).to.equal(false);
-      expect(wrapper.find('tbody tr')).to.have.length(1);
+      expect(wrapper.find('.ffe-responsive-table__row-expandable--expanded')).to.have.length(0);
+      expect(wrapper.find('.ffe-responsive-table__row-expanded-content').prop('aria-hidden')).to.equal('true');
   });
 
   it('should render expanded content', () => {
-      wrapper.setState({ expanded: true });
-      expect(wrapper.find('td').last().find('div p').text()).to.equal('The cake is a lie');
+    wrapper.setState({ expanded: true });
+    expect(wrapper.find('td').last().find('p').text()).to.equal('The cake is a lie');
+    expect(wrapper.find('tr').last().hasClass('ffe-responsive-table__row-expanded-content--expanded')).to.equal(true);
+  });
+
+  const renderedWrapper = render(
+	  <TableRowExpandable { ...props }>
+		  <p>a Festivus for the rest of us</p>
+	  </TableRowExpandable>
+  );
+
+  it('should render two tr', () => {
+      expect(renderedWrapper.find('tbody tr')).to.have.length(2);
+  });
+
+  it('should have the correct aria attributes', () => {
+    expect(renderedWrapper.find('tr').first().prop('aria-expanded')).to.equal('false');
+    expect(renderedWrapper.find('tr').last().prop('aria-hidden')).to.equal('true');
   });
 
 });
