@@ -8,17 +8,22 @@ class BaseSelector extends React.Component {
   constructor(props) {
     super(props);
     this.onInputChange = this.onInputChange.bind(this);
-    this.onInputOrSuggestionsBlur = this.onInputOrSuggestionsBlur.bind(this);
-    this.onInputOrSuggestionsFocus = this.onInputOrSuggestionsFocus.bind(this);
     this.showHideSuggestions = this.showHideSuggestions.bind(this);
-    this.onSelect = this.onSelect.bind(this);
+    this.onSuggestionSelect = this.onSuggestionSelect.bind(this);
     this.onInputReset = this.onInputReset.bind(this);
     this.onInputKeyDown = this.onInputKeyDown.bind(this);
+    this.onFocus = this.onFocus.bind(this);
+    this.onBlur = this.onBlur.bind(this);
+    this.globalClickHandler = this.globalClickHandler.bind(this);
+    this.onInputBlur = this.onInputBlur.bind(this);
+    this.onInputFocus = this.onInputFocus.bind(this);
+    this.onSuggestionsBlur = this.onSuggestionsBlur.bind(this);
+    this.onSuggestionsFocus = this.onSuggestionsFocus.bind(this);
+    this.onChangeFocusedSuggestion = this.onChangeFocusedSuggestion.bind(this);
 
     this.state = {
       showSuggestions: false,
-      hasFocus: false,
-      onFocusJustCalled: false,
+      focusedSuggestionIndex: -1,
     };
   }
 
@@ -30,56 +35,122 @@ class BaseSelector extends React.Component {
     onChange(input);
   }
 
-  onInputOrSuggestionsFocus(event) {
-    event.stopPropagation();
-    if (!this.state.hasFocus) {
-      this.setState({
-        hasFocus: true,
-        showSuggestions: true
-      }, ()=> {
-        this.props.onFocus();
-      });
+  globalClickHandler(evt) {
+    console.log("GLOB")
+    if (!this.self.contains(evt.target)) {
+      const {shouldSelectFocusedSuggestionOnTab, suggestions} = this.props;
+      const {focusedSuggestionIndex} = this.state;
+      if (shouldSelectFocusedSuggestionOnTab) {
+        const selectedAccount = suggestions[focusedSuggestionIndex];
+        if (selectedAccount) {
+          this.onSuggestionSelect(selectedAccount);
+        }
+      }
+      this.onBlur();
+      return;
     }
+    if (this.input === evt.target) {
+      if (this.state.focusedSuggestionIndex !== -1) {
+        this.setState({showSuggestions: false, focusedSuggestionIndex: -1}, ()=> this.input.focus());
+      }
+    }
+  }
+
+  addGlobalEventListeners() {
+    window.addEventListener('click', this.globalClickHandler);
+  }
+
+  removeGlobalEventListeners() {
+    window.removeEventListener('click', this.globalClickHandler);
+  }
+
+  onChangeFocusedSuggestion(index) {
+    const nextState = index === -1 ? {...this.state, focusedSuggestionIndex: index, showSuggestions: false} : {focusedSuggestionIndex: index};
+    this.setState(nextState);
+  }
+
+  onFocus() {
     this.setState({
-      onFocusJustCalled: true,
+      showSuggestions: true
+    }, () => {
+      this.props.onFocus();
+      this.addGlobalEventListeners();
     });
   }
 
-  onInputOrSuggestionsBlur(event) {
+  onBlur() {
+    this.setState({showSuggestions: false}, () => {
+      this.props.onBlur();
+      this.removeGlobalEventListeners();
+    });
+  }
+
+  hasFocus() {
+    const {inputHasFocus, suggestionsHasFocus} = this.state;
+    return inputHasFocus || suggestionsHasFocus;
+  }
+
+  onInputFocus(event) {
+    //console.log("inFocus")
     event.stopPropagation();
-    //In the case where onFocus is called right before onBlur, the timeout callback is executed when the onFocus is fully resolved.
-    //This insures that onBlur is not called when focus is moved within this component
+    if (!this.hasFocus()) {
+      this.onFocus();
+    }
+    this.setState({inputHasFocus: true});
+  }
+
+  onSuggestionsFocus(event) {
+    event.stopPropagation();
+    //console.log("sugfocus")
+    if (!this.hasFocus()) {
+      this.props.onFocus();
+    }
+    this.setState({suggestionsHasFocus: true});
+  }
+
+  onInputBlur(event) {
+    //console.log("inblur")
+    event.stopPropagation();
+    this.setState({inputHasFocus: false});
     setTimeout(()=> {
-      if (!this.state.onFocusJustCalled) {
-        this.setState({hasFocus: false, showSuggestions: false}, this.props.onBlur);
+      if (!this.hasFocus()) {
+        this.onBlur();
       }
     });
+  }
 
-    this.setState({
-      onFocusJustCalled: false,
+  onSuggestionsBlur(event) {
+    // event.stopPropagation();
+    this.setState({suggestionsHasFocus: false});
+    setTimeout(()=> {
+      if (!this.hasFocus()) {
+        this.onBlur();
+      }
     });
   }
 
-  showHideSuggestions(show, cb = ()=> {}) {
-    this.setState({showSuggestions: show}, cb);
+  showHideSuggestions(show, cb = ()=> {
+  }) {
+    const nextState = show ? {showSuggestions: show} : {...this.state, showSuggestions: show, focusedSuggestionIndex: -1};
+    this.setState(nextState, cb);
   }
 
   onSelect(suggestion) {
-    const {onSelect, shouldSetFocusToInputOnSelect, shouldHideSuggestionsOnSelect} = this.props;
+    const {onSelect, shouldSetFocusToInputOnSelect} = this.props;
+    onSelect(suggestion);
+    if (shouldSetFocusToInputOnSelect) {
+      this.setState({suggestionsHasFocus: false, inputHasFocus: true}, ()=> this.input.focus())
+    }
+  }
 
-    const _onSelect = ()=> {
-      onSelect(suggestion);
-      if (shouldSetFocusToInputOnSelect) {
-        this.input.focus();
-      }
-    };
-
+  onSuggestionSelect(suggestion) {
+    const {shouldHideSuggestionsOnSelect} = this.props;
     if (shouldHideSuggestionsOnSelect) {
-      this.showHideSuggestions(false, _onSelect);
+      this.showHideSuggestions(false, ()=> this.onSelect(suggestion));
       return;
     }
 
-    _onSelect();
+    this.onSelect(suggestion);
   }
 
   onInputReset() {
@@ -96,7 +167,7 @@ class BaseSelector extends React.Component {
           this.showHideSuggestions(true);
         }
         if (showSuggestions) {
-          this.suggestionList.setHiglightedIndex(0);
+          this.setState({focusedSuggestionIndex: 0})
         }
         break;
       case KeyCodes.UP :
@@ -118,15 +189,25 @@ class BaseSelector extends React.Component {
       renderSuggestion,
       renderNoMatches,
       suggestionFilter,
-      shouldSelectHighlightedSuggestionOnTab,
+      shouldSelectFocusedSuggestionOnTab,
       suggestionsHeightMax,
       id,
     } = this.props;
-    const {showSuggestions} = this.state;
+    const {showSuggestions, focusedSuggestionIndex} = this.state;
+    ////console.log("render")
     return (
-      <div className='base-selector'>
+      <div
+        ref={(self)=> {
+          if (self) {
+            this.self = self;
+          }
+        }}
+        className='base-selector'
+      >
         <Input
-          inputFieldRef={(input)=> {this.input = input}}
+          inputFieldRef={(input)=> {
+            this.input = input
+          }}
           value={value}
           onChange={this.onInputChange}
           onReset={this.onInputReset}
@@ -135,22 +216,25 @@ class BaseSelector extends React.Component {
           isSuggestionsShowing={showSuggestions}
           id={id}
           placeholder={placeholder}
-          onBlur={this.onInputOrSuggestionsBlur}
-          onFocus={this.onInputOrSuggestionsFocus}
+          onBlur={this.onInputBlur}
+          onFocus={this.onInputFocus}
         />
         {showSuggestions &&
         <SuggestionsList
-          ref={(suggestionList)=> {this.suggestionList = suggestionList}}
+          ref={(suggestionList)=> {
+            this.suggestionList = suggestionList
+          }}
+          onChangeFocused={this.onChangeFocusedSuggestion}
+          focusedIndex={focusedSuggestionIndex}
           suggestions={suggestions.filter(suggestionFilter(value))}
           heightMax={suggestionsHeightMax}
           renderSuggestion={renderSuggestion}
           renderNoMatches={renderNoMatches}
-          onSelect={this.onSelect}
+          onSelect={this.onSuggestionSelect}
           onClose={()=> this.showHideSuggestions(false)}
-          onFocus={this.onInputOrSuggestionsFocus}
-          onBlur={this.onInputOrSuggestionsBlur}
+          onFocus={this.onSuggestionsFocus}
           onShiftTab={() => this.input.focus()}
-          shouldSelectHighlightedSuggestionOnTab={shouldSelectHighlightedSuggestionOnTab}
+          shouldSelectFocusedSuggestionOnTab={shouldSelectFocusedSuggestionOnTab}
         />}
       </div>
     );
@@ -160,7 +244,7 @@ class BaseSelector extends React.Component {
 BaseSelector.propTypes = {
   suggestions: PropTypes.arrayOf(PropTypes.object).isRequired,
   suggestionFilter: PropTypes.func.isRequired,
-  suggestionsHeightMax : PropTypes.number,
+  suggestionsHeightMax: PropTypes.number,
   onSelect: PropTypes.func.isRequired,
   onChange: PropTypes.func,
   onBlur: PropTypes.func,

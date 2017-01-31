@@ -8,7 +8,7 @@ export default class SuggestionList extends Component {
     const {
       suggestions,
       onSelect,
-      highlightedIndex,
+      focusedIndex,
       renderSuggestion,
       renderNoMatches,
       onKeyDown
@@ -20,7 +20,7 @@ export default class SuggestionList extends Component {
             <Suggestion
               key={index}
               item={item}
-              isHighlighted={index === highlightedIndex}
+              setFocus={index === focusedIndex}
               render={renderSuggestion}
               onSelect={onSelect}
             />
@@ -34,8 +34,8 @@ export default class SuggestionList extends Component {
 
 SuggestionList.propTypes = {
   suggestions: PropTypes.arrayOf(React.PropTypes.object).isRequired,
+  focusedIndex: PropTypes.number.isRequired,
   renderNoMatches: PropTypes.func,
-  highlightedIndex: PropTypes.number,
 };
 
 SuggestionList.defaultProps = {
