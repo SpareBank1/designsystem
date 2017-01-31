@@ -1,12 +1,16 @@
 # Changelog
 
+## v2.3.0
+
+* Update ffe-icons to version 7.2.0. New icons:
+  * ffe-icons-react/pluss-ikon
 
 ## v2.2.0
 * Update ffe-icons to a new major: 7.1.1. New icons:
- * `ffe-icons-react/bil-camping-ikon` 
- * `ffe-icons-react/hus-tre-ikon` 
- * `ffe-icons-react/handlevogn-pakker-ikon` 
- 
+  * `ffe-icons-react/bil-camping-ikon`
+  * `ffe-icons-react/hus-tre-ikon`
+  * `ffe-icons-react/handlevogn-pakker-ikon`
+
 ## v2.1.1
 
 * Update eslint configuration
@@ -25,7 +29,7 @@
 
 ## v1.1.0
 
-* Update ffe-icons to `^5.2.0`, new icons are
+* Update ffe-icons to 5.2.0. New icons:
   * ffe-icons-react/konfetti-ikon
   * ffe-icons-react/tommel-opp-ikon
 
