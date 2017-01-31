@@ -1,5 +1,9 @@
 # Changelog
 
+## 7.2.0
+
+Added pluss-icon.svg
+
 ## 7.1.1
 
 Added handlevogn-pakker-ikon.svg, bil-camping-ikon.svg and hus-tre-ikon.svg
