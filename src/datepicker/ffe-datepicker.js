@@ -30,6 +30,7 @@ export default class FFEDatepicker extends React.Component {
   onInputFocus() {
     if (this.state.openOnFocus) {
       this.openCalendar();
+      this._datepickerNode.click();
     }
   }
 

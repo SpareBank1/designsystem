@@ -15,13 +15,13 @@ class DatepickerExample extends React.Component {
 
   constructor() {
     super();
-    this.state = { date: '' };
+    this.state = { dateOne: '', dateTwo: '' };
     this.onChange = this.onChange.bind(this);
   }
 
-  onChange(date) {
+  onChange(date, field) {
     this.setState({
-      date,
+      [field]: date,
     });
   }
 
@@ -29,11 +29,21 @@ class DatepickerExample extends React.Component {
     return (
       <form>
         <Datepicker
-          value={ this.state.date }
-          onChange={ this.onChange }
+          value={ this.state.dateOne }
+          onChange={ date => this.onChange(date, 'dateOne') }
           language="nb"
           minDate="01.01.2016"
-          maxDate="31.12.2016"
+          maxDate="31.12.2018"
+          inputProps={ { className: 'customClass', id: 'custom-input-id' } }
+          ariaInvalid={ false }
+        />
+
+        <Datepicker
+          value={ this.state.dateTwo }
+          onChange={ date => this.onChange(date, 'dateTwo') }
+          language="nb"
+          minDate="01.01.2016"
+          maxDate="31.12.2018"
           inputProps={ { className: 'customClass', id: 'custom-input-id' } }
           ariaInvalid={ false }
         />
