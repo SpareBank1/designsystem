@@ -1,67 +1,60 @@
-import React, { PropTypes } from 'react';
-import { Scrollbars } from 'react-custom-scrollbars';
+import React, {PropTypes} from 'react';
+import {Scrollbars} from 'react-custom-scrollbars';
 import SuggestionList from './suggestion-list';
-import { KeyCodes } from '../util/types';
+import {KeyCodes} from '../util/types';
 
 class SuggestionListContainer extends React.Component {
 
   constructor(props) {
     super(props);
     this.onKeyDown = this.onKeyDown.bind(this);
-    this.setHiglightedIndex = this.setHiglightedIndex.bind(this);
-    this.state = {
-      highlightedIndex: -1,
-    };
   }
 
-  nextHighlightedIndex() {
-    return this.state.highlightedIndex === this.props.suggestions.length - 1 ?
-      0 : this.state.highlightedIndex + 1;
+  nextFocusedIndex() {
+    const {focusedIndex, suggestions} = this.props;
+    return focusedIndex === suggestions.length - 1 ? 0 : focusedIndex + 1;
   }
 
-  previousHighlightedIndex() {
-    return this.state.highlightedIndex === 0 ?
-    this.props.suggestions.length - 1 : this.state.highlightedIndex - 1;
-  }
-
-  setHiglightedIndex(highlightedIndex) {
-    this.setState({highlightedIndex})
+  previousFocusedIndex() {
+    const {focusedIndex, suggestions} = this.props;
+    return focusedIndex === 0 ? suggestions.length - 1 : focusedIndex - 1;
   }
 
   onKeyDown(evt) {
-    const {suggestions, onClose, onSelect, shouldSelectHighlightedSuggestionOnTab} = this.props;
-    const {highlightedIndex} = this.state;
+    const {suggestions, onClose, onSelect, shouldSelectFocusedSuggestionOnTab, onChangeFocused, focusedIndex} = this.props;
     switch (evt.which) {
       case KeyCodes.DOWN:
         evt.preventDefault();
-        this.setHiglightedIndex(this.nextHighlightedIndex());
+        onChangeFocused(this.nextFocusedIndex());
         break;
       case KeyCodes.UP:
         evt.preventDefault();
-        this.setHiglightedIndex(this.previousHighlightedIndex());
+        onChangeFocused(this.previousFocusedIndex());
         break;
       case KeyCodes.HOME:
-        this.setHiglightedIndex(0);
+        onChangeFocused(0);
         break;
       case KeyCodes.END:
-        this.setHiglightedIndex(suggestions.length - 1);
+        onChangeFocused(suggestions.length - 1);
         break;
       case KeyCodes.ESC:
         onClose();
         break;
       case KeyCodes.ENTER:
-        onSelect(suggestions[highlightedIndex]);
+        onSelect(suggestions[focusedIndex]);
         break;
       case KeyCodes.TAB:
         if (evt.shiftKey) {
           evt.preventDefault();
-          this.setState({highlightedIndex : -1}, ()=>  this.props.onShiftTab(evt));
+          this.props.onChangeFocused(-1);
+          this.props.onShiftTab(evt);
           break;
         }
-        if (shouldSelectHighlightedSuggestionOnTab) {
-          onSelect(suggestions[highlightedIndex]);
+        if (shouldSelectFocusedSuggestionOnTab) {
+          onSelect(suggestions[focusedIndex]);
+          break;
         }
-        break;
+        this.props.onBlur();
     }
   }
 
@@ -71,13 +64,14 @@ class SuggestionListContainer extends React.Component {
       <div className='container-suggestion'
            onKeyDown={this.onKeyDown}
            onFocus={ this.props.onFocus }
-           onBlur={ this.props.onBlur }
+           onBlur={ ()=> {
+           }}
       >
         <Scrollbars
           autoHeight={true}
           autoHeightMax={heightMax}
         >
-          <SuggestionList highlightedIndex={this.state.highlightedIndex} {...this.props}/>
+          <SuggestionList {...this.props}/>
         </Scrollbars>
       </div>
     );
@@ -88,9 +82,11 @@ SuggestionListContainer.propTypes = {
   suggestions: PropTypes.array.isRequired,
   onSelect: PropTypes.func.isRequired,
   onShiftTab: PropTypes.func.isRequired,
+  onChangeFocused: PropTypes.func.isRequired,
+  focusedIndex: PropTypes.number.isRequired,
   onClose: PropTypes.func,
-  shouldSelectHighlightedSuggestionOnTab : PropTypes.bool,
-  heightMax : PropTypes.number
+  heightMax: PropTypes.number,
+  shouldSelectFocusedSuggestionOnTab: PropTypes.bool,
 };
 
 SuggestionListContainer.defaultProps = {

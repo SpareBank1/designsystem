@@ -1,14 +1,14 @@
 import React, {PropTypes} from 'react';
 
-const SuggestionItem = ({item, isHighlighted, render, onSelect}) => {
+const SuggestionItem = ({item, setFocus, render, onSelect}) => {
   return (
     <li
       role='option'
       onClick={(e) => onSelect(item)}
       className='account-suggestion'
-      tabIndex={isHighlighted ? 0 : -1}
+      tabIndex={setFocus ? 0 : -1}
       ref={(element) => {
-        if (isHighlighted && element) {
+        if (setFocus && element) {
           element.focus();
         }
       }}
@@ -20,7 +20,7 @@ const SuggestionItem = ({item, isHighlighted, render, onSelect}) => {
 
 SuggestionItem.propTypes = {
   item: PropTypes.object.isRequired,
-  isHighlighted: PropTypes.bool.isRequired,
+  setFocus: PropTypes.bool.isRequired,
   render: PropTypes.func.isRequired,
   onSelect: PropTypes.func.isRequired,
 };

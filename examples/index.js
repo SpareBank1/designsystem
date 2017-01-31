@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from 'react-dom';
+import {render} from 'react-dom';
 import AccountSelectorExample from './account-selector';
 
 require('./example.less');
@@ -15,6 +15,7 @@ document.body.appendChild(accountSelectorDOM);
 
 render(
   <div>
+    <input/>
     <AccountSelectorExample />
   </div>
   , accountSelectorDOM);
