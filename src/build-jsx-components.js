@@ -5,12 +5,25 @@ import mkdirp from 'mkdirp';
 mkdirp.sync('./jsx');
 
 /**
+ * We have to expect dash-cased attributes in the SVG files from ffe-icons but React doesn't really
+ * like those. A more solid approach to this would be preferable but on short term just handle the
+ * three props we know exist in ffe-icons right now.
+ *
+ * Should this proplem (sic!) pop up more often, another solution should be sought
+ * */
+const camelCaseSVGProps = svgString =>
+    svgString
+        .replace(/fill-rule/g, 'fillRule')
+        .replace(/stroke-width/g, 'strokeWidth')
+        .replace(/stroke-miterlimit/g, 'strokeMiterlimit');
+
+/**
  * Creates a new React component and a corresponding .jsx file for each icon. .
  * */
 const createStandaloneJSX = iconName => `
 import React from 'react';
 
-const svg = ${icons[iconName]};
+const svg = ${camelCaseSVGProps(icons[iconName])};
 const createTitle = title => title ? <title>{title}</title> : null;
 const createDesc = desc => desc ? <desc>{desc}</desc> : null;
 
