@@ -1,7 +1,7 @@
-import React, {PropTypes} from 'react';
-import {Scrollbars} from 'react-custom-scrollbars';
+import React, { PropTypes } from 'react';
+import { Scrollbars } from 'react-custom-scrollbars';
 import SuggestionList from './suggestion-list';
-import {KeyCodes} from '../util/types';
+import { KeyCodes } from '../util/types';
 
 class SuggestionListContainer extends React.Component {
 
@@ -21,7 +21,7 @@ class SuggestionListContainer extends React.Component {
   }
 
   onKeyDown(evt) {
-    const {suggestions, onClose, onSelect, shouldSelectFocusedSuggestionOnTab, onChangeFocused, focusedIndex} = this.props;
+    const {suggestions, onClose, onSelect, shouldSelectFocusedSuggestionOnTab, onChangeFocused, focusedIndex, onBlur} = this.props;
     switch (evt.which) {
       case KeyCodes.DOWN:
         evt.preventDefault();
@@ -46,15 +46,13 @@ class SuggestionListContainer extends React.Component {
       case KeyCodes.TAB:
         if (evt.shiftKey) {
           evt.preventDefault();
-          this.props.onChangeFocused(-1);
-          this.props.onShiftTab(evt);
+          onSelect(suggestions[focusedIndex]);
           break;
         }
         if (shouldSelectFocusedSuggestionOnTab) {
           onSelect(suggestions[focusedIndex]);
-          break;
         }
-        this.props.onBlur();
+        onBlur();
     }
   }
 
@@ -63,9 +61,6 @@ class SuggestionListContainer extends React.Component {
     return (
       <div className='container-suggestion'
            onKeyDown={this.onKeyDown}
-           onFocus={ this.props.onFocus }
-           onBlur={ ()=> {
-           }}
       >
         <Scrollbars
           autoHeight={true}
@@ -81,9 +76,9 @@ class SuggestionListContainer extends React.Component {
 SuggestionListContainer.propTypes = {
   suggestions: PropTypes.array.isRequired,
   onSelect: PropTypes.func.isRequired,
-  onShiftTab: PropTypes.func.isRequired,
   onChangeFocused: PropTypes.func.isRequired,
   focusedIndex: PropTypes.number.isRequired,
+  onBlur: PropTypes.func.isRequired,
   onClose: PropTypes.func,
   heightMax: PropTypes.number,
   shouldSelectFocusedSuggestionOnTab: PropTypes.bool,
@@ -91,7 +86,7 @@ SuggestionListContainer.propTypes = {
 
 SuggestionListContainer.defaultProps = {
   onClose: () => {},
-  heightMax : 300
+  heightMax: 300
 };
 
 export default SuggestionListContainer;

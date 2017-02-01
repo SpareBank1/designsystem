@@ -17,8 +17,6 @@ class BaseSelector extends React.Component {
     this.globalClickHandler = this.globalClickHandler.bind(this);
     this.onInputBlur = this.onInputBlur.bind(this);
     this.onInputFocus = this.onInputFocus.bind(this);
-    this.onSuggestionsBlur = this.onSuggestionsBlur.bind(this);
-    this.onSuggestionsFocus = this.onSuggestionsFocus.bind(this);
     this.onChangeFocusedSuggestion = this.onChangeFocusedSuggestion.bind(this);
 
     this.state = {
@@ -29,9 +27,7 @@ class BaseSelector extends React.Component {
 
   onInputChange(input) {
     const {onChange} = this.props;
-    this.setState({
-      showSuggestions: true,
-    });
+    this.showHideSuggestions(true);
     onChange(input);
   }
 
@@ -49,6 +45,7 @@ class BaseSelector extends React.Component {
       this.onBlur();
       return;
     }
+
     if (this.input === evt.target) {
       if (this.state.focusedSuggestionIndex !== -1) {
         this.setState({showSuggestions: false, focusedSuggestionIndex: -1}, ()=> this.input.focus());
@@ -65,8 +62,7 @@ class BaseSelector extends React.Component {
   }
 
   onChangeFocusedSuggestion(index) {
-    const nextState = index === -1 ? {...this.state, focusedSuggestionIndex: index, showSuggestions: false} : {focusedSuggestionIndex: index};
-    this.setState(nextState);
+    this.setState({focusedSuggestionIndex: index});
   }
 
   onFocus() {
@@ -86,12 +82,11 @@ class BaseSelector extends React.Component {
   }
 
   hasFocus() {
-    const {inputHasFocus, suggestionsHasFocus} = this.state;
-    return inputHasFocus || suggestionsHasFocus;
+    const {inputHasFocus, focusedSuggestionIndex} = this.state;
+    return inputHasFocus || focusedSuggestionIndex !== -1;
   }
 
   onInputFocus(event) {
-    //console.log("inFocus")
     event.stopPropagation();
     if (!this.hasFocus()) {
       this.onFocus();
@@ -99,39 +94,18 @@ class BaseSelector extends React.Component {
     this.setState({inputHasFocus: true});
   }
 
-  onSuggestionsFocus(event) {
-    event.stopPropagation();
-    //console.log("sugfocus")
-    if (!this.hasFocus()) {
-      this.props.onFocus();
-    }
-    this.setState({suggestionsHasFocus: true});
-  }
-
   onInputBlur(event) {
-    //console.log("inblur")
     event.stopPropagation();
+    setTimeout(()=> {
+      if (!this.hasFocus()) {
+        this.onBlur();
+      }
+    });
     this.setState({inputHasFocus: false});
-    setTimeout(()=> {
-      if (!this.hasFocus()) {
-        this.onBlur();
-      }
-    });
   }
 
-  onSuggestionsBlur(event) {
-    // event.stopPropagation();
-    this.setState({suggestionsHasFocus: false});
-    setTimeout(()=> {
-      if (!this.hasFocus()) {
-        this.onBlur();
-      }
-    });
-  }
-
-  showHideSuggestions(show, cb = ()=> {
-  }) {
-    const nextState = show ? {showSuggestions: show} : {...this.state, showSuggestions: show, focusedSuggestionIndex: -1};
+  showHideSuggestions(show, cb = ()=> {}) {
+    const nextState = show ? {showSuggestions: show} : {...this.state, showSuggestions: false, focusedSuggestionIndex: -1};
     this.setState(nextState, cb);
   }
 
@@ -139,7 +113,7 @@ class BaseSelector extends React.Component {
     const {onSelect, shouldSetFocusToInputOnSelect} = this.props;
     onSelect(suggestion);
     if (shouldSetFocusToInputOnSelect) {
-      this.setState({suggestionsHasFocus: false, inputHasFocus: true}, ()=> this.input.focus())
+      this.setState({inputHasFocus: true}, ()=> this.input.focus())
     }
   }
 
@@ -194,7 +168,6 @@ class BaseSelector extends React.Component {
       id,
     } = this.props;
     const {showSuggestions, focusedSuggestionIndex} = this.state;
-    ////console.log("render")
     return (
       <div
         ref={(self)=> {
@@ -221,9 +194,6 @@ class BaseSelector extends React.Component {
         />
         {showSuggestions &&
         <SuggestionsList
-          ref={(suggestionList)=> {
-            this.suggestionList = suggestionList
-          }}
           onChangeFocused={this.onChangeFocusedSuggestion}
           focusedIndex={focusedSuggestionIndex}
           suggestions={suggestions.filter(suggestionFilter(value))}
@@ -232,8 +202,7 @@ class BaseSelector extends React.Component {
           renderNoMatches={renderNoMatches}
           onSelect={this.onSuggestionSelect}
           onClose={()=> this.showHideSuggestions(false)}
-          onFocus={this.onSuggestionsFocus}
-          onShiftTab={() => this.input.focus()}
+          onBlur={this.onBlur}
           shouldSelectFocusedSuggestionOnTab={shouldSelectFocusedSuggestionOnTab}
         />}
       </div>
@@ -260,7 +229,7 @@ BaseSelector.defaultProps = {
   onChange: () => {},
   onBlur: () => {},
   onFocus: () => {},
-  onReset : ()=> {},
+  onReset: ()=> {},
   ariaInvalid: false,
 };
 
