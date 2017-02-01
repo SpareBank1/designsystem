@@ -51,6 +51,7 @@ class SuggestionListContainer extends React.Component {
         }
         if (shouldSelectFocusedSuggestionOnTab) {
           onSelect(suggestions[focusedIndex]);
+          break;
         }
         onBlur();
     }
