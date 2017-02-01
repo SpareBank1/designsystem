@@ -4,6 +4,7 @@ import sinon from 'sinon';
 import {
     ContextInfoMessage,
     ContextTipMessage,
+    ContextSuccessMessage,
 } from '../';
 import Base from '../base';
 import InfoCircleIcon from 'ffe-icons-react/info-sirkel-ikon';
@@ -108,5 +109,21 @@ describe('Test ContextTipMessage', () => {
     it('renders ContextInfoMessage', () => {
         const component = wrapper.find('.ffe-context-message');
         expect(component.hasClass('ffe-context-message--tip')).to.be(true);
+    });
+});
+
+describe('Test ContextSuccessMessage', () => {
+    const wrapper = mount(
+        <ContextSuccessMessage
+            icon={<InfoCircleIcon />}
+            showCloseButton={true}
+        >
+            <p>content</p>
+        </ContextSuccessMessage>
+    );
+
+    it('renders ContextInfoMessage', () => {
+        const component = wrapper.find('.ffe-context-message');
+        expect(component.hasClass('ffe-context-message--success')).to.be(true);
     });
 });

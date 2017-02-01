@@ -9,6 +9,7 @@ import { render } from 'react-dom';
 import {
     ContextInfoMessage,
     ContextTipMessage,
+    ContextSuccessMessage,
 } from '../src';
 
 render(
@@ -58,7 +59,7 @@ render(
         </div>
 
         <div style={{ margin: '25px 0' }}>
-            <ContextTipMessage
+            <ContextSuccessMessage
                 locale='en'
                 showCloseButton={true}
                 icon={<CatchCircleIcon/>}
@@ -66,7 +67,7 @@ render(
                 Vekommen til betaversjonen av nye Sparebank1.no.
                 Vekommen til betaversjonen av nye Sparebank1.no.
                 Vekommen til betaversjonen av nye Sparebank1.no.
-            </ContextTipMessage>
+            </ContextSuccessMessage>
         </div>
     </div>,
     document.getElementById('root')
