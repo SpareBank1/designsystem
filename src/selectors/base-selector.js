@@ -32,7 +32,6 @@ class BaseSelector extends React.Component {
   }
 
   globalClickHandler(evt) {
-    console.log("GLOB")
     if (!this.self.contains(evt.target)) {
       const {shouldSelectFocusedSuggestionOnTab, suggestions} = this.props;
       const {focusedSuggestionIndex} = this.state;
@@ -42,7 +41,6 @@ class BaseSelector extends React.Component {
           this.onSuggestionSelect(selectedAccount);
         }
       }
-      this.onBlur();
       return;
     }
 
@@ -54,11 +52,11 @@ class BaseSelector extends React.Component {
   }
 
   addGlobalEventListeners() {
-    window.addEventListener('click', this.globalClickHandler);
+    window.addEventListener('mousedown', this.globalClickHandler);
   }
 
   removeGlobalEventListeners() {
-    window.removeEventListener('click', this.globalClickHandler);
+    window.removeEventListener('mousedown', this.globalClickHandler);
   }
 
   onChangeFocusedSuggestion(index) {
@@ -105,7 +103,7 @@ class BaseSelector extends React.Component {
   }
 
   showHideSuggestions(show, cb = ()=> {}) {
-    const nextState = show ? {showSuggestions: show} : {...this.state, showSuggestions: false, focusedSuggestionIndex: -1};
+    const nextState = show ? {showSuggestions: show} : {showSuggestions: false, focusedSuggestionIndex: -1};
     this.setState(nextState, cb);
   }
 
