@@ -1,14 +1,17 @@
 # CHANGELOG
 
+## 2.1.0
+* Added <ContextSuccessMessage /> component
+
 ## 2.0.4
 * Upgrade eslint to use latest ffe config.
 
 ## 2.0.3
 * Bugfix: Remove from element from DOM on animation end
-* Added optional prop `animationLengtMs` to control animation length 
-* Added optional prop `headerElementId` for better universal accessibility 
-* Added optional prop `contentElementId` for better universal accessibility 
-* Improvements in universal accessibility 
+* Added optional prop `animationLengtMs` to control animation length
+* Added optional prop `headerElementId` for better universal accessibility
+* Added optional prop `contentElementId` for better universal accessibility
+* Improvements in universal accessibility
 
 ## 2.0.2
 * Less margin between header and body text

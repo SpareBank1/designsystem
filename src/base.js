@@ -92,7 +92,7 @@ export default class Base extends Component {
 
 Base.propTypes = {
     children: PropTypes.node.isRequired,
-    messageType: PropTypes.oneOf(['info', 'tip']).isRequired,
+    messageType: PropTypes.oneOf(['info', 'tip', 'success']).isRequired,
     showCloseButton: PropTypes.bool.isRequired,
     locale: PropTypes.oneOf(acceptedLocales),
     icon: PropTypes.element,
