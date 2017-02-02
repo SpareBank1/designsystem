@@ -1,11 +1,16 @@
 # Changelog
 
+## v2.3.1
+
+* remove snake-cased properties from pluss-ikon and bil-camping icon
+
 ## v2.3.0
 
 * Update ffe-icons to version 7.2.0. New icons:
   * ffe-icons-react/pluss-ikon
 
 ## v2.2.0
+
 * Update ffe-icons to a new major: 7.1.1. New icons:
   * `ffe-icons-react/bil-camping-ikon`
   * `ffe-icons-react/hus-tre-ikon`
