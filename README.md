@@ -14,7 +14,7 @@ Ta en titt i [example-filen](example/example.html) for markup og [less-filen](le
 tilgjengelige klasser og modifiers.
 
 ## Bruk klassenavn på `.ffe-responsive-table` sine children!
-Fra og med versjon 3.0.0 er styling direkte på DOM-struktur deprecated. Med andre ord - legg på klasser på alle tabell-relaterte tags.
+Fra og med versjon 3.0.0 er styling direkte på DOM-struktur fjernet. Med andre ord - legg på klasser på alle tabell-relaterte tags.
 
 ## Screenshot
 ![icons](visual-tests/baseline-screenshots/example/plain/firefox-large.png)

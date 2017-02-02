@@ -2,11 +2,29 @@
 
 ## v.3.0.0
 
-* Adds styling for `ffe-sortable-table` og `ffe-expandable-row`.
-* Removes DOM styling on table elements
+* BREAKING: Removes DOM styling on table elements.
+All table child elements MUST HAVE its corresponding classname. Take a look at the migrationg guide og the examples
+* Adds styling for `ffe-sortable-table` and `ffe-expandable-row`.
 * Adds a `--collapsed` modifier to `ffe-responsive-table__row` and `ffe-responsive-table__cell` to prevent them taking
 up any space. Used on the `.expand-icon` and the row that holds the content to be expanded.
 * Adds a `--text-right` modifier to `ffe-responsive-table__content`
+
+## Migrating to v.3.0.0 ##
+Make sure all table child elements have the following classnames:
+```
+<caption
+    class="ffe-responsive-table_caption">
+<thead
+    class="ffe-responsive-table_head">
+<tr
+    class="ffe-responsive-table_row">
+<td
+    class="ffe-responsive-table_cell">
+<footer
+    class="ffe-responsive-table_footer">
+```
+
+`<tbody>`  (still) don't require classname
 
 ## v.2.1.0
 
