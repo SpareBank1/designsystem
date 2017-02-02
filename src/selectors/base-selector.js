@@ -41,13 +41,6 @@ class BaseSelector extends React.Component {
           this.onSuggestionSelect(selectedAccount);
         }
       }
-      return;
-    }
-
-    if (this.input === evt.target) {
-      if (this.state.focusedSuggestionIndex !== -1) {
-        this.setState({showSuggestions: false, focusedSuggestionIndex: -1}, ()=> this.input.focus());
-      }
     }
   }
 
@@ -73,10 +66,11 @@ class BaseSelector extends React.Component {
   }
 
   onBlur() {
-    this.setState({showSuggestions: false}, () => {
-      this.props.onBlur();
-      this.removeGlobalEventListeners();
-    });
+    //Calling setState causes a rerender which removes SuggestionList from the DOM.
+    //onSelect is thus never called when a SuggestionItem is clicked.
+    this.state = {...this.state, showSuggestions : false};
+    this.props.onBlur();
+    this.removeGlobalEventListeners();
   }
 
   hasFocus() {
