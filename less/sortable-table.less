@@ -28,8 +28,9 @@
     fill: @ffe-grey;
     margin-left: 8px;
     transform: rotate(180deg);
-}
+    transition: transform .2s;
 
-.ffe-sortable-table__sort-arrow--descending {
-    transform: none;
+    &--descending {
+        transform: none;
+    }
 }
