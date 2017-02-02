@@ -68,7 +68,7 @@ class BaseSelector extends React.Component {
   onBlur() {
     //Calling setState causes a rerender which removes SuggestionList from the DOM.
     //onSelect is thus never called when a SuggestionItem is clicked.
-    this.state = {...this.state, showSuggestions : false};
+    this.state = {...this.state, showSuggestions: false};
     this.props.onBlur();
     this.removeGlobalEventListeners();
   }
@@ -83,7 +83,7 @@ class BaseSelector extends React.Component {
     if (!this.hasFocus()) {
       this.onFocus();
     }
-    this.setState({inputHasFocus: true});
+    this.state = {...this.state, inputHasFocus: true};
   }
 
   onInputBlur(event) {
@@ -93,7 +93,7 @@ class BaseSelector extends React.Component {
         this.onBlur();
       }
     });
-    this.setState({inputHasFocus: false});
+    this.state = {...this.state, inputHasFocus: false};
   }
 
   showHideSuggestions(show, cb = ()=> {}) {
@@ -105,7 +105,7 @@ class BaseSelector extends React.Component {
     const {onSelect, shouldSetFocusToInputOnSelect} = this.props;
     onSelect(suggestion);
     if (shouldSetFocusToInputOnSelect) {
-      this.setState({inputHasFocus: true}, ()=> this.input.focus())
+      this.setState({inputHasFocus: true, showSuggestions: false, focusedSuggestionIndex: -1}, ()=> this.input.focus());
     }
   }
 
