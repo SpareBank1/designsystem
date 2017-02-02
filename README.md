@@ -10,12 +10,11 @@ $ npm install --save-dev ffe-core ffe-tables
 ```
 ffe-tables brukes på samme måte som ffe-core. Importer `ffe-tables/less/tables.less` for å ta i bruk alle listene.
 
-Ta en titt i [examples-filen](examples/example.html) for markup og [less-filen](less/responsive-table.less) for
+Ta en titt i [example-filen](example/example.html) for markup og [less-filen](less/responsive-table.less) for
 tilgjengelige klasser og modifiers.
 
 ## Bruk klassenavn på `.ffe-responsive-table` sine children!
-Fra og med versjon 2.0.0 oppfordres det til å bruke klassenavn på alle elementer, da styling direkte på DOM-struktur
-planlegges deprecated i fremtiden. Med andre ord - legg på klasser på alle tabell-relaterte tags.
+Fra og med versjon 3.0.0 er styling direkte på DOM-struktur deprecated. Med andre ord - legg på klasser på alle tabell-relaterte tags.
 
 ## Screenshot
 ![icons](visual-tests/baseline-screenshots/example/plain/firefox-large.png)
@@ -43,7 +42,7 @@ Når endringene dine er gjort må du oppdatere de visuelle regresjonstestene. De
 [Gemini](https://github.com/gemini-testing/gemini) er installert på din maskin:
 
 ```
-./update_visual_regression_test_baseline.sh
+./update_visual-tests-baselines.sh
 ```
 
 Verifiser ved å kjøre testene:

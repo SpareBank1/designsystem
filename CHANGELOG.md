@@ -1,5 +1,13 @@
 # Changelog
 
+## v.3.0.0
+
+* Adds styling for `ffe-sortable-table` og `ffe-expandable-row`.
+* Removes DOM styling on table elements
+* Adds a `--collapsed` modifier to `ffe-responsive-table__row` and `ffe-responsive-table__cell` to prevent them taking
+up any space. Used on the `.expand-icon` and the row that holds the content to be expanded.
+* Adds a `--text-right` modifier to `ffe-responsive-table__content`
+
 ## v.2.1.0
 
 Adds a `--vertical` modifier to `ffe-responsive-table__content` which makes the table-headers
