@@ -2,7 +2,7 @@
 
 ## v.3.0.0
 
-* BREAKING: Removes DOM styling on table elements.
+* BREAKING: Removes element styling on table elements.
 All table child elements MUST HAVE its corresponding classname. Take a look at the migrationg guide og the examples
 * Adds styling for `ffe-sortable-table` and `ffe-expandable-row`.
 * Adds a `--collapsed` modifier to `ffe-responsive-table__row` and `ffe-responsive-table__cell` to prevent them taking
@@ -25,6 +25,10 @@ Make sure all table child elements have the following classnames:
 ```
 
 `<tbody>`  (still) don't require classname
+
+**Visual diff**
+
+No visual diff. The tables in the examples have been updated to use caption instead of `<h2>`.
 
 ## v.2.1.0
 
