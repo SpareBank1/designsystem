@@ -5,53 +5,54 @@
     border-collapse: collapse;
 }
 
-.ffe-responsive-table caption,
 .ffe-responsive-table__caption {
     &:extend(.ffe-h4);
 }
 
-.ffe-responsive-table thead,
 .ffe-responsive-table__head {
     display: none;
 
-    @media (min-width: @breakpoint-md) {
+    @media screen and (min-width: @breakpoint-md) {
         display: table-header-group;
     }
 }
 
-.ffe-responsive-table tfoot,
 .ffe-responsive-table__footer {
     border-top: 2px solid @ffe-blue-royal;
 }
 
-.ffe-responsive-table tr,
 .ffe-responsive-table__row {
     border-bottom: 1px solid @ffe-grey-light;
     display: block;
     padding: 10px 0;
 
-    @media (min-width: @breakpoint-md) {
+    @media screen and (min-width: @breakpoint-md) {
         display: table-row;
     }
 }
 
-.ffe-responsive-table th,
 .ffe-responsive-table__heading {
     &:extend(.ffe-strong-text);
 
     text-align: left;
 }
 
-.ffe-responsive-table td,
 .ffe-responsive-table__cell {
     display: block;
 }
 
-.ffe-responsive-table th,
-.ffe-responsive-table td,
+.ffe-responsive-table__row,
+.ffe-responsive-table__cell {
+    &--collapsed {
+        line-height: 0;
+        padding: 0;
+        font-size: 0;
+    }
+}
+
 .ffe-responsive-table__heading,
 .ffe-responsive-table__cell {
-    @media (min-width: @breakpoint-md) {
+    @media screen and (min-width: @breakpoint-md) {
         display: table-cell;
         padding: 10px;
     }
@@ -67,25 +68,29 @@
         max-width: none;
     }
 
-    @media (min-width: @breakpoint-md) {
+    &--text-right {
+        text-align: right;
+    }
+
+    @media screen and (min-width: @breakpoint-md) {
         display: block;
         max-width: none;
     }
 }
 
 .ffe-responsive-table {
-    [data-th]:before {
+    [data-th]::before {
         content: attr(data-th);
         width: 100px;
         display: inline-block;
         &:extend(.ffe-strong-text);
 
-        @media (min-width: @breakpoint-md) {
+        @media screen and (min-width: @breakpoint-md) {
             display: none;
         }
     }
 
-    &--small-header [data-th]:before {
+    &--small-header [data-th]::before {
         width: 65px;
     }
 }
