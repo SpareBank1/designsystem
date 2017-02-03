@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import ReactDOM from 'react-dom';
 import Suggestion from './suggestion-item';
 
 export default class SuggestionList extends Component {
@@ -11,16 +10,18 @@ export default class SuggestionList extends Component {
       focusedIndex,
       renderSuggestion,
       renderNoMatches,
-      onKeyDown
     } = this.props;
     return (
-      <ul className='container-suggestion-list' role='listbox'>
+      <ul
+        className='container-suggestion-list'
+        role='listbox'
+      >
         { suggestions.length > 0 ?
           suggestions.map((item, index) => (
             <Suggestion
               key={index}
               item={item}
-              setFocus={index === focusedIndex}
+              isHighlighted={index === focusedIndex}
               render={renderSuggestion}
               onSelect={onSelect}
             />
