@@ -1,15 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 
-const TableCell = (props) => {
-    const {
-        children,
-        columnHeader,
-        alignRight,
-        tdClasses,
-        contentClasses,
-        colSpan
-    } = props;
+const TableCell = ({ children, columnHeader, alignRight, tdClasses, contentClasses, colSpan }) => {
 
     return (
         <td

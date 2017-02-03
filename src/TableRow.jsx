@@ -7,8 +7,7 @@ const TableRow = ({ cells, headers, onClick, trClasses, expanded }) => {
         <tr
             className={classNames(
                 'ffe-responsive-table__row ',
-                trClasses,
-                { 'ffe-responsive-table__row-expanded' : expanded }
+                trClasses
             )}
             onClick={ onClick }
             aria-expanded={ expanded }
@@ -16,6 +15,7 @@ const TableRow = ({ cells, headers, onClick, trClasses, expanded }) => {
         { headers.map((header, index) => {
             return <TableCell
                 key={ index }
+                tdClasses={ (header.key === 'expandIcon') ? 'ffe-responsive-table__cell--collapsed' : '' }
                 columnHeader={ header.content }
                 alignRight={ header.alignRight }
             >

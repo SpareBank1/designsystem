@@ -8,6 +8,7 @@ class TableRowExpandable extends Component {
     constructor(props) {
         super(props);
         this.handleKeyPress = this.handleKeyPress.bind(this);
+        this.toggleExpand = this.toggleExpand.bind(this);
         this.state = {
             expanded: false
         };
@@ -44,23 +45,22 @@ class TableRowExpandable extends Component {
                         { 'ffe-responsive-table__row-expandable--expanded' : this.state.expanded }
                     )}
                     headers={ headers }
-                    onClick={ this.toggleExpand.bind(this) }
+                    onClick={ this.toggleExpand }
                     expanded={ this.state.expanded }
                 />
                 <tr
                     role="presentation"
-                    aria-hidden={ this.state.expanded ? 'false' : 'true' }
+                    aria-hidden={String(!this.state.expanded)}
                     className={ classNames(
-                        'ffe-responsive-table__cell--no-border',
-                        'ffe-responsive-table__row-expanded-content',
-                         { 'ffe-responsive-table__row-expanded-content--expanded' : this.state.expanded }
+                        'ffe-responsive-table__row',
+                        'ffe-responsive-table__row-expandable-content',
+                         { 'ffe-responsive-table__row-expandable-content--expanded' : this.state.expanded },
+                         { 'ffe-responsive-table__row--collapsed' : !this.state.expanded }
                      )}
                 >
                     <td
-                        className={ classNames(
-                            { 'ffe-responsive-table__cell--no-padding' : !this.state.expanded }
-                        )}
                         colSpan={ headers.length }
+                        className="ffe-responsive-table__cell-expandable-content"
                     >
                         <div>
                             { this.state.expanded && children }
