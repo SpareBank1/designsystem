@@ -60,7 +60,7 @@
   },
   "peerDependencies": {
     "ffe-core": "^8.1.2",
-    "ffe-tables": "^2.0.0",
+    "ffe-tables": "^3.0.0",
     "ffe-icons-react": "2.1.0"
   },
   "dependencies": {
