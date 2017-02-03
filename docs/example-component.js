@@ -6,11 +6,13 @@ export const SuccessExample = (
 );
 
 export const ErrorExample = (
-    <ErrorMessage title="Noe gikk galt" content="Noe gikk galt. Vennligst prøv igjen senere!" />
+    <ErrorMessage title="Noe gikk galt" content={
+        <span>Noe gikk galt. Vennligst prøv igjen senere! <a href="#">Finn ut hva som gikk galt</a></span>}
+    />
 );
 
 export const TipsExample = (
-    <TipsMessage title="Et tips til deg" content="Følger du dette tipset i denne boksen kan du spare mange penger." />
+    <TipsMessage title="Et tips til deg" content={"Følger du dette tipset i denne boksen kan du spare mange penger."} />
 );
 
 export const InfoExample = (
