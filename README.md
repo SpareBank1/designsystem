@@ -32,7 +32,7 @@ const headers = [
 The `key` prop in headers corresponds to the prop you want to display in the data array object.
 The `alignRight` prop in headers will align the entire column
 
-The `data` prop is _required_, and expects an array of arrays of object like this:
+The `data` prop is _required_, and expects an array of object like this:
 
 ```javascript
 const data = [
@@ -44,6 +44,11 @@ const data = [
     {
         name: 'Sivert Svenska',
         address: 'Gatuveio 7',
+        age: 45,
+    },
+    {
+        name: 'Daniel Dansk',
+        address: <button>legg til adresse</button>,
         age: 45,
     }
 ]
@@ -59,7 +64,7 @@ The `<SortableTable />` component lets you create simple, flexible and sortable 
     data={Array}
 />
 ```
-`<SortableTable />` is not sortable on screen width > 768px (@breakpoint-md)
+`<SortableTable />` is not sortable on screen width < 768px (@breakpoint-md)
 
 The `<ExpandableRow />` component lets you create clickable tablerows that can expand complimentary content.
 Use it as a child to `<ResponsiveTable />` with the `expandable={true}` prop
