@@ -28,6 +28,10 @@ class ResponsiveTable extends Component {
             return null;
         }
 
+        if (this.props.expandable) {
+            headers.push({ key: 'expandIcon', content: '' , alignRight: true });
+        }
+
         return <TableHeaders headers={ headers } />;
     }
 
@@ -40,6 +44,10 @@ class ResponsiveTable extends Component {
 
         if (!data || !data.length) {
             return null;
+        }
+
+        if (this.props.children) {
+            return this.props.children;
         }
 
         return (
@@ -58,15 +66,20 @@ class ResponsiveTable extends Component {
                 {this.renderTableHeaders()}
                 {this.renderTableBody()}
             </table>
-        );
+          );
     }
 }
 
 ResponsiveTable.propTypes = {
     caption: PropTypes.string,
-    data: PropTypes.arrayOf(
+    expandable: PropTypes.bool,
+    children: PropTypes.node,
+    headerData: PropTypes.arrayOf(
         PropTypes.object
-    ).isRequired,
+    ),
+    data: PropTypes.arrayOf(
+            PropTypes.object
+        ).isRequired,
     headers: PropTypes.arrayOf(
         PropTypes.shape({
             content: PropTypes.node.isRequired,

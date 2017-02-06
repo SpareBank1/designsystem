@@ -1,6 +1,6 @@
 {
   "name": "ffe-tables-react",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "React implementation of ffe-tables",
   "main": "lib/index.js",
   "scripts": {
@@ -33,7 +33,7 @@
     "eslint-plugin-react": "^6.8.0",
     "ffe-core": "^8.1.2",
     "ffe-icons-react": "2.1.0",
-    "ffe-tables": "^2.0.0",
+    "ffe-tables": "^3.0.0",
     "mocha": "^2.5.3",
     "node-lessify": "^0.1.4",
     "nsp": "^2.2.0",
@@ -60,7 +60,7 @@
   },
   "peerDependencies": {
     "ffe-core": "^8.1.2",
-    "ffe-tables": "^2.0.0",
+    "ffe-tables": "^3.0.0",
     "ffe-icons-react": "2.1.0"
   },
   "dependencies": {
