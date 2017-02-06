@@ -1,6 +1,6 @@
 #CHANGELOG
 
-## Version 3.1.2
+## Version 3.1.2/3.1.3
 * Added changes to styleguide example
 
 ## Version 3.1.1

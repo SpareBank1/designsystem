@@ -7,7 +7,7 @@ export const SuccessExample = (
 
 export const ErrorExample = (
     <ErrorMessage title="Noe gikk galt" content={
-        <span>Noe gikk galt. Vennligst prøv igjen senere! <a href="#">Finn ut hva som gikk galt</a></span>}
+        <span>Noe gikk galt. Vennligst prøv igjen senere! <a className="ffe-message-box__link" href="#">Finn ut hva som gikk galt</a></span>}
     />
 );
 
