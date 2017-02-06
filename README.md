@@ -2,7 +2,6 @@
 
 ## Intro
 Felles form-/skjemakomponentpakke for SpareBank 1. Inneholder styling for form-/skjemaelementer i FFE.
-![exempel](visual-tests/baseline-screenshots/index/plain/firefox.png)
 
 ## Bruk
 Modulen inneholder LESS-filer som kan importeres direkte fra node_modules til prosjektets CSS/LESS.
