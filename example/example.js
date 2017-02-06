@@ -1,19 +1,21 @@
 import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
+import prettyHtml from 'pretty';
 import ThumbUpIcon from 'ffe-icons-react/tommel-opp-ikon';
 import {
     ContextInfoMessage,
     ContextTipMessage,
+    ContextSuccessMessage,
 } from '../lib';
 
 const example = (
     <div>
         <div className="component-intro">
             <h2 className="component-intro__header">Kontekst Meldinger</h2>
-            <div className="lozenge lozenge--wip">UNDER ARBEID</div>
+            <div className="lozenge lozenge--success">I PRODUKSJON</div>
             <p className="ffe-micro-text ffe-external-docs-text">
                 RELATERTE PAKKER PÅ STASH:
-                <a href="***REMOVED***">LESS</a>
+                <a href="***REMOVED***">LESS</a>&nbsp;
                 <a href="***REMOVED***">REACT</a>
             </p>
             <p>Gir side eller produktspesifikk informasjon av ikke kritisk art</p>
@@ -44,6 +46,18 @@ const example = (
             </ContextTipMessage>
         </div>
 
+        <div className="example-container">
+            <h4 className="example-container__header">Success</h4>
+            <ContextSuccessMessage
+                header='Success'
+                locale='nb'
+                icon={<ThumbUpIcon />}
+                showCloseButton={true}
+            >
+                Alt gikk bra!
+            </ContextSuccessMessage>
+        </div>
+
         <div className="expanding-field">
             <button className="expanding-field__toggle">Vis HTML</button>
             <span className="expanding-field__icon"></span>
@@ -51,7 +65,7 @@ const example = (
                 <pre>
                     <code className="html hljs xml">
                         {
-                            renderToStaticMarkup(
+                            prettyHtml(renderToStaticMarkup(
                                 <ContextInfoMessage
                                     header='Info'
                                     locale='nb'
@@ -59,7 +73,7 @@ const example = (
                                 >
                                     Info om en spennede side eller produkt.
                                 </ContextInfoMessage>
-                            ).replace(/</, '\n<')
+                            ))
                         }
                     </code>
                 </pre>
