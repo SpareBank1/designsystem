@@ -34,7 +34,7 @@ class SortableTable extends Component {
     }
 
     handleKeyPress(headerKey, event) {
-        if ( event.key === 'Enter') {
+        if ( event.key === 'Enter' || event.key === ' ' ) {
             this.tableHeaderClicked(headerKey);
             event.preventDefault();
         }
@@ -48,15 +48,15 @@ class SortableTable extends Component {
     }
 
     decorateSortableTableHeader(header) {
-        const tabIndex = { tabIndex:'0' };
         return (
             <span
-                {...tabIndex}
+                tabIndex="0"
                 onKeyDown={ (event) => this.handleKeyPress(header.key, event) }
                 className={classNames(
                     'ffe-sortable-table__header',
                     { 'ffe-sortable-table__header--active': this.state.sortBy === header.key }
                 )}
+                role="button"
                 onClick={ this.tableHeaderClicked.bind(this, header.key) }
             >
                 { header.content }
