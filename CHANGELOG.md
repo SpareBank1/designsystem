@@ -1,5 +1,11 @@
 # Changelog
 
+## v.8.2.0
+
+Added `--bg-blue` and `--bg-blue-flat` modifiers to `.ffe-section-wrapper`.
+The `--bg-blue-flat` text color to `ffe-white` for all its children since the
+default color does not work very well on dark blue backgrounds.
+
 ## v.8.1.2
 
 This release changes the font size and / or line-height for h2, h4 and h6 for
