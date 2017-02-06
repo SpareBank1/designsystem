@@ -12,7 +12,7 @@ const example = (
     <div>
         <div className="component-intro">
             <h2 className="component-intro__header">System Message</h2>
-            <div className="lozenge lozenge-success">I PRODUKSJON</div>
+            <div className="lozenge lozenge--success">I PRODUKSJON</div>
             <p className="ffe-micro-text ffe-external-docs-text">
                 HENTET FRA <a href="***REMOVED***">STASH</a>
             </p>

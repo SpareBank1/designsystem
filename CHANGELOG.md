@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## Version 1.1.2
+* Minor bugfix in example
+
 ## Version 1.1.1
 * Upgrade eslint to use ffe config
 
