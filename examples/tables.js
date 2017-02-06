@@ -15,6 +15,9 @@ render(
     <div className="ffe-section-wrapper">
       <div className="ffe-content-container">
 
+        <h2 className="ffe-h2">Responsive table</h2>
+        <ResponsiveTable headers={SIMPLE_TABLE.headers} data={SIMPLE_TABLE.dataObject}/>
+
         <h2 className="ffe-h2">Responsive table with expandable rows</h2>
         <ResponsiveTable headers={SIMPLE_TABLE_EXPANDABLE.headers} data={SIMPLE_TABLE_EXPANDABLE.dataObject} expandable={true}>
 
@@ -35,9 +38,6 @@ render(
             ))
           }
         </ResponsiveTable>
-
-        <h2 className="ffe-h2">Responsive table</h2>
-        <ResponsiveTable headers={SIMPLE_TABLE.headers} data={SIMPLE_TABLE.dataObject}/>
 
         <h2 className="ffe-h2">Sortable table</h2>
         <SortableTable headers={SIMPLE_TABLE.headers} data={SIMPLE_TABLE.dataObject} />

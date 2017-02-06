@@ -21,25 +21,73 @@ The `<ResponsiveTable />` component lets you create simple, yet flexible tables 
 />
 ```
 
-The `headers` prop is _optional_, and expects an array of nodes like this:
+The `headers` prop is _required_, and expects an array of objects like this:
 
 ```javascript
 const headers = [
-    <input type="checkbox" />,
-    "First name",
-    2016
+    { key: 'name', content: 'Navn' },
+    { key: 'age', content: 'Alder', alignRight: true }
 ];
 ```
+The `key` prop in headers corresponds to the prop you want to display in the data array object.
+The `alignRight` prop in headers will align the entire column
 
-The `data` prop is _optional_, and expects an array of arrays of nodes like this:
+The `data` prop is _required_, and expects an array of arrays of object like this:
 
 ```javascript
 const data = [
-    ['row 1 column 1', 'row 1 column 2', 'row 1 column 3 etc', ],
-    ['row 2 column 1', 'also support for components', <ActionButton onClick={this.onSave} />]
+    {
+        name: 'Ola Normann',
+        address: 'Gateveien 2',
+        age: 23
+    },
+    {
+        name: 'Sivert Svenska',
+        address: 'Gatuveio 7',
+        age: 45,
+    }
 ]
 ```
 
+Note: the `address` prop will not be displayed since it's not defined in the `headers`.
+
+The `<SortableTable />` component lets you create simple, flexible and sortable table. It expects the same props as `<ResponsiveTable />`.
+
+```javascript
+<SortableTable
+    headers={Array}
+    data={Array}
+/>
+```
+`<SortableTable />` is not sortable on screen width > 768px (@breakpoint-md)
+
+The `<ExpandableRow />` component lets you create clickable tablerows that can expand complimentary content.
+Use it as a child to `<ResponsiveTable />` with the `expandable={true}` prop
+You need to pass the same `headers` prop to <TableRowExpandable />
+
+```javascript
+<ResponsiveTable
+    headers={headers}
+    data={tableData}
+    expandable={true}>
+      {
+        tableData.map((row, index) => (
+          <TableRowExpandable
+            cells={ row }
+            headers={headers}
+            key={ index }>
+                <div>
+                    <p>This content will be revealed on expand<p>
+                    <p>Address: { row.address }</p>
+                </div>
+          </TableRowExpandable>
+        ))
+      }
+</ResponsiveTable>
+```
+
+The `headers` prop is _required_, and expects the same array passed to `<ResponsiveTable />`.
+The `cells` prop is _required_, and expects one of the objects in the `data` array passed to `<ResponsiveTable />`.
 
 ## Examples
 
