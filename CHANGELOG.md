@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.2.1
+* Added meta-data for style guide
+
 ## v1.2.0
 * Added support for 0 column offset
 
