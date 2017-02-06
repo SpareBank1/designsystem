@@ -1,6 +1,6 @@
 {
     "name": "ffe-grid",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "description": "A grid component for use within the FFE framework",
     "scripts": {
         "compile": "lessc examples/examples.less examples/examples.css && cp -R node_modules/ffe-core/fonts/ examples/ && echo \"$(date +%T): Updated examples\"",
@@ -16,7 +16,8 @@
         "ffe"
     ],
     "files": [
-        "less"
+        "less",
+        "examples"
     ],
     "author": "SpareBank 1",
     "repository": {
@@ -26,6 +27,18 @@
     "publishConfig": {
         "registry": "***REMOVED***"
     },
+    "homepage": "***REMOVED***",
+    "documentation": [
+        {
+          "type": "html",
+          "file": "examples/examples.html",
+          "select": "#ffedoc"
+        },
+        {
+          "type": "markdown",
+          "file": "README.md"
+        }
+    ],
     "license": "ISC",
     "peerDependencies": {
         "ffe-core": "^8.0.0"
