@@ -1,5 +1,8 @@
 #CHANGELOG
 
+## Version 3.1.2
+* Added changes to styleguide example
+
 ## Version 3.1.1
 * Bugfix: Stale version number of dependency react-dom caused peer dependency conflicts on npm install.
 
