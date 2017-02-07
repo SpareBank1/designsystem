@@ -23,6 +23,7 @@ const TableCell = ({ children, columnHeader, alignRight, tdClasses, contentClass
 };
 
 TableCell.propTypes = {
+    children: React.PropTypes.any,
     columnHeader: React.PropTypes.string,
     alignRight: React.PropTypes.bool,
     tdClasses: React.PropTypes.string,

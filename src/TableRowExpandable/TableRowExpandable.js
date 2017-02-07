@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import classNames from 'classnames';
-import TableRow from '../TableRow.jsx';
+import TableRow from '../TableRow';
 import Chevron from 'ffe-icons-react/chevron-ikon';
 
 class TableRowExpandable extends Component {
@@ -19,7 +19,7 @@ class TableRowExpandable extends Component {
     }
 
     handleKeyPress(event) {
-        if ( event.key === 'Enter' && event.target.tagName === 'TBODY') {
+        if ((event.key === 'Enter' || event.key === ' ') && event.target.tagName === 'TR') {
             this.setState({ expanded: !this.state.expanded});
             event.preventDefault();
         }
@@ -29,7 +29,7 @@ class TableRowExpandable extends Component {
         const { cells, headers, children } = this.props;
 
         return (
-            <tbody tabIndex="0" onKeyDown={ this.handleKeyPress }>
+            <tbody>
                 <TableRow
                     cells={{
                         ...cells,
@@ -46,6 +46,7 @@ class TableRowExpandable extends Component {
                     )}
                     headers={ headers }
                     onClick={ this.toggleExpand }
+                    onKeyDown={ this.handleKeyPress }
                     expanded={ this.state.expanded }
                 />
                 <tr
