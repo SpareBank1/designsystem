@@ -68,6 +68,14 @@ Remove the default top padding from the grid itself
 #### `.ffe-grid__col--no-bottom-padding`
 Remove the default bottom padding from the column
 
+### Colours
+
+#### `.ffe-grid__row--bg-blue`
+Adds the `@ffe-blue-royal-light-20` color as a background for the row
+
+#### `.ffe-grid__row--bg-sand`
+Adds the `@ffe-sand` color as a background for the row
+
 ### Flexbox
 
 Since the grid is based on the flexbox layout model, there's a few extra modifiers that's available
@@ -75,9 +83,6 @@ to you.
 
 #### `.ffe-grid__row--reverse`
 Reverses the grid columns so that they're laid out right to left instead
-
-#### `.ffe-grid__row--bg-blue`
-Adds the `@ffe-blue-royal-light-20` color as a background for the row
 
 #### `.ffe-grid__col--start`
 Aligns the content of a cell to the left
