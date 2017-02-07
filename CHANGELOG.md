@@ -2,6 +2,7 @@
 
 ## v.2.1.0
 * New modifier: `.ffe-grid__row--bg-sand`, adds `@ffe-sand` background colour.
+* New modifier: `.ffe-grid__row--top-padding`, adds padding to the top of a row.
 
 ## v.2.0.0
 * Visual change: `ffe-grid` now by default has a 40px padding on top, which is the same padding
