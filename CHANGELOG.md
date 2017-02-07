@@ -1,5 +1,8 @@
 #CHANGELOG
 
+## Version 3.1.4
+* Bumped ffe-icons-react dependency to ^2.3.0
+
 ## Version 3.1.2/3.1.3
 * Added changes to styleguide example
 
