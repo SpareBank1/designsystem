@@ -60,6 +60,14 @@ The pattern is like so: `ffe-grid__col--{size}-offset-{num-of-cols}`
 The offsets work in a similar fashion to the width specification modifiers. Each breakpoint
 can have its own offset if needed.
 
+### Padding
+
+#### `.ffe-grid--no-top-padding`
+Remove the default top padding from the grid itself
+
+#### `.ffe-grid__col--no-bottom-padding`
+Remove the default bottom padding from the column
+
 ### Flexbox
 
 Since the grid is based on the flexbox layout model, there's a few extra modifiers that's available
@@ -94,9 +102,6 @@ Space the content out with space around each item
 
 #### `.ffe-grid__col--between`
 Space the content out with space between each item
-
-#### `.ffe-grid__col--no-bottom-padding`
-Remove the default bottom padding from the column
 
 ## Development
 
