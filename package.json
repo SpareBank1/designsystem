@@ -1,6 +1,6 @@
 {
   "name": "ffe-grid-react",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "main": "lib/index.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/. && npm run example",
@@ -20,7 +20,7 @@
     "classnames": "^2.2.5"
   },
   "peerDependencies": {
-    "ffe-grid": "^1.1.0"
+    "ffe-grid": "^2.1.0"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
