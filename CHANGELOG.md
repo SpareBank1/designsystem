@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.2.2
+* Bugfix: `--no-bottom-padding` modifer on `ffe-grid__col` now works
+
 ## v1.2.1
 * Added meta-data for style guide
 
