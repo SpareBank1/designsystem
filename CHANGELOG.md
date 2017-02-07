@@ -1,5 +1,8 @@
 #CHANGELOG
 
+## Version 4.1.0
+Oppdatert eksempler med beskrivelse
+
 ## Version 4.0.1
 Meta-data til styleguide
 
