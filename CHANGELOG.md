@@ -1,5 +1,11 @@
 # Changelog
 
+## v.8.2.2
+
+`ffe-divider-line`'s width explicitly set to 100% to make sure it divides its entire
+container. This fixes an issue discovered when using the divider in a `ffe-grid` column.
+It should not affect dividers used outside of flex-containers.
+
 ## v.8.2.1
 
 Change `ffe-section-wrapper--bg-blue-flat` text color selector from wildcard to individual for typography.
