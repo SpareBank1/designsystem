@@ -1,5 +1,11 @@
 # Changelog
 
+## v.8.2.1
+
+Change `ffe-section-wrapper--bg-blue-flat` text color selector from wildcard to individual for typography.
+This fixes a bug where `ffe-secondary-button` inside a `ffe-section-wrapper--bg-blue-flat` would get
+white text on a white background.
+
 ## v.8.2.0
 
 Added `--bg-blue` and `--bg-blue-flat` modifiers to `.ffe-section-wrapper`.
