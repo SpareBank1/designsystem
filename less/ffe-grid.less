@@ -21,8 +21,21 @@
 .ffe-grid {
     margin-left: auto;
     margin-right: auto;
-    width: 100%;
     max-width: @ffe-grid-width;
+    padding-top: @ffe-grid-gutter-sm;
+    width: 100%;
+
+    &--no-top-padding {
+        padding-top: 0;
+    }
+
+    @media only screen and (min-width: @breakpoint-lg) {
+        padding-top: @ffe-grid-gutter-lg;
+
+        &--no-top-padding {
+            padding-top: 0;
+        }
+    }
 }
 
 .ffe-grid__row {
@@ -132,6 +145,7 @@
 
 @media only screen and (min-width: @breakpoint-md) {
     .create-column(md, 12);
+
     .ffe-grid__col--md-offset-0 {
         margin-left: 0;
     }
@@ -139,6 +153,7 @@
 
 @media only screen and (min-width: @breakpoint-lg) {
     .create-column(lg, 12);
+
     .ffe-grid__col--lg-offset-0 {
         margin-left: 0;
     }
@@ -146,6 +161,7 @@
 
 @media only screen and (min-width: @breakpoint-xl) {
     .create-column(xl, 12);
+
     .ffe-grid__col--xl-offset-0 {
         margin-left: 0;
     }
