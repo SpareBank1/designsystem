@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.0.2
+
+* exports in index.js
+* refactoring
+
 ## v1.0.1
 
 * Update dependency ffe-icons-react to ^2.1.0

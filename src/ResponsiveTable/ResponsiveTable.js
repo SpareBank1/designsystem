@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
-import TableHeaders from '../TableHeaders.jsx';
-import TableRow from '../TableRow.jsx';
+import TableHeaders from '../TableHeaders';
+import TableRow from '../TableRow';
 
 class ResponsiveTable extends Component {
     renderTableCaption() {

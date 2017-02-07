@@ -9,22 +9,26 @@ const TableHeaders = ({ headers }) => {
             <tr className="ffe-responsive-table__row">
                 { headers.map((header, index) => {
                     if (header === null) {
-                        return <th key={ index }></th>;
-                    } else {
-                        return <th key={ index }
-                                   className="ffe-responsive-table__heading"
-                                   aria-sort={ header.ariaSort }
-                                   scope="col">
+                        return <th key={ index } />;
+                    }
+                    return (
+                        <th
+                            key={ index }
+                            className="ffe-responsive-table__heading"
+                            aria-sort={ header.ariaSort }
+                            scope="col"
+                        >
                             <span
                                 className={classNames(
                                     'ffe-responsive-table__content',
                                     { 'ffe-responsive-table__content--text-right' : header.alignRight }
                                     )}
                             >
-                            { header.content }
+                              { header.content }
                             </span>
                         </th>
-                    }
+                    );
+
                 })}
             </tr>
     </thead>
