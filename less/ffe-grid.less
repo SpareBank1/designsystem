@@ -60,6 +60,14 @@
     &--bg-sand {
         background-color: @ffe-sand;
     }
+
+    &--top-padding {
+        padding-top: @ffe-grid-gutter-sm;
+
+        @media only screen and (min-width: @breakpoint-lg) {
+            padding-top: @ffe-grid-gutter-lg;
+        }
+    }
 }
 
 .ffe-grid__col {

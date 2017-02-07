@@ -65,6 +65,9 @@ can have its own offset if needed.
 #### `.ffe-grid--no-top-padding`
 Remove the default top padding from the grid itself
 
+#### `.ffe-grid__row--top-padding`
+Add padding to the top of a grid row
+
 #### `.ffe-grid__col--no-bottom-padding`
 Remove the default bottom padding from the column
 
