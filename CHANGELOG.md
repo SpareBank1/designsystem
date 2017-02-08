@@ -1,5 +1,8 @@
 # Changelog
 
+## v2.0.9
+* Remove event listeners on unmount
+
 ## v2.0.8
 * Fix focus/click bug which made it possible to keep several calendars open when having more than one datepicker on the same page
 

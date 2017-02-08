@@ -27,6 +27,10 @@ export default class FFEDatepicker extends React.Component {
     this.onInputBlur = this.onInputBlur.bind(this);
   }
 
+  componentWillUnmount() {
+    this.removeGlobalEventListeners();
+  }
+
   onInputFocus() {
     if (this.state.openOnFocus) {
       this.openCalendar();
