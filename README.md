@@ -42,7 +42,7 @@ render() {
 
 To set the number of cols and offset for `lg`, `md` or `sm` displays use the object syntax, for just setting the number of cols you can supply either a string or a number.
 
-All the components support the same modifiers that can be found in [ffe-grid](***REMOVED***). Modifiers that are snake-cased in `ffe-grid` is supplied with camelCase to the react-components.
+All the components aim to support the same modifiers that can be found in [ffe-grid](***REMOVED***). Modifiers that are snake-cased in `ffe-grid` is supplied with camelCase to the react-components.
 
 ```javascript
 <GridRow bgBlue={true}>
