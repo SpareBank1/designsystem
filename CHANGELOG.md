@@ -1,5 +1,9 @@
 #CHANGELOG
 
+## Version 4.1.0
+* Oppdatert eksempler med beskrivelse
+* Tatt i bruk `ffe-visual-tests-support`
+
 ## Version 4.0.1
 Meta-data til styleguide
 
