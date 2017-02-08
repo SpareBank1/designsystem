@@ -35,4 +35,18 @@ describe('GridRow', () => {
         expect(el.hasClass('ffe-grid__row')).to.be(true);
         expect(el.hasClass('ffe-grid__row--bg-blue')).to.be(true);
     });
+
+    it('sets the bgSand modifier', () => {
+        const el = renderShallow({ bgSand: true });
+
+        expect(el.hasClass('ffe-grid__row')).to.be(true);
+        expect(el.hasClass('ffe-grid__row--bg-sand')).to.be(true);
+    });
+
+    it('sets the topPadding modifier', () => {
+        const el = renderShallow({ topPadding: true });
+
+        expect(el.hasClass('ffe-grid__row')).to.be(true);
+        expect(el.hasClass('ffe-grid__row--top-padding')).to.be(true);
+    });
 });
