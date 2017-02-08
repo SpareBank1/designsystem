@@ -1,9 +1,9 @@
 rootUrl: ***REMOVED***
-windowSize: 1030x1080
+gridUrl: 'overidden by test script to point towards dockerized browser'
 screenshotsDir: './visual-tests/baseline-screenshots'
 browsers:
   firefox:
-    gridUrl: http://0.0.0.0:32783/wd/hub
+    windowSize: 1030x1080
     desiredCapabilities:
       browserName: firefox
 
