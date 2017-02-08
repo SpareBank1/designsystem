@@ -42,12 +42,12 @@ class ResponsiveTable extends Component {
             headerData
         } = this.props;
 
-        if (!data || !data.length) {
-            return null;
-        }
-
         if (this.props.children) {
             return this.props.children;
+        }
+
+        if (!data || !data.length) {
+            return null;
         }
 
         return (
@@ -79,7 +79,7 @@ ResponsiveTable.propTypes = {
     ),
     data: PropTypes.arrayOf(
             PropTypes.object
-        ).isRequired,
+        ),
     headers: PropTypes.arrayOf(
         PropTypes.shape({
             content: PropTypes.node.isRequired,
