@@ -12,17 +12,19 @@ const example = (
             HENTET FRA <a href="***REMOVED***">STASH</a>
         </p>
         <p>Message box bør brukes når man skal vise informasjon til bruker, som at en oppdatering har feilet eller at tjenester er nede. </p>
+        <p>Keep it short and simple! Det skal være reelle tips/informasjon til brukeren, ikke informasjon vi ønsker å forklare her fordi vi ikke finner noe annet sted å gjøre det. For mye tekst gjør at komponenten mister litt av meningen.
+Boksene skal ha overskrift, og teksten skal være midtstilt, men i de tilfellene man har punkter vil teksten være venstrejustert.</p>
     </div>
 
     <h3 className="ffe-h4">Eksempler</h3>
 
     <div className="example-container">
-        <p className="example-container__header">Success</p>
+        <p className="example-container__header">Suksessmelding</p>
         { SuccessExample }
     </div>
 
     <div className="example-container">
-        <p className="example-container__header">Error</p>
+        <p className="example-container__header">Feilmelding</p>
         { ErrorExample }
     </div>
 
@@ -32,7 +34,7 @@ const example = (
     </div>
 
     <div className="example-container">
-        <p className="example-container__header">Info</p>
+        <p className="example-container__header">Fakta∕Informasjon</p>
         { InfoExample }
     </div>
 
