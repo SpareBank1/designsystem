@@ -59,12 +59,12 @@ describe('Button components:', () => {
         let wrapper = render(<ShortcutButton onClick={() => ({})}>Hello</ShortcutButton>);
         expect(wrapper.find('.ffe-shortcut-button')).to.have.length(1);
         expect(wrapper.find('.ffe-shortcut-button__label-text').text()).to.equal('Hello');
-        expect(wrapper.find('svg.ffe-shortcut-button__label-icon')).to.have.length(1);
+        expect(wrapper.find('svg.ffe-shortcut-button__icon-chevron')).to.have.length(1);
 
         wrapper = render(<ShortcutButton onClick={() => ({})} label="Hello" />);
         expect(wrapper.find('.ffe-shortcut-button')).to.have.length(1);
         expect(wrapper.find('.ffe-shortcut-button__label-text').text()).to.equal('Hello');
-        expect(wrapper.find('svg.ffe-shortcut-button__label-icon')).to.have.length(1);
+        expect(wrapper.find('svg.ffe-shortcut-button__icon-chevron')).to.have.length(1);
     });
 
     it('TertiaryButton renders a tertiary button', () => {

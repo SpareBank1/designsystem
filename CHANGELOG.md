@@ -1,5 +1,8 @@
 # Changelog
 
+## v5.1.2
+* Bugfix: ShortcutButton used wrong css-class on its icon.
+
 ## v5.1.1
 * Upgrade eslint and fix linting errors.
 

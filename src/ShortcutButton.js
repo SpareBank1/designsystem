@@ -7,7 +7,7 @@ export default function ShortcutButton(props) {
 
     return <Button {...props} label={null} buttonType="shortcut">
                 {children}
-                <ChevronIcon className="ffe-shortcut-button__label-icon" />
+                <ChevronIcon className="ffe-shortcut-button__icon-chevron" />
             </Button>;
 }
 
