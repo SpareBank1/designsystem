@@ -1,5 +1,8 @@
 # Changelog
 
+## v2.5.5
+* According to Bodil Egge, icons in buttons are 14x14 px in "verktøykassa", not 18x18 px. This change only affects the size of the icon, the button's outer dimensions are not changed.
+
 ## v2.5.4
 * Fix visual bug with icons in buttons in IE by explicitly setting label icon width.
 
