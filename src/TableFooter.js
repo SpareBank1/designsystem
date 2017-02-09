@@ -1,21 +1,21 @@
 import React, { PropTypes } from 'react';
 import TableCell from './TableCell';
 
-const TableFooter = ({ headers }) => {
+const TableFooter = ({ columns }) => {
     return (
         <tfoot className="ffe-responsive-table__footer">
             <tr className="ffe-responsive-table__row">
-                { headers.map((header, index) => {
-                    if (header === null) {
+                { columns.map((column, index) => {
+                    if (column === null) {
                         return <td key={ index } />;
                     }
                     return (
                         <TableCell
                             key={ index }
-                            columnHeader={ header.content }
-                            alignRight={ header.alignRight }
+                            columnHeader={ column.content }
+                            alignRight={ column.alignRight }
                         >
-                            { header.footerContent }
+                            { column.footer }
                         </TableCell>
                     );
                 })}
@@ -25,11 +25,11 @@ const TableFooter = ({ headers }) => {
 };
 
 TableFooter.propTypes = {
-    headers: PropTypes.arrayOf(
+    columns: PropTypes.arrayOf(
         PropTypes.shape({
-            content: PropTypes.node.isRequired,
-            key: PropTypes.string.isRequired,
-            footerContent: PropTypes.any,
+			key: PropTypes.string.isRequired,
+			header: PropTypes.node.isRequired,
+            footer: PropTypes.any,
             alignRight: PropTypes.bool,
         })
     ),

@@ -3,28 +3,28 @@ import React, { PropTypes } from 'react';
 
 import classNames from 'classnames';
 
-const TableHeaders = ({ headers }) => {
+const TableHeaders = ({ columns }) => {
     return (
         <thead className="ffe-responsive-table__head">
             <tr className="ffe-responsive-table__row">
-                { headers.map((header, index) => {
-                    if (header === null) {
+                { columns.map((column, index) => {
+                    if (column === null) {
                         return <th key={ index } />;
                     }
                     return (
                         <th
                             key={ index }
                             className="ffe-responsive-table__heading"
-                            aria-sort={ header.ariaSort }
+                            aria-sort={ column.ariaSort }
                             scope="col"
                         >
                             <span
                                 className={classNames(
                                     'ffe-responsive-table__content',
-                                    { 'ffe-responsive-table__content--text-right' : header.alignRight }
+                                    { 'ffe-responsive-table__content--text-right' : column.alignRight }
                                     )}
                             >
-                              { header.content }
+                              { column.header }
                             </span>
                         </th>
                     );
@@ -36,9 +36,9 @@ const TableHeaders = ({ headers }) => {
 };
 
 TableHeaders.propTypes = {
-    headers: PropTypes.arrayOf(
+    columns: PropTypes.arrayOf(
         PropTypes.shape({
-            content: PropTypes.node.isRequired,
+            header: PropTypes.node.isRequired,
             key: PropTypes.string.isRequired,
             alignRight: PropTypes.bool,
         })

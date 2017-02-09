@@ -5,10 +5,10 @@ import SortableTable from './SortableTable';
 
 describe('<SortableTable>', () => {
 
-  const headers = [
-    {content: 'Name', key: 'name'},
-    {content: 'Age', key: 'age'},
-    {content: 'Employee-id', key: 'id'}
+  const columns = [
+    {header: 'Name', key: 'name'},
+    {header: 'Age', key: 'age'},
+    {header: 'Employee-id', key: 'id'}
   ];
 
   const data = [
@@ -18,10 +18,10 @@ describe('<SortableTable>', () => {
     {name: 'Jon Snow', age: 20, id: 1}
   ];
 
-  const wrapper = render(<SortableTable headers={headers} data={data}/>);
+  const wrapper = render(<SortableTable columns={columns} data={data}/>);
 
   it('should show right amount of th tags', () => {
-    expect(wrapper.find('th')).to.have.length(headers.length);
+    expect(wrapper.find('th')).to.have.length(columns.length);
   });
 
   it('should render a row for each data array entry', () => {
@@ -29,10 +29,10 @@ describe('<SortableTable>', () => {
   });
 
   it('should set data-th property on each cell rendered', () => {
-    expect(wrapper.find('[data-th]')).to.have.length((data.length * headers.length));
+    expect(wrapper.find('[data-th]')).to.have.length((data.length * columns.length));
   });
 
   it('should add `aria-sort` property', () => {
-    expect(wrapper.find('[aria-sort]')).to.have.length(headers.length);
+    expect(wrapper.find('[aria-sort]')).to.have.length(columns.length);
     });
 });

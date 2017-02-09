@@ -6,15 +6,15 @@ import { shallow, render } from 'enzyme';
 import ResponsiveTable from './ResponsiveTable';
 
 describe('<ResponsiveTable />', () => {
-  const headers = [
-    { key: 'name', content: 'Navn' },
-    { key: 'address', content: 'Adresse' },
-    { key: 'age', content: 'Alder', alignRight: true }
+  const columns = [
+    { key: 'name', header: 'Navn' },
+    { key: 'address', header: 'Adresse' },
+    { key: 'age', header: 'Alder', alignRight: true }
   ];
-  const headersWithFooterContent = [
-    { key: 'name', content: 'Navn', footerContent: 'Sum alder' },
-    { key: 'address', content: 'Adresse' },
-    { key: 'age', content: 'Alder', footerContent: 135, alignRight: true }
+  const columnsWithFooterContent = [
+    { key: 'name', header: 'Navn', footer: 'Sum alder' },
+    { key: 'address', header: 'Adresse' },
+    { key: 'age', header: 'Alder', footer: 135, alignRight: true }
   ];
   const data = [
     { name: 'Ola Normann', address: 'Gateveien 2', age: 23, phone: '912 34 567' },
@@ -24,12 +24,12 @@ describe('<ResponsiveTable />', () => {
 
   describe('general', () => {
     it('renders without exploding', () => {
-      const wrapper = shallow(<ResponsiveTable headers={headers} data={data}/>);
+      const wrapper = shallow(<ResponsiveTable columns={columns} data={data}/>);
       expect(wrapper).to.have.length(1);
     });
 
     it('renders the correct dom structure', () => {
-      const wrapper = shallow(<ResponsiveTable headers={headers} data={data}/>);
+      const wrapper = shallow(<ResponsiveTable columns={columns} data={data}/>);
       expect(wrapper.is('table')).to.equal(true);
       expect(wrapper.hasClass('ffe-responsive-table')).to.equal(true);
     });
@@ -37,36 +37,36 @@ describe('<ResponsiveTable />', () => {
 
   describe('table caption', () => {
     it('does not render a <caption /> if caption prop is not provided', () => {
-      const wrapper = shallow(<ResponsiveTable headers={headers} data={data}/>);
+      const wrapper = shallow(<ResponsiveTable columns={columns} data={data}/>);
       expect(wrapper.find('caption')).to.have.length(0);
     });
 
     it('renders a <caption /> if caption prop is provided', () => {
-      const wrapper = shallow(<ResponsiveTable headers={headers} data={data} caption="A nice table" />);
+      const wrapper = shallow(<ResponsiveTable columns={columns} data={data} caption="A nice table" />);
       expect(wrapper.find('caption')).to.have.length(1);
       expect(wrapper.find('caption').text()).to.equal('A nice table');
     });
   });
 
   describe('table headers', () => {
-    const wrapper = render(<ResponsiveTable headers={headers} data={data}/>);
+    const wrapper = render(<ResponsiveTable columns={columns} data={data}/>);
 
-    it('renders headers inside a <thead />', () => {
+    it('renders columns inside a <thead />', () => {
       expect(wrapper.find('thead')).to.have.length(1);
     });
 
-    it('renders headers as <th /> tags', () => {
+    it('renders columns as <th /> tags', () => {
       expect(wrapper.find('th')).to.have.length(3);
     });
 
     it('renders header content as <th /> content', () => {
-      expect(wrapper.find('th').first().text()).to.equal(headers[0].content);
+      expect(wrapper.find('th').first().text()).to.equal(columns[0].header);
     });
 
   });
 
   describe('table footer', () => {
-     const wrapper = render(<ResponsiveTable headers={headersWithFooterContent} data={data}/>);
+     const wrapper = render(<ResponsiveTable columns={columnsWithFooterContent} data={data}/>);
 
     it('renders a <tfoot />', () => {
       expect(wrapper.find('tfoot')).to.have.length(1);
@@ -77,7 +77,7 @@ describe('<ResponsiveTable />', () => {
     });
 
     it('does not render <tfoot /> unless footerContent is present', () => {
-      const wrapper2 = render(<ResponsiveTable headers={headers} data={data}/>);
+      const wrapper2 = render(<ResponsiveTable columns={columns} data={data}/>);
       expect(wrapper2.find('tfoot')).to.have.length(0);
     });
   });
@@ -85,46 +85,46 @@ describe('<ResponsiveTable />', () => {
   describe('table body', () => {
 
     it('does not render a tbody if data prop is empty', () => {
-      const wrapper = shallow(<ResponsiveTable headers={headers} data={[]} />);
+      const wrapper = shallow(<ResponsiveTable columns={columns} data={[]} />);
       expect(wrapper.find('tbody')).to.have.length(0);
     });
 
     it('renders a tbody if data is provided', () => {
-      const wrapper = shallow(<ResponsiveTable headers={headers} data={data} />);
+      const wrapper = shallow(<ResponsiveTable columns={columns} data={data} />);
       expect(wrapper.find('tbody')).to.have.length(1);
     });
 
     it('renders a <tr /> row for each entry in the data prop', () => {
-      const wrapper = render(<ResponsiveTable headers={headers} data={data} />);
+      const wrapper = render(<ResponsiveTable columns={columns} data={data} />);
       expect(wrapper.find('tbody tr')).to.have.length(data.length);
     });
 
     it('renders a <td /> cell for each entry in each row', () => {
-      const wrapper = render(<ResponsiveTable headers={headers} data={data} />);
-      expect(wrapper.find('td')).to.have.length(data.length * headers.length);
+      const wrapper = render(<ResponsiveTable columns={columns} data={data} />);
+      expect(wrapper.find('td')).to.have.length(data.length * columns.length);
     });
 
     it('renders a content-div inside each td', () => {
-      const wrapper = render(<ResponsiveTable headers={headers} data={data} />);
+      const wrapper = render(<ResponsiveTable columns={columns} data={data} />);
       expect(
         wrapper.find('td .ffe-responsive-table__content').length
       ).to.equal(
-        data.length * headers.length
+        data.length * columns.length
       );
     });
 
     it('renders content of each cell', () => {
-      const wrapper = render(<ResponsiveTable headers={headers} data={data} />);
+      const wrapper = render(<ResponsiveTable columns={columns} data={data} />);
       expect(
         wrapper.find('td .ffe-responsive-table__content').first().text()
       ).to.equal(data[0].name);
     });
 
     it('adds column heading to data-th property of each cell', () => {
-      const wrapper = render(<ResponsiveTable data={data} headers={headers} />);
+      const wrapper = render(<ResponsiveTable data={data} columns={columns} />);
 
-      expect(wrapper.find('[data-th="Navn"]')).to.have.length(headers.length);
-      expect(wrapper.find('td').first().prop('data-th')).to.equal(headers[0].content);
+      expect(wrapper.find('[data-th="Navn"]')).to.have.length(columns.length);
+      expect(wrapper.find('td').first().prop('data-th')).to.equal(columns[0].header);
     });
   });
 });

@@ -26,7 +26,7 @@ class TableRowExpandable extends Component {
     }
 
     render() {
-        const { cells, headers, children } = this.props;
+        const { cells, columns, children } = this.props;
 
         return (
             <tbody>
@@ -44,7 +44,7 @@ class TableRowExpandable extends Component {
                         'ffe-responsive-table__row-expandable',
                         { 'ffe-responsive-table__row-expandable--expanded' : this.state.expanded }
                     )}
-                    headers={ headers }
+                    columns={ columns }
                     onClick={ this.toggleExpand }
                     onKeyDown={ this.handleKeyPress }
                     expanded={ this.state.expanded }
@@ -60,7 +60,7 @@ class TableRowExpandable extends Component {
                      )}
                 >
                     <td
-                        colSpan={ headers.length }
+                        colSpan={ columns.length }
                         className="ffe-responsive-table__cell-expandable-content"
                     >
                         <div>
@@ -76,7 +76,7 @@ class TableRowExpandable extends Component {
 TableRowExpandable.propTypes = {
     children: PropTypes.node.isRequired,
     cells: PropTypes.object.isRequired,
-    headers: PropTypes.array.isRequired
+    columns: PropTypes.array.isRequired
 };
 
 export default TableRowExpandable;

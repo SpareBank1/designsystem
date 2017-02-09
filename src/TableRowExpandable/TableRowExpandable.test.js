@@ -5,7 +5,7 @@ import TableRowExpandable from './TableRowExpandable';
 
 const props = {
     cells : { name: 'Ola Normann', address: 'Gateveien 2', age: 23, phone: '912 34 567', email: 'ola@normann.no' },
-    headers: [
+    columns: [
       { key: 'name', content: 'Navn' },
       { key: 'address', content: 'Adresse' },
       { key: 'age', content: 'Alder', alignRight: true },
@@ -40,7 +40,7 @@ describe('<TableRowExpandable>', () => {
     wrapper.setState({ expanded: true });
     const tableRow = wrapper.find('TableRow').props();
     expect(tableRow.expanded).to.equal(true);
-    expect(tableRow.headers).to.equal(props.headers);
+    expect(tableRow.columns).to.equal(props.columns);
     expect(tableRow.trClasses).contains('ffe-responsive-table__row-expandable--expanded');
   });
 
