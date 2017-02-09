@@ -20,7 +20,7 @@ const TableFooter = ({ columns }) => {
                     );
                 })}
             </tr>
-    </tfoot>
+        </tfoot>
     );
 };
 

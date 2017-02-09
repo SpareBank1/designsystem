@@ -15,19 +15,19 @@ const TableRow = ({ cells, columns, onClick, onKeyDown, trClasses, expanded }) =
             onKeyDown={ onKeyDown }
             aria-expanded={ expanded }
         >
-        { columns.map((column, index) => {
-            return (
-                <TableCell
-                    key={ index }
-                    tdClasses={ (column.key === 'expandIcon') ? 'ffe-responsive-table__cell--collapsed' : '' }
-                    columnHeader={ column.header }
-                    alignRight={ column.alignRight }
-                >
-                    { cells[column.key] }
-                </TableCell>
-            );
-        })}
-    </tr>
+            { columns.map((column, index) => {
+                return (
+                    <TableCell
+                        key={ index }
+                        tdClasses={ (column.key === 'expandIcon') ? 'ffe-responsive-table__cell--collapsed' : '' }
+                        columnHeader={ column.header }
+                        alignRight={ column.alignRight }
+                    >
+                        { cells[column.key] }
+                    </TableCell>
+                );
+            })}
+        </tr>
     );
 };
 

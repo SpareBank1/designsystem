@@ -31,7 +31,7 @@ const TableHeaders = ({ columns }) => {
 
                 })}
             </tr>
-    </thead>
+        </thead>
     );
 };
 
