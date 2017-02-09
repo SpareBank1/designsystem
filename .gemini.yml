@@ -2,15 +2,23 @@ rootUrl: http://static.dev.sparebank1.no:81/examples/
 gridUrl: 'overidden by test script to point towards dockerized browser'
 screenshotsDir: './visual-tests/baseline-screenshots'
 browsers:
-  firefox-small:
+  firefox-sm:
     windowSize: 479x10000
     desiredCapabilities:
       browserName: firefox
-  firefox-medium:
+  firefox-md:
     windowSize: 767x10000
     desiredCapabilities:
       browserName: firefox
-  firefox-large:
+  firefox-lg:
     windowSize: 1023x10000
+    desiredCapabilities:
+      browserName: firefox
+  firefox-xl:
+    windowSize: 1279x10000
+    desiredCapabilities:
+      browserName: firefox
+  firefox-xxl:
+    windowSize: 1400x10000
     desiredCapabilities:
       browserName: firefox
