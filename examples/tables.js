@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 import ResponsiveTable from '../src/ResponsiveTable/ResponsiveTable';
 import SortableTable from '../src/SortableTable/SortableTable';
 import TableRowExpandable from '../src/TableRowExpandable/TableRowExpandable';
-import { SIMPLE_TABLE, SIMPLE_TABLE_EXPANDABLE } from './tables.data';
+import { SIMPLE_TABLE, SIMPLE_TABLE_WITH_FOOTER, SIMPLE_TABLE_EXPANDABLE } from './tables.data';
 
 require('./example.less');
 
@@ -17,6 +17,9 @@ render(
 
         <h2 className="ffe-h2">Responsive table</h2>
         <ResponsiveTable headers={SIMPLE_TABLE.headers} data={SIMPLE_TABLE.dataObject}/>
+
+        <h2 className="ffe-h2">Responsive table med footer</h2>
+        <ResponsiveTable headers={SIMPLE_TABLE_WITH_FOOTER.headers} data={SIMPLE_TABLE_WITH_FOOTER.dataObject} footer={SIMPLE_TABLE_WITH_FOOTER.footer}/>
 
         <h2 className="ffe-h2">Responsive table with expandable rows</h2>
         <ResponsiveTable headers={SIMPLE_TABLE_EXPANDABLE.headers} expandable={true}>

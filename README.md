@@ -32,6 +32,15 @@ const headers = [
 The `key` prop in headers corresponds to the prop you want to display in the data array object.
 The `alignRight` prop in headers will align the entire column
 
+# Footers
+To add a footer to simply include a `footerContent` prop to the corresponding header object, like so:
+```javascript
+const headers = [
+    { key: 'name', content: 'Varenavn', footerContent: 'Sum' },
+    { key: 'price', content: 'Pris', footerContent: 'kr 123,50' alignRight: true }
+];
+```
+
 The `data` prop is _required_, and expects an array of object like this:
 
 ```javascript

@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.0.3
+
+* table footers
+* data is no longer a required prop in ResponsiveTable
+
 ## v1.0.2
 
 * exports in index.js

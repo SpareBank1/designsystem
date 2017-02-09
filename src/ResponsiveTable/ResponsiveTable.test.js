@@ -11,6 +11,11 @@ describe('<ResponsiveTable />', () => {
     { key: 'address', content: 'Adresse' },
     { key: 'age', content: 'Alder', alignRight: true }
   ];
+  const headersWithFooterContent = [
+    { key: 'name', content: 'Navn', footerContent: 'Sum alder' },
+    { key: 'address', content: 'Adresse' },
+    { key: 'age', content: 'Alder', footerContent: 135, alignRight: true }
+  ];
   const data = [
     { name: 'Ola Normann', address: 'Gateveien 2', age: 23, phone: '912 34 567' },
     { name: 'Sivert Svenska', address: 'Gatuveio 7', age: 45, phone: '+46 123 456 789' },
@@ -58,6 +63,23 @@ describe('<ResponsiveTable />', () => {
       expect(wrapper.find('th').first().text()).to.equal(headers[0].content);
     });
 
+  });
+
+  describe('table footer', () => {
+     const wrapper = render(<ResponsiveTable headers={headersWithFooterContent} data={data}/>);
+
+    it('renders a <tfoot />', () => {
+      expect(wrapper.find('tfoot')).to.have.length(1);
+    });
+
+    it('renders the footer content inside <tfoot />', () => {
+      expect(wrapper.find('tfoot').find('td').first().text()).to.equal('Sum alder');
+    });
+
+    it('does not render <tfoot /> unless footerContent is present', () => {
+      const wrapper2 = render(<ResponsiveTable headers={headers} data={data}/>);
+      expect(wrapper2.find('tfoot')).to.have.length(0);
+    });
   });
 
   describe('table body', () => {

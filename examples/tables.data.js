@@ -42,6 +42,23 @@ export const SIMPLE_TABLE = {
   ],
 };
 
+export const SIMPLE_TABLE_WITH_FOOTER = {
+  headers: [
+    { key: 'name', content: 'Vare', footerContent: 'Sum' },
+    { key: 'price', content: 'Pris', footerContent: '40,50', alignRight: true },
+  ],
+  dataObject: [
+    {
+      name: 'Melk lett, 1 liter',
+      price: '18,50',
+    },
+    {
+      name: 'Pepper hel',
+      price: '22,00',
+    },
+  ],
+};
+
 export const SIMPLE_TABLE_EXPANDABLE = {
   headers: [
     { key: 'name', content: 'Navn' },
