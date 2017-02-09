@@ -1,6 +1,6 @@
 {
   "name": "ffe-spinner",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "less/spinner.less",
   "scripts": {
     "compile": "npm run lint && lessc example/example.less example/example.css && cp -R node_modules/ffe-core/fonts/ example/fonts/ && echo \"$(date +%T): Updated example\"",
