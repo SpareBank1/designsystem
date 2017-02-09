@@ -16,7 +16,7 @@ const example = (
             <p className="ffe-micro-text ffe-external-docs-text">
                 HENTET FRA <a href="***REMOVED***">STASH</a>
             </p>
-            <p>Systemmeldinger</p>
+            <p>Denne typen meldinger skal kun benyttes til kritiske systemmeldinger som skal eksponeres til brukeren. Kan lukkes om brukeren klikker på "x".</p>
         </div>
 
         <h3 className="ffe-h4">Eksempler</h3>
@@ -29,16 +29,16 @@ const example = (
         </div>
 
         <div className="example-container">
-            <h4 className="example-container__header">Info</h4>
+            <h4 className="example-container__header">Informasjon</h4>
             <SystemInfoMessage>
-                Informasjon
+                Her kan det stå en nyhet eller informasjon som ikke er kritisk.
             </SystemInfoMessage>
         </div>
 
         <div className="example-container">
-            <h4 className="example-container__header">News</h4>
+            <h4 className="example-container__header">Nyheter</h4>
             <SystemNewsMessage>
-                Nyheter
+                Velkommen til betaversjonen av nye Sparebank1.no. En egen farge for nyheter som dette.
             </SystemNewsMessage>
         </div>
 
