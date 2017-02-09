@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## Version 1.1.3
+* Added description to example
+
 ## Version 1.1.2
 * Minor bugfix in example
 
