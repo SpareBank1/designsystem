@@ -15,6 +15,8 @@ to give the button some content, either as `children` or by using the `label`
 property:
 
 ```javascript
+import { ActionButton } from 'ffe-buttons-react';
+
 <ActionButton onClick={clickHandler}>
     <CoolIcon /> Awesome
 </ActionButton>
@@ -25,7 +27,7 @@ property:
 There are components available for all the button types:
 
 ```javascript
-<ActionButton>, <PrimaryButton>, <SecondaryButton>, <ShortcutButton>, <TertiaryButton>
+<ActionButton>, <BackButton>, <PrimaryButton>, <SecondaryButton>, <ShortcutButton>, <TertiaryButton>
 ```
 
 ### Supported props
