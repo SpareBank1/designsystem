@@ -19,52 +19,52 @@ class SortableTable extends Component {
     componentWillReceiveProps(nextProps) {
         if (nextProps !== this.props) {
             this.setState({
-                tableData: sortData(this.props.headers, this.props.data, this.state.sortBy, this.state.descending)
+                tableData: sortData(this.props.columns, this.props.data, this.state.sortBy, this.state.descending)
             });
         }
     }
 
-    tableHeaderClicked(headerKey) {
-        const descending = headerKey === this.state.sortBy ? !this.state.descending : false;
+    tableHeaderClicked(columnKey) {
+        const descending = columnKey === this.state.sortBy ? !this.state.descending : false;
         this.setState({
-            sortBy: headerKey,
+            sortBy: columnKey,
             descending: descending,
-            tableData: sortData(this.props.headers, this.props.data, headerKey, descending)
+            tableData: sortData(this.props.columns, this.props.data, columnKey, descending)
         });
     }
 
-    handleKeyPress(headerKey, event) {
+    handleKeyPress(columnKey, event) {
         if ( event.key === 'Enter' || event.key === ' ' ) {
-            this.tableHeaderClicked(headerKey);
+            this.tableHeaderClicked(columnKey);
             event.preventDefault();
         }
     }
 
-    getAriaSort(header) {
-        if (this.state.sortBy !== header.key) {
+    getAriaSort(column) {
+        if (this.state.sortBy !== column.key) {
             return 'none';
         }
         return this.state.descending ? 'descending' : 'ascending';
     }
 
-    decorateSortableTableHeader(header) {
+    decorateSortableTableHeader(column) {
         return (
             <span
                 tabIndex="0"
-                onKeyDown={ (event) => this.handleKeyPress(header.key, event) }
+                onKeyDown={ (event) => this.handleKeyPress(column.key, event) }
                 className={classNames(
                     'ffe-sortable-table__header',
-                    { 'ffe-sortable-table__header--active': this.state.sortBy === header.key }
+                    { 'ffe-sortable-table__header--active': this.state.sortBy === column.key }
                 )}
                 role="button"
-                onClick={ this.tableHeaderClicked.bind(this, header.key) }
+                onClick={ this.tableHeaderClicked.bind(this, column.key) }
             >
-                { header.content }
+                { column.header }
                 <PilNedIcon
                     className={ classNames(
                     'icon',
                     'ffe-sortable-table__sort-arrow',
-                    { 'ffe-sortable-table__sort-arrow--descending' : (this.state.sortBy === header.key && this.state.descending) }
+                    { 'ffe-sortable-table__sort-arrow--descending' : (this.state.sortBy === column.key && this.state.descending) }
                 )}
                 />
           </span>
@@ -72,22 +72,22 @@ class SortableTable extends Component {
     }
 
     render() {
-        const sortableHeaders = this.props.headers.map((header) => {
+        const sortableColumns = this.props.columns.map((column) => {
             return {
-                ...header,
-                ariaSort: this.getAriaSort(header),
-                content: this.decorateSortableTableHeader(header)
+                ...column,
+                ariaSort: this.getAriaSort(column),
+                header: this.decorateSortableTableHeader(column)
             };
         });
 
         return (
-            <ResponsiveTable headers={ sortableHeaders } headerData={ this.props.headers } data={ this.state.tableData } />
+            <ResponsiveTable columns={ sortableColumns } columnData={ this.props.columns } data={ this.state.tableData } />
         );
     }
 }
 
 SortableTable.propTypes = {
-    headers: PropTypes.arrayOf(PropTypes.object).isRequired,
+    columns: PropTypes.arrayOf(PropTypes.object).isRequired,
     data: PropTypes.arrayOf(PropTypes.object).isRequired
 };
 

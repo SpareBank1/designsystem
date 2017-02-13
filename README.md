@@ -16,22 +16,21 @@ The `<ResponsiveTable />` component lets you create simple, yet flexible tables 
 
 ```javascript
 <ResponsiveTable
-    headers={Array}
+    columns={Array}
     data={Array}
 />
 ```
 
-The `headers` prop is _required_, and expects an array of objects like this:
+The `columns` prop is _required_, and expects an array of objects like this:
 
 ```javascript
-const headers = [
-    { key: 'name', content: 'Navn' },
-    { key: 'age', content: 'Alder', alignRight: true }
+const columns = [
+    { key: 'name', header: 'Navn' },
+    { key: 'age', header: 'Alder', alignRight: true }
 ];
 ```
-The `key` prop in headers corresponds to the prop you want to display in the data array object.
-The `alignRight` prop in headers will align the entire column
-
+The `key` prop in `columns` corresponds to the prop you want to display in the data array object.
+The `alignRight` prop in will align the entire column
 The `data` prop is _required_, and expects an array of object like this:
 
 ```javascript
@@ -53,33 +52,40 @@ const data = [
     }
 ]
 ```
+Note: the `address` prop will not be displayed since it's not defined in the `columns`.
 
-Note: the `address` prop will not be displayed since it's not defined in the `headers`.
+# Footers
+To add a footer to a column simply include a `footer` prop in the column-object like so:
+```javascript
+const columns = [
+    { key: 'name', header: 'Varenavn', footer: 'Sum' },
+    { key: 'price', header: 'Pris', footer: 'kr 123,50' alignRight: true }
+];
+```
+Footers are compatible with all table variations
 
 The `<SortableTable />` component lets you create simple, flexible and sortable table. It expects the same props as `<ResponsiveTable />`.
 
 ```javascript
 <SortableTable
-    headers={Array}
+    columns={Array}
     data={Array}
 />
 ```
 `<SortableTable />` is not sortable on screen width < 768px (@breakpoint-md)
 
 The `<ExpandableRow />` component lets you create clickable tablerows that can expand complimentary content.
-Use it as a child to `<ResponsiveTable />` with the `expandable={true}` prop
-You need to pass the same `headers` prop to <TableRowExpandable />
+Use it as a child to `<ResponsiveTable />` with the `expandable={true}` prop. No need to pass the `data` prop
 
 ```javascript
 <ResponsiveTable
-    headers={headers}
-    data={tableData}
+    columns={columns}
     expandable={true}>
       {
         tableData.map((row, index) => (
           <TableRowExpandable
             cells={ row }
-            headers={headers}
+            columns={columns}
             key={ index }>
                 <div>
                     <p>This content will be revealed on expand<p>
@@ -91,7 +97,7 @@ You need to pass the same `headers` prop to <TableRowExpandable />
 </ResponsiveTable>
 ```
 
-The `headers` prop is _required_, and expects the same array passed to `<ResponsiveTable />`.
+The `columns` prop is _required_, and expects the same array passed to `<ResponsiveTable />`.
 The `cells` prop is _required_, and expects one of the objects in the `data` array passed to `<ResponsiveTable />`.
 
 ## Examples

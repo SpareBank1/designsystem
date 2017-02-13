@@ -1,10 +1,10 @@
 export const SIMPLE_TABLE = {
-  headers: [
-    { key: 'name', content: 'Navn' },
-    { key: 'address', content: 'Adresse' },
-    { key: 'age', content: 'Alder', alignRight: true },
-    { key: 'phone', content: 'Telefon' },
-    { key: 'email', content: 'E-post'},
+  columns: [
+    { key: 'name', header: 'Navn' },
+    { key: 'address', header: 'Adresse' },
+    { key: 'age', header: 'Alder', alignRight: true },
+    { key: 'phone', header: 'Telefon' },
+    { key: 'email', header: 'E-post'},
   ],
   dataObject: [
     {
@@ -42,10 +42,27 @@ export const SIMPLE_TABLE = {
   ],
 };
 
+export const SIMPLE_TABLE_WITH_FOOTER = {
+  columns: [
+    { key: 'name', header: 'Vare', footer: 'Sum' },
+    { key: 'price', header: 'Pris', footer: '40,50', alignRight: true },
+  ],
+  dataObject: [
+    {
+      name: 'Melk lett, 1 liter',
+      price: '18,50',
+    },
+    {
+      name: 'Pepper hel',
+      price: '22,00',
+    },
+  ],
+};
+
 export const SIMPLE_TABLE_EXPANDABLE = {
-  headers: [
-    { key: 'name', content: 'Navn' },
-    { key: 'username', content: 'Brukernavn' }
+  columns: [
+    { key: 'name', header: 'Navn' },
+    { key: 'username', header: 'Brukernavn' }
   ],
   dataObject: [
     {

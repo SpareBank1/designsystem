@@ -1,13 +1,12 @@
 import React from 'react';
 import classNames from 'classnames';
 
-const TableCell = ({ children, columnHeader, alignRight, tdClasses, contentClasses, colSpan }) => {
+const TableCell = ({ children, columnHeader, alignRight, tdClasses, contentClasses }) => {
 
     return (
         <td
             className={ classNames('ffe-responsive-table__cell', tdClasses) }
             data-th={ columnHeader }
-            colSpan={ colSpan }
         >
             <span
                 className={ classNames(
@@ -28,7 +27,6 @@ TableCell.propTypes = {
     alignRight: React.PropTypes.bool,
     tdClasses: React.PropTypes.string,
     contentClasses: React.PropTypes.string,
-    colSpan: React.PropTypes.number
 };
 
 export default TableCell;

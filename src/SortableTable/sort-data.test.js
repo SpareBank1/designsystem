@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import sortData from './sort-data';
 
-const headers = [
+const columns = [
     { header: 'Name', dataKey: 'name' },
     { header: 'Age', dataKey: 'age' },
     { header: 'Employee-id', dataKey: 'id' }
@@ -17,21 +17,21 @@ const data = [
 describe('sortData', () => {
 
     it('should sort data in descending order' , () => {
-        const ascendingTableData = sortData(headers, data, 'age', true);
+        const ascendingTableData = sortData(columns, data, 'age', true);
         for (let i = 1; i > ascendingTableData.length; i++) {
             expect(ascendingTableData[i].id).to.be.below(ascendingTableData[i-1].id);
         }
     });
 
     it('should sort data in ascending order' , () => {
-        const ascendingTableData = sortData(headers, data, 'age', false);
+        const ascendingTableData = sortData(columns, data, 'age', false);
         for (let i = 1; i > ascendingTableData.length; i++) {
             expect(ascendingTableData[i].id).to.be.above(ascendingTableData[i-1].id);
         }
     });
 
     it('should sort data based on `sortBy` parameter' , () => {
-        const tableData = sortData(headers, data, 'age', true);
+        const tableData = sortData(columns, data, 'age', true);
         expect(tableData[0].age).to.equal(48);
         expect(tableData[1].age).to.equal(36);
         expect(tableData[2].age).to.equal(20);

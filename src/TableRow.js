@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import TableCell from './TableCell';
 
-const TableRow = ({ cells, headers, onClick, onKeyDown, trClasses, expanded }) => {
+const TableRow = ({ cells, columns, onClick, onKeyDown, trClasses, expanded }) => {
     return (
         <tr
             className={classNames(
@@ -15,25 +15,25 @@ const TableRow = ({ cells, headers, onClick, onKeyDown, trClasses, expanded }) =
             onKeyDown={ onKeyDown }
             aria-expanded={ expanded }
         >
-        { headers.map((header, index) => {
-            return (
-                <TableCell
-                    key={ index }
-                    tdClasses={ (header.key === 'expandIcon') ? 'ffe-responsive-table__cell--collapsed' : '' }
-                    columnHeader={ header.content }
-                    alignRight={ header.alignRight }
-                >
-                    { cells[header.key] }
-                </TableCell>
-            );
-        })}
-    </tr>
+            { columns.map((column, index) => {
+                return (
+                    <TableCell
+                        key={ index }
+                        tdClasses={ (column.key === 'expandIcon') ? 'ffe-responsive-table__cell--collapsed' : '' }
+                        columnHeader={ column.header }
+                        alignRight={ column.alignRight }
+                    >
+                        { cells[column.key] }
+                    </TableCell>
+                );
+            })}
+        </tr>
     );
 };
 
 TableRow.propTypes = {
     cells: React.PropTypes.object.isRequired,
-    headers: React.PropTypes.array.isRequired,
+    columns: React.PropTypes.array.isRequired,
     trClasses: React.PropTypes.string,
     onClick: React.PropTypes.func,
     onKeyDown: React.PropTypes.func,

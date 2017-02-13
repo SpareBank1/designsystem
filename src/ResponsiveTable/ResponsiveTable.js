@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import TableHeaders from '../TableHeaders';
+import TableFooter from '../TableFooter';
 import TableRow from '../TableRow';
 
 class ResponsiveTable extends Component {
@@ -21,39 +22,56 @@ class ResponsiveTable extends Component {
 
     renderTableHeaders() {
         const {
-            headers,
+            columns,
         } = this.props;
 
-        if (!headers || !headers.length) {
+        if (!columns || !columns.length) {
             return null;
         }
 
         if (this.props.expandable) {
-            headers.push({ key: 'expandIcon', content: '' , alignRight: true });
+            columns.push({ key: 'expandIcon', header: '' , alignRight: true });
         }
 
-        return <TableHeaders headers={ headers } />;
+        return <TableHeaders columns={ columns } />;
+    }
+
+    renderTableFooter() {
+        const {
+            columns,
+            columnData,
+        } = this.props;
+
+        if (!columns || !columns.length) {
+          return null;
+        }
+
+        if (!columns.some(column => column.footer)) {
+          return null;
+        }
+
+        return <TableFooter columns={ columnData || columns } />;
     }
 
     renderTableBody() {
         const {
             data,
-            headers,
-            headerData
+            columns,
+            columnData
         } = this.props;
-
-        if (!data || !data.length) {
-            return null;
-        }
 
         if (this.props.children) {
             return this.props.children;
         }
 
+        if (!data || !data.length) {
+            return null;
+        }
+
         return (
             <tbody>
                 {data.map((row, index) => (
-                    <TableRow cells={ row } headers={ headerData || headers } key={ index } />
+                    <TableRow cells={ row } columns={ columnData || columns } key={ index } />
                 ))}
             </tbody>
         );
@@ -64,6 +82,7 @@ class ResponsiveTable extends Component {
             <table className="ffe-responsive-table">
                 {this.renderTableCaption()}
                 {this.renderTableHeaders()}
+                {this.renderTableFooter()}
                 {this.renderTableBody()}
             </table>
           );
@@ -74,15 +93,15 @@ ResponsiveTable.propTypes = {
     caption: PropTypes.string,
     expandable: PropTypes.bool,
     children: PropTypes.node,
-    headerData: PropTypes.arrayOf(
+    columnData: PropTypes.arrayOf(
         PropTypes.object
     ),
     data: PropTypes.arrayOf(
             PropTypes.object
-        ).isRequired,
-    headers: PropTypes.arrayOf(
+        ),
+    columns: PropTypes.arrayOf(
         PropTypes.shape({
-            content: PropTypes.node.isRequired,
+            header: PropTypes.node.isRequired,
             key: PropTypes.string.isRequired,
         }).isRequired
     ),
