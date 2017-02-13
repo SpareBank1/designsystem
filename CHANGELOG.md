@@ -5,7 +5,7 @@
 * BREAKING: `headers` prop is renamed to `columns` to include footers
 * data is no longer a required prop in ResponsiveTable
 
-## Migrating to v.2.0.0
+### Migrating to v.2.0.0
 * Rename `headers` prop to `columns` in all tables
 * Rename the `content` prop in the columns objects to `header`
 

@@ -76,9 +76,9 @@ describe('<ResponsiveTable />', () => {
       expect(wrapper.find('tfoot').find('td').first().text()).to.equal('Sum alder');
     });
 
-    it('does not render <tfoot /> unless footerContent is present', () => {
-      const wrapper2 = render(<ResponsiveTable columns={columns} data={data}/>);
-      expect(wrapper2.find('tfoot')).to.have.length(0);
+    it('does not render <tfoot /> unless footer is present in columns', () => {
+      const wrapperWithoutFooterContent = render(<ResponsiveTable columns={columns} data={data}/>);
+      expect(wrapperWithoutFooterContent.find('tfoot')).to.have.length(0);
     });
   });
 

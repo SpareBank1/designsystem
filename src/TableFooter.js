@@ -12,7 +12,7 @@ const TableFooter = ({ columns }) => {
                     return (
                         <TableCell
                             key={ index }
-                            columnHeader={ column.content }
+                            columnHeader={ column.header }
                             alignRight={ column.alignRight }
                         >
                             { column.footer }
@@ -27,8 +27,7 @@ const TableFooter = ({ columns }) => {
 TableFooter.propTypes = {
     columns: PropTypes.arrayOf(
         PropTypes.shape({
-			key: PropTypes.string.isRequired,
-			header: PropTypes.node.isRequired,
+            header: PropTypes.node.isRequired,
             footer: PropTypes.any,
             alignRight: PropTypes.bool,
         })
