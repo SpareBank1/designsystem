@@ -48,6 +48,10 @@ class SortableTable extends Component {
     }
 
     decorateSortableTableHeader(column) {
+        if (column.header === '') {
+          return <span className='ffe-sortable-table__header' />;
+          }
+
         return (
             <span
                 tabIndex="0"

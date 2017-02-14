@@ -1,5 +1,11 @@
 # Changelog
 
+## v2.0.1
+
+* Update dependency ffe-icons-react to ^2.3.0
+* Update peerDependencies ffe-icons-react to ^2.3.0
+* Removing sorting arrow in header cell if header is empty string
+
 ## v2.0.0
 
 * BREAKING: `headers` prop is renamed to `columns` to include footers
