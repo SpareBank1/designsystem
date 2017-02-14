@@ -1,3 +1,5 @@
+import React from 'react';
+
 export const SIMPLE_TABLE = {
   columns: [
     { key: 'name', header: 'Navn' },
@@ -5,6 +7,7 @@ export const SIMPLE_TABLE = {
     { key: 'age', header: 'Alder', alignRight: true },
     { key: 'phone', header: 'Telefon' },
     { key: 'email', header: 'E-post'},
+    { key: 'button', header: ''},
   ],
   dataObject: [
     {
@@ -14,6 +17,7 @@ export const SIMPLE_TABLE = {
       phone: '912 34 567',
       email: 'ola@normann.no',
       username: 'olli22',
+      button: <button>poke</button>
     },
     {
       name: 'Sivert Svenska',
@@ -22,6 +26,7 @@ export const SIMPLE_TABLE = {
       phone: '+46 123 456 789',
       email: 'sivert@svenska.se',
       username: 'zlatan_2000',
+      button: <button>poke</button>
     },
     {
       name: 'Daniel Dansk',
@@ -30,6 +35,7 @@ export const SIMPLE_TABLE = {
       phone: '+45 018 456 789',
       email: 'daniel@dansk.dk',
       username: 'kartoffel88',
+      button: <button>poke</button>
     },
     {
       name: 'Anders Amerikaner',
@@ -38,6 +44,7 @@ export const SIMPLE_TABLE = {
       phone: '+1 555 555 5555',
       email: 'anders@amerikaner.biz',
       username: 'andy-mandy',
+      button: <button>poke</button>
     },
   ],
 };
