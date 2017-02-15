@@ -18,10 +18,10 @@ const example = (
         <p className="example-container__header">Default</p>
 
         <div className="ffe-input-group" aria-live="polite">
-            <label id="checkbox-ibf-label" className="ffe-form-label" htmlFor="checkbox-ibf1">
-                What colors do you like on unicorns?
-            </label>
-            <fieldset id="checkbox-ibf1">
+            <fieldset class="ffe-fieldset">
+                <legend className="ffe-form-label">
+                    What colors do you like on unicorns?
+                </legend>
                 <div>
                     { CreateCheckbox({ name: 'yellow-block', label: 'Yellow', checked: true }) }
                 </div>
@@ -38,12 +38,12 @@ const example = (
 
     <div className="example-container">
         <p className="example-container__header">Inline</p>
-        
+
         <div className="ffe-input-group" aria-live="polite">
-            <label id="checkbox-ibf-label" className="ffe-form-label" htmlFor="checkbox-inline-ibf1">
-                Favorite unicorn foods?
-            </label>
-            <fieldset id="checkbox-inline-ibf1">
+            <fieldset class="ffe-fieldset">
+                <legend className="ffe-form-label">
+                    Favorite unicorn foods?
+                </legend>
                 { CreateCheckbox({ name: 'yellow-inline', label: 'Yellow', checked: true }) }
                 { CreateCheckbox({ name: 'purple-inline', label: 'Purple' }) }
                 { CreateCheckbox({ name: 'white-inline', label: 'White' }) }
