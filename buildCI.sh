@@ -1,6 +1,7 @@
 #!/bin/bash -e
 
 main() {
+    git clean -f -x -d
     npm install
     npm run lint
     npm test
