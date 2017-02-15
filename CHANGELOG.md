@@ -1,5 +1,8 @@
 # Changelog
 
+## v4.1.1
+* Modified the font size for dropdowns from 18px to 16px.
+
 ## v4.1.0
 * Remove vendor prefix on appearance property. Autoprefixer FTW!
 
