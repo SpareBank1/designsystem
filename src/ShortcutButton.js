@@ -5,10 +5,16 @@ import Button from './Button';
 export default function ShortcutButton(props) {
     const children = props.label ? props.label : props.children;
 
-    return <Button {...props} label={null} buttonType="shortcut">
-                {children}
-                <ChevronIcon className="ffe-shortcut-button__icon-chevron" />
-            </Button>;
+    return (
+        <Button
+            {...props}
+            label={null}
+            buttonType="shortcut"
+            rightIcon={<ChevronIcon className="ffe-shortcut-button__icon-chevron" />}
+        >
+            {children}
+        </Button>
+    );
 }
 
 ShortcutButton.propTypes = {
