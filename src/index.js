@@ -2,7 +2,7 @@ import BulletList from './BulletList';
 import CheckList from './CheckList';
 import NumberedList from './NumberedList';
 import StylizedNumberedList from './StylizedNumberedList';
-import DescriptionListFlex from './DescriptionListFlex';
+import DescriptionList from './DescriptionList';
 import DescriptionListMultiCol from './DescriptionListMultiCol';
 
 export {
@@ -10,7 +10,7 @@ export {
 	CheckList,
 	NumberedList,
 	StylizedNumberedList,
-	DescriptionListFlex,
+	DescriptionList,
 	DescriptionListMultiCol,
 };
 
