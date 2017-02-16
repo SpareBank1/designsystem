@@ -1,5 +1,9 @@
 # Changelog
 
+## 7.3.0
+
+Added moped-ikon.svg
+
 ## 7.2.0
 
 Added pluss-icon.svg
