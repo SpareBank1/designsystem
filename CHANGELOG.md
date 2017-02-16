@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.0.1
+
+* Fixed erroneous reference to renamed file
+
 ## v2.0.0
 
 * Breaking:
