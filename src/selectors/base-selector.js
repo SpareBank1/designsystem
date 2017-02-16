@@ -1,7 +1,7 @@
-import React, { PropTypes } from 'react';
+import React, {PropTypes} from 'react';
 import Input from './input-field';
 import SuggestionsList from '../suggestion/suggestion-list-container';
-import { KeyCodes } from '../util/types';
+import {KeyCodes} from '../util/types';
 
 class BaseSelector extends React.Component {
 
@@ -21,7 +21,7 @@ class BaseSelector extends React.Component {
 
     this.state = {
       showSuggestions: false,
-      focusedSuggestionIndex: -1,
+      highlightedSuggestionIndex: -1,
     };
   }
 
@@ -34,9 +34,9 @@ class BaseSelector extends React.Component {
   globalClickHandler(evt) {
     if (!this.self.contains(evt.target)) {
       const {shouldSelectFocusedSuggestionOnTab, suggestions} = this.props;
-      const {focusedSuggestionIndex} = this.state;
+      const {highlightedSuggestionIndex} = this.state;
       if (shouldSelectFocusedSuggestionOnTab) {
-        const selectedAccount = suggestions[focusedSuggestionIndex];
+        const selectedAccount = suggestions[highlightedSuggestionIndex];
         if (selectedAccount) {
           this.onSuggestionSelect(selectedAccount);
         }
@@ -53,7 +53,7 @@ class BaseSelector extends React.Component {
   }
 
   onChangeFocusedSuggestion(index) {
-    this.setState({focusedSuggestionIndex: index});
+    this.setState({highlightedSuggestionIndex: index});
   }
 
   onFocus() {
@@ -74,8 +74,8 @@ class BaseSelector extends React.Component {
   }
 
   hasFocus() {
-    const {inputHasFocus, focusedSuggestionIndex} = this.state;
-    return inputHasFocus || focusedSuggestionIndex !== -1;
+    const {inputHasFocus, highlightedSuggestionIndex} = this.state;
+    return inputHasFocus || highlightedSuggestionIndex !== -1;
   }
 
   onInputFocus(event) {
@@ -96,8 +96,9 @@ class BaseSelector extends React.Component {
     this.state = {...this.state, inputHasFocus: false};
   }
 
-  showHideSuggestions(show, cb = ()=> {}) {
-    const nextState = show ? {showSuggestions: show} : {showSuggestions: false, focusedSuggestionIndex: -1};
+  showHideSuggestions(show, cb = ()=> {
+  }) {
+    const nextState = show ? {showSuggestions: show} : {showSuggestions: false, highlightedSuggestionIndex: -1};
     this.setState(nextState, cb);
   }
 
@@ -105,7 +106,11 @@ class BaseSelector extends React.Component {
     const {onSelect, shouldSetFocusToInputOnSelect} = this.props;
     onSelect(suggestion);
     if (shouldSetFocusToInputOnSelect) {
-      this.setState({inputHasFocus: true, showSuggestions: false, focusedSuggestionIndex: -1}, ()=> this.input.focus());
+      this.setState({
+        inputHasFocus: true,
+        showSuggestions: false,
+        highlightedSuggestionIndex: -1
+      }, ()=> this.input.focus());
     }
   }
 
@@ -125,6 +130,20 @@ class BaseSelector extends React.Component {
     this.input.focus();
   }
 
+  setNextHighlightedIndex() {
+    const {highlightedSuggestionIndex} = this.state;
+    const {suggestions} = this.props;
+    const nextHighlightedSuggestionIndex = highlightedSuggestionIndex === suggestions.length - 1 ? 0 : highlightedSuggestionIndex + 1;
+    this.setState({highlightedSuggestionIndex : nextHighlightedSuggestionIndex});
+  }
+
+  setPreviousHighlightedIndex() {
+    const {highlightedSuggestionIndex} = this.state;
+    const {suggestions} = this.props;
+    const nextHighlightedSuggestionIndex = highlightedSuggestionIndex === 0 ? suggestions.length - 1 : highlightedSuggestionIndex - 1;
+    this.setState({highlightedSuggestionIndex : nextHighlightedSuggestionIndex});
+  }
+
   onInputKeyDown({which, altKey}) {
     const {showSuggestions} = this.state;
     switch (which) {
@@ -133,17 +152,53 @@ class BaseSelector extends React.Component {
           this.showHideSuggestions(true);
         }
         if (showSuggestions) {
-          this.setState({focusedSuggestionIndex: 0})
+          this.setNextHighlightedIndex();
         }
         break;
       case KeyCodes.UP :
         if (altKey && showSuggestions) {
           this.showHideSuggestions(false);
         }
+        if(showSuggestions){
+          this.setPreviousHighlightedIndex();
+        }
         break;
       case KeyCodes.ESC:
         this.onInputReset();
         break;
+
+      // case KeyCodes.DOWN:
+      //   evt.preventDefault();
+      //   onChangeFocused(this.nextFocusedIndex());
+      //   break;
+      // case KeyCodes.UP:
+      //   evt.preventDefault();
+      //   onChangeFocused(this.previousFocusedIndex());
+      //   break;
+      // case KeyCodes.HOME:
+      //   onChangeFocused(0);
+      //   break;
+      // case KeyCodes.END:
+      //   onChangeFocused(suggestions.length - 1);
+      //   break;
+      // case KeyCodes.ESC:
+      //   onClose();
+      //   break;
+      // case KeyCodes.ENTER:
+      //   onSelect(suggestions[highlightedIndex]);
+      //   break;
+      // case KeyCodes.TAB:
+      //   if (evt.shiftKey) {
+      //     evt.preventDefault();
+      //     onSelect(suggestions[highlightedIndex]);
+      //     break;
+      //   }
+      //   if (shouldSelectFocusedSuggestionOnTab) {
+      //     onSelect(suggestions[highlightedIndex]);
+      //     break;
+      //   }
+      //   onBlur();
+
     }
   }
 
@@ -159,7 +214,7 @@ class BaseSelector extends React.Component {
       suggestionsHeightMax,
       id,
     } = this.props;
-    const {showSuggestions, focusedSuggestionIndex} = this.state;
+    const {showSuggestions, highlightedSuggestionIndex} = this.state;
     return (
       <div
         ref={(self)=> {
@@ -187,7 +242,7 @@ class BaseSelector extends React.Component {
         {showSuggestions &&
         <SuggestionsList
           onChangeFocused={this.onChangeFocusedSuggestion}
-          focusedIndex={focusedSuggestionIndex}
+          highlightedIndex={highlightedSuggestionIndex}
           suggestions={suggestions.filter(suggestionFilter(value))}
           heightMax={suggestionsHeightMax}
           renderSuggestion={renderSuggestion}
@@ -218,10 +273,14 @@ BaseSelector.propTypes = {
 };
 
 BaseSelector.defaultProps = {
-  onChange: () => {},
-  onBlur: () => {},
-  onFocus: () => {},
-  onReset: ()=> {},
+  onChange: () => {
+  },
+  onBlur: () => {
+  },
+  onFocus: () => {
+  },
+  onReset: ()=> {
+  },
   ariaInvalid: false,
 };
 

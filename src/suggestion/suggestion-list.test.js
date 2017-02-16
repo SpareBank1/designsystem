@@ -57,7 +57,7 @@ function shallowSuggestionListContainer(props = propsSuggestionListContainer()) 
 
 describe('<SuggestionList />', () => {
 
-  it('highlighted <Suggestion> set to focusedIndex', () => {
+  it('highlighted <Suggestion> set to highlightedIndex', () => {
     const wrapper = shallowSuggestionList();
     const ul = wrapper.find('ul');
 
@@ -82,38 +82,38 @@ describe('<SuggestionListContainer />', () => {
     assert.equal(wrapper.find('SuggestionList').length, 1);
   });
 
-  it('should increment focusedIndex on keyboard.DOWN', () => {
+  it('should increment highlightedIndex on keyboard.DOWN', () => {
     const wrapper = shallowSuggestionListContainer();
     const spyPreventDefault = sinon.spy();
     wrapper.simulate('keydown', {which: KeyCodes.DOWN, preventDefault: spyPreventDefault});
 
-    assert.equal(wrapper.state('focusedIndex'), 0);
+    assert.equal(wrapper.state('highlightedIndex'), 0);
     assert.isTrue(spyPreventDefault.calledOnce);
   });
 
-  it('should decrement focusedIndex on keyboard.UP', () => {
+  it('should decrement highlightedIndex on keyboard.UP', () => {
     const wrapper = shallowSuggestionListContainer();
-    wrapper.setState({focusedIndex: 1});
+    wrapper.setState({highlightedIndex: 1});
     const spyPreventDefault = sinon.spy();
     wrapper.simulate('keydown', {which: KeyCodes.UP, preventDefault: spyPreventDefault});
 
-    assert.equal(wrapper.state('focusedIndex'), 0);
+    assert.equal(wrapper.state('highlightedIndex'), 0);
     assert.isTrue(spyPreventDefault.calledOnce);
   });
 
-  it('should reset focusedIndex on keyboard.HOME', () => {
+  it('should reset highlightedIndex on keyboard.HOME', () => {
     const wrapper = shallowSuggestionListContainer();
-    wrapper.setState({focusedIndex: 1});
+    wrapper.setState({highlightedIndex: 1});
     wrapper.simulate('keydown', {which: KeyCodes.HOME});
 
-    assert.equal(wrapper.state('focusedIndex'), 0);
+    assert.equal(wrapper.state('highlightedIndex'), 0);
   });
 
-  it('should set focusedIndex to suggestions end on keyboard.END', () => {
+  it('should set highlightedIndex to suggestions end on keyboard.END', () => {
     const wrapper = shallowSuggestionListContainer();
     wrapper.simulate('keydown', {which: KeyCodes.END});
 
-    assert.equal(wrapper.state('focusedIndex'), 1);
+    assert.equal(wrapper.state('highlightedIndex'), 1);
   });
 
   it('should call onClose prop on keyboard.ESC', () => {
@@ -127,7 +127,7 @@ describe('<SuggestionListContainer />', () => {
   it('should call onSuggestionSelect with highlightedItem on keyboard.ENTER', () => {
     const spyOnSelect = sinon.spy();
     const wrapper = shallowSuggestionListContainer({...propsSuggestionListContainer(), onSelect: spyOnSelect});
-    wrapper.setState({focusedIndex: 1});
+    wrapper.setState({highlightedIndex: 1});
     wrapper.simulate('keydown', {which: KeyCodes.ENTER});
     const item = suggestions()[1];
 
@@ -137,7 +137,7 @@ describe('<SuggestionListContainer />', () => {
   it('should call onBlur with highlightedItem on keyboard.TAB', () => {
     const spyOnBlur = sinon.spy();
     const wrapper = shallowSuggestionListContainer({...propsSuggestionListContainer(), onBlur: spyOnBlur});
-    wrapper.setState({focusedIndex: 1});
+    wrapper.setState({highlightedIndex: 1});
     wrapper.simulate('keydown', {which: KeyCodes.TAB});
     const item = suggestions()[1];
 
