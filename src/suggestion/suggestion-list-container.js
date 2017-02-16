@@ -65,7 +65,7 @@ class SuggestionListContainer extends React.Component {
       >
         <Scrollbars
           autoHeight={true}
-          autoHeightMax={heightMax}
+          autoHeightMax={200}
         >
           <SuggestionList {...this.props}/>
         </Scrollbars>
@@ -78,7 +78,7 @@ SuggestionListContainer.propTypes = {
   suggestions: PropTypes.array.isRequired,
   onSelect: PropTypes.func.isRequired,
   onChangeFocused: PropTypes.func.isRequired,
-  focusedIndex: PropTypes.number.isRequired,
+  highlightedIndex: PropTypes.number.isRequired,
   onBlur: PropTypes.func.isRequired,
   onClose: PropTypes.func,
   heightMax: PropTypes.number,
