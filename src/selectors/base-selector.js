@@ -18,11 +18,17 @@ class BaseSelector extends React.Component {
     this.onInputBlur = this.onInputBlur.bind(this);
     this.onInputFocus = this.onInputFocus.bind(this);
     this.onChangeFocusedSuggestion = this.onChangeFocusedSuggestion.bind(this);
+    this.filterSuggestions = this.filterSuggestions.bind(this);
 
     this.state = {
       showSuggestions: false,
       highlightedSuggestionIndex: -1,
     };
+  }
+
+  filterSuggestions() {
+    const {suggestions, suggestionFilter, value} = this.props;
+    return suggestions.filter(suggestionFilter(value));
   }
 
   onInputChange(input) {
@@ -125,14 +131,16 @@ class BaseSelector extends React.Component {
   }
 
   onInputReset() {
-    const {onReset} = this.props;
-    onReset();
-    this.input.focus();
+    if(this.state.showSuggestions){
+      this.setState({showSuggestions : false});
+      return;
+    }
+    this.props.onReset();
   }
 
-  setNextHighlightedIndex() {
+  setNextHighlighted() {
     const {highlightedSuggestionIndex} = this.state;
-    const {suggestions} = this.props;
+    const suggestions = this.filterSuggestions();
     const nextHighlightedSuggestionIndex = highlightedSuggestionIndex === suggestions.length - 1 ? 0 : highlightedSuggestionIndex + 1;
     this.setState({highlightedSuggestionIndex: nextHighlightedSuggestionIndex});
 
@@ -143,28 +151,39 @@ class BaseSelector extends React.Component {
     this.suggestionList.setScrollPosNext();
   }
 
-  setPreviousHighlightedIndex() {
+  setPreviousHighlighted() {
     const {highlightedSuggestionIndex} = this.state;
-    const {suggestions} = this.props;
+    const suggestions = this.filterSuggestions();
     const nextHighlightedSuggestionIndex = highlightedSuggestionIndex === 0 ? suggestions.length - 1 : highlightedSuggestionIndex - 1;
     this.setState({highlightedSuggestionIndex: nextHighlightedSuggestionIndex});
 
-    if (nextHighlightedSuggestionIndex === suggestions.length - 1 ) {
+    if (nextHighlightedSuggestionIndex === suggestions.length - 1) {
       this.suggestionList.setScrollPosEnd();
       return;
     }
     this.suggestionList.setScrollPosPrevious();
   }
 
-  onInputKeyDown({which, altKey}) {
+  setFirstHighlighted() {
+    this.setState({highlightedSuggestionIndex: 0});
+    this.suggestionList.setScrollPosStart();
+  }
+
+  setLastHighlighted() {
+    this.setState({highlightedSuggestionIndex: this.filterSuggestions().length - 1});
+    this.suggestionList.setScrollPosEnd();
+  }
+
+  onInputKeyDown(event) {
     const {showSuggestions} = this.state;
+    const {which, altKey} = event;
     switch (which) {
       case KeyCodes.DOWN :
         if (altKey && !showSuggestions) {
           this.showHideSuggestions(true);
         }
         if (showSuggestions) {
-          this.setNextHighlightedIndex();
+          this.setNextHighlighted();
         }
         break;
       case KeyCodes.UP :
@@ -172,30 +191,24 @@ class BaseSelector extends React.Component {
           this.showHideSuggestions(false);
         }
         if (showSuggestions) {
-          this.setPreviousHighlightedIndex();
+          this.setPreviousHighlighted();
         }
         break;
       case KeyCodes.ESC:
         this.onInputReset();
         break;
-
-      // case KeyCodes.DOWN:
-      //   evt.preventDefault();
-      //   onChangeFocused(this.nextFocusedIndex());
-      //   break;
-      // case KeyCodes.UP:
-      //   evt.preventDefault();
-      //   onChangeFocused(this.previousFocusedIndex());
-      //   break;
-      // case KeyCodes.HOME:
-      //   onChangeFocused(0);
-      //   break;
-      // case KeyCodes.END:
-      //   onChangeFocused(suggestions.length - 1);
-      //   break;
-      // case KeyCodes.ESC:
-      //   onClose();
-      //   break;
+      case KeyCodes.HOME:
+        if (showSuggestions) {
+          this.setFirstHighlighted();
+          event.preventDefault();
+        }
+        break;
+      case KeyCodes.END:
+        if (showSuggestions) {
+          this.setLastHighlighted();
+          event.preventDefault();
+        }
+        break;
       // case KeyCodes.ENTER:
       //   onSelect(suggestions[highlightedIndex]);
       //   break;
@@ -218,10 +231,8 @@ class BaseSelector extends React.Component {
     const {
       value,
       placeholder,
-      suggestions,
       renderSuggestion,
       renderNoMatches,
-      suggestionFilter,
       shouldSelectFocusedSuggestionOnTab,
       suggestionsHeightMax,
       id,
@@ -258,7 +269,7 @@ class BaseSelector extends React.Component {
           }}
           onChangeFocused={this.onChangeFocusedSuggestion}
           highlightedIndex={highlightedSuggestionIndex}
-          suggestions={suggestions.filter(suggestionFilter(value))}
+          suggestions={this.filterSuggestions()}
           heightMax={suggestionsHeightMax}
           renderSuggestion={renderSuggestion}
           renderNoMatches={renderNoMatches}
