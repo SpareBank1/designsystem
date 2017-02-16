@@ -1,60 +1,38 @@
-import React, { PropTypes } from 'react';
-import { Scrollbars } from 'react-custom-scrollbars';
+import React, {PropTypes} from 'react';
+import {Scrollbars} from 'react-custom-scrollbars';
 import SuggestionList from './suggestion-list';
-import { KeyCodes } from '../util/types';
 
 class SuggestionListContainer extends React.Component {
 
   constructor(props) {
     super(props);
-    this.onKeyDown = this.onKeyDown.bind(this);
+    this.refHighlightedSuggestion = this.refHighlightedSuggestion.bind(this);
   }
 
-  nextFocusedIndex() {
-    const {focusedIndex, suggestions} = this.props;
-    return focusedIndex === suggestions.length - 1 ? 0 : focusedIndex + 1;
+  refHighlightedSuggestion(suggestionEl) {
+    this.highlightedSuggestionHeight = suggestionEl.clientHeight;
   }
 
-  previousFocusedIndex() {
-    const {focusedIndex, suggestions} = this.props;
-    return focusedIndex === 0 ? suggestions.length - 1 : focusedIndex - 1;
+  _setScrollPos(pos) {
+    this.scrollbars.scrollTop(pos);
   }
 
-  onKeyDown(evt) {
-    const {suggestions, onClose, onSelect, shouldSelectFocusedSuggestionOnTab, onChangeFocused, focusedIndex, onBlur} = this.props;
-    switch (evt.which) {
-      case KeyCodes.DOWN:
-        evt.preventDefault();
-        onChangeFocused(this.nextFocusedIndex());
-        break;
-      case KeyCodes.UP:
-        evt.preventDefault();
-        onChangeFocused(this.previousFocusedIndex());
-        break;
-      case KeyCodes.HOME:
-        onChangeFocused(0);
-        break;
-      case KeyCodes.END:
-        onChangeFocused(suggestions.length - 1);
-        break;
-      case KeyCodes.ESC:
-        onClose();
-        break;
-      case KeyCodes.ENTER:
-        onSelect(suggestions[focusedIndex]);
-        break;
-      case KeyCodes.TAB:
-        if (evt.shiftKey) {
-          evt.preventDefault();
-          onSelect(suggestions[focusedIndex]);
-          break;
-        }
-        if (shouldSelectFocusedSuggestionOnTab) {
-          onSelect(suggestions[focusedIndex]);
-          break;
-        }
-        onBlur();
-    }
+  setScrollPosStart() {
+    this._setScrollPos(0);
+  }
+
+  setScrollPosEnd() {
+    this._setScrollPos(this.scrollbars.getScrollHeight());
+  }
+
+  setScrollPosNext() {
+    const {highlightedIndex} = this.props;
+    this._setScrollPos(highlightedIndex * this.highlightedSuggestionHeight);
+  }
+
+  setScrollPosPrevious() {
+    const {highlightedIndex} = this.props;
+    this._setScrollPos((highlightedIndex * this.highlightedSuggestionHeight) - this.highlightedSuggestionHeight);
   }
 
   render() {
@@ -65,9 +43,14 @@ class SuggestionListContainer extends React.Component {
       >
         <Scrollbars
           autoHeight={true}
-          autoHeightMax={200}
+          autoHeightMax={heightMax}
+          ref={(scrollbars) => {
+            if (scrollbars) {
+              this.scrollbars = scrollbars
+            }
+          }}
         >
-          <SuggestionList {...this.props}/>
+          <SuggestionList refHighlightedSuggestion={this.refHighlightedSuggestion} {...this.props}/>
         </Scrollbars>
       </div>
     );
@@ -86,7 +69,8 @@ SuggestionListContainer.propTypes = {
 };
 
 SuggestionListContainer.defaultProps = {
-  onClose: () => {},
+  onClose: () => {
+  },
   heightMax: 300
 };
 

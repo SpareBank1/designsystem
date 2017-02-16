@@ -10,6 +10,7 @@ export default class SuggestionList extends Component {
       highlightedIndex,
       renderSuggestion,
       renderNoMatches,
+      refHighlightedSuggestion
     } = this.props;
     return (
       <ul
@@ -17,15 +18,17 @@ export default class SuggestionList extends Component {
         role='listbox'
       >
         { suggestions.length > 0 ?
-          suggestions.map((item, index) => (
-            <Suggestion
+          suggestions.map((item, index) => {
+            const isHighlighted = index === highlightedIndex;
+            return <Suggestion
               key={index}
               item={item}
-              isHighlighted={index === highlightedIndex}
+              isHighlighted={isHighlighted}
+              refHighlightedSuggestion={refHighlightedSuggestion}
               render={renderSuggestion}
               onSelect={onSelect}
             />
-          )) :
+          }) :
           <li>{renderNoMatches()}</li>
         }
       </ul>
@@ -36,6 +39,7 @@ export default class SuggestionList extends Component {
 SuggestionList.propTypes = {
   suggestions: PropTypes.arrayOf(React.PropTypes.object).isRequired,
   highlightedIndex: PropTypes.number.isRequired,
+  refHighlightedSuggestion: PropTypes.func.isRequired,
   renderNoMatches: PropTypes.func,
 };
 
