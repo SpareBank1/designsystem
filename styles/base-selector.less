@@ -46,15 +46,17 @@
   }
 
   .container-suggestion {
+    @border : 1px solid @ffe-grey-light;
+
     position: absolute;
     left: 0;
     right: 0;
+    border : @border;
+    border-radius: 2px;
     &-list {
       left: 0;
       width: 100%;
       top: 45px;
-      border: 1px solid @ffe-grey-light;
-      border-radius: 2px;
       box-sizing: border-box;
       z-index: 100;
       margin: 0;

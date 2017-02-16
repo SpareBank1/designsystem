@@ -134,14 +134,26 @@ class BaseSelector extends React.Component {
     const {highlightedSuggestionIndex} = this.state;
     const {suggestions} = this.props;
     const nextHighlightedSuggestionIndex = highlightedSuggestionIndex === suggestions.length - 1 ? 0 : highlightedSuggestionIndex + 1;
-    this.setState({highlightedSuggestionIndex : nextHighlightedSuggestionIndex});
+    this.setState({highlightedSuggestionIndex: nextHighlightedSuggestionIndex});
+
+    if (nextHighlightedSuggestionIndex === 0) {
+      this.suggestionList.setScrollPosStart();
+      return;
+    }
+    this.suggestionList.setScrollPosNext();
   }
 
   setPreviousHighlightedIndex() {
     const {highlightedSuggestionIndex} = this.state;
     const {suggestions} = this.props;
     const nextHighlightedSuggestionIndex = highlightedSuggestionIndex === 0 ? suggestions.length - 1 : highlightedSuggestionIndex - 1;
-    this.setState({highlightedSuggestionIndex : nextHighlightedSuggestionIndex});
+    this.setState({highlightedSuggestionIndex: nextHighlightedSuggestionIndex});
+
+    if (nextHighlightedSuggestionIndex === suggestions.length - 1 ) {
+      this.suggestionList.setScrollPosEnd();
+      return;
+    }
+    this.suggestionList.setScrollPosPrevious();
   }
 
   onInputKeyDown({which, altKey}) {
@@ -159,7 +171,7 @@ class BaseSelector extends React.Component {
         if (altKey && showSuggestions) {
           this.showHideSuggestions(false);
         }
-        if(showSuggestions){
+        if (showSuggestions) {
           this.setPreviousHighlightedIndex();
         }
         break;
@@ -241,6 +253,9 @@ class BaseSelector extends React.Component {
         />
         {showSuggestions &&
         <SuggestionsList
+          ref={(suggestionList) => {
+            this.suggestionList = suggestionList
+          }}
           onChangeFocused={this.onChangeFocusedSuggestion}
           highlightedIndex={highlightedSuggestionIndex}
           suggestions={suggestions.filter(suggestionFilter(value))}
