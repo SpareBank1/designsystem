@@ -1,11 +1,12 @@
 #!/usr/bin/env node
 
+/* eslint-disable strict */
+// Jenkins version of Node dislikes features like let and const outside of strict mode
 'use strict';
 
 const argv = require('yargs').argv;
 const deepAssign = require('deep-assign');
 const fs = require('fs');
-const glob = require('glob');
 const mkdirp = require('mkdirp');
 const path = require('path');
 const SVGSpriter = require('svg-sprite');
@@ -42,7 +43,7 @@ if (argv.opts) {
 
     // deepAssign does not handle arrays, so copy the icon array and delete it from opts before assigning the rest
     options.icons = opts.icons.slice(0);
-    if (opts.projectIcons) options.projectIcons = opts.projectIcons.slice(0);
+    if (opts.projectIcons) {options.projectIcons = opts.projectIcons.slice(0);}
     delete opts.icons;
     delete opts.projectIcons;
 
@@ -50,7 +51,7 @@ if (argv.opts) {
 
     // convenience to avoid having file extension in config
     options.icons = options.icons.map(icon => `${icon}.svg`);
-    if (options.projectIcons) options.projectIcons = options.projectIcons.map(icon => `${icon}.svg`);
+    if (options.projectIcons) {options.projectIcons = options.projectIcons.map(icon => `${icon}.svg`);}
 
     if (!options.dest) {
         throw Error('ffe-icons was given an options object, but no destination for the generated sprite! Update your ' +
@@ -67,7 +68,7 @@ fs.readdirSync(ICONS_PATH)
     .filter(fileName => fileName.match(/\.svg$/))
     .filter(fileName => {
         return options.icons === '**/*.svg'
-            || options.icons.includes(fileName.substring(fileName.lastIndexOf('/')))
+            || options.icons.includes(fileName.substring(fileName.lastIndexOf('/')));
     })
     .forEach((fileName) => {
         const iconPath = path.join(ICONS_PATH, fileName);
@@ -91,10 +92,14 @@ if (options.projectIcons) {
 }
 
 spriter.compile(function(error, result) {
-    for (let mode in result) {
-        for (let resource in result[mode]) {
-            mkdirp.sync(path.dirname(result[mode][resource].path));
-            fs.writeFileSync(result[mode][resource].path, result[mode][resource].contents);
+    for (const mode in result) {
+        if (Object.prototype.hasOwnProperty.call(result, mode)) {
+            for (const resource in result[mode]) {
+                if (Object.prototype.hasOwnProperty.call(result[mode], resource)) {
+                    mkdirp.sync(path.dirname(result[mode][resource].path));
+                    fs.writeFileSync(result[mode][resource].path, result[mode][resource].contents);
+                }
+            }
         }
     }
 });

@@ -2,8 +2,8 @@
 
 ## 7.4.0
 
-* :bug: Bugfix: the produced bundle should again only contain the icons in your `icons.json`
-* :rocket: New feature: `projectIcons` option now available
+* Bugfix: the produced bundle should again only contain the icons in your `icons.json`
+* New feature: `projectIcons` option now available
 
 Usage:
 
