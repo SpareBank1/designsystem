@@ -1,5 +1,24 @@
 # Changelog
 
+## 7.4.0
+
+* Bugfix: the produced bundle should again only contain the icons in your `icons.json`
+* New feature: `projectIcons` option now available
+
+Usage:
+
+```json
+{
+    "dest": "dist/resources/",
+    "icons": [
+        "bamse-ikon"
+    ],
+    "projectIcons": [
+        "src/main/resources/special/snowflake/snokrystall-ikon"
+    ]
+}
+```
+
 ## 7.3.0
 
 Added moped-ikon.svg
