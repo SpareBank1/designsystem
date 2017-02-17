@@ -42,14 +42,17 @@ if (argv.opts) {
 
     // deepAssign does not handle arrays, so copy the icon array and delete it from opts before assigning the rest
     options.icons = opts.icons.slice(0);
+    if (opts.projectIcons) options.projectIcons = opts.projectIcons.slice(0);
     delete opts.icons;
+    delete opts.projectIcons;
 
     options = deepAssign(options, opts);
 
     // convenience to avoid having file extension in config
     options.icons = options.icons.map(icon => `${icon}.svg`);
+    if (options.projectIcons) options.projectIcons = options.projectIcons.map(icon => `${icon}.svg`);
 
-    if (!opts.dest) {
+    if (!options.dest) {
         throw Error('ffe-icons was given an options object, but no destination for the generated sprite! Update your ' +
             'config file (e.g. icons.json) to include a "dest" property with a path to where you want the generated sprite.');
     }
@@ -60,9 +63,12 @@ options.config.dest = path.join(__dirname, options.cwd, options.dest);
 // https://github.com/jkphl/svg-sprite#usage-pattern
 const spriter = new SVGSpriter(options.config);
 
-
 fs.readdirSync(ICONS_PATH)
-    .filter(fname => fname.match(/\.svg$/))
+    .filter(fileName => fileName.match(/\.svg$/))
+    .filter(fileName => {
+        return options.icons === '**/*.svg'
+            || options.icons.includes(fileName.substring(fileName.lastIndexOf('/')))
+    })
     .forEach((fileName) => {
         const iconPath = path.join(ICONS_PATH, fileName);
         spriter.add(new Vinyl({
@@ -71,6 +77,18 @@ fs.readdirSync(ICONS_PATH)
             contents: fs.readFileSync(iconPath)
         }));
     });
+
+if (options.projectIcons) {
+    options.projectIcons
+        .forEach((fileName) => {
+            const iconPath = path.join(options.cwd, fileName);
+            spriter.add(new Vinyl({
+                path: fileName.substring(fileName.lastIndexOf('/') - 1),
+                base: options.cwd,
+                contents: fs.readFileSync(iconPath)
+            }));
+        });
+}
 
 spriter.compile(function(error, result) {
     for (let mode in result) {
