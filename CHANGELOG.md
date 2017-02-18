@@ -1,5 +1,8 @@
 # Changelog
 
+## v4.1.2
+* Added space underneath radio-switches on small devices and updated visual tests with longer button text.
+
 ## v4.1.1
 * Modified the font size for dropdowns from 18px to 16px.
 
