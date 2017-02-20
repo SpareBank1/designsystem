@@ -27,26 +27,30 @@ class TableRowExpandable extends Component {
 
     render() {
         const { cells, columns, children } = this.props;
+        const unexpandable = !children;
 
         return (
             <tbody>
                 <TableRow
                     cells={{
                         ...cells,
-                        expandIcon: <Chevron
-                                        className={ classNames(
-                                            'ffe-responsive-table__expand-icon',
-                                            { 'ffe-responsive-table__expand-icon--expanded' : this.state.expanded }
-                                        )}
-                                    />
+                        expandIcon: (unexpandable ? ' ' :
+                                        <Chevron
+                                            className={ classNames(
+                                                'ffe-responsive-table__expand-icon',
+                                                { 'ffe-responsive-table__expand-icon--expanded' : this.state.expanded }
+                                            )}
+                                        />
+                                    )
                     }}
                     trClasses={ classNames(
-                        'ffe-responsive-table__row-expandable',
+                        { 'ffe-responsive-table__row-expandable' : !unexpandable },
                         { 'ffe-responsive-table__row-expandable--expanded' : this.state.expanded }
                     )}
                     columns={ columns }
                     onClick={ this.toggleExpand }
                     onKeyDown={ this.handleKeyPress }
+                    expandable={ !unexpandable }
                     expanded={ this.state.expanded }
                 />
                 <tr

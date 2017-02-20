@@ -26,16 +26,18 @@ render(
           {
             SIMPLE_TABLE_EXPANDABLE.dataObject.map((row, index) => (
               <TableRowExpandable cells={ row } columns={SIMPLE_TABLE_EXPANDABLE.columns} key={ index }>
-                <div>
-                  <dl>
-                    <dt>Adresse</dt>
-                    <dd>{ row.address }</dd>
-                    <dt>E-post</dt>
-                    <dd>{ row.email }</dd>
-                    <dt>Telefon</dt>
-                    <dd>{ row.phone }</dd>
-                  </dl>
-                </div>
+                { row.address && row.email && row.phone && (
+                  <div>
+                    <dl>
+                      <dt>Adresse</dt>
+                      <dd>{ row.address }</dd>
+                      <dt>E-post</dt>
+                      <dd>{ row.email }</dd>
+                      <dt>Telefon</dt>
+                      <dd>{ row.phone }</dd>
+                    </dl>
+                  </div>
+                ) }
               </TableRowExpandable>
             ))
           }

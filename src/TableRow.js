@@ -2,18 +2,17 @@ import React from 'react';
 import classNames from 'classnames';
 import TableCell from './TableCell';
 
-const TableRow = ({ cells, columns, onClick, onKeyDown, trClasses, expanded }) => {
+const TableRow = ({ cells, columns, onClick, onKeyDown, trClasses, expandable, expanded }) => {
+    const expandableProps = expandable ? { tabIndex:'0', onClick, onKeyDown } : {};
     return (
         <tr
             className={classNames(
-                'ffe-responsive-table__row ',
+                'ffe-responsive-table__row',
                 trClasses
             )}
-            tabIndex="0"
             role="button"
-            onClick={ onClick }
-            onKeyDown={ onKeyDown }
             aria-expanded={ expanded }
+            { ...expandableProps }
         >
             { columns.map((column, index) => {
                 return (
@@ -37,6 +36,7 @@ TableRow.propTypes = {
     trClasses: React.PropTypes.string,
     onClick: React.PropTypes.func,
     onKeyDown: React.PropTypes.func,
+    expandable: React.PropTypes.bool,
     expanded: React.PropTypes.bool,
 };
 

@@ -1,5 +1,10 @@
 # Changelog
 
+## v.3.0.0
+
+* BREAKING: Behavioural change on `TableRowExpandable`. If no children, or a falsy value is passed as children, the row will not be expandable. This will remove chevron, tabIndex and event listeners from the `tr`. This is intended used when there are no details available for the row, or if the expandable area contains actions which are currently blocked on this item.
+* Fixed: `TableRow` in a plain `ResponsiveTable` should not have a `tabIndex` (should not be focusable).
+
 ## v2.0.1
 
 * Update dependency ffe-icons-react to ^2.3.0
