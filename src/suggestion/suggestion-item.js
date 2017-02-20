@@ -11,7 +11,9 @@ class SuggestionItem extends Component{
           }
         }}
         role='option'
-        onClick={(e) => onSelect(item)}
+        onMouseDown={(event) => {event.stopPropagation();onSelect(event, item)}}
+        onMouseUp={(event)=>{event.stopPropagation()}}
+        onClick={()=> console.log("hei")}
         className={isHighlighted ? 'account-suggestion__highlighted account-suggestion' : 'account-suggestion'}
         tabIndex={-1}
       >
