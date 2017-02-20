@@ -7,6 +7,7 @@ class SuggestionListContainer extends React.Component {
   constructor(props) {
     super(props);
     this.refHighlightedSuggestion = this.refHighlightedSuggestion.bind(this);
+
   }
 
   refHighlightedSuggestion(suggestionEl) {
@@ -40,6 +41,7 @@ class SuggestionListContainer extends React.Component {
     return (
       <div className='container-suggestion'
            onKeyDown={this.onKeyDown}
+           ref={(self)=> {if(self){ self.addEventListener(['mousedown', 'mouseup'], (e)=> e.stopPropagation())} }}
       >
         <Scrollbars
           autoHeight={true}
@@ -62,7 +64,6 @@ SuggestionListContainer.propTypes = {
   onSelect: PropTypes.func.isRequired,
   onChangeFocused: PropTypes.func.isRequired,
   highlightedIndex: PropTypes.number.isRequired,
-  onBlur: PropTypes.func.isRequired,
   onClose: PropTypes.func,
   heightMax: PropTypes.number,
   shouldSelectFocusedSuggestionOnTab: PropTypes.bool,

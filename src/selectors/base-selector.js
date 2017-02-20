@@ -14,9 +14,6 @@ class BaseSelector extends React.Component {
     this.onInputKeyDown = this.onInputKeyDown.bind(this);
     this.onFocus = this.onFocus.bind(this);
     this.onBlur = this.onBlur.bind(this);
-    this.globalClickHandler = this.globalClickHandler.bind(this);
-    this.onInputBlur = this.onInputBlur.bind(this);
-    this.onInputFocus = this.onInputFocus.bind(this);
     this.onChangeFocusedSuggestion = this.onChangeFocusedSuggestion.bind(this);
     this.filterSuggestions = this.filterSuggestions.bind(this);
 
@@ -32,78 +29,25 @@ class BaseSelector extends React.Component {
   }
 
   onInputChange(input) {
-    const {onChange} = this.props;
     this.showHideSuggestions(true);
-    onChange(input);
+    this.props.onChange(input);
   }
 
-  globalClickHandler(evt) {
-    if (!this.self.contains(evt.target)) {
-      const {shouldSelectFocusedSuggestionOnTab, suggestions} = this.props;
-      const {highlightedSuggestionIndex} = this.state;
-      if (shouldSelectFocusedSuggestionOnTab) {
-        const selectedAccount = suggestions[highlightedSuggestionIndex];
-        if (selectedAccount) {
-          this.onSuggestionSelect(selectedAccount);
-        }
-      }
-    }
-  }
-
-  addGlobalEventListeners() {
-    window.addEventListener('mousedown', this.globalClickHandler);
-  }
-
-  removeGlobalEventListeners() {
-    window.removeEventListener('mousedown', this.globalClickHandler);
-  }
-
-  onChangeFocusedSuggestion(index) {
+  onChangeFocusedSuggestion(index) { //TODO focus
     this.setState({highlightedSuggestionIndex: index});
   }
 
   onFocus() {
-    this.setState({
-      showSuggestions: true
-    }, () => {
-      this.props.onFocus();
-      this.addGlobalEventListeners();
-    });
+    this.setState({showSuggestions: true}, this.props.onFocus
+    );
   }
 
-  onBlur() {
-    //Calling setState causes a rerender which removes SuggestionList from the DOM.
-    //onSelect is thus never called when a SuggestionItem is clicked.
-    this.state = {...this.state, showSuggestions: false};
-    this.props.onBlur();
-    this.removeGlobalEventListeners();
-  }
-
-  hasFocus() {
-    const {inputHasFocus, highlightedSuggestionIndex} = this.state;
-    return inputHasFocus || highlightedSuggestionIndex !== -1;
-  }
-
-  onInputFocus(event) {
+  onBlur(event) {
     event.stopPropagation();
-    if (!this.hasFocus()) {
-      this.onFocus();
-    }
-    this.state = {...this.state, inputHasFocus: true};
+    this.setState({showSuggestions: false}, this.props.onBlur);
   }
 
-  onInputBlur(event) {
-    event.stopPropagation();
-    setTimeout(()=> {
-      if (!this.hasFocus()) {
-        this.onBlur();
-      }
-    });
-    this.state = {...this.state, inputHasFocus: false};
-  }
-
-  showHideSuggestions(show, cb = ()=> {
-  }) {
+  showHideSuggestions(show, cb = ()=> {}) {
     const nextState = show ? {showSuggestions: show} : {showSuggestions: false, highlightedSuggestionIndex: -1};
     this.setState(nextState, cb);
   }
@@ -113,15 +57,16 @@ class BaseSelector extends React.Component {
     onSelect(suggestion);
     if (shouldSetFocusToInputOnSelect) {
       this.setState({
-        inputHasFocus: true,
         showSuggestions: false,
         highlightedSuggestionIndex: -1
-      }, ()=> this.input.focus());
+      });
     }
   }
 
-  onSuggestionSelect(suggestion) {
-    const {shouldHideSuggestionsOnSelect} = this.props;
+  onSuggestionSelect(event, suggestion) {
+    event.stopPropagation();
+    const {shouldHideSuggestionsOnSelect, shouldSetFocusToInputOnSelect} = this.props;
+
     if (shouldHideSuggestionsOnSelect) {
       this.showHideSuggestions(false, ()=> this.onSelect(suggestion));
       return;
@@ -131,10 +76,7 @@ class BaseSelector extends React.Component {
   }
 
   onInputReset() {
-    if(this.state.showSuggestions){
-      this.setState({showSuggestions : false});
-      return;
-    }
+    this.setState({showSuggestions : false});
     this.props.onReset();
   }
 
@@ -175,8 +117,9 @@ class BaseSelector extends React.Component {
   }
 
   onInputKeyDown(event) {
-    const {showSuggestions} = this.state;
-    const {which, altKey} = event;
+    const {showSuggestions, highlightedSuggestionIndex} = this.state;
+    const {suggestions, shouldSelectFocusedSuggestionOnTab} = this.props;
+    const {which, altKey, shiftKey} = event;
     switch (which) {
       case KeyCodes.DOWN :
         if (altKey && !showSuggestions) {
@@ -209,21 +152,19 @@ class BaseSelector extends React.Component {
           event.preventDefault();
         }
         break;
-      // case KeyCodes.ENTER:
-      //   onSelect(suggestions[highlightedIndex]);
-      //   break;
-      // case KeyCodes.TAB:
-      //   if (evt.shiftKey) {
-      //     evt.preventDefault();
-      //     onSelect(suggestions[highlightedIndex]);
-      //     break;
-      //   }
-      //   if (shouldSelectFocusedSuggestionOnTab) {
-      //     onSelect(suggestions[highlightedIndex]);
-      //     break;
-      //   }
-      //   onBlur();
-
+      case KeyCodes.ENTER:
+        this.onSelect(suggestions[highlightedSuggestionIndex]);
+        break;
+      case KeyCodes.TAB:
+        if (shiftKey) {
+          event.preventDefault();
+          this.onSelect(suggestions[highlightedSuggestionIndex]);
+          break;
+        }
+        if (shouldSelectFocusedSuggestionOnTab) {
+          this.onSelect(suggestions[highlightedSuggestionIndex]);
+          break;
+        }
     }
   }
 
@@ -259,8 +200,8 @@ class BaseSelector extends React.Component {
           isSuggestionsShowing={showSuggestions}
           id={id}
           placeholder={placeholder}
-          onBlur={this.onInputBlur}
-          onFocus={this.onInputFocus}
+          onBlur={this.onBlur}
+          onFocus={this.onFocus}
         />
         {showSuggestions &&
         <SuggestionsList
@@ -275,7 +216,6 @@ class BaseSelector extends React.Component {
           renderNoMatches={renderNoMatches}
           onSelect={this.onSuggestionSelect}
           onClose={()=> this.showHideSuggestions(false)}
-          onBlur={this.onBlur}
           shouldSelectFocusedSuggestionOnTab={shouldSelectFocusedSuggestionOnTab}
         />}
       </div>
