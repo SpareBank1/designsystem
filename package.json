@@ -1,6 +1,6 @@
 {
   "name": "ffe-form",
-  "version": "4.1.1",
+  "version": "4.1.2",
   "description": "Form-/skjemapakke for Felles Front End",
   "main": "less/form.less",
   "scripts": {
