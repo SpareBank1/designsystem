@@ -1,5 +1,9 @@
 # Changelog
 
+## v5.2.0
+* Added support for icons in `<Button>`, `<SecondaryButton>` and `<TertiaryButton>`.
+* Modified `ShortcutButton` to pass the `<ChevronIcon>` as a `rightIcon` prop to `<Button>`
+
 ## v5.1.2
 * Bugfix: ShortcutButton used wrong css-class on its icon.
 
