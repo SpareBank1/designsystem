@@ -1,17 +1,21 @@
-import React, { PropTypes } from 'react';
+import React, { cloneElement, PropTypes } from 'react';
 
 export default function Button(props) {
+    const decorate = (icon, buttonType) => cloneElement(icon, { className: `ffe-${buttonType}-button__label-icon` });
+
     const {
         action,
         ariaLoadingMessage = 'Vennligst vent',
+        buttonType = 'primary',
         children,
         className = '',
         disableButton,
         isLoading,
         isTabbable,
         label,
+        leftIcon,
+        rightIcon,
         simpleContent = false,
-        buttonType = 'primary',
         ...rest
     } = props;
     const loadingClass = isLoading ? `ffe-${buttonType}-button--loading` : '';
@@ -33,7 +37,9 @@ export default function Button(props) {
                         className={`ffe-${buttonType}-button__label-text
                         ${isLoading ? `ffe-${buttonType}-button__label-text--loading` : ''}`}
                     >
+                        {leftIcon && decorate(leftIcon, buttonType)}
                         {label || children}
+                        {rightIcon && rightIcon}
                     </span>
                     <span
                         className={`ffe-${buttonType}-button__label-spinner`}
@@ -66,7 +72,9 @@ Button.propTypes = {
     isTabbable: PropTypes.bool,
     autoFocus: PropTypes.bool,
     label: PropTypes.string,
+    leftIcon: PropTypes.node,
     onClick: PropTypes.func,
+    rightIcon: PropTypes.node,
     simpleContent: PropTypes.bool,
     style: PropTypes.object,
     type: PropTypes.oneOf(['button', 'submit', 'reset']),

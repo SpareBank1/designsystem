@@ -43,7 +43,9 @@ isLoading: bool,
 isTabbable: bool,
 autoFocus: bool,
 label: string,
+leftIcon: node,
 onClick: func,
+rightIcon: node,
 simpleContent: bool, (default: false)
 style: object,
 type: 'button' | 'submit' | 'reset' (default: 'submit')
@@ -132,6 +134,28 @@ Optionally, pass `className` to set a custom class on the button.
 ```javascript
 <Button className="testClass">...</Button>
 ```
+
+### Icons
+
+`<Button>` has support for icons, `leftIcon` and `rightIcon`
+`leftIcon` will be placed to the left of the label text, and `rightIcon` to the right of the label text.
+
+`<SecondaryButton>` and `<TertiaryButton>` support `leftIcon`
+
+
+```javascript
+<Button leftIcon={<MyLeftIcon />}>...</Button>
+```
+```javascript
+<Button rightIcon={<MyRightIcon />}>...</Button>
+```
+```javascript
+<SecondaryButton leftIcon={<MyLeftIcon />}>...</SecondaryButton>
+```
+```javascript
+<TertiaryButton leftIcon={<MyLeftIcon />}>...</TertiaryButton>
+```
+
 
 ### Type and onClick-handlers
 
