@@ -92,9 +92,9 @@ export const SIMPLE_TABLE_EXPANDABLE = {
       name: 'Daniel Dansk',
       address: 'Kartoffel Fjers',
       age: 67,
-      phone: '+45 018 456 789',
+      // With no phone number, this guy won't be expandable
       email: 'daniel@dansk.dk',
-      username: 'kartoffel88',
+      username: 'kartoffel88'
     },
     {
       name: 'Anders Amerikaner',
