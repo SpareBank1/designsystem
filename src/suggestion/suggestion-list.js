@@ -19,11 +19,10 @@ export default class SuggestionList extends Component {
       >
         { suggestions.length > 0 ?
           suggestions.map((item, index) => {
-            const isHighlighted = index === highlightedIndex;
             return <Suggestion
               key={index}
               item={item}
-              isHighlighted={isHighlighted}
+              isHighlighted={index === highlightedIndex}
               refHighlightedSuggestion={refHighlightedSuggestion}
               render={renderSuggestion}
               onSelect={onSelect}
@@ -39,7 +38,6 @@ export default class SuggestionList extends Component {
 SuggestionList.propTypes = {
   suggestions: PropTypes.arrayOf(React.PropTypes.object).isRequired,
   highlightedIndex: PropTypes.number.isRequired,
-  refHighlightedSuggestion: PropTypes.func.isRequired,
   renderNoMatches: PropTypes.func,
 };
 
