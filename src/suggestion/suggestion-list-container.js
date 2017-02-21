@@ -41,7 +41,6 @@ class SuggestionListContainer extends React.Component {
     return (
       <div className='container-suggestion'
            onKeyDown={this.onKeyDown}
-           ref={(self)=> {if(self){ self.addEventListener(['mousedown', 'mouseup'], (e)=> e.stopPropagation())} }}
       >
         <Scrollbars
           autoHeight={true}
