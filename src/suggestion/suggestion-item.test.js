@@ -2,22 +2,24 @@ import {mount} from 'enzyme';
 import {assert} from 'chai';
 import React from 'react';
 import  SuggestionItem from './suggestion-item';
+import sinon from 'sinon';
+
 import jsdom from 'jsdom'
 
 const doc = jsdom.jsdom('<!doctype html><html><body></body></html>');
 global.document = doc;
 global.window = doc.defaultView;
 
-function assertHasFocus(wrapper, focus = true) {
-  const testWrapperFocus = wrapper.node === document.activeElement;
-  focus ? assert.isTrue(testWrapperFocus) : assert.isFalse(testWrapperFocus);
+function item() {
+  return {header: 'header'};
 }
 
-function mountSuggestionItem(isHighlighted = true) {
+function renderSuggestionItem(isHighlighted = true, refHighlightedSuggestion = ()=>{}, onSelect = ()=>{}) {
   return mount(<SuggestionItem
-    onSelect={()=>{}}
-    item={{header: 'header'}}
+    onSelect={onSelect}
+    item={item()}
     isHighlighted={isHighlighted}
+    refHighlightedSuggestion={refHighlightedSuggestion}
     render={({header}) => <h1>{header}</h1>}
   />);
 }
@@ -25,28 +27,35 @@ function mountSuggestionItem(isHighlighted = true) {
 describe('<SuggestionItem />', () => {
 
   it('item is rendered', () => {
-    const wrapper = mountSuggestionItem();
+    const wrapper = renderSuggestionItem();
     const li = wrapper.find('li');
 
     assert.equal(li.childAt(0).html(), '<h1>header</h1>');
   });
 
   it('isHighlighted', () => {
-    const wrapper = mountSuggestionItem();
-    const li = wrapper.find('li');
+    const refHighlightedSuggestionSpy = sinon.spy();
+    const wrapper = renderSuggestionItem(true, refHighlightedSuggestionSpy);
 
-    assert.isTrue(wrapper.hasClass('--highlighted'));
-    assert.equal(li.props().tabIndex, 0);
-    assertHasFocus(li);
+    assert.isTrue(wrapper.hasClass('account-suggestion__highlighted'));
+    assert.isTrue(wrapper.hasClass('account-suggestion'));
+    assert.isTrue(refHighlightedSuggestionSpy.calledOnce);
   });
 
 
   it('not Highlighted', () => {
-    const wrapper = mountSuggestionItem(false);
-    const li = wrapper.find('li');
+    const refHighlightedSuggestionSpy = sinon.spy();
+    const wrapper = renderSuggestionItem(false, refHighlightedSuggestionSpy);
 
-    assert.isFalse(wrapper.hasClass('--highlighted'));
-    assert.equal(li.props().tabIndex, -1);
-    assertHasFocus(li, false);
+    assert.isFalse(wrapper.hasClass('account-suggestion__highlighted'));
+    assert.isTrue(wrapper.hasClass('account-suggestion'));
+    assert.isFalse(refHighlightedSuggestionSpy.called);
+  });
+
+  it('onSelect called', () => {
+    const onSelectSpy = sinon.spy();
+    const wrapper = renderSuggestionItem(true, ()=>{}, onSelectSpy);
+    wrapper.simulate('mousedown');
+    assert.isTrue(onSelectSpy.calledWith(item()));
   });
 });

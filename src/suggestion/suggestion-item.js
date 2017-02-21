@@ -11,7 +11,7 @@ class SuggestionItem extends Component{
           }
         }}
         role='option'
-        onMouseDown={() => {onSelect(item, true)}}
+        onMouseDown={() => {onSelect(item)}}
         className={isHighlighted ? 'account-suggestion__highlighted account-suggestion' : 'account-suggestion'}
         tabIndex={-1}
       >
@@ -25,6 +25,7 @@ SuggestionItem.propTypes = {
   isHighlighted: PropTypes.bool.isRequired,
   render: PropTypes.func.isRequired,
   onSelect: PropTypes.func.isRequired,
+  refHighlightedSuggestion: PropTypes.func.isRequired,
 };
 
 export default SuggestionItem;
