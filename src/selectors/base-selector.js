@@ -38,13 +38,11 @@ class BaseSelector extends React.Component {
   }
 
   onFocus() {
-    this.setState({showSuggestions: true}, this.props.onFocus
-    );
+    this.setState({showSuggestions: true}, this.props.onFocus);
   }
 
-  onBlur(event) {
-    event.stopPropagation();
-    this.setState({showSuggestions: false}, this.props.onBlur);
+  onBlur() {
+    this.props.onBlur();
   }
 
   showHideSuggestions(show, cb = ()=> {}) {
@@ -52,31 +50,17 @@ class BaseSelector extends React.Component {
     this.setState(nextState, cb);
   }
 
-  onSelect(suggestion) {
-    const {onSelect, shouldSetFocusToInputOnSelect} = this.props;
-    onSelect(suggestion);
-    if (shouldSetFocusToInputOnSelect) {
-      this.setState({
-        showSuggestions: false,
-        highlightedSuggestionIndex: -1
-      });
-    }
-  }
-
-  onSuggestionSelect(event, suggestion) {
-    event.stopPropagation();
-    const {shouldHideSuggestionsOnSelect, shouldSetFocusToInputOnSelect} = this.props;
-
+  onSuggestionSelect(suggestion) {
+    const {shouldHideSuggestionsOnSelect, onSelect} = this.props;
     if (shouldHideSuggestionsOnSelect) {
-      this.showHideSuggestions(false, ()=> this.onSelect(suggestion));
+      this.showHideSuggestions(false, ()=> onSelect(suggestion));
       return;
     }
-
-    this.onSelect(suggestion);
+    onSelect(suggestion);
   }
 
   onInputReset() {
-    this.setState({showSuggestions : false});
+    this.setState({showSuggestions: false});
     this.props.onReset();
   }
 
@@ -153,7 +137,7 @@ class BaseSelector extends React.Component {
         }
         break;
       case KeyCodes.ENTER:
-        this.onSelect(suggestions[highlightedSuggestionIndex]);
+        this.onSuggestionSelect(suggestions[highlightedSuggestionIndex]);
         break;
       case KeyCodes.TAB:
         if (shiftKey) {
@@ -215,8 +199,6 @@ class BaseSelector extends React.Component {
           renderSuggestion={renderSuggestion}
           renderNoMatches={renderNoMatches}
           onSelect={this.onSuggestionSelect}
-          onClose={()=> this.showHideSuggestions(false)}
-          shouldSelectFocusedSuggestionOnTab={shouldSelectFocusedSuggestionOnTab}
         />}
       </div>
     );
@@ -233,7 +215,6 @@ BaseSelector.propTypes = {
   onReset: PropTypes.func,
   value: PropTypes.string.isRequired,
   onFocus: PropTypes.func,
-  shouldSetFocusToInputOnSelect: PropTypes.bool.isRequired,
   shouldHideSuggestionsOnSelect: PropTypes.bool.isRequired,
   id: PropTypes.string,
 };
