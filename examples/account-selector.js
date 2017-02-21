@@ -1,11 +1,12 @@
-import React, { Component } from 'react';
-import { accounts as accountArray } from './example-data';
+import React, {Component} from 'react';
+import {accounts as accountArray} from './example-data';
 import AccountSelector from '../src/selectors/account-selector';
 
 class AccountSelectorExample extends Component {
   constructor(props) {
     super(props);
     this.onChange = this.onChange.bind(this);
+    this.onBlur = this.onBlur.bind(this);
     this.onReset = this.onReset.bind(this);
     this.onAccountSelected = this.onAccountSelected.bind(this);
     this.state = {value: ''};
@@ -13,7 +14,7 @@ class AccountSelectorExample extends Component {
 
   onChange(value) {
     console.log('onchange', value);
-    this.setState({value});
+    this.setState({selectedAccount: null, value});
   }
 
   onBlur() {
@@ -27,18 +28,19 @@ class AccountSelectorExample extends Component {
   onAccountSelected(account) {
     console.log('account selected', account);
     this.setState({
-      selectedAccount : account,
-      value : account.name,
+      selectedAccount: account,
+      value: account.name,
     });
   }
 
-  onReset(){
+  onReset() {
     console.log('onreset');
-    this.setState({value : '', selectedAccount : null});
+    this.setState({value: '', selectedAccount: null});
   }
 
   render() {
     const {selectedAccount, value} = this.state;
+    // console.log("render", this.state)
     return (
       <div className="selector">
         <label htmlFor="custom-id" className="ffe-form-label ffe-form-label--block selector-label">Velg konto</label>
