@@ -61,7 +61,6 @@ class SuggestionListContainer extends React.Component {
 SuggestionListContainer.propTypes = {
   suggestions: PropTypes.array.isRequired,
   onSelect: PropTypes.func.isRequired,
-  onChangeFocused: PropTypes.func.isRequired,
   highlightedIndex: PropTypes.number.isRequired,
   onClose: PropTypes.func,
   heightMax: PropTypes.number,
@@ -69,8 +68,7 @@ SuggestionListContainer.propTypes = {
 };
 
 SuggestionListContainer.defaultProps = {
-  onClose: () => {
-  },
+  onClose: () => {},
   heightMax: 300
 };
 

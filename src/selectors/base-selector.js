@@ -9,18 +9,24 @@ class BaseSelector extends React.Component {
     super(props);
     this.onInputChange = this.onInputChange.bind(this);
     this.showHideSuggestions = this.showHideSuggestions.bind(this);
-    this.onSuggestionSelect = this.onSuggestionSelect.bind(this);
-    this.onInputReset = this.onInputReset.bind(this);
+    this.onSuggestionClick = this.onSuggestionClick.bind(this);
+    this.onInputResetClick = this.onInputResetClick.bind(this);
     this.onInputKeyDown = this.onInputKeyDown.bind(this);
     this.onFocus = this.onFocus.bind(this);
     this.onBlur = this.onBlur.bind(this);
-    this.onChangeFocusedSuggestion = this.onChangeFocusedSuggestion.bind(this);
     this.filterSuggestions = this.filterSuggestions.bind(this);
 
     this.state = {
       showSuggestions: false,
       highlightedSuggestionIndex: -1,
     };
+
+    /*
+     Used for controlling the calling of props.onFocus and props.onBlur.
+     This is necessary since mouseClick events on the clearInputField
+     button and suggestion items remove focus from the input field
+     */
+    this.didPerformClickAction = false;
   }
 
   filterSuggestions() {
@@ -28,21 +34,26 @@ class BaseSelector extends React.Component {
     return suggestions.filter(suggestionFilter(value));
   }
 
-  onInputChange(input) {
-    this.showHideSuggestions(true);
-    this.props.onChange(input);
-  }
-
-  onChangeFocusedSuggestion(index) { //TODO focus
-    this.setState({highlightedSuggestionIndex: index});
+  onInputChange(value) {
+    this.showHideSuggestions(true, ()=> this.props.onChange(value));
   }
 
   onFocus() {
-    this.setState({showSuggestions: true}, this.props.onFocus);
+    if (this.didPerformClickAction) {
+      this.didPerformClickAction = false;
+      return;
+    }
+
+    this.showHideSuggestions(true, this.props.onFocus);
   }
 
   onBlur() {
-    this.props.onBlur();
+    if (this.didPerformClickAction) {
+      this.input.focus();
+      return;
+    }
+
+    this.showHideSuggestions(false);
   }
 
   showHideSuggestions(show, cb = ()=> {}) {
@@ -50,18 +61,30 @@ class BaseSelector extends React.Component {
     this.setState(nextState, cb);
   }
 
+
   onSuggestionSelect(suggestion) {
-    const {shouldHideSuggestionsOnSelect, onSelect} = this.props;
-    if (shouldHideSuggestionsOnSelect) {
-      this.showHideSuggestions(false, ()=> onSelect(suggestion));
-      return;
+    if (suggestion) {
+      const {shouldHideSuggestionsOnSelect, onSelect} = this.props;
+      if (shouldHideSuggestionsOnSelect) {
+        this.showHideSuggestions(false, ()=> onSelect(suggestion));
+        return;
+      }
+      onSelect(suggestion);
     }
-    onSelect(suggestion);
+  }
+
+  onSuggestionClick(suggestion) {
+    this.didPerformClickAction = true;
+    this.onSuggestionSelect(suggestion);
+  }
+
+  onInputResetClick() {
+    this.didPerformClickAction = true;
+    this.onInputReset();
   }
 
   onInputReset() {
-    this.setState({showSuggestions: false});
-    this.props.onReset();
+    this.showHideSuggestions(false, this.props.onReset);
   }
 
   setNextHighlighted() {
@@ -102,8 +125,8 @@ class BaseSelector extends React.Component {
 
   onInputKeyDown(event) {
     const {showSuggestions, highlightedSuggestionIndex} = this.state;
-    const {suggestions, shouldSelectFocusedSuggestionOnTab} = this.props;
-    const {which, altKey, shiftKey} = event;
+    const {suggestions, shouldSelectHighlightedOnTab} = this.props;
+    const {which, altKey} = event;
     switch (which) {
       case KeyCodes.DOWN :
         if (altKey && !showSuggestions) {
@@ -140,14 +163,8 @@ class BaseSelector extends React.Component {
         this.onSuggestionSelect(suggestions[highlightedSuggestionIndex]);
         break;
       case KeyCodes.TAB:
-        if (shiftKey) {
-          event.preventDefault();
-          this.onSelect(suggestions[highlightedSuggestionIndex]);
-          break;
-        }
-        if (shouldSelectFocusedSuggestionOnTab) {
-          this.onSelect(suggestions[highlightedSuggestionIndex]);
-          break;
+        if (showSuggestions && shouldSelectHighlightedOnTab) {
+          this.onSuggestionSelect(suggestions[highlightedSuggestionIndex]);
         }
     }
   }
@@ -158,18 +175,12 @@ class BaseSelector extends React.Component {
       placeholder,
       renderSuggestion,
       renderNoMatches,
-      shouldSelectFocusedSuggestionOnTab,
       suggestionsHeightMax,
       id,
     } = this.props;
     const {showSuggestions, highlightedSuggestionIndex} = this.state;
     return (
       <div
-        ref={(self)=> {
-          if (self) {
-            this.self = self;
-          }
-        }}
         className='base-selector'
       >
         <Input
@@ -178,7 +189,7 @@ class BaseSelector extends React.Component {
           }}
           value={value}
           onChange={this.onInputChange}
-          onReset={this.onInputReset}
+          onReset={this.onInputResetClick}
           resetLabel={''}
           onKeyDown={this.onInputKeyDown}
           isSuggestionsShowing={showSuggestions}
@@ -192,13 +203,12 @@ class BaseSelector extends React.Component {
           ref={(suggestionList) => {
             this.suggestionList = suggestionList
           }}
-          onChangeFocused={this.onChangeFocusedSuggestion}
           highlightedIndex={highlightedSuggestionIndex}
           suggestions={this.filterSuggestions()}
           heightMax={suggestionsHeightMax}
           renderSuggestion={renderSuggestion}
           renderNoMatches={renderNoMatches}
-          onSelect={this.onSuggestionSelect}
+          onSelect={this.onSuggestionClick}
         />}
       </div>
     );
@@ -216,18 +226,15 @@ BaseSelector.propTypes = {
   value: PropTypes.string.isRequired,
   onFocus: PropTypes.func,
   shouldHideSuggestionsOnSelect: PropTypes.bool.isRequired,
+  shouldSelectHighlightedOnTab: PropTypes.bool.isRequired,
   id: PropTypes.string,
 };
 
 BaseSelector.defaultProps = {
-  onChange: () => {
-  },
-  onBlur: () => {
-  },
-  onFocus: () => {
-  },
-  onReset: ()=> {
-  },
+  onChange: () => {},
+  onBlur: () => {},
+  onFocus: () => {},
+  onReset: ()=> {},
   ariaInvalid: false,
 };
 

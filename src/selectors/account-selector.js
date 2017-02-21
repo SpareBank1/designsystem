@@ -15,7 +15,7 @@ class AccountSelector extends React.Component {
           renderSuggestion={(account)=> <AccountSuggestionItem account={account} locale={locale}/>}
           renderNoMatches={()=> <AccountNoMatch value={noMatches}/>}
           shouldHideSuggestionsOnSelect={true}
-          shouldSelectFocusedSuggestionOnTab={true}
+          shouldSelectHighlightedOnTab={true}
           suggestions={accounts}
           suggestionFilter={accountFilter}
           onSelect={onAccountSelected}

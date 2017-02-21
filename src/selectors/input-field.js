@@ -53,7 +53,7 @@ class Input extends Component {
         <button
           aria-label={ resetLabel }
           className='reset-button'
-          onClick={ onReset }
+          onMouseDown={ onReset }
           tabIndex={-1}
           type="button"
         >
