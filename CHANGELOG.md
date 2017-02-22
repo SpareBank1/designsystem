@@ -1,5 +1,9 @@
 # Changelog
 
+## v.3.0.1
+
+* Fixed broken animation in `ffe-expandable-row`
+
 ## v.3.0.0
 
 * BREAKING: Removes element styling on table elements.
