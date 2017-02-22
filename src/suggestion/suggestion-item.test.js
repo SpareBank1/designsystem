@@ -3,12 +3,7 @@ import {assert} from 'chai';
 import React from 'react';
 import  SuggestionItem from './suggestion-item';
 import sinon from 'sinon';
-
-import jsdom from 'jsdom'
-
-const doc = jsdom.jsdom('<!doctype html><html><body></body></html>');
-global.document = doc;
-global.window = doc.defaultView;
+import './test/setup';
 
 function item() {
   return {header: 'header'};

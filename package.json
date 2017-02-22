@@ -23,7 +23,7 @@
     "babelify": "^7.3.0",
     "budo": "^8.3.0",
     "chai": "^3.5.0",
-    "enzyme": "^2.0.0",
+    "enzyme": "^2.7.1",
     "eslint": "^2.13.0",
     "eslint-config-ffe": "^2.0.0",
     "eslint-plugin-import": "^1.8.1",
