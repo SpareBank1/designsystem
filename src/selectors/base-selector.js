@@ -19,6 +19,7 @@ class BaseSelector extends Component {
     this.state = {
       showSuggestions: false,
       highlightedSuggestionIndex: -1,
+      suggestionListId: "account-selector-suggestion-list"
     };
 
     /*
@@ -172,6 +173,15 @@ class BaseSelector extends Component {
     }
   }
 
+  getFocusedOptionId() {
+    const filteredResults = this.filterSuggestions();
+    const {highlightedSuggestionIndex} = this.state;
+    if (filteredResults.length > 0 && highlightedSuggestionIndex > -1 && filteredResults.length > highlightedSuggestionIndex) {
+      return `option-${filteredResults[highlightedSuggestionIndex].id}`;
+    }
+    return null;
+  }
+
   render() {
     const {
       value,
@@ -179,7 +189,7 @@ class BaseSelector extends Component {
       suggestionsHeightMax,
       id,
     } = this.props;
-    const {showSuggestions, highlightedSuggestionIndex} = this.state;
+    const {showSuggestions, highlightedSuggestionIndex, suggestionListId} = this.state;
     return (
       <div
         className='base-selector'
@@ -198,6 +208,8 @@ class BaseSelector extends Component {
           placeholder={placeholder}
           onBlur={this.onBlur}
           onFocus={this.onFocus}
+          highlightedId={highlightedSuggestionIndex}
+          suggestionListId={suggestionListId}
         />
         {showSuggestions &&
         <SuggestionsList
@@ -209,6 +221,7 @@ class BaseSelector extends Component {
           suggestions={this.filterSuggestions()}
           heightMax={suggestionsHeightMax}
           onSelect={this.onSuggestionClick}
+          id={this.state.suggestionListId}
         />}
       </div>
     );

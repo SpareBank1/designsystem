@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 class SuggestionItem extends Component {
   render() {
-    const {item, isHighlighted, render, onSelect, refHighlightedSuggestion} = this.props;
+    const {item, id, isHighlighted, render, onSelect, refHighlightedSuggestion} = this.props;
     return (
       <li
         ref={(itemRef) => {
@@ -12,6 +12,7 @@ class SuggestionItem extends Component {
           }
         }}
         role='option'
+        id={id}
         onMouseDown={() => {onSelect(item);}}
         className={classNames('account-suggestion', {'account-suggestion__highlighted' : isHighlighted})}
         tabIndex={-1}
@@ -23,6 +24,7 @@ class SuggestionItem extends Component {
 
 SuggestionItem.propTypes = {
   item: PropTypes.object.isRequired,
+  id: PropTypes.string.isRequired,
   isHighlighted: PropTypes.bool.isRequired,
   render: PropTypes.func.isRequired,
   onSelect: PropTypes.func.isRequired,
