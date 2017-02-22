@@ -37,13 +37,13 @@ class SuggestionListContainer extends React.Component {
   }
 
   render() {
-    const {heightMax} = this.props;
+    const {heightMax, autoHeight} = this.props;
     return (
       <div className='container-suggestion'
            onKeyDown={this.onKeyDown}
       >
         <Scrollbars
-          autoHeight={true}
+          autoHeight={autoHeight}
           autoHeightMax={heightMax}
           ref={(scrollbars) => {
             if (scrollbars) {
@@ -59,17 +59,13 @@ class SuggestionListContainer extends React.Component {
 }
 
 SuggestionListContainer.propTypes = {
-  suggestions: PropTypes.array.isRequired,
-  onSelect: PropTypes.func.isRequired,
   highlightedIndex: PropTypes.number.isRequired,
-  onClose: PropTypes.func,
   heightMax: PropTypes.number,
-  shouldSelectFocusedSuggestionOnTab: PropTypes.bool,
 };
 
 SuggestionListContainer.defaultProps = {
-  onClose: () => {},
-  heightMax: 300
+  heightMax: 300,
+  autoHeight : true,
 };
 
 export default SuggestionListContainer;

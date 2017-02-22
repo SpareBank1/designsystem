@@ -4,17 +4,6 @@ import ChevronIkon from 'ffe-icons-react/chevron-ikon';
 import KryssIkon from 'ffe-icons-react/kryss-ikon';
 
 class Input extends Component {
-  constructor(props) {
-    super(props);
-    this.arrowIconClassName = this.arrowIconClassName.bind(this);
-  }
-
-  arrowIconClassName() {
-    return classNames('arrow-icon',
-      {'arrow-icon--up': this.props.isSuggestionsShowing}
-    );
-  }
-
   render() {
     const {
       onFocus,
@@ -60,7 +49,7 @@ class Input extends Component {
           <KryssIkon className='reset-button-icon'/>
         </button>
         }
-        <div className={this.arrowIconClassName()}>
+        <div className={classNames('arrow-icon', {'arrow-icon--up': isSuggestionsShowing })}>
           <ChevronIkon focusable={ false }/>
         </div>
       </div>

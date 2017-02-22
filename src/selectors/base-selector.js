@@ -24,7 +24,7 @@ class BaseSelector extends React.Component {
     /*
      Used for controlling the calling of props.onFocus and props.onBlur.
      This is necessary for maintaining focus in the input field for mouseClick events
-     on the clearInputField button and suggestion items.
+     on the clearInput button and suggestion items.
      */
     this.didPerformClickAction = false;
   }

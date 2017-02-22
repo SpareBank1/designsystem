@@ -3,7 +3,7 @@ import { assert, expect } from 'chai';
 import React from 'react';
 import AccountDetails from './account-details';
 
-describe('<AccountDetails />', () => {
+describe.skip('<AccountDetails />', () => {
 
   const account = {
     id: 1,

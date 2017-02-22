@@ -1,4 +1,5 @@
 import React, {PropTypes, Component} from 'react';
+import classNames from 'classnames';
 
 class SuggestionItem extends Component{
   render() {
@@ -12,7 +13,7 @@ class SuggestionItem extends Component{
         }}
         role='option'
         onMouseDown={() => {onSelect(item)}}
-        className={isHighlighted ? 'account-suggestion__highlighted account-suggestion' : 'account-suggestion'}
+        className={classNames('account-suggestion', {'account-suggestion__highlighted' : isHighlighted})}
         tabIndex={-1}
       >
         {render(item)}
