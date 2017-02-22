@@ -1,8 +1,18 @@
 # Changelog
 
-## v.3.0.0
+## v3.0.1
 
-* BREAKING: Behavioural change on `TableRowExpandable`. If no children, or a falsy value is passed as children, the row will not be expandable. This will remove chevron, tabIndex and event listeners from the `tr`. This is intended used when there are no details available for the row, or if the expandable area contains actions which are currently blocked on this item.
+* Fixed: State change on props update in `SortableTable` will now only trigger if props have actually changed.
+Also, this data will only be sorted if `sortBy` is set in component state.
+* Fixed: Component will only update if props or state has actually changed
+(avoid updating if equal props are given through a prop change in a parent component).
+
+## v3.0.0
+
+* BREAKING: Behavioural change on `TableRowExpandable`. If no children, or a falsy value is passed as children,
+the row will not be expandable. This will remove chevron, tabIndex and event listeners from the `tr`.
+This is intended used when there are no details available for the row, or if the expandable area contains
+actions which are currently blocked on this item.
 * Fixed: `TableRow` in a plain `ResponsiveTable` should not have a `tabIndex` (should not be focusable).
 
 ## v2.0.1
@@ -16,7 +26,7 @@
 * BREAKING: `headers` prop is renamed to `columns` to include footers
 * data is no longer a required prop in ResponsiveTable
 
-### Migrating to v.2.0.0
+### Migrating to v2.0.0
 * Rename `headers` prop to `columns` in all tables
 * Rename the `content` prop in the columns objects to `header`
 
