@@ -73,11 +73,26 @@ Remove the default bottom padding from the column
 
 ### Colours
 
+Use a background colour on the rows. This requires that the children is wrapped in `.ffe-grid__row-wrapper`
+
+```html
+<div class="ffe-grid__row ffe-grid__row--bg-sand ffe-grid__row--top-padding">
+  <div class="ffe-grid__row-wrapper">
+      <div class="ffe-grid__col--md-6">
+          <div class="ffe-grid__content"></div>
+      </div>
+      <div class="ffe-grid__col--md-6">
+          <div class="ffe-grid__content"></div>
+      </div>
+  </div>
+</div>
+```
+
 #### `.ffe-grid__row--bg-blue`
-Adds the `@ffe-blue-royal-light-20` color as a background for the row
+Adds the `@ffe-blue-royal-light-20` colour as a background for the row
 
 #### `.ffe-grid__row--bg-sand`
-Adds the `@ffe-sand` color as a background for the row
+Adds the `@ffe-sand` colour as a background for the row
 
 ### Flexbox
 
