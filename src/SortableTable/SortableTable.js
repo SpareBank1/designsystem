@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import classNames from 'classnames';
+import equal from 'deep-equal';
 import PilNedIcon from 'ffe-icons-react/pil-ned-ikon';
 import sortData from './sort-data';
 import ResponsiveTable from '../ResponsiveTable/ResponsiveTable';
@@ -16,12 +17,20 @@ class SortableTable extends Component {
         };
     }
 
+    sortStateHasChanged(nextState) {
+        return nextState.sortBy !== this.state.sortBy || nextState.descending !== this.state.descending;
+    }
+
     componentWillReceiveProps(nextProps) {
-        if (nextProps !== this.props) {
+        if (!equal(nextProps, this.props)) {
             this.setState({
-                tableData: sortData(this.props.columns, this.props.data, this.state.sortBy, this.state.descending)
+                tableData: this.state.sortBy ? sortData(nextProps.columns, nextProps.data, this.state.sortBy, this.state.descending) : nextProps.data
             });
         }
+    }
+
+    shouldComponentUpdate(nextProps, nextState) {
+        return !equal(nextProps, this.props) || this.sortStateHasChanged(nextState);
     }
 
     tableHeaderClicked(columnKey) {
