@@ -53,14 +53,8 @@ class BaseSelector extends React.Component {
       return;
     }
 
-    this.showHideSuggestions(false);
+    this.showHideSuggestions(false, this.props.onBlur);
   }
-
-  showHideSuggestions(show, cb = ()=> {}) {
-    const nextState = show ? {showSuggestions: show} : {showSuggestions: false, highlightedSuggestionIndex: -1};
-    this.setState(nextState, cb);
-  }
-
 
   onSuggestionSelect(suggestion) {
     if (suggestion) {
@@ -85,6 +79,11 @@ class BaseSelector extends React.Component {
 
   onInputReset() {
     this.showHideSuggestions(false, this.props.onReset);
+  }
+
+  showHideSuggestions(show, cb = ()=> {}) {
+    const nextState = show ? {showSuggestions: show} : {showSuggestions: false, highlightedSuggestionIndex: -1};
+    this.setState(nextState, cb);
   }
 
   setNextHighlighted() {
@@ -131,6 +130,7 @@ class BaseSelector extends React.Component {
       case KeyCodes.DOWN :
         if (altKey && !showSuggestions) {
           this.showHideSuggestions(true);
+          break;
         }
         if (showSuggestions) {
           this.setNextHighlighted();
@@ -139,6 +139,7 @@ class BaseSelector extends React.Component {
       case KeyCodes.UP :
         if (altKey && showSuggestions) {
           this.showHideSuggestions(false);
+          break;
         }
         if (showSuggestions) {
           this.setPreviousHighlighted();
@@ -218,15 +219,14 @@ class BaseSelector extends React.Component {
 BaseSelector.propTypes = {
   suggestions: PropTypes.arrayOf(PropTypes.object).isRequired,
   suggestionFilter: PropTypes.func.isRequired,
-  suggestionsHeightMax: PropTypes.number,
   onSelect: PropTypes.func.isRequired,
+  value: PropTypes.string.isRequired,
+  shouldHideSuggestionsOnSelect: PropTypes.bool.isRequired,
+  shouldSelectHighlightedOnTab: PropTypes.bool.isRequired,
   onChange: PropTypes.func,
   onBlur: PropTypes.func,
   onReset: PropTypes.func,
-  value: PropTypes.string.isRequired,
   onFocus: PropTypes.func,
-  shouldHideSuggestionsOnSelect: PropTypes.bool.isRequired,
-  shouldSelectHighlightedOnTab: PropTypes.bool.isRequired,
   id: PropTypes.string,
 };
 
