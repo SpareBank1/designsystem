@@ -1,5 +1,20 @@
 # Changelog
 
+## v.3.0.0
+* Breaking: `.ffe-grid__row--bg-sand` and `.ffe-grid__row--bg-blue` now require a `.ffe-grid__row-wrapper` around its columns. The background will then be full width while the content keeps to the grid size.
+```html
+<div class="ffe-grid__row ffe-grid__row--bg-sand ffe-grid__row--top-padding">
+  <div class="ffe-grid__row-wrapper">
+      <div class="ffe-grid__col--md-6">
+          <div class="ffe-grid__content"></div>
+      </div>
+      <div class="ffe-grid__col--md-6">
+          <div class="ffe-grid__content"></div>
+      </div>
+  </div>
+</div>
+```
+
 ## v.2.1.0
 * New modifier: `.ffe-grid__row--bg-sand`, adds `@ffe-sand` background colour.
 * New modifier: `.ffe-grid__row--top-padding`, adds padding to the top of a row.
