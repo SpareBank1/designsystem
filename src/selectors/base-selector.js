@@ -35,7 +35,7 @@ class BaseSelector extends Component {
   }
 
   onInputChange(value) {
-    this.showHideSuggestions(true, () => this.props.onChange(value));
+    this.setState({showSuggestions : true, highlightedSuggestionIndex : -1}, () => this.props.onChange(value));
   }
 
   onFocus() {
@@ -134,6 +134,7 @@ class BaseSelector extends Component {
         }
         if (showSuggestions) {
           this.setNextHighlighted();
+          event.preventDefault();
         }
         break;
       case KeyCodes.UP :
@@ -143,6 +144,7 @@ class BaseSelector extends Component {
         }
         if (showSuggestions) {
           this.setPreviousHighlighted();
+          event.preventDefault();
         }
         break;
       case KeyCodes.ESC:
