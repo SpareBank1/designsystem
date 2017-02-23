@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import { GridRow } from '..';
+import { GridRow, GridCol } from '..';
 
 const defaultProps = {
     children: <p>blah</p>,
@@ -41,6 +41,15 @@ describe('GridRow', () => {
 
         expect(el.hasClass('ffe-grid__row')).to.be(true);
         expect(el.hasClass('ffe-grid__row--bg-sand')).to.be(true);
+    });
+
+    it('renders coloured rows with extra wrappers', () => {
+        const el = renderShallow({
+            bgSand: true,
+            children: <GridCol lg={12}><p>blah</p></GridCol>,
+        });
+
+        expect(el.childAt(0).hasClass('ffe-grid__row-wrapper')).to.be(true);
     });
 
     it('sets the topPadding modifier', () => {
