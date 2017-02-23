@@ -13,6 +13,7 @@ function renderSuggestionItem(isHighlighted = true, refHighlightedSuggestion = (
   return mount(<SuggestionItem
     onSelect={onSelect}
     item={item()}
+    id="suggestion-option-0"
     isHighlighted={isHighlighted}
     refHighlightedSuggestion={refHighlightedSuggestion}
     render={({header}) => <h1>{header}</h1>}
@@ -25,6 +26,7 @@ describe('<SuggestionItem />', () => {
     const wrapper = renderSuggestionItem();
     const li = wrapper.find('li');
 
+    assert.isTrue(li.prop('id') === 'suggestion-option-0');
     assert.equal(li.childAt(0).html(), '<h1>header</h1>');
   });
 
@@ -36,7 +38,6 @@ describe('<SuggestionItem />', () => {
     assert.isTrue(wrapper.hasClass('account-suggestion'));
     assert.isTrue(refHighlightedSuggestionSpy.calledOnce);
   });
-
 
   it('not Highlighted', () => {
     const refHighlightedSuggestionSpy = sinon.spy();
