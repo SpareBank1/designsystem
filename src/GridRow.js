@@ -2,6 +2,10 @@ import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 
 export default function GridRow({ bgBlue, bgSand, children, reverse, topPadding }) {
+    let content = children;
+    if (bgBlue || bgSand) {
+        content = <div className="ffe-grid__row-wrapper">{children}</div>;
+    }
     return (
         <div
             className={
@@ -14,7 +18,7 @@ export default function GridRow({ bgBlue, bgSand, children, reverse, topPadding 
                 )
             }
         >
-            {children}
+            {content}
         </div>
     );
 }
