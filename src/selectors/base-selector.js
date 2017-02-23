@@ -19,7 +19,7 @@ class BaseSelector extends Component {
     this.state = {
       showSuggestions: false,
       highlightedSuggestionIndex: -1,
-      suggestionListId: "account-selector-suggestion-list"
+      suggestionListId: "suggestion-list"
     };
 
     /*
@@ -199,7 +199,7 @@ class BaseSelector extends Component {
           placeholder={placeholder}
           onBlur={this.onBlur}
           onFocus={this.onFocus}
-          highlightedId={highlightedSuggestionIndex}
+          highlightedIndex={highlightedSuggestionIndex}
           suggestionListId={suggestionListId}
         />
         {showSuggestions &&
@@ -212,7 +212,7 @@ class BaseSelector extends Component {
           suggestions={this.filterSuggestions()}
           heightMax={suggestionsHeightMax}
           onSelect={this.onSuggestionClick}
-          id={this.state.suggestionListId}
+          id={suggestionListId}
         />}
       </div>
     );
