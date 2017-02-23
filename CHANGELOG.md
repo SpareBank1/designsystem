@@ -1,5 +1,9 @@
 # Changelog
 
+## 7.4.1
+
+* Bugfix: resolves a path issue that made the `projectIcons` config unusable outside of `npm link`
+
 ## 7.4.0
 
 * Bugfix: the produced bundle should again only contain the icons in your `icons.json`
