@@ -5,13 +5,6 @@ import React from 'react';
 import BaseSelector from './base-selector';
 import {KeyCodes} from '../util/types';
 
-function shallowBaseSelector(props) {
-  return shallow(
-    <BaseSelector
-      {...{...propsBaseSelector(), ...props}}
-    />);
-}
-
 function suggestions() {
   return [
     {header: '1'},
@@ -23,12 +16,19 @@ function suggestions() {
 function propsBaseSelector(_suggestions = suggestions()) {
   return {
     suggestions: _suggestions,
-    suggestionFilter: ()=> ()=> true,
+    suggestionFilter: () => () => true,
     onSelect: () => {},
     value: '',
     shouldHideSuggestionsOnSelect: true,
     shouldSelectHighlightedOnTab: true,
   };
+}
+
+function shallowBaseSelector(props) {
+  return shallow(
+    <BaseSelector
+      {...{...propsBaseSelector(), ...props}}
+    />);
 }
 
 function assertHomeEnd(keyCode, stubMethodName) {
@@ -117,7 +117,7 @@ describe('<BaseSelector> methods', () => {
     assert.isFalse(component.state.showSuggestions);
   });
 
-  it('should not hide suggestions when props.shouldHideSuggestionsOnSelect = false', ()=> {
+  it('should not hide suggestions when props.shouldHideSuggestionsOnSelect = false', () => {
     const onSelectSpy = sinon.spy();
     const suggestion = {suggestion: 'suggestion'};
     const component = shallowBaseSelector({onSelect: onSelectSpy, shouldHideSuggestionsOnSelect: false}).instance();
@@ -128,7 +128,7 @@ describe('<BaseSelector> methods', () => {
 
   });
 
-  it('should not hide suggestions when suggestion is empty', ()=> {
+  it('should not hide suggestions when suggestion is empty', () => {
     const onSelectSpy = sinon.spy();
     const component = shallowBaseSelector({onSelect: onSelectSpy, shouldHideSuggestionsOnSelect: false}).instance();
 
@@ -160,7 +160,7 @@ describe('<BaseSelector> methods', () => {
     assert.isTrue(onResetSpy.calledOnce);
   });
 
-  it('should increment highlightedSuggestionIndex on nextHighlightedIndex', ()=> {
+  it('should increment highlightedSuggestionIndex on nextHighlightedIndex', () => {
     const component = shallowBaseSelector().instance();
     const scollPosSpy = sinon.spy();
     component.state.highlightedSuggestionIndex = 1;
@@ -171,7 +171,7 @@ describe('<BaseSelector> methods', () => {
     assert.isTrue(scollPosSpy.calledOnce);
   });
 
-  it('should wrap highlightedSuggestionIndex on nextHighlightedIndex', ()=> {
+  it('should wrap highlightedSuggestionIndex on nextHighlightedIndex', () => {
     const component = shallowBaseSelector().instance();
     const scollPosSpy = sinon.spy();
     component.state.highlightedSuggestionIndex = 2;
@@ -182,7 +182,7 @@ describe('<BaseSelector> methods', () => {
     assert.isTrue(scollPosSpy.calledOnce);
   });
 
-  it('should decrement highlightedSuggestionIndex on previousHighlightedIndex', ()=> {
+  it('should decrement highlightedSuggestionIndex on previousHighlightedIndex', () => {
     const component = shallowBaseSelector().instance();
     const scollPosSpy = sinon.spy();
     component.state.highlightedSuggestionIndex = 1;
@@ -194,7 +194,7 @@ describe('<BaseSelector> methods', () => {
   });
 
 
-  it('should wrap highlightedSuggestionIndex on previousHighlightedIndex', ()=> {
+  it('should wrap highlightedSuggestionIndex on previousHighlightedIndex', () => {
     const component = shallowBaseSelector().instance();
     const scollPosSpy = sinon.spy();
     component.state.highlightedSuggestionIndex = 0;
@@ -227,7 +227,7 @@ describe('<BaseSelector> methods', () => {
 });
 
 describe('<BaseSelector> keyboard navigation', () => {
-  it('should show suggestions on ALT + DOWN', ()=> {
+  it('should show suggestions on ALT + DOWN', () => {
     const component = shallowBaseSelector().instance();
     const showHideSuggestionsSpy = sinon.spy(component, 'showHideSuggestions');
 
@@ -235,7 +235,7 @@ describe('<BaseSelector> keyboard navigation', () => {
     assert.isTrue(showHideSuggestionsSpy.calledWith(true));
   });
 
-  it('should highlight next if suggestion are showing on DOWN', ()=> {
+  it('should highlight next if suggestion are showing on DOWN', () => {
     const component = shallowBaseSelector().instance();
     const setNextHighlightedStub = sinon.stub(component, 'setNextHighlighted');
     component.state.showSuggestions = true;
@@ -244,7 +244,7 @@ describe('<BaseSelector> keyboard navigation', () => {
     assert.isTrue(setNextHighlightedStub.called);
   });
 
-  it('should hide suggestions on ALT + UP', ()=> {
+  it('should hide suggestions on ALT + UP', () => {
     const component = shallowBaseSelector().instance();
     const showHideSuggestionsSpy = sinon.spy(component, 'showHideSuggestions');
     component.state.showSuggestions = true;
@@ -253,7 +253,7 @@ describe('<BaseSelector> keyboard navigation', () => {
     assert.isTrue(showHideSuggestionsSpy.calledWith(false));
   });
 
-  it('should highlight previous suggestions on UP', ()=> {
+  it('should highlight previous suggestions on UP', () => {
     const component = shallowBaseSelector().instance();
     const showHideSuggestionsStub = sinon.stub(component, 'setPreviousHighlighted');
     component.state.showSuggestions = true;
@@ -278,12 +278,12 @@ describe('<BaseSelector> keyboard navigation', () => {
     assertHomeEnd(KeyCodes.END, 'setLastHighlighted');
   });
 
-  it('should select highlighted suggestion on ENTER', ()=> {
+  it('should select highlighted suggestion on ENTER', () => {
     assertSuggestionSelected({which: KeyCodes.ENTER});
   });
 
   it('should select highlighted index on TAB', () => {
-    assertSuggestionSelected({which: KeyCodes.TAB})
+    assertSuggestionSelected({which: KeyCodes.TAB});
   });
 
   it('should not select highlighted index on TAB when shouldSelectHighlightedOnTab', () => {

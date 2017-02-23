@@ -1,7 +1,6 @@
-import React, { PropTypes } from 'react';
-import { accountFormatter } from '../util/format';
+import React from 'react';
+import { accountFormatter, balanceWithCurrency } from '../util/format';
 import { Account, Locale } from '../util/types';
-import { balanceWithCurrency } from '../util/format';
 
 const AccountSuggestionItem = ({account, locale}) => {
   const {accountNumber, balance, name}= account;
