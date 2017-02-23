@@ -82,7 +82,7 @@ fs.readdirSync(ICONS_PATH)
 if (options.projectIcons) {
     options.projectIcons
         .forEach((fileName) => {
-            const iconPath = path.join(options.cwd, fileName);
+            const iconPath = path.join(fileName);
             spriter.add(new Vinyl({
                 path: fileName.substring(fileName.lastIndexOf('/') - 1),
                 base: options.cwd,
