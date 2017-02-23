@@ -1,9 +1,9 @@
-import React, {PropTypes} from 'react';
+import React, {PropTypes, Component} from 'react';
 import Input from './input-field';
 import SuggestionsList from '../suggestion/suggestion-list-container';
 import {KeyCodes} from '../util/types';
 
-class BaseSelector extends React.Component {
+class BaseSelector extends Component {
 
   constructor(props) {
     super(props);
@@ -35,7 +35,7 @@ class BaseSelector extends React.Component {
   }
 
   onInputChange(value) {
-    this.showHideSuggestions(true, ()=> this.props.onChange(value));
+    this.showHideSuggestions(true, () => this.props.onChange(value));
   }
 
   onFocus() {
@@ -60,7 +60,7 @@ class BaseSelector extends React.Component {
     if (suggestion) {
       const {shouldHideSuggestionsOnSelect, onSelect} = this.props;
       if (shouldHideSuggestionsOnSelect) {
-        this.showHideSuggestions(false, ()=> onSelect(suggestion));
+        this.showHideSuggestions(false, () => onSelect(suggestion));
         return;
       }
       onSelect(suggestion);
@@ -81,7 +81,7 @@ class BaseSelector extends React.Component {
     this.showHideSuggestions(false, this.props.onReset);
   }
 
-  showHideSuggestions(show, cb = ()=> {}) {
+  showHideSuggestions(show, cb = () => {}) {
     const nextState = show ? {showSuggestions: show} : {showSuggestions: false, highlightedSuggestionIndex: -1};
     this.setState(nextState, cb);
   }
@@ -174,8 +174,6 @@ class BaseSelector extends React.Component {
     const {
       value,
       placeholder,
-      renderSuggestion,
-      renderNoMatches,
       suggestionsHeightMax,
       id,
     } = this.props;
@@ -185,8 +183,8 @@ class BaseSelector extends React.Component {
         className='base-selector'
       >
         <Input
-          inputFieldRef={(input)=> {
-            this.input = input
+          inputFieldRef={(input) => {
+            this.input = input;
           }}
           value={value}
           onChange={this.onInputChange}
@@ -201,14 +199,13 @@ class BaseSelector extends React.Component {
         />
         {showSuggestions &&
         <SuggestionsList
+          {...this.props}
           ref={(suggestionList) => {
-            this.suggestionList = suggestionList
+            this.suggestionList = suggestionList;
           }}
           highlightedIndex={highlightedSuggestionIndex}
           suggestions={this.filterSuggestions()}
           heightMax={suggestionsHeightMax}
-          renderSuggestion={renderSuggestion}
-          renderNoMatches={renderNoMatches}
           onSelect={this.onSuggestionClick}
         />}
       </div>
@@ -228,14 +225,17 @@ BaseSelector.propTypes = {
   onReset: PropTypes.func,
   onFocus: PropTypes.func,
   id: PropTypes.string,
+  placeholder : PropTypes.string,
+  suggestionsHeightMax : PropTypes.number,
 };
 
 BaseSelector.defaultProps = {
   onChange: () => {},
   onBlur: () => {},
   onFocus: () => {},
-  onReset: ()=> {},
+  onReset: () => {},
   ariaInvalid: false,
+  placeholder : '',
 };
 
 export default BaseSelector;

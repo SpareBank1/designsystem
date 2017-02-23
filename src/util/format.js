@@ -1,5 +1,5 @@
 import amountFormatter from 'nfe-amount-formatter';
-import {currencyPrefix} from './types';
+import {currencyPostfix} from './types';
 
 const getWeightedSumOfDigits = (accountNumber) => {
   const weights = [5, 4, 3, 2, 7, 6, 5, 4, 3, 2, 1];
@@ -27,6 +27,6 @@ export function accountFormatter(accountNumber) {
 }
 
 export function balanceWithCurrency(balance, locale) {
-  return `${amountFormatter(balance, locale)} ${currencyPrefix[locale]}`;
+  return `${amountFormatter(balance, locale)} ${currencyPostfix[locale]}`;
 }
 

@@ -4,7 +4,6 @@ import sinon from 'sinon';
 import React from 'react';
 import  SuggestionList from './suggestion-list';
 import  SuggestionListContainer from './suggestion-list-container';
-import { KeyCodes } from '../util/types';
 import './test/setup';
 
 function suggestions() {
@@ -22,6 +21,26 @@ function renderNoSuggestion() {
   return <h2>No Match found</h2>;
 }
 
+function propsSuggestionList(_suggestions = suggestions()) {
+  return {
+    suggestions: _suggestions,
+    onSelect: () => {},
+    highlightedIndex: 1,
+    renderSuggestion,
+    renderNoSuggestion,
+    refHighlightedSuggestion: () => {},
+    onKeyDown: () => {}
+  };
+}
+
+function propsSuggestionListContainer() {
+  return {
+    ...propsSuggestionList(),
+    highlightedIndex: 2,
+    autoHeight : false,
+  };
+}
+
 function shallowSuggestionList(props = propsSuggestionList()) {
   return shallow(
     <SuggestionList
@@ -34,26 +53,6 @@ function mountSuggestionListContainer(props = propsSuggestionListContainer()) {
     <SuggestionListContainer
       {...props}
     />);
-}
-
-function propsSuggestionList(_suggestions = suggestions()) {
-  return {
-    suggestions: _suggestions,
-    onSelect: () => {},
-    highlightedIndex: 1,
-    renderSuggestion,
-    renderNoSuggestion,
-    refHighlightedSuggestion: ()=> {},
-    onKeyDown: () => {}
-  };
-}
-
-function propsSuggestionListContainer() {
-  return {
-    ...propsSuggestionList(),
-    highlightedIndex: 2,
-    autoHeight : false,
-  };
 }
 
 describe('<SuggestionList />', () => {

@@ -9,7 +9,7 @@ function item() {
   return {header: 'header'};
 }
 
-function renderSuggestionItem(isHighlighted = true, refHighlightedSuggestion = ()=>{}, onSelect = ()=>{}) {
+function renderSuggestionItem(isHighlighted = true, refHighlightedSuggestion = () => {}, onSelect = () => {}) {
   return mount(<SuggestionItem
     onSelect={onSelect}
     item={item()}
@@ -49,7 +49,7 @@ describe('<SuggestionItem />', () => {
 
   it('onSelect called', () => {
     const onSelectSpy = sinon.spy();
-    const wrapper = renderSuggestionItem(true, ()=>{}, onSelectSpy);
+    const wrapper = renderSuggestionItem(true, () => {}, onSelectSpy);
     wrapper.simulate('mousedown');
     assert.isTrue(onSelectSpy.calledWith(item()));
   });

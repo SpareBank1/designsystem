@@ -27,7 +27,7 @@ class Input extends Component {
         onBlur={ onBlur }
       >
         <input
-          onChange={ (e) => {onChange(e.target.value)}}
+          onChange={ (e) => {onChange(e.target.value);}}
           className='ffe-input-field input-field'
           onKeyDown={ onKeyDown }
           autoComplete='off'
@@ -75,7 +75,7 @@ Input.propTypes = {
 Input.defaultProps = {
   onBlur: () => {},
   onFocus: () => {},
-  inputFieldRef: ()=> {},
+  inputFieldRef: () => {},
 };
 
 export default Input;

@@ -1,18 +1,18 @@
 import React, {PropTypes, Component} from 'react';
 import classNames from 'classnames';
 
-class SuggestionItem extends Component{
+class SuggestionItem extends Component {
   render() {
     const {item, isHighlighted, render, onSelect, refHighlightedSuggestion} = this.props;
     return (
       <li
-        ref={(item) => {
-          if(item && isHighlighted) {
-            refHighlightedSuggestion(item);
+        ref={(itemRef) => {
+          if (itemRef && isHighlighted) {
+            refHighlightedSuggestion(itemRef);
           }
         }}
         role='option'
-        onMouseDown={() => {onSelect(item)}}
+        onMouseDown={() => {onSelect(item);}}
         className={classNames('account-suggestion', {'account-suggestion__highlighted' : isHighlighted})}
         tabIndex={-1}
       >
