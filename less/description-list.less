@@ -92,6 +92,16 @@
         text-align: center;
     }
 
+    &--sm-2-cols {
+        .ffe-description-list-multicol__avoid-break {
+            flex-basis: 50%;
+        }
+    }
+
+    &__avoid-break:last-child:not(:nth-child(even)) {
+        flex-basis: 100%;
+    }
+
     @media (min-width: @breakpoint-sm) {
         &__avoid-break {
             flex-basis: 50%;

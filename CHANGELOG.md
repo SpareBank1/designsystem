@@ -1,5 +1,8 @@
 # Changelog
 
+## v.3.0.1
+* Added `--sm-2-cols` modifier to support 2 columns on small screens in `ffe-description-list-multicol` 
+
 ## v.3.0.0
 * Breaking:
   * Refactored and renamed description lists in order to more correctly follow BEM naming convention
