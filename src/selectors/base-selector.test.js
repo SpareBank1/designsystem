@@ -239,9 +239,11 @@ describe('<BaseSelector> keyboard navigation', () => {
     const component = shallowBaseSelector().instance();
     const setNextHighlightedStub = sinon.stub(component, 'setNextHighlighted');
     component.state.showSuggestions = true;
+    const preventDefaultSpy = sinon.spy();
 
-    component.onInputKeyDown({which: KeyCodes.DOWN});
-    assert.isTrue(setNextHighlightedStub.called);
+    component.onInputKeyDown({which: KeyCodes.DOWN, preventDefault : preventDefaultSpy});
+    assert.isTrue(setNextHighlightedStub.calledOnce);
+    assert.isTrue(preventDefaultSpy.calledOnce);
   });
 
   it('should hide suggestions on ALT + UP', () => {
@@ -256,10 +258,12 @@ describe('<BaseSelector> keyboard navigation', () => {
   it('should highlight previous suggestions on UP', () => {
     const component = shallowBaseSelector().instance();
     const showHideSuggestionsStub = sinon.stub(component, 'setPreviousHighlighted');
+    const preventDefaultSpy = sinon.spy();
     component.state.showSuggestions = true;
 
-    component.onInputKeyDown({which: KeyCodes.UP});
-    assert.isTrue(showHideSuggestionsStub.called);
+    component.onInputKeyDown({which: KeyCodes.UP, preventDefault : preventDefaultSpy});
+    assert.isTrue(showHideSuggestionsStub.calledOnce);
+    assert.isTrue(preventDefaultSpy.calledOnce);
   });
 
   it('should reset input on ESC', () => {
