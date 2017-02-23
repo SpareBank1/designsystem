@@ -22,7 +22,7 @@ export default function SuggestionList(props) {
               {...props}
               key={index}
               item={item}
-              id={`suggestion-option-${index}`}
+              id={`suggestion-item-${index}`}
               isHighlighted={index === highlightedIndex}
               render={renderSuggestion}
             />);

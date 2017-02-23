@@ -18,7 +18,7 @@ class Input extends Component {
       onBlur,
       onReset,
       inputFieldRef,
-      highlightedId,
+      highlightedIndex,
       suggestionListId
     } = this.props;
     return (
@@ -27,7 +27,7 @@ class Input extends Component {
         aria-expanded={ isSuggestionsShowing }
         onFocus={ onFocus }
         onBlur={ onBlur }
-        aria-activedescendant={highlightedId > -1 ? `suggestion-option-${highlightedId}` : null}
+        aria-activedescendant={highlightedIndex > -1 ? `suggestion-item-${highlightedIndex}` : null}
         aria-owns={suggestionListId}
       >
         <input
@@ -74,7 +74,7 @@ Input.propTypes = {
   onFocus: PropTypes.func,
   ariaInvalid: PropTypes.bool,
   inputFieldRef: PropTypes.func,
-  highlightedId: PropTypes.number,
+  highlightedIndex: PropTypes.number,
   suggestionListId: PropTypes.string,
 };
 
