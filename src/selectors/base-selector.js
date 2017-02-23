@@ -173,15 +173,6 @@ class BaseSelector extends Component {
     }
   }
 
-  getFocusedOptionId() {
-    const filteredResults = this.filterSuggestions();
-    const {highlightedSuggestionIndex} = this.state;
-    if (filteredResults.length > 0 && highlightedSuggestionIndex > -1 && filteredResults.length > highlightedSuggestionIndex) {
-      return `option-${filteredResults[highlightedSuggestionIndex].id}`;
-    }
-    return null;
-  }
-
   render() {
     const {
       value,
