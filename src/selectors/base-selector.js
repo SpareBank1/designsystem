@@ -19,6 +19,7 @@ class BaseSelector extends Component {
     this.state = {
       showSuggestions: false,
       highlightedSuggestionIndex: -1,
+      suggestionListId: "suggestion-list"
     };
 
     /*
@@ -179,7 +180,7 @@ class BaseSelector extends Component {
       suggestionsHeightMax,
       id,
     } = this.props;
-    const {showSuggestions, highlightedSuggestionIndex} = this.state;
+    const {showSuggestions, highlightedSuggestionIndex, suggestionListId} = this.state;
     return (
       <div
         className='base-selector'
@@ -198,6 +199,8 @@ class BaseSelector extends Component {
           placeholder={placeholder}
           onBlur={this.onBlur}
           onFocus={this.onFocus}
+          highlightedIndex={highlightedSuggestionIndex}
+          suggestionListId={suggestionListId}
         />
         {showSuggestions &&
         <SuggestionsList
@@ -209,6 +212,7 @@ class BaseSelector extends Component {
           suggestions={this.filterSuggestions()}
           heightMax={suggestionsHeightMax}
           onSelect={this.onSuggestionClick}
+          id={suggestionListId}
         />}
       </div>
     );

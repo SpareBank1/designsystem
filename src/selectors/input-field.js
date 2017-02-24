@@ -17,7 +17,9 @@ class Input extends Component {
       resetLabel,
       onBlur,
       onReset,
-      inputFieldRef
+      inputFieldRef,
+      highlightedIndex,
+      suggestionListId
     } = this.props;
     return (
       <div
@@ -25,6 +27,8 @@ class Input extends Component {
         aria-expanded={ isSuggestionsShowing }
         onFocus={ onFocus }
         onBlur={ onBlur }
+        aria-activedescendant={highlightedIndex > -1 ? `suggestion-item-${highlightedIndex}` : null}
+        aria-owns={suggestionListId}
       >
         <input
           onChange={ (e) => {onChange(e.target.value);}}
@@ -70,6 +74,8 @@ Input.propTypes = {
   onFocus: PropTypes.func,
   ariaInvalid: PropTypes.bool,
   inputFieldRef: PropTypes.func,
+  highlightedIndex: PropTypes.number,
+  suggestionListId: PropTypes.string,
 };
 
 Input.defaultProps = {
