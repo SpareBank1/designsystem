@@ -1,5 +1,8 @@
 # Changelog
 
+## v4.1.3
+* Changed color of option text in selects with validation errors to default blue in stead of inherited red.
+
 ## v4.1.2
 * Added space underneath radio-switches on small devices and updated visual tests with longer button text.
 
