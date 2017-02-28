@@ -1,5 +1,8 @@
 # Changelog
 
+## v.3.0.1
+* Bugfix: `.ffe-grid__row-wrapper` now treats columns that wrap to more than one row correctly
+
 ## v.3.0.0
 * Breaking: `.ffe-grid__row--bg-sand` and `.ffe-grid__row--bg-blue` now require a `.ffe-grid__row-wrapper` around its columns. The background will then be full width while the content keeps to the grid size.
 ```html
