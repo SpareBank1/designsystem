@@ -58,9 +58,6 @@
     "*.js",
     "styles/"
   ],
-  "eslintConfig": {
-    "extends": "eslint-config-ffe"
-  },
   "author": "SpareBank1",
   "license": "",
   "dependencies": {
