@@ -15,6 +15,7 @@ function AccountSelector(props) {
         renderNoMatches={() => <AccountNoMatch value={noMatches}/>}
         shouldHideSuggestionsOnSelect={true}
         shouldSelectHighlightedOnTab={true}
+        shouldHideSuggestionOnBlur={true}
         suggestionFilter={accountFilter}
         onSelect={onAccountSelected}
         suggestions={accounts}

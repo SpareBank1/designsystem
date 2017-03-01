@@ -1,6 +1,7 @@
 import React from 'react';
 import {render} from 'react-dom';
 import AccountSelectorExample from './account-selector';
+import MultiAccountSelectorExample from './account-selector-multi';
 
 require('./example.less');
 
@@ -17,6 +18,7 @@ render(
   <div>
     <form>
       <input/>
+      <MultiAccountSelectorExample />
       <AccountSelectorExample />
       <input/>
     </form>

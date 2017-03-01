@@ -76,12 +76,12 @@ describe('<BaseSelector> methods', () => {
   it('should not show suggestions on input focus if clickAction was performed', () => {
     const onFocusSpy = sinon.spy();
     const component = shallowBaseSelector({onFocus: onFocusSpy}).instance();
-    component.didPerformClickAction = true;
+    component.shouldPreventBlurForNextMouseClick = true;
 
     component.onFocus();
     assert.isFalse(component.state.showSuggestions);
     assert.isFalse(onFocusSpy.called);
-    assert.isFalse(component.didPerformClickAction);
+    assert.isFalse(component.shouldPreventBlurForNextMouseClick);
   });
 
   it('should hide suggestions on input blur', () => {
@@ -97,7 +97,7 @@ describe('<BaseSelector> methods', () => {
     const onBlurSpy = sinon.spy();
     const inputFocusSpy = sinon.spy();
     const component = shallowBaseSelector({onBlur: onBlurSpy}).instance();
-    component.didPerformClickAction = true;
+    component.shouldPreventBlurForNextMouseClick = true;
     component.input = {focus: inputFocusSpy};
 
     component.onBlur();
@@ -141,14 +141,14 @@ describe('<BaseSelector> methods', () => {
     const component = shallowBaseSelector().instance();
 
     component.onSuggestionClick();
-    assert.isTrue(component.didPerformClickAction);
+    assert.isTrue(component.shouldPreventBlurForNextMouseClick);
   });
 
   it('should set didPerformClickAction on onInputResetClick', () => {
     const component = shallowBaseSelector().instance();
 
     component.onInputResetClick();
-    assert.isTrue(component.didPerformClickAction);
+    assert.isTrue(component.shouldPreventBlurForNextMouseClick);
   });
 
   it('should hide suggestions on input reset', () => {
