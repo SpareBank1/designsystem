@@ -1,19 +1,5 @@
 {
-  "env": {
-    "es6": true,
-    "browser": true,
-    "node": true
-  },
   "extends": "eslint-config-ffe",
-  "parserOptions": {
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "jsx": true
-    }
-  },
-  "plugins": [
-    "react"
-  ],
   "globals": {
     "describe": true,
     "it": true
