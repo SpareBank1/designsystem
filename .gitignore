@@ -38,3 +38,6 @@ examples/examples.css
 
 # Generated report website
 gemini-report
+
+# IntelliJ
+.idea/*
