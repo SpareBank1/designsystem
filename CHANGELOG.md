@@ -1,5 +1,9 @@
 # Changelog
 
+## v.8.2.3
+
+Added color `@ffe-blue-royal-light-10` (background color of expandable table rows)
+
 ## v.8.2.2
 
 `ffe-divider-line`'s width explicitly set to 100% to make sure it divides its entire
