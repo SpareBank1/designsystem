@@ -1,5 +1,8 @@
 # Changelog
 
+## v.3.0.2
+* Fix visual IE bug. When wrapping DescriptionList in a ffe-grid (because flex in flex?) the DescriptionList will not take full width (not even close). Thus we specify full width for DescriptionList.
+
 ## v.3.0.1
 * Added `--sm-2-cols` modifier to support 2 columns on small screens in `ffe-description-list-multicol` 
 
