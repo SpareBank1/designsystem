@@ -29,6 +29,10 @@ class TableRowExpandable extends Component {
         const { cells, columns, children } = this.props;
         const unexpandable = !children;
 
+        if (unexpandable && this.state.expanded) {
+            this.setState({ expanded: false });
+        }
+
         return (
             <tbody>
                 <TableRow

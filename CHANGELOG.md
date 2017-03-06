@@ -1,5 +1,9 @@
 # Changelog
 
+## v3.0.2
+
+* Fixed: When no children, or a falsy value, is passed as children to `TableRowExpandable` the row will set the expanded value in this.state to false. 
+
 ## v3.0.1
 
 * Fixed: State change on props update in `SortableTable` will now only trigger if props have actually changed.
