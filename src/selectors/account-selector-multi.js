@@ -5,6 +5,7 @@ import AccountNoMatch from '../account/account-nomatch';
 import {Account, Locale} from '../util/types';
 import {accountFilter} from '../filter/filters';
 import StatusBar from '../suggestion/suggestion-list-status-bar';
+import txt from '../i18n/i18n';
 
 let baseRef;
 let shouldHideSuggestions;
@@ -48,18 +49,18 @@ class AccountSelectorMulti extends React.Component {
     let statusText;
     const {selectedAccounts} = this.props;
     if (selectedAccounts.length === 0) {
-      statusText = 'Ingen kontoer valgt';
+      statusText = txt[this.props.locale].NO_ACCOUNTS_SELECTED;
     } else if (selectedAccounts === 1) {
-      statusText = '1 konto valgt';
+      statusText = txt[this.props.locale].NO_ACCOUNTS_SELECTED;
     } else {
-      statusText = `${selectedAccounts.length} kontoer valgt`;
+      statusText = `${selectedAccounts.length} ${txt[this.props.locale].NO_ACCOUNTS_SELECTED}`;
     }
     const height = listHeight + 45;
     return (
       <StatusBar
         renderSelectionStatus={() => statusText}
         onDone={() => this.onDone()}
-        labelDoneButton="Ferdig"
+        labelDoneButton={txt[this.props.locale].DROPDOWN_MULTISELECT_DONE}
         style={{position: 'absolute', zIndex: 100, top: height}}
       />
     );
