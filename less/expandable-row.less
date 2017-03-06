@@ -1,10 +1,62 @@
 
-.ffe-responsive-table__row-expandable {
-    cursor: pointer;
-    position: relative;
+.ffe-responsive-table {
+    &__row-expandable {
+        cursor: pointer;
+        position: relative;
 
-    &:hover {
-        background-color: @ffe-blue-royal-light-20;
+        &:hover {
+            background-color: @ffe-blue-royal-light-20;
+        }
+
+        &--expanded {
+            background-color: @ffe-blue-royal-light-20;
+        }
+
+        &--expanded:not(:last-child) {
+            border-color: @ffe-blue-royal-light-20;
+        }
+    }
+
+    &__row-expandable-content {
+        opacity: 0;
+
+        .ffe-responsive-table__cell-expandable-content {
+            padding: 0;
+        }
+
+        &:not(.ffe-responsive-table__row-expandable-content--expanded) {
+            border: 0;
+        }
+
+        &--expanded {
+            transition: background-color .2s .1s;
+            animation: slide-row .2s cubic-bezier(0.5, 0.015, 0.485, 1.445);
+            background-color: @ffe-blue-royal-light-10;
+            opacity: 1;
+
+            .ffe-responsive-table__cell-expandable-content {
+                padding: 10px;
+            }
+        }
+    }
+
+    &__expand-icon {
+        width: 17px;
+        height: 17px;
+        fill: @ffe-blue-royal-light-wcag;
+        transition: transform .2s;
+        position: absolute;
+        top: 10px;
+        right: 5px;
+
+        @media screen and (min-width: @breakpoint-md) {
+            position: static;
+            vertical-align: middle;
+        }
+
+        &--expanded {
+            transform: rotate(180deg);
+        }
     }
 }
 
@@ -13,51 +65,13 @@
         transform: translateY(-2em);
         opacity: 0;
     }
+
     50% {
         opacity: .25;
     }
+
     100% {
         transform: translateY(0);
         opacity: 1;
     }
 }
-
-.ffe-responsive-table__row-expandable-content {
-    opacity: 0;
-    border: 0;
-
-    .ffe-responsive-table__cell-expandable-content {
-        padding: 0;
-    }
-
-    &--expanded {
-        transition: background-color .2s .2s;
-        animation: slide-row .2s cubic-bezier(0.500, 0.015, 0.485, 1.445);
-        background-color: @ffe-grey-light-bg;
-        opacity: 1;
-
-        .ffe-responsive-table__cell-expandable-content {
-            padding: 10px;
-        }
-    }
-}
-
-.ffe-responsive-table__expand-icon {
-    width: 17px;
-    fill: @ffe-blue-royal;
-    transition: transform .2s;
-    position: absolute;
-    top: 10px;
-    right: 0;
-    height: inherit;
-
-    @media screen and (min-width: @breakpoint-md) {
-        position: static;
-        vertical-align: middle;
-    }
-
-    &--expanded {
-        transform: rotate(180deg);
-    }
-}
-
