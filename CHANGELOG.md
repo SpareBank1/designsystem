@@ -1,5 +1,9 @@
 # Changelog
 
+## 7.5.0
+
+* Added svar-pil-ikon.svg, binders-ikon.svg
+
 ## 7.4.1
 
 * Bugfix: resolves a path issue that made the `projectIcons` config unusable outside of `npm link`
