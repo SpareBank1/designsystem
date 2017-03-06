@@ -1,5 +1,17 @@
 # Changelog
 
+## v.4.0.0
+
+* BREAKING: Refactored styling to reflect design guidelines
+	* More vertical padding in table rows by default
+	* Added default horizontal padding in table cells on small screens
+	* `--condensed` modifier to decrease default vertical padding in table rows
+	* Changed th color to ffe-blue-royal
+	* Changed background colors in expandable rows
+	* Different border and text styling in table footers
+* Rewrote styling to less syntax
+* Specified icon height to fix IE bug where chevron causes table row height issues
+
 ## v.3.0.1
 
 * Fixed broken animation in `ffe-expandable-row`

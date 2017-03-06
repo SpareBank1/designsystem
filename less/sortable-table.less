@@ -1,36 +1,38 @@
-.ffe-sortable-table__header {
-    color: @ffe-blue-royal;
-}
+.ffe-sortable-table {
+    &__header {
+        color: @ffe-blue-royal;
+        white-space: nowrap;
 
-.ffe-sortable-table__header:hover {
-    cursor: pointer;
-    color: @ffe-blue-royal-light-wcag;
-    border-bottom: solid 2px;
-    user-select: none;
+        &:hover {
+            cursor: pointer;
+            color: @ffe-blue-royal-light-wcag;
+            border-bottom: solid 2px;
+            user-select: none;
 
-    .ffe-sortable-table__sort-arrow {
-        fill: @ffe-blue-royal-light-wcag;
+            .ffe-sortable-table__sort-arrow {
+                fill: @ffe-blue-royal-light-wcag;
+            }
+        }
+
+        &--active {
+            border-bottom: solid 2px @ffe-blue-royal;
+
+            .ffe-sortable-table__sort-arrow {
+                fill: @ffe-blue-royal;
+            }
+        }
     }
-}
 
-.ffe-sortable-table__header--active {
-    border-bottom: solid 2px @ffe-blue-royal;
-
-    .ffe-sortable-table__sort-arrow {
+    &__sort-arrow {
+        height: 12px;
+        width: 12px;
+        vertical-align: middle;
         fill: @ffe-blue-royal;
-    }
-}
+        margin-left: 8px;
+        transition: transform .2s;
 
-.ffe-sortable-table__sort-arrow {
-    height: 12px;
-    width: 12px;
-    vertical-align: middle;
-    fill: @ffe-grey;
-    margin-left: 8px;
-    transform: rotate(180deg);
-    transition: transform .2s;
-
-    &--descending {
-        transform: none;
+        &--descending {
+            transform: rotate(180deg);
+        }
     }
 }
