@@ -8,8 +8,6 @@ import StatusBar from '../suggestion/suggestion-list-status-bar';
 
 let baseRef;
 let shouldHideSuggestions;
-let suggestionListRef;
-let suggestionListHeight;
 
 class AccountSelectorMulti extends React.Component {
   constructor(props) {
@@ -17,10 +15,6 @@ class AccountSelectorMulti extends React.Component {
     this.state = {
       suggestionListHeight: 0
     };
-  }
-
-  onCheckboxChange() {
-    baseRef.preventBlurForNextMouseClick();
   }
 
   renderSuggestion(account) {
@@ -31,7 +25,7 @@ class AccountSelectorMulti extends React.Component {
         account={account}
         locale={locale}
         selected={isSelected.length > 0}
-        onChange={this.onCheckboxChange}
+        onChange={() => baseRef.preventBlurForNextMouseClick()}
       />
     );
   }
@@ -44,14 +38,9 @@ class AccountSelectorMulti extends React.Component {
     shouldHideSuggestions = true;
   }
 
-  onTab(event) {
-    shouldHideSuggestions = event.shiftKey;
-  }
-
   onDone() {
     baseRef.setFocus();
-    // Make sure suggestions dont show up again when manually resetting focus
-    window.setTimeout(() => baseRef.showHideSuggestions(false), 0);
+    baseRef.showHideSuggestions(false);
     this.props.onBlur();
   }
 
@@ -64,9 +53,6 @@ class AccountSelectorMulti extends React.Component {
       statusText = '1 konto valgt';
     } else {
       statusText = `${selectedAccounts.length} kontoer valgt`;
-    }
-    if (suggestionListRef) {
-      console.log('height', suggestionListRef.getHeight());
     }
     const height = listHeight + 45;
     return (
@@ -90,7 +76,7 @@ class AccountSelectorMulti extends React.Component {
           shouldHideSuggestionsOnSelect={false}
           shouldSelectHighlightedOnTab={false}
           shouldHideSuggestionOnBlur={false}
-          onTab={this.onTab}
+          onTab={() => {shouldHideSuggestions = event.shiftKey;}}
           suggestionFilter={accountFilter}
           onSelect={onAccountSelected}
           onSuggestionListChange={(height) => {
@@ -106,7 +92,7 @@ class AccountSelectorMulti extends React.Component {
           {...this.props}
           onBlur={(e) => this.onBlur(e)}
         />
-        {this.state.suggestionListHeight && this.renderSuggestionDetails(this.state.suggestionListHeight)}
+        {this.state.suggestionListHeight > 0 && this.renderSuggestionDetails(this.state.suggestionListHeight)}
       </div>
     );
   }
