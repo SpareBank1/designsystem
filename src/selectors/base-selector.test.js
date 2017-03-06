@@ -21,6 +21,7 @@ function propsBaseSelector(_suggestions = suggestions()) {
     value: '',
     shouldHideSuggestionsOnSelect: true,
     shouldSelectHighlightedOnTab: true,
+    shouldHideSuggestionOnBlur: true,
   };
 }
 
@@ -284,6 +285,22 @@ describe('<BaseSelector> keyboard navigation', () => {
 
   it('should select highlighted suggestion on ENTER', () => {
     assertSuggestionSelected({which: KeyCodes.ENTER});
+  });
+
+  it('should select highlighted suggestion from filtered list', () => {
+    const accounts = [
+      {name: 'lønnskonto'},
+      {name: 'sparekonto'},
+      {name: 'investeringskonto'},
+    ];
+    const component = shallowBaseSelector({suggestions: accounts}).instance();
+    const filterAccountsStub = sinon.stub(component, 'filterSuggestions');
+    filterAccountsStub.returns([accounts[2]]);
+    const onSuggestionSelectSpy = sinon.stub(component, 'onSuggestionSelect');
+    component.state = {highlightedSuggestionIndex: 0};
+
+    component.onInputKeyDown({which: KeyCodes.ENTER});
+    assert.isTrue(onSuggestionSelectSpy.calledWith(accounts[2]));
   });
 
   it('should select highlighted index on TAB', () => {
