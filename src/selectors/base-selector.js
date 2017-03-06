@@ -67,15 +67,19 @@ class BaseSelector extends Component {
   onBlur() {
     if (this.shouldPreventBlurForNextMouseClick) {
       this.input.focus();
+      window.setTimeout(() => {this.props.onSuggestionListChange(this.getSuggestionListHeight());});
       return;
     }
 
     if (this.props.shouldHideSuggestionOnBlur) {
-      this.showHideSuggestions(false, this.props.onBlur);
+      this.showHideSuggestions(false, () => {
+        window.setTimeout(() => {this.props.onSuggestionListChange(this.getSuggestionListHeight());});
+        this.props.onBlur();
+      });
       return;
     }
-    this.props.onBlur();
     window.setTimeout(() => {this.props.onSuggestionListChange(this.getSuggestionListHeight());});
+    this.props.onBlur();
   }
 
   onSuggestionSelect(suggestion) {
@@ -90,7 +94,6 @@ class BaseSelector extends Component {
   }
 
   onSuggestionClick(suggestion) {
-    console.log('on suggestion click');
     this.preventBlurForNextMouseClick();
     this.onSuggestionSelect(suggestion);
   }
@@ -148,7 +151,7 @@ class BaseSelector extends Component {
 
   onInputKeyDown(event) {
     const {showSuggestions, highlightedSuggestionIndex} = this.state;
-    const {suggestions, shouldSelectHighlightedOnTab, onTab} = this.props;
+    const {shouldSelectHighlightedOnTab, onTab} = this.props;
     const {which, altKey} = event;
     switch (which) {
       case KeyCodes.DOWN :
@@ -187,11 +190,11 @@ class BaseSelector extends Component {
         }
         break;
       case KeyCodes.ENTER:
-        this.onSuggestionSelect(suggestions[highlightedSuggestionIndex]);
+        this.onSuggestionSelect(this.filterSuggestions()[highlightedSuggestionIndex]);
         break;
       case KeyCodes.TAB:
         if (showSuggestions && shouldSelectHighlightedOnTab) {
-          this.onSuggestionSelect(suggestions[highlightedSuggestionIndex]);
+          this.onSuggestionSelect(this.filterSuggestions()[highlightedSuggestionIndex]);
         }
         onTab(event);
     }
@@ -229,7 +232,6 @@ class BaseSelector extends Component {
           {...this.props}
           ref={(suggestionList) => {
             this.suggestionList = suggestionList;
-            console.log('suggestionlist ref', suggestionList);
           }}
           highlightedIndex={highlightedSuggestionIndex}
           suggestions={this.filterSuggestions()}
