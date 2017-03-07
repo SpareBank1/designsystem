@@ -1,6 +1,6 @@
 {
   "name": "ffe-accordion-react",
-  "version": "1.2.7",
+  "version": "2.0.0",
   "main": "lib/index.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/. && npm run example",
@@ -17,7 +17,8 @@
   },
   "peerDependencies": {
     "react": "^0.14.0 || ^15.0.0",
-    "ffe-core": "*"
+    "ffe-core": "*",
+    "ffe-accordion": "^1.3.3"
   },
   "dependencies": {
     "classnames": "^2.2.5",
