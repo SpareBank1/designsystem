@@ -75,19 +75,18 @@ class AccordionItem extends Component {
 
         return (
             <li className={ createClasses('ffe-accordion-item', isOpen, type) }>
-                <a
+                <button
                     aria-controls={ `panel-${uuid}-${index}` }
                     aria-expanded={ isOpen }
                     aria-label={ ariaLabel }
                     className={ createClasses('ffe-accordion-item__toggler', isOpen, type) }
-                    href="javascript:;" // eslint-disable-line no-script-url
                     id={ `tab-${uuid}-${index}` }
                     onClick={ this.onClick }
                     role="tab"
                 >
                     <Chevron className={ createClasses('ffe-accordion-item__icon', isOpen, type) } />
                     { children }
-                </a>
+                </button>
                 <FFEExpandable
                     expanded={ this.renderExpandedContent() }
                     isOpen={ isOpen }
