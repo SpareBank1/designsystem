@@ -53,6 +53,9 @@ You only have to specify one of these if you want - each column defaults to a 10
 for viewports that are not specified (i.e. `.ffe-grid__col--md-6` will be 100 % wide on small
 devices, and 50 % on medium and large screens).
 
+You can set the colum size to 0, e.g. `ffe-grid__col--md-0`. This enabled you to remove/add columns for specific screen-sizes.
+See the "Disappearing columns example" in the example html for more details.
+
 ### Offset
 
 The pattern is like so: `ffe-grid__col--{size}-offset-{num-of-cols}`
