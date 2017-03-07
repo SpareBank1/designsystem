@@ -5,10 +5,14 @@
 @ffe-grid-gutter-lg: 40px;
 
 // Mixins
-.create-column(@size, @total, @current: 1) when (@current <= @total) {
+.create-column(@size, @total, @current: 0) when (@current <= @total) {
     .ffe-grid__col--@{size}-@{current} {
         flex-basis: (@current * 100%) / @total;
         max-width: (@current * 100%) / @total;
+        display: flex;
+        & when (@current = 0) {
+            display: none;
+        }
     }
 
     .ffe-grid__col--@{size}-offset-@{current} {
@@ -76,6 +80,7 @@
 
 .ffe-grid__row-wrapper {
     &:extend(.ffe-grid__row);
+
     margin: 0 auto;
 }
 
@@ -157,12 +162,6 @@
 }
 
 .create-column(sm, 12);
-
-@media only screen and (max-width: (@breakpoint-md - 1px)) {
-    .ffe-grid__col--sm-offset-0 {
-        margin-left: 0;
-    }
-}
 
 @media only screen and (min-width: @breakpoint-md) {
     .create-column(md, 12);

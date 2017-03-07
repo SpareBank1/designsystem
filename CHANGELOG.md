@@ -1,5 +1,8 @@
 # Changelog
 
+## v.3.1.0
+* Added support for 0 column size
+
 ## v.3.0.1
 * Bugfix: `.ffe-grid__row-wrapper` now treats columns that wrap to more than one row correctly
 
