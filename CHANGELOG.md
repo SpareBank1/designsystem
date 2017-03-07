@@ -1,5 +1,9 @@
 # Changelog
 
+## 7.5.1
+
+* Add babel-polyfill, to support node 4
+
 ## 7.5.0
 
 * Added svar-pil-ikon.svg, binders-ikon.svg
