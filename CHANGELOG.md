@@ -1,5 +1,10 @@
 # Changelog
 
+## 7.5.2
+
+* Bugfix: Include all icons when `opts.icons` are set to `*`. This fixes a problem in
+`ffe-icons-react` where no icons were outputted during the build
+
 ## 7.5.1
 
 * Add babel-polyfill, to support node 4
