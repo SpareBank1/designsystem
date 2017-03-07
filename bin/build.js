@@ -69,7 +69,7 @@ fs.readdirSync(ICONS_PATH)
     .filter(fileName => fileName.match(/\.svg$/))
     .filter(fileName => {
         return options.icons === '**/*.svg'
-            || options.icons.includes('*')
+            || options.icons.includes('*.svg')
             || options.icons.includes(fileName.substring(fileName.lastIndexOf('/')));
     })
     .forEach((fileName) => {

@@ -1,5 +1,10 @@
 # Changelog
 
+## 7.5.3
+
+* Bugfix: Remember that `.svg` is appended to all input in the `icons` config object
+(as a convenience).
+
 ## 7.5.2
 
 * Bugfix: Include all icons when `opts.icons` are set to `*`. This fixes a problem in
