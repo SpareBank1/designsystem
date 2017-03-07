@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## Version 1.3.3
+* Add a few minor style changes to the toggler, to make it possible to use either an `<a>` or a `<button>` tag with the same visual results.
+* Updated all examples to use a `<button>`, as it makes the most sense semantically.
+
 ## Version 1.3.2
 * Remove .accordion-item bottom margin for white accordions that was introduced in 1.3.1.
 
