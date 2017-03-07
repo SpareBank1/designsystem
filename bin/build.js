@@ -11,6 +11,7 @@ const mkdirp = require('mkdirp');
 const path = require('path');
 const SVGSpriter = require('svg-sprite');
 const Vinyl = require('vinyl');
+require("babel-polyfill");
 
 const ICONS_PATH = path.join(__dirname, '..', 'icons');
 
