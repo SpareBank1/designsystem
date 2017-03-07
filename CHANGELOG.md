@@ -1,5 +1,8 @@
 # Changelog
 
+## v.6.0.1 (08.03.2017)
+* (patch) at least one rule in `eslint-plugin-react` no longer work without an array prop.
+
 ## v.6.0.0 (29.12.2016)
 * (breaking) jsx-a11y rules are included by default and require eslint-plugin-jsx-a11y.
 
