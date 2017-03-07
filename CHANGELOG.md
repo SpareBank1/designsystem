@@ -1,5 +1,12 @@
 # Changelog
 
+## v2.4.0
+
+* Update ffe-icons to 7.5.1, new icons:
+  * `ffe-icons-react/binders-ikon`
+  * `ffe-icons-react/svar-pil-ikon`
+  * `ffe-icons-react/moped-ikon`
+
 ## v2.3.1
 
 * remove snake-cased properties from pluss-ikon and bil-camping icon
