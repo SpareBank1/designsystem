@@ -1,5 +1,9 @@
 # Changelog
 
+## v.8.2.4
+
+Adjusted colors to reflect design guidelines
+
 ## v.8.2.3
 
 Added color `@ffe-blue-royal-light-10` (background color of expandable table rows)
