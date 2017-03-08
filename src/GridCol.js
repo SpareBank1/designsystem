@@ -49,12 +49,14 @@ const modifiers = props => Object.keys(props)
 export default function GridCol(props) {
     const {
         children,
+        className,
         lg,
         md,
         sm,
     } = props;
 
     const classes = [
+        className,
         'ffe-grid__col',
         sizeClasses('lg', lg),
         sizeClasses('md', md),
@@ -70,6 +72,7 @@ export default function GridCol(props) {
 }
 
 GridCol.propTypes = {
+    className: PropTypes.string,
     ...MODIFIER_LIST.reduce((props, mod) => ({
         ...props,
         [mod]: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
