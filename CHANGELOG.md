@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## Version 2.2.0
+* Add className property to Grid, GriRow and GridCol
+
 ## Version 2.1.1
 * Grid rows with background colour are now full width
 

@@ -16,6 +16,11 @@ describe('GridCol', () => {
         expect(el.prop('className')).to.be('ffe-grid__col');
     });
 
+    it('renders with custom class', () => {
+        const el = renderShallow({ className: 'custom-class' });
+        expect(el.prop('className')).to.contain('custom-class');
+    });
+
     it('renders provided children node', () => {
         const el = renderShallow();
 
