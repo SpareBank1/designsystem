@@ -16,7 +16,7 @@ import { Grid, GridRow, GridCol } from 'ffe-grid-react';
 render() {
     return (
         <Grid>
-            <GridRow reverse={true}>
+            <GridRow className='my-special-row' reverse={true}>
                 <GridCol
                     center={true}
                     lg={{ cols: 4, offset: 4 }}
@@ -44,6 +44,7 @@ To set the number of cols and offset for `lg`, `md` or `sm` displays use the obj
 
 All the components aim to support the same modifiers that can be found in [ffe-grid](***REMOVED***). Modifiers that are snake-cased in `ffe-grid` is supplied with camelCase to the react-components.
 
+All components support the 'className' property.
 ```javascript
 <GridRow bgBlue={true}>
     ...

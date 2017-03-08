@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 
-export default function GridRow({ bgBlue, bgSand, children, reverse, topPadding }) {
+export default function GridRow({ bgBlue, bgSand, className, children, reverse, topPadding }) {
     let content = children;
     if (bgBlue || bgSand) {
         content = <div className="ffe-grid__row-wrapper">{children}</div>;
@@ -10,6 +10,7 @@ export default function GridRow({ bgBlue, bgSand, children, reverse, topPadding 
         <div
             className={
                 classNames(
+                    className,
                     'ffe-grid__row',
                     { 'ffe-grid__row--bg-blue': bgBlue },
                     { 'ffe-grid__row--bg-sand': bgSand },
@@ -26,6 +27,7 @@ export default function GridRow({ bgBlue, bgSand, children, reverse, topPadding 
 GridRow.propTypes = {
     bgBlue: PropTypes.bool,
     bgSand: PropTypes.bool,
+    className: PropTypes.string,
     children: PropTypes.node.isRequired,
     reverse: PropTypes.bool,
     topPadding: PropTypes.bool,
