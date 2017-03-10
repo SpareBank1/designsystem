@@ -30,6 +30,8 @@
         }
 
         &__details-col {
+            padding-right: 20px;
+
             &:nth-child(1) {
                 // This approach was used, rather than just width: 33.33%;, because of weird behavior
                 // with four columns where the first column would only wrap its children, not take up
@@ -53,6 +55,11 @@
             &&--last {
                 flex-grow: 2;
                 text-align: right;
+            }
+
+            &&--last,
+            &&--no-padding {
+                padding-right: 0;
             }
         }
     }

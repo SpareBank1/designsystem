@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## Version 7.0.1
+* right-padding on `__details-col` to make space between columns, use modifier `--no-padding` to cancel
+
 ## Version 7.0.0
 
 **Potentially breaking change:** The first column is now fixed at 33.33% width.
