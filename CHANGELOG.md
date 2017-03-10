@@ -1,5 +1,9 @@
 # Changelog
 
+## v.4.0.1
+
+* Update dependency to ffe-core to ensure all colors are correct
+
 ## v.4.0.0
 
 * BREAKING: Refactored styling to reflect design guidelines
@@ -29,15 +33,15 @@ up any space. Used on the `.expand-icon` and the row that holds the content to b
 Make sure all table child elements have the following classnames:
 ```
 <caption
-    class="ffe-responsive-table_caption">
+    class="ffe-responsive-table__caption">
 <thead
-    class="ffe-responsive-table_head">
+    class="ffe-responsive-table__head">
 <tr
-    class="ffe-responsive-table_row">
+    class="ffe-responsive-table__row">
 <td
-    class="ffe-responsive-table_cell">
+    class="ffe-responsive-table__cell">
 <footer
-    class="ffe-responsive-table_footer">
+    class="ffe-responsive-table__footer">
 ```
 
 `<tbody>`  (still) don't require classname
