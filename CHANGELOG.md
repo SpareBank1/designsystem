@@ -1,5 +1,8 @@
 # Changelog
 
+## 3.1.0
+* Added optional style to display the calendar above the field instead of below (`ffe-calendar--datepicker--above`).
+
 ## 3.0.1
 * Fixed issue with the previous and next month buttons on iPhone(6)/Safari causing the datepicker not to work at all.
 
