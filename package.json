@@ -1,6 +1,6 @@
 {
   "name": "ffe-tables",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "main": "less/tables.less",
   "scripts": {
     "compile": "npm run lint && lessc example/example.less example/example.css && cp -R node_modules/ffe-core/fonts/ example/fonts/ && echo \"$(date +%T): Updated example\"",
@@ -29,7 +29,7 @@
     }
   ],
   "devDependencies": {
-    "ffe-core": "8.x",
+    "ffe-core": ">= 8.2.3 < 9",
     "ffe-visual-tests-support": "2.1.0",
     "less": "^2.7.1",
     "nsp": "^2.6.2",
@@ -39,7 +39,7 @@
     "watch": "^1.0.1"
   },
   "peerDependencies": {
-    "ffe-core": "8.x"
+    "ffe-core": ">= 8.2.3 < 9"
   },
   "publishConfig": {
     "registry": "https://nexus.intern.sparebank1.no/nexus/content/repositories/npm-internal"
