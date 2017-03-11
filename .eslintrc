@@ -1,9 +1,6 @@
 {
     "extends": "eslint-config-ffe",
     "parser": "babel-eslint",
-    "rules": {
-        "react/no-did-mount-set-state": [2, "disallow-in-func"],
-    },
     "env": {
         "browser": true
     }

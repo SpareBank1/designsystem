@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import sinon from 'sinon';
 import createRafMock from 'mock-raf';
 
-import easeProperties from '../ease-properties';
+import easeProperties from '../src/ease-properties';
 
 const rafMock = createRafMock();
 

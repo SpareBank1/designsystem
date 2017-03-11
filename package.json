@@ -1,20 +1,23 @@
 {
   "name": "ffe-decorators-react",
   "version": "1.0.0",
-  "main": "lib/ffe-decorators-react.js",
+  "description": "",
   "scripts": {
-    "build": "babel -d lib/. --ignore=*.test.js src/.",
+    "build": "babel -d lib/ src/",
     "watch": "onchange 'src/**.js' -- npm run build",
-    "lint": "eslint src/.",
-    "lint:fix": "eslint --fix src/.",
+    "lint": "eslint src/ test/",
+    "lint:fix": "eslint --fix src/ test/",
     "test": "npm run test:spec && npm run test:nsp",
     "test:nsp": "nsp check",
-    "test:spec": "mocha -G --compilers js:babel-core/register --require ./src/test/setup.js src/**/*.test.js",
+    "test:spec": "mocha -G --compilers js:babel-core/register --require ./test/setup.test.js test/**/*.test.js",
     "test:watch": "npm run tdd",
-    "tdd": "mocha -G --compilers js:babel-core/register --require ./src/test/setup.js src/**/*.test.js -w",
+    "tdd": "mocha -G --compilers js:babel-core/register --require ./test/setup.test.js test/**/*.test.js -w",
     "prepublish": "npm run build",
-    "has-published": "npm show . versions -s | grep -q ${npm_package_version}"
+    "has-published": "npm show . versions -s --json | grep -q \\\"${npm_package_version}\\\""
   },
+  "keywords": [
+    "ffe"
+  ],
   "peerDependencies": {
     "react": "^15.4.2"
   },
@@ -27,18 +30,16 @@
     "babel-preset-latest": "^6.22.0",
     "babel-preset-react": "^6.23.0",
     "babel-register": "^6.23.0",
-    "chai": "^3.5.0",
     "enzyme": "^2.7.1",
     "eslint": "^3.17.1",
-    "eslint-config-ffe": "^6.0.0",
+    "eslint-config-ffe": "^6.0.1",
     "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^6.10.0",
     "expect.js": "^0.3.1",
     "install": "^0.8.7",
     "jsdom": "^9.11.0",
     "mocha": "^3.2.0",
-    "mock-raf": "^1.0.0",
     "nsp": "^2.6.3",
     "onchange": "3.2.1",
     "react": "^15.4.2",
@@ -46,14 +47,18 @@
     "react-dom": "^15.4.2",
     "sinon": "^1.17.7"
   },
-  "publishConfig": {
-    "registry": "***REMOVED***"
-  },
   "files": [
     "lib",
     "*.js"
   ],
-  "repository": "",
-  "author": "SpareBank1",
-  "license": ""
+  "main": "lib/index.js",
+  "author": "SpareBank 1",
+  "repository": {
+    "type": "git",
+    "url": "***REMOVED***"
+  },
+  "publishConfig": {
+    "registry": "***REMOVED***"
+  },
+  "license": "ISC"
 }
