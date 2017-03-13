@@ -1,5 +1,10 @@
 # Changelog
 
+## v3.0.3
+
+* Update dependency ffe-tables to 4.x
+* Update dependency ffe-core to >= 8.2.3 < 9
+
 ## v3.0.2
 
 * Fixed: When no children, or a falsy value, is passed as children to `TableRowExpandable` the row will set the expanded value in this.state to false in componentWillReceiveProps.
