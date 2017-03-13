@@ -1,9 +1,9 @@
 import {mount} from 'enzyme';
 import {assert} from 'chai';
 import React from 'react';
-import  SuggestionItem from './suggestion-item';
+import  SuggestionItem from '../suggestion-item';
 import sinon from 'sinon';
-import './test/setup';
+import './setup';
 
 function item() {
   return {header: 'header'};
