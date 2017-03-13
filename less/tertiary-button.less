@@ -11,7 +11,7 @@
     margin: 0 -4px; // Hack to allow box-shadow to float outside content on focus
     padding: 0 4px;
 
-    &:after {
+    &::after {
         border-bottom: solid 1px @ffe-blue-royal-light-wcag;
         content: " ";
         display: block;
@@ -28,9 +28,9 @@
         color: @ffe-blue-flat;
     }
 
-    &:active:after,
-    &:focus:after,
-    &:hover:after {
+    &:active::after,
+    &:focus::after,
+    &:hover::after {
         border-color: @ffe-blue-flat;
     }
 
