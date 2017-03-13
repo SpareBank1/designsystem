@@ -43,6 +43,13 @@ class BaseSelector extends Component {
     }
   }
 
+  getInputHeight() {
+    if (this.input) {
+      return this.input.getBoundingClientRect().height;
+    }
+    return 0;
+  }
+
   filterSuggestions() {
     const {suggestions, suggestionFilter, value} = this.props;
     return suggestions.filter(suggestionFilter(value));
