@@ -1,5 +1,6 @@
 /*eslint jsx-a11y/onclick-has-focus:1 jsx-a11y/onclick-has-role:1 */
 import React, { PropTypes } from 'react';
+import classNames from 'classnames';
 import Calendar from '../calendar/ffe-calendar';
 import KeyCode from '../util/keyCode';
 import DateInput from '../dateinput/ffe-dateinput';
@@ -119,6 +120,10 @@ export default class FFEDatepicker extends React.Component {
   }
 
   render() {
+    const calendarClassName = classNames(
+        'ffe-calendar ffe-calendar--datepicker',
+        { 'ffe-calendar--datepicker--above': this.props.calendarAbove }
+    );
     return (
       <div
         onClick={ this.clickHandler }
@@ -144,7 +149,7 @@ export default class FFEDatepicker extends React.Component {
             minDate={ this.props.minDate }
             maxDate={ this.props.maxDate }
             escKeyHandler={ this.escKeyHandler }
-            calendarClassName="ffe-calendar ffe-calendar--datepicker"
+            calendarClassName={ calendarClassName }
           />
           : null }
       </div>);
@@ -159,4 +164,5 @@ FFEDatepicker.propTypes = {
   maxDate: PropTypes.string,
   inputProps: PropTypes.object,
   ariaInvalid: PropTypes.bool,
+  calendarAbove: PropTypes.bool,
 };

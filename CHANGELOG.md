@@ -1,5 +1,8 @@
 # Changelog
 
+## v2.1.0
+* Make it possible to display the calendar above the datepicker field using the `calendarAbove` boolean property.
+
 ## v2.0.9
 * Remove event listeners on unmount
 

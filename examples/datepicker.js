@@ -15,7 +15,7 @@ class DatepickerExample extends React.Component {
 
   constructor() {
     super();
-    this.state = { dateOne: '', dateTwo: '' };
+    this.state = { dateOne: '', dateTwo: '', dateThree: '' };
     this.onChange = this.onChange.bind(this);
   }
 
@@ -46,6 +46,17 @@ class DatepickerExample extends React.Component {
           maxDate="31.12.2018"
           inputProps={ { className: 'customClass', id: 'custom-input-id' } }
           ariaInvalid={ false }
+        />
+
+        <Datepicker
+          value={ this.state.dateThree }
+          onChange={ date => this.onChange(date, 'dateThree') }
+          language="nb"
+          minDate="01.01.2016"
+          maxDate="31.12.2018"
+          inputProps={ { className: 'customClass', id: 'custom-input-id' } }
+          ariaInvalid={ false }
+          calendarAbove={ true }
         />
       </form>
     );
