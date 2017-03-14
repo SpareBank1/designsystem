@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## Version 1.2.0
+ * Add support for --error modifier with same bg color as `ffe-message-box--error`
+
 ## Version 1.1.0
  * Add support for --success modifier with same bg color as `ffe-message-box--success`
 
