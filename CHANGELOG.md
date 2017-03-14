@@ -1,5 +1,8 @@
 # Changelog
 
+## v4.1.4
+* Modified the `padding-bottom` for `ffe-form-label` from 8px to 2px
+
 ## v4.1.3
 * Changed color of option text in selects with validation errors to default blue in stead of inherited red.
 
