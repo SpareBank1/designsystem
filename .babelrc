@@ -1,8 +1,9 @@
 {
-    "presets": [
-        "es2015"
-    ],
+    "presets": ["latest", "react"],
     "plugins": [
         'transform-object-rest-spread'
+    ],
+    "ignore": [
+        "test/**/*.js"
     ]
 }
