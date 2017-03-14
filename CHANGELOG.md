@@ -1,5 +1,29 @@
 # Changelog
 
+## v.9.0.0
+
+BREAKING: 
+
+Refactored color variables.
+To upgrade to this release, the following variables must be replaced by their new names in your LESS code:
+
+* `@ffe-blue-flat` --> `@ffe-blue-cobalt`
+* `@ffe-blue-royal-light-wcag` --> `@ffe-blue-azure`
+* `@ffe-blue-royal-light` --> `@ffe-blue-deep-sky`
+* `@ffe-blue-royal-light-50` --> `@ffe-blue-sky`
+* `@ffe-blue-royal-light-20` --> `@ffe-blue-pale`
+* `@ffe-blue-royal-light-10` --> `@ffe-blue-ice`
+* `@ffe-green-wcag` --> `@ffe-green-shamrock`
+* `@ffe-green-dark-10` --> `@ffe-green-emerald`
+* `@ffe-green-wcag-20` --> `@ffe-green-mint`
+* `@ffe-orange-wcag` --> `@ffe-orange-fire`
+* `@ffe-orange-wcag-20` --> `@ffe-orange-salmon`
+* `@ffe-purple-wcag` --> `@ffe-purple-magenta`
+* `@ffe-sand-50` --> `@ffe-sand-ivory`
+* `@ffe-grey-light-bg` --> `@ffe-grey-cloud`
+* `@ffe-grey-light` --> `@ffe-grey-silver`
+* `@ffe-grey-dark` --> `@ffe-grey-charcoal`
+
 ## v.8.2.4
 
 Adjusted colors to reflect design guidelines
