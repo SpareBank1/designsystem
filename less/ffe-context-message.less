@@ -1,22 +1,3 @@
-.ffe-context-message {
-  transition: height 0.3s;
-  overflow: hidden;
-  position: relative;
-  border-radius: 5px;
-
-  &--info {
-    background-color: @ffe-blue-royal-light-20;
-  }
-
-  &--tip {
-    background-color: @ffe-sand;
-  }
-
-  &--success {
-    background-color: @ffe-green-wcag-20;
-  }
-}
-
 .ffe-context-message-content {
   display: flex;
   flex-direction: row;
@@ -74,3 +55,33 @@
   }
 }
 
+.ffe-context-message {
+  transition: height 0.3s;
+  overflow: hidden;
+  position: relative;
+  border-radius: 5px;
+
+  &--info {
+    background-color: @ffe-blue-royal-light-20;
+  }
+
+  &--tip {
+    background-color: @ffe-sand;
+  }
+
+  &--success {
+    background-color: @ffe-green-wcag-20;
+  }
+
+  &--error {
+    background-color: @ffe-orange-wcag-20;
+
+    .ffe-context-message-content__header {
+      color: @ffe-black;
+    }
+
+    .ffe-context-message-content__icon-svg {
+      fill: @ffe-red;
+    }
+  }
+}
