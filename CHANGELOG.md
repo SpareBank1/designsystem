@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 2.2.0
+* Added <ContextErrorMessage /> component
+
 ## 2.1.1/2.1.2 
 * Update designguide doc
 
