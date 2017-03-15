@@ -12,120 +12,135 @@ $ npm install --save ffe-core ffe-tables ffe-tables-react
 
 ## Usage
 
-#### Columns
-The `columns` prop is _required_, and expects an array of objects like this:
+First you will need to import the table component from the default export of `ffe-tables-react`.
+```javascript
+import ResponsiveTable from 'ffe-tables-react';
+```
 
+### Bear necessities
+
+This is an example with only the required values and props present.
+Forget about your worries and your strife!
+
+Columns should be an array of objects where each object represents properties for each column.
+Each column must have a `key` and a `header`, each of which should be a string.
+The `key` will correspond to the props of each object in the `data` array.
 ```javascript
 const columns = [
     { key: 'name', header: 'Navn' },
-    { key: 'age', header: 'Alder', alignRight: true }
+    { key: 'email', header: 'E-post' }
 ];
 ```
-The `key` prop in `columns` corresponds to the prop you want to display in the data array object.
-The `alignRight` prop in will align the entire column
 
-##### Footer
-To add a footer to a column simply include a `footer` prop in the column-object like so:
-```javascript
-const columns = [
-    { key: 'name', header: 'Navn', footer: 'Gjennomsnitt' },
-    { key: 'age', header: 'Alder', footer: '37,67', alignRight: true }
-];
-```
-Footers are compatible with all table variations
-
-#### Data
-The `data` prop is _required*_, and expects an array of object like this:
-
+Data should be an array of objects where each object represents a row.
+Each row should have a property to correspond to each column object `key`.
 ```javascript
 const data = [
     {
         name: 'Ola Normann',
-        address: 'Gateveien 2',
-        age: 23
+        email: 'ola@normann.no'
     },
     {
         name: 'Sivert Svenska',
-        address: 'Gatuveio 7',
-        age: 45,
+        email: 'sivert@svenska.se'
     },
     {
         name: 'Daniel Dansk',
-        address: <button>legg til adresse</button>,
-        age: 45,
+        email: 'daniel@dansk.dk'
     }
-]
-```
-Note: the `address` prop will not be displayed since it's not defined in the `columns`.
-*Not required when using a `ResponsiveTable` with `TableRowExpandable`.
-
-### Responsive table
-The `<ResponsiveTable />` component lets you create simple, yet flexible tables based on your data:
-
-```javascript
-<ResponsiveTable
-    columns={Array}
-    data={Array}
-/>
+];
 ```
 
-#### Expandable rows
-The `<TableRowExpandable />` component lets you create clickable tablerows that can expand complimentary content.
-Use it as a child to `<ResponsiveTable />` with the `expandable={true}` prop. No need to pass the `data` prop.
-
+The table itself shouldn't need much explaining.
 ```javascript
 <ResponsiveTable
     columns={columns}
-    expandable={true}>
-      {
-        tableData.map((row, index) => (
-          <TableRowExpandable
-            cells={ row }
-            columns={columns}
-            key={ index }>
-                <div>
-                    <p>This content will be revealed on expand<p>
-                    <p>Address: { row.address }</p>
-                </div>
-          </TableRowExpandable>
-        ))
-      }
-</ResponsiveTable>
-```
-
-The `columns` prop is _required_, and expects the same array passed to `<ResponsiveTable />`.
-The `cells` prop is _required_, and expects one of the objects in the `data` array passed to `<ResponsiveTable />`.
-
-##### Unexpandable expandable
-Should you have the need to make some of your `TableRowExpandable` unexpandable (for lack of details or whatever)
-this can be achieved by not passing children, or passing a `falsy` value like this:
-
-```javascript
-<TableRowExpandable
-  cells={ row }
-  columns={columns}
-  key={ index }>
-      { row.address && (
-          <div>
-              <p>This content will be revealed on expand<p>
-              <p>Address: { row.address }</p>
-          </div>
-      )}
-</TableRowExpandable>
-```
-
-In this example, if the person does not hav an address, the row will not be expandable.
-
-### Sortable table
-The `<SortableTable />` component lets you create simple, flexible and sortable table. It expects the same props as `<ResponsiveTable />`.
-
-```javascript
-<SortableTable
-    columns={Array}
-    data={Array}
+    data={data}
 />
 ```
-`<SortableTable />` is not sortable on screen width < 768px (@breakpoint-md)
+
+### The King of the Swingers
+
+So give me the secret, man-cub, clue me what to do.
+This is an example which includes all the options to tailor the table to your needs.
+
+Each column can have any of these optional props:
+- `footer` is a string or node which will be used as a table footer.
+- `alignRight` is a boolean to align all cell content to the right (headers and footers included)
+- `compare` is to provide a custom compare function for the column.
+If not provided, a basic compare function is applied.
+- `notSortable` is a boolean to disable sorting on a specific column.
+If your `header` is an empty string `''`, you do not need to provide this property,
+as an empty header will also result in a column that's not sortable.
+
+The latter two will only apply to a `sortable` table.
+```javascript
+const currencyCompare = (a, b) => {
+    /* Perform some custom comparison of two networth values */
+};
+
+const columns = [
+    { key: 'name', header: 'Navn', footer: 'Gjennomsnitt' },
+    { key: 'email', header: 'E-post' },
+    { key: 'age', header: 'Alder', footer: '37,67', alignRight: true },
+    { key: 'networth', header: 'Formue', footer: '37,67', alignRight: true, compare: currencyCompare },
+    { key: 'button', header: 'Poke', notSortable: true }
+];
+```
+
+The data block is not very different in this example.
+Note that values can easily be a component or node, as seen on `button`.
+Also note that you can add more values than those which are found as column keys, as seen on `address`.
+The purpose here is to supply values to the expandable row.
+```javascript
+const data = [
+    {
+        name: 'Ola Normann',
+        email: 'ola@normann.no',
+        address: 'Gateveien 2',
+        age: 23,
+        networth: '12 693 005,93',
+        button: <button>poke</button>
+    },
+    {
+        name: 'Sivert Svenska',
+        email: 'sivert@svenska.se',
+        age: 45,
+        networth: '8 693 005,93',
+        button: <button>poke</button>
+    },
+    {
+        name: 'Daniel Dansk',
+        email: 'daniel@dansk.dk',
+        address: <button>legg til adresse</button>,
+        age: 45,
+        networth: '9 005,93',
+        button: <button>poke</button>
+    }
+];
+```
+
+The table accepts any of these optional props:
+- `sortable` is a boolean to make the table sortable.
+  - Click the headers to sort the table.
+  - Tables will not be `sortable` on screen width < 768px (@breakpoint-md)
+- `caption` is a string or node to insert as table caption.
+- `expandedContentMapper` must be a reference to a function which takes a single value.
+The output of this function will be the contents of the expanded area of an expandable row.
+  - As you see in the example below, the output of this function will be `undefined` for Sivert Svenska,
+  because he doesn't have an `address`. In this case the row will not be expandable.
+  - The presence of this function also acts as a boolean to inform the table it has expandable rows.
+```javascript
+const expandedContentMapper = row => row.address && <span>Adresse: { row.address }</span>;
+
+<ResponsiveTable
+    columns={ columns }
+    data={ data }
+    expandedContentMapper={ expandedContentMapper }
+    sortable={ true }
+    caption="For the strength of the pack is the wolf. And the strength of the wolf is the pack."
+/>
+```
 
 ## Examples
 

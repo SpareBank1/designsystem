@@ -58,8 +58,11 @@ class SortableTable extends Component {
 
     decorateSortableTableHeader(column) {
         if (column.header === '') {
-          return <span className='ffe-sortable-table__header' />;
-          }
+            return <span className='ffe-sortable-table__header' />;
+        }
+        if (column.notSortable) {
+            return column.header;
+        }
 
         return (
             <span
@@ -93,13 +96,22 @@ class SortableTable extends Component {
             };
         });
 
+        const { caption, expandedContentMapper } = this.props;
+
         return (
-            <ResponsiveTable columns={ sortableColumns } columnData={ this.props.columns } data={ this.state.tableData } />
+            <ResponsiveTable
+                caption={ caption }
+                expandedContentMapper={ expandedContentMapper }
+                columns={ sortableColumns }
+                data={ this.state.tableData }
+            />
         );
     }
 }
 
 SortableTable.propTypes = {
+    caption: PropTypes.string,
+    expandedContentMapper: PropTypes.func,
     columns: PropTypes.arrayOf(PropTypes.object).isRequired,
     data: PropTypes.arrayOf(PropTypes.object).isRequired
 };
