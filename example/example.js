@@ -6,6 +6,7 @@ import {
     ContextInfoMessage,
     ContextTipMessage,
     ContextSuccessMessage,
+    ContextErrorMessage,
 } from '../lib';
 
 const example = (
@@ -56,6 +57,17 @@ const example = (
             >
                 Alt gikk bra!
             </ContextSuccessMessage>
+        </div>
+
+        <div className="example-container">
+            <h4 className="example-container__header">Error</h4>
+            <ContextErrorMessage
+                header='Error'
+                locale='nb'
+                showCloseButton={true}
+            >
+                Whoops! Noe gikk feil.
+            </ContextErrorMessage>
         </div>
 
         <div className="expanding-field">

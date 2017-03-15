@@ -5,6 +5,7 @@ import {
     ContextInfoMessage,
     ContextTipMessage,
     ContextSuccessMessage,
+    ContextErrorMessage,
 } from '../';
 import Base from '../base';
 import InfoCircleIcon from 'ffe-icons-react/info-sirkel-ikon';
@@ -125,5 +126,21 @@ describe('Test ContextSuccessMessage', () => {
     it('renders ContextInfoMessage', () => {
         const component = wrapper.find('.ffe-context-message');
         expect(component.hasClass('ffe-context-message--success')).to.be(true);
+    });
+});
+
+describe('Test ContextErrorMessage', () => {
+    const wrapper = mount(
+        <ContextErrorMessage
+            icon={<InfoCircleIcon />}
+            showCloseButton={true}
+        >
+            <p>content</p>
+        </ContextErrorMessage>
+    );
+
+    it('renders ContextErrorMessage', () => {
+        const component = wrapper.find('.ffe-context-message');
+        expect(component.hasClass('ffe-context-message--error')).to.be(true);
     });
 });
