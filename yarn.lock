@@ -115,6 +115,12 @@ argparse@^1.0.7:
   dependencies:
     sprintf-js "~1.0.2"
 
+aria-query@^0.3.0:
+  version "0.3.0"
+  resolved "***REMOVED***#cb8a9984e2862711c83c80ade5b8f5ca0de2b467"
+  dependencies:
+    ast-types-flow "0.0.7"
+
 arr-diff@^2.0.0:
   version "2.0.0"
   resolved "***REMOVED***#8f3b827f955a8bd669697e4a4256ac3ceae356cf"
@@ -203,6 +209,10 @@ assert@^1.4.0:
 assertion-error@^1.0.1:
   version "1.0.2"
   resolved "***REMOVED***#13ca515d86206da0bac66e834dd397d87581094c"
+
+ast-types-flow@0.0.7:
+  version "0.0.7"
+  resolved "***REMOVED***#f70b735c6bca1a5c9c22d982c3e39e7feba3bdad"
 
 astw@^2.0.0:
   version "2.2.0"
@@ -1475,6 +1485,10 @@ d@^0.1.1, d@~0.1.1:
   dependencies:
     es5-ext "~0.10.2"
 
+damerau-levenshtein@^1.0.0:
+  version "1.0.3"
+  resolved "***REMOVED***#ae4f4ce0b62acae10ff63a01bb08f652f5213af2"
+
 dashdash@^1.12.0:
   version "1.14.1"
   resolved "***REMOVED***#853cfa0f7cbe2fed5de20326b8dd581035f6e2f0"
@@ -1696,6 +1710,10 @@ elliptic@^6.0.0:
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.0"
 
+emoji-regex@^6.1.0:
+  version "6.4.1"
+  resolved "***REMOVED***#77486fe9cd45421d260a6238b88d721e2fad2050"
+
 encodeurl@~1.0.1:
   version "1.0.1"
   resolved "***REMOVED***#79e3d58655346909fe6f0f45a5de68103b294d20"
@@ -1876,6 +1894,17 @@ eslint-plugin-import@^2.2.0:
     lodash.cond "^4.3.0"
     minimatch "^3.0.3"
     pkg-up "^1.0.0"
+
+eslint-plugin-jsx-a11y@^4.0.0:
+  version "4.0.0"
+  resolved "***REMOVED***#779bb0fe7b08da564a422624911de10061e048ee"
+  dependencies:
+    aria-query "^0.3.0"
+    ast-types-flow "0.0.7"
+    damerau-levenshtein "^1.0.0"
+    emoji-regex "^6.1.0"
+    jsx-ast-utils "^1.0.0"
+    object-assign "^4.0.1"
 
 eslint-plugin-react@^6.10.0:
   version "6.10.0"
@@ -2934,7 +2963,7 @@ jsprim@^1.2.2:
     json-schema "0.2.3"
     verror "1.3.6"
 
-jsx-ast-utils@^1.3.4:
+jsx-ast-utils@^1.0.0, jsx-ast-utils@^1.3.4:
   version "1.4.0"
   resolved "***REMOVED***#5afe38868f56bc8cc7aeaef0100ba8c75bd12591"
   dependencies:

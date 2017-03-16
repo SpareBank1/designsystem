@@ -39,8 +39,9 @@ class SuggestionListContainer extends React.Component {
   render() {
     const {heightMax, autoHeight} = this.props;
     return (
-      <div className='container-suggestion'
-           onKeyDown={this.onKeyDown}
+      <div
+        className='container-suggestion'
+        onKeyDown={this.onKeyDown}
       >
         <Scrollbars
           autoHeight={autoHeight}
@@ -61,12 +62,12 @@ class SuggestionListContainer extends React.Component {
 SuggestionListContainer.propTypes = {
   highlightedIndex: PropTypes.number.isRequired,
   heightMax: PropTypes.number,
-  autoHeight : PropTypes.bool,
+  autoHeight: PropTypes.bool,
 };
 
 SuggestionListContainer.defaultProps = {
   heightMax: 300,
-  autoHeight : true,
+  autoHeight: true,
 };
 
 export default SuggestionListContainer;

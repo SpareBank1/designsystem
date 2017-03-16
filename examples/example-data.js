@@ -10,7 +10,6 @@ export const accounts = [
     id: 2,
     name: 'Matvererkonto',
     accountNumber: '42011841044',
-    balance: 24566546.21,
   },
   {
     id: 3,

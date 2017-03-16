@@ -1,6 +1,8 @@
 import React from 'react';
 import {accountFormatter, balanceWithCurrency} from '../util/format';
-import { Account, Locale } from '../util/types';
+import {Account, Locale} from '../util/types';
+import {AccountBalanceHoc} from './account-balance-hoc';
+
 
 function AccountDetails({account, locale}) {
   const {balance, accountNumber} = account;
@@ -9,11 +11,11 @@ function AccountDetails({account, locale}) {
       <div className='account-details--left'>
         { accountFormatter(accountNumber) }
       </div>
-      { balance &&
-      <div className='account-details--right'>
-        { balanceWithCurrency(balance, locale) }
-      </div>
-      }
+      <AccountBalanceHoc balance={balance}>
+        <div className='account-details--right'>
+          { balanceWithCurrency(balance, locale) }
+        </div>
+      </AccountBalanceHoc>
     </div>
   );
 }
