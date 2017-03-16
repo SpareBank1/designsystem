@@ -2,10 +2,11 @@
 
 ## v.9.0.0
 
-BREAKING: 
+BREAKING:
 
-Refactored color variables.
-To upgrade to this release, the following variables must be replaced by their new names in your LESS code:
+Removed `@ffe-sand-25`, renamed other color variables.
+
+To upgrade to this release, all references to the following variables must be replaced by their new names in your LESS code:
 
 * `@ffe-blue-flat` --> `@ffe-blue-cobalt`
 * `@ffe-blue-royal-light-wcag` --> `@ffe-blue-azure`
@@ -23,6 +24,8 @@ To upgrade to this release, the following variables must be replaced by their ne
 * `@ffe-grey-light-bg` --> `@ffe-grey-cloud`
 * `@ffe-grey-light` --> `@ffe-grey-silver`
 * `@ffe-grey-dark` --> `@ffe-grey-charcoal`
+
+Instances of `@ffe-sand-25` can be replaced by `@ffe-sand`, which is the same color. 
 
 ## v.8.2.4
 
