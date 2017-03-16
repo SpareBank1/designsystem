@@ -283,7 +283,9 @@ describe('<BaseSelector> keyboard navigation', () => {
   });
 
   it('should select highlighted suggestion on ENTER', () => {
-    assertSuggestionSelected({which: KeyCodes.ENTER});
+    const preventDefaultSpy = sinon.spy();
+    assertSuggestionSelected({which: KeyCodes.ENTER, preventDefault : preventDefaultSpy});
+    assert.isTrue(preventDefaultSpy.calledOnce);
   });
 
   it('should select highlighted index on TAB', () => {
