@@ -9,15 +9,18 @@ function item() {
   return {header: 'header'};
 }
 
-function renderSuggestionItem(isHighlighted = true, refHighlightedSuggestion = () => {}, onSelect = () => {}) {
-  return mount(<SuggestionItem
-    onSelect={onSelect}
-    item={item()}
-    id="suggestion-option-0"
-    isHighlighted={isHighlighted}
-    refHighlightedSuggestion={refHighlightedSuggestion}
-    render={({header}) => <h1>{header}</h1>}
-  />);
+function renderSuggestionItem(isHighlighted = true, refHighlightedSuggestion = () => {
+}, onSelect = () => {}) {
+  return mount(
+    <SuggestionItem
+      onSelect={onSelect}
+      item={item()}
+      id="suggestion-option-0"
+      isHighlighted={isHighlighted}
+      refHighlightedSuggestion={refHighlightedSuggestion}
+      render={({header}) => <h1>{header}</h1>}
+    />
+  );
 }
 
 describe('<SuggestionItem />', () => {
@@ -50,7 +53,8 @@ describe('<SuggestionItem />', () => {
 
   it('onSelect called', () => {
     const onSelectSpy = sinon.spy();
-    const wrapper = renderSuggestionItem(true, () => {}, onSelectSpy);
+    const wrapper = renderSuggestionItem(true, () => {
+    }, onSelectSpy);
     wrapper.simulate('mousedown');
     assert.isTrue(onSelectSpy.calledWith(item()));
   });

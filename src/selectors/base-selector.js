@@ -164,7 +164,7 @@ class BaseSelector extends Component {
         }
         break;
       case KeyCodes.ENTER:
-        if(showSuggestions){
+        if (showSuggestions) {
           event.preventDefault();
         }
         this.onSuggestionSelect(suggestions[highlightedSuggestionIndex]);
