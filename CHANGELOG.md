@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.6.0
+
+* Added support for autoFocus attribute
+
 ## 2.5.2
 
 * Use latest FFE eslint config
