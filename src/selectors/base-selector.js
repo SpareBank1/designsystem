@@ -19,7 +19,7 @@ class BaseSelector extends Component {
     this.state = {
       showSuggestions: false,
       highlightedSuggestionIndex: -1,
-      suggestionListId: "suggestion-list"
+      suggestionListId: 'suggestion-list'
     };
 
     /*
@@ -164,6 +164,9 @@ class BaseSelector extends Component {
         }
         break;
       case KeyCodes.ENTER:
+        if(showSuggestions){
+          event.preventDefault();
+        }
         this.onSuggestionSelect(suggestions[highlightedSuggestionIndex]);
         break;
       case KeyCodes.TAB:
