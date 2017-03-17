@@ -74,3 +74,9 @@ Loading state can be indicated using `isLoading`. When this is set a loading spi
 ```javascript
 <Dropdown isLoading={ true }>...</Dropdown>
 ```
+
+##### Focus
+In some situations where you remove a part of the DOM that contains the focused element (e.g after clicking a button), you might want to automatically set focus to a specific element.
+
+The `autoFocus`-prop may be used for this purpose. It will automatically focus the element after mounting. Please note that this only works on one element!
+

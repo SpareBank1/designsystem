@@ -21,7 +21,8 @@ function Dropdown(props) {
         name,
         onChange,
         onBlur,
-        selectedValue
+        selectedValue,
+        autoFocus
     } = props;
 
     const domId = id || createID(label, children);
@@ -42,6 +43,7 @@ function Dropdown(props) {
                 value={selectedValue}
                 defaultValue={defaultValue}
                 aria-invalid={invalid}
+                autoFocus={autoFocus}
             >
                 {children}
             </select>
@@ -72,7 +74,8 @@ Dropdown.propTypes = {
     name: PropTypes.string,
     onChange: PropTypes.func.isRequired,
     onBlur: PropTypes.func,
-    selectedValue: PropTypes.string
+    selectedValue: PropTypes.string,
+    autoFocus: PropTypes.bool
 };
 
 export default Dropdown;
