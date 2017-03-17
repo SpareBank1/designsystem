@@ -2,9 +2,9 @@ import { shallow, mount } from 'enzyme';
 import { assert } from 'chai';
 import sinon from 'sinon';
 import React from 'react';
-import  SuggestionList from './suggestion-list';
-import  SuggestionListContainer from './suggestion-list-container';
-import './test/setup';
+import  SuggestionList from '../suggestion-list';
+import  SuggestionListContainer from '../suggestion-list-container';
+import './setup';
 
 function suggestions() {
   return [
@@ -29,7 +29,8 @@ function propsSuggestionList(_suggestions = suggestions()) {
     renderSuggestion,
     renderNoSuggestion,
     refHighlightedSuggestion: () => {},
-    onKeyDown: () => {}
+    onKeyDown: () => {},
+    id : 'id'
   };
 }
 

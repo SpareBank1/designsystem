@@ -26,7 +26,7 @@ export function accountFormatter(accountNumber) {
   return accountNumber;
 }
 
-export function balanceWithCurrency(balance, locale) {
+export function balanceWithCurrency(balance = '', locale) {
   return `${amountFormatter(balance, locale)} ${currencyPostfix[locale]}`;
 }
 

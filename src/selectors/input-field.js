@@ -1,6 +1,4 @@
 import React, { PropTypes, Component } from 'react';
-import classNames from 'classnames';
-import ChevronIkon from 'ffe-icons-react/chevron-ikon';
 import KryssIkon from 'ffe-icons-react/kryss-ikon';
 
 class Input extends Component {
@@ -14,10 +12,11 @@ class Input extends Component {
       placeholder,
       isSuggestionsShowing,
       ariaInvalid,
-      resetLabel,
       onBlur,
       onReset,
-      inputFieldRef
+      inputFieldRef,
+      highlightedIndex,
+      suggestionListId
     } = this.props;
     return (
       <div
@@ -25,22 +24,23 @@ class Input extends Component {
         aria-expanded={ isSuggestionsShowing }
         onFocus={ onFocus }
         onBlur={ onBlur }
+        aria-activedescendant={highlightedIndex > -1 ? `suggestion-item-${highlightedIndex}` : null}
+        aria-owns={suggestionListId}
       >
         <input
           onChange={ (e) => {onChange(e.target.value);}}
-          className='ffe-input-field input-field'
+          className='ffe-input-field ffe-dropdown input-field'
           onKeyDown={ onKeyDown }
           autoComplete='off'
           value={ value }
           id={ id }
           placeholder={ placeholder }
           ref={inputFieldRef}
-          aria-invalid={ ariaInvalid } // add aria with hoc?
+          aria-invalid={ ariaInvalid }
           aria-autocomplete='list'
         />
         { value.length > 0 &&
         <button
-          aria-label={ resetLabel }
           className='reset-button'
           onMouseDown={ onReset }
           tabIndex={-1}
@@ -49,9 +49,6 @@ class Input extends Component {
           <KryssIkon className='reset-button-icon'/>
         </button>
         }
-        <div className={classNames('arrow-icon', {'arrow-icon--up': isSuggestionsShowing })}>
-          <ChevronIkon focusable={ false }/>
-        </div>
       </div>
     );
   }
@@ -61,7 +58,6 @@ Input.propTypes = {
   onChange: PropTypes.func.isRequired,
   onKeyDown: PropTypes.func.isRequired,
   value: PropTypes.string.isRequired,
-  resetLabel: PropTypes.string.isRequired,
   onReset: PropTypes.func.isRequired,
   isSuggestionsShowing: PropTypes.bool.isRequired,
   id: PropTypes.string,
@@ -70,12 +66,15 @@ Input.propTypes = {
   onFocus: PropTypes.func,
   ariaInvalid: PropTypes.bool,
   inputFieldRef: PropTypes.func,
+  highlightedIndex: PropTypes.number,
+  suggestionListId: PropTypes.string,
 };
 
 Input.defaultProps = {
   onBlur: () => {},
   onFocus: () => {},
   inputFieldRef: () => {},
+  ariaInvalid : false,
 };
 
 export default Input;

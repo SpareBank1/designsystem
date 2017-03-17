@@ -7,11 +7,13 @@ export default function SuggestionList(props) {
     highlightedIndex,
     renderSuggestion,
     renderNoMatches,
+    id,
   } = props;
   return (
     <ul
       className='container-suggestion-list'
       role='listbox'
+      id={id}
     >
       { suggestions.length > 0 ?
         suggestions.map((item, index) => {
@@ -20,6 +22,7 @@ export default function SuggestionList(props) {
               {...props}
               key={index}
               item={item}
+              id={`suggestion-item-${index}`}
               isHighlighted={index === highlightedIndex}
               render={renderSuggestion}
             />);
@@ -35,6 +38,7 @@ SuggestionList.propTypes = {
   highlightedIndex: PropTypes.number.isRequired,
   renderSuggestion: PropTypes.func.isRequired,
   renderNoMatches: PropTypes.func,
+  id: PropTypes.string.isRequired
 };
 
 SuggestionList.defaultProps = {

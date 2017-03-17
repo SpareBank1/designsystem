@@ -1,5 +1,3 @@
-import AccountSelector from './selectors/base-selector';
-import AccountSelectorMulti from './selectors/account-selector-multi';
+import AccountSelector from './selectors/account-selector';
 
-export {AccountSelectorMulti};
 export default AccountSelector;

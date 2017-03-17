@@ -19,6 +19,7 @@ class BaseSelector extends Component {
     this.state = {
       showSuggestions: false,
       highlightedSuggestionIndex: -1,
+      suggestionListId: 'suggestion-list'
     };
 
     /*
@@ -41,6 +42,7 @@ class BaseSelector extends Component {
     if (this.suggestionList) {
       return this.suggestionList.scrollbars.getClientHeight();
     }
+    return 0;
   }
 
   getInputHeight() {
@@ -197,7 +199,10 @@ class BaseSelector extends Component {
         }
         break;
       case KeyCodes.ENTER:
-        this.onSuggestionSelect(this.filterSuggestions()[highlightedSuggestionIndex]);
+        if (showSuggestions) {
+          event.preventDefault();
+        }
+        this.onSuggestionSelect(suggestions[highlightedSuggestionIndex]);
         break;
       case KeyCodes.TAB:
         if (showSuggestions && shouldSelectHighlightedOnTab) {
@@ -212,12 +217,12 @@ class BaseSelector extends Component {
       value,
       placeholder,
       suggestionsHeightMax,
-      id,
+      ariaInvalid,
     } = this.props;
-    const {showSuggestions, highlightedSuggestionIndex} = this.state;
+    const {showSuggestions, highlightedSuggestionIndex, suggestionListId} = this.state;
     return (
       <div
-        className='base-selector'
+        className='base-selector ffe-input-group'
       >
         <Input
           inputFieldRef={(input) => {
@@ -226,13 +231,14 @@ class BaseSelector extends Component {
           value={value}
           onChange={this.onInputChange}
           onReset={this.onInputResetClick}
-          resetLabel={''}
           onKeyDown={this.onInputKeyDown}
           isSuggestionsShowing={showSuggestions}
-          id={id}
           placeholder={placeholder}
           onBlur={this.onBlur}
           onFocus={this.onFocus}
+          highlightedIndex={highlightedSuggestionIndex}
+          suggestionListId={suggestionListId}
+          ariaInvalid={ariaInvalid}
         />
         {showSuggestions &&
         <SuggestionsList
@@ -244,6 +250,7 @@ class BaseSelector extends Component {
           suggestions={this.filterSuggestions()}
           heightMax={suggestionsHeightMax}
           onSelect={this.onSuggestionClick}
+          id={suggestionListId}
         />}
       </div>
     );
@@ -262,10 +269,8 @@ BaseSelector.propTypes = {
   onBlur: PropTypes.func,
   onReset: PropTypes.func,
   onFocus: PropTypes.func,
-  onTab: PropTypes.func,
-  onSuggestionListChange: PropTypes.func,
-  id: PropTypes.string,
   placeholder : PropTypes.string,
+  ariaInvalid : PropTypes.bool,
   suggestionsHeightMax : PropTypes.number,
 };
 
@@ -274,8 +279,6 @@ BaseSelector.defaultProps = {
   onBlur: () => {},
   onFocus: () => {},
   onReset: () => {},
-  onTab: () => {},
-  onSuggestionListChange: () => {},
   ariaInvalid: false,
   placeholder : '',
 };
