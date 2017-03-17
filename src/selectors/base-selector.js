@@ -58,9 +58,11 @@ class BaseSelector extends Component {
   }
 
   onInputChange(value) {
-    this.setState({showSuggestions : true, highlightedSuggestionIndex : -1}, () => {
+    this.setState({showSuggestions: true, highlightedSuggestionIndex: -1}, () => {
       this.props.onChange(value);
-      window.setTimeout(() => {this.props.onSuggestionListChange(this.getSuggestionListHeight());});
+      window.setTimeout(() => {
+        this.props.onSuggestionListChange(this.getSuggestionListHeight());
+      });
     });
   }
 
@@ -70,24 +72,32 @@ class BaseSelector extends Component {
       return;
     }
     this.showHideSuggestions(true, this.props.onFocus);
-    window.setTimeout(() => {this.props.onSuggestionListChange(this.getSuggestionListHeight());});
+    window.setTimeout(() => {
+      this.props.onSuggestionListChange(this.getSuggestionListHeight());
+    });
   }
 
   onBlur() {
     if (this.shouldPreventBlurForNextMouseClick) {
       this.input.focus();
-      window.setTimeout(() => {this.props.onSuggestionListChange(this.getSuggestionListHeight());});
+      window.setTimeout(() => {
+        this.props.onSuggestionListChange(this.getSuggestionListHeight());
+      });
       return;
     }
 
     if (this.props.shouldHideSuggestionOnBlur) {
       this.showHideSuggestions(false, () => {
-        window.setTimeout(() => {this.props.onSuggestionListChange(this.getSuggestionListHeight());});
+        window.setTimeout(() => {
+          this.props.onSuggestionListChange(this.getSuggestionListHeight());
+        });
         this.props.onBlur();
       });
       return;
     }
-    window.setTimeout(() => {this.props.onSuggestionListChange(this.getSuggestionListHeight());});
+    window.setTimeout(() => {
+      this.props.onSuggestionListChange(this.getSuggestionListHeight());
+    });
     this.props.onBlur();
   }
 
@@ -112,12 +122,16 @@ class BaseSelector extends Component {
     this.onInputReset();
   }
 
+
   onInputReset() {
     this.showHideSuggestions(false, this.props.onReset);
-    window.setTimeout(() => {this.props.onSuggestionListChange(this.getSuggestionListHeight());});
+    window.setTimeout(() => {
+      this.props.onSuggestionListChange(this.getSuggestionListHeight());
+    });
   }
 
-  showHideSuggestions(show, cb = () => {}) {
+  showHideSuggestions(show, cb = () => {
+  }) {
     const nextState = show ? {showSuggestions: show} : {showSuggestions: false, highlightedSuggestionIndex: -1};
     this.setState(nextState, cb);
   }
@@ -160,7 +174,7 @@ class BaseSelector extends Component {
 
   onInputKeyDown(event) {
     const {showSuggestions, highlightedSuggestionIndex} = this.state;
-    const {shouldSelectHighlightedOnTab, onTab} = this.props;
+    const {shouldSelectHighlightedOnTab} = this.props;
     const {which, altKey} = event;
     switch (which) {
       case KeyCodes.DOWN :
@@ -202,13 +216,12 @@ class BaseSelector extends Component {
         if (showSuggestions) {
           event.preventDefault();
         }
-        this.onSuggestionSelect(suggestions[highlightedSuggestionIndex]);
+        this.onSuggestionSelect(this.filterSuggestions()[highlightedSuggestionIndex]);
         break;
       case KeyCodes.TAB:
         if (showSuggestions && shouldSelectHighlightedOnTab) {
           this.onSuggestionSelect(this.filterSuggestions()[highlightedSuggestionIndex]);
         }
-        onTab(event);
     }
   }
 
@@ -269,9 +282,10 @@ BaseSelector.propTypes = {
   onBlur: PropTypes.func,
   onReset: PropTypes.func,
   onFocus: PropTypes.func,
-  placeholder : PropTypes.string,
-  ariaInvalid : PropTypes.bool,
-  suggestionsHeightMax : PropTypes.number,
+  onSuggestionListChange: PropTypes.func, //provides the height of the suggestion list
+  placeholder: PropTypes.string,
+  ariaInvalid: PropTypes.bool,
+  suggestionsHeightMax: PropTypes.number,
 };
 
 BaseSelector.defaultProps = {
@@ -279,8 +293,9 @@ BaseSelector.defaultProps = {
   onBlur: () => {},
   onFocus: () => {},
   onReset: () => {},
+  onSuggestionListChange: () => {},
   ariaInvalid: false,
-  placeholder : '',
+  placeholder: '',
 };
 
 export default BaseSelector;

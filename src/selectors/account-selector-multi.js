@@ -2,7 +2,7 @@ import React, {PropTypes} from 'react';
 import BaseSelector from './base-selector';
 import AccountSuggestionItemMulti from '../account/account-suggestion-multi';
 import AccountNoMatch from '../account/account-nomatch';
-import {Account, Locale} from '../util/types';
+import {Account, Locale, KeyCodes} from '../util/types';
 import {accountFilter} from '../filter/filters';
 import StatusBar from '../suggestion/suggestion-list-status-bar';
 import txt from '../i18n/i18n';
@@ -69,10 +69,18 @@ class AccountSelectorMulti extends React.Component {
     return null;
   }
 
+  onKeyDown(event) {
+    shouldHideSuggestions = event.shiftKey && event.which === KeyCodes.TAB;
+  }
+
+
   render() {
     const {noMatches, onAccountSelected, accounts} = this.props;
     return (
-      <div className='account-selector'>
+      <div
+        className='account-selector'
+        onKeyDown={this.onKeyDown}
+      >
         <BaseSelector
           renderSuggestion={(account) => this.renderSuggestion(account)}
           renderNoMatches={() => <AccountNoMatch value={noMatches}/>}
@@ -80,7 +88,6 @@ class AccountSelectorMulti extends React.Component {
           shouldHideSuggestionsOnSelect={false}
           shouldSelectHighlightedOnTab={false}
           shouldHideSuggestionOnBlur={false}
-          onTab={() => {shouldHideSuggestions = event.shiftKey;}}
           suggestionFilter={accountFilter}
           onSelect={onAccountSelected}
           onSuggestionListChange={(height) => {
@@ -103,8 +110,8 @@ class AccountSelectorMulti extends React.Component {
 }
 
 AccountSelectorMulti.propTypes = {
-  onAccountSelected : PropTypes.func.isRequired,
-  accounts : PropTypes.arrayOf(Account),
+  onAccountSelected: PropTypes.func.isRequired,
+  accounts: PropTypes.arrayOf(Account),
   locale: Locale.isRequired,
   selectedAccounts: PropTypes.arrayOf(Account),
   noMatches: PropTypes.string,
