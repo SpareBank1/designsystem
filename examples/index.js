@@ -14,11 +14,9 @@ document.body.appendChild(accountSelectorDOM);
 
 
 render(
-  <div>
-    <form>
-      <input/>
-      <AccountSelectorExample />
-      <input/>
-    </form>
-  </div>
+  <form>
+    <input/>
+    <AccountSelectorExample />
+    <input/>
+  </form>
   , accountSelectorDOM);
