@@ -15,12 +15,10 @@ document.body.appendChild(accountSelectorDOM);
 
 
 render(
-  <div>
-    <form>
-      <input/>
-      <MultiAccountSelectorExample />
-      <AccountSelectorExample />
-      <input/>
-    </form>
-  </div>
+  <form>
+    <input/>
+    <MultiAccountSelectorExample />
+    <AccountSelectorExample />
+    <input/>
+  </form>
   , accountSelectorDOM);

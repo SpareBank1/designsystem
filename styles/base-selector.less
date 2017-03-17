@@ -2,52 +2,30 @@
 
   .input-field {
     width: 100%;
-    z-index: 10;
-
     &::-ms-clear {
       display: none;
-    }
-  }
-
-  .arrow-icon {
-    position: absolute;
-    top: 16px;
-    right: 10px;
-
-    svg {
-      width: 14px;
-      height: 14px;
-      fill: @ffe-blue-royal-light-wcag;
-    }
-
-    &--up {
-      svg {
-        transform: rotate(180deg);
-      }
     }
   }
 
   .reset-button {
     position: absolute;
     right: 35px;
-    top: 15px;
-    width: 15px;
-    height: 15px;
+    margin: auto;
+    top: 0;
+    bottom: 0;
     background: transparent;
     border: none;
-    padding: 0;
     fill: @ffe-grey-dark;
 
     &-icon {
-      width: 10px;
-      height: 10px;
-      margin: 0 4px;
+      @size : 11px;
+      width: @size;
+      height: @size;
     }
   }
 
   .container-suggestion {
     @border : 1px solid @ffe-grey-light;
-
     z-index: 100;
     position: absolute;
     left: 0;

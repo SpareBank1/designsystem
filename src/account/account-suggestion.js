@@ -1,6 +1,7 @@
 import React from 'react';
-import { accountFormatter, balanceWithCurrency } from '../util/format';
-import { Account, Locale } from '../util/types';
+import {accountFormatter, balanceWithCurrency} from '../util/format';
+import {Account, Locale} from '../util/types';
+import {AccountBalanceHoc} from './account-balance-hoc';
 
 const AccountSuggestionItem = ({account, locale}) => {
   const {accountNumber, balance, name}= account;
@@ -11,9 +12,11 @@ const AccountSuggestionItem = ({account, locale}) => {
         <span className='account-suggestion__account-number'>
           { accountFormatter(accountNumber) }
         </span>
-        <span className='account-suggestion__balance'>
-            { balanceWithCurrency(balance, locale)}
-          </span>
+        <AccountBalanceHoc balance={balance}>
+          <span className='account-suggestion__balance'>
+              { balanceWithCurrency(balance, locale)}
+            </span>
+        </AccountBalanceHoc>
       </div>
     </div>
   );
