@@ -12,7 +12,6 @@ class Input extends Component {
       placeholder,
       isSuggestionsShowing,
       ariaInvalid,
-      resetLabel,
       onBlur,
       onReset,
       inputFieldRef,
@@ -42,7 +41,6 @@ class Input extends Component {
         />
         { value.length > 0 &&
         <button
-          aria-label={ resetLabel }
           className='reset-button'
           onMouseDown={ onReset }
           tabIndex={-1}
@@ -60,7 +58,6 @@ Input.propTypes = {
   onChange: PropTypes.func.isRequired,
   onKeyDown: PropTypes.func.isRequired,
   value: PropTypes.string.isRequired,
-  resetLabel: PropTypes.string.isRequired,
   onReset: PropTypes.func.isRequired,
   isSuggestionsShowing: PropTypes.bool.isRequired,
   id: PropTypes.string,
@@ -77,6 +74,7 @@ Input.defaultProps = {
   onBlur: () => {},
   onFocus: () => {},
   inputFieldRef: () => {},
+  ariaInvalid : false,
 };
 
 export default Input;
