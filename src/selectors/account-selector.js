@@ -5,11 +5,23 @@ import AccountNoMatch from '../account/account-nomatch';
 import AccountDetails from '../account/account-details';
 import {Account, Locale} from '../util/types';
 import {accountFilter} from '../filter/filters';
+import classNames from 'classnames';
 
 function AccountSelector(props) {
-  const {selectedAccount, locale, noMatches, onAccountSelected, accounts} = props;
+  const {
+    selectedAccount,
+    locale,
+    noMatches,
+    onAccountSelected,
+    accounts,
+    id,
+    className
+  } = props;
   return (
-    <div className='account-selector'>
+    <div
+      className={classNames('account-selector', className)}
+      id={id}
+    >
       <BaseSelector
         renderSuggestion={(account) => <AccountSuggestionItem account={account} locale={locale}/>}
         renderNoMatches={() => <AccountNoMatch value={noMatches}/>}
@@ -32,6 +44,8 @@ AccountSelector.propTypes = {
   locale: Locale.isRequired,
   selectedAccount: Account,
   noMatches: PropTypes.string,
+  id: PropTypes.string,
+  className : PropTypes.string,
 };
 
 export default AccountSelector;

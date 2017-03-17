@@ -181,7 +181,7 @@ class BaseSelector extends Component {
       value,
       placeholder,
       suggestionsHeightMax,
-      id,
+      ariaInvalid,
     } = this.props;
     const {showSuggestions, highlightedSuggestionIndex, suggestionListId} = this.state;
     return (
@@ -195,15 +195,14 @@ class BaseSelector extends Component {
           value={value}
           onChange={this.onInputChange}
           onReset={this.onInputResetClick}
-          resetLabel={''}
           onKeyDown={this.onInputKeyDown}
           isSuggestionsShowing={showSuggestions}
-          id={id}
           placeholder={placeholder}
           onBlur={this.onBlur}
           onFocus={this.onFocus}
           highlightedIndex={highlightedSuggestionIndex}
           suggestionListId={suggestionListId}
+          ariaInvalid={ariaInvalid}
         />
         {showSuggestions &&
         <SuggestionsList
@@ -233,8 +232,8 @@ BaseSelector.propTypes = {
   onBlur: PropTypes.func,
   onReset: PropTypes.func,
   onFocus: PropTypes.func,
-  id: PropTypes.string,
   placeholder : PropTypes.string,
+  ariaInvalid : PropTypes.bool,
   suggestionsHeightMax : PropTypes.number,
 };
 
@@ -243,7 +242,6 @@ BaseSelector.defaultProps = {
   onBlur: () => {},
   onFocus: () => {},
   onReset: () => {},
-  ariaInvalid: false,
   placeholder : '',
 };
 
