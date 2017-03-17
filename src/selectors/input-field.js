@@ -1,6 +1,4 @@
 import React, { PropTypes, Component } from 'react';
-import classNames from 'classnames';
-import ChevronIkon from 'ffe-icons-react/chevron-ikon';
 import KryssIkon from 'ffe-icons-react/kryss-ikon';
 
 class Input extends Component {
@@ -32,14 +30,14 @@ class Input extends Component {
       >
         <input
           onChange={ (e) => {onChange(e.target.value);}}
-          className='ffe-input-field input-field'
+          className='ffe-input-field ffe-dropdown input-field'
           onKeyDown={ onKeyDown }
           autoComplete='off'
           value={ value }
           id={ id }
           placeholder={ placeholder }
           ref={inputFieldRef}
-          aria-invalid={ ariaInvalid } // add aria with hoc?
+          aria-invalid={ ariaInvalid }
           aria-autocomplete='list'
         />
         { value.length > 0 &&
@@ -53,9 +51,6 @@ class Input extends Component {
           <KryssIkon className='reset-button-icon'/>
         </button>
         }
-        <div className={classNames('arrow-icon', {'arrow-icon--up': isSuggestionsShowing })}>
-          <ChevronIkon focusable={ false }/>
-        </div>
       </div>
     );
   }
