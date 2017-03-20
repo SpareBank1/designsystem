@@ -1,5 +1,8 @@
 # Changelog
 
+## v2.1.2
+* Removed use of `line-height` to set `ffe-tab-button` height, instead use `padding`. This so line breaks won't look awkward - with padding around every text row.
+
 ## v2.1.1
 
 Lagt til `outline: 0` på focus og active for å unngå "dobbel" fokus i Firefox.

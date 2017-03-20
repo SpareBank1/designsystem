@@ -1,6 +1,6 @@
 {
   "name": "ffe-tabs",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "main": "less/ffe-tabs.less",
   "scripts": {
     "lint": "lessc --lint example/example.less && stylelint less/*.less",
