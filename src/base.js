@@ -15,7 +15,7 @@ export default class Base extends Component {
     }
 
     close(event) {
-        const { animationLengthMs, onClose} = this.props;
+        const { animationLengthMs, onClose } = this.props;
         const element = this._self;
         element.style.height = `${element.offsetHeight}px`;
         setTimeout(() => {
@@ -42,7 +42,9 @@ export default class Base extends Component {
         const {
             animationLengthMs,
             children,
+            compact,
             contentElementId,
+            className,
             header,
             headerElementId,
             icon,
@@ -51,14 +53,20 @@ export default class Base extends Component {
             showCloseButton,
             style,
         } = this.props;
+
         if (this.state.closed) {
             return null;
         }
+
         return (
             <div
                 aria-describedby={contentElementId}
                 aria-labelledby={headerElementId}
-                className={`ffe-context-message ffe-context-message--${messageType}`}
+                className={
+                    `ffe-context-message ffe-context-message--${messageType}`
+                        + `${compact ? ' ffe-context-message--compact' : ''}`
+                        + `${className ? ` ${className}` : ''}`
+                }
                 ref={(_self) => { this._self = _self; }}
                 style={{ ...style, transition: `height ${animationLengthMs / 1000}s` }}
             >
@@ -93,6 +101,8 @@ export default class Base extends Component {
 Base.propTypes = {
     animationLengthMs: PropTypes.number,
     children: PropTypes.node.isRequired,
+    className: PropTypes.string,
+    compact: PropTypes.bool,
     contentElementId: PropTypes.string,
     header: PropTypes.string,
     headerElementId: PropTypes.string,
@@ -100,15 +110,17 @@ Base.propTypes = {
     locale: PropTypes.oneOf(acceptedLocales),
     messageType: PropTypes.oneOf(['info', 'tip', 'success', 'error']).isRequired,
     onClose: PropTypes.func,
-    showCloseButton: PropTypes.bool.isRequired,
+    showCloseButton: PropTypes.bool,
     style: PropTypes.object,
 };
 
 Base.defaultProps = {
     animationLengthMs: 300,
+    compact: false,
     contentElementId: 'contentElementId',
     headerElementId: 'headerElementId',
     locale: 'nb',
     onClose: () => {},
+    showCloseButton: false,
     style: {},
 };
