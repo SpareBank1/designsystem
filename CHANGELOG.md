@@ -1,5 +1,8 @@
 # Changelog
 
+## v4.1.4
+* Removed use of `line-height` to set `ffe-radio-block-header` height, instead use `padding`. This so line breaks won't look awkward - with padding around every text row.
+
 ## v4.1.3
 * Changed color of option text in selects with validation errors to default blue in stead of inherited red.
 
