@@ -1,136 +1,152 @@
-# nfe-account-selector-react
+# ffe-account-selector-react
 
-A combobox with autocomplete.
-This package consists of a base selector which can be wrapped to provide more specific features.
-Out of the box there are 2 selectors provided.
-1. account-selector (single account select). This was the default selector until 3.x release.
-2. account-selector-multi (multiple account select)
+A combobox with autocomplete. This package provides the selectors:
 
-## Install
+1. <AccountSelector> single account select)
+2. <AccountSelectorMulti> (multiple account select)
+3. <BaseSelector> (can be wrapped to create selectors with custom content)
 
-```
-$ npm install --save nfe-account-selector-react
-```
+`ffe-account-selector-react` requires `ffe-core` and `ffe-form` to be present in your CSS object model.
 
-`nfe-account-selector-react` depends on `ffe-core` and `ffe-form` being present and imported in your project.
-More specifically, the CSS classes related to dropdowns in those packages should be in your CSS Object Model when using this component.
 
-You must also import the styles
+For styling the account-selector use:
 ```css
-@import "node_modules/nfe-account-selector-react/styles/account-selector.less";
+@import "npm://ffe-account-selector-react/less/account-selector";
+```
+For custom components:
+```css
+@import "npm://ffe-account-selector-react/less/base-selector";
 ```
 
-## Upgrading from 2.x to 3.x
-There are some major changes in 3.x and so, the API has changed, but just a little bit.
+## Upgrading from `nfe-ffe-account-selector-react`
 
-__accounts__
-The account objects in the accounts array must contain a unique key "id". This could be the account number.
+The origin of this package is the `nfe-account-selector-react`. The main reason for the rewrite was difficulty in managing 
+focus in the `nfe-account-selector-react`. This caused the onFocus and onBlur events to fire incorrectly. This package also aims 
+to provide better separation between the different selectors (currently AccountSelector and AccountSelectorMulti). 
 
-__onAccountSelected__
-Called with the selected account object as parameter instead of the account number.
+The external api is mostly unchanged with some exceptions.
 
-__onBlur__
-Called with 2 parameters. The first is the selected account object or null if none is selected.
-The second parameter is the input field value, e.g a user typed value or the selected account name.
-
-__onChange__
-Called with the input fields current value. It will no longer be called with the selected accounts account number.
-
-
-## Usage AccountSelector
-The AccountSelector is the default export of the package
-
-```javascript
-import AccountSelector from 'nfe-account-selector-react';
-
-const accounts = [
-{
-    name: 'Tax account',
-    id: '12345678912',
-    balance: 66546.99,
-    currencyCode: 'USD',
-  },
-]
-
-<AccountSelector
-    accounts={ accounts }
-    onChange={ onChange }
-    onAccountSelected={ onAccountSelected }
-    onBlur={ onBlur }
-    onFocus={ onFocus }
-    locale="nb"
-    ariaInvalid={false}
-    placeholder="Select account"
-    noMatches="No matches"
-    id="custom-id"
-    selectedAccount={ getAccount(accounts, value) }
-    value={ value ? getAccount(accounts, value).name : '' }
-/>
+This component no longer holds the selected object in its internal state. It's the consuming components responsibility 
+to set the selected suggestion and the input field value. For example the component can be reset by passing the props:
+```js
+ value : "",
+ selectedAccount : null
 ```
 
-### Props API
+Styling has also been changed where `nfe-account-selector` has be renamed to `account-selector`
+
+## Example
+
+To view live example `npm start`
+
+### <AccountSelector> Props API
+
+__value__
+Sets the input field value.
 
 __accounts (required)__
-Array of account objects where only "name" and "id" is required props.
+Array of account objects where "accountNumber" and "name" are required.
 
 __onAccountSelected (required)__
-callback who will receive the selected account object or null if selection is reset/removed.
+function that receives the selected account object.
 
 __onChange__
-callback who will receive a string value with the input fields current value
+function that receives the input field value when it is changed
 
 __onBlur__
-callback with 2 parameters. The first is the selected account object or null if none is selected.
-The second parameter is the input fields current value.
+function that is called when the input field loses focus.
 
 __onFocus__
-called when the component gains focus
+function that is called when the input field gains focus.
+ 
+__onReset__
+function that is called when input field is reset.
 
 __locale__
-Either "nb", "nn" or "en". Defaults to "nb" if not set.
+Either "nb", "nn" or "en". Defaults to "nb".
 
 __placeholder__
 Set the placeholder attribute of the input field.
 
 __noMatches__
-String to be shown in the dropdown when input value doesn't match any of the accounts
+String to be shown in the suggestion list when input value doesn't match any of the accounts
 
 __id__
-The id attribute of the input field.
+The id of the component
 
 __ariaInvalid__
-Mark input field as invalid. Defaults to false.
+boolean that marks input field as invalid. Defaults to false.
 
-__selectedAccount__
-Set the selected account object. Input field will be set with the correct value.
+__suggestionsHeightMax__
+number that specifies that max height in pixels of the suggestion list. Defaults to 300.
+
+
+### <AccountSelectorMulti> Props API
+
+//TODO docs
+
+
+## Creating a custom selector
+
+It is possible to create custom selector components my wrapping the base component. Check <AccountSelector> and <AccountSelectorMulti> 
+for example usage.
+
+### <BaseSelector> Props API
+
+__suggestions (required)__
+Array of objects
+
+__shouldHideSuggestionsOnSelect (required)__
+boolean that specifies if the suggestion list should be hidden when a suggestion is selected
+
+__shouldHideSuggestionOnBlur (required)__
+boolean that specifies if the suggestion list should be hidden when input field loses focus
+
+__shouldSelectHighlightedOnTab (required)__
+boolean that specifies if onSelect should be fired with the highlighted suggestion object when tabbing away from input field.
 
 __value__
 Sets the input field value.
 
+__renderSuggestion__
+function that receives a suggestion as input and returns a react component
 
-## Reset Account Selector from parent component
+__renderNoMatches__
+function that returns a react component when no matches are found.
 
-```
-class Parent extends Component {
-    resetForm(){
-        const {AccountSelectorRef} = this.refs;
-        AccountSelectorRef.reset(giveFocus = true | false)
-    }
+__filter__
+function that is applied on the suggestions array.
 
-    render(){
-        return(
-            <AccountSelector
-                ref="AccountSelectorRef"
-            />
-        )
-    }
-}
-```
-## Example
+__onSelect__
+function that receives the selected suggestion object
 
-To view live example `npm start`
+__onChange__
+function that receives the input field value when it is changed
 
-## Creating a custom selector
-It's possible to create a custom selector by writing a wrapper around the BaseSelector.
+__onBlur__
+function that is called when the input field loses focus.
 
+__onFocus__
+function that is called when the input field gains focus.
+ 
+__onReset__
+function that is called when input field is reset.
+
+__locale__
+Either "nb", "nn" or "en". Defaults to "nb".
+
+__placeholder__
+Set the placeholder attribute of the input field.
+
+__noMatches__
+String to be shown in the suggestion list when input value doesn't match any of the accounts
+
+__ariaInvalid__
+boolean that marks input field as invalid. Defaults to false.
+
+__suggestionsHeightMax__
+number that specifies that max height in pixels of the suggestion list. Defaults to 300.
+
+__onSuggestionListChange__
+function that is called when the height of the suggestion list is changed.
 

@@ -1,7 +1,7 @@
 {
-  "name": "nfe-account-selector-react",
-  "version": "4.1.6",
-  "main": "lib/account-selector.js",
+  "name": "account-selector-react",
+  "version": "0.0.1",
+  "main": "lib/index.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/.",
     "lint": "eslint src/.",
