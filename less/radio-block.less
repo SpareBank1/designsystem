@@ -14,7 +14,7 @@
         background-color: @ffe-white;
         cursor: pointer;
 
-        &:before {
+        &::before {
             .ffe-sb1-radioblob();
 
             left: 20px;
@@ -30,8 +30,8 @@
     }
 
     &__wrapper {
-            padding: 20px 20px 30px;
-            cursor: auto;
+        padding: 20px 20px 30px;
+        cursor: auto;
 
         &--empty {
             padding: 0;
@@ -63,7 +63,7 @@
         }
     }
 
-    &:checked + .ffe-radio-block__content:before {
+    &:checked + .ffe-radio-block__content::before {
         .ffe-sb1-radioblob-active();
     }
 
