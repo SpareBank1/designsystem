@@ -7,12 +7,10 @@ import {accountFilter} from '../filter/filters';
 import StatusBar from '../suggestion/suggestion-list-status-bar';
 import txt from '../i18n/i18n';
 
-let baseRef;
-let shouldHideSuggestions;
-
 class AccountSelectorMulti extends React.Component {
   constructor(props) {
     super(props);
+    this.onKeyDown = this.onKeyDown.bind(this);
     this.state = {
       suggestionListHeight: 0
     };
@@ -26,27 +24,27 @@ class AccountSelectorMulti extends React.Component {
         account={account}
         locale={locale}
         selected={isSelected.length > 0}
-        onChange={() => baseRef.preventBlurForNextMouseClick()}
+        onChange={() => this.baseRef.preventBlurForNextMouseClick()}
       />
     );
   }
 
   onBlur() {
-    if (shouldHideSuggestions) {
-      baseRef.showHideSuggestions(false);
+    if (this.shouldHideSuggestions) {
+      this.baseRef.showHideSuggestions(false);
       this.props.onBlur();
     }
-    shouldHideSuggestions = true;
+    this.shouldHideSuggestions = true;
   }
 
   onDone() {
-    baseRef.setFocus();
-    baseRef.showHideSuggestions(false);
+    this.baseRef.setFocus();
+    this.baseRef.showHideSuggestions(false);
     this.props.onBlur();
   }
 
   renderSuggestionDetails(listHeight) {
-    if (baseRef) {
+    if (this.baseRef) {
       let statusText;
       const {selectedAccounts} = this.props;
       if (selectedAccounts.length === 0) {
@@ -56,7 +54,7 @@ class AccountSelectorMulti extends React.Component {
       } else {
         statusText = `${selectedAccounts.length} ${txt[this.props.locale].MULTIPLE_ACCOUNTS_SELECTED}`;
       }
-      const height = listHeight + baseRef.getInputHeight();
+      const height = listHeight + this.baseRef.getInputHeight();
       return (
         <StatusBar
           renderSelectionStatus={() => statusText}
@@ -70,7 +68,7 @@ class AccountSelectorMulti extends React.Component {
   }
 
   onKeyDown(event) {
-    shouldHideSuggestions = event.shiftKey && event.which === KeyCodes.TAB;
+    this.shouldHideSuggestions = event.shiftKey && event.which === KeyCodes.TAB;
   }
 
 
@@ -95,11 +93,8 @@ class AccountSelectorMulti extends React.Component {
           }}
           suggestions={accounts}
           ref={(element) => {
-            if (element) {
-              baseRef = element;
-            }
-          }
-          }
+            this.baseRef = element;
+          }}
           {...this.props}
           onBlur={(e) => this.onBlur(e)}
         />

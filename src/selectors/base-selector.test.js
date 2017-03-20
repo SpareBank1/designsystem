@@ -65,7 +65,7 @@ describe('<BaseSelector> methods', () => {
     component.onInputChange(value);
     assert.isTrue(component.state.showSuggestions);
     assert.isTrue(onChangeSpy.calledWith(value));
-    setTimeout(()=>{
+    setTimeout(() => {
       assert.isTrue(onSuggestionListChangeSpy.calledOnce);
     });
   });
