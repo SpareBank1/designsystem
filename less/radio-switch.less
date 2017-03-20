@@ -14,11 +14,11 @@
     box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.05);
     margin-bottom: 5px;
 
-    &:before {
-      .ffe-sb1-radioblob();
+    &::before {
+        .ffe-sb1-radioblob();
 
-      left: 12px;
-      top: 8px;
+        left: 12px;
+        top: 8px;
     }
 
     @media screen and (min-width: @breakpoint-sm) {
@@ -41,7 +41,7 @@
         border-color: @ffe-blue-focus;
     }
 
-    &:checked + .ffe-radio-switch:before {
+    &:checked + .ffe-radio-switch::before {
         .ffe-sb1-radioblob-active();
     }
 }
