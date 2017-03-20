@@ -10,7 +10,7 @@ function main() {
     ./build.sh
 
     if should_publish; then
-        npm run has-published -s || npm publish
+        yarn run has-published -s || yarn publish
     fi
 }
 

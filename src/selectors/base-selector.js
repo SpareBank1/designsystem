@@ -285,6 +285,7 @@ BaseSelector.defaultProps = {
   onSuggestionListChange: () => {},
   ariaInvalid: false,
   placeholder: '',
+  value : '',
 };
 
 export default BaseSelector;
