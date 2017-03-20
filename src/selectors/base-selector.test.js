@@ -21,6 +21,7 @@ function propsBaseSelector(_suggestions = suggestions()) {
     value: '',
     shouldHideSuggestionsOnSelect: true,
     shouldSelectHighlightedOnTab: true,
+    shouldHideSuggestionOnBlur: true,
   };
 }
 
@@ -57,11 +58,16 @@ describe('<BaseSelector> methods', () => {
   it('should show suggestions on input change', () => {
     const value = 'test';
     const onChangeSpy = sinon.spy();
-    const component = shallowBaseSelector({onChange: onChangeSpy}).instance();
+    const onSuggestionListChangeSpy = sinon.spy();
+    const component = shallowBaseSelector(
+      {onChange: onChangeSpy, onSuggestionListChange : onSuggestionListChangeSpy}).instance();
 
     component.onInputChange(value);
     assert.isTrue(component.state.showSuggestions);
     assert.isTrue(onChangeSpy.calledWith(value));
+    setTimeout(() => {
+      assert.isTrue(onSuggestionListChangeSpy.calledOnce);
+    });
   });
 
   it('should show suggestions on input focus', () => {
@@ -76,12 +82,12 @@ describe('<BaseSelector> methods', () => {
   it('should not show suggestions on input focus if clickAction was performed', () => {
     const onFocusSpy = sinon.spy();
     const component = shallowBaseSelector({onFocus: onFocusSpy}).instance();
-    component.didPerformClickAction = true;
+    component.shouldPreventBlurForNextMouseClick = true;
 
     component.onFocus();
     assert.isFalse(component.state.showSuggestions);
     assert.isFalse(onFocusSpy.called);
-    assert.isFalse(component.didPerformClickAction);
+    assert.isFalse(component.shouldPreventBlurForNextMouseClick);
   });
 
   it('should hide suggestions on input blur', () => {
@@ -97,7 +103,7 @@ describe('<BaseSelector> methods', () => {
     const onBlurSpy = sinon.spy();
     const inputFocusSpy = sinon.spy();
     const component = shallowBaseSelector({onBlur: onBlurSpy}).instance();
-    component.didPerformClickAction = true;
+    component.shouldPreventBlurForNextMouseClick = true;
     component.input = {focus: inputFocusSpy};
 
     component.onBlur();
@@ -141,14 +147,14 @@ describe('<BaseSelector> methods', () => {
     const component = shallowBaseSelector().instance();
 
     component.onSuggestionClick();
-    assert.isTrue(component.didPerformClickAction);
+    assert.isTrue(component.shouldPreventBlurForNextMouseClick);
   });
 
   it('should set didPerformClickAction on onInputResetClick', () => {
     const component = shallowBaseSelector().instance();
 
     component.onInputResetClick();
-    assert.isTrue(component.didPerformClickAction);
+    assert.isTrue(component.shouldPreventBlurForNextMouseClick);
   });
 
   it('should hide suggestions on input reset', () => {
@@ -286,6 +292,22 @@ describe('<BaseSelector> keyboard navigation', () => {
     const preventDefaultSpy = sinon.spy();
     assertSuggestionSelected({which: KeyCodes.ENTER, preventDefault : preventDefaultSpy});
     assert.isTrue(preventDefaultSpy.calledOnce);
+  });
+
+  it('should select highlighted suggestion from filtered list', () => {
+    const accounts = [
+      {name: 'lønnskonto'},
+      {name: 'sparekonto'},
+      {name: 'investeringskonto'},
+    ];
+    const component = shallowBaseSelector({suggestions: accounts}).instance();
+    const filterAccountsStub = sinon.stub(component, 'filterSuggestions');
+    filterAccountsStub.returns([accounts[2]]);
+    const onSuggestionSelectSpy = sinon.stub(component, 'onSuggestionSelect');
+    component.state = {highlightedSuggestionIndex: 0};
+
+    component.onInputKeyDown({which: KeyCodes.ENTER});
+    assert.isTrue(onSuggestionSelectSpy.calledWith(accounts[2]));
   });
 
   it('should select highlighted index on TAB', () => {
