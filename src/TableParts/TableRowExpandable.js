@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import classNames from 'classnames';
-import TableRow from '../TableRow';
+import TableRow from './TableRow';
 import Chevron from 'ffe-icons-react/chevron-ikon';
 
 class TableRowExpandable extends Component {
@@ -15,12 +15,14 @@ class TableRowExpandable extends Component {
     }
 
     toggleExpand() {
-        this.setState({ expanded: !this.state.expanded});
+        this.setState({ expanded: !this.state.expanded });
     }
 
     handleKeyPress(event) {
-        if ((event.key === 'Enter' || event.key === ' ') && event.target.tagName === 'TR') {
-            this.setState({ expanded: !this.state.expanded});
+        if ((event.key === 'Enter' || event.key === ' ')) {
+            if (event.target.tagName === 'TR') {
+                this.setState({ expanded: !this.state.expanded });
+            }
             event.preventDefault();
         }
     }
@@ -84,7 +86,7 @@ class TableRowExpandable extends Component {
 }
 
 TableRowExpandable.propTypes = {
-    children: PropTypes.node.isRequired,
+    children: PropTypes.node,
     cells: PropTypes.object.isRequired,
     columns: PropTypes.array.isRequired
 };

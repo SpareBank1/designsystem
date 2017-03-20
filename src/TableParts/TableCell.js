@@ -3,10 +3,19 @@ import classNames from 'classnames';
 
 const TableCell = ({ children, columnHeader, alignRight, tdClasses, contentClasses }) => {
 
+    let dataTh = '';
+    if (columnHeader) {
+        if (typeof columnHeader === 'string') {
+            dataTh = columnHeader;
+        } else if (columnHeader.props && columnHeader.props.children) {
+            dataTh = React.Children.toArray(columnHeader.props.children)[0];
+        }
+    }
+
     return (
         <td
             className={ classNames('ffe-responsive-table__cell', tdClasses) }
-            data-th={ columnHeader }
+            data-th={ dataTh }
         >
             <span
                 className={ classNames(
@@ -23,7 +32,7 @@ const TableCell = ({ children, columnHeader, alignRight, tdClasses, contentClass
 
 TableCell.propTypes = {
     children: React.PropTypes.any,
-    columnHeader: React.PropTypes.string,
+    columnHeader: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.node]),
     alignRight: React.PropTypes.bool,
     tdClasses: React.PropTypes.string,
     contentClasses: React.PropTypes.string,

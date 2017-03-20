@@ -1,13 +1,12 @@
 import React, { Component, PropTypes } from 'react';
-import TableHeaders from '../TableHeaders';
-import TableFooter from '../TableFooter';
-import TableRow from '../TableRow';
+import TableHeaders from '../TableParts/TableHeaders';
+import TableFooter from '../TableParts/TableFooter';
+import TableRow from '../TableParts/TableRow';
+import TableRowExpandable from '../TableParts/TableRowExpandable';
 
 class ResponsiveTable extends Component {
     renderTableCaption() {
-        const {
-            caption,
-        } = this.props;
+        const { caption } = this.props;
 
         if (!caption) {
             return null;
@@ -21,15 +20,13 @@ class ResponsiveTable extends Component {
     }
 
     renderTableHeaders() {
-        const {
-            columns,
-        } = this.props;
+        const { columns } = this.props;
 
         if (!columns || !columns.length) {
             return null;
         }
 
-        if (this.props.expandable) {
+        if (this.props.expandedContentMapper) {
             columns.push({ key: 'expandIcon', header: '' , alignRight: true });
         }
 
@@ -37,41 +34,38 @@ class ResponsiveTable extends Component {
     }
 
     renderTableFooter() {
-        const {
-            columns,
-            columnData,
-        } = this.props;
-
-        if (!columns || !columns.length) {
-          return null;
-        }
+        const { columns } = this.props;
 
         if (!columns.some(column => column.footer)) {
           return null;
         }
 
-        return <TableFooter columns={ columnData || columns } />;
+        return <TableFooter columns={ columns } />;
     }
 
     renderTableBody() {
         const {
             data,
             columns,
-            columnData
+            expandedContentMapper
         } = this.props;
-
-        if (this.props.children) {
-            return this.props.children;
-        }
 
         if (!data || !data.length) {
             return null;
         }
 
+        if (expandedContentMapper) {
+            return data.map((row, index) => (
+                <TableRowExpandable cells={ row } columns={ columns } key={ index }>
+                    { expandedContentMapper(row) }
+                </TableRowExpandable>
+            ));
+        }
+
         return (
             <tbody>
                 {data.map((row, index) => (
-                    <TableRow cells={ row } columns={ columnData || columns } key={ index } />
+                    <TableRow cells={ row } columns={ columns } key={ index } />
                 ))}
             </tbody>
         );
@@ -91,14 +85,10 @@ class ResponsiveTable extends Component {
 
 ResponsiveTable.propTypes = {
     caption: PropTypes.string,
-    expandable: PropTypes.bool,
-    children: PropTypes.node,
-    columnData: PropTypes.arrayOf(
+    expandedContentMapper: PropTypes.func,
+    data: PropTypes.arrayOf(
         PropTypes.object
     ),
-    data: PropTypes.arrayOf(
-            PropTypes.object
-        ),
     columns: PropTypes.arrayOf(
         PropTypes.shape({
             header: PropTypes.node.isRequired,
