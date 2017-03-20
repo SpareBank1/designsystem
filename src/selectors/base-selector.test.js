@@ -58,11 +58,16 @@ describe('<BaseSelector> methods', () => {
   it('should show suggestions on input change', () => {
     const value = 'test';
     const onChangeSpy = sinon.spy();
-    const component = shallowBaseSelector({onChange: onChangeSpy}).instance();
+    const onSuggestionListChangeSpy = sinon.spy();
+    const component = shallowBaseSelector(
+      {onChange: onChangeSpy, onSuggestionListChange : onSuggestionListChangeSpy}).instance();
 
     component.onInputChange(value);
     assert.isTrue(component.state.showSuggestions);
     assert.isTrue(onChangeSpy.calledWith(value));
+    setTimeout(()=>{
+      assert.isTrue(onSuggestionListChangeSpy.calledOnce);
+    });
   });
 
   it('should show suggestions on input focus', () => {
