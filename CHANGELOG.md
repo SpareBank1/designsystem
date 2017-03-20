@@ -1,5 +1,8 @@
 # Changelog
 
+## v2.5.7
+* Removed use of `line-height` to set button height, instead use `padding`. This so line breaks won't look awkward - with padding around every text row.
+
 ## v2.5.6
 * Changed primary button background color to @ffe-blue-royal-light-wcag
 
