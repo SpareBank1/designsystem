@@ -30,12 +30,10 @@ class BaseSelector extends Component {
     this.shouldPreventBlurForNextMouseClick = false;
   }
 
-  preventBlurForNextMouseClick(prevent = true) {
-    this.shouldPreventBlurForNextMouseClick = prevent;
-  }
-
-  setFocus() {
-    this.input.focus();
+  _onSuggestionListChange() {
+    window.setTimeout(() => {
+      this.props.onSuggestionListChange(this.getSuggestionListHeight());
+    });
   }
 
   getSuggestionListHeight() {
@@ -43,6 +41,14 @@ class BaseSelector extends Component {
       return this.suggestionList.scrollbars.getClientHeight();
     }
     return 0;
+  }
+
+  preventBlurForNextMouseClick(prevent = true) {
+    this.shouldPreventBlurForNextMouseClick = prevent;
+  }
+
+  setFocus() {
+    this.input.focus();
   }
 
   getInputHeight() {
@@ -60,9 +66,7 @@ class BaseSelector extends Component {
   onInputChange(value) {
     this.setState({showSuggestions: true, highlightedSuggestionIndex: -1}, () => {
       this.props.onChange(value);
-      window.setTimeout(() => {
-        this.props.onSuggestionListChange(this.getSuggestionListHeight());
-      });
+      this._onSuggestionListChange();
     });
   }
 
@@ -72,32 +76,20 @@ class BaseSelector extends Component {
       return;
     }
     this.showHideSuggestions(true, this.props.onFocus);
-    window.setTimeout(() => {
-      this.props.onSuggestionListChange(this.getSuggestionListHeight());
-    });
   }
 
   onBlur() {
     if (this.shouldPreventBlurForNextMouseClick) {
       this.input.focus();
-      window.setTimeout(() => {
-        this.props.onSuggestionListChange(this.getSuggestionListHeight());
-      });
       return;
     }
 
     if (this.props.shouldHideSuggestionOnBlur) {
       this.showHideSuggestions(false, () => {
-        window.setTimeout(() => {
-          this.props.onSuggestionListChange(this.getSuggestionListHeight());
-        });
         this.props.onBlur();
       });
       return;
     }
-    window.setTimeout(() => {
-      this.props.onSuggestionListChange(this.getSuggestionListHeight());
-    });
     this.props.onBlur();
   }
 
@@ -125,15 +117,12 @@ class BaseSelector extends Component {
 
   onInputReset() {
     this.showHideSuggestions(false, this.props.onReset);
-    window.setTimeout(() => {
-      this.props.onSuggestionListChange(this.getSuggestionListHeight());
-    });
   }
 
-  showHideSuggestions(show, cb = () => {
-  }) {
+  showHideSuggestions(show, cb = () => {}) {
     const nextState = show ? {showSuggestions: show} : {showSuggestions: false, highlightedSuggestionIndex: -1};
     this.setState(nextState, cb);
+    this._onSuggestionListChange();
   }
 
   setNextHighlighted() {
