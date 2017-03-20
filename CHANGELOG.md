@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 2.3.0
+
+### 🚀 New features
+
+* FFE-177: add modifier for `--compact`. To use it set the prop `compact={true}`.
+* If `className` is set, it will be applies to the root node of the component along with the FFE styles.
+* `showCloseButton` is no longer required. It now defaults to `false`.
+
 ## 2.2.0
 
 ### 🚀 New features

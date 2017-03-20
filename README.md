@@ -15,7 +15,7 @@ $ npm install --save ffe-context-message-react
 ```javascript
 import { ContextInfoMessage } from 'ffe-context-message-react';
 
-<ContextInfoMessage showCloseButton={false}>
+<ContextInfoMessage>
     <p className="ffe-body-paragraph">
         Info about something interesting
     </p>
@@ -25,16 +25,16 @@ import { ContextInfoMessage } from 'ffe-context-message-react';
 ### Available props
 
 ```javascript
-animationLengthMs,  // Control close animation length. Default value 300.
-children,           // Content in the message. Required.
-contentElementId,   // String used to link 'children' for universal accessibility.
-header,             // Content header,
-headerElementId,    // String used to link 'header' for universal accessibility.
-icon,               // FFEIcon. A white background circle will automatically be set for the icon passed,
-locale,             // One of 'nb', 'nn' or 'en'. Default value 'nb',
-onClose,            // Callback that is called on close click,
-showCloseButton,    // Boolean. Required.
-style,              // Style object, sets styles of the outermost container,
+animationLengthMs,  // Number. Control close animation length. Default value 300.
+children,           // Node. Content in the message. Required.
+contentElementId,   // String. Used to link 'children' for universal accessibility.
+header,             // String. Header summing up the message.
+headerElementId,    // String. Used to link 'header' for universal accessibility.
+icon,               // Element, preferably an icon from ffe-icons-react. A white background circle will automatically be set for the icon passed.
+locale,             // String. One of 'nb', 'nn' or 'en'. Default value 'nb'.
+onClose,            // Function. Callback that is called on close click. Use in conjunction with showCloseButton.
+showCloseButton,    // Boolean. Renders a button that lets users close the message.
+style,              // Object. Sets styles of the outermost container. Prefer using className.
 ```
 
 ### Peer Dependencies
