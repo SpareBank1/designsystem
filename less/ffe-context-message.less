@@ -61,6 +61,26 @@
   position: relative;
   border-radius: 5px;
 
+  &--compact {
+    .ffe-context-message-content {
+      padding: 0.5em 1.2em;
+
+      &__icon {
+        margin-right: 1.2em;
+        border-radius: 50%;
+        height: 2.2em;
+        width: 2.2em;
+
+        &-svg {
+          height: 1.5em;
+          width: 1.5em;
+          padding: 0.2em;
+          fill: @ffe-blue-royal;
+        }
+      }
+    }
+  }
+
   &--info {
     background-color: @ffe-blue-royal-light-20;
   }
