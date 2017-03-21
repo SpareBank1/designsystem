@@ -11,7 +11,7 @@ export default function SuggestionList(props) {
   } = props;
   return (
     <ul
-      className='container-suggestion-list'
+      className='ffe-base-selector__suggestion-container-list'
       role='listbox'
       id={id}
     >

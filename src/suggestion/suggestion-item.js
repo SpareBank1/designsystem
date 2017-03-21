@@ -14,7 +14,7 @@ class SuggestionItem extends Component {
         role='option'
         id={id}
         onMouseDown={() => {onSelect(item);}}
-        className={classNames('account-suggestion', {'account-suggestion__highlighted' : isHighlighted})}
+        className={classNames('ffe-account-suggestion', {'ffe-account-suggestion--highlighted' : isHighlighted})}
         tabIndex={-1}
       >
         {render(item)}

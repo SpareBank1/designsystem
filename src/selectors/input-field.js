@@ -29,7 +29,7 @@ class Input extends Component {
       >
         <input
           onChange={ (e) => {onChange(e.target.value);}}
-          className='ffe-input-field ffe-dropdown input-field'
+          className='ffe-input-field ffe-dropdown ffe-base-selector__input-field'
           onKeyDown={ onKeyDown }
           autoComplete='off'
           value={ value }
@@ -41,12 +41,12 @@ class Input extends Component {
         />
         { value.length > 0 &&
         <button
-          className='reset-button'
+          className='ffe-base-selector__reset-button'
           onMouseDown={ onReset }
           tabIndex={-1}
           type="button"
         >
-          <KryssIkon className='reset-button-icon'/>
+          <KryssIkon className='ffe-base-selector__reset-button-icon'/>
         </button>
         }
       </div>
