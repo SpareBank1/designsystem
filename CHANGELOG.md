@@ -1,5 +1,8 @@
 # Changelog
 
+## v4.1.5
+* Removed use of `line-height` to set `ffe-radio-block__header` height, instead use `padding`. This so line breaks won't look awkward - with padding around every text row.
+
 ## v4.1.4
 * Modified the `padding-bottom` for `ffe-form-label` from 8px to 2px
 
