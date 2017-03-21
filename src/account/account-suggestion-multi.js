@@ -7,7 +7,7 @@ import {AccountBalanceHoc} from './account-balance-hoc';
 const AccountSuggestionItemMulti = ({account, locale, selected, onChange}) => {
   const {accountNumber, balance, name}= account;
   return (
-    <div className='account-suggestion__account--multi' onMouseDown={(e) => {e.preventDefault();}}>
+    <div className='ffe-account-suggestion__account--multi' onMouseDown={(e) => {e.preventDefault();}}>
       <Checkbox
         checked={selected}
         name='my-checkbox-label'
@@ -16,14 +16,14 @@ const AccountSuggestionItemMulti = ({account, locale, selected, onChange}) => {
         onChange={() => {}}
         onMouseDown={() => {}}
       />
-      <div className='account-suggestion__content-wrapper'>
-        <a className='account-suggestion__name'>{name}</a>
-        <div className='account-suggestion__details'>
-          <span className='account-suggestion__account-number'>
+      <div className='ffe-account-suggestion__content-wrapper'>
+        <a className='ffe-account-suggestion__name'>{name}</a>
+        <div className='ffe-account-suggestion__details'>
+          <span className='ffe-account-suggestion__number'>
             {accountFormatter(accountNumber)}
           </span>
           <AccountBalanceHoc balance={balance}>
-            <span className='account-suggestion__balance'>
+            <span className='ffe-account-suggestion__balance'>
               {balanceWithCurrency(balance, locale)}
             </span>
           </AccountBalanceHoc>

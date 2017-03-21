@@ -10,11 +10,11 @@ const StatusBar = ({onDone, renderSelectionStatus, labelDoneButton, style}) => {
   };
 
   return (
-    <div className='account-selector__dropdown-statusbar' style={style}>
-      <div className='account-selector__selection-status'>{renderSelectionStatus()}</div>
+    <div className='ffe-account-selector__dropdown-statusbar' style={style}>
+      <div className='ffe-account-selector__selection-status'>{renderSelectionStatus()}</div>
       <button
         type='button'
-        className='ffe-primary-button nfe-account-selector__statusbar-button'
+        className='ffe-primary-button ffe-account-selector__statusbar-button'
         tabIndex='0'
         onMouseDown={onDone}
         onKeyDown={onKeyDown}

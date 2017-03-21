@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 
 const AccountNoMatch = ({value}) =>
-  <div className='account-suggestion__nomatches'>
+  <div className='ffe-account-suggestion__nomatches'>
     <span>{ value }</span>
   </div>;
 

@@ -19,7 +19,7 @@ function AccountSelector(props) {
   } = props;
   return (
     <div
-      className={classNames('account-selector', className)}
+      className={classNames('ffe-account-selector', className)}
       id={id}
     >
       <BaseSelector

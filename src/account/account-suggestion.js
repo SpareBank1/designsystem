@@ -6,14 +6,14 @@ import {AccountBalanceHoc} from './account-balance-hoc';
 const AccountSuggestionItem = ({account, locale}) => {
   const {accountNumber, balance, name}= account;
   return (
-    <div className='account-suggestion__account'>
-      <a className='account-suggestion__name'>{ name }</a>
-      <div className='account-suggestion__details'>
-        <span className='account-suggestion__account-number'>
+    <div className='ffe-account-suggestion__account'>
+      <a className='ffe-account-suggestion__name'>{ name }</a>
+      <div className='ffe-account-suggestion__details'>
+        <span className='ffe-account-suggestion__number'>
           { accountFormatter(accountNumber) }
         </span>
         <AccountBalanceHoc balance={balance}>
-          <span className='account-suggestion__balance'>
+          <span className='ffe-account-suggestion__balance'>
               { balanceWithCurrency(balance, locale)}
             </span>
         </AccountBalanceHoc>

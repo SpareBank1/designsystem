@@ -40,7 +40,7 @@ class SuggestionListContainer extends React.Component {
     const {heightMax, autoHeight} = this.props;
     return (
       <div
-        className='container-suggestion'
+        className='ffe-base-selector__suggestion-container'
         onKeyDown={this.onKeyDown}
       >
         <Scrollbars

@@ -76,7 +76,7 @@ class AccountSelectorMulti extends React.Component {
     const {noMatches, onAccountSelected, accounts} = this.props;
     return (
       <div
-        className='account-selector'
+        className='ffe-account-selector'
         onKeyDown={this.onKeyDown}
       >
         <BaseSelector

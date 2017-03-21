@@ -7,12 +7,12 @@ import {AccountBalanceHoc} from './account-balance-hoc';
 function AccountDetails({account, locale}) {
   const {balance, accountNumber} = account;
   return (
-    <div className='account-details'>
-      <div className='account-details--left'>
+    <div className='ffe-account-selector__details'>
+      <div className='ffe-account-selector__details--left'>
         { accountFormatter(accountNumber) }
       </div>
       <AccountBalanceHoc balance={balance}>
-        <div className='account-details--right'>
+        <div className='ffe-account-selector__details--right'>
           { balanceWithCurrency(balance, locale) }
         </div>
       </AccountBalanceHoc>
