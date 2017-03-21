@@ -1,6 +1,6 @@
 {
-  "name": "account-selector-react",
-  "version": "0.0.1",
+  "name": "ffe-account-selector-react",
+  "version": "1.0.0",
   "main": "lib/index.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/.",
@@ -51,7 +51,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git@stash.intern.sparebank1.no:22/nfe/account-selector-react.git"
+    "url": "ssh://git@stash.intern.sparebank1.no:22/ffe/ffe-account-selector-react.git"
   },
   "files": [
     "lib",
