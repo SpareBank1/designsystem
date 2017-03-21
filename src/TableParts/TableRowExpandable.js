@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import classNames from 'classnames';
+import equal from 'deep-equal';
 import TableRow from './TableRow';
 import Chevron from 'ffe-icons-react/chevron-ikon';
 
@@ -28,7 +29,7 @@ class TableRowExpandable extends Component {
     }
 
     componentWillReceiveProps(newProps) {
-        if (!newProps.children && this.state.expanded) {
+        if (!newProps.children && this.state.expanded || !equal(newProps.columns, this.props.columns)) {
             this.setState({ expanded: false });
         }
     }

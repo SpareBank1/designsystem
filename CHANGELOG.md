@@ -1,5 +1,12 @@
 # Changelog
 
+## v4.0.1
+
+* All rows will now collapse on sort.
+We do this because expanded state belongs to the row number,
+not to the row data. Thus expanding and then sorting would result
+in the same row number being expanded, even though it gets new data.
+
 ## v4.0.0
 
 * BREAKING: Major API changes as we introduce the magic table which is both expandable and sortable.
