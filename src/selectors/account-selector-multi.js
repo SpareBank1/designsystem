@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
 import BaseSelector from './base-selector';
-import AccountSuggestionItemMulti from '../account/account-suggestion-multi';
+import AccountSuggestionMulti from '../account/account-suggestion-multi';
 import AccountNoMatch from '../account/account-nomatch';
 import {Account, Locale, KeyCodes} from '../util/types';
 import {accountFilter} from '../filter/filters';
@@ -20,7 +20,7 @@ class AccountSelectorMulti extends React.Component {
     const {locale, selectedAccounts} = this.props;
     const isSelected = selectedAccounts.filter(a => a.accountNumber === account.accountNumber);
     return (
-      <AccountSuggestionItemMulti
+      <AccountSuggestionMulti
         account={account}
         locale={locale}
         selected={isSelected.length > 0}

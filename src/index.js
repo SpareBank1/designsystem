@@ -1,7 +1,3 @@
-import AccountSelector from './selectors/account-selector';
-import Multi from './selectors/account-selector-multi';
-import Base from './selectors/base-selector';
-
-export const AccountSelectorMulti = Multi;
-export const BaseSelector = Base;
-export default AccountSelector;
+export {default as AccountSelector} from './selectors/account-selector';
+export {default as AccountSelectorMulti} from './selectors/account-selector-multi';
+export {default as BaseSelector} from './selectors/base-selector';

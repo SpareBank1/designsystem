@@ -1,6 +1,6 @@
 {
   "name": "ffe-account-selector-react",
-  "version": "1.0.0",
+  "version": "5.0.0",
   "main": "lib/index.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/.",
@@ -10,7 +10,8 @@
     "posttest": "nsp check",
     "test:watch": "npm test -- -w",
     "prepublish": "npm run build",
-    "has-published": "npm show . versions -s | grep -q ${npm_package_version}\\'"
+    "postpublish": "npm show . versions -s | grep -q ${npm_package_version}\\' && npm run git-tag",
+    "git-tag" : "git tag ${npm_package_version} && git push --tags"
   },
   "devDependencies": {
     "babel-cli": "^6.23.0",
@@ -26,6 +27,7 @@
     "eslint": "^3.16.1",
     "eslint-config-ffe": "^6.0.0",
     "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.10.0",
     "ffe-buttons": "^2.5.5",
     "ffe-core": "^8.2.2",
@@ -62,7 +64,6 @@
   "license": "",
   "dependencies": {
     "classnames": "2.2.5",
-    "eslint-plugin-jsx-a11y": "^4.0.0",
     "ffe-checkbox-react": "4.1.1",
     "ffe-icons-react": "2.3.1",
     "lodash.isequal": "4.5.0",

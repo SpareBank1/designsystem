@@ -2,10 +2,10 @@ import React, {PropTypes} from 'react';
 import Checkbox from 'ffe-checkbox-react';
 import {accountFormatter, balanceWithCurrency} from '../util/format';
 import {Account, Locale} from '../util/types';
-import {AccountBalanceHoc} from './account-balance-hoc';
 
-const AccountSuggestionItemMulti = ({account, locale, selected, onChange}) => {
+function AccountSuggestionMulti({account, locale, selected}) {
   const {accountNumber, balance, name}= account;
+  const hasBalance = balance !== undefined;
   return (
     <div className='ffe-account-suggestion__account--multi' onMouseDown={(e) => {e.preventDefault();}}>
       <Checkbox
@@ -14,34 +14,32 @@ const AccountSuggestionItemMulti = ({account, locale, selected, onChange}) => {
         inline={ false }
         tabIndex={-1}
         onChange={() => {}}
-        onMouseDown={() => {}}
       />
       <div className='ffe-account-suggestion__content-wrapper'>
-        <a className='ffe-account-suggestion__name'>{name}</a>
+        <span className='ffe-account-suggestion__name'>{name}</span>
         <div className='ffe-account-suggestion__details'>
           <span className='ffe-account-suggestion__number'>
             {accountFormatter(accountNumber)}
           </span>
-          <AccountBalanceHoc balance={balance}>
-            <span className='ffe-account-suggestion__balance'>
-              {balanceWithCurrency(balance, locale)}
-            </span>
-          </AccountBalanceHoc>
+          {hasBalance &&
+          <span className='ffe-account-suggestion__balance'>
+            {balanceWithCurrency(balance, locale)}
+          </span>
+          }
         </div>
       </div>
     </div>
   );
-};
+}
 
-AccountSuggestionItemMulti.propTypes = {
+AccountSuggestionMulti.propTypes = {
   account: Account.isRequired,
   locale: Locale.isRequired,
   selected: PropTypes.bool.isRequired,
-  onChange: PropTypes.func.isRequired
 };
 
-AccountSuggestionItemMulti.defaultProps = {
+AccountSuggestionMulti.defaultProps = {
   selected: false
 };
 
-export default AccountSuggestionItemMulti;
+export default AccountSuggestionMulti;
