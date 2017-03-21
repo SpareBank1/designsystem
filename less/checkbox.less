@@ -17,7 +17,7 @@
         margin-right: 20px;
     }
 
-    &:before {
+    &::before {
         border: solid 2px @ffe-grey;
         border-radius: 2px;
         content: '';
@@ -32,7 +32,7 @@
         background-color: @ffe-white;
     }
 
-    &:after {
+    &::after {
         transform: scaleX(-1) rotate(180deg + -45deg);
         transform-origin: left top;
         border-right: 3px solid transparent;
@@ -52,32 +52,32 @@
     opacity: 0;
     cursor: pointer;
 
-    &:checked + .ffe-checkbox:before,
-    &:hover + .ffe-checkbox:before,
-    &:focus + .ffe-checkbox:before,
-    &:active + .ffe-checkbox:before {
+    &:checked + .ffe-checkbox::before,
+    &:hover + .ffe-checkbox::before,
+    &:focus + .ffe-checkbox::before,
+    &:active + .ffe-checkbox::before {
         outline: none;
     }
 
-    &:hover + .ffe-checkbox:before {
+    &:hover + .ffe-checkbox::before {
         border-color: @ffe-blue-royal-light-wcag;
     }
 
-    &:active + .ffe-checkbox:before,
-    &:focus + .ffe-checkbox:before {
+    &:active + .ffe-checkbox::before,
+    &:focus + .ffe-checkbox::before {
         box-shadow: 0 0 0 2px @ffe-blue-focus;
     }
 
-    &:checked + .ffe-checkbox:before {
+    &:checked + .ffe-checkbox::before {
         border-color: @ffe-blue-royal-light-wcag;
         background-color: @ffe-white;
     }
 
-    &:focus + .ffe-checkbox:before {
+    &:focus + .ffe-checkbox::before {
         box-shadow: 0 0 0 2px @ffe-blue-focus;
     }
 
-    &:checked + .ffe-checkbox:after {
+    &:checked + .ffe-checkbox::after {
         animation: checkmark 0.4s;
         border-color: @ffe-blue-royal-light-wcag;
     }
@@ -85,12 +85,12 @@
 
 @keyframes checkmark {
     0% {
-      height: 0;
-      width: 6px;
+        height: 0;
+        width: 6px;
     }
 
     50% {
-      height: 11px;
-      width: 6px;
+        height: 11px;
+        width: 6px;
     }
 }
