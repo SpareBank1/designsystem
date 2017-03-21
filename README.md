@@ -1,6 +1,6 @@
 # ffe-context-message-react
 
-## Intended Use
+## Intended use
 
 Messagebox showing non-critical tip or information about a page or product.
 
@@ -12,39 +12,35 @@ $ npm install --save ffe-context-message-react
 
 ## Usage
 
-Like all React packages in FFE, this package expects the package `ffe-system-message` to be imported in your project's main css- or less-file.
-
-
 ```javascript
-import { ContextInfoMessage, ContextTipMessage } from 'ffe-context-message-react';
+import { ContextInfoMessage } from 'ffe-context-message-react';
 
-<ContextInfoMessage 
-        header='Content header'
-        icon={<ThumbUpIcon />}  
-        style={{width : '50%'}}
-        onClose={ () => {} }
-        showCloseButton={false}
-        locale='en'
-    >
-    <p>
-       Info about something interesting
+<ContextInfoMessage>
+    <p className="ffe-body-paragraph">
+        Info about something interesting
     </p>
 </ContextInfoMessage>
 ```
 
-### Props
+### Available props
+
 ```javascript
-children : Content in the message. Required,
-showCloseButton : Boolean. Required.
-locale : One of 'nb', 'nn' or 'en'. Default value 'nb',
-header : Content header,
-icon : FFEIcon. A white background circle will automatically be set for the icon passed,
-style: Style object, sets styles of the outermost container,
-onClose : Callback that is called on close click,
-animationLengthMs : Control close animation length. Default value 300,
-contentElementId : String used to link 'children' for universal accessibility.
-headerElementId : String used to link 'header' for universal accessibility.
+animationLengthMs,  // Number. Control close animation length. Default value 300.
+children,           // Node. Content in the message. Required.
+contentElementId,   // String. Used to link 'children' for universal accessibility.
+header,             // String. Header summing up the message.
+headerElementId,    // String. Used to link 'header' for universal accessibility.
+icon,               // Element, preferably an icon from ffe-icons-react. A white background circle will automatically be set for the icon passed.
+locale,             // String. One of 'nb', 'nn' or 'en'. Default value 'nb'.
+onClose,            // Function. Callback that is called on close click. Use in conjunction with showCloseButton.
+showCloseButton,    // Boolean. Renders a button that lets users close the message.
+style,              // Object. Sets styles of the outermost container. Prefer using className.
 ```
+
+### Peer Dependencies
+
+Like all React packages in FFE, this package expects a Less-package to be imported in your project's main css- or less-file.
+This package requires [ffe-context-message](https://stash.intern.sparebank1.no/projects/FFE/repos/ffe-context-message/browse).
 
 ## Examples
 
