@@ -1,10 +1,10 @@
 import React from 'react';
 import {accountFormatter, balanceWithCurrency} from '../util/format';
 import {Account, Locale} from '../util/types';
-import {AccountBalanceHoc} from './account-balance-hoc';
 
 const AccountSuggestionItem = ({account, locale}) => {
   const {accountNumber, balance, name}= account;
+  const hasBalance = balance !== undefined;
   return (
     <div className='ffe-account-suggestion__account'>
       <a className='ffe-account-suggestion__name'>{ name }</a>
@@ -12,11 +12,11 @@ const AccountSuggestionItem = ({account, locale}) => {
         <span className='ffe-account-suggestion__number'>
           { accountFormatter(accountNumber) }
         </span>
-        <AccountBalanceHoc balance={balance}>
-          <span className='ffe-account-suggestion__balance'>
-              { balanceWithCurrency(balance, locale)}
-            </span>
-        </AccountBalanceHoc>
+        {hasBalance &&
+        <span className='ffe-account-suggestion__balance'>
+          { balanceWithCurrency(balance, locale)}
+        </span>
+        }
       </div>
     </div>
   );
