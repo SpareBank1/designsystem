@@ -1,18 +1,22 @@
 import React, { Component, PropTypes, cloneElement } from 'react';
+
 import CloseIcon from 'ffe-icons-react/kryss-ikon';
-import texts from './locale/texts';
+
 import acceptedLocales from './locale/accepted-locales';
+import texts from './locale/texts';
 
 export default class Base extends Component {
-    constructor(props) {
-        super(props);
-        this.state = { closed: false };
+    constructor() {
+        super();
         this.close = this.close.bind(this);
+        this.state = {
+            closed: false,
+        };
     }
 
     close(event) {
-        const { onClose, animationLengthMs } = this.props;
-        const element = this.self;
+        const { animationLengthMs, onClose } = this.props;
+        const element = this._self;
         element.style.height = `${element.offsetHeight}px`;
         setTimeout(() => {
             element.style.height = 0;
@@ -36,81 +40,87 @@ export default class Base extends Component {
 
     render() {
         const {
-            children,
-            icon,
-            messageType,
-            style,
-            header,
-            locale,
-            showCloseButton,
             animationLengthMs,
+            children,
+            compact,
             contentElementId,
+            className,
+            header,
             headerElementId,
+            icon,
+            locale,
+            messageType,
+            showCloseButton,
+            style,
         } = this.props;
+
         if (this.state.closed) {
             return null;
         }
+
         return (
             <div
-                className={`ffe-context-message ffe-context-message--${messageType}`}
-                ref={(self) => {
-                    this.self = self;
-                }}
-                style={{ ...style, transition: `height ${animationLengthMs / 1000}s` }}
                 aria-describedby={contentElementId}
                 aria-labelledby={headerElementId}
+                className={
+                    `ffe-context-message ffe-context-message--${messageType}`
+                        + `${compact ? ' ffe-context-message--compact' : ''}`
+                        + `${className ? ` ${className}` : ''}`
+                }
+                ref={(_self) => { this._self = _self; }}
+                style={{ ...style, transition: `height ${animationLengthMs / 1000}s` }}
             >
                 <div className="ffe-context-message-content">
                     {icon && this.renderIcon()}
                     <div>
                         {header &&
-                        <header
-                            className="ffe-context-message-content__header" id={headerElementId}
-                        >
-                            {header}
-                        </header>
+                            <header className="ffe-context-message-content__header" id={headerElementId}>
+                                {header}
+                            </header>
                         }
                         <div className="ffe-body-text" id={contentElementId}>
                             {children}
                         </div>
                     </div>
                 </div>
-                { showCloseButton &&
-                <button
-                    type="button"
-                    className="ffe-context-message-content__close-button"
-                    tabIndex="0"
-                    aria-label={`${texts[locale].FFE_CONTEXT_MESSAGE_CLOSE} ${header}`}
-                    onClick={this.close}
-                >
-                    <CloseIcon className="ffe-context-message-content__close-button-svg" aria-hidden="true"/>
-                </button> }
+                {showCloseButton &&
+                    <button
+                        aria-label={`${texts[locale].FFE_CONTEXT_MESSAGE_CLOSE} ${header}`}
+                        className="ffe-context-message-content__close-button"
+                        onClick={this.close}
+                        type="button"
+                    >
+                        <CloseIcon className="ffe-context-message-content__close-button-svg" aria-hidden="true" />
+                    </button>
+                }
             </div>
         );
     }
 }
 
 Base.propTypes = {
-    children: PropTypes.node.isRequired,
-    messageType: PropTypes.oneOf(['info', 'tip', 'success', 'error']).isRequired,
-    showCloseButton: PropTypes.bool.isRequired,
-    locale: PropTypes.oneOf(acceptedLocales),
-    icon: PropTypes.element,
-    header: PropTypes.string,
-    style: PropTypes.object,
-    onClose: PropTypes.func,
     animationLengthMs: PropTypes.number,
+    children: PropTypes.node.isRequired,
+    className: PropTypes.string,
+    compact: PropTypes.bool,
     contentElementId: PropTypes.string,
+    header: PropTypes.string,
     headerElementId: PropTypes.string,
+    icon: PropTypes.element,
+    locale: PropTypes.oneOf(acceptedLocales),
+    messageType: PropTypes.oneOf(['info', 'tip', 'success', 'error']).isRequired,
+    onClose: PropTypes.func,
+    showCloseButton: PropTypes.bool,
+    style: PropTypes.object,
 };
 
 Base.defaultProps = {
+    animationLengthMs: 300,
+    compact: false,
+    contentElementId: 'contentElementId',
+    headerElementId: 'headerElementId',
     locale: 'nb',
     onClose: () => {},
+    showCloseButton: false,
     style: {},
-    animationLengthMs: 300,
-    contentElementId: 'contentElementId',
-    headerElementId: 'headerElementId'
-
 };
-

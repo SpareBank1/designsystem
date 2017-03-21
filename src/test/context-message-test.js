@@ -1,14 +1,16 @@
 import React, { cloneElement } from 'react';
 import { shallow, mount } from 'enzyme';
 import sinon from 'sinon';
+
+import InfoCircleIcon from 'ffe-icons-react/info-sirkel-ikon';
+
 import {
-    ContextInfoMessage,
-    ContextTipMessage,
-    ContextSuccessMessage,
     ContextErrorMessage,
+    ContextInfoMessage,
+    ContextSuccessMessage,
+    ContextTipMessage,
 } from '../';
 import Base from '../base';
-import InfoCircleIcon from 'ffe-icons-react/info-sirkel-ikon';
 
 
 describe('Test Base', () => {
@@ -17,16 +19,11 @@ describe('Test Base', () => {
 
     beforeEach(() => {
         element = (
-            <Base
-                messageType="tip"
-                showCloseButton={true}
-            >
+            <Base messageType="tip">
                 <p>content</p>
             </Base>
         );
-        wrapper = mount(
-            element
-        );
+        wrapper = mount(element);
     });
 
     it('renders with provided content', () => {
@@ -53,22 +50,37 @@ describe('Test Base', () => {
         expect(component.props().style.marginTop).to.be('40px');
     });
 
-    it('renders with context icon', done => {
+    it('renders provided className to outermost container', () => {
+        const component = shallow(cloneElement(element, { className: 'special special--mod' }));
+        expect(component.props().className).to.be('ffe-context-message ffe-context-message--tip special special--mod');
+    });
+
+    it('renders --compact modifier if compact prop is true', () => {
+        const component = shallow(cloneElement(element, { compact: true }));
+        expect(component.props().className)
+            .to.be('ffe-context-message ffe-context-message--tip ffe-context-message--compact');
+    });
+
+    it('renders with context icon', (done) => {
         wrapper = mount(cloneElement(element, { icon: <InfoCircleIcon /> }));
         expect(wrapper.find('.ffe-context-message-content__icon-svg').length).to.be(1);
         done();
     });
 
-    it('renders without close button', done => {
-        wrapper = mount(cloneElement(element, { showCloseButton: false }));
+    it('renders without close button by default', (done) => {
+        wrapper = mount(cloneElement(element));
         expect(wrapper.find('.ffe-context-message-content__close-button-svg').isEmpty()).to.be(true);
         expect(wrapper.find('.ffe-context-message-content__close-button').isEmpty()).to.be(true);
         done();
     });
 
-    it('closes itself on close click', done => {
+    it('closes itself on close click', (done) => {
         const onClickSpy = sinon.spy();
-        wrapper = mount(cloneElement(element, { onClose: onClickSpy, animationLengthMs : 10 }));
+        wrapper = mount(cloneElement(element, {
+            animationLengthMs: 10,
+            showCloseButton: true,
+            onClose: onClickSpy,
+        }));
         let component = wrapper.find('.ffe-context-message');
         expect(component.length).to.be(1);
         wrapper.find('.ffe-context-message-content__close-button').simulate('click');
