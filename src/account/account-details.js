@@ -4,7 +4,7 @@ import {Account, Locale} from '../util/types';
 
 function AccountDetails({account, locale}) {
   const {balance, accountNumber} = account;
-  const hasBalance = balance !== undefined;
+  const hasBalance = balance != null;
   return (
     <div className='ffe-account-selector__details'>
       <div className='ffe-account-selector__details--left'>
