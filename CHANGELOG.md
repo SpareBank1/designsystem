@@ -1,5 +1,12 @@
 # Changelog
 
+## 3.0.4
+
+### 🐛 Bugfixes
+
+* Reverts the ffe-core major version bump as it causes builds to break for consumers who have not upgraded
+to the new ffe-core major.
+
 ## v.3.0.3
 * Bumped ffe-core version, made minor adjustments to sync with the latest color setup
 
@@ -7,7 +14,7 @@
 * Fix visual IE bug. When wrapping DescriptionList in a ffe-grid (because flex in flex?) the DescriptionList will not take full width (not even close). Thus we specify full width for DescriptionList.
 
 ## v.3.0.1
-* Added `--sm-2-cols` modifier to support 2 columns on small screens in `ffe-description-list-multicol` 
+* Added `--sm-2-cols` modifier to support 2 columns on small screens in `ffe-description-list-multicol`
 
 ## v.3.0.0
 * Breaking:
