@@ -1,5 +1,9 @@
 # Changelog
 
+## 7.5.4
+
+* Bugfix: Removed a class-attribute that caused warnings when used with react.
+
 ## 7.5.3
 
 * Bugfix: Remember that `.svg` is appended to all input in the `icons` config object
