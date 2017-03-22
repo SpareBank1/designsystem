@@ -32,7 +32,7 @@ class BaseSelector extends Component {
   }
 
   _onSuggestionListChange() {
-    window.setTimeout(() => {
+    setTimeout(() => {
       this.props.onSuggestionListChange(this.getSuggestionListHeight());
     });
   }

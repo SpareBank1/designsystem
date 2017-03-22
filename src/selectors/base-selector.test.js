@@ -22,7 +22,7 @@ function propsBaseSelector(_suggestions = suggestions()) {
     shouldHideSuggestionsOnSelect: true,
     shouldSelectHighlightedOnTab: true,
     shouldHideSuggestionsOnBlur: true,
-    shouldHideSuggestionsOnReset : true,
+    shouldHideSuggestionsOnReset: true,
   };
 }
 
@@ -46,28 +46,29 @@ function assertHomeEnd(keyCode, stubMethodName) {
 
 function assertSuggestionSelected(event) {
   const component = shallowBaseSelector().instance();
-  const onSuggestionSelectSpy = sinon.stub(component, 'onSuggestionSelect');
+  const onSuggestionSelectStub = sinon.stub(component, 'onSuggestionSelect');
   component.state = {highlightedSuggestionIndex: 0, showSuggestions: true};
 
   component.onInputKeyDown(event);
-  assert.isTrue(onSuggestionSelectSpy.calledWith(suggestions()[0]));
+  assert.isTrue(onSuggestionSelectStub.calledWith(suggestions()[0]));
 }
 
 
 describe('<BaseSelector> methods', () => {
 
-  it('should show suggestions on input change', () => {
+  it('should show suggestions on input change', (done) => {
     const value = 'test';
     const onChangeSpy = sinon.spy();
     const onSuggestionListChangeSpy = sinon.spy();
     const component = shallowBaseSelector(
-      {onChange: onChangeSpy, onSuggestionListChange : onSuggestionListChangeSpy}).instance();
+      {onChange: onChangeSpy, onSuggestionListChange: onSuggestionListChangeSpy}).instance();
 
     component.onInputChange(value);
     assert.isTrue(component.state.showSuggestions);
     assert.isTrue(onChangeSpy.calledWith(value));
     setTimeout(() => {
       assert.isTrue(onSuggestionListChangeSpy.calledOnce);
+      done();
     });
   });
 
@@ -160,15 +161,12 @@ describe('<BaseSelector> methods', () => {
 
   it('should hide suggestions on input reset', () => {
     const onResetSpy = sinon.spy();
-    const setFocusSpy = sinon.spy();
     const component = shallowBaseSelector({onReset: onResetSpy}).instance();
-    component.setFocus = setFocusSpy;
 
     component.onInputReset();
     assert.isFalse(component.state.showSuggestions);
     assert.isTrue(onResetSpy.calledOnce);
     assert.isTrue(component.shouldPreventBlurForNextFocusEvent);
-    setTimeout(()=> assert.isTrue(component.setFocus.calledOnce));
   });
 
   it('should show suggestions on input reset', () => {
@@ -261,7 +259,7 @@ describe('<BaseSelector> keyboard navigation', () => {
     component.state.showSuggestions = true;
     const preventDefaultSpy = sinon.spy();
 
-    component.onInputKeyDown({which: KeyCodes.DOWN, preventDefault : preventDefaultSpy});
+    component.onInputKeyDown({which: KeyCodes.DOWN, preventDefault: preventDefaultSpy});
     assert.isTrue(setNextHighlightedStub.calledOnce);
     assert.isTrue(preventDefaultSpy.calledOnce);
   });
@@ -281,7 +279,7 @@ describe('<BaseSelector> keyboard navigation', () => {
     const preventDefaultSpy = sinon.spy();
     component.state.showSuggestions = true;
 
-    component.onInputKeyDown({which: KeyCodes.UP, preventDefault : preventDefaultSpy});
+    component.onInputKeyDown({which: KeyCodes.UP, preventDefault: preventDefaultSpy});
     assert.isTrue(showHideSuggestionsStub.calledOnce);
     assert.isTrue(preventDefaultSpy.calledOnce);
   });
@@ -304,7 +302,7 @@ describe('<BaseSelector> keyboard navigation', () => {
 
   it('should select highlighted suggestion on ENTER', () => {
     const preventDefaultSpy = sinon.spy();
-    assertSuggestionSelected({which: KeyCodes.ENTER, preventDefault : preventDefaultSpy});
+    assertSuggestionSelected({which: KeyCodes.ENTER, preventDefault: preventDefaultSpy});
     assert.isTrue(preventDefaultSpy.calledOnce);
   });
 
