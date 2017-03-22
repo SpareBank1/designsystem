@@ -1,5 +1,16 @@
 # Changelog
 
+## 4.0.0
+
+### 💥 Breaking changes
+
+* `ffe-core@9.x` is now a peerDependency of `ffe-lists`. You need to upgrade `ffe-core` to use this version.
+
+### 🏠 Improvements
+
+* Use new color names from `ffe-core@9.x`
+* Fix lint warnings
+
 ## 3.0.4
 
 ### 🐛 Bugfixes
