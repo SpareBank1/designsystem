@@ -1,5 +1,8 @@
 # Changelog
 
+## v.3.0.3
+* Bumped ffe-core version, made minor adjustments to sync with the latest color setup
+
 ## v.3.0.2
 * Fix visual IE bug. When wrapping DescriptionList in a ffe-grid (because flex in flex?) the DescriptionList will not take full width (not even close). Thus we specify full width for DescriptionList.
 
