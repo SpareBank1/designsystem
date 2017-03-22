@@ -1,5 +1,12 @@
 # Changelog
 
+## v3.0.0
+* BREAKING: `ffe-back-button` is now a `display: inline-block` element, which might break some layouts.
+Migrating should be pretty simple though - if you were depending on `ffe-back-button` to be a block level
+element, please wrap your element in a block level element, like a `<div />`.
+* Made `ffe-back-button` work with `<a />` elements.
+* Made `ffe-tertiary-button` work with `<a />` elements.
+
 ## v2.5.7
 * Removed use of `line-height` to set button height, instead use `padding`. This so line breaks won't look awkward - with padding around every text row.
 
