@@ -21,7 +21,8 @@ function propsBaseSelector(_suggestions = suggestions()) {
     value: '',
     shouldHideSuggestionsOnSelect: true,
     shouldSelectHighlightedOnTab: true,
-    shouldHideSuggestionOnBlur: true,
+    shouldHideSuggestionsOnBlur: true,
+    shouldHideSuggestionsOnReset : true,
   };
 }
 
@@ -163,6 +164,15 @@ describe('<BaseSelector> methods', () => {
 
     component.onInputReset();
     assert.isFalse(component.state.showSuggestions);
+    assert.isTrue(onResetSpy.calledOnce);
+  });
+
+  it('should show suggestions on input reset', () => {
+    const onResetSpy = sinon.spy();
+    const component = shallowBaseSelector({onReset: onResetSpy, shouldHideSuggestionsOnReset: false}).instance();
+
+    component.onInputReset();
+    assert.isTrue(component.state.showSuggestions);
     assert.isTrue(onResetSpy.calledOnce);
   });
 

@@ -84,7 +84,7 @@ class BaseSelector extends Component {
       return;
     }
 
-    if (this.props.shouldHideSuggestionOnBlur) {
+    if (this.props.shouldHideSuggestionsOnBlur) {
       this.showHideSuggestions(false, () => {
         this.props.onBlur();
       });
@@ -116,7 +116,8 @@ class BaseSelector extends Component {
 
 
   onInputReset() {
-    this.showHideSuggestions(false, this.props.onReset);
+    const shouldShowSuggestions = !this.props.shouldHideSuggestionsOnReset;
+    this.showHideSuggestions(shouldShowSuggestions, this.props.onReset);
   }
 
   showHideSuggestions(show, cb = () => {}) {
@@ -266,7 +267,8 @@ BaseSelector.propTypes = {
   value: PropTypes.string.isRequired,
   shouldHideSuggestionsOnSelect: PropTypes.bool.isRequired,
   shouldSelectHighlightedOnTab: PropTypes.bool.isRequired,
-  shouldHideSuggestionOnBlur: PropTypes.bool.isRequired,
+  shouldHideSuggestionsOnBlur: PropTypes.bool.isRequired,
+  shouldHideSuggestionsOnReset : PropTypes.bool.isRequired,
   onChange: PropTypes.func,
   onBlur: PropTypes.func,
   onReset: PropTypes.func,
