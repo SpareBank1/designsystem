@@ -1,52 +1,52 @@
 .ffe-numbered-list,
 .ffe-bullet-list {
-  padding: 0;
-  text-align: left;
-  margin: 0 0 20px;
+    padding: 0;
+    text-align: left;
+    margin: 0 0 20px;
 
-  > li {
-    margin-top: 10px;
-    margin-left: 15px;
-  }
+    > li {
+        margin-top: 10px;
+        margin-left: 15px;
+    }
 }
 
 .ffe-numbered-list {
-  list-style-type: decimal;
+    list-style-type: decimal;
 }
 
 .ffe-bullet-list {
-  list-style-type: disc;
+    list-style-type: disc;
 }
 
 /* tablet/medium typography */
 @media screen and (min-width: @breakpoint-sm) {
-  .ffe-numbered-list,
-  .ffe-bullet-list {
-    margin-left: 20px;
-  }
+    .ffe-numbered-list,
+    .ffe-bullet-list {
+        margin-left: 20px;
+    }
 }
 
 /* Desktop */
 @media screen and (min-width: @breakpoint-md) {
-  .ffe-numbered-list > li,
-  .ffe-bullet-list > li {
-    margin-left: 30px;
-  }
+    .ffe-numbered-list > li,
+    .ffe-bullet-list > li {
+        margin-left: 30px;
+    }
 }
 
 .ffe-check-list,
 .ffe-stylized-numbered-list {
-  padding: 0;
-  text-align: left;
-  margin: 0 0 20px;
-  list-style: none;
+    padding: 0;
+    text-align: left;
+    margin: 0 0 20px;
+    list-style: none;
 
-  > li {
-    margin-top: 1.75em;
-    margin-left: 2.5em;
-    position: relative;
-    line-height: 1.5em;
-  }
+    > li {
+        margin-top: 1.75em;
+        margin-left: 2.5em;
+        position: relative;
+        line-height: 1.5em;
+    }
 }
 
 @ffe-green-shamrock-escape: escape('@{ffe-green-shamrock}');
@@ -55,56 +55,56 @@
 @ffe-blue-royal-fill: @ffe-blue-royal-escape;
 
 .ffe-check-list {
-  > li {
-    &:before {
-      content: "\2022";
-      display: block;
-      position: absolute;
-      text-indent: -9999px;
-      width: 1em;
-      height: 1em;
-      left: -2.5em;
-      top: .15em;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' width='200' height='200'%3E%3Cpath fill='@{ffe-green-shamrock-fill}' d='M176.56-8.325E-7c-4.403,0-8.307,2.46595-10.288,5.89248l-90.5448,156.336-42.6109-59.77c-2.46172-2.94562-5.88534-4.89058-9.78806-4.89058h-7.3426c-4.40307,0-8.30704,2.46094-10.2884,6.36839-1.94136,3.94753-1.46102,8.8406,1.0007,12.2671l54.8007,75.963c3.4224,4.89,9.3077,7.834,15.1918,7.834,6.84477,0,12.7076-3.42654,16.13-9.31777l100.827-173.487c2.46172-3.4666,2.46547-7.83618,0.0438-11.3028-1.942-3.94755-5.886-5.8925-10.289-5.8925h-6.84226z'/%3E%3C/svg%3E");
-      background-position: center;
-      background-size: 1em 1em;
-      background-repeat: no-repeat;
-    }
-  }
-
-  &--bg-sand {
     > li {
-      color: @ffe-blue-royal;
-      background-color: @ffe-sand;
-      padding: .85em 1em .85em 3em;
-      border-radius: 4px;
-      margin-left: 0;
-      margin-top: 1em;
-      .ffe-fontsize-h5;
-
-      &:before {
-        left: 1em;
-        top: 1em;
-        background-size: .9em .9em;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' width='200' height='200'%3E%3Cpath fill='@{ffe-blue-royal-fill}' d='M176.56-8.325E-7c-4.403,0-8.307,2.46595-10.288,5.89248l-90.5448,156.336-42.6109-59.77c-2.46172-2.94562-5.88534-4.89058-9.78806-4.89058h-7.3426c-4.40307,0-8.30704,2.46094-10.2884,6.36839-1.94136,3.94753-1.46102,8.8406,1.0007,12.2671l54.8007,75.963c3.4224,4.89,9.3077,7.834,15.1918,7.834,6.84477,0,12.7076-3.42654,16.13-9.31777l100.827-173.487c2.46172-3.4666,2.46547-7.83618,0.0438-11.3028-1.942-3.94755-5.886-5.8925-10.289-5.8925h-6.84226z'/%3E%3C/svg%3E");
-      }
+        &::before {
+            content: "\2022";
+            display: block;
+            position: absolute;
+            text-indent: -9999px;
+            width: 1em;
+            height: 1em;
+            left: -2.5em;
+            top: .15em;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' width='200' height='200'%3E%3Cpath fill='@{ffe-green-shamrock-fill}' d='M176.56-8.325E-7c-4.403,0-8.307,2.46595-10.288,5.89248l-90.5448,156.336-42.6109-59.77c-2.46172-2.94562-5.88534-4.89058-9.78806-4.89058h-7.3426c-4.40307,0-8.30704,2.46094-10.2884,6.36839-1.94136,3.94753-1.46102,8.8406,1.0007,12.2671l54.8007,75.963c3.4224,4.89,9.3077,7.834,15.1918,7.834,6.84477,0,12.7076-3.42654,16.13-9.31777l100.827-173.487c2.46172-3.4666,2.46547-7.83618,0.0438-11.3028-1.942-3.94755-5.886-5.8925-10.289-5.8925h-6.84226z'/%3E%3C/svg%3E");
+            background-position: center;
+            background-size: 1em 1em;
+            background-repeat: no-repeat;
+        }
     }
-  }
+
+    &--bg-sand {
+        > li {
+            color: @ffe-blue-royal;
+            background-color: @ffe-sand;
+            padding: .85em 1em .85em 3em;
+            border-radius: 4px;
+            margin-left: 0;
+            margin-top: 1em;
+            .ffe-fontsize-h5;
+
+            &::before {
+                left: 1em;
+                top: 1em;
+                background-size: .9em .9em;
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' width='200' height='200'%3E%3Cpath fill='@{ffe-blue-royal-fill}' d='M176.56-8.325E-7c-4.403,0-8.307,2.46595-10.288,5.89248l-90.5448,156.336-42.6109-59.77c-2.46172-2.94562-5.88534-4.89058-9.78806-4.89058h-7.3426c-4.40307,0-8.30704,2.46094-10.2884,6.36839-1.94136,3.94753-1.46102,8.8406,1.0007,12.2671l54.8007,75.963c3.4224,4.89,9.3077,7.834,15.1918,7.834,6.84477,0,12.7076-3.42654,16.13-9.31777l100.827-173.487c2.46172-3.4666,2.46547-7.83618,0.0438-11.3028-1.942-3.94755-5.886-5.8925-10.289-5.8925h-6.84226z'/%3E%3C/svg%3E");
+            }
+        }
+    }
 }
 
 .ffe-stylized-numbered-list {
-  > li {
-    counter-increment: list-elements;
+    > li {
+        counter-increment: list-elements;
 
-    &:before {
-      content: counter(list-elements);
-      display: block;
-      position: absolute;
-      left: -2.3em;
-      top: .05em;
-      font-size: 1.1em;
-      color: @ffe-blue-royal;
-      &:extend(.ffe-strong-text);
+        &::before {
+            content: counter(list-elements);
+            display: block;
+            position: absolute;
+            left: -2.3em;
+            top: .05em;
+            font-size: 1.1em;
+            color: @ffe-blue-royal;
+            &:extend(.ffe-strong-text);
+        }
     }
-  }
 }
