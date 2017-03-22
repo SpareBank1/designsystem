@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.4.2
+
+* Updated ffe-icons to version 7.5.4
+
 ## v2.4.1
 
 * Updated ffe-icons to 7.5.3, fixing a breaking bug introduced with v7.5.1 of ffe-icons:
