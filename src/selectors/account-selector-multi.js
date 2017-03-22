@@ -85,7 +85,8 @@ class AccountSelectorMulti extends React.Component {
           suggestionDetails={this.renderSuggestionDetails()}
           shouldHideSuggestionsOnSelect={false}
           shouldSelectHighlightedOnTab={false}
-          shouldHideSuggestionOnBlur={false}
+          shouldHideSuggestionsOnBlur={false}
+          shouldHideSuggestionsOnReset={true}
           suggestionFilter={accountFilter}
           onSelect={onAccountSelected}
           onSuggestionListChange={(height) => {
