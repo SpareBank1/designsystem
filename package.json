@@ -11,7 +11,7 @@
     "test:watch": "npm test -- -w",
     "prepublish": "npm run build",
     "has-published": "npm show . versions -s | grep -q ${npm_package_version}\\'",
-    "postpublish" : "git tag ${npm_package_version} && git push --tags"
+    "postpublish": "git tag ${npm_package_version} && git push --tags"
   },
   "devDependencies": {
     "babel-cli": "^6.23.0",
@@ -25,9 +25,9 @@
     "chai": "^3.5.0",
     "enzyme": "^2.7.1",
     "eslint": "^3.16.1",
-    "eslint-config-ffe": "^6.0.0",
+    "eslint-config-ffe": "^6.0.1",
     "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^6.10.0",
     "ffe-buttons": "^2.5.5",
     "ffe-core": "^8.2.2",
