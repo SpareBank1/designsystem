@@ -24,7 +24,7 @@ class AccountSelectorMulti extends React.Component {
         account={account}
         locale={locale}
         selected={isSelected.length > 0}
-        onChange={() => this.baseRef.preventBlurForNextMouseClick()}
+        onChange={() => this.baseRef.preventBlurForNextFocusEvent()}
       />
     );
   }
