@@ -83,12 +83,12 @@ describe('<BaseSelector> methods', () => {
   it('should not show suggestions on input focus if clickAction was performed', () => {
     const onFocusSpy = sinon.spy();
     const component = shallowBaseSelector({onFocus: onFocusSpy}).instance();
-    component.shouldPreventBlurForNextMouseClick = true;
+    component.shouldPreventBlurForNextFocusEvent = true;
 
     component.onFocus();
     assert.isFalse(component.state.showSuggestions);
     assert.isFalse(onFocusSpy.called);
-    assert.isFalse(component.shouldPreventBlurForNextMouseClick);
+    assert.isFalse(component.shouldPreventBlurForNextFocusEvent);
   });
 
   it('should hide suggestions on input blur', () => {
@@ -104,7 +104,7 @@ describe('<BaseSelector> methods', () => {
     const onBlurSpy = sinon.spy();
     const inputFocusSpy = sinon.spy();
     const component = shallowBaseSelector({onBlur: onBlurSpy}).instance();
-    component.shouldPreventBlurForNextMouseClick = true;
+    component.shouldPreventBlurForNextFocusEvent = true;
     component.input = {focus: inputFocusSpy};
 
     component.onBlur();
@@ -148,23 +148,27 @@ describe('<BaseSelector> methods', () => {
     const component = shallowBaseSelector().instance();
 
     component.onSuggestionClick();
-    assert.isTrue(component.shouldPreventBlurForNextMouseClick);
+    assert.isTrue(component.shouldPreventBlurForNextFocusEvent);
   });
 
   it('should set didPerformClickAction on onInputResetClick', () => {
     const component = shallowBaseSelector().instance();
 
     component.onInputResetClick();
-    assert.isTrue(component.shouldPreventBlurForNextMouseClick);
+    assert.isTrue(component.shouldPreventBlurForNextFocusEvent);
   });
 
   it('should hide suggestions on input reset', () => {
     const onResetSpy = sinon.spy();
+    const setFocusSpy = sinon.spy();
     const component = shallowBaseSelector({onReset: onResetSpy}).instance();
+    component.setFocus = setFocusSpy;
 
     component.onInputReset();
     assert.isFalse(component.state.showSuggestions);
     assert.isTrue(onResetSpy.calledOnce);
+    assert.isTrue(component.shouldPreventBlurForNextFocusEvent);
+    setTimeout(()=> assert.isTrue(component.setFocus.calledOnce));
   });
 
   it('should show suggestions on input reset', () => {

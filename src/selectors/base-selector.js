@@ -15,6 +15,7 @@ class BaseSelector extends Component {
     this.onFocus = this.onFocus.bind(this);
     this.onBlur = this.onBlur.bind(this);
     this.filterSuggestions = this.filterSuggestions.bind(this);
+    this.setFocus = this.setFocus.bind(this);
 
     this.state = {
       showSuggestions: false,
@@ -27,7 +28,7 @@ class BaseSelector extends Component {
      This is necessary for maintaining focus in the input field for mouseClick events
      on the clearInput button and suggestion items.
      */
-    this.shouldPreventBlurForNextMouseClick = false;
+    this.shouldPreventBlurForNextFocusEvent = false;
   }
 
   _onSuggestionListChange() {
@@ -43,8 +44,8 @@ class BaseSelector extends Component {
     return 0;
   }
 
-  preventBlurForNextMouseClick(prevent = true) {
-    this.shouldPreventBlurForNextMouseClick = prevent;
+  preventBlurForNextFocusEvent(prevent = true) {
+    this.shouldPreventBlurForNextFocusEvent = prevent;
   }
 
   setFocus() {
@@ -71,16 +72,16 @@ class BaseSelector extends Component {
   }
 
   onFocus() {
-    if (this.shouldPreventBlurForNextMouseClick) {
-      this.preventBlurForNextMouseClick(false);
+    if (this.shouldPreventBlurForNextFocusEvent) {
+      this.preventBlurForNextFocusEvent(false);
       return;
     }
     this.showHideSuggestions(true, this.props.onFocus);
   }
 
   onBlur() {
-    if (this.shouldPreventBlurForNextMouseClick) {
-      this.input.focus();
+    if (this.shouldPreventBlurForNextFocusEvent) {
+      this.setFocus();
       return;
     }
 
@@ -105,12 +106,12 @@ class BaseSelector extends Component {
   }
 
   onSuggestionClick(suggestion) {
-    this.preventBlurForNextMouseClick();
+    this.preventBlurForNextFocusEvent();
     this.onSuggestionSelect(suggestion);
   }
 
   onInputResetClick() {
-    this.preventBlurForNextMouseClick();
+    this.preventBlurForNextFocusEvent();
     this.onInputReset();
   }
 
@@ -118,6 +119,8 @@ class BaseSelector extends Component {
   onInputReset() {
     const shouldShowSuggestions = !this.props.shouldHideSuggestionsOnReset;
     this.showHideSuggestions(shouldShowSuggestions, this.props.onReset);
+    this.preventBlurForNextFocusEvent();
+    setTimeout(this.setFocus);
   }
 
   showHideSuggestions(show, cb = () => {}) {
