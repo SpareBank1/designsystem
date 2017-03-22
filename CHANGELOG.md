@@ -1,5 +1,9 @@
 # Changelog
 
+## v.9.0.1
+
+* Added devDependency to ffe-lists in order to correctly style examples
+
 ## v.9.0.0
 
 - BREAKING: List styling are removed from `ffe-core`. These styles are now available in `ffe-lists`.
