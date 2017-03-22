@@ -5,7 +5,7 @@ import {Account, Locale} from '../util/types';
 
 function AccountSuggestionMulti({account, locale, selected}) {
   const {accountNumber, balance, name}= account;
-  const hasBalance = balance !== undefined;
+  const hasBalance = balance != null;
   return (
     <div className='ffe-account-suggestion__account--multi' onMouseDown={(e) => {e.preventDefault();}}>
       <Checkbox

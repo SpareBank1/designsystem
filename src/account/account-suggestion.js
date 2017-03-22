@@ -4,7 +4,7 @@ import {Account, Locale} from '../util/types';
 
 const AccountSuggestionItem = ({account, locale}) => {
   const {accountNumber, balance, name}= account;
-  const hasBalance = balance !== undefined;
+  const hasBalance = balance != null;
   return (
     <div className='ffe-account-suggestion__account'>
       <a className='ffe-account-suggestion__name'>{ name }</a>
