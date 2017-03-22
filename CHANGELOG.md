@@ -1,5 +1,35 @@
 # Changelog
 
+## v.9.0.0
+
+- BREAKING: List styling are removed from `ffe-core`. These styles are now available in `ffe-lists`.
+- BREAKING: `.ffe-number-list` is no more - use `ffe-lists`'s `.ffe-numbered-list`.
+- BREAKING: Removed `@ffe-sand-25` from colors.less, renamed other color variables.
+
+To upgrade to this release, all references to the following variables must be replaced by their new names in your LESS code:
+
+* `@ffe-blue-flat` --> `@ffe-blue-cobalt`
+* `@ffe-blue-royal-light-wcag` --> `@ffe-blue-azure`
+* `@ffe-blue-royal-light` --> `@ffe-blue-deep-sky`
+* `@ffe-blue-royal-light-50` --> `@ffe-blue-sky`
+* `@ffe-blue-royal-light-20` --> `@ffe-blue-pale`
+* `@ffe-blue-royal-light-10` --> `@ffe-blue-ice`
+* `@ffe-green-wcag` --> `@ffe-green-shamrock`
+* `@ffe-green-dark-10` --> `@ffe-green-emerald`
+* `@ffe-green-wcag-20` --> `@ffe-green-mint`
+* `@ffe-orange-wcag` --> `@ffe-orange-fire`
+* `@ffe-orange-wcag-20` --> `@ffe-orange-salmon`
+* `@ffe-purple-wcag` --> `@ffe-purple-magenta`
+* `@ffe-sand-50` --> `@ffe-sand-ivory`
+* `@ffe-sand-25` --> `@ffe-sand`
+* `@ffe-grey-light-bg` --> `@ffe-grey-cloud`
+* `@ffe-grey-light` --> `@ffe-grey-silver`
+* `@ffe-grey-dark` --> `@ffe-grey-charcoal`
+
+To save some time on searching and replacing, run this command from inside your repository:
+
+    for pair in ffe-blue-flat:ffe-blue-cobalt ffe-blue-royal-light-10:ffe-blue-ice ffe-blue-royal-light-20:ffe-blue-pale ffe-blue-royal-light-50:ffe-blue-sky ffe-blue-royal-light-wcag:ffe-blue-azure ffe-blue-royal-light:ffe-blue-deep-sky ffe-green-wcag-20:ffe-green-mint ffe-green-wcag:ffe-green-shamrock ffe-green-dark-10:ffe-green-emerald ffe-orange-wcag-20:ffe-orange-salmon ffe-orange-wcag:ffe-orange-fire ffe-purple-wcag:ffe-purple-magenta ffe-sand-50:ffe-sand-ivory ffe-sand-25:ffe-sand ffe-grey-light-bg:ffe-grey-cloud ffe-grey-light:ffe-grey-silver ffe-grey-dark:ffe-grey-charcoal; do old=${pair%%:*}; new=${pair##*:}; echo "Changing $old to $new"; find . -type f -name '*.less' -exec sed -i "s/$old/$new/g" {} \;; done
+
 ## v.8.2.4
 
 Adjusted colors to reflect design guidelines

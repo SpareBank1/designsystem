@@ -48,7 +48,7 @@
 }
 
 .ffe-small-text {
-    color: @ffe-grey-dark;
+    color: @ffe-grey-charcoal;
     font-family: "MuseoSans-500", arial, sans-serif;
     font-size: 14px;
     font-weight: normal;
@@ -56,7 +56,7 @@
 }
 
 .ffe-micro-text {
-    color: @ffe-grey-dark;
+    color: @ffe-grey-charcoal;
     font-family: "MuseoSans-500", arial, sans-serif;
     font-size: 12px;
     font-weight: normal;
@@ -73,7 +73,7 @@
     margin-top: 0;
 
     &--error {
-        color: @ffe-orange-wcag;
+        color: @ffe-orange-fire;
     }
 
     &--no-margin {
@@ -81,7 +81,7 @@
     }
 
     &--with-border {
-        border-bottom: 1px solid @ffe-grey-light;
+        border-bottom: 1px solid @ffe-grey-silver;
         padding-bottom: 10px;
     }
 }
@@ -125,19 +125,19 @@
 }
 
 .ffe-link-text {
-    color: @ffe-blue-royal-light-wcag;
+    color: @ffe-blue-azure;
     text-decoration: none;
     word-wrap: break-word;
 
     &:hover {
-        color: @ffe-blue-flat;
+        color: @ffe-blue-cobalt;
         text-decoration: none;
     }
 }
 
 .ffe-divider-line {
     border: none;
-    border-bottom: solid 1px @ffe-grey-light;
+    border-bottom: solid 1px @ffe-grey-silver;
     width: 100%;
 }
 
@@ -151,7 +151,7 @@
 }
 
 .ffe-pre-text {
-    background-color: @ffe-sand-50;
+    background-color: @ffe-sand-ivory;
     font-family: consolas, menlo, monaco, monospace;
     margin: 0;
     text-align: left;
@@ -159,26 +159,6 @@
 
 .ffe-inline-separator {
     margin: 0 4px;
-}
-
-.ffe-number-list,
-.ffe-bullet-list {
-    margin: 0 0 20px;
-    padding: 0;
-    text-align: left;
-
-    > li {
-        margin-left: 15px;
-        margin-top: 10px;
-    }
-}
-
-.ffe-number-list {
-    list-style-type: decimal;
-}
-
-.ffe-bullet-list {
-    list-style-type: disc;
 }
 
 @media screen and (min-width: @breakpoint-sm) {
@@ -238,11 +218,6 @@
         font-size: 12px;
         line-height: 20px;
     }
-
-    .ffe-number-list,
-    .ffe-bullet-list {
-        margin-left: 20px;
-    }
 }
 
 @media screen and (min-width: @breakpoint-md) {
@@ -300,10 +275,5 @@
     .ffe-micro-text {
         font-size: 12px;
         line-height: 20px;
-    }
-
-    .ffe-number-list > li,
-    .ffe-bullet-list > li {
-        margin-left: 30px;
     }
 }
