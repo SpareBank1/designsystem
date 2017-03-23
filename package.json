@@ -1,6 +1,6 @@
 {
   "name": "ffe-accordion",
-  "version": "1.3.3",
+  "version": "2.0.0",
   "description": "Accordion component for FFE.",
   "main": "index.js",
   "scripts": {
@@ -23,11 +23,11 @@
   },
   "author": "SpareBank 1",
   "peerDependencies": {
-    "ffe-core": "*"
+    "ffe-core": "9.x"
   },
   "devDependencies": {
-    "ffe-core": "^8.0.2",
-    "ffe-visual-tests-support": "2.0.0",
+    "ffe-core": "9.x",
+    "ffe-visual-tests-support": "2.1.0",
     "less": "^2.6.1",
     "nsp": "^2.2.0",
     "opn-cli": "^3.1.0",
