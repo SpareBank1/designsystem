@@ -24,7 +24,7 @@ class AccountSelectorMulti extends React.Component {
         account={account}
         locale={locale}
         selected={isSelected.length > 0}
-        onChange={() => this.baseRef.preventBlurForNextMouseClick()}
+        onChange={() => this.baseRef.preventBlurForNextFocusEvent()}
       />
     );
   }
@@ -85,7 +85,8 @@ class AccountSelectorMulti extends React.Component {
           suggestionDetails={this.renderSuggestionDetails()}
           shouldHideSuggestionsOnSelect={false}
           shouldSelectHighlightedOnTab={false}
-          shouldHideSuggestionOnBlur={false}
+          shouldHideSuggestionsOnBlur={false}
+          shouldHideSuggestionsOnReset={true}
           suggestionFilter={accountFilter}
           onSelect={onAccountSelected}
           onSuggestionListChange={(height) => {
