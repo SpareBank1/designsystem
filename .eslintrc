@@ -1,0 +1,7 @@
+{
+  "extends": "eslint-config-ffe",
+  "globals": {
+    "describe": true,
+    "it": true
+  }
+}

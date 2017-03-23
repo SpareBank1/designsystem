@@ -1,0 +1,74 @@
+.ffe-account-suggestion {
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid @ffe-grey-light;
+  background: @ffe-white;
+
+  &:hover,
+  &--highlighted {
+    cursor: pointer;
+    background: @ffe-blue-royal-light-wcag;
+    color: @ffe-white;
+    .ffe-account-suggestion__name,
+    .ffe-account-suggestion__details {
+      color: @ffe-white;
+    }
+  }
+
+  &__nomatches {
+    background: @ffe-white;
+    color: @ffe-blue-royal-light-wcag;
+    padding: 16px;
+    cursor: default;
+  }
+
+  &__account {
+    padding: 8px 16px 8px 21px;
+  }
+
+  &__account--multi {
+    padding: 8px 16px 8px 10px;
+    overflow: hidden;
+  }
+
+  &__name {
+    &:extend(.ffe-link-text);
+    line-height: 1;
+    font-size: 15px;
+    display: block;
+    padding-bottom: 6px;
+  }
+
+  &__details {
+    color: @ffe-grey-dark;
+    font-size: 12px;
+    .ffe-clearfix;
+  }
+
+  &__number {
+    float: left;
+  }
+
+  &__balance {
+    float: right;
+  }
+
+  &__checkbox {
+    float: left;
+    width: 10%;
+  }
+
+  &__content-wrapper {
+    float: right;
+    width: 88%;
+  }
+
+  .ffe-checkbox {
+    margin: 0;
+    top: -3px;
+  }
+
+  &:first-child {
+    border-top: none;
+  }
+}
