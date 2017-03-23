@@ -1,6 +1,6 @@
 {
   "name": "ffe-context-message",
-  "version": "1.3.0",
+  "version": "2.0.0",
   "description": "Messagebox showing non-critical tip or information about a page or product",
   "style": "less/ffe-context-message.less",
   "scripts": {
@@ -20,10 +20,10 @@
   },
   "author": "SpareBank 1",
   "peerDependencies": {
-    "ffe-core": "^8.2.4"
+    "ffe-core": "9.x"
   },
   "devDependencies": {
-    "ffe-core": "^8.2.4",
+    "ffe-core": "9.x",
     "ffe-visual-tests-support": "2.1.0",
     "less": "2.7.2",
     "mkdirp": "0.5.1",
