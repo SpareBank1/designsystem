@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## Version 2.0.0
+
+### Breaking changes
+
+Bumped peer dependency version of ffe-core. No external API change, but this version requires a new major of `ffe-core`
+
+* Renamed color names to stay in sync with refactoring in ffe-core@9.x
+* Bumped ffe-visual-tests-support version
+* Updated visual test baselines according to color changes in ffe-core
+
+To migrate, update your app to ffe-core version 9.x
+
 ## Version 1.3.3
 * Add a few minor style changes to the toggler, to make it possible to use either an `<a>` or a `<button>` tag with the same visual results.
 * Updated all examples to use a `<button>`, as it makes the most sense semantically.
