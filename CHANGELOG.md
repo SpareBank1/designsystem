@@ -1,5 +1,15 @@
 # Changelog
 
+## v3.0.0
+
+### Breaking changes
+
+Bumped peer dependency version of ffe-core. No external API change, but this version requires a new major of `ffe-core`
+
+* Renamed color names to stay in sync with refactoring in ffe-core@9.x
+
+To migrate, update your app to ffe-core version 9.x
+
 ## v2.1.2
 * Removed use of `line-height` to set `ffe-tab-button` height, instead use `padding`. This so line breaks won't look awkward - with padding around every text row.
 
