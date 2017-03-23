@@ -105,6 +105,9 @@ boolean that specifies if the suggestion list should be hidden when input field 
 __shouldSelectHighlightedOnTab (required)__
 boolean that specifies if onSelect should be fired with the highlighted suggestion object when tabbing away from input field.
 
+__shouldHideSuggestionsOnReset (required)__
+boolean that specifies if suggestions should be hidden on reset.
+
 __value__
 Sets the input field value.
 

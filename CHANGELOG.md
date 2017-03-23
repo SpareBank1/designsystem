@@ -1,5 +1,9 @@
 # Changelog
 
+#v5.0.1 
+* Show suggestions on reset
+* Bugfix: always give input focus after reset 
+
 # v5.0.0
 * Check README for migration from `nfe-account-selector-react`
 

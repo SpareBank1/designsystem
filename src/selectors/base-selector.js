@@ -15,6 +15,7 @@ class BaseSelector extends Component {
     this.onFocus = this.onFocus.bind(this);
     this.onBlur = this.onBlur.bind(this);
     this.filterSuggestions = this.filterSuggestions.bind(this);
+    this.setFocus = this.setFocus.bind(this);
 
     this.state = {
       showSuggestions: false,
@@ -27,11 +28,11 @@ class BaseSelector extends Component {
      This is necessary for maintaining focus in the input field for mouseClick events
      on the clearInput button and suggestion items.
      */
-    this.shouldPreventBlurForNextMouseClick = false;
+    this.shouldPreventBlurForNextFocusEvent = false;
   }
 
   _onSuggestionListChange() {
-    window.setTimeout(() => {
+    setTimeout(() => {
       this.props.onSuggestionListChange(this.getSuggestionListHeight());
     });
   }
@@ -43,8 +44,8 @@ class BaseSelector extends Component {
     return 0;
   }
 
-  preventBlurForNextMouseClick(prevent = true) {
-    this.shouldPreventBlurForNextMouseClick = prevent;
+  preventBlurForNextFocusEvent(prevent = true) {
+    this.shouldPreventBlurForNextFocusEvent = prevent;
   }
 
   setFocus() {
@@ -71,20 +72,20 @@ class BaseSelector extends Component {
   }
 
   onFocus() {
-    if (this.shouldPreventBlurForNextMouseClick) {
-      this.preventBlurForNextMouseClick(false);
+    if (this.shouldPreventBlurForNextFocusEvent) {
+      this.preventBlurForNextFocusEvent(false);
       return;
     }
     this.showHideSuggestions(true, this.props.onFocus);
   }
 
   onBlur() {
-    if (this.shouldPreventBlurForNextMouseClick) {
-      this.input.focus();
+    if (this.shouldPreventBlurForNextFocusEvent) {
+      this.setFocus();
       return;
     }
 
-    if (this.props.shouldHideSuggestionOnBlur) {
+    if (this.props.shouldHideSuggestionsOnBlur) {
       this.showHideSuggestions(false, () => {
         this.props.onBlur();
       });
@@ -105,18 +106,21 @@ class BaseSelector extends Component {
   }
 
   onSuggestionClick(suggestion) {
-    this.preventBlurForNextMouseClick();
+    this.preventBlurForNextFocusEvent();
     this.onSuggestionSelect(suggestion);
   }
 
   onInputResetClick() {
-    this.preventBlurForNextMouseClick();
+    this.preventBlurForNextFocusEvent();
     this.onInputReset();
   }
 
 
   onInputReset() {
-    this.showHideSuggestions(false, this.props.onReset);
+    const shouldShowSuggestions = !this.props.shouldHideSuggestionsOnReset;
+    this.showHideSuggestions(shouldShowSuggestions, this.props.onReset);
+    this.preventBlurForNextFocusEvent();
+    setTimeout(this.setFocus);
   }
 
   showHideSuggestions(show, cb = () => {}) {
@@ -266,7 +270,8 @@ BaseSelector.propTypes = {
   value: PropTypes.string.isRequired,
   shouldHideSuggestionsOnSelect: PropTypes.bool.isRequired,
   shouldSelectHighlightedOnTab: PropTypes.bool.isRequired,
-  shouldHideSuggestionOnBlur: PropTypes.bool.isRequired,
+  shouldHideSuggestionsOnBlur: PropTypes.bool.isRequired,
+  shouldHideSuggestionsOnReset : PropTypes.bool.isRequired,
   onChange: PropTypes.func,
   onBlur: PropTypes.func,
   onReset: PropTypes.func,
