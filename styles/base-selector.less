@@ -1,0 +1,46 @@
+.ffe-base-selector {
+
+  &__input-field {
+    width: 100%;
+    &::-ms-clear {
+      display: none;
+    }
+  }
+
+  &__reset-button {
+    position: absolute;
+    right: 35px;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    background: transparent;
+    border: none;
+    fill: @ffe-grey-dark;
+
+    &-icon {
+      @size : 11px;
+      width: @size;
+      height: @size;
+    }
+  }
+
+  &__suggestion-container {
+    @border : 1px solid @ffe-grey-light;
+    z-index: 100;
+    position: absolute;
+    left: 0;
+    right: 0;
+    border : @border;
+    border-radius: 2px;
+    &-list {
+      left: 0;
+      width: 100%;
+      top: 45px;
+      box-sizing: border-box;
+      z-index: 100;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+  }
+}
