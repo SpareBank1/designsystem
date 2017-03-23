@@ -1,6 +1,6 @@
 {
   "name": "ffe-core",
-  "version": "9.0.0",
+  "version": "9.0.1",
   "description": "Rammeverk for Felles Front End",
   "less": "ffe.less",
   "main": "index.js",
@@ -44,6 +44,7 @@
   "author": "Glenn A. Brownlee <glenn.brownlee@sparebank1.no>",
   "license": "ISC",
   "devDependencies": {
+    "ffe-lists": "^4.0.0",
     "ffe-visual-tests-support": "2.1.0",
     "less": "^2.7.1",
     "nsp": "^2.6.1",
