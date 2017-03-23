@@ -1,6 +1,6 @@
 {
   "name": "ffe-details-list",
-  "version": "7.0.1",
+  "version": "8.0.0",
   "description": "Opplisting av attributter i en grid",
   "main": "index.js",
   "scripts": {
@@ -27,10 +27,10 @@
   "author": "Ivar Nilsen <ivar.nilsen@sparebank1.no>",
   "license": "ISC",
   "peerDependencies": {
-    "ffe-core": "^8.1.0"
+    "ffe-core": "9.x"
   },
   "devDependencies": {
-    "ffe-core": "^8.1.0",
+    "ffe-core": "9.x",
     "ffe-visual-tests-support": "^2.1.0",
     "less": "^2.7.1",
     "mkdirp": "^0.5.1",

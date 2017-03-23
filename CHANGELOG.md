@@ -1,5 +1,16 @@
 # CHANGELOG
 
+## Version 8.0.0
+
+### Breaking changes
+
+Bumped peer dependency version of ffe-core. No external API change, but this version requires a new major of `ffe-core`
+
+* Renamed color names to stay in sync with refactoring in ffe-core@9.x
+* Updated visual test baselines according to color changes in ffe-core
+
+To migrate, update your app to ffe-core version 9.x
+
 ## Version 7.0.1
 * right-padding on `__details-col` to make space between columns, use modifier `--no-padding` to cancel
 
