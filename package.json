@@ -1,6 +1,6 @@
 {
   "name": "ffe-form",
-  "version": "4.1.5",
+  "version": "5.0.0",
   "description": "Form-/skjemapakke for Felles Front End",
   "main": "less/form.less",
   "scripts": {
@@ -68,7 +68,7 @@
     }
   ],
   "devDependencies": {
-    "ffe-core": "^8.1.2",
+    "ffe-core": "9.x",
     "ffe-visual-tests-support": "2.0.0",
     "less": "^2.6.1",
     "less-plugin-autoprefix": "^1.5.1",
@@ -80,7 +80,7 @@
     "watch": "^0.19.2"
   },
   "peerDependencies": {
-    "ffe-core": "^8.0.2"
+    "ffe-core": "9.x"
   },
   "publishConfig": {
     "registry": "***REMOVED***"
