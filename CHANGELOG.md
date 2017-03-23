@@ -1,6 +1,9 @@
 # Changelog
 
-#v5.0.1 
+# v5.0.2
+* Bugfix: Blur event wrongfully prevented after reset from ESC 
+
+# v5.0.1 
 * Show suggestions on reset
 * Bugfix: always give input focus after reset 
 
