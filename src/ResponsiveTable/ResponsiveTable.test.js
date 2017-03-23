@@ -32,6 +32,13 @@ describe('<ResponsiveTable />', () => {
       const wrapper = shallow(<ResponsiveTable columns={columns} data={data}/>);
       expect(wrapper.is('table')).to.equal(true);
       expect(wrapper.hasClass('ffe-responsive-table')).to.equal(true);
+      expect(wrapper.hasClass('ffe-responsive-table--condensed')).to.equal(false);
+    });
+
+    it('can be condensed', () => {
+      const wrapper = shallow(<ResponsiveTable condensed={true} columns={columns} data={data}/>);
+      expect(wrapper.hasClass('ffe-responsive-table')).to.equal(true);
+      expect(wrapper.hasClass('ffe-responsive-table--condensed')).to.equal(true);
     });
   });
 

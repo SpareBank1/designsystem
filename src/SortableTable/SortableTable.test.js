@@ -44,4 +44,14 @@ describe('<SortableTable>', () => {
   it('should show buttons in table when passing in buttons in data', () => {
     expect(wrapper.find('button')).length.to.be(data.length);
   });
+
+  describe('condensed', () => {
+      it('should by default not be condensed', () =>
+         expect(wrapper.find('.ffe-responsive-table--condensed')).to.have.length(0));
+
+      const condensedWrapper = render(<SortableTable condensed={true} columns={columns} data={data}/>);
+
+      it('can be condensed', () =>
+         expect(condensedWrapper.find('.ffe-responsive-table--condensed')).to.have.length(1));
+  });
 });
