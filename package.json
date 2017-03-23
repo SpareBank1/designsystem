@@ -1,6 +1,6 @@
 {
   "name": "ffe-spinner",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "main": "less/spinner.less",
   "scripts": {
     "compile": "npm run lint && lessc example/example.less example/example.css && cp -R node_modules/ffe-core/fonts/ example/fonts/ && echo \"$(date +%T): Updated example\"",
@@ -29,7 +29,7 @@
     }
   ],
   "devDependencies": {
-    "ffe-core": "^8.0.0",
+    "ffe-core": "9.x",
     "ffe-visual-tests-support": "2.0.0",
     "less": "^2.7.1",
     "nsp": "^2.2.0",
@@ -39,7 +39,7 @@
     "watch": "^0.19.2"
   },
   "peerDependencies": {
-    "ffe-core": "8.x"
+    "ffe-core": "9.x"
   },
   "publishConfig": {
     "registry": "***REMOVED***"
