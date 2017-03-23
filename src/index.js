@@ -12,6 +12,8 @@ ResponsiveTable.propTypes = {
     caption: PropTypes.string,
     expandedContentMapper: PropTypes.func,
     sortable: PropTypes.bool,
+    condensed: PropTypes.bool,
+    smallHeader: PropTypes.bool,
     data: PropTypes.arrayOf(
         PropTypes.object
     ),

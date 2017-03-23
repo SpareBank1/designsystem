@@ -96,7 +96,7 @@ class SortableTable extends Component {
             };
         });
 
-        const { caption, expandedContentMapper } = this.props;
+        const { caption, expandedContentMapper, condensed, smallHeader } = this.props;
 
         return (
             <ResponsiveTable
@@ -104,6 +104,8 @@ class SortableTable extends Component {
                 expandedContentMapper={ expandedContentMapper }
                 columns={ sortableColumns }
                 data={ this.state.tableData }
+                condensed={ condensed }
+                smallHeader={ smallHeader }
             />
         );
     }
@@ -112,6 +114,8 @@ class SortableTable extends Component {
 SortableTable.propTypes = {
     caption: PropTypes.string,
     expandedContentMapper: PropTypes.func,
+    condensed: PropTypes.bool,
+    smallHeader: PropTypes.bool,
     columns: PropTypes.arrayOf(PropTypes.object).isRequired,
     data: PropTypes.arrayOf(PropTypes.object).isRequired
 };

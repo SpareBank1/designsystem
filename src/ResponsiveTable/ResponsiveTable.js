@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import classNames from 'classnames';
 import TableHeaders from '../TableParts/TableHeaders';
 import TableFooter from '../TableParts/TableFooter';
 import TableRow from '../TableParts/TableRow';
@@ -72,8 +73,15 @@ class ResponsiveTable extends Component {
     }
 
     render() {
+        const { condensed, smallHeader } = this.props;
         return (
-            <table className="ffe-responsive-table">
+            <table
+                className={classNames(
+                    'ffe-responsive-table',
+                    { 'ffe-responsive-table--condensed': condensed },
+                    { 'ffe-responsive-table--small-header': smallHeader }
+                )}
+            >
                 {this.renderTableCaption()}
                 {this.renderTableHeaders()}
                 {this.renderTableFooter()}
@@ -86,6 +94,8 @@ class ResponsiveTable extends Component {
 ResponsiveTable.propTypes = {
     caption: PropTypes.string,
     expandedContentMapper: PropTypes.func,
+    condensed: PropTypes.bool,
+    smallHeader: PropTypes.bool,
     data: PropTypes.arrayOf(
         PropTypes.object
     ),

@@ -123,13 +123,16 @@ const data = [
 The table accepts any of these optional props:
 - `sortable` is a boolean to make the table sortable.
   - Click the headers to sort the table.
-  - Tables will not be `sortable` on screen width < 768px (@breakpoint-md)
+  - Tables will not be `sortable` on screen width < 768px (`@breakpoint-md`)
 - `caption` is a string or node to insert as table caption.
 - `expandedContentMapper` must be a reference to a function which takes a single value.
 The output of this function will be the contents of the expanded area of an expandable row.
   - As you see in the example below, the output of this function will be `undefined` for Sivert Svenska,
   because he doesn't have an `address`. In this case the row will not be expandable.
   - The presence of this function also acts as a boolean to inform the table it has expandable rows.
+- `condensed` adds the `--condensed`-modifier to the table for condensed row height.
+- `smallHeader` adds the `--small-header`-modifier to the table for reduced header width
+on tables when screen width < 768px (`@breakpoint-md`).
 ```javascript
 const expandedContentMapper = row => row.address && <span>Adresse: { row.address }</span>;
 
@@ -138,6 +141,8 @@ const expandedContentMapper = row => row.address && <span>Adresse: { row.address
     data={ data }
     expandedContentMapper={ expandedContentMapper }
     sortable={ true }
+    condensed={ true }
+    smallHeader={ true }
     caption="For the strength of the pack is the wolf. And the strength of the wolf is the pack."
 />
 ```

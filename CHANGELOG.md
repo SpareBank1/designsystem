@@ -1,5 +1,9 @@
 # Changelog
 
+## v4.1.0
+
+* Added optional boolean props `condensed` and `smallHeader` to support table modifiers from `ffe-tables`.
+
 ## v4.0.1
 
 * All rows will now collapse on sort.
