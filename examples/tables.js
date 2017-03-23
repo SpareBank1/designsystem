@@ -47,12 +47,14 @@ render(
                 <h2 className="ffe-h2">Sortable table</h2>
                 <ResponsiveTable columns={SIMPLE_TABLE.columns} data={SIMPLE_TABLE.dataObject} sortable={true}/>
 
-                <h2 className="ffe-h2">Sortable, expandable, captioned, footerized</h2>
+                <h2 className="ffe-h2">Sortable, expandable, captioned, footerized, condensed, small headers</h2>
                 <ResponsiveTable
                     columns={SIMPLE_TABLE_SORTABLE_EXPANDABLE.columns}
                     data={SIMPLE_TABLE_SORTABLE_EXPANDABLE.dataObject}
                     expandedContentMapper={ expandedContentMapper }
                     sortable={true}
+                    condensed={true}
+                    smallHeader={true}
                     caption="This is the craziest table we can offer"
                 />
 
