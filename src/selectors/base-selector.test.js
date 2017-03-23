@@ -166,7 +166,6 @@ describe('<BaseSelector> methods', () => {
     component.onInputReset();
     assert.isFalse(component.state.showSuggestions);
     assert.isTrue(onResetSpy.calledOnce);
-    assert.isTrue(component.shouldPreventBlurForNextFocusEvent);
   });
 
   it('should show suggestions on input reset', () => {

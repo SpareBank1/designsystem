@@ -119,7 +119,6 @@ class BaseSelector extends Component {
   onInputReset() {
     const shouldShowSuggestions = !this.props.shouldHideSuggestionsOnReset;
     this.showHideSuggestions(shouldShowSuggestions, this.props.onReset);
-    this.preventBlurForNextFocusEvent();
     setTimeout(this.setFocus);
   }
 
