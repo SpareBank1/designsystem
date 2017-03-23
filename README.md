@@ -2,9 +2,9 @@
 
 A combobox with autocomplete. This package provides the selectors:
 
-1. <AccountSelector> single account select)
-2. <AccountSelectorMulti> (multiple account select)
-3. <BaseSelector> (can be wrapped to create selectors with custom content)
+1. `<AccountSelector>` single account select)
+2. `<AccountSelectorMulti>` (multiple account select)
+3. `<BaseSelector>` (can be wrapped to create selectors with custom content)
 
 `ffe-account-selector-react` requires `ffe-core` and `ffe-form` to be present in your CSS object model.
 
@@ -39,7 +39,7 @@ Styling has also been changed where `nfe-account-selector` has be renamed to `ac
 
 To view live example `npm start`
 
-### <AccountSelector> Props API
+## `<AccountSelector>` Props API
 
 __value__
 Sets the input field value.
@@ -81,17 +81,17 @@ __suggestionsHeightMax__
 number that specifies that max height in pixels of the suggestion list. Defaults to 300.
 
 
-### <AccountSelectorMulti> Props API
+## `<AccountSelectorMulti>` Props API
 
 //TODO docs
 
 
-## Creating a custom selector
+# Creating a custom selector
 
 It is possible to create custom selector components my wrapping the base component. Check <AccountSelector> and <AccountSelectorMulti> 
 for example usage.
 
-### <BaseSelector> Props API
+## `<BaseSelector>` Props API
 
 __suggestions (required)__
 Array of objects
