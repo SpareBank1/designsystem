@@ -1,6 +1,6 @@
 {
   "name": "ffe-context-message",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Messagebox showing non-critical tip or information about a page or product",
   "style": "less/ffe-context-message.less",
   "scripts": {
