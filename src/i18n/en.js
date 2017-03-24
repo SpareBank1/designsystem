@@ -4,6 +4,7 @@ export default {
   RESET_SEARCH: 'Reset',
   DROPDOWN_MULTISELECT_DONE: 'Done',
   NO_ACCOUNTS_SELECTED: 'No accounts selected',
+  NO_ACCOUNTS_FOUND : 'No accounts',
   ONE_ACCOUNT_SELECTED: '1 account selected',
   MULTIPLE_ACCOUNTS_SELECTED: 'accounts selected',
 };
