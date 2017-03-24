@@ -18,8 +18,8 @@ in the same row number being expanded, even though it gets new data.
 * Added support for custom compare function on each sortable column through the column prop `compare`.
 * Added support for explicitly making a column not sortable through the column prop `notSortable`.
 * Removed `isRequired` on prop `children` in `TableRowExpandable` as this produced a warning for unexpandable rows in expandable table.
-* Fixed issue where having a button in the clickable part of an expandable row could cause the row to expand onClick on the button.
-  * The consumer is still responsible for handling propagation of onKeyDown-events.
+* Fixed issue where having a button in the clickable part of an expandable row could cause the row to expand onKeyDown on the button.
+  * The consumer is still responsible for handling propagation of onClick-events.
 
 ### Migrating to v4.0.0
 
