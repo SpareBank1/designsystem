@@ -1,5 +1,16 @@
 # Changelog
 
+## v4.0.0
+
+### Breaking changes
+
+Bumped peer dependency version of ffe-core. No external API change, but this version requires a new major of `ffe-core`
+
+* Renamed color names to stay in sync with refactoring in ffe-core@9.x
+* Updated visual test baselines according to color changes in ffe-core
+
+To migrate, update your app to ffe-core version 9.x
+
 ## v3.0.0
 * BREAKING: `ffe-back-button` is now a `display: inline-block` element, which might break some layouts.
 Migrating should be pretty simple though - if you were depending on `ffe-back-button` to be a block level
