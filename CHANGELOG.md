@@ -1,5 +1,8 @@
 # Changelog
 
+# v5.0.3 
+* Default value for suggestions element when no matches found
+
 # v5.0.2
 * Bugfix: Blur event wrongfully prevented after reset from ESC 
 
