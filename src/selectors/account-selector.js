@@ -24,7 +24,7 @@ function AccountSelector(props) {
     >
       <BaseSelector
         renderSuggestion={(account) => <AccountSuggestionItem account={account} locale={locale}/>}
-        renderNoMatches={() => <AccountNoMatch value={noMatches}/>}
+        renderNoMatches={() => <AccountNoMatch value={noMatches} locale={locale}/>}
         shouldHideSuggestionsOnSelect={true}
         shouldSelectHighlightedOnTab={true}
         shouldHideSuggestionsOnBlur={true}
