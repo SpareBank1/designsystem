@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## Version 2.0.1
+
+* Content is now centered vertically.
+
 ## Version 2.0.0
 
 ### Breaking changes
