@@ -1,5 +1,15 @@
 # Changelog
 
+## v.4.0.0
+
+### Breaking changes
+
+Bumped peer dependency version of ffe-core. No external API change, but this version requires a new major of `ffe-core`
+
+* Renamed color names to stay in sync with refactoring in ffe-core@9.x
+
+To migrate, update your app to ffe-core version 9.x
+
 ## v.3.1.0
 * Added support for 0 column size
 
