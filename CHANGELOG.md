@@ -1,5 +1,9 @@
 # Changelog
 
+## v.4.1.0
+
+* Condensed variation with less gutter (modifier `ffe-grid--condensed`).
+
 ## v.4.0.0
 
 ### Breaking changes

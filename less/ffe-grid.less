@@ -3,6 +3,8 @@
 @ffe-grid-width: 1280px;
 @ffe-grid-gutter-sm: 20px;
 @ffe-grid-gutter-lg: 40px;
+@ffe-condensed-grid-gutter-sm: 10px;
+@ffe-condensed-grid-gutter-lg: 20px;
 
 // Mixins
 .create-column(@size, @total, @current: 0) when (@current <= @total) {
@@ -150,6 +152,14 @@
                 /* stylelint-disable max-nesting-depth */
                 @media only screen and (min-width: @breakpoint-lg) {
                     padding: 0 (@ffe-grid-gutter-lg / 2) @ffe-grid-gutter-lg;
+                }
+
+                .ffe-grid--condensed & {
+                    padding: 0 (@ffe-condensed-grid-gutter-sm / 2) @ffe-condensed-grid-gutter-sm;
+
+                    @media only screen and (min-width: @breakpoint-lg) {
+                        padding: 0 (@ffe-condensed-grid-gutter-lg / 2) @ffe-condensed-grid-gutter-lg;
+                    }
                 }
                 /* stylelint-enable max-nesting-depth */
             }
