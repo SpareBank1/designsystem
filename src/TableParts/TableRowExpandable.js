@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import classNames from 'classnames';
-import equal from 'deep-equal';
+import shallowEqual from 'shallow-equals';
 import TableRow from './TableRow';
 import Chevron from 'ffe-icons-react/chevron-ikon';
 
@@ -20,16 +20,14 @@ class TableRowExpandable extends Component {
     }
 
     handleKeyPress(event) {
-        if ((event.key === 'Enter' || event.key === ' ')) {
-            if (event.target.tagName === 'TR') {
-                this.setState({ expanded: !this.state.expanded });
-            }
+        if ((event.key === 'Enter' || event.key === ' ') && event.target.tagName === 'TR') {
+            this.setState({ expanded: !this.state.expanded });
             event.preventDefault();
         }
     }
 
     componentWillReceiveProps(newProps) {
-        if (!newProps.children && this.state.expanded || !equal(newProps.columns, this.props.columns)) {
+        if (!newProps.children && this.state.expanded || !shallowEqual(newProps.sort, this.props.sort)) {
             this.setState({ expanded: false });
         }
     }
@@ -89,7 +87,8 @@ class TableRowExpandable extends Component {
 TableRowExpandable.propTypes = {
     children: PropTypes.node,
     cells: PropTypes.object.isRequired,
-    columns: PropTypes.array.isRequired
+    columns: PropTypes.array.isRequired,
+    sort: PropTypes.object
 };
 
 export default TableRowExpandable;

@@ -97,6 +97,7 @@ class SortableTable extends Component {
         });
 
         const { caption, expandedContentMapper, condensed, smallHeader } = this.props;
+        const { sortBy, descending } = this.state;
 
         return (
             <ResponsiveTable
@@ -106,6 +107,7 @@ class SortableTable extends Component {
                 data={ this.state.tableData }
                 condensed={ condensed }
                 smallHeader={ smallHeader }
+                sort={ { sortBy, descending } }
             />
         );
     }
