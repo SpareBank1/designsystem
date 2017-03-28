@@ -1,5 +1,8 @@
 # Changelog
 
+## v2.0.1
+Bump ffe-accordion version.
+
 ## v2.0.0
 Use `<button>` (instead of `<a>`) for the toggler to prevent unnecessary links.
 Add `ffe-accordion` as a peer dependency.
