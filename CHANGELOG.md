@@ -1,5 +1,12 @@
 # Changelog
 
+## v4.1.1
+
+* Reverted attempted fix on `onKeyDown`-events on expandable rows as it caused unforseen issues.
+Consumers should be responsible for stopping event propagation when needed anyways.
+  * Added `event.stopPropagation()` to buttons in table examples to demonstrate the need for this.
+* Improved logic to collapse rows on sort.
+
 ## v4.1.0
 
 * Added optional boolean props `condensed` and `smallHeader` to support table modifiers from `ffe-tables`.

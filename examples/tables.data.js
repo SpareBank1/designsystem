@@ -131,7 +131,7 @@ export const SIMPLE_TABLE_SORTABLE_EXPANDABLE = {
             phone: '912 34 567',
             email: 'ola@normann.no',
             username: 'olli22',
-            button: <button>poke</button>
+            button: <button onClick={e=>e.stopPropagation()}>poke</button>
         },
         {
             name: 'Sivert Svenska',
@@ -142,7 +142,7 @@ export const SIMPLE_TABLE_SORTABLE_EXPANDABLE = {
             phone: '+46 123 456 789',
             email: 'sivert@svenska.se',
             username: 'zlatan_2000',
-            button: <button>poke</button>
+            button: <button onClick={e=>e.stopPropagation()}>poke</button>
         },
         {
             name: 'Daniel Dansk',
@@ -153,7 +153,7 @@ export const SIMPLE_TABLE_SORTABLE_EXPANDABLE = {
             // With no phone number, this guy won't be expandable
             email: 'daniel@dansk.dk',
             username: 'kartoffel88',
-            button: <button>poke</button>
+            button: <button onClick={e=>e.stopPropagation()}>poke</button>
         },
         {
             name: 'Anders Amerikaner',
@@ -164,7 +164,7 @@ export const SIMPLE_TABLE_SORTABLE_EXPANDABLE = {
             phone: '+1 555 555 5555',
             email: 'anders@amerikaner.biz',
             username: 'andy-mandy',
-            button: <button>poke</button>
+            button: <button onClick={e=>e.stopPropagation()}>poke</button>
         },
     ],
 };

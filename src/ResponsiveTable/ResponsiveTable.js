@@ -48,7 +48,8 @@ class ResponsiveTable extends Component {
         const {
             data,
             columns,
-            expandedContentMapper
+            expandedContentMapper,
+            sort
         } = this.props;
 
         if (!data || !data.length) {
@@ -57,7 +58,7 @@ class ResponsiveTable extends Component {
 
         if (expandedContentMapper) {
             return data.map((row, index) => (
-                <TableRowExpandable cells={ row } columns={ columns } key={ index }>
+                <TableRowExpandable cells={ row } columns={ columns } key={ index } sort={ sort }>
                     { expandedContentMapper(row) }
                 </TableRowExpandable>
             ));
@@ -96,6 +97,7 @@ ResponsiveTable.propTypes = {
     expandedContentMapper: PropTypes.func,
     condensed: PropTypes.bool,
     smallHeader: PropTypes.bool,
+    sort: PropTypes.object,
     data: PropTypes.arrayOf(
         PropTypes.object
     ),
