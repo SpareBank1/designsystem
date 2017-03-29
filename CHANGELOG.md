@@ -2,6 +2,7 @@
 
 ## HEAD
 
+* Set default text color for input fields and selects to `@ffe-black`
 * Remove orange text color from invalid input-fields and dropdown
 
 ## Version 5.0.0
