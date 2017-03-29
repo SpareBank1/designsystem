@@ -1,13 +1,13 @@
 {
   "name": "ffe-core",
-  "version": "9.0.1",
+  "version": "9.1.0",
   "description": "Rammeverk for Felles Front End",
   "less": "ffe.less",
   "main": "index.js",
   "scripts": {
     "precompile": "npm run lint",
     "compile": "lessc examples/examples.less examples/examples.css && echo \"$(date +%T): Updated examples\"",
-    "lint": "stylelint less{/**,}/*.less",
+    "lint": "lessc -l less/*.less && stylelint less{/**,}/*.less",
     "start": "opn examples/colors.html & opn examples/layout.html & opn examples/typo.html & watch \"npm run -s compile\" less/",
     "test": "npm run lint && npm run test:nsp && npm run compile && ./run_visual-tests.sh",
     "test:nsp": "nsp check",

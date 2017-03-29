@@ -1,5 +1,11 @@
 # Changelog
 
+## v.9.1.0
+
+* Definition of breakpoints and variables related to layout (`@app-width`, ...) have their own less files: `less/breakpoints.less` and `less/app-width.less`.
+* Each less file can be independently imported.
+* Better default for `@base-url` ("." instead of "/").
+
 ## v.9.0.1
 
 * Added devDependency to ffe-lists in order to correctly style examples
