@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## Version 2.0.1
+* Make white accordion the default layout. Previously there was no default layout (that wasn't broken) without
+tons of modifiers everywhere. Now you don't need to add modifiers if you want the white design.
+* Fix a bug where single-item accordions got a double bottom border
+* Add a `viewport` meta tag to the examples page so that it scales correctly on smaller devices
+
 ## Version 2.0.0
 
 ### Breaking changes

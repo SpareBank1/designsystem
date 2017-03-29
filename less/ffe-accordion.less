@@ -2,112 +2,107 @@
     text-align: left;
     margin: 0 auto;
     padding: 0;
-
-    &--white {
-        border-bottom: solid @ffe-grey-silver 1px;
-    }
 }
 
 .ffe-accordion-item {
+    border-top: solid @ffe-grey-silver 1px;
+    margin-bottom: 0;
     position: relative;
     list-style: none;
 
-    &--white {
-        border-top: solid @ffe-grey-silver 1px;
-        margin-bottom: 0;
-
-        &:last-of-type {
-            border-bottom: solid @ffe-grey-silver 1px;
-        }
+    &:last-of-type {
+        border-bottom: solid @ffe-grey-silver 1px;
     }
 
     &--blue {
+        border-top: 0;
         margin-bottom: 10px;
+
+        &:last-of-type {
+            border-bottom: 0;
+        }
     }
 
     &--open {
         margin-bottom: 20px;
     }
+}
 
-    &__icon {
-        width: 17px;
-        height: 17px;
-        position: absolute;
-        right: 20px;
-        top: 25px;
-        transition: transform .3s, fill .3s;
+.ffe-accordion-item__icon {
+    fill: @ffe-blue-azure;
+    width: 17px;
+    height: 17px;
+    position: absolute;
+    right: 20px;
+    top: 25px;
+    transition: transform .3s, fill .3s;
 
-        &--white {
-            fill: @ffe-blue-azure;
-        }
-
-        &--blue {
-            fill: @ffe-blue-royal;
-        }
-
-        &--open {
-            transform: rotateX(180deg);
-            fill: @ffe-blue-royal;
-        }
-
-        &--open&--blue {
-            fill: @ffe-white;
-        }
+    &--blue {
+        fill: @ffe-blue-royal;
     }
 
-    &__content {
+    &--open {
+        transform: rotateX(180deg);
+        fill: @ffe-blue-royal;
+    }
+
+    &--open&--blue {
+        fill: @ffe-white;
+    }
+}
+
+.ffe-accordion-item__content {
+    padding: 10px 25px;
+
+    &--blue {
         padding: 10px 25px 0;
+    }
+}
 
-        &--white {
-            padding: 10px 25px;
-        }
+.ffe-accordion-item__toggler {
+    color: @ffe-blue-azure;
+    cursor: pointer;
+    display: inline-block;
+    padding: 20px 40px 20px 20px;
+    text-decoration: none;
+    text-align: left;
+    border: none;
+    background: inherit;
+    transition: background-color .3s, color .3s;
+    width: 100%;
+
+    &:hover,
+    &:focus {
+        color: @ffe-blue-royal;
     }
 
-    &__toggler {
-        cursor: pointer;
-        display: inline-block;
-        padding: 20px 40px 20px 20px;
-        text-decoration: none;
-        text-align: left;
-        border: none;
-        background: inherit;
-        transition: background-color .3s, color .3s;
-        width: 100%;
+    &--open {
+        color: @ffe-blue-royal;
+    }
 
-        &--white {
-            color: @ffe-blue-azure;
+    &--blue {
+        color: @ffe-blue-royal;
+        background-color: @ffe-blue-pale;
+        border-radius: 3px;
 
-            &:hover, &:focus {
-                color: @ffe-blue-royal;
-            }
-        }
-
-        &--open&--white {
-            color: @ffe-blue-royal;
-        }
-
-        &--blue {
-            color: @ffe-blue-royal;
-            background-color: @ffe-blue-pale;
-            border-radius: 3px;
-
-            &:hover, &:focus {
-                color: white;
-                background-color: @ffe-blue-royal;
-            }
-        }
-
-        &--open&--blue {
-            color: @ffe-white;
+        &:hover,
+        &:focus {
+            color: white;
             background-color: @ffe-blue-royal;
         }
+    }
 
-        &:hover, &:focus {
-            .ffe-accordion-item__icon--white {
-                fill: @ffe-blue-royal;
-            }
+    &--open&--blue {
+        color: @ffe-white;
+        background-color: @ffe-blue-royal;
+    }
 
-            .ffe-accordion-item__icon--blue {
+    &:hover,
+    &:focus {
+        .ffe-accordion-item__icon {
+            fill: @ffe-blue-royal;
+
+            &--blue {
                 fill: @ffe-white;
             }
         }
