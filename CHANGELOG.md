@@ -1,5 +1,9 @@
 # Changelog
 
+## HEAD
+
+* Remove orange text color from invalid input-fields and dropdown
+
 ## Version 5.0.0
 
 ### Breaking changes
