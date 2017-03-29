@@ -27,6 +27,21 @@ $ npm install --save-dev less less-plugin-npm-import    # less-plugin er valgfri
 @import "npm://ffe-core/less/ffe-element-styling";
 ```
 
+### Import av enkelte less filer
+
+I noe tilfeller trenger man kanskje kun deler av ffe-core. Derfor kan hver fil importeres for seg selv.
+
+```less
+// useful variables
+@import "~ffe-core/less/colors";
+@import "~ffe-core/less/breakpoints";
+@import "~ffe-core/less/dimensions";
+
+// font-face definitions (requires @base-url or @font-url to be defined)
+@import "~ffe-core/less/fonts";
+@font-url: './fonts';
+```
+
 ## Kom i gang med FFE
 
 Koden for FFE pakkes i flere forskjellige NPM-moduler som publiseres på et internt
