@@ -19,7 +19,7 @@ function Accordion(props) {
 
 Accordion.propTypes = {
     children: PropTypes.node.isRequired,
-    type: PropTypes.oneOf(['white', 'blue']).isRequired
+    type: PropTypes.oneOf(['blue']),
 };
 
 export default Accordion;
