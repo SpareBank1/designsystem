@@ -23,6 +23,7 @@ function propsBaseSelector(_suggestions = suggestions()) {
     shouldSelectHighlightedOnTab: true,
     shouldHideSuggestionsOnBlur: true,
     shouldHideSuggestionsOnReset: true,
+    id : 'id'
   };
 }
 

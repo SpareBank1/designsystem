@@ -20,7 +20,7 @@ function AccountSelector(props) {
   return (
     <div
       className={classNames('ffe-account-selector', className)}
-      id={id}
+      id={`${id}-container`}
     >
       <BaseSelector
         renderSuggestion={(account) => <AccountSuggestionItem account={account} locale={locale}/>}
@@ -42,11 +42,11 @@ function AccountSelector(props) {
 
 AccountSelector.propTypes = {
   onAccountSelected : PropTypes.func.isRequired,
+  id: PropTypes.string.isRequired,
   accounts : PropTypes.arrayOf(Account),
   locale: Locale.isRequired,
   selectedAccount: Account,
   noMatches: PropTypes.string,
-  id: PropTypes.string,
   className : PropTypes.string,
 };
 
