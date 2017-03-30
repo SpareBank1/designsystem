@@ -1,5 +1,8 @@
 # Changelog
 
+# v6.0.0 
+* Id prop required to promote good UU. Id of container set to `$id-container`, id of input field set to `id`
+
 # v5.0.3 
 * Default value for suggestions element when no matches found
 
