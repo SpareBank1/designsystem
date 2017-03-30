@@ -40,10 +40,9 @@ class AccountSelectorExample extends Component {
 
   render() {
     const {selectedAccount, value} = this.state;
-    // console.log("render", this.state)
     return (
       <div className="selector">
-        <label htmlFor="custom-id" className="ffe-form-label ffe-form-label--block selector-label">Velg konto</label>
+        <label htmlFor="account-selector" className="ffe-form-label ffe-form-label--block selector-label">Velg konto</label>
         <AccountSelector
           value={value}
           accounts={accountArray}
@@ -55,6 +54,7 @@ class AccountSelectorExample extends Component {
           selectedAccount={selectedAccount}
           noMatches='Ingen'
           locale='nb'
+          id='account-selector'
           suggestionsHeightMax={500}
         />
       </div>

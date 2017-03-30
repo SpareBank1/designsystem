@@ -72,6 +72,7 @@ class AccountSelectorMultiExample extends React.Component {
           selectedAccounts={selectedAccounts}
           noMatches='Ingen'
           locale='nb'
+          id = 'account-selector-multi'
           suggestionsHeightMax={500}
         />
       </div>

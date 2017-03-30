@@ -16,7 +16,7 @@ class Input extends Component {
       onReset,
       inputFieldRef,
       highlightedIndex,
-      suggestionListId
+      suggestionListId,
     } = this.props;
     return (
       <div
@@ -60,7 +60,7 @@ Input.propTypes = {
   value: PropTypes.string.isRequired,
   onReset: PropTypes.func.isRequired,
   isSuggestionsShowing: PropTypes.bool.isRequired,
-  id: PropTypes.string,
+  id: PropTypes.string.isRequired,
   placeholder: PropTypes.string,
   onBlur: PropTypes.func,
   onFocus: PropTypes.func,

@@ -223,6 +223,7 @@ class BaseSelector extends Component {
       placeholder,
       suggestionsHeightMax,
       ariaInvalid,
+      id,
     } = this.props;
     const {showSuggestions, highlightedSuggestionIndex, suggestionListId} = this.state;
     return (
@@ -244,6 +245,7 @@ class BaseSelector extends Component {
           highlightedIndex={highlightedSuggestionIndex}
           suggestionListId={suggestionListId}
           ariaInvalid={ariaInvalid}
+          id={id}
         />
         {showSuggestions &&
         <SuggestionsList
@@ -279,6 +281,7 @@ BaseSelector.propTypes = {
   placeholder: PropTypes.string,
   ariaInvalid: PropTypes.bool,
   suggestionsHeightMax: PropTypes.number,
+  id : PropTypes.string,
 };
 
 BaseSelector.defaultProps = {
