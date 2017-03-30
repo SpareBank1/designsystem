@@ -50,6 +50,9 @@ Array of account objects where "accountNumber" and "name" are required.
 __onAccountSelected (required)__
 function that receives the selected account object.
 
+__id (required)__
+The id of the component
+
 __onChange__
 function that receives the input field value when it is changed
 
@@ -70,9 +73,6 @@ Set the placeholder attribute of the input field.
 
 __noMatches__
 String to be shown in the suggestion list when input value doesn't match any of the accounts
-
-__id__
-The id of the component
 
 __ariaInvalid__
 boolean that marks input field as invalid. Defaults to false.
