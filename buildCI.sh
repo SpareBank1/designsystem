@@ -1,11 +1,33 @@
 #!/bin/bash -e
-# Runs build.sh before checking should_publish
 
 function should_publish() {
     [[ $GIT_BRANCH =~ ^(origin/)?master$ ]]
 }
 
-source build.sh
+main() {
+    git clean -f -x -d
+    npm install
+    npm run compile
+
+    rm -rf target/
+    mkdir -p target/archive
+
+    ./run_visual-tests.sh
+
+    cp -R examples target/archive
+}
+
+_move_gemini_files() {
+    testRes=$?
+
+    cp -R gemini-report/ target/archive
+
+    exit ${testRes}
+}
+
+trap "_move_gemini_files" INT TERM EXIT
+
+main "$@"
 
 if should_publish; then
     npm run has-published -s || npm publish

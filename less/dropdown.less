@@ -12,7 +12,7 @@
     border: 2px solid @ffe-grey-silver;
     border-radius: 4px;
     box-shadow: 0 1px 1px 0 @ffe-grey-cloud;
-    color: @ffe-blue-azure;
+    color: @ffe-black;
     display: block;
     .ffe-chevron-icon-with-color();
 
@@ -37,18 +37,13 @@
 
     &:-moz-focusring {
         color: transparent;
-        text-shadow: 0 0 0 @ffe-blue-azure;
+        text-shadow: 0 0 0 @ffe-black;
         transition: color 0ms;
-
-        option {
-            color: @ffe-blue-azure;
-            text-shadow: none;
-        }
     }
 
     &:focus::-ms-value {
         background: @ffe-white;
-        color: @ffe-blue-azure;
+        color: @ffe-black;
     }
 
     &::-ms-expand {
@@ -66,15 +61,6 @@
 
         &:-moz-focusring {
             color: transparent;
-            text-shadow: 0 0 0 @ffe-orange-fire;
-
-            option {
-                color: @ffe-orange-fire;
-            }
-        }
-
-        option:not(:checked) {
-            color: @ffe-blue-azure;
         }
     }
 
