@@ -1,6 +1,6 @@
 {
   "name": "ffe-accordion-react",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "main": "lib/index.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/. && npm run example",
@@ -18,7 +18,7 @@
   "peerDependencies": {
     "react": "^0.14.0 || ^15.0.0",
     "ffe-core": "*",
-    "ffe-accordion": "^2.0.0"
+    "ffe-accordion": "^2.0.1"
   },
   "dependencies": {
     "classnames": "^2.2.5",
@@ -42,11 +42,11 @@
     "eslint-plugin-react": "^6.8.0",
     "mocha": "^3.2.0",
     "nsp": "^2.2.0",
-    "onchange": "3.2.0",
+    "onchange": "3.2.1",
     "react": "^15.0.0",
     "react-addons-test-utils": "^15.0.0",
     "react-dom": "^15.0.0",
-    "sinon": "^1.17.4"
+    "sinon": "^2.1.0"
   },
   "publishConfig": {
     "registry": "https://nexus.intern.sparebank1.no/nexus/content/repositories/npm-internal"

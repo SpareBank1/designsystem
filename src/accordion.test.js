@@ -36,14 +36,6 @@ describe('ffe-accordion-react', () => {
             true);
 
         assert.equal(
-            wrapperHasContent(render(blueAccordion), '.ffe-accordion-item--white'),
-            false);
-
-        assert.equal(
-            wrapperHasContent(render(whiteAccordion), 'ffe-accordion-item--white'),
-            true);
-
-        assert.equal(
             wrapperHasContent(render(blueAccordion), 'ffe-accordion-item--blue'),
             true);
     });

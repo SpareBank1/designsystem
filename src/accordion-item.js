@@ -5,25 +5,21 @@ import classNames from 'classnames';
 
 const createClasses = (baseClass, isOpen, type) => classNames(baseClass, {
     [`${baseClass}--open`]: isOpen,
-    [`${baseClass}--${type}`]: true
+    [`${baseClass}--blue`]: type === 'blue',
 });
 
 class AccordionItem extends Component {
     constructor(props) {
         super();
         this.state = {
-            isOpen: props.isOpen
+            isOpen: props.isOpen,
         };
 
         this.onClick = this.onClick.bind(this);
     }
 
     onClick(e) {
-        const {
-            ignoredNodeNames,
-        } = this.props;
-
-        if (ignoredNodeNames.some(name => name === e.target.nodeName)) {
+        if (this.props.ignoredNodeNames.some(name => name === e.target.nodeName)) {
             return;
         }
         this.toggle();
@@ -105,7 +101,7 @@ AccordionItem.propTypes = {
     isOpen: PropTypes.bool,
     onClose: PropTypes.func,
     onOpen: PropTypes.func,
-    type: PropTypes.oneOf(['white', 'blue']),
+    type: PropTypes.oneOf(['blue']),
     uuid: PropTypes.string,
 };
 

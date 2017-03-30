@@ -1,5 +1,8 @@
 # Changelog
 
+## v2.0.2
+Remove the `--white` modifier classes, since they are now the default.
+
 ## v2.0.1
 Bump ffe-accordion version.
 
