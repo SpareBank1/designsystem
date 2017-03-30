@@ -1,5 +1,10 @@
 # Changelog
 
+## Version 5.1.0
+
+* Set default text color for input fields and selects to `@ffe-black`
+* Remove orange text color from invalid input-fields and dropdown
+
 ## Version 5.0.0
 
 ### Breaking changes
