@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.0.6
+Make sure content has 100% width of container
+
 ## 1.0.5
 isOpen is no longer a required prop.
 
