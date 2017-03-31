@@ -40,7 +40,7 @@ class Expandable extends React.Component {
                 {folded}
                 <ExpandedElementTag className={customClass} style={styles}>
                     <ComponentHeight onHeightReady={this.onHeightReady}>
-                        <div style={{ display: 'inline-block' }}>
+                        <div style={{ display: 'inline-block', width: '100%' }}>
                             { expanded || children }
                         </div>
                     </ComponentHeight>
