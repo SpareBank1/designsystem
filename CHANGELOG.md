@@ -1,5 +1,8 @@
 # Changelog
 
+## v4.0.1
+* Fixed `active` and `focus` state of the chevron in `ffe-shortcut-button--condensed`.
+
 ## v4.0.0
 
 ### Breaking changes
