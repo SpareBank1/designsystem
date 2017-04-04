@@ -22,6 +22,9 @@ fs.readdirSync('./examples')
                     )
                     .wait(500);  // for checkbox animations to reach a steady state
                 })
-                .capture('plain');
+                .capture('plain')
+                .capture('condensed', (actions, find) => {
+                    actions.click(find('[href="#condensed"]'));
+                });
             });
         });

@@ -63,6 +63,11 @@ The pattern is like so: `ffe-grid__col--{size}-offset-{num-of-cols}`
 The offsets work in a similar fashion to the width specification modifiers. Each breakpoint
 can have its own offset if needed.
 
+### Condensed
+
+#### `.ffe-grid--condensed`
+Reduce gutter width to 20px, resp. 10px on smaller screens.
+
 ### Padding
 
 #### `.ffe-grid--no-top-padding`
