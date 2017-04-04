@@ -8,6 +8,9 @@
 </head>
 
 <body class="ffe-body-text">
+    <div class="condensed-toggle">
+        <a href='#not-condensed'>regular</a> | <a href='#condensed'>condensed</a>
+    </div>
     <div class="ffe-section-wrapper">
         <div class="ffe-content-container">
             <h1 class="ffe-h1">ffe-grid</h1>
@@ -381,5 +384,21 @@
             </div>
         </div>
     </div>
+
+    <script>
+        (function () {
+            var grids = document.querySelectorAll('.ffe-grid');
+
+            function addOrRemoveCondensedModifier() {
+                var func = window.location.hash === '#condensed' ? 'add' : 'remove';
+                for (var i = 0; i < grids.length; i++) {
+                    grids[i].classList[func]('ffe-grid--condensed');
+                }
+            }
+
+            window.onpopstate = addOrRemoveCondensedModifier;
+            addOrRemoveCondensedModifier();
+        }());
+    </script>
 </body>
 </html>
