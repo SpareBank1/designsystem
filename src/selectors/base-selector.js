@@ -115,7 +115,6 @@ class BaseSelector extends Component {
     this.onInputReset();
   }
 
-
   onInputReset() {
     const shouldShowSuggestions = !this.props.shouldHideSuggestionsOnReset;
     this.showHideSuggestions(shouldShowSuggestions, this.props.onReset);
@@ -224,6 +223,7 @@ class BaseSelector extends Component {
       suggestionsHeightMax,
       ariaInvalid,
       id,
+      name,
     } = this.props;
     const {showSuggestions, highlightedSuggestionIndex, suggestionListId} = this.state;
     return (
@@ -246,6 +246,7 @@ class BaseSelector extends Component {
           suggestionListId={suggestionListId}
           ariaInvalid={ariaInvalid}
           id={id}
+          name={name}
         />
         {showSuggestions &&
         <SuggestionsList
@@ -282,6 +283,7 @@ BaseSelector.propTypes = {
   ariaInvalid: PropTypes.bool,
   suggestionsHeightMax: PropTypes.number,
   id : PropTypes.string,
+  name : PropTypes.string,
 };
 
 BaseSelector.defaultProps = {

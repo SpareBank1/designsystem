@@ -1,5 +1,8 @@
 # Changelog
 
+# v7.1.0
+* Support setting name of input-field as prop to AccountSelector. The property is not required
+
 # v7.0.0
 ### Breaking changes
 Bumped peer dependency version of ffe-core. No external API change, but this version requires a new major of `ffe-core`
@@ -7,18 +10,18 @@ Bumped peer dependency version of ffe-core. No external API change, but this ver
 
 To migrate, update your app to ffe-core version 9.x
 
-# v6.0.0 
+# v6.0.0
 * Id prop required to promote good UU. Id of container set to `$id-container`, id of input field set to `id`
 
-# v5.0.3 
+# v5.0.3
 * Default value for suggestions element when no matches found
 
 # v5.0.2
-* Bugfix: Blur event wrongfully prevented after reset from ESC 
+* Bugfix: Blur event wrongfully prevented after reset from ESC
 
-# v5.0.1 
+# v5.0.1
 * Show suggestions on reset
-* Bugfix: always give input focus after reset 
+* Bugfix: always give input focus after reset
 
 # v5.0.0
 * Check README for migration from `nfe-account-selector-react`
