@@ -17,6 +17,7 @@ class Input extends Component {
       inputFieldRef,
       highlightedIndex,
       suggestionListId,
+      name,
     } = this.props;
     return (
       <div
@@ -38,6 +39,7 @@ class Input extends Component {
           ref={inputFieldRef}
           aria-invalid={ ariaInvalid }
           aria-autocomplete='list'
+          name={ name }
         />
         { value.length > 0 &&
         <button
@@ -68,6 +70,7 @@ Input.propTypes = {
   inputFieldRef: PropTypes.func,
   highlightedIndex: PropTypes.number,
   suggestionListId: PropTypes.string,
+  name: PropTypes.string,
 };
 
 Input.defaultProps = {
