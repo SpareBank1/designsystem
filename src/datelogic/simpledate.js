@@ -1,4 +1,4 @@
-const dateRegex = /(\d{2})\.(\d{2})\.(\d{4})/;
+const dateRegex = /^(\d{1,2})(\.| |-|\/)?(\d{1,2})\2(\d{2}(\d{2})?)$/;
 
 function isDate(date) {
   return !!date && typeof date === 'object' &&
@@ -6,9 +6,7 @@ function isDate(date) {
 }
 
 function SimpleDate(date) {
-  if (typeof date === 'string') {
-    this.internalDate = new Date(date.replace(dateRegex, '$3-$2-$1'));
-  } else if (isDate(date)) {
+  if (isDate(date)) {
     this.internalDate = date;
   } else {
     this.internalDate = new Date();
@@ -24,6 +22,25 @@ SimpleDateFactory.today = function today() {
   return new SimpleDate();
 };
 
+function beforeYear(year, yearLimit) {
+  return parseInt(year, 10) < yearLimit;
+}
+
+/*
+  If given a two-digit year we assume this century.
+  E.g: 01.01.17 will yield 01.01.2017, not 01.01.1917 (JS default)
+  Else they'll have to use 4-digit year.
+*/
+function deriveTwoDigitYear(year) {
+  const yearDate = new Date(year, 0);
+  const fullYear = yearDate.getFullYear();
+  if (beforeYear(fullYear, 2000)) {
+    return yearDate.getFullYear() + 100;
+  }
+
+  return yearDate.getFullYear();
+}
+
 SimpleDateFactory.fromString = function fromString(string) {
   const newDate = new SimpleDate();
   const match = dateRegex.exec(string);
@@ -32,7 +49,12 @@ SimpleDateFactory.fromString = function fromString(string) {
     return null;
   }
 
-  const [, date, month, year] = match;
+  const [ , date, , month] = match;
+  let year = match[4];
+
+  if (year.length === 2) {
+    year = deriveTwoDigitYear(year);
+  }
 
   newDate.setYear(year);
   newDate.setMonth(month - 1); // Months are 0-indexed
