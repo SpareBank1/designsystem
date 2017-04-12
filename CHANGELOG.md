@@ -1,5 +1,13 @@
 # Changelog
 
+## v.9.2.0
+
+* Added `motion.less`, which contains variables for common transitions 
+
+To migrate to this release, replace timing functions (including `ease-in`, `ease-out` and other functions that do not directly correspond to the variables) and duration with the variables that fit your use case. Make sure to specify which property to transition - avoid `all`.
+
+For example `transition: all 0.15s ease;` may be replaced by `transition: transform @ffe-transition-duration @ffe-ease-in-out-back;`.
+
 ## v.9.1.0
 
 * Definition of breakpoints and variables related to layout (`@app-width`, ...) have their own less files: `less/breakpoints.less` and `less/app-width.less`.
