@@ -1,3 +1,4 @@
+/* eslint react/prop-types:0*/
 import React from 'react';
 import { render } from 'react-dom';
 import ResponsiveTable from '../src/index';
@@ -26,6 +27,25 @@ const expandedContentMapper = row => row.address && row.email && row.phone && (
     </div>
 );
 
+const LazyContent = function({ row }) {
+    console.log('render row expansion for "%s"', row.name);
+    console.dir(row);
+    return (
+        <div>
+            <dl>
+                <dt>Adresse</dt>
+                <dd>{ row.address }</dd>
+                <dt>E-post</dt>
+                <dd>{ row.email }</dd>
+                <dt>Telefon</dt>
+                <dd>{ row.phone }</dd>
+            </dl>
+        </div>
+    );
+};
+
+const lazyExpandedContentMapper = row => row.address && row.email && row.phone && (<LazyContent row={row} />);
+
 render(
     <div className="ffe-body-text">
         <div className="ffe-section-wrapper">
@@ -51,7 +71,7 @@ render(
                 <ResponsiveTable
                     columns={SIMPLE_TABLE_SORTABLE_EXPANDABLE.columns}
                     data={SIMPLE_TABLE_SORTABLE_EXPANDABLE.dataObject}
-                    expandedContentMapper={ expandedContentMapper }
+                    expandedContentMapper={ lazyExpandedContentMapper }
                     sortable={true}
                     condensed={true}
                     smallHeader={true}
