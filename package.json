@@ -6,7 +6,7 @@
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/.",
     "watch": "onchange 'src/**/*.js' -- npm run build",
-    "pretest": "eslint src/.",
+    "pretest": "eslint --ext .js,jsx src/.",
     "test": "mocha --require babel-register 'src/**/*.test.js'",
     "posttest": "nsp check",
     "start": "budo examples/tables.js --open --live --title \"FFE Tables React\" -- -t [ babelify --presets [ es2015 react ] ] -t node-lessify",
