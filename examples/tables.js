@@ -6,7 +6,8 @@ import {
     SIMPLE_TABLE,
     SIMPLE_TABLE_WITH_FOOTER,
     SIMPLE_TABLE_EXPANDABLE,
-    SIMPLE_TABLE_SORTABLE_EXPANDABLE
+    SIMPLE_TABLE_SORTABLE_EXPANDABLE,
+    SIMPLE_TABLE_SORTABLE_PAGINATED
 } from './tables.data';
 
 require('./example.less');
@@ -66,6 +67,15 @@ render(
 
                 <h2 className="ffe-h2">Sortable table</h2>
                 <ResponsiveTable columns={SIMPLE_TABLE.columns} data={SIMPLE_TABLE.dataObject} sortable={true}/>
+
+                <h2 className="ffe-h2">Sortable table with offset and limit (5th to 15th item)</h2>
+                <ResponsiveTable
+                    columns={SIMPLE_TABLE_SORTABLE_PAGINATED.columns}
+                    data={SIMPLE_TABLE_SORTABLE_PAGINATED.dataObject}
+                    sortable={true}
+                    offset={4}
+                    limit={10}
+                />
 
                 <h2 className="ffe-h2">Sortable, expandable, captioned, footerized, condensed, small headers</h2>
                 <ResponsiveTable

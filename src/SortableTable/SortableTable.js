@@ -96,7 +96,7 @@ class SortableTable extends Component {
             };
         });
 
-        const { caption, expandedContentMapper, condensed, smallHeader } = this.props;
+        const { caption, expandedContentMapper, condensed, smallHeader, limit, offset } = this.props;
         const { sortBy, descending } = this.state;
 
         return (
@@ -107,6 +107,8 @@ class SortableTable extends Component {
                 data={ this.state.tableData }
                 condensed={ condensed }
                 smallHeader={ smallHeader }
+                limit={limit}
+                offset={offset}
                 sort={ { sortBy, descending } }
             />
         );
@@ -116,6 +118,8 @@ class SortableTable extends Component {
 SortableTable.propTypes = {
     caption: PropTypes.string,
     expandedContentMapper: PropTypes.func,
+    offset: PropTypes.number,
+    limit: PropTypes.number,
     condensed: PropTypes.bool,
     smallHeader: PropTypes.bool,
     columns: PropTypes.arrayOf(PropTypes.object).isRequired,

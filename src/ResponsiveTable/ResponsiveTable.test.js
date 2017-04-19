@@ -134,4 +134,58 @@ describe('<ResponsiveTable />', () => {
       expect(wrapper.find('td').first().prop('data-th')).to.equal(columns[0].header);
     });
   });
+
+  describe('offset and limit properties', () => {
+    const muchData = 'ABCDEFGHIJKLMNO'.split('')
+        .map((c, i) => ({ name: c, address: `Sesame Street ${i}`, age: i }));
+
+    const getContentOfFirstColumn = comp =>
+        comp.find('.ffe-responsive-table__cell:first-of-type .ffe-responsive-table__content');
+
+    describe('setting limit', () => {
+      const contentOfFirstColumn = getContentOfFirstColumn(
+        render(<ResponsiveTable columns={columns} data={muchData} limit={3} />)
+      );
+
+      it('reduces number of table rows', () =>
+        expect(contentOfFirstColumn).to.have.length(3));
+
+      it('does not skip data', () =>
+        expect( contentOfFirstColumn.first().text() ).to.eql('A'));
+
+      it('limits data', () =>
+        expect( contentOfFirstColumn.last().text() ).to.eql('C'));
+
+    });
+
+    describe('setting offset', () => {
+      const contentOfFirstColumn = getContentOfFirstColumn(
+        render(<ResponsiveTable columns={columns} data={muchData} offset={10} />)
+      );
+
+      it('reduces number of table rows', () =>
+        expect(contentOfFirstColumn).to.have.length(5));
+
+      it('skips data', () =>
+        expect( contentOfFirstColumn.first().text() ).to.eql('K'));
+
+      it('does not limits data', () =>
+        expect( contentOfFirstColumn.last().text() ).to.eql('O'));
+    });
+
+    describe('setting both', () => {
+      const contentOfFirstColumn = getContentOfFirstColumn(
+        render(<ResponsiveTable columns={columns} data={muchData} offset={5} limit={4} />)
+      );
+
+      it('reduces number of table rows', () =>
+        expect(contentOfFirstColumn).to.have.length(4));
+
+      it('skips data', () =>
+        expect( contentOfFirstColumn.first().text() ).to.eql('F'));
+
+      it('limits data', () =>
+        expect( contentOfFirstColumn.last().text() ).to.eql('I'));
+    });
+  });
 });

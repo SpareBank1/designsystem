@@ -23,7 +23,7 @@ class ResponsiveTable extends Component {
     renderTableHeaders() {
         const { columns } = this.props;
 
-        if (!columns || !columns.length) {
+        if (!columns.length) {
             return null;
         }
 
@@ -44,15 +44,25 @@ class ResponsiveTable extends Component {
         return <TableFooter columns={ columns } />;
     }
 
+    getData() {
+        const { data, offset, limit } = this.props;
+        if (!offset && !limit) {
+            return data;
+        }
+
+        return data.slice(offset, limit ? offset + limit : data.length);
+    }
+
     renderTableBody() {
         const {
-            data,
             columns,
             expandedContentMapper,
             sort
         } = this.props;
 
-        if (!data || !data.length) {
+        const data = this.getData();
+
+        if (!data.length) {
             return null;
         }
 
@@ -98,6 +108,8 @@ ResponsiveTable.propTypes = {
     condensed: PropTypes.bool,
     smallHeader: PropTypes.bool,
     sort: PropTypes.object,
+    offset: PropTypes.number,
+    limit: PropTypes.number,
     data: PropTypes.arrayOf(
         PropTypes.object
     ),
@@ -107,6 +119,13 @@ ResponsiveTable.propTypes = {
             key: PropTypes.string.isRequired,
         }).isRequired
     ),
+};
+
+ResponsiveTable.defaultProps = {
+    columns: [],
+    data: [],
+    offset: 0,
+    limit: 0
 };
 
 export default ResponsiveTable;
