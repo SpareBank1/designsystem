@@ -1,9 +1,12 @@
 /*eslint-env mocha*/
 import React from 'react';
-import { expect } from 'chai';
+import chai, { expect } from 'chai';
 import { shallow, render } from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
 
 import ResponsiveTable from './ResponsiveTable';
+
+chai.use(chaiEnzyme());
 
 describe('<ResponsiveTable />', () => {
   const columns = [
@@ -132,6 +135,20 @@ describe('<ResponsiveTable />', () => {
 
       expect(wrapper.find('[data-th="Navn"]')).to.have.length(columns.length);
       expect(wrapper.find('td').first().prop('data-th')).to.equal(columns[0].header);
+    });
+
+    it('render screen reader only caption', () => {
+
+        const wrapper = render(<ResponsiveTable data={data} columns={columns} caption="Read me" srOnlyCaption={true} />);
+        expect(wrapper.find('caption')).to.have.length(1);
+        expect(wrapper.find('caption')).to.have.className('ffe-screenreader-only');
+        expect(wrapper.find('caption')).to.have.text('Read me');
+    });
+
+    it('do not render caption when srOnlyCaption is true but missing caption text', () => {
+
+        const wrapper = render(<ResponsiveTable data={data} columns={columns} srOnlyCaption={true} />);
+        expect(wrapper.find('caption')).to.have.length(0);
     });
   });
 });
