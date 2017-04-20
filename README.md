@@ -36,13 +36,13 @@ use are sent to the client.
 ### Available props
 
 ```
-className: React.PropTypes.string
-desc: React.PropTypes.string
-focusable: React.PropTypes.bool
-onClick: React.PropTypes.func
-style: React.PropTypes.object
-tabIndex: React.PropTypes.number
-title: React.PropTypes.string
+className: PropTypes.string
+desc: PropTypes.string
+focusable: PropTypes.bool
+onClick: PropTypes.func
+style: PropTypes.object
+tabIndex: PropTypes.number
+title: PropTypes.string
 ```
 
 * Use css and `className` to change size and color, or use `style` and react inline styles.

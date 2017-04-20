@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.4.3
+
+* Stopped using PropTypes from the main react package since that's deprecated in favour of the 'prop-types' npm package.
+
 ## v2.4.2
 
 * Updated ffe-icons to version 7.5.4

@@ -22,6 +22,7 @@ const camelCaseSVGProps = svgString =>
  * */
 const createStandaloneJSX = iconName => `
 import React from 'react';
+import { string, bool, func, object, number } from 'prop-types';
 
 const svg = ${camelCaseSVGProps(icons[iconName])};
 const createTitle = title => title ? <title>{title}</title> : null;
@@ -42,13 +43,13 @@ const Icon = (
         </svg>;
 
 Icon.propTypes = {
-    className: React.PropTypes.string,
-    desc: React.PropTypes.string,
-    focusable: React.PropTypes.bool,
-    onClick: React.PropTypes.func,
-    style: React.PropTypes.object,
-    tabIndex: React.PropTypes.number,
-    title: React.PropTypes.string,
+    className: string,
+    desc: string,
+    focusable: bool,
+    onClick: func,
+    style: object,
+    tabIndex: number,
+    title: string,
 };
 
 export default Icon;
