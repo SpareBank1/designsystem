@@ -1,12 +1,9 @@
 /*eslint-env mocha*/
 import React from 'react';
-import chai, { expect } from 'chai';
+import { expect } from 'chai';
 import { shallow, render } from 'enzyme';
-import chaiEnzyme from 'chai-enzyme';
 
 import ResponsiveTable from './ResponsiveTable';
-
-chai.use(chaiEnzyme());
 
 describe('<ResponsiveTable />', () => {
   const columns = [
@@ -141,8 +138,8 @@ describe('<ResponsiveTable />', () => {
 
         const wrapper = render(<ResponsiveTable data={data} columns={columns} caption="Read me" srOnlyCaption={true} />);
         expect(wrapper.find('caption')).to.have.length(1);
-        expect(wrapper.find('caption')).to.have.className('ffe-screenreader-only');
-        expect(wrapper.find('caption')).to.have.text('Read me');
+        expect(wrapper.find('caption').hasClass('ffe-screenreader-only')).to.equal(true);
+        expect(wrapper.find('caption').text()).to.equal('Read me');
     });
 
     it('do not render caption when srOnlyCaption is true but missing caption text', () => {
