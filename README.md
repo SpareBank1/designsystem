@@ -132,6 +132,7 @@ The output of this function will be the contents of the expanded area of an expa
   because he doesn't have an `address`. In this case the row will not be expandable.
   - The presence of this function also acts as a boolean to inform the table it has expandable rows.
 - `condensed` adds the `--condensed`-modifier to the table for condensed row height.
+- `limit` and `offset` limit the number of table rows rendered. Behaves like `LIMIT` and `OFFSET` in SQL-queries and works well with the `sortable`-flag. Useful for pagination.
 - `smallHeader` adds the `--small-header`-modifier to the table for reduced header width
 on tables when screen width < 768px (`@breakpoint-md`).
 ```javascript

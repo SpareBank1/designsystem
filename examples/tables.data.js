@@ -131,7 +131,7 @@ export const SIMPLE_TABLE_SORTABLE_EXPANDABLE = {
             phone: '912 34 567',
             email: 'ola@normann.no',
             username: 'olli22',
-            button: <button onClick={e=>e.stopPropagation()}>poke</button>
+            button: <button onClick={e => e.stopPropagation()}>poke</button>
         },
         {
             name: 'Sivert Svenska',
@@ -142,7 +142,7 @@ export const SIMPLE_TABLE_SORTABLE_EXPANDABLE = {
             phone: '+46 123 456 789',
             email: 'sivert@svenska.se',
             username: 'zlatan_2000',
-            button: <button onClick={e=>e.stopPropagation()}>poke</button>
+            button: <button onClick={e => e.stopPropagation()}>poke</button>
         },
         {
             name: 'Daniel Dansk',
@@ -153,7 +153,7 @@ export const SIMPLE_TABLE_SORTABLE_EXPANDABLE = {
             // With no phone number, this guy won't be expandable
             email: 'daniel@dansk.dk',
             username: 'kartoffel88',
-            button: <button onClick={e=>e.stopPropagation()}>poke</button>
+            button: <button onClick={e => e.stopPropagation()}>poke</button>
         },
         {
             name: 'Anders Amerikaner',
@@ -164,7 +164,49 @@ export const SIMPLE_TABLE_SORTABLE_EXPANDABLE = {
             phone: '+1 555 555 5555',
             email: 'anders@amerikaner.biz',
             username: 'andy-mandy',
-            button: <button onClick={e=>e.stopPropagation()}>poke</button>
+            button: <button onClick={e => e.stopPropagation()}>poke</button>
         },
     ],
+};
+
+export const SIMPLE_TABLE_SORTABLE_PAGINATED = {
+    columns: [
+        {key: 'name', header: 'Navn'},
+        {key: 'hex', header: 'Heksadesimal'},
+        {key: 'r', header: 'Rødt'},
+        {key: 'g', header: 'Grønt'},
+        {key: 'b', header: 'Blått'}
+    ],
+    dataObject: [
+        { name: 'ffe-blue-royal', hex: '#002776' },
+        { name: 'ffe-blue-cobalt', hex: '#005AA4' },
+        { name: 'ffe-blue-azure', hex: '#0071CD' },
+        { name: 'ffe-blue-deep-sky', hex: '#008ED2' },
+        { name: 'ffe-blue-sky', hex: '#7FC6E8' },
+        { name: 'ffe-blue-pale', hex: '#DFF1F9' },
+        { name: 'ffe-blue-ice', hex: '#EFF8FC' },
+        { name: 'ffe-green', hex: '#37B441' },
+        { name: 'ffe-green-shamrock', hex: '#008A00' },
+        { name: 'ffe-green-emerald', hex: '#007B00' },
+        { name: 'ffe-green-mint', hex: '#E1F4E3' },
+        { name: 'ffe-orange', hex: '#FF9100' },
+        { name: 'ffe-orange-fire', hex: '#DA3D00' },
+        { name: 'ffe-orange-salmon', hex: '#F3BBAA' },
+        { name: 'ffe-red', hex: '#E60000' },
+        { name: 'ffe-purple', hex: '#C94096' },
+        { name: 'ffe-purple-magenta', hex: '#A20076' },
+        { name: 'ffe-sand', hex: '#F8F5EB' },
+        { name: 'ffe-sand-ivory', hex: '#FBFAF5' },
+        { name: 'ffe-white', hex: '#FFFFFF' },
+        { name: 'ffe-grey', hex: '#ADADAD' },
+        { name: 'ffe-grey-cloud', hex: '#F4F4F4' },
+        { name: 'ffe-grey-silver', hex: '#CCCCCC' },
+        { name: 'ffe-grey-charcoal', hex: '#676767' },
+        { name: 'ffe-black', hex: '#262626' }
+    ].map( c => ({
+        ...c,
+        r: parseInt(c.hex.substr(1, 2), 16),
+        g: parseInt(c.hex.substr(3, 2), 16),
+        b: parseInt(c.hex.substr(5, 2), 16)
+    }))
 };

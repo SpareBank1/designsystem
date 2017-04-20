@@ -1,5 +1,9 @@
 # Changelog
 
+## HEAD
+
+* Added props `limit` and `offset` to render only a subset of given data.
+
 ## v4.1.1
 
 * Reverted attempted fix on `onKeyDown`-events on expandable rows as it caused unforseen issues.
