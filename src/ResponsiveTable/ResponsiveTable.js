@@ -7,10 +7,20 @@ import TableRowExpandable from '../TableParts/TableRowExpandable';
 
 class ResponsiveTable extends Component {
     renderTableCaption() {
-        const { caption } = this.props;
+        const {
+            caption,
+            srOnlyCaption } = this.props;
 
         if (!caption) {
             return null;
+        }
+
+        if (srOnlyCaption) {
+            return (
+                <caption className="ffe-screenreader-only" aria-live="polite">
+                    {caption}
+                </caption>
+            );
         }
 
         return (
@@ -94,6 +104,7 @@ class ResponsiveTable extends Component {
 
 ResponsiveTable.propTypes = {
     caption: PropTypes.string,
+    srOnlyCaption: PropTypes.bool,
     expandedContentMapper: PropTypes.func,
     condensed: PropTypes.bool,
     smallHeader: PropTypes.bool,
