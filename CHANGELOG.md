@@ -1,7 +1,8 @@
 # Changelog
 
-## HEAD
+## v4.2.0
 
+* Added prop `srOnlyCaption` which visually hides the caption but keeps it available to screen readers.
 * Added props `limit` and `offset` to render only a subset of given data.
 
 ## v4.1.1

@@ -125,7 +125,7 @@ The table accepts any of these optional props:
   - Click the headers to sort the table.
   - Tables will not be `sortable` on screen width < 768px (`@breakpoint-md`)
 - `caption` is a string or node to insert as table caption.
-- `srOnlyCaption is a boolean to hide the caption and make it available for screen readers`
+- `srOnlyCaption` is a boolean to hide the caption and make it available for screen readers.
 - `expandedContentMapper` must be a reference to a function which takes a single value.
 The output of this function will be the contents of the expanded area of an expandable row.
   - As you see in the example below, the output of this function will be `undefined` for Sivert Svenska,
