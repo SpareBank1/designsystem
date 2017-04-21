@@ -4,6 +4,14 @@
     text-align: left;
     border-collapse: collapse;
 
+    &--text-left {
+        .ffe-responsive-table__heading,
+        .ffe-responsive-table__content,
+        .ffe-responsive-table__cell {
+            padding-left: 0;
+        }
+    }
+
     &__caption {
         &:extend(.ffe-h4);
     }
