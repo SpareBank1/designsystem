@@ -40,6 +40,9 @@ class ExpandableDemo extends Component {
                             <ComponentIpsum />
                             <ComponentIpsum />
                             <ComponentIpsum />
+                            <button className="button-in-expandable">
+                                A button
+                            </button>
                         </Expandable>
                         <h3 className="ffe-h3">Here is more content after the expandable content</h3>
                         <ComponentIpsum />
