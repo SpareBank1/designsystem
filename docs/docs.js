@@ -1,6 +1,6 @@
 import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
-import CreateCheckbox, { MainExample, YellowExample, PurpleExample, WhiteExample } from './example-component';
+import CreateCheckbox, { MainExample } from './example-component';
 
 const example = (
 <div>
@@ -23,7 +23,7 @@ const example = (
                     What colors do you like on unicorns?
                 </legend>
                 <div>
-                    { CreateCheckbox({ name: 'yellow-block', label: 'Yellow', checked: true }) }
+                    { CreateCheckbox({ name: 'yellow-block', label: 'Yellow', checked: true, onChange: () => {} }) }
                 </div>
                 <div>
                     { CreateCheckbox({ name: 'purple-block', label: 'Purple' }) }
@@ -44,7 +44,7 @@ const example = (
                 <legend className="ffe-form-label">
                     Favorite unicorn foods?
                 </legend>
-                { CreateCheckbox({ name: 'yellow-inline', label: 'Yellow', checked: true }) }
+                { CreateCheckbox({ name: 'yellow-inline', label: 'Yellow', checked: true, onChange: () => {} }) }
                 { CreateCheckbox({ name: 'purple-inline', label: 'Purple' }) }
                 { CreateCheckbox({ name: 'white-inline', label: 'White' }) }
             </fieldset>
