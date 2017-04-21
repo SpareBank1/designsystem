@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## Version 2.2.1
+* Expand peerDep scope of `ffe-grid` to include `4.x`.
+* Add devDeps to `ffe-core` and `ffe-grid`.
+
 ## Version 2.2.0
 * Add className property to Grid, GriRow and GridCol
 
