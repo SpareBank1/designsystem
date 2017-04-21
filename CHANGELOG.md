@@ -1,5 +1,9 @@
 # Changelog
 
+## 4.1.2
+* Expand peerDep scope of `ffe-form` to include `5.x`.
+* Remove peerDep to `ffe-core`.
+
 ## 4.1.1
 * Update eslint to latest ffe config
 
