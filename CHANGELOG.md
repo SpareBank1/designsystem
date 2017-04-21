@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.0.7
+Make room for button focus border when button is at the bottom of the expanded area
+
 ## 1.0.6
 Make sure content has 100% width of container
 

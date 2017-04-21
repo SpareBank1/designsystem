@@ -30,9 +30,9 @@ class Expandable extends React.Component {
         const ExpandedElementTag = isTable ? 'td' : 'div';
 
         const styles = {
-            maxHeight: isOpen ? height : 0,
+            height: isOpen ? height + 2 : 0,
             overflow: 'hidden',
-            transition: `max-height ${expandTime}s ease-out`,
+            transition: `height ${expandTime}s ease-out`,
         };
 
         return (

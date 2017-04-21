@@ -37,11 +37,11 @@ describe('ffe-expandable-react', () => {
         expect(componentMounted).to.contain(<ExpandedContent />);
     });
 
-    it('has wrapped Expandable with max-height set to 5000', () => {
-        expect(componentMounted.find('.expandable-wrapper')).to.have.style('max-height', '5000px');
+    it('adds 2 pixels to height to allow for focus border', () => {
+        expect(componentMounted.find('.expandable-wrapper')).to.have.style('height', '5002px');
     });
 
-    it('has wrapped Expandable with max-height set to 0 when isOpen is false', () => {
+    it('has wrapped Expandable with height set to 0px when isOpen is false', () => {
         componentMounted = mount(
             <Expandable
                 isOpen={false}
@@ -50,6 +50,6 @@ describe('ffe-expandable-react', () => {
                 customClass="expandable-wrapper"
             />
         );
-        expect(componentMounted.find('.expandable-wrapper')).to.have.style('max-height', '0');
+        expect(componentMounted.find('.expandable-wrapper')).to.have.style('height', '0px');
     });
 });
