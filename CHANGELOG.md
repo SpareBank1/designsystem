@@ -1,5 +1,9 @@
 #CHANGELOG
 
+## Version 3.1.6
+* Expand peerDep scope of `ffe-message-box` to include `4.x`.
+* Remove peerDep on `ffe-core` and `ffe-icons-react`.
+
 ## Version 3.1.5
 * Updated example descriptions
 
