@@ -8,7 +8,7 @@ export default function CheckBox(props) {
         label,
         noMargins,
         inline,
-        ...rest,
+        ...rest
     } = props;
 
     const id = `checkbox-${hash(rest.name)}`;

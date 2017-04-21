@@ -6,6 +6,7 @@ export const MainExample = (
         checked={false}
         name="Yellow"
         label="Yellow"
+        onChange={ () => {} }
     />
 );
 
