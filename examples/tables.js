@@ -86,7 +86,7 @@ render(
                     expandedContentMapper={ lazyExpandedContentMapper }
                     condensed={true}
                     smallHeader={true}
-                    caption="This is the craziest table we can offer"
+                    caption="This table even has caption!"
                     sortable={true}
                 />
 

@@ -1,5 +1,10 @@
 # Changelog
 
+## v4.2.1
+
+* Expand peerDep scope of `ffe-tables` to include `5.x`.
+* Remove peerDep on `ffe-core` and `ffe-icons-react`.
+
 ## v4.2.0
 
 * Added prop `srOnlyCaption` which visually hides the caption but keeps it available to screen readers.
