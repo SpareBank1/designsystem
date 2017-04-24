@@ -1,5 +1,9 @@
 # Changelog
 
+# v.2.0.2
+* Expand peerDep scope of `ffe-spinner` to include `2.x`.
+* Remove peerDep on `ffe-core`.
+
 ## v.2.0.1
 * Upgrade eslint to use latest ffe config
 
