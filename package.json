@@ -1,6 +1,6 @@
 {
   "name": "ffe-spinner-react",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "author": "Sparebank 1",
   "main": "lib/index.js",
   "scripts": {
@@ -30,6 +30,8 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^6.8.0",
+    "ffe-core": "^9.2.0",
+    "ffe-spinner": "^2.0.0",
     "mocha": "^2.4.5",
     "mocha-tap13": "0.0.3",
     "node-lessify": "^0.1.4",
@@ -39,8 +41,7 @@
     "react-dom": "^15.0.0"
   },
   "peerDependencies": {
-    "ffe-core": "^8.0.2",
-    "ffe-spinner": "^1.0.0"
+    "ffe-spinner": "1.x - 2.x"
   },
   "publishConfig": {
     "registry": "***REMOVED***"
