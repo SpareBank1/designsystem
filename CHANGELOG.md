@@ -1,5 +1,10 @@
 # Changelog
 
+## v2.1.1
+* Expand peerDep scope of `ffe-datepicker` to include `4.x`.
+* Expand peerDep scope of `ffe-form` to include `5.x`.
+* Remove peerDep on `ffe-core`.
+
 ## v2.1.0
 * Make it possible to display the calendar above the datepicker field using the `calendarAbove` boolean property.
 
