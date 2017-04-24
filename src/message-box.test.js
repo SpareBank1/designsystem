@@ -89,4 +89,12 @@ describe('<MessageBox />', () => {
         assert.ok(wrapper.props().style);
         assert.equal(wrapper.props().style.marginTop, '40px');
     });
+
+    it('should accept className prop to apply styles to outermost container', () => {
+        const wrapper = shallow(<SuccessMessage className="custom-class"/>);
+
+        assert.ok(wrapper.props().className);
+        assert.equal(wrapper.props().className, 'ffe-message-box custom-class');
+        assert.equal(wrapper.find('.custom-class').length, 1);
+    });
 });

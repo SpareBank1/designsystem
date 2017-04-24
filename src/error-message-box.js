@@ -7,12 +7,13 @@ const iconStyles = {
     height: '40px'
 };
 
-const ErrorMessage = ({ title, content, style, children }) => MessageBox({
+const ErrorMessage = ({ title, content, style, className, children }) => MessageBox({
     type: 'error',
     icon: <Icon style={ iconStyles }/>,
     title,
     content,
     style,
+    className,
     children
 });
 

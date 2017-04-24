@@ -32,6 +32,7 @@ The components accept the following props:
 - `content`: Content rendered inside a `<p />` tag. Can include HTML.
 - `children`: Content rendered without an enclosing tag.
 - `style`: Styling object for applying style to the outermost container.
+- `className`: Class on the outer wrapper. 
 
 Note that no props are required. However, you should at least provide either
 `content` or children for the component to look and behave correctly.

@@ -1,5 +1,8 @@
 #CHANGELOG
 
+## Version 3.2.0
+* Add support for className prop.
+
 ## Version 3.1.6
 * Expand peerDep scope of `ffe-message-box` to include `4.x`.
 * Remove peerDep on `ffe-core` and `ffe-icons-react`.

@@ -8,10 +8,11 @@ function MessageBox(props) {
         content,
         style,
         children,
+        className = ''
     } = props;
 
     return (
-        <div className="ffe-message-box" style={ style }>
+        <div className={`ffe-message-box ${className}`} style={ style }>
             <span
                 className={`
                     ffe-message-box__icon
@@ -44,6 +45,7 @@ function MessageBox(props) {
 
 MessageBox.propTypes = {
     children: PropTypes.any,
+    className: PropTypes.string,
     content: PropTypes.node,
     icon: PropTypes.node.isRequired,
     title: PropTypes.string,

@@ -14,7 +14,7 @@ document.body.appendChild(messageBoxDOM);
 
 render(
   <div>
-      <SuccessMessage title="Success!" content="This message is here to tell you about great success!"/>
+      <SuccessMessage title="Success!" className="custom-class" content="This message is here to tell you about great success!"/>
       <ErrorMessage title="Error!" content="This message is here to tell you about a horrible error!"/>
       <InfoMessage title="Information" content="This message is here to tell you something..."/>
       <TipsMessage title="Tips">
