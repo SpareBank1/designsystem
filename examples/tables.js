@@ -87,6 +87,7 @@ render(
                     condensed={true}
                     smallHeader={true}
                     caption="This is the craziest table we can offer"
+                    sortable={true}
                 />
 
             </div>

@@ -10,6 +10,7 @@ function ResponsiveTable(props) {
 
 ResponsiveTable.propTypes = {
     caption: PropTypes.string,
+    srOnlyCaption: PropTypes.bool,
     expandedContentMapper: PropTypes.func,
     sortable: PropTypes.bool,
     offset: PropTypes.number,

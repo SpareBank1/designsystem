@@ -96,12 +96,18 @@ class SortableTable extends Component {
             };
         });
 
-        const { caption, expandedContentMapper, condensed, smallHeader, limit, offset } = this.props;
+        let { caption } = this.props;
+        const { expandedContentMapper, condensed, smallHeader, limit, offset, srOnlyCaption } = this.props;
         const { sortBy, descending } = this.state;
+
+        if (srOnlyCaption && sortBy) {
+            caption = caption.concat(' ', sortBy, ' ', descending ? 'descending' : 'ascending');
+        }
 
         return (
             <ResponsiveTable
                 caption={ caption }
+                srOnlyCaption={ srOnlyCaption }
                 expandedContentMapper={ expandedContentMapper }
                 columns={ sortableColumns }
                 data={ this.state.tableData }
@@ -117,6 +123,7 @@ class SortableTable extends Component {
 
 SortableTable.propTypes = {
     caption: PropTypes.string,
+    srOnlyCaption: PropTypes.bool,
     expandedContentMapper: PropTypes.func,
     offset: PropTypes.number,
     limit: PropTypes.number,
