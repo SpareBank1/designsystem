@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 2.3.1
+
+* Expand peerDep scope of `ffe-context-message` to include `2.x`.
+* Remove peerDep on `ffe-core`, `ffe-icons-react`, `react` and `react-dom`.
+
 ## 2.3.0
 
 ### 🚀 New features
