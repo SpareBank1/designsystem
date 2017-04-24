@@ -1,5 +1,9 @@
 # Changelog
 
+# v7.1.1
+* Expand peerDep scope of `ffe-form` to include `5.x`.
+* Remove peerDep on `ffe-core`, `ffe-buttons` and `react`.
+
 # v7.1.0
 * Support setting name of input-field as prop to AccountSelector. The property is not required
 

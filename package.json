@@ -1,6 +1,6 @@
 {
   "name": "ffe-account-selector-react",
-  "version": "7.1.0",
+  "version": "7.1.1",
   "main": "lib/index.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/.",
@@ -29,9 +29,9 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^6.10.0",
-    "ffe-buttons": "^2.5.5",
+    "ffe-buttons": "^4.0.1",
     "ffe-core": "^9.x",
-    "ffe-form": "4.x",
+    "ffe-form": "^5.x",
     "ffe-icons": "^7.4.1",
     "jsdom": "^9.11.0",
     "mocha": "^3.2.0",
@@ -43,10 +43,7 @@
     "sinon": "^1.17.7"
   },
   "peerDependencies": {
-    "ffe-buttons": "^2.5.5",
-    "ffe-core": "^9.x",
-    "ffe-form": "4.x",
-    "react": "^15.4.2"
+    "ffe-form": "4.x - 5.x"
   },
   "publishConfig": {
     "registry": "https://nexus.intern.sparebank1.no/nexus/content/repositories/npm-internal"
@@ -64,8 +61,8 @@
   "license": "",
   "dependencies": {
     "classnames": "2.2.5",
-    "ffe-checkbox-react": "4.1.1",
-    "ffe-icons-react": "2.3.1",
+    "ffe-checkbox-react": "4.1.2",
+    "ffe-icons-react": "2.4.3",
     "lodash.isequal": "4.5.0",
     "nfe-amount-formatter": "2.0.1",
     "react-custom-scrollbars": "4.0.2"
