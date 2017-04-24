@@ -1,5 +1,9 @@
 # Changelog
 
+## v.5.1.0
+
+* Added modifier `--text-left` that left-aligns the content of headings and cells. Use it with `.ffe-responsive-table`.
+
 ## v.5.0.0
 
 ### Breaking changes
