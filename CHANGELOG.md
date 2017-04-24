@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.6.1
+
+* Expand peerDep scope of `ffe-form` to include `5.x`.
+* Remove peerDep on `ffe-core` and `ffe-spinner`.
+
 ## 2.6.0
 
 * Added support for autoFocus attribute
