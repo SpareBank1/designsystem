@@ -45,6 +45,9 @@ The label-attribute should then be omitted.
 </Dropdown>
 ```
 
+Alternatively, you can also use the `labelledBy` property in case you need to explicitly link the component to another label.
+Similarly, you can also use the `describedBy` property to mark another element as a description of the dropdown.
+
 If you want to initialize the dropdown with a non-empty value, you can supply a `defaultValue` prop.
 
 To get an error message showing pass `errorMessage` to the `Dropdown`.

@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.7.0
+
+* Add `labelledBy` and `describedBy` properties to the component.
+* Remove `aria-live="polite"` from the wrapping input group.
+
+
 ## 2.6.1
 
 * Expand peerDep scope of `ffe-form` to include `5.x`.

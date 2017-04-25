@@ -18,6 +18,8 @@ function Dropdown(props) {
         invalid,
         isLoading,
         label,
+        labelledBy,
+        describedBy,
         name,
         onChange,
         onBlur,
@@ -28,7 +30,7 @@ function Dropdown(props) {
     const domId = id || createID(label, children);
 
     return (
-        <div className={`ffe-input-group ${containerClassName}`} aria-live="polite">
+        <div className={`ffe-input-group ${containerClassName}`}>
             {label &&
                 <label className="ffe-form-label ffe-form-label--block" htmlFor={domId}>
                     {label}
@@ -43,6 +45,8 @@ function Dropdown(props) {
                 value={selectedValue}
                 defaultValue={defaultValue}
                 aria-invalid={invalid}
+                aria-labelledby={labelledBy}
+                aria-describedby={describedBy}
                 autoFocus={autoFocus}
             >
                 {children}
@@ -71,6 +75,8 @@ Dropdown.propTypes = {
     invalid: PropTypes.bool,
     isLoading: PropTypes.bool,
     label: PropTypes.string,
+    labelledBy: PropTypes.string,
+    describedBy: PropTypes.string,
     name: PropTypes.string,
     onChange: PropTypes.func.isRequired,
     onBlur: PropTypes.func,
