@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.5.0 (25.4.2017)
+
+* Pass through additional `props` passed to `RadioSwitch` onwards to `RadioButtonGroup`.
+* Pass through additional `props` passed to `RadioButtonGroup` onwards to `fieldset`, then we can add additional stuff such as `aria-labelledby` directly.
+* Pass through additional `props` passed to `RadioBase` onwards to `input`.
+
 ## v0.4.3 (25.4.2017)
 
 * Removed `aria-live="polite"` from `RadioButtonGroup`, as it should not be used to wrap all input fields.
