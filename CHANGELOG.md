@@ -1,5 +1,8 @@
 # Changelog
 
+## Version 5.1.1
+* Remove background color on ffe-radio-button. Was set to white which made it look weird if used in containers with different colors.
+
 ## Version 5.1.0
 
 * Set default text color for input fields and selects to `@ffe-black`
