@@ -1,10 +1,11 @@
 {
   "name": "ffe-header",
-  "version": "8.0.0",
+  "version": "8.0.1",
   "description": "Felles header for SpareBank 1",
   "main": "index.js",
   "scripts": {
-    "examples": "lessc examples/examples.less examples/examples.css && mkdirp examples/fonts && cp -R node_modules/ffe-core/fonts/* examples/fonts/ && echo Now open /examples/index.html to see styleguide.",
+    "compile": "lessc examples/examples.less examples/examples.css && mkdirp examples/fonts && cp -R node_modules/ffe-core/fonts/* examples/fonts/",
+    "examples": "npm run compile && echo Now open /examples/index.html to see styleguide.",
     "lint": "lessc --lint examples/examples.less && stylelint less/*.less",
     "has-published": "npm show . versions -s | grep -q ${npm_package_version}",
     "postpublish": "git tag ${npm_package_version} && git push --tags"
@@ -19,9 +20,13 @@
   "author": "Glenn Brownlee <glenn.brownlee@sparebank1.no>",
   "license": "ISC",
   "peerDependencies": {
+    "ffe-buttons": "4.x",
     "ffe-core": "9.x"
   },
   "devDependencies": {
+    "ffe-buttons": "^4.0.1",
+    "ffe-core": "^9.2.0",
+    "ffe-visual-tests-support": "^2.1.2",
     "less": "^2.7.1",
     "mkdirp": "^0.5.1",
     "stylelint": "^7.7.1",
