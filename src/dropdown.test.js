@@ -148,10 +148,10 @@ describe('<Dropdown /> with externally rendered label and id', () => {
     });
 });
 
-describe('<Dropdown /> with labelledBy and describedBy', () => {
+describe('<Dropdown /> should work with extra stuff such as aria-labelledby and aria-describedby', () => {
     const externalLabelId = 'someLabel';
     const externalDescriptionId = 'someDescription';
-    const dropdown = <Dropdown labelledBy={ externalLabelId } describedBy={ externalDescriptionId }>
+    const dropdown = <Dropdown aria-labelledby={ externalLabelId } aria-describedby={ externalDescriptionId }>
         <option value="steve">Steve Vai</option>
         <option value="guthrie">Guthrie Govan</option>
         <option value="mateus">Mateus Asato</option>

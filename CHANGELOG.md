@@ -2,7 +2,7 @@
 
 ## 2.7.0
 
-* Add `labelledBy` and `describedBy` properties to the component.
+* Pass through (almost) all `props` passed to `Dropdown` directly to `select`. Then we can use the component more like the native ones.
 * Remove `aria-live="polite"` from the wrapping input group.
 
 

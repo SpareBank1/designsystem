@@ -13,18 +13,12 @@ function Dropdown(props) {
         children,
         className = '',
         containerClassName = '',
-        defaultValue,
         errorMessage,
         invalid,
         isLoading,
         label,
-        labelledBy,
-        describedBy,
-        name,
-        onChange,
-        onBlur,
         selectedValue,
-        autoFocus
+        ...rest
     } = props;
 
     const domId = id || createID(label, children);
@@ -39,15 +33,9 @@ function Dropdown(props) {
             <select
                 className={`ffe-dropdown ${className}`}
                 id={domId}
-                name={name}
-                onChange={onChange}
-                onBlur={onBlur}
                 value={selectedValue}
-                defaultValue={defaultValue}
                 aria-invalid={invalid}
-                aria-labelledby={labelledBy}
-                aria-describedby={describedBy}
-                autoFocus={autoFocus}
+                {...rest}
             >
                 {children}
             </select>
@@ -75,8 +63,6 @@ Dropdown.propTypes = {
     invalid: PropTypes.bool,
     isLoading: PropTypes.bool,
     label: PropTypes.string,
-    labelledBy: PropTypes.string,
-    describedBy: PropTypes.string,
     name: PropTypes.string,
     onChange: PropTypes.func.isRequired,
     onBlur: PropTypes.func,
