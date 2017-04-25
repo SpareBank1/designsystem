@@ -45,7 +45,7 @@ const RadioButtonGroup = ({ label, name, inline, invalid, buttons, children, val
     const labelStyle = inline ? { display: 'block' } : {};
 
     return (
-        <div className="ffe-input-group" aria-live="polite">
+        <div className="ffe-input-group">
             <fieldset
                 className="ffe-fieldset"
                 value={value}
