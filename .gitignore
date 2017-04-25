@@ -1,5 +1,6 @@
 #Editors
 *~
+*.iml
 
 #FFE fonts
 dev/ffe/*
