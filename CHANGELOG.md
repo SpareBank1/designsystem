@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.4.3 (25.4.2017)
+
+* Removed `aria-live="polite"` from `RadioButtonGroup`, as it should not be used to wrap all input fields.
+
 ## v0.4.2 (27.12.2016)
 
 * Update eslint configuraton to use latest ffe config.
