@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## Version 1.1.4
+* Removed peerDep on ffe-core
+
 ## Version 1.1.3
 * Added description to example
 
