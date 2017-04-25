@@ -5,13 +5,15 @@ const inlined = {
     display: 'inline-block'
 };
 
+const createId = values => `radio-button-${ hash(values) }`;
+
 class RadioBase extends Component {
 
     constructor(props) {
         super(props);
 
         let styles = props.style;
-        if(props.inline) {
+        if (props.inline) {
             styles = Object.assign({}, inlined, styles);
         }
         this.state = { styles };
@@ -19,31 +21,29 @@ class RadioBase extends Component {
 
     render() {
         const {
-            checked,
             children,
-            disabled,
+            id,
             inline,
             label,
             labelClasses,
             name,
-            onChange,
             value,
+            ...rest
         } = this.props;
 
-        const id = `radio-button-${ hash({ name, value, label, inline }) }`;
+        const domId = id || createId({ name, value, label, inline });
 
         return (
             <div style={ this.state.styles }>
-                <input type="radio"
-                       className="ffe-radio-input"
-                       name={ name }
-                       value={ value }
-                       id={ id }
-                       checked={ checked }
-                       disabled={ disabled }
-                       onChange={ onChange }
+                <input
+                    type="radio"
+                    className="ffe-radio-input"
+                    name={ name }
+                    value={ value }
+                    id={ domId }
+                    {...rest}
                 />
-                <label className={ labelClasses } htmlFor={ id }>
+                <label className={ labelClasses } htmlFor={ domId }>
                     { label || children }
                 </label>
             </div>
@@ -53,7 +53,9 @@ class RadioBase extends Component {
 
 RadioBase.propTypes = {
     checked: PropTypes.bool,
+    children: PropTypes.node,
     disabled: PropTypes.bool,
+    id: PropTypes.string,
     inline: PropTypes.bool,
     label: PropTypes.string,
     labelClasses: PropTypes.string.isRequired,

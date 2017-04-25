@@ -1,9 +1,9 @@
 import React, { Component, PropTypes } from 'react';
-import hash from 'nfe-hash';
 
 import RadioBase from './radio-base';
 
 class RadioButton extends Component {
+
     constructor(props) {
         super(props);
 
