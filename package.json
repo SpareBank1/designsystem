@@ -1,6 +1,6 @@
 {
   "name": "ffe-form",
-  "version": "5.1.0",
+  "version": "5.1.1",
   "description": "Form-/skjemapakke for Felles Front End",
   "main": "less/form.less",
   "scripts": {
@@ -9,6 +9,7 @@
     "start": "watch \"npm run -s compile\" less/",
     "test:nsp": "nsp check",
     "test:visual": "./run_visual-tests.sh",
+    "test:update-baseline": "./update_visual-tests-baselines.sh",
     "test": "npm run lint && npm run test:nsp && npm run test:visual",
     "examples": "lessc examples/examples.less examples/examples.css --autoprefix && mkdirp examples/fonts && cp -R node_modules/ffe-core/fonts/* examples/fonts/ && echo Now open /examples/[component].html to see styleguide.",
     "has-published": "npm show . versions -s | grep -q ${npm_package_version}",
@@ -69,7 +70,7 @@
   ],
   "devDependencies": {
     "ffe-core": "9.x",
-    "ffe-visual-tests-support": "2.0.0",
+    "ffe-visual-tests-support": "2.1.1",
     "less": "^2.6.1",
     "less-plugin-autoprefix": "^1.5.1",
     "mkdirp": "^0.5.1",
