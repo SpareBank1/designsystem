@@ -49,4 +49,23 @@ describe('<RadioSwitch />', () => {
         });
     });
 
+    describe('pass-through of additional props values', () => {
+
+        const labelledBy = 'someId';
+        const describedBy= 'anotherId';
+        const wrapper = shallow(
+            <RadioSwitch
+                firstOption={ { label: 'one', value: 1 } }
+                lastOption={ { label: 'two', value: 2 } }
+                aria-labelledby={ labelledBy }
+                aria-describedby={ describedBy }
+            />
+        );
+
+        it('should allow pass-through of additional props values', () => {
+            expect(wrapper.find('RadioButtonGroup').prop('aria-labelledby')).to.equal(labelledBy);
+            expect(wrapper.find('RadioButtonGroup').prop('aria-describedby')).to.equal(describedBy);
+        });
+    });
+
 });

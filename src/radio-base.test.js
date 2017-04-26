@@ -53,6 +53,11 @@ describe('<RadioBase />', () => {
             const wrapper = shallow(<RadioBase labelClasses="test-class" value="" />);
             expect(wrapper.find('label').hasClass('test-class')).to.be.true;
         });
+
+        it('should apply pass-through extra props', () => {
+          const wrapper = shallow(<RadioBase labelClasses="" value="shark" label="Kjempetorsk" aria-describedby="svorsk" />);
+          expect(wrapper.find('input').prop('aria-describedby')).to.equal('svorsk');
+        });
     });
 
     describe('interactivity', () => {

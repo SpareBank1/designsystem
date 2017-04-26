@@ -186,4 +186,21 @@ describe('<RadioButtonGroup />', () => {
             expect(wrapper.find('input[value="orange"]')).to.be.checked;
         });
     });
+
+    describe('pass-through of additional props values', () => {
+
+        const labelledBy = 'someId';
+        const describedBy= 'anotherId';
+        const wrapper = shallow(
+            <RadioButtonGroup
+                aria-labelledby={ labelledBy }
+                aria-describedby={ describedBy }
+            />
+        );
+
+        it('should allow pass-through of additional props values', () => {
+            expect(wrapper.find('fieldset').prop('aria-labelledby')).to.equal(labelledBy);
+            expect(wrapper.find('fieldset').prop('aria-describedby')).to.equal(describedBy);
+        });
+    });
 });
