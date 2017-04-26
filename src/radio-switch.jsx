@@ -6,24 +6,13 @@ import RadioBase from './radio-base';
 const RadioSwitch = (props) => {
     const {
         value,
-        disabled,
         firstOption,
-        invalid,
-        label,
         lastOption,
-        name,
-        onChange,
+        ...rest
     } = props;
 
     return (
-        <RadioButtonGroup
-            disabled={disabled}
-            inline={true}
-            invalid={invalid}
-            name={name}
-            label={label}
-            onChange={onChange}
-        >
+        <RadioButtonGroup inline={true} {...rest}>
             <RadioBase
                 checked={value === firstOption.value}
                 label={firstOption.label}

@@ -19,7 +19,7 @@ const isChecked = (groupValue, radioValue, radioChecked) => groupValue ? groupVa
 const listenToChange = (process.env.NODE_ENV !== 'production') ? (groupOnChange, fieldOnChange) => fieldOnChange || (groupOnChange && nil)
                                                                : (groupOnChange, fieldOnChange) => fieldOnChange;
 
-const RadioButtonGroup = ({ label, name, inline, invalid, buttons, children, value, disabled, onChange }) => {
+const RadioButtonGroup = ({ label, name, inline, invalid, buttons, children, value, disabled, onChange, ...rest }) => {
 
     let overridden;
     if (buttons) {
@@ -51,6 +51,7 @@ const RadioButtonGroup = ({ label, name, inline, invalid, buttons, children, val
                 value={value}
                 onChange={onChange}
                 aria-invalid={invalid ? 'true' : 'false'}
+                {...rest}
             >
                 {label &&
                     <legend className="ffe-form-label" style={labelStyle}>
