@@ -4,8 +4,8 @@ JavaScript general use string formatters.
 
 ## THIS PACKAGE IS NOT YET PUBLISHED
 
-This package is still under active pre-launch development. If you want to install it locally, 
-please install it with its git URL. 
+This package is still under active pre-launch development. If you want to install it locally,
+please install it with its git URL.
 
 ## Installation
 
@@ -30,13 +30,13 @@ You'll find a full overview over all the available formatters in the [`src/`-fol
 
 ## Development
 
-To develop locally, clone the repository and install the dependencies. Once you have, you have 
+To develop locally, clone the repository and install the dependencies. Once you have, you have
 the following commands available to you:
 
 ```bash
-yarn start          # Starts the continuous test runner
-yarn lint           # Lints your code for common errors
-yarn build          # Runs the production build
+yarn test               # Runs all tests
+yarn test:watch         # Starts the continuous test runner
+yarn test:coverage      # Runs all tests with code coverage
 ```
 
 ## Contributing
