@@ -1,0 +1,10 @@
+# Dependencies
+node_modules
+
+# Logs
+*.log
+
+# Editors
+.idea
+*.iml
+*.imr
