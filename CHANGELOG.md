@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.7.0
+
+* Pass through (almost) all `props` passed to `Dropdown` directly to `select`. Then we can use the component more like the native ones.
+* Remove `aria-live="polite"` from the wrapping input group.
+
+
 ## 2.6.1
 
 * Expand peerDep scope of `ffe-form` to include `5.x`.

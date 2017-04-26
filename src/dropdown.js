@@ -13,22 +13,18 @@ function Dropdown(props) {
         children,
         className = '',
         containerClassName = '',
-        defaultValue,
         errorMessage,
         invalid,
         isLoading,
         label,
-        name,
-        onChange,
-        onBlur,
         selectedValue,
-        autoFocus
+        ...rest
     } = props;
 
     const domId = id || createID(label, children);
 
     return (
-        <div className={`ffe-input-group ${containerClassName}`} aria-live="polite">
+        <div className={`ffe-input-group ${containerClassName}`}>
             {label &&
                 <label className="ffe-form-label ffe-form-label--block" htmlFor={domId}>
                     {label}
@@ -37,13 +33,9 @@ function Dropdown(props) {
             <select
                 className={`ffe-dropdown ${className}`}
                 id={domId}
-                name={name}
-                onChange={onChange}
-                onBlur={onBlur}
                 value={selectedValue}
-                defaultValue={defaultValue}
                 aria-invalid={invalid}
-                autoFocus={autoFocus}
+                {...rest}
             >
                 {children}
             </select>

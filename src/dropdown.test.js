@@ -147,3 +147,36 @@ describe('<Dropdown /> with externally rendered label and id', () => {
         );
     });
 });
+
+describe('<Dropdown /> should work with extra stuff such as aria-labelledby and aria-describedby', () => {
+    const externalLabelId = 'someLabel';
+    const externalDescriptionId = 'someDescription';
+    const dropdown = <Dropdown aria-labelledby={ externalLabelId } aria-describedby={ externalDescriptionId }>
+        <option value="steve">Steve Vai</option>
+        <option value="guthrie">Guthrie Govan</option>
+        <option value="mateus">Mateus Asato</option>
+    </Dropdown>;
+
+    it('should not render its own label', () => {
+        const wrapper = shallow(dropdown);
+        assert.equal(wrapper.find('label').length, 0);
+    });
+
+    it('should link the external id using aria-labelledby', () => {
+        const wrapper = shallow(dropdown);
+
+        assert.equal(
+            externalLabelId,
+            wrapper.find('select').prop('aria-labelledby')
+        );
+    });
+
+    it('should link the external id using aria-describedby', () => {
+        const wrapper = shallow(dropdown);
+
+        assert.equal(
+            externalDescriptionId,
+            wrapper.find('select').prop('aria-describedby')
+        );
+    });
+});
