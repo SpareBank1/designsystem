@@ -28,6 +28,18 @@ formatDate(moment('20000101')) === '01.01.2000'
 formatDate(946681200000) === '01.01.2000'
 ```
 
+### `km(distance)`
+
+Formats distances in kilometers in the correct format with non breaking
+space characters.
+
+```javascript
+import formatKm from 'ffe-formatters/km';
+
+formatKm(160520) === '160 520 km'
+```
+
+
 ### `number(num [, decimals = 0])`
 
 Formats numbers to the correct format separated with non breaking
