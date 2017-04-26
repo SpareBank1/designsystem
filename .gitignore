@@ -8,3 +8,6 @@ node_modules
 .idea
 *.iml
 *.imr
+
+# Coverage data
+coverage
