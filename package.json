@@ -22,5 +22,8 @@
     "babel-preset-latest": "^6.24.1",
     "jest": "^19.0.2",
     "moment": "^2.18.1"
+  },
+  "dependencies": {
+    "underscore.string": "^3.3.4"
   }
 }
