@@ -20,6 +20,7 @@
     "babel-plugin-root-import": "^5.1.0",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-preset-latest": "^6.24.1",
-    "jest": "^19.0.2"
+    "jest": "^19.0.2",
+    "moment": "^2.18.1"
   }
 }

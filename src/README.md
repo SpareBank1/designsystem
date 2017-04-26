@@ -7,6 +7,7 @@ the relevant tests, as they provide more information on edge case behavior.
 ## Table of contents
 
 - [`account-number`](#account-number)
+- [`date`](#date)
 - [`ssn`](#ssn)
 
 ### `account-number`
@@ -18,6 +19,18 @@ space characters.
 import formatAccountNumber from 'ffe-formatters/account-number';
 
 formatAccountNumber('90010012345') === '9001 00 12345'
+```
+
+### `date`
+
+Formats timestamps, `Date`- `moment` objects to the correct format.
+
+```javascript
+import formatDate from 'ffe-formatters/date';
+
+formatDate(new Date('2000', 0, 1)) === '01.01.2000'
+formatDate(moment('20000101')) === '01.01.2000'
+formatDate(946681200000) === '01.01.2000'
 ```
 
 ### `ssn`
