@@ -61,7 +61,6 @@ import formatKm from 'ffe-formatters/km';
 formatKm(160520) === '160 520 km'
 ```
 
-
 ### `number(num [, decimals = 0])`
 
 Formats numbers to the correct format separated with non breaking
@@ -74,6 +73,21 @@ import formatNumber from 'ffe-formatters/number';
 formatNumber(1000000) === '1 000 000'
 formatNumber(1234.567) === '1 234'
 formatNumber(1234.567, 2) === '1 234,56'
+```
+
+### `percentage(num [, maxDecimals = 2])`
+
+Formats percentages to the correct format separated with non breaking
+space characters. Returns as few decimals as possible. By default there's
+a two digit maximum on decimals, but this can be overridden by the second
+optional argument if needed.
+
+```javascript
+import formatPercentage from 'ffe-formatters/percentage';
+
+formatPercentage(0.10) === '10 %';
+formatPercentage(0.123456) === '12.35 %' // rounds the overflowing decimals
+formatPercentage(0.123456, 4) === '12.3456'
 ```
 
 ### `ssn(fødselsnummer)`
