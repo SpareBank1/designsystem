@@ -1,5 +1,10 @@
 # Changelog
 
+## v2.0.2
+
+* Expand peerDep scope of `ffe-lists` to include `4.x`.
+* Remove peerDep on `ffe-core`.
+
 ## v2.0.1
 
 * Fixed erroneous reference to renamed file
