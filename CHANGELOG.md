@@ -1,5 +1,9 @@
 # Changelog
 
+## 7.6.0
+
+* Added hus-stjerne-ikon.svg
+
 ## 7.5.4
 
 * Bugfix: Removed a class-attribute that caused warnings when used with react.
