@@ -1,7 +1,7 @@
 import numberFormat from 'underscore.string/numberFormat';
 import { NON_BREAKING_SPACE } from '~/unicode';
 
-const parse = (number) => {
+export const parse = (number) => {
     if (!number || typeof number === 'number') {
         return number;
     }

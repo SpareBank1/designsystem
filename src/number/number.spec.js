@@ -1,4 +1,5 @@
 import formatNumber from '.';
+import { parse } from './number';
 
 describe('formatNumber', () => {
     test('noops on falsy values', () => {
@@ -38,5 +39,40 @@ describe('formatNumber', () => {
     test('format numeric strings', () => {
         expect(formatNumber('1234')).toBe('1 234');
         expect(formatNumber('-1234567')).toBe('-1 234 567');
+    });
+});
+
+describe('parse', () => {
+    test('noops on non-string arguments', () => {
+        expect(parse(null)).toBe(null);
+        expect(parse(undefined)).toBe(undefined);
+        expect(parse(false)).toBe(false);
+        expect(parse('')).toBe('');
+    });
+
+    test('parses regular numeric strings', () => {
+        expect(parse('123')).toBe(123);
+        expect(parse('0')).toBe(0);
+        expect(parse('000123456')).toBe(123456);
+    });
+
+    test('parses negative numbers', () => {
+        expect(parse('-1')).toBe(-1);
+        expect(parse('-123456')).toBe(-123456);
+    });
+
+    test('parses leading-zeroes strings as numbers', () => {
+        expect(parse('000123456')).toBe(123456);
+    });
+
+    test('parses formatted numeric strings', () => {
+        expect(parse('1 234 567')).toBe(1234567);
+        expect(parse('-1 234 567')).toBe(-1234567);
+        expect(parse('0,235')).toBe(0.235);
+    });
+
+    test('parses numeric strings with prefixes etc', () => {
+        expect(parse('kr 1 234')).toBe(1234);
+        expect(parse('1 tusenlapp og 234 kroner')).toBe(1234);
     });
 });
