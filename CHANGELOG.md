@@ -1,5 +1,8 @@
 # Changelog
 
+## Version 5.1.2
+* Replaced hardcoded transition properties with variables from ffe-core
+
 ## Version 5.1.1
 * Remove background color on ffe-radio-button. Was set to white which made it look weird if used in containers with different colors.
 
