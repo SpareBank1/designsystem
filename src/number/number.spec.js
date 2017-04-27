@@ -1,5 +1,4 @@
 import formatNumber from '.';
-import { parse } from './number';
 
 describe('formatNumber', () => {
     test('noops on falsy values', () => {

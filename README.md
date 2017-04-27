@@ -4,11 +4,9 @@ JavaScript general use string formatters.
 
 ## Installation
 
-Install this package via Yarn or npm like so:
+Install this package via npm like so:
 
 ```bash
-yarn add ffe-formatters
-# or
 npm install --save ffe-formatters
 ```
 
@@ -38,9 +36,10 @@ To develop locally, clone the repository and install the dependencies. Once you 
 the following commands available to you:
 
 ```bash
-yarn test               # Runs all tests
-yarn test:watch         # Starts the continuous test runner
-yarn test:coverage      # Runs all tests with code coverage
+npm test                    # Runs all tests
+npm run test:watch          # Starts the continuous test runner
+npm run test:coverage       # Runs all tests with code coverage
+npm run lint                # Lints the code for errors
 ```
 
 ## Contributing

@@ -2,7 +2,7 @@
   "name": "ffe-formatters",
   "version": "1.0.0",
   "description": "JavaScript general use string formatters",
-  "main": "src/index.js",
+  "main": "index.js",
   "files": [
     "lib",
     "src"
@@ -10,7 +10,8 @@
   "scripts": {
     "test": "jest --coverage",
     "test:watch": "jest --watch",
-    "test:nocoverage": "jest"
+    "test:nocoverage": "jest",
+    "lint": "eslint src/"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,11 @@
     "babel-plugin-root-import": "^5.1.0",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-preset-latest": "^6.24.1",
+    "eslint": "^3.19.0",
+    "eslint-config-ffe": "^6.0.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^3.0.2",
+    "eslint-plugin-react": "^6.10.3",
     "jest": "^19.0.2",
     "moment": "^2.18.1"
   },
