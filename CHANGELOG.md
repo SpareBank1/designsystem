@@ -1,5 +1,9 @@
 #CHANGELOG
 
+## Version 8.0.1
+
+Since buttons are no longer part of ffe-core, ffe-buttons was added as a peer dependency
+
 ## Version 8.0.0
 
 ### Breaking changes
