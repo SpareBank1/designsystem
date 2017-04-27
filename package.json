@@ -4,8 +4,8 @@
   "description": "JavaScript general use string formatters",
   "main": "index.js",
   "files": [
-    "lib",
-    "src"
+    "lib/",
+    "src/"
   ],
   "scripts": {
     "prebuild": "rimraf lib",
@@ -13,14 +13,19 @@
     "test": "jest --coverage",
     "test:watch": "jest --watch",
     "test:nocoverage": "jest",
-    "lint": "eslint src/"
+    "lint": "eslint src/",
+    "precommit": "npm run lint && npm run test:nocoverage",
+    "prepublish": "npm run build"
+  },
+  "publishConfig": {
+    "registry": "***REMOVED***"
   },
   "repository": {
     "type": "git",
     "url": "***REMOVED***"
   },
   "keywords": [],
-  "author": "Kristofer Selbekk <kristofer.selbekk@sparebank1.no> (https://www.sparebank1.no)",
+  "author": "SpareBank 1",
   "license": "UNLICENCED",
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -33,6 +38,7 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^6.10.3",
+    "husky": "^0.13.3",
     "jest": "^19.0.2",
     "moment": "^2.18.1",
     "rimraf": "^2.6.1"
