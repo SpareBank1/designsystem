@@ -1,7 +1,7 @@
 .ffe-radio-block {
     margin-top: 20px;
     width: 100%;
-    transition: width 0.3s ease-in-out;
+    transition: width @ffe-transition-duration @ffe-ease-in-out-back;
 
     &__content {
         width: 100%;
@@ -13,6 +13,7 @@
         color: @ffe-black;
         background-color: @ffe-white;
         cursor: pointer;
+        transition: border-color @ffe-transition-duration @ffe-ease;
 
         &::before {
             .ffe-sb1-radioblob();
@@ -27,6 +28,9 @@
         display: block;
         padding: 8px 60px 7px;
         cursor: pointer;
+        transition:
+            background-color @ffe-transition-duration @ffe-ease,
+            border-color @ffe-transition-duration @ffe-ease;
     }
 
     &__wrapper {
