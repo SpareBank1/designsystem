@@ -2,11 +2,6 @@
 
 JavaScript general use string formatters.
 
-## THIS PACKAGE IS NOT YET PUBLISHED
-
-This package is still under active pre-launch development. If you want to install it locally,
-please install it with its git URL.
-
 ## Installation
 
 Install this package via Yarn or npm like so:
