@@ -20,8 +20,8 @@ You can import formatters in two different ways. If your build chain does tree s
 import { formatNumber, formatPercentage } from 'ffe-formatters';
 ```
 
-If you don't that feature enabled, you should import them like this to avoid bundling
-unneeded code:
+If you don't have that feature enabled, you should import the formatters you need like
+this to avoid bundling unused code:
 
 ```javascript
 import formatNumber from 'ffe-formatters/lib/format-number';
