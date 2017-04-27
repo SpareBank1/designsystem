@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "JavaScript general use string formatters",
   "main": "src/index.js",
+  "files": [
+    "lib",
+    "src"
+  ],
   "scripts": {
     "test": "jest --coverage",
     "test:watch": "jest --watch",

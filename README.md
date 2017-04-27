@@ -14,11 +14,20 @@ npm install --save ffe-formatters
 
 ## Usage
 
-Import the functions you need directly from the `ffe-formatters` package like this to avoid
-depending on the entire package:
+You can import formatters in two different ways. If your build chain does tree shaking
+(through Webpack 2 or Rollup), you can import them like this:
+
 
 ```javascript
-import formatPercentage from 'ffe-formatters/format-percentage';
+import { formatNumber, formatPercentage } from 'ffe-formatters';
+```
+
+If you don't that feature enabled, you should import them like this to avoid bundling
+unneeded code:
+
+```javascript
+import formatNumber from 'ffe-formatters/lib/format-number';
+import formatPercentage from 'ffe-formatters/lib/format-percentage';
 ```
 
 You'll find a full overview over all the available formatters in the [`src/`-folder](src).
