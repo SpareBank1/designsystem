@@ -8,6 +8,8 @@
     "src"
   ],
   "scripts": {
+    "prebuild": "rimraf lib",
+    "build": "babel src -d lib --ignore *.spec.js,README.md",
     "test": "jest --coverage",
     "test:watch": "jest --watch",
     "test:nocoverage": "jest",
@@ -21,6 +23,7 @@
   "author": "Kristofer Selbekk <kristofer.selbekk@sparebank1.no> (https://www.sparebank1.no)",
   "license": "UNLICENCED",
   "devDependencies": {
+    "babel-cli": "^6.24.1",
     "babel-jest": "^19.0.0",
     "babel-plugin-root-import": "^5.1.0",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
@@ -31,7 +34,8 @@
     "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^6.10.3",
     "jest": "^19.0.2",
-    "moment": "^2.18.1"
+    "moment": "^2.18.1",
+    "rimraf": "^2.6.1"
   },
   "dependencies": {
     "underscore.string": "^3.3.4"
