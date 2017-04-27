@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.0.8
+Do not focus hidden links and buttons
+
 ## 1.0.7
 Make room for button focus border when button is at the bottom of the expanded area
 
