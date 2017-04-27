@@ -1,4 +1,4 @@
-import { NON_BREAKING_SPACE } from '~/unicode';
+import { NON_BREAKING_SPACE } from '~/internal/unicode';
 import formatKm from '.';
 
 describe('format km', () => {

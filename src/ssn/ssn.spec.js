@@ -1,5 +1,5 @@
 import formatSsn from '.';
-import { NON_BREAKING_SPACE } from '~/unicode';
+import { NON_BREAKING_SPACE } from '~/internal/unicode';
 
 describe('formatSsn', () => {
     test('returns input when ssn is undefined', () => {

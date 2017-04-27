@@ -1,6 +1,6 @@
 import formatNumber from '~/number';
-import { parse } from '~/number/number';
-import { NON_BREAKING_SPACE } from '~/unicode';
+import parseNumber from '~/internal/parse-number';
+import { NON_BREAKING_SPACE } from '~/internal/unicode';
 
 export default function formatAmount(amount, opts = {}) {
     const {
@@ -14,7 +14,7 @@ export default function formatAmount(amount, opts = {}) {
 
     // A ',-' postfix is not allowed for amounts with øre, see:
     // http://www.sprakradet.no/svardatabase/sporsmal-og-svar/kronebelop-rekkjefolgje-komma-og-strek/
-    if (parse(amount) % 1 !== 0) {
+    if (parseNumber(amount) % 1 !== 0) {
         return `${prefix}${formatNumber(amount, 2)}`;
     }
 

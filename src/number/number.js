@@ -1,24 +1,9 @@
 import numberFormat from 'underscore.string/numberFormat';
-import { NON_BREAKING_SPACE } from '~/unicode';
-
-export const parse = (number) => {
-    if (!number || typeof number === 'number') {
-        return number;
-    }
-
-    let parsed = number;
-    if (typeof number === 'string') {
-        parsed = parseFloat(number.replace(/[^\d,.-]/g, '').replace(/,/g, '.'));
-    }
-    if (Number.isNaN(parsed) || typeof parsed !== 'number') {
-        return null;
-    }
-
-    return parsed;
-}
+import { NON_BREAKING_SPACE } from '~/internal/unicode';
+import parseNumber from '~/internal/parse-number';
 
 export default function formatNumber(number, decimals = 0) {
-    const toFormat = parse(number);
+    const toFormat = parseNumber(number);
     if (!toFormat) {
         return number;
     }
