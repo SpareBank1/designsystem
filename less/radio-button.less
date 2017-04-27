@@ -4,7 +4,7 @@
     color: @ffe-black;
     cursor: pointer;
     margin: 10px 0;
-    transition: width 0.15s ease-in-out;
+    transition: width @ffe-transition-duration @ffe-ease-in-out-back;
     text-align: left;
     padding-left: 30px;
 
@@ -24,6 +24,7 @@
         pointer-events: none;
         left: 0;
         top: 3px;
+        transition: border-color @ffe-transition-duration @ffe-ease;
     }
 
     &::after {
