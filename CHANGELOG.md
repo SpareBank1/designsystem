@@ -1,5 +1,9 @@
 # Changelog
 
+## 7.6.1
+
+* Updated utropstegn-icon.svg
+
 ## 7.6.0
 
 * Added hus-stjerne-ikon.svg
