@@ -1,5 +1,9 @@
 #CHANGELOG
 
+## Version 8.0.2
+
+Replaced hardcoded transition properties with variables from ffe-core
+
 ## Version 8.0.1
 
 Since buttons are no longer part of ffe-core, ffe-buttons was added as a peer dependency
