@@ -1,4 +1,4 @@
-const zeroPad = d => `00${d}`.slice(-2);
+const ensureTwoDigits = d => `00${d}`.slice(-2);
 
 export default function formatDate(timestamp) {
     const isMoment = timestamp && timestamp._isAMomentObject;
@@ -12,8 +12,8 @@ export default function formatDate(timestamp) {
     }
 
     const date = timestamp instanceof Date ? timestamp : new Date(timestamp);
-    const dd = zeroPad(date.getDate());
-    const mm = zeroPad(date.getMonth() + 1);
+    const dd = ensureTwoDigits(date.getDate());
+    const mm = ensureTwoDigits(date.getMonth() + 1);
     const yyyy = date.getFullYear();
     return `${dd}.${mm}.${yyyy}`;
 }
