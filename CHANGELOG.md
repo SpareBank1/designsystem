@@ -1,5 +1,8 @@
 # Changelog
 
+## v4.0.2
+* Replaced hardcoded transition properties with variables from ffe-core
+
 ## v4.0.1
 * Fixed `active` and `focus` state of the chevron in `ffe-shortcut-button--condensed`.
 
