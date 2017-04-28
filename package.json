@@ -1,6 +1,6 @@
 {
   "name": "ffe-header",
-  "version": "8.0.1",
+  "version": "8.0.2",
   "description": "Felles header for SpareBank 1",
   "main": "index.js",
   "scripts": {
@@ -21,7 +21,7 @@
   "license": "ISC",
   "peerDependencies": {
     "ffe-buttons": "4.x",
-    "ffe-core": "9.x"
+    "ffe-core": "^9.2.0"
   },
   "devDependencies": {
     "ffe-buttons": "^4.0.1",

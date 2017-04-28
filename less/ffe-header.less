@@ -1,6 +1,6 @@
 .ffe-header {
     margin-bottom: 30px;
-    transition: top 0.2s ease-in-out 0.6s;
+    transition: top @ffe-transition-duration @ffe-ease 0.6s;
     width: 100%;
     background: @ffe-white;
     text-align: center;
@@ -68,7 +68,7 @@
                 display: table;
                 width: 100%;
                 padding: 30px 20px;
-                transition: padding 0.2s ease-in-out;
+                transition: padding @ffe-transition-duration @ffe-ease;
             }
         }
 
@@ -89,7 +89,7 @@
         &__logo {
             height: 40px;
             margin: 0;
-            transition: all .2s ease-in-out;
+            transition: all @ffe-transition-duration @ffe-ease;
 
             &--sm {
                 height: 26px;
@@ -102,7 +102,7 @@
             font-family: MuseoSans-500, arial, sans-serif;
             font-weight: normal;
             line-height: 30px;
-            transition: font-size .2s ease-in-out;
+            transition: font-size @ffe-transition-duration @ffe-ease;
             margin: 0;
 
             &--sm {
