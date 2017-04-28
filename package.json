@@ -2,11 +2,8 @@
   "name": "ffe-formatters",
   "version": "1.0.0",
   "description": "JavaScript general use string formatters",
-  "main": "index.js",
-  "files": [
-    "lib/",
-    "src/"
-  ],
+  "main": "lib/index.js",
+  "files": ["lib/*.js"],
   "scripts": {
     "prebuild": "rimraf lib",
     "build": "babel src -d lib --ignore *.spec.js,README.md",

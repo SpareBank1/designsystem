@@ -1,5 +1,5 @@
 import formatAccountNumber from '.';
-import { NON_BREAKING_SPACE } from '~/internal/unicode';
+import { NON_BREAKING_SPACE } from '../internal/unicode';
 
 describe('format account number', () => {
     test('returns input when account number is undefined', () => {

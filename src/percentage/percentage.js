@@ -1,4 +1,4 @@
-import { NON_BREAKING_SPACE } from '~/internal/unicode';
+import { NON_BREAKING_SPACE } from '../internal/unicode';
 
 export default function formatPercentage(amount, maxDecimals = 2) {
     if (typeof amount !== 'number') {

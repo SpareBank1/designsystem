@@ -1,9 +1,6 @@
 {
     "presets": ["latest"],
     "plugins": [
-        "transform-object-rest-spread",
-        ["babel-plugin-root-import", {
-            "rootPathSuffix": "src"
-        }]
+        "transform-object-rest-spread"
     ]
 }

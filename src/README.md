@@ -10,8 +10,7 @@ Formats an account number to the correct format separated with non breaking
 space characters.
 
 ```javascript
-import formatAccountNumber from 'ffe-formatters/account-number';
-import { formatAccountNumber } from 'ffe-formatters';
+import formatAccountNumber from 'ffe-formatters/lib/account-number';
 
 formatAccountNumber('90010012345') === '9001 00 12345'
 ```
@@ -31,8 +30,7 @@ The function accepts an optional second `options`-object, with two keys:
 ```
 
 ```javascript
-import formatAmount from 'ffe-formatters/amount';
-import { formatAmount } from 'ffe-formatters';
+import formatAmount from 'ffe-formatters/lib/amount';
 
 formatAmount(1000) === 'kr. 1 000,-'
 formatAmount(13.37) === 'kr. 13,37'
@@ -45,8 +43,7 @@ Formats timestamps, `Date`-objects  and `moment` instances to the correct
 format.
 
 ```javascript
-import formatDate from 'ffe-formatters/date';
-import { formatDate } from 'ffe-formatters';
+import formatDate from 'ffe-formatters/lib/date';
 
 formatDate(new Date('2000', 0, 1)) === '01.01.2000'
 formatDate(moment('20000101')) === '01.01.2000'
@@ -59,8 +56,7 @@ Formats distances in kilometers in the correct format with non breaking
 space characters.
 
 ```javascript
-import formatKm from 'ffe-formatters/km';
-import { formatKm } from 'ffe-formatters';
+import formatKm from 'ffe-formatters/lib/km';
 
 formatKm(160520) === '160 520 km'
 ```
@@ -72,8 +68,7 @@ space characters. Ignores decimals by default, but accepts the
 number for decimals as a second argument.
 
 ```javascript
-import formatNumber from 'ffe-formatters/number';
-import { formatNumber } from 'ffe-formatters/number';
+import formatNumber from 'ffe-formatters/lib/number';
 
 formatNumber(1000000) === '1 000 000'
 formatNumber(1234.567) === '1 234'
@@ -88,8 +83,7 @@ a two digit maximum on decimals, but this can be overridden by the second
 optional argument if needed.
 
 ```javascript
-import formatPercentage from 'ffe-formatters/percentage';
-import { formatPercentage } from 'ffe-formatters';
+import formatPercentage from 'ffe-formatters/lib/percentage';
 
 formatPercentage(0.10) === '10 %';
 formatPercentage(0.123456) === '12.35 %' // rounds the overflowing decimals
@@ -102,8 +96,7 @@ Formats a Norwegian SSN (fødselsnummer) to the correct format separated with
 non breaking space characters.
 
 ```javascript
-import formatSsn from 'ffe-formatters/ssn';
-import { formatSsn } from 'ffe-formatters';
+import formatSsn from 'ffe-formatters/lib/ssn';
 
 formatSsn('01010112345') === '010101 12345'
 ```

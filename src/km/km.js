@@ -1,5 +1,5 @@
-import formatNumber from '~/number';
-import { NON_BREAKING_SPACE } from '~/internal/unicode';
+import formatNumber from '../number';
+import { NON_BREAKING_SPACE } from '../internal/unicode';
 
 export default function formatKm(km) {
     const distance = formatNumber(km);
