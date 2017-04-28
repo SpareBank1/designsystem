@@ -15,10 +15,10 @@ import formatAccountNumber from 'ffe-formatters/lib/account-number';
 formatAccountNumber('90010012345') === '9001 00 12345'
 ```
 
-### `formatAmount(number [, options])`
+### `formatCurrency(number [, options])`
 
-Formats an amount with the correct prefix, postfix and decimals, all
-separated by non breaking space characters.
+Formats an amount of currency with the correct prefix, postfix and decimals,
+all separated by non breaking space characters.
 
 The function accepts an optional second `options`-object, with two keys:
 
@@ -30,11 +30,11 @@ The function accepts an optional second `options`-object, with two keys:
 ```
 
 ```javascript
-import formatAmount from 'ffe-formatters/lib/amount';
+import formatCurrency from 'ffe-formatters/lib/currency';
 
-formatAmount(1000) === 'kr. 1 000,-'
-formatAmount(13.37) === 'kr. 13,37'
-formatAmount(1000, { prefix: '', postfix: 'kroner'}) === '1 000,- kroner'
+formatCurrency(1000) === 'kr. 1 000,-'
+formatCurrency(13.37) === 'kr. 13,37'
+formatCurrency(1000, { prefix: '', postfix: 'kroner'}) === '1 000,- kroner'
 ```
 
 ### `formatDate(timestamp)`

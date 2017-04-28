@@ -2,7 +2,7 @@ import formatNumber from '../number';
 import parseNumber from '../internal/parse-number';
 import { NON_BREAKING_SPACE } from '../internal/unicode';
 
-export default function formatAmount(amount, opts = {}) {
+export default function formatCurrency(amount, opts = {}) {
     const {
         prefix,
         postfix,
