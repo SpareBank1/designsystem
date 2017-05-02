@@ -42,4 +42,8 @@ export default {
   PREV_SHORT: 'Prev',
   NEXT_LONG: 'Next',
   FIRST_DAY_OF_WEEK: 0,
+  INVALID_DATE_FORMAT: 'Date must be in this format: dd.mm.åååå',
+  INVALID_DATE: 'Invalid date',
+  MIN_DATE: 'Given date is too far back',
+  MAX_DATE: 'Given date is too far ahead'
 };

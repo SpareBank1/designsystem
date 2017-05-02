@@ -1,7 +1,7 @@
 import Datepicker from './datepicker/ffe-datepicker';
-import DateInput from './dateinput/ffe-dateinput';
-import Calendar from './calendar/ffe-calendar';
-export default Datepicker;
-export { DateInput };
-export { Calendar };
 
+export { default as DateInput } from './dateinput/ffe-dateinput';
+export { default as Calendar } from './calendar/ffe-calendar';
+export { default as ErrorTypes } from './datelogic/error-types';
+
+export default Datepicker;

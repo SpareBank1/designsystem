@@ -1,3 +1,5 @@
+import errorTypes from './error-types';
+
 const dateRegex = /^(\d{1,2})(\.| |-|\/)?(\d{1,2})\2(\d{2}(\d{2})?)$/;
 
 function isDate(date) {
@@ -41,11 +43,14 @@ function deriveTwoDigitYear(year) {
   return yearDate.getFullYear();
 }
 
-SimpleDateFactory.fromString = function fromString(string) {
+SimpleDateFactory.fromString = function fromString(string, onSuccess, onError) {
+  const success = onSuccess || (() => {});
+  const error = onError || (() => {});
   const newDate = new SimpleDate();
   const match = dateRegex.exec(string);
 
   if (!match) {
+    error(errorTypes.INVALID_DATE_FORMAT);
     return null;
   }
 
@@ -59,12 +64,16 @@ SimpleDateFactory.fromString = function fromString(string) {
   newDate.setYear(year);
   newDate.setMonth(month - 1); // Months are 0-indexed
   newDate.setDate(date); // Need to set date last, to avoid month-overflow
-  if (newDate.date() !== date * 1 ||
+  if (
+    newDate.date() !== date * 1 ||
     newDate.month() + 1 !== month * 1 ||
-    newDate.year() !== year * 1) {
+    newDate.year() !== year * 1
+  ) {
+    error(errorTypes.INVALID_DATE);
     return null;
   }
 
+  success(newDate);
   return newDate;
 };
 

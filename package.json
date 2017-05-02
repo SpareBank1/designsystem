@@ -1,13 +1,13 @@
 {
   "name": "ffe-datepicker-react",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "main": "lib/ffe-datepicker-react.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/.",
     "watch": "onchange 'src/**/*.js' -- npm run build",
     "pretest": "eslint src/.",
     "lint": "npm run pretest",
-    "test": "mocha --require babel-register 'src/**/*.test.js'",
+    "test": "mocha --require src/util/test-setup.js --compilers js:babel-core/register 'src/**/*.test.js'",
     "posttest": "nsp check",
     "test:watch": "npm test -- -w",
     "prepublish": "npm run build",
@@ -28,6 +28,7 @@
     "browserify": "^13.0.0",
     "budo": "^8.2.1",
     "chai": "^3.5.0",
+    "chai-enzyme": "^0.6.1",
     "enzyme": "^2.3.0",
     "eslint": "^3.12.2",
     "eslint-config-ffe": "^6.0.0",
@@ -37,6 +38,7 @@
     "ffe-core": "^9.2.0",
     "ffe-form": "^5.1.0",
     "ffe-icons-react": "^2.4.3",
+    "jsdom": "^10.0.0",
     "mocha": "^2.5.3",
     "node-lessify": "^0.1.4",
     "nsp": "^2.2.0",
@@ -44,7 +46,8 @@
     "react": "^15.0.1",
     "react-addons-test-utils": "^15.1.0",
     "react-dom": "^15.0.1",
-    "sinon": "^1.17.4"
+    "sinon": "^1.17.4",
+    "sinon-chai": "^2.9.0"
   },
   "publishConfig": {
     "registry": "***REMOVED***"
@@ -66,7 +69,7 @@
   "peerDependencies": {
     "ffe-datepicker": "3.x - 4.x",
     "ffe-form": "2.x - 5.x",
-    "react": "^15.0.1"
+    "react": "15.x"
   },
   "dependencies": {
     "classnames": "^2.2.5",

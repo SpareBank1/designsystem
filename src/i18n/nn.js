@@ -42,4 +42,8 @@ export default {
   PREV_SHORT: 'Forrige',
   NEXT_LONG: 'Neste',
   FIRST_DAY_OF_WEEK: 1,
+  INVALID_DATE_FORMAT: 'Dato må skrives på dette formatet: dd.mm.åååå',
+  INVALID_DATE: 'Ugyldig dato',
+  MIN_DATE: 'Oppgitt dato er for langt tilbake',
+  MAX_DATE: 'Oppgitt dato er for langt frem'
 };

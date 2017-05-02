@@ -1,9 +1,31 @@
 /* eslint-env mocha */
 
 import { assert } from 'chai';
+import { spy } from 'sinon';
 import simpleDate from './simpledate';
+import ErrorTypes from './error-types';
 
-describe('simpledate', () => {
+describe('simpleDate fromString', () => {
+  describe('triggers', () => {
+    it('onSuccess callback', () => {
+      const onSuccess = spy();
+      const date = simpleDate.fromString('01.01.2016', onSuccess);
+      assert.isTrue(onSuccess.calledWith(date));
+    });
+
+    it('onError callback with INVALID_DATE_FORMAT', () => {
+      const onError = spy();
+      simpleDate.fromString('---', () => {}, onError);
+      assert.isTrue(onError.calledWith(ErrorTypes.INVALID_DATE_FORMAT));
+    });
+
+    it('onError callback with INVALID_DATE', () => {
+      const onError = spy();
+      simpleDate.fromString('29.02.2015', () => {}, onError);
+      assert.isTrue(onError.calledWith(ErrorTypes.INVALID_DATE));
+    });
+  });
+
   describe('formats',  () => {
     it('single digit dates as double digit values', () =>
       assert.deepEqual(simpleDate.fromString('01.01.2016').format(), '01.01.2016'));
