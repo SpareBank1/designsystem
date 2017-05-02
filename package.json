@@ -1,13 +1,14 @@
 {
   "name": "ffe-buttons",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "main": "less/buttons.less",
   "scripts": {
     "compile": "npm run lint && lessc example/example.less example/example.css && cp -R node_modules/ffe-core/fonts/ example/ && echo \"$(date +%T): Updated example\"",
     "lint": "lessc --lint example/example.less && stylelint less/*.less",
     "start": "opn example/example.html & watch \"npm run -s compile\" less/",
     "test:nsp": "nsp check",
-    "test": "npm run lint && npm run test:nsp",
+    "test": "npm run lint && npm run test:nsp && npm run test:visual",
+    "test:visual": "./run_visual-tests.sh",
     "has-published": "npm show . versions -s | grep -q ${npm_package_version}",
     "preversion": "npm run lint",
     "postpublish": "git tag ${npm_package_version} && git push --tags"
@@ -30,13 +31,13 @@
   ],
   "devDependencies": {
     "ffe-core": "9.x",
-    "ffe-visual-tests-support": "2.1.0",
-    "less": "^2.7.1",
-    "nsp": "^2.2.0",
-    "opn-cli": "^3.1.0",
-    "stylelint": "^7.7.1",
-    "stylelint-config-ffe": "^0.2.0",
-    "watch": "^0.19.2"
+    "ffe-visual-tests-support": "2.1.1",
+    "less": "2.7.2",
+    "nsp": "2.6.3",
+    "opn-cli": "3.1.0",
+    "stylelint": "7.10.1",
+    "stylelint-config-ffe": "0.3.0",
+    "watch": "1.0.2"
   },
   "peerDependencies": {
     "ffe-core": "9.x"

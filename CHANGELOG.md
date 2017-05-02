@@ -1,5 +1,9 @@
 # Changelog
 
+## v4.0.2
+* Add line-height to buttons to remove implicit dependency on ffe-body-text
+* Add multiline example for ffe-action-button
+
 ## v4.0.1
 * Fixed `active` and `focus` state of the chevron in `ffe-shortcut-button--condensed`.
 
