@@ -35,7 +35,9 @@
     position: absolute;
     right: 20px;
     top: 25px;
-    transition: transform .3s, fill .3s;
+    transition:
+        transform @ffe-transition-duration @ffe-ease-in-out-back,
+        fill @ffe-transition-duration @ffe-ease;
 
     &--blue {
         fill: @ffe-blue-royal;
@@ -68,7 +70,9 @@
     text-align: left;
     border: none;
     background: inherit;
-    transition: background-color .3s, color .3s;
+    transition:
+        background-color @ffe-transition-duration @ffe-ease,
+        color @ffe-transition-duration @ffe-ease;
     width: 100%;
 
     &:hover,

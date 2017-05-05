@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## Version 2.0.2
+* Replaced hardcoded transition properties with variables from ffe-core
+
 ## Version 2.0.1
 * Make white accordion the default layout. Previously there was no default layout (that wasn't broken) without
 tons of modifiers everywhere. Now you don't need to add modifiers if you want the white design.
