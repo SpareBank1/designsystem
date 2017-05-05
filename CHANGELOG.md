@@ -1,17 +1,20 @@
 # Changelog
 
-## Version 5.1.2
+## v5.1.3
+* Reset border to 0 for `ffe-input-group`, so that the class can be used with `fieldset`-elements
+
+## v5.1.2
 * Replaced hardcoded transition properties with variables from ffe-core
 
-## Version 5.1.1
+## v5.1.1
 * Remove background color on ffe-radio-button. Was set to white which made it look weird if used in containers with different colors.
 
-## Version 5.1.0
+## v5.1.0
 
 * Set default text color for input fields and selects to `@ffe-black`
 * Remove orange text color from invalid input-fields and dropdown
 
-## Version 5.0.0
+## v5.0.0
 
 ### Breaking changes
 
