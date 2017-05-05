@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## Version 2.0.2
+
+* Replaced hardcoded transition properties with variables from ffe-core
+
 ## Version 2.0.1
 
 * Content is now centered vertically.
