@@ -1,5 +1,8 @@
 # Changelog
 
+## v4.0.3
+* Replaced hardcoded transition properties with variables from ffe-core
+
 ## v4.0.2
 * Add line-height to buttons to remove implicit dependency on ffe-body-text
 * Add multiline example for ffe-action-button
