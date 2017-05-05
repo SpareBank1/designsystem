@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import Datepicker from '../src/ffe-datepicker-react';
+import Datepicker, { ErrorTypes } from '../src/ffe-datepicker-react';
 require('./example.less');
 
 const heading = document.createElement('h1');
@@ -17,6 +17,7 @@ class DatepickerExample extends React.Component {
     super();
     this.state = { dateOne: '', dateTwo: '', dateThree: '' };
     this.onChange = this.onChange.bind(this);
+    this.onError = this.onError.bind(this);
   }
 
   onChange(date, field) {
@@ -25,39 +26,59 @@ class DatepickerExample extends React.Component {
     });
   }
 
+  onError(type) {
+    switch (type) {
+      case ErrorTypes.INVALID_DATE_FORMAT:
+        return 'Dato må skrives på dette formatet: dd.mm.åååå';
+      case ErrorTypes.INVALID_DATE:
+        return 'Ugyldig dato';
+      case ErrorTypes.MIN_DATE:
+        return 'Du kan ikke velge dato lenger tilbake i tid';
+      case ErrorTypes.MAX_DATE:
+        return 'Oops, du kan dessverre ikke velge dato lenger frem i tid';
+    }
+  }
+
   render() {
     return (
-      <form>
-        <Datepicker
-          value={ this.state.dateOne }
-          onChange={ date => this.onChange(date, 'dateOne') }
-          language="nb"
-          minDate="01.01.2016"
-          maxDate="31.12.2018"
-          inputProps={ { className: 'customClass', id: 'custom-input-id' } }
-          ariaInvalid={ false }
-        />
+      <form className="ffe-input-group">
+        <div style={ { padding: '10px' } }>
+          <Datepicker
+            value={ this.state.dateOne }
+            onChange={ date => this.onChange(date, 'dateOne') }
+            language="nn"
+            minDate="01.01.2016"
+            maxDate="31.12.2018"
+            inputProps={ { className: 'customClass', id: 'custom-input-id' } }
+            ariaInvalid={ false }
+            style={ {display: 'block'} }
+          />
+        </div>
 
-        <Datepicker
-          value={ this.state.dateTwo }
-          onChange={ date => this.onChange(date, 'dateTwo') }
-          language="nb"
-          minDate="01.01.2016"
-          maxDate="31.12.2018"
-          inputProps={ { className: 'customClass', id: 'custom-input-id' } }
-          ariaInvalid={ false }
-        />
+        <div style={ { padding: '10px' } }>
+          <Datepicker
+            value={ this.state.dateTwo }
+            onChange={ date => this.onChange(date, 'dateTwo') }
+            onError={ this.onError }
+            language="nb"
+            minDate="01.01.2016"
+            maxDate="31.12.2018"
+            inputProps={ { className: 'customClass', id: 'custom-input-id' } }
+          />
+        </div>
 
-        <Datepicker
-          value={ this.state.dateThree }
-          onChange={ date => this.onChange(date, 'dateThree') }
-          language="nb"
-          minDate="01.01.2016"
-          maxDate="31.12.2018"
-          inputProps={ { className: 'customClass', id: 'custom-input-id' } }
-          ariaInvalid={ false }
-          calendarAbove={ true }
-        />
+        <div style={ { padding: '10px' } }>
+          <Datepicker
+            value={ this.state.dateThree }
+            onChange={ date => this.onChange(date, 'dateThree') }
+            language="en"
+            minDate="01.01.2016"
+            maxDate="31.12.2018"
+            inputProps={ { className: 'customClass', id: 'custom-input-id' } }
+            ariaInvalid={ false }
+            calendarAbove={ true }
+          />
+        </div>
       </form>
     );
   }

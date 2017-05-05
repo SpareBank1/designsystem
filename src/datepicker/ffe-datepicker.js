@@ -4,6 +4,9 @@ import classNames from 'classnames';
 import Calendar from '../calendar/ffe-calendar';
 import KeyCode from '../util/keyCode';
 import DateInput from '../dateinput/ffe-dateinput';
+import SimpleDate from '../datelogic/simpledate';
+import dateErrorTypes from '../datelogic/error-types';
+import i18n from '../i18n/i18n';
 
 export default class FFEDatepicker extends React.Component {
 
@@ -26,6 +29,7 @@ export default class FFEDatepicker extends React.Component {
     this.onInputKeydown = this.onInputKeydown.bind(this);
     this.onInputFocus = this.onInputFocus.bind(this);
     this.onInputBlur = this.onInputBlur.bind(this);
+    this.onError = this.onError.bind(this);
   }
 
   componentWillUnmount() {
@@ -39,10 +43,67 @@ export default class FFEDatepicker extends React.Component {
     }
   }
 
+  onError(type) {
+    const language = this.props.language;
+    return this.props.onError ?
+      this.props.onError(type)
+      : i18n[language][type];
+  }
+
   onInputBlur() {
-    this.setState({
-      openOnFocus: true,
-    });
+    let nextState = {};
+
+    const error = (type) => {
+      const errorMessage = this.onError(type);
+
+      nextState = {
+        errorMessage,
+        openOnFocus: false,
+        ariaInvalid: true,
+        displayDatePicker: false,
+      };
+    };
+
+    SimpleDate.fromString(
+      this.props.value,
+      date => {
+        nextState = {
+          openOnFocus: true,
+          ariaInvalid: false,
+        };
+
+        const minDate = SimpleDate.fromString(this.props.minDate);
+        const maxDate = SimpleDate.fromString(this.props.maxDate);
+        if (this.props.minDate && date.isBefore(minDate)) {
+          error(dateErrorTypes.MIN_DATE);
+        } else if (this.props.maxDate && date.isAfter(maxDate)) {
+          error(dateErrorTypes.MAX_DATE);
+        }
+
+        this.props.onChange(date.format());
+      },
+      errorType => {
+        const emptyValue = this.props.value === '';
+
+        if (emptyValue && this.state.errorMessage) {
+          nextState = {
+            openOnFocus: false,
+            ariaInvalid: false,
+            displayDatePicker: false
+          };
+          return;
+        } else if (emptyValue) {
+          nextState = {
+            ...this.state,
+          };
+          return;
+        }
+
+        error(errorType);
+      }
+    );
+
+    this.setState(nextState);
   }
 
   onInputKeydown(evt) {
@@ -66,7 +127,7 @@ export default class FFEDatepicker extends React.Component {
   }
 
   clickHandler() {
-    if (!this.state.displayDatePicker) {
+    if (!this.state.displayDatePicker && this.state.openOnFocus) {
       this.openCalendar();
     }
   }
@@ -119,7 +180,24 @@ export default class FFEDatepicker extends React.Component {
     window.removeEventListener('keyup', this.escKeyHandler);
   }
 
+  ariaInvalid() {
+    const ariaProp = this.props.ariaInvalid;
+    if (ariaProp !== undefined && ariaProp !== null) {
+      return ariaProp;
+    }
+
+    return this.state.ariaInvalid;
+  }
+
   render() {
+    let inputProps = this.props.inputProps;
+    if (this.state.ariaInvalid) {
+      inputProps = {
+        ...inputProps,
+        'aria-describedby': 'date-input-validation'
+      };
+    }
+
     const calendarClassName = classNames(
         'ffe-calendar ffe-calendar--datepicker',
         { 'ffe-calendar--datepicker--above': this.props.calendarAbove }
@@ -136,22 +214,35 @@ export default class FFEDatepicker extends React.Component {
           onChange={ (evt) => this.props.onChange(evt.target.value) }
           onKeyDown={ this.onInputKeydown }
           value={ this.props.value }
-          inputProps={ this.props.inputProps }
+          inputProps={ inputProps }
           ref={ c => { this.dateInputRef = c; } }
-          ariaInvalid={ this.props.ariaInvalid }
+          ariaInvalid={ this.ariaInvalid() }
         />
-        { this.state.displayDatePicker ?
-          <Calendar
-            onDatePicked={ this.datePickedHandler }
-            onBlurHandler={ this.blurHandler }
-            language={ this.props.language }
-            selectedDate={ this.props.value }
-            minDate={ this.props.minDate }
-            maxDate={ this.props.maxDate }
-            escKeyHandler={ this.escKeyHandler }
-            calendarClassName={ calendarClassName }
-          />
-          : null }
+
+        {
+          this.state.ariaInvalid &&
+            <div
+              id="date-input-validation"
+              className="ffe-body-text ffe-field-error-message"
+              role="alert"
+            >
+              { this.state.errorMessage }
+            </div>
+        }
+
+        {
+          this.state.displayDatePicker &&
+            <Calendar
+              onDatePicked={ this.datePickedHandler }
+              onBlurHandler={ this.blurHandler }
+              language={ this.props.language }
+              selectedDate={ this.props.value }
+              minDate={ this.props.minDate }
+              maxDate={ this.props.maxDate }
+              escKeyHandler={ this.escKeyHandler }
+              calendarClassName={ calendarClassName }
+            />
+        }
       </div>);
   }
 }
@@ -165,4 +256,5 @@ FFEDatepicker.propTypes = {
   inputProps: PropTypes.object,
   ariaInvalid: PropTypes.bool,
   calendarAbove: PropTypes.bool,
+  onError: PropTypes.func,
 };

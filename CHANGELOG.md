@@ -1,5 +1,14 @@
 # Changelog
 
+## v2.2.0
+* Added multiple dateformats to input field
+**d[d]m[m]yy[yy]
+**d[d] m[m] yy[yy]
+**d[d]/m[m]/yy[yy]
+**d[d]-m[m]-yy[yy]
+**d[d].m[m].yy[yy]
+* Validates on blur with default or custom error messages
+
 ## v2.1.1
 * Expand peerDep scope of `ffe-datepicker` to include `4.x`.
 * Expand peerDep scope of `ffe-form` to include `5.x`.
