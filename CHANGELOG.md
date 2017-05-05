@@ -1,5 +1,9 @@
 # Changelog
 
+## v.5.1.1
+
+* Replaced hardcoded transition properties with variables from ffe-core
+
 ## v.5.1.0
 
 * Added modifier `--text-left` that left-aligns the content of headings and cells. Use it with `.ffe-responsive-table`.

@@ -29,7 +29,7 @@
         }
 
         &--expanded {
-            transition: background-color .2s .1s;
+            transition: background-color @ffe-transition-duration .1s;
             animation: slide-row .2s cubic-bezier(0.5, 0.015, 0.485, 1.445);
             background-color: @ffe-blue-ice;
             opacity: 1;
@@ -44,7 +44,7 @@
         width: 17px;
         height: 17px;
         fill: @ffe-blue-azure;
-        transition: transform .2s;
+        transition: transform @ffe-transition-duration @ffe-ease-in-out-back;
         position: absolute;
         top: 10px;
         right: 5px;
