@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## Version 4.1.0
+- Added message-box__error-list
+- Updated exclamation mark icon to latest version
+
 ## Version 4.0.0
 
 ### Breaking changes
