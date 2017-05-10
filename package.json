@@ -37,6 +37,7 @@
     "mocha": "^3.2.0",
     "node-lessify": "^0.1.4",
     "nsp": "^2.6.2",
+    "prop-types": "^15.5.9",
     "react": "^15.4.2",
     "react-addons-test-utils": "^15.4.2",
     "react-dom": "^15.4.2",
@@ -65,6 +66,6 @@
     "ffe-icons-react": "2.4.3",
     "lodash.isequal": "4.5.0",
     "nfe-amount-formatter": "2.0.1",
-    "react-custom-scrollbars": "4.0.2"
+    "react-custom-scrollbars": "4.1.1"
   }
 }
