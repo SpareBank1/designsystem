@@ -50,15 +50,17 @@ formatDate(moment('20000101')) === '01.01.2000'
 formatDate(946681200000) === '01.01.2000'
 ```
 
-### `formatKm(distance)`
+### `formatDistance(distance[, opts])`
 
 Formats distances in kilometers in the correct format with non breaking
-space characters.
+space characters. Defaults to `km` as a suffix, but can be overridden with
+the `unit` parameter in the `opts` argument if needed.
 
 ```javascript
-import formatKm from 'ffe-formatters/lib/formatKm';
+import formatDistance from 'ffe-formatters/lib/formatDistance';
 
-formatKm(160520) === '160 520 km'
+formatDistance(160520) === '160 520 km'
+formatDistance(12345, { unit: 'mi' }) === '12 345 mi'
 ```
 
 ### `formatNumber(num [, opts])`
