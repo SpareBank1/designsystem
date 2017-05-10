@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import BaseSelector from './base-selector';
 import AccountSuggestionItem from '../account/account-suggestion';
 import AccountNoMatch from '../account/account-nomatch';
