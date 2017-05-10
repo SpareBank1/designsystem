@@ -1,6 +1,6 @@
 import numberFormat from 'underscore.string/numberFormat';
-import { NON_BREAKING_SPACE } from '../internal/unicode';
-import parseNumber from '../internal/parse-number';
+import { NON_BREAKING_SPACE } from './internal/unicode';
+import parseNumber from './internal/parseNumber';
 
 export default function formatNumber(number, decimals = 0) {
     const toFormat = parseNumber(number);

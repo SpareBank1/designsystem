@@ -1,5 +1,5 @@
-import { NON_BREAKING_SPACE } from '../internal/unicode';
-import formatKm from '.';
+import { NON_BREAKING_SPACE } from './internal/unicode';
+import formatKm from './formatKm';
 
 describe('format km', () => {
     test('formats distance with spaces between thousands', () => {

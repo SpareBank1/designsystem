@@ -1,4 +1,4 @@
-import formatDate from '.';
+import formatDate from './formatDate';
 import moment from 'moment';
 
 describe('format date ', () => {

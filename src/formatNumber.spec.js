@@ -1,4 +1,4 @@
-import formatNumber from '.';
+import formatNumber from './formatNumber';
 
 describe('formatNumber', () => {
     test('noops on falsy values', () => {

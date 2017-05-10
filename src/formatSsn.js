@@ -1,4 +1,4 @@
-import { NON_BREAKING_SPACE } from '../internal/unicode';
+import { NON_BREAKING_SPACE } from './internal/unicode';
 
 export default function formatSsn(ssn) {
     if (!ssn || ssn.length !== 11) {

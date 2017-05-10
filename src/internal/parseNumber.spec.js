@@ -1,4 +1,4 @@
-import parseNumber from './parse-number';
+import parseNumber from './parseNumber';
 
 describe('parseNumber', () => {
     test('noops on non-string arguments', () => {

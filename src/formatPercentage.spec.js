@@ -1,5 +1,5 @@
-import { NON_BREAKING_SPACE } from '../internal/unicode';
-import formatPercentage from '.';
+import { NON_BREAKING_SPACE } from './internal/unicode';
+import formatPercentage from './formatPercentage';
 
 describe('format percentage', () => {
     test('returns empty string non-number values', () => {
