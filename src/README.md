@@ -90,13 +90,13 @@ formatPercentage(0.123456) === '12.35 %' // rounds the overflowing decimals
 formatPercentage(0.123456, 4) === '12.3456'
 ```
 
-### `formatSsn(fødselsnummer)`
+### `formatFodselsnummer(fodselsnummer)`
 
-Formats a Norwegian SSN (fødselsnummer) to the correct format separated with
+Formats a Norwegian fødselsnummer to the correct format separated with
 non breaking space characters.
 
 ```javascript
-import formatSsn from 'ffe-formatters/lib/formatSsn';
+import formatFodselsnummer from 'ffe-formatters/lib/formatFodselsnummer';
 
-formatSsn('01010112345') === '010101 12345'
+formatFodselsnummer('01010112345') === '010101 12345'
 ```

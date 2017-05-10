@@ -6,7 +6,7 @@ Initial version of `ffe-formatters`. Includes the following formatters:
 - formatAccountNumber
 - formatCurrency
 - formatDate
+- formatFodselsnummer
 - formatKm
 - formatNumber
 - formatPercentage
-- formatSsn

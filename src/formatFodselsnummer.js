@@ -1,6 +1,6 @@
 import { NON_BREAKING_SPACE } from './internal/unicode';
 
-export default function formatSsn(ssn) {
+export default function formatFodselsnummer(ssn) {
     if (!ssn || ssn.length !== 11) {
         return ssn;
     }
