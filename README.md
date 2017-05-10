@@ -15,11 +15,11 @@ npm install --save ffe-formatters
 Import the formatter(s) you need the following way:
 
 ```javascript
-import formatNumber from 'ffe-formatters/lib/format-number';
-import formatPercentage from 'ffe-formatters/lib/format-percentage';
+import formatNumber from 'ffe-formatters/lib/formatNumber';
+import formatPercentage from 'ffe-formatters/lib/formatPercentage';
 ```
 
-You'll find a full overview over all the available formatters in the [`src/`-folder](src).
+You'll find a full overview and documentation over all the available formatters [here](src).
 
 ## Development
 
