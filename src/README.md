@@ -15,12 +15,12 @@ import formatAccountNumber from 'ffe-formatters/lib/formatAccountNumber';
 formatAccountNumber('90010012345') === '9001 00 12345'
 ```
 
-### `formatCurrency(number [, options])`
+### `formatCurrency(number [, opts])`
 
 Formats an amount of currency with the correct prefix, postfix and decimals,
 all separated by non breaking space characters.
 
-The function accepts an optional second `options`-object, with two keys:
+The function accepts an optional second `opts`-object, with two keys:
 
 ```javascript
 {
@@ -61,33 +61,33 @@ import formatKm from 'ffe-formatters/lib/formatKm';
 formatKm(160520) === '160 520 km'
 ```
 
-### `formatNumber(num [, decimals = 0])`
+### `formatNumber(num [, opts])`
 
 Formats numbers to the correct format separated with non breaking
 space characters. Ignores decimals by default, but accepts the
-number for decimals as a second argument.
+number for decimals as a `decimals`-prop to the `opts`-argument.
 
 ```javascript
 import formatNumber from 'ffe-formatters/lib/formatNumber';
 
 formatNumber(1000000) === '1 000 000'
 formatNumber(1234.567) === '1 234'
-formatNumber(1234.567, 2) === '1 234,56'
+formatNumber(1234.567, { decimals: 2 }) === '1 234,56'
 ```
 
-### `formatPercentage(num [, maxDecimals = 2])`
+### `formatPercentage(num [, opts])`
 
 Formats percentages to the correct format separated with non breaking
 space characters. Returns as few decimals as possible. By default there's
-a two digit maximum on decimals, but this can be overridden by the second
-optional argument if needed.
+a two digit maximum on decimals, but this can be overridden by the `maxDecimals`
+property in the `opts` argument if needed.
 
 ```javascript
 import formatPercentage from 'ffe-formatters/lib/formatPercentage';
 
 formatPercentage(0.10) === '10 %';
 formatPercentage(0.123456) === '12.35 %' // rounds the overflowing decimals
-formatPercentage(0.123456, 4) === '12.3456'
+formatPercentage(0.123456, { maxDecimals: 4 }) === '12.3456'
 ```
 
 ### `formatFodselsnummer(fodselsnummer)`

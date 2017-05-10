@@ -27,8 +27,8 @@ describe('format percentage', () => {
     });
 
     test('lets you specify number of maximum decimals', () => {
-        expect(formatPercentage(0.1010101, 4)).toBe(`10.1010${NON_BREAKING_SPACE}%`);
-        expect(formatPercentage(0.123456, 1)).toBe(`12.3${NON_BREAKING_SPACE}%`);
-        expect(formatPercentage(-0.987654321, 3)).toBe(`-98.765${NON_BREAKING_SPACE}%`);
+        expect(formatPercentage(0.1010101, { maxDecimals: 4 })).toBe(`10.1010${NON_BREAKING_SPACE}%`);
+        expect(formatPercentage(0.123456, { maxDecimals: 1 })).toBe(`12.3${NON_BREAKING_SPACE}%`);
+        expect(formatPercentage(-0.987654321, { maxDecimals: 3 })).toBe(`-98.765${NON_BREAKING_SPACE}%`);
     });
 });

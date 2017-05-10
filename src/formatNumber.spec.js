@@ -31,8 +31,8 @@ describe('formatNumber', () => {
     });
 
     test('include decimal numbers if specified', () => {
-        expect(formatNumber(1234.4, 1)).toBe('1 234,4');
-        expect(formatNumber(1234.4, 2)).toBe('1 234,40');
+        expect(formatNumber(1234.4, { decimals: 1 })).toBe('1 234,4');
+        expect(formatNumber(1234.4, { decimals: 2 })).toBe('1 234,40');
     });
 
     test('format numeric strings', () => {
