@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 
-import { oneOf, node, string } from 'prop-types';
+import { bool, oneOf, node, string } from 'prop-types';
 
 function Heading(props) {
     const {
@@ -37,8 +37,11 @@ function Heading(props) {
 Heading.propTypes = {
     children: node.isRequired,
     className: string,
+    error: bool,
     lookLike: oneOf([1, 2, 3, 4, 5, 6]),
     level: oneOf([1, 2, 3, 4, 5, 6]),
+    noMargin: bool,
+    withBorder: bool,
 };
 
 export const Heading1 = props => <Heading level={1} {...props} />;
