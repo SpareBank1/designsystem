@@ -4,14 +4,12 @@
   "description": "React components for ffe-core components",
   "scripts": {
     "build": "babel -d lib/ src/",
-    "watch": "onchange 'src/**.js' -- npm run build",
-    "lint": "eslint src/ test/",
+    "start": "onchange 'src/**.js' -- npm run build",
+    "lint": "eslint src/",
     "lint:fix": "eslint --fix src/ test/",
-    "test": "npm run test:spec && npm run test:nsp",
-    "test:nsp": "nsp check",
-    "test:spec": "mocha -G --compilers js:babel-core/register --require ./test/setup.test.js test/**/*.test.js",
-    "test:watch": "npm run tdd",
-    "tdd": "mocha -G --compilers js:babel-core/register --require ./test/setup.test.js test/**/*.test.js -w",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
+    "test:nocoverage": "jest",
     "prepublish": "npm run build",
     "has-published": "npm show . versions -s --json | grep -q \\\"${npm_package_version}\\\""
   },
@@ -24,6 +22,7 @@
   "devDependencies": {
     "babel-cli": "^6.23.0",
     "babel-core": "^6.23.1",
+    "babel-jest": "^20.0.0",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-polyfill": "^6.23.0",
     "babel-preset-latest": "^6.22.0",
@@ -37,13 +36,16 @@
     "eslint-plugin-react": "^6.10.0",
     "expect.js": "^0.3.1",
     "install": "^0.8.7",
+    "jest": "^20.0.0",
     "jsdom": "^9.11.0",
     "mocha": "^3.2.0",
     "nsp": "^2.6.3",
     "onchange": "3.2.1",
+    "prop-types": "^15.5.9",
     "react": "^15.4.2",
     "react-addons-test-utils": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "react-test-renderer": "^15.5.4"
   },
   "files": [
     "lib",
@@ -58,5 +60,8 @@
   "publishConfig": {
     "registry": "https://nexus.intern.sparebank1.no/nexus/content/repositories/npm-internal"
   },
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "classnames": "^2.2.5"
+  }
 }
