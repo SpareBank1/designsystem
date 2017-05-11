@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { func, string, object } from 'prop-types';
 import {KeyCodes} from '../util/types';
 
 const StatusBar = ({onDone, renderSelectionStatus, labelDoneButton, style}) => {
@@ -27,10 +27,10 @@ const StatusBar = ({onDone, renderSelectionStatus, labelDoneButton, style}) => {
 };
 
 StatusBar.propTypes = {
-  onDone: PropTypes.func.isRequired,
-  renderSelectionStatus: PropTypes.func.isRequired,
-  labelDoneButton: PropTypes.string.isRequired,
-  style: PropTypes.object.isRequired
+  onDone: func.isRequired,
+  renderSelectionStatus: func.isRequired,
+  labelDoneButton: string.isRequired,
+  style: object.isRequired
 };
 
 export default StatusBar;

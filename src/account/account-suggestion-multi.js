@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { bool } from 'prop-types';
 import Checkbox from 'ffe-checkbox-react';
 import {accountFormatter, balanceWithCurrency} from '../util/format';
 import {Account, Locale} from '../util/types';
@@ -36,7 +36,7 @@ function AccountSuggestionMulti({account, locale, selected}) {
 AccountSuggestionMulti.propTypes = {
   account: Account.isRequired,
   locale: Locale.isRequired,
-  selected: PropTypes.bool.isRequired,
+  selected: bool.isRequired,
 };
 
 AccountSuggestionMulti.defaultProps = {

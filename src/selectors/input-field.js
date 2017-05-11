@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import { func, string, bool, number } from 'prop-types';
 import KryssIkon from 'ffe-icons-react/kryss-ikon';
 
 class Input extends Component {
@@ -63,20 +63,20 @@ class Input extends Component {
 }
 
 Input.propTypes = {
-  onChange: PropTypes.func.isRequired,
-  onKeyDown: PropTypes.func.isRequired,
-  value: PropTypes.string.isRequired,
-  onReset: PropTypes.func.isRequired,
-  isSuggestionsShowing: PropTypes.bool.isRequired,
-  id: PropTypes.string.isRequired,
-  placeholder: PropTypes.string,
-  onBlur: PropTypes.func,
-  onFocus: PropTypes.func,
-  ariaInvalid: PropTypes.bool,
-  inputFieldRef: PropTypes.func,
-  highlightedIndex: PropTypes.number,
-  suggestionListId: PropTypes.string,
-  name: PropTypes.string,
+  onChange: func.isRequired,
+  onKeyDown: func.isRequired,
+  value: string.isRequired,
+  onReset: func.isRequired,
+  isSuggestionsShowing: bool.isRequired,
+  id: string.isRequired,
+  placeholder: string,
+  onBlur: func,
+  onFocus: func,
+  ariaInvalid: bool,
+  inputFieldRef: func,
+  highlightedIndex: number,
+  suggestionListId: string,
+  name: string,
 };
 
 Input.defaultProps = {
