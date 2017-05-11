@@ -8,6 +8,12 @@ $ npm install --save ffe-chart-donut-react
 
 ## Usage
 
+Appen må først importere less stylesheet fra lib/ mappa:
+```css
+@import "~ffe-chart-donut-react/lib/ffe-chart-donut";
+```
+
+For å bruke selve komponenten:
 ```javascript
 import ChartDonut from 'ffe-chart-donut-react';
 
