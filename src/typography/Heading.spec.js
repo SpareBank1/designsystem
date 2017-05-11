@@ -16,7 +16,7 @@ const getWrapper = (props = {}) => {
     return shallow(<Heading {...finalProps} />);
 };
 
-describe('<H1...6 />', () => {
+describe('<Heading1...6 />', () => {
     test('renders without exploding', () => {
         const wrapper = getWrapper();
         expect(wrapper.length).toBe(1);
