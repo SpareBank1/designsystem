@@ -61,7 +61,7 @@
   "publishConfig": {
     "registry": "***REMOVED***"
   },
-  "license": "ISC",
+  "license": "UNLICENCED",
   "dependencies": {
     "classnames": "^2.2.5"
   }
