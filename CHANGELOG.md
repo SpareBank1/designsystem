@@ -1,4 +1,6 @@
 # Changelog
+# v7.1.2 
+* Removed custom event prevention to enable consistent behaviour across browsers
 
 # v7.1.1
 * Expand peerDep scope of `ffe-form` to include `5.x`.

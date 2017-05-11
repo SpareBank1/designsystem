@@ -3,7 +3,7 @@ import {assert} from 'chai';
 import React from 'react';
 import  SuggestionItem from '../suggestion-item';
 import sinon from 'sinon';
-import './setup';
+import './setup-dom';
 
 function item() {
   return {header: 'header'};
