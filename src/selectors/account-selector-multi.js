@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import BaseSelector from './base-selector';
 import AccountSuggestionMulti from '../account/account-suggestion-multi';
 import AccountNoMatch from '../account/account-nomatch';
-import {Account, Locale, KeyCodes} from '../util/types';
-import {accountFilter} from '../filter/filters';
+import { Account, Locale, KeyCodes } from '../util/types';
+import { accountFilter } from '../filter/filters';
 import StatusBar from '../suggestion/suggestion-list-status-bar';
 import txt from '../i18n/i18n';
 
@@ -18,36 +18,34 @@ class AccountSelectorMulti extends React.Component {
   }
 
   renderSuggestion(account) {
-    const {locale, selectedAccounts} = this.props;
+    const { locale, selectedAccounts } = this.props;
     const isSelected = selectedAccounts.filter(a => a.accountNumber === account.accountNumber);
     return (
       <AccountSuggestionMulti
         account={account}
         locale={locale}
         selected={isSelected.length > 0}
-        onChange={() => this.baseRef.preventBlurForNextFocusEvent()}
       />
     );
   }
 
   onBlur() {
-    if (this.shouldHideSuggestions) {
-      this.baseRef.showHideSuggestions(false);
+    if (!this.shouldShowSuggestions) {
       this.props.onBlur();
     }
-    this.shouldHideSuggestions = true;
+    this.baseRef.showOrHideSuggestions(this.shouldShowSuggestions);
+    this.shouldShowSuggestions = false;
   }
 
   onDone() {
-    this.baseRef.setFocus();
-    this.baseRef.showHideSuggestions(false);
+    this.baseRef.showOrHideSuggestions(false);
     this.props.onBlur();
   }
 
   renderSuggestionDetails(listHeight) {
     if (this.baseRef) {
       let statusText;
-      const {selectedAccounts} = this.props;
+      const { selectedAccounts } = this.props;
       if (selectedAccounts.length === 0) {
         statusText = txt[this.props.locale].NO_ACCOUNTS_SELECTED;
       } else if (selectedAccounts === 1) {
@@ -61,7 +59,7 @@ class AccountSelectorMulti extends React.Component {
           renderSelectionStatus={() => statusText}
           onDone={() => this.onDone()}
           labelDoneButton={txt[this.props.locale].DROPDOWN_MULTISELECT_DONE}
-          style={{position: 'absolute', zIndex: 100, top: height}}
+          style={{ position: 'absolute', zIndex: 100, top: height }}
         />
       );
     }
@@ -69,12 +67,14 @@ class AccountSelectorMulti extends React.Component {
   }
 
   onKeyDown(event) {
-    this.shouldHideSuggestions = event.shiftKey && event.which === KeyCodes.TAB;
+    if (event.which === KeyCodes.TAB) {
+      this.shouldShowSuggestions = !event.shiftKey;
+    }
   }
 
 
   render() {
-    const {noMatches, onAccountSelected, accounts} = this.props;
+    const { noMatches, onAccountSelected, accounts, locale } = this.props;
     return (
       <div
         className='ffe-account-selector'
@@ -82,7 +82,7 @@ class AccountSelectorMulti extends React.Component {
       >
         <BaseSelector
           renderSuggestion={(account) => this.renderSuggestion(account)}
-          renderNoMatches={() => <AccountNoMatch value={noMatches}/>}
+          renderNoMatches={() => <AccountNoMatch value={noMatches} locale={locale}/>}
           suggestionDetails={this.renderSuggestionDetails()}
           shouldHideSuggestionsOnSelect={false}
           shouldSelectHighlightedOnTab={false}
@@ -91,7 +91,7 @@ class AccountSelectorMulti extends React.Component {
           suggestionFilter={accountFilter}
           onSelect={onAccountSelected}
           onSuggestionListChange={(height) => {
-            this.setState({suggestionListHeight: height});
+            this.setState({ suggestionListHeight: height });
           }}
           suggestions={accounts}
           ref={(element) => {

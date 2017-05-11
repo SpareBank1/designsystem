@@ -1,4 +1,5 @@
-import React, { PropTypes, Component } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import KryssIkon from 'ffe-icons-react/kryss-ikon';
 
 class Input extends Component {
@@ -29,7 +30,9 @@ class Input extends Component {
         aria-owns={suggestionListId}
       >
         <input
-          onChange={ (e) => {onChange(e.target.value);}}
+          onChange={ (e) => {
+            onChange(e.target.value);
+          }}
           className='ffe-input-field ffe-dropdown ffe-base-selector__input-field'
           onKeyDown={ onKeyDown }
           autoComplete='off'
@@ -44,7 +47,10 @@ class Input extends Component {
         { value.length > 0 &&
         <button
           className='ffe-base-selector__reset-button'
-          onMouseDown={ onReset }
+          onMouseDown={ (e) => {
+            e.preventDefault();
+            onReset();
+          } }
           tabIndex={-1}
           type="button"
         >
@@ -77,7 +83,7 @@ Input.defaultProps = {
   onBlur: () => {},
   onFocus: () => {},
   inputFieldRef: () => {},
-  ariaInvalid : false,
+  ariaInvalid: false,
 };
 
 export default Input;

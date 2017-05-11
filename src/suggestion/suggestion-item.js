@@ -1,9 +1,10 @@
-import React, {PropTypes, Component} from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 class SuggestionItem extends Component {
   render() {
-    const {item, id, isHighlighted, render, onSelect, refHighlightedSuggestion} = this.props;
+    const { item, id, isHighlighted, render, onSelect, refHighlightedSuggestion } = this.props;
     return (
       <li
         ref={(itemRef) => {
@@ -13,8 +14,11 @@ class SuggestionItem extends Component {
         }}
         role='option'
         id={id}
-        onMouseDown={() => {onSelect(item);}}
-        className={classNames('ffe-account-suggestion', {'ffe-account-suggestion--highlighted' : isHighlighted})}
+        onMouseDown={(e) => {
+          e.preventDefault();
+          onSelect(item);
+        }}
+        className={classNames('ffe-account-suggestion', { 'ffe-account-suggestion--highlighted': isHighlighted })}
         tabIndex={-1}
       >
         {render(item)}

@@ -8,13 +8,13 @@ function AccountSuggestionMulti({account, locale, selected}) {
   const {accountNumber, balance, name}= account;
   const hasBalance = balance != null;
   return (
-    <div className='ffe-account-suggestion__account--multi' onMouseDown={(e) => {e.preventDefault();}}>
+    <div className='ffe-account-suggestion__account--multi'>
       <Checkbox
         checked={selected}
         name='my-checkbox-label'
         inline={ false }
         tabIndex={-1}
-        onChange={() => {}}
+        disabled={ true }
       />
       <div className='ffe-account-suggestion__content-wrapper'>
         <span className='ffe-account-suggestion__name'>{name}</span>

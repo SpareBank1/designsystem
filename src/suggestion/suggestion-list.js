@@ -35,7 +35,7 @@ export default function SuggestionList(props) {
 }
 
 SuggestionList.propTypes = {
-  suggestions: PropTypes.arrayOf(React.PropTypes.object).isRequired,
+  suggestions: PropTypes.arrayOf(PropTypes.object).isRequired,
   highlightedIndex: PropTypes.number.isRequired,
   renderSuggestion: PropTypes.func.isRequired,
   renderNoMatches: PropTypes.func,
