@@ -9,7 +9,12 @@ export default function DividerLine(props) {
     } = props;
 
     return (
-        <hr className={classNames('ffe-divider-line', className)} {...rest} />
+        <hr
+            className={classNames('ffe-divider-line', className)}
+            aria-hidden="true"
+            role="presentation"
+            {...rest}
+        />
     );
 }
 
