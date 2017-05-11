@@ -1,0 +1,23 @@
+# Test coverage reports
+.nyc_output/
+coverage/
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Generated files
+fonts/
+lib/
+!lib/images
+examples/*.css
+
+# Editor files
+*sublime-project
+*sublime-workspace
+.idea/
+
+# Added by precommit-hook module
+.jshintignore
+.jshintrc
+
