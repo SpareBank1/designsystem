@@ -16,3 +16,10 @@ lib/
 # NPM
 node_modules/
 npm-debug.log*
+
+# Generated example files
+example/example.css
+example/example.html
+
+# Visual tests report
+gemini-report/
