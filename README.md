@@ -82,12 +82,12 @@ lookLike|number (1-6)|no|Sets the visual size of heading, while retaining semant
 noMargin|bool|no|Remove margins,
 withBorder|bool|no|Adds silver border,
 
-#### `<ItalicText />`
+#### `<EmphasizedText />`
 
-Inline italic (emphasized) text.
+Inline emphasized (italic) text.
 
 ```javascript
-import ItalicText from 'ffe-core-react/typography/ItalicText';
+import EmphasizedText from 'ffe-core-react/typography/EmphasizedText';
 ```
 
 Property | Type | Required | Description

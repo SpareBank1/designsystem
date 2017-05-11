@@ -2,7 +2,7 @@ import React from 'react';
 import { node, string } from 'prop-types';
 import classNames from 'classnames';
 
-export default function ItalicText(props) {
+export default function EmphasizedText(props) {
     const {
         children,
         className,
@@ -16,7 +16,7 @@ export default function ItalicText(props) {
     );
 }
 
-ItalicText.propTypes = {
+EmphasizedText.propTypes = {
     children: node.isRequired,
     className: string,
 };
