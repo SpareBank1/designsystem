@@ -9,7 +9,7 @@ const getWrapper = (props = {}) => shallow(
     <SectionWrapper {...defaultProps} {...props} />
 );
 
-describe('<ContentContainer />', () => {
+describe('<SectionWrapper />', () => {
     test('renders without exploding', () => {
         const wrapper = getWrapper();
         expect(wrapper.length).toBe(1);
