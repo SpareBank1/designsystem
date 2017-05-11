@@ -1,5 +1,5 @@
 import React from 'react';
-import { node, string } from 'prop-types';
+import { string } from 'prop-types';
 import classNames from 'classnames';
 
 export default function DividerLine(props) {
