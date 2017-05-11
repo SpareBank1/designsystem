@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { bool, number } from 'prop-types';
 import {Scrollbars} from 'react-custom-scrollbars';
 import SuggestionList from './suggestion-list';
 
@@ -61,9 +61,9 @@ class SuggestionListContainer extends React.Component {
 }
 
 SuggestionListContainer.propTypes = {
-  highlightedIndex: PropTypes.number.isRequired,
-  heightMax: PropTypes.number,
-  autoHeight: PropTypes.bool,
+  highlightedIndex: number.isRequired,
+  heightMax: number,
+  autoHeight: bool,
 };
 
 SuggestionListContainer.defaultProps = {

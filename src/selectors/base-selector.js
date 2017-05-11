@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import { func, bool, number, string, arrayOf, object } from 'prop-types';
 import Input from './input-field';
 import SuggestionsList from '../suggestion/suggestion-list-container';
 import { KeyCodes } from '../util/types';
@@ -231,24 +231,24 @@ class BaseSelector extends Component {
 }
 
 BaseSelector.propTypes = {
-  suggestions: PropTypes.arrayOf(PropTypes.object).isRequired,
-  suggestionFilter: PropTypes.func.isRequired,
-  onSelect: PropTypes.func.isRequired,
-  value: PropTypes.string.isRequired,
-  shouldHideSuggestionsOnSelect: PropTypes.bool.isRequired,
-  shouldSelectHighlightedOnTab: PropTypes.bool.isRequired,
-  shouldHideSuggestionsOnBlur: PropTypes.bool.isRequired,
-  shouldHideSuggestionsOnReset: PropTypes.bool.isRequired,
-  onChange: PropTypes.func,
-  onBlur: PropTypes.func,
-  onReset: PropTypes.func,
-  onFocus: PropTypes.func,
-  onSuggestionListChange: PropTypes.func, //provides the height of the suggestion list
-  placeholder: PropTypes.string,
-  ariaInvalid: PropTypes.bool,
-  suggestionsHeightMax: PropTypes.number,
-  id: PropTypes.string,
-  name: PropTypes.string,
+  suggestions: arrayOf(object).isRequired,
+  suggestionFilter: func.isRequired,
+  onSelect: func.isRequired,
+  value: string.isRequired,
+  shouldHideSuggestionsOnSelect: bool.isRequired,
+  shouldSelectHighlightedOnTab: bool.isRequired,
+  shouldHideSuggestionsOnBlur: bool.isRequired,
+  shouldHideSuggestionsOnReset: bool.isRequired,
+  onChange: func,
+  onBlur: func,
+  onReset: func,
+  onFocus: func,
+  onSuggestionListChange: func, //provides the height of the suggestion list
+  placeholder: string,
+  ariaInvalid: bool,
+  suggestionsHeightMax: number,
+  id: string,
+  name: string,
 };
 
 BaseSelector.defaultProps = {

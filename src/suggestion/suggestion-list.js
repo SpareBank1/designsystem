@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { func, arrayOf, number, string, object } from 'prop-types';
 import Suggestion from './suggestion-item';
 
 export default function SuggestionList(props) {
@@ -35,11 +35,11 @@ export default function SuggestionList(props) {
 }
 
 SuggestionList.propTypes = {
-  suggestions: PropTypes.arrayOf(PropTypes.object).isRequired,
-  highlightedIndex: PropTypes.number.isRequired,
-  renderSuggestion: PropTypes.func.isRequired,
-  renderNoMatches: PropTypes.func,
-  id: PropTypes.string.isRequired
+  suggestions: arrayOf(object).isRequired,
+  highlightedIndex: number.isRequired,
+  renderSuggestion: func.isRequired,
+  renderNoMatches: func,
+  id: string.isRequired
 };
 
 SuggestionList.defaultProps = {

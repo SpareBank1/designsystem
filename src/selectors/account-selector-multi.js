@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { func, string, arrayOf} from 'prop-types';
 import BaseSelector from './base-selector';
 import AccountSuggestionMulti from '../account/account-suggestion-multi';
 import AccountNoMatch from '../account/account-nomatch';
@@ -107,12 +107,12 @@ class AccountSelectorMulti extends React.Component {
 }
 
 AccountSelectorMulti.propTypes = {
-  onAccountSelected: PropTypes.func.isRequired,
-  accounts: PropTypes.arrayOf(Account),
+  onAccountSelected: func.isRequired,
+  accounts: arrayOf(Account),
   locale: Locale.isRequired,
-  selectedAccounts: PropTypes.arrayOf(Account),
-  noMatches: PropTypes.string,
-  onBlur: PropTypes.func.isRequired
+  selectedAccounts: arrayOf(Account),
+  noMatches: string,
+  onBlur: func.isRequired
 };
 
 export default AccountSelectorMulti;

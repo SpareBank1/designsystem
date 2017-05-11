@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import { object, bool, func, string} from 'prop-types';
 import classNames from 'classnames';
 
 class SuggestionItem extends Component {
@@ -27,12 +27,12 @@ class SuggestionItem extends Component {
 }
 
 SuggestionItem.propTypes = {
-  item: PropTypes.object.isRequired,
-  id: PropTypes.string.isRequired,
-  isHighlighted: PropTypes.bool.isRequired,
-  render: PropTypes.func.isRequired,
-  onSelect: PropTypes.func.isRequired,
-  refHighlightedSuggestion: PropTypes.func.isRequired,
+  item: object.isRequired,
+  id: string.isRequired,
+  isHighlighted: bool.isRequired,
+  render: func.isRequired,
+  onSelect: func.isRequired,
+  refHighlightedSuggestion: func.isRequired,
 };
 
 export default SuggestionItem;

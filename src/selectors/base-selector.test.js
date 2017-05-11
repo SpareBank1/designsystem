@@ -34,14 +34,14 @@ function propsBaseSelector(_suggestions = suggestions()) {
 function shallowBaseSelector(props) {
   return shallow(
     <BaseSelector
-      {...{ ...propsBaseSelector(), ...props }}
+      {...propsBaseSelector()} {...props }
     />);
 }
 
 function mountBaseSelector(props) {
   return mount(
     <BaseSelector
-      {...{ ...propsBaseSelector(), ...props }}
+      {...propsBaseSelector()} {...props }
     />);
 }
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { func, string, arrayOf} from 'prop-types';
 import BaseSelector from './base-selector';
 import AccountSuggestionItem from '../account/account-suggestion';
 import AccountNoMatch from '../account/account-nomatch';
@@ -42,13 +42,13 @@ function AccountSelector(props) {
 }
 
 AccountSelector.propTypes = {
-  onAccountSelected : PropTypes.func.isRequired,
-  id: PropTypes.string.isRequired,
-  accounts : PropTypes.arrayOf(Account),
+  onAccountSelected : func.isRequired,
+  id: string.isRequired,
+  accounts : arrayOf(Account),
   locale: Locale.isRequired,
   selectedAccount: Account,
-  noMatches: PropTypes.string,
-  className : PropTypes.string,
+  noMatches: string,
+  className : string,
 };
 
 export default AccountSelector;
