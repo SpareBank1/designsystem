@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "React components for ffe-core components",
   "scripts": {
-    "build": "babel -d lib/ src/",
+    "prebuild": "rimraf lib",
+    "build": "babel --ignore spec.js -d lib/ src/",
     "start": "onchange 'src/**.js' -- npm run build",
     "lint": "eslint src/",
     "lint:fix": "eslint --fix src/ test/",
@@ -43,7 +44,8 @@
     "react": "^15.4.2",
     "react-addons-test-utils": "^15.4.2",
     "react-dom": "^15.4.2",
-    "react-test-renderer": "^15.5.4"
+    "react-test-renderer": "^15.5.4",
+    "rimraf": "^2.6.1"
   },
   "files": [
     "lib",
