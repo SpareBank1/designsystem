@@ -11,7 +11,8 @@
     "test": "jest --coverage src",
     "test:watch": "jest --watch src",
     "test:nocoverage": "jest src",
-    "prepublish": "npm run build",
+    "precommit": "npm run test:nocoverage && npm run lint",
+    "prepublish": "npm run lint && npm run build",
     "has-published": "npm show . versions -s --json | grep -q \\\"${npm_package_version}\\\""
   },
   "keywords": [
@@ -36,6 +37,7 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^6.10.0",
+    "husky": "^0.13.3",
     "install": "^0.8.7",
     "jest": "^20.0.0",
     "nsp": "^2.6.3",
