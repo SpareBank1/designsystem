@@ -1,6 +1,6 @@
 {
   "name": "ffe-icons-react",
-  "version": "2.4.4",
+  "version": "2.4.5",
   "description": "React komponent for ffe-icons",
   "main": "ffe-icons-react.js",
   "scripts": {
@@ -41,7 +41,7 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^6.10.3",
-    "ffe-icons": "^7.6.0",
+    "ffe-icons": "^7.6.1",
     "gulp": "^3.9.1",
     "json-loader": "^0.5.4",
     "mkdirp": "^0.5.1",
