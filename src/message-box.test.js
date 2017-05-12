@@ -2,7 +2,7 @@
 import { shallow } from 'enzyme';
 import { assert } from 'chai';
 import React from 'react';
-import { SuccessMessage, InfoMessage, ErrorMessage, TipsMessage } from './index';
+import { SuccessMessage, InfoMessage, ErrorMessage, TipsMessage, InfoMessageList, InfoMessageListItem } from './index';
 
 describe('<MessageBox />', () => {
 
@@ -41,7 +41,6 @@ describe('<MessageBox />', () => {
 
         assert.equal(wrapper.find('.ffe-body-text').length, 1);
     });
-
 
     it('should render children without a wrapper', () => {
         const content = (<marquee>Dette er en melding til deg</marquee>);
@@ -96,5 +95,40 @@ describe('<MessageBox />', () => {
         assert.ok(wrapper.props().className);
         assert.equal(wrapper.props().className, 'ffe-message-box custom-class');
         assert.equal(wrapper.find('.custom-class').length, 1);
+    });
+
+    describe('<InfoMessageList/>', () => {
+        it('should render as <ul />', () => {
+            const wrapper = shallow(<InfoMessageList>
+                <InfoMessageListItem>Add content to field</InfoMessageListItem>
+                <InfoMessageListItem>Add content to second field</InfoMessageListItem>
+            </InfoMessageList>);
+
+            assert.equal(wrapper.find('ul').length, 1);
+            assert.isTrue(wrapper.find('ul').hasClass('ffe-message-box__list'));
+        });
+
+        it('renders children', () => {
+            const wrapper = shallow(<InfoMessageList>
+                <li>Add content to field</li>
+                <li>Add content to second field</li>
+            </InfoMessageList>);
+
+            assert.equal(wrapper.find('li').length, 2);
+        });
+
+        describe('<InfoMessageListItem/>', () => {
+            it('should render list item with link inside `<a />` tag', () => {
+                const wrapper = shallow(<InfoMessageListItem href='link'>Add content to field</InfoMessageListItem>);
+
+                assert.equal(wrapper.find('a').length, 1);
+            });
+
+            it('should not render link element if linkTarget is not defined', () => {
+                const wrapper = shallow(<InfoMessageListItem>Add content to field</InfoMessageListItem>);
+
+                assert.equal(wrapper.find('a').length, 0);
+            });
+        });
     });
 });

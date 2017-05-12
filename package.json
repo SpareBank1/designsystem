@@ -1,6 +1,6 @@
 {
   "name": "ffe-message-box-react",
-  "version": "3.2.0",
+  "version": "3.3.0",
   "main": "lib/index.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/. && npm run example",
@@ -36,13 +36,14 @@
     "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^6.8.0",
     "ffe-core": "^9.2.0",
-    "ffe-icons-react": "^2.4.3",
-    "ffe-message-box": "^4.0.0",
+    "ffe-icons-react": "^2.4.5",
+    "ffe-message-box": "^4.2.0",
     "mocha": "^2.5.3",
     "mocha-tap13": "1.0.4",
     "node-lessify": "^0.1.4",
     "nsp": "^2.4.0",
     "onchange": "2.5.0",
+    "prop-types": "^15.5.10",
     "react": "^15.1.0",
     "react-addons-test-utils": "^15.1.0",
     "react-dom": "^15.1.0"

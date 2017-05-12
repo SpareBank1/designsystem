@@ -37,10 +37,25 @@ The components accept the following props:
 Note that no props are required. However, you should at least provide either
 `content` or children for the component to look and behave correctly.
 
+```javascript
+<InfoMessageList />
+```
+- The component can be added as a child component of Success/Error/Tips/InfoMessage
+- The component takes `<InfoMessageListItem />` as children
+
+```javascript 
+<InfoMessageListItem />
+``` 
+Props:
+- `children`:  Content rendered inside a `<li />` tag.
+- `href`: Can be included to render list element with `<a />` tag.
+
+
+
 ### Example usage
 
 ```javascript
-import { SuccessMessage, ErrorMessage } from 'ffe-message-box-react';
+import { SuccessMessage, ErrorMessage, InfoMessageList, InfoMessageListItem } from 'ffe-message-box-react';
 
 <SuccessMessage
     title="Regionsperre er nå oppdatert!"
@@ -58,6 +73,18 @@ import { SuccessMessage, ErrorMessage } from 'ffe-message-box-react';
         for spørsmål.
     </p>
 </ErrorMessage>
+
+<ErrorMessage title="Feil">
+    <InfoMessageList>
+        <InfoMessageListItem>
+            Feltet må fylles ut
+        </InfoMessageListItem>
+        <InfoMessageListItem href="#email">
+            Skriv inn en gyldig e-postadresse
+        </InfoMessageListItem>
+    </InfoMessageList>
+</ErrorMessage>
+
 ```
 
 The current version of the package can be seen in the SB1 Design Manual at
