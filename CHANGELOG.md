@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## Version 4.2.0
+- Added info list
+-renamed message-box__error-list to __list
+
 ## Version 4.1.0
 - Added message-box__error-list
 - Updated exclamation mark icon to latest version
