@@ -20,7 +20,7 @@ parameters (like aria or style) to the element as is.
 Outermost component to wrap your content in.
 
 ```javascript
-import SectionWrapper from 'ffe-core-react/layout/SectionWrapper';
+import SectionWrapper from 'ffe-core-react/lib/layout/SectionWrapper';
 ```
 
 Property | Type | Required | Description
@@ -37,7 +37,7 @@ className|string|no|Extra class names to apply
 Wraps your content and centers it on the page. Should be inside of a `<SectionWrapper />`.
 
 ```javascript
-import ContentContainer from 'ffe-core-react/layout/ContentContainer';
+import ContentContainer from 'ffe-core-react/lib/layout/ContentContainer';
 ```
 
 Property | Type | Required | Description
@@ -58,7 +58,7 @@ textLeft|bool|no|Left-align content
 A horizontal rule to divide up the page between sections etc.
 
 ```javascript
-import DividerLine from 'ffe-core-react/typography/DividerLine';
+import DividerLine from 'ffe-core-react/lib/typography/DividerLine';
 ```
 
 Property | Type | Required | Description
@@ -70,7 +70,7 @@ className|string|no|Extra class names to apply
 Text headings. Comes in 6 different sizes.
 
 ```javascript
-import Heading1 from 'ffe-core-react/typography/Heading1';
+import Heading1 from 'ffe-core-react/lib/typography/Heading1';
 ```
 
 Property | Type | Required | Description
@@ -87,7 +87,7 @@ withBorder|bool|no|Adds silver border,
 Inline emphasized (italic) text.
 
 ```javascript
-import EmphasizedText from 'ffe-core-react/typography/EmphasizedText';
+import EmphasizedText from 'ffe-core-react/lib/typography/EmphasizedText';
 ```
 
 Property | Type | Required | Description
@@ -100,7 +100,7 @@ className|string|no|Extra class names to apply
 Very small text.
 
 ```javascript
-import MicroText from 'ffe-core-react/typography/MicroText';
+import MicroText from 'ffe-core-react/lib/typography/MicroText';
 ```
 
 Property | Type | Required | Description
@@ -113,7 +113,7 @@ className|string|no|
 Paragraphs for placing your text content in. Comes in regular, lead and sub-lead varieties!
 
 ```javascript
-import Paragraph from 'ffe-core-react/typography/Paragraph';
+import Paragraph from 'ffe-core-react/lib/typography/Paragraph';
 ```
 
 Property | Type | Required | Description
@@ -130,7 +130,7 @@ textLeft|bool|no|Left-align the text
 Use for preformatted text.
 
 ```javascript
-import PreformattedText from 'ffe-core-react/typography/PreformattedText';
+import PreformattedText from 'ffe-core-react/lib/typography/PreformattedText';
 ```
 
 Property | Type | Required | Description
@@ -143,7 +143,7 @@ className|string|no|Extra class names to apply
 Small text.
 
 ```javascript
-import SmallText from 'ffe-core-react/typography/SmallText';
+import SmallText from 'ffe-core-react/lib/typography/SmallText';
 ```
 
 Property | Type | Required | Description
@@ -156,7 +156,7 @@ className|string|no|Extra class names to apply
 Strong text.
 
 ```javascript
-import StrongText from 'ffe-core-react/typography/StrongText';
+import StrongText from 'ffe-core-react/lib/typography/StrongText';
 ```
 
 Property | Type | Required | Description
