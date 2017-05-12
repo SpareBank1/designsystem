@@ -1,26 +1,11 @@
-import ActionButton from './ActionButton';
 import Button from './Button';
-import PrimaryButton from './PrimaryButton';
-import SecondaryButton from './SecondaryButton';
-import ShortcutButton from './ShortcutButton';
-import TertiaryButton from './TertiaryButton';
-import BackButton from './BackButton';
 
-export {
-    ActionButton,
-    Button,
-    PrimaryButton,
-    SecondaryButton,
-    ShortcutButton,
-    TertiaryButton,
-    BackButton,
+export { default as ActionButton } from './ActionButton';
+export { default as PrimaryButton } from './PrimaryButton';
+export { default as SecondaryButton } from './SecondaryButton';
+export { default as ShortcutButton } from './ShortcutButton';
+export { default as TertiaryButton } from './TertiaryButton';
+export { default as BackButton } from './BackButton';
 
-    // DEPRECATED
-    ActionButton as FFEActionButton,
-    Button as FFEButton,
-    PrimaryButton as FFEPrimaryButton,
-    SecondaryButton as FFESecondaryButton,
-    ShortcutButton as FFEShortcutButton,
-};
-
+export { Button };
 export default Button;
