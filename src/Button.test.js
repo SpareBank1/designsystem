@@ -16,85 +16,85 @@ import BackButton from './BackButton';
 
 describe('Button components:', () => {
     it('Button by default renders a primary button', () => {
-        let wrapper = render(<Button onClick={() => ({})}>Hello</Button>);
+        let wrapper = render(<Button>Hello</Button>);
         expect(wrapper.find('.ffe-primary-button')).to.have.length(1);
         expect(wrapper.find('.ffe-primary-button__label-text').text()).to.equal('Hello');
 
-        wrapper = render(<Button onClick={() => ({})} label="Hello" />);
+        wrapper = render(<Button label="Hello" />);
         expect(wrapper.find('.ffe-primary-button')).to.have.length(1);
         expect(wrapper.find('.ffe-primary-button__label-text').text()).to.equal('Hello');
     });
 
     it('PrimaryButton renders a primary button', () => {
-        let wrapper = render(<PrimaryButton onClick={() => ({})}>Hello</PrimaryButton>);
+        let wrapper = render(<PrimaryButton>Hello</PrimaryButton>);
         expect(wrapper.find('.ffe-primary-button')).to.have.length(1);
         expect(wrapper.find('.ffe-primary-button__label-text').text()).to.equal('Hello');
 
-        wrapper = render(<Button onClick={() => ({})} label="Hello" />);
+        wrapper = render(<Button label="Hello" />);
         expect(wrapper.find('.ffe-primary-button')).to.have.length(1);
         expect(wrapper.find('.ffe-primary-button__label-text').text()).to.equal('Hello');
     });
 
     it('ActionButton renders an action button', () => {
-        let wrapper = render(<ActionButton onClick={() => ({})}>Hello</ActionButton>);
+        let wrapper = render(<ActionButton>Hello</ActionButton>);
         expect(wrapper.find('.ffe-action-button')).to.have.length(1);
         expect(wrapper.find('.ffe-action-button__label-text').text()).to.equal('Hello');
 
-        wrapper = render(<ActionButton onClick={() => ({})} label="Hello" />);
+        wrapper = render(<ActionButton label="Hello" />);
         expect(wrapper.find('.ffe-action-button')).to.have.length(1);
         expect(wrapper.find('.ffe-action-button__label-text').text()).to.equal('Hello');
     });
 
     it('SecondaryButton renders a secondary button', () => {
-        let wrapper = render(<SecondaryButton onClick={() => ({})}>Hello</SecondaryButton>);
+        let wrapper = render(<SecondaryButton>Hello</SecondaryButton>);
         expect(wrapper.find('.ffe-secondary-button')).to.have.length(1);
         expect(wrapper.find('.ffe-secondary-button__label-text').text()).to.equal('Hello');
 
-        wrapper = render(<SecondaryButton onClick={() => ({})} label="Hello" />);
+        wrapper = render(<SecondaryButton label="Hello" />);
         expect(wrapper.find('.ffe-secondary-button')).to.have.length(1);
         expect(wrapper.find('.ffe-secondary-button__label-text').text()).to.equal('Hello');
     });
 
     it('ShortcutButton renders a shortcut button with icon', () => {
-        let wrapper = render(<ShortcutButton onClick={() => ({})}>Hello</ShortcutButton>);
+        let wrapper = render(<ShortcutButton>Hello</ShortcutButton>);
         expect(wrapper.find('.ffe-shortcut-button')).to.have.length(1);
         expect(wrapper.find('.ffe-shortcut-button__label-text').text()).to.equal('Hello');
         expect(wrapper.find('svg.ffe-shortcut-button__icon-chevron')).to.have.length(1);
 
-        wrapper = render(<ShortcutButton onClick={() => ({})} label="Hello" />);
+        wrapper = render(<ShortcutButton label="Hello" />);
         expect(wrapper.find('.ffe-shortcut-button')).to.have.length(1);
         expect(wrapper.find('.ffe-shortcut-button__label-text').text()).to.equal('Hello');
         expect(wrapper.find('svg.ffe-shortcut-button__icon-chevron')).to.have.length(1);
     });
 
     it('TertiaryButton renders a tertiary button', () => {
-        let wrapper = render(<TertiaryButton onClick={() => ({})}>Hello</TertiaryButton>);
+        let wrapper = render(<TertiaryButton>Hello</TertiaryButton>);
         expect(wrapper.find('.ffe-tertiary-button')).to.have.length(1);
         expect(wrapper.find('.ffe-tertiary-button').text()).to.equal('Hello');
 
-        wrapper = render(<TertiaryButton onClick={() => ({})} label="Hello" />);
+        wrapper = render(<TertiaryButton label="Hello" />);
         expect(wrapper.find('.ffe-tertiary-button')).to.have.length(1);
         expect(wrapper.find('.ffe-tertiary-button').text()).to.equal('Hello');
     });
 
     it('BackButton renders a back button', () => {
-        let wrapper = render(<BackButton onClick={() => ({})}>Hello</BackButton>);
+        let wrapper = render(<BackButton>Hello</BackButton>);
         expect(wrapper.find('.ffe-back-button')).to.have.length(1);
         expect(wrapper.find('.ffe-back-button').text()).to.equal('Hello');
 
-        wrapper = render(<BackButton onClick={() => ({})} label="Hello" />);
+        wrapper = render(<BackButton label="Hello" />);
         expect(wrapper.find('.ffe-back-button')).to.have.length(1);
         expect(wrapper.find('.ffe-back-button').text()).to.equal('Hello');
     });
 
     it('isLoading prop toggles aria-hidden and classes with --loading modifier', () => {
-        let wrapper = render(<Button onClick={() => ({})}>Hello</Button>);
+        let wrapper = render(<Button>Hello</Button>);
         expect(wrapper.find('.ffe-primary-button--loading')).to.have.length(0);
         expect(wrapper.find('.ffe-primary-button__label-text--loading')).to.have.length(0);
         expect(wrapper.find('.ffe-primary-button__label-spinner').prop('aria-hidden'))
             .to.equal('true');
 
-        wrapper = render(<Button onClick={() => ({})} isLoading={true}>Hello</Button>);
+        wrapper = render(<Button isLoading={true}>Hello</Button>);
         expect(wrapper.find('.ffe-primary-button--loading')).to.have.length(1);
         expect(wrapper.find('.ffe-primary-button__label-text--loading')).to.have.length(1);
         expect(wrapper.find('.ffe-primary-button__label-spinner').prop('aria-hidden'))
@@ -102,14 +102,14 @@ describe('Button components:', () => {
     });
 
     it('buttons should not be disabled by default', () => {
-        const wrapper = shallow(<Button onClick={() => ({})}>Hello</Button>);
+        const wrapper = shallow(<Button>Hello</Button>);
         const button = wrapper.find('button');
         expect(button.prop('disabled')).to.be.undefined;
         expect(button.prop('aria-disabled')).to.be.undefined;
     });
 
     it('disableButton prop disables the button', () => {
-        const wrapper = shallow(<Button disableButton={true} onClick={() => ({})}>Hello</Button>);
+        const wrapper = shallow(<Button disableButton={true}>Hello</Button>);
         const button = wrapper.find('button');
         expect(button.prop('disabled')).to.be.true;
         expect(button.prop('aria-disabled')).to.be.true;
@@ -117,7 +117,7 @@ describe('Button components:', () => {
 
     it('ActionButton passes disableButton on to Button', () => {
         const wrapper = shallow(
-            <ActionButton disableButton={true} onClick={() => ({})}>Hello</ActionButton>
+            <ActionButton disableButton={true}>Hello</ActionButton>
         );
         expect(wrapper.find('Button').prop('disableButton')).to.be.true;
     });
@@ -131,35 +131,35 @@ describe('Button components:', () => {
 
     it('PrimaryButton passes disableButton on to Button', () => {
         const wrapper = shallow(
-            <PrimaryButton disableButton={true} onClick={() => ({})}>Hello</PrimaryButton>
+            <PrimaryButton disableButton={true}>Hello</PrimaryButton>
         );
         expect(wrapper.find('Button').prop('disableButton')).to.be.true;
     });
 
     it('SecondaryButton passes disableButton on to Button', () => {
         const wrapper = shallow(
-            <SecondaryButton disableButton={true} onClick={() => ({})}>Hello</SecondaryButton>
+            <SecondaryButton disableButton={true}>Hello</SecondaryButton>
         );
         expect(wrapper.find('Button').prop('disableButton')).to.be.true;
     });
 
     it('ShortcutButton passes disableButton on to Button', () => {
         const wrapper = shallow(
-            <ShortcutButton disableButton={true} onClick={() => ({})}>Hello</ShortcutButton>
+            <ShortcutButton disableButton={true}>Hello</ShortcutButton>
         );
         expect(wrapper.find('Button').prop('disableButton')).to.be.true;
     });
 
     it('TertiaryButton passes disableButton on to Button', () => {
         const wrapper = shallow(
-            <TertiaryButton disableButton={true} onClick={() => ({})}>Hello</TertiaryButton>
+            <TertiaryButton disableButton={true}>Hello</TertiaryButton>
         );
         expect(wrapper.find('Button').prop('disableButton')).to.be.true;
     });
 
     it('BackButton passes disableButton on to Button', () => {
         const wrapper = shallow(
-            <BackButton disableButton={true} onClick={() => ({})}>Hello</BackButton>
+            <BackButton disableButton={true}>Hello</BackButton>
         );
         expect(wrapper.find('Button').prop('disableButton')).to.be.true;
     });
@@ -180,35 +180,35 @@ describe('Button components:', () => {
     });
 
     it('Set isTabbable={true} on Button does nothing', () => {
-        const wrapper = shallow(<Button onClick={() => ({})} isTabbable={true}>Hello</Button>);
+        const wrapper = shallow(<Button isTabbable={true}>Hello</Button>);
         const button = wrapper.find('button');
         expect(button.prop('tabIndex')).to.be.undefined;
     });
 
     it('ActionButton is tabbable by default', () => {
         const wrapper = shallow(
-            <ActionButton disableButton={true} onClick={() => ({})}>Hello</ActionButton>
+            <ActionButton disableButton={true}>Hello</ActionButton>
         );
         expect(wrapper.find('Button').prop('tabIndex')).to.be.undefined;
     });
 
     it('ActionButton passes isTabbable={false} on to Button', () => {
         const wrapper = shallow(
-            <ActionButton disableButton={true} onClick={() => ({})} isTabbable={false}>Hello</ActionButton>
+            <ActionButton disableButton={true} isTabbable={false}>Hello</ActionButton>
         );
         expect(wrapper.find('Button').prop('isTabbable')).to.be.false;
     });
 
     it('PrimaryButton is tabbable by default', () => {
         const wrapper = shallow(
-            <PrimaryButton disableButton={true} onClick={() => ({})}>Hello</PrimaryButton>
+            <PrimaryButton disableButton={true}>Hello</PrimaryButton>
         );
         expect(wrapper.find('Button').prop('tabIndex')).to.be.undefined;
     });
 
     it('PrimaryButton passes isTabbable={false} on to Button', () => {
         const wrapper = shallow(
-            <PrimaryButton disableButton={true} onClick={() => ({})} isTabbable={false}>
+            <PrimaryButton disableButton={true} isTabbable={false}>
                 Hello
             </PrimaryButton>
         );
@@ -217,14 +217,14 @@ describe('Button components:', () => {
 
     it('SecondaryButton is tabbable by default', () => {
         const wrapper = shallow(
-            <SecondaryButton disableButton={true} onClick={() => ({})}>Hello</SecondaryButton>
+            <SecondaryButton disableButton={true}>Hello</SecondaryButton>
         );
         expect(wrapper.find('Button').prop('tabIndex')).to.be.undefined;
     });
 
     it('SecondaryButton passes isTabbable={false} on to Button', () => {
         const wrapper = shallow(
-            <SecondaryButton disableButton={true} onClick={() => ({})} isTabbable={false}>
+            <SecondaryButton disableButton={true} isTabbable={false}>
                 Hello
             </SecondaryButton>
         );
@@ -233,14 +233,14 @@ describe('Button components:', () => {
 
     it('ShortcutButton is tabbable by default', () => {
         const wrapper = shallow(
-            <ShortcutButton disableButton={true} onClick={() => ({})}>Hello</ShortcutButton>
+            <ShortcutButton disableButton={true}>Hello</ShortcutButton>
         );
         expect(wrapper.find('Button').prop('tabIndex')).to.be.undefined;
     });
 
     it('ShortcutButton passes isTabbable={false} on to Button', () => {
         const wrapper = shallow(
-            <ShortcutButton disableButton={true} onClick={() => ({})} isTabbable={false}>
+            <ShortcutButton disableButton={true} isTabbable={false}>
                 Hello
             </ShortcutButton>
         );
@@ -249,14 +249,14 @@ describe('Button components:', () => {
 
     it('TertiaryButton is tabbable by default', () => {
         const wrapper = shallow(
-            <TertiaryButton disableButton={true} onClick={() => ({})}>Hello</TertiaryButton>
+            <TertiaryButton disableButton={true}>Hello</TertiaryButton>
         );
         expect(wrapper.find('Button').prop('tabIndex')).to.be.undefined;
     });
 
     it('TertiaryButton passes isTabbable={false} on to Button', () => {
         const wrapper = shallow(
-            <TertiaryButton disableButton={true} onClick={() => ({})} isTabbable={false}>
+            <TertiaryButton disableButton={true} isTabbable={false}>
                 Hello
             </TertiaryButton>
         );
@@ -265,14 +265,14 @@ describe('Button components:', () => {
 
     it('BackButton is tabbable by default', () => {
         const wrapper = shallow(
-            <BackButton disableButton={true} onClick={() => ({})}>Hello</BackButton>
+            <BackButton disableButton={true}>Hello</BackButton>
         );
         expect(wrapper.find('Button').prop('tabIndex')).to.be.undefined;
     });
 
     it('BackButton passes isTabbable={false} on to Button', () => {
         const wrapper = shallow(
-            <BackButton disableButton={true} onClick={() => ({})} isTabbable={false}>
+            <BackButton disableButton={true} isTabbable={false}>
                 Hello
             </BackButton>
         );
@@ -281,7 +281,7 @@ describe('Button components:', () => {
 
     it('Button sets class', () => {
         const wrapper = shallow(
-            <Button className="testClass" onClick={() => {}}>Hello</Button>
+            <Button className="testClass">Hello</Button>
         );
         expect(wrapper.find('button').hasClass('testClass')).to.be.true;
     });
