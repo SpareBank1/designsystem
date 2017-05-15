@@ -8,6 +8,7 @@ trap 'executionFailed ${LINENO}' ERR
 
 function main() {
     ./build.sh
+    ./run_visual-tests.sh
 
     if should_publish; then
         npm run has-published -s || npm publish
