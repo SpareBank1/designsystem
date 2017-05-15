@@ -3,309 +3,149 @@
 
 import React from 'react';
 import { expect } from 'chai';
-import { render, shallow } from 'enzyme';
+import { shallow } from 'enzyme';
 import { spy } from 'sinon';
 
-import ActionButton from './ActionButton';
-import Button from './Button';
-import PrimaryButton from './PrimaryButton';
-import SecondaryButton from './SecondaryButton';
-import ShortcutButton from './ShortcutButton';
-import TertiaryButton from './TertiaryButton';
-import BackButton from './BackButton';
+import Button from './index';
 
-describe('Button components:', () => {
-    it('Button by default renders a primary button', () => {
-        let wrapper = render(<Button>Hello</Button>);
-        expect(wrapper.find('.ffe-primary-button')).to.have.length(1);
-        expect(wrapper.find('.ffe-primary-button__label-text').text()).to.equal('Hello');
+describe('Button', () => {
+    describe('by default', () => {
+        let button;
 
-        wrapper = render(<Button label="Hello" />);
-        expect(wrapper.find('.ffe-primary-button')).to.have.length(1);
-        expect(wrapper.find('.ffe-primary-button__label-text').text()).to.equal('Hello');
+        beforeEach(() => {
+            button = shallow(<Button>Hello</Button>);
+        });
+
+        it('renders a primary button', () => {
+            expect(button).to.have.className('ffe-primary-button');
+        });
+
+        it('uses child-text as label', () => {
+            const label = button.find('.ffe-primary-button__label-text');
+            expect(label).to.have.text('Hello');
+        });
+
+        it('is not disabled', () => {
+            expect(button).to.not.have.prop('disabled');
+            expect(button).to.not.have.prop('aria-disabled');
+        });
+
+        it('does not have --loading modifier', () => {
+            expect(button).to.not.have.className('ffe-primary-button--loading');
+
+            const label = button.find('.ffe-primary-button__label-text');
+            expect(label).to.not.have.className('ffe-primary-button__label-text--loading');
+        });
+
+        it('has aria-hidden on spinner', () => {
+            expect(button.find('.ffe-primary-button__label-spinner').prop('aria-hidden'))
+                .to.be.true;
+        });
     });
 
-    it('PrimaryButton renders a primary button', () => {
-        let wrapper = render(<PrimaryButton>Hello</PrimaryButton>);
-        expect(wrapper.find('.ffe-primary-button')).to.have.length(1);
-        expect(wrapper.find('.ffe-primary-button__label-text').text()).to.equal('Hello');
+    describe('given prop', () => {
+        describe('of random name', () => {
+            it('passes it on', () => {
+                const button = shallow(<Button data-analytics-track="logMe" />);
+                expect(button).to.have.attr('data-analytics-track', 'logMe');
+            });
+        });
 
-        wrapper = render(<Button label="Hello" />);
-        expect(wrapper.find('.ffe-primary-button')).to.have.length(1);
-        expect(wrapper.find('.ffe-primary-button__label-text').text()).to.equal('Hello');
-    });
+        describe('label', () => {
+            it('uses that as label text', () => {
+                const wrapper = shallow(<Button label="Hello" />);
+                expect(wrapper.find('.ffe-primary-button__label-text').text()).to.equal('Hello');
+            });
+        });
 
-    it('ActionButton renders an action button', () => {
-        let wrapper = render(<ActionButton>Hello</ActionButton>);
-        expect(wrapper.find('.ffe-action-button')).to.have.length(1);
-        expect(wrapper.find('.ffe-action-button__label-text').text()).to.equal('Hello');
+        describe('buttonType', () => {
+            it('has correct ffe button type class', () => {
+                const button = shallow(<Button buttonType="someRandomType" />);
+                expect(button).to.have.className('ffe-someRandomType-button');
+            });
+        });
 
-        wrapper = render(<ActionButton label="Hello" />);
-        expect(wrapper.find('.ffe-action-button')).to.have.length(1);
-        expect(wrapper.find('.ffe-action-button__label-text').text()).to.equal('Hello');
-    });
+        describe('isLoading', () => {
+            let button;
 
-    it('SecondaryButton renders a secondary button', () => {
-        let wrapper = render(<SecondaryButton>Hello</SecondaryButton>);
-        expect(wrapper.find('.ffe-secondary-button')).to.have.length(1);
-        expect(wrapper.find('.ffe-secondary-button__label-text').text()).to.equal('Hello');
+            beforeEach(() => {
+                button = shallow(<Button isLoading={true} />);
+            });
 
-        wrapper = render(<SecondaryButton label="Hello" />);
-        expect(wrapper.find('.ffe-secondary-button')).to.have.length(1);
-        expect(wrapper.find('.ffe-secondary-button__label-text').text()).to.equal('Hello');
-    });
+            it('adds --loading modifier', () => {
+                expect(button).to.have.className('ffe-primary-button--loading');
 
-    it('ShortcutButton renders a shortcut button with icon', () => {
-        let wrapper = render(<ShortcutButton>Hello</ShortcutButton>);
-        expect(wrapper.find('.ffe-shortcut-button')).to.have.length(1);
-        expect(wrapper.find('.ffe-shortcut-button__label-text').text()).to.equal('Hello');
-        expect(wrapper.find('svg.ffe-shortcut-button__icon-chevron')).to.have.length(1);
+                const label = button.find('.ffe-primary-button__label-text');
+                expect(label).to.have.className('ffe-primary-button__label-text--loading');
+            });
 
-        wrapper = render(<ShortcutButton label="Hello" />);
-        expect(wrapper.find('.ffe-shortcut-button')).to.have.length(1);
-        expect(wrapper.find('.ffe-shortcut-button__label-text').text()).to.equal('Hello');
-        expect(wrapper.find('svg.ffe-shortcut-button__icon-chevron')).to.have.length(1);
-    });
+            it('sets aria-hidden=false on spinner', () => {
+                const spinner = button.find('.ffe-primary-button__label-spinner');
+                expect(spinner).to.have.prop('aria-hidden', false);
+            });
 
-    it('TertiaryButton renders a tertiary button', () => {
-        let wrapper = render(<TertiaryButton>Hello</TertiaryButton>);
-        expect(wrapper.find('.ffe-tertiary-button')).to.have.length(1);
-        expect(wrapper.find('.ffe-tertiary-button').text()).to.equal('Hello');
+            it('disables the button', () => {
+                expect(button).to.have.prop('disabled', true);
+            });
 
-        wrapper = render(<TertiaryButton label="Hello" />);
-        expect(wrapper.find('.ffe-tertiary-button')).to.have.length(1);
-        expect(wrapper.find('.ffe-tertiary-button').text()).to.equal('Hello');
-    });
+            it('marks button as aria-busy', () => {
+                expect(button).to.have.prop('aria-busy', true);
+            });
+        });
 
-    it('BackButton renders a back button', () => {
-        let wrapper = render(<BackButton>Hello</BackButton>);
-        expect(wrapper.find('.ffe-back-button')).to.have.length(1);
-        expect(wrapper.find('.ffe-back-button').text()).to.equal('Hello');
+        describe('disableButton', () => {
+            it('disables the button', () => {
+                const button = shallow(<Button disableButton={true} />);
+                expect(button).to.have.prop('disabled', true);
+                expect(button).to.have.prop('aria-disabled', true);
+            });
+        });
 
-        wrapper = render(<BackButton label="Hello" />);
-        expect(wrapper.find('.ffe-back-button')).to.have.length(1);
-        expect(wrapper.find('.ffe-back-button').text()).to.equal('Hello');
-    });
+        describe('onClick', () => {
+            it('runs the passed function when clicked', () => {
+                const onClick = spy();
+                const button = shallow(<Button onClick={onClick} />);
+                button.simulate('click');
+                expect(onClick.calledOnce).to.be.true;
+            });
+        });
 
-    it('isLoading prop toggles aria-hidden and classes with --loading modifier', () => {
-        let wrapper = render(<Button>Hello</Button>);
-        expect(wrapper.find('.ffe-primary-button--loading')).to.have.length(0);
-        expect(wrapper.find('.ffe-primary-button__label-text--loading')).to.have.length(0);
-        expect(wrapper.find('.ffe-primary-button__label-spinner').prop('aria-hidden'))
-            .to.equal('true');
+        describe('isTabbable', () => {
+            it('should not set tabIndex', () => {
+                const button = shallow(<Button isTabbable={true} />);
+                expect(button).to.not.have.prop('tabIndex');
+            });
+        });
 
-        wrapper = render(<Button isLoading={true}>Hello</Button>);
-        expect(wrapper.find('.ffe-primary-button--loading')).to.have.length(1);
-        expect(wrapper.find('.ffe-primary-button__label-text--loading')).to.have.length(1);
-        expect(wrapper.find('.ffe-primary-button__label-spinner').prop('aria-hidden'))
-            .to.equal('false');
-    });
+        describe('className', () => {
+            it('has given class', () => {
+                const button = shallow(<Button className="testClass" />);
+                expect(button).to.have.className('testClass');
+            });
+        });
 
-    it('buttons should not be disabled by default', () => {
-        const wrapper = shallow(<Button>Hello</Button>);
-        const button = wrapper.find('button');
-        expect(button.prop('disabled')).to.be.undefined;
-        expect(button.prop('aria-disabled')).to.be.undefined;
-    });
+        describe('type', () => {
+            it('can be type="button"', () => {
+                const wrapper = shallow(<Button type="button" />);
+                expect(wrapper.find('button').is('[type="button"]')).to.be.true;
+            });
 
-    it('disableButton prop disables the button', () => {
-        const wrapper = shallow(<Button disableButton={true}>Hello</Button>);
-        const button = wrapper.find('button');
-        expect(button.prop('disabled')).to.be.true;
-        expect(button.prop('aria-disabled')).to.be.true;
-    });
+            it('can be type="reset"', () => {
+                const wrapper = shallow(<Button type="reset" />);
+                expect(wrapper.find('button').is('[type="reset"]')).to.be.true;
+            });
 
-    it('ActionButton passes disableButton on to Button', () => {
-        const wrapper = shallow(
-            <ActionButton disableButton={true}>Hello</ActionButton>
-        );
-        expect(wrapper.find('Button').prop('disableButton')).to.be.true;
-    });
+            it('can be type="submit"', () => {
+                const wrapper = shallow(<Button type="submit" />);
+                expect(wrapper.find('button').is('[type="submit"]')).to.be.true;
+            });
+        });
 
-    it('ActionButton passes any prop on to Button', () => {
-        const wrapper = shallow(
-            <ActionButton data-analytics-track="logMe">Hello</ActionButton>
-        );
-        expect(wrapper.find('Button').is('[data-analytics-track="logMe"]')).to.be.true;
-    });
-
-    it('PrimaryButton passes disableButton on to Button', () => {
-        const wrapper = shallow(
-            <PrimaryButton disableButton={true}>Hello</PrimaryButton>
-        );
-        expect(wrapper.find('Button').prop('disableButton')).to.be.true;
-    });
-
-    it('SecondaryButton passes disableButton on to Button', () => {
-        const wrapper = shallow(
-            <SecondaryButton disableButton={true}>Hello</SecondaryButton>
-        );
-        expect(wrapper.find('Button').prop('disableButton')).to.be.true;
-    });
-
-    it('ShortcutButton passes disableButton on to Button', () => {
-        const wrapper = shallow(
-            <ShortcutButton disableButton={true}>Hello</ShortcutButton>
-        );
-        expect(wrapper.find('Button').prop('disableButton')).to.be.true;
-    });
-
-    it('TertiaryButton passes disableButton on to Button', () => {
-        const wrapper = shallow(
-            <TertiaryButton disableButton={true}>Hello</TertiaryButton>
-        );
-        expect(wrapper.find('Button').prop('disableButton')).to.be.true;
-    });
-
-    it('BackButton passes disableButton on to Button', () => {
-        const wrapper = shallow(
-            <BackButton disableButton={true}>Hello</BackButton>
-        );
-        expect(wrapper.find('Button').prop('disableButton')).to.be.true;
-    });
-
-    it('runs the function passed as onClick when clicked', () => {
-        const onClick = spy();
-        const wrapper = shallow(<Button onClick={onClick}>Hello</Button>);
-        wrapper.find('button').simulate('click');
-        expect(onClick.calledOnce).to.true;
-    });
-
-    it('isLoading prop disables the button and marks it as aria-busy', () => {
-        const wrapper = shallow(<Button isLoading={true}>Hello</Button>);
-        const button = wrapper.find('button');
-        expect(button.prop('disabled')).to.be.true;
-        expect(button.prop('aria-busy')).to.be.true;
-        expect(button.prop('aria-disabled')).to.be.undefined;
-    });
-
-    it('Set isTabbable={true} on Button does nothing', () => {
-        const wrapper = shallow(<Button isTabbable={true}>Hello</Button>);
-        const button = wrapper.find('button');
-        expect(button.prop('tabIndex')).to.be.undefined;
-    });
-
-    it('ActionButton is tabbable by default', () => {
-        const wrapper = shallow(
-            <ActionButton disableButton={true}>Hello</ActionButton>
-        );
-        expect(wrapper.find('Button').prop('tabIndex')).to.be.undefined;
-    });
-
-    it('ActionButton passes isTabbable={false} on to Button', () => {
-        const wrapper = shallow(
-            <ActionButton disableButton={true} isTabbable={false}>Hello</ActionButton>
-        );
-        expect(wrapper.find('Button').prop('isTabbable')).to.be.false;
-    });
-
-    it('PrimaryButton is tabbable by default', () => {
-        const wrapper = shallow(
-            <PrimaryButton disableButton={true}>Hello</PrimaryButton>
-        );
-        expect(wrapper.find('Button').prop('tabIndex')).to.be.undefined;
-    });
-
-    it('PrimaryButton passes isTabbable={false} on to Button', () => {
-        const wrapper = shallow(
-            <PrimaryButton disableButton={true} isTabbable={false}>
-                Hello
-            </PrimaryButton>
-        );
-        expect(wrapper.find('Button').prop('isTabbable')).to.be.false;
-    });
-
-    it('SecondaryButton is tabbable by default', () => {
-        const wrapper = shallow(
-            <SecondaryButton disableButton={true}>Hello</SecondaryButton>
-        );
-        expect(wrapper.find('Button').prop('tabIndex')).to.be.undefined;
-    });
-
-    it('SecondaryButton passes isTabbable={false} on to Button', () => {
-        const wrapper = shallow(
-            <SecondaryButton disableButton={true} isTabbable={false}>
-                Hello
-            </SecondaryButton>
-        );
-        expect(wrapper.find('Button').prop('isTabbable')).to.be.false;
-    });
-
-    it('ShortcutButton is tabbable by default', () => {
-        const wrapper = shallow(
-            <ShortcutButton disableButton={true}>Hello</ShortcutButton>
-        );
-        expect(wrapper.find('Button').prop('tabIndex')).to.be.undefined;
-    });
-
-    it('ShortcutButton passes isTabbable={false} on to Button', () => {
-        const wrapper = shallow(
-            <ShortcutButton disableButton={true} isTabbable={false}>
-                Hello
-            </ShortcutButton>
-        );
-        expect(wrapper.find('Button').prop('isTabbable')).to.be.false;
-    });
-
-    it('TertiaryButton is tabbable by default', () => {
-        const wrapper = shallow(
-            <TertiaryButton disableButton={true}>Hello</TertiaryButton>
-        );
-        expect(wrapper.find('Button').prop('tabIndex')).to.be.undefined;
-    });
-
-    it('TertiaryButton passes isTabbable={false} on to Button', () => {
-        const wrapper = shallow(
-            <TertiaryButton disableButton={true} isTabbable={false}>
-                Hello
-            </TertiaryButton>
-        );
-        expect(wrapper.find('Button').prop('isTabbable')).to.be.false;
-    });
-
-    it('BackButton is tabbable by default', () => {
-        const wrapper = shallow(
-            <BackButton disableButton={true}>Hello</BackButton>
-        );
-        expect(wrapper.find('Button').prop('tabIndex')).to.be.undefined;
-    });
-
-    it('BackButton passes isTabbable={false} on to Button', () => {
-        const wrapper = shallow(
-            <BackButton disableButton={true} isTabbable={false}>
-                Hello
-            </BackButton>
-        );
-        expect(wrapper.find('Button').prop('isTabbable')).to.be.false;
-    });
-
-    it('Button sets class', () => {
-        const wrapper = shallow(
-            <Button className="testClass">Hello</Button>
-        );
-        expect(wrapper.find('button').hasClass('testClass')).to.be.true;
-    });
-
-    it('Button can be type="button" if specified', () => {
-        const wrapper = shallow(
-            <Button type="button">Hello</Button>
-        );
-
-        expect(wrapper.find('button').is('[type="button"]')).to.be.true;
-    });
-
-    it('Button can be type="reset" if specified', () => {
-        const wrapper = shallow(
-            <Button type="reset">Hello</Button>
-        );
-
-        expect(wrapper.find('button').is('[type="reset"]')).to.be.true;
-    });
-
-    it('Button can be autoFocused if specified', () => {
-        const wrapper = shallow(
-            <Button autoFocus={true}>Hello</Button>
-        );
-        expect(wrapper.find('button').prop('autoFocus')).to.be.true;
+        describe('autoFocus', () => {
+            it('can be autoFocused', () => {
+                const wrapper = shallow(<Button autoFocus={true} />);
+                expect(wrapper.find('button').prop('autoFocus')).to.be.true;
+            });
+        });
     });
 });

@@ -8,8 +8,8 @@
     "lint": "eslint src/.",
     "test": "npm run test:spec && npm run test:nsp",
     "test:nsp": "nsp check",
-    "test:spec": "mocha --require babel-register src/**/*.test.js",
-    "tdd": "mocha --require babel-register src/**/*.test.js -w",
+    "test:spec": "mocha --require src/util/test-setup.js --compilers js:babel-core/register src/**/*.test.js",
+    "tdd": "mocha --require src/util/test-setup.js --compilers js:babel-core/register src/**/*.test.js -w",
     "start": "budo examples/buttons.js --open --live --title \"FFE Buttons\" -- -t [ babelify --presets [ es2015 react ] ] -t node-lessify",
     "prepublish": "npm run build",
     "has-published": "npm show . versions -s | grep -q ${npm_package_version}",
@@ -36,6 +36,7 @@
     "babelify": "^7.3.0",
     "budo": "^10.0.3",
     "chai": "^3.5.0",
+    "chai-enzyme": "^0.6.1",
     "enzyme": "^2.1.0",
     "eslint": "^3.12.2",
     "eslint-config-ffe": "^6.0.0",
@@ -65,5 +66,6 @@
   },
   "dependencies": {
     "ffe-icons-react": "^2.1.0"
-  }
+  },
+  "license": "UNLICENSED"
 }
