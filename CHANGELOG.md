@@ -1,4 +1,4 @@
-# Changelog for ffe-core-react
+# Changelog
 
 ## v.1.0.0
 * First release.
