@@ -147,5 +147,12 @@ describe('Button', () => {
                 expect(wrapper.find('button').prop('autoFocus')).to.be.true;
             });
         });
+
+        describe('condensed', () => {
+            it('has condensed class', () => {
+                const button = shallow(<Button condensed={true} />);
+                expect(button).to.have.className('ffe-primary-button--condensed');
+            });
+        });
     });
 });
