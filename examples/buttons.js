@@ -23,16 +23,31 @@ function ButtonsExample() {
         <ActionButton>I'm an action button</ActionButton>
       </div>
       <div className="ffe-content-container">
+        <ActionButton condensed>Condensed action button</ActionButton>
+      </div>
+      <div className="ffe-content-container">
         <PrimaryButton>I'm a primary button</PrimaryButton>
+      </div>
+      <div className="ffe-content-container">
+        <PrimaryButton condensed>Condensed primary button</PrimaryButton>
       </div>
       <div className="ffe-content-container">
         <SecondaryButton>I'm a secondary button</SecondaryButton>
       </div>
       <div className="ffe-content-container">
+        <SecondaryButton condensed>Condensed secondary button</SecondaryButton>
+      </div>
+      <div className="ffe-content-container">
         <ShortcutButton>I'm a shortcut button</ShortcutButton>
       </div>
       <div className="ffe-content-container">
+        <ShortcutButton condensed>Condensed shortcut button</ShortcutButton>
+      </div>
+      <div className="ffe-content-container">
         <TertiaryButton>I'm a tertiary button</TertiaryButton>
+      </div>
+      <div className="ffe-content-container">
+        <TertiaryButton condensed>Condensed tertiary button</TertiaryButton>
       </div>
       <div className="ffe-content-container">
         <BackButton>I'm a back button</BackButton>
