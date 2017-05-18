@@ -5,7 +5,7 @@ function should_publish() {
 }
 
 main() {
-    git clean -f -x -d
+    git clean -ff -x -d
     npm install
     npm run compile
 
