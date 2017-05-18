@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import hash from 'nfe-hash';
 
-const inlined = {
+const inlineStyles = {
     display: 'inline-block'
 };
 
@@ -11,12 +11,6 @@ class RadioBase extends Component {
 
     constructor(props) {
         super(props);
-
-        let styles = props.style;
-        if (props.inline) {
-            styles = Object.assign({}, inlined, styles);
-        }
-        this.state = { styles };
     }
 
     render() {
@@ -28,13 +22,18 @@ class RadioBase extends Component {
             labelClasses,
             name,
             value,
+            style,
             ...rest
         } = this.props;
 
+        let styles = style;
+        if (inline) {
+            styles = Object.assign({}, inlineStyles, style);
+        }
         const domId = id || createId({ name, value, label, inline });
 
         return (
-            <div style={ this.state.styles }>
+            <div style={ styles }>
                 <input
                     type="radio"
                     className="ffe-radio-input"
