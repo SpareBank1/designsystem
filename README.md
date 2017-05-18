@@ -25,6 +25,7 @@ import RadioButton from 'ffe-radio-button-react';
              name={ string }
              inline={ boolean }
              checked={ boolean }
+             tooltip={ string }
              onChange={ function }
 />
 ```
@@ -36,6 +37,14 @@ If you want to have a more complex label, you can use `children`:
     <span>Look at me, I'm a super special label!</span>
 </RadioButton>
 ```
+
+You can also add a helping text by using the tooltip property:
+```javascript
+<RadioButton label="This is not the complete truth"
+             tooltip="The complete truth is..."
+/>
+```
+When the `tooltip` is truthy the `inline` capabilities will be ignored as the tooltip icon will be added to the end of the line.
 
 ### `<RadioButtonGroup />`
 

@@ -30,9 +30,7 @@
     "mocha": "^2.4.5",
     "mocha-tap13": "0.0.3",
     "nsp": "^2.2.0",
-    "react": "^15.0.1",
     "react-addons-test-utils": "^15.0.1",
-    "react-dom": "^15.0.1",
     "sinon": "^1.17.3"
   },
   "publishConfig": {
@@ -48,10 +46,13 @@
       "es2015"
     ],
     "plugins": [
-        "transform-object-rest-spread"
+      "transform-object-rest-spread"
     ]
   },
   "dependencies": {
-    "nfe-hash": "^1.1.0"
+    "classnames": "^2.2.5",
+    "nfe-hash": "^1.1.0",
+    "react": "^15.0.1",
+    "react-dom": "^15.0.1"
   }
 }
