@@ -7,10 +7,41 @@
     transition: width @ffe-transition-duration @ffe-ease-in-out-back;
     text-align: left;
     padding-left: 30px;
+    padding-top: 1px;
 
     &--inline {
         display: inline-block;
         margin-right: 20px;
+    }
+
+    &--with-tooltip {
+        display: inline-block;
+        margin-right: 30px;
+        margin-bottom: 0;
+    }
+
+    &__tooltip-icon {
+        display: inline-block;
+        vertical-align: top;
+        width: 25px;
+        position: absolute;
+        right: 0;
+        margin-top: 8px;
+
+        & .ffe-tooltip__icon {
+            margin: 0;
+        }
+    }
+
+    &__tooltip-text {
+        color: #676767;
+        font-family: "MuseoSans-500", arial, sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 22px;
+        margin-left: 30px;
+        margin-top: 0;
+        margin-bottom: 0;
     }
 
     &::before {
