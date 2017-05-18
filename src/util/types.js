@@ -1,4 +1,4 @@
-import { PropTypes } from 'react';
+import { shape, string, number, oneOf } from 'prop-types';
 
 export const nb = 'nb';
 export const en = 'en';
@@ -26,11 +26,11 @@ export const KeyCodes = {
   DOWN: 40,
 };
 
-export const Account = PropTypes.shape({
-  accountNumber: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  currencyCode: PropTypes.string,
-  balance: PropTypes.number,
+export const Account = shape({
+  accountNumber: string.isRequired,
+  name: string.isRequired,
+  currencyCode: string,
+  balance: number,
 });
 
-export const Locale = PropTypes.oneOf([nb, nn, en]);
+export const Locale = oneOf([nb, nn, en]);

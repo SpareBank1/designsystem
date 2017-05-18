@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
+import { bool } from 'prop-types';
 import Checkbox from 'ffe-checkbox-react';
 import {accountFormatter, balanceWithCurrency} from '../util/format';
 import {Account, Locale} from '../util/types';
@@ -7,13 +8,13 @@ function AccountSuggestionMulti({account, locale, selected}) {
   const {accountNumber, balance, name}= account;
   const hasBalance = balance != null;
   return (
-    <div className='ffe-account-suggestion__account--multi' onMouseDown={(e) => {e.preventDefault();}}>
+    <div className='ffe-account-suggestion__account--multi'>
       <Checkbox
         checked={selected}
         name='my-checkbox-label'
         inline={ false }
         tabIndex={-1}
-        onChange={() => {}}
+        disabled={ true }
       />
       <div className='ffe-account-suggestion__content-wrapper'>
         <span className='ffe-account-suggestion__name'>{name}</span>
@@ -35,7 +36,7 @@ function AccountSuggestionMulti({account, locale, selected}) {
 AccountSuggestionMulti.propTypes = {
   account: Account.isRequired,
   locale: Locale.isRequired,
-  selected: PropTypes.bool.isRequired,
+  selected: bool.isRequired,
 };
 
 AccountSuggestionMulti.defaultProps = {

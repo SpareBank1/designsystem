@@ -1,9 +1,10 @@
-import React, {PropTypes, Component} from 'react';
+import React, { Component } from 'react';
+import { object, bool, func, string} from 'prop-types';
 import classNames from 'classnames';
 
 class SuggestionItem extends Component {
   render() {
-    const {item, id, isHighlighted, render, onSelect, refHighlightedSuggestion} = this.props;
+    const { item, id, isHighlighted, render, onSelect, refHighlightedSuggestion } = this.props;
     return (
       <li
         ref={(itemRef) => {
@@ -13,8 +14,11 @@ class SuggestionItem extends Component {
         }}
         role='option'
         id={id}
-        onMouseDown={() => {onSelect(item);}}
-        className={classNames('ffe-account-suggestion', {'ffe-account-suggestion--highlighted' : isHighlighted})}
+        onMouseDown={(e) => {
+          e.preventDefault();
+          onSelect(item);
+        }}
+        className={classNames('ffe-account-suggestion', { 'ffe-account-suggestion--highlighted': isHighlighted })}
         tabIndex={-1}
       >
         {render(item)}
@@ -23,12 +27,12 @@ class SuggestionItem extends Component {
 }
 
 SuggestionItem.propTypes = {
-  item: PropTypes.object.isRequired,
-  id: PropTypes.string.isRequired,
-  isHighlighted: PropTypes.bool.isRequired,
-  render: PropTypes.func.isRequired,
-  onSelect: PropTypes.func.isRequired,
-  refHighlightedSuggestion: PropTypes.func.isRequired,
+  item: object.isRequired,
+  id: string.isRequired,
+  isHighlighted: bool.isRequired,
+  render: func.isRequired,
+  onSelect: func.isRequired,
+  refHighlightedSuggestion: func.isRequired,
 };
 
 export default SuggestionItem;

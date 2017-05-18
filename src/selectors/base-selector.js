@@ -1,17 +1,18 @@
-import React, {PropTypes, Component} from 'react';
+import React, { Component } from 'react';
+import { func, bool, number, string, arrayOf, object } from 'prop-types';
 import Input from './input-field';
 import SuggestionsList from '../suggestion/suggestion-list-container';
-import {KeyCodes} from '../util/types';
+import { KeyCodes } from '../util/types';
 
 class BaseSelector extends Component {
 
   constructor(props) {
     super(props);
     this.onInputChange = this.onInputChange.bind(this);
-    this.showHideSuggestions = this.showHideSuggestions.bind(this);
-    this.onSuggestionClick = this.onSuggestionClick.bind(this);
-    this.onInputResetClick = this.onInputResetClick.bind(this);
+    this.showOrHideSuggestions = this.showOrHideSuggestions.bind(this);
+    this.onSuggestionSelect = this.onSuggestionSelect.bind(this);
     this.onInputKeyDown = this.onInputKeyDown.bind(this);
+    this.onInputReset = this.onInputReset.bind(this);
     this.onFocus = this.onFocus.bind(this);
     this.onBlur = this.onBlur.bind(this);
     this.filterSuggestions = this.filterSuggestions.bind(this);
@@ -22,13 +23,6 @@ class BaseSelector extends Component {
       highlightedSuggestionIndex: -1,
       suggestionListId: 'suggestion-list'
     };
-
-    /*
-     Used for controlling the calling of props.onFocus and props.onBlur.
-     This is necessary for maintaining focus in the input field for mouseClick events
-     on the clearInput button and suggestion items.
-     */
-    this.shouldPreventBlurForNextFocusEvent = false;
   }
 
   _onSuggestionListChange() {
@@ -44,10 +38,6 @@ class BaseSelector extends Component {
     return 0;
   }
 
-  preventBlurForNextFocusEvent(prevent = true) {
-    this.shouldPreventBlurForNextFocusEvent = prevent;
-  }
-
   setFocus() {
     this.input.focus();
   }
@@ -60,78 +50,53 @@ class BaseSelector extends Component {
   }
 
   filterSuggestions() {
-    const {suggestions, suggestionFilter, value} = this.props;
+    const { suggestions, suggestionFilter, value } = this.props;
     return suggestions.filter(suggestionFilter(value));
   }
 
   onInputChange(value) {
-    this.setState({showSuggestions: true, highlightedSuggestionIndex: -1}, () => {
+    this.setState({ showSuggestions: true, highlightedSuggestionIndex: -1 }, () => {
       this.props.onChange(value);
       this._onSuggestionListChange();
     });
   }
 
   onFocus() {
-    if (this.shouldPreventBlurForNextFocusEvent) {
-      this.preventBlurForNextFocusEvent(false);
-      return;
-    }
-    this.showHideSuggestions(true, this.props.onFocus);
+    this.showOrHideSuggestions(true, this.props.onFocus);
   }
 
   onBlur() {
-    if (this.shouldPreventBlurForNextFocusEvent) {
-      this.setFocus();
-      return;
-    }
-
-    if (this.props.shouldHideSuggestionsOnBlur) {
-      this.showHideSuggestions(false, () => {
-        this.props.onBlur();
-      });
-      return;
-    }
-    this.props.onBlur();
+    this.showOrHideSuggestions(false, this.props.onBlur);
   }
 
   onSuggestionSelect(suggestion) {
     if (suggestion) {
-      const {shouldHideSuggestionsOnSelect, onSelect} = this.props;
+      const { shouldHideSuggestionsOnSelect, onSelect } = this.props;
       if (shouldHideSuggestionsOnSelect) {
-        this.showHideSuggestions(false, () => onSelect(suggestion));
+        this.showOrHideSuggestions(false, () => onSelect(suggestion));
         return;
       }
       onSelect(suggestion);
     }
   }
 
-  onSuggestionClick(suggestion) {
-    this.preventBlurForNextFocusEvent();
-    this.onSuggestionSelect(suggestion);
-  }
-
-  onInputResetClick() {
-    this.preventBlurForNextFocusEvent();
-    this.onInputReset();
-  }
-
   onInputReset() {
     const shouldShowSuggestions = !this.props.shouldHideSuggestionsOnReset;
-    this.showHideSuggestions(shouldShowSuggestions, this.props.onReset);
+    this.showOrHideSuggestions(shouldShowSuggestions, this.props.onReset);
     setTimeout(this.setFocus);
   }
 
-  showHideSuggestions(show, cb = () => {}) {
-    const nextState = show ? {showSuggestions: show} : {showSuggestions: false, highlightedSuggestionIndex: -1};
+  showOrHideSuggestions(show, cb = () => {}) {
+    const nextState = show ? { showSuggestions: show } : { showSuggestions: false, highlightedSuggestionIndex: -1 };
     this.setState(nextState, cb);
     this._onSuggestionListChange();
   }
 
   setNextHighlighted() {
-    const {highlightedSuggestionIndex} = this.state;
+    const { highlightedSuggestionIndex } = this.state;
     const suggestions = this.filterSuggestions();
     const nextHighlightedSuggestionIndex = highlightedSuggestionIndex === suggestions.length - 1 ? 0 : highlightedSuggestionIndex + 1;
-    this.setState({highlightedSuggestionIndex: nextHighlightedSuggestionIndex});
+    this.setState({ highlightedSuggestionIndex: nextHighlightedSuggestionIndex });
 
     if (nextHighlightedSuggestionIndex === 0) {
       this.suggestionList.setScrollPosStart();
@@ -141,10 +106,10 @@ class BaseSelector extends Component {
   }
 
   setPreviousHighlighted() {
-    const {highlightedSuggestionIndex} = this.state;
+    const { highlightedSuggestionIndex } = this.state;
     const suggestions = this.filterSuggestions();
     const nextHighlightedSuggestionIndex = highlightedSuggestionIndex === 0 ? suggestions.length - 1 : highlightedSuggestionIndex - 1;
-    this.setState({highlightedSuggestionIndex: nextHighlightedSuggestionIndex});
+    this.setState({ highlightedSuggestionIndex: nextHighlightedSuggestionIndex });
 
     if (nextHighlightedSuggestionIndex === suggestions.length - 1) {
       this.suggestionList.setScrollPosEnd();
@@ -154,23 +119,23 @@ class BaseSelector extends Component {
   }
 
   setFirstHighlighted() {
-    this.setState({highlightedSuggestionIndex: 0});
+    this.setState({ highlightedSuggestionIndex: 0 });
     this.suggestionList.setScrollPosStart();
   }
 
   setLastHighlighted() {
-    this.setState({highlightedSuggestionIndex: this.filterSuggestions().length - 1});
+    this.setState({ highlightedSuggestionIndex: this.filterSuggestions().length - 1 });
     this.suggestionList.setScrollPosEnd();
   }
 
   onInputKeyDown(event) {
-    const {showSuggestions, highlightedSuggestionIndex} = this.state;
-    const {shouldSelectHighlightedOnTab} = this.props;
-    const {which, altKey} = event;
+    const { showSuggestions, highlightedSuggestionIndex } = this.state;
+    const { shouldSelectHighlightedOnTab } = this.props;
+    const { which, altKey } = event;
     switch (which) {
       case KeyCodes.DOWN :
         if (altKey && !showSuggestions) {
-          this.showHideSuggestions(true);
+          this.showOrHideSuggestions(true);
           break;
         }
         if (showSuggestions) {
@@ -180,7 +145,7 @@ class BaseSelector extends Component {
         break;
       case KeyCodes.UP :
         if (altKey && showSuggestions) {
-          this.showHideSuggestions(false);
+          this.showOrHideSuggestions(false);
           break;
         }
         if (showSuggestions) {
@@ -225,7 +190,7 @@ class BaseSelector extends Component {
       id,
       name,
     } = this.props;
-    const {showSuggestions, highlightedSuggestionIndex, suggestionListId} = this.state;
+    const { showSuggestions, highlightedSuggestionIndex, suggestionListId } = this.state;
     return (
       <div
         className='base-selector ffe-input-group'
@@ -236,7 +201,7 @@ class BaseSelector extends Component {
           }}
           value={value}
           onChange={this.onInputChange}
-          onReset={this.onInputResetClick}
+          onReset={this.onInputReset}
           onKeyDown={this.onInputKeyDown}
           isSuggestionsShowing={showSuggestions}
           placeholder={placeholder}
@@ -257,7 +222,7 @@ class BaseSelector extends Component {
           highlightedIndex={highlightedSuggestionIndex}
           suggestions={this.filterSuggestions()}
           heightMax={suggestionsHeightMax}
-          onSelect={this.onSuggestionClick}
+          onSelect={this.onSuggestionSelect}
           id={suggestionListId}
         />}
       </div>
@@ -266,24 +231,24 @@ class BaseSelector extends Component {
 }
 
 BaseSelector.propTypes = {
-  suggestions: PropTypes.arrayOf(PropTypes.object).isRequired,
-  suggestionFilter: PropTypes.func.isRequired,
-  onSelect: PropTypes.func.isRequired,
-  value: PropTypes.string.isRequired,
-  shouldHideSuggestionsOnSelect: PropTypes.bool.isRequired,
-  shouldSelectHighlightedOnTab: PropTypes.bool.isRequired,
-  shouldHideSuggestionsOnBlur: PropTypes.bool.isRequired,
-  shouldHideSuggestionsOnReset : PropTypes.bool.isRequired,
-  onChange: PropTypes.func,
-  onBlur: PropTypes.func,
-  onReset: PropTypes.func,
-  onFocus: PropTypes.func,
-  onSuggestionListChange: PropTypes.func, //provides the height of the suggestion list
-  placeholder: PropTypes.string,
-  ariaInvalid: PropTypes.bool,
-  suggestionsHeightMax: PropTypes.number,
-  id : PropTypes.string,
-  name : PropTypes.string,
+  suggestions: arrayOf(object).isRequired,
+  suggestionFilter: func.isRequired,
+  onSelect: func.isRequired,
+  value: string.isRequired,
+  shouldHideSuggestionsOnSelect: bool.isRequired,
+  shouldSelectHighlightedOnTab: bool.isRequired,
+  shouldHideSuggestionsOnBlur: bool.isRequired,
+  shouldHideSuggestionsOnReset: bool.isRequired,
+  onChange: func,
+  onBlur: func,
+  onReset: func,
+  onFocus: func,
+  onSuggestionListChange: func, //provides the height of the suggestion list
+  placeholder: string,
+  ariaInvalid: bool,
+  suggestionsHeightMax: number,
+  id: string,
+  name: string,
 };
 
 BaseSelector.defaultProps = {
@@ -294,7 +259,7 @@ BaseSelector.defaultProps = {
   onSuggestionListChange: () => {},
   ariaInvalid: false,
   placeholder: '',
-  value : '',
+  value: '',
 };
 
 export default BaseSelector;
