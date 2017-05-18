@@ -12,6 +12,12 @@ class RadioBase extends Component {
     constructor(props) {
         super(props);
         this.state = { closed: true };
+
+        this.onClick = this.onClick.bind(this);
+    }
+
+    onClick() {
+        this.setState({ closed: !this.state.closed });
     }
 
     render() {
@@ -56,7 +62,7 @@ class RadioBase extends Component {
                 <div className="ffe-radio-button__tooltip-icon">
                     <button
                         className="ffe-tooltip__icon"
-                        onClick={() => this.setState(Object.assign({}, this.state, {closed: !this.state.closed}))}
+                        onClick={ this.onClick }
                     >
                         ?
                     </button>
