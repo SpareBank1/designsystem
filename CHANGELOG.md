@@ -1,5 +1,8 @@
 # Changelog
 
+## v5.2.0
+* Adding optional tooltip on radio buttons for extra information
+
 ## v5.1.3
 * Reset border to 0 for `ffe-input-group`, so that the class can be used with `fieldset`-elements
 
