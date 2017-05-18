@@ -11,6 +11,7 @@ class RadioBase extends Component {
 
     constructor(props) {
         super(props);
+        this.state = { closed: true };
     }
 
     render() {
@@ -22,6 +23,7 @@ class RadioBase extends Component {
             labelClasses,
             name,
             value,
+            tooltip,
             style,
             ...rest
         } = this.props;
@@ -30,9 +32,14 @@ class RadioBase extends Component {
         if (inline) {
             styles = Object.assign({}, inlineStyles, style);
         }
+        let labelClassNames = labelClasses;
+        if (tooltip) {
+            labelClassNames = `${labelClasses} ffe-radio-button--with-tooltip`;
+        }
+
         const domId = id || createId({ name, value, label, inline });
 
-        return (
+        const radioButton = (
             <div style={ styles }>
                 <input
                     type="radio"
@@ -42,11 +49,34 @@ class RadioBase extends Component {
                     id={ domId }
                     {...rest}
                 />
-                <label className={ labelClasses } htmlFor={ domId }>
+                <label className={ labelClassNames } htmlFor={ domId }>
                     { label || children }
                 </label>
+                { tooltip &&
+                <div className="ffe-radio-button__tooltip-icon">
+                    <button
+                        className="ffe-tooltip__icon"
+                        onClick={() => this.setState(Object.assign({}, this.state, {closed: !this.state.closed}))}
+                    >
+                        ?
+                    </button>
+                </div>
+                }
             </div>
         );
+
+        if (tooltip) {
+            return (
+                <div>
+                    { radioButton }
+                    { !this.state.closed &&
+                    <p className="ffe-radio-button__tooltip-text">{tooltip}</p>
+                    }
+                </div>
+            );
+        }
+        return radioButton;
+
     }
 }
 
@@ -57,6 +87,7 @@ RadioBase.propTypes = {
     id: PropTypes.string,
     inline: PropTypes.bool,
     label: PropTypes.string,
+    tooltip: PropTypes.string,
     labelClasses: PropTypes.string.isRequired,
     name: PropTypes.string,
     onChange: PropTypes.func,
