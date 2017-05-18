@@ -4,7 +4,7 @@ import sinon from 'sinon';
 import React from 'react';
 import  SuggestionList from '../suggestion-list';
 import  SuggestionListContainer from '../suggestion-list-container';
-import './setup';
+import './setup-dom';
 
 function suggestions() {
   return [
