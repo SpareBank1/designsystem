@@ -7,7 +7,6 @@ export default function ActionButton(props) {
             </Button>;
 }
 
-
 ActionButton.propTypes = {
     children: PropTypes.node
 };

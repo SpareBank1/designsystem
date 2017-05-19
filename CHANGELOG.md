@@ -1,5 +1,17 @@
 # Changelog
 
+## v6.0.0
+* (BREAKING) Remove button names with 'FFE' prefix that were deprecated in v2.1.0
+    * To migrate to v6.0.0, change your button imports as follows:
+        * FFEActionButton -> ActionButton
+        * FFEButton -> Button
+        * FFEPrimaryButton -> PrimaryButton
+        * FFESecondaryButton -> SecondaryButton
+        * FFEShortcutButton -> ShortcutButton
+* Restructure tests
+* Add condensed property
+* Add live examples
+
 ## v5.2.0
 * Added support for icons in `<Button>`, `<SecondaryButton>` and `<TertiaryButton>`.
 * Modified `ShortcutButton` to pass the `<ChevronIcon>` as a `rightIcon` prop to `<Button>`
@@ -25,7 +37,7 @@
 ## v4.1.0
 
 * Fix truly disabling button while `isLoading` (CSS `pointer-events:none` was an obscure and inefficient way to achieve this)
-* `isLoading` will also set the attribute `aria-busy=true` on the button 
+* `isLoading` will also set the attribute `aria-busy=true` on the button
 
 ## v4.0.0
 
