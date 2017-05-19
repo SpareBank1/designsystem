@@ -1,4 +1,4 @@
-import { SuccessMessage, ErrorMessage, TipsMessage, InfoMessage } from '../lib/index';
+import { SuccessMessage, ErrorMessage, TipsMessage, InfoMessage, InfoMessageList, InfoMessageListItem } from '../lib/index';
 import React from 'react';
 
 export const SuccessExample = (
@@ -11,8 +11,40 @@ export const ErrorExample = (
     />
 );
 
+export const ErrorListExample = (
+    <ErrorMessage title="Feil">
+        <InfoMessageList>
+            <InfoMessageListItem>
+                Feltet må fylles ut
+            </InfoMessageListItem>
+            <InfoMessageListItem href="#email">
+                Skriv inn en gyldig e-postadresse
+            </InfoMessageListItem>
+            <InfoMessageListItem href="#phone">
+                Skriv inn gyldig telefonnummer, 8 siffer
+            </InfoMessageListItem>
+        </InfoMessageList>
+    </ErrorMessage>
+);
+
 export const TipsExample = (
     <TipsMessage title="Et tips til deg" content={"Følger du dette tipset i denne boksen kan du spare mange penger."} />
+);
+
+export const TipsListExample = (
+    <TipsMessage title="Tips">
+        <InfoMessageList>
+            <InfoMessageListItem>
+                Dette er det første tipset
+            </InfoMessageListItem>
+            <InfoMessageListItem>
+                Det er lurt å følge disse tipsene dersom du ønsker å spare penger.
+            </InfoMessageListItem>
+            <InfoMessageListItem>
+                Følger du tipsene over gjør du noe lurt!
+            </InfoMessageListItem>
+        </InfoMessageList>
+    </TipsMessage>
 );
 
 export const InfoExample = (

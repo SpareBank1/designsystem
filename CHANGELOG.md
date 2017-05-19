@@ -1,5 +1,10 @@
 #CHANGELOG
 
+## Version 3.3.0
+* Add InfoMessageList and childComponent InfoMessageListItem.
+* Updated to latest version of ffe-message-box (4.2.0)
+* Updated to latest version of ffe-icons-react (2.4.5)
+
 ## Version 3.2.0
 * Add support for className prop.
 

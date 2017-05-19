@@ -1,10 +1,10 @@
 import { renderToStaticMarkup } from 'react-dom/server';
-import { MainExample, SuccessExample, ErrorExample, TipsExample, InfoExample } from './example-component';
+import { MainExample, SuccessExample, ErrorExample, ErrorListExample, TipsExample, TipsListExample, InfoExample } from './example-component';
 import React from 'react';
 
 const example = (
 <div>
-    
+
     <div className="component-intro">
         <h2 className="component-intro__header">Message Box</h2>
         <div className="lozenge lozenge--success">I PRODUKSJON</div>
@@ -29,8 +29,18 @@ Boksene skal ha overskrift, og teksten skal være midtstilt, men i de tilfellene
     </div>
 
     <div className="example-container">
+        <p className="example-container__header">oppsummering av feil i skjema</p>
+        { ErrorListExample }
+    </div>
+
+    <div className="example-container">
         <p className="example-container__header">Tips</p>
         { TipsExample }
+    </div>
+
+    <div className="example-container">
+        <p className="example-container__header">Liste med tips</p>
+        { TipsListExample }
     </div>
 
     <div className="example-container">
@@ -54,9 +64,9 @@ Boksene skal ha overskrift, og teksten skal være midtstilt, men i de tilfellene
         <div className="expanding-field__content">
             <pre>
                 <code className="html hljs js">{
-                `<SuccessMessage 
-                title="Betalingen er gjennomført" 
-                content="Her står det en lengre melding, kanskje med HTML." 
+                `<SuccessMessage
+                title="Betalingen er gjennomført"
+                content="Her står det en lengre melding, kanskje med HTML."
                 />`}</code>
             </pre>
         </div>
