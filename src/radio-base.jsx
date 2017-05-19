@@ -1,7 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import hash from 'nfe-hash';
+import classnames from 'classnames';
 
-const inlined = {
+const inlineStyles = {
     display: 'inline-block'
 };
 
@@ -11,12 +12,13 @@ class RadioBase extends Component {
 
     constructor(props) {
         super(props);
+        this.state = { closed: true };
 
-        let styles = props.style;
-        if (props.inline) {
-            styles = Object.assign({}, inlined, styles);
-        }
-        this.state = { styles };
+        this.onClick = this.onClick.bind(this);
+    }
+
+    onClick() {
+        this.setState({ closed: !this.state.closed });
     }
 
     render() {
@@ -28,24 +30,60 @@ class RadioBase extends Component {
             labelClasses,
             name,
             value,
+            tooltip,
+            style,
             ...rest
         } = this.props;
 
         const domId = id || createId({ name, value, label, inline });
 
         return (
-            <div style={ this.state.styles }>
-                <input
-                    type="radio"
-                    className="ffe-radio-input"
-                    name={ name }
-                    value={ value }
-                    id={ domId }
-                    {...rest}
-                />
-                <label className={ labelClasses } htmlFor={ domId }>
-                    { label || children }
-                </label>
+            <div style={ inline ? { ...inlineStyles, ...style } : style }>
+                <div>
+                    <input
+                        type="radio"
+                        className="ffe-radio-input"
+                        name={ name }
+                        value={ value }
+                        id={ domId }
+                        {...rest}
+                    />
+                    <label
+                        className={ classnames(
+                            labelClasses,
+                            { 'ffe-radio-button--with-tooltip': tooltip }) }
+                        htmlFor={ domId }
+                    >
+                        { label || children }
+                    </label>
+                    { tooltip &&
+                        <div className="ffe-radio-button__tooltip-icon">
+                            <button
+                                className={ classnames(
+                                    'ffe-tooltip__icon',
+                                    { 'ffe-tooltip__icon--active': !this.state.closed }
+                                ) }
+                                onClick={ this.onClick }
+                            >
+                                ?
+                            </button>
+                        </div>
+                    }
+                </div>
+                { tooltip &&
+                    <p
+                        ref={ input => {
+                            this.tooltipText = input;
+                        }}
+                        style={{maxHeight: this.state.closed ? '0' : this.tooltipText.scrollHeight}}
+                        className={ classnames(
+                            'ffe-tooltip__text',
+                            'ffe-radio-button__tooltip-text',
+                            {'ffe-tooltip__text--active': !this.state.closed }) }
+                    >
+                        {tooltip}
+                    </p>
+                }
             </div>
         );
     }
@@ -58,6 +96,7 @@ RadioBase.propTypes = {
     id: PropTypes.string,
     inline: PropTypes.bool,
     label: PropTypes.string,
+    tooltip: PropTypes.string,
     labelClasses: PropTypes.string.isRequired,
     name: PropTypes.string,
     onChange: PropTypes.func,
