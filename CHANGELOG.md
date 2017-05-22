@@ -1,5 +1,8 @@
 # Changelog
 
+## v6.1.0
+* Added handling of invalid prop on radio button and radio switch (validation error)
+
 ## v6.0.0
 * Removed class error-summary. The design is outdated and new class and react-component can be found in ffe-message-box and ffe-message-box-react
 
