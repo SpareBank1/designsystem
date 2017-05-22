@@ -1,5 +1,8 @@
 # Changelog
 
+## v6.0.0
+* Removed class error-summary. The design is outdated and new class and react-component can be found in ffe-message-box and ffe-message-box-react
+
 ## v5.2.1
 * Added missing margin on tooltip text on radio button
 
