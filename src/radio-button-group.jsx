@@ -26,6 +26,7 @@ const RadioButtonGroup = ({ label, name, inline, invalid, buttons, children, val
         // If a buttons config array is present, it takes precedent and the replaces any passed children.
         overridden = buttons.map(c => <RadioButton value={ c.value } label={ c.label } name={ c.name || name } key={ c.value }
                                                    inline={ defaultBoolean(c.inline, inline) }
+                                                   invalid={ defaultBoolean(c.invalid, invalid) }
                                                    checked={ isChecked(value, c.value, c.checked) }
                                                    disabled={ c.disabled || disabled }
                                                    onChange={ listenToChange(onChange, c.onChange) } /> );
@@ -35,6 +36,7 @@ const RadioButtonGroup = ({ label, name, inline, invalid, buttons, children, val
         overridden = Children.map(children, child => React.cloneElement(child, {
                 name: child.props.name || name,
                 inline: defaultBoolean(child.props.inline, inline),
+                invalid: defaultBoolean(child.props.invalid, invalid),
                 checked: isChecked(value, child.props.value, child.props.checked),
                 disabled: child.props.disabled || disabled,
                 onChange: listenToChange(onChange, child.props.onChange)

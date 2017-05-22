@@ -1,6 +1,6 @@
 {
   "name": "ffe-radio-button-react",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "lib/index.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/.",

@@ -24,6 +24,7 @@ import RadioButton from 'ffe-radio-button-react';
              label= { string }
              name={ string }
              inline={ boolean }
+             invalid={ boolean }
              checked={ boolean }
              tooltip={ string }
              onChange={ function }
