@@ -1,5 +1,8 @@
 # Changelog
 
+## v5.2.2
+* Added handling of invalid prop on radio button and radio switch (validation error)
+
 ## v5.2.1
 * Added missing margin on tooltip text on radio button
 

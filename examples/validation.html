@@ -53,37 +53,6 @@
                         <div class="ffe-field-error-message">Vennligst fyll inn "Fødselsnummer"</div>
                     </div>
 
-                    <div class="ffe-input-group" aria-live="polite">
-                        <fieldset class="ffe-fieldset" aria-invalid="true">
-                            <legend class="ffe-form-label">
-                                Are there unicorns with wings?
-                            </legend>
-                            <input class="ffe-radio-input"
-                                   type="radio"
-                                   name="unicornwings-validation"
-                                   value="yes"
-                                   id="unicornwings-1-invalid"
-                                   checked>
-                            <label class="ffe-radio-button ffe-radio-button--inline"
-                                   for="unicornwings-1-invalid">Yes</label>
-                            <input class="ffe-radio-input"
-                                   type="radio"
-                                   name="unicornwings-validation"
-                                   value="no"
-                                   id="unicornwings-2-invalid">
-                            <label class="ffe-radio-button ffe-radio-button--inline"
-                                   for="unicornwings-2-invalid">No</label>
-                            <input class="ffe-radio-input"
-                                   type="radio"
-                                   name="unicornwings-validation"
-                                   value="dunno"
-                                   id="unicornwings-3-invalid">
-                            <label class="ffe-radio-button ffe-radio-button--inline" for="unicornwings-3-invalid">I do
-                                not know!</label>
-                        </fieldset>
-                        <div class="ffe-field-error-message">Ta våre fabeldyr på alvor.</div>
-                    </div>
-
                     <div class="ffe-content-container ffe-content-container--text-left">
                         <div class="ffe-input-group" aria-live="polite">
                             <label id="month-label-error" class="ffe-form-label" for="month-error">
@@ -98,6 +67,61 @@
                             </select>
                             <div class="ffe-field-error-message">Vennligst gjør et valg</div>
                         </div>
+                    </div>
+                </div>
+
+                <div class="ffe-content-container ffe-content-container--text-left">
+                    <h3 class="ffe-h3">Feilmeldinger på radio-elementene</h3>
+
+                    <div class="ffe-input-group" aria-live="polite">
+                        <fieldset class="ffe-fieldset" aria-invalid="true">
+                            <legend class="ffe-form-label">
+                                Are there unicorns with wings?
+                            </legend>
+                            <input class="ffe-radio-input"
+                                   type="radio"
+                                   name="unicornwings-validation"
+                                   value="yes"
+                                   id="unicornwings-1-invalid">
+                            <label class="ffe-radio-button ffe-radio-button--inline ffe-radio-button--invalid"
+                                   for="unicornwings-1-invalid">Yes</label>
+                            <input class="ffe-radio-input"
+                                   type="radio"
+                                   name="unicornwings-validation"
+                                   value="no"
+                                   id="unicornwings-2-invalid">
+                            <label class="ffe-radio-button ffe-radio-button--inline ffe-radio-button--invalid"
+                                   for="unicornwings-2-invalid">No</label>
+                            <input class="ffe-radio-input"
+                                   type="radio"
+                                   name="unicornwings-validation"
+                                   value="dunno"
+                                   id="unicornwings-3-invalid">
+                            <label class="ffe-radio-button ffe-radio-button--inline ffe-radio-button--invalid"
+                                   for="unicornwings-3-invalid">I do not know!</label>
+                        </fieldset>
+                        <div class="ffe-field-error-message">Ta våre fabeldyr på alvor.</div>
+                    </div>
+
+                    <div class="ffe-input-group" aria-live="polite">
+                        <fieldset class="ffe-fieldset">
+                            <legend class="ffe-form-label">
+                                Do you like unicorns at all?
+                            </legend>
+                            <input class="ffe-radio-input"
+                                   type="radio"
+                                   name="unicornslike"
+                                   value="yes"
+                                   id="unicornslike-1">
+                            <label class="ffe-radio-switch ffe-radio-button--invalid" for="unicornslike-1">Ja</label>
+                            <input class="ffe-radio-input"
+                                   type="radio"
+                                   name="unicornslike"
+                                   value="no"
+                                   id="unicornslike-2">
+                            <label class="ffe-radio-switch ffe-radio-button--invalid" for="unicornslike-2">Nei</label>
+                        </fieldset>
+                        <div class="ffe-field-error-message">Ta våre fabeldyr på alvor.</div>
                     </div>
 
 
