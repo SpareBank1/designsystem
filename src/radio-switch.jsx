@@ -8,6 +8,7 @@ const RadioSwitch = (props) => {
         value,
         firstOption,
         lastOption,
+        invalid,
         ...rest
     } = props;
 
@@ -17,6 +18,7 @@ const RadioSwitch = (props) => {
                 checked={value === firstOption.value}
                 label={firstOption.label}
                 labelClasses="ffe-radio-switch"
+                invalid={invalid}
                 value={firstOption.value}
                 style={ { marginRight: '5px' } }
             />
@@ -24,6 +26,7 @@ const RadioSwitch = (props) => {
                 checked={value === lastOption.value}
                 label={lastOption.label}
                 labelClasses="ffe-radio-switch"
+                invalid={invalid}
                 value={lastOption.value}
             />
         </RadioButtonGroup>

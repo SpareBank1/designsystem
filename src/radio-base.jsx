@@ -30,6 +30,7 @@ class RadioBase extends Component {
             labelClasses,
             name,
             value,
+            invalid,
             tooltip,
             style,
             ...rest
@@ -51,6 +52,7 @@ class RadioBase extends Component {
                     <label
                         className={ classnames(
                             labelClasses,
+                            { 'ffe-radio-button--invalid': invalid },
                             { 'ffe-radio-button--with-tooltip': tooltip }) }
                         htmlFor={ domId }
                     >
@@ -96,6 +98,7 @@ RadioBase.propTypes = {
     id: PropTypes.string,
     inline: PropTypes.bool,
     label: PropTypes.string,
+    invalid: PropTypes.bool,
     tooltip: PropTypes.string,
     labelClasses: PropTypes.string.isRequired,
     name: PropTypes.string,
