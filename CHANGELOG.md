@@ -1,4 +1,7 @@
 # Changelog
+# v7.1.3 
+* Added property shouldShowSuggestionsOnFocus on selector. Defaults to true.
+
 # v7.1.2 
 * Removed custom event prevention to enable consistent behaviour across browsers
 

@@ -62,7 +62,8 @@ class BaseSelector extends Component {
   }
 
   onFocus() {
-    this.showOrHideSuggestions(true, this.props.onFocus);
+    const {shouldShowSuggestionsOnFocus, onFocus} = this.props;
+    this.showOrHideSuggestions(shouldShowSuggestionsOnFocus, onFocus);
   }
 
   onBlur() {
@@ -239,6 +240,7 @@ BaseSelector.propTypes = {
   shouldSelectHighlightedOnTab: bool.isRequired,
   shouldHideSuggestionsOnBlur: bool.isRequired,
   shouldHideSuggestionsOnReset: bool.isRequired,
+  shouldShowSuggestionsOnFocus: bool,
   onChange: func,
   onBlur: func,
   onReset: func,
@@ -260,6 +262,7 @@ BaseSelector.defaultProps = {
   ariaInvalid: false,
   placeholder: '',
   value: '',
+  shouldShowSuggestionsOnFocus: true
 };
 
 export default BaseSelector;
