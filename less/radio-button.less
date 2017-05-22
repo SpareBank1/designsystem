@@ -59,6 +59,12 @@
         transition: border-color @ffe-transition-duration @ffe-ease;
     }
 
+    &--invalid {
+        &::before {
+            border-color: @ffe-orange-fire;
+        }
+    }
+
     &::after {
         content: '';
         border: 2px solid transparent;
