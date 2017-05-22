@@ -33,12 +33,16 @@
         }
     }
 
-    &__tooltip-text {
+    &__tooltip-text.ffe-tooltip__text {
         &:extend(.ffe-small-text);
 
         margin-left: 30px;
         margin-top: 0;
         margin-bottom: 0;
+    }
+
+    &__tooltip-text.ffe-tooltip__text--active {
+        margin-top: 5px;
     }
 
     &::before {

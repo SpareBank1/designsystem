@@ -1,5 +1,8 @@
 # Changelog
 
+## v5.2.1
+* Added missing margin on tooltip text on radio button
+
 ## v5.2.0
 * Adding optional tooltip on radio buttons for extra information
 
