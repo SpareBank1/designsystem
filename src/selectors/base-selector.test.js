@@ -341,4 +341,16 @@ describe('<BaseSelector> focus', () => {
     assert.isTrue(onFocusSpy.calledOnce);
     assert.equal(onBlurSpy.callCount, 0);
   });
+
+  it('should not show suggestions on focus', () => {
+    const onFocus = sinon.spy();
+    const component = mountBaseSelector({
+      shouldShowSuggestionsOnFocus: false,
+      onFocus: onFocus
+    }).instance();
+    const showHideSuggestionsSpy = sinon.spy(component, 'showOrHideSuggestions');
+    component.onFocus();
+
+    assert.isTrue(showHideSuggestionsSpy.calledWith(false, onFocus));
+  });
 });

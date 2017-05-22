@@ -108,6 +108,9 @@ boolean that specifies if onSelect should be fired with the highlighted suggesti
 __shouldHideSuggestionsOnReset (required)__
 boolean that specifies if suggestions should be hidden on reset.
 
+__shouldShowSuggestionsOnFocus__
+boolean that specifies if suggestions should be shown when input field receives focus. Defaults to true.
+
 __value__
 Sets the input field value.
 
