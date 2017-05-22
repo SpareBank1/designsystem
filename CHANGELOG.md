@@ -1,6 +1,6 @@
 # Changelog
 
-## v6.0.1
+## v6.1.0
 * Added handling of invalid prop on radio button and radio switch (validation error)
 
 ## v6.0.0
