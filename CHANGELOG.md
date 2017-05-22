@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.0.1 (22.5.2017)
+* Fixed invalid prop on radio button, radio button group and radio switch to handle the validation error state
+
 ## v1.0.0 (18.5.2017)
 * Potential breaking change! Styles sent to component could previously not be changed by consumer as this was stored only to state in the constructor. Refactored code to handle updating styles from consumer after initialization.
 * Added tooltip icon to toggle showing helping text when clicked
