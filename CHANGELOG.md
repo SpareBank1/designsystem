@@ -1,6 +1,6 @@
 # Changelog
 
-## v1.0.1 (22.5.2017)
+## v1.1.0 (22.5.2017)
 * Fixed invalid prop on radio button, radio button group and radio switch to handle the validation error state
 
 ## v1.0.0 (18.5.2017)
