@@ -25,6 +25,9 @@ fs.readdirSync('./example')
                     })
                     .wait(500);
                 })
-                .capture('plain');
+                .capture('plain')
+                .capture('condensed', (actions, find) => {
+                    actions.click(find('[href="#condensed"]'));
+                });
         })
     });

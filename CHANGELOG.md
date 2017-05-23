@@ -1,5 +1,10 @@
 # Changelog
 
+## v.5.1.2
+
+* Specified font size of `--condensed` modifier to 14px
+* Added example of condensed table 
+
 ## v.5.1.1
 
 * Replaced hardcoded transition properties with variables from ffe-core
@@ -28,12 +33,12 @@ To migrate, update your app to ffe-core version 9.x
 * BREAKING: Refactored styling to reflect design guidelines
 	* More vertical padding in table rows by default
 	* Added default horizontal padding in table cells on small screens
-	* `--condensed` modifier to decrease default vertical padding in table rows
 	* Changed th color to ffe-blue-royal
 	* Changed background colors in expandable rows
 	* Different border and text styling in table footers
 * Rewrote styling to less syntax
 * Specified icon height to fix IE bug where chevron causes table row height issues
+* Added `--condensed` modifier to decrease default vertical padding in table rows
 
 ## v.3.0.1
 
