@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.0.10
+Revert 1.0.9
+
 ## 1.0.9
 Allow overflow
 

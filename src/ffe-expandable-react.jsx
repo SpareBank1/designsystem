@@ -32,6 +32,7 @@ class Expandable extends React.Component {
         const styles = {
             visibility: isOpen ? 'visible' : 'hidden',
             height: isOpen ? height + 2 : 0,
+            overflow: 'hidden',
             transition: `height ${expandTime}s ease-out, visibility ${expandTime}s`,
         };
 
