@@ -8,6 +8,10 @@
 </head>
 
 <body class="ffe-body-text">
+    <div class="condensed-toggle">
+        <a href='#not-condensed'>regular</a> | <a href='#condensed'>condensed</a>
+    </div>
+    
     <div class="ffe-section-wrapper">
         <div class="ffe-content-container">
             <h1 class="ffe-h1">Tabeller</h1>
@@ -293,5 +297,21 @@
             </div>
         </div>
     </div>
+
+    <script>
+        (function () {
+            var tables = document.querySelectorAll('.ffe-responsive-table');
+
+            function toggleCondensedModifier() {
+                var func = window.location.hash === '#condensed' ? 'add' : 'remove';
+                for (var i = 0; i < tables.length; i++) {
+                    tables[i].classList[func]('ffe-responsive-table--condensed');
+                }
+            }
+
+            window.onpopstate = toggleCondensedModifier;
+            toggleModifier();
+        }());
+    </script>
 </body>
 </html>
