@@ -89,6 +89,18 @@
 .ffe-grid__col {
     display: flex;
 
+    &--reverse {
+        flex-direction: row-reverse;
+    }
+
+    &--vertical {
+        flex-direction: column;
+    }
+
+    &--vertical&--reverse {
+        flex-direction: column-reverse;
+    }
+
     &--start {
         justify-content: flex-start;
         text-align: start;
