@@ -1,5 +1,9 @@
 # Changelog
 
+## v.4.2.0
+
+* Added two modifiers to columns, `--vertical` and `--reverse`.
+
 ## v.4.1.0
 
 * Condensed variation with less gutter (modifier `ffe-grid--condensed`).
