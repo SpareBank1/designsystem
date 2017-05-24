@@ -106,6 +106,8 @@ describe('GridCol', () => {
             center: true,
             bottom: true,
             between: true,
+            vertical: true,
+            reverse: true,
         });
 
         expect(el.hasClass('ffe-grid__col')).to.be(true);
@@ -116,5 +118,7 @@ describe('GridCol', () => {
         expect(el.hasClass('ffe-grid__col--center')).to.be(true);
         expect(el.hasClass('ffe-grid__col--bottom')).to.be(true);
         expect(el.hasClass('ffe-grid__col--between')).to.be(true);
+        expect(el.hasClass('ffe-grid__col--vertical')).to.be(true);
+        expect(el.hasClass('ffe-grid__col--reverse')).to.be(true);
     });
 });

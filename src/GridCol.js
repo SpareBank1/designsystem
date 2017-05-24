@@ -20,8 +20,10 @@ const MODIFIER_LIST = [
     'end',
     'middle',
     'noBottomPadding',
-    'top',
+    'reverse',
     'start',
+    'top',
+    'vertical',
 ];
 const SIZE_LIST = [
     'sm',
