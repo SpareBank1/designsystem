@@ -107,31 +107,42 @@ Adds the `@ffe-sand` colour as a background for the row
 Since the grid is based on the flexbox layout model, there's a few extra modifiers that's available
 to you.
 
-#### `.ffe-grid__row--reverse`
+#### Rows
+
+##### `.ffe-grid__row--reverse`
 Reverses the grid columns so that they're laid out right to left instead
 
-#### `.ffe-grid__col--start`
+#### Columns
+
+##### `.ffe-grid__col--vertical`
+Aligns the content of a cell vertically
+
+##### `.ffe-grid__col--reverse`
+Aligns the content of a cell in the reverse order
+(Can be used with `--vertical` for a reversed vertical order)
+
+##### `.ffe-grid__col--start`
 Aligns the content of a cell to the left
 
-#### `.ffe-grid__col--center`
+##### `.ffe-grid__col--center`
 Aligns the content of a cell to the center
 
-#### `.ffe-grid__col--end`
+##### `.ffe-grid__col--end`
 Aligns the content of a cell to the right
 
-#### `.ffe-grid__col--top`
+##### `.ffe-grid__col--top`
 Aligns the content of a cell to the top
 
-#### `.ffe-grid__col--middle`
+##### `.ffe-grid__col--middle`
 Aligns the content of a cell to the vertical middle
 
-#### `.ffe-grid__col--bottom`
+##### `.ffe-grid__col--bottom`
 Aligns the content of a cell to the bottom
 
-#### `.ffe-grid__col--around`
+##### `.ffe-grid__col--around`
 Space the content out with space around each item
 
-#### `.ffe-grid__col--between`
+##### `.ffe-grid__col--between`
 Space the content out with space between each item
 
 ## Development
