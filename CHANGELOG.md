@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.0.9
+Allow overflow
+
 ## 1.0.8
 Do not focus hidden links and buttons
 
