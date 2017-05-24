@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version 3.0.0
+* Added `vertical` and `reverse` modifiers to `GridCol`.
+* These modifiers only work with minimum v.4.2.0 of `ffe-grid` so the breaking change is that we have to
+depend on a new major version of `ffe-grid` to use them.
+
 ## Version 2.2.1
 * Expand peerDep scope of `ffe-grid` to include `4.x`.
 * Add devDeps to `ffe-core` and `ffe-grid`.
