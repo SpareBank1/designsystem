@@ -34,11 +34,18 @@ describe('GridRow', () => {
         expect(el.hasClass('ffe-grid__row--reverse')).to.be(true);
     });
 
-    it('sets the bgBlue modifier', () => {
-        const el = renderShallow({ bgBlue: true });
+    it('sets the bgBlueCobalt modifier', () => {
+        const el = renderShallow({ bgBlueCobalt: true });
 
         expect(el.hasClass('ffe-grid__row')).to.be(true);
-        expect(el.hasClass('ffe-grid__row--bg-blue')).to.be(true);
+        expect(el.hasClass('ffe-grid__row--bg-blue-cobalt')).to.be(true);
+    });
+
+    it('sets the bgBluePale modifier', () => {
+        const el = renderShallow({ bgBluePale: true });
+
+        expect(el.hasClass('ffe-grid__row')).to.be(true);
+        expect(el.hasClass('ffe-grid__row--bg-blue-pale')).to.be(true);
     });
 
     it('sets the bgSand modifier', () => {
