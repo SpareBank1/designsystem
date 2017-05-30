@@ -1,5 +1,15 @@
 # Changelog
 
+## v.5.0.0
+
+### Breaking changes
+
+* Renamed `ffe-grid__row--bg-blue` to `ffe-grid__row--bg-blue-pale` after `ffe-core` name change.
+
+### New features
+
+* Added `ffe-grid__row--bg-blue-cobalt` with the (you guessed it) `ffe-blue-cobalt` background colour.
+
 ## v.4.2.0
 
 * Added two modifiers to columns, `--vertical` and `--reverse`.
