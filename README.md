@@ -26,7 +26,7 @@ render() {
                     <p>This is a column</p>
                 </GridCol>
             </GridRow>
-            <GridRow>
+            <GridRow bgBluePale={true}>
                 <GridCol
                     lg="2"
                     md="2"
@@ -45,11 +45,6 @@ To set the number of cols and offset for `lg`, `md` or `sm` displays use the obj
 All the components aim to support the same modifiers that can be found in [ffe-grid](***REMOVED***). Modifiers that are snake-cased in `ffe-grid` is supplied with camelCase to the react-components.
 
 All components support the 'className' property.
-```javascript
-<GridRow bgBlue={true}>
-    ...
-</GridRow>
-```
 
 ## Grid overlay
 
