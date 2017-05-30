@@ -57,11 +57,17 @@
         margin-right: @ffe-grid-gutter-lg / 2 * -1;
     }
 
-    &--reverse {
-        flex-direction: row-reverse;
+    &--bg-blue-cobalt {
+        background-color: @ffe-blue-cobalt;
+        color: @ffe-white;
+        max-width: 100%;
+
+        [class^='ffe-h'] {
+            color: @ffe-white;
+        }
     }
 
-    &--bg-blue {
+    &--bg-blue-pale {
         background-color: @ffe-blue-pale;
         max-width: 100%;
     }
@@ -69,6 +75,10 @@
     &--bg-sand {
         background-color: @ffe-sand;
         max-width: 100%;
+    }
+
+    &--reverse {
+        flex-direction: row-reverse;
     }
 
     &--top-padding {
