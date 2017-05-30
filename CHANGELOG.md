@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## Version 4.0.0
+
+### Breaking changes
+* `bgBlue` prop for `GridRow` renamed to `bgBluePale`
+* Depends on new major of `ffe-grid` (`5.0.0`).
+
+### New features
+* Added `bgBlueCobalt` prop for `GridRow`, which adds a `ffe-blue-cobalt` background colour.
+
 ## Version 3.0.0
 * Added `vertical` and `reverse` modifiers to `GridCol`.
 * These modifiers only work with minimum v.4.2.0 of `ffe-grid` so the breaking change is that we have to
