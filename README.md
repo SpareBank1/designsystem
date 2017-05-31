@@ -2,41 +2,35 @@
 
 JavaScript general use string formatters.
 
-## THIS PACKAGE IS NOT YET PUBLISHED
-
-This package is still under active pre-launch development. If you want to install it locally, 
-please install it with its git URL. 
-
 ## Installation
 
-Install this package via Yarn or npm like so:
+Install this package via npm like so:
 
 ```bash
-yarn add ffe-formatters
-# or
 npm install --save ffe-formatters
 ```
 
 ## Usage
 
-Import the functions you need directly from the `ffe-formatters` package like this to avoid
-depending on the entire package:
+Import the formatter(s) you need the following way:
 
 ```javascript
-import formatPercentage from 'ffe-formatters/format-percentage';
+import formatNumber from 'ffe-formatters/lib/formatNumber';
+import formatPercentage from 'ffe-formatters/lib/formatPercentage';
 ```
 
-You'll find a full overview over all the available formatters in the [`src/`-folder](src).
+You'll find a full overview and documentation over all the available formatters [here](src).
 
 ## Development
 
-To develop locally, clone the repository and install the dependencies. Once you have, you have 
+To develop locally, clone the repository and install the dependencies. Once you have, you have
 the following commands available to you:
 
 ```bash
-yarn start          # Starts the continuous test runner
-yarn lint           # Lints your code for common errors
-yarn build          # Runs the production build
+npm test                    # Runs all tests
+npm run test:watch          # Starts the continuous test runner
+npm run test:coverage       # Runs all tests with code coverage
+npm run lint                # Lints the code for errors
 ```
 
 ## Contributing

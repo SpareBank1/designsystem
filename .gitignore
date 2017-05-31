@@ -8,3 +8,9 @@ node_modules
 .idea
 *.iml
 *.imr
+
+# Coverage data
+coverage
+
+# Built files
+lib

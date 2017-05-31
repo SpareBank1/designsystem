@@ -1,0 +1,47 @@
+{
+  "name": "ffe-formatters",
+  "version": "1.0.0",
+  "description": "JavaScript general use string formatters",
+  "main": "lib/index.js",
+  "files": [
+    "lib/*.js"
+  ],
+  "scripts": {
+    "prebuild": "rimraf lib",
+    "build": "babel src -d lib --ignore *.spec.js,README.md",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
+    "test:nocoverage": "jest",
+    "lint": "eslint src/",
+    "precommit": "npm run lint && npm run test:nocoverage",
+    "prepublish": "npm run build"
+  },
+  "publishConfig": {
+    "registry": "***REMOVED***"
+  },
+  "repository": {
+    "type": "git",
+    "url": "***REMOVED***"
+  },
+  "keywords": [],
+  "author": "SpareBank 1",
+  "license": "UNLICENCED",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-jest": "^20.0.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-latest": "^6.24.1",
+    "eslint": "^3.19.0",
+    "eslint-config-ffe": "^6.0.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^3.0.2",
+    "eslint-plugin-react": "^6.10.3",
+    "husky": "^0.13.3",
+    "jest": "^20.0.0",
+    "moment": "^2.18.1",
+    "rimraf": "^2.6.1"
+  },
+  "dependencies": {
+    "underscore.string": "^3.3.4"
+  }
+}
