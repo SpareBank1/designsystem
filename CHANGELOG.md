@@ -1,5 +1,8 @@
 # Changelog
 
+## v6.2.0
+* Added handling of invalid prop on checkbox (validation error)
+
 ## v6.1.0
 * Added handling of invalid prop on radio button and radio switch (validation error)
 
