@@ -70,6 +70,12 @@ describe('<Checkbox />', () => {
             1);
     });
 
+    it('should support invalid', () => {
+        assert.isTrue(shallow(CreateCheckbox()).find('.ffe-checkbox--invalid').isEmpty());
+        assert.isTrue(shallow(CreateCheckbox({ invalid: false })).find('.ffe-checkbox--invalid').isEmpty());
+        assert.isFalse(shallow(CreateCheckbox({ invalid: true })).find('.ffe-checkbox--invalid').isEmpty());
+    });
+
     it('should set arbitrary props (rest) on input', () => {
         const wrapper = shallow(CreateCheckbox({
             name: 'checkbox',

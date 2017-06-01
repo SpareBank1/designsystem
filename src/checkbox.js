@@ -8,6 +8,7 @@ export default function CheckBox(props) {
         label,
         noMargins,
         inline,
+        invalid,
         ...rest
     } = props;
 
@@ -25,6 +26,7 @@ export default function CheckBox(props) {
                 className={classNames({
                     'ffe-checkbox': true,
                     'ffe-checkbox--inline': inline,
+                    'ffe-checkbox--invalid': invalid,
                     'ffe-checkbox--no-margin': noMargins
                 })}
                 htmlFor={id}
@@ -41,10 +43,12 @@ CheckBox.propTypes = {
     checked: PropTypes.bool,
     noMargins: PropTypes.bool,
     inline: PropTypes.bool,
+    invalid: PropTypes.bool,
     children: PropTypes.array,
 };
 
 CheckBox.defaultProps = {
     noMargins: false,
-    inline: true
+    inline: true,
+    invalid: false
 };
