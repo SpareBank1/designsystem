@@ -1,5 +1,11 @@
 # Changelog
 
+## v2.0.0
+
+**BREAKING:** `formatPercentage` now expects the actual percentage instead of the fraction.
+Previously: `formatPercentage(0.123) === 12.3 %`, now: `formatPercentage(0.123) === 0.12 %`.
+To migrate, just make sure the value you send in is in the correct order of magnitude.
+
 ## v1.0.0
 
 Initial version of `ffe-formatters`. Includes the following formatters:
