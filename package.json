@@ -1,6 +1,6 @@
 {
   "name": "ffe-icons",
-  "version": "7.6.1",
+  "version": "7.7.0",
   "description": "Felles Front End Icons",
   "main": "bin/build.js",
   "bin": {

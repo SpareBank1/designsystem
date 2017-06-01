@@ -1,5 +1,9 @@
 # Changelog
 
+## 7.7.0
+
+* Added kalkulator-ikon.svg
+
 ## 7.6.1
 
 * Updated utropstegn-icon.svg
