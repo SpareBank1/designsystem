@@ -1,5 +1,8 @@
 # Changelog
 
+## 4.2.0
+* Added option to show checkbox in invalid state
+
 ## 4.1.2
 * Expand peerDep scope of `ffe-form` to include `5.x`.
 * Remove peerDep to `ffe-core`.
