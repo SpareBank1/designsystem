@@ -27,7 +27,6 @@ export default function CheckBox(props) {
                 className={classNames({
                     'ffe-checkbox': true,
                     'ffe-checkbox--inline': inline,
-                    'ffe-checkbox--invalid': invalid,
                     'ffe-checkbox--no-margin': noMargins
                 })}
                 htmlFor={id}
