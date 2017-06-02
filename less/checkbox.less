@@ -17,10 +17,6 @@
         margin-right: 20px;
     }
 
-    &--invalid&::before {
-        border-color: @ffe-orange-fire;
-    }
-
     &::before {
         border: solid 2px @ffe-grey;
         border-radius: 2px;
@@ -84,6 +80,10 @@
     &:checked + .ffe-checkbox::after {
         animation: checkmark 0.4s;
         border-color: @ffe-blue-azure;
+    }
+
+    &[aria-invalid="true"] + .ffe-checkbox::before {
+        border-color: @ffe-orange-fire;
     }
 }
 
