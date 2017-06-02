@@ -71,9 +71,6 @@ describe('<Checkbox />', () => {
     });
 
     it('should support invalid', () => {
-        assert.isTrue(shallow(CreateCheckbox()).find('.ffe-checkbox--invalid').isEmpty());
-        assert.isTrue(shallow(CreateCheckbox({ invalid: false })).find('.ffe-checkbox--invalid').isEmpty());
-        assert.isFalse(shallow(CreateCheckbox({ invalid: true })).find('.ffe-checkbox--invalid').isEmpty());
         assert.equal(shallow(CreateCheckbox({ invalid: false })).find('input').prop('aria-invalid'), 'false');
         assert.equal(shallow(CreateCheckbox({ invalid: true })).find('input').prop('aria-invalid'), 'true');
     });
