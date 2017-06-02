@@ -21,6 +21,7 @@ export default function CheckBox(props) {
                 id={id}
                 type="checkbox"
                 {...rest}
+                aria-invalid={String(!!invalid)}
             />
             <label
                 className={classNames({
