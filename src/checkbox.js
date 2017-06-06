@@ -8,6 +8,7 @@ export default function CheckBox(props) {
         label,
         noMargins,
         inline,
+        invalid,
         ...rest
     } = props;
 
@@ -20,6 +21,7 @@ export default function CheckBox(props) {
                 id={id}
                 type="checkbox"
                 {...rest}
+                aria-invalid={String(!!invalid)}
             />
             <label
                 className={classNames({
@@ -41,10 +43,12 @@ CheckBox.propTypes = {
     checked: PropTypes.bool,
     noMargins: PropTypes.bool,
     inline: PropTypes.bool,
+    invalid: PropTypes.bool,
     children: PropTypes.array,
 };
 
 CheckBox.defaultProps = {
     noMargins: false,
-    inline: true
+    inline: true,
+    invalid: false
 };

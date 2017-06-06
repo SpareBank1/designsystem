@@ -70,16 +70,19 @@ describe('<Checkbox />', () => {
             1);
     });
 
+    it('should support invalid', () => {
+        assert.equal(shallow(CreateCheckbox({ invalid: false })).find('input').prop('aria-invalid'), 'false');
+        assert.equal(shallow(CreateCheckbox({ invalid: true })).find('input').prop('aria-invalid'), 'true');
+    });
+
     it('should set arbitrary props (rest) on input', () => {
         const wrapper = shallow(CreateCheckbox({
             name: 'checkbox',
             iDontReallyDoAnything: 'false',
-            tabIndex: -1,
-            'aria-invalid': true,
+            tabIndex: -1
         }));
 
         assert.equal(wrapper.find('input').prop('name'), 'checkbox');
-        assert.equal(wrapper.find('input').prop('aria-invalid'), true);
         assert.equal(wrapper.find('input').prop('iDontReallyDoAnything'), 'false');
         assert.equal(wrapper.find('input').prop('tabIndex'), -1);
     });
