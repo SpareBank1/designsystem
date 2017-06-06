@@ -88,8 +88,8 @@ property in the `opts` argument if needed.
 import formatPercentage from 'ffe-formatters/lib/formatPercentage';
 
 formatPercentage(10.00001) === '10 %';
-formatPercentage(12.3456) === '12.35 %' // rounds the overflowing decimals
-formatPercentage(12.34567, { maxDecimals: 4 }) === '12.3457'
+formatPercentage(12.3456) === '12,35 %' // rounds the overflowing decimals
+formatPercentage(12.34567, { maxDecimals: 4 }) === '12,3457'
 ```
 
 ### `formatFodselsnummer(fodselsnummer)`
