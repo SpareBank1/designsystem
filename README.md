@@ -27,6 +27,7 @@ import Checkbox from 'ffe-checkbox-react';
         checked={ boolean }
         name={ string }
         label={ string }
+        invalid={ boolean }
         noMargins={ boolean } // disables top- and bottom margins, useful for use in tables etc
 />
 ```
