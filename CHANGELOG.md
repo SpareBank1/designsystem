@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.0.1
+
+- Bugfix: Fix broken export of `formatFodselsnummer` from the main index file.
+
 ## v2.0.0
 
 **BREAKING:** `formatPercentage` now expects the actual percentage instead of the fraction.
