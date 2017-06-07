@@ -1,5 +1,8 @@
 # Changelog
 
+## v6.3.0
+* Added .ffe-file-upload
+
 ## v6.2.0
 * Added handling of invalid prop on checkbox (validation error)
 
