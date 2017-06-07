@@ -1,0 +1,163 @@
+@ffe-blue-royal-escape: escape('@{ffe-blue-royal}');
+@ffe-blue-royal-fill: @ffe-blue-royal-escape;
+
+.ffe-file-upload {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: stretch;
+
+    @media all and (min-width: @breakpoint-md) {
+        flex-wrap: nowrap;
+    }
+
+    &__upload-button {
+        flex-basis: 100%;
+        order: 1;
+
+        @media all and (min-width: @breakpoint-md) {
+            flex-basis: 130px;
+        }
+    }
+
+    &__input {
+        width: 0.1px;
+        height: 0.1px;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
+
+        &:focus + .ffe-file-upload__label,
+        &:active + .ffe-file-upload__label {
+            border-color: @ffe-blue-azure;
+            box-shadow: 0 0 0 2px @ffe-blue-focus;
+            outline: 0;
+        }
+    }
+
+    &__label,
+    &__delete-button {
+        color: @ffe-blue-azure;
+        font-family: "MuseoSansRounded-500", arial, sans-serif;
+        cursor: pointer;
+        transition: all @ffe-transition-duration @ffe-ease;
+    }
+
+    &__label {
+        display: block;
+        background-color: @ffe-white;
+        border: solid 2px @ffe-grey-silver;
+        border-radius: 4px;
+        box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.05);
+        line-height: 24px;
+        font-size: 18px;
+        outline: none;
+        overflow: hidden;
+        padding: 8px 30px;
+        text-align: center;
+        text-decoration: none;
+        white-space: nowrap;
+
+        &:active,
+        &:focus,
+        &:hover {
+            border-color: @ffe-blue-azure;
+        }
+
+        &:hover {
+            box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.2);
+        }
+
+        &:active {
+            box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.25);
+        }
+    }
+
+    &__selected-files {
+        order: 2;
+        flex-basis: 100%;
+        line-height: 24px;
+        padding: 11px 0;
+        color: @ffe-grey-charcoal;
+        list-style: none;
+        max-width: 100%;
+
+        @media all and (min-width: @breakpoint-md) {
+            margin-top: 0;
+            padding: 11px 0 11px 30px;
+            max-width: ~"calc(100% - 130px)";
+        }
+
+        li {
+            display: flex;
+            margin: 0 0 5px;
+        }
+    }
+
+    &__filename {
+        order: 1;
+        flex-basis: 100%;
+        align-self: flex-end;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__delete {
+        flex-basis: 90px;
+        order: 2;
+        margin-left: 30px;
+        text-align: right;
+    }
+
+    &__delete-button {
+        background-color: transparent;
+        border: none;
+        border-radius: 4px;
+        font-size: 14px;
+        height: 24px;
+        line-height: 18px;
+        margin: 0 -4px; // Hack to allow box-shadow to float outside content on focus
+        padding: 0 4px 0 30px;
+        text-decoration: none;
+        position: relative;
+
+        &::after {
+            border-bottom: solid 1px @ffe-blue-azure;
+            content: "";
+            display: block;
+        }
+
+        &:active,
+        &:focus {
+            box-shadow: 0 0 0 2px @ffe-blue-focus;
+            color: @ffe-blue-cobalt;
+            outline: none;
+        }
+
+        &:hover {
+            color: @ffe-blue-cobalt;
+        }
+
+        &:active::after,
+        &:focus::after,
+        &:hover::after {
+            border-color: @ffe-blue-cobalt;
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cpath fill='@{ffe-blue-royal-fill}' d='M18.77,0c-3.562,0-7.125,1.347-9.834,4.044l-4.429,4.439c-5.381,5.394-5.381,14.25,0,19.68l71.19,71.83-71.66,71.83c-5.381,5.394-5.381,14.25,0,19.68l4.429,4.439c5.381,5.394,14.22,5.394,19.64,0l71.66-71.83,71.65,71.83c5.381,5.394,14.23,5.394,19.65,0l4.429-4.439c5.381-5.394,5.381-14.25,0-19.68l-71.19-71.83,71.66-71.83c5.381-4.914,5.381-13.78,0-19.21l-4.429-4.423c-5.381-5.394-14.22-5.394-19.64,0l-72.13,71.34-71.17-71.83c-2.691-2.697-6.257-4.044-9.819-4.044z'/%3E%3C/svg%3E");
+            background-size: 12px 12px;
+            background-repeat: no-repeat;
+            bottom: 6px;
+            left: 8px;
+            fill: @ffe-blue-royal;
+            height: 12px;
+            width: 12px;
+        }
+    }
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>ffe-form</title>
+        <link href="examples.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body class="ffe-body-text">
+        <div class="ffe-section-wrapper">
+            <div class="ffe-content-container">
+                <h1 class="ffe-h1">File input</h1>
+            </div>
+        </div>
+
+        <div id="ffedoc">
+            <div class="ffe-section-wrapper">
+                <div class="ffe-content-container ffe-content-container--text-left">
+
+                    <p class="ffe-body-paragraph">
+                        Består av et skjult input-felt og en label stylet som en knapp.
+                    </p>
+
+                    <div class="ffe-file-upload">
+                        <div class="ffe-file-upload__upload-button">
+                            <input type="file" id="file-upload" name="file-upload" class="ffe-file-upload__input">
+                            <label class="ffe-file-upload__label" for="file-upload">
+                                Velg fil
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="ffedoc">
+            <div class="ffe-section-wrapper">
+                <div class="ffe-content-container ffe-content-container--text-left">
+
+                    <p class="ffe-body-paragraph">
+                        File input + valgte filer.
+                    </p>
+
+                    <div class="ffe-file-upload">
+                        <div class="ffe-file-upload__upload-button">
+                            <input type="file" id="file-upload2" name="file-upload2" class="ffe-file-upload__input">
+                            <label class="ffe-file-upload__label" for="file-upload2">
+                                Velg fil
+                            </label>
+                        </div>
+
+                        <ul class="ffe-file-upload__selected-files">
+                            <li>
+                                <div class="ffe-file-upload__filename">Virus.exe</div>
+                                <div class="ffe-file-upload__delete">
+                                    <button class="ffe-file-upload__delete-button">Slett</button>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="ffe-file-upload__filename">Selfie_fjelltopp.jpg</div>
+                                <div class="ffe-file-upload__delete">
+                                    <button class="ffe-file-upload__delete-button">Slett</button>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="ffe-file-upload__filename">Lønnsslipp.pdf</div>
+                                <div class="ffe-file-upload__delete">
+                                    <button class="ffe-file-upload__delete-button">Slett</button>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="ffe-file-upload__filename">system.ini</div>
+                                <div class="ffe-file-upload__delete">
+                                    <button class="ffe-file-upload__delete-button">Slett</button>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="ffe-file-upload__filename">20060606-213314543_345666677777777_abcdefgh.txt</div>
+                                <div class="ffe-file-upload__delete">
+                                    <button class="ffe-file-upload__delete-button">Slett</button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
