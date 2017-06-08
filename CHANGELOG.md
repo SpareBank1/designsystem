@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.4.0
+
+* Fix a bug where the datepicker didn't show on focus/click after there has been an error.
+
 ## v2.3.0
 * Increased version range for ffe-form
 

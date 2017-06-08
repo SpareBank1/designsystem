@@ -1,6 +1,6 @@
 {
   "name": "ffe-datepicker-react",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "main": "lib/ffe-datepicker-react.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/.",

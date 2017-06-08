@@ -10,6 +10,9 @@ import i18n from '../i18n/i18n';
 import ErrorTypes from '../datelogic/error-types';
 
 describe('<FFEDatepicker />', () => {
+
+  const errorClass = '.ffe-field-error-message';
+
   let defaultProps;
   let wrapper;
 
@@ -36,7 +39,7 @@ describe('<FFEDatepicker />', () => {
       expect(wrapper).to.not.have.descendants(Calendar));
 
     it('does not have an error message', () =>
-      expect(wrapper).to.not.have.descendants('.ffe-field-error-message'));
+      expect(wrapper).to.not.have.descendants(errorClass));
   });
 
   describe('with focus on DateInput', () => {
@@ -48,6 +51,56 @@ describe('<FFEDatepicker />', () => {
 
     it('contains a Calendar', () =>
       expect(wrapper).to.have.exactly(1).descendants(Calendar));
+  });
+
+  describe('with click on DateInput', () => {
+    beforeEach(() => {
+      wrapper = mount(<Datepicker { ...defaultProps } />);
+      const input = wrapper.find(DateInput).find('input');
+      input.simulate('click');
+    });
+
+    it('contains a Calendar', () =>
+      expect(wrapper).to.have.exactly(1).descendants(Calendar));
+  });
+
+  describe('with click after errors', () => {
+
+    let input;
+
+    beforeEach(() => {
+      wrapper = mount(<Datepicker { ...defaultProps } />);
+      input = wrapper.find(DateInput).find('input');
+      wrapper.setProps({ value: 'invalid date' });
+      input.simulate('blur');
+      input.simulate('click');
+    });
+
+    it('works when the field is cleared', () => {
+      // Click shouldnt work when there is an error...
+      expect(wrapper).to.have.descendants(errorClass);
+      expect(wrapper).to.not.have.descendants(Calendar);
+
+      // ...but it should work when we have resetted the field
+      wrapper.setProps({ value: '' });
+      input.simulate('blur');
+      expect(wrapper).to.not.have.descendants(errorClass);
+      input.simulate('click');
+      expect(wrapper).to.have.exactly(1).descendants(Calendar);
+    });
+
+    it('works when the field gets a correct value', () => {
+      // Click shouldnt work when there is an error...
+      expect(wrapper).to.have.descendants(errorClass);
+      expect(wrapper).to.not.have.descendants(Calendar);
+
+      // ...but it should work when we have set a correct value again
+      wrapper.setProps({ value: '14.06.2017' });
+      input.simulate('blur');
+      expect(wrapper).to.not.have.descendants(errorClass);
+      input.simulate('click');
+      expect(wrapper).to.have.exactly(1).descendants(Calendar);
+    });
   });
 
   describe('when input field changes', () => {
@@ -158,11 +211,10 @@ describe('<FFEDatepicker />', () => {
       });
 
       it('has an error message', () =>
-        expect(wrapper).to.have.descendants('.ffe-field-error-message'));
+        expect(wrapper).to.have.descendants(errorClass));
     });
 
     describe('with date', () => {
-      const errorClass = '.ffe-field-error-message';
       let errorMessage;
 
       describe('below minimum date', () => {
