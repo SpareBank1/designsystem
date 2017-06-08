@@ -39,7 +39,7 @@
   },
   "peerDependencies": {
     "ffe-core": "9.x",
-    "ffe-form": "5.x"
+    "ffe-form": "5.x - 6.x"
   },
   "publishConfig": {
     "registry": "***REMOVED***"
