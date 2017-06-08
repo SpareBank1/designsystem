@@ -1,5 +1,8 @@
 # Changelog
 
+## v2.3.0
+* Increased version range for ffe-form
+
 ## v2.2.0
 * Added multiple dateformats to input field
 **d[d]m[m]yy[yy]
