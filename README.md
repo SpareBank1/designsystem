@@ -1,66 +1,38 @@
 # ffe-expandable-react
 
-An expandable component that lets you show or hide content based on a property.
+## Deprecation notice
 
-## Install
+Etter en del frem og tilbake i dette repoet, og at react-height har blitt tatt inn som dependency lener det seg mot å være mer hensiktsmessig å benytte seg av [react-collapse](https://github.com/nkbt/react-collapse).
 
-```bash
-$ npm install --save ffe-expandable-react
-```
+Om dette er ønskelig for andre har vi satt sammen en enkel overgangs-oppskrift:
 
-## Usage
-
-Simply wrap the content you want to show or hide in this component, and you're good
-to go. Provide the `isOpen` property to toggle it to be open or empty.
-
-Here's a simple example:
-
+Gammelt:
 ```javascript
-import React from 'react';
 import Expandable from 'ffe-expandable-react';
 
-const ExampleComponent = () = (
-    <Expandable isOpen={this.state.isOpen}>
-        <h2 className="ffe-h2">More info</h2>
-        <p className="ffe-body-text">
-            This content is only shown if the isOpen property is set.
-        </p>
-    </Expandable>
-);
+const isOpen = false;
+const RowFolded = element || string || array(element);
+const RowExpanded = element || string || array(element);
+
+<Expandable
+    isOpen={ isOpen }
+    expandTime={ expandTime }
+    folded={ RowFolded }
+    expanded={ RowExpanded }
+/>
 ```
+Ny:
+```javascript
+import Collapse from 'react-collapse';
 
-### Options
-The `Expandable` component accepts quite a few optional properties:
+const isOpen = false;
+const RowFolded = element || string || array(element);
+const RowExpanded = element || string || array(element);
 
-#### `customClass`: PropTypes.string
-
-Custom class names to apply to the middle `<div />` / the `<td />` element.
-
-#### `expanded`: PropTypes.node (default: null)
-
-Deprecated (but still supported) way of specifying the expandable content. Although you
-typically want to send this in as children, you might want to do this instead. Same as
-specifying `children` as a property.
-
-#### `expandTime`: PropTypes.number (default: 0.5)
-
-Duration in seconds for the span of the expand / collapse animation
-
-#### `folded`: PropTypes.node (default: null)
-
-Content to show above the expandable content.
-
-
-#### `isOpen`: PropTypes.bool (default: false)
-
-Value deciding whether or not to render children.
-
-#### `isTable`: PropTypes.bool (default: false)
-
-Value deciding whether or not to render the element as a table row (with a single cell)
-or as divs. If you're creating expandable table rows, set this to `true`.
-
-## Development
-
-To develop locally, start a local server with `npm start`.
-To run the tests, run `npm test`.
+{ RowFolded }
+<Collapse
+    isOpened={ isOpen }
+>
+    { RowExpanded }
+</Collapse>
+```
