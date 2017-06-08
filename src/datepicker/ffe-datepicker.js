@@ -1,5 +1,6 @@
 /*eslint jsx-a11y/onclick-has-focus:1 jsx-a11y/onclick-has-role:1 */
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Calendar from '../calendar/ffe-calendar';
 import KeyCode from '../util/keyCode';

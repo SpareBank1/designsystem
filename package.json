@@ -73,6 +73,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "ffe-datepicker": "^4.0.0"
+    "ffe-datepicker": "^4.0.0",
+    "prop-types": "15.x"
   }
 }

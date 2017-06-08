@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import ActiveDate from './activeDate';
 import LeadDate from './leadDate';
 import Header from './header';
