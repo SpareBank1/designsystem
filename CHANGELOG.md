@@ -1,5 +1,8 @@
 # Changelog
 
+## 4.1.0
+* Added ffe-form 6.x to version range in devDependencies
+
 ## Version 4.0.0
 
 ### Breaking changes
