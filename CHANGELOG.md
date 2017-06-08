@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.8.0
+
+* Increased version range for ffe-form.
+
+
 ## 2.7.0
 
 * Pass through (almost) all `props` passed to `Dropdown` directly to `select`. Then we can use the component more like the native ones.
