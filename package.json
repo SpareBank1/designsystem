@@ -1,6 +1,6 @@
 {
   "name": "ffe-datepicker-react",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "main": "lib/ffe-datepicker-react.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/.",
@@ -68,7 +68,7 @@
   },
   "peerDependencies": {
     "ffe-datepicker": "3.x - 4.x",
-    "ffe-form": "2.x - 5.x",
+    "ffe-form": "2.x - 6.x",
     "react": "15.x"
   },
   "dependencies": {
