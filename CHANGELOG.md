@@ -1,4 +1,8 @@
 # Changelog
+
+# v7.2.0
+* Increased version range for ffe-form
+
 # v7.1.3 
 * Added property shouldShowSuggestionsOnFocus on selector. Defaults to true.
 
