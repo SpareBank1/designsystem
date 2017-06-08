@@ -1,5 +1,8 @@
 # Changelog
 
+## 4.3.0
+* Increased version range for ffe-form to 6.x
+
 ## 4.2.0
 * Added option to show checkbox in invalid state
 
