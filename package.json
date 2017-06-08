@@ -29,7 +29,7 @@
   ],
   "devDependencies": {
     "ffe-core": "9.x",
-    "ffe-form": "6.x",
+    "ffe-form": "5.x - 6.x",
     "ffe-visual-tests-support": "2.0.0",
     "less": "^2.6.1",
     "mkdirp": "^0.5.1",
