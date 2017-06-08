@@ -1,5 +1,8 @@
 # Changelog
 
+# v7.3.0
+* Changed dependency version for ffe-checkbox-react 
+
 # v7.2.0
 * Increased version range for ffe-form
 
