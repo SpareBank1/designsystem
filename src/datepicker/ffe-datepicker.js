@@ -210,6 +210,8 @@ export default class FFEDatepicker extends React.Component {
         onClick={ this.clickHandler }
         ref={ c => { this._datepickerNode = c; } }
         className="ffe-datepicker"
+        tabIndex={ -1 }
+        role="button"
       >
         <DateInput
           onFocus={ this.onInputFocus }
