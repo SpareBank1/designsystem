@@ -1,8 +1,15 @@
 # Changelog
 
+## v.9.3.0
+
+* Added cursor: pointer to `ffe-link-text`
+* Added support for modifier `--underlined` to `ffe-link-text` for anchors with underline.
+
+Prefer using the underlined variant. There will be an upcoming major release that makes it the new default.
+
 ## v.9.2.0
 
-* Added `motion.less`, which contains variables for common transitions 
+* Added `motion.less`, which contains variables for common transitions
 
 To migrate to this release, replace timing functions (including `ease-in`, `ease-out` and other functions that do not directly correspond to the variables) and duration with the variables that fit your use case. Make sure to specify which property to transition - avoid `all`.
 
