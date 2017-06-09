@@ -3,9 +3,12 @@
 ## v.9.3.0
 
 * Added cursor: pointer to `ffe-link-text`
-* Added support for modifier `--underlined` to `ffe-link-text` for anchors with underline.
+* Added support for modifier `--underline` to `ffe-link-text` for anchors with underline.
 
 Prefer using the underlined variant. There will be an upcoming major release that makes it the new default.
+
+Early adaptors of `v.9.3.0` who wants to be ready for the next major can start using `--no-underline` for
+the links that they don't want underlined in the next major.
 
 ## v.9.2.0
 
