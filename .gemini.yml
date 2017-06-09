@@ -7,10 +7,10 @@ browsers:
     desiredCapabilities:
       browserName: firefox
   firefox-medium:
-    windowSize: 767x10000
+    windowSize: 768x10000
     desiredCapabilities:
       browserName: firefox
   firefox-large:
-    windowSize: 1023x10000
+    windowSize: 1025x10000
     desiredCapabilities:
       browserName: firefox
