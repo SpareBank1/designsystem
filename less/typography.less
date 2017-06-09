@@ -130,8 +130,17 @@
 
 .ffe-link-text {
     color: @ffe-blue-azure;
+    cursor: pointer;
     text-decoration: none;
     word-wrap: break-word;
+
+    &--underlined {
+        border-bottom: 1px solid @ffe-blue-azure;
+
+        &:hover {
+            border-bottom-color: @ffe-blue-cobalt;
+        }
+    }
 
     &:hover {
         color: @ffe-blue-cobalt;
