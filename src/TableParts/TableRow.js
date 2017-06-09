@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import TableCell from './TableCell';
 
@@ -18,7 +19,10 @@ const TableRow = ({ cells, columns, onClick, onKeyDown, trClasses, expandable, e
                 return (
                     <TableCell
                         key={ index }
-                        tdClasses={ (column.key === 'expandIcon') ? 'ffe-responsive-table__cell--collapsed' : '' }
+                        tdClasses={classNames(
+                            {'ffe-responsive-table__cell--collapsed' : column.key === 'expandIcon' },
+                            {'ffe-responsive-table--hide-md' : column.hideOnTablet }
+                        )}
                         columnHeader={ column.header }
                         alignRight={ column.alignRight }
                     >
@@ -31,13 +35,20 @@ const TableRow = ({ cells, columns, onClick, onKeyDown, trClasses, expandable, e
 };
 
 TableRow.propTypes = {
-    cells: React.PropTypes.object.isRequired,
-    columns: React.PropTypes.array.isRequired,
-    trClasses: React.PropTypes.string,
-    onClick: React.PropTypes.func,
-    onKeyDown: React.PropTypes.func,
-    expandable: React.PropTypes.bool,
-    expanded: React.PropTypes.bool,
+    cells: PropTypes.object.isRequired,
+    columns: PropTypes.arrayOf(
+        PropTypes.shape({
+            key: PropTypes.string,
+            header: PropTypes.any,
+            alignRight: PropTypes.bool,
+            hideOnTablet: PropTypes.bool,
+        })
+    ).isRequired,
+    trClasses: PropTypes.string,
+    onClick: PropTypes.func,
+    onKeyDown: PropTypes.func,
+    expandable: PropTypes.bool,
+    expanded: PropTypes.bool,
 };
 
 export default TableRow;

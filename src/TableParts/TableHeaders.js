@@ -1,6 +1,5 @@
-
-import React, { PropTypes } from 'react';
-
+import React  from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 const TableHeaders = ({ columns }) => {
@@ -14,7 +13,10 @@ const TableHeaders = ({ columns }) => {
                     return (
                         <th
                             key={ index }
-                            className="ffe-responsive-table__heading"
+                            className={classNames(
+                                    'ffe-responsive-table__heading',
+                                    { 'ffe-responsive-table--hide-md' : column.hideOnTablet }
+                                )}
                             aria-sort={ column.ariaSort }
                             scope="col"
                         >
@@ -41,6 +43,7 @@ TableHeaders.propTypes = {
             header: PropTypes.node.isRequired,
             key: PropTypes.string.isRequired,
             alignRight: PropTypes.bool,
+            hideOnTablet: PropTypes.bool,
         })
     ),
 };

@@ -7,6 +7,7 @@ import {
     SIMPLE_TABLE_WITH_FOOTER,
     SIMPLE_TABLE_EXPANDABLE,
     SIMPLE_TABLE_SORTABLE_EXPANDABLE,
+    SIMPLE_TABLE_HIDE_ON_TABLET,
     SIMPLE_TABLE_SORTABLE_PAGINATED
 } from './tables.data';
 
@@ -54,6 +55,9 @@ render(
 
                 <h2 className="ffe-h2">Responsive table</h2>
                 <ResponsiveTable columns={SIMPLE_TABLE.columns} data={SIMPLE_TABLE.dataObject}/>
+
+                <h2 className="ffe-h2">Responsive table with columns hidden on tablet</h2>
+                <ResponsiveTable columns={SIMPLE_TABLE_HIDE_ON_TABLET.columns} data={SIMPLE_TABLE_HIDE_ON_TABLET.dataObject}/>
 
                 <h2 className="ffe-h2">Responsive table with footer and caption</h2>
                 <ResponsiveTable columns={SIMPLE_TABLE_WITH_FOOTER.columns} data={SIMPLE_TABLE_WITH_FOOTER.dataObject} caption="This is a caption"/>

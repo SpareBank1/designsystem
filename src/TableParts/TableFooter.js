@@ -1,5 +1,7 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import TableCell from './TableCell';
+import classNames from 'classnames';
 
 const TableFooter = ({ columns }) => {
     return (
@@ -14,6 +16,7 @@ const TableFooter = ({ columns }) => {
                             key={ index }
                             columnHeader={ column.header }
                             alignRight={ column.alignRight }
+                            tdClasses={ classNames({'ffe-responsive-table--hide-md' : column.hideOnTablet }) }
                         >
                             { column.footer }
                         </TableCell>
@@ -30,6 +33,7 @@ TableFooter.propTypes = {
             header: PropTypes.node.isRequired,
             footer: PropTypes.any,
             alignRight: PropTypes.bool,
+            hideOnTablet: PropTypes.bool,
         })
     ),
 };

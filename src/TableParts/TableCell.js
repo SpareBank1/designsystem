@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 const TableCell = ({ children, columnHeader, alignRight, tdClasses, contentClasses }) => {
@@ -31,11 +32,11 @@ const TableCell = ({ children, columnHeader, alignRight, tdClasses, contentClass
 };
 
 TableCell.propTypes = {
-    children: React.PropTypes.any,
-    columnHeader: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.node]),
-    alignRight: React.PropTypes.bool,
-    tdClasses: React.PropTypes.string,
-    contentClasses: React.PropTypes.string,
+    children: PropTypes.any,
+    columnHeader: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+    alignRight: PropTypes.bool,
+    tdClasses: PropTypes.string,
+    contentClasses: PropTypes.string,
 };
 
 export default TableCell;
