@@ -1,5 +1,9 @@
 # Changelog
 
+## v.5.2.0
+
+* Added `--hide-md` modifier in order to be able to responsively hide columns
+
 ## v.5.1.2
 
 * Specified font size of `--condensed` modifier to 14px
