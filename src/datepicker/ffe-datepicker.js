@@ -1,5 +1,6 @@
 /*eslint jsx-a11y/onclick-has-focus:1 jsx-a11y/onclick-has-role:1 */
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Calendar from '../calendar/ffe-calendar';
 import KeyCode from '../util/keyCode';
@@ -87,14 +88,16 @@ export default class FFEDatepicker extends React.Component {
 
         if (emptyValue && this.state.errorMessage) {
           nextState = {
-            openOnFocus: false,
+            openOnFocus: true,
             ariaInvalid: false,
+            errorMessage: null,
             displayDatePicker: false
           };
           return;
         } else if (emptyValue) {
           nextState = {
             ...this.state,
+            openOnFocus: true
           };
           return;
         }
@@ -207,6 +210,8 @@ export default class FFEDatepicker extends React.Component {
         onClick={ this.clickHandler }
         ref={ c => { this._datepickerNode = c; } }
         className="ffe-datepicker"
+        tabIndex={ -1 }
+        role="button"
       >
         <DateInput
           onFocus={ this.onInputFocus }

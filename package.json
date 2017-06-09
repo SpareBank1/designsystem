@@ -1,6 +1,6 @@
 {
   "name": "ffe-datepicker-react",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "main": "lib/ffe-datepicker-react.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/.",
@@ -73,6 +73,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "ffe-datepicker": "^4.0.0"
+    "ffe-datepicker": "^4.0.0",
+    "prop-types": "15.x"
   }
 }
