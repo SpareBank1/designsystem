@@ -129,26 +129,20 @@
 }
 
 .ffe-link-text {
+    border-bottom: 1px solid @ffe-blue-azure;
     color: @ffe-blue-azure;
     cursor: pointer;
     text-decoration: none;
     word-wrap: break-word;
 
-    &--no-underline {
-        border-bottom: none;
-    }
-
-    &--underline {
-        border-bottom: 1px solid @ffe-blue-azure;
-
-        &:hover {
-            border-bottom-color: @ffe-blue-cobalt;
-        }
-    }
-
     &:hover {
+        border-bottom-color: @ffe-blue-cobalt;
         color: @ffe-blue-cobalt;
         text-decoration: none;
+    }
+
+    &--no-underline {
+        border-bottom: none;
     }
 }
 
