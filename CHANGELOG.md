@@ -1,6 +1,10 @@
 # Changelog
 
-## v2.5.6
+## v2.4.7
+
+* Updated ffe-icons to version 7.8.0
+
+## v2.4.6
 
 * Updated ffe-icons to version 7.7.0
 
