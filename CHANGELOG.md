@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## Version 2.0.2
+* Support both versions 9 and 10 of `ffe-core`
+
 ## Version 2.0.1
 Replaced hardcoded transition properties with variables from ffe-core
 
