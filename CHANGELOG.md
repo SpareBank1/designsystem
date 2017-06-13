@@ -1,5 +1,8 @@
 # Changelog
 
+## 4.2.1
+* Support both versions 9 and 10 of `ffe-core`
+
 ## 4.2.0
 * Added ffe-form 6.x to version range in peerDependencies
 
