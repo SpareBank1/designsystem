@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## Version 4.2.1
+- Support both versions 9 and 10 of `ffe-core`
+
 ## Version 4.2.0
 - Added visual tests
 - Added info list
