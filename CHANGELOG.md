@@ -1,5 +1,8 @@
 # Changelog
 
+## 4.0.1
+* Support both versions 9 and 10 of `ffe-core`
+
 ## 4.0.0
 
 ### 💥 Breaking changes
