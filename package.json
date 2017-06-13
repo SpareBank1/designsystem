@@ -1,6 +1,6 @@
 {
   "name": "ffe-form",
-  "version": "6.3.0",
+  "version": "6.3.1",
   "description": "Form-/skjemapakke for Felles Front End",
   "main": "less/form.less",
   "scripts": {
@@ -69,7 +69,7 @@
     }
   ],
   "devDependencies": {
-    "ffe-core": "^9.2.0",
+    "ffe-core": "^9.2.0 || ^10.0.0",
     "ffe-visual-tests-support": "2.1.2",
     "less": "^2.6.1",
     "less-plugin-autoprefix": "^1.5.1",
@@ -81,7 +81,7 @@
     "watch": "^0.19.2"
   },
   "peerDependencies": {
-    "ffe-core": "^9.2.0"
+    "ffe-core": "^10.0.0"
   },
   "publishConfig": {
     "registry": "https://nexus.intern.sparebank1.no/nexus/content/repositories/npm-internal"
