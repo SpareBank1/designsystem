@@ -1,5 +1,10 @@
 # Changelog
 
+## v4.3.0
+
+* Added `hideOnTablet` boolean to support hiding columns responsively on tablet screen sizes.
+* Added dep on `prop-types` and changed all `PropTypes` to use this package.
+
 ## v4.2.1
 
 * Expand peerDep scope of `ffe-tables` to include `5.x`.

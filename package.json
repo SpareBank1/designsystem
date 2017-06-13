@@ -1,6 +1,6 @@
 {
   "name": "ffe-tables-react",
-  "version": "4.2.1",
+  "version": "4.3.0",
   "description": "React implementation of ffe-tables",
   "main": "lib/index.js",
   "scripts": {
@@ -64,6 +64,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "deep-equal": "^1.0.1",
+    "prop-types": "^15.5.10",
     "shallow-equals": "^1.0.0"
   }
 }

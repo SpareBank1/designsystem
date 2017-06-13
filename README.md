@@ -67,6 +67,7 @@ This is an example which includes all the options to tailor the table to your ne
 Each column can have any of these optional props:
 - `footer` is a string or node which will be used as a table footer.
 - `alignRight` is a boolean to align all cell content to the right (headers and footers included)
+- `hideOnTablet` hides columns responsively on tablet screen sizes
 - `compare` is to provide a custom compare function for the column.
 If not provided, a basic compare function is applied.
 - `notSortable` is a boolean to disable sorting on a specific column.
