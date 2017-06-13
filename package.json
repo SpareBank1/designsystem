@@ -1,6 +1,6 @@
 {
   "name": "ffe-tables",
-  "version": "5.2.0",
+  "version": "5.2.1",
   "main": "less/tables.less",
   "scripts": {
     "compile": "npm run lint && lessc example/example.less example/example.css && cp -R node_modules/ffe-core/fonts/ example/fonts/ && echo \"$(date +%T): Updated example\"",
@@ -29,7 +29,7 @@
     }
   ],
   "devDependencies": {
-    "ffe-core": "^9.2.0",
+    "ffe-core": "^10.0.0",
     "ffe-visual-tests-support": "2.1.1",
     "less": "^2.7.2",
     "nsp": "^2.6.3",
@@ -39,7 +39,7 @@
     "watch": "^1.0.2"
   },
   "peerDependencies": {
-    "ffe-core": "^9.2.0"
+    "ffe-core": "^9.2.0 || ^10.0.0"
   },
   "publishConfig": {
     "registry": "***REMOVED***"
