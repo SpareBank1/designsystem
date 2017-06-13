@@ -1,5 +1,8 @@
 # Changelog
 
+## v.6.3.1
+* Support both versions 9 and 10 of `ffe-core`
+
 ## v6.3.0
 * Added .ffe-file-upload
 
