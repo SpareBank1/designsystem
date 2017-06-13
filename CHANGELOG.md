@@ -1,5 +1,9 @@
 # Changelog
 
+## 7.8.0
+
+* Added bankid- and varsel-ikon.svg
+
 ## 7.7.0
 
 * Added kalkulator-ikon.svg
