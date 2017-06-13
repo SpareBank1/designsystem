@@ -1,6 +1,6 @@
 {
   "name": "ffe-tabs",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "main": "less/ffe-tabs.less",
   "scripts": {
     "lint": "lessc --lint example/example.less && stylelint less/*.less",
@@ -10,7 +10,7 @@
     "has-published": "npm show . versions -s | grep -q ${npm_package_version}"
   },
   "devDependencies": {
-    "ffe-core": "^9.2.0",
+    "ffe-core": "^10.0.0",
     "ffe-visual-tests-support": "2.0.0",
     "less": "^2.7.1",
     "opn-cli": "^3.1.0",
@@ -19,7 +19,7 @@
     "watch": "^0.19.2"
   },
   "peerDependencies": {
-    "ffe-core": "^9.2.0"
+    "ffe-core": "^9.2.0 || ^10.0.0"
   },
   "repository": {
     "type": "git",
