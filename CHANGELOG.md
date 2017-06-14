@@ -1,5 +1,9 @@
 # Changelog
 
+## v.5.2.1
+
+* Support both versions 9 and 10 of `ffe-core`
+
 ## v.5.2.0
 
 * Added `--hide-md` modifier in order to be able to responsively hide columns
@@ -7,7 +11,7 @@
 ## v.5.1.2
 
 * Specified font size of `--condensed` modifier to 14px
-* Added example of condensed table 
+* Added example of condensed table
 
 ## v.5.1.1
 
