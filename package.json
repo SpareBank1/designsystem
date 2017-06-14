@@ -25,9 +25,9 @@
   },
   "devDependencies": {
     "ffe-core": "^10.0.0",
-    "ffe-visual-tests-support": "2.0.0",
+    "ffe-visual-tests-support": "2.1.2",
     "gemini": "4.12.2",
-    "less": "2.7.1",
+    "less": "2.7.2",
     "mkdirp": "0.5.1",
     "stylelint": "^7.7.1",
     "stylelint-config-ffe": "^0.2.0"
