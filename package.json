@@ -1,9 +1,10 @@
 {
   "name": "ffe-message-box",
-  "version": "4.2.0",
+  "version": "4.2.1",
   "description": "Meldingsboks",
   "main": "index.js",
   "scripts": {
+    "compile": "lessc examples/examples.less examples/examples.css",
     "examples": "lessc examples/examples.less examples/examples.css && mkdirp examples/fonts && cp -R node_modules/ffe-core/fonts/* examples/fonts/ && echo Now open /examples/examples.html to see styleguide.",
     "lint": "lessc --lint examples/examples.less && stylelint less/*.less",
     "postpublish": "git tag ${npm_package_version} && git push --tags"
@@ -18,10 +19,10 @@
   "author": "SpareBank1",
   "license": "ISC",
   "peerDependencies": {
-    "ffe-core": "9.x"
+    "ffe-core": "^9.0.0 || ^10.0.0"
   },
   "devDependencies": {
-    "ffe-core": "9.x",
+    "ffe-core": "^10.0.0",
     "ffe-visual-tests-support": "^2.1.2",
     "less": "^2.6.1",
     "mkdirp": "^0.5.1",
