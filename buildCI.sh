@@ -14,7 +14,7 @@ main() {
 
     ./run_visual-tests.sh
 
-    cp -R examples target/archive
+    #cp -R examples target/archive
 }
 
 _move_gemini_files() {
