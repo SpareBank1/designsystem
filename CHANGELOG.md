@@ -3,6 +3,21 @@
 ## v.10.0.0
 
 - BREAKING: The new default for links is the underlined version. If you want links without underlines use the `--no-underline` modifier.
+- BREAKING: Element styling (via `ffe-element-styling.less` and `element-map.less`) is removed.
+
+Element styling has been deprecated for several majors, so hopefully this will not be a heavy upgrade for most
+applications. However, for those applications that still import and use these styles, the upgrade path consists of
+adding some classes in your DOM:
+
+- Add `ffe-body-text` class to `<body />` tag.
+- Add `ffe-h[1-6]` classes to `<h[1-6] />` tags
+- Add `ffe-body-paragraph` class to `<p />` tags
+- Add `ffe-strong-text` class to `<strong />` tags
+- Add `ffe-em-text` class to `<em />` tags
+- Add `ffe-pre-text` class to `<pre />` tags
+- Add `ffe-link-text` class to `<a />` tags
+- Add `ffe-divider-line` class to `<hr />` tags
+- Add `ffe-fieldset` class to `<fieldset />` tags
 
 ## v.9.3.0
 
