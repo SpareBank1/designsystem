@@ -1,9 +1,10 @@
 {
   "name": "ffe-context-message",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Messagebox showing non-critical tip or information about a page or product",
   "style": "less/ffe-context-message.less",
   "scripts": {
+    "compile": "lessc examples/examples.less examples/examples.css",
     "examples": "lessc examples/examples.less examples/examples.css && mkdirp examples/fonts && cp -r node_modules/ffe-core/fonts/* examples/fonts && echo Now open /examples/ffe-context-message.html to see styleguide",
     "lint": "lessc --lint examples/examples.less && stylelint less/*.less",
     "postpublish": "git tag ${npm_package_version} && git push --tags",
@@ -20,11 +21,11 @@
   },
   "author": "SpareBank 1",
   "peerDependencies": {
-    "ffe-core": "^9.2.0"
+    "ffe-core": "^9.2.0 || ^10.0.0"
   },
   "devDependencies": {
-    "ffe-core": "^9.2.0",
-    "ffe-visual-tests-support": "2.1.0",
+    "ffe-core": "^10.0.0",
+    "ffe-visual-tests-support": "2.1.2",
     "less": "2.7.2",
     "mkdirp": "0.5.1",
     "stylelint": "^7.9.0",
