@@ -3,3 +3,4 @@ node_modules/
 examples/fonts/
 examples/examples.css
 npm-debug.log*
+gemini-report/
