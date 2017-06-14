@@ -4,6 +4,7 @@
   "description": "Messagebox showing non-critical tip or information about a page or product",
   "style": "less/ffe-context-message.less",
   "scripts": {
+    "compile": "lessc examples/examples.less examples/examples.css",
     "examples": "lessc examples/examples.less examples/examples.css && mkdirp examples/fonts && cp -r node_modules/ffe-core/fonts/* examples/fonts && echo Now open /examples/ffe-context-message.html to see styleguide",
     "lint": "lessc --lint examples/examples.less && stylelint less/*.less",
     "postpublish": "git tag ${npm_package_version} && git push --tags",
