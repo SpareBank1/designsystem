@@ -4,6 +4,7 @@
   "description": "Meldingsboks",
   "main": "index.js",
   "scripts": {
+    "compile": "lessc examples/examples.less examples/examples.css",
     "examples": "lessc examples/examples.less examples/examples.css && mkdirp examples/fonts && cp -R node_modules/ffe-core/fonts/* examples/fonts/ && echo Now open /examples/examples.html to see styleguide.",
     "lint": "lessc --lint examples/examples.less && stylelint less/*.less",
     "postpublish": "git tag ${npm_package_version} && git push --tags"
