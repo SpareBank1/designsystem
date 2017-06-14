@@ -4,7 +4,8 @@
   "description": "SpareBank1 System Message",
   "main": "index.js",
   "scripts": {
-    "examples": "lessc examples/examples.less examples/examples.css && mkdirp examples/fonts && cp -r node_modules/ffe-core/fonts/* examples/fonts && echo Now open /examples/ffe-system-message.html to see styleguide",
+    "compile": "lessc examples/examples.less examples/examples.css",
+    "examples": "npm run examples && mkdirp examples/fonts && cp -r node_modules/ffe-core/fonts/* examples/fonts && echo Now open /examples/ffe-system-message.html to see styleguide",
     "lint": "lessc --lint examples/examples.less && stylelint less/*.less",
     "postpublish": "git tag ${npm_package_version} && git push --tags",
     "has-published": "npm show . versions -s | grep -q ${npm_package_version}",
