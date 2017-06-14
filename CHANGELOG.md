@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## Version 8.0.1
+* Support both versions 9 and 10 of `ffe-core`
+
 ## Version 8.0.0
 
 ### Breaking changes
