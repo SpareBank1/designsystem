@@ -1,10 +1,11 @@
 {
   "name": "ffe-system-message",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "SpareBank1 System Message",
   "main": "index.js",
   "scripts": {
-    "examples": "lessc examples/examples.less examples/examples.css && mkdirp examples/fonts && cp -r node_modules/ffe-core/fonts/* examples/fonts && echo Now open /examples/ffe-system-message.html to see styleguide",
+    "compile": "lessc examples/examples.less examples/examples.css",
+    "examples": "npm run compile && mkdirp examples/fonts && cp -r node_modules/ffe-core/fonts/* examples/fonts && echo Now open /examples/ffe-system-message.html to see styleguide",
     "lint": "lessc --lint examples/examples.less && stylelint less/*.less",
     "postpublish": "git tag ${npm_package_version} && git push --tags",
     "has-published": "npm show . versions -s | grep -q ${npm_package_version}",
@@ -20,13 +21,13 @@
   },
   "author": "SpareBank 1",
   "peerDependencies": {
-    "ffe-core": "^9.2.0"
+    "ffe-core": "^9.2.0 || ^10.0.0"
   },
   "devDependencies": {
-    "ffe-core": "^9.2.0",
-    "ffe-visual-tests-support": "2.0.0",
-    "gemini": "4.12.2",
-    "less": "2.7.1",
+    "ffe-core": "^10.0.0",
+    "ffe-visual-tests-support": "2.1.2",
+    "gemini": "4.19.3",
+    "less": "2.7.2",
     "mkdirp": "0.5.1",
     "stylelint": "^7.7.1",
     "stylelint-config-ffe": "^0.2.0"
