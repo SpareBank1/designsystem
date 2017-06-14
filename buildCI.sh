@@ -7,7 +7,7 @@ function should_publish() {
 main() {
     git clean -f -x -d
     npm install
-    npm run compile
+    npm run examples
 
     rm -rf target/
     mkdir -p target/archive
