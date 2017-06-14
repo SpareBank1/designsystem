@@ -1,5 +1,9 @@
 # Changelog
 
+## v.10.0.0
+
+- BREAKING: The new default for links is the underlined version. If you want links without underlines use the `--no-underline` modifier.
+
 ## v.9.3.0
 
 * Added cursor: pointer to `ffe-link-text`
