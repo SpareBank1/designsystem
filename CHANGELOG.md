@@ -1,5 +1,8 @@
 # Changelog
 
+## v.5.0.1
+* Support both versions 9 and 10 of `ffe-core`
+
 ## v.5.0.0
 
 ### Breaking changes
