@@ -3,6 +3,25 @@ import { func, string, bool, number } from 'prop-types';
 import KryssIkon from 'ffe-icons-react/kryss-ikon';
 
 class Input extends Component {
+
+  constructor(props) {
+    super(props);
+
+    /*
+     IE11 can drop characters when typing fast.
+     This is a known issue with React 15 and IE11 and will be fixed in React 16
+     See bugreport: https://github.com/facebook/react/issues/7027
+     As discussed in the React bugreport, a workaround for this is to use "onInput" instead of "onChange" in IE11.
+     In order to achieve this we use a very dirty, but workable, browser testing regex:
+     https://github.com/faisalman/ua-parser-js/blob/master/src/ua-parser.js#L261
+     */
+    this.isIE11 = window.navigator.userAgent.match(/(trident).+rv[:\s]([\w.]+).+like\sgecko/i) !== null;
+  }
+
+  onChangeHandler(handler) {
+    return this.isIE11 ? { onInput: handler }: { onChange: handler };
+  }
+
   render() {
     const {
       onFocus,
@@ -30,9 +49,6 @@ class Input extends Component {
         aria-owns={suggestionListId}
       >
         <input
-          onChange={ (e) => {
-            onChange(e.target.value);
-          }}
           className='ffe-input-field ffe-dropdown ffe-base-selector__input-field'
           onKeyDown={ onKeyDown }
           autoComplete='off'
@@ -43,6 +59,7 @@ class Input extends Component {
           aria-invalid={ ariaInvalid }
           aria-autocomplete='list'
           name={ name }
+          {...this.onChangeHandler((e) => onChange(e.target.value))}
         />
         { value.length > 0 &&
         <button
