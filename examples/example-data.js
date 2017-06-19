@@ -48,58 +48,16 @@ export const accounts = [
     accountNumber: '42000619307',
     balance: 9999997643.50,
   },
-];
-
-export const accountGroups = [
   {
-    name: 'Lønnskontoer',
-    id: 1,
+    id: 9,
+    name: 'Apple Inc 1',
+    accountNumber: '42000619307',
+    balance: 9999997643.50,
   },
   {
-    name: 'Skattekontoer',
-    id: 2
+    id: 10,
+    name: 'Apple Inc 2',
+    accountNumber: '42000619307',
+    balance: 9999997643.50,
   },
-  {
-    name: 'Saft og limonadekontoer',
-    id: 3
-  },
-  {
-    name: 'Utleggskontoer',
-    id: 4
-  },
-  {
-    name: 'Bestikkelserkontoer',
-    id: 5
-  },
-  {
-    name: 'Korrupsjonskontoer',
-    id: 6
-  },
-  {
-    name: 'Bonuskontoer',
-    id: 7
-  }
-];
-
-export const people = [
-  {
-    name: 'Inge Flønæs Saga Johnsen',
-    age: '34',
-    id: 1
-  },
-  {
-    name: 'Lasse Guttormsen',
-    age: '32',
-    id: 2
-  },
-  {
-    name: 'Jørgen Tu Sveli',
-    age: '29',
-    id: 3
-  },
-  {
-    name: 'Terje Røstum',
-    age: '34',
-    id: 4
-  }
 ];
