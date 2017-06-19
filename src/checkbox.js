@@ -20,8 +20,8 @@ export default function CheckBox(props) {
                 className="ffe-hidden-checkbox"
                 id={id}
                 type="checkbox"
-                {...rest}
                 aria-invalid={String(!!invalid)}
+                {...rest}
             />
             <label
                 className={classNames({
