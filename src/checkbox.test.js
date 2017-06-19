@@ -75,6 +75,28 @@ describe('<Checkbox />', () => {
         assert.equal(shallow(CreateCheckbox({ invalid: true })).find('input').prop('aria-invalid'), 'true');
     });
 
+    it('setting "aria-invalid" should override "invalid"', () => {
+        assert.equal(
+            shallow(CreateCheckbox({ invalid: true, 'aria-invalid': 'false' })).find('input').prop('aria-invalid'),
+            'false'
+        );
+
+        assert.equal(
+            shallow(CreateCheckbox({ invalid: false, 'aria-invalid': 'true' })).find('input').prop('aria-invalid'),
+            'true'
+        );
+
+        assert.equal(
+            shallow(CreateCheckbox({ invalid: false, 'aria-invalid': 'spelling' })).find('input').prop('aria-invalid'),
+            'spelling'
+        );
+
+        assert.equal(
+            shallow(CreateCheckbox({ invalid: false, 'aria-invalid': 'grammar' })).find('input').prop('aria-invalid'),
+            'grammar'
+        );
+    });
+
     it('should set arbitrary props (rest) on input', () => {
         const wrapper = shallow(CreateCheckbox({
             name: 'checkbox',
