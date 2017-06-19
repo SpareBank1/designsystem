@@ -73,11 +73,11 @@ describe('accountFilter', () => {
     assert.deepEqual(accounts.filter(accountFilter('xxx')), []);
   });
 
-  it('should create account filter when no account', () => {
-    assert.equal(createAccountFilter().name, 'accountFilter');
+  it('should enable account filter', () => {
+    assert.equal(createAccountFilter(true).name, 'accountFilter');
   });
 
-  it('should create no filter when account', ()=>{
-    assert.equal(createAccountFilter({}).name, 'noFilter');
+  it('should disable account filter', () => {
+    assert.equal(createAccountFilter(false).name, 'noFilter');
   });
 });
