@@ -1,7 +1,7 @@
 /* eslint-env mocha */
 
 import { assert } from 'chai';
-import { accountFilter } from './filters';
+import { accountFilter, createAccountFilter } from './filters';
 
 describe('accountFilter', () => {
   const accounts = [
@@ -71,5 +71,13 @@ describe('accountFilter', () => {
 
   it('should return empty array when no match', () => {
     assert.deepEqual(accounts.filter(accountFilter('xxx')), []);
+  });
+
+  it('should create account filter when no account', () => {
+    assert.equal(createAccountFilter().name, 'accountFilter');
+  });
+
+  it('should create no filter when account', ()=>{
+    assert.equal(createAccountFilter({}).name, 'noFilter');
   });
 });

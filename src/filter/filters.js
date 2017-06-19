@@ -12,10 +12,10 @@ export function accountFilter(query = '') {
   };
 }
 
-export function nameFilter(query = '') {
-  const nameQuery = query.toLowerCase();
+function noFilter() {
+  return () => () => true;
+}
 
-  return (item) => {
-    return item.name.toLowerCase().indexOf(nameQuery) !== -1;
-  };
+export function createAccountFilter(account){
+  return account ? noFilter : accountFilter;
 }

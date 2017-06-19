@@ -1,8 +1,10 @@
 # Changelog
 
+# v7.4.0
+* Disable account filtering when an account is selected
+
 # v7.3.1
 * Add workaround for IE11 and fast typing, which can cause characters to drop. Bugreport for issue, https://github.com/facebook/react/issues/7027, suggests this will be fixed in React 16. 
-
 
 # v7.3.0
 * Changed dependency version for ffe-checkbox-react 
