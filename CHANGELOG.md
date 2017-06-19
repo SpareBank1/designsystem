@@ -1,5 +1,8 @@
 # Changelog
 
+## 4.4.0
+* Support `aria-invalid` as a prop in addition to `invalid`.
+
 ## 4.3.0
 * Increased version range for ffe-form to 6.x
 
