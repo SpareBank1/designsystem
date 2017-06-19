@@ -1,5 +1,9 @@
 # Changelog
 
+## 7.9.0
+
+* Added taleassistent-ikon.svg
+
 ## 7.8.0
 
 * Added bankid- and varsel-ikon.svg
