@@ -63,7 +63,8 @@ class DatepickerExample extends React.Component {
             language="nb"
             minDate="01.01.2016"
             maxDate="31.12.2018"
-            inputProps={ { className: 'customClass', id: 'custom-input-id' } }
+            inputProps={ { className: 'customClass' } }
+            label={ 'Label not attached to input.' }
           />
         </div>
 
@@ -74,10 +75,8 @@ class DatepickerExample extends React.Component {
             language="en"
             minDate="01.01.2016"
             maxDate="31.12.2018"
-            inputProps={ { className: 'customClass' } }
-            label={ {
-              labelText: 'A really long label. Longer than the input field, in fact.',
-              id: 'unique-input-id' } }
+            inputProps={ { className: 'customClass', id: 'unique-id' } }
+            label={ 'A long label which is attached to the input' }
             ariaInvalid={ false }
             calendarAbove={ true }
           />
