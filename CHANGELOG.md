@@ -1,5 +1,8 @@
 # Changelog
 
+# v7.4.1
+* Enable account filtering on user input
+
 # v7.4.0
 * Disable account filtering when an account is selected
 

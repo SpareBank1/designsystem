@@ -16,6 +16,6 @@ function noFilter() {
   return () => () => true;
 }
 
-export function createAccountFilter(account){
-  return account ? noFilter : accountFilter;
+export function createAccountFilter(enableFilter) {
+  return enableFilter ? accountFilter : noFilter;
 }
