@@ -1,4 +1,7 @@
 # Changelog
+## v2.4.1
+
+* Add optional label to input field
 
 ## v2.4.0
 

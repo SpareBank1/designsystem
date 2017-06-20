@@ -213,6 +213,11 @@ export default class FFEDatepicker extends React.Component {
         tabIndex={ -1 }
         role="button"
       >
+        {inputProps.label &&
+        <label className="ffe-form-label ffe-form-label--block" htmlFor={inputProps.id}>
+          {inputProps.label}
+        </label>
+        }
         <DateInput
           onFocus={ this.onInputFocus }
           onBlur={ this.onInputBlur }
