@@ -207,12 +207,12 @@ export default class FFEDatepicker extends React.Component {
     );
     return (
       <div>
-        { inputProps && inputProps.label &&
+        { this.props.label &&
         <label
           className="ffe-form-label ffe-form-label--block"
-          htmlFor={ inputProps.id }
+          htmlFor={ this.props.label.id }
         >
-          { inputProps.label }
+          { this.props.label.labelText }
         </label>
         }
         <div
@@ -223,6 +223,7 @@ export default class FFEDatepicker extends React.Component {
           role="button"
         >
           <DateInput
+            id={this.props.label ? this.props.label.id : undefined}
             onFocus={ this.onInputFocus }
             onBlur={ this.onInputBlur }
             onChange={ (evt) => this.props.onChange(evt.target.value) }
@@ -263,6 +264,10 @@ export default class FFEDatepicker extends React.Component {
 }
 
 FFEDatepicker.propTypes = {
+  label: PropTypes.shape({
+    labelText : PropTypes.string.isRequired,
+    id        : PropTypes.string.isRequired
+  }),
   value: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
   language: PropTypes.string.isRequired,

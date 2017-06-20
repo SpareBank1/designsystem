@@ -18,6 +18,7 @@ export default class FFEDateInput extends React.Component {
     return (
       <div className="ffe-dateinput">
         <input
+          id={this.props.id}
           type="text"
           maxLength="10"
           value={ this.props.value }
@@ -37,6 +38,7 @@ export default class FFEDateInput extends React.Component {
 }
 
 FFEDateInput.propTypes = {
+  id: PropTypes.string,
   onFocus: PropTypes.func,
   onBlur: PropTypes.func,
   onChange: PropTypes.func.isRequired,
