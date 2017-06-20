@@ -30,7 +30,7 @@ describe('<FFEDatepicker />', () => {
     });
 
     it('renders a wrapper for the datepicker components', () =>
-      expect(wrapper).to.have.className('ffe-datepicker'));
+      expect(wrapper).to.have.descendants('.ffe-datepicker'));
 
     it('contains a single DateInput component', () =>
       expect(wrapper).to.have.exactly(1).descendants(DateInput));
