@@ -1,5 +1,9 @@
 # Changelog
 
+## 7.9.1
+
+* Remove class property from taleassistent-ikon, that broke usage with ffe-icons-react
+
 ## 7.9.0
 
 * Added taleassistent-ikon.svg
