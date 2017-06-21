@@ -22,6 +22,7 @@ export default function Form() {
     <Datepicker
         value={ this.state.date }
         onChange={ this.onChange }
+        label={ 'A label' }
         language="nb"
         minDate="01.01.2016"
         maxDate="31.12.2016"
@@ -35,6 +36,7 @@ export default function Form() {
 * onChange: will be called with the new date string, picked from the calendar. format: dd.mm.yyyy
 * inputProps: props to set on the input field.
 * ariaInvalid: signifies validation errors.
+* label: Optional. Adds a lable formated by .ffe-form-label
 
 ### <DateInput />
 Use only the input field
