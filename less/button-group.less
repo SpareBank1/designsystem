@@ -14,6 +14,23 @@
         padding: 0;
     }
 
+    &--inline {
+        .ffe-action-button,
+        .ffe-primary-button,
+        .ffe-secondary-button,
+        .ffe-shortcut-button,
+        .ffe-tertiary-button,
+        .ffe-tab-button {
+            display: inline;
+            margin: 0 0 10px 10px;
+            width: auto;
+
+            &:first-child {
+                margin: 0 0 10px;
+            }
+        }
+    }
+
     @media screen and (min-width: @breakpoint-sm) {
         .ffe-action-button,
         .ffe-primary-button,
