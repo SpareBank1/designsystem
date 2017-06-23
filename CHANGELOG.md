@@ -1,5 +1,9 @@
 # Changelog
 
+## v4.1.0
+* Add `--inline` modifier to ffe-button-group. When using this modifier, the buttons in the modified button group will not have width 100% on small screens,
+and will be displayed on the same line as long as there is enough horizontal space.
+
 ## v4.0.4
 * Support both versions 9 and 10 of `ffe-core`
 
