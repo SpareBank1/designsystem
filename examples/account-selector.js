@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {accounts as accountArray} from './example-data';
 import AccountSelector from '../src/selectors/account-selector';
+import { Account } from '../src/util/types';
 
 class AccountSelectorExample extends Component {
   constructor(props) {
@@ -9,7 +10,10 @@ class AccountSelectorExample extends Component {
     this.onBlur = this.onBlur.bind(this);
     this.onReset = this.onReset.bind(this);
     this.onAccountSelected = this.onAccountSelected.bind(this);
-    this.state = {value: ''};
+    this.state = {
+      selectedAccount: props.selectedAccount,
+      value: props.selectedAccount ? props.selectedAccount.name : ''
+    };
   }
 
   onChange(value) {
@@ -61,4 +65,9 @@ class AccountSelectorExample extends Component {
     );
   }
 }
+
+AccountSelectorExample.propTypes = {
+  selectedAccount: Account
+};
+
 export default AccountSelectorExample;
