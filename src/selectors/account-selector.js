@@ -17,8 +17,7 @@ class AccountSelector extends Component {
     this.onAccountSelect = this.onAccountSelect.bind(this);
     this.onInputChange = this.onInputChange.bind(this);
 
-    // Filter disabled if initialized with selectedAccount
-    this.enableFilter = !props.selectedAccount;
+    this.enableFilter = false;
   }
 
   renderSuggestion(account) {
