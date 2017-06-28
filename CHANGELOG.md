@@ -1,5 +1,8 @@
 # Changelog
 
+# v7.4.2
+* Default account filtering to false to fix behaviour when initializing with preselected account
+
 # v7.4.1
 * Enable account filtering on user input
 
