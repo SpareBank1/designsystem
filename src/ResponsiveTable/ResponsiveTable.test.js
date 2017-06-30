@@ -40,6 +40,12 @@ describe('<ResponsiveTable />', () => {
       expect(wrapper.hasClass('ffe-responsive-table')).to.equal(true);
       expect(wrapper.hasClass('ffe-responsive-table--condensed')).to.equal(true);
     });
+
+    it('can be left aligned', () => {
+      const wrapper = shallow(<ResponsiveTable alignLeft={true} columns={columns} data={data}/>);
+      expect(wrapper.hasClass('ffe-responsive-table')).to.equal(true);
+      expect(wrapper.hasClass('ffe-responsive-table--text-left')).to.equal(true);
+    });
   });
 
   describe('table caption', () => {

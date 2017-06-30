@@ -56,6 +56,13 @@ render(
                 <h2 className="ffe-h2">Responsive table</h2>
                 <ResponsiveTable columns={SIMPLE_TABLE.columns} data={SIMPLE_TABLE.dataObject}/>
 
+                <h2 className="ffe-h2">Responsive table without left padding on first column's content</h2>
+                <ResponsiveTable
+                    columns={SIMPLE_TABLE.columns}
+                    data={SIMPLE_TABLE.dataObject}
+                    alignLeft={true}
+                />
+
                 <h2 className="ffe-h2">Responsive table with columns hidden on tablet</h2>
                 <ResponsiveTable columns={SIMPLE_TABLE_HIDE_ON_TABLET.columns} data={SIMPLE_TABLE_HIDE_ON_TABLET.dataObject}/>
 

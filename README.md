@@ -136,6 +136,7 @@ The output of this function will be the contents of the expanded area of an expa
 - `limit` and `offset` limit the number of table rows rendered. Behaves like `LIMIT` and `OFFSET` in SQL-queries and works well with the `sortable`-flag. Useful for pagination.
 - `smallHeader` adds the `--small-header`-modifier to the table for reduced header width
 on tables when screen width < 768px (`@breakpoint-md`).
+- `alignLeft` adds the `--text-left`-modifier to the table for skipping left padding on content in the first column
 ```javascript
 const expandedContentMapper = row => row.address && <span>Adresse: { row.address }</span>;
 

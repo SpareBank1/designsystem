@@ -1,5 +1,9 @@
 # Changelog
 
+## v4.4.0
+
+* Added optional boolean prop `alignLeft` to support table modifier `--text-left` from `ffe-tables`.
+
 ## v4.3.0
 
 * Added `hideOnTablet` boolean to support hiding columns responsively on tablet screen sizes.
