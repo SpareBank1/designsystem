@@ -1,5 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import sinon from 'sinon';
 
 import { GridCol } from '..';
 
@@ -14,6 +15,7 @@ describe('GridCol', () => {
         const el = renderShallow();
 
         expect(el.prop('className')).to.be('ffe-grid__col');
+        expect(el.type()).to.be('div');
     });
 
     it('renders with custom class', () => {
@@ -120,5 +122,20 @@ describe('GridCol', () => {
         expect(el.hasClass('ffe-grid__col--between')).to.be(true);
         expect(el.hasClass('ffe-grid__col--vertical')).to.be(true);
         expect(el.hasClass('ffe-grid__col--reverse')).to.be(true);
+    });
+
+    it('preserves other attributes that are passed to it', () => {
+        const handler = sinon.spy();
+        const el = renderShallow({ onClick: handler });
+
+        el.simulate('click');
+
+        expect(handler.calledOnce).to.be(true);
+    });
+
+    it('can render a custom root element', () => {
+        const el = renderShallow({ element: 'section' });
+
+        expect(el.type()).to.be('section');
     });
 });

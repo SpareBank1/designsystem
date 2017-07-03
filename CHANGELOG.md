@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## Version 4.1.0
+
+### New features
+* `Grid`, `GridRow` and `GridCol` accepts new prop `element` (default: _div_) which can be used to render a different
+element (e.g. a _section_, _header_, etc).
+* `Grid`, `GridRow` and `GridCol` will pass any props it doesn't know what to do with (such as _onClick_, _style_, etc) on to its root element.
+
+### Other
+* Dependency on `PropTypes` from the `react` package removed in favor for direct imports from the `prop-types` package.
+
 ## Version 4.0.0
 
 ### Breaking changes
