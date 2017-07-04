@@ -1,15 +1,27 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import { bool, node, string } from 'prop-types';
 import classNames from 'classnames';
 
-export default function GridRow({ bgBlueCobalt, bgBluePale, bgSand, className, children, reverse, topPadding }) {
+export default function GridRow({
+    bgBlueCobalt,
+    bgBluePale,
+    bgSand,
+    className,
+    children,
+    element,
+    reverse,
+    topPadding,
+    ...rest
+}) {
     let content = children;
-
     if (bgBluePale || bgBlueCobalt || bgSand) {
         content = <div className="ffe-grid__row-wrapper">{children}</div>;
     }
 
+    const Element = element || 'div';
+
     return (
-        <div
+        <Element
             className={
                 classNames(
                     className,
@@ -21,18 +33,20 @@ export default function GridRow({ bgBlueCobalt, bgBluePale, bgSand, className, c
                     { 'ffe-grid__row--top-padding': topPadding },
                 )
             }
+            {...rest}
         >
             {content}
-        </div>
+        </Element>
     );
 }
 
 GridRow.propTypes = {
-    bgBlueCobalt: PropTypes.bool,
-    bgBluePale: PropTypes.bool,
-    bgSand: PropTypes.bool,
-    className: PropTypes.string,
-    children: PropTypes.node.isRequired,
-    reverse: PropTypes.bool,
-    topPadding: PropTypes.bool,
+    bgBlueCobalt: bool,
+    bgBluePale: bool,
+    bgSand: bool,
+    className: string,
+    children: node.isRequired,
+    element: string,
+    reverse: bool,
+    topPadding: bool,
 };

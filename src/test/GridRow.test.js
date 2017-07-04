@@ -1,5 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import sinon from 'sinon';
 
 import { GridRow, GridCol } from '..';
 
@@ -10,10 +11,11 @@ const defaultProps = {
 const renderShallow = (props = {}) => shallow(<GridRow {...defaultProps} {...props} />);
 
 describe('GridRow', () => {
-    it('renders with default class', () => {
+    it('renders with default class and element', () => {
         const el = renderShallow();
 
         expect(el.prop('className')).to.be('ffe-grid__row');
+        expect(el.type()).to.be('div');
     });
 
     it('renders with custom class', () => {
@@ -69,5 +71,20 @@ describe('GridRow', () => {
 
         expect(el.hasClass('ffe-grid__row')).to.be(true);
         expect(el.hasClass('ffe-grid__row--top-padding')).to.be(true);
+    });
+
+    it('preserves other attributes that are passed to it', () => {
+        const handler = sinon.spy();
+        const el = renderShallow({ onClick: handler });
+
+        el.simulate('click');
+
+        expect(handler.calledOnce).to.be(true);
+    });
+
+    it('can render a custom root element', () => {
+        const el = renderShallow({ element: 'section' });
+
+        expect(el.type()).to.be('section');
     });
 });

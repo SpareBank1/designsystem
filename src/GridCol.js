@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import { bool, number, oneOfType, shape, string } from 'prop-types';
 import classNames from 'classnames';
 
 function camelCaseToDashCase(str) {
@@ -52,9 +53,11 @@ export default function GridCol(props) {
     const {
         children,
         className,
+        element,
         lg,
         md,
         sm,
+        ...rest
     } = props;
 
     const classes = [
@@ -66,26 +69,28 @@ export default function GridCol(props) {
         modifiers(props),
     ].filter(x => x).join(' ');
 
+    const Element = element || 'div';
+
     return (
-        <div className={classes}>
+        <Element className={classes} {...rest}>
             {children}
-        </div>
+        </Element>
     );
 }
 
 GridCol.propTypes = {
-    className: PropTypes.string,
+    className: string,
     ...MODIFIER_LIST.reduce((props, mod) => ({
         ...props,
-        [mod]: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
+        [mod]: oneOfType([bool, string]),
     }), {}),
     ...SIZE_LIST.reduce((props, size) => ({
         ...props,
-        [size]: PropTypes.oneOfType([
-            PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-            PropTypes.shape({
-                cols: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-                offset: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+        [size]: oneOfType([
+            oneOfType([number, string]),
+            shape({
+                cols: oneOfType([number, string]),
+                offset: oneOfType([number, string]),
             }),
         ]),
     }), {}),
