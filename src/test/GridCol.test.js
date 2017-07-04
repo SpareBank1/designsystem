@@ -138,4 +138,11 @@ describe('GridCol', () => {
 
         expect(el.type()).to.be('section');
     });
+
+    it('does not pass on known properties to its root element', () => {
+        const el = renderShallow({ center: true, reverse: true });
+
+        expect(el.props().center).to.be(undefined);
+        expect(el.props().reverse).to.be(undefined);
+    });
 });

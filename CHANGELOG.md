@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version 4.1.1
+
+### Bugfix
+* `GridCol` does not pass on properties it uses itself (like `end`, `middle`, etc) to its root element
+
 ## Version 4.1.0
 
 ### New features
