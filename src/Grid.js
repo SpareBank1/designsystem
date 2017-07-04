@@ -1,9 +1,11 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import classNames from 'classnames';
+import { bool, node, string } from 'prop-types';
 
-export default function Grid({ children, className, noTopPadding }) {
+export default function Grid({ children, className, element, noTopPadding, ...rest }) {
+    const Element = element || 'div';
     return (
-        <div
+        <Element
             className={
                 classNames(
                     className,
@@ -11,14 +13,16 @@ export default function Grid({ children, className, noTopPadding }) {
                     { 'ffe-grid--no-top-padding': noTopPadding },
                 )
             }
+            {...rest}
         >
             {children}
-        </div>
+        </Element>
     );
 }
 
 Grid.propTypes = {
-    children: PropTypes.node.isRequired,
-    className: PropTypes.string,
-    noTopPadding: PropTypes.bool,
+    children: node.isRequired,
+    className: string,
+    element: string,
+    noTopPadding: bool,
 };

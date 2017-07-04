@@ -44,7 +44,7 @@ To set the number of cols and offset for `lg`, `md` or `sm` displays use the obj
 
 All the components aim to support the same modifiers that can be found in [ffe-grid](https://bitbucket.intern.sparebank1.no/projects/FFE/repos/ffe-grid/browse). Modifiers that are snake-cased in `ffe-grid` is supplied with camelCase to the react-components.
 
-All components support the 'className' property.
+All components support the 'className' property and can accept a custom element name via the 'element' property if something other than a _div_ should be used.
 
 ## Grid overlay
 
