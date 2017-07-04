@@ -60,6 +60,12 @@ export default function GridCol(props) {
         ...rest
     } = props;
 
+    Object.keys(rest).forEach(key => {
+        if (MODIFIER_LIST.includes(key)) {
+            delete rest[key];
+        }
+    });
+
     const classes = [
         className,
         'ffe-grid__col',
