@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.0.2
+
+- Bugfix: Include correct files in NPM package.
+
 ## v2.0.1
 
 - Bugfix: Fix broken export of `formatFodselsnummer` from the main index file.
