@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import { func, string, bool, number } from 'prop-types';
 import KryssIkon from 'ffe-icons-react/kryss-ikon';
 
@@ -6,6 +7,7 @@ class Input extends Component {
 
   constructor(props) {
     super(props);
+    this.onChange = this.onChange.bind(this);
 
     /*
      IE11 can drop characters when typing fast.
@@ -16,16 +18,34 @@ class Input extends Component {
      https://github.com/faisalman/ua-parser-js/blob/master/src/ua-parser.js#L261
      */
     this.isIE11 = window.navigator.userAgent.match(/(trident).+rv[:\s]([\w.]+).+like\sgecko/i) !== null;
+    this.state = {
+      value : props.value,
+    }
   }
 
   onChangeHandler(handler) {
     return this.isIE11 ? { onInput: handler }: { onChange: handler };
   }
 
+  onChange(e){
+    const value = e.target.value;
+    ReactDOM.unstable_batchedUpdates(() => {
+      this.setState({ value });
+      this.props.onChange(value);
+    });
+  }
+
+  componentWillReceiveProps(nextProps){
+    if(this.state.value !== nextProps.value){
+      this.setState({
+        value : nextProps.value,
+      });
+    }
+  }
+
   render() {
     const {
       onFocus,
-      onChange,
       onKeyDown,
       value,
       id,
@@ -52,14 +72,14 @@ class Input extends Component {
           className='ffe-input-field ffe-dropdown ffe-base-selector__input-field'
           onKeyDown={ onKeyDown }
           autoComplete='off'
-          value={ value }
+          value={ this.state.value }
           id={ id }
           placeholder={ placeholder }
           ref={inputFieldRef}
           aria-invalid={ ariaInvalid }
           aria-autocomplete='list'
           name={ name }
-          {...this.onChangeHandler((e) => onChange(e.target.value))}
+          {...this.onChangeHandler(this.onChange)}
         />
         { value.length > 0 &&
         <button

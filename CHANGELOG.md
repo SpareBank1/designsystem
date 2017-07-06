@@ -1,5 +1,9 @@
 # Changelog
 
+# v7.4.3
+* Bugfix: Cursor no longer jumps to the end on input. Used solution proposed here: https://github.com/facebook/react/issues/955.
+
+
 # v7.4.2
 * Default account filtering to false to fix behaviour when initializing with preselected account
 
