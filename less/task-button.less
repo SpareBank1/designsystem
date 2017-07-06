@@ -1,0 +1,60 @@
+.ffe-task-button {
+    background-color: @ffe-white;
+    border: none;
+    color: @ffe-blue-azure;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 18px;
+    outline: none;
+    padding: 2px;
+    text-align: left;
+    text-decoration: none;
+    transition: all 0.2s;
+    vertical-align: middle;
+    width: auto;
+
+    &:active,
+    &:focus,
+    &:hover {
+        color: @ffe-blue-cobalt;
+    }
+
+    &:hover .ffe-task-button__label-icon {
+        border-color: @ffe-blue-cobalt;
+        .ffe-buttons-shadow-hover();
+    }
+
+    &:active .ffe-task-button__label-icon {
+        border-color: @ffe-blue-cobalt;
+        .ffe-buttons-shadow-active();
+    }
+
+    &:focus .ffe-task-button__label-icon {
+        border-color: @ffe-blue-cobalt;
+        box-shadow: 0 0 0 2px @ffe-blue-focus;
+    }
+}
+
+.ffe-task-button__label-text {
+    align-items: center;
+    display: flex;
+
+    &--loading {
+        display: none;
+    }
+}
+
+.ffe-task-button__label-spinner {
+    display: none;
+}
+
+.ffe-task-button__label-icon {
+    border: 2px solid @ffe-grey-silver;
+    border-radius: 50%;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    fill: @ffe-blue-azure;
+    height: 45px;
+    padding: 13px;
+    margin-right: 5px;
+    width: 45px;
+}
