@@ -1,6 +1,6 @@
 {
   "name": "ffe-account-selector-react",
-  "version": "7.4.2",
+  "version": "7.4.3",
   "main": "lib/index.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/.",
