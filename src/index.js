@@ -23,7 +23,7 @@ ResponsiveTable.propTypes = {
     ),
     columns: PropTypes.arrayOf(
         PropTypes.shape({
-            header: PropTypes.string.isRequired,
+            header: PropTypes.node.isRequired,
             key: PropTypes.string.isRequired,
         }).isRequired
     ),

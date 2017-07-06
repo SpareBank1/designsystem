@@ -1,5 +1,9 @@
 # Changelog
 
+## v4.4.1
+
+* Allow sending in React components instead of strings as headings
+
 ## v4.4.0
 
 * Added optional boolean prop `alignLeft` to support table modifier `--text-left` from `ffe-tables`.
