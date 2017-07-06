@@ -1,5 +1,8 @@
 # Changelog
 
+## v4.2.0
+* Add `ffe-task-button` as a new button type. Should be used for any action where the user is adding a new item to some kind of collection. It's not opinionated about what icon to use, but was designed with `pluss-ikon` from `ffe-icons` in mind.
+
 ## v4.1.0
 * Add `--inline` modifier to ffe-button-group. When using this modifier, the buttons in the modified button group will not have width 100% on small screens,
 and will be displayed on the same line as long as there is enough horizontal space.
