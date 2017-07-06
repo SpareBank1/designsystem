@@ -158,13 +158,13 @@ class BaseSelector extends Component {
         this.onInputReset();
         break;
       case KeyCodes.HOME:
-        if (showSuggestions) {
+        if (showSuggestions && this.filterSuggestions().length !== 0) {
           this.setFirstHighlighted();
           event.preventDefault();
         }
         break;
       case KeyCodes.END:
-        if (showSuggestions) {
+        if (showSuggestions && this.filterSuggestions().length !== 0) {
           this.setLastHighlighted();
           event.preventDefault();
         }
