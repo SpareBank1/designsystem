@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## Version 8.1.0
+* Add support for `--no-top-padding` on `.ffe-details-list__details-row`
+
 ## Version 8.0.1
 * Support both versions 9 and 10 of `ffe-core`
 
