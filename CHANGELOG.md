@@ -1,5 +1,14 @@
 # Changelog
 
+## v.6.0.0
+
+* BREAKING: Refactored styling for small screens
+	* Removed the `--vertical` modifier - vertical view is now default on small screens
+	* Added `--columns-sm` modifier to preserve the column layout which was previously default on small screens
+* Fixed text color for table headers displayed as pseudo elements
+* Added `--hide-sm` modifier to support hiding columns on small screens
+* Added margin-bottom to `.ffe-responsive-table__content` on small screens to separate cells more clearly
+
 ## v.5.2.1
 
 * Support both versions 9 and 10 of `ffe-core`
