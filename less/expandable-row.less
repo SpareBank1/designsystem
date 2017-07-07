@@ -15,6 +15,12 @@
         &--expanded:not(:last-child) {
             border-color: @ffe-blue-pale;
         }
+
+        .ffe-responsive-table__content {
+            @media screen and (max-width: @breakpoint-sm) {
+                margin-bottom: 0;
+            }
+        }
     }
 
     &__row-expandable-content {
