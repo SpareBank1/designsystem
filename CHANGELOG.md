@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## Version 2.0.4
+* Set width explicitly to 100% otherwise the box won't take all its space if it's within a container with `display: flex;`
+
 ## Version 2.0.3
 * Support both versions 9 and 10 of `ffe-core`
 
