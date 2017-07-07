@@ -145,4 +145,18 @@ describe('GridCol', () => {
         expect(el.props().center).to.be(undefined);
         expect(el.props().reverse).to.be(undefined);
     });
+
+    it('can render with offset 0 and columns 0', () => {
+        const el = renderShallow({ md: { cols: 0, offset: 0 }});
+
+        expect(el.hasClass('ffe-grid__col--md-offset-0')).to.be(true);
+        expect(el.hasClass('ffe-grid__col--md-0')).to.be(true);
+    });
+
+    it('can render with offset 1 and columns 1', () => {
+        const el = renderShallow({ md: { cols: 1, offset: 1 }});
+
+        expect(el.hasClass('ffe-grid__col--md-offset-1')).to.be(true);
+        expect(el.hasClass('ffe-grid__col--md-1')).to.be(true);
+    });
 });

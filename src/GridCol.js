@@ -37,8 +37,8 @@ const sizeClasses = (size, def) => {
         case 'undefined': return '';
         case 'object':
             return classNames({
-                [`ffe-grid__col--${size}-${def.cols}`]: def.cols,
-                [`ffe-grid__col--${size}-offset-${def.offset}`]: def.offset,
+                [`ffe-grid__col--${size}-${def.cols}`]: def.cols || def.cols === 0,
+                [`ffe-grid__col--${size}-offset-${def.offset}`]: def.offset || def.offset === 0,
             });
         default: return `ffe-grid__col--${size}-${def}`;
     }
