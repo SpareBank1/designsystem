@@ -9,6 +9,7 @@ Pakken inneholder stylingen for de ulike knappene som er i FFE. Generelt, om en 
 * ffe-shortcut-button
 * ffe-tertiary-button
 * ffe-back-button
+* ffe-task-button
 
 ## Bruk
 
