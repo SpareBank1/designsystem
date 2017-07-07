@@ -2,6 +2,7 @@
 <html>
     <head lang="en">
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
         <title>ffe-form</title>
         <link href="examples.css" rel="stylesheet" type="text/css">
     </head>
@@ -16,7 +17,7 @@
         <div id="ffedoc">
             <div class="ffe-section-wrapper">
                 <div class="ffe-content-container ffe-content-container--text-left">
-
+                    <h2 class="ffe-h2">Standard input</h2>
                     <p class="ffe-body-paragraph visual-test-hidden">
                         Default tar input hele bredden av containeren den ligger i og vises som et block-element.
                     </p>
@@ -37,7 +38,7 @@
                 </div>
 
                 <div class="ffe-content-container ffe-content-container--text-left">
-
+                    <h2 class="ffe-h2">Inline input</h2>
                     <p class="ffe-body-paragraph visual-test-hidden">
                         Input kan også settes til å være<br />
                         <em>--inline</em><br />
@@ -55,6 +56,31 @@
                             type="text"
                             maxlength="11"
                         >
+                    </div>
+                </div>
+
+                <div class="ffe-content-container ffe-content-container--text-left">
+                    <h2 class="ffe-h2">Input innbakt i tekst</h2>
+                    <p class="ffe-body-paragraph visual-test-hidden">
+                        Dersom input brukes som en del av en tekst brukes en variant uten borders<br />
+                        <em>--text-like</em><br />
+                        Merk at siden layout overlates til applikasjonen har ikke dette feltet noen definert
+                        bredde, dette må derfor styres av konsumenten.
+                    </p>
+
+                    <div class="ffe-input-group">
+                        <label class="ffe-form-label" for="age">
+                            Jeg er
+                        </label>
+                        <input
+                            type="tel"
+                            maxlength="2"
+                            name="age"
+                            value="43"
+                            class="ffe-input-field ffe-input-field--text-like ffe-input-field--inline"
+                            style="width: 50px;"
+                        >
+                        <span class="ffe-form-label">år</span>
                     </div>
                 </div>
 
