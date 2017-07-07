@@ -26,4 +26,22 @@
         display: inline-block;
         width: auto;
     }
+
+    &--text-like {
+        background-color: @ffe-white;
+        border: none;
+        border-bottom: 2px solid @ffe-blue-royal;
+        border-radius: 4px 4px 0 0;
+        box-shadow: none;
+        color: @ffe-blue-royal;
+        display: inline-block;
+        height: 2em;
+        transition: all @ffe-transition-duration @ffe-ease;
+
+        &:focus {
+            border-color: @ffe-blue-azure;
+            box-shadow: none;
+            color: @ffe-blue-azure;
+        }
+    }
 }
