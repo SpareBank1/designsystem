@@ -17,6 +17,7 @@ const createGridContainer = () => {
             pointer-events: none;
             position: fixed;
             top: 0;
+            z-index: 9999;
             width: 100%;
         }
     `;
