@@ -60,4 +60,11 @@ describe('<Heading1...6 />', () => {
         const wrapper = getWrapper({ withBorder: true });
         expect(wrapper.hasClass('ffe-h1--with-border')).toBe(true);
     });
+
+    test('does not add conditional classes if no props are given', () => {
+        const wrapper = getWrapper();
+        expect(wrapper.hasClass('ffe-h1--error')).toBe(false);
+        expect(wrapper.hasClass('ffe-h1--no-margin')).toBe(false);
+        expect(wrapper.hasClass('ffe-h1--with-border')).toBe(false);
+    });
 });
