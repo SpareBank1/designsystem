@@ -1,5 +1,8 @@
 # Changelog
 
+## 4.1.1
+* `--condensed` now works on all screen sizes
+
 ## 4.1.0
 * Add `--condensed` modifier for `.ffe-bullet-list`
 
