@@ -1,5 +1,8 @@
 # Changelog
 
+## 4.1.0
+* Add `--condensed` modifier for `.ffe-bullet-list`
+
 ## 4.0.1
 * Support both versions 9 and 10 of `ffe-core`
 
