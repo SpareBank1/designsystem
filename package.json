@@ -1,6 +1,6 @@
 {
   "name": "ffe-lists",
-  "version": "4.0.1",
+  "version": "4.1.0",
   "description": "Lists in ffe",
   "main": "less/lists.less",
   "scripts": {
