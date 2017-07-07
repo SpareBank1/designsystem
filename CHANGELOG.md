@@ -1,5 +1,8 @@
 # Changelog
 
+## v.6.4.0
+* Add new input-field modifier, `--text-like` for use in inputs that are inlined in text
+
 ## v.6.3.1
 * Support both versions 9 and 10 of `ffe-core`
 
