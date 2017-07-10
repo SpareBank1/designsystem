@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## Version 4.1.2
+* The Grid overlay has z-index over 9000.
+* `<GridCol>` accepts 0 as valid values for both `cols` and `offset`. It's not known if there's a usecase for a 0 cols column but there definitely is for a 0 offset column. The less module generates classes for 0 cols though so we might as well support it.
+
 ## Version 4.1.1
 
 ### Bugfix
