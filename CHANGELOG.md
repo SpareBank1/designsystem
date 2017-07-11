@@ -1,5 +1,9 @@
 # Changelog
 
+## v.6.0.1
+
+* Moved `--columns-sm` to container level to avoid being dependent on markup changes in several places. This change is breaking in relation to `v.6.0.0`, but is published as a patch due to `v.6.0.0` being a mere few hours old.
+
 ## v.6.0.0
 
 * BREAKING: Refactored styling for small screens
