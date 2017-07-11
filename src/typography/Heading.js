@@ -23,9 +23,9 @@ const makeHeading = level => {
                 {...rest}
                 className={classNames(
                     headingClass,
-                    [`${headingClass}--error`]: error,
-                    [`${headingClass}--no-margin`]: noMargin,
-                    [`${headingClass}--with-border`]: withBorder,
+                    { [`${headingClass}--error`]: error },
+                    { [`${headingClass}--no-margin`]: noMargin },
+                    { [`${headingClass}--with-border`]: withBorder },
                     className
                 )}
             >
