@@ -8,6 +8,8 @@ import {
     SIMPLE_TABLE_EXPANDABLE,
     SIMPLE_TABLE_SORTABLE_EXPANDABLE,
     SIMPLE_TABLE_HIDE_ON_TABLET,
+    SIMPLE_TABLE_HIDE_ON_MOBILE,
+    SIMPLE_TABLE_COLUMNS_ON_MOBILE,
     SIMPLE_TABLE_SORTABLE_PAGINATED
 } from './tables.data';
 
@@ -56,7 +58,7 @@ render(
                 <h2 className="ffe-h2">Responsive table</h2>
                 <ResponsiveTable columns={SIMPLE_TABLE.columns} data={SIMPLE_TABLE.dataObject}/>
 
-                <h2 className="ffe-h2">Responsive table without left padding on first column's content</h2>
+                <h2 className="ffe-h2">Responsive table without left padding on first column&#39;s content</h2>
                 <ResponsiveTable
                     columns={SIMPLE_TABLE.columns}
                     data={SIMPLE_TABLE.dataObject}
@@ -66,11 +68,18 @@ render(
                 <h2 className="ffe-h2">Responsive table with columns hidden on tablet</h2>
                 <ResponsiveTable columns={SIMPLE_TABLE_HIDE_ON_TABLET.columns} data={SIMPLE_TABLE_HIDE_ON_TABLET.dataObject}/>
 
+                <h2 className="ffe-h2">Responsive table with columns hidden on mobile</h2>
+                <ResponsiveTable columns={SIMPLE_TABLE_HIDE_ON_MOBILE.columns} data={SIMPLE_TABLE_HIDE_ON_MOBILE.dataObject}/>
+
+                <h2 className="ffe-h2">Responsive table with 2 column layout on mobile</h2>
+                <ResponsiveTable columnLayoutMobile={true} columns={SIMPLE_TABLE_COLUMNS_ON_MOBILE.columns} data={SIMPLE_TABLE_COLUMNS_ON_MOBILE.dataObject}/>
+
                 <h2 className="ffe-h2">Responsive table with footer and caption</h2>
                 <ResponsiveTable columns={SIMPLE_TABLE_WITH_FOOTER.columns} data={SIMPLE_TABLE_WITH_FOOTER.dataObject} caption="This is a caption"/>
 
-                <h2 className="ffe-h2">Responsive table with expandable rows</h2>
+                <h2 className="ffe-h2">Responsive table with expandable rows and column layout on mobile</h2>
                 <ResponsiveTable
+                    columnLayoutMobile={true}
                     columns={SIMPLE_TABLE_EXPANDABLE.columns}
                     data={SIMPLE_TABLE_EXPANDABLE.dataObject}
                     expandedContentMapper={ expandedContentMapper }
@@ -90,8 +99,9 @@ render(
                     srOnlyCaption={true}
                 />
 
-                <h2 className="ffe-h2">Sortable, expandable, captioned, footerized, condensed, small headers</h2>
+                <h2 className="ffe-h2">Sortable, expandable, captioned, footerized, condensed, small headers, column layout on mobile</h2>
                 <ResponsiveTable
+                    columnLayoutMobile={true}
                     columns={SIMPLE_TABLE_SORTABLE_EXPANDABLE.columns}
                     data={SIMPLE_TABLE_SORTABLE_EXPANDABLE.dataObject}
                     expandedContentMapper={ lazyExpandedContentMapper }

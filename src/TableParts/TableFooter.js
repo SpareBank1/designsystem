@@ -16,7 +16,10 @@ const TableFooter = ({ columns }) => {
                             key={ index }
                             columnHeader={ column.header }
                             alignRight={ column.alignRight }
-                            tdClasses={ classNames({'ffe-responsive-table--hide-md' : column.hideOnTablet }) }
+                            tdClasses={ classNames(
+                                {'ffe-responsive-table--hide-md' : column.hideOnTablet },
+                                {'ffe-responsive-table--hide-sm' : column.hideOnMobile }
+                            ) }
                         >
                             { column.footer }
                         </TableCell>
@@ -34,6 +37,7 @@ TableFooter.propTypes = {
             footer: PropTypes.any,
             alignRight: PropTypes.bool,
             hideOnTablet: PropTypes.bool,
+            hideOnMobile: PropTypes.bool,
         })
     ),
 };

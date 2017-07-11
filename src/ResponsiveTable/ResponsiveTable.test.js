@@ -46,6 +46,12 @@ describe('<ResponsiveTable />', () => {
       expect(wrapper.hasClass('ffe-responsive-table')).to.equal(true);
       expect(wrapper.hasClass('ffe-responsive-table--text-left')).to.equal(true);
     });
+
+    it('can have a two column layout on mobile', () => {
+      const wrapper = shallow(<ResponsiveTable columnLayoutMobile={true} columns={columns} data={data}/>);
+      expect(wrapper.hasClass('ffe-responsive-table')).to.equal(true);
+      expect(wrapper.hasClass('ffe-responsive-table--columns-sm')).to.equal(true);
+    });
   });
 
   describe('table caption', () => {

@@ -69,9 +69,9 @@ export const SIMPLE_TABLE_WITH_FOOTER = {
 export const SIMPLE_TABLE_HIDE_ON_TABLET = {
     columns: [
         {key: 'col1', header: 'Synlig kolonne', footer: 'Synlig'},
-        {key: 'col2', header: 'Skjult kolonne', footer: 'Skjult', hideOnTablet: true},
+        {key: 'col2', header: 'Skjult på tablet', footer: 'Skjult', hideOnTablet: true},
         {key: 'col3', header: 'Synlig kolonne', footer: 'Synlig'},
-        {key: 'col4', header: 'Skjult kolonne', footer: 'Skjult', hideOnTablet: true}
+        {key: 'col4', header: 'Skjult på tablet', footer: 'Skjult', hideOnTablet: true}
     ],
     dataObject: [
         {
@@ -97,6 +97,71 @@ export const SIMPLE_TABLE_HIDE_ON_TABLET = {
             col2: 'laoreet',
             col3: 'sed lacus',
             col4: 'lobortis faucibus'
+        },
+    ],
+};
+
+export const SIMPLE_TABLE_HIDE_ON_MOBILE = {
+    columns: [
+        {key: 'col1', header: 'Synlig kolonne', footer: 'Synlig'},
+        {key: 'col2', header: 'Skjult på mobil', footer: 'Skjult', hideOnMobile: true},
+        {key: 'col3', header: 'Synlig kolonne', footer: 'Synlig'},
+        {key: 'col4', header: 'Skjult på mobil', footer: 'Skjult', hideOnMobile: true}
+    ],
+    dataObject: [
+        {
+            col1: 'lorem ipsum',
+            col2: 'dolor sit amet',
+            col3: 'consectetur',
+            col4: 'adipiscing elit'
+        },
+        {
+            col1: 'cras sodales',
+            col2: 'iaculis',
+            col3: 'quam id',
+            col4: 'posuere'
+        },
+        {
+            col1: 'sed lacinia',
+            col2: 'nec dolor',
+            col3: 'sit amet porta',
+            col4: 'praesent'
+        },
+        {
+            col1: 'nunc sem',
+            col2: 'laoreet',
+            col3: 'sed lacus',
+            col4: 'lobortis faucibus'
+        },
+    ],
+};
+
+export const SIMPLE_TABLE_COLUMNS_ON_MOBILE = {
+    columns: [
+        {key: 'col1', header: 'Lorem'},
+        {key: 'col2', header: 'Ipsum'},
+        {key: 'col3', header: 'Dolor'}
+    ],
+    dataObject: [
+        {
+            col1: 'lorem ipsum',
+            col2: 'dolor sit amet',
+            col3: 'consectetur'
+        },
+        {
+            col1: 'cras sodales',
+            col2: 'iaculis',
+            col3: 'quam id'
+        },
+        {
+            col1: 'sed lacinia',
+            col2: 'nec dolor',
+            col3: 'sit amet porta'
+        },
+        {
+            col1: 'nunc sem',
+            col2: 'laoreet',
+            col3: 'sed lacus'
         },
     ],
 };

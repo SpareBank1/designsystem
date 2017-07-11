@@ -17,10 +17,9 @@ First you will need to import the table component from the default export of `ff
 import ResponsiveTable from 'ffe-tables-react';
 ```
 
-### Bear necessities
+### Required values and props
 
 This is an example with only the required values and props present.
-Forget about your worries and your strife!
 
 Columns should be an array of objects where each object represents properties for each column.
 Each column must have a `key` and a `header`, each of which should be a string.
@@ -59,15 +58,15 @@ The table itself shouldn't need much explaining.
 />
 ```
 
-### The King of the Swingers
+### Optionals
 
-So give me the secret, man-cub, clue me what to do.
 This is an example which includes all the options to tailor the table to your needs.
 
 Each column can have any of these optional props:
 - `footer` is a string or node which will be used as a table footer.
-- `alignRight` is a boolean to align all cell content to the right (headers and footers included)
-- `hideOnTablet` hides columns responsively on tablet screen sizes
+- `alignRight` is a boolean to align all cell content to the right (headers and footers included).
+- `hideOnTablet` hides columns responsively on tablet screen sizes.
+- `hideOnMobile` hides columns responsively on mobile screen sizes.
 - `compare` is to provide a custom compare function for the column.
 If not provided, a basic compare function is applied.
 - `notSortable` is a boolean to disable sorting on a specific column.
@@ -137,6 +136,7 @@ The output of this function will be the contents of the expanded area of an expa
 - `smallHeader` adds the `--small-header`-modifier to the table for reduced header width
 on tables when screen width < 768px (`@breakpoint-md`).
 - `alignLeft` adds the `--text-left`-modifier to the table for skipping left padding on content in the first column
+- `columnLayoutMobile` adds the `--columns-sm` modifier in order to switch from the standard vertical layout to two columns for table headers and cells on mobile screen sizes.
 ```javascript
 const expandedContentMapper = row => row.address && <span>Adresse: { row.address }</span>;
 
@@ -147,6 +147,7 @@ const expandedContentMapper = row => row.address && <span>Adresse: { row.address
     sortable={ true }
     condensed={ true }
     smallHeader={ true }
+    columnLayoutMobile={ true }
     caption="For the strength of the pack is the wolf. And the strength of the wolf is the pack."
 />
 ```

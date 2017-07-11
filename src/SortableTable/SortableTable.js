@@ -98,7 +98,7 @@ class SortableTable extends Component {
         });
 
         let { caption } = this.props;
-        const { expandedContentMapper, condensed, smallHeader, limit, offset, srOnlyCaption } = this.props;
+        const { expandedContentMapper, condensed, columnLayoutMobile, smallHeader, limit, offset, srOnlyCaption } = this.props;
         const { sortBy, descending } = this.state;
 
         if (srOnlyCaption && sortBy) {
@@ -110,6 +110,7 @@ class SortableTable extends Component {
                 caption={ caption }
                 srOnlyCaption={ srOnlyCaption }
                 expandedContentMapper={ expandedContentMapper }
+                columnLayoutMobile={ columnLayoutMobile }
                 columns={ sortableColumns }
                 data={ this.state.tableData }
                 condensed={ condensed }
@@ -128,6 +129,7 @@ SortableTable.propTypes = {
     expandedContentMapper: PropTypes.func,
     offset: PropTypes.number,
     limit: PropTypes.number,
+    columnLayoutMobile: PropTypes.bool,
     condensed: PropTypes.bool,
     smallHeader: PropTypes.bool,
     columns: PropTypes.arrayOf(PropTypes.object).isRequired,
