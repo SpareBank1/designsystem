@@ -1,5 +1,10 @@
 # Changelog
 
+## v4.5.0
+
+* Added `hideOnMobile` boolean to support hiding columns responsively on mobile screen sizes.
+* Added `columnLayoutMobile` boolean to support two column layout on mobile screen sizes.
+
 ## v4.4.1
 
 * Allow sending in React components instead of strings as headings

@@ -95,13 +95,14 @@ class ResponsiveTable extends Component {
     }
 
     render() {
-        const { alignLeft, condensed, smallHeader } = this.props;
+        const { alignLeft, condensed, smallHeader, columnLayoutMobile } = this.props;
         return (
             <table
                 className={classNames(
                     'ffe-responsive-table',
                     { 'ffe-responsive-table--condensed': condensed },
                     { 'ffe-responsive-table--small-header': smallHeader },
+                    { 'ffe-responsive-table--columns-sm': columnLayoutMobile },
                     { 'ffe-responsive-table--text-left': alignLeft }
                 )}
             >
@@ -116,6 +117,7 @@ class ResponsiveTable extends Component {
 
 ResponsiveTable.propTypes = {
     alignLeft: PropTypes.bool,
+    columnLayoutMobile: PropTypes.bool,
     caption: PropTypes.string,
     srOnlyCaption: PropTypes.bool,
     expandedContentMapper: PropTypes.func,

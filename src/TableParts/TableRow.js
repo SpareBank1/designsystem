@@ -21,7 +21,8 @@ const TableRow = ({ cells, columns, onClick, onKeyDown, trClasses, expandable, e
                         key={ index }
                         tdClasses={classNames(
                             {'ffe-responsive-table__cell--collapsed' : column.key === 'expandIcon' },
-                            {'ffe-responsive-table--hide-md' : column.hideOnTablet }
+                            {'ffe-responsive-table--hide-md' : column.hideOnTablet },
+                            {'ffe-responsive-table--hide-sm' : column.hideOnMobile }
                         )}
                         columnHeader={ column.header }
                         alignRight={ column.alignRight }
@@ -42,6 +43,7 @@ TableRow.propTypes = {
             header: PropTypes.any,
             alignRight: PropTypes.bool,
             hideOnTablet: PropTypes.bool,
+            hideOnMobile: PropTypes.bool,
         })
     ).isRequired,
     trClasses: PropTypes.string,

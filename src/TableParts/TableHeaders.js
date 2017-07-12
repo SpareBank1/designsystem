@@ -15,7 +15,8 @@ const TableHeaders = ({ columns }) => {
                             key={ index }
                             className={classNames(
                                     'ffe-responsive-table__heading',
-                                    { 'ffe-responsive-table--hide-md' : column.hideOnTablet }
+                                    { 'ffe-responsive-table--hide-md' : column.hideOnTablet },
+                                    { 'ffe-responsive-table--hide-sm' : column.hideOnMobile }
                                 )}
                             aria-sort={ column.ariaSort }
                             scope="col"
@@ -44,6 +45,7 @@ TableHeaders.propTypes = {
             key: PropTypes.string.isRequired,
             alignRight: PropTypes.bool,
             hideOnTablet: PropTypes.bool,
+            hideOnMobile: PropTypes.bool,
         })
     ),
 };
