@@ -2,7 +2,8 @@ import React, { Children, PropTypes } from 'react';
 import RadioBase from './radio-base';
 import RadioButton from './radio-button';
 
-const nil = () => {};
+const nil = () => {
+};
 const defaultBoolean = (lhs, rhs) => lhs || (rhs && typeof lhs === 'undefined');
 const isChecked = (groupValue, radioValue, radioChecked) => groupValue ? groupValue === radioValue : radioChecked;
 
@@ -17,28 +18,48 @@ const isChecked = (groupValue, radioValue, radioChecked) => groupValue ? groupVa
 // Also, in order to keep it lean 'n' mean, we're only doing this stunt if we're NOT in production...
 //     This Github issue pretty much sums it up: https://github.com/facebook/react/issues/1118
 const listenToChange = (process.env.NODE_ENV !== 'production') ? (groupOnChange, fieldOnChange) => fieldOnChange || (groupOnChange && nil)
-                                                               : (groupOnChange, fieldOnChange) => fieldOnChange;
+    : (groupOnChange, fieldOnChange) => fieldOnChange;
 
-const RadioButtonGroup = ({ label, name, inline, invalid, buttons, children, value, disabled, onChange, ...rest }) => {
+const RadioButtonGroup = (props) => {
+    const {
+        'aria-invalid': ariaInvalid,
+        children,
+        buttons,
+        disabled,
+        inline,
+        invalid,
+        label,
+        name,
+        onChange,
+        value,
+        ...rest
+    } = props;
 
     let overridden;
     if (buttons) {
         // If a buttons config array is present, it takes precedent and the replaces any passed children.
-        overridden = buttons.map(c => <RadioButton value={ c.value } label={ c.label } name={ c.name || name } key={ c.value }
-                                                   inline={ defaultBoolean(c.inline, inline) }
-                                                   invalid={ defaultBoolean(c.invalid, invalid) }
-                                                   checked={ isChecked(value, c.value, c.checked) }
-                                                   disabled={ c.disabled || disabled }
-                                                   onChange={ listenToChange(onChange, c.onChange) } /> );
+        overridden = buttons.map(c =>
+            <RadioButton
+                aria-invalid={c['aria-invalid'] || ariaInvalid}
+                checked={isChecked(value, c.value, c.checked)}
+                disabled={c.disabled || disabled}
+                inline={defaultBoolean(c.inline, inline)}
+                invalid={c.invalid || invalid}
+                key={c.value}
+                label={c.label}
+                name={c.name || name}
+                onChange={listenToChange(onChange, c.onChange)}
+                value={c.value}
+            />);
     } else if (name || inline || value || disabled) {
-
         // Allow to default name & inline values for all children, as those are most often shared.
         overridden = Children.map(children, child => React.cloneElement(child, {
-                name: child.props.name || name,
-                inline: defaultBoolean(child.props.inline, inline),
-                invalid: defaultBoolean(child.props.invalid, invalid),
+                'aria-invalid': child.props['aria-invalid'] || ariaInvalid,
                 checked: isChecked(value, child.props.value, child.props.checked),
                 disabled: child.props.disabled || disabled,
+                inline: defaultBoolean(child.props.inline, inline),
+                invalid: child.props.invalid || invalid,
+                name: child.props.name || name,
                 onChange: listenToChange(onChange, child.props.onChange)
             })
         );
@@ -52,13 +73,12 @@ const RadioButtonGroup = ({ label, name, inline, invalid, buttons, children, val
                 className="ffe-fieldset"
                 value={value}
                 onChange={onChange}
-                aria-invalid={invalid ? 'true' : 'false'}
                 {...rest}
             >
                 {label &&
-                    <legend className="ffe-form-label" style={labelStyle}>
-                        {label}
-                    </legend>
+                <legend className="ffe-form-label" style={labelStyle}>
+                    {label}
+                </legend>
                 }
                 {overridden || children}
             </fieldset>
@@ -67,9 +87,10 @@ const RadioButtonGroup = ({ label, name, inline, invalid, buttons, children, val
 };
 
 RadioButtonGroup.propTypes = {
+    'aria-invalid': PropTypes.oneOf(['true', 'false', true, false]),
     children: (props, name) => {
         const children = Children.toArray(props[name]);
-        const allowedTypes = [ RadioButton, RadioBase ];
+        const allowedTypes = [RadioButton, RadioBase];
         if (children.some(child => !allowedTypes.includes(child.type))) {
             return new Error(
                 'Children of `RadioButtonGroup` is invalid as only `RadioBase`s and `RadioButton`s are allowed.'
@@ -89,17 +110,16 @@ RadioButtonGroup.propTypes = {
         disabled: PropTypes.bool,
         onChange: PropTypes.func
     })),
-    onChange: PropTypes.func,
+    disabled: PropTypes.bool,
+    invalid: PropTypes.oneOf(['true', 'false', true, false]),
     label: PropTypes.string,
     name: PropTypes.string,
-    inline: PropTypes.bool,
-    invalid: PropTypes.bool,
+    onChange: PropTypes.func,
     value: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.number,
         PropTypes.bool
     ]),
-    disabled: PropTypes.bool
 };
 
 export default RadioButtonGroup;
