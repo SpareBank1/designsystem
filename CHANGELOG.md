@@ -1,7 +1,7 @@
 # Changelog
 
-## v.6.5.0
-* Updated the file upload to look like the specification from designers
+## v.7.0.0
+* **Breaking change** in .ffe-file-upload to look like the specification from designers
 * Added option to set aria-invalid on file upload
 
 ## v.6.4.0
