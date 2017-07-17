@@ -20,10 +20,11 @@ class RadioButton extends Component {
 }
 
 RadioButton.propTypes = {
+    'aria-invalid': PropTypes.oneOf(['true', 'false', true, false]),
     checked: PropTypes.bool,
     disabled: PropTypes.bool,
     inline: PropTypes.bool,
-    invalid: PropTypes.bool,
+    invalid: PropTypes.oneOf(['true', 'false', true, false]),
     label: PropTypes.string,
     name: PropTypes.string,
     onChange: PropTypes.func,

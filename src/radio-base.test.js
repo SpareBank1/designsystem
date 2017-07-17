@@ -97,4 +97,69 @@ describe('<RadioBase />', () => {
         });
     });
 
+    describe('invalid', () => {
+        it('sets missing prop to false', () => {
+            const wrapper = shallow(<RadioBase value="Hei" labelClasses="" />);
+
+            expect(wrapper.find('input').prop('aria-invalid')).to.equal('false');
+            expect(wrapper.find('label').prop('className')).not.to.equal('ffe-radio-button--invalid');
+        });
+
+        it('handles boolean `false` aria-invalid-prop', () => {
+            const wrapper = shallow(<RadioBase value="Hei" labelClasses="" aria-invalid={false} />);
+
+            expect(wrapper.find('input').prop('aria-invalid')).to.equal('false');
+            expect(wrapper.find('label').prop('className')).not.to.equal('ffe-radio-button--invalid');
+        });
+
+        it('handles boolean `true` aria-invalid-prop', () => {
+            const wrapper = shallow(<RadioBase value="Hei" labelClasses="" aria-invalid={true} />);
+
+            expect(wrapper.find('input').prop('aria-invalid')).to.equal('true');
+            expect(wrapper.find('label').prop('className')).to.equal('ffe-radio-button--invalid');
+        });
+
+        it('handles string "false" aria-invalid-prop', () => {
+            const wrapper = shallow(<RadioBase value="Hei" labelClasses="" aria-invalid="false" />);
+
+            expect(wrapper.find('input').prop('aria-invalid')).to.equal('false');
+            expect(wrapper.find('label').prop('className')).not.to.equal('ffe-radio-button--invalid');
+        });
+
+        it('handles string "true" aria-invalid-prop', () => {
+            const wrapper = shallow(<RadioBase value="Hei" labelClasses="" aria-invalid="true" />);
+
+            expect(wrapper.find('input').prop('aria-invalid')).to.equal('true');
+            expect(wrapper.find('label').prop('className')).to.equal('ffe-radio-button--invalid');
+        });
+
+        it('handles boolean `false` invalid-prop', () => {
+            const wrapper = shallow(<RadioBase value="Hei" labelClasses="" invalid={false} />);
+
+            expect(wrapper.find('input').prop('aria-invalid')).to.equal('false');
+            expect(wrapper.find('label').prop('className')).not.to.equal('ffe-radio-button--invalid');
+        });
+
+        it('handles boolean `true` invalid-prop', () => {
+            const wrapper = shallow(<RadioBase value="Hei" labelClasses="" invalid={true} />);
+
+            expect(wrapper.find('input').prop('aria-invalid')).to.equal('true');
+            expect(wrapper.find('label').prop('className')).to.equal('ffe-radio-button--invalid');
+        });
+
+        it('handles string "false" invalid-prop', () => {
+            const wrapper = shallow(<RadioBase value="Hei" labelClasses="" invalid="false" />);
+
+            expect(wrapper.find('input').prop('aria-invalid')).to.equal('false');
+            expect(wrapper.find('label').prop('className')).not.to.equal('ffe-radio-button--invalid');
+        });
+
+        it('handles string "true" invalid-prop', () => {
+            const wrapper = shallow(<RadioBase value="Hei" labelClasses="" invalid="true" />);
+
+            expect(wrapper.find('input').prop('aria-invalid')).to.equal('true');
+            expect(wrapper.find('label').prop('className')).to.equal('ffe-radio-button--invalid');
+        });
+    });
+
 });
