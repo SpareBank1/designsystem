@@ -29,6 +29,11 @@
     },
     {
       "type": "html",
+      "file": "examples/file-upload.html",
+      "select": "#ffedoc"
+    },
+    {
+      "type": "html",
       "file": "examples/checkbox.html",
       "select": "#ffedoc"
     },
