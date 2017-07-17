@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## Version 2.0.5
+* Improve responsiveness by placing the icon on the top of the box for small screens.
+
 ## Version 2.0.4
 * Set width explicitly to 100% otherwise the box won't take all its space if it's within a container with `display: flex;`
 
