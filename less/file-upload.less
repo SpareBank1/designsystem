@@ -1,163 +1,143 @@
 @ffe-blue-royal-escape: escape('@{ffe-blue-royal}');
 @ffe-blue-royal-fill: @ffe-blue-royal-escape;
+@ffe-blue-azure-escape: escape('@{ffe-blue-azure}');
+@ffe-blue-azure-fill: @ffe-blue-azure-escape;
 
 .ffe-file-upload {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: stretch;
-
-    @media all and (min-width: @breakpoint-md) {
-        flex-wrap: nowrap;
-    }
-
-    &__upload-button {
-        flex-basis: 100%;
-        order: 1;
-
-        @media all and (min-width: @breakpoint-md) {
-            flex-basis: 130px;
-        }
-    }
-
-    &__input {
-        width: 0.1px;
-        height: 0.1px;
-        opacity: 0;
-        overflow: hidden;
-        position: absolute;
-        z-index: -1;
-
-        &:focus + .ffe-file-upload__label,
-        &:active + .ffe-file-upload__label {
-            border-color: @ffe-blue-azure;
-            box-shadow: 0 0 0 2px @ffe-blue-focus;
-            outline: 0;
-        }
-    }
-
-    &__label,
-    &__delete-button {
-        color: @ffe-blue-azure;
-        font-family: "MuseoSansRounded-500", arial, sans-serif;
-        cursor: pointer;
-        transition: all @ffe-transition-duration @ffe-ease;
-    }
-
-    &__label {
-        display: block;
-        background-color: @ffe-white;
-        border: solid 2px @ffe-grey-silver;
-        border-radius: 4px;
-        box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.05);
-        line-height: 24px;
-        font-size: 18px;
-        outline: none;
-        overflow: hidden;
-        padding: 8px 30px;
-        text-align: center;
-        text-decoration: none;
-        white-space: nowrap;
-
-        &:active,
-        &:focus,
-        &:hover {
-            border-color: @ffe-blue-azure;
+    &__button {
+        input[type="file"] {
+            display: none;
         }
 
-        &:hover {
-            box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.2);
+        &__label[aria-invalid="true"] {
+            border: solid 2px @ffe-orange-fire;
         }
 
-        &:active {
-            box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.25);
+        &__label {
+            display: inline-block;
+            cursor: pointer;
+            background-color: @ffe-white;
+            border: solid 2px @ffe-grey-silver;
+            border-radius: 4px;
+            box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.05);
+            line-height: 24px;
+            font-size: 18px;
+            outline: none;
+            overflow: hidden;
+            padding: 8px 20px;
+            text-align: center;
+            text-decoration: none;
+            white-space: nowrap;
+            color: @ffe-blue-azure;
+            vertical-align: middle;
+            margin-bottom: 10px;
+
+            @media all and (max-width: @breakpoint-sm) {
+                width: 100%;
+            }
+
+            &:active,
+            &:focus,
+            &:hover {
+                border-color: @ffe-blue-azure;
+            }
+
+            &:hover {
+                box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.2);
+            }
+
+            &:active {
+                box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.25);
+            }
+        }
+
+        &__label-icon {
+            display: inline-block;
+            position: relative;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cpath fill='@{ffe-blue-royal-fill}' d='M50.87 148.324l.264-109.678c0-20.024 16.474-37.025 36.518-36.64a35.829 35.829 0 0 1 35.078 35.87l-.263 107.79a22.459 22.459 0 0 1-19.964 22.54 22.073 22.073 0 0 1-24.122-21.992l.142-59.586a5.762 5.762 0 0 1 5.761-5.742h2.699a5.762 5.762 0 0 1 5.741 5.762l-.142 59.363a7.993 7.993 0 0 0 6.087 7.912 7.851 7.851 0 0 0 9.515-7.648l.264-107.811A21.992 21.992 0 0 0 88.99 16.309a21.607 21.607 0 0 0-23.656 21.425l-.263 110.813c0 19.598 15.946 36.336 35.565 36.072a35.098 35.098 0 0 0 34.49-34.956l.141-60.398a5.742 5.742 0 0 1 5.762-5.741h2.698a5.742 5.742 0 0 1 5.742 5.762l-.142 60.397a49.32 49.32 0 0 1-48.488 49.138c-27.552.405-50.03-22.926-49.97-50.497z'/%3E%3C/svg%3E") no-repeat;
+            background-size: 22px 22px;
+            margin-right: 10px;
+            fill: @ffe-blue-royal;
+            height: 22px;
+            width: 22px;
+            vertical-align: middle;
         }
     }
 
     &__selected-files {
-        order: 2;
-        flex-basis: 100%;
         line-height: 24px;
-        padding: 11px 0;
-        color: @ffe-grey-charcoal;
+        padding: 0;
+        margin: 10px 0;
+        color: @ffe-black;
         list-style: none;
-        max-width: 100%;
-
-        @media all and (min-width: @breakpoint-md) {
-            margin-top: 0;
-            padding: 11px 0 11px 30px;
-            max-width: ~"calc(100% - 130px)";
-        }
+        width: 100%;
+        max-width: @breakpoint-sm;
+        border-bottom: 1px solid @ffe-grey-silver;
 
         li {
             display: flex;
-            margin: 0 0 5px;
+            flex-flow: row nowrap;
+            align-items: center;
+            padding: 10px;
+            margin: 0;
+            border-top: 1px solid @ffe-grey-silver;
         }
+    }
+
+    &__filename__title {
+        color: @ffe-blue-royal;
+        line-height: 16px;
+        font-size: 16px;
+        margin: 20px 0 10px;
     }
 
     &__filename {
         order: 1;
-        flex-basis: 100%;
-        align-self: flex-end;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        margin-top: 2px;
     }
 
-    &__delete {
-        flex-basis: 90px;
+    &__file-size {
         order: 2;
-        margin-left: 30px;
-        text-align: right;
+        align-self: flex-start;
+        margin: 2px 20px 0;
+        flex-grow: 1;
+        color: @ffe-grey-charcoal;
     }
 
     &__delete-button {
         background-color: transparent;
         border: none;
         border-radius: 4px;
-        font-size: 14px;
+        font-size: 18px;
         height: 24px;
         line-height: 18px;
-        margin: 0 -4px; // Hack to allow box-shadow to float outside content on focus
+        margin: 2px -4px 0 -4px; // Hack to allow box-shadow to float outside content on focus
         padding: 0 4px 0 30px;
         text-decoration: none;
         position: relative;
-
-        &::after {
-            border-bottom: solid 1px @ffe-blue-azure;
-            content: "";
-            display: block;
-        }
+        order: 3;
 
         &:active,
-        &:focus {
-            box-shadow: 0 0 0 2px @ffe-blue-focus;
-            color: @ffe-blue-cobalt;
-            outline: none;
-        }
-
+        &:focus,
         &:hover {
-            color: @ffe-blue-cobalt;
-        }
-
-        &:active::after,
-        &:focus::after,
-        &:hover::after {
-            border-color: @ffe-blue-cobalt;
+            outline: none;
         }
 
         &::before {
             content: "";
             display: block;
             position: absolute;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cpath fill='@{ffe-blue-royal-fill}' d='M18.77,0c-3.562,0-7.125,1.347-9.834,4.044l-4.429,4.439c-5.381,5.394-5.381,14.25,0,19.68l71.19,71.83-71.66,71.83c-5.381,5.394-5.381,14.25,0,19.68l4.429,4.439c5.381,5.394,14.22,5.394,19.64,0l71.66-71.83,71.65,71.83c5.381,5.394,14.23,5.394,19.65,0l4.429-4.439c5.381-5.394,5.381-14.25,0-19.68l-71.19-71.83,71.66-71.83c5.381-4.914,5.381-13.78,0-19.21l-4.429-4.423c-5.381-5.394-14.22-5.394-19.64,0l-72.13,71.34-71.17-71.83c-2.691-2.697-6.257-4.044-9.819-4.044z'/%3E%3C/svg%3E");
-            background-size: 12px 12px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cpath fill='@{ffe-blue-azure-fill}' d='M18.77,0c-3.562,0-7.125,1.347-9.834,4.044l-4.429,4.439c-5.381,5.394-5.381,14.25,0,19.68l71.19,71.83-71.66,71.83c-5.381,5.394-5.381,14.25,0,19.68l4.429,4.439c5.381,5.394,14.22,5.394,19.64,0l71.66-71.83,71.65,71.83c5.381,5.394,14.23,5.394,19.65,0l4.429-4.439c5.381-5.394,5.381-14.25,0-19.68l-71.19-71.83,71.66-71.83c5.381-4.914,5.381-13.78,0-19.21l-4.429-4.423c-5.381-5.394-14.22-5.394-19.64,0l-72.13,71.34-71.17-71.83c-2.691-2.697-6.257-4.044-9.819-4.044z'/%3E%3C/svg%3E");
+            background-size: 14px 14px;
             background-repeat: no-repeat;
             bottom: 6px;
             left: 8px;
-            fill: @ffe-blue-royal;
-            height: 12px;
-            width: 12px;
+            fill: @ffe-blue-azure;
+            height: 14px;
+            width: 14px;
         }
     }
 }
