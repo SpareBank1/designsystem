@@ -1,5 +1,9 @@
 # Changelog
 
+## v.6.5.0
+* Updated the file upload to look like the specification from designers
+* Added option to set aria-invalid on file upload
+
 ## v.6.4.0
 * Add new input-field modifier, `--text-like` for use in inputs that are inlined in text
 
