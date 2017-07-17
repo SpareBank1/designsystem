@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.2.0 (17.7.2017)
+* Fixed: `aria-invalid` was not being set on `input`-elements.
+* Removed `aria-invalid` from `RadioButtonGroup`s fieldset.
+* `invalid` is an alias for `aria-invalid` either can be used and will produce the same result.
+* `aria-invalid`/`invalid` now accepts both boolean values and `true`/`false` as a string.
+
 ## v1.1.0 (22.5.2017)
 * Fixed invalid prop on radio button, radio button group and radio switch to handle the validation error state
 

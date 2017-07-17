@@ -20,14 +20,15 @@ At it's simplest you can just use the `RadioButton` directly:
 ```javascript
 import RadioButton from 'ffe-radio-button-react';
 
-<RadioButton value={ string, boolean, number }
-             label= { string }
-             name={ string }
-             inline={ boolean }
-             invalid={ boolean }
-             checked={ boolean }
-             tooltip={ string }
-             onChange={ function }
+<RadioButton
+    aria-invalid={string}
+    checked={boolean}
+    inline={boolean}
+    label= {string}
+    name={string}
+    onChange={function}
+    tooltip={string}
+    value={string, boolean, number}
 />
 ```
 
@@ -41,8 +42,9 @@ If you want to have a more complex label, you can use `children`:
 
 You can also add a helping text by using the tooltip property:
 ```javascript
-<RadioButton label="This is not the complete truth"
-             tooltip="The complete truth is..."
+<RadioButton 
+    label="This is not the complete truth"
+    tooltip="The complete truth is..."
 />
 ```
 When the `tooltip` is truthy the `inline` capabilities will be ignored as the tooltip icon will be added to the end of the line.
@@ -58,12 +60,11 @@ import { RadioButton, RadioButtonGroup } from 'ffe-radio-button-react';
 <RadioButtonGroup
     label="Do not mix"
     name="fruit"
-    inline={ true }
-    invalid={ false }
-    onChange={ function }
+    inline={true}
+    onChange={function}
 >
-    <RadioButton value="apple" label="Apple" checked={ true } />
-    <RadioButton value="orange" label="Orange" />
+    <RadioButton aria-invalid="false" value="apple" label="Apple" checked={ true } />
+    <RadioButton aria-invalid="true" value="orange" label="Orange" />
 </RadioButtonGroup>
 ```
 
@@ -78,15 +79,16 @@ array of button configs:
 import { RadioButton, RadioButtonGroup } from 'ffe-radio-button-react';
 
 const buttonsConfig = [
-    { value: 'apple', label 'Apple', checked: true },
-    { value: 'orange', label 'Orange' }
+    { value: 'apple', label: 'Apple', checked: true },
+    { value: 'orange', label: 'Orange' }
 ];
 
-<RadioButtonGroup label="Do not mix"
-                  name="fruit"
-                  inline={ true }
-                  onChange={ function }
-                  buttons={ buttonsConfig }
+<RadioButtonGroup
+    label="Do not mix"
+    name="fruit"
+    inline={true}
+    onChange={function}
+    buttons={buttonsConfig}
 />
 ```
 
@@ -96,7 +98,7 @@ the selected value directly to the `RadioButtonGroup`:
 ```javascript
 import { RadioButton, RadioButtonGroup } from 'ffe-radio-button-react';
 
-<RadioButtonGroup label="Do not mix" name="fruit" value="apple" onChange={ function }>
+<RadioButtonGroup label="Do not mix" name="fruit" value="apple" onChange={function}>
     <RadioButton value="apple" label="Apple" />
     <RadioButton value="orange" label="Orange" />
 </RadioButtonGroup>
@@ -115,12 +117,12 @@ choices in a "switch" like design
 import { RadioSwitch } from 'ffe-radio-button-react';
 
 <RadioSwitch
-    name="some-setting"
+    aria-invalid="false"
+    firstOption={{ label: 'På', value: true }}
     label="En innstilling"
-    onChange={ function }
-    invalid={ false }
-    firstOption={ { label: 'På', value: true } }
-    lastOption={ { label: 'Av', value: false } }
-    value={ true }
+    lastOption={{ label: 'Av', value: false }}
+    name="some-setting"
+    onChange={function}
+    value={true}
 />
 ```
