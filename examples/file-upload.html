@@ -18,19 +18,18 @@
                 <div class="ffe-content-container ffe-content-container--text-left">
 
                     <p class="ffe-body-paragraph">
-                        Består av et skjult input-felt og en label stylet som en knapp.
+                        Består av et skjult input-felt og en label stylet som en knapp med ikon.
                     </p>
 
                     <div class="ffe-file-upload">
-                        <div class="ffe-file-upload__upload-button">
-                            <input type="file" id="file-upload" name="file-upload" class="ffe-file-upload__input">
-                            <label class="ffe-file-upload__label" for="file-upload">
-                                Velg fil
+                        <div class="ffe-file-upload__button">
+                            <label for="file-upload1" class="ffe-file-upload__button__label">
+                                <span class="ffe-file-upload__button__label-icon"></span> Legg til vedlegg
                             </label>
+                            <input id="file-upload1" type="file"/>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
 
@@ -43,45 +42,42 @@
                     </p>
 
                     <div class="ffe-file-upload">
-                        <div class="ffe-file-upload__upload-button">
-                            <input type="file" id="file-upload2" name="file-upload2" class="ffe-file-upload__input">
-                            <label class="ffe-file-upload__label" for="file-upload2">
-                                Velg fil
+                        <div class="ffe-file-upload__button">
+                            <label for="file-upload2" class="ffe-file-upload__button__label">
+                                <span class="ffe-file-upload__button__label-icon"></span> Legg til vedlegg
                             </label>
+                            <input id="file-upload2" type="file"/>
                         </div>
-
-                        <ul class="ffe-file-upload__selected-files">
-                            <li>
-                                <div class="ffe-file-upload__filename">Virus.exe</div>
-                                <div class="ffe-file-upload__delete">
-                                    <button class="ffe-file-upload__delete-button">Slett</button>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="ffe-file-upload__filename">Selfie_fjelltopp.jpg</div>
-                                <div class="ffe-file-upload__delete">
-                                    <button class="ffe-file-upload__delete-button">Slett</button>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="ffe-file-upload__filename">Lønnsslipp.pdf</div>
-                                <div class="ffe-file-upload__delete">
-                                    <button class="ffe-file-upload__delete-button">Slett</button>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="ffe-file-upload__filename">system.ini</div>
-                                <div class="ffe-file-upload__delete">
-                                    <button class="ffe-file-upload__delete-button">Slett</button>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="ffe-file-upload__filename">20060606-213314543_345666677777777_abcdefgh.txt</div>
-                                <div class="ffe-file-upload__delete">
-                                    <button class="ffe-file-upload__delete-button">Slett</button>
-                                </div>
-                            </li>
-                        </ul>
+                        <div>
+                            <div class="ffe-file-upload__filename__title">Du har lastet opp:</div>
+                            <ul class="ffe-file-upload__selected-files">
+                                <li>
+                                    <div class="ffe-file-upload__filename">Virus.exe</div>
+                                    <div class="ffe-file-upload__file-size">195kB</div>
+                                    <button class="ffe-file-upload__delete-button"></button>
+                                </li>
+                                <li>
+                                    <div class="ffe-file-upload__filename">Selfie_fjelltopp.jpg</div>
+                                    <div class="ffe-file-upload__file-size">82kB</div>
+                                    <button class="ffe-file-upload__delete-button"></button>
+                                </li>
+                                <li>
+                                    <div class="ffe-file-upload__filename">Lønnsslipp.pdf</div>
+                                    <div class="ffe-file-upload__file-size">216kB</div>
+                                    <button class="ffe-file-upload__delete-button"></button>
+                                </li>
+                                <li>
+                                    <div class="ffe-file-upload__filename">system.ini</div>
+                                    <div class="ffe-file-upload__file-size">13kB</div>
+                                    <button class="ffe-file-upload__delete-button"></button>
+                                </li>
+                                <li>
+                                    <div class="ffe-file-upload__filename">20060606-213314543_345666677777777_abcdefgh.txt</div>
+                                    <div class="ffe-file-upload__file-size">63kB</div>
+                                    <button class="ffe-file-upload__delete-button"></button>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
 
                 </div>
