@@ -1,6 +1,6 @@
 {
   "name": "ffe-form",
-  "version": "6.4.0",
+  "version": "7.0.0",
   "description": "Form-/skjemapakke for Felles Front End",
   "main": "less/form.less",
   "scripts": {
@@ -25,6 +25,11 @@
     {
       "type": "html",
       "file": "examples/input.html",
+      "select": "#ffedoc"
+    },
+    {
+      "type": "html",
+      "file": "examples/file-upload.html",
       "select": "#ffedoc"
     },
     {
