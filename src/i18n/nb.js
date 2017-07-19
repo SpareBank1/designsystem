@@ -45,5 +45,5 @@ export default {
   INVALID_DATE_FORMAT: 'Dato må skrives på dette formatet: dd.mm.åååå',
   INVALID_DATE: 'Ugyldig dato',
   MIN_DATE: 'Oppgitt dato er for langt tilbake',
-  MAX_DATE: 'Oppgitt date er for lang frem'
+  MAX_DATE: 'Oppgitt dato er for langt frem'
 };
