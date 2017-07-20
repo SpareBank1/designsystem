@@ -1,4 +1,8 @@
 # Changelog
+## v2.4.2
+
+* Minor error message text fix
+
 ## v2.4.1
 
 * Add optional label to input field
