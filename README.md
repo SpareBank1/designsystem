@@ -73,16 +73,13 @@ export function* documentUploadedSaga() {
 ```
 ### Example with async await
 ```javascript
-async function getContent(file) {
-    return getFileContent(file);
-}
-```
-```javascript
+import { getFileContent } from 'ffe-file-upload-react';
+
 const onFilesSelected = async function(files) {
     for (let i = 0; i < files.length; i++) {
         const file = files[i];
 
-        const fileContent = await getContent(file);
+        const fileContent = await getFileContent(file);
         // do something with fileContent
     }
     console.log(this.state);

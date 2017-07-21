@@ -14,11 +14,6 @@ class Example extends React.Component {
         this.onFileDeleted = this.onFileDeleted.bind(this);
     }
 
-
-    static async getContent(file) {
-        return getFileContent(file);
-    }
-
     async onFilesSelected(files) {
         for (let i = 0; i < files.length; i++) {
             const file = files[i];
@@ -30,7 +25,7 @@ class Example extends React.Component {
                 return;
             }
 
-            const content = await Example.getContent(file);
+            const content = await getFileContent(file);
             this.setState({
                 ...this.state,
                 errorMessage: undefined,
