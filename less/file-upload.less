@@ -78,7 +78,7 @@
             display: flex;
             flex-flow: row nowrap;
             align-items: center;
-            padding: 10px;
+            padding: 9px 10px 11px;
             margin: 0;
             border-top: 1px solid @ffe-grey-silver;
         }
@@ -113,18 +113,13 @@
         border-radius: 4px;
         font-size: 18px;
         height: 24px;
+        min-width: 24px;
         line-height: 18px;
-        margin: 2px -4px 0 -4px; // Hack to allow box-shadow to float outside content on focus
-        padding: 0 4px 0 30px;
+        padding: 2px 5px 0;
+        margin: 0;
         text-decoration: none;
         position: relative;
         order: 3;
-
-        &:active,
-        &:focus,
-        &:hover {
-            outline: none;
-        }
 
         &::before {
             content: "";
@@ -133,8 +128,8 @@
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cpath fill='@{ffe-blue-azure-fill}' d='M18.77,0c-3.562,0-7.125,1.347-9.834,4.044l-4.429,4.439c-5.381,5.394-5.381,14.25,0,19.68l71.19,71.83-71.66,71.83c-5.381,5.394-5.381,14.25,0,19.68l4.429,4.439c5.381,5.394,14.22,5.394,19.64,0l71.66-71.83,71.65,71.83c5.381,5.394,14.23,5.394,19.65,0l4.429-4.439c5.381-5.394,5.381-14.25,0-19.68l-71.19-71.83,71.66-71.83c5.381-4.914,5.381-13.78,0-19.21l-4.429-4.423c-5.381-5.394-14.22-5.394-19.64,0l-72.13,71.34-71.17-71.83c-2.691-2.697-6.257-4.044-9.819-4.044z'/%3E%3C/svg%3E");
             background-size: 14px 14px;
             background-repeat: no-repeat;
-            bottom: 6px;
-            left: 8px;
+            bottom: 5px;
+            left: 5px;
             fill: @ffe-blue-azure;
             height: 14px;
             width: 14px;
