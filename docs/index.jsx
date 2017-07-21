@@ -56,12 +56,13 @@ class Example extends React.Component {
             <div>
                 <h1 className="ffe-h1">ffe-file-upload-react</h1>
                 <FileUpload
-                    label={'Velg fil'}
+                    label="Velg fil"
                     multiple={ true }
+                    accept=".pdf"
                     selectedFiles={this.state.selectedFiles}
                     onFilesSelected={ this.onFilesSelected }
                     onFileDeleted={ this.onFileDeleted }
-                    selectedFilesHeaderLabel={'Du har lastet opp:'}
+                    selectedFilesHeaderLabel="Du har lastet opp:"
                     errorMessage={this.state.errorMessage}
                 />
             </div>

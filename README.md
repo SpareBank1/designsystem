@@ -18,6 +18,8 @@ const Example = () => {
     return (
         <FileUpload
             label={ string }
+            multiple={ boolean }
+            accept={ string }
             selectedFiles={ array }
             onFilesSelected={ function }
             onFileDeleted={ function }

@@ -39,6 +39,7 @@ class FileUpload extends React.Component {
             label,
             selectedFilesHeaderLabel,
             selectedFiles,
+            accept,
             multiple,
             errorMessage
         } = this.props;
@@ -55,7 +56,7 @@ class FileUpload extends React.Component {
                 <input
                     id="file-upload"
                     type="file"
-                    accept=".pdf"
+                    accept={ accept }
                     multiple={ multiple }
                     ref={ this.setFileInputElement }
                     onChange={ this.onFilesSelected }
@@ -93,6 +94,7 @@ FileUpload.propTypes = {
     onFilesSelected: func.isRequired,
     onFileDeleted: func.isRequired,
     multiple: bool,
+    accept: stringType,
     selectedFilesHeaderLabel: stringType,
     errorMessage: stringType,
 };
