@@ -1,5 +1,9 @@
 # Changelog
 
+## v.7.0.1
+* Fixed bug where delete button was not visually focused on file-upload
+* Fixed vertical alignment to center on uploaded files
+
 ## v.7.0.0
 * **Breaking change** in .ffe-file-upload to look like the specification from designers
 * Added option to set aria-invalid on file upload
