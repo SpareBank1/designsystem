@@ -95,3 +95,9 @@ const onFilesSelected = async function(files) {
 />
 ...
 ```
+
+## Doing changes
+After cloning the project run this to download dependencies and start the local server
+```
+$ npm install && npm start
+```
