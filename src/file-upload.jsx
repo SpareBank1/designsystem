@@ -51,12 +51,11 @@ class FileUpload extends React.Component {
                     <span className="ffe-file-upload__button__label-icon" />{ label }
                 </button>
                 <input
-                    ref={ this.setFileInputElement }
                     id="file-upload"
                     type="file"
-                    multiple={ true }
                     accept=".pdf"
-                    tabIndex="0"
+                    multiple={ true }
+                    ref={ this.setFileInputElement }
                     onChange={ this.onFilesSelected }
                 />
 
