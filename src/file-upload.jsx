@@ -1,8 +1,9 @@
 import React  from 'react';
 import {
-    string as stringType,
+    array,
+    bool,
     func,
-    array
+    string as stringType
 } from 'prop-types';
 
 class FileUpload extends React.Component {
@@ -38,6 +39,7 @@ class FileUpload extends React.Component {
             label,
             selectedFilesHeaderLabel,
             selectedFiles,
+            multiple,
             errorMessage
         } = this.props;
 
@@ -54,7 +56,7 @@ class FileUpload extends React.Component {
                     id="file-upload"
                     type="file"
                     accept=".pdf"
-                    multiple={ true }
+                    multiple={ multiple }
                     ref={ this.setFileInputElement }
                     onChange={ this.onFilesSelected }
                 />
@@ -90,6 +92,7 @@ FileUpload.propTypes = {
     selectedFiles: array.isRequired,
     onFilesSelected: func.isRequired,
     onFileDeleted: func.isRequired,
+    multiple: bool,
     selectedFilesHeaderLabel: stringType,
     errorMessage: stringType,
 };

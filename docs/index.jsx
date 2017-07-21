@@ -57,6 +57,7 @@ class Example extends React.Component {
                 <h1 className="ffe-h1">ffe-file-upload-react</h1>
                 <FileUpload
                     label={'Velg fil'}
+                    multiple={ true }
                     selectedFiles={this.state.selectedFiles}
                     onFilesSelected={ this.onFilesSelected }
                     onFileDeleted={ this.onFileDeleted }
