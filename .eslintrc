@@ -4,10 +4,7 @@
     "plugins": [
         "jsx-a11y"
     ],
-    "globals": {
-        "describe": false,
-        "it": false,
-        "window": false,
-        "beforeEach": false
+    "env": {
+        "mocha": true
     }
 }
