@@ -2,4 +2,4 @@
 
 npm install
 npm test
-npm lint
+npm run lint
