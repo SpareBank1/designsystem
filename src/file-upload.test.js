@@ -69,7 +69,8 @@ describe('<FileUpload/>', () => {
         });
 
         it('should set aria-invalid on button when invalid', () => {
-            assert.isTrue(
+            assert.equal(
+                'true',
                 component
                     .find('.ffe-file-upload__button')
                     .props()['aria-invalid']
