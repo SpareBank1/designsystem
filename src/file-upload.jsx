@@ -48,7 +48,7 @@ class FileUpload extends React.Component {
             <div className="ffe-file-upload">
                 <button
                     className="ffe-file-upload__button"
-                    aria-invalid={ !!errorMessage }
+                    aria-invalid={ String(!!errorMessage) }
                     onClick={ this.triggerUploadFileNativeHandler }
                 >
                     <span className="ffe-file-upload__button__label-icon" />{ label }
