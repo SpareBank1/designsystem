@@ -3,17 +3,17 @@
   "version": "1.0.0",
   "main": "lib/index.js",
   "scripts": {
-    "start": "yarn server",
+    "start": "npm run server",
     "server": "./node_modules/.bin/webpack-dev-server --progress --color",
     "build": "babel -d lib/. --ignore=*.test.js src/.",
-    "watch": "onchange 'src/**.js' -- yarn build",
+    "watch": "onchange 'src/**.js' -- npm run build",
     "lint": "eslint --ext .js,.jsx src/.",
     "test:nsp": "nsp check",
     "test:spec": "mocha --require babel-register src/**/*.test.js",
-    "test": "yarn test:spec && yarn test:nsp",
+    "test": "npm run test:spec && npm run test:nsp",
     "tdd": "mocha --require babel-register src/**/*.test.js -w  --watch-extensions jsx",
     "example": "babel-node docs/create.js > example.html",
-    "prepublish": "yarn build",
+    "prepublish": "npm run build",
     "has-published": "npm show . versions -s --json | grep -q \\\"${npm_package_version}\\\""
   },
   "devDependencies": {
