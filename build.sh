@@ -1,5 +1,5 @@
 #!/bin/bash -e
 
-yarn
-yarn test
-yarn lint
+npm install
+npm test
+npm lint
