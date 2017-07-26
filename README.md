@@ -10,10 +10,10 @@ $ npm install --save-dev ffe-core ffe-tables
 ```
 ffe-tables brukes på samme måte som ffe-core. Importer `ffe-tables/less/tables.less` for å ta i bruk alle listene.
 
-Ta en titt i [example-filen](example/example.html) for markup og [less-filen](less/responsive-table.less) for
+Ta en titt i [example-filen](example/example.html) for markup og [less-filen](less/table.less) for
 tilgjengelige klasser og modifiers.
 
-## Bruk klassenavn på `.ffe-responsive-table` sine children!
+## Bruk klassenavn på `.ffe-table` sine children!
 Fra og med versjon 3.0.0 er styling direkte på DOM-struktur fjernet. Med andre ord - legg på klasser på alle tabell-relaterte tags.
 
 ## Screenshot
