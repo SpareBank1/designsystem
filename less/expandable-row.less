@@ -1,5 +1,5 @@
 
-.ffe-responsive-table {
+.ffe-table {
     &__row-expandable {
         cursor: pointer;
         position: relative;
@@ -16,7 +16,7 @@
             border-color: @ffe-blue-pale;
         }
 
-        .ffe-responsive-table__content {
+        .ffe-table__content {
             @media screen and (max-width: @breakpoint-sm) {
                 margin-bottom: 0;
             }
@@ -26,11 +26,11 @@
     &__row-expandable-content {
         opacity: 0;
 
-        .ffe-responsive-table__cell-expandable-content {
+        .ffe-table__cell-expandable-content {
             padding: 0;
         }
 
-        &:not(.ffe-responsive-table__row-expandable-content--expanded) {
+        &:not(.ffe-table__row-expandable-content--expanded) {
             border: 0;
         }
 
@@ -40,7 +40,7 @@
             background-color: @ffe-blue-ice;
             opacity: 1;
 
-            .ffe-responsive-table__cell-expandable-content {
+            .ffe-table__cell-expandable-content {
                 padding: 10px;
             }
         }
