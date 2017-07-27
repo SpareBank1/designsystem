@@ -1,13 +1,13 @@
-.ffe-responsive-table {
+.ffe-table {
     margin: 20px 0;
     min-width: 100%;
     text-align: left;
     border-collapse: collapse;
 
     &--text-left {
-        .ffe-responsive-table__heading,
-        .ffe-responsive-table__content,
-        .ffe-responsive-table__cell {
+        .ffe-table__heading,
+        .ffe-table__content,
+        .ffe-table__cell {
             padding-left: 0;
         }
     }
@@ -27,7 +27,7 @@
     &__footer {
         &:extend(.ffe-strong-text);
 
-        .ffe-responsive-table__row {
+        .ffe-table__row {
             border-bottom: none;
         }
     }
@@ -81,8 +81,8 @@
     &--condensed {
         font-size: 14px;
 
-        .ffe-responsive-table__heading,
-        .ffe-responsive-table__cell {
+        .ffe-table__heading,
+        .ffe-table__cell {
             @media screen and (min-width: @breakpoint-md) {
                 padding: 10px;
             }
@@ -122,7 +122,7 @@
     }
 
     &--columns-sm {
-        .ffe-responsive-table__content {
+        .ffe-table__content {
             display: inline-block;
             max-width: ~"calc(100% - 105px)";
             margin-bottom: 0;
@@ -146,15 +146,18 @@
         }
     }
 
-    &--hide-md {
-        @media screen and (min-width: @breakpoint-md) and (max-width: @breakpoint-lg) {
-            display: none;
+    .ffe-table__heading,
+    .ffe-table__cell {
+        &.ffe-table--hide-md {
+            @media screen and (min-width: @breakpoint-md) and (max-width: @breakpoint-lg) {
+                display: none;
+            }
         }
-    }
 
-    &--hide-sm {
-        @media screen and (max-width: @breakpoint-sm) {
-            display: none;
+        &.ffe-table--hide-sm {
+            @media screen and (max-width: @breakpoint-sm) {
+                display: none;
+            }
         }
     }
 }
