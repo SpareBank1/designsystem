@@ -1,5 +1,10 @@
 # Changelog
 
+## v.7.0.0
+
+* BREAKING: Removed `responsive` from all styles. Style names are now `ffe-table`, `ffe-table__cell`, `ffe-table--condensed`, etc.
+* Added modifiers `--breakpoint-sm` and `--breakpoint-none` to table level to modify the responsive behaviour. This is useful when paired with `--hide-sm` or `--hide-md` to maintain normal table style on smaller screens.
+
 ## v.6.0.1
 
 * Moved `--columns-sm` to container level to avoid being dependent on markup changes in several places. This change is breaking in relation to `v.6.0.0`, but is published as a patch due to `v.6.0.0` being a mere few hours old.
@@ -112,7 +117,7 @@ after upgrading.
 This release also introduces class names for all styled elements within a
 `.ffe-responsive-table` table. This way, we can do away with styling DOM-elements completely
 in a future major version. Please go through your implementations and add the appropriate
-class names (use the [less-file](less/responsive-table.less) for documentation).
+class names (use the [less-file](less/table.less) for documentation).
 
 There are no visual or functional differences between 1.0.1 and 2.0.0.
 
