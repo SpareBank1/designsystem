@@ -1,5 +1,10 @@
 # Changelog
 
+## v.8.0.0
+
+* BREAKING: Changed `--hide-md` modifier to hide columns between `sm` and `md` breakpoints instead of `md` and `lg` to be consistent with `--hide-sm`.
+* Added `--hide-lg` modifier which hides columns between the `md` and `lg` breakpoints. This is how `--hide-md` behaved in earlier versions.
+
 ## v.7.0.0
 
 * BREAKING: Removed `responsive` from all styles. Style names are now `ffe-table`, `ffe-table__cell`, `ffe-table--condensed`, etc.
