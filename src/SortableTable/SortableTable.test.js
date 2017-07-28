@@ -1,7 +1,7 @@
 import React from 'react';
 import { expect } from 'chai';
 import { render } from 'enzyme';
-import SortableTable from './SortableTable';
+import SortableTable from './';
 
 describe('<SortableTable>', () => {
 
@@ -47,11 +47,11 @@ describe('<SortableTable>', () => {
 
   describe('condensed', () => {
       it('should by default not be condensed', () =>
-         expect(wrapper.find('.ffe-responsive-table--condensed')).to.have.length(0));
+         expect(wrapper.find('.ffe-table--condensed')).to.have.length(0));
 
       const condensedWrapper = render(<SortableTable condensed={true} columns={columns} data={data}/>);
 
       it('can be condensed', () =>
-         expect(condensedWrapper.find('.ffe-responsive-table--condensed')).to.have.length(1));
+         expect(condensedWrapper.find('.ffe-table--condensed')).to.have.length(1));
   });
 });

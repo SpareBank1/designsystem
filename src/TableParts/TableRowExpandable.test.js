@@ -30,16 +30,16 @@ describe('<TableRowExpandable>', () => {
 
     it('should be collapsed by default', () => {
         expect(wrapper.state().expanded).to.equal(false);
-        expect(wrapper.find('.ffe-responsive-table__row-expandable--expanded')).to.have.length(0);
-        expect(wrapper.find('.ffe-responsive-table__row-expandable-content').prop('aria-hidden')).to.equal('true');
-        expect(wrapper.find('.ffe-responsive-table__row-expandable-content').hasClass('ffe-responsive-table__row--collapsed')).to.equal(true);
+        expect(wrapper.find('.ffe-table__row-expandable--expanded')).to.have.length(0);
+        expect(wrapper.find('.ffe-table__row-expandable-content').prop('aria-hidden')).to.equal('true');
+        expect(wrapper.find('.ffe-table__row-expandable-content').hasClass('ffe-table__row--collapsed')).to.equal(true);
     });
 
     it('should render expanded content', () => {
         wrapper.setState({ expanded: true });
         expect(wrapper.find('td').last().find('p').text()).to.equal('The cake is a lie');
-        expect(wrapper.find('tr').last().hasClass('ffe-responsive-table__row-expandable-content--expanded')).to.equal(true);
-        expect(wrapper.find('tr').last().hasClass('ffe-responsive-table__row--collapsed')).to.equal(false);
+        expect(wrapper.find('tr').last().hasClass('ffe-table__row-expandable-content--expanded')).to.equal(true);
+        expect(wrapper.find('tr').last().hasClass('ffe-table__row--collapsed')).to.equal(false);
     });
 
     it('should pass correct props to TableRow component', () => {
@@ -47,13 +47,13 @@ describe('<TableRowExpandable>', () => {
         const tableRow = wrapper.find('TableRow').props();
         expect(tableRow.expanded).to.equal(true);
         expect(tableRow.columns).to.equal(props.columns);
-        expect(tableRow.trClasses).contains('ffe-responsive-table__row-expandable--expanded');
+        expect(tableRow.trClasses).contains('ffe-table__row-expandable--expanded');
     });
 
     it('should pass an expand icon with correct classname to TableRow', () => {
         wrapper.setState({ expanded: true });
         const tableRow = wrapper.find('TableRow').props();
-        expect(tableRow.cells.expandIcon.props.className).contains('ffe-responsive-table__expand-icon--expanded');
+        expect(tableRow.cells.expandIcon.props.className).contains('ffe-table__expand-icon--expanded');
         expect(tableRow.expandable).to.equal(true);
     });
 

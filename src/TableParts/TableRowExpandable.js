@@ -45,15 +45,15 @@ class TableRowExpandable extends Component {
                         expandIcon: (unexpandable ? ' ' :
                                         <Chevron
                                             className={ classNames(
-                                                'ffe-responsive-table__expand-icon',
-                                                { 'ffe-responsive-table__expand-icon--expanded' : this.state.expanded }
+                                                'ffe-table__expand-icon',
+                                                { 'ffe-table__expand-icon--expanded' : this.state.expanded }
                                             )}
                                         />
                                     )
                     }}
                     trClasses={ classNames(
-                        { 'ffe-responsive-table__row-expandable' : !unexpandable },
-                        { 'ffe-responsive-table__row-expandable--expanded' : this.state.expanded }
+                        { 'ffe-table__row-expandable' : !unexpandable },
+                        { 'ffe-table__row-expandable--expanded' : this.state.expanded }
                     )}
                     columns={ columns }
                     onClick={ this.toggleExpand }
@@ -65,15 +65,15 @@ class TableRowExpandable extends Component {
                     role="presentation"
                     aria-hidden={String(!this.state.expanded)}
                     className={ classNames(
-                        'ffe-responsive-table__row',
-                        'ffe-responsive-table__row-expandable-content',
-                         { 'ffe-responsive-table__row-expandable-content--expanded' : this.state.expanded },
-                         { 'ffe-responsive-table__row--collapsed' : !this.state.expanded }
+                        'ffe-table__row',
+                        'ffe-table__row-expandable-content',
+                         { 'ffe-table__row-expandable-content--expanded' : this.state.expanded },
+                         { 'ffe-table__row--collapsed' : !this.state.expanded }
                      )}
                 >
                     <td
                         colSpan={ columns.length }
-                        className="ffe-responsive-table__cell-expandable-content"
+                        className="ffe-table__cell-expandable-content"
                     >
                         <div>
                             { this.state.expanded && children }

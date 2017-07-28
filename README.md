@@ -14,7 +14,7 @@ $ npm install --save ffe-core ffe-tables ffe-tables-react
 
 First you will need to import the table component from the default export of `ffe-tables-react`.
 ```javascript
-import ResponsiveTable from 'ffe-tables-react';
+import Table from 'ffe-tables-react';
 ```
 
 ### Required values and props
@@ -52,7 +52,7 @@ const data = [
 
 The table itself shouldn't need much explaining.
 ```javascript
-<ResponsiveTable
+<Table
     columns={columns}
     data={data}
 />
@@ -66,6 +66,7 @@ Each column can have any of these optional props:
 - `footer` is a string or node which will be used as a table footer.
 - `alignRight` is a boolean to align all cell content to the right (headers and footers included).
 - `hideOnTablet` hides columns responsively on tablet screen sizes.
+- `hideOnSmallTablet` hides columns responsively on small tablet screen sizes.
 - `hideOnMobile` hides columns responsively on mobile screen sizes.
 - `compare` is to provide a custom compare function for the column.
 If not provided, a basic compare function is applied.
@@ -81,8 +82,8 @@ const currencyCompare = (a, b) => {
 
 const columns = [
     { key: 'name', header: 'Navn', footer: 'Gjennomsnitt' },
-    { key: 'email', header: 'E-post' },
-    { key: 'age', header: 'Alder', footer: '37,67', alignRight: true },
+    { key: 'email', header: 'E-post', hideOnTablet: true, hideOnMobile: true },
+    { key: 'age', header: 'Alder', footer: '37,67', alignRight: true, hideOnMobile: true },
     { key: 'networth', header: 'Formue', footer: '37,67', alignRight: true, compare: currencyCompare },
     { key: 'button', header: 'Poke', notSortable: true }
 ];
@@ -122,8 +123,7 @@ const data = [
 
 The table accepts any of these optional props:
 - `sortable` is a boolean to make the table sortable.
-  - Click the headers to sort the table.
-  - Tables will not be `sortable` on screen width < 768px (`@breakpoint-md`)
+  - Tables will not be `sortable` when collapsed to small screen layout (default < 768px `@breakpoint-md`)
 - `caption` is a string or node to insert as table caption.
 - `srOnlyCaption` is a boolean to hide the caption and make it available for screen readers.
 - `expandedContentMapper` must be a reference to a function which takes a single value.
@@ -137,10 +137,13 @@ The output of this function will be the contents of the expanded area of an expa
 on tables when screen width < 768px (`@breakpoint-md`).
 - `alignLeft` adds the `--text-left`-modifier to the table for skipping left padding on content in the first column
 - `columnLayoutMobile` adds the `--columns-sm` modifier in order to switch from the standard vertical layout to two columns for table headers and cells on mobile screen sizes.
+- `breakpoint` accepts either `sm` or `none` to add either `--breakpoint-sm` or `--breakpoint-none` modifier to the table.
+  - `--breakpoint-sm` reduces the responsive collapse breakpoint from default `@breakpoint-md` to `@breakpoint-sm`.
+  - `--breakpoint-none` disables the responsive collapse altogether.
 ```javascript
 const expandedContentMapper = row => row.address && <span>Adresse: { row.address }</span>;
 
-<ResponsiveTable
+<Table
     columns={ columns }
     data={ data }
     expandedContentMapper={ expandedContentMapper }
@@ -148,6 +151,7 @@ const expandedContentMapper = row => row.address && <span>Adresse: { row.address
     condensed={ true }
     smallHeader={ true }
     columnLayoutMobile={ true }
+    breakpoint={ 'none' }
     caption="For the strength of the pack is the wolf. And the strength of the wolf is the pack."
 />
 ```

@@ -216,10 +216,10 @@ const norwegianCurrencyCompare = (a, b) => {
 export const SIMPLE_TABLE_SORTABLE_EXPANDABLE = {
     columns: [
         {key: 'name', header: 'Navn', footer: 'Snittalder'},
-        {key: 'networth', header: 'Formue'},
+        {key: 'networth', header: 'Formue', hideOnTablet: true, hideOnSmallTablet: true, hideOnMobile: true},
         {key: 'networthProperSort', header: 'Formue (custom compare)', compare: norwegianCurrencyCompare},
-        {key: 'age', header: 'Alder', alignRight: true, footer: '53.25'},
-        {key: 'button', header: 'Poke', notSortable: true}
+        {key: 'age', header: 'Alder', alignRight: true, footer: '53.25', hideOnMobile: true},
+        {key: 'button', header: 'Poke', notSortable: true, hideOnSmallTablet: true, hideOnMobile: true}
     ],
     dataObject: [
         {

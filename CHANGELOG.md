@@ -1,5 +1,13 @@
 # Changelog
 
+## v4.6.0
+
+* Bump peerDep on `ffe-tables` to `^8.0.0`.
+* Added optional prop `breakpoint` to table component.
+* Added optional prop `hideOnSmallTablet` to support hiding columns responsively on smaller tablet screen sizes.
+* Fixed lists of `PropTypes` to include recently added props.
+* Fixed `alignLeft` not working on `SortableTable`.
+
 ## v4.5.0
 
 * Added `hideOnMobile` boolean to support hiding columns responsively on mobile screen sizes.

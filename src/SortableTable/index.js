@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import equal from 'deep-equal';
 import PilNedIcon from 'ffe-icons-react/pil-ned-ikon';
 import sortData from './sort-data';
-import ResponsiveTable from '../ResponsiveTable/ResponsiveTable';
+import Table from '../Table';
 
 
 class SortableTable extends Component {
@@ -98,7 +98,7 @@ class SortableTable extends Component {
         });
 
         let { caption } = this.props;
-        const { expandedContentMapper, condensed, columnLayoutMobile, smallHeader, limit, offset, srOnlyCaption } = this.props;
+        const { expandedContentMapper, condensed, columnLayoutMobile, smallHeader, alignLeft, breakpoint, limit, offset, srOnlyCaption } = this.props;
         const { sortBy, descending } = this.state;
 
         if (srOnlyCaption && sortBy) {
@@ -106,7 +106,7 @@ class SortableTable extends Component {
         }
 
         return (
-            <ResponsiveTable
+            <Table
                 caption={ caption }
                 srOnlyCaption={ srOnlyCaption }
                 expandedContentMapper={ expandedContentMapper }
@@ -115,8 +115,10 @@ class SortableTable extends Component {
                 data={ this.state.tableData }
                 condensed={ condensed }
                 smallHeader={ smallHeader }
-                limit={limit}
-                offset={offset}
+                alignLeft={ alignLeft }
+                breakpoint={ breakpoint }
+                limit={ limit }
+                offset={ offset }
                 sort={ { sortBy, descending } }
             />
         );
@@ -132,6 +134,8 @@ SortableTable.propTypes = {
     columnLayoutMobile: PropTypes.bool,
     condensed: PropTypes.bool,
     smallHeader: PropTypes.bool,
+    alignLeft: PropTypes.bool,
+    breakpoint: PropTypes.oneOf(['sm', 'none']),
     columns: PropTypes.arrayOf(PropTypes.object).isRequired,
     data: PropTypes.arrayOf(PropTypes.object).isRequired
 };

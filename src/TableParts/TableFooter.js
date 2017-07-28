@@ -5,8 +5,8 @@ import classNames from 'classnames';
 
 const TableFooter = ({ columns }) => {
     return (
-        <tfoot className="ffe-responsive-table__footer">
-            <tr className="ffe-responsive-table__row">
+        <tfoot className="ffe-table__footer">
+            <tr className="ffe-table__row">
                 { columns.map((column, index) => {
                     if (column === null) {
                         return <td key={ index } />;
@@ -17,8 +17,9 @@ const TableFooter = ({ columns }) => {
                             columnHeader={ column.header }
                             alignRight={ column.alignRight }
                             tdClasses={ classNames(
-                                {'ffe-responsive-table--hide-md' : column.hideOnTablet },
-                                {'ffe-responsive-table--hide-sm' : column.hideOnMobile }
+                                { 'ffe-table--hide-lg' : column.hideOnTablet },
+                                { 'ffe-table--hide-md' : column.hideOnSmallTablet },
+                                { 'ffe-table--hide-sm' : column.hideOnMobile }
                             ) }
                         >
                             { column.footer }
@@ -37,6 +38,7 @@ TableFooter.propTypes = {
             footer: PropTypes.any,
             alignRight: PropTypes.bool,
             hideOnTablet: PropTypes.bool,
+            hideOnSmallTablet: PropTypes.bool,
             hideOnMobile: PropTypes.bool,
         })
     ),
