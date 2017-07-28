@@ -15,13 +15,13 @@ const TableCell = ({ children, columnHeader, alignRight, tdClasses, contentClass
 
     return (
         <td
-            className={ classNames('ffe-responsive-table__cell', tdClasses) }
+            className={ classNames('ffe-table__cell', tdClasses) }
             data-th={ dataTh }
         >
             <span
                 className={ classNames(
-                    'ffe-responsive-table__content',
-                     { 'ffe-responsive-table__content--text-right' : alignRight },
+                    'ffe-table__content',
+                     { 'ffe-table__content--text-right' : alignRight },
                      contentClasses
                  )}
             >

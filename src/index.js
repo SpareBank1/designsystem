@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ResponsiveTableComponent from './ResponsiveTable/ResponsiveTable';
-import SortableTableComponent from './SortableTable/SortableTable';
+import TableComponent from './Table';
+import SortableTableComponent from './SortableTable';
 
-function ResponsiveTable(props) {
+function Table(props) {
     return props.sortable ?
         <SortableTableComponent {...props}/> :
-        <ResponsiveTableComponent {...props}/>;
+        <TableComponent {...props}/>;
 }
 
-ResponsiveTable.propTypes = {
+Table.propTypes = {
     caption: PropTypes.string,
     srOnlyCaption: PropTypes.bool,
     expandedContentMapper: PropTypes.func,
@@ -18,6 +18,9 @@ ResponsiveTable.propTypes = {
     limit: PropTypes.number,
     condensed: PropTypes.bool,
     smallHeader: PropTypes.bool,
+    alignLeft: PropTypes.bool,
+    columnLayoutMobile: PropTypes.bool,
+    breakpoint: PropTypes.oneOf(['sm', 'none']),
     data: PropTypes.arrayOf(
         PropTypes.object
     ),
@@ -29,4 +32,4 @@ ResponsiveTable.propTypes = {
     ),
 };
 
-export default ResponsiveTable;
+export default Table;

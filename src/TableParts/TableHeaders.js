@@ -4,8 +4,8 @@ import classNames from 'classnames';
 
 const TableHeaders = ({ columns }) => {
     return (
-        <thead className="ffe-responsive-table__head">
-            <tr className="ffe-responsive-table__row">
+        <thead className="ffe-table__head">
+            <tr className="ffe-table__row">
                 { columns.map((column, index) => {
                     if (column === null) {
                         return <th key={ index } />;
@@ -14,17 +14,18 @@ const TableHeaders = ({ columns }) => {
                         <th
                             key={ index }
                             className={classNames(
-                                    'ffe-responsive-table__heading',
-                                    { 'ffe-responsive-table--hide-md' : column.hideOnTablet },
-                                    { 'ffe-responsive-table--hide-sm' : column.hideOnMobile }
+                                    'ffe-table__heading',
+                                    { 'ffe-table--hide-lg' : column.hideOnTablet },
+                                    { 'ffe-table--hide-md' : column.hideOnSmallTablet },
+                                    { 'ffe-table--hide-sm' : column.hideOnMobile }
                                 )}
                             aria-sort={ column.ariaSort }
                             scope="col"
                         >
                             <span
                                 className={classNames(
-                                    'ffe-responsive-table__content',
-                                    { 'ffe-responsive-table__content--text-right' : column.alignRight }
+                                    'ffe-table__content',
+                                    { 'ffe-table__content--text-right' : column.alignRight }
                                     )}
                             >
                               { column.header }
@@ -45,6 +46,7 @@ TableHeaders.propTypes = {
             key: PropTypes.string.isRequired,
             alignRight: PropTypes.bool,
             hideOnTablet: PropTypes.bool,
+            hideOnSmallTablet: PropTypes.bool,
             hideOnMobile: PropTypes.bool,
         })
     ),

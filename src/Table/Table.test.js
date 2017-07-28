@@ -3,9 +3,9 @@ import React from 'react';
 import { expect } from 'chai';
 import { shallow, render } from 'enzyme';
 
-import ResponsiveTable from './ResponsiveTable';
+import Table from './';
 
-describe('<ResponsiveTable />', () => {
+describe('<Table />', () => {
   const columns = [
     { key: 'name', header: 'Navn' },
     { key: 'address', header: 'Adresse' },
@@ -24,51 +24,51 @@ describe('<ResponsiveTable />', () => {
 
   describe('general', () => {
     it('renders without exploding', () => {
-      const wrapper = shallow(<ResponsiveTable columns={columns} data={data}/>);
+      const wrapper = shallow(<Table columns={columns} data={data}/>);
       expect(wrapper).to.have.length(1);
     });
 
     it('renders the correct dom structure', () => {
-      const wrapper = shallow(<ResponsiveTable columns={columns} data={data}/>);
+      const wrapper = shallow(<Table columns={columns} data={data}/>);
       expect(wrapper.is('table')).to.equal(true);
-      expect(wrapper.hasClass('ffe-responsive-table')).to.equal(true);
-      expect(wrapper.hasClass('ffe-responsive-table--condensed')).to.equal(false);
+      expect(wrapper.hasClass('ffe-table')).to.equal(true);
+      expect(wrapper.hasClass('ffe-table--condensed')).to.equal(false);
     });
 
     it('can be condensed', () => {
-      const wrapper = shallow(<ResponsiveTable condensed={true} columns={columns} data={data}/>);
-      expect(wrapper.hasClass('ffe-responsive-table')).to.equal(true);
-      expect(wrapper.hasClass('ffe-responsive-table--condensed')).to.equal(true);
+      const wrapper = shallow(<Table condensed={true} columns={columns} data={data}/>);
+      expect(wrapper.hasClass('ffe-table')).to.equal(true);
+      expect(wrapper.hasClass('ffe-table--condensed')).to.equal(true);
     });
 
     it('can be left aligned', () => {
-      const wrapper = shallow(<ResponsiveTable alignLeft={true} columns={columns} data={data}/>);
-      expect(wrapper.hasClass('ffe-responsive-table')).to.equal(true);
-      expect(wrapper.hasClass('ffe-responsive-table--text-left')).to.equal(true);
+      const wrapper = shallow(<Table alignLeft={true} columns={columns} data={data}/>);
+      expect(wrapper.hasClass('ffe-table')).to.equal(true);
+      expect(wrapper.hasClass('ffe-table--text-left')).to.equal(true);
     });
 
     it('can have a two column layout on mobile', () => {
-      const wrapper = shallow(<ResponsiveTable columnLayoutMobile={true} columns={columns} data={data}/>);
-      expect(wrapper.hasClass('ffe-responsive-table')).to.equal(true);
-      expect(wrapper.hasClass('ffe-responsive-table--columns-sm')).to.equal(true);
+      const wrapper = shallow(<Table columnLayoutMobile={true} columns={columns} data={data}/>);
+      expect(wrapper.hasClass('ffe-table')).to.equal(true);
+      expect(wrapper.hasClass('ffe-table--columns-sm')).to.equal(true);
     });
   });
 
   describe('table caption', () => {
     it('does not render a <caption /> if caption prop is not provided', () => {
-      const wrapper = shallow(<ResponsiveTable columns={columns} data={data}/>);
+      const wrapper = shallow(<Table columns={columns} data={data}/>);
       expect(wrapper.find('caption')).to.have.length(0);
     });
 
     it('renders a <caption /> if caption prop is provided', () => {
-      const wrapper = shallow(<ResponsiveTable columns={columns} data={data} caption="A nice table" />);
+      const wrapper = shallow(<Table columns={columns} data={data} caption="A nice table" />);
       expect(wrapper.find('caption')).to.have.length(1);
       expect(wrapper.find('caption').text()).to.equal('A nice table');
     });
   });
 
   describe('table headers', () => {
-    const wrapper = render(<ResponsiveTable columns={columns} data={data}/>);
+    const wrapper = render(<Table columns={columns} data={data}/>);
 
     it('renders columns inside a <thead />', () => {
       expect(wrapper.find('thead')).to.have.length(1);
@@ -85,7 +85,7 @@ describe('<ResponsiveTable />', () => {
   });
 
   describe('table footer', () => {
-     const wrapper = render(<ResponsiveTable columns={columnsWithFooterContent} data={data}/>);
+     const wrapper = render(<Table columns={columnsWithFooterContent} data={data}/>);
 
     it('renders a <tfoot />', () => {
       expect(wrapper.find('tfoot')).to.have.length(1);
@@ -96,7 +96,7 @@ describe('<ResponsiveTable />', () => {
     });
 
     it('does not render <tfoot /> unless footer is present in columns', () => {
-      const wrapperWithoutFooterContent = render(<ResponsiveTable columns={columns} data={data}/>);
+      const wrapperWithoutFooterContent = render(<Table columns={columns} data={data}/>);
       expect(wrapperWithoutFooterContent.find('tfoot')).to.have.length(0);
     });
   });
@@ -104,43 +104,43 @@ describe('<ResponsiveTable />', () => {
   describe('table body', () => {
 
     it('does not render a tbody if data prop is empty', () => {
-      const wrapper = shallow(<ResponsiveTable columns={columns} data={[]} />);
+      const wrapper = shallow(<Table columns={columns} data={[]} />);
       expect(wrapper.find('tbody')).to.have.length(0);
     });
 
     it('renders a tbody if data is provided', () => {
-      const wrapper = shallow(<ResponsiveTable columns={columns} data={data} />);
+      const wrapper = shallow(<Table columns={columns} data={data} />);
       expect(wrapper.find('tbody')).to.have.length(1);
     });
 
     it('renders a <tr /> row for each entry in the data prop', () => {
-      const wrapper = render(<ResponsiveTable columns={columns} data={data} />);
+      const wrapper = render(<Table columns={columns} data={data} />);
       expect(wrapper.find('tbody tr')).to.have.length(data.length);
     });
 
     it('renders a <td /> cell for each entry in each row', () => {
-      const wrapper = render(<ResponsiveTable columns={columns} data={data} />);
+      const wrapper = render(<Table columns={columns} data={data} />);
       expect(wrapper.find('td')).to.have.length(data.length * columns.length);
     });
 
     it('renders a content-div inside each td', () => {
-      const wrapper = render(<ResponsiveTable columns={columns} data={data} />);
+      const wrapper = render(<Table columns={columns} data={data} />);
       expect(
-        wrapper.find('td .ffe-responsive-table__content').length
+        wrapper.find('td .ffe-table__content').length
       ).to.equal(
         data.length * columns.length
       );
     });
 
     it('renders content of each cell', () => {
-      const wrapper = render(<ResponsiveTable columns={columns} data={data} />);
+      const wrapper = render(<Table columns={columns} data={data} />);
       expect(
-        wrapper.find('td .ffe-responsive-table__content').first().text()
+        wrapper.find('td .ffe-table__content').first().text()
       ).to.equal(data[0].name);
     });
 
     it('adds column heading to data-th property of each cell', () => {
-      const wrapper = render(<ResponsiveTable data={data} columns={columns} />);
+      const wrapper = render(<Table data={data} columns={columns} />);
 
       expect(wrapper.find('[data-th="Navn"]')).to.have.length(columns.length);
       expect(wrapper.find('td').first().prop('data-th')).to.equal(columns[0].header);
@@ -148,7 +148,7 @@ describe('<ResponsiveTable />', () => {
 
     it('render screen reader only caption', () => {
 
-        const wrapper = render(<ResponsiveTable data={data} columns={columns} caption="Read me" srOnlyCaption={true} />);
+        const wrapper = render(<Table data={data} columns={columns} caption="Read me" srOnlyCaption={true} />);
         expect(wrapper.find('caption')).to.have.length(1);
         expect(wrapper.find('caption').hasClass('ffe-screenreader-only')).to.equal(true);
         expect(wrapper.find('caption').text()).to.equal('Read me');
@@ -156,7 +156,7 @@ describe('<ResponsiveTable />', () => {
 
     it('do not render caption when srOnlyCaption is true but missing caption text', () => {
 
-        const wrapper = render(<ResponsiveTable data={data} columns={columns} srOnlyCaption={true} />);
+        const wrapper = render(<Table data={data} columns={columns} srOnlyCaption={true} />);
         expect(wrapper.find('caption')).to.have.length(0);
     });
   });
@@ -166,11 +166,11 @@ describe('<ResponsiveTable />', () => {
         .map((c, i) => ({ name: c, address: `Sesame Street ${i}`, age: i }));
 
     const getContentOfFirstColumn = comp =>
-        comp.find('.ffe-responsive-table__cell:first-of-type .ffe-responsive-table__content');
+        comp.find('.ffe-table__cell:first-of-type .ffe-table__content');
 
     describe('setting limit', () => {
       const contentOfFirstColumn = getContentOfFirstColumn(
-        render(<ResponsiveTable columns={columns} data={muchData} limit={3} />)
+        render(<Table columns={columns} data={muchData} limit={3} />)
       );
 
       it('reduces number of table rows', () =>
@@ -186,7 +186,7 @@ describe('<ResponsiveTable />', () => {
 
     describe('setting offset', () => {
       const contentOfFirstColumn = getContentOfFirstColumn(
-        render(<ResponsiveTable columns={columns} data={muchData} offset={10} />)
+        render(<Table columns={columns} data={muchData} offset={10} />)
       );
 
       it('reduces number of table rows', () =>
@@ -201,7 +201,7 @@ describe('<ResponsiveTable />', () => {
 
     describe('setting both', () => {
       const contentOfFirstColumn = getContentOfFirstColumn(
-        render(<ResponsiveTable columns={columns} data={muchData} offset={5} limit={4} />)
+        render(<Table columns={columns} data={muchData} offset={5} limit={4} />)
       );
 
       it('reduces number of table rows', () =>

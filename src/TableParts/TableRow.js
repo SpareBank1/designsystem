@@ -8,7 +8,7 @@ const TableRow = ({ cells, columns, onClick, onKeyDown, trClasses, expandable, e
     return (
         <tr
             className={classNames(
-                'ffe-responsive-table__row',
+                'ffe-table__row',
                 trClasses
             )}
             role="button"
@@ -20,9 +20,10 @@ const TableRow = ({ cells, columns, onClick, onKeyDown, trClasses, expandable, e
                     <TableCell
                         key={ index }
                         tdClasses={classNames(
-                            {'ffe-responsive-table__cell--collapsed' : column.key === 'expandIcon' },
-                            {'ffe-responsive-table--hide-md' : column.hideOnTablet },
-                            {'ffe-responsive-table--hide-sm' : column.hideOnMobile }
+                            { 'ffe-table__cell--collapsed' : column.key === 'expandIcon' },
+                            { 'ffe-table--hide-lg' : column.hideOnTablet },
+                            { 'ffe-table--hide-md' : column.hideOnSmallTablet },
+                            { 'ffe-table--hide-sm' : column.hideOnMobile }
                         )}
                         columnHeader={ column.header }
                         alignRight={ column.alignRight }
@@ -43,6 +44,7 @@ TableRow.propTypes = {
             header: PropTypes.any,
             alignRight: PropTypes.bool,
             hideOnTablet: PropTypes.bool,
+            hideOnSmallTablet: PropTypes.bool,
             hideOnMobile: PropTypes.bool,
         })
     ).isRequired,

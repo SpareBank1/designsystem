@@ -6,7 +6,7 @@ import TableFooter from '../TableParts/TableFooter';
 import TableRow from '../TableParts/TableRow';
 import TableRowExpandable from '../TableParts/TableRowExpandable';
 
-class ResponsiveTable extends Component {
+class Table extends Component {
     renderTableCaption() {
         const {
             caption,
@@ -25,7 +25,7 @@ class ResponsiveTable extends Component {
         }
 
         return (
-            <caption className="ffe-responsive-table__caption">
+            <caption className="ffe-table__caption">
                 {caption}
             </caption>
         );
@@ -95,27 +95,28 @@ class ResponsiveTable extends Component {
     }
 
     render() {
-        const { alignLeft, condensed, smallHeader, columnLayoutMobile } = this.props;
+        const { alignLeft, condensed, smallHeader, columnLayoutMobile, breakpoint } = this.props;
         return (
             <table
                 className={classNames(
-                    'ffe-responsive-table',
-                    { 'ffe-responsive-table--condensed': condensed },
-                    { 'ffe-responsive-table--small-header': smallHeader },
-                    { 'ffe-responsive-table--columns-sm': columnLayoutMobile },
-                    { 'ffe-responsive-table--text-left': alignLeft }
+                    'ffe-table',
+                    { 'ffe-table--condensed': condensed },
+                    { 'ffe-table--small-header': smallHeader },
+                    { 'ffe-table--columns-sm': columnLayoutMobile },
+                    { 'ffe-table--text-left': alignLeft },
+                    breakpoint && `ffe-table--breakpoint-${this.props.breakpoint}`
                 )}
             >
-                {this.renderTableCaption()}
-                {this.renderTableHeaders()}
-                {this.renderTableFooter()}
-                {this.renderTableBody()}
+                { this.renderTableCaption() }
+                { this.renderTableHeaders() }
+                { this.renderTableFooter() }
+                { this.renderTableBody() }
             </table>
           );
     }
 }
 
-ResponsiveTable.propTypes = {
+Table.propTypes = {
     alignLeft: PropTypes.bool,
     columnLayoutMobile: PropTypes.bool,
     caption: PropTypes.string,
@@ -126,6 +127,7 @@ ResponsiveTable.propTypes = {
     sort: PropTypes.object,
     offset: PropTypes.number,
     limit: PropTypes.number,
+    breakpoint: PropTypes.oneOf(['sm', 'none']),
     data: PropTypes.arrayOf(
         PropTypes.object
     ),
@@ -137,11 +139,11 @@ ResponsiveTable.propTypes = {
     ),
 };
 
-ResponsiveTable.defaultProps = {
+Table.defaultProps = {
     columns: [],
     data: [],
     offset: 0,
     limit: 0
 };
 
-export default ResponsiveTable;
+export default Table;
