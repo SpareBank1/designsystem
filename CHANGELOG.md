@@ -1,8 +1,7 @@
 # Changelog
 
-## v.7.0.1
+## v.8.0.0
 
-This version is breaking in relation to `v.7.0.0`, but is published as a patch due to `v.7.0.0` being a mere few hours old.
 * BREAKING: Changed `--hide-md` modifier to hide columns between `sm` and `md` breakpoints instead of `md` and `lg` to be consistent with `--hide-sm`.
 * Added `--hide-lg` modifier which hides columns between the `md` and `lg` breakpoints. This is how `--hide-md` behaved in earlier versions.
 
