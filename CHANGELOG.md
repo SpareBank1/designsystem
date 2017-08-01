@@ -1,5 +1,9 @@
 # Changelog
 
+## v.10.1.0
+
+* Supports `--no-underline` modifier for `ffe-h*` classes. Only use these if there are anchors in menus with header-style typography when it's obvious from their context that they are clickable.
+
 ## v.10.0.0
 
 - BREAKING: The new default for links is the underlined version. If you want links without underlines use the `--no-underline` modifier.
