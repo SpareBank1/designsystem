@@ -1,5 +1,9 @@
 # Changelog
 
+## v.8.0.1
+
+* `--text-left` now also works with `--condensed` 
+
 ## v.8.0.0
 
 * BREAKING: Changed `--hide-md` modifier to hide columns between `sm` and `md` breakpoints instead of `md` and `lg` to be consistent with `--hide-sm`.
