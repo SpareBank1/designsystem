@@ -43,14 +43,13 @@ function deriveTwoDigitYear(year) {
   return yearDate.getFullYear();
 }
 
-SimpleDateFactory.fromString = function fromString(string, onSuccess, onError) {
-  const success = onSuccess || (() => {});
-  const error = onError || (() => {});
-  const newDate = new SimpleDate();
+const noop = () => {};
+
+SimpleDateFactory.fromString = function fromString(string, onSuccess = noop, onError = noop) {
   const match = dateRegex.exec(string);
 
   if (!match) {
-    error(errorTypes.INVALID_DATE_FORMAT);
+    onError(errorTypes.INVALID_DATE_FORMAT);
     return null;
   }
 
@@ -61,19 +60,18 @@ SimpleDateFactory.fromString = function fromString(string, onSuccess, onError) {
     year = deriveTwoDigitYear(year);
   }
 
-  newDate.setYear(year);
-  newDate.setMonth(month - 1); // Months are 0-indexed
-  newDate.setDate(date); // Need to set date last, to avoid month-overflow
+  const newDate = new SimpleDate(new Date(year, month - 1, date));
+
   if (
     newDate.date() !== date * 1 ||
     newDate.month() + 1 !== month * 1 ||
     newDate.year() !== year * 1
   ) {
-    error(errorTypes.INVALID_DATE);
+    onError(errorTypes.INVALID_DATE);
     return null;
   }
 
-  success(newDate);
+  onSuccess(newDate);
   return newDate;
 };
 
