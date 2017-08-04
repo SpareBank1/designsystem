@@ -1,7 +1,7 @@
 /* eslint-env mocha */
 
 import { assert } from 'chai';
-import { spy } from 'sinon';
+import { spy, useFakeTimers } from 'sinon';
 import simpleDate from './simpledate';
 import ErrorTypes from './error-types';
 
@@ -98,5 +98,34 @@ describe('simpleDate fromString', () => {
         assert.deepEqual(date.format(), '10.10.2016');
       });
     });
+  });
+
+  describe('during last day of month', () => {
+    let clock;
+
+    before(() => {
+      clock = useFakeTimers(new Date(2017, 6, 31).getTime());
+    });
+
+    after(() => {
+      clock.restore();
+    });
+
+    describe('given date from month with 30 days', () => {
+      it('parses', () =>
+        assert.isNotNull(simpleDate.fromString('01.09.2017')));
+
+      it('formats', () =>
+        assert.deepEqual(simpleDate.fromString('01.09.2017').format(), '01.09.2017'));
+    });
+
+    describe('given date from month with 28 days', () => {
+      it('parses', () =>
+        assert.isNotNull(simpleDate.fromString('05.02.2015')));
+
+      it('formats', () =>
+        assert.deepEqual(simpleDate.fromString('05.02.2015').format(), '05.02.2015'));
+    });
+
   });
 });

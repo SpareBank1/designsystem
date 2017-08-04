@@ -1,4 +1,10 @@
 # Changelog
+
+## v2.4.3
+
+* Bugfix: SimpleDate.fromString did not parse valid dates on certain days at the end of a month, which resulted in false-negative validation errors.
+
+
 ## v2.4.2
 
 * Minor error message text fix
