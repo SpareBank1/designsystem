@@ -1,5 +1,10 @@
 # Changelog
 
+## v.8.1.0
+
+* Added `--hide-xlg` modifier which hides columns in `lg` breakpoint (typically desktop).
+* Added `--top` modifier which vertical-aligns content in a columns at the top.
+
 ## v.8.0.1
 
 * `--text-left` now also works with `--condensed` 
