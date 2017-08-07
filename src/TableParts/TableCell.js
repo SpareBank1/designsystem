@@ -2,7 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-const TableCell = ({ children, columnHeader, alignRight, tdClasses, contentClasses }) => {
+const TableCell = (props) => {
+    const {
+        alignRight,
+        alignTop,
+        children,
+        columnHeader,
+        contentClasses,
+        tdClasses,
+    } = props;
 
     let dataTh = '';
     if (columnHeader) {
@@ -15,7 +23,11 @@ const TableCell = ({ children, columnHeader, alignRight, tdClasses, contentClass
 
     return (
         <td
-            className={ classNames('ffe-table__cell', tdClasses) }
+            className={ classNames(
+                'ffe-table__cell',
+                { 'ffe-table__cell--top': alignTop },
+                tdClasses
+            ) }
             data-th={ dataTh }
         >
             <span
@@ -32,11 +44,12 @@ const TableCell = ({ children, columnHeader, alignRight, tdClasses, contentClass
 };
 
 TableCell.propTypes = {
+    alignRight: PropTypes.bool,
+    alignTop: PropTypes.bool,
     children: PropTypes.any,
     columnHeader: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
-    alignRight: PropTypes.bool,
-    tdClasses: PropTypes.string,
     contentClasses: PropTypes.string,
+    tdClasses: PropTypes.string,
 };
 
 export default TableCell;

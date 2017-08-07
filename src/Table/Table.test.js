@@ -147,17 +147,33 @@ describe('<Table />', () => {
     });
 
     it('render screen reader only caption', () => {
-
-        const wrapper = render(<Table data={data} columns={columns} caption="Read me" srOnlyCaption={true} />);
-        expect(wrapper.find('caption')).to.have.length(1);
-        expect(wrapper.find('caption').hasClass('ffe-screenreader-only')).to.equal(true);
-        expect(wrapper.find('caption').text()).to.equal('Read me');
+      const wrapper = render(<Table data={data} columns={columns} caption="Read me" srOnlyCaption={true} />);
+      expect(wrapper.find('caption')).to.have.length(1);
+      expect(wrapper.find('caption').hasClass('ffe-screenreader-only')).to.equal(true);
+      expect(wrapper.find('caption').text()).to.equal('Read me');
     });
 
     it('do not render caption when srOnlyCaption is true but missing caption text', () => {
+      const wrapper = render(<Table data={data} columns={columns} srOnlyCaption={true} />);
+      expect(wrapper.find('caption')).to.have.length(0);
+    });
 
-        const wrapper = render(<Table data={data} columns={columns} srOnlyCaption={true} />);
-        expect(wrapper.find('caption')).to.have.length(0);
+    it('sets correct class for top-alignment on table cells', () => {
+      const columnsWithTopAlignment = columns.map(column => ({ ...column, alignTop: true }));
+
+      const wrapper = render(<Table data={data} columns={columnsWithTopAlignment} />);
+
+      expect(wrapper.find('.ffe-table__cell--top').length).to.equal(9);
+    });
+
+    it('sets correct class for hiding column on desktop', () => {
+      const columnsWithTopAlignment = columns.map((column, index) =>
+          (index === 0 ? { ...column, hideOnDesktop: true } : column)
+      );
+
+      const wrapper = render(<Table data={data} columns={columnsWithTopAlignment} />);
+
+      expect(wrapper.find('.ffe-table--hide-xlg').length).to.equal(4);
     });
   });
 
