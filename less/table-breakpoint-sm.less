@@ -46,6 +46,12 @@
 
     .ffe-table__heading,
     .ffe-table__cell {
+        &.ffe-table--hide-xlg {
+            @media screen and (min-width: @breakpoint-lg) {
+                display: none;
+            }
+        }
+
         &.ffe-table--hide-lg {
             @media screen and (min-width: @breakpoint-md) and (max-width: @breakpoint-lg) {
                 display: none;
