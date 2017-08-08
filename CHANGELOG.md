@@ -1,5 +1,11 @@
 # Changelog
 
+## v4.7.0
+
+* Bump peerDep on `ffe-tables` to `^8.1.0`.
+* Added optional prop `alignTop` to table cells.
+* Added optional prop `hideOnDesktop` to support hiding columns on desktop.
+
 ## v4.6.0
 
 * Bump peerDep on `ffe-tables` to `^8.0.0`.

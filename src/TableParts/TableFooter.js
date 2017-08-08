@@ -16,10 +16,12 @@ const TableFooter = ({ columns }) => {
                             key={ index }
                             columnHeader={ column.header }
                             alignRight={ column.alignRight }
+                            alignTop={ column.alignTop }
                             tdClasses={ classNames(
-                                { 'ffe-table--hide-lg' : column.hideOnTablet },
+                                { 'ffe-table--hide-sm' : column.hideOnMobile },
                                 { 'ffe-table--hide-md' : column.hideOnSmallTablet },
-                                { 'ffe-table--hide-sm' : column.hideOnMobile }
+                                { 'ffe-table--hide-lg' : column.hideOnTablet },
+                                { 'ffe-table--hide-xlg' : column.hideOnDesktop }
                             ) }
                         >
                             { column.footer }
@@ -34,12 +36,14 @@ const TableFooter = ({ columns }) => {
 TableFooter.propTypes = {
     columns: PropTypes.arrayOf(
         PropTypes.shape({
-            header: PropTypes.node.isRequired,
-            footer: PropTypes.any,
             alignRight: PropTypes.bool,
-            hideOnTablet: PropTypes.bool,
-            hideOnSmallTablet: PropTypes.bool,
+            alignTop: PropTypes.bool,
+            footer: PropTypes.any,
+            header: PropTypes.node.isRequired,
+            hideOnDesktop: PropTypes.bool,
             hideOnMobile: PropTypes.bool,
+            hideOnSmallTablet: PropTypes.bool,
+            hideOnTablet: PropTypes.bool,
         })
     ),
 };

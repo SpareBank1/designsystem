@@ -18,15 +18,17 @@ const TableRow = ({ cells, columns, onClick, onKeyDown, trClasses, expandable, e
             { columns.map((column, index) => {
                 return (
                     <TableCell
+                        alignRight={ column.alignRight }
+                        alignTop={ column.alignTop }
+                        columnHeader={ column.header }
                         key={ index }
                         tdClasses={classNames(
                             { 'ffe-table__cell--collapsed' : column.key === 'expandIcon' },
-                            { 'ffe-table--hide-lg' : column.hideOnTablet },
+                            { 'ffe-table--hide-sm' : column.hideOnMobile },
                             { 'ffe-table--hide-md' : column.hideOnSmallTablet },
-                            { 'ffe-table--hide-sm' : column.hideOnMobile }
+                            { 'ffe-table--hide-lg' : column.hideOnTablet },
+                            { 'ffe-table--hide-xlg' : column.hideOnDesktop }
                         )}
-                        columnHeader={ column.header }
-                        alignRight={ column.alignRight }
                     >
                         { cells[column.key] }
                     </TableCell>
@@ -40,19 +42,21 @@ TableRow.propTypes = {
     cells: PropTypes.object.isRequired,
     columns: PropTypes.arrayOf(
         PropTypes.shape({
-            key: PropTypes.string,
-            header: PropTypes.any,
             alignRight: PropTypes.bool,
-            hideOnTablet: PropTypes.bool,
-            hideOnSmallTablet: PropTypes.bool,
+            alignTop: PropTypes.bool,
+            header: PropTypes.any,
+            hideOnDesktop: PropTypes.bool,
             hideOnMobile: PropTypes.bool,
+            hideOnSmallTablet: PropTypes.bool,
+            hideOnTablet: PropTypes.bool,
+            key: PropTypes.string,
         })
     ).isRequired,
-    trClasses: PropTypes.string,
-    onClick: PropTypes.func,
-    onKeyDown: PropTypes.func,
     expandable: PropTypes.bool,
     expanded: PropTypes.bool,
+    onClick: PropTypes.func,
+    onKeyDown: PropTypes.func,
+    trClasses: PropTypes.string,
 };
 
 export default TableRow;
