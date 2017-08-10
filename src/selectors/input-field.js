@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import { func, string, bool, number } from 'prop-types';
 import KryssIkon from 'ffe-icons-react/kryss-ikon';
 
@@ -8,6 +7,8 @@ class Input extends Component {
   constructor(props) {
     super(props);
     this.onChange = this.onChange.bind(this);
+    this.onFocus = this.onFocus.bind(this);
+    this.onBlur = this.onBlur.bind(this);
 
     /*
      IE11 can drop characters when typing fast.
@@ -19,40 +20,45 @@ class Input extends Component {
      */
     this.isIE11 = window.navigator.userAgent.match(/(trident).+rv[:\s]([\w.]+).+like\sgecko/i) !== null;
     this.state = {
-      value : props.value,
+      value: props.value,
+      isFocused: false,
     }
   }
 
   onChangeHandler(handler) {
-    return this.isIE11 ? { onInput: handler }: { onChange: handler };
+    return this.isIE11 ? { onInput: handler } : { onChange: handler };
   }
 
-  onChange(e){
+  onChange(e) {
     const value = e.target.value;
-    ReactDOM.unstable_batchedUpdates(() => {
-      this.setState({ value });
-      this.props.onChange(value);
-    });
+    this.setState({ value });
+    this.props.onChange(value);
   }
 
-  componentWillReceiveProps(nextProps){
-    if(this.state.value !== nextProps.value){
-      this.setState({
-        value : nextProps.value,
-      });
+  onFocus() {
+    this.setState({ isFocused: true });
+    this.props.onFocus();
+  }
+
+  onBlur() {
+    this.setState({ isFocused: false });
+    this.props.onBlur();
+  }
+  
+  componentWillReceiveProps(nextProps) {
+    if (!this.state.isFocused || this.state.value !== nextProps.value) {
+      this.setState({ value: nextProps.value });
     }
   }
 
   render() {
     const {
-      onFocus,
       onKeyDown,
       value,
       id,
       placeholder,
       isSuggestionsShowing,
       ariaInvalid,
-      onBlur,
       onReset,
       inputFieldRef,
       highlightedIndex,
@@ -63,8 +69,8 @@ class Input extends Component {
       <div
         role='combobox'
         aria-expanded={ isSuggestionsShowing }
-        onFocus={ onFocus }
-        onBlur={ onBlur }
+        onFocus={ this.onFocus }
+        onBlur={ this.onBlur }
         aria-activedescendant={highlightedIndex > -1 ? `suggestion-item-${highlightedIndex}` : null}
         aria-owns={suggestionListId}
       >
