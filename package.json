@@ -1,0 +1,85 @@
+{
+  "name": "ffe-searchable-dropdown-react",
+  "version": "1.0.0",
+  "description": "Dropdown with search option",
+  "scripts": {
+    "build": "babel -d lib src",
+    "start": "styleguidist server",
+    "pretest": "eslint src/",
+    "lint:fix": "eslint --fix src/",
+    "test": "jest src",
+    "test:watch": "jest src --watch",
+    "posttest": "nsp check",
+    "prepublish": "npm run build",
+    "has-published": "npm show . versions -s --json | grep -q \\\"${npm_package_version}\\\""
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(css|less)$": "<rootDir>/mock/styleMock.js"
+    }
+  },
+  "keywords": [
+    "ffe"
+  ],
+  "peerDependencies": {
+    "react": "^15.4.0",
+    "ffe-core": "^10.0.0",
+    "ffe-form": "^6.3.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.1",
+    "babel-cli": "^6.23.0",
+    "babel-core": "^6.23.1",
+    "babel-loader": "^7.1.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-latest": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "babel-register": "^6.23.0",
+    "css-loader": "^0.28.4",
+    "enzyme": "^2.7.1",
+    "eslint": "^3.17.1",
+    "eslint-config-ffe": "^6.0.1",
+    "eslint-loader": "^1.8.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^3.0.2",
+    "eslint-plugin-react": "^6.10.0",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "ffe-core": "^10.0.0",
+    "ffe-form": "^6.3.1",
+    "ffe-icons": "^7.9.1",
+    "file-loader": "^0.11.2",
+    "jest": "^20.0.4",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.4",
+    "nsp": "^2.6.3",
+    "postcss-loader": "^2.0.6",
+    "react": "^15.4.2",
+    "react-addons-test-utils": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-styleguidist": "^5.4.8",
+    "webpack": "^3.0.0"
+  },
+  "files": [
+    "less/searchable-dropdown.less",
+    "lib",
+    "*.js"
+  ],
+  "main": "lib/SearchableDropdown.js",
+  "author": "SpareBank 1",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "publishConfig": {
+    "registry": "***REMOVED***"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "ffe-icons-react": "^2.4.9",
+    "lodash.isequal": "^4.5.0",
+    "prop-types": "^15.5.10",
+    "react-custom-scrollbars": "^4.1.2"
+  }
+}
