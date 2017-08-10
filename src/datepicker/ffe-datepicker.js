@@ -59,7 +59,7 @@ export default class FFEDatepicker extends React.Component {
 
       nextState = {
         errorMessage,
-        openOnFocus: false,
+        openOnFocus: true,
         ariaInvalid: true,
         displayDatePicker: false,
       };

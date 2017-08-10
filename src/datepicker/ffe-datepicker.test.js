@@ -76,30 +76,9 @@ describe('<FFEDatepicker />', () => {
       input.simulate('click');
     });
 
-    it('works when the field is cleared', () => {
-      // Click shouldnt work when there is an error...
+    it('works when field contains invalid input', () => {
       expect(wrapper).to.have.descendants(errorClass);
-      expect(wrapper).to.not.have.descendants(Calendar);
-
-      // ...but it should work when we have resetted the field
-      wrapper.setProps({ value: '' });
-      input.simulate('blur');
-      expect(wrapper).to.not.have.descendants(errorClass);
-      input.simulate('click');
-      expect(wrapper).to.have.exactly(1).descendants(Calendar);
-    });
-
-    it('works when the field gets a correct value', () => {
-      // Click shouldnt work when there is an error...
-      expect(wrapper).to.have.descendants(errorClass);
-      expect(wrapper).to.not.have.descendants(Calendar);
-
-      // ...but it should work when we have set a correct value again
-      wrapper.setProps({ value: '14.06.2017' });
-      input.simulate('blur');
-      expect(wrapper).to.not.have.descendants(errorClass);
-      input.simulate('click');
-      expect(wrapper).to.have.exactly(1).descendants(Calendar);
+      expect(wrapper).to.have.descendants(Calendar);
     });
   });
 
