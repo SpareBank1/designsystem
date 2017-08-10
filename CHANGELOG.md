@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.4.4
+
+* Fix bug where the datepicker wasn't clickable with invalid-input.
+
 ## v2.4.3
 
 * Bugfix: SimpleDate.fromString did not parse valid dates on certain days at the end of a month, which resulted in false-negative validation errors.
