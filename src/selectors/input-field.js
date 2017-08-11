@@ -6,6 +6,9 @@ class Input extends Component {
 
   constructor(props) {
     super(props);
+    this.onChange = this.onChange.bind(this);
+    this.onFocus = this.onFocus.bind(this);
+    this.onBlur = this.onBlur.bind(this);
 
     /*
      IE11 can drop characters when typing fast.
@@ -16,23 +19,46 @@ class Input extends Component {
      https://github.com/faisalman/ua-parser-js/blob/master/src/ua-parser.js#L261
      */
     this.isIE11 = window.navigator.userAgent.match(/(trident).+rv[:\s]([\w.]+).+like\sgecko/i) !== null;
+    this.state = {
+      value: props.value,
+      isFocused: false,
+    }
   }
 
   onChangeHandler(handler) {
-    return this.isIE11 ? { onInput: handler }: { onChange: handler };
+    return this.isIE11 ? { onInput: handler } : { onChange: handler };
+  }
+
+  onChange(e) {
+    const value = e.target.value;
+    this.setState({ value });
+    this.props.onChange(value);
+  }
+
+  onFocus() {
+    this.setState({ isFocused: true });
+    this.props.onFocus();
+  }
+
+  onBlur() {
+    this.setState({ isFocused: false });
+    this.props.onBlur();
+  }
+  
+  componentWillReceiveProps(nextProps) {
+    if (!this.state.isFocused || this.state.value !== nextProps.value) {
+      this.setState({ value: nextProps.value });
+    }
   }
 
   render() {
     const {
-      onFocus,
-      onChange,
       onKeyDown,
       value,
       id,
       placeholder,
       isSuggestionsShowing,
       ariaInvalid,
-      onBlur,
       onReset,
       inputFieldRef,
       highlightedIndex,
@@ -43,8 +69,8 @@ class Input extends Component {
       <div
         role='combobox'
         aria-expanded={ isSuggestionsShowing }
-        onFocus={ onFocus }
-        onBlur={ onBlur }
+        onFocus={ this.onFocus }
+        onBlur={ this.onBlur }
         aria-activedescendant={highlightedIndex > -1 ? `suggestion-item-${highlightedIndex}` : null}
         aria-owns={suggestionListId}
       >
@@ -52,14 +78,14 @@ class Input extends Component {
           className='ffe-input-field ffe-dropdown ffe-base-selector__input-field'
           onKeyDown={ onKeyDown }
           autoComplete='off'
-          value={ value }
+          value={ this.state.value }
           id={ id }
           placeholder={ placeholder }
           ref={inputFieldRef}
           aria-invalid={ ariaInvalid }
           aria-autocomplete='list'
           name={ name }
-          {...this.onChangeHandler((e) => onChange(e.target.value))}
+          {...this.onChangeHandler(this.onChange)}
         />
         { value.length > 0 &&
         <button
