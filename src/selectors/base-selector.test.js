@@ -270,6 +270,18 @@ describe('<BaseSelector> keyboard navigation', () => {
     assertHomeEnd(KeyCodes.HOME, 'setFirstHighlighted');
   });
 
+  it('should not prevent HOME and END events when no matching suggestions', () => {
+    const suggestionFilterStub = sinon.stub().returns(() => false);
+    const component = shallowBaseSelector({suggestionFilter: suggestionFilterStub}).instance();
+    const preventDefaultSpy = sinon.spy();
+    component.state.showSuggestions = true;
+    component.onInputKeyDown({ which: KeyCodes.END, preventDefault: preventDefaultSpy });
+    component.onInputKeyDown({ which: KeyCodes.HOME, prevenDefault: preventDefaultSpy });
+
+    assert.equal(suggestionFilterStub.callCount, 2);
+    assert.equal(preventDefaultSpy.callCount, 0);
+  });
+
   it('should move to last suggestion on END', () => {
     assertHomeEnd(KeyCodes.END, 'setLastHighlighted');
   });
