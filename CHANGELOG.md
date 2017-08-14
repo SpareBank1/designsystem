@@ -1,5 +1,8 @@
 # Changelog
 
+## v.7.0.2
+* Fixed `peerDependencies` field for `ffe-core` that was mixed up with `devDepedencies`
+
 ## v.7.0.1
 * Fixed bug where delete button was not visually focused on file-upload
 * Fixed vertical alignment to center on uploaded files
