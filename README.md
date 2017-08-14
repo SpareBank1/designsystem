@@ -21,19 +21,7 @@ styling:
 
 ## Available props
 
-```
-displayResetWhenInputHasValue: PropTypes.bool,
-dropdownList: PropTypes.arrayOf(PropTypes.object).isRequired,
-dropdownAttributes: PropTypes.array,  //will display these attributes for each item (no more than two)
-initialInputValue: PropTypes.string,
-noMatch: PropTypes.string.isRequired,
-onInputChange: PropTypes.func.isRequired,
-onReset: PropTypes.func.isRequired,
-placeholder: PropTypes.string,
-renderDropdownElement: PropTypes.func, //if you wish to customise the list items
-searchAttributes: PropTypes.array.isRequired, 
-
-```
+See propTypes in [SearchableDropdown.ja](src/SearchableDropdown.js)
 
 ## Development
 ```
