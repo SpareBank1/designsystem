@@ -199,6 +199,7 @@ export default class FFEDatepicker extends Component {
 
   render() {
     const {
+      hideErrors,
       inputProps = {},
       label,
       language,
@@ -242,16 +243,16 @@ export default class FFEDatepicker extends Component {
             onFocus={ this.onInputFocus }
             onKeyDown={ this.onInputKeydown }
             ref={ c => { this.dateInputRef = c; } }
-            value={ this.props.value }
+            value={ value }
           />
 
-          { this.ariaInvalid() &&
+          { this.state.ariaInvalid && !hideErrors &&
               <div
                 id={`date-input-validation-${this.datepickerId}`}
                 className="ffe-body-text ffe-field-error-message"
                 role="alert"
               >
-                { this.props.errorMessage || this.state.errorMessage }
+                { this.state.errorMessage }
               </div>
           }
 
@@ -275,7 +276,7 @@ export default class FFEDatepicker extends Component {
 FFEDatepicker.propTypes = {
   ariaInvalid: bool,
   calendarAbove: bool,
-  errorMessage: string,
+  hideErrors: bool,
   inputProps: shape({
     className: string,
     id: string,

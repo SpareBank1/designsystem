@@ -1,5 +1,11 @@
 # Changelog
 
+## v2.5.0
+
+* Add property `hideErrors`, which hides the internal datepicker error output if any
+* Improve readme slightly
+* Internal refactor and formatting cleanup
+
 ## v2.4.4
 
 * Fix bug where the datepicker wasn't clickable with invalid-input.

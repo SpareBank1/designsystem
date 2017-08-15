@@ -191,6 +191,11 @@ describe('<FFEDatepicker />', () => {
 
       it('has an error message', () =>
         expect(wrapper).to.have.descendants(errorClass));
+
+      it('hides error message if hideErrors prop is true', () => {
+        wrapper.setProps({ hideErrors: true });
+        expect(wrapper).to.not.have.descendants(errorClass);
+      });
     });
 
     describe('with date', () => {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { render } from 'react-dom';
 import Datepicker, { ErrorTypes } from '../src/ffe-datepicker-react';
 require('./example.less');
@@ -11,7 +11,7 @@ document.body.appendChild(heading);
 const datepicker = document.createElement('section');
 document.body.appendChild(datepicker);
 
-class DatepickerExample extends React.Component {
+class DatepickerExample extends Component {
 
   constructor() {
     super();
