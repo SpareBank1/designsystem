@@ -199,7 +199,7 @@ export default class FFEDatepicker extends Component {
 
   render() {
     const {
-      inputProps,
+      inputProps = {},
       label,
       language,
       maxDate,

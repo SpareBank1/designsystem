@@ -1,5 +1,5 @@
 import React from 'react';
-import { shape, string } from 'prop-types';
+import { shape, number } from 'prop-types';
 
 export default function LeadDate(props) {
   return (
@@ -15,6 +15,6 @@ export default function LeadDate(props) {
 
 LeadDate.propTypes = {
   date: shape({
-    timestamp: string.isRequired,
+    timestamp: number.isRequired,
   }).isRequired,
 };

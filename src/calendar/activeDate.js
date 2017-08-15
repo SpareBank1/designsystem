@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { bool, func, shape, string } from 'prop-types';
+import { bool, func, number, oneOfType, shape, string } from 'prop-types';
 import classNames from 'classnames';
 
 export default class ActiveDate extends Component {
@@ -61,8 +61,8 @@ export default class ActiveDate extends Component {
 
     return (
       <td
-        aria-selected={ date.isSelected }
         aria-disabled={ !date.isEnabled }
+        aria-selected={ date.isSelected }
         className={ this.dayClassName() }
         headers={ headers }
         onClick={ () => onClick(date) }
@@ -79,7 +79,7 @@ export default class ActiveDate extends Component {
 
 ActiveDate.propTypes = {
   date: shape({
-    date: shape({}),
+    date: oneOfType([func, number]),
     isEnabled: bool,
     isFocus: bool,
     isSelected: bool,
