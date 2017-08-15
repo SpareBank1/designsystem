@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { bool, func, shape, string } from 'prop-types';
 import classNames from 'classnames';
 
-export default class ActiveDate extends React.Component {
+export default class ActiveDate extends Component {
 
   componentDidMount() {
     if (this.props.date.isFocus && this.props.setFocusOnInitialMount) {

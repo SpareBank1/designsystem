@@ -1,5 +1,5 @@
 /*eslint jsx-a11y/onclick-has-focus:1 jsx-a11y/onclick-has-role:1 */
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Calendar from '../calendar/ffe-calendar';
@@ -9,7 +9,7 @@ import SimpleDate from '../datelogic/simpledate';
 import dateErrorTypes from '../datelogic/error-types';
 import i18n from '../i18n/i18n';
 
-export default class FFEDatepicker extends React.Component {
+export default class FFEDatepicker extends Component {
 
   constructor(props) {
     super(props);
