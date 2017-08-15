@@ -12,7 +12,7 @@ export default class ActiveDate extends Component {
     this.focusIfNeeded();
   }
 
-  focusIfNeeded(){
+  focusIfNeeded() {
     const {
       date,
       setFocusOnInitialMount,
@@ -24,7 +24,7 @@ export default class ActiveDate extends Component {
   }
 
   dateClassName() {
-    const{
+    const {
       isEnabled,
       isFocus,
       isSelected,

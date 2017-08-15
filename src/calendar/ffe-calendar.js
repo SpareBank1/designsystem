@@ -24,7 +24,7 @@ export default class Datepicker extends Component {
 
     this.onBlur = props.onBlurHandler;
 
-    this.datepickerId = `ffe-calendar-${uuid.v4())}`;
+    this.datepickerId = `ffe-calendar-${uuid.v4()}`;
     this.dateShouldSetFocusOnInitialMount = false;
 
     this.keyDown = this.keyDown.bind(this);
@@ -68,7 +68,7 @@ export default class Datepicker extends Component {
       KeyCode.RIGHT,
       KeyCode.DOWN,
     ];
-    if (scrollableEvents.indexOf(event.which) !== -1) {
+    if (scrollableEvents.includes(event.which)) {
       event.preventDefault();
     }
 
@@ -153,53 +153,68 @@ export default class Datepicker extends Component {
 
   renderDate(date, index) {
     if (date.isLead) {
-      return <LeadDate key={ date.date } date={ date } />;
+      return (
+        <LeadDate key={ date.date } date={ date } />
+      );
     }
     return (
       <ActiveDate
-        key={ date.date }
         date={ date }
-        setFocusOnInitialMount={ this.dateShouldSetFocusOnInitialMount }
-        onClick={ (clickedDate) => this.mouseClick(clickedDate) }
         headers={ `header__${this.datepickerId}__${index}` }
+        key={ date.date }
+        onClick={ this.mouseClick }
+        setFocusOnInitialMount={ this.dateShouldSetFocusOnInitialMount }
       />
     );
   }
 
   renderWeek(week) {
-    return <tr key={ `week-${week.number}` } role="row">{ week.dates.map(this.renderDate) }</tr>;
+    return (
+      <tr
+        key={ `week-${week.number}` }
+        role="row"
+      >
+        { week.dates.map(this.renderDate) }
+      </tr>
+    );
   }
 
   renderDay(day, index) {
     return (
       <th
+        aria-label={ day.name }
         className="ffe-calendar__weekday"
+        id={ `header__${this.datepickerId}__${index}` }
         key={ day.name }
         role="columnheader"
-        aria-label={ day.name }
-        id={ `header__${this.datepickerId}__${index}` }
       >
-        <span title={ day.name }>{ day.shortName }</span>
+        <span title={ day.name }>
+          { day.shortName }
+        </span>
       </th>
     );
   }
 
   render() {
+    const {
+      calendar,
+    } = this.state;
+
     return (
       <div
-        className={ this.props.calendarClassName || 'ffe-calendar' }
         aria-labelledby={`${this.datepickerId}-title`}
+        className={ this.props.calendarClassName || 'ffe-calendar' }
         onFocus={ this.focusHandler }
         role="region"
       >
       <Header
-        month={ this.state.calendar.focusedMonth() }
-        year={ this.state.calendar.focusedYear() }
-        previousMonthLabel={ this.state.calendar.previousName() }
-        nextMonthLabel={ this.state.calendar.nextName() }
         datepickerId={ this.datepickerId }
-        previousMonthHandler={ this.previousMonth }
+        month={ calendar.focusedMonth() }
         nextMonthHandler={ this.nextMonth }
+        nextMonthLabel={ calendar.nextName() }
+        previousMonthHandler={ this.previousMonth }
+        previousMonthLabel={ calendar.previousName() }
+        year={ calendar.focusedYear() }
       />
       <table
         className="ffe-calendar__grid"
@@ -209,11 +224,11 @@ export default class Datepicker extends Component {
       >
         <thead>
           <tr role="row">
-            { this.state.calendar.dayNames().map(this.renderDay) }
+            { calendar.dayNames().map(this.renderDay) }
           </tr>
         </thead>
         <tbody>
-          { this.state.calendar.visibleDates().map(this.renderWeek) }
+          { calendar.visibleDates().map(this.renderWeek) }
         </tbody>
       </table>
     </div>);
@@ -224,9 +239,9 @@ Datepicker.propTypes = {
   calendarClassName: string,
   escKeyHandler: func,
   language: string.isRequired,
-  onDatePicked: func.isRequired,
-  onBlurHandler: func,
-  selectedDate: string,
   maxDate: string,
   minDate: string,
+  onBlurHandler: func,
+  onDatePicked: func.isRequired,
+  selectedDate: string,
 };

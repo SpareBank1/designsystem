@@ -9,30 +9,39 @@ export default class FFEDateInput extends Component {
     this._input.focus();
   }
 
+  inputClassNames(extraClassNames) {
+    return classNames(
+      'ffe-dateinput__field',
+      'ffe-input-field',
+      extraClassNames
+    );
+  }
+
   render() {
     const {
+      ariaInvalid,
       inputProps = {},
+      onBlur,
+      onChange,
+      onFocus,
+      onKeyDown,
+      value,
     } = this.props;
 
     return (
       <div className="ffe-dateinput">
         <input
-          type="text"
+          aria-invalid={ ariaInvalid }
           maxLength="10"
-          value={ this.props.value }
-          onFocus={ this.props.onFocus }
-          onBlur={ this.props.onBlur }
-          onChange={ this.props.onChange }
-          onKeyPress={ this.props.onKeyDown }
-          onKeyDown={ this.props.onKeyDown }
+          onFocus={ onFocus }
+          onBlur={ onBlur }
+          onChange={ onChange }
+          onKeyPress={ onKeyDown }
+          onKeyDown={ onKeyDown }
           ref={ c => { this._input = c; } }
-          aria-invalid={ this.props.ariaInvalid }
+          value={ value }
           { ...inputProps }
-          className={ classNames(
-            'ffe-dateinput__field',
-            'ffe-input-field',
-            givenInputProps.className
-          ) }
+          className={ this.inputClassNames(inputProps.className) }
         />
         <KalenderIkon className="ffe-dateinput__icon" />
       </div>

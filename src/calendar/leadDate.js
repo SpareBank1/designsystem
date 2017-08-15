@@ -1,14 +1,14 @@
 import React from 'react';
 import { shape, string } from 'prop-types';
 
-export default function LeadDate({ date }) {
+export default function LeadDate(props) {
   return (
     <td
-      className="ffe-calendar__day"
-      key={ date.timestamp }
-      role="gridcell"
-      aria-selected="false"
       aria-disabled="true"
+      aria-selected="false"
+      className="ffe-calendar__day"
+      key={ props.date.timestamp }
+      role="gridcell"
     />
   );
 }
