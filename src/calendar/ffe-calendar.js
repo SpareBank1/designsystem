@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { func, string } from 'prop-types';
+import uuid from 'uuid';
 import ActiveDate from './activeDate';
 import LeadDate from './leadDate';
 import Header from './header';
@@ -23,7 +24,7 @@ export default class Datepicker extends Component {
 
     this.onBlur = props.onBlurHandler;
 
-    this.datepickerId = `ffe-calendar-${Math.floor(Math.random() * 1000)}`;
+    this.datepickerId = `ffe-calendar-${uuid.v4())}`;
     this.dateShouldSetFocusOnInitialMount = false;
 
     this.keyDown = this.keyDown.bind(this);
