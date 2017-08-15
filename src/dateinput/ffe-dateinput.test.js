@@ -1,71 +1,83 @@
 /* eslint-env mocha */
 
 import { shallow } from 'enzyme';
-import { assert } from 'chai';
-import { spy } from 'sinon';
+import { expect } from 'chai';
+import sinon from 'sinon';
 import React from 'react';
 import FFEDateInput from './ffe-dateinput';
 
-describe('<FFEDateInput />', () => {
-  const onChange = spy();
-  const onFocus = spy();
-  const onKeyDown = spy();
+const defaultProps = {
+  inputProps:{ className: 'given-class-name', placeholder: 'Given placeholder' },
+  onChange: f => f,
+  onFocus: f => f,
+  onKeyDown: f => f,
+  value: '2016-03-07',
+  'aria-invalid': 'false',
+};
 
-  const component = shallow(
-    <FFEDateInput
-      inputProps={{ className: 'given-class-name', placeholder: 'Given placeholder' }}
-      onChange={onChange}
-      onFocus={onFocus}
-      onKeyDown={onKeyDown}
-      value="2016-03-07"
-      ariaInvalid={false}
-    />
-  );
+const getWrapper = props => shallow(<FFEDateInput {...defaultProps} {...props} />);
 
+describe.only('<FFEDateInput />', () => {
   it('should render a wrapper for the input field', () => {
-    assert.isTrue(component.is('.ffe-dateinput'));
+    const wrapper = getWrapper();
+    expect(wrapper.hasClass('ffe-dateinput')).to.equal(true);
   });
 
   describe('nested input field', () => {
-    const input = component.find('input');
-
     it('should be a single input field', () => {
-      assert.equal(component.length, 1);
+      const input = getWrapper().find('input');
+      expect(input.length).to.equal(1);
     });
 
     it('should have BEM element class name', () => {
-      assert.isTrue(input.hasClass('ffe-dateinput__field'));
+      const input = getWrapper().find('input');
+      expect(input.hasClass('ffe-dateinput__field')).to.equal(true);
     });
 
     it('should have given value', () => {
-      assert.equal(input.prop('value'), '2016-03-07');
+      const input = getWrapper().find('input');
+      expect(input.prop('value')).to.equal('2016-03-07');
     });
 
     it('should have property from input props', () => {
-      assert.equal(input.prop('placeholder'), 'Given placeholder');
+      const input = getWrapper().find('input');
+      expect(input.prop('placeholder')).to.equal('Given placeholder');
     });
 
     it('should have given aria-invalid', () => {
-      assert.equal(input.prop('aria-invalid'), false);
+      const input = getWrapper().find('input');
+      expect(input.prop('aria-invalid')).to.equal('false');
+    });
+
+    it('should fall back to use ariaInvalid prop if aria-invalid is not set', () => {
+      const input = getWrapper({ 'aria-invalid': undefined, ariaInvalid: true }).find('input');
+      expect(input.prop('aria-invalid')).to.equal('true');
     });
 
     it('should have class name from input props', () => {
-      assert.isTrue(input.hasClass('given-class-name'));
+      const input = getWrapper().find('input');
+      expect(input.hasClass('given-class-name')).to.equal(true);
     });
 
     it('should delegate change events', () => {
+      const spy = sinon.spy();
+      const input = getWrapper({ onChange: spy }).find('input');
       input.simulate('change');
-      assert.isTrue(onChange.calledOnce);
+      expect(spy.calledOnce).to.equal(true);
     });
 
     it('should delegate focus events', () => {
+      const spy = sinon.spy();
+      const input = getWrapper({ onFocus: spy }).find('input');
       input.simulate('focus');
-      assert.isTrue(onFocus.calledOnce);
+      expect(spy.calledOnce).to.equal(true);
     });
 
     it('should delegate key down events', () => {
+      const spy = sinon.spy();
+      const input = getWrapper({ onKeyDown: spy }).find('input');
       input.simulate('keypress');
-      assert.isTrue(onKeyDown.calledOnce);
+      expect(spy.calledOnce).to.equal(true);
     });
   });
 });
