@@ -41,13 +41,13 @@ function Header(props) {
 }
 
 Header.propTypes = {
-  month: PropTypes.string.isRequired,
-  year: PropTypes.number.isRequired,
-  previousMonthLabel: PropTypes.string.isRequired,
-  nextMonthLabel: PropTypes.string.isRequired,
-  datepickerId: PropTypes.string.isRequired,
-  previousMonthHandler: PropTypes.func.isRequired,
-  nextMonthHandler: PropTypes.func.isRequired,
+  month: string.isRequired,
+  year: number.isRequired,
+  previousMonthLabel: string.isRequired,
+  nextMonthLabel: string.isRequired,
+  datepickerId: string.isRequired,
+  previousMonthHandler: func.isRequired,
+  nextMonthHandler: func.isRequired,
 };
 
 export default Header;

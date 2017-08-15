@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { bool, func, shape, string } from 'prop-types';
 import classNames from 'classnames';
 
 export default class ActiveDate extends React.Component {
@@ -57,8 +57,14 @@ export default class ActiveDate extends React.Component {
 }
 
 ActiveDate.propTypes = {
-  date: PropTypes.object.isRequired,
-  setFocusOnInitialMount: PropTypes.bool.isRequired,
-  onClick: PropTypes.func.isRequired,
-  headers: PropTypes.string.isRequired,
+  date: shape({
+    date: shape({}),
+    isEnabled: bool,
+    isFocus: bool,
+    isSelected: bool,
+    isToday: bool,
+  }).isRequired,
+  headers: string.isRequired,
+  onClick: func.isRequired,
+  setFocusOnInitialMount: bool.isRequired,
 };

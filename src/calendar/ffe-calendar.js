@@ -1,5 +1,5 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import { func, string } from 'prop-types';
 import ActiveDate from './activeDate';
 import LeadDate from './leadDate';
 import Header from './header';
@@ -7,7 +7,7 @@ import KeyCode from '../util/keyCode';
 import simpleDate from '../datelogic/simpledate';
 import simpleCalendar from '../datelogic/simplecalendar';
 
-export default class Datepicker extends React.Component {
+export default class Datepicker extends Component {
 
   constructor(props) {
     super(props);
@@ -220,12 +220,12 @@ export default class Datepicker extends React.Component {
 }
 
 Datepicker.propTypes = {
-  onDatePicked: PropTypes.func.isRequired,
-  language: PropTypes.string.isRequired,
-  onBlurHandler: PropTypes.func,
-  escKeyHandler: PropTypes.func,
-  selectedDate: PropTypes.string,
-  minDate: PropTypes.string,
-  maxDate: PropTypes.string,
-  calendarClassName: PropTypes.string,
+  calendarClassName: string,
+  escKeyHandler: func,
+  language: string.isRequired,
+  onDatePicked: func.isRequired,
+  onBlurHandler: func,
+  selectedDate: string,
+  maxDate: string,
+  minDate: string,
 };

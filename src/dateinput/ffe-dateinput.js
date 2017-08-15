@@ -1,20 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import { bool, func, string, shape } from 'prop-types';
 import classNames from 'classnames';
 import KalenderIkon from 'ffe-icons-react/kalender-ikon';
 
-export default class FFEDateInput extends React.Component {
+export default class FFEDateInput extends Component {
 
   focus() {
     this._input.focus();
   }
 
   render() {
-    const givenInputProps = this.props.inputProps || {};
-    const inputProps = {
-      ...givenInputProps,
-      className: classNames('ffe-dateinput__field', 'ffe-input-field', givenInputProps.className),
-    };
+    const {
+      inputProps = {},
+    } = this.props;
+
     return (
       <div className="ffe-dateinput">
         <input
@@ -29,6 +28,11 @@ export default class FFEDateInput extends React.Component {
           ref={ c => { this._input = c; } }
           aria-invalid={ this.props.ariaInvalid }
           { ...inputProps }
+          className={ classNames(
+            'ffe-dateinput__field',
+            'ffe-input-field',
+            givenInputProps.className
+          ) }
         />
         <KalenderIkon className="ffe-dateinput__icon" />
       </div>
@@ -37,11 +41,13 @@ export default class FFEDateInput extends React.Component {
 }
 
 FFEDateInput.propTypes = {
-  onFocus: PropTypes.func,
-  onBlur: PropTypes.func,
-  onChange: PropTypes.func.isRequired,
-  onKeyDown: PropTypes.func,
-  value: PropTypes.string.isRequired,
-  inputProps: PropTypes.object,
-  ariaInvalid: PropTypes.bool,
+  ariaInvalid: bool,
+  inputProps: shape({
+    className: string,
+  }),
+  onBlur: func,
+  onChange: func.isRequired,
+  onFocus: func,
+  onKeyDown: func,
+  value: string.isRequired,
 };
