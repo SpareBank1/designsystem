@@ -3,6 +3,7 @@
 ## v2.5.0
 
 * Add property `hideErrors`, which hides the internal datepicker error output if any
+* Fix typo in class name for `ffe-calendar__date--focus`, making it not apply the correct styles
 * Improve readme slightly
 * Internal refactor and formatting cleanup
 
