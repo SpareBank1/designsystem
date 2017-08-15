@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { bool, func, string, shape } from 'prop-types';
+import { bool, func, oneOfType, string, shape } from 'prop-types';
 import classNames from 'classnames';
 import KalenderIkon from 'ffe-icons-react/kalender-ikon';
 
@@ -31,7 +31,7 @@ export default class FFEDateInput extends Component {
     return (
       <div className="ffe-dateinput">
         <input
-          aria-invalid={ ariaInvalid }
+          aria-invalid={ String(this.props['aria-invalid'] || ariaInvalid) }
           maxLength="10"
           onFocus={ onFocus }
           onBlur={ onBlur }
@@ -50,7 +50,8 @@ export default class FFEDateInput extends Component {
 }
 
 FFEDateInput.propTypes = {
-  ariaInvalid: bool,
+  'aria-invalid': string,
+  ariaInvalid: oneOfType([bool, string]),
   inputProps: shape({
     className: string,
   }),

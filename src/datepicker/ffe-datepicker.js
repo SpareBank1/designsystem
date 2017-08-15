@@ -1,6 +1,6 @@
 /*eslint jsx-a11y/onclick-has-focus:1 jsx-a11y/onclick-has-role:1 */
 import React, { Component } from 'react';
-import { bool, func, shape, string } from 'prop-types';
+import { bool, func, oneOfType, shape, string } from 'prop-types';
 import classNames from 'classnames';
 import uuid from 'uuid';
 import Calendar from '../calendar/ffe-calendar';
@@ -189,12 +189,9 @@ export default class FFEDatepicker extends Component {
   }
 
   ariaInvalid() {
-    const { ariaInvalid } = this.props;
-    if (ariaInvalid !== undefined && ariaInvalid !== null) {
-      return ariaInvalid;
-    }
+    const ariaInvalid = this.props['aria-invalid'] || this.props.ariaInvalid;
 
-    return this.state.ariaInvalid;
+    return [null, undefined].every(val => val !== ariaInvalid) ? ariaInvalid : this.state.ariaInvalid;
   }
 
   render() {
@@ -209,7 +206,7 @@ export default class FFEDatepicker extends Component {
       value,
     } = this.props;
 
-    if (this.ariaInvalid()) {
+    if (this.state.ariaInvalid) {
       inputProps['aria-describedby'] = `date-input-validation-${this.datepickerId}`;
     }
 
@@ -236,7 +233,7 @@ export default class FFEDatepicker extends Component {
           tabIndex={ -1 }
         >
           <DateInput
-            ariaInvalid={ this.ariaInvalid() }
+            aria-invalid={ this.ariaInvalid() }
             inputProps={ inputProps }
             onBlur={ this.onInputBlur }
             onChange={ (evt) => onChange(evt.target.value) }
@@ -274,7 +271,8 @@ export default class FFEDatepicker extends Component {
 }
 
 FFEDatepicker.propTypes = {
-  ariaInvalid: bool,
+  'aria-invalid': string,
+  ariaInvalid: oneOfType([bool, string]),
   calendarAbove: bool,
   hideErrors: bool,
   inputProps: shape({
