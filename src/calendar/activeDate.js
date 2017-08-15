@@ -1,36 +1,51 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import { bool, func, number, oneOfType, shape, string } from 'prop-types';
 import classNames from 'classnames';
 
-export default class ActiveDate extends React.Component {
+export default class ActiveDate extends Component {
 
   componentDidMount() {
-    if (this.props.date.isFocus && this.props.setFocusOnInitialMount) {
-      this._datecell.focus();
-    }
+    this.focusIfNeeded();
   }
 
   componentDidUpdate() {
-    if (this.props.date.isFocus && this.props.setFocusOnInitialMount) {
+    this.focusIfNeeded();
+  }
+
+  focusIfNeeded() {
+    const {
+      date,
+      forceFocus,
+    } = this.props;
+
+    if (date.isFocus && forceFocus) {
       this._datecell.focus();
     }
   }
 
   dateClassName() {
+    const {
+      isEnabled,
+      isFocus,
+      isSelected,
+      isToday,
+    } = this.props.date;
+
     return classNames({
       'ffe-calendar__date': true,
-      'ffe-calendar__date--today': this.props.date.isToday,
-      'ffe-calendar__date--focus': this.props.date.isFocus,
-      'ffe-calendar__date--disabled': !this.props.date.isEnabled,
-      'ffe-calendar__date--selected': this.props.date.isSelected,
-      'ffe-calendar__date--disabled-focus': !this.props.date.isEnabled && this.props.date.isFocus,
+      'ffe-calendar__date--today': isToday,
+      'ffe-calendar__date--focus': isFocus,
+      'ffe-calendar__date--disabled': !isEnabled,
+      'ffe-calendar__date--selected': isSelected,
+      'ffe-calendar__date--disabled-focus': !isEnabled && isFocus,
     });
   }
 
   dayClassName() {
-    let className = 'ffe-calendar__day';
-    className += this.props.date.isFocus ? ' ffe-calendar_date--focus' : '';
-    return className;
+    return classNames(
+      'ffe-calendar__day',
+      { 'ffe-calendar__date--focus' : this.props.date.isFocus }
+    );
   }
 
   tabIndex() {
@@ -38,27 +53,39 @@ export default class ActiveDate extends React.Component {
   }
 
   render() {
+    const {
+      date,
+      headers,
+      onClick,
+    } = this.props;
+
     return (
       <td
+        aria-disabled={ !date.isEnabled }
+        aria-selected={ date.isSelected }
         className={ this.dayClassName() }
+        headers={ headers }
+        onClick={ () => onClick(date) }
+        ref={ c => { this._datecell = c; } }
         role="gridcell"
         tabIndex={ this.tabIndex() }
-        ref={ c => { this._datecell = c; } }
-        aria-selected={ this.props.date.isSelected }
-        aria-disabled={ !this.props.date.isEnabled }
-        onClick={ () => this.props.onClick(this.props.date) }
-        headers={ this.props.headers }
       >
         <span className={ this.dateClassName() }>
-          { this.props.date.date }
+          { date.date }
         </span>
       </td>);
   }
 }
 
 ActiveDate.propTypes = {
-  date: PropTypes.object.isRequired,
-  setFocusOnInitialMount: PropTypes.bool.isRequired,
-  onClick: PropTypes.func.isRequired,
-  headers: PropTypes.string.isRequired,
+  date: shape({
+    date: oneOfType([func, number]),
+    isEnabled: bool,
+    isFocus: bool,
+    isSelected: bool,
+    isToday: bool,
+  }).isRequired,
+  headers: string.isRequired,
+  onClick: func.isRequired,
+  forceFocus: bool.isRequired,
 };

@@ -1,5 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import { func, string } from 'prop-types';
+import uuid from 'uuid';
 import ActiveDate from './activeDate';
 import LeadDate from './leadDate';
 import Header from './header';
@@ -7,7 +8,7 @@ import KeyCode from '../util/keyCode';
 import simpleDate from '../datelogic/simpledate';
 import simpleCalendar from '../datelogic/simplecalendar';
 
-export default class Datepicker extends React.Component {
+export default class Datepicker extends Component {
 
   constructor(props) {
     super(props);
@@ -23,8 +24,8 @@ export default class Datepicker extends React.Component {
 
     this.onBlur = props.onBlurHandler;
 
-    this.datepickerId = `ffe-calendar-${Math.floor(Math.random() * 1000)}`;
-    this.dateShouldSetFocusOnInitialMount = false;
+    this.datepickerId = `ffe-calendar-${uuid.v4()}`;
+    this.forceDateFocus = false;
 
     this.keyDown = this.keyDown.bind(this);
     this.mouseClick = this.mouseClick.bind(this);
@@ -67,7 +68,7 @@ export default class Datepicker extends React.Component {
       KeyCode.RIGHT,
       KeyCode.DOWN,
     ];
-    if (scrollableEvents.indexOf(event.which) !== -1) {
+    if (scrollableEvents.includes(event.which)) {
       event.preventDefault();
     }
 
@@ -135,7 +136,7 @@ export default class Datepicker extends React.Component {
   }
 
   focusHandler() {
-    this.dateShouldSetFocusOnInitialMount = true;
+    this.forceDateFocus = true;
   }
 
   nextMonth(evt) {
@@ -152,53 +153,68 @@ export default class Datepicker extends React.Component {
 
   renderDate(date, index) {
     if (date.isLead) {
-      return <LeadDate key={ date.date } date={ date } />;
+      return (
+        <LeadDate key={ date.date } date={ date } />
+      );
     }
     return (
       <ActiveDate
-        key={ date.date }
         date={ date }
-        setFocusOnInitialMount={ this.dateShouldSetFocusOnInitialMount }
-        onClick={ (clickedDate) => this.mouseClick(clickedDate) }
         headers={ `header__${this.datepickerId}__${index}` }
+        key={ date.date }
+        onClick={ this.mouseClick }
+        forceFocus={ this.forceDateFocus }
       />
     );
   }
 
   renderWeek(week) {
-    return <tr key={ `week-${week.number}` } role="row">{ week.dates.map(this.renderDate) }</tr>;
+    return (
+      <tr
+        key={ `week-${week.number}` }
+        role="row"
+      >
+        { week.dates.map(this.renderDate) }
+      </tr>
+    );
   }
 
   renderDay(day, index) {
     return (
       <th
+        aria-label={ day.name }
         className="ffe-calendar__weekday"
+        id={ `header__${this.datepickerId}__${index}` }
         key={ day.name }
         role="columnheader"
-        aria-label={ day.name }
-        id={ `header__${this.datepickerId}__${index}` }
       >
-        <span title={ day.name }>{ day.shortName }</span>
+        <span title={ day.name }>
+          { day.shortName }
+        </span>
       </th>
     );
   }
 
   render() {
+    const {
+      calendar,
+    } = this.state;
+
     return (
       <div
-        className={ this.props.calendarClassName || 'ffe-calendar' }
         aria-labelledby={`${this.datepickerId}-title`}
+        className={ this.props.calendarClassName || 'ffe-calendar' }
         onFocus={ this.focusHandler }
         role="region"
       >
       <Header
-        month={ this.state.calendar.focusedMonth() }
-        year={ this.state.calendar.focusedYear() }
-        previousMonthLabel={ this.state.calendar.previousName() }
-        nextMonthLabel={ this.state.calendar.nextName() }
         datepickerId={ this.datepickerId }
-        previousMonthHandler={ this.previousMonth }
+        month={ calendar.focusedMonth() }
         nextMonthHandler={ this.nextMonth }
+        nextMonthLabel={ calendar.nextName() }
+        previousMonthHandler={ this.previousMonth }
+        previousMonthLabel={ calendar.previousName() }
+        year={ calendar.focusedYear() }
       />
       <table
         className="ffe-calendar__grid"
@@ -208,11 +224,11 @@ export default class Datepicker extends React.Component {
       >
         <thead>
           <tr role="row">
-            { this.state.calendar.dayNames().map(this.renderDay) }
+            { calendar.dayNames().map(this.renderDay) }
           </tr>
         </thead>
         <tbody>
-          { this.state.calendar.visibleDates().map(this.renderWeek) }
+          { calendar.visibleDates().map(this.renderWeek) }
         </tbody>
       </table>
     </div>);
@@ -220,12 +236,12 @@ export default class Datepicker extends React.Component {
 }
 
 Datepicker.propTypes = {
-  onDatePicked: PropTypes.func.isRequired,
-  language: PropTypes.string.isRequired,
-  onBlurHandler: PropTypes.func,
-  escKeyHandler: PropTypes.func,
-  selectedDate: PropTypes.string,
-  minDate: PropTypes.string,
-  maxDate: PropTypes.string,
-  calendarClassName: PropTypes.string,
+  calendarClassName: string,
+  escKeyHandler: func,
+  language: string.isRequired,
+  maxDate: string,
+  minDate: string,
+  onBlurHandler: func,
+  onDatePicked: func.isRequired,
+  selectedDate: string,
 };

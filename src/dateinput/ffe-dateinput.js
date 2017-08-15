@@ -1,34 +1,47 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import { bool, func, oneOfType, string, shape } from 'prop-types';
 import classNames from 'classnames';
 import KalenderIkon from 'ffe-icons-react/kalender-ikon';
 
-export default class FFEDateInput extends React.Component {
+export default class FFEDateInput extends Component {
 
   focus() {
     this._input.focus();
   }
 
+  inputClassNames(extraClassNames) {
+    return classNames(
+      'ffe-dateinput__field',
+      'ffe-input-field',
+      extraClassNames
+    );
+  }
+
   render() {
-    const givenInputProps = this.props.inputProps || {};
-    const inputProps = {
-      ...givenInputProps,
-      className: classNames('ffe-dateinput__field', 'ffe-input-field', givenInputProps.className),
-    };
+    const {
+      ariaInvalid,
+      inputProps = {},
+      onBlur,
+      onChange,
+      onFocus,
+      onKeyDown,
+      value,
+    } = this.props;
+
     return (
       <div className="ffe-dateinput">
         <input
-          type="text"
+          aria-invalid={ String(this.props['aria-invalid'] || ariaInvalid) }
           maxLength="10"
-          value={ this.props.value }
-          onFocus={ this.props.onFocus }
-          onBlur={ this.props.onBlur }
-          onChange={ this.props.onChange }
-          onKeyPress={ this.props.onKeyDown }
-          onKeyDown={ this.props.onKeyDown }
+          onFocus={ onFocus }
+          onBlur={ onBlur }
+          onChange={ onChange }
+          onKeyPress={ onKeyDown }
+          onKeyDown={ onKeyDown }
           ref={ c => { this._input = c; } }
-          aria-invalid={ this.props.ariaInvalid }
+          value={ value }
           { ...inputProps }
+          className={ this.inputClassNames(inputProps.className) }
         />
         <KalenderIkon className="ffe-dateinput__icon" />
       </div>
@@ -37,11 +50,14 @@ export default class FFEDateInput extends React.Component {
 }
 
 FFEDateInput.propTypes = {
-  onFocus: PropTypes.func,
-  onBlur: PropTypes.func,
-  onChange: PropTypes.func.isRequired,
-  onKeyDown: PropTypes.func,
-  value: PropTypes.string.isRequired,
-  inputProps: PropTypes.object,
-  ariaInvalid: PropTypes.bool,
+  'aria-invalid': string,
+  ariaInvalid: oneOfType([bool, string]),
+  inputProps: shape({
+    className: string,
+  }),
+  onBlur: func,
+  onChange: func.isRequired,
+  onFocus: func,
+  onKeyDown: func,
+  value: string.isRequired,
 };

@@ -1,5 +1,13 @@
 # Changelog
 
+## v2.5.0
+
+* Add property `hideErrors`, which hides the internal datepicker error output if any
+* Add possibility to use `aria-invalid` prop on both `Datepicker` and `DateInput`. This will take prescedence over the `ariaInvalid` prop.
+* Fix typo in class name for `ffe-calendar__date--focus`, making it not apply the correct styles
+* Improve readme slightly
+* Internal refactor and formatting cleanup
+
 ## v2.4.4
 
 * Fix bug where the datepicker wasn't clickable with invalid-input.

@@ -1,7 +1,8 @@
 /*eslint jsx-a11y/onclick-has-focus:1 jsx-a11y/onclick-has-role:1 */
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import { bool, func, oneOfType, shape, string } from 'prop-types';
 import classNames from 'classnames';
+import uuid from 'uuid';
 import Calendar from '../calendar/ffe-calendar';
 import KeyCode from '../util/keyCode';
 import DateInput from '../dateinput/ffe-dateinput';
@@ -9,7 +10,7 @@ import SimpleDate from '../datelogic/simpledate';
 import dateErrorTypes from '../datelogic/error-types';
 import i18n from '../i18n/i18n';
 
-export default class FFEDatepicker extends React.Component {
+export default class FFEDatepicker extends Component {
 
   constructor(props) {
     super(props);
@@ -18,6 +19,8 @@ export default class FFEDatepicker extends React.Component {
       displayDatePicker: false,
       openOnFocus: true,
     };
+
+    this.datepickerId = uuid.v4();
 
     this.openCalendar = this.openCalendar.bind(this);
     this.closeCalendar = this.closeCalendar.bind(this);
@@ -45,10 +48,12 @@ export default class FFEDatepicker extends React.Component {
   }
 
   onError(type) {
-    const language = this.props.language;
-    return this.props.onError ?
-      this.props.onError(type)
-      : i18n[language][type];
+    const {
+      language,
+      onError,
+    } = this.props;
+
+    return onError ? onError(type) : i18n[language][type];
   }
 
   onInputBlur() {
@@ -124,7 +129,7 @@ export default class FFEDatepicker extends React.Component {
   }
 
   globalClickHandler(evt) {
-    if ((this.state.displayDatePicker && !this._datepickerNode.contains(evt.target))) {
+    if (this.state.displayDatePicker && !this._datepickerNode.contains(evt.target)) {
       this.closeCalendar();
     }
   }
@@ -184,59 +189,63 @@ export default class FFEDatepicker extends React.Component {
   }
 
   ariaInvalid() {
-    const ariaProp = this.props.ariaInvalid;
-    if (ariaProp !== undefined && ariaProp !== null) {
-      return ariaProp;
-    }
+    const ariaInvalid = this.props['aria-invalid'] || this.props.ariaInvalid;
 
-    return this.state.ariaInvalid;
+    return [null, undefined].every(val => val !== ariaInvalid) ? ariaInvalid : this.state.ariaInvalid;
   }
 
   render() {
-    let inputProps = this.props.inputProps;
+    const {
+      hideErrors,
+      inputProps = {},
+      label,
+      language,
+      maxDate,
+      minDate,
+      onChange,
+      value,
+    } = this.props;
+
     if (this.state.ariaInvalid) {
-      inputProps = {
-        ...inputProps,
-        'aria-describedby': 'date-input-validation'
-      };
+      inputProps['aria-describedby'] = `date-input-validation-${this.datepickerId}`;
     }
 
     const calendarClassName = classNames(
         'ffe-calendar ffe-calendar--datepicker',
         { 'ffe-calendar--datepicker--above': this.props.calendarAbove }
     );
+
     return (
       <div>
-        { this.props.label &&
+        { label &&
         <label
           className="ffe-form-label ffe-form-label--block"
           htmlFor={ inputProps.id }
         >
-          { this.props.label }
+          { label }
         </label>
         }
         <div
+          className="ffe-datepicker"
           onClick={ this.clickHandler }
           ref={ c => { this._datepickerNode = c; } }
-          className="ffe-datepicker"
-          tabIndex={ -1 }
           role="button"
+          tabIndex={ -1 }
         >
           <DateInput
-            onFocus={ this.onInputFocus }
-            onBlur={ this.onInputBlur }
-            onChange={ (evt) => this.props.onChange(evt.target.value) }
-            onKeyDown={ this.onInputKeydown }
-            value={ this.props.value }
+            aria-invalid={ this.ariaInvalid() }
             inputProps={ inputProps }
+            onBlur={ this.onInputBlur }
+            onChange={ (evt) => onChange(evt.target.value) }
+            onFocus={ this.onInputFocus }
+            onKeyDown={ this.onInputKeydown }
             ref={ c => { this.dateInputRef = c; } }
-            ariaInvalid={ this.ariaInvalid() }
+            value={ value }
           />
 
-          {
-            this.state.ariaInvalid &&
+          { this.state.ariaInvalid && !hideErrors &&
               <div
-                id="date-input-validation"
+                id={`date-input-validation-${this.datepickerId}`}
                 className="ffe-body-text ffe-field-error-message"
                 role="alert"
               >
@@ -244,17 +253,16 @@ export default class FFEDatepicker extends React.Component {
               </div>
           }
 
-          {
-            this.state.displayDatePicker &&
+          { this.state.displayDatePicker &&
               <Calendar
-                onDatePicked={ this.datePickedHandler }
-                onBlurHandler={ this.blurHandler }
-                language={ this.props.language }
-                selectedDate={ this.props.value }
-                minDate={ this.props.minDate }
-                maxDate={ this.props.maxDate }
-                escKeyHandler={ this.escKeyHandler }
                 calendarClassName={ calendarClassName }
+                escKeyHandler={ this.escKeyHandler }
+                language={ language }
+                maxDate={ maxDate }
+                minDate={ minDate }
+                onBlurHandler={ this.blurHandler }
+                onDatePicked={ this.datePickedHandler }
+                selectedDate={ value }
               />
           }
         </div>
@@ -263,14 +271,19 @@ export default class FFEDatepicker extends React.Component {
 }
 
 FFEDatepicker.propTypes = {
-  label:  PropTypes.string,
-  value: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired,
-  language: PropTypes.string.isRequired,
-  minDate: PropTypes.string,
-  maxDate: PropTypes.string,
-  inputProps: PropTypes.object,
-  ariaInvalid: PropTypes.bool,
-  calendarAbove: PropTypes.bool,
-  onError: PropTypes.func,
+  'aria-invalid': string,
+  ariaInvalid: oneOfType([bool, string]),
+  calendarAbove: bool,
+  hideErrors: bool,
+  inputProps: shape({
+    className: string,
+    id: string,
+  }),
+  label:  string,
+  language: string.isRequired,
+  maxDate: string,
+  minDate: string,
+  onChange: func.isRequired,
+  onError: func,
+  value: string.isRequired,
 };

@@ -1,18 +1,20 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { shape, number } from 'prop-types';
 
-export default function LeadDate({ date }) {
+export default function LeadDate(props) {
   return (
     <td
-      className="ffe-calendar__day"
-      key={ date.timestamp }
-      role="gridcell"
-      aria-selected="false"
       aria-disabled="true"
+      aria-selected="false"
+      className="ffe-calendar__day"
+      key={ props.date.timestamp }
+      role="gridcell"
     />
   );
 }
 
 LeadDate.propTypes = {
-  date: PropTypes.object.isRequired,
+  date: shape({
+    timestamp: number.isRequired,
+  }).isRequired,
 };

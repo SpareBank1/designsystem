@@ -13,6 +13,7 @@ $ npm install --save ffe-datepicker-react
 
 ### <Datepicker />
 This will give you an input field and a calendar to pick dates from.
+
 ```javascript
 import React from 'react';
 import Datepicker from 'ffe-datepicker-react';
@@ -28,15 +29,26 @@ export default function Form() {
         maxDate="31.12.2016"
         inputProps={ { className: 'customClass', id: 'custom-input-id' } }
         ariaInvalid={ false }
+        hideErrors={ false }
     />
   </form>
 }
 ```
-* value: the input field value. Can be used to set an initial date.
-* onChange: will be called with the new date string, picked from the calendar. format: dd.mm.yyyy
-* inputProps: props to set on the input field.
-* ariaInvalid: signifies validation errors.
-* label: Optional. Adds a lable formated by .ffe-form-label
+* `calendarAbove`: Optional boolean signifying whether the calendar should be rendered above or below the date field
+* `value`: the string input field value. Can be used to set an initial date.
+* `onChange`: will be called with the new date string, picked from the calendar. format: dd.mm.yyyy
+* `inputProps`: props to set on the input field.
+* `ariaInvalid`: signifies validation errors.
+* `hideErrors`: Optional. Hides error output if any, so errors can be handled from outside.
+* `label`: Optional. Adds a label formatted by .ffe-form-label
+* `onError`: Optional. Will be called on any internal error with the error code, like if the input is malformed or out of bounds.
+
+#### ErrorCodes
+Error codes can be imported as an object from the main package as well:
+
+```javascript
+import { ErrorCodes } from 'ffe-datepicker-react';
+```
 
 ### <DateInput />
 Use only the input field

@@ -1,36 +1,46 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { func, number, string } from 'prop-types';
 import ChevronIkon from 'ffe-icons-react/chevron-ikon';
 
-function Header(props) {
+export default function Header(props) {
+  const {
+    datepickerId,
+    month,
+    nextMonthHandler,
+    nextMonthLabel,
+    previousMonthHandler,
+    previousMonthLabel,
+    year,
+  } = props;
+
   return (
     <div className="ffe-calendar__header">
       <div className="ffe-calendar__header-inner-wrapper">
         <button
-          tabIndex="-1"
           className="ffe-calendar__month-nav ffe-calendar__previous"
-          title={ props.previousMonthLabel }
-          onClick={ props.previousMonthHandler }
+          onClick={ previousMonthHandler }
+          tabIndex="-1"
+          title={ previousMonthLabel }
           type="button"
         >
           <ChevronIkon className="ffe-calendar__icon-prev" />
         </button>
         <header
-          id={`${props.datepickerId}-title`}
-          className="ffe-calendar__title"
           aria-live="assertive"
           aria-atomic="true"
+          className="ffe-calendar__title"
+          id={`${datepickerId}-title`}
         >
-          <div id={ `${props.datepickerId}__month-label` }>
-            <span className="ffe-calendar__month">{ props.month }</span>
-            <span className="ffe-calendar__year">{ props.year }</span>
+          <div id={ `${datepickerId}__month-label` }>
+            <span className="ffe-calendar__month">{ month }</span>
+            <span className="ffe-calendar__year">{ year }</span>
           </div>
         </header>
         <button
-          tabIndex="-1"
           className="ffe-calendar__month-nav ffe-calendar__next"
-          title={ props.nextMonthLabel }
-          onClick={ props.nextMonthHandler }
+          onClick={ nextMonthHandler }
+          title={ nextMonthLabel }
+          tabIndex="-1"
           type="button"
         >
           <ChevronIkon className="ffe-calendar__icon-next" />
@@ -41,13 +51,11 @@ function Header(props) {
 }
 
 Header.propTypes = {
-  month: PropTypes.string.isRequired,
-  year: PropTypes.number.isRequired,
-  previousMonthLabel: PropTypes.string.isRequired,
-  nextMonthLabel: PropTypes.string.isRequired,
-  datepickerId: PropTypes.string.isRequired,
-  previousMonthHandler: PropTypes.func.isRequired,
-  nextMonthHandler: PropTypes.func.isRequired,
+  datepickerId: string.isRequired,
+  month: string.isRequired,
+  nextMonthHandler: func.isRequired,
+  nextMonthLabel: string.isRequired,
+  previousMonthHandler: func.isRequired,
+  previousMonthLabel: string.isRequired,
+  year: number.isRequired,
 };
-
-export default Header;
