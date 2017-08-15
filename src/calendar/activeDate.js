@@ -15,10 +15,10 @@ export default class ActiveDate extends Component {
   focusIfNeeded() {
     const {
       date,
-      setFocusOnInitialMount,
+      forceFocus,
     } = this.props;
 
-    if (date.isFocus && setFocusOnInitialMount) {
+    if (date.isFocus && forceFocus) {
       this._datecell.focus();
     }
   }
@@ -87,5 +87,5 @@ ActiveDate.propTypes = {
   }).isRequired,
   headers: string.isRequired,
   onClick: func.isRequired,
-  setFocusOnInitialMount: bool.isRequired,
+  forceFocus: bool.isRequired,
 };

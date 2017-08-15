@@ -25,7 +25,7 @@ export default class Datepicker extends Component {
     this.onBlur = props.onBlurHandler;
 
     this.datepickerId = `ffe-calendar-${uuid.v4()}`;
-    this.dateShouldSetFocusOnInitialMount = false;
+    this.forceDateFocus = false;
 
     this.keyDown = this.keyDown.bind(this);
     this.mouseClick = this.mouseClick.bind(this);
@@ -136,7 +136,7 @@ export default class Datepicker extends Component {
   }
 
   focusHandler() {
-    this.dateShouldSetFocusOnInitialMount = true;
+    this.forceDateFocus = true;
   }
 
   nextMonth(evt) {
@@ -163,7 +163,7 @@ export default class Datepicker extends Component {
         headers={ `header__${this.datepickerId}__${index}` }
         key={ date.date }
         onClick={ this.mouseClick }
-        setFocusOnInitialMount={ this.dateShouldSetFocusOnInitialMount }
+        forceFocus={ this.forceDateFocus }
       />
     );
   }
