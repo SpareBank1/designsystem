@@ -1,4 +1,6 @@
 #CHANGELOG
+## Version 3.3.1
+* Updated to latest version of ffe-message-box (4.2.2)
 
 ## Version 3.3.0
 * Add InfoMessageList and childComponent InfoMessageListItem.
