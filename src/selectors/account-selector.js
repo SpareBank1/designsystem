@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { func, string, arrayOf } from 'prop-types';
+import { func, string, arrayOf, bool } from 'prop-types';
 import BaseSelector from './base-selector';
 import AccountSuggestionItem from '../account/account-suggestion';
 import AccountNoMatch from '../account/account-nomatch';
@@ -21,7 +21,13 @@ class AccountSelector extends Component {
   }
 
   renderSuggestion(account) {
-    return <AccountSuggestionItem account={account} locale={this.props.locale}/>;
+    return (
+      <AccountSuggestionItem
+        account={account}
+        locale={this.props.locale}
+        showBalance={this.props.showBalance}
+      />
+    );
   }
 
   renderNoMatches() {
@@ -40,11 +46,12 @@ class AccountSelector extends Component {
 
   render() {
     const {
-      selectedAccount,
-      locale,
       accounts,
-      id,
       className,
+      id,
+      locale,
+      selectedAccount,
+      showBalance,
     } = this.props;
     return (
       <div
@@ -65,21 +72,27 @@ class AccountSelector extends Component {
           onChange={this.onInputChange}
         />
         {selectedAccount &&
-        <AccountDetails account={selectedAccount} locale={locale}/> }
+        <AccountDetails
+          account={selectedAccount}
+          locale={locale}
+          showBalance={showBalance}
+        />
+        }
       </div>
     );
   }
 }
 
 AccountSelector.propTypes = {
+  accounts: arrayOf(Account),
+  className: string,
+  id: string.isRequired,
+  locale: Locale.isRequired,
+  noMatches: string,
   onAccountSelected: func.isRequired,
   onChange : func.isRequired,
-  id: string.isRequired,
-  accounts: arrayOf(Account),
-  locale: Locale.isRequired,
   selectedAccount: Account,
-  noMatches: string,
-  className: string,
+  showBalance: bool,
 };
 
 export default AccountSelector;
