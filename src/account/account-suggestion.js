@@ -1,8 +1,9 @@
 import React from 'react';
+import { bool } from 'prop-types';
 import {accountFormatter, balanceWithCurrency} from '../util/format';
 import {Account, Locale} from '../util/types';
 
-const AccountSuggestionItem = ({account, locale}) => {
+const AccountSuggestionItem = ({account, locale, showBalance = true}) => {
   const {accountNumber, balance, name}= account;
   const hasBalance = balance != null;
   return (
@@ -12,7 +13,7 @@ const AccountSuggestionItem = ({account, locale}) => {
         <span className='ffe-account-suggestion__number'>
           { accountFormatter(accountNumber) }
         </span>
-        {hasBalance &&
+        {showBalance && hasBalance &&
         <span className='ffe-account-suggestion__balance'>
           { balanceWithCurrency(balance, locale)}
         </span>
@@ -25,6 +26,7 @@ const AccountSuggestionItem = ({account, locale}) => {
 AccountSuggestionItem.propTypes = {
   account: Account.isRequired,
   locale: Locale.isRequired,
+  showBalance: bool,
 };
 
 export default AccountSuggestionItem;
