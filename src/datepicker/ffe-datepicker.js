@@ -191,7 +191,7 @@ export default class FFEDatepicker extends Component {
   ariaInvalid() {
     const ariaInvalid = this.props['aria-invalid'] || this.props.ariaInvalid;
 
-    return [null, undefined].every(val => val !== ariaInvalid) ? ariaInvalid : this.state.ariaInvalid;
+    return [null, undefined].every(val => val !== ariaInvalid) ? String(ariaInvalid) : String(this.state.ariaInvalid);
   }
 
   render() {
@@ -218,12 +218,12 @@ export default class FFEDatepicker extends Component {
     return (
       <div>
         { label &&
-        <label
-          className="ffe-form-label ffe-form-label--block"
-          htmlFor={ inputProps.id }
-        >
-          { label }
-        </label>
+          <label
+            className="ffe-form-label ffe-form-label--block"
+            htmlFor={ inputProps.id }
+          >
+            { label }
+          </label>
         }
         <div
           className="ffe-datepicker"
