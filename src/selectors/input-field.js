@@ -22,7 +22,7 @@ class Input extends Component {
     this.state = {
       value: props.value,
       isFocused: false,
-    }
+    };
   }
 
   onChangeHandler(handler) {
@@ -44,7 +44,7 @@ class Input extends Component {
     this.setState({ isFocused: false });
     this.props.onBlur();
   }
-  
+
   componentWillReceiveProps(nextProps) {
     if (!this.state.isFocused || this.state.value !== nextProps.value) {
       this.setState({ value: nextProps.value });

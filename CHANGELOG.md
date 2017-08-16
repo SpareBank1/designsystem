@@ -1,5 +1,8 @@
 # Changelog
 
+# v7.5.0
+* Added property `showBalance`. Set to false to hide the balance of the accounts.
+
 # v7.4.3
 * Bugfix: Cursor no longer jumps to the end of field on input. Used solution proposed here: https://gist.github.com/rchanou/0a5c4173803a0d654f4c986d696a5c7f
 * Bugfix: HOME and END events now puts cursor at home and end of input field when on no matching suggestions
