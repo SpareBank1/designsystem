@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## Version 4.2.2
+- Set a margin-bottom value to actual required value, no over-shooting.
+
 ## Version 4.2.1
 - Support both versions 9 and 10 of `ffe-core`
 
