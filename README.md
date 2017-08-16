@@ -80,6 +80,9 @@ boolean that marks input field as invalid. Defaults to false.
 __suggestionsHeightMax__
 number that specifies that max height in pixels of the suggestion list. Defaults to 300.
 
+__showBalance__
+boolean that shows the balance of the accounts. Defaults to true.
+
 
 ## `<AccountSelectorMulti>` Props API
 
