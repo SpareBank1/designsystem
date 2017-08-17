@@ -11,7 +11,7 @@ describe('<ActiveDate />', () => {
   const activeDate = (
     <ActiveDate
       date={ date }
-      setFocusOnInitialMount={ false }
+      forceFocus={ false }
       onClick={ () => true }
       headers="id-to-th-element"
     />

@@ -1,5 +1,10 @@
 # Changelog
 
+## v2.5.1
+
+* Fix prop type warning when using `ariaInvalid` prop with a boolean value on `Datepicker`.
+This property is deprecated now, you should instead use the standard `aria-invalid` with a `String` value ("true" or "false").
+
 ## v2.5.0
 
 * Add property `hideErrors`, which hides the internal datepicker error output if any
@@ -15,7 +20,6 @@
 ## v2.4.3
 
 * Bugfix: SimpleDate.fromString did not parse valid dates on certain days at the end of a month, which resulted in false-negative validation errors.
-
 
 ## v2.4.2
 
