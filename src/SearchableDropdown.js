@@ -159,6 +159,7 @@ class SearchableDropdown extends Component {
                     onFocus={this.onFocus}
                     onKeyDown={this.onKeyDown}
                     placeholder={placeholder}
+                    inputId={this.props.inputId}
                     inputValue={this.state.value}
                     onReset={this.onReset}
                     searchTerm={this.state.searchTerm}
@@ -191,6 +192,8 @@ SearchableDropdown.propTypes = {
     dropdownAttributes: array,
     /** Initial selected value/value in input field  */
     initialInputValue: string,
+    /** Id attribute on the input element */
+    inputId: string,
     /** value to be displayed in dropdown in case of search with no match */
     noMatch: string.isRequired,
     /** Function receives value of inputField and should return with value of inputField */

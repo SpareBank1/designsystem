@@ -21,7 +21,7 @@ class Input extends Component {
     }
 
     render() {
-        const { inputValue, onBlur, onClick, onFocus, onInputChange, onKeyDown, placeholder, onReset, ariaInvalid } = this.props;
+        const { inputId, inputValue, onBlur, onClick, onFocus, onInputChange, onKeyDown, placeholder, onReset, ariaInvalid } = this.props;
         return (
             <div>
                 <input
@@ -30,6 +30,7 @@ class Input extends Component {
                         {"ffe-searchable-dropdown__display-reset": this.displayReset()}
                     )}
                     aria-invalid={ariaInvalid}
+                    id={inputId}
                     onBlur={onBlur}
                     onChange={onInputChange}
                     onClick={onClick}
@@ -59,6 +60,7 @@ class Input extends Component {
 
 Input.propTypes = {
     ariaInvalid: bool,
+    inputId: string,
     inputValue: string,
     onBlur: func.isRequired,
     onInputChange: func.isRequired,
