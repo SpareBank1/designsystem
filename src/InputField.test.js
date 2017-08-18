@@ -16,6 +16,7 @@ describe('<Input>', () => {
         placeholder:"Velg",
         onInputChange:defaultMock.onChange,
         displayResetWhenInputHasValue:true,
+        inputId: 'anId',
         inputValue:'',
         onReset:i,
         searchTerm:'',
@@ -26,13 +27,16 @@ describe('<Input>', () => {
     test('renders', () =>
         expect(component.find('.ffe-searchable-dropdown__dropdown-input-field')).toHaveLength(1));
 
+     test('input field has an Id', () => 
+        expect(component.find('input').prop('id')).toBe('anId'));    
+
     test('input field is empty', () => {
         expect(component.find('input').prop('value')).toBe('');
     });
 
     test('displays reset when input has value', () => {
         const componentWithInputValue = mountInputFieldWithProps({...props, inputValue:'aa'});
-        expect(componentWithInputValue.find('input').prop('value')).toBe('aa');
+        expect(componentWithInputValue.find('input').prop('value')).toBe('aa');        
         expect(componentWithInputValue.find('.ffe-searchable-dropdown__reset-button')).toHaveLength(1);
     });
 

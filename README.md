@@ -16,12 +16,12 @@ import SearchableDropdown from 'ffe-searchable-dropdown-react';
 
 styling: 
 ```
-@import "npm://ffe-search-dropdown-react/less/search-dropdown";
+@import "npm://ffe-searchable-dropdown-react/less/searchable-dropdown";
 ```
 
 ## Available props
 
-See propTypes in [SearchableDropdown.ja](src/SearchableDropdown.js)
+See propTypes in [SearchableDropdown.js](src/SearchableDropdown.js#185)
 
 ## Development
 ```
