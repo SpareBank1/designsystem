@@ -1,6 +1,6 @@
 {
   "name": "ffe-searchable-dropdown-react",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Dropdown with search option",
   "scripts": {
     "build": "babel -d lib src",
@@ -22,7 +22,7 @@
     "ffe"
   ],
   "peerDependencies": {
-    "ffe-core": "^10.0.0",
+    "ffe-core": "9.x || 10.x",
     "ffe-form": "^6.3.1",
     "react": "^15.4.0"
   },

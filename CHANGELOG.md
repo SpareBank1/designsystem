@@ -1,7 +1,12 @@
 # Changelog for ffe-search-dropdown-react
 
-## v.1.1.0
+## v1.1.1
+* Removes local imports from ffe-core, up to projects to import styling. 
+* Remove less import into js, breaks with gulp build
+* Accepts peerDependencies ffe-core 9.x.x || 10.x.x
+
+## v1.1.0
 * Can stick an id on the input element.
 
-## v.1.0.0
+## v1.0.0
 * First release.
