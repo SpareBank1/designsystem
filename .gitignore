@@ -12,6 +12,7 @@ bin/
 
 # Generated sources
 lib/
+webpack-cache
 
 # NPM
 node_modules/
