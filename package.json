@@ -3,7 +3,7 @@
   "version": "1.1.0",
   "description": "Dropdown with search option",
   "scripts": {
-    "build": "babel -d lib src",
+    "build": "babel -d lib --ignore=*.test.js src",
     "start": "styleguidist server",
     "pretest": "eslint src/",
     "lint:fix": "eslint --fix src/",
@@ -11,6 +11,7 @@
     "test:watch": "jest src --watch",
     "posttest": "nsp check",
     "prepublish": "npm run build",
+    "postpublish": "git tag ${npm_package_version} && git push --tags",
     "has-published": "npm show . versions -s --json | grep -q \\\"${npm_package_version}\\\""
   },
   "jest": {
