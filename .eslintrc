@@ -1,6 +1,7 @@
 {
     "extends": "eslint-config-ffe",
     "env": {
-        "browser": true
+        "browser": true,
+        "mocha": true
     }
 }
