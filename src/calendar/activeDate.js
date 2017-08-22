@@ -41,10 +41,6 @@ export default class ActiveDate extends Component {
     });
   }
 
-  dayClassName() {
-    return classNames('ffe-calendar__day');
-  }
-
   tabIndex() {
     return this.props.date.isFocus ? 0 : -1;
   }
@@ -60,7 +56,7 @@ export default class ActiveDate extends Component {
       <td
         aria-disabled={ !date.isEnabled }
         aria-selected={ date.isSelected }
-        className={ this.dayClassName() }
+        className='ffe-calendar__day'
         headers={ headers }
         onClick={ () => onClick(date) }
         ref={ c => { this._datecell = c; } }
