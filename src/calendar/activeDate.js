@@ -42,10 +42,7 @@ export default class ActiveDate extends Component {
   }
 
   dayClassName() {
-    return classNames(
-      'ffe-calendar__day',
-      { 'ffe-calendar__date--focus' : this.props.date.isFocus }
-    );
+    return classNames('ffe-calendar__day');
   }
 
   tabIndex() {
