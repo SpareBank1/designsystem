@@ -3,6 +3,7 @@ import { string, bool, array, func, arrayOf, object } from 'prop-types';
 import classNames from 'classnames';
 import Input from './InputField';
 import ScrollContainer from './ScrollContainer';
+import isRequiredIf from 'react-proptype-conditional-require';
 
 class SearchableDropdown extends Component {
     constructor(props) {
@@ -142,9 +143,16 @@ class SearchableDropdown extends Component {
     }
 
     render() {
-        const { dropdownAttributes, noMatch, placeholder, renderDropdownElement } = this.props;
+        const { dropdownAttributes, noMatch, placeholder, renderDropdownElement, label } = this.props;
         const { filteredList, highlightedElementIndex, showListContainer } = this.state;
         return (
+          <div>
+            {label?
+              <label className="ffe-form-label ffe-form-label--block" htmlFor={ this.props.inputId }>
+                  { label }
+              </label>
+              : null
+            }
             <div
                 className={classNames(
                     "ffe-searchable-dropdown",
@@ -178,10 +186,13 @@ class SearchableDropdown extends Component {
                         renderDropdownElement={renderDropdownElement}
                     />
                 }
+              </div>
             </div>
+
         );
     }
 }
+
 
 SearchableDropdown.propTypes = {
     /** Display reset when input has value */
@@ -192,8 +203,10 @@ SearchableDropdown.propTypes = {
     dropdownAttributes: array,
     /** Initial selected value/value in input field  */
     initialInputValue: string,
+    /** Label above dropdown */
+    label: string,
     /** Id attribute on the input element */
-    inputId: string,
+    inputId: isRequiredIf(string, props => props.label),
     /** value to be displayed in dropdown in case of search with no match */
     noMatch: string.isRequired,
     /** Function receives value of inputField and should return with value of inputField */
@@ -215,6 +228,7 @@ SearchableDropdown.propTypes = {
     /** css class for main div searchableDropdown */
     className: string,
 };
+
 
 SearchableDropdown.defaultProps = {
     displayResetWhenInputHasValue: false,

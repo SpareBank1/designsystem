@@ -7,10 +7,11 @@ The default:
     noMatch="Søket ga ingen treff"
     dropdownAttributes={['companyName']}
     searchAttributes={['companyName']}
-    onSelect={mockDefaultExample.onSelect} 
+    onSelect={mockDefaultExample.onSelect}
     onInputChange={mockDefaultExample.onChange}
     onReset={mockDefaultExample.onReset}
     displayResetWhenInputHasValue = {true}
+    inputId = "default"
 />
 ```
 
@@ -23,14 +24,16 @@ With listElements of two values
     noMatch="Søket ga ingen treff"
     dropdownAttributes={['organizationName', 'organizationNumber']}
     searchAttributes={['organizationName', 'organizationNumber']}
-    onSelect={mockTwoValueListElementExample.onSelect} 
+    onSelect={mockTwoValueListElementExample.onSelect}
     onInputChange={mockTwoValueListElementExample.onChange}
     onReset={mockTwoValueListElementExample.onReset}
     displayResetWhenInputHasValue = {true}
+    label = "Fund"
+    inputId = "two values"
 />
 ```
 
-with custom list element
+with custom list element missing inputId for inputField
 
 ```example
 <SearchableDropdown
@@ -39,8 +42,9 @@ with custom list element
     searchAttributes={['organizationName', 'organizationNumber']}
     renderDropdownElement={mockCustomExample.renderItem("ulest")}
     initialInputValue={mockCustomExample.initialInputValue}
-    onSelect={mockCustomExample.onSelect} 
+    onSelect={mockCustomExample.onSelect}
     onInputChange={mockCustomExample.onChange}
     onReset={mockCustomExample.onReset}
+    label = "Fund"
 />
 ```
