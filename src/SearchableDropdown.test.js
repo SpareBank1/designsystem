@@ -21,16 +21,22 @@ describe('<SearchableDropdown>', () => {
         onInputChange:defaultMock.onChange,
         onReset:defaultMock.onReset,
         displayResetWhenInputHasValue:true,
+        label:"Foo",
+        inputId: "inputid"
     };
 
     const setHighlightedIndexSpy = jest.spyOn(SearchableDropdown.prototype, 'setHighlightedIndex');
     const component = mountDropdownWithProps(props);
+
 
     test('renders', () =>
         expect(component.find('.ffe-searchable-dropdown')).toHaveLength(1));
 
     test('renders <Input>', () =>
         expect(component.find(Input)).toHaveLength(1));
+
+    test('renders <label> ',() =>
+      expect(component.find('.ffe-form-label')).toHaveLength(1));
 
     test('does not render <ScrollContainer> when dropdown is closed', () => {
         expect(component.state('showListContainer')).toBe(false);
@@ -66,4 +72,3 @@ describe('<SearchableDropdown>', () => {
     });
 
 });
-
