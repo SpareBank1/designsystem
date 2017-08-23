@@ -1,5 +1,9 @@
 # Changelog for ffe-search-dropdown-react
 
+
+## v.1.1.3
+* Bumped version due to prepublish 1.1.2(unknown why)
+
 ## v1.1.2
 * Added label property
 * InputId is required to inputField so label can bind to it.
