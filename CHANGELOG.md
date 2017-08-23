@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## Version 2.0.4
+* Set default background of `ffe-accordion-item__toggler` explicit to transparent. 
+This fixes IE11 error where background becomes gray when a toggler is a button.
+
 ## Version 2.0.3
 * Support both versions 9 and 10 of `ffe-core`
 
