@@ -146,7 +146,7 @@ class SearchableDropdown extends Component {
         const { dropdownAttributes, noMatch, placeholder, renderDropdownElement, label } = this.props;
         const { filteredList, highlightedElementIndex, showListContainer } = this.state;
         return (
-          <div>
+          <div className={ classNames(this.props.className) }>
             {label?
               <label className="ffe-form-label ffe-form-label--block" htmlFor={ this.props.inputId }>
                   { label }
