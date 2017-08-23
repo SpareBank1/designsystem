@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { string, bool, func } from 'prop-types';
 import classNames from 'classnames';
 import KryssIkon from 'ffe-icons-react/kryss-ikon';
-import '../less/searchable-dropdown.less';
 
 class Input extends Component {
     constructor(props) {

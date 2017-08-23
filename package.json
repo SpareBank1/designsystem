@@ -1,6 +1,6 @@
 {
   "name": "ffe-searchable-dropdown-react",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "description": "Dropdown with search option",
   "scripts": {
     "build": "babel -d lib --ignore=*.test.js src",
@@ -23,7 +23,7 @@
     "ffe"
   ],
   "peerDependencies": {
-    "ffe-core": "^10.0.0",
+    "ffe-core": "9.x || 10.x",
     "ffe-form": "^6.3.1",
     "react": "^15.4.0"
   },
@@ -81,6 +81,7 @@
     "ffe-icons-react": "^2.4.9",
     "lodash.isequal": "^4.5.0",
     "prop-types": "^15.5.10",
-    "react-custom-scrollbars": "^4.1.2"
+    "react-custom-scrollbars": "^4.1.2",
+    "react-proptype-conditional-require": "^1.0.4"
   }
 }
