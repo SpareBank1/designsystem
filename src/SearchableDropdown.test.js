@@ -17,9 +17,10 @@ describe('<SearchableDropdown>', () => {
         noMatch:"Søket ga ingen treff",
         dropdownAttributes:['companyName'],
         searchAttributes:['companyName'],
-        onSelect:defaultMock.onSelect,
-        onInputChange:defaultMock.onChange,
-        onReset:defaultMock.onReset,
+        onSelect:i,
+        onInputChange:i,
+        onReset:i,
+        inputValue:'',
         displayResetWhenInputHasValue:true,
         label:"Foo",
         inputId: "inputid"
