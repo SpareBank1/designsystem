@@ -1,5 +1,7 @@
 # Changelog for ffe-search-dropdown-react
 
+## v1.1.4
+* hotfix div wrapper classname with version for npm
 
 ## v.1.1.3
 * Bumped version due to prepublish 1.1.2(unknown why)
