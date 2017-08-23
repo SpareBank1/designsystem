@@ -1,5 +1,11 @@
 # Changelog for ffe-search-dropdown-react
 
+## v.2.0.0
+* Set inputValue outside the component to be able to reset and 
+change the value without interfering with the component. 
+* attributes onSelect, onReset and onChange should now update inputValue and not return it.
+* Removed attribute initialInputValue, added attribute inputValue.
+
 ## v1.1.4
 * hotfix div wrapper classname with version for npm
 

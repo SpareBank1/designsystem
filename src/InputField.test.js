@@ -1,7 +1,6 @@
 /*eslint-env jest */
 import { shallow } from 'enzyme';
 import React from 'react';
-import defaultMock from '../mock/mockDefaultExample';
 import Input from './InputField';
 const i = t => t;
 
@@ -14,7 +13,7 @@ describe('<Input>', () => {
         onFocus: i,
         onKeyDown: i,
         placeholder:"Velg",
-        onInputChange:defaultMock.onChange,
+        onInputChange:i,
         displayResetWhenInputHasValue:true,
         inputId: 'anId',
         inputValue:'',
@@ -27,8 +26,8 @@ describe('<Input>', () => {
     test('renders', () =>
         expect(component.find('.ffe-searchable-dropdown__dropdown-input-field')).toHaveLength(1));
 
-     test('input field has an Id', () => 
-        expect(component.find('input').prop('id')).toBe('anId'));    
+     test('input field has an Id', () =>
+        expect(component.find('input').prop('id')).toBe('anId'));
 
     test('input field is empty', () => {
         expect(component.find('input').prop('value')).toBe('');
@@ -36,7 +35,7 @@ describe('<Input>', () => {
 
     test('displays reset when input has value', () => {
         const componentWithInputValue = mountInputFieldWithProps({...props, inputValue:'aa'});
-        expect(componentWithInputValue.find('input').prop('value')).toBe('aa');        
+        expect(componentWithInputValue.find('input').prop('value')).toBe('aa');
         expect(componentWithInputValue.find('.ffe-searchable-dropdown__reset-button')).toHaveLength(1);
     });
 
