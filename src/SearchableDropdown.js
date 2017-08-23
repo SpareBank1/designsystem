@@ -9,11 +9,9 @@ class SearchableDropdown extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            filteredList: this.props.dropdownList,
             highlightedElementIndex: -1,
             searchTerm: '',
             showListContainer: false,
-            value:this.props.initialInputValue ? this.props.initialInputValue : '',
         };
 
         this.filterList = this.filterList.bind(this);
@@ -40,9 +38,8 @@ class SearchableDropdown extends Component {
     onReset() {
         this.setState ({
             searchTerm: '',
-            value: this.props.onReset(),
-            filteredList: this.props.dropdownList,
         });
+        this.props.onReset();
     }
 
     onInputChange(event) {
@@ -50,10 +47,9 @@ class SearchableDropdown extends Component {
         this.setState({
             showListContainer:true,
             searchTerm: searchTerm,
-            value: this.props.onInputChange(searchTerm),
             highlightedElementIndex: -1,
         });
-        this.filterList(searchTerm);
+        this.props.onInputChange(searchTerm);
     }
 
     filterList(searchTerm) {
@@ -69,23 +65,21 @@ class SearchableDropdown extends Component {
         } else {
             updatedList = this.props.dropdownList;
         }
-        this.setState({
-            filteredList: updatedList,
-        });
+        return updatedList;
     }
 
     onSelect(value) {
         this.setState({
             showListContainer:false,
             searchTerm: '',
-            value: this.props.onSelect(value),
             highlightedElementIndex: -1,
-            filteredList: this.props.dropdownList,
         });
+        this.props.onSelect(value);
     }
 
     onKeyDown(event) {
-        const { highlightedElementIndex, filteredList } = this.state;
+        const { highlightedElementIndex, searchTerm } = this.state;
+        const filteredList = this.filterList(searchTerm);
         if (event.key === 'ArrowDown') {
             this.setState({showListContainer:true});
             this.setHighlightedIndex("DOWN", highlightedElementIndex, filteredList);
@@ -130,7 +124,6 @@ class SearchableDropdown extends Component {
                     filteredListLength -1 : highlightedElementIndex -1;
                 this.setState({highlightedElementIndex: nextHighlightedIndex });
 
-
                 if (nextHighlightedIndex === filteredListLength - 1) {
                     if (this.state.showListContainer === true) {
                         this.scrollContainer.setScrollPosEnd();
@@ -144,7 +137,8 @@ class SearchableDropdown extends Component {
 
     render() {
         const { dropdownAttributes, noMatch, placeholder, renderDropdownElement, label } = this.props;
-        const { filteredList, highlightedElementIndex, showListContainer } = this.state;
+        const { highlightedElementIndex, showListContainer, searchTerm } = this.state;
+        const filteredList = this.filterList(searchTerm);
         return (
           <div className={ classNames(this.props.className) }>
             {label?
@@ -168,7 +162,7 @@ class SearchableDropdown extends Component {
                     onKeyDown={this.onKeyDown}
                     placeholder={placeholder}
                     inputId={this.props.inputId}
-                    inputValue={this.state.value}
+                    inputValue={this.props.inputValue}
                     onReset={this.onReset}
                     searchTerm={this.state.searchTerm}
                     ariaInvalid={this.props.ariaInvalid}
@@ -188,11 +182,9 @@ class SearchableDropdown extends Component {
                 }
               </div>
             </div>
-
         );
     }
 }
-
 
 SearchableDropdown.propTypes = {
     /** Display reset when input has value */
@@ -207,15 +199,17 @@ SearchableDropdown.propTypes = {
     label: string,
     /** Id attribute on the input element */
     inputId: isRequiredIf(string, props => props.label),
+    /** Value of input field */
+    inputValue: string,
     /** value to be displayed in dropdown in case of search with no match */
     noMatch: string.isRequired,
-    /** Function receives value of inputField and should return with value of inputField */
+    /** Function receives value of inputField and should update inputValue */
     onInputChange: func.isRequired,
     /** Function receives no input expects no return */
     onBlur: func,
-    /** Function receives selected object, should return value to be displayed in input field */
+    /** Function receives selected object, should update inputValue */
     onSelect: func.isRequired,
-    /** Function gets no input, should return value to be displayed in input field */
+    /** Function gets no input, should update inputValue */
     onReset: func.isRequired,
     /** Placeholder for input field when empty */
     placeholder: string,
@@ -228,7 +222,6 @@ SearchableDropdown.propTypes = {
     /** css class for main div searchableDropdown */
     className: string,
 };
-
 
 SearchableDropdown.defaultProps = {
     displayResetWhenInputHasValue: false,
