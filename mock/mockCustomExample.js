@@ -34,22 +34,6 @@ exports.companies = [
     }
 ];
 
-exports.initialInputValue = exports.companies[0].organizationName;
-let selectedCompanyName = exports.companies[0].organizationName;
-
-exports.onSelect = function (company) {
-    selectedCompanyName = company.organizationName;
-    return selectedCompanyName;
-};
-
-exports.onReset = function () {
-    return selectedCompanyName;
-};
-
-exports.onChange = function (value) {
-    return value;
-};
-
 exports.renderItem = unreadLabel => company => (
     <div style={{cursor:"pointer"}}>
         <a className="ffe-searchable-dropdown__item--header">{company.organizationName}</a>
@@ -61,4 +45,6 @@ exports.renderItem = unreadLabel => company => (
         </div>
     </div>
 );
+
+
 

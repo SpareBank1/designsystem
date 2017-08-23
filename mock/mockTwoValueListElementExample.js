@@ -33,19 +33,3 @@ exports.companies = [
     }
 ];
 
-exports.initialInputValue ='';
-let selectedCompanyName = exports.companies[0].organizationName;
-
-exports.onSelect = function (company) {
-    selectedCompanyName = company.organizationName;
-    return selectedCompanyName;
-};
-
-exports.onReset = function () {
-    return '';
-};
-
-exports.onChange = function (value) {
-    return value;
-};
-
