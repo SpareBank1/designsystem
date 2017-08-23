@@ -1938,16 +1938,9 @@ domutils@1.1:
   dependencies:
     domelementtype "1"
 
-domutils@1.5.1:
+domutils@1.5.1, domutils@^1.5.1:
   version "1.5.1"
   resolved "***REMOVED***#dcd8488a26f563d61079e48c9f7b7e32373682cf"
-  dependencies:
-    dom-serializer "0"
-    domelementtype "1"
-
-domutils@^1.5.1:
-  version "1.6.2"
-  resolved "***REMOVED***#1958cc0b4c9426e9ed367fb1c8e854891b0fa3ff"
   dependencies:
     dom-serializer "0"
     domelementtype "1"
@@ -4294,17 +4287,13 @@ minimatch@3.0.3:
   dependencies:
     brace-expansion "^1.0.0"
 
-minimist@0.0.8:
+minimist@0.0.8, minimist@~0.0.1:
   version "0.0.8"
   resolved "***REMOVED***#857fcabfc3397d2625b8228262e86aa7a011b05d"
 
 minimist@^1.1.1, minimist@^1.2.0:
   version "1.2.0"
   resolved "***REMOVED***#a35008b20f41383eec1fb914f4cd5df79a264284"
-
-minimist@~0.0.1:
-  version "0.0.10"
-  resolved "***REMOVED***#de3f98543dbf96082be48ad1a0c7cda836301dcf"
 
 mkdirp@0.5.0:
   version "0.5.0"
@@ -5382,6 +5371,10 @@ react-icons@^2.2.5:
   resolved "***REMOVED***#f942501c21a4cc0456ce2bbee5032c93f6051dcf"
   dependencies:
     react-icon-base "2.0.7"
+
+react-proptype-conditional-require@^1.0.4:
+  version "1.0.4"
+  resolved "***REMOVED***#69c2d5741e6df5e08f230f36bbc2944ee1222555"
 
 react-styleguidist@^5.4.8:
   version "5.5.10"
