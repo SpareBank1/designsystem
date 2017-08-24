@@ -1,5 +1,8 @@
 # Changelog
 
+## v.5.0.2
+* Using left, right instead of start, end for text-align property to support IE.
+
 ## v.5.0.1
 * Support both versions 9 and 10 of `ffe-core`
 

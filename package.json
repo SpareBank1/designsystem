@@ -1,6 +1,6 @@
 {
     "name": "ffe-grid",
-    "version": "5.0.1",
+    "version": "5.0.2",
     "description": "A grid component for use within the FFE framework",
     "scripts": {
         "compile": "lessc examples/examples.less examples/examples.css && cp -R node_modules/ffe-core/fonts/ examples/ && echo \"$(date +%T): Updated examples\"",
