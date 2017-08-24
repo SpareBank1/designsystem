@@ -1,5 +1,9 @@
 # Changelog
 
+## 7.11.0
+
+* snakkeboble-ikon.svg has been redesigned to be more in line with the visual profile.
+
 ## 7.10.0
 
 * Added trillekoffert-ikon.svg
