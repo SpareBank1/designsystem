@@ -1,5 +1,8 @@
 # Changelog
 
+## v.7.0.3
+* Changed font-weight of .ffe-dropdown from 300 to 500
+
 ## v.7.0.2
 * Fixed `peerDependencies` field for `ffe-core` that was mixed up with `devDepedencies`
 
