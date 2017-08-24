@@ -1,11 +1,8 @@
 # Changelog
 
-## 8.0.0
+## 7.11.0
 
-** Breaking changes **
-
-* snakkeboble-ikon.svg has been redesignet to be more in line with the visual profile. Anyone using that icon
-should ensure that nothing in their UI breaks because of this update.
+* snakkeboble-ikon.svg has been redesigned to be more in line with the visual profile.
 
 ## 7.10.0
 
