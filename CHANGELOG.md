@@ -1,5 +1,8 @@
 # Changelog
 
+## v2.5.2
+* Removing class `ffe-calendar__date--focus` from container-div.
+
 ## v2.5.1
 
 * Fix prop type warning when using `ariaInvalid` prop with a boolean value on `Datepicker`.

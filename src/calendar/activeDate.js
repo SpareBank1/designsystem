@@ -56,7 +56,7 @@ export default class ActiveDate extends Component {
       <td
         aria-disabled={ !date.isEnabled }
         aria-selected={ date.isSelected }
-        className='ffe-calendar__day'
+        className="ffe-calendar__day"
         headers={ headers }
         onClick={ () => onClick(date) }
         ref={ c => { this._datecell = c; } }
