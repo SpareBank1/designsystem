@@ -1,5 +1,12 @@
 # Changelog
 
+## 8.0.0
+
+** Breaking changes **
+
+* snakkeboble-ikon.svg has been redesignet to be more in line with the visual profile. Anyone using that icon
+should ensure that nothing in their UI breaks because of this update.
+
 ## 7.10.0
 
 * Added trillekoffert-ikon.svg
