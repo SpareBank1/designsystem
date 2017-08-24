@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.4.11
+
+* Update ffe-icons to version 7.11.0,
+  * `ffe-icons-react/snakkeboble-ikon` has been redesigned to be more in line with the visual profile.
+
 ## 2.4.10
 
 * Updated ffe-icons to version 7.10.0, new icons:
