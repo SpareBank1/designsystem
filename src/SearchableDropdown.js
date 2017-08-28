@@ -136,9 +136,10 @@ class SearchableDropdown extends Component {
     }
 
     render() {
-        const { dropdownAttributes, noMatch, placeholder, renderDropdownElement, label } = this.props;
+        const { dropdownAttributes, noMatch, placeholder, renderDropdownElement, label, errorMessage } = this.props;
         const { highlightedElementIndex, showListContainer, searchTerm } = this.state;
         const filteredList = this.filterList(searchTerm);
+
         return (
           <div className={ classNames(this.props.className) }>
             {label?
@@ -147,12 +148,7 @@ class SearchableDropdown extends Component {
               </label>
               : null
             }
-            <div
-                className={classNames(
-                    "ffe-searchable-dropdown",
-                    this.props.className
-                )}
-            >
+            <div className="ffe-searchable-dropdown">
                 <Input
                     displayResetWhenInputHasValue = {this.props.displayResetWhenInputHasValue}
                     onBlur={this.onBlur}
@@ -181,6 +177,11 @@ class SearchableDropdown extends Component {
                     />
                 }
               </div>
+              {errorMessage &&
+                <div className="ffe-field-error-message">
+                    {errorMessage}
+                </div>
+              }
             </div>
         );
     }
@@ -221,6 +222,8 @@ SearchableDropdown.propTypes = {
     ariaInvalid: bool,
     /** css class for main div searchableDropdown */
     className: string,
+    /** Error message */
+    errorMessage: string,
 };
 
 SearchableDropdown.defaultProps = {

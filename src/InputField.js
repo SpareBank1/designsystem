@@ -28,7 +28,7 @@ class Input extends Component {
                         "ffe-searchable-dropdown__dropdown-input-field",
                         {"ffe-searchable-dropdown__display-reset": this.displayReset()}
                     )}
-                    aria-invalid={ariaInvalid}
+                    aria-invalid={ String(ariaInvalid) }
                     id={inputId}
                     onBlur={onBlur}
                     onChange={onInputChange}
