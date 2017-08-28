@@ -26,15 +26,23 @@
     transition: all @ffe-transition-duration @ffe-ease;
     width: 100%;
 
-    &:hover {
+    &[aria-invalid="true"] {
+      .ffe-chevron-icon-with-color(@ffe-orange-fire);
+    }
+
+    &:not([aria-invalid="true"]):hover {
       border-color: @ffe-blue-azure;
     }
 
     &:focus,
     &:active {
-      border-color: @ffe-blue-azure;
       box-shadow: 0 0 0 2px @ffe-blue-focus;
       outline: none;
+    }
+
+    &:not([aria-invalid="true"]):focus,
+    &:not([aria-invalid="true"]):active {
+      border-color: @ffe-blue-azure;
     }
 
     &:-moz-focusring {
@@ -53,7 +61,7 @@
     }
   }
   &__display-reset {
-    background-image:none;
+    background-image:none!important;
   }
   &__reset-button {
     position: absolute;
