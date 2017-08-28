@@ -1,5 +1,12 @@
 # Changelog
 
+## v2.0.3
+
+### 🐛 Bugfixes
+
+* `formatDistance` no longer returns the empty string if the input is equal to
+the result of `formatNumber(input)` (solves part of SFO-6995)
+
 ## v2.0.2
 
 - Bugfix: Include correct files in NPM package.
