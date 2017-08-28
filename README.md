@@ -37,6 +37,7 @@ I noe tilfeller trenger man kanskje kun deler av ffe-core. Derfor kan hver fil i
 @import "~ffe-core/less/breakpoints";
 @import "~ffe-core/less/dimensions";
 @import "~ffe-core/less/motion";
+@import "~ffe-core/less/font-sizes";
 
 // font-face definitions (requires @base-url or @font-url to be defined)
 @import "~ffe-core/less/fonts";
