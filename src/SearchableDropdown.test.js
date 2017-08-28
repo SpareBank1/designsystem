@@ -23,13 +23,16 @@ describe('<SearchableDropdown>', () => {
         inputValue:'',
         displayResetWhenInputHasValue:true,
         label:"Foo",
-        inputId: "inputid"
+        inputId: "inputid",
+        errorMessage: "404"
     };
 
     const setHighlightedIndexSpy = jest.spyOn(SearchableDropdown.prototype, 'setHighlightedIndex');
     const component = mountDropdownWithProps(props);
 
-
+    test('errorMessage <div> ', () =>
+      expect(component.find('.ffe-field-error-message')).toHaveLength(1));
+      
     test('renders', () =>
         expect(component.find('.ffe-searchable-dropdown')).toHaveLength(1));
 
@@ -49,6 +52,7 @@ describe('<SearchableDropdown>', () => {
         expect(component.find(ScrollContainer)).toHaveLength(1);
         expect(component.state('showListContainer')).toEqual(true);
     });
+
     test('renders <ScrollContainer> on arrowDown', () => {
         const arrowDownEvent = {key: 'ArrowDown', preventDefault: i};
         component.find(Input).prop('onKeyDown')(arrowDownEvent);
