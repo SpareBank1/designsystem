@@ -2,8 +2,7 @@
 
 main() {
     npm install
-    npm run lint
-    npm test
+    npm run test
     npm run build
 
     if should_publish; then
