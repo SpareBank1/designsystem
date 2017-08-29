@@ -1,5 +1,9 @@
 # Changelog
 
+## v.8.0.0
+* BREAKING: peerDependency to `ffe-core` bumped to new major
+* Replaced hardcoded font-sizes with mixins from ffe-core
+
 ## v.7.0.3
 * Changed font-weight of .ffe-dropdown from 300 to 500
 
