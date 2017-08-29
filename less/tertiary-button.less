@@ -6,12 +6,12 @@
     cursor: pointer;
     display: inline-block;
     font-family: "MuseoSansRounded-500", arial, sans-serif;
-    font-size: 16px;
     height: 26px;
     line-height: 20px;
     margin: 0 -4px; // Hack to allow box-shadow to float outside content on focus
     padding: 0 4px;
     text-decoration: none;
+    .ffe-fontsize-button-transparent;
 
     &::after {
         border-bottom: solid 1px @ffe-blue-azure;
@@ -51,7 +51,7 @@
     }
 
     &--condensed {
-        font-size: 14px;
+        .ffe-fontsize-button-condensed;
 
         .ffe-tertiary-button__label-icon {
             bottom: 7px;
