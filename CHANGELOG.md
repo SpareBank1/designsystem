@@ -1,5 +1,9 @@
 # Changelog
 
+## v5.0.0
+* BREAKING: peerDependency to `ffe-core` bumped to new major
+* Replaced hardcoded font-sizes with mixins from ffe-core
+
 ## v4.2.0
 * Add `ffe-task-button` as a new button type. Should be used for any action where the user is adding a new item to some kind of collection. It's not opinionated about what icon to use, but was designed with `pluss-ikon` from `ffe-icons` in mind.
 
