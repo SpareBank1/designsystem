@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.4.12
+* Removed the default `onClick` handler which caused decorative icons to be read by screen readers.
+
 ## 2.4.11
 
 * Update ffe-icons to version 7.11.0,
