@@ -28,15 +28,13 @@ const svg = ${camelCaseSVGProps(icons[iconName])};
 const createTitle = title => title ? <title>{title}</title> : null;
 const createDesc = desc => desc ? <desc>{desc}</desc> : null;
 
-const Icon = (
-    {className = '',
-    style = {},
+const Icon = ({
+    desc = '',
     focusable = false,
     title = '',
-    desc = '',
-    onClick = f => f,
-    tabIndex}) =>
-        <svg className={className} style={style} focusable={focusable} tabIndex={tabIndex} onClick={onClick} {...svg.props}>
+    ...rest
+    }) =>
+        <svg focusable={focusable} {...rest} {...svg.props}>
             {createTitle(title)}
             {createDesc(desc)}
             {svg.props.children}

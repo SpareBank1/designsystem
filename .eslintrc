@@ -1,5 +1,5 @@
 {
-    "extends": "ffe",
+    "extends": "eslint-config-ffe",
     "rules": {
         "react/no-unknown-property": 0
     }
