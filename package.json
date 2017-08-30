@@ -1,6 +1,6 @@
 {
   "name": "ffe-icons-react",
-  "version": "2.4.11",
+  "version": "2.4.12",
   "description": "React komponent for ffe-icons",
   "main": "ffe-icons-react.js",
   "scripts": {
@@ -13,18 +13,12 @@
     "test:nsp": "nsp check",
     "clean": "babel-node ./src/clean.js",
     "ffe:icons": "ffe-icons --opts=svg.sprite.config.json",
-    "server": "npm run build && npm run build:iconlist && webpack-dev-server",
+    "start": "npm run build && npm run build:iconlist && webpack-dev-server",
     "postpublish": "git tag ${npm_package_version} && git push --tags"
   },
   "repository": {
     "type": "git",
     "url": "***REMOVED***"
-  },
-  "babel": {
-    "presets": [
-      "react",
-      "es2015"
-    ]
   },
   "license": "ISC",
   "dependencies": {
@@ -33,24 +27,26 @@
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
-    "babel-loader": "^6.4.1",
-    "babel-preset-es2015": "^6.24.1",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-latest": "^6.24.1",
     "babel-preset-react": "^6.24.1",
-    "eslint": "^3.19.0",
+    "eslint": "4.5.0",
     "eslint-config-ffe": "^6.0.1",
-    "eslint-plugin-import": "^2.2.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^3.0.2",
-    "eslint-plugin-react": "^6.10.3",
+    "eslint-plugin-react": "^7.3.0",
     "ffe-icons": "7.11.0",
     "gulp": "^3.9.1",
-    "json-loader": "^0.5.4",
+    "json-loader": "^0.5.7",
     "mkdirp": "^0.5.1",
     "nsp": "^2.6.3",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "rimraf": "^2.6.1",
-    "webpack": "^1.12.14",
-    "webpack-dev-server": "^1.14.1"
+    "webpack": "^3.5.5",
+    "webpack-dev-server": "^2.7.1"
   },
   "publishConfig": {
     "registry": "***REMOVED***"
