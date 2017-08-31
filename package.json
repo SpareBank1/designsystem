@@ -1,6 +1,6 @@
 {
   "name": "ffe-searchable-dropdown-react",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Dropdown with search option",
   "scripts": {
     "build": "babel -d lib --ignore=*.test.js src",

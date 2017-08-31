@@ -7,6 +7,9 @@
 .ffe-searchable-dropdown {
   position: relative;
   &__dropdown-input-field {
+    &::-ms-clear {
+      display: none;
+    }
     background-color: @ffe-white;
     background-size: 18px 18px;
     background-repeat: no-repeat;

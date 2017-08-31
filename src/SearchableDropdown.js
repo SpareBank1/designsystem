@@ -12,6 +12,7 @@ class SearchableDropdown extends Component {
             highlightedElementIndex: -1,
             searchTerm: '',
             showListContainer: false,
+            scrollId: "SearchableDropDown",
         };
 
         this.filterList = this.filterList.bind(this);
@@ -25,8 +26,19 @@ class SearchableDropdown extends Component {
         this.onReset = this.onReset.bind(this);
     }
 
-    onClick() { this.setState({showListContainer:true}); }
-    onFocus() { this.setState({showListContainer:true}); }
+    onClick() {
+        this.setState({showListContainer:true});
+        if (this.props.isMobilbank) {
+            this.props.scrollToTop(this.state.scrollId);
+        }
+    }
+
+    onFocus() {
+        this.setState({showListContainer:true});
+        if (this.props.isMobilbank) {
+            this.props.scrollToTop(this.state.scrollId);
+        }
+    }
 
     onBlur() {
         this.setState({showListContainer:false});
@@ -141,7 +153,7 @@ class SearchableDropdown extends Component {
         const filteredList = this.filterList(searchTerm);
 
         return (
-          <div className={ classNames(this.props.className) }>
+          <div className={ classNames(this.props.className) } id={this.state.scrollId}>
             {label?
               <label className="ffe-form-label ffe-form-label--block" htmlFor={ this.props.inputId }>
                   { label }
@@ -224,6 +236,10 @@ SearchableDropdown.propTypes = {
     className: string,
     /** Error message */
     errorMessage: string,
+    /** Adjust user view if mobilbank */
+    isMobilbank: bool,
+    /** Dictates behvaiour if mobilbank */
+    scrollToTop: isRequiredIf(func, props => props.isMobilbank)
 };
 
 SearchableDropdown.defaultProps = {
