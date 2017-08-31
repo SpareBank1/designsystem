@@ -1,5 +1,8 @@
 # Changelog for ffe-search-dropdown-react
 
+## v2.1.1
+* On mobile if field is selected or onfucus then scroll to top div element here.
+* Remove auto X in IE
 
 ## v2.1.0
 * Added errorMessage prop
