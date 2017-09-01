@@ -84,7 +84,7 @@ export default class GridCol extends Component {
             'ffe-grid__col',
             sizeClasses('lg', lg),
             sizeClasses('md', md),
-            sizeClasses('sm', sm),
+            sizeClasses('sm', !sm && !lg && !md ? 12: sm),
             modifiers(this.props),
         ].filter(x => x).join(' ');
 
