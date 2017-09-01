@@ -1,5 +1,8 @@
 # Changelog
 
+## v.8.1.0
+* Add new input-field modifier `--condensed`
+
 ## v.8.0.0
 * BREAKING: peerDependency to `ffe-core` bumped to new major
 * Replaced hardcoded font-sizes with mixins from ffe-core
