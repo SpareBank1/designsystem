@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { bool, number, oneOfType, shape, string } from 'prop-types';
 import classNames from 'classnames';
 
@@ -49,39 +49,53 @@ const modifiers = props => Object.keys(props)
         .map(key => `ffe-grid__col--${camelCaseToDashCase(key)}`)
         .join(' ');
 
-export default function GridCol(props) {
-    const {
-        children,
-        className,
-        element,
-        lg,
-        md,
-        sm,
-        ...rest
-    } = props;
+export default class GridCol extends Component {
 
-    Object.keys(rest).forEach(key => {
-        if (MODIFIER_LIST.includes(key)) {
-            delete rest[key];
-        }
-    });
+    componentDidMount() {
+        React.Children.forEach(this.props.children, child => {
+            if (child.type === GridCol) {
+                console.error(`
+                    Detected a <GridCol /> child within another GridCol. Do not nest grid columns,
+                    the result will be unpredictable.
+                `);
+            }
+        });
+    }
 
-    const classes = [
-        className,
-        'ffe-grid__col',
-        sizeClasses('lg', lg),
-        sizeClasses('md', md),
-        sizeClasses('sm', sm),
-        modifiers(props),
-    ].filter(x => x).join(' ');
+    render() {
+        const {
+            children,
+            className,
+            element,
+            lg,
+            md,
+            sm,
+            ...rest
+        } = this.props;
 
-    const Element = element || 'div';
+        Object.keys(rest).forEach(key => {
+            if (MODIFIER_LIST.includes(key)) {
+                delete rest[key];
+            }
+        });
 
-    return (
-        <Element className={classes} {...rest}>
-            {children}
-        </Element>
-    );
+        const classes = [
+            className,
+            'ffe-grid__col',
+            sizeClasses('lg', lg),
+            sizeClasses('md', md),
+            sizeClasses('sm', sm),
+            modifiers(this.props),
+        ].filter(x => x).join(' ');
+
+        const Element = element || 'div';
+
+        return (
+            <Element className={classes} {...rest}>
+                {children}
+            </Element>
+        );
+    }
 }
 
 GridCol.propTypes = {
