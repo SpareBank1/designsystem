@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 import sinon from 'sinon';
 
 import { GridCol } from '..';
@@ -14,7 +14,7 @@ describe('GridCol', () => {
     it('renders with default class', () => {
         const el = renderShallow();
 
-        expect(el.prop('className')).to.be('ffe-grid__col');
+        expect(el.prop('className')).to.contain('ffe-grid__col');
         expect(el.type()).to.be('div');
     });
 
@@ -158,5 +158,33 @@ describe('GridCol', () => {
 
         expect(el.hasClass('ffe-grid__col--md-offset-1')).to.be(true);
         expect(el.hasClass('ffe-grid__col--md-1')).to.be(true);
+    });
+
+    it('defaults to sm={12} if no dimensions are provided', () => {
+        const el = renderShallow();
+
+        expect(el.hasClass('ffe-grid__col--sm-12')).to.be(true);
+    });
+
+    describe('when mounting', () => {
+        beforeEach(() => {
+            sinon.spy(console, 'error');
+        });
+
+        it('warns about nested <GridCol> tags', () => {
+            mount(
+                <GridCol name="parent">
+                    <GridCol name="child">
+                        <div />
+                    </GridCol>
+                </GridCol>
+            );
+            expect(console.error.called).to.be(true);
+            expect(console.error.getCall(0).args[0]).to.contain('<GridCol />');
+        });
+
+        afterEach(() => {
+            console.error.restore();
+        });
     });
 });
