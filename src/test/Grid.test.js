@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 import sinon from 'sinon';
 
 import { Grid } from '..';
@@ -49,5 +49,27 @@ describe('Grid', () => {
         const el = renderShallow({ element: 'section' });
 
         expect(el.type()).to.be('section');
+    });
+
+    describe('when mounting', () => {
+        beforeEach(() => {
+            sinon.spy(console, 'error');
+        });
+
+        it('warns about nested <Grid> tags', () => {
+            mount(
+                <Grid name="parent">
+                    <Grid name="child">
+                        <div />
+                    </Grid>
+                </Grid>
+            );
+            expect(console.error.called).to.be(true);
+            expect(console.error.getCall(0).args[0]).to.contain('<Grid />');
+        });
+
+        afterEach(() => {
+            console.error.restore();
+        });
     });
 });

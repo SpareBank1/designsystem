@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 import sinon from 'sinon';
 
 import { GridRow, GridCol } from '..';
@@ -86,5 +86,27 @@ describe('GridRow', () => {
         const el = renderShallow({ element: 'section' });
 
         expect(el.type()).to.be('section');
+    });
+
+    describe('when mounting', () => {
+        beforeEach(() => {
+            sinon.spy(console, 'error');
+        });
+
+        it('warns about nested <GridRow> tags', () => {
+            mount(
+                <GridRow name="parent">
+                    <GridRow>
+                        <div />
+                    </GridRow>
+                </GridRow>
+            );
+            expect(console.error.called).to.be(true);
+            expect(console.error.getCall(0).args[0]).to.contain('<GridRow />');
+        });
+
+        afterEach(() => {
+            console.error.restore();
+        });
     });
 });
