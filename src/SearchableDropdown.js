@@ -58,7 +58,7 @@ class SearchableDropdown extends Component {
         const searchTerm = event.target.value;
         this.setState({
             showListContainer:true,
-            searchTerm: searchTerm,
+            searchTerm,
             highlightedElementIndex: -1,
         });
         this.props.onInputChange(searchTerm);
@@ -148,7 +148,18 @@ class SearchableDropdown extends Component {
     }
 
     render() {
-        const { dropdownAttributes, noMatch, placeholder, renderDropdownElement, label, errorMessage } = this.props;
+        const {
+            dropdownAttributes,
+            noMatch,
+            placeholder,
+            renderDropdownElement,
+            label,
+            errorMessage,
+            inputId,
+            inputValue,
+            ariaInvalid,
+            displayResetWhenInputHasValue
+        } = this.props;
         const { highlightedElementIndex, showListContainer, searchTerm } = this.state;
         const filteredList = this.filterList(searchTerm);
 
@@ -162,18 +173,18 @@ class SearchableDropdown extends Component {
             }
             <div className="ffe-searchable-dropdown">
                 <Input
-                    displayResetWhenInputHasValue = {this.props.displayResetWhenInputHasValue}
+                    displayResetWhenInputHasValue = {displayResetWhenInputHasValue}
                     onBlur={this.onBlur}
                     onInputChange={this.onInputChange}
                     onClick={this.onClick}
                     onFocus={this.onFocus}
                     onKeyDown={this.onKeyDown}
                     placeholder={placeholder}
-                    inputId={this.props.inputId}
-                    inputValue={this.props.inputValue}
+                    inputId={inputId}
+                    inputValue={inputValue}
                     onReset={this.onReset}
-                    searchTerm={this.state.searchTerm}
-                    ariaInvalid={this.props.ariaInvalid}
+                    searchTerm={searchTerm}
+                    ariaInvalid={ariaInvalid}
                 />
                 {showListContainer &&
                     <ScrollContainer

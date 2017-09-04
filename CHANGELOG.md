@@ -1,5 +1,9 @@
 # Changelog for ffe-search-dropdown-react
 
+## Unversioned
+* Fix console error in SearchableDropdown example.
+* Code style changes.
+
 ## v2.1.1
 * On mobile if field is selected or onfucus then scroll to top div element here.
 * Remove auto X in IE
