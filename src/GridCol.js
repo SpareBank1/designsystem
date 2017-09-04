@@ -53,7 +53,7 @@ export default class GridCol extends Component {
 
     componentDidMount() {
         React.Children.forEach(this.props.children, child => {
-            if (child.type === GridCol) {
+            if (child && child.type === GridCol) {
                 console.error(`
                     Detected a <GridCol /> child within another GridCol. Do not nest grid columns,
                     the result will be unpredictable.
