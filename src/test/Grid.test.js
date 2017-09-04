@@ -53,7 +53,7 @@ describe('Grid', () => {
 
     describe('when mounting', () => {
         beforeEach(() => {
-            sinon.spy(console, 'error');
+            sinon.stub(console, 'error');
         });
 
         it('warns about nested <Grid> tags', () => {
@@ -66,6 +66,18 @@ describe('Grid', () => {
             );
             expect(console.error.called).to.be(true);
             expect(console.error.getCall(0).args[0]).to.contain('<Grid />');
+        });
+
+        it('does not blow up if a null-child is received', () => {
+            // The below inline check on "false" will result in the outer <Grid>
+            // receiving children as an array-like of [<Grid />, null] which it needs
+            // to handle when checking for nesten grids.
+            mount(
+                <Grid>
+                    <Grid />
+                    { false && <Grid /> }
+                </Grid>
+            );
         });
 
         afterEach(() => {

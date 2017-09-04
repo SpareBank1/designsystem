@@ -6,7 +6,7 @@ export default class GridRow extends Component {
 
     componentDidMount() {
         React.Children.forEach(this.props.children, child => {
-            if (child.type === GridRow) {
+            if (child && child.type === GridRow) {
                 console.error(`
                     Detected a <GridRow /> child within another GridRow. Do not nest grid rows,
                     the result will be unpredictable.
