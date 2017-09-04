@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version 4.2.1
+
+### Bugfix
+* Fix a NPE when rendering with `null` as a child of `Grid`, `GridRow` or `GridCol`.
+
 ## Version 4.2.0
 
 ### New features

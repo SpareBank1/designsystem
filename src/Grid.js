@@ -6,7 +6,7 @@ export default class Grid extends Component {
 
     componentDidMount() {
         React.Children.forEach(this.props.children, child => {
-            if (child.type === Grid) {
+            if (child && child.type === Grid) {
                 console.error(`
                     Detected a <Grid /> child within another Grid. Do not nest grids,
                     the result will be unpredictable.
