@@ -51,6 +51,5 @@ initialState = { inputValue: mockCustomExample.companies[0].organizationName,
     onSelect={(company) => setState({inputValue: company.organizationName, selectedCompanyName:company.organizationName})} 
     onInputChange={(value) => setState({inputValue: value})}
     onReset={() => setState({inputValue: state.selectedCompanyName})}
-     label = "Fund"
 />
 ```
