@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 2.3.2
+* Use PropTypes from prop-types package
+
 ## 2.3.1
 
 * Expand peerDep scope of `ffe-context-message` to include `2.x`.
