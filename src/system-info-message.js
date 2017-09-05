@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import { node, object } from 'prop-types';
 
 import InfoSirkelIkon from 'ffe-icons-react/info-sirkel-ikon';
 
@@ -13,6 +14,6 @@ export default function SystemInfoMessage({ style, children }) {
 }
 
 SystemInfoMessage.propTypes = {
-    children: PropTypes.node.isRequired,
-    style: PropTypes.object,
+    children: node.isRequired,
+    style: object,
 };

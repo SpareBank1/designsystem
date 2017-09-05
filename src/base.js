@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import { node, object, oneOf } from 'prop-types';
 import { findDOMNode } from 'react-dom';
 
 import KryssIkon from 'ffe-icons-react/kryss-ikon';
@@ -61,8 +62,8 @@ export default class Base extends Component {
 }
 
 Base.propTypes = {
-    children: PropTypes.node.isRequired,
-    icon: PropTypes.node.isRequired,
-    modifier: PropTypes.oneOf(['error', 'info', 'success', 'news']),
-    style: PropTypes.object,
+    children: node.isRequired,
+    icon: node.isRequired,
+    modifier: oneOf(['error', 'info', 'success', 'news']),
+    style: object,
 };
