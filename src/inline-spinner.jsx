@@ -1,11 +1,12 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import { bool } from 'prop-types'
 
 const InlineSpinner = ({ large = false }) => (
     <span className={ `ffe-loading-spinner ${ large ? 'ffe-loading-spinner--large' : '' }` } />
 );
 
 InlineSpinner.propTypes = {
-    large: PropTypes.bool
+    large: bool
 };
 
 export default InlineSpinner;

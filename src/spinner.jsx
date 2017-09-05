@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import { bool, node } from 'prop-types'
 
 const Spinner = ({ text, children, large = false, center = true }) => (
     <div className={ `ffe-content-container ${ !center ? 'ffe-content-container--text-left' : '' }` }>
@@ -12,10 +13,10 @@ const Spinner = ({ text, children, large = false, center = true }) => (
 );
 
 Spinner.propTypes = {
-    text: PropTypes.node,
-    children: PropTypes.node,
-    large: PropTypes.bool,
-    center: PropTypes.bool
+    text: node,
+    children: node,
+    large: bool,
+    center: bool
 };
 
 export default Spinner;

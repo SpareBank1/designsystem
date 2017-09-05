@@ -1,6 +1,9 @@
 # Changelog
 
-# v.2.0.2
+## v.2.0.3
+* Use PropTypes from prop-types package
+
+## v.2.0.2
 * Expand peerDep scope of `ffe-spinner` to include `2.x`.
 * Remove peerDep on `ffe-core`.
 
