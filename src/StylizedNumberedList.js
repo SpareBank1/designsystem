@@ -1,4 +1,5 @@
 import React from 'react';
+import { array } from 'prop-types';
 
 export default function StylizedNumberedList({ children }) {
     return  <ol className="ffe-stylized-numbered-list">
@@ -7,5 +8,5 @@ export default function StylizedNumberedList({ children }) {
 }
 
 StylizedNumberedList.propTypes = {
-    children: React.PropTypes.array.isRequired,
+    children: array.isRequired,
 };

@@ -1,4 +1,5 @@
 import React from 'react';
+import { array } from 'prop-types';
 
 export default function NumberedList({ children }) {
     return  <ol className="ffe-numbered-list">
@@ -7,5 +8,5 @@ export default function NumberedList({ children }) {
 }
 
 NumberedList.propTypes = {
-    children: React.PropTypes.array.isRequired,
+    children: array.isRequired,
 };
