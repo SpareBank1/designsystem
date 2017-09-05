@@ -1,5 +1,14 @@
-import React, { Component, PropTypes, cloneElement } from 'react';
-
+import React, { Component, cloneElement } from 'react';
+import {
+    number,
+    node,
+    string,
+    bool,
+    element,
+    oneOf,
+    func,
+    object
+} from 'prop-types';
 import CloseIcon from 'ffe-icons-react/kryss-ikon';
 
 import acceptedLocales from './locale/accepted-locales';
@@ -16,10 +25,10 @@ export default class Base extends Component {
 
     close(event) {
         const { animationLengthMs, onClose } = this.props;
-        const element = this._self;
-        element.style.height = `${element.offsetHeight}px`;
+        const self = this._self;
+        self.style.height = `${self.offsetHeight}px`;
         setTimeout(() => {
-            element.style.height = 0;
+            self.style.height = 0;
         }, 0);
         setTimeout(() => {
             this.setState({ closed: true }, () => {
@@ -99,19 +108,19 @@ export default class Base extends Component {
 }
 
 Base.propTypes = {
-    animationLengthMs: PropTypes.number,
-    children: PropTypes.node.isRequired,
-    className: PropTypes.string,
-    compact: PropTypes.bool,
-    contentElementId: PropTypes.string,
-    header: PropTypes.string,
-    headerElementId: PropTypes.string,
-    icon: PropTypes.element,
-    locale: PropTypes.oneOf(acceptedLocales),
-    messageType: PropTypes.oneOf(['info', 'tip', 'success', 'error']).isRequired,
-    onClose: PropTypes.func,
-    showCloseButton: PropTypes.bool,
-    style: PropTypes.object,
+    animationLengthMs: number,
+    children: node.isRequired,
+    className: string,
+    compact: bool,
+    contentElementId: string,
+    header: string,
+    headerElementId: string,
+    icon: element,
+    locale: oneOf(acceptedLocales),
+    messageType: oneOf(['info', 'tip', 'success', 'error']).isRequired,
+    onClose: func,
+    showCloseButton: bool,
+    style: object,
 };
 
 Base.defaultProps = {
