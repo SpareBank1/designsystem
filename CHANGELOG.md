@@ -1,5 +1,8 @@
 # Changelog
 
+## v.2.0.3
+* Use PropTypes from prop-types package
+
 ## v2.0.2
 Remove the `--white` modifier classes, since they are now the default.
 

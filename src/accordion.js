@@ -1,4 +1,5 @@
-import React, { PropTypes, cloneElement } from 'react';
+import React, { cloneElement } from 'react';
+import { node, oneOf } from 'prop-types';
 import uuid from 'uuid';
 
 function Accordion(props) {
@@ -18,8 +19,8 @@ function Accordion(props) {
 }
 
 Accordion.propTypes = {
-    children: PropTypes.node.isRequired,
-    type: PropTypes.oneOf(['blue']),
+    children: node.isRequired,
+    type: oneOf(['blue']),
 };
 
 export default Accordion;
