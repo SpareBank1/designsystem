@@ -1,4 +1,10 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import {
+    array,
+    bool,
+    func,
+    string,
+} from 'prop-types';
 import hash from 'nfe-hash';
 import classNames from 'classnames';
 
@@ -37,14 +43,14 @@ export default function CheckBox(props) {
 }
 
 CheckBox.propTypes = {
-    name: PropTypes.string.isRequired,
-    label: PropTypes.string.isRequired,
-    onChange: PropTypes.func,
-    checked: PropTypes.bool,
-    noMargins: PropTypes.bool,
-    inline: PropTypes.bool,
-    invalid: PropTypes.bool,
-    children: PropTypes.array,
+    name: string.isRequired,
+    label: string.isRequired,
+    onChange: func,
+    checked: bool,
+    noMargins: bool,
+    inline: bool,
+    invalid: bool,
+    children: array,
 };
 
 CheckBox.defaultProps = {
