@@ -1,4 +1,10 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import {
+    string,
+    array,
+    bool,
+    func
+} from 'prop-types';
 import hash from 'nfe-hash';
 
 const createID = (label, options) => {
@@ -54,20 +60,20 @@ function Dropdown(props) {
 }
 
 Dropdown.propTypes = {
-    id: PropTypes.string,
-    children: PropTypes.array,
-    className: PropTypes.string,
-    containerClassName: PropTypes.string,
-    defaultValue: PropTypes.string,
-    errorMessage: PropTypes.string,
-    invalid: PropTypes.bool,
-    isLoading: PropTypes.bool,
-    label: PropTypes.string,
-    name: PropTypes.string,
-    onChange: PropTypes.func.isRequired,
-    onBlur: PropTypes.func,
-    selectedValue: PropTypes.string,
-    autoFocus: PropTypes.bool
+    id: string,
+    children: array,
+    className: string,
+    containerClassName: string,
+    defaultValue: string,
+    errorMessage: string,
+    invalid: bool,
+    isLoading: bool,
+    label: string,
+    name: string,
+    onChange: func.isRequired,
+    onBlur: func,
+    selectedValue: string,
+    autoFocus: bool
 };
 
 export default Dropdown;

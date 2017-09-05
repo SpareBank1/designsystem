@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.8.1
+* Use PropTypes from prop-types package
+
 ## 2.8.0
 
 * Increased version range for ffe-form.

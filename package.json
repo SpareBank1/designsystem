@@ -1,6 +1,6 @@
 {
   "name": "ffe-dropdown-react",
-  "version": "2.8.0",
+  "version": "2.8.1",
   "main": "lib/dropdown.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/. && npm run example",
@@ -19,7 +19,8 @@
     "ffe-form": "1.x - 6.x"
   },
   "dependencies": {
-    "nfe-hash": "^1.1.1"
+    "nfe-hash": "^1.1.1",
+    "prop-types": "*"
   },
   "devDependencies": {
     "babel-cli": "6.7.5",
