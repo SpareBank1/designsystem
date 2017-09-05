@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import { number, string } from 'prop-types';
 
 const NON_BREAKING_SPACE = '\u00A0';
 
@@ -93,10 +94,10 @@ function ChartDonut({ name, percentage, firstLabel, lastLabel }) {
 }
 
 ChartDonut.propTypes = {
-    firstLabel: PropTypes.string.isRequired,
-    lastLabel: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    percentage: PropTypes.number.isRequired,
+    firstLabel: string.isRequired,
+    lastLabel: string.isRequired,
+    name: string.isRequired,
+    percentage: number.isRequired,
 };
 
 export default ChartDonut;
