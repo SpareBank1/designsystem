@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import { node } from 'prop-types';
 import Button from './Button';
 
 export default function ActionButton(props) {
@@ -8,5 +9,5 @@ export default function ActionButton(props) {
 }
 
 ActionButton.propTypes = {
-    children: PropTypes.node
+    children: node
 };
