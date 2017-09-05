@@ -1,5 +1,8 @@
 # Changelog
 
+## 4.4.2
+* Use PropTypes from prop-types package
+
 ## 4.4.1
 * Added examples for local testing.
 * Bumped devDep on `ffe-form` to `7.0.2` to fix styling of invalid.
