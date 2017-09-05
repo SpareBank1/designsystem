@@ -1,4 +1,12 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import {
+    bool,
+    func,
+    number,
+    oneOf,
+    oneOfType,
+    string
+} from 'prop-types';
 
 import RadioBase from './radio-base';
 
@@ -20,18 +28,18 @@ class RadioButton extends Component {
 }
 
 RadioButton.propTypes = {
-    'aria-invalid': PropTypes.oneOf(['true', 'false', true, false]),
-    checked: PropTypes.bool,
-    disabled: PropTypes.bool,
-    inline: PropTypes.bool,
-    invalid: PropTypes.oneOf(['true', 'false', true, false]),
-    label: PropTypes.string,
-    name: PropTypes.string,
-    onChange: PropTypes.func,
-    value: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.number,
-        PropTypes.bool
+    'aria-invalid': oneOf(['true', 'false', true, false]),
+    checked: bool,
+    disabled: bool,
+    inline: bool,
+    invalid: oneOf(['true', 'false', true, false]),
+    label: string,
+    name: string,
+    onChange: func,
+    value: oneOfType([
+        string,
+        number,
+        bool
     ]).isRequired,
 };
 

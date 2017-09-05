@@ -1,5 +1,14 @@
-import React, { PropTypes } from 'react';
-
+import React from 'react';
+import {
+    oneOf,
+    bool,
+    shape,
+    node,
+    oneOfType,
+    string,
+    number,
+    func
+} from 'prop-types';
 import RadioButtonGroup from './radio-button-group';
 import RadioBase from './radio-base';
 
@@ -37,32 +46,32 @@ const RadioSwitch = (props) => {
 };
 
 RadioSwitch.propTypes = {
-    'aria-invalid': PropTypes.oneOf(['true', 'false', true, false]),
-    disabled: PropTypes.bool,
-    firstOption: PropTypes.shape({
-        label: PropTypes.node.isRequired,
-        value: PropTypes.oneOfType([
-            PropTypes.string,
-            PropTypes.number,
-            PropTypes.bool
+    'aria-invalid': oneOf(['true', 'false', true, false]),
+    disabled: bool,
+    firstOption: shape({
+        label: node.isRequired,
+        value: oneOfType([
+            string,
+            number,
+            bool
         ]).isRequired,
     }).isRequired,
-    invalid: PropTypes.oneOf(['true', 'false', true, false]),
-    label: PropTypes.string,
-    lastOption: PropTypes.shape({
-        label: PropTypes.node.isRequired,
-        value: PropTypes.oneOfType([
-            PropTypes.string,
-            PropTypes.number,
-            PropTypes.bool
+    invalid: oneOf(['true', 'false', true, false]),
+    label: string,
+    lastOption: shape({
+        label: node.isRequired,
+        value: oneOfType([
+            string,
+            number,
+            bool
         ]).isRequired,
     }).isRequired,
-    name: PropTypes.string,
-    onChange: PropTypes.func,
-    value: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.number,
-        PropTypes.bool
+    name: string,
+    onChange: func,
+    value: oneOfType([
+        string,
+        number,
+        bool
     ]),
 };
 

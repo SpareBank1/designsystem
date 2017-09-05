@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.2.1
+* Use PropTypes from prop-types package
+
 ## v1.2.0 (17.7.2017)
 * Fixed: `aria-invalid` was not being set on `input`-elements.
 * Removed `aria-invalid` from `RadioButtonGroup`s fieldset.
