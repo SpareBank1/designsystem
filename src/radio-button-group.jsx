@@ -1,4 +1,14 @@
-import React, { Children, PropTypes } from 'react';
+import React, { Children } from 'react';
+import {
+    arrayOf,
+    bool,
+    func,
+    number,
+    oneOf,
+    oneOfType,
+    shape,
+    string
+} from 'prop-types';
 import RadioBase from './radio-base';
 import RadioButton from './radio-button';
 
@@ -87,7 +97,7 @@ const RadioButtonGroup = (props) => {
 };
 
 RadioButtonGroup.propTypes = {
-    'aria-invalid': PropTypes.oneOf(['true', 'false', true, false]),
+    'aria-invalid': oneOf(['true', 'false', true, false]),
     children: (props, name) => {
         const children = Children.toArray(props[name]);
         const allowedTypes = [RadioButton, RadioBase];
@@ -97,28 +107,28 @@ RadioButtonGroup.propTypes = {
             );
         }
     },
-    buttons: PropTypes.arrayOf(PropTypes.shape({
-        value: PropTypes.oneOfType([
-            PropTypes.string,
-            PropTypes.number,
-            PropTypes.bool
+    buttons: arrayOf(shape({
+        value: oneOfType([
+            string,
+            number,
+            bool
         ]).isRequired,
-        label: PropTypes.string.isRequired,
-        name: PropTypes.string,
-        inline: PropTypes.bool,
-        checked: PropTypes.bool,
-        disabled: PropTypes.bool,
-        onChange: PropTypes.func
+        label: string.isRequired,
+        name: string,
+        inline: bool,
+        checked: bool,
+        disabled: bool,
+        onChange: func
     })),
-    disabled: PropTypes.bool,
-    invalid: PropTypes.oneOf(['true', 'false', true, false]),
-    label: PropTypes.string,
-    name: PropTypes.string,
-    onChange: PropTypes.func,
-    value: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.number,
-        PropTypes.bool
+    disabled: bool,
+    invalid: oneOf(['true', 'false', true, false]),
+    label: string,
+    name: string,
+    onChange: func,
+    value: oneOfType([
+        string,
+        number,
+        bool
     ]),
 };
 

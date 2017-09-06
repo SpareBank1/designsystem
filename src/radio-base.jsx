@@ -1,4 +1,14 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import {
+    bool,
+    func,
+    node,
+    number,
+    object,
+    oneOf,
+    oneOfType,
+    string
+} from 'prop-types';
 import hash from 'nfe-hash';
 import classnames from 'classnames';
 
@@ -95,23 +105,23 @@ class RadioBase extends Component {
 }
 
 RadioBase.propTypes = {
-    'aria-invalid': PropTypes.oneOf(['true', 'false', true, false]),
-    checked: PropTypes.bool,
-    children: PropTypes.node,
-    disabled: PropTypes.bool,
-    id: PropTypes.string,
-    inline: PropTypes.bool,
-    invalid: PropTypes.oneOf(['true', 'false', true, false]),
-    label: PropTypes.string,
-    labelClasses: PropTypes.string.isRequired,
-    name: PropTypes.string,
-    onChange: PropTypes.func,
-    style: PropTypes.object,
-    tooltip: PropTypes.string,
-    value: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.number,
-        PropTypes.bool
+    'aria-invalid': oneOf(['true', 'false', true, false]),
+    checked: bool,
+    children: node,
+    disabled: bool,
+    id: string,
+    inline: bool,
+    invalid: oneOf(['true', 'false', true, false]),
+    label: string,
+    labelClasses: string.isRequired,
+    name: string,
+    onChange: func,
+    style: object,
+    tooltip: string,
+    value: oneOfType([
+        string,
+        number,
+        bool
     ]).isRequired,
 };
 
