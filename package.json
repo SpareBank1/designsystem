@@ -1,6 +1,6 @@
 {
   "name": "ffe-chart-donut-react",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Donut chart in SVG",
   "scripts": {
     "build": "babel -d lib/ src/ && cp src/ffe-chart-donut.less lib/",
@@ -21,6 +21,9 @@
   "keywords": [
     "ffe"
   ],
+  "dependencies": {
+    "prop-types": "*"
+  },
   "peerDependencies": {
     "react": "^15.4.0"
   },
