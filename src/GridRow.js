@@ -2,17 +2,14 @@ import React, { Component } from 'react';
 import { bool, node, string } from 'prop-types';
 import classNames from 'classnames';
 
+import { checkForNestedComponent } from './utils';
+
 export default class GridRow extends Component {
 
     componentDidMount() {
-        React.Children.forEach(this.props.children, child => {
-            if (child && child.type === GridRow) {
-                console.error(`
-                    Detected a <GridRow /> child within another GridRow. Do not nest grid rows,
-                    the result will be unpredictable.
-                `);
-            }
-        });
+        if (process.env.NODE_ENV !== 'production') {
+            checkForNestedComponent(this.props.children, GridRow);
+        }
     }
 
     render() {
@@ -61,7 +58,7 @@ GridRow.propTypes = {
     bgBluePale: bool,
     bgSand: bool,
     className: string,
-    children: node.isRequired,
+    children: node,
     element: string,
     reverse: bool,
     topPadding: bool,
