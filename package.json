@@ -1,6 +1,6 @@
 {
   "name": "ffe-accordion-react",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "main": "lib/index.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/. && npm run example",
@@ -25,6 +25,7 @@
     "classnames": "^2.2.5",
     "ffe-expandable-react": "^1.0.5",
     "ffe-icons-react": "^2.1.0",
+    "prop-types": "*",
     "uuid": "^3.0.1"
   },
   "devDependencies": {

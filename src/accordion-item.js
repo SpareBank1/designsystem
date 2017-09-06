@@ -1,4 +1,13 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import {
+    arrayOf,
+    bool,
+    func,
+    node,
+    number,
+    oneOf,
+    string
+} from 'prop-types';
 import FFEExpandable from 'ffe-expandable-react';
 import Chevron from 'ffe-icons-react/chevron-ikon';
 import classNames from 'classnames';
@@ -93,16 +102,16 @@ class AccordionItem extends Component {
 }
 
 AccordionItem.propTypes = {
-    ariaLabel: PropTypes.string,
-    children: PropTypes.node,
-    expandedContent: PropTypes.node,
-    ignoredNodeNames: PropTypes.arrayOf(PropTypes.string),
-    index: PropTypes.number,
-    isOpen: PropTypes.bool,
-    onClose: PropTypes.func,
-    onOpen: PropTypes.func,
-    type: PropTypes.oneOf(['blue']),
-    uuid: PropTypes.string,
+    ariaLabel: string,
+    children: node,
+    expandedContent: node,
+    ignoredNodeNames: arrayOf(string),
+    index: number,
+    isOpen: bool,
+    onClose: func,
+    onOpen: func,
+    type: oneOf(['blue']),
+    uuid: string,
 };
 
 AccordionItem.defaultProps = {
