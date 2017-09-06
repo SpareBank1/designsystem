@@ -1,6 +1,6 @@
 {
   "name": "ffe-checkbox-react",
-  "version": "4.4.1",
+  "version": "4.4.2",
   "main": "lib/checkbox.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/. && npm run example",
@@ -21,7 +21,8 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "nfe-hash": "^1.1.0"
+    "nfe-hash": "^1.1.0",
+    "prop-types": "*"
   },
   "devDependencies": {
     "babel-cli": "6.7.5",
