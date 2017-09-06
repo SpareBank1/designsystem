@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## Version 4.2.2
+
+### Improvement
+* The warnings about nested grid elements has been fixed to work recursively.
+* The warnings about nested grid elements do not run in production environments.
+
 ## Version 4.2.1
 
 ### Bugfix

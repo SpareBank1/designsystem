@@ -2,7 +2,7 @@ import React from 'react';
 import { mount, shallow } from 'enzyme';
 import sinon from 'sinon';
 
-import { GridCol } from '..';
+import { Grid, GridRow, GridCol } from '..';
 
 const defaultProps = {
     children: <p>blah</p>,
@@ -171,16 +171,29 @@ describe('GridCol', () => {
             sinon.stub(console, 'error');
         });
 
-        it('warns about nested <GridCol> tags', () => {
+        it('warns about nested <GridCol> tag', () => {
             mount(
-                <GridCol name="parent">
-                    <GridCol name="child">
-                        <div />
-                    </GridCol>
-                </GridCol>
+                <Grid>
+                    <GridRow>
+                        <GridCol>
+                            <div>
+                                <div>
+                                    <div>
+                                        <GridCol>
+                                            <div>hadoken</div>
+                                        </GridCol>
+                                    </div>
+                                </div>
+                            </div>
+                        </GridCol>
+                    </GridRow>
+                </Grid>
             );
-            expect(console.error.called).to.be(true);
-            expect(console.error.getCall(0).args[0]).to.contain('<GridCol />');
+
+            expect(console.error.calledOnce).to.be(true);
+            expect(console.error.getCall(0).args[0])
+                .to.contain('Do not nest')
+                .and.to.contain('<GridCol />');
         });
 
         it('does not blow up if a null-child is received', () => {

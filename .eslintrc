@@ -4,6 +4,9 @@
         "node": false
     },
     "parserOptions": {
-        ecmaVersion: 8
+        "ecmaVersion": 8
+    },
+    "globals": {
+        "process": false
     }
 }

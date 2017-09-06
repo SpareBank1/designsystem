@@ -93,16 +93,25 @@ describe('GridRow', () => {
             sinon.stub(console, 'error');
         });
 
-        it('warns about nested <GridRow> tags', () => {
+        it('warns about nested <GridRow> tag', () => {
             mount(
-                <GridRow name="parent">
                     <GridRow>
-                        <div />
+                        <GridCol>
+                            <div>
+                                <div>
+                                    <div>
+                                        <GridRow />
+                                    </div>
+                                </div>
+                            </div>
+                        </GridCol>
                     </GridRow>
-                </GridRow>
             );
-            expect(console.error.called).to.be(true);
-            expect(console.error.getCall(0).args[0]).to.contain('<GridRow />');
+
+            expect(console.error.calledOnce).to.be(true);
+            expect(console.error.getCall(0).args[0])
+                .to.contain('Do not nest')
+                .and.to.contain('<GridRow />');
         });
 
         it('does not blow up if a null-child is received', () => {
