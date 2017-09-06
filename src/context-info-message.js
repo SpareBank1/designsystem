@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import { node } from 'prop-types';
 import Base from './base';
 
 export default function ContextInfoMessage({children, ...rest}) {
@@ -13,5 +14,5 @@ export default function ContextInfoMessage({children, ...rest}) {
 }
 
 ContextInfoMessage.propTypes = {
-    children: PropTypes.node.isRequired,
+    children: node.isRequired,
 };

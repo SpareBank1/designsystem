@@ -1,6 +1,6 @@
 {
   "name": "ffe-context-message-react",
-  "version": "2.3.1",
+  "version": "2.3.2",
   "description": "SpareBank 1 System Message komponent",
   "main": "lib/index.js",
   "scripts": {
@@ -22,6 +22,9 @@
     "url": "ssh://git@stash.intern.sparebank1.no:22/ffe/ffe-context-message-react.git"
   },
   "author": "SpareBank 1",
+  "dependencies": {
+    "prop-types": "*"
+  },
   "peerDependencies": {
     "ffe-context-message": "1.x - 2.x"
   },
