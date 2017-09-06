@@ -1,5 +1,8 @@
 # Changelog
 
+## v2.0.3
+* Use PropTypes from prop-types package
+
 ## v2.0.2
 
 * Expand peerDep scope of `ffe-lists` to include `4.x`.

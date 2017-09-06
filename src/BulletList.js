@@ -1,4 +1,5 @@
 import React from 'react';
+import { array } from 'prop-types';
 
 export default function BulletList({ children }) {
     return  <ul className="ffe-bullet-list">
@@ -7,5 +8,5 @@ export default function BulletList({ children }) {
 }
 
 BulletList.propTypes = {
-    children: React.PropTypes.array.isRequired,
+    children: array.isRequired,
 };

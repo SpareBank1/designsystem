@@ -1,4 +1,5 @@
 import React from 'react';
+import { array, bool } from 'prop-types';
 import classNames from 'classnames';
 
 export default function DescriptionList({ children, medium, large }) {
@@ -16,7 +17,7 @@ export default function DescriptionList({ children, medium, large }) {
 }
 
 DescriptionList.propTypes = {
-    children: React.PropTypes.array.isRequired,
-    medium: React.PropTypes.bool,
-    large: React.PropTypes.bool,
+    children: array.isRequired,
+    medium: bool,
+    large: bool,
 };

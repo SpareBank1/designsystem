@@ -1,4 +1,5 @@
 import React from 'react';
+import { node } from 'prop-types';
 import hash from 'nfe-hash';
 
 const DescriptionListMultiCol = ({ children }) => {
@@ -25,7 +26,7 @@ const DescriptionListMultiCol = ({ children }) => {
 };
 
 DescriptionListMultiCol.propTypes = {
-  children: React.PropTypes.node.isRequired,
+  children: node.isRequired,
 };
 
 export default DescriptionListMultiCol;
