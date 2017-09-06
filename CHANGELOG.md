@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## Version 1.1.5
+* Use PropTypes from prop-types package
+
 ## Version 1.1.4
 * Removed peerDep on ffe-core
 
