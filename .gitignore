@@ -1,4 +1,6 @@
 .idea
+*.iml
+
 /lib
 # Created by https://www.gitignore.io/api/node
 

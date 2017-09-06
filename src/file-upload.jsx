@@ -25,6 +25,11 @@ class FileUpload extends React.Component {
     }
 
     onFilesSelected(event) {
+        // clear file input to trigger onChange when uploading same filename
+        if (this.fileInputElement) {
+            this.fileInputElement.value = '';
+        }
+
         this.props.onFilesSelected(event.target.files);
     }
 
