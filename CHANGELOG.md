@@ -1,5 +1,8 @@
 # Changelog
 
+## v6.0.1
+* Use PropTypes from prop-types package
+
 ## v6.0.0
 * (BREAKING) Remove button names with 'FFE' prefix that were deprecated in v2.1.0
     * To migrate to v6.0.0, change your button imports as follows:

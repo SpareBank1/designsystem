@@ -1,6 +1,6 @@
 {
   "name": "ffe-buttons-react",
-  "version": "6.0.0",
+  "version": "6.0.1",
   "description": "React implementation of ffe-buttons",
   "main": "lib/index.js",
   "scripts": {
@@ -65,7 +65,8 @@
     ]
   },
   "dependencies": {
-    "ffe-icons-react": "^2.1.0"
+    "ffe-icons-react": "^2.1.0",
+    "prop-types": "*"
   },
   "license": "UNLICENSED"
 }
