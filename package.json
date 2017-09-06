@@ -1,6 +1,6 @@
 {
   "name": "ffe-header",
-  "version": "8.0.3",
+  "version": "9.0.0",
   "description": "Felles header for SpareBank 1",
   "main": "index.js",
   "scripts": {
@@ -20,7 +20,7 @@
   "author": "Glenn Brownlee <glenn.brownlee@sparebank1.no>",
   "license": "ISC",
   "peerDependencies": {
-    "ffe-buttons": "4.x",
+    "ffe-buttons": "5.x",
     "ffe-core": "^9.2.0 || ^10.0.0"
   },
   "devDependencies": {
