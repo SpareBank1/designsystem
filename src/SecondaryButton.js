@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import { node } from 'prop-types';
 import Button from './Button';
 
 export default function SecondaryButton(props) {
@@ -18,5 +19,5 @@ export default function SecondaryButton(props) {
 }
 
 SecondaryButton.propTypes = {
-    children: PropTypes.node
+    children: node
 };

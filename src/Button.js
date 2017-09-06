@@ -1,4 +1,12 @@
-import React, { cloneElement, PropTypes } from 'react';
+import React, { cloneElement } from 'react';
+import {
+    bool,
+    func,
+    node,
+    object,
+    oneOf,
+    string
+} from 'prop-types';
 
 export default function Button(props) {
     const decorate = (icon, buttonType) => cloneElement(icon, { className: `ffe-${buttonType}-button__label-icon` });
@@ -56,13 +64,13 @@ export default function Button(props) {
 }
 
 Button.propTypes = {
-    action: PropTypes.string,
-    ariaLoadingMessage: PropTypes.string,
-    children: PropTypes.node,
-    className: PropTypes.string,
-    condensed: PropTypes.bool,
-    disableButton: PropTypes.bool,
-    buttonType: PropTypes.oneOf([
+    action: string,
+    ariaLoadingMessage: string,
+    children: node,
+    className: string,
+    condensed: bool,
+    disableButton: bool,
+    buttonType: oneOf([
         'action',
         'primary',
         'secondary',
@@ -70,15 +78,15 @@ Button.propTypes = {
         'tertiary',
         'back',
     ]),
-    id: PropTypes.string,
-    isLoading: PropTypes.bool,
-    isTabbable: PropTypes.bool,
-    autoFocus: PropTypes.bool,
-    label: PropTypes.string,
-    leftIcon: PropTypes.node,
-    onClick: PropTypes.func,
-    rightIcon: PropTypes.node,
-    simpleContent: PropTypes.bool,
-    style: PropTypes.object,
-    type: PropTypes.oneOf(['button', 'submit', 'reset']),
+    id: string,
+    isLoading: bool,
+    isTabbable: bool,
+    autoFocus: bool,
+    label: string,
+    leftIcon: node,
+    onClick: func,
+    rightIcon: node,
+    simpleContent: bool,
+    style: object,
+    type: oneOf(['button', 'submit', 'reset']),
 };

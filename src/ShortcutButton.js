@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import { node, string } from 'prop-types';
 import ChevronIcon from 'ffe-icons-react/chevron-ikon';
 import Button from './Button';
 
@@ -18,6 +19,6 @@ export default function ShortcutButton(props) {
 }
 
 ShortcutButton.propTypes = {
-    children: PropTypes.node,
-    label: PropTypes.string
+    children: node,
+    label: string
 };
