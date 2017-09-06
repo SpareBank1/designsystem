@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import { bool, node } from 'prop-types';
 import Spinner from './spinner';
 
 const LargeSpinner = ({ text, children, center = true }) => (
@@ -8,9 +9,9 @@ const LargeSpinner = ({ text, children, center = true }) => (
 );
 
 LargeSpinner.propTypes = {
-    text: PropTypes.node,
-    children: PropTypes.node,
-    center: PropTypes.bool
+    text: node,
+    children: node,
+    center: bool
 };
 
 export default LargeSpinner;

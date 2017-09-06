@@ -1,6 +1,6 @@
 {
   "name": "ffe-spinner-react",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "author": "Sparebank 1",
   "main": "lib/index.js",
   "scripts": {
@@ -13,6 +13,9 @@
     "prepublish": "npm run build",
     "has-published": "npm show . versions -s | grep -q ${npm_package_version}",
     "postpublish": "git tag ${npm_package_version} && git push --tags"
+  },
+  "dependencies": {
+      "prop-types": "*"
   },
   "devDependencies": {
     "babel-cli": "^6.4.5",
@@ -36,6 +39,7 @@
     "mocha-tap13": "0.0.3",
     "node-lessify": "^0.1.4",
     "nsp": "^2.2.0",
+    "prop-types": "^15.5.10",
     "react": "^15.2.0",
     "react-addons-test-utils": "^15.0.0",
     "react-dom": "^15.0.0"
