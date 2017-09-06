@@ -1,5 +1,10 @@
 #CHANGELOG
 
+## Version 9.0.0
+
+### Breaking changes
+* Bumped dependency on ffe-buttons to 5.x
+
 ## Version 8.0.3
 * Support both versions 9 and 10 of `ffe-core`
 
