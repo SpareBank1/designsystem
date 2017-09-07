@@ -2,17 +2,14 @@ import React, { Component } from 'react';
 import classNames from 'classnames';
 import { bool, node, string } from 'prop-types';
 
+import { checkForNestedComponent } from './utils';
+
 export default class Grid extends Component {
 
     componentDidMount() {
-        React.Children.forEach(this.props.children, child => {
-            if (child && child.type === Grid) {
-                console.error(`
-                    Detected a <Grid /> child within another Grid. Do not nest grids,
-                    the result will be unpredictable.
-                `);
-            }
-        });
+        if (process.env.NODE_ENV !== 'production') {
+            checkForNestedComponent(this.props.children, Grid);
+        }
     }
 
     render() {
@@ -44,7 +41,7 @@ export default class Grid extends Component {
 }
 
 Grid.propTypes = {
-    children: node.isRequired,
+    children: node,
     className: string,
     element: string,
     noTopPadding: bool,

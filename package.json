@@ -1,6 +1,6 @@
 {
   "name": "ffe-grid-react",
-  "version": "4.2.1",
+  "version": "4.2.2",
   "main": "lib/index.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/. && npm run example",
@@ -9,8 +9,8 @@
     "lint:fix": "eslint --fix src/.",
     "test": "npm run test:spec && npm run test:nsp",
     "test:nsp": "nsp check",
-    "test:spec": "mocha -G --require babel-register src/**/*.test.js --require ./src/test/setup.test.js",
-    "test:watch": "mocha -G --require babel-register src/**/*.test.js -w --require ./src/test/setup.test.js",
+    "test:spec": "cross-env NODE_ENV=test mocha -G --require babel-register src/**/*.test.js --require ./src/test/setup.test.js",
+    "test:watch": "cross-env NODE_ENV=test mocha -G --require babel-register src/**/*.test.js -w --require ./src/test/setup.test.js",
     "tdd": "npm run test:watch",
     "example": "babel-node docs/create.js > example.html",
     "prepublish": "npm run build",
@@ -31,6 +31,7 @@
     "babel-preset-react": "^6.16.0",
     "babel-register": "^6.18.0",
     "chai": "^3.5.0",
+    "cross-env": "^5.0.5",
     "enzyme": "^2.7.0",
     "eslint": "^3.13.0",
     "eslint-config-ffe": "^6.0.0",
