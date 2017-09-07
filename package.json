@@ -1,6 +1,6 @@
 {
   "name": "ffe-file-upload-react",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "lib/index.js",
   "scripts": {
     "start": "npm run server",
@@ -9,10 +9,10 @@
     "watch": "onchange 'src/**.js' -- npm run build",
     "lint": "eslint --ext .js,.jsx src/.",
     "test:nsp": "nsp check",
-    "test:spec": "mocha --require babel-register src/**/*.test.js",
+    "test:spec": "mocha --compilers babel-register src/**/*.test.js",
+    "test:watch": "mocha --compilers babel-register src/**/*.test.js -w  --watch-extensions jsx",
     "test": "npm run test:spec && npm run test:nsp",
-    "tdd": "mocha --require babel-register src/**/*.test.js -w  --watch-extensions jsx",
-    "example": "babel-node docs/create.js > example.html",
+    "tdd": "npm run test:watch",
     "prepublish": "npm run build",
     "has-published": "npm show . versions -s --json | grep -q \\\"${npm_package_version}\\\""
   },
@@ -55,7 +55,7 @@
   "peerDependencies": {
     "react": "^15.x",
     "react-dom": "15.x",
-    "prop-types": "15.x"
+    "prop-types": "*"
   },
   "publishConfig": {
     "registry": "***REMOVED***"
