@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { bool, number, oneOfType, shape, string } from 'prop-types';
 import classNames from 'classnames';
 
+import { checkForNestedComponent } from './utils';
+
 function camelCaseToDashCase(str) {
     if (!str) {
         return str;
@@ -52,14 +54,9 @@ const modifiers = props => Object.keys(props)
 export default class GridCol extends Component {
 
     componentDidMount() {
-        React.Children.forEach(this.props.children, child => {
-            if (child && child.type === GridCol) {
-                console.error(`
-                    Detected a <GridCol /> child within another GridCol. Do not nest grid columns,
-                    the result will be unpredictable.
-                `);
-            }
-        });
+        if (process.env.NODE_ENV !== 'production') {
+            checkForNestedComponent(this.props.children, GridCol);
+        }
     }
 
     render() {
