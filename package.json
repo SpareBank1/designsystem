@@ -55,7 +55,7 @@
   "peerDependencies": {
     "react": "^15.x",
     "react-dom": "15.x",
-    "prop-types": "x"
+    "prop-types": "*"
   },
   "publishConfig": {
     "registry": "***REMOVED***"
