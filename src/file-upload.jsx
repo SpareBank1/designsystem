@@ -46,7 +46,9 @@ class FileUpload extends React.Component {
             selectedFiles,
             accept,
             multiple,
-            errorMessage
+            errorMessage,
+            infoMessage,
+            successMessage
         } = this.props;
 
         return (
@@ -68,8 +70,11 @@ class FileUpload extends React.Component {
                 />
 
                 { errorMessage && <div className="ffe-field-error-message">{ errorMessage }</div> }
+                { !errorMessage && successMessage && <div className="ffe-field-success-message">{ successMessage }</div> }
+                { !errorMessage && !successMessage && infoMessage && <div className="ffe-field-info-message">{ infoMessage }</div> }
 
-                { selectedFiles && selectedFiles.length > 0 && <div>
+                { selectedFiles && selectedFiles.length > 0 &&
+                <div>
                     <div className="ffe-file-upload__filename__title">{ selectedFilesHeaderLabel }</div>
                     <ul className="ffe-file-upload__selected-files">
                         { selectedFiles.map((file, index) => (
@@ -102,6 +107,8 @@ FileUpload.propTypes = {
     accept: stringType,
     selectedFilesHeaderLabel: stringType,
     errorMessage: stringType,
+    infoMessage: stringType,
+    successMessage: stringType
 };
 
 export default FileUpload;
