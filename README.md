@@ -24,7 +24,9 @@ const Example = () => {
             onFilesSelected={ function }
             onFileDeleted={ function }
             selectedFilesHeaderLabel={ string }
-            errorMessage={ undefined || 'Wrong file format' }
+            errorMessage={ undefined || 'Wrong file format' || ['Not correct 1', 'Not correct 2'] }
+            infoMessage={ undefined || 'Supported file formats' }
+            successMessage={ undefined || 'You did it!' }
         />
     );
 }
