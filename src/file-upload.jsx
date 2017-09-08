@@ -21,16 +21,16 @@ class FileUpload extends React.Component {
     }
 
     triggerUploadFileNativeHandler() {
+        // clear file input to trigger onChange when uploading same filename
+        if (this.fileInputElement) {
+            this.fileInputElement.value = '';
+        }
         this.fileInputElement.click();
     }
 
     onFilesSelected(event) {
         this.props.onFilesSelected(event.target.files);
 
-        // clear file input to trigger onChange when uploading same filename
-        if (this.fileInputElement) {
-            this.fileInputElement.value = '';
-        }
     }
 
     onFileDeleted(event) {
