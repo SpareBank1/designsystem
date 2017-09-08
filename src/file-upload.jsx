@@ -69,9 +69,12 @@ class FileUpload extends React.Component {
                     onChange={ this.onFilesSelected }
                 />
 
-                { errorMessage && <div className="ffe-field-error-message">{ errorMessage }</div> }
                 { !errorMessage && successMessage && <div className="ffe-field-success-message">{ successMessage }</div> }
-                { !errorMessage && !successMessage && infoMessage && <div className="ffe-field-info-message">{ infoMessage }</div> }
+                { errorMessage && !Array.isArray(errorMessage) && <div className="ffe-field-error-message">{ errorMessage }</div> }
+                { errorMessage && Array.isArray(errorMessage) && errorMessage.map((message, index) =>
+                    <div key={ index } className="ffe-field-error-message">{ message }</div>
+                )}
+                { infoMessage && <div className="ffe-field-info-message">{ infoMessage }</div> }
 
                 { selectedFiles && selectedFiles.length > 0 &&
                 <div>
