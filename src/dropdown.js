@@ -22,6 +22,7 @@ function Dropdown(props) {
         errorMessage,
         invalid,
         isLoading,
+        isTabbable,
         label,
         selectedValue,
         ...rest
@@ -30,7 +31,7 @@ function Dropdown(props) {
     const domId = id || createID(label, children);
 
     return (
-        <div className={`ffe-input-group ${containerClassName}`}>
+        <div className={`ffe-input-group ${containerClassName}`} >
             {label &&
                 <label className="ffe-form-label ffe-form-label--block" htmlFor={domId}>
                     {label}
@@ -41,6 +42,7 @@ function Dropdown(props) {
                 id={domId}
                 value={selectedValue}
                 aria-invalid={invalid}
+                {... isTabbable ? {} : { tabIndex: -1 }}
                 {...rest}
             >
                 {children}
@@ -68,6 +70,7 @@ Dropdown.propTypes = {
     errorMessage: string,
     invalid: bool,
     isLoading: bool,
+    isTabbable: bool,
     label: string,
     name: string,
     onChange: func.isRequired,
