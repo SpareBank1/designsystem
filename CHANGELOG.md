@@ -1,6 +1,6 @@
 # Changelog
 
-## 2.8.2
+## 2.9.0
 * Added support for `isTabbable`
 
 ## 2.8.1
