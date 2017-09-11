@@ -21,16 +21,16 @@ class FileUpload extends React.Component {
     }
 
     triggerUploadFileNativeHandler() {
+        // clear file input to trigger onChange when uploading same filename
+        if (this.fileInputElement) {
+            this.fileInputElement.value = '';
+        }
         this.fileInputElement.click();
     }
 
     onFilesSelected(event) {
         this.props.onFilesSelected(event.target.files);
 
-        // clear file input to trigger onChange when uploading same filename
-        if (this.fileInputElement) {
-            this.fileInputElement.value = '';
-        }
     }
 
     onFileDeleted(event) {
@@ -46,7 +46,9 @@ class FileUpload extends React.Component {
             selectedFiles,
             accept,
             multiple,
-            errorMessage
+            errorMessage,
+            infoMessage,
+            successMessage
         } = this.props;
 
         return (
@@ -67,9 +69,15 @@ class FileUpload extends React.Component {
                     onChange={ this.onFilesSelected }
                 />
 
-                { errorMessage && <div className="ffe-field-error-message">{ errorMessage }</div> }
+                { !errorMessage && successMessage && <div className="ffe-field-success-message">{ successMessage }</div> }
+                { errorMessage && !Array.isArray(errorMessage) && <div className="ffe-field-error-message">{ errorMessage }</div> }
+                { errorMessage && Array.isArray(errorMessage) && errorMessage.map((message, index) =>
+                    <div key={ index } className="ffe-field-error-message">{ message }</div>
+                )}
+                { infoMessage && <div className="ffe-field-info-message">{ infoMessage }</div> }
 
-                { selectedFiles && selectedFiles.length > 0 && <div>
+                { selectedFiles && selectedFiles.length > 0 &&
+                <div>
                     <div className="ffe-file-upload__filename__title">{ selectedFilesHeaderLabel }</div>
                     <ul className="ffe-file-upload__selected-files">
                         { selectedFiles.map((file, index) => (
@@ -102,6 +110,8 @@ FileUpload.propTypes = {
     accept: stringType,
     selectedFilesHeaderLabel: stringType,
     errorMessage: stringType,
+    infoMessage: stringType,
+    successMessage: stringType
 };
 
 export default FileUpload;
