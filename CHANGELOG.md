@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.8.2
+* Added support for `isTabbable`
+
 ## 2.8.1
 * Use PropTypes from prop-types package
 
