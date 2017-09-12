@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.4.13
+
+* Updated ffe-icons to version 7.12.0, new icons:
+  * `ffe-icons-react/pil-ut-av-boks-skraa-ikon` has been redesigned with thicker lines
+
+
 ## 2.4.12
 * Removed the default `onClick` handler which caused decorative icons to be read by screen readers.
 
