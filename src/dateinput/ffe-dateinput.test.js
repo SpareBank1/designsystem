@@ -17,7 +17,7 @@ const defaultProps = {
 
 const getWrapper = props => shallow(<FFEDateInput {...defaultProps} {...props} />);
 
-describe.only('<FFEDateInput />', () => {
+describe('<FFEDateInput />', () => {
   it('should render a wrapper for the input field', () => {
     const wrapper = getWrapper();
     expect(wrapper.hasClass('ffe-dateinput')).to.equal(true);

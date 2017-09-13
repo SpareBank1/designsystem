@@ -41,7 +41,7 @@ export default function Form() {
 * `ariaInvalid`: signifies validation errors.
 * `hideErrors`: Optional. Hides error output if any, so errors can be handled from outside.
 * `label`: Optional. Adds a label formatted by .ffe-form-label
-* `onError`: Optional. Will be called on any internal error with the error code, like if the input is malformed or out of bounds.
+* `onError`: Optional. Will be called on any validation error with the error code and error text, like if the input is malformed or out of bounds.
 
 #### ErrorCodes
 Error codes can be imported as an object from the main package as well:

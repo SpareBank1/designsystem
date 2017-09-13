@@ -136,7 +136,8 @@ describe('<FFEDatepicker />', () => {
       });
 
       it('runs the error callback', () =>
-        expect(onError).to.have.been.calledWith(ErrorTypes.INVALID_DATE_FORMAT));
+        expect(onError).to.have.been.calledWithExactly(
+          ErrorTypes.INVALID_DATE_FORMAT, i18n.nb[ErrorTypes.INVALID_DATE_FORMAT]));
     });
 
     describe('ariaInvalid', () => {
