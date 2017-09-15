@@ -1,6 +1,6 @@
 {
   "name": "ffe-account-selector-react",
-  "version": "7.5.0",
+  "version": "7.5.1",
   "main": "lib/index.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/.",
@@ -39,6 +39,7 @@
     "nsp": "^2.6.2",
     "react": "^15.4.2",
     "react-addons-test-utils": "^15.4.2",
+    "react-auto-bind": "^0.4.0",
     "react-dom": "^15.4.2",
     "sinon": "^1.17.7"
   },

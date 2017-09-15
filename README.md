@@ -142,7 +142,7 @@ __onReset__
 function that is called when input field is reset.
 
 __locale__
-Either "nb", "nn" or "en". Defaults to "nb".
+Either "nb", "nn" or "en". 
 
 __placeholder__
 Set the placeholder attribute of the input field.
@@ -159,3 +159,11 @@ number that specifies that max height in pixels of the suggestion list. Defaults
 __onSuggestionListChange__
 function that is called when the height of the suggestion list is changed.
 
+__showSelectAllOption__
+boolean that specifies if an option for selecting all should be rendered. Defaults to false. Used for AccountSelectorMulti only.
+
+__onSelectAll__
+function that gets called if the all option is clicked. Used for AccountSelectorMulti only.
+
+__allSelected__
+boolean that specifies if the "Select all" option is selected. Used for AccountSelectorMulti only.

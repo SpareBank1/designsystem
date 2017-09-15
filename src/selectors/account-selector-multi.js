@@ -1,6 +1,7 @@
 import React from 'react';
-import { func, string, arrayOf} from 'prop-types';
+import { func, string, arrayOf, bool} from 'prop-types';
 import BaseSelector from './base-selector';
+import autoBind from 'react-auto-bind';
 import AccountSuggestionMulti from '../account/account-suggestion-multi';
 import AccountNoMatch from '../account/account-nomatch';
 import { Account, Locale, KeyCodes } from '../util/types';
@@ -11,7 +12,7 @@ import txt from '../i18n/i18n';
 class AccountSelectorMulti extends React.Component {
   constructor(props) {
     super(props);
-    this.onKeyDown = this.onKeyDown.bind(this);
+    autoBind(this);
     this.state = {
       suggestionListHeight: 0
     };
@@ -57,7 +58,7 @@ class AccountSelectorMulti extends React.Component {
       return (
         <StatusBar
           renderSelectionStatus={() => statusText}
-          onDone={() => this.onDone()}
+          onDone={this.onDone}
           labelDoneButton={txt[this.props.locale].DROPDOWN_MULTISELECT_DONE}
           style={{ position: 'absolute', zIndex: 100, top: height }}
         />
@@ -74,7 +75,7 @@ class AccountSelectorMulti extends React.Component {
 
 
   render() {
-    const { noMatches, onAccountSelected, accounts, locale } = this.props;
+    const { noMatches, onAccountSelected, accounts, locale, showSelectAllOption, onSelectAll, selectedAccounts } = this.props;
     return (
       <div
         className='ffe-account-selector'
@@ -84,12 +85,16 @@ class AccountSelectorMulti extends React.Component {
           renderSuggestion={(account) => this.renderSuggestion(account)}
           renderNoMatches={() => <AccountNoMatch value={noMatches} locale={locale}/>}
           suggestionDetails={this.renderSuggestionDetails()}
+          showSelectAllOption={showSelectAllOption}
           shouldHideSuggestionsOnSelect={false}
+          onSelectAll={onSelectAll}
           shouldSelectHighlightedOnTab={false}
+          allSelected={accounts.length === selectedAccounts.length}
           shouldHideSuggestionsOnBlur={false}
           shouldHideSuggestionsOnReset={true}
           suggestionFilter={accountFilter}
           onSelect={onAccountSelected}
+          locale={locale}
           onSuggestionListChange={(height) => {
             this.setState({ suggestionListHeight: height });
           }}
@@ -106,11 +111,18 @@ class AccountSelectorMulti extends React.Component {
   }
 }
 
+AccountSelectorMulti.defaultProps = {
+  onSelectAll: () => {},
+  showSelectAllOption: false
+};
+
 AccountSelectorMulti.propTypes = {
   onAccountSelected: func.isRequired,
+  onSelectAll: func,
   accounts: arrayOf(Account),
   locale: Locale.isRequired,
   selectedAccounts: arrayOf(Account),
+  showSelectAllOption: bool,
   noMatches: string,
   onBlur: func.isRequired
 };
