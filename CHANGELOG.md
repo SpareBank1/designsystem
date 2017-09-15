@@ -1,5 +1,9 @@
 # Changelog
 
+# v7.5.1
+* Added property `showAllOption`. Set to true to show an option for selecting all accounts. Will call "onSelectAll" when selected/deselected
+
+
 # v7.5.0
 * Added property `showBalance`. Set to false to hide the balance of the accounts.
 

@@ -7,4 +7,5 @@ export default {
   NO_ACCOUNTS_FOUND : 'Ingen kontoar',
   ONE_ACCOUNT_SELECTED: '1 konto vald',
   MULTIPLE_ACCOUNTS_SELECTED: 'kontoar vald',
+  SELECT_ALL: 'Velj alle'
 };

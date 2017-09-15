@@ -50,7 +50,10 @@ class BaseSelector extends Component {
   }
 
   filterSuggestions() {
-    const { suggestions, suggestionFilter, value } = this.props;
+    const { suggestions, suggestionFilter, value, showSelectAllOption } = this.props;
+    if (showSelectAllOption) {
+      return [{ id: "all-accounts"},...suggestions.filter(suggestionFilter(value))];
+    }
     return suggestions.filter(suggestionFilter(value));
   }
 
@@ -72,6 +75,10 @@ class BaseSelector extends Component {
 
   onSuggestionSelect(suggestion) {
     if (suggestion) {
+      if (suggestion.id === "all-accounts") {
+        this.props.onSelectAll();
+        return;
+      }
       const { shouldHideSuggestionsOnSelect, onSelect } = this.props;
       if (shouldHideSuggestionsOnSelect) {
         this.showOrHideSuggestions(false, () => onSelect(suggestion));
@@ -241,7 +248,11 @@ BaseSelector.propTypes = {
   shouldHideSuggestionsOnBlur: bool.isRequired,
   shouldHideSuggestionsOnReset: bool.isRequired,
   shouldShowSuggestionsOnFocus: bool,
+  showSelectAllOption: bool,
+  onSelectAll: func,
+  allSelected: bool,
   onChange: func,
+  locale: string.isRequired,
   onBlur: func,
   onReset: func,
   onFocus: func,
@@ -259,6 +270,8 @@ BaseSelector.defaultProps = {
   onFocus: () => {},
   onReset: () => {},
   onSuggestionListChange: () => {},
+  onSelectAll: () => {},
+  showSelectAllOption: false,
   ariaInvalid: false,
   placeholder: '',
   value: '',
