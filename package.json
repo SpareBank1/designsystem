@@ -1,6 +1,6 @@
 {
   "name": "ffe-account-selector-react",
-  "version": "7.5.0",
+  "version": "7.6.0",
   "main": "lib/index.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/.",
@@ -63,6 +63,8 @@
     "classnames": "2.2.5",
     "ffe-checkbox-react": "4.x",
     "ffe-icons-react": "2.4.3",
+    "ffe-spinner": "^2.0.1",
+    "ffe-spinner-react": "^2.0.3",
     "lodash.isequal": "4.5.0",
     "nfe-amount-formatter": "2.0.1",
     "prop-types": "15.5.9",
