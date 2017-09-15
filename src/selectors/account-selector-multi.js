@@ -1,5 +1,5 @@
 import React from 'react';
-import { func, string, arrayOf} from 'prop-types';
+import { func, string, arrayOf, bool} from 'prop-types';
 import BaseSelector from './base-selector';
 import AccountSuggestionMulti from '../account/account-suggestion-multi';
 import AccountNoMatch from '../account/account-nomatch';
@@ -12,6 +12,7 @@ class AccountSelectorMulti extends React.Component {
   constructor(props) {
     super(props);
     this.onKeyDown = this.onKeyDown.bind(this);
+    this.renderSuggestionDetails = this.renderSuggestionDetails.bind(this);
     this.state = {
       suggestionListHeight: 0
     };
@@ -45,7 +46,7 @@ class AccountSelectorMulti extends React.Component {
   renderSuggestionDetails(listHeight) {
     if (this.baseRef) {
       let statusText;
-      const { selectedAccounts } = this.props;
+      const { selectedAccounts, isLoading } = this.props;
       if (selectedAccounts.length === 0) {
         statusText = txt[this.props.locale].NO_ACCOUNTS_SELECTED;
       } else if (selectedAccounts === 1) {
@@ -54,14 +55,13 @@ class AccountSelectorMulti extends React.Component {
         statusText = `${selectedAccounts.length} ${txt[this.props.locale].MULTIPLE_ACCOUNTS_SELECTED}`;
       }
       const height = listHeight + this.baseRef.getInputHeight();
-      return (
+      return !isLoading &&
         <StatusBar
           renderSelectionStatus={() => statusText}
           onDone={() => this.onDone()}
           labelDoneButton={txt[this.props.locale].DROPDOWN_MULTISELECT_DONE}
           style={{ position: 'absolute', zIndex: 100, top: height }}
-        />
-      );
+        />;
     }
     return null;
   }
@@ -112,7 +112,12 @@ AccountSelectorMulti.propTypes = {
   locale: Locale.isRequired,
   selectedAccounts: arrayOf(Account),
   noMatches: string,
-  onBlur: func.isRequired
+  onBlur: func.isRequired,
+  isLoading : bool,
+};
+
+AccountSelectorMulti.defaultProps = {
+  isLoading : false,
 };
 
 export default AccountSelectorMulti;

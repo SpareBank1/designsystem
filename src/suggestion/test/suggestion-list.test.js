@@ -5,6 +5,7 @@ import React from 'react';
 import  SuggestionList from '../suggestion-list';
 import  SuggestionListContainer from '../suggestion-list-container';
 import './setup-dom';
+import Spinner from 'ffe-spinner-react';
 
 function suggestions() {
   return [
@@ -42,10 +43,11 @@ function propsSuggestionListContainer() {
   };
 }
 
-function shallowSuggestionList(props = propsSuggestionList()) {
+function shallowSuggestionList(props) {
+
   return shallow(
     <SuggestionList
-      {...props}
+      {...propsSuggestionList()} { ...props}
     />);
 }
 
@@ -65,6 +67,7 @@ describe('<SuggestionList />', () => {
     assert.equal(ul.children().length, 2);
     assert.isFalse(ul.childAt(0).props().isHighlighted);
     assert.isTrue(ul.childAt(1).props().isHighlighted);
+    assert.isTrue(wrapper.find(Spinner).length === 0);
   });
 
   it('should renderNoSuggestions when suggestions is empty', () => {
@@ -73,6 +76,12 @@ describe('<SuggestionList />', () => {
     const ul = wrapper.find('ul');
     assert.equal(ul.children().length, 1);
     assert.isTrue(renderNoMatchesSpy.calledOnce);
+    assert.isTrue(wrapper.find(Spinner).length === 0);
+  });
+
+  it('should render spinner', () => {
+    const wrapper = shallowSuggestionList({isLoading : true});
+    assert.isTrue(wrapper.find(Spinner).length === 1);
   });
 });
 
