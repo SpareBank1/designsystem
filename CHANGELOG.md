@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version 4.3.0
+
+### New features
+* Added `bgBlueIce` prop for `GridRow`, which adds a `ffe-blue-ice` background colour.
+
 ## Version 4.2.2
 
 ### Improvement
