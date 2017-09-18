@@ -1,5 +1,8 @@
 # Changelog
 
+## v.5.1.0
+* Added a new background modifier (`--bg-blue-ice`) to `ffe-grid-row`.
+
 ## v.5.0.2
 * Using left, right instead of start, end for text-align property to support IE.
 
