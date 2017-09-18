@@ -6,10 +6,10 @@ import txt from '../i18n/i18n';
 
 const renderSelectAll = (allSelected, locale) => {
   return (
-    <div className='ffe-account-suggestion__account--multi select-all'>
+    <div className='ffe-account-suggestion__account--multi ffe-account-suggestion__select-all'>
       <Checkbox
         checked={allSelected}
-        name='my-checkbox-label'
+        name='ffe-account-suggestion__select-all-label'
         inline={ false }
         tabIndex={-1}
         disabled={ true }
@@ -45,7 +45,7 @@ export default function SuggestionList(props) {
               item={item}
               id={`suggestion-item-${index}`}
               isHighlighted={index === highlightedIndex}
-              render={item.id !=="all-accounts" ? renderSuggestion : () => {return renderSelectAll(allSelected, locale);}}
+              render={item.id !=="all-accounts" ? renderSuggestion : () => renderSelectAll(allSelected, locale)}
             />);
         }) :
         <li>{renderNoMatches()}</li>

@@ -1,7 +1,7 @@
 # Changelog
 
-# v7.5.1
-* Added property `showAllOption`. Set to true to show an option for selecting all accounts. Will call "onSelectAll" when selected/deselected
+# v7.6.0
+* New feature "select all". Set `showAllOption` to true to show an option for selecting all accounts. Will call "onSelectAll" when selected/deselected
 
 
 # v7.5.0
