@@ -17,16 +17,20 @@ class AccountSelectorExample extends Component {
   }
 
   onChange(value) {
+    console.log('onchange', value);
     this.setState({selectedAccount: null, value});
   }
 
   onBlur() {
+    console.log('onblur');
   }
 
   onFocus() {
+    console.log('onfocus');
   }
 
   onAccountSelected(account) {
+    console.log('account selected', account);
     this.setState({
       selectedAccount: account,
       value: account.name,
@@ -34,6 +38,7 @@ class AccountSelectorExample extends Component {
   }
 
   onReset() {
+    console.log('onreset');
     this.setState({value: '', selectedAccount: null});
   }
 
