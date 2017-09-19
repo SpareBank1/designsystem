@@ -67,6 +67,7 @@ class FileUpload extends React.Component {
                     multiple={ multiple }
                     ref={ this.setFileInputElement }
                     onChange={ this.onFilesSelected }
+                    aria-label={ label }
                 />
 
                 { !errorMessage && successMessage && <div className="ffe-field-success-message">{ successMessage }</div> }

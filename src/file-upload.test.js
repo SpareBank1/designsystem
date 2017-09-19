@@ -35,6 +35,10 @@ describe('<FileUpload/>', () => {
             assert.equal(component.find('.ffe-file-upload__button').text(), 'label');
         });
 
+        it('should add label as aria-label', () => {
+            assert.equal(component.find('#file-upload').props()['aria-label'], 'label');
+        });
+
         it('should extract and return files when user finishes selecting files', () => {
             component.find('#file-upload').simulate('change', {
                 target: {

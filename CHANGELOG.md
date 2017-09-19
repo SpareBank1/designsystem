@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v1.2.0
+* aria-label is now set by label
+
 ## v1.1.0
 * Moved clearing of input to enable multiple upload
 * Adding success and info message support
