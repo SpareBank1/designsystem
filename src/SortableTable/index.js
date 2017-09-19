@@ -11,10 +11,11 @@ class SortableTable extends Component {
 
     constructor(props) {
         super(props);
+        const {sortBy, descending, columns, data} = props;
         this.state = {
-            sortBy: undefined,
-            descending: false,
-            tableData: props.data
+            sortBy,
+            descending,
+            tableData: sortBy ? sortData(columns, data, sortBy, descending) : data
         };
     }
 
@@ -137,7 +138,13 @@ SortableTable.propTypes = {
     alignLeft: PropTypes.bool,
     breakpoint: PropTypes.oneOf(['sm', 'none']),
     columns: PropTypes.arrayOf(PropTypes.object).isRequired,
-    data: PropTypes.arrayOf(PropTypes.object).isRequired
+    data: PropTypes.arrayOf(PropTypes.object).isRequired,
+    sortBy: PropTypes.string,
+    descending: PropTypes.bool,
+};
+
+SortableTable.defaultProps = {
+    descending: false
 };
 
 export default SortableTable;

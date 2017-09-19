@@ -1,5 +1,9 @@
 # Changelog
 
+## v4.8.0
+
+* Added optional props `descending` and `sortBy` to set initial sort.
+
 ## v4.7.0
 
 * Bump peerDep on `ffe-tables` to `^8.1.0`.
