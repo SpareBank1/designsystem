@@ -1,6 +1,6 @@
 # Changelog
 
-# v7.6.0
+# v7.7.0
 * New feature "select all". Set `showAllOption` to true to show an option for selecting all accounts. Will call "onSelectAll" when selected/deselected
 
 
