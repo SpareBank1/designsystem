@@ -51,7 +51,7 @@ class BaseSelector extends Component {
 
   filterSuggestions() {
     const { suggestions, suggestionFilter, value, showSelectAllOption } = this.props;
-    if (showSelectAllOption) {
+    if (showSelectAllOption && !value) {
       return [{ id: "all-accounts"},...suggestions.filter(suggestionFilter(value))];
     }
     return suggestions.filter(suggestionFilter(value));
