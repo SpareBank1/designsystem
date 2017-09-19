@@ -2,21 +2,14 @@ import React, { Component } from 'react';
 import { func, bool, number, string, arrayOf, object } from 'prop-types';
 import Input from './input-field';
 import SuggestionsList from '../suggestion/suggestion-list-container';
+import autoBind from 'react-auto-bind';
 import { KeyCodes } from '../util/types';
 
 class BaseSelector extends Component {
 
   constructor(props) {
     super(props);
-    this.onInputChange = this.onInputChange.bind(this);
-    this.showOrHideSuggestions = this.showOrHideSuggestions.bind(this);
-    this.onSuggestionSelect = this.onSuggestionSelect.bind(this);
-    this.onInputKeyDown = this.onInputKeyDown.bind(this);
-    this.onInputReset = this.onInputReset.bind(this);
-    this.onFocus = this.onFocus.bind(this);
-    this.onBlur = this.onBlur.bind(this);
-    this.filterSuggestions = this.filterSuggestions.bind(this);
-    this.setFocus = this.setFocus.bind(this);
+    autoBind(this);
 
     this.state = {
       showSuggestions: false,
@@ -49,14 +42,6 @@ class BaseSelector extends Component {
     return 0;
   }
 
-  filterSuggestions() {
-    const { suggestions, suggestionFilter, value, showSelectAllOption } = this.props;
-    if (showSelectAllOption && !value) {
-      return [{ id: "all-accounts"},...suggestions.filter(suggestionFilter(value))];
-    }
-    return suggestions.filter(suggestionFilter(value));
-  }
-
   onInputChange(value) {
     this.setState({ showSuggestions: true, highlightedSuggestionIndex: -1 }, () => {
       this.props.onChange(value);
@@ -73,21 +58,6 @@ class BaseSelector extends Component {
     this.showOrHideSuggestions(false, this.props.onBlur);
   }
 
-  onSuggestionSelect(suggestion) {
-    if (suggestion) {
-      if (suggestion.id === "all-accounts") {
-        this.props.onSelectAll();
-        return;
-      }
-      const { shouldHideSuggestionsOnSelect, onSelect } = this.props;
-      if (shouldHideSuggestionsOnSelect) {
-        this.showOrHideSuggestions(false, () => onSelect(suggestion));
-        return;
-      }
-      onSelect(suggestion);
-    }
-  }
-
   onInputReset() {
     const shouldShowSuggestions = !this.props.shouldHideSuggestionsOnReset;
     this.showOrHideSuggestions(shouldShowSuggestions, this.props.onReset);
@@ -102,7 +72,7 @@ class BaseSelector extends Component {
 
   setNextHighlighted() {
     const { highlightedSuggestionIndex } = this.state;
-    const suggestions = this.filterSuggestions();
+    const {suggestions} = this.props;
     const nextHighlightedSuggestionIndex = highlightedSuggestionIndex === suggestions.length - 1 ? 0 : highlightedSuggestionIndex + 1;
     this.setState({ highlightedSuggestionIndex: nextHighlightedSuggestionIndex });
 
@@ -115,7 +85,7 @@ class BaseSelector extends Component {
 
   setPreviousHighlighted() {
     const { highlightedSuggestionIndex } = this.state;
-    const suggestions = this.filterSuggestions();
+    const {suggestions} = this.props;
     const nextHighlightedSuggestionIndex = highlightedSuggestionIndex === 0 ? suggestions.length - 1 : highlightedSuggestionIndex - 1;
     this.setState({ highlightedSuggestionIndex: nextHighlightedSuggestionIndex });
 
@@ -132,13 +102,13 @@ class BaseSelector extends Component {
   }
 
   setLastHighlighted() {
-    this.setState({ highlightedSuggestionIndex: this.filterSuggestions().length - 1 });
+    this.setState({ highlightedSuggestionIndex: this.props.suggestions.length - 1 });
     this.suggestionList.setScrollPosEnd();
   }
 
   onInputKeyDown(event) {
     const { showSuggestions, highlightedSuggestionIndex } = this.state;
-    const { shouldSelectHighlightedOnTab } = this.props;
+    const { shouldSelectHighlightedOnTab, suggestions, onSuggestionSelect } = this.props;
     const { which, altKey } = event;
     switch (which) {
       case KeyCodes.DOWN :
@@ -165,13 +135,13 @@ class BaseSelector extends Component {
         this.onInputReset();
         break;
       case KeyCodes.HOME:
-        if (showSuggestions && this.filterSuggestions().length !== 0) {
+        if (showSuggestions && suggestions.length !== 0) {
           this.setFirstHighlighted();
           event.preventDefault();
         }
         break;
       case KeyCodes.END:
-        if (showSuggestions && this.filterSuggestions().length !== 0) {
+        if (showSuggestions && suggestions.length !== 0) {
           this.setLastHighlighted();
           event.preventDefault();
         }
@@ -180,11 +150,11 @@ class BaseSelector extends Component {
         if (showSuggestions) {
           event.preventDefault();
         }
-        this.onSuggestionSelect(this.filterSuggestions()[highlightedSuggestionIndex]);
+        onSuggestionSelect(suggestions[highlightedSuggestionIndex]);
         break;
       case KeyCodes.TAB:
         if (showSuggestions && shouldSelectHighlightedOnTab) {
-          this.onSuggestionSelect(this.filterSuggestions()[highlightedSuggestionIndex]);
+          onSuggestionSelect(suggestions[highlightedSuggestionIndex]);
         }
     }
   }
@@ -197,6 +167,8 @@ class BaseSelector extends Component {
       ariaInvalid,
       id,
       name,
+      suggestions,
+      onSuggestionSelect
     } = this.props;
     const { showSuggestions, highlightedSuggestionIndex, suggestionListId } = this.state;
     return (
@@ -228,9 +200,9 @@ class BaseSelector extends Component {
             this.suggestionList = suggestionList;
           }}
           highlightedIndex={highlightedSuggestionIndex}
-          suggestions={this.filterSuggestions()}
+          suggestions={suggestions}
           heightMax={suggestionsHeightMax}
-          onSelect={this.onSuggestionSelect}
+          onSelect={onSuggestionSelect}
           id={suggestionListId}
         />}
       </div>
@@ -248,11 +220,8 @@ BaseSelector.propTypes = {
   shouldHideSuggestionsOnBlur: bool.isRequired,
   shouldHideSuggestionsOnReset: bool.isRequired,
   shouldShowSuggestionsOnFocus: bool,
-  showSelectAllOption: bool,
-  onSelectAll: func,
-  allSelected: bool,
+  onSuggestionSelect: func.isRequired,
   onChange: func,
-  locale: string.isRequired,
   onBlur: func,
   onReset: func,
   onFocus: func,
@@ -270,8 +239,6 @@ BaseSelector.defaultProps = {
   onFocus: () => {},
   onReset: () => {},
   onSuggestionListChange: () => {},
-  onSelectAll: () => {},
-  showSelectAllOption: false,
   ariaInvalid: false,
   placeholder: '',
   value: '',
