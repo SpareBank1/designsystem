@@ -1,5 +1,8 @@
 # Changelog
 
+# v7.6.0
+* Added property `ìsLoading`. Shows a loading spinner in the suggestion list
+
 # v7.5.0
 * Added property `showBalance`. Set to false to hide the balance of the accounts.
 

@@ -83,6 +83,9 @@ number that specifies that max height in pixels of the suggestion list. Defaults
 __showBalance__
 boolean that shows the balance of the accounts. Defaults to true.
 
+__isLoading__ 
+boolean that shows a loading spinner in the suggestion list. Defaults to false
+
 
 ## `<AccountSelectorMulti>` Props API
 
@@ -158,4 +161,7 @@ number that specifies that max height in pixels of the suggestion list. Defaults
 
 __onSuggestionListChange__
 function that is called when the height of the suggestion list is changed.
+
+__isLoading__ 
+boolean that shows a loading spinner in the suggestion list. Defaults to false
 
