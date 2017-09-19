@@ -1,24 +1,6 @@
 import React from 'react';
-import { func, arrayOf, number, string, object, bool } from 'prop-types';
-import Checkbox from 'ffe-checkbox-react';
+import { func, arrayOf, number, string, object } from 'prop-types';
 import Suggestion from './suggestion-item';
-import txt from '../i18n/i18n';
-
-const renderSelectAll = (allSelected, locale) => {
-  return (
-    <div className='ffe-account-suggestion__account--multi ffe-account-suggestion__select-all'>
-      <Checkbox
-        checked={allSelected}
-        name='ffe-account-suggestion__select-all-label'
-        inline={ false }
-        tabIndex={-1}
-        disabled={ true }
-      />
-      <div className='ffe-account-suggestion__content-wrapper'>
-        <span className='ffe-account-suggestion__name'>{txt[locale].SELECT_ALL}</span>
-      </div>
-    </div>);
-};
 
 export default function SuggestionList(props) {
   const {
@@ -26,9 +8,7 @@ export default function SuggestionList(props) {
     highlightedIndex,
     renderSuggestion,
     renderNoMatches,
-    id,
-    allSelected,
-    locale
+    id
   } = props;
   return (
     <ul
@@ -45,7 +25,7 @@ export default function SuggestionList(props) {
               item={item}
               id={`suggestion-item-${index}`}
               isHighlighted={index === highlightedIndex}
-              render={item.id !=="all-accounts" ? renderSuggestion : () => renderSelectAll(allSelected, locale)}
+              render={renderSuggestion}
             />);
         }) :
         <li>{renderNoMatches()}</li>
@@ -59,8 +39,6 @@ SuggestionList.propTypes = {
   highlightedIndex: number.isRequired,
   renderSuggestion: func.isRequired,
   renderNoMatches: func,
-  allSelected: bool,
-  locale: string,
   id: string.isRequired
 };
 
