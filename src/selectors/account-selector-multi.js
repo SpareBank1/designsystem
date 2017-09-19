@@ -82,7 +82,7 @@ class AccountSelectorMulti extends React.Component {
   renderSuggestionDetails(listHeight) {
     if (this.baseRef) {
       let statusText;
-      const { selectedAccounts } = this.props;
+      const { selectedAccounts, isLoading } = this.props;
       if (selectedAccounts.length === 0) {
         statusText = txt[this.props.locale].NO_ACCOUNTS_SELECTED;
       } else if (selectedAccounts === 1) {
@@ -91,14 +91,13 @@ class AccountSelectorMulti extends React.Component {
         statusText = `${selectedAccounts.length} ${txt[this.props.locale].MULTIPLE_ACCOUNTS_SELECTED}`;
       }
       const height = listHeight + this.baseRef.getInputHeight();
-      return (
+      return !isLoading &&
         <StatusBar
           renderSelectionStatus={() => statusText}
           onDone={this.onDone}
           labelDoneButton={txt[this.props.locale].DROPDOWN_MULTISELECT_DONE}
           style={{ position: 'absolute', zIndex: 100, top: height }}
-        />
-      );
+        />;
     }
     return null;
   }
@@ -147,7 +146,8 @@ class AccountSelectorMulti extends React.Component {
 
 AccountSelectorMulti.defaultProps = {
   onSelectAll: () => {},
-  showSelectAllOption: false
+  showSelectAllOption: false,
+  isLoading: false
 };
 
 AccountSelectorMulti.propTypes = {

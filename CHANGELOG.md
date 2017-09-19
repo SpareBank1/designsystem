@@ -1,8 +1,9 @@
 # Changelog
-
 # v7.7.0
 * New feature "select all". Set `showAllOption` to true to show an option for selecting all accounts. Will call "onSelectAll" when selected/deselected
 
+# v7.6.0
+* Added property `ìsLoading`. Shows a loading spinner in the suggestion list
 
 # v7.5.0
 * Added property `showBalance`. Set to false to hide the balance of the accounts.
