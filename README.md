@@ -83,6 +83,9 @@ number that specifies that max height in pixels of the suggestion list. Defaults
 __showBalance__
 boolean that shows the balance of the accounts. Defaults to true.
 
+__isLoading__ 
+boolean that shows a loading spinner in the suggestion list. Defaults to false
+
 
 ## `<AccountSelectorMulti>` Props API
 
@@ -159,11 +162,6 @@ number that specifies that max height in pixels of the suggestion list. Defaults
 __onSuggestionListChange__
 function that is called when the height of the suggestion list is changed.
 
-__showSelectAllOption__
-boolean that specifies if an option for selecting all should be rendered. Defaults to false. Used for AccountSelectorMulti only.
+__isLoading__ 
+boolean that shows a loading spinner in the suggestion list. Defaults to false
 
-__onSelectAll__
-function that gets called if the all option is clicked. Used for AccountSelectorMulti only.
-
-__allSelected__
-boolean that specifies if the "Select all" option is selected. Used for AccountSelectorMulti only.
