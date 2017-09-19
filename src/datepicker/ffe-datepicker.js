@@ -53,7 +53,8 @@ export default class FFEDatepicker extends Component {
       onError,
     } = this.props;
 
-    return onError ? onError(type) : i18n[language][type];
+    const errorText = i18n[language][type];
+    return onError ? onError(type, errorText) : errorText;
   }
 
   onInputBlur() {

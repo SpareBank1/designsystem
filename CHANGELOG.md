@@ -1,5 +1,8 @@
 # Changelog
 
+## v2.6.0
+* Provide validation error text to onError callback. This allows the consuming component to use the error texts defined by this component.
+
 ## v2.5.2
 * Removing class `ffe-calendar__date--focus` from container-div.
 
