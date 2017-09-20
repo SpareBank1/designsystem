@@ -1,5 +1,8 @@
 # Changelog
 
+## v.8.1.1
+* Adjusted `.ffe-radio-button` focus state and transitions to more closely reflect the behaviour of `.ffe-checkbox`
+
 ## v.8.1.0
 * Add new input-field modifier `--condensed`
 
