@@ -48,33 +48,34 @@
     &::before {
         content: '';
         background-color: @ffe-white;
+        border: 10px solid @ffe-white;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        position: absolute;
+        pointer-events: none;
+        left: 0;
+        top: 3px;
+        transition: all @ffe-transition-duration @ffe-ease;
+    }
+
+    &::after {
+        content: '';
         border: 2px solid @ffe-grey;
         width: 20px;
         height: 20px;
         border-radius: 50%;
         position: absolute;
-        pointer-events: none;
         left: 0;
         top: 3px;
-        transition: border-color @ffe-transition-duration @ffe-ease;
+        pointer-events: none;
+        transition: all @ffe-transition-duration @ffe-ease;
     }
 
     &--invalid {
-        &::before {
+        &::after {
             border-color: @ffe-orange-fire;
         }
-    }
-
-    &::after {
-        content: '';
-        border: 2px solid transparent;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        position: absolute;
-        left: 0;
-        top: 3px;
-        pointer-events: none;
     }
 }
 
@@ -86,13 +87,8 @@
         outline: none;
     }
 
-    &:hover + .ffe-radio-button::before {
+    &:hover + .ffe-radio-button::after {
         border-color: @ffe-blue-azure;
-    }
-
-    &:active + .ffe-radio-button::before,
-    &:focus + .ffe-radio-button::before {
-        border-color: @ffe-blue-focus;
     }
 
     &:checked + .ffe-radio-button::before {
@@ -104,7 +100,16 @@
         border-color: @ffe-blue-azure;
     }
 
-    &:focus + .ffe-radio-button::before {
+    &:active + .ffe-radio-button::after,
+    &:focus + .ffe-radio-button::after {
         box-shadow: 0 0 0 2px @ffe-blue-focus;
+    }
+
+    &:hover + .ffe-radio-button--invalid::after {
+        border-color: @ffe-orange-fire;
+    }
+
+    &:checked + .ffe-radio-button--invalid::after {
+        border-color: @ffe-orange-fire;
     }
 }
