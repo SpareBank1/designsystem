@@ -30,6 +30,10 @@ class AccountSelector extends Component {
     );
   }
 
+  assignBaseSelectorRef(baseSelector) {
+    this.baseSelector = baseSelector;
+  }
+
   renderNoMatches() {
     return <AccountNoMatch value={this.props.noMatches} locale={this.props.locale}/>;
   }
@@ -71,7 +75,7 @@ class AccountSelector extends Component {
         id={`${id}-container`}
       >
         <BaseSelector
-          ref={baseSelector => {this.baseSelector = baseSelector;}}
+          ref={this.assignBaseSelectorRef}
           renderSuggestion={this.renderSuggestion}
           renderNoMatches={this.renderNoMatches}
           shouldHideSuggestionsOnSelect={true}
