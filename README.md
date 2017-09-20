@@ -126,6 +126,8 @@ const data = [
 The table accepts any of these optional props:
 - `sortable` is a boolean to make the table sortable.
   - Tables will not be `sortable` when collapsed to small screen layout (default < 768px `@breakpoint-md`)
+  - `sortBy` (optional) is a string with the name of one of the columns. If set, the table will initially be sorted by this column.
+  - `descending` (optional) is a boolean to specify if the `sortBy` column should be sorted ascending or descending (default).
 - `caption` is a string or node to insert as table caption.
 - `srOnlyCaption` is a boolean to hide the caption and make it available for screen readers.
 - `expandedContentMapper` must be a reference to a function which takes a single value.
