@@ -57,16 +57,6 @@ function assertHomeEnd(keyCode, stubMethodName) {
   assert.isTrue(preventDefaultSpy.calledOnce);
 }
 
-// function assertSuggestionSelected(event) {
-//   const component = shallowBaseSelector().instance();
-//   const onSuggestionSelectStub = sinon.stub(component, 'onSuggestionSelect');
-//   component.state = { highlightedSuggestionIndex: 0, showSuggestions: true };
-//
-//   component.onInputKeyDown(event);
-//   assert.isTrue(onSuggestionSelectStub.calledWith(suggestions()[0]));
-// }
-
-
 describe('<BaseSelector> methods', () => {
 
   it('should show suggestions on input change', (done) => {
@@ -103,28 +93,6 @@ describe('<BaseSelector> methods', () => {
     assert.isFalse(component.state.showSuggestions);
     assert.isTrue(onBlurSpy.calledOnce);
   });
-
-  // it('should hide suggestions on suggestionSelect', () => {
-  //   const onSelectSpy = sinon.spy();
-  //   const suggestion = { suggestion: 'suggestion' };
-  //   const component = shallowBaseSelector({ onSelect: onSelectSpy }).instance();
-  //   component.state.showSuggestions = true;
-
-  //   component.onSuggestionSelect(suggestion);
-  //   assert.isTrue(onSelectSpy.calledOnce);
-  //   assert.isFalse(component.state.showSuggestions);
-  // });
-  //
-  // it('should not hide suggestions when props.shouldHideSuggestionsOnSelect = false', () => {
-  //   const onSelectSpy = sinon.spy();
-  //   const suggestion = { suggestion: 'suggestion' };
-  //   const component = shallowBaseSelector({ onSelect: onSelectSpy, shouldHideSuggestionsOnSelect: false }).instance();
-  //
-  //   component.onSuggestionSelect(suggestion);
-  //   assert.isTrue(onSelectSpy.calledOnce);
-  //   assert.isFalse(component.state.showSuggestions);
-  //
-  // });
 
   it('should not hide suggestions when suggestion is empty', () => {
     const onSelectSpy = sinon.spy();
@@ -271,55 +239,10 @@ describe('<BaseSelector> keyboard navigation', () => {
     assertHomeEnd(KeyCodes.HOME, 'setFirstHighlighted');
   });
 
-  // it('should not prevent HOME and END events when no matching suggestions', () => {
-  //   const suggestionFilterStub = sinon.stub().returns(() => false);
-  //   const component = shallowBaseSelector({suggestionFilter: suggestionFilterStub}).instance();
-  //   const preventDefaultSpy = sinon.spy();
-  //   component.state.showSuggestions = true;
-  //   component.onInputKeyDown({ which: KeyCodes.END, preventDefault: preventDefaultSpy });
-  //   component.onInputKeyDown({ which: KeyCodes.HOME, prevenDefault: preventDefaultSpy });
-  //
-  //   assert.equal(suggestionFilterStub.callCount, 2);
-  //   assert.equal(preventDefaultSpy.callCount, 0);
-  // });
-
   it('should move to last suggestion on END', () => {
     assertHomeEnd(KeyCodes.END, 'setLastHighlighted');
   });
 
-  // it('should select highlighted suggestion on ENTER', () => {
-  //   const preventDefaultSpy = sinon.spy();
-  //   assertSuggestionSelected({ which: KeyCodes.ENTER, preventDefault: preventDefaultSpy });
-  //   assert.isTrue(preventDefaultSpy.calledOnce);
-  // });
-
-  // it('should select highlighted suggestion from filtered list', () => {
-  //   const accounts = [
-  //     { name: 'lønnskonto' },
-  //     { name: 'sparekonto' },
-  //     { name: 'investeringskonto' },
-  //   ];
-  //   const component = shallowBaseSelector({ suggestions: accounts }).instance();
-  //   const filterAccountsStub = sinon.stub(component, 'filterSuggestions');
-  //   filterAccountsStub.returns([accounts[2]]);
-  //   const onSuggestionSelectSpy = sinon.stub(component, 'onSuggestionSelect');
-  //   component.state = { highlightedSuggestionIndex: 0 };
-  //
-  //   component.onInputKeyDown({ which: KeyCodes.ENTER });
-  //   assert.isTrue(onSuggestionSelectSpy.calledWith(accounts[2]));
-  // });
-
-  //   component.onInputKeyDown({ which: KeyCodes.ENTER });
-  //   assert.isTrue(onSuggestionSelectSpy.calledWith(accounts[2]));
-  // });
-
-  // it('should not select highlighted index on TAB when shouldSelectHighlightedOnTab', () => {
-  //   const component = shallowBaseSelector({ shouldSelectHighlightedOnTab: false }).instance();
-  //   const onSuggestionSelectSpy = sinon.stub(component, 'onSuggestionSelect');
-  //
-  //   component.onInputKeyDown({ which: KeyCodes.TAB });
-  //   assert.isFalse(onSuggestionSelectSpy.called);
-  // });
 });
 
 describe('<BaseSelector> focus', () => {
