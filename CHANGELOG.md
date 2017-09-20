@@ -1,5 +1,8 @@
 # Changelog
 
+## v2.0.4
+Set `type="button"` for Button-toggler to prevent submit when accordion is used inside a form.
+
 ## v.2.0.3
 * Use PropTypes from prop-types package
 

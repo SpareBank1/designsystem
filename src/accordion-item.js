@@ -88,6 +88,7 @@ class AccordionItem extends Component {
                     id={ `tab-${uuid}-${index}` }
                     onClick={ this.onClick }
                     role="tab"
+                    type="button"
                 >
                     <Chevron className={ createClasses('ffe-accordion-item__icon', isOpen, type) } />
                     { children }
