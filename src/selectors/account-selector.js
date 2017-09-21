@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import autoBind from 'react-auto-bind';
 import { func, string, arrayOf, bool } from 'prop-types';
 import BaseSelector from './base-selector';
 import AccountSuggestionItem from '../account/account-suggestion';
@@ -12,10 +13,9 @@ class AccountSelector extends Component {
 
   constructor(props) {
     super(props);
-    this.renderSuggestion = this.renderSuggestion.bind(this);
-    this.renderNoMatches = this.renderNoMatches.bind(this);
-    this.onAccountSelect = this.onAccountSelect.bind(this);
-    this.onInputChange = this.onInputChange.bind(this);
+    autoBind(this);
+
+    this.baseSelector = null;
 
     this.enableFilter = false;
   }
@@ -28,6 +28,10 @@ class AccountSelector extends Component {
         showBalance={this.props.showBalance}
       />
     );
+  }
+
+  assignBaseSelectorRef(baseSelector) {
+    this.baseSelector = baseSelector;
   }
 
   renderNoMatches() {
@@ -44,9 +48,21 @@ class AccountSelector extends Component {
     this.props.onChange(value);
   }
 
+  onSuggestionSelect(suggestion) {
+    if (suggestion) {
+        this.baseSelector.showOrHideSuggestions(false, () => this.onAccountSelect(suggestion));
+    }
+  }
+
+  filterSuggestions() {
+    const {  value, accounts } = this.props;
+    const suggFilt = createAccountFilter(this.enableFilter);
+    return accounts.filter(suggFilt(value));
+  }
+
+
   render() {
     const {
-      accounts,
       className,
       id,
       locale,
@@ -59,14 +75,16 @@ class AccountSelector extends Component {
         id={`${id}-container`}
       >
         <BaseSelector
+          ref={this.assignBaseSelectorRef}
           renderSuggestion={this.renderSuggestion}
           renderNoMatches={this.renderNoMatches}
           shouldHideSuggestionsOnSelect={true}
           shouldSelectHighlightedOnTab={true}
           shouldHideSuggestionsOnBlur={true}
           shouldHideSuggestionsOnReset={false}
+          onSuggestionSelect={this.onSuggestionSelect}
           suggestionFilter={createAccountFilter(this.enableFilter)}
-          suggestions={accounts}
+          suggestions={this.filterSuggestions()}
           {...this.props}
           onSelect={this.onAccountSelect}
           onChange={this.onInputChange}
@@ -86,6 +104,7 @@ class AccountSelector extends Component {
 AccountSelector.propTypes = {
   accounts: arrayOf(Account),
   className: string,
+  value: string.isRequired,
   id: string.isRequired,
   locale: Locale.isRequired,
   noMatches: string,

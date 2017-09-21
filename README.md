@@ -145,7 +145,7 @@ __onReset__
 function that is called when input field is reset.
 
 __locale__
-Either "nb", "nn" or "en". Defaults to "nb".
+Either "nb", "nn" or "en". 
 
 __placeholder__
 Set the placeholder attribute of the input field.

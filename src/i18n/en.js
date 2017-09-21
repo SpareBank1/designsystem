@@ -7,4 +7,5 @@ export default {
   NO_ACCOUNTS_FOUND : 'No accounts',
   ONE_ACCOUNT_SELECTED: '1 account selected',
   MULTIPLE_ACCOUNTS_SELECTED: 'accounts selected',
+  SELECT_ALL: 'Select all'
 };

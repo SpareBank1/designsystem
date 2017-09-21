@@ -1,33 +1,69 @@
 import React from 'react';
 import { func, string, arrayOf, bool} from 'prop-types';
 import BaseSelector from './base-selector';
+import autoBind from 'react-auto-bind';
 import AccountSuggestionMulti from '../account/account-suggestion-multi';
 import AccountNoMatch from '../account/account-nomatch';
 import { Account, Locale, KeyCodes } from '../util/types';
 import { accountFilter } from '../filter/filters';
+import Checkbox from 'ffe-checkbox-react';
 import StatusBar from '../suggestion/suggestion-list-status-bar';
 import txt from '../i18n/i18n';
+
+const allAccountsElement = {id: "all-accounts", accountNumber: ""};
+
+const renderSelectAll = (allSelected, locale) => (
+    <div className='ffe-account-suggestion__account--multi ffe-account-suggestion__select-all'>
+      <Checkbox
+        checked={allSelected}
+        name='ffe-account-suggestion__select-all-label'
+        inline={ false }
+        tabIndex={-1}
+        disabled={ true }
+      />
+      <div className='ffe-account-suggestion__content-wrapper'>
+        <span className='ffe-account-suggestion__name'>{txt[locale].SELECT_ALL}</span>
+      </div>
+    </div>);
 
 class AccountSelectorMulti extends React.Component {
   constructor(props) {
     super(props);
-    this.onKeyDown = this.onKeyDown.bind(this);
-    this.renderSuggestionDetails = this.renderSuggestionDetails.bind(this);
+    autoBind(this);
     this.state = {
       suggestionListHeight: 0
     };
   }
 
+  filterSuggestions(value) {
+    const { accounts, showSelectAllOption } = this.props;
+    if (showSelectAllOption && !value) {
+      return [allAccountsElement,...accounts.filter(accountFilter(value))];
+    }
+    return accounts.filter(accountFilter(value));
+  }
+
+  onSuggestionSelect(suggestion) {
+    const { onAccountSelected } = this.props;
+    if (suggestion) {
+      if (suggestion.id === allAccountsElement.id) {
+        this.props.onSelectAll();
+        return;
+      }
+      onAccountSelected(suggestion);
+    }
+  }
+
   renderSuggestion(account) {
-    const { locale, selectedAccounts } = this.props;
+    const { locale, selectedAccounts, accounts } = this.props;
     const isSelected = selectedAccounts.filter(a => a.accountNumber === account.accountNumber);
-    return (
-      <AccountSuggestionMulti
+    if ( account.id !== allAccountsElement.id ) {
+      return (<AccountSuggestionMulti
         account={account}
         locale={locale}
         selected={isSelected.length > 0}
-      />
-    );
+              />);
+    } return renderSelectAll(selectedAccounts.length === accounts.length, locale);
   }
 
   onBlur() {
@@ -58,7 +94,7 @@ class AccountSelectorMulti extends React.Component {
       return !isLoading &&
         <StatusBar
           renderSelectionStatus={() => statusText}
-          onDone={() => this.onDone()}
+          onDone={this.onDone}
           labelDoneButton={txt[this.props.locale].DROPDOWN_MULTISELECT_DONE}
           style={{ position: 'absolute', zIndex: 100, top: height }}
         />;
@@ -74,7 +110,7 @@ class AccountSelectorMulti extends React.Component {
 
 
   render() {
-    const { noMatches, onAccountSelected, accounts, locale } = this.props;
+    const { noMatches, onAccountSelected, locale, value } = this.props;
     return (
       <div
         className='ffe-account-selector'
@@ -88,12 +124,14 @@ class AccountSelectorMulti extends React.Component {
           shouldSelectHighlightedOnTab={false}
           shouldHideSuggestionsOnBlur={false}
           shouldHideSuggestionsOnReset={true}
+          onSuggestionSelect={this.onSuggestionSelect}
           suggestionFilter={accountFilter}
           onSelect={onAccountSelected}
+          locale={locale}
           onSuggestionListChange={(height) => {
             this.setState({ suggestionListHeight: height });
           }}
-          suggestions={accounts}
+          suggestions={this.filterSuggestions(value)}
           ref={(element) => {
             this.baseRef = element;
           }}
@@ -106,18 +144,22 @@ class AccountSelectorMulti extends React.Component {
   }
 }
 
+AccountSelectorMulti.defaultProps = {
+  onSelectAll: () => {},
+  showSelectAllOption: false,
+  isLoading: false
+};
+
 AccountSelectorMulti.propTypes = {
   onAccountSelected: func.isRequired,
+  onSelectAll: func,
   accounts: arrayOf(Account),
   locale: Locale.isRequired,
   selectedAccounts: arrayOf(Account),
+  showSelectAllOption: bool,
   noMatches: string,
   onBlur: func.isRequired,
-  isLoading : bool,
-};
-
-AccountSelectorMulti.defaultProps = {
-  isLoading : false,
+  value: string
 };
 
 export default AccountSelectorMulti;
