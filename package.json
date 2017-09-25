@@ -1,6 +1,6 @@
 {
   "name": "ffe-accordion-react",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "main": "lib/index.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/. && npm run example",
@@ -23,10 +23,11 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "ffe-expandable-react": "^1.0.5",
-    "ffe-icons-react": "^2.1.0",
+    "ffe-icons-react": "^2.4.13",
     "prop-types": "*",
-    "uuid": "^3.0.1"
+    "react-collapse": "^4.0.3",
+    "react-motion": "^0.5.1",
+    "uuid": "^3.1.0"
   },
   "devDependencies": {
     "babel-cli": "^6.4.5",
@@ -44,7 +45,7 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^6.8.0",
-    "ffe-core": "^9.2.0",
+    "ffe-core": "^10.1.1",
     "ffe-accordion": "^2.0.1",
     "mocha": "^3.2.0",
     "node-lessify": "^0.1.4",
