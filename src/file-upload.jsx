@@ -41,6 +41,7 @@ class FileUpload extends React.Component {
 
     render() {
         const {
+            id,
             label,
             selectedFilesHeaderLabel,
             selectedFiles,
@@ -58,16 +59,17 @@ class FileUpload extends React.Component {
                     aria-invalid={ String(!!errorMessage) }
                     onClick={ this.triggerUploadFileNativeHandler }
                 >
-                    <span className="ffe-file-upload__button__label-icon" />{ label }
+                    <span className="ffe-file-upload__button__label-icon" />
+                    <span id={`${id}-label`}>{ label }</span>
                 </button>
                 <input
-                    id="file-upload"
+                    id={ id }
                     type="file"
                     accept={ accept }
                     multiple={ multiple }
                     ref={ this.setFileInputElement }
                     onChange={ this.onFilesSelected }
-                    aria-label={ label }
+                    aria-labelledby={ `${id}-label` }
                 />
 
                 { !errorMessage && successMessage && <div className="ffe-field-success-message">{ successMessage }</div> }
@@ -103,6 +105,7 @@ class FileUpload extends React.Component {
 }
 
 FileUpload.propTypes = {
+    id: stringType.isRequired,
     label: stringType.isRequired,
     selectedFiles: array.isRequired,
     onFilesSelected: func.isRequired,

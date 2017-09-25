@@ -18,6 +18,7 @@ describe('<FileUpload/>', () => {
         beforeEach(() => {
             component = shallow(
                 <FileUpload
+                    id="file-upload"
                     label="label"
                     selectedFiles={[]}
                     onFilesSelected={ onFilesSelected }
@@ -36,7 +37,7 @@ describe('<FileUpload/>', () => {
         });
 
         it('should add label as aria-label', () => {
-            assert.equal(component.find('#file-upload').props()['aria-label'], 'label');
+            assert.equal(component.find('#file-upload-label').text(), 'label');
         });
 
         it('should extract and return files when user finishes selecting files', () => {
@@ -56,6 +57,7 @@ describe('<FileUpload/>', () => {
         beforeEach(() => {
             component = shallow(
                 <FileUpload
+                    id="file-upload"
                     label="label"
                     selectedFiles={[]}
                     onFilesSelected={ onFilesSelected }
@@ -86,6 +88,7 @@ describe('<FileUpload/>', () => {
         beforeEach(() => {
             component = shallow(
                 <FileUpload
+                    id="file-upload"
                     label="label"
                     selectedFilesHeaderLabel="files header"
                     selectedFiles={[

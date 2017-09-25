@@ -56,6 +56,7 @@ class Example extends React.Component {
             <div>
                 <h1 className="ffe-h1">ffe-file-upload-react</h1>
                 <FileUpload
+                    id="file-upload"
                     label="Velg fil"
                     multiple={ true }
                     accept=".pdf"
