@@ -18,6 +18,7 @@ describe('<FileUpload/>', () => {
         beforeEach(() => {
             component = shallow(
                 <FileUpload
+                    id="file-upload"
                     label="label"
                     selectedFiles={[]}
                     onFilesSelected={ onFilesSelected }
@@ -33,6 +34,10 @@ describe('<FileUpload/>', () => {
 
         it('should render input label', () => {
             assert.equal(component.find('.ffe-file-upload__button').text(), 'label');
+        });
+
+        it('should add label as aria-label', () => {
+            assert.equal(component.find('#file-upload-label').text(), 'label');
         });
 
         it('should extract and return files when user finishes selecting files', () => {
@@ -52,6 +57,7 @@ describe('<FileUpload/>', () => {
         beforeEach(() => {
             component = shallow(
                 <FileUpload
+                    id="file-upload"
                     label="label"
                     selectedFiles={[]}
                     onFilesSelected={ onFilesSelected }
@@ -82,6 +88,7 @@ describe('<FileUpload/>', () => {
         beforeEach(() => {
             component = shallow(
                 <FileUpload
+                    id="file-upload"
                     label="label"
                     selectedFilesHeaderLabel="files header"
                     selectedFiles={[

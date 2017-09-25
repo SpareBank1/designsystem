@@ -17,6 +17,7 @@ import FileUpload from 'ffe-file-upload-react';
 const Example = () => {
     return (
         <FileUpload
+            id={ string }
             label={ string }
             multiple={ boolean }
             accept={ string }
@@ -31,6 +32,9 @@ const Example = () => {
     );
 }
 ```
+
+The components id will be used to associate the input to the label. The input gets its id from props and the label will get the `id + "-label"`.
+
 The passed `onFilesSelected` function will be called with `FileList`-object containing the `File`-objects the user selected. 
 * FileList - https://developer.mozilla.org/en-US/docs/Web/API/FileList
 * File - https://developer.mozilla.org/en-US/docs/Web/API/File
