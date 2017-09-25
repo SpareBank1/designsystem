@@ -42,11 +42,13 @@ class BaseSelector extends Component {
     return 0;
   }
 
-  onInputChange(value) {
-    this.setState({ showSuggestions: true, highlightedSuggestionIndex: -1 }, () => {
-      this.props.onChange(value);
-      this._onSuggestionListChange();
-    });
+  onInputChange(val) {
+    if (val !== this.props.value) {
+      this.setState({ showSuggestions: true, highlightedSuggestionIndex: -1 }, () => {
+        this.props.onChange(val);
+        this._onSuggestionListChange();
+      });
+    }
   }
 
   onFocus() {
