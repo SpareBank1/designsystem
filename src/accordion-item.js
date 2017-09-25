@@ -8,7 +8,7 @@ import {
     oneOf,
     string
 } from 'prop-types';
-import FFEExpandable from 'ffe-expandable-react';
+import { Collapse } from 'react-collapse';
 import Chevron from 'ffe-icons-react/chevron-ikon';
 import classNames from 'classnames';
 
@@ -93,10 +93,9 @@ class AccordionItem extends Component {
                     <Chevron className={ createClasses('ffe-accordion-item__icon', isOpen, type) } />
                     { children }
                 </button>
-                <FFEExpandable
-                    expanded={ this.renderExpandedContent() }
-                    isOpen={ isOpen }
-                />
+                <Collapse isOpened={ isOpen }>
+                    {this.renderExpandedContent()}
+                </Collapse>
             </li>
         );
     }
