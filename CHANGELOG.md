@@ -1,8 +1,8 @@
 # Changelog
 
-## v2.0.5
-Use `react-collapse` instead of ffe-expandable-react, since the latter is
-deprecated.
+## v2.1.0
+Use `react-collapse` instead of ffe-expandable-react, since the latter is deprecated. Also add a new property
+`hasNestedCollapse`, which lets the consumer use another `react-collapse` element inside the accordion.
 
 ## v2.0.4
 Set `type="button"` for Button-toggler to prevent submit when accordion is used inside a form.

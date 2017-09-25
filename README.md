@@ -50,7 +50,14 @@ Callback function when accordion close
 
 * `ignoredNodeNames` (array of strings)
 
-Some scenarios might involve having a form element (e.g a checkbox) inside the accordion item. In these cases you don't want a click event on the checkbox to propagate to the underlying element and thus cause the accordion to expand. Avoid this by passing the HTML node names you want to ignore clicks on (e.g. ['INPUT', 'LABEL'])
+Some scenarios might involve having a form element (e.g a checkbox) inside the accordion item. In these cases you don't
+want a click event on the checkbox to propagate to the underlying element and thus cause the accordion to expand. Avoid
+this by passing the HTML node names you want to ignore clicks on (e.g. ['INPUT', 'LABEL'])
+
+* `hasNestedCollapse` (boolean)
+
+Set this property to true if you're sending in children that contains (or may contain) `react-collapse/Collapse`
+element(s). Defaults to false.
 
 ## Test
 
