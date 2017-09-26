@@ -36,6 +36,13 @@ describe('Grid', () => {
         expect(el.hasClass('ffe-grid--no-top-padding')).to.be(true);
     });
 
+    it('sets the condensed modifier', () => {
+        const el = renderShallow({ condensed: true });
+
+        expect(el.hasClass('ffe-grid')).to.be(true);
+        expect(el.hasClass('ffe-grid--condensed')).to.be(true);
+    });
+
     it('preserves other attributes that are passed to it', () => {
         const handler = sinon.spy();
         const el = renderShallow({ onClick: handler });
