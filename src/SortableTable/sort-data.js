@@ -6,6 +6,12 @@ export default (columns, data, sortBy, descending) => {
         if (!isNaN(data1[sortBy])) {
             return data1[sortBy] - data2[sortBy];
         }
+        if (!data1 && !data2) {
+            return 0;
+        }
+        if (!data1 && data2) {
+            return 1;
+        }
         return data1[sortBy].localeCompare(data2[sortBy]);
     };
 
