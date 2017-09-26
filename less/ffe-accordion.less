@@ -9,6 +9,7 @@
     margin-bottom: 0;
     position: relative;
     list-style: none;
+    width: 100%;
 
     &:last-of-type {
         border-bottom: solid @ffe-grey-silver 1px;
@@ -32,9 +33,10 @@
     fill: @ffe-blue-azure;
     width: 17px;
     height: 17px;
-    position: absolute;
-    right: 20px;
-    top: 25px;
+    align-self: center;
+    max-width: 17px;
+    min-width: 17px;
+    margin-left: 10px;
     transition:
         transform @ffe-transition-duration @ffe-ease-in-out-back,
         fill @ffe-transition-duration @ffe-ease;
@@ -61,13 +63,18 @@
     }
 }
 
+.ffe-accordion-item__title {
+    flex-grow: 1;
+}
+
 .ffe-accordion-item__toggler {
     background-color: transparent;
     border: none;
     color: @ffe-blue-azure;
     cursor: pointer;
-    display: inline-block;
-    padding: 20px 40px 20px 20px;
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 20px;
     text-decoration: none;
     text-align: left;
     transition:

@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## Version 2.0.5
+* Changing to use flex to align items instead of absolute positioning
+
 ## Version 2.0.4
 * Set default background of `ffe-accordion-item__toggler` explicit to transparent. 
 This fixes IE11 error where background becomes gray when a toggler is a button.
