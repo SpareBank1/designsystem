@@ -16,6 +16,7 @@ export default class Grid extends Component {
         const {
             children,
             className,
+            condensed,
             element,
             noTopPadding,
             ...rest
@@ -29,6 +30,7 @@ export default class Grid extends Component {
                     classNames(
                         className,
                         'ffe-grid',
+                        { 'ffe-grid--condensed': condensed },
                         { 'ffe-grid--no-top-padding': noTopPadding },
                     )
                 }
@@ -43,6 +45,7 @@ export default class Grid extends Component {
 Grid.propTypes = {
     children: node,
     className: string,
+    condensed: bool,
     element: string,
     noTopPadding: bool,
 };

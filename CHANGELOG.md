@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version 4.4.0
+
+### New features
+* Added `condensed` prop for `Grid`, which adds the `ffe-grid--condensed` modifier.
+
 ## Version 4.3.0
 
 ### New features
