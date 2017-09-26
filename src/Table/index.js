@@ -79,7 +79,7 @@ class Table extends Component {
 
         if (expandedContentMapper) {
             return data.map((row, index) => (
-                <TableRowExpandable cells={ row } columns={ columns } key={ index } sort={ sort }>
+                <TableRowExpandable cells={ row } columns={ columns } key={ row.id || index } sort={ sort }>
                     { expandedContentMapper(row) }
                 </TableRowExpandable>
             ));
@@ -88,7 +88,7 @@ class Table extends Component {
         return (
             <tbody>
                 {data.map((row, index) => (
-                    <TableRow cells={ row } columns={ columns } key={ index } />
+                    <TableRow cells={ row } columns={ columns } key={ row.id || index } />
                 ))}
             </tbody>
         );

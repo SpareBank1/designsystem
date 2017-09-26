@@ -1,5 +1,10 @@
 # Changelog
 
+## v4.9.0
+
+* Improve performance of table row rendering/sorting by utilizing an optional `id` property on each row object.
+* The `id` property also fixes a bug where updating table rows (i.e pagination) didn't cause an unmount/mount of the new rows. 
+
 ## v4.8.0
 
 * Added optional props `descending` and `sortBy` to set initial sort.
