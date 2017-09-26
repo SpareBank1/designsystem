@@ -1,5 +1,8 @@
 # Changelog
 
+## v2.0.5
+* Changing to use flex to align items instead of absolute positioning
+ 
 ## v2.0.4
 Set `type="button"` for Button-toggler to prevent submit when accordion is used inside a form.
 
