@@ -90,8 +90,10 @@ class AccordionItem extends Component {
                     role="tab"
                     type="button"
                 >
+                    <div className="ffe-accordion-item__title">
+                        { children }
+                    </div>
                     <Chevron className={ createClasses('ffe-accordion-item__icon', isOpen, type) } />
-                    { children }
                 </button>
                 <FFEExpandable
                     expanded={ this.renderExpandedContent() }
