@@ -32,7 +32,7 @@ const columns = [
 ```
 
 Data should be an array of objects where each object represents a row.
-Each row should have a property to correspond to each column object `key`.
+Each row should have a property to correspond to each column object `key` (although it can support potentially undefined values).
 ```javascript
 const data = [
     {

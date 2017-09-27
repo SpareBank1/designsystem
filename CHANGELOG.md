@@ -1,5 +1,9 @@
 # Changelog
 
+## v4.8.1
+
+* Added support for sorting on potentially undefined values in columns
+
 ## v4.8.0
 
 * Added optional props `descending` and `sortBy` to set initial sort.
