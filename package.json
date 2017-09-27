@@ -1,6 +1,6 @@
 {
   "name": "ffe-tables-react",
-  "version": "4.8.1",
+  "version": "4.9.1",
   "description": "React implementation of ffe-tables",
   "main": "lib/index.js",
   "scripts": {

@@ -33,17 +33,24 @@ const columns = [
 
 Data should be an array of objects where each object represents a row.
 Each row should have a property to correspond to each column object `key` (although it can support potentially undefined values).
+
+Though not required, it's recommended that each row also have a property `id` which must be unique.
+The `id` prop should not be a simple index count since this will have no impact on performance.
+For more info: https://facebook.github.io/react/docs/reconciliation.html#keys
 ```javascript
 const data = [
     {
+        id: 'u123',
         name: 'Ola Normann',
         email: 'ola@normann.no'
     },
     {
+        id: 'u463',
         name: 'Sivert Svenska',
         email: 'sivert@svenska.se'
     },
     {
+        id: 'u9463',
         name: 'Daniel Dansk',
         email: 'daniel@dansk.dk'
     }

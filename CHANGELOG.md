@@ -1,8 +1,13 @@
 # Changelog
 
-## v4.8.1
+## v4.9.1
 
 * Added support for sorting on potentially undefined values in columns
+
+## v4.9.0
+
+* Improve performance of table row rendering/sorting by utilizing an optional `id` property on each row object.
+* The `id` property also fixes a bug where updating table rows (i.e pagination) didn't cause an unmount/mount of the new rows. 
 
 ## v4.8.0
 
