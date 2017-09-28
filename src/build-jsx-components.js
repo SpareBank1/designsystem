@@ -32,9 +32,10 @@ const Icon = ({
     desc = '',
     focusable = false,
     title = '',
+    iconName,
     ...rest
     }) =>
-        <svg focusable={focusable} {...rest} {...svg.props}>
+        <svg focusable={focusable ? 'true' : 'false'} {...rest} {...svg.props}>
             {createTitle(title)}
             {createDesc(desc)}
             {svg.props.children}
@@ -48,6 +49,7 @@ Icon.propTypes = {
     style: object,
     tabIndex: number,
     title: string,
+    iconName: string,
 };
 
 export default Icon;
