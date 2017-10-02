@@ -64,23 +64,19 @@
 }
 
 .ffe-accordion-item__title {
+    display: flex;
+    flex-flow: column;
     flex-grow: 1;
 }
 
 .ffe-accordion-item__toggler {
+    cursor: pointer;
     background-color: transparent;
     border: none;
     color: @ffe-blue-azure;
-    cursor: pointer;
-    display: flex;
-    flex-flow: row nowrap;
-    padding: 20px;
-    text-decoration: none;
-    text-align: left;
-    transition:
-        background-color @ffe-transition-duration @ffe-ease,
-        color @ffe-transition-duration @ffe-ease;
     width: 100%;
+    padding: 0;
+    margin: 0;
 
     &:hover,
     &:focus {
@@ -118,4 +114,17 @@
             }
         }
     }
+}
+
+.ffe-accordion-item__toggler-content {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 20px;
+    text-decoration: none;
+    text-align: left;
+    transition:
+        background-color @ffe-transition-duration @ffe-ease,
+        color @ffe-transition-duration @ffe-ease;
+    width: 100%;
+    margin: 0;
 }
