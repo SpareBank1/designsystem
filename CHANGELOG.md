@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version 4.5.0
+
+### New features
+* Added `bgPurpleMagenta` prop for `GridRow`, which adds a `ffe-purple-magenta` background colour.
+
 ## Version 4.4.0
 
 ### New features
