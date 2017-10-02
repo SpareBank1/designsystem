@@ -17,6 +17,7 @@ export default class GridRow extends Component {
             bgBlueCobalt,
             bgBlueIce,
             bgBluePale,
+            bgPurpleMagenta,
             bgSand,
             className,
             children,
@@ -27,7 +28,7 @@ export default class GridRow extends Component {
         } = this.props;
 
         let content = children;
-        if (bgBluePale || bgBlueCobalt || bgSand) {
+        if (bgBluePale || bgBlueCobalt || bgSand || bgBlueIce || bgPurpleMagenta) {
             content = <div className="ffe-grid__row-wrapper">{children}</div>;
         }
 
@@ -42,6 +43,7 @@ export default class GridRow extends Component {
                         { 'ffe-grid__row--bg-blue-cobalt': bgBlueCobalt },
                         { 'ffe-grid__row--bg-blue-ice': bgBlueIce },
                         { 'ffe-grid__row--bg-blue-pale': bgBluePale },
+                        { 'ffe-grid__row--bg-purple-magenta': bgPurpleMagenta },
                         { 'ffe-grid__row--bg-sand': bgSand },
                         { 'ffe-grid__row--reverse': reverse },
                         { 'ffe-grid__row--top-padding': topPadding },
@@ -59,6 +61,7 @@ GridRow.propTypes = {
     bgBlueCobalt: bool,
     bgBlueIce: bool,
     bgBluePale: bool,
+    bgPurpleMagenta: bool,
     bgSand: bool,
     className: string,
     children: node,
