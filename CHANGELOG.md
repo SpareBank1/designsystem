@@ -1,5 +1,12 @@
 # Changelog
 
+## 7.13.0
+
+* Add beta-ikon.svg
+* Add kr-tannhjul-ikon.svg
+* Add mobil-utropstegn-ikon.svg
+* Add person-streker-ikon.svg
+
 ## 7.12.0
 
 * pil-ut-av-boks-skraa-ikon has been updated with thicker lines
