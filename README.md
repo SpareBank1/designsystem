@@ -105,6 +105,9 @@ Adds the `@ffe-blue-cobalt` colour as a background for the row
 #### `.ffe-grid__row--bg-blue-ice`
 Adds the `@ffe-blue-ice` colour as a background for the row
 
+#### `.ffe-grid__row--bg-purple-magenta`
+Adds the `@ffe-purple-magenta` colour as a background for the row
+
 #### `.ffe-grid__row--bg-sand`
 Adds the `@ffe-sand` colour as a background for the row
 
