@@ -68,7 +68,7 @@ class AccordionItem extends Component {
         );
     }
 
-    render(props) {
+    render() {
         const { isOpen } = this.state;
         const {
             ariaLabel,
@@ -90,10 +90,12 @@ class AccordionItem extends Component {
                     role="tab"
                     type="button"
                 >
-                    <div className="ffe-accordion-item__title">
-                        { children }
-                    </div>
-                    <Chevron className={ createClasses('ffe-accordion-item__icon', isOpen, type) } />
+                    <span className="ffe-accordion-item__toggler-content">
+                        <span className="ffe-accordion-item__title">
+                            { children }
+                        </span>
+                        <Chevron className={ createClasses('ffe-accordion-item__icon', isOpen, type) } />
+                    </span>
                 </button>
                 <FFEExpandable
                     expanded={ this.renderExpandedContent() }

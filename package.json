@@ -6,7 +6,7 @@
     "build": "babel -d lib/. --ignore=*.test.js src/. && npm run example",
     "watch": "onchange 'src/**.js' -- npm run build",
     "lint": "eslint src/.",
-    "start": "budo examples/accordian.js --open --live --title \"FFE Accordian React\" -- -t [ babelify --presets [ es2015 react ] ] -t node-lessify",
+    "start": "budo examples/accordion.js --open --live --title \"FFE Accordion React\" -- -t [ babelify --presets [ es2015 react ] ] -t node-lessify",
     "test:nsp": "nsp check",
     "test:spec": "mocha --require babel-register src/**/*.test.js",
     "test": "npm run test:spec && npm run test:nsp",
