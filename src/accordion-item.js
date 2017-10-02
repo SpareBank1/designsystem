@@ -8,7 +8,7 @@ import {
     oneOf,
     string
 } from 'prop-types';
-import FFEExpandable from 'ffe-expandable-react';
+import { Collapse } from 'react-collapse';
 import Chevron from 'ffe-icons-react/chevron-ikon';
 import classNames from 'classnames';
 
@@ -73,6 +73,7 @@ class AccordionItem extends Component {
         const {
             ariaLabel,
             children,
+            hasNestedCollapse,
             index,
             type,
             uuid,
@@ -97,10 +98,12 @@ class AccordionItem extends Component {
                         <Chevron className={ createClasses('ffe-accordion-item__icon', isOpen, type) } />
                     </span>
                 </button>
-                <FFEExpandable
-                    expanded={ this.renderExpandedContent() }
-                    isOpen={ isOpen }
-                />
+                <Collapse
+                    hasNestedCollapse={ hasNestedCollapse }
+                    isOpened={ isOpen }
+                >
+                    {this.renderExpandedContent()}
+                </Collapse>
             </li>
         );
     }
@@ -110,6 +113,7 @@ AccordionItem.propTypes = {
     ariaLabel: string,
     children: node,
     expandedContent: node,
+    hasNestedCollapse: bool,
     ignoredNodeNames: arrayOf(string),
     index: number,
     isOpen: bool,
@@ -120,6 +124,7 @@ AccordionItem.propTypes = {
 };
 
 AccordionItem.defaultProps = {
+    hasNestedCollapse: false,
     ignoredNodeNames: [],
     onClose: f => f,
     onOpen: f => f,
