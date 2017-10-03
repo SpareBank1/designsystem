@@ -1,6 +1,6 @@
 {
   "name": "ffe-radio-button-react",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "main": "lib/index.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/.",
@@ -30,6 +30,8 @@
     "mocha": "^2.4.5",
     "mocha-tap13": "0.0.3",
     "nsp": "^2.2.0",
+    "react": "^15.0.1",
+    "react-dom": "^15.0.1",
     "react-addons-test-utils": "^15.0.1",
     "sinon": "^1.17.3"
   },
@@ -52,8 +54,6 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "nfe-hash": "^1.1.0",
-    "prop-types": "*",
-    "react": "^15.0.1",
-    "react-dom": "^15.0.1"
+    "prop-types": "*"
   }
 }
