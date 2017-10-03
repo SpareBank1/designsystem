@@ -1,6 +1,6 @@
 {
   "name": "ffe-icons-react",
-  "version": "2.4.14",
+  "version": "2.4.15",
   "description": "React komponent for ffe-icons",
   "main": "ffe-icons-react.js",
   "scripts": {
@@ -14,7 +14,8 @@
     "clean": "babel-node ./src/clean.js",
     "ffe:icons": "ffe-icons --opts=svg.sprite.config.json",
     "start": "npm run build && npm run build:iconlist && webpack-dev-server",
-    "postpublish": "git tag ${npm_package_version} && git push --tags"
+    "postpublish": "git tag ${npm_package_version} && git push --tags",
+    "server": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -37,7 +38,7 @@
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^7.3.0",
-    "ffe-icons": "7.12.0",
+    "ffe-icons": "7.13.0",
     "gulp": "^3.9.1",
     "json-loader": "^0.5.7",
     "mkdirp": "^0.5.1",
