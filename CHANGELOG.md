@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.4.15
+
+* Updated ffe-icons to version 7.13.0, new icons:
+  * `ffe-icons-react/beta-ikon`
+  * `ffe-icons-react/kr-tannhjul-ikon`
+  * `ffe-icons-react/mobil-utropstegn-ikon`
+  * `ffe-icons-react/person-streker-ikon`
+
 ## 2.4.14
 
 * Fixed warnings:
