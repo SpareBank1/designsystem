@@ -1,6 +1,6 @@
 # Changelog
 
-## v2.1.1
+## v3.0.0
 * Changing to use flex to align items instead of absolute positioning
 
 ## v2.1.0
