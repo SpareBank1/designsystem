@@ -1,7 +1,7 @@
 # CHANGELOG
 
-## Version 2.0.5
-* Changing to use flex to align items instead of absolute positioning
+## Version 3.0.0
+* *Breaking change* to use flex to align items instead of absolute positioning
 
 ## Version 2.0.4
 * Set default background of `ffe-accordion-item__toggler` explicit to transparent. 
