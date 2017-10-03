@@ -32,7 +32,7 @@ const columns = [
 ```
 
 Data should be an array of objects where each object represents a row.
-Each row should have a property to correspond to each column object `key`.
+Each row should have a property to correspond to each column object `key` (although it can support potentially undefined values).
 
 Though not required, it's recommended that each row also have a property `id` which must be unique.
 The `id` prop should not be a simple index count since this will have no impact on performance.

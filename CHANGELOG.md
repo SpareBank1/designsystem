@@ -1,5 +1,9 @@
 # Changelog
 
+## v4.9.1
+
+* Added support for sorting on potentially undefined values in columns
+
 ## v4.9.0
 
 * Improve performance of table row rendering/sorting by utilizing an optional `id` property on each row object.
