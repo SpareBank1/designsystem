@@ -8,7 +8,7 @@ const defaults = {
 
 export default function formatNumber(number, opts = defaults) {
     const toFormat = parseNumber(number);
-    if (!toFormat) {
+    if (typeof toFormat !== 'number') {
         return number;
     }
     return `${numberFormat(toFormat, opts.decimals, ',', NON_BREAKING_SPACE)}`;

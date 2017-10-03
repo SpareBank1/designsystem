@@ -35,6 +35,15 @@ describe('formatNumber', () => {
         expect(formatNumber(1234.4, { decimals: 2 })).toBe('1 234,40');
     });
 
+    test('format 0 without decimal numbers', () => {
+        expect(formatNumber(0)).toBe('0');
+    });
+
+    test('format 0 with decimal numbers if specified', () => {
+        expect(formatNumber(0, { decimals: 1 })).toBe('0,0');
+        expect(formatNumber(0, { decimals: 2 })).toBe('0,00');
+    });
+
     test('format numeric strings', () => {
         expect(formatNumber('1234')).toBe('1 234');
         expect(formatNumber('-1234567')).toBe('-1 234 567');
