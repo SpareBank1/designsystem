@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.2.2
+* Move react and react-dom to devDependencies
+
 ## v1.2.1
 * Use PropTypes from prop-types package
 
