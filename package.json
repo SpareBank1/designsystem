@@ -1,6 +1,6 @@
 {
   "name": "ffe-accordion",
-  "version": "2.0.4",
+  "version": "3.0.0",
   "description": "Accordion component for FFE.",
   "main": "index.js",
   "scripts": {

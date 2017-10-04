@@ -2,3 +2,9 @@
 @import "../less/ffe-accordion";
 
 @base-url: ".";
+
+button {
+    // Fixing margin-bug for visual tests
+    // https://stackoverflow.com/questions/13697150/textbox-and-button-top-margin-issue-for-firefox-and-chrome
+    vertical-align: bottom;
+}
