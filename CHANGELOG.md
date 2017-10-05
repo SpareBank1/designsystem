@@ -1,5 +1,8 @@
 # Changelog
-
+## v2.0.4
+- Bugfix: Fixed a bug where
+    - `formatNumber(0)` returns 0, (expected: '0')
+    - `formatNumber(0, { decimals: 2 })` returns 0, (expected: '0,00') 
 ## v2.0.3
 
 ### 🐛 Bugfixes
