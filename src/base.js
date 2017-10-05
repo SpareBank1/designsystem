@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { node, object, oneOf } from 'prop-types';
-import { findDOMNode } from 'react-dom';
+import { func, node, number, object, oneOf } from 'prop-types';
 
 import KryssIkon from 'ffe-icons-react/kryss-ikon';
 
@@ -11,16 +10,24 @@ export default class Base extends Component {
         this.close = this.close.bind(this);
     }
 
-    close() {
-        const element = findDOMNode(this.refs.self);
+    close(event) {
+        const { animationLengthMs, onClose } = this.props;
+        const element = this._self;
+        const clickDelayMs = 50;
         element.style.height = `${element.offsetHeight}px`;
-        window.setTimeout(() => {
+        setTimeout(() => {
             element.style.height = 0;
-        }, 50);
+        }, clickDelayMs);
+        setTimeout(() => {
+            onClose(event);
+        }, clickDelayMs + animationLengthMs);
+
+
     }
 
     render() {
         const {
+            animationLengthMs,
             children,
             icon,
             modifier,
@@ -30,8 +37,8 @@ export default class Base extends Component {
         return (
             <div
                 className={`ffe-system-message-wrapper ffe-system-message-wrapper--${modifier}`}
-                ref="self"
-                style={style}
+                ref={self => { this._self = self; }}
+                style={{...style, transition: `height ${animationLengthMs / 1000}s`}}
             >
                 <div
                     className={`
@@ -62,8 +69,15 @@ export default class Base extends Component {
 }
 
 Base.propTypes = {
+    animationLengthMs: number,
     children: node.isRequired,
     icon: node.isRequired,
     modifier: oneOf(['error', 'info', 'success', 'news']),
+    onClose: func,
     style: object,
+};
+
+Base.defaultProps = {
+    animationLengthMs: 200,
+    onClose: () => {},
 };

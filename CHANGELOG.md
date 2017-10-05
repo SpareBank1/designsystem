@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## Version 1.2.0
+* Added support for on close callback using onClose prop
+
 ## Version 1.1.5
 * Use PropTypes from prop-types package
 

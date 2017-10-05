@@ -5,12 +5,17 @@ import InfoSirkelIkon from 'ffe-icons-react/info-sirkel-ikon';
 
 import Base from './base';
 
-export default function SystemErrorMessage({ style, children }) {
+export default function SystemErrorMessage({ style, children, ...rest }) {
     const ikon = (
         <InfoSirkelIkon style={{ transform: 'rotateX(180deg)' }} />
     );
     return (
-        <Base modifier="error" icon={ikon} style={style}>
+        <Base
+            modifier="error"
+            icon={ikon}
+            style={style}
+            {...rest}
+        >
             {children}
         </Base>
     );
