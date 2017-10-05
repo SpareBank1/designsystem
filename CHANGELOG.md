@@ -1,5 +1,9 @@
 # Changelog
 
+## 7.14.0
+
+* Add p-pose-stjerne-ikon.svg
+
 ## 7.13.0
 
 * Add beta-ikon.svg

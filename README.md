@@ -150,10 +150,10 @@ Example using Inkscape:
 1. Open the SVG file in Inkscape
 2. SHIFT-CTRL-D Change the width and height to 200.
 3. CTRL-A Select all elements.
-4. SHIFT-CTRLl-G Remove groups, (<g> elements). Repeat until no more groups.
+4. SHIFT-CTRL-G Remove groups, (<g> elements). Repeat until no more groups.
 5. CTRL-A and CTRL-'+' (Union) - Convert all elements to a single path. This may make the icon larger if the path is very complex.
 6. SHIFT-CTRL-M  Scale the icon until it fills the view box (vertical or horizontal), Hold SHIFT-CTRL to preserve ratio.
 7. SHIFT-CTRL-S Save the icon as Optimized SVG
-8. Open the Icon in a text editor and check if it contains any transform attributes. If not, jump to 10.
+8. Open the icon in a text editor and check if it contains any transform attributes. If not, jump to 10.
 9. Open the icon in http://editor.method.ac/ CTRL-A and choose Object->Reorient Path - This usually removes transforms. Save the file to disk.
 10. Remove all metadata og unnecessary whitespace. The structure of the .svg file should be <svg viewBox="0 0 200 200" xmln"..."><path d="..."/></svg>
