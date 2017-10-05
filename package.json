@@ -1,12 +1,12 @@
 {
   "name": "ffe-accordion-react",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "main": "lib/index.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/. && npm run example",
     "watch": "onchange 'src/**.js' -- npm run build",
     "lint": "eslint src/.",
-    "start": "budo examples/accordian.js --open --live --title \"FFE Accordian React\" -- -t [ babelify --presets [ es2015 react ] ] -t node-lessify",
+    "start": "budo examples/accordion.js --open --live --title \"FFE Accordion React\" -- -t [ babelify --presets [ es2015 react ] ] -t node-lessify",
     "test:nsp": "nsp check",
     "test:spec": "mocha --require babel-register src/**/*.test.js",
     "test": "npm run test:spec && npm run test:nsp",
@@ -19,7 +19,7 @@
   "peerDependencies": {
     "react": "^0.14.0 || ^15.0.0",
     "ffe-core": "*",
-    "ffe-accordion": "^2.0.1"
+    "ffe-accordion": "^3.0.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
