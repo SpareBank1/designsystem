@@ -1,5 +1,8 @@
 # Changelog
 
+## v3.0.0
+* Changing to use flex to align items instead of absolute positioning
+
 ## v2.1.0
 Use `react-collapse` instead of ffe-expandable-react, since the latter is deprecated. Also add a new property
 `hasNestedCollapse`, which lets the consumer use another `react-collapse` element inside the accordion.
