@@ -1,7 +1,7 @@
 {
   "name": "ffe-icons-react",
-  "version": "2.4.15",
-  "description": "React komponent for ffe-icons",
+  "version": "2.4.16",
+  "description": "React-komponent for ffe-icons",
   "main": "ffe-icons-react.js",
   "scripts": {
     "build": "npm run lint && npm run ffe:icons && npm run build:iconlist && npm run build:jsx-components && npm run lint:jsx && npm run build:babel",
@@ -38,7 +38,7 @@
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^7.3.0",
-    "ffe-icons": "7.13.0",
+    "ffe-icons": "7.14.0",
     "gulp": "^3.9.1",
     "json-loader": "^0.5.7",
     "mkdirp": "^0.5.1",
