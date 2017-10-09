@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.4.16
+
+* Updated ffe-icons to version 7.14.0, new icon:
+  * `ffe-icons-react/p-pose-stjerne-ikon`
+
 ## 2.4.15
 
 * Updated ffe-icons to version 7.13.0, new icons:
