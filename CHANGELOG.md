@@ -1,5 +1,8 @@
 # Changelog
 
+## 4.2.2
+* Actually support both versions 9 and 10 of `ffe-core` (fixes 4.2.1)
+
 ## 4.2.1
 * Support both versions 9 and 10 of `ffe-core`
 
