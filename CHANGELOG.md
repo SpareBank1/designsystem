@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.0.2
+* Actually support both versions 9 and 10 of `ffe-core` (fixes 2.0.1)
+* Lint fixes
+
 ## v2.0.1
 * Support both versions 9 and 10 of `ffe-core`
 

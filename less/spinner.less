@@ -4,15 +4,15 @@
     display: inline-block;
     vertical-align: middle;
 
-    &:before {
-      .ffe-sb1-spinner();
+    &::before {
+        .ffe-sb1-spinner();
     }
 
-    &--stop-animation:before {
+    &--stop-animation::before {
         animation: none;
     }
 
-    &--large:before {
+    &--large::before {
         border-width: 3px;
         height: 40px;
         width: 40px;
