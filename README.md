@@ -70,7 +70,12 @@ className|string|no|Extra class names to apply
 Text headings. Comes in 6 different sizes.
 
 ```javascript
-import Heading1 from 'ffe-core-react/lib/typography/Heading1';
+import { Heading1 } from 'ffe-core-react/lib/typography/Heading';
+import { Heading2 } from 'ffe-core-react/lib/typography/Heading';
+import { Heading3 } from 'ffe-core-react/lib/typography/Heading';
+import { Heading4 } from 'ffe-core-react/lib/typography/Heading';
+import { Heading5 } from 'ffe-core-react/lib/typography/Heading';
+import { Heading6 } from 'ffe-core-react/lib/typography/Heading';
 ```
 
 Property | Type | Required | Description
