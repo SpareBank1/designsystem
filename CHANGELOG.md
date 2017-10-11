@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.6.1
+* Add support for version 8 of `ffe-form`
+* Fix incorrect variable names in `i18n`
+
 ## v2.6.0
 * Provide validation error text to onError callback. This allows the consuming component to use the error texts defined by this component.
 
@@ -7,12 +11,10 @@
 * Removing class `ffe-calendar__date--focus` from container-div.
 
 ## v2.5.1
-
 * Fix prop type warning when using `ariaInvalid` prop with a boolean value on `Datepicker`.
 This property is deprecated now, you should instead use the standard `aria-invalid` with a `String` value ("true" or "false").
 
 ## v2.5.0
-
 * Add property `hideErrors`, which hides the internal datepicker error output if any
 * Add possibility to use `aria-invalid` prop on both `Datepicker` and `DateInput`. This will take prescedence over the `ariaInvalid` prop.
 * Fix typo in class name for `ffe-calendar__date--focus`, making it not apply the correct styles
@@ -20,23 +22,18 @@ This property is deprecated now, you should instead use the standard `aria-inval
 * Internal refactor and formatting cleanup
 
 ## v2.4.4
-
 * Fix bug where the datepicker wasn't clickable with invalid-input.
 
 ## v2.4.3
-
 * Bugfix: SimpleDate.fromString did not parse valid dates on certain days at the end of a month, which resulted in false-negative validation errors.
 
 ## v2.4.2
-
 * Minor error message text fix
 
 ## v2.4.1
-
 * Add optional label to input field
 
 ## v2.4.0
-
 * Fix a bug where the datepicker didn't show on focus/click after there has been an error.
 * Use PropTypes from `prop-types` package, instead of React.
 
