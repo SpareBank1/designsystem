@@ -1,4 +1,11 @@
 # Changelog
+
+# v7.8.0
+* Add support for `ffe-form@8` and `ffe-core@10`
+* Remove less extension of `ffe-link-text` on `ffe-account-suggestion__name`
+* Add classes `ffe-link-text` and `ffe-link-text--no-underline` alongside
+all `ffe-account-suggestion__name`
+
 # v7.7.1
 * Bugfix IE11
 

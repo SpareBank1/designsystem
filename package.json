@@ -1,6 +1,6 @@
 {
   "name": "ffe-account-selector-react",
-  "version": "7.7.1",
+  "version": "7.8.0",
   "main": "lib/index.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/.",
@@ -30,11 +30,10 @@
     "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^6.10.0",
     "ffe-buttons": "^4.0.1",
-    "ffe-core": "^9.x",
-    "ffe-form": "^5.x",
+    "ffe-core": "^10.x",
+    "ffe-form": "^8.x",
     "ffe-icons": "^7.4.1",
     "ffe-spinner": "^2.0.1",
-    "ffe-spinner-react" : "^2.0.3",
     "jsdom": "^9.11.0",
     "mocha": "^3.5.3",
     "node-lessify": "^0.1.4",
@@ -47,7 +46,7 @@
     "sinon": "^1.17.7"
   },
   "peerDependencies": {
-    "ffe-form": "4.x - 6.x",
+    "ffe-form": "4.x - 8.x",
     "ffe-spinner" : "2.x"
   },
   "publishConfig": {
@@ -66,9 +65,9 @@
   "license": "",
   "dependencies": {
     "classnames": "2.2.5",
-    "ffe-checkbox-react": "4.x",
+    "ffe-checkbox-react": "^4.4.3",
     "ffe-icons-react": "2.4.3",
-    "ffe-spinner-react": "2.0.3",
+    "ffe-spinner-react": "^2.0.3",
     "lodash.isequal": "4.5.0",
     "nfe-amount-formatter": "2.0.1",
     "prop-types": "15.5.9",

@@ -22,7 +22,7 @@ const renderSelectAll = (allSelected, locale) => (
         disabled={ true }
       />
       <div className='ffe-account-suggestion__content-wrapper'>
-        <span className='ffe-account-suggestion__name'>{txt[locale].SELECT_ALL}</span>
+        <span className='ffe-account-suggestion__name ffe-link-text ffe-link-text--no-underline'>{txt[locale].SELECT_ALL}</span>
       </div>
     </div>);
 
@@ -159,7 +159,8 @@ AccountSelectorMulti.propTypes = {
   showSelectAllOption: bool,
   noMatches: string,
   onBlur: func.isRequired,
-  value: string
+  value: string,
+  isLoading: bool
 };
 
 export default AccountSelectorMulti;
