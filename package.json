@@ -1,6 +1,6 @@
 {
   "name": "ffe-searchable-dropdown-react",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Dropdown with search option",
   "scripts": {
     "build": "babel -d lib --ignore=*.test.js src",
@@ -24,7 +24,7 @@
   ],
   "peerDependencies": {
     "ffe-core": "9.x || 10.x",
-    "ffe-form": "^6.3.1",
+    "ffe-form": "^6.3.1 || 7.x - 8.x",
     "react": "^15.4.0"
   },
   "devDependencies": {
@@ -46,8 +46,8 @@
     "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^6.10.0",
     "extract-text-webpack-plugin": "^2.1.2",
-    "ffe-core": "^10.0.0",
-    "ffe-form": "^6.3.1",
+    "ffe-core": "^10.1.1",
+    "ffe-form": "^8.1.1",
     "ffe-icons": "^7.9.1",
     "file-loader": "^0.11.2",
     "jest": "^20.0.4",

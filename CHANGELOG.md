@@ -1,6 +1,7 @@
 # Changelog for ffe-search-dropdown-react
 
-## Unversioned
+## v2.1.2
+* Add support for version 7 and 8 of `ffe-form`.
 * Fix console error in SearchableDropdown example.
 * Code style changes.
 
