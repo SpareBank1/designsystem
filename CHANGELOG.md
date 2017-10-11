@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.9.1
+* Add support for version 8 of `ffe-form`.
+* Specify version of `React`-related packages to `15.x`
+
 ## 2.9.0
 * Added support for `isTabbable`
 
