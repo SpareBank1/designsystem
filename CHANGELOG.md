@@ -1,5 +1,8 @@
 # Changelog
 
+## 4.2.3
+* Add support of version 8 of `ffe-form`
+
 ## 4.2.2
 * Actually support both versions 9 and 10 of `ffe-core` (fixes 4.2.1)
 
