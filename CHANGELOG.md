@@ -1,5 +1,9 @@
 # Changelog
 
+# 4.4.3
+* Update peerDep on `ffe-form` to include version `8.x`
+* Bump devDeps to `ffe-core@10.1.1` and `ffe-form@8.1.1`
+
 ## 4.4.2
 * Use PropTypes from prop-types package
 
