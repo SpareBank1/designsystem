@@ -18,11 +18,9 @@ document.body.appendChild(accountSelectorDOM);
 
 render(
   <form>
-    <input/>
     <MultiAccountSelectorExample />
     <MultiAccountSelectorWithAllExample />
     <AccountSelectorExample selectedAccount={null} value={''} />
     <AccountSelectorExample selectedAccount={accountArray[0]} value={accountArray[0].name} />
-    <input/>
   </form>
   , accountSelectorDOM);
