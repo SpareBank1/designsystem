@@ -1,6 +1,6 @@
 {
   "name": "ffe-checkbox-react",
-  "version": "4.4.2",
+  "version": "4.4.3",
   "main": "lib/checkbox.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/. && npm run example",
@@ -17,7 +17,7 @@
     "postpublish": "git tag ${npm_package_version} && git push --tags"
   },
   "peerDependencies": {
-    "ffe-form": "1.x - 7.x"
+    "ffe-form": "1.x - 8.x"
   },
   "dependencies": {
     "classnames": "^2.2.5",
@@ -41,8 +41,8 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^6.8.0",
-    "ffe-core": "^9.2.0",
-    "ffe-form": "7.0.2",
+    "ffe-core": "^10.1.1",
+    "ffe-form": "8.1.1",
     "mocha": "^2.4.5",
     "mocha-tap13": "0.0.3",
     "node-lessify": "^0.1.4",
