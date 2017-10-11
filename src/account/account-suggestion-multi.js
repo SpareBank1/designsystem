@@ -6,7 +6,7 @@ import {Account, Locale} from '../util/types';
 
 function AccountSuggestionMulti({account, locale, selected}) {
   const {accountNumber, balance, name}= account;
-  const hasBalance = balance != null;
+  const hasBalance = balance !== null;
   return (
     <div className='ffe-account-suggestion__account--multi'>
       <Checkbox
@@ -17,7 +17,7 @@ function AccountSuggestionMulti({account, locale, selected}) {
         disabled={ true }
       />
       <div className='ffe-account-suggestion__content-wrapper'>
-        <span className='ffe-account-suggestion__name'>{name}</span>
+        <span className='ffe-account-suggestion__name ffe-link-text ffe-link-text--no-underline'>{name}</span>
         <div className='ffe-account-suggestion__details'>
           <span className='ffe-account-suggestion__number'>
             {accountFormatter(accountNumber)}
