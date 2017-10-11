@@ -1,6 +1,6 @@
 {
   "name": "ffe-datepicker-react",
-  "version": "2.6.0",
+  "version": "2.6.1",
   "main": "lib/ffe-datepicker-react.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/.",
@@ -36,7 +36,7 @@
     "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^6.8.0",
     "ffe-core": "^10.1.0",
-    "ffe-form": "^7.0.2",
+    "ffe-form": "^8.0.0",
     "ffe-icons-react": "^2.4.3",
     "jsdom": "^11.1.0",
     "mocha": "^3.5.0",
@@ -68,12 +68,12 @@
   },
   "peerDependencies": {
     "ffe-datepicker": "3.x - 4.x",
-    "ffe-form": "2.x - 6.x",
+    "ffe-form": "2.x - 8.x",
     "react": "15.x"
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "ffe-datepicker": "^4.0.0",
+    "ffe-datepicker": "^4.2.3",
     "prop-types": "15.x",
     "uuid": "^3.1.0"
   }
