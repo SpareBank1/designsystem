@@ -96,6 +96,7 @@ class Input extends Component {
           } }
           tabIndex={-1}
           type="button"
+          aria-label="Reset"
         >
           <KryssIkon className='ffe-base-selector__reset-button-icon'/>
         </button>
