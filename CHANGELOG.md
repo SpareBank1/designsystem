@@ -2,7 +2,10 @@
 
 ## v4.9.1
 
-* Added support for sorting on potentially undefined values in columns
+* Fixed prop type of `caption` from `string` to `node` to allow rendering React components.
+This was always intended based on `README.md`.
+* Replace `flow.sh` with `buildCI.sh`.
+* Added support for sorting on potentially undefined values in columns.
 
 ## v4.9.0
 
