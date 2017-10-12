@@ -1,5 +1,8 @@
 # Changelog
 
+# v7.8.2
+* Add aria-label to reset-button to fix empty-button error.
+
 # v7.8.1
 * Move `react-auto-bind` from devDeps to dependencies.
 
