@@ -10,7 +10,7 @@ function Table(props) {
 }
 
 Table.propTypes = {
-    caption: PropTypes.string,
+    caption: PropTypes.node,
     srOnlyCaption: PropTypes.bool,
     expandedContentMapper: PropTypes.func,
     sortable: PropTypes.bool,

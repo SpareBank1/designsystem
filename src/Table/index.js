@@ -119,7 +119,7 @@ class Table extends Component {
 Table.propTypes = {
     alignLeft: PropTypes.bool,
     columnLayoutMobile: PropTypes.bool,
-    caption: PropTypes.string,
+    caption: PropTypes.node,
     srOnlyCaption: PropTypes.bool,
     expandedContentMapper: PropTypes.func,
     condensed: PropTypes.bool,

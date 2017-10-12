@@ -127,7 +127,7 @@ class SortableTable extends Component {
 }
 
 SortableTable.propTypes = {
-    caption: PropTypes.string,
+    caption: PropTypes.node,
     srOnlyCaption: PropTypes.bool,
     expandedContentMapper: PropTypes.func,
     offset: PropTypes.number,

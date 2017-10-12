@@ -107,7 +107,7 @@ render(
                     expandedContentMapper={ lazyExpandedContentMapper }
                     condensed={true}
                     smallHeader={true}
-                    caption="This table even has caption!"
+                    caption={ <span>This table even has caption!<br/><span className="ffe-small-text">Which can even be a component</span></span> }
                     sortable={true}
                 />
 
