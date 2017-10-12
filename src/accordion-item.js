@@ -21,7 +21,7 @@ class AccordionItem extends Component {
     constructor(props) {
         super();
         this.state = {
-            isOpen: props.isOpen,
+            isOpen: props.isOpen || false,
         };
 
         this.onClick = this.onClick.bind(this);

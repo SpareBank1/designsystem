@@ -1,6 +1,6 @@
 {
   "name": "ffe-accordion-react",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "main": "lib/index.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/. && npm run example",
