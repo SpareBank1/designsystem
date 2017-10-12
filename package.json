@@ -1,6 +1,6 @@
 {
   "name": "ffe-account-selector-react",
-  "version": "7.8.1",
+  "version": "7.8.2",
   "main": "lib/index.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/.",
@@ -46,7 +46,7 @@
   },
   "peerDependencies": {
     "ffe-form": "4.x - 8.x",
-    "ffe-spinner" : "2.x"
+    "ffe-spinner": "2.x"
   },
   "publishConfig": {
     "registry": "https://nexus.intern.sparebank1.no/nexus/content/repositories/npm-internal"
