@@ -1,5 +1,8 @@
 # Changelog
 
+# v7.8.1
+* Move `react-auto-bind` from devDeps to dependencies.
+
 # v7.8.0
 * Add support for `ffe-form@8` and `ffe-core@10`
 * Remove less extension of `ffe-link-text` on `ffe-account-suggestion__name`
