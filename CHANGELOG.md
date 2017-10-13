@@ -1,5 +1,9 @@
 # Changelog
 
+## v3.0.1
+* Fix a propType error that would happen if isOpen was not set on AccordionItem. Collapse complained that
+`this.state.isOpen` was undefined, so it now defaults to the boolean `false`.
+
 ## v3.0.0
 * Changing to use flex to align items instead of absolute positioning
 
