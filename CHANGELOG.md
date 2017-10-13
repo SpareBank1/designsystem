@@ -3,7 +3,6 @@
 ## v.6.0.2 (13.10.2017)
 * (patch) added support for `eslint-plugin-react@7`
 * (patch) added various devDependencies
-* (patch) added package-lock.json
 
 ## v.6.0.1 (08.03.2017)
 * (patch) at least one rule in `eslint-plugin-react` no longer work without an array prop.
