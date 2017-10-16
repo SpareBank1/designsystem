@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version 4.6.0
+
+### New features
+* Added `bgBlueRoyal` prop for `GridRow`, which adds a `ffe-blue-royal` background colour.
+
 ## Version 4.5.0
 
 ### New features
