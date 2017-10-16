@@ -1,5 +1,8 @@
 # Changelog
 
+## v.5.3.0
+* Added a new background modifier (`--bg-blue-royal`) to `ffe-grid-row`.
+
 ## v.5.2.0
 * Added a new background modifier (`--bg-purple-magenta`) to `ffe-grid-row`.
 
