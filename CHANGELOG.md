@@ -1,5 +1,8 @@
 # Changelog
 
+## v.5.3.1
+* Make text and headers white when using `--bg-blue-royal`.
+
 ## v.5.3.0
 * Added a new background modifier (`--bg-blue-royal`) to `ffe-grid-row`.
 
