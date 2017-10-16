@@ -43,11 +43,32 @@ describe('GridRow', () => {
         expect(el.hasClass('ffe-grid__row--bg-blue-cobalt')).to.be(true);
     });
 
+    it('sets the bgBlueIce modifier', () => {
+        const el = renderShallow({ bgBlueIce: true });
+
+        expect(el.hasClass('ffe-grid__row')).to.be(true);
+        expect(el.hasClass('ffe-grid__row--bg-blue-ice')).to.be(true);
+    });
+
     it('sets the bgBluePale modifier', () => {
         const el = renderShallow({ bgBluePale: true });
 
         expect(el.hasClass('ffe-grid__row')).to.be(true);
         expect(el.hasClass('ffe-grid__row--bg-blue-pale')).to.be(true);
+    });
+
+    it('sets the bgBlueRoyal modifier', () => {
+        const el = renderShallow({ bgBlueRoyal: true });
+
+        expect(el.hasClass('ffe-grid__row')).to.be(true);
+        expect(el.hasClass('ffe-grid__row--bg-blue-royal')).to.be(true);
+    });
+
+    it('sets the bgPurpleMagenta modifier', () => {
+        const el = renderShallow({ bgPurpleMagenta: true });
+
+        expect(el.hasClass('ffe-grid__row')).to.be(true);
+        expect(el.hasClass('ffe-grid__row--bg-purple-magenta')).to.be(true);
     });
 
     it('sets the bgSand modifier', () => {
@@ -58,12 +79,22 @@ describe('GridRow', () => {
     });
 
     it('renders coloured rows with extra wrappers', () => {
-        const el = renderShallow({
-            bgSand: true,
-            children: <GridCol lg={12}><p>blah</p></GridCol>,
-        });
+        const bgColorProps = [
+            'bgBlueCobalt',
+            'bgBlueIce',
+            'bgBluePale',
+            'bgBlueRoyal',
+            'bgPurpleMagenta',
+            'bgSand',
+        ];
 
-        expect(el.childAt(0).hasClass('ffe-grid__row-wrapper')).to.be(true);
+        bgColorProps.forEach((color) => {
+            const el = renderShallow({
+                [color]: true,
+                children: <GridCol lg={12}><p>blah</p></GridCol>,
+            });
+            expect(el.childAt(0).hasClass('ffe-grid__row-wrapper')).to.be(true);
+        });
     });
 
     it('sets the topPadding modifier', () => {
