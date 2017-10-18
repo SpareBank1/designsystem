@@ -60,6 +60,11 @@ class BaseSelector extends Component {
     this.showOrHideSuggestions(false, this.props.onBlur);
   }
 
+  onClick() {
+    const {onClick } = this.props;
+    this.showOrHideSuggestions(true, onClick);
+  }
+
   onInputReset() {
     const shouldShowSuggestions = !this.props.shouldHideSuggestionsOnReset;
     this.showOrHideSuggestions(shouldShowSuggestions, this.props.onReset);
@@ -189,6 +194,7 @@ class BaseSelector extends Component {
           placeholder={placeholder}
           onBlur={this.onBlur}
           onFocus={this.onFocus}
+          onClick={this.onClick}
           highlightedIndex={highlightedSuggestionIndex}
           suggestionListId={suggestionListId}
           ariaInvalid={ariaInvalid}
@@ -225,6 +231,7 @@ BaseSelector.propTypes = {
   onSuggestionSelect: func.isRequired,
   onChange: func,
   onBlur: func,
+  onClick: func,
   onReset: func,
   onFocus: func,
   onSuggestionListChange: func, //provides the height of the suggestion list
@@ -238,6 +245,7 @@ BaseSelector.propTypes = {
 BaseSelector.defaultProps = {
   onChange: () => {},
   onBlur: () => {},
+  onClick: () => {},
   onFocus: () => {},
   onReset: () => {},
   onSuggestionListChange: () => {},
