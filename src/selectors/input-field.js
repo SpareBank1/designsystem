@@ -60,6 +60,7 @@ class Input extends Component {
       isSuggestionsShowing,
       ariaInvalid,
       onReset,
+      onClick,
       inputFieldRef,
       highlightedIndex,
       suggestionListId,
@@ -85,6 +86,7 @@ class Input extends Component {
           aria-invalid={ ariaInvalid }
           aria-autocomplete='list'
           name={ name }
+          onClick={ onClick }
           {...this.onChangeHandler(this.onChange)}
         />
         { value.length > 0 &&
@@ -116,6 +118,7 @@ Input.propTypes = {
   placeholder: string,
   onBlur: func,
   onFocus: func,
+  onClick: func,
   ariaInvalid: bool,
   inputFieldRef: func,
   highlightedIndex: number,
