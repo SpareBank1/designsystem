@@ -138,6 +138,9 @@ function that receives the input field value when it is changed
 __onBlur__
 function that is called when the input field loses focus.
 
+__onClick__
+function that is called when the input field is clicked.
+
 __onFocus__
 function that is called when the input field gains focus.
  

@@ -29,6 +29,10 @@ class AccountSelectorExample extends Component {
     console.log('onfocus');
   }
 
+  onClick() {
+    console.log('onclick');
+  }
+
   onAccountSelected(account) {
     console.log('account selected', account);
     this.setState({
@@ -55,6 +59,7 @@ class AccountSelectorExample extends Component {
           onReset={this.onReset}
           onBlur={this.onBlur}
           onFocus={this.onFocus}
+          onClick={this.onClick}
           selectedAccount={selectedAccount}
           noMatches='Ingen'
           locale='nb'
