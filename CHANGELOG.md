@@ -1,5 +1,9 @@
 # Changelog
 
+# v7.9.0
+* Open the suggestion-list when input-field is clicked, even when the input-field is already focused.
+* Add prop 'onClick' for overriding the onClick callback. 
+
 # v7.8.2
 * Add aria-label to reset-button to fix empty-button error.
 

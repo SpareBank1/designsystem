@@ -84,6 +84,26 @@ describe('<BaseSelector> methods', () => {
     assert.isTrue(onFocusSpy.calledOnce);
   });
 
+  it('should show suggestions on input click', () => {
+    const onClickSpy = sinon.spy();
+    const component = shallowBaseSelector({onClick: onClickSpy}).instance();
+
+    component.onClick();
+    assert.isTrue(component.state.showSuggestions);
+    assert.isTrue(onClickSpy.calledOnce);
+  });
+
+  it('should show suggestions on input click + focus', () => {
+    const onClickSpy = sinon.spy();
+    const onFocusSpy = sinon.spy();
+    const component = shallowBaseSelector({onClick: onClickSpy, onFocus: onFocusSpy}).instance();
+
+    component.onFocus();
+    component.onClick();
+    assert.isTrue(component.state.showSuggestions);
+    assert.isTrue(onClickSpy.calledOnce);
+    assert.isTrue(onFocusSpy.calledOnce);
+  });
 
   it('should hide suggestions on input blur', () => {
     const onBlurSpy = sinon.spy();
