@@ -85,7 +85,7 @@ class AccountSelectorMulti extends React.Component {
       const { selectedAccounts, isLoading } = this.props;
       if (selectedAccounts.length === 0) {
         statusText = txt[this.props.locale].NO_ACCOUNTS_SELECTED;
-      } else if (selectedAccounts === 1) {
+      } else if (selectedAccounts.length === 1) {
         statusText = txt[this.props.locale].ONE_ACCOUNT_SELECTED;
       } else {
         statusText = `${selectedAccounts.length} ${txt[this.props.locale].MULTIPLE_ACCOUNTS_SELECTED}`;
