@@ -1,5 +1,8 @@
 # Changelog
 
+## v3.0.3
+* Removed the text transformation styling of the `ffe-tab-button`
+
 ## v3.0.2
 * Support both versions 9 and 10 of `ffe-core`
 
