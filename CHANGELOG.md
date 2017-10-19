@@ -1,5 +1,8 @@
 # Changelog
 
+# v7.9.1
+* Fixed bug where one selected account in multiple-account-selector was written in plural
+
 # v7.9.0
 * Open the suggestion-list when input-field is clicked, even when the input-field is already focused.
 * Add prop 'onClick' for overriding the onClick callback. 
