@@ -1,11 +1,14 @@
 # Changelog
 
+# v7.9.2
+* Fixed issue where iOS9 units may not receive click event
+
 # v7.9.1
 * Fixed bug where one selected account in multiple-account-selector was written in plural
 
 # v7.9.0
 * Open the suggestion-list when input-field is clicked, even when the input-field is already focused.
-* Add prop 'onClick' for overriding the onClick callback. 
+* Add prop 'onClick' for overriding the onClick callback.
 
 # v7.8.2
 * Add aria-label to reset-button to fix empty-button error.
@@ -26,7 +29,7 @@ all `ffe-account-suggestion__name`
 * New feature "select all". Set `showAllOption` to true to show an option for selecting all accounts. Will call "onSelectAll" when selected/deselected
 
 # v7.6.1
-* Bugfix: Moved `ffe-spinner` to peer-dependencies. 
+* Bugfix: Moved `ffe-spinner` to peer-dependencies.
 
 # v7.6.0 (Invalid version, broken .less import)
 * Added property `isLoading`. Shows a loading spinner in the suggestion list
@@ -48,18 +51,18 @@ all `ffe-account-suggestion__name`
 * Disable account filtering when an account is selected
 
 # v7.3.1
-* Add workaround for IE11 and fast typing, which can cause characters to drop. Bugreport for issue, https://github.com/facebook/react/issues/7027, suggests this will be fixed in React 16. 
+* Add workaround for IE11 and fast typing, which can cause characters to drop. Bugreport for issue, https://github.com/facebook/react/issues/7027, suggests this will be fixed in React 16.
 
 # v7.3.0
-* Changed dependency version for ffe-checkbox-react 
+* Changed dependency version for ffe-checkbox-react
 
 # v7.2.0
 * Increased version range for ffe-form
 
-# v7.1.3 
+# v7.1.3
 * Added property shouldShowSuggestionsOnFocus on selector. Defaults to true.
 
-# v7.1.2 
+# v7.1.2
 * Removed custom event prevention to enable consistent behaviour across browsers
 
 # v7.1.1
