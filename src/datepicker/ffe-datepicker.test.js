@@ -245,4 +245,72 @@ describe('<FFEDatepicker />', () => {
       });
     });
   });
+  describe('validate input on minDate prop change', () => {
+    describe('with minDate after maxDate', () => {
+      let errorMessage;
+      beforeEach(() => {
+        wrapper = mount(
+          <Datepicker
+            { ...defaultProps }
+            value={ '15.11.2014' }
+            minDate={'01.11.2014'}
+            maxDate={'01.12.2014'}
+          />
+        );
+        wrapper.setProps({minDate: '01.01.2015'});
+        errorMessage = wrapper.find(errorClass);
+
+      });
+
+      it('has an error message', () =>
+        expect(wrapper).to.have.descendants(errorClass));
+
+      it('has correct error-message', () =>
+        expect(errorMessage).to.have.text(i18n.nb.MIN_DATE));
+
+      describe('setting valid minDate', () => {
+        beforeEach(() => {
+          wrapper.setProps({minDate: '01.11.2014'});
+        });
+
+        it('removes the error message', () =>
+          expect(wrapper).not.to.have.descendants(errorClass));
+
+      });
+    });
+  });
+
+  describe('validate input on maxDate prop change', () => {
+    describe('with maxDate before minDate', () => {
+      let errorMessage;
+      beforeEach(() => {
+        wrapper = mount(
+          <Datepicker
+            { ...defaultProps }
+            value={ '15.11.2014' }
+            minDate={'01.11.2014'}
+            maxDate={'01.12.2014'}
+          />
+        );
+        wrapper.setProps({maxDate: '01.01.2014'});
+        errorMessage = wrapper.find(errorClass);
+
+      });
+
+      it('has an error message', () =>
+        expect(wrapper).to.have.descendants(errorClass));
+
+      it('has correct error-message', () =>
+        expect(errorMessage).to.have.text(i18n.nb.MAX_DATE));
+
+      describe('setting valid maxDate', () => {
+        beforeEach(() => {
+          wrapper.setProps({maxDate: '01.12.2014'});
+        });
+        it('removes the error message', () =>
+          expect(wrapper).not.to.have.descendants(errorClass));
+
+      });
+    });
+  });
 });

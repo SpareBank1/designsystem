@@ -1,5 +1,8 @@
 # Changelog
 
+## v2.6.2
+* Added validation when minDate or maxDate changes
+
 ## v2.6.1
 * Add support for version 8 of `ffe-form`
 * Fix incorrect variable names in `i18n`
