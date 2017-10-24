@@ -1,6 +1,6 @@
 /*eslint jsx-a11y/onclick-has-focus:1 jsx-a11y/onclick-has-role:1 */
-import React, { Component } from 'react';
-import { bool, func, oneOfType, shape, string } from 'prop-types';
+import React, {Component} from 'react';
+import {bool, func, oneOfType, shape, string} from 'prop-types';
 import classNames from 'classnames';
 import uuid from 'uuid';
 import Calendar from '../calendar/ffe-calendar';
@@ -18,6 +18,8 @@ export default class FFEDatepicker extends Component {
     this.state = {
       displayDatePicker: false,
       openOnFocus: true,
+      minDate: props.minDate,
+      maxDate: props.maxDate,
     };
 
     this.datepickerId = uuid.v4();
@@ -40,6 +42,12 @@ export default class FFEDatepicker extends Component {
     this.removeGlobalEventListeners();
   }
 
+  componentWillReceiveProps(nextProps) {
+    if ((nextProps.minDate && nextProps.minDate !== this.state.minDate) || (nextProps.maxDate && nextProps.maxDate !== this.state.maxDate)) {
+      this.setState({minDate: nextProps.minDate, maxDate: nextProps.maxDate}, this.validateDateIntervals);
+    }
+  }
+
   onInputFocus() {
     if (this.state.openOnFocus) {
       this.openCalendar();
@@ -57,7 +65,7 @@ export default class FFEDatepicker extends Component {
     return onError ? onError(type, errorText) : errorText;
   }
 
-  onInputBlur() {
+  validateDateIntervals() {
     let nextState = {};
 
     const error = (type) => {
@@ -79,11 +87,11 @@ export default class FFEDatepicker extends Component {
           ariaInvalid: false,
         };
 
-        const minDate = SimpleDate.fromString(this.props.minDate);
-        const maxDate = SimpleDate.fromString(this.props.maxDate);
-        if (this.props.minDate && date.isBefore(minDate)) {
+        const minDate = SimpleDate.fromString(this.state.minDate);
+        const maxDate = SimpleDate.fromString(this.state.maxDate);
+        if (this.state.minDate && minDate && date.isBefore(minDate)) {
           error(dateErrorTypes.MIN_DATE);
-        } else if (this.props.maxDate && date.isAfter(maxDate)) {
+        } else if (this.state.maxDate && maxDate && date.isAfter(maxDate)) {
           error(dateErrorTypes.MAX_DATE);
         }
 
@@ -113,6 +121,10 @@ export default class FFEDatepicker extends Component {
     );
 
     this.setState(nextState);
+  }
+
+  onInputBlur() {
+    this.validateDateIntervals();
   }
 
   onInputKeydown(evt) {
@@ -168,7 +180,7 @@ export default class FFEDatepicker extends Component {
 
   closeCalendar() {
     this.removeGlobalEventListeners();
-    this.setState({ displayDatePicker: false });
+    this.setState({displayDatePicker: false});
   }
 
   closeCalendarSetInputFocus() {
@@ -201,70 +213,73 @@ export default class FFEDatepicker extends Component {
       inputProps = {},
       label,
       language,
-      maxDate,
-      minDate,
       onChange,
       value,
     } = this.props;
+    const {minDate, maxDate} = this.state;
 
     if (this.state.ariaInvalid) {
       inputProps['aria-describedby'] = `date-input-validation-${this.datepickerId}`;
     }
 
     const calendarClassName = classNames(
-        'ffe-calendar ffe-calendar--datepicker',
-        { 'ffe-calendar--datepicker--above': this.props.calendarAbove }
+      'ffe-calendar ffe-calendar--datepicker',
+      {'ffe-calendar--datepicker--above': this.props.calendarAbove}
     );
 
     return (
       <div>
-        { label &&
-          <label
-            className="ffe-form-label ffe-form-label--block"
-            htmlFor={ inputProps.id }
-          >
-            { label }
-          </label>
+        {label &&
+        <label
+          className="ffe-form-label ffe-form-label--block"
+          htmlFor={inputProps.id}
+        >
+          {label}
+        </label>
         }
         <div
           className="ffe-datepicker"
-          onClick={ this.clickHandler }
-          ref={ c => { this._datepickerNode = c; } }
+          onClick={this.clickHandler}
+          ref={c => {
+            this._datepickerNode = c;
+          }}
           role="button"
-          tabIndex={ -1 }
+          tabIndex={-1}
         >
           <DateInput
-            aria-invalid={ this.ariaInvalid() }
-            inputProps={ inputProps }
-            onBlur={ this.onInputBlur }
-            onChange={ (evt) => onChange(evt.target.value) }
-            onFocus={ this.onInputFocus }
-            onKeyDown={ this.onInputKeydown }
-            ref={ c => { this.dateInputRef = c; } }
-            value={ value }
+            aria-invalid={this.ariaInvalid()}
+            inputProps={inputProps}
+            onBlur={this.onInputBlur}
+            onChange={(evt) => onChange(evt.target.value)}
+            onFocus={this.onInputFocus}
+            onKeyDown={this.onInputKeydown}
+            ref={c => {
+              this.dateInputRef = c;
+            }}
+            value={value}
           />
 
-          { this.state.ariaInvalid && !hideErrors &&
-              <div
-                id={`date-input-validation-${this.datepickerId}`}
-                className="ffe-body-text ffe-field-error-message"
-                role="alert"
-              >
-                { this.state.errorMessage }
-              </div>
+          {this.state.ariaInvalid && !hideErrors &&
+          <div
+            id={`date-input-validation-${this.datepickerId}`}
+            className="ffe-body-text ffe-field-error-message"
+            role="alert"
+          >
+            {this.state.errorMessage}
+          </div>
           }
 
-          { this.state.displayDatePicker &&
-              <Calendar
-                calendarClassName={ calendarClassName }
-                escKeyHandler={ this.escKeyHandler }
-                language={ language }
-                maxDate={ maxDate }
-                minDate={ minDate }
-                onBlurHandler={ this.blurHandler }
-                onDatePicked={ this.datePickedHandler }
-                selectedDate={ value }
-              />
+          {this.state.displayDatePicker &&
+          <Calendar
+            calendarClassName={calendarClassName}
+            escKeyHandler={this.escKeyHandler}
+            language={language}
+            maxDate={maxDate}
+            minDate={minDate}
+            onBlurHandler={this.blurHandler}
+            onDatePicked={this.datePickedHandler}
+            selectedDate={value}
+          />
           }
         </div>
       </div>);
@@ -280,7 +295,7 @@ FFEDatepicker.propTypes = {
     className: string,
     id: string,
   }),
-  label:  string,
+  label: string,
   language: string.isRequired,
   maxDate: string,
   minDate: string,
