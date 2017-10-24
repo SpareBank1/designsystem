@@ -1,5 +1,8 @@
 # Changelog
 
+## v6.1.0
+* Add prop `buttonRef` so a DOM reference can be obtained
+
 ## v6.0.1
 * Use PropTypes from prop-types package
 

@@ -48,7 +48,8 @@ onClick: func,
 rightIcon: node,
 simpleContent: bool, (default: false)
 style: object,
-type: 'button' | 'submit' | 'reset' (default: 'submit')
+type: 'button' | 'submit' | 'reset' (default: 'submit'),
+buttonRef: func
 ```
 
 ### Loading state

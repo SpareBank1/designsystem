@@ -24,6 +24,7 @@ export default function Button(props) {
         rightIcon,
         condensed,
         simpleContent = false,
+        buttonRef,
         ...rest
     } = props;
 
@@ -37,6 +38,7 @@ export default function Button(props) {
             className={`ffe-${buttonType}-button ${loadingClass} ${condensedClass} ${className}`}
             data-action={action}
             disabled={disableButton || isLoading}
+            ref={buttonRef}
             {... isTabbable === false ? { tabIndex: -1 } : {}}
             {...rest}
         >
@@ -89,4 +91,5 @@ Button.propTypes = {
     simpleContent: bool,
     style: object,
     type: oneOf(['button', 'submit', 'reset']),
+    buttonRef: func,
 };
