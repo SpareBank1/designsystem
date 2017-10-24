@@ -95,7 +95,9 @@ export default class FFEDatepicker extends Component {
           error(dateErrorTypes.MAX_DATE);
         }
 
-        this.props.onChange(date.format());
+        if (date.format() !== this.props.value) {
+          this.props.onChange(date.format());
+        }
       },
       errorType => {
         const emptyValue = this.props.value === '';

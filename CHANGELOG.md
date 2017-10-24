@@ -1,5 +1,8 @@
 # Changelog
 
+## v2.6.3
+* Prevent unnecessary calls to onChange
+
 ## v2.6.2
 * Added validation when minDate or maxDate changes
 
