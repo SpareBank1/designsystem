@@ -69,6 +69,10 @@
         pointer-events: none;
     }
 
+    &--loading &__label-text {
+        bottom: 50px;
+    }
+
     &--condensed {
         padding: 5px 20px;
         .ffe-fontsize-button-condensed;
@@ -76,10 +80,6 @@
         [class*="-button__label-spinner"][aria-hidden="false"] {
             bottom: -3px;
         }
-    }
-
-    &__label-text--loading {
-        bottom: 50px;
     }
 }
 

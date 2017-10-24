@@ -1,5 +1,8 @@
 # Changelog
 
+## v5.0.1
+* Fix unnecessary duplicate nesting of `--loading`-modifier.
+
 ## v5.0.0
 * BREAKING: peerDependency to `ffe-core` bumped to new major
 * Replaced hardcoded font-sizes with mixins from ffe-core
