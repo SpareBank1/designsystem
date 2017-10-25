@@ -1,5 +1,9 @@
 # Changelog
 
+## 7.15.0
+
+* Add info-sirkel-solid-ikon.svg
+
 ## 7.14.0
 
 * Add p-pose-stjerne-ikon.svg
