@@ -4,7 +4,7 @@ import {accountFormatter, balanceWithCurrency} from '../util/format';
 import {Account, Locale} from '../util/types';
 
 function AccountDetails({account, locale, showBalance = true}) {
-  const {balance, accountNumber} = account;
+  const {balance, accountNumber, currencyCode} = account;
   const hasBalance = balance != null;
   return (
     <div className='ffe-account-selector__details'>
@@ -13,7 +13,7 @@ function AccountDetails({account, locale, showBalance = true}) {
       </div>
       {showBalance && hasBalance &&
       <div className='ffe-account-selector__details--right'>
-        { balanceWithCurrency(balance, locale) }
+        { balanceWithCurrency(balance, locale, currencyCode) }
       </div>
       }
     </div>

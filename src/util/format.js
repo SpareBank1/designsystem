@@ -26,7 +26,11 @@ export function accountFormatter(accountNumber) {
   return accountNumber;
 }
 
-export function balanceWithCurrency(balance = '', locale) {
+export function balanceWithCurrency(balance = '', locale, currencyCode) {
+  if (currencyCode && currencyCode !== "NOK") {
+    return `${amountFormatter(balance, locale)} ${currencyCode}`;
+  }
+
   return `${amountFormatter(balance, locale)} ${currencyPostfix[locale]}`;
 }
 
