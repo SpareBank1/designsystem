@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.4.17
+
+* Updated ffe-icons to version 7.15.0, new icon:
+  * `ffe-icons-react/info-sirkel-solid-ikon`
+
 ## 2.4.16
 
 * Updated ffe-icons to version 7.14.0, new icon:
