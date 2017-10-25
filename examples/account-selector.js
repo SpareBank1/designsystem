@@ -65,6 +65,7 @@ class AccountSelectorExample extends Component {
           locale='nb'
           id='account-selector'
           suggestionsHeightMax={500}
+          showBalance={true}
         />
       </div>
     );
