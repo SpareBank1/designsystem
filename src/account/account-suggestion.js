@@ -4,7 +4,7 @@ import {accountFormatter, balanceWithCurrency} from '../util/format';
 import {Account, Locale} from '../util/types';
 
 const AccountSuggestionItem = ({account, locale, showBalance = true}) => {
-  const {accountNumber, balance, name}= account;
+  const {accountNumber, balance, name, currencyCode }= account;
   const hasBalance = balance !== null;
   return (
     <div className='ffe-account-suggestion__account'>
@@ -15,7 +15,7 @@ const AccountSuggestionItem = ({account, locale, showBalance = true}) => {
         </span>
         {showBalance && hasBalance &&
         <span className='ffe-account-suggestion__balance'>
-          { balanceWithCurrency(balance, locale)}
+          { balanceWithCurrency(balance, locale, currencyCode)}
         </span>
         }
       </div>

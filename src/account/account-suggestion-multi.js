@@ -5,7 +5,7 @@ import {accountFormatter, balanceWithCurrency} from '../util/format';
 import {Account, Locale} from '../util/types';
 
 function AccountSuggestionMulti({account, locale, selected}) {
-  const {accountNumber, balance, name}= account;
+  const {accountNumber, balance, name, currencyCode} = account;
   const hasBalance = balance !== null;
   return (
     <div className='ffe-account-suggestion__account--multi'>
@@ -24,7 +24,7 @@ function AccountSuggestionMulti({account, locale, selected}) {
           </span>
           {hasBalance &&
           <span className='ffe-account-suggestion__balance'>
-            {balanceWithCurrency(balance, locale)}
+            {balanceWithCurrency(balance, locale, currencyCode)}
           </span>
           }
         </div>

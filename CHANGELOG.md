@@ -1,4 +1,6 @@
 # Changelog
+# v.7.10.0
+* Show correct currency for accounts with currencyCodes other than NOK.
 
 # v7.9.2
 * Fixed issue where iOS9 units may not receive click event
