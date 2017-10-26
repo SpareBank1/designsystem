@@ -4,7 +4,7 @@ export const nb = 'nb';
 export const en = 'en';
 export const nn = 'nn';
 
-export const currencyPostfix = {
+export const currencyAffixNOK = {
   [nb]: 'kr',
   [nn]: 'kr',
   [en]: 'NOK'
