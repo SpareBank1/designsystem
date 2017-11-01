@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {
+    func,
     node,
     oneOf,
     oneOfType,
@@ -14,47 +15,65 @@ import ErrorFieldMessage from './ErrorFieldMessage';
 import SuccessFieldMessage from './SuccessFieldMessage';
 import InfoFieldMessage from './InfoFieldMessage';
 
-const InputGroup = ({
-    children,
-    className,
-    label,
-    fieldMessage,
-    tooltip,
-    ...rest
-}) => {
-    const childId = !!children.props.id ? children.props.id : uuid.v4();
-    const invalid = !!fieldMessage && (typeof fieldMessage === 'string' || fieldMessage.type === ErrorFieldMessage);
+class InputGroup extends Component {
+    constructor() {
+        super();
 
-    return (
-        <div
-            className={ classNames(
-                'ffe-input-group',
-                className
-            )}
-            { ...rest }
-        >
+        this.id = uuid.v4();
+    }
 
-            { typeof label === 'string' && <Label htmlFor={ childId }>{ label }</Label> }
-            { React.isValidElement(label) && React.cloneElement( label, { htmlFor : childId }) }
+    render() {
+        const {
+            children,
+            className,
+            label,
+            fieldMessage,
+            tooltip,
+            ...rest
+        } = this.props;
 
-            { typeof tooltip === 'string' && <Tooltip>{ tooltip }</Tooltip> }
-            { React.isValidElement(tooltip) && tooltip }
+        if (React.Children.count(children) > 1) {
+            throw new Error(
+                'This element does not support more than one child. If you need more than one element inside your ' +
+                'InputGroup, please use the function-as-a-child pattern outlined in the documentation.'
+            );
+        }
 
-            { React.cloneElement(children, {
-                'aria-invalid': String(invalid),
-                id: childId
-            })}
+        const extraProps = {
+            id: this.id,
+            'aria-invalid': String(!!fieldMessage && (typeof fieldMessage === 'string' || fieldMessage.type === ErrorFieldMessage)),
+        };
 
-            { typeof fieldMessage === 'string' && <ErrorFieldMessage>{ fieldMessage }</ErrorFieldMessage> }
-            { React.isValidElement(fieldMessage) && fieldMessage }
-        </div>
-    );
-};
+        const modifiedChildren = typeof children === 'function' ? children(extraProps) : React.cloneElement(children, extraProps);
+
+        return (
+            <div
+                className={ classNames(
+                    'ffe-input-group',
+                    className
+                )}
+                { ...rest }
+            >
+
+                { typeof label === 'string' && <Label htmlFor={ this.id }>{ label }</Label> }
+                { React.isValidElement(label) && React.cloneElement( label, { htmlFor : this.id }) }
+
+                { typeof tooltip === 'string' && <Tooltip>{ tooltip }</Tooltip> }
+                { React.isValidElement(tooltip) && tooltip }
+
+                { modifiedChildren }
+
+                { typeof fieldMessage === 'string' && <ErrorFieldMessage>{ fieldMessage }</ErrorFieldMessage> }
+                { React.isValidElement(fieldMessage) && fieldMessage }
+            </div>
+        );
+    }
+}
 
 const instanceOfComponent = component => shape({ type: oneOf([ component ])});
 
 InputGroup.propTypes = {
-    children: node.isRequired,
+    children: oneOfType({ func, node }).isRequired,
     className: string,
     fieldMessage: oneOfType([
         string,
