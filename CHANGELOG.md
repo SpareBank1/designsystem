@@ -1,4 +1,8 @@
 # Changelog
+## v2.1.0
+- `formatNumber` now accepts additional props to the `opts`-argument.
+    - `thousandSeparator` (defaults to NON_BREAKING_SPACE)
+    - `decimalMark` (defaults to ',')
 ## v2.0.4
 - Bugfix: Fixed a bug where
     - `formatNumber(0)` returns 0, (expected: '0')

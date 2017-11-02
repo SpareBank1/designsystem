@@ -67,7 +67,8 @@ formatDistance(12345, { unit: 'mi' }) === '12 345 mi'
 
 Formats numbers to the correct format separated with non breaking
 space characters. Ignores decimals by default, but accepts the
-number for decimals as a `decimals`-prop to the `opts`-argument.
+number for decimals as a `decimals`-prop to the `opts`-argument. Thousand separator and 
+decimal mark can also be specified as props to the `opts`-argument.
 
 ```javascript
 import formatNumber from 'ffe-formatters/lib/formatNumber';
@@ -75,6 +76,7 @@ import formatNumber from 'ffe-formatters/lib/formatNumber';
 formatNumber(1000000) === '1 000 000'
 formatNumber(1234.567) === '1 234'
 formatNumber(1234.567, { decimals: 2 }) === '1 234,56'
+formatNumber(1234.567, { decimals: 2, thousandSeparator: ',', decimalMark: '.'}) === '1,234.56'
 ```
 
 ### `formatPercentage(num [, opts])`
