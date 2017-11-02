@@ -1,6 +1,6 @@
 {
   "name": "ffe-account-selector-react",
-  "version": "7.10.0",
+  "version": "7.10.1",
   "main": "lib/index.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/.",
@@ -14,16 +14,17 @@
     "postpublish": "git tag ${npm_package_version} && git push --tags"
   },
   "devDependencies": {
-    "babel-cli": "^6.23.0",
-    "babel-core": "^6.23.1",
-    "babel-plugin-transform-object-rest-spread": "^6.23.0",
-    "babel-preset-es2015": "^6.22.0",
-    "babel-preset-react": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
     "babel-register": "^6.23.0",
-    "babelify": "^7.3.0",
-    "budo": "^9.4.7",
-    "chai": "^3.5.0",
-    "enzyme": "^2.7.1",
+    "babelify": "^8.0.0",
+    "budo": "^10.0.4",
+    "chai": "^4.1.2",
+    "enzyme": "^3.1.0",
+    "enzyme-adapter-react-16": "^1.0.3",
     "eslint": "^3.16.1",
     "eslint-config-ffe": "^6.0.1",
     "eslint-plugin-import": "^2.2.0",
@@ -34,15 +35,14 @@
     "ffe-form": "^8.x",
     "ffe-icons": "^7.4.1",
     "ffe-spinner": "^2.0.1",
-    "jsdom": "^9.11.0",
-    "mocha": "^3.5.3",
-    "node-lessify": "^0.1.4",
-    "nsp": "^2.6.2",
-    "react": "^15.4.2",
-    "react-addons-test-utils": "^15.4.2",
-    "react-test-renderer": "^15.6.1",
-    "react-dom": "^15.4.2",
-    "sinon": "^1.17.7"
+    "jsdom": "^11.3.0",
+    "mocha": "^4.0.1",
+    "node-lessify": "^0.1.5",
+    "nsp": "^2.8.1",
+    "react": "^16.0.0",
+    "react-test-renderer": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "sinon": "^4.0.2"
   },
   "peerDependencies": {
     "ffe-form": "4.x - 8.x",
@@ -69,8 +69,8 @@
     "ffe-spinner-react": "^2.0.3",
     "lodash.isequal": "4.5.0",
     "nfe-amount-formatter": "2.0.1",
-    "prop-types": "15.5.9",
     "react-auto-bind": "^0.4.0",
-    "react-custom-scrollbars": "4.1.2"
+    "react-custom-scrollbars": "^4.2.1",
+    "prop-types": "^15.6.0"
   }
 }

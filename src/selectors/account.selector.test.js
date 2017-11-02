@@ -1,4 +1,5 @@
-import { mount } from 'enzyme';
+import Enzyme, { mount } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 import { expect } from 'chai';
 import sinon from 'sinon';
 import React from 'react';
@@ -6,6 +7,8 @@ import AccountSelector from './account-selector';
 import SuggestionItem from '../suggestion/suggestion-item';
 import Input from './input-field';
 import '../suggestion/test/setup-dom';
+
+Enzyme.configure({adapter: new Adapter()});
 
 const accounts = [
   {

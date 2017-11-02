@@ -1,4 +1,8 @@
 # Changelog
+# v.7.10.1
+* Updated to support React 16. 
+* Upgraded npm dependencies. 
+
 # v.7.10.0
 * Show correct currency for accounts with currencyCodes other than NOK.
 
