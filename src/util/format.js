@@ -32,3 +32,4 @@ export function balanceWithCurrency(balance = '', locale, currencyCode) {
   return (locale === 'en')? `${currencyAffix} ${amount}` : `${amount} ${currencyAffix}`;
 }
 
+export const isEmpty = (amount) => !(amount === 0 || amount);
