@@ -1,5 +1,4 @@
-import Enzyme, { shallow, mount } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import { shallow, mount } from 'enzyme';
 import { assert } from 'chai';
 import sinon from 'sinon';
 import React from 'react';
@@ -8,8 +7,6 @@ import SuggestionItem from '../suggestion/suggestion-item';
 import Input from './input-field';
 import { KeyCodes } from '../util/types';
 import '../suggestion/test/setup-dom';
-
-Enzyme.configure({adapter: new Adapter()});
 
 function suggestions() {
   return [
