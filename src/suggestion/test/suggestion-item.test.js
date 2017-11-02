@@ -1,9 +1,12 @@
-import {mount} from 'enzyme';
+import Enzyme, {mount} from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 import {assert} from 'chai';
 import React from 'react';
 import  SuggestionItem from '../suggestion-item';
 import sinon from 'sinon';
 import './setup-dom';
+
+Enzyme.configure({adapter: new Adapter()});
 
 function item() {
   return {header: 'header'};
@@ -37,8 +40,8 @@ describe('<SuggestionItem />', () => {
     const refHighlightedSuggestionSpy = sinon.spy();
     const wrapper = renderSuggestionItem(true, refHighlightedSuggestionSpy);
 
-    assert.isTrue(wrapper.hasClass('ffe-account-suggestion--highlighted'));
-    assert.isTrue(wrapper.hasClass('ffe-account-suggestion'));
+    assert.isTrue(wrapper.children().hasClass('ffe-account-suggestion--highlighted'));
+    assert.isTrue(wrapper.children().hasClass('ffe-account-suggestion'));
     assert.isTrue(refHighlightedSuggestionSpy.calledOnce);
   });
 
@@ -46,8 +49,8 @@ describe('<SuggestionItem />', () => {
     const refHighlightedSuggestionSpy = sinon.spy();
     const wrapper = renderSuggestionItem(false, refHighlightedSuggestionSpy);
 
-    assert.isFalse(wrapper.hasClass('ffe-account-suggestion--highlighted'));
-    assert.isTrue(wrapper.hasClass('ffe-account-suggestion'));
+    assert.isFalse(wrapper.children().hasClass('ffe-account-suggestion--highlighted'));
+    assert.isTrue(wrapper.children().hasClass('ffe-account-suggestion'));
     assert.isFalse(refHighlightedSuggestionSpy.called);
   });
 

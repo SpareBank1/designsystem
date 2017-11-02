@@ -1,4 +1,5 @@
-import { shallow, mount } from 'enzyme';
+import Enzyme, { shallow, mount } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 import { assert } from 'chai';
 import sinon from 'sinon';
 import React from 'react';
@@ -6,6 +7,8 @@ import  SuggestionList from '../suggestion-list';
 import  SuggestionListContainer from '../suggestion-list-container';
 import './setup-dom';
 import Spinner from 'ffe-spinner-react';
+
+Enzyme.configure({adapter: new Adapter()});
 
 function suggestions() {
   return [
@@ -88,7 +91,7 @@ describe('<SuggestionList />', () => {
 describe('<SuggestionListContainer />', () => {
 
   it('should set scrollPos to start', () => {
-    const component = mountSuggestionListContainer().component.getInstance();
+    const component = mountSuggestionListContainer().instance();
     const scrollSpy = sinon.spy(component.scrollbars, 'scrollTop');
 
     component.setScrollPosStart();
@@ -97,7 +100,7 @@ describe('<SuggestionListContainer />', () => {
   });
 
   it('should set scrollPos to end', () => {
-    const component = mountSuggestionListContainer().component.getInstance();
+    const component = mountSuggestionListContainer().instance();
     sinon.stub(component.scrollbars, 'getScrollHeight' ).returns(300);
     const scrollSpy = sinon.spy(component.scrollbars, 'scrollTop');
 
@@ -107,7 +110,7 @@ describe('<SuggestionListContainer />', () => {
   });
 
   it('should set scrollPos to next', () => {
-    const component = mountSuggestionListContainer().component.getInstance();
+    const component = mountSuggestionListContainer().instance();
     component.refHighlightedSuggestion({clientHeight : 50});
     const scrollSpy = sinon.spy(component.scrollbars, 'scrollTop');
 
@@ -116,7 +119,7 @@ describe('<SuggestionListContainer />', () => {
   });
 
   it('should set scrollPos to previous', () => {
-    const component = mountSuggestionListContainer().component.getInstance();
+    const component = mountSuggestionListContainer().instance();
     component.refHighlightedSuggestion({clientHeight : 50});
     const scrollSpy = sinon.spy(component.scrollbars, 'scrollTop');
 
