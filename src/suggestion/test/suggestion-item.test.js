@@ -37,8 +37,8 @@ describe('<SuggestionItem />', () => {
     const refHighlightedSuggestionSpy = sinon.spy();
     const wrapper = renderSuggestionItem(true, refHighlightedSuggestionSpy);
 
-    assert.isTrue(wrapper.hasClass('ffe-account-suggestion--highlighted'));
-    assert.isTrue(wrapper.hasClass('ffe-account-suggestion'));
+    assert.isTrue(wrapper.children().hasClass('ffe-account-suggestion--highlighted'));
+    assert.isTrue(wrapper.children().hasClass('ffe-account-suggestion'));
     assert.isTrue(refHighlightedSuggestionSpy.calledOnce);
   });
 
@@ -46,8 +46,8 @@ describe('<SuggestionItem />', () => {
     const refHighlightedSuggestionSpy = sinon.spy();
     const wrapper = renderSuggestionItem(false, refHighlightedSuggestionSpy);
 
-    assert.isFalse(wrapper.hasClass('ffe-account-suggestion--highlighted'));
-    assert.isTrue(wrapper.hasClass('ffe-account-suggestion'));
+    assert.isFalse(wrapper.children().hasClass('ffe-account-suggestion--highlighted'));
+    assert.isTrue(wrapper.children().hasClass('ffe-account-suggestion'));
     assert.isFalse(refHighlightedSuggestionSpy.called);
   });
 

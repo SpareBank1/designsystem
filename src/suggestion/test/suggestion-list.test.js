@@ -88,7 +88,7 @@ describe('<SuggestionList />', () => {
 describe('<SuggestionListContainer />', () => {
 
   it('should set scrollPos to start', () => {
-    const component = mountSuggestionListContainer().component.getInstance();
+    const component = mountSuggestionListContainer().instance();
     const scrollSpy = sinon.spy(component.scrollbars, 'scrollTop');
 
     component.setScrollPosStart();
@@ -97,7 +97,7 @@ describe('<SuggestionListContainer />', () => {
   });
 
   it('should set scrollPos to end', () => {
-    const component = mountSuggestionListContainer().component.getInstance();
+    const component = mountSuggestionListContainer().instance();
     sinon.stub(component.scrollbars, 'getScrollHeight' ).returns(300);
     const scrollSpy = sinon.spy(component.scrollbars, 'scrollTop');
 
@@ -107,7 +107,7 @@ describe('<SuggestionListContainer />', () => {
   });
 
   it('should set scrollPos to next', () => {
-    const component = mountSuggestionListContainer().component.getInstance();
+    const component = mountSuggestionListContainer().instance();
     component.refHighlightedSuggestion({clientHeight : 50});
     const scrollSpy = sinon.spy(component.scrollbars, 'scrollTop');
 
@@ -116,7 +116,7 @@ describe('<SuggestionListContainer />', () => {
   });
 
   it('should set scrollPos to previous', () => {
-    const component = mountSuggestionListContainer().component.getInstance();
+    const component = mountSuggestionListContainer().instance();
     component.refHighlightedSuggestion({clientHeight : 50});
     const scrollSpy = sinon.spy(component.scrollbars, 'scrollTop');
 
