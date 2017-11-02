@@ -1,4 +1,10 @@
 # Changelog
+
+# v8.0.0
+* Bugfix: Babel transpiles != to !=== which caused the account-suggestion balance to be shown when the balance is undefined.
+Removed != check and added linting rule.
+    - Breaking if you expect 0,00 to be shown when accountBalance is undefined
+
 # v.7.10.1
 * Updated to support React 16. 
 * Upgraded npm dependencies. 
