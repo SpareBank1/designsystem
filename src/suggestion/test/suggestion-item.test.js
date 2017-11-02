@@ -1,12 +1,9 @@
-import Enzyme, {mount} from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import {mount} from 'enzyme';
 import {assert} from 'chai';
 import React from 'react';
 import  SuggestionItem from '../suggestion-item';
 import sinon from 'sinon';
 import './setup-dom';
-
-Enzyme.configure({adapter: new Adapter()});
 
 function item() {
   return {header: 'header'};

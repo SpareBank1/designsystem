@@ -1,5 +1,4 @@
-import Enzyme, { shallow, mount } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import { shallow, mount } from 'enzyme';
 import { assert } from 'chai';
 import sinon from 'sinon';
 import React from 'react';
@@ -7,8 +6,6 @@ import  SuggestionList from '../suggestion-list';
 import  SuggestionListContainer from '../suggestion-list-container';
 import './setup-dom';
 import Spinner from 'ffe-spinner-react';
-
-Enzyme.configure({adapter: new Adapter()});
 
 function suggestions() {
   return [
