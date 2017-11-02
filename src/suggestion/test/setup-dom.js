@@ -1,5 +1,10 @@
 import jsdom from 'jsdom';
+import Enzyme from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 
-const doc = jsdom.jsdom('<!doctype html><html><body></body></html>');
-global.document = doc;
-global.window = doc.defaultView;
+const {JSDOM} = jsdom;
+const {document} = (new JSDOM('<!doctype html><html><body></body></html>')).window;
+global.document = document;
+global.window = document.defaultView;
+
+Enzyme.configure({adapter: new Adapter()});
