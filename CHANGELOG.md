@@ -1,5 +1,8 @@
 # Changelog
 
+## v2.6.4
+* Support for React 16
+
 ## v2.6.3
 * Prevent unnecessary calls to onChange
 
