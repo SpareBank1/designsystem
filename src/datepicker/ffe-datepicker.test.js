@@ -258,6 +258,7 @@ describe('<FFEDatepicker />', () => {
           />
         );
         wrapper.setProps({minDate: '01.01.2015'});
+        wrapper.update();
         errorMessage = wrapper.find(errorClass);
 
       });
@@ -271,6 +272,7 @@ describe('<FFEDatepicker />', () => {
       describe('setting valid minDate', () => {
         beforeEach(() => {
           wrapper.setProps({minDate: '01.11.2014'});
+          wrapper.update();
         });
 
         it('removes the error message', () =>
@@ -293,6 +295,7 @@ describe('<FFEDatepicker />', () => {
           />
         );
         wrapper.setProps({maxDate: '01.01.2014'});
+        wrapper.update();
         errorMessage = wrapper.find(errorClass);
 
       });
@@ -306,6 +309,7 @@ describe('<FFEDatepicker />', () => {
       describe('setting valid maxDate', () => {
         beforeEach(() => {
           wrapper.setProps({maxDate: '01.12.2014'});
+          wrapper.update();
         });
         it('removes the error message', () =>
           expect(wrapper).not.to.have.descendants(errorClass));
