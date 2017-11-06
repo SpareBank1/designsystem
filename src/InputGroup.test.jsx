@@ -29,35 +29,29 @@ describe('<InputGroup>', () => {
     it('renders the given child', () => {
         const component = shallow(
             <InputGroup label="label">
-                <Input
-                    id="InputId"
-                />
+                <Input />
             </InputGroup>
         );
         expect(component.find('Input')).to.have.length(1);
-        expect(component.find('Input')).to.have.prop('id', 'InputId');
     });
 
     it('renders a Label if a string passed from the label prop', () => {
         const component = shallow(
             <InputGroup label="label">
-                <Input
-                    id="InputId"
-                />
+                <Input />
             </InputGroup>
         );
         expect(component.find('Label')).to.have.prop('children', 'label');
     });
 
-    it('renders a Label with htmlFor set to the same value of the id of children', () => {
+    it('renders a Label with htmlFor set to the same value of the children id', () => {
         const component = shallow(
             <InputGroup label="label">
-                <Input
-                    id="InputId"
-                />
+                <Input />
             </InputGroup>
         );
-        expect(component.find('Label')).to.have.prop('htmlFor', 'InputId');
+        const inputId = component.find('Input').prop('id');
+        expect(component.find('Label').prop('htmlFor')).to.equal(inputId);
     });
 
     it('generates a id for children and set it as htmlFor on Label', () => {
@@ -83,7 +77,7 @@ describe('<InputGroup>', () => {
         expect(component.find('Tooltip')).to.have.prop('children', 'tooltip');
     });
 
-    it('renders a ErrorFieldMessage and sets aria-invalid if a string is passed as fieldMessage', () => {
+    it('renders an ErrorFieldMessage and sets aria-invalid if a string is passed as fieldMessage', () => {
         const component = shallow(
             <InputGroup
                 label="InputLabel"
@@ -96,16 +90,15 @@ describe('<InputGroup>', () => {
         expect(component.find('Input')).to.have.prop('aria-invalid', 'true');
     });
 
-    it('renders a Label component if passed as label prop', () => {
+    it('renders a Label component if passed a label prop', () => {
         const component = shallow(
             <InputGroup
                 label={<Label htmlFor="inputId">LabelComponent</Label>}
             >
-                <Input id="inputId"/>
+                <Input/>
             </InputGroup>
         );
         expect(component.find('Label')).to.have.prop('children', 'LabelComponent');
-        expect(component.find('Label')).to.have.prop('htmlFor', 'inputId');
     });
 
     it('renders a Tooltip if passed as tooltip prop', () => {
@@ -145,4 +138,32 @@ describe('<InputGroup>', () => {
         expect(component.find('SuccessFieldMessage')).to.have.prop('children', 'SuccessFieldMessage');
     });
 
+    it('throws error when receiving multiple children', () => {
+        const component = () => shallow(
+            <InputGroup label="How much money do you make?">
+                <span>About...</span>
+                <Input />
+                <span> moneys</span>
+            </InputGroup>
+        );
+
+        expect(component).to.throw(Error);
+    });
+
+    it('supplies id and aria-invalid to function when child is a function', () => {
+        const component = shallow(
+            <InputGroup label="Fancy pattern">
+                {(props => (
+                    <div>
+                        <span>so cool</span>
+                        <Input {...props} />
+                        <span> easy stuff</span>
+                    </div>
+                ))}
+            </InputGroup>
+        );
+
+        expect(component.find('Input').prop('id')).to.have.lengthOf(36);
+        expect(component.find('Input').prop('aria-invalid')).to.equal('false');
+    });
 });

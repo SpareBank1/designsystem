@@ -1,6 +1,6 @@
 {
   "name": "ffe-form-react",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "React component for form elements in ffe",
   "main": "lib/index.js",
   "scripts": {
@@ -8,6 +8,7 @@
     "prebuild": "npm run test && npm run test:nsp",
     "build": "babel -d lib/. --ignore=*.test.jsx src/.",
     "test": "mocha --require babel-register src/**/*.test.jsx",
+    "test:watch": "npm run test -- --watch",
     "test:nsp": "nsp check"
   },
   "repository": {

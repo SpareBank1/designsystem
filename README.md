@@ -29,7 +29,7 @@ export const InputExample = props => (
     >
         <Input
             id="InputExample"
-            className="ffe-input-field--small"
+            className="some-modifier"
             type="tel"
             name="textInput"
             onChange={ e => console.log('onChange', e.target.value) }
@@ -45,7 +45,7 @@ export const InputExample = props => (
 
 #### InputGroup
 ```
-children: node,
+children: oneOfType([ node, func ]),
 className: string,
 fieldMessage: oneOfType([
     string,
@@ -57,12 +57,29 @@ label: oneOfType([ string, instanceOfComponent(Label) ]),
 tooltip: oneOfType([ string, instanceOfComponent(Tooltip) ])
 ```
 
-* `children`: Content of the InputGroup. 
+* `children`: Content of the InputGroup.
 * `className`: ClassName for the InputGroup div
 * `fieldMessage`: `ErrorFieldMessage`, `SuccessFieldMessage`, `InfoFieldMessage` or `string` that is displayed under `children`. If only a string is passed this defaults to an ErrorFieldMessage.
 * `label`: `Label` or `string` that is displayed above `children`.
 * `tooltip`: `Tooltip` or `string` that is displayed when the user presses the ?-button.
 
+Note that the `InputGroup` component only accepts a single child. This is due to the fact that the `InputGroup`
+decorates it's children with a few extra props like an auto-generated ID and aria-tags. If you need to have several
+children, please use the function-as-a-child pattern like the following example:
+
+```javascript
+<InputField label="How old are you?">
+  {(extraProps) => (
+    <div>
+        <InputField {...extraProps} />
+        <span> years old</span>
+    </div>
+  )}
+</InputField>
+```
+
+The `extraProps` argument is an object that needs to be spread on your input element. You can skip the enclosing `<div />`tag if
+you are using React@^16.0.0.
 
 #### Input
 ```
@@ -95,7 +112,7 @@ htmlFor: string.isRequired
 ```
 
 * `block`: Adds the 'ffe-form-label--block' class to the wrapper element.
-* `children`: Content of the label.  
+* `children`: Content of the label.
 * `className`: class of det label element.
 * `htmlFor`: Id of input element that this label is for.
 
@@ -129,7 +146,7 @@ onClick: func,
 
 ## Styling
 
-This package has peer dependencies for styling on `ffe-core` and `ffe-form`, so make sure you import 
+This package has peer dependencies for styling on `ffe-core` and `ffe-form`, so make sure you import
 those into your application's less file.
 
 ## Development
