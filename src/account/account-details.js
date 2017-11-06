@@ -1,6 +1,6 @@
 import React from 'react';
 import { bool } from 'prop-types';
-import {accountFormatter, balanceWithCurrency, isEmpty} from '../util/format';
+import {accountFormatter, balanceWithCurrency} from '../util/format';
 import {Account, Locale} from '../util/types';
 
 function AccountDetails({account, locale, showBalance = true}) {
@@ -10,7 +10,7 @@ function AccountDetails({account, locale, showBalance = true}) {
       <div className='ffe-account-selector__details--left'>
         { accountFormatter(accountNumber) }
       </div>
-      {showBalance && !isEmpty(balance) &&
+      {showBalance &&
       <div className='ffe-account-selector__details--right'>
         { balanceWithCurrency(balance, locale, currencyCode) }
       </div>

@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import { isValidNorwegianAccountNumber, accountFormatter, isEmpty } from './format';
+import { isValidNorwegianAccountNumber, accountFormatter } from './format';
 
 const validNorwegianAccountNumber = '42000231376';
 const inValidNorwegianAccountNumber = '42000231377';
@@ -28,14 +28,5 @@ describe('valid norwegian account number', () => {
   });
   it('should return false for invalid norwegian account number', () => {
     assert.isFalse(isValidNorwegianAccountNumber(inValidNorwegianAccountNumber));
-  });
-});
-
-describe('test amount is empty', () => {
-  it('should test that amount is empty', () => {
-    assert.isTrue(isEmpty(undefined));
-    assert.isTrue(isEmpty(null));
-    assert.isFalse(isEmpty(0));
-    assert.isFalse(isEmpty(123));
   });
 });

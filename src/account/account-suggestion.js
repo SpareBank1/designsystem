@@ -1,6 +1,6 @@
 import React from 'react';
 import { bool } from 'prop-types';
-import {accountFormatter, balanceWithCurrency, isEmpty} from '../util/format';
+import {accountFormatter, balanceWithCurrency} from '../util/format';
 import {Account, Locale} from '../util/types';
 
 const AccountSuggestionItem = ({account, locale, showBalance = true}) => {
@@ -12,7 +12,7 @@ const AccountSuggestionItem = ({account, locale, showBalance = true}) => {
         <span className='ffe-account-suggestion__number'>
           { accountFormatter(accountNumber) }
         </span>
-        {showBalance && !isEmpty(balance) &&
+        {showBalance &&
         <span className='ffe-account-suggestion__balance'>
           { balanceWithCurrency(balance, locale, currencyCode)}
         </span>
