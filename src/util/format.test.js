@@ -30,4 +30,3 @@ describe('valid norwegian account number', () => {
     assert.isFalse(isValidNorwegianAccountNumber(inValidNorwegianAccountNumber));
   });
 });
-

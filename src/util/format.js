@@ -31,4 +31,3 @@ export function balanceWithCurrency(balance = '', locale, currencyCode) {
   const currencyAffix = (currencyCode && currencyCode !== "NOK")? currencyCode : currencyAffixNOK[locale];
   return (locale === 'en')? `${currencyAffix} ${amount}` : `${amount} ${currencyAffix}`;
 }
-

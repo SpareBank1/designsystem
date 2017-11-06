@@ -1,4 +1,8 @@
 # Changelog
+
+# v7.10.2
+* Bugfix: Removed `balance` empty check, control balance visibility with `showBalance` prop. 
+ 
 # v.7.10.1
 * Updated to support React 16. 
 * Upgraded npm dependencies. 
