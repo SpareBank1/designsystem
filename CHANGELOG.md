@@ -1,5 +1,8 @@
 # Changelog for ffe-form-react
 
+## v.2.0.1
+* Fix failing prop type for `InputGroup`
+
 ## v.2.0.0
 * BREAKING: `InputGroup` no longer supports sending in your own ID - it will now be generated
 and applied automatically when needed.
