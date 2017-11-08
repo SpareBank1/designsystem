@@ -73,7 +73,7 @@ class InputGroup extends Component {
 const instanceOfComponent = component => shape({ type: oneOf([ component ])});
 
 InputGroup.propTypes = {
-    children: oneOfType({ func, node }).isRequired,
+    children: oneOfType([ func, node ]).isRequired,
     className: string,
     fieldMessage: oneOfType([
         string,
