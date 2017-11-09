@@ -1,5 +1,9 @@
 # Changelog
 
+## v.2.1.0 (09.11.2017)
+* Added "import/named"-rule
+* Added "import/default"-rule
+
 ## v.2.0.2 (18.10.2016)
 * (patch) Update peerDependency plugin-import to include v2.0.1
 * (patch) Update devDependency eslint-find-rules to include v1.11.0 which includes eslint 3.0.0 as its peerDependency
