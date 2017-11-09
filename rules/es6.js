@@ -54,6 +54,14 @@ module.exports = {
 
         // warn on accessing default export property names that are also named exports
         // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-named-as-default-member.md
-        'import/no-named-as-default-member': 2
+        'import/no-named-as-default-member': 2,
+
+        // Verifies that all named imports are part of the set of named exports in the referenced module.
+        // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/named.md
+        'import/named': 2,
+
+        // If a default import is requested, this rule will report if there is no default export in the imported module.
+        // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/default.md
+        'import/default': 2
     }
 };

@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-ffe-base",
-  "version": "2.0.2",
+  "version": "2.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -20,12 +20,13 @@
   "files": [
     "rules",
     "*.js"
-    ],
+  ],
   "publishConfig": {
     "registry": "https://nexus.intern.sparebank1.no/nexus/content/repositories/npm-internal"
   },
   "devDependencies": {
     "eslint": "^3.0.0",
-    "eslint-find-rules": "^1.11.0"
+    "eslint-find-rules": "^1.11.0",
+    "eslint-plugin-import": "^2.0.1"
   }
 }
