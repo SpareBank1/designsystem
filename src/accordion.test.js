@@ -1,11 +1,9 @@
-/* eslint-disable no-duplicate-imports */
 /*eslint-env mocha*/
 import Adapter from 'enzyme-adapter-react-16';
-import Enzyme from 'enzyme';
 import { assert } from 'chai';
 import { whiteAccordion, blueAccordion } from '../docs/example-component';
 import { AccordionItem, WhiteAccordion } from '../src/';
-import { shallow, render } from 'enzyme';
+import Enzyme, { shallow, render } from 'enzyme';
 import React from 'react';
 import sinon from 'sinon';
 
