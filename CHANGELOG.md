@@ -1,5 +1,8 @@
 # Changelog
 
+## v6.1.1
+* Now possible to use leftIcon with Tertiary-button
+
 ## v6.1.0
 * Add prop `buttonRef` so a DOM reference can be obtained
 
