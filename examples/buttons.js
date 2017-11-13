@@ -1,5 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
+import FaksPrinterSolidIkon from 'ffe-icons-react/faks-printer-solid-ikon';
 import './buttons.less';
 import {
   ActionButton,
@@ -35,6 +36,9 @@ function ButtonsExample() {
         <SecondaryButton>I'm a secondary button</SecondaryButton>
       </div>
       <div className="ffe-content-container">
+        <SecondaryButton leftIcon={ <FaksPrinterSolidIkon /> }>I'm a secondary button with icon</SecondaryButton>
+      </div>
+      <div className="ffe-content-container">
         <SecondaryButton condensed>Condensed secondary button</SecondaryButton>
       </div>
       <div className="ffe-content-container">
@@ -42,6 +46,9 @@ function ButtonsExample() {
       </div>
       <div className="ffe-content-container">
         <ShortcutButton condensed>Condensed shortcut button</ShortcutButton>
+      </div>
+      <div className="ffe-content-container">
+        <TertiaryButton leftIcon={ <FaksPrinterSolidIkon /> }>I'm a tertiary button with icon</TertiaryButton>
       </div>
       <div className="ffe-content-container">
         <TertiaryButton>I'm a tertiary button</TertiaryButton>
