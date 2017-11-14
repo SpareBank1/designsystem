@@ -111,6 +111,9 @@ Adds the `@ffe-purple-magenta` colour as a background for the row
 #### `.ffe-grid__row--bg-sand`
 Adds the `@ffe-sand` colour as a background for the row
 
+#### `.ffe-grid__row--bg-grey-cloud`
+Adds the `@ffe-grey-cloud` colour as a background for the row
+
 ### Flexbox
 
 Since the grid is based on the flexbox layout model, there's a few extra modifiers that's available
