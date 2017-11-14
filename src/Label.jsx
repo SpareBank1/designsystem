@@ -26,7 +26,7 @@ Label.propTypes = {
     block: bool,
     children: node.isRequired,
     className: string,
-    htmlFor: string.isRequired
+    htmlFor: string,
 };
 
 export default Label;
