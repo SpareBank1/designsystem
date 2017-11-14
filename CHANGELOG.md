@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## Version 4.7.0
+* Added `bgGreyCloud` prop for `GridRow`, which adds a `ffe-grey-cloud` background colour.
+
 ## Version 4.6.0
 
 ### New features
