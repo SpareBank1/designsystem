@@ -1,17 +1,23 @@
 import React from 'react';
-import { node } from 'prop-types';
+import { node, element } from 'prop-types';
 import Button from './Button';
 
 export default function TertiaryButton(props) {
     const {
         children,
+        leftIcon,
         ...rest
     } = props;
+
+    const tertiaryProps = leftIcon ?
+        { leftIcon, className: 'ffe-tertiary-button--with-icon' } :
+        { simpleContent: true };
+
     return (
         <Button
             {...rest}
             buttonType="tertiary"
-            simpleContent={true}
+            { ...tertiaryProps }
         >
             {children}
         </Button>
@@ -19,5 +25,6 @@ export default function TertiaryButton(props) {
 }
 
 TertiaryButton.propTypes = {
-    children: node
+    children: node,
+    leftIcon: element
 };

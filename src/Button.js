@@ -30,6 +30,7 @@ export default function Button(props) {
 
     const loadingClass = isLoading ? `ffe-${buttonType}-button--loading` : '';
     const condensedClass = condensed ? `ffe-${buttonType}-button--condensed` : '';
+    const isTertiary = buttonType === 'tertiary';
 
     return (
         <button
@@ -53,12 +54,16 @@ export default function Button(props) {
                         {label || children}
                         {rightIcon && rightIcon}
                     </span>
-                    <span
-                        className={`ffe-${buttonType}-button__label-spinner`}
-                        aria-hidden={!isLoading}
-                    >
-                        {ariaLoadingMessage}
-                    </span>
+
+                    { isTertiary ?
+                        null :
+                        <span
+                            className={`ffe-${buttonType}-button__label-spinner`}
+                            aria-hidden={!isLoading}
+                        >
+                            {ariaLoadingMessage}
+                        </span>
+                    }
                 </span>
             }
         </button>
