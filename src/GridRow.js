@@ -18,6 +18,7 @@ export default class GridRow extends Component {
             bgBlueIce,
             bgBluePale,
             bgBlueRoyal,
+            bgGreyCloud,
             bgPurpleMagenta,
             bgSand,
             className,
@@ -34,6 +35,7 @@ export default class GridRow extends Component {
             || bgBlueIce
             || bgBluePale
             || bgBlueRoyal
+            || bgGreyCloud
             || bgPurpleMagenta
             || bgSand;
 
@@ -53,6 +55,7 @@ export default class GridRow extends Component {
                         { 'ffe-grid__row--bg-blue-ice': bgBlueIce },
                         { 'ffe-grid__row--bg-blue-pale': bgBluePale },
                         { 'ffe-grid__row--bg-blue-royal': bgBlueRoyal },
+                        { 'ffe-grid__row--bg-grey-cloud': bgGreyCloud },
                         { 'ffe-grid__row--bg-purple-magenta': bgPurpleMagenta },
                         { 'ffe-grid__row--bg-sand': bgSand },
                         { 'ffe-grid__row--reverse': reverse },
@@ -72,6 +75,7 @@ GridRow.propTypes = {
     bgBlueIce: bool,
     bgBluePale: bool,
     bgBlueRoyal: bool,
+    bgGreyCloud: bool,
     bgPurpleMagenta: bool,
     bgSand: bool,
     className: string,

@@ -60,7 +60,7 @@ Funksjonen man importerer fra `ffe-grid-react/lib/show-grid` fungerer som en tog
 
 ## Test
 
-# Local
+### Local
 
 For å teste endringer lokalt kan man kjøre i dette prosjektes mappe:
 
