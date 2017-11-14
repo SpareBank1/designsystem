@@ -1,5 +1,9 @@
 # Changelog
 
+## v3.1.0
+* Upgraded to react 16. Enzyme to 3.1.1 to support react 16. Added repository to remove warning. 
+Upgraded ffe-accordian to remove warning. 
+
 ## v3.0.1
 * Fix a propType error that would happen if isOpen was not set on AccordionItem. Collapse complained that
 `this.state.isOpen` was undefined, so it now defaults to the boolean `false`.
