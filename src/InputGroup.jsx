@@ -19,7 +19,7 @@ class InputGroup extends Component {
     constructor() {
         super();
 
-        this.id = uuid.v4();
+        this.id = `input-${uuid.v4()}`;
     }
 
     render() {
