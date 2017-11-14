@@ -163,7 +163,7 @@ describe('<InputGroup>', () => {
             </InputGroup>
         );
 
-        expect(component.find('Input').prop('id')).to.have.lengthOf(36);
+        expect(component.find('Input').prop('id')).to.have.lengthOf(42);
         expect(component.find('Input').prop('aria-invalid')).to.equal('false');
     });
 });
