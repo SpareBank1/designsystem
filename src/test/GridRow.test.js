@@ -64,6 +64,13 @@ describe('GridRow', () => {
         expect(el.hasClass('ffe-grid__row--bg-blue-royal')).to.be(true);
     });
 
+    it('sets the bgGreyCloud modifier', () => {
+        const el = renderShallow({ bgGreyCloud: true });
+
+        expect(el.hasClass('ffe-grid__row')).to.be(true);
+        expect(el.hasClass('ffe-grid__row--bg-grey-cloud')).to.be(true);
+    });
+
     it('sets the bgPurpleMagenta modifier', () => {
         const el = renderShallow({ bgPurpleMagenta: true });
 
@@ -84,6 +91,7 @@ describe('GridRow', () => {
             'bgBlueIce',
             'bgBluePale',
             'bgBlueRoyal',
+            'bgGreyCloud',
             'bgPurpleMagenta',
             'bgSand',
         ];
