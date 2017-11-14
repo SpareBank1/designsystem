@@ -2,6 +2,7 @@
 
 ## v.2.0.2
 * Ensure `InputGroup`'s automatic ID is a valid ID.
+* Allow `Label`'s `htmlFor` prop to be optional
 
 ## v.2.0.1
 * Fix failing prop type for `InputGroup`
