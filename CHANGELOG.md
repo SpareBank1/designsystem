@@ -1,5 +1,8 @@
 # Changelog for ffe-form-react
 
+## v.2.0.2
+* Ensure `InputGroup`'s automatic ID is a valid ID.
+
 ## v.2.0.1
 * Fix failing prop type for `InputGroup`
 
