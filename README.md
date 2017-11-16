@@ -105,15 +105,15 @@ To view live example `npm start`
 ### Quality
 - Full test-coverage
 - Visual regression test
-- ~~Better documentation
-- ~~User-testing for a11y
+- ~~Better documentation~~
+- ~~User-testing for a11y~~
 
 ### Functionality
-- ~~Ironing out focus- and dismiss-kinks
+- ~~Ironing out focus- and dismiss-kinks~~
 - Extracting styles to own package
-- ~~Finalize design (pending approval from design)
+- ~~Finalize design (pending approval from design)~~
 - Use date-format from existing solution
-- ~~Some way of handling formatting errors when inputting date manually
+- ~~Some way of handling formatting errors when inputting date manually~~
 - Pass max-width as a prop
 
 ### Nice-to-haves
@@ -124,9 +124,9 @@ To view live example `npm start`
 
 ## Requirements
 
-- ~~i18n
-- ~~Show calendar on focus
-- Handle various input-formats (dd/mm yyyy, dd/mm, dd.mm.yyyy, dd.mm.yy etc)
+- ~~i18n~~
+- ~~Show calendar on focus~~
+- ~~Handle various input-formats (see simpledate.test.js)~~
 - Validate on blur on the whole component (both the input and the calendar)
 
 ### a11y
