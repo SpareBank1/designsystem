@@ -175,6 +175,29 @@ describe('<FFEDatepicker />', () => {
         expect(input).to.have.id('custom-input-id');
       });
     });
+
+    describe('onValidationComplete', () => {
+      let onValidationComplete;
+
+      beforeEach(() => {
+        onValidationComplete = spy();
+        wrapper = mount(
+          <Datepicker
+            { ...defaultProps }
+            onValidationComplete={ onValidationComplete }
+          />
+        );
+
+        wrapper.setProps({ value: '14317' });
+
+        const input = wrapper.find(DateInput).find('input');
+        input.simulate('blur');
+      });
+
+      it('runs onValidationComplete with formatted and validated value', () => {
+        expect(onValidationComplete).to.have.been.calledWith('14.03.2017');
+      });
+    });
   });
 
   describe('validating input on blur', () => {
