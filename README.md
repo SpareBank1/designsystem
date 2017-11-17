@@ -43,11 +43,11 @@ export default function Form() {
 * `label`: Optional. Adds a label formatted by .ffe-form-label
 * `onError`: Optional. Will be called on any validation error with the error code and error text, like if the input is malformed or out of bounds.
 
-#### ErrorCodes
-Error codes can be imported as an object from the main package as well:
+#### ErrorTypes
+Error types can be imported as an object from the main package as well:
 
 ```javascript
-import { ErrorCodes } from 'ffe-datepicker-react';
+import { ErrorTypes } from 'ffe-datepicker-react';
 ```
 
 ### <DateInput />
