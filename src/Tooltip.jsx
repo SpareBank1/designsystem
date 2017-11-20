@@ -26,26 +26,34 @@ class Tooltip extends React.Component {
             className,
             ...rest
         } = this.props;
+
+        const { isOpen } = this.state;
+
         return (
             <span { ...rest }>
                 <button
                     aria-label={ ariaLabel }
-                    className="ffe-tooltip__icon"
+                    className={classNames(
+                        'ffe-tooltip__icon',
+                        { 'ffe-tooltip__icon--active': isOpen}
+                    )}
                     onClick={ this.onToggle }
                     type="button"
                 >
                     ?
                 </button>
-                <Collapse isOpened={ this.state.isOpen } aria-expanded={ String(this.state.isOpen) }>
-                    <div
-                        className={ classNames(
-                            'ffe-small-text',
-                            className
-                        )}
-                    >
-                        { children }
-                    </div>
-                </Collapse>
+                {children &&
+                    <Collapse isOpened={ isOpen } aria-expanded={ String(isOpen) }>
+                        <div
+                            className={ classNames(
+                                'ffe-small-text',
+                                className
+                            )}
+                        >
+                            { children }
+                        </div>
+                    </Collapse>
+                }
             </span>
 
         );
@@ -54,7 +62,7 @@ class Tooltip extends React.Component {
 
 Tooltip.propTypes = {
     'aria-label': string,
-    children: node.isRequired,
+    children: node,
     className: string,
     isOpen: bool,
     onClick: func,
