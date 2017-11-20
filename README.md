@@ -49,9 +49,7 @@ children: oneOfType([ node, func ]),
 className: string,
 fieldMessage: oneOfType([
     string,
-    instanceOfComponent(ErrorFieldMessage),
-    instanceOfComponent(SuccessFieldMessage),
-    instanceOfComponent(InfoFieldMessage)
+    node,
 ]),
 label: oneOfType([ string, instanceOfComponent(Label) ]),
 tooltip: oneOfType([ string, instanceOfComponent(Tooltip) ])
@@ -59,9 +57,10 @@ tooltip: oneOfType([ string, instanceOfComponent(Tooltip) ])
 
 * `children`: Content of the InputGroup.
 * `className`: ClassName for the InputGroup div
-* `fieldMessage`: `ErrorFieldMessage`, `SuccessFieldMessage`, `InfoFieldMessage` or `string` that is displayed under `children`. If only a string is passed this defaults to an ErrorFieldMessage.
+* `fieldMessage`: A React `node` or a `string` that is displayed under `children`. If only a string is passed this defaults to an ErrorFieldMessage.
 * `label`: `Label` or `string` that is displayed above `children`.
 * `tooltip`: `Tooltip` or `string` that is displayed when the user presses the ?-button.
+* `onTooltipToggle`: callback that gets invoked when tooltip is toggled (if it was provided as a string)
 
 Note that the `InputGroup` component only accepts a single child. This is due to the fact that the `InputGroup`
 decorates it's children with a few extra props like an auto-generated ID and aria-tags. If you need to have several
@@ -131,14 +130,14 @@ All other props are spread on the wrapper element.
 ### Tooltip
 ```
 aria-label: string,
-children: node.isRequired,
+children: node,
 className: string,
 isOpen: bool,
 onClick: func,
 ```
 
 * `aria-label`: aria-label for the ?-button,
-* `children`: content of the hidden tooltip message.
+* `children`: content of the hidden tooltip message, if one is to be shown.
 * `className`: string,
 * `isOpen`: open/closes the tooltip. Clicking the button will toggle this.,
 * `onClick`: onClick callback for the ?-button
