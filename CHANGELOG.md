@@ -1,5 +1,9 @@
 # Changelog
 
+## 7.16.0
+
+* Add gravemaskin-ikon.svg
+
 ## 7.15.0
 
 * Add info-sirkel-solid-ikon.svg
