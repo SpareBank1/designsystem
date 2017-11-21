@@ -1,5 +1,12 @@
 # Changelog
 
+# 4.4.4
+* Bugfix: If the `<Checkbox>` was given an id as a prop, the connection between label and input was broken
+because the input would be given the provided id while the label would be given the internal generated id.
+This meant you'd need to be a goddamn sniper to click the checkbox rather than being able to just click its
+label. This fix makes the component use the provided ID instead of a generated one, which seems the most
+intuitive way to handle this.
+
 # 4.4.3
 * Update peerDep on `ffe-form` to include version `8.x`
 * Bump devDeps to `ffe-core@10.1.1` and `ffe-form@8.1.1`

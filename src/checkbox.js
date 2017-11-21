@@ -18,7 +18,7 @@ export default function CheckBox(props) {
         ...rest
     } = props;
 
-    const id = `checkbox-${hash(rest.name)}`;
+    const id = props.id || `checkbox-${hash(rest.name)}`;
 
     return (
         <span>
@@ -48,6 +48,7 @@ CheckBox.propTypes = {
     onChange: func,
     checked: bool,
     noMargins: bool,
+    id: string,
     inline: bool,
     invalid: bool,
     children: array,
