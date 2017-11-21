@@ -1,6 +1,6 @@
 {
   "name": "ffe-checkbox-react",
-  "version": "4.4.3",
+  "version": "4.4.4",
   "main": "lib/checkbox.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/. && npm run example",
@@ -47,6 +47,7 @@
     "mocha-tap13": "0.0.3",
     "node-lessify": "^0.1.4",
     "nsp": "^2.2.0",
+    "onchange": "^3.2.1",
     "react": "^15.3.1",
     "react-addons-test-utils": "^15.0.1",
     "react-dom": "^15.0.1",
