@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {
+    bool,
     func,
     node,
     oneOf,
@@ -16,7 +17,7 @@ import SuccessFieldMessage from './SuccessFieldMessage';
 import InfoFieldMessage from './InfoFieldMessage';
 
 class InputGroup extends Component {
-    constructor() {
+    constructor(props) {
         super();
 
         this.id = `input-${uuid.v4()}`;
@@ -29,6 +30,7 @@ class InputGroup extends Component {
             label,
             fieldMessage,
             tooltip,
+            onTooltipToggle,
             ...rest
         } = this.props;
 
@@ -36,6 +38,13 @@ class InputGroup extends Component {
             throw new Error(
                 'This element does not support more than one child. If you need more than one element inside your ' +
                 'InputGroup, please use the function-as-a-child pattern outlined in the documentation.'
+            );
+        }
+
+        if (onTooltipToggle && typeof tooltip !== 'boolean' && typeof tooltip !== 'string') {
+            throw new Error(
+                'Only use the "onTooltipToggle" prop if you\'re not sending a component of type ' +
+                '<Tooltip /> in the "tooltip" prop. If you are, use "onClick" on that component instead'
             );
         }
 
@@ -58,7 +67,8 @@ class InputGroup extends Component {
                 { typeof label === 'string' && <Label htmlFor={ this.id }>{ label }</Label> }
                 { React.isValidElement(label) && React.cloneElement( label, { htmlFor : this.id }) }
 
-                { typeof tooltip === 'string' && <Tooltip>{ tooltip }</Tooltip> }
+                { typeof tooltip === 'string' && <Tooltip onClick={onTooltipToggle}>{ tooltip }</Tooltip> }
+                { tooltip === true && <Tooltip onClick={onTooltipToggle} /> }
                 { React.isValidElement(tooltip) && tooltip }
 
                 { modifiedChildren }
@@ -75,14 +85,10 @@ const instanceOfComponent = component => shape({ type: oneOf([ component ])});
 InputGroup.propTypes = {
     children: oneOfType([ func, node ]).isRequired,
     className: string,
-    fieldMessage: oneOfType([
-        string,
-        instanceOfComponent(ErrorFieldMessage),
-        instanceOfComponent(SuccessFieldMessage),
-        instanceOfComponent(InfoFieldMessage)
-    ]),
-    label: oneOfType([ string, instanceOfComponent(Label) ]).isRequired,
-    tooltip: oneOfType([ string, instanceOfComponent(Tooltip) ])
+    fieldMessage: oneOfType([string, node]),
+    label: oneOfType([ string, instanceOfComponent(Label) ]),
+    onTooltipToggle: func,
+    tooltip: oneOfType([ bool, string, instanceOfComponent(Tooltip) ])
 };
 
 export default InputGroup;
