@@ -67,6 +67,11 @@ export default class FFEDatepicker extends Component {
 
   validateDateIntervals() {
     let nextState = {};
+    const {
+      onChange,
+      value,
+      onValidationComplete
+    } = this.props;
 
     const error = (type) => {
       const errorMessage = this.onError(type);
@@ -80,12 +85,18 @@ export default class FFEDatepicker extends Component {
     };
 
     SimpleDate.fromString(
-      this.props.value,
+      value,
       date => {
         nextState = {
           openOnFocus: true,
           ariaInvalid: false,
         };
+
+        const formattedDate = date.format();
+
+        if (formattedDate !== value) {
+          onChange(formattedDate);
+        }
 
         const minDate = SimpleDate.fromString(this.state.minDate);
         const maxDate = SimpleDate.fromString(this.state.maxDate);
@@ -95,16 +106,10 @@ export default class FFEDatepicker extends Component {
           error(dateErrorTypes.MAX_DATE);
         }
 
-        const formattedDate = date.format();
-
-        if (formattedDate !== this.props.value) {
-          this.props.onChange(formattedDate);
-        }
-
-        this.props.onValidationComplete(formattedDate);
+        onValidationComplete(formattedDate);
       },
       errorType => {
-        const emptyValue = this.props.value === '';
+        const emptyValue = value === '';
 
         if (emptyValue && this.state.errorMessage) {
           nextState = {
@@ -113,18 +118,20 @@ export default class FFEDatepicker extends Component {
             errorMessage: null,
             displayDatePicker: false
           };
+          onValidationComplete(value);
           return;
         } else if (emptyValue) {
           nextState = {
             ...this.state,
             openOnFocus: true
           };
+          onValidationComplete(value);
           return;
         }
 
         error(errorType);
 
-        this.props.onValidationComplete(this.props.value);
+        onValidationComplete(value);
       }
     );
 
