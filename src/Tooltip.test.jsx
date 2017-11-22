@@ -45,4 +45,11 @@ describe('<Tooltip>', () => {
         component.find('button').simulate('click');
         expect(component.find('Collapse')).to.have.prop('isOpened', true);
     });
+
+    it('should toggle active state if button is clicked', () => {
+        const component = shallow(<Tooltip>Tooltip Text</Tooltip>);
+        expect(component.find('button')).to.not.have.className('ffe-tooltip__icon--active');
+        component.find('button').simulate('click');
+        expect(component.find('button')).to.have.className('ffe-tooltip__icon--active');
+    });
 });

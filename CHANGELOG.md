@@ -1,5 +1,13 @@
 # Changelog for ffe-form-react
 
+## v.2.1.0
+* Allow arbitrary React nodes in the `fieldMessage` prop.
+* Correctly set `.ffe-tooltip__icon--active` class on tooltip button when expanded.
+* Add an optional `onTooltipToggle` to `InputGroup` which will be invoked on toggling tooltip if the tooltip is
+provided as a string.
+* `Tooltip` can be rendered with no children, which leads to it only rendering its button-controller.
+* `label` is no longer a required prop for `InputGroup`.
+
 ## v.2.0.2
 * Ensure `InputGroup`'s automatic ID is a valid ID.
 * Allow `Label`'s `htmlFor` prop to be optional
