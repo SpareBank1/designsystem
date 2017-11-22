@@ -1,5 +1,10 @@
 # Changelog
 
+## v2.7.0
+* Add onValidationComplete property
+* Fix typo in readme
+* Fix strike-throughs in readme
+
 ## v2.6.4
 * Support for React 16
 

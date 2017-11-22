@@ -95,9 +95,13 @@ export default class FFEDatepicker extends Component {
           error(dateErrorTypes.MAX_DATE);
         }
 
-        if (date.format() !== this.props.value) {
-          this.props.onChange(date.format());
+        const formattedDate = date.format();
+
+        if (formattedDate !== this.props.value) {
+          this.props.onChange(formattedDate);
         }
+
+        this.props.onValidationComplete(formattedDate);
       },
       errorType => {
         const emptyValue = this.props.value === '';
@@ -119,6 +123,8 @@ export default class FFEDatepicker extends Component {
         }
 
         error(errorType);
+
+        this.props.onValidationComplete(this.props.value);
       }
     );
 
@@ -166,6 +172,7 @@ export default class FFEDatepicker extends Component {
 
   datePickedHandler(date) {
     this.props.onChange(date);
+    this.props.onValidationComplete(date);
     this.removeGlobalEventListeners();
     this.setState({
       openOnFocus: false,
@@ -288,11 +295,16 @@ export default class FFEDatepicker extends Component {
   }
 }
 
+FFEDatepicker.defaultProps = {
+  onValidationComplete: () => {}
+};
+
 FFEDatepicker.propTypes = {
   'aria-invalid': string,
   ariaInvalid: oneOfType([bool, string]),
   calendarAbove: bool,
   hideErrors: bool,
+  onValidationComplete: func,
   inputProps: shape({
     className: string,
     id: string,
