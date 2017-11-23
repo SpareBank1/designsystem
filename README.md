@@ -1,6 +1,6 @@
-#Felles Frontend Header
+# Felles Frontend Header
 
-##Intro
+## Intro
 
 Felles header-komponent for SpareBank 1.
 

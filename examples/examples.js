@@ -13,3 +13,9 @@ toggleSiteNav.onclick = function() {
     siteNav.classList.toggle('ffe-header__site-nav-list--visible');
     siteNavBurger.classList.toggle('ffe-header__site-nav-hamburger--expanded');
 };
+
+const toggleSearch = document.querySelector('.ffe-header__search-button');
+toggleSearch.onclick = function() {
+    const searchContainer = document.querySelector('.ffe-header__search');
+    searchContainer.classList.toggle('ffe-header__search--visible');
+};

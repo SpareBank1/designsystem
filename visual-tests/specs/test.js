@@ -1,7 +1,5 @@
 var fs = require('fs');
 
-
-
 var HTML_PATTERN = /\.html$/
 
 fs.readdirSync('./examples')
@@ -9,8 +7,11 @@ fs.readdirSync('./examples')
   .forEach(function(f) {
     gemini.suite(f.replace(HTML_PATTERN, ""), function(suite) {
       suite.setUrl('/' + f)
-           .setCaptureElements('body')
-           .capture('plain');
+          .setCaptureElements('body')
+          .capture('plain')
+          .capture('user-nav-expanded', (actions, find) => {
+            actions.click(find('.ffe-header__user-button'));
+        });
     });
   });
 
