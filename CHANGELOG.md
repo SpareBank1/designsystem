@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.7.1
+* Run onValidationComplete on empty values
+* Trigger onChange before MIN_DATE and MAX_DATE errors to avoid resetting error messages onChange
+
 ## v2.7.0
 * Add onValidationComplete property
 * Fix typo in readme
