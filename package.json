@@ -1,6 +1,6 @@
 {
   "name": "ffe-core",
-  "version": "10.1.1",
+  "version": "10.1.2",
   "description": "Rammeverk for Felles Front End",
   "less": "ffe.less",
   "main": "index.js",
