@@ -1,5 +1,9 @@
 # Changelog
 
+## v.10.1.2
+
+* Reduced font size of `ffe-fontsize-form-input` from `18px` to `16px`.
+
 ## v.10.1.1
 
 * Replaced hardcoded font-sizes with variables
