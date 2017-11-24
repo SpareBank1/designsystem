@@ -1,5 +1,9 @@
 # Changelog
 
+## v.8.1.2
+* Bump devDep and peerDep of `ffe-core` from `^10.1.1` to `^10.1.2`.
+* Adjust font-family of `input-field` and `textarea` from `MuseoSans-300` to `MuseoSans-500`.
+
 ## v.8.1.1
 * Adjusted `.ffe-radio-button` focus state and transitions to more closely reflect the behaviour of `.ffe-checkbox`
 
