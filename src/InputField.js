@@ -25,7 +25,7 @@ class Input extends Component {
             <div>
                 <input
                     className={classNames(
-                        "ffe-searchable-dropdown__dropdown-input-field",
+                        "ffe-dropdown",
                         {"ffe-searchable-dropdown__display-reset": this.displayReset()}
                     )}
                     aria-invalid={ String(ariaInvalid) }
