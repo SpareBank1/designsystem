@@ -1,5 +1,13 @@
 # Changelog for ffe-search-dropdown-react
 
+## v2.1.3
+* Bump devDeps of `ffe-core` and `ffe-form` to latest versions.
+* Change Babel preset from deprecated `latest` to `env`.
+* Disable npm lockfile and delete yarn lockfile.
+* Other devDep bumps to fix peerDep warnings.
+* Deprecated npm script `prepublish` replaced with `prepublishOnly`.
+`npm install` will no longer trigger build.
+
 ## v2.1.2
 * Add support for version 7 and 8 of `ffe-form`.
 * Fix console error in SearchableDropdown example.
