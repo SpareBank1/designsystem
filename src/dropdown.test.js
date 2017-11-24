@@ -180,3 +180,23 @@ describe('<Dropdown /> should work with extra stuff such as aria-labelledby and 
         );
     });
 });
+
+describe('<DropDown /> should default to tabbable if not specified', () => {
+    const dropdown = <Dropdown>
+        <option value="steve">Steve Vai</option>
+        <option value="mateus">Mateus Asato</option>
+    </Dropdown>;
+    
+    const wrapper = shallow(dropdown);
+    assert.equal(undefined, wrapper.find('select').prop('tabIndex'));
+});
+
+describe('<DropDown /> should not be tabbable if specified', () => {
+    const dropdown = <Dropdown isTabbable={false}>
+        <option value="steve">Steve Vai</option>
+        <option value="mateus">Mateus Asato</option>
+    </Dropdown>;
+    
+    const wrapper = shallow(dropdown);
+    assert.equal(-1, wrapper.find('select').prop('tabIndex'));
+});
