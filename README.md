@@ -19,6 +19,8 @@ styling:
 @import "npm://ffe-searchable-dropdown-react/less/searchable-dropdown";
 ```
 
+Component should be wrapped in a `.ffe-input-group` for correct styling to be applied.
+
 ## FFE less Dependencies:
 ```
 @import "~ffe-core/less/colors";
