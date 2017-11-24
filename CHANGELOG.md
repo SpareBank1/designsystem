@@ -1,5 +1,10 @@
 # Changelog
 
+## 4.2.4
+* Add new baseline images to match latest version of `ffe-core` and `ffe-form`.
+* Bump devDeps `ffe-visual-tests-support` and `stylelint-config-ffe`.
+* Add `package-lock=false` to [.npmrc](.npmrc)
+
 ## 4.2.3
 * Add support of version 8 of `ffe-form`
 
