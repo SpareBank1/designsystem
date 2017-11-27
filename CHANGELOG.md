@@ -1,5 +1,8 @@
 # Changelog for ffe-search-dropdown-react
 
+## v2.1.3
+* Add prevent default for handled key events in onKeyDown function.
+
 ## v2.1.2
 * Add support for version 7 and 8 of `ffe-form`.
 * Fix console error in SearchableDropdown example.
