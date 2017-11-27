@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## Version 5.0.0
+* BREAKING: All `bg*` have been removed, and are replaced by a single `background` prop, which accepts a dash-cased value. Please see the README for a complete list of valid values. Upgrading requires the consumer to i.e. replace `bgBlueIce={true}` with `background="blue-ice"`.
+* Added `mint-green` as a valid background value
+
 ## Version 4.7.0
 * Added `bgGreyCloud` prop for `GridRow`, which adds a `ffe-grey-cloud` background colour.
 
