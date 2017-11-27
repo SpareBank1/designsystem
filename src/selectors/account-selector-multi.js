@@ -44,10 +44,11 @@ class AccountSelectorMulti extends React.Component {
   }
 
   onSuggestionSelect(suggestion) {
-    const { onAccountSelected } = this.props;
+    const { onAccountSelected, selectedAccounts, accounts } = this.props;
     if (suggestion) {
       if (suggestion.id === allAccountsElement.id) {
-        this.props.onSelectAll();
+        const allSelected = selectedAccounts.length === accounts.length;
+        this.props.onSelectAll(!allSelected);
         return;
       }
       onAccountSelected(suggestion);
