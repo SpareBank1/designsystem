@@ -1,5 +1,10 @@
 #CHANGELOG
 
+## Version 10.0.0
+
+### Breaking changes
+* Rewrote styling and examples from scratch, according to new responsive header specs
+
 ## Version 9.0.0
 
 ### Breaking changes
