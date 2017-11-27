@@ -1,5 +1,8 @@
 # Changelog
 
+## v.5.5.0
+* Added a new background modifier (`--bg-green-mint`) to `ffe-grid-row`.
+
 ## v.5.4.0
 * Added a new background modifier (`--bg-grey-cloud`) to `ffe-grid-row`.
 
