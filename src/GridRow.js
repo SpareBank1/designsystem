@@ -1,8 +1,19 @@
 import React, { Component } from 'react';
-import { bool, node, string } from 'prop-types';
+import { bool, node, oneOf, string } from 'prop-types';
 import classNames from 'classnames';
 
 import { checkForNestedComponent } from './utils';
+
+export const VALID_BACKGROUND_COLORS = [
+    'blue-cobalt',
+    'blue-ice',
+    'blue-pale',
+    'blue-royal',
+    'green-mint',
+    'grey-cloud',
+    'purple-magenta',
+    'sand',
+];
 
 export default class GridRow extends Component {
 
@@ -14,13 +25,7 @@ export default class GridRow extends Component {
 
     render() {
         const {
-            bgBlueCobalt,
-            bgBlueIce,
-            bgBluePale,
-            bgBlueRoyal,
-            bgGreyCloud,
-            bgPurpleMagenta,
-            bgSand,
+            background,
             className,
             children,
             element,
@@ -31,13 +36,7 @@ export default class GridRow extends Component {
 
         let content = children;
 
-        const hasBackgroundColor = bgBlueCobalt
-            || bgBlueIce
-            || bgBluePale
-            || bgBlueRoyal
-            || bgGreyCloud
-            || bgPurpleMagenta
-            || bgSand;
+        const hasBackgroundColor = VALID_BACKGROUND_COLORS.includes(background);
 
         if (hasBackgroundColor) {
             content = <div className="ffe-grid__row-wrapper">{children}</div>;
@@ -51,13 +50,7 @@ export default class GridRow extends Component {
                     classNames(
                         className,
                         'ffe-grid__row',
-                        { 'ffe-grid__row--bg-blue-cobalt': bgBlueCobalt },
-                        { 'ffe-grid__row--bg-blue-ice': bgBlueIce },
-                        { 'ffe-grid__row--bg-blue-pale': bgBluePale },
-                        { 'ffe-grid__row--bg-blue-royal': bgBlueRoyal },
-                        { 'ffe-grid__row--bg-grey-cloud': bgGreyCloud },
-                        { 'ffe-grid__row--bg-purple-magenta': bgPurpleMagenta },
-                        { 'ffe-grid__row--bg-sand': bgSand },
+                        { [`ffe-grid__row--bg-${background}`]: hasBackgroundColor },
                         { 'ffe-grid__row--reverse': reverse },
                         { 'ffe-grid__row--top-padding': topPadding },
                     )
@@ -71,13 +64,7 @@ export default class GridRow extends Component {
 }
 
 GridRow.propTypes = {
-    bgBlueCobalt: bool,
-    bgBlueIce: bool,
-    bgBluePale: bool,
-    bgBlueRoyal: bool,
-    bgGreyCloud: bool,
-    bgPurpleMagenta: bool,
-    bgSand: bool,
+    background: oneOf(VALID_BACKGROUND_COLORS),
     className: string,
     children: node,
     element: string,
