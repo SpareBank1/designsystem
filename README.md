@@ -26,7 +26,7 @@ render() {
                     <p>This is a column</p>
                 </GridCol>
             </GridRow>
-            <GridRow background="green-mist">
+            <GridRow background="green-mint">
                 <GridCol
                     lg="2"
                     md="2"
