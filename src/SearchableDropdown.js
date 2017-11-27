@@ -93,15 +93,17 @@ class SearchableDropdown extends Component {
         const { highlightedElementIndex, searchTerm } = this.state;
         const filteredList = this.filterList(searchTerm);
         if (event.key === 'ArrowDown') {
+            event.preventDefault();
             this.setState({showListContainer:true});
             this.setHighlightedIndex("DOWN", highlightedElementIndex, filteredList);
-            event.preventDefault();
         }
         else if (event.key === 'ArrowUp') {
+            event.preventDefault();
             this.setState({showListContainer:true});
             this.setHighlightedIndex("UP", highlightedElementIndex, filteredList);
         }
         else if (event.key === 'Enter') {
+            event.preventDefault();
             if (highlightedElementIndex === -1) {
                 if (filteredList.length === 1) {
                     this.onSelect(filteredList[0]);
