@@ -22,7 +22,7 @@ function Dropdown(props) {
         errorMessage,
         invalid,
         isLoading,
-        isTabbable,
+        isTabbable = true,
         label,
         selectedValue,
         ...rest
