@@ -1,13 +1,16 @@
 # Changelog
 
+# v7.10.3
+* Now possible to de-select all accounts. onSelectAll will be called with true or false to select/de-select all accounts.
+
 # v7.10.2
 * Bugfix: Removed `balance` empty check, control balance visibility with `showBalance` prop. 
  
-# v.7.10.1
+# v7.10.1
 * Updated to support React 16. 
 * Upgraded npm dependencies. 
 
-# v.7.10.0
+# v7.10.0
 * Show correct currency for accounts with currencyCodes other than NOK.
 
 # v7.9.2
