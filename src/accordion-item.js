@@ -81,7 +81,8 @@ class AccordionItem extends Component {
 
         return (
             <li className={ createClasses('ffe-accordion-item', isOpen, type) }>
-                <button
+                <div
+                    tabIndex={ -1 }
                     aria-controls={ `panel-${uuid}-${index}` }
                     aria-expanded={ isOpen }
                     aria-label={ ariaLabel }
@@ -89,7 +90,6 @@ class AccordionItem extends Component {
                     id={ `tab-${uuid}-${index}` }
                     onClick={ this.onClick }
                     role="tab"
-                    type="button"
                 >
                     <span className="ffe-accordion-item__toggler-content">
                         <span className="ffe-accordion-item__title">
@@ -97,7 +97,7 @@ class AccordionItem extends Component {
                         </span>
                         <Chevron className={ createClasses('ffe-accordion-item__icon', isOpen, type) } />
                     </span>
-                </button>
+                </div>
                 <Collapse
                     hasNestedCollapse={ hasNestedCollapse }
                     isOpened={ isOpen }
