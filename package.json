@@ -1,6 +1,6 @@
 {
   "name": "ffe-accordion-react",
-  "version": "3.0.1",
+  "version": "3.2.0",
   "main": "lib/index.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/. && npm run example",
@@ -17,16 +17,16 @@
     "postpublish": "git tag ${npm_package_version} && git push --tags"
   },
   "peerDependencies": {
-    "react": "^0.14.0 || ^15.0.0",
+    "ffe-accordion": "^3.0.0",
     "ffe-core": "*",
-    "ffe-accordion": "^3.0.0"
+    "react": "^0.14.0 || ^15.0.0 || ^16.0.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "ffe-icons-react": "^2.4.13",
-    "prop-types": "*",
+    "ffe-icons-react": "^2.4.17",
+    "prop-types": "^15.6.0",
     "react-collapse": "^4.0.3",
-    "react-motion": "^0.5.1",
+    "react-motion": "^0.5.2",
     "uuid": "^3.1.0"
   },
   "devDependencies": {
@@ -39,21 +39,21 @@
     "babelify": "^7.3.0",
     "budo": "8.3.0",
     "chai": "^3.5.0",
-    "enzyme": "^2.0.0",
-    "eslint": "^3.12.2",
+    "enzyme": "^3.1.1",
+    "enzyme-adapter-react-16": "^1.0.4",
+    "eslint": "3.12.2",
     "eslint-config-ffe": "^6.0.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^6.8.0",
+    "ffe-accordion": "^3.0.0",
     "ffe-core": "^10.1.1",
-    "ffe-accordion": "^2.0.1",
     "mocha": "^3.2.0",
     "node-lessify": "^0.1.4",
     "nsp": "^2.2.0",
     "onchange": "3.2.1",
-    "react": "^15.0.0",
-    "react-addons-test-utils": "^15.0.0",
-    "react-dom": "^15.0.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
     "sinon": "^2.1.0"
   },
   "publishConfig": {
@@ -64,7 +64,7 @@
     "example.html",
     "*.js"
   ],
-  "repository": "",
+  "repository": "ssh://git@stash.intern.sparebank1.no:22/ffe/ffe-accordion-react.git",
   "author": "SpareBank 1",
   "license": "ISC"
 }
