@@ -1,5 +1,9 @@
 # Changelog
 
+## v.5.5.2
+* Internal rewrite of grid library, reducing size from ~40kb to ~28kb (before gzip). This is accomplished by using
+attribute
+
 ## v.5.5.1
 * Fixed a bug where `.ffe-grid__row--reverse` did not work as expected when `.ffe-grid__row-wrapper` was set as it's child.
 
