@@ -1,22 +1,25 @@
 # Changelog
 
+## v.5.5.1
+* Fixed a bug where `.ffe-grid__row--reverse` did not work as expected when `.ffe-grid__row-wrapper` was set as it's child.
+
 ## v.5.5.0
-* Added a new background modifier (`--bg-green-mint`) to `ffe-grid-row`.
+* Added a new background modifier (`--bg-green-mint`) to `ffe-grid__row`.
 
 ## v.5.4.0
-* Added a new background modifier (`--bg-grey-cloud`) to `ffe-grid-row`.
+* Added a new background modifier (`--bg-grey-cloud`) to `ffe-grid__row`.
 
 ## v.5.3.1
 * Make text and headers white when using `--bg-blue-royal`.
 
 ## v.5.3.0
-* Added a new background modifier (`--bg-blue-royal`) to `ffe-grid-row`.
+* Added a new background modifier (`--bg-blue-royal`) to `ffe-grid__row`.
 
 ## v.5.2.0
-* Added a new background modifier (`--bg-purple-magenta`) to `ffe-grid-row`.
+* Added a new background modifier (`--bg-purple-magenta`) to `ffe-grid__row`.
 
 ## v.5.1.0
-* Added a new background modifier (`--bg-blue-ice`) to `ffe-grid-row`.
+* Added a new background modifier (`--bg-blue-ice`) to `ffe-grid__row`.
 
 ## v.5.0.2
 * Using left, right instead of start, end for text-align property to support IE.
