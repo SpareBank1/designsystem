@@ -1,6 +1,6 @@
 {
   "name": "ffe-grid-react",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "main": "lib/index.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/. && npm run example",
@@ -20,7 +20,7 @@
     "classnames": "^2.2.5"
   },
   "peerDependencies": {
-    "ffe-grid": "^5.4.0"
+    "ffe-grid": "^5.6.0"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
@@ -40,7 +40,7 @@
     "eslint-plugin-react": "^6.9.0",
     "expect.js": "^0.3.1",
     "ffe-core": "^9.2.0",
-    "ffe-grid": "^5.0.0",
+    "ffe-grid": "^5.6.0",
     "jsdom": "^11.2.0",
     "mocha": "^3.2.0",
     "nsp": "^2.6.2",
