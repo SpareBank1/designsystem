@@ -1,6 +1,6 @@
 # Changelog for ffe-search-dropdown-react
 
-## v2.1.3
+## v2.1.4
 * Bump devDeps of `ffe-core` and `ffe-form` to latest versions.
 * FFE-consistent styling by replacing `.ffe-searchable-dropdown__dropdown-input-field`
 with `.ffe-dropdown` from `ffe-form`.
@@ -9,6 +9,9 @@ with `.ffe-dropdown` from `ffe-form`.
 * Other devDep bumps to fix peerDep warnings.
 * Deprecated npm script `prepublish` replaced with `prepublishOnly`.
 `npm install` will no longer trigger build.
+
+## v2.1.3
+* Add prevent default for handled key events in onKeyDown function.
 
 ## v2.1.2
 * Add support for version 7 and 8 of `ffe-form`.
