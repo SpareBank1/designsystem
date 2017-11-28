@@ -1,6 +1,6 @@
 # Changelog
 
-## v3.2.0
+## v3.1.1
 * Removed button and replaced with div to fix biug in internet explorer
 
 
