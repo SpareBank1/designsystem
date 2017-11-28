@@ -24,7 +24,7 @@ describe('<Input>', () => {
     const component = mountInputFieldWithProps(props);
 
     test('renders', () =>
-        expect(component.find('.ffe-searchable-dropdown__dropdown-input-field')).toHaveLength(1));
+        expect(component.find('.ffe-dropdown')).toHaveLength(1));
 
      test('input field has an Id', () =>
         expect(component.find('input').prop('id')).toBe('anId'));

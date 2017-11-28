@@ -6,63 +6,6 @@
 
 .ffe-searchable-dropdown {
   position: relative;
-  &__dropdown-input-field {
-    &::-ms-clear {
-      display: none;
-    }
-    background-color: @ffe-white;
-    background-size: 18px 18px;
-    background-repeat: no-repeat;
-    background-position: ~"calc(100% - 9px) 50%";
-    border: 2px solid @ffe-grey-silver;
-    border-radius: 4px;
-    box-shadow: 0 1px 1px 0 @ffe-grey-cloud;
-    color: @ffe-black;
-    display: block;
-    .ffe-chevron-icon-with-color();
-
-    font-family: MuseoSans-300, arial, sans-serif;
-    font-size: 16px;
-    height: 45px;
-    padding: 0 32px 0 10px;
-    line-height: 20px;
-    transition: all @ffe-transition-duration @ffe-ease;
-    width: 100%;
-
-    &[aria-invalid="true"] {
-      .ffe-chevron-icon-with-color(@ffe-orange-fire);
-    }
-
-    &:not([aria-invalid="true"]):hover {
-      border-color: @ffe-blue-azure;
-    }
-
-    &:focus,
-    &:active {
-      box-shadow: 0 0 0 2px @ffe-blue-focus;
-      outline: none;
-    }
-
-    &:not([aria-invalid="true"]):focus,
-    &:not([aria-invalid="true"]):active {
-      border-color: @ffe-blue-azure;
-    }
-
-    &:-moz-focusring {
-      color: transparent;
-      text-shadow: 0 0 0 @ffe-black;
-      transition: color 0ms;
-    }
-
-    &:focus::-ms-value {
-      background: @ffe-white;
-      color: @ffe-black;
-    }
-
-    &::-ms-expand {
-      display: none;
-    }
-  }
   &__display-reset {
     background-image:none!important;
   }
