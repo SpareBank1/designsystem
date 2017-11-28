@@ -78,7 +78,6 @@ export default class GridCol extends Component {
 
         const classes = [
             className,
-            'ffe-grid__col',
             sizeClasses('lg', lg),
             sizeClasses('md', md),
             sizeClasses('sm', !sm && !lg && !md ? 12: sm),
