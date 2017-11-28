@@ -82,7 +82,7 @@ class AccordionItem extends Component {
         return (
             <li className={ createClasses('ffe-accordion-item', isOpen, type) }>
                 <div
-                    tabIndex={ -1 }
+                    tabIndex={ 0 }
                     aria-controls={ `panel-${uuid}-${index}` }
                     aria-expanded={ isOpen }
                     aria-label={ ariaLabel }
