@@ -3,6 +3,7 @@ import { mount, shallow } from 'enzyme';
 import sinon from 'sinon';
 
 import { GridRow, GridCol } from '..';
+import { VALID_BACKGROUND_COLORS } from '../GridRow';
 
 const defaultProps = {
     children: <p>blah</p>,
@@ -36,69 +37,26 @@ describe('GridRow', () => {
         expect(el.hasClass('ffe-grid__row--reverse')).to.be(true);
     });
 
-    it('sets the bgBlueCobalt modifier', () => {
-        const el = renderShallow({ bgBlueCobalt: true });
-
-        expect(el.hasClass('ffe-grid__row')).to.be(true);
-        expect(el.hasClass('ffe-grid__row--bg-blue-cobalt')).to.be(true);
+    it('adds correct class for all valid background colors', () => {
+        const el = renderShallow();
+        VALID_BACKGROUND_COLORS.forEach((background) => {
+            el.setProps({ background });
+            expect(el.hasClass(`ffe-grid__row--bg-${background}`)).to.be(true);
+        });
     });
 
-    it('sets the bgBlueIce modifier', () => {
-        const el = renderShallow({ bgBlueIce: true });
-
-        expect(el.hasClass('ffe-grid__row')).to.be(true);
-        expect(el.hasClass('ffe-grid__row--bg-blue-ice')).to.be(true);
-    });
-
-    it('sets the bgBluePale modifier', () => {
-        const el = renderShallow({ bgBluePale: true });
-
-        expect(el.hasClass('ffe-grid__row')).to.be(true);
-        expect(el.hasClass('ffe-grid__row--bg-blue-pale')).to.be(true);
-    });
-
-    it('sets the bgBlueRoyal modifier', () => {
-        const el = renderShallow({ bgBlueRoyal: true });
-
-        expect(el.hasClass('ffe-grid__row')).to.be(true);
-        expect(el.hasClass('ffe-grid__row--bg-blue-royal')).to.be(true);
-    });
-
-    it('sets the bgGreyCloud modifier', () => {
-        const el = renderShallow({ bgGreyCloud: true });
-
-        expect(el.hasClass('ffe-grid__row')).to.be(true);
-        expect(el.hasClass('ffe-grid__row--bg-grey-cloud')).to.be(true);
-    });
-
-    it('sets the bgPurpleMagenta modifier', () => {
-        const el = renderShallow({ bgPurpleMagenta: true });
-
-        expect(el.hasClass('ffe-grid__row')).to.be(true);
-        expect(el.hasClass('ffe-grid__row--bg-purple-magenta')).to.be(true);
-    });
-
-    it('sets the bgSand modifier', () => {
-        const el = renderShallow({ bgSand: true });
-
-        expect(el.hasClass('ffe-grid__row')).to.be(true);
-        expect(el.hasClass('ffe-grid__row--bg-sand')).to.be(true);
+    it('does not add any background-class for invalid background colors', () => {
+        const el = renderShallow();
+        ['illegal', 'color values', 'are ignored'].forEach((background) => {
+            el.setProps({ background });
+            expect(el.hasClass(`ffe-grid__row--bg-${background}`)).to.be(false);
+        });
     });
 
     it('renders coloured rows with extra wrappers', () => {
-        const bgColorProps = [
-            'bgBlueCobalt',
-            'bgBlueIce',
-            'bgBluePale',
-            'bgBlueRoyal',
-            'bgGreyCloud',
-            'bgPurpleMagenta',
-            'bgSand',
-        ];
-
-        bgColorProps.forEach((color) => {
+        VALID_BACKGROUND_COLORS.forEach((background) => {
             const el = renderShallow({
-                [color]: true,
+                background,
                 children: <GridCol lg={12}><p>blah</p></GridCol>,
             });
             expect(el.childAt(0).hasClass('ffe-grid__row-wrapper')).to.be(true);
