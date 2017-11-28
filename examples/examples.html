@@ -19,7 +19,10 @@
     <div id="ffedoc">
       <style>
         .ffe-grid__content {
+          align-items: center;
           background-color: #ddd;
+          display: flex;
+          justify-content: center;
           min-height: 20px;
           width: 100%;
         }
@@ -610,6 +613,39 @@
           </div>
         </div>
       </div>
+
+      <div class="demo-section">
+        <h2 class="ffe-h2 ffe-h2--no-margin">Reversed rows</h2>
+      </div>
+
+      <div class="ffe-grid">
+        <div class="ffe-grid__row ffe-grid__row--reverse">
+          <div class="ffe-grid__col--sm-0 ffe-grid__col--md-4">
+            <div class="ffe-grid__content">First column</div>
+          </div>
+          <div class="ffe-grid__col--sm-6 ffe-grid__col--md-4">
+            <div class="ffe-grid__content">Second column</div>
+          </div>
+          <div class="ffe-grid__col--sm-6 ffe-grid__col--md-4">
+            <div class="ffe-grid__content">Third column</div>
+          </div>
+        </div>
+        <div class="ffe-grid__row ffe-grid__row--bg-grey-cloud ffe-grid__row--top-padding ffe-grid__row--reverse">
+          <div class="ffe-grid__row-wrapper">
+              <div class="ffe-grid__col--sm-0 ffe-grid__col--md-4">
+                <div class="ffe-grid__content">First column</div>
+              </div>
+              <div class="ffe-grid__col--sm-6 ffe-grid__col--md-4">
+                  <div class="ffe-grid__content">Second column</div>
+              </div>
+              <div class="ffe-grid__col--sm-6 ffe-grid__col--md-4">
+                  <div class="ffe-grid__content">Third column</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
 
       <div class="demo-section">
         <h2 class="ffe-h2 ffe-h2--no-margin">Disappearing columns example</h2>
