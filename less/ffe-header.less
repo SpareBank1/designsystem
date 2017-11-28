@@ -84,7 +84,7 @@
     }
     
     &__user-icon,
-    &__user-chevron,
+    &__user-chevron-icon,
     &__search-icon,
     &__site-nav-icon {
         fill: @ffe-blue-royal;
@@ -98,16 +98,16 @@
         vertical-align: middle;
     }
 
-    &__user-chevron {
+    &__user-chevron-icon {
         height: 14px;
         width: 14px;
         vertical-align: middle;
         margin-left: 5px;
         transition: transform @ffe-transition-duration @ffe-ease-in-out-back;
+    }
 
-        &--expanded {
-            transform: rotate(180deg);
-        }
+    &__user-chevron--expanded &__user-chevron-icon {
+        transform: rotate(180deg);
     }
 
     &__user-nav-list {
