@@ -26,7 +26,7 @@ render() {
                     <p>This is a column</p>
                 </GridCol>
             </GridRow>
-            <GridRow bgBluePale={true}>
+            <GridRow background="green-mint">
                 <GridCol
                     lg="2"
                     md="2"
@@ -43,6 +43,17 @@ render() {
 To set the number of cols and offset for `lg`, `md` or `sm` displays use the object syntax, for just setting the number of cols you can supply either a string or a number.
 
 All the components aim to support the same modifiers that can be found in [ffe-grid](https://bitbucket.intern.sparebank1.no/projects/FFE/repos/ffe-grid/browse). Modifiers that are snake-cased in `ffe-grid` is supplied with camelCase to the react-components.
+
+Background colors can be set by adding the `background` prop. The following values are valid:
+
+- `blue-cobalt`
+- `blue-ice`
+- `blue-pale`
+- `blue-royal`
+- `green-mint`
+- `grey-cloud`
+- `purple-magenta`
+- `sand`
 
 All components support the 'className' property and can accept a custom element name via the 'element' property if something other than a _div_ should be used.
 
