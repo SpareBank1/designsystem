@@ -25,6 +25,7 @@ class AccordionItem extends Component {
         };
 
         this.onClick = this.onClick.bind(this);
+        this.onClickEnterAndSpace = this.onClickEnterAndSpace.bind(this);
     }
 
     onClick(e) {
@@ -32,6 +33,14 @@ class AccordionItem extends Component {
             return;
         }
         this.toggle();
+    }
+
+    onClickEnterAndSpace(event) {
+        const enterKey = 13;
+        const spaceBar = 32;
+        if ([enterKey, spaceBar].includes(event.keyCode)) {
+            this.onClick(event);
+        }
     }
 
     toggle() {
@@ -89,13 +98,7 @@ class AccordionItem extends Component {
                     className={ createClasses('ffe-accordion-item__toggler', isOpen, type) }
                     id={ `tab-${uuid}-${index}` }
                     onClick={ this.onClick }
-                    onKeyUp={event => {
-                        const enterKey = 13;
-                        const spaceBar = 32;
-                        if (event.keyCode === enterKey || event.keyCode === spaceBar) {
-                            this.onClick(event);
-                        }
-                    }}
+                    onKeyUp={ this.onClickEnterAndSpace }
                     role="tab"
                 >
                     <span className="ffe-accordion-item__toggler-content">
