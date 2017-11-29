@@ -89,6 +89,12 @@ class AccordionItem extends Component {
                     className={ createClasses('ffe-accordion-item__toggler', isOpen, type) }
                     id={ `tab-${uuid}-${index}` }
                     onClick={ this.onClick }
+                    onKeyUp={event => {
+                        const enterKey = 13;
+                        if (event.keyCode === enterKey) {
+                            this.onClick(event);
+                        }
+                    }}
                     role="tab"
                 >
                     <span className="ffe-accordion-item__toggler-content">
