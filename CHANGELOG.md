@@ -1,7 +1,7 @@
 # Changelog
 
 ## v3.1.1
-* Removed button and replaced with div to fix biug in internet explorer
+* Removed button and replaced with div to fix bug in internet explorer
 
 ## v3.1.0
 * Upgraded to react 16. Enzyme to 3.1.1 to support react 16. Added repository to remove warning. 
