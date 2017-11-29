@@ -1,7 +1,10 @@
 # Changelog
 
+## v.5.6.1
+* Make `ffe-grid__col--no-bottom-padding` work again.
+
 ## v.5.6.0
-* Internal rewrite of grid library, reducing size from ~40kb to ~28kb (before gzip). 
+* Internal rewrite of grid library, reducing size from ~40kb to ~28kb (before gzip).
 * The `ffe-grid__col` class is now obsolete, and has been removed. Consumers are encouraged to remove them from their
 own code bases as well.
 
