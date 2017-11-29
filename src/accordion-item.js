@@ -91,7 +91,8 @@ class AccordionItem extends Component {
                     onClick={ this.onClick }
                     onKeyUp={event => {
                         const enterKey = 13;
-                        if (event.keyCode === enterKey) {
+                        const spaceBar = 32;
+                        if (event.keyCode === enterKey || event.keyCode === spaceBar) {
                             this.onClick(event);
                         }
                     }}
