@@ -2,6 +2,12 @@
     background: @ffe-white;
     text-align: center;
 
+    &__search--visible,
+    &__user-nav-list--visible,
+    &__site-nav-list--visible {
+        z-index: 1;
+    }
+
     &__border {
         border-bottom: 1px solid @ffe-grey-silver;
     }
@@ -55,6 +61,12 @@
         list-style: none;
     }
 
+    &__list-item {
+        &--centered {
+            text-align: center;
+        }
+    }
+
     &__logo {
         flex-grow: 1;
         margin: 10px 0;
@@ -80,6 +92,15 @@
             position: absolute;
             left: -4px;
             bottom: -4px;
+        }
+    }
+
+    &__button {
+        &--log-out {
+            border-radius: 22px;
+            color: @ffe-grey-charcoal;
+            display: inline-block;
+            width: auto;
         }
     }
     
@@ -284,13 +305,6 @@
         &__border {
             &:last-child {
                 margin-top: -1px;
-            }
-        }
-
-        &__icon-button {
-            &:active,
-            &:focus {
-                box-shadow: none;
             }
         }
 

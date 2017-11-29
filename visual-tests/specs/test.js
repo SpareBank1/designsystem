@@ -10,7 +10,7 @@ fs.readdirSync('./examples')
           .setCaptureElements('body')
           .capture('plain')
           .capture('user-nav-expanded', (actions, find) => {
-            actions.click(find('.ffe-header__user-button'));
+            actions.click(find('.ffe-header__user-button')).focus('body').wait('1000');
         });
     });
   });

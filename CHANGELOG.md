@@ -1,5 +1,8 @@
 #CHANGELOG
 
+## Version 10.1.0
+* Provide a version of ffe-header without dependencies to other ffe packages.
+
 ## Version 10.0.1
 * JavaScript used in the example supports IE.
 
