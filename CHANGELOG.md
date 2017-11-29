@@ -1,5 +1,8 @@
 # Changelog
 
+## v.5.6.2
+* Make `ffe-grid__col--no-bottom-padding` work for condensed grids also.
+
 ## v.5.6.1
 * Make `ffe-grid__col--no-bottom-padding` work again.
 
