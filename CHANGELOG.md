@@ -1,5 +1,8 @@
 #CHANGELOG
 
+## Version 10.0.1
+* JavaScript used in the example supports IE.
+
 ## Version 10.0.0
 
 ### Breaking changes

@@ -1,21 +1,29 @@
-const toggleUserNav = document.querySelector('.ffe-header__user-button');
-toggleUserNav.onclick = function() {
-    const userNav = document.querySelector('.ffe-header__user-nav-list');
-    const userNavChevron = document.querySelector('.ffe-header__user-chevron');
-    userNav.classList.toggle('ffe-header__user-nav-list--visible');
-    userNavChevron.classList.toggle('ffe-header__user-chevron--expanded');
-};
+(function() {
+    var qs = document.querySelector.bind(document);
 
-const toggleSiteNav = document.querySelector('.ffe-header__site-nav-button');
-toggleSiteNav.onclick = function() {
-    const siteNav = document.querySelector('.ffe-header__site-nav-list');
-    const siteNavBurger = document.querySelector('.ffe-header__site-nav-hamburger');
-    siteNav.classList.toggle('ffe-header__site-nav-list--visible');
-    siteNavBurger.classList.toggle('ffe-header__site-nav-hamburger--expanded');
-};
+    qs('.ffe-header__user-button').onclick = function() {
+        toggleModifier('ffe-header__user-nav-list', 'visible');
+        toggleModifier('ffe-header__user-chevron', 'expanded');
+    };
 
-const toggleSearch = document.querySelector('.ffe-header__search-button');
-toggleSearch.onclick = function() {
-    const searchContainer = document.querySelector('.ffe-header__search');
-    searchContainer.classList.toggle('ffe-header__search--visible');
-};
+    qs('.ffe-header__site-nav-button').onclick = function() {
+        toggleModifier('ffe-header__site-nav-list', 'visible');
+        toggleModifier('ffe-header__site-nav-hamburger', 'expanded');
+    };
+
+    qs('.ffe-header__search-button').onclick = function() {
+        toggleModifier('ffe-header__search', 'visible');
+    };
+
+    function toggleModifier(be, m) {
+        toggleClass(qs('.'+be), be+'--'+m);
+    }
+
+    function toggleClass(el, className) {
+        if (el.className.indexOf(className) == -1) {
+            el.className += ' '+className;
+        } else {
+            el.className = el.className.replace(className, '');
+        }
+    }
+}());
