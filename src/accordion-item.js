@@ -25,6 +25,7 @@ class AccordionItem extends Component {
         };
 
         this.onClick = this.onClick.bind(this);
+        this.onClickEnterAndSpace = this.onClickEnterAndSpace.bind(this);
     }
 
     onClick(e) {
@@ -32,6 +33,14 @@ class AccordionItem extends Component {
             return;
         }
         this.toggle();
+    }
+
+    onClickEnterAndSpace(event) {
+        const enterKey = 13;
+        const spaceBar = 32;
+        if ([enterKey, spaceBar].includes(event.keyCode)) {
+            this.onClick(event);
+        }
     }
 
     toggle() {
@@ -81,15 +90,16 @@ class AccordionItem extends Component {
 
         return (
             <li className={ createClasses('ffe-accordion-item', isOpen, type) }>
-                <button
+                <div
+                    tabIndex={ 0 }
                     aria-controls={ `panel-${uuid}-${index}` }
                     aria-expanded={ isOpen }
                     aria-label={ ariaLabel }
                     className={ createClasses('ffe-accordion-item__toggler', isOpen, type) }
                     id={ `tab-${uuid}-${index}` }
                     onClick={ this.onClick }
+                    onKeyUp={ this.onClickEnterAndSpace }
                     role="tab"
-                    type="button"
                 >
                     <span className="ffe-accordion-item__toggler-content">
                         <span className="ffe-accordion-item__title">
@@ -97,7 +107,7 @@ class AccordionItem extends Component {
                         </span>
                         <Chevron className={ createClasses('ffe-accordion-item__icon', isOpen, type) } />
                     </span>
-                </button>
+                </div>
                 <Collapse
                     hasNestedCollapse={ hasNestedCollapse }
                     isOpened={ isOpen }
