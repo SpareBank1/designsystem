@@ -24,7 +24,7 @@ class Tooltip extends React.Component {
             'aria-label': ariaLabel,
             children,
             className,
-            tabIndex = undefined,
+            tabIndex,
             ...rest
         } = this.props;
 
