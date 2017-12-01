@@ -1,5 +1,8 @@
 # Changelog for ffe-form-react
 
+## v.2.1.1
+* Allow specification of tabIndex for Tooltip, defaults to undefined.
+
 ## v.2.1.0
 * Allow arbitrary React nodes in the `fieldMessage` prop.
 * Correctly set `.ffe-tooltip__icon--active` class on tooltip button when expanded.
