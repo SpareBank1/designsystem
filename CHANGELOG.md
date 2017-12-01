@@ -1,6 +1,6 @@
 # Changelog for ffe-form-react
 
-## v.2.1.1
+## v.2.2.0
 * Allow specification of tabIndex for Tooltip, defaults to undefined.
 
 ## v.2.1.0
