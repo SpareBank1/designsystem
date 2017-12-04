@@ -1,5 +1,8 @@
 # Changelog
 
+## v.5.6.3
+* `ffe-grid__row--reverse` now reverses wrapped elements as well, as is expected.
+
 ## v.5.6.2
 * Make `ffe-grid__col--no-bottom-padding` work for condensed grids also.
 
