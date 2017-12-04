@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## Version 5.1.0
+* The module now complains (in the console and for non-production builds) if `ffe-grid` is used in a way it's not meant to be.
+From [ffe-grid's README](***REMOVED***):
+
+> There should be no more than four columns on small devices and six columns on medium ones.
+> Although it's technically possible, it's not something that's encouraged by the designers.
+
 ## Version 5.0.1
 * Removed now unnecessary class `ffe-grid__col` from markup
 
