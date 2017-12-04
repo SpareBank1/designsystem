@@ -190,6 +190,74 @@ describe('GridCol', () => {
             );
         });
 
+        describe('and checking cols and offset validity', () => {
+            const renderWithModifier = modifier => mount(
+                <Grid>
+                    <GridRow>
+                        <GridCol {...modifier} />
+                    </GridRow>
+                </Grid>
+            );
+
+            it('does not warn about valid columns and offsets for "lg" screens', () => {
+                renderWithModifier({ lg: { cols: 9, offset: 3 }});
+                renderWithModifier({ lg: { cols: 1, offset: 11 }});
+                renderWithModifier({ lg: { cols: 6, offset: 6 }});
+
+                expect(console.error.called).to.be(false);
+            });
+
+            it('does not warn about valid columns and offsets for "md" screens', () => {
+                renderWithModifier({ md: { cols: 6, offset: 4 }});
+                renderWithModifier({ md: { cols: 12, offset: 0 }});
+                renderWithModifier({ md: { cols: 2, offset: 8 }});
+                renderWithModifier({ md: 6 });
+
+                expect(console.error.called).to.be(false);
+            });
+
+            it('does not warn about valid columns and offsets for "sm" screens', () => {
+                renderWithModifier({ sm: { cols: 6, offset: 6 }});
+                renderWithModifier({ sm: { cols: 3, offset: 3 }});
+                renderWithModifier({ sm: { cols: 12, offset: 0 }});
+                renderWithModifier({ sm: 12 });
+
+                expect(console.error.called).to.be(false);
+            });
+
+            it('warns about not sticking to 6 columns on "md" screens for objects', () => {
+                renderWithModifier({ md: { cols: 1, offset: 1 }});
+
+                expect(console.error.calledOnce).to.be(true);
+                expect(console.error.getCall(0).args[0])
+                    .to.contain('The grid should have 6 columns for "md" screens');
+            });
+
+            it('warns about not sticking to 6 columns on "md" screens for numbers', () => {
+                renderWithModifier({ md: 9 });
+
+                expect(console.error.calledOnce).to.be(true);
+                expect(console.error.getCall(0).args[0])
+                    .to.contain('The grid should have 6 columns for "md" screens');
+            });
+
+            it('warns about not sticking to 4 columns on "sm" screens for objects', () => {
+                renderWithModifier({ sm: { cols: 11, offset: 1 }});
+
+                expect(console.error.calledOnce).to.be(true);
+                expect(console.error.getCall(0).args[0])
+                    .to.contain('The grid should have 4 columns for "sm" screens');
+            });
+
+            it('warns about not sticking to 4 columns on "sm" screens for numbers', () => {
+                renderWithModifier({ sm: 5 });
+
+                expect(console.error.calledOnce).to.be(true);
+                expect(console.error.getCall(0).args[0])
+                    .to.contain('The grid should have 4 columns for "sm" screens');
+            });
+        });
+
         afterEach(() => {
             console.error.restore();
         });
