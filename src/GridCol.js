@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { bool, number, oneOfType, shape, string } from 'prop-types';
 import classNames from 'classnames';
 
-import { checkForNestedComponent } from './utils';
+import { checkForNestedComponent, checkValidColumnCount } from './utils';
 
 function camelCaseToDashCase(str) {
     if (!str) {
@@ -56,6 +56,7 @@ export default class GridCol extends Component {
     componentDidMount() {
         if (process.env.NODE_ENV !== 'production') {
             checkForNestedComponent(this.props.children, GridCol);
+            checkValidColumnCount(this.props);
         }
     }
 
