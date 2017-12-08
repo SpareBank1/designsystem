@@ -1,5 +1,9 @@
 # Changelog
 
+## 7.17.0
+
+* Add kr-klokke-ikon.svg
+
 ## 7.16.0
 
 * Add gravemaskin-ikon.svg
