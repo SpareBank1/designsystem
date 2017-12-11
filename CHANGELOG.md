@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.4.19
+
+* Updated ffe-icons to 7.17.0, new icon: `ffe-icons-react/kr-klokke-ikon.svg`
+
 ## 2.4.18
 
 * Updated ffe-icons to 7.16.0 for `ffe-icons-react/gravemaskin-ikon`
