@@ -2,6 +2,11 @@ import React, { cloneElement } from 'react';
 import { node, oneOf } from 'prop-types';
 import uuid from 'uuid';
 
+/**
+ * Internal base component for white and blue accordions.
+ * Should not be used directly, use `WhiteAccordion` or `BlueAccordion`
+ * instead.
+ */
 function Accordion(props) {
     const accordionId = uuid.v4();
     return (
@@ -19,7 +24,12 @@ function Accordion(props) {
 }
 
 Accordion.propTypes = {
+    /** Accordion items */
     children: node.isRequired,
+    /**
+     * Accordion theme - defaults to white . Used internally only.
+     * @ignore
+     **/
     type: oneOf(['blue']),
 };
 

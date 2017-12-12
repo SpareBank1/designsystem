@@ -120,16 +120,31 @@ class AccordionItem extends Component {
 }
 
 AccordionItem.propTypes = {
+    /** A label for the accordion item */
     ariaLabel: string,
+    /** The title content */
     children: node,
+    /** The content shown when an accordion item is expanded */
     expandedContent: node,
+    /** Set to true if there will be nested collapsable elements inside the expandedContent prop */
     hasNestedCollapse: bool,
+    /** List of node names the toggle click handler will ignore */
     ignoredNodeNames: arrayOf(string),
+    /** The index of the accordion item in the current accordion */
     index: number,
+    /** Specifies whether the accordion item is initially open */
     isOpen: bool,
+    /** Callback that fires whenever the accordion item closes */
     onClose: func,
+    /** Callback that fires whenever the accordion item opens */
     onOpen: func,
+    /**
+     * Decides the color and theming of the accordion item, provided by the wrapping <Accordion /> element .
+     * For internal use only
+     * @ignore
+     * */
     type: oneOf(['blue']),
+    /** A unique ID, usually provided by the wrapping <Accordion /> element */
     uuid: string,
 };
 
