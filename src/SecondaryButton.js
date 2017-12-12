@@ -19,5 +19,5 @@ export default function SecondaryButton(props) {
 }
 
 SecondaryButton.propTypes = {
-    children: node
+    children: node,
 };

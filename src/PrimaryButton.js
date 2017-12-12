@@ -3,11 +3,21 @@ import { node } from 'prop-types';
 import Button from './Button';
 
 export default function PrimaryButton(props) {
-    return <Button {...props} buttonType="primary">
-                {props.children}
-            </Button>;
+    const {
+        children,
+        ...rest
+    } = props;
+
+    return (
+        <Button
+            {...rest}
+            buttonType="primary"
+        >
+            {children}
+        </Button>
+    );
 }
 
 PrimaryButton.propTypes = {
-    children: node
+    children: node,
 };

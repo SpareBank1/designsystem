@@ -4,12 +4,14 @@ import ChevronIcon from 'ffe-icons-react/chevron-ikon';
 import Button from './Button';
 
 export default function ShortcutButton(props) {
-    const children = props.label ? props.label : props.children;
+    const {
+        children,
+        ...rest
+    } = props;
 
     return (
         <Button
-            {...props}
-            label={null}
+            {...rest}
             buttonType="shortcut"
             rightIcon={<ChevronIcon className="ffe-shortcut-button__icon-chevron" />}
         >
@@ -19,6 +21,5 @@ export default function ShortcutButton(props) {
 }
 
 ShortcutButton.propTypes = {
-    children: node,
-    label: string
+    children: node
 };
