@@ -1,6 +1,6 @@
 import React from 'react';
 import {render} from 'react-dom';
-import Checkbox from '../src/checkbox';
+import Checkbox from '../src/Checkbox';
 
 require('./example.less');
 

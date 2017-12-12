@@ -1,8 +1,7 @@
 import React from 'react';
 import {
-    array,
     bool,
-    func,
+    node,
     string,
 } from 'prop-types';
 import hash from 'nfe-hash';
@@ -11,10 +10,10 @@ import classNames from 'classnames';
 export default function CheckBox(props) {
     const {
         children,
-        label,
-        noMargins,
         inline,
         invalid,
+        label,
+        noMargins,
         ...rest
     } = props;
 
@@ -26,7 +25,7 @@ export default function CheckBox(props) {
                 className="ffe-hidden-checkbox"
                 id={id}
                 type="checkbox"
-                aria-invalid={String(!!invalid)}
+                aria-invalid={String(invalid)}
                 {...rest}
             />
             <label
@@ -43,19 +42,28 @@ export default function CheckBox(props) {
 }
 
 CheckBox.propTypes = {
+    /** Name of input field */
     name: string.isRequired,
-    label: string.isRequired,
-    onChange: func,
-    checked: bool,
+    /**
+     * @deprecated
+     * Use `children` instead
+     */
+    label: string,
+    /** Removes vertical margins from the checkbox */
     noMargins: bool,
+    /** Override the automatically generated ID */
     id: string,
     inline: bool,
+    /**
+     * @deprecated
+     * Use `aria-invalid` directly instead
+     */
     invalid: bool,
-    children: array,
+    /** The label for the checkbox */
+    children: node,
 };
 
 CheckBox.defaultProps = {
-    noMargins: false,
     inline: true,
-    invalid: false
+    invalid: false,
 };
