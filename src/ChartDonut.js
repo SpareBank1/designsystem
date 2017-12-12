@@ -94,9 +94,13 @@ function ChartDonut({ name, percentage, firstLabel, lastLabel }) {
 }
 
 ChartDonut.propTypes = {
+    /** Short text labeling left value, like "empty", "said yes" etc */
     firstLabel: string.isRequired,
+    /** Short text labeling right value, like "full", "said no" etc */
     lastLabel: string.isRequired,
+    /** Short text labeling the graph in total, like "percentage", "voted this year" etc */
     name: string.isRequired,
+    /** The percentage for the right-most value */
     percentage: number.isRequired,
 };
 
