@@ -60,6 +60,6 @@ describe('<Tooltip>', () => {
 
     it('should have a tabIndex if specified', () => {
         const component = shallow(<Tooltip tabIndex={-1}>Tooltip text</Tooltip>);
-        expect(component.find('button')).to.not.have.property('tabIndex').equal(-1);
+        expect(component.find('button')).to.have.prop('tabIndex', -1);
     });
 });
