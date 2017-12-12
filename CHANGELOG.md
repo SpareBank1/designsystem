@@ -1,5 +1,8 @@
 # Changelog
 
+## v6.1.3
+* Some housekeeping: documentation and refactoring of the button components.
+
 ## v6.1.2
 * Possible to use extra classes with Tertiary-button with icon
 

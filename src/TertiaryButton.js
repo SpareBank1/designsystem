@@ -7,6 +7,7 @@ export default function TertiaryButton(props) {
     const {
         leftIcon,
         className,
+        children,
         ...rest
     } = props;
 
@@ -20,12 +21,14 @@ export default function TertiaryButton(props) {
                 { 'ffe-tertiary-button--with-icon': leftIcon }
             )}
             simpleContent={!leftIcon}
-        />
+        >
+            {children}
+        </Button>
     );
 }
 
 TertiaryButton.propTypes = {
     className: string,
     children: node,
-    leftIcon: element
+    leftIcon: node,
 };
