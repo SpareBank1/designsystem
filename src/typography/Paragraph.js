@@ -33,8 +33,12 @@ export default function Paragraph(props) {
 Paragraph.propTypes = {
     children: node.isRequired,
     className: string,
+    /** Makes this paragraph a lead paragraph, typically used directly below a heading. */
     lead: bool,
+    /** Makes this paragraph a sub-lead paragraph, typically used directly below a lead paragraph. */
     subLead: bool,
+    /** Use if text alignment should override that of its container. */
     textCenter: bool,
+    /** Use if text alignment should override that of its container. */
     textLeft: bool,
 };
