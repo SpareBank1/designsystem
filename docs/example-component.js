@@ -1,12 +1,11 @@
-import Checkbox from '../src/checkbox';
 import React from 'react';
+import Checkbox from '../src/Checkbox';
 
 export const MainExample = (
     <Checkbox
         checked={false}
         name="Yellow"
         label="Yellow"
-        onChange={ () => {} }
     />
 );
 
