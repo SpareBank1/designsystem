@@ -19,25 +19,4 @@ should be in your CSS Object Model when using this component:
 
 ## Usage
 
-```javascript
-import Checkbox from 'ffe-checkbox-react';
-
-<Checkbox
-        onChange={ function }
-        checked={ boolean }
-        name={ string }
-        label={ string }
-        invalid={ boolean }
-        noMargins={ boolean } // disables top- and bottom margins, useful for use in tables etc
-/>
-```
-
-If you need a more complex description, use `children`:
-
-```
-<Checkbox>
-    <Icon />
-    Some text
-    <AnotherIcon />
-</Checkbox>
-```
+For how and when to use this component, please refer to [the documentation](src/Checkbox.md).
