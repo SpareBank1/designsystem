@@ -10,18 +10,18 @@ import {
     ContextSuccessMessage,
     ContextTipMessage,
 } from '../';
-import Base from '../base';
+import ContextMessage from '../ContextMessage';
 
 
-describe('Test Base', () => {
+describe('<ContextMessage />', () => {
     let wrapper;
     let element;
 
     beforeEach(() => {
         element = (
-            <Base messageType="tip">
+            <ContextMessage messageType="tip">
                 <p>content</p>
-            </Base>
+            </ContextMessage>
         );
         wrapper = mount(element);
     });
@@ -69,8 +69,8 @@ describe('Test Base', () => {
 
     it('renders without close button by default', (done) => {
         wrapper = mount(cloneElement(element));
-        expect(wrapper.find('.ffe-context-message-content__close-button-svg').isEmpty()).to.be(true);
-        expect(wrapper.find('.ffe-context-message-content__close-button').isEmpty()).to.be(true);
+        expect(wrapper.find('.ffe-context-message-content__close-button-svg').exists()).to.be(false);
+        expect(wrapper.find('.ffe-context-message-content__close-button').exists()).to.be(false);
         done();
     });
 
@@ -93,7 +93,7 @@ describe('Test Base', () => {
     });
 });
 
-describe('Test ContextInfoMessage', () => {
+describe('<ContextInfoMessage />', () => {
     const wrapper = mount(
         <ContextInfoMessage
             icon={<InfoCircleIcon />}
@@ -109,7 +109,7 @@ describe('Test ContextInfoMessage', () => {
     });
 });
 
-describe('Test ContextTipMessage', () => {
+describe('<ContextTipMessage />', () => {
     const wrapper = mount(
         <ContextTipMessage
             icon={<InfoCircleIcon />}
@@ -141,7 +141,7 @@ describe('Test ContextSuccessMessage', () => {
     });
 });
 
-describe('Test ContextErrorMessage', () => {
+describe('<ContextErrorMessage />', () => {
     const wrapper = mount(
         <ContextErrorMessage
             icon={<InfoCircleIcon />}
