@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## Version 1.2.1
+* Added documentation for Styleguidist
+
 ## Version 1.2.0
 * Added support for on close callback using onClose prop
 
@@ -27,7 +30,7 @@
 Update version number after build includes examples
 
 ## Version 1.0.0
-Bumped dependency on 
+Bumped dependency on
 * `ffe-core` to `^8.1.0`
 * `ffe-icons-react` to `1.1.1`
 * `ffe-system-message` to `1.0.0`

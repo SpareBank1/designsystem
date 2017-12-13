@@ -3,8 +3,12 @@ import { func, node, number, object, oneOf } from 'prop-types';
 
 import KryssIkon from 'ffe-icons-react/kryss-ikon';
 
-export default class Base extends Component {
-
+/**
+ * Internal base component for creating system messages.
+ * Should not be used directly! Instead, use one of the
+ * proxy components exported from the public API
+ */
+export default class SystemMessage extends Component {
     constructor(props) {
         super(props);
         this.close = this.close.bind(this);
@@ -21,8 +25,6 @@ export default class Base extends Component {
         setTimeout(() => {
             onClose(event);
         }, clickDelayMs + animationLengthMs);
-
-
     }
 
     render() {
@@ -38,7 +40,7 @@ export default class Base extends Component {
             <div
                 className={`ffe-system-message-wrapper ffe-system-message-wrapper--${modifier}`}
                 ref={self => { this._self = self; }}
-                style={{...style, transition: `height ${animationLengthMs / 1000}s`}}
+                style={{ ...style, transition: `height ${animationLengthMs / 1000}s` }}
             >
                 <div
                     className={`
@@ -68,16 +70,24 @@ export default class Base extends Component {
 
 }
 
-Base.propTypes = {
+SystemMessage.propTypes = {
     animationLengthMs: number,
+    /** The content of the system message */
     children: node.isRequired,
+    /** Override the default icon - use with caution! */
     icon: node.isRequired,
+    /**
+     * The type of system message. Used internally only-
+     * @ignore
+     **/
     modifier: oneOf(['error', 'info', 'success', 'news']),
+    /** Callback for when the system message has been closed (after animation ends) */
     onClose: func,
+    /** Optional styles to apply to the outermost element. `transition` will be overridden */
     style: object,
 };
 
-Base.defaultProps = {
+SystemMessage.defaultProps = {
     animationLengthMs: 200,
     onClose: () => {},
 };
