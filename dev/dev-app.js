@@ -4,12 +4,12 @@ import React from 'react';
 import InfoIcon from 'ffe-icons-react/info-ikon';
 import ShowerIcon from 'ffe-icons-react/badekar-dusj-ikon';
 import BoatIcon from 'ffe-icons-react/bat-liten-ikon';
-import CatchCircleIcon from 'ffe-icons-react/hake-sirkel-ikon';
 import { render } from 'react-dom';
 import {
     ContextInfoMessage,
     ContextTipMessage,
     ContextSuccessMessage,
+    ContextErrorMessage,
 } from '../src';
 
 render(
@@ -35,7 +35,7 @@ render(
             </ContextTipMessage>
         </div>
         <div style={{ margin: '25px 0' }}>
-            <ContextTipMessage
+            <ContextSuccessMessage
                 locale='en'
                 showCloseButton={true}
                 icon={<ShowerIcon/>}
@@ -43,11 +43,11 @@ render(
                 Vekommen til betaversjonen av nye Sparebank1.no.
                 Vekommen til betaversjonen av nye Sparebank1.no.
                 Vekommen til betaversjonen av nye Sparebank1.no.
-            </ContextTipMessage>
+            </ContextSuccessMessage>
         </div>
 
         <div style={{ margin: '25px 0' }}>
-            <ContextTipMessage
+            <ContextErrorMessage
                 locale='en'
                 showCloseButton={true}
                 icon={<BoatIcon/>}
@@ -55,19 +55,7 @@ render(
                 Vekommen til betaversjonen av nye Sparebank1.no.
                 Vekommen til betaversjonen av nye Sparebank1.no.
                 Vekommen til betaversjonen av nye Sparebank1.no.
-            </ContextTipMessage>
-        </div>
-
-        <div style={{ margin: '25px 0' }}>
-            <ContextSuccessMessage
-                locale='en'
-                showCloseButton={true}
-                icon={<CatchCircleIcon/>}
-            >
-                Vekommen til betaversjonen av nye Sparebank1.no.
-                Vekommen til betaversjonen av nye Sparebank1.no.
-                Vekommen til betaversjonen av nye Sparebank1.no.
-            </ContextSuccessMessage>
+            </ContextErrorMessage>
         </div>
     </div>,
     document.getElementById('root')

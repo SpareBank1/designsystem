@@ -9,12 +9,19 @@ import {
     func,
     object
 } from 'prop-types';
+import classNames from 'classnames';
 import CloseIcon from 'ffe-icons-react/kryss-ikon';
 
 import acceptedLocales from './locale/accepted-locales';
 import texts from './locale/texts';
 
-export default class Base extends Component {
+/**
+ * Base component for all four types of context messages.
+ *
+ * *Should never be used directly!*
+ * Please use one of the four versions exported from this package.
+ */
+export default class ContextMessage extends Component {
     constructor() {
         super();
         this.close = this.close.bind(this);
@@ -71,11 +78,12 @@ export default class Base extends Component {
             <div
                 aria-describedby={contentElementId}
                 aria-labelledby={headerElementId}
-                className={
-                    `ffe-context-message ffe-context-message--${messageType}`
-                        + `${compact ? ' ffe-context-message--compact' : ''}`
-                        + `${className ? ` ${className}` : ''}`
-                }
+                className={classNames(
+                    'ffe-context-message',
+                    `ffe-context-message--${messageType}`,
+                    { 'ffe-context-message--compact': compact },
+                    className
+                )}
                 ref={(_self) => { this._self = _self; }}
                 style={{ ...style, transition: `height ${animationLengthMs / 1000}s` }}
             >
@@ -107,23 +115,32 @@ export default class Base extends Component {
     }
 }
 
-Base.propTypes = {
+ContextMessage.propTypes = {
     animationLengthMs: number,
+    /** The content shown in the context box */
     children: node.isRequired,
+    /** Classes are added in addition to the relevant context message classes */
     className: string,
+    /** Renders a more compact version of the context message */
     compact: bool,
+    /** ID for the children container */
     contentElementId: string,
     header: string,
+    /** ID for the header container */
     headerElementId: string,
     icon: element,
+    /** Decides the language of the aria-label for the close icon */
     locale: oneOf(acceptedLocales),
+    /** Provided by the wrapper component */
     messageType: oneOf(['info', 'tip', 'success', 'error']).isRequired,
+    /** Callback for when the context message has been closed (after the animation) */
     onClose: func,
     showCloseButton: bool,
+    /** Styles applied to the outermost element. `height` will be overridden */
     style: object,
 };
 
-Base.defaultProps = {
+ContextMessage.defaultProps = {
     animationLengthMs: 300,
     compact: false,
     contentElementId: 'contentElementId',
