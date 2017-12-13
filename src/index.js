@@ -1,7 +1,7 @@
-import ContextInfoMessage from './context-info-message';
-import ContextTipMessage from './context-tip-message';
-import ContextSuccessMessage from './context-success-message';
-import ContextErrorMessage from './context-error-message';
+import ContextInfoMessage from './ContextInfoMessage';
+import ContextTipMessage from './ContextTipMessage';
+import ContextSuccessMessage from './ContextSuccessMessage';
+import ContextErrorMessage from './ContextErrorMessage';
 
 export {
     ContextInfoMessage,

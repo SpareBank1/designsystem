@@ -1,9 +1,24 @@
 # CHANGELOG
 
+## 2.3.3
+
+### 🏠 Improvements
+
+* Improve documentation
+
+### 🐛 Bugfixes
+
+* Fix some deprecation warnings
+
 ## 2.3.2
+
+### 🏠 Improvements
+
 * Use PropTypes from prop-types package
 
 ## 2.3.1
+
+### 🏠 Improvements
 
 * Expand peerDep scope of `ffe-context-message` to include `2.x`.
 * Remove peerDep on `ffe-core`, `ffe-icons-react`, `react` and `react-dom`.

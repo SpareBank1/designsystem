@@ -1,7 +1,7 @@
 {
   "name": "ffe-context-message-react",
-  "version": "2.3.2",
-  "description": "SpareBank 1 System Message komponent",
+  "version": "2.3.3",
+  "description": "React implementation of ffe-context-message component",
   "main": "lib/index.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=src/test/ src/. && npm run example",
@@ -23,6 +23,7 @@
   },
   "author": "SpareBank 1",
   "dependencies": {
+    "classnames": "^2.2.5",
     "prop-types": "*"
   },
   "peerDependencies": {
