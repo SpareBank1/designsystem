@@ -3,13 +3,13 @@ import { expect } from 'chai';
 import { shallow, mount } from 'enzyme';
 import { spy } from 'sinon';
 import React from 'react';
-import DateInput from '../dateinput/ffe-dateinput';
-import Calendar from '../calendar/ffe-calendar';
-import Datepicker from './ffe-datepicker';
+import DateInput from '../input';
+import Calendar from '../calendar';
+import Datepicker from './Datepicker';
 import i18n from '../i18n/i18n';
 import ErrorTypes from '../datelogic/error-types';
 
-describe('<FFEDatepicker />', () => {
+describe('<Datepicker />', () => {
 
   const errorClass = '.ffe-field-error-message';
 

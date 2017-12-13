@@ -3,7 +3,7 @@ import { bool, func, oneOfType, string, shape } from 'prop-types';
 import classNames from 'classnames';
 import KalenderIkon from 'ffe-icons-react/kalender-ikon';
 
-export default class FFEDateInput extends Component {
+export default class Input extends Component {
 
   focus() {
     this._input.focus();
@@ -49,7 +49,7 @@ export default class FFEDateInput extends Component {
   }
 }
 
-FFEDateInput.propTypes = {
+Input.propTypes = {
   'aria-invalid': string,
   ariaInvalid: oneOfType([bool, string]),
   inputProps: shape({

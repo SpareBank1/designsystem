@@ -4,7 +4,7 @@ import { shallow } from 'enzyme';
 import { expect } from 'chai';
 import sinon from 'sinon';
 import React from 'react';
-import FFEDateInput from './ffe-dateinput';
+import Input from './Input';
 
 const defaultProps = {
   inputProps:{ className: 'given-class-name', placeholder: 'Given placeholder' },
@@ -15,9 +15,9 @@ const defaultProps = {
   'aria-invalid': 'false',
 };
 
-const getWrapper = props => shallow(<FFEDateInput {...defaultProps} {...props} />);
+const getWrapper = props => shallow(<Input {...defaultProps} {...props} />);
 
-describe('<FFEDateInput />', () => {
+describe('<Input />', () => {
   it('should render a wrapper for the input field', () => {
     const wrapper = getWrapper();
     expect(wrapper.hasClass('ffe-dateinput')).to.equal(true);
