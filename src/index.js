@@ -1,4 +1,4 @@
-import FileUpload from './file-upload';
+import FileUpload from './FileUpload';
 
 export { getFileContent } from './file-content';
 
