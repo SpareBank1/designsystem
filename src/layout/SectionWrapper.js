@@ -2,6 +2,9 @@ import React from 'react';
 import { bool, node, string } from 'prop-types';
 import classNames from 'classnames';
 
+/**
+ * Consider using ffe-grid-react instead for greater flexibility.
+ */
 export default function SectionWrapper(props) {
     const {
         bgBlue,
