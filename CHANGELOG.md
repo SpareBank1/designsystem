@@ -6,6 +6,7 @@
 
 * The `ExpandButton` component gets a React implementation. Consumers are in charge of reacting to clicks and
 controlling state.
+* `ActionButton` now has a boolean prop `ghost` to toggle the `--ghost` modifier
 
 ### 🏠 Housekeeping
 
