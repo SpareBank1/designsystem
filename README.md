@@ -19,14 +19,29 @@ import Tab from 'ffe-tabs-react';
 ```
 
 ```
-<Tab condensed={true} ghost={true} selected={true}>
-  Dette er en kompakt (condensed) tab med transparent (ghost) bakgrunn, som er valgt
-</Tab>
+<TabGroup>
+  <Tab>
+    Dette er en tab
+  </Tab>
+
+  <Tab condensed={true} ghost={true} selected={true} onClick={() => { alert('Hei'); }}>
+    Dette er en kompakt (condensed) tab med transparent (ghost) bakgrunn, som er valgt og sier Hei på klikk
+  </Tab>
+</TabGroup>
+```
+
+### Supported props
+
+```
+children: node,
+selected: bool,
+ghost: bool,
+condensed: bool
 ```
 
 ## Test
 
-To view live examples, run `npm start`
+For å starte en testserver med live eksempler, kjør `npm start`
 
 # Local
 
