@@ -82,7 +82,10 @@ export default function Button(props) {
 }
 
 Button.propTypes = {
-    /** Value for the attribute `data-action` */
+    /**
+     * @deprecated
+     * Set `data-action` directly instead.
+     */
     action: string,
     ariaLoadingMessage: string,
     buttonRef: func,
@@ -101,6 +104,11 @@ Button.propTypes = {
     /** Sets the `disabled` and `aria-disabled` attributes. */
     disableButton: bool,
     isLoading: bool,
+    /**
+     * @deprecated
+     * A button should in almost all cases be tabbable.
+     * If you for some reason need it not to be, set tabIndex={-1} yourself.
+     */
     isTabbable: bool,
     /**
      * @deprecated
@@ -115,7 +123,7 @@ Button.propTypes = {
      */
     rightIcon: node,
     /**
-     * @deprecated
+     * @ignore
      * Used internally by the different components in order to not render needless stuff for e.g. tertiary button.
      */
     simpleContent: bool.isRequired,
