@@ -52,4 +52,14 @@ describe('<Tooltip>', () => {
         component.find('button').simulate('click');
         expect(component.find('button')).to.have.className('ffe-tooltip__icon--active');
     });
+
+    it('should not have a tabIndex unless otherwise specified', () => {
+        const component = shallow(<Tooltip>Tooltip text</Tooltip>);
+        expect(component.find('button')).to.not.have.property('tabIndex');
+    });
+
+    it('should have a tabIndex if specified', () => {
+        const component = shallow(<Tooltip tabIndex={-1}>Tooltip text</Tooltip>);
+        expect(component.find('button')).to.have.prop('tabIndex', -1);
+    });
 });

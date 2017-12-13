@@ -1,5 +1,5 @@
 import React from 'react';
-import { bool, func, node, string } from 'prop-types';
+import { bool, func, node, string, number } from 'prop-types';
 import classNames from 'classnames';
 import { Collapse } from 'react-collapse';
 
@@ -24,6 +24,7 @@ class Tooltip extends React.Component {
             'aria-label': ariaLabel,
             children,
             className,
+            tabIndex,
             ...rest
         } = this.props;
 
@@ -39,6 +40,7 @@ class Tooltip extends React.Component {
                     )}
                     onClick={ this.onToggle }
                     type="button"
+                    tabIndex={tabIndex}
                 >
                     ?
                 </button>
@@ -66,6 +68,7 @@ Tooltip.propTypes = {
     className: string,
     isOpen: bool,
     onClick: func,
+    tabIndex: number,
 };
 
 export default Tooltip;
