@@ -1,5 +1,10 @@
 # Changelog
 
+# 4.4.5
+* Added inline JSDoc comments
+* `label` prop is no longer required
+* Deprecated two props - `invalid` and `label` - both are to be removed in 5.0.0
+
 # 4.4.4
 * Bugfix: If the `<Checkbox>` was given an id as a prop, the connection between label and input was broken
 because the input would be given the provided id while the label would be given the internal generated id.
