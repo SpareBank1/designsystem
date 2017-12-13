@@ -26,7 +26,9 @@ const Input = ({
 
 Input.propTypes = {
     className: string,
+    /** Input fields default to `display: block;`. Set this to `true` to apply the inline modifier. */
     inline: bool,
+    /** Apply the text-like modifier by setting this to `true`. */
     textLike: bool
 };
 

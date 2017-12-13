@@ -64,10 +64,14 @@ class Tooltip extends React.Component {
 
 Tooltip.propTypes = {
     'aria-label': string,
+    /** The children are rendered in the expanded tooltip. */
     children: node,
+    /** The className is set on the root node of the expanded tooltip. */
     className: string,
     isOpen: bool,
+    /** Optional listener for clicks on the tooltip button. Is passed the event object. */
     onClick: func,
+    /** Sets the tabIndex of the tooltip button. */
     tabIndex: number,
 };
 

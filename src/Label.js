@@ -6,7 +6,6 @@ const Label = ({
     block,
     children,
     className,
-    htmlFor,
     ...rest
 }) => (
     <label
@@ -15,7 +14,6 @@ const Label = ({
             { 'ffe-form-label--block': block },
             className
         )}
-        htmlFor={ htmlFor }
         { ...rest }
     >
         { children }
@@ -23,10 +21,13 @@ const Label = ({
 );
 
 Label.propTypes = {
+    /**
+     * Labels default to `display: inline-block;` to have tooltips appear immediately to the right.
+     * Set this to `true` if you don't use tooltips and need the label to be `display: block;`.
+     */
     block: bool,
     children: node.isRequired,
     className: string,
-    htmlFor: string,
 };
 
 export default Label;
