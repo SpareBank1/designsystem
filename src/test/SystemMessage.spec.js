@@ -4,18 +4,19 @@ import {
     SystemErrorMessage,
     SystemInfoMessage,
     SystemSuccessMessage,
+    SystemNewsMessage,
 } from '../';
-import Base from '../base';
-import sinon from "sinon";
+import SystemMessage from '../SystemMessage';
+import sinon from 'sinon';
 
-describe('when rendering', () => {
+describe('<SystemMessage />', () => {
     let wrapper;
 
     beforeEach(() => {
         wrapper = mount(
-            <Base>
+            <SystemMessage>
                 Blå sjiraff
-            </Base>
+            </SystemMessage>
         );
     });
 
@@ -35,8 +36,8 @@ describe('when rendering', () => {
     });
 
     it('should accept style prop to apply styles to outermost container', () => {
-        const $ = shallow(<Base style={{ marginTop: '40px' }} />);
-        expect($.props().style.marginTop).to.be('40px');
+        const el = shallow(<SystemMessage style={{ marginTop: '40px' }} />);
+        expect(el.props().style.marginTop).to.be('40px');
     });
 
     it('should execute onClose prop when close button is clicked', done => {
@@ -92,5 +93,15 @@ describe('for different types of message', () => {
         );
         const message = wrapper.find('.ffe-system-message-wrapper');
         expect(message.hasClass('ffe-system-message-wrapper--success')).to.be(true);
+    });
+
+    it('create news-message', () => {
+        wrapper = mount(
+            <SystemNewsMessage>
+                Nyhetsmelding
+            </SystemNewsMessage>
+        );
+        const message = wrapper.find('.ffe-system-message-wrapper');
+        expect(message.hasClass('ffe-system-message-wrapper--news')).to.be(true);
     });
 });

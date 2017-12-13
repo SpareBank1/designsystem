@@ -1,6 +1,6 @@
 {
   "name": "ffe-system-message-react",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "SpareBank 1 System Message komponent",
   "main": "lib/index.js",
   "scripts": {
@@ -10,6 +10,7 @@
     "ffe:fonts": "mkdirp dev/ffe/fonts && cp node_modules/ffe-core/fonts/* dev/ffe/fonts",
     "lint": "eslint src/",
     "lint:fix": "eslint --fix src/",
+    "start": "npm run dev",
     "test": "cross-env NODE_ENV=test mocha -G --compilers js:babel-core/register --require src/test/setup.js --recursive src/test",
     "tdd": "npm test -- --watch",
     "validate": "npm ls",

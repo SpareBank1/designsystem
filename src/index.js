@@ -1,7 +1,7 @@
-import SystemErrorMessage from './system-error-message';
-import SystemInfoMessage from './system-info-message';
-import SystemNewsMessage from './system-news-message';
-import SystemSuccessMessage from './system-success-message';
+import SystemErrorMessage from './SystemErrorMessage';
+import SystemInfoMessage from './SystemInfoMessage';
+import SystemNewsMessage from './SystemNewsMessage';
+import SystemSuccessMessage from './SystemSuccessMessage';
 
 export {
     SystemErrorMessage,
