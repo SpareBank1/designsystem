@@ -1,5 +1,10 @@
 # Changelog
 
+## v4.9.2
+
+* Added documentation and refactored slightly.
+* Added missing prop types for documented props
+
 ## v4.9.1
 
 * Fixed prop type of `caption` from `string` to `node` to allow rendering React components.
@@ -10,7 +15,7 @@ This was always intended based on `README.md`.
 ## v4.9.0
 
 * Improve performance of table row rendering/sorting by utilizing an optional `id` property on each row object.
-* The `id` property also fixes a bug where updating table rows (i.e pagination) didn't cause an unmount/mount of the new rows. 
+* The `id` property also fixes a bug where updating table rows (i.e pagination) didn't cause an unmount/mount of the new rows.
 
 ## v4.8.0
 
