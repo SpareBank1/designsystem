@@ -1,5 +1,8 @@
 # Changelog
 
+## v6.1.2
+* Possible to use extra classes with Tertiary-button with icon
+
 ## v6.1.1
 * Now possible to use leftIcon with Tertiary-button
 
