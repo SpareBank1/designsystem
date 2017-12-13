@@ -9,13 +9,24 @@ $ npm install --save ffe-tabs-react
 ## Usage
 
 ```javascript
-import ffeTabsReact from 'ffe-tabs-react';
+import Tab from 'ffe-tabs-react';
+```
 
-ffeTabsReact('ffe-component');
-//=> 'hello ffe-component'
+```
+<Tab>
+  Dette er en tab
+</Tab>
+```
+
+```
+<Tab condensed={true} ghost={true} selected={true}>
+  Dette er en kompakt (condensed) tab med transparent (ghost) bakgrunn, som er valgt
+</Tab>
 ```
 
 ## Test
+
+To view live examples, run `npm start`
 
 # Local
 
