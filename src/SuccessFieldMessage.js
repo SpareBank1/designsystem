@@ -11,8 +11,4 @@ const SuccessFieldMessage = props => {
     );
 };
 
-SuccessFieldMessage.propTypes = {
-    children: node.isRequired
-};
-
 export default SuccessFieldMessage;
