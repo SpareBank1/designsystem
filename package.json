@@ -6,8 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server",
     "prebuild": "npm run test && npm run test:nsp",
-    "build": "babel -d lib/. --ignore=*.test.jsx src/.",
-    "test": "mocha --require babel-register src/**/*.test.jsx",
+    "build": "babel -d lib/. --ignore=*.test.js src/.",
+    "test": "mocha --require babel-register src/**/*.test.js",
     "test:watch": "npm run test -- --watch",
     "test:nsp": "nsp check"
   },
