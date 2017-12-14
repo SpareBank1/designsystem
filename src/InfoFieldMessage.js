@@ -2,17 +2,13 @@ import React from 'react';
 import { node } from 'prop-types';
 import FieldMessage from './FieldMessage';
 
-const ErrorFieldMessage = props => {
+const InfoFieldMessage = props => {
     return (
         <FieldMessage
             { ...props }
-            type="error"
+            type="info"
         />
     );
 };
 
-ErrorFieldMessage.propTypes = {
-    children: node.isRequired
-};
-
-export default ErrorFieldMessage;
+export default InfoFieldMessage;

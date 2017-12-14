@@ -83,11 +83,15 @@ class InputGroup extends Component {
 const instanceOfComponent = component => shape({ type: oneOf([ component ])});
 
 InputGroup.propTypes = {
+    /** Unless you only have one element in your `InputGroup` you will have to use the function-as-a-child pattern. */
     children: oneOfType([ func, node ]).isRequired,
     className: string,
+    /** Use the ErrorFieldMessage component if you need more flexibility in how the content is rendered. */
     fieldMessage: oneOfType([string, node]),
+    /** Use the Label component if you need more flexibility in how the content is rendered. */
     label: oneOfType([ string, instanceOfComponent(Label) ]),
     onTooltipToggle: func,
+    /** Use the Tooltip component if you need more flexibility in how the content is rendered. */
     tooltip: oneOfType([ bool, string, instanceOfComponent(Tooltip) ])
 };
 

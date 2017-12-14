@@ -4,10 +4,10 @@ module.exports = {
     devtool: 'cheap-module-source-map',
     entry: [
         'webpack-dev-server/client?http://localhost:8080',
-        './docs/index.jsx'
+        './docs/index.js'
     ],
     resolve: {
-        extensions: ['.js', '.jsx']
+        extensions: ['.js']
     },
     output: {
         path: path.join(__dirname, 'temp'),
@@ -17,12 +17,12 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.jsx?/,
+                test: /\.js/,
                 loader: 'eslint-loader',
                 enforce: 'pre',
                 exclude: /node_modules/
             }, {
-                test: /\.jsx?/,
+                test: /\.js/,
                 loader: 'babel-loader',
                 exclude: /node_modules/,
                 options: {
