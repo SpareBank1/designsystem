@@ -1,5 +1,5 @@
 import React from 'react';
-import { node, element, string } from 'prop-types';
+import { node, string } from 'prop-types';
 import classNames from 'classnames';
 import Button from './Button';
 
@@ -7,6 +7,7 @@ export default function TertiaryButton(props) {
     const {
         leftIcon,
         className,
+        children,
         ...rest
     } = props;
 
@@ -20,12 +21,14 @@ export default function TertiaryButton(props) {
                 { 'ffe-tertiary-button--with-icon': leftIcon }
             )}
             simpleContent={!leftIcon}
-        />
+        >
+            {children}
+        </Button>
     );
 }
 
 TertiaryButton.propTypes = {
     className: string,
     children: node,
-    leftIcon: element
+    leftIcon: node,
 };

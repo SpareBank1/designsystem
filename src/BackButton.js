@@ -3,11 +3,24 @@ import { node } from 'prop-types';
 import Button from './Button';
 
 export default function BackButton(props) {
-    return <Button {...props} buttonType="back" simpleContent={true}>
-                <span className="ffe-back-button__label">{props.children}</span>
-            </Button>;
+    const {
+        children,
+        ...rest
+    } = props;
+
+    return (
+        <Button
+            {...rest}
+            buttonType="back"
+            simpleContent={true}
+        >
+            <span className="ffe-back-button__label">
+                {children}
+            </span>
+        </Button>
+    );
 }
 
 BackButton.propTypes = {
-    children: node
+    children: node,
 };
