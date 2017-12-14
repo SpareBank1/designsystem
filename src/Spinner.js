@@ -1,5 +1,5 @@
 import React from 'react';
-import { bool, node } from 'prop-types'
+import { bool, node } from 'prop-types';
 
 const Spinner = ({ text, children, large = false, center = true }) => (
     <div className={ `ffe-content-container ${ !center ? 'ffe-content-container--text-left' : '' }` }>

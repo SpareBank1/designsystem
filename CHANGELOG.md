@@ -1,6 +1,6 @@
 # Changelog
 
-## v.2.0.3
+## v.2.0.4
 * Document and refactor internally.
 * Deprecate `text` prop in favor of `children`
 
