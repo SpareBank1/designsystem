@@ -1,0 +1,38 @@
+{
+  "name": "ffe",
+  "version": "1.0.0",
+  "description": "Felles Front End",
+  "scripts": {
+    "lerna": "lerna",
+    "lerna:bootstrap": "lerna bootstrap",
+    "lerna:publish": "lerna publish --yes",
+    "lerna:clean": "lerna clean --yes",
+    "styleguidist": "styleguidist start",
+    "styleguidist:build": "styleguidist build",
+    "build:css": "lessc packages/ffe-all.less dist/ffe.css",
+    "lint": "lerna run lint",
+    "test": "lerna run test",
+    "commitmsg": "commitlint -e $GIT_PARAMS"
+  },
+  "author": "SpareBank 1",
+  "license": "TBA",
+  "devDependencies": {
+    "@commitlint/cli": "^4.3.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "css-loader": "^0.28.7",
+    "html-reporter": "^1.0.0",
+    "husky": "^0.14.3",
+    "lerna": "^2.4.0",
+    "less": "^2.7.3",
+    "less-plugin-autoprefix": "^1.5.1",
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1",
+    "react-styleguidist": "^6.0.32",
+    "webpack": "^3.8.1"
+  }
+}
