@@ -1,5 +1,4 @@
 import React from 'react';
-import { node, string } from 'prop-types';
 import ChevronIcon from 'ffe-icons-react/chevron-ikon';
 import Button from './Button';
 

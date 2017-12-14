@@ -1,3 +1,12 @@
 {
-  "extends": "ffe"
+  "extends": "ffe",
+  "parser": "babel-eslint",
+  "overrides": [
+    {
+      "files": [ "src/*.test.js"],
+      "rules": {
+        "no-unused-expressions": 0
+      }
+    }
+  ]
 }

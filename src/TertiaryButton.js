@@ -1,5 +1,5 @@
 import React from 'react';
-import { node, element, string } from 'prop-types';
+import { node, string } from 'prop-types';
 import classNames from 'classnames';
 import Button from './Button';
 
