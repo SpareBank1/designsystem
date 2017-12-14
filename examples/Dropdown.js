@@ -1,6 +1,6 @@
 import React from 'react';
 import {render} from 'react-dom';
-import Dropdown from '../src/dropdown';
+import Dropdown from '../src/Dropdown';
 
 require('./example.less');
 

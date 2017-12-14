@@ -3,7 +3,7 @@ import sinon from 'sinon';
 import { shallow } from 'enzyme';
 import { assert } from 'chai';
 import React from 'react';
-import Dropdown from './dropdown';
+import Dropdown from './Dropdown';
 import createDropdown, { Example } from '../docs/example-component';
 
 describe('<Dropdown />', () => {
@@ -186,7 +186,7 @@ describe('<DropDown /> should default to tabbable if not specified', () => {
         <option value="steve">Steve Vai</option>
         <option value="mateus">Mateus Asato</option>
     </Dropdown>;
-    
+
     const wrapper = shallow(dropdown);
     assert.equal(undefined, wrapper.find('select').prop('tabIndex'));
 });
@@ -196,7 +196,7 @@ describe('<DropDown /> should not be tabbable if specified', () => {
         <option value="steve">Steve Vai</option>
         <option value="mateus">Mateus Asato</option>
     </Dropdown>;
-    
+
     const wrapper = shallow(dropdown);
     assert.equal(-1, wrapper.find('select').prop('tabIndex'));
 });

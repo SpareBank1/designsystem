@@ -1,7 +1,7 @@
 {
   "name": "ffe-dropdown-react",
   "version": "2.9.2",
-  "main": "lib/dropdown.js",
+  "main": "lib/Dropdown.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/. && npm run example",
     "lint": "eslint src/.",

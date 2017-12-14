@@ -1,4 +1,4 @@
-import Dropdown from '../lib/dropdown';
+import Dropdown from '../lib/Dropdown';
 import React, { cloneElement } from 'react';
 
 export const Example = (
