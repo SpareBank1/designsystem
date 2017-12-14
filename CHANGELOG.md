@@ -1,6 +1,10 @@
 # Changelog
 
 ## v.2.0.3
+* Document and refactor internally.
+* Deprecate `text` prop in favor of `children`
+
+## v.2.0.3
 * Use PropTypes from prop-types package
 
 ## v.2.0.2
