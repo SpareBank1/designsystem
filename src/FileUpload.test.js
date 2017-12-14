@@ -2,7 +2,7 @@ import React from 'react';
 import {assert} from 'chai';
 import sinon from 'sinon';
 import {shallow} from 'enzyme';
-import FileUpload from './file-upload';
+import FileUpload from './FileUpload';
 
 describe('<FileUpload/>', () => {
     let component;

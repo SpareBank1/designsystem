@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import FileUpload from '../src/file-upload.jsx';
+import FileUpload from '../src/FileUpload';
 import { getFileContent } from '../src/file-content';
 import './index.less';
 

@@ -105,12 +105,29 @@ class FileUpload extends React.Component {
 }
 
 FileUpload.propTypes = {
+    /** ID for the input field. The ID is used as a base for the label ID as well. */
     id: stringType.isRequired,
+    /**
+     * Label for the button to trigger native upload handling. The label doubles as the label
+     * for the input field via aria-labelledby.
+     */
     label: stringType.isRequired,
     selectedFiles: array.isRequired,
+    /**
+     * Will be called with `FileList`-object containing the `File`-objects the user selected.
+     * See MDN for documentation on
+     * [FileList](https://developer.mozilla.org/en-US/docs/Web/API/FileList) and
+     * [File](https://developer.mozilla.org/en-US/docs/Web/API/File).
+     */
     onFilesSelected: func.isRequired,
     onFileDeleted: func.isRequired,
     multiple: bool,
+    /**
+     * Sets the `accept` attribute of the input field. Use to limit allowed file types.
+     * Takes a comma-separated list of file extensions or MIME types. See
+     * [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file#Limiting_accepted_file_types)
+     * for more information.
+     */
     accept: stringType,
     selectedFilesHeaderLabel: stringType,
     errorMessage: stringType,

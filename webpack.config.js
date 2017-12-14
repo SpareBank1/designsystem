@@ -3,10 +3,10 @@ var path = require('path');
 module.exports = {
     entry: [
         'webpack-dev-server/client?http://localhost:8080',
-        './docs/index.jsx'
+        './docs/index.js'
     ],
     resolve: {
-        extensions: ['.js', '.jsx'],
+        extensions: ['.js'],
         modules: ['node_modules']
     },
     output: {
@@ -16,7 +16,7 @@ module.exports = {
     },
     module: {
         loaders: [{
-            test: /\.jsx?$/,
+            test: /\.js$/,
             loaders: ['babel-loader', 'eslint-loader'],
             exclude: '/node_modules/'
         }, {
