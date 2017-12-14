@@ -3,14 +3,14 @@ import React, {Component} from 'react';
 import {bool, func, oneOfType, shape, string} from 'prop-types';
 import classNames from 'classnames';
 import uuid from 'uuid';
-import Calendar from '../calendar/ffe-calendar';
+import Calendar from '../calendar';
 import KeyCode from '../util/keyCode';
-import DateInput from '../dateinput/ffe-dateinput';
+import DateInput from '../input';
 import SimpleDate from '../datelogic/simpledate';
 import dateErrorTypes from '../datelogic/error-types';
 import i18n from '../i18n/i18n';
 
-export default class FFEDatepicker extends Component {
+export default class Datepicker extends Component {
 
   constructor(props) {
     super(props);
@@ -302,11 +302,11 @@ export default class FFEDatepicker extends Component {
   }
 }
 
-FFEDatepicker.defaultProps = {
+Datepicker.defaultProps = {
   onValidationComplete: () => {}
 };
 
-FFEDatepicker.propTypes = {
+Datepicker.propTypes = {
   'aria-invalid': string,
   ariaInvalid: oneOfType([bool, string]),
   calendarAbove: bool,

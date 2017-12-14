@@ -3,7 +3,7 @@
 import { shallow } from 'enzyme';
 import { assert } from 'chai';
 import React from 'react';
-import ActiveDate from './activeDate';
+import ActiveDate from './ActiveDate';
 import simpleDate from '../datelogic/simpledate';
 
 describe('<ActiveDate />', () => {
