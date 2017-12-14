@@ -1,0 +1,16 @@
+{
+  "lerna": "2.4.0",
+  "packages": [
+    "packages/*",
+    "linting/*"
+  ],
+  "version": "independent",
+  "hoist": true,
+  "command": {
+    "publish": {
+      "conventionalCommits": true,
+      "allowBranch": "master",
+      "message": "chore(release): publish"
+    }
+  }
+}
