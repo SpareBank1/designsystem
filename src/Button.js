@@ -1,62 +1,73 @@
 import React, { cloneElement } from 'react';
-import {
-    bool,
-    func,
-    node,
-    object,
-    oneOf,
-    string
-} from 'prop-types';
+import { bool, func, node, oneOf, string } from 'prop-types';
+import classNames from 'classnames';
 
+const decorate = (icon, buttonType) =>
+    cloneElement(icon, { className: `ffe-${buttonType}-button__label-icon` });
+
+/**
+ * Base component, should *not* be used directly by consumers.
+ */
 export default function Button(props) {
-    const decorate = (icon, buttonType) => cloneElement(icon, { className: `ffe-${buttonType}-button__label-icon` });
     const {
         action,
         ariaLoadingMessage = 'Vennligst vent',
+        buttonRef,
         buttonType = 'primary',
         children,
         className = '',
+        condensed = false,
         disableButton,
         isLoading,
-        isTabbable,
+        isTabbable = true,
         label,
         leftIcon,
         rightIcon,
-        condensed,
         simpleContent = false,
-        buttonRef,
         ...rest
     } = props;
 
-    const loadingClass = isLoading ? `ffe-${buttonType}-button--loading` : '';
-    const condensedClass = condensed ? `ffe-${buttonType}-button--condensed` : '';
     const isTertiary = buttonType === 'tertiary';
 
     return (
         <button
             aria-disabled={disableButton}
             aria-busy={isLoading}
-            className={`ffe-${buttonType}-button ${loadingClass} ${condensedClass} ${className}`}
+            className={classNames(
+                `ffe-${buttonType}-button`,
+                { [`ffe-${buttonType}-button--loading`]: isLoading },
+                { [`ffe-${buttonType}-button--condensed`]: condensed },
+                className,
+            )}
             data-action={action}
             disabled={disableButton || isLoading}
             ref={buttonRef}
-            {... isTabbable === false ? { tabIndex: -1 } : {}}
+            {...(isTabbable ? {} : { tabIndex: -1 })}
             {...rest}
         >
-            {simpleContent ?
-                (label || children) :
+            {simpleContent &&
+                (label || children)
+            }
+            {!simpleContent &&
                 <span className={`ffe-${buttonType}-button__label`}>
                     <span
-                        className={`ffe-${buttonType}-button__label-text
-                        ${isLoading ? `ffe-${buttonType}-button__label-text--loading` : ''}`}
+                        className={classNames(
+                            `ffe-${buttonType}-button__label-text`,
+                            { [`ffe-${buttonType}-button__label-text--loading`]: isLoading },
+                        )}
                     >
-                        {leftIcon && decorate(leftIcon, buttonType)}
+                        {leftIcon &&
+                            decorate(leftIcon, buttonType)
+                        }
+
                         {label || children}
-                        {rightIcon && rightIcon}
+
+                        {rightIcon &&
+                            rightIcon
+                        }
                     </span>
 
-                    { isTertiary ?
-                        null :
+                    {!isTertiary &&
                         <span
                             className={`ffe-${buttonType}-button__label-spinner`}
                             aria-hidden={!isLoading}
@@ -71,12 +82,13 @@ export default function Button(props) {
 }
 
 Button.propTypes = {
+    /**
+     * @deprecated
+     * Set `data-action` directly instead.
+     */
     action: string,
     ariaLoadingMessage: string,
-    children: node,
-    className: string,
-    condensed: bool,
-    disableButton: bool,
+    buttonRef: func,
     buttonType: oneOf([
         'action',
         'primary',
@@ -85,16 +97,35 @@ Button.propTypes = {
         'tertiary',
         'back',
     ]),
-    id: string,
+    children: node,
+    /** Class names set in addition to the ffe button classes. */
+    className: string,
+    condensed: bool,
+    /** Sets the `disabled` and `aria-disabled` attributes. */
+    disableButton: bool,
     isLoading: bool,
+    /**
+     * @deprecated
+     * A button should in almost all cases be tabbable.
+     * If you for some reason need it not to be, set tabIndex={-1} yourself.
+     */
     isTabbable: bool,
-    autoFocus: bool,
+    /**
+     * @deprecated
+     * Use `children` instead (i.e. `<ActionButton>Boom</ActionButton>` instead of `<ActionButton label="Boom" />`).
+     */
     label: string,
+    /** Rendered to the left of the label. Use if want the component to add the correct class for you. */
     leftIcon: node,
-    onClick: func,
+    /**
+     * @deprecated
+     * Set the icon as a child after the label instead.
+     */
     rightIcon: node,
-    simpleContent: bool,
-    style: object,
+    /**
+     * @ignore
+     * Used internally by the different components in order to not render needless stuff for e.g. tertiary button.
+     */
+    simpleContent: bool.isRequired,
     type: oneOf(['button', 'submit', 'reset']),
-    buttonRef: func,
 };
