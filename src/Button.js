@@ -1,5 +1,5 @@
 import React, { cloneElement } from 'react';
-import { bool, func, node, object, oneOf, string } from 'prop-types';
+import { bool, func, node, oneOf, string } from 'prop-types';
 import classNames from 'classnames';
 
 const decorate = (icon, buttonType) =>
