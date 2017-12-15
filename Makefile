@@ -3,6 +3,9 @@ $(shell mkdir -p $(DIRS))
 
 all: styleguidist
 
+bootstrap:
+	npm run lerna:bootstrap
+
 css: fonts
 	npm run build:css
 fonts:
