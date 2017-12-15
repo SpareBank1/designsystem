@@ -1,5 +1,8 @@
 # Changelog
 
+## v.2.2.0 (13.12.2017)
+* Updated versions of eslint and eslint-find-rules
+
 ## v.2.1.0 (09.11.2017)
 * Added "import/named"-rule
 * Added "import/default"-rule
