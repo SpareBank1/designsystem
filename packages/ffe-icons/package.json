@@ -1,0 +1,39 @@
+{
+  "name": "ffe-icons",
+  "version": "7.17.0",
+  "description": "Felles Front End Icons",
+  "main": "bin/build.js",
+  "bin": {
+    "ffe-icons": "bin/build.js"
+  },
+  "scripts": {
+    "build": "node bin/build.js",
+    "start": "npm run build && opn dist/symbol/sprite.symbol.html",
+    "lint": "eslint bin/.",
+    "test": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "***REMOVED***"
+  },
+  "publishConfig": {
+    "registry": "***REMOVED***"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "deep-assign": "^2.0.0",
+    "mkdirp": "^0.5.1",
+    "svg-sprite": "^1.3.6",
+    "vinyl": "^2.0.1",
+    "yargs": "^6.5.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.15.0",
+    "eslint-config-ffe-base": "^2.0.2",
+    "eslint-plugin-import": "^2.2.0",
+    "ffe-visual-tests-support": "^2.1.0",
+    "opn-cli": "^3.1.0"
+  }
+}
