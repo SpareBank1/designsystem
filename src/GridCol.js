@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { bool, number, oneOfType, shape, string } from 'prop-types';
 import classNames from 'classnames';
 
-import { checkForNestedComponent, checkValidColumnCount } from './utils';
+import { checkForDeprecatedModifiers, checkForNestedComponent, checkValidColumnCount } from './utils';
 
 function camelCaseToDashCase(str) {
     if (!str) {
@@ -21,12 +21,12 @@ const MODIFIER_LIST = [
     'bottom',
     'center',
     'end',
+    'horizontal',
     'middle',
     'noBottomPadding',
     'reverse',
     'start',
     'top',
-    'vertical',
 ];
 const SIZE_LIST = [
     'sm',
@@ -55,6 +55,7 @@ export default class GridCol extends Component {
 
     componentDidMount() {
         if (process.env.NODE_ENV !== 'production') {
+            checkForDeprecatedModifiers(this.props);
             checkForNestedComponent(this.props.children, GridCol);
             checkValidColumnCount(this.props);
         }

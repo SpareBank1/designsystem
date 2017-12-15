@@ -14,6 +14,16 @@ const checkForNestedComponent = (children, Component) =>
         }
     });
 
+
+const deprecatedModifiers = {
+    vertical: '`<GridCol vertical={true} />` is the default behavior. You can safely remove this prop.',
+};
+const checkForDeprecatedModifiers = (props) => {
+    Object.keys(props)
+        .filter(propName => deprecatedModifiers[propName])
+        .forEach((propName) => console.error(deprecatedModifiers[propName]));
+};
+
 const checkValidMdColumns = modifier => {
     const total = typeof modifier === 'object' ? modifier.cols + modifier.offset : modifier;
 
@@ -52,6 +62,7 @@ const checkValidColumnCount = ({ sm, md }) => {
 };
 
 export {
+    checkForDeprecatedModifiers,
     checkForNestedComponent,
     checkValidColumnCount,
 };

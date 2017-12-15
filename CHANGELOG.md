@@ -1,5 +1,24 @@
 # CHANGELOG
 
+## Version 6.0.0
+
+`<GridCol vertical={true} />` is now the default behavior, which means you need to do a manual
+migration job. Do a global search for `<GridCol` and follow this approach for each occurrence:
+
+- If you have specified `vertical={true}`, remove the prop. This is the default behavior now.
+- If your `<GridCol />` has more than one child, add the prop `horizontal={true}` to keep the behavior from < 6.0.0.
+- If your `<GridCol />` has exactly one child, this will now take up as much space as it originally required. So if your
+single child is an inline element, no change is required. If your child is a block element, it will now occupy up to 100 %
+of the available space instead of being sized by its content. You might want to add `horizontal={true}` here as well, but
+you might not need this (depending on your use case).
+
+### Breaking changes
+* Supports `ffe-grid@^6.0.0`.
+* Removes the `<GridCol vertical />` prop, and complains (in the console for non-production builds) if it's specified.
+
+### New features
+* Adds the `<GridCol horizontal />` prop, for keeping the behavior from < 6.0.0.
+
 ## Version 5.1.0
 * The module now complains (in the console and for non-production builds) if `ffe-grid` is used in a way it's not meant to be.
 From [ffe-grid's README](***REMOVED***):
