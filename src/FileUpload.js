@@ -112,6 +112,7 @@ FileUpload.propTypes = {
      * for the input field via aria-labelledby.
      */
     label: stringType.isRequired,
+    /** Array of `File` objects that the user has uploaded. Must be maintained outside of `FileUpload`. */
     selectedFiles: array.isRequired,
     /**
      * Will be called with `FileList`-object containing the `File`-objects the user selected.
@@ -120,6 +121,10 @@ FileUpload.propTypes = {
      * [File](https://developer.mozilla.org/en-US/docs/Web/API/File).
      */
     onFilesSelected: func.isRequired,
+    /**
+     * Called when the user clicks the delete button for a given file. Is called with the `File`
+     * object of the file in question.
+     */
     onFileDeleted: func.isRequired,
     multiple: bool,
     /**
