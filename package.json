@@ -7,7 +7,7 @@
     "lerna:bootstrap": "lerna bootstrap",
     "lerna:publish": "lerna publish --yes",
     "lerna:clean": "lerna clean --yes",
-    "styleguidist": "styleguidist start",
+    "styleguidist": "styleguidist server",
     "styleguidist:build": "styleguidist build",
     "build:css": "lessc packages/ffe-all.less dist/ffe.css",
     "lint": "lerna run lint",
