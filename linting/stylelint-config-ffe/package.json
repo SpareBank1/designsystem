@@ -1,0 +1,25 @@
+{
+  "name": "stylelint-config-ffe",
+  "version": "0.3.0",
+  "description": "FFE shareable config for stylelint",
+  "author": "SpareBank 1",
+  "license": "ISC",
+  "main": "index.js",
+  "scripts": {
+    "has-published": "npm show . versions -s --json | grep -q ${npm_package_version}",
+    "postpublish": "git tag ${npm_package_version} && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "***REMOVED***"
+  },
+  "publishConfig": {
+    "registry": "***REMOVED***"
+  },
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "stylelint-config-standard": "^16.0.0"
+  }
+}
