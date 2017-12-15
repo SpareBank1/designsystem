@@ -1,0 +1,91 @@
+.ffe-primary-button {
+    background-color: @ffe-blue-azure;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    color: @ffe-white;
+    cursor: pointer;
+    display: block;
+    .ffe-buttons-shadow();
+
+    line-height: 24px;
+    font-family: "MuseoSansRounded-500", arial, sans-serif;
+    outline: none;
+    overflow: hidden;
+    padding: 8px 30px;
+    text-align: center;
+    text-decoration: none;
+    transition: all @ffe-transition-duration @ffe-ease;
+    vertical-align: middle;
+    width: 100%;
+    .ffe-fontsize-button;
+
+    &:focus {
+        background-color: darken(@ffe-blue-azure, 5%);
+        box-shadow: 0 0 0 2px @ffe-blue-focus;
+        outline: 0;
+    }
+
+    &:hover {
+        background-color: darken(@ffe-blue-azure, 5%);
+        .ffe-buttons-shadow-hover();
+    }
+
+    &:active {
+        background-color: darken(@ffe-blue-azure, 10%);
+        .ffe-buttons-shadow-active();
+    }
+
+    &__label {
+        overflow: hidden;
+        position: relative;
+    }
+
+    &__label-text {
+        bottom: 0;
+        display: inline-block;
+        position: relative;
+        transition: bottom @ffe-transition-duration @ffe-ease;
+    }
+
+    &__label-spinner {
+        bottom: -40px;
+        color: transparent;
+        .ffe-buttons-spinner(@ffe-white, 22px);
+
+        left: ~"calc(50% - 11px)";
+        opacity: 0;
+        position: absolute;
+        transition: all @ffe-transition-duration @ffe-ease;
+        user-select: none;
+
+        &[aria-hidden="false"] {
+            bottom: 0;
+            opacity: 1;
+        }
+    }
+
+    &--loading {
+        background-color: darken(@ffe-blue-azure, 10%);
+        pointer-events: none;
+    }
+
+    &--loading &__label-text {
+        bottom: 50px;
+    }
+
+    &--condensed {
+        padding: 5px 20px;
+        .ffe-fontsize-button-condensed;
+
+        [class*="-button__label-spinner"][aria-hidden="false"] {
+            bottom: -3px;
+        }
+    }
+}
+
+@media screen and (min-width: @breakpoint-sm) {
+    .ffe-primary-button {
+        display: inline-block;
+        width: auto;
+    }
+}
