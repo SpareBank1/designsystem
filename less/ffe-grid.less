@@ -131,6 +131,7 @@
 
 [class*="ffe-grid__col"] {
     flex: 1 1;
+    flex-direction: column;
     max-width: 100%;
     padding: 0 (@ffe-grid-gutter-sm / 2) @ffe-grid-gutter-sm;
 
@@ -149,15 +150,15 @@
 
 .ffe-grid__col {
     &--reverse {
-        flex-direction: row-reverse;
-    }
-
-    &--vertical {
-        flex-direction: column;
-    }
-
-    &--vertical&--reverse {
         flex-direction: column-reverse;
+    }
+
+    &--horizontal {
+        flex-direction: row;
+    }
+
+    &--horizontal&--reverse {
+        flex-direction: row-reverse;
     }
 
     &--start {
