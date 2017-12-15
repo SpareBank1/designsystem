@@ -2,27 +2,24 @@
   "name": "eslint-config-ffe",
   "version": "6.0.2",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "lint": "eslint ."
-  },
+  "author": "SpareBank 1",
+  "license": "UNLICENSED",
   "repository": {
     "type": "git",
     "url": "***REMOVED***"
   },
-  "author": "Sparebank 1",
-  "license": "",
-  "peerDependencies": {
-    "eslint": "^2.0.0 || ^3.0.0",
-    "eslint-plugin-jsx-a11y": "^3.0.2",
-    "eslint-plugin-react": "^6.0.0 || ^7.0.0"
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint ."
   },
   "files": [
     "rules",
     "*.js"
   ],
-  "publishConfig": {
-    "registry": "***REMOVED***"
+  "peerDependencies": {
+    "eslint": "^2.0.0 || ^3.0.0",
+    "eslint-plugin-jsx-a11y": "^3.0.2",
+    "eslint-plugin-react": "^6.0.0 || ^7.0.0"
   },
   "devDependencies": {
     "eslint": "^3.0.0",
