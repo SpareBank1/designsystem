@@ -12,7 +12,7 @@
     "lint:jsx": "eslint ./jsx/*.jsx",
     "test:nsp": "nsp check",
     "clean": "babel-node ./src/clean.js",
-    "ffe:icons": "ffe-icons --opts=svg.sprite.config.json",
+    "ffe:icons": "ffe-icons --opts=packages/ffe-icons-react/svg.sprite.config.json",
     "start": "npm run build && npm run build:iconlist && webpack-dev-server",
     "server": "webpack-dev-server"
   },
