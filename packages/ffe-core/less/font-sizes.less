@@ -1,0 +1,135 @@
+/* stylelint-disable */
+.ffe-fontsize(@minWidth, @rules) {
+    @media screen and (min-width: @minWidth) {
+        @rules();
+    }
+}
+/* stylelint-enable */
+
+.ffe-fontsize-body-text() {
+    font-size: 16px;
+}
+
+.ffe-fontsize-small-text() {
+    font-size: 14px;
+}
+
+.ffe-fontsize-micro-text() {
+    font-size: 12px;
+}
+
+.ffe-fontsize-lead-paragraph() {
+    font-size: 18px;
+
+    .ffe-fontsize(@breakpoint-sm, {
+        font-size: 22px;
+    });
+
+    .ffe-fontsize(@breakpoint-md, {
+        font-size: 22px;
+    });
+}
+
+.ffe-fontsize-sub-lead-paragraph() {
+    font-size: 16px;
+
+    .ffe-fontsize(@breakpoint-sm, {
+        font-size: 18px;
+    });
+
+    .ffe-fontsize(@breakpoint-md, {
+        font-size: 18px;
+    });
+}
+
+.ffe-fontsize-h1() {
+    font-size: 28px;
+
+    .ffe-fontsize(@breakpoint-sm, {
+        font-size: 40px;
+    });
+
+    .ffe-fontsize(@breakpoint-md, {
+        font-size: 46px;
+    });
+}
+
+.ffe-fontsize-h2() {
+    font-size: 24px;
+
+    .ffe-fontsize(@breakpoint-sm, {
+        font-size: 32px;
+    });
+
+    .ffe-fontsize(@breakpoint-md, {
+        font-size: 32px;
+    });
+}
+
+.ffe-fontsize-h3() {
+    font-size: 20px;
+
+    .ffe-fontsize(@breakpoint-sm, {
+        font-size: 27px;
+    });
+
+    .ffe-fontsize(@breakpoint-md, {
+        font-size: 28px;
+    });
+}
+
+.ffe-fontsize-h4() {
+    font-size: 18px;
+
+    .ffe-fontsize(@breakpoint-sm, {
+        font-size: 20px;
+    });
+
+    .ffe-fontsize(@breakpoint-md, {
+        font-size: 22px;
+    });
+}
+
+.ffe-fontsize-h5() {
+    font-size: 16px;
+
+    .ffe-fontsize(@breakpoint-sm, {
+        font-size: 16px;
+    });
+
+    .ffe-fontsize(@breakpoint-md, {
+        font-size: 18px;
+    });
+}
+
+.ffe-fontsize-h6() {
+    font-size: 16px;
+
+    .ffe-fontsize(@breakpoint-sm, {
+        font-size: 16px;
+    });
+
+    .ffe-fontsize(@breakpoint-md, {
+        font-size: 16px;
+    });
+}
+
+.ffe-fontsize-form-input() {
+    font-size: 16px;
+}
+
+.ffe-fontsize-form-dropdown() {
+    font-size: 16px;
+}
+
+.ffe-fontsize-button() {
+    font-size: 18px;
+}
+
+.ffe-fontsize-button-transparent() {
+    font-size: 16px;
+}
+
+.ffe-fontsize-button-condensed() {
+    font-size: 14px;
+}
