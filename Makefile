@@ -6,6 +6,9 @@ all: styleguidist
 bootstrap:
 	npm run lerna:bootstrap
 
+clean:
+	npm run lerna:clean
+
 css: fonts
 	npm run build:css
 fonts:
