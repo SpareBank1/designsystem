@@ -1,0 +1,69 @@
+{
+  "name": "ffe-buttons-react",
+  "version": "6.2.0",
+  "description": "React implementation of ffe-buttons",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "./node_modules/babel-cli/bin/babel.js -d lib/. --ignore=*.test.js src/.",
+    "lint": "eslint src/.",
+    "test": "npm run test:spec && npm run test:nsp",
+    "test:nsp": "nsp check",
+    "test:spec": "mocha --require src/util/test-setup.js --compilers js:babel-core/register src/**/*.test.js",
+    "tdd": "mocha --require src/util/test-setup.js --compilers js:babel-core/register src/**/*.test.js -w",
+    "start": "budo examples/buttons.js --open --live --title \"FFE Buttons\" -- -t [ babelify --presets [ es2015 react ] ] -t node-lessify"
+  },
+  "files": [
+    "lib",
+    "*.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "***REMOVED***"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-eslint": "^8.0.3",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.10",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.24.1",
+    "babel-register": "^6.23.0",
+    "babelify": "^8.0.0",
+    "budo": "^10.0.3",
+    "chai": "^4.1.2",
+    "chai-enzyme": "^1.0.0-beta.0",
+    "cheerio": "^0.22.0",
+    "enzyme": "^3.2.0",
+    "enzyme-adapter-react-16": "^1.1.0",
+    "eslint": "^4.0.0",
+    "eslint-config-ffe": "^6.0.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^3.0.2",
+    "eslint-plugin-react": "^7.4.0",
+    "ffe-buttons": "^5.0.1",
+    "ffe-core": "^10.1.1",
+    "mocha": "^2.4.5",
+    "mocha-tap13": "^1.0.2",
+    "node-lessify": "^0.1.5",
+    "nsp": "^3.1.0",
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1",
+    "sinon": "^4.1.2"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "react"
+    ],
+    "plugins": [
+      "transform-react-remove-prop-types",
+      "transform-object-rest-spread"
+    ]
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "ffe-icons-react": "^2.4.17",
+    "prop-types": "^15.5.9"
+  },
+  "license": "UNLICENSED"
+}
