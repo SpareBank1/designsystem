@@ -15,7 +15,7 @@
     "commitmsg": "commitlint -e $GIT_PARAMS"
   },
   "author": "SpareBank 1",
-  "license": "TBA",
+  "license": "UNLICENSED",
   "devDependencies": {
     "@commitlint/cli": "^4.3.0",
     "babel-core": "^6.26.0",

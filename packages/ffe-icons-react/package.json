@@ -20,9 +20,9 @@
     "type": "git",
     "url": "ssh://git@stash.intern.sparebank1.no:22/ffe/ffe-icons-react.git"
   },
-  "license": "ISC",
+  "license": "UNLICENSED",
   "dependencies": {
-    "prop-types": "^15.5.7"
+    "prop-types": "^15.5.9"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
