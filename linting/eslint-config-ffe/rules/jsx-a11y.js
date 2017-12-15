@@ -16,13 +16,13 @@ module.exports = {
       // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/aria-unsupported-elements.md
       "jsx-a11y/aria-unsupported-elements": 2,
 
-      // Enforce an anchor element's href prop value is not just #.
-      // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/href-no-hash.md
-      "jsx-a11y/href-no-hash": 2,
+      // Enforce all anchors are valid, navigable elements.
+      // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/anchor-is-valid.md
+      "jsx-a11y/anchor-is-valid": 2,
 
-      // Enforce that <img> JSX elements use the alt prop.
-      // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/img-has-alt.md
-      "jsx-a11y/img-has-alt": 2,
+      // Enforce all elements that require alternative text have meaningful information to relay back to end user.
+      // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/alt-text.md
+      "jsx-a11y/alt-text": 2,
 
       // Enforce <img> alt prop does not contain the word "image", "picture", or "photo".
       // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/img-redundant-alt.md
@@ -44,13 +44,17 @@ module.exports = {
       // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/no-onchange.md
       "jsx-a11y/no-onchange": 0,
 
-      // Enforce that elements with onClick handlers must be focusable.
-      // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/onlcick-has-focus.md
-      "jsx-a11y/onclick-has-focus": 2,
+      // Enforce that elements with interactive handlers like onClick must be focusable.
+      // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/interactive-supports-focus.md
+      "jsx-a11y/interactive-supports-focus": 2,
 
       // Enforce that non-interactive, visible elements (such as <div>) that have click handlers use the role attribute.
-      // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/onlcick-has-role.md
-      "jsx-a11y/onclick-has-role": 2,
+      // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/no-static-element-interactions.md
+      "jsx-a11y/no-static-element-interactions": 2,
+
+      // Non-interactive elements should not be assigned mouse or keyboard event listeners.
+      // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/no-noninteractive-element-interactions.md
+      "jsx-a11y/no-noninteractive-element-interactions": 2,
 
       // Enforce that elements with ARIA roles must have all required attributes for that role.
       // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/role-has-required-aria-props.md
