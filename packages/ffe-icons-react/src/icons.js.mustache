@@ -1,0 +1,6 @@
+{{! Creates a js object with each svg as a string }}
+export default {
+{{#shapes}}
+    '{{name}}': '{{{svg}}}',
+{{/shapes}}
+};

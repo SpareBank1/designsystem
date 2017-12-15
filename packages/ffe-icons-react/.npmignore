@@ -1,0 +1,10 @@
+buildCI.sh
+src/build-iconlist.js
+src/build-jsx-components.js
+clean.js
+src/example.jsx
+index.html
+iconlist.json
+svg.sprite.config.json
+webpack.config.js
+src/icons.js.mustache
