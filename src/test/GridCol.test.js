@@ -153,6 +153,8 @@ describe('GridCol', () => {
             sinon.stub(console, 'error');
         });
 
+        afterEach(() => console.error.reset());
+
         it('warns about using deprecated props on GridCol', () => {
             mount(
                 <Grid>
@@ -162,8 +164,8 @@ describe('GridCol', () => {
                 </Grid>
             );
 
-            expect(console.error.calledOnce).to.be(true);
-            expect(console.error.getCall(0).args[0])
+            expect(console.error.callCount).to.be.greaterThan(0);
+            expect(console.error.getCalls().map(call => call.args[0]))
                 .to.contain('`<GridCol vertical={true} />` is the default behavior. You can safely remove this prop.');
         });
 

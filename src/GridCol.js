@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { bool, number, oneOfType, shape, string } from 'prop-types';
+import { bool, node, number, oneOfType, shape, string } from 'prop-types';
 import classNames from 'classnames';
 
 import { checkForDeprecatedModifiers, checkForNestedComponent, checkValidColumnCount } from './utils';
@@ -97,7 +97,10 @@ export default class GridCol extends Component {
 }
 
 GridCol.propTypes = {
+    /** Any extra classes are attached to the root node, in addition to ffe-grid__col classes */
     className: string,
+    /** Specify the DOM element being used to create the GridCol */
+    element: node,
     ...MODIFIER_LIST.reduce((props, mod) => ({
         ...props,
         [mod]: oneOfType([bool, string]),
@@ -105,7 +108,8 @@ GridCol.propTypes = {
     ...SIZE_LIST.reduce((props, size) => ({
         ...props,
         [size]: oneOfType([
-            oneOfType([number, string]),
+            number,
+            string,
             shape({
                 cols: oneOfType([number, string]),
                 offset: oneOfType([number, string]),
