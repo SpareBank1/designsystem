@@ -8,12 +8,9 @@
     "start": "onchange 'src/**.js' -- npm run build",
     "lint": "eslint src/",
     "lint:fix": "eslint --fix src/ test/",
-    "test": "jest --coverage src",
+    "test": "jest src",
     "test:watch": "jest --watch src",
-    "test:nocoverage": "jest src",
-    "precommit": "npm run test:nocoverage && npm run lint",
-    "prepublish": "npm run lint && npm run build",
-    "has-published": "npm show . versions -s --json | grep -q \\\"${npm_package_version}\\\""
+    "test:coverage": "jest src --coverage"
   },
   "keywords": [
     "ffe"
@@ -23,13 +20,13 @@
   },
   "devDependencies": {
     "babel-cli": "^6.23.0",
-    "babel-core": "^6.23.1",
+    "babel-core": "^6.26.0",
     "babel-eslint": "^7.2.3",
     "babel-jest": "^20.0.0",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
-    "babel-polyfill": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
     "babel-preset-latest": "^6.22.0",
-    "babel-preset-react": "^6.23.0",
+    "babel-preset-react": "^6.24.1",
     "babel-register": "^6.23.0",
     "enzyme": "^2.7.1",
     "eslint": "^3.17.1",
@@ -37,8 +34,6 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^6.10.0",
-    "husky": "^0.13.3",
-    "install": "^0.8.7",
     "jest": "^20.0.0",
     "nsp": "^2.6.3",
     "onchange": "3.2.1",
@@ -57,10 +52,7 @@
   "author": "SpareBank 1",
   "repository": {
     "type": "git",
-    "url": "ssh://git@stash.intern.sparebank1.no:22/ffe/ffe-core-react.git"
-  },
-  "publishConfig": {
-    "registry": "https://nexus.intern.sparebank1.no/nexus/content/repositories/npm-internal"
+    "url": "ssh://git@stash.intern.sparebank1.no:22/ffe/ffe-monorepo.git"
   },
   "license": "UNLICENSED",
   "dependencies": {
