@@ -1,0 +1,33 @@
+{
+  "name": "eslint-config-ffe",
+  "version": "6.0.2",
+  "description": "",
+  "author": "SpareBank 1",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@stash.intern.sparebank1.no:22/ffe/ffe-monorepo.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "files": [
+    "rules",
+    "*.js"
+  ],
+  "peerDependencies": {
+    "eslint": "^2.0.0 - ^4.0.0",
+    "eslint-plugin-jsx-a11y": "^3.0.2",
+    "eslint-plugin-react": "^6.0.0 || ^7.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.13.1",
+    "eslint-plugin-import": "^2.0.1",
+    "eslint-plugin-jsx-a11y": "^3.0.2",
+    "eslint-plugin-react": "^7.0.0"
+  },
+  "dependencies": {
+    "eslint-config-ffe-base": "^2.0.0"
+  }
+}
