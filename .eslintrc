@@ -1,0 +1,4 @@
+{
+    "extends": "./linting/eslint-config-ffe/index.js",
+    "parser": "babel-eslint"
+}
