@@ -20,9 +20,9 @@
     "type": "git",
     "url": "***REMOVED***"
   },
-  "license": "ISC",
+  "license": "UNLICENSED",
   "dependencies": {
-    "prop-types": "^15.5.7"
+    "prop-types": "^15.5.9"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
