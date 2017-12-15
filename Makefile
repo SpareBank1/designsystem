@@ -1,7 +1,7 @@
 DIRS=dist dist/fonts
 $(shell mkdir -p $(DIRS))
 
-all: styleguidist
+all: bootstrap
 
 bootstrap:
 	npm run lerna:bootstrap
