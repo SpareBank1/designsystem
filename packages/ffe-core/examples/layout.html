@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>layout</title>
+
+    <link rel="stylesheet" type="text/css" href="examples.css">
+
+    <style>
+        .page .ffe-section-wrapper {
+            border: 2px dashed transparent;
+        }
+        .page.-guides .ffe-section-wrapper,
+        .page.-guides .ffe-content-container {
+            position: relative;
+        }
+        .page.-guides .ffe-section-wrapper {
+            border-color: rgba(47,79,79,0.65);
+        }
+        .page.-guides .ffe-content-container {
+            min-height: 200px;
+            outline: 2px dashed rgba(255, 140, 0, 0.65);
+        }
+        .page.-guides .ffe-section-wrapper:before,
+        .page.-guides .ffe-content-container:before {
+            position: absolute;
+            content: attr(class);
+            color: white;
+            right: 0;
+            padding: 4px 10px;
+            font-size: 12px;
+            line-height: 1;
+        }
+        .page.-guides .ffe-section-wrapper:before {
+            background-color: rgba(47,79,79,0.65);
+            top: 0;
+        }
+        .page.-guides .ffe-content-container:before {
+            background-color: rgba(255, 140, 0, 0.65);
+            bottom: 0;
+        }
+        .page.-guides .-darkslategrey {
+            color: rgba(47,79,79,0.65);
+        }
+        .page.-guides .-darkorange {
+            color: rgba(255, 140, 0, 0.65);
+        }
+
+    </style>
+</head>
+<body class="ffe-body-text page -guides">
+
+<main class="styleguide-wrapper">
+    <section class="ffe-section-wrapper ffe-section-wrapper--bg-sand">
+        <div class="ffe-content-container">
+            <h2 class="ffe-h2">Hawaii Layout System</h2>
+            <p class="ffe-lead-paragraph">Layouts are composed of one or more sections wrapping content containers.</p>
+        </div>
+
+        <div class="ffe-content-container ffe-content-container--text-left">
+            <ul class="ffe-bullet-list">
+                <li>Do not put any more classes on them (except modifiers)</li>
+                <li>Think separation of concerns, a section contains other things so they should not have any other responsibility</li>
+                <li>It should be a flexible system, but if you feel the need for more flags, consider making that behaviour part of a component instead</li>
+            </ul>
+        </div>
+
+        <div class="ffe-content-container ffe-content-container--text-left">
+            <h2 class="ffe-h2 -darkslategrey">.section-wrapper</h2>
+            <ul class="ffe-bullet-list">
+                <li>Responsible to uphold the standard layout rules concerning app gutters</li>
+                <li>Wrapper for content containers</li>
+                <li>Provides seamless stacking</li>
+                <li>Does not need to be of the HTML5 section tag, but could be a good semantic structure</li>
+            </ul>
+            <table class="ffe-responsive-table">
+                <thead>
+                <tr>
+                    <th class="ffe-h4">Modifier</th>
+                    <th class="ffe-h4">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th data-th="Modifier">--bg-sand</th>
+                    <td data-th="Description">Setting background color to <em class="ffe-em-text">Sand-25%</em></td>
+                </tr>
+                <tr>
+                    <th data-th="Modifier">--bg-grey</th>
+                    <td data-th="Description">Setting background color to <em class="ffe-em-text">Grey-light-bg</em></td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+        <div class="ffe-content-container ffe-content-container--text-left">
+            <h2 class="ffe-h2 -darkorange">.content-container</h2>
+            <ul class="ffe-bullet-list">
+                <li>Manages the direct layout of content, text or components</li>
+                <li>Default centering of content</li>
+                <li>Provide horizontal spacing when stacked</li>
+                <li>Depending on breakpoints for dynamic vertical margins</li>
+            </ul>
+            <table class="ffe-responsive-table">
+                <thead>
+                <tr>
+                    <th class="ffe-h4">Modifier</th>
+                    <th class="ffe-h4">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th data-th="Modifier">--sm</th>
+                    <td data-th="Description">Small container</td>
+                </tr>
+                <tr>
+                    <th data-th="Modifier">--lg</th>
+                    <td data-th="Description">Large container</td>
+                </tr>
+                <tr>
+                    <th data-th="Modifier">--text-left</th>
+                    <td data-th="Description">Align text to the left, instead of the default centering</td>
+                </tr>
+                <tr>
+                    <th data-th="Modifier">--no-space</th>
+                    <td data-th="Description">Removes default spacing</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="ffe-section-wrapper">
+
+        <div class="ffe-content-container">
+            <h2 class="ffe-h2">Default content container</h2>
+            <p class="ffe-body-paragraph ffe-lead-paragraph">Max width is 768px</p>
+            <p class="ffe-body-paragraph">Always centered</p>
+        </div>
+        <div class="ffe-content-container">
+            <h3 class="ffe-h3">Example header</h3>
+            <p class="ffe-body-paragraph">A paragraph demonstrating this type of container</p>
+            <p class="ffe-body-paragraph">A paragraph demonstrating this type of container</p>
+            <p class="ffe-body-paragraph">A paragraph demonstrating this type of container</p>
+        </div>
+        <div class="ffe-content-container ffe-content-container--text-left">
+            <h3 class="ffe-h3">Another header</h3>
+            <p class="ffe-body-paragraph">Another paragraph in a left aligned container</p>
+            <p class="ffe-body-paragraph">Another paragraph in a left aligned container</p>
+            <p class="ffe-body-paragraph">Another paragraph in a left aligned container</p>
+        </div>
+
+        <div class="ffe-content-container ffe-content-container--lg">
+            <h2 class="ffe-h2">Large content container</h2>
+            <p class="ffe-body-paragraph ffe-lead-paragraph">Max width is 1280px</p>
+            <p class="ffe-body-paragraph">Always centered</p>
+        </div>
+        <div class="ffe-content-container ffe-content-container--lg">
+            <h3 class="ffe-h3">Example header</h3>
+            <p class="ffe-body-paragraph">A paragraph demonstrating this type of container</p>
+            <p class="ffe-body-paragraph">A paragraph demonstrating this type of container</p>
+            <p class="ffe-body-paragraph">A paragraph demonstrating this type of container</p>
+        </div>
+        <div class="ffe-content-container ffe-content-container--lg ffe-content-container--text-left">
+            <h3 class="ffe-h3">Example header</h3>
+            <p class="ffe-body-paragraph">Another paragraph in a left aligned container</p>
+            <p class="ffe-body-paragraph">Another paragraph in a left aligned container</p>
+            <p class="ffe-body-paragraph">Another paragraph in a left aligned container</p>
+        </div>
+
+        <div class="ffe-content-container ffe-content-container--sm">
+            <h2 class="ffe-h2">Small content container</h2>
+            <p class="ffe-body-paragraph ffe-lead-paragraph">Max width is 480px</p>
+            <p class="ffe-body-paragraph">Always centered</p>
+        </div>
+        <div class="ffe-content-container ffe-content-container--sm">
+            <h3 class="ffe-h3">Example header</h3>
+            <p class="ffe-body-paragraph">A paragraph demonstrating this type of container</p>
+            <p class="ffe-body-paragraph">A paragraph demonstrating this type of container</p>
+            <p class="ffe-body-paragraph">A paragraph demonstrating this type of container</p>
+        </div>
+        <div class="ffe-content-container ffe-content-container--sm ffe-content-container--text-left">
+            <h3 class="ffe-h3">Another header</h3>
+            <p class="ffe-body-paragraph">Another paragraph in a left aligned container</p>
+            <p class="ffe-body-paragraph">Another paragraph in a left aligned container</p>
+            <p class="ffe-body-paragraph">Another paragraph in a left aligned container</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="ffe-content-container">
+            <h2 class="ffe-h2">Default content container without section wrapper</h2>
+            <p class="ffe-lead-paragraph">This is unfortunate, since there will be no gutters on before the 768px breakpoint</p>
+        </div>
+        <div class="ffe-content-container">
+            <h3 class="ffe-h3">Example header</h3>
+            <p class="ffe-body-paragraph">A paragraph demonstrating this type of container</p>
+            <p class="ffe-body-paragraph">A paragraph demonstrating this type of container</p>
+            <p class="ffe-body-paragraph">A paragraph demonstrating this type of container</p>
+        </div>
+        <div class="ffe-content-container ffe-content-container--text-left">
+            <h3 class="ffe-h3">Another header</h3>
+            <p class="ffe-body-paragraph">Another paragraph in a left aligned container</p>
+            <p class="ffe-body-paragraph">Another paragraph in a left aligned container</p>
+            <p class="ffe-body-paragraph">Another paragraph in a left aligned container</p>
+        </div>
+    </section>
+
+    <section class="ffe-section-wrapper ffe-section-wrapper--bg-grey">
+        <div class="ffe-content-container ffe-content-container--text-left">
+            <h2 class="ffe-h2">Demo #1</h2>
+            <p class="ffe-lead-paragraph">Using the a colored background of the section: --bg-grey</p>
+        </div>
+    </section>
+
+    <section class="ffe-section-wrapper ffe-section-wrapper--bg-blue">
+        <div class="ffe-content-container ffe-content-container--text-left">
+            <h2 class="ffe-h2">Demo #1</h2>
+            <p class="ffe-lead-paragraph">Using the a colored background of the section: --bg-blue</p>
+        </div>
+    </section>
+
+    <section class="ffe-section-wrapper ffe-section-wrapper--bg-blue-flat">
+        <div class="ffe-content-container ffe-content-container--text-left ">
+            <h2 class="ffe-h2">Demo #1</h2>
+            <p class="ffe-lead-paragraph">Using the a colored background of the section: --bg-blue-flat</p>
+        </div>
+    </section>
+
+</main>
+
+</body>
+</html>
