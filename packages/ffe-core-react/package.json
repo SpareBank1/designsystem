@@ -1,0 +1,64 @@
+{
+  "name": "ffe-core-react",
+  "version": "1.0.1",
+  "description": "React components for ffe-core components",
+  "scripts": {
+    "prebuild": "rimraf lib",
+    "build": "babel --ignore spec.js -d lib/ src/",
+    "start": "onchange 'src/**.js' -- npm run build",
+    "lint": "eslint src/",
+    "lint:fix": "eslint --fix src/ test/",
+    "test": "jest src",
+    "test:watch": "jest --watch src",
+    "test:coverage": "jest src --coverage"
+  },
+  "keywords": [
+    "ffe"
+  ],
+  "peerDependencies": {
+    "react": "^16.1.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^7.2.3",
+    "babel-jest": "^21.2.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-latest": "^6.22.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-register": "^6.23.0",
+    "enzyme": "^3.2.0",
+    "enzyme-adapter-react-16": "^1.1.0",
+    "eslint": "^3.17.1",
+    "eslint-config-ffe": "^6.0.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^3.0.2",
+    "eslint-plugin-react": "^6.10.0",
+    "jest": "^21.2.1",
+    "nsp": "^3.1.0",
+    "onchange": "3.2.1",
+    "prop-types": "^15.5.9",
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1",
+    "react-test-renderer": "^16.2.0",
+    "rimraf": "^2.6.1"
+  },
+  "files": [
+    "lib",
+    "*.js"
+  ],
+  "jest": {
+    "setupTestFrameworkScriptFile": "./setupEnzyme.js"
+  },
+  "main": "lib/index.js",
+  "author": "SpareBank 1",
+  "repository": {
+    "type": "git",
+    "url": "***REMOVED***"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "classnames": "^2.2.5"
+  }
+}
