@@ -5,7 +5,7 @@
     "linting/*"
   ],
   "version": "independent",
-  "hoist": false,
+  "hoist": true,
   "command": {
     "publish": {
       "conventionalCommits": true,

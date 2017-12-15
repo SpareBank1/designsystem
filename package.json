@@ -25,7 +25,6 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-3": "^6.24.1",
     "css-loader": "^0.28.7",
-    "html-reporter": "^1.0.0",
     "husky": "^0.14.3",
     "lerna": "^2.5.1",
     "less": "^2.7.3",
