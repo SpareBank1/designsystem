@@ -1,0 +1,69 @@
+{
+  "name": "ffe-core-react",
+  "version": "1.0.1",
+  "description": "React components for ffe-core components",
+  "scripts": {
+    "prebuild": "rimraf lib",
+    "build": "babel --ignore spec.js -d lib/ src/",
+    "start": "onchange 'src/**.js' -- npm run build",
+    "lint": "eslint src/",
+    "lint:fix": "eslint --fix src/ test/",
+    "test": "jest --coverage src",
+    "test:watch": "jest --watch src",
+    "test:nocoverage": "jest src",
+    "precommit": "npm run test:nocoverage && npm run lint",
+    "prepublish": "npm run lint && npm run build",
+    "has-published": "npm show . versions -s --json | grep -q \\\"${npm_package_version}\\\""
+  },
+  "keywords": [
+    "ffe"
+  ],
+  "peerDependencies": {
+    "react": "^15.4.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-core": "^6.23.1",
+    "babel-eslint": "^7.2.3",
+    "babel-jest": "^20.0.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-latest": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "babel-register": "^6.23.0",
+    "enzyme": "^2.7.1",
+    "eslint": "^3.17.1",
+    "eslint-config-ffe": "^6.0.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^3.0.2",
+    "eslint-plugin-react": "^6.10.0",
+    "husky": "^0.13.3",
+    "install": "^0.8.7",
+    "jest": "^20.0.0",
+    "nsp": "^2.6.3",
+    "onchange": "3.2.1",
+    "prop-types": "^15.5.9",
+    "react": "^15.4.2",
+    "react-addons-test-utils": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-test-renderer": "^15.5.4",
+    "rimraf": "^2.6.1"
+  },
+  "files": [
+    "lib",
+    "*.js"
+  ],
+  "main": "lib/index.js",
+  "author": "SpareBank 1",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@stash.intern.sparebank1.no:22/ffe/ffe-core-react.git"
+  },
+  "publishConfig": {
+    "registry": "https://nexus.intern.sparebank1.no/nexus/content/repositories/npm-internal"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "classnames": "^2.2.5"
+  }
+}
