@@ -1,6 +1,6 @@
-import Spinner from './spinner';
+import Spinner from './Spinner';
 
-export { default as InlineSpinner } from './inline-spinner';
-export { default as LargeSpinner } from './large-spinner';
-export { Spinner };
 export default Spinner;
+export { default as LargeSpinner } from './LargeSpinner';
+export { default as InlineSpinner } from './InlineSpinner';
+export { Spinner };
