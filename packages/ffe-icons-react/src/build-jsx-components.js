@@ -1,4 +1,4 @@
-import icons from './../temp/icons';
+import icons from './../tmp/icons';
 import fs from 'fs';
 import mkdirp from 'mkdirp';
 
@@ -22,11 +22,9 @@ const camelCaseSVGProps = svgString =>
  * */
 const createStandaloneJSX = iconName => `
 import React from 'react';
-import { string, bool, func, object, number } from 'prop-types';
+import { bool, func, number, object, string } from 'prop-types';
 
 const svg = ${camelCaseSVGProps(icons[iconName])};
-const createTitle = title => title ? <title>{title}</title> : null;
-const createDesc = desc => desc ? <desc>{desc}</desc> : null;
 
 const Icon = ({
     desc = '',
@@ -35,9 +33,13 @@ const Icon = ({
     iconName,
     ...rest
     }) =>
-        <svg focusable={focusable ? 'true' : 'false'} {...rest} {...svg.props}>
-            {createTitle(title)}
-            {createDesc(desc)}
+        <svg focusable={String(focusable)} {...rest} {...svg.props}>
+            {title &&
+                <title>{title}</title>
+            }
+            {desc &&
+                <desc>{desc}</desc>
+            }
             {svg.props.children}
         </svg>;
 
@@ -55,7 +57,6 @@ Icon.propTypes = {
 export default Icon;
 `;
 Object.keys(icons).map((iconName) => fs.writeFileSync(`./jsx/${iconName}.jsx`, createStandaloneJSX(iconName)));
-
 
 /**
  * Creates a list of strings on the form ['bil-ikon': require('./bil-ikon')',] from icons.
