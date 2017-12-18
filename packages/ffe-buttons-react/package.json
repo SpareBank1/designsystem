@@ -4,7 +4,7 @@
   "description": "React implementation of ffe-buttons",
   "main": "lib/index.js",
   "scripts": {
-    "build": "./node_modules/babel-cli/bin/babel.js -d lib/. --ignore=*.test.js src/.",
+    "build": "babel -d lib/. --ignore=*.test.js src/.",
     "lint": "eslint src/.",
     "test": "npm run test:spec && npm run test:nsp",
     "test:nsp": "nsp check",
