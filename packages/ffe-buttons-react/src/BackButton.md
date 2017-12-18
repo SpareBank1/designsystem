@@ -1,5 +1,3 @@
-# Back button
-
 Til bruk for tilbakenavigasjon, typisk oppe under headeren.
 
 ```js
