@@ -1,4 +1,6 @@
 # Changelog
+## v.8.1.3
+* Fjerne implisitt clearing i ie
 
 ## v.8.1.2
 * Bump devDep and peerDep of `ffe-core` from `^10.1.1` to `^10.1.2`.
