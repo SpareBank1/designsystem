@@ -1,5 +1,5 @@
 {
-    "dest": "temp/",
+    "dest": "packages/ffe-icons-react/temp/",
     "icons": [
         "*"
     ],
