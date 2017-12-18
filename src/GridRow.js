@@ -64,10 +64,16 @@ export default class GridRow extends Component {
 }
 
 GridRow.propTypes = {
+    /** Supported background colors */
     background: oneOf(VALID_BACKGROUND_COLORS),
+    /** Any extra classes are attached to the root node, in addition to ffe-grid__row classes */
     className: string,
+    /** All children of a `<GridRow />` must be `<GridCol />`. */
     children: node,
+    /** Specify the DOM element being used to create the GridRow */
     element: string,
+    /** If true, columns are reversed */
     reverse: bool,
+    /** If true, row receives top padding. Useful for when you have background colored rows */
     topPadding: bool,
 };

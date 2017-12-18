@@ -91,7 +91,7 @@ describe('GridCol', () => {
             center: true,
             bottom: true,
             between: true,
-            vertical: true,
+            horizontal: true,
             reverse: true,
         });
 
@@ -102,7 +102,7 @@ describe('GridCol', () => {
         expect(el.hasClass('ffe-grid__col--center')).to.be(true);
         expect(el.hasClass('ffe-grid__col--bottom')).to.be(true);
         expect(el.hasClass('ffe-grid__col--between')).to.be(true);
-        expect(el.hasClass('ffe-grid__col--vertical')).to.be(true);
+        expect(el.hasClass('ffe-grid__col--horizontal')).to.be(true);
         expect(el.hasClass('ffe-grid__col--reverse')).to.be(true);
     });
 
@@ -153,6 +153,22 @@ describe('GridCol', () => {
             sinon.stub(console, 'error');
         });
 
+        afterEach(() => console.error.reset());
+
+        it('warns about using deprecated props on GridCol', () => {
+            mount(
+                <Grid>
+                    <GridRow>
+                        <GridCol vertical={true} />
+                    </GridRow>
+                </Grid>
+            );
+
+            expect(console.error.callCount).to.be.greaterThan(0);
+            expect(console.error.getCalls().map(call => call.args[0]))
+                .to.contain('`<GridCol vertical={true} />` is the default behavior. You can safely remove this prop.');
+        });
+
         it('warns about nested <GridCol> tag', () => {
             mount(
                 <Grid>
@@ -190,7 +206,7 @@ describe('GridCol', () => {
             );
         });
 
-        describe('and checking cols and offset validity', () => {
+        describe('checks cols and offset validity', () => {
             const renderWithModifier = modifier => mount(
                 <Grid>
                     <GridRow>
