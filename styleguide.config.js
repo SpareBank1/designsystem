@@ -6,7 +6,7 @@ module.exports = {
         'babel-polyfill',
         path.join(__dirname, 'dist/ffe.css')
     ],
-    components: 'packages/ffe-*-react/src/**/[A-Z]*.js',
+    components: 'packages/ffe-*-react/src/**/[A-Z]+([A-Za-z]).js',
     webpackConfig: {
         module: {
             rules: [
