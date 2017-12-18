@@ -3,7 +3,7 @@ import { bool, node, string } from 'prop-types';
 import classNames from 'classnames';
 
 /**
- * Consider using ffe-grid-react instead for greater flexibility.
+ * @deprecated Bruk ffe-grid-react istedenfor
  */
 export default function ContentContainer(props) {
     const {
