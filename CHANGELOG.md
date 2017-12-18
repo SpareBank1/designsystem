@@ -1,5 +1,28 @@
 # Changelog
 
+## v.6.0.0
+
+This release fixes an issue with the original implementation, that needed to be done sooner or
+later. It will require some manual testing for consumers. :-(
+
+### Breaking changes
+
+`ffe-grid__col--vertical` is removed. This behavior is now enabled by default. This might lead to
+large visual changes in your application, so make sure to do the following check:
+
+- Go through all your usage of `ffe-grid__col`. If they have the `ffe-grid__col--vertical` modifier,
+you can safely remove it - no further change will be necessary.
+- If your `ffe-grid__col` has more than one direct child / descendant, add the new modifier
+`ffe-grid__col--horizontal` to keep things working the way they have.
+- If your `ffe-grid__col` has a single child, this child will now keep it's original width. Inline
+elements will be sized according to their content, while block elements will receive 100 % of the
+column width. This might let you delete some custom modifiers, or it might lead to a visual
+regression.
+
+## New features
+
+* Added new modifier `ffe-grid__col--horizontal` to let consumers flow flex-items horizontally
+
 ## v.5.6.3
 * `ffe-grid__row--reverse` now reverses wrapped elements as well, as is expected.
 
