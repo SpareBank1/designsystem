@@ -10,9 +10,9 @@ module.exports = {
         extensions: ['.js', '.jsx']
     },
     output: {
-        path: path.join(__dirname, 'temp'),
+        path: path.join(__dirname, 'tmp'),
         filename: 'bundle.js',
-        publicPath: '/temp/'
+        publicPath: '/tmp/'
     },
     module: {
         rules: [
