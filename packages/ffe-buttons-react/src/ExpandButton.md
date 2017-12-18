@@ -1,5 +1,3 @@
-# Expand button
-
 Default brukes for å ekspandere og vise innhold som ikke nødvendigvis trenger å ligge synlig på siden til enhver tid.
 Skal brukes med beige bakgrunn på innholdet som blir vist. Det beige laget som ekspanderes er fullbredde, det går fra
 kant til kant uavhengig av skjermstørrelse. Knappen er hvit (ikke transparent). Dark brukes for å ekspandere og vise
@@ -8,16 +6,10 @@ blå bakgrunn på innholdet som blir vist.
 
 
 ```js
+initialState = { isExpanded: false };
 <ExpandButton
-    isExpanded={false}
-    onClick={f => f}
->
-    Vis mer
-</ExpandButton>
-
-<ExpandButton
-    isExpanded={true}
-    onClick={f => f}
+    isExpanded={state.isExpanded}
+    onClick={() => setState({ isExpanded: !state.isExpanded })}
 >
     Vis mer
 </ExpandButton>

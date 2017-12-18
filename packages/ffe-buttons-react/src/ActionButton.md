@@ -1,5 +1,3 @@
-# Action button
-
 Knappen går til kjøp, bestill, søk etc. På produktsider følger knappen etter USP
 (unique selling points) øverst på sidene. Det skal bare være én action-knapp (i
 grønn) på en side.
@@ -30,10 +28,12 @@ er veldig treigt, vil det bli vist en progressindikator – spinner – på knap
 
 
 ```js
+initialState = { isLoading: false };
 <ActionButton
-    isLoading={true}
+    isLoading={state.isLoading}
+    onClick={() => setState({ isLoading: !state.isLoading })}
     ariaLoadingMessage="Jeg jobber med saken..."
 >
-    Klikk på meg!
+    Klikk for å laste!
 </ActionButton>
 ```

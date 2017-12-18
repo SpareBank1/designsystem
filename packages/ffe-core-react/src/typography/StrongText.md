@@ -1,7 +1,5 @@
-# String text
-
 ```js
-<StringText>
+<StrongText>
     Dette er en sterk type
-</StringText>
+</StrongText>
 ```

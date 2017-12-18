@@ -1,5 +1,3 @@
-# Divider line
-
 Også kjent som _horizontal rule_, eller _thematic break_ i HTML-verden.
 
 Fra [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr):

@@ -1,5 +1,3 @@
-# Paragraph
-
 ```js
 <Paragraph>
     Velg en av bankene våre, og bruk BankID for å bli kunde. Nettbank og

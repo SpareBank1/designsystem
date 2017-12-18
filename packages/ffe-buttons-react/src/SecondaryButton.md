@@ -1,5 +1,3 @@
-# Secondary button
-
 Knappen blir brukt sammen med de andre knappene, men er ikke like viktig. Den blir brukt ved siden av en annen knapp
 for å ikke ta fokus bort fra hovedbudskapet. Knappen er hvit (ikke transparent). Denne knappen kan for eksempel være
 legg til flere, avbryt (der dette ikke kan være en tekstlenke) osv. Secondary button kan også ha ikon (16px) for å
@@ -15,10 +13,12 @@ brukeren om at formatet man laster ned er PDF.
 ```
 
 ```js
+initialState = { isLoading: false };
 <SecondaryButton
-    isLoading={true}
+    isLoading={state.isLoading}
+    onClick={() => setState({ isLoading: !state.isLoading })}
     ariaLoadingMessage="Jeg jobber med saken..."
 >
-    Klikk på meg!
+    Klikk for å laste!
 </SecondaryButton>
 ```

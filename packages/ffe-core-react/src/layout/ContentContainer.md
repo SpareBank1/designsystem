@@ -1,22 +1,20 @@
-# Content container
-
 Vurdér å bruke Grid i stedet for disse layoutmekanismene. Grid er en god del mer fleksibelt.
 
 ```js
 <SectionWrapper>
-    <ConentContainer>
+    <ContentContainer>
         <Paragraph>
             Velg en av bankene våre, og bruk BankID for å bli kunde. Nettbank og
             mobilbank får du med en gang, og bankkortet kommer i posten om en ukes
             tid.
         </Paragraph>
-    </ConentContainer>
+    </ContentContainer>
 </SectionWrapper>
 ```
 
 ```js
 <SectionWrapper>
-    <ConentContainer
+    <ContentContainer
         bgGrey={true}
     >
         <Paragraph>
@@ -24,13 +22,13 @@ Vurdér å bruke Grid i stedet for disse layoutmekanismene. Grid er en god del m
             mobilbank får du med en gang, og bankkortet kommer i posten om en ukes
             tid.
         </Paragraph>
-    </ConentContainer>
+    </ContentContainer>
 </SectionWrapper>
 ```
 
 ```js
 <SectionWrapper>
-    <ConentContainer
+    <ContentContainer
         bgSand={true}
     >
         <Paragraph>
@@ -38,13 +36,13 @@ Vurdér å bruke Grid i stedet for disse layoutmekanismene. Grid er en god del m
             mobilbank får du med en gang, og bankkortet kommer i posten om en ukes
             tid.
         </Paragraph>
-    </ConentContainer>
+    </ContentContainer>
 </SectionWrapper>
 ```
 
 ```js
 <SectionWrapper>
-    <ConentContainer
+    <ContentContainer
         bgSand={true}
         small={true}
     >
@@ -53,13 +51,13 @@ Vurdér å bruke Grid i stedet for disse layoutmekanismene. Grid er en god del m
             mobilbank får du med en gang, og bankkortet kommer i posten om en ukes
             tid.
         </Paragraph>
-    </ConentContainer>
+    </ContentContainer>
 </SectionWrapper>
 ```
 
 ```js
 <SectionWrapper>
-    <ConentContainer
+    <ContentContainer
         bgSand={true}
         large={true}
     >
@@ -68,13 +66,13 @@ Vurdér å bruke Grid i stedet for disse layoutmekanismene. Grid er en god del m
             mobilbank får du med en gang, og bankkortet kommer i posten om en ukes
             tid.
         </Paragraph>
-    </ConentContainer>
+    </ContentContainer>
 </SectionWrapper>
 ```
 
 ```js
 <SectionWrapper>
-    <ConentContainer
+    <ContentContainer
         bgSand={true}
         noSpace={true}
     >
@@ -83,14 +81,14 @@ Vurdér å bruke Grid i stedet for disse layoutmekanismene. Grid er en god del m
             mobilbank får du med en gang, og bankkortet kommer i posten om en ukes
             tid.
         </Paragraph>
-    </ConentContainer>
+    </ContentContainer>
 </SectionWrapper>
 ```
 
 
 ```js
 <SectionWrapper>
-    <ConentContainer
+    <ContentContainer
         bgSand={true}
         textLeft={true}
     >
@@ -99,6 +97,6 @@ Vurdér å bruke Grid i stedet for disse layoutmekanismene. Grid er en god del m
             mobilbank får du med en gang, og bankkortet kommer i posten om en ukes
             tid.
         </Paragraph>
-    </ConentContainer>
+    </ContentContainer>
 </SectionWrapper>
 ```

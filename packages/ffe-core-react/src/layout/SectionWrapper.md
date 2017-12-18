@@ -1,16 +1,14 @@
-# Section wrapper
-
 Vurdér å bruke Grid i stedet for disse layoutmekanismene. Grid er en god del mer fleksibelt.
 
 ```js
 <SectionWrapper>
-    <ConentContainer>
+    <ContentContainer>
         <Paragraph>
             Velg en av bankene våre, og bruk BankID for å bli kunde. Nettbank og
             mobilbank får du med en gang, og bankkortet kommer i posten om en ukes
             tid.
         </Paragraph>
-    </ConentContainer>
+    </ContentContainer>
 </SectionWrapper>
 ```
 
@@ -18,13 +16,13 @@ Vurdér å bruke Grid i stedet for disse layoutmekanismene. Grid er en god del m
 <SectionWrapper
     bgBlue={true}
 >
-    <ConentContainer>
+    <ContentContainer>
         <Paragraph>
             Velg en av bankene våre, og bruk BankID for å bli kunde. Nettbank og
             mobilbank får du med en gang, og bankkortet kommer i posten om en ukes
             tid.
         </Paragraph>
-    </ConentContainer>
+    </ContentContainer>
 </SectionWrapper>
 ```
 
@@ -32,13 +30,13 @@ Vurdér å bruke Grid i stedet for disse layoutmekanismene. Grid er en god del m
 <SectionWrapper
     bgBlueFlat={true}
 >
-    <ConentContainer>
+    <ContentContainer>
         <Paragraph>
             Velg en av bankene våre, og bruk BankID for å bli kunde. Nettbank og
             mobilbank får du med en gang, og bankkortet kommer i posten om en ukes
             tid.
         </Paragraph>
-    </ConentContainer>
+    </ContentContainer>
 </SectionWrapper>
 ```
 
@@ -46,13 +44,13 @@ Vurdér å bruke Grid i stedet for disse layoutmekanismene. Grid er en god del m
 <SectionWrapper
     bgGrey={true}
 >
-    <ConentContainer>
+    <ContentContainer>
         <Paragraph>
             Velg en av bankene våre, og bruk BankID for å bli kunde. Nettbank og
             mobilbank får du med en gang, og bankkortet kommer i posten om en ukes
             tid.
         </Paragraph>
-    </ConentContainer>
+    </ContentContainer>
 </SectionWrapper>
 ```
 
@@ -60,12 +58,12 @@ Vurdér å bruke Grid i stedet for disse layoutmekanismene. Grid er en god del m
 <SectionWrapper
     bgSand={true}
 >
-    <ConentContainer>
+    <ContentContainer>
         <Paragraph>
             Velg en av bankene våre, og bruk BankID for å bli kunde. Nettbank og
             mobilbank får du med en gang, og bankkortet kommer i posten om en ukes
             tid.
         </Paragraph>
-    </ConentContainer>
+    </ContentContainer>
 </SectionWrapper>
 ```

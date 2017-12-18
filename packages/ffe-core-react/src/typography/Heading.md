@@ -1,25 +1,11 @@
-# Headings
-
 ```js
-<Heading1>Vi er 14 banker som samarbeider</Heading1>
-```
-
-```js
-<Heading2>Vi er 14 banker som samarbeider</Heading2>
-```
-
-```js
-<Heading3>Vi er 14 banker som samarbeider</Heading3>
-```
-
-```js
-<Heading4>Vi er 14 banker som samarbeider</Heading4>
-```
-
-```js
-<Heading5>Vi er 14 banker som samarbeider</Heading5>
-```
-
-```js
-<Heading6>Vi er 14 banker som samarbeider</Heading6>
+const { Heading1, Heading2, Heading3, Heading4, Heading5, Heading6 } = require('./Heading');
+<div>
+    <Heading1>Overskrift nivå 1</Heading1>
+    <Heading2>Overskrift nivå 2</Heading2>
+    <Heading3>Overskrift nivå 3</Heading3>
+    <Heading4>Overskrift nivå 4</Heading4>
+    <Heading5>Overskrift nivå 5</Heading5>
+    <Heading6>Overskrift nivå 6</Heading6>
+</div>
 ```
