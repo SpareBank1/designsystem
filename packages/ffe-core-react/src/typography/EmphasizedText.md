@@ -1,6 +1,4 @@
-# Emphasized text
-
-```jsx
+```js
 <EmphasizedText>
     Dette bør utheves
 </EmphasizedText>

@@ -1,8 +1,5 @@
-# Knapper
-
 En knapp kommuniserer tydelig hvilken handling som skjer når brukeren trykker på den. Den består av beskrivende tekst,
 et bilde eller begge.
-
 
 ## Layout
 

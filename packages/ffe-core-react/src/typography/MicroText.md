@@ -1,5 +1,3 @@
-# Micro text
-
 ```js
 <MicroText>
     Dette er den minste typen vi har
