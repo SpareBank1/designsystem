@@ -4,9 +4,16 @@ Felles frontend sin felles repository.
 
 ```
 npm install
-npm run lerna:bootstrap
+make bootstrap
 ```
 
 ## Development
 
 Se på [CONTRIBUTE.md].
+
+```
+make build
+make test
+make publish
+make clean
+```

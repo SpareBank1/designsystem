@@ -4,11 +4,8 @@
   "description": "Felles Front End",
   "scripts": {
     "lerna": "lerna",
-    "lerna:bootstrap": "lerna bootstrap",
-    "lerna:publish": "lerna publish --yes",
-    "lerna:clean": "lerna clean --yes",
-    "styleguidist": "styleguidist server",
-    "styleguidist:build": "styleguidist build",
+    "start": "styleguidist server",
+    "styleguidist": "styleguidist",
     "build:css": "lessc packages/ffe-all.less dist/ffe.css",
     "lint": "lerna run lint",
     "test": "lerna run test",
