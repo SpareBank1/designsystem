@@ -14,21 +14,28 @@ $ git subtree add --prefix packages/ffe-core ***REMOVED*** master
 
 Gjør dette i en egen branch.
 
+### Rydde i komponenten
+
+* Fjern `build.sh` og `npm run postpublish/preversion/has-published` i package.json.
+* Fiks `publishConfig` og `repository` i `package.json`
+* Fjern commit-hooks (se etter husky i package.json).
+* Fiks `license` i `package.json`
+* Linting
+  * Oppdatere eller fjern .stylelintrc og .eslintrc (Trenger ikke en extends-regler pga. eslintrc på toplevel i repoet; kun overstyring av regler).
+  * Fjern dependencies til eslint-plugin-*/-config-*. Behold kun eslint.
+  * Fjern dependencies til stylelint-config-*. Behold kun stylelint.
+* Fjern .editorconfig
+* Fjern alt i .npmrc foruten package-lock=false
+* Fjern `ffe-visual-tests-support` og alt relatert til gemini (.gemini.yml).
+* Oppgradere til React 16.
+* Fiks hoisting errors (se stdout til lerna bootstrap i neste trinn).
+* Sjekk at `npm run build/test/lint` fungerer.
+
 ### Lerna bootstrap
 
 ```
 $ npm run lerna:bootstrap
 ```
-
-### Rydde i komponenten
-
-* Fiks hoisting errors (se stdout til lerna bootstrap)
-* Fiks `publishConfig` og `repository` i `package.json`
-* Fiks `license` i `package.json`
-* Fjern alt i .npmrc foruten  package-lock=false
-* Fjern `ffe-visual-tests-support` og alt relatert til gemini (.gemini.yml).
-* Fjern `build.sh` og `npm run postpublish/preversion/has-published`
-* Sjekk at `npm run build/test/lint` fungerer.
 
 less-pakke:
 * Legg til import av pakkens less i packages/ffe-all.less
