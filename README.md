@@ -129,12 +129,12 @@ Reverses the grid columns so that they're laid out right to left instead
 
 #### Columns
 
-##### `.ffe-grid__col--vertical`
-Aligns the content of a cell vertically
+##### `.ffe-grid__col--horizontal`
+Aligns the content of a cell horizontally
 
 ##### `.ffe-grid__col--reverse`
 Aligns the content of a cell in the reverse order
-(Can be used with `--vertical` for a reversed vertical order)
+(Can be used with `--horizontal` for a reversed horizontal order)
 
 ##### `.ffe-grid__col--start`
 Aligns the content of a cell to the left
