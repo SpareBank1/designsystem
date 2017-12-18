@@ -31,14 +31,15 @@ Gjør dette i en egen branch.
 * Fiks hoisting errors (se stdout til lerna bootstrap i neste trinn).
 * Sjekk at `npm run build/test/lint` fungerer.
 
+less-pakke:
+* Legg til import av pakkens less i packages/ffe-all.less
+
+
 ### Lerna bootstrap
 
 ```
 $ npm run lerna:bootstrap
 ```
-
-less-pakke:
-* Legg til import av pakkens less i packages/ffe-all.less
 
 ## Publisering
 
