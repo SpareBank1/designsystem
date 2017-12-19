@@ -11,8 +11,8 @@ For å kunne definere en tabell, så trenger du to arrays - en med kolonner og e
 
 ```js static
 const columns = [
-    { key: 'name', heading: 'Navn'},
-    { key: 'age', heading: 'Alder' },
+    { key: 'name', header: 'Navn'},
+    { key: 'age', header: 'Alder' },
 ];
 const data = [
     { name: 'Anders' alder: 32 },
@@ -27,8 +27,8 @@ Slik ser det ut:
 
 ```js
 const columns = [
-    { key: 'name', heading: 'Navn'},
-    { key: 'age', heading: 'Alder' },
+    { key: 'name', header: 'Navn'},
+    { key: 'age', header: 'Alder' },
 ];
 const data = [
     { name: 'Anders' alder: 32 },
@@ -49,8 +49,8 @@ En tabell kan være sorterbar:
 
 ```js
 const columns = [
-    { key: 'name', heading: 'Navn'},
-    { key: 'age', heading: 'Alder' },
+    { key: 'name', header: 'Navn'},
+    { key: 'age', header: 'Alder' },
 ];
 const data = [
     { name: 'Anders' alder: 32 },
@@ -73,8 +73,8 @@ med eldst først:
 
 ```js
 const columns = [
-    { key: 'name', heading: 'Navn'},
-    { key: 'age', heading: 'Alder' },
+    { key: 'name', header: 'Navn'},
+    { key: 'age', header: 'Alder' },
 ];
 const data = [
     { name: 'Anders' alder: 32 },
@@ -96,8 +96,8 @@ En tabell kan være paginert:
 
 ```js
 const columns = [
-    { key: 'name', heading: 'Navn'},
-    { key: 'age', heading: 'Alder' },
+    { key: 'name', header: 'Navn'},
+    { key: 'age', header: 'Alder' },
 ];
 let data = [
     { name: 'Anders' alder: 32 },
@@ -120,8 +120,8 @@ Du kan også få en mer kompakt tabell:
 
 ```js
 const columns = [
-    { key: 'name', heading: 'Navn'},
-    { key: 'age', heading: 'Alder' },
+    { key: 'name', header: 'Navn'},
+    { key: 'age', header: 'Alder' },
 ];
 const data = [
     { name: 'Anders' alder: 32 },
@@ -143,8 +143,8 @@ Det er støtte for ekspanderbare rader:
 
 ```js
 const columns = [
-    { key: 'name', heading: 'Navn'},
-    { key: 'age', heading: 'Alder' },
+    { key: 'name', header: 'Navn'},
+    { key: 'age', header: 'Alder' },
 ];
 const data = [
     { name: 'Anders' alder: 32, beskrivelse: 'Flittig' },
