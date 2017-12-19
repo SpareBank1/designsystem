@@ -1,5 +1,13 @@
 # Changelog
 
+## v.6.0.1
+
+### Bugfix
+
+* Made the `--start`, `--center`, `--end`, `--top`, `--middle` and `--bottom` modifiers work as close as possible to how they did before the `v6.0.0` change for horizontal columns. For vertical columns, the modifiers will work
+like they do for horizontal columns while still stacking content vertically. Visual tests and examples have been
+added to demonstrate this behaviour.
+
 ## v.6.0.0
 
 This release fixes an issue with the original implementation, that needed to be done sooner or
