@@ -3,4 +3,5 @@ node_modules/
 dist/
 iconlist.json
 jsx/
-temp/
+tmp/
+lib
