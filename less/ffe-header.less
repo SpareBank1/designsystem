@@ -22,7 +22,17 @@
         margin: 0 auto;
         padding: 0 20px;
         max-width: 1280px;
+
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+            > .ffe-header__secondary-nav,
+            > .ffe-header__logo,
+            > .ffe-header__user-button,
+            > .ffe-header__site-nav {
+                display: block\9;
+            }
+        }
     }
+
 
     &__link {
         &:link,
@@ -75,6 +85,7 @@
     &__logo-svg {
         height: 30px;
         vertical-align: middle;
+        border: none;
     }
 
     &__icon-button {
@@ -90,7 +101,7 @@
 
         .ffe-header__notification-bubble {
             position: absolute;
-            left: -4px;
+            left: 18px;
             bottom: -4px;
         }
     }
@@ -208,6 +219,7 @@
     }
     
     &__secondary-nav {
+        display: none;
         text-transform: uppercase;
     }
 
@@ -249,6 +261,7 @@
         }
 
         &__site-nav {
+            width: 100%;
             flex-basis: 100%;
             padding: 10px;
 
@@ -308,13 +321,16 @@
             }
         }
 
-        &__user-name,
-        &__secondary-nav {
+        &__user-name {
             display: none;
         }
 
         &__user-nav {
             margin-right: 20px;
+        }
+
+        &__user-button {
+            order: -1;
         }
 
         &__user-nav-list,
@@ -349,8 +365,9 @@
             }
         }
 
-        &__user-button {
+        &__search-button {
             margin-right: 10px;
+            order: -1;
         }
     }
 }
