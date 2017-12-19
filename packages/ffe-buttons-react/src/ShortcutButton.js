@@ -1,5 +1,5 @@
 import React from 'react';
-import ChevronIcon from 'ffe-icons-react/chevron-ikon';
+import ChevronIcon from 'ffe-icons-react/lib/chevron-ikon';
 import Button from './Button';
 
 const ShortcutButton = props => (
