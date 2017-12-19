@@ -1,7 +1,7 @@
 .idea/
 node_modules/
-dist/
 iconlist.json
 jsx/
 tmp/
-lib
+/*-ikon.js
+/ffe-icons-react.js
