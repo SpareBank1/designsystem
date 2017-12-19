@@ -16,9 +16,6 @@
     "type": "git",
     "url": "***REMOVED***"
   },
-  "publishConfig": {
-    "registry": "***REMOVED***"
-  },
   "author": "",
   "license": "UNLICENSED",
   "dependencies": {
