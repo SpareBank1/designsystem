@@ -1,0 +1,3 @@
+{
+    "extends": "./linting/stylelint-config-ffe"
+}

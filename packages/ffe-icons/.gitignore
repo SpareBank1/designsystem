@@ -1,0 +1,7 @@
+node_modules/
+dist/symbol
+.idea/
+gemini-report/
+
+npm-debug.log*
+target

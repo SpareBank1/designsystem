@@ -1,0 +1,18 @@
+{
+  "name": "stylelint-config-ffe",
+  "version": "0.3.0",
+  "description": "FFE shareable config for stylelint",
+  "author": "SpareBank 1",
+  "license": "UNLICENSED",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "***REMOVED***"
+  },
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "stylelint-config-standard": "^16.0.0"
+  }
+}

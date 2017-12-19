@@ -1,0 +1,17 @@
+{
+    "dest": "packages/ffe-icons-react/tmp/",
+    "icons": [
+        "*"
+    ],
+    "config": {
+        "mode": {
+            "view": {
+                "prefix": ".icon.icon-",
+                "example": {
+                    "template": "./src/icons.js.mustache",
+                    "dest": "../icons.js"
+                }
+            }
+        }
+    }
+}
