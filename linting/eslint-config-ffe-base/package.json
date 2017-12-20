@@ -6,7 +6,7 @@
   "license": "UNLICENSED",
   "repository": {
     "type": "git",
-    "url": "ssh://git@stash.intern.sparebank1.no:22/ffe/eslint-config-ffe-base.git"
+    "url": "ssh://git@stash.intern.sparebank1.no:22/ffe/ffe-monorepo.git"
   },
   "main": "index.js",
   "scripts": {
