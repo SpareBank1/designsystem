@@ -1,5 +1,10 @@
 #CHANGELOG
 
+## Version 10.2.0
+* Hide search on mobile
+* Flexbox fixes for IE10
+* Added svgs of all bank logos
+
 ## Version 10.1.0
 * Provide a version of ffe-header without dependencies to other ffe packages.
 
