@@ -79,14 +79,14 @@ Bruk [convetional commits](https://conventionalcommits.org/) isteden og lerna ta
 -> https://github.com/lerna/lerna#--conventional-commits
 
 
-### Push til npmreg
-
-```
-$ npm run lerna:publish
-```
-
 ## Styleguidist
 
 ```
-$ make styleguidist
+$ npm run styleguidist:build
+```
+
+eller
+
+```
+$ npm start
 ```
