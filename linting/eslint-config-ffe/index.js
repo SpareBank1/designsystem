@@ -13,8 +13,5 @@ module.exports = {
             'jsx': true
         },
     },
-    'ecmaFeatures': {
-        'jsx': true
-    },
     'rules': {}
 };
