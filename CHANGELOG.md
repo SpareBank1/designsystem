@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## Version 6.0.1
+* `utils.js` exports empty functions for production bundle
+
 ## Version 6.0.0
 
 `<GridCol vertical={true} />` is now the default behavior, which means you need to do a manual

@@ -1,7 +1,7 @@
 {
     "extends": "ffe",
     "env": {
-        "node": false
+        "node": true
     },
     "parserOptions": {
         "ecmaVersion": 8
