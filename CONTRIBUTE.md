@@ -1,8 +1,37 @@
 # Contribute
 
+Dette er et monorepo som på sikt skal inneholde alle FFE-komponenter.
 Publisering og sånt skjer med [lerna](https://lernajs.io).
 
-## Importere eksisterende ffe-komponenter
+## Lage en ny feature eller bugfix
+
+Utvikling skjer i en feature- eller bugfix-branch fra master og tilføres master
+i en pull request på stash.
+
+## Commit-meldinger
+
+Commit-meldinger må følge [convetional commits](https://conventionalcommits.org/)-formatet.
+
+Dette repo har en post-commit-hook som sjekker meldingen med [commitlint](https://github.com/marionebl/commitlint)
+og feiler om den ikke stemmer overens med formatet.
+
+Eksempel commit-melding:
+
+```
+feat(ffe-grid): Adds another background color
+
+This commit adds a new background modifier --bg-hot-pink to ffe-grid__row. Enjoy!
+
+Fixes FFE-1337
+```
+
+Type er vanligvis `feat` på features eller `fix` på bugfixes. Scope er navnet på pakken, f.eks. ffe-core.
+
+## Lage en ny FFE-komponenter
+
+_writeme_
+
+## Importere en eksisterende FFE-komponent
 
 ### Dra inn koden inkl. git historien
 
@@ -50,14 +79,14 @@ Bruk [convetional commits](https://conventionalcommits.org/) isteden og lerna ta
 -> https://github.com/lerna/lerna#--conventional-commits
 
 
-### Push til npmreg
-
-```
-$ npm run lerna:publish
-```
-
 ## Styleguidist
 
 ```
-$ make styleguidist
+$ npm run styleguidist:build
+```
+
+eller
+
+```
+$ npm start
 ```
