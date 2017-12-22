@@ -19,3 +19,8 @@ Create .eslintsrc and extend this config.
 ```
 
 If you are not using React see eslint-config-ffe-base.
+
+## Utvikling og bidrag
+
+For informasjon om utvikling og bidrag, vennligst se
+[CONTRIBUTE.md](***REMOVED***)
