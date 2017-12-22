@@ -51,24 +51,7 @@ title: PropTypes.string
 * Use `tabIndex` to set tabIndex of the icon. Default is undefined.
 * Use `title` to create a `<title></title>` element inside the icon. Default is `''`.
 
+## Utvikling og bidrag
 
-
-
-## Development
-
-### Building
-```
-npm install
-
-npm run build
-```
-or
-```
-./buildCI.sh
-```
-### Testserver
-
-```
-npm run server
-```
-Server is now available on http://localhost:8080
+For informasjon om utvikling og bidrag, vennligst se
+[CONTRIBUTE.md](https://stash.intern.sparebank1.no/projects/FFE/repos/ffe-monorepo/browse/CONTRIBUTE.md)
