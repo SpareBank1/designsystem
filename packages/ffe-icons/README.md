@@ -42,7 +42,7 @@ Example `icons.json`:
 
 ```
 
-To build your icon sprite, run the `ffe-icons` command using Node and pass the path to your `icons.json` as `--opts`. 
+To build your icon sprite, run the `ffe-icons` command using Node and pass the path to your `icons.json` as `--opts`.
 It is recommended you add an npm-script to your `package.json` like so:
 
 ```
@@ -135,6 +135,11 @@ See [readme for ffe-core](***REMOVED***).
 
 ## Publishing
 See [readme for ffe-core](***REMOVED***).
+
+## Utvikling og bidrag
+
+For informasjon om utvikling og bidrag, vennligst se
+[CONTRIBUTE.md](***REMOVED***)
 
 
 ###### Footnotes
