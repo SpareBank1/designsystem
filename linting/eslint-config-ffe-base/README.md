@@ -19,3 +19,8 @@ Create .eslintsrc and extend this config.
     "extends": "ffe-base"
 }
 ```
+
+## Utvikling og bidrag
+
+For informasjon om utvikling og bidrag, vennligst se
+[CONTRIBUTE.md](https://stash.intern.sparebank1.no/projects/FFE/repos/ffe-monorepo/browse/CONTRIBUTE.md)
