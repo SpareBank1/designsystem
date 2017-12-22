@@ -1,4 +1,41 @@
-# Changelog
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+    <a name="8.0.0"></a>
+# 8.0.0 (2017-12-22)
+
+
+### Bug Fixes
+
+* **ffe-icons:** Fix git repository url ([6278180](***REMOVED***))
+* **ffe-icons:** Remove class attribute from klokke-ikon ([0298c35](***REMOVED***))
+
+
+### Features
+
+* **ffe-icons:** Add contribute.md link to readme ([166d9b2](***REMOVED***))
+
+
+### Fix
+
+* Rename all icons to end with -ikon ([f4b815a](***REMOVED***))
+
+
+### BREAKING CHANGES
+
+* This commit renames two icons in ffe-icons.
+`bankid-icon` is now named `bankid-ikon`, and
+`mynter-to-stabler-pluss` is now named `mynter-to-stabler-pluss-ikon`.
+
+In addition, ffe-icons-react receives a fix that unbroke a previous
+release
+
+
+
+
+    # Changelog
 
 ## 7.17.0
 
@@ -94,13 +131,13 @@ Usage:
 
 ```json
 {
-    "dest": "dist/resources/",
-    "icons": [
-        "bamse-ikon"
-    ],
-    "projectIcons": [
-        "src/main/resources/special/snowflake/snokrystall-ikon"
-    ]
+"dest": "dist/resources/",
+"icons": [
+    "bamse-ikon"
+],
+"projectIcons": [
+    "src/main/resources/special/snowflake/snokrystall-ikon"
+]
 }
 ```
 
@@ -155,9 +192,9 @@ above `node_modules/` (the same directory as your apps `package.json`). So what 
 ## 6.0.0
 * Breaking: kontorbygg-ikon renamed to kontorbygg-solid-ikon in order to be consistent with how other icons are named. Anyone who where using the `kontorbygg-ikon` and wants to keep using the version with a fill should change to `kontorbygg-solid-ikon`.
 * Add new icons
-    * kontorbygg-ikon (replaces old solid one with a non-solid version)
-    * skyskraper-ikon
-    * personer-ikon
+* kontorbygg-ikon (replaces old solid one with a non-solid version)
+* skyskraper-ikon
+* personer-ikon
 
 ## 5.3.1
 * No change
@@ -165,9 +202,9 @@ above `node_modules/` (the same directory as your apps `package.json`). So what 
 ## Version 5.3.0
 
 * Added a few new icons
-    * hus-hake-ikon.svg
-    * hus-hjerte-ikon-svg
-    * kr-hake-ikon.svg
+* hus-hake-ikon.svg
+* hus-hjerte-ikon-svg
+* kr-hake-ikon.svg
 
 ## Version 5.2.1
 * No change.
@@ -179,30 +216,30 @@ above `node_modules/` (the same directory as your apps `package.json`). So what 
 ## Version 5.1.0
 
 * Added a bunch of new icons
-     * campingbil-ikon.svg
-     * fritidshus-ikon.svg
-     * handlevogn-ikon.svg
-     * hus-enebolig-ikon.svg
-     * hus-horisontaldelt-ikon.svg
-     * hus-ikon.svg
-     * hus-kjedet-ikon.svg
-     * hus-leilighet-ikon.svg
-     * hus-rekkehus-ikon.svg
-     * hus-vertikaldelt-ikon.svg
-     * katt-ikon.svg
-     * lommebok-ikon.svg
-     * mobil-ikon.svg
-     * motorsykkel-ikon.svg
-     * nokkelhull-ikon.svg
-     * person-brukket-arm-ikon.svg
-     * robat-ikon.svg
-     * seilbat-ikon.svg
-     * snoscooter-ikon.svg
-     * sofa-ikon.svg
-     * sporsmalstegn-ikon.svg
-     * sykebil-ikon.svg
-     * traktor-ikon.svg
-     * ung-caps-ikon.svg
+ * campingbil-ikon.svg
+ * fritidshus-ikon.svg
+ * handlevogn-ikon.svg
+ * hus-enebolig-ikon.svg
+ * hus-horisontaldelt-ikon.svg
+ * hus-ikon.svg
+ * hus-kjedet-ikon.svg
+ * hus-leilighet-ikon.svg
+ * hus-rekkehus-ikon.svg
+ * hus-vertikaldelt-ikon.svg
+ * katt-ikon.svg
+ * lommebok-ikon.svg
+ * mobil-ikon.svg
+ * motorsykkel-ikon.svg
+ * nokkelhull-ikon.svg
+ * person-brukket-arm-ikon.svg
+ * robat-ikon.svg
+ * seilbat-ikon.svg
+ * snoscooter-ikon.svg
+ * sofa-ikon.svg
+ * sporsmalstegn-ikon.svg
+ * sykebil-ikon.svg
+ * traktor-ikon.svg
+ * ung-caps-ikon.svg
 
 ## Version 5.0.0
 

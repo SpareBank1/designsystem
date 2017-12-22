@@ -1,3 +1,19 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+<a name="5.1.0"></a>
+# 5.1.0 (2017-12-22)
+
+
+### Features
+
+* **ffe-buttons:** Add contribute.md link to readme ([e0e3d2c](***REMOVED***))
+
+
+
+
 # Changelog
 
 ## v5.0.1

@@ -1,6 +1,6 @@
 {
   "name": "ffe-buttons",
-  "version": "5.0.1",
+  "version": "5.1.0",
   "scripts": {
     "build": "npm run lint && lessc example/example.less example/example.css && cp -R node_modules/ffe-core/fonts/ example/ && echo \"$(date +%T): Updated example\"",
     "lint": "lessc --lint example/example.less && stylelint less/*.less",
@@ -13,7 +13,7 @@
     "url": "***REMOVED***"
   },
   "devDependencies": {
-    "ffe-core": "^10.1.1",
+    "ffe-core": "^10.2.0",
     "less": "^2.7.3",
     "nsp": "^3.1.0",
     "opn-cli": "^3.1.0",
@@ -21,7 +21,7 @@
     "watch": "^1.0.2"
   },
   "peerDependencies": {
-    "ffe-core": "^10.1.1"
+    "ffe-core": "^10.2.0"
   },
   "files": [
     "less"

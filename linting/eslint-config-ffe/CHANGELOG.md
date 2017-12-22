@@ -1,3 +1,26 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+<a name="7.0.0"></a>
+# 7.0.0 (2017-12-22)
+
+
+### Features
+
+* **eslint-config-ffe:** Add contribute.md link to readme ([869691f](***REMOVED***))
+* **eslint-config-ffe:** Upgrade to eslint 4 ([05536ed](***REMOVED***))
+
+
+### BREAKING CHANGES
+
+* **eslint-config-ffe:** Removes deprecated ecmaFeature setting and drops
+support for eslint 3 and older.
+
+
+
+
 # Changelog
 
 ## v.6.0.2 (13.10.2017)

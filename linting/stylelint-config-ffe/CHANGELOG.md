@@ -1,3 +1,19 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+<a name="0.4.0"></a>
+# 0.4.0 (2017-12-22)
+
+
+### Features
+
+* **stylelint-config-ffe:** Add contribute.md link to readme ([9d91204](***REMOVED***))
+
+
+
+
 # Changelog
 
 ## 0.3.0

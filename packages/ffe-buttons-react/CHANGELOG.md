@@ -1,4 +1,43 @@
-# Changelog
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+    <a name="7.0.0"></a>
+# 7.0.0 (2017-12-22)
+
+
+### Bug Fixes
+
+* Fix a few issues with the documentation ([83bee34](***REMOVED***))
+* **ffe-buttons-react:** Fixed path to chevron icon ([4a16869](***REMOVED***))
+* **ffe-icons-react:** Change hardcoded path of npm run build target ([ecfc6a3](***REMOVED***))
+
+
+### Features
+
+* **ffe-buttons-react:** Add contribute.md link to readme ([2b8ead4](***REMOVED***))
+* **ffe-buttons-react:** Upgrade to React 16 ([f119120](***REMOVED***))
+
+
+### Fix
+
+* Rename all icons to end with -ikon ([f4b815a](***REMOVED***))
+
+
+### BREAKING CHANGES
+
+* This commit renames two icons in ffe-icons.
+`bankid-icon` is now named `bankid-ikon`, and
+`mynter-to-stabler-pluss` is now named `mynter-to-stabler-pluss-ikon`.
+
+In addition, ffe-icons-react receives a fix that unbroke a previous
+release
+
+
+
+
+    # Changelog
 
 ## v6.2.0
 
@@ -41,12 +80,12 @@ controlling state.
 ### 💥 Breaking changes
 
 * (BREAKING) Remove button names with 'FFE' prefix that were deprecated in v2.1.0
-    * To migrate to v6.0.0, change your button imports as follows:
-        * FFEActionButton -> ActionButton
-        * FFEButton -> Button
-        * FFEPrimaryButton -> PrimaryButton
-        * FFESecondaryButton -> SecondaryButton
-        * FFEShortcutButton -> ShortcutButton
+* To migrate to v6.0.0, change your button imports as follows:
+    * FFEActionButton -> ActionButton
+    * FFEButton -> Button
+    * FFEPrimaryButton -> PrimaryButton
+    * FFESecondaryButton -> SecondaryButton
+    * FFEShortcutButton -> ShortcutButton
 
 ### 🚀 New features
 

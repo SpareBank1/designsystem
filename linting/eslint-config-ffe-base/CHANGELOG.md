@@ -1,3 +1,19 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+<a name="2.3.0"></a>
+# 2.3.0 (2017-12-22)
+
+
+### Features
+
+* **eslint-config-ffe-base:** Add contribute.md link to readme ([28d5fe9](***REMOVED***))
+
+
+
+
 # Changelog
 
 ## v.2.2.0 (13.12.2017)

@@ -1,4 +1,42 @@
-# Changelog
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+      <a name="3.0.0"></a>
+# 3.0.0 (2017-12-22)
+
+
+### Bug Fixes
+
+* **ffe-icons-react:** Adjust file path to monorepo layout ([3f89c42](***REMOVED***))
+* **ffe-icons-react:** fix build script to work inside monorepo ([3dd256e](***REMOVED***))
+* **ffe-icons-react:** Output components to /lib ([4b62d10](***REMOVED***))
+
+
+### Features
+
+* **ffe-icons-react:** Add contribute.md link to readme ([32014fc](***REMOVED***))
+
+
+### Fix
+
+* Rename all icons to end with -ikon ([f4b815a](***REMOVED***))
+
+
+### BREAKING CHANGES
+
+* This commit renames two icons in ffe-icons.
+`bankid-icon` is now named `bankid-ikon`, and
+`mynter-to-stabler-pluss` is now named `mynter-to-stabler-pluss-ikon`.
+
+In addition, ffe-icons-react receives a fix that unbroke a previous
+release
+
+
+
+
+      # Changelog
 
 ## 2.4.19
 
@@ -11,31 +49,31 @@
 ## 2.4.17
 
 * Updated ffe-icons to version 7.15.0, new icon:
-  * `ffe-icons-react/info-sirkel-solid-ikon`
+* `ffe-icons-react/info-sirkel-solid-ikon`
 
 ## 2.4.16
 
 * Updated ffe-icons to version 7.14.0, new icon:
-  * `ffe-icons-react/p-pose-stjerne-ikon`
+* `ffe-icons-react/p-pose-stjerne-ikon`
 
 ## 2.4.15
 
 * Updated ffe-icons to version 7.13.0, new icons:
-  * `ffe-icons-react/beta-ikon`
-  * `ffe-icons-react/kr-tannhjul-ikon`
-  * `ffe-icons-react/mobil-utropstegn-ikon`
-  * `ffe-icons-react/person-streker-ikon`
+* `ffe-icons-react/beta-ikon`
+* `ffe-icons-react/kr-tannhjul-ikon`
+* `ffe-icons-react/mobil-utropstegn-ikon`
+* `ffe-icons-react/person-streker-ikon`
 
 ## 2.4.14
 
 * Fixed warnings:
-  * attribute focusable on svg elements should be a string, not a boolean
-  * avoid sending iconName prop to the svg element since it is not a prop on the DOM element
+* attribute focusable on svg elements should be a string, not a boolean
+* avoid sending iconName prop to the svg element since it is not a prop on the DOM element
 
 ## 2.4.13
 
 * Updated ffe-icons to version 7.12.0, new icons:
-  * `ffe-icons-react/pil-ut-av-boks-skraa-ikon` has been redesigned with thicker lines
+* `ffe-icons-react/pil-ut-av-boks-skraa-ikon` has been redesigned with thicker lines
 
 ## 2.4.12
 * Removed the default `onClick` handler which caused decorative icons to be read by screen readers.
@@ -43,12 +81,12 @@
 ## 2.4.11
 
 * Update ffe-icons to version 7.11.0,
-  * `ffe-icons-react/snakkeboble-ikon` has been redesigned to be more in line with the visual profile.
+* `ffe-icons-react/snakkeboble-ikon` has been redesigned to be more in line with the visual profile.
 
 ## 2.4.10
 
 * Updated ffe-icons to version 7.10.0, new icons:
-  * `ffe-icons-react/trillekoffert-ikon`
+* `ffe-icons-react/trillekoffert-ikon`
 
 ## 2.4.9
 
@@ -89,9 +127,9 @@
 ## v2.4.0
 
 * Update ffe-icons to 7.5.1, new icons:
-  * `ffe-icons-react/binders-ikon`
-  * `ffe-icons-react/svar-pil-ikon`
-  * `ffe-icons-react/moped-ikon`
+* `ffe-icons-react/binders-ikon`
+* `ffe-icons-react/svar-pil-ikon`
+* `ffe-icons-react/moped-ikon`
 
 ## v2.3.1
 
@@ -100,14 +138,14 @@
 ## v2.3.0
 
 * Update ffe-icons to version 7.2.0. New icons:
-  * ffe-icons-react/pluss-ikon
+* ffe-icons-react/pluss-ikon
 
 ## v2.2.0
 
 * Update ffe-icons to a new major: 7.1.1. New icons:
-  * `ffe-icons-react/bil-camping-ikon`
-  * `ffe-icons-react/hus-tre-ikon`
-  * `ffe-icons-react/handlevogn-pakker-ikon`
+* `ffe-icons-react/bil-camping-ikon`
+* `ffe-icons-react/hus-tre-ikon`
+* `ffe-icons-react/handlevogn-pakker-ikon`
 
 ## v2.1.1
 
@@ -116,10 +154,10 @@
 ## v2.0.0
 
 * Update ffe-icons to a new major: 6.0.0.
-  * `ffe-icons-react/kontorbygg-ikon` renamed to `ffe-icons-react/kontorbygg-solid-ikon`
-  * `ffe-icons-react/skyskraper-ikon` added
-  * `ffe-icons-react/personer-ikon` added
-  * `ffe-icons-react/kontorbygg-ikon` added (in a non-solid version)
+* `ffe-icons-react/kontorbygg-ikon` renamed to `ffe-icons-react/kontorbygg-solid-ikon`
+* `ffe-icons-react/skyskraper-ikon` added
+* `ffe-icons-react/personer-ikon` added
+* `ffe-icons-react/kontorbygg-ikon` added (in a non-solid version)
 
 ## v1.1.1
 
@@ -128,8 +166,8 @@
 ## v1.1.0
 
 * Update ffe-icons to 5.2.0. New icons:
-  * ffe-icons-react/konfetti-ikon
-  * ffe-icons-react/tommel-opp-ikon
+* ffe-icons-react/konfetti-ikon
+* ffe-icons-react/tommel-opp-ikon
 
 ## v1.0.0
 
