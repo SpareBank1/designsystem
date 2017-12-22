@@ -1,3 +1,19 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+<a name="2.3.0"></a>
+# 2.3.0 (2017-12-22)
+
+
+### Features
+
+* **eslint-config-ffe-base:** Add contribute.md link to readme ([28d5fe9](http://stash.intern.sparebank1.no:22/ffe/ffe-monorepo/commits/28d5fe9))
+
+
+
+
 # Changelog
 
 ## v.2.2.0 (13.12.2017)
