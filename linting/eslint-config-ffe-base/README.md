@@ -19,3 +19,8 @@ Create .eslintsrc and extend this config.
     "extends": "ffe-base"
 }
 ```
+
+## Utvikling og bidrag
+
+For informasjon om utvikling og bidrag, vennligst se
+[CONTRIBUTE.md](***REMOVED***)

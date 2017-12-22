@@ -6,7 +6,7 @@
 $ npm install --save ffe-core ffe-buttons ffe-buttons-react
 ```
 
-`ffe-buttons-react` has a peer dependency on `ffe-core` and `ffe-buttons`. 
+`ffe-buttons-react` has a peer dependency on `ffe-core` and `ffe-buttons`.
 
 ## Usage
 
@@ -173,3 +173,8 @@ it, you can change the type to either `button` or `reset`:
 In the case of specifying `type="button"` it is important that you also
 specify an `onClick` handler - so that the button triggers some kind of
 reaction.
+
+## Utvikling og bidrag
+
+For informasjon om utvikling og bidrag, vennligst se
+[CONTRIBUTE.md](***REMOVED***)

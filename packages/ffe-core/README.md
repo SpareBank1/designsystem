@@ -85,16 +85,7 @@ Ellers kan du følge dokumentasjonen for de forskjellige verktøyene.
 
 I koden vil du måtte `import`e Less og JavaScript fra de enkelte pakkene. Se pakkens README for hvordan dette bør gjøres.
 
-## Forvaltning av FFE
+## Utvikling og bidrag
 
-Se [CONTRIBUTE.md](***REMOVED***) for hvordan du bidrar med features og bugfixes.
-
-Vi følger [BEM](https://en.bem.info/) for å sørge for god organisasjon av CSS-koden.
-
-FFE skal ivareta fargekontrastkravene som spesifisert i WCAG 2.0-standarden (AA-nivå).
-
-Nettleser som _ikke_ støttes av FFE:
-
-* Internet Explorer 8 og tidligere; Internet Explorer 9 kan brukes, men begrensede visuelle avvik må aksepteres.
-* Android Browser-versjoner tidligere enn 4.4
-
+For informasjon om utvikling og bidrag, vennligst se
+[CONTRIBUTE.md](***REMOVED***)
