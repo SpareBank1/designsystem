@@ -21,3 +21,8 @@ Your project's `.stylelintrc`:
   "extends": "stylelint-config-ffe"
 }
 ```
+
+## Utvikling og bidrag
+
+For informasjon om utvikling og bidrag, vennligst se
+[CONTRIBUTE.md](***REMOVED***)
