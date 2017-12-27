@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import FaksPrinterSolidIkon from 'ffe-icons-react/faks-printer-solid-ikon';
+import { FaksPrinterSolidIkon } from 'ffe-icons-react';
 import './buttons.less';
 import {
   ActionButton,
