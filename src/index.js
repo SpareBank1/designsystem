@@ -1,5 +1,5 @@
 import React from 'react';
-import { node, bool, func, number, oneOf, arrayOf, shape, string } from 'prop-types';
+import { node, bool, func, number, oneOf, oneOfType, arrayOf, shape, string } from 'prop-types';
 import TableComponent from './Table';
 import SortableTableComponent from './SortableTable';
 
@@ -37,7 +37,7 @@ Table.propTypes = {
     data: arrayOf(
         shape({
             /** A unique ID for each row of data. Required for sorting */
-            id: oneOf([string, number]),
+            id: oneOfType([string, number]),
         })
     ),
     /** An array of objects with a key describing your column, and a header describing that column */

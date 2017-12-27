@@ -1,5 +1,9 @@
 # Changelog
 
+## v4.9.3
+
+* Fixed broken prop type for data IDs
+
 ## v4.9.2
 
 * Added documentation and refactored slightly.
