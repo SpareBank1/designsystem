@@ -40,7 +40,6 @@ class ScrollContainer extends React.Component {
         return (
             <div
                 className='ffe-searchable-dropdown__scroll-container'
-                onKeyDown={this.onKeyDown}
             >
                 <Scrollbars
                     autoHeight={autoHeight}
