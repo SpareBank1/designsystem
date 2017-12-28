@@ -1,5 +1,10 @@
 # Changelog for ffe-search-dropdown-react
 
+## v3.0.0
+* Bump React 15 -> 16
+* Bump all outdated dependencies
+* Fix new accessibility errors
+
 ## v2.1.4
 * Bump devDeps of `ffe-core` and `ffe-form` to latest versions.
 * FFE-consistent styling by replacing `.ffe-searchable-dropdown__dropdown-input-field`
