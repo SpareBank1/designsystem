@@ -3,6 +3,51 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+    <a name="8.0.0"></a>
+# [8.0.0](http://stash.intern.sparebank1.no:22/ffe/ffe-monorepo/compare/ffe-buttons-react@7.0.0...ffe-buttons-react@8.0.0) (2018-01-02)
+
+
+### Code Refactoring
+
+* **ffe-icons-react:** Improve API ([ecb9ac6](http://stash.intern.sparebank1.no:22/ffe/ffe-monorepo/commits/ecb9ac6))
+
+
+### BREAKING CHANGES
+
+* **ffe-icons-react:** Improve the API of ffe-icons-react.
+
+This commit changes the API of the ffe-icons-react package to take
+advantage of dead code eliminination and tree shaking in
+Webpack >= 2.
+
+Previously, you imported one and one icon from the corresponding
+JSX file. Now all icons are available as named exports from the
+root level of `ffe-icons-react`.
+
+If you're using webpack@>=2.0.0,  please make the following changes
+to migrate:
+
+```diff
+- import ChevronIkon from 'ffe-icons-react/chevron-ikon';
+- import FamilieIkon from 'ffe-icons-react/familie-ikon';
++ import { ChevronIkon, FamilieIkon } from 'ffe-icons-react';
+```
+
+If you're not using a build tool that enables dead code elimination
+and tree shaking, please make the following changes to migrate:
+
+```diff
+- import ChevronIkon from 'ffe-icons-react/chevron-ikon';
+- import FamilieIkon from 'ffe-icons-react/familie-ikon';
++ import ChevronIkon from 'ffe-icons-react/lib/chevron-ikon';
++ import FamilieIkon from 'ffe-icons-react/lib/familie-ikon';
+```
+
+This API change allows for cleaner usage and better documentation.
+
+
+
+
     <a name="7.0.0"></a>
 # 7.0.0 (2017-12-22)
 
@@ -37,7 +82,7 @@ release
 
 
 
-    # Changelog
+# Changelog
 
 ## v6.2.0
 
@@ -81,11 +126,11 @@ controlling state.
 
 * (BREAKING) Remove button names with 'FFE' prefix that were deprecated in v2.1.0
 * To migrate to v6.0.0, change your button imports as follows:
-    * FFEActionButton -> ActionButton
-    * FFEButton -> Button
-    * FFEPrimaryButton -> PrimaryButton
-    * FFESecondaryButton -> SecondaryButton
-    * FFEShortcutButton -> ShortcutButton
+* FFEActionButton -> ActionButton
+* FFEButton -> Button
+* FFEPrimaryButton -> PrimaryButton
+* FFESecondaryButton -> SecondaryButton
+* FFEShortcutButton -> ShortcutButton
 
 ### 🚀 New features
 

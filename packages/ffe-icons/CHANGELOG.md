@@ -3,7 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-    <a name="8.0.0"></a>
+       <a name="9.0.0"></a>
+# [9.0.0](http://stash.intern.sparebank1.no:22/ffe/ffe-monorepo/compare/ffe-icons@8.0.0...ffe-icons@9.0.0) (2018-01-02)
+
+
+### Bug Fixes
+
+* **ffe-icons:** Rename numeric icons ([502c8c9](http://stash.intern.sparebank1.no:22/ffe/ffe-monorepo/commits/502c8c9))
+
+
+### BREAKING CHANGES
+
+* **ffe-icons:** Rename two icons that begins with numbers in order
+to allow named exports in react package.
+
+The following icons have been renamed:
+
+- `1-2-3-sirkel-ikon` is now named `sirkel-1-2-3-ikon`
+- `1-2-3-understrek-ikon` is now named `understrek-1-2-3-ikon`
+
+
+
+
+       <a name="8.0.0"></a>
 # 8.0.0 (2017-12-22)
 
 
@@ -35,7 +57,7 @@ release
 
 
 
-    # Changelog
+   # Changelog
 
 ## 7.17.0
 
@@ -133,10 +155,10 @@ Usage:
 {
 "dest": "dist/resources/",
 "icons": [
-    "bamse-ikon"
+   "bamse-ikon"
 ],
 "projectIcons": [
-    "src/main/resources/special/snowflake/snokrystall-ikon"
+   "src/main/resources/special/snowflake/snokrystall-ikon"
 ]
 }
 ```
@@ -216,30 +238,30 @@ above `node_modules/` (the same directory as your apps `package.json`). So what 
 ## Version 5.1.0
 
 * Added a bunch of new icons
- * campingbil-ikon.svg
- * fritidshus-ikon.svg
- * handlevogn-ikon.svg
- * hus-enebolig-ikon.svg
- * hus-horisontaldelt-ikon.svg
- * hus-ikon.svg
- * hus-kjedet-ikon.svg
- * hus-leilighet-ikon.svg
- * hus-rekkehus-ikon.svg
- * hus-vertikaldelt-ikon.svg
- * katt-ikon.svg
- * lommebok-ikon.svg
- * mobil-ikon.svg
- * motorsykkel-ikon.svg
- * nokkelhull-ikon.svg
- * person-brukket-arm-ikon.svg
- * robat-ikon.svg
- * seilbat-ikon.svg
- * snoscooter-ikon.svg
- * sofa-ikon.svg
- * sporsmalstegn-ikon.svg
- * sykebil-ikon.svg
- * traktor-ikon.svg
- * ung-caps-ikon.svg
+* campingbil-ikon.svg
+* fritidshus-ikon.svg
+* handlevogn-ikon.svg
+* hus-enebolig-ikon.svg
+* hus-horisontaldelt-ikon.svg
+* hus-ikon.svg
+* hus-kjedet-ikon.svg
+* hus-leilighet-ikon.svg
+* hus-rekkehus-ikon.svg
+* hus-vertikaldelt-ikon.svg
+* katt-ikon.svg
+* lommebok-ikon.svg
+* mobil-ikon.svg
+* motorsykkel-ikon.svg
+* nokkelhull-ikon.svg
+* person-brukket-arm-ikon.svg
+* robat-ikon.svg
+* seilbat-ikon.svg
+* snoscooter-ikon.svg
+* sofa-ikon.svg
+* sporsmalstegn-ikon.svg
+* sykebil-ikon.svg
+* traktor-ikon.svg
+* ung-caps-ikon.svg
 
 ## Version 5.0.0
 
