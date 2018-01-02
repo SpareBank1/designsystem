@@ -1,7 +1,11 @@
-.idea/
+# Dependencies
 node_modules/
+
+# Editors
+.idea/
+
+# Built files
 iconlist.json
 jsx/
 tmp/
-/*-ikon.js
-/ffe-icons-react.js
+lib/

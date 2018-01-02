@@ -3,12 +3,9 @@ const path = require('path');
 module.exports = {
     devtool: 'cheap-module-source-map',
     entry: [
-        'webpack-dev-server/client?http://localhost:8080',
+        'webpack-dev-server/client?http://localhost:8081',
         './src/example'
     ],
-    resolve: {
-        extensions: ['.js', '.jsx']
-    },
     output: {
         path: path.join(__dirname, 'tmp'),
         filename: 'bundle.js',
@@ -17,7 +14,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.jsx?$/,
+                test: /\.js$/,
                 loader: 'babel-loader',
                 exclude: /node_modules/,
             }
