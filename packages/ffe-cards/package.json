@@ -1,0 +1,41 @@
+{
+  "name": "ffe-cards",
+  "version": "5.0.1",
+  "description": "Kort for bruk i oversikter",
+  "main": "index.js",
+  "scripts": {
+    "examples": "lessc examples/examples.less examples/examples.css && mkdirp examples/fonts && cp -R node_modules/ffe-core/fonts/* examples/fonts/ && echo Now open /examples/index.html to see styleguide.",
+    "test": "npm run examples && ./run_visual-tests.sh",
+    "lint": "lessc --lint examples/examples.less && stylelint less/*.less",
+    "has-published": "npm show . versions -s | grep -q ${npm_package_version}",
+    "postpublish": "git tag ${npm_package_version} && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@stash.intern.sparebank1.no:22/ffe/ffe-cards.git"
+  },
+  "homepage": "https://stash.intern.sparebank1.no/projects/FFE/repos/ffe-cards/browse",
+  "documentation": [
+    {
+      "type": "html",
+      "file": "examples/index.html",
+      "select": "#ffedoc"
+    }
+  ],
+  "publishConfig": {
+    "registry": "https://nexus.intern.sparebank1.no/nexus/content/repositories/npm-internal"
+  },
+  "author": "Ivar Nilsen <ivar.nilsen@sparebank1.no>",
+  "license": "ISC",
+  "peerDependencies": {
+    "ffe-core": "^9.0.0 || ^10.0.0"
+  },
+  "devDependencies": {
+    "ffe-core": "^10.0.0",
+    "ffe-visual-tests-support": "2.1.0",
+    "less": "2.7.1",
+    "mkdirp": "^0.5.1",
+    "stylelint": "^7.7.1",
+    "stylelint-config-ffe": "^0.2.0"
+  }
+}
