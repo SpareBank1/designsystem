@@ -1,6 +1,7 @@
-import icons from './../tmp/icons';
+import caseUtil from 'case';
 import fs from 'fs';
 import mkdirp from 'mkdirp';
+import icons from '../tmp/icons';
 
 mkdirp.sync('./jsx');
 
@@ -18,21 +19,21 @@ const camelCaseSVGProps = svgString =>
         .replace(/stroke-miterlimit/g, 'strokeMiterlimit');
 
 /**
- * Creates a new React component and a corresponding .jsx file for each icon. .
+ * Creates a new React component and a corresponding .jsx file for each icon
  * */
 const createStandaloneJSX = iconName => `
 import React from 'react';
-import { bool, func, number, object, string } from 'prop-types';
+import { bool, string } from 'prop-types';
 
 const svg = ${camelCaseSVGProps(icons[iconName])};
 
 const Icon = ({
-    desc = '',
+    desc,
     focusable = false,
-    title = '',
+    title,
     iconName,
     ...rest
-    }) =>
+    }) => (
         <svg focusable={String(focusable)} {...rest} {...svg.props}>
             {title &&
                 <title>{title}</title>
@@ -41,32 +42,27 @@ const Icon = ({
                 <desc>{desc}</desc>
             }
             {svg.props.children}
-        </svg>;
+        </svg>
+    );
 
 Icon.propTypes = {
-    className: string,
     desc: string,
     focusable: bool,
-    onClick: func,
-    style: object,
-    tabIndex: number,
     title: string,
     iconName: string,
 };
 
+Icon.displayName = '${caseUtil.pascal(iconName)}';
+
 export default Icon;
 `;
-Object.keys(icons).map((iconName) => fs.writeFileSync(`./jsx/${iconName}.jsx`, createStandaloneJSX(iconName)));
+Object.keys(icons).forEach((iconName) => fs.writeFileSync(`./jsx/${iconName}.js`, createStandaloneJSX(iconName)));
 
 /**
- * Creates a list of strings on the form ['bil-ikon': require('./bil-ikon')',] from icons.
- * The list is then interpolated with surrounding brackets to create a js object in the outputted file.
- * */
-const createAllJSX = iconsObjectString => `
-const icons = {${iconsObjectString}};
-export default props => icons[props.iconName] ? icons[props.iconName].default(props) : null;
-`;
-const iconsObjectString = Object.keys(icons)
-    .map(iconname => `'${iconname}': require('./${iconname}')`);
+ * Creates an index file that exports all icons
+ */
+const indexFileString = Object.keys(icons)
+    .map(iconName => `export { default as ${caseUtil.pascal(iconName)} } from './${iconName}';`)
+    .join('\n');
 
-fs.writeFileSync('./jsx/ffe-icons-react.jsx', createAllJSX(iconsObjectString));
+fs.writeFileSync('./jsx/index.js', indexFileString);
