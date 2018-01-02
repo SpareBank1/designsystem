@@ -8,6 +8,7 @@ module.exports = {
           'stylelint-config-ffe',
           'ffe-buttons',
           'ffe-buttons-react',
+          'ffe-chart-donut-react',
           'ffe-core',
           'ffe-core-react',
           'ffe-form',

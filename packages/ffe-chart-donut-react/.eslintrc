@@ -1,6 +1,0 @@
-{
-    "extends": "eslint-config-ffe",
-    "env": {
-        "browser": true
-    }
-}
