@@ -248,6 +248,11 @@ For LESS-pakker:
 $ npm run lerna:bootstrap
 ```
 
+### Legg til scope i `commitlint.config.js`
+
+Prosjektet du legger til må ligge i denne filen for at du skal kunne committe under dette scopet. Under `scope-enum` legger du til navnet på prosjektet du
+akkurat har lagt til.
+
 ### Lag en pull request!
 
 Til slutt lager du en pull request, og legger til alle relevante reviewers.

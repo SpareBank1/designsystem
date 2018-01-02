@@ -6,6 +6,7 @@ module.exports = {
           'eslint-config-ffe',
           'eslint-config-ffe-base',
           'stylelint-config-ffe',
+          'ffe-accordion',
           'ffe-buttons',
           'ffe-buttons-react',
           'ffe-core',
