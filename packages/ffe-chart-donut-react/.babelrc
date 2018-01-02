@@ -1,0 +1,9 @@
+{
+    "presets": ["latest", "react"],
+    "plugins": [
+        'transform-object-rest-spread'
+    ],
+    "ignore": [
+        "test/**/*.js"
+    ]
+}
