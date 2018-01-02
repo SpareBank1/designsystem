@@ -3,7 +3,52 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-      <a name="3.0.0"></a>
+  <a name="4.0.0"></a>
+# [4.0.0](***REMOVED***) (2018-01-02)
+
+
+### Code Refactoring
+
+* **ffe-icons-react:** Improve API ([ecb9ac6](***REMOVED***))
+
+
+### BREAKING CHANGES
+
+* **ffe-icons-react:** Improve the API of ffe-icons-react.
+
+This commit changes the API of the ffe-icons-react package to take
+advantage of dead code eliminination and tree shaking in
+Webpack >= 2.
+
+Previously, you imported one and one icon from the corresponding
+JSX file. Now all icons are available as named exports from the
+root level of `ffe-icons-react`.
+
+If you're using webpack@>=2.0.0,  please make the following changes
+to migrate:
+
+```diff
+- import ChevronIkon from 'ffe-icons-react/chevron-ikon';
+- import FamilieIkon from 'ffe-icons-react/familie-ikon';
++ import { ChevronIkon, FamilieIkon } from 'ffe-icons-react';
+```
+
+If you're not using a build tool that enables dead code elimination
+and tree shaking, please make the following changes to migrate:
+
+```diff
+- import ChevronIkon from 'ffe-icons-react/chevron-ikon';
+- import FamilieIkon from 'ffe-icons-react/familie-ikon';
++ import ChevronIkon from 'ffe-icons-react/lib/chevron-ikon';
++ import FamilieIkon from 'ffe-icons-react/lib/familie-ikon';
+```
+
+This API change allows for cleaner usage and better documentation.
+
+
+
+
+  <a name="3.0.0"></a>
 # 3.0.0 (2017-12-22)
 
 
@@ -36,7 +81,7 @@ release
 
 
 
-      # Changelog
+# Changelog
 
 ## 2.4.19
 
