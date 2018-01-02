@@ -1,5 +1,3 @@
-# Accordion
-
 Brukt til prisliste, arkiv (nyheter, presse- og børsmeldinger). Hele raden med overskrifter er klikkbar.
 
 Det finnes to forskjellige versjoner av `Accordion` - hvit og blå:
