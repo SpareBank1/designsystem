@@ -245,13 +245,18 @@ For LESS-pakker:
 ### Kjør `lerna bootstrap`
 
 ```
-$ npm run lerna:bootstrap
+$ npx lerna bootstrap
 ```
 
 ### Legg til scope i `commitlint.config.js`
 
-Prosjektet du legger til må ligge i denne filen for at du skal kunne committe under dette scopet. Under `scope-enum` legger du til navnet på prosjektet du
-akkurat har lagt til.
+Prosjektet du legger til må ligge i denne filen for at du skal kunne committe under dette scopet. Under `scope-enum`
+legger du til navnet på prosjektet du akkurat har lagt til.
+
+### Legg til dokumentasjon i `styleguide.config.js`
+
+For at dokumentasjonen skal dukke opp i styleguidist-dokumentasjonen, må den legges til som en `section` i
+`styleguide.config.js`. Du kan se på eksisterende seksjoner hvordan det kan gjøres.
 
 ### Lag en pull request!
 

@@ -2,11 +2,6 @@ import React, { cloneElement } from 'react';
 import { node, oneOf } from 'prop-types';
 import uuid from 'uuid';
 
-/**
- * Internal base component for white and blue accordions.
- * Should not be used directly, use `WhiteAccordion` or `BlueAccordion`
- * instead.
- */
 function Accordion(props) {
     const accordionId = uuid.v4();
     return (
