@@ -1,0 +1,80 @@
+{
+  "name": "ffe-context-message-react",
+  "version": "2.3.3",
+  "description": "React implementation of ffe-context-message component",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel -d lib/. --ignore=src/test/ src/. && npm run example",
+    "dev": "npm run ffe:fonts && hjs-dev-server",
+    "watch": "npm run dev",
+    "example": "babel-node example/create-example.js > example.html",
+    "ffe:fonts": "mkdirp dev/ffe/fonts && cp node_modules/ffe-core/fonts/* dev/ffe/fonts",
+    "lint": "eslint src/",
+    "lint:fix": "eslint --fix src/",
+    "test": "cross-env NODE_ENV=test mocha -G --compilers js:babel-core/register --require src/test/setup.js --recursive src/test",
+    "tdd": "npm test -- --watch",
+    "validate": "npm ls",
+    "postpublish": "git tag ${npm_package_version} && git push --tags",
+    "has-published": "npm show . versions -s --json | grep -q ${npm_package_version}"
+  },
+  "repository": {
+    "type": "git",
+    "url": "***REMOVED***"
+  },
+  "author": "SpareBank 1",
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "prop-types": "*"
+  },
+  "peerDependencies": {
+    "ffe-context-message": "1.x - 2.x"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-react": "^6.23.0",
+    "cross-env": "^3.2.4",
+    "css-loader": "^0.27.3",
+    "enzyme": "^2.7.1",
+    "eslint": "^3.18.0",
+    "eslint-config-ffe": "^6.0.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^3.0.2",
+    "eslint-plugin-react": "^6.10.2",
+    "expect.js": "^0.3.1",
+    "ffe-context-message": "^2.0.1",
+    "ffe-core": "^9.2.0",
+    "ffe-icons-react": "^2.4.3",
+    "hjs-webpack": "^8.4.3",
+    "jsdom": "^9.12.0",
+    "less": "^2.7.2",
+    "less-loader": "^3.0.0",
+    "mkdirp": "^0.5.1",
+    "mocha": "^3.2.0",
+    "postcss-loader": "^1.3.3",
+    "precommit-hook": "^3.0.0",
+    "pretty": "^1.0.0",
+    "react": "^15.4.2",
+    "react-addons-test-utils": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "sinon": "^2.0.0",
+    "style-loader": "^0.14.1"
+  },
+  "publishConfig": {
+    "registry": "***REMOVED***"
+  },
+  "files": [
+    "lib",
+    "example.html",
+    "*.js"
+  ],
+  "pre-commit": [
+    "lint",
+    "validate",
+    "test"
+  ]
+}
