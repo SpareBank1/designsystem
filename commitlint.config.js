@@ -9,6 +9,7 @@ module.exports = {
           'ffe-buttons',
           'ffe-buttons-react',
           'ffe-cards',
+          'ffe-cards-react',
           'ffe-core',
           'ffe-core-react',
           'ffe-form',
