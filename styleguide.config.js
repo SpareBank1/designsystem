@@ -38,5 +38,10 @@ module.exports = {
             content: 'packages/ffe-chart-donut-react/USAGE.md',
             components: 'packages/ffe-chart-donut-react/src/[A-Z]+([A-Za-z]).js'
         },
+        {
+            name: 'Grid',
+            content: 'packages/ffe-grid-react/USAGE.md',
+            components: 'packages/ffe-grid-react/src/[A-Z]+([A-Za-z]).js'
+        },
     ],
 };
