@@ -12,6 +12,7 @@ module.exports = {
           'ffe-core',
           'ffe-core-react',
           'ffe-form',
+          'ffe-grid',
           'ffe-icons',
           'ffe-icons-react'
       ]]
