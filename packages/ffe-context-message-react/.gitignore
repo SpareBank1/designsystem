@@ -1,0 +1,19 @@
+#Editors
+*~
+
+#FFE fonts
+dev/ffe/*
+
+#Node
+node_modules
+npm-debug.log*
+
+#We're not using this but the precommit-hook keeps adding them
+.jshintrc
+.jshintignore
+
+#Build
+lib/
+example.html
+.idea/
+*.iml
