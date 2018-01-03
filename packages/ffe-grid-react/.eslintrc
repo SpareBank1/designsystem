@@ -1,0 +1,12 @@
+{
+    "extends": "ffe",
+    "env": {
+        "node": true
+    },
+    "parserOptions": {
+        "ecmaVersion": 8
+    },
+    "globals": {
+        "process": false
+    }
+}
