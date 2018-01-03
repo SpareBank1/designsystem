@@ -33,5 +33,9 @@ module.exports = {
             content: 'packages/ffe-core-react/USAGE.md',
             components: 'packages/ffe-core-react/src/typography/[A-Z]+([A-Za-z]).js'
         },
+        {
+            name: 'Kort',
+            components: 'packages/ffe-cards-react/src/[A-Z]+([A-Za-z]).js'
+        },
     ],
 };
