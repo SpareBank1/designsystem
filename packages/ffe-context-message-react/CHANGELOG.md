@@ -1,5 +1,20 @@
 # CHANGELOG
 
+## 3.0.0
+
+### 💥 Breaking changes
+
+* Requires React 16
+* Requires `ffe-icons-react` 4.0.0
+* No longer includes raw JS files. If you expect imports other than through
+`ffe-context-message-react` or `ffe-context-message-react/lib/` your things
+will break.
+
+### 🏠 Improvements
+
+* Removed local dev server now that the package lives in a monorepo. Use
+styleguidist from the monorepo root when developing.
+
 ## 2.3.3
 
 ### 🏠 Improvements

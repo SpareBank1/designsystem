@@ -10,7 +10,7 @@ import {
     object
 } from 'prop-types';
 import classNames from 'classnames';
-import CloseIcon from 'ffe-icons-react/kryss-ikon';
+import { KryssIkon } from 'ffe-icons-react';
 
 import acceptedLocales from './locale/accepted-locales';
 import texts from './locale/texts';
@@ -102,12 +102,12 @@ export default class ContextMessage extends Component {
                 </div>
                 {showCloseButton &&
                     <button
-                        aria-label={`${texts[locale].FFE_CONTEXT_MESSAGE_CLOSE} ${header}`}
+                        aria-label={`${texts[locale].FFE_CONTEXT_MESSAGE_CLOSE} ${header || ''}`}
                         className="ffe-context-message-content__close-button"
                         onClick={this.close}
                         type="button"
                     >
-                        <CloseIcon className="ffe-context-message-content__close-button-svg" aria-hidden="true" />
+                        <KryssIkon className="ffe-context-message-content__close-button-svg" aria-hidden="true" />
                     </button>
                 }
             </div>
