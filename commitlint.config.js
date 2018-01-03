@@ -13,6 +13,7 @@ module.exports = {
           'ffe-cards',
           'ffe-cards-react',
           'ffe-chart-donut-react',
+          'ffe-context-message',
           'ffe-core',
           'ffe-core-react',
           'ffe-form',
