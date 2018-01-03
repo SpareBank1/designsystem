@@ -10,6 +10,8 @@ module.exports = {
           'ffe-accordion-react',
           'ffe-buttons',
           'ffe-buttons-react',
+          'ffe-cards',
+          'ffe-cards-react',
           'ffe-chart-donut-react',
           'ffe-core',
           'ffe-core-react',
