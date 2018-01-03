@@ -1,6 +1,6 @@
 {
   "name": "ffe-grid-react",
-  "version": "6.0.0",
+  "version": "6.0.1",
   "main": "lib/index.js",
   "scripts": {
     "build": "babel -d lib/. --ignore=*.test.js src/. && npm run example",
