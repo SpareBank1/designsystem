@@ -38,5 +38,9 @@ module.exports = {
             content: 'packages/ffe-chart-donut-react/USAGE.md',
             components: 'packages/ffe-chart-donut-react/src/[A-Z]+([A-Za-z]).js'
         },
+        {
+            name: 'Accordion',
+            components: 'packages/ffe-accordion-react/src/Accordion*.js',
+        }
     ],
 };
