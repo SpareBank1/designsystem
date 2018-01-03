@@ -1,0 +1,43 @@
+{
+  "name": "ffe-accordion-react",
+  "version": "3.1.2",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel -d lib/. --ignore=*.test.js src/. && npm run example",
+    "watch": "onchange 'src/**.js' -- npm run build",
+    "lint": "eslint src/.",
+    "start": "budo examples/accordion.js --open --live --title \"FFE Accordion React\" -- -t [ babelify --presets [ es2015 react ] ] -t node-lessify",
+    "test:nsp": "nsp check",
+    "test:spec": "mocha --require babel-register src/**/*.test.js",
+    "test": "npm run test:spec && npm run test:nsp",
+    "tdd": "mocha --require babel-register src/**/*.test.js -w",
+    "example": "babel-node docs/create.js > example.html"
+  },
+  "peerDependencies": {
+    "ffe-accordion": "^3.0.0",
+    "ffe-core": "*",
+    "react": "^0.14.0 || ^15.0.0 || ^16.0.0"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "ffe-icons-react": "^2.4.17",
+    "prop-types": "^15.6.0",
+    "react-collapse": "^4.0.3",
+    "react-motion": "^0.5.2",
+    "uuid": "^3.1.0"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-es2015": "^6.3.13",
+    "ffe-accordion": "^3.0.0",
+    "ffe-core": "^10.1.2"
+  },
+  "files": [
+    "lib",
+    "example.html",
+    "*.js"
+  ],
+  "repository": "ssh://git@stash.intern.sparebank1.no:22/ffe/ffe-accordion-react.git",
+  "author": "SpareBank 1",
+  "license": "UNLICENSED"
+}

@@ -1,0 +1,130 @@
+.ffe-accordion {
+    text-align: left;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.ffe-accordion-item {
+    border-top: solid @ffe-grey-silver 1px;
+    margin-bottom: 0;
+    position: relative;
+    list-style: none;
+    width: 100%;
+
+    &:last-of-type {
+        border-bottom: solid @ffe-grey-silver 1px;
+    }
+
+    &--blue {
+        border-top: 0;
+        margin-bottom: 10px;
+
+        &:last-of-type {
+            border-bottom: 0;
+        }
+    }
+
+    &--open {
+        margin-bottom: 20px;
+    }
+}
+
+.ffe-accordion-item__icon {
+    fill: @ffe-blue-azure;
+    width: 17px;
+    height: 17px;
+    align-self: center;
+    max-width: 17px;
+    min-width: 17px;
+    margin-left: 10px;
+    transition:
+        transform @ffe-transition-duration @ffe-ease-in-out-back,
+        fill @ffe-transition-duration @ffe-ease;
+
+    &--blue {
+        fill: @ffe-blue-royal;
+    }
+
+    &--open {
+        transform: rotateX(180deg);
+        fill: @ffe-blue-royal;
+    }
+
+    &--open&--blue {
+        fill: @ffe-white;
+    }
+}
+
+.ffe-accordion-item__content {
+    padding: 10px 25px;
+
+    &--blue {
+        padding: 10px 25px 0;
+    }
+}
+
+.ffe-accordion-item__title {
+    display: flex;
+    flex-flow: column;
+    flex-grow: 1;
+}
+
+.ffe-accordion-item__toggler {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: @ffe-blue-azure;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    &:hover,
+    &:focus {
+        color: @ffe-blue-royal;
+    }
+
+    &--open {
+        color: @ffe-blue-royal;
+    }
+
+    &--blue {
+        color: @ffe-blue-royal;
+        background-color: @ffe-blue-pale;
+        border-radius: 3px;
+
+        &:hover,
+        &:focus {
+            color: white;
+            background-color: @ffe-blue-royal;
+        }
+    }
+
+    &--open&--blue {
+        color: @ffe-white;
+        background-color: @ffe-blue-royal;
+    }
+
+    &:hover,
+    &:focus {
+        .ffe-accordion-item__icon {
+            fill: @ffe-blue-royal;
+
+            &--blue {
+                fill: @ffe-white;
+            }
+        }
+    }
+}
+
+.ffe-accordion-item__toggler-content {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 20px;
+    text-decoration: none;
+    text-align: left;
+    transition:
+        background-color @ffe-transition-duration @ffe-ease,
+        color @ffe-transition-duration @ffe-ease;
+    width: 100%;
+    margin: 0;
+}
