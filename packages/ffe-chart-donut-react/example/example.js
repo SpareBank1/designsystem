@@ -1,7 +1,7 @@
 import { writeFileSync } from 'fs';
 import { join } from 'path';
 
-import React, { Component } from 'react';
+import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 
 import ChartDonut from '../src/ChartDonut';
@@ -46,7 +46,7 @@ function App() {
                 />
             </div>
         </div>
-    )
+    );
 }
 
 const markup = `
