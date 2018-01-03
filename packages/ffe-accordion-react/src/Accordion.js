@@ -1,21 +1,34 @@
-import React, { cloneElement } from 'react';
+import React, { Component } from 'react';
 import { node, oneOf } from 'prop-types';
 import uuid from 'uuid';
 
-function Accordion(props) {
-    const accordionId = uuid.v4();
-    return (
-        <ul
-            {...props}
-            aria-multiselectable="true"
-            className="ffe-accordion"
-            role="tablist"
-        >
-            { React.Children.map(props.children, (ele) =>
-                cloneElement(ele, { type: props.type, uuid: accordionId }))
-            }
-        </ul>
-    );
+class Accordion extends Component {
+    constructor() {
+        super();
+
+        this.id = uuid.v4();
+    }
+
+    render() {
+        const {
+            children,
+            type,
+            ...rest
+        } = this.props;
+
+        return (
+            <ul
+                {...rest}
+                aria-multiselectable="true"
+                className="ffe-accordion"
+                role="tablist"
+            >
+                {React.Children.map(children, (ele) =>
+                    React.cloneElement(ele, { type, uuid: this.id })
+                )}
+            </ul>
+        );
+    }
 }
 
 Accordion.propTypes = {
