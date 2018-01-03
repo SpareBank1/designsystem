@@ -1,0 +1,41 @@
+{
+  "name": "ffe-chart-donut-react",
+  "version": "1.0.2",
+  "description": "Donut chart in SVG",
+  "scripts": {
+    "build": "babel -d lib/ src/ && cp src/ffe-chart-donut.less lib/",
+    "build:example": "npm run build:less && babel-node example/example.js",
+    "build:less": "lessc example/example.less example/example.css",
+    "watch": "onchange 'src/**.js' -- npm run build",
+    "lint": "eslint src/ test/",
+    "lint:fix": "eslint --fix src/ test/",
+    "start": "hjs-dev-server",
+    "test": "npm run test:spec && npm run test:nsp && npm run build:example",
+    "test:nsp": "nsp check",
+    "test:spec": "mocha -G --compilers js:babel-core/register --require ./test/setup.test.js test/**/*.test.js",
+    "test:watch": "npm run tdd",
+    "tdd": "mocha -G --compilers js:babel-core/register --require ./test/setup.test.js test/**/*.test.js -w",
+    "prepublish": "npm run build"
+  },
+  "keywords": [
+    "ffe"
+  ],
+  "dependencies": {
+    "prop-types": "*"
+  },
+  "peerDependencies": {
+    "react": "^15.4.0 || ^16.0.0"
+  },
+  "devDependencies": {
+    "react": "^16.0",
+    "style-loader": "^0.19.1"
+  },
+  "files": [
+    "lib",
+    "*.js",
+    "*.less"
+  ],
+  "main": "lib/index.js",
+  "author": "SpareBank 1",
+  "license": "UNLICENSED"
+}

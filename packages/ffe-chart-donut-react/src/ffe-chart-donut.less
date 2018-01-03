@@ -1,0 +1,65 @@
+.ffe-chart-donut {
+    height: 200px;
+    position: relative;
+    text-align: left;
+    width: 200px;
+
+    &--cobalt {
+        stroke: @ffe-blue-cobalt;
+    }
+
+    &--sky {
+        stroke: @ffe-blue-sky;
+    }
+
+    &__circle {
+        height: 100%;
+        margin: 0 auto;
+        position: absolute;
+        width: 100%;
+
+        @media screen and (min-width: @breakpoint-md) {
+            margin: inherit;
+            width: 200px;
+        }
+    }
+
+    &__description {
+        left: calc(~"50% - 75px");
+        position: absolute;
+        top: 60px;
+        width: 150px;
+
+        @media screen and (min-width @breakpoint-md) {
+            left: 25px;
+        }
+    }
+
+    &__name {
+        color: #808285;
+        text-align: center;
+    }
+
+    &__fractions {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__fraction {
+        > .ffe-chart-donut__amount {
+            color: @ffe-grey-charcoal;
+            text-align: center;
+        }
+
+        &:last-child {
+            > .ffe-chart-donut__type {
+                padding-left: 20px;
+            }
+
+            > .ffe-chart-donut__amount {
+                border-left: 1px solid @ffe-grey;
+                padding-left: 20px;
+            }
+        }
+    }
+}
