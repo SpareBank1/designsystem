@@ -41,6 +41,10 @@ module.exports = {
         {
             name: 'Accordion',
             components: 'packages/ffe-accordion-react/src/Accordion*.js',
-        }
+        },
+        {
+            name: 'Kort',
+            components: 'packages/ffe-cards-react/src/[A-Z]+([A-Za-z]).js'
+        },
     ],
 };

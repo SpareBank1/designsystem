@@ -1,0 +1,27 @@
+{
+  "name": "ffe-cards",
+  "version": "5.0.1",
+  "description": "Kort for bruk i oversikter",
+  "main": "index.js",
+  "scripts": {
+    "examples": "lessc examples/examples.less examples/examples.css && mkdirp examples/fonts && cp -R node_modules/ffe-core/fonts/* examples/fonts/ && echo Now open /examples/index.html to see styleguide.",
+    "test": "npm run examples",
+    "lint": "lessc --lint examples/examples.less && stylelint less/*.less"
+  },
+  "documentation": [
+    {
+      "type": "html",
+      "file": "examples/index.html",
+      "select": "#ffedoc"
+    }
+  ],
+  "author": "SpareBank 1",
+  "license": "UNLICENSED",
+  "peerDependencies": {
+    "ffe-core": "^9.0.0 || ^10.0.0"
+  },
+  "devDependencies": {
+    "ffe-core": "^10.0.0",
+    "mkdirp": "^0.5.1"
+  }
+}
