@@ -24,7 +24,7 @@
     "ffe"
   ],
   "dependencies": {
-    "prop-types": "*"
+    "prop-types": "^15.6.0"
   },
   "peerDependencies": {
     "react": "^15.4.0 || ^16.0.0"
@@ -34,7 +34,7 @@
     "enzyme-adapter-react-16": "^1.1.1",
     "ffe-core": "^10.2.0",
     "jest": "^22.0.4",
-    "react": "^16.0",
+    "react": "^16.1.1",
     "style-loader": "^0.19.1"
   },
   "jest": {
