@@ -13,8 +13,7 @@
     "test:watch": "cross-env NODE_ENV=test mocha -G --require babel-register src/**/*.test.js -w --require ./src/test/setup.test.js",
     "tdd": "npm run test:watch",
     "example": "babel-node docs/create.js > example.html",
-    "prepublish": "npm run build",
-    "has-published": "npm show . versions -s | grep -q ${npm_package_version}"
+    "prepublish": "npm run build"
   },
   "dependencies": {
     "classnames": "^2.2.5"
@@ -32,12 +31,9 @@
     "babel-register": "^6.18.0",
     "chai": "^3.5.0",
     "cross-env": "^5.0.5",
-    "enzyme": "^2.7.0",
+    "enzyme": "^3.2.0",
+    "enzyme-adapter-react-16": "^1.1.0",
     "eslint": "^3.13.0",
-    "eslint-config-ffe": "^6.0.0",
-    "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "3.0.2",
-    "eslint-plugin-react": "^6.9.0",
     "expect.js": "^0.3.1",
     "ffe-core": "^9.2.0",
     "ffe-grid": "^6.0.0",
@@ -45,14 +41,9 @@
     "mocha": "^3.2.0",
     "nsp": "^2.6.2",
     "onchange": "3.2.1",
-    "react": "^15.4.2",
-    "react-addons-test-utils": "^15.4.2",
-    "react-dom": "^15.4.2",
-    "react-test-renderer": "^15.6.1",
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1",
     "sinon": "^2.3.6"
-  },
-  "publishConfig": {
-    "registry": "***REMOVED***"
   },
   "files": [
     "lib",
