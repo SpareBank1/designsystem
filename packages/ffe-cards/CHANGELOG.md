@@ -1,3 +1,16 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+<a name="5.0.2"></a>
+## 5.0.2 (2018-01-04)
+
+
+
+
+**Note:** Version bump only for package ffe-cards
+
 #CHANGELOG
 
 ## Version 5.0.1

@@ -3,7 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-  <a name="4.0.0"></a>
+      <a name="4.0.1"></a>
+## [4.0.1](***REMOVED***) (2018-01-04)
+
+
+
+
+**Note:** Version bump only for package ffe-icons-react
+
+      <a name="4.0.0"></a>
 # [4.0.0](***REMOVED***) (2018-01-02)
 
 
@@ -48,7 +56,7 @@ This API change allows for cleaner usage and better documentation.
 
 
 
-  <a name="3.0.0"></a>
+<a name="3.0.0"></a>
 # 3.0.0 (2017-12-22)
 
 
