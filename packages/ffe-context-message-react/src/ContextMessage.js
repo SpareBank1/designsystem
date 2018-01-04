@@ -7,7 +7,7 @@ import {
     element,
     oneOf,
     func,
-    object
+    object,
 } from 'prop-types';
 import classNames from 'classnames';
 import { KryssIkon } from 'ffe-icons-react';
@@ -49,7 +49,9 @@ export default class ContextMessage extends Component {
         const { icon } = this.props;
         return (
             <div className="ffe-context-message-content__icon">
-                {cloneElement(icon, { className: 'ffe-context-message-content__icon-svg' })}
+                {cloneElement(icon, {
+                    className: 'ffe-context-message-content__icon-svg',
+                })}
             </div>
         );
     }
@@ -82,34 +84,47 @@ export default class ContextMessage extends Component {
                     'ffe-context-message',
                     `ffe-context-message--${messageType}`,
                     { 'ffe-context-message--compact': compact },
-                    className
+                    className,
                 )}
-                ref={(_self) => { this._self = _self; }}
-                style={{ ...style, transition: `height ${animationLengthMs / 1000}s` }}
+                ref={_self => {
+                    this._self = _self;
+                }}
+                style={{
+                    ...style,
+                    transition: `height ${animationLengthMs / 1000}s`,
+                }}
             >
                 <div className="ffe-context-message-content">
                     {icon && this.renderIcon()}
                     <div>
-                        {header &&
-                            <header className="ffe-context-message-content__header" id={headerElementId}>
+                        {header && (
+                            <header
+                                className="ffe-context-message-content__header"
+                                id={headerElementId}
+                            >
                                 {header}
                             </header>
-                        }
+                        )}
                         <div className="ffe-body-text" id={contentElementId}>
                             {children}
                         </div>
                     </div>
                 </div>
-                {showCloseButton &&
+                {showCloseButton && (
                     <button
-                        aria-label={`${texts[locale].FFE_CONTEXT_MESSAGE_CLOSE} ${header || ''}`}
+                        aria-label={`${
+                            texts[locale].FFE_CONTEXT_MESSAGE_CLOSE
+                        } ${header || ''}`}
                         className="ffe-context-message-content__close-button"
                         onClick={this.close}
                         type="button"
                     >
-                        <KryssIkon className="ffe-context-message-content__close-button-svg" aria-hidden="true" />
+                        <KryssIkon
+                            className="ffe-context-message-content__close-button-svg"
+                            aria-hidden="true"
+                        />
                     </button>
-                }
+                )}
             </div>
         );
     }
