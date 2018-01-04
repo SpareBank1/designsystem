@@ -1,21 +1,14 @@
 import React, { Component } from 'react';
-import {
-    arrayOf,
-    bool,
-    func,
-    node,
-    number,
-    oneOf,
-    string
-} from 'prop-types';
+import { arrayOf, bool, func, node, number, oneOf, string } from 'prop-types';
 import { Collapse } from 'react-collapse';
 import Chevron from 'ffe-icons-react/chevron-ikon';
 import classNames from 'classnames';
 
-const createClasses = (baseClass, isOpen, type) => classNames(baseClass, {
-    [`${baseClass}--open`]: isOpen,
-    [`${baseClass}--blue`]: type === 'blue',
-});
+const createClasses = (baseClass, isOpen, type) =>
+    classNames(baseClass, {
+        [`${baseClass}--open`]: isOpen,
+        [`${baseClass}--blue`]: type === 'blue',
+    });
 
 class AccordionItem extends Component {
     constructor(props) {
@@ -29,7 +22,9 @@ class AccordionItem extends Component {
     }
 
     onClick(e) {
-        if (this.props.ignoredNodeNames.some(name => name === e.target.nodeName)) {
+        if (
+            this.props.ignoredNodeNames.some(name => name === e.target.nodeName)
+        ) {
             return;
         }
         this.toggle();
@@ -57,22 +52,21 @@ class AccordionItem extends Component {
 
     renderExpandedContent() {
         const { isOpen } = this.state;
-        const {
-            expandedContent,
-            index,
-            type,
-            uuid,
-        } = this.props;
+        const { expandedContent, index, type, uuid } = this.props;
 
         return (
             <div
-                className={ createClasses('ffe-accordion-item__content', isOpen, type) }
+                className={createClasses(
+                    'ffe-accordion-item__content',
+                    isOpen,
+                    type,
+                )}
                 role="tabpanel"
-                id={ `panel-${uuid}-${index}` }
-                aria-hidden={ !isOpen }
-                aria-labelledby={ `tab-${uuid}-${index}` }
+                id={`panel-${uuid}-${index}`}
+                aria-hidden={!isOpen}
+                aria-labelledby={`tab-${uuid}-${index}`}
             >
-                { expandedContent }
+                {expandedContent}
             </div>
         );
     }
@@ -89,28 +83,38 @@ class AccordionItem extends Component {
         } = this.props;
 
         return (
-            <li className={ createClasses('ffe-accordion-item', isOpen, type) }>
+            <li className={createClasses('ffe-accordion-item', isOpen, type)}>
                 <div
-                    tabIndex={ 0 }
-                    aria-controls={ `panel-${uuid}-${index}` }
-                    aria-expanded={ isOpen }
-                    aria-label={ ariaLabel }
-                    className={ createClasses('ffe-accordion-item__toggler', isOpen, type) }
-                    id={ `tab-${uuid}-${index}` }
-                    onClick={ this.onClick }
-                    onKeyUp={ this.onClickEnterAndSpace }
+                    tabIndex={0}
+                    aria-controls={`panel-${uuid}-${index}`}
+                    aria-expanded={isOpen}
+                    aria-label={ariaLabel}
+                    className={createClasses(
+                        'ffe-accordion-item__toggler',
+                        isOpen,
+                        type,
+                    )}
+                    id={`tab-${uuid}-${index}`}
+                    onClick={this.onClick}
+                    onKeyUp={this.onClickEnterAndSpace}
                     role="tab"
                 >
                     <span className="ffe-accordion-item__toggler-content">
                         <span className="ffe-accordion-item__title">
-                            { children }
+                            {children}
                         </span>
-                        <Chevron className={ createClasses('ffe-accordion-item__icon', isOpen, type) } />
+                        <Chevron
+                            className={createClasses(
+                                'ffe-accordion-item__icon',
+                                isOpen,
+                                type,
+                            )}
+                        />
                     </span>
                 </div>
                 <Collapse
-                    hasNestedCollapse={ hasNestedCollapse }
-                    isOpened={ isOpen }
+                    hasNestedCollapse={hasNestedCollapse}
+                    isOpened={isOpen}
                 >
                     {this.renderExpandedContent()}
                 </Collapse>

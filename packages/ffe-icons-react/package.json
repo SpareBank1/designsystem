@@ -1,47 +1,47 @@
 {
-  "name": "ffe-icons-react",
-  "version": "4.0.1",
-  "description": "React-komponenter for ffe-icons",
-  "main": "lib/index.js",
-  "scripts": {
-    "build": "npm run ffe:icons && npm run build:jsx-components && npm run build:babel",
-    "build:babel": "babel jsx -d lib",
-    "build:jsx-components": "babel-node ./src/build-jsx-components.js",
-    "clean": "rimraf tmp jsx lib",
-    "lint": "eslint src",
-    "test": "nsp check && npm run lint",
-    "ffe:icons": "ffe-icons --opts=packages/ffe-icons-react/svg.sprite.config.json",
-    "start": "npm run build && webpack-dev-server"
-  },
-  "repository": {
-    "type": "git",
-    "url": "ssh://git@stash.intern.sparebank1.no:22/ffe/ffe-icons-react.git"
-  },
-  "license": "UNLICENSED",
-  "dependencies": {
-    "prop-types": "^15.6.0"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-latest": "^6.24.1",
-    "babel-preset-react": "^6.24.1",
-    "eslint": "^4.13.1",
-    "eslint-loader": "^1.9.0",
-    "ffe-icons": "^9.0.0",
-    "gulp": "^3.9.1",
-    "json-loader": "^0.5.7",
-    "mkdirp": "^0.5.1",
-    "nsp": "^3.1.0",
-    "react": "^16.1.1",
-    "react-dom": "^16.1.1",
-    "rimraf": "^2.6.1",
-    "webpack": "^3.8.1",
-    "webpack-dev-server": "^2.7.1"
-  },
-  "files": [
-    "lib"
-  ]
+    "name": "ffe-icons-react",
+    "version": "4.0.1",
+    "description": "React-komponenter for ffe-icons",
+    "main": "lib/index.js",
+    "scripts": {
+        "build":
+            "npm run ffe:icons && npm run build:jsx-components && npm run build:babel",
+        "build:babel": "babel jsx -d lib",
+        "build:jsx-components": "babel-node ./src/build-jsx-components.js",
+        "clean": "rimraf tmp jsx lib",
+        "lint": "eslint src",
+        "test": "nsp check && npm run lint",
+        "ffe:icons":
+            "ffe-icons --opts=packages/ffe-icons-react/svg.sprite.config.json",
+        "start": "npm run build && webpack-dev-server"
+    },
+    "repository": {
+        "type": "git",
+        "url": "ssh://git@stash.intern.sparebank1.no:22/ffe/ffe-icons-react.git"
+    },
+    "license": "UNLICENSED",
+    "dependencies": {
+        "prop-types": "^15.6.0"
+    },
+    "devDependencies": {
+        "babel-cli": "^6.24.1",
+        "babel-core": "^6.26.0",
+        "babel-loader": "^7.1.2",
+        "babel-plugin-transform-object-rest-spread": "^6.26.0",
+        "babel-preset-latest": "^6.24.1",
+        "babel-preset-react": "^6.24.1",
+        "eslint": "^4.13.1",
+        "eslint-loader": "^1.9.0",
+        "ffe-icons": "^9.0.0",
+        "gulp": "^3.9.1",
+        "json-loader": "^0.5.7",
+        "mkdirp": "^0.5.1",
+        "nsp": "^3.1.0",
+        "react": "^16.1.1",
+        "react-dom": "^16.1.1",
+        "rimraf": "^2.6.1",
+        "webpack": "^3.8.1",
+        "webpack-dev-server": "^2.7.1"
+    },
+    "files": ["lib"]
 }

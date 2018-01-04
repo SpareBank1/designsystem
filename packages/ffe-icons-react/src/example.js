@@ -11,5 +11,5 @@ ReactDOM.render(
             </div>
         ))}
     </div>,
-    document.getElementById('app')
+    document.getElementById('app'),
 );
