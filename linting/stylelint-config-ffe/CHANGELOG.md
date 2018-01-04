@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.4.1"></a>
+## [0.4.1](***REMOVED***) (2018-01-04)
+
+
+### Bug Fixes
+
+* **stylelint-config-ffe:** Ignore flex-flow shorthand ([92e99ef](***REMOVED***))
+
+
+
+
 <a name="0.4.0"></a>
 # 0.4.0 (2017-12-22)
 
