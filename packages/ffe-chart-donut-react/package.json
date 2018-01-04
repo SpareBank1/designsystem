@@ -1,48 +1,43 @@
 {
-  "name": "ffe-chart-donut-react",
-  "version": "1.0.3",
-  "description": "Donut chart in SVG",
-  "main": "lib/index.js",
-  "author": "SpareBank 1",
-  "license": "UNLICENSED",
-  "scripts": {
-    "build": "babel -d lib/ src/ && cp src/ffe-chart-donut.less lib/",
-    "build:example": "npm run build:less && babel-node example/example.js",
-    "build:less": "lessc example/example.less example/example.css",
-    "watch": "onchange 'src/**.js' -- npm run build",
-    "lint": "eslint src/ test/",
-    "lint:fix": "eslint --fix src/ test/",
-    "start": "hjs-dev-server",
-    "test": "npm run test:spec && npm run test:nsp && npm run build:example",
-    "test:nsp": "nsp check",
-    "test:spec": "jest",
-    "test:watch": "jest --watch",
-    "tdd": "jest --watch",
-    "prepublish": "npm run build"
-  },
-  "keywords": [
-    "ffe"
-  ],
-  "dependencies": {
-    "prop-types": "^15.6.0"
-  },
-  "peerDependencies": {
-    "react": "^15.4.0 || ^16.0.0"
-  },
-  "devDependencies": {
-    "enzyme": "^3.3.0",
-    "enzyme-adapter-react-16": "^1.1.1",
-    "ffe-core": "^10.2.1",
-    "jest": "^22.0.4",
-    "react": "^16.1.1",
-    "style-loader": "^0.19.1"
-  },
-  "jest": {
-    "setupTestFrameworkScriptFile": "./test-setup.js"
-  },
-  "files": [
-    "lib",
-    "*.js",
-    "*.less"
-  ]
+    "name": "ffe-chart-donut-react",
+    "version": "1.0.3",
+    "description": "Donut chart in SVG",
+    "main": "lib/index.js",
+    "author": "SpareBank 1",
+    "license": "UNLICENSED",
+    "scripts": {
+        "build": "babel -d lib/ src/ && cp src/ffe-chart-donut.less lib/",
+        "build:example": "npm run build:less && babel-node example/example.js",
+        "build:less": "lessc example/example.less example/example.css",
+        "watch": "onchange 'src/**.js' -- npm run build",
+        "lint": "eslint src/ test/",
+        "lint:fix": "eslint --fix src/ test/",
+        "start": "hjs-dev-server",
+        "test":
+            "npm run test:spec && npm run test:nsp && npm run build:example",
+        "test:nsp": "nsp check",
+        "test:spec": "jest",
+        "test:watch": "jest --watch",
+        "tdd": "jest --watch",
+        "prepublish": "npm run build"
+    },
+    "keywords": ["ffe"],
+    "dependencies": {
+        "prop-types": "^15.6.0"
+    },
+    "peerDependencies": {
+        "react": "^15.4.0 || ^16.0.0"
+    },
+    "devDependencies": {
+        "enzyme": "^3.3.0",
+        "enzyme-adapter-react-16": "^1.1.1",
+        "ffe-core": "^10.2.1",
+        "jest": "^22.0.4",
+        "react": "^16.1.1",
+        "style-loader": "^0.19.1"
+    },
+    "jest": {
+        "setupTestFrameworkScriptFile": "./test-setup.js"
+    },
+    "files": ["lib", "*.js", "*.less"]
 }

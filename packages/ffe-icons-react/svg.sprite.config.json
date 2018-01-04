@@ -1,8 +1,6 @@
 {
     "dest": "packages/ffe-icons-react/tmp/",
-    "icons": [
-        "*"
-    ],
+    "icons": ["*"],
     "config": {
         "mode": {
             "view": {

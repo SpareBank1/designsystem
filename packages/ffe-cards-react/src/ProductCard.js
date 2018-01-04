@@ -2,7 +2,7 @@ import React from 'react';
 import { oneOfType, node, func, string } from 'prop-types';
 import classNames from 'classnames';
 
-const ProductCard = (props) => {
+const ProductCard = props => {
     const {
         className,
         details,
@@ -15,18 +15,17 @@ const ProductCard = (props) => {
 
     return (
         <ElementType
-            className={classNames(
-                'ffe-product-card',
-                className,
-            )}
+            className={classNames('ffe-product-card', className)}
             {...rest}
         >
-            {status &&
-                <div className="ffe-product-card__status">{status}</div>
-            }
+            {status && <div className="ffe-product-card__status">{status}</div>}
             {icon &&
-                React.cloneElement(icon, { className: classNames('ffe-product-card__icon', icon.props.className)} )
-            }
+                React.cloneElement(icon, {
+                    className: classNames(
+                        'ffe-product-card__icon',
+                        icon.props.className,
+                    ),
+                })}
             {heading && <p className="ffe-product-card__heading">{heading}</p>}
             {details && <p className="ffe-product-card__details">{details}</p>}
         </ElementType>

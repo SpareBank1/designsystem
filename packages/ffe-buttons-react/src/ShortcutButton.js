@@ -5,7 +5,9 @@ import Button from './Button';
 const ShortcutButton = props => (
     <Button
         buttonType="shortcut"
-        rightIcon={<ChevronIkon className="ffe-shortcut-button__icon-chevron" />}
+        rightIcon={
+            <ChevronIkon className="ffe-shortcut-button__icon-chevron" />
+        }
         {...props}
     />
 );

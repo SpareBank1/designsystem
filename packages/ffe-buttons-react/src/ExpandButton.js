@@ -3,28 +3,21 @@ import { bool, func, node } from 'prop-types';
 import classNames from 'classnames';
 
 export default function ExpandButton(props) {
-    const {
-        children,
-        isExpanded,
-        onClick,
-        ...rest
-    } = props;
+    const { children, isExpanded, onClick, ...rest } = props;
 
     return (
         <button
             aria-expanded={String(isExpanded)}
-            className={classNames(
-                'ffe-expand-button',
-                { 'ffe-expand-button--expanded': isExpanded },
-            )}
+            className={classNames('ffe-expand-button', {
+                'ffe-expand-button--expanded': isExpanded,
+            })}
             onClick={onClick}
             {...rest}
         >
             <span
-                className={classNames(
-                    'ffe-expand-button__label',
-                    { 'ffe-expand-button__label--expanded': isExpanded },
-                )}
+                className={classNames('ffe-expand-button__label', {
+                    'ffe-expand-button__label--expanded': isExpanded,
+                })}
             >
                 {children}
             </span>
