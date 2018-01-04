@@ -50,5 +50,10 @@ module.exports = {
             components:
                 'packages/ffe-context-message-react/src/[A-Z]+([A-Za-z]).js',
         },
+        {
+            name: 'Søkbar dropdown',
+            components:
+                'packages/ffe-searchable-dropdown-react/src/SearchableDropdown.js',
+        },
     ],
 };
