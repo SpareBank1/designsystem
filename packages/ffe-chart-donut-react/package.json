@@ -2,6 +2,9 @@
   "name": "ffe-chart-donut-react",
   "version": "1.0.2",
   "description": "Donut chart in SVG",
+  "main": "lib/index.js",
+  "author": "SpareBank 1",
+  "license": "UNLICENSED",
   "scripts": {
     "build": "babel -d lib/ src/ && cp src/ffe-chart-donut.less lib/",
     "build:example": "npm run build:less && babel-node example/example.js",
@@ -12,30 +15,34 @@
     "start": "hjs-dev-server",
     "test": "npm run test:spec && npm run test:nsp && npm run build:example",
     "test:nsp": "nsp check",
-    "test:spec": "mocha -G --compilers js:babel-core/register --require ./test/setup.test.js test/**/*.test.js",
-    "test:watch": "npm run tdd",
-    "tdd": "mocha -G --compilers js:babel-core/register --require ./test/setup.test.js test/**/*.test.js -w",
+    "test:spec": "jest",
+    "test:watch": "jest --watch",
+    "tdd": "jest --watch",
     "prepublish": "npm run build"
   },
   "keywords": [
     "ffe"
   ],
   "dependencies": {
-    "prop-types": "*"
+    "prop-types": "^15.6.0"
   },
   "peerDependencies": {
     "react": "^15.4.0 || ^16.0.0"
   },
   "devDependencies": {
-    "react": "^16.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "ffe-core": "^10.2.0",
+    "jest": "^22.0.4",
+    "react": "^16.1.1",
     "style-loader": "^0.19.1"
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "./test-setup.js"
   },
   "files": [
     "lib",
     "*.js",
     "*.less"
-  ],
-  "main": "lib/index.js",
-  "author": "SpareBank 1",
-  "license": "UNLICENSED"
+  ]
 }
