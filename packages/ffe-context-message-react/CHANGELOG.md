@@ -3,7 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-<a name="3.0.1"></a>
+      <a name="3.0.2"></a>
+## [3.0.2](***REMOVED***) (2018-01-04)
+
+
+
+
+**Note:** Version bump only for package ffe-context-message-react
+
+      <a name="3.0.1"></a>
 
 ## 3.0.1 (2018-01-04)
 
@@ -18,13 +26,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * Requires React 16
 * Requires `ffe-icons-react` 4.0.0
 * No longer includes raw JS files. If you expect imports other than through
-  `ffe-context-message-react` or `ffe-context-message-react/lib/` your things
-  will break.
+`ffe-context-message-react` or `ffe-context-message-react/lib/` your things
+will break.
 
 ### 🏠 Improvements
 
 * Removed local dev server now that the package lives in a monorepo. Use
-  styleguidist from the monorepo root when developing.
+styleguidist from the monorepo root when developing.
 
 ## 2.3.3
 
