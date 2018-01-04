@@ -2,9 +2,25 @@ import React from 'react';
 import { array, string, number, func } from 'prop-types';
 import ListItem from './ListItem';
 
-const ListContainer = ({ dropdownAttributes, dropdownList, highlightedIndex, noMatch, onSelect, renderDropdownElement, refHighlightedListItem }) => {
+const ListContainer = ({
+    dropdownAttributes,
+    dropdownList,
+    highlightedIndex,
+    noMatch,
+    onSelect,
+    renderDropdownElement,
+    refHighlightedListItem
+}) => {
     return (
-        <ul className='ffe-searchable-dropdown__scroll-container-list' role='listbox'>
+        <ul
+            className='ffe-searchable-dropdown__scroll-container-list'
+            role='listbox'
+            aria-activedescendant={
+                dropdownList.length > 0 &&
+                highlightedIndex > -1 &&
+                highlightedIndex
+            }
+        >
             { dropdownList.length > 0 ? dropdownList.map((item, index) =>
                 {
                     return (

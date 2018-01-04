@@ -11,6 +11,7 @@ const ListItem = ({ dropdownAttributes, id, isHighlighted, item, onSelect, rende
                 }
             }}
             role='option'
+            aria-selected={isHighlighted}
             id={id}
             onMouseDown={(e) => {
                 e.preventDefault();
@@ -21,7 +22,7 @@ const ListItem = ({ dropdownAttributes, id, isHighlighted, item, onSelect, rende
         >
             {renderElement ? renderElement(item) :
                 <div>
-                    <a className="ffe-searchable-dropdown__item--header">{item[dropdownAttributes[0]]}</a>
+                    <div className="ffe-searchable-dropdown__item--header">{item[dropdownAttributes[0]]}</div>
                     {dropdownAttributes.length > 1 &&
                     <div className="ffe-searchable-dropdown__item--details">
                         {item[dropdownAttributes[1]]}
