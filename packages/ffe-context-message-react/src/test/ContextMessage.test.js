@@ -1,4 +1,4 @@
-import React, { cloneElement } from 'react';
+import React from 'react';
 import { shallow, mount } from 'enzyme';
 import sinon from 'sinon';
 
@@ -13,12 +13,14 @@ import {
 import ContextMessage from '../ContextMessage';
 
 const defaultProps = {
-    children: (<p>content</p>),
+    children: <p>content</p>,
     messageType: 'tip',
 };
 
-const getShallowWrapper = props => shallow(<ContextMessage {...defaultProps} {...props} />);
-const getMountedWrapper = props => mount(<ContextMessage {...defaultProps} {...props} />);
+const getShallowWrapper = props =>
+    shallow(<ContextMessage {...defaultProps} {...props} />);
+const getMountedWrapper = props =>
+    mount(<ContextMessage {...defaultProps} {...props} />);
 
 describe('<ContextMessage />', () => {
     it('renders with provided content', () => {
@@ -40,7 +42,9 @@ describe('<ContextMessage />', () => {
 
     it('renders without header', () => {
         const wrapper = getMountedWrapper();
-        const header = wrapper.find('.ffe-context-message-content').find('header');
+        const header = wrapper
+            .find('.ffe-context-message-content')
+            .find('header');
         expect(header.exists()).to.be(false);
     });
 
@@ -57,34 +61,44 @@ describe('<ContextMessage />', () => {
         const wrapper = getShallowWrapper({
             className: 'special special--mod',
         });
-        expect(wrapper.props().className)
-            .to.be('ffe-context-message ffe-context-message--tip special special--mod');
+        expect(wrapper.props().className).to.be(
+            'ffe-context-message ffe-context-message--tip special special--mod',
+        );
     });
 
     it('renders --compact modifier if compact prop is true', () => {
         const wrapper = getShallowWrapper({
             compact: true,
         });
-        expect(wrapper.props().className)
-            .to.be('ffe-context-message ffe-context-message--tip ffe-context-message--compact');
+        expect(wrapper.props().className).to.be(
+            'ffe-context-message ffe-context-message--tip ffe-context-message--compact',
+        );
     });
 
     it('renders with context icon', () => {
         const wrapper = getMountedWrapper({
-            icon: (<InfoSirkelIkon />),
+            icon: <InfoSirkelIkon />,
         });
-        expect(wrapper.find('svg.ffe-context-message-content__icon-svg').length).to.be(1);
+        expect(
+            wrapper.find('svg.ffe-context-message-content__icon-svg').length,
+        ).to.be(1);
     });
 
     it('renders without close button by default', () => {
         const wrapper = getMountedWrapper({
-            icon: (<InfoSirkelIkon />),
+            icon: <InfoSirkelIkon />,
         });
-        expect(wrapper.find('.ffe-context-message-content__close-button-svg').exists()).to.be(false);
-        expect(wrapper.find('.ffe-context-message-content__close-button').exists()).to.be(false);
+        expect(
+            wrapper
+                .find('.ffe-context-message-content__close-button-svg')
+                .exists(),
+        ).to.be(false);
+        expect(
+            wrapper.find('.ffe-context-message-content__close-button').exists(),
+        ).to.be(false);
     });
 
-    it('closes itself on close click', (done) => {
+    it('closes itself on close click', done => {
         const onClickSpy = sinon.spy();
         const wrapper = getMountedWrapper({
             animationLengthMs: 10,
@@ -92,7 +106,9 @@ describe('<ContextMessage />', () => {
             onClose: onClickSpy,
         });
         expect(wrapper.find('.ffe-context-message').exists()).to.be(true);
-        wrapper.find('.ffe-context-message-content__close-button').simulate('click');
+        wrapper
+            .find('.ffe-context-message-content__close-button')
+            .simulate('click');
         setTimeout(() => {
             wrapper.update();
             expect(onClickSpy.calledOnce);
@@ -104,12 +120,9 @@ describe('<ContextMessage />', () => {
 
 describe('<ContextInfoMessage />', () => {
     const wrapper = mount(
-        <ContextInfoMessage
-            icon={<InfoSirkelIkon />}
-            showCloseButton={true}
-        >
+        <ContextInfoMessage icon={<InfoSirkelIkon />} showCloseButton={true}>
             <p>content</p>
-        </ContextInfoMessage>
+        </ContextInfoMessage>,
     );
 
     it('renders ContextInfoMessage', () => {
@@ -120,12 +133,9 @@ describe('<ContextInfoMessage />', () => {
 
 describe('<ContextTipMessage />', () => {
     const wrapper = mount(
-        <ContextTipMessage
-            icon={<InfoSirkelIkon />}
-            showCloseButton={true}
-        >
+        <ContextTipMessage icon={<InfoSirkelIkon />} showCloseButton={true}>
             <p>content</p>
-        </ContextTipMessage>
+        </ContextTipMessage>,
     );
 
     it('renders ContextInfoMessage', () => {
@@ -136,12 +146,9 @@ describe('<ContextTipMessage />', () => {
 
 describe('Test ContextSuccessMessage', () => {
     const wrapper = mount(
-        <ContextSuccessMessage
-            icon={<InfoSirkelIkon />}
-            showCloseButton={true}
-        >
+        <ContextSuccessMessage icon={<InfoSirkelIkon />} showCloseButton={true}>
             <p>content</p>
-        </ContextSuccessMessage>
+        </ContextSuccessMessage>,
     );
 
     it('renders ContextInfoMessage', () => {
@@ -152,12 +159,9 @@ describe('Test ContextSuccessMessage', () => {
 
 describe('<ContextErrorMessage />', () => {
     const wrapper = mount(
-        <ContextErrorMessage
-            icon={<InfoSirkelIkon />}
-            showCloseButton={true}
-        >
+        <ContextErrorMessage icon={<InfoSirkelIkon />} showCloseButton={true}>
             <p>content</p>
-        </ContextErrorMessage>
+        </ContextErrorMessage>,
     );
 
     it('renders ContextErrorMessage', () => {
