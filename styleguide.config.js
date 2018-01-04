@@ -2,10 +2,7 @@ const path = require('path');
 
 module.exports = {
     title: 'FFE',
-    require: [
-        'babel-polyfill',
-        path.join(__dirname, 'dist/ffe.css'),
-    ],
+    require: ['babel-polyfill', path.join(__dirname, 'dist/ffe.css')],
     components: 'packages/ffe-*-react/src/**/[A-Z]+([A-Za-z]).js',
     webpackConfig: {
         module: {
@@ -13,11 +10,11 @@ module.exports = {
                 {
                     test: /\.jsx?$/,
                     use: ['babel-loader'],
-                    exclude: /node_modules/
+                    exclude: /node_modules/,
                 },
                 {
                     test: /\.css$/,
-                    use: ['style-loader', 'css-loader?url=false']
+                    use: ['style-loader', 'css-loader?url=false'],
                 },
             ],
         },
@@ -26,17 +23,19 @@ module.exports = {
         {
             name: 'Knapper',
             content: 'packages/ffe-buttons-react/USAGE.md',
-            components: 'packages/ffe-buttons-react/src/[A-Z]+([A-Za-z]).js'
+            components: 'packages/ffe-buttons-react/src/[A-Z]+([A-Za-z]).js',
         },
         {
             name: 'Typografi',
             content: 'packages/ffe-core-react/USAGE.md',
-            components: 'packages/ffe-core-react/src/typography/[A-Z]+([A-Za-z]).js'
+            components:
+                'packages/ffe-core-react/src/typography/[A-Z]+([A-Za-z]).js',
         },
         {
             name: 'Kakediagram',
             content: 'packages/ffe-chart-donut-react/USAGE.md',
-            components: 'packages/ffe-chart-donut-react/src/[A-Z]+([A-Za-z]).js'
+            components:
+                'packages/ffe-chart-donut-react/src/[A-Z]+([A-Za-z]).js',
         },
         {
             name: 'Accordion',
@@ -44,7 +43,12 @@ module.exports = {
         },
         {
             name: 'Kort',
-            components: 'packages/ffe-cards-react/src/[A-Z]+([A-Za-z]).js'
+            components: 'packages/ffe-cards-react/src/[A-Z]+([A-Za-z]).js',
+        },
+        {
+            name: 'Meldinger',
+            components:
+                'packages/ffe-context-message-react/src/[A-Z]+([A-Za-z]).js',
         },
     ],
 };
