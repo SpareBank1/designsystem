@@ -49,6 +49,7 @@ describe('<SearchableDropdown>', () => {
 
     test('renders <ScrollContainer> on click', () => {
         component.find(Input).prop('onClick')();
+        component.update();
         expect(component.find(ScrollContainer)).toHaveLength(1);
         expect(component.state('showListContainer')).toEqual(true);
     });
