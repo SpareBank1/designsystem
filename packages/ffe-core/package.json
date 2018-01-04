@@ -1,6 +1,6 @@
 {
   "name": "ffe-core",
-  "version": "10.2.0",
+  "version": "10.2.1",
   "description": "Rammeverk for Felles Front End",
   "scripts": {
     "build": "lessc examples/examples.less examples/examples.css && echo \"$(date +%T): Updated examples\"",

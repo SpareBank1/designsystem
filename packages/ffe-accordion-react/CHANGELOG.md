@@ -1,3 +1,19 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+<a name="3.1.3"></a>
+## 3.1.3 (2018-01-04)
+
+
+### Bug Fixes
+
+* **ffe-accordion-react:** Create ID only once ([d448528](http://stash.intern.sparebank1.no:22/ffe/ffe-monorepo/commits/d448528))
+
+
+
+
 # Changelog
 
 ## v3.1.2

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+    <a name="8.0.2"></a>
+## [8.0.2](http://stash.intern.sparebank1.no:22/ffe/ffe-monorepo/compare/ffe-buttons-react@8.0.1...ffe-buttons-react@8.0.2) (2018-01-04)
+
+
+
+
+**Note:** Version bump only for package ffe-buttons-react
+
     <a name="8.0.1"></a>
 ## [8.0.1](http://stash.intern.sparebank1.no:22/ffe/ffe-monorepo/compare/ffe-buttons-react@8.0.0...ffe-buttons-react@8.0.1) (2018-01-02)
 
@@ -11,7 +19,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package ffe-buttons-react
 
-    <a name="8.0.0"></a>
+<a name="8.0.0"></a>
 # [8.0.0](http://stash.intern.sparebank1.no:22/ffe/ffe-monorepo/compare/ffe-buttons-react@7.0.0...ffe-buttons-react@8.0.0) (2018-01-02)
 
 
