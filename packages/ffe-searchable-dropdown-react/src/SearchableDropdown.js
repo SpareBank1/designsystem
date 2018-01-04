@@ -12,7 +12,7 @@ class SearchableDropdown extends Component {
             highlightedElementIndex: -1,
             searchTerm: '',
             showListContainer: false,
-            scrollId: "SearchableDropDown",
+            scrollId: 'SearchableDropDown',
         };
 
         this.filterList = this.filterList.bind(this);
@@ -27,28 +27,28 @@ class SearchableDropdown extends Component {
     }
 
     onClick() {
-        this.setState({showListContainer:true});
+        this.setState({ showListContainer: true });
         if (this.props.isMobilbank) {
             this.props.scrollToTop(this.state.scrollId);
         }
     }
 
     onFocus() {
-        this.setState({showListContainer:true});
+        this.setState({ showListContainer: true });
         if (this.props.isMobilbank) {
             this.props.scrollToTop(this.state.scrollId);
         }
     }
 
     onBlur() {
-        this.setState({showListContainer:false});
+        this.setState({ showListContainer: false });
         if (this.props.onBlur) {
             this.props.onBlur();
         }
     }
 
     onReset() {
-        this.setState ({
+        this.setState({
             searchTerm: '',
         });
         this.props.onReset();
@@ -57,7 +57,7 @@ class SearchableDropdown extends Component {
     onInputChange(event) {
         const searchTerm = event.target.value;
         this.setState({
-            showListContainer:true,
+            showListContainer: true,
             searchTerm,
             highlightedElementIndex: -1,
         });
@@ -72,7 +72,11 @@ class SearchableDropdown extends Component {
             const searchTermLowerCase = searchTerm.toLowerCase().trim();
 
             updatedList = this.props.dropdownList.filter(listItem => {
-               return searchAttributes.find(attribute => listItem[attribute].toLowerCase().includes(searchTermLowerCase));
+                return searchAttributes.find(attribute =>
+                    listItem[attribute]
+                        .toLowerCase()
+                        .includes(searchTermLowerCase),
+                );
             });
         } else {
             updatedList = this.props.dropdownList;
@@ -82,7 +86,7 @@ class SearchableDropdown extends Component {
 
     onSelect(value) {
         this.setState({
-            showListContainer:false,
+            showListContainer: false,
             searchTerm: '',
             highlightedElementIndex: -1,
         });
@@ -94,26 +98,30 @@ class SearchableDropdown extends Component {
         const filteredList = this.filterList(searchTerm);
         if (event.key === 'ArrowDown') {
             event.preventDefault();
-            this.setState({showListContainer:true});
-            this.setHighlightedIndex("DOWN", highlightedElementIndex, filteredList);
-        }
-        else if (event.key === 'ArrowUp') {
+            this.setState({ showListContainer: true });
+            this.setHighlightedIndex(
+                'DOWN',
+                highlightedElementIndex,
+                filteredList,
+            );
+        } else if (event.key === 'ArrowUp') {
             event.preventDefault();
-            this.setState({showListContainer:true});
-            this.setHighlightedIndex("UP", highlightedElementIndex, filteredList);
-        }
-        else if (event.key === 'Enter') {
+            this.setState({ showListContainer: true });
+            this.setHighlightedIndex(
+                'UP',
+                highlightedElementIndex,
+                filteredList,
+            );
+        } else if (event.key === 'Enter') {
             event.preventDefault();
             if (highlightedElementIndex === -1) {
                 if (filteredList.length === 1) {
                     this.onSelect(filteredList[0]);
                 }
-            }
-            else {
+            } else {
                 this.onSelect(filteredList[highlightedElementIndex]);
             }
-        }
-        else if (event.key === 'Escape') {
+        } else if (event.key === 'Escape') {
             this.onReset();
         }
     }
@@ -122,10 +130,17 @@ class SearchableDropdown extends Component {
         const filteredListLength = filteredList.length;
         if (this.scrollContainer) {
             if (direction === 'DOWN') {
-                const nextHighlightedIndex = highlightedElementIndex === filteredListLength -1 ? 0 : highlightedElementIndex +1;
-                this.setState({highlightedElementIndex: nextHighlightedIndex });
+                const nextHighlightedIndex =
+                    highlightedElementIndex === filteredListLength - 1
+                        ? 0
+                        : highlightedElementIndex + 1;
+                this.setState({
+                    highlightedElementIndex: nextHighlightedIndex,
+                });
 
-                if (highlightedElementIndex === -1) {return;}
+                if (highlightedElementIndex === -1) {
+                    return;
+                }
                 if (nextHighlightedIndex === 0) {
                     this.scrollContainer.setScrollPosStart();
                     return;
@@ -134,9 +149,14 @@ class SearchableDropdown extends Component {
             }
 
             if (direction === 'UP') {
-                const nextHighlightedIndex = (highlightedElementIndex === 0 ||  highlightedElementIndex === -1) ?
-                    filteredListLength -1 : highlightedElementIndex -1;
-                this.setState({highlightedElementIndex: nextHighlightedIndex });
+                const nextHighlightedIndex =
+                    highlightedElementIndex === 0 ||
+                    highlightedElementIndex === -1
+                        ? filteredListLength - 1
+                        : highlightedElementIndex - 1;
+                this.setState({
+                    highlightedElementIndex: nextHighlightedIndex,
+                });
 
                 if (nextHighlightedIndex === filteredListLength - 1) {
                     if (this.state.showListContainer === true) {
@@ -160,53 +180,65 @@ class SearchableDropdown extends Component {
             inputId,
             inputValue,
             ariaInvalid,
-            displayResetWhenInputHasValue
+            displayResetWhenInputHasValue,
         } = this.props;
-        const { highlightedElementIndex, showListContainer, searchTerm } = this.state;
+        const {
+            highlightedElementIndex,
+            showListContainer,
+            searchTerm,
+        } = this.state;
         const filteredList = this.filterList(searchTerm);
 
         return (
-          <div className={ classNames(this.props.className) } id={this.state.scrollId}>
-            {label?
-              <label className="ffe-form-label ffe-form-label--block" htmlFor={ this.props.inputId }>
-                  { label }
-              </label>
-              : null
-            }
-            <div className="ffe-searchable-dropdown">
-                <Input
-                    displayResetWhenInputHasValue = {displayResetWhenInputHasValue}
-                    onBlur={this.onBlur}
-                    onInputChange={this.onInputChange}
-                    onClick={this.onClick}
-                    onFocus={this.onFocus}
-                    onKeyDown={this.onKeyDown}
-                    placeholder={placeholder}
-                    inputId={inputId}
-                    inputValue={inputValue}
-                    onReset={this.onReset}
-                    searchTerm={searchTerm}
-                    ariaInvalid={ariaInvalid}
-                />
-                {showListContainer &&
-                    <ScrollContainer
-                        ref={(scrollContainer) => {
-                                this.scrollContainer = scrollContainer;
-                        }}
-                        dropdownAttributes={dropdownAttributes}
-                        dropdownList={filteredList}
-                        highlightedIndex={highlightedElementIndex}
-                        noMatch={noMatch}
-                        onSelect={this.onSelect}
-                        renderDropdownElement={renderDropdownElement}
+            <div
+                className={classNames(this.props.className)}
+                id={this.state.scrollId}
+            >
+                {label ? (
+                    // eslint-disable-next-line jsx-a11y/label-has-for
+                    <label
+                        className="ffe-form-label ffe-form-label--block"
+                        htmlFor={inputId}
+                    >
+                        {label}
+                    </label>
+                ) : null}
+                <div className="ffe-searchable-dropdown">
+                    <Input
+                        displayResetWhenInputHasValue={
+                            displayResetWhenInputHasValue
+                        }
+                        onBlur={this.onBlur}
+                        onInputChange={this.onInputChange}
+                        onClick={this.onClick}
+                        onFocus={this.onFocus}
+                        onKeyDown={this.onKeyDown}
+                        placeholder={placeholder}
+                        inputId={inputId}
+                        inputValue={inputValue}
+                        onReset={this.onReset}
+                        searchTerm={searchTerm}
+                        ariaInvalid={ariaInvalid}
                     />
-                }
-              </div>
-              {errorMessage &&
-                <div className="ffe-field-error-message">
-                    {errorMessage}
+                    {showListContainer && (
+                        <ScrollContainer
+                            ref={scrollContainer => {
+                                this.scrollContainer = scrollContainer;
+                            }}
+                            dropdownAttributes={dropdownAttributes}
+                            dropdownList={filteredList}
+                            highlightedIndex={highlightedElementIndex}
+                            noMatch={noMatch}
+                            onSelect={this.onSelect}
+                            renderDropdownElement={renderDropdownElement}
+                        />
+                    )}
                 </div>
-              }
+                {errorMessage && (
+                    <div className="ffe-field-error-message">
+                        {errorMessage}
+                    </div>
+                )}
             </div>
         );
     }
@@ -252,7 +284,7 @@ SearchableDropdown.propTypes = {
     /** Adjust user view if mobilbank */
     isMobilbank: bool,
     /** Dictates behvaiour if mobilbank */
-    scrollToTop: isRequiredIf(func, props => props.isMobilbank)
+    scrollToTop: isRequiredIf(func, props => props.isMobilbank),
 };
 
 SearchableDropdown.defaultProps = {

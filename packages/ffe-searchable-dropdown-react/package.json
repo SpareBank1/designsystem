@@ -1,88 +1,57 @@
 {
-  "name": "ffe-searchable-dropdown-react",
-  "version": "3.0.0",
-  "description": "Dropdown with search option",
-  "scripts": {
-    "build": "babel -d lib --ignore=*.test.js src",
-    "start": "styleguidist server",
-    "pretest": "eslint src/",
-    "lint:fix": "eslint --fix src/",
-    "test": "jest src",
-    "test:watch": "jest src --watch",
-    "posttest": "nsp check",
-    "prepublishOnly": "npm run build",
-    "postpublish": "git tag ${npm_package_version} && git push --tags",
-    "has-published": "npm show . versions -s --json | grep -q \\\"${npm_package_version}\\\""
-  },
-  "jest": {
-    "moduleNameMapper": {
-      "\\.(css|less)$": "<rootDir>/mock/styleMock.js"
+    "name": "ffe-searchable-dropdown-react",
+    "version": "3.0.0",
+    "description": "Dropdown with search option",
+    "scripts": {
+        "build": "babel -d lib --ignore=*.test.js src",
+        "pretest": "eslint src/",
+        "lint:fix": "eslint --fix src/",
+        "test": "jest src",
+        "test:watch": "jest src --watch",
+        "posttest": "nsp check",
+        "prepublishOnly": "npm run build"
     },
-    "setupTestFrameworkScriptFile": "<rootDir>/testSetup.js"
-  },
-  "keywords": [
-    "ffe"
-  ],
-  "peerDependencies": {
-    "ffe-core": "9.x || 10.x",
-    "ffe-form": "^6.3.1 || 7.x - 8.x",
-    "react": "^15.4.0 || ^16.0.0"
-  },
-  "devDependencies": {
-    "autoprefixer": "^7.1.1",
-    "babel-cli": "^6.23.0",
-    "babel-core": "^6.23.1",
-    "babel-loader": "^7.1.0",
-    "babel-plugin-transform-object-rest-spread": "^6.23.0",
-    "babel-polyfill": "^6.23.0",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-react": "^6.23.0",
-    "babel-register": "^6.23.0",
-    "css-loader": "^0.28.4",
-    "enzyme": "^3.2.0",
-    "enzyme-adapter-react-16": "^1.1.1",
-    "eslint": "^4.13.1",
-    "eslint-config-ffe": "^7.0.0",
-    "eslint-loader": "^1.8.0",
-    "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^7.5.1",
-    "extract-text-webpack-plugin": "^3.0.2",
-    "ffe-core": "^10.1.2",
-    "ffe-form": "^8.1.2",
-    "ffe-icons": "^8.0.0",
-    "file-loader": "^1.1.6",
-    "jest": "^22.0.4",
-    "less": "^2.7.2",
-    "less-loader": "^4.0.4",
-    "nsp": "^3.1.0",
-    "postcss-loader": "^2.0.6",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-styleguidist": "^6.0.33",
-    "webpack": "^3.1.0"
-  },
-  "files": [
-    "less/searchable-dropdown.less",
-    "lib",
-    "*.js"
-  ],
-  "main": "lib/SearchableDropdown.js",
-  "author": "SpareBank 1",
-  "repository": {
-    "type": "git",
-    "url": ""
-  },
-  "publishConfig": {
-    "registry": "***REMOVED***"
-  },
-  "license": "ISC",
-  "dependencies": {
-    "classnames": "^2.2.5",
-    "ffe-icons-react": "^3.0.0",
-    "lodash.isequal": "^4.5.0",
-    "prop-types": "^15.5.10",
-    "react-custom-scrollbars": "^4.2.1",
-    "react-proptype-conditional-require": "^1.0.4"
-  }
+    "jest": {
+        "setupTestFrameworkScriptFile": "<rootDir>/testSetup.js"
+    },
+    "peerDependencies": {
+        "ffe-core": "9.x || 10.x",
+        "ffe-form": "^6.3.1 || 7.x - 8.x",
+        "react": "^15.4.0 || ^16.0.0"
+    },
+    "devDependencies": {
+        "babel-cli": "^6.24.1",
+        "babel-core": "^6.26.0",
+        "babel-plugin-transform-object-rest-spread": "^6.26.0",
+        "babel-preset-env": "^1.6.1",
+        "babel-preset-react": "^6.24.1",
+        "babel-register": "^6.23.0",
+        "enzyme": "^3.3.0",
+        "enzyme-adapter-react-16": "^1.1.1",
+        "eslint": "^4.13.1",
+        "ffe-core": "^10.1.2",
+        "ffe-form": "^8.1.2",
+        "ffe-icons": "^8.0.0",
+        "jest": "^22.0.4",
+        "less": "^2.7.3",
+        "nsp": "^3.1.0",
+        "react": "^16.1.1",
+        "react-dom": "^16.1.1"
+    },
+    "files": ["less/searchable-dropdown.less", "lib", "*.js"],
+    "main": "lib/SearchableDropdown.js",
+    "author": "SpareBank 1",
+    "repository": {
+        "type": "git",
+        "url": "***REMOVED***"
+    },
+    "license": "UNLICENSED",
+    "dependencies": {
+        "classnames": "^2.2.5",
+        "ffe-icons-react": "^3.0.0",
+        "lodash.isequal": "^4.5.0",
+        "prop-types": "^15.6.0",
+        "react-custom-scrollbars": "^4.2.1",
+        "react-proptype-conditional-require": "^1.0.4"
+    }
 }
