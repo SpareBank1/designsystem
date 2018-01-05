@@ -7,7 +7,7 @@ const RADIUS = 150;
 const CIRCUMFERENCE = 2 * Math.PI * RADIUS;
 
 function ChartDonut({ name, percentage, firstLabel, lastLabel }) {
-    const offset = CIRCUMFERENCE - ((CIRCUMFERENCE / 100) * percentage);
+    const offset = CIRCUMFERENCE - CIRCUMFERENCE / 100 * percentage;
 
     /*
         The rendered circle consists of two half-circles with a gap between them.
@@ -24,10 +24,12 @@ function ChartDonut({ name, percentage, firstLabel, lastLabel }) {
                 viewBox="0 0 360 360"
                 className="ffe-chart-donut__circle"
                 style={{
-                    transform: `scale(-1, 1) rotate(${percentage ? 275 : -90}deg)`,
+                    transform: `scale(-1, 1) rotate(${
+                        percentage ? 275 : -90
+                    }deg)`,
                 }}
             >
-                {percentage < 95.7 &&
+                {percentage < 95.7 && (
                     <circle
                         className="ffe-chart-donut--cobalt"
                         fill="none"
@@ -39,9 +41,11 @@ function ChartDonut({ name, percentage, firstLabel, lastLabel }) {
                         cy="50%"
                         r={RADIUS}
                         strokeDasharray={CIRCUMFERENCE}
-                        strokeDashoffset={(CIRCUMFERENCE - offset) + (percentage ? 22 : 0)}
+                        strokeDashoffset={
+                            CIRCUMFERENCE - offset + (percentage ? 22 : 0)
+                        }
                     />
-                }
+                )}
             </svg>
             <svg
                 viewBox="0 0 360 360"
@@ -50,7 +54,7 @@ function ChartDonut({ name, percentage, firstLabel, lastLabel }) {
                     transform: `rotate(${percentage ? -85 : -90}deg)`,
                 }}
             >
-                {percentage > 3.2 &&
+                {percentage > 3.2 && (
                     <circle
                         className="ffe-chart-donut--sky"
                         fill="none"
@@ -61,10 +65,12 @@ function ChartDonut({ name, percentage, firstLabel, lastLabel }) {
                         cx="50%"
                         cy="50%"
                         r={RADIUS}
-                        strokeDasharray={CIRCUMFERENCE + (percentage === 100 ? 22 : 0)}
+                        strokeDasharray={
+                            CIRCUMFERENCE + (percentage === 100 ? 22 : 0)
+                        }
                         strokeDashoffset={offset + (percentage ? 30 : 0)}
                     />
-                }
+                )}
             </svg>
             <div className="ffe-chart-donut__description">
                 <div className="ffe-chart-donut__name ffe-strong-text">
@@ -73,7 +79,9 @@ function ChartDonut({ name, percentage, firstLabel, lastLabel }) {
                 <div className="ffe-chart-donut__fractions">
                     <div className="ffe-chart-donut__fraction ffe-chart-donut__fraction--cobalt">
                         <div className="ffe-chart-donut__amount ffe-strong-text">
-                            {`${Number(100 - percentage).toFixed(0)}${NON_BREAKING_SPACE}%`}
+                            {`${Number(100 - percentage).toFixed(
+                                0,
+                            )}${NON_BREAKING_SPACE}%`}
                         </div>
                         <div className="ffe-chart-donut__type ffe-micro-text">
                             {firstLabel}
@@ -81,7 +89,9 @@ function ChartDonut({ name, percentage, firstLabel, lastLabel }) {
                     </div>
                     <div className="ffe-chart-donut__fraction ffe-chart-donut__fraction--sky">
                         <div className="ffe-chart-donut__amount ffe-strong-text">
-                            {`${Number(percentage).toFixed(0)}${NON_BREAKING_SPACE}%`}
+                            {`${Number(percentage).toFixed(
+                                0,
+                            )}${NON_BREAKING_SPACE}%`}
                         </div>
                         <div className="ffe-chart-donut__type ffe-micro-text">
                             {lastLabel}

@@ -1,27 +1,25 @@
 {
-  "name": "ffe-accordion",
-  "version": "3.0.1",
-  "description": "Accordion component for FFE.",
-  "author": "SpareBank 1",
-  "license": "UNLICENSED",
-  "main": "index.js",
-  "scripts": {
-    "build": "npm run lint && lessc examples/examples.less examples/examples.css && cp -R node_modules/ffe-core/fonts/ examples/fonts/ && echo \"$(date +%T): Updated example\"",
-    "lint": "lessc --lint examples/examples.less && stylelint less/*.less",
-    "start": "opn examples/accordion.html & watch \"npm run -s compile\" less/",
-    "test:nsp": "nsp check",
-    "test": "npm run lint && npm run test:nsp"
-  },
-  "keywords": [
-    "FFE",
-    "SpareBank1",
-    "Accordion"
-  ],
-  "peerDependencies": {
-    "ffe-core": "^10.2.1"
-  },
-  "devDependencies": {
-    "ffe-core": "^10.2.1",
-    "opn-cli": "^3.1.0"
-  }
+    "name": "ffe-accordion",
+    "version": "3.0.1",
+    "description": "Accordion component for FFE.",
+    "author": "SpareBank 1",
+    "license": "UNLICENSED",
+    "main": "index.js",
+    "scripts": {
+        "build":
+            "npm run lint && lessc examples/examples.less examples/examples.css && cp -R node_modules/ffe-core/fonts/ examples/fonts/ && echo \"$(date +%T): Updated example\"",
+        "lint": "lessc --lint examples/examples.less && stylelint less/*.less",
+        "start":
+            "opn examples/accordion.html & watch \"npm run -s compile\" less/",
+        "test:nsp": "nsp check",
+        "test": "npm run lint && npm run test:nsp"
+    },
+    "keywords": ["FFE", "SpareBank1", "Accordion"],
+    "peerDependencies": {
+        "ffe-core": "^10.2.1"
+    },
+    "devDependencies": {
+        "ffe-core": "^10.2.1",
+        "opn-cli": "^3.1.0"
+    }
 }

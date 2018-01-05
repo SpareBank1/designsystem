@@ -45,6 +45,6 @@
         "webpack": "^3.8.1"
     },
     "lint-staged": {
-        "*.{js,json,less,md}": ["prettier --write", "git add"]
+        "*.{js,json,less,md}": ["prettier --write", "git add -f"]
     }
 }

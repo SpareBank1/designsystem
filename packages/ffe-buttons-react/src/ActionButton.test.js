@@ -10,7 +10,8 @@ const defaultProps = {
     children: <span>Hello, World!</span>,
 };
 
-const getWrapper = props => shallow(<ActionButton {...defaultProps} {...props} />);
+const getWrapper = props =>
+    shallow(<ActionButton {...defaultProps} {...props} />);
 
 describe('ActionButton', () => {
     it('renders an action button', () => {
