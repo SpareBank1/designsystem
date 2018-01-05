@@ -3,30 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-    <a name="8.0.2"></a>
-## [8.0.2](http://stash.intern.sparebank1.no:22/ffe/ffe-monorepo/compare/ffe-buttons-react@8.0.1...ffe-buttons-react@8.0.2) (2018-01-04)
+    <a name="8.0.3"></a>
 
-
-
+## [8.0.3](http://stash.intern.sparebank1.no:22/ffe/ffe-monorepo/compare/ffe-buttons-react@8.0.2...ffe-buttons-react@8.0.3) (2018-01-05)
 
 **Note:** Version bump only for package ffe-buttons-react
 
-    <a name="8.0.1"></a>
+    <a name="8.0.2"></a>
+
+## [8.0.2](http://stash.intern.sparebank1.no:22/ffe/ffe-monorepo/compare/ffe-buttons-react@8.0.1...ffe-buttons-react@8.0.2) (2018-01-04)
+
+**Note:** Version bump only for package ffe-buttons-react
+
+<a name="8.0.1"></a>
+
 ## [8.0.1](http://stash.intern.sparebank1.no:22/ffe/ffe-monorepo/compare/ffe-buttons-react@8.0.0...ffe-buttons-react@8.0.1) (2018-01-02)
-
-
-
 
 **Note:** Version bump only for package ffe-buttons-react
 
 <a name="8.0.0"></a>
-# [8.0.0](http://stash.intern.sparebank1.no:22/ffe/ffe-monorepo/compare/ffe-buttons-react@7.0.0...ffe-buttons-react@8.0.0) (2018-01-02)
 
+# [8.0.0](http://stash.intern.sparebank1.no:22/ffe/ffe-monorepo/compare/ffe-buttons-react@7.0.0...ffe-buttons-react@8.0.0) (2018-01-02)
 
 ### Code Refactoring
 
 * **ffe-icons-react:** Improve API ([ecb9ac6](http://stash.intern.sparebank1.no:22/ffe/ffe-monorepo/commits/ecb9ac6))
-
 
 ### BREAKING CHANGES
 
@@ -40,7 +41,7 @@ Previously, you imported one and one icon from the corresponding
 JSX file. Now all icons are available as named exports from the
 root level of `ffe-icons-react`.
 
-If you're using webpack@>=2.0.0,  please make the following changes
+If you're using webpack@>=2.0.0, please make the following changes
 to migrate:
 
 ```diff
@@ -61,12 +62,9 @@ and tree shaking, please make the following changes to migrate:
 
 This API change allows for cleaner usage and better documentation.
 
-
-
-
 <a name="7.0.0"></a>
-# 7.0.0 (2017-12-22)
 
+# 7.0.0 (2017-12-22)
 
 ### Bug Fixes
 
@@ -74,29 +72,23 @@ This API change allows for cleaner usage and better documentation.
 * **ffe-buttons-react:** Fixed path to chevron icon ([4a16869](http://stash.intern.sparebank1.no:22/ffe/ffe-monorepo/commits/4a16869))
 * **ffe-icons-react:** Change hardcoded path of npm run build target ([ecfc6a3](http://stash.intern.sparebank1.no:22/ffe/ffe-monorepo/commits/ecfc6a3))
 
-
 ### Features
 
 * **ffe-buttons-react:** Add contribute.md link to readme ([2b8ead4](http://stash.intern.sparebank1.no:22/ffe/ffe-monorepo/commits/2b8ead4))
 * **ffe-buttons-react:** Upgrade to React 16 ([f119120](http://stash.intern.sparebank1.no:22/ffe/ffe-monorepo/commits/f119120))
 
-
 ### Fix
 
 * Rename all icons to end with -ikon ([f4b815a](http://stash.intern.sparebank1.no:22/ffe/ffe-monorepo/commits/f4b815a))
 
-
 ### BREAKING CHANGES
 
 * This commit renames two icons in ffe-icons.
-`bankid-icon` is now named `bankid-ikon`, and
-`mynter-to-stabler-pluss` is now named `mynter-to-stabler-pluss-ikon`.
+  `bankid-icon` is now named `bankid-ikon`, and
+  `mynter-to-stabler-pluss` is now named `mynter-to-stabler-pluss-ikon`.
 
 In addition, ffe-icons-react receives a fix that unbroke a previous
 release
-
-
-
 
 # Changelog
 
@@ -105,7 +97,7 @@ release
 ### 🚀 New features
 
 * The `ExpandButton` component gets a React implementation. Consumers are in charge of reacting to clicks and
-controlling state.
+  controlling state.
 * `ActionButton` now has a boolean prop `ghost` to toggle the `--ghost` modifier
 
 ### 🏠 Housekeeping
@@ -225,17 +217,17 @@ bumps the peerDependency on ffe-core to ^8.0.1
 ### 💥 Breaking changes
 
 * (BREAKING): Button's `type` prop has been renamed to `buttonType`. This change
-will only be breaking for direct consumers of the `<Button />` component - not
-its specialized versions `<PrimaryButton />`, `<SecondaryButton />` etc.
+  will only be breaking for direct consumers of the `<Button />` component - not
+  its specialized versions `<PrimaryButton />`, `<SecondaryButton />` etc.
 
 ### 🚀 New features
 
 * Allow overriding a button's `type` prop with `type="button"` or `type="reset"`
-when needed - now the `<*Button />` components behave like regular HTML buttons.
-The default is still `type="submit"`.
+  when needed - now the `<*Button />` components behave like regular HTML buttons.
+  The default is still `type="submit"`.
 * Allow no `onClick` handler. Since the default type is `submit`, the default
-click handler will trigger a `submit` event, which can be handled elsewhere,
-rendering an `onClick` handler useless.
+  click handler will trigger a `submit` event, which can be handled elsewhere,
+  rendering an `onClick` handler useless.
 
 ## v2.4.1
 

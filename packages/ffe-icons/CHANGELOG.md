@@ -3,61 +3,58 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-       <a name="9.0.0"></a>
-# [9.0.0](http://stash.intern.sparebank1.no:22/ffe/ffe-monorepo/compare/ffe-icons@8.0.0...ffe-icons@9.0.0) (2018-01-02)
+     <a name="9.0.1"></a>
 
+## [9.0.1](http://stash.intern.sparebank1.no:22/ffe/ffe-monorepo/compare/ffe-icons@9.0.0...ffe-icons@9.0.1) (2018-01-05)
+
+**Note:** Version bump only for package ffe-icons
+
+     <a name="9.0.0"></a>
+
+# [9.0.0](http://stash.intern.sparebank1.no:22/ffe/ffe-monorepo/compare/ffe-icons@8.0.0...ffe-icons@9.0.0) (2018-01-02)
 
 ### Bug Fixes
 
 * **ffe-icons:** Rename numeric icons ([502c8c9](http://stash.intern.sparebank1.no:22/ffe/ffe-monorepo/commits/502c8c9))
 
-
 ### BREAKING CHANGES
 
 * **ffe-icons:** Rename two icons that begins with numbers in order
-to allow named exports in react package.
+  to allow named exports in react package.
 
 The following icons have been renamed:
 
-- `1-2-3-sirkel-ikon` is now named `sirkel-1-2-3-ikon`
-- `1-2-3-understrek-ikon` is now named `understrek-1-2-3-ikon`
+* `1-2-3-sirkel-ikon` is now named `sirkel-1-2-3-ikon`
+* `1-2-3-understrek-ikon` is now named `understrek-1-2-3-ikon`
 
 
+    <a name="8.0.0"></a>
 
-
-       <a name="8.0.0"></a>
 # 8.0.0 (2017-12-22)
-
 
 ### Bug Fixes
 
 * **ffe-icons:** Fix git repository url ([6278180](http://stash.intern.sparebank1.no:22/ffe/ffe-monorepo/commits/6278180))
 * **ffe-icons:** Remove class attribute from klokke-ikon ([0298c35](http://stash.intern.sparebank1.no:22/ffe/ffe-monorepo/commits/0298c35))
 
-
 ### Features
 
 * **ffe-icons:** Add contribute.md link to readme ([166d9b2](http://stash.intern.sparebank1.no:22/ffe/ffe-monorepo/commits/166d9b2))
-
 
 ### Fix
 
 * Rename all icons to end with -ikon ([f4b815a](http://stash.intern.sparebank1.no:22/ffe/ffe-monorepo/commits/f4b815a))
 
-
 ### BREAKING CHANGES
 
 * This commit renames two icons in ffe-icons.
-`bankid-icon` is now named `bankid-ikon`, and
-`mynter-to-stabler-pluss` is now named `mynter-to-stabler-pluss-ikon`.
+  `bankid-icon` is now named `bankid-ikon`, and
+  `mynter-to-stabler-pluss` is now named `mynter-to-stabler-pluss-ikon`.
 
 In addition, ffe-icons-react receives a fix that unbroke a previous
 release
 
-
-
-
-   # Changelog
+# Changelog
 
 ## 7.17.0
 
@@ -125,12 +122,12 @@ release
 ## 7.5.3
 
 * Bugfix: Remember that `.svg` is appended to all input in the `icons` config object
-(as a convenience).
+  (as a convenience).
 
 ## 7.5.2
 
 * Bugfix: Include all icons when `opts.icons` are set to `*`. This fixes a problem in
-`ffe-icons-react` where no icons were outputted during the build
+  `ffe-icons-react` where no icons were outputted during the build
 
 ## 7.5.1
 
@@ -153,13 +150,9 @@ Usage:
 
 ```json
 {
-"dest": "dist/resources/",
-"icons": [
-   "bamse-ikon"
-],
-"projectIcons": [
-   "src/main/resources/special/snowflake/snokrystall-ikon"
-]
+    "dest": "dist/resources/",
+    "icons": ["bamse-ikon"],
+    "projectIcons": ["src/main/resources/special/snowflake/snokrystall-ikon"]
 }
 ```
 
@@ -186,7 +179,7 @@ Changes the shebang so it works better on different flavours of Linux
 The Gulp dependency has been removed. Outdated packages that crash on
 Node 7 deep in the dependency tree made it overdue
 
-*To migrate you need to update your npm-script*:
+_To migrate you need to update your npm-script_:
 
 ```json
 "ffe:icons": "ffe-icons --opts=icons.json",
@@ -197,21 +190,27 @@ above `node_modules/` (the same directory as your apps `package.json`). So what 
 `--opts=../../icons.json` is now just `--opts=icons.json`.
 
 ## 6.4.0
+
 * Added koffert-ikon.svg
 
 ## 6.3.0
+
 * Added p-pose-ikon.svg
 
 ## 6.2.0
+
 * Added mynter-to-stabler-pluss.svg
 
 ## 6.1.1
+
 * Update design on faks-printer-solid-ikon [FFE-90](https://jira.intern.sparebank1.no/browse/FFE-90)
 
 ## 6.1.0
+
 * Added pose-i-haand-ikon.svg
 
 ## 6.0.0
+
 * Breaking: kontorbygg-ikon renamed to kontorbygg-solid-ikon in order to be consistent with how other icons are named. Anyone who where using the `kontorbygg-ikon` and wants to keep using the version with a fill should change to `kontorbygg-solid-ikon`.
 * Add new icons
 * kontorbygg-ikon (replaces old solid one with a non-solid version)
@@ -219,6 +218,7 @@ above `node_modules/` (the same directory as your apps `package.json`). So what 
 * personer-ikon
 
 ## 5.3.1
+
 * No change
 
 ## Version 5.3.0
@@ -229,9 +229,11 @@ above `node_modules/` (the same directory as your apps `package.json`). So what 
 * kr-hake-ikon.svg
 
 ## Version 5.2.1
+
 * No change.
 
 ## Version 5.2.0
+
 * Added konfetti-ikon.svg
 * Added tommel-opp-ikong.svg
 
@@ -268,27 +270,34 @@ above `node_modules/` (the same directory as your apps `package.json`). So what 
 * A vengeful lumberjack has swung the axe against tre-ikon, spire-ikon, and blad-ikon. It was decided the icons did not fit the brand and should not be used by anyone.
 
 ## Version 4.7.0
+
 * Added bygning-pluss-ikon.svg
 
 ## Version 4.6.0
+
 * Added stetoskop-ikon.svg
 
 ## Version 4.5.0
+
 * Added forstorrelsesglass-ikon.svg
 
 ## Version 4.4.0
+
 * Added snakkeboble-ikon.svg
 
 ## Version 4.3.0
+
 * Added person-rullestol-ikon.svg
 * Added hjerte-kardiograf-ikon.svg
 
 ## Version 4.2.0
+
 * Added graf-opp-enkel-ikon.svg
 * Added soylediagram-ikon.svg
 * Added pil-ut-av-boks-skraa-ikon.svg
 
 ## Version 4.1.0
+
 * Added blyant-ikon.svg
 * Added person-pluss-ikon.svg
 * Added bsu-ikon.svg
@@ -351,6 +360,7 @@ above `node_modules/` (the same directory as your apps `package.json`). So what 
 * Removed the postinstall script, since it created issues with builds on npm 2.x. See https://github.com/npm/npm/issues/8850
 
 ## Version 2.4.0
+
 Optimized:
 
 * boks-ikon
@@ -358,14 +368,17 @@ Optimized:
 * verktoy-skiftenokkel-ikon
 
 ## Version 2.3.0
+
 Renamed lukk-ikon to kryss-sirkel-ikon and optimized it
 
 ## Version 2.2.0
+
 Optimized:
 
 * lyspare-ikon
 
 ## Version 2.1.0
+
 Added new icons and optimized some old ones for use in lo-kort.
 
 Optimized:
@@ -408,7 +421,8 @@ New:
 * xls-ikon
 
 ## Version 2.0.0
-For version 2.x, removed all existing icons and added _ICON_REQUIREMENTS.md to have a clean slate. Also updated README.
+
+For version 2.x, removed all existing icons and added \_ICON_REQUIREMENTS.md to have a clean slate. Also updated README.
 
 Releasing version 2 with the first batch of optimized icons:
 
@@ -426,18 +440,22 @@ Releasing version 2 with the first batch of optimized icons:
 * telefon
 
 ## Version 1.0.3
+
 * Made devDependencies actual dependencies so package consumers get them...
 * Re-added postinstall script
 
 ## Version 1.0.2
+
 * Removed postinstall script, since some build tools had trouble finding gulp at that stage
 * Updated package.json with the correct repository URL
 
 ## Version 1.0.1
+
 * Added plaster-ikon
-![plaster-ikon](https://stash.intern.sparebank1.no/projects/FFE/repos/ffe-icons/browse/icons/plaster-ikon.svg?raw)
+  ![plaster-ikon](https://stash.intern.sparebank1.no/projects/FFE/repos/ffe-icons/browse/icons/plaster-ikon.svg?raw)
 
 ## Version 1.0.0
+
 * Renamed default sprite to ffe-icons.svg
 * Renamed desktop-ikon to laptop-ikon
 * Added several new icons to ffe-icons

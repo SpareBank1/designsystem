@@ -3,15 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
- <a name="2.0.7"></a>
-## [2.0.7](http://stash.intern.sparebank1.no:22/ffe/ffe-monorepo/compare/ffe-context-message@2.0.6...ffe-context-message@2.0.7) (2018-01-04)
+       <a name="2.0.8"></a>
 
-
-
+## [2.0.8](http://stash.intern.sparebank1.no:22/ffe/ffe-monorepo/compare/ffe-context-message@2.0.7...ffe-context-message@2.0.8) (2018-01-05)
 
 **Note:** Version bump only for package ffe-context-message
 
- <a name="2.0.6"></a>
+       <a name="2.0.7"></a>
+
+## [2.0.7](http://stash.intern.sparebank1.no:22/ffe/ffe-monorepo/compare/ffe-context-message@2.0.6...ffe-context-message@2.0.7) (2018-01-04)
+
+**Note:** Version bump only for package ffe-context-message
+
+<a name="2.0.6"></a>
 
 ## 2.0.6 (2018-01-04)
 

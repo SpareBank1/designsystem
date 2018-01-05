@@ -1,6 +1,6 @@
 {
     "name": "ffe-grid",
-    "version": "6.0.2",
+    "version": "6.0.3",
     "description": "A grid component for use within the FFE framework",
     "scripts": {
         "compile":
@@ -33,10 +33,10 @@
     ],
     "license": "UNLICENSED",
     "peerDependencies": {
-        "ffe-core": "^9.0.0 || ^10.0.0"
+        "ffe-core": "^10.2.2"
     },
     "devDependencies": {
-        "ffe-core": "^10.0.0",
+        "ffe-core": "^10.2.2",
         "less": "^2.7.3",
         "nsp": "^3.1.0",
         "opn-cli": "^3.1.0",

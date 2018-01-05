@@ -3,15 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-      <a name="6.0.2"></a>
-## 6.0.2 (2018-01-05)
+<a name="6.0.3"></a>
 
-
-
+## [6.0.3](http://stash.intern.sparebank1.no:22/ffe/ffe-monorepo/compare/ffe-grid-react@6.0.2...ffe-grid-react@6.0.3) (2018-01-05)
 
 **Note:** Version bump only for package ffe-grid-react
 
-      # CHANGELOG
+<a name="6.0.2"></a>
+
+## 6.0.2 (2018-01-05)
+
+**Note:** Version bump only for package ffe-grid-react
+
+# CHANGELOG
 
 ## Version 6.0.1
 
@@ -25,9 +29,9 @@ migration job. Do a global search for `<GridCol` and follow this approach for ea
 * If you have specified `vertical={true}`, remove the prop. This is the default behavior now.
 * If your `<GridCol />` has more than one child, add the prop `horizontal={true}` to keep the behavior from < 6.0.0.
 * If your `<GridCol />` has exactly one child, this will now take up as much space as it originally required. So if your
-single child is an inline element, no change is required. If your child is a block element, it will now occupy up to 100 %
-of the available space instead of being sized by its content. You might want to add `horizontal={true}` here as well, but
-you might not need this (depending on your use case).
+  single child is an inline element, no change is required. If your child is a block element, it will now occupy up to 100 %
+  of the available space instead of being sized by its content. You might want to add `horizontal={true}` here as well, but
+  you might not need this (depending on your use case).
 
 ### Breaking changes
 
@@ -41,7 +45,7 @@ you might not need this (depending on your use case).
 ## Version 5.1.0
 
 * The module now complains (in the console and for non-production builds) if `ffe-grid` is used in a way it's not meant to be.
-From [ffe-grid's README](https://stash.intern.sparebank1.no/projects/FFE/repos/ffe-grid/browse/README.md):
+  From [ffe-grid's README](https://stash.intern.sparebank1.no/projects/FFE/repos/ffe-grid/browse/README.md):
 
 > There should be no more than four columns on small devices and six columns on medium ones.
 > Although it's technically possible, it's not something that's encouraged by the designers.
@@ -119,7 +123,7 @@ From [ffe-grid's README](https://stash.intern.sparebank1.no/projects/FFE/repos/f
 ### New features
 
 * `Grid`, `GridRow` and `GridCol` accepts new prop `element` (default: _div_) which can be used to render a different
-element (e.g. a _section_, _header_, etc).
+  element (e.g. a _section_, _header_, etc).
 * `Grid`, `GridRow` and `GridCol` will pass any props it doesn't know what to do with (such as _onClick_, _style_, etc) on to its root element.
 
 ### Other
@@ -141,7 +145,7 @@ element (e.g. a _section_, _header_, etc).
 
 * Added `vertical` and `reverse` modifiers to `GridCol`.
 * These modifiers only work with minimum v.4.2.0 of `ffe-grid` so the breaking change is that we have to
-depend on a new major version of `ffe-grid` to use them.
+  depend on a new major version of `ffe-grid` to use them.
 
 ## Version 2.2.1
 
