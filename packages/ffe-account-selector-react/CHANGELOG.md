@@ -5,6 +5,7 @@
 * Less can now be found under `ffe-account-selector-react/less/ffe-account-selector`,
   changed from `ffe-account-selector-react/styles/account-selector`. This to be more
   like the other packages.
+* Replace `nfe-amount-formatter` with `ffe-formatters`
 
 # v7.10.3
 

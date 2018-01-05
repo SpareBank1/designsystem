@@ -1,14 +1,18 @@
 import React from 'react';
 import { func, string, arrayOf, bool } from 'prop-types';
-import BaseSelector from './base-selector';
 import autoBind from 'react-auto-bind';
-import AccountSuggestionMulti from '../account/account-suggestion-multi';
-import AccountNoMatch from '../account/account-nomatch';
-import { Account, Locale, KeyCodes } from '../util/types';
-import { accountFilter } from '../filter/filters';
+
 import Checkbox from 'ffe-checkbox-react';
-import StatusBar from '../suggestion/suggestion-list-status-bar';
-import txt from '../i18n/i18n';
+
+import BaseSelector from '../base-selector';
+import {
+    AccountNoMatch,
+    AccountSuggestionMulti,
+} from '../../subcomponents/account';
+import { Account, Locale, KeyCodes } from '../../util/types';
+import { accountFilter } from '../../filter/filters';
+import { SuggestionListStatusBar } from '../../subcomponents/suggestion';
+import txt from '../../i18n/i18n';
 
 const allAccountsElement = { id: 'all-accounts', accountNumber: '' };
 
@@ -110,7 +114,7 @@ class AccountSelectorMulti extends React.Component {
             const height = listHeight + this.baseRef.getInputHeight();
             return (
                 !isLoading && (
-                    <StatusBar
+                    <SuggestionListStatusBar
                         renderSelectionStatus={() => statusText}
                         onDone={this.onDone}
                         labelDoneButton={
@@ -178,16 +182,37 @@ AccountSelectorMulti.defaultProps = {
 };
 
 AccountSelectorMulti.propTypes = {
-    onAccountSelected: func.isRequired,
-    onSelectAll: func,
+    /**
+     * Array of objects:
+     *  {
+     *      accountNumber: string.isRequired,
+     *      balance: number,
+     *      currencyCode: string.
+     *      name: string.isRequired,
+     *  }
+     */
     accounts: arrayOf(Account),
+    id: string.isRequired,
+    isLoading: bool,
+    /** 'nb', 'nn', or 'en' */
     locale: Locale.isRequired,
+    /** Overrides default string for all locales. */
+    noMatches: string,
+    onAccountSelected: func.isRequired,
+    onBlur: func.isRequired,
+    onSelectAll: func,
+    /**
+     * Array of objects:
+     *  {
+     *      accountNumber: string.isRequired,
+     *      balance: number,
+     *      currencyCode: string.
+     *      name: string.isRequired,
+     *  }
+     */
     selectedAccounts: arrayOf(Account),
     showSelectAllOption: bool,
-    noMatches: string,
-    onBlur: func.isRequired,
     value: string,
-    isLoading: bool,
 };
 
 export default AccountSelectorMulti;

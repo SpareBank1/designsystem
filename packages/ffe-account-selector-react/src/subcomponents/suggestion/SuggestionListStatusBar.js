@@ -1,6 +1,7 @@
 import React from 'react';
 import { func, string, object } from 'prop-types';
-import { KeyCodes } from '../util/types';
+
+import { KeyCodes } from '../../util/types';
 
 const StatusBar = ({
     onDone,

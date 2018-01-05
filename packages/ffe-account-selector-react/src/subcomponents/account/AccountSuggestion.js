@@ -1,7 +1,8 @@
 import React from 'react';
 import { bool } from 'prop-types';
-import { accountFormatter, balanceWithCurrency } from '../util/format';
-import { Account, Locale } from '../util/types';
+
+import { accountFormatter, balanceWithCurrency } from '../../util/format';
+import { Account, Locale } from '../../util/types';
 
 const AccountSuggestionItem = ({ account, locale, showBalance = true }) => {
     const { accountNumber, balance, name, currencyCode } = account;

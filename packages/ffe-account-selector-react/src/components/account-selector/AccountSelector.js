@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import autoBind from 'react-auto-bind';
 import { func, string, arrayOf, bool } from 'prop-types';
-import BaseSelector from './base-selector';
-import AccountSuggestionItem from '../account/account-suggestion';
-import AccountNoMatch from '../account/account-nomatch';
-import AccountDetails from '../account/account-details';
-import { Account, Locale } from '../util/types';
-import { createAccountFilter } from '../filter/filters';
 import classNames from 'classnames';
+
+import BaseSelector from '../base-selector';
+import {
+    AccountDetails,
+    AccountNoMatch,
+    AccountSuggestion,
+} from '../../subcomponents/account';
+import { Account, Locale } from '../../util/types';
+import { createAccountFilter } from '../../filter/filters';
 
 class AccountSelector extends Component {
     constructor(props) {
@@ -21,7 +24,7 @@ class AccountSelector extends Component {
 
     renderSuggestion(account) {
         return (
-            <AccountSuggestionItem
+            <AccountSuggestion
                 account={account}
                 locale={this.props.locale}
                 showBalance={this.props.showBalance}
@@ -107,16 +110,28 @@ class AccountSelector extends Component {
 }
 
 AccountSelector.propTypes = {
+    /**
+     * Array of objects:
+     *  {
+     *      accountNumber: string.isRequired,
+     *      balance: number,
+     *      currencyCode: string.
+     *      name: string.isRequired,
+     *  }
+     */
     accounts: arrayOf(Account),
     className: string,
-    value: string.isRequired,
     id: string.isRequired,
+    /** 'nb', 'nn', or 'en' */
     locale: Locale.isRequired,
+    /** Overrides default string for all locales. */
     noMatches: string,
     onAccountSelected: func.isRequired,
     onChange: func.isRequired,
     selectedAccount: Account,
+    /** Default true. */
     showBalance: bool,
+    value: string.isRequired,
 };
 
 export default AccountSelector;
