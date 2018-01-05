@@ -241,7 +241,7 @@ For LESS-pakker:
 ### Kjør `lerna bootstrap`
 
 ```
-$ npx lerna bootstrap
+$ npm run bootstrap
 ```
 
 ### Formatter med prettier
