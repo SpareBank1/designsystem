@@ -150,9 +150,8 @@ commit-meldinger](https://medium.com/@steveamaza/how-to-write-a-proper-git-commi
 å følge en standard til:
 
 Commit-meldinger følger [conventional commits](https://conventionalcommits.org/)-formatet. Dette gjør vi for å automatisk
-kunne generere endringslogger og nye versjonsnumre. For at dette skal fungere som forventet, må hver branch kun
-inneholde èn commit. Les mer om hvordan du squasher flere commits
-[her](https://makandracards.com/makandra/527-squash-several-git-commits-into-a-single-commit).
+kunne generere endringslogger og nye versjonsnumre. Det oppfordres til at hver commit kun endrer en pakke, og setter
+riktig "scope" (pakke) for hver commit. Dette hjelper oss å automatisere publisering av changelogs etc.
 
 Dette er lettest forklart med eksempler:
 
