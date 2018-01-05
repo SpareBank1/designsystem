@@ -1,7 +1,10 @@
 {
-    "extends": "eslint-config-ffe",
-    "env": {
-        "browser": true,
-        "mocha": true
-    }
-}
+    "overrides": [
+      {
+        "files": [ "src/**/*.spec.js"],
+        "env": {
+            "jest": true
+        }
+      }
+    ]
+  }
