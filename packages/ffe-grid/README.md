@@ -192,7 +192,7 @@ the following commands available to you:
 $ npm start             # Starts a local web server with live reload
 $ npm test              # Runs visual regression tests
 $ npm run lint          # Lints your less-files
-$ npm run compile         # Compiles the files into the examples/ folder
+$ npm run build         # Compiles the files into the examples/ folder
 ```
 
 ## Contributing

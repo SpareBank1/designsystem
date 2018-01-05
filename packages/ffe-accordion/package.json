@@ -10,7 +10,7 @@
             "npm run lint && lessc examples/examples.less examples/examples.css && cp -R node_modules/ffe-core/fonts/ examples/fonts/ && echo \"$(date +%T): Updated example\"",
         "lint": "lessc --lint examples/examples.less && stylelint less/*.less",
         "start":
-            "opn examples/accordion.html & watch \"npm run -s compile\" less/",
+            "opn examples/accordion.html & watch \"npm run -s build\" less/",
         "test:nsp": "nsp check",
         "test": "npm run lint && npm run test:nsp"
     },
