@@ -1,60 +1,55 @@
 {
-  "name": "ffe-core-react",
-  "version": "1.1.2",
-  "description": "React components for ffe-core components",
-  "scripts": {
-    "prebuild": "rimraf lib",
-    "build": "babel --ignore spec.js -d lib/ src/",
-    "start": "onchange 'src/**.js' -- npm run build",
-    "lint": "eslint src/",
-    "lint:fix": "eslint --fix src/ test/",
-    "test": "jest src",
-    "test:watch": "jest --watch src",
-    "test:coverage": "jest src --coverage"
-  },
-  "keywords": [
-    "ffe"
-  ],
-  "peerDependencies": {
-    "react": "^16.1.1"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-core": "^6.26.0",
-    "babel-eslint": "^8.0.3",
-    "babel-jest": "^22.0.4",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-polyfill": "^6.26.0",
-    "babel-preset-latest": "^6.24.1",
-    "babel-preset-react": "^6.24.1",
-    "babel-register": "^6.23.0",
-    "enzyme": "^3.3.0",
-    "enzyme-adapter-react-16": "^1.1.1",
-    "eslint": "^4.13.1",
-    "jest": "^22.0.4",
-    "nsp": "^3.1.0",
-    "onchange": "3.2.1",
-    "prop-types": "^15.6.0",
-    "react": "^16.1.1",
-    "react-dom": "^16.1.1",
-    "react-test-renderer": "^16.2.0",
-    "rimraf": "^2.6.1"
-  },
-  "files": [
-    "lib",
-    "*.js"
-  ],
-  "jest": {
-    "setupTestFrameworkScriptFile": "./setupEnzyme.js"
-  },
-  "main": "lib/index.js",
-  "author": "SpareBank 1",
-  "repository": {
-    "type": "git",
-    "url": "***REMOVED***"
-  },
-  "license": "UNLICENSED",
-  "dependencies": {
-    "classnames": "^2.2.5"
-  }
+    "name": "ffe-core-react",
+    "version": "1.1.2",
+    "description": "React components for ffe-core components",
+    "scripts": {
+        "prebuild": "rimraf lib",
+        "build": "babel --ignore spec.js -d lib/ src/",
+        "start": "onchange 'src/**.js' -- npm run build",
+        "lint": "eslint src/",
+        "lint:fix": "eslint --fix src/ test/",
+        "test": "jest src",
+        "test:watch": "jest --watch src",
+        "test:coverage": "jest src --coverage"
+    },
+    "keywords": ["ffe"],
+    "peerDependencies": {
+        "react": "^16.1.1"
+    },
+    "devDependencies": {
+        "babel-cli": "^6.24.1",
+        "babel-core": "^6.26.0",
+        "babel-eslint": "^8.0.3",
+        "babel-jest": "^22.0.4",
+        "babel-plugin-transform-object-rest-spread": "^6.26.0",
+        "babel-polyfill": "^6.26.0",
+        "babel-preset-latest": "^6.24.1",
+        "babel-preset-react": "^6.24.1",
+        "babel-register": "^6.23.0",
+        "enzyme": "^3.3.0",
+        "enzyme-adapter-react-16": "^1.1.1",
+        "eslint": "^4.13.1",
+        "jest": "^22.0.4",
+        "nsp": "^3.1.0",
+        "onchange": "3.2.1",
+        "prop-types": "^15.6.0",
+        "react": "^16.1.1",
+        "react-dom": "^16.1.1",
+        "react-test-renderer": "^16.2.0",
+        "rimraf": "^2.6.1"
+    },
+    "files": ["lib", "*.js"],
+    "jest": {
+        "setupTestFrameworkScriptFile": "./setupEnzyme.js"
+    },
+    "main": "lib/index.js",
+    "author": "SpareBank 1",
+    "repository": {
+        "type": "git",
+        "url": "***REMOVED***"
+    },
+    "license": "UNLICENSED",
+    "dependencies": {
+        "classnames": "^2.2.5"
+    }
 }

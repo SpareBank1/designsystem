@@ -16,7 +16,9 @@ describe('ShortcutButton', () => {
         it('a Chevron icon inside the button', () => {
             const button = render(<ShortcutButton />);
 
-            expect(button).to.have.descendants('svg.ffe-shortcut-button__icon-chevron');
+            expect(button).to.have.descendants(
+                'svg.ffe-shortcut-button__icon-chevron',
+            );
         });
     });
 

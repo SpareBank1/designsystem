@@ -44,6 +44,12 @@ Vi prøver å holde koden på samme nivå på tvers av dette monorepoet. Dette h
 samt å bruke mindre tid på code reviews. Denne seksjonen forklarer litt om de forskjellige tekniske valgene vi bruker
 på tvers av pakkene våre.
 
+#### Formattering
+
+Vi bruker [prettier](https://prettier.io) til formattere koden vår (både JS og LESS). Det skjer automatisk når du
+committer endringer. Du kan sette opp `prettier` til å [kjøre i editoren din
+også](https://prettier.io/docs/en/editors.html) om du vil.
+
 #### LESS
 
 All stylingkode blir skrevet i [LESS](http://lesscss.org/). LESS er et supersett av CSS, som gir oss endel
@@ -77,11 +83,9 @@ det underliggende DOM-elementet. Et eksempel kan være en knapp:
 
 ```javascript
 const Button = ({ children, ...rest }) => (
-  <button {...rest}>
-    <span className="ffe-button__inner">
-      {children}
-    </span>
-  </button>
+    <button {...rest}>
+        <span className="ffe-button__inner">{children}</span>
+    </button>
 );
 ```
 
@@ -102,13 +106,7 @@ Mange applikasjoner har behov for å legge til ekstra stiler på visse komponent
 ```javascript
 import classNames from 'classnames';
 const Button = ({ className, ...rest }) => (
-  <button
-    className={classNames(
-      'ffe-button',
-      className,
-    )}
-    {...rest}
-  />
+    <button className={classNames('ffe-button', className)} {...rest} />
 );
 ```
 
@@ -189,16 +187,15 @@ git-loggen til koden / filen(e) du endret på, og legg til disse også. Tidliger
 
 Før du lager en pull request kan det være lurt å ta en titt gjennom denne huskelisten:
 
-- Er koden så konsis og forståelig som mulig?
-- Har du lagt til et test-case som bekrefter at endringen fungerer?
-- Trenger endringen å dokumenteres?
+* Er koden så konsis og forståelig som mulig?
+* Har du lagt til et test-case som bekrefter at endringen fungerer?
+* Trenger endringen å dokumenteres?
 
 Du kan merge dine egne pull requests, men vi ber om at du får endringene dine godkjent av minst 2 andre før du gjør det.
 Dette er for å sikre oss mot regresjoner og bugs så godt vi kan.
 
 Hvis du selv bidrar med tilbakemelding på en pull request, ber vi deg innstendig om å være både høflig og konstruktiv i
-kommentarene dine. Kodeformatering er et eksempel på ting som ikke alltid er nødvendig å kommentere - vi er mange
-utviklere med mange forskjellige preferanser om hvordan vi skriver kode.
+kommentarene dine.
 
 ## Lage en ny FFE-komponent
 
@@ -222,21 +219,21 @@ Denne kommandoen importerer alle filer og git-historikk til `ffe-monorepo`, slik
 
 ### Rydd i komponenten
 
-- Fjern `build.sh` og npm-scriptene `postpublish`, `preversion` og `has-published` i `package.json`.
-- Fiks `publishConfig` og `repository` i `package.json`
-- Fjern commit-hooks (se etter husky i `package.json`).
-- Endre `license`-feltet i `package.json` til `UNLICENSED`.
-- Linting
-  - Oppdatere eller fjern `.stylelintrc` og `.eslintrc` (Trenger ikke en extends-regler pga. eslintrc på toplevel i
-  repoet; kun overstyring av regler).
-  - Fjern dependencies til `eslint-plugin-*/-config-*`. Behold kun eslint.
-  - Fjern dependencies til `stylelint-config-*`. Behold kun stylelint.
-- Fjern `.editorconfig`
-- Fjern alt i .npmrc bortsett fra `package-lock=false`
-- Fjern `ffe-visual-tests-support` og alt relatert til gemini (.gemini.yml)
-- Oppgradere komponenten til å støtte React 16
-- Fiks hoisting errors (se stdout til lerna bootstrap i neste trinn)
-- Sjekk at `npm run build/test/lint` fungerer
+* Fjern `build.sh` og npm-scriptene `postpublish`, `preversion` og `has-published` i `package.json`.
+* Fiks `publishConfig` og `repository` i `package.json`
+* Fjern commit-hooks (se etter husky i `package.json`).
+* Endre `license`-feltet i `package.json` til `UNLICENSED`.
+* Linting
+  * Oppdatere eller fjern `.stylelintrc` og `.eslintrc` (Trenger ikke en extends-regler pga. eslintrc på toplevel i
+    repoet; kun overstyring av regler).
+  * Fjern dependencies til `eslint-plugin-*/-config-*`. Behold kun eslint.
+  * Fjern dependencies til `stylelint-config-*`. Behold kun stylelint.
+* Fjern `.editorconfig`
+* Fjern alt i .npmrc bortsett fra `package-lock=false`
+* Fjern `ffe-visual-tests-support` og alt relatert til gemini (.gemini.yml)
+* Oppgradere komponenten til å støtte React 16
+* Fiks hoisting errors (se stdout til lerna bootstrap i neste trinn)
+* Sjekk at `npm run build/test/lint` fungerer
 
 For LESS-pakker:
 
@@ -247,6 +244,19 @@ For LESS-pakker:
 ```
 $ npx lerna bootstrap
 ```
+
+### Formatter med prettier
+
+Installer `prettier` globalt og formatter alle `.jsx?`, `.json` og `.less`-filer i prosjektet.
+
+Et eksempel kan være:
+
+```
+prettier --write src/*.js *.json *.js examples/*.js
+```
+
+Prettier kjøres også på alle filer du har staget for commit når du commiter. Derfor vil du av og til se endringer i
+formattering selv om du ikke nødvendigvis gjorde det selv.
 
 ### Legg til scope i `commitlint.config.js`
 

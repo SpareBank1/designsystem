@@ -5,23 +5,15 @@ import classNames from 'classnames';
 import Button from './Button';
 
 export default function ActionButton(props) {
-    const {
-        children,
-        className,
-        ghost,
-        ...rest
-    } = props;
-
-
+    const { children, className, ghost, ...rest } = props;
 
     return (
         <Button
             {...rest}
             buttonType="action"
-            className={classNames(
-                className,
-                { 'ffe-action-button--ghost': ghost },
-            )}
+            className={classNames(className, {
+                'ffe-action-button--ghost': ghost,
+            })}
         >
             {children}
         </Button>

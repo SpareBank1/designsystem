@@ -1,8 +1,16 @@
 import React from 'react';
-import { bool, func, node, number as numberType, oneOf, oneOfType, string } from 'prop-types';
+import {
+    bool,
+    func,
+    node,
+    number as numberType,
+    oneOf,
+    oneOfType,
+    string,
+} from 'prop-types';
 import classNames from 'classnames';
 
-const LinkCard = (props) => {
+const LinkCard = props => {
     const {
         center,
         className,
@@ -29,15 +37,19 @@ const LinkCard = (props) => {
             )}
             {...rest}
         >
-            {status &&
-                <div className="ffe-link-card__status">{status}</div>
-            }
+            {status && <div className="ffe-link-card__status">{status}</div>}
             {icon &&
-                React.cloneElement(icon, { className: classNames('ffe-link-card__icon', icon.props.className)} )
-            }
+                React.cloneElement(icon, {
+                    className: classNames(
+                        'ffe-link-card__icon',
+                        icon.props.className,
+                    ),
+                })}
             {number && <span className="ffe-link-card__number">{number}</span>}
             {heading && <p className="ffe-link-card__heading">{heading}</p>}
-            {subHeading && <p className="ffe-link-card__sub-heading">{subHeading}</p>}
+            {subHeading && (
+                <p className="ffe-link-card__sub-heading">{subHeading}</p>
+            )}
             {details && <p className="ffe-link-card__details">{details}</p>}
         </ElementType>
     );
