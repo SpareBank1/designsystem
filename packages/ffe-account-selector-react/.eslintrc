@@ -1,0 +1,10 @@
+{
+  "extends": "eslint-config-ffe",
+  "globals": {
+    "describe": true,
+    "it": true
+  },
+  "rules": {
+    "eqeqeq": ["error","always"]
+  }
+}
