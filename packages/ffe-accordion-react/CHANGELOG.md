@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.1.4"></a>
+## [3.1.4](http://stash.intern.sparebank1.no:22/ffe/ffe-monorepo/compare/ffe-accordion-react@3.1.3...ffe-accordion-react@3.1.4) (2018-01-05)
+
+
+
+
+**Note:** Version bump only for package ffe-accordion-react
+
 <a name="3.1.3"></a>
 ## 3.1.3 (2018-01-04)
 

@@ -3,7 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-       <a name="9.0.0"></a>
+     <a name="9.0.1"></a>
+## [9.0.1](http://stash.intern.sparebank1.no:22/ffe/ffe-monorepo/compare/ffe-icons@9.0.0...ffe-icons@9.0.1) (2018-01-05)
+
+
+
+
+**Note:** Version bump only for package ffe-icons
+
+     <a name="9.0.0"></a>
 # [9.0.0](http://stash.intern.sparebank1.no:22/ffe/ffe-monorepo/compare/ffe-icons@8.0.0...ffe-icons@9.0.0) (2018-01-02)
 
 
@@ -25,7 +33,7 @@ The following icons have been renamed:
 
 
 
-       <a name="8.0.0"></a>
+    <a name="8.0.0"></a>
 # 8.0.0 (2017-12-22)
 
 
@@ -57,7 +65,7 @@ release
 
 
 
-   # Changelog
+# Changelog
 
 ## 7.17.0
 
@@ -155,10 +163,10 @@ Usage:
 {
 "dest": "dist/resources/",
 "icons": [
-   "bamse-ikon"
+"bamse-ikon"
 ],
 "projectIcons": [
-   "src/main/resources/special/snowflake/snokrystall-ikon"
+"src/main/resources/special/snowflake/snokrystall-ikon"
 ]
 }
 ```

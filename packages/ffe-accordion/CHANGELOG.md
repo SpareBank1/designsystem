@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.2"></a>
+## [3.0.2](http://stash.intern.sparebank1.no:22/ffe/ffe-monorepo/compare/ffe-accordion@3.0.1...ffe-accordion@3.0.2) (2018-01-05)
+
+
+
+
+**Note:** Version bump only for package ffe-accordion
+
 <a name="3.0.1"></a>
 ## 3.0.1 (2018-01-04)
 

@@ -1,6 +1,6 @@
 {
     "name": "ffe-buttons-react",
-    "version": "8.0.2",
+    "version": "8.0.3",
     "description": "React implementation of ffe-buttons",
     "main": "lib/index.js",
     "scripts": {
@@ -8,14 +8,14 @@
         "lint": "eslint src/.",
         "test": "npm run test:spec && npm run test:nsp",
         "test:nsp": "nsp check",
-        "test:spec":
-            "mocha --require src/util/test-setup.js --compilers js:babel-core/register src/**/*.test.js",
-        "tdd":
-            "mocha --require src/util/test-setup.js --compilers js:babel-core/register src/**/*.test.js -w",
-        "start":
-            "budo examples/buttons.js --open --live --title \"FFE Buttons\" -- -t [ babelify --presets [ es2015 react ] ] -t node-lessify"
+        "test:spec": "mocha --require src/util/test-setup.js --compilers js:babel-core/register src/**/*.test.js",
+        "tdd": "mocha --require src/util/test-setup.js --compilers js:babel-core/register src/**/*.test.js -w",
+        "start": "budo examples/buttons.js --open --live --title \"FFE Buttons\" -- -t [ babelify --presets [ es2015 react ] ] -t node-lessify"
     },
-    "files": ["lib", "*.js"],
+    "files": [
+        "lib",
+        "*.js"
+    ],
     "repository": {
         "type": "git",
         "url": "ssh://git@stash.intern.sparebank1.no:22/ffe/ffe-monorepo.git"
@@ -36,8 +36,8 @@
         "enzyme": "^3.3.0",
         "enzyme-adapter-react-16": "^1.1.1",
         "eslint": "^4.13.1",
-        "ffe-buttons": "^5.1.1",
-        "ffe-core": "^10.2.1",
+        "ffe-buttons": "^5.1.2",
+        "ffe-core": "^10.2.2",
         "mocha": "^2.4.5",
         "mocha-tap13": "^1.0.2",
         "node-lessify": "^0.1.5",
@@ -47,7 +47,10 @@
         "sinon": "^4.1.2"
     },
     "babel": {
-        "presets": ["es2015", "react"],
+        "presets": [
+            "es2015",
+            "react"
+        ],
         "plugins": [
             "transform-react-remove-prop-types",
             "transform-object-rest-spread"
@@ -55,7 +58,7 @@
     },
     "dependencies": {
         "classnames": "^2.2.5",
-        "ffe-icons-react": "^4.0.1",
+        "ffe-icons-react": "^4.0.2",
         "prop-types": "^15.6.0"
     },
     "license": "UNLICENSED"

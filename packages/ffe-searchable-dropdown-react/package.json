@@ -1,6 +1,6 @@
 {
     "name": "ffe-searchable-dropdown-react",
-    "version": "3.0.1",
+    "version": "3.0.2",
     "description": "Dropdown with search option",
     "scripts": {
         "build": "babel -d lib --ignore=*.test.js src",
@@ -15,7 +15,7 @@
         "setupTestFrameworkScriptFile": "<rootDir>/testSetup.js"
     },
     "peerDependencies": {
-        "ffe-core": "9.x || 10.x",
+        "ffe-core": "^10.2.2",
         "ffe-form": "^6.3.1 || 7.x - 8.x",
         "react": "^15.4.0 || ^16.0.0"
     },
@@ -29,7 +29,7 @@
         "enzyme": "^3.3.0",
         "enzyme-adapter-react-16": "^1.1.1",
         "eslint": "^4.13.1",
-        "ffe-core": "^10.1.2",
+        "ffe-core": "^10.2.2",
         "ffe-form": "^8.1.2",
         "ffe-icons": "^8.0.0",
         "jest": "^22.0.4",
