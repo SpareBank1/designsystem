@@ -5,7 +5,8 @@
     "main": "lib/index.js",
     "scripts": {
         "build": "babel --ignore spec.js -d lib src",
-        "start": "echo \"No local demo available - use the monorepo's npm start.\"",
+        "start":
+            "echo \"No local demo available - use the monorepo's npm start.\"",
         "test": "jest",
         "test:watch": "jest --watch"
     },

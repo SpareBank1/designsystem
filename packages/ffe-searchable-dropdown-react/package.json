@@ -38,11 +38,7 @@
         "react": "^16.1.1",
         "react-dom": "^16.1.1"
     },
-    "files": [
-        "less/searchable-dropdown.less",
-        "lib",
-        "*.js"
-    ],
+    "files": ["less/searchable-dropdown.less", "lib", "*.js"],
     "main": "lib/SearchableDropdown.js",
     "author": "SpareBank 1",
     "repository": {

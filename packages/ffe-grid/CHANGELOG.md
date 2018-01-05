@@ -4,30 +4,26 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
     <a name="6.0.3"></a>
+
 ## [6.0.3](***REMOVED***) (2018-01-05)
-
-
-
 
 **Note:** Version bump only for package ffe-grid
 
     <a name="6.0.2"></a>
+
 ## 6.0.2 (2018-01-05)
-
-
-
 
 **Note:** Version bump only for package ffe-grid
 
-  # Changelog
+# Changelog
 
 ## v.6.0.1
 
 ### Bugfix
 
 * Made the `--start`, `--center`, `--end`, `--top`, `--middle` and `--bottom` modifiers work as close as possible to how they did before the `v6.0.0` change for horizontal columns. For vertical columns, the modifiers will work
-like they do for horizontal columns while still stacking content vertically. Visual tests and examples have been
-added to demonstrate this behaviour.
+  like they do for horizontal columns while still stacking content vertically. Visual tests and examples have been
+  added to demonstrate this behaviour.
 
 ## v.6.0.0
 
@@ -40,13 +36,13 @@ later. It will require some manual testing for consumers. :-(
 large visual changes in your application, so make sure to do the following check:
 
 * Go through all your usage of `ffe-grid__col`. If they have the `ffe-grid__col--vertical` modifier,
-you can safely remove it - no further change will be necessary.
+  you can safely remove it - no further change will be necessary.
 * If your `ffe-grid__col` has more than one direct child / descendant, add the new modifier
-`ffe-grid__col--horizontal` to keep things working the way they have.
+  `ffe-grid__col--horizontal` to keep things working the way they have.
 * If your `ffe-grid__col` has a single child, this child will now keep it's original width. Inline
-elements will be sized according to their content, while block elements will receive 100 % of the
-column width. This might let you delete some custom modifiers, or it might lead to a visual
-regression.
+  elements will be sized according to their content, while block elements will receive 100 % of the
+  column width. This might let you delete some custom modifiers, or it might lead to a visual
+  regression.
 
 ## New features
 
@@ -68,7 +64,7 @@ regression.
 
 * Internal rewrite of grid library, reducing size from ~40kb to ~28kb (before gzip).
 * The `ffe-grid__col` class is now obsolete, and has been removed. Consumers are encouraged to remove them from their
-own code bases as well.
+  own code bases as well.
 
 ## v.5.5.1
 
@@ -167,7 +163,7 @@ To migrate, update your app to ffe-core version 9.x
 ## v.2.0.0
 
 * Visual change: `ffe-grid` now by default has a 40px padding on top, which is the same padding
-that are used between grid-rows.
+  that are used between grid-rows.
 * New modifier: `ffe-grid--no-top-padding` added, use this if you do not want the default padding.
 
 ## v1.2.2

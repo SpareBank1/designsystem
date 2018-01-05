@@ -12,9 +12,7 @@
         "test:watch": "jest --watch src",
         "test:coverage": "jest src --coverage"
     },
-    "keywords": [
-        "ffe"
-    ],
+    "keywords": ["ffe"],
     "peerDependencies": {
         "react": "^16.1.1"
     },
@@ -40,10 +38,7 @@
         "react-test-renderer": "^16.2.0",
         "rimraf": "^2.6.1"
     },
-    "files": [
-        "lib",
-        "*.js"
-    ],
+    "files": ["lib", "*.js"],
     "jest": {
         "setupTestFrameworkScriptFile": "./setupEnzyme.js"
     },

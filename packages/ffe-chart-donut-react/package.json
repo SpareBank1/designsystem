@@ -13,16 +13,15 @@
         "lint": "eslint src/ test/",
         "lint:fix": "eslint --fix src/ test/",
         "start": "hjs-dev-server",
-        "test": "npm run test:spec && npm run test:nsp && npm run build:example",
+        "test":
+            "npm run test:spec && npm run test:nsp && npm run build:example",
         "test:nsp": "nsp check",
         "test:spec": "jest",
         "test:watch": "jest --watch",
         "tdd": "jest --watch",
         "prepublish": "npm run build"
     },
-    "keywords": [
-        "ffe"
-    ],
+    "keywords": ["ffe"],
     "dependencies": {
         "prop-types": "^15.6.0"
     },
@@ -40,9 +39,5 @@
     "jest": {
         "setupTestFrameworkScriptFile": "./test-setup.js"
     },
-    "files": [
-        "lib",
-        "*.js",
-        "*.less"
-    ]
+    "files": ["lib", "*.js", "*.less"]
 }
