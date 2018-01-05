@@ -2,9 +2,7 @@
     "name": "ffe-context-message-react",
     "version": "3.0.3",
     "description": "React implementation of ffe-context-message component",
-    "keywords": [
-        "ffe"
-    ],
+    "keywords": ["ffe"],
     "license": "UNLICENSED",
     "author": "SpareBank 1",
     "main": "lib/index.js",
@@ -14,10 +12,12 @@
     },
     "scripts": {
         "build": "babel -d lib/. --ignore=src/test/ src/.",
-        "start": "echo \"No local demo available - use the monorepo's npm start.\"",
+        "start":
+            "echo \"No local demo available - use the monorepo's npm start.\"",
         "lint": "eslint src/",
         "lint:fix": "eslint --fix src/",
-        "test": "cross-env NODE_ENV=test mocha -G --require babel-core/register --require src/test/setup.js --recursive src/test"
+        "test":
+            "cross-env NODE_ENV=test mocha -G --require babel-core/register --require src/test/setup.js --recursive src/test"
     },
     "dependencies": {
         "classnames": "^2.2.5",

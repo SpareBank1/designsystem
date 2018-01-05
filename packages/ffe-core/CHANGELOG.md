@@ -4,30 +4,24 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
       <a name="10.2.2"></a>
+
 ## [10.2.2](http://stash.intern.sparebank1.no:22/ffe/ffe-monorepo/compare/ffe-core@10.2.1...ffe-core@10.2.2) (2018-01-05)
-
-
-
 
 **Note:** Version bump only for package ffe-core
 
       <a name="10.2.1"></a>
+
 ## [10.2.1](http://stash.intern.sparebank1.no:22/ffe/ffe-monorepo/compare/ffe-core@10.2.0...ffe-core@10.2.1) (2018-01-04)
-
-
-
 
 **Note:** Version bump only for package ffe-core
 
      <a name="10.2.0"></a>
-# 10.2.0 (2017-12-22)
 
+# 10.2.0 (2017-12-22)
 
 ### Features
 
 * **ffe-core:** Add contribute.md link to readme ([4f0693c](http://stash.intern.sparebank1.no:22/ffe/ffe-monorepo/commits/4f0693c))
-
-
 
 
     # Changelog
@@ -46,22 +40,22 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## v.10.0.0
 
-- BREAKING: The new default for links is the underlined version. If you want links without underlines use the `--no-underline` modifier.
-- BREAKING: Element styling (via `ffe-element-styling.less` and `element-map.less`) is removed.
+* BREAKING: The new default for links is the underlined version. If you want links without underlines use the `--no-underline` modifier.
+* BREAKING: Element styling (via `ffe-element-styling.less` and `element-map.less`) is removed.
 
 Element styling has been deprecated for several majors, so hopefully this will not be a heavy upgrade for most
 applications. However, for those applications that still import and use these styles, the upgrade path consists of
 adding some classes in your DOM:
 
-- Add `ffe-body-text` class to `<body />` tag.
-- Add `ffe-h[1-6]` classes to `<h[1-6] />` tags
-- Add `ffe-body-paragraph` class to `<p />` tags
-- Add `ffe-strong-text` class to `<strong />` tags
-- Add `ffe-em-text` class to `<em />` tags
-- Add `ffe-pre-text` class to `<pre />` tags
-- Add `ffe-link-text` class to `<a />` tags
-- Add `ffe-divider-line` class to `<hr />` tags
-- Add `ffe-fieldset` class to `<fieldset />` tags
+* Add `ffe-body-text` class to `<body />` tag.
+* Add `ffe-h[1-6]` classes to `<h[1-6] />` tags
+* Add `ffe-body-paragraph` class to `<p />` tags
+* Add `ffe-strong-text` class to `<strong />` tags
+* Add `ffe-em-text` class to `<em />` tags
+* Add `ffe-pre-text` class to `<pre />` tags
+* Add `ffe-link-text` class to `<a />` tags
+* Add `ffe-divider-line` class to `<hr />` tags
+* Add `ffe-fieldset` class to `<fieldset />` tags
 
 ## v.9.3.0
 
@@ -93,9 +87,9 @@ For example `transition: all 0.15s ease;` may be replaced by `transition: transf
 
 ## v.9.0.0
 
-- BREAKING: List styling are removed from `ffe-core`. These styles are now available in `ffe-lists`.
-- BREAKING: `.ffe-number-list` is no more - use `ffe-lists`'s `.ffe-numbered-list`.
-- BREAKING: Removed `@ffe-sand-25` from colors.less, renamed other color variables.
+* BREAKING: List styling are removed from `ffe-core`. These styles are now available in `ffe-lists`.
+* BREAKING: `.ffe-number-list` is no more - use `ffe-lists`'s `.ffe-numbered-list`.
+* BREAKING: Removed `@ffe-sand-25` from colors.less, renamed other color variables.
 
 To upgrade to this release, all references to the following variables must be replaced by their new names in your LESS code:
 
@@ -119,7 +113,7 @@ To upgrade to this release, all references to the following variables must be re
 
 To save some time on searching and replacing, run this command from inside your repository:
 
-for pair in ffe-blue-flat:ffe-blue-cobalt ffe-blue-royal-light-10:ffe-blue-ice ffe-blue-royal-light-20:ffe-blue-pale ffe-blue-royal-light-50:ffe-blue-sky ffe-blue-royal-light-wcag:ffe-blue-azure ffe-blue-royal-light:ffe-blue-deep-sky ffe-green-wcag-20:ffe-green-mint ffe-green-wcag:ffe-green-shamrock ffe-green-dark-10:ffe-green-emerald ffe-orange-wcag-20:ffe-orange-salmon ffe-orange-wcag:ffe-orange-fire ffe-purple-wcag:ffe-purple-magenta ffe-sand-50:ffe-sand-ivory ffe-sand-25:ffe-sand ffe-grey-light-bg:ffe-grey-cloud ffe-grey-light:ffe-grey-silver ffe-grey-dark:ffe-grey-charcoal; do old=${pair%%:*}; new=${pair##*:}; echo "Changing $old to $new"; find . -type f -name '*.less' -exec sed -i "s/$old/$new/g" {} \;; done
+for pair in ffe-blue-flat:ffe-blue-cobalt ffe-blue-royal-light-10:ffe-blue-ice ffe-blue-royal-light-20:ffe-blue-pale ffe-blue-royal-light-50:ffe-blue-sky ffe-blue-royal-light-wcag:ffe-blue-azure ffe-blue-royal-light:ffe-blue-deep-sky ffe-green-wcag-20:ffe-green-mint ffe-green-wcag:ffe-green-shamrock ffe-green-dark-10:ffe-green-emerald ffe-orange-wcag-20:ffe-orange-salmon ffe-orange-wcag:ffe-orange-fire ffe-purple-wcag:ffe-purple-magenta ffe-sand-50:ffe-sand-ivory ffe-sand-25:ffe-sand ffe-grey-light-bg:ffe-grey-cloud ffe-grey-light:ffe-grey-silver ffe-grey-dark:ffe-grey-charcoal; do old=${pair%%:_}; new=${pair##_:}; echo "Changing $old to $new"; find . -type f -name '\*.less' -exec sed -i "s/$old/$new/g" {} \;; done
 
 ## v.8.2.4
 
@@ -195,9 +189,11 @@ fixes problems with color contrast, and is considered a bugfix.
 * Fixes a bug where `box-sizing: border-box;` went missing
 
 ## v.8.0.1
+
 * Readded normalize.css as a static file
 
 ## v.8.0.0
+
 * Removing components from ffe-core (new modules created for them in their respective repos).
 * Updating examples to only include new ffe-core elements.
 * Updated normalize.css and added it as an npm dependency. (see https://github.com/necolas/normalize.css/blob/master/CHANGELOG.md for changes since v.3.0.3)
@@ -220,13 +216,13 @@ Remember to also update your Less imports
 (example below is given [less-plugin-npm-import](https://github.com/less/less-plugin-npm-import) is used):
 
 ```less
-@import "npm://ffe-core/less/ffe";
-@import "npm://ffe-buttons/less/buttons";
-@import "npm://ffe-form/less/form";
-@import "npm://ffe-lists/less/lists";
-@import "npm://ffe-tables/less/tables";
-@import "npm://ffe-tabs/less/tabs";
-@import "npm://ffe-spinner/less/spinner";
+@import 'npm://ffe-core/less/ffe';
+@import 'npm://ffe-buttons/less/buttons';
+@import 'npm://ffe-form/less/form';
+@import 'npm://ffe-lists/less/lists';
+@import 'npm://ffe-tables/less/tables';
+@import 'npm://ffe-tabs/less/tabs';
+@import 'npm://ffe-spinner/less/spinner';
 ```
 
 #### Other breaking changes
@@ -259,25 +255,25 @@ If you want to keep using it and don't plan on upgrading to `ffe-buttons@2.1.0` 
 
 ```less
 .ffe-button-group {
-padding: 40px 0;
+    padding: 40px 0;
 
-&--thin {
-    padding: 0;
-}
-}
-
-.ffe-button-group [class^="ffe-"][class$="-button"] {
-margin: 0 auto 10px;
-
-@media screen and (min-width: @breakpoint-sm) {
-    display: inline-block;
-    margin: 0 0 10px 10px;
-    width: auto;
-
-    &:first-child {
-        margin-left: 0;
+    &--thin {
+        padding: 0;
     }
 }
+
+.ffe-button-group [class^='ffe-'][class$='-button'] {
+    margin: 0 auto 10px;
+
+    @media screen and (min-width: @breakpoint-sm) {
+        display: inline-block;
+        margin: 0 0 10px 10px;
+        width: auto;
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
 }
 ```
 
@@ -288,91 +284,114 @@ If you have used any of the `.ffe-shadow-buttons-whatever()` mixins they are now
 * `ffe-tab-button` is in `ffe-tabs`, not `ffe-buttons`
 
 ## v.7.0.1
+
 * Minor fix: make button texts of loading buttons unselectable, the text is only of interest for
-screen readers and ought to remain invisible under all circumstances.
+  screen readers and ought to remain invisible under all circumstances.
 
 ## v.7.0.0
+
 * Breaking: removed `--inline` support from `.ffe-form-label`. It was just setting max-width to 100% which is not the same as inlining. Removed `max-width: 85%` from `ffe-form-label`. It's layout and doesn't belong in the component. It now defaults to browser default which should be `none`. If you were using `ffe-form-label ffe-form-label--inline` you can just use `ffe-form-label`. If you were relying on the max-width being 85% then action is required.
 * Breaking: removed support for deprecated `ffe-check-box` in favor of the arguably less aptly named `ffe-checkbox`. NOTE: Filename is also changed.
 * Breaking: removed support for deprecated `ffe-select-box` in favor of the arguably less aptly named `ffe-dropdown`.
 * Added CONTRIBUTE.md to clarify release procedures.
 
 ## v.6.3.2
+
 * Change background position of dropdown arrows from fluid to static
 * Rollback breaking change from v.6.3.1 - `--inline` support has been restored to `.ffe-form-label`
 
 ## v.6.3.1
+
 * Add isLoading style for ffe-dropdown-react
 * Focus state styling fix for select element in IE
 * Focus state styling fix for ghost action button
 
 ## v.6.3.0
+
 * Add description list component
 * Patch --no-space on ffe-content-container to also work on larger screens
 * Minor form examples fix: prefixed icon-info-error with ffe-
 
 ## v.6.0.1
+
 * Minor radio switch fix: adjusted vertical position of the label
 * Minor form examples fix: prefixed info-message and info-message--error with ffe-
-* Added display: inline-block to ffe-primary-button__label-text fix a bug in Safari. Label disappears if changing states from loading to normal.
+* Added display: inline-block to ffe-primary-button\_\_label-text fix a bug in Safari. Label disappears if changing states from loading to normal.
 
 ## v.6.0.0
+
 * Several changes to sizes and line-heights of the typography. Also added ffe-sub-lead-paragraph.
 
 ## v.5.6.0
+
 * Adding 20% opaque green.
 * Adding 20% opaque orange.
 * Adding 20% opaque light royal blue.
 * Minor fixes to tertiary-button appearance.
 
 ## v.5.5.3
+
 * Removing general positioning of spinner to fix layout bug when spinner is used on secondary buttons.
-Bug happens because secondary-button reruns ffe-sb1-spinner-mixin after position is set in primary-button which it extends.
+  Bug happens because secondary-button reruns ffe-sb1-spinner-mixin after position is set in primary-button which it extends.
 
 ## v.5.5.2
+
 * Fixed bug that vertically misalignes icon on info-messages. [Source of solution](http://stackoverflow.com/questions/11726442/font-rendering-line-height-issue-on-mac-pc-outside-of-element)
 
 ## v.5.5.1
+
 * Secondary button: Modified colors for the loading state
 
 ## v.5.5.0
+
 * Layout: Support `--bg-sand` and `--bg-grey` modifiers on `ffe-content-container`
 
 ## v.5.4.0
+
 * ffe-dropdown replaces ffe-select-box, while ffe-select-box is kept (but deprecated) until the next major release
 
 ## v.5.3.1
+
 * Responsive table: Fix left-alignment of table headers in Internet Explorer
 
 ## v.5.3.0
+
 * Implemented Tertiary button
 * Updated element mapping to include fieldsets. Fixes default styling set by normalize.
 * Introduce less variable `ffe-expand-button-height`
 
 ## v.5.2.0
+
 * Bugfix select box text foreground color
 * New component: expand button (for controlling collapsable containers)
 
 ## v.5.1.0
+
 * Implemented ghost- and tab-button
 
 ## v.4.2.1
+
 * New build
 
 ## v.4.2.0 (16.03.2016)
+
 * Inlined svg-icons in less to avoid potential include-issues
 
 ## v.4.1.0
+
 * Introduce new gateway less-file: ffe-no-reset.less
 * Add property for static resources to package.json. Fascilitates tooling that copies static resources to output folder
 
 ## v.4.0.1
+
 * Fix: `ffe-` prefix for `@breakpoint-sm` was missing for `.primary-button` making buttons have width 100% on larger screens
 
 ## v.4.0.0 (08.03.2016)
+
 * Element styling is now opt-in rather than default
 
 ## v.3.0.0 (07.03.2016)
+
 * All css classes now prefixed with `ffe-`
 * All less color variables now prefixed with `ffe-`
 

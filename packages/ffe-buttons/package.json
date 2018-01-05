@@ -2,7 +2,8 @@
     "name": "ffe-buttons",
     "version": "5.1.2",
     "scripts": {
-        "build": "npm run lint && lessc example/example.less example/example.css && cp -R node_modules/ffe-core/fonts/ example/ && echo \"$(date +%T): Updated example\"",
+        "build":
+            "npm run lint && lessc example/example.less example/example.css && cp -R node_modules/ffe-core/fonts/ example/ && echo \"$(date +%T): Updated example\"",
         "lint": "lessc --lint example/example.less && stylelint less/*.less",
         "start": "opn example/example.html & watch \"npm run -s build\" less/",
         "test:nsp": "nsp check",
@@ -23,9 +24,7 @@
     "peerDependencies": {
         "ffe-core": "^10.2.2"
     },
-    "files": [
-        "less"
-    ],
+    "files": ["less"],
     "author": "SpareBank1",
     "license": "UNLICENSED"
 }

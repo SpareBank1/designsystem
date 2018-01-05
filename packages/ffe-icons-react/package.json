@@ -4,13 +4,15 @@
     "description": "React-komponenter for ffe-icons",
     "main": "lib/index.js",
     "scripts": {
-        "build": "npm run ffe:icons && npm run build:jsx-components && npm run build:babel",
+        "build":
+            "npm run ffe:icons && npm run build:jsx-components && npm run build:babel",
         "build:babel": "babel jsx -d lib",
         "build:jsx-components": "babel-node ./src/build-jsx-components.js",
         "clean": "rimraf tmp jsx lib",
         "lint": "eslint src",
         "test": "nsp check && npm run lint",
-        "ffe:icons": "ffe-icons --opts=packages/ffe-icons-react/svg.sprite.config.json",
+        "ffe:icons":
+            "ffe-icons --opts=packages/ffe-icons-react/svg.sprite.config.json",
         "start": "npm run build && webpack-dev-server"
     },
     "repository": {
@@ -41,7 +43,5 @@
         "webpack": "^3.8.1",
         "webpack-dev-server": "^2.7.1"
     },
-    "files": [
-        "lib"
-    ]
+    "files": ["lib"]
 }

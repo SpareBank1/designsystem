@@ -4,7 +4,8 @@
     "description": "Kort for bruk i oversikter",
     "main": "index.js",
     "scripts": {
-        "examples": "lessc examples/examples.less examples/examples.css && mkdirp examples/fonts && cp -R node_modules/ffe-core/fonts/* examples/fonts/ && echo Now open /examples/index.html to see styleguide.",
+        "examples":
+            "lessc examples/examples.less examples/examples.css && mkdirp examples/fonts && cp -R node_modules/ffe-core/fonts/* examples/fonts/ && echo Now open /examples/index.html to see styleguide.",
         "test": "npm run examples",
         "lint": "lessc --lint examples/examples.less && stylelint less/*.less"
     },
