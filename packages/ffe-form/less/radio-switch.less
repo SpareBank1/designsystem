@@ -1,0 +1,51 @@
+.ffe-radio-switch {
+    padding: 6px 20px 6px 50px;
+    position: relative;
+    background-color: @ffe-white;
+    border: 2px solid @ffe-grey-silver;
+    border-radius: 22px;
+    display: inline-block;
+    min-width: 100px;
+    text-align: left;
+    color: @ffe-blue-azure;
+    font-family: "MuseoSansRounded-700", arial, sans-serif;
+    cursor: pointer;
+    transition: all @ffe-transition-duration @ffe-ease;
+    box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.05);
+    margin-bottom: 5px;
+
+    &::before {
+        .ffe-sb1-radioblob();
+
+        left: 12px;
+        top: 8px;
+    }
+
+    &.ffe-radio-button--invalid {
+        border-color: @ffe-orange-fire;
+    }
+
+    @media screen and (min-width: @breakpoint-sm) {
+        margin-bottom: 0;
+    }
+}
+
+.ffe-radio-input {
+    &:checked + .ffe-radio-switch {
+        border-color: @ffe-blue-royal;
+        background-color: @ffe-blue-royal;
+        color: @ffe-white;
+    }
+
+    &:hover + .ffe-radio-switch {
+        border-color: @ffe-blue-azure;
+    }
+
+    &:focus + .ffe-radio-switch {
+        border-color: @ffe-blue-focus;
+    }
+
+    &:checked + .ffe-radio-switch::before {
+        .ffe-sb1-radioblob-active();
+    }
+}
