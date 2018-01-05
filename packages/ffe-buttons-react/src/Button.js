@@ -45,38 +45,34 @@ export default function Button(props) {
             {...(isTabbable ? {} : { tabIndex: -1 })}
             {...rest}
         >
-            {simpleContent &&
-                (label || children)
-            }
-            {!simpleContent &&
+            {simpleContent && (label || children)}
+            {!simpleContent && (
                 <span className={`ffe-${buttonType}-button__label`}>
                     <span
                         className={classNames(
                             `ffe-${buttonType}-button__label-text`,
-                            { [`ffe-${buttonType}-button__label-text--loading`]: isLoading },
+                            {
+                                [`ffe-${buttonType}-button__label-text--loading`]: isLoading,
+                            },
                         )}
                     >
-                        {leftIcon &&
-                            decorate(leftIcon, buttonType)
-                        }
+                        {leftIcon && decorate(leftIcon, buttonType)}
 
                         {label || children}
 
-                        {rightIcon &&
-                            rightIcon
-                        }
+                        {rightIcon && rightIcon}
                     </span>
 
-                    {!isTertiary &&
+                    {!isTertiary && (
                         <span
                             className={`ffe-${buttonType}-button__label-spinner`}
                             aria-hidden={!isLoading}
                         >
                             {ariaLoadingMessage}
                         </span>
-                    }
+                    )}
                 </span>
-            }
+            )}
         </button>
     );
 }

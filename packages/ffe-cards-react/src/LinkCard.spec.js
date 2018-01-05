@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 
 import LinkCard from './LinkCard';
 
-const getWrapper = (props) => shallow(<LinkCard {...props} />);
+const getWrapper = props => shallow(<LinkCard {...props} />);
 
 describe('<LinkCard />', () => {
     it('renders without exploding', () => {
@@ -30,7 +30,9 @@ describe('<LinkCard />', () => {
     it('renders icon if provided', () => {
         const wrapper = getWrapper({ icon: <svg className="some-icon" /> });
         expect(wrapper.find('.ffe-link-card__icon').length).toBe(1);
-        expect(wrapper.find('.ffe-link-card__icon').hasClass('some-icon')).toBe(true);
+        expect(wrapper.find('.ffe-link-card__icon').hasClass('some-icon')).toBe(
+            true,
+        );
     });
     it('renders heading if provided', () => {
         const wrapper = getWrapper({ heading: 'Heading' });
@@ -40,7 +42,9 @@ describe('<LinkCard />', () => {
     it('renders sub-heading if provided', () => {
         const wrapper = getWrapper({ subHeading: 'Sub-heading' });
         expect(wrapper.find('.ffe-link-card__sub-heading').length).toBe(1);
-        expect(wrapper.find('.ffe-link-card__sub-heading').text()).toBe('Sub-heading');
+        expect(wrapper.find('.ffe-link-card__sub-heading').text()).toBe(
+            'Sub-heading',
+        );
     });
     it('renders details if provided', () => {
         const wrapper = getWrapper({ details: 'Details' });

@@ -56,13 +56,20 @@ Icon.displayName = '${caseUtil.pascal(iconName)}';
 
 export default Icon;
 `;
-Object.keys(icons).forEach((iconName) => fs.writeFileSync(`./jsx/${iconName}.js`, createStandaloneJSX(iconName)));
+Object.keys(icons).forEach(iconName =>
+    fs.writeFileSync(`./jsx/${iconName}.js`, createStandaloneJSX(iconName)),
+);
 
 /**
  * Creates an index file that exports all icons
  */
 const indexFileString = Object.keys(icons)
-    .map(iconName => `export { default as ${caseUtil.pascal(iconName)} } from './${iconName}';`)
+    .map(
+        iconName =>
+            `export { default as ${caseUtil.pascal(
+                iconName,
+            )} } from './${iconName}';`,
+    )
     .join('\n');
 
 fs.writeFileSync('./jsx/index.js', indexFileString);
