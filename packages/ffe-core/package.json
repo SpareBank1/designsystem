@@ -1,6 +1,6 @@
 {
     "name": "ffe-core",
-    "version": "10.2.1",
+    "version": "10.2.2",
     "description": "Rammeverk for Felles Front End",
     "scripts": {
         "build":
