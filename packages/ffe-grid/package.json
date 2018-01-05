@@ -3,12 +3,12 @@
     "version": "6.0.3",
     "description": "A grid component for use within the FFE framework",
     "scripts": {
-        "compile":
+        "build":
             "lessc examples/examples.less examples/examples.css && cp -R node_modules/ffe-core/fonts/ examples/ && echo \"$(date +%T): Updated examples\"",
         "lint": "lessc --lint examples/examples.less && stylelint less/*.less",
         "start":
-            "opn examples/examples.html & watch \"npm run -s compile\" less/",
-        "test": "npm run lint && npm run test:nsp && npm run compile",
+            "opn examples/examples.html & watch \"npm run -s build\" less/",
+        "test": "npm run lint && npm run test:nsp && npm run build",
         "test:nsp": "nsp check"
     },
     "keywords": ["ffe"],
