@@ -1,6 +1,6 @@
 {
     "name": "ffe-chart-donut-react",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "Donut chart in SVG",
     "main": "lib/index.js",
     "author": "SpareBank 1",
@@ -13,15 +13,16 @@
         "lint": "eslint src/ test/",
         "lint:fix": "eslint --fix src/ test/",
         "start": "hjs-dev-server",
-        "test":
-            "npm run test:spec && npm run test:nsp && npm run build:example",
+        "test": "npm run test:spec && npm run test:nsp && npm run build:example",
         "test:nsp": "nsp check",
         "test:spec": "jest",
         "test:watch": "jest --watch",
         "tdd": "jest --watch",
         "prepublish": "npm run build"
     },
-    "keywords": ["ffe"],
+    "keywords": [
+        "ffe"
+    ],
     "dependencies": {
         "prop-types": "^15.6.0"
     },
@@ -31,7 +32,7 @@
     "devDependencies": {
         "enzyme": "^3.3.0",
         "enzyme-adapter-react-16": "^1.1.1",
-        "ffe-core": "^10.2.1",
+        "ffe-core": "^10.2.2",
         "jest": "^22.0.4",
         "react": "^16.1.1",
         "style-loader": "^0.19.1"
@@ -39,5 +40,9 @@
     "jest": {
         "setupTestFrameworkScriptFile": "./test-setup.js"
     },
-    "files": ["lib", "*.js", "*.less"]
+    "files": [
+        "lib",
+        "*.js",
+        "*.less"
+    ]
 }
