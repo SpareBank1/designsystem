@@ -26,6 +26,7 @@ module.exports = {
                 'ffe-icons',
                 'ffe-icons-react',
                 'ffe-searchable-dropdown-react',
+                'ffe-tables',
             ],
         ],
     },
