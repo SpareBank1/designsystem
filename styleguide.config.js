@@ -60,5 +60,9 @@ module.exports = {
             content: 'packages/ffe-grid-react/USAGE.md',
             components: 'packages/ffe-grid-react/src/[A-Z]+([A-Za-z]).js',
         },
+        {
+            name: 'Skjema',
+            components: 'packages/ffe-form-react/src/[A-Z]+([A-Za-z]).js',
+        },
     ],
 };
