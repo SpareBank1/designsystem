@@ -11,6 +11,7 @@ module.exports = {
                 'stylelint-config-ffe',
                 'ffe-accordion',
                 'ffe-accordion-react',
+                'ffe-account-selector-react',
                 'ffe-buttons',
                 'ffe-buttons-react',
                 'ffe-cards',

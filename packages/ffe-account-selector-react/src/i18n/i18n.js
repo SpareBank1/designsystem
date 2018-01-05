@@ -3,5 +3,7 @@ import nn from './nn';
 import nb from './nb';
 
 export default {
-  nb, nn, en,
+    nb,
+    nn,
+    en,
 };
