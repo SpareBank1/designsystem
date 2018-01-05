@@ -1,0 +1,38 @@
+.ffe-sortable-table {
+    &__header {
+        color: @ffe-blue-royal;
+        white-space: nowrap;
+
+        &:hover {
+            cursor: pointer;
+            color: @ffe-blue-azure;
+            border-bottom: solid 2px;
+            user-select: none;
+
+            .ffe-sortable-table__sort-arrow {
+                fill: @ffe-blue-azure;
+            }
+        }
+
+        &--active {
+            border-bottom: solid 2px @ffe-blue-royal;
+
+            .ffe-sortable-table__sort-arrow {
+                fill: @ffe-blue-royal;
+            }
+        }
+    }
+
+    &__sort-arrow {
+        height: 12px;
+        width: 12px;
+        vertical-align: middle;
+        fill: @ffe-blue-royal;
+        margin-left: 8px;
+        transition: transform @ffe-transition-duration @ffe-ease-in-out-back;
+
+        &--descending {
+            transform: rotate(180deg);
+        }
+    }
+}
