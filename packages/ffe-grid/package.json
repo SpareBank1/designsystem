@@ -1,0 +1,47 @@
+{
+    "name": "ffe-grid",
+    "version": "6.0.1",
+    "description": "A grid component for use within the FFE framework",
+    "scripts": {
+        "compile":
+            "lessc examples/examples.less examples/examples.css && cp -R node_modules/ffe-core/fonts/ examples/ && echo \"$(date +%T): Updated examples\"",
+        "lint": "lessc --lint examples/examples.less && stylelint less/*.less",
+        "start":
+            "opn examples/examples.html & watch \"npm run -s compile\" less/",
+        "test": "npm run lint && npm run test:nsp && npm run compile",
+        "test:nsp": "nsp check"
+    },
+    "keywords": ["ffe"],
+    "files": ["less", "examples"],
+    "author": "SpareBank 1",
+    "repository": {
+        "type": "git",
+        "url": "ssh://git@stash.intern.sparebank1.no:22/ffe/ffe-monorepo.git"
+    },
+
+    "homepage":
+        "https://stash.intern.sparebank1.no/projects/FFE/repos/ffe-monorepo/packages/ffe-grid/browse",
+    "documentation": [
+        {
+            "type": "html",
+            "file": "examples/examples.html",
+            "select": "#ffedoc"
+        },
+        {
+            "type": "markdown",
+            "file": "README.md"
+        }
+    ],
+    "license": "UNLICENSED",
+    "peerDependencies": {
+        "ffe-core": "^9.0.0 || ^10.0.0"
+    },
+    "devDependencies": {
+        "ffe-core": "^10.0.0",
+        "less": "^2.7.3",
+        "nsp": "^2.8.1",
+        "opn-cli": "^3.1.0",
+        "stylelint": "^7.7.1",
+        "watch": "^0.19.2"
+    }
+}

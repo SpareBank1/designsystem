@@ -21,6 +21,8 @@ module.exports = {
                 'ffe-core',
                 'ffe-core-react',
                 'ffe-form',
+                'ffe-grid',
+                'ffe-grid-react',
                 'ffe-icons',
                 'ffe-icons-react',
                 'ffe-searchable-dropdown-react',
