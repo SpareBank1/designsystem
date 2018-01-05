@@ -10,7 +10,8 @@ const defaultProps = {
     percentage: 42,
 };
 
-const renderShallow = (props = {}) => shallow(<ChartDonut {...defaultProps} {...props} />);
+const renderShallow = (props = {}) =>
+    shallow(<ChartDonut {...defaultProps} {...props} />);
 
 describe('ChartDonut', () => {
     it('renders two SVGs', () => {
@@ -32,10 +33,30 @@ describe('ChartDonut', () => {
         expect(el.find('.ffe-chart-donut__type')).toHaveLength(2);
         expect(el.find('.ffe-chart-donut__amount')).toHaveLength(2);
 
-        expect(el.find('.ffe-chart-donut__type').at(0).text()).toBe('Foo');
-        expect(el.find('.ffe-chart-donut__amount').at(0).text()).toMatch(/58/);
+        expect(
+            el
+                .find('.ffe-chart-donut__type')
+                .at(0)
+                .text(),
+        ).toBe('Foo');
+        expect(
+            el
+                .find('.ffe-chart-donut__amount')
+                .at(0)
+                .text(),
+        ).toMatch(/58/);
 
-        expect(el.find('.ffe-chart-donut__type').at(1).text()).toBe('Bar');
-        expect(el.find('.ffe-chart-donut__amount').at(1).text()).toMatch(/42/);
+        expect(
+            el
+                .find('.ffe-chart-donut__type')
+                .at(1)
+                .text(),
+        ).toBe('Bar');
+        expect(
+            el
+                .find('.ffe-chart-donut__amount')
+                .at(1)
+                .text(),
+        ).toMatch(/42/);
     });
 });

@@ -34,12 +34,17 @@ describe('Button', () => {
             expect(button).to.not.have.className('ffe-primary-button--loading');
 
             const label = button.find('.ffe-primary-button__label-text');
-            expect(label).to.not.have.className('ffe-primary-button__label-text--loading');
+            expect(label).to.not.have.className(
+                'ffe-primary-button__label-text--loading',
+            );
         });
 
         it('has aria-hidden on spinner', () => {
-            expect(button.find('.ffe-primary-button__label-spinner').prop('aria-hidden'))
-                .to.be.true;
+            expect(
+                button
+                    .find('.ffe-primary-button__label-spinner')
+                    .prop('aria-hidden'),
+            ).to.be.true;
         });
     });
 
@@ -54,7 +59,9 @@ describe('Button', () => {
         describe('label', () => {
             it('uses that as label text', () => {
                 const wrapper = shallow(<Button label="Hello" />);
-                expect(wrapper.find('.ffe-primary-button__label-text').text()).to.equal('Hello');
+                expect(
+                    wrapper.find('.ffe-primary-button__label-text').text(),
+                ).to.equal('Hello');
             });
         });
 
@@ -76,11 +83,15 @@ describe('Button', () => {
                 expect(button).to.have.className('ffe-primary-button--loading');
 
                 const label = button.find('.ffe-primary-button__label-text');
-                expect(label).to.have.className('ffe-primary-button__label-text--loading');
+                expect(label).to.have.className(
+                    'ffe-primary-button__label-text--loading',
+                );
             });
 
             it('sets aria-hidden=false on spinner', () => {
-                const spinner = button.find('.ffe-primary-button__label-spinner');
+                const spinner = button.find(
+                    '.ffe-primary-button__label-spinner',
+                );
                 expect(spinner).to.have.prop('aria-hidden', false);
             });
 
@@ -151,7 +162,9 @@ describe('Button', () => {
         describe('condensed', () => {
             it('has condensed class', () => {
                 const button = shallow(<Button condensed={true} />);
-                expect(button).to.have.className('ffe-primary-button--condensed');
+                expect(button).to.have.className(
+                    'ffe-primary-button--condensed',
+                );
             });
         });
     });

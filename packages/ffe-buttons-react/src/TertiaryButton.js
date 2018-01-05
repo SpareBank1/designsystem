@@ -4,22 +4,16 @@ import classNames from 'classnames';
 import Button from './Button';
 
 export default function TertiaryButton(props) {
-    const {
-        leftIcon,
-        className,
-        children,
-        ...rest
-    } = props;
+    const { leftIcon, className, children, ...rest } = props;
 
     return (
         <Button
             {...rest}
             buttonType="tertiary"
             leftIcon={leftIcon}
-            className={classNames(
-                className,
-                { 'ffe-tertiary-button--with-icon': leftIcon }
-            )}
+            className={classNames(className, {
+                'ffe-tertiary-button--with-icon': leftIcon,
+            })}
             simpleContent={!leftIcon}
         >
             {children}

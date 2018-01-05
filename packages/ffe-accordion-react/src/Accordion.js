@@ -10,11 +10,7 @@ class Accordion extends Component {
     }
 
     render() {
-        const {
-            children,
-            type,
-            ...rest
-        } = this.props;
+        const { children, type, ...rest } = this.props;
 
         return (
             <ul
@@ -23,8 +19,8 @@ class Accordion extends Component {
                 className="ffe-accordion"
                 role="tablist"
             >
-                {React.Children.map(children, (ele) =>
-                    React.cloneElement(ele, { type, uuid: this.id })
+                {React.Children.map(children, ele =>
+                    React.cloneElement(ele, { type, uuid: this.id }),
                 )}
             </ul>
         );
