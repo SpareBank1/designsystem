@@ -1,0 +1,180 @@
+.ffe-table {
+    margin: 20px 0;
+    min-width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+
+    &--text-left {
+        .ffe-table__heading,
+        .ffe-table__content,
+        .ffe-table__cell {
+            // Set !important to make --text-left work with --condensed which sets padding to 10px
+            padding-left: 0 !important;
+        }
+    }
+
+    &__caption {
+        &:extend(.ffe-h4);
+    }
+
+    &__head {
+        display: none;
+
+        @media screen and (min-width: @breakpoint-md) {
+            display: table-header-group;
+        }
+    }
+
+    &__footer {
+        &:extend(.ffe-strong-text);
+
+        .ffe-table__row {
+            border-bottom: none;
+        }
+    }
+
+    &__row {
+        border-bottom: 1px solid @ffe-grey-silver;
+        display: block;
+        padding: 10px 0;
+
+        @media screen and (min-width: @breakpoint-md) {
+            display: table-row;
+        }
+    }
+
+    &__heading {
+        &:extend(.ffe-strong-text);
+
+        color: @ffe-blue-royal;
+        text-align: left;
+    }
+
+    &__cell {
+        display: block;
+    }
+
+    &__row,
+    &__cell {
+        &--collapsed {
+            line-height: 0;
+            padding: 0;
+            font-size: 0;
+        }
+    }
+
+    &__heading {
+        @media screen and (min-width: @breakpoint-md) {
+            display: table-cell;
+            padding: 10px;
+        }
+    }
+
+    &__cell {
+        padding: 0 5px;
+
+        &--top {
+            vertical-align: top;
+        }
+
+        @media screen and (min-width: @breakpoint-md) {
+            display: table-cell;
+            padding: 19px 10px;
+        }
+    }
+
+    &--condensed {
+        font-size: 14px;
+
+        .ffe-table__heading,
+        .ffe-table__cell {
+            @media screen and (min-width: @breakpoint-md) {
+                padding: 10px;
+            }
+        }
+    }
+
+    &__content {
+        display: block;
+        max-width: none;
+        vertical-align: top;
+        margin-bottom: 15px;
+
+        &--text-right {
+            text-align: right;
+        }
+
+        @media screen and (min-width: @breakpoint-md) {
+            display: block;
+            max-width: none;
+            margin-bottom: 0;
+        }
+    }
+
+    [data-th]::before {
+        content: attr(data-th);
+        display: block;
+        color: @ffe-blue-royal;
+        &:extend(.ffe-strong-text);
+
+        @media screen and (min-width: @breakpoint-md) {
+            display: none;
+        }
+    }
+
+    &--small-header [data-th]::before {
+        width: 65px;
+    }
+
+    &--columns-sm {
+        .ffe-table__content {
+            display: inline-block;
+            max-width: ~"calc(100% - 105px)";
+            margin-bottom: 0;
+
+            @media screen and (min-width: @breakpoint-md) {
+                display: block;
+                max-width: none;
+                margin-bottom: 0;
+            }
+        }
+
+        [data-th]::before {
+            width: 100px;
+            display: inline-block;
+        }
+
+        @media screen and (min-width: @breakpoint-md) {
+            [data-th]::before {
+                display: none;
+            }
+        }
+    }
+
+    .ffe-table__heading,
+    .ffe-table__cell {
+        &.ffe-table--hide-xlg {
+            @media screen and (min-width: @breakpoint-lg) {
+                display: none;
+            }
+        }
+
+        &.ffe-table--hide-lg {
+            @media screen and (min-width: @breakpoint-md) and (max-width: @breakpoint-lg) {
+                display: none;
+            }
+        }
+
+        &.ffe-table--hide-md {
+            @media screen and (min-width: @breakpoint-sm) and (max-width: @breakpoint-md) {
+                display: none;
+            }
+        }
+
+        &.ffe-table--hide-sm {
+            @media screen and (max-width: @breakpoint-sm) {
+                display: none;
+            }
+        }
+    }
+}
