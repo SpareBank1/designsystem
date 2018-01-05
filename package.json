@@ -30,6 +30,7 @@
         "babel-preset-stage-3": "^6.24.1",
         "case": "^1.5.4",
         "css-loader": "^0.28.7",
+        "eslint": "^4.13.1",
         "eslint-config-prettier": "^2.9.0",
         "husky": "^0.14.3",
         "lerna": "^2.5.1",
