@@ -1,12 +1,12 @@
+import React from 'react';
 import { shallow, mount } from 'enzyme';
 import { assert } from 'chai';
 import sinon from 'sinon';
-import React from 'react';
-import BaseSelector from './base-selector';
-import SuggestionItem from '../suggestion/suggestion-item';
-import Input from './input-field';
-import { KeyCodes } from '../util/types';
-import '../suggestion/test/setup-dom';
+
+import BaseSelector from './BaseSelector';
+import { SuggestionItem } from '../../subcomponents/suggestion';
+import Input from '../../subcomponents/input-field';
+import { KeyCodes } from '../../util/types';
 
 function suggestions() {
     return [{ header: '1' }, { header: '2' }, { header: '3' }];

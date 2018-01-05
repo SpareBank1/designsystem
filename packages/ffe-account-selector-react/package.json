@@ -16,15 +16,16 @@
         "lint": "eslint src/.",
         "start":
             "echo \"No local demo available - use the monorepo's npm start.\"",
-        "test": "mocha --require babel-register 'src/**/*.test.js'",
+        "test":
+            "mocha --require babel-core/register --require ./test-setup.js 'src/**/*.test.js'",
         "test:watch": "npm test -- -w"
     },
     "dependencies": {
         "classnames": "^2.2.5",
         "ffe-checkbox-react": "^4.4.4",
+        "ffe-formatters": "^2.1.0",
         "ffe-icons-react": "^4.0.3",
         "ffe-spinner-react": "^2.0.3",
-        "nfe-amount-formatter": "^2.0.1",
         "prop-types": "^15.6.0",
         "react-auto-bind": "^0.4.2",
         "react-custom-scrollbars": "^4.2.1"

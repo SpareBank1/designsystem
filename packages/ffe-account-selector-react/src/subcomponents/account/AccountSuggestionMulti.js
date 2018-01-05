@@ -1,8 +1,9 @@
 import React from 'react';
 import { bool } from 'prop-types';
 import Checkbox from 'ffe-checkbox-react';
-import { accountFormatter, balanceWithCurrency } from '../util/format';
-import { Account, Locale } from '../util/types';
+
+import { accountFormatter, balanceWithCurrency } from '../../util/format';
+import { Account, Locale } from '../../util/types';
 
 function AccountSuggestionMulti({ account, locale, selected }) {
     const { accountNumber, balance, name, currencyCode } = account;

@@ -1,4 +1,4 @@
-import amountFormatter from 'nfe-amount-formatter';
+import { formatNumber } from 'ffe-formatters';
 import { currencyAffixNOK } from './types';
 
 const getWeightedSumOfDigits = accountNumber => {
@@ -30,7 +30,9 @@ export function accountFormatter(accountNumber) {
 }
 
 export function balanceWithCurrency(balance = '', locale, currencyCode) {
-    const amount = amountFormatter(balance, locale);
+    const formatOptions =
+        locale === 'en' ? { thousandSeparator: ',', decimalMark: '.' } : {};
+    const amount = formatNumber(balance, formatOptions);
     const currencyAffix =
         currencyCode && currencyCode !== 'NOK'
             ? currencyCode

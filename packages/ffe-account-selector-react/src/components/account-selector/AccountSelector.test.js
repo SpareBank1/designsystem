@@ -2,10 +2,10 @@ import { mount } from 'enzyme';
 import { expect } from 'chai';
 import sinon from 'sinon';
 import React from 'react';
-import AccountSelector from './account-selector';
-import SuggestionItem from '../suggestion/suggestion-item';
-import Input from './input-field';
-import '../suggestion/test/setup-dom';
+
+import AccountSelector from './AccountSelector';
+import Input from '../../subcomponents/input-field';
+import { SuggestionItem } from '../../subcomponents/suggestion';
 
 const accounts = [
     {

@@ -1,7 +1,8 @@
 import React from 'react';
 import { string } from 'prop-types';
-import { Locale } from '../util/types';
-import txt from '../i18n/i18n';
+
+import { Locale } from '../../util/types';
+import txt from '../../i18n/i18n';
 
 const AccountNoMatch = ({ value, locale }) => (
     <div className="ffe-account-suggestion__nomatches">

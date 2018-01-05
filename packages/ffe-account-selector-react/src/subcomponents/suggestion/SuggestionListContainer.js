@@ -1,7 +1,8 @@
 import React from 'react';
 import { bool, number } from 'prop-types';
 import { Scrollbars } from 'react-custom-scrollbars';
-import SuggestionList from './suggestion-list';
+
+import SuggestionList from './SuggestionList';
 
 class SuggestionListContainer extends React.Component {
     constructor(props) {

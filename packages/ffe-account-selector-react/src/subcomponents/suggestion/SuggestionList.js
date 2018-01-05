@@ -1,7 +1,8 @@
 import React from 'react';
 import { func, arrayOf, number, string, object, bool } from 'prop-types';
-import Suggestion from './suggestion-item';
 import Spinner from 'ffe-spinner-react';
+
+import SuggestionItem from './SuggestionItem';
 
 export default function SuggestionList(props) {
     const {
@@ -22,7 +23,7 @@ export default function SuggestionList(props) {
         >
             {suggestions.length > 0 ? (
                 suggestions.map((item, index) => (
-                    <Suggestion
+                    <SuggestionItem
                         {...props}
                         key={index}
                         item={item}

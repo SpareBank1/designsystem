@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { func, bool, number, string, arrayOf, object } from 'prop-types';
-import Input from './input-field';
-import SuggestionsList from '../suggestion/suggestion-list-container';
 import autoBind from 'react-auto-bind';
-import { KeyCodes } from '../util/types';
+
+import Input from '../../subcomponents/input-field';
+import { SuggestionListContainer } from '../../subcomponents/suggestion';
+import { KeyCodes } from '../../util/types';
 
 class BaseSelector extends Component {
     constructor(props) {
@@ -224,7 +225,7 @@ class BaseSelector extends Component {
                     name={name}
                 />
                 {showSuggestions && (
-                    <SuggestionsList
+                    <SuggestionListContainer
                         {...this.props}
                         ref={suggestionList => {
                             this.suggestionList = suggestionList;
