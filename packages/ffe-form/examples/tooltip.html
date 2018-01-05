@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="nb">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="examples.css">
+</head>
+
+<body class="ffe-body-text">
+<main class="styleguide-wrapper">
+    <section class="ffe-section-wrapper">
+
+        <div class="ffe-content-container ffe-content-container--text-left">
+            <h2 class="ffe-h2">Input-felt med hjelpetekst</h2>
+            <div class="ffe-content-container ffe-content-container--text-left">
+                <h2 class="ffe-h4">Lukket</h2>
+                <p class="ffe-body-paragraph">Trykk på ? for å åpne/lukke</p>
+                <div class="ffe-input-group" aria-live="polite">
+                    <label for="cvv" id="cvv-label" class="ffe-form-label">
+                        Normal with info
+                    </label>
+                    <button id="cvv-tooltip-button" class="ffe-tooltip__icon">?</button>
+
+                    <p id="cvv-tooltip" class="ffe-tooltip__text ffe-small-text">
+                        Hjelpetekst
+                    </p>
+
+                    <input type="text" id="cvv" class="ffe-input-field ffe-input-field--large" name="cvv" maxlength="3"
+                           autocomplete="off">
+                </div>
+            </div>
+            <div class="ffe-content-container ffe-content-container--text-left">
+                <h2 class="ffe-h4">Åpen</h2>
+
+
+                <div class="ffe-input-group" aria-live="polite">
+                    <label for="cvv-open" class="ffe-form-label">
+                        CVV2
+                    </label>
+                    <button class="ffe-tooltip__icon ffe-tooltip__icon--active">?</button>
+
+                    <p class="ffe-tooltip__text ffe-tooltip__text--active ffe-small-text" style="max-height: 22px">
+                        Hjelpetekst
+                    </p>
+
+                    <input type="text" id="cvv-open" class="ffe-input-field ffe-input-field--medium" name="cvv"
+                           maxlength="3" autocomplete="off">
+                </div>
+            </div>
+        </div>
+
+        <script>
+            document.getElementById('cvv-tooltip-button').onclick = function () {
+                var tooltip = document.getElementById('cvv-tooltip');
+                var displayHeight = tooltip.clientHeight;
+                var scrollHeight = tooltip.scrollHeight;
+                displayHeight ? document.getElementById('cvv-tooltip-button').classList.remove('ffe-tooltip__icon--active') : document.getElementById('cvv-tooltip-button').classList.add('ffe-tooltip__icon--active');
+                displayHeight ? tooltip.classList.remove('ffe-tooltip__text--active') : tooltip.classList.add('ffe-tooltip__text--active');
+                displayHeight ? tooltip.style = '' : tooltip.style = 'max-height: ' + scrollHeight + 'px;';
+            };
+        </script>
+
+    </section>
+</main>
+
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+.ffe-radio-button {
+    display: block;
+    position: relative;
+    color: @ffe-black;
+    cursor: pointer;
+    margin: 10px 0;
+    transition: width @ffe-transition-duration @ffe-ease-in-out-back;
+    text-align: left;
+    padding-left: 30px;
+    padding-top: 1px;
+
+    &--inline {
+        display: inline-block;
+        margin-right: 20px;
+    }
+
+    &--with-tooltip {
+        display: inline-block;
+        margin-right: 30px;
+        margin-bottom: 0;
+    }
+
+    &__tooltip-icon {
+        display: inline-block;
+        vertical-align: top;
+        width: 25px;
+        position: absolute;
+        right: 0;
+        margin-top: 8px;
+
+        & .ffe-tooltip__icon {
+            margin: 0;
+        }
+    }
+
+    &__tooltip-text.ffe-tooltip__text {
+        &:extend(.ffe-small-text);
+
+        margin-left: 30px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    &__tooltip-text.ffe-tooltip__text--active {
+        margin-top: 5px;
+    }
+
+    &::before {
+        content: '';
+        background-color: @ffe-white;
+        border: 10px solid @ffe-white;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        position: absolute;
+        pointer-events: none;
+        left: 0;
+        top: 3px;
+        transition: all @ffe-transition-duration @ffe-ease;
+    }
+
+    &::after {
+        content: '';
+        border: 2px solid @ffe-grey;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+        top: 3px;
+        pointer-events: none;
+        transition: all @ffe-transition-duration @ffe-ease;
+    }
+
+    &--invalid {
+        &::after {
+            border-color: @ffe-orange-fire;
+        }
+    }
+}
+
+.ffe-radio-input {
+    &:checked + .ffe-radio-button::before,
+    &:hover + .ffe-radio-button::before,
+    &:focus + .ffe-radio-button::before,
+    &:active + .ffe-radio-button::before {
+        outline: none;
+    }
+
+    &:hover + .ffe-radio-button::after {
+        border-color: @ffe-blue-azure;
+    }
+
+    &:checked + .ffe-radio-button::before {
+        background-color: @ffe-blue-azure;
+        border: 5px solid @ffe-white;
+    }
+
+    &:checked + .ffe-radio-button::after {
+        border-color: @ffe-blue-azure;
+    }
+
+    &:active + .ffe-radio-button::after,
+    &:focus + .ffe-radio-button::after {
+        box-shadow: 0 0 0 2px @ffe-blue-focus;
+    }
+
+    &:hover + .ffe-radio-button--invalid::after {
+        border-color: @ffe-orange-fire;
+    }
+
+    &:checked + .ffe-radio-button--invalid::after {
+        border-color: @ffe-orange-fire;
+    }
+}
