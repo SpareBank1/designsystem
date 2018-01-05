@@ -55,5 +55,10 @@ module.exports = {
             components:
                 'packages/ffe-searchable-dropdown-react/src/SearchableDropdown.js',
         },
+        {
+            name: 'Grid',
+            content: 'packages/ffe-grid-react/USAGE.md',
+            components: 'packages/ffe-grid-react/src/[A-Z]+([A-Za-z]).js',
+        },
     ],
 };
