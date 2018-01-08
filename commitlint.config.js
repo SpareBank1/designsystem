@@ -17,6 +17,7 @@ module.exports = {
                 'ffe-cards',
                 'ffe-cards-react',
                 'ffe-chart-donut-react',
+                'ffe-checkbox-react',
                 'ffe-context-message',
                 'ffe-context-message-react',
                 'ffe-core',
