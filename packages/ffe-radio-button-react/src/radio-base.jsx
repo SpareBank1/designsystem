@@ -9,14 +9,14 @@ import {
     oneOfType,
     string
 } from 'prop-types';
-import hash from 'nfe-hash';
+import hash from 'sdbm';
 import classnames from 'classnames';
 
 const inlineStyles = {
     display: 'inline-block'
 };
 
-const createId = values => `radio-button-${hash(values)}`;
+const createId = values => `radio-button-${hash(JSON.stringify(values))}`;
 
 class RadioBase extends Component {
 
