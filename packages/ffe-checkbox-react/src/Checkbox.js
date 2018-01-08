@@ -1,23 +1,12 @@
 import React from 'react';
-import {
-    bool,
-    node,
-    string,
-} from 'prop-types';
-import hash from 'nfe-hash';
+import { bool, node, string } from 'prop-types';
+import hash from 'sdbm';
 import classNames from 'classnames';
 
 export default function CheckBox(props) {
-    const {
-        children,
-        inline,
-        invalid,
-        label,
-        noMargins,
-        ...rest
-    } = props;
+    const { children, inline, invalid, label, noMargins, ...rest } = props;
 
-    const id = props.id || `checkbox-${hash(rest.name)}`;
+    const id = props.id || `checkbox-${hash(rest.name || '')}`;
 
     return (
         <span>
@@ -32,13 +21,14 @@ export default function CheckBox(props) {
                 className={classNames({
                     'ffe-checkbox': true,
                     'ffe-checkbox--inline': inline,
-                    'ffe-checkbox--no-margin': noMargins
+                    'ffe-checkbox--no-margin': noMargins,
                 })}
                 htmlFor={id}
             >
                 {label || children}
             </label>
-        </span>);
+        </span>
+    );
 }
 
 CheckBox.propTypes = {
