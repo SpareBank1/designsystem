@@ -42,6 +42,11 @@ module.exports = {
             components: 'packages/ffe-accordion-react/src/Accordion*.js',
         },
         {
+            name: 'Kontovelger',
+            components:
+                'packages/ffe-account-selector-react/src/components/**/[A-Z]+([A-Za-z]).js',
+        },
+        {
             name: 'Kort',
             components: 'packages/ffe-cards-react/src/[A-Z]+([A-Za-z]).js',
         },
