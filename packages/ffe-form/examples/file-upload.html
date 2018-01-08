@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>ffe-form</title>
+        <link href="examples.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body class="ffe-body-text">
+        <div class="ffe-section-wrapper">
+            <div class="ffe-content-container">
+                <h1 class="ffe-h1">File input</h1>
+            </div>
+        </div>
+
+        <div id="ffedoc">
+            <div class="ffe-section-wrapper">
+                <div class="ffe-content-container ffe-content-container--text-left">
+
+                    <p class="ffe-body-paragraph">
+                        Består av et skjult input-felt og en label stylet som en knapp med ikon.
+                    </p>
+
+                    <div class="ffe-file-upload">
+                        <button class="ffe-file-upload__button">
+                            <span class="ffe-file-upload__button__label-icon"></span>Legg til vedlegg
+                        </button>
+                        <input id="file-upload1" type="file"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="ffedoc">
+            <div class="ffe-section-wrapper">
+                <div class="ffe-content-container ffe-content-container--text-left">
+
+                    <p class="ffe-body-paragraph">
+                        File input + valgte filer.
+                    </p>
+
+                    <div class="ffe-file-upload">
+                        <button class="ffe-file-upload__button">
+                            <span class="ffe-file-upload__button__label-icon"></span>Legg til vedlegg
+                        </button>
+                        <input id="file-upload2" type="file"/>
+                        <div>
+                            <div class="ffe-file-upload__filename__title">Du har lastet opp:</div>
+                            <ul class="ffe-file-upload__selected-files">
+                                <li>
+                                    <div class="ffe-file-upload__filename">Virus.exe</div>
+                                    <div class="ffe-file-upload__file-size">195kB</div>
+                                    <button class="ffe-file-upload__delete-button"></button>
+                                </li>
+                                <li>
+                                    <div class="ffe-file-upload__filename">Selfie_fjelltopp.jpg</div>
+                                    <div class="ffe-file-upload__file-size">82kB</div>
+                                    <button class="ffe-file-upload__delete-button"></button>
+                                </li>
+                                <li>
+                                    <div class="ffe-file-upload__filename">Lønnsslipp.pdf</div>
+                                    <div class="ffe-file-upload__file-size">216kB</div>
+                                    <button class="ffe-file-upload__delete-button"></button>
+                                </li>
+                                <li>
+                                    <div class="ffe-file-upload__filename">system.ini</div>
+                                    <div class="ffe-file-upload__file-size">13kB</div>
+                                    <button class="ffe-file-upload__delete-button"></button>
+                                </li>
+                                <li>
+                                    <div class="ffe-file-upload__filename">20060606-213314543_345666677777777_abcdefgh.txt</div>
+                                    <div class="ffe-file-upload__file-size">63kB</div>
+                                    <button class="ffe-file-upload__delete-button"></button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

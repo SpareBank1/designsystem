@@ -1,0 +1,55 @@
+.ffe-input-field {
+    display: block;
+    height: 45px;
+    padding: 0 13px;
+    font-family: MuseoSans-500, arial, sans-serif;
+    color: @ffe-black;
+    border-radius: 4px;
+    border: 2px solid @ffe-grey-silver;
+    transition: all @ffe-transition-duration @ffe-ease;
+    box-shadow: 0 1px 2px 0 @ffe-grey-cloud inset;
+    width: 100%;
+    .ffe-fontsize-form-input;
+
+    &:hover {
+        border-color: @ffe-blue-azure;
+    }
+
+    &:focus,
+    &:active {
+        border-color: @ffe-blue-azure;
+        box-shadow: 0 0 0 2px @ffe-blue-focus;
+        outline: none;
+    }
+
+    &--inline {
+        display: inline-block;
+        width: auto;
+    }
+
+    &--condensed {
+        height: 38px;
+    }
+
+    &--text-like {
+        background-color: @ffe-white;
+        border: none;
+        border-bottom: 2px solid @ffe-blue-royal;
+        border-radius: 4px 4px 0 0;
+        box-shadow: none;
+        color: @ffe-blue-royal;
+        display: inline-block;
+        height: 2em;
+        transition: all @ffe-transition-duration @ffe-ease;
+
+        &:focus {
+            border-color: @ffe-blue-azure;
+            box-shadow: none;
+            color: @ffe-blue-azure;
+        }
+    }
+
+    &::-ms-clear {
+        display: none;
+    }
+}

@@ -1,0 +1,19 @@
+# IDE-generated files
+*.iml
+.idea
+.project
+.settings
+.classpath
+.checkstyle
+target
+bin/
+*~
+*.sublime-*
+
+# Generated sources
+lib/
+webpack-cache
+
+# NPM
+node_modules/
+npm-debug.log*
