@@ -1,0 +1,6 @@
+{
+  "extends": "ffe",
+  "env": {
+    "mocha": true
+  }
+}
