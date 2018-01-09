@@ -9,8 +9,7 @@
         "start":
             "budo examples/checkbox.js --open --live --title \"FFE Checkbox React\" -- -t [ babelify --presets [ es2015 react ] ] -t node-lessify",
         "test:nsp": "nsp check",
-        "test:spec":
-            "mocha --require babel-register --require ./test-setup.js src/**/*.test.js",
+        "test:spec": "mocha --require babel-register --require ./test-setup.js src/**/*.test.js",
         "test": "npm run test:spec && npm run test:nsp",
         "tdd": "mocha --require babel-register src/**/*.test.js -w",
         "prepublish": "npm run build",
@@ -41,10 +40,10 @@
         "ffe-core": "^10.1.1",
         "ffe-form": "^8.1.1",
         "mocha": "^4.1.0",
-        "mocha-tap13": "^0.0.3",
+        "mocha-tap13": "^1.0.2",
         "node-lessify": "^0.1.5",
         "nsp": "^3.1.0",
-        "onchange": "^3.2.1",
+        "onchange": "3.2.1",
         "react": "^16.1.1",
         "react-addons-test-utils": "^15.0.1",
         "react-dom": "^16.1.1",

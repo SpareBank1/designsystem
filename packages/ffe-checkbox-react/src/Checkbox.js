@@ -1,3 +1,4 @@
+/*eslint jsx-a11y/label-has-for:0*/
 import React from 'react';
 import { bool, node, string } from 'prop-types';
 import hash from 'sdbm';
