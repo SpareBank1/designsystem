@@ -30,6 +30,7 @@ module.exports = {
                 'ffe-icons-react',
                 'ffe-searchable-dropdown-react',
                 'ffe-tables',
+                'ffe-radio-button-react',
             ],
         ],
     },
