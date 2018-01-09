@@ -2,6 +2,7 @@
     "name": "ffe-datepicker-react",
     "version": "2.7.1",
     "main": "lib/ffe-datepicker-react.js",
+    "license": "UNLICENSED",
     "scripts": {
         "build": "babel -d lib/. --ignore=*.test.js src/.",
         "watch": "onchange 'src/**/*.js' -- npm run build",
