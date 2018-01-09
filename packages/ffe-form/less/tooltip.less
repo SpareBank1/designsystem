@@ -1,0 +1,47 @@
+.ffe-tooltip {
+    @ffe-tooltip-size: 25px;
+
+    &__icon {
+        background: @ffe-white;
+        border-radius: 50%;
+        border: 2px solid @ffe-grey-silver;
+        color: @ffe-blue-azure;
+        cursor: help;
+        display: inline-block;
+        height: @ffe-tooltip-size;
+        line-height: @ffe-tooltip-size;
+        margin: 0 0 4px 13px;
+        padding: 0 0 0 1px;
+        text-align: center;
+        vertical-align: middle;
+        width: @ffe-tooltip-size;
+        .ffe-fontsize-button;
+
+        &:hover,
+        &:focus {
+            border-color: @ffe-blue-azure;
+        }
+
+        &:focus {
+            box-shadow: 0 0 0 2px @ffe-blue-focus;
+            outline: none;
+        }
+
+        &:active,
+        &--active {
+            border-color: @ffe-blue-royal;
+            color: @ffe-blue-royal;
+        }
+    }
+
+    &__text {
+        margin: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: all @ffe-transition-duration @ffe-ease;
+
+        &--active {
+            margin-bottom: 12px;
+        }
+    }
+}

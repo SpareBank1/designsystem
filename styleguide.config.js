@@ -70,5 +70,13 @@ module.exports = {
             content: 'packages/ffe-tables-react/USAGE.md',
             components: 'packages/ffe-tables-react/src/[A-Z]+([A-Za-z]).js',
         },
+        {
+            name: 'Skjema',
+            components: 'packages/ffe-form-react/src/[A-Z]+([A-Za-z]).js',
+        },
+        {
+            name: 'Checkbox',
+            components: 'packages/ffe-checkbox-react/src/[A-Z]+([A-Za-z]).js',
+        },
     ],
 };

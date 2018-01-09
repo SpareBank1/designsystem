@@ -3,13 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-     <a name="9.0.1"></a>
+      <a name="9.0.2"></a>
+
+## [9.0.2](***REMOVED***) (2018-01-09)
+
+**Note:** Version bump only for package ffe-icons
+
+      <a name="9.0.1"></a>
 
 ## [9.0.1](***REMOVED***) (2018-01-05)
 
 **Note:** Version bump only for package ffe-icons
 
-     <a name="9.0.0"></a>
+<a name="9.0.0"></a>
 
 # [9.0.0](***REMOVED***) (2018-01-02)
 
@@ -27,8 +33,7 @@ The following icons have been renamed:
 * `1-2-3-sirkel-ikon` is now named `sirkel-1-2-3-ikon`
 * `1-2-3-understrek-ikon` is now named `understrek-1-2-3-ikon`
 
-
-    <a name="8.0.0"></a>
+<a name="8.0.0"></a>
 
 # 8.0.0 (2017-12-22)
 
