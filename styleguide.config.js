@@ -32,6 +32,10 @@ module.exports = {
                 'packages/ffe-core-react/src/typography/[A-Z]+([A-Za-z]).js',
         },
         {
+            name: 'Ikoner',
+            content: 'packages/ffe-icons-react/USAGE.md',
+        },
+        {
             name: 'Kakediagram',
             content: 'packages/ffe-chart-donut-react/USAGE.md',
             components:
