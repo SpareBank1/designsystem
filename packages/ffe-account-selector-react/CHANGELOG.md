@@ -1,3 +1,7 @@
+# v8.0.1
+
+* To monorepo.
+
 # v8.0.0
 
 * No longer including raw JS in `files` - use the main entry through import
