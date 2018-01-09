@@ -3,7 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-<a name="3.0.3"></a>
+      <a name="3.0.4"></a>
+
+## [3.0.4](http://stash.intern.sparebank1.no:22/ffe/ffe-monorepo/compare/ffe-context-message-react@3.0.3...ffe-context-message-react@3.0.4) (2018-01-09)
+
+**Note:** Version bump only for package ffe-context-message-react
+
+      <a name="3.0.3"></a>
 
 ## [3.0.3](http://stash.intern.sparebank1.no:22/ffe/ffe-monorepo/compare/ffe-context-message-react@3.0.2...ffe-context-message-react@3.0.3) (2018-01-05)
 

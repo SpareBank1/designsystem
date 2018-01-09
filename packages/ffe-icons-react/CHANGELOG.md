@@ -3,7 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-<a name="4.0.2"></a>
+      <a name="4.0.3"></a>
+
+## [4.0.3](http://stash.intern.sparebank1.no:22/ffe/ffe-icons-react/compare/ffe-icons-react@4.0.2...ffe-icons-react@4.0.3) (2018-01-09)
+
+**Note:** Version bump only for package ffe-icons-react
+
+      <a name="4.0.2"></a>
 
 ## [4.0.2](http://stash.intern.sparebank1.no:22/ffe/ffe-icons-react/compare/ffe-icons-react@4.0.1...ffe-icons-react@4.0.2) (2018-01-05)
 
