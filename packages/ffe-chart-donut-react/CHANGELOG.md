@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.5"></a>
+
+## [1.0.5](***REMOVED***) (2018-01-09)
+
+**Note:** Version bump only for package ffe-chart-donut-react
+
 <a name="1.0.4"></a>
 
 ## [1.0.4](***REMOVED***) (2018-01-05)
