@@ -1,7 +1,7 @@
 import React from 'react';
 import { expect } from 'chai';
 import { render } from 'enzyme';
-import SortableTable from './index';
+import SortableTable from './SortableTable';
 
 describe('<SortableTable>', () => {
     const columns = [

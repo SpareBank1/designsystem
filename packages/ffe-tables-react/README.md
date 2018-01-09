@@ -12,4 +12,4 @@ $ npm install --save ffe-core ffe-tables ffe-tables-react
 
 ## Usage
 
-For more information about how and when to use this component, check the [documentation](src/Readme.md).
+For more information about how and when to use this component, check the [documentation](src/Table.md).

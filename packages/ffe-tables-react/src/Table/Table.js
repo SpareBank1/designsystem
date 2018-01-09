@@ -8,9 +8,7 @@ import TableRowExpandable from '../TableParts/TableRowExpandable';
 
 class Table extends Component {
     renderTableCaption() {
-        const {
-            caption,
-            srOnlyCaption } = this.props;
+        const { caption, srOnlyCaption } = this.props;
 
         if (!caption) {
             return null;
@@ -24,11 +22,7 @@ class Table extends Component {
             );
         }
 
-        return (
-            <caption className="ffe-table__caption">
-                {caption}
-            </caption>
-        );
+        return <caption className="ffe-table__caption">{caption}</caption>;
     }
 
     renderTableHeaders() {
@@ -39,20 +33,20 @@ class Table extends Component {
         }
 
         if (this.props.expandedContentMapper) {
-            columns.push({ key: 'expandIcon', header: '' , alignRight: true });
+            columns.push({ key: 'expandIcon', header: '', alignRight: true });
         }
 
-        return <TableHeaders columns={ columns } />;
+        return <TableHeaders columns={columns} />;
     }
 
     renderTableFooter() {
         const { columns } = this.props;
 
         if (!columns.some(column => column.footer)) {
-          return null;
+            return null;
         }
 
-        return <TableFooter columns={ columns } />;
+        return <TableFooter columns={columns} />;
     }
 
     getData() {
@@ -65,11 +59,7 @@ class Table extends Component {
     }
 
     renderTableBody() {
-        const {
-            columns,
-            expandedContentMapper,
-            sort
-        } = this.props;
+        const { columns, expandedContentMapper, sort } = this.props;
 
         const data = this.getData();
 
@@ -79,8 +69,13 @@ class Table extends Component {
 
         if (expandedContentMapper) {
             return data.map((row, index) => (
-                <TableRowExpandable cells={ row } columns={ columns } key={ row.id || index } sort={ sort }>
-                    { expandedContentMapper(row) }
+                <TableRowExpandable
+                    cells={row}
+                    columns={columns}
+                    key={row.id || index}
+                    sort={sort}
+                >
+                    {expandedContentMapper(row)}
                 </TableRowExpandable>
             ));
         }
@@ -88,14 +83,24 @@ class Table extends Component {
         return (
             <tbody>
                 {data.map((row, index) => (
-                    <TableRow cells={ row } columns={ columns } key={ row.id || index } />
+                    <TableRow
+                        cells={row}
+                        columns={columns}
+                        key={row.id || index}
+                    />
                 ))}
             </tbody>
         );
     }
 
     render() {
-        const { alignLeft, condensed, smallHeader, columnLayoutMobile, breakpoint } = this.props;
+        const {
+            alignLeft,
+            condensed,
+            smallHeader,
+            columnLayoutMobile,
+            breakpoint,
+        } = this.props;
         return (
             <table
                 className={classNames(
@@ -104,15 +109,16 @@ class Table extends Component {
                     { 'ffe-table--small-header': smallHeader },
                     { 'ffe-table--columns-sm': columnLayoutMobile },
                     { 'ffe-table--text-left': alignLeft },
-                    breakpoint && `ffe-table--breakpoint-${this.props.breakpoint}`
+                    breakpoint &&
+                        `ffe-table--breakpoint-${this.props.breakpoint}`,
                 )}
             >
-                { this.renderTableCaption() }
-                { this.renderTableHeaders() }
-                { this.renderTableFooter() }
-                { this.renderTableBody() }
+                {this.renderTableCaption()}
+                {this.renderTableHeaders()}
+                {this.renderTableFooter()}
+                {this.renderTableBody()}
             </table>
-          );
+        );
     }
 }
 
@@ -128,14 +134,12 @@ Table.propTypes = {
     offset: PropTypes.number,
     limit: PropTypes.number,
     breakpoint: PropTypes.oneOf(['sm', 'none']),
-    data: PropTypes.arrayOf(
-        PropTypes.object
-    ),
+    data: PropTypes.arrayOf(PropTypes.object),
     columns: PropTypes.arrayOf(
         PropTypes.shape({
             header: PropTypes.node.isRequired,
             key: PropTypes.string.isRequired,
-        }).isRequired
+        }).isRequired,
     ),
 };
 
@@ -143,7 +147,7 @@ Table.defaultProps = {
     columns: [],
     data: [],
     offset: 0,
-    limit: 0
+    limit: 0,
 };
 
 export default Table;
