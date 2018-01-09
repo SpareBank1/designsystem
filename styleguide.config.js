@@ -69,5 +69,9 @@ module.exports = {
             name: 'Skjema',
             components: 'packages/ffe-form-react/src/[A-Z]+([A-Za-z]).js',
         },
+        {
+            name: 'Checkbox',
+            components: 'packages/ffe-checkbox-react/src/[A-Z]+([A-Za-z]).js',
+        },
     ],
 };
