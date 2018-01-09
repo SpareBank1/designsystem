@@ -3,7 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-<a name="6.0.3"></a>
+      <a name="6.0.4"></a>
+
+## [6.0.4](http://stash.intern.sparebank1.no:22/ffe/ffe-monorepo/compare/ffe-grid-react@6.0.3...ffe-grid-react@6.0.4) (2018-01-09)
+
+**Note:** Version bump only for package ffe-grid-react
+
+      <a name="6.0.3"></a>
 
 ## [6.0.3](http://stash.intern.sparebank1.no:22/ffe/ffe-monorepo/compare/ffe-grid-react@6.0.2...ffe-grid-react@6.0.3) (2018-01-05)
 
