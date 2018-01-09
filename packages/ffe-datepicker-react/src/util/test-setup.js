@@ -11,4 +11,4 @@ chai.use(sinonChai);
 global.window = new JSDOM('<!DOCTYPE html><html><body></body></html>').window;
 global.document = global.window.document;
 
-Enzyme.configure({adapter: new Adapter()});
+Enzyme.configure({ adapter: new Adapter() });
