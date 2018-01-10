@@ -48,10 +48,11 @@
 
         color: @ffe-blue-royal;
         text-align: left;
-    }
 
-    &__cell {
-        display: block;
+        @media screen and (min-width: @breakpoint-md) {
+            display: table-cell;
+            padding: 10px;
+        }
     }
 
     &__row,
@@ -63,14 +64,8 @@
         }
     }
 
-    &__heading {
-        @media screen and (min-width: @breakpoint-md) {
-            display: table-cell;
-            padding: 10px;
-        }
-    }
-
     &__cell {
+        display: block;
         padding: 0 5px;
 
         &--top {
@@ -129,7 +124,7 @@
     &--columns-sm {
         .ffe-table__content {
             display: inline-block;
-            max-width: ~"calc(100% - 105px)";
+            max-width: ~'calc(100% - 105px)';
             margin-bottom: 0;
 
             @media screen and (min-width: @breakpoint-md) {

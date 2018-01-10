@@ -9,10 +9,8 @@
         "type": "git",
         "url": "***REMOVED***"
     },
-    "files": [
-        "index.js"
-    ],
+    "files": ["index.js"],
     "dependencies": {
-        "stylelint-config-standard": "^16.0.0"
+        "stylelint-config-standard": "^18.0.0"
     }
 }
