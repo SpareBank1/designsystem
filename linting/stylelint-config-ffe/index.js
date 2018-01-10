@@ -1,5 +1,5 @@
 module.exports = {
-    extends: 'stylelint-config-standard',
+    extends: ['stylelint-config-standard', 'stylelint-config-prettier'],
     rules: {
         'at-rule-empty-line-before': [
             'always',
@@ -52,5 +52,7 @@ module.exports = {
             true,
             { ignoreShorthands: ['flex-flow'] },
         ],
+        'selector-combinator-space-before': null,
+        'no-descending-specificity': null,
     },
 };

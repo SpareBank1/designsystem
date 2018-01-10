@@ -19,7 +19,10 @@ class Input extends Component {
      In order to achieve this we use a very dirty, but workable, browser testing regex:
      https://github.com/faisalman/ua-parser-js/blob/master/src/ua-parser.js#L261
      */
-        this.isIE11 = window.navigator.userAgent.match(/(trident).+rv[:\s]([\w.]+).+like\sgecko/i) !== null;
+        this.isIE11 =
+            window.navigator.userAgent.match(
+                /(trident).+rv[:\s]([\w.]+).+like\sgecko/i,
+            ) !== null;
         this.state = {
             value: props.value,
             isFocused: false,

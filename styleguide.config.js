@@ -70,6 +70,11 @@ module.exports = {
             components: 'packages/ffe-grid-react/src/[A-Z]+([A-Za-z]).js',
         },
         {
+            name: 'Tabeller',
+            content: 'packages/ffe-tables-react/USAGE.md',
+            components: 'packages/ffe-tables-react/src/Table.js',
+        },
+        {
             name: 'Skjema',
             components: 'packages/ffe-form-react/src/[A-Z]+([A-Za-z]).js',
         },

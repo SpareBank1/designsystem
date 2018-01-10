@@ -15,5 +15,5 @@ export {
     InputGroup,
     Label,
     TextArea,
-    Tooltip
+    Tooltip,
 };

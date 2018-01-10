@@ -8,7 +8,8 @@
         "lint": "eslint src/.",
         "start": "budo examples/checkbox.js --open --live --title \"FFE Checkbox React\" -- -t [ babelify --presets [ es2015 react ] ] -t node-lessify",
         "test:nsp": "nsp check",
-        "test:spec": "mocha --require babel-register --require ./test-setup.js src/**/*.test.js",
+        "test:spec":
+            "mocha --require babel-register --require ./test-setup.js src/**/*.test.js",
         "test": "npm run test:spec && npm run test:nsp",
         "tdd": "mocha --require babel-register src/**/*.test.js -w",
         "prepublish": "npm run build",

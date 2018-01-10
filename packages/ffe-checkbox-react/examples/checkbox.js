@@ -1,5 +1,5 @@
 import React from 'react';
-import {render} from 'react-dom';
+import { render } from 'react-dom';
 import Checkbox from '../src/Checkbox';
 
 require('./example.less');
@@ -17,14 +17,15 @@ render(
         <Checkbox
             label="This is an example checkbox"
             name="justACheckbox"
-            inline={ false }
+            inline={false}
         />
 
         <Checkbox
             label="This is an example checkbox with error"
             name="anotherCheckbox"
-            inline={ false }
-            invalid={ true }
+            inline={false}
+            invalid={true}
         />
-    </div>
-    , checkboxDOM);
+    </div>,
+    checkboxDOM,
+);

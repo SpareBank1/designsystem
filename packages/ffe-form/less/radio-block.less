@@ -28,8 +28,7 @@
         display: block;
         padding: 8px 60px 7px;
         cursor: pointer;
-        transition:
-            background-color @ffe-transition-duration @ffe-ease,
+        transition: background-color @ffe-transition-duration @ffe-ease,
             border-color @ffe-transition-duration @ffe-ease;
     }
 
@@ -41,7 +40,7 @@
             padding: 0;
         }
 
-        &[aria-hidden="true"] {
+        &[aria-hidden='true'] {
             display: none;
         }
     }
@@ -53,7 +52,9 @@
         border-bottom: thin solid @ffe-grey-silver;
     }
 
-    & + .ffe-radio-block__content[role="presentation"] > .ffe-radio-block__header {
+    &
+        + .ffe-radio-block__content[role='presentation']
+        > .ffe-radio-block__header {
         border-bottom: none;
     }
 

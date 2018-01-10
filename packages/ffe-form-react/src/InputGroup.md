@@ -9,8 +9,8 @@ tooltip, skjemaelementet, og en feilmelding for valideringsfeil som vil bli vist
     <Input
         type="tel"
         name="mobile"
-        onChange={ e => console.log('onChange', e.target.value) }
-        onBlur={ e => console.log('onBlur', e.target.value) }
+        onChange={e => console.log('onChange', e.target.value)}
+        onBlur={e => console.log('onBlur', e.target.value)}
     />
 </InputGroup>
 ```

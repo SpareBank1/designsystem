@@ -15,6 +15,7 @@ CSS Object Model when using this component.
 ## Usage
 
 ### `<RadioButton />`
+
 At it's simplest you can just use the `RadioButton` directly:
 
 ```javascript
@@ -41,12 +42,14 @@ If you want to have a more complex label, you can use `children`:
 ```
 
 You can also add a helping text by using the tooltip property:
+
 ```javascript
-<RadioButton 
+<RadioButton
     label="This is not the complete truth"
     tooltip="The complete truth is..."
 />
 ```
+
 When the `tooltip` is truthy the `inline` capabilities will be ignored as the tooltip icon will be added to the end of the line.
 
 ### `<RadioButtonGroup />`
