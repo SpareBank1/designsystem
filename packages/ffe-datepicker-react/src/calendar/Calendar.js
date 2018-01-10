@@ -190,6 +190,7 @@ export default class Calendar extends Component {
     render() {
         const { calendar } = this.state;
 
+        /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
         return (
             <div
                 aria-labelledby={`${this.datepickerId}-title`}
@@ -223,6 +224,7 @@ export default class Calendar extends Component {
                 </table>
             </div>
         );
+        /* eslint-enable jsx-a11y/no-noninteractive-element-interactions */
     }
 }
 
