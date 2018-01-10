@@ -1,6 +1,6 @@
 {
     "name": "ffe-buttons-react",
-    "version": "8.0.6",
+    "version": "8.1.0",
     "description": "React implementation of ffe-buttons",
     "main": "lib/index.js",
     "scripts": {
@@ -8,14 +8,14 @@
         "lint": "eslint src/.",
         "test": "npm run test:spec && npm run test:nsp",
         "test:nsp": "nsp check",
-        "test:spec":
-            "mocha --require src/util/test-setup.js --compilers js:babel-core/register src/**/*.test.js",
-        "tdd":
-            "mocha --require src/util/test-setup.js --compilers js:babel-core/register src/**/*.test.js -w",
-        "start":
-            "budo examples/buttons.js --open --live --title \"FFE Buttons\" -- -t [ babelify --presets [ es2015 react ] ] -t node-lessify"
+        "test:spec": "mocha --require src/util/test-setup.js --compilers js:babel-core/register src/**/*.test.js",
+        "tdd": "mocha --require src/util/test-setup.js --compilers js:babel-core/register src/**/*.test.js -w",
+        "start": "budo examples/buttons.js --open --live --title \"FFE Buttons\" -- -t [ babelify --presets [ es2015 react ] ] -t node-lessify"
     },
-    "files": ["lib", "*.js"],
+    "files": [
+        "lib",
+        "*.js"
+    ],
     "repository": {
         "type": "git",
         "url": "***REMOVED***"
@@ -47,7 +47,10 @@
         "sinon": "^4.1.3"
     },
     "babel": {
-        "presets": ["es2015", "react"],
+        "presets": [
+            "es2015",
+            "react"
+        ],
         "plugins": [
             "transform-react-remove-prop-types",
             "transform-object-rest-spread"
