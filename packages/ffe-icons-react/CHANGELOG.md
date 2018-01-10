@@ -3,13 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="4.0.4"></a>
+## [4.0.4](***REMOVED***) (2018-01-10)
+
+
+
+
+**Note:** Version bump only for package ffe-icons-react
+
       <a name="4.0.3"></a>
 
 ## [4.0.3](***REMOVED***) (2018-01-09)
 
 **Note:** Version bump only for package ffe-icons-react
 
-      <a name="4.0.2"></a>
+    <a name="4.0.2"></a>
 
 ## [4.0.2](***REMOVED***) (2018-01-05)
 
@@ -83,8 +91,8 @@ This API change allows for cleaner usage and better documentation.
 ### BREAKING CHANGES
 
 * This commit renames two icons in ffe-icons.
-  `bankid-icon` is now named `bankid-ikon`, and
-  `mynter-to-stabler-pluss` is now named `mynter-to-stabler-pluss-ikon`.
+`bankid-icon` is now named `bankid-ikon`, and
+`mynter-to-stabler-pluss` is now named `mynter-to-stabler-pluss-ikon`.
 
 In addition, ffe-icons-react receives a fix that unbroke a previous
 release

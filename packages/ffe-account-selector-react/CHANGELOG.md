@@ -3,7 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-      <a name="8.0.2"></a>
+  <a name="8.0.3"></a>
+## [8.0.3](***REMOVED***) (2018-01-10)
+
+
+
+
+**Note:** Version bump only for package ffe-account-selector-react
+
+  <a name="8.0.2"></a>
 ## [8.0.2](***REMOVED***) (2018-01-10)
 
 
@@ -11,7 +19,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package ffe-account-selector-react
 
-      # v8.0.1
+# v8.0.1
 
 * To monorepo.
 

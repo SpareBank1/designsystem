@@ -1,12 +1,11 @@
 {
     "name": "ffe-cards-react",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "React implementation of ffe-react",
     "main": "lib/index.js",
     "scripts": {
         "build": "babel --ignore spec.js -d lib src",
-        "start":
-            "echo \"No local demo available - use the monorepo's npm start.\"",
+        "start": "echo \"No local demo available - use the monorepo's npm start.\"",
         "test": "jest",
         "test:watch": "jest --watch"
     },
@@ -16,7 +15,7 @@
         "enzyme": "^3.3.0",
         "enzyme-adapter-react-16": "^1.1.1",
         "ffe-icons": "^9.0.2",
-        "ffe-icons-react": "^4.0.3",
+        "ffe-icons-react": "^4.0.4",
         "jest": "^22.0.4"
     },
     "jest": {

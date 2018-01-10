@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.2.4"></a>
+## [1.2.4](***REMOVED***) (2018-01-10)
+
+
+### Bug Fixes
+
+* **ffe-radio-button-react:** Repalce sdbm with uuid ([5ba9639](***REMOVED***))
+
+
+
+
 <a name="1.2.3"></a>
 ## 1.2.3 (2018-01-10)
 

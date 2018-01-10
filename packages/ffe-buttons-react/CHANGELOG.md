@@ -3,13 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="8.0.5"></a>
+## [8.0.5](***REMOVED***) (2018-01-10)
+
+
+
+
+**Note:** Version bump only for package ffe-buttons-react
+
       <a name="8.0.4"></a>
 
 ## [8.0.4](***REMOVED***) (2018-01-09)
 
 **Note:** Version bump only for package ffe-buttons-react
 
-      <a name="8.0.3"></a>
+    <a name="8.0.3"></a>
 
 ## [8.0.3](***REMOVED***) (2018-01-05)
 
@@ -90,8 +98,8 @@ This API change allows for cleaner usage and better documentation.
 ### BREAKING CHANGES
 
 * This commit renames two icons in ffe-icons.
-  `bankid-icon` is now named `bankid-ikon`, and
-  `mynter-to-stabler-pluss` is now named `mynter-to-stabler-pluss-ikon`.
+`bankid-icon` is now named `bankid-ikon`, and
+`mynter-to-stabler-pluss` is now named `mynter-to-stabler-pluss-ikon`.
 
 In addition, ffe-icons-react receives a fix that unbroke a previous
 release
@@ -103,7 +111,7 @@ release
 ### 🚀 New features
 
 * The `ExpandButton` component gets a React implementation. Consumers are in charge of reacting to clicks and
-  controlling state.
+controlling state.
 * `ActionButton` now has a boolean prop `ghost` to toggle the `--ghost` modifier
 
 ### 🏠 Housekeeping
@@ -223,17 +231,17 @@ bumps the peerDependency on ffe-core to ^8.0.1
 ### 💥 Breaking changes
 
 * (BREAKING): Button's `type` prop has been renamed to `buttonType`. This change
-  will only be breaking for direct consumers of the `<Button />` component - not
-  its specialized versions `<PrimaryButton />`, `<SecondaryButton />` etc.
+will only be breaking for direct consumers of the `<Button />` component - not
+its specialized versions `<PrimaryButton />`, `<SecondaryButton />` etc.
 
 ### 🚀 New features
 
 * Allow overriding a button's `type` prop with `type="button"` or `type="reset"`
-  when needed - now the `<*Button />` components behave like regular HTML buttons.
-  The default is still `type="submit"`.
+when needed - now the `<*Button />` components behave like regular HTML buttons.
+The default is still `type="submit"`.
 * Allow no `onClick` handler. Since the default type is `submit`, the default
-  click handler will trigger a `submit` event, which can be handled elsewhere,
-  rendering an `onClick` handler useless.
+click handler will trigger a `submit` event, which can be handled elsewhere,
+rendering an `onClick` handler useless.
 
 ## v2.4.1
 
