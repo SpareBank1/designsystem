@@ -1,3 +1,5 @@
+/* TODO: Needs an aria-role, but I'm not sure which is correct */
+/* eslint jsx-a11y/no-static-element-interactions:0 */
 import React from 'react';
 import { bool, number } from 'prop-types';
 import { Scrollbars } from 'react-custom-scrollbars';
@@ -7,9 +9,7 @@ import SuggestionList from './SuggestionList';
 class SuggestionListContainer extends React.Component {
     constructor(props) {
         super(props);
-        this.refHighlightedSuggestion = this.refHighlightedSuggestion.bind(
-            this,
-        );
+        this.refHighlightedSuggestion = this.refHighlightedSuggestion.bind(this);
     }
 
     refHighlightedSuggestion(suggestionEl) {
@@ -35,10 +35,7 @@ class SuggestionListContainer extends React.Component {
 
     setScrollPosPrevious() {
         const { highlightedIndex } = this.props;
-        this._setScrollPos(
-            highlightedIndex * this.highlightedSuggestionHeight -
-                this.highlightedSuggestionHeight,
-        );
+        this._setScrollPos(highlightedIndex * this.highlightedSuggestionHeight - this.highlightedSuggestionHeight);
     }
 
     render() {

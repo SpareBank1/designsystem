@@ -1,12 +1,12 @@
 {
     "name": "ffe-searchable-dropdown-react",
-    "version": "3.0.3",
+    "version": "3.0.4",
     "description": "Dropdown with search option",
     "scripts": {
         "build": "babel -d lib --ignore=*.test.js src",
         "pretest": "eslint src/",
         "lint:fix": "eslint --fix src/",
-        "test": "jest src",
+        "test": "jest",
         "test:watch": "jest src --watch",
         "posttest": "nsp check",
         "prepublishOnly": "npm run build"
@@ -38,7 +38,11 @@
         "react": "^16.1.1",
         "react-dom": "^16.1.1"
     },
-    "files": ["less/searchable-dropdown.less", "lib", "*.js"],
+    "files": [
+        "less/searchable-dropdown.less",
+        "lib",
+        "*.js"
+    ],
     "main": "lib/SearchableDropdown.js",
     "author": "SpareBank 1",
     "repository": {

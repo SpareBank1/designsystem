@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="7.0.1"></a>
+## [7.0.1](***REMOVED***) (2018-01-10)
+
+
+### Bug Fixes
+
+* Replace eslint ignore with customized lint rule. ([ff23e8d](***REMOVED***))
+
+
+
+
 <a name="7.0.0"></a>
 # 7.0.0 (2017-12-22)
 
