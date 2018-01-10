@@ -1,4 +1,15 @@
-# Changelog
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+      <a name="8.1.5"></a>
+
+## 8.1.5 (2018-01-10)
+
+**Note:** Version bump only for package ffe-form
+
+      # Changelog
 
 ## v.8.1.4
 
@@ -140,19 +151,22 @@ To migrate, update your app to ffe-core version 9.x
 
 * Removed layout styles from `ffe-form`. In practice all width styling is now removed and
   consumers must provide their own class on the form of
-  ```
-  [project-prefix]-input--[modifier] {
-      width: 120 px;
-  }
-  ```
-  Removed features:
-  * `dropdown` no longer supports `--small` modifier
-  * `dropdown` no longer has a `min-width`
-  * `error-summary` no longer has a `max-width`
-  * `input-field` no longer supports `--small`, `--medium` and `--large` modifiers
-  * `radio-block` no longer has a `min-width` or a `max-width`
-  * `radio-switch` no longer has a `min-width`
-  * `text-area` no longer uses media-queries, defaults to 100% width always
+
+```
+[project-prefix]-input--[modifier] {
+    width: 120 px;
+}
+```
+
+Removed features:
+
+* `dropdown` no longer supports `--small` modifier
+* `dropdown` no longer has a `min-width`
+* `error-summary` no longer has a `max-width`
+* `input-field` no longer supports `--small`, `--medium` and `--large` modifiers
+* `radio-block` no longer has a `min-width` or a `max-width`
+* `radio-switch` no longer has a `min-width`
+* `text-area` no longer uses media-queries, defaults to 100% width always
 
 It is recommended that each consumer set up their own regime for managing the width of
 input controls due to the distinct lack of a common set of requirements across platforms
@@ -205,10 +219,10 @@ and organizations.
 ## v2.0.0
 
 * **Potentially breaking change:** in order to support tooltips for form labels, the block-level relationship between labels and fields has been inverted:
-  * `ffe-form-label` is now an `inline-block`. In order to keep the old behaviour add the new class `ffe-form-label--block` to your labels.
-  * Input fields and dropdowns are now `block`s.In order to keep the old behaviour add the corresponding `--inline` modifier class, i.e.:
-    * `ffe-input-field` - `ffe-input-field--inline`
-    * `ffe-dropdown` - `ffe-dropdown--inline`
+* `ffe-form-label` is now an `inline-block`. In order to keep the old behaviour add the new class `ffe-form-label--block` to your labels.
+* Input fields and dropdowns are now `block`s.In order to keep the old behaviour add the corresponding `--inline` modifier class, i.e.:
+  * `ffe-input-field` - `ffe-input-field--inline`
+  * `ffe-dropdown` - `ffe-dropdown--inline`
 * Added `ffe-tooltip` for form label tooltips.
 
 ## v1.1.0

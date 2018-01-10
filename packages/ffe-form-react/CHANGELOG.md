@@ -1,4 +1,15 @@
-# Changelog for ffe-form-react
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+      <a name="2.2.1"></a>
+
+## 2.2.1 (2018-01-10)
+
+**Note:** Version bump only for package ffe-form-react
+
+      # Changelog for ffe-form-react
 
 ## v.2.2.0
 

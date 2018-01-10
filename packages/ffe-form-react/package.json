@@ -1,6 +1,6 @@
 {
     "name": "ffe-form-react",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "description": "React component for form elements in ffe",
     "main": "lib/index.js",
     "scripts": {
@@ -32,7 +32,7 @@
         "enzyme": "^3.3.0",
         "enzyme-adapter-react-16": "^1.1.1",
         "eslint": "^4.13.1",
-        "ffe-core": "^10.1.0",
+        "ffe-core": "^10.2.4",
         "ffe-form": "^7.0.1",
         "jest": "^22.0.4",
         "nsp": "^3.1.0",
@@ -45,7 +45,7 @@
     },
     "peerDependencies": {
         "classnames": "2.x",
-        "ffe-core": "8.x || 9.x || 10.x",
+        "ffe-core": "^10.2.4",
         "ffe-form": "*",
         "react": "*"
     },

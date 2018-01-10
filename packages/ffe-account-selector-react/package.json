@@ -1,16 +1,12 @@
 {
     "name": "ffe-account-selector-react",
-    "version": "8.0.3",
+    "version": "8.0.4",
     "description": "Selector for bank accounts with autocomplete.",
-    "keywords": [
-        "ffe"
-    ],
+    "keywords": ["ffe"],
     "license": "UNLICENSED",
     "author": "SpareBank 1",
     "main": "lib/index.js",
-    "files": [
-        "styles/"
-    ],
+    "files": ["styles/"],
     "repository": {
         "type": "git",
         "url": "***REMOVED***"
@@ -26,7 +22,7 @@
     },
     "dependencies": {
         "classnames": "^2.2.5",
-        "ffe-checkbox-react": "^4.4.7",
+        "ffe-checkbox-react": "^4.4.8",
         "ffe-formatters": "^2.1.0",
         "ffe-icons-react": "^4.0.4",
         "ffe-spinner-react": "^2.0.3",

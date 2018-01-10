@@ -3,19 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-  <a name="8.0.3"></a>
-## [8.0.3](***REMOVED***) (2018-01-10)
+      <a name="8.0.4"></a>
 
-
-
+## [8.0.4](***REMOVED***) (2018-01-10)
 
 **Note:** Version bump only for package ffe-account-selector-react
 
-  <a name="8.0.2"></a>
+      <a name="8.0.3"></a>
+
+## [8.0.3](***REMOVED***) (2018-01-10)
+
+**Note:** Version bump only for package ffe-account-selector-react
+
+<a name="8.0.2"></a>
+
 ## [8.0.2](***REMOVED***) (2018-01-10)
-
-
-
 
 **Note:** Version bump only for package ffe-account-selector-react
 
@@ -26,10 +28,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 # v8.0.0
 
 * No longer including raw JS in `files` - use the main entry through import
-or require.
+  or require.
 * Less can now be found under `ffe-account-selector-react/less/ffe-account-selector`,
-changed from `ffe-account-selector-react/styles/account-selector`. This to be more
-like the other packages.
+  changed from `ffe-account-selector-react/styles/account-selector`. This to be more
+  like the other packages.
 * Replace `nfe-amount-formatter` with `ffe-formatters`
 
 # v7.10.3
@@ -75,7 +77,7 @@ like the other packages.
 * Add support for `ffe-form@8` and `ffe-core@10`
 * Remove less extension of `ffe-link-text` on `ffe-account-suggestion__name`
 * Add classes `ffe-link-text` and `ffe-link-text--no-underline` alongside
-all `ffe-account-suggestion__name`
+  all `ffe-account-suggestion__name`
 
 # v7.7.1
 
@@ -295,7 +297,7 @@ To migrate, update your app to ffe-core version 9.x
 ## v2.0.1
 
 * Removed import of `form.less` from `ffe-form` in `account-selector.less`
-You will now need to install `ffe-form` and import `form.less` in your project's `.less`-file
+  You will now need to install `ffe-form` and import `form.less` in your project's `.less`-file
 
 ## v2.0.0
 

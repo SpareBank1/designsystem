@@ -3,27 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-<a name="4.4.7"></a>
-## [4.4.7](***REMOVED***) (2018-01-10)
+      <a name="4.4.8"></a>
 
+## [4.4.8](***REMOVED***) (2018-01-10)
+
+**Note:** Version bump only for package ffe-checkbox-react
+
+      <a name="4.4.7"></a>
+
+## [4.4.7](***REMOVED***) (2018-01-10)
 
 ### Bug Fixes
 
 * **ffe-checkbox-react:** Replace sdbm with uuid ([225ecf4](***REMOVED***))
 
-
-
-
 <a name="4.4.6"></a>
-## 4.4.6 (2018-01-10)
 
+## 4.4.6 (2018-01-10)
 
 ### Bug Fixes
 
 * Replace eslint ignore with customized lint rule. ([ff23e8d](***REMOVED***))
-
-
-
 
 # Changelog
 
