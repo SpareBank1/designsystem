@@ -1,0 +1,7 @@
+{
+    "extends": "eslint-config-ffe",
+    "parser": "babel-eslint",
+    "env": {
+        "browser": true
+    }
+}
