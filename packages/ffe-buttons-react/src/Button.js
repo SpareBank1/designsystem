@@ -1,5 +1,5 @@
 import React, { cloneElement } from 'react';
-import { bool, func, node, oneOf, string } from 'prop-types';
+import { bool, func, node, oneOf, oneOfType, string } from 'prop-types';
 import classNames from 'classnames';
 
 const decorate = (icon, buttonType) =>
@@ -11,26 +11,27 @@ const decorate = (icon, buttonType) =>
 export default function Button(props) {
     const {
         action,
-        ariaLoadingMessage = 'Vennligst vent',
+        ariaLoadingMessage,
+        element: Element,
         buttonRef,
-        buttonType = 'primary',
+        buttonType,
         children,
-        className = '',
-        condensed = false,
+        className,
+        condensed,
         disableButton,
         isLoading,
-        isTabbable = true,
+        isTabbable,
         label,
         leftIcon,
         rightIcon,
-        simpleContent = false,
+        simpleContent,
         ...rest
     } = props;
 
     const isTertiary = buttonType === 'tertiary';
 
     return (
-        <button
+        <Element
             aria-disabled={disableButton}
             aria-busy={isLoading}
             className={classNames(
@@ -73,7 +74,7 @@ export default function Button(props) {
                     )}
                 </span>
             )}
-        </button>
+        </Element>
     );
 }
 
@@ -99,6 +100,10 @@ Button.propTypes = {
     condensed: bool,
     /** Sets the `disabled` and `aria-disabled` attributes. */
     disableButton: bool,
+    /**
+     * Override the rendered element, with a DOM node or a React component
+     */
+    element: oneOfType([string, node]),
     isLoading: bool,
     /**
      * @deprecated
@@ -124,4 +129,13 @@ Button.propTypes = {
      */
     simpleContent: bool.isRequired,
     type: oneOf(['button', 'submit', 'reset']),
+};
+
+Button.defaultProps = {
+    ariaLoadingMessage: 'Vennligst vent',
+    buttonType: 'primary',
+    condensed: false,
+    element: 'button',
+    isTabbable: true,
+    simpleContent: false,
 };
