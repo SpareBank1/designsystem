@@ -1,7 +1,10 @@
 {
-    "extends": "eslint-config-ffe",
-    "parser": "babel-eslint",
-    "env": {
-        "browser": true
-    }
-}
+    "overrides": [
+      {
+        "files": [ "src/**/*.spec.js"],
+        "env": {
+            "jest": true
+        }
+      }
+    ]
+  }
