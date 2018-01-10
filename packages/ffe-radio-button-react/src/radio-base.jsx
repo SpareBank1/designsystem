@@ -9,14 +9,14 @@ import {
     oneOfType,
     string
 } from 'prop-types';
-import hash from 'sdbm';
+import { v4 as hash } from 'uuid';
 import classnames from 'classnames';
 
 const inlineStyles = {
     display: 'inline-block'
 };
 
-const createId = values => `radio-button-${hash(JSON.stringify(values))}`;
+const createId = () => `radio-button-${hash()}`;
 
 class RadioBase extends Component {
 
@@ -47,7 +47,7 @@ class RadioBase extends Component {
             ...rest
         } = this.props;
 
-        const domId = id || createId({ name, value, label, inline });
+        const domId = id || createId();
         const invalidAsString = String(ariaInvalid ? ariaInvalid : invalid);
 
         return (
