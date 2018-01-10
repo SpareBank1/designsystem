@@ -1,7 +1,7 @@
 /*eslint no-unused-expressions:0*/
 /*eslint-env mocha*/
 import React from 'react';
-import chai, { expect } from 'chai';
+import { expect } from 'chai';
 import { shallow } from 'enzyme';
 
 import RadioSwitch from './radio-switch';
@@ -26,26 +26,16 @@ describe('<RadioSwitch />', () => {
         });
 
         it('should pass the correct labels and values', () => {
-            expect(
-                wrapper.find('RadioBase[label="one"]').prop('value'),
-            ).to.be.equal(1);
-            expect(
-                wrapper.find('RadioBase[label="two"]').prop('value'),
-            ).to.be.equal(2);
+            expect(wrapper.find('RadioBase[label="one"]').prop('value')).to.be.equal(1);
+            expect(wrapper.find('RadioBase[label="two"]').prop('value')).to.be.equal(2);
         });
 
         it('should mark the correct switch as checked based on value param', () => {
-            expect(
-                wrapper.find('RadioBase[label="two"]').prop('value'),
-            ).to.be.equal(checkedValue);
-            expect(wrapper.find('RadioBase[label="two"]').prop('checked')).to.be
-                .true;
+            expect(wrapper.find('RadioBase[label="two"]').prop('value')).to.be.equal(checkedValue);
+            expect(wrapper.find('RadioBase[label="two"]').prop('checked')).to.be.true;
 
-            expect(
-                wrapper.find('RadioBase[label="one"]').prop('value'),
-            ).not.to.be.equal(checkedValue);
-            expect(wrapper.find('RadioBase[label="one"]').prop('checked')).to.be
-                .false;
+            expect(wrapper.find('RadioBase[label="one"]').prop('value')).not.to.be.equal(checkedValue);
+            expect(wrapper.find('RadioBase[label="one"]').prop('checked')).to.be.false;
         });
     });
 
@@ -62,12 +52,8 @@ describe('<RadioSwitch />', () => {
         );
 
         it('should allow pass-through of additional props values', () => {
-            expect(
-                wrapper.find('RadioButtonGroup').prop('aria-labelledby'),
-            ).to.equal(labelledBy);
-            expect(
-                wrapper.find('RadioButtonGroup').prop('aria-describedby'),
-            ).to.equal(describedBy);
+            expect(wrapper.find('RadioButtonGroup').prop('aria-labelledby')).to.equal(labelledBy);
+            expect(wrapper.find('RadioButtonGroup').prop('aria-describedby')).to.equal(describedBy);
         });
     });
 });

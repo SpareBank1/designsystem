@@ -20,6 +20,7 @@ class SuggestionItem extends Component {
                     }
                 }}
                 role="option"
+                aria-selected={isHighlighted}
                 id={id}
                 onMouseDown={e => {
                     e.preventDefault();
