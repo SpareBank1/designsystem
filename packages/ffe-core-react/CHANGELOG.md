@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.1.5"></a>
+## [1.1.5](***REMOVED***) (2018-01-10)
+
+
+### Bug Fixes
+
+* Run just 'jest', not 'jest src' ([9bb7309](***REMOVED***))
+
+
+
+
 <a name="1.1.4"></a>
 
 ## [1.1.4](***REMOVED***) (2018-01-09)

@@ -1,3 +1,19 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+<a name="4.4.6"></a>
+## 4.4.6 (2018-01-10)
+
+
+### Bug Fixes
+
+* Replace eslint ignore with customized lint rule. ([ff23e8d](***REMOVED***))
+
+
+
+
 # Changelog
 
 # 4.4.5
