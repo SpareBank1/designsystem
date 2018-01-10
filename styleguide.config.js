@@ -68,7 +68,7 @@ module.exports = {
         {
             name: 'Tabeller',
             content: 'packages/ffe-tables-react/USAGE.md',
-            components: 'packages/ffe-tables-react/src/[A-Z]+([A-Za-z]).js',
+            components: 'packages/ffe-tables-react/src/Table.js',
         },
         {
             name: 'Skjema',

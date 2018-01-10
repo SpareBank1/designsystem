@@ -29,7 +29,7 @@
         "ffe-icons-react": "^3.0.0",
         "ffe-tables": "^8.1.0",
         "mocha": "^4.1.0",
-        "node-lessify": "^0.1.4",
+        "node-lessify": "^0.1.5",
         "nsp": "^3.1.0",
         "onchange": "3.2.1",
         "react": "^16.1.1",
