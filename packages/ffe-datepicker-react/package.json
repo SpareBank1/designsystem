@@ -1,6 +1,6 @@
 {
     "name": "ffe-datepicker-react",
-    "version": "2.7.1",
+    "version": "2.7.2",
     "main": "lib/ffe-datepicker-react.js",
     "license": "UNLICENSED",
     "scripts": {
@@ -8,12 +8,10 @@
         "watch": "onchange 'src/**/*.js' -- npm run build",
         "pretest": "eslint src/.",
         "lint": "npm run pretest",
-        "test":
-            "mocha --require src/util/test-setup.js --compilers js:babel-core/register 'src/**/*.test.js'",
+        "test": "mocha --require src/util/test-setup.js --compilers js:babel-core/register 'src/**/*.test.js'",
         "posttest": "nsp check",
         "test:watch": "npm test -- -w",
-        "start":
-            "echo \"No local demo available - use the monorepo's npm start.\""
+        "start": "echo \"No local demo available - use the monorepo's npm start.\""
     },
     "devDependencies": {
         "babel-cli": "^6.26.0",
@@ -35,15 +33,18 @@
         "sinon": "^4.0.2",
         "sinon-chai": "^2.14.0"
     },
-    "files": ["lib", "*.js"],
+    "files": [
+        "lib",
+        "*.js"
+    ],
     "peerDependencies": {
-        "ffe-datepicker": "3.x - 4.x",
+        "ffe-datepicker": "^4.2.5",
         "ffe-form": "2.x - 8.x",
         "react": "15.x || 16.x"
     },
     "dependencies": {
         "classnames": "^2.2.5",
-        "ffe-datepicker": "^4.2.3",
+        "ffe-datepicker": "^4.2.5",
         "prop-types": "15.x",
         "uuid": "^3.1.0"
     }
