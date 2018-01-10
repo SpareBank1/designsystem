@@ -1,7 +1,7 @@
 /*eslint no-unused-expressions:0*/
 /*eslint-env mocha*/
 import React from 'react';
-import chai, { expect } from 'chai';
+import { expect } from 'chai';
 import { shallow } from 'enzyme';
 
 import RadioSwitch from './radio-switch';

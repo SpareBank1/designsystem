@@ -8,9 +8,9 @@ const AccountSuggestionItem = ({ account, locale, showBalance = true }) => {
     const { accountNumber, balance, name, currencyCode } = account;
     return (
         <div className="ffe-account-suggestion__account">
-            <a className="ffe-account-suggestion__name ffe-link-text ffe-link-text--no-underline">
+            <span className="ffe-account-suggestion__name ffe-link-text ffe-link-text--no-underline">
                 {name}
-            </a>
+            </span>
             <div className="ffe-account-suggestion__details">
                 <span className="ffe-account-suggestion__number">
                     {accountFormatter(accountNumber)}

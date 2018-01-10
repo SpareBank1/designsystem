@@ -8,7 +8,7 @@
         "start": "onchange 'src/**.js' -- npm run build",
         "lint": "eslint src/",
         "lint:fix": "eslint --fix src/ test/",
-        "test": "jest src",
+        "test": "jest",
         "test:watch": "jest --watch src",
         "test:coverage": "jest src --coverage"
     },

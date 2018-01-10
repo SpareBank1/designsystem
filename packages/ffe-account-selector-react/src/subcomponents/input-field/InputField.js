@@ -1,3 +1,5 @@
+/* Because we are missing aria-controls (http://www.heydonworks.com/article/aria-controls-is-poop): */
+/* eslint jsx-a11y/role-has-required-aria-props:0 */
 import React, { Component } from 'react';
 import { func, string, bool, number } from 'prop-types';
 import { KryssIkon } from 'ffe-icons-react';

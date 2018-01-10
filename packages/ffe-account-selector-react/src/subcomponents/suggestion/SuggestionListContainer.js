@@ -1,3 +1,5 @@
+/* TODO: Needs an aria-role, but I'm not sure which is correct */
+/* eslint jsx-a11y/no-static-element-interactions:0 */
 import React from 'react';
 import { bool, number } from 'prop-types';
 import { Scrollbars } from 'react-custom-scrollbars';

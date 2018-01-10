@@ -1,7 +1,7 @@
 /*eslint-env mocha*/
 /*eslint no-unused-expressions:0*/
 import React from 'react';
-import chai, { expect } from 'chai';
+import { expect } from 'chai';
 import { shallow, mount } from 'enzyme';
 import sinon from 'sinon';
 import { JSDOM } from 'jsdom';
