@@ -167,5 +167,22 @@ describe('Button', () => {
                 );
             });
         });
+
+        describe('element', () => {
+            it('sets the rendered element', () => {
+                const link = shallow(
+                    <Button element="a" href="/path">
+                        Link
+                    </Button>,
+                );
+                expect(link.is('a')).to.be.true;
+            });
+            it('allows you to pass a component', () => {
+                const Link = ({ to, ...props }) => <a href={to} {...props} />; // eslint-disable-line react/prop-types
+                const link = shallow(<Button element={Link} to="/path" />);
+
+                expect(link.is('Link')).to.be.true;
+            });
+        });
     });
 });
