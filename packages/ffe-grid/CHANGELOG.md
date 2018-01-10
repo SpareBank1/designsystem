@@ -3,13 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="6.0.5"></a>
+
+## [6.0.5](***REMOVED***) (2018-01-10)
+
+**Note:** Version bump only for package ffe-grid
+
       <a name="6.0.4"></a>
 
 ## [6.0.4](***REMOVED***) (2018-01-09)
 
 **Note:** Version bump only for package ffe-grid
 
-      <a name="6.0.3"></a>
+    <a name="6.0.3"></a>
 
 ## [6.0.3](***REMOVED***) (2018-01-05)
 
@@ -152,10 +158,10 @@ To migrate, update your app to ffe-core version 9.x
 <div class="ffe-grid__row ffe-grid__row--bg-sand ffe-grid__row--top-padding">
 <div class="ffe-grid__row-wrapper">
 <div class="ffe-grid__col--md-6">
-  <div class="ffe-grid__content"></div>
+<div class="ffe-grid__content"></div>
 </div>
 <div class="ffe-grid__col--md-6">
-  <div class="ffe-grid__content"></div>
+<div class="ffe-grid__content"></div>
 </div>
 </div>
 </div>

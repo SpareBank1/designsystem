@@ -1,12 +1,12 @@
 import React from 'react';
 import { bool, node, string } from 'prop-types';
-import hash from 'sdbm';
+import { v4 as hash } from 'uuid';
 import classNames from 'classnames';
 
 export default function CheckBox(props) {
     const { children, inline, invalid, label, noMargins, ...rest } = props;
 
-    const id = props.id || `checkbox-${hash(rest.name || '')}`;
+    const id = props.id || `checkbox-${hash()}`;
 
     return (
         <span>
@@ -32,8 +32,6 @@ export default function CheckBox(props) {
 }
 
 CheckBox.propTypes = {
-    /** Name of input field */
-    name: string.isRequired,
     /**
      * @deprecated
      * Use `children` instead

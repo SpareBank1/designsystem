@@ -3,32 +3,49 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.2.5"></a>
+
+## [1.2.5](***REMOVED***) (2018-01-10)
+
+**Note:** Version bump only for package ffe-radio-button-react
+
+<a name="1.2.4"></a>
+
+## [1.2.4](***REMOVED***) (2018-01-10)
+
+### Bug Fixes
+
+* **ffe-radio-button-react:** Repalce sdbm with uuid ([5ba9639](***REMOVED***))
+
 <a name="1.2.3"></a>
+
 ## 1.2.3 (2018-01-10)
-
-
-
 
 **Note:** Version bump only for package ffe-radio-button-react
 
 # Changelog
 
 ## v1.2.2
+
 * Move react and react-dom to devDependencies
 
 ## v1.2.1
+
 * Use PropTypes from prop-types package
 
 ## v1.2.0 (17.7.2017)
+
 * Fixed: `aria-invalid` was not being set on `input`-elements.
 * Removed `aria-invalid` from `RadioButtonGroup`s fieldset.
 * `invalid` is an alias for `aria-invalid` either can be used and will produce the same result.
 * `aria-invalid`/`invalid` now accepts both boolean values and `true`/`false` as a string.
 
 ## v1.1.0 (22.5.2017)
+
 * Fixed invalid prop on radio button, radio button group and radio switch to handle the validation error state
 
 ## v1.0.0 (18.5.2017)
+
 * Potential breaking change! Styles sent to component could previously not be changed by consumer as this was stored only to state in the constructor. Refactored code to handle updating styles from consumer after initialization.
 * Added tooltip icon to toggle showing helping text when clicked
 

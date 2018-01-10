@@ -5,7 +5,6 @@ import { assert } from 'chai';
 import CreateCheckbox from '../docs/example-component';
 
 describe('<Checkbox />', () => {
-
     it('should render a input', () => {
         const wrapper = shallow(CreateCheckbox({}));
         assert.equal(wrapper.find('input').length, 1);
@@ -38,75 +37,116 @@ describe('<Checkbox />', () => {
     });
 
     it('should apply the same id to <label> and <input>', () => {
-        const wrapper = shallow(CreateCheckbox({ name: 'Some text goes here' }));
+        const wrapper = shallow(
+            CreateCheckbox({ name: 'Some text goes here' }),
+        );
 
         assert.equal(
             wrapper.find('label').prop('htmlFor'),
-            wrapper.find('input').prop('id')
+            wrapper.find('input').prop('id'),
         );
     });
 
     it('should support noMargins', () => {
         assert.equal(
-            shallow(CreateCheckbox({ noMargins: false })).find('.ffe-checkbox--no-margin').length,
-            0);
+            shallow(CreateCheckbox({ noMargins: false })).find(
+                '.ffe-checkbox--no-margin',
+            ).length,
+            0,
+        );
 
         assert.equal(
-            shallow(CreateCheckbox({ noMargins: true })).find('.ffe-checkbox--no-margin').length,
-            1);
+            shallow(CreateCheckbox({ noMargins: true })).find(
+                '.ffe-checkbox--no-margin',
+            ).length,
+            1,
+        );
     });
 
     it('should support inline', () => {
         assert.equal(
             shallow(CreateCheckbox()).find('.ffe-checkbox--inline').length,
-            1);
+            1,
+        );
 
         assert.equal(
-            shallow(CreateCheckbox({ inline: false })).find('.ffe-checkbox--inline').length,
-            0);
+            shallow(CreateCheckbox({ inline: false })).find(
+                '.ffe-checkbox--inline',
+            ).length,
+            0,
+        );
 
         assert.equal(
-            shallow(CreateCheckbox({ inline: true })).find('.ffe-checkbox--inline').length,
-            1);
+            shallow(CreateCheckbox({ inline: true })).find(
+                '.ffe-checkbox--inline',
+            ).length,
+            1,
+        );
     });
 
     it('should support invalid', () => {
-        assert.equal(shallow(CreateCheckbox({ invalid: false })).find('input').prop('aria-invalid'), 'false');
-        assert.equal(shallow(CreateCheckbox({ invalid: true })).find('input').prop('aria-invalid'), 'true');
+        assert.equal(
+            shallow(CreateCheckbox({ invalid: false }))
+                .find('input')
+                .prop('aria-invalid'),
+            'false',
+        );
+        assert.equal(
+            shallow(CreateCheckbox({ invalid: true }))
+                .find('input')
+                .prop('aria-invalid'),
+            'true',
+        );
     });
 
     it('setting "aria-invalid" should override "invalid"', () => {
         assert.equal(
-            shallow(CreateCheckbox({ invalid: true, 'aria-invalid': 'false' })).find('input').prop('aria-invalid'),
-            'false'
+            shallow(CreateCheckbox({ invalid: true, 'aria-invalid': 'false' }))
+                .find('input')
+                .prop('aria-invalid'),
+            'false',
         );
 
         assert.equal(
-            shallow(CreateCheckbox({ invalid: false, 'aria-invalid': 'true' })).find('input').prop('aria-invalid'),
-            'true'
+            shallow(CreateCheckbox({ invalid: false, 'aria-invalid': 'true' }))
+                .find('input')
+                .prop('aria-invalid'),
+            'true',
         );
 
         assert.equal(
-            shallow(CreateCheckbox({ invalid: false, 'aria-invalid': 'spelling' })).find('input').prop('aria-invalid'),
-            'spelling'
+            shallow(
+                CreateCheckbox({ invalid: false, 'aria-invalid': 'spelling' }),
+            )
+                .find('input')
+                .prop('aria-invalid'),
+            'spelling',
         );
 
         assert.equal(
-            shallow(CreateCheckbox({ invalid: false, 'aria-invalid': 'grammar' })).find('input').prop('aria-invalid'),
-            'grammar'
+            shallow(
+                CreateCheckbox({ invalid: false, 'aria-invalid': 'grammar' }),
+            )
+                .find('input')
+                .prop('aria-invalid'),
+            'grammar',
         );
     });
 
     it('should set arbitrary props (rest) on input', () => {
-        const wrapper = shallow(CreateCheckbox({
-            name: 'checkbox',
-            iDontReallyDoAnything: 'false',
-            tabIndex: -1
-        }));
+        const wrapper = shallow(
+            CreateCheckbox({
+                name: 'checkbox',
+                iDontReallyDoAnything: 'false',
+                tabIndex: -1,
+            }),
+        );
 
         assert.equal(wrapper.find('input').prop('name'), 'checkbox');
-        assert.equal(wrapper.find('input').prop('iDontReallyDoAnything'), 'false');
+        assert.equal(
+            wrapper.find('input').prop('iDontReallyDoAnything'),
+            'false',
+        );
         assert.equal(wrapper.find('input').prop('tabIndex'), -1);
     });
-
 });

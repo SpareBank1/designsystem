@@ -13,8 +13,8 @@ project. More specifically, the CSS classes related to checkboxes in ffe-core
 should be in your CSS Object Model when using this component:
 
 ```less
-@import 'npm://ffe-form/less/checkbox';   // Less with less-plugin-npm-import
-@import '~ffe-form/less/checkbox';        // Less with webpack and less-loader
+@import 'npm://ffe-form/less/checkbox'; // Less with less-plugin-npm-import
+@import '~ffe-form/less/checkbox'; // Less with webpack and less-loader
 ```
 
 ## Usage

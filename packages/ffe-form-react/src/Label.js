@@ -2,21 +2,16 @@ import React from 'react';
 import { bool, node, string } from 'prop-types';
 import classNames from 'classnames';
 
-const Label = ({
-    block,
-    children,
-    className,
-    ...rest
-}) => (
+const Label = ({ block, children, className, ...rest }) => (
     <label
-        className={ classNames(
+        className={classNames(
             'ffe-form-label',
             { 'ffe-form-label--block': block },
-            className
+            className,
         )}
-        { ...rest }
+        {...rest}
     >
-        { children }
+        {children}
     </label>
 );
 

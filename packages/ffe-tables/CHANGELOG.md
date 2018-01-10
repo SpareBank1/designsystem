@@ -1,4 +1,15 @@
-# Changelog
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+       <a name="8.1.1"></a>
+
+## 8.1.1 (2018-01-10)
+
+**Note:** Version bump only for package ffe-tables
+
+       # Changelog
 
 ## v.8.1.0
 
@@ -7,7 +18,7 @@
 
 ## v.8.0.1
 
-* `--text-left` now also works with `--condensed` 
+* `--text-left` now also works with `--condensed`
 
 ## v.8.0.0
 
@@ -26,8 +37,8 @@
 ## v.6.0.0
 
 * BREAKING: Refactored styling for small screens
-	* Removed the `--vertical` modifier - vertical view is now default on small screens
-	* Added `--columns-sm` modifier to preserve the column layout which was previously default on small screens
+  _ Removed the `--vertical` modifier - vertical view is now default on small screens
+  _ Added `--columns-sm` modifier to preserve the column layout which was previously default on small screens
 * Fixed text color for table headers displayed as pseudo elements
 * Added `--hide-sm` modifier to support hiding columns on small screens
 * Added margin-bottom to `.ffe-responsive-table__content` on small screens to separate cells more clearly
@@ -71,11 +82,10 @@ To migrate, update your app to ffe-core version 9.x
 ## v.4.0.0
 
 * BREAKING: Refactored styling to reflect design guidelines
-	* More vertical padding in table rows by default
-	* Added default horizontal padding in table cells on small screens
-	* Changed th color to ffe-blue-royal
-	* Changed background colors in expandable rows
-	* Different border and text styling in table footers
+  _ More vertical padding in table rows by default
+  _ Added default horizontal padding in table cells on small screens
+  _ Changed th color to ffe-blue-royal
+  _ Changed background colors in expandable rows \* Different border and text styling in table footers
 * Rewrote styling to less syntax
 * Specified icon height to fix IE bug where chevron causes table row height issues
 * Added `--condensed` modifier to decrease default vertical padding in table rows
@@ -87,28 +97,30 @@ To migrate, update your app to ffe-core version 9.x
 ## v.3.0.0
 
 * BREAKING: Removes element styling on table elements.
-All table child elements MUST HAVE its corresponding classname. Take a look at the migrationg guide og the examples
+  All table child elements MUST HAVE its corresponding classname. Take a look at the migrationg guide og the examples
 * Adds styling for `ffe-sortable-table` and `ffe-expandable-row`.
 * Adds a `--collapsed` modifier to `ffe-responsive-table__row` and `ffe-responsive-table__cell` to prevent them taking
-up any space. Used on the `.expand-icon` and the row that holds the content to be expanded.
+  up any space. Used on the `.expand-icon` and the row that holds the content to be expanded.
 * Adds a `--text-right` modifier to `ffe-responsive-table__content`
 
-## Migrating to v.3.0.0 ##
+## Migrating to v.3.0.0
+
 Make sure all table child elements have the following classnames:
+
 ```
 <caption
-    class="ffe-responsive-table__caption">
+   class="ffe-responsive-table__caption">
 <thead
-    class="ffe-responsive-table__head">
+   class="ffe-responsive-table__head">
 <tr
-    class="ffe-responsive-table__row">
+   class="ffe-responsive-table__row">
 <td
-    class="ffe-responsive-table__cell">
+   class="ffe-responsive-table__cell">
 <footer
-    class="ffe-responsive-table__footer">
+   class="ffe-responsive-table__footer">
 ```
 
-`<tbody>`  (still) don't require classname
+`<tbody>` (still) don't require classname
 
 **Visual diff**
 

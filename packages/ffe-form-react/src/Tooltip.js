@@ -13,7 +13,7 @@ class Tooltip extends React.Component {
     }
 
     onToggle(evt) {
-        this.setState({ isOpen : !this.state.isOpen });
+        this.setState({ isOpen: !this.state.isOpen });
         if (this.props.onClick) {
             this.props.onClick(evt);
         }
@@ -31,33 +31,28 @@ class Tooltip extends React.Component {
         const { isOpen } = this.state;
 
         return (
-            <span { ...rest }>
+            <span {...rest}>
                 <button
-                    aria-label={ ariaLabel }
-                    className={classNames(
-                        'ffe-tooltip__icon',
-                        { 'ffe-tooltip__icon--active': isOpen}
-                    )}
-                    onClick={ this.onToggle }
+                    aria-label={ariaLabel}
+                    className={classNames('ffe-tooltip__icon', {
+                        'ffe-tooltip__icon--active': isOpen,
+                    })}
+                    onClick={this.onToggle}
                     type="button"
                     tabIndex={tabIndex}
                 >
                     ?
                 </button>
-                {children &&
-                    <Collapse isOpened={ isOpen } aria-expanded={ String(isOpen) }>
+                {children && (
+                    <Collapse isOpened={isOpen} aria-expanded={String(isOpen)}>
                         <div
-                            className={ classNames(
-                                'ffe-small-text',
-                                className
-                            )}
+                            className={classNames('ffe-small-text', className)}
                         >
-                            { children }
+                            {children}
                         </div>
                     </Collapse>
-                }
+                )}
             </span>
-
         );
     }
 }
