@@ -6,7 +6,7 @@
         "build": "babel -d lib --ignore=*.test.js src",
         "pretest": "eslint src/",
         "lint:fix": "eslint --fix src/",
-        "test": "jest src",
+        "test": "jest",
         "test:watch": "jest src --watch",
         "posttest": "nsp check",
         "prepublishOnly": "npm run build"
