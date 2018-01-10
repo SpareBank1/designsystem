@@ -82,5 +82,10 @@ module.exports = {
             name: 'Checkbox',
             components: 'packages/ffe-checkbox-react/src/[A-Z]+([A-Za-z]).js',
         },
+        {
+            name: 'Datepicker',
+            components:
+                'packages/ffe-datepicker-react/src/**/{Datepicker,Calendar,Input}.js',
+        },
     ],
 };

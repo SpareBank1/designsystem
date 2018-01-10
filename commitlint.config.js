@@ -22,6 +22,8 @@ module.exports = {
                 'ffe-context-message-react',
                 'ffe-core',
                 'ffe-core-react',
+                'ffe-datepicker',
+                'ffe-datepicker-react',
                 'ffe-form',
                 'ffe-form-react',
                 'ffe-grid',

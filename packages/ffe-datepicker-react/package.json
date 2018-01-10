@@ -1,0 +1,50 @@
+{
+    "name": "ffe-datepicker-react",
+    "version": "2.7.1",
+    "main": "lib/ffe-datepicker-react.js",
+    "license": "UNLICENSED",
+    "scripts": {
+        "build": "babel -d lib/. --ignore=*.test.js src/.",
+        "watch": "onchange 'src/**/*.js' -- npm run build",
+        "pretest": "eslint src/.",
+        "lint": "npm run pretest",
+        "test":
+            "mocha --require src/util/test-setup.js --compilers js:babel-core/register 'src/**/*.test.js'",
+        "posttest": "nsp check",
+        "test:watch": "npm test -- -w",
+        "start":
+            "echo \"No local demo available - use the monorepo's npm start.\""
+    },
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-plugin-transform-object-rest-spread": "^6.26.0",
+        "babel-preset-env": "^1.6.1",
+        "babel-preset-react": "^6.24.1",
+        "chai": "^4.1.2",
+        "chai-enzyme": "1.0.0-beta.0",
+        "enzyme": "^3.1.0",
+        "enzyme-adapter-react-16": "^1.0.2",
+        "eslint": "^3.0.0",
+        "jsdom": "^11.3.0",
+        "mocha": "^4.0.1",
+        "nsp": "^2.8.1",
+        "onchange": "^3.2.1",
+        "react": "^16.0.0",
+        "react-dom": "^16.0.0",
+        "react-test-renderer": "^16.0.0",
+        "sinon": "^4.0.2",
+        "sinon-chai": "^2.14.0"
+    },
+    "files": ["lib", "*.js"],
+    "peerDependencies": {
+        "ffe-datepicker": "3.x - 4.x",
+        "ffe-form": "2.x - 8.x",
+        "react": "15.x || 16.x"
+    },
+    "dependencies": {
+        "classnames": "^2.2.5",
+        "ffe-datepicker": "^4.2.3",
+        "prop-types": "15.x",
+        "uuid": "^3.1.0"
+    }
+}
