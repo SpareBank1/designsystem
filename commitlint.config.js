@@ -24,6 +24,7 @@ module.exports = {
                 'ffe-core-react',
                 'ffe-datepicker',
                 'ffe-datepicker-react',
+                'ffe-details-list',
                 'ffe-form',
                 'ffe-form-react',
                 'ffe-grid',
