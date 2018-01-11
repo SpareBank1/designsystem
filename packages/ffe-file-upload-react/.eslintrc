@@ -1,0 +1,10 @@
+{
+    "extends": "ffe",
+    "parser": "babel-eslint",
+    "plugins": [
+        "jsx-a11y"
+    ],
+    "env": {
+        "mocha": true
+    }
+}
