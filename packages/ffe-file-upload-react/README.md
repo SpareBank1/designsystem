@@ -1,7 +1,8 @@
 # ffe-file-upload-react
-Upload file button with validation and list of uploaded files. 
 
-*NB! `FileReader` is not supported in IE9 or below so this component will not work for older browsers(http://caniuse.com/#search=filereader)*
+Upload file button with validation and list of uploaded files.
+
+_NB! `FileReader` is not supported in IE9 or below so this component will not work for older browsers(http://caniuse.com/#search=filereader)_
 
 ## Install
 
@@ -35,17 +36,27 @@ const Example = () => {
 
 The components id will be used to associate the input to the label. The input gets its id from props and the label will get the `id + "-label"`.
 
-The passed `onFilesSelected` function will be called with `FileList`-object containing the `File`-objects the user selected. 
+The passed `onFilesSelected` function will be called with `FileList`-object containing the `File`-objects the user selected.
+
 * FileList - https://developer.mozilla.org/en-US/docs/Web/API/FileList
 * File - https://developer.mozilla.org/en-US/docs/Web/API/File
 
 ## Examples
+
 ### Example with redux-saga
+
 ```javascript
 //action.js
-export const fraudFilesUploaded = (files) => ({ type: 'DOCUMENT_UPLOADED', files: files });
-export const fraudFileRemoved = (file) => ({ type: 'DOCUMENT_REMOVED', file: file });
+export const fraudFilesUploaded = files => ({
+    type: 'DOCUMENT_UPLOADED',
+    files: files,
+});
+export const fraudFileRemoved = file => ({
+    type: 'DOCUMENT_REMOVED',
+    file: file,
+});
 ```
+
 ```javascript
 //feature.js
 ...
@@ -57,6 +68,7 @@ export const fraudFileRemoved = (file) => ({ type: 'DOCUMENT_REMOVED', file: fil
 />
 ...
 ```
+
 ```javascript
 //saga.js
 import { getFileContent } from 'ffe-file-upload-react';
@@ -79,7 +91,9 @@ export function* documentUploadedSaga() {
     yield* takeEvery('DOCUMENT_UPLOADED', documentUploaded);
 }
 ```
+
 ### Example with async await
+
 ```javascript
 import { getFileContent } from 'ffe-file-upload-react';
 
@@ -91,8 +105,9 @@ const onFilesSelected = async function(files) {
         // do something with fileContent
     }
     console.log(this.state);
-}
+};
 ```
+
 ```javascript
 //feature.js
 ...
@@ -105,7 +120,9 @@ const onFilesSelected = async function(files) {
 ```
 
 ## Doing changes
+
 After cloning the project run this to download dependencies and start the local server
+
 ```
 $ npm install && npm start
 ```

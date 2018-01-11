@@ -1,10 +1,5 @@
-import React  from 'react';
-import {
-    array,
-    bool,
-    func,
-    string as stringType
-} from 'prop-types';
+import React, { Fragment } from 'react';
+import { array, bool, func, string as stringType } from 'prop-types';
 
 class FileUpload extends React.Component {
     constructor(props) {
@@ -13,7 +8,9 @@ class FileUpload extends React.Component {
         this.onFilesSelected = this.onFilesSelected.bind(this);
         this.onFileDeleted = this.onFileDeleted.bind(this);
         this.setFileInputElement = this.setFileInputElement.bind(this);
-        this.triggerUploadFileNativeHandler = this.triggerUploadFileNativeHandler.bind(this);
+        this.triggerUploadFileNativeHandler = this.triggerUploadFileNativeHandler.bind(
+            this,
+        );
     }
 
     setFileInputElement(element) {
@@ -30,13 +27,14 @@ class FileUpload extends React.Component {
 
     onFilesSelected(event) {
         this.props.onFilesSelected(event.target.files);
-
     }
 
     onFileDeleted(event) {
         this.props.onFileDeleted(
-            this.props.selectedFiles
-                .find(file => file.name === event.target.id));
+            this.props.selectedFiles.find(
+                file => file.name === event.target.id,
+            ),
+        );
     }
 
     render() {
@@ -49,56 +47,79 @@ class FileUpload extends React.Component {
             multiple,
             errorMessage,
             infoMessage,
-            successMessage
+            successMessage,
         } = this.props;
 
         return (
             <div className="ffe-file-upload">
                 <button
                     className="ffe-file-upload__button"
-                    aria-invalid={ String(!!errorMessage) }
-                    onClick={ this.triggerUploadFileNativeHandler }
+                    aria-invalid={String(!!errorMessage)}
+                    onClick={this.triggerUploadFileNativeHandler}
                 >
                     <span className="ffe-file-upload__button__label-icon" />
-                    <span id={`${id}-label`}>{ label }</span>
+                    <span id={`${id}-label`}>{label}</span>
                 </button>
                 <input
-                    id={ id }
+                    id={id}
                     type="file"
-                    accept={ accept }
-                    multiple={ multiple }
-                    ref={ this.setFileInputElement }
-                    onChange={ this.onFilesSelected }
-                    aria-labelledby={ `${id}-label` }
+                    accept={accept}
+                    multiple={multiple}
+                    ref={this.setFileInputElement}
+                    onChange={this.onFilesSelected}
+                    aria-labelledby={`${id}-label`}
                 />
 
-                { !errorMessage && successMessage && <div className="ffe-field-success-message">{ successMessage }</div> }
-                { errorMessage && !Array.isArray(errorMessage) && <div className="ffe-field-error-message">{ errorMessage }</div> }
-                { errorMessage && Array.isArray(errorMessage) && errorMessage.map((message, index) =>
-                    <div key={ index } className="ffe-field-error-message">{ message }</div>
+                {!errorMessage &&
+                    successMessage && (
+                        <div className="ffe-field-success-message">
+                            {successMessage}
+                        </div>
+                    )}
+                {errorMessage &&
+                    !Array.isArray(errorMessage) && (
+                        <div className="ffe-field-error-message">
+                            {errorMessage}
+                        </div>
+                    )}
+                {errorMessage &&
+                    Array.isArray(errorMessage) &&
+                    errorMessage.map((message, index) => (
+                        <div key={index} className="ffe-field-error-message">
+                            {message}
+                        </div>
+                    ))}
+                {infoMessage && (
+                    <div className="ffe-field-info-message">{infoMessage}</div>
                 )}
-                { infoMessage && <div className="ffe-field-info-message">{ infoMessage }</div> }
 
-                { selectedFiles && selectedFiles.length > 0 &&
-                <div>
-                    <div className="ffe-file-upload__filename__title">{ selectedFilesHeaderLabel }</div>
-                    <ul className="ffe-file-upload__selected-files">
-                        { selectedFiles.map((file, index) => (
-                            <li key={ index }>
-                                <div className="ffe-file-upload__filename">{ file.name }</div>
-                                <div className="ffe-file-upload__file-size">
-                                    { `${Math.round(file.size / 1024)}kB` }
-                                </div>
-                                <button
-                                    id={ file.name }
-                                    className="ffe-file-upload__delete-button"
-                                    onClick={ this.onFileDeleted }
-                                />
-                            </li>
-                        )) }
-                    </ul>
-                </div>
-                }
+                {selectedFiles &&
+                    selectedFiles.length > 0 && (
+                        <Fragment>
+                            <div className="ffe-file-upload__filename__title">
+                                {selectedFilesHeaderLabel}
+                            </div>
+                            <ul className="ffe-file-upload__selected-files">
+                                {selectedFiles.map((file, index) => (
+                                    <li key={index}>
+                                        <div className="ffe-file-upload__filename">
+                                            {file.name}
+                                        </div>
+                                        <div className="ffe-file-upload__file-size">
+                                            {`${Math.round(
+                                                file.size / 1024,
+                                            )}kB`}
+                                        </div>
+                                        <button
+                                            id={file.name}
+                                            className="ffe-file-upload__delete-button"
+                                            onClick={this.onFileDeleted}
+                                        />
+                                    </li>
+                                ))}
+                            </ul>
+                        </Fragment>
+                    )}
             </div>
         );
     }
@@ -137,7 +158,7 @@ FileUpload.propTypes = {
     selectedFilesHeaderLabel: stringType,
     errorMessage: stringType,
     infoMessage: stringType,
-    successMessage: stringType
+    successMessage: stringType,
 };
 
 export default FileUpload;

@@ -1,8 +1,9 @@
 import React from 'react';
-import {assert} from 'chai';
+import { assert } from 'chai';
 import sinon from 'sinon';
-import {shallow} from 'enzyme';
-import FileUpload from './FileUpload';
+import { shallow } from 'enzyme';
+
+import FileUpload from '../src/FileUpload';
 
 describe('<FileUpload/>', () => {
     let component;
@@ -21,9 +22,9 @@ describe('<FileUpload/>', () => {
                     id="file-upload"
                     label="label"
                     selectedFiles={[]}
-                    onFilesSelected={ onFilesSelected }
-                    onFileDeleted={ onFileDeleted }
-                />
+                    onFilesSelected={onFilesSelected}
+                    onFileDeleted={onFileDeleted}
+                />,
             );
         });
 
@@ -33,7 +34,10 @@ describe('<FileUpload/>', () => {
         });
 
         it('should render input label', () => {
-            assert.equal(component.find('.ffe-file-upload__button').text(), 'label');
+            assert.equal(
+                component.find('.ffe-file-upload__button').text(),
+                'label',
+            );
         });
 
         it('should add label as aria-label', () => {
@@ -43,10 +47,8 @@ describe('<FileUpload/>', () => {
         it('should extract and return files when user finishes selecting files', () => {
             component.find('#file-upload').simulate('change', {
                 target: {
-                    files: [
-                        {name: 'filename'}
-                    ]
-                }
+                    files: [{ name: 'filename' }],
+                },
             });
 
             assert.isTrue(onFilesSelected.calledOnce);
@@ -60,26 +62,26 @@ describe('<FileUpload/>', () => {
                     id="file-upload"
                     label="label"
                     selectedFiles={[]}
-                    onFilesSelected={ onFilesSelected }
-                    onFileDeleted={ onFileDeleted }
+                    onFilesSelected={onFilesSelected}
+                    onFileDeleted={onFileDeleted}
                     errorMessage="Wrong file format"
-                />
+                />,
             );
         });
 
         it('should render error message when invalid', () => {
             assert.equal(
                 component.find('.ffe-field-error-message').text(),
-                'Wrong file format'
+                'Wrong file format',
             );
         });
 
         it('should set aria-invalid on button when invalid', () => {
             assert.equal(
                 'true',
-                component
-                    .find('.ffe-file-upload__button')
-                    .props()['aria-invalid']
+                component.find('.ffe-file-upload__button').props()[
+                    'aria-invalid'
+                ],
             );
         });
     });
@@ -92,12 +94,12 @@ describe('<FileUpload/>', () => {
                     label="label"
                     selectedFilesHeaderLabel="files header"
                     selectedFiles={[
-                        {name: 'file.pdf', size: 1024},
-                        {name: 'image.jpg', size: 1024}
+                        { name: 'file.pdf', size: 1024 },
+                        { name: 'image.jpg', size: 1024 },
                     ]}
-                    onFilesSelected={ onFilesSelected }
-                    onFileDeleted={ onFileDeleted }
-                />
+                    onFilesSelected={onFilesSelected}
+                    onFileDeleted={onFileDeleted}
+                />,
             );
         });
 
@@ -108,29 +110,39 @@ describe('<FileUpload/>', () => {
 
             files.forEach(file => {
                 assert.isTrue(file.find('.ffe-file-upload__filename').exists());
-                assert.match(file.find('.ffe-file-upload__filename').text(), /^\w+\.\w+$/);
-                assert.isTrue(file.find('.ffe-file-upload__file-size').exists());
-                assert.equal('1kB', file.find('.ffe-file-upload__file-size').text());
-                assert.isTrue(file.find('.ffe-file-upload__delete-button').exists());
+                assert.match(
+                    file.find('.ffe-file-upload__filename').text(),
+                    /^\w+\.\w+$/,
+                );
+                assert.isTrue(
+                    file.find('.ffe-file-upload__file-size').exists(),
+                );
+                assert.equal(
+                    '1kB',
+                    file.find('.ffe-file-upload__file-size').text(),
+                );
+                assert.isTrue(
+                    file.find('.ffe-file-upload__delete-button').exists(),
+                );
             });
         });
 
         it('should render file list header', () => {
             assert.equal(
                 component.find('.ffe-file-upload__filename__title').text(),
-                'files header'
+                'files header',
             );
         });
 
         it('should call onFileDeleted when delete button is clicked', () => {
-            const deletebuttons = component.find('.ffe-file-upload__delete-button');
-            deletebuttons
-                .first()
-                .simulate('click', {
-                    target: {
-                        id: "file.pdf"
-                    }
-                });
+            const deletebuttons = component.find(
+                '.ffe-file-upload__delete-button',
+            );
+            deletebuttons.first().simulate('click', {
+                target: {
+                    id: 'file.pdf',
+                },
+            });
 
             assert.isTrue(onFileDeleted.calledOnce);
         });
