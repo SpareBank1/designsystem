@@ -1,3 +1,10 @@
 {
-  "extends": "ffe"
+  "overrides": [
+    {
+      "files": [ "src/*.spec.js"],
+      "env": {
+          "jest": true
+      }
+    }
+  ]
 }

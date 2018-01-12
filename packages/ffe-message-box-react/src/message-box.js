@@ -1,5 +1,6 @@
-import React  from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 function MessageBox(props) {
     const {
@@ -7,56 +8,62 @@ function MessageBox(props) {
         title,
         icon,
         content,
-        style,
         children,
-        className = ''
+        className = '',
+        ...rest
     } = props;
 
     return (
-        <div className={`ffe-message-box ${className}`} style={ style }>
+        <div className={classNames('ffe-message-box', className)} {...rest}>
             <span
-                className={`
-                    ffe-message-box__icon
-                    ffe-message-box__icon--${type}
-                `}
+                className={classNames(
+                    'ffe-message-box__icon',
+                    `ffe-message-box__icon--${type}`,
+                )}
             >
-                { icon }
+                {icon}
             </span>
             <div
-                className={`
-                    ffe-message-box__box
-                    ffe-message-box__box--${type}
-                    `}
+                className={classNames(
+                    'ffe-message-box__box',
+                    `ffe-message-box__box--${type}`,
+                )}
             >
-                {title &&
-                    <div className={`ffe-h4 ffe-message-box__title--${type}`}>
-                        { title }
+                {title && (
+                    <div
+                        className={classNames(
+                            'ffe-h4',
+                            `ffe-message-box__title--${type}`,
+                        )}
+                    >
+                        {title}
                     </div>
-                }
-                { content &&
-                    <p className="ffe-body-text">
-                        { content }
-                    </p>
-                }
-                { !content && children }
+                )}
+                {content && <p className="ffe-body-text">{content}</p>}
+                {!content && children}
             </div>
         </div>
     );
 }
 
 MessageBox.propTypes = {
-    children: PropTypes.any,
+    /** The content of the message box */
+    children: PropTypes.node,
+    /** Any extra class names to the wrapping DOM node */
     className: PropTypes.string,
+    /**
+     * Deprecated. Use `children` instead.
+     * @deprecated
+     */
     content: PropTypes.node,
+    /** The icon to show. Has a default value for each message box type, but can be overridden */
     icon: PropTypes.node.isRequired,
     title: PropTypes.string,
-    style: PropTypes.object,
-    type: PropTypes.oneOf([
-        'success',
-        'error',
-        'tips',
-        'info',
-    ]),
+    /**
+     * Internal type enum for specifying the style of message box. Should not be used directly
+     * @ignore
+     */
+    type: PropTypes.oneOf(['success', 'error', 'tips', 'info']).isRequired,
 };
 
 export default MessageBox;
