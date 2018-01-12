@@ -1,0 +1,95 @@
+.ffe-message-box {
+    text-align: center;
+
+    &__box {
+        padding: @app-margin*2 @app-margin*2;
+        border-radius: 5px;
+
+        &--tips {
+            background-color: @ffe-sand;
+        }
+
+        &--info {
+            background-color: @ffe-blue-pale;
+        }
+
+        &--success {
+            background-color: @ffe-green-mint;
+        }
+
+        &--error {
+            background-color: @ffe-orange-salmon;
+        }
+
+        &--action {
+            background-color: @ffe-grey-cloud;
+        }
+    }
+
+    &__title {
+        &--success {
+            color: @ffe-black;
+        }
+
+        &--error {
+            color: @ffe-black;
+        }
+    }
+
+    &__list {
+        padding-left: 20px;
+        margin: 0;
+        line-height: 2;
+        text-align: left;
+    }
+
+    &__icon {
+        background-color: #FFF;
+        border-radius: 50%;
+        display: inline-block;
+        fill: #002776;
+        height: 80px;
+        margin-bottom: -16px;
+        padding: 10px;
+        padding-top: 20px;
+        position: relative;
+        top: 12px;
+        width: 80px;
+
+        &--error svg {
+            fill: @ffe-orange-fire;
+        }
+
+        &--info svg {
+            fill: @ffe-blue-royal;
+        }
+
+        &--success svg {
+            fill: @ffe-green-shamrock;
+        }
+
+        &--tips svg {
+            fill: @ffe-blue-royal;
+        }
+    }
+
+    @media print {
+        &__box {
+            border: 2px dashed @ffe-black;
+        }
+
+        &__icon {
+            border-bottom: 2px dashed @ffe-black;
+            margin-bottom: -33.5px;
+        }
+    }
+
+    &__link {
+        color: inherit;
+        text-decoration: underline;
+
+        &:hover, &:focus {
+            font-family: "MuseoSansRounded-700", arial, sans-serif;
+        }
+    }
+}
