@@ -1,6 +1,6 @@
 {
     "name": "ffe-decorators-react",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "",
     "main": "lib/index.js",
     "author": "SpareBank 1",
@@ -16,7 +16,9 @@
         "test:watch": "npm run tdd",
         "tdd": "jest --watch"
     },
-    "keywords": ["ffe"],
+    "keywords": [
+        "ffe"
+    ],
     "peerDependencies": {
         "react": "^15.4.2 || ^16.0.0"
     },
@@ -41,11 +43,13 @@
         "react-dom": "^16.2.0",
         "sinon": "^1.17.7"
     },
-    "files": ["lib", "*.js"],
+    "files": [
+        "lib",
+        "*.js"
+    ],
     "repository": {
         "type": "git",
-        "url":
-            "***REMOVED***"
+        "url": "***REMOVED***"
     },
     "jest": {
         "setupTestFrameworkScriptFile": "./test-setup.js"
