@@ -1,3 +1,33 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+<a name="3.0.0"></a>
+# 3.0.0 (2018-01-12)
+
+
+### Chores
+
+* **ffe-dropdown-react:** Import ffe-dropdown-react ([7ba8e47](***REMOVED***))
+
+
+### BREAKING CHANGES
+
+* **ffe-dropdown-react:** Simplify the ffe-dropdown-react implementation.
+
+This commit simplifies the component, and leaves more of the
+compositional power to the consumer.
+
+In order to migrate to this new major, the consumer should wrap
+their existing component in `ffe-form-react`'s `InputGroup`
+component. This will provide most of the functionality that this
+major removes from `ffe-dropdown-react`. Please refer to the
+documentation for new usage information.
+
+
+
+
 # Changelog
 ## 2.9.2
 * Setting the default behaviour to tabbable.
