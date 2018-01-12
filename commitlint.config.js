@@ -27,6 +27,7 @@ module.exports = {
                 'ffe-decorators-react',
                 'ffe-details-list',
                 'ffe-dropdown-react',
+                'ffe-expandable-react',
                 'ffe-form',
                 'ffe-form-react',
                 'ffe-grid',
