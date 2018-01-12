@@ -28,6 +28,7 @@ module.exports = {
                 'ffe-details-list',
                 'ffe-dropdown-react',
                 'ffe-expandable-react',
+                'ffe-file-upload-react',
                 'ffe-form',
                 'ffe-form-react',
                 'ffe-grid',

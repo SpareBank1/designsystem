@@ -89,5 +89,10 @@ module.exports = {
             components:
                 'packages/ffe-datepicker-react/src/**/{Datepicker,Calendar,Input}.js',
         },
+        {
+            name: 'Filopplasting',
+            components:
+                'packages/ffe-file-upload-react/src/[A-Z]+([A-Za-z]).js',
+        },
     ],
 };
