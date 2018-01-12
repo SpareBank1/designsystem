@@ -60,9 +60,11 @@ module.exports = {
                 'packages/ffe-context-message-react/src/[A-Z]+([A-Za-z]).js',
         },
         {
-            name: 'Søkbar dropdown',
-            components:
+            name: 'Dropdowns',
+            components: () => [
                 'packages/ffe-searchable-dropdown-react/src/SearchableDropdown.js',
+                'packages/ffe-dropdown-react/src/Dropdown.js',
+            ],
         },
         {
             name: 'Grid',

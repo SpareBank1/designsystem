@@ -1,0 +1,1 @@
+export { Collapse, UnmountClosed } from 'react-collapse';
