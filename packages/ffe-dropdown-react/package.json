@@ -1,0 +1,36 @@
+{
+    "name": "ffe-dropdown-react",
+    "version": "2.9.2",
+    "main": "lib/Dropdown.js",
+    "license": "UNLICENSED",
+    "scripts": {
+        "build": "babel --ignore spec.js -d lib src",
+        "lint": "eslint src",
+        "start":
+            "echo \"No local demo available - use the monorepo's npm start.\"",
+        "test": "jest",
+        "test:watch": "jest --watch"
+    },
+    "peerDependencies": {
+        "ffe-form": "1.x - 8.x"
+    },
+    "dependencies": {
+        "classnames": "^2.2.5"
+    },
+    "devDependencies": {
+        "babel-cli": "6.7.5",
+        "babel-plugin-transform-object-rest-spread": "^6.23.0",
+        "babel-preset-react": "^6.5.0",
+        "enzyme": "^3.3.0",
+        "enzyme-adapter-react-16": "^1.1.1",
+        "eslint": "^3.12.2",
+        "jest": "^22.0.5",
+        "react": "^16.2.0",
+        "react-addons-test-utils": "^15.0.1",
+        "react-dom": "^16.2.0"
+    },
+    "files": ["lib", "*.js"],
+    "jest": {
+        "setupTestFrameworkScriptFile": "./test-setup.js"
+    }
+}

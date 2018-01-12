@@ -10,7 +10,8 @@
         "type": "git",
         "url": "***REMOVED***"
     },
-    "homepage": "***REMOVED***",
+    "homepage":
+        "***REMOVED***",
     "author": "SpareBank 1",
     "license": "UNLICENSED",
     "peerDependencies": {
