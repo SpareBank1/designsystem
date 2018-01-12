@@ -1,12 +1,20 @@
 import React, { Component } from 'react';
 
 // The easing function used. It's pretty similar to the `ease-out` preset in CSS.
-function easeOutCubic(currentIteration, startValue, changeInValue, totalIterations) {
-    return (changeInValue * ((((currentIteration / totalIterations) - 1) ** 3) + 1)) + startValue;
+function easeOutCubic(
+    currentIteration,
+    startValue,
+    changeInValue,
+    totalIterations,
+) {
+    return (
+        changeInValue * ((currentIteration / totalIterations - 1) ** 3 + 1) +
+        startValue
+    );
 }
 
 // This higher order component eases properties of the component it decorates whenever they change.
-export default (properties = {}) => (TargetComponent) =>
+export default (properties = {}) => TargetComponent =>
     // The properties argument is an object like this:
     // {
     //      somePropertyToEase: {
@@ -22,8 +30,15 @@ export default (properties = {}) => (TargetComponent) =>
         // That tolerance is the absolute value of the difference between the eased values divided by expected FPS.
         static withinTolerance(currentValue, fromValue, toValue) {
             const isGrowing = toValue > fromValue;
-            const tolerance = Math.abs(isGrowing ? toValue - fromValue : fromValue - toValue) / 60;
-            return Math.abs(isGrowing ? toValue - currentValue : currentValue - toValue) < tolerance;
+            const tolerance =
+                Math.abs(
+                    isGrowing ? toValue - fromValue : fromValue - toValue,
+                ) / 60;
+            return (
+                Math.abs(
+                    isGrowing ? toValue - currentValue : currentValue - toValue,
+                ) < tolerance
+            );
         }
 
         constructor(props) {
@@ -32,7 +47,7 @@ export default (properties = {}) => (TargetComponent) =>
             if (!properties || !Object.keys(properties).length) {
                 throw new Error(
                     'The second argument to easeProperties must be an object with at least one property to ' +
-                    'ease.',
+                        'ease.',
                 );
             }
 
@@ -41,7 +56,8 @@ export default (properties = {}) => (TargetComponent) =>
             // Finally, the properties are reduced back into an object again.
             this.state = Object.entries(properties)
                 .map(([propName, propOptions]) => {
-                    const hasInitialValue = propOptions.initialValue !== undefined;
+                    const hasInitialValue =
+                        propOptions.initialValue !== undefined;
                     const currentValue = hasInitialValue
                         ? propOptions.initialValue
                         : props[propName];
@@ -56,10 +72,13 @@ export default (properties = {}) => (TargetComponent) =>
                         toValue: props[propName],
                     };
                 })
-                .reduce((finalState, propertyState) => ({
-                    ...finalState,
-                    [propertyState.propName]: propertyState,
-                }), {});
+                .reduce(
+                    (finalState, propertyState) => ({
+                        ...finalState,
+                        [propertyState.propName]: propertyState,
+                    }),
+                    {},
+                );
         }
 
         // When the component is mounted, we need to check if there's any properties set with an initial value. If so,
@@ -67,14 +86,22 @@ export default (properties = {}) => (TargetComponent) =>
         // requestAnimationFrame and saving its ID to state.
         componentWillMount() {
             const nextState = Object.entries(this.state)
-                .filter(([, propertyProps]) => propertyProps.fromValue !== propertyProps.toValue)
-                .reduce((state, [propName]) => ({
-                    ...state,
-                    [propName]: {
-                        ...this.state[propName],
-                        rafId: window.requestAnimationFrame(this.nextFrame.bind(this, propName)),
-                    },
-                }), {});
+                .filter(
+                    ([, propertyProps]) =>
+                        propertyProps.fromValue !== propertyProps.toValue,
+                )
+                .reduce(
+                    (state, [propName]) => ({
+                        ...state,
+                        [propName]: {
+                            ...this.state[propName],
+                            rafId: window.requestAnimationFrame(
+                                this.nextFrame.bind(this, propName),
+                            ),
+                        },
+                    }),
+                    {},
+                );
 
             this.setState(nextState);
         }
@@ -84,11 +111,11 @@ export default (properties = {}) => (TargetComponent) =>
         // requesting a new one.
         componentWillReceiveProps(nextProps) {
             const nextState = Object.entries(nextProps)
-                .filter(([propName, propValue]) =>
-                    this.state[propName]
-                    && (
-                        propValue !== this.state[propName].currentValue || propValue !== this.props[propName]
-                    ),
+                .filter(
+                    ([propName, propValue]) =>
+                        this.state[propName] &&
+                        (propValue !== this.state[propName].currentValue ||
+                            propValue !== this.props[propName]),
                 )
                 .reduce((state, [propName, propValue]) => {
                     window.cancelAnimationFrame(this.state[propName].rafId);
@@ -98,7 +125,9 @@ export default (properties = {}) => (TargetComponent) =>
                             ...this.state[propName],
                             currentIteration: 0,
                             fromValue: this.state[propName].currentValue,
-                            rafId: window.requestAnimationFrame(this.nextFrame.bind(this, propName)),
+                            rafId: window.requestAnimationFrame(
+                                this.nextFrame.bind(this, propName),
+                            ),
                             toValue: propValue,
                         },
                     };
@@ -107,7 +136,9 @@ export default (properties = {}) => (TargetComponent) =>
         }
 
         componentWillUnmount() {
-            Object.values(this.state).forEach(value => window.cancelAnimationFrame(value.rafId));
+            Object.values(this.state).forEach(value =>
+                window.cancelAnimationFrame(value.rafId),
+            );
         }
 
         // This is the recursive tweening function. It calculates the next value by providing some values to an easing
@@ -121,9 +152,18 @@ export default (properties = {}) => (TargetComponent) =>
                 toValue,
             } = this.state[propName];
 
-            const nextValue = easeOutCubic(currentIteration, fromValue, toValue - fromValue, duration * 60);
+            const nextValue = easeOutCubic(
+                currentIteration,
+                fromValue,
+                toValue - fromValue,
+                duration * 60,
+            );
 
-            const done = EasePropertiesWrapper.withinTolerance(nextValue, fromValue, toValue);
+            const done = EasePropertiesWrapper.withinTolerance(
+                nextValue,
+                fromValue,
+                toValue,
+            );
 
             const nextState = {
                 currentValue: done ? toValue : nextValue,
@@ -131,17 +171,24 @@ export default (properties = {}) => (TargetComponent) =>
             };
 
             if (!done) {
-                nextState.rafId = window.requestAnimationFrame(() => this.nextFrame(propName));
+                nextState.rafId = window.requestAnimationFrame(() =>
+                    this.nextFrame(propName),
+                );
             }
-            this.setState({ [propName]: { ...this.state[propName], ...nextState } });
+            this.setState({
+                [propName]: { ...this.state[propName], ...nextState },
+            });
         }
 
         render() {
-            const easedProps = Object.entries(this.state)
-                .reduce((props, [name, value]) => ({ ...props, [name]: value.currentValue }), {});
-
-            return (
-                <TargetComponent {...this.props} {...easedProps} />
+            const easedProps = Object.entries(this.state).reduce(
+                (props, [name, value]) => ({
+                    ...props,
+                    [name]: value.currentValue,
+                }),
+                {},
             );
+
+            return <TargetComponent {...this.props} {...easedProps} />;
         }
     };
