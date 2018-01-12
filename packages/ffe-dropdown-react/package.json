@@ -1,13 +1,12 @@
 {
     "name": "ffe-dropdown-react",
-    "version": "3.0.0",
+    "version": "3.0.1",
     "main": "lib/Dropdown.js",
     "license": "UNLICENSED",
     "scripts": {
         "build": "babel --ignore spec.js -d lib src",
         "lint": "eslint src",
-        "start":
-            "echo \"No local demo available - use the monorepo's npm start.\"",
+        "start": "echo \"No local demo available - use the monorepo's npm start.\"",
         "test": "jest",
         "test:watch": "jest --watch"
     },
@@ -29,7 +28,10 @@
         "react-addons-test-utils": "^15.0.1",
         "react-dom": "^16.2.0"
     },
-    "files": ["lib", "*.js"],
+    "files": [
+        "lib",
+        "*.js"
+    ],
     "jest": {
         "setupTestFrameworkScriptFile": "./test-setup.js"
     }
