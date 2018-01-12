@@ -1,5 +1,4 @@
 {
-    "extends": "eslint-config-ffe",
     "env": {
         "browser": true,
         "jest": true
