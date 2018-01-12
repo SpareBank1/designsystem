@@ -1,9 +1,10 @@
 {
     "name": "ffe-file-upload-react",
-    "version": "1.2.0",
-    "description":
-        "Upload file button with validation and list of uploaded files.",
-    "keywords": ["ffe"],
+    "version": "2.0.0",
+    "description": "Upload file button with validation and list of uploaded files.",
+    "keywords": [
+        "ffe"
+    ],
     "license": "UNLICENSED",
     "author": "SpareBank 1",
     "main": "lib/index.js",
@@ -11,10 +12,8 @@
         "start": "echo \"Use Styleguidsit to test changes locally\"",
         "build": "babel -d lib/. src/.",
         "lint": "eslint src/. test/.",
-        "test":
-            "mocha --require babel-core/register --require test/setup.js test/**/*.test.js",
-        "test:watch":
-            "mocha --require babel-core/register --require test/setup.js test/**/*.test.js -w  --watch-extensions jsx"
+        "test": "mocha --require babel-core/register --require test/setup.js test/**/*.test.js",
+        "test:watch": "mocha --require babel-core/register --require test/setup.js test/**/*.test.js -w  --watch-extensions jsx"
     },
     "depencencies": {
         "prop-types": "^15.6.0"
@@ -30,9 +29,9 @@
         "sinon": "^2.3.8"
     },
     "peerDependencies": {
-        "react": "^16.2.0",
-        "react-dom": "^16.0.0",
         "ffe-core": "^10.0.0",
-        "ffe-form": "^8.0.0"
+        "ffe-form": "^8.0.0",
+        "react": "^16.2.0",
+        "react-dom": "^16.0.0"
     }
 }
