@@ -1,12 +1,16 @@
 {
     "name": "ffe-account-selector-react",
-    "version": "8.0.4",
+    "version": "8.1.0",
     "description": "Selector for bank accounts with autocomplete.",
-    "keywords": ["ffe"],
+    "keywords": [
+        "ffe"
+    ],
     "license": "UNLICENSED",
     "author": "SpareBank 1",
     "main": "lib/index.js",
-    "files": ["styles/"],
+    "files": [
+        "styles/"
+    ],
     "repository": {
         "type": "git",
         "url": "***REMOVED***"
@@ -14,10 +18,8 @@
     "scripts": {
         "build": "babel -d lib/. --ignore=*.test.js src/.",
         "lint": "eslint src/.",
-        "start":
-            "echo \"No local demo available - use the monorepo's npm start.\"",
-        "test":
-            "mocha --require babel-core/register --require ./test-setup.js 'src/**/*.test.js'",
+        "start": "echo \"No local demo available - use the monorepo's npm start.\"",
+        "test": "mocha --require babel-core/register --require ./test-setup.js 'src/**/*.test.js'",
         "test:watch": "npm test -- -w"
     },
     "dependencies": {
