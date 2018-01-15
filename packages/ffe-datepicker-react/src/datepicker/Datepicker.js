@@ -55,6 +55,7 @@ export default class Datepicker extends Component {
     }
 
     onInputFocus() {
+        this.validateDateIntervals();
         if (this.state.openOnFocus) {
             this.openCalendar();
             this._datepickerNode.click();
@@ -74,12 +75,14 @@ export default class Datepicker extends Component {
 
         const error = type => {
             const errorMessage = this.onError(type);
+            const shouldDisplayDatePicker =
+                type === (dateErrorTypes.MIN_DATE || dateErrorTypes.MAX_DATE);
 
             nextState = {
                 errorMessage,
                 openOnFocus: true,
                 ariaInvalid: true,
-                displayDatePicker: false,
+                displayDatePicker: shouldDisplayDatePicker,
             };
         };
 
