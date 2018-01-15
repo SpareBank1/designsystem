@@ -21,6 +21,7 @@ module.exports = {
             base: ['MuseoSans-500', 'arial', 'sans-serif'],
         },
     },
+    assetsDir: './static',
     webpackConfig: {
         module: {
             rules: [
@@ -210,6 +211,12 @@ module.exports = {
                     content: 'packages/ffe-grid-react/USAGE.md',
                     components:
                         'packages/ffe-grid-react/src/[A-Z]+([A-Za-z]).js',
+                },
+                {
+                    name: 'Grid Details',
+                    content: 'packages/ffe-grid-details-react/USAGE.md',
+                    components:
+                        'packages/ffe-grid-details-react/src/[A-Z]+([A-Za-z]).js',
                 },
                 {
                     name: 'Tabeller',

@@ -33,6 +33,7 @@ module.exports = {
                 'ffe-form-react',
                 'ffe-formatters',
                 'ffe-grid',
+                'ffe-grid-details-react',
                 'ffe-grid-react',
                 'ffe-header',
                 'ffe-icons',

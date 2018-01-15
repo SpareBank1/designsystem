@@ -1,0 +1,48 @@
+{
+    "name": "ffe-grid-details-react",
+    "version": "1.0.0",
+    "main": "lib/index.js",
+    "scripts": {
+        "build": "babel -d lib/. --ignore=*.test.js src/.",
+        "watch": "onchange 'src/**.js' -- npm run build",
+        "lint": "eslint src/.",
+        "lint:fix": "eslint --fix src/."
+    },
+    "dependencies": {
+        "classnames": "^2.2.5",
+        "ffe-grid-react": "^6.0.5"
+    },
+    "peerDependencies": {
+        "ffe-grid": "^6.0.5"
+    },
+    "devDependencies": {
+        "babel-cli": "^6.24.1",
+        "babel-core": "^6.26.0",
+        "babel-plugin-syntax-trailing-function-commas": "^6.20.0",
+        "babel-plugin-transform-object-rest-spread": "^6.26.0",
+        "babel-preset-es2015": "^6.18.0",
+        "babel-preset-react": "^6.24.1",
+        "babel-register": "^6.23.0",
+        "chai": "^4.1.2",
+        "cross-env": "^5.1.3",
+        "enzyme": "^3.3.0",
+        "enzyme-adapter-react-16": "^1.1.1",
+        "eslint": "^4.13.1",
+        "expect.js": "^0.3.1",
+        "ffe-core": "^9.3.0",
+        "ffe-grid": "^6.0.5",
+        "jsdom": "^11.5.1",
+        "mocha": "^4.1.0",
+        "nsp": "^3.1.0",
+        "onchange": "3.2.1",
+        "react": "^16.1.1",
+        "react-dom": "^16.1.1"
+    },
+    "files": ["less", "lib", "*.js"],
+    "repository": {
+        "type": "git",
+        "url": "***REMOVED***"
+    },
+    "author": "SpareBank1",
+    "license": "UNLICENSED"
+}
