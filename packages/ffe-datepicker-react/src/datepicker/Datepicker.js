@@ -69,20 +69,24 @@ export default class Datepicker extends Component {
         return onError ? onError(type, errorText) : errorText;
     }
 
+    openCalendarOrLeaveOpen(type) {
+        return type === (dateErrorTypes.MIN_DATE || dateErrorTypes.MAX_DATE)
+            ? this.state.displayDatePicker
+            : false;
+    }
+
     validateDateIntervals() {
         let nextState = {};
         const { onChange, value, onValidationComplete } = this.props;
 
         const error = type => {
             const errorMessage = this.onError(type);
-            const shouldDisplayDatePicker =
-                type === (dateErrorTypes.MIN_DATE || dateErrorTypes.MAX_DATE);
 
             nextState = {
                 errorMessage,
                 openOnFocus: true,
                 ariaInvalid: true,
-                displayDatePicker: shouldDisplayDatePicker,
+                displayDatePicker: this.openCalendarOrLeaveOpen(type),
             };
         };
 
