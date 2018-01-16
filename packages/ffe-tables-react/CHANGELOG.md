@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="4.9.5"></a>
+## [4.9.5](***REMOVED***) (2018-01-16)
+
+
+
+
+**Note:** Version bump only for package ffe-tables-react
+
       <a name="4.9.4"></a>
 
 ## 4.9.4 (2018-01-10)
@@ -13,7 +21,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * **ffe-tables-react:** Properly handle zero as row id ([35b523b](***REMOVED***))
 
 
-      # Changelog
+    # Changelog
 
 ## v4.9.3
 
@@ -27,7 +35,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## v4.9.1
 
 * Fixed prop type of `caption` from `string` to `node` to allow rendering React components.
-  This was always intended based on `README.md`.
+This was always intended based on `README.md`.
 * Replace `flow.sh` with `buildCI.sh`.
 * Added support for sorting on potentially undefined values in columns.
 
@@ -85,7 +93,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## v4.1.1
 
 * Reverted attempted fix on `onKeyDown`-events on expandable rows as it caused unforseen issues.
-  Consumers should be responsible for stopping event propagation when needed anyways.
+Consumers should be responsible for stopping event propagation when needed anyways.
 * Added `event.stopPropagation()` to buttons in table examples to demonstrate the need for this.
 * Improved logic to collapse rows on sort.
 
@@ -96,9 +104,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## v4.0.1
 
 * All rows will now collapse on sort.
-  We do this because expanded state belongs to the row number,
-  not to the row data. Thus expanding and then sorting would result
-  in the same row number being expanded, even though it gets new data.
+We do this because expanded state belongs to the row number,
+not to the row data. Thus expanding and then sorting would result
+in the same row number being expanded, even though it gets new data.
 
 ## v4.0.0
 
@@ -130,16 +138,16 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## v3.0.1
 
 * Fixed: State change on props update in `SortableTable` will now only trigger if props have actually changed.
-  Also, this data will only be sorted if `sortBy` is set in component state.
+Also, this data will only be sorted if `sortBy` is set in component state.
 * Fixed: Component will only update if props or state has actually changed
-  (avoid updating if equal props are given through a prop change in a parent component).
+(avoid updating if equal props are given through a prop change in a parent component).
 
 ## v3.0.0
 
 * BREAKING: Behavioural change on `TableRowExpandable`. If no children, or a falsy value is passed as children,
-  the row will not be expandable. This will remove chevron, tabIndex and event listeners from the `tr`.
-  This is intended used when there are no details available for the row, or if the expandable area contains
-  actions which are currently blocked on this item.
+the row will not be expandable. This will remove chevron, tabIndex and event listeners from the `tr`.
+This is intended used when there are no details available for the row, or if the expandable area contains
+actions which are currently blocked on this item.
 * Fixed: `TableRow` in a plain `ResponsiveTable` should not have a `tabIndex` (should not be focusable).
 
 ## v2.0.1
@@ -162,8 +170,8 @@ change this:
 
 ```javascript
 const headers = [
-  { key: 'name', content: 'Varenavn' },
-  { key: 'price', content: 'Pris', alignRight: true }
+{ key: 'name', content: 'Varenavn' },
+{ key: 'price', content: 'Pris', alignRight: true }
 ];
 <ResponsiveTable headers={headers} data={data}>
 ```
@@ -172,8 +180,8 @@ to this:
 
 ```javascript
 const columns = [
-  { key: 'name', header: 'Varenavn' },
-  { key: 'price', header: 'Pris', alignRight: true }
+{ key: 'name', header: 'Varenavn' },
+{ key: 'price', header: 'Pris', alignRight: true }
 ];
 <ResponsiveTable columns={columns} data={data}>
 ```

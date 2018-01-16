@@ -1,12 +1,16 @@
 {
     "name": "ffe-formatters",
-    "version": "2.1.0",
+    "version": "2.1.1",
     "description": "JavaScript general use string formatters",
-    "keywords": ["ffe"],
+    "keywords": [
+        "ffe"
+    ],
     "license": "UNLICENCED",
     "author": "SpareBank 1",
     "main": "lib/index.js",
-    "files": ["lib"],
+    "files": [
+        "lib"
+    ],
     "repository": {
         "type": "git",
         "url": "***REMOVED***"
