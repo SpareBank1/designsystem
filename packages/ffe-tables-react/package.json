@@ -2,7 +2,7 @@
     "name": "ffe-tables-react",
     "version": "4.9.4",
     "description": "React implementation of ffe-tables",
-    "main": "lib/Table.js",
+    "main": "lib/index.js",
     "scripts": {
         "start":
             "echo \"No local demo available - use the monorepo's npm start.\"",

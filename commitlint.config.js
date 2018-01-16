@@ -31,6 +31,7 @@ module.exports = {
                 'ffe-file-upload-react',
                 'ffe-form',
                 'ffe-form-react',
+                'ffe-formatters',
                 'ffe-grid',
                 'ffe-grid-react',
                 'ffe-icons',

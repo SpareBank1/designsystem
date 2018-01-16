@@ -32,6 +32,10 @@ module.exports = {
                 'packages/ffe-core-react/src/typography/[A-Z]+([A-Za-z]).js',
         },
         {
+            name: 'Formatering',
+            content: 'packages/ffe-formatters/USAGE.md',
+        },
+        {
             name: 'Ikoner',
             content: 'packages/ffe-icons-react/USAGE.md',
         },
