@@ -1,0 +1,60 @@
+.sb1ds-top-menu {
+    font-family: MuseoSans-500, arial, sans-serif;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+    background-color: @ffe-white;
+    position: relative;
+    z-index: 0;
+
+    &__logo {
+        height: 30px;
+        margin: 5px 10px;
+
+        @media screen and (min-width: @breakpoint-lg) {
+            height: 40px;
+            margin-left: 15px;
+        }
+    }
+
+    &__list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        @media screen and (min-width: @breakpoint-lg) {
+            display: flex;
+        }
+    }
+
+    &__link {
+        display: block;
+        color: @ffe-grey-charcoal;
+
+        @media screen and (min-width: @breakpoint-lg) {
+            display: inline-block;
+            padding: 20px;
+        }
+    }
+
+    &__wrapper {
+        display: none;
+
+        @media screen and (min-width: @breakpoint-lg) {
+            display: flex;
+        }
+    }
+
+    @media screen and (min-width: @breakpoint-lg) {
+        height: 60px;
+        position: fixed;
+        width: 100vw;
+        z-index: 1;
+
+        > .sb1ds-header-grid {
+            height: 100%;
+
+            > .sb1ds-header-grid__row {
+                flex: 1;
+            }
+        }
+    }
+}

@@ -1,0 +1,41 @@
+.sb1ds-components-list {
+    font-family: MuseoSans-500, arial, sans-serif;
+    margin: 0 0 0 -10px;
+    padding: 0;
+
+    &__item {
+        display: block;
+
+        &--heading {
+            .sb1ds-components-list {
+                margin-left: 10px;
+            }
+        }
+    }
+
+    &__link {
+        padding: 5px 10px;
+        color: @ffe-grey-charcoal;
+        border-radius: 5px;
+        display: block;
+        transition: all @ffe-transition-duration @ffe-ease;
+
+        &:hover {
+            background: tint(@ffe-grey-silver, 50%);
+        }
+    }
+}
+
+/* Unnskyld */
+.sb1ds-sidebar__menu
+    > .sb1ds-components-list
+    > .sb1ds-components-list__item
+    > .sb1ds-components-list__link--heading {
+    color: @ffe-blue-royal;
+    &:extend(.ffe-h4);
+    margin: 10px 0 0;
+
+    &:hover {
+        background: transparent;
+    }
+}
