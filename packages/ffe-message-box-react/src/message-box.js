@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-function MessageBox(props) {
+const MessageBox = props => {
     const {
         type,
         title,
@@ -44,7 +44,7 @@ function MessageBox(props) {
             </div>
         </div>
     );
-}
+};
 
 MessageBox.propTypes = {
     /** The content of the message box */
