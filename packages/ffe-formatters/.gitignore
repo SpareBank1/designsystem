@@ -1,0 +1,16 @@
+# Dependencies
+node_modules
+
+# Logs
+*.log
+
+# Editors
+.idea
+*.iml
+*.imr
+
+# Coverage data
+coverage
+
+# Built files
+lib

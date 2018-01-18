@@ -197,6 +197,7 @@ class BaseSelector extends Component {
             name,
             suggestions,
             onSuggestionSelect,
+            readOnly,
         } = this.props;
         const {
             showSuggestions,
@@ -223,6 +224,7 @@ class BaseSelector extends Component {
                     ariaInvalid={ariaInvalid}
                     id={id}
                     name={name}
+                    readOnly={readOnly}
                 />
                 {showSuggestions && (
                     <SuggestionListContainer
@@ -264,6 +266,7 @@ BaseSelector.propTypes = {
     suggestionsHeightMax: number,
     id: string,
     name: string,
+    readOnly: bool,
 };
 
 BaseSelector.defaultProps = {

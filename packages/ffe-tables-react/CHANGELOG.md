@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="4.9.5"></a>
+
+## [4.9.5](***REMOVED***) (2018-01-16)
+
+**Note:** Version bump only for package ffe-tables-react
+
       <a name="4.9.4"></a>
 
 ## 4.9.4 (2018-01-10)
@@ -13,7 +19,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * **ffe-tables-react:** Properly handle zero as row id ([35b523b](***REMOVED***))
 
 
-      # Changelog
+    # Changelog
 
 ## v4.9.3
 
@@ -162,8 +168,8 @@ change this:
 
 ```javascript
 const headers = [
-  { key: 'name', content: 'Varenavn' },
-  { key: 'price', content: 'Pris', alignRight: true }
+{ key: 'name', content: 'Varenavn' },
+{ key: 'price', content: 'Pris', alignRight: true }
 ];
 <ResponsiveTable headers={headers} data={data}>
 ```
@@ -172,8 +178,8 @@ to this:
 
 ```javascript
 const columns = [
-  { key: 'name', header: 'Varenavn' },
-  { key: 'price', header: 'Pris', alignRight: true }
+{ key: 'name', header: 'Varenavn' },
+{ key: 'price', header: 'Pris', alignRight: true }
 ];
 <ResponsiveTable columns={columns} data={data}>
 ```

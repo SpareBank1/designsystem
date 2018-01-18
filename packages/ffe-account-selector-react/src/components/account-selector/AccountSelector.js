@@ -132,6 +132,11 @@ AccountSelector.propTypes = {
     /** Default true. */
     showBalance: bool,
     value: string.isRequired,
+    /**
+     * Disables the input-field. Useful when shown in native apps,
+     * where the textual input and keyboard can be distracting.
+     */
+    readOnly: bool,
 };
 
 export default AccountSelector;

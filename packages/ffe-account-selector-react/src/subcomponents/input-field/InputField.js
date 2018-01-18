@@ -69,6 +69,7 @@ class Input extends Component {
             highlightedIndex,
             suggestionListId,
             name,
+            readOnly,
         } = this.props;
         return (
             <div
@@ -95,6 +96,7 @@ class Input extends Component {
                     aria-autocomplete="list"
                     name={name}
                     onClick={onClick}
+                    readOnly={readOnly}
                     {...this.onChangeHandler(this.onChange)}
                 />
                 {value.length > 0 && (
@@ -123,6 +125,7 @@ Input.propTypes = {
     onReset: func.isRequired,
     isSuggestionsShowing: bool.isRequired,
     id: string.isRequired,
+    readOnly: bool,
     placeholder: string,
     onBlur: func,
     onFocus: func,
@@ -139,6 +142,7 @@ Input.defaultProps = {
     onFocus: () => {},
     inputFieldRef: () => {},
     ariaInvalid: false,
+    readOnly: false,
 };
 
 export default Input;
