@@ -1,0 +1,33 @@
+@import (inline) '../../packages/ffe-core/less/normalize.css';
+@import '../../packages/ffe-core/less/ffe-normalize';
+@import '../../packages/ffe-core/less/colors';
+@import '../../packages/ffe-core/less/font-sizes';
+@import '../../packages/ffe-core/less/typography';
+@import '../../packages/ffe-core/less/layout';
+@import '../../packages/ffe-core/less/motion';
+@import '../../packages/ffe-core/less/accessibility';
+
+@import 'components/components-list';
+@import 'components/sidebar';
+@import 'components/top-menu';
+
+.sb1ds {
+    @media screen and (min-width: @breakpoint-lg) {
+        position: relative;
+        z-index: 0;
+    }
+}
+
+.sb1ds-main {
+    @media screen and (min-width: @breakpoint-lg) {
+        margin-top: 50px;
+    }
+}
+
+.sb1ds-section {
+    margin: 30px 0;
+}
+
+.sb1ds-search {
+    margin: 10px 0 20px;
+}

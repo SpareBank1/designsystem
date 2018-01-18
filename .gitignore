@@ -4,3 +4,4 @@ dist/
 example/
 styleguide/
 .idea/
+.DS_Store
