@@ -7,7 +7,8 @@
     "scripts": {
         "build": "babel -d lib/. --ignore=*.spec.js src/.",
         "lint": "eslint src",
-        "start": "echo \"No local demo available - use the monorepo's npm start.\"",
+        "start":
+            "echo \"No local demo available - use the monorepo's npm start.\"",
         "test:watch": "jest --watch",
         "test": "jest && nsp check"
     },
@@ -16,10 +17,6 @@
         "ffe-message-box": "3.x - 4.x"
     },
     "devDependencies": {
-        "babel-cli": "^6.10.1",
-        "babel-plugin-transform-object-rest-spread": "^6.8.0",
-        "babel-preset-env": "^1.6.1",
-        "babel-preset-react": "^6.5.0",
         "enzyme": "^3.3.0",
         "enzyme-adapter-react-16": "^1.1.1",
         "eslint": "^3.12.2",
@@ -32,10 +29,7 @@
         "react-addons-test-utils": "^15.1.0",
         "react-dom": "^16.2.0"
     },
-    "files": [
-        "lib",
-        "*.js"
-    ],
+    "files": ["lib", "*.js"],
     "jest": {
         "setupTestFrameworkScriptFile": "./test-setup.js"
     },

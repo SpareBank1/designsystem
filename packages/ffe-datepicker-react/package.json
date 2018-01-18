@@ -8,16 +8,14 @@
         "watch": "onchange 'src/**/*.js' -- npm run build",
         "pretest": "eslint src/.",
         "lint": "npm run pretest",
-        "test": "mocha --require src/util/test-setup.js --compilers js:babel-core/register 'src/**/*.test.js'",
+        "test":
+            "mocha --require src/util/test-setup.js --compilers js:babel-core/register 'src/**/*.test.js'",
         "posttest": "nsp check",
         "test:watch": "npm test -- -w",
-        "start": "echo \"No local demo available - use the monorepo's npm start.\""
+        "start":
+            "echo \"No local demo available - use the monorepo's npm start.\""
     },
     "devDependencies": {
-        "babel-cli": "^6.26.0",
-        "babel-plugin-transform-object-rest-spread": "^6.26.0",
-        "babel-preset-env": "^1.6.1",
-        "babel-preset-react": "^6.24.1",
         "chai": "^4.1.2",
         "chai-enzyme": "1.0.0-beta.0",
         "enzyme": "^3.1.0",
@@ -33,10 +31,7 @@
         "sinon": "^4.0.2",
         "sinon-chai": "^2.14.0"
     },
-    "files": [
-        "lib",
-        "*.js"
-    ],
+    "files": ["lib", "*.js"],
     "peerDependencies": {
         "ffe-datepicker": "^4.2.5",
         "ffe-form": "2.x - 8.x",

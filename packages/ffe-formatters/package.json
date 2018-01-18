@@ -2,15 +2,11 @@
     "name": "ffe-formatters",
     "version": "2.1.2",
     "description": "JavaScript general use string formatters",
-    "keywords": [
-        "ffe"
-    ],
+    "keywords": ["ffe"],
     "license": "UNLICENCED",
     "author": "SpareBank 1",
     "main": "lib/index.js",
-    "files": [
-        "lib"
-    ],
+    "files": ["lib"],
     "repository": {
         "type": "git",
         "url": "***REMOVED***"
@@ -24,7 +20,6 @@
         "lint": "eslint src/"
     },
     "devDependencies": {
-        "babel-cli": "^6.24.1",
         "eslint": "^3.19.0",
         "jest": "^21.0.0",
         "moment": "^2.18.1",

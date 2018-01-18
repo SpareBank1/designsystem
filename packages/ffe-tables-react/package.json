@@ -4,20 +4,16 @@
     "description": "React implementation of ffe-tables",
     "main": "lib/index.js",
     "scripts": {
-        "start": "echo \"No local demo available - use the monorepo's npm start.\"",
+        "start":
+            "echo \"No local demo available - use the monorepo's npm start.\"",
         "build": "babel -d lib/. --ignore=*.test.js src/.",
-        "test": "mocha --require babel-register 'src/**/*.test.js' --require ./test-setup.js",
+        "test":
+            "mocha --require babel-register 'src/**/*.test.js' --require ./test-setup.js",
         "test:watch": "npm test -- -w --require ./test-setup.js",
         "posttest": "nsp check",
         "watch": "onchange 'src/**/*.js' -- npm run build"
     },
     "devDependencies": {
-        "babel-cli": "^6.24.1",
-        "babel-eslint": "^8.0.3",
-        "babel-plugin-transform-object-rest-spread": "^6.26.0",
-        "babel-preset-env": "^1.6.1",
-        "babel-preset-react": "^6.24.1",
-        "babel-register": "^6.23.0",
         "chai": "^4.1.2",
         "enzyme": "^3.3.0",
         "enzyme-adapter-react-16": "^1.1.1",
@@ -39,22 +35,10 @@
         "prop-types": "^15.6.0",
         "shallow-equals": "^1.0.0"
     },
-    "files": [
-        "lib",
-        "*.js"
-    ],
+    "files": ["lib", "*.js"],
     "repository": {
         "type": "git",
         "url": "***REMOVED***"
-    },
-    "babel": {
-        "presets": [
-            "env",
-            "react"
-        ],
-        "plugins": [
-            "transform-object-rest-spread"
-        ]
     },
     "license": "UNLICENSED"
 }
