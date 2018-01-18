@@ -19,6 +19,8 @@ describe('formatFodselsnummer', () => {
     });
 
     test('formats ssn correctly', () => {
-        expect(formatFodselsnummer('12345678901')).toBe(`123456${NON_BREAKING_SPACE}78901`);
+        expect(formatFodselsnummer('12345678901')).toBe(
+            `123456${NON_BREAKING_SPACE}78901`,
+        );
     });
 });

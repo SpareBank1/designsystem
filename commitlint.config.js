@@ -36,6 +36,8 @@ module.exports = {
                 'ffe-grid-react',
                 'ffe-icons',
                 'ffe-icons-react',
+                'ffe-message-box',
+                'ffe-message-box-react',
                 'ffe-radio-button-react',
                 'ffe-searchable-dropdown-react',
                 'ffe-tables',

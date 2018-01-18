@@ -42,7 +42,8 @@ describe('format distance', () => {
     });
 
     test('returns the unit specified in options', () => {
-        expect(formatDistance(100000, { unit: 'mi' }))
-            .toBe(`100${nbsp}000${nbsp}mi`);
+        expect(formatDistance(100000, { unit: 'mi' })).toBe(
+            `100${nbsp}000${nbsp}mi`,
+        );
     });
 });

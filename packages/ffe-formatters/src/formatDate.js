@@ -3,7 +3,9 @@ const ensureTwoDigits = d => `00${d}`.slice(-2);
 export default function formatDate(timestamp) {
     const isMoment = timestamp && timestamp._isAMomentObject;
 
-    if (!(Number.isInteger(timestamp) || timestamp instanceof Date || isMoment)) {
+    if (
+        !(Number.isInteger(timestamp) || timestamp instanceof Date || isMoment)
+    ) {
         return null;
     }
 

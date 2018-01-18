@@ -4,13 +4,12 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="2.0.0"></a>
-# 2.0.0 (2018-01-12)
 
+# 2.0.0 (2018-01-12)
 
 ### Chores
 
 * **ffe-file-upload-react:** Moving in ([9fb27cd](***REMOVED***))
-
 
 ### BREAKING CHANGES
 
@@ -19,9 +18,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 With this ffe-file-upload-react is moved to the monorepo. A breaking
 change is introduced to remove support for React 15. The upgrade should
 be a drop-in upgrade for users of React 16.2 or newer.
-
-
-
 
 ## v1.2.0
 

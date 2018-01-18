@@ -4,31 +4,25 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="2.0.1"></a>
+
 ## [2.0.1](***REMOVED***) (2018-01-12)
-
-
-
 
 **Note:** Version bump only for package ffe-expandable-react
 
 <a name="2.0.0"></a>
-# 2.0.0 (2018-01-12)
 
+# 2.0.0 (2018-01-12)
 
 ### Chores
 
 * **ffe-expandable-react:** Import ffe-expandable-react ([c2e5b08](***REMOVED***))
 
-
 ### BREAKING CHANGES
 
 * **ffe-expandable-react:** This commit removes the original implementation,
-and creates a new major of ffe-expandable-react, which simply
-works as a proxy for `react-collapse`. The package is deprecated,
-and kept around for legacy reasons.
-
-
-
+  and creates a new major of ffe-expandable-react, which simply
+  works as a proxy for `react-collapse`. The package is deprecated,
+  and kept around for legacy reasons.
 
 # CHANGELOG
 

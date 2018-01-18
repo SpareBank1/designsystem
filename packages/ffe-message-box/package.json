@@ -1,0 +1,23 @@
+{
+    "name": "ffe-message-box",
+    "version": "4.2.2",
+    "description": "Meldingsboks",
+    "main": "less/ffe-message-box",
+    "scripts": {
+        "lint": "stylelint less/*.less",
+        "start":
+            "echo \"No local demo available - use the monorepo's npm start.\""
+    },
+    "repository": {
+        "type": "git",
+        "url": "***REMOVED***"
+    },
+    "author": "SpareBank 1",
+    "license": "UNLICENSED",
+    "peerDependencies": {
+        "ffe-core": "^9.0.0 || ^10.0.0"
+    },
+    "devDependencies": {
+        "stylelint": "^7.7.1"
+    }
+}

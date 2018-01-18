@@ -19,7 +19,8 @@ describe('format account number', () => {
     });
 
     test('formats account number correctly', () => {
-        expect(formatAccountNumber('12345678901'))
-            .toBe(`1234${NON_BREAKING_SPACE}56${NON_BREAKING_SPACE}78901`);
+        expect(formatAccountNumber('12345678901')).toBe(
+            `1234${NON_BREAKING_SPACE}56${NON_BREAKING_SPACE}78901`,
+        );
     });
 });

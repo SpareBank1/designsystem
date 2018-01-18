@@ -3,11 +3,7 @@ import { NON_BREAKING_SPACE } from './internal/unicode';
 import parseNumber from './internal/parseNumber';
 
 export default function formatNumber(number, opts = {}) {
-    const {
-        decimals,
-        thousandSeparator,
-        decimalMark,
-    } = {
+    const { decimals, thousandSeparator, decimalMark } = {
         decimals: 0,
         thousandSeparator: NON_BREAKING_SPACE,
         decimalMark: ',',
@@ -18,5 +14,10 @@ export default function formatNumber(number, opts = {}) {
     if (typeof toFormat !== 'number') {
         return number;
     }
-    return `${numberFormat(toFormat, decimals, decimalMark, thousandSeparator)}`;
+    return `${numberFormat(
+        toFormat,
+        decimals,
+        decimalMark,
+        thousandSeparator,
+    )}`;
 }

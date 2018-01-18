@@ -3,10 +3,7 @@ import parseNumber from './internal/parseNumber';
 import { NON_BREAKING_SPACE } from './internal/unicode';
 
 export default function formatCurrency(amount, opts = {}) {
-    const {
-        prefix,
-        postfix,
-    } = {
+    const { prefix, postfix } = {
         prefix: `kr${NON_BREAKING_SPACE}`,
         postfix: ',–',
         ...opts,

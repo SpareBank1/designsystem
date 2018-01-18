@@ -12,7 +12,7 @@ space characters.
 ```javascript
 import formatAccountNumber from 'ffe-formatters/lib/formatAccountNumber';
 
-formatAccountNumber('90010012345') === '9001 00 12345'
+formatAccountNumber('90010012345') === '9001 00 12345';
 ```
 
 ### `formatCurrency(number [, opts])`
@@ -32,22 +32,22 @@ The function accepts an optional second `opts`-object, with two keys:
 ```javascript
 import formatCurrency from 'ffe-formatters/lib/formatCurrency';
 
-formatCurrency(1000) === 'kr. 1 000,-'
-formatCurrency(13.37) === 'kr. 13,37'
-formatCurrency(1000, { prefix: '', postfix: 'kroner'}) === '1 000,- kroner'
+formatCurrency(1000) === 'kr. 1 000,-';
+formatCurrency(13.37) === 'kr. 13,37';
+formatCurrency(1000, { prefix: '', postfix: 'kroner' }) === '1 000,- kroner';
 ```
 
 ### `formatDate(timestamp)`
 
-Formats timestamps, `Date`-objects  and `moment` instances to the correct
+Formats timestamps, `Date`-objects and `moment` instances to the correct
 format.
 
 ```javascript
 import formatDate from 'ffe-formatters/lib/formatDate';
 
-formatDate(new Date('2000', 0, 1)) === '01.01.2000'
-formatDate(moment('20000101')) === '01.01.2000'
-formatDate(946681200000) === '01.01.2000'
+formatDate(new Date('2000', 0, 1)) === '01.01.2000';
+formatDate(moment('20000101')) === '01.01.2000';
+formatDate(946681200000) === '01.01.2000';
 ```
 
 ### `formatDistance(distance[, opts])`
@@ -59,24 +59,28 @@ the `unit` parameter in the `opts` argument if needed.
 ```javascript
 import formatDistance from 'ffe-formatters/lib/formatDistance';
 
-formatDistance(160520) === '160 520 km'
-formatDistance(12345, { unit: 'mi' }) === '12 345 mi'
+formatDistance(160520) === '160 520 km';
+formatDistance(12345, { unit: 'mi' }) === '12 345 mi';
 ```
 
 ### `formatNumber(num [, opts])`
 
 Formats numbers to the correct format separated with non breaking
 space characters. Ignores decimals by default, but accepts the
-number for decimals as a `decimals`-prop to the `opts`-argument. Thousand separator and 
+number for decimals as a `decimals`-prop to the `opts`-argument. Thousand separator and
 decimal mark can also be specified as props to the `opts`-argument.
 
 ```javascript
 import formatNumber from 'ffe-formatters/lib/formatNumber';
 
-formatNumber(1000000) === '1 000 000'
-formatNumber(1234.567) === '1 234'
-formatNumber(1234.567, { decimals: 2 }) === '1 234,56'
-formatNumber(1234.567, { decimals: 2, thousandSeparator: ',', decimalMark: '.'}) === '1,234.56'
+formatNumber(1000000) === '1 000 000';
+formatNumber(1234.567) === '1 234';
+formatNumber(1234.567, { decimals: 2 }) === '1 234,56';
+formatNumber(1234.567, {
+    decimals: 2,
+    thousandSeparator: ',',
+    decimalMark: '.',
+}) === '1,234.56';
 ```
 
 ### `formatPercentage(num [, opts])`
@@ -90,8 +94,8 @@ property in the `opts` argument if needed.
 import formatPercentage from 'ffe-formatters/lib/formatPercentage';
 
 formatPercentage(10.00001) === '10 %';
-formatPercentage(12.3456) === '12,35 %' // rounds the overflowing decimals
-formatPercentage(12.34567, { maxDecimals: 4 }) === '12,3457'
+formatPercentage(12.3456) === '12,35 %'; // rounds the overflowing decimals
+formatPercentage(12.34567, { maxDecimals: 4 }) === '12,3457';
 ```
 
 ### `formatFodselsnummer(fodselsnummer)`
@@ -102,5 +106,5 @@ non breaking space characters.
 ```javascript
 import formatFodselsnummer from 'ffe-formatters/lib/formatFodselsnummer';
 
-formatFodselsnummer('01010112345') === '010101 12345'
+formatFodselsnummer('01010112345') === '010101 12345';
 ```

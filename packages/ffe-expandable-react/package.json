@@ -5,7 +5,8 @@
     "scripts": {
         "build": "babel -d lib src",
         "lint": "eslint src",
-        "start": "echo \"No local demo available - use the monorepo's npm start.\""
+        "start":
+            "echo \"No local demo available - use the monorepo's npm start.\""
     },
     "devDependencies": {
         "babel-cli": "^6.4.5",
@@ -17,10 +18,7 @@
         "react": "^16.2.0",
         "react-dom": "^16.2.0"
     },
-    "files": [
-        "lib",
-        "*.js"
-    ],
+    "files": ["lib", "*.js"],
     "author": "SpareBank 1",
     "license": "UNLICENSED",
     "dependencies": {
