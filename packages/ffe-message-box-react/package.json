@@ -13,7 +13,8 @@
         "test": "jest && nsp check"
     },
     "peerDependencies": {
-        "ffe-message-box": "3.x - 4.x"
+        "ffe-message-box": "3.x - 4.x",
+        "ffe-icons-react": "^4.0.0"
     },
     "devDependencies": {
         "babel-cli": "^6.10.1",
@@ -23,7 +24,7 @@
         "enzyme": "^3.3.0",
         "enzyme-adapter-react-16": "^1.1.1",
         "eslint": "^3.12.2",
-        "ffe-icons-react": "^2.4.5",
+        "ffe-icons-react": "^4.0.0",
         "jest": "^22.0.6",
         "nsp": "^2.4.0",
         "onchange": "2.5.0",

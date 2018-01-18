@@ -1,3 +1,4 @@
+/* eslint-env jest */
 import { shallow } from 'enzyme';
 import React from 'react';
 import { SuccessMessage, InfoMessage, ErrorMessage, TipsMessage } from '.';

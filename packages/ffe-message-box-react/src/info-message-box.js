@@ -1,20 +1,17 @@
 import React from 'react';
-import Icon from 'ffe-icons-react/info-sirkel-ikon';
+import { InfoSirkelIkon } from 'ffe-icons-react';
 import MessageBox from './message-box';
 
 const iconStyles = {
     width: '40px',
-    height: '40px'
+    height: '40px',
 };
-
-const InfoMessage = ({ title, content, style, className, children }) => MessageBox({
-    type: 'info',
-    icon: <Icon style={ iconStyles }/>,
-    title,
-    content,
-    style,
-    className,
-    children
-});
+const InfoMessage = props => (
+    <MessageBox
+        type="info"
+        icon={<InfoSirkelIkon style={iconStyles} />}
+        {...props}
+    />
+);
 
 export default InfoMessage;
