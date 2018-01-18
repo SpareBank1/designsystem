@@ -9,10 +9,7 @@ const defaultProps = {
 };
 
 const getWrapper = (props = {}) => {
-    const {
-        el: Heading,
-        ...finalProps
-    } = { ...defaultProps, ...props };
+    const { el: Heading, ...finalProps } = { ...defaultProps, ...props };
     return shallow(<Heading {...finalProps} />);
 };
 
@@ -32,12 +29,24 @@ describe('<Heading1...6 />', () => {
     });
 
     test('sets the correct class as default', () => {
-        expect(getWrapper({ el: Headings.Heading1 }).hasClass('ffe-h1')).toBe(true);
-        expect(getWrapper({ el: Headings.Heading2 }).hasClass('ffe-h2')).toBe(true);
-        expect(getWrapper({ el: Headings.Heading3 }).hasClass('ffe-h3')).toBe(true);
-        expect(getWrapper({ el: Headings.Heading4 }).hasClass('ffe-h4')).toBe(true);
-        expect(getWrapper({ el: Headings.Heading5 }).hasClass('ffe-h5')).toBe(true);
-        expect(getWrapper({ el: Headings.Heading6 }).hasClass('ffe-h6')).toBe(true);
+        expect(getWrapper({ el: Headings.Heading1 }).hasClass('ffe-h1')).toBe(
+            true,
+        );
+        expect(getWrapper({ el: Headings.Heading2 }).hasClass('ffe-h2')).toBe(
+            true,
+        );
+        expect(getWrapper({ el: Headings.Heading3 }).hasClass('ffe-h3')).toBe(
+            true,
+        );
+        expect(getWrapper({ el: Headings.Heading4 }).hasClass('ffe-h4')).toBe(
+            true,
+        );
+        expect(getWrapper({ el: Headings.Heading5 }).hasClass('ffe-h5')).toBe(
+            true,
+        );
+        expect(getWrapper({ el: Headings.Heading6 }).hasClass('ffe-h6')).toBe(
+            true,
+        );
     });
 
     test('overrides the class via the lookLike prop', () => {
@@ -49,6 +58,11 @@ describe('<Heading1...6 />', () => {
     test('adds --error class if error prop is true', () => {
         const wrapper = getWrapper({ error: true });
         expect(wrapper.hasClass('ffe-h1--error')).toBe(true);
+    });
+
+    test('adds --inline class if inline prop is true', () => {
+        const wrapper = getWrapper({ inline: true });
+        expect(wrapper.hasClass('ffe-h1--inline')).toBe(true);
     });
 
     test('adds --no-margin class if noMargin prop is true', () => {
