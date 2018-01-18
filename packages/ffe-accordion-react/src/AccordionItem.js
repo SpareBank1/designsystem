@@ -52,7 +52,7 @@ class AccordionItem extends Component {
 
     renderExpandedContent() {
         const { isOpen } = this.state;
-        const { expandedContent, index, type, uuid } = this.props;
+        const { children, index, type, uuid } = this.props;
 
         return (
             <div
@@ -66,7 +66,7 @@ class AccordionItem extends Component {
                 aria-hidden={!isOpen}
                 aria-labelledby={`tab-${uuid}-${index}`}
             >
-                {expandedContent}
+                {children}
             </div>
         );
     }
@@ -75,10 +75,10 @@ class AccordionItem extends Component {
         const { isOpen } = this.state;
         const {
             ariaLabel,
-            children,
             hasNestedCollapse,
             index,
             type,
+            title,
             uuid,
         } = this.props;
 
@@ -101,7 +101,7 @@ class AccordionItem extends Component {
                 >
                     <span className="ffe-accordion-item__toggler-content">
                         <span className="ffe-accordion-item__title">
-                            {children}
+                            {title}
                         </span>
                         <Chevron
                             className={createClasses(
@@ -126,10 +126,8 @@ class AccordionItem extends Component {
 AccordionItem.propTypes = {
     /** A label for the accordion item */
     ariaLabel: string,
-    /** The title content */
-    children: node,
     /** The content shown when an accordion item is expanded */
-    expandedContent: node,
+    children: node,
     /** Set to true if there will be nested collapsable elements inside the expandedContent prop */
     hasNestedCollapse: bool,
     /** List of node names the toggle click handler will ignore */
@@ -142,6 +140,8 @@ AccordionItem.propTypes = {
     onClose: func,
     /** Callback that fires whenever the accordion item opens */
     onOpen: func,
+    /** The title */
+    title: node,
     /**
      * Decides the color and theming of the accordion item, provided by the wrapping <Accordion /> element .
      * For internal use only

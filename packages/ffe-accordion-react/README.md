@@ -12,8 +12,8 @@ $ npm install --save ffe-accordion-react
 import { WhiteAccordion, AccordionItem } from 'ffe-accordion-react';
 
 <WhiteAccordion>
-    <AccordionItem expandedContent="Some more content, only shown when expanded">
-        Some header text, always visible.
+    <AccordionItem title="Some header text, always visible">
+        <p>Some more content, only shown when expanded.</p>
     </AccordionItem>
 </WhiteAccordion>
 ```
@@ -28,11 +28,11 @@ The AccordionItems contained by the Accordion.
 
 #### `AccordionItem`
 
-* `children` (renderable - string | component | array of components)
+* `title` (renderable - string | component | array of components)
 
 The accordion header content. May be a simple string or a more complex construction of components.
 
-* `expandedContent` (renderable - string | component | array of components)
+* `children` (renderable - string | component | array of components)
 
 The content shown when the accordion is expanded. May be a simple string or a more complex construction of components.
 
