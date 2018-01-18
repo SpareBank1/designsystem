@@ -1,6 +1,15 @@
+# Logs
 *.log
+
+# Dependencies
 node_modules
+
+# Built files
 dist/
+
+# Example folders - should be removed at a later point
 example/
-styleguide/
+
+# Editors
 .idea/
+.vscode/
