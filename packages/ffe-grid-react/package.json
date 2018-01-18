@@ -2,9 +2,14 @@
     "name": "ffe-grid-react",
     "version": "6.0.6",
     "main": "lib/index.js",
+    "repository": {
+        "type": "git",
+        "url": "***REMOVED***"
+    },
+    "author": "SpareBank1",
+    "license": "UNLICENSED",
     "scripts": {
         "build": "babel -d lib/. --ignore=*.test.js src/. && npm run example",
-        "watch": "onchange 'src/**.js' -- npm run build",
         "lint": "eslint src/.",
         "lint:fix": "eslint --fix src/.",
         "test": "npm run test:spec && npm run test:nsp",
@@ -13,9 +18,7 @@
             "cross-env NODE_ENV=test mocha -G --require babel-register src/**/*.test.js --require ./src/test/setup.test.js",
         "test:watch":
             "cross-env NODE_ENV=test mocha -G --require babel-register src/**/*.test.js -w --require ./src/test/setup.test.js",
-        "tdd": "npm run test:watch",
-        "example": "babel-node docs/create.js > example.html",
-        "prepublish": "npm run build"
+        "tdd": "npm run test:watch"
     },
     "dependencies": {
         "classnames": "^2.2.5"
@@ -35,16 +38,9 @@
         "jsdom": "^11.5.1",
         "mocha": "^4.1.0",
         "nsp": "^3.1.0",
-        "onchange": "3.2.1",
         "react": "^16.1.1",
         "react-dom": "^16.1.1",
         "sinon": "^4.1.3"
     },
-    "files": ["lib", "*.js"],
-    "repository": {
-        "type": "git",
-        "url": "***REMOVED***"
-    },
-    "author": "SpareBank1",
-    "license": "UNLICENSED"
+    "files": ["lib", "*.js"]
 }

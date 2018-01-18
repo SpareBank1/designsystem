@@ -8,7 +8,6 @@
     "author": "SpareBank 1",
     "main": "lib/index.js",
     "scripts": {
-        "start": "echo \"Use Styleguidsit to test changes locally\"",
         "build": "babel -d lib/. src/.",
         "lint": "eslint src/. test/.",
         "test":
@@ -25,7 +24,6 @@
         "enzyme-adapter-react-16": "^1.1.1",
         "eslint": "^3.19.0",
         "mocha": "^3.4.2",
-        "onchange": "3.2.1",
         "sinon": "^2.3.8"
     },
     "peerDependencies": {

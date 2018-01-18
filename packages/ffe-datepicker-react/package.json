@@ -5,15 +5,12 @@
     "license": "UNLICENSED",
     "scripts": {
         "build": "babel -d lib/. --ignore=*.test.js src/.",
-        "watch": "onchange 'src/**/*.js' -- npm run build",
-        "pretest": "eslint src/.",
-        "lint": "npm run pretest",
-        "test":
+        "lint": "eslint src/.",
+        "test": "npm run test:spec && npm run test:nsp",
+        "test:spec":
             "mocha --require src/util/test-setup.js --compilers js:babel-core/register 'src/**/*.test.js'",
-        "posttest": "nsp check",
-        "test:watch": "npm test -- -w",
-        "start":
-            "echo \"No local demo available - use the monorepo's npm start.\""
+        "test:nsp": "nsp check",
+        "test:watch": "npm test -- -w"
     },
     "devDependencies": {
         "chai": "^4.1.2",
@@ -24,7 +21,6 @@
         "jsdom": "^11.3.0",
         "mocha": "^4.0.1",
         "nsp": "^2.8.1",
-        "onchange": "^3.2.1",
         "react": "^16.0.0",
         "react-dom": "^16.0.0",
         "react-test-renderer": "^16.0.0",

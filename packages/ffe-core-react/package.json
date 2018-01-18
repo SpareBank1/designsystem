@@ -13,9 +13,8 @@
     "scripts": {
         "prebuild": "rimraf lib",
         "build": "babel --ignore spec.js -d lib/ src/",
-        "start": "onchange 'src/**.js' -- npm run build",
         "lint": "eslint src/",
-        "lint:fix": "eslint --fix src/ test/",
+        "lint:fix": "eslint --fix src/",
         "test": "jest",
         "test:watch": "jest --watch",
         "test:coverage": "jest src --coverage"
@@ -29,7 +28,6 @@
         "eslint": "^4.13.1",
         "jest": "^22.0.4",
         "nsp": "^3.1.0",
-        "onchange": "3.2.1",
         "prop-types": "^15.6.0",
         "react": "^16.1.1",
         "react-dom": "^16.1.1",

@@ -12,8 +12,7 @@
         "lint": "eslint src",
         "test": "nsp check && npm run lint",
         "ffe:icons":
-            "ffe-icons --opts=packages/ffe-icons-react/svg.sprite.config.json",
-        "start": "npm run build && webpack-dev-server"
+            "ffe-icons --opts=packages/ffe-icons-react/svg.sprite.config.json"
     },
     "repository": {
         "type": "git",
@@ -33,9 +32,7 @@
         "nsp": "^3.1.0",
         "react": "^16.1.1",
         "react-dom": "^16.1.1",
-        "rimraf": "^2.6.1",
-        "webpack": "^3.8.1",
-        "webpack-dev-server": "^2.7.1"
+        "rimraf": "^2.6.1"
     },
     "files": ["lib"]
 }

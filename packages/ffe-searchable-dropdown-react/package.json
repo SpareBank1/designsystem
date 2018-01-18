@@ -2,14 +2,20 @@
     "name": "ffe-searchable-dropdown-react",
     "version": "3.0.5",
     "description": "Dropdown with search option",
+    "main": "lib/SearchableDropdown.js",
+    "author": "SpareBank 1",
+    "repository": {
+        "type": "git",
+        "url": "***REMOVED***"
+    },
+    "license": "UNLICENSED",
     "scripts": {
         "build": "babel -d lib --ignore=*.test.js src",
-        "pretest": "eslint src/",
+        "lint": "eslint src/",
         "lint:fix": "eslint --fix src/",
-        "test": "jest",
+        "test": "jest && npm run test:nsp",
         "test:watch": "jest src --watch",
-        "posttest": "nsp check",
-        "prepublishOnly": "npm run build"
+        "test:nsp": "nsp check"
     },
     "jest": {
         "setupTestFrameworkScriptFile": "<rootDir>/testSetup.js"
@@ -33,13 +39,6 @@
         "react-dom": "^16.1.1"
     },
     "files": ["less/searchable-dropdown.less", "lib", "*.js"],
-    "main": "lib/SearchableDropdown.js",
-    "author": "SpareBank 1",
-    "repository": {
-        "type": "git",
-        "url": "***REMOVED***"
-    },
-    "license": "UNLICENSED",
     "dependencies": {
         "classnames": "^2.2.5",
         "ffe-icons-react": "^3.0.0",

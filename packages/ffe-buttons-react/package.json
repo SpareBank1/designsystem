@@ -11,9 +11,7 @@
         "test:spec":
             "mocha --require src/util/test-setup.js --compilers js:babel-core/register src/**/*.test.js",
         "tdd":
-            "mocha --require src/util/test-setup.js --compilers js:babel-core/register src/**/*.test.js -w",
-        "start":
-            "echo \"No local demo available - use the monorepo's npm start.\""
+            "mocha --require src/util/test-setup.js --compilers js:babel-core/register src/**/*.test.js -w"
     },
     "files": ["lib", "*.js"],
     "repository": {
@@ -21,7 +19,6 @@
         "url": "***REMOVED***"
     },
     "devDependencies": {
-        "budo": "^10.0.3",
         "chai": "^4.1.2",
         "chai-enzyme": "^1.0.0-beta.0",
         "cheerio": "^0.22.0",
@@ -32,7 +29,6 @@
         "ffe-core": "^10.2.4",
         "mocha": "^4.1.0",
         "mocha-tap13": "^1.0.2",
-        "node-lessify": "^0.1.5",
         "nsp": "^3.1.0",
         "react": "^16.1.1",
         "react-dom": "^16.1.1",

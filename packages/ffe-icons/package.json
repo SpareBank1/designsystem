@@ -6,18 +6,17 @@
     "bin": {
         "ffe-icons": "bin/build.js"
     },
-    "scripts": {
-        "build": "node bin/build.js",
-        "start": "npm run build && opn dist/symbol/sprite.symbol.html",
-        "lint": "eslint bin/.",
-        "test": "npm run lint"
-    },
     "repository": {
         "type": "git",
         "url": "***REMOVED***"
     },
-    "author": "",
+    "author": "SpareBank 1",
     "license": "UNLICENSED",
+    "scripts": {
+        "build": "node bin/build.js",
+        "lint": "eslint bin/.",
+        "test": "npm run lint"
+    },
     "dependencies": {
         "deep-assign": "^2.0.0",
         "mkdirp": "^0.5.1",
@@ -26,7 +25,6 @@
         "yargs": "^6.5.0"
     },
     "devDependencies": {
-        "eslint": "^4.13.1",
-        "opn-cli": "^3.1.0"
+        "eslint": "^4.13.1"
     }
 }

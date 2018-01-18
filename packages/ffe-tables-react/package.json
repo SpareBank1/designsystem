@@ -3,15 +3,19 @@
     "version": "4.9.6",
     "description": "React implementation of ffe-tables",
     "main": "lib/index.js",
+    "files": ["lib", "*.js"],
+    "repository": {
+        "type": "git",
+        "url": "***REMOVED***"
+    },
+    "license": "UNLICENSED",
     "scripts": {
-        "start":
-            "echo \"No local demo available - use the monorepo's npm start.\"",
         "build": "babel -d lib/. --ignore=*.test.js src/.",
-        "test":
+        "test": "npm run test:spec && npm run test:nsp",
+        "test:spec":
             "mocha --require babel-register 'src/**/*.test.js' --require ./test-setup.js",
         "test:watch": "npm test -- -w --require ./test-setup.js",
-        "posttest": "nsp check",
-        "watch": "onchange 'src/**/*.js' -- npm run build"
+        "test:nsp": "nsp check"
     },
     "devDependencies": {
         "chai": "^4.1.2",
@@ -22,7 +26,6 @@
         "ffe-tables": "^8.1.1",
         "mocha": "^4.1.0",
         "nsp": "^3.1.0",
-        "onchange": "3.2.1",
         "react": "^16.1.1",
         "react-dom": "^16.1.1"
     },
@@ -34,11 +37,5 @@
         "deep-equal": "^1.0.1",
         "prop-types": "^15.6.0",
         "shallow-equals": "^1.0.0"
-    },
-    "files": ["lib", "*.js"],
-    "repository": {
-        "type": "git",
-        "url": "***REMOVED***"
-    },
-    "license": "UNLICENSED"
+    }
 }

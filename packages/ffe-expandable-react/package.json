@@ -4,9 +4,7 @@
     "main": "lib/ffe-expandable-react.js",
     "scripts": {
         "build": "babel -d lib src",
-        "lint": "eslint src",
-        "start":
-            "echo \"No local demo available - use the monorepo's npm start.\""
+        "lint": "eslint src"
     },
     "devDependencies": {
         "nsp": "^2.2.0",

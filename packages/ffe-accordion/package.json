@@ -6,11 +6,7 @@
     "license": "UNLICENSED",
     "main": "index.js",
     "scripts": {
-        "build":
-            "npm run lint && lessc examples/examples.less examples/examples.css && cp -R node_modules/ffe-core/fonts/ examples/fonts/ && echo \"$(date +%T): Updated example\"",
-        "lint": "lessc --lint examples/examples.less && stylelint less/*.less",
-        "start":
-            "opn examples/accordion.html & watch \"npm run -s build\" less/",
+        "lint": "stylelint less/*.less",
         "test:nsp": "nsp check",
         "test": "npm run lint && npm run test:nsp"
     },
@@ -19,7 +15,6 @@
         "ffe-core": "^10.2.4"
     },
     "devDependencies": {
-        "ffe-core": "^10.2.4",
-        "opn-cli": "^3.1.0"
+        "ffe-core": "^10.2.4"
     }
 }

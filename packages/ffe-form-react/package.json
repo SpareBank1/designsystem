@@ -4,11 +4,9 @@
     "description": "React component for form elements in ffe",
     "main": "lib/index.js",
     "scripts": {
-        "start":
-            "echo \"No local demo available - use the monorepo's npm start.\"",
         "build": "babel -d lib/. --ignore=*.test.js src/.",
         "test": "jest && npm run test:nsp",
-        "test:nsp": "jest && nsp check",
+        "test:nsp": "nsp check",
         "test:watch": "jest --watch"
     },
     "repository": {

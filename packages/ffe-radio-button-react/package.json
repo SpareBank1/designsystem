@@ -9,8 +9,7 @@
         "test:nsp": "nsp check",
         "test:spec":
             "mocha --require babel-register --require ./test-setup.js --reporter mocha-tap13 src/**/*.test.js",
-        "test": "npm run test:spec && npm run test:nsp",
-        "prepublish": "npm run build"
+        "test": "npm run test:spec && npm run test:nsp"
     },
     "devDependencies": {
         "chai": "^4.1.2",
