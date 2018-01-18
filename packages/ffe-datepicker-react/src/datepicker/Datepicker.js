@@ -70,7 +70,8 @@ export default class Datepicker extends Component {
     }
 
     openCalendarOrLeaveOpen(type) {
-        return type === (dateErrorTypes.MIN_DATE || dateErrorTypes.MAX_DATE)
+        return type === dateErrorTypes.MIN_DATE ||
+            type === dateErrorTypes.MAX_DATE
             ? this.state.displayDatePicker
             : false;
     }
