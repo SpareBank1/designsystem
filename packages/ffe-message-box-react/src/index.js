@@ -1,8 +1,8 @@
-import SuccessMessage from './success-message-box';
-import ErrorMessage from './error-message-box';
-import InfoMessage from './info-message-box';
-import TipsMessage from './tips-message-box';
-import { InfoMessageList, InfoMessageListItem } from './info-message-list';
+import SuccessMessage from './SuccessMessageBox';
+import ErrorMessage from './ErrorMessageBox';
+import InfoMessage from './InfoMessageBox';
+import TipsMessage from './TipsMessageBox';
+import { InfoMessageList, InfoMessageListItem } from './InfoMessageList';
 
 export {
     SuccessMessage,

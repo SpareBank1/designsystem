@@ -1,7 +1,7 @@
 /* eslint-env jest */
 import React from 'react';
 import { shallow } from 'enzyme';
-import MessageBox from './message-box';
+import MessageBox from './MessageBox';
 
 const defaultProps = { type: 'info', icon: <svg id="icon" /> };
 const getWrapper = props =>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { UtropstegnIkon } from 'ffe-icons-react';
-import MessageBox from './message-box';
+import MessageBox from './MessageBox';
 
 const iconStyles = {
     width: '40px',
