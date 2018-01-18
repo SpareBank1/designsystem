@@ -1,14 +1,12 @@
 {
     "name": "ffe-tables-react",
-    "version": "4.9.5",
+    "version": "4.9.6",
     "description": "React implementation of ffe-tables",
     "main": "lib/index.js",
     "scripts": {
-        "start":
-            "echo \"No local demo available - use the monorepo's npm start.\"",
+        "start": "echo \"No local demo available - use the monorepo's npm start.\"",
         "build": "babel -d lib/. --ignore=*.test.js src/.",
-        "test":
-            "mocha --require babel-register 'src/**/*.test.js' --require ./test-setup.js",
+        "test": "mocha --require babel-register 'src/**/*.test.js' --require ./test-setup.js",
         "test:watch": "npm test -- -w --require ./test-setup.js",
         "posttest": "nsp check",
         "watch": "onchange 'src/**/*.js' -- npm run build"
@@ -41,14 +39,22 @@
         "prop-types": "^15.6.0",
         "shallow-equals": "^1.0.0"
     },
-    "files": ["lib", "*.js"],
+    "files": [
+        "lib",
+        "*.js"
+    ],
     "repository": {
         "type": "git",
         "url": "***REMOVED***"
     },
     "babel": {
-        "presets": ["env", "react"],
-        "plugins": ["transform-object-rest-spread"]
+        "presets": [
+            "env",
+            "react"
+        ],
+        "plugins": [
+            "transform-object-rest-spread"
+        ]
     },
     "license": "UNLICENSED"
 }

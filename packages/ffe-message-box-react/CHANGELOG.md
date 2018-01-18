@@ -1,4 +1,17 @@
-#CHANGELOG
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+       <a name="3.3.2"></a>
+## 3.3.2 (2018-01-18)
+
+
+
+
+**Note:** Version bump only for package ffe-message-box-react
+
+       #CHANGELOG
 ## Version 3.3.1
 * Updated to latest version of ffe-message-box (4.2.2)
 
@@ -30,16 +43,16 @@
 * Added support for styling outer container using style prop
 
 ## Version 3.0.1
- * Use newer version of ffe-icons-react
+* Use newer version of ffe-icons-react
 
 ## Version 3.0.0
- * No longer render children inside a `<p />`. This allows for several
- paragraphs or other custom HTML structures. If you depend on this behavior,
- either provide your content to the `content` attribute, or wrap your
- children in a `<p className="ffe-body-text" />` tag.
+* No longer render children inside a `<p />`. This allows for several
+paragraphs or other custom HTML structures. If you depend on this behavior,
+either provide your content to the `content` attribute, or wrap your
+children in a `<p className="ffe-body-text" />` tag.
 
 ## Version 2.0.0
- * Bumped dependency on `ffe-icons-react` to next major (`1.x`).
+* Bumped dependency on `ffe-icons-react` to next major (`1.x`).
 
 ## Version 1.0.0
 * Bumped dependency on `ffe-core` to `^8.0.2`

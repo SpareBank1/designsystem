@@ -1,20 +1,19 @@
 {
     "name": "ffe-message-box-react",
-    "version": "3.3.1",
+    "version": "3.3.2",
     "main": "lib/index.js",
     "author": "SpareBank 1",
     "license": "UNLICENSED",
     "scripts": {
         "build": "babel -d lib/. --ignore=*.spec.js src/.",
         "lint": "eslint src",
-        "start":
-            "echo \"No local demo available - use the monorepo's npm start.\"",
+        "start": "echo \"No local demo available - use the monorepo's npm start.\"",
         "test:watch": "jest --watch",
         "test": "jest && nsp check"
     },
     "peerDependencies": {
-        "ffe-message-box": "3.x - 4.x",
-        "ffe-icons-react": "^4.0.0"
+        "ffe-icons-react": "^4.0.0",
+        "ffe-message-box": "3.x - 4.x"
     },
     "devDependencies": {
         "babel-cli": "^6.10.1",
@@ -33,7 +32,10 @@
         "react-addons-test-utils": "^15.1.0",
         "react-dom": "^16.2.0"
     },
-    "files": ["lib", "*.js"],
+    "files": [
+        "lib",
+        "*.js"
+    ],
     "jest": {
         "setupTestFrameworkScriptFile": "./test-setup.js"
     },
