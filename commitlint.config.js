@@ -34,6 +34,7 @@ module.exports = {
                 'ffe-formatters',
                 'ffe-grid',
                 'ffe-grid-react',
+                'ffe-header',
                 'ffe-icons',
                 'ffe-icons-react',
                 'ffe-message-box',
