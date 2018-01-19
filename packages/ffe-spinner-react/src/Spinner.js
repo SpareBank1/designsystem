@@ -1,22 +1,25 @@
 import React from 'react';
-import { bool, node } from 'prop-types';
+import { bool, string } from 'prop-types';
+import classNames from 'classnames';
 
-const Spinner = ({ text, children, large = false, center = true }) => (
-    <div className={ `ffe-content-container ${ !center ? 'ffe-content-container--text-left' : '' }` }>
-        <div className={ `ffe-loading-spinner ${ large ? 'ffe-loading-spinner--large' : '' }` } />
-        { (text || children) ?
-            <div className="ffe-body-paragraph">
-                { text || children }
-            </div>
-        : '' }
-    </div>
+const Spinner = ({ className, large, ...rest }) => (
+    <span
+        className={classNames(
+            'ffe-loading-spinner',
+            { 'ffe-loading-spinner--large': large },
+            className,
+        )}
+        {...rest}
+    />
 );
 
 Spinner.propTypes = {
-    text: node,
-    children: node,
+    className: string,
     large: bool,
-    center: bool
+};
+
+Spinner.defaultProps = {
+    large: false,
 };
 
 export default Spinner;

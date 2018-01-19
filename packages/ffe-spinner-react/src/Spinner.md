@@ -1,25 +1,16 @@
 # Spinner
 
-En selvstendig komponent for å vise at man venter på innholdet siden avhenger av.
+En spinner vises oftest når man venter på svar fra en ekstern tjeneste. Den finnes i liten og stor versjon
 
 ```js
-<Spinner />
+<div>
+    <Spinner /> Vennligst vent litt
+</div>
 ```
 
-Den kan ha en tekst under seg som forklarer ventetiden:
-
 ```js
-<Spinner>Kalkulerer pris...</Spinner>
-```
-
-Den kan være venstrestilt:
-
-```js
-<Spinner center={false} />
-```
-
-Den kan være stor:
-
-```js
-<Spinner large={true} />
+<div style={{ textAlign: 'center' }}>
+    <Spinner large={true} />
+    <p className="ffe-body-paragraph">Vennligst vent litt</p>
+</div>
 ```
