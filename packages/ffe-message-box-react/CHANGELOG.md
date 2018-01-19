@@ -3,7 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-       <a name="3.3.2"></a>
+ <a name="3.3.3"></a>
+## [3.3.3](***REMOVED***) (2018-01-19)
+
+
+
+
+**Note:** Version bump only for package ffe-message-box-react
+
+ <a name="3.3.2"></a>
 ## 3.3.2 (2018-01-18)
 
 
@@ -11,7 +19,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package ffe-message-box-react
 
-       #CHANGELOG
+#CHANGELOG
 ## Version 3.3.1
 * Updated to latest version of ffe-message-box (4.2.2)
 

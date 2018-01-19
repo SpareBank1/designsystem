@@ -3,19 +3,40 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="4.0.0"></a>
+# [4.0.0](***REMOVED***) (2018-01-19)
+
+
+### Bug Fixes
+
+* **ffe-accordion-react:** Remove "expandableContent" prop ([9b1c67b](***REMOVED***))
+
+
+### BREAKING CHANGES
+
+* **ffe-accordion-react:** Replace "expandedContent" with children- & title- prop
+
+This commit changes the structure of ffe-accordion-react by making
+the expandable content of the accordion item the children, while the heading of the item
+is now a new "title"-prop. This previous soulution was somewhat backwards,
+while this change will be more the React way of doing things.
+
+
+
+
       <a name="3.1.6"></a>
 
 ## [3.1.6](***REMOVED***) (2018-01-10)
 
 **Note:** Version bump only for package ffe-accordion-react
 
-      <a name="3.1.5"></a>
+    <a name="3.1.5"></a>
 
 ## [3.1.5](***REMOVED***) (2018-01-09)
 
 **Note:** Version bump only for package ffe-accordion-react
 
-    <a name="3.1.4"></a>
+  <a name="3.1.4"></a>
 
 ## [3.1.4](***REMOVED***) (2018-01-05)
 
@@ -42,12 +63,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## v3.1.0
 
 * Upgraded to react 16. Enzyme to 3.1.1 to support react 16. Added repository to remove warning.
-  Upgraded ffe-accordian to remove warning.
+Upgraded ffe-accordian to remove warning.
 
 ## v3.0.1
 
 * Fix a propType error that would happen if isOpen was not set on AccordionItem. Collapse complained that
-  `this.state.isOpen` was undefined, so it now defaults to the boolean `false`.
+`this.state.isOpen` was undefined, so it now defaults to the boolean `false`.
 
 ## v3.0.0
 
