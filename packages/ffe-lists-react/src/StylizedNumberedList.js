@@ -1,12 +1,19 @@
 import React from 'react';
-import { array } from 'prop-types';
+import { node, string } from 'prop-types';
+import classNames from 'classnames';
 
-export default function StylizedNumberedList({ children }) {
-    return  <ol className="ffe-stylized-numbered-list">
-                {children}
-            </ol>;
-}
+const StylizedNumberedList = ({ className, ...rest }) => (
+    <ol
+        className={classNames('ffe-stylized-numbered-list', className)}
+        {...rest}
+    />
+);
 
 StylizedNumberedList.propTypes = {
-    children: array.isRequired,
+    /** List items */
+    children: node.isRequired,
+    /** Any extra classes */
+    className: string,
 };
+
+export default StylizedNumberedList;

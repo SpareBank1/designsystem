@@ -1,19 +1,31 @@
-/* eslint-env mocha */
+/* eslint-env jest */
+
 import React from 'react';
-import { assert } from 'chai';
 import { shallow } from 'enzyme';
 import NumberedList from './NumberedList';
 
+const getWrapper = props =>
+    shallow(
+        <NumberedList {...props}>
+            <li>Firstly</li>
+            <li>Secondly</li>
+        </NumberedList>,
+    );
+
 describe('<NumberedList>', () => {
-  it('should render a <ol> with class ffe-numbered-list', () => {
-    const wrapper = shallow(<NumberedList><li>First</li><li>Second</li></NumberedList>);
-
-    assert.ok(wrapper.find('ol').hasClass('ffe-numbered-list'));
-  });
-  it('should render two list elements', () => {
-    const wrapper = shallow(<NumberedList><li>First</li><li>Second</li></NumberedList>);
-
-    assert.ok(wrapper.find('li').at(0).text(), 'First');
-    assert.ok(wrapper.find('li').at(1).text(), 'Second');
-  });
+    it('renders without exploding', () => {
+        const wrapper = getWrapper();
+        expect(wrapper.exists()).toBe(true);
+        expect(wrapper.is('ol')).toBe(true);
+    });
+    it('has the correct class', () => {
+        const wrapper = getWrapper({ className: 'test-class' });
+        expect(wrapper.hasClass('ffe-numbered-list')).toBe(true);
+        expect(wrapper.hasClass('test-class')).toBe(true);
+    });
+    it('passes props', () => {
+        const wrapper = getWrapper({ id: 'that-id' });
+        expect(wrapper.prop('id')).toBe('that-id');
+        expect(wrapper.text()).toContain('Firstly');
+    });
 });

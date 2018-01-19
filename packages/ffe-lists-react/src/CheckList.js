@@ -1,13 +1,16 @@
 import React from 'react';
-import { array, string } from 'prop-types';
+import classNames from 'classnames';
+import { node, string } from 'prop-types';
 
-export default function CheckList({ children, className = '' }) {
-    return  <ul className={`ffe-check-list ${className}`}>
-                {children}
-            </ul>;
-}
+const CheckList = ({ className, ...rest }) => (
+    <ul className={classNames('ffe-check-list', className)} {...rest} />
+);
 
 CheckList.propTypes = {
-    children: array.isRequired,
+    /** List items */
+    children: node.isRequired,
+    /** Any extra classes */
     className: string,
 };
+
+export default CheckList;

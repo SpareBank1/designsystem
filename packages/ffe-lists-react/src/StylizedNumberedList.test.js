@@ -1,19 +1,31 @@
-/* eslint-env mocha */
+/* eslint-env jest */
+
 import React from 'react';
-import { assert } from 'chai';
 import { shallow } from 'enzyme';
 import StylizedNumberedList from './StylizedNumberedList';
 
+const getWrapper = props =>
+    shallow(
+        <StylizedNumberedList {...props}>
+            <li>Firstly</li>
+            <li>Secondly</li>
+        </StylizedNumberedList>,
+    );
+
 describe('<StylizedNumberedList>', () => {
-  it('should render a <ol> with class ffe-stylized-numbered-list', () => {
-    const wrapper = shallow(<StylizedNumberedList><li>First</li><li>Second</li></StylizedNumberedList>);
-
-    assert.ok(wrapper.find('ol').hasClass('ffe-stylized-numbered-list'));
-  });
-  it('should render two list elements', () => {
-    const wrapper = shallow(<StylizedNumberedList><li>First</li><li>Second</li></StylizedNumberedList>);
-
-    assert.ok(wrapper.find('li').at(0).text(), 'First');
-    assert.ok(wrapper.find('li').at(1).text(), 'Second');
-  });
+    it('renders without exploding', () => {
+        const wrapper = getWrapper();
+        expect(wrapper.exists()).toBe(true);
+        expect(wrapper.is('ol')).toBe(true);
+    });
+    it('has the correct class', () => {
+        const wrapper = getWrapper({ className: 'test-class' });
+        expect(wrapper.hasClass('ffe-stylized-numbered-list')).toBe(true);
+        expect(wrapper.hasClass('test-class')).toBe(true);
+    });
+    it('passes props', () => {
+        const wrapper = getWrapper({ id: 'that-id' });
+        expect(wrapper.prop('id')).toBe('that-id');
+        expect(wrapper.text()).toContain('Firstly');
+    });
 });

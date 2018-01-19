@@ -1,12 +1,16 @@
 import React from 'react';
-import { array } from 'prop-types';
+import { node, string } from 'prop-types';
+import classNames from 'classnames';
 
-export default function BulletList({ children }) {
-    return  <ul className="ffe-bullet-list">
-                {children}
-            </ul>;
-}
+const BulletList = ({ className, ...rest }) => (
+    <ul className={classNames('ffe-bullet-list', className)} {...rest} />
+);
 
 BulletList.propTypes = {
-    children: array.isRequired,
+    /** List items */
+    children: node.isRequired,
+    /** Any extra classes */
+    className: string,
 };
+
+export default BulletList;

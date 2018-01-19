@@ -6,12 +6,12 @@ import DescriptionList from './DescriptionList';
 import DescriptionListMultiCol from './DescriptionListMultiCol';
 
 export {
-	BulletList,
-	CheckList,
-	NumberedList,
-	StylizedNumberedList,
-	DescriptionList,
-	DescriptionListMultiCol,
+    BulletList,
+    CheckList,
+    NumberedList,
+    StylizedNumberedList,
+    DescriptionList,
+    DescriptionListMultiCol,
 };
 
 export default BulletList;

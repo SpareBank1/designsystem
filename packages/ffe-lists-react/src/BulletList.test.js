@@ -1,21 +1,31 @@
-/* eslint-env mocha */
-/* eslint-disable no-unused-expressions */
+/* eslint-env jest */
 
 import React from 'react';
-import { assert } from 'chai';
 import { shallow } from 'enzyme';
 import BulletList from './BulletList';
 
+const getWrapper = props =>
+    shallow(
+        <BulletList {...props}>
+            <li>Firstly</li>
+            <li>Secondly</li>
+        </BulletList>,
+    );
+
 describe('<BulletList>', () => {
-  it('should render a <ul> with class ffe-bullet-list', () => {
-    const wrapper = shallow(<BulletList><li>First</li><li>Second</li></BulletList>);
-
-    assert.ok(wrapper.find('ul').hasClass('ffe-bullet-list'));
-  });
-  it('should render two list elements', () => {
-    const wrapper = shallow(<BulletList><li>First</li><li>Second</li></BulletList>);
-
-    assert.ok(wrapper.find('li').at(0).text(), 'First');
-    assert.ok(wrapper.find('li').at(1).text(), 'Second');
-  });
+    it('renders without exploding', () => {
+        const wrapper = getWrapper();
+        expect(wrapper.exists()).toBe(true);
+        expect(wrapper.is('ul')).toBe(true);
+    });
+    it('has the correct class', () => {
+        const wrapper = getWrapper({ className: 'test-class' });
+        expect(wrapper.hasClass('ffe-bullet-list')).toBe(true);
+        expect(wrapper.hasClass('test-class')).toBe(true);
+    });
+    it('passes props', () => {
+        const wrapper = getWrapper({ id: 'that-id' });
+        expect(wrapper.prop('id')).toBe('that-id');
+        expect(wrapper.text()).toContain('Firstly');
+    });
 });

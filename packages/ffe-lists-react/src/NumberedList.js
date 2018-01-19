@@ -1,12 +1,16 @@
 import React from 'react';
-import { array } from 'prop-types';
+import { string, node } from 'prop-types';
+import classNames from 'classnames';
 
-export default function NumberedList({ children }) {
-    return  <ol className="ffe-numbered-list">
-                {children}
-            </ol>;
-}
+const NumberedList = ({ className, ...rest }) => (
+    <ol className={classNames('ffe-numbered-list', className)} {...rest} />
+);
 
 NumberedList.propTypes = {
-    children: array.isRequired,
+    /** List items */
+    children: node.isRequired,
+    /** Any extra classes */
+    className: string,
 };
+
+export default NumberedList;
