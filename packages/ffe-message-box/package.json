@@ -16,6 +16,6 @@
         "ffe-core": "^9.0.0 || ^10.0.0"
     },
     "devDependencies": {
-        "stylelint": "^7.7.1"
+        "stylelint": "^8.4.0"
     }
 }
