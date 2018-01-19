@@ -3,10 +3,7 @@
     "version": "4.9.7",
     "description": "React implementation of ffe-tables",
     "main": "lib/index.js",
-    "files": [
-        "lib",
-        "*.js"
-    ],
+    "files": ["lib", "*.js"],
     "repository": {
         "type": "git",
         "url": "***REMOVED***"
@@ -15,7 +12,8 @@
     "scripts": {
         "build": "babel -d lib/. --ignore=*.test.js src/.",
         "test": "npm run test:spec && npm run test:nsp",
-        "test:spec": "mocha --require babel-register 'src/**/*.test.js' --require ./test-setup.js",
+        "test:spec":
+            "mocha --require babel-register 'src/**/*.test.js' --require ./test-setup.js",
         "test:watch": "npm test -- -w --require ./test-setup.js",
         "test:nsp": "nsp check"
     },
@@ -24,7 +22,6 @@
         "enzyme": "^3.3.0",
         "enzyme-adapter-react-16": "^1.1.1",
         "ffe-core": "^9.2.0",
-        "ffe-icons-react": "^3.0.0",
         "ffe-tables": "^8.1.2",
         "mocha": "^4.1.0",
         "nsp": "^3.1.0",
@@ -37,6 +34,7 @@
     "dependencies": {
         "classnames": "^2.2.5",
         "deep-equal": "^1.0.1",
+        "ffe-icons-react": "^4.0.5",
         "prop-types": "^15.6.0",
         "shallow-equals": "^1.0.0"
     }

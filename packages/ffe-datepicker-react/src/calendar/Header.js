@@ -1,6 +1,6 @@
 import React from 'react';
 import { func, number, string } from 'prop-types';
-import ChevronIkon from 'ffe-icons-react/chevron-ikon';
+import { ChevronIkon } from 'ffe-icons-react';
 
 export default function Header(props) {
     const {

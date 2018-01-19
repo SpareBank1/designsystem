@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { bool, func, oneOfType, string, shape } from 'prop-types';
 import classNames from 'classnames';
-import KalenderIkon from 'ffe-icons-react/kalender-ikon';
+import { KalenderIkon } from 'ffe-icons-react';
 
 export default class Input extends Component {
     focus() {

@@ -38,14 +38,10 @@
         "react": "^16.1.1",
         "react-dom": "^16.1.1"
     },
-    "files": [
-        "less/searchable-dropdown.less",
-        "lib",
-        "*.js"
-    ],
+    "files": ["less/searchable-dropdown.less", "lib", "*.js"],
     "dependencies": {
         "classnames": "^2.2.5",
-        "ffe-icons-react": "^3.0.0",
+        "ffe-icons-react": "^4.0.5",
         "lodash.isequal": "^4.5.0",
         "prop-types": "^15.6.0",
         "react-custom-scrollbars": "^4.2.1",

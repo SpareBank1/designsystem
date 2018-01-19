@@ -19,7 +19,7 @@
     },
     "dependencies": {
         "classnames": "^2.2.5",
-        "ffe-icons-react": "^3.0.0",
+        "ffe-icons-react": "^4.0.5",
         "prop-types": "^15.6.0",
         "react-collapse": "^4.0.3",
         "react-motion": "^0.5.2",
@@ -32,10 +32,7 @@
         "ffe-core": "^10.2.5",
         "jest": "^22.0.4"
     },
-    "files": [
-        "lib",
-        "*.js"
-    ],
+    "files": ["lib", "*.js"],
     "jest": {
         "setupTestFrameworkScriptFile": "./test-setup.js"
     }

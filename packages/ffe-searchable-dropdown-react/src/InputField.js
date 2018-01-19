@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { string, bool, func } from 'prop-types';
 import classNames from 'classnames';
-import KryssIkon from 'ffe-icons-react/kryss-ikon';
+import { KryssIkon } from 'ffe-icons-react';
 
 class Input extends Component {
     constructor(props) {
@@ -12,23 +12,32 @@ class Input extends Component {
     displayReset() {
         if (this.props.searchTerm) {
             return true;
-        }
-        else if (this.props.displayResetWhenInputHasValue) {
+        } else if (this.props.displayResetWhenInputHasValue) {
             return !!this.props.inputValue;
         }
         return false;
     }
 
     render() {
-        const { inputId, inputValue, onBlur, onClick, onFocus, onInputChange, onKeyDown, placeholder, onReset, ariaInvalid } = this.props;
+        const {
+            inputId,
+            inputValue,
+            onBlur,
+            onClick,
+            onFocus,
+            onInputChange,
+            onKeyDown,
+            placeholder,
+            onReset,
+            ariaInvalid,
+        } = this.props;
         return (
             <div>
                 <input
-                    className={classNames(
-                        "ffe-dropdown",
-                        {"ffe-searchable-dropdown__display-reset": this.displayReset()}
-                    )}
-                    aria-invalid={ String(ariaInvalid) }
+                    className={classNames('ffe-dropdown', {
+                        'ffe-searchable-dropdown__display-reset': this.displayReset(),
+                    })}
+                    aria-invalid={String(ariaInvalid)}
                     id={inputId}
                     onBlur={onBlur}
                     onChange={onInputChange}
@@ -38,20 +47,20 @@ class Input extends Component {
                     placeholder={placeholder}
                     value={inputValue}
                 />
-                {this.displayReset() &&
+                {this.displayReset() && (
                     <button
-                        className='ffe-searchable-dropdown__reset-button'
+                        className="ffe-searchable-dropdown__reset-button"
                         onMouseDown={onReset}
-                        onKeyDown={ (e) => {
-                            if (e.key === "Enter") {
+                        onKeyDown={e => {
+                            if (e.key === 'Enter') {
                                 onReset();
                             }
                         }}
                         type="button"
                     >
-                        <KryssIkon className='ffe-searchable-dropdown__reset-button-icon'/>
+                        <KryssIkon className="ffe-searchable-dropdown__reset-button-icon" />
                     </button>
-                }
+                )}
             </div>
         );
     }

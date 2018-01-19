@@ -2,9 +2,7 @@
     "name": "ffe-context-message-react",
     "version": "3.0.7",
     "description": "React implementation of ffe-context-message component",
-    "keywords": [
-        "ffe"
-    ],
+    "keywords": ["ffe"],
     "license": "UNLICENSED",
     "author": "SpareBank 1",
     "main": "lib/index.js",
@@ -16,10 +14,12 @@
         "build": "babel -d lib/. --ignore=src/test/ src/.",
         "lint": "eslint src/",
         "lint:fix": "eslint --fix src/",
-        "test": "cross-env NODE_ENV=test mocha -G --require babel-core/register --require src/test/setup.js --recursive src/test"
+        "test":
+            "cross-env NODE_ENV=test mocha -G --require babel-core/register --require src/test/setup.js --recursive src/test"
     },
     "dependencies": {
         "classnames": "^2.2.5",
+        "ffe-icons-react": "^4.0.5",
         "prop-types": "^15.6.0"
     },
     "devDependencies": {
@@ -29,7 +29,6 @@
         "eslint": "^4.13.1",
         "expect.js": "^0.3.1",
         "ffe-context-message": "^2.0.11",
-        "ffe-icons-react": "^4.0.5",
         "jsdom": "^11.5.1",
         "mocha": "^4.1.0",
         "sinon": "^4.1.3"
