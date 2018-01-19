@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.2.6"></a>
+## [4.2.6](***REMOVED***) (2018-01-19)
+
+
+
+
+**Note:** Version bump only for package ffe-datepicker
+
 <a name="4.2.5"></a>
 ## 4.2.5 (2018-01-10)
 

@@ -3,13 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-    <a name="3.0.5"></a>
+      <a name="3.0.6"></a>
+## [3.0.6](***REMOVED***) (2018-01-19)
+
+
+
+
+**Note:** Version bump only for package ffe-searchable-dropdown-react
+
+      <a name="3.0.5"></a>
 
 ## [3.0.5](***REMOVED***) (2018-01-10)
 
 **Note:** Version bump only for package ffe-searchable-dropdown-react
 
-    <a name="3.0.4"></a>
+  <a name="3.0.4"></a>
 
 ## [3.0.4](***REMOVED***) (2018-01-10)
 
@@ -47,12 +55,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 * Bump devDeps of `ffe-core` and `ffe-form` to latest versions.
 * FFE-consistent styling by replacing `.ffe-searchable-dropdown__dropdown-input-field`
-  with `.ffe-dropdown` from `ffe-form`.
+with `.ffe-dropdown` from `ffe-form`.
 * Change Babel preset from deprecated `latest` to `env`.
 * Disable npm lockfile and delete yarn lockfile.
 * Other devDep bumps to fix peerDep warnings.
 * Deprecated npm script `prepublish` replaced with `prepublishOnly`.
-  `npm install` will no longer trigger build.
+`npm install` will no longer trigger build.
 
 ## v2.1.3
 
@@ -77,7 +85,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## v2.0.0
 
 * Set inputValue outside the component to be able to reset and
-  change the value without interfering with the component.
+change the value without interfering with the component.
 * attributes onSelect, onReset and onChange should now update inputValue and not return it.
 * Removed attribute initialInputValue, added attribute inputValue.
 

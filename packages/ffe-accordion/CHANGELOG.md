@@ -3,19 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="3.0.5"></a>
+## [3.0.5](***REMOVED***) (2018-01-19)
+
+
+
+
+**Note:** Version bump only for package ffe-accordion
+
       <a name="3.0.4"></a>
 
 ## [3.0.4](***REMOVED***) (2018-01-10)
 
 **Note:** Version bump only for package ffe-accordion
 
-      <a name="3.0.3"></a>
+    <a name="3.0.3"></a>
 
 ## [3.0.3](***REMOVED***) (2018-01-09)
 
 **Note:** Version bump only for package ffe-accordion
 
-    <a name="3.0.2"></a>
+  <a name="3.0.2"></a>
 
 ## [3.0.2](***REMOVED***) (2018-01-05)
 
@@ -36,7 +44,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## Version 2.0.4
 
 * Set default background of `ffe-accordion-item__toggler` explicit to transparent.
-  This fixes IE11 error where background becomes gray when a toggler is a button.
+This fixes IE11 error where background becomes gray when a toggler is a button.
 
 ## Version 2.0.3
 
@@ -49,7 +57,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## Version 2.0.1
 
 * Make white accordion the default layout. Previously there was no default layout (that wasn't broken) without
-  tons of modifiers everywhere. Now you don't need to add modifiers if you want the white design.
+tons of modifiers everywhere. Now you don't need to add modifiers if you want the white design.
 * Fix a bug where single-item accordions got a double bottom border
 * Add a `viewport` meta tag to the examples page so that it scales correctly on smaller devices
 

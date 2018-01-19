@@ -1,6 +1,6 @@
 {
     "name": "ffe-searchable-dropdown-react",
-    "version": "3.0.5",
+    "version": "3.0.6",
     "description": "Dropdown with search option",
     "main": "lib/SearchableDropdown.js",
     "author": "SpareBank 1",
@@ -29,8 +29,8 @@
         "enzyme": "^3.3.0",
         "enzyme-adapter-react-16": "^1.1.1",
         "eslint": "^4.13.1",
-        "ffe-core": "^10.2.4",
-        "ffe-form": "^8.1.5",
+        "ffe-core": "^10.2.5",
+        "ffe-form": "^8.1.6",
         "ffe-icons": "^8.0.0",
         "jest": "^22.0.4",
         "less": "^2.7.3",
@@ -38,7 +38,11 @@
         "react": "^16.1.1",
         "react-dom": "^16.1.1"
     },
-    "files": ["less/searchable-dropdown.less", "lib", "*.js"],
+    "files": [
+        "less/searchable-dropdown.less",
+        "lib",
+        "*.js"
+    ],
     "dependencies": {
         "classnames": "^2.2.5",
         "ffe-icons-react": "^3.0.0",

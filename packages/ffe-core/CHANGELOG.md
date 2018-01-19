@@ -3,19 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="10.2.5"></a>
+## [10.2.5](***REMOVED***) (2018-01-19)
+
+
+
+
+**Note:** Version bump only for package ffe-core
+
       <a name="10.2.4"></a>
 
 ## [10.2.4](***REMOVED***) (2018-01-10)
 
 **Note:** Version bump only for package ffe-core
 
-      <a name="10.2.3"></a>
+    <a name="10.2.3"></a>
 
 ## [10.2.3](***REMOVED***) (2018-01-09)
 
 **Note:** Version bump only for package ffe-core
 
-    <a name="10.2.2"></a>
+  <a name="10.2.2"></a>
 
 ## [10.2.2](***REMOVED***) (2018-01-05)
 
@@ -266,25 +274,25 @@ If you want to keep using it and don't plan on upgrading to `ffe-buttons@2.1.0` 
 
 ```less
 .ffe-button-group {
-    padding: 40px 0;
+  padding: 40px 0;
 
-    &--thin {
-        padding: 0;
-    }
+  &--thin {
+      padding: 0;
+  }
 }
 
 .ffe-button-group [class^='ffe-'][class$='-button'] {
-    margin: 0 auto 10px;
+  margin: 0 auto 10px;
 
-    @media screen and (min-width: @breakpoint-sm) {
-        display: inline-block;
-        margin: 0 0 10px 10px;
-        width: auto;
+  @media screen and (min-width: @breakpoint-sm) {
+      display: inline-block;
+      margin: 0 0 10px 10px;
+      width: auto;
 
-        &:first-child {
-            margin-left: 0;
-        }
-    }
+      &:first-child {
+          margin-left: 0;
+      }
+  }
 }
 ```
 
@@ -297,7 +305,7 @@ If you have used any of the `.ffe-shadow-buttons-whatever()` mixins they are now
 ## v.7.0.1
 
 * Minor fix: make button texts of loading buttons unselectable, the text is only of interest for
-  screen readers and ought to remain invisible under all circumstances.
+screen readers and ought to remain invisible under all circumstances.
 
 ## v.7.0.0
 
@@ -343,7 +351,7 @@ If you have used any of the `.ffe-shadow-buttons-whatever()` mixins they are now
 ## v.5.5.3
 
 * Removing general positioning of spinner to fix layout bug when spinner is used on secondary buttons.
-  Bug happens because secondary-button reruns ffe-sb1-spinner-mixin after position is set in primary-button which it extends.
+Bug happens because secondary-button reruns ffe-sb1-spinner-mixin after position is set in primary-button which it extends.
 
 ## v.5.5.2
 

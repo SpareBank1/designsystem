@@ -1,13 +1,12 @@
 {
     "name": "ffe-checkbox-react",
-    "version": "4.4.8",
+    "version": "4.4.9",
     "main": "lib/Checkbox.js",
     "scripts": {
         "build": "babel -d lib/. --ignore=*.test.js src/.",
         "lint": "eslint src/.",
         "test:nsp": "nsp check",
-        "test:spec":
-            "mocha --require babel-register --require ./test-setup.js src/**/*.test.js",
+        "test:spec": "mocha --require babel-register --require ./test-setup.js src/**/*.test.js",
         "test": "npm run test:spec && npm run test:nsp",
         "tdd": "mocha --require babel-register src/**/*.test.js -w"
     },
@@ -24,8 +23,8 @@
         "enzyme": "^3.3.0",
         "enzyme-adapter-react-16": "^1.1.1",
         "eslint": "^4.13.1",
-        "ffe-core": "^10.2.4",
-        "ffe-form": "^8.1.5",
+        "ffe-core": "^10.2.5",
+        "ffe-form": "^8.1.6",
         "mocha": "^4.1.0",
         "mocha-tap13": "^1.0.2",
         "nsp": "^3.1.0",
@@ -35,5 +34,8 @@
         "react-dom": "^16.1.1",
         "sinon": "^4.1.3"
     },
-    "files": ["lib", "*.js"]
+    "files": [
+        "lib",
+        "*.js"
+    ]
 }

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="8.1.1"></a>
+## [8.1.1](***REMOVED***) (2018-01-19)
+
+
+
+
+**Note:** Version bump only for package ffe-buttons-react
+
       <a name="8.1.0"></a>
 # [8.1.0](***REMOVED***) (2018-01-10)
 
@@ -14,13 +22,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="8.0.6"></a>
+    <a name="8.0.6"></a>
 
 ## [8.0.6](***REMOVED***) (2018-01-10)
 
 **Note:** Version bump only for package ffe-buttons-react
 
-  <a name="8.0.5"></a>
+<a name="8.0.5"></a>
 
 ## [8.0.5](***REMOVED***) (2018-01-10)
 

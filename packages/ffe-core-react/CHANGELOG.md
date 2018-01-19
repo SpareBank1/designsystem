@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.1.6"></a>
+## [1.1.6](***REMOVED***) (2018-01-19)
+
+
+
+
+**Note:** Version bump only for package ffe-core-react
+
 <a name="1.1.5"></a>
 ## [1.1.5](***REMOVED***) (2018-01-10)
 

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.6"></a>
+## [5.0.6](***REMOVED***) (2018-01-19)
+
+
+
+
+**Note:** Version bump only for package ffe-cards
+
 <a name="5.0.5"></a>
 
 ## [5.0.5](***REMOVED***) (2018-01-10)

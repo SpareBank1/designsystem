@@ -3,19 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="5.1.5"></a>
+## [5.1.5](***REMOVED***) (2018-01-19)
+
+
+
+
+**Note:** Version bump only for package ffe-buttons
+
       <a name="5.1.4"></a>
 
 ## [5.1.4](***REMOVED***) (2018-01-10)
 
 **Note:** Version bump only for package ffe-buttons
 
-      <a name="5.1.3"></a>
+    <a name="5.1.3"></a>
 
 ## [5.1.3](***REMOVED***) (2018-01-09)
 
 **Note:** Version bump only for package ffe-buttons
 
-    <a name="5.1.2"></a>
+  <a name="5.1.2"></a>
 
 ## [5.1.2](***REMOVED***) (2018-01-05)
 
@@ -53,7 +61,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## v4.1.0
 
 * Add `--inline` modifier to ffe-button-group. When using this modifier, the buttons in the modified button group will not have width 100% on small screens,
-  and will be displayed on the same line as long as there is enough horizontal space.
+and will be displayed on the same line as long as there is enough horizontal space.
 
 ## v4.0.4
 
@@ -86,8 +94,8 @@ To migrate, update your app to ffe-core version 9.x
 ## v3.0.0
 
 * BREAKING: `ffe-back-button` is now a `display: inline-block` element, which might break some layouts.
-  Migrating should be pretty simple though - if you were depending on `ffe-back-button` to be a block level
-  element, please wrap your element in a block level element, like a `<div />`.
+Migrating should be pretty simple though - if you were depending on `ffe-back-button` to be a block level
+element, please wrap your element in a block level element, like a `<div />`.
 * Made `ffe-back-button` work with `<a />` elements.
 * Made `ffe-tertiary-button` work with `<a />` elements.
 
@@ -123,7 +131,7 @@ To migrate, update your app to ffe-core version 9.x
 ## v2.5.0
 
 * Icons can be nested inside tertiary buttons with `.ffe-tertiary-button__label-icon`.
-  This also requires `.ffe-tertiary-button--with-icon` on the button.
+This also requires `.ffe-tertiary-button--with-icon` on the button.
 * Adjust odd placement of icons in secondary buttons.
 
 ## v2.4.0

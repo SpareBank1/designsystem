@@ -1,6 +1,6 @@
 {
     "name": "ffe-dropdown-react",
-    "version": "3.0.2",
+    "version": "3.0.3",
     "main": "lib/Dropdown.js",
     "license": "UNLICENSED",
     "scripts": {
@@ -24,7 +24,10 @@
         "react-addons-test-utils": "^15.0.1",
         "react-dom": "^16.2.0"
     },
-    "files": ["lib", "*.js"],
+    "files": [
+        "lib",
+        "*.js"
+    ],
     "jest": {
         "setupTestFrameworkScriptFile": "./test-setup.js"
     }

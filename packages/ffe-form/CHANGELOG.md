@@ -3,13 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="8.1.6"></a>
+## [8.1.6](***REMOVED***) (2018-01-19)
+
+
+
+
+**Note:** Version bump only for package ffe-form
+
       <a name="8.1.5"></a>
 
 ## 8.1.5 (2018-01-10)
 
 **Note:** Version bump only for package ffe-form
 
-      # Changelog
+    # Changelog
 
 ## v.8.1.4
 
@@ -150,11 +158,11 @@ To migrate, update your app to ffe-core version 9.x
 ## v4.0.0
 
 * Removed layout styles from `ffe-form`. In practice all width styling is now removed and
-  consumers must provide their own class on the form of
+consumers must provide their own class on the form of
 
 ```
 [project-prefix]-input--[modifier] {
-    width: 120 px;
+  width: 120 px;
 }
 ```
 
@@ -201,12 +209,12 @@ and organizations.
 ## v2.0.4
 
 * Gave radio switches a white background when not selected, so that they work
-  correctly on non-white backgrounds as well
+correctly on non-white backgrounds as well
 
 ## v2.0.3
 
 * Updated the focus state to have correct focus color and to not have an
-  box-shadow
+box-shadow
 
 ## v2.0.2
 
@@ -221,8 +229,8 @@ and organizations.
 * **Potentially breaking change:** in order to support tooltips for form labels, the block-level relationship between labels and fields has been inverted:
 * `ffe-form-label` is now an `inline-block`. In order to keep the old behaviour add the new class `ffe-form-label--block` to your labels.
 * Input fields and dropdowns are now `block`s.In order to keep the old behaviour add the corresponding `--inline` modifier class, i.e.:
-  * `ffe-input-field` - `ffe-input-field--inline`
-  * `ffe-dropdown` - `ffe-dropdown--inline`
+* `ffe-input-field` - `ffe-input-field--inline`
+* `ffe-dropdown` - `ffe-dropdown--inline`
 * Added `ffe-tooltip` for form label tooltips.
 
 ## v1.1.0

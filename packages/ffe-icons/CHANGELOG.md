@@ -3,13 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="9.0.3"></a>
+## [9.0.3](***REMOVED***) (2018-01-19)
+
+
+
+
+**Note:** Version bump only for package ffe-icons
+
       <a name="9.0.2"></a>
 
 ## [9.0.2](***REMOVED***) (2018-01-09)
 
 **Note:** Version bump only for package ffe-icons
 
-      <a name="9.0.1"></a>
+    <a name="9.0.1"></a>
 
 ## [9.0.1](***REMOVED***) (2018-01-05)
 
@@ -26,7 +34,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ### BREAKING CHANGES
 
 * **ffe-icons:** Rename two icons that begins with numbers in order
-  to allow named exports in react package.
+to allow named exports in react package.
 
 The following icons have been renamed:
 
@@ -53,8 +61,8 @@ The following icons have been renamed:
 ### BREAKING CHANGES
 
 * This commit renames two icons in ffe-icons.
-  `bankid-icon` is now named `bankid-ikon`, and
-  `mynter-to-stabler-pluss` is now named `mynter-to-stabler-pluss-ikon`.
+`bankid-icon` is now named `bankid-ikon`, and
+`mynter-to-stabler-pluss` is now named `mynter-to-stabler-pluss-ikon`.
 
 In addition, ffe-icons-react receives a fix that unbroke a previous
 release
@@ -127,12 +135,12 @@ release
 ## 7.5.3
 
 * Bugfix: Remember that `.svg` is appended to all input in the `icons` config object
-  (as a convenience).
+(as a convenience).
 
 ## 7.5.2
 
 * Bugfix: Include all icons when `opts.icons` are set to `*`. This fixes a problem in
-  `ffe-icons-react` where no icons were outputted during the build
+`ffe-icons-react` where no icons were outputted during the build
 
 ## 7.5.1
 
@@ -155,9 +163,9 @@ Usage:
 
 ```json
 {
-    "dest": "dist/resources/",
-    "icons": ["bamse-ikon"],
-    "projectIcons": ["src/main/resources/special/snowflake/snokrystall-ikon"]
+  "dest": "dist/resources/",
+  "icons": ["bamse-ikon"],
+  "projectIcons": ["src/main/resources/special/snowflake/snokrystall-ikon"]
 }
 ```
 
@@ -457,7 +465,7 @@ Releasing version 2 with the first batch of optimized icons:
 ## Version 1.0.1
 
 * Added plaster-ikon
-  ![plaster-ikon](***REMOVED***)
+![plaster-ikon](***REMOVED***)
 
 ## Version 1.0.0
 

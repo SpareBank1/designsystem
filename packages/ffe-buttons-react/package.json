@@ -1,6 +1,6 @@
 {
     "name": "ffe-buttons-react",
-    "version": "8.1.0",
+    "version": "8.1.1",
     "description": "React implementation of ffe-buttons",
     "main": "lib/index.js",
     "scripts": {
@@ -8,12 +8,13 @@
         "lint": "eslint src/.",
         "test": "npm run test:spec && npm run test:nsp",
         "test:nsp": "nsp check",
-        "test:spec":
-            "mocha --require src/util/test-setup.js --compilers js:babel-core/register src/**/*.test.js",
-        "tdd":
-            "mocha --require src/util/test-setup.js --compilers js:babel-core/register src/**/*.test.js -w"
+        "test:spec": "mocha --require src/util/test-setup.js --compilers js:babel-core/register src/**/*.test.js",
+        "tdd": "mocha --require src/util/test-setup.js --compilers js:babel-core/register src/**/*.test.js -w"
     },
-    "files": ["lib", "*.js"],
+    "files": [
+        "lib",
+        "*.js"
+    ],
     "repository": {
         "type": "git",
         "url": "***REMOVED***"
@@ -25,8 +26,8 @@
         "enzyme": "^3.3.0",
         "enzyme-adapter-react-16": "^1.1.1",
         "eslint": "^4.13.1",
-        "ffe-buttons": "^5.1.4",
-        "ffe-core": "^10.2.4",
+        "ffe-buttons": "^5.1.5",
+        "ffe-core": "^10.2.5",
         "mocha": "^4.1.0",
         "mocha-tap13": "^1.0.2",
         "nsp": "^3.1.0",
@@ -36,7 +37,7 @@
     },
     "dependencies": {
         "classnames": "^2.2.5",
-        "ffe-icons-react": "^4.0.4",
+        "ffe-icons-react": "^4.0.5",
         "prop-types": "^15.6.0"
     },
     "license": "UNLICENSED"

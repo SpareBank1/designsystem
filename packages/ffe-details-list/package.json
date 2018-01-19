@@ -1,6 +1,6 @@
 {
     "name": "ffe-details-list",
-    "version": "8.1.4",
+    "version": "8.1.5",
     "description": "Opplisting av attributter i en grid",
     "main": "less/ffe-details-list.less",
     "scripts": {
@@ -10,15 +10,14 @@
         "type": "git",
         "url": "***REMOVED***"
     },
-    "homepage":
-        "***REMOVED***",
+    "homepage": "***REMOVED***",
     "author": "SpareBank 1",
     "license": "UNLICENSED",
     "peerDependencies": {
         "ffe-core": "^9.0.0 || ^10.0.0"
     },
     "devDependencies": {
-        "ffe-core": "^10.0.0",
+        "ffe-core": "^10.2.5",
         "stylelint": "^7.7.1"
     }
 }

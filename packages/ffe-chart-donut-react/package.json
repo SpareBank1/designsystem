@@ -1,11 +1,13 @@
 {
     "name": "ffe-chart-donut-react",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "description": "Donut chart in SVG",
     "main": "lib/index.js",
     "author": "SpareBank 1",
     "license": "UNLICENSED",
-    "keywords": ["ffe"],
+    "keywords": [
+        "ffe"
+    ],
     "scripts": {
         "build": "babel -d lib/ src/ && cp src/ffe-chart-donut.less lib/",
         "lint": "eslint src/ test/",
@@ -25,12 +27,16 @@
     "devDependencies": {
         "enzyme": "^3.3.0",
         "enzyme-adapter-react-16": "^1.1.1",
-        "ffe-core": "^10.2.4",
+        "ffe-core": "^10.2.5",
         "jest": "^22.0.4",
         "react": "^16.1.1"
     },
     "jest": {
         "setupTestFrameworkScriptFile": "./test-setup.js"
     },
-    "files": ["lib", "*.js", "*.less"]
+    "files": [
+        "lib",
+        "*.js",
+        "*.less"
+    ]
 }

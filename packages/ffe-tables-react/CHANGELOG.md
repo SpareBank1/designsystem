@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="4.9.7"></a>
+## [4.9.7](***REMOVED***) (2018-01-19)
+
+
+
+
+**Note:** Version bump only for package ffe-tables-react
+
       <a name="4.9.6"></a>
 ## [4.9.6](***REMOVED***) (2018-01-18)
 
@@ -11,13 +19,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package ffe-tables-react
 
-      <a name="4.9.5"></a>
+    <a name="4.9.5"></a>
 
 ## [4.9.5](***REMOVED***) (2018-01-16)
 
 **Note:** Version bump only for package ffe-tables-react
 
-    <a name="4.9.4"></a>
+  <a name="4.9.4"></a>
 
 ## 4.9.4 (2018-01-10)
 
@@ -27,7 +35,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * **ffe-tables-react:** Properly handle zero as row id ([35b523b](***REMOVED***))
 
 
-  # Changelog
+# Changelog
 
 ## v4.9.3
 
