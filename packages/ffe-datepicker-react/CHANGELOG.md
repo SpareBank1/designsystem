@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.7.5"></a>
+## [2.7.5](***REMOVED***) (2018-01-19)
+
+
+### Bug Fixes
+
+* Upgrade ffe-icons-react to v4 ([ea2d734](***REMOVED***))
+
+
+
+
 <a name="2.7.4"></a>
 ## [2.7.4](***REMOVED***) (2018-01-19)
 

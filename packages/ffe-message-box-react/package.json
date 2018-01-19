@@ -1,6 +1,6 @@
 {
     "name": "ffe-message-box-react",
-    "version": "3.3.5",
+    "version": "3.3.6",
     "main": "lib/index.js",
     "author": "SpareBank 1",
     "license": "UNLICENSED",
@@ -25,7 +25,10 @@
         "react-addons-test-utils": "^15.1.0",
         "react-dom": "^16.2.0"
     },
-    "files": ["lib", "*.js"],
+    "files": [
+        "lib",
+        "*.js"
+    ],
     "jest": {
         "setupTestFrameworkScriptFile": "./test-setup.js"
     },

@@ -1,6 +1,6 @@
 {
     "name": "ffe-searchable-dropdown-react",
-    "version": "3.0.6",
+    "version": "3.0.7",
     "description": "Dropdown with search option",
     "main": "lib/SearchableDropdown.js",
     "author": "SpareBank 1",
@@ -38,7 +38,11 @@
         "react": "^16.1.1",
         "react-dom": "^16.1.1"
     },
-    "files": ["less/searchable-dropdown.less", "lib", "*.js"],
+    "files": [
+        "less/searchable-dropdown.less",
+        "lib",
+        "*.js"
+    ],
     "dependencies": {
         "classnames": "^2.2.5",
         "ffe-icons-react": "^4.0.5",

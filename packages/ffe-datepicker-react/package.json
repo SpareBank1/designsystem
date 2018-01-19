@@ -1,14 +1,13 @@
 {
     "name": "ffe-datepicker-react",
-    "version": "2.7.4",
+    "version": "2.7.5",
     "main": "lib/ffe-datepicker-react.js",
     "license": "UNLICENSED",
     "scripts": {
         "build": "babel -d lib/. --ignore=*.test.js src/.",
         "lint": "eslint src/.",
         "test": "npm run test:spec && npm run test:nsp",
-        "test:spec":
-            "mocha --require src/util/test-setup.js --compilers js:babel-core/register 'src/**/*.test.js'",
+        "test:spec": "mocha --require src/util/test-setup.js --compilers js:babel-core/register 'src/**/*.test.js'",
         "test:nsp": "nsp check",
         "test:watch": "npm test -- -w"
     },
@@ -27,7 +26,10 @@
         "sinon": "^4.0.2",
         "sinon-chai": "^2.14.0"
     },
-    "files": ["lib", "*.js"],
+    "files": [
+        "lib",
+        "*.js"
+    ],
     "peerDependencies": {
         "ffe-datepicker": "^4.2.5",
         "ffe-form": "2.x - 8.x",
