@@ -1,0 +1,48 @@
+.ffe-header {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+
+    // normalize html5 tags for IE 9-
+    display: block;
+
+    &__secondary-nav,
+    &__user-nav,
+    &__site-nav {
+        display: block;
+    }
+   
+    // normalize links
+    &__link {
+        background-color: transparent;
+        -webkit-text-decoration-skip: objects;
+
+        &:active, &:hover {
+            outline-width: 0;
+        }
+    }
+
+    // normalize svg
+    &__svg-icon {
+        overflow: hidden;
+    }
+
+    // normalize button
+    &__icon-button {
+        font: inherit;
+        margin: 0;
+        overflow: visible;
+        text-transform: none;
+        -webkit-appearance: button;
+        &::-moz-focus-inner {
+            border-style: none;
+            padding: 0;
+        }
+    }
+
+    // normalize box model
+    &, *, *::before, *::after {
+        box-sizing: border-box;
+    }
+}
