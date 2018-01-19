@@ -1,0 +1,63 @@
+{
+  "name": "ffe-spinner-react",
+  "version": "2.0.4",
+  "author": "SpareBank 1",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel -d lib/. --ignore=*.test.js src/.",
+    "lint": "eslint src/.",
+    "start": "budo examples/spinner.js --open --live --title \"FFE Spinner React\" -- -t [ babelify --presets [ es2015 react ] ] -t node-lessify",
+    "test:nsp": "nsp check",
+    "test:spec": "mocha --require babel-register --reporter mocha-tap13 src/**/*.test.js",
+    "test": "npm run test:spec && npm run test:nsp",
+    "prepublish": "npm run build",
+    "has-published": "npm show . versions -s | grep -q ${npm_package_version}",
+    "postpublish": "git tag ${npm_package_version} && git push --tags"
+  },
+  "dependencies": {
+    "prop-types": "*"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.4.5",
+    "babel-core": "^6.5.2",
+    "babel-plugin-transform-object-rest-spread": "^6.5.0",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.5.0",
+    "babel-register": "^6.4.3",
+    "babelify": "^7.3.0",
+    "budo": "^8.3.0",
+    "chai": "^3.5.0",
+    "enzyme": "^2.0.0",
+    "eslint": "^3.12.2",
+    "eslint-config-ffe": "^6.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^3.0.2",
+    "eslint-plugin-react": "^6.8.0",
+    "ffe-core": "^9.2.0",
+    "ffe-spinner": "^2.0.0",
+    "mocha": "^2.4.5",
+    "mocha-tap13": "0.0.3",
+    "node-lessify": "^0.1.4",
+    "nsp": "^2.2.0",
+    "prop-types": "^15.5.10",
+    "react": "^15.2.0",
+    "react-addons-test-utils": "^15.0.0",
+    "react-dom": "^15.0.0"
+  },
+  "peerDependencies": {
+    "ffe-spinner": "1.x - 2.x"
+  },
+  "publishConfig": {
+    "registry": "***REMOVED***"
+  },
+  "files": [
+    "lib",
+    "*.js"
+  ],
+  "babel": {
+    "presets": [
+      "react",
+      "es2015"
+    ]
+  }
+}
