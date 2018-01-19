@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { arrayOf, bool, func, node, number, oneOf, string } from 'prop-types';
 import { Collapse } from 'react-collapse';
-import Chevron from 'ffe-icons-react/chevron-ikon';
+import { ChevronIkon } from 'ffe-icons-react';
 import classNames from 'classnames';
 
 const createClasses = (baseClass, isOpen, type) =>
@@ -103,7 +103,7 @@ class AccordionItem extends Component {
                         <span className="ffe-accordion-item__title">
                             {title}
                         </span>
-                        <Chevron
+                        <ChevronIkon
                             className={createClasses(
                                 'ffe-accordion-item__icon',
                                 isOpen,

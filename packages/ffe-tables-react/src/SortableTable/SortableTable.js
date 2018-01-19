@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import equal from 'deep-equal';
-import PilNedIcon from 'ffe-icons-react/pil-ned-ikon';
+import { PilNedIkon } from 'ffe-icons-react';
 import sortData from './sort-data';
 import Table from '../Table';
 
@@ -96,7 +96,7 @@ class SortableTable extends Component {
                 onClick={this.tableHeaderClicked.bind(this, column.key)}
             >
                 {column.header}
-                <PilNedIcon
+                <PilNedIkon
                     className={classNames(
                         'icon',
                         'ffe-sortable-table__sort-arrow',
