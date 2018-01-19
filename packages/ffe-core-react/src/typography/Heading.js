@@ -4,11 +4,12 @@ import classNames from 'classnames';
 import { bool, oneOf, node, string } from 'prop-types';
 
 const makeHeading = level => {
-    const Heading = (props) => {
+    const Heading = props => {
         const {
             children,
             className,
             error,
+            inline,
             noMargin,
             withBorder,
             lookLike,
@@ -24,9 +25,10 @@ const makeHeading = level => {
                 className={classNames(
                     headingClass,
                     { [`${headingClass}--error`]: error },
+                    { [`${headingClass}--inline`]: inline },
                     { [`${headingClass}--no-margin`]: noMargin },
                     { [`${headingClass}--with-border`]: withBorder },
-                    className
+                    className,
                 )}
             >
                 {children}
@@ -38,6 +40,7 @@ const makeHeading = level => {
         children: node.isRequired,
         className: string,
         error: bool,
+        inline: bool,
         lookLike: oneOf([1, 2, 3, 4, 5, 6]),
         noMargin: bool,
         withBorder: bool,
