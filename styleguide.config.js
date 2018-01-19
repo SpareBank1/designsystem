@@ -149,6 +149,11 @@ module.exports = {
                         'packages/ffe-core-react/src/typography/[A-Z]+([A-Za-z]).js',
                 },
                 {
+                    name: 'Lister',
+                    components:
+                        'packages/ffe-lists-react/src/[A-Z]+([A-Za-z]).js',
+                },
+                {
                     name: 'Formatering',
                     content: 'packages/ffe-formatters/USAGE.md',
                 },
