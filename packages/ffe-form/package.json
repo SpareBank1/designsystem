@@ -24,7 +24,7 @@
     "peerDependencies": {
         "ffe-core": "^10.2.4"
     },
-    "files": ["less", "examples"],
+    "files": ["less"],
     "keywords": [
         "frontend",
         "front",

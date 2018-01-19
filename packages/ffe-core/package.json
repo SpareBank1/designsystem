@@ -2,7 +2,7 @@
     "name": "ffe-core",
     "version": "10.2.4",
     "description": "Rammeverk for Felles Front End",
-    "files": ["fonts", "less", "examples"],
+    "files": ["fonts", "less"],
     "author": "SpareBank 1",
     "license": "UNLICENSED",
     "repository": {

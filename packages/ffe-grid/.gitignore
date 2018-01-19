@@ -32,12 +32,5 @@ node_modules
 # Optional REPL history
 .node_repl_history
 
-# Copied files
-examples/fonts
-examples/examples.css
-
-# Generated report website
-gemini-report
-
 # IntelliJ
 .idea/*

@@ -1,11 +1,6 @@
-examples/examples.css
-gemini-report
 .idea
 *.iml
 *.swp
-example/fonts
-example.css
-target
 
 # Created by https://www.gitignore.io/api/node
 

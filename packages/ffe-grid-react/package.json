@@ -9,7 +9,7 @@
     "author": "SpareBank1",
     "license": "UNLICENSED",
     "scripts": {
-        "build": "babel -d lib/. --ignore=*.test.js src/. && npm run example",
+        "build": "babel -d lib/. --ignore=*.test.js src/.",
         "lint": "eslint src/.",
         "lint:fix": "eslint --fix src/.",
         "test": "npm run test:spec && npm run test:nsp",

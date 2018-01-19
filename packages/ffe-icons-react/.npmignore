@@ -1,6 +1,5 @@
 buildCI.sh
 src/build-jsx-components.js
-src/example.jsx
 index.html
 svg.sprite.config.json
 webpack.config.js
