@@ -7,9 +7,6 @@ node_modules
 # Built files
 dist/
 
-# Example folders - should be removed at a later point
-example/
-
 # Editors
 .idea/
 .vscode/

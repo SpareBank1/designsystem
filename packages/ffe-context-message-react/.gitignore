@@ -1,15 +1,11 @@
 #Editors
 *~
 
-#FFE fonts
-dev/ffe/*
-
 #Node
 node_modules
 npm-debug.log*
 
 #Build
 lib/
-example.html
 .idea/
 *.iml

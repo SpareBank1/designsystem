@@ -6,14 +6,14 @@
     "license": "UNLICENSED",
     "main": "less/datepicker",
     "scripts": {
-        "lint": "stylelint less/*.less",
-        "start": "echo \"No local demo available - use the monorepo's npm start.\""
+        "lint": "stylelint less/*.less"
     },
     "repository": {
         "type": "git",
         "url": "***REMOVED***"
     },
-    "homepage": "***REMOVED***",
+    "homepage":
+        "***REMOVED***",
     "devDependencies": {
         "ffe-core": "^10.0.0",
         "ffe-form": "^8.0.0"

@@ -3,14 +3,13 @@
     "version": "1.0.4",
     "description": "React implementation of ffe-react",
     "main": "lib/index.js",
+    "author": "SpareBank 1",
+    "license": "UNLICENSED",
     "scripts": {
         "build": "babel --ignore spec.js -d lib src",
-        "start": "echo \"No local demo available - use the monorepo's npm start.\"",
         "test": "jest",
         "test:watch": "jest --watch"
     },
-    "author": "SpareBank 1",
-    "license": "UNLICENSED",
     "devDependencies": {
         "enzyme": "^3.3.0",
         "enzyme-adapter-react-16": "^1.1.1",

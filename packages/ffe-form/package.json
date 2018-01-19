@@ -6,14 +6,9 @@
     "author": "SpareBank 1",
     "license": "UNLICENSED",
     "scripts": {
-        "build":
-            "npm run lint && lessc examples/examples.less examples/examples.css --autoprefix && cp -R node_modules/ffe-core/fonts/ examples/fonts/ && echo \"$(date +%T): Updated example\"",
-        "lint": "lessc --lint examples/examples.less && stylelint less/*.less",
-        "start": "watch \"npm run -s build\" less/",
+        "lint": "stylelint less/*.less",
         "test:nsp": "nsp check",
-        "test": "npm run lint && npm run test:nsp",
-        "examples":
-            "lessc examples/examples.less examples/examples.css --autoprefix && mkdirp examples/fonts && cp -R node_modules/ffe-core/fonts/* examples/fonts/ && echo Now open /examples/[component].html to see styleguide."
+        "test": "npm run lint && npm run test:nsp"
     },
     "repository": {
         "type": "git",
@@ -21,73 +16,15 @@
     },
     "homepage":
         "***REMOVED***",
-    "documentation": [
-        {
-            "type": "html",
-            "file": "examples/input.html",
-            "select": "#ffedoc"
-        },
-        {
-            "type": "html",
-            "file": "examples/file-upload.html",
-            "select": "#ffedoc"
-        },
-        {
-            "type": "html",
-            "file": "examples/checkbox.html",
-            "select": "#ffedoc"
-        },
-        {
-            "type": "html",
-            "file": "examples/dropdown.html",
-            "select": "#ffedoc"
-        },
-        {
-            "type": "html",
-            "file": "examples/radioblock.html",
-            "select": "#ffedoc"
-        },
-        {
-            "type": "html",
-            "file": "examples/radiobutton.html",
-            "select": "#ffedoc"
-        },
-        {
-            "type": "html",
-            "file": "examples/radioswitch.html",
-            "select": "#ffedoc"
-        },
-        {
-            "type": "html",
-            "file": "examples/textarea.html",
-            "select": "#ffedoc"
-        },
-        {
-            "type": "html",
-            "file": "examples/tooltip.html",
-            "select": "#ffedoc"
-        },
-        {
-            "type": "html",
-            "file": "examples/validation.html",
-            "select": "#ffedoc"
-        }
-    ],
     "devDependencies": {
         "ffe-core": "^10.2.4",
-        "ffe-visual-tests-support": "2.1.2",
-        "less": "^2.7.3",
-        "less-plugin-autoprefix": "^1.5.1",
-        "mkdirp": "^0.5.1",
         "nsp": "^3.1.0",
-        "opn-cli": "^3.1.0",
-        "stylelint": "^8.4.0",
-        "watch": "^1.0.2"
+        "stylelint": "^8.4.0"
     },
     "peerDependencies": {
         "ffe-core": "^10.2.4"
     },
-    "files": ["less", "examples"],
+    "files": ["less"],
     "keywords": [
         "frontend",
         "front",

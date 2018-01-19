@@ -251,7 +251,7 @@ Installer `prettier` globalt og formatter alle `.jsx?`, `.json` og `.less`-filer
 Et eksempel kan være:
 
 ```
-prettier --write src/*.js *.json *.js examples/*.js
+prettier --write src/*.js *.json *.js
 ```
 
 Prettier kjøres også på alle filer du har staget for commit når du commiter. Derfor vil du av og til se endringer i

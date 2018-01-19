@@ -7,7 +7,6 @@
     "license": "UNLICENSED",
     "scripts": {
         "build": "babel -d lib/ src/",
-        "watch": "onchange 'src/**.js' -- npm run build",
         "lint": "eslint src/",
         "lint:fix": "eslint --fix src/",
         "test": "npm run test:spec && npm run test:nsp",
@@ -16,40 +15,27 @@
         "test:watch": "npm run tdd",
         "tdd": "jest --watch"
     },
-    "keywords": [
-        "ffe"
-    ],
+    "keywords": ["ffe"],
     "peerDependencies": {
         "react": "^15.4.2 || ^16.0.0"
     },
     "devDependencies": {
-        "babel-cli": "^6.23.0",
-        "babel-core": "^6.23.1",
-        "babel-eslint": "^7.1.1",
-        "babel-plugin-transform-object-rest-spread": "^6.23.0",
-        "babel-polyfill": "^6.23.0",
-        "babel-preset-latest": "^6.22.0",
-        "babel-preset-react": "^6.23.0",
-        "babel-register": "^6.23.0",
         "enzyme": "^3.3.0",
         "enzyme-adapter-react-16": "^1.1.1",
         "eslint": "^3.17.1",
         "jest": "^22.0.5",
         "mock-raf": "^1.0.0",
         "nsp": "^2.6.3",
-        "onchange": "3.2.1",
         "react": "^16.2.0",
         "react-addons-test-utils": "^15.6.2",
         "react-dom": "^16.2.0",
         "sinon": "^1.17.7"
     },
-    "files": [
-        "lib",
-        "*.js"
-    ],
+    "files": ["lib", "*.js"],
     "repository": {
         "type": "git",
-        "url": "***REMOVED***"
+        "url":
+            "***REMOVED***"
     },
     "jest": {
         "setupTestFrameworkScriptFile": "./test-setup.js"

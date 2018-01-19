@@ -38,11 +38,3 @@ node_modules
 
 # IDEA
 .idea/
-
-# examples
-examples/example.css
-examples/fonts
-
-# visual-tests
-gemini-report
-target

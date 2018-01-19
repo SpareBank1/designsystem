@@ -1,8 +1,12 @@
 /*eslint-env mocha*/
+import React from 'react';
 import sinon from 'sinon';
 import { shallow } from 'enzyme';
 import { assert } from 'chai';
-import CreateCheckbox from '../docs/example-component';
+
+import Checkbox from './Checkbox';
+
+const CreateCheckbox = props => <Checkbox {...props} />;
 
 describe('<Checkbox />', () => {
     it('should render a input', () => {

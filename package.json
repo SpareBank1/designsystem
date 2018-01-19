@@ -23,7 +23,9 @@
     },
     "devDependencies": {
         "@commitlint/cli": "^5.2.5",
+        "babel-cli": "^6.26.0",
         "babel-core": "^6.26.0",
+        "babel-eslint": "^8.2.1",
         "babel-loader": "^7.1.2",
         "babel-polyfill": "^6.26.0",
         "babel-preset-env": "^1.6.1",

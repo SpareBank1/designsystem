@@ -12,14 +12,11 @@
         "url": "***REMOVED***"
     },
     "scripts": {
-        "build":
-            "lessc examples/examples.less examples/examples.css && mkdirp examples/fonts && cp -r node_modules/ffe-core/fonts/* examples/fonts && echo \"$(date +%T): Updated example\"",
         "lint": "stylelint less/*.less",
         "test": "npm run lint"
     },
     "devDependencies": {
-        "ffe-core": "^10.2.4",
-        "mkdirp": "^0.5.1"
+        "ffe-core": "^10.2.4"
     },
     "peerDependencies": {
         "ffe-core": "^10.2.4"

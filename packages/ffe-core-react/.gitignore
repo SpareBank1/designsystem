@@ -10,7 +10,6 @@ npm-debug.log*
 fonts/
 lib/
 !lib/images
-examples/*.css
 
 # Editor files
 *sublime-project

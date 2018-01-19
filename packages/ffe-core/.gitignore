@@ -1,6 +1,4 @@
-examples/examples.css
 target/
-gemini-report
 .idea
 *.iml
 *.swp
