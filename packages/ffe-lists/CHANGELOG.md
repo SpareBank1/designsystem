@@ -1,4 +1,17 @@
-# Changelog
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+      <a name="4.1.2"></a>
+## 4.1.2 (2018-01-19)
+
+
+
+
+**Note:** Version bump only for package ffe-lists
+
+      # Changelog
 
 ## 4.1.1
 * `--condensed` now works on all screen sizes
@@ -38,11 +51,11 @@ to the new ffe-core major.
 
 ## v.3.0.0
 * Breaking:
-  * Refactored and renamed description lists in order to more correctly follow BEM naming convention
-  	* Renamed `ffe-description-list--flex` to `ffe-description-list`
-  	* Renamed `ffe-description-list--multicolumn` to `ffe-description-list-multicol`
-  * Removed `ffe-number-list` (use `ffe-numbered-list`)
-  * Removed `ffe-stylized-number-list` (use `ffe-stylized-numbered-list`)
+* Refactored and renamed description lists in order to more correctly follow BEM naming convention
+	* Renamed `ffe-description-list--flex` to `ffe-description-list`
+	* Renamed `ffe-description-list--multicolumn` to `ffe-description-list-multicol`
+* Removed `ffe-number-list` (use `ffe-numbered-list`)
+* Removed `ffe-stylized-number-list` (use `ffe-stylized-numbered-list`)
 * Added `--md` and `--lg` modifiers for `ffe-description-list`
 
 ## v.2.3.0
@@ -61,8 +74,8 @@ to the new ffe-core major.
 
 ## v.2.0.0
 * Breaking:
-  * renamed `less/description-list.less` to `less/description-list.less`
-  * renamed `less/list.less` to `less/regular-lists.less`
-  * moved entry-point `ffe-lists.less` to `less/lists.less`
+* renamed `less/description-list.less` to `less/description-list.less`
+* renamed `less/list.less` to `less/regular-lists.less`
+* moved entry-point `ffe-lists.less` to `less/lists.less`
 
 This is consistent with how `.less` files are named similar to their package names in the other packages that were exported from core.

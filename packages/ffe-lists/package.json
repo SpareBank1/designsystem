@@ -1,6 +1,6 @@
 {
     "name": "ffe-lists",
-    "version": "4.1.1",
+    "version": "4.1.2",
     "description": "Lists in ffe",
     "main": "less/lists.less",
     "repository": {
@@ -20,5 +20,7 @@
     "peerDependencies": {
         "ffe-core": "^9.0.0 || ^10.0.0"
     },
-    "files": ["less"]
+    "files": [
+        "less"
+    ]
 }

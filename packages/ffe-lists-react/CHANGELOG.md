@@ -1,4 +1,20 @@
-# Changelog
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+       <a name="2.1.0"></a>
+# 2.1.0 (2018-01-19)
+
+
+### Features
+
+* **ffe-lists-react:** Import ffe-lists-react ([4d8b7df](***REMOVED***))
+
+
+
+
+       # Changelog
 
 ## v2.0.3
 * Use PropTypes from prop-types package
