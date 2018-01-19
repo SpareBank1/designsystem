@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.7.4"></a>
+## [2.7.4](***REMOVED***) (2018-01-19)
+
+
+### Bug Fixes
+
+* **ffe-datepicker-react:** added tests ([b4ad204](***REMOVED***))
+* **ffe-datepicker-react:** changed slightly the logic so that calendar will open only if it is not already open ([233d17b](***REMOVED***))
+* **ffe-datepicker-react:** refactoring ([e11e9f1](***REMOVED***))
+* **ffe-datepicker-react:** This commit adds a fix to make sure date with validation error can be changed ([610dfcb](***REMOVED***))
+
+
+
+
 <a name="2.7.3"></a>
 ## [2.7.3](***REMOVED***) (2018-01-19)
 
