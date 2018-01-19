@@ -55,6 +55,7 @@ export default class Datepicker extends Component {
     }
 
     onInputFocus() {
+        this.validateDateIntervals();
         if (this.state.openOnFocus) {
             this.openCalendar();
             this._datepickerNode.click();
@@ -68,6 +69,13 @@ export default class Datepicker extends Component {
         return onError ? onError(type, errorText) : errorText;
     }
 
+    openCalendarOrLeaveOpen(type) {
+        return type === dateErrorTypes.MIN_DATE ||
+            type === dateErrorTypes.MAX_DATE
+            ? this.state.displayDatePicker
+            : false;
+    }
+
     validateDateIntervals() {
         let nextState = {};
         const { onChange, value, onValidationComplete } = this.props;
@@ -79,7 +87,7 @@ export default class Datepicker extends Component {
                 errorMessage,
                 openOnFocus: true,
                 ariaInvalid: true,
-                displayDatePicker: false,
+                displayDatePicker: this.openCalendarOrLeaveOpen(type),
             };
         };
 

@@ -350,4 +350,89 @@ describe('<Datepicker />', () => {
             });
         });
     });
+
+    describe('validate correct visibility of Calendar on DateInput blur', () => {
+        const openCalendarAndBlurDateInput = datepicker => {
+            const input = wrapper.find(DateInput).find('input');
+            input.simulate('click');
+            input.simulate('blur');
+        };
+        describe('should not be visible on invalid date value', () => {
+            beforeEach(() => {
+                wrapper = mount(
+                    <Datepicker {...defaultProps} value={'iamturtles'} />,
+                );
+                openCalendarAndBlurDateInput(wrapper);
+            });
+
+            it('has an error message', () =>
+                expect(wrapper).to.have.descendants(errorClass));
+
+            it('hides error message if hideErrors prop is true', () => {
+                wrapper.setProps({ hideErrors: true });
+                expect(wrapper).to.not.have.descendants(errorClass);
+            });
+
+            it('hides calendar', () => {
+                expect(wrapper).to.not.have.descendants(Calendar);
+            });
+        });
+
+        describe('should be visible with valid date value', () => {
+            let errorMessage;
+
+            describe('when date is below minimum date', () => {
+                beforeEach(() => {
+                    wrapper = mount(
+                        <Datepicker
+                            {...defaultProps}
+                            value="31.12.2014"
+                            minDate="01.01.2016"
+                        />,
+                    );
+                    openCalendarAndBlurDateInput(wrapper);
+                    errorMessage = wrapper.find(errorClass);
+                });
+
+                it('has correct error-class', () =>
+                    expect(wrapper).to.have.descendants(errorClass));
+
+                it('has correct error-message', () => {
+                    expect(errorMessage).to.have.text(i18n.nb.MIN_DATE);
+                    expect(wrapper).to.have.descendants(Calendar);
+                });
+
+                it('has calendar open', () =>
+                    expect(wrapper)
+                        .to.have.exactly(1)
+                        .descendants(Calendar));
+            });
+
+            describe('when date is above maximum date', () => {
+                beforeEach(() => {
+                    wrapper = mount(
+                        <Datepicker
+                            {...defaultProps}
+                            value="31.12.2016"
+                            maxDate="01.01.2016"
+                        />,
+                    );
+
+                    openCalendarAndBlurDateInput(wrapper);
+                    errorMessage = wrapper.find(errorClass);
+                });
+
+                it('has correct error-class', () =>
+                    expect(wrapper).to.have.descendants(errorClass));
+
+                it('has correct error-message', () =>
+                    expect(errorMessage).to.have.text(i18n.nb.MAX_DATE));
+
+                it('has calendar open', () =>
+                    expect(wrapper)
+                        .to.have.exactly(1)
+                        .descendants(Calendar));
+            });
+        });
+    });
 });
