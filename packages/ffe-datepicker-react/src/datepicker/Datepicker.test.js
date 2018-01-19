@@ -352,20 +352,17 @@ describe('<Datepicker />', () => {
     });
 
     describe('validate correct visibility of Calendar on DateInput blur', () => {
+        const openCalendarAndBlurDateInput = datepicker => {
+            const input = wrapper.find(DateInput).find('input');
+            input.simulate('click');
+            input.simulate('blur');
+        };
         describe('should not be visible on invalid date value', () => {
             beforeEach(() => {
                 wrapper = mount(
                     <Datepicker {...defaultProps} value={'iamturtles'} />,
                 );
-
-                wrapper
-                    .find(DateInput)
-                    .find('input')
-                    .simulate('click');
-                wrapper
-                    .find(DateInput)
-                    .find('input')
-                    .simulate('blur');
+                openCalendarAndBlurDateInput(wrapper);
             });
 
             it('has an error message', () =>
@@ -393,15 +390,7 @@ describe('<Datepicker />', () => {
                             minDate="01.01.2016"
                         />,
                     );
-
-                    wrapper
-                        .find(DateInput)
-                        .find('input')
-                        .simulate('click');
-                    wrapper
-                        .find(DateInput)
-                        .find('input')
-                        .simulate('blur');
+                    openCalendarAndBlurDateInput(wrapper);
                     errorMessage = wrapper.find(errorClass);
                 });
 
@@ -429,15 +418,7 @@ describe('<Datepicker />', () => {
                         />,
                     );
 
-                    wrapper
-                        .find(DateInput)
-                        .find('input')
-                        .simulate('click');
-
-                    wrapper
-                        .find(DateInput)
-                        .find('input')
-                        .simulate('blur');
+                    openCalendarAndBlurDateInput(wrapper);
                     errorMessage = wrapper.find(errorClass);
                 });
 
