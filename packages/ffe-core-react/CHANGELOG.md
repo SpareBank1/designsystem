@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.2.0"></a>
+# [1.2.0](***REMOVED***) (2018-01-19)
+
+
+### Features
+
+* **ffe-core-react:** Add new inline prop ([d9d125f](***REMOVED***))
+
+
+
+
 <a name="1.1.6"></a>
 ## [1.1.6](***REMOVED***) (2018-01-19)
 

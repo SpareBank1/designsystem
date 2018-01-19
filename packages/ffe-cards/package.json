@@ -1,6 +1,6 @@
 {
     "name": "ffe-cards",
-    "version": "5.0.6",
+    "version": "5.0.7",
     "description": "Kort for bruk i oversikter",
     "main": "index.js",
     "scripts": {
@@ -13,6 +13,6 @@
         "ffe-core": "^10.2.4"
     },
     "devDependencies": {
-        "ffe-core": "^10.2.5"
+        "ffe-core": "^10.3.0"
     }
 }

@@ -1,6 +1,6 @@
 {
     "name": "ffe-datepicker-react",
-    "version": "2.7.5",
+    "version": "2.7.6",
     "main": "lib/ffe-datepicker-react.js",
     "license": "UNLICENSED",
     "scripts": {
@@ -37,7 +37,7 @@
     },
     "dependencies": {
         "classnames": "^2.2.5",
-        "ffe-datepicker": "^4.2.6",
+        "ffe-datepicker": "^4.2.7",
         "ffe-icons-react": "^4.0.5",
         "prop-types": "15.x",
         "uuid": "^3.1.0"

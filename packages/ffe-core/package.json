@@ -1,6 +1,6 @@
 {
     "name": "ffe-core",
-    "version": "10.2.5",
+    "version": "10.3.0",
     "description": "Rammeverk for Felles Front End",
     "files": [
         "fonts",

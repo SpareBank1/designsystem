@@ -1,6 +1,6 @@
 {
     "name": "ffe-tables-react",
-    "version": "4.9.8",
+    "version": "4.9.9",
     "description": "React implementation of ffe-tables",
     "main": "lib/index.js",
     "files": [
@@ -24,7 +24,7 @@
         "enzyme": "^3.3.0",
         "enzyme-adapter-react-16": "^1.1.1",
         "ffe-core": "^9.2.0",
-        "ffe-tables": "^8.1.2",
+        "ffe-tables": "^8.1.3",
         "mocha": "^4.1.0",
         "nsp": "^3.1.0",
         "react": "^16.1.1",

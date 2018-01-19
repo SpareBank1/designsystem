@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="3.0.6"></a>
+## [3.0.6](***REMOVED***) (2018-01-19)
+
+
+
+
+**Note:** Version bump only for package ffe-accordion
+
       <a name="3.0.5"></a>
 ## [3.0.5](***REMOVED***) (2018-01-19)
 
@@ -11,19 +19,19 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package ffe-accordion
 
-      <a name="3.0.4"></a>
+    <a name="3.0.4"></a>
 
 ## [3.0.4](***REMOVED***) (2018-01-10)
 
 **Note:** Version bump only for package ffe-accordion
 
-    <a name="3.0.3"></a>
+  <a name="3.0.3"></a>
 
 ## [3.0.3](***REMOVED***) (2018-01-09)
 
 **Note:** Version bump only for package ffe-accordion
 
-  <a name="3.0.2"></a>
+<a name="3.0.2"></a>
 
 ## [3.0.2](***REMOVED***) (2018-01-05)
 

@@ -1,6 +1,6 @@
 {
     "name": "ffe-form",
-    "version": "8.1.6",
+    "version": "8.1.7",
     "description": "Form components for Felles Front End",
     "main": "less/form.less",
     "author": "SpareBank 1",
@@ -16,7 +16,7 @@
     },
     "homepage": "***REMOVED***",
     "devDependencies": {
-        "ffe-core": "^10.2.5",
+        "ffe-core": "^10.3.0",
         "nsp": "^3.1.0",
         "stylelint": "^8.4.0"
     },
