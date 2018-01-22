@@ -1,0 +1,34 @@
+{
+    "name": "ffe-lists-react",
+    "version": "2.1.0",
+    "description": "React implementation of ffe-lists",
+    "main": "lib/index.js",
+    "scripts": {
+        "build": "babel -d lib/. --ignore=*.test.js src/.",
+        "lint": "eslint src/",
+        "test": "npm run test:spec && npm run test:nsp",
+        "test:spec": "jest",
+        "test:nsp": "nsp check",
+        "test:watch": "jest --watch"
+    },
+    "devDependencies": {
+        "enzyme": "^3.3.0",
+        "enzyme-adapter-react-16": "^1.1.1",
+        "ffe-lists": "^4.1.2",
+        "jest": "^22.1.3",
+        "nsp": "^2.2.0",
+        "react": "^16.2.0",
+        "react-dom": "^16.2.0"
+    },
+    "files": ["lib", "*.js"],
+    "peerDependencies": {
+        "ffe-lists": "3.x - 4.x"
+    },
+    "dependencies": {
+        "classnames": "^2.2.5",
+        "prop-types": "*"
+    },
+    "jest": {
+        "setupTestFrameworkScriptFile": "./test-setup.js"
+    }
+}

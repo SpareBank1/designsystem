@@ -1,0 +1,111 @@
+@description-list-vertical-seperation: 20px;
+
+.ffe-description-list,
+.ffe-description-list-multicol {
+    dt {
+        color: @ffe-blue-royal;
+        &:extend(.ffe-strong-text);
+        .ffe-fontsize-h6;
+    }
+
+    /* Use padding rather than margin in bottom to avoid extra spacing overflowing to the top of the next column */
+    dd {
+        padding-bottom: @description-list-vertical-seperation;
+        margin-left: 0;
+        &:extend(.ffe-body-text);
+    }
+}
+
+.ffe-description-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 100%;
+
+    dt {
+        flex: 0 0 35%;
+        overflow: hidden;
+    }
+
+    dd {
+        flex: 65% 0 0;
+        padding-left: 20px;
+        max-width: 65%; /* Fix for IE issue in which box-sizing is not taken into account when using flex */
+    }
+
+    dd + dd {
+        margin-left: 35%; /* Keep left margin when using multiple dd's */
+    }
+
+    @media (min-width: @breakpoint-sm) {
+        dt {
+            flex: 0 0 20%;
+        }
+
+        dd {
+            flex: 80% 0 0;
+            max-width: 80%;
+        }
+
+        dd + dd {
+            margin-left: 20%;
+        }
+    }
+
+    &--md {
+        dt {
+            flex: 0 0 40%;
+        }
+
+        dd {
+            flex: 60% 0 0;
+            max-width: 60%;
+        }
+
+        dd + dd {
+            margin-left: 40%;
+        }
+    }
+
+    &--lg {
+        dt {
+            flex: 0 0 50%;
+        }
+
+        dd {
+            flex: 50% 0 0;
+            max-width: 50%;
+        }
+
+        dd + dd {
+            margin-left: 50%;
+        }
+    }
+}
+
+.ffe-description-list-multicol {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+
+    &__avoid-break {
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    &--sm-2-cols {
+        .ffe-description-list-multicol__avoid-break {
+            flex-basis: 50%;
+        }
+    }
+
+    &__avoid-break:last-child:not(:nth-child(even)) {
+        flex-basis: 100%;
+    }
+
+    @media (min-width: @breakpoint-sm) {
+        &__avoid-break {
+            flex-basis: 50%;
+        }
+    }
+}

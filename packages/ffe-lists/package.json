@@ -1,0 +1,24 @@
+{
+    "name": "ffe-lists",
+    "version": "4.1.2",
+    "description": "Lists in ffe",
+    "main": "less/lists.less",
+    "repository": {
+        "type": "git",
+        "url": "***REMOVED***"
+    },
+    "author": "SpareBank 1",
+    "license": "UNLICENSED",
+    "scripts": {
+        "lint": "stylelint less/*.less",
+        "test:nsp": "nsp check",
+        "test": "npm run lint && npm run test:nsp"
+    },
+    "devDependencies": {
+        "ffe-core": "^10.0.0"
+    },
+    "peerDependencies": {
+        "ffe-core": "^9.0.0 || ^10.0.0"
+    },
+    "files": ["less"]
+}
