@@ -230,6 +230,11 @@ module.exports = {
                     components:
                         'packages/ffe-file-upload-react/src/[A-Z]+([A-Za-z]).js',
                 },
+                {
+                    name: 'Spinners',
+                    components:
+                        'packages/ffe-spinner-react/src/[A-Z]+([A-Za-z]).js',
+                },
             ],
         },
     ],

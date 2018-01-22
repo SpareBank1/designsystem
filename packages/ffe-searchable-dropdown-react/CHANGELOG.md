@@ -3,7 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-    <a name="3.0.8"></a>
+      <a name="4.0.0"></a>
+# [4.0.0](***REMOVED***) (2018-01-22)
+
+
+### Chores
+
+* **ffe-spinner-react:** Reimplement ffe-spinner-react ([a847bf1](***REMOVED***))
+
+
+### BREAKING CHANGES
+
+* **ffe-spinner-react:** This commit reimplements and simplifies the
+ffe-spinner-react implementation. It no longer includes layout, which
+requires the consumer to place it correctly.
+
+The `<InlineSpinner />` and `<LargeSpinner />` are now available as
+`<Spinner large={true|false} />`.
+
+The previous `<Spinner />` implementation, which wrapped a large
+spinner in a `ffe-content-container` class is now removed. To keep this
+behavior, the consumer can create its own implementation of a
+`<SpinnerWithLayout />` or something similar.
+
+
+
+
+      <a name="3.0.8"></a>
 ## [3.0.8](***REMOVED***) (2018-01-19)
 
 
@@ -11,7 +37,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package ffe-searchable-dropdown-react
 
-    <a name="3.0.7"></a>
+  <a name="3.0.7"></a>
 ## [3.0.7](***REMOVED***) (2018-01-19)
 
 
@@ -22,7 +48,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-  <a name="3.0.6"></a>
+<a name="3.0.6"></a>
 ## [3.0.6](***REMOVED***) (2018-01-19)
 
 
