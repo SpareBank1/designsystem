@@ -1,6 +1,6 @@
 {
     "name": "ffe-message-box",
-    "version": "4.2.4",
+    "version": "4.2.5",
     "description": "Meldingsboks",
     "main": "less/ffe-message-box",
     "repository": {

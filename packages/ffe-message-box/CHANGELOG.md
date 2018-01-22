@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.2.5"></a>
+## [4.2.5](***REMOVED***) (2018-01-22)
+
+
+
+
+**Note:** Version bump only for package ffe-message-box
+
 <a name="4.2.4"></a>
 ## [4.2.4](***REMOVED***) (2018-01-19)
 

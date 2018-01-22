@@ -1,8 +1,11 @@
 {
     "name": "ffe-spinner",
-    "version": "2.0.3",
+    "version": "2.0.4",
     "main": "less/spinner.less",
-    "files": ["less", "example"],
+    "files": [
+        "less",
+        "example"
+    ],
     "author": "SpareBank1",
     "license": "UNLICENSED",
     "scripts": {
@@ -14,8 +17,7 @@
         "type": "git",
         "url": "***REMOVED***"
     },
-    "homepage":
-        "***REMOVED***",
+    "homepage": "***REMOVED***",
     "devDependencies": {
         "ffe-core": "^10.0.0",
         "nsp": "^2.2.0"

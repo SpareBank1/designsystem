@@ -1,11 +1,10 @@
 {
     "name": "ffe-header",
-    "version": "10.2.0",
+    "version": "10.2.1",
     "description": "Felles header for SpareBank 1",
     "main": "index.js",
     "scripts": {
-        "compile":
-            "lessc less/ffe-header-nodeps.less examples/ffe-header.css --autoprefix",
+        "compile": "lessc less/ffe-header-nodeps.less examples/ffe-header.css --autoprefix",
         "lint": "stylelint less/*.less"
     },
     "repository": {

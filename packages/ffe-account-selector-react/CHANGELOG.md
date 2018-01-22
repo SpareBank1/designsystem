@@ -3,7 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-      <a name="8.1.6"></a>
+    <a name="8.1.7"></a>
+## [8.1.7](***REMOVED***) (2018-01-22)
+
+
+
+
+**Note:** Version bump only for package ffe-account-selector-react
+
+    <a name="8.1.6"></a>
 ## [8.1.6](***REMOVED***) (2018-01-22)
 
 
@@ -11,7 +19,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package ffe-account-selector-react
 
-      <a name="8.1.5"></a>
+  <a name="8.1.5"></a>
 ## [8.1.5](***REMOVED***) (2018-01-19)
 
 
@@ -19,7 +27,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package ffe-account-selector-react
 
-    <a name="8.1.4"></a>
+<a name="8.1.4"></a>
 ## [8.1.4](***REMOVED***) (2018-01-19)
 
 

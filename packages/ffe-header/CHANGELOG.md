@@ -1,3 +1,16 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+<a name="10.2.1"></a>
+## 10.2.1 (2018-01-22)
+
+
+
+
+**Note:** Version bump only for package ffe-header
+
 #CHANGELOG
 
 ## Version 10.2.0
