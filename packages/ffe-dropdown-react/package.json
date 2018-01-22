@@ -19,16 +19,13 @@
     "devDependencies": {
         "enzyme": "^3.3.0",
         "enzyme-adapter-react-16": "^1.1.1",
-        "eslint": "^3.12.2",
+        "eslint": "^4.13.1",
         "jest": "^22.0.5",
         "react": "^16.2.0",
         "react-addons-test-utils": "^15.0.1",
         "react-dom": "^16.2.0"
     },
-    "files": [
-        "lib",
-        "*.js"
-    ],
+    "files": ["lib", "*.js"],
     "jest": {
         "setupTestFrameworkScriptFile": "./test-setup.js"
     }

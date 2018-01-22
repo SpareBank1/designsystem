@@ -26,10 +26,7 @@
     "peerDependencies": {
         "ffe-spinner": "1.x - 2.x"
     },
-    "files": [
-        "lib",
-        "*.js"
-    ],
+    "files": ["lib", "*.js"],
     "jest": {
         "setupTestFrameworkScriptFile": "./test-setup.js"
     }

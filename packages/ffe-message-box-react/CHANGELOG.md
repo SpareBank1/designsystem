@@ -30,7 +30,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 <a name="3.3.7"></a>
 ## [3.3.7](***REMOVED***) (2018-01-19)
 
-
+Furthermore removes unused test dependencies and linting errors.
 
 
 **Note:** Version bump only for package ffe-message-box-react
@@ -57,7 +57,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 <a name="3.3.4"></a>
 ## [3.3.4](***REMOVED***) (2018-01-19)
 
-
+Furthermore removes unused test dependencies and linting errors.
 
 
 **Note:** Version bump only for package ffe-message-box-react

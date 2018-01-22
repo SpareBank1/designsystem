@@ -20,7 +20,5 @@
     "peerDependencies": {
         "ffe-core": "^9.0.0 || ^10.0.0"
     },
-    "files": [
-        "less"
-    ]
+    "files": ["less"]
 }

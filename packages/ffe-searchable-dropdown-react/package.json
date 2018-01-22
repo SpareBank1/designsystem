@@ -38,11 +38,7 @@
         "react": "^16.1.1",
         "react-dom": "^16.1.1"
     },
-    "files": [
-        "less/searchable-dropdown.less",
-        "lib",
-        "*.js"
-    ],
+    "files": ["less/searchable-dropdown.less", "lib", "*.js"],
     "dependencies": {
         "classnames": "^2.2.5",
         "ffe-icons-react": "^4.0.5",

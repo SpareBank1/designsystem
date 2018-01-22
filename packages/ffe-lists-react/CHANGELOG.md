@@ -4,19 +4,18 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
        <a name="2.1.0"></a>
-# 2.1.0 (2018-01-19)
 
+# 2.1.0 (2018-01-19)
 
 ### Features
 
 * **ffe-lists-react:** Import ffe-lists-react ([4d8b7df](***REMOVED***))
 
 
-
-
        # Changelog
 
 ## v2.0.3
+
 * Use PropTypes from prop-types package
 
 ## v2.0.2
@@ -31,8 +30,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## v2.0.0
 
 * Breaking:
-	* Renamed `DescriptionListFlex` to `DescriptionList`
-	* Updated `DescriptionList` and `DescriptionListMultiCol` markup to reflect refactoring in `ffe-lists` v.3.0.0
+  _ Renamed `DescriptionListFlex` to `DescriptionList`
+  _ Updated `DescriptionList` and `DescriptionListMultiCol` markup to reflect refactoring in `ffe-lists` v.3.0.0
 * Added support for `medium` and `large` attributes to `DescriptionList`
 
 ## v1.1.1
