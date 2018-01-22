@@ -1,5 +1,5 @@
 import React from 'react';
-import { bool, node } from 'prop-types';
+import { bool, node, string } from 'prop-types';
 import classNames from 'classnames';
 
 const Dropdown = props => {
@@ -20,6 +20,7 @@ const Dropdown = props => {
 Dropdown.propTypes = {
     children: node,
     inline: bool,
+    className: string,
 };
 
 export default Dropdown;
