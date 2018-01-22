@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.4"></a>
+## [3.0.4](***REMOVED***) (2018-01-22)
+
+
+### Bug Fixes
+
+* **ffe-dropdown-react:** Add missing proptypes check ([995d7f4](***REMOVED***))
+
+
+
+
 <a name="3.0.3"></a>
 ## [3.0.3](***REMOVED***) (2018-01-19)
 
