@@ -1,3 +1,34 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+<a name="3.0.0"></a>
+# 3.0.0 (2018-01-22)
+
+
+### Chores
+
+* **ffe-spinner-react:** Reimplement ffe-spinner-react ([a847bf1](***REMOVED***))
+
+
+### BREAKING CHANGES
+
+* **ffe-spinner-react:** This commit reimplements and simplifies the
+ffe-spinner-react implementation. It no longer includes layout, which
+requires the consumer to place it correctly.
+
+The `<InlineSpinner />` and `<LargeSpinner />` are now available as
+`<Spinner large={true|false} />`.
+
+The previous `<Spinner />` implementation, which wrapped a large
+spinner in a `ffe-content-container` class is now removed. To keep this
+behavior, the consumer can create its own implementation of a
+`<SpinnerWithLayout />` or something similar.
+
+
+
+
 # Changelog
 
 ## v.2.0.4
