@@ -42,6 +42,8 @@ module.exports = {
                 'ffe-message-box-react',
                 'ffe-radio-button-react',
                 'ffe-searchable-dropdown-react',
+                'ffe-spinner',
+                'ffe-spinner-react',
                 'ffe-tables',
                 'ffe-tables-react',
             ],
