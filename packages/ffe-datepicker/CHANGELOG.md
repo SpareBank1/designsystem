@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.2.8"></a>
+## [4.2.8](***REMOVED***) (2018-01-23)
+
+
+### Bug Fixes
+
+* **ffe-datepicker:** Make calendar icon clickable on Android ([bd5c2ef](***REMOVED***))
+
+
+
+
 <a name="4.2.7"></a>
 ## [4.2.7](***REMOVED***) (2018-01-19)
 
