@@ -21,6 +21,7 @@ export function ComponentsListRenderer({ classes, items }) {
                     key={name}
                 >
                     <Link
+                        noUnderline={true}
                         className={classNames('sb1ds-components-list__link', {
                             'sb1ds-components-list__link--heading': heading,
                         })}
