@@ -1,5 +1,6 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import Enzyme, { shallow, mount } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 import {
     SystemErrorMessage,
     SystemInfoMessage,
@@ -8,6 +9,8 @@ import {
 } from '../';
 import SystemMessage from '../SystemMessage';
 import sinon from 'sinon';
+
+Enzyme.configure({adapter: new Adapter()});
 
 describe('<SystemMessage />', () => {
     let wrapper;
@@ -30,7 +33,7 @@ describe('<SystemMessage />', () => {
         wrapper.find('.ffe-system-message__close').simulate('click');
         setTimeout(() => {
             const component = wrapper.find('.ffe-system-message-wrapper');
-            expect(component.get(0).style.getPropertyValue('height')).to.be('0px');
+            expect(component.first().instance().style.height).to.be('0px');
             done();
         }, 100);
     });
