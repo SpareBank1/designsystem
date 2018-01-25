@@ -1,6 +1,7 @@
 import React from 'react';
 import { Grid, GridRow, GridCol } from '../../../packages/ffe-grid-react';
 import classNames from 'classnames';
+import Link from 'rsg-components/Link';
 import Logo from './Logo';
 
 export default function TopMenu() {
@@ -30,56 +31,40 @@ export default function TopMenu() {
                         <nav className="sb1ds-top-menu__site-nav">
                             <ul className="sb1ds-top-menu__list">
                                 <li className="sb1ds-top-menu__item">
-                                    <a
-                                        className={classNames(
-                                            'ffe-link-text',
-                                            'ffe-link-text--no-underline',
-                                            'sb1ds-top-menu__link',
-                                            'ffe-strong-text',
-                                        )}
+                                    <Link
+                                        noUnderline={true}
+                                        className="sb1ds-top-menu__link ffe-strong-text"
                                         href="#kom-i-gang"
                                     >
                                         Kom i gang
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li className="sb1ds-top-menu__item">
-                                    <a
-                                        className={classNames(
-                                            'ffe-link-text',
-                                            'ffe-link-text--no-underline',
-                                            'sb1ds-top-menu__link',
-                                            'ffe-strong-text',
-                                        )}
+                                    <Link
+                                        noUnderline={true}
+                                        className="sb1ds-top-menu__link ffe-strong-text"
                                         href="#merkevare"
                                     >
                                         Merkevare
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li className="sb1ds-top-menu__item">
-                                    <a
-                                        className={classNames(
-                                            'ffe-link-text',
-                                            'ffe-link-text--no-underline',
-                                            'sb1ds-top-menu__link',
-                                            'ffe-strong-text',
-                                        )}
+                                    <Link
+                                        noUnderline={true}
+                                        className="sb1ds-top-menu__link ffe-strong-text"
                                         href="#visuell-stil"
                                     >
                                         Visuell stil
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li className="sb1ds-top-menu__item">
-                                    <a
-                                        className={classNames(
-                                            'ffe-link-text',
-                                            'ffe-link-text--no-underline',
-                                            'sb1ds-top-menu__link',
-                                            'ffe-strong-text',
-                                        )}
+                                    <Link
+                                        noUnderline={true}
+                                        className="sb1ds-top-menu__link ffe-strong-text"
                                         href="#komponenter"
                                     >
                                         Komponenter
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </nav>

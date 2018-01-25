@@ -7,11 +7,15 @@
 
     &__logo {
         height: 30px;
-        margin: 5px 10px;
+        margin: 10px 0;
+        vertical-align: middle;
+
+        @media screen and (min-width: @breakpoint-md) {
+            margin: 10px 15px;
+        }
 
         @media screen and (min-width: @breakpoint-lg) {
             height: 40px;
-            margin-left: 15px;
         }
     }
 
@@ -22,17 +26,49 @@
 
         @media screen and (min-width: @breakpoint-lg) {
             display: flex;
+            height: 100%;
         }
     }
 
     &__link {
-        display: block;
+        display: inline-block;
+        height: 100%;
+        padding: 0 20px;
         color: @ffe-grey-charcoal;
+        position: relative;
+        transition: all @ffe-transition-duration @ffe-ease;
 
-        @media screen and (min-width: @breakpoint-lg) {
-            display: inline-block;
-            padding: 20px;
+        &::before {
+            content: '';
+            display: block;
+            height: 5px;
+            background: @ffe-blue-royal;
+            position: absolute;
+            top: 0;
+            left: 20px;
+            right: 20px;
+            transform: translateY(-10px);
+            transition: transform @ffe-transition-duration @ffe-ease-in-out-back;
         }
+
+        &::after {
+            content: '';
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+        }
+
+        &:hover {
+            color: @ffe-blue-royal;
+
+            &::before {
+                transform: translateY(0);
+            }
+        }
+    }
+
+    &__site-nav {
+        height: 100%;
     }
 
     &__wrapper {
@@ -44,17 +80,12 @@
     }
 
     @media screen and (min-width: @breakpoint-lg) {
-        height: 60px;
         position: fixed;
         width: 100vw;
         z-index: 1;
-
-        > .sb1ds-header-grid {
-            height: 100%;
-
-            > .sb1ds-header-grid__row {
-                flex: 1;
-            }
-        }
     }
+}
+
+.sb1ds-header-grid__row {
+    flex: 1;
 }
