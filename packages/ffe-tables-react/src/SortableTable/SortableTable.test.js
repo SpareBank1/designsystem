@@ -1,6 +1,7 @@
 import React from 'react';
 import { expect } from 'chai';
-import { render } from 'enzyme';
+import { render, shallow } from 'enzyme';
+import sinon from 'sinon';
 import SortableTable from './SortableTable';
 
 describe('<SortableTable>', () => {
@@ -56,6 +57,22 @@ describe('<SortableTable>', () => {
 
     it('should show buttons in table when passing in buttons in data', () => {
         expect(wrapper.find('button').length).to.be.equal(data.length);
+    });
+
+    it('should call onSort after sorting table', () => {
+        const onSort = sinon.spy();
+        const table = shallow(
+            <SortableTable columns={columns} data={data} onSort={onSort} />,
+        );
+        table.instance().tableHeaderClicked('name');
+        sinon.assert.calledWith(
+            onSort,
+            sinon.match(val => {
+                return (
+                    'sortBy' in val && 'descending' in val && 'tableData' in val
+                );
+            }),
+        );
     });
 
     describe('condensed', () => {

@@ -3,10 +3,7 @@
     "version": "4.9.9",
     "description": "React implementation of ffe-tables",
     "main": "lib/index.js",
-    "files": [
-        "lib",
-        "*.js"
-    ],
+    "files": ["lib", "*.js"],
     "repository": {
         "type": "git",
         "url": "***REMOVED***"
@@ -15,7 +12,8 @@
     "scripts": {
         "build": "babel -d lib/. --ignore=*.test.js src/.",
         "test": "npm run test:spec && npm run test:nsp",
-        "test:spec": "mocha --require babel-register 'src/**/*.test.js' --require ./test-setup.js",
+        "test:spec":
+            "mocha --require babel-register 'src/**/*.test.js' --require ./test-setup.js",
         "test:watch": "npm test -- -w --require ./test-setup.js",
         "test:nsp": "nsp check"
     },
@@ -28,7 +26,8 @@
         "mocha": "^4.1.0",
         "nsp": "^3.1.0",
         "react": "^16.1.1",
-        "react-dom": "^16.1.1"
+        "react-dom": "^16.1.1",
+        "sinon": "^4.2.1"
     },
     "peerDependencies": {
         "ffe-tables": "^8.1.1"

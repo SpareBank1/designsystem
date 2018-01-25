@@ -50,16 +50,25 @@ class SortableTable extends Component {
     tableHeaderClicked(columnKey) {
         const descending =
             columnKey === this.state.sortBy ? !this.state.descending : false;
-        this.setState({
-            sortBy: columnKey,
-            descending: descending,
-            tableData: sortData(
-                this.props.columns,
-                this.props.data,
-                columnKey,
+        const tableData = sortData(
+            this.props.columns,
+            this.props.data,
+            columnKey,
+            descending,
+        );
+        this.setState(
+            {
+                sortBy: columnKey,
                 descending,
-            ),
-        });
+                tableData,
+            },
+            () =>
+                this.props.onSort({
+                    sortBy: columnKey,
+                    descending,
+                    tableData,
+                }),
+        );
     }
 
     handleKeyPress(columnKey, event) {
@@ -178,10 +187,12 @@ SortableTable.propTypes = {
     data: PropTypes.arrayOf(PropTypes.object).isRequired,
     sortBy: PropTypes.string,
     descending: PropTypes.bool,
+    onSort: PropTypes.func,
 };
 
 SortableTable.defaultProps = {
     descending: false,
+    onSort: () => {},
 };
 
 export default SortableTable;
