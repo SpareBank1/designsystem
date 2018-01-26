@@ -3,7 +3,7 @@ import { func, node, number, object, oneOf } from 'prop-types';
 
 import KryssIkon from 'ffe-icons-react/lib/kryss-ikon';
 
-/**
+/*
  * Internal base component for creating system messages.
  * Should not be used directly! Instead, use one of the
  * proxy components exported from the public API
@@ -39,8 +39,13 @@ export default class SystemMessage extends Component {
         return (
             <div
                 className={`ffe-system-message-wrapper ffe-system-message-wrapper--${modifier}`}
-                ref={self => { this._self = self; }}
-                style={{ ...style, transition: `height ${animationLengthMs / 1000}s` }}
+                ref={self => {
+                    this._self = self;
+                }}
+                style={{
+                    ...style,
+                    transition: `height ${animationLengthMs / 1000}s`,
+                }}
             >
                 <div
                     className={`
@@ -48,12 +53,8 @@ export default class SystemMessage extends Component {
                         ffe-content-container
                         ffe-content-container--lg`}
                 >
-                    <div className="ffe-system-message__icon">
-                        {icon}
-                    </div>
-                    <p className="ffe-system-message__content">
-                        {children}
-                    </p>
+                    <div className="ffe-system-message__icon">{icon}</div>
+                    <p className="ffe-system-message__content">{children}</p>
                     <div
                         className="ffe-system-message__close"
                         role="button"
@@ -67,7 +68,6 @@ export default class SystemMessage extends Component {
             </div>
         );
     }
-
 }
 
 SystemMessage.propTypes = {

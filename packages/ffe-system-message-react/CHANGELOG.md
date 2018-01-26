@@ -1,4 +1,3 @@
-# CHANGELOG
 
 ## Version 2.0.0
 * Upgraded to work with ffe-icons-react 4.x.

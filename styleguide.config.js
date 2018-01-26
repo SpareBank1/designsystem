@@ -193,6 +193,12 @@ module.exports = {
                         'packages/ffe-context-message-react/src/[A-Z]+([A-Za-z]).js',
                 },
                 {
+                    name: 'Systemmeldinger',
+                    content: 'packages/ffe-system-message-react/USAGE.md',
+                    components:
+                        'packages/ffe-system-message-react/src/System{Error,Info,News,Success}Message.js',
+                },
+                {
                     name: 'Dropdowns',
                     components: () => [
                         'packages/ffe-searchable-dropdown-react/src/SearchableDropdown.js',
