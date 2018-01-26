@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="4.10.0"></a>
+# [4.10.0](***REMOVED***) (2018-01-26)
+
+
+### Features
+
+* **ffe-tables-react:** Add prop onSort ([119f0da](***REMOVED***))
+
+
+
+
       <a name="4.9.9"></a>
 ## [4.9.9](***REMOVED***) (2018-01-19)
 
@@ -11,7 +22,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package ffe-tables-react
 
-      <a name="4.9.8"></a>
+    <a name="4.9.8"></a>
 ## [4.9.8](***REMOVED***) (2018-01-19)
 
 
@@ -22,7 +33,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-    <a name="4.9.7"></a>
+  <a name="4.9.7"></a>
 ## [4.9.7](***REMOVED***) (2018-01-19)
 
 
@@ -30,7 +41,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package ffe-tables-react
 
-  <a name="4.9.6"></a>
+<a name="4.9.6"></a>
 ## [4.9.6](***REMOVED***) (2018-01-18)
 
 
