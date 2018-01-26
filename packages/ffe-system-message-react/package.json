@@ -1,0 +1,78 @@
+{
+  "name": "ffe-system-message-react",
+  "version": "2.0.0",
+  "description": "SpareBank 1 System Message komponent",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel -d lib/. --ignore=src/test/ src/. && npm run example",
+    "dev": "npm run ffe:fonts && hjs-dev-server",
+    "example": "babel-node example/create-example.js > example.html",
+    "ffe:fonts": "mkdirp dev/ffe/fonts && cp node_modules/ffe-core/fonts/* dev/ffe/fonts",
+    "lint": "eslint src/",
+    "lint:fix": "eslint --fix src/",
+    "start": "npm run dev",
+    "test": "cross-env NODE_ENV=test mocha -G --compilers js:babel-core/register --require src/test/setup.js --recursive src/test",
+    "tdd": "npm test -- --watch",
+    "validate": "npm ls",
+    "postpublish": "git tag ${npm_package_version} && git push --tags",
+    "has-published": "npm show . versions -s | grep -q ${npm_package_version}"
+  },
+  "repository": {
+    "type": "git",
+    "url": "***REMOVED***"
+  },
+  "author": "SpareBank 1",
+  "pre-commit": [
+    "lint",
+    "test"
+  ],
+  "dependencies": {
+    "prop-types": "*"
+  },
+  "peerDependencies": {
+    "ffe-icons-react": "4.x",
+    "ffe-system-message": "1.x || 2.x"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.10.1",
+    "babel-core": "^6.10.4",
+    "babel-loader": "^6.4.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-polyfill": "^6.9.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.11.1",
+    "cross-env": "^1.0.8",
+    "css-loader": "^0.28.9",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "eslint": "^4.16.0",
+    "eslint-config-ffe": "^7.0.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.5.1",
+    "expect.js": "^0.3.1",
+    "ffe-core": "^10.3.0",
+    "ffe-icons-react": "^4.0.5",
+    "ffe-system-message": "^2.0.0",
+    "hjs-webpack": "^9.2.0",
+    "jsdom": "^11.6.0",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
+    "mkdirp": "^0.5.1",
+    "mocha": "^5.0.0",
+    "postcss-loader": "^0.9.1",
+    "precommit-hook": "^3.0.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "sinon": "^4.0.1",
+    "style-loader": "^0.19.1"
+  },
+  "publishConfig": {
+    "registry": "***REMOVED***"
+  },
+  "files": [
+    "lib",
+    "example.html",
+    "*.js"
+  ]
+}
