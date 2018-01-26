@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.2.9"></a>
+## [4.2.9](***REMOVED***) (2018-01-26)
+
+
+### Bug Fixes
+
+* **ffe-datepicker:** Revert changes to z-index, and add pointer-events: none to fix issues with Android ([b8381ef](***REMOVED***))
+
+
+
+
 <a name="4.2.8"></a>
 ## [4.2.8](***REMOVED***) (2018-01-23)
 
