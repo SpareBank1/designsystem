@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.2.1"></a>
+## [1.2.1](***REMOVED***) (2018-01-26)
+
+
+### Bug Fixes
+
+* **ffe-core-react:** Relax peerDeps to allow React 15. ([6721a20](***REMOVED***))
+
+
+
+
 <a name="1.2.0"></a>
 # [1.2.0](***REMOVED***) (2018-01-19)
 
