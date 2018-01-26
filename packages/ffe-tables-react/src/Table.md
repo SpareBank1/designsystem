@@ -110,6 +110,9 @@ const columns = [
 const expandedContentMapper = row =>
     row.address && <span>Adresse: {row.address}</span>;
 
+// function is called when table sorting changes.
+const onSort = ({sortBy, descending, tableData}) => {};
+
 <Table
     columns={columns}
     data={data}
@@ -122,5 +125,6 @@ const expandedContentMapper = row =>
     columnLayoutMobile={true}
     breakpoint={'none'}
     caption="Masse spennende data"
+    onSort={onSort}
 />;
 ```
