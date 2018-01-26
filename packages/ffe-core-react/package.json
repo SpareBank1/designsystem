@@ -4,9 +4,7 @@
     "description": "React components for ffe-core components",
     "main": "lib/index.js",
     "author": "SpareBank 1",
-    "keywords": [
-        "ffe"
-    ],
+    "keywords": ["ffe"],
     "repository": {
         "type": "git",
         "url": "***REMOVED***"
@@ -22,7 +20,7 @@
         "test:coverage": "jest src --coverage"
     },
     "peerDependencies": {
-        "react": "^16.1.1"
+        "react": "^15.4.0 || ^16.1.1"
     },
     "devDependencies": {
         "enzyme": "^3.3.0",
@@ -36,10 +34,7 @@
         "react-test-renderer": "^16.2.0",
         "rimraf": "^2.6.1"
     },
-    "files": [
-        "lib",
-        "*.js"
-    ],
+    "files": ["lib", "*.js"],
     "jest": {
         "setupTestFrameworkScriptFile": "./setupEnzyme.js"
     },
