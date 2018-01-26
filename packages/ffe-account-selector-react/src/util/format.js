@@ -32,7 +32,7 @@ export function accountFormatter(accountNumber) {
 export function balanceWithCurrency(balance = '', locale, currencyCode) {
     const formatOptions =
         locale === 'en' ? { thousandSeparator: ',', decimalMark: '.' } : {};
-    const amount = formatNumber(balance, formatOptions);
+    const amount = formatNumber(balance, { decimals: 2, ...formatOptions });
     const currencyAffix =
         currencyCode && currencyCode !== 'NOK'
             ? currencyCode
