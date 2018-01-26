@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="8.1.9"></a>
+## [8.1.9](***REMOVED***) (2018-01-26)
+
+
+### Bug Fixes
+
+* **ffe-account-selector-react:** Reintroducing the missing decimals in account balance. ([2275261](***REMOVED***))
+
+
+
+
       <a name="8.1.8"></a>
 ## [8.1.8](***REMOVED***) (2018-01-25)
 
@@ -14,7 +25,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="8.1.7"></a>
+    <a name="8.1.7"></a>
 ## [8.1.7](***REMOVED***) (2018-01-22)
 
 
@@ -22,7 +33,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package ffe-account-selector-react
 
-  <a name="8.1.6"></a>
+<a name="8.1.6"></a>
 ## [8.1.6](***REMOVED***) (2018-01-22)
 
 
