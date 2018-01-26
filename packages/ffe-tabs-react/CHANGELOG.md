@@ -1,4 +1,3 @@
-# Changelog
 
 ## v.1.1.0
 * Added `TabGroup` component
