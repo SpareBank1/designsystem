@@ -1,4 +1,3 @@
-# Changelog
 
 ## v3.0.3
 * Removed the text transformation styling of the `ffe-tab-button`
