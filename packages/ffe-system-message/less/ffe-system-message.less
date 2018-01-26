@@ -50,6 +50,19 @@
         padding: 0;
         width: 75%;
         font-size: 14px;
+
+
+        @media screen and (min-width: 460px) {
+            width: 84%;
+        }
+
+        @media screen and (min-width: 600px) {
+            font-size: 16px;
+        }
+
+        @media screen and (min-width: 720px) {
+            width: 90%;
+        }
     }
 
     &__close {
@@ -66,23 +79,5 @@
             height: 100%;
             width: 100%;
         }
-    }
-}
-
-@media screen and (min-width: 460px) {
-    .ffe-system-message__content {
-        width: 84%;
-    }
-}
-
-@media screen and (min-width: 600px) {
-    .ffe-system-message__content {
-        font-size: 16px;
-    }
-}
-
-@media screen and (min-width: 720px) {
-    .ffe-system-message__content {
-        width: 90%;
     }
 }
