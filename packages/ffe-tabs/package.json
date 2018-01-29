@@ -1,0 +1,23 @@
+{
+    "name": "ffe-tabs",
+    "version": "3.0.3",
+    "main": "less/ffe-tabs.less",
+    "files": ["less"],
+    "repository": {
+        "type": "git",
+        "url": "***REMOVED***"
+    },
+    "author": "SpareBank1",
+    "license": "UNLICENSED",
+    "scripts": {
+        "lint": "stylelint less/*.less",
+        "test:nsp": "nsp check",
+        "test": "npm run lint && npm run test:nsp"
+    },
+    "devDependencies": {
+        "ffe-core": "^10.0.0"
+    },
+    "peerDependencies": {
+        "ffe-core": "^9.2.0 || ^10.0.0"
+    }
+}

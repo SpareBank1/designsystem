@@ -241,6 +241,11 @@ module.exports = {
                     components:
                         'packages/ffe-spinner-react/src/[A-Z]+([A-Za-z]).js',
                 },
+                {
+                    name: 'Faner',
+                    components:
+                        'packages/ffe-tabs-react/src/[A-Z]+([A-Za-z]).js',
+                },
             ],
         },
     ],

@@ -1,0 +1,39 @@
+{
+    "name": "ffe-tabs-react",
+    "version": "1.1.0",
+    "main": "lib/index.js",
+    "files": ["lib"],
+    "repository": {
+        "type": "git",
+        "url": "***REMOVED***"
+    },
+    "author": "SpareBank 1",
+    "license": "UNLICENSED",
+    "scripts": {
+        "build": "babel -d lib/. --ignore=*.spec.js src/.",
+        "lint": "eslint src/.",
+        "test:nsp": "nsp check",
+        "test:watch": "jest --watch",
+        "test": "jest && npm run test:nsp"
+    },
+    "dependencies": {
+        "classnames": "^2.2.5",
+        "prop-types": "^15.6.0"
+    },
+    "devDependencies": {
+        "enzyme": "^3.3.0",
+        "enzyme-adapter-react-16": "^1.1.1",
+        "jest": "^22.0.4",
+        "nsp": "^3.1.0",
+        "react": "^16.1.1",
+        "react-dom": "^16.1.1"
+    },
+    "peerDependencies": {
+        "ffe-core": "^10.1.2",
+        "ffe-tabs": "^3.0.3",
+        "react": "^15.0.0 || ^16.0.0"
+    },
+    "jest": {
+        "setupTestFrameworkScriptFile": "./test-setup.js"
+    }
+}

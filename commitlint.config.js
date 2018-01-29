@@ -49,6 +49,8 @@ module.exports = {
                 'ffe-system-message-react',
                 'ffe-tables',
                 'ffe-tables-react',
+                'ffe-tabs',
+                'ffe-tabs-react',
             ],
         ],
     },
