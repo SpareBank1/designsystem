@@ -1,0 +1,20 @@
+@import '../node_modules/ffe-core/less/fonts';
+@import (reference) '../node_modules/ffe-core/less/ffe';
+@base-url: '.';
+
+body {
+    margin: 0;
+    min-height: 300px;
+}
+
+.lorem-ipsum {
+    margin: 0;
+    padding: 0 20px;
+    color: @ffe-grey-silver;
+    font-family: 'MuseoSans-500', arial, sans-serif;
+    font-size: 16px;
+    line-height: 26px;
+    @media screen and (min-width: @breakpoint-md) {
+        line-height: 24px;
+    }
+}

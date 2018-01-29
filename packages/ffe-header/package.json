@@ -4,7 +4,8 @@
     "description": "Felles header for SpareBank 1",
     "main": "index.js",
     "scripts": {
-        "compile": "lessc less/ffe-header-nodeps.less examples/ffe-header.css --autoprefix",
+        "build":
+            "lessc less/ffe-header-nodeps.less examples/ffe-header.css --autoprefix && lessc examples/examples.less examples/examples.css && mkdirp examples/fonts && cp -R node_modules/ffe-core/fonts/* examples/fonts/",
         "lint": "stylelint less/*.less"
     },
     "repository": {
