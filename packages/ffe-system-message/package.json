@@ -1,9 +1,11 @@
 {
     "name": "ffe-system-message",
-    "version": "2.0.2",
+    "version": "2.0.3",
     "description": "Systemmelding",
     "main": "index.js",
-    "files": ["less"],
+    "files": [
+        "less"
+    ],
     "repository": {
         "type": "git",
         "url": "***REMOVED***"

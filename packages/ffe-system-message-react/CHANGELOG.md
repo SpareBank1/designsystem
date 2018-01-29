@@ -1,3 +1,28 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+<a name="3.0.0"></a>
+# 3.0.0 (2018-01-29)
+
+
+### Chores
+
+* **ffe-system-message-react:** Import component ([867822c](***REMOVED***))
+
+
+### BREAKING CHANGES
+
+* **ffe-system-message-react:** the `files` property has been changed to only include
+the `lib/` folder. If you imported anything from anywhere else you need
+to update your imports to go through the official channels.
+
+With this ffe-system-message-react lives in the monorepo. All new
+changes must be done there.
+
+
+
 
 ## Version 2.0.0
 * Upgraded to work with ffe-icons-react 4.x.
