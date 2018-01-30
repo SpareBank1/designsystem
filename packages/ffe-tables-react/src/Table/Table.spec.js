@@ -1,6 +1,4 @@
-/*eslint-env mocha*/
 import React from 'react';
-import { expect } from 'chai';
 import { shallow, render } from 'enzyme';
 
 import Table from './Table';
@@ -40,30 +38,30 @@ describe('<Table />', () => {
     describe('general', () => {
         it('renders without exploding', () => {
             const wrapper = shallow(<Table columns={columns} data={data} />);
-            expect(wrapper).to.have.length(1);
+            expect(wrapper).toHaveLength(1);
         });
 
         it('renders the correct dom structure', () => {
             const wrapper = shallow(<Table columns={columns} data={data} />);
-            expect(wrapper.is('table')).to.equal(true);
-            expect(wrapper.hasClass('ffe-table')).to.equal(true);
-            expect(wrapper.hasClass('ffe-table--condensed')).to.equal(false);
+            expect(wrapper.is('table')).toBe(true);
+            expect(wrapper.hasClass('ffe-table')).toBe(true);
+            expect(wrapper.hasClass('ffe-table--condensed')).toBe(false);
         });
 
         it('can be condensed', () => {
             const wrapper = shallow(
                 <Table condensed={true} columns={columns} data={data} />,
             );
-            expect(wrapper.hasClass('ffe-table')).to.equal(true);
-            expect(wrapper.hasClass('ffe-table--condensed')).to.equal(true);
+            expect(wrapper.hasClass('ffe-table')).toBe(true);
+            expect(wrapper.hasClass('ffe-table--condensed')).toBe(true);
         });
 
         it('can be left aligned', () => {
             const wrapper = shallow(
                 <Table alignLeft={true} columns={columns} data={data} />,
             );
-            expect(wrapper.hasClass('ffe-table')).to.equal(true);
-            expect(wrapper.hasClass('ffe-table--text-left')).to.equal(true);
+            expect(wrapper.hasClass('ffe-table')).toBe(true);
+            expect(wrapper.hasClass('ffe-table--text-left')).toBe(true);
         });
 
         it('can have a two column layout on mobile', () => {
@@ -74,23 +72,23 @@ describe('<Table />', () => {
                     data={data}
                 />,
             );
-            expect(wrapper.hasClass('ffe-table')).to.equal(true);
-            expect(wrapper.hasClass('ffe-table--columns-sm')).to.equal(true);
+            expect(wrapper.hasClass('ffe-table')).toBe(true);
+            expect(wrapper.hasClass('ffe-table--columns-sm')).toBe(true);
         });
     });
 
     describe('table caption', () => {
         it('does not render a <caption /> if caption prop is not provided', () => {
             const wrapper = shallow(<Table columns={columns} data={data} />);
-            expect(wrapper.find('caption')).to.have.length(0);
+            expect(wrapper.find('caption')).toHaveLength(0);
         });
 
         it('renders a <caption /> if caption prop is provided', () => {
             const wrapper = shallow(
                 <Table columns={columns} data={data} caption="A nice table" />,
             );
-            expect(wrapper.find('caption')).to.have.length(1);
-            expect(wrapper.find('caption').text()).to.equal('A nice table');
+            expect(wrapper.find('caption')).toHaveLength(1);
+            expect(wrapper.find('caption').text()).toBe('A nice table');
         });
     });
 
@@ -98,11 +96,11 @@ describe('<Table />', () => {
         const wrapper = render(<Table columns={columns} data={data} />);
 
         it('renders columns inside a <thead />', () => {
-            expect(wrapper.find('thead')).to.have.length(1);
+            expect(wrapper.find('thead')).toHaveLength(1);
         });
 
         it('renders columns as <th /> tags', () => {
-            expect(wrapper.find('th')).to.have.length(3);
+            expect(wrapper.find('th')).toHaveLength(3);
         });
 
         it('renders header content as <th /> content', () => {
@@ -111,7 +109,7 @@ describe('<Table />', () => {
                     .find('th')
                     .first()
                     .text(),
-            ).to.equal(columns[0].header);
+            ).toBe(columns[0].header);
         });
     });
 
@@ -121,7 +119,7 @@ describe('<Table />', () => {
         );
 
         it('renders a <tfoot />', () => {
-            expect(wrapper.find('tfoot')).to.have.length(1);
+            expect(wrapper.find('tfoot')).toHaveLength(1);
         });
 
         it('renders the footer content inside <tfoot />', () => {
@@ -131,43 +129,43 @@ describe('<Table />', () => {
                     .find('td')
                     .first()
                     .text(),
-            ).to.equal('Sum alder');
+            ).toBe('Sum alder');
         });
 
         it('does not render <tfoot /> unless footer is present in columns', () => {
             const wrapperWithoutFooterContent = render(
                 <Table columns={columns} data={data} />,
             );
-            expect(wrapperWithoutFooterContent.find('tfoot')).to.have.length(0);
+            expect(wrapperWithoutFooterContent.find('tfoot')).toHaveLength(0);
         });
     });
 
     describe('table body', () => {
         it('does not render a tbody if data prop is empty', () => {
             const wrapper = shallow(<Table columns={columns} data={[]} />);
-            expect(wrapper.find('tbody')).to.have.length(0);
+            expect(wrapper.find('tbody')).toHaveLength(0);
         });
 
         it('renders a tbody if data is provided', () => {
             const wrapper = shallow(<Table columns={columns} data={data} />);
-            expect(wrapper.find('tbody')).to.have.length(1);
+            expect(wrapper.find('tbody')).toHaveLength(1);
         });
 
         it('renders a <tr /> row for each entry in the data prop', () => {
             const wrapper = render(<Table columns={columns} data={data} />);
-            expect(wrapper.find('tbody tr')).to.have.length(data.length);
+            expect(wrapper.find('tbody tr')).toHaveLength(data.length);
         });
 
         it('renders a <td /> cell for each entry in each row', () => {
             const wrapper = render(<Table columns={columns} data={data} />);
-            expect(wrapper.find('td')).to.have.length(
+            expect(wrapper.find('td')).toHaveLength(
                 data.length * columns.length,
             );
         });
 
         it('renders a content-div inside each td', () => {
             const wrapper = render(<Table columns={columns} data={data} />);
-            expect(wrapper.find('td .ffe-table__content').length).to.equal(
+            expect(wrapper.find('td .ffe-table__content').length).toBe(
                 data.length * columns.length,
             );
         });
@@ -179,13 +177,13 @@ describe('<Table />', () => {
                     .find('td .ffe-table__content')
                     .first()
                     .text(),
-            ).to.equal(data[0].name);
+            ).toBe(data[0].name);
         });
 
         it('adds column heading to data-th property of each cell', () => {
             const wrapper = render(<Table data={data} columns={columns} />);
 
-            expect(wrapper.find('[data-th="Navn"]')).to.have.length(
+            expect(wrapper.find('[data-th="Navn"]')).toHaveLength(
                 columns.length,
             );
             expect(
@@ -193,7 +191,7 @@ describe('<Table />', () => {
                     .find('td')
                     .first()
                     .prop('data-th'),
-            ).to.equal(columns[0].header);
+            ).toBe(columns[0].header);
         });
 
         it('render screen reader only caption', () => {
@@ -205,18 +203,18 @@ describe('<Table />', () => {
                     srOnlyCaption={true}
                 />,
             );
-            expect(wrapper.find('caption')).to.have.length(1);
+            expect(wrapper.find('caption')).toHaveLength(1);
             expect(
                 wrapper.find('caption').hasClass('ffe-screenreader-only'),
-            ).to.equal(true);
-            expect(wrapper.find('caption').text()).to.equal('Read me');
+            ).toBe(true);
+            expect(wrapper.find('caption').text()).toBe('Read me');
         });
 
         it('do not render caption when srOnlyCaption is true but missing caption text', () => {
             const wrapper = render(
                 <Table data={data} columns={columns} srOnlyCaption={true} />,
             );
-            expect(wrapper.find('caption')).to.have.length(0);
+            expect(wrapper.find('caption')).toHaveLength(0);
         });
 
         it('sets correct class for top-alignment on table cells', () => {
@@ -229,7 +227,7 @@ describe('<Table />', () => {
                 <Table data={data} columns={columnsWithTopAlignment} />,
             );
 
-            expect(wrapper.find('.ffe-table__cell--top').length).to.equal(9);
+            expect(wrapper.find('.ffe-table__cell--top').length).toBe(9);
         });
 
         it('sets correct class for hiding column on desktop', () => {
@@ -242,18 +240,16 @@ describe('<Table />', () => {
                 <Table data={data} columns={columnsWithTopAlignment} />,
             );
 
-            expect(wrapper.find('.ffe-table--hide-xlg').length).to.equal(4);
+            expect(wrapper.find('.ffe-table--hide-xlg').length).toBe(4);
         });
     });
 
     describe('offset and limit properties', () => {
-        const muchData = 'ABCDEFGHIJKLMNO'
-            .split('')
-            .map((c, i) => ({
-                name: c,
-                address: `Sesame Street ${i}`,
-                age: i,
-            }));
+        const muchData = 'ABCDEFGHIJKLMNO'.split('').map((c, i) => ({
+            name: c,
+            address: `Sesame Street ${i}`,
+            age: i,
+        }));
 
         const getContentOfFirstColumn = comp =>
             comp.find('.ffe-table__cell:first-of-type .ffe-table__content');
@@ -264,13 +260,13 @@ describe('<Table />', () => {
             );
 
             it('reduces number of table rows', () =>
-                expect(contentOfFirstColumn).to.have.length(3));
+                expect(contentOfFirstColumn).toHaveLength(3));
 
             it('does not skip data', () =>
-                expect(contentOfFirstColumn.first().text()).to.eql('A'));
+                expect(contentOfFirstColumn.first().text()).toBe('A'));
 
             it('limits data', () =>
-                expect(contentOfFirstColumn.last().text()).to.eql('C'));
+                expect(contentOfFirstColumn.last().text()).toBe('C'));
         });
 
         describe('setting offset', () => {
@@ -279,13 +275,13 @@ describe('<Table />', () => {
             );
 
             it('reduces number of table rows', () =>
-                expect(contentOfFirstColumn).to.have.length(5));
+                expect(contentOfFirstColumn).toHaveLength(5));
 
             it('skips data', () =>
-                expect(contentOfFirstColumn.first().text()).to.eql('K'));
+                expect(contentOfFirstColumn.first().text()).toBe('K'));
 
             it('does not limits data', () =>
-                expect(contentOfFirstColumn.last().text()).to.eql('O'));
+                expect(contentOfFirstColumn.last().text()).toBe('O'));
         });
 
         describe('setting both', () => {
@@ -301,13 +297,13 @@ describe('<Table />', () => {
             );
 
             it('reduces number of table rows', () =>
-                expect(contentOfFirstColumn).to.have.length(4));
+                expect(contentOfFirstColumn).toHaveLength(4));
 
             it('skips data', () =>
-                expect(contentOfFirstColumn.first().text()).to.eql('F'));
+                expect(contentOfFirstColumn.first().text()).toBe('F'));
 
             it('limits data', () =>
-                expect(contentOfFirstColumn.last().text()).to.eql('I'));
+                expect(contentOfFirstColumn.last().text()).toBe('I'));
         });
     });
 });
