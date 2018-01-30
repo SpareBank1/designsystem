@@ -1,3 +1,15 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+<a name="3.0.4"></a>
+## 3.0.4 (2018-01-30)
+
+
+
+
+**Note:** Version bump only for package ffe-tabs
 
 ## v3.0.3
 * Removed the text transformation styling of the `ffe-tab-button`

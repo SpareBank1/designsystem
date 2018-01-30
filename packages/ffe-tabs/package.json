@@ -1,8 +1,10 @@
 {
     "name": "ffe-tabs",
-    "version": "3.0.3",
+    "version": "3.0.4",
     "main": "less/ffe-tabs.less",
-    "files": ["less"],
+    "files": [
+        "less"
+    ],
     "repository": {
         "type": "git",
         "url": "***REMOVED***"
