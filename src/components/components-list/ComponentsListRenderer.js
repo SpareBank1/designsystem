@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Link from 'rsg-components/Link';
 
-export function ComponentsListRenderer({ classes, items }) {
+export function ComponentsListRenderer({ items }) {
     items = items.filter(item => item.name);
 
     if (!items.length) {
@@ -38,7 +38,6 @@ export function ComponentsListRenderer({ classes, items }) {
 
 ComponentsListRenderer.propTypes = {
     items: PropTypes.array.isRequired,
-    classes: PropTypes.object.isRequired,
 };
 
 export default ComponentsListRenderer;

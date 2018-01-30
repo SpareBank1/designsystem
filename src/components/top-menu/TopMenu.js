@@ -3,6 +3,7 @@ import { Grid, GridRow, GridCol } from '../../../packages/ffe-grid-react';
 import classNames from 'classnames';
 import Link from 'rsg-components/Link';
 import Logo from './Logo';
+import Scrollspy from 'react-scrollspy';
 
 export default function TopMenu() {
     return (
@@ -29,12 +30,22 @@ export default function TopMenu() {
                         className="sb1ds-top-menu__wrapper"
                     >
                         <nav className="sb1ds-top-menu__site-nav">
-                            <ul className="sb1ds-top-menu__list">
+                            <Scrollspy
+                                className="sb1ds-top-menu__list"
+                                offset={-70}
+                                items={[
+                                    'section-kom-i-gang',
+                                    'section-merkevare',
+                                    'section-visuell-stil',
+                                    'section-komponenter',
+                                ]}
+                                currentClassName="sb1ds-top-menu__item--active"
+                            >
                                 <li className="sb1ds-top-menu__item">
                                     <Link
                                         noUnderline={true}
                                         className="sb1ds-top-menu__link ffe-strong-text"
-                                        href="#kom-i-gang"
+                                        href="#section-kom-i-gang"
                                     >
                                         Kom i gang
                                     </Link>
@@ -43,7 +54,7 @@ export default function TopMenu() {
                                     <Link
                                         noUnderline={true}
                                         className="sb1ds-top-menu__link ffe-strong-text"
-                                        href="#merkevare"
+                                        href="#section-merkevare"
                                     >
                                         Merkevare
                                     </Link>
@@ -52,7 +63,7 @@ export default function TopMenu() {
                                     <Link
                                         noUnderline={true}
                                         className="sb1ds-top-menu__link ffe-strong-text"
-                                        href="#visuell-stil"
+                                        href="#section-visuell-stil"
                                     >
                                         Visuell stil
                                     </Link>
@@ -61,12 +72,12 @@ export default function TopMenu() {
                                     <Link
                                         noUnderline={true}
                                         className="sb1ds-top-menu__link ffe-strong-text"
-                                        href="#komponenter"
+                                        href="#section-komponenter"
                                     >
                                         Komponenter
                                     </Link>
                                 </li>
-                            </ul>
+                            </Scrollspy>
                         </nav>
                     </GridCol>
                 </GridRow>
