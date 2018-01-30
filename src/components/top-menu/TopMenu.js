@@ -11,7 +11,7 @@ export default function TopMenu() {
             <Grid noTopPadding={true} className="sb1ds-header-grid">
                 <GridRow className="sb1ds-header-grid__row">
                     <GridCol
-                        md={3}
+                        md={4}
                         sm={12}
                         start={true}
                         middle={true}
@@ -22,7 +22,7 @@ export default function TopMenu() {
                         </a>
                     </GridCol>
                     <GridCol
-                        md={9}
+                        md={8}
                         sm={12}
                         middle={true}
                         end={true}

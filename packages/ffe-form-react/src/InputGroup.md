@@ -2,6 +2,8 @@ En _input group_ er en standarisert omverden for enkelt-inputs i et skjema. En g
 tooltip, skjemaelementet, og en feilmelding for valideringsfeil som vil bli vist om det er feil i skjemaet.
 
 ```js
+const { Input } = require('.');
+
 <InputGroup
     label="Telefonnummer"
     tooltop="Vi bruker telefonnummer for å sende deg kvittering på SMS"
@@ -12,7 +14,7 @@ tooltip, skjemaelementet, og en feilmelding for valideringsfeil som vil bli vist
         onChange={e => console.log('onChange', e.target.value)}
         onBlur={e => console.log('onBlur', e.target.value)}
     />
-</InputGroup>
+</InputGroup>;
 ```
 
 Utviklere bør merke seg at man er nødt til å bruke det såkalte _function-as-a-child_-patternet med mindre man bare har
@@ -21,16 +23,16 @@ det forventes at det er et skjemaelement.
 
 Et eksempel med flere children kan du se her:
 
-```js static
-<InputField label="How old are you?">
-  {(extraProps) => (
-    <Fragment>
-        <InputField
-            {...extraProps}
-            inline={true}
-        />
-        <span> years old</span>
-    </Fragment>
-  )}
-</InputField>
+```js
+const { Input } = require('.');
+
+<InputGroup label="How old are you?">
+    {extraProps => (
+        <div>
+            <span>I am </span>
+            <Input {...extraProps} inline={true} textLike={true} />
+            <span> years old</span>
+        </div>
+    )}
+</InputGroup>;
 ```
