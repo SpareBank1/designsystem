@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.8"></a>
+## [1.0.8](***REMOVED***) (2018-01-30)
+
+
+
+
+**Note:** Version bump only for package ffe-decorators-react
+
 <a name="1.0.7"></a>
 ## [1.0.7](***REMOVED***) (2018-01-22)
 
