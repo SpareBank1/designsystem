@@ -1,6 +1,6 @@
 {
     "name": "ffe-account-selector-react",
-    "version": "8.1.9",
+    "version": "8.1.10",
     "description": "Selector for bank accounts with autocomplete.",
     "keywords": [
         "ffe"

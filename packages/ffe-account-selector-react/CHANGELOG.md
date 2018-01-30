@@ -3,7 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-      <a name="8.1.9"></a>
+    <a name="8.1.10"></a>
+## [8.1.10](***REMOVED***) (2018-01-30)
+
+
+### Bug Fixes
+
+* **ffe-account-selector-react:** Explicit specify padding on "reset" button in account selector ([748f73e](***REMOVED***))
+
+
+
+
+    <a name="8.1.9"></a>
 ## [8.1.9](***REMOVED***) (2018-01-26)
 
 
@@ -14,7 +25,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="8.1.8"></a>
+  <a name="8.1.8"></a>
 ## [8.1.8](***REMOVED***) (2018-01-25)
 
 
@@ -25,7 +36,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-    <a name="8.1.7"></a>
+<a name="8.1.7"></a>
 ## [8.1.7](***REMOVED***) (2018-01-22)
 
 
