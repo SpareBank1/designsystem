@@ -1,5 +1,5 @@
 import React from 'react';
-import { expect } from 'chai';
+
 import { shallow, render } from 'enzyme';
 import TableRowExpandable from './TableRowExpandable';
 
@@ -20,34 +20,34 @@ const props = {
     ],
 };
 
+const wrapper = shallow(
+    <TableRowExpandable {...props}>
+        <p>The cake is a lie</p>
+    </TableRowExpandable>,
+);
+
+const unexpandableWrapper = shallow(
+    <TableRowExpandable {...props}>
+        {false && <div>Ignorance is bliss, and we won't render this</div>}
+    </TableRowExpandable>,
+);
+
 describe('<TableRowExpandable>', () => {
-    const wrapper = shallow(
-        <TableRowExpandable {...props}>
-            <p>The cake is a lie</p>
-        </TableRowExpandable>,
-    );
-
-    const unexpandableWrapper = shallow(
-        <TableRowExpandable {...props}>
-            {false && <div>Ignorance is bliss, and we won't render this</div>}
-        </TableRowExpandable>,
-    );
-
     it('should be collapsed by default', () => {
-        expect(wrapper.state().expanded).to.equal(false);
+        expect(wrapper.state().expanded).toBe(false);
         expect(
             wrapper.find('.ffe-table__row-expandable--expanded'),
-        ).to.have.length(0);
+        ).toHaveLength(0);
         expect(
             wrapper
                 .find('.ffe-table__row-expandable-content')
                 .prop('aria-hidden'),
-        ).to.equal('true');
+        ).toBe('true');
         expect(
             wrapper
                 .find('.ffe-table__row-expandable-content')
                 .hasClass('ffe-table__row--collapsed'),
-        ).to.equal(true);
+        ).toBe(true);
     });
 
     it('should render expanded content', () => {
@@ -58,27 +58,27 @@ describe('<TableRowExpandable>', () => {
                 .last()
                 .find('p')
                 .text(),
-        ).to.equal('The cake is a lie');
+        ).toBe('The cake is a lie');
         expect(
             wrapper
                 .find('tr')
                 .last()
                 .hasClass('ffe-table__row-expandable-content--expanded'),
-        ).to.equal(true);
+        ).toBe(true);
         expect(
             wrapper
                 .find('tr')
                 .last()
                 .hasClass('ffe-table__row--collapsed'),
-        ).to.equal(false);
+        ).toBe(false);
     });
 
     it('should pass correct props to TableRow component', () => {
         wrapper.setState({ expanded: true });
         const tableRow = wrapper.find('TableRow').props();
-        expect(tableRow.expanded).to.equal(true);
-        expect(tableRow.columns).to.equal(props.columns);
-        expect(tableRow.trClasses).contains(
+        expect(tableRow.expanded).toBe(true);
+        expect(tableRow.columns).toBe(props.columns);
+        expect(tableRow.trClasses).toContain(
             'ffe-table__row-expandable--expanded',
         );
     });
@@ -86,16 +86,16 @@ describe('<TableRowExpandable>', () => {
     it('should pass an expand icon with correct classname to TableRow', () => {
         wrapper.setState({ expanded: true });
         const tableRow = wrapper.find('TableRow').props();
-        expect(tableRow.cells.expandIcon.props.className).contains(
+        expect(tableRow.cells.expandIcon.props.className).toContain(
             'ffe-table__expand-icon--expanded',
         );
-        expect(tableRow.expandable).to.equal(true);
+        expect(tableRow.expandable).toBe(true);
     });
 
     it('should not pass an expand icon to TableRows that are not expandable', () => {
         const tableRow = unexpandableWrapper.find('TableRow').props();
-        expect(tableRow.cells.expandIcon).to.equal(' ');
-        expect(tableRow.expandable).to.equal(false);
+        expect(tableRow.cells.expandIcon).toBe(' ');
+        expect(tableRow.expandable).toBe(false);
     });
 
     const renderedWrapper = render(
@@ -105,7 +105,7 @@ describe('<TableRowExpandable>', () => {
     );
 
     it('should render a tbody with two tr', () => {
-        expect(renderedWrapper.children()).to.have.length(2);
+        expect(renderedWrapper.children()).toHaveLength(2);
     });
 
     it('should set the correct aria attributes on tr', () => {
@@ -114,12 +114,12 @@ describe('<TableRowExpandable>', () => {
                 .find('tr')
                 .first()
                 .prop('aria-expanded'),
-        ).to.equal('false');
+        ).toBe('false');
         expect(
             renderedWrapper
                 .find('tr')
                 .last()
                 .prop('aria-hidden'),
-        ).to.equal('true');
+        ).toBe('true');
     });
 });

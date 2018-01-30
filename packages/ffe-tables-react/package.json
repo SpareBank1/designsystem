@@ -3,29 +3,25 @@
     "version": "4.10.0",
     "description": "React implementation of ffe-tables",
     "main": "lib/index.js",
-    "files": [
-        "lib",
-        "*.js"
-    ],
+    "files": ["lib", "*.js"],
     "repository": {
         "type": "git",
         "url": "***REMOVED***"
     },
     "license": "UNLICENSED",
     "scripts": {
-        "build": "babel -d lib/. --ignore=*.test.js src/.",
+        "build": "babel -d lib/. --ignore=*.spec.js src/.",
         "test": "npm run test:spec && npm run test:nsp",
-        "test:spec": "mocha --require babel-register 'src/**/*.test.js' --require ./test-setup.js",
-        "test:watch": "npm test -- -w --require ./test-setup.js",
+        "test:spec": "jest",
+        "test:watch": "jest --watch",
         "test:nsp": "nsp check"
     },
     "devDependencies": {
-        "chai": "^4.1.2",
         "enzyme": "^3.3.0",
         "enzyme-adapter-react-16": "^1.1.1",
         "ffe-core": "^9.2.0",
         "ffe-tables": "^8.1.3",
-        "mocha": "^4.1.0",
+        "jest": "^22.1.4",
         "nsp": "^3.1.0",
         "react": "^16.1.1",
         "react-dom": "^16.1.1",
@@ -40,5 +36,8 @@
         "ffe-icons-react": "^4.0.5",
         "prop-types": "^15.6.0",
         "shallow-equals": "^1.0.0"
+    },
+    "jest": {
+        "setupTestFrameworkScriptFile": "./test-setup.js"
     }
 }
