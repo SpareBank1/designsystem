@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { arrayOf, bool, func, node, number, oneOf, string } from 'prop-types';
 import { Collapse } from 'react-collapse';
-import { ChevronIkon } from 'ffe-icons-react';
+import ChevronIkon from 'ffe-icons-react/lib/chevron-ikon';
 import classNames from 'classnames';
 
 const createClasses = (baseClass, isOpen, type) =>
