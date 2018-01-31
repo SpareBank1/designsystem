@@ -3,7 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-      <a name="4.0.1"></a>
+    <a name="4.0.2"></a>
+## [4.0.2](***REMOVED***) (2018-01-31)
+
+
+### Bug Fixes
+
+* Treeshake ffe-icons ([d431cb3](***REMOVED***))
+
+
+
+
+    <a name="4.0.1"></a>
 ## [4.0.1](***REMOVED***) (2018-01-22)
 
 
@@ -11,7 +22,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package ffe-searchable-dropdown-react
 
-      <a name="4.0.0"></a>
+  <a name="4.0.0"></a>
 # [4.0.0](***REMOVED***) (2018-01-22)
 
 
@@ -37,7 +48,7 @@ behavior, the consumer can create its own implementation of a
 
 
 
-    <a name="3.0.8"></a>
+<a name="3.0.8"></a>
 ## [3.0.8](***REMOVED***) (2018-01-19)
 
 

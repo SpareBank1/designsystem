@@ -3,7 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
- <a name="3.3.11"></a>
+       <a name="3.3.12"></a>
+## [3.3.12](***REMOVED***) (2018-01-31)
+
+
+### Bug Fixes
+
+* Treeshake ffe-icons ([d431cb3](***REMOVED***))
+
+
+
+
+       <a name="3.3.11"></a>
 ## [3.3.11](***REMOVED***) (2018-01-22)
 
 
@@ -11,7 +22,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package ffe-message-box-react
 
- <a name="3.3.10"></a>
+<a name="3.3.10"></a>
 ## [3.3.10](***REMOVED***) (2018-01-22)
 
 

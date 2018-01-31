@@ -1,6 +1,6 @@
 {
     "name": "ffe-datepicker-react",
-    "version": "2.7.9",
+    "version": "2.7.10",
     "main": "lib/ffe-datepicker-react.js",
     "license": "UNLICENSED",
     "scripts": {

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.7.10"></a>
+## [2.7.10](***REMOVED***) (2018-01-31)
+
+
+### Bug Fixes
+
+* Treeshake ffe-icons ([d431cb3](***REMOVED***))
+
+
+
+
 <a name="2.7.9"></a>
 ## [2.7.9](***REMOVED***) (2018-01-26)
 
