@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="10.2.3"></a>
+## [10.2.3](***REMOVED***) (2018-01-31)
+
+
+### Bug Fixes
+
+* **ffe-header:** Add container element to menu toggle buttons ([48d1ef7](***REMOVED***))
+
+
+
+
 <a name="10.2.2"></a>
 ## [10.2.2](***REMOVED***) (2018-01-26)
 
