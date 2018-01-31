@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow, mount } from 'enzyme';
 import sinon from 'sinon';
 
-import { InfoSirkelIkon } from 'ffe-icons-react';
+import InfoSirkelIkon from 'ffe-icons-react/lib/info-sirkel-ikon';
 
 import {
     ContextErrorMessage,
