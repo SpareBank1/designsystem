@@ -14,7 +14,7 @@ function HeadingRenderer({ classes, level, children, ...props }) {
 }
 
 HeadingRenderer.propTypes = {
-    classes: PropTypes.object.isRequired,
+    classes: PropTypes.object,
     level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]).isRequired,
     children: PropTypes.node,
 };

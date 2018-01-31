@@ -11,8 +11,6 @@ Her er hvordan vi presenterer et utvalg av informasjon:
 const formatters = require('./src');
 const Table = require('../ffe-tables-react/lib').default;
 
-console.log(Table);
-
 const columns = [
     { key: 'type', header: 'Type' },
     { key: 'example', header: 'Eksempel' },

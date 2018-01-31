@@ -1,5 +1,3 @@
-# Checkbox
-
 ```js
 <fieldset className="ffe-fieldset">
     <legend className="ffe-form-label">Hvilke aviser leser du?</legend>
@@ -35,7 +33,7 @@ Kan komme under hverandre også, ved å sende inn `inline={false}`:
 Du kan merke at et felt er ugyldig ved å sette `aria-invalid="true"`:
 
 ```js
-<CheckBox name="loves-ads" aria-invalid="true" checked={true}>
+<CheckBox name="loves-ads" aria-invalid="true" checked={true} onChange={f => f}>
     Ja, jeg vil gjerne motta reklame!
 </CheckBox>
 ```

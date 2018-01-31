@@ -10,13 +10,17 @@ _Standard_ og _inline_ er mest relevant for utviklere. De ser helt like ut, men 
 med andre elementer på siden.
 
 ```js
-<Input placeholder="Skriv noe her..." />
+const { Input } = require('.');
+
+<Input placeholder="Skriv noe her..." />;
 ```
 
 _Text-like_-varianten er designet for å kunne brukes som en del av en setning med et minimum av ramme rundt:
 
 ```js
+const { Input } = require('.');
+
 <p className="ffe-body-paragraph">
     Jeg er <Input textLike={true} /> år gammel
-</p>
+</p>;
 ```
