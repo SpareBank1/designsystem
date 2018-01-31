@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="2.1.5"></a>
+## [2.1.5](***REMOVED***) (2018-01-31)
+
+
+
+
+**Note:** Version bump only for package ffe-formatters
+
       <a name="2.1.4"></a>
 ## [2.1.4](***REMOVED***) (2018-01-22)
 
@@ -11,7 +19,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package ffe-formatters
 
-      <a name="2.1.3"></a>
+    <a name="2.1.3"></a>
 ## [2.1.3](***REMOVED***) (2018-01-19)
 
 
@@ -19,7 +27,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package ffe-formatters
 
-  <a name="2.1.2"></a>
+<a name="2.1.2"></a>
 ## [2.1.2](***REMOVED***) (2018-01-18)
 
 

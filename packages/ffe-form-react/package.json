@@ -1,6 +1,6 @@
 {
     "name": "ffe-form-react",
-    "version": "2.2.3",
+    "version": "2.2.4",
     "description": "React component for form elements in ffe",
     "main": "lib/index.js",
     "scripts": {

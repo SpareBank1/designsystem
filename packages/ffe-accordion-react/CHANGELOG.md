@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="4.0.4"></a>
+## [4.0.4](***REMOVED***) (2018-01-31)
+
+
+
+
+**Note:** Version bump only for package ffe-accordion-react
+
       <a name="4.0.3"></a>
 ## [4.0.3](***REMOVED***) (2018-01-19)
 
@@ -11,7 +19,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package ffe-accordion-react
 
-      <a name="4.0.2"></a>
+    <a name="4.0.2"></a>
 ## [4.0.2](***REMOVED***) (2018-01-19)
 
 
@@ -22,7 +30,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-    <a name="4.0.1"></a>
+  <a name="4.0.1"></a>
 ## [4.0.1](***REMOVED***) (2018-01-19)
 
 
@@ -30,7 +38,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package ffe-accordion-react
 
-  <a name="4.0.0"></a>
+<a name="4.0.0"></a>
 # [4.0.0](***REMOVED***) (2018-01-19)
 
 
