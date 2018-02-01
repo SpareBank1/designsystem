@@ -150,8 +150,14 @@ commit-meldinger](https://medium.com/@steveamaza/how-to-write-a-proper-git-commi
 å følge en standard til:
 
 Commit-meldinger følger [conventional commits](https://conventionalcommits.org/)-formatet. Dette gjør vi for å automatisk
-kunne generere endringslogger og nye versjonsnumre. Det oppfordres til at hver commit kun endrer en pakke, og setter
-riktig "scope" (pakke) for hver commit. Dette hjelper oss å automatisere publisering av changelogs etc.
+kunne generere endringslogger og nye versjonsnumre. På grunn av denne automatiske genereringen er det viktig at
+hver commit kun endrer en pakke, og setter riktig "scope" (pakke) for hver commit.
+
+[Et godt eksempel](***REMOVED***)
+på hvorfor dette er så viktig er hvis du gjør endringer i en pakke, og skriver commit-melding
+for denne, men samtidig endrer en liten ting i én fil i en annen pakke, så vil også den andre
+pakken få tilsvarende version bump og changelog. I eksempelet fikk ffe-searchable-dropdown-react
+major version bump og changelog med innholdet i commit-meldingen for ffe-spinner-react.
 
 Dette er lettest forklart med eksempler:
 
