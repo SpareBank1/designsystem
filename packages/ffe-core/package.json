@@ -2,10 +2,7 @@
     "name": "ffe-core",
     "version": "10.3.0",
     "description": "Rammeverk for Felles Front End",
-    "files": [
-        "fonts",
-        "less"
-    ],
+    "files": ["fonts", "less"],
     "author": "SpareBank 1",
     "license": "UNLICENSED",
     "repository": {
@@ -20,5 +17,6 @@
     "devDependencies": {
         "nsp": "^3.1.0",
         "stylelint": "^8.4.0"
-    }
+    },
+    "sb1.StaticResources": ["fonts/**"]
 }
