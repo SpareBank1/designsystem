@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="6.0.9"></a>
+## [6.0.9](***REMOVED***) (2018-02-01)
+
+
+
+
+**Note:** Version bump only for package ffe-grid-react
+
       <a name="6.0.8"></a>
 ## [6.0.8](***REMOVED***) (2018-01-19)
 
@@ -11,7 +19,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package ffe-grid-react
 
-      <a name="6.0.7"></a>
+    <a name="6.0.7"></a>
 ## [6.0.7](***REMOVED***) (2018-01-19)
 
 
@@ -19,13 +27,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package ffe-grid-react
 
-    <a name="6.0.6"></a>
+  <a name="6.0.6"></a>
 
 ## [6.0.6](***REMOVED***) (2018-01-10)
 
 **Note:** Version bump only for package ffe-grid-react
 
-  <a name="6.0.5"></a>
+<a name="6.0.5"></a>
 
 ## [6.0.5](***REMOVED***) (2018-01-09)
 

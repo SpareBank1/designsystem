@@ -1,6 +1,6 @@
 {
     "name": "ffe-details-list",
-    "version": "8.1.7",
+    "version": "8.1.8",
     "description": "Opplisting av attributter i en grid",
     "main": "less/ffe-details-list.less",
     "scripts": {
@@ -17,7 +17,7 @@
         "ffe-core": "^9.0.0 || ^10.0.0"
     },
     "devDependencies": {
-        "ffe-core": "^10.3.0",
+        "ffe-core": "^10.3.1",
         "stylelint": "^8.4.0"
     }
 }

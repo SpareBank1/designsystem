@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="10.3.1"></a>
+## [10.3.1](***REMOVED***) (2018-02-01)
+
+
+### Bug Fixes
+
+* **ffe-core:** Re-add property `sb1.StaticResources` in `package.json`. ([3506fb5](***REMOVED***))
+
+
+
+
       <a name="10.3.0"></a>
 # [10.3.0](***REMOVED***) (2018-01-19)
 
@@ -14,7 +25,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="10.2.5"></a>
+    <a name="10.2.5"></a>
 ## [10.2.5](***REMOVED***) (2018-01-19)
 
 
@@ -22,13 +33,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package ffe-core
 
-    <a name="10.2.4"></a>
+  <a name="10.2.4"></a>
 
 ## [10.2.4](***REMOVED***) (2018-01-10)
 
 **Note:** Version bump only for package ffe-core
 
-  <a name="10.2.3"></a>
+<a name="10.2.3"></a>
 
 ## [10.2.3](***REMOVED***) (2018-01-09)
 
@@ -288,7 +299,7 @@ If you want to keep using it and don't plan on upgrading to `ffe-buttons@2.1.0` 
 padding: 40px 0;
 
 &--thin {
-    padding: 0;
+  padding: 0;
 }
 }
 
@@ -296,13 +307,13 @@ padding: 40px 0;
 margin: 0 auto 10px;
 
 @media screen and (min-width: @breakpoint-sm) {
-    display: inline-block;
-    margin: 0 0 10px 10px;
-    width: auto;
+  display: inline-block;
+  margin: 0 0 10px 10px;
+  width: auto;
 
-    &:first-child {
-        margin-left: 0;
-    }
+  &:first-child {
+      margin-left: 0;
+  }
 }
 }
 ```

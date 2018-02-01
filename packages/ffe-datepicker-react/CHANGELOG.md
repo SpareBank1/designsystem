@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.7.11"></a>
+## [2.7.11](***REMOVED***) (2018-02-01)
+
+
+
+
+**Note:** Version bump only for package ffe-datepicker-react
+
 <a name="2.7.10"></a>
 ## [2.7.10](***REMOVED***) (2018-01-31)
 
