@@ -13,4 +13,5 @@ module.exports = {
     Heading: path.join(__dirname, 'src/components/heading'),
     Link: path.join(__dirname, 'src/components/link'),
     SectionRenderer: path.join(__dirname, 'src/components/section'),
+    ToolbarButtonRenderer: path.join(__dirname, 'src/components/toolbarbutton'),
 };

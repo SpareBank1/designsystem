@@ -50,10 +50,6 @@ module.exports = {
             content: 'src/content/kom-i-gang/index.md',
             sections: [
                 {
-                    name: 'Introduksjon',
-                    content: 'src/content/kom-i-gang/introduksjon/index.md',
-                },
-                {
                     name: 'For designere',
                     content: 'src/content/kom-i-gang/for-designere/index.md',
                 },
@@ -65,16 +61,16 @@ module.exports = {
                     name: 'Om FFE',
                     content: 'src/content/kom-i-gang/om-ffe/index.md',
                 },
+                {
+                    name: 'Bidra',
+                    content: 'src/content/kom-i-gang/bidra/index.md',
+                },
             ],
         },
         {
             name: 'Merkevare',
             content: 'src/content/merkevare/index.md',
             sections: [
-                {
-                    name: 'Introduksjon',
-                    content: 'src/content/merkevare/introduksjon/index.md',
-                },
                 {
                     name: 'Profil',
                     content: 'src/content/merkevare/profil/index.md',
@@ -83,20 +79,12 @@ module.exports = {
                     name: 'Stil og tone',
                     content: 'src/content/merkevare/stil-og-tone/index.md',
                 },
-                {
-                    name: 'Redaksjonelt',
-                    content: 'src/content/merkevare/redaksjonelt/index.md',
-                },
             ],
         },
         {
             name: 'Visuell stil',
             content: 'src/content/visuell-stil/index.md',
             sections: [
-                {
-                    name: 'Oversikt',
-                    content: 'src/content/visuell-stil/oversikt/index.md',
-                },
                 {
                     name: 'Farger',
                     content: 'src/content/visuell-stil/farger/index.md',
@@ -128,6 +116,22 @@ module.exports = {
                                 'src/content/visuell-stil/layout/grid/index.md',
                         },
                     ],
+                },
+            ],
+        },
+        {
+            name: 'Universell utforming',
+            content: 'src/content/universell-utforming/index.md',
+            sections: [
+                {
+                    name: 'WAI-Aria',
+                    content:
+                        'src/content/universell-utforming/wai-aria/index.md',
+                },
+                {
+                    name: 'Kontrast',
+                    content:
+                        'src/content/universell-utforming/kontrast/index.md',
                 },
             ],
         },
