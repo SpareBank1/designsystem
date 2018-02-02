@@ -135,23 +135,6 @@ describe('Button', () => {
             });
         });
 
-        describe('type', () => {
-            it('can be type="button"', () => {
-                const wrapper = shallow(<Button type="button" />);
-                expect(wrapper.find('button').is('[type="button"]')).to.be.true;
-            });
-
-            it('can be type="reset"', () => {
-                const wrapper = shallow(<Button type="reset" />);
-                expect(wrapper.find('button').is('[type="reset"]')).to.be.true;
-            });
-
-            it('can be type="submit"', () => {
-                const wrapper = shallow(<Button type="submit" />);
-                expect(wrapper.find('button').is('[type="submit"]')).to.be.true;
-            });
-        });
-
         describe('autoFocus', () => {
             it('can be autoFocused', () => {
                 const wrapper = shallow(<Button autoFocus={true} />);
