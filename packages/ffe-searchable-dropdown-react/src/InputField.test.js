@@ -4,7 +4,7 @@ import React from 'react';
 import Input from './InputField';
 const i = t => t;
 
-const mountInputFieldWithProps = props => shallow(<Input {...props}/>);
+const mountInputFieldWithProps = props => shallow(<Input {...props} />);
 
 describe('<Input>', () => {
     const props = {
@@ -12,36 +12,44 @@ describe('<Input>', () => {
         onClick: i,
         onFocus: i,
         onKeyDown: i,
-        placeholder:"Velg",
-        onInputChange:i,
-        displayResetWhenInputHasValue:true,
+        placeholder: 'Velg',
+        onInputChange: i,
+        displayResetWhenInputHasValue: true,
         inputId: 'anId',
-        inputValue:'',
-        onReset:i,
-        searchTerm:'',
+        inputValue: '',
+        onReset: i,
+        searchTerm: '',
     };
 
     const component = mountInputFieldWithProps(props);
 
-    test('renders', () =>
+    it('renders', () =>
         expect(component.find('.ffe-dropdown')).toHaveLength(1));
 
-     test('input field has an Id', () =>
+    it('input field has an Id', () =>
         expect(component.find('input').prop('id')).toBe('anId'));
 
-    test('input field is empty', () => {
+    it('input field is empty', () => {
         expect(component.find('input').prop('value')).toBe('');
     });
 
-    test('displays reset when input has value', () => {
-        const componentWithInputValue = mountInputFieldWithProps({...props, inputValue:'aa'});
+    it('displays reset when input has value', () => {
+        const componentWithInputValue = mountInputFieldWithProps({
+            ...props,
+            inputValue: 'aa',
+        });
         expect(componentWithInputValue.find('input').prop('value')).toBe('aa');
-        expect(componentWithInputValue.find('.ffe-searchable-dropdown__reset-button')).toHaveLength(1);
+        expect(
+            componentWithInputValue.find(
+                '.ffe-searchable-dropdown__reset-button',
+            ),
+        ).toHaveLength(1);
     });
 
-    test('do not display reset when input is empty', () => {
+    it('do not display reset when input is empty', () => {
         expect(component.find('input').prop('value')).toBe('');
-        expect(component.find('.ffe-searchable-dropdown__reset-button')).toHaveLength(0);
+        expect(
+            component.find('.ffe-searchable-dropdown__reset-button'),
+        ).toHaveLength(0);
     });
 });
-

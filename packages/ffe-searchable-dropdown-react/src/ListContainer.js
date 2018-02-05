@@ -9,34 +9,44 @@ const ListContainer = ({
     noMatch,
     onSelect,
     renderDropdownElement,
-    refHighlightedListItem
+    refHighlightedListItem,
+    maxRenderedDropdownElements,
 }) => {
+    const itemsToRender =
+        maxRenderedDropdownElements > 0
+            ? dropdownList.slice(0, maxRenderedDropdownElements)
+            : dropdownList;
     return (
         <ul
-            className='ffe-searchable-dropdown__scroll-container-list'
-            role='listbox'
+            className="ffe-searchable-dropdown__scroll-container-list"
+            role="listbox"
             aria-activedescendant={
                 dropdownList.length > 0 &&
                 highlightedIndex > -1 &&
                 highlightedIndex
             }
         >
-            { dropdownList.length > 0 ? dropdownList.map((item, index) =>
-                {
-                    return (
-                        <ListItem
-                            id={index}
-                            key={index}
-                            isHighlighted={index === highlightedIndex}
-                            item={item}
-                            onSelect={onSelect}
-                            dropdownAttributes={dropdownAttributes}
-                            renderElement={renderDropdownElement}
-                            refHighlightedListItem={refHighlightedListItem}
-                        />
-                    );
-                }) : <li className='ffe-searchable-dropdown__item'>{noMatch}</li>
-            }
+            {itemsToRender.map((item, index) => {
+                return (
+                    <ListItem
+                        id={index}
+                        key={index}
+                        isHighlighted={index === highlightedIndex}
+                        item={item}
+                        onSelect={onSelect}
+                        dropdownAttributes={dropdownAttributes}
+                        renderElement={renderDropdownElement}
+                        refHighlightedListItem={refHighlightedListItem}
+                    />
+                );
+            })}
+            {maxRenderedDropdownElements > 0 &&
+                dropdownList.length > maxRenderedDropdownElements && (
+                    <li className="ffe-searchable-dropdown__item">...</li>
+                )}
+            {dropdownList.length === 0 && (
+                <li className="ffe-searchable-dropdown__item">{noMatch}</li>
+            )}
         </ul>
     );
 };
@@ -44,6 +54,7 @@ const ListContainer = ({
 ListContainer.propTypes = {
     dropdownAttributes: array,
     dropdownList: array.isRequired,
+    maxRenderedDropdownElements: number,
     highlightedIndex: number.isRequired,
     noMatch: string.isRequired,
     onSelect: func.isRequired,

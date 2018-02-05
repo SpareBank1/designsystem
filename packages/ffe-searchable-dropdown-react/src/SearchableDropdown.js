@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { string, bool, array, func, arrayOf, object } from 'prop-types';
+import { string, bool, array, func, arrayOf, object, number } from 'prop-types';
 import classNames from 'classnames';
 import Input from './InputField';
 import ScrollContainer from './ScrollContainer';
@@ -181,6 +181,7 @@ class SearchableDropdown extends Component {
             inputValue,
             ariaInvalid,
             displayResetWhenInputHasValue,
+            maxRenderedDropdownElements,
         } = this.props;
         const {
             highlightedElementIndex,
@@ -227,6 +228,9 @@ class SearchableDropdown extends Component {
                             }}
                             dropdownAttributes={dropdownAttributes}
                             dropdownList={filteredList}
+                            maxRenderedDropdownElements={
+                                maxRenderedDropdownElements
+                            }
                             highlightedIndex={highlightedElementIndex}
                             noMatch={noMatch}
                             onSelect={this.onSelect}
@@ -273,6 +277,8 @@ SearchableDropdown.propTypes = {
     placeholder: string,
     /** If you want custom input element. Function is called with object from dropdownList */
     renderDropdownElement: func,
+    /** Limits number of rendered dropdown elements */
+    maxRenderedDropdownElements: number,
     /** Array of attributes used when filtering search */
     searchAttributes: array.isRequired,
     /**Aria invalid*/
