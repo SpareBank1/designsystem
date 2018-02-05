@@ -128,7 +128,6 @@ Button.propTypes = {
      * Used internally by the different components in order to not render needless stuff for e.g. tertiary button.
      */
     simpleContent: bool.isRequired,
-    type: oneOf(['button', 'submit', 'reset']),
 };
 
 Button.defaultProps = {
