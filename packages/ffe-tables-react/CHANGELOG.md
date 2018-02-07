@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="4.10.4"></a>
+## [4.10.4](***REMOVED***) (2018-02-07)
+
+
+
+
+**Note:** Version bump only for package ffe-tables-react
+
       <a name="4.10.3"></a>
 ## [4.10.3](***REMOVED***) (2018-02-01)
 
@@ -11,7 +19,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package ffe-tables-react
 
-      <a name="4.10.2"></a>
+    <a name="4.10.2"></a>
 ## [4.10.2](***REMOVED***) (2018-01-31)
 
 
@@ -22,7 +30,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-    <a name="4.10.1"></a>
+  <a name="4.10.1"></a>
 ## [4.10.1](***REMOVED***) (2018-01-30)
 
 
@@ -30,7 +38,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package ffe-tables-react
 
-  <a name="4.10.0"></a>
+<a name="4.10.0"></a>
 # [4.10.0](***REMOVED***) (2018-01-26)
 
 
