@@ -155,19 +155,19 @@
         }
 
         &.ffe-table--hide-lg {
-            @media screen and (min-width: @breakpoint-md) and (max-width: @breakpoint-lg) {
+            @media screen and (min-width: @breakpoint-md) and (max-width: (@breakpoint-lg - 1px)) {
                 display: none;
             }
         }
 
         &.ffe-table--hide-md {
-            @media screen and (min-width: @breakpoint-sm) and (max-width: @breakpoint-md) {
+            @media screen and (min-width: @breakpoint-sm) and (max-width: (@breakpoint-md - 1px)) {
                 display: none;
             }
         }
 
         &.ffe-table--hide-sm {
-            @media screen and (max-width: @breakpoint-sm) {
+            @media screen and (max-width: (@breakpoint-sm - 1px)) {
                 display: none;
             }
         }
