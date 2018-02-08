@@ -1,7 +1,5 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
-import { assert } from 'chai';
-import sinon from 'sinon';
+import { mount } from 'enzyme';
 
 import BaseSelector from './BaseSelector';
 import { SuggestionItem } from '../../subcomponents/suggestion';
@@ -28,257 +26,253 @@ function propsBaseSelector(_suggestions = suggestions()) {
     };
 }
 
-function shallowBaseSelector(props) {
-    return shallow(<BaseSelector {...propsBaseSelector()} {...props} />);
-}
-
 function mountBaseSelector(props) {
     return mount(<BaseSelector {...propsBaseSelector()} {...props} />);
 }
 
 function assertHomeEnd(keyCode, stubMethodName) {
-    const component = shallowBaseSelector().instance();
-    const setLastHighlighted = sinon.stub(component, stubMethodName);
-    const preventDefaultSpy = sinon.spy();
+    const component = mountBaseSelector().instance();
+    const setLastHighlighted = jest.spyOn(component, stubMethodName);
+    const preventDefaultSpy = jest.fn();
     component.state.showSuggestions = true;
 
     component.onInputKeyDown({
         which: keyCode,
         preventDefault: preventDefaultSpy,
     });
-    assert.isTrue(setLastHighlighted.calledOnce);
-    assert.isTrue(preventDefaultSpy.calledOnce);
+    expect(setLastHighlighted).toHaveBeenCalledTimes(1);
+    expect(preventDefaultSpy).toHaveBeenCalledTimes(1);
 }
 
 describe('<BaseSelector> methods', () => {
     it('should show suggestions on input change', done => {
         const value = 'test';
-        const onChangeSpy = sinon.spy();
-        const onSuggestionListChangeSpy = sinon.spy();
-        const component = shallowBaseSelector({
+        const onChangeSpy = jest.fn();
+        const onSuggestionListChangeSpy = jest.fn();
+        const component = mountBaseSelector({
             onChange: onChangeSpy,
             onSuggestionListChange: onSuggestionListChangeSpy,
         }).instance();
 
         component.onInputChange(value);
-        assert.isTrue(component.state.showSuggestions);
-        assert.isTrue(onChangeSpy.calledWith(value));
+        expect(component.state.showSuggestions).toBe(true);
+        expect(onChangeSpy).toHaveBeenCalledWith(value);
         setTimeout(() => {
-            assert.isTrue(onSuggestionListChangeSpy.calledOnce);
+            expect(onSuggestionListChangeSpy).toHaveBeenCalledTimes(1);
             done();
         });
     });
 
     it('should show suggestions on input focus', () => {
-        const onFocusSpy = sinon.spy();
-        const component = shallowBaseSelector({
+        const onFocusSpy = jest.fn();
+        const component = mountBaseSelector({
             onFocus: onFocusSpy,
         }).instance();
 
         component.onFocus();
-        assert.isTrue(component.state.showSuggestions);
-        assert.isTrue(onFocusSpy.calledOnce);
+        expect(component.state.showSuggestions).toBe(true);
+        expect(onFocusSpy).toHaveBeenCalledTimes(1);
     });
 
     it('should show suggestions on input click', () => {
-        const onClickSpy = sinon.spy();
-        const component = shallowBaseSelector({
+        const onClickSpy = jest.fn();
+        const component = mountBaseSelector({
             onClick: onClickSpy,
         }).instance();
 
         component.onClick();
-        assert.isTrue(component.state.showSuggestions);
-        assert.isTrue(onClickSpy.calledOnce);
+        expect(component.state.showSuggestions).toBe(true);
+        expect(onClickSpy).toHaveBeenCalledTimes(1);
     });
 
     it('should show suggestions on input click + focus', () => {
-        const onClickSpy = sinon.spy();
-        const onFocusSpy = sinon.spy();
-        const component = shallowBaseSelector({
+        const onClickSpy = jest.fn();
+        const onFocusSpy = jest.fn();
+        const component = mountBaseSelector({
             onClick: onClickSpy,
             onFocus: onFocusSpy,
         }).instance();
 
         component.onFocus();
         component.onClick();
-        assert.isTrue(component.state.showSuggestions);
-        assert.isTrue(onClickSpy.calledOnce);
-        assert.isTrue(onFocusSpy.calledOnce);
+        expect(component.state.showSuggestions).toBe(true);
+        expect(onClickSpy).toHaveBeenCalledTimes(1);
+        expect(onFocusSpy).toHaveBeenCalledTimes(1);
     });
 
     it('should hide suggestions on input blur', () => {
-        const onBlurSpy = sinon.spy();
-        const component = shallowBaseSelector({ onBlur: onBlurSpy }).instance();
+        const onBlurSpy = jest.fn();
+        const component = mountBaseSelector({ onBlur: onBlurSpy }).instance();
 
         component.onBlur();
-        assert.isFalse(component.state.showSuggestions);
-        assert.isTrue(onBlurSpy.calledOnce);
+        expect(component.state.showSuggestions).toBe(false);
+        expect(onBlurSpy).toHaveBeenCalledTimes(1);
     });
 
     it('should not hide suggestions when suggestion is empty', () => {
-        const onSelectSpy = sinon.spy();
-        const component = shallowBaseSelector({
+        const onSelectSpy = jest.fn();
+        const component = mountBaseSelector({
             onSelect: onSelectSpy,
             shouldHideSuggestionsOnSelect: false,
         }).instance();
 
         component.props.onSuggestionSelect(null);
-        assert.isFalse(onSelectSpy.called);
-        assert.isFalse(component.state.showSuggestions);
+        expect(onSelectSpy).not.toHaveBeenCalled();
+        expect(component.state.showSuggestions).toBe(false);
     });
 
     it('should hide suggestions on input reset', () => {
-        const onResetSpy = sinon.spy();
-        const component = shallowBaseSelector({
+        const onResetSpy = jest.fn();
+        const component = mountBaseSelector({
             onReset: onResetSpy,
         }).instance();
 
         component.onInputReset();
-        assert.isFalse(component.state.showSuggestions);
-        assert.isTrue(onResetSpy.calledOnce);
+        expect(component.state.showSuggestions).toBe(false);
+        expect(onResetSpy).toHaveBeenCalledTimes(1);
     });
 
     it('should show suggestions on input reset', () => {
-        const onResetSpy = sinon.spy();
-        const component = shallowBaseSelector({
+        const onResetSpy = jest.fn();
+        const component = mountBaseSelector({
             onReset: onResetSpy,
             shouldHideSuggestionsOnReset: false,
         }).instance();
 
         component.onInputReset();
-        assert.isTrue(component.state.showSuggestions);
-        assert.isTrue(onResetSpy.calledOnce);
+        expect(component.state.showSuggestions).toBe(true);
+        expect(onResetSpy).toHaveBeenCalledTimes(1);
     });
 
     it('should increment highlightedSuggestionIndex on nextHighlightedIndex', () => {
-        const component = shallowBaseSelector().instance();
-        const scollPosSpy = sinon.spy();
+        const component = mountBaseSelector().instance();
+        const scollPosSpy = jest.fn();
         component.state.highlightedSuggestionIndex = 1;
         component.suggestionList = { setScrollPosNext: scollPosSpy };
 
         component.setNextHighlighted();
-        assert.equal(component.state.highlightedSuggestionIndex, 2);
-        assert.isTrue(scollPosSpy.calledOnce);
+        expect(component.state.highlightedSuggestionIndex).toBe(2);
+        expect(scollPosSpy).toHaveBeenCalledTimes(1);
     });
 
     it('should wrap highlightedSuggestionIndex on nextHighlightedIndex', () => {
-        const component = shallowBaseSelector().instance();
-        const scollPosSpy = sinon.spy();
+        const component = mountBaseSelector().instance();
+        const scollPosSpy = jest.fn();
         component.state.highlightedSuggestionIndex = 2;
         component.suggestionList = { setScrollPosStart: scollPosSpy };
 
         component.setNextHighlighted();
-        assert.equal(component.state.highlightedSuggestionIndex, 0);
-        assert.isTrue(scollPosSpy.calledOnce);
+        expect(component.state.highlightedSuggestionIndex).toBe(0);
+        expect(scollPosSpy).toHaveBeenCalledTimes(1);
     });
 
     it('should decrement highlightedSuggestionIndex on previousHighlightedIndex', () => {
-        const component = shallowBaseSelector().instance();
-        const scollPosSpy = sinon.spy();
+        const component = mountBaseSelector().instance();
+        const scollPosSpy = jest.fn();
         component.state.highlightedSuggestionIndex = 1;
         component.suggestionList = { setScrollPosPrevious: scollPosSpy };
 
         component.setPreviousHighlighted();
-        assert.equal(component.state.highlightedSuggestionIndex, 0);
-        assert.isTrue(scollPosSpy.calledOnce);
+        expect(component.state.highlightedSuggestionIndex).toBe(0);
+        expect(scollPosSpy).toHaveBeenCalledTimes(1);
     });
 
     it('should wrap highlightedSuggestionIndex on previousHighlightedIndex', () => {
-        const component = shallowBaseSelector().instance();
-        const scollPosSpy = sinon.spy();
+        const component = mountBaseSelector().instance();
+        const scollPosSpy = jest.fn();
         component.state.highlightedSuggestionIndex = 0;
         component.suggestionList = { setScrollPosEnd: scollPosSpy };
 
         component.setPreviousHighlighted();
-        assert.equal(component.state.highlightedSuggestionIndex, 2);
-        assert.isTrue(scollPosSpy.calledOnce);
+        expect(component.state.highlightedSuggestionIndex).toBe(2);
+        expect(scollPosSpy).toHaveBeenCalledTimes(1);
     });
 
     it('should setFirstHighlighted ', () => {
-        const component = shallowBaseSelector().instance();
-        const scollPosSpy = sinon.spy();
+        const component = mountBaseSelector().instance();
+        const scollPosSpy = jest.fn();
         component.suggestionList = { setScrollPosStart: scollPosSpy };
 
         component.setFirstHighlighted();
-        assert.equal(component.state.highlightedSuggestionIndex, 0);
-        assert.isTrue(scollPosSpy.calledOnce);
+        expect(component.state.highlightedSuggestionIndex).toBe(0);
+        expect(scollPosSpy).toHaveBeenCalledTimes(1);
     });
 
     it('should setLastHighlighted ', () => {
-        const component = shallowBaseSelector().instance();
-        const scollPosSpy = sinon.spy();
+        const component = mountBaseSelector().instance();
+        const scollPosSpy = jest.fn();
         component.suggestionList = { setScrollPosEnd: scollPosSpy };
 
         component.setLastHighlighted();
-        assert.equal(component.state.highlightedSuggestionIndex, 2);
-        assert.isTrue(scollPosSpy.calledOnce);
+        expect(component.state.highlightedSuggestionIndex).toBe(2);
+        expect(scollPosSpy).toHaveBeenCalledTimes(1);
     });
 });
 
 describe('<BaseSelector> keyboard navigation', () => {
     it('should show suggestions on ALT + DOWN', () => {
-        const component = shallowBaseSelector().instance();
-        const showHideSuggestionsSpy = sinon.spy(
+        const component = mountBaseSelector().instance();
+        const showHideSuggestionsSpy = jest.spyOn(
             component,
             'showOrHideSuggestions',
         );
 
         component.onInputKeyDown({ which: KeyCodes.DOWN, altKey: true });
-        assert.isTrue(showHideSuggestionsSpy.calledWith(true));
+        expect(showHideSuggestionsSpy).toHaveBeenCalledWith(true);
     });
 
     it('should highlight next if suggestion are showing on DOWN', () => {
-        const component = shallowBaseSelector().instance();
-        const setNextHighlightedStub = sinon.stub(
+        const component = mountBaseSelector().instance();
+        const setNextHighlightedStub = jest.spyOn(
             component,
             'setNextHighlighted',
         );
         component.state.showSuggestions = true;
-        const preventDefaultSpy = sinon.spy();
+        const preventDefaultSpy = jest.fn();
 
         component.onInputKeyDown({
             which: KeyCodes.DOWN,
             preventDefault: preventDefaultSpy,
         });
-        assert.isTrue(setNextHighlightedStub.calledOnce);
-        assert.isTrue(preventDefaultSpy.calledOnce);
+        expect(setNextHighlightedStub).toHaveBeenCalledTimes(1);
+        expect(preventDefaultSpy).toHaveBeenCalledTimes(1);
     });
 
     it('should hide suggestions on ALT + UP', () => {
-        const component = shallowBaseSelector().instance();
-        const showHideSuggestionsSpy = sinon.spy(
+        const component = mountBaseSelector().instance();
+        const showHideSuggestionsSpy = jest.spyOn(
             component,
             'showOrHideSuggestions',
         );
         component.state.showSuggestions = true;
 
         component.onInputKeyDown({ which: KeyCodes.UP, altKey: true });
-        assert.isTrue(showHideSuggestionsSpy.calledWith(false));
+        expect(showHideSuggestionsSpy).toHaveBeenCalledWith(false);
     });
 
     it('should highlight previous suggestions on UP', () => {
-        const component = shallowBaseSelector().instance();
-        const showHideSuggestionsStub = sinon.stub(
+        const component = mountBaseSelector().instance();
+        const showHideSuggestionsStub = jest.spyOn(
             component,
             'setPreviousHighlighted',
         );
-        const preventDefaultSpy = sinon.spy();
+        const preventDefaultSpy = jest.fn();
         component.state.showSuggestions = true;
 
         component.onInputKeyDown({
             which: KeyCodes.UP,
             preventDefault: preventDefaultSpy,
         });
-        assert.isTrue(showHideSuggestionsStub.calledOnce);
-        assert.isTrue(preventDefaultSpy.calledOnce);
+        expect(showHideSuggestionsStub).toHaveBeenCalledTimes(1);
+        expect(preventDefaultSpy).toHaveBeenCalledTimes(1);
     });
 
     it('should reset input on ESC', () => {
-        const component = shallowBaseSelector().instance();
-        const onInputResetSpy = sinon.spy(component, 'onInputReset');
+        const component = mountBaseSelector().instance();
+        const onInputResetSpy = jest.spyOn(component, 'onInputReset');
 
         component.onInputKeyDown({ which: KeyCodes.ESC });
-        assert.isTrue(onInputResetSpy.calledOnce);
+        expect(onInputResetSpy).toHaveBeenCalledTimes(1);
     });
 
     it('should move to first suggestion on HOME', () => {
@@ -292,8 +286,8 @@ describe('<BaseSelector> keyboard navigation', () => {
 
 describe('<BaseSelector> focus', () => {
     it('should maintain focus on suggestionClick', () => {
-        const onBlurSpy = sinon.spy();
-        const onFocusSpy = sinon.spy();
+        const onBlurSpy = jest.fn();
+        const onFocusSpy = jest.fn();
         const component = mountBaseSelector({
             onBlur: onBlurSpy,
             onFocus: onFocusSpy,
@@ -303,13 +297,13 @@ describe('<BaseSelector> focus', () => {
         const suggestionListItem = component.find(SuggestionItem).first();
         suggestionListItem.simulate('click');
 
-        assert.isTrue(onFocusSpy.calledOnce);
-        assert.equal(onBlurSpy.callCount, 0);
+        expect(onFocusSpy).toHaveBeenCalledTimes(1);
+        expect(onBlurSpy).not.toHaveBeenCalled();
     });
 
     it('should maintain focus on resetClick', () => {
-        const onBlurSpy = sinon.spy();
-        const onFocusSpy = sinon.spy();
+        const onBlurSpy = jest.fn();
+        const onFocusSpy = jest.fn();
         const component = mountBaseSelector({
             onBlur: onBlurSpy,
             onFocus: onFocusSpy,
@@ -319,22 +313,22 @@ describe('<BaseSelector> focus', () => {
         const resetButton = component.find(SuggestionItem).first('button');
         resetButton.simulate('click');
 
-        assert.isTrue(onFocusSpy.calledOnce);
-        assert.equal(onBlurSpy.callCount, 0);
+        expect(onFocusSpy).toHaveBeenCalledTimes(1);
+        expect(onBlurSpy).not.toHaveBeenCalled();
     });
 
     it('should not show suggestions on focus', () => {
-        const onFocus = sinon.spy();
+        const onFocus = jest.fn();
         const component = mountBaseSelector({
             shouldShowSuggestionsOnFocus: false,
             onFocus: onFocus,
         }).instance();
-        const showHideSuggestionsSpy = sinon.spy(
+        const showHideSuggestionsSpy = jest.spyOn(
             component,
             'showOrHideSuggestions',
         );
         component.onFocus();
 
-        assert.isTrue(showHideSuggestionsSpy.calledWith(false, onFocus));
+        expect(showHideSuggestionsSpy).toHaveBeenCalledWith(false, onFocus);
     });
 });

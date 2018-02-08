@@ -1,7 +1,5 @@
-import { mount } from 'enzyme';
-import { expect } from 'chai';
-import sinon from 'sinon';
 import React from 'react';
+import { mount } from 'enzyme';
 
 import AccountSelector from './AccountSelector';
 import Input from '../../subcomponents/input-field';
@@ -58,18 +56,18 @@ describe('<AccountSelector> methods', () => {
         const component = mountAccountSelector();
         component.instance().onInputChange('');
 
-        expect(
-            component.instance().baseSelector.props.suggestions.length,
-        ).to.equal(3);
+        expect(component.instance().baseSelector.props.suggestions.length).toBe(
+            3,
+        );
 
         component.setProps({ value: 'oo' });
-        expect(
-            component.instance().baseSelector.props.suggestions.length,
-        ).to.equal(2);
+        expect(component.instance().baseSelector.props.suggestions.length).toBe(
+            2,
+        );
     });
 
     it('calls onSuggestionSelect with accounts[0] when the first item is selected', () => {
-        const onSuggestionSelectSpy = sinon.spy();
+        const onSuggestionSelectSpy = jest.fn();
         const component = mountAccountSelector({
             onSuggestionSelect: onSuggestionSelectSpy,
         });
@@ -78,6 +76,6 @@ describe('<AccountSelector> methods', () => {
         const suggestionListItem = component.find(SuggestionItem).first();
         suggestionListItem.simulate('mousedown');
 
-        expect(onSuggestionSelectSpy.calledWith(accounts[0]));
+        expect(onSuggestionSelectSpy).toHaveBeenCalledWith(accounts[0]);
     });
 });

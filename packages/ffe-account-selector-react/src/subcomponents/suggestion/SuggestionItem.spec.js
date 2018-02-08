@@ -1,7 +1,5 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { assert } from 'chai';
-import sinon from 'sinon';
 
 import SuggestionItem from './SuggestionItem';
 
@@ -31,39 +29,43 @@ describe('<SuggestionItem />', () => {
         const wrapper = renderSuggestionItem();
         const li = wrapper.find('li');
 
-        assert.isTrue(li.prop('id') === 'suggestion-option-0');
-        assert.equal(li.childAt(0).html(), '<h1>header</h1>');
+        expect(li.prop('id') === 'suggestion-option-0').toBe(true);
+        expect(li.childAt(0).html()).toBe('<h1>header</h1>');
     });
 
     it('isHighlighted', () => {
-        const refHighlightedSuggestionSpy = sinon.spy();
+        const refHighlightedSuggestionSpy = jest.fn();
         const wrapper = renderSuggestionItem(true, refHighlightedSuggestionSpy);
 
-        assert.isTrue(
+        expect(
             wrapper.children().hasClass('ffe-account-suggestion--highlighted'),
+        ).toBe(true);
+        expect(wrapper.children().hasClass('ffe-account-suggestion')).toBe(
+            true,
         );
-        assert.isTrue(wrapper.children().hasClass('ffe-account-suggestion'));
-        assert.isTrue(refHighlightedSuggestionSpy.calledOnce);
+        expect(refHighlightedSuggestionSpy).toHaveBeenCalledTimes(1);
     });
 
     it('not Highlighted', () => {
-        const refHighlightedSuggestionSpy = sinon.spy();
+        const refHighlightedSuggestionSpy = jest.fn();
         const wrapper = renderSuggestionItem(
             false,
             refHighlightedSuggestionSpy,
         );
 
-        assert.isFalse(
+        expect(
             wrapper.children().hasClass('ffe-account-suggestion--highlighted'),
+        ).toBe(false);
+        expect(wrapper.children().hasClass('ffe-account-suggestion')).toBe(
+            true,
         );
-        assert.isTrue(wrapper.children().hasClass('ffe-account-suggestion'));
-        assert.isFalse(refHighlightedSuggestionSpy.called);
+        expect(refHighlightedSuggestionSpy).not.toHaveBeenCalled();
     });
 
     it('onSelect called', () => {
-        const onSelectSpy = sinon.spy();
+        const onSelectSpy = jest.fn();
         const wrapper = renderSuggestionItem(true, () => {}, onSelectSpy);
         wrapper.simulate('mousedown');
-        assert.isTrue(onSelectSpy.calledWith(item()));
+        expect(onSelectSpy).toHaveBeenCalledWith(item());
     });
 });
