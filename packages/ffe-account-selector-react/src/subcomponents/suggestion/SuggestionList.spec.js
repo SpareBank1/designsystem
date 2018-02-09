@@ -1,7 +1,5 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { assert } from 'chai';
-import sinon from 'sinon';
 
 import Spinner from 'ffe-spinner-react';
 
@@ -54,64 +52,64 @@ describe('<SuggestionList />', () => {
         const wrapper = shallowSuggestionList();
         const ul = wrapper.find('ul');
 
-        assert.equal(ul.children().length, 2);
-        assert.isFalse(ul.childAt(0).props().isHighlighted);
-        assert.isTrue(ul.childAt(1).props().isHighlighted);
-        assert.isTrue(wrapper.find(Spinner).length === 0);
+        expect(ul.children().length).toBe(2);
+        expect(ul.childAt(0).props().isHighlighted).toBe(false);
+        expect(ul.childAt(1).props().isHighlighted).toBe(true);
+        expect(wrapper.find(Spinner).length === 0).toBe(true);
     });
 
     it('should renderNoSuggestions when suggestions is empty', () => {
-        const renderNoMatchesSpy = sinon.spy();
+        const renderNoMatchesSpy = jest.fn();
         const wrapper = shallowSuggestionList({
             ...propsSuggestionList(),
             suggestions: [],
             renderNoMatches: renderNoMatchesSpy,
         });
         const ul = wrapper.find('ul');
-        assert.equal(ul.children().length, 1);
-        assert.isTrue(renderNoMatchesSpy.calledOnce);
-        assert.isTrue(wrapper.find(Spinner).length === 0);
+        expect(ul.children().length).toBe(1);
+        expect(renderNoMatchesSpy).toHaveBeenCalled();
+        expect(wrapper.find(Spinner).length === 0).toBe(true);
     });
 
     it('should render spinner', () => {
         const wrapper = shallowSuggestionList({ isLoading: true });
-        assert.isTrue(wrapper.find(Spinner).length === 1);
+        expect(wrapper.find(Spinner).length === 1).toBe(true);
     });
 });
 
 describe('<SuggestionListContainer />', () => {
     it('should set scrollPos to start', () => {
         const component = mountSuggestionListContainer().instance();
-        const scrollSpy = sinon.spy(component.scrollbars, 'scrollTop');
+        const scrollSpy = jest.spyOn(component.scrollbars, 'scrollTop');
 
         component.setScrollPosStart();
-        assert.isTrue(scrollSpy.calledWith(0));
+        expect(scrollSpy).toHaveBeenCalledWith(0);
     });
 
     it('should set scrollPos to end', () => {
         const component = mountSuggestionListContainer().instance();
-        sinon.stub(component.scrollbars, 'getScrollHeight').returns(300);
-        const scrollSpy = sinon.spy(component.scrollbars, 'scrollTop');
+        component.scrollbars.getScrollHeight = jest.fn().mockReturnValue(300);
+        const scrollSpy = jest.spyOn(component.scrollbars, 'scrollTop');
 
         component.setScrollPosEnd();
-        assert.isTrue(scrollSpy.calledWith(300));
+        expect(scrollSpy).toHaveBeenCalledWith(300);
     });
 
     it('should set scrollPos to next', () => {
         const component = mountSuggestionListContainer().instance();
         component.refHighlightedSuggestion({ clientHeight: 50 });
-        const scrollSpy = sinon.spy(component.scrollbars, 'scrollTop');
+        const scrollSpy = jest.spyOn(component.scrollbars, 'scrollTop');
 
         component.setScrollPosNext();
-        assert.isTrue(scrollSpy.calledWith(100));
+        expect(scrollSpy).toHaveBeenCalledWith(100);
     });
 
     it('should set scrollPos to previous', () => {
         const component = mountSuggestionListContainer().instance();
         component.refHighlightedSuggestion({ clientHeight: 50 });
-        const scrollSpy = sinon.spy(component.scrollbars, 'scrollTop');
+        const scrollSpy = jest.spyOn(component.scrollbars, 'scrollTop');
 
         component.setScrollPosPrevious();
-        assert.isTrue(scrollSpy.calledWith(50));
+        expect(scrollSpy).toHaveBeenCalledWith(50);
     });
 });

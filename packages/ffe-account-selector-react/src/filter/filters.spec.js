@@ -1,6 +1,3 @@
-/* eslint-env mocha */
-
-import { assert } from 'chai';
 import { accountFilter, createAccountFilter } from './filters';
 
 describe('accountFilter', () => {
@@ -38,60 +35,60 @@ describe('accountFilter', () => {
     ];
 
     it('should not filter with empty query', () => {
-        assert.deepEqual(accounts.filter(accountFilter('')), accounts);
+        expect(accounts.filter(accountFilter(''))).toEqual(accounts);
     });
 
     it('should not filter with undefined query', () => {
-        assert.deepEqual(accounts.filter(accountFilter(undefined)), accounts);
+        expect(accounts.filter(accountFilter(undefined))).toEqual(accounts);
     });
 
     it('should filter by name', () => {
-        assert.deepEqual(accounts.filter(accountFilter('Matvererkonto')), [
+        expect(accounts.filter(accountFilter('Matvererkonto'))).toEqual([
             accounts[1],
         ]);
     });
 
     it('should filter by account number', () => {
-        assert.deepEqual(accounts.filter(accountFilter('12867318345')), [
+        expect(accounts.filter(accountFilter('12867318345'))).toEqual([
             accounts[1],
         ]);
     });
 
     it('should filter account number with dots seperators', () => {
-        assert.deepEqual(accounts.filter(accountFilter('1286.7318.345')), [
+        expect(accounts.filter(accountFilter('1286.7318.345'))).toEqual([
             accounts[1],
         ]);
     });
 
     it('should filter account number with space seperators', () => {
-        assert.deepEqual(accounts.filter(accountFilter('1286 7318 345')), [
+        expect(accounts.filter(accountFilter('1286 7318 345'))).toEqual([
             accounts[1],
         ]);
     });
 
     it('should filter by partial account number', () => {
-        assert.deepEqual(accounts.filter(accountFilter('876')), [
+        expect(accounts.filter(accountFilter('876'))).toEqual([
             accounts[2],
             accounts[3],
         ]);
     });
 
     it('should filter by partial name', () => {
-        assert.deepEqual(accounts.filter(accountFilter('lønnskonto')), [
+        expect(accounts.filter(accountFilter('lønnskonto'))).toEqual([
             accounts[4],
             accounts[5],
         ]);
     });
 
     it('should return empty array when no match', () => {
-        assert.deepEqual(accounts.filter(accountFilter('xxx')), []);
+        expect(accounts.filter(accountFilter('xxx'))).toEqual([]);
     });
 
     it('should enable account filter', () => {
-        assert.equal(createAccountFilter(true).name, 'accountFilter');
+        expect(createAccountFilter(true).name).toBe('accountFilter');
     });
 
     it('should disable account filter', () => {
-        assert.equal(createAccountFilter(false).name, 'noFilter');
+        expect(createAccountFilter(false).name).toEqual('noFilter');
     });
 });

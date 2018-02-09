@@ -1,9 +1,9 @@
 {
     "overrides": [
         {
-            "files": [ "src/**/*.test.js"],
+            "files": [ "src/**/*.spec.js"],
             "env": {
-                "mocha": true
+                "jest": true
             }
         }
     ]
