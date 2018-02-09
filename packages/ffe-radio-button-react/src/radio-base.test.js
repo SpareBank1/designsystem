@@ -32,6 +32,13 @@ describe('<RadioBase />', () => {
                 const id = wrapper.find('input').prop('id');
                 expect(htmlFor).to.be.equal(id);
             });
+
+            it('should not create a new id on every render', () => {
+                const firstId = wrapper.find('input').prop('id');
+                wrapper.setProps({ invalid: true }); // trigger re-render
+                const secondId =  wrapper.find('input').prop('id');
+                expect(firstId).to.equal(secondId);
+            })
         });
 
         it('should render a default value if passed', () => {
