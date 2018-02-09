@@ -16,13 +16,13 @@ const inlineStyles = {
     display: 'inline-block'
 };
 
-const createId = () => `radio-button-${hash()}`;
-
 class RadioBase extends Component {
 
     constructor(props) {
         super(props);
         this.state = { closed: true };
+
+        this.id = `radio-button-${hash()}`;
 
         this.onClick = this.onClick.bind(this);
     }
@@ -47,7 +47,7 @@ class RadioBase extends Component {
             ...rest
         } = this.props;
 
-        const domId = id || createId();
+        const domId = id || this.id;
         const invalidAsString = String(ariaInvalid ? ariaInvalid : invalid);
 
         return (
