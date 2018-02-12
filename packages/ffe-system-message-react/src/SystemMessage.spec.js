@@ -3,7 +3,6 @@ import React from 'react';
 import { shallow, mount } from 'enzyme';
 import sinon from 'sinon';
 
-import SystemMessage from './SystemMessage';
 import SystemErrorMessage from './SystemErrorMessage';
 import SystemInfoMessage from './SystemInfoMessage';
 import SystemNewsMessage from './SystemNewsMessage';
