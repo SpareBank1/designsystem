@@ -6,6 +6,7 @@ node_modules
 
 # Built files
 dist/
+styleguide/
 
 # Editors
 .idea/

@@ -7,7 +7,14 @@ function HeadingRenderer({ classes, level, children, ...props }) {
     const headingClasses = classes;
 
     return (
-        <Tag {...props} className={classNames(headingClasses, `ffe-h${level}`)}>
+        <Tag
+            {...props}
+            className={classNames(
+                headingClasses,
+                `ffe-h${level}`,
+                'sb1ds-header-offset',
+            )}
+        >
             {children}
         </Tag>
     );

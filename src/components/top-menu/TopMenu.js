@@ -17,7 +17,7 @@ export default function TopMenu() {
                         middle={true}
                         noBottomPadding={true}
                     >
-                        <a href="/">
+                        <a href="./">
                             <Logo />
                         </a>
                     </GridCol>
@@ -37,6 +37,7 @@ export default function TopMenu() {
                                     'section-kom-i-gang',
                                     'section-merkevare',
                                     'section-visuell-stil',
+                                    'section-universell-utforming',
                                     'section-komponenter',
                                 ]}
                                 currentClassName="sb1ds-top-menu__item--active"
@@ -66,6 +67,15 @@ export default function TopMenu() {
                                         href="#section-visuell-stil"
                                     >
                                         Visuell stil
+                                    </Link>
+                                </li>
+                                <li className="sb1ds-top-menu__item">
+                                    <Link
+                                        noUnderline={true}
+                                        className="sb1ds-top-menu__link ffe-strong-text"
+                                        href="#section-universell-utforming"
+                                    >
+                                        Universell utforming
                                     </Link>
                                 </li>
                                 <li className="sb1ds-top-menu__item">

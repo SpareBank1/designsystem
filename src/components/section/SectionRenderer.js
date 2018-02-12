@@ -16,7 +16,10 @@ export function SectionRenderer(allProps) {
     } = allProps;
 
     return (
-        <section className="sb1ds-section" id={`section-${slug}`}>
+        <section
+            className="sb1ds-section sb1ds-header-offset"
+            id={`section-${slug}`}
+        >
             {name && (
                 <SectionHeading
                     depth={depth}

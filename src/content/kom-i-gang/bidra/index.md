@@ -1,0 +1,1 @@
+Vi oppfordrer alle, både rutinerte og ferske, til å opprette issues, sende inn pull requests og kommentere på andres bidrag. Ta en titt på `CONTRIBUTE.md` for hvordan du går frem.
