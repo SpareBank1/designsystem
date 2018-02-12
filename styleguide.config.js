@@ -51,19 +51,19 @@ module.exports = {
             sections: [
                 {
                     name: 'For designere',
-                    content: 'src/content/kom-i-gang/for-designere/index.md',
+                    content: 'src/content/kom-i-gang/for-designere.md',
                 },
                 {
                     name: 'For utviklere',
-                    content: 'src/content/kom-i-gang/for-utviklere/index.md',
+                    content: 'src/content/kom-i-gang/for-utviklere.md',
                 },
                 {
                     name: 'Om FFE',
-                    content: 'src/content/kom-i-gang/om-ffe/index.md',
+                    content: 'src/content/kom-i-gang/om-ffe.md',
                 },
                 {
                     name: 'Bidra',
-                    content: 'src/content/kom-i-gang/bidra/index.md',
+                    content: 'src/content/kom-i-gang/bidra.md',
                 },
             ],
         },
@@ -73,11 +73,11 @@ module.exports = {
             sections: [
                 {
                     name: 'Profil',
-                    content: 'src/content/merkevare/profil/index.md',
+                    content: 'src/content/merkevare/profil.md',
                 },
                 {
                     name: 'Stil og tone',
-                    content: 'src/content/merkevare/stil-og-tone/index.md',
+                    content: 'src/content/merkevare/stil-og-tone.md',
                 },
             ],
         },
@@ -87,23 +87,23 @@ module.exports = {
             sections: [
                 {
                     name: 'Farger',
-                    content: 'src/content/visuell-stil/farger/index.md',
+                    content: 'src/content/visuell-stil/farger.md',
                 },
                 {
                     name: 'Ikoner',
-                    content: 'src/content/visuell-stil/ikoner/index.md',
+                    content: 'src/content/visuell-stil/ikoner.md',
                 },
                 {
                     name: 'Typografi',
-                    content: 'src/content/visuell-stil/typografi/index.md',
+                    content: 'src/content/visuell-stil/typografi.md',
                 },
                 {
                     name: 'Illustrasjoner',
-                    content: 'src/content/visuell-stil/illustrasjoner/index.md',
+                    content: 'src/content/visuell-stil/illustrasjoner.md',
                 },
                 {
                     name: 'Animasjoner',
-                    content: 'src/content/visuell-stil/animasjoner/index.md',
+                    content: 'src/content/visuell-stil/animasjoner.md',
                 },
                 {
                     name: 'Layout',
@@ -126,12 +126,12 @@ module.exports = {
                 {
                     name: 'WAI-Aria',
                     content:
-                        'src/content/universell-utforming/wai-aria/index.md',
+                        'src/content/universell-utforming/wai-aria.md',
                 },
                 {
                     name: 'Kontrast',
                     content:
-                        'src/content/universell-utforming/kontrast/index.md',
+                        'src/content/universell-utforming/kontrast.md',
                 },
             ],
         },
