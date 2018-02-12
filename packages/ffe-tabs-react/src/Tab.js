@@ -1,5 +1,5 @@
 import React from 'react';
-import { node, bool, string } from 'prop-types';
+import { bool, string } from 'prop-types';
 import classNames from 'classnames';
 
 export default function Tab(props) {
