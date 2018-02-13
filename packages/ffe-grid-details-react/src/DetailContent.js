@@ -2,7 +2,7 @@ import React from 'react';
 import { bool, node, number, string } from 'prop-types';
 import classNames from 'classnames';
 
-import { Grid, GridCol, GridRow } from 'ffe-grid-react';
+import { GridCol } from 'ffe-grid-react';
 
 const getColCount = (total, current, md) => {
     if (total === 1) {
