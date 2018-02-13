@@ -60,6 +60,5 @@ Markupen for eksempelet over ser slik ut:
             </TertiaryButton>
         </DetailContent>
     </Detail>
-
 </DetailList>
 ```
