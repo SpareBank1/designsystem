@@ -58,7 +58,7 @@ MessageBox.propTypes = {
     content: node,
     /** The icon to show. Has a default value for each message box type, but can be overridden */
     icon: node.isRequired,
-    title: string,
+    title: node,
     /**
      * Internal type enum for specifying the style of message box. Should not be used directly
      * @ignore
