@@ -213,10 +213,9 @@ module.exports = {
                         'packages/ffe-grid-react/src/[A-Z]+([A-Za-z]).js',
                 },
                 {
-                    name: 'Grid Details',
-                    content: 'packages/ffe-grid-details-react/USAGE.md',
+                    name: 'Detaljliste',
                     components:
-                        'packages/ffe-grid-details-react/src/[A-Z]+([A-Za-z]).js',
+                        'packages/ffe-details-list-react/src/[A-Z]+([A-Za-z]).js',
                 },
                 {
                     name: 'Tabeller',

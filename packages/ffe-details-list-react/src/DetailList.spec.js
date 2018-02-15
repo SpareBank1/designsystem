@@ -20,11 +20,11 @@ describe('<DetailContent />', () => {
 
     it('adds correct class based on cta prop', () => {
         const wrapper = getWrapper({ cta: false });
-        expect(wrapper.hasClass('ffe-grid-details-react__content--action')).toBe(false);
+        expect(wrapper.hasClass('ffe-details-list-react__content--action')).toBe(false);
 
         wrapper.setProps({ cta: true });
 
-        expect(wrapper.hasClass('ffe-grid-details-react__content--action')).toBe(true);
+        expect(wrapper.hasClass('ffe-details-list-react__content--action')).toBe(true);
     });
 
     it('adds any extra classes if provided', () => {

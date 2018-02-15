@@ -15,15 +15,15 @@ høyre.
 
 På store skjermer vil listen rendres slik:
 
-![image](ffe-grid-details-react/lg.png)
+![image](ffe-details-list-react/lg.png)
 
 På mellomstore skjermer slik:
 
-![image](ffe-grid-details-react/md.png)
+![image](ffe-details-list-react/md.png)
 
 Og på små skjermer brekker innholdet om og stackes i høyden, slik:
 
-![image](ffe-grid-details-react/sm.png)
+![image](ffe-details-list-react/sm.png)
 
 Markupen for eksempelet over ser slik ut:
 

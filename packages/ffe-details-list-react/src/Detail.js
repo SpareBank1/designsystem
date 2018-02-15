@@ -14,7 +14,7 @@ export default function Detail(props) {
                 <GridCol
                     sm={12}
                     md={{ cols: 2, offset: 2 }}
-                    className="ffe-grid-details-react__content"
+                    className="ffe-details-list-react__content"
                     noBottomPadding={true}
                 >
                     <div className="ffe-h5 ffe-h5--no-margin">{label}</div>

@@ -21,8 +21,8 @@ export default function DetailContent(props) {
         <GridCol
             className={classNames(
                 className,
-                'ffe-grid-details-react__content',
-                { 'ffe-grid-details-react__content--action': cta },
+                'ffe-details-list-react__content',
+                { 'ffe-details-list-react__content--action': cta },
             )}
             sm={12}
             md={getColCount(childCount, index, true)}
