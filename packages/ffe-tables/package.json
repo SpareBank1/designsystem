@@ -1,6 +1,6 @@
 {
     "name": "ffe-tables",
-    "version": "8.1.5",
+    "version": "8.1.6",
     "files": [
         "less"
     ],
@@ -16,7 +16,7 @@
         "test": "npm run lint && npm run test:nsp"
     },
     "devDependencies": {
-        "ffe-core": "^10.3.1",
+        "ffe-core": "^11.0.0",
         "nsp": "^3.1.0",
         "stylelint": "^8.4.0"
     },

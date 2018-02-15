@@ -1,6 +1,6 @@
 {
     "name": "ffe-lists",
-    "version": "4.1.4",
+    "version": "4.1.5",
     "description": "Lists in ffe",
     "main": "less/lists.less",
     "repository": {
@@ -15,7 +15,7 @@
         "test": "npm run lint && npm run test:nsp"
     },
     "devDependencies": {
-        "ffe-core": "^10.3.1"
+        "ffe-core": "^11.0.0"
     },
     "peerDependencies": {
         "ffe-core": "^9.0.0 || ^10.0.0"

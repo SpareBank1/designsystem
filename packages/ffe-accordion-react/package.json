@@ -1,6 +1,6 @@
 {
     "name": "ffe-accordion-react",
-    "version": "4.0.6",
+    "version": "4.0.7",
     "main": "lib/index.js",
     "author": "SpareBank 1",
     "license": "UNLICENSED",
@@ -28,8 +28,8 @@
     "devDependencies": {
         "enzyme": "^3.3.0",
         "enzyme-adapter-react-16": "^1.1.1",
-        "ffe-accordion": "^3.0.7",
-        "ffe-core": "^10.3.1",
+        "ffe-accordion": "^3.0.8",
+        "ffe-core": "^11.0.0",
         "jest": "^22.0.4"
     },
     "files": [

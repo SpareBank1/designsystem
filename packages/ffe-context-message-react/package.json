@@ -1,6 +1,6 @@
 {
     "name": "ffe-context-message-react",
-    "version": "3.0.11",
+    "version": "3.0.12",
     "description": "React implementation of ffe-context-message component",
     "keywords": [
         "ffe"
@@ -29,7 +29,7 @@
         "enzyme-adapter-react-16": "^1.1.1",
         "eslint": "^4.13.1",
         "expect.js": "^0.3.1",
-        "ffe-context-message": "^2.0.13",
+        "ffe-context-message": "^2.0.14",
         "jsdom": "^11.5.1",
         "mocha": "^4.1.0",
         "sinon": "^4.1.3"

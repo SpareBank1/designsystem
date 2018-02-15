@@ -1,6 +1,6 @@
 {
     "name": "ffe-buttons",
-    "version": "5.1.8",
+    "version": "5.1.9",
     "files": [
         "less"
     ],
@@ -16,7 +16,7 @@
         "url": "***REMOVED***"
     },
     "devDependencies": {
-        "ffe-core": "^10.3.1",
+        "ffe-core": "^11.0.0",
         "nsp": "^3.1.0",
         "stylelint": "^8.4.0"
     },

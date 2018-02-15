@@ -1,6 +1,6 @@
 {
     "name": "ffe-checkbox-react",
-    "version": "4.4.12",
+    "version": "4.4.13",
     "main": "lib/Checkbox.js",
     "scripts": {
         "build": "babel -d lib/. --ignore=*.test.js src/.",
@@ -23,8 +23,8 @@
         "enzyme": "^3.3.0",
         "enzyme-adapter-react-16": "^1.1.1",
         "eslint": "^4.13.1",
-        "ffe-core": "^10.3.1",
-        "ffe-form": "^8.1.8",
+        "ffe-core": "^11.0.0",
+        "ffe-form": "^8.1.9",
         "mocha": "^4.1.0",
         "mocha-tap13": "^1.0.2",
         "nsp": "^3.1.0",

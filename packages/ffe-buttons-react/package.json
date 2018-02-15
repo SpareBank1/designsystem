@@ -1,6 +1,6 @@
 {
     "name": "ffe-buttons-react",
-    "version": "8.1.6",
+    "version": "8.1.7",
     "description": "React implementation of ffe-buttons",
     "main": "lib/index.js",
     "scripts": {
@@ -26,8 +26,8 @@
         "enzyme": "^3.3.0",
         "enzyme-adapter-react-16": "^1.1.1",
         "eslint": "^4.13.1",
-        "ffe-buttons": "^5.1.8",
-        "ffe-core": "^10.3.1",
+        "ffe-buttons": "^5.1.9",
+        "ffe-core": "^11.0.0",
         "mocha": "^4.1.0",
         "mocha-tap13": "^1.0.2",
         "nsp": "^3.1.0",
