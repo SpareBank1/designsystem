@@ -1,0 +1,23 @@
+{
+    "name": "ffe-webfonts",
+    "description": "Fonts and fonts definition used in FFE",
+    "version": "0.0.0",
+    "files": ["fonts", "fonts.css", "fonts.less"],
+    "author": "SpareBank 1",
+    "license": "UNLICENSED",
+    "repository": {
+        "type": "git",
+        "url": "***REMOVED***"
+    },
+    "scripts": {
+        "build": "lessc --no-ie-compat --inline-urls fonts.less fonts.css",
+        "lint": "stylelint *.less",
+        "test": "npm run lint && npm run test:nsp",
+        "test:nsp": "nsp check"
+    },
+    "devDependencies": {
+        "less-plugin-inline-urls": "^1.2.0",
+        "nsp": "^3.1.0",
+        "stylelint": "^8.4.0"
+    }
+}

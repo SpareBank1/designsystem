@@ -14,7 +14,7 @@
         "prebuild": "mkdirp dist/fonts",
         "build": "npm run build:css && npm run build:fonts && lerna run build",
         "build:css": "lessc packages/ffe-all.less dist/ffe.css",
-        "build:fonts": "cp -r packages/ffe-core/fonts dist",
+        "build:fonts": "cp -r packages/ffe-webfonts/fonts dist",
         "lint": "lerna run lint",
         "start": "npm run build && styleguidist server",
         "styleguidist": "styleguidist",

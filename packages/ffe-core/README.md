@@ -18,9 +18,6 @@ $ npm install --save-dev less less-plugin-npm-import    # less-plugin er valgfri
 @import "~ffe-core/less/ffe";                           // med webpack og less-loader
 @import "../path/to/node_modules/ffe-core/less/ffe";    // direkte referanse
 
-/* FFE trenger at det er definert en konstant 'base-url'. Denne må inneholde rot-pathen i appens URL */
-/* FFEs fonter må kopieres til en mappe 'fonts' som publiseres på denne pathen, f.eks. /privat/forsikring/fonts */
-@base-url: '/privat/forsikring/';
 
 /* Om du vil ha element styling finnes det en annen import */
 /* Det anbefales ikke å bruke denne siden det kan skape problemer med andre CSS-regler */
@@ -38,10 +35,6 @@ I noe tilfeller trenger man kanskje kun deler av ffe-core. Derfor kan hver fil i
 @import "~ffe-core/less/dimensions";
 @import "~ffe-core/less/motion";
 @import "~ffe-core/less/font-sizes";
-
-// font-face definitions (requires @base-url or @font-url to be defined)
-@import "~ffe-core/less/fonts";
-@font-url: './fonts';
 ```
 
 ## Kom i gang med FFE
