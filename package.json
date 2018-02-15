@@ -42,7 +42,7 @@
         "less-plugin-autoprefix": "^1.5.1",
         "mkdirp": "^0.5.1",
         "precise-commits": "^1.0.0",
-        "prettier": "1.9.2",
+        "prettier": "^1.10.2",
         "react": "^16.1.1",
         "react-dom": "^16.1.1",
         "react-scrollspy": "^3.3.5",

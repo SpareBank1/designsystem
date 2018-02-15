@@ -1,0 +1,41 @@
+{
+    "name": "ffe-details-list-react",
+    "version": "1.0.0",
+    "main": "lib/index.js",
+    "files": [
+        "less",
+        "lib",
+        "*.js"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "***REMOVED***"
+    },
+    "author": "SpareBank 1",
+    "license": "UNLICENSED",
+    "scripts": {
+        "build": "babel -d lib/. --ignore=*.test.js src/.",
+        "lint": "eslint src/.",
+        "lint:fix": "eslint --fix src/.",
+        "test": "npm run test:spec && npm run test:nsp",
+        "test:nsp": "nsp check",
+        "test:spec": "jest"
+    },
+    "dependencies": {
+        "classnames": "^2.2.5",
+        "ffe-grid-react": "^6.0.5"
+    },
+    "devDependencies": {
+        "babel-cli": "^6.24.1",
+        "babel-core": "^6.26.0",
+        "enzyme": "^3.3.0",
+        "enzyme-adapter-react-16": "^1.1.1",
+        "jest": "^22.2.2",
+        "nsp": "^3.1.0",
+        "react": "^16.2.0",
+        "react-dom": "^16.2.0"
+    },
+    "jest": {
+        "setupTestFrameworkScriptFile": "./test-setup.js"
+    }
+}
