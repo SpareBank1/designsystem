@@ -3,7 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-      <a name="8.1.7"></a>
+    <a name="8.2.0"></a>
+# [8.2.0](***REMOVED***) (2018-02-16)
+
+
+### Features
+
+* **ffe-buttons-react:** Inline expand button ([fdf3326](***REMOVED***))
+
+
+
+
+    <a name="8.1.7"></a>
 ## [8.1.7](***REMOVED***) (2018-02-15)
 
 
@@ -11,7 +22,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package ffe-buttons-react
 
-      <a name="8.1.6"></a>
+  <a name="8.1.6"></a>
 ## [8.1.6](***REMOVED***) (2018-02-09)
 
 
@@ -19,7 +30,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package ffe-buttons-react
 
-    <a name="8.1.5"></a>
+<a name="8.1.5"></a>
 ## [8.1.5](***REMOVED***) (2018-02-05)
 
 

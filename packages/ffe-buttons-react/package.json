@@ -1,6 +1,6 @@
 {
     "name": "ffe-buttons-react",
-    "version": "8.1.7",
+    "version": "8.2.0",
     "description": "React implementation of ffe-buttons",
     "keywords": [
         "ffe"
@@ -32,7 +32,7 @@
         "enzyme": "^3.3.0",
         "enzyme-adapter-react-16": "^1.1.1",
         "eslint": "^4.13.1",
-        "ffe-buttons": "^5.1.9",
+        "ffe-buttons": "^5.2.0",
         "ffe-core": "^11.0.0",
         "jest": "^22.0.6",
         "nsp": "^3.1.0",
