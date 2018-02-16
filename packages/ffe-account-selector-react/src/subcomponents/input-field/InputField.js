@@ -71,6 +71,9 @@ class Input extends Component {
             name,
             readOnly,
         } = this.props;
+
+        const showReset = !readOnly && value.length > 0;
+
         return (
             <div
                 role="combobox"
@@ -99,7 +102,7 @@ class Input extends Component {
                     readOnly={readOnly}
                     {...this.onChangeHandler(this.onChange)}
                 />
-                {value.length > 0 && (
+                {showReset && (
                     <button
                         className="ffe-base-selector__reset-button"
                         onMouseDown={e => {
