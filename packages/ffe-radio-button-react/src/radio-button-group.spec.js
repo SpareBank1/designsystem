@@ -1,36 +1,32 @@
-/*eslint no-unused-expressions:0*/
-/*eslint-env mocha*/
 import React from 'react';
-import { expect } from 'chai';
 import { shallow, mount } from 'enzyme';
-import sinon from 'sinon';
-import { JSDOM } from 'jsdom';
 import RadioButtonGroup from './radio-button-group';
 import RadioButton from './radio-button';
 
 describe('<RadioButtonGroup />', () => {
+    console.error = jest.fn(); // To suppress missing onChange warnings
     describe('basic rendering', () => {
         const wrapper = shallow(<RadioButtonGroup />);
 
         it('should render an input group', () => {
-            expect(wrapper.find('.ffe-input-group')).to.have.lengthOf(1);
+            expect(wrapper.find('.ffe-input-group')).toHaveLength(1);
         });
 
         it('should render a fieldset', () => {
-            expect(wrapper.find('fieldset')).to.have.lengthOf(1);
+            expect(wrapper.find('fieldset')).toHaveLength(1);
         });
 
         it('should not render a legend by default', () => {
-            expect(wrapper.find('legend')).to.be.empty;
+            expect(wrapper.find('legend')).toHaveLength(0);
+        });
 
-            it('should render a legend when specified', () => {
-                const wrapperWithLabel = shallow(
-                    <RadioButtonGroup label="Wazzup" />,
-                );
-                const legend = wrapperWithLabel.find('legend');
-                expect(legend).to.have.lengthOf(1);
-                expect(legend.text()).to.be.equal('Wazzup');
-            });
+        it('should render a legend when specified', () => {
+            const wrapperWithLabel = shallow(
+                <RadioButtonGroup label="Wazzup" />,
+            );
+            const legend = wrapperWithLabel.find('legend');
+            expect(legend).toHaveLength(1);
+            expect(legend.text()).toBe('Wazzup');
         });
     });
 
@@ -41,7 +37,7 @@ describe('<RadioButtonGroup />', () => {
                     <RadioButton value="banana" label="Gulebøj" />
                 </RadioButtonGroup>,
             );
-            expect(wrapper.find('RadioButton')).to.have.lengthOf(1);
+            expect(wrapper.find('RadioButton')).toHaveLength(1);
         });
 
         it('should default the name and inline properties of its children', () => {
@@ -51,8 +47,8 @@ describe('<RadioButtonGroup />', () => {
                 </RadioButtonGroup>,
             );
             const child = wrapper.find('RadioButton');
-            expect(child.prop('name')).to.be.equal('fruit');
-            expect(child.prop('inline')).to.be.equal(true);
+            expect(child.prop('name')).toBe('fruit');
+            expect(child.prop('inline')).toBe(true);
         });
 
         it('should not override the name and inline properties of its children', () => {
@@ -67,8 +63,8 @@ describe('<RadioButtonGroup />', () => {
                 </RadioButtonGroup>,
             );
             const child = wrapper.find('RadioButton');
-            expect(child.prop('name')).to.be.equal('frukt');
-            expect(child.prop('inline')).to.be.equal(false);
+            expect(child.prop('name')).toBe('frukt');
+            expect(child.prop('inline')).toBe(false);
         });
 
         it('should disable its children if the group is set to disabled', () => {
@@ -78,7 +74,7 @@ describe('<RadioButtonGroup />', () => {
                 </RadioButtonGroup>,
             );
             const child = wrapper.find('RadioButton');
-            expect(child.prop('disabled')).to.be.true;
+            expect(child.prop('disabled')).toBe(true);
         });
     });
 
@@ -87,9 +83,9 @@ describe('<RadioButtonGroup />', () => {
             const buttons = [{ value: 'banana', label: 'Gulebøj' }];
             const wrapper = shallow(<RadioButtonGroup buttons={buttons} />);
             const child = wrapper.find('RadioButton');
-            expect(child).to.have.lengthOf(1);
-            expect(child.prop('value')).to.be.equal('banana');
-            expect(child.prop('label')).to.be.equal('Gulebøj');
+            expect(child).toHaveLength(1);
+            expect(child.prop('value')).toBe('banana');
+            expect(child.prop('label')).toBe('Gulebøj');
         });
 
         it('should default the name and inline properties of the buttons', () => {
@@ -102,8 +98,8 @@ describe('<RadioButtonGroup />', () => {
                 />,
             );
             const child = wrapper.find('RadioButton');
-            expect(child.prop('name')).to.be.equal('fruit');
-            expect(child.prop('inline')).to.be.equal(true);
+            expect(child.prop('name')).toBe('fruit');
+            expect(child.prop('inline')).toBe(true);
         });
 
         it('should not override the name and inline properties of the buttons', () => {
@@ -123,8 +119,8 @@ describe('<RadioButtonGroup />', () => {
                 />,
             );
             const child = wrapper.find('RadioButton');
-            expect(child.prop('name')).to.be.equal('frukt');
-            expect(child.prop('inline')).to.be.equal(false);
+            expect(child.prop('name')).toBe('frukt');
+            expect(child.prop('inline')).toBe(false);
         });
 
         it('should replace any children with the specified buttons', () => {
@@ -135,9 +131,9 @@ describe('<RadioButtonGroup />', () => {
                 </RadioButtonGroup>,
             );
             const child = wrapper.find('RadioButton');
-            expect(child).to.have.lengthOf(1);
-            expect(child.prop('value')).to.be.equal('banana');
-            expect(child.prop('label')).to.be.equal('Gulebøj');
+            expect(child).toHaveLength(1);
+            expect(child.prop('value')).toBe('banana');
+            expect(child.prop('label')).toBe('Gulebøj');
         });
 
         it('should disable the buttons if the group is set to disabled', () => {
@@ -146,28 +142,22 @@ describe('<RadioButtonGroup />', () => {
                 <RadioButtonGroup buttons={buttons} disabled={true} />,
             );
             const child = wrapper.find('RadioButton');
-            expect(child.prop('disabled')).to.be.true;
+            expect(child.prop('disabled')).toBe(true);
         });
     });
 
     describe('interactivity', () => {
-        before('init the fake DOM', () => {
-            const dom = new JSDOM();
-            global.window = dom.window;
-            global.document = window.document;
-        });
-
         it('should call onChange when changed', () => {
-            const spy = sinon.spy();
+            const spy = jest.fn();
             const wrapper = shallow(
                 <RadioButtonGroup name="fruit" onChange={spy} />,
             );
             wrapper.find('fieldset').simulate('change');
-            expect(spy.calledOnce).to.be.true;
+            expect(spy).toHaveBeenCalledTimes(1);
         });
 
         it('should call onChange with the correct values', () => {
-            const spy = sinon.spy();
+            const spy = jest.fn();
             const wrapper = mount(
                 <RadioButtonGroup name="fruit" onChange={spy}>
                     <RadioButton value="apple" label="Apple" />
@@ -181,11 +171,10 @@ describe('<RadioButtonGroup />', () => {
             orange.simulate('change');
             apple.simulate('change');
 
-            expect(spy.callCount).to.be.equal(3);
-            expect(spy.getCall(0).args[0].target.value).to.equal('apple');
-            expect(spy.getCall(1).args[0].target.value).to.equal('orange');
-            expect(spy.getCall(2).args[0].target.value).to.equal('apple');
-            // Remember kids - don't mix 'em!!!
+            expect(spy).toHaveBeenCalledTimes(3);
+            expect(spy.mock.calls[0][0].target.value).toBe('apple');
+            expect(spy.mock.calls[1][0].target.value).toBe('orange');
+            expect(spy.mock.calls[2][0].target.value).toBe('apple');
         });
 
         it('passed values should be propagated to the children', () => {
@@ -195,8 +184,12 @@ describe('<RadioButtonGroup />', () => {
                     <RadioButton value="orange" label="Orange" />
                 </RadioButtonGroup>,
             );
-            expect(wrapper.find('input[value="apple"]')).to.be.checked;
-            expect(wrapper.find('input[value="orange"]')).to.not.be.checked;
+            expect(wrapper.find('input[value="apple"]').prop('checked')).toBe(
+                true,
+            );
+            expect(wrapper.find('input[value="orange"]').prop('checked')).toBe(
+                false,
+            );
         });
 
         it('passed values should be override any checked values in the children', () => {
@@ -206,26 +199,30 @@ describe('<RadioButtonGroup />', () => {
                     <RadioButton value="orange" label="Orange" />
                 </RadioButtonGroup>,
             );
-            expect(wrapper.find('input[value="apple"]')).to.not.be.checked;
-            expect(wrapper.find('input[value="orange"]')).to.be.checked;
+            expect(wrapper.find('input[value="apple"]').prop('checked')).toBe(
+                false,
+            );
+            expect(wrapper.find('input[value="orange"]').prop('checked')).toBe(
+                true,
+            );
         });
     });
 
     describe('pass-through of additional props values', () => {
-        const labelledBy = 'someId';
-        const describedBy = 'anotherId';
-        const wrapper = shallow(
-            <RadioButtonGroup
-                aria-labelledby={labelledBy}
-                aria-describedby={describedBy}
-            />,
-        );
-
         it('should allow pass-through of additional props values', () => {
-            expect(wrapper.find('fieldset').prop('aria-labelledby')).to.equal(
+            const labelledBy = 'someId';
+            const describedBy = 'anotherId';
+            const wrapper = shallow(
+                <RadioButtonGroup
+                    aria-labelledby={labelledBy}
+                    aria-describedby={describedBy}
+                />,
+            );
+
+            expect(wrapper.find('fieldset').prop('aria-labelledby')).toBe(
                 labelledBy,
             );
-            expect(wrapper.find('fieldset').prop('aria-describedby')).to.equal(
+            expect(wrapper.find('fieldset').prop('aria-describedby')).toBe(
                 describedBy,
             );
         });
