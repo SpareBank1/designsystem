@@ -1,7 +1,5 @@
-/*eslint-env mocha */
 import React from 'react';
-import { expect } from 'chai';
-import { shallow, render } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 
 import { ShortcutButton } from './index';
 
@@ -9,22 +7,19 @@ describe('ShortcutButton', () => {
     describe('renders', () => {
         it('a shortcut button', () => {
             const button = shallow(<ShortcutButton />);
-
-            expect(button).to.have.prop('buttonType', 'shortcut');
+            expect(button.props()).toHaveProperty('buttonType', 'shortcut');
         });
 
         it('a Chevron icon inside the button', () => {
-            const button = render(<ShortcutButton />);
-
-            expect(button).to.have.descendants(
-                'svg.ffe-shortcut-button__icon-chevron',
-            );
+            const button = mount(<ShortcutButton />);
+            expect(button
+                    .find('svg.ffe-shortcut-button__icon-chevron')
+                    .exists()).toBe(true);
         });
     });
 
     it('passes any prop on to Button', () => {
         const button = shallow(<ShortcutButton disableButton={true} />);
-
-        expect(button).to.have.attr('disabled');
+        expect(button.dive().props()).toHaveProperty('disabled', true);
     });
 });

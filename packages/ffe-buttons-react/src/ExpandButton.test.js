@@ -1,8 +1,5 @@
-/*eslint-env mocha */
 import React from 'react';
-import { expect } from 'chai';
 import { shallow } from 'enzyme';
-import sinon from 'sinon';
 
 import { ExpandButton } from './index';
 
@@ -24,12 +21,12 @@ describe('ExpandButton', () => {
             wrapper
                 .find('.ffe-expand-button')
                 .hasClass('ffe-expand-button--expanded'),
-        ).to.be.true;
+        ).toBe(true);
         expect(
             wrapper
                 .find('.ffe-expand-button__label')
                 .hasClass('ffe-expand-button__label--expanded'),
-        ).to.be.true;
+        ).toBe(true);
     });
 
     it('renders a button and label without the modifiers if isExpanded is false', () => {
@@ -40,20 +37,20 @@ describe('ExpandButton', () => {
             wrapper
                 .find('.ffe-expand-button')
                 .hasClass('ffe-expand-button--expanded'),
-        ).to.be.false;
+        ).toBe(false);
         expect(
             wrapper
                 .find('.ffe-expand-button__label')
                 .hasClass('ffe-expand-button__label--expanded'),
-        ).to.be.false;
+        ).toBe(false);
     });
 
     it('clicking the button calls onClick', () => {
-        const onClick = sinon.spy();
+        const onClick = jest.fn();
         const wrapper = getWrapper({
             onClick,
         });
         wrapper.find('button').simulate('click');
-        expect(onClick.calledOnce).to.be.true;
+        expect(onClick).toHaveBeenCalledTimes(1);
     });
 });

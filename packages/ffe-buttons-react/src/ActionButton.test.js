@@ -1,6 +1,4 @@
-/*eslint-env mocha */
 import React from 'react';
-import { expect } from 'chai';
 import { shallow } from 'enzyme';
 
 import { ActionButton } from './index';
@@ -16,14 +14,16 @@ const getWrapper = props =>
 describe('ActionButton', () => {
     it('renders an action button', () => {
         const button = getWrapper();
-        expect(button).to.have.prop('buttonType', 'action');
+        expect(button.props()).toHaveProperty('buttonType', 'action');
     });
 
     it('passes any prop on to Button', () => {
         const button = getWrapper({
             'data-analytics-track': 'logMe',
         });
-        expect(button).to.have.attr('data-analytics-track', 'logMe');
+        expect(button
+                .dive()
+                .props()).toHaveProperty('data-analytics-track', 'logMe');
     });
 
     describe('👻 ghost modifier 👻', () => {
@@ -31,14 +31,14 @@ describe('ActionButton', () => {
             const button = getWrapper({
                 ghost: false,
             });
-            expect(button.hasClass('ffe-action-button--ghost')).to.be.false;
+            expect(button.hasClass('ffe-action-button--ghost')).toBe(false);
         });
 
         it('renders the --ghost modifier if ghost is true', () => {
             const button = getWrapper({
                 ghost: true,
             });
-            expect(button.hasClass('ffe-action-button--ghost')).to.be.true;
+            expect(button.hasClass('ffe-action-button--ghost')).toBe(true);
         });
 
         it('renders the --ghost modifier alongside the className value', () => {
@@ -46,8 +46,8 @@ describe('ActionButton', () => {
                 className: 'working-class',
                 ghost: true,
             });
-            expect(button.hasClass('working-class')).to.be.true;
-            expect(button.hasClass('ffe-action-button--ghost')).to.be.true;
+            expect(button.hasClass('working-class')).toBe(true);
+            expect(button.hasClass('ffe-action-button--ghost')).toBe(true);
         });
     });
 });
