@@ -1,6 +1,6 @@
 {
     "name": "ffe-file-upload-react",
-    "version": "2.0.3",
+    "version": "2.0.4",
     "description": "Upload file button with validation and list of uploaded files.",
     "keywords": [
         "ffe"
