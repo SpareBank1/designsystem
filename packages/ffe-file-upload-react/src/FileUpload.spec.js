@@ -1,5 +1,4 @@
 import React from 'react';
-import { assert } from 'chai';
 import sinon from 'sinon';
 import { shallow } from 'enzyme';
 
@@ -29,19 +28,24 @@ describe('<FileUpload/>', () => {
         });
 
         it('should have a button and input', () => {
-            assert.isTrue(component.find('.ffe-file-upload__button').exists());
-            assert.isTrue(component.find('#file-upload').exists());
+            expect(component
+                    .find('.ffe-file-upload__button')
+                    .exists()).toBe(true);
+            expect(component
+                    .find('#file-upload')
+                    .exists()).toBe(true);
         });
 
         it('should render input label', () => {
-            assert.equal(
-                component.find('.ffe-file-upload__button').text(),
-                'label',
-            );
+            expect(component
+                    .find('.ffe-file-upload__button')
+                    .text()).toBe('label');
         });
 
         it('should add label as aria-label', () => {
-            assert.equal(component.find('#file-upload-label').text(), 'label');
+            expect(component
+                    .find('#file-upload-label')
+                    .text()).toBe('label');
         });
 
         it('should extract and return files when user finishes selecting files', () => {
@@ -51,7 +55,7 @@ describe('<FileUpload/>', () => {
                 },
             });
 
-            assert.isTrue(onFilesSelected.calledOnce);
+            expect(onFilesSelected.calledOnce).toBe(true);
         });
     });
 
@@ -70,19 +74,15 @@ describe('<FileUpload/>', () => {
         });
 
         it('should render error message when invalid', () => {
-            assert.equal(
-                component.find('.ffe-field-error-message').text(),
-                'Wrong file format',
-            );
+            expect(component
+                    .find('.ffe-field-error-message')
+                    .text()).toBe('Wrong file format');
         });
 
         it('should set aria-invalid on button when invalid', () => {
-            assert.equal(
-                'true',
-                component.find('.ffe-file-upload__button').props()[
-                    'aria-invalid'
-                ],
-            );
+            expect(component
+                    .find('.ffe-file-upload__button')
+                    .prop('aria-invalid')).toBe('true');
         });
     });
 
@@ -105,33 +105,30 @@ describe('<FileUpload/>', () => {
 
         it('should render list of files', () => {
             const files = component.find('.ffe-file-upload__selected-files li');
-            assert.isTrue(files.exists());
-            assert.equal(2, files.length);
+            expect(files.exists()).toBe(true);
+            expect(files).toHaveLength(2);
 
             files.forEach(file => {
-                assert.isTrue(file.find('.ffe-file-upload__filename').exists());
-                assert.match(
-                    file.find('.ffe-file-upload__filename').text(),
-                    /^\w+\.\w+$/,
-                );
-                assert.isTrue(
-                    file.find('.ffe-file-upload__file-size').exists(),
-                );
-                assert.equal(
-                    '1kB',
-                    file.find('.ffe-file-upload__file-size').text(),
-                );
-                assert.isTrue(
-                    file.find('.ffe-file-upload__delete-button').exists(),
-                );
+                expect(file
+                        .find('.ffe-file-upload__filename')
+                        .exists()).toBe(true);
+                expect(file
+                        .find('.ffe-file-upload__filename')
+                        .text()).toMatch(/^\w+\.\w+$/);
+                expect(file
+                        .find('.ffe-file-upload__file-size')
+                        .exists()).toBe(true);
+                expect(file
+                        .find('.ffe-file-upload__file-size')
+                        .text()).toBe('1kB');
+                expect(file
+                        .find('.ffe-file-upload__delete-button')
+                        .exists()).toBe(true);
             });
         });
 
         it('should render file list header', () => {
-            assert.equal(
-                component.find('.ffe-file-upload__filename__title').text(),
-                'files header',
-            );
+            expect(component.find('.ffe-file-upload__filename__title').text()).toBe('files header');
         });
 
         it('should call onFileDeleted when delete button is clicked', () => {
@@ -144,7 +141,7 @@ describe('<FileUpload/>', () => {
                 },
             });
 
-            assert.isTrue(onFileDeleted.calledOnce);
+            expect(onFileDeleted.calledOnce).toBe(true);
         });
     });
 });

@@ -11,24 +11,23 @@
     "scripts": {
         "build": "babel -d lib/. src/.",
         "lint": "eslint src/. test/.",
-        "test": "mocha --require babel-core/register --require test/setup.js test/**/*.test.js",
-        "test:watch": "mocha --require babel-core/register --require test/setup.js test/**/*.test.js -w  --watch-extensions jsx"
+        "test": "jest",
+        "test:watch": "jest --watch"
     },
     "depencencies": {
         "prop-types": "^15.6.0"
     },
     "devDependencies": {
-        "chai": "^4.1.2",
         "enzyme": "^3.3.0",
-        "enzyme-adapter-react-16": "^1.1.1",
-        "eslint": "^4.13.1",
-        "mocha": "^4.1.0",
-        "sinon": "^4.1.3"
+        "enzyme-adapter-react-16": "^1.1.1"
     },
     "peerDependencies": {
         "ffe-core": "^10.0.0",
         "ffe-form": "^8.0.0",
         "react": "^16.2.0",
-        "react-dom": "^16.0.0"
+        "react-dom": "^16.2.0"
+    },
+    "jest": {
+        "setupTestFrameworkScriptFile": "./test-setup.js"
     }
 }
