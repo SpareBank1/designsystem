@@ -1,10 +1,5 @@
-/*eslint-env mocha */
-/*eslint-disable no-unused-expressions */
-
 import React from 'react';
-import { expect } from 'chai';
 import { shallow } from 'enzyme';
-import { spy } from 'sinon';
 
 import Button from './index';
 
@@ -17,34 +12,29 @@ describe('Button', () => {
         });
 
         it('renders a primary button', () => {
-            expect(button).to.have.className('ffe-primary-button');
+            expect(button.hasClass('ffe-primary-button')).toBe(true);
         });
 
         it('uses child-text as label', () => {
             const label = button.find('.ffe-primary-button__label-text');
-            expect(label).to.have.text('Hello');
+            expect(label.text()).toBe('Hello');
         });
 
         it('is not disabled', () => {
-            expect(button).to.not.have.prop('disabled');
-            expect(button).to.not.have.prop('aria-disabled');
+            expect(button.props()).not.toHaveProperty('disabled', true);
+            expect(button.props()).not.toHaveProperty('aria-disabled', true);
         });
 
         it('does not have --loading modifier', () => {
-            expect(button).to.not.have.className('ffe-primary-button--loading');
-
+            expect(button.hasClass('ffe-primary-button--loading')).toBe(false);
             const label = button.find('.ffe-primary-button__label-text');
-            expect(label).to.not.have.className(
-                'ffe-primary-button__label-text--loading',
-            );
+            expect(label.hasClass('ffe-primary-button__label-text--loading')).toBe(false);
         });
 
         it('has aria-hidden on spinner', () => {
-            expect(
-                button
+            expect(button
                     .find('.ffe-primary-button__label-spinner')
-                    .prop('aria-hidden'),
-            ).to.be.true;
+                    .prop('aria-hidden')).toBe(true);
         });
     });
 
@@ -52,23 +42,23 @@ describe('Button', () => {
         describe('of random name', () => {
             it('passes it on', () => {
                 const button = shallow(<Button data-analytics-track="logMe" />);
-                expect(button).to.have.attr('data-analytics-track', 'logMe');
+                expect(button.props()).toHaveProperty('data-analytics-track', 'logMe');
             });
         });
 
         describe('label', () => {
             it('uses that as label text', () => {
                 const wrapper = shallow(<Button label="Hello" />);
-                expect(
-                    wrapper.find('.ffe-primary-button__label-text').text(),
-                ).to.equal('Hello');
+                expect(wrapper
+                        .find('.ffe-primary-button__label-text')
+                        .text()).toBe('Hello');
             });
         });
 
         describe('buttonType', () => {
             it('has correct ffe button type class', () => {
-                const button = shallow(<Button buttonType="someRandomType" />);
-                expect(button).to.have.className('ffe-someRandomType-button');
+                const button = shallow(<Button buttonType="action" />);
+                expect(button.hasClass('ffe-action-button')).toBe(true);
             });
         });
 
@@ -80,91 +70,87 @@ describe('Button', () => {
             });
 
             it('adds --loading modifier', () => {
-                expect(button).to.have.className('ffe-primary-button--loading');
+                expect(button.hasClass('ffe-primary-button--loading')).toBe(true);
 
                 const label = button.find('.ffe-primary-button__label-text');
-                expect(label).to.have.className(
-                    'ffe-primary-button__label-text--loading',
-                );
+                expect(label.hasClass('ffe-primary-button__label-text--loading')).toBe(true);
             });
 
             it('sets aria-hidden=false on spinner', () => {
                 const spinner = button.find(
                     '.ffe-primary-button__label-spinner',
                 );
-                expect(spinner).to.have.prop('aria-hidden', false);
+                expect(spinner.props()).toHaveProperty('aria-hidden', false);
             });
 
             it('disables the button', () => {
-                expect(button).to.have.prop('disabled', true);
+                expect(button.props()).toHaveProperty('disabled', true);
             });
 
             it('marks button as aria-busy', () => {
-                expect(button).to.have.prop('aria-busy', true);
+                expect(button.props()).toHaveProperty('aria-busy', true);
             });
         });
 
         describe('disableButton', () => {
             it('disables the button', () => {
                 const button = shallow(<Button disableButton={true} />);
-                expect(button).to.have.prop('disabled', true);
-                expect(button).to.have.prop('aria-disabled', true);
+                expect(button.props()).toHaveProperty('disabled', true);
+                expect(button.props()).toHaveProperty('aria-disabled', true);
             });
         });
 
         describe('onClick', () => {
             it('runs the passed function when clicked', () => {
-                const onClick = spy();
+                const onClick = jest.fn();
                 const button = shallow(<Button onClick={onClick} />);
                 button.simulate('click');
-                expect(onClick.calledOnce).to.be.true;
+                expect(onClick).toHaveBeenCalledTimes(1);
             });
         });
 
         describe('isTabbable', () => {
             it('should not set tabIndex', () => {
                 const button = shallow(<Button isTabbable={true} />);
-                expect(button).to.not.have.prop('tabIndex');
+                expect(button.props()).not.toHaveProperty('tabIndex');
             });
         });
 
         describe('className', () => {
             it('has given class', () => {
                 const button = shallow(<Button className="testClass" />);
-                expect(button).to.have.className('testClass');
+                expect(button.hasClass('testClass')).toBe(true);
             });
         });
 
         describe('autoFocus', () => {
             it('can be autoFocused', () => {
                 const wrapper = shallow(<Button autoFocus={true} />);
-                expect(wrapper.find('button').prop('autoFocus')).to.be.true;
+                expect(wrapper
+                        .find('button')
+                        .prop('autoFocus')).toBe(true);
             });
         });
 
         describe('condensed', () => {
             it('has condensed class', () => {
                 const button = shallow(<Button condensed={true} />);
-                expect(button).to.have.className(
-                    'ffe-primary-button--condensed',
-                );
+                expect(button.hasClass('ffe-primary-button--condensed')).toBe(true);
             });
         });
 
         describe('element', () => {
             it('sets the rendered element', () => {
-                const link = shallow(
-                    <Button element="a" href="/path">
+                const link = shallow(<Button element="a" href="/path">
                         Link
-                    </Button>,
-                );
-                expect(link.is('a')).to.be.true;
+                    </Button>);
+                expect(link.is('a')).toBe(true);
             });
+
             it('allows you to pass a component', () => {
                 const Link = ({ to, ...props }) => <a href={to} {...props} />; // eslint-disable-line react/prop-types
                 const link = shallow(<Button element={Link} to="/path" />);
-
-                expect(link.is('Link')).to.be.true;
+                expect(link.is('Link')).toBe(true);
             });
         });
     });

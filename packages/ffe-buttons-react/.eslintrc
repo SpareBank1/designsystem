@@ -2,8 +2,8 @@
   "overrides": [
     {
       "files": [ "src/*.test.js"],
-      "rules": {
-        "no-unused-expressions": 0
+      "env": {
+          "jest": true
       }
     }
   ]

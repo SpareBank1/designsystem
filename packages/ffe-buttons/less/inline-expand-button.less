@@ -1,0 +1,42 @@
+.ffe-inline-expand-button {
+    appearance: none; // For iOS
+    background-color: transparent;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: @ffe-blue-azure;
+    display: inline-block;
+    font-family: 'MuseoSans-500', arial, sans-serif;
+    line-height: 26px;
+    margin: 0 -4px; // Hack to allow box-shadow to float outside content on focus
+    padding: 0 4px;
+    .ffe-fontsize-body-text;
+
+    &:active,
+    &:focus {
+        box-shadow: 0 0 0 2px @ffe-blue-focus;
+        color: @ffe-blue-cobalt;
+        outline: none;
+    }
+
+    &:hover {
+        color: @ffe-blue-cobalt;
+    }
+}
+
+.ffe-inline-expand-button__icon {
+    fill: @ffe-blue-azure;
+    width: 16px;
+    height: 16px;
+    align-self: center;
+    max-width: 16px;
+    min-width: 16px;
+    margin: 0 0 -2px 6px;
+    transition: transform @ffe-transition-duration @ffe-ease-in-out-back,
+        fill @ffe-transition-duration @ffe-ease;
+
+    &--expanded {
+        transform: rotateX(180deg);
+        fill: @ffe-blue-royal;
+    }
+}
