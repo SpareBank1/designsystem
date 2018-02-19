@@ -1,0 +1,11 @@
+<section>
+  <h{{depth}} id="{{ section.target }}">{{ section.name }}</h{{depth}}>
+
+  {{{ section.content }}}
+</section>
+
+{{#if section.sections.length }}
+  {{#each section.sections}}
+    {{> section section=this depth=(increment ../depth)}}
+  {{/each}}
+{{/if}}

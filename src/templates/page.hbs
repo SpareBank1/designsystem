@@ -1,0 +1,35 @@
+<html>
+<head>
+  <meta charset=utf8>
+  <title>{{ title }} - {{ section.name }}</title>
+  <link rel=stylesheet href=style.css>
+</head>
+<body>
+  <header>
+    <h1>{{ section.name }}</h1>
+    <p>
+      src: {{ section.source }}
+    </p>
+  </header>
+
+  <nav>
+    <ul>
+      {{#each sections}}
+        <li>
+          <a href="{{this.target}}.html">{{this.name}}</a>
+        </li>
+      {{/each}}
+    </ul>
+  </nav>
+
+  <nav>
+    <a href="#{{section.target}}">{{section.name}}</a>
+    {{> sectionsToc}}
+  </nav>
+
+  <main>
+    {{> section depth=1}}
+  </main>
+
+</body>
+</html>

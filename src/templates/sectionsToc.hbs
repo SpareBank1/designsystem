@@ -1,0 +1,10 @@
+<ul>
+  {{#each section.sections}}
+    <li>
+      <a href="#{{this.target}}">{{this.name}}</a>
+      {{#if this.sections.length }}
+          {{> sectionsToc section=this}}
+      {{/if}}
+    </li>
+  {{/each}}
+</ul>
