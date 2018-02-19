@@ -6,7 +6,15 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 	<body>
-		{{ header }}
+    <nav>
+      <ul>
+        {{#each sections}}
+          <li>
+            <a href="{{this.target}}.html">{{this.name}}</a>
+          </li>
+        {{/each}}
+      </ul>
+    </nav>
 
 		<div id="app"></div>
 	</body>

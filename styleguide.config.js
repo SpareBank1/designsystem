@@ -45,7 +45,7 @@ module.exports = {
             ],
         },
     },
-    template: 'src/templates/index.hbs',
+    template: 'src/styleguidist.html',
     sections: [
         {
             name: 'Komponenter',

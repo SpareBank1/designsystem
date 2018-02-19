@@ -7,6 +7,7 @@ module.exports = {
         section: 'src/templates/section.hbs',
         sectionsToc: 'src/templates/sectionsToc.hbs',
     },
+    styleguidistTemplate: 'src/templates/styleguidist.hbs',
     context: {
         title: 'FFE',
     },
