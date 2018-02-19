@@ -1,3 +1,4 @@
+/*eslint-disable*/
 (function() {
     var qs = document.querySelector.bind(document);
 
@@ -9,10 +10,6 @@
     qs('.ffe-header__site-nav-button').onclick = function() {
         toggleModifier('ffe-header__site-nav-list', 'visible');
         toggleModifier('ffe-header__site-nav-hamburger', 'expanded');
-    };
-
-    qs('.ffe-header__search-button').onclick = function() {
-        toggleModifier('ffe-header__search', 'visible');
     };
 
     function toggleModifier(be, m) {
