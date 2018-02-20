@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="10.5.0"></a>
+# [10.5.0](***REMOVED***) (2018-02-20)
+
+
+### Features
+
+* **ffe-header:** Make logout button look like secondary button ([c50139f](***REMOVED***))
+
+
+
+
 <a name="10.4.3"></a>
 ## [10.4.3](***REMOVED***) (2018-02-20)
 
