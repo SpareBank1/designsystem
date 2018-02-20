@@ -4,6 +4,7 @@ module.exports = {
     template: 'src/templates/page.hbs',
     helpers: 'src/templates/helpers.js',
     partials: {
+        header: 'src/templates/header.hbs',
         section: 'src/templates/section.hbs',
         sectionsToc: 'src/templates/sectionsToc.hbs',
     },
