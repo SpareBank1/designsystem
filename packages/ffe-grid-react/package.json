@@ -8,15 +8,17 @@
     },
     "author": "SpareBank1",
     "license": "UNLICENSED",
+    "files": [
+        "lib",
+        "*.js"
+    ],
     "scripts": {
         "build": "babel -d lib/. --ignore=*.test.js src/.",
         "lint": "eslint src/.",
         "lint:fix": "eslint --fix src/.",
         "test": "npm run test:spec && npm run test:nsp",
         "test:nsp": "nsp check",
-        "test:spec": "cross-env NODE_ENV=test mocha -G --require babel-register src/**/*.test.js --require ./src/test/setup.test.js",
-        "test:watch": "cross-env NODE_ENV=test mocha -G --require babel-register src/**/*.test.js -w --require ./src/test/setup.test.js",
-        "tdd": "npm run test:watch"
+        "test:spec": "jest"
     },
     "dependencies": {
         "classnames": "^2.2.5"
@@ -25,23 +27,14 @@
         "ffe-grid": "^6.0.5"
     },
     "devDependencies": {
-        "chai": "^4.1.2",
-        "cross-env": "^5.1.3",
         "enzyme": "^3.3.0",
         "enzyme-adapter-react-16": "^1.1.1",
-        "eslint": "^4.13.1",
-        "expect.js": "^0.3.1",
-        "ffe-core": "^9.2.0",
-        "ffe-grid": "^6.0.9",
-        "jsdom": "^11.5.1",
-        "mocha": "^4.1.0",
+        "jest": "^22.3.0",
         "nsp": "^3.1.0",
         "react": "^16.1.1",
-        "react-dom": "^16.1.1",
-        "sinon": "^4.1.3"
+        "react-dom": "^16.1.1"
     },
-    "files": [
-        "lib",
-        "*.js"
-    ]
+    "jest": {
+        "setupTestFrameworkScriptFile": "./test-setup.js"
+    }
 }
