@@ -49,7 +49,7 @@ module.exports = {
     sections: [
         {
             name: 'Komponenter',
-            content: 'src/content/komponenter/index.md',
+            content: 'styleguide-content/komponenter/index.md',
             sections: [
                 {
                     name: 'Knapper',
