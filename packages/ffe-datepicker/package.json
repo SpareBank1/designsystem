@@ -1,6 +1,6 @@
 {
     "name": "ffe-datepicker",
-    "version": "4.2.11",
+    "version": "4.2.12",
     "description": "FFE Datepicker",
     "author": "SpareBank 1",
     "license": "UNLICENSED",
@@ -14,8 +14,8 @@
     },
     "homepage": "***REMOVED***",
     "devDependencies": {
-        "ffe-core": "^11.0.0",
-        "ffe-form": "^8.1.9"
+        "ffe-core": "^11.0.1",
+        "ffe-form": "^8.1.10"
     },
     "peerDependencies": {
         "ffe-core": "^9.0.0 || ^10.0.0",

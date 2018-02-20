@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="5.2.1"></a>
+## [5.2.1](***REMOVED***) (2018-02-20)
+
+
+
+
+**Note:** Version bump only for package ffe-buttons
+
       <a name="5.2.0"></a>
 # [5.2.0](***REMOVED***) (2018-02-16)
 
@@ -14,7 +22,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="5.1.9"></a>
+    <a name="5.1.9"></a>
 ## [5.1.9](***REMOVED***) (2018-02-15)
 
 
@@ -22,7 +30,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package ffe-buttons
 
-    <a name="5.1.8"></a>
+  <a name="5.1.8"></a>
 ## [5.1.8](***REMOVED***) (2018-02-09)
 
 
@@ -33,7 +41,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-  <a name="5.1.7"></a>
+<a name="5.1.7"></a>
 ## [5.1.7](***REMOVED***) (2018-02-01)
 
 

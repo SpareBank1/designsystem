@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="11.0.1"></a>
+## [11.0.1](***REMOVED***) (2018-02-20)
+
+
+### Bug Fixes
+
+* **ffe-core:** Avoid subpixel calculation error for ffe-divider-line ([f3dd3b5](***REMOVED***))
+
+
+
+
       <a name="11.0.0"></a>
 # [11.0.0](***REMOVED***) (2018-02-15)
 
@@ -30,7 +41,7 @@ package's README and change `@build-path` to `@fonts-path`.
 
 
 
-      <a name="10.3.1"></a>
+    <a name="10.3.1"></a>
 ## [10.3.1](***REMOVED***) (2018-02-01)
 
 
@@ -41,7 +52,7 @@ package's README and change `@build-path` to `@fonts-path`.
 
 
 
-    <a name="10.3.0"></a>
+  <a name="10.3.0"></a>
 # [10.3.0](***REMOVED***) (2018-01-19)
 
 
@@ -52,7 +63,7 @@ package's README and change `@build-path` to `@fonts-path`.
 
 
 
-  <a name="10.2.5"></a>
+<a name="10.2.5"></a>
 ## [10.2.5](***REMOVED***) (2018-01-19)
 
 
@@ -339,7 +350,7 @@ margin: 0 0 10px 10px;
 width: auto;
 
 &:first-child {
-    margin-left: 0;
+  margin-left: 0;
 }
 }
 }
