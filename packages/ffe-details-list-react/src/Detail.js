@@ -13,11 +13,12 @@ export default function Detail(props) {
             <GridRow>
                 <GridCol
                     sm={12}
-                    md={{ cols: 2, offset: 2 }}
+                    md={{ cols: 8, offset: 2 }}
+                    lg={{ cols: 2, offset: 2 }}
                     className="ffe-details-list-react__content"
                     noBottomPadding={true}
                 >
-                    <div className="ffe-h5 ffe-h5--no-margin">{label}</div>
+                    <div className="ffe-h6 ffe-h6--no-margin">{label}</div>
                 </GridCol>
                 {React.Children.map(children, (child, index) =>
                     React.cloneElement(child, { childCount, index }),
