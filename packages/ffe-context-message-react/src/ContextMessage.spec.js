@@ -1,6 +1,5 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import sinon from 'sinon';
 
 import InfoSirkelIkon from 'ffe-icons-react/lib/info-sirkel-ikon';
 
@@ -9,8 +8,9 @@ import {
     ContextInfoMessage,
     ContextSuccessMessage,
     ContextTipMessage,
-} from '../';
-import ContextMessage from '../ContextMessage';
+} from '.';
+
+import ContextMessage from './ContextMessage';
 
 const defaultProps = {
     children: <p>content</p>,
@@ -26,8 +26,8 @@ describe('<ContextMessage />', () => {
     it('renders with provided content', () => {
         const wrapper = getMountedWrapper();
         const content = wrapper.find('.ffe-body-text').find('p');
-        expect(content.exists()).to.be(true);
-        expect(content.text()).to.be('content');
+        expect(content.exists()).toBe(true);
+        expect(content.text()).toBe('content');
     });
 
     it('renders with provided header', () => {
@@ -36,8 +36,8 @@ describe('<ContextMessage />', () => {
             header,
         });
         const headerComponent = wrapper.find('header');
-        expect(headerComponent.exists()).to.be(true);
-        expect(headerComponent.text()).to.be(header);
+        expect(headerComponent.exists()).toBe(true);
+        expect(headerComponent.text()).toBe(header);
     });
 
     it('renders without header', () => {
@@ -45,7 +45,7 @@ describe('<ContextMessage />', () => {
         const header = wrapper
             .find('.ffe-context-message-content')
             .find('header');
-        expect(header.exists()).to.be(false);
+        expect(header.exists()).toBe(false);
     });
 
     it('renders provided styles to outermost container', () => {
@@ -54,25 +54,23 @@ describe('<ContextMessage />', () => {
                 marginTop: '40px',
             },
         });
-        expect(wrapper.props().style.marginTop).to.be('40px');
+        expect(wrapper.prop('style').marginTop).toBe('40px');
     });
 
     it('renders provided className to outermost container', () => {
         const wrapper = getShallowWrapper({
             className: 'special special--mod',
         });
-        expect(wrapper.props().className).to.be(
-            'ffe-context-message ffe-context-message--tip special special--mod',
-        );
+        expect(wrapper.hasClass('special')).toBe(true);
+        expect(wrapper.hasClass('special--mod')).toBe(true);
+        expect(wrapper.hasClass('ffe-context-message')).toBe(true);
     });
 
     it('renders --compact modifier if compact prop is true', () => {
         const wrapper = getShallowWrapper({
             compact: true,
         });
-        expect(wrapper.props().className).to.be(
-            'ffe-context-message ffe-context-message--tip ffe-context-message--compact',
-        );
+        expect(wrapper.hasClass('ffe-context-message--compact')).toBe(true);
     });
 
     it('renders with context icon', () => {
@@ -80,8 +78,8 @@ describe('<ContextMessage />', () => {
             icon: <InfoSirkelIkon />,
         });
         expect(
-            wrapper.find('svg.ffe-context-message-content__icon-svg').length,
-        ).to.be(1);
+            wrapper.find('svg.ffe-context-message-content__icon-svg'),
+        ).toHaveLength(1);
     });
 
     it('renders without close button by default', () => {
@@ -92,27 +90,28 @@ describe('<ContextMessage />', () => {
             wrapper
                 .find('.ffe-context-message-content__close-button-svg')
                 .exists(),
-        ).to.be(false);
+        ).toBe(false);
         expect(
             wrapper.find('.ffe-context-message-content__close-button').exists(),
-        ).to.be(false);
+        ).toBe(false);
     });
 
     it('closes itself on close click', done => {
-        const onClickSpy = sinon.spy();
+        const onClickSpy = jest.fn();
         const wrapper = getMountedWrapper({
             animationLengthMs: 10,
             showCloseButton: true,
             onClose: onClickSpy,
         });
-        expect(wrapper.find('.ffe-context-message').exists()).to.be(true);
+        expect(wrapper.find('.ffe-context-message').exists()).toBe(true);
         wrapper
             .find('.ffe-context-message-content__close-button')
             .simulate('click');
+
         setTimeout(() => {
             wrapper.update();
-            expect(onClickSpy.calledOnce);
-            expect(wrapper.find('.ffe-context-message').exists()).to.be(false);
+            expect(onClickSpy).toHaveBeenCalledTimes(1);
+            expect(wrapper.find('.ffe-context-message').exists()).toBe(false);
             done();
         }, 20);
     });
@@ -127,7 +126,7 @@ describe('<ContextInfoMessage />', () => {
 
     it('renders ContextInfoMessage', () => {
         const component = wrapper.find('.ffe-context-message');
-        expect(component.hasClass('ffe-context-message--info')).to.be(true);
+        expect(component.hasClass('ffe-context-message--info')).toBe(true);
     });
 });
 
@@ -140,7 +139,7 @@ describe('<ContextTipMessage />', () => {
 
     it('renders ContextInfoMessage', () => {
         const component = wrapper.find('.ffe-context-message');
-        expect(component.hasClass('ffe-context-message--tip')).to.be(true);
+        expect(component.hasClass('ffe-context-message--tip')).toBe(true);
     });
 });
 
@@ -153,7 +152,7 @@ describe('Test ContextSuccessMessage', () => {
 
     it('renders ContextInfoMessage', () => {
         const component = wrapper.find('.ffe-context-message');
-        expect(component.hasClass('ffe-context-message--success')).to.be(true);
+        expect(component.hasClass('ffe-context-message--success')).toBe(true);
     });
 });
 
@@ -166,6 +165,6 @@ describe('<ContextErrorMessage />', () => {
 
     it('renders ContextErrorMessage', () => {
         const component = wrapper.find('.ffe-context-message');
-        expect(component.hasClass('ffe-context-message--error')).to.be(true);
+        expect(component.hasClass('ffe-context-message--error')).toBe(true);
     });
 });
