@@ -13,12 +13,12 @@
     "author": "SpareBank 1",
     "license": "MIT",
     "scripts": {
-        "build": "babel -d lib/. --ignore=*.test.js src/.",
+        "build": "babel -d lib/. --ignore=*.spec.js src/.",
         "lint": "eslint src/.",
         "test:nsp": "nsp check",
-        "test:spec": "mocha --require babel-register --require ./test-setup.js src/**/*.test.js",
-        "test": "npm run test:spec && npm run test:nsp",
-        "tdd": "mocha --require babel-register src/**/*.test.js -w"
+        "test:spec": "jest",
+        "test:watch": "jest --watch",
+        "test": "npm run test:spec && npm run test:nsp"
     },
     "peerDependencies": {
         "ffe-form": "^8.1.5"
@@ -29,19 +29,14 @@
         "uuid": "^3.1.0"
     },
     "devDependencies": {
-        "chai": "^4.1.2",
         "enzyme": "^3.3.0",
         "enzyme-adapter-react-16": "^1.1.1",
-        "eslint": "^4.13.1",
-        "ffe-core": "^11.0.2",
-        "ffe-form": "^8.1.11",
-        "mocha": "^4.1.0",
-        "mocha-tap13": "^1.0.2",
+        "jest": "^22.4.0",
         "nsp": "^3.1.0",
-        "onchange": "3.2.1",
         "react": "^16.1.1",
-        "react-addons-test-utils": "^15.0.1",
-        "react-dom": "^16.1.1",
-        "sinon": "^4.1.3"
+        "react-dom": "^16.1.1"
+    },
+    "jest": {
+        "setupTestFrameworkScriptFile": "./test-setup.js"
     }
 }
