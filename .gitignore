@@ -5,9 +5,8 @@
 node_modules
 
 # Built files
-docs/
 dist/
-styleguide/
+src/styleguidist.html
 
 # Editors
 .idea/

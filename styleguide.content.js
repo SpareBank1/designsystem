@@ -1,6 +1,6 @@
 module.exports = {
     contentDir: 'styleguide-content',
-    outputDir: 'docs',
+    outputDir: 'dist',
     template: 'src/templates/page.hbs',
     helpers: 'src/templates/helpers.js',
     partials: {

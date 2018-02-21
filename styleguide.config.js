@@ -10,6 +10,7 @@ module.exports = {
     ],
     components: 'packages/ffe-*-react/src/**/[A-Z]+([A-Za-z]).js',
     styleguideComponents: components,
+    styleguideDir: 'dist/styleguidist',
     theme: {
         color: {
             link: '#676767',
