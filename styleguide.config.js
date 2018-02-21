@@ -51,8 +51,7 @@ module.exports = {
         {
             name: 'Knapper',
             content: 'packages/ffe-buttons-react/USAGE.md',
-            components:
-                'packages/ffe-buttons-react/src/[A-Z]+([A-Za-z]).js',
+            components: 'packages/ffe-buttons-react/src/[A-Z]+([A-Za-z]).js',
         },
         {
             name: 'Typografi',
@@ -62,8 +61,7 @@ module.exports = {
         },
         {
             name: 'Lister',
-            components:
-                'packages/ffe-lists-react/src/[A-Z]+([A-Za-z]).js',
+            components: 'packages/ffe-lists-react/src/[A-Z]+([A-Za-z]).js',
         },
         {
             name: 'Formatering',
@@ -81,8 +79,7 @@ module.exports = {
         },
         {
             name: 'Accordion',
-            components:
-                'packages/ffe-accordion-react/src/Accordion*.js',
+            components: 'packages/ffe-accordion-react/src/Accordion*.js',
         },
         {
             name: 'Kontovelger',
@@ -91,8 +88,7 @@ module.exports = {
         },
         {
             name: 'Kort',
-            components:
-                'packages/ffe-cards-react/src/[A-Z]+([A-Za-z]).js',
+            components: 'packages/ffe-cards-react/src/[A-Z]+([A-Za-z]).js',
         },
         {
             name: 'Meldinger',
@@ -125,8 +121,7 @@ module.exports = {
         {
             name: 'Grid',
             content: 'packages/ffe-grid-react/USAGE.md',
-            components:
-                'packages/ffe-grid-react/src/[A-Z]+([A-Za-z]).js',
+            components: 'packages/ffe-grid-react/src/[A-Z]+([A-Za-z]).js',
         },
         {
             name: 'Detaljliste',
@@ -140,13 +135,11 @@ module.exports = {
         },
         {
             name: 'Skjema',
-            components:
-                'packages/ffe-form-react/src/[A-Z]+([A-Za-z]).js',
+            components: 'packages/ffe-form-react/src/[A-Z]+([A-Za-z]).js',
         },
         {
             name: 'Checkbox',
-            components:
-                'packages/ffe-checkbox-react/src/[A-Z]+([A-Za-z]).js',
+            components: 'packages/ffe-checkbox-react/src/[A-Z]+([A-Za-z]).js',
         },
         {
             name: 'Datepicker',
@@ -160,13 +153,11 @@ module.exports = {
         },
         {
             name: 'Spinners',
-            components:
-                'packages/ffe-spinner-react/src/[A-Z]+([A-Za-z]).js',
+            components: 'packages/ffe-spinner-react/src/[A-Z]+([A-Za-z]).js',
         },
         {
             name: 'Faner',
-            components:
-                'packages/ffe-tabs-react/src/[A-Z]+([A-Za-z]).js',
+            components: 'packages/ffe-tabs-react/src/[A-Z]+([A-Za-z]).js',
         },
     ],
 };
