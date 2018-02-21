@@ -65,15 +65,21 @@ const getTemplateCompiler = fname =>
         .then(template => Handlebars.compile(template))
         .then(compile => opts => Promise.resolve(compile(opts)));
 
-const getStyleguidistCompiler = (source, destination) => {
-    return readFile(resolveDir(source), 'utf8')
+const getFrontpageCompiler = fname =>
+    readFromBaseDir(fname)
+        .then(template => Handlebars.compile(template))
+        .then(compile => opts =>
+            Promise.resolve(compile(opts)).then(writeToOutputDir('index.html'))
+        );
+
+const getStyleguidistCompiler = (source, destination) =>
+    readFile(resolveDir(source), 'utf8')
         .then(template => Handlebars.compile(template))
         .then(compile => opts =>
             Promise.resolve(compile(opts)).then(
                 dataToFileWriter(resolveDir(destination)),
             ),
         );
-};
 
 const registerPartials = partialsDef =>
     promisedMap(Object.entries(partialsDef), ([key, fname]) =>
@@ -84,17 +90,18 @@ const registerPartials = partialsDef =>
 
 Promise.all([
         prerenderSections(settings.sections),
-    getTemplateCompiler(
-        settings.template
-    ),
-    getStyleguidistCompiler(
-        settings.styleguidistTemplate,
-        styleguidistSettings.template
-    ),
-    registerPartials(settings.partials),
-    mkdir(settings.outputDir),
+        getTemplateCompiler(
+            settings.template
+        ),
+        getFrontpageCompiler(settings.frontpage),
+        getStyleguidistCompiler(
+            settings.styleguidistTemplate,
+            styleguidistSettings.template
+        ),
+        registerPartials(settings.partials),
+        mkdir(settings.outputDir),
 ])
-    .then(([sections, compile, compileStyleguidist]) =>
+    .then(([sections, compile, compileFrontpage, compileStyleguidist]) =>
         Promise.all([
             promisedMap(sections, section => compile({
                     ...settings.context,
@@ -102,6 +109,10 @@ Promise.all([
                     section,
                 }).then(writeToOutputDir(`${section.target}.html`))
             ),
+            compileFrontpage({
+                ...settings.context,
+                sections,
+            }),
             compileStyleguidist({
                 ...settings.context,
                 sections,

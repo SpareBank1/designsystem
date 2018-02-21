@@ -3,6 +3,7 @@ module.exports = {
     outputDir: 'dist',
     template: 'src/templates/page.hbs',
     helpers: 'src/templates/helpers.js',
+    frontpage: 'src/templates/frontpage.hbs',
     partials: {
         header: 'src/templates/header.hbs',
         section: 'src/templates/section.hbs',
