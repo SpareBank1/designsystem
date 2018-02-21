@@ -1,7 +1,7 @@
-<ul>
+<ul class="sb1ds-components-list">
   {{#each section.sections}}
-    <li>
-      <a href="#{{this.target}}">{{this.name}}</a>
+    <li class="sb1ds-components-list__item">
+      <a class="ffe-link-text ffe-link-text--no-underline sb1ds-components-list__link" href="#{{this.target}}">{{this.name}}</a>
       {{#if this.sections.length }}
           {{> sectionsToc section=this}}
       {{/if}}

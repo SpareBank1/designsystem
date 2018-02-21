@@ -94,20 +94,25 @@ module.exports = {
                 'packages/ffe-cards-react/src/[A-Z]+([A-Za-z]).js',
         },
         {
-            name: 'Meldinger, bokser',
-            components:
-                'packages/ffe-message-box-react/src/[A-Z]+([A-Za-z]).js',
-        },
-        {
-            name: 'Meldinger, kontekstuelle',
-            components:
-                'packages/ffe-context-message-react/src/[A-Z]+([A-Za-z]).js',
-        },
-        {
-            name: 'Systemmeldinger',
-            content: 'packages/ffe-system-message-react/USAGE.md',
-            components:
-                'packages/ffe-system-message-react/src/System{Error,Info,News,Success}Message.js',
+            name: 'Meldinger',
+            sections: [
+                {
+                    name: 'Meldinger, bokser',
+                    components:
+                        'packages/ffe-message-box-react/src/[A-Z]+([A-Za-z]).js',
+                },
+                {
+                    name: 'Meldinger, kontekstuelle',
+                    components:
+                        'packages/ffe-context-message-react/src/[A-Z]+([A-Za-z]).js',
+                },
+                {
+                    name: 'Systemmeldinger',
+                    content: 'packages/ffe-system-message-react/USAGE.md',
+                    components:
+                        'packages/ffe-system-message-react/src/System{Error,Info,News,Success}Message.js',
+                },
+            ],
         },
         {
             name: 'Dropdowns',
