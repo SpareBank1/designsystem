@@ -18,7 +18,7 @@
         "test:nsp": "nsp check"
     },
     "jest": {
-        "setupTestFrameworkScriptFile": "./testSetup.js"
+        "setupTestFrameworkScriptFile": "./test-setup.js"
     },
     "peerDependencies": {
         "ffe-core": "^10.2.4",
