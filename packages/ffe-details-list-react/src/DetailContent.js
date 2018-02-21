@@ -4,9 +4,9 @@ import classNames from 'classnames';
 
 import { GridCol } from 'ffe-grid-react';
 
-const getColCount = (total, current, md) => {
+const getColCount = (total, current) => {
     if (total === 1) {
-        return md ? 6 : 7;
+        return 7;
     }
     if (total < 3 && current === total - 1) {
         return 4;
@@ -25,8 +25,8 @@ export default function DetailContent(props) {
                 { 'ffe-details-list-react__content--action': cta },
             )}
             sm={12}
-            md={getColCount(childCount, index, true)}
-            lg={getColCount(childCount, index)}
+            md={{ cols: 8, offset: 2 }}
+            lg={{ cols: getColCount(childCount, index), offset: 0 }}
             noBottomPadding={true}
             {...rest}
         >
@@ -40,7 +40,7 @@ DetailContent.propTypes = {
      * Internal prop used for knowing the total amount of columns, provided by `Detail`
      * @ignore
      */
-    childCount: number.isRequired,
+    childCount: number,
     /**
      * The contents of the column
      */
@@ -49,7 +49,7 @@ DetailContent.propTypes = {
      * Internal prop used for knowing which column is being rendered, provided by `Detail`
      * @ignore
      */
-    index: number.isRequired,
+    index: number,
     /**
      * Any CSS classes that should be included on the rendered content
      */
