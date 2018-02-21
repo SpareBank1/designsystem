@@ -1,7 +1,4 @@
-/* eslint-env mocha */
-
 import { shallow } from 'enzyme';
-import { assert } from 'chai';
 import React from 'react';
 import ActiveDate from './ActiveDate';
 import simpleDate from '../datelogic/simpledate';
@@ -19,11 +16,11 @@ describe('<ActiveDate />', () => {
 
     it('should render an active date', () => {
         const wrapper = shallow(activeDate);
-        assert.equal(wrapper.find('td.ffe-calendar__day').length, 1);
+        expect(wrapper.find('td.ffe-calendar__day').exists()).toBe(true);
     });
 
     it('should have role gridcell', () => {
         const wrapper = shallow(activeDate);
-        assert.equal(wrapper.find('[role="gridcell"]').length, 1);
+        expect(wrapper.find('[role="gridcell"]').exists()).toBe(true);
     });
 });
