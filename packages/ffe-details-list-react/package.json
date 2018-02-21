@@ -1,6 +1,6 @@
 {
     "name": "ffe-details-list-react",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "main": "lib/index.js",
     "files": [
         "less",
