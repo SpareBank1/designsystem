@@ -41,7 +41,7 @@
         "*.js"
     ],
     "jest": {
-        "setupTestFrameworkScriptFile": "./setupEnzyme.js"
+        "setupTestFrameworkScriptFile": "./test-setup.js"
     },
     "dependencies": {
         "classnames": "^2.2.5"
