@@ -1,6 +1,6 @@
 {
     "name": "ffe-context-message-react",
-    "version": "3.0.13",
+    "version": "3.0.14",
     "description": "React implementation of ffe-context-message component",
     "keywords": [
         "ffe"
