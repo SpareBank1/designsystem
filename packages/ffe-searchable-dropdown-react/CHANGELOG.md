@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="4.1.3"></a>
+## [4.1.3](***REMOVED***) (2018-02-21)
+
+
+
+
+**Note:** Version bump only for package ffe-searchable-dropdown-react
+
       <a name="4.1.2"></a>
 ## [4.1.2](***REMOVED***) (2018-02-20)
 
@@ -11,7 +19,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package ffe-searchable-dropdown-react
 
-      <a name="4.1.1"></a>
+    <a name="4.1.1"></a>
 ## [4.1.1](***REMOVED***) (2018-02-15)
 
 
@@ -19,7 +27,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package ffe-searchable-dropdown-react
 
-  <a name="4.1.0"></a>
+<a name="4.1.0"></a>
 # [4.1.0](***REMOVED***) (2018-02-05)
 
 
