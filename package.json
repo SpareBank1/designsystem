@@ -4,6 +4,7 @@
     "description": "Felles Front End",
     "author": "SpareBank 1",
     "license": "MIT",
+    "private": true,
     "scripts": {
         "clean": "lerna run clean --yes",
         "clean:icons": "lerna run clean --scope ffe-icons-react",
