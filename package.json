@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "Felles Front End",
     "author": "SpareBank 1",
-    "license": "MIT",
+    "license": "SEE LICENSE IN README.md",
     "private": true,
     "scripts": {
         "clean": "lerna run clean --yes",

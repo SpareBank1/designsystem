@@ -5,14 +5,17 @@
     "files": [
         "fonts",
         "fonts.css",
-        "fonts.less"
+        "fonts.less",
+        "LICENSE-fonts.md",
+        "LICENSE.md",
+        "README.md"
     ],
     "repository": {
         "type": "git",
         "url": "***REMOVED***"
     },
     "author": "SpareBank 1",
-    "license": "SEE LICENSE IN LICENSE",
+    "license": "SEE LICENSE IN README.md",
     "scripts": {
         "build": "lessc --no-ie-compat --inline-urls fonts.less fonts.css",
         "lint": "stylelint *.less",
