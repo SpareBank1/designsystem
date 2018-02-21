@@ -5,8 +5,19 @@
     "hoist": true,
     "command": {
         "publish": {
-            "conventionalCommits": true,
             "allowBranch": "master",
+            "conventionalCommits": true,
+            "ignore": [
+                ".eslintrc",
+                ".gitattributes",
+                ".gitignore",
+                ".npmignore",
+                ".npmrc",
+                "*.md",
+                "*.spec.js",
+                "*.test.js",
+                "test-setup.js"
+            ],
             "message": "chore(release): publish"
         }
     }
