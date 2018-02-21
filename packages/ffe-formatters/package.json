@@ -5,12 +5,12 @@
     "keywords": [
         "ffe"
     ],
-    "license": "UNLICENCED",
-    "author": "SpareBank 1",
     "main": "lib/index.js",
     "files": [
         "lib"
     ],
+    "license": "MIT",
+    "author": "SpareBank 1",
     "repository": {
         "type": "git",
         "url": "***REMOVED***"

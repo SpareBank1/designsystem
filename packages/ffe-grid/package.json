@@ -2,7 +2,7 @@
     "name": "ffe-grid",
     "version": "6.0.10",
     "description": "A grid component for use within the FFE framework",
-    "license": "UNLICENSED",
+    "license": "MIT",
     "keywords": [
         "ffe"
     ],

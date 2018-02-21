@@ -7,7 +7,7 @@
         "example"
     ],
     "author": "SpareBank1",
-    "license": "UNLICENSED",
+    "license": "MIT",
     "scripts": {
         "lint": "stylelint less/*.less",
         "test:nsp": "nsp check",

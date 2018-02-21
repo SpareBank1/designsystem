@@ -17,7 +17,7 @@
         "*.js"
     ],
     "author": "SpareBank 1",
-    "license": "UNLICENSED",
+    "license": "MIT",
     "dependencies": {
         "react-collapse": "^4.0.3",
         "react-motion": "^0.5.2"

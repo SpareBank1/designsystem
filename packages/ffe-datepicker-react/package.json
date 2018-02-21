@@ -2,7 +2,7 @@
     "name": "ffe-datepicker-react",
     "version": "2.7.13",
     "main": "lib/ffe-datepicker-react.js",
-    "license": "UNLICENSED",
+    "license": "MIT",
     "scripts": {
         "build": "babel -d lib/. --ignore=*.test.js src/.",
         "lint": "eslint src/.",

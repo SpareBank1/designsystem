@@ -1,8 +1,17 @@
 {
     "name": "ffe-spinner-react",
     "version": "3.0.4",
-    "author": "SpareBank 1",
     "main": "lib/index.js",
+    "files": [
+        "lib",
+        "*.js"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "***REMOVED***"
+    },
+    "author": "SpareBank 1",
+    "license": "MIT",
     "scripts": {
         "build": "babel -d lib/. --ignore=*.spec.js src/.",
         "lint": "eslint src/.",
@@ -11,7 +20,7 @@
         "test": "npm run test:spec && npm run test:nsp"
     },
     "dependencies": {
-        "prop-types": "*"
+        "prop-types": "^15.6.0"
     },
     "devDependencies": {
         "enzyme": "^3.3.0",
@@ -26,10 +35,6 @@
     "peerDependencies": {
         "ffe-spinner": "1.x - 2.x"
     },
-    "files": [
-        "lib",
-        "*.js"
-    ],
     "jest": {
         "setupTestFrameworkScriptFile": "./test-setup.js"
     }
