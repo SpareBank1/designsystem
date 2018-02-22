@@ -25,8 +25,8 @@
         "enzyme-adapter-react-16": "^1.1.1",
         "ffe-core": "^9.2.0",
         "ffe-tables": "^8.1.8",
-        "jest": "^22.1.4",
-        "nsp": "^3.1.0",
+        "jest": "^22.4.0",
+        "nsp": "^3.2.1",
         "react": "^16.1.1",
         "react-dom": "^16.1.1",
         "sinon": "^4.2.1"

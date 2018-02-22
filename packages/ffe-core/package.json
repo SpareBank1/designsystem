@@ -18,7 +18,7 @@
         "test:nsp": "nsp check"
     },
     "devDependencies": {
-        "nsp": "^3.1.0",
+        "nsp": "^3.2.1",
         "stylelint": "^8.4.0"
     },
     "sb1.StaticResources": [
