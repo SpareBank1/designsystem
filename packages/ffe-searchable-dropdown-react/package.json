@@ -8,7 +8,7 @@
         "type": "git",
         "url": "***REMOVED***"
     },
-    "license": "UNLICENSED",
+    "license": "MIT",
     "scripts": {
         "build": "babel -d lib --ignore=*.test.js src",
         "lint": "eslint src/",

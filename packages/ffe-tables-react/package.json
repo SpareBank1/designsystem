@@ -11,7 +11,7 @@
         "type": "git",
         "url": "***REMOVED***"
     },
-    "license": "UNLICENSED",
+    "license": "MIT",
     "scripts": {
         "build": "babel -d lib/. --ignore=*.spec.js src/.",
         "test": "npm run test:spec && npm run test:nsp",

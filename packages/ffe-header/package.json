@@ -12,7 +12,7 @@
         "url": "***REMOVED***"
     },
     "author": "SpareBank 1",
-    "license": "UNLICENSED",
+    "license": "MIT",
     "peerDependencies": {
         "ffe-buttons": "5.x",
         "ffe-core": "^9.2.0 || ^10.0.0"

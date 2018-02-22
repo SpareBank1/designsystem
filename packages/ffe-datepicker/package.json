@@ -3,7 +3,7 @@
     "version": "4.2.12",
     "description": "FFE Datepicker",
     "author": "SpareBank 1",
-    "license": "UNLICENSED",
+    "license": "MIT",
     "main": "less/datepicker",
     "scripts": {
         "lint": "stylelint less/*.less"

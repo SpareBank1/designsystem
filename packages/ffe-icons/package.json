@@ -11,7 +11,7 @@
         "url": "***REMOVED***"
     },
     "author": "SpareBank 1",
-    "license": "UNLICENSED",
+    "license": "MIT",
     "scripts": {
         "build": "node bin/build.js",
         "lint": "eslint bin/.",

@@ -2,7 +2,7 @@
     "name": "ffe-dropdown-react",
     "version": "3.0.5",
     "main": "lib/Dropdown.js",
-    "license": "UNLICENSED",
+    "license": "MIT",
     "scripts": {
         "build": "babel --ignore spec.js -d lib src",
         "lint": "eslint src",

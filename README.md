@@ -21,3 +21,8 @@ npm run build   # Bygg alle pakker
 
 Vi oppfordrer alle, både rutinerte og ferske, til å opprette issues, sende inn pull requests og kommentere på andres
 bidrag. Ta en titt på [CONTRIBUTE.md](CONTRIBUTE.md) for hvordan du går frem.
+
+# Licenses
+
+* Source code is licensed under MIT
+* The MuseoSans fonts are licensed separately. See LICENSE-fonts.md.

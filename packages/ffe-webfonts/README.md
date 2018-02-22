@@ -49,3 +49,8 @@ knows where to download the font files.
 ```less
 @import (inline) '~ffe-webfonts/fonts.css';
 ```
+
+# Licenses
+
+* Source code is licensed under MIT
+* The MuseoSans fonts are licensed separately. See LICENSE-fonts.md.

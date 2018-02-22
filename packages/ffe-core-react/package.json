@@ -11,7 +11,7 @@
         "type": "git",
         "url": "***REMOVED***"
     },
-    "license": "UNLICENSED",
+    "license": "MIT",
     "scripts": {
         "prebuild": "rimraf lib",
         "build": "babel --ignore spec.js -d lib/ src/",

@@ -16,7 +16,7 @@
         "type": "git",
         "url": "***REMOVED***"
     },
-    "license": "UNLICENSED",
+    "license": "MIT",
     "dependencies": {
         "prop-types": "^15.6.0"
     },

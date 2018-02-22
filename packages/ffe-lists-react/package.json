@@ -3,6 +3,16 @@
     "version": "2.1.4",
     "description": "React implementation of ffe-lists",
     "main": "lib/index.js",
+    "files": [
+        "lib",
+        "*.js"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "***REMOVED***"
+    },
+    "author": "SpareBank 1",
+    "license": "MIT",
     "scripts": {
         "build": "babel -d lib/. --ignore=*.test.js src/.",
         "lint": "eslint src/",
@@ -10,6 +20,10 @@
         "test:spec": "jest",
         "test:nsp": "nsp check",
         "test:watch": "jest --watch"
+    },
+    "dependencies": {
+        "classnames": "^2.2.5",
+        "prop-types": "^15.6.0"
     },
     "devDependencies": {
         "enzyme": "^3.3.0",
@@ -20,16 +34,8 @@
         "react": "^16.2.0",
         "react-dom": "^16.2.0"
     },
-    "files": [
-        "lib",
-        "*.js"
-    ],
     "peerDependencies": {
         "ffe-lists": "3.x - 4.x"
-    },
-    "dependencies": {
-        "classnames": "^2.2.5",
-        "prop-types": "^15.6.0"
     },
     "jest": {
         "setupTestFrameworkScriptFile": "./test-setup.js"

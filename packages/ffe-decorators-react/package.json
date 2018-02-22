@@ -4,7 +4,7 @@
     "description": "",
     "main": "lib/index.js",
     "author": "SpareBank 1",
-    "license": "UNLICENSED",
+    "license": "MIT",
     "scripts": {
         "build": "babel -d lib/ --ignore *.spec.js src/",
         "lint": "eslint src/",
