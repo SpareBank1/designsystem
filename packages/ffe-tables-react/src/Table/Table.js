@@ -89,7 +89,7 @@ class Table extends Component {
     }
 
     render() {
-        const { alignLeft, condensed, smallHeader, columnLayoutMobile, breakpoint } = this.props;
+        const { alignLeft, condensed, smallHeader, columnLayoutMobile, breakpoint, className } = this.props;
         return (
             <table
                 className={classNames(
@@ -99,6 +99,7 @@ class Table extends Component {
                     { 'ffe-table--columns-sm': columnLayoutMobile },
                     { 'ffe-table--text-left': alignLeft },
                     breakpoint && `ffe-table--breakpoint-${this.props.breakpoint}`,
+                    className,
                 )}
             >
                 {this.renderTableCaption()}
@@ -129,6 +130,7 @@ Table.propTypes = {
             key: PropTypes.string.isRequired,
         }).isRequired,
     ),
+    className: PropTypes.string,
 };
 
 Table.defaultProps = {
