@@ -15,7 +15,6 @@
                 ".npmrc",
                 "*.md",
                 "*.spec.js",
-                "*.test.js",
                 "test-setup.js"
             ],
             "message": "chore(release): publish"
