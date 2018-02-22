@@ -10,7 +10,7 @@
     },
     "license": "MIT",
     "scripts": {
-        "build": "babel -d lib --ignore=*.test.js src",
+        "build": "babel -d lib --ignore=*.spec.js src",
         "lint": "eslint src/",
         "lint:fix": "eslint --fix src/",
         "test": "jest && npm run test:nsp",

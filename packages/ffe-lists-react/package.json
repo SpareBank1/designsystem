@@ -14,7 +14,7 @@
     "author": "SpareBank 1",
     "license": "MIT",
     "scripts": {
-        "build": "babel -d lib/. --ignore=*.test.js src/.",
+        "build": "babel -d lib/. --ignore=*.spec.js src/.",
         "lint": "eslint src/",
         "test": "npm run test:spec && npm run test:nsp",
         "test:spec": "jest",

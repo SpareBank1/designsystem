@@ -21,9 +21,10 @@ describe('ActionButton', () => {
         const button = getWrapper({
             'data-analytics-track': 'logMe',
         });
-        expect(button
-                .dive()
-                .props()).toHaveProperty('data-analytics-track', 'logMe');
+        expect(button.dive().props()).toHaveProperty(
+            'data-analytics-track',
+            'logMe',
+        );
     });
 
     describe('👻 ghost modifier 👻', () => {

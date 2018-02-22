@@ -1,7 +1,7 @@
 {
   "overrides": [
     {
-      "files": [ "src/*.test.js"],
+      "files": [ "src/*.spec.js"],
       "env": {
           "jest": true
       }

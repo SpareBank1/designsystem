@@ -17,7 +17,7 @@
         "url": "***REMOVED***"
     },
     "scripts": {
-        "build": "babel -d lib/. --ignore=*.test.js src/.",
+        "build": "babel -d lib/. --ignore=*.spec.js src/.",
         "lint": "eslint src/.",
         "test:nsp": "nsp check",
         "test:watch": "jest --watch",

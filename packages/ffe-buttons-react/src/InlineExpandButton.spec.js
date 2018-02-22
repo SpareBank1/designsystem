@@ -9,7 +9,8 @@ const defaultProps = {
     onClick: f => f,
 };
 
-const getWrapper = props => shallow(<InlineExpandButton {...defaultProps} {...props} />);
+const getWrapper = props =>
+    shallow(<InlineExpandButton {...defaultProps} {...props} />);
 
 describe('<InlineExpandButton />', () => {
     it('renders without exploding', () => {
@@ -24,12 +25,14 @@ describe('<InlineExpandButton />', () => {
 
     it('renders --expanded classes if isExpanded is true', () => {
         const wrapper = getWrapper({ isExpanded: true });
-        expect(wrapper.hasClass('ffe-inline-expand-button--expanded')).toBe(true);
-        expect(wrapper
+        expect(wrapper.hasClass('ffe-inline-expand-button--expanded')).toBe(
+            true,
+        );
+        expect(
+            wrapper
                 .find(ChevronIkon)
-                .hasClass(
-                    'ffe-inline-expand-button__icon--expanded',
-                )).toBe(true);
+                .hasClass('ffe-inline-expand-button__icon--expanded'),
+        ).toBe(true);
     });
 
     it('clicks call the onClick function', () => {
