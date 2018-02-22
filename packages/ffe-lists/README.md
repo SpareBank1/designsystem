@@ -1,13 +1,15 @@
-# ffe-lists
+# @sb1/ffe-lists
 
-Pakken inneholder styling til ffe-lists
+## Install
 
-## Bruke
-
-ffe-lists har en peerDependency på ffe-core
-
-```
-$ npm install --save-dev ffe-core ffe-lists
+```bash
+npm install --save @sb1/ffe-lists
 ```
 
-ffe-lists brukes på samme måte som ffe-core. Importer `ffe-lists/less/lists.less` for å ta i bruk alle listene.
+## Usage
+
+```less
+@import 'path/to/node_modules/@sb1/ffe-lists/less/lists';
+```
+
+See also `@sb1/ffe-lists-react`.

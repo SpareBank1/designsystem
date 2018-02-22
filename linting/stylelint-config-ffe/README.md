@@ -1,28 +1,19 @@
-# FFE Stylelint Config
+# @sb1/stylelint-config-ffe
 
 A shareable stylelint configuration object for FFE components
 
+## Install
+
+```bash
+npm install --save-dev stylelint @sb1/stylelint-config-ffe
+```
+
 ## Usage
 
-```
-$ npm install stylelint-config-ffe --save-dev
-```
+Create `.stylelintrc` in the same directory as your `package.json` and extend this config:
 
-or
-
-```
-$ yarn add stylelint-config-ffe --dev
-```
-
-Your project's `.stylelintrc`:
-
-```
+```json
 {
-  "extends": "stylelint-config-ffe"
+  "extends": "@sb1/stylelint-config-ffe"
 }
 ```
-
-## Utvikling og bidrag
-
-For informasjon om utvikling og bidrag, vennligst se
-[CONTRIBUTE.md](***REMOVED***)

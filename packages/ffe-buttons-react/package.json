@@ -1,5 +1,5 @@
 {
-    "name": "ffe-buttons-react",
+    "name": "@sb1/ffe-buttons-react",
     "version": "8.2.4",
     "description": "React implementation of ffe-buttons",
     "keywords": [
@@ -26,17 +26,17 @@
     },
     "dependencies": {
         "classnames": "^2.2.5",
-        "ffe-icons-react": "^4.0.7",
+        "@sb1/ffe-icons-react": "^4.0.7",
         "prop-types": "^15.6.0"
     },
     "devDependencies": {
         "enzyme": "^3.3.0",
         "enzyme-adapter-react-16": "^1.1.1",
         "eslint": "^4.13.1",
-        "ffe-buttons": "^5.2.3",
-        "ffe-core": "^11.0.3",
         "jest": "^22.4.0",
         "nsp": "^3.2.1",
+        "@sb1/ffe-buttons": "^5.2.3",
+        "@sb1/ffe-core": "^11.0.3",
         "react": "^16.1.1",
         "react-dom": "^16.1.1"
     },

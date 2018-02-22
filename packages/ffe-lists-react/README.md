@@ -1,9 +1,12 @@
-# ffe-lists-react
+# @sb1/ffe-lists-react
 
 ## Install
 
 ```
-$ npm install --save ffe-core ffe-lists ffe-lists-react
+npm install --save @sb1/ffe-lists-react
 ```
 
-`ffe-lists-react` has peer dependencies on `ffe-core` and `ffe-lists`.
+## Usage
+
+Run Styleguidist from the repository root to see live examples and documentation,
+or see the markdown files next to the component code in `src/`.

@@ -1,5 +1,5 @@
 {
-    "name": "ffe-icons",
+    "name": "@sb1/ffe-icons",
     "version": "9.0.5",
     "description": "Felles Front End Icons",
     "main": "bin/build.js",

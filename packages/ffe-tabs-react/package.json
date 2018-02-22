@@ -1,5 +1,5 @@
 {
-    "name": "ffe-tabs-react",
+    "name": "@sb1/ffe-tabs-react",
     "version": "1.1.5",
     "main": "lib/index.js",
     "files": [
@@ -32,8 +32,8 @@
         "react-dom": "^16.1.1"
     },
     "peerDependencies": {
-        "ffe-core": "^10.1.2",
-        "ffe-tabs": "^3.0.3",
+        "@sb1/ffe-core": "^11.0.3",
+        "@sb1/ffe-tabs": "^3.0.9",
         "react": "^15.0.0 || ^16.0.0"
     },
     "jest": {

@@ -1,18 +1,12 @@
-# ffe-icons-react
-
-React component with all svg icons in ffe-icons inlined.
+# @sb1/ffe-icons-react
 
 ## Install
 
 ```
-npm install --save ffe-icons-react
+npm install --save @sb1/ffe-icons-react
 ```
 
 ## Usage
 
-
-
-## Utvikling og bidrag
-
-For informasjon om utvikling og bidrag, vennligst se
-[CONTRIBUTE.md](***REMOVED***)
+Run Styleguidist from the repository root to see live examples and documentation,
+or `USAGE.md`.

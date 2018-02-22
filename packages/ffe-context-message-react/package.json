@@ -1,5 +1,5 @@
 {
-    "name": "ffe-context-message-react",
+    "name": "@sb1/ffe-context-message-react",
     "version": "3.0.16",
     "description": "React implementation of ffe-context-message component",
     "keywords": [
@@ -22,7 +22,7 @@
     },
     "dependencies": {
         "classnames": "^2.2.5",
-        "ffe-icons-react": "^4.0.7",
+        "@sb1/ffe-icons-react": "^4.0.7",
         "prop-types": "^15.6.0"
     },
     "devDependencies": {
@@ -32,7 +32,7 @@
         "nsp": "^3.2.1"
     },
     "peerDependencies": {
-        "ffe-context-message": "^2.0.10"
+        "@sb1/ffe-context-message": "^2.0.11"
     },
     "jest": {
         "setupTestFrameworkScriptFile": "../../test-setup.js"

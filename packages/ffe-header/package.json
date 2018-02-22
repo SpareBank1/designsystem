@@ -1,5 +1,5 @@
 {
-    "name": "ffe-header",
+    "name": "@sb1/ffe-header",
     "version": "10.5.2",
     "description": "Felles header for SpareBank 1",
     "main": "index.js",
@@ -16,13 +16,13 @@
     "author": "SpareBank 1",
     "license": "MIT",
     "peerDependencies": {
-        "ffe-buttons": "5.x",
-        "ffe-core": "^9.2.0 || ^10.0.0"
+        "@sb1/ffe-buttons": "^5.2.3",
+        "@sb1/ffe-core": "^11.0.3"
     },
     "devDependencies": {
-        "ffe-buttons": "^5.2.3",
-        "ffe-core": "^11.0.3",
-        "ffe-webfonts": "^1.0.3",
+        "@sb1/ffe-buttons": "^5.2.3",
+        "@sb1/ffe-core": "^11.0.3",
+        "@sb1/ffe-webfonts": "^1.0.3",
         "less": "^2.7.3",
         "less-plugin-autoprefix": "^1.5.1",
         "mkdirp": "^0.5.1",

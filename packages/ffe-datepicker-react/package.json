@@ -1,5 +1,5 @@
 {
-    "name": "ffe-datepicker-react",
+    "name": "@sb1/ffe-datepicker-react",
     "version": "2.7.16",
     "main": "lib/ffe-datepicker-react.js",
     "license": "MIT",
@@ -21,14 +21,14 @@
         "react-dom": "^16.2.0"
     },
     "peerDependencies": {
-        "ffe-datepicker": "^4.2.5",
-        "ffe-form": "2.x - 8.x",
+        "@sb1/ffe-datepicker": "^4.2.14",
+        "@sb1/ffe-form": "^8.1.12",
         "react": "15.x || 16.x"
     },
     "dependencies": {
         "classnames": "^2.2.5",
-        "ffe-datepicker": "^4.2.14",
-        "ffe-icons-react": "^4.0.7",
+        "@sb1/ffe-datepicker": "^4.2.14",
+        "@sb1/ffe-icons-react": "^4.0.7",
         "prop-types": "^15.6.0",
         "uuid": "^3.1.0"
     },

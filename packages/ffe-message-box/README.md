@@ -1,20 +1,15 @@
-# Felles Frontend Message Box
+# @sb1/ffe-message-box
 
-Felles meldingsboks for SpareBank 1.
+## Install
 
-## Bruk
-
-Installer modulen via npm:
-
-```
-npm install --save ffe-message-box
+```bash
+npm install --save @sb1/ffe-message-box
 ```
 
-Importer LESS-filen i din main.less fil:
-```
-@import ../node_modules/ffe-message-box/less/ffe-message-box
+## Usage
+
+```less
+@import 'path/to/node_modules/@sb1/ffe-message-box/less/ffe-message-box';
 ```
 
-Merk: Denne modulen har en `peerDependency` på `ffe-core@^8.1.0`.
-
-Link styling må settes eksplisitt: `<a href="http://www.sparebank1.no" class="ffe-message-box__link">En lenke</a>`
+See also `@sb1/ffe-message-box-react`.

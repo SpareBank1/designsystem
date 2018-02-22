@@ -1,22 +1,16 @@
-# Felles Frontend Cards
+# @sb1/ffe-cards
 
-## Intro
+## Install
 
-Felles kort-komponent for SpareBank 1.
+```bash
+npm install --save @sb1/ffe-core @sb1/ffe-cards
+```
 
-![exempel](visual-tests/baseline-screenshots/index/plain/firefox.png)
+## Usage
 
-## Bruk
+```less
+@import 'path/to/node_modules/@sb1/ffe-cards/less/ffe-link-card';
+@import 'path/to/node_modules/@sb1/ffe-cards/less/ffe-product-card';
+```
 
-<code>@import ../node_modules/ffe-cards/less/[...]</code> i en less-fil i ditt prosjekt.
-
-Merk at ffe-core er en avhengighet for ffe-cards (se peerDependencies i package.json).
-
-## Visuell regressionstestning
-Se [readme for ffe-core](***REMOVED***).
-
-## Pull Requests
-Se [contribute for ffe-core](***REMOVED***).
-
-## Publisering
-Se [contribute for ffe-core](***REMOVED***).
+See also `@sb1/ffe-cards-react`.

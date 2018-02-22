@@ -1,4 +1,4 @@
-# ffe-expandable-react
+# @sb1/ffe-expandable-react
 
 ## Deprecation notice
 
@@ -9,7 +9,7 @@ Om dette er ønskelig for andre har vi satt sammen en enkel overgangs-oppskrift:
 Gammelt:
 
 ```javascript
-import Expandable from 'ffe-expandable-react';
+import Expandable from '@sb1/ffe-expandable-react';
 
 const isOpen = false;
 const RowFolded = element || string || array(element);

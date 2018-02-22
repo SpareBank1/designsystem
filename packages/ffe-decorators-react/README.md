@@ -1,15 +1,15 @@
-# ffe-decorators-react
+# @sb1/ffe-decorators-react
 
 ## Install
 
 ```
-$ npm install --save ffe-decorators-react
+npm install --save @sb1/ffe-decorators-react
 ```
 
 ## Usage
 
 ```javascript
-import decorator from 'ffe-decorators-react/lib/decorator';
+import decorator from '@sb1/ffe-decorators-react/lib/decorator';
 
 decorator(config)(MyComponent);
 ```
@@ -36,19 +36,3 @@ Der `foobar` er propertyen man er interessert i, `initialValue` er start-verdien
 
 Det er frivillig å oppgi en `initialValue`.
 Dersom det ikke angis en `duration` blir 1s brukt som default.
-
-## Test
-
-# Local
-
-For å teste endringer lokalt kan man kjøre i dette prosjektes mappe:
-
-```
-sudo npm link
-```
-
-Og i prosjektet som skal bruke endringene gjort lokalt kan man kjøre:
-
-```
-npm link ffe-decorators-react
-```

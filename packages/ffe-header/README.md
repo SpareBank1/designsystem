@@ -1,16 +1,20 @@
-# Felles Frontend Header
+# @sb1/ffe-header
 
-## Intro
+## Install
 
-Felles header-komponent for SpareBank 1.
+```bash
+npm install --save @sb1/ffe-core @sb1/ffe-header
+```
 
-## Bruk
+## Usage
 
-<code>@import ../node_modules/ffe-header/less/ffe-header</code> i en less-fil i ditt prosjekt.
+```less
+@import 'path/to/node_modules/@sb1/ffe-header/less/ffe-header';
+```
 
-Merk at ffe-core og ffe-buttons er en avhengighet for til denne filen (se peerDependencies i package.json).
+If you need a version without a dependency on `@sb1/ffe-core` and `@sb1/ffe-buttons` you can use
+the `-no-deps` suffix in your import.
 
-Det finnes en less-fil som kan brukes uten ffe-core og ffe-buttons:
-<code>@import ../node_modules/ffe-header/less/ffe-header-nodeps</code>
-
-Se readme for ffe-core for øvrig informasjon.
+```less
+@import 'path/to/node_modules/@sb1/ffe-header/less/ffe-header-no-deps';
+```

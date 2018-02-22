@@ -1,5 +1,5 @@
 {
-    "name": "ffe-details-list",
+    "name": "@sb1/ffe-details-list",
     "version": "8.1.12",
     "description": "Opplisting av attributter i en grid",
     "main": "less/ffe-details-list.less",
@@ -16,10 +16,10 @@
     "author": "SpareBank 1",
     "license": "MIT",
     "peerDependencies": {
-        "ffe-core": "^9.0.0 || ^10.0.0"
+        "@sb1/ffe-core": "^11.0.2"
     },
     "devDependencies": {
-        "ffe-core": "^11.0.3",
+        "@sb1/ffe-core": "^11.0.3",
         "nsp": "^3.2.1",
         "stylelint": "^8.4.0"
     }

@@ -1,6 +1,6 @@
 module.exports = {
     'extends': [
-        'eslint-config-ffe-base',
+        '@sb1/eslint-config-ffe-base',
         './rules/jsx',
         './rules/jsx-a11y'
     ].map(require.resolve),

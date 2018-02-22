@@ -1,5 +1,5 @@
 {
-    "name": "ffe-accordion",
+    "name": "@sb1/ffe-accordion",
     "version": "3.0.11",
     "description": "Accordion component for FFE.",
     "author": "SpareBank 1",
@@ -16,10 +16,10 @@
         "Accordion"
     ],
     "peerDependencies": {
-        "ffe-core": "^10.2.4"
+        "@sb1/ffe-core": "^11.0.3"
     },
     "devDependencies": {
-        "ffe-core": "^11.0.3",
-        "nsp": "^3.2.1"
+        "nsp": "^3.2.1",
+        "@sb1/ffe-core": "^11.0.3"
     }
 }

@@ -1,5 +1,5 @@
 {
-    "name": "ffe-dropdown-react",
+    "name": "@sb1/ffe-dropdown-react",
     "version": "3.0.7",
     "main": "lib/Dropdown.js",
     "license": "MIT",
@@ -12,7 +12,7 @@
         "test:watch": "jest --watch"
     },
     "peerDependencies": {
-        "ffe-form": "1.x - 8.x"
+        "@sb1/ffe-form": "^8.1.12"
     },
     "dependencies": {
         "classnames": "^2.2.5"

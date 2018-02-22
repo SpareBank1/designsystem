@@ -1,5 +1,5 @@
 {
-    "name": "ffe-file-upload-react",
+    "name": "@sb1/ffe-file-upload-react",
     "version": "2.0.6",
     "description": "Upload file button with validation and list of uploaded files.",
     "keywords": [
@@ -26,8 +26,8 @@
         "nsp": "^3.2.1"
     },
     "peerDependencies": {
-        "ffe-core": "^10.0.0",
-        "ffe-form": "^8.0.0",
+        "@sb1/ffe-core": "^11.0.3",
+        "@sb1/ffe-form": "^8.1.12",
         "react": "^16.2.0",
         "react-dom": "^16.2.0"
     },
