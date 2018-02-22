@@ -4,32 +4,22 @@
     "main": "lib/ffe-datepicker-react.js",
     "license": "MIT",
     "scripts": {
-        "build": "babel -d lib/. --ignore=*.test.js src/.",
+        "build": "babel -d lib/. --ignore=*.spec.js src/.",
         "lint": "eslint src/.",
         "test": "npm run test:spec && npm run test:nsp",
-        "test:spec": "mocha --require src/util/test-setup.js --compilers js:babel-core/register 'src/**/*.test.js'",
+        "test:spec": "jest",
         "test:nsp": "nsp check",
-        "test:watch": "npm test -- -w"
+        "test:watch": "jest --watch"
     },
     "devDependencies": {
-        "chai": "^4.1.2",
-        "chai-enzyme": "^1.0.0-beta.0",
         "enzyme": "^3.3.0",
         "enzyme-adapter-react-16": "^1.1.1",
         "eslint": "^4.13.1",
-        "jsdom": "^11.5.1",
-        "mocha": "^4.1.0",
+        "jest": "^22.4.0",
         "nsp": "^3.1.0",
-        "react": "^16.0.0",
-        "react-dom": "^16.0.0",
-        "react-test-renderer": "^16.0.0",
-        "sinon": "^4.1.3",
-        "sinon-chai": "^2.14.0"
+        "react": "^16.2.0",
+        "react-dom": "^16.2.0"
     },
-    "files": [
-        "lib",
-        "*.js"
-    ],
     "peerDependencies": {
         "ffe-datepicker": "^4.2.5",
         "ffe-form": "2.x - 8.x",
@@ -41,5 +31,12 @@
         "ffe-icons-react": "^4.0.6",
         "prop-types": "^15.6.0",
         "uuid": "^3.1.0"
+    },
+    "files": [
+        "lib",
+        "*.js"
+    ],
+    "jest": {
+        "setupTestFrameworkScriptFile": "./test-setup.js"
     }
 }
