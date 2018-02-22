@@ -76,6 +76,8 @@ Table.propTypes = {
             notSortable: bool,
         }).isRequired,
     ),
+    /** Class names set in addition to the ffe tables classes. */
+    className: string,
 };
 
 export default Table;

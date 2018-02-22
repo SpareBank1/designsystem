@@ -140,6 +140,7 @@ class SortableTable extends Component {
             limit,
             offset,
             srOnlyCaption,
+            className,
         } = this.props;
         const { sortBy, descending } = this.state;
 
@@ -167,6 +168,7 @@ class SortableTable extends Component {
                 limit={limit}
                 offset={offset}
                 sort={{ sortBy, descending }}
+                className={className}
             />
         );
     }
@@ -188,6 +190,7 @@ SortableTable.propTypes = {
     sortBy: PropTypes.string,
     descending: PropTypes.bool,
     onSort: PropTypes.func,
+    className: PropTypes.string,
 };
 
 SortableTable.defaultProps = {
