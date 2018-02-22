@@ -15,10 +15,10 @@
     "scripts": {
         "build": "babel -d lib/. --ignore=*.spec.js src/.",
         "lint": "eslint src/.",
+        "test": "npm run test:spec && npm run test:nsp",
         "test:nsp": "nsp check",
         "test:spec": "jest",
-        "test:watch": "jest --watch",
-        "test": "npm run test:spec && npm run test:nsp"
+        "test:watch": "jest --watch"
     },
     "peerDependencies": {
         "ffe-form": "^8.1.5"

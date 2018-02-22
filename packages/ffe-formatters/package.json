@@ -16,18 +16,17 @@
         "url": "***REMOVED***"
     },
     "scripts": {
-        "prebuild": "rimraf lib",
-        "build": "babel src -d lib --ignore *.spec.js,README.md",
-        "test": "jest",
-        "test:watch": "jest --watch",
-        "test:coverage": "jest --coverage",
-        "lint": "eslint src/"
+        "build": "babel -d lib/. --ignore=*.spec.js src/.",
+        "lint": "eslint src/.",
+        "test": "npm run test:spec && npm run test:nsp",
+        "test:nsp": "nsp check",
+        "test:spec": "jest",
+        "test:watch": "jest --watch"
     },
     "devDependencies": {
         "eslint": "^4.13.1",
         "jest": "^21.0.0",
-        "moment": "^2.18.1",
-        "rimraf": "^2.6.1"
+        "moment": "^2.18.1"
     },
     "dependencies": {
         "underscore.string": "^3.3.4"

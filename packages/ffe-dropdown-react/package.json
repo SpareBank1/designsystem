@@ -4,10 +4,11 @@
     "main": "lib/Dropdown.js",
     "license": "MIT",
     "scripts": {
-        "build": "babel --ignore spec.js -d lib src",
-        "lint": "eslint src",
-        "pretest": "eslint src",
-        "test": "jest",
+        "build": "babel -d lib/. --ignore=*.spec.js src/.",
+        "lint": "eslint src/.",
+        "test": "npm run test:spec && npm run test:nsp",
+        "test:nsp": "nsp check",
+        "test:spec": "jest",
         "test:watch": "jest --watch"
     },
     "peerDependencies": {

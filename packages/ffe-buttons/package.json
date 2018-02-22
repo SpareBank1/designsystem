@@ -8,8 +8,8 @@
     "license": "MIT",
     "scripts": {
         "lint": "stylelint less/*.less",
-        "test:nsp": "nsp check",
-        "test": "npm run lint && npm run test:nsp"
+        "test": "npm run lint && npm run test:nsp",
+        "test:nsp": "nsp check"
     },
     "repository": {
         "type": "git",

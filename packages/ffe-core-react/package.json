@@ -13,13 +13,12 @@
     },
     "license": "MIT",
     "scripts": {
-        "prebuild": "rimraf lib",
-        "build": "babel --ignore spec.js -d lib/ src/",
-        "lint": "eslint src/",
-        "lint:fix": "eslint --fix src/",
-        "test": "jest",
-        "test:watch": "jest --watch",
-        "test:coverage": "jest src --coverage"
+        "build": "babel -d lib/. --ignore=*.spec.js src/.",
+        "lint": "eslint src/.",
+        "test": "npm run test:spec && npm run test:nsp",
+        "test:nsp": "nsp check",
+        "test:spec": "jest",
+        "test:watch": "jest --watch"
     },
     "peerDependencies": {
         "react": "^15.4.0 || ^16.1.1"

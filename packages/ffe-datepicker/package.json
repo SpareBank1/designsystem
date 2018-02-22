@@ -6,7 +6,9 @@
     "license": "MIT",
     "main": "less/datepicker",
     "scripts": {
-        "lint": "stylelint less/*.less"
+        "lint": "stylelint less/*.less",
+        "test": "npm run lint && npm run test:nsp",
+        "test:nsp": "nsp check"
     },
     "repository": {
         "type": "git",

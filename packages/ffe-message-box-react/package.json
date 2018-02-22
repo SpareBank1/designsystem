@@ -6,10 +6,11 @@
     "license": "MIT",
     "scripts": {
         "build": "babel -d lib/. --ignore=*.spec.js src/.",
-        "lint": "eslint src",
+        "lint": "eslint src/.",
+        "test": "npm run test:spec && npm run test:nsp",
         "test:nsp": "nsp check",
-        "test:watch": "jest --watch",
-        "test": "jest && npm run test:nsp"
+        "test:spec": "jest",
+        "test:watch": "jest --watch"
     },
     "peerDependencies": {
         "ffe-message-box": "3.x - 4.x"

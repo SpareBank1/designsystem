@@ -3,9 +3,12 @@
     "version": "2.0.5",
     "main": "lib/ffe-expandable-react.js",
     "scripts": {
-        "build": "babel -d lib src",
-        "test": "nsp check",
-        "lint": "eslint src"
+        "build": "babel -d lib/. --ignore=*.spec.js src/.",
+        "lint": "eslint src/.",
+        "test": "npm run test:spec && npm run test:nsp",
+        "test:nsp": "nsp check",
+        "test:spec": "echo \"This package does not have tests\"",
+        "test:watch": "echo \"This package does not have tests\""
     },
     "devDependencies": {
         "nsp": "^3.1.0",

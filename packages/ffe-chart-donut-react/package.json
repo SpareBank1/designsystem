@@ -9,14 +9,12 @@
         "ffe"
     ],
     "scripts": {
-        "build": "babel -d lib/ --ignore spec.js src/ && cp src/ffe-chart-donut.less lib/",
-        "lint": "eslint src/ test/",
-        "lint:fix": "eslint --fix src/ test/",
+        "build": "babel -d lib/. --ignore=*.spec.js src/ && cp src/ffe-chart-donut.less lib/",
+        "lint": "eslint src/.",
         "test": "npm run test:spec && npm run test:nsp",
         "test:nsp": "nsp check",
         "test:spec": "jest",
-        "test:watch": "jest --watch",
-        "tdd": "jest --watch"
+        "test:watch": "jest --watch"
     },
     "dependencies": {
         "prop-types": "^15.6.0"

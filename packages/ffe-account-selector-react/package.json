@@ -19,9 +19,11 @@
         "url": "***REMOVED***"
     },
     "scripts": {
-        "build": "babel -d lib/. --ignore=*.test.js src/.",
+        "build": "babel -d lib/. --ignore=*.spec.js src/.",
         "lint": "eslint src/.",
-        "test": "jest",
+        "test": "npm run test:spec && npm run test:nsp",
+        "test:nsp": "nsp check",
+        "test:spec": "jest",
         "test:watch": "jest --watch"
     },
     "dependencies": {

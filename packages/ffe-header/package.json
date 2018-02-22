@@ -5,7 +5,9 @@
     "main": "index.js",
     "scripts": {
         "build": "lessc less/ffe-header-nodeps.less examples/ffe-header.css --autoprefix && lessc examples/examples.less examples/examples.css",
-        "lint": "stylelint less/*.less"
+        "lint": "stylelint less/*.less",
+        "test": "npm run lint && npm run test:nsp",
+        "test:nsp": "nsp check"
     },
     "repository": {
         "type": "git",

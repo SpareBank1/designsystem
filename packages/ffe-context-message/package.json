@@ -16,7 +16,8 @@
     },
     "scripts": {
         "lint": "stylelint less/*.less",
-        "test": "npm run lint"
+        "test": "npm run lint && npm run test:nsp",
+        "test:nsp": "nsp check"
     },
     "devDependencies": {
         "ffe-core": "^11.0.2"

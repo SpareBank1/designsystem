@@ -10,12 +10,12 @@
     },
     "license": "MIT",
     "scripts": {
-        "build": "babel -d lib --ignore=*.spec.js src",
-        "lint": "eslint src/",
-        "lint:fix": "eslint --fix src/",
-        "test": "jest && npm run test:nsp",
-        "test:watch": "jest src --watch",
-        "test:nsp": "nsp check"
+        "build": "babel -d lib/. --ignore=*.spec.js src/.",
+        "lint": "eslint src/.",
+        "test": "npm run test:spec && npm run test:nsp",
+        "test:nsp": "nsp check",
+        "test:spec": "jest",
+        "test:watch": "jest --watch"
     },
     "jest": {
         "setupTestFrameworkScriptFile": "./test-setup.js"

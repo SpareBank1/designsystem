@@ -14,11 +14,11 @@
     },
     "scripts": {
         "build": "babel -d lib/. --ignore=*.spec.js src/.",
-        "lint": "eslint src/",
-        "lint:fix": "eslint --fix src/",
+        "lint": "eslint src/.",
         "test": "npm run test:spec && npm run test:nsp",
+        "test:nsp": "nsp check",
         "test:spec": "jest",
-        "test:nsp": "nsp check"
+        "test:watch": "jest --watch"
     },
     "dependencies": {
         "classnames": "^2.2.5",

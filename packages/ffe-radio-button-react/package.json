@@ -8,11 +8,12 @@
         "*.js"
     ],
     "scripts": {
-        "build": "babel -d lib/. --ignore=*.test.js src/.",
+        "build": "babel -d lib/. --ignore=*.spec.js src/.",
         "lint": "eslint src/.",
+        "test": "npm run test:spec && npm run test:nsp",
         "test:nsp": "nsp check",
         "test:spec": "jest",
-        "test": "npm run test:spec && npm run test:nsp"
+        "test:watch": "jest --watch"
     },
     "devDependencies": {
         "jest": "^22.3.0",

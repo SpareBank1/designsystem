@@ -8,8 +8,9 @@
         "build:babel": "babel jsx -d lib",
         "build:jsx-components": "babel-node ./src/build-jsx-components.js",
         "clean": "rimraf tmp jsx lib",
-        "lint": "eslint src",
-        "test": "nsp check && npm run lint",
+        "lint": "eslint src/.",
+        "test": "run-p test:nsp lint",
+        "test:nsp": "nsp check",
         "ffe:icons": "ffe-icons --opts=packages/ffe-icons-react/svg.sprite.config.json"
     },
     "repository": {
