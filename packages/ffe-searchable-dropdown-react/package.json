@@ -18,7 +18,7 @@
         "test:watch": "jest --watch"
     },
     "jest": {
-        "setupTestFrameworkScriptFile": "./test-setup.js"
+        "setupTestFrameworkScriptFile": "../../test-setup.js"
     },
     "peerDependencies": {
         "ffe-core": "^10.2.4",

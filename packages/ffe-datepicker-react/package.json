@@ -37,6 +37,6 @@
         "*.js"
     ],
     "jest": {
-        "setupTestFrameworkScriptFile": "./test-setup.js"
+        "setupTestFrameworkScriptFile": "../../test-setup.js"
     }
 }

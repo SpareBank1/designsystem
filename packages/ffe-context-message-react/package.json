@@ -35,6 +35,6 @@
         "ffe-context-message": "^2.0.10"
     },
     "jest": {
-        "setupTestFrameworkScriptFile": "./test-setup.js"
+        "setupTestFrameworkScriptFile": "../../test-setup.js"
     }
 }

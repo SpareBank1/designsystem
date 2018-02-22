@@ -37,6 +37,6 @@
         "react": "^15.0.0 || ^16.0.0"
     },
     "jest": {
-        "setupTestFrameworkScriptFile": "./test-setup.js"
+        "setupTestFrameworkScriptFile": "../../test-setup.js"
     }
 }

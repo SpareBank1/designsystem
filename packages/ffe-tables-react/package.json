@@ -42,6 +42,6 @@
         "shallow-equals": "^1.0.0"
     },
     "jest": {
-        "setupTestFrameworkScriptFile": "./test-setup.js"
+        "setupTestFrameworkScriptFile": "../../test-setup.js"
     }
 }

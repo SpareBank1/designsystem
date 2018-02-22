@@ -20,7 +20,10 @@
         "start": "npm run build && styleguidist server",
         "styleguidist": "styleguidist",
         "styleguidist:build": "styleguidist build",
-        "test": "lerna run test"
+        "test": "npm run test:js && npm run test:nsp",
+        "test:js": "jest",
+        "test:nsp": "lerna run test:nsp",
+        "test:watch": "jest --watch"
     },
     "devDependencies": {
         "@commitlint/cli": "^5.2.5",
@@ -34,14 +37,19 @@
         "babel-preset-stage-3": "^6.24.1",
         "case": "^1.5.4",
         "css-loader": "^0.28.7",
+        "enzyme": "^3.3.0",
+        "enzyme-adapter-react-16": "^1.1.1",
         "eslint": "^4.13.1",
         "eslint-config-prettier": "^2.9.0",
         "husky": "^0.14.3",
+        "jest": "^22.4.0",
         "lerna": "^2.8.0",
         "less": "^2.7.3",
         "less-loader": "^4.0.5",
         "less-plugin-autoprefix": "^1.5.1",
         "mkdirp": "^0.5.1",
+        "npm-run-all": "^4.1.2",
+        "nsp": "^3.2.1",
         "precise-commits": "^1.0.0",
         "prettier": "^1.10.2",
         "react": "^16.1.1",
@@ -51,5 +59,8 @@
         "style-loader": "^0.19.1",
         "stylelint-config-prettier": "^2.0.0",
         "webpack": "^3.8.1"
+    },
+    "jest": {
+        "setupTestFrameworkScriptFile": "./test-setup.js"
     }
 }
