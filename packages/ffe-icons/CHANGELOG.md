@@ -75,40 +75,38 @@ The following icons have been renamed:
 In addition, ffe-icons-react receives a fix that unbroke a previous
 release
 
-# Changelog
-
-## 7.17.0
+# 7.17.0
 
 * Add kr-klokke-ikon.svg
 
-## 7.16.0
+# 7.16.0
 
 * Add gravemaskin-ikon.svg
 
-## 7.15.0
+# 7.15.0
 
 * Add info-sirkel-solid-ikon.svg
 
-## 7.14.0
+# 7.14.0
 
 * Add p-pose-stjerne-ikon.svg
 
-## 7.13.0
+# 7.13.0
 
 * Add beta-ikon.svg
 * Add kr-tannhjul-ikon.svg
 * Add mobil-utropstegn-ikon.svg
 * Add person-streker-ikon.svg
 
-## 7.12.0
+# 7.12.0
 
 * pil-ut-av-boks-skraa-ikon has been updated with thicker lines
 
-## 7.11.0
+# 7.11.0
 
 * snakkeboble-ikon.svg has been redesigned to be more in line with the visual profile.
 
-## 7.10.0
+# 7.10.0
 
 * Added trillekoffert-ikon.svg
 
@@ -116,15 +114,15 @@ release
 
 * Remove class property from taleassistent-ikon, that broke usage with ffe-icons-react
 
-## 7.9.0
+# 7.9.0
 
 * Added taleassistent-ikon.svg
 
-## 7.8.0
+# 7.8.0
 
 * Added bankid- and varsel-ikon.svg
 
-## 7.7.0
+# 7.7.0
 
 * Added kalkulator-ikon.svg
 
@@ -132,7 +130,7 @@ release
 
 * Updated utropstegn-icon.svg
 
-## 7.6.0
+# 7.6.0
 
 * Added hus-stjerne-ikon.svg
 
@@ -154,7 +152,7 @@ release
 
 * Add babel-polyfill, to support node 4
 
-## 7.5.0
+# 7.5.0
 
 * Added svar-pil-ikon.svg, binders-ikon.svg
 
@@ -162,7 +160,7 @@ release
 
 * Bugfix: resolves a path issue that made the `projectIcons` config unusable outside of `npm link`
 
-## 7.4.0
+# 7.4.0
 
 * Bugfix: the produced bundle should again only contain the icons in your `icons.json`
 * New feature: `projectIcons` option now available
@@ -177,11 +175,11 @@ Usage:
 }
 ```
 
-## 7.3.0
+# 7.3.0
 
 Added moped-ikon.svg
 
-## 7.2.0
+# 7.2.0
 
 Added pluss-icon.svg
 
@@ -193,7 +191,7 @@ Added handlevogn-pakker-ikon.svg, bil-camping-ikon.svg and hus-tre-ikon.svg
 
 Changes the shebang so it works better on different flavours of Linux
 
-## 7.0.0
+# 7.0.0
 
 **Breaking changes**
 
@@ -210,15 +208,15 @@ Note that the `--opts` flag now assumes the base path for the location of `icons
 above `node_modules/` (the same directory as your apps `package.json`). So what used to be
 `--opts=../../icons.json` is now just `--opts=icons.json`.
 
-## 6.4.0
+# 6.4.0
 
 * Added koffert-ikon.svg
 
-## 6.3.0
+# 6.3.0
 
 * Added p-pose-ikon.svg
 
-## 6.2.0
+# 6.2.0
 
 * Added mynter-to-stabler-pluss.svg
 
@@ -226,11 +224,11 @@ above `node_modules/` (the same directory as your apps `package.json`). So what 
 
 * Update design on faks-printer-solid-ikon [FFE-90](***REMOVED***)
 
-## 6.1.0
+# 6.1.0
 
 * Added pose-i-haand-ikon.svg
 
-## 6.0.0
+##6.0.0
 
 * Breaking: kontorbygg-ikon renamed to kontorbygg-solid-ikon in order to be consistent with how other icons are named. Anyone who where using the `kontorbygg-ikon` and wants to keep using the version with a fill should change to `kontorbygg-solid-ikon`.
 * Add new icons
@@ -242,23 +240,23 @@ above `node_modules/` (the same directory as your apps `package.json`). So what 
 
 * No change
 
-## Version 5.3.0
+# 5.3.0
 
 * Added a few new icons
 * hus-hake-ikon.svg
 * hus-hjerte-ikon-svg
 * kr-hake-ikon.svg
 
-## Version 5.2.1
+## 5.2.1
 
 * No change.
 
-## Version 5.2.0
+# 5.2.0
 
 * Added konfetti-ikon.svg
 * Added tommel-opp-ikong.svg
 
-## Version 5.1.0
+# 5.1.0
 
 * Added a bunch of new icons
 * campingbil-ikon.svg
@@ -286,57 +284,57 @@ above `node_modules/` (the same directory as your apps `package.json`). So what 
 * traktor-ikon.svg
 * ung-caps-ikon.svg
 
-## Version 5.0.0
+# 5.0.0
 
 * A vengeful lumberjack has swung the axe against tre-ikon, spire-ikon, and blad-ikon. It was decided the icons did not fit the brand and should not be used by anyone.
 
-## Version 4.7.0
+# 4.7.0
 
 * Added bygning-pluss-ikon.svg
 
-## Version 4.6.0
+# 4.6.0
 
 * Added stetoskop-ikon.svg
 
-## Version 4.5.0
+# 4.5.0
 
 * Added forstorrelsesglass-ikon.svg
 
-## Version 4.4.0
+# 4.4.0
 
 * Added snakkeboble-ikon.svg
 
-## Version 4.3.0
+# 4.3.0
 
 * Added person-rullestol-ikon.svg
 * Added hjerte-kardiograf-ikon.svg
 
-## Version 4.2.0
+# 4.2.0
 
 * Added graf-opp-enkel-ikon.svg
 * Added soylediagram-ikon.svg
 * Added pil-ut-av-boks-skraa-ikon.svg
 
-## Version 4.1.0
+# 4.1.0
 
 * Added blyant-ikon.svg
 * Added person-pluss-ikon.svg
 * Added bsu-ikon.svg
 
-## Version 4.0.0
+# 4.0.0
 
 * Renamed: hake-sirkel-ikon.svg => hake-sirkel-solid-ikon.svg
 * Added a new hake-sirkel-ikon.svg that is not solid
 
-## Version 3.7.2
+## 3.7.2
 
 * New icon: kalender-ikon.svg
 
-## Version 3.7.1
+## 3.7.1
 
 * Quickfix for kartmarkor-ikon - Was not optimized correctly
 
-## Version 3.7.0
+# 3.7.0
 
 * Changed look of tannhjul-ikon
 * Add old tannhjul-ikon.svg as tannhjul-solid-ikon.svg
@@ -350,37 +348,37 @@ above `node_modules/` (the same directory as your apps `package.json`). So what 
 * New icon: kartmarkor-ikon.svg
 * New icon: kr-pil-solid-ikon.svg
 
-## Version 3.6.0
+# 3.6.0
 
 * New icons: hake-stjerne-ikon
 
-## Version 3.5.0
+# 3.5.0
 
 * New icons: blad-ikon, hake-sirkel-ikon, spire-ikon, tre-ikon
 
-## Version 3.4.0
+# 3.4.0
 
 * New icons: graf-opp-ikon, kake-kvart-ikon, person-slips-ikon, sparegris-ikon, konvolutt-ikon
 
-## Version 3.3.0
+# 3.3.0
 
 * New icon: kontorbygg
 
-## Version 3.2.0
+# 3.2.0
 
 * New icon: paraply-ikon
 
-## Version 3.1.0
+# 3.1.0
 
 * New icons: hengelaas, pil-ned, tannhjul
 * Automatic publish and test
 * Screenshot in readme
 
-## Version 3.0.0
+# 3.0.0
 
 * Removed the postinstall script, since it created issues with builds on npm 2.x. See https://github.com/npm/npm/issues/8850
 
-## Version 2.4.0
+# 2.4.0
 
 Optimized:
 
@@ -388,17 +386,17 @@ Optimized:
 * varebil-ikon
 * verktoy-skiftenokkel-ikon
 
-## Version 2.3.0
+# 2.3.0
 
 Renamed lukk-ikon to kryss-sirkel-ikon and optimized it
 
-## Version 2.2.0
+# 2.2.0
 
 Optimized:
 
 * lyspare-ikon
 
-## Version 2.1.0
+# 2.1.0
 
 Added new icons and optimized some old ones for use in lo-kort.
 
@@ -441,7 +439,7 @@ New:
 * piler-hoyre-venstre
 * xls-ikon
 
-## Version 2.0.0
+# 2.0.0
 
 For version 2.x, removed all existing icons and added \_ICON_REQUIREMENTS.md to have a clean slate. Also updated README.
 
@@ -460,22 +458,22 @@ Releasing version 2 with the first batch of optimized icons:
 * plaster
 * telefon
 
-## Version 1.0.3
+## 1.0.3
 
 * Made devDependencies actual dependencies so package consumers get them...
 * Re-added postinstall script
 
-## Version 1.0.2
+## 1.0.2
 
 * Removed postinstall script, since some build tools had trouble finding gulp at that stage
 * Updated package.json with the correct repository URL
 
-## Version 1.0.1
+## 1.0.1
 
 * Added plaster-ikon
 ![plaster-ikon](***REMOVED***)
 
-## Version 1.0.0
+# 1.0.0
 
 * Renamed default sprite to ffe-icons.svg
 * Renamed desktop-ikon to laptop-ikon

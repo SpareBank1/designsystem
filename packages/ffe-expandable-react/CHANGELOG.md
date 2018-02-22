@@ -56,8 +56,6 @@ and creates a new major of ffe-expandable-react, which simply
 works as a proxy for `react-collapse`. The package is deprecated,
 and kept around for legacy reasons.
 
-# CHANGELOG
-
 ## 1.0.10
 
 Revert 1.0.9
@@ -98,6 +96,6 @@ Use `react-height` for calculating heights (for including margins recursively do
 
 If the wrapped element has margins, they are included in the height
 
-## 1.0.0
+# 1.0.0
 
 Initial version

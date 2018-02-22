@@ -113,8 +113,6 @@ This API change allows for cleaner usage and better documentation.
 In addition, ffe-icons-react receives a fix that unbroke a previous
 release
 
-# Changelog
-
 ## 2.4.19
 
 * Updated ffe-icons to 7.17.0, new icon: `ffe-icons-react/kr-klokke-ikon.svg`
@@ -170,66 +168,66 @@ release
 
 * Updated ffe-icons to version 7.9.1
 
-## v2.4.8
+## 2.4.8
 
 * Updated ffe-icons to version 7.9.0
 
-## v2.4.7
+## 2.4.7
 
 * Updated ffe-icons to version 7.8.0
 
-## v2.4.6
+## 2.4.6
 
 * Updated ffe-icons to version 7.7.0
 
-## v2.4.5
+## 2.4.5
 
 * Updated ffe-icons to version 7.6.1
 
-## v2.4.4
+## 2.4.4
 
 * Updated ffe-icons to version 7.6.0
 
-## v2.4.3
+## 2.4.3
 
 * Stopped using PropTypes from the main react package since that's deprecated in favour of the 'prop-types' npm package.
 
-## v2.4.2
+## 2.4.2
 
 * Updated ffe-icons to version 7.5.4
 
-## v2.4.1
+## 2.4.1
 
 * Updated ffe-icons to 7.5.3, fixing a breaking bug introduced with v7.5.1 of ffe-icons:
 
-## v2.4.0
+# 2.4.0
 
 * Update ffe-icons to 7.5.1, new icons:
 * `ffe-icons-react/binders-ikon`
 * `ffe-icons-react/svar-pil-ikon`
 * `ffe-icons-react/moped-ikon`
 
-## v2.3.1
+## 2.3.1
 
 * remove snake-cased properties from pluss-ikon and bil-camping icon
 
-## v2.3.0
+# 2.3.0
 
 * Update ffe-icons to version 7.2.0. New icons:
 * ffe-icons-react/pluss-ikon
 
-## v2.2.0
+# 2.2.0
 
 * Update ffe-icons to a new major: 7.1.1. New icons:
 * `ffe-icons-react/bil-camping-ikon`
 * `ffe-icons-react/hus-tre-ikon`
 * `ffe-icons-react/handlevogn-pakker-ikon`
 
-## v2.1.1
+## 2.1.1
 
 * Update eslint configuration
 
-## v2.0.0
+# 2.0.0
 
 * Update ffe-icons to a new major: 6.0.0.
 * `ffe-icons-react/kontorbygg-ikon` renamed to `ffe-icons-react/kontorbygg-solid-ikon`
@@ -237,54 +235,54 @@ release
 * `ffe-icons-react/personer-ikon` added
 * `ffe-icons-react/kontorbygg-ikon` added (in a non-solid version)
 
-## v1.1.1
+## 1.1.1
 
 * Update ffe-icons to version 5.3.0
 
-## v1.1.0
+# 1.1.0
 
 * Update ffe-icons to 5.2.0. New icons:
 * ffe-icons-react/konfetti-ikon
 * ffe-icons-react/tommel-opp-ikon
 
-## v1.0.0
+# 1.0.0
 
 * Updated ffe-icons to a new major: 5.0.0
 
-## v0.5.4
+## 0.5.4
 
 * Updated ffe-icons version to 4.6.0
 
-## v0.5.3
+## 0.5.3
 
 * Updated ffe-icons version to 4.5.0
 
-## v0.5.1
+## 0.5.1
 
 * Updated ffe-icons version to 4.3.0
 
-## v0.5.0
+## 0.5.0
 
 * Added support for `onClick` property on icons
 
-## v0.4.2
+## 0.4.2
 
 * Updated ffe-icons version to 4.1.0
 
-## v0.4.1
+## 0.4.1
 
 * Updated ffe-icons version to 3.7.2
 
-## v0.4.0
+## 0.4.0
 
 * ffe-icons-react return `null` if iconName don't match any icon.
 
-## v0.3.0
+## 0.3.0
 
 * Added support for title, desc, tabIndex and focusable as props, increasing support for screen readers.
 * Updated ffe-icons version to 3.7.1
 
-## v0.2.0
+## 0.2.0
 
 * Added style props
 * Added focusable="false" to prevent IE focusing on svg elements
@@ -292,6 +290,6 @@ release
 * Added eslint rules from ffe
 * Updated ffe-icons version to 3.6.
 
-## v0.1.0 (22.04.2016)
+## 0.1.0 (22.04.2016)
 
 * Initial release. Based on ffe-icons v3.3.0

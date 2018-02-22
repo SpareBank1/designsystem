@@ -97,12 +97,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * **ffe-core-react:** Add contribute.md link to readme ([b10325a](***REMOVED***))
 * **ffe-core-react:** Upgrade to React 16 ([77f0c3a](***REMOVED***))
 
-# Changelog
-
 ## v.1.0.1
 
 * Fix handling of conditional classes for Heading component
 
-## v.1.0.0
+# v.1.0.0
 
 * First release.
