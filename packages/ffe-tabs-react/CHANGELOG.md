@@ -35,9 +35,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package ffe-tabs-react
 
-## v.1.1.0
+# 1.1.0
 * Added `TabGroup` component
 * Added support for passing any prop to the `Tab` button
 
-## v.1.0.0
+# 1.0.0
 * Initial commit

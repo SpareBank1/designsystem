@@ -39,8 +39,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 * **stylelint-config-ffe:** Add contribute.md link to readme ([9d91204](***REMOVED***))
 
-# Changelog
-
 ## 0.3.0
 
 Upgrade to latest version of `stylelint-config-standard`, which removes some deprecation warnings.

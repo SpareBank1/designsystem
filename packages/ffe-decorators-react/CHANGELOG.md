@@ -67,8 +67,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package ffe-decorators-react
 
-# Changelog
-
-## v.1.0.0
+# 1.0.0
 
 * First release.

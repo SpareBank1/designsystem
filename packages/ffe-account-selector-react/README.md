@@ -20,24 +20,6 @@ For custom components:
 @import 'npm://ffe-account-selector-react/less/base-selector';
 ```
 
-## Upgrading from `nfe-ffe-account-selector-react`
-
-The origin of this package is the `nfe-account-selector-react`. The main reason for the rewrite was difficulty in managing
-focus in the `nfe-account-selector-react`. This caused the onFocus and onBlur events to fire incorrectly. This package also aims
-to provide better separation between the different selectors (currently AccountSelector and AccountSelectorMulti).
-
-The external api is mostly unchanged with some exceptions.
-
-This component no longer holds the selected object in its internal state. It's the consuming components responsibility
-to set the selected suggestion and the input field value. For example the component can be reset by passing the props:
-
-```js
- value : "",
- selectedAccount : null
-```
-
-Styling has also been changed where `nfe-account-selector` has be renamed to `account-selector`
-
 ## Example
 
 Run Styleguidist from the repository root to see live examples and documentation,

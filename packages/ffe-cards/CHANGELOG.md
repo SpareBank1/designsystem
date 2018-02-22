@@ -75,15 +75,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package ffe-cards
 
-#CHANGELOG
-
-## Version 5.0.1
+## 5.0.1
 
 * Support both versions 9 and 10 of `ffe-core`
 
-## Version 5.0.0
+# 5.0.0
 
-### Breaking changes
+### BREAKING CHANGES
 
 Bumped peer dependency version of ffe-core. No external API change, but this version requires a new major of `ffe-core`
 
@@ -92,52 +90,53 @@ Bumped peer dependency version of ffe-core. No external API change, but this ver
 
 To migrate, update your app to ffe-core version 9.x
 
-## Version 4.1.0
+# 4.1.0
 
-* Oppdatert eksempler med beskrivelse
-* Tatt i bruk `ffe-visual-tests-support`
+* Uses `ffe-visual-tests-support`
 
-## Version 4.0.1
+## 4.0.1
 
-Meta-data til styleguide
+Meta-data for styleguide
 
-## Version 4.0.0
+# 4.0.0
 
-Bruker v8.x av ffe-core
+### BREAKING CHANGES
 
-## Version 3.2.2
+Uses v8.x of ffe-core
 
-Korrigerte README.md ift. pull requests og publisering
+## 3.2.2
 
-## Version 3.2.1
+Fixed instructions for PRs in README
 
-Fiks plassering av statusbanner i Internet Explorer
+## 3.2.1
 
-## Version 3.2.0
+Bugfix for the status banner position in IE
 
-Endret bredden på ffe-product-card til 320px
+# 3.2.0
 
-## Version 3.1.0
+Default width of ffe-product-card is now 320px
 
-La til ffe-product-card
+# 3.1.0
 
-## Version 3.0.1
+Added ffe-product-card
 
-Oppdatert til å bruke v4 eller høyere av ffe-core
+## 3.0.1
 
-## Version 2.0.0
+Use v4 or higher of ffe-core
 
-Oppdatert til å bruke v4.x av ffe-core
+# 2.0.0
 
-## Version 1.0.1
+Use 4.x of ffe-core
 
-`ffe-link-card__price` erstattet med `ffe-link-card__details`
-(Denne bryter med semver men releasene er så tett på hverandre at det ikke bør skape problemer)
+## 1.0.1
 
-## Version 1.0.0
+`ffe-link-card__price` replaced with `ffe-link-card__details`
+Yes, this breaks SemVer but v1 was just released this second.
 
-Omskriving som tar utgangspunkt i en jobb som allerede var gjort for å få dette over på BEM
+# 1.0.0
 
-## Versjon 0.0.1
+Rewrite to BEM
 
-Første versjon av ffe-cards.
+# 0.0.1
+
+First version of ffe-cards.

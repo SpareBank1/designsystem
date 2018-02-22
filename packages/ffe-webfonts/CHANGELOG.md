@@ -40,8 +40,3 @@ Upgrade from ffe-core: Install ffe-webfonts and include the less file
 accordingly the package's README.  Change your `@build-path` to `@fonts-path`.
 Please note that `fonts-path` is the actual `fonts`-folder and not the parent
 folder.
-
-
-
-
-# Change Log
