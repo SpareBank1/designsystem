@@ -1,6 +1,6 @@
 {
     "name": "ffe-message-box-react",
-    "version": "3.4.0",
+    "version": "3.4.1",
     "main": "lib/index.js",
     "author": "SpareBank 1",
     "license": "MIT",
@@ -34,6 +34,6 @@
     },
     "dependencies": {
         "classnames": "^2.2.5",
-        "ffe-icons-react": "^4.0.5"
+        "ffe-icons-react": "^4.0.6"
     }
 }

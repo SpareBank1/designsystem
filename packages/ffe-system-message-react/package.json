@@ -1,6 +1,6 @@
 {
     "name": "ffe-system-message-react",
-    "version": "3.0.1",
+    "version": "3.0.2",
     "description": "SpareBank 1 System Message komponent",
     "main": "lib/index.js",
     "files": [
@@ -29,7 +29,7 @@
     "devDependencies": {
         "enzyme": "^3.3.0",
         "enzyme-adapter-react-16": "^1.1.1",
-        "ffe-icons-react": "^4.0.5",
+        "ffe-icons-react": "^4.0.6",
         "jest": "^22.1.4",
         "nsp": "^2.2.0",
         "react": "^16.2.0",

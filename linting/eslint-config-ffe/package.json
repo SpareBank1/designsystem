@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-ffe",
-  "version": "7.0.1",
+  "version": "7.0.2",
   "description": "",
   "author": "SpareBank 1",
   "license": "MIT",
@@ -28,6 +28,6 @@
     "eslint-plugin-react": "^7.0.0"
   },
   "dependencies": {
-    "eslint-config-ffe-base": "^2.3.0"
+    "eslint-config-ffe-base": "^2.3.1"
   }
 }

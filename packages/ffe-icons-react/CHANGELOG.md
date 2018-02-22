@@ -3,7 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-    <a name="4.0.5"></a>
+      <a name="4.0.6"></a>
+## [4.0.6](***REMOVED***) (2018-02-22)
+
+
+
+
+**Note:** Version bump only for package ffe-icons-react
+
+      <a name="4.0.5"></a>
 ## [4.0.5](***REMOVED***) (2018-01-19)
 
 
@@ -11,7 +19,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package ffe-icons-react
 
-    <a name="4.0.4"></a>
+  <a name="4.0.4"></a>
 ## [4.0.4](***REMOVED***) (2018-01-10)
 
 
@@ -19,7 +27,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package ffe-icons-react
 
-  <a name="4.0.3"></a>
+<a name="4.0.3"></a>
 
 ## [4.0.3](***REMOVED***) (2018-01-09)
 

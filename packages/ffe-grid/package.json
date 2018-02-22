@@ -1,6 +1,6 @@
 {
     "name": "ffe-grid",
-    "version": "6.0.10",
+    "version": "6.0.11",
     "description": "A grid component for use within the FFE framework",
     "license": "MIT",
     "keywords": [
@@ -24,7 +24,7 @@
         "ffe-core": "^10.2.4"
     },
     "devDependencies": {
-        "ffe-core": "^11.0.1",
+        "ffe-core": "^11.0.2",
         "nsp": "^3.1.0",
         "stylelint": "^8.4.0"
     }

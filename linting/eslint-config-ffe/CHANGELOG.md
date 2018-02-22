@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="7.0.2"></a>
+## [7.0.2](***REMOVED***) (2018-02-22)
+
+
+
+
+**Note:** Version bump only for package eslint-config-ffe
+
 <a name="7.0.1"></a>
 ## [7.0.1](***REMOVED***) (2018-01-10)
 

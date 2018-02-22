@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.2.9"></a>
+## [1.2.9](***REMOVED***) (2018-02-22)
+
+
+
+
+**Note:** Version bump only for package ffe-radio-button-react
+
 <a name="1.2.8"></a>
 ## [1.2.8](***REMOVED***) (2018-02-20)
 

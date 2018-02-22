@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="11.0.2"></a>
+## [11.0.2](***REMOVED***) (2018-02-22)
+
+
+
+
+**Note:** Version bump only for package ffe-core
+
       <a name="11.0.1"></a>
 ## [11.0.1](***REMOVED***) (2018-02-20)
 
@@ -14,7 +22,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="11.0.0"></a>
+    <a name="11.0.0"></a>
 # [11.0.0](***REMOVED***) (2018-02-15)
 
 
@@ -41,7 +49,7 @@ package's README and change `@build-path` to `@fonts-path`.
 
 
 
-    <a name="10.3.1"></a>
+  <a name="10.3.1"></a>
 ## [10.3.1](***REMOVED***) (2018-02-01)
 
 
@@ -52,7 +60,7 @@ package's README and change `@build-path` to `@fonts-path`.
 
 
 
-  <a name="10.3.0"></a>
+<a name="10.3.0"></a>
 # [10.3.0](***REMOVED***) (2018-01-19)
 
 
@@ -350,7 +358,7 @@ margin: 0 0 10px 10px;
 width: auto;
 
 &:first-child {
-  margin-left: 0;
+margin-left: 0;
 }
 }
 }

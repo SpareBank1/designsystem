@@ -1,6 +1,6 @@
 {
     "name": "ffe-cards-react",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "description": "React implementation of ffe-react",
     "main": "lib/index.js",
     "author": "SpareBank 1",
@@ -13,8 +13,8 @@
     "devDependencies": {
         "enzyme": "^3.3.0",
         "enzyme-adapter-react-16": "^1.1.1",
-        "ffe-icons": "^9.0.3",
-        "ffe-icons-react": "^4.0.5",
+        "ffe-icons": "^9.0.4",
+        "ffe-icons-react": "^4.0.6",
         "jest": "^22.0.4"
     },
     "jest": {

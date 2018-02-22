@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.8"></a>
+## [2.0.8](***REMOVED***) (2018-02-22)
+
+
+
+
+**Note:** Version bump only for package ffe-spinner
+
 <a name="2.0.7"></a>
 ## [2.0.7](***REMOVED***) (2018-02-20)
 

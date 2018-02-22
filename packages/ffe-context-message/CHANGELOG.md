@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.16"></a>
+## [2.0.16](***REMOVED***) (2018-02-22)
+
+
+
+
+**Note:** Version bump only for package ffe-context-message
+
 <a name="2.0.15"></a>
 ## [2.0.15](***REMOVED***) (2018-02-20)
 

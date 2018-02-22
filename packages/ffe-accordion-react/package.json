@@ -1,6 +1,6 @@
 {
     "name": "ffe-accordion-react",
-    "version": "4.0.8",
+    "version": "4.0.9",
     "main": "lib/index.js",
     "author": "SpareBank 1",
     "license": "MIT",
@@ -19,7 +19,7 @@
     },
     "dependencies": {
         "classnames": "^2.2.5",
-        "ffe-icons-react": "^4.0.5",
+        "ffe-icons-react": "^4.0.6",
         "prop-types": "^15.6.0",
         "react-collapse": "^4.0.3",
         "react-motion": "^0.5.2",
@@ -28,8 +28,8 @@
     "devDependencies": {
         "enzyme": "^3.3.0",
         "enzyme-adapter-react-16": "^1.1.1",
-        "ffe-accordion": "^3.0.9",
-        "ffe-core": "^11.0.1",
+        "ffe-accordion": "^3.0.10",
+        "ffe-core": "^11.0.2",
         "jest": "^22.0.4"
     },
     "files": [

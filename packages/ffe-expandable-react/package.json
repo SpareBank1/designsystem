@@ -1,6 +1,6 @@
 {
     "name": "ffe-expandable-react",
-    "version": "2.0.4",
+    "version": "2.0.5",
     "main": "lib/ffe-expandable-react.js",
     "scripts": {
         "build": "babel -d lib src",
