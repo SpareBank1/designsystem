@@ -6,8 +6,10 @@
     "license": "SEE LICENSE IN README.md",
     "private": true,
     "scripts": {
-        "clean": "lerna clean --yes",
+        "clean": "run-s clean:lib clean:lerna",
         "clean:icons": "lerna clean --scope ffe-icons-react",
+        "clean:lib": "rimraf packages/*/lib",
+        "clean:lerna": "lerna clean --yes",
         "precommit": "precise-commits",
         "commitmsg": "commitlint -e $GIT_PARAMS",
         "postinstall": "npm run bootstrap",
@@ -56,6 +58,7 @@
         "react-dom": "^16.1.1",
         "react-scrollspy": "^3.3.5",
         "react-styleguidist": "^6.0.32",
+        "rimraf": "^2.6.2",
         "style-loader": "^0.19.1",
         "stylelint-config-prettier": "^2.0.0",
         "webpack": "^3.8.1"
