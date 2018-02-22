@@ -17,7 +17,8 @@
     "homepage": "***REMOVED***",
     "devDependencies": {
         "ffe-core": "^11.0.2",
-        "ffe-form": "^8.1.11"
+        "ffe-form": "^8.1.11",
+        "nsp": "^3.2.1"
     },
     "peerDependencies": {
         "ffe-core": "^9.0.0 || ^10.0.0",

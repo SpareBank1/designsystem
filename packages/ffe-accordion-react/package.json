@@ -30,7 +30,8 @@
         "enzyme-adapter-react-16": "^1.1.1",
         "ffe-accordion": "^3.0.10",
         "ffe-core": "^11.0.2",
-        "jest": "^22.4.0"
+        "jest": "^22.4.0",
+        "nsp": "^3.2.1"
     },
     "files": [
         "lib",

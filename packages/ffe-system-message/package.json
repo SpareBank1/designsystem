@@ -21,6 +21,7 @@
         "ffe-core": "^9.2.0 || ^10.0.0"
     },
     "devDependencies": {
-        "ffe-core": "^11.0.2"
+        "ffe-core": "^11.0.2",
+        "nsp": "^3.2.1"
     }
 }

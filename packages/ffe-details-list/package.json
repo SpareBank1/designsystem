@@ -20,6 +20,7 @@
     },
     "devDependencies": {
         "ffe-core": "^11.0.2",
+        "nsp": "^3.2.1",
         "stylelint": "^8.4.0"
     }
 }

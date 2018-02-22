@@ -18,7 +18,8 @@
         "enzyme-adapter-react-16": "^1.1.1",
         "ffe-icons": "^9.0.4",
         "ffe-icons-react": "^4.0.6",
-        "jest": "^22.4.0"
+        "jest": "^22.4.0",
+        "nsp": "^3.2.1"
     },
     "jest": {
         "setupTestFrameworkScriptFile": "../../test-setup.js"

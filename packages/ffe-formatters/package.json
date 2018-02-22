@@ -26,7 +26,8 @@
     "devDependencies": {
         "eslint": "^4.13.1",
         "jest": "^22.4.0",
-        "moment": "^2.18.1"
+        "moment": "^2.18.1",
+        "nsp": "^3.2.1"
     },
     "dependencies": {
         "underscore.string": "^3.3.4"
