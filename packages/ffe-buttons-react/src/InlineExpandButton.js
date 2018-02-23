@@ -1,7 +1,7 @@
 import React from 'react';
 import { bool, func, node, string } from 'prop-types';
 import classNames from 'classnames';
-import ChevronIkon from 'ffe-icons-react/lib/chevron-ikon';
+import ChevronIkon from '@sb1/ffe-icons-react/lib/chevron-ikon';
 
 const InlineExpandButton = (props) => {
     const {

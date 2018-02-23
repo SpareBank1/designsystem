@@ -179,19 +179,19 @@ If you're using webpack@>=2.0.0, please make the following changes
 to migrate:
 
 ```diff
-- import ChevronIkon from 'ffe-icons-react/chevron-ikon';
-- import FamilieIkon from 'ffe-icons-react/familie-ikon';
-+ import { ChevronIkon, FamilieIkon } from 'ffe-icons-react';
+- import ChevronIkon from '@sb1/ffe-icons-react/chevron-ikon';
+- import FamilieIkon from '@sb1/ffe-icons-react/familie-ikon';
++ import { ChevronIkon, FamilieIkon } from '@sb1/ffe-icons-react';
 ```
 
 If you're not using a build tool that enables dead code elimination
 and tree shaking, please make the following changes to migrate:
 
 ```diff
-- import ChevronIkon from 'ffe-icons-react/chevron-ikon';
-- import FamilieIkon from 'ffe-icons-react/familie-ikon';
-+ import ChevronIkon from 'ffe-icons-react/lib/chevron-ikon';
-+ import FamilieIkon from 'ffe-icons-react/lib/familie-ikon';
+- import ChevronIkon from '@sb1/ffe-icons-react/chevron-ikon';
+- import FamilieIkon from '@sb1/ffe-icons-react/familie-ikon';
++ import ChevronIkon from '@sb1/ffe-icons-react/lib/chevron-ikon';
++ import FamilieIkon from '@sb1/ffe-icons-react/lib/familie-ikon';
 ```
 
 This API change allows for cleaner usage and better documentation.

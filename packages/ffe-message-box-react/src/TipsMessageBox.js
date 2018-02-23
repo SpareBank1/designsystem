@@ -1,5 +1,5 @@
 import React from 'react';
-import LyspareIkon from 'ffe-icons-react/lib/lyspare-ikon';
+import LyspareIkon from '@sb1/ffe-icons-react/lib/lyspare-ikon';
 import MessageBox from './MessageBox';
 
 const iconStyles = {

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Grid, GridRow, GridCol } from 'ffe-grid-react';
+import { Grid, GridRow, GridCol } from '@sb1/ffe-grid-react';
 import { render } from 'react-dom';
 
 const createGridContainer = () => {

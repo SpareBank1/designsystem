@@ -1,5 +1,5 @@
 import React from 'react';
-import UtropstegnIkon from 'ffe-icons-react/lib/utropstegn-ikon';
+import UtropstegnIkon from '@sb1/ffe-icons-react/lib/utropstegn-ikon';
 import MessageBox from './MessageBox';
 
 const iconStyles = {

@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { node, string } from 'prop-types';
 
-import { GridCol, GridRow } from 'ffe-grid-react';
+import { GridCol, GridRow } from '@sb1/ffe-grid-react';
 
 export default function Detail(props) {
     const { children, label } = props;

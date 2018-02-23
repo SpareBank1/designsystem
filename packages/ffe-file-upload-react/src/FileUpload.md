@@ -6,7 +6,7 @@ initialState = { selectedFiles: [] };
 const getFileContents = file =>
     new Promise(resolve => {
         // Get the file contents here using getFileContent
-        // import { getFileContent } from 'ffe-file-upload-react';
+        // import { getFileContent } from '@sb1/ffe-file-upload-react';
         setTimeout(resolve, 300, 'Her kommer filinnholdet');
     });
 

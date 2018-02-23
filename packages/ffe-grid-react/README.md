@@ -18,7 +18,7 @@ For å lettere inspisere hvordan innholdet legger seg i kolonner, eller for å s
 Et eksempel er
 
 ```javascript
-import showGrid from 'ffe-grid-react/lib/show-grid';
+import showGrid from '@sb1/ffe-grid-react/lib/show-grid';
 window.showGrid = showGrid;
 ```
 

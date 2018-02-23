@@ -1,4 +1,4 @@
-import { formatNumber } from 'ffe-formatters';
+import { formatNumber } from '@sb1/ffe-formatters';
 import { currencyAffixNOK } from './types';
 
 const getWeightedSumOfDigits = accountNumber => {

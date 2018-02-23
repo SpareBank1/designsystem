@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { string, bool, func } from 'prop-types';
 import classNames from 'classnames';
-import KryssIkon from 'ffe-icons-react/lib/kryss-ikon';
+import KryssIkon from '@sb1/ffe-icons-react/lib/kryss-ikon';
 
 class Input extends Component {
     constructor(props) {
