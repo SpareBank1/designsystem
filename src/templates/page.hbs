@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf8">
+  <title>{{ title }} - {{ section.name }}</title>
+  <link rel="stylesheet" href="/ffe.css">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+  {{> header }}
+
+  <div class="sb1ds ffe-grid ffe-grid--no-top-padding">
+    <div class="ffe-grid__row">
+      <div class="ffe-grid__col--lg-3 ffe-grid__col--md-4 ffe-grid__col--sm-12 ffe-grid__col--no-bottom-padding">
+        <div class="sb1ds-sidebar__wrapper">
+        <div class="sb1ds-sidebar sb1ds-sidebar--expanded">
+          <div class="sb1ds-sidebar__menu">
+            <ul class="sb1ds-components-list">
+              <li class="sb1ds-components-list__item--heading sb1ds-components-list__item">
+                <a class="ffe-link-text ffe-link-text--no-underline sb1ds-components-list__link sb1ds-components-list__link--heading" href="#{{section.target}}">{{section.name}}</a>
+                {{> sectionsToc}}
+              </li>
+            </ul>
+          </div>
+          </div>
+        </div>
+      </div>
+      <div class="ffe-grid__col--lg-9 ffe-grid__col--md-8 ffe-grid__col--sm-12 ffe-grid__col--no-bottom-padding">
+        <main class="sb1ds-main">
+          {{> section depth=1}}
+        </main>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

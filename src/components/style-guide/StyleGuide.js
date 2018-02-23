@@ -10,8 +10,6 @@ export default function StyleGuide(props) {
 
     return (
         <Fragment>
-            <TopMenu />
-
             <Grid noTopPadding={true} className="sb1ds">
                 <GridRow>
                     <GridCol lg={3} md={4} sm={12} noBottomPadding={true}>

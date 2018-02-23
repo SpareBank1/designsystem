@@ -6,7 +6,7 @@ node_modules
 
 # Built files
 dist/
-styleguide/
+src/styleguidist.html
 
 # Editors
 .idea/

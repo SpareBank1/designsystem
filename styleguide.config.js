@@ -10,6 +10,7 @@ module.exports = {
     ],
     components: 'packages/ffe-*-react/src/**/[A-Z]+([A-Za-z]).js',
     styleguideComponents: components,
+    styleguideDir: 'dist/styleguidist',
     theme: {
         color: {
             link: '#676767',
@@ -45,148 +46,53 @@ module.exports = {
             ],
         },
     },
+    template: 'src/styleguidist.html',
     sections: [
         {
-            name: 'Kom i gang',
-            content: 'src/content/kom-i-gang/index.md',
-            sections: [
-                {
-                    name: 'For designere',
-                    content: 'src/content/kom-i-gang/for-designere.md',
-                },
-                {
-                    name: 'For utviklere',
-                    content: 'src/content/kom-i-gang/for-utviklere.md',
-                },
-                {
-                    name: 'Om FFE',
-                    content: 'src/content/kom-i-gang/om-ffe.md',
-                },
-                {
-                    name: 'Bidra',
-                    content: 'src/content/kom-i-gang/bidra.md',
-                },
-            ],
+            name: 'Knapper',
+            content: 'packages/ffe-buttons-react/USAGE.md',
+            components: 'packages/ffe-buttons-react/src/[A-Z]+([A-Za-z]).js',
         },
         {
-            name: 'Merkevare',
-            content: 'src/content/merkevare/index.md',
-            sections: [
-                {
-                    name: 'Profil',
-                    content: 'src/content/merkevare/profil.md',
-                },
-                {
-                    name: 'Stil og tone',
-                    content: 'src/content/merkevare/stil-og-tone.md',
-                },
-            ],
+            name: 'Typografi',
+            content: 'packages/ffe-core-react/USAGE.md',
+            components:
+                'packages/ffe-core-react/src/typography/[A-Z]+([A-Za-z]).js',
         },
         {
-            name: 'Visuell stil',
-            content: 'src/content/visuell-stil/index.md',
-            sections: [
-                {
-                    name: 'Farger',
-                    content: 'src/content/visuell-stil/farger.md',
-                },
-                {
-                    name: 'Ikoner',
-                    content: 'src/content/visuell-stil/ikoner.md',
-                },
-                {
-                    name: 'Typografi',
-                    content: 'src/content/visuell-stil/typografi.md',
-                },
-                {
-                    name: 'Illustrasjoner',
-                    content: 'src/content/visuell-stil/illustrasjoner.md',
-                },
-                {
-                    name: 'Animasjoner',
-                    content: 'src/content/visuell-stil/animasjoner.md',
-                },
-                {
-                    name: 'Layout',
-                    content: 'src/content/visuell-stil/layout/index.md',
-
-                    sections: [
-                        {
-                            name: 'Grid',
-                            content:
-                                'src/content/visuell-stil/layout/grid/index.md',
-                        },
-                    ],
-                },
-            ],
+            name: 'Lister',
+            components: 'packages/ffe-lists-react/src/[A-Z]+([A-Za-z]).js',
         },
         {
-            name: 'Universell utforming',
-            content: 'src/content/universell-utforming/index.md',
-            sections: [
-                {
-                    name: 'WAI-Aria',
-                    content:
-                        'src/content/universell-utforming/wai-aria.md',
-                },
-                {
-                    name: 'Kontrast',
-                    content:
-                        'src/content/universell-utforming/kontrast.md',
-                },
-            ],
+            name: 'Formatering',
+            content: 'packages/ffe-formatters/USAGE.md',
         },
-
         {
-            name: 'Komponenter',
-            content: 'src/content/komponenter/index.md',
+            name: 'Ikoner',
+            content: 'packages/ffe-icons-react/USAGE.md',
+        },
+        {
+            name: 'Kakediagram',
+            content: 'packages/ffe-chart-donut-react/USAGE.md',
+            components:
+                'packages/ffe-chart-donut-react/src/[A-Z]+([A-Za-z]).js',
+        },
+        {
+            name: 'Accordion',
+            components: 'packages/ffe-accordion-react/src/Accordion*.js',
+        },
+        {
+            name: 'Kontovelger',
+            components:
+                'packages/ffe-account-selector-react/src/components/**/[A-Z]+([A-Za-z]).js',
+        },
+        {
+            name: 'Kort',
+            components: 'packages/ffe-cards-react/src/[A-Z]+([A-Za-z]).js',
+        },
+        {
+            name: 'Meldinger',
             sections: [
-                {
-                    name: 'Knapper',
-                    content: 'packages/ffe-buttons-react/USAGE.md',
-                    components:
-                        'packages/ffe-buttons-react/src/[A-Z]+([A-Za-z]).js',
-                },
-                {
-                    name: 'Typografi',
-                    content: 'packages/ffe-core-react/USAGE.md',
-                    components:
-                        'packages/ffe-core-react/src/typography/[A-Z]+([A-Za-z]).js',
-                },
-                {
-                    name: 'Lister',
-                    components:
-                        'packages/ffe-lists-react/src/[A-Z]+([A-Za-z]).js',
-                },
-                {
-                    name: 'Formatering',
-                    content: 'packages/ffe-formatters/USAGE.md',
-                },
-                {
-                    name: 'Ikoner',
-                    content: 'packages/ffe-icons-react/USAGE.md',
-                },
-                {
-                    name: 'Kakediagram',
-                    content: 'packages/ffe-chart-donut-react/USAGE.md',
-                    components:
-                        'packages/ffe-chart-donut-react/src/[A-Z]+([A-Za-z]).js',
-                },
-                {
-                    name: 'Accordion',
-                    components:
-                        'packages/ffe-accordion-react/src/Accordion*.js',
-                },
-                {
-                    name: 'Kontovelger',
-                    components:
-                        'packages/ffe-account-selector-react/src/components/**/[A-Z]+([A-Za-z]).js',
-                },
-                {
-                    name: 'Kort',
-                    components:
-                        'packages/ffe-cards-react/src/[A-Z]+([A-Za-z]).js',
-                },
                 {
                     name: 'Meldinger, bokser',
                     components:
@@ -203,60 +109,55 @@ module.exports = {
                     components:
                         'packages/ffe-system-message-react/src/System{Error,Info,News,Success}Message.js',
                 },
-                {
-                    name: 'Dropdowns',
-                    components: () => [
-                        'packages/ffe-searchable-dropdown-react/src/SearchableDropdown.js',
-                        'packages/ffe-dropdown-react/src/Dropdown.js',
-                    ],
-                },
-                {
-                    name: 'Grid',
-                    content: 'packages/ffe-grid-react/USAGE.md',
-                    components:
-                        'packages/ffe-grid-react/src/[A-Z]+([A-Za-z]).js',
-                },
-                {
-                    name: 'Detaljliste',
-                    components:
-                        'packages/ffe-details-list-react/src/[A-Z]+([A-Za-z]).js',
-                },
-                {
-                    name: 'Tabeller',
-                    content: 'packages/ffe-tables-react/USAGE.md',
-                    components: 'packages/ffe-tables-react/src/Table.js',
-                },
-                {
-                    name: 'Skjema',
-                    components:
-                        'packages/ffe-form-react/src/[A-Z]+([A-Za-z]).js',
-                },
-                {
-                    name: 'Checkbox',
-                    components:
-                        'packages/ffe-checkbox-react/src/[A-Z]+([A-Za-z]).js',
-                },
-                {
-                    name: 'Datepicker',
-                    components:
-                        'packages/ffe-datepicker-react/src/**/{Datepicker,Calendar,Input}.js',
-                },
-                {
-                    name: 'Filopplasting',
-                    components:
-                        'packages/ffe-file-upload-react/src/[A-Z]+([A-Za-z]).js',
-                },
-                {
-                    name: 'Spinners',
-                    components:
-                        'packages/ffe-spinner-react/src/[A-Z]+([A-Za-z]).js',
-                },
-                {
-                    name: 'Faner',
-                    components:
-                        'packages/ffe-tabs-react/src/[A-Z]+([A-Za-z]).js',
-                },
             ],
+        },
+        {
+            name: 'Dropdowns',
+            components: () => [
+                'packages/ffe-searchable-dropdown-react/src/SearchableDropdown.js',
+                'packages/ffe-dropdown-react/src/Dropdown.js',
+            ],
+        },
+        {
+            name: 'Grid',
+            content: 'packages/ffe-grid-react/USAGE.md',
+            components: 'packages/ffe-grid-react/src/[A-Z]+([A-Za-z]).js',
+        },
+        {
+            name: 'Detaljliste',
+            components:
+                'packages/ffe-details-list-react/src/[A-Z]+([A-Za-z]).js',
+        },
+        {
+            name: 'Tabeller',
+            content: 'packages/ffe-tables-react/USAGE.md',
+            components: 'packages/ffe-tables-react/src/Table.js',
+        },
+        {
+            name: 'Skjema',
+            components: 'packages/ffe-form-react/src/[A-Z]+([A-Za-z]).js',
+        },
+        {
+            name: 'Checkbox',
+            components: 'packages/ffe-checkbox-react/src/[A-Z]+([A-Za-z]).js',
+        },
+        {
+            name: 'Datepicker',
+            components:
+                'packages/ffe-datepicker-react/src/**/{Datepicker,Calendar,Input}.js',
+        },
+        {
+            name: 'Filopplasting',
+            components:
+                'packages/ffe-file-upload-react/src/[A-Z]+([A-Za-z]).js',
+        },
+        {
+            name: 'Spinners',
+            components: 'packages/ffe-spinner-react/src/[A-Z]+([A-Za-z]).js',
+        },
+        {
+            name: 'Faner',
+            components: 'packages/ffe-tabs-react/src/[A-Z]+([A-Za-z]).js',
         },
     ],
 };

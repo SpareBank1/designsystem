@@ -38,17 +38,19 @@
         position: relative;
         transition: all @ffe-transition-duration @ffe-ease;
 
-        &::before {
-            content: '';
-            display: block;
-            height: 5px;
-            background: @ffe-blue-royal;
-            position: absolute;
-            top: 0;
-            left: 20px;
-            right: 20px;
-            transform: translateY(-10px);
-            transition: transform @ffe-transition-duration @ffe-ease-in-out-back;
+        @media screen and (min-width: @breakpoint-lg) {
+            &::before {
+                content: '';
+                display: block;
+                height: 5px;
+                background: @ffe-blue-royal;
+                position: absolute;
+                top: 0;
+                left: 20px;
+                right: 20px;
+                transform: translateY(-10px);
+                transition: transform @ffe-transition-duration @ffe-ease-in-out-back;
+            }
         }
 
         &::after {
@@ -82,8 +84,6 @@
     }
 
     &__wrapper {
-        display: none;
-
         @media screen and (min-width: @breakpoint-lg) {
             display: flex;
         }

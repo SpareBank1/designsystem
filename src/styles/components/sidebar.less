@@ -4,7 +4,7 @@
 
     @media screen and (min-width: @breakpoint-md) {
         border-right: 1px solid @ffe-grey-silver;
-        min-height: calc(~'100vh - 60px');
+        min-height: 100vh;
         height: 100%;
     }
 
@@ -21,7 +21,8 @@
 
         @media screen and (min-width: @breakpoint-xl) {
             position: fixed;
-            overflow: auto;
+            overflow-y: auto;
+            overflow-x: hidden;
             height: calc(~'100vh - 100px');
             max-width: 265px;
 
@@ -42,8 +43,11 @@
     }
 
     &__wrapper {
+        margin: 0 -10px;
+
         @media screen and (min-width: @breakpoint-md) {
             height: 100%;
+            margin: 0;
         }
     }
 

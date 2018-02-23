@@ -15,6 +15,7 @@ npm start       # Starter en lokal server på localhost:6060
 npm test        # Kjør alle tester for alle pakker
 npm run lint    # Lint alle pakker
 npm run build   # Bygg alle pakker
+npm run build:htdocs   # Bygg dokumentasjon
 ```
 
 ## Hvordan ser jeg hva som er nytt?
