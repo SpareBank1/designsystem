@@ -1,6 +1,6 @@
 {
-    "name": "ffe-message-box",
-    "version": "4.2.5",
+    "name": "@sb1/ffe-message-box",
+    "version": "4.2.7",
     "description": "Meldingsboks",
     "main": "less/ffe-message-box",
     "repository": {
@@ -8,14 +8,17 @@
         "url": "***REMOVED***"
     },
     "author": "SpareBank 1",
-    "license": "UNLICENSED",
+    "license": "MIT",
     "scripts": {
-        "lint": "stylelint less/*.less"
+        "lint": "stylelint less/*.less",
+        "test": "npm run lint && npm run test:nsp",
+        "test:nsp": "nsp check"
     },
     "peerDependencies": {
-        "ffe-core": "^9.0.0 || ^10.0.0"
+        "@sb1/ffe-core": "^11.0.3"
     },
     "devDependencies": {
+        "nsp": "^3.2.1",
         "stylelint": "^8.4.0"
     }
 }

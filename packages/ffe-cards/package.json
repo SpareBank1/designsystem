@@ -1,18 +1,20 @@
 {
-    "name": "ffe-cards",
-    "version": "5.0.9",
+    "name": "@sb1/ffe-cards",
+    "version": "5.0.12",
     "description": "Kort for bruk i oversikter",
     "main": "index.js",
     "scripts": {
-        "test": "npm run lint",
-        "lint": "stylelint less/*.less"
+        "lint": "stylelint less/*.less",
+        "test": "npm run lint && npm run test:nsp",
+        "test:nsp": "nsp check"
     },
     "author": "SpareBank 1",
-    "license": "UNLICENSED",
+    "license": "MIT",
     "peerDependencies": {
-        "ffe-core": "^10.2.4"
+        "@sb1/ffe-core": "^11.0.2"
     },
     "devDependencies": {
-        "ffe-core": "^11.0.0"
+        "nsp": "^3.2.1",
+        "@sb1/ffe-core": "^11.0.3"
     }
 }

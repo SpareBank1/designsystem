@@ -4,8 +4,8 @@ React dropdown component with search.
 
 ## Install
 
-```
-$ npm install --save ffe-searchable-dropdown-react
+```bash
+npm install --save ffe-searchable-dropdown-react
 ```
 
 ## Usage

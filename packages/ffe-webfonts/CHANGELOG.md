@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.3"></a>
+## [1.0.3](***REMOVED***) (2018-02-23)
+
+
+
+
+**Note:** Version bump only for package ffe-webfonts
+
+<a name="1.0.2"></a>
+## [1.0.2](***REMOVED***) (2018-02-22)
+
+
+
+
+**Note:** Version bump only for package ffe-webfonts
+
 <a name="1.0.1"></a>
 ## [1.0.1](***REMOVED***) (2018-02-19)
 
@@ -32,8 +48,3 @@ Upgrade from ffe-core: Install ffe-webfonts and include the less file
 accordingly the package's README.  Change your `@build-path` to `@fonts-path`.
 Please note that `fonts-path` is the actual `fonts`-folder and not the parent
 folder.
-
-
-
-
-# Change Log

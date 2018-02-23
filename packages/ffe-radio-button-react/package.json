@@ -1,36 +1,32 @@
 {
-    "name": "ffe-radio-button-react",
-    "version": "1.2.7",
+    "name": "@sb1/ffe-radio-button-react",
+    "version": "1.2.10",
     "main": "lib/index.js",
-    "license": "UNLICENSED",
-    "scripts": {
-        "build": "babel -d lib/. --ignore=*.test.js src/.",
-        "lint": "eslint src/.",
-        "test:nsp": "nsp check",
-        "test:spec": "mocha --require babel-register --require ./test-setup.js --reporter mocha-tap13 src/**/*.test.js",
-        "test": "npm run test:spec && npm run test:nsp"
-    },
-    "devDependencies": {
-        "chai": "^4.1.2",
-        "chai-enzyme": "^1.0.0-beta.0",
-        "enzyme": "^3.3.0",
-        "eslint": "^4.13.1",
-        "jsdom": "^11.5.1",
-        "mocha": "^4.1.0",
-        "mocha-tap13": "^1.0.2",
-        "nsp": "^3.1.0",
-        "react": "^16.1.1",
-        "react-addons-test-utils": "^15.0.1",
-        "react-dom": "^16.1.1",
-        "sinon": "^4.1.3"
-    },
+    "license": "MIT",
     "files": [
         "lib",
         "*.js"
     ],
+    "scripts": {
+        "build": "babel -d lib/. --ignore=*.spec.js src/.",
+        "lint": "eslint src/.",
+        "test": "npm run test:spec && npm run test:nsp",
+        "test:nsp": "nsp check",
+        "test:spec": "jest",
+        "test:watch": "jest --watch"
+    },
+    "devDependencies": {
+        "jest": "^22.4.0",
+        "nsp": "^3.2.1",
+        "react": "^16.1.1",
+        "react-dom": "^16.1.1"
+    },
     "dependencies": {
         "classnames": "^2.2.5",
         "prop-types": "^15.6.0",
         "uuid": "^3.1.0"
+    },
+    "jest": {
+        "setupTestFrameworkScriptFile": "../../test-setup.js"
     }
 }

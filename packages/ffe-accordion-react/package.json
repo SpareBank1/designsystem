@@ -1,25 +1,25 @@
 {
-    "name": "ffe-accordion-react",
-    "version": "4.0.7",
+    "name": "@sb1/ffe-accordion-react",
+    "version": "4.0.10",
     "main": "lib/index.js",
     "author": "SpareBank 1",
-    "license": "UNLICENSED",
+    "license": "MIT",
     "scripts": {
-        "build": "babel -d lib/. --ignore=*.test.js src/.",
+        "build": "babel -d lib/. --ignore=*.spec.js src/.",
         "lint": "eslint src/.",
+        "test": "npm run test:spec && npm run test:nsp",
         "test:nsp": "nsp check",
         "test:spec": "jest",
-        "test": "npm run test:spec && npm run test:nsp",
-        "tdd": "jest --watch"
+        "test:watch": "jest --watch"
     },
     "peerDependencies": {
-        "ffe-accordion": "^3.0.4",
-        "ffe-core": "^10.2.4",
-        "react": "^0.14.0 || ^15.0.0 || ^16.0.0"
+        "@sb1/ffe-accordion": "^3.0.10",
+        "@sb1/ffe-core": "^11.0.2",
+        "react": "^15.0.0 || ^16.0.0"
     },
     "dependencies": {
         "classnames": "^2.2.5",
-        "ffe-icons-react": "^4.0.5",
+        "@sb1/ffe-icons-react": "^4.0.7",
         "prop-types": "^15.6.0",
         "react-collapse": "^4.0.3",
         "react-motion": "^0.5.2",
@@ -28,15 +28,16 @@
     "devDependencies": {
         "enzyme": "^3.3.0",
         "enzyme-adapter-react-16": "^1.1.1",
-        "ffe-accordion": "^3.0.8",
-        "ffe-core": "^11.0.0",
-        "jest": "^22.0.4"
+        "jest": "^22.4.0",
+        "nsp": "^3.2.1",
+        "@sb1/ffe-accordion": "^3.0.11",
+        "@sb1/ffe-core": "^11.0.3"
     },
     "files": [
         "lib",
         "*.js"
     ],
     "jest": {
-        "setupTestFrameworkScriptFile": "./test-setup.js"
+        "setupTestFrameworkScriptFile": "../../test-setup.js"
     }
 }

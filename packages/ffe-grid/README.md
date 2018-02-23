@@ -1,20 +1,22 @@
-# ffe-grid
+# @sb1/ffe-grid
 
 A 12-column grid you can use to visually structure your UIs.
 
 ## Installation
 
 ```bash
-$ npm install --save ffe-core ffe-grid
+npm install --save @sb1/ffe-core @sb1/ffe-grid
 ```
 
 Remember to include the less-file in your main less-file:
 
 ```less
-@import '~ffe-grid/less/ffe-grid';
+@import '~@sb1/ffe-grid/less/ffe-grid';
 ```
 
 ## Usage
+
+See also `@sb1/ffe-grid-react`.
 
 All you need to remember is `.ffe-grid`, `.ffe-grid__row` and `.ffe-grid__col`.
 
@@ -182,20 +184,3 @@ Space the content out with space around each item
 ##### `.ffe-grid__col--between`
 
 Space the content out with space between each item
-
-## Development
-
-To develop locally, clone the repository and install the dependencies. Once you have, you have
-the following commands available to you:
-
-```bash
-$ npm start             # Starts a local web server with live reload
-$ npm test              # Runs visual regression tests
-$ npm run lint          # Lints your less-files
-$ npm run build         # Compiles the files into the examples/ folder
-```
-
-## Contributing
-
-For contributing guidelines, check the
-[contribution guidelines for ffe-core](***REMOVED***).

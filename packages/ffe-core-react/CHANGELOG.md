@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.2.4"></a>
+## [1.2.4](***REMOVED***) (2018-02-23)
+
+
+
+
+**Note:** Version bump only for package ffe-core-react
+
+<a name="1.2.3"></a>
+## [1.2.3](***REMOVED***) (2018-02-22)
+
+
+
+
+**Note:** Version bump only for package ffe-core-react
+
+<a name="1.2.2"></a>
+## [1.2.2](***REMOVED***) (2018-02-21)
+
+
+
+
+**Note:** Version bump only for package ffe-core-react
+
 <a name="1.2.1"></a>
 ## [1.2.1](***REMOVED***) (2018-01-26)
 
@@ -81,12 +105,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * **ffe-core-react:** Add contribute.md link to readme ([b10325a](***REMOVED***))
 * **ffe-core-react:** Upgrade to React 16 ([77f0c3a](***REMOVED***))
 
-# Changelog
-
 ## v.1.0.1
 
 * Fix handling of conditional classes for Heading component
 
-## v.1.0.0
+# v.1.0.0
 
 * First release.

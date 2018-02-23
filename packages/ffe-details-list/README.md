@@ -1,9 +1,15 @@
-# ffe-details-list
+# @sb1/ffe-details-list
 
-## Intro
+## Install
 
-Felles komponent for opplisting av attributter i en grid.
+```bash
+npm install --save @sb1/ffe-core @sb1/ffe-details-list
+```
 
-## Bruk
+## Usage
 
-<code>@import ../node_modules/ffe-details-list/less/ffe-details-list</code> i en less-fil i ditt prosjekt.
+```less
+@import 'path/to/node_modules/@sb1/ffe-details-list/less/ffe-details-list';
+```
+
+See also `@sb1/ffe-details-list-react`.

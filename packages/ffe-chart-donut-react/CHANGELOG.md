@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.14"></a>
+## [1.0.14](***REMOVED***) (2018-02-23)
+
+
+
+
+**Note:** Version bump only for package ffe-chart-donut-react
+
+<a name="1.0.13"></a>
+## [1.0.13](***REMOVED***) (2018-02-22)
+
+
+
+
+**Note:** Version bump only for package ffe-chart-donut-react
+
+<a name="1.0.12"></a>
+## [1.0.12](***REMOVED***) (2018-02-20)
+
+
+
+
+**Note:** Version bump only for package ffe-chart-donut-react
+
 <a name="1.0.11"></a>
 ## [1.0.11](***REMOVED***) (2018-02-15)
 
@@ -67,17 +91,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package ffe-chart-donut-react
 
-# Changelog for ffe-chart-donut-react
-
-## v.1.0.2
+## 1.0.2
 
 * Added inline JSDoc comments for prop types
 * Added support for React 16
 
-## v.1.0.1
+## 1.0.1
 
 * Use PropTypes from prop-types package
 
-## v.1.0.0
+# 1.0.0
 
 * First release.

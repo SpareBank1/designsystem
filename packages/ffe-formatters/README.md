@@ -1,4 +1,4 @@
-# ffe-formatters
+# @sb1/ffe-formatters
 
 JavaScript general use string formatters.
 
@@ -7,7 +7,7 @@ JavaScript general use string formatters.
 Install this package via npm like so:
 
 ```bash
-npm install --save ffe-formatters
+npm install --save @sb1/ffe-formatters
 ```
 
 ## Usage
@@ -15,24 +15,8 @@ npm install --save ffe-formatters
 Import the formatter(s) you need the following way:
 
 ```javascript
-import formatNumber from 'ffe-formatters/lib/formatNumber';
-import formatPercentage from 'ffe-formatters/lib/formatPercentage';
+import formatNumber from '@sb1/ffe-formatters/lib/formatNumber';
+import formatPercentage from '@sb1/ffe-formatters/lib/formatPercentage';
 ```
 
-You'll find a full overview and documentation over all the available formatters [here](src).
-
-## Development
-
-To develop locally, clone the repository and install the dependencies. Once you have, you have
-the following commands available to you:
-
-```bash
-npm test                    # Runs all tests
-npm run test:watch          # Starts the continuous test runner
-npm run test:coverage       # Runs all tests with code coverage
-npm run lint                # Lints the code for errors
-```
-
-## Contributing
-
-For contributing guidelines, check the [contribution guidelines for ffe-core](***REMOVED***).
+You'll find a full overview and documentation over all the available formatters [in src/](src).

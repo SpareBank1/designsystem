@@ -1,26 +1,21 @@
-# ffe-eslint-config
+# @sb1/eslint-config-ffe
 
-Recommended eslint-config used for ffe-components. Based on eslint-config-airbnb, but without any styling rules.
+Recommended eslint config used for FFE components. Based on eslint-config-airbnb, but without any styling rules.
+
+## Install
+
+```bash
+npm install --save-dev eslint @sb1/eslint-config-ffe eslint-plugin-import eslint-plugin-react eslint-plugin-jsx-a11y
+```
 
 ## Usage
 
-Install npm module
-
-```bash
-npm i -D eslint eslint-config-ffe eslint-plugin-import eslint-plugin-react eslint-plugin-jsx-a11y
-```
-
-Create .eslintsrc and extend this config.
+Create `.eslintsrc` in the same directory as your `package.json` and extend this config:
 
 ```json
 {
-    "extends": "ffe"
+    "extends": "@sb1/ffe"
 }
 ```
 
-If you are not using React see eslint-config-ffe-base.
-
-## Utvikling og bidrag
-
-For informasjon om utvikling og bidrag, vennligst se
-[CONTRIBUTE.md](***REMOVED***)
+NB: If you are not using React see `@sb1/eslint-config-ffe-base`.

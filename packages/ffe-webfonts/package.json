@@ -1,18 +1,21 @@
 {
-    "name": "ffe-webfonts",
+    "name": "@sb1/ffe-webfonts",
     "description": "Fonts and fonts definition used in FFE",
-    "version": "1.0.1",
+    "version": "1.0.3",
     "files": [
         "fonts",
         "fonts.css",
-        "fonts.less"
+        "fonts.less",
+        "LICENSE-fonts.md",
+        "LICENSE.md",
+        "README.md"
     ],
-    "author": "SpareBank 1",
-    "license": "UNLICENSED",
     "repository": {
         "type": "git",
         "url": "***REMOVED***"
     },
+    "author": "SpareBank 1",
+    "license": "SEE LICENSE IN README.md",
     "scripts": {
         "build": "lessc --no-ie-compat --inline-urls fonts.less fonts.css",
         "lint": "stylelint *.less",
@@ -21,7 +24,7 @@
     },
     "devDependencies": {
         "less-plugin-inline-urls": "^1.2.0",
-        "nsp": "^3.1.0",
+        "nsp": "^3.2.1",
         "stylelint": "^8.4.0"
     }
 }

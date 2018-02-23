@@ -1,6 +1,6 @@
 {
-    "name": "ffe-system-message-react",
-    "version": "3.0.1",
+    "name": "@sb1/ffe-system-message-react",
+    "version": "3.0.3",
     "description": "SpareBank 1 System Message komponent",
     "main": "lib/index.js",
     "files": [
@@ -11,31 +11,32 @@
         "url": "***REMOVED***"
     },
     "author": "SpareBank 1",
-    "license": "UNLICENSED",
+    "license": "MIT",
     "scripts": {
         "build": "babel -d lib/. --ignore=*.spec.js src/.",
         "lint": "eslint src/.",
+        "test": "npm run test:spec && npm run test:nsp",
         "test:nsp": "nsp check",
         "test:spec": "jest",
-        "test": "npm run test:spec && npm run test:nsp"
+        "test:watch": "jest --watch"
     },
     "dependencies": {
         "prop-types": "*"
     },
     "peerDependencies": {
-        "ffe-icons-react": "4.x",
-        "ffe-system-message": "1.x || 2.x"
+        "@sb1/ffe-icons-react": "^4.0.7",
+        "@sb1/ffe-system-message": "^2.0.8"
     },
     "devDependencies": {
         "enzyme": "^3.3.0",
         "enzyme-adapter-react-16": "^1.1.1",
-        "ffe-icons-react": "^4.0.5",
-        "jest": "^22.1.4",
-        "nsp": "^2.2.0",
+        "@sb1/ffe-icons-react": "^4.0.7",
+        "jest": "^22.4.0",
+        "nsp": "^3.2.1",
         "react": "^16.2.0",
         "react-dom": "^16.2.0"
     },
     "jest": {
-        "setupTestFrameworkScriptFile": "./test-setup.js"
+        "setupTestFrameworkScriptFile": "../../test-setup.js"
     }
 }

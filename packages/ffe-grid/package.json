@@ -1,8 +1,8 @@
 {
-    "name": "ffe-grid",
-    "version": "6.0.9",
+    "name": "@sb1/ffe-grid",
+    "version": "6.0.12",
     "description": "A grid component for use within the FFE framework",
-    "license": "UNLICENSED",
+    "license": "MIT",
     "keywords": [
         "ffe"
     ],
@@ -21,11 +21,11 @@
         "test:nsp": "nsp check"
     },
     "peerDependencies": {
-        "ffe-core": "^10.2.4"
+        "@sb1/ffe-core": "^11.0.3"
     },
     "devDependencies": {
-        "ffe-core": "^11.0.0",
-        "nsp": "^3.1.0",
+        "@sb1/ffe-core": "^11.0.3",
+        "nsp": "^3.2.1",
         "stylelint": "^8.4.0"
     }
 }

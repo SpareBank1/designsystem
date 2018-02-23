@@ -1,33 +1,33 @@
 {
-    "name": "ffe-formatters",
-    "version": "2.1.5",
+    "name": "@sb1/ffe-formatters",
+    "version": "2.1.7",
     "description": "JavaScript general use string formatters",
     "keywords": [
         "ffe"
     ],
-    "license": "UNLICENCED",
-    "author": "SpareBank 1",
     "main": "lib/index.js",
     "files": [
         "lib"
     ],
+    "license": "MIT",
+    "author": "SpareBank 1",
     "repository": {
         "type": "git",
         "url": "***REMOVED***"
     },
     "scripts": {
-        "prebuild": "rimraf lib",
-        "build": "babel src -d lib --ignore *.spec.js,README.md",
-        "test": "jest",
-        "test:watch": "jest --watch",
-        "test:coverage": "jest --coverage",
-        "lint": "eslint src/"
+        "build": "babel -d lib/. --ignore=*.spec.js src/.",
+        "lint": "eslint src/.",
+        "test": "npm run test:spec && npm run test:nsp",
+        "test:nsp": "nsp check",
+        "test:spec": "jest",
+        "test:watch": "jest --watch"
     },
     "devDependencies": {
         "eslint": "^4.13.1",
-        "jest": "^21.0.0",
+        "jest": "^22.4.0",
         "moment": "^2.18.1",
-        "rimraf": "^2.6.1"
+        "nsp": "^3.2.1"
     },
     "dependencies": {
         "underscore.string": "^3.3.4"

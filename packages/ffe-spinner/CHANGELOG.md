@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.9"></a>
+## [2.0.9](***REMOVED***) (2018-02-23)
+
+
+
+
+**Note:** Version bump only for package ffe-spinner
+
+<a name="2.0.8"></a>
+## [2.0.8](***REMOVED***) (2018-02-22)
+
+
+
+
+**Note:** Version bump only for package ffe-spinner
+
+<a name="2.0.7"></a>
+## [2.0.7](***REMOVED***) (2018-02-20)
+
+
+
+
+**Note:** Version bump only for package ffe-spinner
+
 <a name="2.0.6"></a>
 ## [2.0.6](***REMOVED***) (2018-02-15)
 
@@ -35,18 +59,16 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package ffe-spinner
 
-# Changelog
-
-## v2.0.2
+## 2.0.2
 * Actually support both versions 9 and 10 of `ffe-core` (fixes 2.0.1)
 * Lint fixes
 
-## v2.0.1
+## 2.0.1
 * Support both versions 9 and 10 of `ffe-core`
 
-## v2.0.0
+# 2.0.0
 
-### Breaking changes
+### BREAKING CHANGES
 
 Bumped peer dependency version of ffe-core. No external API change, but this version requires a new major of `ffe-core`
 
@@ -55,14 +77,14 @@ Bumped peer dependency version of ffe-core. No external API change, but this ver
 
 To migrate, update your app to ffe-core version 9.x
 
-## v1.0.2
+## 1.0.2
 
 * Added description to examples
 
-## v1.0.1
+## 1.0.1
 
 * Include examples in npm package
 
-## v1.0.0
+# 1.0.0
 
 * Initial release

@@ -1,6 +1,6 @@
 {
-    "name": "ffe-icons",
-    "version": "9.0.3",
+    "name": "@sb1/ffe-icons",
+    "version": "9.0.5",
     "description": "Felles Front End Icons",
     "main": "bin/build.js",
     "bin": {
@@ -11,11 +11,14 @@
         "url": "***REMOVED***"
     },
     "author": "SpareBank 1",
-    "license": "UNLICENSED",
+    "license": "MIT",
     "scripts": {
         "build": "node bin/build.js",
-        "lint": "eslint bin/.",
-        "test": "npm run lint"
+        "lint": "run-p lint:js lint:less",
+        "lint:js": "eslint bin/.",
+        "lint:less": "stylelint less/*.less",
+        "test": "npm run lint && npm run test:nsp",
+        "test:nsp": "nsp check"
     },
     "dependencies": {
         "deep-assign": "^2.0.0",
@@ -25,6 +28,7 @@
         "yargs": "^6.5.0"
     },
     "devDependencies": {
-        "eslint": "^4.13.1"
+        "eslint": "^4.13.1",
+        "nsp": "^3.2.1"
     }
 }

@@ -1,6 +1,6 @@
 {
-    "name": "ffe-tabs-react",
-    "version": "1.1.3",
+    "name": "@sb1/ffe-tabs-react",
+    "version": "1.1.5",
     "main": "lib/index.js",
     "files": [
         "lib"
@@ -10,13 +10,14 @@
         "url": "***REMOVED***"
     },
     "author": "SpareBank 1",
-    "license": "UNLICENSED",
+    "license": "MIT",
     "scripts": {
         "build": "babel -d lib/. --ignore=*.spec.js src/.",
         "lint": "eslint src/.",
+        "test": "npm run test:spec && npm run test:nsp",
         "test:nsp": "nsp check",
-        "test:watch": "jest --watch",
-        "test": "jest && npm run test:nsp"
+        "test:spec": "jest",
+        "test:watch": "jest --watch"
     },
     "dependencies": {
         "classnames": "^2.2.5",
@@ -25,17 +26,17 @@
     "devDependencies": {
         "enzyme": "^3.3.0",
         "enzyme-adapter-react-16": "^1.1.1",
-        "jest": "^22.0.4",
-        "nsp": "^3.1.0",
+        "jest": "^22.4.0",
+        "nsp": "^3.2.1",
         "react": "^16.1.1",
         "react-dom": "^16.1.1"
     },
     "peerDependencies": {
-        "ffe-core": "^10.1.2",
-        "ffe-tabs": "^3.0.3",
+        "@sb1/ffe-core": "^11.0.3",
+        "@sb1/ffe-tabs": "^3.0.9",
         "react": "^15.0.0 || ^16.0.0"
     },
     "jest": {
-        "setupTestFrameworkScriptFile": "./test-setup.js"
+        "setupTestFrameworkScriptFile": "../../test-setup.js"
     }
 }

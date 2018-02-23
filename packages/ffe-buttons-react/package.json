@@ -1,11 +1,11 @@
 {
-    "name": "ffe-buttons-react",
-    "version": "8.2.0",
+    "name": "@sb1/ffe-buttons-react",
+    "version": "8.2.4",
     "description": "React implementation of ffe-buttons",
     "keywords": [
         "ffe"
     ],
-    "license": "UNLICENSED",
+    "license": "MIT",
     "author": "SpareBank 1",
     "main": "lib/index.js",
     "files": [
@@ -17,29 +17,30 @@
         "url": "***REMOVED***"
     },
     "scripts": {
-        "build": "babel -d lib/. --ignore=*.test.js src/.",
+        "build": "babel -d lib/. --ignore=*.spec.js src/.",
         "lint": "eslint src/.",
+        "test": "npm run test:spec && npm run test:nsp",
         "test:nsp": "nsp check",
-        "test:watch": "jest --watch",
-        "test": "jest && npm run test:nsp"
+        "test:spec": "jest",
+        "test:watch": "jest --watch"
     },
     "dependencies": {
         "classnames": "^2.2.5",
-        "ffe-icons-react": "^4.0.5",
+        "@sb1/ffe-icons-react": "^4.0.7",
         "prop-types": "^15.6.0"
     },
     "devDependencies": {
         "enzyme": "^3.3.0",
         "enzyme-adapter-react-16": "^1.1.1",
         "eslint": "^4.13.1",
-        "ffe-buttons": "^5.2.0",
-        "ffe-core": "^11.0.0",
-        "jest": "^22.0.6",
-        "nsp": "^3.1.0",
+        "jest": "^22.4.0",
+        "nsp": "^3.2.1",
+        "@sb1/ffe-buttons": "^5.2.3",
+        "@sb1/ffe-core": "^11.0.3",
         "react": "^16.1.1",
         "react-dom": "^16.1.1"
     },
     "jest": {
-        "setupTestFrameworkScriptFile": "./test-setup.js"
+        "setupTestFrameworkScriptFile": "../../test-setup.js"
     }
 }

@@ -1,37 +1,25 @@
-# ffe-datepicker
+# @sb1/ffe-datepicker
 
 This package contains styles for the ffe-datepicker.
 
 ## Install
 
-```
-$ npm install --save ffe-datepicker
-```
-
-To test changes locally, you can run the following command in the projects directory:
-
-```
-sudo npm link
-```
-
-And in the project which will use the files you change, you must run:
-
-```
-npm link ffe-datepicker
+```bash
+npm install --save @sb1/ffe-datepicker
 ```
 
 ## Usage
 
 The styles for this package can be used in 3 different ways depending on what you want.
-For All styles or Only date input you will need the `ffe-form` package in your project.
+For All styles or Only date input you will need the `@sb1/ffe-form` package in your project.
 
 ### All styles
 
 You need styles for both the dateinput field and the calendar.
 
 ```css
-@import 'node_modules/ffe-datepicker/less/datepicker.less';
-@import 'node_modules/ffe-form/less/form.less';
+@import 'node_modules/@sb1/ffe-datepicker/less/datepicker.less';
+@import 'node_modules/@sb1/ffe-form/less/form.less';
 ```
 
 Example HTML stucture with classes. (Aria-tags and other attributes have been removed for clarity)
@@ -46,8 +34,8 @@ Example HTML stucture with classes. (Aria-tags and other attributes have been re
 ### Only date input styles
 
 ```css
-@import 'node_modules/ffe-datepicker/less/dateinput.less';
-@import 'node_modules/ffe-form/less/form.less';
+@import 'node_modules/@sb1/ffe-datepicker/less/dateinput.less';
+@import 'node_modules/@sb1/ffe-form/less/form.less';
 ```
 
 Example HTML stucture with classes. (Aria-tags and other attributes have been removed for clarity)
@@ -64,7 +52,7 @@ Example HTML stucture with classes. (Aria-tags and other attributes have been re
 ### Only the calendar styles
 
 ```css
-@import 'node_modules/ffe-datepicker/less/calendar.less';
+@import 'node_modules/@sb1/ffe-datepicker/less/calendar.less';
 ```
 
 Example HTML stucture with classes. (Aria-tags and other attributes have been removed for clarity)

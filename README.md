@@ -2,7 +2,7 @@
 
 Felles front end (FFE) sitt felles repository. Her vil du finne alle komponentene i FFE, både for LESS og React.
 
-Hver pakke har hver sin katalog under `/packages`.
+Hver pakke har hver sin katalog under [packages/](packages/).
 
 ## Kom i gang!
 
@@ -18,7 +18,22 @@ npm run build   # Bygg alle pakker
 npm run build:htdocs   # Bygg dokumentasjon
 ```
 
+## Hvordan ser jeg hva som er nytt?
+
+For å holde tritt med nye versjoner kan vi anbefale [npm-check-update](https://www.npmjs.com/package/npm-check-updates).
+Med det installert kan du kjøre kommandoen `ncu` i prosjektet ditt og få en oppsummering av hvilke pakker som har fått
+nye versjoner. Du kan også få en slags oversikt over nye versjoner ved å se på Git tags. Hver release får sin egen tag
+på formatet _pakkenavn@versjon_.
+
+Hver pakke har sin egen CHANGELOG.md, for eksempel [denne for ffe-core](packages/ffe-core/CHANGELOG.md). Følg med der
+for å få oversikt over nye features, bugfixer, og _breaking changes_.
+
 ## Bidra!
 
 Vi oppfordrer alle, både rutinerte og ferske, til å opprette issues, sende inn pull requests og kommentere på andres
 bidrag. Ta en titt på [CONTRIBUTE.md](CONTRIBUTE.md) for hvordan du går frem.
+
+# Licenses
+
+* Source code is licensed under MIT
+* The MuseoSans fonts are licensed separately. See LICENSE-fonts.md.

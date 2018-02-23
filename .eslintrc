@@ -1,4 +1,12 @@
 {
     "extends": ["./linting/eslint-config-ffe/index.js", "prettier"],
-    "parser": "babel-eslint"
+    "parser": "babel-eslint",
+    "overrides": [
+        {
+            "files": ["packages/**/*.spec.js"],
+            "env": {
+                "jest": true
+            }
+        }
+    ]
 }

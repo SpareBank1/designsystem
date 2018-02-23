@@ -36,34 +36,34 @@ describe('<DetailContent />', () => {
         it('is exactly one DetailContent', () => {
             const wrapper = getWrapper({ childCount: 1 });
             expect(wrapper.prop('sm')).toBe(12);
-            expect(wrapper.prop('md')).toBe(6);
-            expect(wrapper.prop('lg')).toBe(7);
+            expect(wrapper.prop('md')).toEqual({ cols: 8, offset: 2 });
+            expect(wrapper.prop('lg')).toEqual({ cols: 7, offset: 0 });
         });
 
         it('are two DetailContents, and this DetailContent is the first one', () => {
             const wrapper = getWrapper({ childCount: 2, index: 0 });
             expect(wrapper.prop('sm')).toBe(12);
-            expect(wrapper.prop('md')).toBe(2);
-            expect(wrapper.prop('lg')).toBe(2);
+            expect(wrapper.prop('md')).toEqual({ cols: 8, offset: 2 });
+            expect(wrapper.prop('lg')).toEqual({ cols: 2, offset: 0 });
         });
 
         it('are two DetailContents, and this DetailContent is the last one', () => {
             const wrapper = getWrapper({ childCount: 2, index: 1 });
             expect(wrapper.prop('sm')).toBe(12);
-            expect(wrapper.prop('md')).toBe(4);
-            expect(wrapper.prop('lg')).toBe(4);
+            expect(wrapper.prop('md')).toEqual({ cols: 8, offset: 2 });
+            expect(wrapper.prop('lg')).toEqual({ cols: 4, offset: 0 });
         });
 
         it('are three or more DetailsContents', () => {
             const wrapper = getWrapper({ childCount: 3, index: 1 });
             expect(wrapper.prop('sm')).toBe(12);
-            expect(wrapper.prop('md')).toBe(2);
-            expect(wrapper.prop('lg')).toBe(2);
+            expect(wrapper.prop('md')).toEqual({ cols: 8, offset: 2 });
+            expect(wrapper.prop('lg')).toEqual({ cols: 2, offset: 0 });
 
             wrapper.setProps({ childCount: 4 });
             expect(wrapper.prop('sm')).toBe(12);
-            expect(wrapper.prop('md')).toBe(2);
-            expect(wrapper.prop('lg')).toBe(2);
+            expect(wrapper.prop('md')).toEqual({ cols: 8, offset: 2 });
+            expect(wrapper.prop('lg')).toEqual({ cols: 2, offset: 0 });
         });
     });
 });
