@@ -7,8 +7,8 @@
         "build": "babel -d lib/. --ignore=*.spec.js src/.",
         "lint": "eslint src/.",
         "test": "npm run test:spec && npm run test:nsp",
-        "test:spec": "jest",
         "test:nsp": "nsp check",
+        "test:spec": "jest",
         "test:watch": "jest --watch"
     },
     "devDependencies": {
@@ -16,7 +16,7 @@
         "enzyme-adapter-react-16": "^1.1.1",
         "eslint": "^4.13.1",
         "jest": "^22.4.0",
-        "nsp": "^3.1.0",
+        "nsp": "^3.2.1",
         "react": "^16.2.0",
         "react-dom": "^16.2.0"
     },
@@ -37,6 +37,6 @@
         "*.js"
     ],
     "jest": {
-        "setupTestFrameworkScriptFile": "./test-setup.js"
+        "setupTestFrameworkScriptFile": "../../test-setup.js"
     }
 }

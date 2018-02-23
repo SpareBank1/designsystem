@@ -12,9 +12,9 @@ describe('ShortcutButton', () => {
 
         it('a Chevron icon inside the button', () => {
             const button = mount(<ShortcutButton />);
-            expect(button
-                    .find('svg.ffe-shortcut-button__icon-chevron')
-                    .exists()).toBe(true);
+            expect(
+                button.find('svg.ffe-shortcut-button__icon-chevron').exists(),
+            ).toBe(true);
         });
     });
 

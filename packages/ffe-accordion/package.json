@@ -7,8 +7,8 @@
     "main": "index.js",
     "scripts": {
         "lint": "stylelint less/*.less",
-        "test:nsp": "nsp check",
-        "test": "npm run lint && npm run test:nsp"
+        "test": "npm run lint && npm run test:nsp",
+        "test:nsp": "nsp check"
     },
     "keywords": [
         "FFE",
@@ -19,6 +19,7 @@
         "ffe-core": "^10.2.4"
     },
     "devDependencies": {
-        "ffe-core": "^11.0.2"
+        "ffe-core": "^11.0.2",
+        "nsp": "^3.2.1"
     }
 }

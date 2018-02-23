@@ -1,26 +1,24 @@
-/* eslint-env jest */
-
 import React from 'react';
 import { shallow } from 'enzyme';
-import StylizedNumberedList from './StylizedNumberedList';
+import CheckList from './CheckList';
 
 const getWrapper = props =>
     shallow(
-        <StylizedNumberedList {...props}>
+        <CheckList {...props}>
             <li>Firstly</li>
             <li>Secondly</li>
-        </StylizedNumberedList>,
+        </CheckList>,
     );
 
-describe('<StylizedNumberedList>', () => {
+describe('<CheckList>', () => {
     it('renders without exploding', () => {
         const wrapper = getWrapper();
         expect(wrapper.exists()).toBe(true);
-        expect(wrapper.is('ol')).toBe(true);
+        expect(wrapper.is('ul')).toBe(true);
     });
     it('has the correct class', () => {
         const wrapper = getWrapper({ className: 'test-class' });
-        expect(wrapper.hasClass('ffe-stylized-numbered-list')).toBe(true);
+        expect(wrapper.hasClass('ffe-check-list')).toBe(true);
         expect(wrapper.hasClass('test-class')).toBe(true);
     });
     it('passes props', () => {

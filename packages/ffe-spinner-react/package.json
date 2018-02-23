@@ -15,9 +15,10 @@
     "scripts": {
         "build": "babel -d lib/. --ignore=*.spec.js src/.",
         "lint": "eslint src/.",
+        "test": "npm run test:spec && npm run test:nsp",
         "test:nsp": "nsp check",
         "test:spec": "jest",
-        "test": "npm run test:spec && npm run test:nsp"
+        "test:watch": "jest --watch"
     },
     "dependencies": {
         "prop-types": "^15.6.0"
@@ -27,8 +28,8 @@
         "enzyme-adapter-react-16": "^1.1.1",
         "ffe-core": "^9.2.0",
         "ffe-spinner": "^2.0.8",
-        "jest": "^22.1.3",
-        "nsp": "^2.2.0",
+        "jest": "^22.4.0",
+        "nsp": "^3.2.1",
         "react": "^16.2.0",
         "react-dom": "^16.2.0"
     },
@@ -36,6 +37,6 @@
         "ffe-spinner": "1.x - 2.x"
     },
     "jest": {
-        "setupTestFrameworkScriptFile": "./test-setup.js"
+        "setupTestFrameworkScriptFile": "../../test-setup.js"
     }
 }

@@ -10,15 +10,15 @@
     },
     "license": "MIT",
     "scripts": {
-        "build": "babel -d lib --ignore=*.test.js src",
-        "lint": "eslint src/",
-        "lint:fix": "eslint --fix src/",
-        "test": "jest && npm run test:nsp",
-        "test:watch": "jest src --watch",
-        "test:nsp": "nsp check"
+        "build": "babel -d lib/. --ignore=*.spec.js src/.",
+        "lint": "eslint src/.",
+        "test": "npm run test:spec && npm run test:nsp",
+        "test:nsp": "nsp check",
+        "test:spec": "jest",
+        "test:watch": "jest --watch"
     },
     "jest": {
-        "setupTestFrameworkScriptFile": "./test-setup.js"
+        "setupTestFrameworkScriptFile": "../../test-setup.js"
     },
     "peerDependencies": {
         "ffe-core": "^10.2.4",
@@ -32,9 +32,9 @@
         "ffe-core": "^11.0.2",
         "ffe-form": "^8.1.11",
         "ffe-icons": "^8.0.0",
-        "jest": "^22.0.4",
+        "jest": "^22.4.0",
         "less": "^2.7.3",
-        "nsp": "^3.1.0",
+        "nsp": "^3.2.1",
         "react": "^16.1.1",
         "react-dom": "^16.1.1"
     },

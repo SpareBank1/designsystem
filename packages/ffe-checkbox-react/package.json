@@ -15,10 +15,10 @@
     "scripts": {
         "build": "babel -d lib/. --ignore=*.spec.js src/.",
         "lint": "eslint src/.",
+        "test": "npm run test:spec && npm run test:nsp",
         "test:nsp": "nsp check",
         "test:spec": "jest",
-        "test:watch": "jest --watch",
-        "test": "npm run test:spec && npm run test:nsp"
+        "test:watch": "jest --watch"
     },
     "peerDependencies": {
         "ffe-form": "^8.1.5"
@@ -32,11 +32,11 @@
         "enzyme": "^3.3.0",
         "enzyme-adapter-react-16": "^1.1.1",
         "jest": "^22.4.0",
-        "nsp": "^3.1.0",
+        "nsp": "^3.2.1",
         "react": "^16.1.1",
         "react-dom": "^16.1.1"
     },
     "jest": {
-        "setupTestFrameworkScriptFile": "./test-setup.js"
+        "setupTestFrameworkScriptFile": "../../test-setup.js"
     }
 }
