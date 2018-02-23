@@ -2,17 +2,17 @@
     "name": "@sb1/ffe-lists-react",
     "version": "2.1.6",
     "description": "React implementation of ffe-lists",
-    "main": "lib/index.js",
+    "license": "MIT",
+    "author": "SpareBank 1",
     "files": [
         "lib",
         "*.js"
     ],
+    "main": "lib/index.js",
     "repository": {
         "type": "git",
         "url": "ssh://git@github.com:SpareBank1/designsystem.git"
     },
-    "author": "SpareBank 1",
-    "license": "MIT",
     "scripts": {
         "build": "babel -d lib/. --ignore=*.spec.js src/.",
         "lint": "eslint src/.",
@@ -20,6 +20,9 @@
         "test:nsp": "nsp check",
         "test:spec": "jest",
         "test:watch": "jest --watch"
+    },
+    "jest": {
+        "setupTestFrameworkScriptFile": "../../test-setup.js"
     },
     "dependencies": {
         "classnames": "^2.2.5",
@@ -35,8 +38,5 @@
     },
     "peerDependencies": {
         "@sb1/ffe-lists": "^4.1.8"
-    },
-    "jest": {
-        "setupTestFrameworkScriptFile": "../../test-setup.js"
     }
 }

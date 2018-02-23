@@ -1,9 +1,13 @@
 {
     "name": "@sb1/ffe-message-box-react",
     "version": "3.4.2",
-    "main": "lib/index.js",
-    "author": "SpareBank 1",
     "license": "MIT",
+    "author": "SpareBank 1",
+    "files": [
+        "lib",
+        "*.js"
+    ],
+    "main": "lib/index.js",
     "repository": {
         "type": "git",
         "url": "ssh://git@github.com:SpareBank1/designsystem.git"
@@ -16,8 +20,12 @@
         "test:spec": "jest",
         "test:watch": "jest --watch"
     },
-    "peerDependencies": {
-        "@sb1/ffe-message-box": "^4.2.7"
+    "jest": {
+        "setupTestFrameworkScriptFile": "../../test-setup.js"
+    },
+    "dependencies": {
+        "@sb1/ffe-icons-react": "^4.0.7",
+        "classnames": "^2.2.5"
     },
     "devDependencies": {
         "enzyme": "^3.3.0",
@@ -30,15 +38,7 @@
         "react-addons-test-utils": "^15.1.0",
         "react-dom": "^16.2.0"
     },
-    "files": [
-        "lib",
-        "*.js"
-    ],
-    "jest": {
-        "setupTestFrameworkScriptFile": "../../test-setup.js"
-    },
-    "dependencies": {
-        "classnames": "^2.2.5",
-        "@sb1/ffe-icons-react": "^4.0.7"
+    "peerDependencies": {
+        "@sb1/ffe-message-box": "^4.2.7"
     }
 }

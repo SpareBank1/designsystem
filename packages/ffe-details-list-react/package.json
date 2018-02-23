@@ -1,18 +1,18 @@
 {
     "name": "@sb1/ffe-details-list-react",
     "version": "1.0.6",
-    "main": "lib/index.js",
+    "license": "MIT",
+    "author": "SpareBank 1",
     "files": [
         "less",
         "lib",
         "*.js"
     ],
+    "main": "lib/index.js",
     "repository": {
         "type": "git",
         "url": "ssh://git@github.com:SpareBank1/designsystem.git"
     },
-    "author": "SpareBank 1",
-    "license": "MIT",
     "scripts": {
         "build": "babel -d lib/. --ignore=*.spec.js src/.",
         "lint": "eslint src/.",
@@ -21,9 +21,12 @@
         "test:spec": "jest",
         "test:watch": "jest --watch"
     },
+    "jest": {
+        "setupTestFrameworkScriptFile": "../../test-setup.js"
+    },
     "dependencies": {
-        "classnames": "^2.2.5",
-        "@sb1/ffe-grid-react": "^6.0.13"
+        "@sb1/ffe-grid-react": "^6.0.13",
+        "classnames": "^2.2.5"
     },
     "devDependencies": {
         "babel-cli": "^6.24.1",
@@ -34,8 +37,5 @@
         "nsp": "^3.2.1",
         "react": "^16.2.0",
         "react-dom": "^16.2.0"
-    },
-    "jest": {
-        "setupTestFrameworkScriptFile": "../../test-setup.js"
     }
 }

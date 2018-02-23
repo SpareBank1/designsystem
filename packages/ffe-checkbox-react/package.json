@@ -1,17 +1,17 @@
 {
     "name": "@sb1/ffe-checkbox-react",
     "version": "4.4.17",
-    "main": "lib/Checkbox.js",
+    "license": "MIT",
+    "author": "SpareBank 1",
     "files": [
         "lib",
         "*.js"
     ],
+    "main": "lib/Checkbox.js",
     "repository": {
         "type": "git",
         "url": "ssh://git@github.com:SpareBank1/designsystem.git"
     },
-    "author": "SpareBank 1",
-    "license": "MIT",
     "scripts": {
         "build": "babel -d lib/. --ignore=*.spec.js src/.",
         "lint": "eslint src/.",
@@ -20,8 +20,8 @@
         "test:spec": "jest",
         "test:watch": "jest --watch"
     },
-    "peerDependencies": {
-        "@sb1/ffe-form": "^8.1.5"
+    "jest": {
+        "setupTestFrameworkScriptFile": "../../test-setup.js"
     },
     "dependencies": {
         "classnames": "^2.2.5",
@@ -36,7 +36,7 @@
         "react": "^16.1.1",
         "react-dom": "^16.1.1"
     },
-    "jest": {
-        "setupTestFrameworkScriptFile": "../../test-setup.js"
+    "peerDependencies": {
+        "@sb1/ffe-form": "^8.1.5"
     }
 }

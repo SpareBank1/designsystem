@@ -1,7 +1,9 @@
 {
     "name": "@sb1/ffe-webfonts",
-    "description": "Fonts and fonts definition used in FFE",
     "version": "1.0.3",
+    "description": "Fonts and fonts definition used in FFE",
+    "license": "SEE LICENSE IN README.md",
+    "author": "SpareBank 1",
     "files": [
         "fonts",
         "fonts.css",
@@ -14,8 +16,6 @@
         "type": "git",
         "url": "ssh://git@github.com:SpareBank1/designsystem.git"
     },
-    "author": "SpareBank 1",
-    "license": "SEE LICENSE IN README.md",
     "scripts": {
         "build": "lessc --no-ie-compat --inline-urls fonts.less fonts.css",
         "lint": "stylelint *.less",

@@ -2,16 +2,16 @@
     "name": "@sb1/ffe-system-message-react",
     "version": "3.0.3",
     "description": "SpareBank 1 System Message komponent",
-    "main": "lib/index.js",
+    "license": "MIT",
+    "author": "SpareBank 1",
     "files": [
         "lib"
     ],
+    "main": "lib/index.js",
     "repository": {
         "type": "git",
         "url": "ssh://git@github.com:SpareBank1/designsystem.git"
     },
-    "author": "SpareBank 1",
-    "license": "MIT",
     "scripts": {
         "build": "babel -d lib/. --ignore=*.spec.js src/.",
         "lint": "eslint src/.",
@@ -20,23 +20,23 @@
         "test:spec": "jest",
         "test:watch": "jest --watch"
     },
+    "jest": {
+        "setupTestFrameworkScriptFile": "../../test-setup.js"
+    },
     "dependencies": {
         "prop-types": "*"
     },
-    "peerDependencies": {
-        "@sb1/ffe-icons-react": "^4.0.7",
-        "@sb1/ffe-system-message": "^2.0.8"
-    },
     "devDependencies": {
+        "@sb1/ffe-icons-react": "^4.0.7",
         "enzyme": "^3.3.0",
         "enzyme-adapter-react-16": "^1.1.1",
-        "@sb1/ffe-icons-react": "^4.0.7",
         "jest": "^22.4.0",
         "nsp": "^3.2.1",
         "react": "^16.2.0",
         "react-dom": "^16.2.0"
     },
-    "jest": {
-        "setupTestFrameworkScriptFile": "../../test-setup.js"
+    "peerDependencies": {
+        "@sb1/ffe-icons-react": "^4.0.7",
+        "@sb1/ffe-system-message": "^2.0.8"
     }
 }

@@ -1,17 +1,17 @@
 {
     "name": "@sb1/ffe-grid-react",
     "version": "6.0.13",
+    "license": "MIT",
+    "author": "SpareBank1",
+    "files": [
+        "lib",
+        "*.js"
+    ],
     "main": "lib/index.js",
     "repository": {
         "type": "git",
         "url": "ssh://git@github.com:SpareBank1/designsystem.git"
     },
-    "author": "SpareBank1",
-    "license": "MIT",
-    "files": [
-        "lib",
-        "*.js"
-    ],
     "scripts": {
         "build": "babel -d lib/. --ignore=*.spec.js src/.",
         "lint": "eslint src/.",
@@ -20,11 +20,11 @@
         "test:spec": "jest",
         "test:watch": "jest --watch"
     },
+    "jest": {
+        "setupTestFrameworkScriptFile": "../../test-setup.js"
+    },
     "dependencies": {
         "classnames": "^2.2.5"
-    },
-    "peerDependencies": {
-        "@sb1/ffe-grid": "^6.0.12"
     },
     "devDependencies": {
         "enzyme": "^3.3.0",
@@ -34,7 +34,7 @@
         "react": "^16.1.1",
         "react-dom": "^16.1.1"
     },
-    "jest": {
-        "setupTestFrameworkScriptFile": "../../test-setup.js"
+    "peerDependencies": {
+        "@sb1/ffe-grid": "^6.0.12"
     }
 }
