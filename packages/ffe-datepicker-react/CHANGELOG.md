@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="2.7.16"></a>
-## [2.7.16](***REMOVED***) (2018-02-23)
+## [2.7.16](https://github.com/SpareBank1/designsystem/compare/ffe-datepicker-react@2.7.15...ffe-datepicker-react@2.7.16) (2018-02-23)
 
 
 
@@ -12,7 +12,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-datepicker-react
 
 <a name="2.7.15"></a>
-## [2.7.15](***REMOVED***) (2018-02-22)
+## [2.7.15](https://github.com/SpareBank1/designsystem/compare/ffe-datepicker-react@2.7.14...ffe-datepicker-react@2.7.15) (2018-02-22)
 
 
 
@@ -20,7 +20,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-datepicker-react
 
 <a name="2.7.14"></a>
-## [2.7.14](***REMOVED***) (2018-02-22)
+## [2.7.14](https://github.com/SpareBank1/designsystem/compare/ffe-datepicker-react@2.7.13...ffe-datepicker-react@2.7.14) (2018-02-22)
 
 
 
@@ -28,7 +28,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-datepicker-react
 
 <a name="2.7.13"></a>
-## [2.7.13](***REMOVED***) (2018-02-20)
+## [2.7.13](https://github.com/SpareBank1/designsystem/compare/ffe-datepicker-react@2.7.12...ffe-datepicker-react@2.7.13) (2018-02-20)
 
 
 
@@ -36,7 +36,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-datepicker-react
 
 <a name="2.7.12"></a>
-## [2.7.12](***REMOVED***) (2018-02-15)
+## [2.7.12](https://github.com/SpareBank1/designsystem/compare/ffe-datepicker-react@2.7.11...ffe-datepicker-react@2.7.12) (2018-02-15)
 
 
 
@@ -44,7 +44,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-datepicker-react
 
 <a name="2.7.11"></a>
-## [2.7.11](***REMOVED***) (2018-02-01)
+## [2.7.11](https://github.com/SpareBank1/designsystem/compare/ffe-datepicker-react@2.7.10...ffe-datepicker-react@2.7.11) (2018-02-01)
 
 
 
@@ -52,18 +52,18 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-datepicker-react
 
 <a name="2.7.10"></a>
-## [2.7.10](***REMOVED***) (2018-01-31)
+## [2.7.10](https://github.com/SpareBank1/designsystem/compare/ffe-datepicker-react@2.7.9...ffe-datepicker-react@2.7.10) (2018-01-31)
 
 
 ### Bug Fixes
 
-* Treeshake ffe-icons ([d431cb3](***REMOVED***))
+* Treeshake ffe-icons
 
 
 
 
 <a name="2.7.9"></a>
-## [2.7.9](***REMOVED***) (2018-01-26)
+## [2.7.9](https://github.com/SpareBank1/designsystem/compare/ffe-datepicker-react@2.7.8...ffe-datepicker-react@2.7.9) (2018-01-26)
 
 
 
@@ -71,7 +71,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-datepicker-react
 
 <a name="2.7.8"></a>
-## [2.7.8](***REMOVED***) (2018-01-23)
+## [2.7.8](https://github.com/SpareBank1/designsystem/compare/ffe-datepicker-react@2.7.7...ffe-datepicker-react@2.7.8) (2018-01-23)
 
 
 
@@ -79,7 +79,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-datepicker-react
 
 <a name="2.7.7"></a>
-## [2.7.7](***REMOVED***) (2018-01-22)
+## [2.7.7](https://github.com/SpareBank1/designsystem/compare/ffe-datepicker-react@2.7.6...ffe-datepicker-react@2.7.7) (2018-01-22)
 
 
 
@@ -87,7 +87,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-datepicker-react
 
 <a name="2.7.6"></a>
-## [2.7.6](***REMOVED***) (2018-01-19)
+## [2.7.6](https://github.com/SpareBank1/designsystem/compare/ffe-datepicker-react@2.7.5...ffe-datepicker-react@2.7.6) (2018-01-19)
 
 
 
@@ -95,32 +95,32 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-datepicker-react
 
 <a name="2.7.5"></a>
-## [2.7.5](***REMOVED***) (2018-01-19)
+## [2.7.5](https://github.com/SpareBank1/designsystem/compare/ffe-datepicker-react@2.7.4...ffe-datepicker-react@2.7.5) (2018-01-19)
 
 
 ### Bug Fixes
 
-* Upgrade ffe-icons-react to v4 ([ea2d734](***REMOVED***))
+* Upgrade ffe-icons-react to v4
 
 
 
 
 <a name="2.7.4"></a>
-## [2.7.4](***REMOVED***) (2018-01-19)
+## [2.7.4](https://github.com/SpareBank1/designsystem/compare/ffe-datepicker-react@2.7.3...ffe-datepicker-react@2.7.4) (2018-01-19)
 
 
 ### Bug Fixes
 
-* **ffe-datepicker-react:** added tests ([b4ad204](***REMOVED***))
-* **ffe-datepicker-react:** changed slightly the logic so that calendar will open only if it is not already open ([233d17b](***REMOVED***))
-* **ffe-datepicker-react:** refactoring ([e11e9f1](***REMOVED***))
-* **ffe-datepicker-react:** This commit adds a fix to make sure date with validation error can be changed ([610dfcb](***REMOVED***))
+* **ffe-datepicker-react:** added tests
+* **ffe-datepicker-react:** changed slightly the logic so that calendar will open only if it is not already open
+* **ffe-datepicker-react:** refactoring
+* **ffe-datepicker-react:** This commit adds a fix to make sure date with validation error can be changed
 
 
 
 
 <a name="2.7.3"></a>
-## [2.7.3](***REMOVED***) (2018-01-19)
+## [2.7.3](https://github.com/SpareBank1/designsystem/compare/ffe-datepicker-react@2.7.2...ffe-datepicker-react@2.7.3) (2018-01-19)
 
 
 

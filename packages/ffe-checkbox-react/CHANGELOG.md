@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
       <a name="4.4.17"></a>
-## [4.4.17](***REMOVED***) (2018-02-23)
+## [4.4.17](https://github.com/SpareBank1/designsystem/compare/ffe-checkbox-react@4.4.16...ffe-checkbox-react@4.4.17) (2018-02-23)
 
 
 
@@ -12,7 +12,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-checkbox-react
 
       <a name="4.4.16"></a>
-## [4.4.16](***REMOVED***) (2018-02-22)
+## [4.4.16](https://github.com/SpareBank1/designsystem/compare/ffe-checkbox-react@4.4.15...ffe-checkbox-react@4.4.16) (2018-02-22)
 
 
 
@@ -20,7 +20,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-checkbox-react
 
   <a name="4.4.15"></a>
-## [4.4.15](***REMOVED***) (2018-02-22)
+## [4.4.15](https://github.com/SpareBank1/designsystem/compare/ffe-checkbox-react@4.4.14...ffe-checkbox-react@4.4.15) (2018-02-22)
 
 
 
@@ -28,7 +28,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-checkbox-react
 
 <a name="4.4.14"></a>
-## [4.4.14](***REMOVED***) (2018-02-20)
+## [4.4.14](https://github.com/SpareBank1/designsystem/compare/ffe-checkbox-react@4.4.13...ffe-checkbox-react@4.4.14) (2018-02-20)
 
 
 
@@ -36,7 +36,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-checkbox-react
 
 <a name="4.4.13"></a>
-## [4.4.13](***REMOVED***) (2018-02-15)
+## [4.4.13](https://github.com/SpareBank1/designsystem/compare/ffe-checkbox-react@4.4.12...ffe-checkbox-react@4.4.13) (2018-02-15)
 
 
 
@@ -44,7 +44,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-checkbox-react
 
 <a name="4.4.12"></a>
-## [4.4.12](***REMOVED***) (2018-02-01)
+## [4.4.12](https://github.com/SpareBank1/designsystem/compare/ffe-checkbox-react@4.4.11...ffe-checkbox-react@4.4.12) (2018-02-01)
 
 
 
@@ -52,7 +52,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-checkbox-react
 
 <a name="4.4.11"></a>
-## [4.4.11](***REMOVED***) (2018-01-31)
+## [4.4.11](https://github.com/SpareBank1/designsystem/compare/ffe-checkbox-react@4.4.10...ffe-checkbox-react@4.4.11) (2018-01-31)
 
 
 
@@ -60,7 +60,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-checkbox-react
 
 <a name="4.4.10"></a>
-## [4.4.10](***REMOVED***) (2018-01-19)
+## [4.4.10](https://github.com/SpareBank1/designsystem/compare/ffe-checkbox-react@4.4.9...ffe-checkbox-react@4.4.10) (2018-01-19)
 
 
 
@@ -68,7 +68,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-checkbox-react
 
 <a name="4.4.9"></a>
-## [4.4.9](***REMOVED***) (2018-01-19)
+## [4.4.9](https://github.com/SpareBank1/designsystem/compare/ffe-checkbox-react@4.4.8...ffe-checkbox-react@4.4.9) (2018-01-19)
 
 
 
@@ -77,17 +77,17 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="4.4.8"></a>
 
-## [4.4.8](***REMOVED***) (2018-01-10)
+## [4.4.8](https://github.com/SpareBank1/designsystem/compare/ffe-checkbox-react@4.4.7...ffe-checkbox-react@4.4.8) (2018-01-10)
 
 **Note:** Version bump only for package ffe-checkbox-react
 
 <a name="4.4.7"></a>
 
-## [4.4.7](***REMOVED***) (2018-01-10)
+## [4.4.7](https://github.com/SpareBank1/designsystem/compare/ffe-checkbox-react@4.4.6...ffe-checkbox-react@4.4.7) (2018-01-10)
 
 ### Bug Fixes
 
-* **ffe-checkbox-react:** Replace sdbm with uuid ([225ecf4](***REMOVED***))
+* **ffe-checkbox-react:** Replace sdbm with uuid
 
 <a name="4.4.6"></a>
 
@@ -95,7 +95,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* Replace eslint ignore with customized lint rule. ([ff23e8d](***REMOVED***))
+* Replace eslint ignore with customized lint rule.
 
 ## 4.4.5
 

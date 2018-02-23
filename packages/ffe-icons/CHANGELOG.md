@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
       <a name="9.0.5"></a>
-## [9.0.5](***REMOVED***) (2018-02-23)
+## [9.0.5](https://github.com/SpareBank1/designsystem/compare/ffe-icons@9.0.4...ffe-icons@9.0.5) (2018-02-23)
 
 
 
@@ -12,7 +12,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-icons
 
       <a name="9.0.4"></a>
-## [9.0.4](***REMOVED***) (2018-02-22)
+## [9.0.4](https://github.com/SpareBank1/designsystem/compare/ffe-icons@9.0.3...ffe-icons@9.0.4) (2018-02-22)
 
 
 
@@ -20,7 +20,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-icons
 
     <a name="9.0.3"></a>
-## [9.0.3](***REMOVED***) (2018-01-19)
+## [9.0.3](https://github.com/SpareBank1/designsystem/compare/ffe-icons@9.0.2...ffe-icons@9.0.3) (2018-01-19)
 
 
 
@@ -29,23 +29,23 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
   <a name="9.0.2"></a>
 
-## [9.0.2](***REMOVED***) (2018-01-09)
+## [9.0.2](https://github.com/SpareBank1/designsystem/compare/ffe-icons@9.0.1...ffe-icons@9.0.2) (2018-01-09)
 
 **Note:** Version bump only for package ffe-icons
 
 <a name="9.0.1"></a>
 
-## [9.0.1](***REMOVED***) (2018-01-05)
+## [9.0.1](https://github.com/SpareBank1/designsystem/compare/ffe-icons@9.0.0...ffe-icons@9.0.1) (2018-01-05)
 
 **Note:** Version bump only for package ffe-icons
 
 <a name="9.0.0"></a>
 
-# [9.0.0](***REMOVED***) (2018-01-02)
+# [9.0.0](https://github.com/SpareBank1/designsystem/compare/ffe-icons@8.0.0...ffe-icons@9.0.0) (2018-01-02)
 
 ### Bug Fixes
 
-* **ffe-icons:** Rename numeric icons ([502c8c9](***REMOVED***))
+* **ffe-icons:** Rename numeric icons
 
 ### BREAKING CHANGES
 
@@ -63,16 +63,16 @@ The following icons have been renamed:
 
 ### Bug Fixes
 
-* **ffe-icons:** Fix git repository url ([6278180](***REMOVED***))
-* **ffe-icons:** Remove class attribute from klokke-ikon ([0298c35](***REMOVED***))
+* **ffe-icons:** Fix git repository url
+* **ffe-icons:** Remove class attribute from klokke-ikon
 
 ### Features
 
-* **ffe-icons:** Add contribute.md link to readme ([166d9b2](***REMOVED***))
+* **ffe-icons:** Add contribute.md link to readme
 
 ### Fix
 
-* Rename all icons to end with -ikon ([f4b815a](***REMOVED***))
+* Rename all icons to end with -ikon
 
 ### BREAKING CHANGES
 

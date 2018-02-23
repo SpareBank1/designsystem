@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
  <a name="3.4.2"></a>
-## [3.4.2](***REMOVED***) (2018-02-23)
+## [3.4.2](https://github.com/SpareBank1/designsystem/compare/ffe-message-box-react@3.4.1...ffe-message-box-react@3.4.2) (2018-02-23)
 
 
 
@@ -12,7 +12,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-message-box-react
 
  <a name="3.4.1"></a>
-## [3.4.1](***REMOVED***) (2018-02-22)
+## [3.4.1](https://github.com/SpareBank1/designsystem/compare/ffe-message-box-react@3.4.0...ffe-message-box-react@3.4.1) (2018-02-22)
 
 
 
@@ -20,29 +20,29 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-message-box-react
 
 <a name="3.4.0"></a>
-# [3.4.0](***REMOVED***) (2018-02-14)
+# [3.4.0](https://github.com/SpareBank1/designsystem/compare/ffe-message-box-react@3.3.12...ffe-message-box-react@3.4.0) (2018-02-14)
 
 
 ### Features
 
-* **ffe-message-box-react:** Allow nodes for title prop ([c5dbdb5](***REMOVED***))
+* **ffe-message-box-react:** Allow nodes for title prop
 
 
 
 
 <a name="3.3.12"></a>
-## [3.3.12](***REMOVED***) (2018-01-31)
+## [3.3.12](https://github.com/SpareBank1/designsystem/compare/ffe-message-box-react@3.3.11...ffe-message-box-react@3.3.12) (2018-01-31)
 
 
 ### Bug Fixes
 
-* Treeshake ffe-icons ([d431cb3](***REMOVED***))
+* Treeshake ffe-icons
 
 
 
 
 <a name="3.3.11"></a>
-## [3.3.11](***REMOVED***) (2018-01-22)
+## [3.3.11](https://github.com/SpareBank1/designsystem/compare/ffe-message-box-react@3.3.10...ffe-message-box-react@3.3.11) (2018-01-22)
 
 
 
@@ -50,7 +50,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-message-box-react
 
 <a name="3.3.10"></a>
-## [3.3.10](***REMOVED***) (2018-01-22)
+## [3.3.10](https://github.com/SpareBank1/designsystem/compare/ffe-message-box-react@3.3.9...ffe-message-box-react@3.3.10) (2018-01-22)
 
 
 
@@ -58,7 +58,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-message-box-react
 
 <a name="3.3.9"></a>
-## [3.3.9](***REMOVED***) (2018-01-22)
+## [3.3.9](https://github.com/SpareBank1/designsystem/compare/ffe-message-box-react@3.3.8...ffe-message-box-react@3.3.9) (2018-01-22)
 
 
 
@@ -66,7 +66,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-message-box-react
 
 <a name="3.3.8"></a>
-## [3.3.8](***REMOVED***) (2018-01-19)
+## [3.3.8](https://github.com/SpareBank1/designsystem/compare/ffe-message-box-react@3.3.7...ffe-message-box-react@3.3.8) (2018-01-19)
 
 
 
@@ -74,7 +74,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-message-box-react
 
 <a name="3.3.7"></a>
-## [3.3.7](***REMOVED***) (2018-01-19)
+## [3.3.7](https://github.com/SpareBank1/designsystem/compare/ffe-message-box-react@3.3.6...ffe-message-box-react@3.3.7) (2018-01-19)
 
 Furthermore removes unused test dependencies and linting errors.
 
@@ -82,18 +82,18 @@ Furthermore removes unused test dependencies and linting errors.
 **Note:** Version bump only for package ffe-message-box-react
 
 <a name="3.3.6"></a>
-## [3.3.6](***REMOVED***) (2018-01-19)
+## [3.3.6](https://github.com/SpareBank1/designsystem/compare/ffe-message-box-react@3.3.5...ffe-message-box-react@3.3.6) (2018-01-19)
 
 
 ### Bug Fixes
 
-* Upgrade ffe-icons-react to v4 ([ea2d734](***REMOVED***))
+* Upgrade ffe-icons-react to v4
 
 
 
 
 <a name="3.3.5"></a>
-## [3.3.5](***REMOVED***) (2018-01-19)
+## [3.3.5](https://github.com/SpareBank1/designsystem/compare/ffe-message-box-react@3.3.4...ffe-message-box-react@3.3.5) (2018-01-19)
 
 
 
@@ -101,7 +101,7 @@ Furthermore removes unused test dependencies and linting errors.
 **Note:** Version bump only for package ffe-message-box-react
 
 <a name="3.3.4"></a>
-## [3.3.4](***REMOVED***) (2018-01-19)
+## [3.3.4](https://github.com/SpareBank1/designsystem/compare/ffe-message-box-react@3.3.3...ffe-message-box-react@3.3.4) (2018-01-19)
 
 Furthermore removes unused test dependencies and linting errors.
 
@@ -109,7 +109,7 @@ Furthermore removes unused test dependencies and linting errors.
 **Note:** Version bump only for package ffe-message-box-react
 
 <a name="3.3.3"></a>
-## [3.3.3](***REMOVED***) (2018-01-19)
+## [3.3.3](https://github.com/SpareBank1/designsystem/compare/ffe-message-box-react@3.3.2...ffe-message-box-react@3.3.3) (2018-01-19)
 
 
 

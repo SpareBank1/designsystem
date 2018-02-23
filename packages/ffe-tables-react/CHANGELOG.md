@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
       <a name="4.11.1"></a>
-## [4.11.1](***REMOVED***) (2018-02-23)
+## [4.11.1](https://github.com/SpareBank1/designsystem/compare/ffe-tables-react@4.11.0...ffe-tables-react@4.11.1) (2018-02-23)
 
 
 
@@ -12,18 +12,18 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-tables-react
 
       <a name="4.11.0"></a>
-# [4.11.0](***REMOVED***) (2018-02-22)
+# [4.11.0](https://github.com/SpareBank1/designsystem/compare/ffe-tables-react@4.10.7...ffe-tables-react@4.11.0) (2018-02-22)
 
 
 ### Features
 
-* **ffe-tables-react:** Add property className ([c004ebc](***REMOVED***))
+* **ffe-tables-react:** Add property className
 
 
 
 
     <a name="4.10.7"></a>
-## [4.10.7](***REMOVED***) (2018-02-22)
+## [4.10.7](https://github.com/SpareBank1/designsystem/compare/ffe-tables-react@4.10.6...ffe-tables-react@4.10.7) (2018-02-22)
 
 
 
@@ -31,7 +31,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-tables-react
 
   <a name="4.10.6"></a>
-## [4.10.6](***REMOVED***) (2018-02-20)
+## [4.10.6](https://github.com/SpareBank1/designsystem/compare/ffe-tables-react@4.10.5...ffe-tables-react@4.10.6) (2018-02-20)
 
 
 
@@ -39,7 +39,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-tables-react
 
 <a name="4.10.5"></a>
-## [4.10.5](***REMOVED***) (2018-02-15)
+## [4.10.5](https://github.com/SpareBank1/designsystem/compare/ffe-tables-react@4.10.4...ffe-tables-react@4.10.5) (2018-02-15)
 
 
 
@@ -47,7 +47,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-tables-react
 
 <a name="4.10.4"></a>
-## [4.10.4](***REMOVED***) (2018-02-07)
+## [4.10.4](https://github.com/SpareBank1/designsystem/compare/ffe-tables-react@4.10.3...ffe-tables-react@4.10.4) (2018-02-07)
 
 
 
@@ -55,7 +55,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-tables-react
 
 <a name="4.10.3"></a>
-## [4.10.3](***REMOVED***) (2018-02-01)
+## [4.10.3](https://github.com/SpareBank1/designsystem/compare/ffe-tables-react@4.10.2...ffe-tables-react@4.10.3) (2018-02-01)
 
 
 
@@ -63,18 +63,18 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-tables-react
 
 <a name="4.10.2"></a>
-## [4.10.2](***REMOVED***) (2018-01-31)
+## [4.10.2](https://github.com/SpareBank1/designsystem/compare/ffe-tables-react@4.10.1...ffe-tables-react@4.10.2) (2018-01-31)
 
 
 ### Bug Fixes
 
-* Treeshake ffe-icons ([d431cb3](***REMOVED***))
+* Treeshake ffe-icons
 
 
 
 
 <a name="4.10.1"></a>
-## [4.10.1](***REMOVED***) (2018-01-30)
+## [4.10.1](https://github.com/SpareBank1/designsystem/compare/ffe-tables-react@4.10.0...ffe-tables-react@4.10.1) (2018-01-30)
 
 
 
@@ -82,18 +82,18 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-tables-react
 
 <a name="4.10.0"></a>
-# [4.10.0](***REMOVED***) (2018-01-26)
+# [4.10.0](https://github.com/SpareBank1/designsystem/compare/ffe-tables-react@4.9.9...ffe-tables-react@4.10.0) (2018-01-26)
 
 
 ### Features
 
-* **ffe-tables-react:** Add prop onSort ([119f0da](***REMOVED***))
+* **ffe-tables-react:** Add prop onSort
 
 
 
 
 <a name="4.9.9"></a>
-## [4.9.9](***REMOVED***) (2018-01-19)
+## [4.9.9](https://github.com/SpareBank1/designsystem/compare/ffe-tables-react@4.9.8...ffe-tables-react@4.9.9) (2018-01-19)
 
 
 
@@ -101,18 +101,18 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-tables-react
 
 <a name="4.9.8"></a>
-## [4.9.8](***REMOVED***) (2018-01-19)
+## [4.9.8](https://github.com/SpareBank1/designsystem/compare/ffe-tables-react@4.9.7...ffe-tables-react@4.9.8) (2018-01-19)
 
 
 ### Bug Fixes
 
-* Upgrade ffe-icons-react to v4 ([ea2d734](***REMOVED***))
+* Upgrade ffe-icons-react to v4
 
 
 
 
 <a name="4.9.7"></a>
-## [4.9.7](***REMOVED***) (2018-01-19)
+## [4.9.7](https://github.com/SpareBank1/designsystem/compare/ffe-tables-react@4.9.6...ffe-tables-react@4.9.7) (2018-01-19)
 
 
 
@@ -120,7 +120,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-tables-react
 
 <a name="4.9.6"></a>
-## [4.9.6](***REMOVED***) (2018-01-18)
+## [4.9.6](https://github.com/SpareBank1/designsystem/compare/ffe-tables-react@4.9.5...ffe-tables-react@4.9.6) (2018-01-18)
 
 
 
@@ -129,7 +129,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="4.9.5"></a>
 
-## [4.9.5](***REMOVED***) (2018-01-16)
+## [4.9.5](https://github.com/SpareBank1/designsystem/compare/ffe-tables-react@4.9.4...ffe-tables-react@4.9.5) (2018-01-16)
 
 **Note:** Version bump only for package ffe-tables-react
 
@@ -139,8 +139,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **ffe-tables-react:** Correct main file in package.json ([d9ee539](***REMOVED***))
-* **ffe-tables-react:** Properly handle zero as row id ([35b523b](***REMOVED***))
+* **ffe-tables-react:** Correct main file in package.json
+* **ffe-tables-react:** Properly handle zero as row id
 
 ## 4.9.3
 

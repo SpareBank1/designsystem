@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="3.0.7"></a>
-## [3.0.7](***REMOVED***) (2018-02-23)
+## [3.0.7](https://github.com/SpareBank1/designsystem/compare/ffe-dropdown-react@3.0.6...ffe-dropdown-react@3.0.7) (2018-02-23)
 
 
 
@@ -12,7 +12,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-dropdown-react
 
 <a name="3.0.6"></a>
-## [3.0.6](***REMOVED***) (2018-02-22)
+## [3.0.6](https://github.com/SpareBank1/designsystem/compare/ffe-dropdown-react@3.0.5...ffe-dropdown-react@3.0.6) (2018-02-22)
 
 
 
@@ -20,7 +20,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-dropdown-react
 
 <a name="3.0.5"></a>
-## [3.0.5](***REMOVED***) (2018-01-22)
+## [3.0.5](https://github.com/SpareBank1/designsystem/compare/ffe-dropdown-react@3.0.4...ffe-dropdown-react@3.0.5) (2018-01-22)
 
 
 
@@ -28,18 +28,18 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-dropdown-react
 
 <a name="3.0.4"></a>
-## [3.0.4](***REMOVED***) (2018-01-22)
+## [3.0.4](https://github.com/SpareBank1/designsystem/compare/ffe-dropdown-react@3.0.3...ffe-dropdown-react@3.0.4) (2018-01-22)
 
 
 ### Bug Fixes
 
-* **ffe-dropdown-react:** Add missing proptypes check ([995d7f4](***REMOVED***))
+* **ffe-dropdown-react:** Add missing proptypes check
 
 
 
 
 <a name="3.0.3"></a>
-## [3.0.3](***REMOVED***) (2018-01-19)
+## [3.0.3](https://github.com/SpareBank1/designsystem/compare/ffe-dropdown-react@3.0.2...ffe-dropdown-react@3.0.3) (2018-01-19)
 
 
 
@@ -47,7 +47,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-dropdown-react
 
 <a name="3.0.2"></a>
-## [3.0.2](***REMOVED***) (2018-01-18)
+## [3.0.2](https://github.com/SpareBank1/designsystem/compare/ffe-dropdown-react@3.0.1...ffe-dropdown-react@3.0.2) (2018-01-18)
 
 
 
@@ -56,7 +56,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="3.0.1"></a>
 
-## [3.0.1](***REMOVED***) (2018-01-12)
+## [3.0.1](https://github.com/SpareBank1/designsystem/compare/ffe-dropdown-react@3.0.0...ffe-dropdown-react@3.0.1) (2018-01-12)
 
 **Note:** Version bump only for package ffe-dropdown-react
 
@@ -66,7 +66,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Chores
 
-* **ffe-dropdown-react:** Import ffe-dropdown-react ([7ba8e47](***REMOVED***))
+* **ffe-dropdown-react:** Import ffe-dropdown-react
 
 ### BREAKING CHANGES
 

@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="10.5.2"></a>
-## [10.5.2](***REMOVED***) (2018-02-23)
+## [10.5.2](https://github.com/SpareBank1/designsystem/compare/ffe-header@10.5.1...ffe-header@10.5.2) (2018-02-23)
 
 
 
@@ -12,7 +12,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-header
 
 <a name="10.5.1"></a>
-## [10.5.1](***REMOVED***) (2018-02-22)
+## [10.5.1](https://github.com/SpareBank1/designsystem/compare/ffe-header@10.5.0...ffe-header@10.5.1) (2018-02-22)
 
 
 
@@ -20,18 +20,18 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-header
 
 <a name="10.5.0"></a>
-# [10.5.0](***REMOVED***) (2018-02-20)
+# [10.5.0](https://github.com/SpareBank1/designsystem/compare/ffe-header@10.4.3...ffe-header@10.5.0) (2018-02-20)
 
 
 ### Features
 
-* **ffe-header:** Make logout button look like secondary button ([c50139f](***REMOVED***))
+* **ffe-header:** Make logout button look like secondary button
 
 
 
 
 <a name="10.4.3"></a>
-## [10.4.3](***REMOVED***) (2018-02-20)
+## [10.4.3](https://github.com/SpareBank1/designsystem/compare/ffe-header@10.4.2...ffe-header@10.4.3) (2018-02-20)
 
 
 
@@ -39,7 +39,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-header
 
 <a name="10.4.2"></a>
-## [10.4.2](***REMOVED***) (2018-02-19)
+## [10.4.2](https://github.com/SpareBank1/designsystem/compare/ffe-header@10.4.1...ffe-header@10.4.2) (2018-02-19)
 
 
 
@@ -47,7 +47,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-header
 
 <a name="10.4.1"></a>
-## [10.4.1](***REMOVED***) (2018-02-16)
+## [10.4.1](https://github.com/SpareBank1/designsystem/compare/ffe-header@10.4.0...ffe-header@10.4.1) (2018-02-16)
 
 
 
@@ -55,29 +55,29 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-header
 
 <a name="10.4.0"></a>
-# [10.4.0](***REMOVED***) (2018-02-15)
+# [10.4.0](https://github.com/SpareBank1/designsystem/compare/ffe-header@10.3.0...ffe-header@10.4.0) (2018-02-15)
 
 
 ### Features
 
-* **ffe-header:** Use ffe-webfonts package ([af24767](***REMOVED***))
+* **ffe-header:** Use ffe-webfonts package
 
 
 
 
 <a name="10.3.0"></a>
-# [10.3.0](***REMOVED***) (2018-02-09)
+# [10.3.0](https://github.com/SpareBank1/designsystem/compare/ffe-header@10.2.4...ffe-header@10.3.0) (2018-02-09)
 
 
 ### Features
 
-* **ffe-header:** Add disabled link modifier ([d5d0e57](***REMOVED***))
+* **ffe-header:** Add disabled link modifier
 
 
 
 
 <a name="10.2.4"></a>
-## [10.2.4](***REMOVED***) (2018-02-01)
+## [10.2.4](https://github.com/SpareBank1/designsystem/compare/ffe-header@10.2.3...ffe-header@10.2.4) (2018-02-01)
 
 
 
@@ -85,18 +85,18 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-header
 
 <a name="10.2.3"></a>
-## [10.2.3](***REMOVED***) (2018-01-31)
+## [10.2.3](https://github.com/SpareBank1/designsystem/compare/ffe-header@10.2.2...ffe-header@10.2.3) (2018-01-31)
 
 
 ### Bug Fixes
 
-* **ffe-header:** Add container element to menu toggle buttons ([48d1ef7](***REMOVED***))
+* **ffe-header:** Add container element to menu toggle buttons
 
 
 
 
 <a name="10.2.2"></a>
-## [10.2.2](***REMOVED***) (2018-01-26)
+## [10.2.2](https://github.com/SpareBank1/designsystem/compare/ffe-header@10.2.1...ffe-header@10.2.2) (2018-01-26)
 
 
 

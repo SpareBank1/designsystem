@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="2.3.1"></a>
-## [2.3.1](***REMOVED***) (2018-02-22)
+## [2.3.1](https://github.com/SpareBank1/designsystem/compare/eslint-config-ffe-base@2.3.0...eslint-config-ffe-base@2.3.1) (2018-02-22)
 
 
 
@@ -17,7 +17,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **eslint-config-ffe-base:** Add contribute.md link to readme ([28d5fe9](***REMOVED***))
+* **eslint-config-ffe-base:** Add contribute.md link to readme
 
 # 2.2.0 (13.12.2017)
 * Updated versions of eslint and eslint-find-rules
