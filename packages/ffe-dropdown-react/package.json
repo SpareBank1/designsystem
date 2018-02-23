@@ -1,8 +1,12 @@
 {
     "name": "@sb1/ffe-dropdown-react",
     "version": "3.0.7",
-    "main": "lib/Dropdown.js",
     "license": "MIT",
+    "files": [
+        "lib",
+        "*.js"
+    ],
+    "main": "lib/Dropdown.js",
     "repository": {
         "type": "git",
         "url": "ssh://git@github.com:SpareBank1/designsystem.git"
@@ -15,8 +19,8 @@
         "test:spec": "jest",
         "test:watch": "jest --watch"
     },
-    "peerDependencies": {
-        "@sb1/ffe-form": "^8.1.12"
+    "jest": {
+        "setupTestFrameworkScriptFile": "../../test-setup.js"
     },
     "dependencies": {
         "classnames": "^2.2.5"
@@ -31,11 +35,7 @@
         "react-addons-test-utils": "^15.0.1",
         "react-dom": "^16.2.0"
     },
-    "files": [
-        "lib",
-        "*.js"
-    ],
-    "jest": {
-        "setupTestFrameworkScriptFile": "../../test-setup.js"
+    "peerDependencies": {
+        "@sb1/ffe-form": "^8.1.12"
     }
 }

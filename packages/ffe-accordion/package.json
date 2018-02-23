@@ -2,28 +2,28 @@
     "name": "@sb1/ffe-accordion",
     "version": "3.0.11",
     "description": "Accordion component for FFE.",
-    "author": "SpareBank 1",
+    "keywords": [
+        "Accordion",
+        "FFE",
+        "SpareBank1"
+    ],
     "license": "MIT",
+    "author": "SpareBank 1",
+    "main": "index.js",
     "repository": {
         "type": "git",
         "url": "ssh://git@github.com:SpareBank1/designsystem.git"
     },
-    "main": "index.js",
     "scripts": {
         "lint": "stylelint less/*.less",
         "test": "npm run lint && npm run test:nsp",
         "test:nsp": "nsp check"
     },
-    "keywords": [
-        "FFE",
-        "SpareBank1",
-        "Accordion"
-    ],
-    "peerDependencies": {
-        "@sb1/ffe-core": "^11.0.3"
-    },
     "devDependencies": {
-        "nsp": "^3.2.1",
+        "@sb1/ffe-core": "^11.0.3",
+        "nsp": "^3.2.1"
+    },
+    "peerDependencies": {
         "@sb1/ffe-core": "^11.0.3"
     }
 }

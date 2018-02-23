@@ -2,22 +2,18 @@
     "name": "@sb1/ffe-header",
     "version": "10.5.2",
     "description": "Felles header for SpareBank 1",
+    "license": "MIT",
+    "author": "SpareBank 1",
     "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "ssh://git@github.com:SpareBank1/designsystem.git"
+    },
     "scripts": {
         "build": "lessc less/ffe-header-nodeps.less examples/ffe-header.css --autoprefix && lessc examples/examples.less examples/examples.css",
         "lint": "stylelint less/*.less",
         "test": "npm run lint && npm run test:nsp",
         "test:nsp": "nsp check"
-    },
-    "repository": {
-        "type": "git",
-        "url": "ssh://git@github.com:SpareBank1/designsystem.git"
-    },
-    "author": "SpareBank 1",
-    "license": "MIT",
-    "peerDependencies": {
-        "@sb1/ffe-buttons": "^5.2.3",
-        "@sb1/ffe-core": "^11.0.3"
     },
     "devDependencies": {
         "@sb1/ffe-buttons": "^5.2.3",
@@ -28,5 +24,9 @@
         "mkdirp": "^0.5.1",
         "nsp": "^3.2.1",
         "stylelint": "^8.4.0"
+    },
+    "peerDependencies": {
+        "@sb1/ffe-buttons": "^5.2.3",
+        "@sb1/ffe-core": "^11.0.3"
     }
 }

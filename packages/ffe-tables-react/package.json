@@ -2,16 +2,16 @@
     "name": "@sb1/ffe-tables-react",
     "version": "4.11.1",
     "description": "React implementation of ffe-tables",
-    "main": "lib/index.js",
+    "license": "MIT",
     "files": [
         "lib",
         "*.js"
     ],
+    "main": "lib/index.js",
     "repository": {
         "type": "git",
         "url": "ssh://git@github.com:SpareBank1/designsystem.git"
     },
-    "license": "MIT",
     "scripts": {
         "build": "babel -d lib/. --ignore=*.spec.js src/.",
         "lint": "eslint src/.",
@@ -19,6 +19,16 @@
         "test:nsp": "nsp check",
         "test:spec": "jest",
         "test:watch": "jest --watch"
+    },
+    "jest": {
+        "setupTestFrameworkScriptFile": "../../test-setup.js"
+    },
+    "dependencies": {
+        "@sb1/ffe-icons-react": "^4.0.7",
+        "classnames": "^2.2.5",
+        "deep-equal": "^1.0.1",
+        "prop-types": "^15.6.0",
+        "shallow-equals": "^1.0.0"
     },
     "devDependencies": {
         "enzyme": "^3.3.0",
@@ -31,15 +41,5 @@
     },
     "peerDependencies": {
         "@sb1/ffe-tables": "^8.1.9"
-    },
-    "dependencies": {
-        "classnames": "^2.2.5",
-        "deep-equal": "^1.0.1",
-        "@sb1/ffe-icons-react": "^4.0.7",
-        "prop-types": "^15.6.0",
-        "shallow-equals": "^1.0.0"
-    },
-    "jest": {
-        "setupTestFrameworkScriptFile": "../../test-setup.js"
     }
 }

@@ -2,13 +2,16 @@
     "name": "@sb1/ffe-lists",
     "version": "4.1.8",
     "description": "Lists in ffe",
+    "license": "MIT",
+    "author": "SpareBank 1",
+    "files": [
+        "less"
+    ],
     "main": "less/lists.less",
     "repository": {
         "type": "git",
         "url": "ssh://git@github.com:SpareBank1/designsystem.git"
     },
-    "author": "SpareBank 1",
-    "license": "MIT",
     "scripts": {
         "lint": "stylelint less/*.less",
         "test": "npm run lint && npm run test:nsp",
@@ -20,8 +23,5 @@
     },
     "peerDependencies": {
         "@sb1/ffe-core": "^11.0.3"
-    },
-    "files": [
-        "less"
-    ]
+    }
 }

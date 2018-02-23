@@ -2,13 +2,18 @@
     "name": "@sb1/ffe-searchable-dropdown-react",
     "version": "4.1.5",
     "description": "Dropdown with search option",
-    "main": "lib/SearchableDropdown.js",
+    "license": "MIT",
     "author": "SpareBank 1",
+    "files": [
+        "less/searchable-dropdown.less",
+        "lib",
+        "*.js"
+    ],
+    "main": "lib/SearchableDropdown.js",
     "repository": {
         "type": "git",
         "url": "ssh://git@github.com:SpareBank1/designsystem.git"
     },
-    "license": "MIT",
     "scripts": {
         "build": "babel -d lib/. --ignore=*.spec.js src/.",
         "lint": "eslint src/.",
@@ -20,10 +25,13 @@
     "jest": {
         "setupTestFrameworkScriptFile": "../../test-setup.js"
     },
-    "peerDependencies": {
-        "@sb1/ffe-core": "^11.0.3",
-        "@sb1/ffe-form": "^8.1.12",
-        "react": "^15.4.0 || ^16.0.0"
+    "dependencies": {
+        "@sb1/ffe-icons-react": "^4.0.7",
+        "classnames": "^2.2.5",
+        "lodash.isequal": "^4.5.0",
+        "prop-types": "^15.6.0",
+        "react-custom-scrollbars": "^4.2.1",
+        "react-proptype-conditional-require": "^1.0.4"
     },
     "devDependencies": {
         "enzyme": "^3.3.0",
@@ -35,17 +43,9 @@
         "react": "^16.1.1",
         "react-dom": "^16.1.1"
     },
-    "files": [
-        "less/searchable-dropdown.less",
-        "lib",
-        "*.js"
-    ],
-    "dependencies": {
-        "classnames": "^2.2.5",
-        "@sb1/ffe-icons-react": "^4.0.7",
-        "lodash.isequal": "^4.5.0",
-        "prop-types": "^15.6.0",
-        "react-custom-scrollbars": "^4.2.1",
-        "react-proptype-conditional-require": "^1.0.4"
+    "peerDependencies": {
+        "@sb1/ffe-core": "^11.0.3",
+        "@sb1/ffe-form": "^8.1.12",
+        "react": "^15.4.0 || ^16.0.0"
     }
 }

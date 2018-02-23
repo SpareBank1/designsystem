@@ -2,16 +2,21 @@
     "name": "@sb1/ffe-chart-donut-react",
     "version": "1.0.14",
     "description": "Donut chart in SVG",
-    "main": "lib/index.js",
-    "author": "SpareBank 1",
+    "keywords": [
+        "ffe"
+    ],
     "license": "MIT",
+    "author": "SpareBank 1",
+    "files": [
+        "lib",
+        "*.js",
+        "*.less"
+    ],
+    "main": "lib/index.js",
     "repository": {
         "type": "git",
         "url": "ssh://git@github.com:SpareBank1/designsystem.git"
     },
-    "keywords": [
-        "ffe"
-    ],
     "scripts": {
         "build": "babel -d lib/. --ignore=*.spec.js src/ && cp src/ffe-chart-donut.less lib/",
         "lint": "eslint src/.",
@@ -20,11 +25,11 @@
         "test:spec": "jest",
         "test:watch": "jest --watch"
     },
+    "jest": {
+        "setupTestFrameworkScriptFile": "../../test-setup.js"
+    },
     "dependencies": {
         "prop-types": "^15.6.0"
-    },
-    "peerDependencies": {
-        "react": "^15.4.0 || ^16.0.0"
     },
     "devDependencies": {
         "enzyme": "^3.3.0",
@@ -33,12 +38,7 @@
         "nsp": "^3.2.1",
         "react": "^16.1.1"
     },
-    "jest": {
-        "setupTestFrameworkScriptFile": "../../test-setup.js"
-    },
-    "files": [
-        "lib",
-        "*.js",
-        "*.less"
-    ]
+    "peerDependencies": {
+        "react": "^15.4.0 || ^16.0.0"
+    }
 }

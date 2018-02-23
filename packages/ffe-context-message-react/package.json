@@ -20,9 +20,12 @@
         "test:spec": "jest",
         "test:watch": "jest --watch"
     },
+    "jest": {
+        "setupTestFrameworkScriptFile": "../../test-setup.js"
+    },
     "dependencies": {
-        "classnames": "^2.2.5",
         "@sb1/ffe-icons-react": "^4.0.7",
+        "classnames": "^2.2.5",
         "prop-types": "^15.6.0"
     },
     "devDependencies": {
@@ -33,8 +36,5 @@
     },
     "peerDependencies": {
         "@sb1/ffe-context-message": "^2.0.11"
-    },
-    "jest": {
-        "setupTestFrameworkScriptFile": "../../test-setup.js"
     }
 }

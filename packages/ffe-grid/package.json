@@ -2,14 +2,14 @@
     "name": "@sb1/ffe-grid",
     "version": "6.0.12",
     "description": "A grid component for use within the FFE framework",
-    "license": "MIT",
     "keywords": [
         "ffe"
     ],
+    "license": "MIT",
+    "author": "SpareBank 1",
     "files": [
         "less"
     ],
-    "author": "SpareBank 1",
     "repository": {
         "type": "git",
         "url": "ssh://git@github.com:SpareBank1/designsystem.git"
@@ -19,12 +19,12 @@
         "test": "npm run lint && npm run test:nsp",
         "test:nsp": "nsp check"
     },
-    "peerDependencies": {
-        "@sb1/ffe-core": "^11.0.3"
-    },
     "devDependencies": {
         "@sb1/ffe-core": "^11.0.3",
         "nsp": "^3.2.1",
         "stylelint": "^8.4.0"
+    },
+    "peerDependencies": {
+        "@sb1/ffe-core": "^11.0.3"
     }
 }
