@@ -1,10 +1,9 @@
 import formatDate from './formatDate';
 import moment from 'moment';
 
-// Skip these tests due to problems with timezones
-describe.skip('format date ', () => {
+describe('format date ', () => {
     it('in milliseconds', () => {
-        expect(formatDate(1467756000000)).toBe('06.07.2016');
+        expect(formatDate(1514808000000)).toBe('01.01.2018');
     });
 
     it('in javascript date format', () => {
@@ -12,7 +11,7 @@ describe.skip('format date ', () => {
     });
 
     it('in moment objects', () => {
-        expect(formatDate(moment(1467756000000))).toBe('06.07.2016');
+        expect(formatDate(moment(1514808000000))).toBe('01.01.2018');
     });
 
     it('returns null when input is string', () => {
