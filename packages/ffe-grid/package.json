@@ -12,9 +12,8 @@
     "author": "SpareBank 1",
     "repository": {
         "type": "git",
-        "url": "***REMOVED***"
+        "url": "ssh://git@github.com:SpareBank1/designsystem.git"
     },
-    "homepage": "***REMOVED***",
     "scripts": {
         "lint": "stylelint less/*.less",
         "test": "npm run lint && npm run test:nsp",

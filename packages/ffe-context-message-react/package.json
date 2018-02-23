@@ -10,7 +10,7 @@
     "main": "lib/index.js",
     "repository": {
         "type": "git",
-        "url": "***REMOVED***"
+        "url": "ssh://git@github.com:SpareBank1/designsystem.git"
     },
     "scripts": {
         "build": "babel -d lib/. --ignore=*.spec.js src/.",

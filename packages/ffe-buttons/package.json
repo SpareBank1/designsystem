@@ -13,7 +13,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "***REMOVED***"
+        "url": "ssh://git@github.com:SpareBank1/designsystem.git"
     },
     "devDependencies": {
         "@sb1/ffe-core": "^11.0.3",

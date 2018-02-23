@@ -4,6 +4,10 @@
     "main": "lib/index.js",
     "author": "SpareBank 1",
     "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "ssh://git@github.com:SpareBank1/designsystem.git"
+    },
     "scripts": {
         "build": "babel -d lib/. --ignore=*.spec.js src/.",
         "lint": "eslint src/.",

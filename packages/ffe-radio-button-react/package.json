@@ -3,6 +3,10 @@
     "version": "1.2.10",
     "main": "lib/index.js",
     "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "ssh://git@github.com:SpareBank1/designsystem.git"
+    },
     "files": [
         "lib",
         "*.js"

@@ -6,6 +6,10 @@
         "ffe"
     ],
     "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "ssh://git@github.com:SpareBank1/designsystem.git"
+    },
     "author": "SpareBank 1",
     "main": "lib/index.js",
     "scripts": {

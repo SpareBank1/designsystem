@@ -6,7 +6,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "***REMOVED***"
+    "url": "ssh://git@github.com:SpareBank1/designsystem.git"
   },
   "main": "index.js",
   "scripts": {

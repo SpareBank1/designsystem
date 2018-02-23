@@ -3,6 +3,10 @@
     "version": "2.7.16",
     "main": "lib/ffe-datepicker-react.js",
     "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "ssh://git@github.com:SpareBank1/designsystem.git"
+    },
     "scripts": {
         "build": "babel -d lib/. --ignore=*.spec.js src/.",
         "lint": "eslint src/.",

@@ -8,7 +8,7 @@
     ],
     "repository": {
         "type": "git",
-        "url": "***REMOVED***"
+        "url": "ssh://git@github.com:SpareBank1/designsystem.git"
     },
     "author": "SpareBank 1",
     "license": "MIT",
