@@ -5,7 +5,7 @@ Lenkekort kommer i flere forskjellige størrelser.
 Hele flaten er klikkbar. Brukes som navigasjon. Brukt som produktkort på nettsidene.
 
 ```js
-const { KrPoseIkon } = require('ffe-icons-react');
+const { KrPoseIkon } = require('@sb1/ffe-icons-react');
 <div>
     <LinkCard
         details="kr 32 132,00"
@@ -27,7 +27,7 @@ const { KrPoseIkon } = require('ffe-icons-react');
 Hele flaten er klikkbar. Brukes som navigasjon. Brukt som produktkort på nettsidene.
 
 ```js
-const { KrPoseIkon } = require('ffe-icons-react');
+const { KrPoseIkon } = require('@sb1/ffe-icons-react');
 <div>
     <LinkCard
         heading="Innskuddspensjon med investeringsvalg"
@@ -47,7 +47,7 @@ const { KrPoseIkon } = require('ffe-icons-react');
 Hele flaten er klikkbar. Brukes som navigasjon. Dette er også slik produktkortene ser ut på mobil.
 
 ```js
-const { BilIkon, HusIkon } = require('ffe-icons-react');
+const { BilIkon, HusIkon } = require('@sb1/ffe-icons-react');
 <div>
     <LinkCard
         details="kr 32 132,00"

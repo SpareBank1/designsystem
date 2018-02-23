@@ -1,7 +1,7 @@
 Produktkort brukes for å vise produkter og detaljer om disse. De kan gjerne fungere som navigasjon.
 
 ```jsx
-const { BilIkon, HusIkon } = require('ffe-icons-react');
+const { BilIkon, HusIkon } = require('@sb1/ffe-icons-react');
 
 <div>
     <ProductCard
@@ -19,7 +19,7 @@ const { BilIkon, HusIkon } = require('ffe-icons-react');
 Produktkort kan ha en tilkoblet status.
 
 ```jsx
-const { BilIkon, HusIkon } = require('ffe-icons-react');
+const { BilIkon, HusIkon } = require('@sb1/ffe-icons-react');
 
 <div>
     <ProductCard
