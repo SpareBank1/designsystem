@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="4.2.7"></a>
-## [4.2.7](***REMOVED***) (2018-02-23)
+## [4.2.7](https://github.com/SpareBank1/designsystem/compare/ffe-message-box@4.2.6...ffe-message-box@4.2.7) (2018-02-23)
 
 
 
@@ -12,7 +12,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-message-box
 
 <a name="4.2.6"></a>
-## [4.2.6](***REMOVED***) (2018-02-22)
+## [4.2.6](https://github.com/SpareBank1/designsystem/compare/ffe-message-box@4.2.5...ffe-message-box@4.2.6) (2018-02-22)
 
 
 
@@ -20,7 +20,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-message-box
 
 <a name="4.2.5"></a>
-## [4.2.5](***REMOVED***) (2018-01-22)
+## [4.2.5](https://github.com/SpareBank1/designsystem/compare/ffe-message-box@4.2.4...ffe-message-box@4.2.5) (2018-01-22)
 
 
 
@@ -28,7 +28,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-message-box
 
 <a name="4.2.4"></a>
-## [4.2.4](***REMOVED***) (2018-01-19)
+## [4.2.4](https://github.com/SpareBank1/designsystem/compare/ffe-message-box@4.2.3...ffe-message-box@4.2.4) (2018-01-19)
 
 
 

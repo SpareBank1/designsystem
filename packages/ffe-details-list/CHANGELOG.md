@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="8.1.12"></a>
-## [8.1.12](***REMOVED***) (2018-02-23)
+## [8.1.12](https://github.com/SpareBank1/designsystem/compare/ffe-details-list@8.1.11...ffe-details-list@8.1.12) (2018-02-23)
 
 
 
@@ -12,7 +12,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-details-list
 
 <a name="8.1.11"></a>
-## [8.1.11](***REMOVED***) (2018-02-22)
+## [8.1.11](https://github.com/SpareBank1/designsystem/compare/ffe-details-list@8.1.10...ffe-details-list@8.1.11) (2018-02-22)
 
 
 
@@ -20,7 +20,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-details-list
 
 <a name="8.1.10"></a>
-## [8.1.10](***REMOVED***) (2018-02-20)
+## [8.1.10](https://github.com/SpareBank1/designsystem/compare/ffe-details-list@8.1.9...ffe-details-list@8.1.10) (2018-02-20)
 
 
 
@@ -28,7 +28,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-details-list
 
 <a name="8.1.9"></a>
-## [8.1.9](***REMOVED***) (2018-02-15)
+## [8.1.9](https://github.com/SpareBank1/designsystem/compare/ffe-details-list@8.1.8...ffe-details-list@8.1.9) (2018-02-15)
 
 
 
@@ -36,7 +36,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-details-list
 
 <a name="8.1.8"></a>
-## [8.1.8](***REMOVED***) (2018-02-01)
+## [8.1.8](https://github.com/SpareBank1/designsystem/compare/ffe-details-list@8.1.7...ffe-details-list@8.1.8) (2018-02-01)
 
 
 
@@ -44,7 +44,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-details-list
 
 <a name="8.1.7"></a>
-## [8.1.7](***REMOVED***) (2018-01-22)
+## [8.1.7](https://github.com/SpareBank1/designsystem/compare/ffe-details-list@8.1.6...ffe-details-list@8.1.7) (2018-01-22)
 
 
 
@@ -52,7 +52,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-details-list
 
 <a name="8.1.6"></a>
-## [8.1.6](***REMOVED***) (2018-01-19)
+## [8.1.6](https://github.com/SpareBank1/designsystem/compare/ffe-details-list@8.1.5...ffe-details-list@8.1.6) (2018-01-19)
 
 
 
@@ -60,7 +60,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-details-list
 
 <a name="8.1.5"></a>
-## [8.1.5](***REMOVED***) (2018-01-19)
+## [8.1.5](https://github.com/SpareBank1/designsystem/compare/ffe-details-list@8.1.4...ffe-details-list@8.1.5) (2018-01-19)
 
 
 
@@ -68,7 +68,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-details-list
 
 <a name="8.1.4"></a>
-## [8.1.4](***REMOVED***) (2018-01-18)
+## [8.1.4](https://github.com/SpareBank1/designsystem/compare/ffe-details-list@8.1.3...ffe-details-list@8.1.4) (2018-01-18)
 
 
 
@@ -77,13 +77,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="8.1.3"></a>
 
-## [8.1.3](***REMOVED***) (2018-01-12)
+## [8.1.3](https://github.com/SpareBank1/designsystem/compare/ffe-details-list@8.1.2...ffe-details-list@8.1.3) (2018-01-12)
 
 **Note:** Version bump only for package ffe-details-list
 
 <a name="8.1.2"></a>
 
-## [8.1.2](***REMOVED***) (2018-01-12)
+## [8.1.2](https://github.com/SpareBank1/designsystem/compare/ffe-details-list@8.1.1...ffe-details-list@8.1.2) (2018-01-12)
 
 **Note:** Version bump only for package ffe-details-list
 

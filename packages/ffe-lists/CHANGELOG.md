@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
       <a name="4.1.8"></a>
-## [4.1.8](***REMOVED***) (2018-02-23)
+## [4.1.8](https://github.com/SpareBank1/designsystem/compare/ffe-lists@4.1.7...ffe-lists@4.1.8) (2018-02-23)
 
 
 
@@ -12,7 +12,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-lists
 
       <a name="4.1.7"></a>
-## [4.1.7](***REMOVED***) (2018-02-22)
+## [4.1.7](https://github.com/SpareBank1/designsystem/compare/ffe-lists@4.1.6...ffe-lists@4.1.7) (2018-02-22)
 
 
 
@@ -20,7 +20,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-lists
 
   <a name="4.1.6"></a>
-## [4.1.6](***REMOVED***) (2018-02-20)
+## [4.1.6](https://github.com/SpareBank1/designsystem/compare/ffe-lists@4.1.5...ffe-lists@4.1.6) (2018-02-20)
 
 
 
@@ -28,7 +28,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-lists
 
 <a name="4.1.5"></a>
-## [4.1.5](***REMOVED***) (2018-02-15)
+## [4.1.5](https://github.com/SpareBank1/designsystem/compare/ffe-lists@4.1.4...ffe-lists@4.1.5) (2018-02-15)
 
 
 
@@ -36,7 +36,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-lists
 
 <a name="4.1.4"></a>
-## [4.1.4](***REMOVED***) (2018-02-01)
+## [4.1.4](https://github.com/SpareBank1/designsystem/compare/ffe-lists@4.1.3...ffe-lists@4.1.4) (2018-02-01)
 
 
 
@@ -44,7 +44,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-lists
 
 <a name="4.1.3"></a>
-## [4.1.3](***REMOVED***) (2018-01-22)
+## [4.1.3](https://github.com/SpareBank1/designsystem/compare/ffe-lists@4.1.2...ffe-lists@4.1.3) (2018-01-22)
 
 
 

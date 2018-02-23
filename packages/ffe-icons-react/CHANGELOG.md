@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
       <a name="4.0.7"></a>
-## [4.0.7](***REMOVED***) (2018-02-23)
+## [4.0.7](https://github.com/SpareBank1/designsystem/compare/ffe-icons-react@4.0.6...ffe-icons-react@4.0.7) (2018-02-23)
 
 
 
@@ -12,7 +12,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-icons-react
 
       <a name="4.0.6"></a>
-## [4.0.6](***REMOVED***) (2018-02-22)
+## [4.0.6](https://github.com/SpareBank1/designsystem/compare/ffe-icons-react@4.0.5...ffe-icons-react@4.0.6) (2018-02-22)
 
 
 
@@ -20,7 +20,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-icons-react
 
     <a name="4.0.5"></a>
-## [4.0.5](***REMOVED***) (2018-01-19)
+## [4.0.5](https://github.com/SpareBank1/designsystem/compare/ffe-icons-react@4.0.4...ffe-icons-react@4.0.5) (2018-01-19)
 
 
 
@@ -28,7 +28,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-icons-react
 
 <a name="4.0.4"></a>
-## [4.0.4](***REMOVED***) (2018-01-10)
+## [4.0.4](https://github.com/SpareBank1/designsystem/compare/ffe-icons-react@4.0.3...ffe-icons-react@4.0.4) (2018-01-10)
 
 
 
@@ -37,29 +37,29 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="4.0.3"></a>
 
-## [4.0.3](***REMOVED***) (2018-01-09)
+## [4.0.3](https://github.com/SpareBank1/designsystem/compare/ffe-icons-react@4.0.2...ffe-icons-react@4.0.3) (2018-01-09)
 
 **Note:** Version bump only for package ffe-icons-react
 
 <a name="4.0.2"></a>
 
-## [4.0.2](***REMOVED***) (2018-01-05)
+## [4.0.2](https://github.com/SpareBank1/designsystem/compare/ffe-icons-react@4.0.1...ffe-icons-react@4.0.2) (2018-01-05)
 
 **Note:** Version bump only for package ffe-icons-react
 
 <a name="4.0.1"></a>
 
-## [4.0.1](***REMOVED***) (2018-01-04)
+## [4.0.1](https://github.com/SpareBank1/designsystem/compare/ffe-icons-react@4.0.0...ffe-icons-react@4.0.1) (2018-01-04)
 
 **Note:** Version bump only for package ffe-icons-react
 
 <a name="4.0.0"></a>
 
-# [4.0.0](***REMOVED***) (2018-01-02)
+# [4.0.0](https://github.com/SpareBank1/designsystem/compare/ffe-icons-react@3.0.0...ffe-icons-react@4.0.0) (2018-01-02)
 
 ### Code Refactoring
 
-* **ffe-icons-react:** Improve API ([ecb9ac6](***REMOVED***))
+* **ffe-icons-react:** Improve API
 
 ### BREAKING CHANGES
 
@@ -100,17 +100,17 @@ This API change allows for cleaner usage and better documentation.
 
 ### Bug Fixes
 
-* **ffe-icons-react:** Adjust file path to monorepo layout ([3f89c42](***REMOVED***))
-* **ffe-icons-react:** fix build script to work inside monorepo ([3dd256e](***REMOVED***))
-* **ffe-icons-react:** Output components to /lib ([4b62d10](***REMOVED***))
+* **ffe-icons-react:** Adjust file path to monorepo layout
+* **ffe-icons-react:** fix build script to work inside monorepo
+* **ffe-icons-react:** Output components to /lib
 
 ### Features
 
-* **ffe-icons-react:** Add contribute.md link to readme ([32014fc](***REMOVED***))
+* **ffe-icons-react:** Add contribute.md link to readme
 
 ### Fix
 
-* Rename all icons to end with -ikon ([f4b815a](***REMOVED***))
+* Rename all icons to end with -ikon
 
 ### BREAKING CHANGES
 

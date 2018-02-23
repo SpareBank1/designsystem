@@ -479,7 +479,6 @@ Releasing version 2 with the first batch of optimized icons:
 ## 1.0.1
 
 * Added plaster-ikon
-![plaster-ikon](***REMOVED***)
 
 # 1.0.0
 
