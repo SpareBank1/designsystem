@@ -31,7 +31,7 @@ for å få oversikt over nye features, bugfixer, og _breaking changes_.
 ## Bidra!
 
 Vi oppfordrer alle, både rutinerte og ferske, til å opprette issues, sende inn pull requests og kommentere på andres
-bidrag. Ta en titt på [CONTRIBUTE.md](CONTRIBUTE.md) for hvordan du går frem.
+bidrag. Ta en titt på [CONTRIBUTING.md](CONTRIBUTING.md) for hvordan du går frem.
 
 # Licenses
 
