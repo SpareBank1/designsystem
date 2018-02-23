@@ -5,7 +5,7 @@
 ```
 
 ```js
-const { UtropstegnIkon } = require('ffe-icons-react');
+const { UtropstegnIkon } = require('@sb1/ffe-icons-react');
 
 <ContextErrorMessage icon={<UtropstegnIkon />}>
     Dette gikk ikke som forventet i det hele tatt!

@@ -5,7 +5,7 @@
 ```
 
 ```js
-const { LyspareIkon } = require('ffe-icons-react');
+const { LyspareIkon } = require('@sb1/ffe-icons-react');
 
 <ContextTipMessage icon={<LyspareIkon />}>
     Visste du at du kan få en skattefordel ved sparing i IPS?

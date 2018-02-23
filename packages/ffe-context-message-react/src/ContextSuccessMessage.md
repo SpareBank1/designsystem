@@ -3,7 +3,7 @@
 ```
 
 ```js
-const { HakeIkon } = require('ffe-icons-react');
+const { HakeIkon } = require('@sb1/ffe-icons-react');
 
 <ContextSuccessMessage icon={<HakeIkon />}>
     Betalingen ble registrert!
