@@ -1,6 +1,6 @@
 {
     "name": "ffe-core-react",
-    "version": "1.2.3",
+    "version": "1.2.4",
     "description": "React components for ffe-core components",
     "main": "lib/index.js",
     "author": "SpareBank 1",

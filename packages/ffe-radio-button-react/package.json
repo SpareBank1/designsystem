@@ -1,6 +1,6 @@
 {
     "name": "ffe-radio-button-react",
-    "version": "1.2.9",
+    "version": "1.2.10",
     "main": "lib/index.js",
     "license": "MIT",
     "files": [

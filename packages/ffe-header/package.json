@@ -1,6 +1,6 @@
 {
     "name": "ffe-header",
-    "version": "10.5.1",
+    "version": "10.5.2",
     "description": "Felles header for SpareBank 1",
     "main": "index.js",
     "scripts": {
@@ -20,9 +20,9 @@
         "ffe-core": "^9.2.0 || ^10.0.0"
     },
     "devDependencies": {
-        "ffe-buttons": "^5.2.2",
-        "ffe-core": "^11.0.2",
-        "ffe-webfonts": "^1.0.2",
+        "ffe-buttons": "^5.2.3",
+        "ffe-core": "^11.0.3",
+        "ffe-webfonts": "^1.0.3",
         "less": "^2.7.3",
         "less-plugin-autoprefix": "^1.5.1",
         "mkdirp": "^0.5.1",

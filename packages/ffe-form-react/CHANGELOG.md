@@ -3,7 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-      <a name="2.2.8"></a>
+    <a name="2.2.9"></a>
+## [2.2.9](***REMOVED***) (2018-02-23)
+
+
+
+
+**Note:** Version bump only for package ffe-form-react
+
+    <a name="2.2.8"></a>
 ## [2.2.8](***REMOVED***) (2018-02-22)
 
 
@@ -11,7 +19,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package ffe-form-react
 
-      <a name="2.2.7"></a>
+  <a name="2.2.7"></a>
 ## [2.2.7](***REMOVED***) (2018-02-20)
 
 
@@ -19,7 +27,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package ffe-form-react
 
-    <a name="2.2.6"></a>
+<a name="2.2.6"></a>
 ## [2.2.6](***REMOVED***) (2018-02-15)
 
 

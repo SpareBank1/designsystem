@@ -1,7 +1,7 @@
 {
     "name": "ffe-webfonts",
     "description": "Fonts and fonts definition used in FFE",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "files": [
         "fonts",
         "fonts.css",

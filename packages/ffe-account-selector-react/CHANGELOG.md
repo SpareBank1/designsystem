@@ -3,7 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-    <a name="8.1.19"></a>
+       <a name="8.1.20"></a>
+## [8.1.20](***REMOVED***) (2018-02-23)
+
+
+
+
+**Note:** Version bump only for package ffe-account-selector-react
+
+       <a name="8.1.19"></a>
 ## [8.1.19](***REMOVED***) (2018-02-22)
 
 
@@ -11,7 +19,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package ffe-account-selector-react
 
-    <a name="8.1.18"></a>
+   <a name="8.1.18"></a>
 ## [8.1.18](***REMOVED***) (2018-02-22)
 
 
@@ -19,7 +27,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package ffe-account-selector-react
 
-  <a name="8.1.17"></a>
+ <a name="8.1.17"></a>
 ## [8.1.17](***REMOVED***) (2018-02-20)
 
 
@@ -367,8 +375,8 @@ This component no longer holds the selected object in its internal state. It's t
 to set the selected suggestion and the input field value. For example the component can be reset by passing the props:
 
 ```js
- value : "",
- selectedAccount : null
+value : "",
+selectedAccount : null
 ```
 
 Styling has also been changed where `nfe-account-selector` has be renamed to `account-selector`

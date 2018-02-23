@@ -1,6 +1,6 @@
 {
     "name": "ffe-dropdown-react",
-    "version": "3.0.6",
+    "version": "3.0.7",
     "main": "lib/Dropdown.js",
     "license": "MIT",
     "scripts": {

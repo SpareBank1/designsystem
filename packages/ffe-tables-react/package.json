@@ -1,6 +1,6 @@
 {
     "name": "ffe-tables-react",
-    "version": "4.11.0",
+    "version": "4.11.1",
     "description": "React implementation of ffe-tables",
     "main": "lib/index.js",
     "files": [
@@ -24,7 +24,7 @@
         "enzyme": "^3.3.0",
         "enzyme-adapter-react-16": "^1.1.1",
         "ffe-core": "^9.2.0",
-        "ffe-tables": "^8.1.8",
+        "ffe-tables": "^8.1.9",
         "jest": "^22.4.0",
         "nsp": "^3.2.1",
         "react": "^16.1.1",
@@ -37,7 +37,7 @@
     "dependencies": {
         "classnames": "^2.2.5",
         "deep-equal": "^1.0.1",
-        "ffe-icons-react": "^4.0.6",
+        "ffe-icons-react": "^4.0.7",
         "prop-types": "^15.6.0",
         "shallow-equals": "^1.0.0"
     },

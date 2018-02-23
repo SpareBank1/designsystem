@@ -3,7 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-    <a name="4.4.16"></a>
+      <a name="4.4.17"></a>
+## [4.4.17](***REMOVED***) (2018-02-23)
+
+
+
+
+**Note:** Version bump only for package ffe-checkbox-react
+
+      <a name="4.4.16"></a>
 ## [4.4.16](***REMOVED***) (2018-02-22)
 
 
@@ -11,7 +19,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package ffe-checkbox-react
 
-    <a name="4.4.15"></a>
+  <a name="4.4.15"></a>
 ## [4.4.15](***REMOVED***) (2018-02-22)
 
 
@@ -19,7 +27,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package ffe-checkbox-react
 
-  <a name="4.4.14"></a>
+<a name="4.4.14"></a>
 ## [4.4.14](***REMOVED***) (2018-02-20)
 
 

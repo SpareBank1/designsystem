@@ -1,6 +1,6 @@
 {
     "name": "ffe-tabs",
-    "version": "3.0.8",
+    "version": "3.0.9",
     "main": "less/ffe-tabs.less",
     "files": [
         "less"
@@ -17,7 +17,7 @@
         "test:nsp": "nsp check"
     },
     "devDependencies": {
-        "ffe-core": "^11.0.2",
+        "ffe-core": "^11.0.3",
         "nsp": "^3.2.1"
     },
     "peerDependencies": {

@@ -1,6 +1,6 @@
 {
     "name": "ffe-spinner",
-    "version": "2.0.8",
+    "version": "2.0.9",
     "main": "less/spinner.less",
     "files": [
         "less",
@@ -19,7 +19,7 @@
     },
     "homepage": "***REMOVED***",
     "devDependencies": {
-        "ffe-core": "^11.0.2",
+        "ffe-core": "^11.0.3",
         "nsp": "^3.2.1"
     },
     "peerDependencies": {
