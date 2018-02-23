@@ -2,7 +2,7 @@
 
 Felles front end (FFE) sitt felles repository. Her vil du finne alle komponentene i FFE, både for LESS og React.
 
-Hver pakke har hver sin katalog under [packages/](packages/).
+Hver pakke har sin egen katalog under [packages/](packages/).
 
 ## Kom i gang!
 
