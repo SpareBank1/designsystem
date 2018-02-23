@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { func, node, number, object, oneOf } from 'prop-types';
 
-import KryssIkon from 'ffe-icons-react/lib/kryss-ikon';
+import KryssIkon from '@sb1/ffe-icons-react/lib/kryss-ikon';
 
 /*
  * Internal base component for creating system messages.

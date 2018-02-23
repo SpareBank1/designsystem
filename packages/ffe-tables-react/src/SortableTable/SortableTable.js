@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import equal from 'deep-equal';
-import PilNedIkon from 'ffe-icons-react/lib/pil-ned-ikon';
+import PilNedIkon from '@sb1/ffe-icons-react/lib/pil-ned-ikon';
 import sortData from './sort-data';
 import Table from '../Table';
 

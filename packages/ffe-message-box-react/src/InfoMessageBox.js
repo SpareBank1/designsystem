@@ -1,5 +1,5 @@
 import React from 'react';
-import InfoSirkelIkon from 'ffe-icons-react/lib/info-sirkel-ikon';
+import InfoSirkelIkon from '@sb1/ffe-icons-react/lib/info-sirkel-ikon';
 import MessageBox from './MessageBox';
 
 const iconStyles = {

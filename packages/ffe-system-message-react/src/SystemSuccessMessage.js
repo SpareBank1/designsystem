@@ -1,5 +1,5 @@
 import React from 'react';
-import HakeSirkelIkon from 'ffe-icons-react/lib/hake-sirkel-ikon';
+import HakeSirkelIkon from '@sb1/ffe-icons-react/lib/hake-sirkel-ikon';
 
 import SystemMessage from './SystemMessage';
 

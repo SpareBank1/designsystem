@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import shallowEqual from 'shallow-equals';
-import ChevronIkon from 'ffe-icons-react/lib/chevron-ikon';
+import ChevronIkon from '@sb1/ffe-icons-react/lib/chevron-ikon';
 import TableRow from './TableRow';
 
 class TableRowExpandable extends Component {

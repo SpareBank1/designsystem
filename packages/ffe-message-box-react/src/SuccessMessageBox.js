@@ -1,5 +1,5 @@
 import React from 'react';
-import HakeIkon from 'ffe-icons-react/lib/hake-ikon';
+import HakeIkon from '@sb1/ffe-icons-react/lib/hake-ikon';
 import MessageBox from './MessageBox';
 
 const iconStyles = {

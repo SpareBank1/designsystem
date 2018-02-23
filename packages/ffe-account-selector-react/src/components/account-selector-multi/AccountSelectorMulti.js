@@ -4,7 +4,7 @@ import React from 'react';
 import { func, string, arrayOf, bool } from 'prop-types';
 import autoBind from 'react-auto-bind';
 
-import Checkbox from 'ffe-checkbox-react';
+import Checkbox from '@sb1/ffe-checkbox-react';
 
 import BaseSelector from '../base-selector';
 import {

@@ -38,8 +38,8 @@ let options = {
 };
 
 if (argv.opts) {
-    options.cwd = '../../../../';
-    const opts = require(`../../../../${argv.opts}`);
+    options.cwd = '../../../';
+    const opts = require(`../../../${argv.opts}`);
 
     // deepAssign does not handle arrays, so copy the icon array and delete it from opts before assigning the rest
     options.icons = opts.icons.slice(0);

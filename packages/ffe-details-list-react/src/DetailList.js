@@ -1,7 +1,7 @@
 import React from 'react';
 import { node } from 'prop-types';
 
-import { Grid } from 'ffe-grid-react';
+import { Grid } from '@sb1/ffe-grid-react';
 
 const DetailList = ({ children }) => <Grid>{children}</Grid>;
 
