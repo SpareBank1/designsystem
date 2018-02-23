@@ -1,13 +1,12 @@
-# ffe-system-message-react
+# @sb1/ffe-system-message-react
 
 ## Install
 
-```
-$ npm install --save ffe-system-message-react
+```bash
+npm install --save @sb1/ffe-system-message-react
 ```
 
 ## Usage
 
-Like all React packages in FFE, this package expects the package `ffe-system-message` to be imported in your project's main css- or less-file.
-
-Please see the [docs for usage and API information](src/SystemMessage.md).
+Run Styleguidist from the repository root to see live examples and documentation,
+or see the markdown files next to the component code in `src/`.

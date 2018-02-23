@@ -1,5 +1,5 @@
 {
-  "name": "eslint-config-ffe",
+  "name": "@sb1/eslint-config-ffe",
   "version": "7.0.2",
   "description": "",
   "author": "SpareBank 1",
@@ -28,6 +28,6 @@
     "eslint-plugin-react": "^7.0.0"
   },
   "dependencies": {
-    "eslint-config-ffe-base": "^2.3.1"
+    "@sb1/eslint-config-ffe-base": "^2.3.1"
   }
 }

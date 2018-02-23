@@ -1,13 +1,15 @@
-# ffe-spinner
+# @sb1/ffe-spinner
 
-Pakken inneholder styling til ffe-spinner
+## Install
 
-## Bruke
-
-ffe-spinner har en peerDependency på ffe-core
-
-```
-$ npm install --save-dev ffe-core ffe-spinner
+```bash
+npm install --save @sb1/ffe-spinner
 ```
 
-ffe-spinner brukes på samme måte som ffe-core. Importer `ffe-spinner/less/spinner.less` for å ta i bruk alle listene.
+## Usage
+
+```less
+@import 'path/to/node_modules/@sb1/ffe-spinner/less/spinner';
+```
+
+See also `@sb1/ffe-spinner-react`.

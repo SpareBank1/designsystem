@@ -1,5 +1,5 @@
 {
-    "name": "ffe-details-list-react",
+    "name": "@sb1/ffe-details-list-react",
     "version": "1.0.6",
     "main": "lib/index.js",
     "files": [
@@ -23,7 +23,7 @@
     },
     "dependencies": {
         "classnames": "^2.2.5",
-        "ffe-grid-react": "^6.0.13"
+        "@sb1/ffe-grid-react": "^6.0.13"
     },
     "devDependencies": {
         "babel-cli": "^6.24.1",

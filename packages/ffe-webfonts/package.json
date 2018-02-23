@@ -1,5 +1,5 @@
 {
-    "name": "ffe-webfonts",
+    "name": "@sb1/ffe-webfonts",
     "description": "Fonts and fonts definition used in FFE",
     "version": "1.0.3",
     "files": [

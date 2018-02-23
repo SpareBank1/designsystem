@@ -1,5 +1,5 @@
 {
-    "name": "ffe-system-message-react",
+    "name": "@sb1/ffe-system-message-react",
     "version": "3.0.3",
     "description": "SpareBank 1 System Message komponent",
     "main": "lib/index.js",
@@ -24,13 +24,13 @@
         "prop-types": "*"
     },
     "peerDependencies": {
-        "ffe-icons-react": "4.x",
-        "ffe-system-message": "1.x || 2.x"
+        "@sb1/ffe-icons-react": "^4.0.7",
+        "@sb1/ffe-system-message": "^2.0.8"
     },
     "devDependencies": {
         "enzyme": "^3.3.0",
         "enzyme-adapter-react-16": "^1.1.1",
-        "ffe-icons-react": "^4.0.7",
+        "@sb1/ffe-icons-react": "^4.0.7",
         "jest": "^22.4.0",
         "nsp": "^3.2.1",
         "react": "^16.2.0",

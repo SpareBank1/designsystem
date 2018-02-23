@@ -1,5 +1,5 @@
 {
-    "name": "ffe-expandable-react",
+    "name": "@sb1/ffe-expandable-react",
     "version": "2.0.6",
     "main": "lib/ffe-expandable-react.js",
     "scripts": {

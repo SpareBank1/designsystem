@@ -1,5 +1,5 @@
 {
-    "name": "ffe-form",
+    "name": "@sb1/ffe-form",
     "version": "8.1.12",
     "description": "Form components for Felles Front End",
     "main": "less/form.less",
@@ -16,12 +16,13 @@
     },
     "homepage": "***REMOVED***",
     "devDependencies": {
-        "ffe-core": "^11.0.3",
+        "@sb1/ffe-core": "^11.0.3",
         "nsp": "^3.2.1",
         "stylelint": "^8.4.0"
     },
-    "peerDependencies": {
-        "ffe-core": "^10.2.4"
+    "optionalDependencies": {
+        "@sb1/ffe-buttons": "^5.2.3",
+        "@sb1/ffe-core": "^11.0.3"
     },
     "files": [
         "less"

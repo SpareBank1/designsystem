@@ -1,27 +1,26 @@
-# Felles Frontend
+# @sb1/ffe-core
 
-Felles frontend (FFE) inneholder Less og JavaScript for felles bruk.
+**ffe-core** has Less common to all components in FFE - typography, colors, etc.
 
-**ffe-core** inneholder Less som er felles for alle delte komponenter i FFE - for eksempel
-typografi, farger, og liknende.
+## Install
 
-## TL;DR
-
+```bash
+npm install --save @sb1/ffe-core
+npm install --save-dev less less-plugin-npm-import    # less-plugin er valgfri, men kan forenkle imports
 ```
-$ npm install --save ffe-core
-$ npm install --save-dev less less-plugin-npm-import    # less-plugin er valgfri, men kan forenkle imports
-```
+
+## Usage
 
 ```less
 /* Ditt prosjekts .less */
-@import "npm://ffe-core/less/ffe";                      // med less-plugin
-@import "~ffe-core/less/ffe";                           // med webpack og less-loader
-@import "../path/to/node_modules/ffe-core/less/ffe";    // direkte referanse
+@import 'npm://@sb1/ffe-core/less/ffe';                      // med less-plugin
+@import '~@sb1/ffe-core/less/ffe';                           // med webpack og less-loader
+@import '../path/to/node_modules/@sb1/ffe-core/less/ffe';    // direkte referanse
 
 
 /* Om du vil ha element styling finnes det en annen import */
 /* Det anbefales ikke å bruke denne siden det kan skape problemer med andre CSS-regler */
-@import "npm://ffe-core/less/ffe-element-styling";
+@import 'npm://@sb1/ffe-core/less/ffe-element-styling';
 ```
 
 ### Import av enkelte less filer
@@ -30,55 +29,9 @@ I noe tilfeller trenger man kanskje kun deler av ffe-core. Derfor kan hver fil i
 
 ```less
 // useful variables
-@import "~ffe-core/less/colors";
-@import "~ffe-core/less/breakpoints";
-@import "~ffe-core/less/dimensions";
-@import "~ffe-core/less/motion";
-@import "~ffe-core/less/font-sizes";
+@import '~@sb1/ffe-core/less/colors';
+@import '~@sb1/ffe-core/less/breakpoints';
+@import '~@sb1/ffe-core/less/dimensions';
+@import '~@sb1/ffe-core/less/motion';
+@import '~@sb1/ffe-core/less/font-sizes';
 ```
-
-## Kom i gang med FFE
-
-Koden for FFE pakkes i flere forskjellige NPM-moduler som publiseres på et internt
-repository: [Nexus](***REMOVED***).
-
-For å bruke Nexus i ditt prosjekt må du konfigurere NPM til ikke å gå mot det eksterne NPM registry.
-
-Det anbefales å opprette en `.npmrc` i hvert enkelt prosjekt og sjekke inn denne i Git så hvert
-teammedlem får riktig konfigurasjon:
-
-```
-# .npmrc
-registry=***REMOVED***
-```
-
-Etter dette kan du gjøre `$ npm install` som vanlig.
-
-For en fullstendig installasjon av stylingen i FFE må du installere flere pakker:
-
-```bash
-$ npm install --save ffe-core ffe-buttons ffe-form ffe-lists ffe-tables ffe-tabs ffe-spinner
-```
-
-For en fullstendig liste over tilgjengelige pakker i FFE, se
-[prosjektoversikten på Bitbucket](***REMOVED***)
-
-## Bruk av FFEs pakker
-
-Pakkene i FFE-prosjektet publiserer enten rå Less eller JavaScript ES2015 eller nyere.
-Enkelte komponenter inneholder React-komponenter med JSX-kode.
-
-Med andre ord vil du trenge ett eller flere byggsteg for å ta i bruk FFE, avhengig av hvilke pakker du vil bruke.
-Pakken du vil bruke har som oftest en fungerende konfigurasjon (for å kunne bygge eksempelsider) som du kan ta utgangspunkt i.
-Ellers kan du følge dokumentasjonen for de forskjellige verktøyene.
-
-* Kompilering av [Less](http://lesscss.org/)
-* Transpilering av [ES2015+ til ES5](https://babeljs.io/)
-* Kompilering av [JSX](https://facebook.github.io/react/)
-
-I koden vil du måtte `import`e Less og JavaScript fra de enkelte pakkene. Se pakkens README for hvordan dette bør gjøres.
-
-## Utvikling og bidrag
-
-For informasjon om utvikling og bidrag, vennligst se
-[CONTRIBUTE.md](***REMOVED***)

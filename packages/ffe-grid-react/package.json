@@ -1,5 +1,5 @@
 {
-    "name": "ffe-grid-react",
+    "name": "@sb1/ffe-grid-react",
     "version": "6.0.13",
     "main": "lib/index.js",
     "repository": {
@@ -24,7 +24,7 @@
         "classnames": "^2.2.5"
     },
     "peerDependencies": {
-        "ffe-grid": "^6.0.5"
+        "@sb1/ffe-grid": "^6.0.12"
     },
     "devDependencies": {
         "enzyme": "^3.3.0",

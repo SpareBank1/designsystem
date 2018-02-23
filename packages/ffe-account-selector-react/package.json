@@ -1,5 +1,5 @@
 {
-    "name": "ffe-account-selector-react",
+    "name": "@sb1/ffe-account-selector-react",
     "version": "8.1.20",
     "description": "Selector for bank accounts with autocomplete.",
     "keywords": [
@@ -28,10 +28,10 @@
     },
     "dependencies": {
         "classnames": "^2.2.5",
-        "ffe-checkbox-react": "^4.4.17",
-        "ffe-formatters": "^2.1.7",
-        "ffe-icons-react": "^4.0.7",
-        "ffe-spinner-react": "^3.0.6",
+        "@sb1/ffe-checkbox-react": "^4.4.17",
+        "@sb1/ffe-formatters": "^2.1.7",
+        "@sb1/ffe-icons-react": "^4.0.7",
+        "@sb1/ffe-spinner-react": "^3.0.6",
         "prop-types": "^15.6.0",
         "react-auto-bind": "^0.4.2",
         "react-custom-scrollbars": "^4.2.1"
@@ -44,8 +44,8 @@
         "nsp": "^3.2.1"
     },
     "peerDependencies": {
-        "ffe-form": "4.x - 8.x",
-        "ffe-spinner": "2.x"
+        "@sb1/ffe-form": "^8.1.12",
+        "@sb1/ffe-spinner": "^2.0.9"
     },
     "jest": {
         "setupTestFrameworkScriptFile": "../../test-setup.js"

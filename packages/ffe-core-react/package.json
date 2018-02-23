@@ -1,5 +1,5 @@
 {
-    "name": "ffe-core-react",
+    "name": "@sb1/ffe-core-react",
     "version": "1.2.4",
     "description": "React components for ffe-core components",
     "main": "lib/index.js",
@@ -21,7 +21,8 @@
         "test:watch": "jest --watch"
     },
     "peerDependencies": {
-        "react": "^15.4.0 || ^16.1.1"
+        "react": "^15.4.0 || ^16.1.1",
+        "@sb1/ffe-core": "^11.0.3"
     },
     "devDependencies": {
         "enzyme": "^3.3.0",

@@ -1,9 +1,9 @@
-# @sb1/ffe-message-box-react
+# @sb1/ffe-cards-react
 
 ## Install
 
-```
-npm install --save @sb1/ffe-message-box-react
+```bash
+npm install --save @sb1/ffe-cards-react
 ```
 
 ## Usage

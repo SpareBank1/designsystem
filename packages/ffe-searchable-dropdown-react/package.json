@@ -1,5 +1,5 @@
 {
-    "name": "ffe-searchable-dropdown-react",
+    "name": "@sb1/ffe-searchable-dropdown-react",
     "version": "4.1.5",
     "description": "Dropdown with search option",
     "main": "lib/SearchableDropdown.js",
@@ -21,17 +21,17 @@
         "setupTestFrameworkScriptFile": "../../test-setup.js"
     },
     "peerDependencies": {
-        "ffe-core": "^10.2.4",
-        "ffe-form": "^8.1.5",
+        "@sb1/ffe-core": "^11.0.3",
+        "@sb1/ffe-form": "^8.1.12",
         "react": "^15.4.0 || ^16.0.0"
     },
     "devDependencies": {
         "enzyme": "^3.3.0",
         "enzyme-adapter-react-16": "^1.1.1",
         "eslint": "^4.13.1",
-        "ffe-core": "^11.0.3",
-        "ffe-form": "^8.1.12",
-        "ffe-icons": "^8.0.0",
+        "@sb1/ffe-core": "^11.0.3",
+        "@sb1/ffe-form": "^8.1.12",
+        "@sb1/ffe-icons": "^8.0.0",
         "jest": "^22.4.0",
         "less": "^2.7.3",
         "nsp": "^3.2.1",
@@ -45,7 +45,7 @@
     ],
     "dependencies": {
         "classnames": "^2.2.5",
-        "ffe-icons-react": "^4.0.7",
+        "@sb1/ffe-icons-react": "^4.0.7",
         "lodash.isequal": "^4.5.0",
         "prop-types": "^15.6.0",
         "react-custom-scrollbars": "^4.2.1",

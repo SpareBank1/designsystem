@@ -1,5 +1,5 @@
 {
-    "name": "stylelint-config-ffe",
+    "name": "@sb1/stylelint-config-ffe",
     "version": "0.4.4",
     "description": "FFE shareable config for stylelint",
     "author": "SpareBank 1",

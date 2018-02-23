@@ -1,5 +1,5 @@
 {
-    "name": "ffe-core",
+    "name": "@sb1/ffe-core",
     "version": "11.0.3",
     "description": "Rammeverk for Felles Front End",
     "files": [

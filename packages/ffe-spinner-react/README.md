@@ -1,15 +1,12 @@
-# ffe-spinner-react
+# @sb1/ffe-spinner-react
 
 ## Install
 
-```
-$ npm install --save ffe-spinner-react
+```bash
+npm install --save @sb1/ffe-spinner-react
 ```
 
-> `ffe-spinner-react` depends on `ffe-core` and `ffe-spinner` being present and imported in your project.
-> More specifically, the CSS classes related to spinner in ffe-spinner should be in your CSS Object Model when using
-> this component.
+## Usage
 
-```css
-@import 'node_modules/ffe-spinner/less/spinner.less';
-```
+Run Styleguidist from the repository root to see live examples and documentation,
+or see the markdown files next to the component code in `src/`.

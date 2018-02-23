@@ -1,5 +1,5 @@
 {
-    "name": "ffe-checkbox-react",
+    "name": "@sb1/ffe-checkbox-react",
     "version": "4.4.17",
     "main": "lib/Checkbox.js",
     "files": [
@@ -21,7 +21,7 @@
         "test:watch": "jest --watch"
     },
     "peerDependencies": {
-        "ffe-form": "^8.1.5"
+        "@sb1/ffe-form": "^8.1.5"
     },
     "dependencies": {
         "classnames": "^2.2.5",

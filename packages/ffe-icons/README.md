@@ -1,4 +1,4 @@
-# Felles Front End Icons
+# @sb1/ffe-icons
 
 This is a repository for sharing icon SVGs between projects. When your project produces a new icon,
 please add it to ffe-icons so other teams can make use of it.
@@ -9,10 +9,16 @@ the different icons can be viewed. **This file should in most cases not be used 
 Instead, ffe-icons should be used as a repository from where your build fetches only the icons that it needs, to keep
 the sprite file size as low as possible. Read on to see how you can set up your build to do this.
 
-## Available icons
-![icons](visual-tests/baseline-screenshots/dist/plain/firefox.png)
+## Install
 
-## Including ffe-icons in your app
+```bash
+npm install --save @sb1/ffe-icons
+```
+
+## Usage
+
+See also `@sb1/ffe-icons-react`.
+
 First add an `icons.json` file to your project where you define what icons you want. Additionally, you can
 pass in options that [svg-sprite](https://github.com/jkphl/svg-sprite) support to override defaults.
 
@@ -58,14 +64,14 @@ It is recommended you add an npm-script to your `package.json` like so:
 
 Then, in your terminal:
 
-`$ npm run ffe:icons`
+`npm run ffe:icons`
 
 A fresh SVG sprite should now have arrived at your destination.
 
 Note: **it is recommended that you _not_ check the generated sprite into source control, but instead let ffe-icons
 generate it at build-time.** This reduces the number of manual build steps, and keeps you up-to-date.
 
-## Using the ffe-icons sprite
+### Using the ffe-icons sprite
 
 The primary color (royal blue) is removed from the SVG. This is so CSS can be used to override the color. To re-instate
 royal blue as the primary color, add the following to your global icon class:
@@ -126,28 +132,12 @@ Also before starting, verify your SVG meets the criteria listed in *icons/_ICON_
 9. Make sure you have at least one successful build on jenkins (feature branches are built automatically)
 10. Create a pull request from your repos feature branch to ffe-icons `master`.
 
-## Visual regression testing
-Det utføres visuell regresjonstestning på Jenkins med Gemini.
-Ved endringer som gjør at testene feiler må det aktuelle baseline-screenshotet oppdateres. Dette gjøres med scriptet ./update_visual-tests-baselines.sh.
-
-## Pull Requests
-See [readme for ffe-core](***REMOVED***).
-
-## Publishing
-See [readme for ffe-core](***REMOVED***).
-
-## Utvikling og bidrag
-
-For informasjon om utvikling og bidrag, vennligst se
-[CONTRIBUTE.md](***REMOVED***)
-
-
 ###### Footnotes
 
 [^1]: Give the icon a name that describes _what it is_, **not** what it will be _used for_ (since that may be different
 from app to app). I.e., call it flamme-ikon, not skade-ikon even though it might represent skadeforsikring in your app.
 
-[^2]: Run `$ npm start`, open the generated HTML (`dist/symbol/sprite.symbol.html`) and have a look. If only minor edits
+[^2]: Run `npm start`, open the generated HTML (`dist/symbol/sprite.symbol.html`) and have a look. If only minor edits
 are needed (padding for instance) you can try this [web-based SVG editor](https://github.com/SVG-Edit/svgedit).
 
 [^3]:

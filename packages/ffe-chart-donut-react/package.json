@@ -1,5 +1,5 @@
 {
-    "name": "ffe-chart-donut-react",
+    "name": "@sb1/ffe-chart-donut-react",
     "version": "1.0.14",
     "description": "Donut chart in SVG",
     "main": "lib/index.js",
@@ -25,7 +25,7 @@
     "devDependencies": {
         "enzyme": "^3.3.0",
         "enzyme-adapter-react-16": "^1.1.1",
-        "ffe-core": "^11.0.3",
+        "@sb1/ffe-core": "^11.0.3",
         "jest": "^22.4.0",
         "nsp": "^3.2.1",
         "react": "^16.1.1"

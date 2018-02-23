@@ -1,15 +1,14 @@
-# ffe-tables-react
+# @sb1/ffe-tables-react
 
 A flexible component for dealing with large amounts of tabular data.
 
 ## Install
 
+```bash
+npm install --save @sb1/ffe-tables-react
 ```
-$ npm install --save ffe-core ffe-tables ffe-tables-react
-```
-
-`ffe-tables-react` has peer dependencies on `ffe-core` and `ffe-tables`.
 
 ## Usage
 
-For more information about how and when to use this component, check the [documentation](src/Table.md).
+Run Styleguidist from the repository root to see live examples and documentation,
+or see the markdown files next to the component code in `src/`.

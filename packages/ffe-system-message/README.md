@@ -1,12 +1,15 @@
-# ffe-system-message
+# @sb1/ffe-system-message
+
+## Install
+
+```bash
+npm install --save @sb1/ffe-system-message
+```
 
 ## Usage
 
-`@import ../node_modules/ffe-system-message/less/ffe-system-message` in a less-file in your project.
+```less
+@import 'path/to/node_modules/@sb1/ffe-system-message/less/ffe-system-message';
+```
 
-Note that ffe-core is a dependency for ffe-system-message (ref peerDependencies in package.json).
-refer to to readme in ffe-core for more information.
-
-## Development
-
-You can use the sibling react component, `ffe-system-message-react` (see instructions in its readme).
+See also `@sb1/ffe-system-message-react`.
