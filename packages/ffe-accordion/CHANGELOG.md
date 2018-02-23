@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
       <a name="3.0.11"></a>
-## [3.0.11](***REMOVED***) (2018-02-23)
+## [3.0.11](https://github.com/SpareBank1/designsystem/compare/ffe-accordion@3.0.10...ffe-accordion@3.0.11) (2018-02-23)
 
 
 
@@ -12,7 +12,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-accordion
 
       <a name="3.0.10"></a>
-## [3.0.10](***REMOVED***) (2018-02-22)
+## [3.0.10](https://github.com/SpareBank1/designsystem/compare/ffe-accordion@3.0.9...ffe-accordion@3.0.10) (2018-02-22)
 
 
 
@@ -20,7 +20,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-accordion
 
     <a name="3.0.9"></a>
-## [3.0.9](***REMOVED***) (2018-02-20)
+## [3.0.9](https://github.com/SpareBank1/designsystem/compare/ffe-accordion@3.0.8...ffe-accordion@3.0.9) (2018-02-20)
 
 
 
@@ -28,7 +28,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-accordion
 
   <a name="3.0.8"></a>
-## [3.0.8](***REMOVED***) (2018-02-15)
+## [3.0.8](https://github.com/SpareBank1/designsystem/compare/ffe-accordion@3.0.7...ffe-accordion@3.0.8) (2018-02-15)
 
 
 
@@ -36,7 +36,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-accordion
 
 <a name="3.0.7"></a>
-## [3.0.7](***REMOVED***) (2018-02-01)
+## [3.0.7](https://github.com/SpareBank1/designsystem/compare/ffe-accordion@3.0.6...ffe-accordion@3.0.7) (2018-02-01)
 
 
 
@@ -44,7 +44,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-accordion
 
 <a name="3.0.6"></a>
-## [3.0.6](***REMOVED***) (2018-01-19)
+## [3.0.6](https://github.com/SpareBank1/designsystem/compare/ffe-accordion@3.0.5...ffe-accordion@3.0.6) (2018-01-19)
 
 
 
@@ -52,7 +52,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-accordion
 
 <a name="3.0.5"></a>
-## [3.0.5](***REMOVED***) (2018-01-19)
+## [3.0.5](https://github.com/SpareBank1/designsystem/compare/ffe-accordion@3.0.4...ffe-accordion@3.0.5) (2018-01-19)
 
 
 
@@ -61,19 +61,19 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="3.0.4"></a>
 
-## [3.0.4](***REMOVED***) (2018-01-10)
+## [3.0.4](https://github.com/SpareBank1/designsystem/compare/ffe-accordion@3.0.3...ffe-accordion@3.0.4) (2018-01-10)
 
 **Note:** Version bump only for package ffe-accordion
 
 <a name="3.0.3"></a>
 
-## [3.0.3](***REMOVED***) (2018-01-09)
+## [3.0.3](https://github.com/SpareBank1/designsystem/compare/ffe-accordion@3.0.2...ffe-accordion@3.0.3) (2018-01-09)
 
 **Note:** Version bump only for package ffe-accordion
 
 <a name="3.0.2"></a>
 
-## [3.0.2](***REMOVED***) (2018-01-05)
+## [3.0.2](https://github.com/SpareBank1/designsystem/compare/ffe-accordion@3.0.1...ffe-accordion@3.0.2) (2018-01-05)
 
 **Note:** Version bump only for package ffe-accordion
 

@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="2.0.8"></a>
-## [2.0.8](***REMOVED***) (2018-02-23)
+## [2.0.8](https://github.com/SpareBank1/designsystem/compare/ffe-system-message@2.0.7...ffe-system-message@2.0.8) (2018-02-23)
 
 
 
@@ -12,7 +12,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-system-message
 
 <a name="2.0.7"></a>
-## [2.0.7](***REMOVED***) (2018-02-22)
+## [2.0.7](https://github.com/SpareBank1/designsystem/compare/ffe-system-message@2.0.6...ffe-system-message@2.0.7) (2018-02-22)
 
 
 
@@ -20,7 +20,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-system-message
 
 <a name="2.0.6"></a>
-## [2.0.6](***REMOVED***) (2018-02-20)
+## [2.0.6](https://github.com/SpareBank1/designsystem/compare/ffe-system-message@2.0.5...ffe-system-message@2.0.6) (2018-02-20)
 
 
 
@@ -28,7 +28,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-system-message
 
 <a name="2.0.5"></a>
-## [2.0.5](***REMOVED***) (2018-02-15)
+## [2.0.5](https://github.com/SpareBank1/designsystem/compare/ffe-system-message@2.0.4...ffe-system-message@2.0.5) (2018-02-15)
 
 
 
@@ -36,7 +36,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-system-message
 
 <a name="2.0.4"></a>
-## [2.0.4](***REMOVED***) (2018-02-01)
+## [2.0.4](https://github.com/SpareBank1/designsystem/compare/ffe-system-message@2.0.3...ffe-system-message@2.0.4) (2018-02-01)
 
 
 

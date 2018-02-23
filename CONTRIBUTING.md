@@ -225,8 +225,8 @@ committen feile, og du vil bli bedt om å rette opp meldingen. Det gjør du med 
 
 ### Pull requests
 
-Når du har gjort deg ferdig med koden din, er det på tide å be andre se på koden din. Push koden din til Stash /
-Bitbucket, og opprett en pull request. Det vil bli lagt til et par reviewers automatisk, men ta gjerne en titt på
+Når du har gjort deg ferdig med koden din, er det på tide å be andre se på koden din. Push koden din til Github
+og opprett en pull request. Det vil bli lagt til et par reviewers automatisk, men ta gjerne en titt på
 git-loggen til koden / filen(e) du endret på, og legg til disse også. Tidligere bidragsytere har som regel god feedback
 å komme med!
 

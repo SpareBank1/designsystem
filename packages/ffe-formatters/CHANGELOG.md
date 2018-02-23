@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
       <a name="2.1.7"></a>
-## [2.1.7](***REMOVED***) (2018-02-23)
+## [2.1.7](https://github.com/SpareBank1/designsystem/compare/ffe-formatters@2.1.6...ffe-formatters@2.1.7) (2018-02-23)
 
 
 
@@ -12,7 +12,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-formatters
 
       <a name="2.1.6"></a>
-## [2.1.6](***REMOVED***) (2018-02-22)
+## [2.1.6](https://github.com/SpareBank1/designsystem/compare/ffe-formatters@2.1.5...ffe-formatters@2.1.6) (2018-02-22)
 
 
 
@@ -20,7 +20,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-formatters
 
   <a name="2.1.5"></a>
-## [2.1.5](***REMOVED***) (2018-01-31)
+## [2.1.5](https://github.com/SpareBank1/designsystem/compare/ffe-formatters@2.1.4...ffe-formatters@2.1.5) (2018-01-31)
 
 
 
@@ -28,7 +28,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-formatters
 
 <a name="2.1.4"></a>
-## [2.1.4](***REMOVED***) (2018-01-22)
+## [2.1.4](https://github.com/SpareBank1/designsystem/compare/ffe-formatters@2.1.3...ffe-formatters@2.1.4) (2018-01-22)
 
 
 
@@ -36,7 +36,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-formatters
 
 <a name="2.1.3"></a>
-## [2.1.3](***REMOVED***) (2018-01-19)
+## [2.1.3](https://github.com/SpareBank1/designsystem/compare/ffe-formatters@2.1.2...ffe-formatters@2.1.3) (2018-01-19)
 
 
 
@@ -44,7 +44,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-formatters
 
 <a name="2.1.2"></a>
-## [2.1.2](***REMOVED***) (2018-01-18)
+## [2.1.2](https://github.com/SpareBank1/designsystem/compare/ffe-formatters@2.1.1...ffe-formatters@2.1.2) (2018-01-18)
 
 
 

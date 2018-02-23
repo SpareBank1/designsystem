@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="2.0.17"></a>
-## [2.0.17](***REMOVED***) (2018-02-23)
+## [2.0.17](https://github.com/SpareBank1/designsystem/compare/ffe-context-message@2.0.16...ffe-context-message@2.0.17) (2018-02-23)
 
 
 
@@ -12,7 +12,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-context-message
 
 <a name="2.0.16"></a>
-## [2.0.16](***REMOVED***) (2018-02-22)
+## [2.0.16](https://github.com/SpareBank1/designsystem/compare/ffe-context-message@2.0.15...ffe-context-message@2.0.16) (2018-02-22)
 
 
 
@@ -20,7 +20,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-context-message
 
 <a name="2.0.15"></a>
-## [2.0.15](***REMOVED***) (2018-02-20)
+## [2.0.15](https://github.com/SpareBank1/designsystem/compare/ffe-context-message@2.0.14...ffe-context-message@2.0.15) (2018-02-20)
 
 
 
@@ -28,7 +28,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-context-message
 
 <a name="2.0.14"></a>
-## [2.0.14](***REMOVED***) (2018-02-15)
+## [2.0.14](https://github.com/SpareBank1/designsystem/compare/ffe-context-message@2.0.13...ffe-context-message@2.0.14) (2018-02-15)
 
 
 
@@ -36,7 +36,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-context-message
 
 <a name="2.0.13"></a>
-## [2.0.13](***REMOVED***) (2018-02-01)
+## [2.0.13](https://github.com/SpareBank1/designsystem/compare/ffe-context-message@2.0.12...ffe-context-message@2.0.13) (2018-02-01)
 
 
 
@@ -44,7 +44,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-context-message
 
 <a name="2.0.12"></a>
-## [2.0.12](***REMOVED***) (2018-01-19)
+## [2.0.12](https://github.com/SpareBank1/designsystem/compare/ffe-context-message@2.0.11...ffe-context-message@2.0.12) (2018-01-19)
 
 
 
@@ -52,7 +52,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-context-message
 
 <a name="2.0.11"></a>
-## [2.0.11](***REMOVED***) (2018-01-19)
+## [2.0.11](https://github.com/SpareBank1/designsystem/compare/ffe-context-message@2.0.10...ffe-context-message@2.0.11) (2018-01-19)
 
 
 
@@ -61,25 +61,25 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="2.0.10"></a>
 
-## [2.0.10](***REMOVED***) (2018-01-10)
+## [2.0.10](https://github.com/SpareBank1/designsystem/compare/ffe-context-message@2.0.9...ffe-context-message@2.0.10) (2018-01-10)
 
 **Note:** Version bump only for package ffe-context-message
 
 <a name="2.0.9"></a>
 
-## [2.0.9](***REMOVED***) (2018-01-09)
+## [2.0.9](https://github.com/SpareBank1/designsystem/compare/ffe-context-message@2.0.8...ffe-context-message@2.0.9) (2018-01-09)
 
 **Note:** Version bump only for package ffe-context-message
 
 <a name="2.0.8"></a>
 
-## [2.0.8](***REMOVED***) (2018-01-05)
+## [2.0.8](https://github.com/SpareBank1/designsystem/compare/ffe-context-message@2.0.7...ffe-context-message@2.0.8) (2018-01-05)
 
 **Note:** Version bump only for package ffe-context-message
 
 <a name="2.0.7"></a>
 
-## [2.0.7](***REMOVED***) (2018-01-04)
+## [2.0.7](https://github.com/SpareBank1/designsystem/compare/ffe-context-message@2.0.6...ffe-context-message@2.0.7) (2018-01-04)
 
 **Note:** Version bump only for package ffe-context-message
 

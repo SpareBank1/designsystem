@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
       <a name="8.1.12"></a>
-## [8.1.12](***REMOVED***) (2018-02-23)
+## [8.1.12](https://github.com/SpareBank1/designsystem/compare/ffe-form@8.1.11...ffe-form@8.1.12) (2018-02-23)
 
 
 
@@ -12,7 +12,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-form
 
       <a name="8.1.11"></a>
-## [8.1.11](***REMOVED***) (2018-02-22)
+## [8.1.11](https://github.com/SpareBank1/designsystem/compare/ffe-form@8.1.10...ffe-form@8.1.11) (2018-02-22)
 
 
 
@@ -20,7 +20,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-form
 
     <a name="8.1.10"></a>
-## [8.1.10](***REMOVED***) (2018-02-20)
+## [8.1.10](https://github.com/SpareBank1/designsystem/compare/ffe-form@8.1.9...ffe-form@8.1.10) (2018-02-20)
 
 
 
@@ -28,7 +28,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-form
 
   <a name="8.1.9"></a>
-## [8.1.9](***REMOVED***) (2018-02-15)
+## [8.1.9](https://github.com/SpareBank1/designsystem/compare/ffe-form@8.1.8...ffe-form@8.1.9) (2018-02-15)
 
 
 
@@ -36,7 +36,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-form
 
 <a name="8.1.8"></a>
-## [8.1.8](***REMOVED***) (2018-02-01)
+## [8.1.8](https://github.com/SpareBank1/designsystem/compare/ffe-form@8.1.7...ffe-form@8.1.8) (2018-02-01)
 
 
 
@@ -44,7 +44,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-form
 
 <a name="8.1.7"></a>
-## [8.1.7](***REMOVED***) (2018-01-19)
+## [8.1.7](https://github.com/SpareBank1/designsystem/compare/ffe-form@8.1.6...ffe-form@8.1.7) (2018-01-19)
 
 
 
@@ -52,7 +52,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-form
 
 <a name="8.1.6"></a>
-## [8.1.6](***REMOVED***) (2018-01-19)
+## [8.1.6](https://github.com/SpareBank1/designsystem/compare/ffe-form@8.1.5...ffe-form@8.1.6) (2018-01-19)
 
 
 
@@ -300,7 +300,7 @@ box-shadow
 # 1.0.0
 
 * Første versjon av ffe-form-pakken
-* Less-filene er basert på ffe-core v7.0.1 (***REMOVED***) and kan brukes med ffe-core >= v8.0.0
+* Less-filene er basert på ffe-core v7.0.1 og kan brukes med ffe-core >= v8.0.0
 * ffe-info-message fra ffe-core ble døpt om til ffe-field-info-message
 * ffe-field-error-message og ffe-field-success-message er trukket ut fra ffe-message i ffe-core v7.0.1
 * ffe-input-group ble inkludert her i v1.0.0, men dens eksistens er oppe til diskusjon

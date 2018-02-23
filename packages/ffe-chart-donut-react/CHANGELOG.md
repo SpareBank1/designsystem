@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="1.0.14"></a>
-## [1.0.14](***REMOVED***) (2018-02-23)
+## [1.0.14](https://github.com/SpareBank1/designsystem/compare/ffe-chart-donut-react@1.0.13...ffe-chart-donut-react@1.0.14) (2018-02-23)
 
 
 
@@ -12,7 +12,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-chart-donut-react
 
 <a name="1.0.13"></a>
-## [1.0.13](***REMOVED***) (2018-02-22)
+## [1.0.13](https://github.com/SpareBank1/designsystem/compare/ffe-chart-donut-react@1.0.12...ffe-chart-donut-react@1.0.13) (2018-02-22)
 
 
 
@@ -20,7 +20,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-chart-donut-react
 
 <a name="1.0.12"></a>
-## [1.0.12](***REMOVED***) (2018-02-20)
+## [1.0.12](https://github.com/SpareBank1/designsystem/compare/ffe-chart-donut-react@1.0.11...ffe-chart-donut-react@1.0.12) (2018-02-20)
 
 
 
@@ -28,7 +28,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-chart-donut-react
 
 <a name="1.0.11"></a>
-## [1.0.11](***REMOVED***) (2018-02-15)
+## [1.0.11](https://github.com/SpareBank1/designsystem/compare/ffe-chart-donut-react@1.0.10...ffe-chart-donut-react@1.0.11) (2018-02-15)
 
 
 
@@ -36,7 +36,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-chart-donut-react
 
 <a name="1.0.10"></a>
-## [1.0.10](***REMOVED***) (2018-02-01)
+## [1.0.10](https://github.com/SpareBank1/designsystem/compare/ffe-chart-donut-react@1.0.9...ffe-chart-donut-react@1.0.10) (2018-02-01)
 
 
 
@@ -44,7 +44,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-chart-donut-react
 
 <a name="1.0.9"></a>
-## [1.0.9](***REMOVED***) (2018-01-22)
+## [1.0.9](https://github.com/SpareBank1/designsystem/compare/ffe-chart-donut-react@1.0.8...ffe-chart-donut-react@1.0.9) (2018-01-22)
 
 
 
@@ -52,7 +52,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-chart-donut-react
 
 <a name="1.0.8"></a>
-## [1.0.8](***REMOVED***) (2018-01-19)
+## [1.0.8](https://github.com/SpareBank1/designsystem/compare/ffe-chart-donut-react@1.0.7...ffe-chart-donut-react@1.0.8) (2018-01-19)
 
 
 
@@ -60,7 +60,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-chart-donut-react
 
 <a name="1.0.7"></a>
-## [1.0.7](***REMOVED***) (2018-01-19)
+## [1.0.7](https://github.com/SpareBank1/designsystem/compare/ffe-chart-donut-react@1.0.6...ffe-chart-donut-react@1.0.7) (2018-01-19)
 
 
 
@@ -69,19 +69,19 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="1.0.6"></a>
 
-## [1.0.6](***REMOVED***) (2018-01-10)
+## [1.0.6](https://github.com/SpareBank1/designsystem/compare/ffe-chart-donut-react@1.0.5...ffe-chart-donut-react@1.0.6) (2018-01-10)
 
 **Note:** Version bump only for package ffe-chart-donut-react
 
 <a name="1.0.5"></a>
 
-## [1.0.5](***REMOVED***) (2018-01-09)
+## [1.0.5](https://github.com/SpareBank1/designsystem/compare/ffe-chart-donut-react@1.0.4...ffe-chart-donut-react@1.0.5) (2018-01-09)
 
 **Note:** Version bump only for package ffe-chart-donut-react
 
 <a name="1.0.4"></a>
 
-## [1.0.4](***REMOVED***) (2018-01-05)
+## [1.0.4](https://github.com/SpareBank1/designsystem/compare/ffe-chart-donut-react@1.0.3...ffe-chart-donut-react@1.0.4) (2018-01-05)
 
 **Note:** Version bump only for package ffe-chart-donut-react
 

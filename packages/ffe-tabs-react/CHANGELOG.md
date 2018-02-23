@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="1.1.5"></a>
-## [1.1.5](***REMOVED***) (2018-02-23)
+## [1.1.5](https://github.com/SpareBank1/designsystem/compare/ffe-tabs-react@1.1.4...ffe-tabs-react@1.1.5) (2018-02-23)
 
 
 
@@ -12,7 +12,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-tabs-react
 
 <a name="1.1.4"></a>
-## [1.1.4](***REMOVED***) (2018-02-22)
+## [1.1.4](https://github.com/SpareBank1/designsystem/compare/ffe-tabs-react@1.1.3...ffe-tabs-react@1.1.4) (2018-02-22)
 
 
 
@@ -20,7 +20,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-tabs-react
 
 <a name="1.1.3"></a>
-## [1.1.3](***REMOVED***) (2018-02-15)
+## [1.1.3](https://github.com/SpareBank1/designsystem/compare/ffe-tabs-react@1.1.2...ffe-tabs-react@1.1.3) (2018-02-15)
 
 
 
@@ -28,7 +28,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-tabs-react
 
 <a name="1.1.2"></a>
-## [1.1.2](***REMOVED***) (2018-01-30)
+## [1.1.2](https://github.com/SpareBank1/designsystem/compare/ffe-tabs-react@1.1.1...ffe-tabs-react@1.1.2) (2018-01-30)
 
 
 
