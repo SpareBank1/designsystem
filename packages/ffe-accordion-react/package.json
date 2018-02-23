@@ -29,9 +29,7 @@
         "enzyme": "^3.3.0",
         "enzyme-adapter-react-16": "^1.1.1",
         "jest": "^22.4.0",
-        "nsp": "^3.2.1",
-        "@sb1/ffe-accordion": "^3.0.11",
-        "@sb1/ffe-core": "^11.0.3"
+        "nsp": "^3.2.1"
     },
     "files": [
         "lib",
