@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
       <a name="4.1.5"></a>
-## [4.1.5](***REMOVED***) (2018-02-23)
+## [4.1.5](https://github.com/SpareBank1/designsystem/compare/ffe-searchable-dropdown-react@4.1.4...ffe-searchable-dropdown-react@4.1.5) (2018-02-23)
 
 
 
@@ -12,7 +12,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-searchable-dropdown-react
 
       <a name="4.1.4"></a>
-## [4.1.4](***REMOVED***) (2018-02-22)
+## [4.1.4](https://github.com/SpareBank1/designsystem/compare/ffe-searchable-dropdown-react@4.1.3...ffe-searchable-dropdown-react@4.1.4) (2018-02-22)
 
 
 
@@ -20,7 +20,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-searchable-dropdown-react
 
   <a name="4.1.3"></a>
-## [4.1.3](***REMOVED***) (2018-02-21)
+## [4.1.3](https://github.com/SpareBank1/designsystem/compare/ffe-searchable-dropdown-react@4.1.2...ffe-searchable-dropdown-react@4.1.3) (2018-02-21)
 
 
 
@@ -28,7 +28,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-searchable-dropdown-react
 
 <a name="4.1.2"></a>
-## [4.1.2](***REMOVED***) (2018-02-20)
+## [4.1.2](https://github.com/SpareBank1/designsystem/compare/ffe-searchable-dropdown-react@4.1.1...ffe-searchable-dropdown-react@4.1.2) (2018-02-20)
 
 
 
@@ -36,7 +36,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-searchable-dropdown-react
 
 <a name="4.1.1"></a>
-## [4.1.1](***REMOVED***) (2018-02-15)
+## [4.1.1](https://github.com/SpareBank1/designsystem/compare/ffe-searchable-dropdown-react@4.1.0...ffe-searchable-dropdown-react@4.1.1) (2018-02-15)
 
 
 
@@ -44,18 +44,18 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-searchable-dropdown-react
 
 <a name="4.1.0"></a>
-# [4.1.0](***REMOVED***) (2018-02-05)
+# [4.1.0](https://github.com/SpareBank1/designsystem/compare/ffe-searchable-dropdown-react@4.0.3...ffe-searchable-dropdown-react@4.1.0) (2018-02-05)
 
 
 ### Features
 
-* **ffe-searchable-dropdown-react:** Add support for limiting number of rendered dropdown elements ([730f743](***REMOVED***))
+* **ffe-searchable-dropdown-react:** Add support for limiting number of rendered dropdown elements
 
 
 
 
 <a name="4.0.3"></a>
-## [4.0.3](***REMOVED***) (2018-02-01)
+## [4.0.3](https://github.com/SpareBank1/designsystem/compare/ffe-searchable-dropdown-react@4.0.2...ffe-searchable-dropdown-react@4.0.3) (2018-02-01)
 
 
 
@@ -63,18 +63,18 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-searchable-dropdown-react
 
 <a name="4.0.2"></a>
-## [4.0.2](***REMOVED***) (2018-01-31)
+## [4.0.2](https://github.com/SpareBank1/designsystem/compare/ffe-searchable-dropdown-react@4.0.1...ffe-searchable-dropdown-react@4.0.2) (2018-01-31)
 
 
 ### Bug Fixes
 
-* Treeshake ffe-icons ([d431cb3](***REMOVED***))
+* Treeshake ffe-icons
 
 
 
 
 <a name="4.0.1"></a>
-## [4.0.1](***REMOVED***) (2018-01-22)
+## [4.0.1](https://github.com/SpareBank1/designsystem/compare/ffe-searchable-dropdown-react@4.0.0...ffe-searchable-dropdown-react@4.0.1) (2018-01-22)
 
 
 
@@ -82,12 +82,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-searchable-dropdown-react
 
 <a name="4.0.0"></a>
-# [4.0.0](***REMOVED***) (2018-01-22)
+# [4.0.0](https://github.com/SpareBank1/designsystem/compare/ffe-searchable-dropdown-react@3.0.8...ffe-searchable-dropdown-react@4.0.0) (2018-01-22)
 
 
 ### Chores
 
-* **ffe-spinner-react:** Reimplement ffe-spinner-react ([a847bf1](***REMOVED***))
+* **ffe-spinner-react:** Reimplement ffe-spinner-react
 
 
 ### BREAKING CHANGES
@@ -108,7 +108,7 @@ behavior, the consumer can create its own implementation of a
 
 
 <a name="3.0.8"></a>
-## [3.0.8](***REMOVED***) (2018-01-19)
+## [3.0.8](https://github.com/SpareBank1/designsystem/compare/ffe-searchable-dropdown-react@3.0.7...ffe-searchable-dropdown-react@3.0.8) (2018-01-19)
 
 
 
@@ -116,18 +116,18 @@ behavior, the consumer can create its own implementation of a
 **Note:** Version bump only for package ffe-searchable-dropdown-react
 
 <a name="3.0.7"></a>
-## [3.0.7](***REMOVED***) (2018-01-19)
+## [3.0.7](https://github.com/SpareBank1/designsystem/compare/ffe-searchable-dropdown-react@3.0.6...ffe-searchable-dropdown-react@3.0.7) (2018-01-19)
 
 
 ### Bug Fixes
 
-* Upgrade ffe-icons-react to v4 ([ea2d734](***REMOVED***))
+* Upgrade ffe-icons-react to v4
 
 
 
 
 <a name="3.0.6"></a>
-## [3.0.6](***REMOVED***) (2018-01-19)
+## [3.0.6](https://github.com/SpareBank1/designsystem/compare/ffe-searchable-dropdown-react@3.0.5...ffe-searchable-dropdown-react@3.0.6) (2018-01-19)
 
 
 
@@ -136,27 +136,27 @@ behavior, the consumer can create its own implementation of a
 
 <a name="3.0.5"></a>
 
-## [3.0.5](***REMOVED***) (2018-01-10)
+## [3.0.5](https://github.com/SpareBank1/designsystem/compare/ffe-searchable-dropdown-react@3.0.4...ffe-searchable-dropdown-react@3.0.5) (2018-01-10)
 
 **Note:** Version bump only for package ffe-searchable-dropdown-react
 
 <a name="3.0.4"></a>
 
-## [3.0.4](***REMOVED***) (2018-01-10)
+## [3.0.4](https://github.com/SpareBank1/designsystem/compare/ffe-searchable-dropdown-react@3.0.3...ffe-searchable-dropdown-react@3.0.4) (2018-01-10)
 
 ### Bug Fixes
 
-* Run just 'jest', not 'jest src' ([9bb7309](***REMOVED***))
+* Run just 'jest', not 'jest src'
 
 <a name="3.0.3"></a>
 
-## [3.0.3](***REMOVED***) (2018-01-09)
+## [3.0.3](https://github.com/SpareBank1/designsystem/compare/ffe-searchable-dropdown-react@3.0.2...ffe-searchable-dropdown-react@3.0.3) (2018-01-09)
 
 **Note:** Version bump only for package ffe-searchable-dropdown-react
 
 <a name="3.0.2"></a>
 
-## [3.0.2](***REMOVED***) (2018-01-05)
+## [3.0.2](https://github.com/SpareBank1/designsystem/compare/ffe-searchable-dropdown-react@3.0.1...ffe-searchable-dropdown-react@3.0.2) (2018-01-05)
 
 **Note:** Version bump only for package ffe-searchable-dropdown-react
 

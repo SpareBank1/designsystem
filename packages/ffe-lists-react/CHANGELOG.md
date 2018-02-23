@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
        <a name="2.1.6"></a>
-## [2.1.6](***REMOVED***) (2018-02-23)
+## [2.1.6](https://github.com/SpareBank1/designsystem/compare/ffe-lists-react@2.1.5...ffe-lists-react@2.1.6) (2018-02-23)
 
 
 
@@ -12,7 +12,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-lists-react
 
        <a name="2.1.5"></a>
-## [2.1.5](***REMOVED***) (2018-02-22)
+## [2.1.5](https://github.com/SpareBank1/designsystem/compare/ffe-lists-react@2.1.4...ffe-lists-react@2.1.5) (2018-02-22)
 
 
 
@@ -20,7 +20,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-lists-react
 
   <a name="2.1.4"></a>
-## [2.1.4](***REMOVED***) (2018-02-20)
+## [2.1.4](https://github.com/SpareBank1/designsystem/compare/ffe-lists-react@2.1.3...ffe-lists-react@2.1.4) (2018-02-20)
 
 
 
@@ -28,7 +28,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-lists-react
 
 <a name="2.1.3"></a>
-## [2.1.3](***REMOVED***) (2018-02-15)
+## [2.1.3](https://github.com/SpareBank1/designsystem/compare/ffe-lists-react@2.1.2...ffe-lists-react@2.1.3) (2018-02-15)
 
 
 
@@ -36,7 +36,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-lists-react
 
 <a name="2.1.2"></a>
-## [2.1.2](***REMOVED***) (2018-02-01)
+## [2.1.2](https://github.com/SpareBank1/designsystem/compare/ffe-lists-react@2.1.1...ffe-lists-react@2.1.2) (2018-02-01)
 
 
 
@@ -44,7 +44,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-lists-react
 
 <a name="2.1.1"></a>
-## [2.1.1](***REMOVED***) (2018-01-22)
+## [2.1.1](https://github.com/SpareBank1/designsystem/compare/ffe-lists-react@2.1.0...ffe-lists-react@2.1.1) (2018-01-22)
 
 
 
@@ -57,7 +57,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **ffe-lists-react:** Import ffe-lists-react ([4d8b7df](***REMOVED***))
+* **ffe-lists-react:** Import ffe-lists-react
 
 ## 2.0.3
 

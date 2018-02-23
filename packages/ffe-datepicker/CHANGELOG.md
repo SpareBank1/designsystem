@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="4.2.14"></a>
-## [4.2.14](***REMOVED***) (2018-02-23)
+## [4.2.14](https://github.com/SpareBank1/designsystem/compare/ffe-datepicker@4.2.13...ffe-datepicker@4.2.14) (2018-02-23)
 
 
 
@@ -12,7 +12,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-datepicker
 
 <a name="4.2.13"></a>
-## [4.2.13](***REMOVED***) (2018-02-22)
+## [4.2.13](https://github.com/SpareBank1/designsystem/compare/ffe-datepicker@4.2.12...ffe-datepicker@4.2.13) (2018-02-22)
 
 
 
@@ -20,7 +20,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-datepicker
 
 <a name="4.2.12"></a>
-## [4.2.12](***REMOVED***) (2018-02-20)
+## [4.2.12](https://github.com/SpareBank1/designsystem/compare/ffe-datepicker@4.2.11...ffe-datepicker@4.2.12) (2018-02-20)
 
 
 
@@ -28,7 +28,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-datepicker
 
 <a name="4.2.11"></a>
-## [4.2.11](***REMOVED***) (2018-02-15)
+## [4.2.11](https://github.com/SpareBank1/designsystem/compare/ffe-datepicker@4.2.10...ffe-datepicker@4.2.11) (2018-02-15)
 
 
 
@@ -36,7 +36,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-datepicker
 
 <a name="4.2.10"></a>
-## [4.2.10](***REMOVED***) (2018-02-01)
+## [4.2.10](https://github.com/SpareBank1/designsystem/compare/ffe-datepicker@4.2.9...ffe-datepicker@4.2.10) (2018-02-01)
 
 
 
@@ -44,29 +44,29 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-datepicker
 
 <a name="4.2.9"></a>
-## [4.2.9](***REMOVED***) (2018-01-26)
+## [4.2.9](https://github.com/SpareBank1/designsystem/compare/ffe-datepicker@4.2.8...ffe-datepicker@4.2.9) (2018-01-26)
 
 
 ### Bug Fixes
 
-* **ffe-datepicker:** Revert changes to z-index, and add pointer-events: none to fix issues with Android ([b8381ef](***REMOVED***))
+* **ffe-datepicker:** Revert changes to z-index, and add pointer-events: none to fix issues with Android
 
 
 
 
 <a name="4.2.8"></a>
-## [4.2.8](***REMOVED***) (2018-01-23)
+## [4.2.8](https://github.com/SpareBank1/designsystem/compare/ffe-datepicker@4.2.7...ffe-datepicker@4.2.8) (2018-01-23)
 
 
 ### Bug Fixes
 
-* **ffe-datepicker:** Make calendar icon clickable on Android ([bd5c2ef](***REMOVED***))
+* **ffe-datepicker:** Make calendar icon clickable on Android
 
 
 
 
 <a name="4.2.7"></a>
-## [4.2.7](***REMOVED***) (2018-01-19)
+## [4.2.7](https://github.com/SpareBank1/designsystem/compare/ffe-datepicker@4.2.6...ffe-datepicker@4.2.7) (2018-01-19)
 
 
 
@@ -74,7 +74,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-datepicker
 
 <a name="4.2.6"></a>
-## [4.2.6](***REMOVED***) (2018-01-19)
+## [4.2.6](https://github.com/SpareBank1/designsystem/compare/ffe-datepicker@4.2.5...ffe-datepicker@4.2.6) (2018-01-19)
 
 
 

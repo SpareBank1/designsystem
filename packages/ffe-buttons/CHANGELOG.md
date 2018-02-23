@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
       <a name="5.2.3"></a>
-## [5.2.3](***REMOVED***) (2018-02-23)
+## [5.2.3](https://github.com/SpareBank1/designsystem/compare/ffe-buttons@5.2.2...ffe-buttons@5.2.3) (2018-02-23)
 
 
 
@@ -12,7 +12,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-buttons
 
       <a name="5.2.2"></a>
-## [5.2.2](***REMOVED***) (2018-02-22)
+## [5.2.2](https://github.com/SpareBank1/designsystem/compare/ffe-buttons@5.2.1...ffe-buttons@5.2.2) (2018-02-22)
 
 
 
@@ -20,7 +20,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-buttons
 
     <a name="5.2.1"></a>
-## [5.2.1](***REMOVED***) (2018-02-20)
+## [5.2.1](https://github.com/SpareBank1/designsystem/compare/ffe-buttons@5.2.0...ffe-buttons@5.2.1) (2018-02-20)
 
 
 
@@ -28,18 +28,18 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-buttons
 
   <a name="5.2.0"></a>
-# [5.2.0](***REMOVED***) (2018-02-16)
+# [5.2.0](https://github.com/SpareBank1/designsystem/compare/ffe-buttons@5.1.9...ffe-buttons@5.2.0) (2018-02-16)
 
 
 ### Features
 
-* **ffe-buttons:** Add inline-expand-button ([cffb39f](***REMOVED***))
+* **ffe-buttons:** Add inline-expand-button
 
 
 
 
 <a name="5.1.9"></a>
-## [5.1.9](***REMOVED***) (2018-02-15)
+## [5.1.9](https://github.com/SpareBank1/designsystem/compare/ffe-buttons@5.1.8...ffe-buttons@5.1.9) (2018-02-15)
 
 
 
@@ -47,18 +47,18 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-buttons
 
 <a name="5.1.8"></a>
-## [5.1.8](***REMOVED***) (2018-02-09)
+## [5.1.8](https://github.com/SpareBank1/designsystem/compare/ffe-buttons@5.1.7...ffe-buttons@5.1.8) (2018-02-09)
 
 
 ### Bug Fixes
 
-* **ffe-buttons:** ffe-expand-button expand only horizontally ([a292144](***REMOVED***))
+* **ffe-buttons:** ffe-expand-button expand only horizontally
 
 
 
 
 <a name="5.1.7"></a>
-## [5.1.7](***REMOVED***) (2018-02-01)
+## [5.1.7](https://github.com/SpareBank1/designsystem/compare/ffe-buttons@5.1.6...ffe-buttons@5.1.7) (2018-02-01)
 
 
 
@@ -66,7 +66,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-buttons
 
 <a name="5.1.6"></a>
-## [5.1.6](***REMOVED***) (2018-01-19)
+## [5.1.6](https://github.com/SpareBank1/designsystem/compare/ffe-buttons@5.1.5...ffe-buttons@5.1.6) (2018-01-19)
 
 
 
@@ -74,7 +74,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-buttons
 
 <a name="5.1.5"></a>
-## [5.1.5](***REMOVED***) (2018-01-19)
+## [5.1.5](https://github.com/SpareBank1/designsystem/compare/ffe-buttons@5.1.4...ffe-buttons@5.1.5) (2018-01-19)
 
 
 
@@ -83,25 +83,25 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="5.1.4"></a>
 
-## [5.1.4](***REMOVED***) (2018-01-10)
+## [5.1.4](https://github.com/SpareBank1/designsystem/compare/ffe-buttons@5.1.3...ffe-buttons@5.1.4) (2018-01-10)
 
 **Note:** Version bump only for package ffe-buttons
 
 <a name="5.1.3"></a>
 
-## [5.1.3](***REMOVED***) (2018-01-09)
+## [5.1.3](https://github.com/SpareBank1/designsystem/compare/ffe-buttons@5.1.2...ffe-buttons@5.1.3) (2018-01-09)
 
 **Note:** Version bump only for package ffe-buttons
 
 <a name="5.1.2"></a>
 
-## [5.1.2](***REMOVED***) (2018-01-05)
+## [5.1.2](https://github.com/SpareBank1/designsystem/compare/ffe-buttons@5.1.1...ffe-buttons@5.1.2) (2018-01-05)
 
 **Note:** Version bump only for package ffe-buttons
 
 <a name="5.1.1"></a>
 
-## [5.1.1](***REMOVED***) (2018-01-04)
+## [5.1.1](https://github.com/SpareBank1/designsystem/compare/ffe-buttons@5.1.0...ffe-buttons@5.1.1) (2018-01-04)
 
 **Note:** Version bump only for package ffe-buttons
 
@@ -111,7 +111,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **ffe-buttons:** Add contribute.md link to readme ([e0e3d2c](***REMOVED***))
+* **ffe-buttons:** Add contribute.md link to readme
 
 ## 5.0.1
 

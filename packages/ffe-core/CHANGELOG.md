@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
       <a name="11.0.3"></a>
-## [11.0.3](***REMOVED***) (2018-02-23)
+## [11.0.3](https://github.com/SpareBank1/designsystem/compare/ffe-core@11.0.2...ffe-core@11.0.3) (2018-02-23)
 
 
 
@@ -12,7 +12,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-core
 
       <a name="11.0.2"></a>
-## [11.0.2](***REMOVED***) (2018-02-22)
+## [11.0.2](https://github.com/SpareBank1/designsystem/compare/ffe-core@11.0.1...ffe-core@11.0.2) (2018-02-22)
 
 
 
@@ -20,23 +20,23 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-core
 
     <a name="11.0.1"></a>
-## [11.0.1](***REMOVED***) (2018-02-20)
+## [11.0.1](https://github.com/SpareBank1/designsystem/compare/ffe-core@11.0.0...ffe-core@11.0.1) (2018-02-20)
 
 
 ### Bug Fixes
 
-* **ffe-core:** Avoid subpixel calculation error for ffe-divider-line ([f3dd3b5](***REMOVED***))
+* **ffe-core:** Avoid subpixel calculation error for ffe-divider-line
 
 
 
 
   <a name="11.0.0"></a>
-# [11.0.0](***REMOVED***) (2018-02-15)
+# [11.0.0](https://github.com/SpareBank1/designsystem/compare/ffe-core@10.3.1...ffe-core@11.0.0) (2018-02-15)
 
 
 ### Features
 
-* **ffe-core:** Remove webfonts ([0597ec6](***REMOVED***))
+* **ffe-core:** Remove webfonts
 
 
 ### BREAKING CHANGES
@@ -58,29 +58,29 @@ package's README and change `@build-path` to `@fonts-path`.
 
 
 <a name="10.3.1"></a>
-## [10.3.1](***REMOVED***) (2018-02-01)
+## [10.3.1](https://github.com/SpareBank1/designsystem/compare/ffe-core@10.3.0...ffe-core@10.3.1) (2018-02-01)
 
 
 ### Bug Fixes
 
-* **ffe-core:** Re-add property `sb1.StaticResources` in `package.json`. ([3506fb5](***REMOVED***))
+* **ffe-core:** Re-add property `sb1.StaticResources` in `package.json`.
 
 
 
 
 <a name="10.3.0"></a>
-# [10.3.0](***REMOVED***) (2018-01-19)
+# [10.3.0](https://github.com/SpareBank1/designsystem/compare/ffe-core@10.2.5...ffe-core@10.3.0) (2018-01-19)
 
 
 ### Features
 
-* **ffe-core:** Add --inline modifier to headings ([98b9570](***REMOVED***))
+* **ffe-core:** Add --inline modifier to headings
 
 
 
 
 <a name="10.2.5"></a>
-## [10.2.5](***REMOVED***) (2018-01-19)
+## [10.2.5](https://github.com/SpareBank1/designsystem/compare/ffe-core@10.2.4...ffe-core@10.2.5) (2018-01-19)
 
 
 
@@ -89,25 +89,25 @@ package's README and change `@build-path` to `@fonts-path`.
 
 <a name="10.2.4"></a>
 
-## [10.2.4](***REMOVED***) (2018-01-10)
+## [10.2.4](https://github.com/SpareBank1/designsystem/compare/ffe-core@10.2.3...ffe-core@10.2.4) (2018-01-10)
 
 **Note:** Version bump only for package ffe-core
 
 <a name="10.2.3"></a>
 
-## [10.2.3](***REMOVED***) (2018-01-09)
+## [10.2.3](https://github.com/SpareBank1/designsystem/compare/ffe-core@10.2.2...ffe-core@10.2.3) (2018-01-09)
 
 **Note:** Version bump only for package ffe-core
 
 <a name="10.2.2"></a>
 
-## [10.2.2](***REMOVED***) (2018-01-05)
+## [10.2.2](https://github.com/SpareBank1/designsystem/compare/ffe-core@10.2.1...ffe-core@10.2.2) (2018-01-05)
 
 **Note:** Version bump only for package ffe-core
 
 <a name="10.2.1"></a>
 
-## [10.2.1](***REMOVED***) (2018-01-04)
+## [10.2.1](https://github.com/SpareBank1/designsystem/compare/ffe-core@10.2.0...ffe-core@10.2.1) (2018-01-04)
 
 **Note:** Version bump only for package ffe-core
 
@@ -117,7 +117,7 @@ package's README and change `@build-path` to `@fonts-path`.
 
 ### Features
 
-* **ffe-core:** Add contribute.md link to readme ([4f0693c](***REMOVED***))
+* **ffe-core:** Add contribute.md link to readme
 
 ## 10.1.2
 

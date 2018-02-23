@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="1.2.10"></a>
-## [1.2.10](***REMOVED***) (2018-02-23)
+## [1.2.10](https://github.com/SpareBank1/designsystem/compare/ffe-radio-button-react@1.2.9...ffe-radio-button-react@1.2.10) (2018-02-23)
 
 
 
@@ -12,7 +12,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-radio-button-react
 
 <a name="1.2.9"></a>
-## [1.2.9](***REMOVED***) (2018-02-22)
+## [1.2.9](https://github.com/SpareBank1/designsystem/compare/ffe-radio-button-react@1.2.8...ffe-radio-button-react@1.2.9) (2018-02-22)
 
 
 
@@ -20,7 +20,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-radio-button-react
 
 <a name="1.2.8"></a>
-## [1.2.8](***REMOVED***) (2018-02-20)
+## [1.2.8](https://github.com/SpareBank1/designsystem/compare/ffe-radio-button-react@1.2.7...ffe-radio-button-react@1.2.8) (2018-02-20)
 
 
 
@@ -28,18 +28,18 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-radio-button-react
 
 <a name="1.2.7"></a>
-## [1.2.7](***REMOVED***) (2018-02-09)
+## [1.2.7](https://github.com/SpareBank1/designsystem/compare/ffe-radio-button-react@1.2.6...ffe-radio-button-react@1.2.7) (2018-02-09)
 
 
 ### Bug Fixes
 
-* **ffe-radio-button-react:** Do not create a new id on render ([82e587b](***REMOVED***))
+* **ffe-radio-button-react:** Do not create a new id on render
 
 
 
 
 <a name="1.2.6"></a>
-## [1.2.6](***REMOVED***) (2018-01-19)
+## [1.2.6](https://github.com/SpareBank1/designsystem/compare/ffe-radio-button-react@1.2.5...ffe-radio-button-react@1.2.6) (2018-01-19)
 
 
 
@@ -48,17 +48,17 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="1.2.5"></a>
 
-## [1.2.5](***REMOVED***) (2018-01-10)
+## [1.2.5](https://github.com/SpareBank1/designsystem/compare/ffe-radio-button-react@1.2.4...ffe-radio-button-react@1.2.5) (2018-01-10)
 
 **Note:** Version bump only for package ffe-radio-button-react
 
 <a name="1.2.4"></a>
 
-## [1.2.4](***REMOVED***) (2018-01-10)
+## [1.2.4](https://github.com/SpareBank1/designsystem/compare/ffe-radio-button-react@1.2.3...ffe-radio-button-react@1.2.4) (2018-01-10)
 
 ### Bug Fixes
 
-* **ffe-radio-button-react:** Repalce sdbm with uuid ([5ba9639](***REMOVED***))
+* **ffe-radio-button-react:** Repalce sdbm with uuid
 
 <a name="1.2.3"></a>
 

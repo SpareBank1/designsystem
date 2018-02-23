@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="2.0.6"></a>
-## [2.0.6](***REMOVED***) (2018-02-23)
+## [2.0.6](https://github.com/SpareBank1/designsystem/compare/ffe-file-upload-react@2.0.5...ffe-file-upload-react@2.0.6) (2018-02-23)
 
 
 
@@ -12,7 +12,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-file-upload-react
 
 <a name="2.0.5"></a>
-## [2.0.5](***REMOVED***) (2018-02-22)
+## [2.0.5](https://github.com/SpareBank1/designsystem/compare/ffe-file-upload-react@2.0.4...ffe-file-upload-react@2.0.5) (2018-02-22)
 
 
 
@@ -20,7 +20,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-file-upload-react
 
 <a name="2.0.4"></a>
-## [2.0.4](***REMOVED***) (2018-02-16)
+## [2.0.4](https://github.com/SpareBank1/designsystem/compare/ffe-file-upload-react@2.0.3...ffe-file-upload-react@2.0.4) (2018-02-16)
 
 
 
@@ -28,7 +28,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-file-upload-react
 
 <a name="2.0.3"></a>
-## [2.0.3](***REMOVED***) (2018-01-22)
+## [2.0.3](https://github.com/SpareBank1/designsystem/compare/ffe-file-upload-react@2.0.2...ffe-file-upload-react@2.0.3) (2018-01-22)
 
 
 
@@ -36,7 +36,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-file-upload-react
 
 <a name="2.0.2"></a>
-## [2.0.2](***REMOVED***) (2018-01-19)
+## [2.0.2](https://github.com/SpareBank1/designsystem/compare/ffe-file-upload-react@2.0.1...ffe-file-upload-react@2.0.2) (2018-01-19)
 
 
 
@@ -44,7 +44,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-file-upload-react
 
 <a name="2.0.1"></a>
-## [2.0.1](***REMOVED***) (2018-01-18)
+## [2.0.1](https://github.com/SpareBank1/designsystem/compare/ffe-file-upload-react@2.0.0...ffe-file-upload-react@2.0.1) (2018-01-18)
 
 
 
@@ -57,7 +57,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Chores
 
-* **ffe-file-upload-react:** Moving in ([9fb27cd](***REMOVED***))
+* **ffe-file-upload-react:** Moving in
 
 ### BREAKING CHANGES
 

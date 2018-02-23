@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="7.0.2"></a>
-## [7.0.2](***REMOVED***) (2018-02-22)
+## [7.0.2](https://github.com/SpareBank1/designsystem/compare/eslint-config-ffe@7.0.1...eslint-config-ffe@7.0.2) (2018-02-22)
 
 
 
@@ -12,12 +12,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package eslint-config-ffe
 
 <a name="7.0.1"></a>
-## [7.0.1](***REMOVED***) (2018-01-10)
+## [7.0.1](https://github.com/SpareBank1/designsystem/compare/eslint-config-ffe@7.0.0...eslint-config-ffe@7.0.1) (2018-01-10)
 
 
 ### Bug Fixes
 
-* Replace eslint ignore with customized lint rule. ([ff23e8d](***REMOVED***))
+* Replace eslint ignore with customized lint rule.
 
 
 
@@ -28,8 +28,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **eslint-config-ffe:** Add contribute.md link to readme ([869691f](***REMOVED***))
-* **eslint-config-ffe:** Upgrade to eslint 4 ([05536ed](***REMOVED***))
+* **eslint-config-ffe:** Add contribute.md link to readme
+* **eslint-config-ffe:** Upgrade to eslint 4
 
 
 ### BREAKING CHANGES

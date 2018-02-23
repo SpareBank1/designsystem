@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
        <a name="8.1.9"></a>
-## [8.1.9](***REMOVED***) (2018-02-23)
+## [8.1.9](https://github.com/SpareBank1/designsystem/compare/ffe-tables@8.1.8...ffe-tables@8.1.9) (2018-02-23)
 
 
 
@@ -12,7 +12,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-tables
 
        <a name="8.1.8"></a>
-## [8.1.8](***REMOVED***) (2018-02-22)
+## [8.1.8](https://github.com/SpareBank1/designsystem/compare/ffe-tables@8.1.7...ffe-tables@8.1.8) (2018-02-22)
 
 
 
@@ -20,7 +20,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-tables
 
    <a name="8.1.7"></a>
-## [8.1.7](***REMOVED***) (2018-02-20)
+## [8.1.7](https://github.com/SpareBank1/designsystem/compare/ffe-tables@8.1.6...ffe-tables@8.1.7) (2018-02-20)
 
 
 
@@ -28,7 +28,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-tables
 
   <a name="8.1.6"></a>
-## [8.1.6](***REMOVED***) (2018-02-15)
+## [8.1.6](https://github.com/SpareBank1/designsystem/compare/ffe-tables@8.1.5...ffe-tables@8.1.6) (2018-02-15)
 
 
 
@@ -36,18 +36,18 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-tables
 
 <a name="8.1.5"></a>
-## [8.1.5](***REMOVED***) (2018-02-07)
+## [8.1.5](https://github.com/SpareBank1/designsystem/compare/ffe-tables@8.1.4...ffe-tables@8.1.5) (2018-02-07)
 
 
 ### Bug Fixes
 
-* **ffe-tables:** Fix overlapping media queries ([e2bca24](***REMOVED***))
+* **ffe-tables:** Fix overlapping media queries
 
 
 
 
 <a name="8.1.4"></a>
-## [8.1.4](***REMOVED***) (2018-02-01)
+## [8.1.4](https://github.com/SpareBank1/designsystem/compare/ffe-tables@8.1.3...ffe-tables@8.1.4) (2018-02-01)
 
 
 
@@ -55,7 +55,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-tables
 
 <a name="8.1.3"></a>
-## [8.1.3](***REMOVED***) (2018-01-19)
+## [8.1.3](https://github.com/SpareBank1/designsystem/compare/ffe-tables@8.1.2...ffe-tables@8.1.3) (2018-01-19)
 
 
 
@@ -63,7 +63,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-tables
 
 <a name="8.1.2"></a>
-## [8.1.2](***REMOVED***) (2018-01-19)
+## [8.1.2](https://github.com/SpareBank1/designsystem/compare/ffe-tables@8.1.1...ffe-tables@8.1.2) (2018-01-19)
 
 
 

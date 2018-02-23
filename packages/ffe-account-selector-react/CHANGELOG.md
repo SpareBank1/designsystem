@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
        <a name="8.1.20"></a>
-## [8.1.20](***REMOVED***) (2018-02-23)
+## [8.1.20](https://github.com/SpareBank1/designsystem/compare/ffe-account-selector-react@8.1.19...ffe-account-selector-react@8.1.20) (2018-02-23)
 
 
 
@@ -12,7 +12,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-account-selector-react
 
        <a name="8.1.19"></a>
-## [8.1.19](***REMOVED***) (2018-02-22)
+## [8.1.19](https://github.com/SpareBank1/designsystem/compare/ffe-account-selector-react@8.1.18...ffe-account-selector-react@8.1.19) (2018-02-22)
 
 
 
@@ -20,7 +20,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-account-selector-react
 
    <a name="8.1.18"></a>
-## [8.1.18](***REMOVED***) (2018-02-22)
+## [8.1.18](https://github.com/SpareBank1/designsystem/compare/ffe-account-selector-react@8.1.17...ffe-account-selector-react@8.1.18) (2018-02-22)
 
 
 
@@ -28,7 +28,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-account-selector-react
 
  <a name="8.1.17"></a>
-## [8.1.17](***REMOVED***) (2018-02-20)
+## [8.1.17](https://github.com/SpareBank1/designsystem/compare/ffe-account-selector-react@8.1.16...ffe-account-selector-react@8.1.17) (2018-02-20)
 
 
 
@@ -36,18 +36,18 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-account-selector-react
 
 <a name="8.1.16"></a>
-## [8.1.16](***REMOVED***) (2018-02-19)
+## [8.1.16](https://github.com/SpareBank1/designsystem/compare/ffe-account-selector-react@8.1.15...ffe-account-selector-react@8.1.16) (2018-02-19)
 
 
 ### Bug Fixes
 
-* **ffe-account-selector-react:** hide reset button in readOnly mode ([26c8cf2](***REMOVED***))
+* **ffe-account-selector-react:** hide reset button in readOnly mode
 
 
 
 
 <a name="8.1.15"></a>
-## [8.1.15](***REMOVED***) (2018-02-15)
+## [8.1.15](https://github.com/SpareBank1/designsystem/compare/ffe-account-selector-react@8.1.14...ffe-account-selector-react@8.1.15) (2018-02-15)
 
 
 
@@ -55,7 +55,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-account-selector-react
 
 <a name="8.1.14"></a>
-## [8.1.14](***REMOVED***) (2018-02-09)
+## [8.1.14](https://github.com/SpareBank1/designsystem/compare/ffe-account-selector-react@8.1.13...ffe-account-selector-react@8.1.14) (2018-02-09)
 
 
 
@@ -63,7 +63,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-account-selector-react
 
 <a name="8.1.13"></a>
-## [8.1.13](***REMOVED***) (2018-02-01)
+## [8.1.13](https://github.com/SpareBank1/designsystem/compare/ffe-account-selector-react@8.1.12...ffe-account-selector-react@8.1.13) (2018-02-01)
 
 
 
@@ -71,18 +71,18 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-account-selector-react
 
 <a name="8.1.12"></a>
-## [8.1.12](***REMOVED***) (2018-01-31)
+## [8.1.12](https://github.com/SpareBank1/designsystem/compare/ffe-account-selector-react@8.1.11...ffe-account-selector-react@8.1.12) (2018-01-31)
 
 
 ### Bug Fixes
 
-* Treeshake ffe-icons ([d431cb3](***REMOVED***))
+* Treeshake ffe-icons
 
 
 
 
 <a name="8.1.11"></a>
-## [8.1.11](***REMOVED***) (2018-01-31)
+## [8.1.11](https://github.com/SpareBank1/designsystem/compare/ffe-account-selector-react@8.1.10...ffe-account-selector-react@8.1.11) (2018-01-31)
 
 
 
@@ -90,40 +90,39 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-account-selector-react
 
 <a name="8.1.10"></a>
-## [8.1.10](***REMOVED***) (2018-01-30)
+## [8.1.10](https://github.com/SpareBank1/designsystem/compare/ffe-account-selector-react@8.1.9...ffe-account-selector-react@8.1.10) (2018-01-30)
 
 
 ### Bug Fixes
 
-* **ffe-account-selector-react:** Explicit specify padding on "reset" button in account selector ([748f73e](***REMOVED***))
-
+* **ffe-account-selector-react:** Explicit specify padding on "reset" button in account selector
 
 
 
 <a name="8.1.9"></a>
-## [8.1.9](***REMOVED***) (2018-01-26)
+## [8.1.9](https://github.com/SpareBank1/designsystem/compare/ffe-account-selector-react@8.1.8...ffe-account-selector-react@8.1.9) (2018-01-26)
 
 
 ### Bug Fixes
 
-* **ffe-account-selector-react:** Reintroducing the missing decimals in account balance. ([2275261](***REMOVED***))
+* **ffe-account-selector-react:** Reintroducing the missing decimals in account balance.
 
 
 
 
 <a name="8.1.8"></a>
-## [8.1.8](***REMOVED***) (2018-01-25)
+## [8.1.8](https://github.com/SpareBank1/designsystem/compare/ffe-account-selector-react@8.1.7...ffe-account-selector-react@8.1.8) (2018-01-25)
 
 
 ### Bug Fixes
 
-* **ffe-account-selector-react:** Add ellipsis to account name ([fed2c31](***REMOVED***))
+* **ffe-account-selector-react:** Add ellipsis to account name
 
 
 
 
 <a name="8.1.7"></a>
-## [8.1.7](***REMOVED***) (2018-01-22)
+## [8.1.7](https://github.com/SpareBank1/designsystem/compare/ffe-account-selector-react@8.1.6...ffe-account-selector-react@8.1.7) (2018-01-22)
 
 
 
@@ -131,7 +130,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-account-selector-react
 
 <a name="8.1.6"></a>
-## [8.1.6](***REMOVED***) (2018-01-22)
+## [8.1.6](https://github.com/SpareBank1/designsystem/compare/ffe-account-selector-react@8.1.5...ffe-account-selector-react@8.1.6) (2018-01-22)
 
 
 
@@ -139,7 +138,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-account-selector-react
 
 <a name="8.1.5"></a>
-## [8.1.5](***REMOVED***) (2018-01-19)
+## [8.1.5](https://github.com/SpareBank1/designsystem/compare/ffe-account-selector-react@8.1.4...ffe-account-selector-react@8.1.5) (2018-01-19)
 
 
 
@@ -147,7 +146,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-account-selector-react
 
 <a name="8.1.4"></a>
-## [8.1.4](***REMOVED***) (2018-01-19)
+## [8.1.4](https://github.com/SpareBank1/designsystem/compare/ffe-account-selector-react@8.1.3...ffe-account-selector-react@8.1.4) (2018-01-19)
 
 
 
@@ -155,7 +154,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-account-selector-react
 
 <a name="8.1.3"></a>
-## [8.1.3](***REMOVED***) (2018-01-18)
+## [8.1.3](https://github.com/SpareBank1/designsystem/compare/ffe-account-selector-react@8.1.2...ffe-account-selector-react@8.1.3) (2018-01-18)
 
 
 
@@ -164,42 +163,42 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="8.1.2"></a>
 
-## [8.1.2](***REMOVED***) (2018-01-17)
+## [8.1.2](https://github.com/SpareBank1/designsystem/compare/ffe-account-selector-react@8.1.1...ffe-account-selector-react@8.1.2) (2018-01-17)
 
 ### Bug Fixes
 
-* **ffe-account-selector-react:** fix build ([f0cedda](***REMOVED***))
+* **ffe-account-selector-react:** fix build
 
 
 <a name="8.1.1"></a>
 
-## [8.1.1](***REMOVED***) (2018-01-16)
+## [8.1.1](https://github.com/SpareBank1/designsystem/compare/ffe-account-selector-react@8.1.0...ffe-account-selector-react@8.1.1) (2018-01-16)
 
 **Note:** Version bump only for package ffe-account-selector-react
 
 <a name="8.1.0"></a>
 
-# [8.1.0](***REMOVED***) (2018-01-15)
+# [8.1.0](https://github.com/SpareBank1/designsystem/compare/ffe-account-selector-react@8.0.4...ffe-account-selector-react@8.1.0) (2018-01-15)
 
 ### Features
 
-* **ffe-account-selector-react:** added prop to disable input-field ([9f38d25](***REMOVED***))
+* **ffe-account-selector-react:** added prop to disable input-field
 
 <a name="8.0.4"></a>
 
-## [8.0.4](***REMOVED***) (2018-01-10)
+## [8.0.4](https://github.com/SpareBank1/designsystem/compare/ffe-account-selector-react@8.0.3...ffe-account-selector-react@8.0.4) (2018-01-10)
 
 **Note:** Version bump only for package ffe-account-selector-react
 
 <a name="8.0.3"></a>
 
-## [8.0.3](***REMOVED***) (2018-01-10)
+## [8.0.3](https://github.com/SpareBank1/designsystem/compare/ffe-account-selector-react@8.0.2...ffe-account-selector-react@8.0.3) (2018-01-10)
 
 **Note:** Version bump only for package ffe-account-selector-react
 
 <a name="8.0.2"></a>
 
-## [8.0.2](***REMOVED***) (2018-01-10)
+## [8.0.2](https://github.com/SpareBank1/designsystem/compare/ffe-account-selector-react@8.0.1...ffe-account-selector-react@8.0.2) (2018-01-10)
 
 **Note:** Version bump only for package ffe-account-selector-react
 

@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
       <a name="8.2.4"></a>
-## [8.2.4](***REMOVED***) (2018-02-23)
+## [8.2.4](https://github.com/SpareBank1/designsystem/compare/ffe-buttons-react@8.2.3...ffe-buttons-react@8.2.4) (2018-02-23)
 
 
 
@@ -12,7 +12,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-buttons-react
 
       <a name="8.2.3"></a>
-## [8.2.3](***REMOVED***) (2018-02-22)
+## [8.2.3](https://github.com/SpareBank1/designsystem/compare/ffe-buttons-react@8.2.2...ffe-buttons-react@8.2.3) (2018-02-22)
 
 
 
@@ -20,7 +20,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-buttons-react
 
   <a name="8.2.2"></a>
-## [8.2.2](***REMOVED***) (2018-02-21)
+## [8.2.2](https://github.com/SpareBank1/designsystem/compare/ffe-buttons-react@8.2.1...ffe-buttons-react@8.2.2) (2018-02-21)
 
 
 
@@ -28,7 +28,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-buttons-react
 
 <a name="8.2.1"></a>
-## [8.2.1](***REMOVED***) (2018-02-20)
+## [8.2.1](https://github.com/SpareBank1/designsystem/compare/ffe-buttons-react@8.2.0...ffe-buttons-react@8.2.1) (2018-02-20)
 
 
 
@@ -36,18 +36,18 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-buttons-react
 
 <a name="8.2.0"></a>
-# [8.2.0](***REMOVED***) (2018-02-16)
+# [8.2.0](https://github.com/SpareBank1/designsystem/compare/ffe-buttons-react@8.1.7...ffe-buttons-react@8.2.0) (2018-02-16)
 
 
 ### Features
 
-* **ffe-buttons-react:** Inline expand button ([fdf3326](***REMOVED***))
+* **ffe-buttons-react:** Inline expand button
 
 
 
 
 <a name="8.1.7"></a>
-## [8.1.7](***REMOVED***) (2018-02-15)
+## [8.1.7](https://github.com/SpareBank1/designsystem/compare/ffe-buttons-react@8.1.6...ffe-buttons-react@8.1.7) (2018-02-15)
 
 
 
@@ -55,7 +55,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-buttons-react
 
 <a name="8.1.6"></a>
-## [8.1.6](***REMOVED***) (2018-02-09)
+## [8.1.6](https://github.com/SpareBank1/designsystem/compare/ffe-buttons-react@8.1.5...ffe-buttons-react@8.1.6) (2018-02-09)
 
 
 
@@ -63,18 +63,18 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-buttons-react
 
 <a name="8.1.5"></a>
-## [8.1.5](***REMOVED***) (2018-02-05)
+## [8.1.5](https://github.com/SpareBank1/designsystem/compare/ffe-buttons-react@8.1.4...ffe-buttons-react@8.1.5) (2018-02-05)
 
 
 ### Bug Fixes
 
-* **ffe-buttons-react:** Remove type propType check ([a0c1c12](***REMOVED***))
+* **ffe-buttons-react:** Remove type propType check
 
 
 
 
 <a name="8.1.4"></a>
-## [8.1.4](***REMOVED***) (2018-02-01)
+## [8.1.4](https://github.com/SpareBank1/designsystem/compare/ffe-buttons-react@8.1.3...ffe-buttons-react@8.1.4) (2018-02-01)
 
 
 
@@ -82,18 +82,18 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-buttons-react
 
 <a name="8.1.3"></a>
-## [8.1.3](***REMOVED***) (2018-01-31)
+## [8.1.3](https://github.com/SpareBank1/designsystem/compare/ffe-buttons-react@8.1.2...ffe-buttons-react@8.1.3) (2018-01-31)
 
 
 ### Bug Fixes
 
-* Treeshake ffe-icons ([d431cb3](***REMOVED***))
+* Treeshake ffe-icons
 
 
 
 
 <a name="8.1.2"></a>
-## [8.1.2](***REMOVED***) (2018-01-19)
+## [8.1.2](https://github.com/SpareBank1/designsystem/compare/ffe-buttons-react@8.1.1...ffe-buttons-react@8.1.2) (2018-01-19)
 
 
 
@@ -101,7 +101,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-buttons-react
 
 <a name="8.1.1"></a>
-## [8.1.1](***REMOVED***) (2018-01-19)
+## [8.1.1](https://github.com/SpareBank1/designsystem/compare/ffe-buttons-react@8.1.0...ffe-buttons-react@8.1.1) (2018-01-19)
 
 
 
@@ -109,59 +109,59 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package ffe-buttons-react
 
 <a name="8.1.0"></a>
-# [8.1.0](***REMOVED***) (2018-01-10)
+# [8.1.0](https://github.com/SpareBank1/designsystem/compare/ffe-buttons-react@8.0.6...ffe-buttons-react@8.1.0) (2018-01-10)
 
 
 ### Features
 
-* **ffe-buttons-react:** Add element prop ([ddaf0b6](***REMOVED***))
+* **ffe-buttons-react:** Add element prop
 
 
 
 
 <a name="8.0.6"></a>
 
-## [8.0.6](***REMOVED***) (2018-01-10)
+## [8.0.6](https://github.com/SpareBank1/designsystem/compare/ffe-buttons-react@8.0.5...ffe-buttons-react@8.0.6) (2018-01-10)
 
 **Note:** Version bump only for package ffe-buttons-react
 
 <a name="8.0.5"></a>
 
-## [8.0.5](***REMOVED***) (2018-01-10)
+## [8.0.5](https://github.com/SpareBank1/designsystem/compare/ffe-buttons-react@8.0.4...ffe-buttons-react@8.0.5) (2018-01-10)
 
 **Note:** Version bump only for package ffe-buttons-react
 
 <a name="8.0.4"></a>
 
-## [8.0.4](***REMOVED***) (2018-01-09)
+## [8.0.4](https://github.com/SpareBank1/designsystem/compare/ffe-buttons-react@8.0.3...ffe-buttons-react@8.0.4) (2018-01-09)
 
 **Note:** Version bump only for package ffe-buttons-react
 
 <a name="8.0.3"></a>
 
-## [8.0.3](***REMOVED***) (2018-01-05)
+## [8.0.3](https://github.com/SpareBank1/designsystem/compare/ffe-buttons-react@8.0.2...ffe-buttons-react@8.0.3) (2018-01-05)
 
 **Note:** Version bump only for package ffe-buttons-react
 
 <a name="8.0.2"></a>
 
-## [8.0.2](***REMOVED***) (2018-01-04)
+## [8.0.2](https://github.com/SpareBank1/designsystem/compare/ffe-buttons-react@8.0.1...ffe-buttons-react@8.0.2) (2018-01-04)
 
 **Note:** Version bump only for package ffe-buttons-react
 
 <a name="8.0.1"></a>
 
-## [8.0.1](***REMOVED***) (2018-01-02)
+## [8.0.1](https://github.com/SpareBank1/designsystem/compare/ffe-buttons-react@8.0.0...ffe-buttons-react@8.0.1) (2018-01-02)
 
 **Note:** Version bump only for package ffe-buttons-react
 
 <a name="8.0.0"></a>
 
-# [8.0.0](***REMOVED***) (2018-01-02)
+# [8.0.0](https://github.com/SpareBank1/designsystem/compare/ffe-buttons-react@7.0.0...ffe-buttons-react@8.0.0) (2018-01-02)
 
 ### Code Refactoring
 
-* **ffe-icons-react:** Improve API ([ecb9ac6](***REMOVED***))
+* **ffe-icons-react:** Improve API
 
 ### BREAKING CHANGES
 
@@ -202,18 +202,18 @@ This API change allows for cleaner usage and better documentation.
 
 ### Bug Fixes
 
-* Fix a few issues with the documentation ([83bee34](***REMOVED***))
-* **ffe-buttons-react:** Fixed path to chevron icon ([4a16869](***REMOVED***))
-* **ffe-icons-react:** Change hardcoded path of npm run build target ([ecfc6a3](***REMOVED***))
+* Fix a few issues with the documentation
+* **ffe-buttons-react:** Fixed path to chevron icon
+* **ffe-icons-react:** Change hardcoded path of npm run build target
 
 ### Features
 
-* **ffe-buttons-react:** Add contribute.md link to readme ([2b8ead4](***REMOVED***))
-* **ffe-buttons-react:** Upgrade to React 16 ([f119120](***REMOVED***))
+* **ffe-buttons-react:** Add contribute.md link to readme
+* **ffe-buttons-react:** Upgrade to React 16
 
 ### Fix
 
-* Rename all icons to end with -ikon ([f4b815a](***REMOVED***))
+* Rename all icons to end with -ikon
 
 ### BREAKING CHANGES
 
