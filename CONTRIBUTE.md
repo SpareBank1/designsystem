@@ -21,8 +21,8 @@ Utviklingsmiljøet krever at du har en nyere versjon av [Node og NPM](https://no
 Klon repositoryet og installer avhengigheter:
 
 ```bash
-git clone ***REMOVED***
-cd ffe-monorepo
+git clone git@github.com:SpareBank1/designsystem.git
+cd designsystem
 npm install
 ```
 
@@ -244,21 +244,12 @@ kommentarene dine.
 
 ## Lage en ny FFE-komponent
 
-Denne seksjonen må fortsatt skrives. Spør på HipChat-rommet om detaljer!
+Denne seksjonen må fortsatt skrives. Spør evt. på HipChat-rommet eller lag et issue på GitHub!
 
 ## Importere en eksisterende FFE-komponent
 
 Vi er midt i en migrasjonsfase, hvor noen FFE-pakker har sine egne repositories. Det kan du hjelpe til med å rydde opp
 i! Si ifra på HipChat at du vil migrere en eksisterende komponent, og følg denne guiden:
-
-### Importer koden (inkludert git-historikken)
-
-For å dra inn et eksisterende prosjekt, lag en ny branch og bruk `git subtree add` kommandoen. Her er et eksempel med
-hvordan det så ut for `ffe-core`:
-
-```bash
-$ git subtree add --prefix packages/ffe-core ***REMOVED*** master
-```
 
 Denne kommandoen importerer alle filer og git-historikk til `ffe-monorepo`, slik at ingenting blir borte i migrasjonen.
 
