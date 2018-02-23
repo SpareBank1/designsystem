@@ -21,6 +21,10 @@
     ],
     "author": "SpareBank 1",
     "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "ssh://git@github.com:SpareBank1/designsystem.git"
+    },
     "dependencies": {
         "react-collapse": "^4.0.3",
         "react-motion": "^0.5.2"

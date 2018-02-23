@@ -37,7 +37,7 @@
     ],
     "repository": {
         "type": "git",
-        "url": "***REMOVED***"
+        "url": "ssh://git@github.com:SpareBank1/designsystem.git"
     },
     "jest": {
         "setupTestFrameworkScriptFile": "../../test-setup.js"
