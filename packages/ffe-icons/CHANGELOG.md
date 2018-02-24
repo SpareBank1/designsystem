@@ -230,7 +230,7 @@ above `node_modules/` (the same directory as your apps `package.json`). So what 
 
 ## 6.1.1
 
-* Update design on faks-printer-solid-ikon [FFE-90](***REMOVED***)
+* Update design on faks-printer-solid-ikon FFE-90.
 
 # 6.1.0
 
