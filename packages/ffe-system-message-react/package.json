@@ -24,7 +24,7 @@
     "setupTestFrameworkScriptFile": "../../test-setup.js"
   },
   "dependencies": {
-    "prop-types": "*"
+    "prop-types": "^15.6.0"
   },
   "devDependencies": {
     "@sb1/ffe-icons-react": "^4.0.7",

@@ -32,9 +32,9 @@
     "json-loader": "^0.5.7",
     "mkdirp": "^0.5.1",
     "nsp": "^3.2.1",
-    "react": "^16.1.1",
-    "react-dom": "^16.1.1",
-    "rimraf": "^2.6.1"
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "rimraf": "^2.6.2"
   },
   "publishConfig": {
     "access": "public"

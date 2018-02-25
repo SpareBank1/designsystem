@@ -38,8 +38,8 @@
     "eslint": "^4.13.1",
     "jest": "^22.4.0",
     "nsp": "^3.2.1",
-    "react": "^16.1.1",
-    "react-dom": "^16.1.1"
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
   },
   "publishConfig": {
     "access": "public"
