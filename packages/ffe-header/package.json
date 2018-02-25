@@ -12,8 +12,7 @@
   "scripts": {
     "build": "lessc less/ffe-header-nodeps.less examples/ffe-header.css --autoprefix && lessc examples/examples.less examples/examples.css",
     "lint": "stylelint less/*.less",
-    "test": "npm run lint && npm run test:nsp",
-    "test:nsp": "nsp check"
+    "test": "npm run lint"
   },
   "devDependencies": {
     "@sb1/ffe-buttons": "^6.0.0",
@@ -22,7 +21,6 @@
     "less": "^2.7.3",
     "less-plugin-autoprefix": "^1.5.1",
     "mkdirp": "^0.5.1",
-    "nsp": "^3.2.1",
     "stylelint": "^8.4.0"
   },
   "peerDependencies": {
