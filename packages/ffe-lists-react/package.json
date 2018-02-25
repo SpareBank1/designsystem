@@ -1,42 +1,45 @@
 {
-    "name": "@sb1/ffe-lists-react",
-    "version": "2.1.6",
-    "description": "React implementation of ffe-lists",
-    "license": "MIT",
-    "author": "SpareBank 1",
-    "files": [
-        "lib",
-        "*.js"
-    ],
-    "main": "lib/index.js",
-    "repository": {
-        "type": "git",
-        "url": "ssh://git@github.com:SpareBank1/designsystem.git"
-    },
-    "scripts": {
-        "build": "babel -d lib/. --ignore=*.spec.js src/.",
-        "lint": "eslint src/.",
-        "test": "npm run test:spec && npm run test:nsp",
-        "test:nsp": "nsp check",
-        "test:spec": "jest",
-        "test:watch": "jest --watch"
-    },
-    "jest": {
-        "setupTestFrameworkScriptFile": "../../test-setup.js"
-    },
-    "dependencies": {
-        "classnames": "^2.2.5",
-        "prop-types": "^15.6.0"
-    },
-    "devDependencies": {
-        "enzyme": "^3.3.0",
-        "enzyme-adapter-react-16": "^1.1.1",
-        "jest": "^22.4.0",
-        "nsp": "^3.2.1",
-        "react": "^16.2.0",
-        "react-dom": "^16.2.0"
-    },
-    "peerDependencies": {
-        "@sb1/ffe-lists": "^4.1.8"
-    }
+  "name": "@sb1/ffe-lists-react",
+  "version": "2.1.6",
+  "description": "React implementation of ffe-lists",
+  "license": "MIT",
+  "author": "SpareBank 1",
+  "files": [
+    "lib",
+    "*.js"
+  ],
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:SpareBank1/designsystem.git"
+  },
+  "scripts": {
+    "build": "babel -d lib/. --ignore=*.spec.js src/.",
+    "lint": "eslint src/.",
+    "test": "npm run test:spec && npm run test:nsp",
+    "test:nsp": "nsp check",
+    "test:spec": "jest",
+    "test:watch": "jest --watch"
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "../../test-setup.js"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "prop-types": "^15.6.0"
+  },
+  "devDependencies": {
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "jest": "^22.4.0",
+    "nsp": "^3.2.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "peerDependencies": {
+    "@sb1/ffe-lists": "^4.1.8"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }

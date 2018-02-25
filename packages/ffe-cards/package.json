@@ -1,24 +1,27 @@
 {
-    "name": "@sb1/ffe-cards",
-    "version": "5.0.12",
-    "description": "Kort for bruk i oversikter",
-    "license": "MIT",
-    "author": "SpareBank 1",
-    "main": "index.js",
-    "repository": {
-        "type": "git",
-        "url": "ssh://git@github.com:SpareBank1/designsystem.git"
-    },
-    "scripts": {
-        "lint": "stylelint less/*.less",
-        "test": "npm run lint && npm run test:nsp",
-        "test:nsp": "nsp check"
-    },
-    "devDependencies": {
-        "@sb1/ffe-core": "^11.0.3",
-        "nsp": "^3.2.1"
-    },
-    "peerDependencies": {
-        "@sb1/ffe-core": "^11.0.2"
-    }
+  "name": "@sb1/ffe-cards",
+  "version": "5.0.12",
+  "description": "Kort for bruk i oversikter",
+  "license": "MIT",
+  "author": "SpareBank 1",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:SpareBank1/designsystem.git"
+  },
+  "scripts": {
+    "lint": "stylelint less/*.less",
+    "test": "npm run lint && npm run test:nsp",
+    "test:nsp": "nsp check"
+  },
+  "devDependencies": {
+    "@sb1/ffe-core": "^11.0.3",
+    "nsp": "^3.2.1"
+  },
+  "peerDependencies": {
+    "@sb1/ffe-core": "^11.0.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }

@@ -1,24 +1,27 @@
 {
-    "name": "@sb1/ffe-message-box",
-    "version": "4.2.7",
-    "description": "Meldingsboks",
-    "license": "MIT",
-    "author": "SpareBank 1",
-    "main": "less/ffe-message-box",
-    "repository": {
-        "type": "git",
-        "url": "ssh://git@github.com:SpareBank1/designsystem.git"
-    },
-    "scripts": {
-        "lint": "stylelint less/*.less",
-        "test": "npm run lint && npm run test:nsp",
-        "test:nsp": "nsp check"
-    },
-    "devDependencies": {
-        "nsp": "^3.2.1",
-        "stylelint": "^8.4.0"
-    },
-    "peerDependencies": {
-        "@sb1/ffe-core": "^11.0.3"
-    }
+  "name": "@sb1/ffe-message-box",
+  "version": "4.2.7",
+  "description": "Meldingsboks",
+  "license": "MIT",
+  "author": "SpareBank 1",
+  "main": "less/ffe-message-box",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:SpareBank1/designsystem.git"
+  },
+  "scripts": {
+    "lint": "stylelint less/*.less",
+    "test": "npm run lint && npm run test:nsp",
+    "test:nsp": "nsp check"
+  },
+  "devDependencies": {
+    "nsp": "^3.2.1",
+    "stylelint": "^8.4.0"
+  },
+  "peerDependencies": {
+    "@sb1/ffe-core": "^11.0.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }

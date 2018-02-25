@@ -1,49 +1,52 @@
 {
-    "name": "@sb1/ffe-core-react",
-    "version": "1.2.4",
-    "description": "React components for ffe-core components",
-    "keywords": [
-        "ffe"
-    ],
-    "license": "MIT",
-    "author": "SpareBank 1",
-    "files": [
-        "lib",
-        "*.js"
-    ],
-    "main": "lib/index.js",
-    "repository": {
-        "type": "git",
-        "url": "ssh://git@github.com:SpareBank1/designsystem.git"
-    },
-    "scripts": {
-        "build": "babel -d lib/. --ignore=*.spec.js src/.",
-        "lint": "eslint src/.",
-        "test": "npm run test:spec && npm run test:nsp",
-        "test:nsp": "nsp check",
-        "test:spec": "jest",
-        "test:watch": "jest --watch"
-    },
-    "jest": {
-        "setupTestFrameworkScriptFile": "../../test-setup.js"
-    },
-    "dependencies": {
-        "classnames": "^2.2.5"
-    },
-    "devDependencies": {
-        "enzyme": "^3.3.0",
-        "enzyme-adapter-react-16": "^1.1.1",
-        "eslint": "^4.13.1",
-        "jest": "^22.4.0",
-        "nsp": "^3.2.1",
-        "prop-types": "^15.6.0",
-        "react": "^16.1.1",
-        "react-dom": "^16.1.1",
-        "react-test-renderer": "^16.2.0",
-        "rimraf": "^2.6.1"
-    },
-    "peerDependencies": {
-        "@sb1/ffe-core": "^11.0.3",
-        "react": "^15.4.0 || ^16.1.1"
-    }
+  "name": "@sb1/ffe-core-react",
+  "version": "1.2.4",
+  "description": "React components for ffe-core components",
+  "keywords": [
+    "ffe"
+  ],
+  "license": "MIT",
+  "author": "SpareBank 1",
+  "files": [
+    "lib",
+    "*.js"
+  ],
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:SpareBank1/designsystem.git"
+  },
+  "scripts": {
+    "build": "babel -d lib/. --ignore=*.spec.js src/.",
+    "lint": "eslint src/.",
+    "test": "npm run test:spec && npm run test:nsp",
+    "test:nsp": "nsp check",
+    "test:spec": "jest",
+    "test:watch": "jest --watch"
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "../../test-setup.js"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5"
+  },
+  "devDependencies": {
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "eslint": "^4.13.1",
+    "jest": "^22.4.0",
+    "nsp": "^3.2.1",
+    "prop-types": "^15.6.0",
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1",
+    "react-test-renderer": "^16.2.0",
+    "rimraf": "^2.6.1"
+  },
+  "peerDependencies": {
+    "@sb1/ffe-core": "^11.0.3",
+    "react": "^15.4.0 || ^16.1.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }

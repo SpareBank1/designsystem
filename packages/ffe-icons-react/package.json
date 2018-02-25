@@ -1,39 +1,42 @@
 {
-    "name": "@sb1/ffe-icons-react",
-    "version": "4.0.7",
-    "description": "React-komponenter for ffe-icons",
-    "license": "MIT",
-    "files": [
-        "lib"
-    ],
-    "main": "lib/index.js",
-    "repository": {
-        "type": "git",
-        "url": "ssh://git@github.com:SpareBank1/designsystem.git"
-    },
-    "scripts": {
-        "build": "npm run ffe:icons && npm run build:jsx-components && npm run build:babel",
-        "build:babel": "babel jsx -d lib",
-        "build:jsx-components": "babel-node ./src/build-jsx-components.js",
-        "clean": "rimraf tmp jsx lib",
-        "ffe:icons": "ffe-icons --opts=packages/ffe-icons-react/svg.sprite.config.json",
-        "lint": "eslint src/.",
-        "test": "run-p test:nsp lint",
-        "test:nsp": "nsp check"
-    },
-    "dependencies": {
-        "prop-types": "^15.6.0"
-    },
-    "devDependencies": {
-        "@sb1/ffe-icons": "^9.0.5",
-        "eslint": "^4.13.1",
-        "eslint-loader": "^1.9.0",
-        "gulp": "^3.9.1",
-        "json-loader": "^0.5.7",
-        "mkdirp": "^0.5.1",
-        "nsp": "^3.2.1",
-        "react": "^16.1.1",
-        "react-dom": "^16.1.1",
-        "rimraf": "^2.6.1"
-    }
+  "name": "@sb1/ffe-icons-react",
+  "version": "4.0.7",
+  "description": "React-komponenter for ffe-icons",
+  "license": "MIT",
+  "files": [
+    "lib"
+  ],
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:SpareBank1/designsystem.git"
+  },
+  "scripts": {
+    "build": "npm run ffe:icons && npm run build:jsx-components && npm run build:babel",
+    "build:babel": "babel jsx -d lib",
+    "build:jsx-components": "babel-node ./src/build-jsx-components.js",
+    "clean": "rimraf tmp jsx lib",
+    "ffe:icons": "ffe-icons --opts=packages/ffe-icons-react/svg.sprite.config.json",
+    "lint": "eslint src/.",
+    "test": "run-p test:nsp lint",
+    "test:nsp": "nsp check"
+  },
+  "dependencies": {
+    "prop-types": "^15.6.0"
+  },
+  "devDependencies": {
+    "@sb1/ffe-icons": "^9.0.5",
+    "eslint": "^4.13.1",
+    "eslint-loader": "^1.9.0",
+    "gulp": "^3.9.1",
+    "json-loader": "^0.5.7",
+    "mkdirp": "^0.5.1",
+    "nsp": "^3.2.1",
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1",
+    "rimraf": "^2.6.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }

@@ -1,26 +1,29 @@
 {
-    "name": "@sb1/ffe-buttons",
-    "version": "5.2.3",
-    "license": "MIT",
-    "author": "SpareBank1",
-    "files": [
-        "less"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "ssh://git@github.com:SpareBank1/designsystem.git"
-    },
-    "scripts": {
-        "lint": "stylelint less/*.less",
-        "test": "npm run lint && npm run test:nsp",
-        "test:nsp": "nsp check"
-    },
-    "devDependencies": {
-        "@sb1/ffe-core": "^11.0.3",
-        "nsp": "^3.1.0",
-        "stylelint": "^8.4.0"
-    },
-    "peerDependencies": {
-        "@sb1/ffe-core": "^11.0.3"
-    }
+  "name": "@sb1/ffe-buttons",
+  "version": "5.2.3",
+  "license": "MIT",
+  "author": "SpareBank1",
+  "files": [
+    "less"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:SpareBank1/designsystem.git"
+  },
+  "scripts": {
+    "lint": "stylelint less/*.less",
+    "test": "npm run lint && npm run test:nsp",
+    "test:nsp": "nsp check"
+  },
+  "devDependencies": {
+    "@sb1/ffe-core": "^11.0.3",
+    "nsp": "^3.1.0",
+    "stylelint": "^8.4.0"
+  },
+  "peerDependencies": {
+    "@sb1/ffe-core": "^11.0.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }

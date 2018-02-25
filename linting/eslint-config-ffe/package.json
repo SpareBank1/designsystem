@@ -2,24 +2,22 @@
   "name": "@sb1/eslint-config-ffe",
   "version": "7.0.2",
   "description": "",
-  "author": "SpareBank 1",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "ssh://git@github.com:SpareBank1/designsystem.git"
-  },
-  "main": "index.js",
-  "scripts": {
-    "lint": "eslint ."
-  },
+  "author": "SpareBank 1",
   "files": [
     "rules",
     "*.js"
   ],
-  "peerDependencies": {
-    "eslint": "^4.0.0",
-    "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^6.0.0 || ^7.0.0"
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:SpareBank1/designsystem.git"
+  },
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@sb1/eslint-config-ffe-base": "^2.3.1"
   },
   "devDependencies": {
     "eslint": "^4.13.1",
@@ -27,7 +25,12 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.0.0"
   },
-  "dependencies": {
-    "@sb1/eslint-config-ffe-base": "^2.3.1"
+  "peerDependencies": {
+    "eslint": "^4.0.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^6.0.0 || ^7.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

@@ -1,27 +1,30 @@
 {
-    "name": "@sb1/ffe-core",
-    "version": "11.0.3",
-    "description": "Rammeverk for Felles Front End",
-    "license": "MIT",
-    "author": "SpareBank 1",
-    "files": [
-        "fonts",
-        "less"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "ssh://git@github.com:SpareBank1/designsystem.git"
-    },
-    "scripts": {
-        "lint": "stylelint less/*.less",
-        "test": "npm run lint && npm run test:nsp",
-        "test:nsp": "nsp check"
-    },
-    "devDependencies": {
-        "nsp": "^3.2.1",
-        "stylelint": "^8.4.0"
-    },
-    "sb1.StaticResources": [
-        "fonts/**"
-    ]
+  "name": "@sb1/ffe-core",
+  "version": "11.0.3",
+  "description": "Rammeverk for Felles Front End",
+  "license": "MIT",
+  "author": "SpareBank 1",
+  "files": [
+    "fonts",
+    "less"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:SpareBank1/designsystem.git"
+  },
+  "scripts": {
+    "lint": "stylelint less/*.less",
+    "test": "npm run lint && npm run test:nsp",
+    "test:nsp": "nsp check"
+  },
+  "devDependencies": {
+    "nsp": "^3.2.1",
+    "stylelint": "^8.4.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "sb1.StaticResources": [
+    "fonts/**"
+  ]
 }

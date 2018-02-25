@@ -1,30 +1,33 @@
 {
-    "name": "@sb1/ffe-webfonts",
-    "version": "1.0.3",
-    "description": "Fonts and fonts definition used in FFE",
-    "license": "SEE LICENSE IN README.md",
-    "author": "SpareBank 1",
-    "files": [
-        "fonts",
-        "fonts.css",
-        "fonts.less",
-        "LICENSE-fonts.md",
-        "LICENSE.md",
-        "README.md"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "ssh://git@github.com:SpareBank1/designsystem.git"
-    },
-    "scripts": {
-        "build": "lessc --no-ie-compat --inline-urls fonts.less fonts.css",
-        "lint": "stylelint *.less",
-        "test": "npm run lint && npm run test:nsp",
-        "test:nsp": "nsp check"
-    },
-    "devDependencies": {
-        "less-plugin-inline-urls": "^1.2.0",
-        "nsp": "^3.2.1",
-        "stylelint": "^8.4.0"
-    }
+  "name": "@sb1/ffe-webfonts",
+  "version": "1.0.3",
+  "description": "Fonts and fonts definition used in FFE",
+  "license": "SEE LICENSE IN README.md",
+  "author": "SpareBank 1",
+  "files": [
+    "fonts",
+    "fonts.css",
+    "fonts.less",
+    "LICENSE-fonts.md",
+    "LICENSE.md",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:SpareBank1/designsystem.git"
+  },
+  "scripts": {
+    "build": "lessc --no-ie-compat --inline-urls fonts.less fonts.css",
+    "lint": "stylelint *.less",
+    "test": "npm run lint && npm run test:nsp",
+    "test:nsp": "nsp check"
+  },
+  "devDependencies": {
+    "less-plugin-inline-urls": "^1.2.0",
+    "nsp": "^3.2.1",
+    "stylelint": "^8.4.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }

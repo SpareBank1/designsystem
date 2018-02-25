@@ -1,35 +1,38 @@
 {
-    "name": "@sb1/ffe-formatters",
-    "version": "2.1.7",
-    "description": "JavaScript general use string formatters",
-    "keywords": [
-        "ffe"
-    ],
-    "license": "MIT",
-    "author": "SpareBank 1",
-    "files": [
-        "lib"
-    ],
-    "main": "lib/index.js",
-    "repository": {
-        "type": "git",
-        "url": "ssh://git@github.com:SpareBank1/designsystem.git"
-    },
-    "scripts": {
-        "build": "babel -d lib/. --ignore=*.spec.js src/.",
-        "lint": "eslint src/.",
-        "test": "npm run test:spec && npm run test:nsp",
-        "test:nsp": "nsp check",
-        "test:spec": "jest",
-        "test:watch": "jest --watch"
-    },
-    "dependencies": {
-        "underscore.string": "^3.3.4"
-    },
-    "devDependencies": {
-        "eslint": "^4.13.1",
-        "jest": "^22.4.0",
-        "moment": "^2.18.1",
-        "nsp": "^3.2.1"
-    }
+  "name": "@sb1/ffe-formatters",
+  "version": "2.1.7",
+  "description": "JavaScript general use string formatters",
+  "keywords": [
+    "ffe"
+  ],
+  "license": "MIT",
+  "author": "SpareBank 1",
+  "files": [
+    "lib"
+  ],
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:SpareBank1/designsystem.git"
+  },
+  "scripts": {
+    "build": "babel -d lib/. --ignore=*.spec.js src/.",
+    "lint": "eslint src/.",
+    "test": "npm run test:spec && npm run test:nsp",
+    "test:nsp": "nsp check",
+    "test:spec": "jest",
+    "test:watch": "jest --watch"
+  },
+  "dependencies": {
+    "underscore.string": "^3.3.4"
+  },
+  "devDependencies": {
+    "eslint": "^4.13.1",
+    "jest": "^22.4.0",
+    "moment": "^2.18.1",
+    "nsp": "^3.2.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }

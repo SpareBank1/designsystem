@@ -1,53 +1,32 @@
 {
-    "name": "@sb1/ffe-form",
-    "version": "8.1.12",
-    "description": "Form components for Felles Front End",
-    "keywords": [
-        "checkbox",
-        "design",
-        "dropdown",
-        "end",
-        "error summary",
-        "fieldset",
-        "form",
-        "form label",
-        "front",
-        "frontend",
-        "guide",
-        "info message",
-        "input",
-        "input field",
-        "input group",
-        "radio block",
-        "radio button",
-        "radio input",
-        "radio switch",
-        "sb1",
-        "style",
-        "styling"
-    ],
-    "license": "MIT",
-    "author": "SpareBank 1",
-    "files": [
-        "less"
-    ],
-    "main": "less/form.less",
-    "repository": {
-        "type": "git",
-        "url": "ssh://git@github.com:SpareBank1/designsystem.git"
-    },
-    "scripts": {
-        "lint": "stylelint less/*.less",
-        "test": "npm run lint && npm run test:nsp",
-        "test:nsp": "nsp check"
-    },
-    "devDependencies": {
-        "@sb1/ffe-core": "^11.0.3",
-        "nsp": "^3.2.1",
-        "stylelint": "^8.4.0"
-    },
-    "optionalDependencies": {
-        "@sb1/ffe-buttons": "^5.2.3",
-        "@sb1/ffe-core": "^11.0.3"
-    }
+  "name": "@sb1/ffe-form",
+  "version": "8.1.12",
+  "description": "Form components for Felles Front End",
+  "license": "MIT",
+  "author": "SpareBank 1",
+  "files": [
+    "less"
+  ],
+  "main": "less/form.less",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:SpareBank1/designsystem.git"
+  },
+  "scripts": {
+    "lint": "stylelint less/*.less",
+    "test": "npm run lint && npm run test:nsp",
+    "test:nsp": "nsp check"
+  },
+  "devDependencies": {
+    "@sb1/ffe-core": "^11.0.3",
+    "nsp": "^3.2.1",
+    "stylelint": "^8.4.0"
+  },
+  "optionalDependencies": {
+    "@sb1/ffe-buttons": "^5.2.3",
+    "@sb1/ffe-core": "^11.0.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }
