@@ -3,6 +3,156 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="9.0.0"></a>
+# 9.0.0 (2018-02-25)
+
+
+### Bug Fixes
+
+* Fix a few issues with the documentation ([ab3d579](https://github.com/SpareBank1/designsystem/commit/ab3d579))
+* **ffe-buttons-react:** Fixed path to chevron icon ([0eb4b1b](https://github.com/SpareBank1/designsystem/commit/0eb4b1b))
+* Treeshake ffe-icons ([6bc9d6f](https://github.com/SpareBank1/designsystem/commit/6bc9d6f))
+* **ffe-buttons-react:** Remove type propType check ([005890a](https://github.com/SpareBank1/designsystem/commit/005890a))
+* **ffe-icons-react:** Change hardcoded path of npm run build target ([f271067](https://github.com/SpareBank1/designsystem/commit/f271067))
+
+
+### Chores
+
+* add [@sb1](https://github.com/sb1)/ scope to all packages ([37efbb4](https://github.com/SpareBank1/designsystem/commit/37efbb4))
+
+
+### Code Refactoring
+
+* **ffe-icons-react:** Improve API ([e9b88a4](https://github.com/SpareBank1/designsystem/commit/e9b88a4))
+
+
+### Features
+
+* **ffe-buttons-react:** Add contribute.md link to readme ([5474772](https://github.com/SpareBank1/designsystem/commit/5474772))
+* **ffe-buttons-react:** Add element prop ([c7d3c96](https://github.com/SpareBank1/designsystem/commit/c7d3c96))
+* **ffe-buttons-react:** Inline expand button ([c22ce20](https://github.com/SpareBank1/designsystem/commit/c22ce20))
+* **ffe-buttons-react:** Upgrade to React 16 ([2dc5dd9](https://github.com/SpareBank1/designsystem/commit/2dc5dd9))
+
+
+### Fix
+
+* Rename all icons to end with -ikon ([a9d5741](https://github.com/SpareBank1/designsystem/commit/a9d5741))
+
+
+### BREAKING CHANGES
+
+* All packages have been renamed to add the @sb1 scope.
+
+See links [1] and [2] to read more about package scopes.
+
+Unfortunately this requires you update both your dependencies in
+`package.json` and all `import` or `require` statements in your code.
+Also, you unfortunately have to upgrade all FFE packages at once due to
+dependency between packages. If you are on the latest version prior to
+this breaking change the upgrade should be a matter of updating
+`package.json` with new package names and versions, and updating your
+imports.
+
+To help find the proper package versions you can either browse to the
+packages you need or check out the list of Git tags either on
+Github [3] or by cloning the repository and running the `git tag`
+command. All package versions get a tag in the format
+_package@version_.
+
+Update your `package.json` with the latest package version and add the
+@sb1 scope to the package name:
+
+```diff
+- "ffe-core": "11.0.2",
++ "@sb1/ffe-core": "11.0.2",
+```
+
+Scoped packages all get put in a subdirectory in `node_modules/`. In our
+case packages will be put in the `node_modules/@sb1/` directory. If your
+build depends on file paths (for instance for copying fonts) you need to
+update that path to include the scope.
+
+The directory structure also means you have to update your imports, both
+in Less and in JavaScript.
+
+Using `less-plugin-npm-import`:
+
+```diff
+- @import 'npm://ffe-core/less/ffe';
++ @import 'npm://@sb1/ffe-core/less/ffe';
+```
+
+Using Webpack:
+
+```diff
+- @import '~ffe-core/less/ffe';
++ @import '~@sb1/ffe-core/less/ffe';
+```
+
+Using plain old paths:
+
+```diff
+- @import '../path/to/node_modules/ffe-core/less/ffe';
++ @import '../path/to/node_modules/@sb1/ffe-core/less/ffe';
+```
+
+JavaScript `import`:
+
+```diff
+- import { ActionButton } from 'ffe-buttons-react';
++ import { ActionButton } from '@sb1/ffe-buttons-react';
+```
+
+JavaScript `require`:
+
+```diff
+- const { ActionButton } = require('ffe-buttons-react').default;
++ const { ActionButton } = require('@sb1/ffe-buttons-react').default;
+```
+
+[1]: https://docs.npmjs.com/misc/scope
+[2]: https://docs.npmjs.com/getting-started/scoped-packages
+[3]: https://github.com/sparebank1/designsystem/tags
+* **ffe-icons-react:** Improve the API of ffe-icons-react.
+
+This commit changes the API of the ffe-icons-react package to take
+advantage of dead code eliminination and tree shaking in
+Webpack >= 2.
+
+Previously, you imported one and one icon from the corresponding
+JSX file. Now all icons are available as named exports from the
+root level of `ffe-icons-react`.
+
+If you're using webpack@>=2.0.0,  please make the following changes
+to migrate:
+
+```diff
+- import ChevronIkon from 'ffe-icons-react/chevron-ikon';
+- import FamilieIkon from 'ffe-icons-react/familie-ikon';
++ import { ChevronIkon, FamilieIkon } from 'ffe-icons-react';
+```
+
+If you're not using a build tool that enables dead code elimination
+and tree shaking, please make the following changes to migrate:
+
+```diff
+- import ChevronIkon from 'ffe-icons-react/chevron-ikon';
+- import FamilieIkon from 'ffe-icons-react/familie-ikon';
++ import ChevronIkon from 'ffe-icons-react/lib/chevron-ikon';
++ import FamilieIkon from 'ffe-icons-react/lib/familie-ikon';
+```
+
+This API change allows for cleaner usage and better documentation.
+* This commit renames two icons in ffe-icons.
+`bankid-icon` is now named `bankid-ikon`, and
+`mynter-to-stabler-pluss` is now named `mynter-to-stabler-pluss-ikon`.
+
+In addition, ffe-icons-react receives a fix that unbroke a previous
+release
+
+
+
+
       <a name="8.2.4"></a>
 ## [8.2.4](https://github.com/SpareBank1/designsystem/compare/ffe-buttons-react@8.2.3...ffe-buttons-react@8.2.4) (2018-02-23)
 
@@ -11,7 +161,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package ffe-buttons-react
 
-      <a name="8.2.3"></a>
+    <a name="8.2.3"></a>
 ## [8.2.3](https://github.com/SpareBank1/designsystem/compare/ffe-buttons-react@8.2.2...ffe-buttons-react@8.2.3) (2018-02-22)
 
 
@@ -19,7 +169,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package ffe-buttons-react
 
-  <a name="8.2.2"></a>
+<a name="8.2.2"></a>
 ## [8.2.2](https://github.com/SpareBank1/designsystem/compare/ffe-buttons-react@8.2.1...ffe-buttons-react@8.2.2) (2018-02-21)
 
 

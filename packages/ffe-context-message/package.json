@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-context-message",
-  "version": "2.0.17",
+  "version": "3.0.0",
   "description": "Messagebox showing non-critical tip or information about a page or product",
   "keywords": [
     "ffe"
@@ -20,7 +20,7 @@
     "test:nsp": "nsp check"
   },
   "devDependencies": {
-    "@sb1/ffe-core": "^11.0.3",
+    "@sb1/ffe-core": "^12.0.0",
     "nsp": "^3.2.1"
   },
   "peerDependencies": {

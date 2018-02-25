@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-context-message-react",
-  "version": "3.0.16",
+  "version": "4.0.0",
   "description": "React implementation of ffe-context-message component",
   "keywords": [
     "ffe"
@@ -24,7 +24,7 @@
     "setupTestFrameworkScriptFile": "../../test-setup.js"
   },
   "dependencies": {
-    "@sb1/ffe-icons-react": "^4.0.7",
+    "@sb1/ffe-icons-react": "^5.0.0",
     "classnames": "^2.2.5",
     "prop-types": "^15.6.0"
   },

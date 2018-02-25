@@ -1,6 +1,6 @@
 {
   "name": "@sb1/eslint-config-ffe",
-  "version": "7.0.2",
+  "version": "8.0.0",
   "description": "",
   "license": "MIT",
   "author": "SpareBank 1",
@@ -17,7 +17,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@sb1/eslint-config-ffe-base": "^2.3.1"
+    "@sb1/eslint-config-ffe-base": "^3.0.0"
   },
   "devDependencies": {
     "eslint": "^4.13.1",

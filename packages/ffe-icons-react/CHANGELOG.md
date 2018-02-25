@@ -3,7 +3,153 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-      <a name="4.0.7"></a>
+    <a name="5.0.0"></a>
+# 5.0.0 (2018-02-25)
+
+
+### Bug Fixes
+
+* **ffe-icons-react:** Adjust file path to monorepo layout ([599b38e](https://github.com/SpareBank1/designsystem/commit/599b38e))
+* **ffe-icons-react:** fix build script to work inside monorepo ([6cb9b97](https://github.com/SpareBank1/designsystem/commit/6cb9b97))
+* **ffe-icons-react:** Output components to /lib ([2d02dbb](https://github.com/SpareBank1/designsystem/commit/2d02dbb))
+* remove all references to internal system ([ff22340](https://github.com/SpareBank1/designsystem/commit/ff22340))
+
+
+### Chores
+
+* add [@sb1](https://github.com/sb1)/ scope to all packages ([37efbb4](https://github.com/SpareBank1/designsystem/commit/37efbb4))
+
+
+### Code Refactoring
+
+* **ffe-icons-react:** Improve API ([e9b88a4](https://github.com/SpareBank1/designsystem/commit/e9b88a4))
+
+
+### Features
+
+* **ffe-icons-react:** Add contribute.md link to readme ([532c784](https://github.com/SpareBank1/designsystem/commit/532c784))
+
+
+### Fix
+
+* Rename all icons to end with -ikon ([a9d5741](https://github.com/SpareBank1/designsystem/commit/a9d5741))
+
+
+### BREAKING CHANGES
+
+* All packages have been renamed to add the @sb1 scope.
+
+See links [1] and [2] to read more about package scopes.
+
+Unfortunately this requires you update both your dependencies in
+`package.json` and all `import` or `require` statements in your code.
+Also, you unfortunately have to upgrade all FFE packages at once due to
+dependency between packages. If you are on the latest version prior to
+this breaking change the upgrade should be a matter of updating
+`package.json` with new package names and versions, and updating your
+imports.
+
+To help find the proper package versions you can either browse to the
+packages you need or check out the list of Git tags either on
+Github [3] or by cloning the repository and running the `git tag`
+command. All package versions get a tag in the format
+_package@version_.
+
+Update your `package.json` with the latest package version and add the
+@sb1 scope to the package name:
+
+```diff
+- "ffe-core": "11.0.2",
++ "@sb1/ffe-core": "11.0.2",
+```
+
+Scoped packages all get put in a subdirectory in `node_modules/`. In our
+case packages will be put in the `node_modules/@sb1/` directory. If your
+build depends on file paths (for instance for copying fonts) you need to
+update that path to include the scope.
+
+The directory structure also means you have to update your imports, both
+in Less and in JavaScript.
+
+Using `less-plugin-npm-import`:
+
+```diff
+- @import 'npm://ffe-core/less/ffe';
++ @import 'npm://@sb1/ffe-core/less/ffe';
+```
+
+Using Webpack:
+
+```diff
+- @import '~ffe-core/less/ffe';
++ @import '~@sb1/ffe-core/less/ffe';
+```
+
+Using plain old paths:
+
+```diff
+- @import '../path/to/node_modules/ffe-core/less/ffe';
++ @import '../path/to/node_modules/@sb1/ffe-core/less/ffe';
+```
+
+JavaScript `import`:
+
+```diff
+- import { ActionButton } from 'ffe-buttons-react';
++ import { ActionButton } from '@sb1/ffe-buttons-react';
+```
+
+JavaScript `require`:
+
+```diff
+- const { ActionButton } = require('ffe-buttons-react').default;
++ const { ActionButton } = require('@sb1/ffe-buttons-react').default;
+```
+
+[1]: https://docs.npmjs.com/misc/scope
+[2]: https://docs.npmjs.com/getting-started/scoped-packages
+[3]: https://github.com/sparebank1/designsystem/tags
+* **ffe-icons-react:** Improve the API of ffe-icons-react.
+
+This commit changes the API of the ffe-icons-react package to take
+advantage of dead code eliminination and tree shaking in
+Webpack >= 2.
+
+Previously, you imported one and one icon from the corresponding
+JSX file. Now all icons are available as named exports from the
+root level of `ffe-icons-react`.
+
+If you're using webpack@>=2.0.0,  please make the following changes
+to migrate:
+
+```diff
+- import ChevronIkon from 'ffe-icons-react/chevron-ikon';
+- import FamilieIkon from 'ffe-icons-react/familie-ikon';
++ import { ChevronIkon, FamilieIkon } from 'ffe-icons-react';
+```
+
+If you're not using a build tool that enables dead code elimination
+and tree shaking, please make the following changes to migrate:
+
+```diff
+- import ChevronIkon from 'ffe-icons-react/chevron-ikon';
+- import FamilieIkon from 'ffe-icons-react/familie-ikon';
++ import ChevronIkon from 'ffe-icons-react/lib/chevron-ikon';
++ import FamilieIkon from 'ffe-icons-react/lib/familie-ikon';
+```
+
+This API change allows for cleaner usage and better documentation.
+* This commit renames two icons in ffe-icons.
+`bankid-icon` is now named `bankid-ikon`, and
+`mynter-to-stabler-pluss` is now named `mynter-to-stabler-pluss-ikon`.
+
+In addition, ffe-icons-react receives a fix that unbroke a previous
+release
+
+
+
+
+    <a name="4.0.7"></a>
 ## [4.0.7](https://github.com/SpareBank1/designsystem/compare/ffe-icons-react@4.0.6...ffe-icons-react@4.0.7) (2018-02-23)
 
 
@@ -11,7 +157,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package ffe-icons-react
 
-      <a name="4.0.6"></a>
+  <a name="4.0.6"></a>
 ## [4.0.6](https://github.com/SpareBank1/designsystem/compare/ffe-icons-react@4.0.5...ffe-icons-react@4.0.6) (2018-02-22)
 
 
@@ -19,7 +165,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package ffe-icons-react
 
-    <a name="4.0.5"></a>
+<a name="4.0.5"></a>
 ## [4.0.5](https://github.com/SpareBank1/designsystem/compare/ffe-icons-react@4.0.4...ffe-icons-react@4.0.5) (2018-01-19)
 
 

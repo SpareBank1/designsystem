@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-tabs",
-  "version": "3.0.9",
+  "version": "4.0.0",
   "license": "MIT",
   "author": "SpareBank1",
   "files": [
@@ -16,7 +16,7 @@
     "test:nsp": "nsp check"
   },
   "devDependencies": {
-    "@sb1/ffe-core": "^11.0.3",
+    "@sb1/ffe-core": "^12.0.0",
     "nsp": "^3.2.1"
   },
   "peerDependencies": {
