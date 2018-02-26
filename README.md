@@ -1,5 +1,7 @@
 # Felles Front End i SpareBank 1
 
+[![Build Status](https://travis-ci.org/SpareBank1/designsystem.svg?branch=master)](https://travis-ci.org/SpareBank1/designsystem)
+
 Felles front end (FFE) sitt felles repository. Her vil du finne alle komponentene i FFE, både for LESS og React.
 
 Hver pakke har sin egen katalog under [packages/](packages/).
