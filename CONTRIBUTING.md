@@ -1,10 +1,11 @@
-# Contribute
+# Contributing
 
 **Velkommen til contributor-guiden til FFE!**
 
 Alle som ønsker kan bidra til FFE. Her vil du finne alt du skulle trenge av informasjon for å kunne bidra med å gjøre
 frontend-biblioteket vårt enda bedre. Sitter du igjen med ubesvarte spørsmål etter å ha lest dette dokumentet, er
-terskelen lav for å høre med oss på HipChat-kanalen vår - Alliansens Frontend-forum.
+terskelen lav for å åpne et issue her på Github med `question`-labelen. Om du heller vil kan du også spørre på den
+interne HipChat-kanalen "Designsystem".
 
 Ingen bidrag er for små! Forbedring av dokumentasjon, bugfixes, mangler du ikke har tid eller kunnskap til å fikse på
 egenhånd — alt er nyttig!
@@ -244,69 +245,9 @@ kommentarene dine.
 
 ## Lage en ny FFE-komponent
 
-Denne seksjonen må fortsatt skrives. Spør evt. på HipChat-rommet eller lag et issue på GitHub!
-
-## Importere en eksisterende FFE-komponent
-
-Vi er midt i en migrasjonsfase, hvor noen FFE-pakker har sine egne repositories. Det kan du hjelpe til med å rydde opp
-i! Si ifra på HipChat at du vil migrere en eksisterende komponent, og følg denne guiden:
-
-Denne kommandoen importerer alle filer og git-historikk til `ffe-monorepo`, slik at ingenting blir borte i migrasjonen.
-
-### Rydd i komponenten
-
-* Fjern `build.sh` og npm-scriptene `postpublish`, `preversion` og `has-published` i `package.json`.
-* Fiks `publishConfig` og `repository` i `package.json`
-* Fjern commit-hooks (se etter husky i `package.json`).
-* Endre `license`-feltet i `package.json` til `UNLICENSED`.
-* Linting
-  * Oppdatere eller fjern `.stylelintrc` og `.eslintrc` (Trenger ikke en extends-regler pga. eslintrc på toplevel i
-    repoet; kun overstyring av regler).
-  * Fjern dependencies til `eslint-plugin-*/-config-*`. Behold kun eslint.
-  * Fjern dependencies til `stylelint-config-*`. Behold kun stylelint.
-* Fjern `.editorconfig`
-* Fjern alt i .npmrc bortsett fra `package-lock=false`
-* Fjern `ffe-visual-tests-support` og alt relatert til gemini (.gemini.yml)
-* Oppgradere komponenten til å støtte React 16
-* Fiks hoisting errors (se stdout til lerna bootstrap i neste trinn)
-* Sjekk at `npm run build/test/lint` fungerer
-
-For LESS-pakker:
-
-* Legg til import av pakkens less i `packages/ffe-all.less`
-
-### Kjør `lerna bootstrap`
-
-```
-npm run bootstrap
-```
-
-### Formatter med prettier
-
-Installer `prettier` globalt og formatter alle `.jsx?`, `.json` og `.less`-filer i prosjektet.
-
-Et eksempel kan være:
-
-```
-prettier --write src/*.js *.json *.js
-```
-
-Prettier kjøres også på alle filer du har staget for commit når du commiter. Derfor vil du av og til se endringer i
-formattering selv om du ikke nødvendigvis gjorde det selv.
-
-### Legg til scope i `commitlint.config.js`
-
-Prosjektet du legger til må ligge i denne filen for at du skal kunne committe under dette scopet. Under `scope-enum`
-legger du til navnet på prosjektet du akkurat har lagt til.
-
-### Legg til dokumentasjon i `styleguide.config.js`
-
-For at dokumentasjonen skal dukke opp i styleguidist-dokumentasjonen, må den legges til som en `section` i
-`styleguide.config.js`. Du kan se på eksisterende seksjoner hvordan det kan gjøres.
-
-### Lag en pull request!
-
-Til slutt lager du en pull request, og legger til alle relevante reviewers.
+Her er ikke prosessen helt bygget opp, men åpne et issue her på Github der du beskriver behovet ditt og legg til
+`design`- og `question`-labelen så koordinerer vi derfra. Om du heller vil kan du også spørre på den interne
+HipChat-kanalen "Designsystem".
 
 ## Publisering
 
@@ -316,7 +257,7 @@ versjonsnummer i den relevante `package.json`-filen blir automatisk generert bas
 ## Har du fortsatt spørsmål?
 
 Vi har helt sikkert ikke husket å skrive om alt i denne guiden. Når du kommer på noe som fortsatt ikke er klart eller
-besvart i denne guiden, ber vi deg ta kontakt med Alliansens Front-end Forum på HipChat. Der vil du få svar så fort noen
-har tid.
+besvart i denne guiden, ber vi deg åpne et issue her på Github med `question`-labelen så vil vi svare så snart vi kan.
+Om du heller vil kan du også spørre på den interne HipChat-kanalen "Designsystem".
 
 Takk for at du leste denne guiden, og velkommen som bidragsyter til FFE!
