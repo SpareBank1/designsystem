@@ -1,54 +1,27 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import { ActionButton } from './index';
+import ActionButton from './ActionButton';
 
-const defaultProps = {
-    onClick: f => f,
-    children: <span>Hello, World!</span>,
-};
-
+const defaultProps = { children: 'Click me' };
 const getWrapper = props =>
     shallow(<ActionButton {...defaultProps} {...props} />);
 
-describe('ActionButton', () => {
-    it('renders an action button', () => {
-        const button = getWrapper();
-        expect(button.props()).toHaveProperty('buttonType', 'action');
+describe('<ActionButton />', () => {
+    it('renders without exploding', () => {
+        const wrapper = getWrapper();
+        expect(wrapper.props()).toHaveProperty('buttonType', 'action');
     });
-
-    it('passes any prop on to Button', () => {
-        const button = getWrapper({
-            'data-analytics-track': 'logMe',
+    it('passes on any prop', () => {
+        const wrapper = getWrapper({
+            'aria-label': 'some label',
         });
-        expect(button.dive().props()).toHaveProperty(
-            'data-analytics-track',
-            'logMe',
-        );
+        expect(wrapper.props()).toHaveProperty('aria-label', 'some label');
     });
-
-    describe('👻 ghost modifier 👻', () => {
-        it('renders without the --ghost modifier if ghost is false', () => {
-            const button = getWrapper({
-                ghost: false,
-            });
-            expect(button.hasClass('ffe-action-button--ghost')).toBe(false);
+    it('sets correct class when ghost prop is true', () => {
+        const wrapper = getWrapper({
+            ghost: true,
         });
-
-        it('renders the --ghost modifier if ghost is true', () => {
-            const button = getWrapper({
-                ghost: true,
-            });
-            expect(button.hasClass('ffe-action-button--ghost')).toBe(true);
-        });
-
-        it('renders the --ghost modifier alongside the className value', () => {
-            const button = getWrapper({
-                className: 'working-class',
-                ghost: true,
-            });
-            expect(button.hasClass('working-class')).toBe(true);
-            expect(button.hasClass('ffe-action-button--ghost')).toBe(true);
-        });
+        expect(wrapper.hasClass('ffe-button--ghost')).toBe(true);
     });
 });

@@ -1,28 +1,22 @@
 import React from 'react';
-import { node, string } from 'prop-types';
-import classNames from 'classnames';
-import Button from './Button';
+import { func, node, oneOfType, string } from 'prop-types';
+import InlineButton from './InlineBaseButton';
 
-export default function TertiaryButton(props) {
-    const { leftIcon, className, children, ...rest } = props;
-
-    return (
-        <Button
-            {...rest}
-            buttonType="tertiary"
-            leftIcon={leftIcon}
-            className={classNames(className, {
-                'ffe-tertiary-button--with-icon': leftIcon,
-            })}
-            simpleContent={!leftIcon}
-        >
-            {children}
-        </Button>
-    );
-}
+const TertiaryButton = props => <InlineButton buttonType="tertiary" {...props} />;
 
 TertiaryButton.propTypes = {
-    className: string,
+    /** The button label */
     children: node,
+    /** Extra class names */
+    className: string,
+    /** The rendered element, like an `<a />` or `<Link />` */
+    element: oneOfType([func, string]),
+    /** Ref-setting function passed to the button element */
+    innerRef: func,
+    /** Icon shown to the left of the label */
     leftIcon: node,
+    /** Icon shown to the right of the label */
+    rightIcon: node,
 };
+
+export default TertiaryButton;

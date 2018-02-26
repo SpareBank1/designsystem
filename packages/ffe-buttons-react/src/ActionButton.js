@@ -1,22 +1,20 @@
 import React from 'react';
-import { bool, string, node } from 'prop-types';
+import { bool, func, node, string, oneOfType } from 'prop-types';
 import classNames from 'classnames';
 
-import Button from './Button';
+import Button from './BaseButton';
 
 export default function ActionButton(props) {
-    const { children, className, ghost, ...rest } = props;
+    const { className, ghost, ...rest } = props;
 
     return (
         <Button
-            {...rest}
             buttonType="action"
             className={classNames(className, {
-                'ffe-action-button--ghost': ghost,
+                'ffe-button--ghost': ghost,
             })}
-        >
-            {children}
-        </Button>
+            {...rest}
+        />
     );
 }
 
@@ -25,8 +23,26 @@ ActionButton.defaultProps = {
 };
 
 ActionButton.propTypes = {
+    /** Aria label for loading indicator */
+    ariaLoadingMessage: string,
+    /** The button label */
     children: node,
+    /** Extra class names */
     className: string,
+    /** Condensed modifier. Use in condensed designs */
+    condensed: bool,
+    /** Disable a button in certain situations */
+    disabled: bool,
+    /** The rendered element, like an `<a />` or `<Link />` */
+    element: oneOfType([func, string]),
+    /** Ref-setting function passed to the button element */
+    innerRef: func,
+    /** Shows a loader if true */
+    isLoading: bool,
+    /** Icon shown to the left of the label */
+    leftIcon: node,
+    /** Icon shown to the right of the label */
+    rightIcon: node,
     /** Applies the ghost modifier if true. */
     ghost: bool,
 };
