@@ -1,25 +1,24 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
+import ChevronIkon from '@sb1/ffe-icons-react/lib/chevron-ikon';
 
-import { ShortcutButton } from './index';
+import ShortcutButton from './ShortcutButton';
 
-describe('ShortcutButton', () => {
-    describe('renders', () => {
-        it('a shortcut button', () => {
-            const button = shallow(<ShortcutButton />);
-            expect(button.props()).toHaveProperty('buttonType', 'shortcut');
-        });
+const defaultProps = { children: 'Click me' };
+const getWrapper = props =>
+    shallow(<ShortcutButton {...defaultProps} {...props} />);
 
-        it('a Chevron icon inside the button', () => {
-            const button = mount(<ShortcutButton />);
-            expect(
-                button.find('svg.ffe-shortcut-button__icon-chevron').exists(),
-            ).toBe(true);
-        });
+describe('<ShortcutButton />', () => {
+    it('renders without exploding', () => {
+        const wrapper = getWrapper();
+        expect(wrapper.props()).toHaveProperty('buttonType', 'shortcut');
     });
-
-    it('passes any prop on to Button', () => {
-        const button = shallow(<ShortcutButton disableButton={true} />);
-        expect(button.dive().props()).toHaveProperty('disabled', true);
+    it('passes on any prop', () => {
+        const wrapper = getWrapper({ 'aria-label': 'some label' });
+        expect(wrapper.props()).toHaveProperty('aria-label', 'some label');
+    });
+    it('sends a <ChevronIcon /> as a default rightIcon prop', () => {
+        const wrapper = getWrapper();
+        expect(wrapper.props()).toHaveProperty('rightIcon', <ChevronIkon />);
     });
 });

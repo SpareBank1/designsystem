@@ -1,17 +1,16 @@
 import React from 'react';
 import { bool, func, node, string, oneOfType } from 'prop-types';
-import ChevronIkon from '@sb1/ffe-icons-react/lib/chevron-ikon';
 import Button from './BaseButton';
 
-const ShortcutButton = props => (
+const TaskButton = props => (
     <Button
-        buttonType="shortcut"
-        rightIcon={<ChevronIkon />}
+        buttonType="task"
+        leftIcon={props.icon}
         {...props}
     />
 );
 
-ShortcutButton.propTypes = {
+TaskButton.propTypes = {
     /** The button label */
     children: node,
     /** Extra class names */
@@ -22,10 +21,10 @@ ShortcutButton.propTypes = {
     disabled: bool,
     /** The rendered element, like an `<a />` or `<Link />` */
     element: oneOfType([func, string]),
+    /** Task icon, show to the left of the label */
+    icon: node.isRequired,
     /** Ref-setting function passed to the button element */
     innerRef: func,
-    /** Icon shown to the left of the label */
-    leftIcon: node,
 };
 
-export default ShortcutButton;
+export default TaskButton;

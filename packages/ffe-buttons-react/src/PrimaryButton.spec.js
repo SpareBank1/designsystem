@@ -1,16 +1,19 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import { PrimaryButton } from './index';
+import PrimaryButton from './PrimaryButton';
 
-describe('PrimaryButton', () => {
-    it('renders a primary button', () => {
-        const button = shallow(<PrimaryButton />);
-        expect(button.props()).toHaveProperty('buttonType', 'primary');
+const defaultProps = { children: 'Click me' };
+const getWrapper = props =>
+    shallow(<PrimaryButton {...defaultProps} {...props} />);
+
+describe('<PrimaryButton />', () => {
+    it('renders without exploding', () => {
+        const wrapper = getWrapper();
+        expect(wrapper.props()).toHaveProperty('buttonType', 'primary');
     });
-
-    it('passes any prop on to Button', () => {
-        const button = shallow(<PrimaryButton disableButton={true} />);
-        expect(button.dive().props()).toHaveProperty('disabled', true);
+    it('passes on any prop', () => {
+        const wrapper = getWrapper({ 'aria-label': 'some label' });
+        expect(wrapper.props()).toHaveProperty('aria-label', 'some label');
     });
 });
