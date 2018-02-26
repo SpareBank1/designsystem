@@ -1,4 +1,4 @@
-# Contribute
+# Contributing
 
 **Velkommen til contributor-guiden til FFE!**
 
