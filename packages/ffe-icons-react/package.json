@@ -18,8 +18,7 @@
     "clean": "rimraf tmp jsx lib",
     "ffe:icons": "ffe-icons --opts=packages/ffe-icons-react/svg.sprite.config.json",
     "lint": "eslint src/.",
-    "test": "run-p test:nsp lint",
-    "test:nsp": "nsp check"
+    "test": "npm run lint"
   },
   "dependencies": {
     "prop-types": "^15.6.0"
@@ -31,7 +30,6 @@
     "gulp": "^3.9.1",
     "json-loader": "^0.5.7",
     "mkdirp": "^0.5.1",
-    "nsp": "^3.2.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "rimraf": "^2.6.2"

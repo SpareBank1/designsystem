@@ -18,9 +18,7 @@
   "scripts": {
     "build": "babel -d lib/. --ignore=*.spec.js src/.",
     "lint": "eslint src/.",
-    "test": "npm run test:spec && npm run test:nsp",
-    "test:nsp": "nsp check",
-    "test:spec": "jest",
+    "test": "jest",
     "test:watch": "jest --watch"
   },
   "dependencies": {
@@ -29,8 +27,7 @@
   "devDependencies": {
     "eslint": "^4.13.1",
     "jest": "^22.4.0",
-    "moment": "^2.18.1",
-    "nsp": "^3.2.1"
+    "moment": "^2.18.1"
   },
   "publishConfig": {
     "access": "public"

@@ -19,9 +19,7 @@
   "scripts": {
     "build": "babel -d lib/. --ignore=*.spec.js src/.",
     "lint": "eslint src/.",
-    "test": "npm run test:spec && npm run test:nsp",
-    "test:nsp": "nsp check",
-    "test:spec": "jest",
+    "test": "jest",
     "test:watch": "jest --watch"
   },
   "jest": {
@@ -33,7 +31,6 @@
     "eslint": "^4.13.1",
     "jest": "^22.4.0",
     "mock-raf": "^1.0.0",
-    "nsp": "^3.2.1",
     "react": "^16.2.0",
     "react-addons-test-utils": "^15.6.2",
     "react-dom": "^16.2.0",

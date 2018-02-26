@@ -27,9 +27,7 @@
         "styleguidist": "styleguidist",
         "styleguidist:server": "styleguidist server",
         "styleguidist:build": "styleguidist build",
-        "test": "run-s test:js test:nsp",
-        "test:js": "jest",
-        "test:nsp": "lerna run --parallel test:nsp",
+        "test": "jest",
         "test:watch": "jest --watch"
     },
     "devDependencies": {
@@ -58,7 +56,6 @@
         "marked": "^0.3.15",
         "mkdirp": "^0.5.1",
         "npm-run-all": "^4.1.2",
-        "nsp": "^3.2.1",
         "precise-commits": "^1.0.0",
         "prettier": "^1.10.2",
         "react": "^16.2.0",

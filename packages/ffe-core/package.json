@@ -14,11 +14,9 @@
   },
   "scripts": {
     "lint": "stylelint less/*.less",
-    "test": "npm run lint && npm run test:nsp",
-    "test:nsp": "nsp check"
+    "test": "npm run lint"
   },
   "devDependencies": {
-    "nsp": "^3.2.1",
     "stylelint": "^8.4.0"
   },
   "publishConfig": {
