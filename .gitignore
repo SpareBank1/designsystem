@@ -6,6 +6,7 @@ node_modules
 
 # Built files
 dist/
+lib/
 src/styleguidist.html
 
 # Editors
