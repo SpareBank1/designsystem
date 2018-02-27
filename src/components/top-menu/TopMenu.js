@@ -64,9 +64,9 @@ export default function TopMenu() {
                                     <Link
                                         noUnderline={true}
                                         className="sb1ds-top-menu__link ffe-strong-text"
-                                        href="#section-visuell-stil"
+                                        href="#section-visuell-identitet"
                                     >
-                                        Visuell stil
+                                        Visuell identitet
                                     </Link>
                                 </li>
                                 <li className="sb1ds-top-menu__item">
