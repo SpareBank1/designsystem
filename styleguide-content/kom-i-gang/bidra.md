@@ -1,1 +1,1 @@
-Vi oppfordrer alle, både rutinerte og ferske, til å opprette issues, sende inn pull requests og kommentere på andres bidrag. Ta en titt på `CONTRIBUTING.md` for hvordan du går frem.
+Vi oppfordrer alle, både rutinerte og ferske, til å opprette issues, sende inn pull requests og kommentere på andres bidrag. Ta en titt på [`CONTRIBUTING.md`](https://github.com/SpareBank1/designsystem/blob/master/CONTRIBUTING.md) for hvordan du går frem.
