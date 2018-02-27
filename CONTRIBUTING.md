@@ -46,9 +46,9 @@ på tvers av pakkene våre.
 
 #### Formattering
 
-Vi bruker [prettier](https://prettier.io) til formattere koden vår (både JS og LESS). Det skjer automatisk når du
-committer endringer. Du kan sette opp `prettier` til å [kjøre i editoren din også](https://prettier.io/docs/en/editors.html)
-om du vil.
+Vi bruker [prettier](https://prettier.io) til formattere koden vår (både JS og LESS). Det kjøres enten i editoren din
+eller manuelt på stagede endringer med `npm run prettier`. Du kan sette opp `prettier` til
+å [kjøre i editoren din slik](https://prettier.io/docs/en/editors.html).
 
 #### LESS
 
