@@ -1,11 +1,4 @@
-# Dependencies
-node_modules/
-
-# Editors
-.idea/
-
-# Built files
+# Specific ignores for ffe-icons-react
 iconlist.json
 jsx/
 tmp/
-lib/
