@@ -78,7 +78,7 @@ describe('<Input />', () => {
         it('should delegate key down events', () => {
             const spy = jest.fn();
             const input = getWrapper({ onKeyDown: spy }).find('input');
-            input.simulate('keypress');
+            input.simulate('keydown');
             expect(spy).toHaveBeenCalledTimes(1);
         });
     });
