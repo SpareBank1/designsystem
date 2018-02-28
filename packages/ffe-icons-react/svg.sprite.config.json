@@ -1,5 +1,5 @@
 {
-    "dest": "packages/ffe-icons-react/tmp/",
+    "dest": "designsystem/packages/ffe-icons-react/tmp/",
     "icons": ["*"],
     "config": {
         "mode": {
