@@ -6,6 +6,7 @@ import Calendar from '../calendar';
 import Datepicker from './Datepicker';
 import i18n from '../i18n/i18n';
 import ErrorTypes from '../datelogic/error-types';
+import KeyCode from '../util/keyCode';
 
 const defaultProps = {
     value: '',
@@ -405,6 +406,45 @@ describe('<Datepicker />', () => {
                     openCalendarAndBlurDateInput(wrapper);
                     expect(wrapper.find(Calendar)).toHaveLength(1);
                 });
+            });
+        });
+    });
+
+    describe('validate correct visibility of Calendar on DateInput key press', () => {
+        const openCalendar = wrapper => {
+            const input = wrapper.find('input');
+            input.simulate('click');
+        };
+        const keyDownInInput = (wrapper, keyCode) => {
+            const input = wrapper.find('input');
+            input.simulate('keydown', { which: keyCode });
+        };
+
+        describe('when pressing Enter', () => {
+            it('should close and open calendar if pressed twice', () => {
+                const wrapper = getMountedWrapper({
+                    value: '31.12.2016',
+                    maxDate: '01.01.2016',
+                });
+                openCalendar(wrapper);
+                expect(wrapper.find(Calendar).exists()).toBe(true);
+
+                keyDownInInput(wrapper, KeyCode.ENTER);
+                expect(wrapper.find(Calendar).exists()).toBe(false);
+
+                keyDownInInput(wrapper, KeyCode.ENTER);
+                expect(wrapper.find(Calendar).exists()).toBe(true);
+            });
+
+            it('with invalid date it has correct error-class', () => {
+                const wrapper = getMountedWrapper({
+                    value: '31.12.2016',
+                    maxDate: '01.01.2016',
+                });
+                openCalendar(wrapper);
+                expect(wrapper.find(ERROR_CLASS).exists()).toBe(false);
+                keyDownInInput(wrapper, KeyCode.ENTER);
+                expect(wrapper.find(ERROR_CLASS).exists()).toBe(true);
             });
         });
     });
