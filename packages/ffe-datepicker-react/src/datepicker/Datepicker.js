@@ -154,8 +154,13 @@ export default class Datepicker extends Component {
     }
 
     onInputKeydown(evt) {
-        if (!this.state.displayDatePicker && evt.which === KeyCode.ENTER) {
-            this.openCalendar();
+        if (evt.which === KeyCode.ENTER) {
+            if (!this.state.displayDatePicker) {
+                this.openCalendar();
+            } else {
+                this.validateDateIntervals();
+                this.closeCalendar();
+            }
         } else if (evt.shiftKey && evt.which === KeyCode.TAB) {
             this.closeCalendarSetInputFocus();
         }
