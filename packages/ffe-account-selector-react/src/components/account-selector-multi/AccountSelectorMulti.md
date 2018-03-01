@@ -1,7 +1,10 @@
 Kontovelger med støtte for å velge flere kontoer på én gang.
 
 ```js
-initialState = { value: '' };
+initialState = {
+    selectedAccounts: undefined,
+    value: undefined,
+};
 
 <AccountSelectorMulti
     accounts={[
@@ -20,11 +23,32 @@ initialState = { value: '' };
     ]}
     id="account-selector-multi-1337"
     locale="nb"
-    onAccountSelected={acc => setState({ value: acc.name })}
-    onBlur={value => setState({ value })}
-    onChange={value => setState({ value })}
-    onReset={() => setState({ value: '' })}
-    selectedAccounts={[]}
+    onAccountSelected={acc => {
+        const selectedAccounts = Array.isArray(state.selectedAccounts) 
+            ? state.selectedAccounts 
+            : [];
+
+        const filteredAccounts = selectedAccounts
+            .filter(a => a.accountNumber !== acc.accountNumber);
+        
+        const accountAlreadySelectedAndShouldBeRemoved =
+            filteredAccounts.length !== selectedAccounts.length;
+
+        if (accountAlreadySelectedAndShouldBeRemoved) {
+            setState({ 
+                selectedAccounts: filteredAccounts,
+            });
+        } else {
+            setState({
+                selectedAccounts: [
+                    ...selectedAccounts,
+                    acc,
+                ],
+            });
+        }
+    }}
+    onBlur={f => f}
+    selectedAccounts={state.selectedAccounts}
     value={state.value}
 />;
 ```
