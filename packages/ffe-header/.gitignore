@@ -1,8 +1,4 @@
-*~
-node_modules/
+# Specific ignores for ffe-header
 examples/fonts/
 examples/examples.css
 examples/ffe-header.css
-npm-debug.log*
-gemini-report/
-.DS_Store
