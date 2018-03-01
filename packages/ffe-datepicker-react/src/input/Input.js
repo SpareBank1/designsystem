@@ -37,7 +37,6 @@ export default class Input extends Component {
                     onFocus={onFocus}
                     onBlur={onBlur}
                     onChange={onChange}
-                    onKeyPress={onKeyDown}
                     onKeyDown={onKeyDown}
                     ref={c => {
                         this._input = c;

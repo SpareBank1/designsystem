@@ -1,6 +1,0 @@
-buildCI.sh
-src/build-jsx-components.js
-index.html
-svg.sprite.config.json
-webpack.config.js
-src/icons.js.mustache
