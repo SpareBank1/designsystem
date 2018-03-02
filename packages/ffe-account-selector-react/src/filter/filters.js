@@ -1,12 +1,14 @@
+const COMMON_SEPARATORS = new RegExp(/[ .]/g);
+
 export function accountFilter(query = '') {
     const nameQuery = query.toLowerCase();
-    const accountNumberQuery = query.replace(/[ .]/g, '');
+    const accountNumberQuery = query.replace(COMMON_SEPARATORS, '');
 
     return account => {
-        if (account.name.toLowerCase().indexOf(nameQuery) !== -1) {
+        if (account.name.toLowerCase().includes(nameQuery)) {
             return true;
         } else if (
-            `${account.accountNumber}`.indexOf(accountNumberQuery) !== -1
+            String(account.accountNumber).replace(COMMON_SEPARATORS, '').includes(accountNumberQuery)
         ) {
             return true;
         }

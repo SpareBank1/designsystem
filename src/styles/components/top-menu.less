@@ -11,11 +11,12 @@
         vertical-align: middle;
 
         @media screen and (min-width: @breakpoint-md) {
-            margin: 10px 15px;
+            margin: 10px 20px;
         }
 
         @media screen and (min-width: @breakpoint-lg) {
             height: 40px;
+            margin: 10px 20px 10px 10px;
         }
     }
 
@@ -24,7 +25,7 @@
         margin: 0;
         padding: 0;
 
-        @media screen and (min-width: @breakpoint-lg) {
+        @media screen and (min-width: @breakpoint-md) {
             display: flex;
             height: 100%;
         }
@@ -33,31 +34,47 @@
     &__link {
         display: inline-block;
         height: 100%;
-        padding: 0 20px;
+        padding: 5px 10px;
         color: @ffe-grey-charcoal;
         position: relative;
+        white-space: nowrap;
         transition: all @ffe-transition-duration @ffe-ease;
 
+        @media screen and (min-width: @breakpoint-md) {
+            padding: 0 10px;
+        }
+
         @media screen and (min-width: @breakpoint-lg) {
-            &::before {
+            padding: 0 20px;
+        }
+
+        &::before {
+            @media screen and (min-width: @breakpoint-md) {
                 content: '';
                 display: block;
                 height: 5px;
                 background: @ffe-blue-royal;
                 position: absolute;
                 top: 0;
-                left: 20px;
-                right: 20px;
+                left: 10px;
+                right: 10px;
                 transform: translateY(-10px);
                 transition: transform @ffe-transition-duration @ffe-ease-in-out-back;
+            }
+
+            @media screen and (min-width: @breakpoint-lg) {
+                left: 20px;
+                right: 20px;
             }
         }
 
         &::after {
-            content: '';
-            display: inline-block;
-            height: 100%;
-            vertical-align: middle;
+            @media screen and (min-width: @breakpoint-md) {
+                content: '';
+                display: inline-block;
+                height: 100%;
+                vertical-align: middle;
+            }
         }
 
         &:hover {
@@ -84,8 +101,12 @@
     }
 
     &__wrapper {
-        @media screen and (min-width: @breakpoint-lg) {
+        padding: 20px 0;
+
+        @media screen and (min-width: @breakpoint-md) {
+            padding: 0;
             display: flex;
+            align-items: flex-end;
         }
     }
 

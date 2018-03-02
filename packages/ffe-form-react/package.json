@@ -40,8 +40,8 @@
     "sinon": "^4.2.1"
   },
   "peerDependencies": {
-    "@sb1/ffe-core": "^11.0.3",
-    "@sb1/ffe-form": "^8.1.12",
+    "@sb1/ffe-core": "^12.0.0",
+    "@sb1/ffe-form": "^9.0.0",
     "classnames": "2.x",
     "react": "15.x || 16.x"
   },

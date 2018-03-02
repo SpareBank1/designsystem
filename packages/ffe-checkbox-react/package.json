@@ -34,7 +34,7 @@
     "react-dom": "^16.2.0"
   },
   "peerDependencies": {
-    "@sb1/ffe-form": "^8.1.5"
+    "@sb1/ffe-form": "^9.0.0"
   },
   "publishConfig": {
     "access": "public"
