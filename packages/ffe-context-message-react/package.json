@@ -32,7 +32,7 @@
     "jest": "^22.4.0"
   },
   "peerDependencies": {
-    "@sb1/ffe-context-message": "^2.0.11"
+    "@sb1/ffe-context-message": "^3.0.0"
   },
   "publishConfig": {
     "access": "public"

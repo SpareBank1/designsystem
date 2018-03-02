@@ -16,7 +16,16 @@ export default function StyleGuide(props) {
                         <Sidebar toc={toc} title={title} />
                     </GridCol>
                     <GridCol lg={9} md={8} sm={12} noBottomPadding={true}>
-                        <main className="sb1ds-main">{children}</main>
+                        <main className="sb1ds-main">
+                            <h1 className="ffe-h1 sb1ds-intro__heading">Komponenter</h1>
+                            <div class="sb1ds-intro sb1ds-intro--section">
+                                <p className="ffe-lead-paragraph sb1ds-intro__paragraph">
+                                    Vårt bibliotek av felles komponenter, implementert i Less og React.
+                                </p>
+                            </div>
+
+                            {children}
+                        </main>
                     </GridCol>
                 </GridRow>
             </Grid>
