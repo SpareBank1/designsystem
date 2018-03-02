@@ -27,12 +27,12 @@ module.exports = {
                     content: 'kom-i-gang/for-utviklere.md',
                 },
                 {
-                    name: 'Om FFE',
-                    content: 'kom-i-gang/om-ffe.md',
-                },
-                {
                     name: 'Bidra',
                     content: 'kom-i-gang/bidra.md',
+                },
+                {
+                    name: 'Hjelp',
+                    content: 'kom-i-gang/hjelp.md',
                 },
             ],
         },
@@ -41,8 +41,20 @@ module.exports = {
             content: 'merkevare/index.md',
             sections: [
                 {
-                    name: 'Profil',
-                    content: 'merkevare/profil.md',
+                    name: 'Verdier',
+                    content: 'merkevare/verdier.md',
+                },
+                {
+                    name: 'Vår kampsak',
+                    content: 'merkevare/kampsak.md',
+                },
+                {
+                    name: 'Unikt for oss',
+                    content: 'merkevare/unikt-for-oss.md',
+                },
+                {
+                    name: 'Vår relasjon til kundene',
+                    content: 'merkevare/var-relasjon-til-kundene.md',
                 },
                 {
                     name: 'Stil og tone',
@@ -51,40 +63,40 @@ module.exports = {
             ],
         },
         {
-            name: 'Visuell stil',
-            content: 'visuell-stil/index.md',
+            name: 'Visuell identitet',
+            content: 'visuell-identitet/index.md',
             sections: [
                 {
                     name: 'Farger',
-                    content: 'visuell-stil/farger.md',
+                    content: 'visuell-identitet/farger.md',
                 },
                 {
                     name: 'Ikoner',
-                    content: 'visuell-stil/ikoner.md',
+                    content: 'visuell-identitet/ikoner.md',
                 },
                 {
                     name: 'Typografi',
-                    content: 'visuell-stil/typografi.md',
+                    content: 'visuell-identitet/typografi.md',
                 },
                 {
                     name: 'Illustrasjoner',
-                    content: 'visuell-stil/illustrasjoner.md',
+                    content: 'visuell-identitet/illustrasjoner.md',
                 },
-                {
-                    name: 'Animasjoner',
-                    content: 'visuell-stil/animasjoner.md',
-                },
-                {
-                    name: 'Layout',
-                    content: 'visuell-stil/layout/index.md',
+                // {
+                //     name: 'Animasjoner',
+                //     content: 'visuell-identitet/animasjoner.md',
+                // },
+                // {
+                //     name: 'Layout',
+                //     content: 'visuell-identitet/layout/index.md',
 
-                    sections: [
-                        {
-                            name: 'Grid',
-                            content: 'visuell-stil/layout/grid/index.md',
-                        },
-                    ],
-                },
+                //     sections: [
+                //         {
+                //             name: 'Grid',
+                //             content: 'visuell-identitet/layout/grid/index.md',
+                //         },
+                //     ],
+                // },
             ],
         },
         {
@@ -92,12 +104,12 @@ module.exports = {
             content: 'universell-utforming/index.md',
             sections: [
                 {
-                    name: 'WAI-Aria',
-                    content: 'universell-utforming/wai-aria.md',
+                    name: 'WCAG 2.0',
+                    content: 'universell-utforming/wcag.md',
                 },
                 {
-                    name: 'Kontrast',
-                    content: 'universell-utforming/kontrast.md',
+                    name: 'Verktøy',
+                    content: 'universell-utforming/verktoy.md',
                 },
             ],
         },
