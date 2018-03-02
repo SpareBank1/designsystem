@@ -10,7 +10,7 @@ Illustrasjonene skal være relevante, informative og de handler alltid om folk.
 
 Fargebruken i illustrasjonene er i all hovedsak basert på den blå paletten. Tilleggsfarger benyttes for å gi oppmerksomhet til viktige elementer og for å skape mer varme og energi. Illustrasjonene skal speile innholdet.
 
-Illustrasjoner fungerer bra for å kommunisere situasjoner hvor bilder fort kan bli fremmedgjørende eller fryktinngytende, som f.eks i forsikrings situasjoner.
+Illustrasjoner fungerer bra for å kommunisere situasjoner hvor bilder fort kan bli fremmedgjørende eller fryktinngytende, som f.eks i forsikringssituasjoner.
 
 * Eksisterende fargepalett benyttes.
 * Solide farger benyttes på viktige detaljer som skal fremheves.
