@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="9.0.1"></a>
+## [9.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.0.0...@sb1/ffe-form@9.0.1) (2018-03-02)
+
+
+### Bug Fixes
+
+* Correct peerDependencies after breaking change ([4318363](https://github.com/SpareBank1/designsystem/commit/4318363))
+* **ffe-form:** Add vertical padding to textarea ([4fe4ba8](https://github.com/SpareBank1/designsystem/commit/4fe4ba8)), closes [#38](https://github.com/SpareBank1/designsystem/issues/38)
+
+
+
+
       <a name="9.0.0"></a>
 # 9.0.0 (2018-02-25)
 
@@ -95,7 +107,7 @@ JavaScript `require`:
 
 
 
-      <a name="8.1.12"></a>
+    <a name="8.1.12"></a>
 ## [8.1.12](https://github.com/SpareBank1/designsystem/compare/ffe-form@8.1.11...ffe-form@8.1.12) (2018-02-23)
 
 
@@ -103,7 +115,7 @@ JavaScript `require`:
 
 **Note:** Version bump only for package ffe-form
 
-    <a name="8.1.11"></a>
+  <a name="8.1.11"></a>
 ## [8.1.11](https://github.com/SpareBank1/designsystem/compare/ffe-form@8.1.10...ffe-form@8.1.11) (2018-02-22)
 
 
@@ -111,7 +123,7 @@ JavaScript `require`:
 
 **Note:** Version bump only for package ffe-form
 
-  <a name="8.1.10"></a>
+<a name="8.1.10"></a>
 ## [8.1.10](https://github.com/SpareBank1/designsystem/compare/ffe-form@8.1.9...ffe-form@8.1.10) (2018-02-20)
 
 

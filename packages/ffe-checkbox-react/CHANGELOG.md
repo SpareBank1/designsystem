@@ -3,7 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-      <a name="5.0.0"></a>
+    <a name="5.0.1"></a>
+## [5.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-checkbox-react@5.0.0...@sb1/ffe-checkbox-react@5.0.1) (2018-03-02)
+
+
+### Bug Fixes
+
+* Correct peerDependencies after breaking change ([4318363](https://github.com/SpareBank1/designsystem/commit/4318363))
+
+
+
+
+    <a name="5.0.0"></a>
 # 5.0.0 (2018-02-25)
 
 
@@ -96,7 +107,7 @@ JavaScript `require`:
 
 
 
-      <a name="4.4.17"></a>
+  <a name="4.4.17"></a>
 ## [4.4.17](https://github.com/SpareBank1/designsystem/compare/ffe-checkbox-react@4.4.16...ffe-checkbox-react@4.4.17) (2018-02-23)
 
 
@@ -104,7 +115,7 @@ JavaScript `require`:
 
 **Note:** Version bump only for package ffe-checkbox-react
 
-    <a name="4.4.16"></a>
+<a name="4.4.16"></a>
 ## [4.4.16](https://github.com/SpareBank1/designsystem/compare/ffe-checkbox-react@4.4.15...ffe-checkbox-react@4.4.16) (2018-02-22)
 
 
