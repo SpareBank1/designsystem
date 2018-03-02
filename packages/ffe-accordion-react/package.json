@@ -35,8 +35,7 @@
     "jest": "^22.4.0"
   },
   "peerDependencies": {
-    "@sb1/ffe-accordion": "^3.0.10",
-    "@sb1/ffe-core": "^11.0.2",
+    "@sb1/ffe-accordion": "^4.0.0",
     "react": "^15.0.0 || ^16.0.0"
   },
   "publishConfig": {
