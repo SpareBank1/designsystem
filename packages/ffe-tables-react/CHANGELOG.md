@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="5.0.1"></a>
+## [5.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@5.0.0...@sb1/ffe-tables-react@5.0.1) (2018-03-02)
+
+
+### Bug Fixes
+
+* Correct peerDependencies after breaking change ([4318363](https://github.com/SpareBank1/designsystem/commit/4318363))
+
+
+
+
       <a name="5.0.0"></a>
 # 5.0.0 (2018-02-25)
 
@@ -104,7 +115,7 @@ JavaScript `require`:
 
 
 
-      <a name="4.11.1"></a>
+    <a name="4.11.1"></a>
 ## [4.11.1](https://github.com/SpareBank1/designsystem/compare/ffe-tables-react@4.11.0...ffe-tables-react@4.11.1) (2018-02-23)
 
 
@@ -112,7 +123,7 @@ JavaScript `require`:
 
 **Note:** Version bump only for package ffe-tables-react
 
-    <a name="4.11.0"></a>
+  <a name="4.11.0"></a>
 # [4.11.0](https://github.com/SpareBank1/designsystem/compare/ffe-tables-react@4.10.7...ffe-tables-react@4.11.0) (2018-02-22)
 
 
@@ -123,7 +134,7 @@ JavaScript `require`:
 
 
 
-  <a name="4.10.7"></a>
+<a name="4.10.7"></a>
 ## [4.10.7](https://github.com/SpareBank1/designsystem/compare/ffe-tables-react@4.10.6...ffe-tables-react@4.10.7) (2018-02-22)
 
 

@@ -3,7 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-      <a name="3.0.0"></a>
+   <a name="3.0.1"></a>
+## [3.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@3.0.0...@sb1/ffe-lists-react@3.0.1) (2018-03-02)
+
+
+### Bug Fixes
+
+* Correct peerDependencies after breaking change ([4318363](https://github.com/SpareBank1/designsystem/commit/4318363))
+
+
+
+
+   <a name="3.0.0"></a>
 # 3.0.0 (2018-02-25)
 
 
@@ -95,7 +106,7 @@ JavaScript `require`:
 
 
 
-      <a name="2.1.6"></a>
+ <a name="2.1.6"></a>
 ## [2.1.6](https://github.com/SpareBank1/designsystem/compare/ffe-lists-react@2.1.5...ffe-lists-react@2.1.6) (2018-02-23)
 
 
@@ -103,7 +114,7 @@ JavaScript `require`:
 
 **Note:** Version bump only for package ffe-lists-react
 
-     <a name="2.1.5"></a>
+<a name="2.1.5"></a>
 ## [2.1.5](https://github.com/SpareBank1/designsystem/compare/ffe-lists-react@2.1.4...ffe-lists-react@2.1.5) (2018-02-22)
 
 
