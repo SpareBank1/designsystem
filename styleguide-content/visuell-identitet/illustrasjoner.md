@@ -2,7 +2,7 @@ Illustrasjoner bruker vi når bildene eller ikonene våre ikke kan gi oss den ko
 
 #### Mål med illustrasjonsbruk
 
-Visualisere, forenkle og støtte opp om kommunikasjonen slik at brukeren enkelt forstår innholdet. Illustrasjonene skal også tilføre varme og være bærere av SpareBank 1s verdier: Åpen, relevant, vennlig, tydelig og jordnær.
+Visualisere, forenkle og støtte opp om kommunikasjonen slik at brukeren enkelt forstår innholdet. Illustrasjonene skal også tilføre varme og være bærere av SpareBank 1 sine verdier: Åpen, relevant, vennlig, tydelig og jordnær.
 
 #### Prinsipper
 
