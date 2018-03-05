@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-accordion-react",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "license": "MIT",
   "author": "SpareBank 1",
   "files": [
@@ -22,7 +22,7 @@
     "setupTestFrameworkScriptFile": "../../test-setup.js"
   },
   "dependencies": {
-    "@sb1/ffe-icons-react": "^5.0.0",
+    "@sb1/ffe-icons-react": "^5.0.1",
     "classnames": "^2.2.5",
     "prop-types": "^15.6.0",
     "react-collapse": "^4.0.3",
@@ -35,8 +35,7 @@
     "jest": "^22.4.0"
   },
   "peerDependencies": {
-    "@sb1/ffe-accordion": "^3.0.10",
-    "@sb1/ffe-core": "^11.0.2",
+    "@sb1/ffe-accordion": "^4.0.0",
     "react": "^15.0.0 || ^16.0.0"
   },
   "publishConfig": {

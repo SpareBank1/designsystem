@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-datepicker-react",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "license": "MIT",
   "files": [
     "lib",
@@ -21,8 +21,8 @@
     "setupTestFrameworkScriptFile": "../../test-setup.js"
   },
   "dependencies": {
-    "@sb1/ffe-datepicker": "^5.0.0",
-    "@sb1/ffe-icons-react": "^5.0.0",
+    "@sb1/ffe-datepicker": "^5.0.1",
+    "@sb1/ffe-icons-react": "^5.0.1",
     "classnames": "^2.2.5",
     "prop-types": "^15.6.0",
     "uuid": "^3.1.0"
@@ -36,8 +36,8 @@
     "react-dom": "^16.2.0"
   },
   "peerDependencies": {
-    "@sb1/ffe-datepicker": "^4.2.14",
-    "@sb1/ffe-form": "^8.1.12",
+    "@sb1/ffe-datepicker": "^5.0.0",
+    "@sb1/ffe-form": "^9.0.0",
     "react": "15.x || 16.x"
   },
   "publishConfig": {

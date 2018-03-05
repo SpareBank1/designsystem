@@ -3,7 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-      <a name="5.0.0"></a>
+    <a name="5.0.1"></a>
+## [5.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@5.0.0...@sb1/ffe-lists@5.0.1) (2018-03-02)
+
+
+### Bug Fixes
+
+* Correct peerDependencies after breaking change ([4318363](https://github.com/SpareBank1/designsystem/commit/4318363))
+
+
+
+
+    <a name="5.0.0"></a>
 # 5.0.0 (2018-02-25)
 
 
@@ -95,7 +106,7 @@ JavaScript `require`:
 
 
 
-      <a name="4.1.8"></a>
+  <a name="4.1.8"></a>
 ## [4.1.8](https://github.com/SpareBank1/designsystem/compare/ffe-lists@4.1.7...ffe-lists@4.1.8) (2018-02-23)
 
 
@@ -103,7 +114,7 @@ JavaScript `require`:
 
 **Note:** Version bump only for package ffe-lists
 
-    <a name="4.1.7"></a>
+<a name="4.1.7"></a>
 ## [4.1.7](https://github.com/SpareBank1/designsystem/compare/ffe-lists@4.1.6...ffe-lists@4.1.7) (2018-02-22)
 
 
