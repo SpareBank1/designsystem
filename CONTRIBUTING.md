@@ -1,20 +1,76 @@
 # Contributing
 
-**Velkommen til contributor-guiden til FFE!**
+Forbedring av dokumentasjon, bugfixes, åpning av issues med spørsmål, bugrapporter, eller feature-ønsker - alle kan
+bidra, og ingen bidrag er for små! :tada:
 
-Alle som ønsker kan bidra til FFE. Her vil du finne alt du skulle trenge av informasjon for å kunne bidra med å gjøre
-frontend-biblioteket vårt enda bedre. Sitter du igjen med ubesvarte spørsmål etter å ha lest dette dokumentet, er
-terskelen lav for å åpne et issue her på Github med `question`-labelen. Om du heller vil kan du også spørre på den
-interne HipChat-kanalen "Designsystem".
+I dette dokumentet vil du finne alt du skulle trenge av informasjon for å hjelpe til med å gjøre frontend-biblioteket
+vårt enda bedre. Sitter du igjen med ubesvarte spørsmål etter å ha lest dette dokumentet, er terskelen lav for å åpne et
+issue her på Github med `question`-labelen. Om du heller vil kan du også spørre på den interne HipChat-kanalen
+"Designsystem".
 
-Ingen bidrag er for små! Forbedring av dokumentasjon, bugfixes, mangler du ikke har tid eller kunnskap til å fikse på
-egenhånd — alt er nyttig!
+* [Hvordan bidrar jeg?](#hvordan-bidrar-jeg)
+  * [Som designer](#som-designer)
+  * [Som utvikler](#som-utvikler)
+    * [Github-konto og arbeidsflyt](#github-konto-og-arbeidsflyt)
+    * [Utviklingsmiljø](#utviklingsmiljø)
+    * [Kodestandard](#kodestandard)
+    * [Formatering](#formatering)
+    * [LESS](#less)
+    * [React](#react)
+    * [Testdekning](#testdekning)
+    * [Dokumentasjon](#dokumentasjon)
+    * [Commit-meldinger](#commit-meldinger)
+    * [Pull requests](#pull-requests)
+* [Lage en ny FFE-komponent](#lage-en-ny-ffe-komponent)
+* [Publisering](#publisering)
+* [Har du fortsatt sporsmål?](#har-du-fortsatt-spørsmål)
 
 ## Hvordan bidrar jeg?
 
 Her er litt relevant informasjon om hvordan vi utvikler FFE, og hvordan du kan bidra med endringer.
 
-### Utvikling
+### Som designer
+
+_Help us help you_ :bowing_man: Hva lurer du som designer på om designsystemet? Kommenter på [issue #39](https://github.com/SpareBank1/designsystem/issues/39)
+eller [kom med et endringsforslag direkte i denne teksten](https://help.github.com/articles/editing-files-in-your-repository/).
+
+### Som utvikler
+
+For å fikse en bug eller legge til en feature trenger du i prinsippet to ting:
+
+1. En Github-konto
+2. Et utviklingsmiljø
+
+Vi går igjennom i mer detalj i seksjonene under.
+
+#### Github-konto og arbeidsflyt
+
+For å komme med pull requests må man ha en Github-konto. Hvis du ikke har en allerede kan du lage en
+[her](https://github.com/join). Du kan bruke din private e-post som hovedepost om du vil, men legg i hvertfall til
+SpareBank 1 e-posten din til kontoen og [bruk den til commits for dette repoet](https://help.github.com/articles/setting-your-commit-email-address-in-git/).
+
+Om du ikke er en del av SpareBank 1 organisasjonen på Github og du er ansatt eller konsulent kan du kontakte @antidecaf
+eller @kwltrs for å bli lagt til. Da får du tilgang til å pushe brancher direkte til repositoriet.
+
+Alternativt kan du bruke forks (som er en mer vanlig workflow her på Github). Trykk på Fork-knappen oppe til høyre og
+jobb mot din egen fork for så å lage en pull request derfra når du er klar. Hvis du vil lese mer om denne workflowen og
+prøve deg fram i et annet repo har @wkillerud [et repo her](https://github.com/wkillerud/pr) hvor du kan lese mer og
+prøve alle stegene fra fork til merget PR.
+
+Workflowen for en bug eller feature blir kort oppsummert denne:
+
+1. Assign issuet til deg for å vise at du jobber med den :raising_hand_woman:
+2. Om du ikke har gjort det alt, klon repoet (eller fork det og klon forken) til maskinen din og lag en branch :rocket:
+3. Gjør endringen din og test den :construction_worker_man:
+4. Skriv en detaljert commit-melding (mer om det [her](#commit-meldinger)) :writing_hand:
+5. Push endringene til repoet eller din fork :weight_lifting_woman:
+6. Github skal se at du nylig har pushet en endring og vil tilby deg å lage en Pull Request. Hvis ikke kan du finne fram
+til branchen din og lage en pull request på den måten. Se [Github sine hjelpesider](https://help.github.com/articles/creating-a-pull-request/)
+om du ikke finner fram :female_detective:
+7. Vent på en review. Du kan legge til tidligere bidragsytere som reviewers. :hourglass_flowing_sand:
+8. Når pull requesten er godkjent kan den merges, og endringen blir med i neste release av pakken :tada:
+
+#### Utviklingsmiljø
 
 Utviklingsmiljøet krever at du har en nyere versjon av [Node og NPM](https://nodejs.org/en/) installert. Vi anbefaler
 å bruke LTS-versjonen (long term support), siden det er denne som kjøres på byggserverne våre.
@@ -38,15 +94,15 @@ npm run build # Bygg alle prosjekter
 
 For andre lavnivå-kommandoer, kjør `npm run` for å få full oversikt.
 
-### Kodestandard
+#### Kodestandard
 
 Vi prøver å holde koden på samme nivå på tvers av dette monorepoet. Dette hjelper oss å utvikle nye features raskere,
 samt å bruke mindre tid på code reviews. Denne seksjonen forklarer litt om de forskjellige tekniske valgene vi bruker
 på tvers av pakkene våre.
 
-#### Formattering
+#### Formatering
 
-Vi bruker [prettier](https://prettier.io) til formattere koden vår (både JS og LESS). Det kjøres enten i editoren din
+Vi bruker [prettier](https://prettier.io) til formatere koden vår (både JS og LESS). Det kjøres enten i editoren din
 eller manuelt på stagede endringer med `npm run prettier`. Du kan sette opp `prettier` til
 å [kjøre i editoren din slik](https://prettier.io/docs/en/editors.html).
 
@@ -115,16 +171,16 @@ const Button = ({ className, ...rest }) => (
 Dette er ikke en uttømmende liste. Om det kommer opp andre standarder som brukes på tvers i code reviews, ber vi om at
 man sender inn et pull request til dette dokumentet som dokumenterer den for fremtidige lesere.
 
-### Testdekning
+#### Testdekning
 
 Vi prøver å ha høyest mulig testdekning på koden i dette repoet. Siden vi har både LESS- og React- / JavaScript-kode i
 FFE, er det to forskjellige måter å teste på
 
-#### LESS: Visuell regresjonstesting
+##### LESS: Visuell regresjonstesting
 
 ffe-monorepo har enda ikke støtte for visuell regresjonstesting. Dette vil komme snarest.
 
-#### React og JavaScript
+##### React og JavaScript
 
 Vi prøver å teste React-komponenter og JavaScript-utilities så godt som overhodet mulig. Har du oppdaget en bug,
 vennligst opprett en eller flere tester som bekrefter at feilen blir løst med din endring. Ser du andre test-muligheter
@@ -133,14 +189,14 @@ som ikke er dekket, setter vi selvfølgelig pris på om du bidrar med disse ogs�
 Tester burde i hovedsak dekke overflate-APIet til en komponent. Her burde full testdekning være ambisjonen. For interne
 mekanismer og hjelpefunksjoner så er ikke kravet like strengt.
 
-### Dokumentasjon
+#### Dokumentasjon
 
 Vi bruker [Styleguidist](https://react-styleguidist.js.org/) til å dokumentere komponentene våre, både med [JSDoc](http://usejsdoc.org/)
 og eksempel-filer. Alle React-komponenter har sin egen `<KomponentNavn>.md` fil, hvor vi beskriver de mest vanlige
 bruksscenarioene. Er du usikker på hvordan disse burde se ut, anbefaler vi deg å se på noen av de som eksisterer
 allerede - f.eks. [ffe-core-react](./packages/ffe-core-react/src/typography) eller [ffe-buttons-react](./packages/ffe-buttons-react/src).
 
-### Commit-meldinger
+#### Commit-meldinger
 
 For litt inspirasjon rundt det å skrive gode commit-meldinger og holde loggen ryddig er talken [Deliberate Git av Stephen Ball](https://vimeo.com/72762735)
 veldig god. Om du liker bedre å lese er talken publisert i [bloggformat her](http://www.rakeroutes.com/blog/deliberate-git/).
@@ -224,7 +280,7 @@ For å dobbeltsjekke at du gjorde alt rett, har dette repoet en pre-commithook s
 [commitlint](https://github.com/marionebl/commitlint). Hvis ikke alt stemmer overens med det forventede formatet, vil
 committen feile, og du vil bli bedt om å rette opp meldingen. Det gjør du med `git commit --amend`.
 
-### Pull requests
+#### Pull requests
 
 Når du har gjort deg ferdig med koden din, er det på tide å be andre se på koden din. Push koden din til Github
 og opprett en pull request. Det vil bli lagt til et par reviewers automatisk, men ta gjerne en titt på
