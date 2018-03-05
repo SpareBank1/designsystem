@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.1"></a>
+## [4.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-dropdown-react@4.0.0...@sb1/ffe-dropdown-react@4.0.1) (2018-03-02)
+
+
+### Bug Fixes
+
+* Correct peerDependencies after breaking change ([4318363](https://github.com/SpareBank1/designsystem/commit/4318363))
+
+
+
+
 <a name="4.0.0"></a>
 # 4.0.0 (2018-02-25)
 

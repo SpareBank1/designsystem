@@ -179,6 +179,7 @@ class AccountSelectorMulti extends React.Component {
 
 AccountSelectorMulti.defaultProps = {
     onSelectAll: () => {},
+    selectedAccounts: [],
     showSelectAllOption: false,
     isLoading: false,
 };

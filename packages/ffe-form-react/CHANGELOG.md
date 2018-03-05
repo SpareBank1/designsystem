@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="3.0.1"></a>
+## [3.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@3.0.0...@sb1/ffe-form-react@3.0.1) (2018-03-02)
+
+
+### Bug Fixes
+
+* Correct peerDependencies after breaking change ([4318363](https://github.com/SpareBank1/designsystem/commit/4318363))
+
+
+
+
       <a name="3.0.0"></a>
 # 3.0.0 (2018-02-25)
 
@@ -95,7 +106,7 @@ JavaScript `require`:
 
 
 
-      <a name="2.2.9"></a>
+    <a name="2.2.9"></a>
 ## [2.2.9](https://github.com/SpareBank1/designsystem/compare/ffe-form-react@2.2.8...ffe-form-react@2.2.9) (2018-02-23)
 
 
@@ -103,7 +114,7 @@ JavaScript `require`:
 
 **Note:** Version bump only for package ffe-form-react
 
-  <a name="2.2.8"></a>
+<a name="2.2.8"></a>
 ## [2.2.8](https://github.com/SpareBank1/designsystem/compare/ffe-form-react@2.2.7...ffe-form-react@2.2.8) (2018-02-22)
 
 

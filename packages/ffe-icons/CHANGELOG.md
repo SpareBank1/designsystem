@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="10.0.1"></a>
+## [10.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@10.0.0...@sb1/ffe-icons@10.0.1) (2018-03-02)
+
+
+### Bug Fixes
+
+* **ffe-icons:** Fixed cwd in build script to compensate for package-scoping ([b50afe4](https://github.com/SpareBank1/designsystem/commit/b50afe4))
+
+
+
+
       <a name="10.0.0"></a>
 # 10.0.0 (2018-02-25)
 
@@ -121,7 +132,7 @@ release
 
 
 
-      <a name="9.0.5"></a>
+    <a name="9.0.5"></a>
 ## [9.0.5](https://github.com/SpareBank1/designsystem/compare/ffe-icons@9.0.4...ffe-icons@9.0.5) (2018-02-23)
 
 
@@ -129,7 +140,7 @@ release
 
 **Note:** Version bump only for package ffe-icons
 
-    <a name="9.0.4"></a>
+  <a name="9.0.4"></a>
 ## [9.0.4](https://github.com/SpareBank1/designsystem/compare/ffe-icons@9.0.3...ffe-icons@9.0.4) (2018-02-22)
 
 
@@ -137,7 +148,7 @@ release
 
 **Note:** Version bump only for package ffe-icons
 
-  <a name="9.0.3"></a>
+<a name="9.0.3"></a>
 ## [9.0.3](https://github.com/SpareBank1/designsystem/compare/ffe-icons@9.0.2...ffe-icons@9.0.3) (2018-01-19)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="6.0.1"></a>
+## [6.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@6.0.0...@sb1/ffe-buttons@6.0.1) (2018-03-02)
+
+
+### Bug Fixes
+
+* Correct peerDependencies after breaking change ([4318363](https://github.com/SpareBank1/designsystem/commit/4318363))
+
+
+
+
       <a name="6.0.0"></a>
 # 6.0.0 (2018-02-25)
 
@@ -101,7 +112,7 @@ JavaScript `require`:
 
 
 
-      <a name="5.2.3"></a>
+    <a name="5.2.3"></a>
 ## [5.2.3](https://github.com/SpareBank1/designsystem/compare/ffe-buttons@5.2.2...ffe-buttons@5.2.3) (2018-02-23)
 
 
@@ -109,7 +120,7 @@ JavaScript `require`:
 
 **Note:** Version bump only for package ffe-buttons
 
-    <a name="5.2.2"></a>
+  <a name="5.2.2"></a>
 ## [5.2.2](https://github.com/SpareBank1/designsystem/compare/ffe-buttons@5.2.1...ffe-buttons@5.2.2) (2018-02-22)
 
 
@@ -117,7 +128,7 @@ JavaScript `require`:
 
 **Note:** Version bump only for package ffe-buttons
 
-  <a name="5.2.1"></a>
+<a name="5.2.1"></a>
 ## [5.2.1](https://github.com/SpareBank1/designsystem/compare/ffe-buttons@5.2.0...ffe-buttons@5.2.1) (2018-02-20)
 
 

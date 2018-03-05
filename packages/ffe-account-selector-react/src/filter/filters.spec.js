@@ -9,7 +9,7 @@ describe('accountFilter', () => {
         },
         {
             name: 'Matvererkonto',
-            accountNumber: '12867318345',
+            accountNumber: '1286 73 18345',
             balance: 24566546.21,
         },
         {
@@ -19,17 +19,17 @@ describe('accountFilter', () => {
         },
         {
             name: 'Et virkelig langt kontonavn',
-            accountNumber: '118763547961',
+            accountNumber: '1187 63 547961',
             balance: 13466546.15,
         },
         {
             name: 'Lønnskonto',
-            accountNumber: '97136098334',
+            accountNumber: '9713 60 98334',
             balance: 4566546,
         },
         {
             name: 'Utland lønnskonto',
-            accountNumber: '97136098334',
+            accountNumber: '9713 60 98334',
             balance: 4566546,
         },
     ];
@@ -48,7 +48,7 @@ describe('accountFilter', () => {
         ]);
     });
 
-    it('should filter by account number', () => {
+    it('should filter by account number without separators', () => {
         expect(accounts.filter(accountFilter('12867318345'))).toEqual([
             accounts[1],
         ]);

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="12.0.1"></a>
+## [12.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@12.0.0...@sb1/ffe-core@12.0.1) (2018-03-02)
+
+
+
+
+**Note:** Version bump only for package @sb1/ffe-core
+
       <a name="12.0.0"></a>
 # 12.0.0 (2018-02-25)
 
@@ -115,7 +123,7 @@ package's README and change `@build-path` to `@fonts-path`.
 
 
 
-      <a name="11.0.3"></a>
+    <a name="11.0.3"></a>
 ## [11.0.3](https://github.com/SpareBank1/designsystem/compare/ffe-core@11.0.2...ffe-core@11.0.3) (2018-02-23)
 
 
@@ -123,7 +131,7 @@ package's README and change `@build-path` to `@fonts-path`.
 
 **Note:** Version bump only for package ffe-core
 
-    <a name="11.0.2"></a>
+  <a name="11.0.2"></a>
 ## [11.0.2](https://github.com/SpareBank1/designsystem/compare/ffe-core@11.0.1...ffe-core@11.0.2) (2018-02-22)
 
 
@@ -131,7 +139,7 @@ package's README and change `@build-path` to `@fonts-path`.
 
 **Note:** Version bump only for package ffe-core
 
-  <a name="11.0.1"></a>
+<a name="11.0.1"></a>
 ## [11.0.1](https://github.com/SpareBank1/designsystem/compare/ffe-core@11.0.0...ffe-core@11.0.1) (2018-02-20)
 
 

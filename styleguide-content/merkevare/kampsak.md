@@ -1,0 +1,3 @@
+* Vi kjemper for en enklere og bedre hverdagsøkonomi for folk flest og bedrifter.
+* Det er flest hverdager i livene våre. Kundene skal kunne kjøpe det de forventer at en bank har av produkter og tjenester.
+* Vi skal også være gode når noen tar opp det store boliglånet eller den dagen du blir pensjonist, men vi skal være aller best på ting som hjelper kunden til å ha kontroll på sin økonomi i hverdagen.
