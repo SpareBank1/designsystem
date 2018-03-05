@@ -1,6 +1,6 @@
 Blå er vår hovedfarge. For å være en tydelig utfordrer i markedet må vi være lette å kjenne igjen.
 
-Vi har 2 hovedfarger: **Blue Royal** og **Blue Cobalt**. En blå signatur skal være gjennomgående i vår visuelle profil og er en sterk bærer av SpareBank 1s visuelle identitet.  I digitale flater skal disse blå fargene balanseres med et lysere uttrykk for at løsningene skal være intuitive for brukeren.
+Vi har 2 hovedfarger: **Blue Royal** og **Blue Cobalt**. En blå signatur skal være gjennomgående i vår visuelle profil og er en sterk bærer av SpareBank 1 sin visuelle identitet.  I digitale flater skal disse blå fargene balanseres med et lysere uttrykk for at løsningene skal være intuitive for brukeren.
 
 * Gi en tydelig SpareBank 1 signatur, være bærer av merkevarens verdier
 * Skape oppmerksomhet og fokus
