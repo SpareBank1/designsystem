@@ -1,0 +1,10 @@
+{
+    "source": [
+        "packages/ffe-core/less",
+        "packages/ffe-buttons/less"
+    ],
+    "destination": "dist/markup",
+    "css": [
+        "../ffe.css"
+    ]
+}
