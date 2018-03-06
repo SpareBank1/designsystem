@@ -52,7 +52,10 @@
 						class="sb1ds-top-menu__list"
 					>
 						{{#each sections}}
-							<li class="sb1ds-top-menu__item">
+							<li class="
+								sb1ds-top-menu__item
+								{{#if (eq ../currentTarget this.target)}}sb1ds-top-menu__item--active{{/if}}
+							">
 								<a class="
 									ffe-link-text
 									ffe-link-text--no-underline
@@ -62,7 +65,10 @@
 								 href="/{{this.target}}.html">{{this.name}}</a>
 							</li>
 						{{/each}}
-						<li class="sb1ds-top-menu__item">
+							<li class="
+								sb1ds-top-menu__item
+								{{#if (eq currentTarget "styleguidist")}}sb1ds-top-menu__item--active{{/if}}
+							">
 							<a
 								class="
 									ffe-link-text
