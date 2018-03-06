@@ -8,3 +8,5 @@ Handlebars.registerHelper('preformat', obj => {
         `<pre>${Handlebars.escapeExpression(str)}</pre>`
     );
 });
+
+Handlebars.registerHelper('eq', (a, b) => a == b); // eslint-disable-line eqeqeq
