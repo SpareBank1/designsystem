@@ -1,7 +1,5 @@
-import RadioButton from './radio-button';
-import RadioButtonGroup from './radio-button-group';
-import RadioSwitch from './radio-switch';
+import RadioButton from './RadioButton';
+import RadioButtonInputGroup from './RadioButtonInputGroup';
+import RadioSwitch from './RadioSwitch';
 
-export { RadioButton, RadioButtonGroup, RadioSwitch };
-
-export default RadioButton;
+export { RadioButton, RadioButtonInputGroup, RadioSwitch };
