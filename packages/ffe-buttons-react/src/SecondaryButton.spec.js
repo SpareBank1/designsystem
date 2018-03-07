@@ -1,17 +1,19 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import { SecondaryButton } from './index';
+import SecondaryButton from './SecondaryButton';
 
-describe('SecondaryButton', () => {
-    it('renders a secondary button', () => {
-        const button = shallow(<SecondaryButton />);
+const defaultProps = { children: 'Click me' };
+const getWrapper = props =>
+    shallow(<SecondaryButton {...defaultProps} {...props} />);
 
-        expect(button.props()).toHaveProperty('buttonType', 'secondary');
+describe('<SecondaryButton />', () => {
+    it('renders without exploding', () => {
+        const wrapper = getWrapper();
+        expect(wrapper.props()).toHaveProperty('buttonType', 'secondary');
     });
-
-    it('passes any prop on to Button', () => {
-        const button = shallow(<SecondaryButton disableButton={true} />);
-        expect(button.dive().props()).toHaveProperty('disabled', true);
+    it('passes on any prop', () => {
+        const wrapper = getWrapper({ 'aria-label': 'some label' });
+        expect(wrapper.props()).toHaveProperty('aria-label', 'some label');
     });
 });
