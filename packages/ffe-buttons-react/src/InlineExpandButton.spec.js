@@ -5,40 +5,34 @@ import ChevronIkon from '@sb1/ffe-icons-react/lib/chevron-ikon';
 import InlineExpandButton from './InlineExpandButton';
 
 const defaultProps = {
+    children: 'Click me',
     isExpanded: false,
     onClick: f => f,
 };
-
 const getWrapper = props =>
     shallow(<InlineExpandButton {...defaultProps} {...props} />);
 
 describe('<InlineExpandButton />', () => {
     it('renders without exploding', () => {
         const wrapper = getWrapper();
-        expect(wrapper.exists()).toBe(true);
+        expect(wrapper.props()).toHaveProperty('buttonType', 'expand');
     });
-
-    it('renders a ChevronIkon', () => {
+    it('passes on any prop', () => {
+        const wrapper = getWrapper({ 'aria-label': 'some label' });
+        expect(wrapper.props()).toHaveProperty('aria-label', 'some label');
+    });
+    it('sends a <ChevronIcon /> as a default rightIcon prop', () => {
         const wrapper = getWrapper();
-        expect(wrapper.find(ChevronIkon).exists()).toBe(true);
-    });
-
-    it('renders --expanded classes if isExpanded is true', () => {
-        const wrapper = getWrapper({ isExpanded: true });
-        expect(wrapper.hasClass('ffe-inline-expand-button--expanded')).toBe(
-            true,
+        expect(wrapper.props()).toHaveProperty(
+            'rightIcon',
+            <ChevronIkon style={{ transform: 'none' }} />,
         );
-        expect(
-            wrapper
-                .find(ChevronIkon)
-                .hasClass('ffe-inline-expand-button__icon--expanded'),
-        ).toBe(true);
     });
-
-    it('clicks call the onClick function', () => {
-        const onClick = jest.fn();
-        const wrapper = getWrapper({ onClick });
-        wrapper.find('button').simulate('click');
-        expect(onClick).toHaveBeenCalledTimes(1);
+    it('sends an upside down <ChevronIcon /> as rightIcon if isExpanded prop is true', () => {
+        const wrapper = getWrapper({ isExpanded: true });
+        expect(wrapper.props()).toHaveProperty(
+            'rightIcon',
+            <ChevronIkon style={{ transform: 'rotateX(180deg)' }} />,
+        );
     });
 });

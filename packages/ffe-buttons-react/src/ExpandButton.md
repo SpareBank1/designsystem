@@ -6,11 +6,28 @@ blå bakgrunn på innholdet som blir vist.
 
 
 ```js
+const { BlyantIkon, ForstorrelsesglassIkon } = require('../../ffe-icons-react');
 initialState = { isExpanded: false };
-<ExpandButton
-    isExpanded={state.isExpanded}
-    onClick={() => setState({ isExpanded: !state.isExpanded })}
->
-    Vis mer
-</ExpandButton>
+<div>
+    <ExpandButton
+        isExpanded={state.isExpanded1}
+        onClick={() => setState({ isExpanded1: !state.isExpanded1 })}
+    >
+        Vis mer
+    </ExpandButton><br />
+    <ExpandButton
+        isExpanded={state.isExpanded2}
+        onClick={() => setState({ isExpanded2: !state.isExpanded2 })}
+        leftIcon={<BlyantIkon />}
+    >
+        Endre
+    </ExpandButton><br />
+    <ExpandButton
+        isExpanded={state.isExpanded3}
+        onClick={() => setState({ isExpanded3: !state.isExpanded3 })}
+        rightIcon={<ForstorrelsesglassIkon />}
+    >
+        Enhance
+    </ExpandButton>
+</div>
 ```

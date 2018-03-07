@@ -1,56 +1,45 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import { ExpandButton } from './index';
+import KryssIkon from '@sb1/ffe-icons-react/lib/kryss-ikon';
+import ExpandButton from './ExpandButton';
 
 const defaultProps = {
-    children: <span>Expand-o-matic</span>,
+    children: 'Click me',
     isExpanded: false,
     onClick: f => f,
 };
-
 const getWrapper = props =>
     shallow(<ExpandButton {...defaultProps} {...props} />);
 
-describe('ExpandButton', () => {
-    it('renders a button and label with the proper modifiers when isExpanded is true', () => {
-        const wrapper = getWrapper({
-            isExpanded: true,
-        });
-        expect(
-            wrapper
-                .find('.ffe-expand-button')
-                .hasClass('ffe-expand-button--expanded'),
-        ).toBe(true);
-        expect(
-            wrapper
-                .find('.ffe-expand-button__label')
-                .hasClass('ffe-expand-button__label--expanded'),
-        ).toBe(true);
+describe('<ExpandButton />', () => {
+    it('renders without exploding', () => {
+        const wrapper = getWrapper();
+        expect(wrapper.hasClass('ffe-button')).toBe(true);
+        expect(wrapper.hasClass('ffe-button--expand')).toBe(true);
     });
-
-    it('renders a button and label without the modifiers if isExpanded is false', () => {
-        const wrapper = getWrapper({
-            isExpanded: false,
-        });
-        expect(
-            wrapper
-                .find('.ffe-expand-button')
-                .hasClass('ffe-expand-button--expanded'),
-        ).toBe(false);
-        expect(
-            wrapper
-                .find('.ffe-expand-button__label')
-                .hasClass('ffe-expand-button__label--expanded'),
-        ).toBe(false);
+    it('passes on any prop', () => {
+        const wrapper = getWrapper({ 'aria-label': 'some label' });
+        expect(wrapper.props()).toHaveProperty('aria-label', 'some label');
     });
-
-    it('clicking the button calls onClick', () => {
-        const onClick = jest.fn();
-        const wrapper = getWrapper({
-            onClick,
+    describe('when expanded', () => {
+        it('does not render children', () => {
+            const wrapper = getWrapper({ isExpanded: true });
+            expect(wrapper.text()).not.toContain('Click me');
+        });;
+        it('sets correct class', () => {
+            const wrapper = getWrapper({ isExpanded: true });
+            expect(wrapper.hasClass('ffe-button--expanded')).toBe(true);
         });
-        wrapper.find('button').simulate('click');
-        expect(onClick).toHaveBeenCalledTimes(1);
+        it('sets aria-expanded prop', () => {
+            const wrapper = getWrapper({ isExpanded: true });
+            expect(wrapper.props()).toHaveProperty('aria-expanded', true);
+        });
+        it('renders a KryssIkon', () => {
+            const wrapper = getWrapper({ isExpanded: true });
+            console.log(wrapper.children().debug());
+            expect(wrapper.find(KryssIkon).exists()).toBe(true);
+            expect(wrapper.find(KryssIkon).hasClass('ffe-button__icon')).toBe(true);
+        });
     });
 });

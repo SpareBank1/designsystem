@@ -1,17 +1,19 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import { BackButton } from './index';
+import BackButton from './BackButton';
 
-describe('BackButton', () => {
-    it('renders a back button', () => {
-        const button = shallow(<BackButton />);
-        expect(button.props()).toHaveProperty('buttonType', 'back');
-        expect(button.find('.ffe-back-button__label').exists()).toBe(true);
+const defaultProps = { children: 'Click me' };
+const getWrapper = props =>
+    shallow(<BackButton {...defaultProps} {...props} />);
+
+describe('<BackButton />', () => {
+    it('renders without exploding', () => {
+        const wrapper = getWrapper();
+        expect(wrapper.props()).toHaveProperty('buttonType', 'back');
     });
-
-    it('passes any prop on to Button', () => {
-        const button = shallow(<BackButton disableButton={true} />);
-        expect(button.dive().props()).toHaveProperty('disabled', true);
+    it('passes on any prop', () => {
+        const wrapper = getWrapper({ 'aria-label': 'some label' });
+        expect(wrapper.props()).toHaveProperty('aria-label', 'some label');
     });
 });
