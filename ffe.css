@@ -1287,590 +1287,325 @@ html {
 .ffe-button-group {
   padding: 40px 0;
 }
-.ffe-button-group .ffe-action-button,
-.ffe-button-group .ffe-primary-button,
-.ffe-button-group .ffe-secondary-button,
-.ffe-button-group .ffe-shortcut-button,
-.ffe-button-group .ffe-tertiary-button,
-.ffe-button-group .ffe-tab-button,
-.ffe-button-group .ffe-secondary-button,
-.ffe-button-group .ffe-shortcut-button,
-.ffe-button-group .ffe-action-button,
-.ffe-button-group .ffe-expand-button,
-.ffe-button-group .ffe-shortcut-button,
-.ffe-button-group .ffe-expand-button,
-.ffe-button-group .ffe-expand-button--dark,
-.ffe-button-group .ffe-expand-button--dark {
+.ffe-button-group .ffe-button,
+.ffe-button-group .ffe-inline-button {
   margin: 0 auto 10px;
 }
 .ffe-button-group--thin {
   padding: 0;
 }
-.ffe-button-group--inline .ffe-action-button,
-.ffe-button-group--inline .ffe-primary-button,
-.ffe-button-group--inline .ffe-secondary-button,
-.ffe-button-group--inline .ffe-shortcut-button,
-.ffe-button-group--inline .ffe-tertiary-button,
-.ffe-button-group--inline .ffe-tab-button,
-.ffe-button-group--inline .ffe-secondary-button,
-.ffe-button-group--inline .ffe-shortcut-button,
-.ffe-button-group--inline .ffe-action-button,
-.ffe-button-group--inline .ffe-expand-button,
-.ffe-button-group--inline .ffe-shortcut-button,
-.ffe-button-group--inline .ffe-expand-button,
-.ffe-button-group--inline .ffe-expand-button--dark,
-.ffe-button-group--inline .ffe-expand-button--dark {
+.ffe-button-group--inline .ffe-button,
+.ffe-button-group--inline .ffe-inline-button {
   display: inline;
   margin: 0 0 10px 10px;
   width: auto;
 }
-.ffe-button-group--inline .ffe-action-button:first-child,
-.ffe-button-group--inline .ffe-primary-button:first-child,
-.ffe-button-group--inline .ffe-secondary-button:first-child,
-.ffe-button-group--inline .ffe-shortcut-button:first-child,
-.ffe-button-group--inline .ffe-tertiary-button:first-child,
-.ffe-button-group--inline .ffe-tab-button:first-child,
-.ffe-button-group--inline .ffe-secondary-button:first-child,
-.ffe-button-group--inline .ffe-shortcut-button:first-child,
-.ffe-button-group--inline .ffe-action-button:first-child,
-.ffe-button-group--inline .ffe-expand-button:first-child,
-.ffe-button-group--inline .ffe-shortcut-button:first-child,
-.ffe-button-group--inline .ffe-expand-button:first-child,
-.ffe-button-group--inline .ffe-expand-button--dark:first-child,
-.ffe-button-group--inline .ffe-expand-button--dark:first-child {
+.ffe-button-group--inline .ffe-button:first-child,
+.ffe-button-group--inline .ffe-inline-button:first-child {
   margin: 0 0 10px;
 }
 @media screen and (min-width: 480px) {
-  .ffe-button-group .ffe-action-button,
-  .ffe-button-group .ffe-primary-button,
-  .ffe-button-group .ffe-secondary-button,
-  .ffe-button-group .ffe-shortcut-button,
-  .ffe-button-group .ffe-tertiary-button,
-  .ffe-button-group .ffe-tab-button,
-  .ffe-button-group .ffe-secondary-button,
-  .ffe-button-group .ffe-shortcut-button,
-  .ffe-button-group .ffe-action-button,
-  .ffe-button-group .ffe-expand-button,
-  .ffe-button-group .ffe-shortcut-button,
-  .ffe-button-group .ffe-expand-button,
-  .ffe-button-group .ffe-expand-button--dark,
-  .ffe-button-group .ffe-expand-button--dark {
+  .ffe-button-group .ffe-button,
+  .ffe-button-group .ffe-inline-button {
     display: inline-block;
     margin: 0 0 10px 10px;
     width: auto;
   }
-  .ffe-button-group .ffe-action-button:first-child,
-  .ffe-button-group .ffe-primary-button:first-child,
-  .ffe-button-group .ffe-secondary-button:first-child,
-  .ffe-button-group .ffe-shortcut-button:first-child,
-  .ffe-button-group .ffe-tertiary-button:first-child,
-  .ffe-button-group .ffe-tab-button:first-child,
-  .ffe-button-group .ffe-secondary-button:first-child,
-  .ffe-button-group .ffe-shortcut-button:first-child,
-  .ffe-button-group .ffe-action-button:first-child,
-  .ffe-button-group .ffe-expand-button:first-child,
-  .ffe-button-group .ffe-shortcut-button:first-child,
-  .ffe-button-group .ffe-expand-button:first-child,
-  .ffe-button-group .ffe-expand-button--dark:first-child,
-  .ffe-button-group .ffe-expand-button--dark:first-child {
+  .ffe-button-group .ffe-button:first-child,
+  .ffe-button-group .ffe-inline-button:first-child {
     margin: 0 0 10px;
   }
 }
-.ffe-primary-button,
-.ffe-secondary-button,
-.ffe-action-button,
-.ffe-shortcut-button,
-.ffe-expand-button,
-.ffe-expand-button--dark {
-  background-color: #0071CD;
+.ffe-button {
+  align-items: center;
+  appearance: none;
   border: 2px solid transparent;
   border-radius: 4px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
   color: #FFF;
   cursor: pointer;
-  display: block;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
-  line-height: 24px;
+  display: flex;
   font-family: "MuseoSansRounded-500", arial, sans-serif;
-  outline: none;
+  font-size: 18px;
+  line-height: 24px;
   overflow: hidden;
   padding: 8px 30px;
+  position: relative;
   text-align: center;
   text-decoration: none;
   transition: all 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
-  vertical-align: middle;
+  user-select: none;
   width: 100%;
-  font-size: 18px;
 }
-.ffe-primary-button:focus,
-.ffe-secondary-button:focus,
-.ffe-action-button:focus,
-.ffe-shortcut-button:focus,
-.ffe-expand-button:focus,
-.ffe-expand-button--dark:focus {
-  background-color: #0063b4;
-  box-shadow: 0 0 0 2px rgba(68, 192, 255, 0.5);
-  outline: 0;
+.ffe-button:focus {
+  outline: none;
 }
-.ffe-primary-button:hover,
-.ffe-secondary-button:hover,
-.ffe-action-button:hover,
-.ffe-shortcut-button:hover,
-.ffe-expand-button:hover,
-.ffe-expand-button--dark:hover {
-  background-color: #0063b4;
+.ffe-button:hover {
   box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.2);
 }
-.ffe-primary-button:active,
-.ffe-secondary-button:active,
-.ffe-action-button:active,
-.ffe-shortcut-button:active,
-.ffe-expand-button:active,
-.ffe-expand-button--dark:active {
-  background-color: #00559a;
+.ffe-button:active {
   box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.25);
 }
-.ffe-primary-button__label,
-.ffe-secondary-button__label,
-.ffe-action-button__label,
-.ffe-shortcut-button__label,
-.ffe-expand-button__label,
-.ffe-expand-button--dark__label {
-  overflow: hidden;
-  position: relative;
+.ffe-button--action.ffe-button--ghost,
+.ffe-button--action.ffe-button--ghost:focus {
+  background-color: transparent;
+  border: 2px solid #008A00;
+  color: #008A00;
 }
-.ffe-primary-button__label-text,
-.ffe-secondary-button__label-text,
-.ffe-action-button__label-text,
-.ffe-shortcut-button__label-text,
-.ffe-expand-button__label-text,
-.ffe-expand-button--dark__label-text {
-  bottom: 0;
-  display: inline-block;
-  position: relative;
-  transition: bottom 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+.ffe-button--action.ffe-button--ghost:hover {
+  background-color: #007100;
+  border-color: #007100;
+  color: #FFF;
 }
-.ffe-primary-button__label-spinner,
-.ffe-secondary-button__label-spinner,
-.ffe-action-button__label-spinner,
-.ffe-shortcut-button__label-spinner,
-.ffe-expand-button__label-spinner,
-.ffe-expand-button--dark__label-spinner {
-  bottom: -40px;
-  color: transparent;
-  animation: spindindust 1s linear infinite;
-  border: 3px solid #FFF;
-  border-radius: 50%;
-  border-top-color: transparent;
-  content: " ";
-  display: inline-block;
-  height: 22px;
-  visibility: visible;
-  width: 22px;
-  left: calc(50% - 11px);
-  opacity: 0;
-  position: absolute;
-  transition: all 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
-  user-select: none;
+.ffe-button--action.ffe-button--ghost:active {
+  background-color: #005700;
 }
-@keyframes spindindust {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+.ffe-button--action {
+  background-color: #008A00;
 }
-.ffe-primary-button__label-spinner[aria-hidden="false"],
-.ffe-secondary-button__label-spinner[aria-hidden="false"],
-.ffe-action-button__label-spinner[aria-hidden="false"],
-.ffe-shortcut-button__label-spinner[aria-hidden="false"],
-.ffe-expand-button__label-spinner[aria-hidden="false"],
-.ffe-expand-button--dark__label-spinner[aria-hidden="false"] {
-  bottom: 0;
-  opacity: 1;
+.ffe-button--action:focus {
+  background-color: #007100;
+  box-shadow: 0 0 0 2px rgba(68, 192, 255, 0.5);
 }
-.ffe-primary-button--loading,
-.ffe-secondary-button--loading,
-.ffe-action-button--loading,
-.ffe-shortcut-button--loading,
-.ffe-expand-button--loading,
-.ffe-expand-button--dark--loading {
+.ffe-button--action:hover {
+  background-color: #007100;
+}
+.ffe-button--action:active {
+  background-color: #005700;
+}
+.ffe-button--primary {
+  background-color: #0071CD;
+}
+.ffe-button--primary:focus {
+  background-color: #0063b4;
+  box-shadow: 0 0 0 2px rgba(68, 192, 255, 0.5);
+}
+.ffe-button--primary:hover {
+  background-color: #0063b4;
+}
+.ffe-button--primary:active {
   background-color: #00559a;
-  pointer-events: none;
 }
-.ffe-primary-button--loading .ffe-primary-button__label-text,
-.ffe-secondary-button--loading .ffe-secondary-button__label-text,
-.ffe-action-button--loading .ffe-action-button__label-text,
-.ffe-shortcut-button--loading .ffe-shortcut-button__label-text,
-.ffe-expand-button--loading .ffe-expand-button__label-text,
-.ffe-expand-button--dark--loading .ffe-expand-button--dark__label-text {
-  bottom: 50px;
-}
-.ffe-primary-button--condensed,
-.ffe-secondary-button--condensed,
-.ffe-action-button--condensed,
-.ffe-shortcut-button--condensed,
-.ffe-expand-button--condensed,
-.ffe-expand-button--dark--condensed {
-  padding: 5px 20px;
-  font-size: 14px;
-}
-.ffe-primary-button--condensed [class*="-button__label-spinner"][aria-hidden="false"],
-.ffe-secondary-button--condensed [class*="-button__label-spinner"][aria-hidden="false"],
-.ffe-action-button--condensed [class*="-button__label-spinner"][aria-hidden="false"],
-.ffe-shortcut-button--condensed [class*="-button__label-spinner"][aria-hidden="false"],
-.ffe-expand-button--condensed [class*="-button__label-spinner"][aria-hidden="false"],
-.ffe-expand-button--dark--condensed [class*="-button__label-spinner"][aria-hidden="false"] {
-  bottom: -3px;
-}
-@media screen and (min-width: 480px) {
-  .ffe-primary-button,
-  .ffe-secondary-button,
-  .ffe-action-button,
-  .ffe-shortcut-button,
-  .ffe-expand-button,
-  .ffe-expand-button--dark {
-    display: inline-block;
-    width: auto;
-  }
-}
-.ffe-secondary-button,
-.ffe-shortcut-button,
-.ffe-expand-button,
-.ffe-expand-button--dark {
+.ffe-button--secondary,
+.ffe-button--shortcut,
+.ffe-button--expand {
   background-color: #FFF;
   border: solid 2px #CCC;
   box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.05);
   color: #0071CD;
 }
-.ffe-secondary-button:active,
-.ffe-secondary-button:focus,
-.ffe-secondary-button:hover,
-.ffe-shortcut-button:active,
-.ffe-shortcut-button:focus,
-.ffe-shortcut-button:hover,
-.ffe-expand-button:active,
-.ffe-expand-button:focus,
-.ffe-expand-button:hover,
-.ffe-expand-button--dark:active,
-.ffe-expand-button--dark:focus,
-.ffe-expand-button--dark:hover {
+.ffe-button--secondary:active,
+.ffe-button--shortcut:active,
+.ffe-button--expand:active,
+.ffe-button--secondary:focus,
+.ffe-button--shortcut:focus,
+.ffe-button--expand:focus,
+.ffe-button--secondary:hover,
+.ffe-button--shortcut:hover,
+.ffe-button--expand:hover {
   background-color: #FFF;
   border-color: #0071CD;
 }
-.ffe-secondary-button--loading,
-.ffe-shortcut-button--loading,
-.ffe-expand-button--loading,
-.ffe-expand-button--dark--loading {
-  background-color: #FFF;
-}
-.ffe-secondary-button__label-spinner,
-.ffe-shortcut-button__label-spinner,
-.ffe-expand-button__label-spinner,
-.ffe-expand-button--dark__label-spinner {
-  animation: spindindust 1s linear infinite;
-  border: 3px solid #0071CD;
-  border-radius: 50%;
-  border-top-color: transparent;
-  content: " ";
-  display: inline-block;
-  height: 22px;
-  visibility: visible;
-  width: 22px;
-}
-@keyframes spindindust {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-.ffe-secondary-button__label-icon,
-.ffe-shortcut-button__label-icon,
-.ffe-expand-button__label-icon,
-.ffe-expand-button--dark__label-icon {
-  position: relative;
-  top: .15em;
-  right: 5px;
-  display: inline-block;
-  height: 14px;
-  width: 14px;
-  fill: #002776;
-}
-.ffe-secondary-button--condensed .ffe-secondary-button__label-icon,
-.ffe-shortcut-button--condensed .ffe-secondary-button__label-icon,
-.ffe-expand-button--condensed .ffe-secondary-button__label-icon,
-.ffe-expand-button--dark--condensed .ffe-secondary-button__label-icon {
-  height: 14px;
-  width: 14px;
-}
-.ffe-shortcut-button {
-  padding-right: 35px;
-}
-.ffe-shortcut-button:active .ffe-shortcut-button__icon-chevron,
-.ffe-shortcut-button:focus .ffe-shortcut-button__icon-chevron,
-.ffe-shortcut-button:hover .ffe-shortcut-button__icon-chevron {
-  left: 20px;
-}
-.ffe-shortcut-button__icon-chevron {
-  bottom: -2px;
-  fill: #0071CD;
-  height: 16px;
-  left: 15px;
-  position: relative;
-  transform: rotate(-90deg);
-  transition: left 0.2s cubic-bezier(0.46, -0.265, 0.48, 1.38);
-  width: 16px;
-}
-.ffe-shortcut-button--condensed {
-  padding-right: 25px;
-}
-.ffe-shortcut-button--condensed .ffe-shortcut-button__icon-chevron {
-  height: 14px;
-  width: 14px;
-  left: 10px;
-}
-.ffe-shortcut-button--condensed:active .ffe-shortcut-button__icon-chevron,
-.ffe-shortcut-button--condensed:focus .ffe-shortcut-button__icon-chevron,
-.ffe-shortcut-button--condensed:hover .ffe-shortcut-button__icon-chevron {
-  left: 13px;
-}
-.ffe-action-button {
-  background-color: #008A00;
-}
-.ffe-action-button:focus,
-.ffe-action-button:hover {
-  background-color: #007100;
-}
-.ffe-action-button:active,
-.ffe-action-button--loading {
-  background-color: #005700;
-}
-.ffe-action-button--ghost,
-.ffe-action-button--ghost:focus {
-  background-color: transparent;
-  border: 2px solid #008A00;
-  color: #008A00;
-}
-.ffe-action-button--ghost:hover {
-  background-color: #007100;
-  border-color: #007100;
-  color: #FFF;
-}
-.ffe-action-button--ghost:active {
-  background-color: #005700;
-}
-.ffe-tertiary-button {
-  background-color: transparent;
-  border: none;
-  border-radius: 6px;
-  color: #0071CD;
-  cursor: pointer;
-  display: inline-block;
-  font-family: "MuseoSansRounded-500", arial, sans-serif;
-  height: 26px;
-  line-height: 20px;
-  margin: 0 -4px;
-  padding: 0 4px;
-  text-decoration: none;
-  font-size: 16px;
-}
-.ffe-tertiary-button::after {
-  border-bottom: solid 1px #0071CD;
-  content: " ";
-  display: block;
-}
-.ffe-tertiary-button:active,
-.ffe-tertiary-button:focus {
-  box-shadow: 0 0 0 2px rgba(68, 192, 255, 0.5);
-  color: #005AA4;
-  outline: none;
-}
-.ffe-tertiary-button:hover {
-  color: #005AA4;
-}
-.ffe-tertiary-button:active::after,
-.ffe-tertiary-button:focus::after,
-.ffe-tertiary-button:hover::after {
-  border-color: #005AA4;
-}
-.ffe-tertiary-button--with-icon {
-  padding-left: 30px;
-  position: relative;
-}
-.ffe-tertiary-button__label-icon {
-  position: absolute;
-  bottom: 4px;
-  left: 4px;
-  fill: #002776;
-  height: 14px;
-  width: 14px;
-}
-.ffe-tertiary-button--condensed {
-  font-size: 14px;
-}
-.ffe-tertiary-button--condensed .ffe-tertiary-button__label-icon {
-  bottom: 7px;
-  left: 9px;
-  height: 14px;
-  width: 14px;
-}
-.ffe-inline-expand-button {
-  appearance: none;
-  background-color: transparent;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  color: #0071CD;
-  display: inline-block;
-  font-family: 'MuseoSans-500', arial, sans-serif;
-  line-height: 26px;
-  margin: 0 -4px;
-  padding: 0 4px;
-  font-size: 16px;
-}
-.ffe-inline-expand-button:active,
-.ffe-inline-expand-button:focus {
-  box-shadow: 0 0 0 2px rgba(68, 192, 255, 0.5);
-  color: #005AA4;
-  outline: none;
-}
-.ffe-inline-expand-button:hover {
-  color: #005AA4;
-}
-.ffe-inline-expand-button__icon {
-  fill: #0071CD;
-  width: 16px;
-  height: 16px;
-  align-self: center;
-  max-width: 16px;
-  min-width: 16px;
-  margin: 0 0 -2px 6px;
-  transition: transform 0.2s cubic-bezier(0.46, -0.265, 0.48, 1.38), fill 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
-}
-.ffe-inline-expand-button__icon--expanded {
-  transform: rotateX(180deg);
-  fill: #002776;
-}
-.ffe-expand-button,
-.ffe-expand-button--dark {
+.ffe-button--expand {
   border-radius: 34px;
   height: 45px;
 }
-.ffe-expand-button--expanded,
-.ffe-expand-button--dark--expanded {
-  background-image: url('data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20200%20200%22%3E%3Cpath%20d%3D%22M18.77188%2C0c-3.56152%2C0-7.12521%2C1.34709-9.83437%2C4.04421l-4.42862%2C4.43914c-5.38143%2C5.39423-5.38143%2C14.25271%2C0%2C19.6839l71.18886%2C71.83202-71.66167%2C71.83201c-5.38144%2C5.39422-5.38144%2C14.25271%2C0%2C19.6839l4.42862%2C4.43914c5.38145%2C5.39424%2C14.21893%2C5.39424%2C19.63722%2C0l71.66167-71.83201%2C71.64591%2C71.83201c5.38143%2C5.39424%2C14.23467%2C5.39424%2C19.65298%2C0l4.42862-4.43914c5.38142-5.39423%2C5.38142-14.25271%2C0-19.6839l-71.18886-71.83201%2C71.66167-71.83202c5.38145-4.91394%2C5.38145-13.77881%2C0-19.20997l-4.42862-4.42335c-5.38144-5.39422-14.21891-5.39422-19.63722%2C0l-72.13448%2C71.34229-71.1731-71.83201c-2.69072-2.69712-6.25708-4.04421-9.81861-4.04421z%22%20fill%3D%22%230071CD%22/%3E%3C/svg%3E');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 16px;
-  padding: 0;
-  width: 45px;
+.ffe-button--expanded {
+  padding: 8px;
 }
-.ffe-expand-button__label--expanded,
-.ffe-expand-button--dark__label--expanded {
-  display: none;
-}
-.ffe-expand-button--dark {
-  background-color: #0071CD;
-  border-color: #0071CD;
-  height: 45px;
-}
-.ffe-expand-button--dark:active,
-.ffe-expand-button--dark:focus,
-.ffe-expand-button--dark:hover {
-  background-color: #002776;
-  border-color: #002776;
-}
-.ffe-expand-button--dark--expanded {
-  background-image: url('data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20200%20200%22%3E%3Cpath%20d%3D%22M18.77188%2C0c-3.56152%2C0-7.12521%2C1.34709-9.83437%2C4.04421l-4.42862%2C4.43914c-5.38143%2C5.39423-5.38143%2C14.25271%2C0%2C19.6839l71.18886%2C71.83202-71.66167%2C71.83201c-5.38144%2C5.39422-5.38144%2C14.25271%2C0%2C19.6839l4.42862%2C4.43914c5.38145%2C5.39424%2C14.21893%2C5.39424%2C19.63722%2C0l71.66167-71.83201%2C71.64591%2C71.83201c5.38143%2C5.39424%2C14.23467%2C5.39424%2C19.65298%2C0l4.42862-4.43914c5.38142-5.39423%2C5.38142-14.25271%2C0-19.6839l-71.18886-71.83201%2C71.66167-71.83202c5.38145-4.91394%2C5.38145-13.77881%2C0-19.20997l-4.42862-4.42335c-5.38144-5.39422-14.21891-5.39422-19.63722%2C0l-72.13448%2C71.34229-71.1731-71.83201c-2.69072-2.69712-6.25708-4.04421-9.81861-4.04421z%22%20fill%3D%22%23FFF%22/%3E%3C/svg%3E');
-}
-.ffe-expand-button--dark__label {
-  color: #FFF;
-}
-.ffe-back-button {
-  box-shadow: none;
-  border: none;
-  width: auto;
-  color: #676767;
-  font-family: "MuseoSansRounded-500", arial, sans-serif;
-  height: 24px;
-  line-height: 20px;
-  padding: 1px 6px 1px 1em;
-  background: transparent no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='0.8em' height='1.5em' viewBox='0 0 200 200'%3E%3Cpath transform = 'rotate(90 100 100)' fill = '%23676767' d='m16.171492,41.999998c-4.143269,0-8.2852797,1.57464-11.4277496,4.706478-6.3249899,6.283609-6.3249899,16.499474,0,22.803034l84.0286676,83.76282c6.30496,6.30356,16.54928,6.30356,22.87426,0l83.60959-83.26412c6.32499-6.28361,6.32499-16.499477,0-22.803038-6.30496-6.30356-16.55553-6.30356-22.88051,0l-72.13806,71.893768-72.613438-72.373767c-3.14247-3.151781-7.29074-4.725174-11.433999-4.725174h-0.0188z'/%3E%3C/svg%3E");
-  cursor: pointer;
-  display: inline-block;
-  outline: none;
-  overflow: hidden;
-  text-decoration: none;
-  font-size: 16px;
-}
-.ffe-back-button:focus {
-  background-color: transparent;
-  border-radius: 4px;
-  box-shadow: 0 0 0 2px rgba(68, 192, 255, 0.5);
-}
-.ffe-back-button:hover {
-  background-color: transparent;
-  box-shadow: none;
-}
-.ffe-back-button:hover .ffe-back-button__label {
-  border-bottom: 1px solid #676767;
-}
-a.ffe-back-button {
-  padding-top: 2px;
-}
-.ffe-task-button {
+.ffe-button--task {
   background-color: #FFF;
-  border: none;
+  border-radius: 0px;
+  box-shadow: none;
   color: #0071CD;
-  cursor: pointer;
   display: inline-block;
-  outline: none;
   padding: 2px;
   text-align: left;
-  text-decoration: none;
-  transition: all 0.2s;
-  vertical-align: middle;
+  transition: all 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
   width: auto;
-  font-size: 18px;
 }
-.ffe-task-button:active,
-.ffe-task-button:focus,
-.ffe-task-button:hover {
+.ffe-button--task:active,
+.ffe-button--task:focus,
+.ffe-button--task:hover {
+  box-shadow: none;
   color: #005AA4;
 }
-.ffe-task-button:hover .ffe-task-button__label-icon {
-  border-color: #005AA4;
-  box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.2);
+.ffe-button--condensed {
+  padding: 5px 20px;
+  font-size: 14px;
 }
-.ffe-task-button:active .ffe-task-button__label-icon {
-  border-color: #005AA4;
-  box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.25);
+.ffe-button--loading {
+  pointer-events: none;
 }
-.ffe-task-button:focus .ffe-task-button__label-icon {
-  border-color: #005AA4;
-  box-shadow: 0 0 0 2px rgba(68, 192, 255, 0.5);
+@media screen and (min-width: 480px) {
+  .ffe-button {
+    display: inline-flex;
+    width: auto;
+  }
 }
-.ffe-task-button__label-text {
+.ffe-button__label {
   align-items: center;
   display: flex;
+  transition: all 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
-.ffe-task-button--loading .ffe-task-button__label-text {
-  display: none;
+.ffe-button--loading .ffe-button__label {
+  transform: translateY(-32px);
 }
-.ffe-task-button__label-spinner {
-  display: none;
+.ffe-button__icon {
+  display: inline-block;
+  fill: currentColor;
+  height: 16px;
+  margin: 0 5px;
+  width: 16px;
 }
-.ffe-task-button__label-icon {
+.ffe-button--condensed .ffe-button__icon {
+  height: 14px;
+  width: 14px;
+}
+.ffe-button--shortcut .ffe-button__icon {
+  transform: rotate(-90deg);
+  transition: all 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+  will-change: transform;
+}
+.ffe-button--shortcut:focus .ffe-button__icon,
+.ffe-button--shortcut:hover .ffe-button__icon {
+  transform: rotate(-90deg) translateY(12px);
+}
+.ffe-button--task .ffe-button__icon {
   border: 2px solid #CCC;
   border-radius: 50%;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   fill: #0071CD;
   height: 45px;
   padding: 13px;
-  margin-right: 5px;
+  margin: 0 5px 0 0;
   width: 45px;
+}
+.ffe-button--task:hover .ffe-button__icon {
+  border-color: #005AA4;
+  box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.ffe-button--task:active .ffe-button__icon {
+  border-color: #005AA4;
+  box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.25);
+}
+.ffe-button--task:focus .ffe-button__icon {
+  border-color: #005AA4;
+  box-shadow: 0 0 0 2px rgba(68, 192, 255, 0.5);
+}
+.ffe-button__spinner {
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 8px;
+  transform: translateY(24px);
+  transition: all 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+  visibility: hidden;
+}
+.ffe-button--loading .ffe-button__spinner {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+.ffe-button--condensed .ffe-button__spinner {
+  top: 6px;
+}
+.ffe-button__spinner::after {
+  animation: 1s linear infinite button-loading-spin;
+  border: 3px solid currentColor;
+  border-radius: 50%;
+  border-top-color: transparent;
+  content: '';
+  display: block;
+  height: 22px;
+  margin: 0 auto;
+  width: 22px;
+}
+@keyframes button-loading-spin {
+  from {
+    transform: none;
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.ffe-inline-button {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'MuseoSansRounded-500', arial, sans-serif;
+  margin: 0 -4px;
+  overflow: hidden;
+  padding: 0 4px;
+  text-decoration: none;
+  font-size: 16px;
+}
+.ffe-inline-button:active,
+.ffe-inline-button:focus {
+  box-shadow: 0 0 0 2px rgba(68, 192, 255, 0.5);
+  color: #005AA4;
+  outline: none;
+}
+.ffe-inline-button--back {
+  background: transparent no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='0.8em' height='1.5em' viewBox='0 0 200 200'%3E%3Cpath transform = 'rotate(90 100 100)' fill = '%23676767' d='m16.171492,41.999998c-4.143269,0-8.2852797,1.57464-11.4277496,4.706478-6.3249899,6.283609-6.3249899,16.499474,0,22.803034l84.0286676,83.76282c6.30496,6.30356,16.54928,6.30356,22.87426,0l83.60959-83.26412c6.32499-6.28361,6.32499-16.499477,0-22.803038-6.30496-6.30356-16.55553-6.30356-22.88051,0l-72.13806,71.893768-72.613438-72.373767c-3.14247-3.151781-7.29074-4.725174-11.433999-4.725174h-0.0188z'/%3E%3C/svg%3E");
+  color: #676767;
+  line-height: 26px;
+  padding-left: 1em;
+}
+a.ffe-inline-button--back {
+  padding-top: 2px;
+}
+.ffe-inline-button--back:focus,
+.ffe-inline-button--back:hover {
+  background-color: transparent;
+}
+.ffe-inline-button--back:hover {
+  box-shadow: none;
+}
+.ffe-inline-button--back:hover .ffe-inline-button__label {
+  border-bottom: 1px solid #676767;
+}
+.ffe-inline-button--expand {
+  color: #0071CD;
+}
+.ffe-inline-button--expand:hover {
+  color: #005AA4;
+}
+.ffe-inline-button--tertiary {
+  color: #0071CD;
+}
+.ffe-inline-button--tertiary::after {
+  border-bottom: solid 1px currentColor;
+  content: ' ';
+  display: block;
+}
+.ffe-inline-button--tertiary:hover {
+  color: #005AA4;
+}
+.ffe-inline-button__icon {
+  align-self: center;
+  fill: currentColor;
+  height: 16px;
+  margin-bottom: -2px;
+  max-width: 16px;
+  min-width: 16px;
+  transition: all 0.2s cubic-bezier(0.46, -0.265, 0.48, 1.38);
+  width: 16px;
+  will-change: transform, opacity;
+}
+.ffe-inline-button--back .ffe-inline-button__icon {
+  transform: rotate(90deg);
+}
+.ffe-inline-button__icon--left {
+  margin-right: 6px;
+}
+.ffe-inline-button__icon--right {
+  margin-left: 6px;
 }
 /*
     Animation for loading insurance cards
