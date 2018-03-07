@@ -11,9 +11,7 @@ describe('<RadioBase />', () => {
 
             it('should render an input with type radio', () => {
                 expect(wrapper.find('input')).toHaveLength(1);
-                expect(wrapper
-                        .find('input')
-                        .prop('type')).toBe('radio');
+                expect(wrapper.find('input').prop('type')).toBe('radio');
             });
 
             it('should render a label', () => {
@@ -29,54 +27,50 @@ describe('<RadioBase />', () => {
             it('should not create a new id on every render', () => {
                 const firstId = wrapper.find('input').prop('id');
                 wrapper.setProps({ invalid: true }); // trigger re-render
-                const secondId =  wrapper.find('input').prop('id');
+                const secondId = wrapper.find('input').prop('id');
                 expect(firstId).toBe(secondId);
-            })
+            });
         });
 
         it('should render a default value if passed', () => {
             let wrapper = shallow(<RadioBase labelClasses="" value="" />);
-            expect(wrapper
-                    .find('input')
-                    .prop('checked')).toBeFalsy();
+            expect(wrapper.find('input').prop('checked')).toBeFalsy();
 
-            wrapper = shallow(<RadioBase value="" checked={true} labelClasses="" />);
-            expect(wrapper
-                    .find('input')
-                    .prop('checked')).toBe(true);
+            wrapper = shallow(
+                <RadioBase value="" checked={true} labelClasses="" />,
+            );
+            expect(wrapper.find('input').prop('checked')).toBe(true);
         });
 
         it('should render the field disabled if specified', () => {
             let wrapper = shallow(<RadioBase value="" labelClasses="" />);
-            expect(wrapper
-                    .find('input')
-                    .prop('disabled')).toBeUndefined();
+            expect(wrapper.find('input').prop('disabled')).toBeUndefined();
 
-            wrapper = shallow(<RadioBase value="" labelClasses="" disabled={true} />);
-            expect(wrapper
-                    .find('input')
-                    .prop('disabled')).toBe(true);
+            wrapper = shallow(
+                <RadioBase value="" labelClasses="" disabled={true} />,
+            );
+            expect(wrapper.find('input').prop('disabled')).toBe(true);
         });
 
         it('should apply labelClasses to the label', () => {
             const wrapper = shallow(
                 <RadioBase labelClasses="test-class" value="" />,
             );
-            expect(wrapper
-                    .find('label')
-                    .hasClass('test-class')).toBe(true);
+            expect(wrapper.find('label').hasClass('test-class')).toBe(true);
         });
 
         it('should apply pass-through extra props', () => {
-            const wrapper = shallow(<RadioBase
-                    labelClasses=""        value="shark"
+            const wrapper = shallow(
+                <RadioBase
+                    labelClasses=""
+                    value="shark"
                     label="Kjempetorsk"
                     aria-describedby="svorsk"
                 />,
             );
-            expect(wrapper
-                    .find('input')
-                    .prop('aria-describedby')).toBe('svorsk');
+            expect(wrapper.find('input').prop('aria-describedby')).toBe(
+                'svorsk',
+            );
         });
     });
 
@@ -127,14 +121,10 @@ describe('<RadioBase />', () => {
         it('sets missing prop to false', () => {
             const wrapper = shallow(<RadioBase value="Hei" labelClasses="" />);
 
-            expect(wrapper
-                    .find('input')
-                    .prop('aria-invalid')).toBe('false');
-            expect(wrapper
-                    .find('label')
-                    .prop(
-                        'className',
-                    )).not.toBe('ffe-radio-button--invalid');
+            expect(wrapper.find('input').prop('aria-invalid')).toBe('false');
+            expect(wrapper.find('label').prop('className')).not.toBe(
+                'ffe-radio-button--invalid',
+            );
         });
 
         it('handles boolean `false` aria-invalid-prop', () => {
@@ -142,14 +132,10 @@ describe('<RadioBase />', () => {
                 <RadioBase value="Hei" labelClasses="" aria-invalid={false} />,
             );
 
-            expect(wrapper
-                    .find('input')
-                    .prop('aria-invalid')).toBe('false');
-            expect(wrapper
-                    .find('label')
-                    .prop(
-                        'className',
-                    )).not.toBe('ffe-radio-button--invalid');
+            expect(wrapper.find('input').prop('aria-invalid')).toBe('false');
+            expect(wrapper.find('label').prop('className')).not.toBe(
+                'ffe-radio-button--invalid',
+            );
         });
 
         it('handles boolean `true` aria-invalid-prop', () => {
@@ -157,14 +143,10 @@ describe('<RadioBase />', () => {
                 <RadioBase value="Hei" labelClasses="" aria-invalid={true} />,
             );
 
-            expect(wrapper
-                    .find('input')
-                    .prop('aria-invalid')).toBe('true');
-            expect(wrapper
-                    .find('label')
-                    .prop(
-                        'className',
-                    )).toBe('ffe-radio-button--invalid');
+            expect(wrapper.find('input').prop('aria-invalid')).toBe('true');
+            expect(wrapper.find('label').prop('className')).toBe(
+                'ffe-radio-button--invalid',
+            );
         });
 
         it('handles string "false" aria-invalid-prop', () => {
@@ -172,14 +154,10 @@ describe('<RadioBase />', () => {
                 <RadioBase value="Hei" labelClasses="" aria-invalid="false" />,
             );
 
-            expect(wrapper
-                    .find('input')
-                    .prop('aria-invalid')).toBe('false');
-            expect(wrapper
-                    .find('label')
-                    .prop(
-                        'className',
-                    )).not.toBe('ffe-radio-button--invalid');
+            expect(wrapper.find('input').prop('aria-invalid')).toBe('false');
+            expect(wrapper.find('label').prop('className')).not.toBe(
+                'ffe-radio-button--invalid',
+            );
         });
 
         it('handles string "true" aria-invalid-prop', () => {
@@ -187,14 +165,10 @@ describe('<RadioBase />', () => {
                 <RadioBase value="Hei" labelClasses="" aria-invalid="true" />,
             );
 
-            expect(wrapper
-                    .find('input')
-                    .prop('aria-invalid')).toBe('true');
-            expect(wrapper
-                    .find('label')
-                    .prop(
-                        'className',
-                    )).toBe('ffe-radio-button--invalid');
+            expect(wrapper.find('input').prop('aria-invalid')).toBe('true');
+            expect(wrapper.find('label').prop('className')).toBe(
+                'ffe-radio-button--invalid',
+            );
         });
 
         it('handles boolean `false` invalid-prop', () => {
@@ -202,14 +176,10 @@ describe('<RadioBase />', () => {
                 <RadioBase value="Hei" labelClasses="" invalid={false} />,
             );
 
-            expect(wrapper
-                    .find('input')
-                    .prop('aria-invalid')).toBe('false');
-            expect(wrapper
-                    .find('label')
-                    .prop(
-                        'className',
-                    )).not.toBe('ffe-radio-button--invalid');
+            expect(wrapper.find('input').prop('aria-invalid')).toBe('false');
+            expect(wrapper.find('label').prop('className')).not.toBe(
+                'ffe-radio-button--invalid',
+            );
         });
 
         it('handles boolean `true` invalid-prop', () => {
@@ -217,13 +187,10 @@ describe('<RadioBase />', () => {
                 <RadioBase value="Hei" labelClasses="" invalid={true} />,
             );
 
-            expect(wrapper
-                    .find('input')
-                    .prop('aria-invalid')).toBe('true');
-            expect(wrapper
-                    .find('label')
-                    .prop(
-                        'className')).toBe('ffe-radio-button--invalid');
+            expect(wrapper.find('input').prop('aria-invalid')).toBe('true');
+            expect(wrapper.find('label').prop('className')).toBe(
+                'ffe-radio-button--invalid',
+            );
         });
 
         it('handles string "false" invalid-prop', () => {
@@ -232,7 +199,9 @@ describe('<RadioBase />', () => {
             );
 
             expect(wrapper.find('input').prop('aria-invalid')).toBe('false');
-            expect(wrapper.find('label').prop('className')).not.toBe('ffe-radio-button--invalid');
+            expect(wrapper.find('label').prop('className')).not.toBe(
+                'ffe-radio-button--invalid',
+            );
         });
 
         it('handles string "true" invalid-prop', () => {
@@ -241,7 +210,9 @@ describe('<RadioBase />', () => {
             );
 
             expect(wrapper.find('input').prop('aria-invalid')).toBe('true');
-            expect(wrapper.find('label').prop('className')).toBe('ffe-radio-button--invalid');
+            expect(wrapper.find('label').prop('className')).toBe(
+                'ffe-radio-button--invalid',
+            );
         });
     });
 });
