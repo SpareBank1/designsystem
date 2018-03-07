@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="5.0.2"></a>
+## [5.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@5.0.0...@sb1/ffe-icons-react@5.0.2) (2018-03-07)
+
+
+### Bug Fixes
+
+* **ffe-icons-react:** Fixed build script after changes to path in ffe-icons ([a7270ae](https://github.com/SpareBank1/designsystem/commit/a7270ae))
+
+
+
+
       <a name="5.0.1"></a>
 ## [5.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@5.0.0...@sb1/ffe-icons-react@5.0.1) (2018-03-02)
 
@@ -14,7 +25,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="5.0.0"></a>
+    <a name="5.0.0"></a>
 # 5.0.0 (2018-02-25)
 
 
@@ -160,7 +171,7 @@ release
 
 
 
-  <a name="4.0.7"></a>
+<a name="4.0.7"></a>
 ## [4.0.7](https://github.com/SpareBank1/designsystem/compare/ffe-icons-react@4.0.6...ffe-icons-react@4.0.7) (2018-02-23)
 
 

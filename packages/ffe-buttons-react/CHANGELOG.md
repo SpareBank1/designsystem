@@ -3,7 +3,56 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-    <a name="9.0.1"></a>
+      <a name="10.0.0"></a>
+# [10.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@9.0.0...@sb1/ffe-buttons-react@10.0.0) (2018-03-07)
+
+
+### Features
+
+* **ffe-buttons-react:** Simplify implementation ([e26caf6](https://github.com/SpareBank1/designsystem/commit/e26caf6))
+
+
+### BREAKING CHANGES
+
+* **ffe-buttons-react:** This commit re-implements the ffe-buttons-react
+implementation so that it's easier to maintain for future developers.
+
+A missing implementation, `TaskButton`, is also added in this commit.
+
+The opportunity was taken to do some minor API changes as well, since
+the prior implementation had some deprecated fields that could be
+removed.
+
+With this change, buttons are now much more similar, and follows
+(mostly) the same API across button types. There are some differences
+between them (some does not support loading indicators, while others
+might not support right or left icons. Please refer to the relevant
+documentation to learn more about the new APIs.
+
+**Changes in props:**
+
+- `action` prop is removed.
+- `simpleContent` prop is removed (only used internally)
+- `label` prop is removed. Use `children` instead
+- `isTabbable` prop is removed. Use `tabIndex` instead
+- `disableButton` prop is renamed to its DOM cousin - `disabled`
+
+**Other changes:**
+All buttons support `leftIcon` and `rightIcon` props now - with the
+following exceptions:
+
+- `BackButton` does not support any icons by design
+- `InlineExpandButton` does not support `rightIcon` by design
+- `ShortcutButton` does not support `rightIcon` by design
+- `TaskButton` does not support `rightIcon` by design
+
+All buttons now support the `element` prop, which lets you override what
+component or DOM element is used to render the button.
+
+
+
+
+      <a name="9.0.1"></a>
 ## [9.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@9.0.0...@sb1/ffe-buttons-react@9.0.1) (2018-03-02)
 
 
@@ -11,7 +60,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-buttons-react
 
-    <a name="9.0.0"></a>
+  <a name="9.0.0"></a>
 # 9.0.0 (2018-02-25)
 
 
@@ -161,7 +210,7 @@ release
 
 
 
-  <a name="8.2.4"></a>
+<a name="8.2.4"></a>
 ## [8.2.4](https://github.com/SpareBank1/designsystem/compare/ffe-buttons-react@8.2.3...ffe-buttons-react@8.2.4) (2018-02-23)
 
 

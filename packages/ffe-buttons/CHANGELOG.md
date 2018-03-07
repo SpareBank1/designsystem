@@ -3,6 +3,90 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="7.0.0"></a>
+# [7.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@6.0.0...@sb1/ffe-buttons@7.0.0) (2018-03-07)
+
+
+### Bug Fixes
+
+* Correct peerDependencies after breaking change ([aab59ce](https://github.com/SpareBank1/designsystem/commit/aab59ce))
+
+
+### Features
+
+* **ffe-buttons:** Simplify API ([5e1cd7a](https://github.com/SpareBank1/designsystem/commit/5e1cd7a))
+
+
+### BREAKING CHANGES
+
+* **ffe-buttons:** This commit rewrites the ffe-buttons less package for
+simplicity and ease of use.
+
+There are now two basic button types - `base-button` and
+`inline-base-button`. Each of these two button types have fewer
+elements, and a few modifiers that specify which type of button it is.
+
+Previously, the DOM structure for most buttons looked like a variation
+of this:
+
+```html
+<button class="ffe-[button-type]-button">
+<span class="ffe-[button-type]-button__label">
+<span class="ffe-[button-type]-button__label-text">
+  <img class="ffe-[button-type]-button__label-icon" alt="left icon" />
+  Click me
+  <img class="ffe-[button-type]-button__label-icon" alt="right icon" />
+</span>
+<span class="ffe-[button-type]-button__label-spinner" />
+</span>
+</button>
+```
+
+For `base-button` based buttons (woah), the general DOM structure now
+required is this:
+
+```html
+<button class="ffe-button ffe-button--[button-type]">
+<img class="ffe-button__icon ffe-button__icon--left" alt="left icon" />
+<span class="ffe-button__label">
+Click me
+</span>
+<img class="ffe-button__icon ffe-button__icon--right" alt="right icon" />
+<div class="ffe-button__spinner" />
+</button>
+```
+
+The icons and the spinner is optional if not needed. Please refer to
+the React implementation for further details on which aria-tags are
+expected to be passed where, as well as which modifier flags are
+available.
+
+Note, however, how the button type only needs to be specified at the
+top level. The same goes for any modifier, like loading etc. If your
+button does not require a loading indicator, the entire block can be
+removed without any other tweaks.
+
+Previously, the DOM structure for small inline buttons were similar as
+above, just with a few different classes, and no spinner.
+
+For `inline-base-button` based buttons (:tada:), the general DOM
+structure now required is this:
+
+```html
+<button class="ffe-inline button ffe-inline-button--[button-type]">
+<img class="ffe-inline-button__icon ffe-inline-button__icon--left" alt="left icon" />
+<span class="ffe-inline-button__label">Click me</span>
+<img class="ffe-inline-button__icon ffe-inline-button__icon--right" alt="right icon" />
+</button>
+```
+
+The icons are optional if not needed. Please refer to the React
+implementation for further details on which aria-tags are expected to be
+passed where, as well as which modifier flags are available.
+
+
+
+
       <a name="6.0.1"></a>
 ## [6.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@6.0.0...@sb1/ffe-buttons@6.0.1) (2018-03-02)
 
@@ -14,7 +98,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="6.0.0"></a>
+    <a name="6.0.0"></a>
 # 6.0.0 (2018-02-25)
 
 
@@ -112,7 +196,7 @@ JavaScript `require`:
 
 
 
-    <a name="5.2.3"></a>
+  <a name="5.2.3"></a>
 ## [5.2.3](https://github.com/SpareBank1/designsystem/compare/ffe-buttons@5.2.2...ffe-buttons@5.2.3) (2018-02-23)
 
 
@@ -120,7 +204,7 @@ JavaScript `require`:
 
 **Note:** Version bump only for package ffe-buttons
 
-  <a name="5.2.2"></a>
+<a name="5.2.2"></a>
 ## [5.2.2](https://github.com/SpareBank1/designsystem/compare/ffe-buttons@5.2.1...ffe-buttons@5.2.2) (2018-02-22)
 
 

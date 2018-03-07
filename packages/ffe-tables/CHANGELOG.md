@@ -3,7 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-       <a name="9.0.1"></a>
+    <a name="9.0.2"></a>
+## [9.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@9.0.0...@sb1/ffe-tables@9.0.2) (2018-03-07)
+
+
+### Bug Fixes
+
+* Correct peerDependencies after breaking change ([aab59ce](https://github.com/SpareBank1/designsystem/commit/aab59ce))
+
+
+
+
+    <a name="9.0.1"></a>
 ## [9.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@9.0.0...@sb1/ffe-tables@9.0.1) (2018-03-02)
 
 
@@ -14,7 +25,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-       <a name="9.0.0"></a>
+   <a name="9.0.0"></a>
 # 9.0.0 (2018-02-25)
 
 
@@ -106,7 +117,7 @@ JavaScript `require`:
 
 
 
-     <a name="8.1.9"></a>
+ <a name="8.1.9"></a>
 ## [8.1.9](https://github.com/SpareBank1/designsystem/compare/ffe-tables@8.1.8...ffe-tables@8.1.9) (2018-02-23)
 
 
@@ -114,7 +125,7 @@ JavaScript `require`:
 
 **Note:** Version bump only for package ffe-tables
 
-    <a name="8.1.8"></a>
+<a name="8.1.8"></a>
 ## [8.1.8](https://github.com/SpareBank1/designsystem/compare/ffe-tables@8.1.7...ffe-tables@8.1.8) (2018-02-22)
 
 

@@ -3,7 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-    <a name="5.0.1"></a>
+      <a name="5.0.2"></a>
+## [5.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@5.0.0...@sb1/ffe-searchable-dropdown-react@5.0.2) (2018-03-07)
+
+
+### Bug Fixes
+
+* Correct peerDependencies after breaking change ([aab59ce](https://github.com/SpareBank1/designsystem/commit/aab59ce))
+
+
+
+
+      <a name="5.0.1"></a>
 ## [5.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@5.0.0...@sb1/ffe-searchable-dropdown-react@5.0.1) (2018-03-02)
 
 
@@ -14,7 +25,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-    <a name="5.0.0"></a>
+  <a name="5.0.0"></a>
 # 5.0.0 (2018-02-25)
 
 
@@ -125,7 +136,7 @@ behavior, the consumer can create its own implementation of a
 
 
 
-  <a name="4.1.5"></a>
+<a name="4.1.5"></a>
 ## [4.1.5](https://github.com/SpareBank1/designsystem/compare/ffe-searchable-dropdown-react@4.1.4...ffe-searchable-dropdown-react@4.1.5) (2018-02-23)
 
 

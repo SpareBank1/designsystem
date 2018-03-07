@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="7.0.2"></a>
+## [7.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@7.0.0...@sb1/ffe-grid@7.0.2) (2018-03-07)
+
+
+### Bug Fixes
+
+* Correct peerDependencies after breaking change ([aab59ce](https://github.com/SpareBank1/designsystem/commit/aab59ce))
+
+
+
+
       <a name="7.0.1"></a>
 ## [7.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@7.0.0...@sb1/ffe-grid@7.0.1) (2018-03-02)
 
@@ -14,7 +25,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="7.0.0"></a>
+    <a name="7.0.0"></a>
 # 7.0.0 (2018-02-25)
 
 
@@ -106,7 +117,7 @@ JavaScript `require`:
 
 
 
-    <a name="6.0.12"></a>
+  <a name="6.0.12"></a>
 ## [6.0.12](https://github.com/SpareBank1/designsystem/compare/ffe-grid@6.0.11...ffe-grid@6.0.12) (2018-02-23)
 
 
@@ -114,7 +125,7 @@ JavaScript `require`:
 
 **Note:** Version bump only for package ffe-grid
 
-  <a name="6.0.11"></a>
+<a name="6.0.11"></a>
 ## [6.0.11](https://github.com/SpareBank1/designsystem/compare/ffe-grid@6.0.10...ffe-grid@6.0.11) (2018-02-22)
 
 
