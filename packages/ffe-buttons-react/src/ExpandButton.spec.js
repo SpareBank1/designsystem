@@ -37,7 +37,6 @@ describe('<ExpandButton />', () => {
         });
         it('renders a KryssIkon', () => {
             const wrapper = getWrapper({ isExpanded: true });
-            console.log(wrapper.children().debug());
             expect(wrapper.find(KryssIkon).exists()).toBe(true);
             expect(wrapper.find(KryssIkon).hasClass('ffe-button__icon')).toBe(true);
         });
