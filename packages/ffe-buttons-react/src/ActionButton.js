@@ -35,6 +35,8 @@ ActionButton.propTypes = {
     disabled: bool,
     /** The rendered element, like an `<a />` or `<Link />` */
     element: oneOfType([func, string]),
+    /** Applies the ghost modifier if true. */
+    ghost: bool,
     /** Ref-setting function passed to the button element */
     innerRef: func,
     /** Shows a loader if true */
@@ -43,6 +45,4 @@ ActionButton.propTypes = {
     leftIcon: node,
     /** Icon shown to the right of the label */
     rightIcon: node,
-    /** Applies the ghost modifier if true. */
-    ghost: bool,
 };
