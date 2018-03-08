@@ -28,6 +28,7 @@
         "styleguidist:server": "styleguidist server",
         "styleguidist:build": "styleguidist build",
         "test": "jest",
+        "test:ci": "jest --ci --coverage && cat ./coverage/lcov.info | coveralls && rimraf ./coverage",
         "test:watch": "jest --watch"
     },
     "devDependencies": {
@@ -41,6 +42,7 @@
         "babel-preset-react": "^6.24.1",
         "babel-preset-stage-3": "^6.24.1",
         "case": "^1.5.4",
+        "coveralls": "^3.0.0",
         "css-loader": "^0.28.7",
         "enzyme": "^3.3.0",
         "enzyme-adapter-react-16": "^1.1.1",

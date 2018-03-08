@@ -5,6 +5,7 @@
 node_modules
 
 # Built files
+coverage/
 dist/
 lib/
 src/styleguidist.html
