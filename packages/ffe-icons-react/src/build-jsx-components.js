@@ -1,9 +1,23 @@
 import caseUtil from 'case';
+import cheerio from 'cheerio';
 import fs from 'fs';
+import path from 'path';
 import mkdirp from 'mkdirp';
-import icons from '../tmp/icons';
 
 mkdirp.sync('./jsx');
+
+const createSvgMap = () => {
+    const map = {};
+    const iconsPath = path.join(__dirname, '..', 'node_modules', '@sb1', 'ffe-icons', 'icons');
+    fs.readdirSync(iconsPath)
+        .filter(fileName => fileName.match(/\.svg$/))
+        .forEach((fileName) => {
+            const iconPath = path.join(iconsPath, fileName);
+            const iconName = fileName.split('.svg')[0];
+            map[iconName] = String(fs.readFileSync(iconPath));
+        });
+    return map;
+};
 
 /**
  * We have to expect dash-cased attributes in the SVG files from ffe-icons but React doesn't really
@@ -12,20 +26,32 @@ mkdirp.sync('./jsx');
  *
  * Should this proplem (sic!) pop up more often, another solution should be sought
  * */
-const camelCaseSVGProps = svgString =>
-    svgString
+const toJsx = svgString => {
+    const $ = cheerio.load(svgString, {
+        xmlMode: true
+    });
+    const svg = $('svg');
+    // React does not support namespace definitions
+    svg.attr('xmlns', null);
+    svg.attr('xmlns:svg', null);
+    
+    svg.attr('height', 150);
+    svg.attr('width', 150);
+    
+    return $.html()
         .replace(/fill-rule/g, 'fillRule')
         .replace(/stroke-width/g, 'strokeWidth')
         .replace(/stroke-miterlimit/g, 'strokeMiterlimit');
+}
 
 /**
  * Creates a new React component and a corresponding .jsx file for each icon
  * */
-const createStandaloneJSX = iconName => `
+const createStandaloneJSX = (icons, iconName) => `
 import React from 'react';
 import { bool, string } from 'prop-types';
 
-const svg = ${camelCaseSVGProps(icons[iconName])};
+const svg = ${toJsx(icons[iconName])};
 
 const Icon = ({
     desc,
@@ -56,8 +82,10 @@ Icon.displayName = '${caseUtil.pascal(iconName)}';
 
 export default Icon;
 `;
+
+const icons = createSvgMap();
 Object.keys(icons).forEach(iconName =>
-    fs.writeFileSync(`./jsx/${iconName}.js`, createStandaloneJSX(iconName)),
+    fs.writeFileSync(`./jsx/${iconName}.js`, createStandaloneJSX(icons, iconName)),
 );
 
 /**

@@ -1,4 +1,2 @@
 # Specific ignores for ffe-icons-react
-iconlist.json
 jsx/
-tmp/
