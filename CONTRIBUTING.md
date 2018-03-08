@@ -10,6 +10,7 @@ issue her på Github med `question`-labelen. Om du heller vil kan du også spør
 
 * [Hvordan bidrar jeg?](#hvordan-bidrar-jeg)
   * [Som designer](#som-designer)
+    * [Github-konto og varsler](#github-konto-og-varsler)
   * [Som utvikler](#som-utvikler)
     * [Github-konto og arbeidsflyt](#github-konto-og-arbeidsflyt)
     * [Utviklingsmiljø](#utviklingsmiljø)
@@ -31,12 +32,36 @@ Her er litt relevant informasjon om hvordan vi utvikler FFE, og hvordan du kan b
 
 ### Som designer
 
-_Help us help you_ :bowing_man: Hva lurer du som designer på om designsystemet? Kommenter på [issue #39](https://github.com/SpareBank1/designsystem/issues/39)
-eller [kom med et endringsforslag direkte i denne teksten](https://help.github.com/articles/editing-files-in-your-repository/).
+> _Help us help you_ :bowing_man: Hva lurer du som designer på om bidrag til designsystemet? Kommenter på [issue #39](https://github.com/SpareBank1/designsystem/issues/39)
+> eller [kom med et endringsforslag direkte i denne teksten](https://help.github.com/articles/editing-files-in-your-repository/).
+
+Vi er mange team i SpareBank 1 og det er ikke alltid lett å holde seg i sync - det gjelder også i designsystemet.
+Som designer kan du bidra ved å si ifra når det skjer endringer i Verktøykassa gjennom å [åpne et Issue her på Github](https://help.github.com/articles/creating-an-issue/)
+og merke issuet med labelene `design` og `enhancement`. Da blir det enklere for en utvikler å begynne på jobben med å
+gjøre endringen i FFE.
+
+Du kan også bidra med å forbedre dokumentasjonen. Tekstendringer kan ofte [gjøres via webgrensesnittet til Github](https://help.github.com/articles/editing-files-in-your-repository/).
+Om du sitter fast kan du åpne et issue med den foreslåtte endringen.
+
+Bidra også gjerne med din ekspertise på spørsmål som allerede ligger under Issues (se etter `question`-labelen), eller å
+starte diskusjoner via nye issues!
+
+#### Github-konto og varsler
+
+Hvis du ikke har en Github-konto allerede kan du lage en [her](https://github.com/join). Du kan bruke din private e-post
+som hovedepost om du vil, men legg i hvertfall til SpareBank 1 e-posten din til kontoen.
+
+Medlemmer i SpareBank 1 organisasjonen blir satt opp som Watchers på designsystemet. Da får man varsler om all
+aktivitet. Det blir fort støyete og vanskelig å få med seg designrelaterte spørsmål og endringer. Du kan [_unwatche_](https://help.github.com/articles/watching-and-unwatching-repositories/)
+via dropdownen oppe til høyre her i repositoryet. Sett gjerne innstillingen til å bare varsle i diskusjoner du deltar
+i eller der du blir _mentioned_.
 
 ### Som utvikler
 
-For å fikse en bug eller legge til en feature trenger du i prinsippet to ting:
+Som utvikler kan du for eksempel bidra med å fikse bugs eller lage nye features, forbedre dokumentasjonen eller
+testdekningen, bidra som reviewer på pull requests, og åpne eller svare på issues som er rapportert inn.
+
+For å gjøre endringer i dette repositoriet trenger du i prinsippet to ting:
 
 1. En Github-konto
 2. Et utviklingsmiljø
@@ -49,13 +74,13 @@ For å komme med pull requests må man ha en Github-konto. Hvis du ikke har en a
 [her](https://github.com/join). Du kan bruke din private e-post som hovedepost om du vil, men legg i hvertfall til
 SpareBank 1 e-posten din til kontoen og [bruk den til commits for dette repoet](https://help.github.com/articles/setting-your-commit-email-address-in-git/).
 
-Om du ikke er en del av SpareBank 1 organisasjonen på Github og du er ansatt eller konsulent kan du kontakte @antidecaf
-eller @kwltrs for å bli lagt til. Da får du tilgang til å pushe brancher direkte til repositoriet.
+Om du ikke er en del av SpareBank 1 organisasjonen på Github og du er ansatt eller konsulent kan du bruke Servicedesk
+for å bestille tilgang. Da får du tilgang til å pushe brancher direkte til repositoriet.
 
 Alternativt kan du bruke forks (som er en mer vanlig workflow her på Github). Trykk på Fork-knappen oppe til høyre og
 jobb mot din egen fork for så å lage en pull request derfra når du er klar. Hvis du vil lese mer om denne workflowen og
-prøve deg fram i et annet repo har @wkillerud [et repo her](https://github.com/wkillerud/pr) hvor du kan lese mer og
-prøve alle stegene fra fork til merget PR.
+prøve deg fram i et annet repo har [wkillerud](https://github.com/wkillerud) [et repo her](https://github.com/wkillerud/pr)
+hvor du kan lese mer og prøve alle stegene fra fork til merget PR.
 
 Workflowen for en bug eller feature blir kort oppsummert denne:
 
@@ -69,6 +94,12 @@ til branchen din og lage en pull request på den måten. Se [Github sine hjelpes
 om du ikke finner fram :female_detective:
 7. Vent på en review. Du kan legge til tidligere bidragsytere som reviewers. :hourglass_flowing_sand:
 8. Når pull requesten er godkjent kan den merges, og endringen blir med i neste release av pakken :tada:
+
+Medlemmer i SpareBank 1 organisasjonen blir satt opp som Watchers på designsystemet. Da får man varsler om all
+aktivitet. Du kan [_unwatche_](https://help.github.com/articles/watching-and-unwatching-repositories/) via dropdownen oppe
+til høyre her i repositoryet - sett innstillingen til å varsle i diskusjoner du deltar i eller der du blir _mentioned_.
+Om du har tid og overskudd setter vi stor pris på om du beholder varsler for all aktivitet, bidrar inn som reviewer på
+pull requests og hjelper til med å labele og svare på issues som åpnes.
 
 #### Utviklingsmiljø
 
