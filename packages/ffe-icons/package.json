@@ -20,10 +20,7 @@
     "test": "npm run lint"
   },
   "dependencies": {
-    "deep-assign": "^2.0.0",
-    "mkdirp": "^0.5.1",
-    "svg-sprite": "^1.3.6",
-    "vinyl": "^2.0.1",
+    "svgstore": "^2.0.3",
     "yargs": "^6.5.0"
   },
   "devDependencies": {
