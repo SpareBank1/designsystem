@@ -16,7 +16,7 @@
     "build:babel": "babel jsx -d lib",
     "build:jsx-components": "babel-node ./src/build-jsx-components.js",
     "clean": "rimraf tmp jsx lib",
-    "ffe:icons": "ffe-icons --opts=designsystem/packages/ffe-icons-react/svg.sprite.config.json",
+    "ffe:icons": "ffe-icons --opts=svg.sprite.config.json",
     "lint": "eslint src/.",
     "test": "npm run lint"
   },
