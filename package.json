@@ -16,7 +16,7 @@
         "bootstrap": "lerna bootstrap",
         "build": "lerna run build && npm run build:css:ffe",
         "build:htdocs": "run-s build:packages build:css:* build:assets build:content build:styleguidist",
-        "build:assets": "cp -r src/assets/ dist/",
+        "build:assets": "mkdir -p dist/assets && cp src/assets/* dist/assets/",
         "build:css:ffe": "lessc packages/ffe-all.less dist/ffe.css",
         "build:css:styles": "lessc src/styles/styles.less dist/styles.css",
         "build:packages": "lerna run build",
