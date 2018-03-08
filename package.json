@@ -24,7 +24,6 @@
         "build:styleguidist": "styleguidist build",
         "lint": "lerna run --parallel lint",
         "start": "run-s build:packages build:css:* build:content styleguidist:server",
-        "styleguidist": "styleguidist",
         "styleguidist:server": "styleguidist server",
         "styleguidist:build": "styleguidist build",
         "test": "jest",
