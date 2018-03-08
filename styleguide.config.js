@@ -5,7 +5,7 @@ module.exports = {
     title: 'FFE',
     require: [
         'babel-polyfill',
-        path.join(__dirname, 'dist/ffe.css'),
+        path.join(__dirname, 'packages/ffe-all.less'),
         path.join(__dirname, 'src/styles/styles.less'),
     ],
     components: 'packages/ffe-*-react/src/**/[A-Z]+([A-Za-z]).js',
