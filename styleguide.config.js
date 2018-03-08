@@ -1,5 +1,9 @@
 const path = require('path');
+const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
+
 const components = require('./styleguide.components');
+
+const PRODUCTION = process.env.NODE_ENV === 'production';
 
 module.exports = {
     title: 'FFE',
@@ -33,18 +37,36 @@ module.exports = {
                 },
                 {
                     test: /\.css$/,
-                    use: ['style-loader', 'css-loader?url=false'],
+                    use: PRODUCTION ?
+                        ExtractTextWebpackPlugin.extract({
+                            fallback: 'style-loader',
+                            use: ['css-loader?url=false'],
+                        }) :
+                        ['style-loader', 'css-loader?url=false'],
+                    exclude: /node_modules/,
                 },
                 {
                     test: /\.less$/,
-                    use: [
-                        { loader: 'style-loader' },
-                        { loader: 'css-loader' },
-                        { loader: 'less-loader' },
-                    ],
+                    use: PRODUCTION ?
+                        ExtractTextWebpackPlugin.extract({
+                            fallback: 'style-loader',
+                            use: [
+                                { loader: 'css-loader' },
+                                { loader: 'less-loader' },
+                            ],
+                        }) :
+                        [
+                            { loader: 'style-loader' },
+                            { loader: 'css-loader' },
+                            { loader: 'less-loader' },
+                        ],
+                    exclude: /node_modules/,
                 },
             ],
         },
+        plugins: [
+            new ExtractTextWebpackPlugin('styles.css'),
+        ],
     },
     template: 'src/styleguidist.html',
     sections: [
