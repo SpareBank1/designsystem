@@ -25,7 +25,7 @@
         "styleguidist:server": "cross-env NODE_ENV=development styleguidist server",
         "styleguidist:build": "cross-env NODE_ENV=production styleguidist build",
         "test": "jest",
-        "test:ci": "npm run lint -- --concurrency 2 && jest --ci --coverage && cat ./coverage/lcov.info | coveralls && rimraf ./coverage",
+        "test:ci": "lerna run lint && jest --ci --coverage && cat ./coverage/lcov.info | coveralls && rimraf ./coverage",
         "test:watch": "jest --watch"
     },
     "devDependencies": {
