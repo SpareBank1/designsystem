@@ -37,28 +37,28 @@ module.exports = {
             ],
         },
         {
-            name: 'Merkevare',
-            content: 'merkevare/index.md',
+            name: 'Stil og tone',
+            content: 'stil-og-tone/index.md',
             sections: [
                 {
-                    name: 'Verdier',
-                    content: 'merkevare/verdier.md',
+                    name: 'Våre verdier',
+                    content: 'stil-og-tone/verdier.md',
                 },
                 {
                     name: 'Vår kampsak',
-                    content: 'merkevare/kampsak.md',
+                    content: 'stil-og-tone/kampsak.md',
                 },
                 {
                     name: 'Unikt for oss',
-                    content: 'merkevare/unikt-for-oss.md',
+                    content: 'stil-og-tone/unikt-for-oss.md',
                 },
                 {
                     name: 'Vår relasjon til kundene',
-                    content: 'merkevare/var-relasjon-til-kundene.md',
+                    content: 'stil-og-tone/var-relasjon-til-kundene.md',
                 },
                 {
                     name: 'Stil og tone',
-                    content: 'merkevare/stil-og-tone.md',
+                    content: 'stil-og-tone/stil-og-tone.md',
                 },
             ],
         },
@@ -106,6 +106,10 @@ module.exports = {
                 {
                     name: 'WCAG 2.0',
                     content: 'universell-utforming/wcag.md',
+                },
+                {
+                    name: 'Tips og råd',
+                    content: 'universell-utforming/tips.md',
                 },
                 {
                     name: 'Verktøy',
