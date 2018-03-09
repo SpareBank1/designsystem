@@ -17,7 +17,7 @@ Denne knappen er hvit med grønn outline og grønn tekst.
 ```js
 <ActionButton
     onClick={() => { alert('Bø!'); }}
-    className="ffe-action-button--ghost"
+    ghost={true}
 >
     Spooky!
 </ActionButton>
