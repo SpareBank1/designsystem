@@ -1,6 +1,7 @@
 # Felles Front End i SpareBank 1
 
 [![Build Status](https://travis-ci.org/SpareBank1/designsystem.svg?branch=master)](https://travis-ci.org/SpareBank1/designsystem)
+[![Coverage Status](https://coveralls.io/repos/github/SpareBank1/designsystem/badge.svg?branch=master)](https://coveralls.io/github/SpareBank1/designsystem?branch=master)
 
 Dette repositoryet inneholder designdokumentasjon, teknisk dokumentasjon, og kode for SpareBank 1 sitt designsystem og
 implementasjonen av det - Felles frontend (FFE).
