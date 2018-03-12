@@ -1,6 +1,6 @@
 {
-    "dest": "designsystem/packages/ffe-icons-react/tmp/",
-    "icons": ["*"],
+    "dest": "tmp",
+    "icons": "*",
     "config": {
         "mode": {
             "view": {
