@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="7.0.1"></a>
+## [7.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@7.0.0...@sb1/ffe-buttons@7.0.1) (2018-03-13)
+
+
+### Bug Fixes
+
+* **ffe-buttons:** Center button texts ([fede88a](https://github.com/SpareBank1/designsystem/commit/fede88a))
+
+
+
+
       <a name="7.0.0"></a>
 # [7.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@6.0.0...@sb1/ffe-buttons@7.0.0) (2018-03-07)
 
@@ -33,9 +44,9 @@ of this:
 <button class="ffe-[button-type]-button">
 <span class="ffe-[button-type]-button__label">
 <span class="ffe-[button-type]-button__label-text">
-  <img class="ffe-[button-type]-button__label-icon" alt="left icon" />
-  Click me
-  <img class="ffe-[button-type]-button__label-icon" alt="right icon" />
+<img class="ffe-[button-type]-button__label-icon" alt="left icon" />
+Click me
+<img class="ffe-[button-type]-button__label-icon" alt="right icon" />
 </span>
 <span class="ffe-[button-type]-button__label-spinner" />
 </span>
@@ -87,7 +98,7 @@ passed where, as well as which modifier flags are available.
 
 
 
-      <a name="6.0.1"></a>
+    <a name="6.0.1"></a>
 ## [6.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@6.0.0...@sb1/ffe-buttons@6.0.1) (2018-03-02)
 
 
@@ -98,7 +109,7 @@ passed where, as well as which modifier flags are available.
 
 
 
-    <a name="6.0.0"></a>
+  <a name="6.0.0"></a>
 # 6.0.0 (2018-02-25)
 
 
@@ -196,7 +207,7 @@ JavaScript `require`:
 
 
 
-  <a name="5.2.3"></a>
+<a name="5.2.3"></a>
 ## [5.2.3](https://github.com/SpareBank1/designsystem/compare/ffe-buttons@5.2.2...ffe-buttons@5.2.3) (2018-02-23)
 
 

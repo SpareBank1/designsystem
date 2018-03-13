@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-buttons-react",
-  "version": "10.0.0",
+  "version": "10.0.1",
   "description": "React implementation of ffe-buttons",
   "keywords": [
     "ffe"
@@ -26,7 +26,7 @@
     "setupTestFrameworkScriptFile": "../../test-setup.js"
   },
   "dependencies": {
-    "@sb1/ffe-icons-react": "^5.0.2",
+    "@sb1/ffe-icons-react": "^5.0.3",
     "classnames": "^2.2.5",
     "prop-types": "^15.6.0"
   },

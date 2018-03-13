@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="11.0.0"></a>
+# [11.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@10.1.0...@sb1/ffe-icons@11.0.0) (2018-03-13)
+
+
+### Bug Fixes
+
+* **ffe-icons:** Makes build parameter `--opts` relative to cwd ([24d75e0](https://github.com/SpareBank1/designsystem/commit/24d75e0)), closes [#67](https://github.com/SpareBank1/designsystem/issues/67)
+
+
+### BREAKING CHANGES
+
+* **ffe-icons:** This commit makes the build script use built-in
+functionality of `yargs` and lets the parameter `--opts` to be handled
+as a relative path to `process.cwd()`.
+
+See commit 5cfba06d493a0d70ca41babe3e71d8a71042dbed for an example on
+how to migrate.
+
+
+
+
       <a name="10.1.0"></a>
 # [10.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@10.0.0...@sb1/ffe-icons@10.1.0) (2018-03-07)
 
@@ -20,7 +41,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="10.0.1"></a>
+    <a name="10.0.1"></a>
 ## [10.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@10.0.0...@sb1/ffe-icons@10.0.1) (2018-03-02)
 
 
@@ -31,7 +52,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-    <a name="10.0.0"></a>
+  <a name="10.0.0"></a>
 # 10.0.0 (2018-02-25)
 
 
@@ -149,7 +170,7 @@ release
 
 
 
-  <a name="9.0.5"></a>
+<a name="9.0.5"></a>
 ## [9.0.5](https://github.com/SpareBank1/designsystem/compare/ffe-icons@9.0.4...ffe-icons@9.0.5) (2018-02-23)
 
 

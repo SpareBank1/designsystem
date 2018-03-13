@@ -3,6 +3,57 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0"></a>
+# [3.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-radio-button-react@2.0.2...@sb1/ffe-radio-button-react@3.0.0) (2018-03-13)
+
+
+### Features
+
+* **ffe-radio-button-react:** Reimplement ([5734d87](https://github.com/SpareBank1/designsystem/commit/5734d87))
+
+
+### BREAKING CHANGES
+
+* **ffe-radio-button-react:** This commit reimplements the
+`ffe-radio-button-react` package, and modernizes its APIs.
+
+This change removes deprecated APIs, and instead takes a fresh approach
+to improve the developer experience and design consistency.
+
+Here is a non-exhaustive list of breaking changes:
+
+*`<RadioButton />`*
+- `aria-invalid` prop must be `'true'` or `'false'` now - no booleans!
+- `invalid` prop is removed - use `aria-invalid`
+
+*`<RadioSwitch />`*
+- The `<RadioSwitch />` is no longer wrapped in a `RadioButtonGroup`
+component! Wrap it yourself - create a wrapping component if it's a lot
+of work for your usecase.
+- `aria-invalid` prop must be `'true'` or `'false'` now - no booleans!
+- `invalid` prop is removed - use `aria-invalid`
+- `leftOption` object is now replaced by two props - `leftLabel` and
+`leftValue`
+- `rightOption` object is now replaced by two props - `rightLabel` and
+`rightValue`.
+
+*`<RadioButtonInputGroup />`*
+- This component now requires you to pass a function as a child. You can
+[read more about this pattern here](https://reactjs.org/docs/render-props.html).
+The function receives an object with all props relevant to all options.
+Spread these to every radio button.
+- `buttons` prop is deprecated - pass your choices in as children
+- `aria-invalid` prop must be `'true'` or `'false'` now - no booleans!
+- `invalid` prop is removed - use `aria-invalid`
+
+Please refer to the documentation for usage examples.
+
+Finally, this commit documents this package, which had previously
+been forgotten about.
+
+
+
+
 <a name="2.0.2"></a>
 ## [2.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-radio-button-react@2.0.0...@sb1/ffe-radio-button-react@2.0.2) (2018-03-07)
 
