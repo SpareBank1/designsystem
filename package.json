@@ -70,6 +70,10 @@
         "webpack": "^3.8.1"
     },
     "jest": {
-        "setupTestFrameworkScriptFile": "./test-setup.js"
+        "setupTestFrameworkScriptFile": "./test-setup.js",
+        "coveragePathIgnorePatterns": [
+            "/node_modules/",
+            "<rootDir>/packages/.*/lib/"
+        ]
     }
 }
