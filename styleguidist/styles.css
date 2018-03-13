@@ -2694,6 +2694,9 @@ a.ffe-inline-button--back {
     margin-bottom: 0;
   }
 }
+.ffe-radio-switch + input + .ffe-radio-switch {
+  margin-left: 5px;
+}
 .ffe-radio-input:checked + .ffe-radio-switch {
   border-color: #002776;
   background-color: #002776;
@@ -4165,9 +4168,6 @@ input:not([type='radio']):not([type='checkbox']) {
 }
 .ffe-message-box__box--error {
   background-color: #F3BBAA;
-}
-.ffe-message-box__box--action {
-  background-color: #F4F4F4;
 }
 .ffe-message-box__title--success {
   color: #262626;
