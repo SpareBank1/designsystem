@@ -13,6 +13,13 @@ module.exports = {
         path.join(__dirname, 'src/styles/styles.less'),
     ],
     components: 'packages/ffe-*-react/src/**/[A-Z]+([A-Za-z]).js',
+    ignore: [
+        '**/__tests__/**',
+        '**/*.test.{js,jsx,ts,tsx}',
+        '**/*.spec.{js,jsx,ts,tsx}',
+        '**/Base*.js',
+        '**/InlineBase*.js',
+    ],
     styleguideComponents: components,
     styleguideDir: 'dist/styleguidist',
     theme: {
