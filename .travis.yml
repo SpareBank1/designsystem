@@ -16,5 +16,6 @@ deploy:
   project-name: "SpareBank 1 Designsystem"
   commiter-from-gh: true        # Set so Travis will pose as the owner of the access token. Only this account is allowed to push to gh-pages.
   target-branch: gh-pages
+  keep-history: true            # Required since branch is protected
   on:
     branch: master
