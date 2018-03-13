@@ -164,6 +164,10 @@ module.exports = {
             components: 'packages/ffe-checkbox-react/src/[A-Z]+([A-Za-z]).js',
         },
         {
+            name: 'Radioknapper',
+            components: 'packages/ffe-radio-button-react/src/[A-Z]+([A-Za-z]).js',
+        },
+        {
             name: 'Datepicker',
             components:
                 'packages/ffe-datepicker-react/src/**/{Datepicker,Calendar,Input}.js',

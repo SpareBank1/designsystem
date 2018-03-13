@@ -21,6 +21,7 @@
     "setupTestFrameworkScriptFile": "../../test-setup.js"
   },
   "dependencies": {
+    "@sb1/ffe-form-react": "^3.0.0",
     "classnames": "^2.2.5",
     "prop-types": "^15.6.0",
     "uuid": "^3.1.0"
