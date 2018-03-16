@@ -33,6 +33,7 @@ const MODIFIER_LIST = [
     'noBottomPadding',
     'reverse',
     'start',
+    'centerText',
     'top',
 ];
 
@@ -119,6 +120,8 @@ GridCol.propTypes = {
     bottom: bool,
     /** Center content horizontally */
     center: bool,
+    /** Center text content horizontally */
+    centerText: bool,
     /** The content of the column */
     children: node,
     /** Place content elements to the right of the column */
