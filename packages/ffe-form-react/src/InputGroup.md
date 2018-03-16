@@ -6,7 +6,7 @@ const { Input } = require('.');
 
 <InputGroup
     label="Telefonnummer"
-    tooltop="Vi bruker telefonnummer for å sende deg kvittering på SMS"
+    tooltip="Vi bruker telefonnummer for å sende deg kvittering på SMS"
 >
     <Input
         type="tel"
