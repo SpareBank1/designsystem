@@ -58,6 +58,12 @@ describe('GridCol', () => {
         expect(el.hasClass('ffe-grid__col--center')).toBe(true);
     });
 
+    it('sets the center modifier if the value is boolean true', () => {
+        const el = renderShallow({ centerText: true });
+
+        expect(el.hasClass('ffe-grid__col--center-text')).toBe(true);
+    });
+
     it('sets the center modifier as a string', () => {
         const el = renderShallow({ center: 'true' });
 
@@ -88,6 +94,7 @@ describe('GridCol', () => {
             md: 8,
             lg: { cols: 2 },
             center: true,
+            centerText: true,
             bottom: true,
             between: true,
             horizontal: true,
@@ -99,6 +106,7 @@ describe('GridCol', () => {
         expect(el.hasClass('ffe-grid__col--md-8')).toBe(true);
         expect(el.hasClass('ffe-grid__col--lg-2')).toBe(true);
         expect(el.hasClass('ffe-grid__col--center')).toBe(true);
+        expect(el.hasClass('ffe-grid__col--center-text')).toBe(true);
         expect(el.hasClass('ffe-grid__col--bottom')).toBe(true);
         expect(el.hasClass('ffe-grid__col--between')).toBe(true);
         expect(el.hasClass('ffe-grid__col--horizontal')).toBe(true);

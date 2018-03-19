@@ -33,9 +33,9 @@ const MODIFIER_LIST = [
     'noBottomPadding',
     'reverse',
     'start',
+    'centerText',
     'top',
 ];
-const SIZE_LIST = ['sm', 'md', 'lg'];
 
 const sizeClasses = (size, def) => {
     switch (typeof def) {
@@ -72,7 +72,7 @@ export default class GridCol extends Component {
         const {
             children,
             className,
-            element,
+            element: Element,
             lg,
             md,
             sm,
@@ -95,8 +95,6 @@ export default class GridCol extends Component {
             .filter(x => x)
             .join(' ');
 
-        const Element = element || 'div';
-
         return (
             <Element className={classes} {...rest}>
                 {children}
@@ -105,30 +103,78 @@ export default class GridCol extends Component {
     }
 }
 
+GridCol.defaultProps = {
+    element: 'div',
+};
+
 GridCol.propTypes = {
     /** Any extra classes are attached to the root node, in addition to ffe-grid__col classes */
     className: string,
     /** Specify the DOM element being used to create the GridCol */
     element: node,
-    ...MODIFIER_LIST.reduce(
-        (props, mod) => ({
-            ...props,
-            [mod]: oneOfType([bool, string]),
+    /** Distribute remaining space around the content elements */
+    around: bool,
+    /** Distribute remaining space between the content elements */
+    between: bool,
+    /** Place content elements at the bottom of the column */
+    bottom: bool,
+    /** Center content horizontally */
+    center: bool,
+    /** Center text content horizontally */
+    centerText: bool,
+    /** The content of the column */
+    children: node,
+    /** Place content elements to the right of the column */
+    end: bool,
+    /** Layout column content horizontally and flip flex direction */
+    horizontal: bool,
+    /** Center content vertically */
+    middle: bool,
+    /** Remove bottom padding */
+    noBottomPadding: bool,
+    /** Reverse layout direction */
+    reverse: bool,
+    /** Place content elements to the left of the column */
+    start: bool,
+    /** Place content elements at the top of the column */
+    top: bool,
+    /** Size modifiers for small screen sizes */
+    sm: oneOfType([
+        /** Number of columns, 0-12 */
+        number,
+        /** Number of columns, 0-12 */
+        string,
+        shape({
+            /** Number of columns, 0-12 */
+            cols: oneOfType([number, string]),
+            /** Number of colums offset, 0-12 */
+            offset: oneOfType([number, string]),
         }),
-        {},
-    ),
-    ...SIZE_LIST.reduce(
-        (props, size) => ({
-            ...props,
-            [size]: oneOfType([
-                number,
-                string,
-                shape({
-                    cols: oneOfType([number, string]),
-                    offset: oneOfType([number, string]),
-                }),
-            ]),
+    ]),
+    /** Size modifiers for medium screen sizes */
+    md: oneOfType([
+        /** Number of columns, 0-12 */
+        number,
+        /** Number of columns, 0-12 */
+        string,
+        shape({
+            /** Number of columns, 0-12 */
+            cols: oneOfType([number, string]),
+            /** Number of colums offset, 0-12 */
+            offset: oneOfType([number, string]),
         }),
-        {},
-    ),
+    ]),
+    /** Size modifiers for large screen sizes */
+    lg: oneOfType([
+        /** Number of columns, 0-12 */
+        number,
+        /** Number of columns, 0-12 */
+        string,
+        shape({
+            /** Number of columns, 0-12 */
+            cols: oneOfType([number, string]),
+            /** Number of colums offset, 0-12 */
+            offset: oneOfType([number, string]),
+        }),
+    ]),
 };
