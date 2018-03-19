@@ -22,7 +22,6 @@ const RadioButtonInputGroup = props => {
         inline,
         label,
         name,
-        onChange,
         selectedValue,
         tooltip,
         ...rest
@@ -32,7 +31,6 @@ const RadioButtonInputGroup = props => {
         'aria-invalid': ariaInvalid || String(!!fieldMessage),
         inline,
         name,
-        onChange,
         selectedValue,
     };
 
@@ -43,7 +41,6 @@ const RadioButtonInputGroup = props => {
     return (
         <fieldset
             className={classNames('ffe-fieldset', 'ffe-input-group', className)}
-            onChange={onChange}
             {...rest}
         >
             {label && (
@@ -56,10 +53,6 @@ const RadioButtonInputGroup = props => {
             {fieldMessageContent}
         </fieldset>
     );
-};
-
-RadioButtonInputGroup.defaultProps = {
-    onChange: f => f,
 };
 
 RadioButtonInputGroup.propTypes = {

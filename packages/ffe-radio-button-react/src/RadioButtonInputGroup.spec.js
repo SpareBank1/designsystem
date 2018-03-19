@@ -22,12 +22,10 @@ describe('<RadioButtonGroup />', () => {
     describe('children', () => {
         it('is called with correct parameters', () => {
             const childrenSpy = jest.fn();
-            const onChangeSpy = jest.fn();
             getWrapper({
                 children: childrenSpy,
                 inline: true,
                 name: 'test_name',
-                onChange: onChangeSpy,
                 selectedValue: 'selected_value',
             });
 
@@ -36,7 +34,6 @@ describe('<RadioButtonGroup />', () => {
                 expect.objectContaining({
                     inline: true,
                     name: 'test_name',
-                    onChange: onChangeSpy,
                     selectedValue: 'selected_value',
                 }),
             );
