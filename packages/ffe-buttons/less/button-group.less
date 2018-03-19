@@ -1,8 +1,11 @@
 .ffe-button-group {
+    display: flex;
     padding: 40px 0;
 
     .ffe-button,
     .ffe-inline-button {
+        flex-direction: column;
+        justify-content: center;
         margin: 0 auto 10px;
     }
 
@@ -26,7 +29,7 @@
     @media screen and (min-width: @breakpoint-sm) {
         .ffe-button,
         .ffe-inline-button {
-            display: inline-block;
+            display: inline-flex;
             margin: 0 0 10px 10px;
             width: auto;
 
