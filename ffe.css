@@ -1285,10 +1285,13 @@ html {
   width: 100%;
 }
 .ffe-button-group {
+  display: flex;
   padding: 40px 0;
 }
 .ffe-button-group .ffe-button,
 .ffe-button-group .ffe-inline-button {
+  flex-direction: column;
+  justify-content: center;
   margin: 0 auto 10px;
 }
 .ffe-button-group--thin {
@@ -1307,7 +1310,7 @@ html {
 @media screen and (min-width: 480px) {
   .ffe-button-group .ffe-button,
   .ffe-button-group .ffe-inline-button {
-    display: inline-block;
+    display: inline-flex;
     margin: 0 0 10px 10px;
     width: auto;
   }
@@ -3203,6 +3206,9 @@ input:not([type='radio']):not([type='checkbox']) {
 }
 .ffe-grid__col--between {
   justify-content: space-between;
+}
+.ffe-grid__col--center-text {
+  text-align: center;
 }
 .ffe-grid__col--no-bottom-padding,
 .ffe-grid--condensed .ffe-grid__col--no-bottom-padding {
