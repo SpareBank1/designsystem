@@ -17,7 +17,7 @@
         "build": "lerna run build && npm run build:css",
         "build:htdocs": "run-s build:packages build:css build:assets build:content styleguidist:build",
         "build:assets": "mkdir -p dist/assets && cp src/assets/* dist/assets/",
-        "build:css": "lessc packages/ffe-all.less dist/ffe.css",
+        "build:css": "lessc --autoprefix=\"last 3 versions\" packages/ffe-all.less dist/ffe.css",
         "build:packages": "lerna run build",
         "build:content": "node bin/build-content.js",
         "lint": "lerna run --parallel lint",
