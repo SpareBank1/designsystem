@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="7.0.2"></a>
+## [7.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@7.0.1...@sb1/ffe-buttons@7.0.2) (2018-03-22)
+
+
+### Bug Fixes
+
+* **ffe-buttons:** Fix vertical alignment in group ([57f5219](https://github.com/SpareBank1/designsystem/commit/57f5219))
+
+
+
+
       <a name="7.0.1"></a>
 ## [7.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@7.0.0...@sb1/ffe-buttons@7.0.1) (2018-03-13)
 
@@ -14,7 +25,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="7.0.0"></a>
+    <a name="7.0.0"></a>
 # [7.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@6.0.0...@sb1/ffe-buttons@7.0.0) (2018-03-07)
 
 
@@ -98,7 +109,7 @@ passed where, as well as which modifier flags are available.
 
 
 
-    <a name="6.0.1"></a>
+  <a name="6.0.1"></a>
 ## [6.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@6.0.0...@sb1/ffe-buttons@6.0.1) (2018-03-02)
 
 
@@ -109,7 +120,7 @@ passed where, as well as which modifier flags are available.
 
 
 
-  <a name="6.0.0"></a>
+<a name="6.0.0"></a>
 # 6.0.0 (2018-02-25)
 
 
