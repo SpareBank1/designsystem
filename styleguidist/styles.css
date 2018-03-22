@@ -2058,7 +2058,7 @@ a.ffe-inline-button--back {
   top: 60px;
   width: 150px;
 }
-@media screen and (min-width 768px) {
+@media screen and (min-width: 768px) {
   .ffe-chart-donut__description {
     left: 25px;
   }
