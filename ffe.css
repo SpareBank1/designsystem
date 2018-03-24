@@ -1435,6 +1435,7 @@ html {
 }
 .ffe-button--expanded {
   padding: 8px;
+  width: 45px;
 }
 .ffe-button--task {
   background-color: #FFF;
