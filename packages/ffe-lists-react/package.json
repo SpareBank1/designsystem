@@ -34,7 +34,8 @@
     "react-dom": "^16.2.0"
   },
   "peerDependencies": {
-    "@sb1/ffe-lists": "^5.0.0"
+    "@sb1/ffe-lists": "^5.0.0",
+    "react": "^16.2.0"
   },
   "publishConfig": {
     "access": "public"
