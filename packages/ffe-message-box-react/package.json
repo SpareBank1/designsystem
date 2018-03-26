@@ -36,7 +36,8 @@
     "react-dom": "^16.2.0"
   },
   "peerDependencies": {
-    "@sb1/ffe-message-box": "^5.0.0"
+    "@sb1/ffe-message-box": "^5.0.0",
+    "react": "^16.2.0"
   },
   "publishConfig": {
     "access": "public"

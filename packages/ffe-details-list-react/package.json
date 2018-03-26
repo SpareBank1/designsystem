@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-details-list-react",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "license": "MIT",
   "author": "SpareBank 1",
   "files": [
@@ -23,7 +23,7 @@
     "setupTestFrameworkScriptFile": "../../test-setup.js"
   },
   "dependencies": {
-    "@sb1/ffe-grid-react": "^7.0.2",
+    "@sb1/ffe-grid-react": "^7.1.0",
     "classnames": "^2.2.5"
   },
   "devDependencies": {
@@ -34,6 +34,10 @@
     "jest": "^22.4.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
+  },
+  "peerDependencies": {
+    "@sb1/ffe-details-list": "^9.0.2",
+    "react": "^16.2.0"
   },
   "publishConfig": {
     "access": "public"

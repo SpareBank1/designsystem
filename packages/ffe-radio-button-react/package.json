@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-radio-button-react",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "license": "MIT",
   "files": [
     "lib",
@@ -30,6 +30,9 @@
     "jest": "^22.4.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
+  },
+  "peerDependencies": {
+    "react": "^16.2.0"
   },
   "publishConfig": {
     "access": "public"
