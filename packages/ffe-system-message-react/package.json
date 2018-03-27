@@ -22,7 +22,10 @@
     "setupTestFrameworkScriptFile": "../../test-setup.js"
   },
   "dependencies": {
-    "prop-types": "^15.6.0"
+    "@sb1/ffe-grid-react": "^7.0.2",
+    "classnames": "^2.2.5",
+    "prop-types": "^15.6.0",
+    "react-collapse": "^4.0.3"
   },
   "devDependencies": {
     "@sb1/ffe-icons-react": "^5.0.3",
