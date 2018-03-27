@@ -13,12 +13,13 @@ import {
 import TableComponent from './Table/Table';
 import SortableTableComponent from './SortableTable/SortableTable';
 
-const Table = ({ sortable, ...rest }) =>
-    sortable ? (
-        <SortableTableComponent {...rest} />
-    ) : (
-        <TableComponent {...rest} />
-    );
+const Table = props => {
+    const { sortable, ...rest } = props;
+    if (sortable) {
+        return <SortableTableComponent {...rest} />;
+    }
+    return <TableComponent {...rest} />;
+};
 
 Table.propTypes = {
     caption: node,
