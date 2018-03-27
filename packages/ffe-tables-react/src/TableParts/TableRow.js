@@ -3,34 +3,48 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import TableCell from './TableCell';
 
-const TableRow = ({ cells, columns, onClick, onKeyDown, trClasses, expandable, expanded }) => {
-    const expandableProps = expandable ? { tabIndex:'0', onClick, onKeyDown } : {};
+const TableRow = props => {
+    const {
+        cells,
+        columns,
+        onClick,
+        onKeyDown,
+        trClasses,
+        expandable,
+        expanded,
+    } = props;
+
+    const expandableProps = expandable && {
+        'aria-expanded': expanded,
+        onClick,
+        onKeyDown,
+        role: 'button',
+        tabIndex: '0',
+    };
     return (
         <tr
-            className={classNames(
-                'ffe-table__row',
-                trClasses
-            )}
-            role="button"
-            aria-expanded={ expanded }
-            { ...expandableProps }
+            className={classNames('ffe-table__row', trClasses)}
+            {...expandableProps}
         >
-            { columns.map((column, index) => {
+            {columns.map((column, index) => {
                 return (
                     <TableCell
-                        alignRight={ column.alignRight }
-                        alignTop={ column.alignTop }
-                        columnHeader={ column.header }
-                        key={ index }
+                        alignRight={column.alignRight}
+                        alignTop={column.alignTop}
+                        columnHeader={column.header}
+                        key={index}
                         tdClasses={classNames(
-                            { 'ffe-table__cell--collapsed' : column.key === 'expandIcon' },
-                            { 'ffe-table--hide-sm' : column.hideOnMobile },
-                            { 'ffe-table--hide-md' : column.hideOnSmallTablet },
-                            { 'ffe-table--hide-lg' : column.hideOnTablet },
-                            { 'ffe-table--hide-xlg' : column.hideOnDesktop }
+                            {
+                                'ffe-table__cell--collapsed':
+                                    column.key === 'expandIcon',
+                            },
+                            { 'ffe-table--hide-sm': column.hideOnMobile },
+                            { 'ffe-table--hide-md': column.hideOnSmallTablet },
+                            { 'ffe-table--hide-lg': column.hideOnTablet },
+                            { 'ffe-table--hide-xlg': column.hideOnDesktop },
                         )}
                     >
-                        { cells[column.key] }
+                        {cells[column.key]}
                     </TableCell>
                 );
             })}
@@ -50,7 +64,7 @@ TableRow.propTypes = {
             hideOnSmallTablet: PropTypes.bool,
             hideOnTablet: PropTypes.bool,
             key: PropTypes.string,
-        })
+        }),
     ).isRequired,
     expandable: PropTypes.bool,
     expanded: PropTypes.bool,
