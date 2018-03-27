@@ -7,24 +7,27 @@ const TableFooter = ({ columns }) => {
     return (
         <tfoot className="ffe-table__footer">
             <tr className="ffe-table__row">
-                { columns.map((column, index) => {
+                {columns.map((column, index) => {
                     if (column === null) {
-                        return <td key={ index } />;
+                        return <td key={index} />;
                     }
                     return (
                         <TableCell
-                            key={ index }
-                            columnHeader={ column.header }
-                            alignRight={ column.alignRight }
-                            alignTop={ column.alignTop }
-                            tdClasses={ classNames(
-                                { 'ffe-table--hide-sm' : column.hideOnMobile },
-                                { 'ffe-table--hide-md' : column.hideOnSmallTablet },
-                                { 'ffe-table--hide-lg' : column.hideOnTablet },
-                                { 'ffe-table--hide-xlg' : column.hideOnDesktop }
-                            ) }
+                            key={index}
+                            columnHeader={column.header}
+                            alignRight={column.alignRight}
+                            alignTop={column.alignTop}
+                            tdClasses={classNames(
+                                { 'ffe-table--hide-sm': column.hideOnMobile },
+                                {
+                                    'ffe-table--hide-md':
+                                        column.hideOnSmallTablet,
+                                },
+                                { 'ffe-table--hide-lg': column.hideOnTablet },
+                                { 'ffe-table--hide-xlg': column.hideOnDesktop },
+                            )}
                         >
-                            { column.footer }
+                            {column.footer}
                         </TableCell>
                     );
                 })}
@@ -44,7 +47,7 @@ TableFooter.propTypes = {
             hideOnMobile: PropTypes.bool,
             hideOnSmallTablet: PropTypes.bool,
             hideOnTablet: PropTypes.bool,
-        })
+        }),
     ),
 };
 
