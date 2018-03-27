@@ -1,6 +1,5 @@
 import errorTypes from './error-types';
-
-const dateRegex = /^(\d{1,2})(\.| |-|\/)?(\d{1,2})\2(\d{2}(\d{2})?)$/;
+import {validateDate} from "../util/dateUtil";
 
 function isDate(date) {
     return (
@@ -53,7 +52,7 @@ SimpleDateFactory.fromString = function fromString(
     onSuccess = noop,
     onError = noop,
 ) {
-    const match = dateRegex.exec(string);
+    const match = validateDate(string);
 
     if (!match) {
         onError(errorTypes.INVALID_DATE_FORMAT);

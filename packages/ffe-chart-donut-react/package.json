@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-chart-donut-react",
-  "version": "2.0.2",
+  "version": "2.0.4",
   "description": "Donut chart in SVG",
   "keywords": [
     "ffe"
@@ -33,10 +33,11 @@
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "jest": "^22.4.0",
-    "react": "^16.2.0"
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
   },
   "peerDependencies": {
-    "react": "^15.4.0 || ^16.0.0"
+    "react": "^16.2.0"
   },
   "publishConfig": {
     "access": "public"

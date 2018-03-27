@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-message-box-react",
-  "version": "4.0.3",
+  "version": "4.0.4",
   "license": "MIT",
   "author": "SpareBank 1",
   "files": [
@@ -22,7 +22,7 @@
     "setupTestFrameworkScriptFile": "../../test-setup.js"
   },
   "dependencies": {
-    "@sb1/ffe-icons-react": "^5.0.3",
+    "@sb1/ffe-icons-react": "^5.0.4",
     "classnames": "^2.2.5"
   },
   "devDependencies": {
@@ -36,7 +36,8 @@
     "react-dom": "^16.2.0"
   },
   "peerDependencies": {
-    "@sb1/ffe-message-box": "^5.0.0"
+    "@sb1/ffe-message-box": "^5.0.0",
+    "react": "^16.2.0"
   },
   "publishConfig": {
     "access": "public"

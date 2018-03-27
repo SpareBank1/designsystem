@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-icons-react",
-  "version": "5.0.3",
+  "version": "5.0.4",
   "description": "React-komponenter for ffe-icons",
   "license": "MIT",
   "files": [
@@ -33,6 +33,9 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "rimraf": "^2.6.2"
+  },
+  "peerDependencies": {
+    "react": "^16.2.0"
   },
   "publishConfig": {
     "access": "public"

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="9.0.4"></a>
+## [9.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.0.3...@sb1/ffe-form@9.0.4) (2018-03-22)
+
+
+### Bug Fixes
+
+* **ffe-form:** Use actual icons for field messages as opposed to text intended to look like icons ([0baa0a8](https://github.com/SpareBank1/designsystem/commit/0baa0a8))
+
+
+
+
       <a name="9.0.3"></a>
 ## [9.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.0.2...@sb1/ffe-form@9.0.3) (2018-03-13)
 
@@ -14,7 +25,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="9.0.2"></a>
+    <a name="9.0.2"></a>
 ## [9.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.0.0...@sb1/ffe-form@9.0.2) (2018-03-07)
 
 
@@ -26,7 +37,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-    <a name="9.0.1"></a>
+  <a name="9.0.1"></a>
 ## [9.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.0.0...@sb1/ffe-form@9.0.1) (2018-03-02)
 
 
@@ -38,7 +49,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-  <a name="9.0.0"></a>
+<a name="9.0.0"></a>
 # 9.0.0 (2018-02-25)
 
 
