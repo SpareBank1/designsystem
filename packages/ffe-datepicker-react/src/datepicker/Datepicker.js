@@ -8,6 +8,7 @@ import DateInput from '../input';
 import SimpleDate from '../datelogic/simpledate';
 import dateErrorTypes from '../datelogic/error-types';
 import i18n from '../i18n/i18n';
+import { validateDate } from '../util/dateUtil';
 
 export default class Datepicker extends Component {
     constructor(props) {
@@ -18,6 +19,7 @@ export default class Datepicker extends Component {
             openOnFocus: true,
             minDate: props.minDate,
             maxDate: props.maxDate,
+            lastValidDate: '',
         };
 
         this.datepickerId = uuid.v4();
@@ -116,6 +118,9 @@ export default class Datepicker extends Component {
                 ) {
                     error(dateErrorTypes.MAX_DATE);
                 }
+                this.setState({
+                    lastValidDate: formattedDate,
+                });
 
                 onValidationComplete(formattedDate);
             },
@@ -139,13 +144,16 @@ export default class Datepicker extends Component {
                     onValidationComplete(value);
                     return;
                 }
-
                 error(errorType);
-
+                nextState = {
+                    ...nextState,
+                    openOnFocus: true,
+                    ariaInvalid: true,
+                    displayDatePicker: true,
+                };
                 onValidationComplete(value);
             },
         );
-
         this.setState(nextState);
     }
 
@@ -154,6 +162,7 @@ export default class Datepicker extends Component {
     }
 
     onInputKeydown(evt) {
+        this.openCalendar();
         if (evt.which === KeyCode.ENTER) {
             if (!this.state.displayDatePicker) {
                 this.openCalendar();
@@ -223,13 +232,10 @@ export default class Datepicker extends Component {
 
     closeCalendarSetInputFocus() {
         this.removeGlobalEventListeners();
-        this.setState(
-            {
-                openOnFocus: false,
-                displayDatePicker: false,
-            },
-            () => this.dateInputRef.focus(),
-        );
+        this.setState({
+            openOnFocus: false,
+            displayDatePicker: false,
+        });
     }
 
     addGlobalEventListeners() {
@@ -260,7 +266,8 @@ export default class Datepicker extends Component {
             onChange,
             value,
         } = this.props;
-        const { minDate, maxDate } = this.state;
+        const { minDate, maxDate, lastValidDate } = this.state;
+        const latestValue = validateDate(value) ? value : lastValidDate;
 
         if (this.state.ariaInvalid) {
             inputProps['aria-describedby'] = `date-input-validation-${
@@ -305,19 +312,6 @@ export default class Datepicker extends Component {
                         value={value}
                     />
 
-                    {this.state.ariaInvalid &&
-                        !hideErrors && (
-                            <div
-                                id={`date-input-validation-${
-                                    this.datepickerId
-                                }`}
-                                className="ffe-body-text ffe-field-error-message"
-                                role="alert"
-                            >
-                                {this.state.errorMessage}
-                            </div>
-                        )}
-
                     {this.state.displayDatePicker && (
                         <Calendar
                             calendarClassName={calendarClassName}
@@ -327,10 +321,21 @@ export default class Datepicker extends Component {
                             minDate={minDate}
                             onBlurHandler={this.blurHandler}
                             onDatePicked={this.datePickedHandler}
-                            selectedDate={value}
+                            selectedDate={latestValue}
                         />
                     )}
                 </div>
+
+                {this.state.ariaInvalid &&
+                    !hideErrors && (
+                        <div
+                            id={`date-input-validation-${this.datepickerId}`}
+                            className="ffe-body-text ffe-field-error-message"
+                            role="alert"
+                        >
+                            {this.state.errorMessage}
+                        </div>
+                    )}
             </div>
         );
     }

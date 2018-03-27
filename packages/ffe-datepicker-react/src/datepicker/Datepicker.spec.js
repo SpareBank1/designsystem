@@ -338,10 +338,10 @@ describe('<Datepicker />', () => {
                 expect(wrapper.find(ERROR_CLASS).exists()).toBe(false);
             });
 
-            it('hides calendar', () => {
+            it('stays open on input blur since calendar should handle own blur event', () => {
                 const wrapper = getMountedWrapper({ value: 'iamturtles' });
                 openCalendarAndBlurDateInput(wrapper);
-                expect(wrapper.find(Calendar).exists()).toBe(false);
+                expect(wrapper.find(Calendar).exists()).toBe(true);
             });
         });
 
@@ -445,6 +445,21 @@ describe('<Datepicker />', () => {
                 expect(wrapper.find(ERROR_CLASS).exists()).toBe(false);
                 keyDownInInput(wrapper, KeyCode.ENTER);
                 expect(wrapper.find(ERROR_CLASS).exists()).toBe(true);
+            });
+
+            it('with invalid date it has correct error-class and opens on change', () => {
+                const wrapper = getMountedWrapper({
+                    value: '31.12.201',
+                    maxDate: '01.01.2016',
+                });
+                openCalendar(wrapper);
+                expect(wrapper.find(ERROR_CLASS).exists()).toBe(false);
+                keyDownInInput(wrapper, KeyCode.ENTER);
+                expect(wrapper.find(ERROR_CLASS).exists()).toBe(true);
+                expect(wrapper.find(Calendar).exists()).toBe(false);
+                keyDownInInput(wrapper, KeyCode.ENTER);
+                expect(wrapper.find(ERROR_CLASS).exists()).toBe(true);
+                expect(wrapper.find(Calendar).exists()).toBe(true);
             });
         });
     });
