@@ -82,10 +82,10 @@ module.exports = {
                     name: 'Illustrasjoner',
                     content: 'visuell-identitet/illustrasjoner.md',
                 },
-                // {
-                //     name: 'Animasjoner',
-                //     content: 'visuell-identitet/animasjoner.md',
-                // },
+                {
+                    name: 'Animasjoner',
+                    content: 'visuell-identitet/animasjoner.md',
+                },
                 // {
                 //     name: 'Layout',
                 //     content: 'visuell-identitet/layout/index.md',

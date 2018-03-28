@@ -18,3 +18,10 @@
         }
     }
 })();
+
+const togglePlay = document.querySelectorAll('.sb1ds-svgcontainer');
+[].forEach.call(togglePlay, function(play) {
+    play.addEventListener('click', function(evt) {
+        play.classList.toggle('sb1ds-svgcontainer--playing');
+    });
+});
