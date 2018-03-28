@@ -1,105 +1,73 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
-import sinon from 'sinon';
+import { mount } from 'enzyme';
 
-import SystemErrorMessage from './SystemErrorMessage';
-import SystemInfoMessage from './SystemInfoMessage';
-import SystemNewsMessage from './SystemNewsMessage';
-import SystemSuccessMessage from './SystemSuccessMessage';
+import {
+    SystemErrorMessage,
+    SystemInfoMessage,
+    SystemNewsMessage,
+    SystemSuccessMessage,
+} from '.';
 
 const defaultProps = {
     children: <span>Message</span>,
 };
 
-const getMountedWrapper = props =>
-    mount(<SystemInfoMessage {...defaultProps} {...props} />);
-const getShallowWrapper = props =>
-    shallow(<SystemInfoMessage {...defaultProps} {...props} />);
+const getWrapper = Comp => props =>
+    mount(<Comp {...defaultProps} {...props} />);
+
+const getErrorWrapper = getWrapper(SystemErrorMessage);
+const getInfoWrapper = getWrapper(SystemInfoMessage);
+const getNewsWrapper = getWrapper(SystemNewsMessage);
+const getSuccessWrapper = getWrapper(SystemSuccessMessage);
 
 describe('<SystemMessage />', () => {
-    it('renders with provided body', () => {
-        const wrapper = getMountedWrapper({
-            children: <span>Blå sjiraff</span>,
-        });
-        const text = wrapper.find('.ffe-system-message__content');
-        expect(text.exists()).toBe(true);
-        expect(text.text()).toBe('Blå sjiraff');
+    it('renders without exploding', () => {
+        const wrapper = getInfoWrapper();
+        expect(wrapper.exists()).toBe(true);
     });
+    it('applies the correct modifier classes to each type', () => {
+        const errorWrapper = getErrorWrapper();
+        expect(
+            errorWrapper
+                .find('.ffe-system-message-wrapper')
+                .hasClass('ffe-system-message-wrapper--error'),
+        ).toBe(true);
 
-    it('closes itself after a click on the close container', () => {
-        const clock = sinon.useFakeTimers();
-        const wrapper = getMountedWrapper();
-        wrapper.find('.ffe-system-message__close').simulate('click');
-        clock.tick(200);
-        const component = wrapper.find('.ffe-system-message-wrapper');
-        expect(component.first().instance().style.height).toBe('0px');
-        clock.restore();
+        const infoWrapper = getInfoWrapper();
+        expect(
+            infoWrapper
+                .find('.ffe-system-message-wrapper')
+                .hasClass('ffe-system-message-wrapper--info'),
+        ).toBe(true);
+
+        const newsWrapper = getNewsWrapper();
+        expect(
+            newsWrapper
+                .find('.ffe-system-message-wrapper')
+                .hasClass('ffe-system-message-wrapper--news'),
+        ).toBe(true);
+
+        const successWrapper = getSuccessWrapper();
+        expect(
+            successWrapper
+                .find('.ffe-system-message-wrapper')
+                .hasClass('ffe-system-message-wrapper--success'),
+        ).toBe(true);
     });
+    it('collapses when close button is clicked', () => {
+        const wrapper = getInfoWrapper();
+        expect(wrapper.find('UnmountClosed').prop('isOpened')).toBe(true);
 
-    it('should accept style prop to apply styles to outermost container', () => {
-        const wrapper = getShallowWrapper({
-            style: { marginTop: '40px' },
-        });
-        expect(wrapper.props().style.marginTop).toBe('40px');
+        wrapper.find('button').simulate('click');
+
+        expect(wrapper.find('UnmountClosed').prop('isOpened')).toBe(false);
     });
+    it('calls onClose prop when close button is clicked', () => {
+        const onClose = jest.fn();
+        const wrapper = getInfoWrapper({ onClose });
 
-    it('should execute onClose prop when close button is clicked', () => {
-        const clock = sinon.useFakeTimers();
-        const onClose = sinon.spy();
-        const wrapper = getMountedWrapper({
-            onClose,
-        });
+        wrapper.find('button').simulate('click');
 
-        const component = wrapper.find('.ffe-system-message');
-        expect(component.exists()).toBe(true);
-        wrapper.find('.ffe-system-message__close').simulate('click');
-
-        clock.tick(100);
-        expect(onClose.calledOnce).toBe(false);
-        clock.tick(300);
-        expect(onClose.calledOnce).toBe(true);
-        clock.restore();
-    });
-
-    describe('for different types of message', () => {
-        it('<SystemInfoMessage />', () => {
-            const wrapper = mount(
-                <SystemInfoMessage>Infomelding</SystemInfoMessage>,
-            );
-            const message = wrapper.find('.ffe-system-message-wrapper');
-            expect(message.hasClass('ffe-system-message-wrapper--info')).toBe(
-                true,
-            );
-        });
-
-        it('<SystemErrorMessage />', () => {
-            const wrapper = mount(
-                <SystemErrorMessage>Feilmelding</SystemErrorMessage>,
-            );
-            const message = wrapper.find('.ffe-system-message-wrapper');
-            expect(message.hasClass('ffe-system-message-wrapper--error')).toBe(
-                true,
-            );
-        });
-
-        it('<SystemSuccessMessage />', () => {
-            const wrapper = mount(
-                <SystemSuccessMessage>Gladmelding</SystemSuccessMessage>,
-            );
-            const message = wrapper.find('.ffe-system-message-wrapper');
-            expect(
-                message.hasClass('ffe-system-message-wrapper--success'),
-            ).toBe(true);
-        });
-
-        it('<SystemNewsMessage />', () => {
-            const wrapper = mount(
-                <SystemNewsMessage>Nyhetsmelding</SystemNewsMessage>,
-            );
-            const message = wrapper.find('.ffe-system-message-wrapper');
-            expect(message.hasClass('ffe-system-message-wrapper--news')).toBe(
-                true,
-            );
-        });
+        expect(onClose).toHaveBeenCalledTimes(1);
     });
 });
