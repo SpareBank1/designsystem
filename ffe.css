@@ -1322,6 +1322,8 @@ html {
   .ffe-button-group .ffe-inline-button {
     display: -ms-inline-flexbox;
     display: inline-flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
     margin: 0 0 10px 10px;
     width: auto;
   }
@@ -1612,11 +1614,15 @@ a.ffe-inline-button--back {
 }
 .ffe-inline-button--tertiary {
   color: #0071CD;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .ffe-inline-button--tertiary::after {
   border-bottom: solid 1px currentColor;
   content: ' ';
   display: block;
+  -ms-flex: 1 0 100%;
+      flex: 1 0 100%;
 }
 .ffe-inline-button--tertiary:hover {
   color: #005AA4;
