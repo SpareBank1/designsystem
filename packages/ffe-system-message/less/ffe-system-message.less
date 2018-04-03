@@ -1,45 +1,53 @@
 .ffe-system-message-wrapper {
+    color: @ffe-black;
+    fill: currentColor;
     transition: height @ffe-transition-duration @ffe-ease-in-out-back;
     overflow: hidden;
 
     &--error {
         background-color: @ffe-orange-salmon;
-        fill: @ffe-black;
+        fill: @ffe-red;
     }
 
     &--info {
         background-color: @ffe-blue-pale;
-        fill: @ffe-black;
+        fill: @ffe-blue-royal;
     }
 
+    // TODO: Change color to one in the style guide
     &--news {
+        background-color: #4A5155;
         color: @ffe-white;
-        background-color: @ffe-black;
-        fill: @ffe-white;
+        fill: #4A5155;
     }
 
     &--success {
         background-color: @ffe-green-mint;
-        fill: @ffe-black;
+        fill: @ffe-green-shamrock;
     }
 }
 
 .ffe-system-message {
-    position: relative;
     margin: 0 auto;
-    padding: 10px 20px;
+    max-width: @app-width;
+    position: relative;
+    padding: 10px @app-margin;
     text-align: left;
 
     &__icon {
-        display: inline-block;
+        background: @ffe-white;
+        border-radius: 50%;
+        display: inline-flex;
         vertical-align: middle;
         height: 1.7em;
         width: 1.7em;
         margin-right: 15px;
 
         > svg {
-            height: 100%;
-            width: 100%;
+            height: 50%;
+            position: relative;
+            margin: auto;
+            width: 50%;
         }
     }
 
@@ -66,18 +74,30 @@
     }
 
     &__close {
+        appearance: none;
+        background: transparent;
+        border: 0;
+        border-radius: 0;
+        color: inherit;
+        cursor: pointer;
         display: inline-block;
-        vertical-align: middle;
+        height: 14px;
+        margin: 0;
+        padding: 0;
         position: absolute;
         right: 20px;
-        top: 13px;
-        cursor: pointer;
-        height: 14px;
+        top: 15px;
+        vertical-align: middle;
         width: 14px;
 
         > svg {
+            fill: @ffe-black;
             height: 100%;
             width: 100%;
+
+            .ffe-system-message-wrapper--news & {
+                fill: @ffe-white;
+            }
         }
     }
 }
