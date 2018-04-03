@@ -13,7 +13,8 @@ export default (columns, data, sortBy, descending) => {
 
     const column = columns.find(col => col.key === sortBy);
     const customCompare =
-        column && typeof column.compare === 'function' && column.compare;
+        column && typeof column.compare === 'function' ? column.compare : null;
+
     if (customCompare) {
         compare = (data1, data2) => customCompare(data1[sortBy], data2[sortBy]);
     }

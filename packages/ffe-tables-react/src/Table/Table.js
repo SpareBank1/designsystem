@@ -111,8 +111,7 @@ class Table extends Component {
                     { 'ffe-table--small-header': smallHeader },
                     { 'ffe-table--columns-sm': columnLayoutMobile },
                     { 'ffe-table--text-left': alignLeft },
-                    breakpoint &&
-                        `ffe-table--breakpoint-${this.props.breakpoint}`,
+                    { [`ffe-table--breakpoint-${breakpoint}`]: !!breakpoint },
                     className,
                 )}
             >
