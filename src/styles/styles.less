@@ -34,7 +34,7 @@
         @media screen and (min-width: @breakpoint-lg) {
             content: "";
             display: block;
-            height: 320px;
+            height: 335px;
             position: absolute;
             top: 0;
             left: 0;
@@ -74,6 +74,35 @@
     &__paragraph {
         @media screen and (min-width: @breakpoint-lg) {
             color: @ffe-white;
+        }
+    }
+
+    &__illustration {
+        display: none;
+
+        @media screen and (min-width: @breakpoint-lg) {
+            display: block;
+            width: 200px;
+            float: right;
+            margin: -75px 0 30px 0;
+        }
+
+        &--kom-i-gang {
+            @media screen and (min-width: @breakpoint-lg) {
+                height: 360px;
+            }
+        }
+
+        &--frontpage {
+            @media screen and (min-width: @breakpoint-lg) {
+                width: 320px;
+                height: 270px;
+                margin: -85px -185px 0 0;
+            }
+        }
+
+        svg {
+            width: 100%;
         }
     }
 }
