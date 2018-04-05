@@ -1,5 +1,3 @@
-# Table
-
 Alle tabell-kolonner må ha en overskrift (UU). Kolonnene kan være sorterbare.
 Hele raden er klikkbar dersom den skal ekspanderes.
 Vi har to varianter; en med normal fontstørrelse og en med redusert fontstørrelse.

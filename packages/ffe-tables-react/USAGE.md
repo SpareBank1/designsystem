@@ -1,1 +1,2 @@
-A responsive table component with various features, including sorting and expandable rows.
+Vi bruker tabeller for å vise store mengder informasjon på en strukturert, 
+oversiktlig og versatil måte.
