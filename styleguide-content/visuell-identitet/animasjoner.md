@@ -412,6 +412,27 @@ Variablene brukes i LESS-filer som erstatning for `transition-duration` og `tran
                     id="c3">
             <label class="ffe-checkbox" for="c3">Checkbox</label>
         </div>
+        <div class="ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--center sb1ds-radio sb1ds-transition sb1ds-good">
+            <input class="ffe-radio-input"
+                    type="radio"
+                    id="r1"
+                    name="radio">
+            <label class="ffe-radio-button ffe-radio-button--inline" for="r1">Radio button</label>
+        </div>
+        <div class="ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--center sb1ds-radio sb1ds-transition sb1ds-bad">
+            <input class="ffe-radio-input"
+                    type="radio"
+                    id="r2"
+                    name="radio">
+            <label class="ffe-radio-button ffe-radio-button--inline" for="r2">Radio button</label>
+        </div>
+        <div class="ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--center sb1ds-radio sb1ds-transition sb1ds-none">
+            <input class="ffe-radio-input"
+                    type="radio"
+                    id="r3"
+                    name="radio">
+            <label class="ffe-radio-button ffe-radio-button--inline" for="r3">Radio button</label>
+        </div>
         <div class="ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--center sb1ds-textarea-expand sb1ds-transition sb1ds-good">
             <textarea class="ffe-textarea sb1ds-textarea-expandable" placeholder="Expand"></textarea>
         </div>
@@ -448,7 +469,7 @@ Variablene brukes i LESS-filer som erstatning for `transition-duration` og `tran
         <div class="ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--center sb1ds-svgs sb1ds-transform sb1ds-transition sb1ds-none">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><path d="m168.56,35c-7.3569-0.35717-8.8347,7.4883-8.1875,13.185-0.3441,2.6316,1.4556,7.407-2.8625,6.0646-29.975,0.08599-59.967-0.17224-89.931,0.12955-6.4615,1.4675-4.7348,8.8085-4.9561,13.691-0.7404,4.7598,1.1901,11.138,7.2042,10.335h90.546c0.42866,5.2767-1.1192,11.013,1.407,15.858,3.7179,5.5444,11.306,3.4092,14.587-1.3681,7.4247-7.4285,14.958-14.752,22.312-22.249,3.9564-5.5554-1.5884-10.555-5.4254-14.113-6.86-6.69-13.48-13.66-20.51-20.167-1.23-0.836-2.69-1.324-4.18-1.367zm-137.12,67.156c-6.0098,0.85502-9.1712,6.8182-13.561,10.444-5.4869,5.5897-11.271,10.909-16.559,16.68-3.8247,5.4758,1.1417,10.619,5.1085,14.076,7.2706,6.8445,13.985,14.37,21.633,20.753,6.1454,3.4359,13.04-3.0079,11.566-9.433v-8.9271c30.929-0.086,61.876,0.17226,92.794-0.12955,6.4615-1.4675,4.7348-8.8085,4.956-13.691,0.70757-4.8278-0.97702-11.394-7.2042-10.554h-90.546c-0.41449-5.3241,1.121-11.105-1.49-15.97-1.518-2.1-4.1129-3.3421-6.6975-3.2489z"/></svg>
         </div>
-    </div>            
+    </div>
 </div>
 
 #### Dekorative animasjoner
@@ -493,7 +514,7 @@ Variablene brukes i LESS-filer som erstatning for `transition-duration` og `tran
                         <path d="M98.765 0c-3.005 0-5.32 2.463-5.32 5.356v14.017C45.924 22.713 7.52 60.78 4.516 108.97c-.223 3.005 1.767 5.662 4.66 6.33.445.11 1.016.243 1.46.243 2.45 0 4.668-1.46 5.67-3.687 4.34-9.683 13.91-15.93 24.484-15.93 10.128 0 19.58 6.032 24.033 15.27 1 2.115 3.227 3.548 5.564 3.548s4.563-1.322 5.565-3.548c3.45-7.234 9.898-12.362 17.354-14.365v75.897c0 13.58-13.334 13.913-14.78 13.913-3.896 0-8.918-1.44-12.034-5.113-1.447-1.78-3.902-2.205-6.017-1.426l-2.434.975c-3.227 1.336-4.444 5.46-2.33 8.244 5.12 6.7 13.467 10.7 22.816 10.7 14.022 0 28.135-9.35 28.135-27.27V96.852c7.457 2.003 13.94 7.13 17.39 14.365 1 2.114 3.227 3.547 5.564 3.547s4.563-1.32 5.565-3.547c4.45-9.24 13.903-15.27 24.03-15.27 10.574 0 20.144 6.247 24.485 15.93 1.224 2.782 4.236 4.215 7.13 3.547 2.893-.667 4.882-3.325 4.66-6.33-2.894-48.195-41.408-86.372-88.928-89.6l.105-.104V5.375c.02-3.008-2.41-5.36-5.3-5.36h-2.574zm1.356 31.513c36.838 0 68.32 24.028 79.225 57.53-5.898-3.562-12.798-5.565-20.032-5.565-11.463 0-22.25 5.134-29.596 13.704-7.345-8.57-18.133-13.704-29.596-13.704s-22.285 5.134-29.63 13.704c-7.345-8.57-18.133-13.704-29.596-13.704-7.234 0-14.022 2.003-20.032 5.565 10.918-33.502 42.545-57.53 79.27-57.53z"/>
                         <path id="drop1" d="M14.415 31.138s7.605-7.14 9.898-23.45c.842-5.99-1.432 10.7 7.83 23.1 9.057 12.123-4.533 21-4.533 21s-5.563 2.746-9.684-.162c-4.122-2.908-10.28-10.24-3.51-20.488z" fill="#00ddff"/>
                         <path id="drop2" d="M140.415 31.138s7.605-7.14 9.898-23.45c.842-5.99-1.432 10.7 7.83 23.1 9.057 12.123-4.533 21-4.533 21s-5.563 2.746-9.684-.162c-4.122-2.908-10.28-10.24-3.51-20.488z" fill="#00ddff"/>
-                    </svg>  
+                    </svg>
                 </div>
             </div>
         </div>
