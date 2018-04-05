@@ -71,7 +71,12 @@ class Table extends Component {
             return data.map((row, index) => {
                 const key = row.id || row.id === 0 ? row.id.toString() : index;
                 return (
-                    <TableRowExpandable cells={row} columns={columns} key={key} sort={sort}>
+                    <TableRowExpandable
+                        cells={row}
+                        columns={columns}
+                        key={key}
+                        sort={sort}
+                    >
                         {expandedContentMapper(row)}
                     </TableRowExpandable>
                 );
@@ -81,7 +86,8 @@ class Table extends Component {
         return (
             <tbody>
                 {data.map((row, index) => {
-                    const key = row.id || row.id === 0 ? row.id.toString() : index;
+                    const key =
+                        row.id || row.id === 0 ? row.id.toString() : index;
                     return <TableRow cells={row} columns={columns} key={key} />;
                 })}
             </tbody>
@@ -89,7 +95,14 @@ class Table extends Component {
     }
 
     render() {
-        const { alignLeft, condensed, smallHeader, columnLayoutMobile, breakpoint, className } = this.props;
+        const {
+            alignLeft,
+            condensed,
+            smallHeader,
+            columnLayoutMobile,
+            breakpoint,
+            className,
+        } = this.props;
         return (
             <table
                 className={classNames(
@@ -98,7 +111,7 @@ class Table extends Component {
                     { 'ffe-table--small-header': smallHeader },
                     { 'ffe-table--columns-sm': columnLayoutMobile },
                     { 'ffe-table--text-left': alignLeft },
-                    breakpoint && `ffe-table--breakpoint-${this.props.breakpoint}`,
+                    { [`ffe-table--breakpoint-${breakpoint}`]: !!breakpoint },
                     className,
                 )}
             >

@@ -1,5 +1,4 @@
 export default (columns, data, sortBy, descending) => {
-
     const sortedData = [...data];
 
     let compare = (data1, data2) => {
@@ -13,7 +12,9 @@ export default (columns, data, sortBy, descending) => {
     };
 
     const column = columns.find(col => col.key === sortBy);
-    const customCompare = column && typeof column.compare === 'function' && column.compare;
+    const customCompare =
+        column && typeof column.compare === 'function' ? column.compare : null;
+
     if (customCompare) {
         compare = (data1, data2) => customCompare(data1[sortBy], data2[sortBy]);
     }

@@ -78,7 +78,11 @@ describe('<Table />', () => {
 
         it('applies supplied classes', () => {
             const wrapper = shallow(
-                <Table columns={columns} data={data} className="test-class-one test-class-two" />
+                <Table
+                    columns={columns}
+                    data={data}
+                    className="test-class-one test-class-two"
+                />,
             );
             expect(wrapper.hasClass('ffe-table')).toBe(true);
             expect(wrapper.hasClass('test-class-one')).toBe(true);

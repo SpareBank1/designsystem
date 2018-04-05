@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-const TableCell = (props) => {
+const TableCell = props => {
     const {
         alignRight,
         alignTop,
@@ -23,21 +23,21 @@ const TableCell = (props) => {
 
     return (
         <td
-            className={ classNames(
+            className={classNames(
                 'ffe-table__cell',
                 { 'ffe-table__cell--top': alignTop },
-                tdClasses
-            ) }
-            data-th={ dataTh }
+                tdClasses,
+            )}
+            data-th={dataTh}
         >
             <span
-                className={ classNames(
+                className={classNames(
                     'ffe-table__content',
-                     { 'ffe-table__content--text-right' : alignRight },
-                     contentClasses
-                 )}
+                    { 'ffe-table__content--text-right': alignRight },
+                    contentClasses,
+                )}
             >
-                { children }
+                {children}
             </span>
         </td>
     );
