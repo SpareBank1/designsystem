@@ -625,7 +625,7 @@
             transform: rotate(-90deg) translateY(1em);
         }
     }
-    &.good {
+    &.sb1ds-good {
         svg {
             transition: transform @ffe-transition-duration @ffe-ease-in-out-back;
         }
@@ -658,6 +658,24 @@
     &.sb1ds-none {
         .ffe-hidden-checkbox:checked+.ffe-checkbox:after {
             animation: none;
+        }
+    }
+}
+
+.sb1ds-radio {
+    &.sb1ds-good {
+        .ffe-radio-button, .ffe-radio-button::before, .ffe-radio-button::after {
+            transition-duration: @ffe-transition-duration;
+        }
+    }
+    &.sb1ds-bad {
+        .ffe-radio-button, .ffe-radio-button::before, .ffe-radio-button::after {
+            transition-duration: 1s;
+        }
+    }
+    &.sb1ds-none {
+        .ffe-radio-button, .ffe-radio-button::before, .ffe-radio-button::after {
+            transition: none;
         }
     }
 }

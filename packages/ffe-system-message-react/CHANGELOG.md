@@ -3,6 +3,37 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.0"></a>
+# [5.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@4.0.4...@sb1/ffe-system-message-react@5.0.0) (2018-04-05)
+
+
+### Bug Fixes
+
+* **ffe-system-message-react:** Reimplement ([1748617](https://github.com/SpareBank1/designsystem/commit/1748617))
+
+
+### BREAKING CHANGES
+
+* **ffe-system-message-react:** This commit contributes a new implementation of the
+`ffe-system-message-react` package.
+
+The change removes an optional `animationLengthMs` property, which
+you can now safely remove.
+
+This new implementation brings a few new nice-to-haves to the
+`ffe-system-message-react` components:
+
+- Props that are not listed are passed to the outer component
+- The system message is sized after its container, with a max width
+if it's not put in a sized container
+- The close button is now a `<button />`, improving a11y
+- The test coverage is 100 %, ensuring a stable implementation with
+few bugs
+- The implementation now uses the correct colors and icons
+
+
+
+
 <a name="4.0.4"></a>
 ## [4.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@4.0.3...@sb1/ffe-system-message-react@4.0.4) (2018-03-27)
 
