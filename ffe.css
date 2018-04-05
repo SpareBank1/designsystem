@@ -4595,42 +4595,50 @@ input:not([type='radio']):not([type='checkbox']) {
   width: 40px;
 }
 .ffe-system-message-wrapper {
+  color: #262626;
+  fill: currentColor;
   transition: height 0.2s cubic-bezier(0.46, -0.265, 0.48, 1.38);
   overflow: hidden;
 }
 .ffe-system-message-wrapper--error {
   background-color: #F3BBAA;
-  fill: #262626;
+  fill: #E60000;
 }
 .ffe-system-message-wrapper--info {
   background-color: #DFF1F9;
-  fill: #262626;
+  fill: #002776;
 }
 .ffe-system-message-wrapper--news {
+  background-color: #4A5155;
   color: #FFF;
-  background-color: #262626;
-  fill: #FFF;
+  fill: #4A5155;
 }
 .ffe-system-message-wrapper--success {
   background-color: #E1F4E3;
-  fill: #262626;
+  fill: #008A00;
 }
 .ffe-system-message {
-  position: relative;
   margin: 0 auto;
+  max-width: 1280px;
+  position: relative;
   padding: 10px 20px;
   text-align: left;
 }
 .ffe-system-message__icon {
-  display: inline-block;
+  background: #FFF;
+  border-radius: 50%;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
   height: 1.7em;
   width: 1.7em;
   margin-right: 15px;
 }
 .ffe-system-message__icon > svg {
-  height: 100%;
-  width: 100%;
+  height: 50%;
+  position: relative;
+  margin: auto;
+  width: 50%;
 }
 .ffe-system-message__content {
   display: inline-block;
@@ -4656,18 +4664,31 @@ input:not([type='radio']):not([type='checkbox']) {
   }
 }
 .ffe-system-message__close {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  color: inherit;
+  cursor: pointer;
   display: inline-block;
-  vertical-align: middle;
+  height: 14px;
+  margin: 0;
+  padding: 0;
   position: absolute;
   right: 20px;
-  top: 13px;
-  cursor: pointer;
-  height: 14px;
+  top: 15px;
+  vertical-align: middle;
   width: 14px;
 }
 .ffe-system-message__close > svg {
+  fill: #262626;
   height: 100%;
   width: 100%;
+}
+.ffe-system-message-wrapper--news .ffe-system-message__close > svg {
+  fill: #FFF;
 }
 .ffe-table {
   margin: 20px 0;
