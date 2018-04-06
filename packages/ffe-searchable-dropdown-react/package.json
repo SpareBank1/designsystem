@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-searchable-dropdown-react",
-  "version": "5.0.4",
+  "version": "5.0.5",
   "description": "Dropdown with search option",
   "license": "MIT",
   "author": "SpareBank 1",
@@ -24,7 +24,7 @@
     "setupTestFrameworkScriptFile": "../../test-setup.js"
   },
   "dependencies": {
-    "@sb1/ffe-icons-react": "^5.0.4",
+    "@sb1/ffe-icons-react": "^5.0.5",
     "classnames": "^2.2.5",
     "lodash.isequal": "^4.5.0",
     "prop-types": "^15.6.0",
