@@ -30,7 +30,7 @@
     "eslint": "^4.13.1",
     "npm-run-all": "^4.1.2",
     "run-p": "0.0.0",
-    "stylelint": "^9.1.1"
+    "stylelint": "^8.4.0"
   },
   "publishConfig": {
     "access": "public"
