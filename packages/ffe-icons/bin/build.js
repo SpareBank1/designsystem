@@ -43,7 +43,7 @@ fs
     .filter(matchesIcon(options.icons))
     .forEach(fileName => {
         const iconPath = path.join(ICONS_PATH, fileName);
-        const iconName = fileName.split('.svg')[0];
+        const iconName = path.basename(fileName, '.svg');
         sprite.add(iconName, fs.readFileSync(iconPath), 'utf-8');
     });
 
@@ -51,7 +51,7 @@ if (options.projectIcons) {
     options.projectIcons
         .forEach((fileName) => {
             const iconPath = path.join(fileName);
-            const iconName = fileName.split('.svg')[0];
+            const iconName = path.basename(fileName, '.svg');
             sprite.add(iconName, fs.readFileSync(iconPath), 'utf-8');
         });
 }
