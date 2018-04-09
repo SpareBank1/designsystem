@@ -34,6 +34,7 @@ export default class Datepicker extends Component {
         this.escKeyHandler = this.escKeyHandler.bind(this);
         this.datePickedHandler = this.datePickedHandler.bind(this);
         this.blurHandler = this.blurHandler.bind(this);
+        this.divBlurHandler = this.divBlurHandler.bind(this);
         this.onInputKeydown = this.onInputKeydown.bind(this);
         this.onInputFocus = this.onInputFocus.bind(this);
         this.onInputBlur = this.onInputBlur.bind(this);
@@ -162,7 +163,6 @@ export default class Datepicker extends Component {
     }
 
     onInputKeydown(evt) {
-        this.openCalendar();
         if (evt.which === KeyCode.ENTER) {
             if (!this.state.displayDatePicker) {
                 this.openCalendar();
@@ -205,6 +205,21 @@ export default class Datepicker extends Component {
         }
     }
 
+    divBlurHandler(evt) {
+        if (!this._datepickerNode
+            || (evt.relatedTarget && !this._datepickerNode.contains(evt.relatedTarget))
+            || !this._datepickerNode.contains(evt.target)
+            || (this.datepickerCalendar && this.datepickerCalendar._wrapper && this.datepickerCalendar._wrapper.contains(evt.target) && evt.target.getAttribute('tabindex') !== '-1' && evt.currentTarget.getAttribute('tabindex') === '-1')
+        )
+        {
+            this.removeGlobalEventListeners();
+            this.setState({
+                openOnFocus: true,
+                displayDatePicker: false
+            })
+        }
+    }
+
     datePickedHandler(date) {
         this.props.onChange(date);
         this.props.onValidationComplete(date);
@@ -222,6 +237,7 @@ export default class Datepicker extends Component {
         this.setState({
             displayDatePicker: true,
         });
+        this.removeGlobalEventListeners();
         this.addGlobalEventListeners();
     }
 
@@ -298,6 +314,7 @@ export default class Datepicker extends Component {
                     }}
                     role="button"
                     tabIndex={-1}
+                    onBlur={this.divBlurHandler}
                 >
                     <DateInput
                         aria-invalid={this.ariaInvalid()}
@@ -319,9 +336,11 @@ export default class Datepicker extends Component {
                             language={language}
                             maxDate={maxDate}
                             minDate={minDate}
-                            onBlurHandler={this.blurHandler}
                             onDatePicked={this.datePickedHandler}
                             selectedDate={latestValue}
+                            ref={c => {
+                                this.datepickerCalendar = c;
+                            }}
                         />
                     )}
                 </div>
