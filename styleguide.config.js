@@ -140,6 +140,7 @@ module.exports = {
         },
         {
             name: 'Kontovelger',
+            content: 'packages/ffe-account-selector-react/USAGE.md',
             components:
                 'packages/ffe-account-selector-react/src/components/**/[A-Z]+([A-Za-z]).js',
         },
