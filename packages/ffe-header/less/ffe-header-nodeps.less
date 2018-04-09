@@ -1,81 +1,8 @@
+// Applies relevant rules from ffe-core/less/normalize to .ffe-header.
 @import './local-normalize';
 
+// Import rules and vars used by ffe-header.less without adding any extra rules.
 @import (reference) '../node_modules/@sb1/ffe-core/less/ffe';
 @import (reference) '../node_modules/@sb1/ffe-buttons/less/buttons';
-
-.ffe-header {
-    &:extend(.ffe-body-text);
-
-    /* We basically want to compile with the styles we extend here so we don't need additional deps */
-    /* stylelint-disable block-no-empty */
-    &__search-button:extend(.ffe-tertiary-button) {
-    }
-    &__search-button::after:extend(.ffe-tertiary-button::after) {
-    }
-    &__search-button:active:extend(.ffe-tertiary-button:active) {
-    }
-    &__search-button:focus:extend(.ffe-tertiary-button:focus) {
-    }
-    &__search-button:hover:extend(.ffe-tertiary-button:hover) {
-    }
-    &__search-button:active::after:extend(.ffe-tertiary-button:active::after) {
-    }
-    &__search-button:focus::after:extend(.ffe-tertiary-button:focus::after) {
-    }
-    &__search-button:hover::after:extend(.ffe-tertiary-button:hover::after) {
-    }
-
-    &__user-button:extend(.ffe-tertiary-button) {
-    }
-    &__user-button::after:extend(.ffe-tertiary-button::after) {
-    }
-    &__user-button:active:extend(.ffe-tertiary-button:active) {
-    }
-    &__user-button:focus:extend(.ffe-tertiary-button:focus) {
-    }
-    &__user-button:hover:extend(.ffe-tertiary-button:hover) {
-    }
-    &__user-button:active::after:extend(.ffe-tertiary-button:active::after) {
-    }
-    &__user-button:focus::after:extend(.ffe-tertiary-button:focus::after) {
-    }
-    &__user-button:hover::after:extend(.ffe-tertiary-button:hover::after) {
-    }
-
-    &__site-nav-button:extend(.ffe-tertiary-button) {
-    }
-    &__site-nav-button::after:extend(.ffe-tertiary-button::after) {
-    }
-    &__site-nav-button:active:extend(.ffe-tertiary-button:active) {
-    }
-    &__site-nav-button:focus:extend(.ffe-tertiary-button:focus) {
-    }
-    &__site-nav-button:hover:extend(.ffe-tertiary-button:hover) {
-    }
-    &__site-nav-button:active::after:extend(.ffe-tertiary-button:active::after) {
-    }
-    &__site-nav-button:focus::after:extend(.ffe-tertiary-button:focus::after) {
-    }
-    &__site-nav-button:hover::after:extend(.ffe-tertiary-button:hover::after) {
-    }
-
-    &__button:extend(.ffe-primary-button) {
-    }
-    &__button:active:extend(.ffe-primary-button:active) {
-    }
-    &__button:focus:extend(.ffe-primary-button:focus) {
-    }
-    &__button:hover:extend(.ffe-primary-button:hover) {
-    }
-    &__button:extend(.ffe-secondary-button) {
-    }
-    &__button:active:extend(.ffe-secondary-button:active) {
-    }
-    &__button:focus:extend(.ffe-secondary-button:focus) {
-    }
-    &__button:hover:extend(.ffe-secondary-button:hover) {
-    }
-    /* stylelint-enable block-no-empty */
-}
 
 @import './ffe-header';

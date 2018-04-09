@@ -1,4 +1,7 @@
+/* stylelint-disable block-no-empty */
 .ffe-header {
+    &:extend(.ffe-body-text);
+
     background: @ffe-white;
     text-align: center;
 
@@ -25,7 +28,7 @@
         @media (-ms-high-contrast: active), (-ms-high-contrast: none) {
             > .ffe-header__secondary-nav,
             > .ffe-header__logo,
-            > .ffe-header__user-button,
+            > .ffe-header__icon-button--user-nav,
             > .ffe-header__site-nav {
                 /* \9 is a hack to have the value only apply to IE9 */
                 display: block\9;
@@ -97,30 +100,77 @@
     }
 
     &__icon-button {
+        &:extend(.ffe-inline-button);
+
         color: @ffe-blue-royal;
 
+        &:active:extend(.ffe-inline-button:active) {}
+        &:focus:extend(.ffe-inline-button:focus) {}
+
+        &:extend(.ffe-inline-button--tertiary);
+        &:hover:extend(.ffe-inline-button--tertiary:hover) {}
+
+
         &::after {
+            &:extend(.ffe-inline-button--tertiary::after);
+
             border: none;
         }
-    }
 
-    &__user-button {
-        position: relative;
+        &--user-nav {
+            position: relative;
+            overflow: inherit;
 
-        .ffe-header__notification-bubble {
-            position: absolute;
-            left: 18px;
-            bottom: -4px;
+            .ffe-header__notification-bubble {
+                position: absolute;
+                left: 18px;
+                bottom: -4px;
+            }
         }
     }
 
-    &__button {
+    &__logout-button {
+        &:extend(.ffe-button);
+        &:extend(.ffe-button--secondary);
+        &:extend(.ffe-button--condensed);
+
         margin: 8px 10px;
 
-        &--log-out {
-            padding: 5px 20px;
-            .ffe-fontsize-button-condensed;
+        &:focus:extend(.ffe-button:focus) {}
+        &:hover:extend(.ffe-button:hover) {}
+        &:active:extend(.ffe-button:active) {}
+
+        &--loading {
+            &:extend(.ffe-button--loading);
         }
+
+        &--loading &-label {
+            &:extend(.ffe-button--loading .ffe-button__label);
+        }
+
+        &--loading &-spinner {
+            &:extend(.ffe-button--loading .ffe-button__spinner);
+        }
+    }
+
+    &__logout-button-spinner {
+        &:extend(.ffe-button__spinner);
+        &:extend(.ffe-button--condensed .ffe-button__spinner);
+        &::after {
+            &:extend(.ffe-button__spinner::after);
+
+            animation-name: logout-button-loading-spin;
+        }
+
+        @keyframes logout-button-loading-spin {
+            from { transform: none; }
+            to { transform: rotate(360deg); }
+        }
+    }
+
+
+    &__logout-button-label {
+        &:extend(.ffe-button__label);
     }
 
     &__user-icon,
@@ -150,6 +200,7 @@
 
     &__user-nav-list {
         transition: transform @ffe-transition-duration @ffe-ease, opacity 0.1s;
+        overflow: hidden;
 
         &:not(.ffe-header__user-nav-list--visible) {
             visibility: hidden;
@@ -248,7 +299,7 @@
 
 @media screen and (min-width: @breakpoint-md) {
     .ffe-header {
-        &__site-nav-button,
+        &__icon-button--site-nav,
         &__user-icon {
             display: none;
         }
@@ -311,7 +362,7 @@
             outline: 2px solid @ffe-blue-focus;
         }
 
-        &__user-button {
+        &__icon-button--user-nav {
             .ffe-header__notification-bubble {
                 left: -17px;
                 bottom: 10px;

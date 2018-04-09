@@ -29,7 +29,7 @@
             </div>
 
             <div class="ffe-header__user-nav-toggle">
-                <button class="ffe-header__icon-button ffe-header__user-button">
+                <button class="ffe-header__icon-button ffe-header__icon-button--user-nav">
                     <span class="ffe-header__user-name">
                         Jomar Beate Skrothaug
                         <span class="ffe-header__user-chevron">
@@ -47,7 +47,7 @@
             </div>
 
             <div class="ffe-header__site-nav-toggle">
-                <button class="ffe-header__icon-button ffe-header__site-nav-button">
+                <button class="ffe-header__icon-button ffe-header__icon-button--site-nav">
                     <span class="ffe-header__site-nav-hamburger">
                         <span class="ffe-header__site-nav-hamburger__bar">
                         </span>
@@ -66,7 +66,16 @@
                     <li class="ffe-header__list-item"><a class="ffe-header__link" href="#">Innstillinger</a></li>
                     <li class="ffe-header__list-item"><div class="ffe-header__link ffe-header__link--disabled">Chat - stengt</div></li>
                     <li class="ffe-header__list-item ffe-header__list-item--centered">
-                        <a class="ffe-header__button ffe-header__button--log-out" href="#">Logg ut</a>
+                        <button class="ffe-header__logout-button">
+                            <span class="ffe-header__logout-button-label">
+                                Logg ut
+                            </span>
+                            <div
+                                class="ffe-header__logout-button-spinner"
+                                aria-hidden="true"
+                                aria-label="Logger deg ut"
+                            ></div>
+                        </button>
                     </li>
                 </ul>
             </nav>
