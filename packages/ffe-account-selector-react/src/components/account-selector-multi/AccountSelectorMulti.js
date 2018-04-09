@@ -201,6 +201,7 @@ AccountSelectorMulti.propTypes = {
     locale: Locale.isRequired,
     /** Overrides default string for all locales. */
     noMatches: string,
+    /** Called when an account is clicked */
     onAccountSelected: func.isRequired,
     onBlur: func.isRequired,
     onSelectAll: func,

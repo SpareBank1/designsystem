@@ -126,7 +126,9 @@ AccountSelector.propTypes = {
     locale: Locale.isRequired,
     /** Overrides default string for all locales. */
     noMatches: string,
+    /** Called when an account is clicked (or Enter is pressed when highlighted) */
     onAccountSelected: func.isRequired,
+    /** Called on changes in the input field */
     onChange: func.isRequired,
     selectedAccount: Account,
     /** Default true. */
