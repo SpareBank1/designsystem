@@ -1,6 +1,6 @@
 FFE er en samling av gjenbrukbare komponenter basert på Less og React for å bygge nettsider og brukergrensesnitt. Komponentbiblioteket sikrer konsistent stil og oppførsel i prototyper og produksjonsarbeid.
 
-Komponentene er publisert i forskjellige [pakker på npm under @sb1-scopet av sb1-designsystem](https://www.npmjs.com/search?q=maintainer:sb1-designsystem). Kildekoden til pakkene ligger på [Github](https://github.com/SpareBank1/designsystem/tree/develop/packages) sammen med `README`s med mer detaljerte instruksjoner for hvordan bruke pakkene i prosjektet ditt.
+Komponentene er publisert i forskjellige [pakker på npm under @sb1-organisasjonen](https://www.npmjs.com/org/sb1). Kildekoden til pakkene ligger på [Github](https://github.com/SpareBank1/designsystem/tree/develop/packages) sammen med `README`s med mer detaljerte instruksjoner for hvordan bruke pakkene i prosjektet ditt.
 
 Alle vil trenge [@sb1/ffe-core](https://github.com/SpareBank1/designsystem/tree/develop/packages/ffe-core) og [@sb1/ffe-webfonts](https://github.com/SpareBank1/designsystem/tree/develop/packages/ffe-webfonts), og de fleste trenger pakkene for [grid](https://github.com/SpareBank1/designsystem/tree/develop/packages/ffe-grid), [knapper](https://github.com/SpareBank1/designsystem/tree/develop/packages/ffe-buttons),  og [skjema](https://github.com/SpareBank1/designsystem/tree/develop/packages/ffe-form) (eventuelt med React-tvillingen sin). Bruk verktøyet under for å lage en installasjonskommando som passer deg.
 
