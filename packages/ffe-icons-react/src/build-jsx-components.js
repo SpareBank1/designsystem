@@ -14,7 +14,7 @@ const createSvgMap = () => {
         .forEach((fileName) => {
             const iconPath = path.join(iconsPath, fileName);
             const iconName = fileName.split('.svg')[0];
-            map[iconName] = String(fs.readFileSync(iconPath));
+            map[iconName] = fs.readFileSync(iconPath, 'utf-8');
         });
     return map;
 };
@@ -34,10 +34,10 @@ const toJsx = svgString => {
     // React does not support namespace definitions
     svg.attr('xmlns', null);
     svg.attr('xmlns:svg', null);
-    
+
     svg.attr('height', 150);
     svg.attr('width', 150);
-    
+
     return $.html()
         .replace(/fill-rule/g, 'fillRule')
         .replace(/stroke-width/g, 'strokeWidth')
