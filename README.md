@@ -24,7 +24,9 @@ så åpnes et issue her på Github så en utvikler kan plukke oppgaven og gjøre
 
 ## Utvikler?
 
-FFE er delt opp i mange mindre pakker. Hver pakke har sin egen katalog under [packages/](packages/).
+**Skal du bruke FFE for første gang? Se på dokumentasjonen under [Kom i gang](https://design.sparebank1.no/kom-i-gang.html#kom-i-gang_for-utviklere)** :book:
+
+Resten av denne READMEen hjelper deg med å komme i gang med utvikling på selve designsystemet og pakkene som finnes her.
 
 ### Kom i gang
 
