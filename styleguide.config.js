@@ -5,6 +5,16 @@ const components = require('./styleguide.components');
 
 const PRODUCTION = process.env.NODE_ENV === 'production';
 
+const PACKAGES_WITH_DEFAULT_EXPORT = [
+    'ffe-chart-donut-react',
+    'ffe-checkbox-react',
+    'ffe-dropdown-react',
+    'ffe-file-upload-react',
+    'ffe-searchable-dropdown-react',
+    'ffe-spinner-react',
+    'ffe-tables-react',
+];
+
 module.exports = {
     title: 'FFE',
     require: [
@@ -13,6 +23,24 @@ module.exports = {
         path.join(__dirname, 'src/styles/styles.less'),
     ],
     components: 'packages/ffe-*-react/src/**/[A-Z]+([A-Za-z]).js',
+    getComponentPathLine(componentPath) {
+        /**
+         * Matches a starting "packages/", then creates a capture group for whatever is between
+         * "packages/" and the next occurence of "/". The goal is to capture the folder name
+         * for the package holding the current component.
+         */
+        const regexpResult = /^packages\/(.+?)\//.exec(path.dirname(componentPath));
+        if (regexpResult === null) {
+            return componentPath;
+        }
+        const packageName = regexpResult[1];
+        const name = path.basename(componentPath, '.js');
+        const isDefaultExport = PACKAGES_WITH_DEFAULT_EXPORT.includes(packageName);
+        if (isDefaultExport) {
+            return `import ${name} from '@sb1/${packageName}';`
+        }
+        return `import { ${name} } from '@sb1/${packageName}';`;
+    },
     ignore: [
         '**/__tests__/**',
         '**/*.test.{js,jsx,ts,tsx}',
