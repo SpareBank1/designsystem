@@ -11,26 +11,10 @@ class Input extends Component {
         this.onFocus = this.onFocus.bind(this);
         this.onBlur = this.onBlur.bind(this);
 
-        /*
-     IE11 can drop characters when typing fast.
-     This is a known issue with React 15 and IE11 and will be fixed in React 16
-     See bugreport: https://github.com/facebook/react/issues/7027
-     As discussed in the React bugreport, a workaround for this is to use "onInput" instead of "onChange" in IE11.
-     In order to achieve this we use a very dirty, but workable, browser testing regex:
-     https://github.com/faisalman/ua-parser-js/blob/master/src/ua-parser.js#L261
-     */
-        this.isIE11 =
-            window.navigator.userAgent.match(
-                /(trident).+rv[:\s]([\w.]+).+like\sgecko/i,
-            ) !== null;
         this.state = {
             value: props.value,
             isFocused: false,
         };
-    }
-
-    onChangeHandler(handler) {
-        return this.isIE11 ? { onInput: handler } : { onChange: handler };
     }
 
     onChange(e) {
@@ -99,8 +83,8 @@ class Input extends Component {
                     aria-autocomplete="list"
                     name={name}
                     onClick={onClick}
+                    onChange={this.onChange}
                     readOnly={readOnly}
-                    {...this.onChangeHandler(this.onChange)}
                 />
                 {showReset && (
                     <button
