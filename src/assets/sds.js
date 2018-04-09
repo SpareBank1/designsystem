@@ -43,7 +43,12 @@ const toggleTooltip = document.querySelectorAll('.sb1ds-tooltip');
     var bundles = {
         core: [
             '@sb1/ffe-core',
+            '@sb1/ffe-core-react',
             '@sb1/ffe-webfonts',
+        ],
+        grid: [
+            '@sb1/ffe-grid',
+            '@sb1/ffe-grid-react',
         ],
         buttons: [
             '@sb1/ffe-buttons',
@@ -78,6 +83,10 @@ const toggleTooltip = document.querySelectorAll('.sb1ds-tooltip');
         if (reactAnswer.value === 'false') {
             selectedBundles = selectedBundles.filter(function (packageName) {
                 return packageName.indexOf('-react') === -1;
+            });
+        } else {
+            selectedBundles = selectedBundles.filter(function (packageName) {
+                return packageName !== '@sb1/ffe-icons';
             });
         }
         var installString = 'npm install --save ' + selectedBundles.join(' ');

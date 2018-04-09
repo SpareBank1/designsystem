@@ -37,6 +37,20 @@ Pakkeplukkeren dekker de mest brukte pakkene. Se [Komponentbiblioteket](/stylegu
     </label>
     <input
         class="ffe-hidden-checkbox"
+        id="npm-i-builder-bundle-grid"
+        aria-invalid="false"
+        value="grid"
+        type="checkbox"
+        checked
+    />
+    <label
+        class="ffe-checkbox ffe-checkbox--inline"
+        for="npm-i-builder-bundle-grid"
+    >
+        Grid
+    </label>
+    <input
+        class="ffe-hidden-checkbox"
         id="npm-i-builder-bundle-buttons"
         aria-invalid="false"
         value="buttons"
