@@ -1,12 +1,10 @@
 FFE er en samling av gjenbrukbare komponenter basert på Less og React for å bygge nettsider og brukergrensesnitt. Komponentbiblioteket sikrer konsistent stil og oppførsel i prototyper og produksjonsarbeid.
 
-Komponentene er publisert i forskjellige [pakker på npm under @sb1-scopet av sb1-designsystem](https://www.npmjs.com/search?q=maintainer:sb1-designsystem).
+Komponentene er publisert i forskjellige [pakker på npm under @sb1-scopet av sb1-designsystem](https://www.npmjs.com/search?q=maintainer:sb1-designsystem). Kildekoden til pakkene ligger på [Github](https://github.com/SpareBank1/designsystem/tree/develop/packages) sammen med `README`s med mer detaljerte instruksjoner for hvordan bruke pakkene i prosjektet ditt.
 
-Alle vil trenge `@sb1/ffe-core` og `@sb1/ffe-webfonts`, og de fleste trenger pakkene for knapper og skjema. Bruk verktøyet under for å lage en installasjonskommando som passer deg.
+Alle vil trenge [@sb1/ffe-core](https://github.com/SpareBank1/designsystem/tree/develop/packages/ffe-core) og [@sb1/ffe-webfonts](https://github.com/SpareBank1/designsystem/tree/develop/packages/ffe-webfonts), og de fleste trenger pakkene for [grid](https://github.com/SpareBank1/designsystem/tree/develop/packages/ffe-grid), [knapper](https://github.com/SpareBank1/designsystem/tree/develop/packages/ffe-buttons),  og [skjema](https://github.com/SpareBank1/designsystem/tree/develop/packages/ffe-form) (eventuelt med React-tvillingen sin). Bruk verktøyet under for å lage en installasjonskommando som passer deg.
 
 Less-pakker brukes som oftes ved å ha en egen Less-fil i ditt prosjekt med et `@import`-statement for hver pakke, som [her for `@sb1/ffe-buttons`](https://github.com/SpareBank1/designsystem/tree/develop/packages/ffe-buttons#usage). React-pakker brukes på lik linje med enhver JavaScript-pakke. Se [Komponentbiblioteket](/styleguidist/index.html) for å se et eksempel på en `import`-statement for den komponenten du er interessert.
-
-Vil du komme med et bidrag til designsystemet? Informasjon om hvordan du kommer i gang med utvikling av designsystemet og de forskjellige pakkene funner du i [`README.md`](https://github.com/SpareBank1/designsystem/blob/master/README.md).
 
 <h3 class="ffe-h3">
     Pakkeplukker
