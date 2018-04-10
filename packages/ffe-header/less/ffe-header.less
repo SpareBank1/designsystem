@@ -2,7 +2,6 @@
     background: @ffe-white;
     text-align: center;
 
-    &__search--visible,
     &__user-nav-list--visible,
     &__site-nav-list--visible {
         z-index: 1;
@@ -126,13 +125,11 @@
 
     &__user-icon,
     &__user-chevron-icon,
-    &__search-icon,
     &__site-nav-icon {
         fill: @ffe-blue-royal;
     }
 
     &__user-icon,
-    &__search-icon,
     &__site-nav-icon {
         height: 25px;
         width: 25px;
@@ -251,8 +248,6 @@
 
 @media screen and (min-width: @breakpoint-md) {
     .ffe-header {
-        &__search,
-        &__search-button,
         &__site-nav-button,
         &__user-icon {
             display: none;
@@ -346,8 +341,7 @@
         }
 
         &__user-nav-list,
-        &__site-nav-list,
-        &__search {
+        &__site-nav-list {
             visibility: hidden;
             height: 1px;
             position: absolute;
@@ -376,11 +370,6 @@
                 transform: translateY(0);
                 background-color: @ffe-white;
             }
-        }
-
-        &__search-button {
-            margin-right: 10px;
-            order: -1;
         }
     }
 }
