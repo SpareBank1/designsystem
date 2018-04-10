@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="7.0.5"></a>
+## [7.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@7.0.4...@sb1/ffe-buttons@7.0.5) (2018-04-10)
+
+
+
+
+**Note:** Version bump only for package @sb1/ffe-buttons
+
       <a name="7.0.4"></a>
 ## [7.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@7.0.3...@sb1/ffe-buttons@7.0.4) (2018-03-27)
 
@@ -15,7 +23,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="7.0.3"></a>
+    <a name="7.0.3"></a>
 ## [7.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@7.0.2...@sb1/ffe-buttons@7.0.3) (2018-03-27)
 
 
@@ -26,7 +34,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-    <a name="7.0.2"></a>
+  <a name="7.0.2"></a>
 ## [7.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@7.0.1...@sb1/ffe-buttons@7.0.2) (2018-03-22)
 
 
@@ -37,7 +45,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-  <a name="7.0.1"></a>
+<a name="7.0.1"></a>
 ## [7.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@7.0.0...@sb1/ffe-buttons@7.0.1) (2018-03-13)
 
 

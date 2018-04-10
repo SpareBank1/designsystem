@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0"></a>
+# [3.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@2.0.3...@sb1/ffe-core-react@3.0.0) (2018-04-10)
+
+
+### Chores
+
+* **ffe-core-react:** Remove deprecated layout ([60e8863](https://github.com/SpareBank1/designsystem/commit/60e8863))
+
+
+### BREAKING CHANGES
+
+* **ffe-core-react:** Removed the React components for the deprecated
+Hawaii layout system. Please don't use this layout when developing
+new functionality and please consider moving away from it when
+visiting old functionality.
+
+New layouts should be based on the `ffe-grid` component.
+
+
+
+
 <a name="2.0.3"></a>
 ## [2.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@2.0.2...@sb1/ffe-core-react@2.0.3) (2018-03-27)
 

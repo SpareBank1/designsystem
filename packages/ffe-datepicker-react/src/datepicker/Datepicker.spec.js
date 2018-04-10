@@ -410,6 +410,22 @@ describe('<Datepicker />', () => {
         });
     });
 
+    describe('should have element references in rendered components', () => {
+        it('it has all references when calendar is open', () => {
+            const wrapper = getMountedWrapper({
+                value: '01.01.2016',
+                maxDate: '12.12.2016',
+            });
+
+            const renderedWrapper = wrapper.instance();
+            expect(renderedWrapper.dateInputRef._input).toBeTruthy();
+            expect(renderedWrapper._datepickerNode).toBeTruthy();
+            expect(renderedWrapper.datepickerCalendar).toBeFalsy();
+            renderedWrapper.openCalendar();
+            expect(renderedWrapper.datepickerCalendar._wrapper).toBeTruthy();
+        });
+    });
+
     describe('validate correct visibility of Calendar on DateInput key press', () => {
         const openCalendar = wrapper => {
             const input = wrapper.find('input');
