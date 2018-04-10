@@ -6408,6 +6408,11 @@ input:not([type='radio']):not([type='checkbox']) {
   animation-timing-function: ease;
   animation-play-state: paused;
 }
+.sb1ds-npm-i-builder-output {
+  background: #F4F4F4;
+  padding: 8px 16px;
+  word-break: keep-all;
+}
 .sb1ds {
   font-family: 'MuseoSans-500', arial, sans-serif;
   line-height: 1.5;

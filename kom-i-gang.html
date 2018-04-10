@@ -291,8 +291,164 @@
               <section class="sb1ds-section-static">
                 <h2 class="ffe-h2 sb1ds-section-static__h2 sb1ds-header-offset" id="kom-i-gang_for-utviklere">For utviklere</h2>
               
-                <p>FFE inneholder en samling av gjenbrukbare komponenter basert på Less og React for å bygge nettsider og brukergrensesnitt. Komponentbiblioteket sikrer konsistent stil og oppførsel i prototyper og produksjonsarbeid.</p>
-              <p>Mer informasjon om hvordan du kommer i gang med utvikling i repositoriet og de forskjellige pakkene finnes i <a href="https://github.com/SpareBank1/designsystem/blob/master/README.md"><code>README.md</code></a>.</p>
+                <p>FFE er en samling av gjenbrukbare komponenter basert på Less og React for å bygge nettsider og brukergrensesnitt. Komponentbiblioteket sikrer konsistent stil og oppførsel i prototyper og produksjonsarbeid.</p>
+              <p>Komponentene er publisert i forskjellige <a href="https://www.npmjs.com/org/sb1">pakker på npm under @sb1-organisasjonen</a>. Kildekoden til pakkene ligger på <a href="https://github.com/SpareBank1/designsystem/tree/develop/packages">Github</a> sammen med <code>README</code>s med mer detaljerte instruksjoner for hvordan bruke pakkene i prosjektet ditt.</p>
+              <p>Alle vil trenge <a href="https://github.com/SpareBank1/designsystem/tree/develop/packages/ffe-core">@sb1/ffe-core</a> og <a href="https://github.com/SpareBank1/designsystem/tree/develop/packages/ffe-webfonts">@sb1/ffe-webfonts</a>, og de fleste trenger pakkene for <a href="https://github.com/SpareBank1/designsystem/tree/develop/packages/ffe-grid">grid</a>, <a href="https://github.com/SpareBank1/designsystem/tree/develop/packages/ffe-buttons">knapper</a>,  og <a href="https://github.com/SpareBank1/designsystem/tree/develop/packages/ffe-form">skjema</a> (eventuelt med React-tvillingen sin). Bruk verktøyet under for å lage en installasjonskommando som passer deg.</p>
+              <p>Less-pakker brukes som oftes ved å ha en egen Less-fil i ditt prosjekt med et <code>@import</code>-statement for hver pakke, som <a href="https://github.com/SpareBank1/designsystem/tree/develop/packages/ffe-buttons#usage">her for <code>@sb1/ffe-buttons</code></a>. React-pakker brukes på lik linje med enhver JavaScript-pakke. Se <a href="/styleguidist/index.html">Komponentbiblioteket</a> for å se et eksempel på en <code>import</code>-statement for den komponenten du er interessert.</p>
+              <h3 class="ffe-h3">
+                  Pakkeplukker
+              </h3>
+              
+              <p>Pakkeplukkeren dekker de mest brukte pakkene. Se <a href="/styleguidist/index.html">Komponentbiblioteket</a> for en fullstendig oversikt over hva som finnes og hvilke pakker de er publisert i.</p>
+              <fieldset
+                  id="npm-i-builder-packages"
+                  class="ffe-fieldset"
+              >
+                  <legend class="ffe-form-label">
+                      Hva trenger du?
+                  </legend>
+                  <input
+                      class="ffe-hidden-checkbox"
+                      id="npm-i-builder-bundle-core"
+                      aria-invalid="false"
+                      value="core"
+                      type="checkbox"
+                      checked
+                  />
+                  <label
+                      class="ffe-checkbox ffe-checkbox--inline"
+                      for="npm-i-builder-bundle-core"
+                  >
+                      Kjernen
+                  </label>
+                  <input
+                      class="ffe-hidden-checkbox"
+                      id="npm-i-builder-bundle-grid"
+                      aria-invalid="false"
+                      value="grid"
+                      type="checkbox"
+                      checked
+                  />
+                  <label
+                      class="ffe-checkbox ffe-checkbox--inline"
+                      for="npm-i-builder-bundle-grid"
+                  >
+                      Grid
+                  </label>
+                  <input
+                      class="ffe-hidden-checkbox"
+                      id="npm-i-builder-bundle-buttons"
+                      aria-invalid="false"
+                      value="buttons"
+                      type="checkbox"
+                      checked
+                  />
+                  <label
+                      class="ffe-checkbox ffe-checkbox--inline"
+                      for="npm-i-builder-bundle-buttons"
+                  >
+                      Knapper
+                  </label>
+                  <input
+                      class="ffe-hidden-checkbox"
+                      id="npm-i-builder-bundle-form"
+                      aria-invalid="false"
+                      value="form"
+                      type="checkbox"
+                      checked
+                  />
+                  <label
+                      class="ffe-checkbox ffe-checkbox--inline"
+                      for="npm-i-builder-bundle-form"
+                  >
+                      Skjema
+                  </label>
+                  <input
+                      class="ffe-hidden-checkbox"
+                      id="npm-i-builder-bundle-icons"
+                      aria-invalid="false"
+                      value="icons"
+                      type="checkbox"
+                  />
+                  <label
+                      class="ffe-checkbox ffe-checkbox--inline"
+                      for="npm-i-builder-bundle-icons"
+                  >
+                      Ikoner
+                  </label>
+                  <input
+                      class="ffe-hidden-checkbox"
+                      id="npm-i-builder-bundle-tables"
+                      aria-invalid="false"
+                      value="tables"
+                      type="checkbox"
+                  />
+                  <label
+                      class="ffe-checkbox ffe-checkbox--inline"
+                      for="npm-i-builder-bundle-tables"
+                  >
+                      Tabeller
+                  </label>
+              </fieldset>
+              
+              <fieldset
+                  id="npm-i-builder-react"
+                  class="ffe-fieldset ffe-input-group"
+              >
+                  <legend class="ffe-form-label">
+                      Bruker du React?
+                      <span>
+                          <button
+                              aria-controls="npm-i-builder-react-tooltip-text"
+                              aria-expanded="false"
+                              class="sb1ds-tooltip ffe-tooltip__icon"
+                              type="button"
+                          >
+                              ?
+                          </button>
+                          <p
+                              class="ffe-tooltip__text ffe-small-text"
+                              id="npm-i-builder-react-tooltip-text"
+                          >
+                              React er ikke et krav, men vi har en del ferdige komponenter som du kan bruke om prosjektet ditt bruker React
+                          </p>
+                      </span>
+                  </legend>
+                  <input
+                      class="ffe-radio-input"
+                      id="npm-i-builder-react-yes"
+                      value="true"
+                      name="npm-i-builder-react"
+                      type="radio"
+                      checked
+                  >
+                  <label
+                      for="npm-i-builder-react-yes"
+                      class="ffe-radio-switch"
+                  >
+                      Ja
+                  </label>
+                  <input
+                      class="ffe-radio-input"
+                      id="npm-i-builder-react-no"
+                      value="false"
+                      name="npm-i-builder-react"
+                      type="radio"
+                  >
+                  <label
+                      for="npm-i-builder-react-no"
+                      class="ffe-radio-switch"
+                  >
+                      Nei
+                  </label>
+              </fieldset>
+              
+              <p><span class="ffe-form-label ffe-form-label--block">
+                  Kommando for å installere avhengigheter
+              </span></p>
+              <div class="sb1ds-npm-i-builder-output">
+                  <code id="sb1ds-npm-i-builder-output"></code>
+              </div>
               
               </section>
               
