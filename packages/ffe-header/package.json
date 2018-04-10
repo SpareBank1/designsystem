@@ -4,13 +4,17 @@
   "description": "Felles header for SpareBank 1",
   "license": "MIT",
   "author": "SpareBank 1",
-  "main": "index.js",
+  "files": [
+      "less",
+      "css"
+  ],
   "repository": {
     "type": "git",
     "url": "ssh://git@github.com:SpareBank1/designsystem.git"
   },
   "scripts": {
-    "build": "lessc less/ffe-header-nodeps.less examples/ffe-header.css --autoprefix && lessc examples/examples.less examples/examples.css",
+    "build": "lessc less/ffe-header-nodeps.less css/ffe-header.css --autoprefix",
+    "build:examples": "lessc less/ffe-header-nodeps.less examples/ffe-header.css --autoprefix && lessc examples/examples.less examples/examples.css",
     "lint": "stylelint less/*.less",
     "test": "npm run lint"
   },
