@@ -78,6 +78,20 @@ describe('<RadioButtonGroup />', () => {
                 }),
             );
         });
+        it(`passes down a default noop function to silence intermittent propType
+            warnings about the radio buttons being controlled components without
+            an onChange listener (which is a lie - the onChange is in RadioButtonInputGroup)`, () => {
+            const childrenSpy = jest.fn();
+            getWrapper({
+                'aria-invalid': 'false',
+                children: childrenSpy,
+            });
+            expect(childrenSpy).toHaveBeenCalledWith(
+                expect.objectContaining({
+                    onChange: expect.any(Function),
+                }),
+            );
+        });
     });
     describe('label', () => {
         it('renders a legend if set', () => {
