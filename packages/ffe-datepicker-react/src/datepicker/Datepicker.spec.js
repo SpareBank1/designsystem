@@ -411,19 +411,16 @@ describe('<Datepicker />', () => {
     });
 
     describe('should have element references in rendered components', () => {
-        const TestUtils = require('react-dom/test-utils');
-
-        describe('it has all references when calendar is open', () => {
+        it('it has all references when calendar is open', () => {
             const wrapper = getMountedWrapper({
-                value: '31.12.2016',
-                maxDate: '01.01.2016',
-                displayDatePicker: true,
+                value: '01.01.2016',
+                maxDate: '12.12.2016',
             });
 
-            const renderedWrapper = TestUtils.renderIntoDocument(wrapper);
-            expect(TestUtils.isCompositeComponent(renderedWrapper)).toBeTruthy();
+            const renderedWrapper = wrapper.instance();
             expect(renderedWrapper.dateInputRef._input).toBeTruthy();
             expect(renderedWrapper._datepickerNode).toBeTruthy();
+            expect(renderedWrapper.datepickerCalendar).toBeFalsy();
             renderedWrapper.openCalendar();
             expect(renderedWrapper.datepickerCalendar._wrapper).toBeTruthy();
         });

@@ -206,10 +206,11 @@ export default class Datepicker extends Component {
     }
 
     divBlurHandler(evt) {
-        if (!this._datepickerNode
-            || (evt.relatedTarget && !this._datepickerNode.contains(evt.relatedTarget))
-            || !this._datepickerNode.contains(evt.target)
-            || (this.datepickerCalendar && this.datepickerCalendar._wrapper && this.datepickerCalendar._wrapper.contains(evt.target) && evt.target.getAttribute('tabindex') !== '-1' && evt.currentTarget.getAttribute('tabindex') === '-1')
+        const isBluringOutOfCalendar = (evt.target && this.datepickerCalendar && this.datepickerCalendar._wrapper && this.datepickerCalendar._wrapper.contains(evt.target) && evt.target.getAttribute('tabindex') !== '-1' && evt.currentTarget.getAttribute('tabindex') === '-1');
+        const isBluringWithDisplayDatePickerFalse = ((evt.target === this.dateInputRef._input) && (evt.currentTarget === this._datepickerNode) && !this.state.displayDatePicker );
+        if (
+            isBluringWithDisplayDatePickerFalse
+            || isBluringOutOfCalendar
         )
         {
             this.removeGlobalEventListeners();
