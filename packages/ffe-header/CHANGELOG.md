@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="11.0.7"></a>
+## [11.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@11.0.6...@sb1/ffe-header@11.0.7) (2018-04-10)
+
+
+### Bug Fixes
+
+* **ffe-header:** Fix logo position to ensure it is properly horizontally centered ([aba0c4e](https://github.com/SpareBank1/designsystem/commit/aba0c4e))
+
+
+
+
 <a name="11.0.6"></a>
 ## [11.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@11.0.5...@sb1/ffe-header@11.0.6) (2018-03-27)
 
