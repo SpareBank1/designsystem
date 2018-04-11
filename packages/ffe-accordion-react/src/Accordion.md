@@ -29,7 +29,7 @@ til å begynne med (man kan fortsatt lukke det):
 const { WhiteAccordion, AccordionItem } = require('.');
 
 <WhiteAccordion>
-    <AccordionItem isOpen={true} title="Åpen!">
+    <AccordionItem defaultOpen={true} title="Åpen!">
         Her er info du kan se med EN gang!
     </AccordionItem>
     <AccordionItem title="Lukket">Skjult innhold</AccordionItem>
