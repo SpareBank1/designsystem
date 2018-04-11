@@ -31,7 +31,7 @@ const RadioButtonInputGroup = props => {
         'aria-invalid': ariaInvalid || String(!!fieldMessage),
         inline,
         name,
-        onChange: f => f,
+        onChange: /* istanbul ignore next */ f => f,
         selectedValue,
     };
 
