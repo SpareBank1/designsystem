@@ -3,6 +3,51 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="12.0.0"></a>
+# [12.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@11.0.1...@sb1/ffe-icons@12.0.0) (2018-04-11)
+
+
+### Bug Fixes
+
+* **ffe-icons:** Create target folder before build ([62bdf6d](https://github.com/SpareBank1/designsystem/commit/62bdf6d))
+* **ffe-icons:** Move from height/width to viewBox ([fc62367](https://github.com/SpareBank1/designsystem/commit/fc62367))
+* **ffe-icons:** Remove redundant XML tags and ns ([443b13c](https://github.com/SpareBank1/designsystem/commit/443b13c))
+* **ffe-icons:** Remove svg-sprite dependency ([416c65e](https://github.com/SpareBank1/designsystem/commit/416c65e))
+
+
+### BREAKING CHANGES
+
+* **ffe-icons:** The following icons have had their width and height
+attributes removed and replaced with viewBox. This may or may not cause
+a visual regression - please confirm these icons look like they should
+after you upgrade:
+
+* hus-stjerne
+* koffert
+* kr-klokke
+* moped
+* **ffe-icons:** Since the tool used to build the sprite has changed
+the `config` field in the configuration file is no longer available.
+
+The sprite is no longer put in a `symbols/` folder automatically. If
+you want to preserve the current folder structure you have to add
+`symbols/` to `dest` in your config like so:
+
+```diff
+{
+-   "dest": "dist/assets/",
++   "dest": "dist/assets/symbol/",
+  "icons": ["*"]
+}
+```
+
+This breaking change is introduced to get rid of PhantomJS from our
+dependency tree. You should see a significant reduction in installation
+time and disk usage from this change.
+
+
+
+
       <a name="11.0.1"></a>
 ## [11.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@11.0.0...@sb1/ffe-icons@11.0.1) (2018-04-06)
 
@@ -11,7 +56,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-icons
 
-      <a name="11.0.0"></a>
+    <a name="11.0.0"></a>
 # [11.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@10.1.0...@sb1/ffe-icons@11.0.0) (2018-03-13)
 
 
@@ -32,7 +77,7 @@ how to migrate.
 
 
 
-    <a name="10.1.0"></a>
+  <a name="10.1.0"></a>
 # [10.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@10.0.0...@sb1/ffe-icons@10.1.0) (2018-03-07)
 
 
@@ -49,7 +94,7 @@ how to migrate.
 
 
 
-  <a name="10.0.1"></a>
+<a name="10.0.1"></a>
 ## [10.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@10.0.0...@sb1/ffe-icons@10.0.1) (2018-03-02)
 
 

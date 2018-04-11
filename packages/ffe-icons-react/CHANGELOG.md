@@ -3,7 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-      <a name="5.0.5"></a>
+    <a name="6.0.0"></a>
+# [6.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@5.0.5...@sb1/ffe-icons-react@6.0.0) (2018-04-11)
+
+
+### Chores
+
+* **ffe-icons-react:** Upgrade to new ffe-icons ([bab479f](https://github.com/SpareBank1/designsystem/commit/bab479f))
+
+
+### BREAKING CHANGES
+
+* **ffe-icons-react:** This version migrates to the new `ffe-icons` which
+replaced its method of generating the SVG sprite to no longer need
+PhantomJS. This may or may not introduce visual regressions. From the
+looks of it in the styleguide it should be a drop-in replacement,
+however for safety this is marked as a breaking change.
+
+
+
+
+    <a name="5.0.5"></a>
 ## [5.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@5.0.4...@sb1/ffe-icons-react@5.0.5) (2018-04-06)
 
 
@@ -11,7 +31,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-icons-react
 
-      <a name="5.0.4"></a>
+  <a name="5.0.4"></a>
 ## [5.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@5.0.3...@sb1/ffe-icons-react@5.0.4) (2018-03-27)
 
 
@@ -19,7 +39,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-icons-react
 
-    <a name="5.0.3"></a>
+<a name="5.0.3"></a>
 ## [5.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@5.0.2...@sb1/ffe-icons-react@5.0.3) (2018-03-13)
 
 
