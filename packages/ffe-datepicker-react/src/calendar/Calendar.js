@@ -197,6 +197,9 @@ export default class Calendar extends Component {
                 className={this.props.calendarClassName || 'ffe-calendar'}
                 onFocus={this.focusHandler}
                 role="region"
+                ref={c => {
+                    this._wrapper = c;
+                }}
             >
                 <Header
                     datepickerId={this.datepickerId}
