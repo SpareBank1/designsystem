@@ -112,6 +112,30 @@ describe('<InputGroup>', () => {
         );
     });
 
+    it('throws error when receiving a <Tooltip /> and onTooltipToggle is used', () => {
+        const wrapper = () =>
+            getWrapper({
+                tooltip: (<Tooltip>Message</Tooltip>),
+                onTooltipToggle: f => f,
+            });
+
+        expect(wrapper).toThrowError(
+            /Only use the "onTooltipToggle" prop if you're not sending a component/,
+        );
+    });
+
+    it('renders a <Tooltip /> with onTooltipToggle as an onClick if tooltip is true', () => {
+        const onTooltipToggle = jest.fn();
+        const wrapper = getWrapper({
+            tooltip: true,
+            onTooltipToggle,
+        });
+        const tooltip = wrapper.find(Tooltip);
+        expect(tooltip.exists()).toBe(true);
+        tooltip.simulate('click');
+        expect(onTooltipToggle).toHaveBeenCalled();
+    });
+
     it('supplies id and aria-invalid to function when child is a function', () => {
         const wrapper = getWrapper({
             children: props => (
