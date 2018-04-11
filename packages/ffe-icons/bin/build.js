@@ -1,31 +1,11 @@
 #!/usr/bin/env node
 'use strict'; // eslint-disable-line strict
 
-const deepAssign = require('deep-assign');
 const fs = require('fs');
-const mkdirp = require('mkdirp');
 const path = require('path');
-const SVGSpriter = require('svg-sprite');
-const Vinyl = require('vinyl');
+const svgstore = require('svgstore');
 
 const ICONS_PATH = path.join(__dirname, '..', 'icons');
-const defaultSVGOptions = {
-    log: 'info',
-    svg: {
-        dimensionAttributes: false,
-    },
-    shape: {
-        dimension: {
-            maxWidth: 150,
-        },
-    },
-    mode: {
-        symbol: {
-            sprite: 'ffe-icons.svg',
-            example: true,
-        },
-    },
-};
 
 // convenience to avoid having file extension in config
 const appendSvgExtension = icons =>
@@ -48,21 +28,14 @@ const options = require('yargs')
             normalize: true,
             coerce: path.resolve,
         },
-        config: {
-            default: defaultSVGOptions,
-            coerce: config => deepAssign(defaultSVGOptions, config),
-        },
     }).argv;
-
-options.config.dest = options.dest;
 
 const matchesIcon = icons =>
     icons.includes('*.svg') || icons.includes('**/*.svg')
         ? () => true
         : fileName => icons.includes(path.basename(fileName));
 
-// https://github.com/jkphl/svg-sprite#usage-pattern
-const spriter = new SVGSpriter(options.config);
+const sprite = svgstore();
 
 fs
     .readdirSync(ICONS_PATH)
@@ -70,42 +43,20 @@ fs
     .filter(matchesIcon(options.icons))
     .forEach(fileName => {
         const iconPath = path.join(ICONS_PATH, fileName);
-        spriter.add(
-            new Vinyl({
-                path: iconPath,
-                base: ICONS_PATH,
-                contents: fs.readFileSync(iconPath),
-            }),
-        );
+        const iconName = path.basename(fileName, '.svg');
+        sprite.add(iconName, fs.readFileSync(iconPath), 'utf-8');
     });
 
 if (options.projectIcons) {
-    options.projectIcons.forEach(fileName => {
-        const iconPath = path.join(fileName);
-        spriter.add(
-            new Vinyl({
-                path: fileName.substring(fileName.lastIndexOf('/') - 1),
-                base: process.cwd(),
-                contents: fs.readFileSync(iconPath),
-            }),
-        );
-    });
+    options.projectIcons
+        .forEach((fileName) => {
+            const iconPath = path.join(fileName);
+            const iconName = path.basename(fileName, '.svg');
+            sprite.add(iconName, fs.readFileSync(iconPath), 'utf-8');
+        });
 }
 
-spriter.compile(function(error, result) {
-    for (const mode in result) {
-        if (Object.prototype.hasOwnProperty.call(result, mode)) {
-            for (const resource in result[mode]) {
-                if (
-                    Object.prototype.hasOwnProperty.call(result[mode], resource)
-                ) {
-                    mkdirp.sync(path.dirname(result[mode][resource].path));
-                    fs.writeFileSync(
-                        result[mode][resource].path,
-                        result[mode][resource].contents,
-                    );
-                }
-            }
-        }
-    }
-});
+fs.writeFileSync(
+    path.join(options.dest, 'ffe-icons.svg'),
+    sprite
+);

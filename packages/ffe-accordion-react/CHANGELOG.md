@@ -3,7 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-      <a name="5.0.5"></a>
+      <a name="6.0.1"></a>
+## [6.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@6.0.0...@sb1/ffe-accordion-react@6.0.1) (2018-04-11)
+
+
+
+
+**Note:** Version bump only for package @sb1/ffe-accordion-react
+
+      <a name="6.0.0"></a>
+# [6.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@5.0.5...@sb1/ffe-accordion-react@6.0.0) (2018-04-11)
+
+
+### Features
+
+* **ffe-accordion-react:** Make AccordionItems controllable ([a2761e8](https://github.com/SpareBank1/designsystem/commit/a2761e8)), closes [#155](https://github.com/SpareBank1/designsystem/issues/155)
+
+
+### BREAKING CHANGES
+
+* **ffe-accordion-react:** `AccordionItem`'s prop `isOpen` is renamed to
+`defaultOpen`, while a new `open` prop let's the consumer control the
+open state of the accordion. To migrate, simply rename all `isOpen`
+props to `defaultOpen`.
+* **ffe-accordion-react:** `AccordionItem`'s props `onOpen` and `onClose` replaced
+with `onToggleOpen(nextIsOpen)`.
+
+
+
+
+    <a name="5.0.5"></a>
 ## [5.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@5.0.4...@sb1/ffe-accordion-react@5.0.5) (2018-04-06)
 
 
@@ -11,7 +40,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react
 
-      <a name="5.0.4"></a>
+  <a name="5.0.4"></a>
 ## [5.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@5.0.3...@sb1/ffe-accordion-react@5.0.4) (2018-03-27)
 
 
@@ -19,7 +48,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react
 
-    <a name="5.0.3"></a>
+<a name="5.0.3"></a>
 ## [5.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@5.0.2...@sb1/ffe-accordion-react@5.0.3) (2018-03-13)
 
 
@@ -27,7 +56,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react
 
-  <a name="5.0.2"></a>
+<a name="5.0.2"></a>
 ## [5.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@5.0.0...@sb1/ffe-accordion-react@5.0.2) (2018-03-07)
 
 
