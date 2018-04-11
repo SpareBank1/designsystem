@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 
 import Checkbox from './Checkbox';
 
@@ -105,5 +105,23 @@ describe('<Checkbox />', () => {
             'false',
         );
         expect(wrapper.find('input').prop('tabIndex')).toBe(-1);
+    });
+
+    it('should stop event propagation when stopPropagation is true', () => {
+        const onClickOfWrapper = jest.fn();
+        const onClickOfCheckbox = jest.fn();
+        const wrapper = mount(
+            <div onClick={onClickOfWrapper} role="presentation">
+                <Checkbox
+                    onClick={onClickOfCheckbox}
+                    stopPropagation={true}
+                />
+            </div>
+        );
+
+        wrapper.find('div').find('input').simulate('click');
+
+        expect(onClickOfWrapper).toHaveBeenCalledTimes(0);
+        expect(onClickOfCheckbox).toHaveBeenCalled();
     });
 });
