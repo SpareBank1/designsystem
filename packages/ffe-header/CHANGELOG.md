@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="11.1.0"></a>
+# [11.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@11.0.9...@sb1/ffe-header@11.1.0) (2018-04-11)
+
+
+### Bug Fixes
+
+* **ffe-header:** Change accordingly to ffe-buttons ([d748e14](https://github.com/SpareBank1/designsystem/commit/d748e14))
+
+
+### Features
+
+* **ffe-header:** Include transpiled css in npm package ([393725e](https://github.com/SpareBank1/designsystem/commit/393725e))
+* **ffe-header:** Removes unused search area ([2a141d6](https://github.com/SpareBank1/designsystem/commit/2a141d6))
+
+
+
+
 <a name="11.0.9"></a>
 ## [11.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@11.0.8...@sb1/ffe-header@11.0.9) (2018-04-10)
 
