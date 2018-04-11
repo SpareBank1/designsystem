@@ -9,9 +9,6 @@ import {
 } from './utils';
 
 function camelCaseToDashCase(str) {
-    if (!str) {
-        return str;
-    }
     return str
         .split('')
         .reduce(
@@ -61,6 +58,7 @@ const modifiers = props =>
 
 export default class GridCol extends Component {
     componentDidMount() {
+        /* istanbul ignore else: there is no else  */
         if (process.env.NODE_ENV !== 'production') {
             checkForDeprecatedModifiers(this.props);
             checkForNestedComponent(this.props.children, GridCol);
