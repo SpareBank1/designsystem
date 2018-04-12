@@ -67,6 +67,14 @@ describe('<AccordionItem />', () => {
             }); // esc
             expect(wrapper.find('Collapse').prop('isOpened')).toBe(false);
         });
+        it('is not toggled by other keys', () => {
+            const wrapper = getWrapperWithExpandedContent();
+            wrapper.find('.ffe-accordion-item__toggler').simulate('keyup', {
+                target: { nodeName: 'div' },
+                keyCode: 14,
+            }); // not enter
+            expect(wrapper.find('Collapse').prop('isOpened')).toBe(false);
+        });
         it('toggling onToggle prop', () => {
             const onToggleOpenSpy = jest.fn();
 
