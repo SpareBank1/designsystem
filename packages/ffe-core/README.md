@@ -34,4 +34,6 @@ I noe tilfeller trenger man kanskje kun deler av ffe-core. Derfor kan hver fil i
 @import '~@sb1/ffe-core/less/dimensions';
 @import '~@sb1/ffe-core/less/motion';
 @import '~@sb1/ffe-core/less/font-sizes';
+@import '~@sb1/ffe-core/less/typography';
+@import '~@sb1/ffe-core/less/accessibility';
 ```

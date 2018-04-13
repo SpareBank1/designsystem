@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="11.1.3"></a>
+## [11.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@11.1.2...@sb1/ffe-header@11.1.3) (2018-04-13)
+
+
+### Bug Fixes
+
+* **ffe-header:** Make logout button properly centered on small screens ([9bcc151](https://github.com/SpareBank1/designsystem/commit/9bcc151))
+
+
+
+
+<a name="11.1.2"></a>
+## [11.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@11.1.1...@sb1/ffe-header@11.1.2) (2018-04-13)
+
+
+### Bug Fixes
+
+* **ffe-header:** Extend all necessary modifiers in order to render logout button correctly ([d4a78a0](https://github.com/SpareBank1/designsystem/commit/d4a78a0))
+
+
+
+
 <a name="11.1.1"></a>
 ## [11.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@11.1.0...@sb1/ffe-header@11.1.1) (2018-04-11)
 
