@@ -135,10 +135,14 @@
         &:extend(.ffe-button--condensed);
 
         margin: 8px 10px;
+        border-radius: 20px;
 
         &:focus:extend(.ffe-button:focus) {}
+        &:focus:extend(.ffe-button--secondary:focus) {}
         &:hover:extend(.ffe-button:hover) {}
+        &:hover:extend(.ffe-button--secondary:hover) {}
         &:active:extend(.ffe-button:active) {}
+        &:active:extend(.ffe-button--secondary:active) {}
 
         &--loading {
             &:extend(.ffe-button--loading);
