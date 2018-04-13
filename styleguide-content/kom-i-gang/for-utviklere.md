@@ -4,7 +4,7 @@ Komponentene er publisert i forskjellige [pakker på npm under @sb1-organisasjon
 
 Alle vil trenge [@sb1/ffe-core](https://github.com/SpareBank1/designsystem/tree/develop/packages/ffe-core) og [@sb1/ffe-webfonts](https://github.com/SpareBank1/designsystem/tree/develop/packages/ffe-webfonts), og de fleste trenger pakkene for [grid](https://github.com/SpareBank1/designsystem/tree/develop/packages/ffe-grid), [knapper](https://github.com/SpareBank1/designsystem/tree/develop/packages/ffe-buttons),  og [skjema](https://github.com/SpareBank1/designsystem/tree/develop/packages/ffe-form) (eventuelt med React-tvillingen sin). Bruk verktøyet under for å lage en installasjonskommando som passer deg.
 
-Less-pakker brukes som oftes ved å ha en egen Less-fil i ditt prosjekt med et `@import`-statement for hver pakke, som [her for `@sb1/ffe-buttons`](https://github.com/SpareBank1/designsystem/tree/develop/packages/ffe-buttons#usage). React-pakker brukes på lik linje med enhver JavaScript-pakke. Se [Komponentbiblioteket](/styleguidist/index.html) for å se et eksempel på en `import`-statement for den komponenten du er interessert.
+Less-pakker brukes som oftes ved å ha en egen Less-fil i ditt prosjekt med et `@import`-statement for hver pakke, som her for [`@sb1/ffe-buttons`](https://github.com/SpareBank1/designsystem/tree/develop/packages/ffe-buttons#usage). React-pakker brukes på lik linje med enhver JavaScript-pakke. Se [Komponentbiblioteket](/styleguidist/index.html) for å se et eksempel på en `import`-statement for den komponenten du er interessert.
 
 <h3 class="ffe-h3">
     Pakkeplukker
