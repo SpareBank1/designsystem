@@ -134,7 +134,7 @@
         &:extend(.ffe-button--secondary);
         &:extend(.ffe-button--condensed);
 
-        margin: 8px 10px;
+        margin: 8px 0;
         border-radius: 20px;
 
         &:focus:extend(.ffe-button:focus) {}
@@ -364,6 +364,10 @@
             background: @ffe-white;
             border: 2px solid @ffe-blue-azure;
             outline: 2px solid @ffe-blue-focus;
+        }
+
+        &__logout-button {
+            margin: 8px 10px;
         }
 
         &__icon-button--user-nav {
