@@ -109,23 +109,10 @@ Pakkeplukkeren dekker de mest brukte pakkene. Se [Komponentbiblioteket](/stylegu
 >
     <legend class="ffe-form-label">
         Bruker du React?
-        <span>
-            <button
-                aria-controls="npm-i-builder-react-tooltip-text"
-                aria-expanded="false"
-                class="sb1ds-tooltip ffe-tooltip__icon"
-                type="button"
-            >
-                ?
-            </button>
-            <p
-                class="ffe-tooltip__text ffe-small-text"
-                id="npm-i-builder-react-tooltip-text"
-            >
-                React er ikke et krav, men vi har en del ferdige komponenter som du kan bruke om prosjektet ditt bruker React
-            </p>
-        </span>
     </legend>
+    <div class="ffe-small-text">
+        React er ikke et krav, men vi har en del ferdige komponenter som du kan bruke om prosjektet ditt bruker React
+    </div>
     <input
         class="ffe-radio-input"
         id="npm-i-builder-react-yes"
