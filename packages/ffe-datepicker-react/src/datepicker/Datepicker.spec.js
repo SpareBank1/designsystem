@@ -11,7 +11,6 @@ import KeyCode from '../util/keyCode';
 const defaultProps = {
     value: '',
     onChange: () => {},
-    language: 'nb',
 };
 
 const getShallowWrapper = props =>
@@ -23,6 +22,10 @@ const ERROR_CLASS = '.ffe-field-error-message';
 
 describe('<Datepicker />', () => {
     describe('with empty value', () => {
+        it('renders with language set to nb by default', () => {
+            const wrapper = getMountedWrapper();
+            expect(wrapper.prop('language')).toBe('nb');
+        });
         it('renders a wrapper for the datepicker components', () => {
             const wrapper = getShallowWrapper();
             expect(wrapper.find('.ffe-datepicker').exists()).toBe(true);

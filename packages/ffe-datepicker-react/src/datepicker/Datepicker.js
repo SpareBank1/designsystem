@@ -362,6 +362,7 @@ export default class Datepicker extends Component {
 }
 
 Datepicker.defaultProps = {
+    language: 'nb',
     onValidationComplete: () => {},
 };
 
@@ -376,7 +377,7 @@ Datepicker.propTypes = {
         id: string,
     }),
     label: string,
-    language: string.isRequired,
+    language: string,
     maxDate: string,
     minDate: string,
     onChange: func.isRequired,
