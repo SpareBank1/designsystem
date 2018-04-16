@@ -303,11 +303,14 @@ export default class Datepicker extends Component {
                     <label
                         className="ffe-form-label ffe-form-label--block"
                         htmlFor={inputProps.id}
+                        id={`ffe-datepicker-label-${this.datepickerId}`}
                     >
                         {label}
                     </label>
                 )}
                 <div
+                    aria-labelledby={label ? `ffe-datepicker-label-${this.datepickerId}` : undefined}
+                    aria-label={label ? undefined : i18n[language].CHOOSE_DATE}
                     className="ffe-datepicker"
                     onClick={this.clickHandler}
                     ref={c => {
