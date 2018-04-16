@@ -2,19 +2,19 @@
     width: 100%;
 }
 
-.sb1ds-bad h5 {
+.sb1ds-example__header-bad-example {
     margin: 1em 0 0.5em;
     color: @ffe-orange-fire;
 }
 
-.sb1ds-good h5 {
+.sb1ds-example__header-good-example {
     margin: 1em 0 0.5em;
     color: @ffe-green-emerald;
 }
 
-.sb1ds-none h5 {
+.sb1ds-example__header-no-animation-example {
     margin: 1em 0 0.5em;
-    color: @ffe-grey;
+    color: @ffe-black;
 }
 
 .sb1ds-svgs {
@@ -105,6 +105,7 @@
         .sb1ds-hide,
         .sb1ds-show,
         .sb1ds-cloud #cloud,
+        .sb1ds-cloud #flight-cloud,
         .sb1ds-house #tree,
         .sb1ds-coin-drop #coin,
         .sb1ds-heart #heart,
@@ -711,6 +712,7 @@
     }
 }
 
+.sb1ds-cloud #flight-cloud,
 .sb1ds-cloud #cloud {
     animation-name: move-cloud;
     animation-duration: 4s;
@@ -954,6 +956,7 @@
     #air {
         opacity: 0;
     }
+    #flight-cloud,
     #cloud {
         animation-name: cloud;
         animation-duration: 45s;

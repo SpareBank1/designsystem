@@ -4,23 +4,19 @@ Funksjonelle animasjoner er nyttige virkemidler for å kommunisere respons fra i
 
 Dekorative animasjoner kan i tillegg bidra til å skape levende produkter og grensesnitt med personlighet, og på den måten underbygge merkevare, profil og visuell identitet.
 
-### Når animerer vi?
-
-#### Funksjonelle animasjoner
+### Når bruker vi funksjonelle animasjoner?
 
 *   Visuell feedback på interaksjoner
 *   Kommunisere hvordan systemet responderer på brukerhandlinger
 *   Indikere at elementer trenger oppmerksomhet
 *   Visuelle hint om hvor og hvordan bruker må forholde seg til elementer
 
-#### Dekorative animasjoner
+### Når bruker vi dekorative animasjoner?
 
 *   Bevegelse i illustrasjoner/ikoner som stemningsskapende middel
 *   Må ikke konkurrere med interaksjonselementer
 
-### Hvordan animerer vi?
-
-#### Funksjonelle animasjoner
+### Hvordan designer vi funksjonelle animasjoner?
 
 <div class="ffe-grid ffe-grid--condensed ffe-grid--no-top-padding">
     <div class="ffe-grid__row ffe-grid__row--bg-blue-ice">
@@ -34,7 +30,7 @@ Dekorative animasjoner kan i tillegg bidra til å skape levende produkter og gre
         </div>
         <div class="sb1ds-easing sb1ds-good ffe-grid__col--sm-12 ffe-grid__col--md-4">
             <div class="sb1ds-example">
-                <h5>Easing</h5>
+                <h4 class="sb1ds-example__header-good-example">Easing</h4>
                 <div class="sb1ds-svgcontainer">
                     <div>
                         <div class="sb1ds-easing__ease-object">&nbsp;</div>
@@ -44,7 +40,7 @@ Dekorative animasjoner kan i tillegg bidra til å skape levende produkter og gre
         </div>
         <div class="sb1ds-easing sb1ds-bad ffe-grid__col--sm-12 ffe-grid__col--md-4">
             <div class="sb1ds-example">
-                <h5>Lineær</h5>
+                <h4 class="sb1ds-example__header-bad-example">Lineær</h4>
                 <div class="sb1ds-svgcontainer">
                     <div>
                         <div class="sb1ds-easing__ease-object">&nbsp;</div>
@@ -66,7 +62,7 @@ Dekorative animasjoner kan i tillegg bidra til å skape levende produkter og gre
         </div>
         <div class="sb1ds-arc sb1ds-good ffe-grid__col--sm-12 ffe-grid__col--md-4">
             <div class="sb1ds-example">
-                <h5>Kurve</h5>
+                <h4 class="sb1ds-example__header-good-example">Kurve</h4>
                 <div class="sb1ds-svgcontainer">
                     <div>
                         <div class="sb1ds-arc__container">
@@ -78,7 +74,7 @@ Dekorative animasjoner kan i tillegg bidra til å skape levende produkter og gre
         </div>
         <div class="sb1ds-arc sb1ds-bad ffe-grid__col--sm-12 ffe-grid__col--md-4">
             <div class="sb1ds-example">
-                <h5>Linje</h5>
+                <h4 class="sb1ds-example__header-bad-example">Linje</h4>
                 <div class="sb1ds-svgcontainer">
                     <div>
                         <div class="sb1ds-arc__container">
@@ -102,7 +98,7 @@ Dekorative animasjoner kan i tillegg bidra til å skape levende produkter og gre
         </div>
         <div class="sb1ds-timing sb1ds-good ffe-grid__col--sm-12 ffe-grid__col--md-4">
             <div class="sb1ds-example">
-                <h5>0.2s</h5>
+                <h4 class="sb1ds-example__header-good-example">0.2s</h4>
                 <div class="sb1ds-svgcontainer">
                     <div>
                         <div class="sb1ds-timing__object">&nbsp;</div>
@@ -112,7 +108,7 @@ Dekorative animasjoner kan i tillegg bidra til å skape levende produkter og gre
         </div>
         <div class="sb1ds-timing sb1ds-bad ffe-grid__col--sm-12 ffe-grid__col--md-4">
             <div class="sb1ds-example">
-                <h5>1.0s</h5>
+                <h4>1.0s</h4>
                 <div class="sb1ds-svgcontainer">
                     <div>
                         <div class="sb1ds-timing__object">&nbsp;</div>
@@ -133,7 +129,7 @@ Dekorative animasjoner kan i tillegg bidra til å skape levende produkter og gre
         </div>
         <div class="sb1ds-timing sb1ds-timing--overlap sb1ds-good ffe-grid__col--sm-12 ffe-grid__col--md-4">
             <div class="sb1ds-example">
-                <h5>ease-in-out-back</h5>
+                <h4 class="sb1ds-example__header-good-example">ease-in-out-back</h4>
                 <div class="sb1ds-svgcontainer">
                     <div>
                         <div class="sb1ds-timing__object">&nbsp;</div>
@@ -143,7 +139,7 @@ Dekorative animasjoner kan i tillegg bidra til å skape levende produkter og gre
         </div>
         <div class="sb1ds-timing sb1ds-timing--overlap sb1ds-bad ffe-grid__col--sm-12 ffe-grid__col--md-4">
             <div class="sb1ds-example">
-                <h5>ease</h5>
+                <h4 class="sb1ds-example__header-bad-example">ease</h4>
                 <div class="sb1ds-svgcontainer">
                     <div>
                         <div class="sb1ds-timing__object">&nbsp;</div>
@@ -164,7 +160,7 @@ Dekorative animasjoner kan i tillegg bidra til å skape levende produkter og gre
         </div>
         <div class="sb1ds-sequence sb1ds-good ffe-grid__col--sm-12 ffe-grid__col--md-4">
             <div class="sb1ds-example">
-                <h5>Sekvens</h5>
+                <h4 class="sb1ds-example__header-good-example">Sekvens</h4>
                 <div class="sb1ds-svgcontainer">
                     <ul class="sb1ds-menuthing">
                         <li>&nbsp;</li>
@@ -178,7 +174,7 @@ Dekorative animasjoner kan i tillegg bidra til å skape levende produkter og gre
         </div>
         <div class="sb1ds-sequence sb1ds-bad ffe-grid__col--sm-12 ffe-grid__col--md-4">
             <div class="sb1ds-example">
-                <h5>Samtidig</h5>
+                <h4 class="sb1ds-example__header-bad-example">Samtidig</h4>
                 <div class="sb1ds-svgcontainer">
                     <ul class="sb1ds-menuthing">
                         <li>&nbsp;</li>
@@ -203,7 +199,7 @@ Dekorative animasjoner kan i tillegg bidra til å skape levende produkter og gre
         </div>
         <div class="sb1ds-subtle sb1ds-good ffe-grid__col--sm-12 ffe-grid__col--md-4">
             <div class="sb1ds-example">
-                <h5>Subtilt</h5>
+                <h4 class="sb1ds-example__header-good-example">Subtilt</h4>
                 <div class="sb1ds-svgcontainer">
                     <ul class="sb1ds-menuthing">
                         <li>&nbsp;</li>
@@ -217,7 +213,7 @@ Dekorative animasjoner kan i tillegg bidra til å skape levende produkter og gre
         </div>
         <div class="sb1ds-subtle sb1ds-bad ffe-grid__col--sm-12 ffe-grid__col--md-4">
             <div class="sb1ds-example">
-                <h5>Nja</h5>
+                <h4 class="sb1ds-example__header-bad-example">Nja</h4>
                 <div class="sb1ds-svgcontainer">
                     <ul class="sb1ds-menuthing-subtle">
                         <li>&nbsp;</li>
@@ -241,7 +237,7 @@ Dekorative animasjoner kan i tillegg bidra til å skape levende produkter og gre
         </div>
         <div class="sb1ds-xy sb1ds-good ffe-grid__col--sm-12 ffe-grid__col--md-4">
             <div class="sb1ds-example">
-                <h5>Ja</h5>
+                <h4 class="sb1ds-example__header-good-example">Ja</h4>
                 <div class="sb1ds-svgcontainer">
                     <div>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><path d="m16.171492,41.999998c-4.143269,0-8.2852797,1.57464-11.4277496,4.706478-6.3249899,6.283609-6.3249899,16.499474,0,22.803034l84.0286676,83.76282c6.30496,6.30356,16.54928,6.30356,22.87426,0l83.60959-83.26412c6.32499-6.28361,6.32499-16.499477,0-22.803038-6.30496-6.30356-16.55553-6.30356-22.88051,0l-72.13806,71.893768-72.613438-72.373767c-3.14247-3.151781-7.29074-4.725174-11.433999-4.725174h-0.0188z"/></svg>
@@ -251,7 +247,7 @@ Dekorative animasjoner kan i tillegg bidra til å skape levende produkter og gre
         </div>
         <div class="sb1ds-xy sb1ds-bad ffe-grid__col--sm-12 ffe-grid__col--md-4">
             <div class="sb1ds-example">
-                <h5>Nei</h5>
+                <h4 class="sb1ds-example__header-bad-example">Nei</h4>
                 <div class="sb1ds-svgcontainer">
                     <div>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><path d="m16.171492,41.999998c-4.143269,0-8.2852797,1.57464-11.4277496,4.706478-6.3249899,6.283609-6.3249899,16.499474,0,22.803034l84.0286676,83.76282c6.30496,6.30356,16.54928,6.30356,22.87426,0l83.60959-83.26412c6.32499-6.28361,6.32499-16.499477,0-22.803038-6.30496-6.30356-16.55553-6.30356-22.88051,0l-72.13806,71.893768-72.613438-72.373767c-3.14247-3.151781-7.29074-4.725174-11.433999-4.725174h-0.0188z"/></svg>
@@ -271,7 +267,7 @@ Dekorative animasjoner kan i tillegg bidra til å skape levende produkter og gre
         </div>
         <div class="sb1ds-relocate sb1ds-good ffe-grid__col--sm-12 ffe-grid__col--md-4">
             <div class="sb1ds-example">
-                <h5>Ja</h5>
+                <h4 class="sb1ds-example__header-good-example">Ja</h4>
                 <div class="sb1ds-svgcontainer">
                     <div>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><path d="m16.171492,41.999998c-4.143269,0-8.2852797,1.57464-11.4277496,4.706478-6.3249899,6.283609-6.3249899,16.499474,0,22.803034l84.0286676,83.76282c6.30496,6.30356,16.54928,6.30356,22.87426,0l83.60959-83.26412c6.32499-6.28361,6.32499-16.499477,0-22.803038-6.30496-6.30356-16.55553-6.30356-22.88051,0l-72.13806,71.893768-72.613438-72.373767c-3.14247-3.151781-7.29074-4.725174-11.433999-4.725174h-0.0188z"/></svg> <span class="sb1ds-show">Expand</span><span class="sb1ds-hide">Collapse</span>
@@ -281,7 +277,7 @@ Dekorative animasjoner kan i tillegg bidra til å skape levende produkter og gre
         </div>
         <div class="sb1ds-relocate sb1ds-bad ffe-grid__col--sm-12 ffe-grid__col--md-4">
             <div class="sb1ds-example">
-                <h5>Nei</h5>
+                <h4 class="sb1ds-example__header-bad-example">Nei</h4>
                 <div class="sb1ds-svgcontainer">
                     <div>
                         <span class="sb1ds-show">Expand</span><span class="sb1ds-hide">Collapse</span> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><path d="m16.171492,41.999998c-4.143269,0-8.2852797,1.57464-11.4277496,4.706478-6.3249899,6.283609-6.3249899,16.499474,0,22.803034l84.0286676,83.76282c6.30496,6.30356,16.54928,6.30356,22.87426,0l83.60959-83.26412c6.32499-6.28361,6.32499-16.499477,0-22.803038-6.30496-6.30356-16.55553-6.30356-22.88051,0l-72.13806,71.893768-72.613438-72.373767c-3.14247-3.151781-7.29074-4.725174-11.433999-4.725174h-0.0188z"/></svg>
@@ -292,13 +288,13 @@ Dekorative animasjoner kan i tillegg bidra til å skape levende produkter og gre
     </div>
 </div>
 
-#### Dekorative animasjoner
+### Hvordan designer vi dekorative animasjoner?
 
 *   Naturlige bevegelser
 *   Koreografi
 *   Repeterende bevegelser/loop
 
-### Felles variabler for funksjonelle animasjoner
+### Felles variabler for utviklere av funksjonelle animasjoner
 
 For å sikre konsistens bruker vi felles variabler for timing og lengde på transitions.
 
@@ -320,28 +316,28 @@ For å sikre konsistens bruker vi felles variabler for timing og lengde på tran
 
 Variablene brukes i LESS-filer som erstatning for `transition-duration` og `transition-timing-function`.
 
-##### LESS:
+<code>
+// Less
 
-`transition: all @ffe-transition-duration @ffe-ease-in-out-back;`
+transition: all @ffe-transition-duration @ffe-ease-in-out-back;
 
-##### Output:
+// CSS output
 
-`transition: all .2s cubic-bezier(.46, -0.265, .48, 1.38);`
+transition: all .2s cubic-bezier(.46, -0.265, .48, 1.38);
+</code>
 
-### Eksempler
-
-#### Funksjonelle animasjoner
+### Eksempler på funksjonelle animasjoner
 
 <div class="ffe-grid ffe-grid--condensed ffe-grid--no-top-padding">
     <div class="ffe-grid__row ffe-grid__row--bg-sand">
         <div class="ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--center sb1ds-transition sb1ds-good">
-            <h5>0.2s</h5>
+            <h4 class="sb1ds-example__header-good-example">0.2s</h4>
         </div>
         <div class="ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--center sb1ds-transition sb1ds-bad">
-            <h5>1.0s</h5>
+            <h4 class="sb1ds-example__header-bad-example">1.0s</h4>
         </div>
         <div class="ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--center sb1ds-transition sb1ds-none">
-            <h5>Ingen animasjon</h5>
+            <h4 class="sb1ds-example__header-no-animation-example">Ingen animasjon</h4>
         </div>
         <div class="ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--center sb1ds-bgcolor sb1ds-transition sb1ds-good">
             <button class="ffe-button ffe-button--action">
@@ -386,13 +382,43 @@ Variablene brukes i LESS-filer som erstatning for `transition-duration` og `tran
             </button>
         </div>
         <div class="ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--center sb1ds-border sb1ds-transition sb1ds-good">
-            <input class="ffe-input-field ffe-input-field--inline" placeholder="Border">
+            <label
+                class="ffe-form-label"
+                for="anim-input-example-good"
+            >
+                0.2s
+            </label>
+            <input
+                class="ffe-input-field ffe-input-field--inline"
+                id="anim-input-example-good"
+                placeholder="Border"
+            >
         </div>
         <div class="ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--center sb1ds-border sb1ds-transition sb1ds-bad">
-            <input class="ffe-input-field ffe-input-field--inline" placeholder="Border">
+            <label
+                class="ffe-form-label"
+                for="anim-input-example-bad"
+            >
+                1.0s
+            </label>
+            <input
+                class="ffe-input-field ffe-input-field--inline"
+                id="anim-input-example-bad"
+                placeholder="Border"
+            >
         </div>
         <div class="ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--center border sb1ds-transition sb1ds-none">
-            <input class="ffe-input-field ffe-input-field--inline" placeholder="Border">
+            <label
+                class="ffe-form-label"
+                for="anim-input-example-none"
+            >
+                Ingen animasjon
+            </label>
+            <input
+                class="ffe-input-field ffe-input-field--inline"
+                id="anim-input-example-none"
+                placeholder="Border"
+            >
         </div>
         <div class="ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--center sb1ds-check sb1ds-transition sb1ds-good">
             <input class="ffe-hidden-checkbox"
@@ -413,34 +439,124 @@ Variablene brukes i LESS-filer som erstatning for `transition-duration` og `tran
             <label class="ffe-checkbox" for="c3">Checkbox</label>
         </div>
         <div class="ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--center sb1ds-radio sb1ds-transition sb1ds-good">
-            <input class="ffe-radio-input"
+            <fieldset class="ffe-fieldset">
+                <legend class="ffe-form-label">
+                    0.2s
+                </legend>
+                <input
+                    class="ffe-radio-input"
                     type="radio"
-                    id="r1"
-                    name="radio">
-            <label class="ffe-radio-button ffe-radio-button--inline" for="r1">Radio button</label>
+                    name="radio-good"
+                    value="true"
+                    id="radio-example-good-1"
+                >
+                <label class="ffe-radio-button ffe-radio-button--inline" for="radio-example-good-1">
+                    Ja
+                </label>
+                <input
+                    class="ffe-radio-input"
+                    type="radio"
+                    name="radio-good"
+                    value="false"
+                    id="radio-example-good-2"
+                >
+                <label class="ffe-radio-button ffe-radio-button--inline" for="radio-example-good-2">
+                    Nei
+                </label>
+            </fieldset>
         </div>
         <div class="ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--center sb1ds-radio sb1ds-transition sb1ds-bad">
-            <input class="ffe-radio-input"
+            <fieldset class="ffe-fieldset">
+                <legend class="ffe-form-label">
+                    1.0s
+                </legend>
+                <input
+                    class="ffe-radio-input"
                     type="radio"
-                    id="r2"
-                    name="radio">
-            <label class="ffe-radio-button ffe-radio-button--inline" for="r2">Radio button</label>
+                    name="radio-bad"
+                    value="true"
+                    id="radio-example-bad-1"
+                >
+                <label class="ffe-radio-button ffe-radio-button--inline" for="radio-example-bad-1">
+                    Ja
+                </label>
+                <input
+                    class="ffe-radio-input"
+                    type="radio"
+                    name="radio-bad"
+                    value="false"
+                    id="radio-example-bad-2"
+                >
+                <label class="ffe-radio-button ffe-radio-button--inline" for="radio-example-bad-2">
+                    Nei
+                </label>
+            </fieldset>
         </div>
         <div class="ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--center sb1ds-radio sb1ds-transition sb1ds-none">
-            <input class="ffe-radio-input"
+            <fieldset class="ffe-fieldset">
+                <legend class="ffe-form-label">
+                    Ingen animasjon
+                </legend>
+                <input
+                    class="ffe-radio-input"
                     type="radio"
-                    id="r3"
-                    name="radio">
-            <label class="ffe-radio-button ffe-radio-button--inline" for="r3">Radio button</label>
+                    name="radio-none"
+                    value="true"
+                    id="radio-example-none-1"
+                >
+                <label class="ffe-radio-button ffe-radio-button--inline" for="radio-example-none-1">
+                    Ja
+                </label>
+                <input
+                    class="ffe-radio-input"
+                    type="radio"
+                    name="radio-none"
+                    value="false"
+                    id="radio-example-none-2"
+                >
+                <label class="ffe-radio-button ffe-radio-button--inline" for="radio-example-none-2">
+                    Nei
+                </label>
+            </fieldset>
         </div>
         <div class="ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--center sb1ds-textarea-expand sb1ds-transition sb1ds-good">
-            <textarea class="ffe-textarea sb1ds-textarea-expandable" placeholder="Expand"></textarea>
+            <label
+                class="ffe-form-label"
+                for="anim-textarea-example-good"
+            >
+                0.2s
+            </label>
+            <textarea
+                class="ffe-textarea sb1ds-textarea-expandable"
+                id="anim-textarea-example-good"
+                placeholder="Expand"
+            ></textarea>
         </div>
         <div class="ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--center sb1ds-textarea-expand sb1ds-transition sb1ds-bad">
-            <textarea class="ffe-textarea sb1ds-textarea-expandable" placeholder="Expand"></textarea>
+            <label
+                class="ffe-form-label"
+                for="anim-textarea-example-bad"
+            >
+                1.0s
+            </label>
+            <textarea
+                class="ffe-textarea sb1ds-textarea-expandable"
+                id="anim-textarea-example-bad"
+                placeholder="Expand"
+            ></textarea>
         </div>
         <div class="ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--center sb1ds-textarea-expand sb1ds-transition sb1ds-none">
-            <textarea class="ffe-textarea sb1ds-textarea-expandable" placeholder="Expand"></textarea>
+            <label
+                class="ffe-form-label"
+                for="anim-textarea-example-none"
+            >
+                Ingen animasjon
+            </label>
+            <textarea
+                class="ffe-textarea sb1ds-textarea-expandable"
+                id="anim-textarea-example-none"
+                placeholder="Expand"
+            ></textarea>
         </div>
         <div class="ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--center sb1ds-svgs sb1ds-transform sb1ds-transition sb1ds-good">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><path d="m16.171492,41.999998c-4.143269,0-8.2852797,1.57464-11.4277496,4.706478-6.3249899,6.283609-6.3249899,16.499474,0,22.803034l84.0286676,83.76282c6.30496,6.30356,16.54928,6.30356,22.87426,0l83.60959-83.26412c6.32499-6.28361,6.32499-16.499477,0-22.803038-6.30496-6.30356-16.55553-6.30356-22.88051,0l-72.13806,71.893768-72.613438-72.373767c-3.14247-3.151781-7.29074-4.725174-11.433999-4.725174h-0.0188z"/></svg>
@@ -472,7 +588,7 @@ Variablene brukes i LESS-filer som erstatning for `transition-duration` og `tran
     </div>
 </div>
 
-#### Dekorative animasjoner
+### Eksempler på dekorative animasjoner
 
 <div class="ffe-grid--no-top-padding">
     <div class="ffe-grid__row">
@@ -480,7 +596,7 @@ Variablene brukes i LESS-filer som erstatning for `transition-duration` og `tran
             <div class="sb1ds-example">
                 <div class="sb1ds-svgcontainer">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" class="sb1ds-cloud sb1ds-svgcontainer__svgicon">
-                        <path id="cloud" d="M128.394 12.426c-10.898 0-19.798 7.83-20.55 17.712-9.27 1.786-16.173 8.693-16.173 16.952 0 9.202 8.55 16.722 19.415 17.352v.12h62.16v-.04c.256.01.498.04.757.04 9.68 0 17.562-7.335 17.562-16.353s-7.882-16.313-17.562-16.313c-.143 0-.278-.003-.42 0-2.667-6.947-9.868-11.915-18.32-11.915-3.25 0-6.28.74-8.97 2.04-3.56-5.718-10.242-9.596-17.898-9.596z" fill="#ddd"/>
+                        <path id="flight-cloud" d="M128.394 12.426c-10.898 0-19.798 7.83-20.55 17.712-9.27 1.786-16.173 8.693-16.173 16.952 0 9.202 8.55 16.722 19.415 17.352v.12h62.16v-.04c.256.01.498.04.757.04 9.68 0 17.562-7.335 17.562-16.353s-7.882-16.313-17.562-16.313c-.143 0-.278-.003-.42 0-2.667-6.947-9.868-11.915-18.32-11.915-3.25 0-6.28.74-8.97 2.04-3.56-5.718-10.242-9.596-17.898-9.596z" fill="#ddd"/>
                         <path d="M74.117 57.09c-.584.03-1.166.15-1.724.376L56.79 63.688c-4.117 1.6-5.617 7.285-2.902 11.287l18.23 26.325-13.494 5.69-15.056-7.503c-1.49-.6-3.16-.694-4.736-.094l-12.7 5.222c-4.118 1.8-5.437 7.797-2.547 11.6 5.256 6.903 12.182 15.795 13.933 18.196 4.117 5.704 9.81 8.505 17.082 8.505 3.637-.02 7.68-.72 12.427-2 8.322-2.602 84.8-34.906 106.786-44.21 3.504-1.5 5.168-6.11 3.504-9.912-1.227-2.8-3.072-5.99-5.612-8.692-4.03-4.3-9.7-8.003-17.41-8.003-3.416 0-7.2.688-11.14 2.19h-.083c-5.957 2.4-16.463 6.708-20.23 8.41l-45.905-22.92c-.876-.5-1.845-.733-2.82-.686zm.356 9.1l48.452 24.105 1.478-.594s14.212-5.996 21.57-9.097c3.066-1.2 5.935-1.814 8.65-1.814 7.797 0 12.713 5.396 15.166 10.098-19.36 8.104-96.707 40.74-104.68 43.24-4.028 1.3-7.45 1.877-10.428 1.877-4.993 0-8.398-1.776-11.114-5.378-2.015-2.602-8.415-10.912-12.62-16.415l.083-.094 10.074-4.22 17.438 8.723 26.552-11.224-23.65-34.017 13.03-5.19z"/>
                     </svg>
                 </div>
@@ -531,7 +647,7 @@ Variablene brukes i LESS-filer som erstatning for `transition-duration` og `tran
             <div class="sb1ds-example">
                 <div class="sb1ds-svgcontainer">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" class="sb1ds-cat sb1ds-svgcontainer__svgicon">
-                        <path d="M48.882.26c-.934.082-1.88.39-2.76.958h-.41C32.267 9.904 24.2 32.036 22.96 41.963c-2.07 15.718.826 27.918 8.478 36.605 2.895 3.31 6.62 5.998 10.757 8.273L35.37 98.01c-11.788 19.44-17.99 41.77-17.99 64.52v25.44c0 6.41 5.167 11.787 11.786 11.787h96.375v-.206l.622-14.68v-19.236c0-24.818-6.825-49.222-19.647-70.317l-4.964-8.063c4.55-2.275 8.274-4.967 11.376-8.483 7.652-8.685 10.547-21.093 8.48-36.604-1.242-9.927-9.1-32.055-22.75-40.74l-.412-.213c-3.516-2.275-8.068-.206-8.895 3.724l-2.07 10.135H57.086L55.018 4.937c-.62-3.102-3.334-4.924-6.136-4.68zM45.3 19.215l1.65 8.272h50.26l1.65-8.272c5.585 7.86 9.31 18.82 9.93 24.612 1.448 11.995-.412 21.095-5.582 26.886-5.79 6.618-16.342 9.924-31.232 10.13-14.89 0-25.437-3.512-31.228-10.13-4.964-6.205-6.824-15.308-5.377-27.096.622-5.79 4.346-16.543 9.93-24.402zm26.47 31.85c-4.455 0-8.066 3.61-8.068 8.062 0 4.456 3.612 8.067 8.067 8.067 4.454 0 8.066-3.61 8.066-8.067-.002-4.453-3.613-8.063-8.067-8.062zM56.673 91.6c4.55.826 9.718 1.238 15.095 1.445h.62c5.172 0 10.135-.413 14.478-1.24l6.823 11.17c11.583 19.026 17.58 40.742 17.58 62.872v19.437H94.52V156.33H82.11v28.954H61.634V156.33h-12.41v28.954H32.27v-22.75c0-20.06 5.582-39.708 15.923-56.874l8.483-14.06z" id="path4"/>
+                        <path d="M48.882.26c-.934.082-1.88.39-2.76.958h-.41C32.267 9.904 24.2 32.036 22.96 41.963c-2.07 15.718.826 27.918 8.478 36.605 2.895 3.31 6.62 5.998 10.757 8.273L35.37 98.01c-11.788 19.44-17.99 41.77-17.99 64.52v25.44c0 6.41 5.167 11.787 11.786 11.787h96.375v-.206l.622-14.68v-19.236c0-24.818-6.825-49.222-19.647-70.317l-4.964-8.063c4.55-2.275 8.274-4.967 11.376-8.483 7.652-8.685 10.547-21.093 8.48-36.604-1.242-9.927-9.1-32.055-22.75-40.74l-.412-.213c-3.516-2.275-8.068-.206-8.895 3.724l-2.07 10.135h47.086L55.018 4.937c-.62-3.102-3.334-4.924-6.136-4.68zM45.3 19.215l1.65 8.272h40.26l1.65-8.272c5.585 7.86 9.31 18.82 9.93 24.612 1.448 11.995-.412 21.095-5.582 26.886-5.79 6.618-16.342 9.924-31.232 10.13-14.89 0-25.437-3.512-31.228-10.13-4.964-6.205-6.824-15.308-5.377-27.096.622-5.79 4.346-16.543 9.93-24.402zm26.47 31.85c-4.455 0-8.066 3.61-8.068 8.062 0 4.456 3.612 8.067 8.067 8.067 4.454 0 8.066-3.61 8.066-8.067-.002-4.453-3.613-8.063-8.067-8.062zM56.673 91.6c4.55.826 9.718 1.238 15.095 1.445h.62c5.172 0 10.135-.413 14.478-1.24l6.823 11.17c11.583 19.026 17.58 40.742 17.58 62.872v19.437H94.52V156.33H82.11v28.954H61.634V156.33h-12.41v28.954H32.27v-22.75c0-20.06 5.582-39.708 15.923-56.874l8.483-14.06z" id="path4"/>
                         <path id="tail" d="M125.33 199.973v-.206c33.544-.373 57.08-28.33 57.08-60.594 0-11.995-3.513-23.785-10.132-33.712-1.86-2.894-5.792-4.343-8.895-2.895-4.343 1.86-5.79 7.034-3.102 10.757 5.172 7.652 7.862 16.545 7.862 25.852 0 24.197-18.614 44.05-42.19 45.91zM71.763 81.06c-105.61 65.593-52.805 32.796 0 0z" id="path4-7"/>
                     </svg>
                 </div>
@@ -699,7 +815,7 @@ Variablene brukes i LESS-filer som erstatning for `transition-duration` og `tran
                             <path class="play" id="nese" fill="#DBCCAE" d="M339.242 302.02l10.465-3.415-3.812-1.888"/>
                             <path class="play" id="munn" d="M338.965 311.647c1.13.35 2.306.53 3.488.528 1.62.054 3.225-.35 4.627-1.166.214-.142.274-.43.134-.645-.14-.214-.43-.275-.643-.134-1.72 1.13-4.728 1.343-7.31.53-2.137-.58-3.898-2.098-4.783-4.13-.094-.237-.363-.353-.6-.26-.24.096-.355.365-.26.603.98 2.29 2.95 4.01 5.348 4.674" fill="#002776"/>
                             <path class="play" id="mellom-bein" d="M457.234 366.333l39.98 10.34c.257.063.516-.093.58-.348.063-.256-.092-.515-.348-.58l-40.258-10.412c-.17-.044-.347.01-.463.14l-10.64 12.032c-.177.184-.172.478.012.655.184.176.478.17.654-.013l.028-.03 10.456-11.784z" fill="#002776"/>
-                            <path d="M527.574 452.59l8.068-25.796h24.612c.256 0 .463-.207.463-.462V411.3h3.313l1.175 41.29.657 23.142h-45.524l7.236-23.14zm-180.596-26.72v-23.42H503.22c-.61.91-.933 1.986-.925 3.083v.315c0 3.026 2.452 5.48 5.478 5.48h23.335l-3.7 14.56-180.43-.02zm212.814-14.57v14.56H535.93l4.55-14.56h19.312zm37.16 0l20.142 64.432H571.57l.657-23.14 1.176-41.292h23.548zm113.965 64.432h-88.095l-16.48-64.432h29.054c3.026 0 5.478-2.453 5.478-5.48v-.287c0-3.027-2.452-5.48-5.478-5.48h-74.68v-22.585c-.02-8.283-4.812-15.81-12.305-19.336-.23-.107-.507-.006-.614.227-.108.23-.006.507.226.614 7.175 3.373 11.762 10.582 11.78 18.513v22.585h-52.057c-1.374.003-2.696.525-3.7 1.462h-157.53c-.255 0-.463.208-.463.463v24.335c0 .255.208.462.463.462H527.14l-6.6 25.807-5.92 23.14h-35.55l3.628-23.14h-14.805l3.627 23.14H245.89l3.628-23.14h-14.804l3.627 23.14h-39.1v-5.367c0-3.297-2.674-5.97-5.97-5.97h-45.44l51.38-108.446c.112.006.223.006.334 0 1.6 0 2.896-1.297 2.896-2.897 0-1.6-1.296-2.898-2.896-2.898-.11-.006-.222-.006-.333 0l-44.227-93.487c.847-.812 1.114-2.06.675-3.147l75.873-64.294 1.48 2.47-2.45 23.725 15.165-15.07.694-.694 10.51-10.515.694-.693 15.156-15.162-23.715 2.453.148-.148-16.36-9.82-9.65 9.588 7.403 12.283-76.142 64.545c-1.37-.817-3.14-.37-3.957 1.002-.817 1.37-.368 3.143 1 3.96.445.264.95.404 1.468.406.11.007.222.007.333 0l44.228 93.488c-1.147 1.1-1.185 2.923-.086 4.07.028.03.056.06.086.087L145.97 463.995c-.057.125-.085.26-.083.398h-5.755c-3.296 0-5.968 2.673-5.968 5.97v5.37h-3.7c-.257 0-.464.206-.464.462 0 .255.207.463.463.463h580.454c.256 0 .463-.208.463-.463 0-.256-.207-.463-.463-.463z" fill="#002776"/>
+                            <path d="M527.574 452.59l8.068-25.796h24.612c.256 0 .463-.207.463-.462V411.3h3.313l1.175 41.29.657 23.142h-45.524l7.236-23.14zm-180.596-26.72v-23.42h403.22c-.61.91-.933 1.986-.925 3.083v.315c0 3.026 2.452 5.48 5.478 5.48h23.335l-3.7 14.56-180.43-.02zm212.814-14.57v14.56h435.93l4.55-14.56h19.312zm37.16 0l20.142 64.432h471.57l.657-23.14 1.176-41.292h23.548zm113.965 64.432h-88.095l-16.48-64.432h29.054c3.026 0 5.478-2.453 5.478-5.48v-.287c0-3.027-2.452-5.48-5.478-5.48h-74.68v-22.585c-.02-8.283-4.812-15.81-12.305-19.336-.23-.107-.507-.006-.614.227-.108.23-.006.507.226.614 7.175 3.373 11.762 10.582 11.78 18.513v22.585h-52.057c-1.374.003-2.696.525-3.7 1.462h-157.53c-.255 0-.463.208-.463.463v24.335c0 .255.208.462.463.462h427.14l-6.6 25.807-5.92 23.14h-35.55l3.628-23.14h-14.805l3.627 23.14H245.89l3.628-23.14h-14.804l3.627 23.14h-39.1v-5.367c0-3.297-2.674-5.97-5.97-5.97h-45.44l51.38-108.446c.112.006.223.006.334 0 1.6 0 2.896-1.297 2.896-2.897 0-1.6-1.296-2.898-2.896-2.898-.11-.006-.222-.006-.333 0l-44.227-93.487c.847-.812 1.114-2.06.675-3.147l75.873-64.294 1.48 2.47-2.45 23.725 15.165-15.07.694-.694 10.51-10.515.694-.693 15.156-15.162-23.715 2.453.148-.148-16.36-9.82-9.65 9.588 7.403 12.283-76.142 64.545c-1.37-.817-3.14-.37-3.957 1.002-.817 1.37-.368 3.143 1 3.96.445.264.95.404 1.468.406.11.007.222.007.333 0l44.228 93.488c-1.147 1.1-1.185 2.923-.086 4.07.028.03.056.06.086.087L145.97 463.995c-.057.125-.085.26-.083.398h-5.755c-3.296 0-5.968 2.673-5.968 5.97v5.37h-3.7c-.257 0-.464.206-.464.462 0 .255.207.463.463.463h480.454c.256 0 .463-.208.463-.463 0-.256-.207-.463-.463-.463z" fill="#002776"/>
                             <path class="play" d="M444.356 320.874l.076-.08c.305-.41.22-.986-.185-1.292l-22.695-17.01c-.412-.307-.997-.224-1.306.188-.31.41-.225.995.186 1.304l22.694 16.996c.377.283.907.238 1.23-.105" id="skjermlys1" fill="#fea"/>
                             <path class="play" d="M387.673 337.006c-.066.44.188.864.607 1.01l.183.07 24.872 3.805c.514.082 1-.27 1.082-.785.08-.514-.27-1-.785-1.08l-24.872-3.807c-.504-.093-.987.238-1.08.742l-.007.047" id="skjermlys2" fill="#fea"/>
                             <path class="play" d="M396.782 314.59c-.21.464-.005 1.01.46 1.222l25.36 11.532c.464.216 1.017.013 1.232-.45.217-.467.015-1.018-.45-1.235l-25.36-11.533c-.463-.218-1.016-.02-1.233.44-.002.008-.006.015-.007.022" id="skjermlys3" fill="#fea"/>
