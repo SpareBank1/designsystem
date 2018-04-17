@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="7.1.2"></a>
+## [7.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@7.1.1...@sb1/ffe-buttons@7.1.2) (2018-04-17)
+
+
+### Bug Fixes
+
+* **ffe-buttons:** Align button group contents with container ([d1ca691](https://github.com/SpareBank1/designsystem/commit/d1ca691))
+
+
+
+
       <a name="7.1.1"></a>
 ## [7.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@7.1.0...@sb1/ffe-buttons@7.1.1) (2018-04-11)
 
@@ -11,7 +22,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-buttons
 
-      <a name="7.1.0"></a>
+    <a name="7.1.0"></a>
 # [7.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@7.0.6...@sb1/ffe-buttons@7.1.0) (2018-04-11)
 
 
@@ -22,7 +33,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-    <a name="7.0.6"></a>
+  <a name="7.0.6"></a>
 ## [7.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@7.0.5...@sb1/ffe-buttons@7.0.6) (2018-04-10)
 
 
@@ -33,7 +44,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-  <a name="7.0.5"></a>
+<a name="7.0.5"></a>
 ## [7.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@7.0.4...@sb1/ffe-buttons@7.0.5) (2018-04-10)
 
 
