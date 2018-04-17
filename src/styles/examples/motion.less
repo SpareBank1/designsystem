@@ -96,6 +96,8 @@
             opacity: 0;
             height: 0;
         }
+    }
+    &--paused {
         .sb1ds-menuthing li,
         .sb1ds-menuthing-subtle li,
         .sb1ds-timing__object,
@@ -116,7 +118,7 @@
         .sb1ds-biker .play,
         .sb1ds-pensjon1 .play,
         svg {
-            animation-play-state: running !important;
+            animation: none!important;
         }
     }
 }
@@ -151,7 +153,6 @@
         animation-delay: 0.3s;
         animation-iteration-count: infinite;
         animation-timing-function: ease;
-        animation-play-state: paused;
     }
     &.sb1ds-bad {
         .sb1ds-easing__ease-object {
@@ -226,7 +227,6 @@
             animation-iteration-count: infinite;
             animation-direction: alternate;
             animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            animation-play-state: paused;
         }
         .sb1ds-arc__arc-object {
             animation-name: arc-x;
@@ -235,7 +235,6 @@
             animation-direction: alternate;
             animation-iteration-count: infinite;
             animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
-            animation-play-state: paused;
         }
     }
     &.sb1ds-bad .sb1ds-arc__arc-object {
@@ -245,7 +244,6 @@
         animation-direction: alternate;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
-        animation-play-state: paused;
     }
 }
 
@@ -292,7 +290,6 @@
         animation-iteration-count: infinite;
         animation-direction: alternate;
         animation-timing-function: cubic-bezier(0.46, -0.265, 0.48, 1.38);
-        animation-play-state: paused;
     }
     &.sb1ds-bad .sb1ds-timing__object {
         animation-name: timing-slow;
@@ -301,7 +298,6 @@
         animation-iteration-count: infinite;
         animation-direction: alternate;
         animation-timing-function: ease;
-        animation-play-state: paused;
     }
     &--overlap {
         .sb1ds-timing__object {
@@ -378,7 +374,6 @@
         animation-delay: 0.3s;
         animation-iteration-count: infinite;
         animation-timing-function: cubic-bezier(0.46, -0.265, 0.48, 1.38);
-        animation-play-state: paused;
     }
 }
 
@@ -389,7 +384,6 @@
         animation-delay: 0.3s;
         animation-iteration-count: infinite;
         animation-timing-function: cubic-bezier(0.46, -0.265, 0.48, 1.38);
-        animation-play-state: paused;
     }
 }
 
@@ -467,7 +461,6 @@
         animation-delay: 0.5s;
         animation-iteration-count: infinite;
         animation-timing-function: cubic-bezier(0.46, -0.265, 0.48, 1.38);
-        animation-play-state: paused;
     }
     &.sb1ds-bad {
         svg {
@@ -555,7 +548,6 @@
         animation-delay: 0.5s;
         animation-iteration-count: infinite;
         animation-timing-function: cubic-bezier(0.46, -0.265, 0.48, 1.38);
-        animation-play-state: paused;
     }
     .sb1ds-svgcontainer {
         text-align: left;
@@ -575,7 +567,6 @@
         animation-delay: 0.5s;
         animation-iteration-count: infinite;
         animation-timing-function: ease;
-        animation-play-state: paused;
     }
     .sb1ds-show {
         opacity: 1;
@@ -585,7 +576,6 @@
         animation-delay: 0.5s;
         animation-iteration-count: infinite;
         animation-timing-function: ease;
-        animation-play-state: paused;
     }
 }
 
@@ -665,17 +655,23 @@
 
 .sb1ds-radio {
     &.sb1ds-good {
-        .ffe-radio-button, .ffe-radio-button::before, .ffe-radio-button::after {
+        .ffe-radio-button,
+        .ffe-radio-button::before,
+        .ffe-radio-button::after {
             transition-duration: @ffe-transition-duration;
         }
     }
     &.sb1ds-bad {
-        .ffe-radio-button, .ffe-radio-button::before, .ffe-radio-button::after {
+        .ffe-radio-button,
+        .ffe-radio-button::before,
+        .ffe-radio-button::after {
             transition-duration: 1s;
         }
     }
     &.sb1ds-none {
-        .ffe-radio-button, .ffe-radio-button::before, .ffe-radio-button::after {
+        .ffe-radio-button,
+        .ffe-radio-button::before,
+        .ffe-radio-button::after {
             transition: none;
         }
     }
@@ -696,7 +692,6 @@
     animation-duration: .8s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    animation-play-state: paused;
 }
 
 .sb1ds-rain #drop2 {
@@ -718,7 +713,6 @@
     animation-duration: 4s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    animation-play-state: paused;
     transform-origin: 6.25em 6.25em;
 }
 
@@ -746,7 +740,6 @@
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-timing-function: linear;
-    animation-play-state: paused;
     transform-origin: bottom right;
 }
 
@@ -770,7 +763,6 @@
     animation-duration: 1.5s;
     animation-iteration-count: infinite;
     animation-timing-function: ease;
-    animation-play-state: paused;
 }
 
 @keyframes beat {
@@ -790,7 +782,6 @@
     animation-duration: 1.5s;
     animation-iteration-count: infinite;
     animation-timing-function: ease;
-    animation-play-state: paused;
     transform-origin: 6.25em 6.25em;
 }
 
@@ -808,7 +799,6 @@
     animation-duration: 12s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    animation-play-state: paused;
     transform-origin: 6.25em 6.25em;
 }
 
@@ -825,7 +815,6 @@
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-timing-function: ease-in-out;
-    animation-play-state: paused;
     transform-origin: 8em 6em;
 }
 
@@ -962,14 +951,12 @@
         animation-duration: 45s;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
-        animation-play-state: paused;
     }
     #biker-all {
         animation-name: bike-from-left;
         animation-duration: 15s;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
-        animation-play-state: paused;
     }
     #right-shin,
     #right-shin2,
@@ -980,7 +967,6 @@
         animation-iteration-count: infinite;
         animation-direction: normal;
         animation-timing-function: linear;
-        animation-play-state: paused;
     }
     #left-shin,
     #left-shin2 {
@@ -989,7 +975,6 @@
         animation-iteration-count: infinite;
         animation-direction: alternate-reverse;
         animation-timing-function: ease;
-        animation-play-state: paused;
     }
     #pedal-crank {
         animation-name: pedal-crank;
@@ -998,7 +983,6 @@
         animation-direction: normal;
         transform-origin: .2em 1em;
         animation-timing-function: linear;
-        animation-play-state: paused;
     }
     #pedal-foot,
     #pedal-foot2 {
@@ -1007,7 +991,6 @@
         animation-iteration-count: infinite;
         animation-direction: normal;
         animation-timing-function: linear;
-        animation-play-state: paused;
     }
     #torso,
     #torso2 {
@@ -1016,7 +999,6 @@
         animation-iteration-count: infinite;
         animation-direction: alternate;
         animation-timing-function: ease;
-        animation-play-state: paused;
     }
     #front-wheel1,
     #front-wheel2 {
@@ -1025,7 +1007,6 @@
         animation-iteration-count: infinite;
         animation-direction: alternate;
         animation-timing-function: ease;
-        animation-play-state: paused;
     }
     #back-wheel1,
     #back-wheel2,
@@ -1035,7 +1016,6 @@
         animation-iteration-count: infinite;
         animation-direction: alternate-reverse;
         animation-timing-function: ease;
-        animation-play-state: paused;
     }
     #helmet3,
     #helmet4,
@@ -1047,7 +1027,6 @@
         animation-iteration-count: infinite;
         animation-direction: alternate;
         animation-timing-function: ease;
-        animation-play-state: paused;
     }
     #head1,
     #head2,
@@ -1062,7 +1041,6 @@
         animation-iteration-count: infinite;
         animation-direction: alternate;
         animation-timing-function: ease;
-        animation-play-state: paused;
     }
     #neck1,
     #neck2,
@@ -1072,7 +1050,6 @@
         animation-iteration-count: infinite;
         animation-direction: alternate;
         animation-timing-function: ease;
-        animation-play-state: paused;
     }
     &.sb1ds-biker--quick {
         #biker-all {
@@ -1204,7 +1181,6 @@
     animation-duration: .6s;
     animation-iteration-count: infinite;
     animation-timing-function: ease;
-    animation-play-state: paused;
 }
 
 #vindu-busk1 {
@@ -1213,7 +1189,6 @@
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-timing-function: ease;
-    animation-play-state: paused;
 }
 
 #vindu-busk2 {
@@ -1222,7 +1197,6 @@
     animation-iteration-count: infinite;
     animation-direction: alternate-reverse;
     animation-timing-function: ease;
-    animation-play-state: paused;
 }
 
 #vindu-sky {
@@ -1230,7 +1204,6 @@
     animation-duration: 55s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    animation-play-state: paused;
 }
 
 #skjermlys1,
@@ -1241,5 +1214,4 @@
     animation-iteration-count: infinite;
     animation-direction: alternate-reverse;
     animation-timing-function: ease;
-    animation-play-state: paused;
 }

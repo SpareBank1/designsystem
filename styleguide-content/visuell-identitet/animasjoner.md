@@ -31,7 +31,7 @@ Dekorative animasjoner kan i tillegg bidra til å skape levende produkter og gre
         <div class="sb1ds-easing sb1ds-good ffe-grid__col--sm-12 ffe-grid__col--md-4">
             <div class="sb1ds-example">
                 <h4 class="sb1ds-example__header-good-example">Easing</h4>
-                <div class="sb1ds-svgcontainer">
+                <div class="sb1ds-svgcontainer sb1ds-svgcontainer--paused">
                     <div>
                         <div class="sb1ds-easing__ease-object">&nbsp;</div>
                     </div>
@@ -41,7 +41,7 @@ Dekorative animasjoner kan i tillegg bidra til å skape levende produkter og gre
         <div class="sb1ds-easing sb1ds-bad ffe-grid__col--sm-12 ffe-grid__col--md-4">
             <div class="sb1ds-example">
                 <h4 class="sb1ds-example__header-bad-example">Lineær</h4>
-                <div class="sb1ds-svgcontainer">
+                <div class="sb1ds-svgcontainer sb1ds-svgcontainer--paused">
                     <div>
                         <div class="sb1ds-easing__ease-object">&nbsp;</div>
                     </div>
@@ -63,7 +63,7 @@ Dekorative animasjoner kan i tillegg bidra til å skape levende produkter og gre
         <div class="sb1ds-arc sb1ds-good ffe-grid__col--sm-12 ffe-grid__col--md-4">
             <div class="sb1ds-example">
                 <h4 class="sb1ds-example__header-good-example">Kurve</h4>
-                <div class="sb1ds-svgcontainer">
+                <div class="sb1ds-svgcontainer sb1ds-svgcontainer--paused">
                     <div>
                         <div class="sb1ds-arc__container">
                             <div class="sb1ds-arc__arc-object">&nbsp;</div>
@@ -75,7 +75,7 @@ Dekorative animasjoner kan i tillegg bidra til å skape levende produkter og gre
         <div class="sb1ds-arc sb1ds-bad ffe-grid__col--sm-12 ffe-grid__col--md-4">
             <div class="sb1ds-example">
                 <h4 class="sb1ds-example__header-bad-example">Linje</h4>
-                <div class="sb1ds-svgcontainer">
+                <div class="sb1ds-svgcontainer sb1ds-svgcontainer--paused">
                     <div>
                         <div class="sb1ds-arc__container">
                             <div class="sb1ds-arc__arc-object">&nbsp;</div>
@@ -99,7 +99,7 @@ Dekorative animasjoner kan i tillegg bidra til å skape levende produkter og gre
         <div class="sb1ds-timing sb1ds-good ffe-grid__col--sm-12 ffe-grid__col--md-4">
             <div class="sb1ds-example">
                 <h4 class="sb1ds-example__header-good-example">0.2s</h4>
-                <div class="sb1ds-svgcontainer">
+                <div class="sb1ds-svgcontainer sb1ds-svgcontainer--paused">
                     <div>
                         <div class="sb1ds-timing__object">&nbsp;</div>
                     </div>
@@ -108,8 +108,8 @@ Dekorative animasjoner kan i tillegg bidra til å skape levende produkter og gre
         </div>
         <div class="sb1ds-timing sb1ds-bad ffe-grid__col--sm-12 ffe-grid__col--md-4">
             <div class="sb1ds-example">
-                <h4>1.0s</h4>
-                <div class="sb1ds-svgcontainer">
+                <h4 class="sb1ds-example__header-bad-example">1.0s</h4>
+                <div class="sb1ds-svgcontainer sb1ds-svgcontainer--paused">
                     <div>
                         <div class="sb1ds-timing__object">&nbsp;</div>
                     </div>
@@ -130,7 +130,7 @@ Dekorative animasjoner kan i tillegg bidra til å skape levende produkter og gre
         <div class="sb1ds-timing sb1ds-timing--overlap sb1ds-good ffe-grid__col--sm-12 ffe-grid__col--md-4">
             <div class="sb1ds-example">
                 <h4 class="sb1ds-example__header-good-example">ease-in-out-back</h4>
-                <div class="sb1ds-svgcontainer">
+                <div class="sb1ds-svgcontainer sb1ds-svgcontainer--paused">
                     <div>
                         <div class="sb1ds-timing__object">&nbsp;</div>
                     </div>
@@ -140,7 +140,7 @@ Dekorative animasjoner kan i tillegg bidra til å skape levende produkter og gre
         <div class="sb1ds-timing sb1ds-timing--overlap sb1ds-bad ffe-grid__col--sm-12 ffe-grid__col--md-4">
             <div class="sb1ds-example">
                 <h4 class="sb1ds-example__header-bad-example">ease</h4>
-                <div class="sb1ds-svgcontainer">
+                <div class="sb1ds-svgcontainer sb1ds-svgcontainer--paused">
                     <div>
                         <div class="sb1ds-timing__object">&nbsp;</div>
                     </div>
@@ -161,7 +161,7 @@ Dekorative animasjoner kan i tillegg bidra til å skape levende produkter og gre
         <div class="sb1ds-sequence sb1ds-good ffe-grid__col--sm-12 ffe-grid__col--md-4">
             <div class="sb1ds-example">
                 <h4 class="sb1ds-example__header-good-example">Sekvens</h4>
-                <div class="sb1ds-svgcontainer">
+                <div class="sb1ds-svgcontainer sb1ds-svgcontainer--paused">
                     <ul class="sb1ds-menuthing">
                         <li>&nbsp;</li>
                         <li>&nbsp;</li>
@@ -175,7 +175,7 @@ Dekorative animasjoner kan i tillegg bidra til å skape levende produkter og gre
         <div class="sb1ds-sequence sb1ds-bad ffe-grid__col--sm-12 ffe-grid__col--md-4">
             <div class="sb1ds-example">
                 <h4 class="sb1ds-example__header-bad-example">Samtidig</h4>
-                <div class="sb1ds-svgcontainer">
+                <div class="sb1ds-svgcontainer sb1ds-svgcontainer--paused">
                     <ul class="sb1ds-menuthing">
                         <li>&nbsp;</li>
                         <li>&nbsp;</li>
@@ -200,7 +200,7 @@ Dekorative animasjoner kan i tillegg bidra til å skape levende produkter og gre
         <div class="sb1ds-subtle sb1ds-good ffe-grid__col--sm-12 ffe-grid__col--md-4">
             <div class="sb1ds-example">
                 <h4 class="sb1ds-example__header-good-example">Subtilt</h4>
-                <div class="sb1ds-svgcontainer">
+                <div class="sb1ds-svgcontainer sb1ds-svgcontainer--paused">
                     <ul class="sb1ds-menuthing">
                         <li>&nbsp;</li>
                         <li>&nbsp;</li>
@@ -214,7 +214,7 @@ Dekorative animasjoner kan i tillegg bidra til å skape levende produkter og gre
         <div class="sb1ds-subtle sb1ds-bad ffe-grid__col--sm-12 ffe-grid__col--md-4">
             <div class="sb1ds-example">
                 <h4 class="sb1ds-example__header-bad-example">Nja</h4>
-                <div class="sb1ds-svgcontainer">
+                <div class="sb1ds-svgcontainer sb1ds-svgcontainer--paused">
                     <ul class="sb1ds-menuthing-subtle">
                         <li>&nbsp;</li>
                         <li>&nbsp;</li>
@@ -238,7 +238,7 @@ Dekorative animasjoner kan i tillegg bidra til å skape levende produkter og gre
         <div class="sb1ds-xy sb1ds-good ffe-grid__col--sm-12 ffe-grid__col--md-4">
             <div class="sb1ds-example">
                 <h4 class="sb1ds-example__header-good-example">Ja</h4>
-                <div class="sb1ds-svgcontainer">
+                <div class="sb1ds-svgcontainer sb1ds-svgcontainer--paused">
                     <div>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><path d="m16.171492,41.999998c-4.143269,0-8.2852797,1.57464-11.4277496,4.706478-6.3249899,6.283609-6.3249899,16.499474,0,22.803034l84.0286676,83.76282c6.30496,6.30356,16.54928,6.30356,22.87426,0l83.60959-83.26412c6.32499-6.28361,6.32499-16.499477,0-22.803038-6.30496-6.30356-16.55553-6.30356-22.88051,0l-72.13806,71.893768-72.613438-72.373767c-3.14247-3.151781-7.29074-4.725174-11.433999-4.725174h-0.0188z"/></svg>
                     </div>
@@ -248,7 +248,7 @@ Dekorative animasjoner kan i tillegg bidra til å skape levende produkter og gre
         <div class="sb1ds-xy sb1ds-bad ffe-grid__col--sm-12 ffe-grid__col--md-4">
             <div class="sb1ds-example">
                 <h4 class="sb1ds-example__header-bad-example">Nei</h4>
-                <div class="sb1ds-svgcontainer">
+                <div class="sb1ds-svgcontainer sb1ds-svgcontainer--paused">
                     <div>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><path d="m16.171492,41.999998c-4.143269,0-8.2852797,1.57464-11.4277496,4.706478-6.3249899,6.283609-6.3249899,16.499474,0,22.803034l84.0286676,83.76282c6.30496,6.30356,16.54928,6.30356,22.87426,0l83.60959-83.26412c6.32499-6.28361,6.32499-16.499477,0-22.803038-6.30496-6.30356-16.55553-6.30356-22.88051,0l-72.13806,71.893768-72.613438-72.373767c-3.14247-3.151781-7.29074-4.725174-11.433999-4.725174h-0.0188z"/></svg>
                     </div>
@@ -268,7 +268,7 @@ Dekorative animasjoner kan i tillegg bidra til å skape levende produkter og gre
         <div class="sb1ds-relocate sb1ds-good ffe-grid__col--sm-12 ffe-grid__col--md-4">
             <div class="sb1ds-example">
                 <h4 class="sb1ds-example__header-good-example">Ja</h4>
-                <div class="sb1ds-svgcontainer">
+                <div class="sb1ds-svgcontainer sb1ds-svgcontainer--paused">
                     <div>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><path d="m16.171492,41.999998c-4.143269,0-8.2852797,1.57464-11.4277496,4.706478-6.3249899,6.283609-6.3249899,16.499474,0,22.803034l84.0286676,83.76282c6.30496,6.30356,16.54928,6.30356,22.87426,0l83.60959-83.26412c6.32499-6.28361,6.32499-16.499477,0-22.803038-6.30496-6.30356-16.55553-6.30356-22.88051,0l-72.13806,71.893768-72.613438-72.373767c-3.14247-3.151781-7.29074-4.725174-11.433999-4.725174h-0.0188z"/></svg> <span class="sb1ds-show">Expand</span><span class="sb1ds-hide">Collapse</span>
                     </div>
@@ -278,7 +278,7 @@ Dekorative animasjoner kan i tillegg bidra til å skape levende produkter og gre
         <div class="sb1ds-relocate sb1ds-bad ffe-grid__col--sm-12 ffe-grid__col--md-4">
             <div class="sb1ds-example">
                 <h4 class="sb1ds-example__header-bad-example">Nei</h4>
-                <div class="sb1ds-svgcontainer">
+                <div class="sb1ds-svgcontainer sb1ds-svgcontainer--paused">
                     <div>
                         <span class="sb1ds-show">Expand</span><span class="sb1ds-hide">Collapse</span> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><path d="m16.171492,41.999998c-4.143269,0-8.2852797,1.57464-11.4277496,4.706478-6.3249899,6.283609-6.3249899,16.499474,0,22.803034l84.0286676,83.76282c6.30496,6.30356,16.54928,6.30356,22.87426,0l83.60959-83.26412c6.32499-6.28361,6.32499-16.499477,0-22.803038-6.30496-6.30356-16.55553-6.30356-22.88051,0l-72.13806,71.893768-72.613438-72.373767c-3.14247-3.151781-7.29074-4.725174-11.433999-4.725174h-0.0188z"/></svg>
                     </div>
@@ -594,7 +594,7 @@ transition: all .2s cubic-bezier(.46, -0.265, .48, 1.38);
     <div class="ffe-grid__row">
         <div class="ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--center">
             <div class="sb1ds-example">
-                <div class="sb1ds-svgcontainer">
+                <div class="sb1ds-svgcontainer sb1ds-svgcontainer--paused">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" class="sb1ds-cloud sb1ds-svgcontainer__svgicon">
                         <path id="flight-cloud" d="M128.394 12.426c-10.898 0-19.798 7.83-20.55 17.712-9.27 1.786-16.173 8.693-16.173 16.952 0 9.202 8.55 16.722 19.415 17.352v.12h62.16v-.04c.256.01.498.04.757.04 9.68 0 17.562-7.335 17.562-16.353s-7.882-16.313-17.562-16.313c-.143 0-.278-.003-.42 0-2.667-6.947-9.868-11.915-18.32-11.915-3.25 0-6.28.74-8.97 2.04-3.56-5.718-10.242-9.596-17.898-9.596z" fill="#ddd"/>
                         <path d="M74.117 57.09c-.584.03-1.166.15-1.724.376L56.79 63.688c-4.117 1.6-5.617 7.285-2.902 11.287l18.23 26.325-13.494 5.69-15.056-7.503c-1.49-.6-3.16-.694-4.736-.094l-12.7 5.222c-4.118 1.8-5.437 7.797-2.547 11.6 5.256 6.903 12.182 15.795 13.933 18.196 4.117 5.704 9.81 8.505 17.082 8.505 3.637-.02 7.68-.72 12.427-2 8.322-2.602 84.8-34.906 106.786-44.21 3.504-1.5 5.168-6.11 3.504-9.912-1.227-2.8-3.072-5.99-5.612-8.692-4.03-4.3-9.7-8.003-17.41-8.003-3.416 0-7.2.688-11.14 2.19h-.083c-5.957 2.4-16.463 6.708-20.23 8.41l-45.905-22.92c-.876-.5-1.845-.733-2.82-.686zm.356 9.1l48.452 24.105 1.478-.594s14.212-5.996 21.57-9.097c3.066-1.2 5.935-1.814 8.65-1.814 7.797 0 12.713 5.396 15.166 10.098-19.36 8.104-96.707 40.74-104.68 43.24-4.028 1.3-7.45 1.877-10.428 1.877-4.993 0-8.398-1.776-11.114-5.378-2.015-2.602-8.415-10.912-12.62-16.415l.083-.094 10.074-4.22 17.438 8.723 26.552-11.224-23.65-34.017 13.03-5.19z"/>
@@ -604,7 +604,7 @@ transition: all .2s cubic-bezier(.46, -0.265, .48, 1.38);
         </div>
         <div class="ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--center">
             <div class="sb1ds-example">
-                <div class="sb1ds-svgcontainer">
+                <div class="sb1ds-svgcontainer sb1ds-svgcontainer--paused">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" class="sb1ds-coin-drop sb1ds-svgcontainer__svgicon">
                         <path d="M149.366 46.917c-1.566-.044-3.165.298-4.698 1.086l-19.108 9.46c-5.608-1.75-19.255-5.606-36.078-5.606-8.937 0-17.534 1.052-25.595 3.33C27.787 64.992 8 88.8 8 122.07c0 21.716 11.894 41.315 33.098 54.275v6.833c0 9.28 7.54 16.818 16.83 16.818h9.64c7.185 0 13.325-4.558 15.778-10.862 4.556.35 8.94.35 10.694.35 1.4 0 3.506 0 5.61-.175 2.45 6.32 8.56 10.7 15.57 10.7h9.466c9.463 0 17.005-7.713 17.18-16.82v-5.43c15.07-8.932 23.317-20.465 26.646-26.244h6.136c9.638 0 17.355-7.712 17.355-17.344v-21.198c0-9.632-7.718-17.344-17.355-17.344h-3.156l-.526-.876c-1.05-1.576-5.96-9.286-7.89-11.738l-1.4-1.927-2.63-25.194c-.658-5.254-4.98-8.84-9.677-8.97zm-2.77 13.35l2.805 25.368 3.683 4.555c1.226 1.576 5.61 8.235 7.012 10.687l4.207 6.832h9.992c2.804 0 5.084 2.278 5.084 5.08v21.198c0 2.802-2.28 5.08-5.084 5.08h-13.85l-1.576 3.68c-.176.175-7.195 15.56-26.47 25.893l-3.157 1.753v12.614c0 2.45-1.928 4.555-4.557 4.555h-9.64c-2.455 0-4.56-1.928-4.56-4.555v-7.534l-7.327 1.052c-1.928.35-5.61.525-9.642.525-5.783 0-11.57-.526-14.375-1.05l-7.364-1.578v8.41c0 2.45-1.93 4.554-4.558 4.554h-9.64c-2.455 0-4.56-1.928-4.56-4.555v-14.014l-3.155-1.752c-19.084-10.67-29.96-27.29-29.96-45.33 0-19.264 8.08-44.503 46.806-55.186 6.834-1.75 14.377-2.768 22.263-2.768 19.1 0 34.15 5.747 34.325 5.747l2.455 1.05 20.86-10.3zM87.374 78.45c-6.484 0-12.8.702-18.407 2.28-6.484 1.75-12.098 4.03-17.005 7.006-2.628 1.576-3.155 4.907-1.402 7.358l1.402 1.927c1.577 2.103 4.208 2.63 6.31 1.403 3.856-2.452 8.593-4.38 13.85-5.78 4.556-1.227 9.644-1.93 15.076-1.93 5.257.002 10.17.527 14.024 1.228 2.63.526 5.26-1.05 5.785-3.678l.526-2.278c.7-2.627-1.053-5.43-3.856-5.956-4.557-.876-10.17-1.577-16.303-1.577z"/>
                         <circle id="coin" cx="80" cy="22" r="16" stroke="black" stroke-width="12" fill="white" />
@@ -616,7 +616,7 @@ transition: all .2s cubic-bezier(.46, -0.265, .48, 1.38);
         </div>
         <div class="ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--center">
             <div class="sb1ds-example">
-                <div class="sb1ds-svgcontainer">
+                <div class="sb1ds-svgcontainer sb1ds-svgcontainer--paused">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" class="sb1ds-heart sb1ds-svgcontainer__svgicon">
                         <path id="heart" d="M99.91 185c-5.33 0-10.54-1.6-15.1-4.6-20.87-14.1-58.28-45.5-72.16-67.6C-1.89 89.44-4.11 62.44 7.102 41.89 16.43 24.78 33.972 15 55.282 15c14.32 0 29.65 6.56 44.72 18.89 11.3-9.33 27.2-18.89 44.8-18.89 21.32 0 38.74 9.778 48.18 26.89 11.1 20.33 8.992 47.56-5.55 70.67-13.88 22.11-51.29 53.56-72.16 67.67-4.5 3.1-9.7 4.7-15.1 4.7zM55.17 30.1c-15.88 0-28.2 6.778-35.19 19.11-8.55 15.56-6.55 36.78 5.22 55.58 11.32 17.89 44.18 47.22 68.05 63.33 3.997 2.556 9.325 2.556 13.1 0 23.65-16.11 56.73-45.56 68.05-63.33 11.77-18.67 13.77-40 5.218-55.56-6.772-12.33-19.32-19.11-35.19-19.11-15.32 0-30.09 10.56-39.63 19.33l-5 4.54-4.99-4.56c-9.55-9-24.09-19.33-39.64-19.33z"/>
                     </svg>
@@ -625,7 +625,7 @@ transition: all .2s cubic-bezier(.46, -0.265, .48, 1.38);
         </div>
         <div class="ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--center">
             <div class="sb1ds-example">
-                <div class="sb1ds-svgcontainer">
+                <div class="sb1ds-svgcontainer sb1ds-svgcontainer--paused">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" class="sb1ds-rain sb1ds-svgcontainer__svgicon">
                         <path d="M98.765 0c-3.005 0-5.32 2.463-5.32 5.356v14.017C45.924 22.713 7.52 60.78 4.516 108.97c-.223 3.005 1.767 5.662 4.66 6.33.445.11 1.016.243 1.46.243 2.45 0 4.668-1.46 5.67-3.687 4.34-9.683 13.91-15.93 24.484-15.93 10.128 0 19.58 6.032 24.033 15.27 1 2.115 3.227 3.548 5.564 3.548s4.563-1.322 5.565-3.548c3.45-7.234 9.898-12.362 17.354-14.365v75.897c0 13.58-13.334 13.913-14.78 13.913-3.896 0-8.918-1.44-12.034-5.113-1.447-1.78-3.902-2.205-6.017-1.426l-2.434.975c-3.227 1.336-4.444 5.46-2.33 8.244 5.12 6.7 13.467 10.7 22.816 10.7 14.022 0 28.135-9.35 28.135-27.27V96.852c7.457 2.003 13.94 7.13 17.39 14.365 1 2.114 3.227 3.547 5.564 3.547s4.563-1.32 5.565-3.547c4.45-9.24 13.903-15.27 24.03-15.27 10.574 0 20.144 6.247 24.485 15.93 1.224 2.782 4.236 4.215 7.13 3.547 2.893-.667 4.882-3.325 4.66-6.33-2.894-48.195-41.408-86.372-88.928-89.6l.105-.104V5.375c.02-3.008-2.41-5.36-5.3-5.36h-2.574zm1.356 31.513c36.838 0 68.32 24.028 79.225 57.53-5.898-3.562-12.798-5.565-20.032-5.565-11.463 0-22.25 5.134-29.596 13.704-7.345-8.57-18.133-13.704-29.596-13.704s-22.285 5.134-29.63 13.704c-7.345-8.57-18.133-13.704-29.596-13.704-7.234 0-14.022 2.003-20.032 5.565 10.918-33.502 42.545-57.53 79.27-57.53z"/>
                         <path id="drop1" d="M14.415 31.138s7.605-7.14 9.898-23.45c.842-5.99-1.432 10.7 7.83 23.1 9.057 12.123-4.533 21-4.533 21s-5.563 2.746-9.684-.162c-4.122-2.908-10.28-10.24-3.51-20.488z" fill="#00ddff"/>
@@ -636,7 +636,7 @@ transition: all .2s cubic-bezier(.46, -0.265, .48, 1.38);
         </div>
         <div class="ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--center">
             <div class="sb1ds-example">
-                <div class="sb1ds-svgcontainer">
+                <div class="sb1ds-svgcontainer sb1ds-svgcontainer--paused">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" class="sb1ds-rotate sb1ds-svgcontainer__svgicon">
                         <path id="wheel" d="M93.75,0c-3.75,0-7.5,2.5-8.75,6.25l-6.25,18.75c-6.25,1.25-12.5,3.75-17.5,7.5l-17.5-8.75c-3.75-2.5-7.5-1.25-10,1.25l-8.75,8.75c-2.5,2.5-3.75,6.25-1.25,10l8.75,17.5c-3.75,6.25-6.25,11.25-7.5,17.5l-18.75,6.25c-3.75,1.25-6.25,5-6.25,8.75v12.5c0,3.75,2.5,7.5,6.25,8.75l18.75,6.25c1.25,6.25,3.75,12.5,7.5,17.5l-8.75,17.5c-1.25,3.75-1.25,7.5,1.25,10l8.75,8.75c2.5,2.5,6.25,3.75,10,1.25l18.75-8.75c5,2.5,12.5,5,18.75,7.5l6.25,18.75c0,3.75,3.75,6.25,6.5,6.25h12.5c3.75,0,7.5-2.5,8.75-6.25l5-18.75c6.25-1.25,12.5-3.75,18.75-7.5l17.5,8.75c3.75,1.25,7.5,1.25,10-1.25l8.75-8.75c2.5-2.5,3.75-6.25,1.25-10l-8.75-18.75c2.5-5,5-12.5,7.5-18.75l18.75-5c2.5,0,5-3.75,5-7.5v-12.5c0-3.75-2.5-7.5-6.25-8.75l-18.75-6.25c-1.25-6.25-3.75-12.5-7.5-17.5l8.75-17.5c1.25-3.75,1.25-7.5-1.25-10l-8.75-8.75c-2.5-2.5-6.25-3.75-10-1.25l-18.75,8.75c-5-2.5-12.5-5-18.75-7.5l-5-18.75c0-3.75-3.75-6.25-7.5-6.25h-12.5zm6.25,56.25c23.75,0,43.75,18.75,43.75,43.75s-20,43.75-43.75,43.75-43.75-20-43.75-43.75,20-43.75,43.75-43.75z"/>
                     </svg>
@@ -645,7 +645,7 @@ transition: all .2s cubic-bezier(.46, -0.265, .48, 1.38);
         </div>
         <div class="ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--center">
             <div class="sb1ds-example">
-                <div class="sb1ds-svgcontainer">
+                <div class="sb1ds-svgcontainer sb1ds-svgcontainer--paused">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" class="sb1ds-cat sb1ds-svgcontainer__svgicon">
                         <path d="M48.882.26c-.934.082-1.88.39-2.76.958h-.41C32.267 9.904 24.2 32.036 22.96 41.963c-2.07 15.718.826 27.918 8.478 36.605 2.895 3.31 6.62 5.998 10.757 8.273L35.37 98.01c-11.788 19.44-17.99 41.77-17.99 64.52v25.44c0 6.41 5.167 11.787 11.786 11.787h96.375v-.206l.622-14.68v-19.236c0-24.818-6.825-49.222-19.647-70.317l-4.964-8.063c4.55-2.275 8.274-4.967 11.376-8.483 7.652-8.685 10.547-21.093 8.48-36.604-1.242-9.927-9.1-32.055-22.75-40.74l-.412-.213c-3.516-2.275-8.068-.206-8.895 3.724l-2.07 10.135h47.086L55.018 4.937c-.62-3.102-3.334-4.924-6.136-4.68zM45.3 19.215l1.65 8.272h40.26l1.65-8.272c5.585 7.86 9.31 18.82 9.93 24.612 1.448 11.995-.412 21.095-5.582 26.886-5.79 6.618-16.342 9.924-31.232 10.13-14.89 0-25.437-3.512-31.228-10.13-4.964-6.205-6.824-15.308-5.377-27.096.622-5.79 4.346-16.543 9.93-24.402zm26.47 31.85c-4.455 0-8.066 3.61-8.068 8.062 0 4.456 3.612 8.067 8.067 8.067 4.454 0 8.066-3.61 8.066-8.067-.002-4.453-3.613-8.063-8.067-8.062zM56.673 91.6c4.55.826 9.718 1.238 15.095 1.445h.62c5.172 0 10.135-.413 14.478-1.24l6.823 11.17c11.583 19.026 17.58 40.742 17.58 62.872v19.437H94.52V156.33H82.11v28.954H61.634V156.33h-12.41v28.954H32.27v-22.75c0-20.06 5.582-39.708 15.923-56.874l8.483-14.06z" id="path4"/>
                         <path id="tail" d="M125.33 199.973v-.206c33.544-.373 57.08-28.33 57.08-60.594 0-11.995-3.513-23.785-10.132-33.712-1.86-2.894-5.792-4.343-8.895-2.895-4.343 1.86-5.79 7.034-3.102 10.757 5.172 7.652 7.862 16.545 7.862 25.852 0 24.197-18.614 44.05-42.19 45.91zM71.763 81.06c-105.61 65.593-52.805 32.796 0 0z" id="path4-7"/>
@@ -655,7 +655,7 @@ transition: all .2s cubic-bezier(.46, -0.265, .48, 1.38);
         </div>
         <div class="ffe-grid__col--sm-12 ffe-grid__col--md-12 ffe-grid__col--center">
             <div class="sb1ds-example">
-                <div class="sb1ds-svgcontainer">
+                <div class="sb1ds-svgcontainer sb1ds-svgcontainer--paused">
                     <svg viewBox="0 0 1137 290" xmlns="http://www.w3.org/2000/svg" class="sb1ds-biker sb1ds-biker--quick">
                         <title>Jente på sykkel</title>
                         <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -769,7 +769,7 @@ transition: all .2s cubic-bezier(.46, -0.265, .48, 1.38);
         </div>
         <div class="ffe-grid__col--sm-12 ffe-grid__col--md-12 ffe-grid__col--center">
             <div class="sb1ds-example">
-                <div class="sb1ds-svgcontainer">
+                <div class="sb1ds-svgcontainer sb1ds-svgcontainer--paused">
                     <svg viewBox="0 0 842 617" style="margin-top: -15%; margin-bottom: -15%;" xmlns="http://www.w3.org/2000/svg" class="sb1ds-pensjon1">
                         <title>
                         Pensjon_illustrasjon
