@@ -64,6 +64,9 @@ describe('accountFilter', () => {
         expect(accounts.filter(accountFilter('1286 7318 345'))).toEqual([
             accounts[1],
         ]);
+        const NON_BREAKING_SPACE = '\u00A0';
+        expect(accounts.filter(accountFilter(`1286${NON_BREAKING_SPACE}7318${NON_BREAKING_SPACE}345`))).toEqual([
+            accounts[1]]);
     });
 
     it('should filter by partial account number', () => {
