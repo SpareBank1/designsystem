@@ -1,4 +1,4 @@
-const COMMON_SEPARATORS = new RegExp(/[ .]/g);
+const COMMON_SEPARATORS = new RegExp(/[\s.]/g);
 
 export function accountFilter(query = '') {
     const nameQuery = query.toLowerCase();
