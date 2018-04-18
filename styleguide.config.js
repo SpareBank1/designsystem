@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const MiniHtmlWebpackPlugin = require('mini-html-webpack-plugin');
 
 const components = require('./styleguide.components');
@@ -75,35 +75,24 @@ module.exports = {
                 },
                 {
                     test: /\.css$/,
-                    use: PRODUCTION ?
-                        ExtractTextWebpackPlugin.extract({
-                            fallback: 'style-loader',
-                            use: ['css-loader?url=false'],
-                        }) :
-                        ['style-loader', 'css-loader?url=false'],
+                    use: PRODUCTION
+                        ? [MiniCssExtractPlugin.loader, 'css-loader?url=false']
+                        : ['style-loader', 'css-loader?url=false'],
                     exclude: /node_modules/,
                 },
                 {
                     test: /\.less$/,
-                    use: PRODUCTION ?
-                        ExtractTextWebpackPlugin.extract({
-                            fallback: 'style-loader',
-                            use: [
-                                { loader: 'css-loader' },
-                                { loader: 'less-loader' },
-                            ],
-                        }) :
-                        [
-                            { loader: 'style-loader' },
-                            { loader: 'css-loader' },
-                            { loader: 'less-loader' },
-                        ],
+                    use: PRODUCTION
+                        ? [MiniCssExtractPlugin.loader, 'css-loader', 'less-loader']
+                        : ['style-loader', 'css-loader', 'less-loader'],
                     exclude: /node_modules/,
                 },
             ],
         },
         plugins: [
-            new ExtractTextWebpackPlugin('styles.css'),
+            new MiniCssExtractPlugin({
+                filename: 'styles.css',
+            })
         ],
     },
     template: ({ css, js, publicPath, title }) => {
