@@ -1298,8 +1298,8 @@ html {
   width: 100%;
 }
 .ffe-button-group {
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   padding: 40px 0;
 }
 .ffe-button-group .ffe-button,

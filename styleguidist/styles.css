@@ -1291,7 +1291,7 @@ html {
   width: 100%;
 }
 .ffe-button-group {
-  display: flex;
+  display: inline-flex;
   padding: 40px 0;
 }
 .ffe-button-group .ffe-button,
@@ -4950,12 +4950,16 @@ input:not([type='radio']):not([type='checkbox']) {
   color: #676767;
   border-radius: 5px;
   display: block;
-  white-space: nowrap;
   transition: all 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 .sb1ds-components-list__link:hover {
   color: #676767;
   background: #e6e6e6;
+}
+.sb1ds-components-list__link:not(.sb1ds-components-list__link--heading) {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 /* Unnskyld */
 .sb1ds-sidebar__menu > .sb1ds-components-list > .sb1ds-components-list__item > .sb1ds-components-list__link--heading {
@@ -5061,11 +5065,10 @@ input:not([type='radio']):not([type='checkbox']) {
     margin: 10px 20px;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   .sb1ds-top-menu__logo {
     height: 40px;
     width: 182px;
-    margin: 10px 20px 10px 10px;
   }
 }
 .sb1ds-top-menu__list {
@@ -5073,7 +5076,7 @@ input:not([type='radio']):not([type='checkbox']) {
   margin: 0;
   padding: 0;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .sb1ds-top-menu__list {
     display: flex;
     height: 100%;
@@ -5088,17 +5091,17 @@ input:not([type='radio']):not([type='checkbox']) {
   white-space: nowrap;
   transition: all 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .sb1ds-top-menu__link {
-    padding: 0 10px;
+    padding: 0 15px;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   .sb1ds-top-menu__link {
     padding: 0 20px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .sb1ds-top-menu__link::before {
     content: '';
     display: block;
@@ -5106,19 +5109,19 @@ input:not([type='radio']):not([type='checkbox']) {
     background: #002776;
     position: absolute;
     top: 0;
-    left: 10px;
-    right: 10px;
+    left: 15px;
+    right: 15px;
     transform: translateY(-10px);
     transition: transform 0.2s cubic-bezier(0.46, -0.265, 0.48, 1.38);
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   .sb1ds-top-menu__link::before {
     left: 20px;
     right: 20px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .sb1ds-top-menu__link::after {
     content: '';
     display: inline-block;
@@ -5136,7 +5139,7 @@ input:not([type='radio']):not([type='checkbox']) {
   height: 23px;
   vertical-align: middle;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .sb1ds-top-menu__github-logo {
     height: 28px;
     width: 28px;
@@ -5159,7 +5162,7 @@ input:not([type='radio']):not([type='checkbox']) {
 .sb1ds-top-menu__toggle-button::after {
   border: none;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .sb1ds-top-menu__toggle-button {
     display: none;
   }
@@ -5171,14 +5174,14 @@ input:not([type='radio']):not([type='checkbox']) {
   padding: 20px 0;
   transition: transform 0.2s cubic-bezier(0.25, 0.1, 0.25, 1), opacity 0.1s;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .sb1ds-top-menu__wrapper {
     padding: 0;
     display: flex;
     align-items: flex-end;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
   .sb1ds-top-menu__wrapper:not(.sb1ds-top-menu__wrapper--visible) {
     padding: 0;
     visibility: hidden;
@@ -5191,7 +5194,7 @@ input:not([type='radio']):not([type='checkbox']) {
 @media screen and (min-width: 1024px) {
   .sb1ds-top-menu {
     position: fixed;
-    width: 100vw;
+    width: 100%;
     z-index: 1;
   }
 }
@@ -5357,17 +5360,17 @@ input:not([type='radio']):not([type='checkbox']) {
 .sb1ds-example {
   width: 100%;
 }
-.sb1ds-bad h5 {
+.sb1ds-example__header-bad-example {
   margin: 1em 0 0.5em;
   color: #DA3D00;
 }
-.sb1ds-good h5 {
+.sb1ds-example__header-good-example {
   margin: 1em 0 0.5em;
   color: #007B00;
 }
-.sb1ds-none h5 {
+.sb1ds-example__header-no-animation-example {
   margin: 1em 0 0.5em;
-  color: #ADADAD;
+  color: #262626;
 }
 .sb1ds-svgs svg {
   width: 25px;
@@ -5442,26 +5445,27 @@ input:not([type='radio']):not([type='checkbox']) {
   opacity: 0;
   height: 0;
 }
-.sb1ds-svgcontainer--playing .sb1ds-menuthing li,
-.sb1ds-svgcontainer--playing .sb1ds-menuthing-subtle li,
-.sb1ds-svgcontainer--playing .sb1ds-timing__object,
-.sb1ds-svgcontainer--playing .sb1ds-easing__ease-object,
-.sb1ds-svgcontainer--playing .sb1ds-arc__arc-object,
-.sb1ds-svgcontainer--playing .sb1ds-arc__container,
-.sb1ds-svgcontainer--playing .sb1ds-hide,
-.sb1ds-svgcontainer--playing .sb1ds-show,
-.sb1ds-svgcontainer--playing .sb1ds-cloud #cloud,
-.sb1ds-svgcontainer--playing .sb1ds-house #tree,
-.sb1ds-svgcontainer--playing .sb1ds-coin-drop #coin,
-.sb1ds-svgcontainer--playing .sb1ds-heart #heart,
-.sb1ds-svgcontainer--playing .sb1ds-rain #drop1,
-.sb1ds-svgcontainer--playing .sb1ds-rain #drop2,
-.sb1ds-svgcontainer--playing .sb1ds-rotate #wheel,
-.sb1ds-svgcontainer--playing .sb1ds-cat #tail,
-.sb1ds-svgcontainer--playing .sb1ds-biker .play,
-.sb1ds-svgcontainer--playing .sb1ds-pensjon1 .play,
-.sb1ds-svgcontainer--playing svg {
-  animation-play-state: running !important;
+.sb1ds-svgcontainer--paused .sb1ds-menuthing li,
+.sb1ds-svgcontainer--paused .sb1ds-menuthing-subtle li,
+.sb1ds-svgcontainer--paused .sb1ds-timing__object,
+.sb1ds-svgcontainer--paused .sb1ds-easing__ease-object,
+.sb1ds-svgcontainer--paused .sb1ds-arc__arc-object,
+.sb1ds-svgcontainer--paused .sb1ds-arc__container,
+.sb1ds-svgcontainer--paused .sb1ds-hide,
+.sb1ds-svgcontainer--paused .sb1ds-show,
+.sb1ds-svgcontainer--paused .sb1ds-cloud #cloud,
+.sb1ds-svgcontainer--paused .sb1ds-cloud #flight-cloud,
+.sb1ds-svgcontainer--paused .sb1ds-house #tree,
+.sb1ds-svgcontainer--paused .sb1ds-coin-drop #coin,
+.sb1ds-svgcontainer--paused .sb1ds-heart #heart,
+.sb1ds-svgcontainer--paused .sb1ds-rain #drop1,
+.sb1ds-svgcontainer--paused .sb1ds-rain #drop2,
+.sb1ds-svgcontainer--paused .sb1ds-rotate #wheel,
+.sb1ds-svgcontainer--paused .sb1ds-cat #tail,
+.sb1ds-svgcontainer--paused .sb1ds-biker .play,
+.sb1ds-svgcontainer--paused .sb1ds-pensjon1 .play,
+.sb1ds-svgcontainer--paused svg {
+  animation: none!important;
 }
 @keyframes easing {
   0% {
@@ -5491,7 +5495,6 @@ input:not([type='radio']):not([type='checkbox']) {
   animation-delay: 0.3s;
   animation-iteration-count: infinite;
   animation-timing-function: ease;
-  animation-play-state: paused;
 }
 .sb1ds-easing.sb1ds-bad .sb1ds-easing__ease-object {
   animation-timing-function: linear;
@@ -5557,7 +5560,6 @@ input:not([type='radio']):not([type='checkbox']) {
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  animation-play-state: paused;
 }
 .sb1ds-arc.sb1ds-good .sb1ds-arc__arc-object {
   animation-name: arc-x;
@@ -5566,7 +5568,6 @@ input:not([type='radio']):not([type='checkbox']) {
   animation-direction: alternate;
   animation-iteration-count: infinite;
   animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
-  animation-play-state: paused;
 }
 .sb1ds-arc.sb1ds-bad .sb1ds-arc__arc-object {
   animation-name: arc-xy;
@@ -5575,7 +5576,6 @@ input:not([type='radio']):not([type='checkbox']) {
   animation-direction: alternate;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  animation-play-state: paused;
 }
 @keyframes timing {
   0% {
@@ -5617,7 +5617,6 @@ input:not([type='radio']):not([type='checkbox']) {
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-timing-function: cubic-bezier(0.46, -0.265, 0.48, 1.38);
-  animation-play-state: paused;
 }
 .sb1ds-timing.sb1ds-bad .sb1ds-timing__object {
   animation-name: timing-slow;
@@ -5626,7 +5625,6 @@ input:not([type='radio']):not([type='checkbox']) {
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-timing-function: ease;
-  animation-play-state: paused;
 }
 .sb1ds-timing--overlap .sb1ds-timing__object {
   animation-duration: 3s;
@@ -5696,7 +5694,6 @@ input:not([type='radio']):not([type='checkbox']) {
   animation-delay: 0.3s;
   animation-iteration-count: infinite;
   animation-timing-function: cubic-bezier(0.46, -0.265, 0.48, 1.38);
-  animation-play-state: paused;
 }
 .sb1ds-menuthing-subtle li {
   animation-name: menuthing-subtle;
@@ -5704,7 +5701,6 @@ input:not([type='radio']):not([type='checkbox']) {
   animation-delay: 0.3s;
   animation-iteration-count: infinite;
   animation-timing-function: cubic-bezier(0.46, -0.265, 0.48, 1.38);
-  animation-play-state: paused;
 }
 .sb1ds-good .sb1ds-menuthing li:nth-child(2) {
   animation-delay: 0.35s;
@@ -5767,7 +5763,6 @@ input:not([type='radio']):not([type='checkbox']) {
   animation-delay: 0.5s;
   animation-iteration-count: infinite;
   animation-timing-function: cubic-bezier(0.46, -0.265, 0.48, 1.38);
-  animation-play-state: paused;
 }
 .sb1ds-xy.sb1ds-bad svg {
   animation-name: xy-bad;
@@ -5843,7 +5838,6 @@ input:not([type='radio']):not([type='checkbox']) {
   animation-delay: 0.5s;
   animation-iteration-count: infinite;
   animation-timing-function: cubic-bezier(0.46, -0.265, 0.48, 1.38);
-  animation-play-state: paused;
 }
 .sb1ds-relocate .sb1ds-svgcontainer {
   text-align: left;
@@ -5863,7 +5857,6 @@ input:not([type='radio']):not([type='checkbox']) {
   animation-delay: 0.5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease;
-  animation-play-state: paused;
 }
 .sb1ds-relocate .sb1ds-show {
   opacity: 1;
@@ -5873,7 +5866,6 @@ input:not([type='radio']):not([type='checkbox']) {
   animation-delay: 0.5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease;
-  animation-play-state: paused;
 }
 .sb1ds-bgcolor.sb1ds-bad .ffe-button {
   transition: all 1s cubic-bezier(0.25, 0.1, 0.25, 1);
@@ -5947,7 +5939,6 @@ input:not([type='radio']):not([type='checkbox']) {
   animation-duration: .8s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  animation-play-state: paused;
 }
 .sb1ds-rain #drop2 {
   animation-duration: 1s;
@@ -5960,12 +5951,12 @@ input:not([type='radio']):not([type='checkbox']) {
     transform: translateX(-200%);
   }
 }
+.sb1ds-cloud #flight-cloud,
 .sb1ds-cloud #cloud {
   animation-name: move-cloud;
   animation-duration: 4s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  animation-play-state: paused;
   transform-origin: 6.25em 6.25em;
 }
 @keyframes wind {
@@ -5991,7 +5982,6 @@ input:not([type='radio']):not([type='checkbox']) {
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-timing-function: linear;
-  animation-play-state: paused;
   transform-origin: bottom right;
 }
 @keyframes drop {
@@ -6013,7 +6003,6 @@ input:not([type='radio']):not([type='checkbox']) {
   animation-duration: 1.5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease;
-  animation-play-state: paused;
 }
 @keyframes beat {
   0% {
@@ -6031,7 +6020,6 @@ input:not([type='radio']):not([type='checkbox']) {
   animation-duration: 1.5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease;
-  animation-play-state: paused;
   transform-origin: 6.25em 6.25em;
 }
 @keyframes spin {
@@ -6047,7 +6035,6 @@ input:not([type='radio']):not([type='checkbox']) {
   animation-duration: 12s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  animation-play-state: paused;
   transform-origin: 6.25em 6.25em;
 }
 @keyframes tail {
@@ -6061,7 +6048,6 @@ input:not([type='radio']):not([type='checkbox']) {
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-timing-function: ease-in-out;
-  animation-play-state: paused;
   transform-origin: 8em 6em;
 }
 /* Large svgs */
@@ -6170,19 +6156,18 @@ input:not([type='radio']):not([type='checkbox']) {
 .sb1ds-biker #air {
   opacity: 0;
 }
+.sb1ds-biker #flight-cloud,
 .sb1ds-biker #cloud {
   animation-name: cloud;
   animation-duration: 45s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  animation-play-state: paused;
 }
 .sb1ds-biker #biker-all {
   animation-name: bike-from-left;
   animation-duration: 15s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  animation-play-state: paused;
 }
 .sb1ds-biker #right-shin,
 .sb1ds-biker #right-shin2,
@@ -6193,7 +6178,6 @@ input:not([type='radio']):not([type='checkbox']) {
   animation-iteration-count: infinite;
   animation-direction: normal;
   animation-timing-function: linear;
-  animation-play-state: paused;
 }
 .sb1ds-biker #left-shin,
 .sb1ds-biker #left-shin2 {
@@ -6202,7 +6186,6 @@ input:not([type='radio']):not([type='checkbox']) {
   animation-iteration-count: infinite;
   animation-direction: alternate-reverse;
   animation-timing-function: ease;
-  animation-play-state: paused;
 }
 .sb1ds-biker #pedal-crank {
   animation-name: pedal-crank;
@@ -6211,7 +6194,6 @@ input:not([type='radio']):not([type='checkbox']) {
   animation-direction: normal;
   transform-origin: .2em 1em;
   animation-timing-function: linear;
-  animation-play-state: paused;
 }
 .sb1ds-biker #pedal-foot,
 .sb1ds-biker #pedal-foot2 {
@@ -6220,7 +6202,6 @@ input:not([type='radio']):not([type='checkbox']) {
   animation-iteration-count: infinite;
   animation-direction: normal;
   animation-timing-function: linear;
-  animation-play-state: paused;
 }
 .sb1ds-biker #torso,
 .sb1ds-biker #torso2 {
@@ -6229,7 +6210,6 @@ input:not([type='radio']):not([type='checkbox']) {
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-timing-function: ease;
-  animation-play-state: paused;
 }
 .sb1ds-biker #front-wheel1,
 .sb1ds-biker #front-wheel2 {
@@ -6238,7 +6218,6 @@ input:not([type='radio']):not([type='checkbox']) {
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-timing-function: ease;
-  animation-play-state: paused;
 }
 .sb1ds-biker #back-wheel1,
 .sb1ds-biker #back-wheel2,
@@ -6248,7 +6227,6 @@ input:not([type='radio']):not([type='checkbox']) {
   animation-iteration-count: infinite;
   animation-direction: alternate-reverse;
   animation-timing-function: ease;
-  animation-play-state: paused;
 }
 .sb1ds-biker #helmet3,
 .sb1ds-biker #helmet4,
@@ -6260,7 +6238,6 @@ input:not([type='radio']):not([type='checkbox']) {
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-timing-function: ease;
-  animation-play-state: paused;
 }
 .sb1ds-biker #head1,
 .sb1ds-biker #head2,
@@ -6275,7 +6252,6 @@ input:not([type='radio']):not([type='checkbox']) {
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-timing-function: ease;
-  animation-play-state: paused;
 }
 .sb1ds-biker #neck1,
 .sb1ds-biker #neck2,
@@ -6285,7 +6261,6 @@ input:not([type='radio']):not([type='checkbox']) {
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-timing-function: ease;
-  animation-play-state: paused;
 }
 .sb1ds-biker.sb1ds-biker--quick #biker-all {
   animation-duration: 10s;
@@ -6409,7 +6384,6 @@ input:not([type='radio']):not([type='checkbox']) {
   animation-duration: .6s;
   animation-iteration-count: infinite;
   animation-timing-function: ease;
-  animation-play-state: paused;
 }
 #vindu-busk1 {
   animation-name: bush;
@@ -6417,7 +6391,6 @@ input:not([type='radio']):not([type='checkbox']) {
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-timing-function: ease;
-  animation-play-state: paused;
 }
 #vindu-busk2 {
   animation-name: bush;
@@ -6425,14 +6398,12 @@ input:not([type='radio']):not([type='checkbox']) {
   animation-iteration-count: infinite;
   animation-direction: alternate-reverse;
   animation-timing-function: ease;
-  animation-play-state: paused;
 }
 #vindu-sky {
   animation-name: slow-cloud;
   animation-duration: 55s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  animation-play-state: paused;
 }
 #skjermlys1,
 #skjermlys2,
@@ -6442,7 +6413,6 @@ input:not([type='radio']):not([type='checkbox']) {
   animation-iteration-count: infinite;
   animation-direction: alternate-reverse;
   animation-timing-function: ease;
-  animation-play-state: paused;
 }
 .sb1ds-npm-i-builder-output {
   background: #F4F4F4;
@@ -6507,6 +6477,10 @@ input:not([type='radio']):not([type='checkbox']) {
   .sb1ds-intro--section {
     height: 160px;
   }
+}
+.sb1ds-intro__heading,
+.sb1ds-intro__paragraph {
+  background: #005AA4;
 }
 @media screen and (min-width: 1024px) {
   .sb1ds-intro__heading,
@@ -6575,6 +6549,9 @@ input:not([type='radio']):not([type='checkbox']) {
 }
 .sb1ds-section-static a--no-underline {
   border-bottom: none;
+}
+.sb1ds-section-static__h1 {
+  background: #005AA4;
 }
 @media screen and (min-width: 1024px) {
   .sb1ds-section-static__h1 {
