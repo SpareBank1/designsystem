@@ -1,5 +1,8 @@
+const fs = require('fs');
 const path = require('path');
+
 const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
+const MiniHtmlWebpackPlugin = require('mini-html-webpack-plugin');
 
 const components = require('./styleguide.components');
 
@@ -103,7 +106,25 @@ module.exports = {
             new ExtractTextWebpackPlugin('styles.css'),
         ],
     },
-    template: 'src/styleguidist.html',
+    template: ({ css, js, publicPath, title }) => {
+        const template = fs.readFileSync(
+            path.join(__dirname, 'src', 'styleguidist.html'),
+            'utf-8'
+        );
+        return template
+            .replace(
+                '<!-- MiniHtmlWebpackPlugin:Title -->',
+                `<title>${title}</title>`
+            )
+            .replace(
+                '<!-- MiniHtmlWebpackPlugin:CSS -->',
+                MiniHtmlWebpackPlugin.generateCSSReferences(css, publicPath)
+            )
+            .replace(
+                '<!-- MiniHtmlWebpackPlugin:JS -->',
+                MiniHtmlWebpackPlugin.generateJSReferences(js, publicPath)
+            );
+    },
     sections: [
         {
             name: 'Knapper',
