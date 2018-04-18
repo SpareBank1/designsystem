@@ -76,15 +76,15 @@ module.exports = {
                 {
                     test: /\.css$/,
                     use: PRODUCTION
-                        ? [MiniCssExtractPlugin.loader, 'css-loader?url=false']
-                        : ['style-loader', 'css-loader?url=false'],
+                        ? [MiniCssExtractPlugin.loader, 'css-loader?url=false','postcss-loader']
+                        : ['style-loader', 'css-loader?url=false', 'postcss-loader'],
                     exclude: /node_modules/,
                 },
                 {
                     test: /\.less$/,
                     use: PRODUCTION
-                        ? [MiniCssExtractPlugin.loader, 'css-loader', 'less-loader']
-                        : ['style-loader', 'css-loader', 'less-loader'],
+                        ? [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'less-loader']
+                        : ['style-loader', 'css-loader', 'postcss-loader', 'less-loader'],
                     exclude: /node_modules/,
                 },
             ],
