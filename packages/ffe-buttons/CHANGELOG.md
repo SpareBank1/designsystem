@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="7.1.5"></a>
+## [7.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@7.1.4...@sb1/ffe-buttons@7.1.5) (2018-04-19)
+
+
+### Bug Fixes
+
+* **ffe-buttons:** tertiary button underline on small screens ([171525a](https://github.com/SpareBank1/designsystem/commit/171525a)), closes [#191](https://github.com/SpareBank1/designsystem/issues/191)
+
+
+
+
       <a name="7.1.4"></a>
 ## [7.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@7.1.3...@sb1/ffe-buttons@7.1.4) (2018-04-19)
 
@@ -14,7 +25,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="7.1.3"></a>
+    <a name="7.1.3"></a>
 ## [7.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@7.1.2...@sb1/ffe-buttons@7.1.3) (2018-04-18)
 
 
@@ -25,7 +36,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-    <a name="7.1.2"></a>
+  <a name="7.1.2"></a>
 ## [7.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@7.1.1...@sb1/ffe-buttons@7.1.2) (2018-04-17)
 
 
@@ -36,7 +47,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-  <a name="7.1.1"></a>
+<a name="7.1.1"></a>
 ## [7.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@7.1.0...@sb1/ffe-buttons@7.1.1) (2018-04-11)
 
 

@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.1.0"></a>
+# [3.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@3.0.10...@sb1/ffe-datepicker-react@3.1.0) (2018-04-19)
+
+
+### Bug Fixes
+
+* **ffe-datepicker-react:** Add aria tags for button element ([f07961c](https://github.com/SpareBank1/designsystem/commit/f07961c))
+
+
+### Features
+
+* **ffe-datepicker-react:** `nb` set as default language ([19ac088](https://github.com/SpareBank1/designsystem/commit/19ac088))
+
+
+
+
 <a name="3.0.10"></a>
 ## [3.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@3.0.9...@sb1/ffe-datepicker-react@3.0.10) (2018-04-11)
 
