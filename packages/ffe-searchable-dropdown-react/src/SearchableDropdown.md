@@ -1,10 +1,10 @@
-En komponent for å kunne søke igjennom en lenger liste med valg. Listen med valg har støtte for å vise flere atributter ved et element, for eksempel bedriftnavn og organisasjonsnummer.
+En komponent for å kunne søke igjennom en lenger liste med valg. Listen med valg har støtte for å vise flere attributter ved et element, for eksempel bedriftnavn og organisasjonsnummer.
 
 Om du vet du har 10 valg eller færre er det bedre å bruke en vanlig [dropdown](#dropdown).
 
 Om du er ute etter en måte å vise kontoinformasjon finnes en skreddersydd [kontovelger](#kontovelger).
 
-Under vises et eksempel der vi viser ett atributt.
+Under vises et eksempel der vi viser ett attributt.
 
 ```jsx
 const companies = require('../exampleData').companies;
@@ -26,7 +26,7 @@ const initialState = { inputValue: '' };
 />;
 ```
 
-Her er hvordan det kan se ut med to atributter.
+Her er hvordan det kan se ut med to attributter.
 
 ```jsx
 const companies = require('../exampleData').companiesWithMessageCount;
