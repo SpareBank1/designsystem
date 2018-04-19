@@ -2942,6 +2942,44 @@ html {
   height: 14px;
   width: 14px;
 }
+.ffe-phone-number {
+  display: flex;
+}
+.ffe-phone-number__input-group {
+  display: flex;
+}
+.ffe-phone-number__country-code {
+  min-width: 110px;
+  flex-grow: 1;
+}
+.ffe-phone-number__country-code label {
+  white-space: nowrap;
+  margin-right: 10px;
+}
+.ffe-phone-number__country-code-input {
+  max-width: 60px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  margin-right: 14px;
+}
+.ffe-phone-number__plus {
+  font-weight: 400;
+  line-height: 1;
+  padding: 12px 6px;
+  border: 2px solid #CCC;
+  border-radius: 4px 0 0 4px;
+  border-right: 0;
+}
+.ffe-phone-number__number {
+  flex-grow: 10000;
+}
+.ffe-phone-number__number label {
+  white-space: nowrap;
+}
+.ffe-phone-number__phone-input:disabled,
+.ffe-phone-number__country-code-input:disabled {
+  color: transparent;
+}
 /* Form Layout */
 .ffe-input-group {
   border: 0;
