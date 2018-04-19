@@ -1298,14 +1298,14 @@ html {
   width: 100%;
 }
 .ffe-button-group {
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
   padding: 40px 0;
 }
 .ffe-button-group .ffe-button,
 .ffe-button-group .ffe-inline-button {
-  -ms-flex-direction: column;
-      flex-direction: column;
   -ms-flex-pack: center;
       justify-content: center;
   margin: 0 auto 10px;
@@ -1324,12 +1324,16 @@ html {
   margin: 0 0 10px;
 }
 @media screen and (min-width: 480px) {
-  .ffe-button-group .ffe-button,
-  .ffe-button-group .ffe-inline-button {
+  .ffe-button-group {
     display: -ms-inline-flexbox;
     display: inline-flex;
     -ms-flex-direction: row;
         flex-direction: row;
+  }
+  .ffe-button-group .ffe-button,
+  .ffe-button-group .ffe-inline-button {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
     margin: 0 0 10px 10px;
     width: auto;
   }
@@ -1637,6 +1641,8 @@ html {
 }
 .ffe-inline-button--tertiary,
 .ffe-header__icon-button {
+  -ms-flex-line-pack: center;
+      align-content: center;
   color: #0071CD;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -1645,9 +1651,7 @@ html {
 .ffe-header__icon-button::after {
   border-bottom: solid 1px currentColor;
   content: ' ';
-  display: block;
-  -ms-flex: 1 0 100%;
-      flex: 1 0 100%;
+  width: 100%;
 }
 .ffe-inline-button--tertiary:hover,
 .ffe-header__icon-button:hover {
