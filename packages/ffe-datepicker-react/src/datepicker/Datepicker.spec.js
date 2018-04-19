@@ -11,7 +11,6 @@ import KeyCode from '../util/keyCode';
 const defaultProps = {
     value: '',
     onChange: () => {},
-    language: 'nb',
 };
 
 const getShallowWrapper = props =>
@@ -23,6 +22,11 @@ const ERROR_CLASS = '.ffe-field-error-message';
 
 describe('<Datepicker />', () => {
     describe('with empty value', () => {
+        it('renders with language set to nb by default', () => {
+            const wrapper = getMountedWrapper();
+            expect(wrapper.prop('language')).toBe('nb');
+        });
+
         it('renders a wrapper for the datepicker components', () => {
             const wrapper = getShallowWrapper();
             expect(wrapper.find('.ffe-datepicker').exists()).toBe(true);
@@ -41,6 +45,26 @@ describe('<Datepicker />', () => {
         it('does not have an error message', () => {
             const wrapper = getShallowWrapper();
             expect(wrapper.find(ERROR_CLASS).exists()).toBe(false);
+        });
+
+        it('renders a locale-respecting aria-label for the datepicker if no label is given', () => {
+            let wrapper = getShallowWrapper();
+            expect(wrapper.find('.ffe-datepicker').prop('aria-label')).toBe(i18n.nb.CHOOSE_DATE);
+            expect(wrapper.find('.ffe-datepicker').prop('aria-labelledby')).toBeUndefined();
+            wrapper = getShallowWrapper({
+                language: 'en',
+            });
+            expect(wrapper.find('.ffe-datepicker').prop('aria-label')).toBe(i18n.en.CHOOSE_DATE);
+            expect(wrapper.find('.ffe-datepicker').prop('aria-labelledby')).toBeUndefined();
+        });
+
+        it('renders aria-describeby if a label is given', () => {
+            const wrapper = getShallowWrapper({
+                label: 'Velg startdato',
+            });
+            expect(wrapper.find('.ffe-datepicker').prop('aria-label')).toBeUndefined();
+            expect(wrapper.find('.ffe-datepicker').prop('aria-labelledby'))
+                .toBe(`ffe-datepicker-label-${wrapper.instance().datepickerId}`);
         });
     });
 

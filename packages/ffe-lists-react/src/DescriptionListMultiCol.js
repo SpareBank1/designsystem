@@ -14,20 +14,20 @@ const DescriptionListMultiCol = ({ children, className, ...rest }) => {
     });
 
     return (
-        <dl
+        <div
             className={classNames('ffe-description-list-multicol', className)}
             {...rest}
         >
             {pairs.map((pair, idx) => (
-                <div
+                <dl
                     className="ffe-description-list-multicol__avoid-break"
                     key={idx}
                 >
                     {pair[0]}
                     {pair[1]}
-                </div>
+                </dl>
             ))}
-        </dl>
+        </div>
     );
 };
 

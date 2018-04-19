@@ -2,7 +2,7 @@ Brukes for å liste opp relaterte punkter. Rekkefølgen kan være helt tilfeldig
 
 ```js
 <div>
-    <h4 className="ffe-h4">Våre forsikringer</h4>
+    <h3 className="ffe-h4">Våre forsikringer</h3>
     <BulletList>
         <li>Bilforsikring</li>
         <li>Reiseforsikring</li>
