@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-datepicker-react",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "license": "MIT",
   "files": [
     "lib",
@@ -21,7 +21,7 @@
     "setupTestFrameworkScriptFile": "../../test-setup.js"
   },
   "dependencies": {
-    "@sb1/ffe-datepicker": "^5.0.6",
+    "@sb1/ffe-datepicker": "^5.0.7",
     "@sb1/ffe-icons-react": "^6.0.0",
     "classnames": "^2.2.5",
     "prop-types": "^15.6.0",
