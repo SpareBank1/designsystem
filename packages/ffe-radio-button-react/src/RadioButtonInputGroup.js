@@ -31,7 +31,7 @@ const RadioButtonInputGroup = props => {
         'aria-invalid': ariaInvalid || String(!!fieldMessage),
         inline,
         name,
-        onChange: f => f,
+        onChange: /* istanbul ignore next */ f => f,
         selectedValue,
     };
 
@@ -77,7 +77,11 @@ RadioButtonInputGroup.propTypes = {
      * rendered inline or as a block.
      * */
     inline: bool,
-    /** The text describing the radio button set */
+    /**
+     * The text describing the radio button set. Note that if you don't use this
+     * prop but provide your own label you should make sure your solution passes
+     * acessibility validation using a tool such as aXe DevTools.
+     */
     label: string,
     /** The name of the radio button */
     name: string,

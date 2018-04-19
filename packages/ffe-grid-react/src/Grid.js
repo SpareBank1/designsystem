@@ -6,6 +6,7 @@ import { checkForNestedComponent } from './utils';
 
 export default class Grid extends Component {
     componentDidMount() {
+        /* istanbul ignore else: there is no else  */
         if (process.env.NODE_ENV !== 'production') {
             checkForNestedComponent(this.props.children, Grid);
         }

@@ -3,7 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-       <a name="9.0.8"></a>
+      <a name="9.0.9"></a>
+## [9.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@9.0.8...@sb1/ffe-account-selector-react@9.0.9) (2018-04-18)
+
+
+### Bug Fixes
+
+* **ffe-account-selector-react:** Adds support for filtering on account numbers with unicode spaces ([bd97d83](https://github.com/SpareBank1/designsystem/commit/bd97d83))
+
+
+
+
+      <a name="9.0.8"></a>
 ## [9.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@9.0.7...@sb1/ffe-account-selector-react@9.0.8) (2018-04-11)
 
 
@@ -11,7 +22,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
 
-       <a name="9.0.7"></a>
+     <a name="9.0.7"></a>
 ## [9.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@9.0.6...@sb1/ffe-account-selector-react@9.0.7) (2018-04-09)
 
 
@@ -19,7 +30,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
 
-      <a name="9.0.6"></a>
+    <a name="9.0.6"></a>
 ## [9.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@9.0.5...@sb1/ffe-account-selector-react@9.0.6) (2018-04-06)
 
 
@@ -27,7 +38,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
 
-  <a name="9.0.5"></a>
+<a name="9.0.5"></a>
 ## [9.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@9.0.4...@sb1/ffe-account-selector-react@9.0.5) (2018-04-06)
 
 

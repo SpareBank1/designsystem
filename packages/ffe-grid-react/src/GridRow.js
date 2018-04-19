@@ -17,6 +17,7 @@ export const VALID_BACKGROUND_COLORS = [
 
 export default class GridRow extends Component {
     componentDidMount() {
+        /* istanbul ignore else: there is no else */
         if (process.env.NODE_ENV !== 'production') {
             checkForNestedComponent(this.props.children, GridRow);
         }

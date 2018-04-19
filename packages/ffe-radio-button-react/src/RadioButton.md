@@ -6,6 +6,7 @@ const { RadioButtonInputGroup } = require('.');
 initialState = { selected: undefined };
 <RadioButtonInputGroup
     inline={true}
+    label="Hva er din favorittfarge?"
     name="favoriteColor"
     onChange={e => setState({ selected: e.target.value })}
     selectedValue={state.selected}
@@ -32,6 +33,7 @@ Har valgene litt mer tekst, så bør valgene komme under hverandre:
 const { RadioButtonInputGroup } = require('.');
 initialState = { selected: undefined };
 <RadioButtonInputGroup
+    label="Kundetype"
     name="customerType"
     onChange={e => setState({ selected: e.target.value })}
     selectedValue={state.selected}
@@ -62,6 +64,7 @@ legge til en tipstekst:
 const { RadioButtonInputGroup } = require('.');
 initialState = { selected: undefined };
 <RadioButtonInputGroup
+    label="Hvordan vil du betale?"
     name="invoice"
     onChange={e => setState({ selected: e.target.value })}
     selectedValue={state.selected}

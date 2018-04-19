@@ -46,4 +46,5 @@ export default {
     INVALID_DATE: 'Invalid date',
     MIN_DATE: 'Given date is too far back',
     MAX_DATE: 'Given date is too far ahead',
+    CHOOSE_DATE: 'Choose date',
 };

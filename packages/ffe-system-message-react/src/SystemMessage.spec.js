@@ -70,4 +70,14 @@ describe('<SystemMessage />', () => {
 
         expect(onClose).toHaveBeenCalledTimes(1);
     });
+    it('renders a Norwegian aria label on the close button by default', () => {
+        const wrapper = getInfoWrapper();
+        expect(wrapper.find('button').prop('aria-label')).toBe('Lukk');
+    });
+    it('renders an English aria-label if locale is "en"', () => {
+        const wrapper = getInfoWrapper({
+            locale: 'en',
+        });
+        expect(wrapper.find('button').prop('aria-label')).toBe('Close');
+    });
 });

@@ -2,7 +2,7 @@ Dette er en liste der hvert punkt består av en betegnelse og en eller flere bes
 
 ```js
 <div>
-    <h4 className="ffe-h4">Personalia</h4>
+    <h3 className="ffe-h4">Personalia</h3>
     <DescriptionListMultiCol>
         <dt>Navn</dt>
         <dd>Navn Navnesen</dd>

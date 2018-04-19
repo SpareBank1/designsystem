@@ -18,7 +18,7 @@
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    display: inline-block;
+    display: inline-flex;
     font-family: 'MuseoSansRounded-500', arial, sans-serif;
     margin: 0 -4px; // Hack to allow box-shadow to float outside content on focus
     overflow: hidden;
@@ -40,6 +40,10 @@
     line-height: 26px;
     padding-left: 1em;
 
+    .ffe-inline-button__label {
+        border-bottom: 1px solid transparent;
+    }
+
     &:focus,
     &:hover {
         background-color: transparent;
@@ -50,7 +54,7 @@
     }
 
     &:hover .ffe-inline-button__label {
-        border-bottom: 1px solid @ffe-grey-charcoal;
+        border-bottom-color: @ffe-grey-charcoal;
     }
 }
 
@@ -63,14 +67,14 @@
 }
 
 .ffe-inline-button--tertiary {
+    align-content: center;
     color: @ffe-blue-azure;
     flex-wrap: wrap;
 
     &::after {
         border-bottom: solid 1px currentColor;
         content: ' ';
-        display: block;
-        flex: 1 0 100%;
+        width: 100%;
     }
 
     &:hover {
