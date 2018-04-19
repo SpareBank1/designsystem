@@ -1320,7 +1320,6 @@ html {
   }
   .ffe-button-group .ffe-button,
   .ffe-button-group .ffe-inline-button {
-    display: inline-flex;
     margin: 0 0 10px 10px;
     width: auto;
   }
@@ -1570,7 +1569,7 @@ html {
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  display: inline-block;
+  display: inline-flex;
   font-family: 'MuseoSansRounded-500', arial, sans-serif;
   margin: 0 -4px;
   overflow: hidden;
@@ -1592,6 +1591,9 @@ html {
   line-height: 26px;
   padding-left: 1em;
 }
+.ffe-inline-button--back .ffe-inline-button__label {
+  border-bottom: 1px solid transparent;
+}
 .ffe-inline-button--back:focus,
 .ffe-inline-button--back:hover {
   background-color: transparent;
@@ -1600,7 +1602,7 @@ html {
   box-shadow: none;
 }
 .ffe-inline-button--back:hover .ffe-inline-button__label {
-  border-bottom: 1px solid #676767;
+  border-bottom-color: #676767;
 }
 .ffe-inline-button--expand {
   color: #0071CD;
@@ -4186,6 +4188,7 @@ input:not([type='radio']):not([type='checkbox']) {
 }
 .ffe-description-list-multicol__avoid-break {
   flex-basis: 100%;
+  margin: 0;
   text-align: center;
 }
 .ffe-description-list-multicol--sm-2-cols .ffe-description-list-multicol__avoid-break {
