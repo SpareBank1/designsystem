@@ -207,6 +207,45 @@ describe('<BaseSelector> methods', () => {
         expect(component.state.highlightedSuggestionIndex).toBe(2);
         expect(scollPosSpy).toHaveBeenCalledTimes(1);
     });
+
+    it('should call onInputReset on reset button mousedown', () => {
+        const component = mountBaseSelector({ value: 'notempty' });
+        const onResetSpy = jest.spyOn(component.instance(), 'onInputReset');
+        component.instance().forceUpdate();
+        component.find('.ffe-base-selector__reset-button').simulate('mousedown');
+
+        expect(onResetSpy).toHaveBeenCalled();
+    });
+
+    it('should call onExpandOrCollapseClick on expandOrCollapse button mousedown', () => {
+        const component = mountBaseSelector();
+        const onResetSpy = jest.spyOn(component.instance(), 'onExpandOrCollapseClick');
+        component.instance().forceUpdate();
+        component.find('.ffe-base-selector__expand-button').simulate('mousedown');
+
+        expect(onResetSpy).toHaveBeenCalled();
+    });
+
+    it('should call onInputChange on input change', () => {
+        const component = mountBaseSelector();
+        const onInputChange = jest.spyOn(component.instance(), 'onInputChange');
+        const value = 'value';
+        const event = { target: { value } };
+        component.instance().forceUpdate();
+        component.find('.ffe-base-selector__input-field').simulate('change', event);
+
+        expect(onInputChange).toHaveBeenCalledWith(value);
+    });
+
+    it('should call onBlur on input blur', () => {
+        const component = mountBaseSelector();
+        const onBlur = jest.spyOn(component.instance(), 'onBlur');
+        component.instance().forceUpdate();
+        component.find('.ffe-base-selector__input-field').simulate('blur');
+
+        expect(onBlur).toHaveBeenCalled();
+    })
+
 });
 
 describe('<BaseSelector> keyboard navigation', () => {
