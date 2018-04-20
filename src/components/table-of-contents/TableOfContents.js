@@ -8,9 +8,10 @@ export default function TableOfContents(props) {
         <Fragment>
             <div className="sb1ds-search">
                 <Input
-                    value={searchTerm}
-                    placeholder="Vis meg..."
+                    aria-label="Søk etter en komponent"
                     onChange={event => onSearchTermChange(event.target.value)}
+                    placeholder="Vis meg..."
+                    value={searchTerm}
                 />
             </div>
             {children}

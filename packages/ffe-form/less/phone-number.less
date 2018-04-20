@@ -1,0 +1,45 @@
+.ffe-phone-number {
+    display: flex;
+
+    &__input-group {
+        display: flex;
+    }
+
+    &__country-code {
+        min-width: 110px;
+        flex-grow: 1;
+
+        label {
+            white-space: nowrap;
+            margin-right: 10px;
+        }
+    }
+
+    &__country-code-input {
+        max-width: 60px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        margin-right: 14px;
+    }
+
+    &__plus {
+        font-weight: 400;
+        line-height: 1;
+        padding: 12px 6px;
+        border: 2px solid @ffe-grey-silver;
+        border-radius: 4px 0 0 4px;
+        border-right: 0;
+    }
+
+    &__number {
+        flex-grow: 10000; // Make this element fill all remaining white space
+
+        label {
+            white-space: nowrap;
+        }
+    }
+
+    &__phone-input:disabled, &__country-code-input:disabled {
+        color: transparent;
+    }
+}

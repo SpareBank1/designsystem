@@ -3,7 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-      <a name="3.0.4"></a>
+    <a name="3.1.0"></a>
+# [3.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@3.0.4...@sb1/ffe-form-react@3.1.0) (2018-04-19)
+
+
+### Features
+
+* **ffe-form-react:** Adds a PhoneNumber component to ffe-form-react ([6ec0f92](https://github.com/SpareBank1/designsystem/commit/6ec0f92))
+
+
+
+
+    <a name="3.0.4"></a>
 ## [3.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@3.0.3...@sb1/ffe-form-react@3.0.4) (2018-03-27)
 
 
@@ -11,7 +22,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-form-react
 
-      <a name="3.0.3"></a>
+  <a name="3.0.3"></a>
 ## [3.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@3.0.2...@sb1/ffe-form-react@3.0.3) (2018-03-13)
 
 
@@ -19,7 +30,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-form-react
 
-    <a name="3.0.2"></a>
+<a name="3.0.2"></a>
 ## [3.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@3.0.0...@sb1/ffe-form-react@3.0.2) (2018-03-07)
 
 

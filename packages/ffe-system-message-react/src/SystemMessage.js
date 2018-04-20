@@ -15,7 +15,13 @@ class SystemMessage extends Component {
     };
 
     render() {
-        const { children, className, icon, modifier } = this.props;
+        const {
+            children,
+            className,
+            icon,
+            locale,
+            modifier,
+        } = this.props;
 
         return (
             <Collapse isOpened={!this.state.dismissed}>
@@ -34,6 +40,7 @@ class SystemMessage extends Component {
                             {children}
                         </p>
                         <button
+                            aria-label={locale === 'en' ? 'Close' : 'Lukk'}
                             className="ffe-system-message__close"
                             onClick={this.onClose}
                             type="button"
@@ -48,6 +55,7 @@ class SystemMessage extends Component {
 }
 
 SystemMessage.defaultProps = {
+    locale: 'nb',
     onClose: f => f,
 };
 
@@ -58,6 +66,8 @@ SystemMessage.propTypes = {
     className: string,
     /** Override the default icon - use with caution! */
     icon: node.isRequired,
+    /** 'nb', 'nn', or 'en' */
+    locale: oneOf(['en', 'nb', 'nn']),
     /**
      * The type of system message. Used internally only-
      * @ignore
