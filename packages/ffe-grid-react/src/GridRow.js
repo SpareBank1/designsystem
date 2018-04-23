@@ -2,18 +2,8 @@ import React, { Component } from 'react';
 import { bool, node, oneOf, string } from 'prop-types';
 import classNames from 'classnames';
 
+import backgroundColors from './background-colors';
 import { checkForNestedComponent } from './utils';
-
-export const VALID_BACKGROUND_COLORS = [
-    'blue-cobalt',
-    'blue-ice',
-    'blue-pale',
-    'blue-royal',
-    'green-mint',
-    'grey-cloud',
-    'purple-magenta',
-    'sand',
-];
 
 export default class GridRow extends Component {
     componentDidMount() {
@@ -36,7 +26,7 @@ export default class GridRow extends Component {
 
         let content = children;
 
-        const hasBackgroundColor = VALID_BACKGROUND_COLORS.includes(background);
+        const hasBackgroundColor = backgroundColors.includes(background);
 
         if (hasBackgroundColor) {
             content = <div className="ffe-grid__row-wrapper">{children}</div>;
@@ -63,7 +53,7 @@ export default class GridRow extends Component {
 
 GridRow.propTypes = {
     /** Supported background colors */
-    background: oneOf(VALID_BACKGROUND_COLORS),
+    background: oneOf(backgroundColors),
     /** Any extra classes are attached to the root node, in addition to ffe-grid__row classes */
     className: string,
     /** All children of a `<GridRow />` must be `<GridCol />`. */

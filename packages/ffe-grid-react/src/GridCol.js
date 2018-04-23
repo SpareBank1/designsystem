@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { bool, node, number, oneOfType, shape, string } from 'prop-types';
+import { bool, node, number, oneOf, oneOfType, shape, string } from 'prop-types';
 import classNames from 'classnames';
+import backgroundColors from './background-colors';
 
 import {
     checkForDeprecatedModifiers,
@@ -21,6 +22,7 @@ function camelCaseToDashCase(str) {
 
 const MODIFIER_LIST = [
     'around',
+    'background',
     'between',
     'bottom',
     'center',
@@ -56,6 +58,11 @@ const modifiers = props =>
         .map(key => `ffe-grid__col--${camelCaseToDashCase(key)}`)
         .join(' ');
 
+const backgroundClass = props =>
+    props.background && backgroundColors.includes(props.background)
+    ? `ffe-grid__col--bg-${props.background}`
+    : null;
+
 export default class GridCol extends Component {
     componentDidMount() {
         /* istanbul ignore else: there is no else  */
@@ -89,6 +96,7 @@ export default class GridCol extends Component {
             sizeClasses('md', md),
             sizeClasses('sm', !sm && !lg && !md ? 12 : sm),
             modifiers(this.props),
+            backgroundClass(this.props),
         ]
             .filter(x => x)
             .join(' ');
@@ -106,6 +114,8 @@ GridCol.defaultProps = {
 };
 
 GridCol.propTypes = {
+    /** Supported background colors */
+    background: oneOf(backgroundColors),
     /** Any extra classes are attached to the root node, in addition to ffe-grid__col classes */
     className: string,
     /** Specify the DOM element being used to create the GridCol */

@@ -58,5 +58,37 @@ const backgroundColors = [
 </Grid>;
 ```
 
+En kolonne kan også ha bakgrunnsfarger. De vil da være utfallende, slik at selve innholdet vil forholde seg til griden.
+
+```js
+const backgroundColors = [
+    'blue-cobalt',
+    'blue-ice',
+    'blue-pale',
+    'blue-royal',
+    'green-mint',
+    'grey-cloud',
+    'purple-magenta',
+    'sand',
+];
+<Grid>
+    <GridRow>
+        <GridCol sm={12} lg={3}>Litt innhold</GridCol>
+        <GridCol sm={12} lg={3}>Litt innhold</GridCol>
+        <GridCol sm={12} lg={3}>Litt innhold</GridCol>
+        <GridCol sm={12} lg={3}>Litt innhold</GridCol>
+    </GridRow>
+    {backgroundColors.map((color, idx) => (
+        <GridRow key={idx}>
+            <GridCol
+                sm={12}
+                lg={{ cols: 6, offset: 3 }}
+                background={color}
+            >Litt innhold</GridCol>
+        </GridRow>
+    ))}
+</Grid>;
+```
+
 Det finnes en rekke modifiers på alle tre komponentene som lar deg manipulere hvor innholdet skal plassere seg i en
 kolonne. Ta en titt på prop-types for å finne disse.
