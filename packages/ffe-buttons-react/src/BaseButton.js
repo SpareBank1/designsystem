@@ -21,7 +21,7 @@ const BaseButton = props => {
         ...rest
     } = props;
 
-    const supportsSpinner = ['action', 'primary', 'secondary'].includes(buttonType);
+    const supportsSpinner = ['action', 'primary', 'secondary', 'shortcut'].includes(buttonType);
     return (
         <Element
             aria-busy={isLoading}
