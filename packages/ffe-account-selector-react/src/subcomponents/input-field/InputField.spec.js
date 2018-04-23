@@ -17,6 +17,7 @@ function renderInputField(
             isSuggestionsShowing={false}
             id="id"
             readOnly={readOnly}
+            onExpandOrCollapseClick={() => {}}
         />
     );
 }
