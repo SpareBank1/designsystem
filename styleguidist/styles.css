@@ -1214,6 +1214,23 @@ html {
 .ffe-account-selector .ffe-base-selector__input-field::-ms-clear {
   display: none;
 }
+.ffe-account-selector .ffe-base-selector__expand-button {
+  position: absolute;
+  right: 7px;
+  margin: auto;
+  top: 13px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.ffe-account-selector .ffe-base-selector__expand-button-icon {
+  fill: #0071CD;
+  width: 17px;
+  height: 17px;
+}
+.ffe-account-selector .ffe-base-selector__expand-button-icon--invalid {
+  fill: #DA3D00;
+}
 .ffe-account-selector .ffe-base-selector__reset-button {
   position: absolute;
   right: 35px;
@@ -1225,6 +1242,7 @@ html {
   background: transparent;
   border: none;
   fill: #676767;
+  cursor: pointer;
 }
 .ffe-account-selector .ffe-base-selector__reset-button-icon {
   width: 11px;
