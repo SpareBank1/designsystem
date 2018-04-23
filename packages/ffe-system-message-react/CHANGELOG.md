@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.1.0"></a>
+# [5.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@5.0.3...@sb1/ffe-system-message-react@5.1.0) (2018-04-19)
+
+
+### Features
+
+* **ffe-system-message-react:** Added locale prop, aria-label on Close ([86072e3](https://github.com/SpareBank1/designsystem/commit/86072e3))
+
+
+
+
 <a name="5.0.3"></a>
 ## [5.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@5.0.2...@sb1/ffe-system-message-react@5.0.3) (2018-04-12)
 

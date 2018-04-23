@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="9.1.0"></a>
+# [9.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.0.6...@sb1/ffe-form@9.1.0) (2018-04-19)
+
+
+### Features
+
+* **ffe-form:** Adds a PhoneNumber component to ffe-form ([a7e15ee](https://github.com/SpareBank1/designsystem/commit/a7e15ee))
+
+
+
+
       <a name="9.0.6"></a>
 ## [9.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.0.5...@sb1/ffe-form@9.0.6) (2018-04-11)
 
@@ -11,7 +22,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-form
 
-      <a name="9.0.5"></a>
+    <a name="9.0.5"></a>
 ## [9.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.0.4...@sb1/ffe-form@9.0.5) (2018-04-10)
 
 
@@ -19,7 +30,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-form
 
-    <a name="9.0.4"></a>
+  <a name="9.0.4"></a>
 ## [9.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.0.3...@sb1/ffe-form@9.0.4) (2018-03-22)
 
 
@@ -30,7 +41,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-  <a name="9.0.3"></a>
+<a name="9.0.3"></a>
 ## [9.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.0.2...@sb1/ffe-form@9.0.3) (2018-03-13)
 
 

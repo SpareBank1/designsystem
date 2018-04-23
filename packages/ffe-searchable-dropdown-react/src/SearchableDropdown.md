@@ -1,47 +1,54 @@
-The default:
+En komponent for å kunne søke igjennom en lenger liste med valg. Listen med valg har støtte for å vise flere attributter ved et element, for eksempel bedriftnavn og organisasjonsnummer.
+
+Om du vet du har 10 valg eller færre er det bedre å bruke en vanlig [dropdown](#dropdown).
+
+Om du er ute etter en måte å vise kontoinformasjon finnes en skreddersydd [kontovelger](#kontovelger).
+
+Under vises et eksempel der vi viser ett attributt.
 
 ```jsx
 const companies = require('../exampleData').companies;
 const initialState = { inputValue: '' };
 
 <SearchableDropdown
-    dropdownList={companies}
-    placeholder="Velg"
-    noMatch="Søket ga ingen treff"
+    displayResetWhenInputHasValue={true}
     dropdownAttributes={['companyName']}
-    searchAttributes={['companyName']}
-    onSelect={company => setState({ inputValue: company.companyName })}
+    dropdownList={companies}
+    inputId="searchable-dropdown-single-attribute"
+    inputValue={state.inputValue}
+    label="Velg bedrift"
+    noMatch="Søket ga ingen treff"
     onInputChange={value => setState({ inputValue: value })}
     onReset={() => setState({ inputvalue: '' })}
-    displayResetWhenInputHasValue={true}
-    inputValue={state.inputValue}
-    inputId="default"
+    onSelect={company => setState({ inputValue: company.companyName })}
+    placeholder="Velg"
+    searchAttributes={['companyName']}
 />;
 ```
 
-With listElements of two values
+Her er hvordan det kan se ut med to attributter.
 
 ```jsx
 const companies = require('../exampleData').companiesWithMessageCount;
 const initialState = { inputValue: '' };
 
 <SearchableDropdown
-    dropdownList={companies}
-    placeholder="Velg"
-    noMatch="Søket ga ingen treff"
+    displayResetWhenInputHasValue={true}
     dropdownAttributes={['organizationName', 'organizationNumber']}
-    searchAttributes={['organizationName', 'organizationNumber']}
-    onSelect={company => setState({ inputValue: company.organizationName })}
+    dropdownList={companies}
+    inputId="searchable-dropdown-two-attributes"
+    inputValue={state.inputValue}
+    label="Velg bedrift"
+    noMatch="Søket ga ingen treff"
     onInputChange={value => setState({ inputValue: value })}
     onReset={() => setState({ inputValue: '' })}
-    displayResetWhenInputHasValue={true}
-    inputValue={state.inputValue}
-    label="Fund"
-    inputId="two values"
+    onSelect={company => setState({ inputValue: company.organizationName })}
+    placeholder="Velg"
+    searchAttributes={['organizationName', 'organizationNumber']}
 />;
 ```
 
-with custom list element missing inputId for inputField
+Du kan også bruke høyresiden av et listeelement til å vise annen informasjon, som under.
 
 ```jsx
 const companies = require('../exampleData').companiesWithMessageCount;
@@ -70,17 +77,19 @@ const renderItem = unreadLabel => company => (
 
 <SearchableDropdown
     dropdownList={companies}
-    noMatch="Søket ga ingen treff"
-    searchAttributes={['organizationName', 'organizationNumber']}
-    renderDropdownElement={renderItem('ulest')}
     inputValue={state.inputValue}
+    inputId="searchable-dropdown-custom-details"
+    label="Velg bedrift"
+    noMatch="Søket ga ingen treff"
+    onInputChange={value => setState({ inputValue: value })}
+    onReset={() => setState({ inputValue: state.selectedCompanyName })}
     onSelect={company =>
         setState({
             inputValue: company.organizationName,
             selectedCompanyName: company.organizationName,
         })
     }
-    onInputChange={value => setState({ inputValue: value })}
-    onReset={() => setState({ inputValue: state.selectedCompanyName })}
+    renderDropdownElement={renderItem('ulest')}
+    searchAttributes={['organizationName', 'organizationNumber']}
 />;
 ```

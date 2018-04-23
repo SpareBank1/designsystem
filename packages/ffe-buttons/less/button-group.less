@@ -14,12 +14,12 @@
 //
 // Styleguide ffe-buttons.button-group
 .ffe-button-group {
-    display: inline-flex;
+    display: flex;
+    flex-direction: column;
     padding: 40px 0;
 
     .ffe-button,
     .ffe-inline-button {
-        flex-direction: column;
         justify-content: center;
         margin: 0 auto 10px;
     }
@@ -42,10 +42,10 @@
     }
 
     @media screen and (min-width: @breakpoint-sm) {
+        display: inline-flex;
+        flex-direction: row;
         .ffe-button,
         .ffe-inline-button {
-            display: inline-flex;
-            flex-direction: row;
             margin: 0 0 10px 10px;
             width: auto;
 

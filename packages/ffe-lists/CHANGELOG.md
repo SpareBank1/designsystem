@@ -3,7 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-    <a name="5.0.4"></a>
+      <a name="5.0.5"></a>
+## [5.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@5.0.4...@sb1/ffe-lists@5.0.5) (2018-04-19)
+
+
+### Bug Fixes
+
+* **ffe-lists:** Reset margin to allow using `dl` ([867ebc8](https://github.com/SpareBank1/designsystem/commit/867ebc8))
+
+
+
+
+      <a name="5.0.4"></a>
 ## [5.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@5.0.3...@sb1/ffe-lists@5.0.4) (2018-04-11)
 
 
@@ -11,7 +22,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-lists
 
-    <a name="5.0.3"></a>
+  <a name="5.0.3"></a>
 ## [5.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@5.0.2...@sb1/ffe-lists@5.0.3) (2018-04-10)
 
 
@@ -19,7 +30,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-lists
 
-  <a name="5.0.2"></a>
+<a name="5.0.2"></a>
 ## [5.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@5.0.0...@sb1/ffe-lists@5.0.2) (2018-03-07)
 
 

@@ -6,12 +6,14 @@ import InputGroup from './InputGroup';
 import Label from './Label';
 import TextArea from './TextArea';
 import Tooltip from './Tooltip';
+import PhoneNumber from './PhoneNumber';
 
 export {
     ErrorFieldMessage,
     InfoFieldMessage,
     SuccessFieldMessage,
     Input,
+    PhoneNumber,
     InputGroup,
     Label,
     TextArea,

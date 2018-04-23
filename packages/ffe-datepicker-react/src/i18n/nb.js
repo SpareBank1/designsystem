@@ -46,4 +46,5 @@ export default {
     INVALID_DATE: 'Ugyldig dato',
     MIN_DATE: 'Oppgitt dato er for langt tilbake',
     MAX_DATE: 'Oppgitt dato er for langt frem',
+    CHOOSE_DATE: 'Velg dato',
 };
