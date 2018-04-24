@@ -253,10 +253,12 @@ export default class Datepicker extends Component {
     closeCalendarSetInputFocus() {
         this.removeGlobalEventListeners();
         this.setState({
-            openOnFocus: true,
-            displayDatePicker: false,
-            closeAfter: true
-        },this.dateInputRef._input.focus());
+                openOnFocus: true,
+                displayDatePicker: false,
+                closeAfter: true
+            },
+            () => this.dateInputRef._input.focus()
+        );
     }
 
     addGlobalEventListeners() {
