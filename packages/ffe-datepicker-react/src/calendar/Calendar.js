@@ -24,7 +24,7 @@ export default class Calendar extends Component {
         this.onBlur = props.onBlurHandler;
 
         this.datepickerId = `ffe-calendar-${uuid.v4()}`;
-        this.forceDateFocus = props.focusOnOpen;
+        this.forceDateFocus = props.focusOnOpen === undefined ? false : props.focusOnOpen;
 
         this.keyDown = this.keyDown.bind(this);
         this.mouseClick = this.mouseClick.bind(this);
