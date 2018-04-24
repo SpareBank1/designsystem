@@ -74,6 +74,10 @@ class BaseSelector extends Component {
         setTimeout(this.setFocus);
     }
 
+    onExpandOrCollapseClick() {
+        this.showOrHideSuggestions(!this.state.showSuggestions);
+    }
+
     showOrHideSuggestions(show, cb = () => {}) {
         const nextState = show
             ? { showSuggestions: show }
@@ -225,6 +229,7 @@ class BaseSelector extends Component {
                     id={id}
                     name={name}
                     readOnly={readOnly}
+                    onExpandOrCollapseClick={this.onExpandOrCollapseClick}
                 />
                 {showSuggestions && (
                     <SuggestionListContainer
