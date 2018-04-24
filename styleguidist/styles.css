@@ -4958,6 +4958,31 @@ input:not([type='radio']):not([type='checkbox']) {
     width: auto;
   }
 }
+.ffe-tab-button-group {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 0;
+}
+.ffe-tab-button-group--thin {
+  padding: 0;
+}
+.ffe-tab-button-group .ffe-tab-button {
+  justify-content: center;
+  margin: 0 auto 10px;
+}
+@media screen and (min-width: 480px) {
+  .ffe-tab-button-group {
+    display: inline-flex;
+    flex-direction: row;
+  }
+  .ffe-tab-button-group .ffe-tab-button {
+    margin: 0 0 10px 10px;
+    width: auto;
+  }
+  .ffe-tab-button-group .ffe-tab-button:first-child {
+    margin: 0 0 10px;
+  }
+}
 .sb1ds-sidebar__menu > .sb1ds-components-list > .sb1ds-components-list__item > .sb1ds-components-list__link--heading {
   color: #002776;
   font-family: 'MuseoSansRounded-700', arial, sans-serif;

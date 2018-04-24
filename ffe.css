@@ -5209,3 +5209,33 @@ input:not([type='radio']):not([type='checkbox']) {
     width: auto;
   }
 }
+.ffe-tab-button-group {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  padding: 40px 0;
+}
+.ffe-tab-button-group--thin {
+  padding: 0;
+}
+.ffe-tab-button-group .ffe-tab-button {
+  -ms-flex-pack: center;
+      justify-content: center;
+  margin: 0 auto 10px;
+}
+@media screen and (min-width: 480px) {
+  .ffe-tab-button-group {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+  }
+  .ffe-tab-button-group .ffe-tab-button {
+    margin: 0 0 10px 10px;
+    width: auto;
+  }
+  .ffe-tab-button-group .ffe-tab-button:first-child {
+    margin: 0 0 10px;
+  }
+}
