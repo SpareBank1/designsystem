@@ -2,7 +2,7 @@ import React from 'react';
 import { mount, shallow } from 'enzyme';
 
 import { GridRow, GridCol } from '.';
-import { VALID_BACKGROUND_COLORS } from './GridRow';
+import backgroundColors from './background-colors';
 
 const defaultProps = {
     children: <p>blah</p>,
@@ -39,7 +39,7 @@ describe('GridRow', () => {
 
     it('adds correct class for all valid background colors', () => {
         const el = renderShallow();
-        VALID_BACKGROUND_COLORS.forEach(background => {
+        backgroundColors.forEach(background => {
             el.setProps({ background });
             expect(el.hasClass(`ffe-grid__row--bg-${background}`)).toBe(true);
         });
@@ -55,7 +55,7 @@ describe('GridRow', () => {
     });
 
     it('renders coloured rows with extra wrappers', () => {
-        VALID_BACKGROUND_COLORS.forEach(background => {
+        backgroundColors.forEach(background => {
             const el = renderShallow({
                 background,
                 children: (

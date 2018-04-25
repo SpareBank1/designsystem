@@ -1,6 +1,7 @@
 import React from 'react';
 import { mount, shallow } from 'enzyme';
 import { Grid, GridRow, GridCol } from '.';
+import backgroundColors from './background-colors';
 
 const defaultProps = {
     children: <p>blah</p>,
@@ -87,6 +88,20 @@ describe('GridCol', () => {
 
         expect(el.hasClass('ffe-grid__col--top')).toBe(true);
     });
+
+    it('sets background color class if valid', () => {
+        backgroundColors.forEach(background => {
+            const el = renderShallow({ background });
+            expect(el.hasClass(`ffe-grid__col--bg-${background}`)).toBe(true);
+        });
+    });
+    it('does not set background color class if not valid', () => {
+        const illegalBackgroundColors = ['ice-cream', 'console.log("hack")', '123456'];
+        illegalBackgroundColors.forEach(background => {
+            const el = renderShallow({ background });
+            expect(el.hasClass(`ffe-grid__col--bg-${background}`)).toBe(false);
+        });
+    })
 
     it('sets all the things o/', () => {
         const el = renderShallow({

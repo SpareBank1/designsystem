@@ -63,7 +63,6 @@
     &--bg-blue-cobalt {
         background-color: @ffe-blue-cobalt;
         color: @ffe-white;
-        max-width: 100%;
 
         [class^='ffe-h'] {
             color: @ffe-white;
@@ -146,8 +145,84 @@
         }
     }
 }
+[class*='ffe-grid__col--bg-'] {
+    @media only screen and (min-width: @breakpoint-lg) {
+        position: relative;
+
+        &::before, &::after {
+            background-color: inherit;
+            bottom: 0;
+            content: '';
+            position: absolute;
+            top: 0;
+            width: (@ffe-grid-gutter-lg / 2);
+        }
+        &::before {
+            left: -(@ffe-grid-gutter-lg / 2);
+        }
+        &::after {
+            right: -(@ffe-grid-gutter-lg / 2);
+        }
+        .ffe-grid--condensed & {
+            &::before, &::after {
+                bottom: 0;
+                position: absolute;
+                top: 0;
+                width: (@ffe-condensed-grid-gutter-lg / 2);
+            }
+            &::before {
+                left: -(@ffe-condensed-grid-gutter-lg / 2);
+            }
+            &::after {
+                right: -(@ffe-condensed-grid-gutter-lg / 2);
+            }
+        }
+    }
+}
 
 .ffe-grid__col {
+    &--bg-blue-cobalt {
+        background-color: @ffe-blue-cobalt;
+        color: @ffe-white;
+
+        [class^='ffe-h'] {
+            color: @ffe-white;
+        }
+    }
+
+    &--bg-blue-ice {
+        background-color: @ffe-blue-ice;
+    }
+
+    &--bg-blue-pale {
+        background-color: @ffe-blue-pale;
+    }
+
+    &--bg-blue-royal {
+        background-color: @ffe-blue-royal;
+        color: @ffe-white;
+
+        [class^='ffe-h'] {
+            color: @ffe-white;
+        }
+    }
+
+    &--bg-purple-magenta {
+        background-color: @ffe-purple-magenta;
+    }
+
+    &--bg-green-mint {
+        background-color: @ffe-green-mint;
+    }
+
+    &--bg-sand {
+        background-color: @ffe-sand;
+    }
+
+    &--bg-grey-cloud {
+        background-color: @ffe-grey-cloud;
+    }
+
     &--reverse {
         flex-direction: column-reverse;
     }

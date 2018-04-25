@@ -49,12 +49,89 @@ const backgroundColors = [
     'purple-magenta',
     'sand',
 ];
+initialState = { selected: backgroundColors[0] };
 <Grid>
-    {backgroundColors.map((color, idx) => (
-        <GridRow key={idx} background={color}>
-            <GridCol sm="12">Litt innhold</GridCol>
-        </GridRow>
-    ))}
+    <GridRow>
+        <GridCol sm={12} lg={{ cols: 6, offset: 3 }}>
+            <p className="ffe-body-paragraph">
+                Du kan velge bakgrunnsfarge på grid-raden under her:
+            </p>
+            <select
+                className="ffe-dropdown"
+                onChange={e => setState({ selected: e.target.value })}
+                value={state.selected}
+            >
+                {backgroundColors.map(name => (
+                    <option value={name}>{name}</option>
+                ))}
+            </select>
+        </GridCol>
+    </GridRow>
+    <GridRow background={state.selected}>
+        <GridCol sm={12} lg={{ cols: 6, offset: 3 }}>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+                sed est sit amet enim pretium finibus in id nibh. In orci massa,
+                ultricies imperdiet laoreet et, rhoncus ut est.
+            </p>
+        </GridCol>
+    </GridRow>
+</Grid>;
+```
+
+En kolonne kan også ha bakgrunnsfarger. De vil da være utfallende, slik at selve innholdet vil forholde seg til griden.
+
+```js
+const backgroundColors = [
+    'blue-cobalt',
+    'blue-ice',
+    'blue-pale',
+    'blue-royal',
+    'green-mint',
+    'grey-cloud',
+    'purple-magenta',
+    'sand',
+];
+initialState = { selected: backgroundColors[0] };
+
+<Grid>
+    <GridRow>
+        <GridCol sm={12} lg={{ cols: 6, offset: 3 }}>
+            <p className="ffe-body-paragraph">
+                Du kan velge bakgrunnsfarge på grid-kolonnen under her:
+            </p>
+            <select
+                className="ffe-dropdown"
+                onChange={e => setState({ selected: e.target.value })}
+                value={state.selected}
+            >
+                {backgroundColors.map(name => (
+                    <option value={name}>{name}</option>
+                ))}
+            </select>
+        </GridCol>
+    </GridRow>
+    <GridRow>
+        <GridCol
+            sm={12}
+            lg={{ cols: 6, offset: 3 }}
+            background={state.selected}
+            noBottomPadding={true}
+        >
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+                sed est sit amet enim pretium finibus in id nibh. In orci massa,
+                ultricies imperdiet laoreet et, rhoncus ut est. Integer nec
+                magna ultricies, commodo urna ut, bibendum turpis. Curabitur nec
+                ex sed lacus bibendum sollicitudin.
+            </p>
+        </GridCol>
+    </GridRow>
+    <GridRow>
+        <GridCol sm={12} lg={{ cols: 6, offset: 3 }}>
+            Merk at innholdet både over og under er i linje med grid-et.
+        </GridCol>
+    </GridRow>
 </Grid>;
 ```
 
