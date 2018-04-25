@@ -2,15 +2,15 @@
 /* eslint jsx-a11y/role-has-required-aria-props:0 */
 import React, { Component } from 'react';
 import { func, string, bool, number } from 'prop-types';
+import autoBind from 'react-auto-bind';
 import KryssIkon from '@sb1/ffe-icons-react/lib/kryss-ikon';
+import ChevronIkon from '@sb1/ffe-icons-react/lib/chevron-ikon';
+import classNames from 'classnames';
 
 class Input extends Component {
     constructor(props) {
         super(props);
-        this.onChange = this.onChange.bind(this);
-        this.onFocus = this.onFocus.bind(this);
-        this.onBlur = this.onBlur.bind(this);
-
+        autoBind(this);
         this.state = {
             value: props.value,
             isFocused: false,
@@ -33,6 +33,16 @@ class Input extends Component {
         this.props.onBlur();
     }
 
+    onReset(e) {
+        e.preventDefault();
+        this.props.onReset();
+    }
+
+    onExpandOrCollapse(e) {
+        e.preventDefault();
+        this.props.onExpandOrCollapseClick();
+    }
+
     componentWillReceiveProps(nextProps) {
         if (!this.state.isFocused || this.state.value !== nextProps.value) {
             this.setState({ value: nextProps.value });
@@ -47,7 +57,6 @@ class Input extends Component {
             placeholder,
             isSuggestionsShowing,
             ariaInvalid,
-            onReset,
             onClick,
             inputFieldRef,
             highlightedIndex,
@@ -72,7 +81,7 @@ class Input extends Component {
                 aria-owns={suggestionListId}
             >
                 <input
-                    className="ffe-input-field ffe-dropdown ffe-base-selector__input-field"
+                    className="ffe-input-field ffe-base-selector__input-field"
                     onKeyDown={onKeyDown}
                     autoComplete="off"
                     value={this.state.value}
@@ -89,17 +98,26 @@ class Input extends Component {
                 {showReset && (
                     <button
                         className="ffe-base-selector__reset-button"
-                        onMouseDown={e => {
-                            e.preventDefault();
-                            onReset();
-                        }}
+                        onMouseDown={this.onReset}
                         tabIndex={-1}
                         type="button"
-                        aria-label="Reset"
                     >
-                        <KryssIkon className="ffe-base-selector__reset-button-icon" />
+                        <KryssIkon className="ffe-base-selector__reset-button-icon"/>
                     </button>
                 )}
+                <button
+                    className="ffe-base-selector__expand-button"
+                    onMouseDown={this.onExpandOrCollapse}
+                    tabIndex={-1}
+                    type="button"
+                >
+                    <ChevronIkon
+                        className={classNames(
+                            'ffe-base-selector__expand-button-icon ',
+                            { 'ffe-base-selector__expand-button-icon--invalid': ariaInvalid }
+                        )}
+                    />
+                </button>
             </div>
         );
     }
@@ -108,6 +126,7 @@ class Input extends Component {
 Input.propTypes = {
     onChange: func.isRequired,
     onKeyDown: func.isRequired,
+    onExpandOrCollapseClick: func.isRequired,
     value: string.isRequired,
     onReset: func.isRequired,
     isSuggestionsShowing: bool.isRequired,

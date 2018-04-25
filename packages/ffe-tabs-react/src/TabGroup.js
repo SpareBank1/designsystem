@@ -1,11 +1,26 @@
 import React from 'react';
-import { node } from 'prop-types';
+import { node, string, bool } from 'prop-types';
+import classNames from 'classnames';
 
-export default function TabGroup(props) {
-    return <div className="ffe-tab-button-group" role="group" {...props} />;
+export default function TabGroup({ className, thin, ...rest }) {
+    return (
+        <div
+            className={classNames(
+                'ffe-tab-button-group',
+                { 'ffe-tab-button-group--thin': thin },
+                className,
+            )}
+            role="group"
+            {...rest}
+        />
+    );
 }
 
 TabGroup.propTypes = {
     /** TabGroup contents - a group of Tabs */
     children: node.isRequired,
+    /** Additional css classes */
+    className: string,
+    /** Applies the thin modifier to remove margins */
+    thin: bool,
 };

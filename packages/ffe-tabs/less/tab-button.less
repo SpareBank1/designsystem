@@ -1,0 +1,62 @@
+.ffe-tab-button {
+    background-color: @ffe-white;
+    border: solid 2px @ffe-grey-silver;
+    border-radius: 100px;
+    box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.05);
+    color: @ffe-grey-charcoal;
+    cursor: pointer;
+    display: block;
+    font-family: 'MuseoSansRounded-500', arial, sans-serif;
+    font-size: 16px;
+    outline: none;
+    overflow: hidden;
+    padding: 8px 30px 7px;
+    text-align: center;
+    text-decoration: none;
+    transition: all @ffe-transition-duration @ffe-ease;
+    vertical-align: middle;
+    width: 100%;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: @ffe-blue-royal;
+        border-color: @ffe-blue-royal;
+    }
+
+    &:focus,
+    &:active {
+        box-shadow: 0 0 0 2px @ffe-blue-focus;
+        outline: 0;
+    }
+
+    &--ghost {
+        background-color: transparent;
+    }
+
+    &--selected {
+        color: @ffe-white;
+        background-color: @ffe-blue-royal;
+        border-color: @ffe-blue-royal;
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: @ffe-white;
+            border-color: @ffe-blue-royal;
+        }
+    }
+
+    &--condensed {
+        font-size: 14px;
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+}
+
+@media screen and (min-width: @breakpoint-sm) {
+    .ffe-tab-button {
+        display: inline-block;
+        width: auto;
+    }
+}

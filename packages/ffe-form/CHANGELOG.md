@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="9.1.1"></a>
+## [9.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.1.0...@sb1/ffe-form@9.1.1) (2018-04-25)
+
+
+### Bug Fixes
+
+* **ffe-form:** Chevron in dropdown now renders properly in IE10 ([8fbcc05](https://github.com/SpareBank1/designsystem/commit/8fbcc05))
+* **ffe-form:** Make file upload icons SVGs render properly in IE10 ([8d06693](https://github.com/SpareBank1/designsystem/commit/8d06693))
+
+
+
+
       <a name="9.1.0"></a>
 # [9.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.0.6...@sb1/ffe-form@9.1.0) (2018-04-19)
 
@@ -14,7 +26,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="9.0.6"></a>
+    <a name="9.0.6"></a>
 ## [9.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.0.5...@sb1/ffe-form@9.0.6) (2018-04-11)
 
 
@@ -22,7 +34,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-form
 
-    <a name="9.0.5"></a>
+  <a name="9.0.5"></a>
 ## [9.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.0.4...@sb1/ffe-form@9.0.5) (2018-04-10)
 
 
@@ -30,7 +42,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-form
 
-  <a name="9.0.4"></a>
+<a name="9.0.4"></a>
 ## [9.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.0.3...@sb1/ffe-form@9.0.4) (2018-03-22)
 
 

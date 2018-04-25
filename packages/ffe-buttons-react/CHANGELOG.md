@@ -3,6 +3,42 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="11.0.0"></a>
+# [11.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@10.1.4...@sb1/ffe-buttons-react@11.0.0) (2018-04-25)
+
+
+### Bug Fixes
+
+* **ffe-buttons-react:** Restrict isLoading prop ([946d6ba](https://github.com/SpareBank1/designsystem/commit/946d6ba))
+
+
+### BREAKING CHANGES
+
+* **ffe-buttons-react:** Removed support for `isLoading` from any button
+other than ActionButton, PrimaryButton and SecondaryButton.
+
+This commit removes support for the `isLoading` prop for all other
+buttons, meaning they will not be disabled or act any differently
+if given an `isLoading` prop of true or false.
+
+If you are using `isLoading` with any other kind of button you need
+to sit down with design/ux and either start using one of those
+three button types or figure out another way to show a loading indicator.
+
+
+
+
+      <a name="10.1.4"></a>
+## [10.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@10.1.3...@sb1/ffe-buttons-react@10.1.4) (2018-04-23)
+
+
+### Bug Fixes
+
+* **ffe-buttons-react:** Loadable shortcut-buttons ([2c2fe3d](https://github.com/SpareBank1/designsystem/commit/2c2fe3d))
+
+
+
+
     <a name="10.1.3"></a>
 ## [10.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@10.1.2...@sb1/ffe-buttons-react@10.1.3) (2018-04-11)
 
@@ -11,7 +47,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-buttons-react
 
-    <a name="10.1.2"></a>
+<a name="10.1.2"></a>
 ## [10.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@10.1.1...@sb1/ffe-buttons-react@10.1.2) (2018-04-06)
 
 
@@ -19,7 +55,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-buttons-react
 
-  <a name="10.1.1"></a>
+<a name="10.1.1"></a>
 ## [10.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@10.1.0...@sb1/ffe-buttons-react@10.1.1) (2018-03-27)
 
 

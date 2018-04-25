@@ -6,7 +6,6 @@ const marked = require('marked');
 const Handlebars = require('handlebars');
 
 const settings = require('../styleguide.content.js');
-const styleguidistSettings = require('../styleguide.config.js');
 
 const promisedMap = (arr, cb) => Promise.all(arr.map(cb));
 
@@ -96,7 +95,7 @@ Promise.all([
         getFrontpageCompiler(settings.frontpage),
         getStyleguidistCompiler(
             settings.styleguidistTemplate,
-            styleguidistSettings.template
+            settings.styleguidistDest,
         ),
         registerPartials(settings.partials),
         mkdir(settings.outputDir),

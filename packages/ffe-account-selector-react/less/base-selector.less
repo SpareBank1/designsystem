@@ -10,6 +10,27 @@
         }
     }
 
+    &__expand-button {
+        position: absolute;
+        right: 7px;
+        margin: auto;
+        top: 13px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+
+        &-icon {
+            fill: @ffe-blue-azure;
+            @size: 17px;
+            width: @size;
+            height: @size;
+        }
+
+        &-icon--invalid {
+            fill: @ffe-orange-fire;
+        }
+    }
+
     &__reset-button {
         position: absolute;
         right: 35px;
@@ -21,6 +42,7 @@
         background: transparent;
         border: none;
         fill: @ffe-grey-charcoal;
+        cursor: pointer;
 
         &-icon {
             @size : 11px;
