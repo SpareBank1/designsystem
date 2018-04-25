@@ -21,19 +21,21 @@ const BaseButton = props => {
         ...rest
     } = props;
 
-    const supportsSpinner = ['action', 'primary', 'secondary'].includes(buttonType);
+    const supportsSpinner = ['action', 'primary', 'secondary'].includes(
+        buttonType,
+    );
     return (
         <Element
-            aria-busy={isLoading}
-            aria-disabled={disabled || isLoading}
+            aria-busy={isLoading && supportsSpinner}
+            aria-disabled={disabled || (isLoading && supportsSpinner)}
             className={classNames(
                 'ffe-button',
                 `ffe-button--${buttonType}`,
                 { 'ffe-button--condensed': condensed },
-                { 'ffe-button--loading': isLoading },
+                { 'ffe-button--loading': isLoading && supportsSpinner },
                 className,
             )}
-            disabled={disabled || isLoading}
+            disabled={disabled || (isLoading && supportsSpinner)}
             ref={innerRef}
             {...rest}
         >
@@ -48,13 +50,13 @@ const BaseButton = props => {
                         className: 'ffe-button__icon ffe-button__icon--right',
                     })}
             </span>
-            {supportsSpinner &&
+            {supportsSpinner && (
                 <div
                     aria-hidden={!isLoading}
                     aria-label={ariaLoadingMessage}
                     className="ffe-button__spinner"
                 />
-            }
+            )}
         </Element>
     );
 };
@@ -66,13 +68,7 @@ BaseButton.propTypes = {
      * Enum of supported prop types. Used internally only.
      * @ignore
      */
-    buttonType: oneOf([
-        'action',
-        'primary',
-        'secondary',
-        'shortcut',
-        'task',
-    ]),
+    buttonType: oneOf(['action', 'primary', 'secondary', 'shortcut', 'task']),
     /** The button label */
     children: node,
     /** Extra class names */
@@ -96,7 +92,6 @@ BaseButton.propTypes = {
 BaseButton.defaultProps = {
     ariaLoadingMessage: 'Vennligst vent',
     element: 'button',
-
 };
 
 export default BaseButton;

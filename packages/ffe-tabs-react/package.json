@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-tabs-react",
-  "version": "2.0.3",
+  "version": "2.1.0",
   "license": "MIT",
   "author": "SpareBank 1",
   "files": [
@@ -33,7 +33,7 @@
   },
   "peerDependencies": {
     "@sb1/ffe-core": "^12.0.0",
-    "@sb1/ffe-tabs": "^4.0.0",
+    "@sb1/ffe-tabs": "^4.1.0",
     "react": "^16.2.0"
   },
   "publishConfig": {
