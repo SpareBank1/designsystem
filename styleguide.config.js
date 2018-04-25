@@ -19,7 +19,7 @@ const PACKAGES_WITH_DEFAULT_EXPORT = [
 ];
 
 module.exports = {
-    title: 'FFE',
+    title: 'SpareBank 1 Designsystem',
     require: [
         'babel-polyfill',
         path.join(__dirname, 'packages/ffe-all.less'),
