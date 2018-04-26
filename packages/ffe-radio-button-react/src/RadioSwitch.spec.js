@@ -5,7 +5,7 @@ import RadioSwitch from './RadioSwitch';
 
 const defaultProps = {
     leftLabel: 'Ja',
-    leftValue: 'ja',
+    leftValue: true,
     name: 'choice',
     rightLabel: 'Nei',
     rightValue: 'nei',
