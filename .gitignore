@@ -13,6 +13,7 @@ src/styleguidist.html
 # Editors
 .idea/
 .vscode/
+*.iml
 
 # OS
 .DS_Store
