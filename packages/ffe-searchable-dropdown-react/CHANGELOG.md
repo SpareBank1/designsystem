@@ -3,7 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-      <a name="5.0.6"></a>
+    <a name="6.0.0"></a>
+# [6.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@5.0.6...@sb1/ffe-searchable-dropdown-react@6.0.0) (2018-04-25)
+
+
+### Chores
+
+* **ffe-searchable-dropdown-react:** Remove unused mixin ([da0a8b9](https://github.com/SpareBank1/designsystem/commit/da0a8b9))
+
+
+### BREAKING CHANGES
+
+* **ffe-searchable-dropdown-react:** Removed the `ffe-chevron-icon-with-color` mixin
+
+If you need it, use the identical mixin provided in `@sb1/ffe-form`.
+
+
+
+
+    <a name="5.0.6"></a>
 ## [5.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@5.0.5...@sb1/ffe-searchable-dropdown-react@5.0.6) (2018-04-11)
 
 
@@ -11,7 +29,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react
 
-      <a name="5.0.5"></a>
+  <a name="5.0.5"></a>
 ## [5.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@5.0.4...@sb1/ffe-searchable-dropdown-react@5.0.5) (2018-04-06)
 
 
@@ -19,7 +37,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react
 
-    <a name="5.0.4"></a>
+<a name="5.0.4"></a>
 ## [5.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@5.0.3...@sb1/ffe-searchable-dropdown-react@5.0.4) (2018-03-27)
 
 
