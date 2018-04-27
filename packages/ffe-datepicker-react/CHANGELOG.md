@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.1.3"></a>
+## [3.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@3.1.2...@sb1/ffe-datepicker-react@3.1.3) (2018-04-27)
+
+
+### Bug Fixes
+
+* **ffe-datepicker-react:** fixed issues with focus, tab navigation, k… ([#196](https://github.com/SpareBank1/designsystem/issues/196)) ([31c28f6](https://github.com/SpareBank1/designsystem/commit/31c28f6))
+
+
+
+
 <a name="3.1.2"></a>
 ## [3.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@3.1.1...@sb1/ffe-datepicker-react@3.1.2) (2018-04-25)
 
