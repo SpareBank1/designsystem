@@ -1222,10 +1222,12 @@ html {
   display: none;
 }
 .ffe-account-selector .ffe-base-selector__expand-button {
+  height: 23px;
+  width: 23px;
   position: absolute;
-  right: 7px;
-  margin: auto;
-  top: 13px;
+  padding: 3px;
+  top: 11px;
+  right: 10px;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -1239,13 +1241,12 @@ html {
   fill: #DA3D00;
 }
 .ffe-account-selector .ffe-base-selector__reset-button {
+  height: 23px;
+  width: 23px;
+  padding: 3px;
   position: absolute;
+  top: 10px;
   right: 35px;
-  padding-right: 6px;
-  padding-left: 6px;
-  margin: auto;
-  top: 0;
-  bottom: 0;
   background: transparent;
   border: none;
   fill: #676767;
