@@ -1,4 +1,4 @@
-Radiobrytere brukes når brukeren skal gjøre et binært valg - typisk i formen 
+Radiobrytere brukes når brukeren skal gjøre et binært valg - typisk i formen
 "ja eller nei", eller "av eller på".
 
 ```js
@@ -6,7 +6,7 @@ const { RadioButtonInputGroup } = require('.');
 
 initialState = { selected: undefined };
 
-<RadioButtonInputGroup 
+<RadioButtonInputGroup
     label="Vil bilen bli kjørt av sjåfører under 23 år?"
     tooltip="Unge sjåfører har en statistisk høyere sjanse for å bulke bilen."
     name="under23"
@@ -14,7 +14,7 @@ initialState = { selected: undefined };
     selectedValue={state.selected}
 >
     {inputProps => (
-        <RadioSwitch 
+        <RadioSwitch
             leftLabel="Ja"
             leftValue="true"
             rightLabel="Nei"
