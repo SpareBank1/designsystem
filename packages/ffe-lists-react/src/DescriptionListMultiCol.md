@@ -8,8 +8,10 @@ Dette er en liste der hvert punkt består av en betegnelse og en eller flere bes
         <dd>Navn Navnesen</dd>
         <dt>Adresse</dt>
         <dd>Husgata 14</dd>
-        <dt>Postnummer og sted</dt>
-        <dd>1337 Sandvika</dd>
+        <dt>Postnummer</dt>
+        <dd>0362</dd>
+        <dt>Adresse</dt>
+        <dd>Oslo</dd>
     </DescriptionListMultiCol>
 </div>
 ```
