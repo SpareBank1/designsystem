@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.1.0"></a>
+# [3.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-radio-button-react@3.0.6...@sb1/ffe-radio-button-react@3.1.0) (2018-04-27)
+
+
+### Features
+
+* **ffe-radio-button-react:** value can be boolean ([39d452a](https://github.com/SpareBank1/designsystem/commit/39d452a))
+
+
+
+
 <a name="3.0.6"></a>
 ## [3.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-radio-button-react@3.0.5...@sb1/ffe-radio-button-react@3.0.6) (2018-04-19)
 
