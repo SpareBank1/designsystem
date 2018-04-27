@@ -3,7 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-    <a name="9.1.0"></a>
+       <a name="9.1.1"></a>
+## [9.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@9.1.0...@sb1/ffe-account-selector-react@9.1.1) (2018-04-27)
+
+
+### Bug Fixes
+
+* **ffe-account-selector-react:** Fixes reset and expand button spacing ([e71e3e9](https://github.com/SpareBank1/designsystem/commit/e71e3e9))
+
+
+
+
+       <a name="9.1.0"></a>
 # [9.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@9.0.9...@sb1/ffe-account-selector-react@9.1.0) (2018-04-23)
 
 
@@ -14,7 +25,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-    <a name="9.0.9"></a>
+   <a name="9.0.9"></a>
 ## [9.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@9.0.8...@sb1/ffe-account-selector-react@9.0.9) (2018-04-18)
 
 
@@ -25,7 +36,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-  <a name="9.0.8"></a>
+ <a name="9.0.8"></a>
 ## [9.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@9.0.7...@sb1/ffe-account-selector-react@9.0.8) (2018-04-11)
 
 
@@ -33,7 +44,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
 
- <a name="9.0.7"></a>
+<a name="9.0.7"></a>
 ## [9.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@9.0.6...@sb1/ffe-account-selector-react@9.0.7) (2018-04-09)
 
 
