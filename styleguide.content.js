@@ -10,8 +10,9 @@ module.exports = {
         sectionsToc: 'src/templates/sectionsToc.hbs',
     },
     styleguidistTemplate: 'src/templates/styleguidist.hbs',
+    styleguidistDest: 'src/styleguidist.html',
     context: {
-        title: 'FFE',
+        title: 'SpareBank 1 Designsystem',
     },
     sections: [
         {

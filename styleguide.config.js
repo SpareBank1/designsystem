@@ -1,5 +1,8 @@
+const fs = require('fs');
 const path = require('path');
-const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
+
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const MiniHtmlWebpackPlugin = require('mini-html-webpack-plugin');
 
 const components = require('./styleguide.components');
 
@@ -16,7 +19,7 @@ const PACKAGES_WITH_DEFAULT_EXPORT = [
 ];
 
 module.exports = {
-    title: 'FFE',
+    title: 'SpareBank 1 Designsystem',
     require: [
         'babel-polyfill',
         path.join(__dirname, 'packages/ffe-all.less'),
@@ -72,38 +75,45 @@ module.exports = {
                 },
                 {
                     test: /\.css$/,
-                    use: PRODUCTION ?
-                        ExtractTextWebpackPlugin.extract({
-                            fallback: 'style-loader',
-                            use: ['css-loader?url=false'],
-                        }) :
-                        ['style-loader', 'css-loader?url=false'],
+                    use: PRODUCTION
+                        ? [MiniCssExtractPlugin.loader, 'css-loader?url=false','postcss-loader']
+                        : ['style-loader', 'css-loader?url=false', 'postcss-loader'],
                     exclude: /node_modules/,
                 },
                 {
                     test: /\.less$/,
-                    use: PRODUCTION ?
-                        ExtractTextWebpackPlugin.extract({
-                            fallback: 'style-loader',
-                            use: [
-                                { loader: 'css-loader' },
-                                { loader: 'less-loader' },
-                            ],
-                        }) :
-                        [
-                            { loader: 'style-loader' },
-                            { loader: 'css-loader' },
-                            { loader: 'less-loader' },
-                        ],
+                    use: PRODUCTION
+                        ? [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'less-loader']
+                        : ['style-loader', 'css-loader', 'postcss-loader', 'less-loader'],
                     exclude: /node_modules/,
                 },
             ],
         },
         plugins: [
-            new ExtractTextWebpackPlugin('styles.css'),
+            new MiniCssExtractPlugin({
+                filename: 'styles.css',
+            })
         ],
     },
-    template: 'src/styleguidist.html',
+    template: ({ css, js, publicPath, title }) => {
+        const template = fs.readFileSync(
+            path.join(__dirname, 'src', 'styleguidist.html'),
+            'utf-8'
+        );
+        return template
+            .replace(
+                '<!-- MiniHtmlWebpackPlugin:Title -->',
+                `<title>${title}</title>`
+            )
+            .replace(
+                '<!-- MiniHtmlWebpackPlugin:CSS -->',
+                MiniHtmlWebpackPlugin.generateCSSReferences(css, publicPath)
+            )
+            .replace(
+                '<!-- MiniHtmlWebpackPlugin:JS -->',
+                MiniHtmlWebpackPlugin.generateJSReferences(js, publicPath)
+            );
+    },
     sections: [
         {
             name: 'Knapper',

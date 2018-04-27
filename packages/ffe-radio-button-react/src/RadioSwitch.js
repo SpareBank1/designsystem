@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { string } from 'prop-types';
+import { bool, oneOfType, string } from 'prop-types';
 import classNames from 'classnames';
 
 import BaseRadioButton from './BaseRadioButton';
@@ -40,11 +40,11 @@ RadioSwitch.propTypes = {
     /** The label of the choice to the left */
     leftLabel: string.isRequired,
     /** The value of the choice to the left */
-    leftValue: string.isRequired,
+    leftValue: oneOfType([bool, string]).isRequired,
     /** The label of the choice to the right */
     rightLabel: string.isRequired,
     /** The value of the choice to the right */
-    rightValue: string.isRequired,
+    rightValue: oneOfType([bool, string]).isRequired,
 };
 
 export default RadioSwitch;

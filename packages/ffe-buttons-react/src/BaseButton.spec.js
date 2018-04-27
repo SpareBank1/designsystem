@@ -51,17 +51,36 @@ describe('<BaseButton />', () => {
 
     describe('when loading', () => {
         it('sets the correct class', () => {
-            const wrapper = getWrapper({ isLoading: true });
+            const wrapper = getWrapper({
+                buttonType: 'primary',
+                isLoading: true,
+            });
             expect(wrapper.hasClass('ffe-button--loading')).toBe(true);
         });
         it('sets the correct aria tags', () => {
-            const wrapper = getWrapper({ isLoading: true });
+            const wrapper = getWrapper({
+                buttonType: 'primary',
+                isLoading: true,
+            });
             expect(wrapper.prop('aria-busy')).toBe(true);
         });
         it('disables the button', () => {
-            const wrapper = getWrapper({ isLoading: true });
+            const wrapper = getWrapper({
+                buttonType: 'primary',
+                isLoading: true,
+            });
             expect(wrapper.prop('aria-disabled')).toBe(true);
             expect(wrapper.prop('disabled')).toBe(true);
+        });
+        it('does nothing for unsupported button type', () => {
+            const wrapper = getWrapper({
+                buttonType: 'shortcut',
+                isLoading: true,
+            });
+            expect(wrapper.hasClass('ffe-button--loading')).toBe(false);
+            expect(wrapper.prop('aria-busy')).toBe(false);
+            expect(wrapper.prop('aria-disabled')).toBe(false);
+            expect(wrapper.prop('disabled')).toBe(false);
         });
     });
 });

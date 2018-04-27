@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { func, string } from 'prop-types';
+import { bool, func, string } from 'prop-types';
 import uuid from 'uuid';
 import ActiveDate from './ActiveDate';
 import LeadDate from './LeadDate';
@@ -24,13 +24,14 @@ export default class Calendar extends Component {
         this.onBlur = props.onBlurHandler;
 
         this.datepickerId = `ffe-calendar-${uuid.v4()}`;
-        this.forceDateFocus = false;
+        this.forceDateFocus = props.focusOnOpen;
 
         this.keyDown = this.keyDown.bind(this);
         this.mouseClick = this.mouseClick.bind(this);
         this.nextMonth = this.nextMonth.bind(this);
         this.previousMonth = this.previousMonth.bind(this);
         this.focusHandler = this.focusHandler.bind(this);
+        this.wrapperBlurHandler = this.wrapperBlurHandler.bind(this);
 
         this.renderDate = this.renderDate.bind(this);
         this.renderWeek = this.renderWeek.bind(this);
@@ -69,6 +70,7 @@ export default class Calendar extends Component {
         ];
         if (scrollableEvents.includes(event.which)) {
             event.preventDefault();
+            this.forceDateFocus = true;
         }
 
         switch (event.which) {
@@ -134,8 +136,14 @@ export default class Calendar extends Component {
         }
     }
 
-    focusHandler() {
-        this.forceDateFocus = true;
+    focusHandler(evt) {
+        if(this._wrapper && this._wrapper.contains(evt.target)){
+            this.forceDateFocus = true;
+        }
+    }
+
+    wrapperBlurHandler(){
+            this.forceDateFocus = false;
     }
 
     nextMonth(evt) {
@@ -193,13 +201,14 @@ export default class Calendar extends Component {
         /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
         return (
             <div
-                aria-labelledby={`${this.datepickerId}-title`}
-                className={this.props.calendarClassName || 'ffe-calendar'}
-                onFocus={this.focusHandler}
-                role="region"
                 ref={c => {
                     this._wrapper = c;
                 }}
+                aria-labelledby={`${this.datepickerId}-title`}
+                className={this.props.calendarClassName || 'ffe-calendar'}
+                onFocus={this.focusHandler}
+                onBlur={this.wrapperBlurHandler}
+                role="region"
             >
                 <Header
                     datepickerId={this.datepickerId}
@@ -231,9 +240,14 @@ export default class Calendar extends Component {
     }
 }
 
+Calendar.defaultProps = {
+    focusOnOpen: false
+};
+
 Calendar.propTypes = {
     calendarClassName: string,
     escKeyHandler: func,
+    focusOnOpen: bool,
     language: string.isRequired,
     maxDate: string,
     minDate: string,

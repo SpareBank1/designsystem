@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.1.0"></a>
+# [4.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@4.0.4...@sb1/ffe-tabs@4.1.0) (2018-04-24)
+
+
+### Features
+
+* **ffe-tabs:** new class ffe-tab-button-group ([c296198](https://github.com/SpareBank1/designsystem/commit/c296198)), closes [#201](https://github.com/SpareBank1/designsystem/issues/201)
+
+
+
+
 <a name="4.0.4"></a>
 ## [4.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@4.0.3...@sb1/ffe-tabs@4.0.4) (2018-04-11)
 

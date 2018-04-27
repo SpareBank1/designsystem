@@ -450,6 +450,36 @@ describe('<Datepicker />', () => {
         });
     });
 
+    describe('validate correct focus changes of Calendar on focus and blur events', () => {
+
+        const openCalendar = wrapper => {
+            const input = wrapper.find('input');
+            input.simulate('click');
+        };
+
+        it('calendar should set calendar forceDateFocus to false when bluring',() =>{
+            const wrapper = getMountedWrapper({
+                value: '01.06.2016',
+                minDate: '01.01.2016',
+                maxDate: '31.12.2016',
+                focusOnCalendarOpen: true
+            });
+
+            expect(wrapper.props().focusOnCalendarOpen).toBe(true);
+
+            openCalendar(wrapper);
+            const calendar = wrapper.find(Calendar);
+            const calInstance = wrapper.instance().datepickerCalendar;
+            calendar.simulate('focus');
+            expect(calInstance.forceDateFocus).toBe(true);
+            calendar.simulate('blur');
+
+            expect(calInstance.forceDateFocus).toBe(false);
+            expect(calendar.props().focusOnOpen).toBe(false);
+        })
+
+    });
+
     describe('validate correct visibility of Calendar on DateInput key press', () => {
         const openCalendar = wrapper => {
             const input = wrapper.find('input');

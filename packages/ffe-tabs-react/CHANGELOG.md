@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.1.0"></a>
+# [2.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@2.0.3...@sb1/ffe-tabs-react@2.1.0) (2018-04-24)
+
+
+### Features
+
+* **ffe-tabs-react:** add props thin and className to TabGroup ([5c9b486](https://github.com/SpareBank1/designsystem/commit/5c9b486))
+
+
+
+
 <a name="2.0.3"></a>
 ## [2.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@2.0.2...@sb1/ffe-tabs-react@2.0.3) (2018-03-27)
 

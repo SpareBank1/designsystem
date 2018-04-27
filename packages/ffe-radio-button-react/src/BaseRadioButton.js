@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import classNames from 'classnames';
-import { bool, node, oneOf, shape, string } from 'prop-types';
+import { bool, node, oneOf, oneOfType, shape, string } from 'prop-types';
 import uuid from 'uuid';
 
 import { Tooltip } from '@sb1/ffe-form-react';
@@ -73,13 +73,13 @@ BaseRadioButton.propTypes = {
     /** The name of the radio button */
     name: string.isRequired,
     /** The selected value of the radio button set */
-    selectedValue: string,
+    selectedValue: oneOfType([bool, string]),
     /** Tooltip providing further detail about the choice */
     tooltip: string,
     /** Additional props passed to the Tooltip component */
     tooltipProps: shape({}),
     /** The value of the radio button */
-    value: string.isRequired,
+    value: oneOfType([bool, string]).isRequired,
 };
 
 export default BaseRadioButton;
