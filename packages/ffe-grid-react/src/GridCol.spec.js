@@ -95,13 +95,14 @@ describe('GridCol', () => {
             expect(el.hasClass(`ffe-grid__col--bg-${background}`)).toBe(true);
         });
     });
+
     it('does not set background color class if not valid', () => {
-        const illegalBackgroundColors = ['ice-cream', 'console.log("hack")', '123456'];
+        const illegalBackgroundColors = ['ice-cream', 'log("hack")', '123456'];
         illegalBackgroundColors.forEach(background => {
             const el = renderShallow({ background });
             expect(el.hasClass(`ffe-grid__col--bg-${background}`)).toBe(false);
         });
-    })
+    });
 
     it('sets all the things o/', () => {
         const el = renderShallow({
