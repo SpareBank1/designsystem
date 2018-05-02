@@ -88,7 +88,7 @@ RadioButtonInputGroup.propTypes = {
     /** Change handler, receives value of selected radio button */
     onChange: func,
     /** The currently selected value */
-    selectedValue: string,
+    selectedValue: oneOfType([bool, string]),
     /**
      * String or Tooltip component with further detail about the radio button
      * set
