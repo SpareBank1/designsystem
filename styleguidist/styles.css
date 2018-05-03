@@ -6910,13 +6910,10 @@ input:not([type='radio']):not([type='checkbox']) {
     height: 160px;
   }
 }
-.sb1ds-intro__heading,
-.sb1ds-intro__paragraph {
-  background: #005AA4;
-}
 @media screen and (min-width: 1024px) {
   .sb1ds-intro__heading,
   .sb1ds-intro__paragraph {
+    background: #005AA4;
     color: #FFF;
   }
 }
@@ -6982,11 +6979,9 @@ input:not([type='radio']):not([type='checkbox']) {
 .sb1ds-section-static a--no-underline {
   border-bottom: none;
 }
-.sb1ds-section-static__h1 {
-  background: #005AA4;
-}
 @media screen and (min-width: 1024px) {
   .sb1ds-section-static__h1 {
+    background: #005AA4;
     color: #FFF;
   }
 }
