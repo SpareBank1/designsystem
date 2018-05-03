@@ -5,12 +5,12 @@ const { BilIkon, HusIkon } = require('@sb1/ffe-icons-react');
 
 <div>
     <ProductCard
-        icon={<BilIkon fill="#002776" />}
+        icon={<BilIkon className="sb1ds-icon-color" />}
         heading="Bilforsikring"
         details="Fullkasko"
     />
     <ProductCard
-        icon={<HusIkon fill="#002776" />}
+        icon={<HusIkon className="sb1ds-icon-color" />}
         heading="Husforsikring"
     />
 </div>
@@ -23,13 +23,13 @@ const { BilIkon, HusIkon } = require('@sb1/ffe-icons-react');
 
 <div>
     <ProductCard
-        icon={<BilIkon fill="#002776" />}
+        icon={<BilIkon className="sb1ds-icon-color" />}
         heading="Bilforsikring"
         details="Fullkasko"
         status="Nye vilkår"
     />
     <ProductCard
-        icon={<HusIkon fill="#002776" />}
+        icon={<HusIkon className="sb1ds-icon-color" />}
         heading="Husforsikring"
         status="Fornyelse"
     />
