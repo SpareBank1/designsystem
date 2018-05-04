@@ -1514,7 +1514,7 @@ html {
       align-items: center;
   display: -ms-flexbox;
   display: flex;
-  transition: all 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: transform 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 .ffe-button--loading .ffe-button__label,
 .ffe-header__logout-button--loading .ffe-header__logout-button-label {
