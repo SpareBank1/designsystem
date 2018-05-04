@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="9.1.4"></a>
+## [9.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.1.3...@sb1/ffe-form@9.1.4) (2018-05-04)
+
+
+### Bug Fixes
+
+* **ffe-form:** Change design of radio switch active state ([f753319](https://github.com/SpareBank1/designsystem/commit/f753319))
+
+
+
+
       <a name="9.1.3"></a>
 ## [9.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.1.2...@sb1/ffe-form@9.1.3) (2018-05-04)
 
@@ -14,7 +25,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="9.1.2"></a>
+    <a name="9.1.2"></a>
 ## [9.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.1.1...@sb1/ffe-form@9.1.2) (2018-05-03)
 
 
@@ -22,7 +33,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-form
 
-    <a name="9.1.1"></a>
+  <a name="9.1.1"></a>
 ## [9.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.1.0...@sb1/ffe-form@9.1.1) (2018-04-25)
 
 
@@ -34,7 +45,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-  <a name="9.1.0"></a>
+<a name="9.1.0"></a>
 # [9.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.0.6...@sb1/ffe-form@9.1.0) (2018-04-19)
 
 
