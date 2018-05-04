@@ -4,6 +4,7 @@
 const fs = require('fs');
 const path = require('path');
 const svgstore = require('svgstore');
+const mkdirp = require('mkdirp');
 
 const ICONS_PATH = path.join(__dirname, '..', 'icons');
 
@@ -55,6 +56,8 @@ if (options.projectIcons) {
             sprite.add(iconName, fs.readFileSync(iconPath), 'utf-8');
         });
 }
+
+mkdirp.sync(options.dest);
 
 fs.writeFileSync(
     path.join(options.dest, 'ffe-icons.svg'),
