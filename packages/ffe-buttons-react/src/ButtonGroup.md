@@ -118,7 +118,7 @@ Det finnes også en inline variant.
             Lenke
         </TertiaryButton>
     </ButtonGroup>
-    <ButtonGroup thin={true}>
+    <ButtonGroup inline={true}>
         <PrimaryButton>
             Neste
         </PrimaryButton>
