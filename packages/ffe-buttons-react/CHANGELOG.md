@@ -3,7 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-      <a name="11.0.0"></a>
+      <a name="11.1.1"></a>
+## [11.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@11.1.0...@sb1/ffe-buttons-react@11.1.1) (2018-05-04)
+
+
+
+
+**Note:** Version bump only for package @sb1/ffe-buttons-react
+
+      <a name="11.1.0"></a>
+# [11.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@11.0.0...@sb1/ffe-buttons-react@11.1.0) (2018-04-30)
+
+
+### Features
+
+* **ffe-buttons-react:** add inline prop to ButtonGroup ([386670c](https://github.com/SpareBank1/designsystem/commit/386670c)), closes [#213](https://github.com/SpareBank1/designsystem/issues/213)
+
+
+
+
+  <a name="11.0.0"></a>
 # [11.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@10.1.4...@sb1/ffe-buttons-react@11.0.0) (2018-04-25)
 
 
@@ -28,7 +47,7 @@ three button types or figure out another way to show a loading indicator.
 
 
 
-      <a name="10.1.4"></a>
+<a name="10.1.4"></a>
 ## [10.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@10.1.3...@sb1/ffe-buttons-react@10.1.4) (2018-04-23)
 
 
@@ -39,7 +58,7 @@ three button types or figure out another way to show a loading indicator.
 
 
 
-    <a name="10.1.3"></a>
+<a name="10.1.3"></a>
 ## [10.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@10.1.2...@sb1/ffe-buttons-react@10.1.3) (2018-04-11)
 
 

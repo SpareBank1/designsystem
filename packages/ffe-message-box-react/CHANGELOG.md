@@ -3,7 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
- <a name="5.0.0"></a>
+       <a name="5.0.1"></a>
+## [5.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@5.0.0...@sb1/ffe-message-box-react@5.0.1) (2018-05-04)
+
+
+
+
+**Note:** Version bump only for package @sb1/ffe-message-box-react
+
+       <a name="5.0.0"></a>
 # [5.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@4.0.6...@sb1/ffe-message-box-react@5.0.0) (2018-04-20)
 
 
@@ -20,7 +28,7 @@ major version of ffe-message-box.
 
 
 
- <a name="4.0.6"></a>
+<a name="4.0.6"></a>
 ## [4.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@4.0.5...@sb1/ffe-message-box-react@4.0.6) (2018-04-11)
 
 

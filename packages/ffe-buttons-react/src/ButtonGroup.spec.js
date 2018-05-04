@@ -29,6 +29,13 @@ describe('<ButtonGroup />', () => {
         expect(wrapper.hasClass('ffe-button-group--thin')).toBe(true);
     });
 
+    it('applies the --inline modifier if inline is true', () => {
+        const wrapper = getWrapper({
+            inline: true,
+        });
+        expect(wrapper.hasClass('ffe-button-group--inline')).toBe(true);
+    });
+
     it('applies the given className prop', () => {
         const wrapper = getWrapper({
             className: 'my-class',
