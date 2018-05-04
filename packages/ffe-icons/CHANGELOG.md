@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="12.0.1"></a>
+## [12.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.0.0...@sb1/ffe-icons@12.0.1) (2018-05-04)
+
+
+
+
+**Note:** Version bump only for package @sb1/ffe-icons
+
       <a name="12.0.0"></a>
 # [12.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@11.0.1...@sb1/ffe-icons@12.0.0) (2018-04-11)
 
@@ -37,7 +45,7 @@ you want to preserve the current folder structure you have to add
 {
 -   "dest": "dist/assets/",
 +   "dest": "dist/assets/symbol/",
-  "icons": ["*"]
+"icons": ["*"]
 }
 ```
 
@@ -48,7 +56,7 @@ time and disk usage from this change.
 
 
 
-      <a name="11.0.1"></a>
+    <a name="11.0.1"></a>
 ## [11.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@11.0.0...@sb1/ffe-icons@11.0.1) (2018-04-06)
 
 
@@ -56,7 +64,7 @@ time and disk usage from this change.
 
 **Note:** Version bump only for package @sb1/ffe-icons
 
-    <a name="11.0.0"></a>
+  <a name="11.0.0"></a>
 # [11.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@10.1.0...@sb1/ffe-icons@11.0.0) (2018-03-13)
 
 
@@ -77,7 +85,7 @@ how to migrate.
 
 
 
-  <a name="10.1.0"></a>
+<a name="10.1.0"></a>
 # [10.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@10.0.0...@sb1/ffe-icons@10.1.0) (2018-03-07)
 
 
