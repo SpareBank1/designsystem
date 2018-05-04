@@ -491,7 +491,7 @@ html {
   color: #002776;
   font-family: 'MuseoSansRounded-700', arial, sans-serif;
   font-weight: normal;
-  line-height: 26px;
+  line-height: 28px;
   font-size: 18px;
 }
 @media screen and (min-width: 480px) {
@@ -1944,7 +1944,7 @@ html {
     height: 366px;
     width: 280px;
     text-align: center;
-    padding: 40px 10px;
+    padding: 40px 15px;
   }
   .ffe-link-card--medium > .ffe-link-card__status,
   .ffe-link-card--large > .ffe-link-card__status {
@@ -2828,8 +2828,8 @@ html {
   border-color: rgba(68, 192, 255, 0.5);
 }
 .ffe-radio-input:checked + .ffe-radio-switch::before {
-  background-color: #FFF;
-  border: 7px solid #0071CD;
+  border: 5px solid #FFF;
+  background: #0071CD;
 }
 .ffe-radio-block {
   margin-top: 20px;
@@ -5307,7 +5307,7 @@ input:not([type='radio']):not([type='checkbox']) {
   color: #002776;
   font-family: 'MuseoSansRounded-700', arial, sans-serif;
   font-weight: normal;
-  line-height: 26px;
+  line-height: 28px;
   font-size: 18px;
 }
 @media screen and (min-width: 480px) {
@@ -5777,6 +5777,9 @@ input:not([type='radio']):not([type='checkbox']) {
   fill: #002776;
   height: 80px;
   width: 80px;
+}
+.sb1ds-icon-color {
+  fill: #002776;
 }
 .sb1ds-example {
   width: 100%;
