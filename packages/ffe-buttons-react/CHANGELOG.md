@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="11.1.2"></a>
+## [11.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@11.1.1...@sb1/ffe-buttons-react@11.1.2) (2018-05-04)
+
+
+### Bug Fixes
+
+* **ffe-buttons-react:** Add space for inline expand button icon ([30234e2](https://github.com/SpareBank1/designsystem/commit/30234e2))
+* **ffe-buttons-react:** fix using wrong property in docs ([3ab38aa](https://github.com/SpareBank1/designsystem/commit/3ab38aa))
+
+
+
+
       <a name="11.1.1"></a>
 ## [11.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@11.1.0...@sb1/ffe-buttons-react@11.1.1) (2018-05-04)
 
@@ -11,7 +23,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-buttons-react
 
-      <a name="11.1.0"></a>
+    <a name="11.1.0"></a>
 # [11.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@11.0.0...@sb1/ffe-buttons-react@11.1.0) (2018-04-30)
 
 
@@ -22,7 +34,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-  <a name="11.0.0"></a>
+<a name="11.0.0"></a>
 # [11.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@10.1.4...@sb1/ffe-buttons-react@11.0.0) (2018-04-25)
 
 

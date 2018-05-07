@@ -13,7 +13,7 @@ const InlineExpandButton = (props) => {
     return (
         <InlineButton
             buttonType="expand"
-            rightIcon={<ChevronIkon style={{ transform: isExpanded ? 'rotateX(180deg)' : 'none' }} />}
+            rightIcon={<ChevronIkon style={{ marginLeft: '5px', transform: isExpanded ? 'rotateX(180deg)' : 'none' }} />}
             {...rest}
         />
     );

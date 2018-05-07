@@ -14,20 +14,6 @@ initialState = { isExpanded: false };
         onClick={() => setState({ isExpanded1: !state.isExpanded1 })}
     >
         Vis mer
-    </ExpandButton><br />
-    <ExpandButton
-        isExpanded={state.isExpanded2}
-        onClick={() => setState({ isExpanded2: !state.isExpanded2 })}
-        leftIcon={<BlyantIkon />}
-    >
-        Endre
-    </ExpandButton><br />
-    <ExpandButton
-        isExpanded={state.isExpanded3}
-        onClick={() => setState({ isExpanded3: !state.isExpanded3 })}
-        rightIcon={<ForstorrelsesglassIkon />}
-    >
-        Enhance
     </ExpandButton>
 </div>
 ```
