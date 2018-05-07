@@ -169,6 +169,10 @@ Aligns the content of a cell to the right
 
 Aligns the content of a cell to the top
 
+##### `.ffe-grid__col--top-padding`
+
+Adds top-padding to the column. Useful for when you have background colored columns
+
 ##### `.ffe-grid__col--middle`
 
 Aligns the content of a cell to the vertical middle
