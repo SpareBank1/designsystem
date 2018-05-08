@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>KSS Style Guide</title>
+
+  <meta name="description" content="">
+  <meta name="generator" content="kss-node">
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="stylesheet" href="kss-assets/kss.css">
+  <link rel="stylesheet" href="../ffe.css">
+
+</head>
+<body id="kss-node" >
+
+<div class="kss-sidebar kss-style">
+  <header class="kss-header">
+    <h1 class="kss-doc-title">KSS Style Guide</h1>
+  </header>
+  <nav class="kss-nav">
+    <ul class="kss-nav__menu">
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="./">
+          <span class="kss-nav__ref">0</span
+          ><span class="kss-nav__name">Overview</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-ffe-accordion.html">
+          <span class="kss-nav__ref">1</span><span class="kss-nav__name">ffe-accordion</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-ffe-buttons.html">
+          <span class="kss-nav__ref">2</span><span class="kss-nav__name">ffe-buttons</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-ffe-cards.html">
+          <span class="kss-nav__ref">3</span><span class="kss-nav__name">ffe-cards</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-ffe-context-message.html">
+          <span class="kss-nav__ref">4</span><span class="kss-nav__name">ffe-context-message</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-ffe-core.html">
+          <span class="kss-nav__ref">5</span><span class="kss-nav__name">ffe-core</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-ffe-datepicker.html">
+          <span class="kss-nav__ref">6</span><span class="kss-nav__name">ffe-datepicker</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-ffe-details-list.html">
+          <span class="kss-nav__ref">7</span><span class="kss-nav__name">ffe-details-list</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-ffe-form.html">
+          <span class="kss-nav__ref">8</span><span class="kss-nav__name">ffe-form</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-ffe-grid.html">
+          <span class="kss-nav__ref">9</span><span class="kss-nav__name">ffe-grid</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-ffe-lists.html">
+          <span class="kss-nav__ref">10</span><span class="kss-nav__name">ffe-lists</span>
+        </a>
+            <ul class="kss-nav__menu-child">
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-ffe-lists.html#kssref-ffe-lists-description-list">
+                  <span class="kss-nav__ref ">10.1</span
+                  ><span class="kss-nav__name">ffe-lists.description-list</span>
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-ffe-lists.html#kssref-ffe-lists-description-list-1">
+                  <span class="kss-nav__ref kss-nav__ref-child">10.1.1</span
+                  ><span class="kss-nav__name">Description list</span>
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-ffe-lists.html#kssref-ffe-lists-description-list-2">
+                  <span class="kss-nav__ref kss-nav__ref-child">10.1.2</span
+                  ><span class="kss-nav__name">Multi column description list</span>
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-ffe-lists.html#kssref-ffe-lists-regular-lists">
+                  <span class="kss-nav__ref ">10.2</span
+                  ><span class="kss-nav__name">ffe-lists.regular-lists</span>
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-ffe-lists.html#kssref-ffe-lists-regular-lists-1">
+                  <span class="kss-nav__ref kss-nav__ref-child">10.2.1</span
+                  ><span class="kss-nav__name">Bullet list</span>
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-ffe-lists.html#kssref-ffe-lists-regular-lists-2">
+                  <span class="kss-nav__ref kss-nav__ref-child">10.2.2</span
+                  ><span class="kss-nav__name">Check list</span>
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-ffe-lists.html#kssref-ffe-lists-regular-lists-3">
+                  <span class="kss-nav__ref kss-nav__ref-child">10.2.3</span
+                  ><span class="kss-nav__name">Numbered list</span>
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-ffe-lists.html#kssref-ffe-lists-regular-lists-4">
+                  <span class="kss-nav__ref kss-nav__ref-child">10.2.4</span
+                  ><span class="kss-nav__name">Stylized numbered list</span>
+                </a>
+              </li>
+            </ul>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-ffe-message-box.html">
+          <span class="kss-nav__ref">11</span><span class="kss-nav__name">ffe-message-box</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-ffe-spinner.html">
+          <span class="kss-nav__ref">12</span><span class="kss-nav__name">ffe-spinner</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-ffe-system-message.html">
+          <span class="kss-nav__ref">13</span><span class="kss-nav__name">ffe-system-message</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-ffe-tables.html">
+          <span class="kss-nav__ref">14</span><span class="kss-nav__name">ffe-tables</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-ffe-tabs.html">
+          <span class="kss-nav__ref">15</span><span class="kss-nav__name">ffe-tabs</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+<article role="main" class="kss-main">
+
+    <div id="kssref-ffe-lists" class="kss-section kss-section--depth-1 ">
+
+      <div class="kss-style">
+        <h1 class="kss-title kss-title--level-1">
+          <a class="kss-title__permalink" href="#kssref-ffe-lists">
+            <span class="kss-title__ref">
+              10
+              <span class="kss-title__permalink-hash">
+                  #ffe-lists
+              </span>
+            </span>
+            ffe-lists
+          </a>
+        </h1>
+
+
+
+      </div>
+
+
+
+    </div>
+    <section id="kssref-ffe-lists-description-list" class="kss-section kss-section--depth-2 ">
+
+      <div class="kss-style">
+        <h2 class="kss-title kss-title--level-2">
+          <a class="kss-title__permalink" href="#kssref-ffe-lists-description-list">
+            <span class="kss-title__ref">
+              10.1
+              <span class="kss-title__permalink-hash">
+                  #ffe-lists.description-list
+              </span>
+            </span>
+            ffe-lists.description-list
+          </a>
+        </h2>
+
+
+
+      </div>
+
+
+
+    </section>
+    <section id="kssref-ffe-lists-description-list-1" class="kss-section kss-section--depth-3 ">
+
+      <div class="kss-style">
+        <h3 class="kss-title kss-title--level-3">
+          <a class="kss-title__permalink" href="#kssref-ffe-lists-description-list-1">
+            <span class="kss-title__ref">
+              10.1.1
+              <span class="kss-title__permalink-hash">
+                  #ffe-lists.description-list.1
+              </span>
+            </span>
+            Description list
+          </a>
+        </h3>
+
+          <p class="kss-toolbar">
+              <a href="#kssref-ffe-lists-description-list-1" data-kss-fullscreen="kssref-ffe-lists-description-list-1">
+                <span class="kss-toolbar__tooltip">Toggle full screen</span>
+                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+              </a>
+              <a href="item-ffe-lists-description-list-1.html" target="_blank">
+                <span class="kss-toolbar__tooltip">Open in new window</span>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <rect x="0" y="20" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
+                  <rect x="24" y="0" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M64,44l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="24" y="0" width="40" height="10"/>
+                </svg>
+              </a>
+            <a href="#kssref-ffe-lists-description-list-1" data-kss-guides="true">
+              <span class="kss-toolbar__tooltip">Toggle example guides</span>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="54" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="54" width="9" height="5"/>
+              </svg>
+            </a>
+            <a href="#kssref-ffe-lists-description-list-1" data-kss-markup="true">
+              <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
+                <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
+              </svg>
+            </a>
+          </p>
+
+
+      </div>
+
+        <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Examples
+          </div>
+
+            <div class="kss-modifier__default-name kss-style">
+              Default styling
+            </div>
+
+          <div class="kss-modifier__example">
+            <dl class="ffe-description-list ffe-description-list">
+    <dt>Navn</dt>
+    <dd>Navn Navnesen</dd>
+    <dt>Adresse</dt>
+    <dd>Husgata 14</dd>
+    <dt>Postnummer og sted</dt>
+    <dd>1337 Sandvika</dd>
+</dl>
+            <div class="kss-modifier__example-footer"></div>
+          </div>
+
+            <div class="kss-modifier__name kss-style">
+              --md
+            </div>
+            <div class="kss-modifier__description kss-style">
+              Medium column size
+            </div>
+            <div class="kss-modifier__example">
+              <dl class="ffe-description-list ffe-description-list--md">
+    <dt>Navn</dt>
+    <dd>Navn Navnesen</dd>
+    <dt>Adresse</dt>
+    <dd>Husgata 14</dd>
+    <dt>Postnummer og sted</dt>
+    <dd>1337 Sandvika</dd>
+</dl>
+              <div class="kss-modifier__example-footer"></div>
+            </div>
+            <div class="kss-modifier__name kss-style">
+              --lg
+            </div>
+            <div class="kss-modifier__description kss-style">
+              Large column size
+            </div>
+            <div class="kss-modifier__example">
+              <dl class="ffe-description-list ffe-description-list--lg">
+    <dt>Navn</dt>
+    <dd>Navn Navnesen</dd>
+    <dt>Adresse</dt>
+    <dd>Husgata 14</dd>
+    <dt>Postnummer og sted</dt>
+    <dd>1337 Sandvika</dd>
+</dl>
+              <div class="kss-modifier__example-footer"></div>
+            </div>
+        </div>
+
+          <details class="kss-markup kss-style">
+            <summary>
+                Markup
+            </summary>
+            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;dl class&#x3D;&quot;ffe-description-list ffe-description-list[modifier class]&quot;&gt;
+    &lt;dt&gt;Navn&lt;/dt&gt;
+    &lt;dd&gt;Navn Navnesen&lt;/dd&gt;
+    &lt;dt&gt;Adresse&lt;/dt&gt;
+    &lt;dd&gt;Husgata 14&lt;/dd&gt;
+    &lt;dt&gt;Postnummer og sted&lt;/dt&gt;
+    &lt;dd&gt;1337 Sandvika&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+          </details>
+
+        <div class="kss-source kss-style">
+          Source: <code>description-list.less</code>, line 1
+        </div>
+
+    </section>
+    <section id="kssref-ffe-lists-description-list-2" class="kss-section kss-section--depth-3 ">
+
+      <div class="kss-style">
+        <h3 class="kss-title kss-title--level-3">
+          <a class="kss-title__permalink" href="#kssref-ffe-lists-description-list-2">
+            <span class="kss-title__ref">
+              10.1.2
+              <span class="kss-title__permalink-hash">
+                  #ffe-lists.description-list.2
+              </span>
+            </span>
+            Multi column description list
+          </a>
+        </h3>
+
+          <p class="kss-toolbar">
+              <a href="#kssref-ffe-lists-description-list-2" data-kss-fullscreen="kssref-ffe-lists-description-list-2">
+                <span class="kss-toolbar__tooltip">Toggle full screen</span>
+                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+              </a>
+              <a href="item-ffe-lists-description-list-2.html" target="_blank">
+                <span class="kss-toolbar__tooltip">Open in new window</span>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <rect x="0" y="20" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
+                  <rect x="24" y="0" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M64,44l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="24" y="0" width="40" height="10"/>
+                </svg>
+              </a>
+            <a href="#kssref-ffe-lists-description-list-2" data-kss-guides="true">
+              <span class="kss-toolbar__tooltip">Toggle example guides</span>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="54" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="54" width="9" height="5"/>
+              </svg>
+            </a>
+            <a href="#kssref-ffe-lists-description-list-2" data-kss-markup="true">
+              <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
+                <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
+              </svg>
+            </a>
+          </p>
+
+
+      </div>
+
+        <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Examples
+          </div>
+
+            <div class="kss-modifier__default-name kss-style">
+              Default styling
+            </div>
+
+          <div class="kss-modifier__example">
+            <div class="ffe-description-list-multicol ffe-description-list-multicol">
+    <dl class="ffe-description-list-multicol__avoid-break">
+        <dt>Navn</dt>
+        <dd>Navn Navnesen</dd>
+    </dl>
+    <dl class="ffe-description-list-multicol__avoid-break">
+        <dt>Adresse</dt>
+        <dd>Husgata 14</dd>
+    </dl>
+    <dl class="ffe-description-list-multicol__avoid-break">
+        <dt>Postnummer</dt>
+        <dd>0362</dd>
+    </dl>
+    <dl class="ffe-description-list-multicol__avoid-break">
+        <dt>Adresse</dt>
+        <dd>Oslo</dd>
+    </dl>
+</div>
+            <div class="kss-modifier__example-footer"></div>
+          </div>
+
+            <div class="kss-modifier__name kss-style">
+              --sm-2-cols
+            </div>
+            <div class="kss-modifier__description kss-style">
+              Preserve 2 column layout on small screens
+            </div>
+            <div class="kss-modifier__example">
+              <div class="ffe-description-list-multicol ffe-description-list-multicol--sm-2-cols">
+    <dl class="ffe-description-list-multicol__avoid-break">
+        <dt>Navn</dt>
+        <dd>Navn Navnesen</dd>
+    </dl>
+    <dl class="ffe-description-list-multicol__avoid-break">
+        <dt>Adresse</dt>
+        <dd>Husgata 14</dd>
+    </dl>
+    <dl class="ffe-description-list-multicol__avoid-break">
+        <dt>Postnummer</dt>
+        <dd>0362</dd>
+    </dl>
+    <dl class="ffe-description-list-multicol__avoid-break">
+        <dt>Adresse</dt>
+        <dd>Oslo</dd>
+    </dl>
+</div>
+              <div class="kss-modifier__example-footer"></div>
+            </div>
+        </div>
+
+          <details class="kss-markup kss-style">
+            <summary>
+                Markup
+            </summary>
+            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class&#x3D;&quot;ffe-description-list-multicol ffe-description-list-multicol[modifier class]&quot;&gt;
+    &lt;dl class&#x3D;&quot;ffe-description-list-multicol__avoid-break&quot;&gt;
+        &lt;dt&gt;Navn&lt;/dt&gt;
+        &lt;dd&gt;Navn Navnesen&lt;/dd&gt;
+    &lt;/dl&gt;
+    &lt;dl class&#x3D;&quot;ffe-description-list-multicol__avoid-break&quot;&gt;
+        &lt;dt&gt;Adresse&lt;/dt&gt;
+        &lt;dd&gt;Husgata 14&lt;/dd&gt;
+    &lt;/dl&gt;
+    &lt;dl class&#x3D;&quot;ffe-description-list-multicol__avoid-break&quot;&gt;
+        &lt;dt&gt;Postnummer&lt;/dt&gt;
+        &lt;dd&gt;0362&lt;/dd&gt;
+    &lt;/dl&gt;
+    &lt;dl class&#x3D;&quot;ffe-description-list-multicol__avoid-break&quot;&gt;
+        &lt;dt&gt;Adresse&lt;/dt&gt;
+        &lt;dd&gt;Oslo&lt;/dd&gt;
+    &lt;/dl&gt;
+&lt;/div&gt;</code></pre>
+          </details>
+
+        <div class="kss-source kss-style">
+          Source: <code>description-list.less</code>, line 18
+        </div>
+
+    </section>
+    <section id="kssref-ffe-lists-regular-lists" class="kss-section kss-section--depth-2 ">
+
+      <div class="kss-style">
+        <h2 class="kss-title kss-title--level-2">
+          <a class="kss-title__permalink" href="#kssref-ffe-lists-regular-lists">
+            <span class="kss-title__ref">
+              10.2
+              <span class="kss-title__permalink-hash">
+                  #ffe-lists.regular-lists
+              </span>
+            </span>
+            ffe-lists.regular-lists
+          </a>
+        </h2>
+
+
+
+      </div>
+
+
+
+    </section>
+    <section id="kssref-ffe-lists-regular-lists-1" class="kss-section kss-section--depth-3 ">
+
+      <div class="kss-style">
+        <h3 class="kss-title kss-title--level-3">
+          <a class="kss-title__permalink" href="#kssref-ffe-lists-regular-lists-1">
+            <span class="kss-title__ref">
+              10.2.1
+              <span class="kss-title__permalink-hash">
+                  #ffe-lists.regular-lists.1
+              </span>
+            </span>
+            Bullet list
+          </a>
+        </h3>
+
+          <p class="kss-toolbar">
+              <a href="#kssref-ffe-lists-regular-lists-1" data-kss-fullscreen="kssref-ffe-lists-regular-lists-1">
+                <span class="kss-toolbar__tooltip">Toggle full screen</span>
+                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+              </a>
+              <a href="item-ffe-lists-regular-lists-1.html" target="_blank">
+                <span class="kss-toolbar__tooltip">Open in new window</span>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <rect x="0" y="20" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
+                  <rect x="24" y="0" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M64,44l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="24" y="0" width="40" height="10"/>
+                </svg>
+              </a>
+            <a href="#kssref-ffe-lists-regular-lists-1" data-kss-guides="true">
+              <span class="kss-toolbar__tooltip">Toggle example guides</span>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="54" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="54" width="9" height="5"/>
+              </svg>
+            </a>
+            <a href="#kssref-ffe-lists-regular-lists-1" data-kss-markup="true">
+              <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
+                <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
+              </svg>
+            </a>
+          </p>
+
+
+      </div>
+
+        <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Examples
+          </div>
+
+            <div class="kss-modifier__default-name kss-style">
+              Default styling
+            </div>
+
+          <div class="kss-modifier__example">
+            <ul class="ffe-bullet-list ffe-bullet-list">
+    <li>Bilforsikring</li>
+    <li>Reiseforsikring</li>
+    <li>Innboforsikring</li>
+</ul>
+            <div class="kss-modifier__example-footer"></div>
+          </div>
+
+            <div class="kss-modifier__name kss-style">
+              --condensed
+            </div>
+            <div class="kss-modifier__description kss-style">
+              Condensed
+            </div>
+            <div class="kss-modifier__example">
+              <ul class="ffe-bullet-list ffe-bullet-list--condensed">
+    <li>Bilforsikring</li>
+    <li>Reiseforsikring</li>
+    <li>Innboforsikring</li>
+</ul>
+              <div class="kss-modifier__example-footer"></div>
+            </div>
+        </div>
+
+          <details class="kss-markup kss-style">
+            <summary>
+                Markup
+            </summary>
+            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;ul class&#x3D;&quot;ffe-bullet-list ffe-bullet-list[modifier class]&quot;&gt;
+    &lt;li&gt;Bilforsikring&lt;/li&gt;
+    &lt;li&gt;Reiseforsikring&lt;/li&gt;
+    &lt;li&gt;Innboforsikring&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+          </details>
+
+        <div class="kss-source kss-style">
+          Source: <code>regular-lists.less</code>, line 1
+        </div>
+
+    </section>
+    <section id="kssref-ffe-lists-regular-lists-2" class="kss-section kss-section--depth-3 ">
+
+      <div class="kss-style">
+        <h3 class="kss-title kss-title--level-3">
+          <a class="kss-title__permalink" href="#kssref-ffe-lists-regular-lists-2">
+            <span class="kss-title__ref">
+              10.2.2
+              <span class="kss-title__permalink-hash">
+                  #ffe-lists.regular-lists.2
+              </span>
+            </span>
+            Check list
+          </a>
+        </h3>
+
+          <p class="kss-toolbar">
+              <a href="#kssref-ffe-lists-regular-lists-2" data-kss-fullscreen="kssref-ffe-lists-regular-lists-2">
+                <span class="kss-toolbar__tooltip">Toggle full screen</span>
+                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+              </a>
+              <a href="item-ffe-lists-regular-lists-2.html" target="_blank">
+                <span class="kss-toolbar__tooltip">Open in new window</span>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <rect x="0" y="20" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
+                  <rect x="24" y="0" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M64,44l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="24" y="0" width="40" height="10"/>
+                </svg>
+              </a>
+            <a href="#kssref-ffe-lists-regular-lists-2" data-kss-guides="true">
+              <span class="kss-toolbar__tooltip">Toggle example guides</span>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="54" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="54" width="9" height="5"/>
+              </svg>
+            </a>
+            <a href="#kssref-ffe-lists-regular-lists-2" data-kss-markup="true">
+              <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
+                <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
+              </svg>
+            </a>
+          </p>
+
+
+      </div>
+
+        <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Examples
+          </div>
+
+            <div class="kss-modifier__default-name kss-style">
+              Default styling
+            </div>
+
+          <div class="kss-modifier__example">
+            <ul class="ffe-check-list ffe-check-list">
+    <li>Massevis av ferdige, testede komponenter</li>
+    <li>Likt design som resten av SpareBank 1</li>
+    <li>Høyere utviklingshastighet</li>
+</ul>
+            <div class="kss-modifier__example-footer"></div>
+          </div>
+
+            <div class="kss-modifier__name kss-style">
+              --bg-sand
+            </div>
+            <div class="kss-modifier__description kss-style">
+              Sand background
+            </div>
+            <div class="kss-modifier__example">
+              <ul class="ffe-check-list ffe-check-list--bg-sand">
+    <li>Massevis av ferdige, testede komponenter</li>
+    <li>Likt design som resten av SpareBank 1</li>
+    <li>Høyere utviklingshastighet</li>
+</ul>
+              <div class="kss-modifier__example-footer"></div>
+            </div>
+        </div>
+
+          <details class="kss-markup kss-style">
+            <summary>
+                Markup
+            </summary>
+            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;ul class&#x3D;&quot;ffe-check-list ffe-check-list[modifier class]&quot;&gt;
+    &lt;li&gt;Massevis av ferdige, testede komponenter&lt;/li&gt;
+    &lt;li&gt;Likt design som resten av SpareBank 1&lt;/li&gt;
+    &lt;li&gt;Høyere utviklingshastighet&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+          </details>
+
+        <div class="kss-source kss-style">
+          Source: <code>regular-lists.less</code>, line 14
+        </div>
+
+    </section>
+    <section id="kssref-ffe-lists-regular-lists-3" class="kss-section kss-section--depth-3 ">
+
+      <div class="kss-style">
+        <h3 class="kss-title kss-title--level-3">
+          <a class="kss-title__permalink" href="#kssref-ffe-lists-regular-lists-3">
+            <span class="kss-title__ref">
+              10.2.3
+              <span class="kss-title__permalink-hash">
+                  #ffe-lists.regular-lists.3
+              </span>
+            </span>
+            Numbered list
+          </a>
+        </h3>
+
+          <p class="kss-toolbar">
+              <a href="#kssref-ffe-lists-regular-lists-3" data-kss-fullscreen="kssref-ffe-lists-regular-lists-3">
+                <span class="kss-toolbar__tooltip">Toggle full screen</span>
+                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+              </a>
+              <a href="item-ffe-lists-regular-lists-3.html" target="_blank">
+                <span class="kss-toolbar__tooltip">Open in new window</span>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <rect x="0" y="20" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
+                  <rect x="24" y="0" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M64,44l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="24" y="0" width="40" height="10"/>
+                </svg>
+              </a>
+            <a href="#kssref-ffe-lists-regular-lists-3" data-kss-guides="true">
+              <span class="kss-toolbar__tooltip">Toggle example guides</span>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="54" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="54" width="9" height="5"/>
+              </svg>
+            </a>
+            <a href="#kssref-ffe-lists-regular-lists-3" data-kss-markup="true">
+              <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
+                <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
+              </svg>
+            </a>
+          </p>
+
+
+      </div>
+
+        <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Examples
+          </div>
+
+            <div class="kss-modifier__default-name kss-style">
+              Default styling
+            </div>
+
+          <div class="kss-modifier__example">
+            <ol class="ffe-numbered-list ffe-numbered-list">
+    <li>Installer pakken du vil bruke via NPM</li>
+    <li>Importer pakken i koden din</li>
+    <li>Profit!</li>
+</ol>
+            <div class="kss-modifier__example-footer"></div>
+          </div>
+
+            <div class="kss-modifier__name kss-style">
+              --condensed
+            </div>
+            <div class="kss-modifier__description kss-style">
+              Condensed
+            </div>
+            <div class="kss-modifier__example">
+              <ol class="ffe-numbered-list ffe-numbered-list--condensed">
+    <li>Installer pakken du vil bruke via NPM</li>
+    <li>Importer pakken i koden din</li>
+    <li>Profit!</li>
+</ol>
+              <div class="kss-modifier__example-footer"></div>
+            </div>
+        </div>
+
+          <details class="kss-markup kss-style">
+            <summary>
+                Markup
+            </summary>
+            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;ol class&#x3D;&quot;ffe-numbered-list ffe-numbered-list[modifier class]&quot;&gt;
+    &lt;li&gt;Installer pakken du vil bruke via NPM&lt;/li&gt;
+    &lt;li&gt;Importer pakken i koden din&lt;/li&gt;
+    &lt;li&gt;Profit!&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+          </details>
+
+        <div class="kss-source kss-style">
+          Source: <code>regular-lists.less</code>, line 27
+        </div>
+
+    </section>
+    <section id="kssref-ffe-lists-regular-lists-4" class="kss-section kss-section--depth-3 ">
+
+      <div class="kss-style">
+        <h3 class="kss-title kss-title--level-3">
+          <a class="kss-title__permalink" href="#kssref-ffe-lists-regular-lists-4">
+            <span class="kss-title__ref">
+              10.2.4
+              <span class="kss-title__permalink-hash">
+                  #ffe-lists.regular-lists.4
+              </span>
+            </span>
+            Stylized numbered list
+          </a>
+        </h3>
+
+          <p class="kss-toolbar">
+              <a href="#kssref-ffe-lists-regular-lists-4" data-kss-fullscreen="kssref-ffe-lists-regular-lists-4">
+                <span class="kss-toolbar__tooltip">Toggle full screen</span>
+                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+              </a>
+              <a href="item-ffe-lists-regular-lists-4.html" target="_blank">
+                <span class="kss-toolbar__tooltip">Open in new window</span>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <rect x="0" y="20" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
+                  <rect x="24" y="0" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M64,44l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="24" y="0" width="40" height="10"/>
+                </svg>
+              </a>
+            <a href="#kssref-ffe-lists-regular-lists-4" data-kss-guides="true">
+              <span class="kss-toolbar__tooltip">Toggle example guides</span>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="54" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="54" width="9" height="5"/>
+              </svg>
+            </a>
+            <a href="#kssref-ffe-lists-regular-lists-4" data-kss-markup="true">
+              <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
+                <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
+              </svg>
+            </a>
+          </p>
+
+
+      </div>
+
+        <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Example
+          </div>
+
+
+          <div class="kss-modifier__example">
+            <ol class="ffe-stylized-numbered-list">
+    <li>Installer pakken du vil bruke via NPM</li>
+    <li>Importer pakken i koden din</li>
+    <li>Profit!</li>
+</ol>
+            <div class="kss-modifier__example-footer"></div>
+          </div>
+
+        </div>
+
+          <details class="kss-markup kss-style">
+            <summary>
+                Markup
+            </summary>
+            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;ol class&#x3D;&quot;ffe-stylized-numbered-list&quot;&gt;
+    &lt;li&gt;Installer pakken du vil bruke via NPM&lt;/li&gt;
+    &lt;li&gt;Importer pakken i koden din&lt;/li&gt;
+    &lt;li&gt;Profit!&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+          </details>
+
+        <div class="kss-source kss-style">
+          Source: <code>regular-lists.less</code>, line 40
+        </div>
+
+    </section>
+</article>
+
+<!-- SCRIPTS -->
+<script src="kss-assets/kss.js"></script>
+<script src="kss-assets/scrollspy.js"></script>
+<script src="kss-assets/prettify.js"></script>
+<script src="kss-assets/kss-fullscreen.js"></script>
+<script src="kss-assets/kss-guides.js"></script>
+<script src="kss-assets/kss-markup.js"></script>
+<script>
+  prettyPrint();
+  var spy = new ScrollSpy('#kss-node', {
+    nav: '.kss-nav__menu-child > li > a',
+    className: 'is-in-viewport'
+  });
+  var kssFullScreen = new KssFullScreen({
+    idPrefix: 'kss-fullscreen-',
+    bodyClass: 'kss-fullscreen-mode',
+    elementClass: 'is-fullscreen'
+  });
+  var kssGuides = new KssGuides({
+    bodyClass: 'kss-guides-mode'
+  });
+  var kssMarkup = new KssMarkup({
+    bodyClass: 'kss-markup-mode',
+    detailsClass: 'kss-markup'
+  });
+</script>
+
+
+
+<!-- Automatically built using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
+</body>
+</html>
