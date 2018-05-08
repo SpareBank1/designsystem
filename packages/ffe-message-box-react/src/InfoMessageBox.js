@@ -1,5 +1,5 @@
 import React from 'react';
-import InfoSirkelIkon from '@sb1/ffe-icons-react/lib/info-sirkel-ikon';
+import InfoIkon from '@sb1/ffe-icons-react/lib/info-ikon';
 import MessageBox from './MessageBox';
 
 const iconStyles = {
@@ -9,7 +9,7 @@ const iconStyles = {
 const InfoMessage = props => (
     <MessageBox
         type="info"
-        icon={<InfoSirkelIkon style={iconStyles} />}
+        icon={<InfoIkon style={iconStyles} />}
         {...props}
     />
 );

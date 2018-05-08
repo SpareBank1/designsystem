@@ -10,13 +10,13 @@ const { KrPoseIkon } = require('@sb1/ffe-icons-react');
     <LinkCard
         details="kr 32 132,00"
         heading="Innskuddspensjon med investeringsvalg"
-        icon={<KrPoseIkon />}
+        icon={<KrPoseIkon className="sb1ds-icon-color" />}
         size="large"
     />
     <LinkCard
         details="kr 1 354 001,00"
         heading="Pensjonskonto"
-        icon={<KrPoseIkon />}
+        icon={<KrPoseIkon className="sb1ds-icon-color" />}
         size="large"
     />
 </div>
@@ -31,12 +31,12 @@ const { KrPoseIkon } = require('@sb1/ffe-icons-react');
 <div>
     <LinkCard
         heading="Innskuddspensjon med investeringsvalg"
-        icon={<KrPoseIkon />}
+        icon={<KrPoseIkon className="sb1ds-icon-color" />}
         size="medium"
     />
     <LinkCard
         heading="Pensjonskonto"
-        icon={<KrPoseIkon />}
+        icon={<KrPoseIkon className="sb1ds-icon-color" />}
         size="medium"
     />
 </div>
@@ -52,12 +52,12 @@ const { BilIkon, HusIkon } = require('@sb1/ffe-icons-react');
     <LinkCard
         details="kr 32 132,00"
         heading="Bilforsikring"
-        icon={<BilIkon />}
+        icon={<BilIkon className="sb1ds-icon-color" />}
     />
     <LinkCard
         details="kr 1 354 001,00"
         heading="Husforsikring"
-        icon={<HusIkon />}
+        icon={<HusIkon className="sb1ds-icon-color" />}
     />
 </div>
 ```
