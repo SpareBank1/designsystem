@@ -26,7 +26,10 @@ class Table extends Component {
     }
 
     renderTableHeaders() {
-        const { columns } = this.props;
+        const {
+            columns,
+            headerRender
+        } = this.props;
 
         if (!columns.length) {
             return null;
@@ -35,18 +38,19 @@ class Table extends Component {
         if (this.props.expandedContentMapper) {
             columns.push({ key: 'expandIcon', header: '', alignRight: true });
         }
-
-        return <TableHeaders columns={columns} />;
+        return <TableHeaders columns={columns} headerRender={headerRender} dataWindow={this.getData()} />;
     }
 
     renderTableFooter() {
-        const { columns } = this.props;
+        const {
+            columns,
+            footerRender
+        } = this.props;
 
         if (!columns.some(column => column.footer)) {
             return null;
         }
-
-        return <TableFooter columns={columns} />;
+        return <TableFooter columns={columns} footerRender={footerRender} dataWindow={this.getData()}/>;
     }
 
     getData() {
@@ -59,7 +63,7 @@ class Table extends Component {
     }
 
     renderTableBody() {
-        const { columns, expandedContentMapper, sort } = this.props;
+        const { columns, expandedContentMapper, sort, rowRender } = this.props;
 
         const data = this.getData();
 
@@ -76,6 +80,8 @@ class Table extends Component {
                         columns={columns}
                         key={key}
                         sort={sort}
+                        rowRender={rowRender}
+                        rowIndex={index}
                     >
                         {expandedContentMapper(row)}
                     </TableRowExpandable>
@@ -88,7 +94,7 @@ class Table extends Component {
                 {data.map((row, index) => {
                     const key =
                         row.id || row.id === 0 ? row.id.toString() : index;
-                    return <TableRow cells={row} columns={columns} key={key} />;
+                    return <TableRow cells={row} columns={columns} key={key} rowRender={rowRender} rowIndex={index}/>;
                 })}
             </tbody>
         );
@@ -143,6 +149,9 @@ Table.propTypes = {
             key: PropTypes.string.isRequired,
         }).isRequired,
     ),
+    rowRender: PropTypes.func,
+    headerRender: PropTypes.func,
+    footerRender: PropTypes.func,
     className: PropTypes.string,
 };
 

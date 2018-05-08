@@ -12,6 +12,8 @@ const TableRow = props => {
         trClasses,
         expandable,
         expanded,
+        rowRender,
+        rowIndex
     } = props;
 
     const expandableProps = expandable && {
@@ -21,33 +23,42 @@ const TableRow = props => {
         role: 'button',
         tabIndex: '0',
     };
+    const trprops = {className: classNames('ffe-table__row', trClasses),
+    ...expandableProps,
+    onClick: onClick
+    };
+    const rowContent = columns.map((column, index) => {
+        return (
+            <TableCell
+                alignRight={column.alignRight}
+                alignTop={column.alignTop}
+                columnHeader={column.header}
+                key={index}
+                tdClasses={classNames(
+                    {
+                        'ffe-table__cell--collapsed':
+                        column.key === 'expandIcon',
+                    },
+                    { 'ffe-table--hide-sm': column.hideOnMobile },
+                    { 'ffe-table--hide-md': column.hideOnSmallTablet },
+                    { 'ffe-table--hide-lg': column.hideOnTablet },
+                    { 'ffe-table--hide-xlg': column.hideOnDesktop },
+                )}
+            >
+                {column.cellRender ? column.cellRender(cells[column.key],column, props, index) : cells[column.key]}
+            </TableCell>
+        );
+    });
+
+    if( typeof rowRender  === 'function'){
+        return rowRender(props, rowContent, trprops, rowIndex);
+    }
+
     return (
         <tr
-            className={classNames('ffe-table__row', trClasses)}
-            {...expandableProps}
+            {...trprops}
         >
-            {columns.map((column, index) => {
-                return (
-                    <TableCell
-                        alignRight={column.alignRight}
-                        alignTop={column.alignTop}
-                        columnHeader={column.header}
-                        key={index}
-                        tdClasses={classNames(
-                            {
-                                'ffe-table__cell--collapsed':
-                                    column.key === 'expandIcon',
-                            },
-                            { 'ffe-table--hide-sm': column.hideOnMobile },
-                            { 'ffe-table--hide-md': column.hideOnSmallTablet },
-                            { 'ffe-table--hide-lg': column.hideOnTablet },
-                            { 'ffe-table--hide-xlg': column.hideOnDesktop },
-                        )}
-                    >
-                        {cells[column.key]}
-                    </TableCell>
-                );
-            })}
+            {rowContent}
         </tr>
     );
 };
@@ -64,13 +75,18 @@ TableRow.propTypes = {
             hideOnSmallTablet: PropTypes.bool,
             hideOnTablet: PropTypes.bool,
             key: PropTypes.string,
+            cellRender: PropTypes.func
         }),
     ).isRequired,
     expandable: PropTypes.bool,
     expanded: PropTypes.bool,
     onClick: PropTypes.func,
+    rowRender: PropTypes.func,
+    headerRender: PropTypes.func,
+    footerRender: PropTypes.func,
     onKeyDown: PropTypes.func,
     trClasses: PropTypes.string,
+    rowIndex: PropTypes.number
 };
 
 export default TableRow;
