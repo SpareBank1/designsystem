@@ -1050,7 +1050,8 @@ html {
   fill: #002776;
 }
 .ffe-accordion-item__icon--open {
-  transform: rotateX(180deg);
+  -ms-transform: rotate(180deg);
+      transform: rotateZ(180deg);
   fill: #002776;
 }
 .ffe-accordion-item__icon--open.ffe-accordion-item__icon--blue {
