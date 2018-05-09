@@ -1,3 +1,46 @@
+// Description list
+//
+// Markup:
+// <dl class="ffe-description-list ffe-description-list{{modifier_class}}">
+//     <dt>Navn</dt>
+//     <dd>Navn Navnesen</dd>
+//     <dt>Adresse</dt>
+//     <dd>Husgata 14</dd>
+//     <dt>Postnummer og sted</dt>
+//     <dd>1337 Sandvika</dd>
+// </dl>
+//
+// --md     - Medium column size
+// --lg     - Large column size
+//
+// Styleguide ffe-lists.description-list.1
+
+// Multi column description list
+//
+// Markup:
+// <div class="ffe-description-list-multicol ffe-description-list-multicol{{modifier_class}}">
+//     <dl class="ffe-description-list-multicol__avoid-break">
+//         <dt>Navn</dt>
+//         <dd>Navn Navnesen</dd>
+//     </dl>
+//     <dl class="ffe-description-list-multicol__avoid-break">
+//         <dt>Adresse</dt>
+//         <dd>Husgata 14</dd>
+//     </dl>
+//     <dl class="ffe-description-list-multicol__avoid-break">
+//         <dt>Postnummer</dt>
+//         <dd>0362</dd>
+//     </dl>
+//     <dl class="ffe-description-list-multicol__avoid-break">
+//         <dt>Adresse</dt>
+//         <dd>Oslo</dd>
+//     </dl>
+// </div>
+//
+// --sm-2-cols     - Preserve 2 column layout on small screens
+//
+// Styleguide ffe-lists.description-list.2
+
 @description-list-vertical-seperation: 20px;
 
 .ffe-description-list,
