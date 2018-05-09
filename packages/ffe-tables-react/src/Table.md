@@ -138,8 +138,8 @@ const KryssIkon = require('@sb1/ffe-icons-react/lib').KryssIkon;
 
 const generateCheckbox = (value) => {
     return <div style={{width: '100%', textAlign: 'center'}}>{value ?
-        <HakeIkon className={classNames({'icon-green': true, 'ffe-table__expand-icon': true})}/> :
-        <KryssIkon className={classNames({'icon-red': true, 'ffe-table__expand-icon': true})}/>}</div>;
+        <HakeIkon className='ffe-table__expand-icon'/> :
+        <KryssIkon className='ffe-table__expand-icon'/>}</div>;
 };
 
 const Button = ({children}) => (
