@@ -1696,10 +1696,10 @@ html {
   -ms-transform: rotate(90deg);
       transform: rotate(90deg);
 }
-.ffe-inline-button--left {
+.ffe-inline-button__icon--left {
   margin-right: 6px;
 }
-.ffe-inline-button--right {
+.ffe-inline-button__icon--right {
   margin-left: 6px;
 }
 /*
