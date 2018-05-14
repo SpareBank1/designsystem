@@ -4,18 +4,17 @@
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
-        padding-right: 57px;
+        padding-right: 63px;
         &::-ms-clear {
             display: none;
         }
     }
 
     &__expand-button {
-        height: 23px;
-        width : 23px;
         position: absolute;
-        padding : 3px;
-        top : 11px;
+        padding : 6px;
+        top: 50%;
+        transform: translateY(-50%);
         right: 10px;
         background: transparent;
         border: none;
@@ -23,6 +22,7 @@
 
         &-icon {
             fill: @ffe-blue-azure;
+            display: block;
             width: 17px;
             height: 17px;
         }
@@ -33,11 +33,10 @@
     }
 
     &__reset-button {
-        height: 23px;
-        width : 23px;
-        padding : 3px;
+        padding: 9px;
         position: absolute;
-        top: 10px;
+        top: 50%;
+        transform: translateY(-50%);
         right: 35px;
         background: transparent;
         border: none;
@@ -45,6 +44,7 @@
         cursor: pointer;
 
         &-icon {
+            display: block;
             width: 11px;
             height: 11px;
         }
