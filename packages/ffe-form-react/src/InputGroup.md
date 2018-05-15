@@ -4,17 +4,26 @@ tooltip, skjemaelementet, og en feilmelding for valideringsfeil som vil bli vist
 ```js
 const { Input } = require('.');
 
-<InputGroup
-    label="Telefonnummer"
-    tooltip="Vi bruker telefonnummer for å sende deg kvittering på SMS"
->
-    <Input
-        type="tel"
-        name="mobile"
-        onChange={e => console.log('onChange', e.target.value)}
-        onBlur={e => console.log('onBlur', e.target.value)}
-    />
-</InputGroup>;
+<React.Fragment>
+    <InputGroup
+        label="Telefonnummer"
+        tooltip="Vi bruker telefonnummer for å sende deg kvittering på SMS"
+    >
+        <Input
+            type="tel"
+            name="mobile"
+            onChange={e => console.log('onChange', e.target.value)}
+            onBlur={e => console.log('onBlur', e.target.value)}
+        />
+    </InputGroup>
+
+    <InputGroup
+        label="E-postadresse"
+        fieldMessage="Ugyldig e-postadresse"
+    >
+        <Input />
+    </InputGroup>
+</React.Fragment>
 ```
 
 Utviklere bør merke seg at man er nødt til å bruke det såkalte _function-as-a-child_-patternet med mindre man bare har
