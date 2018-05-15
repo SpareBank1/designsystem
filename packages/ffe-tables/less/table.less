@@ -1,3 +1,112 @@
+// Table
+//
+// Markup:
+// <table class="ffe-table ffe-table{{modifier_class}}">
+//     <caption class="ffe-table__caption">Utviklere</caption>
+//     <thead class="ffe-table__head">
+//         <tr class="ffe-table__row">
+//             <th class="ffe-table__heading" scope="col">
+//                 <span class="ffe-table__content">Navn</span>
+//             </th>
+//             <th class="ffe-table__heading" scope="col">
+//                 <span class="ffe-table__content">Alder</span>
+//             </th>
+//         </tr>
+//     </thead>
+//     <tbody>
+//         <tr class="ffe-table__row">
+//             <td class="ffe-table__cell" data-th="Navn">
+//                 <span class="ffe-table__content">Anders</span>
+//             </td>
+//             <td class="ffe-table__cell" data-th="Alder">
+//                 <span class="ffe-table__content">32</span>
+//             </td>
+//         </tr>
+//         <tr class="ffe-table__row">
+//             <td class="ffe-table__cell" data-th="Navn">
+//                 <span class="ffe-table__content">Erik</span>
+//             </td>
+//             <td class="ffe-table__cell" data-th="Alder">
+//                 <span class="ffe-table__content">25</span>
+//             </td>
+//         </tr>
+//         <tr class="ffe-table__row">
+//             <td class="ffe-table__cell" data-th="Navn">
+//                 <span class="ffe-table__content">Gunn</span>
+//             </td>
+//             <td class="ffe-table__cell" data-th="Alder">
+//                 <span class="ffe-table__content">29</span>
+//             </td>
+//         </tr>
+//     </tbody>
+// </table>
+//
+// --condensed  - Condensed table
+//
+// Styleguide ffe-tables.table.1
+
+// Table cell
+//
+// Markup:
+// <table class="ffe-table">
+//     <caption class="ffe-table__caption">Utviklere</caption>
+//     <thead class="ffe-table__head">
+//         <tr class="ffe-table__row">
+//             <th class="ffe-table__heading" scope="col">
+//                 <span class="ffe-table__content">Navn</span>
+//             </th>
+//             <th class="ffe-table__heading" scope="col">
+//                 <span class="ffe-table__content">Stilling</span>
+//             </th>
+//             <th class="ffe-table__heading ffe-table{{modifier_class}}" scope="col">
+//                 <span class="ffe-table__content">Alder</span>
+//             </th>
+//         </tr>
+//     </thead>
+//     <tbody>
+//         <tr class="ffe-table__row">
+//             <td class="ffe-table__cell" data-th="Navn">
+//                 <span class="ffe-table__content">Anders</span>
+//             </td>
+//             <td class="ffe-table__cell" data-th="Navn">
+//                 <span class="ffe-table__content">Utvikler</span>
+//             </td>
+//             <td class="ffe-table__cell ffe-table{{modifier_class}}" data-th="Alder">
+//                 <span class="ffe-table__content">32</span>
+//             </td>
+//         </tr>
+//         <tr class="ffe-table__row">
+//             <td class="ffe-table__cell" data-th="Navn">
+//                 <span class="ffe-table__content">Erik</span>
+//             </td>
+//             <td class="ffe-table__cell" data-th="Navn">
+//                 <span class="ffe-table__content">Utvikler</span>
+//             </td>
+//             <td class="ffe-table__cell ffe-table{{modifier_class}}" data-th="Alder">
+//                 <span class="ffe-table__content">25</span>
+//             </td>
+//         </tr>
+//         <tr class="ffe-table__row">
+//             <td class="ffe-table__cell" data-th="Navn">
+//                 <span class="ffe-table__content">Gunn</span>
+//             </td>
+//             <td class="ffe-table__cell" data-th="Navn">
+//                 <span class="ffe-table__content">Utvikler</span>
+//             </td>
+//             <td class="ffe-table__cell ffe-table{{modifier_class}}" data-th="Alder">
+//                 <span class="ffe-table__content">29</span>
+//             </td>
+//         </tr>
+//     </tbody>
+// </table>
+//
+// --hide-xlg   - Hide cell on extra large screens
+// --hide-lg    - Hide cell on large screens
+// --hide-md    - Hide cell on medium screens
+// --hide-sm    - Hide cell on small screens
+//
+// Styleguide ffe-tables.table.2
+
 .ffe-table {
     margin: 20px 0;
     min-width: 100%;

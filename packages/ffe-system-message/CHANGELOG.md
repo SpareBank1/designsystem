@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.8"></a>
+## [3.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@3.0.7...@sb1/ffe-system-message@3.0.8) (2018-05-08)
+
+
+
+
+**Note:** Version bump only for package @sb1/ffe-system-message
+
+<a name="3.0.7"></a>
+## [3.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@3.0.6...@sb1/ffe-system-message@3.0.7) (2018-05-04)
+
+
+
+
+**Note:** Version bump only for package @sb1/ffe-system-message
+
+<a name="3.0.6"></a>
+## [3.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@3.0.5...@sb1/ffe-system-message@3.0.6) (2018-05-03)
+
+
+
+
+**Note:** Version bump only for package @sb1/ffe-system-message
+
 <a name="3.0.5"></a>
 ## [3.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@3.0.4...@sb1/ffe-system-message@3.0.5) (2018-04-11)
 

@@ -3,6 +3,38 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="11.1.11"></a>
+## [11.1.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@11.1.10...@sb1/ffe-header@11.1.11) (2018-05-11)
+
+
+
+
+**Note:** Version bump only for package @sb1/ffe-header
+
+<a name="11.1.10"></a>
+## [11.1.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@11.1.9...@sb1/ffe-header@11.1.10) (2018-05-04)
+
+
+
+
+**Note:** Version bump only for package @sb1/ffe-header
+
+<a name="11.1.9"></a>
+## [11.1.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@11.1.8...@sb1/ffe-header@11.1.9) (2018-05-04)
+
+
+
+
+**Note:** Version bump only for package @sb1/ffe-header
+
+<a name="11.1.8"></a>
+## [11.1.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@11.1.7...@sb1/ffe-header@11.1.8) (2018-05-03)
+
+
+
+
+**Note:** Version bump only for package @sb1/ffe-header
+
 <a name="11.1.7"></a>
 ## [11.1.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@11.1.6...@sb1/ffe-header@11.1.7) (2018-04-19)
 
