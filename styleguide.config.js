@@ -76,14 +76,38 @@ module.exports = {
                 {
                     test: /\.css$/,
                     use: PRODUCTION
-                        ? [MiniCssExtractPlugin.loader, 'css-loader?url=false','postcss-loader']
+                        ? [
+                            MiniCssExtractPlugin.loader,
+                            {
+                                loader: 'css-loader',
+                                options: {
+                                    minimize: {
+                                        autoprefixer: false,
+                                    },
+                                    url: false,
+                                },
+                            },
+                            'postcss-loader'
+                        ]
                         : ['style-loader', 'css-loader?url=false', 'postcss-loader'],
                     exclude: /node_modules/,
                 },
                 {
                     test: /\.less$/,
                     use: PRODUCTION
-                        ? [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'less-loader']
+                        ? [
+                            MiniCssExtractPlugin.loader,
+                            {
+                                loader: 'css-loader',
+                                options: {
+                                    minimize: {
+                                        autoprefixer: false,
+                                    },
+                                },
+                            },
+                            'postcss-loader',
+                            'less-loader'
+                        ]
                         : ['style-loader', 'css-loader', 'postcss-loader', 'less-loader'],
                     exclude: /node_modules/,
                 },

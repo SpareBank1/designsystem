@@ -14,7 +14,7 @@ There are two ways to use `ffe-webfonts`:
 2. Use `fonts.css` where the fonts are base64 encoded inline
 
 **You also need to include the webfonts license.** It is included as a comment in both `fonts.css` and `fonts.less`.
-Just make sure your build tools don't strip those comments out.
+It should survive minification, but make sure your build tools don't strip those comments out.
 
 Approach 1 is propably what you want for performance reasons.
 
