@@ -23,10 +23,7 @@ const TableRow = props => {
         role: 'button',
         tabIndex: '0',
     };
-    const trprops = {className: classNames('ffe-table__row', trClasses),
-    ...expandableProps,
-    onClick: onClick
-    };
+
     const rowContent = columns.map((column, index) => {
         return (
             <TableCell
@@ -50,8 +47,14 @@ const TableRow = props => {
         );
     });
 
+    const trprops = {className: classNames('ffe-table__row', trClasses),
+        ...expandableProps,
+        onClick: onClick,
+        children: rowContent
+    };
+
     if( typeof rowRender  === 'function'){
-        return rowRender(props, rowContent, trprops, rowIndex);
+        return rowRender(trprops, props, rowIndex);
     }
 
     return (

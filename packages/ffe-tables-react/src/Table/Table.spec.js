@@ -176,8 +176,8 @@ describe('<Table />', () => {
             <Table
                 columns={columnsForFooterRender}
                 data={data}
-                footerRender={(props, rowcontent, trprops) => {
-                    return <tr {...trprops}>{rowcontent}</tr>}}
+                footerRender={(trProps, columnsFooter) => {
+                    return <tr {...trProps}/>}}
             />
         );
 
@@ -186,27 +186,25 @@ describe('<Table />', () => {
             <Table
                 columns={columnsForFooterRender}
                 data={data}
-                footerRender={(props, rowcontent, trprops) => {
+                footerRender={(trProps, columnsFooter) => {
                     return <React.Fragment>
                         <tr
-                            {...trprops}
+                            {...trProps}
                             a="customfooter"
-                            firstkey={props[0].key}
+                            firstkey={columnsFooter[0].key}
                             onClick={(event) => {
                                 mockCallback();
                             }}
-                        >
-                            {rowcontent}
-                        </tr>
+                        />
                         <tr
-                            {...trprops}
+                            {...trProps}
                             a="customfooter"
-                            firstkey={props[0].key}
+                            firstkey={columnsFooter[0].key}
                             onClick={(event) => {
                                 mockCallback();
                             }}
                         >
-                            {rowcontent[0]}{rowcontent[1]}{rowcontent[2]}
+                            {trProps.children[0]}{trProps.children[1]}{trProps.children[2]}
                         </tr>
                     </React.Fragment>
                 }}
@@ -253,8 +251,8 @@ describe('<Table />', () => {
             <Table
                 columns={columnsForFooterRender}
                 data={data}
-                headerRender={(props, rowcontent, trprops) => {
-                    return <tr {...trprops}>{rowcontent}</tr>}}
+                headerRender={(trProps, headerColumns) => {
+                    return <tr {...trProps}/>}}
             />
         );
 
@@ -263,27 +261,25 @@ describe('<Table />', () => {
             <Table
                 columns={columnsForFooterRender}
                 data={data}
-                headerRender={(props, rowcontent, trprops) => {
+                headerRender={(trProps, headerColumns) => {
                     return <React.Fragment>
                         <tr
-                            {...trprops}
+                            {...trProps}
                             a="customfooter"
-                            firstkey={props[0].key}
+                            firstkey={headerColumns[0].key}
                             onClick={(event) => {
                                 mockCallback();
                             }}
-                        >
-                            {rowcontent}
-                        </tr>
+                        />
                         <tr
-                            {...trprops}
+                            {...trProps}
                             a="customfooter"
-                            firstkey={props[0].key}
+                            firstkey={headerColumns[0].key}
                             onClick={(event) => {
                                 mockCallback();
                             }}
                         >
-                            {rowcontent[0]}{rowcontent[1]}{rowcontent[2]}
+                            {trProps.children[0]}{trProps.children[1]}{trProps.children[2]}
                         </tr>
                     </React.Fragment>
                 }}
@@ -335,8 +331,8 @@ describe('<Table />', () => {
             <Table
                 columns={columnsForRenderOverride}
                 data={data}
-                rowRender={(props, rowcontent, trprops, index)=>{
-                    return <tr {...trprops}>{rowcontent}</tr>}}
+                rowRender={(trprops, props, rowIndex)=>{
+                    return <tr {...trprops}/>}}
             />
         );
 
@@ -345,8 +341,8 @@ describe('<Table />', () => {
                 columns={columnsForRenderOverride}
                 data={data}
                 expandedContentMapper={expandedContentMapper}
-                rowRender={(props, rowcontent, trprops, index)=>{
-                    return <tr {...trprops} onClick={(event) => {mockCallback();trprops.onClick(event);}}>{rowcontent}</tr>}}
+                rowRender={(trprops, props, rowIndex)=>{
+                    return <tr {...trprops} onClick={(event) => {mockCallback();trprops.onClick(event);}}/>}}
             />
         );
 
@@ -355,16 +351,14 @@ describe('<Table />', () => {
             <Table
                 columns={columnsForRenderOverride}
                 data={data}
-                rowRender={(props, rowcontent, trprops, index) => {
+                rowRender={(trprops, props, rowIndex) => {
                     return  <tr
                                 {...trprops}
                                 a="customfooter"
                                 onClick={(event) => {
                                     mockCallback();
                                 }}
-                            >
-                        {rowcontent}
-                    </tr>
+                            />
                 }}
             />
 

@@ -60,14 +60,12 @@ const TableFooter = ({ columns, footerRender, dataWindow }) => {
         );
     });
 
-    const trProps = {className: "ffe-table__row"};
+    const trProps = {className: "ffe-table__row", children: footerContent};
 
     const trDefault =
-        <tr {...trProps}>
-            {footerContent}
-        </tr>;
+        <tr {...trProps}/>
 
-    const footerRendered = typeof footerRender === "function" ? footerRender(columns, footerContent, trProps) : trDefault;
+    const footerRendered = typeof footerRender === "function" ? footerRender(trProps, columns) : trDefault;
 
     return (
         <tfoot className="ffe-table__footer">

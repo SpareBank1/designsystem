@@ -325,7 +325,7 @@ const onSort = ({ sortBy, descending, tableData }) => {};
     breakpoint={'none'}
     caption="Masse spennende data"
     onSort={onSort}
-    headerRender={(props, rowcontent, trprops) => {
+    headerRender={(trprops, columns) => {
         return (
             <React.Fragment>
                 <tr {...trprops}>
@@ -341,14 +341,14 @@ const onSort = ({ sortBy, descending, tableData }) => {};
                         Overskrift
                     </th>
                 </tr>
-                <tr {...trprops}>{rowcontent}</tr>
+                <tr {...trprops}/>
             </React.Fragment>
         );
     }}
-    footerRender={(props, rowcontent, trprops) => {
+    footerRender={(trprops, columns) => {
         return (
             <React.Fragment>
-                <tr {...trprops}>{rowcontent}</tr>
+                <tr {...trprops}/>
                 <tr {...trprops}>
                     <td className="ffe-table__cell" data-th="Navn">
                         <span className="ffe-table__content">Total</span>
@@ -378,10 +378,9 @@ const onSort = ({ sortBy, descending, tableData }) => {};
             </React.Fragment>
         );
     }}
-    rowRender={(props, rowcontent, trprops, index) => {
+    rowRender={(trprops, props, index) => {
         const odd = index % 2 === 1;
-        return (
-            <tr
+        return <tr
                 {...trprops}
                 className={classNames(
                     trprops.className,
@@ -394,9 +393,10 @@ const onSort = ({ sortBy, descending, tableData }) => {};
                 }}
                 title={props.cells['name']}
             >
-                {rowcontent}
+            {trprops.children}
             </tr>
-        );
+            
+        ;
     }}
 />;
 ```

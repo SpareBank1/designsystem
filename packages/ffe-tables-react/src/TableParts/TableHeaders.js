@@ -46,14 +46,12 @@ const TableHeaders = ({columns, headerRender, dataWindow}) => {
             </th>
         );
     });
-    const trProps = {className: "ffe-table__row"};
+    const trProps = {className: "ffe-table__row", children: headerContent};
 
     const trDefault =
-        <tr {...trProps}>
-            {headerContent}
-        </tr>;
+        <tr {...trProps}/>;
 
-    const headerRendered = typeof headerRender === "function" ? headerRender(columns, headerContent, trProps) : trDefault;
+    const headerRendered = typeof headerRender === "function" ? headerRender(trProps, columns) : trDefault;
 
     return (
         <thead className="ffe-table__head">
