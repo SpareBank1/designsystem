@@ -1217,17 +1217,17 @@ html {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  padding-right: 57px;
+  padding-right: 63px;
 }
 .ffe-account-selector .ffe-base-selector__input-field::-ms-clear {
   display: none;
 }
 .ffe-account-selector .ffe-base-selector__expand-button {
-  height: 23px;
-  width: 23px;
   position: absolute;
-  padding: 3px;
-  top: 11px;
+  padding: 6px;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
   right: 10px;
   background: transparent;
   border: none;
@@ -1235,6 +1235,7 @@ html {
 }
 .ffe-account-selector .ffe-base-selector__expand-button-icon {
   fill: #0071CD;
+  display: block;
   width: 17px;
   height: 17px;
 }
@@ -1242,11 +1243,11 @@ html {
   fill: #DA3D00;
 }
 .ffe-account-selector .ffe-base-selector__reset-button {
-  height: 23px;
-  width: 23px;
-  padding: 3px;
+  padding: 9px;
   position: absolute;
-  top: 10px;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
   right: 35px;
   background: transparent;
   border: none;
@@ -1254,6 +1255,7 @@ html {
   cursor: pointer;
 }
 .ffe-account-selector .ffe-base-selector__reset-button-icon {
+  display: block;
   width: 11px;
   height: 11px;
 }
