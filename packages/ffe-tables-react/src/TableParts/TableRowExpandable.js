@@ -39,7 +39,7 @@ class TableRowExpandable extends Component {
     }
 
     render() {
-        const { cells, columns, children } = this.props;
+        const { cells, columns, children, rowRender, rowIndex} = this.props;
         const unexpandable = !children;
 
         return (
@@ -73,6 +73,8 @@ class TableRowExpandable extends Component {
                     onKeyDown={this.handleKeyPress}
                     expandable={!unexpandable}
                     expanded={this.state.expanded}
+                    rowRender={rowRender}
+                    rowIndex={rowIndex}
                 />
                 <tr
                     role="presentation"
@@ -104,6 +106,10 @@ TableRowExpandable.propTypes = {
     cells: PropTypes.object.isRequired,
     columns: PropTypes.array.isRequired,
     sort: PropTypes.object,
+    rowRender: PropTypes.func,
+    headerRender: PropTypes.func,
+    footerRender: PropTypes.func,
+    rowIndex: PropTypes.number
 };
 
 export default TableRowExpandable;

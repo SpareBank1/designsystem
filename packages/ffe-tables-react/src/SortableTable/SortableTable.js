@@ -141,6 +141,9 @@ class SortableTable extends Component {
             offset,
             srOnlyCaption,
             className,
+            rowRender,
+            headerRender,
+            footerRender,
         } = this.props;
         const { sortBy, descending } = this.state;
 
@@ -169,6 +172,9 @@ class SortableTable extends Component {
                 offset={offset}
                 sort={{ sortBy, descending }}
                 className={className}
+                rowRender={rowRender}
+                headerRender={headerRender}
+                footerRender={footerRender}
             />
         );
     }
@@ -190,6 +196,9 @@ SortableTable.propTypes = {
     sortBy: PropTypes.string,
     descending: PropTypes.bool,
     onSort: PropTypes.func,
+    rowRender: PropTypes.func,
+    headerRender: PropTypes.func,
+    footerRender: PropTypes.func,
     className: PropTypes.string,
 };
 

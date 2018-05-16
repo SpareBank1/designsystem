@@ -47,6 +47,21 @@ Table.propTypes = {
     /** Decide if your table rows should break into a vertical view on small or no devices */
     breakpoint: oneOf(['sm', 'none']),
     /**
+     * Override rendering of rows with a prop
+     * rowRender={(props, rowcontent, trprops, index)=>{return <tr {...trprops}>{rowcontent}</tr>}}
+     */
+    rowRender: func,
+    /**
+     * Override rendering of headers with a prop
+     * headerRender={(props, rowcontent, trprops) => {return <tr {...trprops}>{rowcontent}</tr>}}
+     */
+    headerRender: func,
+    /**
+     * Override rendering of footer with a prop
+     * footerRender={(props, rowcontent, trprops) => {return <tr {...trprops}>{rowcontent}</tr>}}
+     */
+    footerRender: func,
+    /**
      * An array of objects with keys equal to the columns array's key value, and value equal to whatever you
      * want in your cell. These are basically an array of rows
      **/
@@ -75,6 +90,9 @@ Table.propTypes = {
             compare: func,
             /** Disable column from sorting. Not needed if heading is an empty string */
             notSortable: bool,
+            cellRender: func,
+            columnHeaderRender: func,
+            columnFooterRender: func,
         }).isRequired,
     ),
     /** Class names set in addition to the ffe tables classes. */
