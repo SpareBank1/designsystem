@@ -106,4 +106,17 @@ describe('<Checkbox />', () => {
         );
         expect(wrapper.find('input').prop('tabIndex')).toBe(-1);
     });
+
+    it('should render children if it is a function', () => {
+        const wrapper = shallow(
+            <Checkbox>
+                { labelProps => (
+// eslint-disable-next-line jsx-a11y/label-has-for
+                    <label {...labelProps}>Hello world</label>
+                ) }
+            </Checkbox>
+        );
+
+        expect(wrapper.find('label').prop('children')).toBe('Hello world');
+    });
 });
