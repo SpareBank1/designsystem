@@ -38,7 +38,7 @@ Du kan merke at et felt er ugyldig ved å sette `aria-invalid="true"`:
 </CheckBox>
 ```
 
-Du kan kan sende inn en callback-funksjon som blir kalt hver gang verdien i checkboxen endrer
+Du kan sende inn en callback-funksjon som blir kalt hver gang verdien i checkboxen endrer
 seg med `onChange`:
 
 ```js
@@ -48,6 +48,20 @@ seg med `onChange`:
 >
     Trykk for å lære litt om meg
 </CheckBox>
+```
+
+Du kan forhindre at click-event bobler opp fra checkboxen.
+Dette kan være nyttig dersom området rundt checkboxen er klikkbart.
+
+```js
+<div style={ { background: '#ccc', width: '150px' } } onClick={ () => alert('Jeg skal ikke komme frem når du bruker checkboxen') }>
+    <CheckBox
+        name="clicked"
+        stopPropagation
+    >
+        Trykk utenfor label for en alert
+    </CheckBox>
+</div>
 ```
 
 Komponenten videresender alle udokumenterte props til `<input />`-elementet.
