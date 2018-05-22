@@ -19,6 +19,24 @@
     }
 })();
 
+const toggleColorSection = document.querySelectorAll('.sb1ds-color-toggle');
+[].forEach.call(toggleColorSection, function(toggleColor) {
+    toggleColor.addEventListener('click', function(evt) {
+        if (!toggleColor.classList.contains('ffe-tab-button--selected')) {
+            var sectionId = toggleColor.id;
+            var section = document.querySelector('.'+sectionId);
+            var otherSectionBtn = document.querySelector('.sb1ds-color-toggle.ffe-tab-button--selected');
+            var otherSectionId = otherSectionBtn.id;
+            var otherSection = document.querySelector('.'+otherSectionId);
+
+            toggleColor.classList.add('ffe-tab-button--selected');
+            section.classList.add('sb1ds-color-section--active');
+            otherSectionBtn.classList.remove('ffe-tab-button--selected');
+            otherSection.classList.remove('sb1ds-color-section--active');
+        }
+    });
+});
+
 const togglePlay = document.querySelectorAll('.sb1ds-svgcontainer');
 [].forEach.call(togglePlay, function(play) {
     play.addEventListener('click', function(evt) {
