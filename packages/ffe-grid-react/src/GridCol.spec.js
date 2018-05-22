@@ -89,6 +89,12 @@ describe('GridCol', () => {
         expect(el.hasClass('ffe-grid__col--top')).toBe(true);
     });
 
+    it('sets the top-padding modifier', () => {
+        const el = renderShallow({ topPadding: true });
+
+        expect(el.hasClass('ffe-grid__col--top-padding')).toBe(true);
+    });
+
     it('sets background color class if valid', () => {
         backgroundColors.forEach(background => {
             const el = renderShallow({ background });

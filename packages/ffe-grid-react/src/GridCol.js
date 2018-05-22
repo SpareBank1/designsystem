@@ -34,6 +34,7 @@ const MODIFIER_LIST = [
     'start',
     'centerText',
     'top',
+    'topPadding',
 ];
 
 const sizeClasses = (size, def) => {
@@ -146,6 +147,8 @@ GridCol.propTypes = {
     start: bool,
     /** Place content elements at the top of the column */
     top: bool,
+    /** If true, column receives top padding. Useful for when you have background colored columns */
+    topPadding: bool,
     /** Size modifiers for small screen sizes */
     sm: oneOfType([
         /** Number of columns, 0-12 */
