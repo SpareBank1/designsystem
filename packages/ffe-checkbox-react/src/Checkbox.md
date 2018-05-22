@@ -50,4 +50,13 @@ seg med `onChange`:
 </CheckBox>
 ```
 
+Du kan sende inn children som en funksjon, for å rendre din egen label. Funksjonen mottar props
+du kan spre på labelen.
+
+```js
+<CheckBox>
+    { labelProps => <label { ...labelProps }>Her benyttes render props</label> }
+</CheckBox>
+```
+
 Komponenten videresender alle udokumenterte props til `<input />`-elementet.
