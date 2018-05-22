@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="12.1.0"></a>
+# [12.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@12.0.6...@sb1/ffe-core@12.1.0) (2018-05-22)
+
+
+### Features
+
+* **ffe-core:** Deprecate unused color variables, add new color ([f2e77f8](https://github.com/SpareBank1/designsystem/commit/f2e77f8))
+
+
+
+
       <a name="12.0.6"></a>
 ## [12.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@12.0.5...@sb1/ffe-core@12.0.6) (2018-05-04)
 
@@ -14,7 +25,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="12.0.5"></a>
+    <a name="12.0.5"></a>
 ## [12.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@12.0.4...@sb1/ffe-core@12.0.5) (2018-05-03)
 
 
@@ -22,7 +33,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-core
 
-    <a name="12.0.4"></a>
+  <a name="12.0.4"></a>
 ## [12.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@12.0.3...@sb1/ffe-core@12.0.4) (2018-04-11)
 
 
@@ -30,7 +41,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-core
 
-  <a name="12.0.3"></a>
+<a name="12.0.3"></a>
 ## [12.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@12.0.2...@sb1/ffe-core@12.0.3) (2018-04-10)
 
 
