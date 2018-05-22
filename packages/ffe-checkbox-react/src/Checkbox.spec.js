@@ -119,4 +119,16 @@ describe('<Checkbox />', () => {
 
         expect(wrapper.find('label').prop('children')).toBe('Hello world');
     });
+
+    it('should render with a hidden label', () => {
+        const wrapper = getWrapper({ 'aria-label': 'I am label', hiddenLabel: true });
+
+        const label = wrapper.find('.ffe-checkbox--hidden-label');
+        const input = wrapper.find('.ffe-hidden-checkbox');
+
+        expect(label.exists()).toBe(true);
+        expect(label.children()).toHaveLength(0);
+        expect(input.exists()).toBe(true);
+        expect(input.prop('aria-label')).toBe('I am label');
+    });
 });

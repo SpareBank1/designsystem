@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { bool, node, string, func, oneOfType } from 'prop-types';
 import { v4 as hash } from 'uuid';
 import classNames from 'classnames';
 
 export default function CheckBox(props) {
-    const { children, inline, invalid, label, noMargins, ...rest } = props;
+    const {
+        children,
+        hiddenLabel,
+        inline,
+        invalid,
+        label,
+        noMargins,
+        ...rest
+    } = props;
 
     const id = props.id || `checkbox-${hash()}`;
     const labelProps = {
@@ -12,12 +20,14 @@ export default function CheckBox(props) {
             'ffe-checkbox': true,
             'ffe-checkbox--inline': inline,
             'ffe-checkbox--no-margin': noMargins,
+            'ffe-checkbox--hidden-label': hiddenLabel,
         }),
         htmlFor: id,
     };
+    const LabelElement = hiddenLabel ? 'span' : 'label';
 
     return (
-        <span>
+        <Fragment>
             <input
                 className="ffe-hidden-checkbox"
                 id={id}
@@ -30,12 +40,12 @@ export default function CheckBox(props) {
                     ? children(labelProps)
                     : (
 // eslint-disable-next-line jsx-a11y/label-has-for
-                        <label {...labelProps}>
-                            {label || children}
-                        </label>
+                        <LabelElement {...labelProps}>
+                            {!hiddenLabel && (label || children)}
+                        </LabelElement>
                     )
             }
-        </span>
+        </Fragment>
     );
 }
 
@@ -47,6 +57,8 @@ CheckBox.propTypes = {
     label: string,
     /** Removes vertical margins from the checkbox */
     noMargins: bool,
+    /** If you plan to render the checkbox without a visible label */
+    hiddenLabel: bool,
     /** Override the automatically generated ID */
     id: string,
     inline: bool,
