@@ -1,5 +1,5 @@
 import React from 'react';
-import { bool, node, string } from 'prop-types';
+import { bool, node, string, func, oneOfType } from 'prop-types';
 import { v4 as hash } from 'uuid';
 import classNames from 'classnames';
 
@@ -7,6 +7,14 @@ export default function CheckBox(props) {
     const { children, inline, invalid, label, noMargins, ...rest } = props;
 
     const id = props.id || `checkbox-${hash()}`;
+    const labelProps = {
+        className: classNames({
+            'ffe-checkbox': true,
+            'ffe-checkbox--inline': inline,
+            'ffe-checkbox--no-margin': noMargins,
+        }),
+        htmlFor: id,
+    };
 
     return (
         <span>
@@ -17,16 +25,16 @@ export default function CheckBox(props) {
                 aria-invalid={String(invalid)}
                 {...rest}
             />
-            <label
-                className={classNames({
-                    'ffe-checkbox': true,
-                    'ffe-checkbox--inline': inline,
-                    'ffe-checkbox--no-margin': noMargins,
-                })}
-                htmlFor={id}
-            >
-                {label || children}
-            </label>
+            {
+                typeof children === 'function'
+                    ? children(labelProps)
+                    : (
+// eslint-disable-next-line jsx-a11y/label-has-for
+                        <label {...labelProps}>
+                            {label || children}
+                        </label>
+                    )
+            }
         </span>
     );
 }
@@ -48,7 +56,7 @@ CheckBox.propTypes = {
      */
     invalid: bool,
     /** The label for the checkbox */
-    children: node,
+    children: oneOfType([node, func]),
 };
 
 CheckBox.defaultProps = {
