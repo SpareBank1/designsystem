@@ -52,6 +52,16 @@
         background-color: @ffe-white;
     }
 
+    &--hidden-label {
+        margin: 0;
+        padding-left: 20px;
+        padding-bottom: 20px;
+
+        &::before {
+            margin-right: 0;
+        }
+    }
+
     &::after {
         transform: scaleX(-1) rotate(180deg + -45deg);
         transform-origin: left top;
