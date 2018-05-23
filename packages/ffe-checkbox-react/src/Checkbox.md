@@ -30,6 +30,17 @@ Kan komme under hverandre også, ved å sende inn `inline={false}`:
 </fieldset>
 ```
 
+Dersom du skal ha en skjult label, brukes `hiddenLabel={true}` og label sendes inn via en `aria-label` prop og ikke som en child:
+
+```js
+    <CheckBox
+        defaultChecked={true}
+        aria-label="Jeg har en ingen label"
+        hiddenLabel={true}
+        inline={false}
+    />
+```
+
 Du kan merke at et felt er ugyldig ved å sette `aria-invalid="true"`:
 
 ```js
