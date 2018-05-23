@@ -1,6 +1,7 @@
 # @sb1/ffe-core
 
 **ffe-core** has Less common to all components in FFE - typography, colors, etc.
+It also includes JavaScript exports for color and breakpoint variables.
 
 ## Install
 
@@ -37,3 +38,20 @@ I noe tilfeller trenger man kanskje kun deler av ffe-core. Derfor kan hver fil i
 @import '~@sb1/ffe-core/less/typography';
 @import '~@sb1/ffe-core/less/accessibility';
 ```
+
+### JavaScript variables
+
+The colors and breakpoint LESS variables specified in this package are also
+available as named JavaScript imports. This can be useful for consumers that use
+CSS-in-JS, or that need access to these values in their JavaScript for other
+reasons. They are named the same as their LESS siblings, but are camelCased, and
+are without their `@ffe-` prefix.
+
+This is how you import them:
+```js
+import { greyCharcoal, white, breakpointMd } from 'ffe-core';
+```
+
+Please refer to the [`colors.less`](https://github.com/SpareBank1/designsystem/blob/develop/packages/ffe-core/less/colors.less)
+and [`breakpoints.less`](https://github.com/SpareBank1/designsystem/blob/develop/packages/ffe-core/less/breakpoints.less)
+files for a full list of exported variables.
