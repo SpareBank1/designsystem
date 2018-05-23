@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="9.2.1"></a>
+## [9.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.2.0...@sb1/ffe-form@9.2.1) (2018-05-23)
+
+
+### Bug Fixes
+
+* **ffe-form:** fix placeholder color for input field some more ([066cc8a](https://github.com/SpareBank1/designsystem/commit/066cc8a)), closes [#240](https://github.com/SpareBank1/designsystem/issues/240)
+* **ffe-form:** fix placeholder color for searchable dropdown ([b2ca371](https://github.com/SpareBank1/designsystem/commit/b2ca371)), closes [#240](https://github.com/SpareBank1/designsystem/issues/240)
+
+
+
+
       <a name="9.2.0"></a>
 # [9.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.1.8...@sb1/ffe-form@9.2.0) (2018-05-23)
 
@@ -14,7 +26,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="9.1.8"></a>
+    <a name="9.1.8"></a>
 ## [9.1.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.1.7...@sb1/ffe-form@9.1.8) (2018-05-22)
 
 
@@ -22,7 +34,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-form
 
-    <a name="9.1.7"></a>
+  <a name="9.1.7"></a>
 ## [9.1.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.1.6...@sb1/ffe-form@9.1.7) (2018-05-15)
 
 
@@ -33,7 +45,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-  <a name="9.1.6"></a>
+<a name="9.1.6"></a>
 ## [9.1.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.1.5...@sb1/ffe-form@9.1.6) (2018-05-15)
 
 

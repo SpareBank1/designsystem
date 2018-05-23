@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.1.0"></a>
+# [3.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@3.0.0...@sb1/ffe-core-react@3.1.0) (2018-05-23)
+
+
+### Features
+
+* **ffe-core-react:** Expose named exports ([4efe35a](https://github.com/SpareBank1/designsystem/commit/4efe35a))
+
+
+
+
 <a name="3.0.0"></a>
 # [3.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@2.0.3...@sb1/ffe-core-react@3.0.0) (2018-04-10)
 
