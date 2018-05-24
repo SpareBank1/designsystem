@@ -1,4 +1,4 @@
-Message Box bør brukes når man skal vise informasjon til bruker, som at en oppdatering har feilet eller at tjenester er
+Meldingsbokser bør brukes når man skal vise informasjon til bruker, som at en oppdatering har feilet eller at tjenester er
 nede.
 
 Keep it short and simple! Det skal være reelle tips/informasjon til brukeren, ikke informasjon vi ønsker å forklare her
