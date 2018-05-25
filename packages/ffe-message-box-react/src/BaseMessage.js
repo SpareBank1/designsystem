@@ -2,7 +2,7 @@ import React from 'react';
 import { node, oneOf, string } from 'prop-types';
 import classNames from 'classnames';
 
-const MessageBox = props => {
+const BaseMessage = props => {
     const {
         type,
         title,
@@ -46,17 +46,10 @@ const MessageBox = props => {
     );
 };
 
-MessageBox.propTypes = {
-    /** The content of the message box */
+BaseMessage.propTypes = {
     children: node,
-    /** Any extra class names to the wrapping DOM node */
     className: string,
-    /**
-     * Deprecated. Use `children` instead.
-     * @deprecated
-     */
     content: node,
-    /** The icon to show. Has a default value for each message box type, but can be overridden */
     icon: node.isRequired,
     title: node,
     /**
@@ -66,4 +59,4 @@ MessageBox.propTypes = {
     type: oneOf(['success', 'error', 'tips', 'info']).isRequired,
 };
 
-export default MessageBox;
+export default BaseMessage;
