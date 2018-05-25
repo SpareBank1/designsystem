@@ -7,5 +7,9 @@ export default [
     'grey-cloud',
     'purple-magenta',
     'sand',
+    'grey-warm',
+    'orange-salmon',
+    'red',
+    'blue-sky',
 ];
 

@@ -115,7 +115,20 @@ GridCol.defaultProps = {
 
 GridCol.propTypes = {
     /** Supported background colors */
-    background: oneOf(backgroundColors),
+    background: oneOf([
+        'blue-cobalt',
+        'blue-ice',
+        'blue-pale',
+        'blue-royal',
+        'green-mint',
+        'grey-cloud',
+        'purple-magenta',
+        'sand',
+        'grey-warm',
+        'orange-salmon',
+        'red',
+        'blue-sky',
+    ]),
     /** Any extra classes are attached to the root node, in addition to ffe-grid__col classes */
     className: string,
     /** Specify the DOM element being used to create the GridCol */

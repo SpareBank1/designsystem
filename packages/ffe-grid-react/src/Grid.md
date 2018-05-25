@@ -48,6 +48,10 @@ const backgroundColors = [
     'grey-cloud',
     'purple-magenta',
     'sand',
+    'grey-warm',
+    'orange-salmon',
+    'red',
+    'blue-sky',
 ];
 initialState = { selected: backgroundColors[0] };
 <Grid>
@@ -91,6 +95,10 @@ const backgroundColors = [
     'grey-cloud',
     'purple-magenta',
     'sand',
+    'grey-warm',
+    'orange-salmon',
+    'red',
+    'blue-sky',
 ];
 initialState = { selected: backgroundColors[0] };
 
