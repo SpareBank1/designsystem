@@ -3,9 +3,10 @@
   "version": "12.1.0",
   "description": "Rammeverk for Felles Front End",
   "license": "MIT",
+  "main": "lib/index.js",
   "author": "SpareBank 1",
   "files": [
-    "fonts",
+    "lib",
     "less"
   ],
   "repository": {
@@ -14,9 +15,14 @@
   },
   "scripts": {
     "lint": "stylelint less/*.less",
-    "test": "npm run lint"
+    "test": "npm run lint",
+    "prebuild": "rimraf lib",
+    "build": "node ./bin/build.js"
   },
   "devDependencies": {
+    "case": "^1.5.5",
+    "mkdirp": "^0.5.1",
+    "rimraf": "^2.6.2",
     "stylelint": "^8.4.0"
   },
   "publishConfig": {
