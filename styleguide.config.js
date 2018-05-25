@@ -187,6 +187,7 @@ module.exports = {
             sections: [
                 {
                     name: 'Meldinger, bokser',
+                    content: 'packages/ffe-message-box-react/USAGE.md',
                     components:
                         'packages/ffe-message-box-react/src/[A-Z]+([A-Za-z]).js',
                 },

@@ -1,12 +1,12 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import MessageBox from './MessageBox';
+import BaseMessage from './BaseMessage';
 
 const defaultProps = { type: 'info', icon: <svg id="icon" /> };
 const getWrapper = props =>
-    shallow(<MessageBox {...defaultProps} {...props} />);
+    shallow(<BaseMessage {...defaultProps} {...props} />);
 
-describe('<MessageBox />', () => {
+describe('<BaseMessage />', () => {
     it('renders without exploding', () => {
         const wrapper = getWrapper();
         expect(wrapper.exists()).toBe(true);
