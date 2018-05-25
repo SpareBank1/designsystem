@@ -101,6 +101,7 @@ class Input extends Component {
                         onMouseDown={this.onReset}
                         tabIndex={-1}
                         type="button"
+                        aria-label="reset"
                     >
                         <KryssIkon className="ffe-base-selector__reset-button-icon"/>
                     </button>
@@ -110,6 +111,7 @@ class Input extends Component {
                     onMouseDown={this.onExpandOrCollapse}
                     tabIndex={-1}
                     type="button"
+                    aria-label="expand"
                 >
                     <ChevronIkon
                         className={classNames(
