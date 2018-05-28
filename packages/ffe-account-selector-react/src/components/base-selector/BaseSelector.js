@@ -4,7 +4,7 @@ import autoBind from 'react-auto-bind';
 
 import Input from '../../subcomponents/input-field';
 import { SuggestionListContainer } from '../../subcomponents/suggestion';
-import { KeyCodes } from '../../util/types';
+import { KeyCodes, Locale } from '../../util/types';
 
 class BaseSelector extends Component {
     constructor(props) {
@@ -202,6 +202,7 @@ class BaseSelector extends Component {
             suggestions,
             onSuggestionSelect,
             readOnly,
+            locale
         } = this.props;
         const {
             showSuggestions,
@@ -230,6 +231,7 @@ class BaseSelector extends Component {
                     name={name}
                     readOnly={readOnly}
                     onExpandOrCollapseClick={this.onExpandOrCollapseClick}
+                    locale={locale}
                 />
                 {showSuggestions && (
                     <SuggestionListContainer
@@ -254,6 +256,7 @@ BaseSelector.propTypes = {
     suggestionFilter: func.isRequired,
     onSelect: func.isRequired,
     value: string.isRequired,
+    locale: Locale.isRequired,
     shouldHideSuggestionsOnSelect: bool.isRequired,
     shouldSelectHighlightedOnTab: bool.isRequired,
     shouldHideSuggestionsOnBlur: bool.isRequired,
@@ -284,7 +287,7 @@ BaseSelector.defaultProps = {
     ariaInvalid: false,
     placeholder: '',
     value: '',
-    shouldShowSuggestionsOnFocus: true,
+    shouldShowSuggestionsOnFocus: true
 };
 
 export default BaseSelector;

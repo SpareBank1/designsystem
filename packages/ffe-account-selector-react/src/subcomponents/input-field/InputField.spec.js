@@ -1,6 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
+
 import InputField from './InputField';
 
 
@@ -18,6 +19,7 @@ function renderInputField(
             id="id"
             readOnly={readOnly}
             onExpandOrCollapseClick={() => {}}
+            locale="nb"
         />
     );
 }
