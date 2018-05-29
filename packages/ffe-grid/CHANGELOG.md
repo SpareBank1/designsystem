@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="7.3.0"></a>
+# [7.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@7.2.4...@sb1/ffe-grid@7.3.0) (2018-05-29)
+
+
+### Bug Fixes
+
+* **ffe-grid:** Normalize padding and margin ([ea0a05e](https://github.com/SpareBank1/designsystem/commit/ea0a05e)), closes [#241](https://github.com/SpareBank1/designsystem/issues/241)
+
+
+### Features
+
+* **ffe-grid:** Add support for more backgrounds ([e225cd8](https://github.com/SpareBank1/designsystem/commit/e225cd8)), closes [#256](https://github.com/SpareBank1/designsystem/issues/256)
+
+
+
+
       <a name="7.2.4"></a>
 ## [7.2.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@7.2.3...@sb1/ffe-grid@7.2.4) (2018-05-22)
 
@@ -11,7 +27,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-grid
 
-      <a name="7.2.3"></a>
+    <a name="7.2.3"></a>
 ## [7.2.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@7.2.2...@sb1/ffe-grid@7.2.3) (2018-05-08)
 
 
@@ -19,7 +35,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-grid
 
-    <a name="7.2.2"></a>
+  <a name="7.2.2"></a>
 ## [7.2.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@7.2.1...@sb1/ffe-grid@7.2.2) (2018-05-04)
 
 
@@ -27,7 +43,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-grid
 
-  <a name="7.2.1"></a>
+<a name="7.2.1"></a>
 ## [7.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@7.2.0...@sb1/ffe-grid@7.2.1) (2018-05-03)
 
 
