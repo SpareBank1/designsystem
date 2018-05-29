@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="9.2.2"></a>
+## [9.2.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.2.1...@sb1/ffe-form@9.2.2) (2018-05-29)
+
+
+
+
+**Note:** Version bump only for package @sb1/ffe-form
+
       <a name="9.2.1"></a>
 ## [9.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.2.0...@sb1/ffe-form@9.2.1) (2018-05-23)
 
@@ -15,7 +23,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="9.2.0"></a>
+    <a name="9.2.0"></a>
 # [9.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.1.8...@sb1/ffe-form@9.2.0) (2018-05-23)
 
 
@@ -26,7 +34,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-    <a name="9.1.8"></a>
+  <a name="9.1.8"></a>
 ## [9.1.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.1.7...@sb1/ffe-form@9.1.8) (2018-05-22)
 
 
@@ -34,7 +42,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-form
 
-  <a name="9.1.7"></a>
+<a name="9.1.7"></a>
 ## [9.1.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.1.6...@sb1/ffe-form@9.1.7) (2018-05-15)
 
 

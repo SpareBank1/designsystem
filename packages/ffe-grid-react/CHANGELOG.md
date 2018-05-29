@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="7.3.0"></a>
+# [7.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@7.2.0...@sb1/ffe-grid-react@7.3.0) (2018-05-29)
+
+
+### Bug Fixes
+
+* **ffe-grid-react:** remove warning when running tests ([aeefcb3](https://github.com/SpareBank1/designsystem/commit/aeefcb3))
+
+
+### Features
+
+* **ffe-grid-react:** Add support for more backgrounds ([6a4062a](https://github.com/SpareBank1/designsystem/commit/6a4062a)), closes [#256](https://github.com/SpareBank1/designsystem/issues/256)
+
+
+
+
       <a name="7.2.0"></a>
 # [7.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@7.1.2...@sb1/ffe-grid-react@7.2.0) (2018-04-25)
 
@@ -14,7 +30,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="7.1.2"></a>
+    <a name="7.1.2"></a>
 ## [7.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@7.1.1...@sb1/ffe-grid-react@7.1.2) (2018-04-12)
 
 
@@ -22,7 +38,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-grid-react
 
-    <a name="7.1.1"></a>
+  <a name="7.1.1"></a>
 ## [7.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@7.1.0...@sb1/ffe-grid-react@7.1.1) (2018-03-27)
 
 
@@ -30,7 +46,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-grid-react
 
-  <a name="7.1.0"></a>
+<a name="7.1.0"></a>
 # [7.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@7.0.2...@sb1/ffe-grid-react@7.1.0) (2018-03-22)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-details-list-react",
-  "version": "2.0.6",
+  "version": "2.0.7",
   "license": "MIT",
   "author": "SpareBank 1",
   "files": [
@@ -23,7 +23,7 @@
     "setupTestFrameworkScriptFile": "../../test-setup.js"
   },
   "dependencies": {
-    "@sb1/ffe-grid-react": "^7.2.0",
+    "@sb1/ffe-grid-react": "^7.3.0",
     "classnames": "^2.2.5"
   },
   "devDependencies": {
