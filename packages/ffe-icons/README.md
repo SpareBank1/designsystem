@@ -125,12 +125,7 @@ Also before starting, verify your SVG meets the criteria listed in *icons/_ICON_
 2. Clean up the SVG markup [^3].
 3. Add the icon SVG to the `icons/` folder [^1].
 4. Verify that the icon looks OK relative to the others (padding etc) [^2].
-5. Update `CHANGELOG.md` with a new entry for the next version.
-6. Update package.json with the new version
-7. Update the baseline-screenshot so the visual regression testing doesn't fail (see below)
-8. Commit your changes to the feature branch, and push the changes to `origin`.
-9. Make sure you have at least one successful build on jenkins (feature branches are built automatically)
-10. Create a pull request from your repos feature branch to ffe-icons `master`.
+5. Create a pull request from your repos feature branch to ffe-icons `master`.
 
 ###### Footnotes
 
