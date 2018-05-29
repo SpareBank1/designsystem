@@ -6,6 +6,8 @@ import autoBind from 'react-auto-bind';
 import KryssIkon from '@sb1/ffe-icons-react/lib/kryss-ikon';
 import ChevronIkon from '@sb1/ffe-icons-react/lib/chevron-ikon';
 import classNames from 'classnames';
+import txt from '../../i18n/i18n';
+import { Locale } from '../../util/types';
 
 class Input extends Component {
     constructor(props) {
@@ -63,6 +65,7 @@ class Input extends Component {
             suggestionListId,
             name,
             readOnly,
+            locale
         } = this.props;
 
         const showReset = !readOnly && value.length > 0;
@@ -101,6 +104,7 @@ class Input extends Component {
                         onMouseDown={this.onReset}
                         tabIndex={-1}
                         type="button"
+                        aria-label={txt[locale].RESET_SEARCH}
                     >
                         <KryssIkon className="ffe-base-selector__reset-button-icon"/>
                     </button>
@@ -110,6 +114,7 @@ class Input extends Component {
                     onMouseDown={this.onExpandOrCollapse}
                     tabIndex={-1}
                     type="button"
+                    aria-label={isSuggestionsShowing ? txt[locale].ACCOUNTSLIST_CLOSE : txt[locale].ACCOUNTSLIST_OPEN}
                 >
                     <ChevronIkon
                         className={classNames(
@@ -141,6 +146,7 @@ Input.propTypes = {
     highlightedIndex: number,
     suggestionListId: string,
     name: string,
+    locale: Locale.isRequired
 };
 
 Input.defaultProps = {
