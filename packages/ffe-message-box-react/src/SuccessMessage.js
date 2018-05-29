@@ -5,15 +5,10 @@ import HakeIkon from '@sb1/ffe-icons-react/lib/hake-ikon';
 
 import BaseMessage from './BaseMessage';
 
-const iconStyles = {
-    width: '40px',
-    height: '40px',
-};
-
 const SuccessMessage = props => (
     <BaseMessage
         type="success"
-        icon={<HakeIkon style={iconStyles} />}
+        icon={<HakeIkon />}
         {...props}
     />
 );

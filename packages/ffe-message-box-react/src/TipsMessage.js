@@ -5,15 +5,10 @@ import LyspareIkon from '@sb1/ffe-icons-react/lib/lyspare-ikon';
 
 import BaseMessage from './BaseMessage';
 
-const iconStyles = {
-    width: '40px',
-    height: '40px',
-};
-
 const TipsMessage = props => (
     <BaseMessage
         type="tips"
-        icon={<LyspareIkon style={iconStyles} />}
+        icon={<LyspareIkon />}
         {...props}
     />
 );
