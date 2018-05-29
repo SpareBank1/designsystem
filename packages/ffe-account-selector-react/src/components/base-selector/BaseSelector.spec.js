@@ -18,6 +18,7 @@ function propsBaseSelector(_suggestions = suggestions()) {
         renderSuggestion: () => <h1>hei</h1>,
         onSuggestionSelect: suggestion => {},
         value: '',
+        locale: 'nb',
         shouldHideSuggestionsOnSelect: true,
         shouldSelectHighlightedOnTab: true,
         shouldHideSuggestionsOnBlur: true,

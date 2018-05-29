@@ -96,6 +96,7 @@ class AccountSelector extends Component {
                     {...this.props}
                     onSelect={this.onAccountSelect}
                     onChange={this.onInputChange}
+                    locale={locale}
                 />
                 {selectedAccount && (
                     <AccountDetails
