@@ -24,7 +24,6 @@ export default function CheckBox(props) {
         }),
         htmlFor: id,
     };
-    const LabelElement = hiddenLabel ? 'span' : 'label';
 
     return (
         <Fragment>
@@ -40,9 +39,9 @@ export default function CheckBox(props) {
                     ? children(labelProps)
                     : (
 // eslint-disable-next-line jsx-a11y/label-has-for
-                        <LabelElement {...labelProps}>
+                        <label {...labelProps}>
                             {!hiddenLabel && (label || children)}
-                        </LabelElement>
+                        </label>
                     )
             }
         </Fragment>
