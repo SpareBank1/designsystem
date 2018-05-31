@@ -19,6 +19,7 @@ export default class Input extends Component {
     render() {
         const {
             ariaInvalid,
+            id,
             inputProps = {},
             onBlur,
             onChange,
@@ -33,6 +34,7 @@ export default class Input extends Component {
                     aria-invalid={String(
                         this.props['aria-invalid'] || ariaInvalid,
                     )}
+                    id={id}
                     maxLength="10"
                     onFocus={onFocus}
                     onBlur={onBlur}
@@ -54,6 +56,7 @@ export default class Input extends Component {
 Input.propTypes = {
     'aria-invalid': string,
     ariaInvalid: oneOfType([bool, string]),
+    id: string,
     inputProps: shape({
         className: string,
     }),

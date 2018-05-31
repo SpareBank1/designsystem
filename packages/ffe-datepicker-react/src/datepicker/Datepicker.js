@@ -284,6 +284,7 @@ export default class Datepicker extends Component {
         const {
             hideErrors,
             inputProps = {},
+            id,
             label,
             language,
             onChange,
@@ -328,6 +329,7 @@ export default class Datepicker extends Component {
                 >
                     <DateInput
                         aria-invalid={this.ariaInvalid()}
+                        id={id}
                         inputProps={inputProps}
                         onBlur={this.onInputBlur}
                         onChange={evt => onChange(evt.target.value)}
@@ -382,10 +384,10 @@ Datepicker.propTypes = {
     ariaInvalid: oneOfType([bool, string]),
     calendarAbove: bool,
     hideErrors: bool,
+    id: string,
     onValidationComplete: func,
-    inputProps: shape({
+    inputProps: shape({ 
         className: string,
-        id: string,
     }),
     label: string,
     language: string,
