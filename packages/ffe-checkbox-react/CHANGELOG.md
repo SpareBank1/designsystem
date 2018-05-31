@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="5.2.1"></a>
+## [5.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-checkbox-react@5.2.0...@sb1/ffe-checkbox-react@5.2.1) (2018-05-31)
+
+
+### Bug Fixes
+
+* **ffe-checkbox-react:** Fix hidden label boxes ([f6d5c7f](https://github.com/SpareBank1/designsystem/commit/f6d5c7f))
+
+
+
+
       <a name="5.2.0"></a>
 # [5.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-checkbox-react@5.1.0...@sb1/ffe-checkbox-react@5.2.0) (2018-05-23)
 
@@ -14,7 +25,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="5.1.0"></a>
+    <a name="5.1.0"></a>
 # [5.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-checkbox-react@5.0.3...@sb1/ffe-checkbox-react@5.1.0) (2018-05-22)
 
 
@@ -25,7 +36,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-  <a name="5.0.3"></a>
+<a name="5.0.3"></a>
 ## [5.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-checkbox-react@5.0.2...@sb1/ffe-checkbox-react@5.0.3) (2018-03-27)
 
 
