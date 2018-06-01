@@ -1,0 +1,35 @@
+.ffe-generic-card {
+    &:extend(.ffe-body-text);
+
+    background: @ffe-white;
+    box-shadow: 0 1px 4px 0 rgba(38, 38, 38, .3);
+    display: flex;
+    margin: 0 0 10px;
+    padding: 10px 20px;
+    border: 2px solid @ffe-white;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.2s;
+    width: 100%;
+    text-decoration: none;
+
+    &:focus {
+        box-shadow: 0 0 0 2px @ffe-blue-focus;
+    }
+
+    &:focus,
+    &:active,
+    &:hover {
+        border-color: @ffe-blue-azure;
+    }
+
+    @media screen and (min-width: @breakpoint-md) {
+        margin-bottom: 20px;
+        padding: 15px 20px;
+    }
+
+    @media screen and (min-width: @breakpoint-lg) {
+        margin-bottom: 40px;
+    }
+}
