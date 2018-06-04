@@ -25,7 +25,7 @@ const StatusBar = ({
             </div>
             <button
                 type="button"
-                className="ffe-primary-button ffe-account-selector__statusbar-button"
+                className="ffe-button ffe-button--primary ffe-account-selector__statusbar-button"
                 tabIndex="0"
                 onMouseDown={onDone}
                 onKeyDown={onKeyDown}
