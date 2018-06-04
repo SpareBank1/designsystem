@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.0.10"></a>
+## [6.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@6.0.9...@sb1/ffe-cards@6.0.10) (2018-06-04)
+
+
+
+
+**Note:** Version bump only for package @sb1/ffe-cards
+
 <a name="6.0.9"></a>
 ## [6.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@6.0.8...@sb1/ffe-cards@6.0.9) (2018-05-29)
 

@@ -1,6 +1,7 @@
 {
-  "name": "@sb1/ffe-tables",
-  "version": "9.0.10",
+  "name": "@sb1/ffe-layout-legacy",
+  "version": "1.0.1",
+  "description": "Deprecated layout system",
   "license": "MIT",
   "author": "SpareBank 1",
   "files": [
@@ -14,12 +15,8 @@
     "lint": "stylelint less/*.less",
     "test": "npm run lint"
   },
-  "devDependencies": {
-    "@sb1/ffe-core": "^13.0.0",
-    "stylelint": "^8.4.0"
-  },
   "peerDependencies": {
-    "@sb1/ffe-core": "^12.0.0"
+    "@sb1/ffe-core": "^12.2.0"
   },
   "publishConfig": {
     "access": "public"
