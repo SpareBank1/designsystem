@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-core",
-  "version": "12.2.0",
+  "version": "13.0.0",
   "description": "Rammeverk for Felles Front End",
   "license": "MIT",
   "main": "lib/index.js",
