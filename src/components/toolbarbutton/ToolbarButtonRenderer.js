@@ -4,8 +4,10 @@ import PropTypes from 'prop-types';
 export function ToolbarButtonRenderer({ onClick, href, title, children }) {
     if (href !== undefined) {
         return (
-            <a href={href} title={title} className="sb1ds-toolbar-button">
-                {children}
+            <a href={href} title={title} className="sb1ds-toolbar-button ffe-inline-button ffe-inline-button--tertiary">
+                <span class="ffe-inline-button__label sb1ds-toolbar-button__label">
+                    {children}
+                </span>
             </a>
         );
     }
@@ -15,9 +17,11 @@ export function ToolbarButtonRenderer({ onClick, href, title, children }) {
             type="button"
             onClick={onClick}
             title={title}
-            className="sb1ds-toolbar-button"
+            className="sb1ds-toolbar-button ffe-inline-button ffe-inline-button--tertiary"
         >
-            {children}
+            <span class="ffe-inline-button__label sb1ds-toolbar-button__label">
+                {children}
+            </span>
         </button>
     );
 }
