@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="8.0.0"></a>
+# [8.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@7.1.13...@sb1/ffe-buttons@8.0.0) (2018-06-06)
+
+
+### Bug Fixes
+
+* **ffe-buttons:** Stop buttons from breaking ([93e2956](https://github.com/SpareBank1/designsystem/commit/93e2956)), closes [#264](https://github.com/SpareBank1/designsystem/issues/264)
+
+
+### BREAKING CHANGES
+
+* **ffe-buttons:** This commit makes sure our buttons stay on one line.
+Previously, they were allowed to break on to two lines - which was not
+allowed according to our design.
+
+This change is marked as breaking, since there's a big change this will
+impact some design (especially on mobile). In order to migrate, click
+through your app and make sure you don't have any very long button
+texts.
+
+
+
+
       <a name="7.1.13"></a>
 ## [7.1.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@7.1.12...@sb1/ffe-buttons@7.1.13) (2018-06-06)
 
@@ -14,7 +37,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="7.1.12"></a>
+    <a name="7.1.12"></a>
 ## [7.1.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@7.1.11...@sb1/ffe-buttons@7.1.12) (2018-06-04)
 
 
@@ -22,7 +45,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-buttons
 
-    <a name="7.1.11"></a>
+  <a name="7.1.11"></a>
 ## [7.1.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@7.1.10...@sb1/ffe-buttons@7.1.11) (2018-05-29)
 
 
@@ -30,7 +53,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-buttons
 
-  <a name="7.1.10"></a>
+<a name="7.1.10"></a>
 ## [7.1.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@7.1.9...@sb1/ffe-buttons@7.1.10) (2018-05-22)
 
 
