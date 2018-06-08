@@ -46,10 +46,6 @@ module.exports = {
                     content: 'stil-og-tone/verdier.md',
                 },
                 {
-                    name: 'Vår kampsak',
-                    content: 'stil-og-tone/kampsak.md',
-                },
-                {
                     name: 'Unikt for oss',
                     content: 'stil-og-tone/unikt-for-oss.md',
                 },
