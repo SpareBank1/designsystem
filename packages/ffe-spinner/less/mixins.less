@@ -1,23 +1,19 @@
-/*
-    Spinner: Commonly found on buttons and loading pages
-*/
+@keyframes ffe-spinner-animation {
+    0% {
+        transform: rotateZ(0);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
 .ffe-sb1-spinner(@color: @ffe-blue-deep-sky, @size: 20px) {
+    animation: ffe-spinner-animation 1s linear infinite;
+    border: 3px solid @color;
+    border-radius: @size;
+    border-top-color: transparent;
     content: ' ';
     display: inline-block;
-    width: @size;
     height: @size;
-    border: 3px solid @color;
-    border-top-color: transparent;
-    border-radius: 50%;
-    visibility: visible;
-    animation: spindindust 1s linear infinite;
-
-    @keyframes spindindust {
-        0% {
-            transform: rotate(0);
-        }
-        100% {
-            transform: rotate(360deg);
-        }
-    }
+    width: @size;
 }
