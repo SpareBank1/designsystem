@@ -4,7 +4,9 @@ grønn) på en side.
 
 ```js
 <ActionButton
-    onClick={() => { alert('Hei!'); }}
+    onClick={() => {
+        alert('Hei!');
+    }}
 >
     Klikk på meg!
 </ActionButton>
@@ -16,7 +18,9 @@ Denne knappen er hvit med grønn outline og grønn tekst.
 
 ```js
 <ActionButton
-    onClick={() => { alert('Bø!'); }}
+    onClick={() => {
+        alert('Bø!');
+    }}
     ghost={true}
 >
     Spooky!
@@ -26,14 +30,18 @@ Denne knappen er hvit med grønn outline og grønn tekst.
 For å vise at noe skjer når bruker har trykket på en knapp, og dersom systemet
 er veldig treigt, vil det bli vist en progressindikator – spinner – på knappen.
 
-
 ```js
 initialState = { isLoading: false };
+const toggleLoading = () => setState({ isLoading: !state.isLoading });
+
 <ActionButton
     isLoading={state.isLoading}
-    onClick={() => setState({ isLoading: !state.isLoading })}
+    onClick={() => {
+        setState({ isLoading: true });
+        setTimeout(() => setState({ isLoading: false }), 4000);
+    }}
     ariaLoadingMessage="Jeg jobber med saken..."
 >
     Klikk for å laste!
-</ActionButton>
+</ActionButton>;
 ```
