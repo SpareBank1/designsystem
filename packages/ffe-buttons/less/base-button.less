@@ -26,7 +26,6 @@
 //
 // Styleguide ffe-buttons.base-button.1
 
-
 // More Buttons
 //
 // Markup:
@@ -38,7 +37,6 @@
 // --task     - Task
 //
 // Styleguide ffe-buttons.base-button.2
-
 
 // Expand Button
 //
@@ -61,7 +59,7 @@
     color: @ffe-white;
     cursor: pointer;
     display: flex;
-    font-family: "MuseoSansRounded-500", arial, sans-serif;
+    font-family: 'MuseoSansRounded-500', arial, sans-serif;
     justify-content: center;
     line-height: 24px;
     overflow: hidden;
@@ -92,7 +90,6 @@
         width: auto;
     }
 }
-
 
 .ffe-button--action.ffe-button--ghost {
     &,
@@ -168,7 +165,7 @@
     height: 45px;
 }
 
-.ffe-button--expanded {
+.ffe-button--expanded  {
     padding: 8px;
     width: 45px;
 }
@@ -200,7 +197,6 @@
 .ffe-button--loading {
     pointer-events: none;
 }
-
 
 .ffe-button__label {
     align-items: center;
@@ -261,6 +257,15 @@
     }
 }
 
+@keyframes ffe-button-spinner-animation {
+    0% {
+        transform: rotateZ(0);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
 .ffe-button__spinner {
     bottom: 0;
     left: 0;
@@ -269,12 +274,13 @@
     right: 0;
     top: 8px;
     transform: translateY(24px);
-    transition: all @ffe-transition-duration @ffe-ease;
+    transition: opacity @ffe-transition-duration @ffe-ease,
+        transform @ffe-transition-duration @ffe-ease;
     visibility: hidden;
 
     .ffe-button--loading & {
         opacity: 1;
-        transform: none;
+        transform: translateY(0);
         visibility: visible;
     }
 
@@ -283,19 +289,14 @@
     }
 
     &::after {
-        animation: 1s linear infinite button-loading-spin;
+        animation: ffe-button-spinner-animation 1s linear infinite;
         border: 3px solid currentColor;
         border-radius: 50%;
         border-top-color: transparent;
-        content: '';
-        display: block;
+        content: ' ';
+        display: inline-block;
         height: 22px;
         margin: 0 auto;
         width: 22px;
-
-        @keyframes button-loading-spin {
-            from { transform: none; }
-            to { transform: rotate(360deg); }
-        }
     }
 }
