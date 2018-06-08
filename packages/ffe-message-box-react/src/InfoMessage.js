@@ -5,14 +5,10 @@ import InfoIkon from '@sb1/ffe-icons-react/lib/info-ikon';
 
 import BaseMessage from './BaseMessage';
 
-const iconStyles = {
-    width: '40px',
-    height: '40px',
-};
 const InfoMessage = props => (
     <BaseMessage
         type="info"
-        icon={<InfoIkon style={iconStyles} />}
+        icon={<InfoIkon />}
         {...props}
     />
 );

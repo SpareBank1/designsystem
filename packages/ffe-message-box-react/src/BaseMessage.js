@@ -2,6 +2,11 @@ import React from 'react';
 import { node, oneOf, string } from 'prop-types';
 import classNames from 'classnames';
 
+const iconStyles = {
+    width: '40px',
+    height: '40px',
+};
+
 const BaseMessage = props => {
     const {
         type,
@@ -21,7 +26,7 @@ const BaseMessage = props => {
                     `ffe-message-box__icon--${type}`,
                 )}
             >
-                {icon}
+                {React.cloneElement(icon, { style: iconStyles, ...icon.props })}
             </span>
             <div
                 className={classNames(

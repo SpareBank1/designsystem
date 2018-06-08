@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="13.0.0"></a>
+# [13.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@12.2.0...@sb1/ffe-core@13.0.0) (2018-06-04)
+
+
+### Code Refactoring
+
+* **ffe-core:** Separate layout from core ([a5df7a0](https://github.com/SpareBank1/designsystem/commit/a5df7a0)), closes [#149](https://github.com/SpareBank1/designsystem/issues/149)
+
+
+### BREAKING CHANGES
+
+* **ffe-core:** The Hawaii layout system has been layed out in
+a different module, `ffe-layout-legacy`. If you're still using it then
+you will find the section-wrapper and content-container CSS
+classes there. If you're already using `ffe-grid` then there should
+be nothing breaking about this change.
+
+
+
+
       <a name="12.2.0"></a>
 # [12.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@12.1.0...@sb1/ffe-core@12.2.0) (2018-05-29)
 
@@ -14,7 +34,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="12.1.0"></a>
+    <a name="12.1.0"></a>
 # [12.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@12.0.6...@sb1/ffe-core@12.1.0) (2018-05-22)
 
 
@@ -25,7 +45,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-    <a name="12.0.6"></a>
+  <a name="12.0.6"></a>
 ## [12.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@12.0.5...@sb1/ffe-core@12.0.6) (2018-05-04)
 
 
@@ -36,7 +56,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-  <a name="12.0.5"></a>
+<a name="12.0.5"></a>
 ## [12.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@12.0.4...@sb1/ffe-core@12.0.5) (2018-05-03)
 
 

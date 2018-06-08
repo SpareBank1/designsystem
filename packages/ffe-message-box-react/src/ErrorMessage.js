@@ -5,15 +5,10 @@ import UtropstegnIkon from '@sb1/ffe-icons-react/lib/utropstegn-ikon';
 
 import BaseMessage from './BaseMessage';
 
-const iconStyles = {
-    width: '40px',
-    height: '40px',
-};
-
 const ErrorMessage = props => (
     <BaseMessage
         type="error"
-        icon={<UtropstegnIkon style={iconStyles} />}
+        icon={<UtropstegnIkon />}
         {...props}
     />
 );
