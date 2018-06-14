@@ -8,10 +8,18 @@ mkdirp.sync('./jsx');
 
 const createSvgMap = () => {
     const map = {};
-    const iconsPath = path.join(__dirname, '..', 'node_modules', '@sb1', 'ffe-icons', 'icons');
-    fs.readdirSync(iconsPath)
+    const iconsPath = path.join(
+        __dirname,
+        '..',
+        'node_modules',
+        '@sb1',
+        'ffe-icons',
+        'icons',
+    );
+    fs
+        .readdirSync(iconsPath)
         .filter(fileName => fileName.match(/\.svg$/))
-        .forEach((fileName) => {
+        .forEach(fileName => {
             const iconPath = path.join(iconsPath, fileName);
             const iconName = fileName.split('.svg')[0];
             map[iconName] = fs.readFileSync(iconPath, 'utf-8');
@@ -28,21 +36,18 @@ const createSvgMap = () => {
  * */
 const toJsx = svgString => {
     const $ = cheerio.load(svgString, {
-        xmlMode: true
+        xmlMode: true,
     });
     const svg = $('svg');
     // React does not support namespace definitions
     svg.attr('xmlns', null);
     svg.attr('xmlns:svg', null);
 
-    svg.attr('height', 150);
-    svg.attr('width', 150);
-
     return $.html()
         .replace(/fill-rule/g, 'fillRule')
         .replace(/stroke-width/g, 'strokeWidth')
         .replace(/stroke-miterlimit/g, 'strokeMiterlimit');
-}
+};
 
 /**
  * Creates a new React component and a corresponding .jsx file for each icon
@@ -85,7 +90,10 @@ export default Icon;
 
 const icons = createSvgMap();
 Object.keys(icons).forEach(iconName =>
-    fs.writeFileSync(`./jsx/${iconName}.js`, createStandaloneJSX(icons, iconName)),
+    fs.writeFileSync(
+        `./jsx/${iconName}.js`,
+        createStandaloneJSX(icons, iconName),
+    ),
 );
 
 /**
