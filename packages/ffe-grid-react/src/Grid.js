@@ -18,7 +18,7 @@ export default class Grid extends Component {
             className,
             condensed,
             element,
-            noTopPadding,
+            topPadding,
             ...rest
         } = this.props;
 
@@ -30,7 +30,7 @@ export default class Grid extends Component {
                     className,
                     'ffe-grid',
                     { 'ffe-grid--condensed': condensed },
-                    { 'ffe-grid--no-top-padding': noTopPadding },
+                    { 'ffe-grid--no-top-padding': !topPadding },
                 )}
                 {...rest}
             >
@@ -39,6 +39,10 @@ export default class Grid extends Component {
         );
     }
 }
+
+Grid.defaultProps = {
+    topPadding: true,
+};
 
 Grid.propTypes = {
     /** Any children of a Grid must be a GridRow */
@@ -49,5 +53,6 @@ Grid.propTypes = {
     condensed: bool,
     /** Specify the DOM element being used to create the Grid */
     element: string,
-    noTopPadding: bool,
+    /** Add top padding */
+    topPadding: bool,
 };
