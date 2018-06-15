@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="5.1.4"></a>
+## [5.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@5.1.3...@sb1/ffe-tables-react@5.1.4) (2018-06-14)
+
+
+
+
+**Note:** Version bump only for package @sb1/ffe-tables-react
+
       <a name="5.1.3"></a>
 ## [5.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@5.1.2...@sb1/ffe-tables-react@5.1.3) (2018-06-04)
 
@@ -11,7 +19,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-tables-react
 
-      <a name="5.1.2"></a>
+    <a name="5.1.2"></a>
 ## [5.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@5.1.1...@sb1/ffe-tables-react@5.1.2) (2018-06-04)
 
 
@@ -19,7 +27,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-tables-react
 
-    <a name="5.1.1"></a>
+  <a name="5.1.1"></a>
 ## [5.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@5.1.0...@sb1/ffe-tables-react@5.1.1) (2018-05-29)
 
 
@@ -27,7 +35,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-tables-react
 
-  <a name="5.1.0"></a>
+<a name="5.1.0"></a>
 # [5.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@5.0.9...@sb1/ffe-tables-react@5.1.0) (2018-05-16)
 
 
