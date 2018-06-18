@@ -27,6 +27,7 @@ class Input extends Component {
             onReset,
             // eslint-disable-next-line no-unused-vars
             searchTerm,
+            // eslint-disable-next-line no-unused-vars
             displayResetWhenInputHasValue,
             ...rest
         } = this.props;
