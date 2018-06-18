@@ -115,7 +115,7 @@ describe('<InputGroup>', () => {
     it('throws error when receiving a <Tooltip /> and onTooltipToggle is used', () => {
         const wrapper = () =>
             getWrapper({
-                tooltip: (<Tooltip>Message</Tooltip>),
+                tooltip: <Tooltip>Message</Tooltip>,
                 onTooltipToggle: f => f,
             });
 
@@ -148,5 +148,20 @@ describe('<InputGroup>', () => {
         });
         expect(wrapper.find('Input').prop('id')).toHaveLength(42);
         expect(wrapper.find('Input').prop('aria-invalid')).toBe('false');
+    });
+
+    it('renders a static tooltip if description is set', () => {
+        const wrapper = getWrapper({
+            description: 'description',
+        });
+        expect(wrapper.find('.ffe-small-text').text()).toBe('description');
+    });
+
+    it('throws if both tooltip and description is set', () => {
+        expect(() =>
+            getWrapper({ description: 'asda', tooltip: 'asdsad' }),
+        ).toThrow(
+            'Don\'t use both "tooltip" and "description" on an <InputGroup />, pick one of them',
+        );
     });
 });
