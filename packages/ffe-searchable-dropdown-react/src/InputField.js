@@ -30,6 +30,7 @@ class Input extends Component {
             placeholder,
             onReset,
             ariaInvalid,
+            ...rest
         } = this.props;
         return (
             <div>
@@ -46,6 +47,7 @@ class Input extends Component {
                     onKeyDown={onKeyDown}
                     placeholder={placeholder}
                     value={inputValue}
+                    {...rest}
                 />
                 {this.displayReset() && (
                     <button
