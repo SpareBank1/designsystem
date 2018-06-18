@@ -1,5 +1,13 @@
 import React, { Component } from 'react';
-import { bool, node, number, oneOf, oneOfType, shape, string } from 'prop-types';
+import {
+    bool,
+    node,
+    number,
+    oneOf,
+    oneOfType,
+    shape,
+    string,
+} from 'prop-types';
 import classNames from 'classnames';
 import backgroundColors from './background-colors';
 
@@ -29,7 +37,6 @@ const MODIFIER_LIST = [
     'end',
     'horizontal',
     'middle',
-    'noBottomPadding',
     'reverse',
     'start',
     'centerText',
@@ -60,8 +67,8 @@ const modifiers = props =>
 
 const backgroundClass = props =>
     props.background && backgroundColors.includes(props.background)
-    ? `ffe-grid__col--bg-${props.background}`
-    : null;
+        ? `ffe-grid__col--bg-${props.background}`
+        : null;
 
 export default class GridCol extends Component {
     componentDidMount() {
@@ -75,6 +82,7 @@ export default class GridCol extends Component {
 
     render() {
         const {
+            bottomPadding,
             children,
             className,
             element: Element,
@@ -97,6 +105,7 @@ export default class GridCol extends Component {
             sizeClasses('sm', !sm && !lg && !md ? 12 : sm),
             modifiers(this.props),
             backgroundClass(this.props),
+            !bottomPadding ? 'ffe-grid__col--no-bottom-padding' : null,
         ]
             .filter(x => x)
             .join(' ');
@@ -110,6 +119,7 @@ export default class GridCol extends Component {
 }
 
 GridCol.defaultProps = {
+    bottomPadding: true,
     element: 'div',
 };
 
@@ -151,8 +161,8 @@ GridCol.propTypes = {
     horizontal: bool,
     /** Center content vertically */
     middle: bool,
-    /** Remove bottom padding */
-    noBottomPadding: bool,
+    /** Add bottom padding */
+    bottomPadding: bool,
     /** Reverse layout direction */
     reverse: bool,
     /** Place content elements to the left of the column */

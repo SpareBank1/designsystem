@@ -20,16 +20,15 @@ class Input extends Component {
 
     render() {
         const {
+            ariaInvalid,
             inputId,
             inputValue,
-            onBlur,
-            onClick,
-            onFocus,
             onInputChange,
-            onKeyDown,
-            placeholder,
             onReset,
-            ariaInvalid,
+            // eslint-disable-next-line no-unused-vars
+            searchTerm,
+            // eslint-disable-next-line no-unused-vars
+            displayResetWhenInputHasValue,
             ...rest
         } = this.props;
         return (
@@ -40,12 +39,7 @@ class Input extends Component {
                     })}
                     aria-invalid={String(ariaInvalid)}
                     id={inputId}
-                    onBlur={onBlur}
                     onChange={onInputChange}
-                    onClick={onClick}
-                    onFocus={onFocus}
-                    onKeyDown={onKeyDown}
-                    placeholder={placeholder}
                     value={inputValue}
                     {...rest}
                 />
