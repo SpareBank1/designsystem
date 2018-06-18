@@ -1,6 +1,7 @@
 export { default as DividerLine } from './typography/DividerLine';
 export { default as EmphasizedText } from './typography/EmphasizedText';
 export * from './typography/Heading';
+export { default as LinkText } from './typography/LinkText';
 export { default as MicroText } from './typography/MicroText';
 export { default as Paragraph } from './typography/Paragraph';
 export { default as PreformattedText } from './typography/PreformattedText';
