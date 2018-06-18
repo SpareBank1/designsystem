@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="8.0.0"></a>
+# [8.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@7.3.0...@sb1/ffe-grid-react@8.0.0) (2018-06-18)
+
+
+### Code Refactoring
+
+* **ffe-grid-react:** Normalized padding props ([97ffc71](https://github.com/SpareBank1/designsystem/commit/97ffc71)), closes [#282](https://github.com/SpareBank1/designsystem/issues/282)
+
+
+### BREAKING CHANGES
+
+* **ffe-grid-react:** Removed the "no" prefix from the padding props.
+For `GridCol`, `noBottomPadding` is now `bottomPadding`.
+For `Grid`, `noTopPadding` is now `topPadding`.
+
+The default behaviour has not been changed, so to migrate you need to
+* Replace all usage of `noBottomPadding={true}` with `bottomPadding={false}` on GridCols.
+* Replace all usage of `noTopPadding={true}` with `topPadding={false}` on Grids.
+
+
+
+
       <a name="7.3.0"></a>
 # [7.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@7.2.0...@sb1/ffe-grid-react@7.3.0) (2018-05-29)
 
@@ -19,7 +41,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="7.2.0"></a>
+    <a name="7.2.0"></a>
 # [7.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@7.1.2...@sb1/ffe-grid-react@7.2.0) (2018-04-25)
 
 
@@ -30,7 +52,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-    <a name="7.1.2"></a>
+  <a name="7.1.2"></a>
 ## [7.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@7.1.1...@sb1/ffe-grid-react@7.1.2) (2018-04-12)
 
 
@@ -38,7 +60,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-grid-react
 
-  <a name="7.1.1"></a>
+<a name="7.1.1"></a>
 ## [7.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@7.1.0...@sb1/ffe-grid-react@7.1.1) (2018-03-27)
 
 
