@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="13.0.1"></a>
+## [13.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@13.0.0...@sb1/ffe-core@13.0.1) (2018-06-18)
+
+
+### Bug Fixes
+
+* **ffe-core:** Fix build issue ([faa8828](https://github.com/SpareBank1/designsystem/commit/faa8828))
+* **ffe-core:** Run babel on generated code ([43ccde7](https://github.com/SpareBank1/designsystem/commit/43ccde7))
+
+
+
+
       <a name="13.0.0"></a>
 # [13.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@12.2.0...@sb1/ffe-core@13.0.0) (2018-06-04)
 
@@ -23,7 +35,7 @@ be nothing breaking about this change.
 
 
 
-      <a name="12.2.0"></a>
+    <a name="12.2.0"></a>
 # [12.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@12.1.0...@sb1/ffe-core@12.2.0) (2018-05-29)
 
 
@@ -34,7 +46,7 @@ be nothing breaking about this change.
 
 
 
-    <a name="12.1.0"></a>
+  <a name="12.1.0"></a>
 # [12.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@12.0.6...@sb1/ffe-core@12.1.0) (2018-05-22)
 
 
@@ -45,7 +57,7 @@ be nothing breaking about this change.
 
 
 
-  <a name="12.0.6"></a>
+<a name="12.0.6"></a>
 ## [12.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@12.0.5...@sb1/ffe-core@12.0.6) (2018-05-04)
 
 
