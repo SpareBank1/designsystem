@@ -1,11 +1,8 @@
 export default [
-    'blue-cobalt',
     'blue-ice',
     'blue-pale',
-    'blue-royal',
     'green-mint',
     'grey-cloud',
-    'purple-magenta',
     'sand',
     'grey-warm',
     'orange-salmon',
@@ -13,3 +10,4 @@ export default [
     'blue-sky',
 ];
 
+export const removedColors = ['blue-cobalt', 'blue-royal', 'purple-magenta'];

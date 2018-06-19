@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { bool, node, oneOf, string } from 'prop-types';
 import classNames from 'classnames';
 
-import backgroundColors from './background-colors';
+import backgroundColors, { removedColors } from './background-colors';
 import { checkForNestedComponent } from './utils';
 
 export default class GridRow extends Component {
@@ -27,9 +27,16 @@ export default class GridRow extends Component {
         let content = children;
 
         const hasBackgroundColor = backgroundColors.includes(background);
+        const hasRemovedColor = removedColors.includes(background);
 
         if (hasBackgroundColor) {
             content = <div className="ffe-grid__row-wrapper">{children}</div>;
+        }
+
+        if (hasRemovedColor) {
+            throw new Error(
+                `Support for the ${background} background on <GridRow> has been removed, please see the CHANGELOG`,
+            );
         }
 
         const Element = element || 'div';
