@@ -40,13 +40,10 @@ En rad kan ha mange forskjellige bakgrunnsfarger:
 
 ```js
 const backgroundColors = [
-    'blue-cobalt',
     'blue-ice',
     'blue-pale',
-    'blue-royal',
     'green-mint',
     'grey-cloud',
-    'purple-magenta',
     'sand',
     'grey-warm',
     'orange-salmon',
@@ -87,13 +84,10 @@ En kolonne kan også ha bakgrunnsfarger. De vil da være utfallende, slik at sel
 
 ```js
 const backgroundColors = [
-    'blue-cobalt',
     'blue-ice',
     'blue-pale',
-    'blue-royal',
     'green-mint',
     'grey-cloud',
-    'purple-magenta',
     'sand',
     'grey-warm',
     'orange-salmon',

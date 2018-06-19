@@ -9,7 +9,7 @@ import {
     string,
 } from 'prop-types';
 import classNames from 'classnames';
-import backgroundColors from './background-colors';
+import backgroundColors, { removedColors } from './background-colors';
 
 import {
     checkForDeprecatedModifiers,
@@ -65,10 +65,21 @@ const modifiers = props =>
         .map(key => `ffe-grid__col--${camelCaseToDashCase(key)}`)
         .join(' ');
 
-const backgroundClass = props =>
-    props.background && backgroundColors.includes(props.background)
-        ? `ffe-grid__col--bg-${props.background}`
+const backgroundClass = ({ background }) => {
+    if (!background) {
+        return null;
+    }
+
+    if (removedColors.includes(background)) {
+        throw new Error(
+            `Support for the ${background} background on <GridCol> has been removed, please see the CHANGELOG`,
+        );
+    }
+
+    return backgroundColors.includes(background)
+        ? `ffe-grid__col--bg-${background}`
         : null;
+};
 
 export default class GridCol extends Component {
     componentDidMount() {
@@ -126,13 +137,10 @@ GridCol.defaultProps = {
 GridCol.propTypes = {
     /** Supported background colors */
     background: oneOf([
-        'blue-cobalt',
         'blue-ice',
         'blue-pale',
-        'blue-royal',
         'green-mint',
         'grey-cloud',
-        'purple-magenta',
         'sand',
         'grey-warm',
         'orange-salmon',
