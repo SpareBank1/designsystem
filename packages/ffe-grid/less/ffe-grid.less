@@ -34,11 +34,8 @@
 //     </div>
 // </div>
 //
-// --bg-blue-cobalt        - Blue cobalt background
 // --bg-blue-ice           - Blue ice background
 // --bg-blue-pale          - Blue pale background
-// --bg-blue-royal         - Blue royal background
-// --bg-purple-magenta     - Purple magenta background
 // --bg-green-mint         - Green mint background
 // --bg-sand               - Sand background
 // --bg-grey-cloud         - Grey cloud background
@@ -65,11 +62,8 @@
 //     </div>
 // </div>
 //
-// --bg-blue-cobalt        - Blue cobalt background
 // --bg-blue-ice           - Blue ice background
 // --bg-blue-pale          - Blue pale background
-// --bg-blue-royal         - Blue royal background
-// --bg-purple-magenta     - Purple magenta background
 // --bg-green-mint         - Green mint background
 // --bg-sand               - Sand background
 // --bg-grey-cloud         - Grey cloud background
@@ -155,34 +149,12 @@
         margin-right: @ffe-grid-gutter-lg / 2 * -1;
     }
 
-    &--bg-blue-cobalt {
-        background-color: @ffe-blue-cobalt;
-        color: @ffe-white;
-
-        [class^='ffe-h'] {
-            color: @ffe-white;
-        }
-    }
-
     &--bg-blue-ice {
         background-color: @ffe-blue-ice;
     }
 
     &--bg-blue-pale {
         background-color: @ffe-blue-pale;
-    }
-
-    &--bg-blue-royal {
-        background-color: @ffe-blue-royal;
-        color: @ffe-white;
-
-        [class^='ffe-h'] {
-            color: @ffe-white;
-        }
-    }
-
-    &--bg-purple-magenta {
-        background-color: @ffe-purple-magenta;
     }
 
     &--bg-green-mint {
@@ -212,7 +184,6 @@
     &--bg-blue-sky {
         background-color: @ffe-blue-sky;
     }
-
 
     &--reverse,
     &--reverse > &-wrapper {
@@ -250,10 +221,12 @@
     }
 
     .ffe-grid--condensed & {
-        padding: 0 (@ffe-condensed-grid-gutter-sm / 2) @ffe-condensed-grid-gutter-sm;
+        padding: 0 (@ffe-condensed-grid-gutter-sm / 2)
+            @ffe-condensed-grid-gutter-sm;
 
         @media only screen and (min-width: @breakpoint-lg) {
-            padding: 0 (@ffe-condensed-grid-gutter-lg / 2) @ffe-condensed-grid-gutter-lg;
+            padding: 0 (@ffe-condensed-grid-gutter-lg / 2)
+                @ffe-condensed-grid-gutter-lg;
         }
     }
 }
@@ -261,7 +234,8 @@
     @media only screen and (min-width: @breakpoint-lg) {
         position: relative;
 
-        &::before, &::after {
+        &::before,
+        &::after {
             background-color: inherit;
             bottom: 0;
             content: '';
@@ -276,7 +250,8 @@
             right: -(@ffe-grid-gutter-lg / 2);
         }
         .ffe-grid--condensed & {
-            &::before, &::after {
+            &::before,
+            &::after {
                 bottom: 0;
                 position: absolute;
                 top: 0;
@@ -293,34 +268,12 @@
 }
 
 .ffe-grid__col {
-    &--bg-blue-cobalt {
-        background-color: @ffe-blue-cobalt;
-        color: @ffe-white;
-
-        [class^='ffe-h'] {
-            color: @ffe-white;
-        }
-    }
-
     &--bg-blue-ice {
         background-color: @ffe-blue-ice;
     }
 
     &--bg-blue-pale {
         background-color: @ffe-blue-pale;
-    }
-
-    &--bg-blue-royal {
-        background-color: @ffe-blue-royal;
-        color: @ffe-white;
-
-        [class^='ffe-h'] {
-            color: @ffe-white;
-        }
-    }
-
-    &--bg-purple-magenta {
-        background-color: @ffe-purple-magenta;
     }
 
     &--bg-green-mint {

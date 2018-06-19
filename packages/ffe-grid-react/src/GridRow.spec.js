@@ -54,6 +54,12 @@ describe('GridRow', () => {
         });
     });
 
+    it('throws for removed background colours', () => {
+        expect(() => renderShallow({ background: 'blue-cobalt' })).toThrow(
+            'Support for the blue-cobalt background on <GridRow> has been removed, please see the CHANGELOG',
+        );
+    });
+
     it('renders coloured rows with extra wrappers', () => {
         backgroundColors.forEach(background => {
             const el = renderShallow({

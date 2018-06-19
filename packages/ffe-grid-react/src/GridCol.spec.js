@@ -104,6 +104,12 @@ describe('GridCol', () => {
         });
     });
 
+    it('throws for removed background colours', () => {
+        expect(() => renderShallow({ background: 'blue-cobalt' })).toThrow(
+            'Support for the blue-cobalt background on <GridCol> has been removed, please see the CHANGELOG',
+        );
+    });
+
     it('sets all the things o/', () => {
         const el = renderShallow({
             sm: { cols: '6', offset: 2 },
