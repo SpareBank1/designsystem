@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="9.0.0"></a>
+# [9.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@8.0.0...@sb1/ffe-grid-react@9.0.0) (2018-06-19)
+
+
+### Bug Fixes
+
+* **ffe-grid-react:** Removed FFE support for some backgrounds ([713ab6d](https://github.com/SpareBank1/designsystem/commit/713ab6d)), closes [#256](https://github.com/SpareBank1/designsystem/issues/256)
+
+
+### BREAKING CHANGES
+
+* **ffe-grid-react:** Support for background colours that are not listed as backgrounds in the [design guide](https://design.sparebank1.no/visuell-identitet.html#visuell-identitet_farger) has been removed. This means the background props `blue-cobalt`, `blue-royal` and `purple-magenta`. If you were using any of those on rows or columns, please consider switching to one of those that are supported by FFE directly or add your own custom CSS classes in userland in order to have these colours.
+
+
+
+
       <a name="8.0.0"></a>
 # [8.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@7.3.0...@sb1/ffe-grid-react@8.0.0) (2018-06-18)
 
@@ -25,7 +41,7 @@ The default behaviour has not been changed, so to migrate you need to
 
 
 
-      <a name="7.3.0"></a>
+    <a name="7.3.0"></a>
 # [7.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@7.2.0...@sb1/ffe-grid-react@7.3.0) (2018-05-29)
 
 
@@ -41,7 +57,7 @@ The default behaviour has not been changed, so to migrate you need to
 
 
 
-    <a name="7.2.0"></a>
+  <a name="7.2.0"></a>
 # [7.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@7.1.2...@sb1/ffe-grid-react@7.2.0) (2018-04-25)
 
 
@@ -52,7 +68,7 @@ The default behaviour has not been changed, so to migrate you need to
 
 
 
-  <a name="7.1.2"></a>
+<a name="7.1.2"></a>
 ## [7.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@7.1.1...@sb1/ffe-grid-react@7.1.2) (2018-04-12)
 
 
