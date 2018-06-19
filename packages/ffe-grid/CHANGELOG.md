@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="8.0.0"></a>
+# [8.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@7.3.2...@sb1/ffe-grid@8.0.0) (2018-06-19)
+
+
+### Bug Fixes
+
+* **ffe-grid:** Removed FFE support for some backgrounds ([be4d7c8](https://github.com/SpareBank1/designsystem/commit/be4d7c8)), closes [#256](https://github.com/SpareBank1/designsystem/issues/256)
+
+
+### BREAKING CHANGES
+
+* **ffe-grid:** Support for background colours that are not listed as backgrounds in the [design guide](https://design.sparebank1.no/visuell-identitet.html#visuell-identitet_farger) has been removed. This means the modifiers `--bg-blue-cobalt`, `--bg-blue-royal` and `--bg-purple-magenta`. If you were using any of those on rows or columns, please consider switching to one of those that are supported by FFE directly or add your own custom CSS classes in userland in order to have these colours.
+
+
+
+
       <a name="7.3.2"></a>
 ## [7.3.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@7.3.1...@sb1/ffe-grid@7.3.2) (2018-06-18)
 
@@ -11,7 +27,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-grid
 
-      <a name="7.3.1"></a>
+    <a name="7.3.1"></a>
 ## [7.3.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@7.3.0...@sb1/ffe-grid@7.3.1) (2018-06-04)
 
 
@@ -19,7 +35,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-grid
 
-    <a name="7.3.0"></a>
+  <a name="7.3.0"></a>
 # [7.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@7.2.4...@sb1/ffe-grid@7.3.0) (2018-05-29)
 
 
@@ -35,7 +51,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-  <a name="7.2.4"></a>
+<a name="7.2.4"></a>
 ## [7.2.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@7.2.3...@sb1/ffe-grid@7.2.4) (2018-05-22)
 
 
