@@ -13,7 +13,7 @@ designsystemet til å passe dine behov.
 
 ### Kom i gang
 
-Ta kontakt med faglederne (anne.gundersen@sparebank1.no eller hans.huseklepp@sparebank1.no), så hjelper de deg med tilgang til Verktøykassa til Sketch.
+Ta kontakt med faglederne (anne.gundersen@sparebank1.no eller adrian.dick@sparebank1.no), så hjelper de deg med tilgang til Verktøykassa til Sketch.
 
 Verktøykassa blir oppdatert av faglederene ved endringer eller når nye ting legges til. Endringene annonseres enn så
 lenge via interne kanaler - spør fagleder, så blir du pekt i riktig retning for å få med deg disse beskjedene :+1:

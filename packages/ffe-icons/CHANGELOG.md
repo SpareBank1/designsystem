@@ -3,7 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-      <a name="12.1.0"></a>
+      <a name="12.2.1"></a>
+## [12.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.2.0...@sb1/ffe-icons@12.2.1) (2018-06-04)
+
+
+### Bug Fixes
+
+* **ffe-icons:** update kake-kvart for thinner stroke ([c49c745](https://github.com/SpareBank1/designsystem/commit/c49c745))
+
+
+
+
+      <a name="12.2.0"></a>
+# [12.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.1.0...@sb1/ffe-icons@12.2.0) (2018-06-04)
+
+
+### Features
+
+* **ffe-icons:** Added trashcan icon to ffe-icons ([4267b64](https://github.com/SpareBank1/designsystem/commit/4267b64))
+* **ffe-icons:** Edited trash icon to standards ([c108f7a](https://github.com/SpareBank1/designsystem/commit/c108f7a))
+
+
+
+
+    <a name="12.1.0"></a>
 # [12.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.0.1...@sb1/ffe-icons@12.1.0) (2018-05-29)
 
 
@@ -14,7 +37,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="12.0.1"></a>
+  <a name="12.0.1"></a>
 ## [12.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.0.0...@sb1/ffe-icons@12.0.1) (2018-05-04)
 
 
@@ -22,7 +45,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-icons
 
-    <a name="12.0.0"></a>
+<a name="12.0.0"></a>
 # [12.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@11.0.1...@sb1/ffe-icons@12.0.0) (2018-04-11)
 
 
@@ -67,7 +90,7 @@ time and disk usage from this change.
 
 
 
-  <a name="11.0.1"></a>
+<a name="11.0.1"></a>
 ## [11.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@11.0.0...@sb1/ffe-icons@11.0.1) (2018-04-06)
 
 

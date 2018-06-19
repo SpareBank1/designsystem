@@ -171,6 +171,18 @@ describe('GridCol', () => {
         expect(el.hasClass('ffe-grid__col--sm-12')).toBe(true);
     });
 
+    it('defaults to not setting the "--no-bottom-padding" modifier', () => {
+        const el = renderShallow();
+
+        expect(el.hasClass('ffe-grid__col--no-bottom-padding')).toBe(false);
+    });
+
+    it('sets the "--no-bottom-padding" modifier if "bottomPadding" prop is false', () => {
+        const el = renderShallow({ bottomPadding: false });
+
+        expect(el.hasClass('ffe-grid__col--no-bottom-padding')).toBe(true);
+    });
+
     describe('when mounting', () => {
         beforeEach(() => {
             console.error = jest.fn();
@@ -187,10 +199,8 @@ describe('GridCol', () => {
             );
 
             expect(console.error).toHaveBeenCalled();
-            expect(
-                console.error.mock.calls.map(call => call[0]),
-            ).toContain(
-                '`<GridCol vertical={true} />` is the default behavior. You can safely remove this prop.'
+            expect(console.error.mock.calls.map(call => call[0])).toContain(
+                '`<GridCol vertical={true} />` is the default behavior. You can safely remove this prop.',
             );
         });
 
@@ -270,28 +280,36 @@ describe('GridCol', () => {
                 renderWithModifier({ md: { cols: 1, offset: 1 } });
 
                 expect(console.error).toHaveBeenCalledTimes(1);
-                expect(console.error.mock.calls[0][0]).toContain('The grid should have 6 columns for "md" screens');
+                expect(console.error.mock.calls[0][0]).toContain(
+                    'The grid should have 6 columns for "md" screens',
+                );
             });
 
             it('warns about not sticking to 6 columns on "md" screens for numbers', () => {
                 renderWithModifier({ md: 9 });
 
                 expect(console.error).toHaveBeenCalledTimes(1);
-                expect(console.error.mock.calls[0][0]).toContain('The grid should have 6 columns for "md" screens');
+                expect(console.error.mock.calls[0][0]).toContain(
+                    'The grid should have 6 columns for "md" screens',
+                );
             });
 
             it('warns about not sticking to 4 columns on "sm" screens for objects', () => {
                 renderWithModifier({ sm: { cols: 11, offset: 1 } });
 
                 expect(console.error).toHaveBeenCalledTimes(1);
-                expect(console.error.mock.calls[0][0]).toContain('The grid should have 4 columns for "sm" screens');
+                expect(console.error.mock.calls[0][0]).toContain(
+                    'The grid should have 4 columns for "sm" screens',
+                );
             });
 
             it('warns about not sticking to 4 columns on "sm" screens for numbers', () => {
                 renderWithModifier({ sm: 5 });
 
                 expect(console.error).toHaveBeenCalledTimes(1);
-                expect(console.error.mock.calls[0][0]).toContain('The grid should have 4 columns for "sm" screens');
+                expect(console.error.mock.calls[0][0]).toContain(
+                    'The grid should have 4 columns for "sm" screens',
+                );
             });
         });
     });

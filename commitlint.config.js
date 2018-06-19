@@ -37,6 +37,7 @@ module.exports = {
                 'ffe-header',
                 'ffe-icons',
                 'ffe-icons-react',
+                'ffe-layout-legacy',
                 'ffe-lists',
                 'ffe-lists-react',
                 'ffe-message-box',

@@ -3,7 +3,54 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-      <a name="6.0.2"></a>
+      <a name="6.0.7"></a>
+## [6.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@6.0.6...@sb1/ffe-searchable-dropdown-react@6.0.7) (2018-06-18)
+
+
+### Bug Fixes
+
+* **ffe-searchable-dropdown-react:** Fix issue with too many parameters being passed to InputField ([a72208c](https://github.com/SpareBank1/designsystem/commit/a72208c))
+* **ffe-searchable-dropdown-react:** Fix issue with too many parameters being passed to InputField ([75e63c5](https://github.com/SpareBank1/designsystem/commit/75e63c5))
+
+
+
+
+      <a name="6.0.6"></a>
+## [6.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@6.0.5...@sb1/ffe-searchable-dropdown-react@6.0.6) (2018-06-18)
+
+
+### Bug Fixes
+
+* **ffe-searchable-dropdown-react:** Disable browsers autoComplete for SearchableDropdown ([a213b69](https://github.com/SpareBank1/designsystem/commit/a213b69))
+
+
+
+
+  <a name="6.0.5"></a>
+## [6.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@6.0.4...@sb1/ffe-searchable-dropdown-react@6.0.5) (2018-06-14)
+
+
+
+
+**Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react
+
+<a name="6.0.4"></a>
+## [6.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@6.0.3...@sb1/ffe-searchable-dropdown-react@6.0.4) (2018-06-04)
+
+
+
+
+**Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react
+
+<a name="6.0.3"></a>
+## [6.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@6.0.2...@sb1/ffe-searchable-dropdown-react@6.0.3) (2018-06-04)
+
+
+
+
+**Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react
+
+<a name="6.0.2"></a>
 ## [6.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@6.0.1...@sb1/ffe-searchable-dropdown-react@6.0.2) (2018-05-29)
 
 
@@ -11,7 +58,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react
 
-      <a name="6.0.1"></a>
+<a name="6.0.1"></a>
 ## [6.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@6.0.0...@sb1/ffe-searchable-dropdown-react@6.0.1) (2018-05-04)
 
 
@@ -19,7 +66,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react
 
-    <a name="6.0.0"></a>
+<a name="6.0.0"></a>
 # [6.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@5.0.6...@sb1/ffe-searchable-dropdown-react@6.0.0) (2018-04-25)
 
 

@@ -10,3 +10,15 @@ const { InfoMessage } = require('.');
     </p>
 </InfoMessage>;
 ```
+
+Custom icon
+```js
+const { InfoMessage } = require('.');
+const { HandlevognIkon } = require('@sb1/ffe-icons-react');
+
+<InfoMessage title="Handlevognen din er tom" icon={<HandlevognIkon />}>
+    <p className="ffe-body-paragraph">
+        Du har ingenting i handlevognen din.
+    </p>
+</InfoMessage>;
+```

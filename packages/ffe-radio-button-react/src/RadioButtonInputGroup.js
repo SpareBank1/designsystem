@@ -45,7 +45,7 @@ const RadioButtonInputGroup = props => {
             {...rest}
         >
             {label && (
-                <legend className="ffe-form-label">
+                <legend className="ffe-form-label ffe-form-label--block">
                     {label}
                     {tooltipContent}
                 </legend>

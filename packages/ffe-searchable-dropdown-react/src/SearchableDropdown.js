@@ -220,6 +220,7 @@ class SearchableDropdown extends Component {
                         onReset={this.onReset}
                         searchTerm={searchTerm}
                         ariaInvalid={ariaInvalid}
+                        autoComplete="off"
                     />
                     {showListContainer && (
                         <ScrollContainer

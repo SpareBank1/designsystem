@@ -51,6 +51,10 @@ export default class GridRow extends Component {
     }
 }
 
+GridRow.defaultProps = {
+    topPadding: false,
+};
+
 GridRow.propTypes = {
     /** Supported background colors */
     background: oneOf([

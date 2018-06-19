@@ -1,15 +1,12 @@
 {
-  "name": "@sb1/ffe-accordion",
-  "version": "4.0.12",
-  "description": "Accordion component for FFE.",
-  "keywords": [
-    "Accordion",
-    "FFE",
-    "SpareBank1"
-  ],
+  "name": "@sb1/ffe-layout-legacy",
+  "version": "1.0.1",
+  "description": "Deprecated layout system",
   "license": "MIT",
   "author": "SpareBank 1",
-  "main": "index.js",
+  "files": [
+    "less"
+  ],
   "repository": {
     "type": "git",
     "url": "ssh://git@github.com:SpareBank1/designsystem.git"
@@ -18,11 +15,8 @@
     "lint": "stylelint less/*.less",
     "test": "npm run lint"
   },
-  "devDependencies": {
-    "@sb1/ffe-core": "^13.0.1"
-  },
   "peerDependencies": {
-    "@sb1/ffe-core": "^12.0.0"
+    "@sb1/ffe-core": "^12.2.0"
   },
   "publishConfig": {
     "access": "public"
