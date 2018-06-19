@@ -17,13 +17,28 @@ const { Input } = require('.');
         />
     </InputGroup>
 
-    <InputGroup
-        label="E-postadresse"
-        fieldMessage="Ugyldig e-postadresse"
-    >
+    <InputGroup label="E-postadresse" fieldMessage="Ugyldig e-postadresse">
         <Input />
     </InputGroup>
-</React.Fragment>
+</React.Fragment>;
+```
+
+Dersom man skal vise en hjelpetekst som alltid er synlig brukes `description` i stedet for `tooltip`.
+
+```js
+const { Input } = require('.');
+
+<InputGroup
+    label="Telefonnummer"
+    description="Vi bruker telefonnummer for å sende deg kvittering på SMS"
+>
+    <Input
+        type="tel"
+        name="mobile"
+        onChange={e => console.log('onChange', e.target.value)}
+        onBlur={e => console.log('onBlur', e.target.value)}
+    />
+</InputGroup>;
 ```
 
 Utviklere bør merke seg at man er nødt til å bruke det såkalte _function-as-a-child_-patternet med mindre man bare har

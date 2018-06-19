@@ -17,6 +17,7 @@ class InputGroup extends Component {
         const {
             children,
             className,
+            description,
             label,
             fieldMessage,
             tooltip,
@@ -39,6 +40,12 @@ class InputGroup extends Component {
             throw new Error(
                 'Only use the "onTooltipToggle" prop if you\'re not sending a component of type ' +
                     '<Tooltip /> in the "tooltip" prop. If you are, use "onClick" on that component instead',
+            );
+        }
+
+        if (tooltip && description) {
+            throw new Error(
+                'Don\'t use both "tooltip" and "description" on an <InputGroup />, pick one of them',
             );
         }
 
@@ -67,8 +74,14 @@ class InputGroup extends Component {
                 {typeof tooltip === 'string' && (
                     <Tooltip onClick={onTooltipToggle}>{tooltip}</Tooltip>
                 )}
+
                 {tooltip === true && <Tooltip onClick={onTooltipToggle} />}
+
                 {React.isValidElement(tooltip) && tooltip}
+
+                {description && (
+                    <div className="ffe-small-text">{description}</div>
+                )}
 
                 {modifiedChildren}
 
@@ -89,6 +102,8 @@ InputGroup.propTypes = {
     className: string,
     /** Use the ErrorFieldMessage component if you need more flexibility in how the content is rendered. */
     fieldMessage: oneOfType([string, node]),
+    /** To just render a static, always visible tooltip, use this. */
+    description: string,
     /** Use the Label component if you need more flexibility in how the content is rendered. */
     label: oneOfType([string, instanceOfComponent(Label)]),
     onTooltipToggle: func,
