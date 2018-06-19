@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="3.2.0"></a>
+# [3.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@3.1.1...@sb1/ffe-form-react@3.2.0) (2018-06-19)
+
+
+### Bug Fixes
+
+* **ffe-form-react:** add expectations and fix tests ([eccd46c](https://github.com/SpareBank1/designsystem/commit/eccd46c))
+
+
+### Features
+
+* **ffe-form-react:** Add new `description` prop to `InputGroup` ([d839b85](https://github.com/SpareBank1/designsystem/commit/d839b85)), closes [#291](https://github.com/SpareBank1/designsystem/issues/291)
+
+
+
+
       <a name="3.1.1"></a>
 ## [3.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@3.1.0...@sb1/ffe-form-react@3.1.1) (2018-05-22)
 
@@ -14,7 +30,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="3.1.0"></a>
+    <a name="3.1.0"></a>
 # [3.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@3.0.4...@sb1/ffe-form-react@3.1.0) (2018-04-19)
 
 
@@ -25,7 +41,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-  <a name="3.0.4"></a>
+<a name="3.0.4"></a>
 ## [3.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@3.0.3...@sb1/ffe-form-react@3.0.4) (2018-03-27)
 
 
