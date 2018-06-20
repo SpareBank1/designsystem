@@ -36,7 +36,7 @@
     "react-dom": "^16.2.0"
   },
   "peerDependencies": {
-    "@sb1/ffe-icons-react": "^5.0.0",
+    "@sb1/ffe-icons-react": "^5.0.0 || ^6.0.0",
     "@sb1/ffe-system-message": "^3.0.0",
     "react": "^16.2.0"
   },
