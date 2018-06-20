@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="6.0.8"></a>
+## [6.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@6.0.7...@sb1/ffe-searchable-dropdown-react@6.0.8) (2018-06-20)
+
+
+### Bug Fixes
+
+* **ffe-searchable-dropdown-react:** added peerDependency to ffe-core@^13.0.0 ([8579723](https://github.com/SpareBank1/designsystem/commit/8579723))
+
+
+
+
       <a name="6.0.7"></a>
 ## [6.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@6.0.6...@sb1/ffe-searchable-dropdown-react@6.0.7) (2018-06-18)
 
@@ -15,7 +26,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="6.0.6"></a>
+    <a name="6.0.6"></a>
 ## [6.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@6.0.5...@sb1/ffe-searchable-dropdown-react@6.0.6) (2018-06-18)
 
 
@@ -26,7 +37,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-  <a name="6.0.5"></a>
+<a name="6.0.5"></a>
 ## [6.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@6.0.4...@sb1/ffe-searchable-dropdown-react@6.0.5) (2018-06-14)
 
 

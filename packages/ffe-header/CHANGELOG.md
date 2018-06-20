@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="11.1.20"></a>
+## [11.1.20](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@11.1.19...@sb1/ffe-header@11.1.20) (2018-06-20)
+
+
+### Bug Fixes
+
+* **ffe-header:** added peerDependency to ffe-core@^13.0.0 ([a05a694](https://github.com/SpareBank1/designsystem/commit/a05a694))
+
+
+
+
 <a name="11.1.19"></a>
 ## [11.1.19](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@11.1.18...@sb1/ffe-header@11.1.19) (2018-06-18)
 

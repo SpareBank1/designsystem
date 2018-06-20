@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.21"></a>
+## [5.0.21](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@5.0.20...@sb1/ffe-datepicker@5.0.21) (2018-06-20)
+
+
+### Bug Fixes
+
+* **ffe-datepicker:** added peerDependency to ffe-core@^13.0.0 ([4375fa6](https://github.com/SpareBank1/designsystem/commit/4375fa6))
+
+
+
+
 <a name="5.0.20"></a>
 ## [5.0.20](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@5.0.19...@sb1/ffe-datepicker@5.0.20) (2018-06-18)
 

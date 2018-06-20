@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-searchable-dropdown-react",
-  "version": "6.0.7",
+  "version": "6.0.8",
   "description": "Dropdown with search option",
   "license": "MIT",
   "author": "SpareBank 1",
@@ -41,7 +41,7 @@
     "react-dom": "^16.2.0"
   },
   "peerDependencies": {
-    "@sb1/ffe-core": "^12.0.0",
+    "@sb1/ffe-core": "^12.0.0 || ^13.0.0",
     "@sb1/ffe-form": "^9.0.0",
     "react": "^16.2.0"
   },

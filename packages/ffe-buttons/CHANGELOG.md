@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="8.0.3"></a>
+## [8.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@8.0.2...@sb1/ffe-buttons@8.0.3) (2018-06-20)
+
+
+### Bug Fixes
+
+* **ffe-buttons:** added peerDependency to ffe-core@^13.0.0 ([49b6458](https://github.com/SpareBank1/designsystem/commit/49b6458))
+
+
+
+
       <a name="8.0.2"></a>
 ## [8.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@8.0.1...@sb1/ffe-buttons@8.0.2) (2018-06-18)
 
@@ -11,7 +22,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-buttons
 
-      <a name="8.0.1"></a>
+    <a name="8.0.1"></a>
 ## [8.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@8.0.0...@sb1/ffe-buttons@8.0.1) (2018-06-06)
 
 
@@ -22,7 +33,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-    <a name="8.0.0"></a>
+  <a name="8.0.0"></a>
 # [8.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@7.1.13...@sb1/ffe-buttons@8.0.0) (2018-06-06)
 
 
@@ -45,7 +56,7 @@ texts.
 
 
 
-  <a name="7.1.13"></a>
+<a name="7.1.13"></a>
 ## [7.1.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@7.1.12...@sb1/ffe-buttons@7.1.13) (2018-06-06)
 
 

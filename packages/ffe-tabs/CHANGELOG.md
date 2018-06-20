@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.1.8"></a>
+## [4.1.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@4.1.7...@sb1/ffe-tabs@4.1.8) (2018-06-20)
+
+
+### Bug Fixes
+
+* **ffe-tabs:** added peerDependency to ffe-core@^13.0.0 ([f48ae2e](https://github.com/SpareBank1/designsystem/commit/f48ae2e))
+
+
+
+
 <a name="4.1.7"></a>
 ## [4.1.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@4.1.6...@sb1/ffe-tabs@4.1.7) (2018-06-18)
 
