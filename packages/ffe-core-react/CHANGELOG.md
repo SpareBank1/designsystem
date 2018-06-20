@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.2.1"></a>
+## [3.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@3.2.0...@sb1/ffe-core-react@3.2.1) (2018-06-20)
+
+
+### Bug Fixes
+
+* **ffe-core-react:** added peerDependency to ffe-core@^13.0.0 ([d1a6451](https://github.com/SpareBank1/designsystem/commit/d1a6451))
+
+
+
+
 <a name="3.2.0"></a>
 # [3.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@3.1.0...@sb1/ffe-core-react@3.2.0) (2018-06-19)
 

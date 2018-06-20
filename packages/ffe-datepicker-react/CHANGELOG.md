@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.1.20"></a>
+## [3.1.20](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@3.1.19...@sb1/ffe-datepicker-react@3.1.20) (2018-06-20)
+
+
+
+
+**Note:** Version bump only for package @sb1/ffe-datepicker-react
+
 <a name="3.1.19"></a>
 ## [3.1.19](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@3.1.18...@sb1/ffe-datepicker-react@3.1.19) (2018-06-18)
 

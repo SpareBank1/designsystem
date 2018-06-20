@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.14"></a>
+## [3.0.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@3.0.13...@sb1/ffe-context-message@3.0.14) (2018-06-20)
+
+
+### Bug Fixes
+
+* **ffe-context-message:** added peerDependency to ffe-core@^13.0.0 ([1f00885](https://github.com/SpareBank1/designsystem/commit/1f00885))
+
+
+
+
 <a name="3.0.13"></a>
 ## [3.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@3.0.12...@sb1/ffe-context-message@3.0.13) (2018-06-18)
 

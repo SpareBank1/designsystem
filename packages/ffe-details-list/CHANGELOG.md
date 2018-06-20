@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="9.0.12"></a>
+## [9.0.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list@9.0.11...@sb1/ffe-details-list@9.0.12) (2018-06-20)
+
+
+### Bug Fixes
+
+* **ffe-details-list:** added peerDependency to ffe-core@^13.0.0 ([84b6f86](https://github.com/SpareBank1/designsystem/commit/84b6f86))
+
+
+
+
 <a name="9.0.11"></a>
 ## [9.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list@9.0.10...@sb1/ffe-details-list@9.0.11) (2018-06-18)
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="8.0.1"></a>
+## [8.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@8.0.0...@sb1/ffe-grid@8.0.1) (2018-06-20)
+
+
+### Bug Fixes
+
+* **ffe-grid:** added peerDependency to ffe-core@^13.0.0 ([3125659](https://github.com/SpareBank1/designsystem/commit/3125659))
+
+
+
+
       <a name="8.0.0"></a>
 # [8.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@7.3.2...@sb1/ffe-grid@8.0.0) (2018-06-19)
 
@@ -19,7 +30,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="7.3.2"></a>
+    <a name="7.3.2"></a>
 ## [7.3.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@7.3.1...@sb1/ffe-grid@7.3.2) (2018-06-18)
 
 
@@ -27,7 +38,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-grid
 
-    <a name="7.3.1"></a>
+  <a name="7.3.1"></a>
 ## [7.3.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@7.3.0...@sb1/ffe-grid@7.3.1) (2018-06-04)
 
 
@@ -35,7 +46,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-grid
 
-  <a name="7.3.0"></a>
+<a name="7.3.0"></a>
 # [7.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@7.2.4...@sb1/ffe-grid@7.3.0) (2018-05-29)
 
 
