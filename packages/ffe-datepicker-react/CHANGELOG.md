@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.1.21"></a>
+## [3.1.21](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@3.1.20...@sb1/ffe-datepicker-react@3.1.21) (2018-06-21)
+
+
+### Bug Fixes
+
+* **ffe-datepicker-react:** Prevent submission of forms when enter-key is pressed for datepicker - IE bug ([9297dcb](https://github.com/SpareBank1/designsystem/commit/9297dcb))
+
+
+
+
 <a name="3.1.20"></a>
 ## [3.1.20](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@3.1.19...@sb1/ffe-datepicker-react@3.1.20) (2018-06-20)
 
