@@ -49,22 +49,33 @@ describe('<Datepicker />', () => {
 
         it('renders a locale-respecting aria-label for the datepicker if no label is given', () => {
             let wrapper = getShallowWrapper();
-            expect(wrapper.find('.ffe-datepicker').prop('aria-label')).toBe(i18n.nb.CHOOSE_DATE);
-            expect(wrapper.find('.ffe-datepicker').prop('aria-labelledby')).toBeUndefined();
+            expect(wrapper.find('.ffe-datepicker').prop('aria-label')).toBe(
+                i18n.nb.CHOOSE_DATE,
+            );
+            expect(
+                wrapper.find('.ffe-datepicker').prop('aria-labelledby'),
+            ).toBeUndefined();
             wrapper = getShallowWrapper({
                 language: 'en',
             });
-            expect(wrapper.find('.ffe-datepicker').prop('aria-label')).toBe(i18n.en.CHOOSE_DATE);
-            expect(wrapper.find('.ffe-datepicker').prop('aria-labelledby')).toBeUndefined();
+            expect(wrapper.find('.ffe-datepicker').prop('aria-label')).toBe(
+                i18n.en.CHOOSE_DATE,
+            );
+            expect(
+                wrapper.find('.ffe-datepicker').prop('aria-labelledby'),
+            ).toBeUndefined();
         });
 
         it('renders aria-describeby if a label is given', () => {
             const wrapper = getShallowWrapper({
                 label: 'Velg startdato',
             });
-            expect(wrapper.find('.ffe-datepicker').prop('aria-label')).toBeUndefined();
-            expect(wrapper.find('.ffe-datepicker').prop('aria-labelledby'))
-                .toBe(`ffe-datepicker-label-${wrapper.instance().datepickerId}`);
+            expect(
+                wrapper.find('.ffe-datepicker').prop('aria-label'),
+            ).toBeUndefined();
+            expect(
+                wrapper.find('.ffe-datepicker').prop('aria-labelledby'),
+            ).toBe(`ffe-datepicker-label-${wrapper.instance().datepickerId}`);
         });
     });
 
@@ -451,18 +462,17 @@ describe('<Datepicker />', () => {
     });
 
     describe('validate correct focus changes of Calendar on focus and blur events', () => {
-
         const openCalendar = wrapper => {
             const input = wrapper.find('input');
             input.simulate('click');
         };
 
-        it('calendar should set calendar forceDateFocus to false when bluring',() =>{
+        it('calendar should set calendar forceDateFocus to false when bluring', () => {
             const wrapper = getMountedWrapper({
                 value: '01.06.2016',
                 minDate: '01.01.2016',
                 maxDate: '31.12.2016',
-                focusOnCalendarOpen: true
+                focusOnCalendarOpen: true,
             });
 
             expect(wrapper.props().focusOnCalendarOpen).toBe(true);
@@ -476,8 +486,7 @@ describe('<Datepicker />', () => {
 
             expect(calInstance.forceDateFocus).toBe(false);
             expect(calendar.props().focusOnOpen).toBe(false);
-        })
-
+        });
     });
 
     describe('validate correct visibility of Calendar on DateInput key press', () => {
@@ -485,12 +494,22 @@ describe('<Datepicker />', () => {
             const input = wrapper.find('input');
             input.simulate('click');
         };
-        const keyDownInInput = (wrapper, keyCode) => {
+        const keyDownInInput = (wrapper, keyCode, preventDefault = f => f) => {
             const input = wrapper.find('input');
-            input.simulate('keydown', { which: keyCode });
+            input.simulate('keydown', { which: keyCode, preventDefault });
         };
 
         describe('when pressing Enter', () => {
+            it('calls to prevent default', () => {
+                const spy = jest.fn();
+                const wrapper = getMountedWrapper({
+                    value: '31.12.2016',
+                    maxDate: '01.01.2016',
+                });
+                keyDownInInput(wrapper, KeyCode.ENTER, spy);
+                expect(spy).toHaveBeenCalledTimes(1);
+            });
+
             it('should close and open calendar if pressed twice', () => {
                 const wrapper = getMountedWrapper({
                     value: '31.12.2016',
@@ -530,6 +549,18 @@ describe('<Datepicker />', () => {
                 keyDownInInput(wrapper, KeyCode.ENTER);
                 expect(wrapper.find(ERROR_CLASS).exists()).toBe(true);
                 expect(wrapper.find(Calendar).exists()).toBe(true);
+            });
+        });
+
+        describe('when pressing other key than Enter', () => {
+            it('does not calls to prevent default', () => {
+                const spy = jest.fn();
+                const wrapper = getMountedWrapper({
+                    value: '31.12.2016',
+                    maxDate: '01.01.2016',
+                });
+                keyDownInInput(wrapper, KeyCode.SPACE, spy);
+                expect(spy).toHaveBeenCalledTimes(0);
             });
         });
     });
