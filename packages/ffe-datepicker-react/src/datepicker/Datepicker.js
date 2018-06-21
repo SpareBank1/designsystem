@@ -63,10 +63,10 @@ export default class Datepicker extends Component {
         this.setState({
             focusOnCalendarOpen: false,
         });
-        if(this.state.closeAfter === true){
+        if (this.state.closeAfter === true) {
             this.setState({
                 closeAfter: false,
-                openOnFocus: true
+                openOnFocus: true,
             });
             return;
         }
@@ -95,7 +95,7 @@ export default class Datepicker extends Component {
                 errorMessage,
                 openOnFocus: true,
                 ariaInvalid: true,
-                displayDatePicker: true
+                displayDatePicker: true,
             };
         };
 
@@ -164,6 +164,8 @@ export default class Datepicker extends Component {
 
     onInputKeydown(evt) {
         if (evt.which === KeyCode.ENTER) {
+            evt.preventDefault();
+
             if (!this.state.displayDatePicker) {
                 this.setState({
                     focusOnCalendarOpen: true,
@@ -202,25 +204,25 @@ export default class Datepicker extends Component {
     blurHandler(evt) {
         if (evt.shiftKey && evt.which === KeyCode.TAB) {
             this.setState({
-                openOnFocus: false
+                openOnFocus: false,
             });
         } else if (evt.which === KeyCode.TAB) {
-            this.closeCalendarSetInputFocus()
+            this.closeCalendarSetInputFocus();
         }
     }
 
     divBlurHandler(evt) {
-        const isBluringWithDisplayDatePickerFalse = ((evt.target === this.dateInputRef._input) && (evt.currentTarget === this._datepickerNode) && !this.state.displayDatePicker );
-        if (
-            isBluringWithDisplayDatePickerFalse
-        )
-        {
+        const isBluringWithDisplayDatePickerFalse =
+            evt.target === this.dateInputRef._input &&
+            evt.currentTarget === this._datepickerNode &&
+            !this.state.displayDatePicker;
+        if (isBluringWithDisplayDatePickerFalse) {
             this.removeGlobalEventListeners();
             this.setState({
                 openOnFocus: true,
                 displayDatePicker: false,
-                closeAfter: false
-            })
+                closeAfter: false,
+            });
         }
     }
 
@@ -252,12 +254,13 @@ export default class Datepicker extends Component {
 
     closeCalendarSetInputFocus() {
         this.removeGlobalEventListeners();
-        this.setState({
+        this.setState(
+            {
                 openOnFocus: true,
                 displayDatePicker: false,
-                closeAfter: true
+                closeAfter: true,
             },
-            () => this.dateInputRef._input.focus()
+            () => this.dateInputRef._input.focus(),
         );
     }
 
@@ -289,7 +292,12 @@ export default class Datepicker extends Component {
             onChange,
             value,
         } = this.props;
-        const { focusOnCalendarOpen, minDate, maxDate, lastValidDate } = this.state;
+        const {
+            focusOnCalendarOpen,
+            minDate,
+            maxDate,
+            lastValidDate,
+        } = this.state;
         const latestValue = validateDate(value) ? value : lastValidDate;
 
         if (this.state.ariaInvalid) {
@@ -315,7 +323,11 @@ export default class Datepicker extends Component {
                     </label>
                 )}
                 <div
-                    aria-labelledby={label ? `ffe-datepicker-label-${this.datepickerId}` : undefined}
+                    aria-labelledby={
+                        label
+                            ? `ffe-datepicker-label-${this.datepickerId}`
+                            : undefined
+                    }
                     aria-label={label ? undefined : i18n[language].CHOOSE_DATE}
                     className="ffe-datepicker"
                     onClick={this.clickHandler}
