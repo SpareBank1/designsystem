@@ -14,7 +14,7 @@ const defaultProps = {
 const getWrapper = props =>
     mount(<RadioButtonInputGroup {...defaultProps} {...props} />);
 
-describe('<RadioButtonGroup />', () => {
+describe('<RadioButtonInputGroup />', () => {
     it('renders without exploding', () => {
         const wrapper = getWrapper();
         expect(wrapper.exists()).toBe(true);
