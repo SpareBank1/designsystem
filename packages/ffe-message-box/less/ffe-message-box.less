@@ -25,8 +25,12 @@
     text-align: center;
 
     &__box {
-        padding: @app-margin*2 @app-margin*2;
+        padding: 40px 30px;
         border-radius: 5px;
+
+        @media only screen and (min-width: @breakpoint-md) {
+            padding: 40px 40px;
+        }
 
         &--tips {
             background-color: @ffe-sand;
@@ -107,8 +111,9 @@
         color: inherit;
         text-decoration: underline;
 
-        &:hover, &:focus {
-            font-family: "MuseoSansRounded-700", arial, sans-serif;
+        &:hover,
+        &:focus {
+            font-family: 'MuseoSansRounded-700', arial, sans-serif;
         }
     }
 }
