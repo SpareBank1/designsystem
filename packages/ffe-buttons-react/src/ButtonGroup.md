@@ -1,45 +1,31 @@
-For å plassere knapper ved siden av hverandre på riktig måte har vi en såkalt
-knappegruppe. Denne sørger for å gi riktige marginer mellom knappene. Knapper i
-grupper kan være vanlige knapper eller lenker til andre steder.
+#### Default
 
 ```js
 <React.Fragment>
     <ButtonGroup>
-        <ActionButton>
-            Neste
-        </ActionButton>
+        <ActionButton>Neste</ActionButton>
         <ActionButton element="a" href="#buttongroup">
             Lenke
         </ActionButton>
-        <SecondaryButton>
-            Avbryt
-        </SecondaryButton>
+        <SecondaryButton>Avbryt</SecondaryButton>
         <SecondaryButton element="a" href="#buttongroup">
             Lenke
         </SecondaryButton>
-        <TertiaryButton>
-            Hopp over
-        </TertiaryButton>
+        <TertiaryButton>Hopp over</TertiaryButton>
         <TertiaryButton element="a" href="#buttongroup">
             Lenke
         </TertiaryButton>
     </ButtonGroup>
     <ButtonGroup>
-        <PrimaryButton>
-            Neste
-        </PrimaryButton>
+        <PrimaryButton>Neste</PrimaryButton>
         <PrimaryButton element="a" href="#buttongroup">
             Lenke
         </PrimaryButton>
-        <SecondaryButton>
-            Avbryt
-        </SecondaryButton>
+        <SecondaryButton>Avbryt</SecondaryButton>
         <SecondaryButton element="a" href="#buttongroup">
             Lenke
         </SecondaryButton>
-        <TertiaryButton>
-            Hopp over
-        </TertiaryButton>
+        <TertiaryButton>Hopp over</TertiaryButton>
         <TertiaryButton element="a" href="#buttongroup">
             Lenke
         </TertiaryButton>
@@ -47,46 +33,34 @@ grupper kan være vanlige knapper eller lenker til andre steder.
 </React.Fragment>
 ```
 
-Det finnes også en tynnere variant.
+#### Thin
 
 ```js
 <React.Fragment>
     <ButtonGroup thin={true}>
-        <ActionButton>
-            Neste
-        </ActionButton>
+        <ActionButton>Neste</ActionButton>
         <ActionButton element="a" href="#buttongroup">
             Lenke
         </ActionButton>
-        <SecondaryButton>
-            Avbryt
-        </SecondaryButton>
+        <SecondaryButton>Avbryt</SecondaryButton>
         <SecondaryButton element="a" href="#buttongroup">
             Lenke
         </SecondaryButton>
-        <TertiaryButton>
-            Hopp over
-        </TertiaryButton>
+        <TertiaryButton>Hopp over</TertiaryButton>
         <TertiaryButton element="a" href="#buttongroup">
             Lenke
         </TertiaryButton>
     </ButtonGroup>
     <ButtonGroup thin={true}>
-        <PrimaryButton>
-            Neste
-        </PrimaryButton>
+        <PrimaryButton>Neste</PrimaryButton>
         <PrimaryButton element="a" href="#buttongroup">
             Lenke
         </PrimaryButton>
-        <SecondaryButton>
-            Avbryt
-        </SecondaryButton>
+        <SecondaryButton>Avbryt</SecondaryButton>
         <SecondaryButton element="a" href="#buttongroup">
             Lenke
         </SecondaryButton>
-        <TertiaryButton>
-            Hopp over
-        </TertiaryButton>
+        <TertiaryButton>Hopp over</TertiaryButton>
         <TertiaryButton element="a" href="#buttongroup">
             Lenke
         </TertiaryButton>
@@ -94,46 +68,34 @@ Det finnes også en tynnere variant.
 </React.Fragment>
 ```
 
-Det finnes også en inline variant.
+#### Inline
 
 ```js
 <React.Fragment>
     <ButtonGroup inline={true}>
-        <ActionButton>
-            Neste
-        </ActionButton>
+        <ActionButton>Neste</ActionButton>
         <ActionButton element="a" href="#buttongroup">
             Lenke
         </ActionButton>
-        <SecondaryButton>
-            Avbryt
-        </SecondaryButton>
+        <SecondaryButton>Avbryt</SecondaryButton>
         <SecondaryButton element="a" href="#buttongroup">
             Lenke
         </SecondaryButton>
-        <TertiaryButton>
-            Hopp over
-        </TertiaryButton>
+        <TertiaryButton>Hopp over</TertiaryButton>
         <TertiaryButton element="a" href="#buttongroup">
             Lenke
         </TertiaryButton>
     </ButtonGroup>
     <ButtonGroup inline={true}>
-        <PrimaryButton>
-            Neste
-        </PrimaryButton>
+        <PrimaryButton>Neste</PrimaryButton>
         <PrimaryButton element="a" href="#buttongroup">
             Lenke
         </PrimaryButton>
-        <SecondaryButton>
-            Avbryt
-        </SecondaryButton>
+        <SecondaryButton>Avbryt</SecondaryButton>
         <SecondaryButton element="a" href="#buttongroup">
             Lenke
         </SecondaryButton>
-        <TertiaryButton>
-            Hopp over
-        </TertiaryButton>
+        <TertiaryButton>Hopp over</TertiaryButton>
         <TertiaryButton element="a" href="#buttongroup">
             Lenke
         </TertiaryButton>

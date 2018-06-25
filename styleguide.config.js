@@ -32,15 +32,19 @@ module.exports = {
          * "packages/" and the next occurence of "/". The goal is to capture the folder name
          * for the package holding the current component.
          */
-        const regexpResult = /^packages\/(.+?)\//.exec(path.dirname(componentPath));
+        const regexpResult = /^packages\/(.+?)\//.exec(
+            path.dirname(componentPath),
+        );
         if (regexpResult === null) {
             return componentPath;
         }
         const packageName = regexpResult[1];
         const name = path.basename(componentPath, '.js');
-        const isDefaultExport = PACKAGES_WITH_DEFAULT_EXPORT.includes(packageName);
+        const isDefaultExport = PACKAGES_WITH_DEFAULT_EXPORT.includes(
+            packageName,
+        );
         if (isDefaultExport) {
-            return `import ${name} from '@sb1/${packageName}';`
+            return `import ${name} from '@sb1/${packageName}';`;
         }
         return `import { ${name} } from '@sb1/${packageName}';`;
     },
@@ -77,38 +81,47 @@ module.exports = {
                     test: /\.css$/,
                     use: PRODUCTION
                         ? [
-                            MiniCssExtractPlugin.loader,
-                            {
-                                loader: 'css-loader',
-                                options: {
-                                    minimize: {
-                                        autoprefixer: false,
-                                    },
-                                    url: false,
-                                },
-                            },
-                            'postcss-loader'
-                        ]
-                        : ['style-loader', 'css-loader?url=false', 'postcss-loader'],
+                              MiniCssExtractPlugin.loader,
+                              {
+                                  loader: 'css-loader',
+                                  options: {
+                                      minimize: {
+                                          autoprefixer: false,
+                                      },
+                                      url: false,
+                                  },
+                              },
+                              'postcss-loader',
+                          ]
+                        : [
+                              'style-loader',
+                              'css-loader?url=false',
+                              'postcss-loader',
+                          ],
                     exclude: /node_modules/,
                 },
                 {
                     test: /\.less$/,
                     use: PRODUCTION
                         ? [
-                            MiniCssExtractPlugin.loader,
-                            {
-                                loader: 'css-loader',
-                                options: {
-                                    minimize: {
-                                        autoprefixer: false,
-                                    },
-                                },
-                            },
-                            'postcss-loader',
-                            'less-loader'
-                        ]
-                        : ['style-loader', 'css-loader', 'postcss-loader', 'less-loader'],
+                              MiniCssExtractPlugin.loader,
+                              {
+                                  loader: 'css-loader',
+                                  options: {
+                                      minimize: {
+                                          autoprefixer: false,
+                                      },
+                                  },
+                              },
+                              'postcss-loader',
+                              'less-loader',
+                          ]
+                        : [
+                              'style-loader',
+                              'css-loader',
+                              'postcss-loader',
+                              'less-loader',
+                          ],
                     exclude: /node_modules/,
                 },
             ],
@@ -116,39 +129,56 @@ module.exports = {
         plugins: [
             new MiniCssExtractPlugin({
                 filename: 'styles.css',
-            })
+            }),
         ],
     },
     template: ({ css, js, publicPath, title }) => {
         const template = fs.readFileSync(
             path.join(__dirname, 'src', 'styleguidist.html'),
-            'utf-8'
+            'utf-8',
         );
         return template
             .replace(
                 '<!-- MiniHtmlWebpackPlugin:Title -->',
-                `<title>${title}</title>`
+                `<title>${title}</title>`,
             )
             .replace(
                 '<!-- MiniHtmlWebpackPlugin:CSS -->',
-                MiniHtmlWebpackPlugin.generateCSSReferences(css, publicPath)
+                MiniHtmlWebpackPlugin.generateCSSReferences(css, publicPath),
             )
             .replace(
                 '<!-- MiniHtmlWebpackPlugin:JS -->',
-                MiniHtmlWebpackPlugin.generateJSReferences(js, publicPath)
+                MiniHtmlWebpackPlugin.generateJSReferences(js, publicPath),
             );
     },
     sections: [
         {
             name: 'Knapper',
-            content: 'packages/ffe-buttons-react/USAGE.md',
-            components: 'packages/ffe-buttons-react/src/[A-Z]+([A-Za-z]).js',
+            sections: [
+                {
+                    name: 'Bruk',
+                    content: 'packages/ffe-buttons-react/USAGE.md',
+                },
+                {
+                    name: 'Kode',
+                    components:
+                        'packages/ffe-buttons-react/src/[A-Z]+([A-Za-z]).js',
+                },
+            ],
         },
         {
             name: 'Typografi',
-            content: 'packages/ffe-core-react/USAGE.md',
-            components:
-                'packages/ffe-core-react/src/typography/[A-Z]+([A-Za-z]).js',
+            sections: [
+                {
+                    name: 'Bruk',
+                    content: 'packages/ffe-core-react/src/typography/USAGE.md',
+                },
+                {
+                    name: 'Kode',
+                    components:
+                        'packages/ffe-core-react/src/typography/[A-Z]+([A-Za-z]).js',
+                },
+            ],
         },
         {
             name: 'Lister',
@@ -236,7 +266,8 @@ module.exports = {
         },
         {
             name: 'Radioknapper',
-            components: 'packages/ffe-radio-button-react/src/[A-Z]+([A-Za-z]).js',
+            components:
+                'packages/ffe-radio-button-react/src/[A-Z]+([A-Za-z]).js',
         },
         {
             name: 'Datepicker',

@@ -1,9 +1,8 @@
-Knapper som brukes for å utføre et gjøremål.
-
 ```js
+const ButtonGroup = require('./ButtonGroup').default;
 const { PlussIkon } = require('../../ffe-icons-react');
 
-<div className="ffe-button-group">
+<ButtonGroup thin={true}>
     <TaskButton icon={<PlussIkon />}>Legg til bruker</TaskButton>
-</div>
+</ButtonGroup>;
 ```
