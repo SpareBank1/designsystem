@@ -65,13 +65,10 @@ GridRow.defaultProps = {
 GridRow.propTypes = {
     /** Supported background colors */
     background: oneOf([
-        'blue-cobalt',
         'blue-ice',
         'blue-pale',
-        'blue-royal',
         'green-mint',
         'grey-cloud',
-        'purple-magenta',
         'sand',
         'grey-warm',
         'orange-salmon',
