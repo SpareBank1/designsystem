@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const glob = require('glob');
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const MiniHtmlWebpackPlugin = require('mini-html-webpack-plugin');
@@ -181,111 +182,257 @@ module.exports = {
             ],
         },
         {
-            name: 'Lister',
-            components: 'packages/ffe-lists-react/src/[A-Z]+([A-Za-z]).js',
+            name: 'Ikoner',
+            sections: [
+                {
+                    name: 'Bruk',
+                    content: 'packages/ffe-icons-react/USAGE.md',
+                },
+                {
+                    name: 'Kode',
+                    content: 'packages/ffe-icons-react/README.md',
+                },
+            ],
         },
         {
             name: 'Formatering',
-            content: 'packages/ffe-formatters/USAGE.md',
+            sections: [
+                {
+                    name: 'Bruk',
+                    content: 'packages/ffe-formatters/USAGE.md',
+                },
+                {
+                    name: 'Kode',
+                    content: 'packages/ffe-icons-react/README.md',
+                },
+            ],
         },
         {
-            name: 'Ikoner',
-            content: 'packages/ffe-icons-react/USAGE.md',
+            name: 'Lister',
+            sections: [
+                {
+                    name: 'Bruk',
+                    content: 'packages/ffe-lists-react/USAGE.md',
+                },
+                {
+                    name: 'Kode',
+                    components:
+                        'packages/ffe-lists-react/src/[A-Z]+([A-Za-z]).js',
+                },
+            ],
         },
         {
             name: 'Kakediagram',
-            content: 'packages/ffe-chart-donut-react/USAGE.md',
-            components:
-                'packages/ffe-chart-donut-react/src/[A-Z]+([A-Za-z]).js',
+            sections: [
+                {
+                    name: 'Bruk',
+                    content: 'packages/ffe-chart-donut-react/USAGE.md',
+                },
+                {
+                    name: 'Kode',
+                    components:
+                        'packages/ffe-chart-donut-react/src/[A-Z]+([A-Za-z]).js',
+                },
+            ],
         },
         {
             name: 'Accordion',
-            components: 'packages/ffe-accordion-react/src/Accordion*.js',
+            sections: [
+                {
+                    name: 'Bruk',
+                    content: 'packages/ffe-accordion-react/USAGE.md',
+                },
+                {
+                    name: 'Kode',
+                    components:
+                        'packages/ffe-accordion-react/src/Accordion*.js',
+                },
+            ],
         },
         {
             name: 'Kontovelger',
-            content: 'packages/ffe-account-selector-react/USAGE.md',
-            components:
-                'packages/ffe-account-selector-react/src/components/**/[A-Z]+([A-Za-z]).js',
+            sections: [
+                {
+                    name: 'Bruk',
+                    content: 'packages/ffe-account-selector-react/USAGE.md',
+                },
+                {
+                    name: 'Kode',
+                    components:
+                        'packages/ffe-account-selector-react/src/components/**/[A-Z]+([A-Za-z]).js',
+                },
+            ],
         },
         {
             name: 'Kort',
-            components: 'packages/ffe-cards-react/src/[A-Z]+([A-Za-z]).js',
+            sections: [
+                {
+                    name: 'Bruk',
+                    content: 'packages/ffe-cards-react/USAGE.md',
+                },
+                {
+                    name: 'Kode',
+                    components:
+                        'packages/ffe-cards-react/src/[A-Z]+([A-Za-z]).js',
+                },
+            ],
         },
         {
             name: 'Meldinger',
             sections: [
                 {
-                    name: 'Meldinger, bokser',
-                    content: 'packages/ffe-message-box-react/USAGE.md',
-                    components:
-                        'packages/ffe-message-box-react/src/[A-Z]+([A-Za-z]).js',
+                    name: 'Bruk',
+                    sections: [
+                        {
+                            name: 'Meldinger, bokser',
+                            content: 'packages/ffe-message-box-react/USAGE.md',
+                        },
+                        {
+                            name: 'Meldinger, kontekstuelle',
+                            content:
+                                'packages/ffe-context-message-react/USAGE.md',
+                        },
+                        {
+                            name: 'Systemmeldinger',
+                            content:
+                                'packages/ffe-system-message-react/USAGE.md',
+                        },
+                    ],
                 },
                 {
-                    name: 'Meldinger, kontekstuelle',
-                    components:
-                        'packages/ffe-context-message-react/src/[A-Z]+([A-Za-z]).js',
-                },
-                {
-                    name: 'Systemmeldinger',
-                    content: 'packages/ffe-system-message-react/USAGE.md',
-                    components:
-                        'packages/ffe-system-message-react/src/System{Error,Info,News,Success}Message.js',
+                    name: 'Kode',
+                    sections: [
+                        {
+                            name: 'Meldinger, bokser',
+                            components:
+                                'packages/ffe-message-box-react/src/[A-Z]+([A-Za-z]).js',
+                        },
+                        {
+                            name: 'Meldinger, kontekstuelle',
+                            components:
+                                'packages/ffe-context-message-react/src/[A-Z]+([A-Za-z]).js',
+                        },
+                        {
+                            name: 'Systemmeldinger',
+                            components:
+                                'packages/ffe-system-message-react/src/System{Error,Info,News,Success}Message.js',
+                        },
+                    ],
                 },
             ],
         },
         {
             name: 'Dropdowns',
-            components: () => [
-                'packages/ffe-searchable-dropdown-react/src/SearchableDropdown.js',
-                'packages/ffe-dropdown-react/src/Dropdown.js',
+            sections: [
+                {
+                    name: 'Bruk',
+                    content: 'packages/ffe-dropdown-react/USAGE.md',
+                },
+                {
+                    name: 'Kode',
+                    components: () => [
+                        'packages/ffe-searchable-dropdown-react/src/SearchableDropdown.js',
+                        'packages/ffe-dropdown-react/src/Dropdown.js',
+                    ],
+                },
             ],
         },
         {
             name: 'Grid',
-            content: 'packages/ffe-grid-react/USAGE.md',
-            components: 'packages/ffe-grid-react/src/[A-Z]+([A-Za-z]).js',
+            sections: [
+                {
+                    name: 'Bruk',
+                    content: 'packages/ffe-grid-react/USAGE.md',
+                },
+                {
+                    name: 'Kode',
+                    components:
+                        'packages/ffe-grid-react/src/[A-Z]+([A-Za-z]).js',
+                },
+            ],
         },
         {
             name: 'Detaljliste',
-            components:
-                'packages/ffe-details-list-react/src/[A-Z]+([A-Za-z]).js',
+            sections: [
+                {
+                    name: 'Bruk',
+                    content: 'packages/ffe-details-list-react/USAGE.md',
+                },
+                {
+                    name: 'Kode',
+                    components:
+                        'packages/ffe-details-list-react/src/[A-Z]+([A-Za-z]).js',
+                },
+            ],
         },
         {
             name: 'Tabeller',
-            content: 'packages/ffe-tables-react/USAGE.md',
-            components: 'packages/ffe-tables-react/src/Table.js',
+            sections: [
+                {
+                    name: 'Bruk',
+                    content: 'packages/ffe-tables-react/USAGE.md',
+                },
+                {
+                    name: 'Kode',
+                    components: 'packages/ffe-tables-react/src/Table.js',
+                },
+            ],
         },
         {
             name: 'Skjema',
-            components: 'packages/ffe-form-react/src/[A-Z]+([A-Za-z]).js',
-        },
-        {
-            name: 'Checkbox',
-            components: 'packages/ffe-checkbox-react/src/[A-Z]+([A-Za-z]).js',
-        },
-        {
-            name: 'Radioknapper',
-            components:
-                'packages/ffe-radio-button-react/src/[A-Z]+([A-Za-z]).js',
-        },
-        {
-            name: 'Datepicker',
-            components:
-                'packages/ffe-datepicker-react/src/**/{Datepicker,Calendar,Input}.js',
-        },
-        {
-            name: 'Filopplasting',
-            components:
-                'packages/ffe-file-upload-react/src/[A-Z]+([A-Za-z]).js',
+            sections: [
+                {
+                    name: 'Bruk',
+                    content: 'packages/ffe-form-react/USAGE.md',
+                },
+                {
+                    name: 'Kode',
+                    components: () => [
+                        ...glob.sync(
+                            'packages/ffe-form-react/src/[A-Z]+([A-Za-z]).js',
+                        ),
+                        ...glob.sync(
+                            'packages/ffe-checkbox-react/src/[A-Z]+([A-Za-z]).js',
+                        ),
+                        ...glob.sync(
+                            'packages/ffe-radio-button-react/src/[A-Z]+([A-Za-z]).js',
+                        ),
+                        'packages/ffe-datepicker-react/src/datepicker/Datepicker.js',
+                        'packages/ffe-datepicker-react/src/calendar/Calendar.js',
+                        ...glob.sync(
+                            'packages/ffe-file-upload-react/src/[A-Z]+([A-Za-z]).js',
+                        ),
+                    ],
+                },
+            ],
         },
         {
             name: 'Spinners',
-            components: 'packages/ffe-spinner-react/src/[A-Z]+([A-Za-z]).js',
+            sections: [
+                {
+                    name: 'Bruk',
+                    content: 'packages/ffe-spinner-react/USAGE.md',
+                },
+                {
+                    name: 'Kode',
+                    components:
+                        'packages/ffe-spinner-react/src/[A-Z]+([A-Za-z]).js',
+                },
+            ],
         },
         {
             name: 'Faner',
-            components: 'packages/ffe-tabs-react/src/[A-Z]+([A-Za-z]).js',
+            sections: [
+                {
+                    name: 'Bruk',
+                    content: 'packages/ffe-tabs-react/USAGE.md',
+                },
+                {
+                    name: 'Kode',
+                    components:
+                        'packages/ffe-tabs-react/src/[A-Z]+([A-Za-z]).js',
+                },
+            ],
         },
     ],
 };
