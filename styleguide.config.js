@@ -203,7 +203,7 @@ module.exports = {
                 },
                 {
                     name: 'Kode',
-                    content: 'packages/ffe-icons-react/README.md',
+                    content: 'packages/ffe-formatters/src/README.md',
                 },
             ],
         },
