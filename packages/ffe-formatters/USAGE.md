@@ -1,9 +1,10 @@
-Presentasjon av valuta, datoer, prosenter, og tall kan gjøres på mange
-forskjellige måter.
+```jsx
+const InfoIkon = require('../ffe-icons-react/lib/info-ikon').default;
 
-For å presentere disse ulike tingene likt på tvers har vi samlet
-formateringsfunksjoner på ett sted som utviklere kan bruke i pakken
-`ffe-formatters`.
+<ContextInfoMessage icon={<InfoIkon />}>
+    Denne seksjonen er ikke skrevet enda
+</ContextInfoMessage>;
+```
 
 Her er hvordan vi presenterer et utvalg av informasjon:
 

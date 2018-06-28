@@ -1,110 +1,148 @@
-# Formatters and how to use them
+### Tall
 
-This document will document all formatters, how to use them and what to
-expect when invoking them. For more detailed documentation, please visit
-the relevant tests, as they provide more information on edge case behavior.
+#### Valuta
 
-### `formatAccountNumber(accNumber)`
-
-Formats an account number to the correct format separated with non breaking
-space characters.
-
-```javascript
-import formatAccountNumber from '@sb1/ffe-formatters/lib/formatAccountNumber';
-
-formatAccountNumber('90010012345') === '9001 00 12345';
+```js static
+import formatCurrency from '@sb1/ffe-formatters/lib/formatCurrency';
 ```
 
-### `formatCurrency(number [, opts])`
+Kan gis et objekt som andre argument for å styre prefix og postfix:
 
-Formats an amount of currency with the correct prefix, postfix and decimals,
-all separated by non breaking space characters.
-
-The function accepts an optional second `opts`-object, with two keys:
-
-```javascript
+```js static
 {
   prefix, // default 'kr. '
-  postfix, // default ',-' if integer, '' if decimal
+  postfix, // default ',-' hvis heltall, '' hvis ikke
 }
 ```
 
-```javascript
-import formatCurrency from '@sb1/ffe-formatters/lib/formatCurrency';
-
-formatCurrency(1000) === 'kr. 1 000,-';
-formatCurrency(13.37) === 'kr. 13,37';
-formatCurrency(1000, { prefix: '', postfix: 'kroner' }) === '1 000,- kroner';
+```js
+const formatCurrency = require('./formatCurrency').default;
+<React.Fragment>
+    <div>{formatCurrency(100)}</div>
+    <div>{formatCurrency(1000, { prefix: '', postfix: ' kroner' })}</div>
+</React.Fragment>;
 ```
 
-### `formatDate(timestamp)`
+### Prosenter
 
-Formats timestamps, `Date`-objects and `moment` instances to the correct
-format.
-
-```javascript
-import formatDate from '@sb1/ffe-formatters/lib/formatDate';
-
-formatDate(new Date('2000', 0, 1)) === '01.01.2000';
-formatDate(moment('20000101')) === '01.01.2000';
-formatDate(946681200000) === '01.01.2000';
-```
-
-### `formatDistance(distance[, opts])`
-
-Formats distances in kilometers in the correct format with non breaking
-space characters. Defaults to `km` as a suffix, but can be overridden with
-the `unit` parameter in the `opts` argument if needed.
-
-```javascript
-import formatDistance from '@sb1/ffe-formatters/lib/formatDistance';
-
-formatDistance(160520) === '160 520 km';
-formatDistance(12345, { unit: 'mi' }) === '12 345 mi';
-```
-
-### `formatNumber(num [, opts])`
-
-Formats numbers to the correct format separated with non breaking
-space characters. Ignores decimals by default, but accepts the
-number for decimals as a `decimals`-prop to the `opts`-argument. Thousand separator and
-decimal mark can also be specified as props to the `opts`-argument.
-
-```javascript
-import formatNumber from '@sb1/ffe-formatters/lib/formatNumber';
-
-formatNumber(1000000) === '1 000 000';
-formatNumber(1234.567) === '1 234';
-formatNumber(1234.567, { decimals: 2 }) === '1 234,56';
-formatNumber(1234.567, {
-    decimals: 2,
-    thousandSeparator: ',',
-    decimalMark: '.',
-}) === '1,234.56';
-```
-
-### `formatPercentage(num [, opts])`
-
-Formats percentages to the correct format separated with non breaking
-space characters. Returns as few decimals as possible. By default there's
-a two digit maximum on decimals, but this can be overridden by the `maxDecimals`
-property in the `opts` argument if needed.
-
-```javascript
+```js static
 import formatPercentage from '@sb1/ffe-formatters/lib/formatPercentage';
-
-formatPercentage(10.00001) === '10 %';
-formatPercentage(12.3456) === '12,35 %'; // rounds the overflowing decimals
-formatPercentage(12.34567, { maxDecimals: 4 }) === '12,3457';
 ```
 
-### `formatFodselsnummer(fodselsnummer)`
+Gir prosenter det korrekte mellomrom mellom tall og `%` med et _non-breaking space_.
+Runder av til så få desimaler som mulig, med en default cap på to desimaler. Dette
+kan overstyres i `options`-objektet.
 
-Formats a Norwegian fødselsnummer to the correct format separated with
-non breaking space characters.
+```js static
+{
+    maxDecimals, // default 2
+}
+```
 
-```javascript
+```jsx
+const formatPercentage = require('./formatPercentage').default;
+
+<React.Fragment>
+    <div>{formatPercentage(10.00001)}</div>
+    <div>{formatPercentage(12.34567, { maxDecimals: 4 })}</div>
+</React.Fragment>;
+```
+
+### Fødselsnummer
+
+```js static
 import formatFodselsnummer from '@sb1/ffe-formatters/lib/formatFodselsnummer';
+```
 
-formatFodselsnummer('01010112345') === '010101 12345';
+Formatert i to deler med et _non-breaking space_.
+
+```js
+const formatFodselsnummer = require('./formatFodselsnummer').default;
+
+<span>{formatFodselsnummer('01010112345')}</span>;
+```
+
+#### Kontonummer
+
+```js static
+import formatAccountNumber from '@sb1/ffe-formatters/lib/formatAccountNumber';
+```
+
+```jsx
+const formatAccountNumber = require('./formatAccountNumber').default;
+
+<span>{formatAccountNumber('90010012345')}</span>;
+```
+
+#### Tall generelt
+
+Om ingen av de spesialiserte formateringsfunksjonene passer i en gitt sammenheng kan du bruke
+`formatNumber`. Denne funksjonen utgjør basen i mange av funksjonene over.
+
+```js static
+import formatNumber from '@sb1/ffe-formatters/lib/formatNumber';
+```
+
+```js static
+{
+  decimals: 2, // default 0
+  thousandSeparator: ',', // default ' ' (space)
+  decimalMark: '.', // default ','
+}
+```
+
+```jsx
+const formatNumber = require('./formatNumber').default;
+
+<React.Fragment>
+    <div>{formatNumber(1000000)}</div>
+    <div>{formatNumber(1234.567)}</div>
+    <div>{formatNumber(1234.567, { decimals: 2 })}</div>
+    <div>
+        {formatNumber(1234.567, {
+            decimals: 2,
+            thousandSeparator: ',',
+            decimalMark: '.',
+        })}
+    </div>
+</React.Fragment>;
+```
+
+### Dato
+
+```js static
+import formatDate from '@sb1/ffe-formatters/lib/formatDate';
+```
+
+Formaterer timestamps, `Date`- og `moment`-objekter. **Støtter kun norsk locale!**
+
+```jsx
+const formatDate = require('./formatDate').default;
+
+<React.Fragment>
+    <div>{formatDate(new Date('2000', 0, 1))}</div>
+    {/* <div>{formatDate(moment('20000101'))}</div> */}
+    <div>{formatDate(946681200000)}</div>
+</React.Fragment>;
+```
+
+### Avstander
+
+```js static
+import formatDistance from '@sb1/ffe-formatters/lib/formatDistance';
+```
+
+```js static
+{
+  units, // default 'km',
+}
+```
+
+```jsx
+const formatDistance = require('./formatDistance').default;
+
+<React.Fragment>
+    <div>{formatDistance(160520)}</div>
+    <div>{formatDistance(12345, { unit: 'mi' })}</div>
+</React.Fragment>;
 ```

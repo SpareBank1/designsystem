@@ -1,5 +1,3 @@
-Dette er en liste hvor punktene består av stiliserte haker, og har en tilfeldig rekkefølge.
-
 ```js
 <div>
     <h3 className="ffe-h4">Ved å bruke FFE får du</h3>

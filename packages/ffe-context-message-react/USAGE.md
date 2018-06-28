@@ -1,1 +1,48 @@
-Gir side- eller produktspesifikk informasjon av ikke kritisk art.
+```jsx
+const InfoIkon = require('../ffe-icons-react/lib/info-ikon').default;
+
+<ContextInfoMessage icon={<InfoIkon />}>
+    Denne seksjonen er ikke ferdig skrevet enda
+</ContextInfoMessage>;
+```
+
+Kommer i samme variasjoner av fargedrakt som [Meldinger, bokser](#meldinger-bokser).
+Kontekstuelle meldinger har i tillegg flere variasjoner innad i samme type melding.
+
+```jsx
+const { InfoIkon } = require('@sb1/ffe-icons-react');
+
+<React.Fragment>
+    <Grid>
+        <GridRow>
+            <GridCol md={6}>
+                <ContextInfoMessage>Standard</ContextInfoMessage>
+            </GridCol>
+            <GridCol md={6}>
+                <ContextInfoMessage compact={true}>
+                    Kompakt variant
+                </ContextInfoMessage>
+            </GridCol>
+        </GridRow>
+        <GridRow>
+            <GridCol md={6}>
+                <ContextInfoMessage header="Til info">
+                    Med header
+                </ContextInfoMessage>
+            </GridCol>
+            <GridCol md={6}>
+                <ContextInfoMessage icon={<InfoIkon />}>
+                    Med ikon
+                </ContextInfoMessage>
+            </GridCol>
+        </GridRow>
+        <GridRow>
+            <GridCol>
+                <ContextInfoMessage showCloseButton={true}>
+                    Lukkbar
+                </ContextInfoMessage>
+            </GridCol>
+        </GridRow>
+    </Grid>
+</React.Fragment>;
+```

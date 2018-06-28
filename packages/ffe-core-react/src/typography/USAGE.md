@@ -1,3 +1,3 @@
-Typografi hjelper brukerne våre forstå det grunnleggende strukturelle hierarkiet av innholdet vårt.
+Bruken av typografi i SpareBank 1 er beskrevet under [Visuell Identitet](/visuell-identitet.html#visuell-identitet_typografi).
 
-Her kan du lese mer om hvordan vi bruker typografi til å oppnå dette.
+Under følger dokumentasjon myntet på utviklere.
