@@ -1,11 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import FieldMessage from './FieldMessage';
+import BaseFieldMessage from './BaseFieldMessage';
 
 const getWrapper = props =>
-    shallow(<FieldMessage {...props}>Field message</FieldMessage>);
+    shallow(<BaseFieldMessage {...props}>Field message</BaseFieldMessage>);
 
-describe('<FieldMessage>', () => {
+describe('<BaseFieldMessage>', () => {
     it('renders the correct class name based on type prop', () => {
         const wrapper = getWrapper({ type: 'error' });
         expect(wrapper.exists()).toBe(true);

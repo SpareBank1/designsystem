@@ -1,8 +1,8 @@
 import React from 'react';
-import FieldMessage from './FieldMessage';
+import BaseFieldMessage from './BaseFieldMessage';
 
 const InfoFieldMessage = props => {
-    return <FieldMessage {...props} type="info" />;
+    return <BaseFieldMessage {...props} type="info" />;
 };
 
 export default InfoFieldMessage;
