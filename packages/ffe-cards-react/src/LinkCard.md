@@ -1,6 +1,6 @@
 Lenkekort kommer i flere forskjellige størrelser.
 
-## Store kort
+#### Store kort
 
 Hele flaten er klikkbar. Brukes som navigasjon. Brukt som produktkort på nettsidene.
 
@@ -19,10 +19,10 @@ const { KrPoseIkon } = require('@sb1/ffe-icons-react');
         icon={<KrPoseIkon className="sb1ds-icon-color" />}
         size="large"
     />
-</div>
+</div>;
 ```
 
-## Mellomstore kort
+#### Mellomstore kort
 
 Hele flaten er klikkbar. Brukes som navigasjon. Brukt som produktkort på nettsidene.
 
@@ -39,10 +39,10 @@ const { KrPoseIkon } = require('@sb1/ffe-icons-react');
         icon={<KrPoseIkon className="sb1ds-icon-color" />}
         size="medium"
     />
-</div>
+</div>;
 ```
 
-## Små kort
+#### Små kort
 
 Hele flaten er klikkbar. Brukes som navigasjon. Dette er også slik produktkortene ser ut på mobil.
 
@@ -59,10 +59,10 @@ const { BilIkon, HusIkon } = require('@sb1/ffe-icons-react');
         heading="Husforsikring"
         icon={<HusIkon className="sb1ds-icon-color" />}
     />
-</div>
+</div>;
 ```
 
-## Nummererte kort
+#### Nummererte kort
 
 ```js
 <div>

@@ -1,5 +1,3 @@
-Produktkort brukes for å vise produkter og detaljer om disse. De kan gjerne fungere som navigasjon.
-
 ```jsx
 const { BilIkon, HusIkon } = require('@sb1/ffe-icons-react');
 
@@ -13,7 +11,7 @@ const { BilIkon, HusIkon } = require('@sb1/ffe-icons-react');
         icon={<HusIkon className="sb1ds-icon-color" />}
         heading="Husforsikring"
     />
-</div>
+</div>;
 ```
 
 Produktkort kan ha en tilkoblet status.
@@ -33,5 +31,5 @@ const { BilIkon, HusIkon } = require('@sb1/ffe-icons-react');
         heading="Husforsikring"
         status="Fornyelse"
     />
-</div>
+</div>;
 ```
