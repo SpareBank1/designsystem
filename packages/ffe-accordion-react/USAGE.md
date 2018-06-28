@@ -5,3 +5,7 @@ const InfoIkon = require('../ffe-icons-react/lib/info-ikon').default;
     Denne seksjonen er ikke skrevet enda
 </ContextInfoMessage>;
 ```
+
+Hele raden med overskrifter er klikkbar.
+
+Det finnes to forskjellige versjoner av `Accordion` - hvit og blå.
