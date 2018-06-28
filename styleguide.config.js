@@ -312,7 +312,7 @@ module.exports = {
                         {
                             name: 'Meldinger, kontekstuelle',
                             components:
-                                'packages/ffe-context-message-react/src/[A-Z]+([A-Za-z]).js',
+                                'packages/ffe-context-message-react/src/Context{Error,Info,Success,Tip}Message.js',
                         },
                         {
                             name: 'Systemmeldinger',
