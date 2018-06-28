@@ -4,4 +4,4 @@ Vi skal oppleves som en støttespiller for våre kunder i deres hverdag. Vi skal
 
 Som støttespiller snakker vi med kunden, ikke til dem. Vi stiller spørsmål, setter oss inn i deres situasjon og bidrar med det som er relevant for dem.
 
-Bruk visuelle virkemidler og animasjoner for å understøtte budskapet i teksten
+Bruk [visuelle virkemidler](/visuell-identitet.html#visuell-identitet_illustrasjoner) og [animasjoner](/visuell-identitet.html#visuell-identitet_animasjoner) for å understøtte budskapet i teksten.
