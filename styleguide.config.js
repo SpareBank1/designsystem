@@ -19,6 +19,14 @@ const PACKAGES_WITH_DEFAULT_EXPORT = [
     'ffe-tables-react',
 ];
 
+const ignore = [
+    '**/__tests__/**',
+    '**/*.test.{js,jsx,ts,tsx}',
+    '**/*.spec.{js,jsx,ts,tsx}',
+    '**/Base*.js',
+    '**/InlineBase*.js',
+];
+
 module.exports = {
     title: 'SpareBank 1 Designsystem',
     require: [
@@ -49,13 +57,7 @@ module.exports = {
         }
         return `import { ${name} } from '@sb1/${packageName}';`;
     },
-    ignore: [
-        '**/__tests__/**',
-        '**/*.test.{js,jsx,ts,tsx}',
-        '**/*.spec.{js,jsx,ts,tsx}',
-        '**/Base*.js',
-        '**/InlineBase*.js',
-    ],
+    ignore,
     styleguideComponents: components,
     styleguideDir: 'dist/styleguidist',
     theme: {
@@ -392,17 +394,21 @@ module.exports = {
                     components: () => [
                         ...glob.sync(
                             'packages/ffe-form-react/src/[A-Z]+([A-Za-z]).js',
+                            { ignore },
                         ),
                         ...glob.sync(
                             'packages/ffe-checkbox-react/src/[A-Z]+([A-Za-z]).js',
+                            { ignore },
                         ),
                         ...glob.sync(
                             'packages/ffe-radio-button-react/src/[A-Z]+([A-Za-z]).js',
+                            { ignore },
                         ),
                         'packages/ffe-datepicker-react/src/datepicker/Datepicker.js',
                         'packages/ffe-datepicker-react/src/calendar/Calendar.js',
                         ...glob.sync(
                             'packages/ffe-file-upload-react/src/[A-Z]+([A-Za-z]).js',
+                            { ignore },
                         ),
                     ],
                 },
