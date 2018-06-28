@@ -1,5 +1,3 @@
-Dette er en liste hvor punktene har en gitt rekkefølge.
-
 ```js
 <div>
     <h3 className="ffe-h4">Å bruke FFE er enkelt!</h3>

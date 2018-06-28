@@ -1,5 +1,3 @@
-Dette er en liste der hvert punkt består av en betegnelse og en eller flere beskrivelser.
-
 ```js
 <div>
     <h3 className="ffe-h4">Personalia</h3>

@@ -1,5 +1,3 @@
-Brukes for å liste opp relaterte punkter. Rekkefølgen kan være helt tilfeldig.
-
 ```js
 <div>
     <h3 className="ffe-h4">Våre forsikringer</h3>
