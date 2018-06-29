@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.2.5"></a>
+## [3.2.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-radio-button-react@3.2.4...@sb1/ffe-radio-button-react@3.2.5) (2018-06-29)
+
+
+### Bug Fixes
+
+* **ffe-radio-button-react:** renamed test text from RadioButtonGroup to RadioButtonInputGroup ([a359e7b](https://github.com/SpareBank1/designsystem/commit/a359e7b))
+
+
+
+
 <a name="3.2.4"></a>
 ## [3.2.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-radio-button-react@3.2.3...@sb1/ffe-radio-button-react@3.2.4) (2018-06-20)
 
