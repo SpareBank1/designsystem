@@ -381,7 +381,7 @@ module.exports = {
             ],
         },
         {
-            name: 'Skjemaelementer',
+            name: 'Skjema elementer',
             sections: [
                 {
                     name: 'Bruk',
