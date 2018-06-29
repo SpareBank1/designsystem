@@ -284,6 +284,7 @@ module.exports = {
             sections: [
                 {
                     name: 'Bruk',
+                    content: 'styleguide-content/komponenter/meldinger.md',
                     sections: [
                         {
                             name: 'Meldinger, bokser',
