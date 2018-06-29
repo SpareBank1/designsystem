@@ -34,7 +34,9 @@ Et mer komplekst eksempel kan se slik ut:
 ```js
 const Button = ({ children }) => (
     // stopPropagation hindrer at raden ekspanderer/kollapser når vi trykker på knappen
-    <button onClick={e => e.stopPropagation()}>{children}</button>
+    <TertiaryButton onClick={e => e.stopPropagation()}>
+        {children}
+    </TertiaryButton>
 );
 
 const data = [
@@ -109,7 +111,7 @@ const expandedContentMapper = row =>
     row.address && <span>Adresse: {row.address}</span>;
 
 // function is called when table sorting changes.
-const onSort = ({sortBy, descending, tableData}) => {};
+const onSort = ({ sortBy, descending, tableData }) => {};
 
 <Table
     columns={columns}
@@ -126,6 +128,7 @@ const onSort = ({sortBy, descending, tableData}) => {};
     onSort={onSort}
 />;
 ```
+
 Bruk av render funksjoner for columns: cellRender, columnHeaderRender, columnFooterRender.
 
 For hele tabellen: rowRender, headerRender, footerRender.
@@ -149,7 +152,9 @@ const generateCheckbox = value => {
 
 const Button = ({ children }) => (
     // stopPropagation hindrer at raden ekspanderer/kollapser når vi trykker på knappen
-    <button onClick={e => e.stopPropagation()}>{children}</button>
+    <TertiaryButton onClick={e => e.stopPropagation()}>
+        {children}
+    </TertiaryButton>
 );
 
 const data = [
@@ -341,14 +346,14 @@ const onSort = ({ sortBy, descending, tableData }) => {};
                         Overskrift
                     </th>
                 </tr>
-                <tr {...trprops}/>
+                <tr {...trprops} />
             </React.Fragment>
         );
     }}
     footerRender={(trprops, columns) => {
         return (
             <React.Fragment>
-                <tr {...trprops}/>
+                <tr {...trprops} />
                 <tr {...trprops}>
                     <td className="ffe-table__cell" data-th="Navn">
                         <span className="ffe-table__content">Total</span>
@@ -380,7 +385,8 @@ const onSort = ({ sortBy, descending, tableData }) => {};
     }}
     rowRender={(trprops, props, index) => {
         const odd = index % 2 === 1;
-        return <tr
+        return (
+            <tr
                 {...trprops}
                 className={classNames(
                     trprops.className,
@@ -393,10 +399,9 @@ const onSort = ({ sortBy, descending, tableData }) => {};
                 }}
                 title={props.cells['name']}
             >
-            {trprops.children}
+                {trprops.children}
             </tr>
-            
-        ;
+        );
     }}
 />;
 ```
