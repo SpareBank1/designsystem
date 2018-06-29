@@ -2,12 +2,12 @@ import React from 'react';
 import { node, string, bool } from 'prop-types';
 import classNames from 'classnames';
 
-export default function TabGroup({ className, thin, ...rest }) {
+export default function TabButtonGroup({ className, thin, ...rest }) {
     return (
         <div
             className={classNames(
-                'ffe-tab-group',
-                { 'ffe-tab-group--thin': thin },
+                'ffe-tab-button-group',
+                { 'ffe-tab-button-group--thin': thin },
                 className,
             )}
             role="group"
@@ -16,7 +16,7 @@ export default function TabGroup({ className, thin, ...rest }) {
     );
 }
 
-TabGroup.propTypes = {
+TabButtonGroup.propTypes = {
     /** TabGroup contents - a group of Tabs */
     children: node.isRequired,
     /** Additional css classes */
