@@ -6,7 +6,7 @@ Knapper gir brukerne mulighet for å gjøre ulike typer handlinger i brukergrens
 -   Navigere i brukergrensesnittet. F.eks. «Neste», «Fortsett», «Søk».
 -   Endre modus eller visning. F.eks. «Redigér» for å gå til redigeringsmodus, «Vis flere» for å ekspandere en liste.
 
-### Hvordan bruke knapper?
+#### Prinsipp
 
 I SpareBank 1 har vi ulike knapper til ulikt bruk (se tabell nedenfor). Hvilken knapp som skal brukes til hva bestemmes av handlingens prioritet og konteksten knappen skal brukes i. Prioriteten vurderes kvalitativt basert på handlingens viktighet og frekvens. En handling som gjøres sjelden, men har svært høy viktighet enten for brukeren eller SB1, bør få høy eller svært høy prioritet. F.eks. knapper for å starte en prosess eller beslutte noe, som "Bli kunde", "Meld skade" og "Kjøp". En handling som har lav eller middels viktighet, men høy bruksfrekvens vil kunne få høy eller middels prioritet (men aldri svært høy). F.eks. knapper som er del av en prosess, som "Legg til godkjenning" og "Fortsett". En handling som sjelden brukes og har lav viktighet, men fortsatt må være tilgjengelig, vil som regel få lav prioritet. F.eks. å hente opp et klageskjema.
 
@@ -22,7 +22,7 @@ const { BindersIkon, PlussIkon } = require('../ffe-icons-react');
                 <span className="ffe-table__heading">Knapp</span>
             </th>
             <th scope="col">
-                <span className="ffe-table__heading">Bruksommråde</span>
+                <span className="ffe-table__heading">Bruksområde</span>
             </th>
         </tr>
     </thead>
