@@ -13,7 +13,10 @@ I SpareBank 1 har vi ulike knapper til ulikt bruk (se tabell nedenfor). Hvilken 
 Valg av prioritet kan også vurderes relativt avhengig av hvilke andre knapper som er i umiddelbar nærhet. F.eks. vil kanskje en lagre-knapp gis høy prioritet, mens avbryt-knappen ved siden av gis lav prioritet (selv om den brukes relativt ofte).
 
 ```js
-const { BindersIkon, PlussIkon } = require('../ffe-icons-react');
+const {
+    BindersIkon,
+    PlussIkon,
+} = require('../../packages/ffe-icons-react/lib');
 
 <table className="ffe-table">
     <thead>

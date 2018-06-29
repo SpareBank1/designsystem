@@ -1,5 +1,5 @@
 ```jsx
-const InfoIkon = require('../ffe-icons-react/lib/info-ikon').default;
+const { InfoIkon } = require('../../packages/ffe-icons-react/lib');
 
 <ContextInfoMessage icon={<InfoIkon />}>
     Denne seksjonen er ikke ferdig skrevet enda
@@ -10,7 +10,7 @@ Kommer i samme variasjoner av fargedrakt som [Meldinger, bokser](#meldinger-boks
 Kontekstuelle meldinger har i tillegg flere variasjoner innad i samme type melding.
 
 ```jsx
-const { InfoIkon } = require('@sb1/ffe-icons-react');
+const { InfoIkon } = require('../../packages/ffe-icons-react/lib');
 
 <React.Fragment>
     <Grid>
