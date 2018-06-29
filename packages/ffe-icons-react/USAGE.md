@@ -1,10 +1,9 @@
-```jsx
-const InfoIkon = require('../ffe-icons-react/lib/info-ikon').default;
+Vi bruker ikoner for å skape bedre navigasjon og for å tydeliggjøre hvilket produkt og tjeneste vi snakker om i vår
+kommunikasjon. Ikoner skal hjelpe kunden med å raskt identifisere og skille mellom ulikt innhold slik at de skaper verdi
+for brukeren. Ikonene er også bærere av SpareBank 1s visuelle identitet.
 
-<ContextInfoMessage icon={<InfoIkon />}>
-    Denne seksjonen er ikke skrevet enda
-</ContextInfoMessage>;
-```
+Ikonene skal være tydelige i sin utforming. Ikonene skal oppleves som relevante og informative i den konteksten de
+presenteres og dermed bidra til at brukeren forstår innholdet raskere.
 
 Under ser du alle ikonene vi har i designsystemet.
 
