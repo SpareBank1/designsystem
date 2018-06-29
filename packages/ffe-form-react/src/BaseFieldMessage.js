@@ -6,7 +6,7 @@ import classNames from 'classnames';
  * Internal factory component
  * @ignore
  */
-const FieldMessage = ({ children, className, type, ...rest }) => {
+const BaseFieldMessage = ({ children, className, type, ...rest }) => {
     return (
         <div
             className={classNames(`ffe-field-${type}-message`, className)}
@@ -17,10 +17,10 @@ const FieldMessage = ({ children, className, type, ...rest }) => {
     );
 };
 
-FieldMessage.propTypes = {
+BaseFieldMessage.propTypes = {
     children: node.isRequired,
     className: string,
     type: oneOf(['success', 'info', 'error']).isRequired,
 };
 
-export default FieldMessage;
+export default BaseFieldMessage;
