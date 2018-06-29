@@ -222,7 +222,7 @@ module.exports = {
             ],
         },
         {
-            name: 'Kakediagram',
+            name: 'Diagram',
             sections: [
                 {
                     name: 'Bruk',
