@@ -1,5 +1,5 @@
 ```jsx
-const InfoIkon = require('../ffe-icons-react/lib/info-ikon').default;
+const { InfoIkon } = require('../../packages/ffe-icons-react/lib');
 
 <ContextInfoMessage icon={<InfoIkon />}>
     Denne seksjonen er ikke skrevet enda
@@ -9,8 +9,8 @@ const InfoIkon = require('../ffe-icons-react/lib/info-ikon').default;
 Her er hvordan vi presenterer et utvalg av informasjon:
 
 ```js
-const formatters = require('./src');
-const Table = require('../ffe-tables-react/lib').default;
+const formatters = require('../../packages/ffe-formatters/src');
+const Table = require('../../packages/ffe-tables-react/lib').default;
 
 const columns = [
     { key: 'type', header: 'Type' },
