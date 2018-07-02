@@ -160,7 +160,7 @@ module.exports = {
             sections: [
                 {
                     name: 'Bruk',
-                    content: 'packages/ffe-buttons-react/USAGE.md',
+                    content: 'styleguide-content/komponenter/knapper.md',
                 },
                 {
                     name: 'Kode',
@@ -174,7 +174,7 @@ module.exports = {
             sections: [
                 {
                     name: 'Bruk',
-                    content: 'packages/ffe-core-react/src/typography/USAGE.md',
+                    content: 'styleguide-content/komponenter/typografi.md',
                 },
                 {
                     name: 'Kode',
@@ -188,7 +188,7 @@ module.exports = {
             sections: [
                 {
                     name: 'Bruk',
-                    content: 'packages/ffe-icons-react/USAGE.md',
+                    content: 'styleguide-content/komponenter/ikoner.md',
                 },
                 {
                     name: 'Kode',
@@ -201,7 +201,7 @@ module.exports = {
             sections: [
                 {
                     name: 'Bruk',
-                    content: 'packages/ffe-formatters/USAGE.md',
+                    content: 'styleguide-content/komponenter/formatering.md',
                 },
                 {
                     name: 'Kode',
@@ -214,7 +214,7 @@ module.exports = {
             sections: [
                 {
                     name: 'Bruk',
-                    content: 'packages/ffe-lists-react/USAGE.md',
+                    content: 'styleguide-content/komponenter/lister.md',
                 },
                 {
                     name: 'Kode',
@@ -228,7 +228,7 @@ module.exports = {
             sections: [
                 {
                     name: 'Bruk',
-                    content: 'packages/ffe-chart-donut-react/USAGE.md',
+                    content: 'styleguide-content/komponenter/diagram.md',
                 },
                 {
                     name: 'Kode',
@@ -242,7 +242,7 @@ module.exports = {
             sections: [
                 {
                     name: 'Bruk',
-                    content: 'packages/ffe-accordion-react/USAGE.md',
+                    content: 'styleguide-content/komponenter/accordion.md',
                 },
                 {
                     name: 'Kode',
@@ -258,7 +258,7 @@ module.exports = {
             sections: [
                 {
                     name: 'Bruk',
-                    content: 'packages/ffe-account-selector-react/USAGE.md',
+                    content: 'styleguide-content/komponenter/kontovelger.md',
                 },
                 {
                     name: 'Kode',
@@ -272,7 +272,7 @@ module.exports = {
             sections: [
                 {
                     name: 'Bruk',
-                    content: 'packages/ffe-cards-react/USAGE.md',
+                    content: 'styleguide-content/komponenter/kort.md',
                 },
                 {
                     name: 'Kode',
@@ -290,17 +290,18 @@ module.exports = {
                     sections: [
                         {
                             name: 'Meldinger, bokser',
-                            content: 'packages/ffe-message-box-react/USAGE.md',
+                            content:
+                                'styleguide-content/komponenter/meldinger-bokser.md',
                         },
                         {
                             name: 'Meldinger, kontekstuelle',
                             content:
-                                'packages/ffe-context-message-react/USAGE.md',
+                                'styleguide-content/komponenter/meldinger-kontekstuelle.md',
                         },
                         {
                             name: 'Systemmeldinger',
                             content:
-                                'packages/ffe-system-message-react/USAGE.md',
+                                'styleguide-content/komponenter/meldinger-system.md',
                         },
                     ],
                 },
@@ -331,7 +332,7 @@ module.exports = {
             sections: [
                 {
                     name: 'Bruk',
-                    content: 'packages/ffe-dropdown-react/USAGE.md',
+                    content: 'styleguide-content/komponenter/dropdown.md',
                 },
                 {
                     name: 'Kode',
@@ -347,7 +348,7 @@ module.exports = {
             sections: [
                 {
                     name: 'Bruk',
-                    content: 'packages/ffe-grid-react/USAGE.md',
+                    content: 'styleguide-content/komponenter/grid.md',
                 },
                 {
                     name: 'Kode',
@@ -361,7 +362,7 @@ module.exports = {
             sections: [
                 {
                     name: 'Bruk',
-                    content: 'packages/ffe-details-list-react/USAGE.md',
+                    content: 'styleguide-content/komponenter/detaljliste.md',
                 },
                 {
                     name: 'Kode',
@@ -375,7 +376,7 @@ module.exports = {
             sections: [
                 {
                     name: 'Bruk',
-                    content: 'packages/ffe-tables-react/USAGE.md',
+                    content: 'styleguide-content/komponenter/tabeller.md',
                 },
                 {
                     name: 'Kode',
@@ -388,7 +389,8 @@ module.exports = {
             sections: [
                 {
                     name: 'Bruk',
-                    content: 'packages/ffe-form-react/USAGE.md',
+                    content:
+                        'styleguide-content/komponenter/skjemaelementer.md',
                 },
                 {
                     name: 'Kode',
@@ -420,7 +422,7 @@ module.exports = {
             sections: [
                 {
                     name: 'Bruk',
-                    content: 'packages/ffe-spinner-react/USAGE.md',
+                    content: 'styleguide-content/komponenter/spinners.md',
                 },
                 {
                     name: 'Kode',
@@ -434,7 +436,7 @@ module.exports = {
             sections: [
                 {
                     name: 'Bruk',
-                    content: 'packages/ffe-tabs-react/USAGE.md',
+                    content: 'styleguide-content/komponenter/faner.md',
                 },
                 {
                     name: 'Kode',
