@@ -11,7 +11,10 @@ Det finnes fire forskjellige typer:
 4.  Error
 
 ```jsx
-const { InfoMessageList, InfoMessageListItem } = require('./src');
+const {
+    InfoMessageList,
+    InfoMessageListItem,
+} = require('../../packages/ffe-message-box-react/src');
 
 <React.Fragment>
     <Grid>
