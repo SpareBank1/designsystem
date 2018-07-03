@@ -1,18 +1,20 @@
-Meldingsbokser bør brukes når man skal vise informasjon til bruker, som at en oppdatering har feilet eller at tjenester er nede.
 
-Keep it short and simple! Det skal være reelle tips/informasjon til brukeren, ikke informasjon vi ønsker å forklare her
-fordi vi ikke finner noe annet sted å gjøre det. For mye tekst gjør at komponenten mister litt av meningen. Boksene
-skal ha overskrift, og teksten skal være midtstilt, men i de tilfellene man har punkter vil teksten være venstrejustert.
+Hold det kort og konsist! Det skal være reelle tips/informasjon til brukeren, ikke informasjon vi ønsker å forklare her
+fordi vi ikke finner noe annet sted å gjøre det. For mye tekst kan føre til at komponenten mister sin verdi. 
+
 
 Det finnes fire forskjellige typer:
 
 1.  Tips
 2.  Info
-3.  Success
+3.  Suksess
 4.  Error
 
 ```jsx
-const { InfoMessageList, InfoMessageListItem } = require('./src');
+const {
+    InfoMessageList,
+    InfoMessageListItem,
+} = require('../../packages/ffe-message-box-react/src');
 
 <React.Fragment>
     <Grid>
