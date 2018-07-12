@@ -5,6 +5,9 @@
     "author": "SpareBank 1",
     "license": "SEE LICENSE IN README.md",
     "private": true,
+    "resolutions": {
+        "eslint-scope": "3.7.1"
+    },
     "scripts": {
         "clean": "run-s clean:lib clean:lerna",
         "clean:lib": "rimraf packages/*/lib",
