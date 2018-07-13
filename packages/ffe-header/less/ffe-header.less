@@ -1,6 +1,6 @@
 // stylelint-disable block-no-empty
 .ffe-header {
-    &:extend(.ffe-body-text);
+   &:extend(.ffe-body-text);
 
     background: @ffe-white;
     text-align: center;
@@ -100,20 +100,20 @@
     }
 
     &__icon-button {
-        &:extend(.ffe-inline-button);
+       &:extend(.ffe-inline-button);
 
         color: @ffe-blue-royal;
 
-        &:active:extend(.ffe-inline-button:active) {}
-        &:focus:extend(.ffe-inline-button:focus) {}
+        &:active:extend(.ffe-inline-button:active) {
+        }
+        &:focus:extend(.ffe-inline-button:focus) {
+        }
 
-        &:extend(.ffe-inline-button--tertiary);
-        &:hover:extend(.ffe-inline-button--tertiary:hover) {}
-
+       &:extend(.ffe-inline-button--tertiary);
+        &:hover:extend(.ffe-inline-button--tertiary:hover) {
+        }
 
         &::after {
-            &:extend(.ffe-inline-button--tertiary::after);
-
             border: none;
         }
 
@@ -130,51 +130,60 @@
     }
 
     &__logout-button {
-        &:extend(.ffe-button);
-        &:extend(.ffe-button--secondary);
-        &:extend(.ffe-button--condensed);
+       &:extend(.ffe-button);
+       &:extend(.ffe-button--secondary);
+       &:extend(.ffe-button--condensed);
 
         margin: 8px 0;
         border-radius: 20px;
 
-        &:focus:extend(.ffe-button:focus) {}
-        &:focus:extend(.ffe-button--secondary:focus) {}
-        &:hover:extend(.ffe-button:hover) {}
-        &:hover:extend(.ffe-button--secondary:hover) {}
-        &:active:extend(.ffe-button:active) {}
-        &:active:extend(.ffe-button--secondary:active) {}
+        &:focus:extend(.ffe-button:focus) {
+        }
+        &:focus:extend(.ffe-button--secondary:focus) {
+        }
+        &:hover:extend(.ffe-button:hover) {
+        }
+        &:hover:extend(.ffe-button--secondary:hover) {
+        }
+        &:active:extend(.ffe-button:active) {
+        }
+        &:active:extend(.ffe-button--secondary:active) {
+        }
 
         &--loading {
-            &:extend(.ffe-button--loading);
+           &:extend(.ffe-button--loading);
         }
 
         &--loading &-label {
-            &:extend(.ffe-button--loading .ffe-button__label);
+           &:extend(.ffe-button--loading .ffe-button__label);
         }
 
         &--loading &-spinner {
-            &:extend(.ffe-button--loading .ffe-button__spinner);
+           &:extend(.ffe-button--loading .ffe-button__spinner);
         }
     }
 
     &__logout-button-spinner {
-        &:extend(.ffe-button__spinner);
-        &:extend(.ffe-button--condensed .ffe-button__spinner);
+       &:extend(.ffe-button__spinner);
+       &:extend(.ffe-button--condensed .ffe-button__spinner);
         &::after {
-            &:extend(.ffe-button__spinner::after);
+           &:extend(.ffe-button__spinner::after);
 
             animation-name: logout-button-loading-spin;
         }
 
         @keyframes logout-button-loading-spin {
-            from { transform: none; }
-            to { transform: rotate(360deg); }
+            from {
+                transform: none;
+            }
+            to {
+                transform: rotate(360deg);
+            }
         }
     }
 
-
     &__logout-button-label {
-        &:extend(.ffe-button__label);
+       &:extend(.ffe-button__label);
     }
 
     &__user-icon,
