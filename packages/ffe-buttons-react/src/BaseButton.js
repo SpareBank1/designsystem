@@ -39,17 +39,21 @@ const BaseButton = props => {
             ref={innerRef}
             {...rest}
         >
-            <span className="ffe-button__label">
-                {leftIcon &&
-                    React.cloneElement(leftIcon, {
-                        className: 'ffe-button__icon ffe-button__icon--left',
-                    })}
-                {children}
-                {rightIcon &&
-                    React.cloneElement(rightIcon, {
-                        className: 'ffe-button__icon ffe-button__icon--right',
-                    })}
-            </span>
+            <div className="ffe-button__label-container">
+                <span className="ffe-button__label">
+                    {leftIcon &&
+                        React.cloneElement(leftIcon, {
+                            className:
+                                'ffe-button__icon ffe-button__icon--left',
+                        })}
+                    {children}
+                    {rightIcon &&
+                        React.cloneElement(rightIcon, {
+                            className:
+                                'ffe-button__icon ffe-button__icon--right',
+                        })}
+                </span>
+            </div>
             {supportsSpinner && (
                 <div
                     aria-hidden={!isLoading}

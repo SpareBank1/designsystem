@@ -26,7 +26,6 @@
 //
 // Styleguide ffe-buttons.base-button.1
 
-
 // More Buttons
 //
 // Markup:
@@ -38,7 +37,6 @@
 // --task     - Task
 //
 // Styleguide ffe-buttons.base-button.2
-
 
 // Expand Button
 //
@@ -61,7 +59,7 @@
     color: @ffe-white;
     cursor: pointer;
     display: flex;
-    font-family: "MuseoSansRounded-500", arial, sans-serif;
+    font-family: 'MuseoSansRounded-500', arial, sans-serif;
     justify-content: center;
     line-height: 24px;
     overflow: hidden;
@@ -92,7 +90,6 @@
         width: auto;
     }
 }
-
 
 .ffe-button--action.ffe-button--ghost {
     &,
@@ -168,7 +165,7 @@
     height: 45px;
 }
 
-.ffe-button--expanded {
+.ffe-button--expanded {
     padding: 8px;
     width: 45px;
 }
@@ -201,6 +198,11 @@
     pointer-events: none;
 }
 
+.ffe-button__label-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
 
 .ffe-button__label {
     align-items: center;
@@ -294,8 +296,12 @@
         width: 22px;
 
         @keyframes button-loading-spin {
-            from { transform: none; }
-            to { transform: rotate(360deg); }
+            from {
+                transform: none;
+            }
+            to {
+                transform: rotate(360deg);
+            }
         }
     }
 }
