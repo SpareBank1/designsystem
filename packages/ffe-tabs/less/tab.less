@@ -1,0 +1,62 @@
+// Tab
+//
+// Markup:
+// <button class="ffe-tab ffe-tab{{modifier_class}}">Dette er en tab</button>
+//
+// --selected   - Selected state
+// --condensed  - Condensed tab button
+//
+// Styleguide ffe-tabs.tab
+
+.ffe-tab {
+    background-color: @ffe-grey-cloud;
+    border: solid 2px @ffe-grey-silver;
+    border-bottom: none;
+    color: @ffe-grey-charcoal;
+    cursor: pointer;
+    display: block;
+    font-family: 'MuseoSansRounded-500', arial, sans-serif;
+    font-size: 16px;
+    outline: none;
+    overflow: hidden;
+    padding: 8px 30px 7px;
+    text-align: center;
+    text-decoration: none;
+    transition: all @ffe-transition-duration @ffe-ease;
+    vertical-align: middle;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: @ffe-blue-royal;
+        background: @ffe-white;
+    }
+
+    &:focus,
+    &:active {
+        box-shadow: 0 0 0 2px @ffe-blue-focus;
+        outline: 0;
+    }
+
+    &--selected {
+        background-color: @ffe-white;
+        color: @ffe-blue-royal;
+    }
+
+    &--condensed {
+        font-size: 14px;
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+}
+
+@media screen and (min-width: @breakpoint-sm) {
+    .ffe-tab {
+        display: inline-block;
+        width: auto;
+
+        &:not(:first-child) {
+            margin-left: -2px;
+        }
+    }
+}
