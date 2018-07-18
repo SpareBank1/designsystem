@@ -1,0 +1,48 @@
+// Tab group
+//
+// Markup:
+// <div class="ffe-tab-group" role="group">
+//     <button class="ffe-tab ffe-tab--selected">Dette er en valgt tab</button>
+//     <button class="ffe-tab">Dette er en annen tab</button>
+//     <button class="ffe-tab">Dette er en annen tab</button>
+// </div>
+//
+// Styleguide ffe-tabs.tab-group
+
+.ffe-tab-group {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 40px 0;
+    position: relative;
+    width: 100%;
+
+    &--thin {
+        margin: 0;
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: @ffe-grey-silver;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    .ffe-tab {
+        justify-content: center;
+
+        &--selected {
+            z-index: 2;
+        }
+    }
+
+    @media screen and (min-width: @breakpoint-sm) {
+        display: inline-flex;
+        flex-direction: row;
+    }
+}
