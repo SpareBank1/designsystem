@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { bool, node, string } from 'prop-types';
+import { bool, node, oneOfType, string } from 'prop-types';
 import classNames from 'classnames';
 import uuid from 'uuid';
 
@@ -61,7 +61,7 @@ RadioBlock.propTypes = {
     /** Additional class names applied to the outer div */
     className: string,
     /** The always visible label of the radio block */
-    label: string.isRequired,
+    label: oneOfType([node, string]).isRequired,
     /** The name of the radio button set */
     name: string.isRequired,
     /** The selected value of the radio button set */
