@@ -11,7 +11,7 @@ describe('TabGroup', () => {
                 <Tab>En annen tab</Tab>
             </TabGroup>,
         );
-        expect(wrapper.hasClass('ffe-tab-button-group')).toBe(true);
+        expect(wrapper.hasClass('ffe-tab-group')).toBe(true);
     });
 
     it('contains a tab button', () => {
@@ -31,7 +31,7 @@ describe('TabGroup', () => {
                 <Tab>En tab</Tab>
             </TabGroup>,
         );
-        expect(wrapper.hasClass('ffe-tab-button-group--thin')).toBe(true);
+        expect(wrapper.hasClass('ffe-tab-group--thin')).toBe(true);
     });
 
     it('should accept custom classes', () => {
