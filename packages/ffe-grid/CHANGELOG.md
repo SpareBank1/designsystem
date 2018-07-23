@@ -3,7 +3,51 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-      <a name="8.0.1"></a>
+      <a name="10.0.0"></a>
+# [10.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@8.0.1...@sb1/ffe-grid@10.0.0) (2018-07-18)
+
+
+### Bug Fixes
+
+* **ffe-grid:** Give all grid-col descendants max-width 100% ([eedcaa8](https://github.com/SpareBank1/designsystem/commit/eedcaa8))
+
+
+### BREAKING CHANGES
+
+* **ffe-grid:** All direct descendants of a grid column now
+receives `max-width: 100%`. This fixes an issue in IE where
+the contents of centered grid columns would ignore the width
+of the column. This might break parts of your layout, e.g. if
+you have SVGs directly inside full-width centered columns (they
+will now use the entire width where they might not have done so
+before) and possibly also in other scenarios
+
+
+
+
+      <a name="9.0.0"></a>
+# [9.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@8.0.1...@sb1/ffe-grid@9.0.0) (2018-07-18)
+
+
+### Bug Fixes
+
+* **ffe-grid:** Give all grid-col descendants max-width 100% ([eedcaa8](https://github.com/SpareBank1/designsystem/commit/eedcaa8))
+
+
+### BREAKING CHANGES
+
+* **ffe-grid:** All direct descendants of a grid column now
+receives `max-width: 100%`. This fixes an issue in IE where
+the contents of centered grid columns would ignore the width
+of the column. This might break parts of your layout, e.g. if
+you have SVGs directly inside full-width centered columns (they
+will now use the entire width where they might not have done so
+before) and possibly also in other scenarios
+
+
+
+
+    <a name="8.0.1"></a>
 ## [8.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@8.0.0...@sb1/ffe-grid@8.0.1) (2018-06-20)
 
 
@@ -14,7 +58,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="8.0.0"></a>
+  <a name="8.0.0"></a>
 # [8.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@7.3.2...@sb1/ffe-grid@8.0.0) (2018-06-19)
 
 
@@ -30,7 +74,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-    <a name="7.3.2"></a>
+<a name="7.3.2"></a>
 ## [7.3.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@7.3.1...@sb1/ffe-grid@7.3.2) (2018-06-18)
 
 
@@ -38,7 +82,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-grid
 
-  <a name="7.3.1"></a>
+<a name="7.3.1"></a>
 ## [7.3.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@7.3.0...@sb1/ffe-grid@7.3.1) (2018-06-04)
 
 
