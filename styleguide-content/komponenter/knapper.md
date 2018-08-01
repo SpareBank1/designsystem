@@ -1,10 +1,10 @@
 Knapper gir brukerne mulighet for å gjøre ulike typer handlinger i brukergrensesnittet, som:
 
--   Starte en prosess. F.eks. «Bli kunde», «Sjekk pris», «Meld skade».
--   Gi en kommando til systemet. F.eks. «Skriv ut», «Last ned», «Betal», «Bestill».
--   Beslutte noe. F.eks. «Kjøp», «Aksepter», «Overfør».
--   Navigere i brukergrensesnittet. F.eks. «Neste», «Fortsett», «Søk».
--   Endre modus eller visning. F.eks. «Redigér» for å gå til redigeringsmodus, «Vis flere» for å ekspandere en liste.
+*   Starte en prosess. F.eks. «Bli kunde», «Sjekk pris», «Meld skade».
+*   Gi en kommando til systemet. F.eks. «Skriv ut», «Last ned», «Betal», «Bestill».
+*   Beslutte noe. F.eks. «Kjøp», «Aksepter», «Overfør».
+*   Navigere i brukergrensesnittet. F.eks. «Neste», «Fortsett», «Søk».
+*   Endre modus eller visning. F.eks. «Redigér» for å gå til redigeringsmodus, «Vis flere» for å ekspandere en liste.
 
 #### Prinsipp
 
@@ -86,13 +86,15 @@ const {
         </tr>
         <tr>
             <td className="ffe-table__cell">
-                <ExpandButton onClick={f => f}>Expand knapp</ExpandButton>
+                <ExpandButton onClick={f => f} isExpanded={false}>
+                    Expand knapp
+                </ExpandButton>
             </td>
             <td className="ffe-table__cell" />
         </tr>
         <tr>
             <td className="ffe-table__cell">
-                <InlineExpandButton onClick={f => f}>
+                <InlineExpandButton onClick={f => f} isExpanded={false}>
                     Inline expand knapp
                 </InlineExpandButton>
             </td>
@@ -118,17 +120,17 @@ Retningslinjene for hvilke knapper som brukes når er ikke absolutte. Du må ogs
 
 Generelt for alle knapper gjelder:
 
--   Knappen skal tydelig kommuniserer hvilken handling som skjer når brukeren trykker på den, enten ved en beskrivende tekst, et ikon eller begge deler. Tekst på knapper bør være et verb i imperativ form. Unntak er konvensjoner som "Neste".
--   Knappen skal som hovedregel være synlig hele tiden. Knapper som dukker opp etter en rekke handlinger gjør det vanskelig for brukeren å få oversikt.
--   Teksten på knappen skal beskrive hva som skjer når man klikker på knappen. Teksten skal være så kort som mulig og bør ikke bryte over to linjer.
+*   Knappen skal tydelig kommuniserer hvilken handling som skjer når brukeren trykker på den, enten ved en beskrivende tekst, et ikon eller begge deler. Tekst på knapper bør være et verb i imperativ form. Unntak er konvensjoner som "Neste".
+*   Knappen skal som hovedregel være synlig hele tiden. Knapper som dukker opp etter en rekke handlinger gjør det vanskelig for brukeren å få oversikt.
+*   Teksten på knappen skal beskrive hva som skjer når man klikker på knappen. Teksten skal være så kort som mulig og bør ikke bryte over to linjer.
 
 ### Når skal knapper ikke brukes?
 
--   Generelt brukes ikke primær eller sekundærknapper for å navigere til sider utenfor løsningen. Bruk heller [lenke](#linktext).
--   Knapper brukes vanligvis til å gjøre handlinger, ikke for å ta valg. For å ta valg, bruk [checkbox](#checkbox) eller [radioknapp](#radioknapper) isteden og forplikt med en knapp.
+*   Generelt brukes ikke primær eller sekundærknapper for å navigere til sider utenfor løsningen. Bruk heller [lenke](#linktext).
+*   Knapper brukes vanligvis til å gjøre handlinger, ikke for å ta valg. For å ta valg, bruk [checkbox](#checkbox) eller [radioknapp](#radioknapper) isteden og forplikt med en knapp.
 
 ### Relaterte komponenter
 
--   [Checkbox](#checkbox)
--   [Radioknapp](#radioknapper)
--   [Lenke](#linktext)
+*   [Checkbox](#checkbox)
+*   [Radioknapp](#radioknapper)
+*   [Lenke](#linktext)

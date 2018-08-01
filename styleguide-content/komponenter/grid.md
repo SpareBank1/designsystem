@@ -60,7 +60,9 @@ initialState = { selected: backgroundColors[0] };
                 value={state.selected}
             >
                 {backgroundColors.map(name => (
-                    <option value={name}>{name}</option>
+                    <option key={name} value={name}>
+                        {name}
+                    </option>
                 ))}
             </select>
         </GridCol>
@@ -105,7 +107,9 @@ initialState = { selected: backgroundColors[0] };
                 value={state.selected}
             >
                 {backgroundColors.map(name => (
-                    <option value={name}>{name}</option>
+                    <option key={name} value={name}>
+                        {name}
+                    </option>
                 ))}
             </select>
         </GridCol>
@@ -115,7 +119,7 @@ initialState = { selected: backgroundColors[0] };
             sm={12}
             lg={{ cols: 6, offset: 3 }}
             background={state.selected}
-            noBottomPadding={true}
+            bottomPadding={false}
         >
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
