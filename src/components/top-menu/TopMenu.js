@@ -8,14 +8,14 @@ import Scrollspy from 'react-scrollspy';
 export default function TopMenu() {
     return (
         <div className="sb1ds-top-menu">
-            <Grid noTopPadding={true} className="sb1ds-header-grid">
+            <Grid topPadding={false} className="sb1ds-header-grid">
                 <GridRow className="sb1ds-header-grid__row">
                     <GridCol
                         md={4}
                         sm={12}
                         start={true}
                         middle={true}
-                        noBottomPadding={true}
+                        bottomPadding={false}
                     >
                         <a href="./">
                             <Logo />
@@ -26,7 +26,7 @@ export default function TopMenu() {
                         sm={12}
                         middle={true}
                         end={true}
-                        noBottomPadding={true}
+                        bottomPadding={false}
                         className="sb1ds-top-menu__wrapper"
                     >
                         <nav className="sb1ds-top-menu__site-nav">
