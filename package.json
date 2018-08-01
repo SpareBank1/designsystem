@@ -78,6 +78,7 @@
     },
     "jest": {
         "setupTestFrameworkScriptFile": "./test-setup.js",
+        "testURL": "http://localhost",
         "coveragePathIgnorePatterns": [
             "/node_modules/",
             "<rootDir>/packages/.*/lib/"
