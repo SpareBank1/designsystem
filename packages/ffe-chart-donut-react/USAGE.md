@@ -1,1 +1,0 @@
-Komponent for å lage donut charts i SVG.

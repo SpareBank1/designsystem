@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="13.0.2"></a>
+## [13.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@13.0.1...@sb1/ffe-core@13.0.2) (2018-07-23)
+
+
+### Bug Fixes
+
+* **ffe-core:** Lock line-height for ffe-link-text ([0eaf597](https://github.com/SpareBank1/designsystem/commit/0eaf597)), closes [#308](https://github.com/SpareBank1/designsystem/issues/308)
+
+
+
+
       <a name="13.0.1"></a>
 ## [13.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@13.0.0...@sb1/ffe-core@13.0.1) (2018-06-18)
 
@@ -15,7 +26,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="13.0.0"></a>
+    <a name="13.0.0"></a>
 # [13.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@12.2.0...@sb1/ffe-core@13.0.0) (2018-06-04)
 
 
@@ -35,7 +46,7 @@ be nothing breaking about this change.
 
 
 
-    <a name="12.2.0"></a>
+  <a name="12.2.0"></a>
 # [12.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@12.1.0...@sb1/ffe-core@12.2.0) (2018-05-29)
 
 
@@ -46,7 +57,7 @@ be nothing breaking about this change.
 
 
 
-  <a name="12.1.0"></a>
+<a name="12.1.0"></a>
 # [12.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@12.0.6...@sb1/ffe-core@12.1.0) (2018-05-22)
 
 

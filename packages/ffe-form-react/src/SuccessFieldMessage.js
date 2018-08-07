@@ -1,8 +1,8 @@
 import React from 'react';
-import FieldMessage from './FieldMessage';
+import BaseFieldMessage from './BaseFieldMessage';
 
 const SuccessFieldMessage = props => {
-    return <FieldMessage {...props} type="success" />;
+    return <BaseFieldMessage {...props} type="success" />;
 };
 
 export default SuccessFieldMessage;

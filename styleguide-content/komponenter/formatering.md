@@ -1,15 +1,16 @@
-Presentasjon av valuta, datoer, prosenter, og tall kan gjøres på mange
-forskjellige måter.
+```jsx
+const { InfoIkon } = require('../../packages/ffe-icons-react/lib');
 
-For å presentere disse ulike tingene likt på tvers har vi samlet
-formateringsfunksjoner på ett sted som utviklere kan bruke i pakken
-`ffe-formatters`.
+<ContextInfoMessage icon={<InfoIkon />}>
+    Denne seksjonen er ikke skrevet enda
+</ContextInfoMessage>;
+```
 
 Her er hvordan vi presenterer et utvalg av informasjon:
 
 ```js
-const formatters = require('./src');
-const Table = require('../ffe-tables-react/lib').default;
+const formatters = require('../../packages/ffe-formatters/src');
+const Table = require('../../packages/ffe-tables-react/lib').default;
 
 const columns = [
     { key: 'type', header: 'Type' },

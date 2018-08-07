@@ -6,8 +6,8 @@ export default function TabGroup({ className, thin, ...rest }) {
     return (
         <div
             className={classNames(
-                'ffe-tab-button-group',
-                { 'ffe-tab-button-group--thin': thin },
+                'ffe-tab-group',
+                { 'ffe-tab-group--thin': thin },
                 className,
             )}
             role="group"

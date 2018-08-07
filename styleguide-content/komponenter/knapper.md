@@ -1,19 +1,22 @@
 Knapper gir brukerne mulighet for å gjøre ulike typer handlinger i brukergrensesnittet, som:
 
--   Starte en prosess. F.eks. «Bli kunde», «Sjekk pris», «Meld skade».
--   Gi en kommando til systemet. F.eks. «Skriv ut», «Last ned», «Betal», «Bestill».
--   Beslutte noe. F.eks. «Kjøp», «Aksepter», «Overfør».
--   Navigere i brukergrensesnittet. F.eks. «Neste», «Fortsett», «Søk».
--   Endre modus eller visning. F.eks. «Redigér» for å gå til redigeringsmodus, «Vis flere» for å ekspandere en liste.
+*   Starte en prosess. F.eks. «Bli kunde», «Sjekk pris», «Meld skade».
+*   Gi en kommando til systemet. F.eks. «Skriv ut», «Last ned», «Betal», «Bestill».
+*   Beslutte noe. F.eks. «Kjøp», «Aksepter», «Overfør».
+*   Navigere i brukergrensesnittet. F.eks. «Neste», «Fortsett», «Søk».
+*   Endre modus eller visning. F.eks. «Redigér» for å gå til redigeringsmodus, «Vis flere» for å ekspandere en liste.
 
-### Hvordan bruke knapper?
+#### Prinsipp
 
 I SpareBank 1 har vi ulike knapper til ulikt bruk (se tabell nedenfor). Hvilken knapp som skal brukes til hva bestemmes av handlingens prioritet og konteksten knappen skal brukes i. Prioriteten vurderes kvalitativt basert på handlingens viktighet og frekvens. En handling som gjøres sjelden, men har svært høy viktighet enten for brukeren eller SB1, bør få høy eller svært høy prioritet. F.eks. knapper for å starte en prosess eller beslutte noe, som "Bli kunde", "Meld skade" og "Kjøp". En handling som har lav eller middels viktighet, men høy bruksfrekvens vil kunne få høy eller middels prioritet (men aldri svært høy). F.eks. knapper som er del av en prosess, som "Legg til godkjenning" og "Fortsett". En handling som sjelden brukes og har lav viktighet, men fortsatt må være tilgjengelig, vil som regel få lav prioritet. F.eks. å hente opp et klageskjema.
 
 Valg av prioritet kan også vurderes relativt avhengig av hvilke andre knapper som er i umiddelbar nærhet. F.eks. vil kanskje en lagre-knapp gis høy prioritet, mens avbryt-knappen ved siden av gis lav prioritet (selv om den brukes relativt ofte).
 
 ```js
-const { BindersIkon, PlussIkon } = require('../ffe-icons-react');
+const {
+    BindersIkon,
+    PlussIkon,
+} = require('../../packages/ffe-icons-react/lib');
 
 <table className="ffe-table">
     <thead>
@@ -22,7 +25,7 @@ const { BindersIkon, PlussIkon } = require('../ffe-icons-react');
                 <span className="ffe-table__heading">Knapp</span>
             </th>
             <th scope="col">
-                <span className="ffe-table__heading">Bruksommråde</span>
+                <span className="ffe-table__heading">Bruksområde</span>
             </th>
         </tr>
     </thead>
@@ -83,13 +86,15 @@ const { BindersIkon, PlussIkon } = require('../ffe-icons-react');
         </tr>
         <tr>
             <td className="ffe-table__cell">
-                <ExpandButton onClick={f => f}>Expand knapp</ExpandButton>
+                <ExpandButton onClick={f => f} isExpanded={false}>
+                    Expand knapp
+                </ExpandButton>
             </td>
             <td className="ffe-table__cell" />
         </tr>
         <tr>
             <td className="ffe-table__cell">
-                <InlineExpandButton onClick={f => f}>
+                <InlineExpandButton onClick={f => f} isExpanded={false}>
                     Inline expand knapp
                 </InlineExpandButton>
             </td>
@@ -115,17 +120,17 @@ Retningslinjene for hvilke knapper som brukes når er ikke absolutte. Du må ogs
 
 Generelt for alle knapper gjelder:
 
--   Knappen skal tydelig kommuniserer hvilken handling som skjer når brukeren trykker på den, enten ved en beskrivende tekst, et ikon eller begge deler. Tekst på knapper bør være et verb i imperativ form. Unntak er konvensjoner som "Neste".
--   Knappen skal som hovedregel være synlig hele tiden. Knapper som dukker opp etter en rekke handlinger gjør det vanskelig for brukeren å få oversikt.
--   Teksten på knappen skal beskrive hva som skjer når man klikker på knappen. Teksten skal være så kort som mulig og bør ikke bryte over to linjer.
+*   Knappen skal tydelig kommuniserer hvilken handling som skjer når brukeren trykker på den, enten ved en beskrivende tekst, et ikon eller begge deler. Tekst på knapper bør være et verb i imperativ form. Unntak er konvensjoner som "Neste".
+*   Knappen skal som hovedregel være synlig hele tiden. Knapper som dukker opp etter en rekke handlinger gjør det vanskelig for brukeren å få oversikt.
+*   Teksten på knappen skal beskrive hva som skjer når man klikker på knappen. Teksten skal være så kort som mulig og bør ikke bryte over to linjer.
 
 ### Når skal knapper ikke brukes?
 
--   Generelt brukes ikke primær eller sekundærknapper for å navigere til sider utenfor løsningen. Bruk heller [lenke](#linktext).
--   Knapper brukes vanligvis til å gjøre handlinger, ikke for å ta valg. For å ta valg, bruk [checkbox](#checkbox) eller [radioknapp](#radioknapper) isteden og forplikt med en knapp.
+*   Generelt brukes ikke primær eller sekundærknapper for å navigere til sider utenfor løsningen. Bruk heller [lenke](#linktext).
+*   Knapper brukes vanligvis til å gjøre handlinger, ikke for å ta valg. For å ta valg, bruk [checkbox](#checkbox) eller [radioknapp](#radioknapper) isteden og forplikt med en knapp.
 
 ### Relaterte komponenter
 
--   [Checkbox](#checkbox)
--   [Radioknapp](#radioknapper)
--   [Lenke](#linktext)
+*   [Checkbox](#checkbox)
+*   [Radioknapp](#radioknapper)
+*   [Lenke](#linktext)
