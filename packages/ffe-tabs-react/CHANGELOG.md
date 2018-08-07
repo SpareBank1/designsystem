@@ -3,6 +3,38 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.0"></a>
+# [4.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@2.1.1...@sb1/ffe-tabs-react@4.0.0) (2018-07-18)
+
+
+### Features
+
+* Change tab styling to resemble actual tabs, rename components ([afd8cbc](https://github.com/SpareBank1/designsystem/commit/afd8cbc))
+
+
+### BREAKING CHANGES
+
+* This commit renames the existing Tab and TabGroup components to TabButton and TabButtonGroup. A new Tab and TabGroup component is added, but uses different styling in order to represent actual tabs.
+
+
+
+
+<a name="3.0.0"></a>
+# [3.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@2.1.1...@sb1/ffe-tabs-react@3.0.0) (2018-07-18)
+
+
+### Features
+
+* Change tab styling to resemble actual tabs, rename components ([afd8cbc](https://github.com/SpareBank1/designsystem/commit/afd8cbc))
+
+
+### BREAKING CHANGES
+
+* This commit renames the existing Tab and TabGroup components to TabButton and TabButtonGroup. A new Tab and TabGroup component is added, but uses different styling in order to represent actual tabs.
+
+
+
+
 <a name="2.1.1"></a>
 ## [2.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@2.1.0...@sb1/ffe-tabs-react@2.1.1) (2018-06-20)
 

@@ -1,10 +1,9 @@
 ```js
-const { BlyantIkon, ForstorrelsesglassIkon } = require('../../ffe-icons-react');
 initialState = { isExpanded: false };
 <div>
     <ExpandButton
-        isExpanded={state.isExpanded1}
-        onClick={() => setState({ isExpanded1: !state.isExpanded1 })}
+        isExpanded={state.isExpanded}
+        onClick={() => setState({ isExpanded: !state.isExpanded })}
     >
         Vis mer
     </ExpandButton>

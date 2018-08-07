@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.2.6"></a>
+## [3.2.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-radio-button-react@3.2.5...@sb1/ffe-radio-button-react@3.2.6) (2018-07-10)
+
+
+### Bug Fixes
+
+* **ffe-radio-button-react:** Allow RadioButton label to be either node or string ([4fb57f9](https://github.com/SpareBank1/designsystem/commit/4fb57f9))
+
+
+
+
 <a name="3.2.5"></a>
 ## [3.2.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-radio-button-react@3.2.4...@sb1/ffe-radio-button-react@3.2.5) (2018-06-29)
 

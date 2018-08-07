@@ -3,7 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-      <a name="9.2.6"></a>
+      <a name="9.2.8"></a>
+## [9.2.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.2.7...@sb1/ffe-form@9.2.8) (2018-07-23)
+
+
+### Bug Fixes
+
+* **ffe-form:** Increase top margin on ffe-radio-switch ([2242738](https://github.com/SpareBank1/designsystem/commit/2242738)), closes [#349](https://github.com/SpareBank1/designsystem/issues/349)
+
+
+
+
+      <a name="9.2.7"></a>
+## [9.2.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.2.6...@sb1/ffe-form@9.2.7) (2018-07-23)
+
+
+
+
+**Note:** Version bump only for package @sb1/ffe-form
+
+    <a name="9.2.6"></a>
 ## [9.2.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.2.5...@sb1/ffe-form@9.2.6) (2018-07-03)
 
 
@@ -14,7 +33,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="9.2.5"></a>
+  <a name="9.2.5"></a>
 ## [9.2.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.2.4...@sb1/ffe-form@9.2.5) (2018-06-20)
 
 
@@ -25,7 +44,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-    <a name="9.2.4"></a>
+<a name="9.2.4"></a>
 ## [9.2.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.2.3...@sb1/ffe-form@9.2.4) (2018-06-18)
 
 
@@ -33,7 +52,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-form
 
-  <a name="9.2.3"></a>
+<a name="9.2.3"></a>
 ## [9.2.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.2.2...@sb1/ffe-form@9.2.3) (2018-06-04)
 
 

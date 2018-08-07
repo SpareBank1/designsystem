@@ -16,7 +16,7 @@ export default function Detail(props) {
                     md={{ cols: 8, offset: 2 }}
                     lg={{ cols: 2, offset: 2 }}
                     className="ffe-details-list-react__content"
-                    noBottomPadding={true}
+                    bottomPadding={false}
                 >
                     <div className="ffe-h6 ffe-h6--no-margin">{label}</div>
                 </GridCol>
@@ -28,7 +28,7 @@ export default function Detail(props) {
                 <GridCol
                     sm={12}
                     md={{ cols: 8, offset: 2 }}
-                    noBottomPadding={true}
+                    bottomPadding={false}
                 >
                     <hr className="ffe-divider-line" />
                 </GridCol>
