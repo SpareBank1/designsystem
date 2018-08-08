@@ -19,7 +19,7 @@
         "build": "run-s build:packages build:css",
         "build:all": "run-s build build:assets build:content styleguidist:build kss:build",
         "build:packages": "lerna run build",
-        "build:css": "lessc --clean-css --autoprefix=\"last 3 versions, IE>=9\" packages/ffe-all.less dist/ffe.css",
+        "build:css": "lessc --clean-css --js --autoprefix=\"last 3 versions, IE>=9\" packages/ffe-all.less dist/ffe.css",
         "build:assets": "mkdir -p dist/assets && cp src/assets/* dist/assets/",
         "build:content": "node bin/build-content.js",
         "lint": "lerna run --parallel lint",

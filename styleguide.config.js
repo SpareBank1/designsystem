@@ -117,13 +117,23 @@ module.exports = {
                                   },
                               },
                               'postcss-loader',
-                              'less-loader',
+                              {
+                                  loader: 'less-loader',
+                                  options: {
+                                      javascriptEnabled: true,
+                                  },
+                              },
                           ]
                         : [
                               'style-loader',
                               'css-loader',
                               'postcss-loader',
-                              'less-loader',
+                              {
+                                  loader: 'less-loader',
+                                  options: {
+                                      javascriptEnabled: true,
+                                  },
+                              },
                           ],
                     exclude: /node_modules/,
                 },
