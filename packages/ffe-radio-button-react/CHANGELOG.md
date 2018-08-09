@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.2.7"></a>
+## [3.2.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-radio-button-react@3.2.6...@sb1/ffe-radio-button-react@3.2.7) (2018-08-09)
+
+
+
+
+**Note:** Version bump only for package @sb1/ffe-radio-button-react
+
 <a name="3.2.6"></a>
 ## [3.2.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-radio-button-react@3.2.5...@sb1/ffe-radio-button-react@3.2.6) (2018-07-10)
 

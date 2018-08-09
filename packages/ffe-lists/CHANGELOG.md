@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="5.0.15"></a>
+## [5.0.15](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@5.0.14...@sb1/ffe-lists@5.0.15) (2018-08-09)
+
+
+
+
+**Note:** Version bump only for package @sb1/ffe-lists
+
       <a name="5.0.14"></a>
 ## [5.0.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@5.0.13...@sb1/ffe-lists@5.0.14) (2018-07-23)
 
@@ -11,7 +19,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-lists
 
-      <a name="5.0.13"></a>
+    <a name="5.0.13"></a>
 ## [5.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@5.0.12...@sb1/ffe-lists@5.0.13) (2018-06-20)
 
 
@@ -22,7 +30,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-  <a name="5.0.12"></a>
+<a name="5.0.12"></a>
 ## [5.0.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@5.0.11...@sb1/ffe-lists@5.0.12) (2018-06-18)
 
 
