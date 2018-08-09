@@ -71,6 +71,7 @@ module.exports = {
             base: ['MuseoSans-500', 'arial', 'sans-serif'],
         },
     },
+    pagePerSection: true,
     assetsDir: './static',
     webpackConfig: {
         module: {
@@ -169,11 +170,11 @@ module.exports = {
             name: 'Knapper',
             sections: [
                 {
-                    name: 'Bruk',
+                    name: 'Bruk av knapper',
                     content: 'styleguide-content/komponenter/knapper.md',
                 },
                 {
-                    name: 'Kode',
+                    name: 'Knappekomponenter',
                     components:
                         'packages/ffe-buttons-react/src/[A-Z]+([A-Za-z]).js',
                 },
@@ -183,11 +184,11 @@ module.exports = {
             name: 'Typografi',
             sections: [
                 {
-                    name: 'Bruk',
+                    name: 'Bruk av typografi',
                     content: 'styleguide-content/komponenter/typografi.md',
                 },
                 {
-                    name: 'Kode',
+                    name: 'Typografikomponenter',
                     components:
                         'packages/ffe-core-react/src/typography/[A-Z]+([A-Za-z]).js',
                 },
@@ -197,11 +198,11 @@ module.exports = {
             name: 'Ikoner',
             sections: [
                 {
-                    name: 'Bruk',
+                    name: 'Bruk av ikoner',
                     content: 'styleguide-content/komponenter/ikoner.md',
                 },
                 {
-                    name: 'Kode',
+                    name: 'Importering av ikoner',
                     content: 'packages/ffe-icons-react/src/README.md',
                 },
             ],
@@ -210,11 +211,11 @@ module.exports = {
             name: 'Formatering',
             sections: [
                 {
-                    name: 'Bruk',
+                    name: 'Formateringsprinsipper',
                     content: 'styleguide-content/komponenter/formatering.md',
                 },
                 {
-                    name: 'Kode',
+                    name: 'Formateringskomponenter',
                     content: 'packages/ffe-formatters/src/README.md',
                 },
             ],
@@ -223,11 +224,11 @@ module.exports = {
             name: 'Lister',
             sections: [
                 {
-                    name: 'Bruk',
+                    name: 'Bruk av lister',
                     content: 'styleguide-content/komponenter/lister.md',
                 },
                 {
-                    name: 'Kode',
+                    name: 'Listekomponenter',
                     components:
                         'packages/ffe-lists-react/src/[A-Z]+([A-Za-z]).js',
                 },
@@ -237,11 +238,11 @@ module.exports = {
             name: 'Diagram',
             sections: [
                 {
-                    name: 'Bruk',
+                    name: 'Bruk av diagrammer',
                     content: 'styleguide-content/komponenter/diagram.md',
                 },
                 {
-                    name: 'Kode',
+                    name: 'Diagramkomponenter',
                     components:
                         'packages/ffe-chart-donut-react/src/[A-Z]+([A-Za-z]).js',
                 },
@@ -251,11 +252,11 @@ module.exports = {
             name: 'Accordion',
             sections: [
                 {
-                    name: 'Bruk',
+                    name: 'Bruk av accordion',
                     content: 'styleguide-content/komponenter/accordion.md',
                 },
                 {
-                    name: 'Kode',
+                    name: 'Accordionkomponenter',
                     components: () => [
                         'packages/ffe-accordion-react/src/Accordion.js',
                         'packages/ffe-accordion-react/src/BlueAccordion.js',
@@ -267,11 +268,11 @@ module.exports = {
             name: 'Kontovelger',
             sections: [
                 {
-                    name: 'Bruk',
+                    name: 'Bruk av kontovelger',
                     content: 'styleguide-content/komponenter/kontovelger.md',
                 },
                 {
-                    name: 'Kode',
+                    name: 'Kontovelgerkomponenter',
                     components:
                         'packages/ffe-account-selector-react/src/components/**/[A-Z]+([A-Za-z]).js',
                 },
@@ -281,11 +282,11 @@ module.exports = {
             name: 'Kort',
             sections: [
                 {
-                    name: 'Bruk',
+                    name: 'Bruk av kort',
                     content: 'styleguide-content/komponenter/kort.md',
                 },
                 {
-                    name: 'Kode',
+                    name: 'Kortkomponenter',
                     components:
                         'packages/ffe-cards-react/src/[A-Z]+([A-Za-z]).js',
                 },
@@ -295,16 +296,16 @@ module.exports = {
             name: 'Meldinger',
             sections: [
                 {
-                    name: 'Bruk',
+                    name: 'Bruk av meldinger',
                     content: 'styleguide-content/komponenter/meldinger.md',
                     sections: [
                         {
-                            name: 'Meldinger, bokser',
+                            name: 'Meldingsbokser',
                             content:
                                 'styleguide-content/komponenter/meldinger-bokser.md',
                         },
                         {
-                            name: 'Meldinger, kontekstuelle',
+                            name: 'Kontekstuelle meldinger',
                             content:
                                 'styleguide-content/komponenter/meldinger-kontekstuelle.md',
                         },
@@ -316,15 +317,15 @@ module.exports = {
                     ],
                 },
                 {
-                    name: 'Kode',
+                    name: 'Meldingskomponenter',
                     sections: [
                         {
-                            name: 'Meldinger, bokser',
+                            name: 'Meldingsbokser',
                             components:
                                 'packages/ffe-message-box-react/src/[A-Z]+([A-Za-z]).js',
                         },
                         {
-                            name: 'Meldinger, kontekstuelle',
+                            name: 'Kontekstuelle meldinger',
                             components:
                                 'packages/ffe-context-message-react/src/Context{Error,Info,Success,Tip}Message.js',
                         },
@@ -338,14 +339,14 @@ module.exports = {
             ],
         },
         {
-            name: 'Dropdowns',
+            name: 'Nedtrekkslister',
             sections: [
                 {
-                    name: 'Bruk',
+                    name: 'Bruk av nedtrekkslister',
                     content: 'styleguide-content/komponenter/dropdown.md',
                 },
                 {
-                    name: 'Kode',
+                    name: 'Nedtrekkslistekomponenter',
                     components: () => [
                         'packages/ffe-searchable-dropdown-react/src/SearchableDropdown.js',
                         'packages/ffe-dropdown-react/src/Dropdown.js',
@@ -357,11 +358,11 @@ module.exports = {
             name: 'Grid',
             sections: [
                 {
-                    name: 'Bruk',
+                    name: 'Bruk av grid',
                     content: 'styleguide-content/komponenter/grid.md',
                 },
                 {
-                    name: 'Kode',
+                    name: 'Gridkomponenter',
                     components:
                         'packages/ffe-grid-react/src/[A-Z]+([A-Za-z]).js',
                 },
@@ -371,11 +372,11 @@ module.exports = {
             name: 'Detaljliste',
             sections: [
                 {
-                    name: 'Bruk',
+                    name: 'Bruk av detaljliste',
                     content: 'styleguide-content/komponenter/detaljliste.md',
                 },
                 {
-                    name: 'Kode',
+                    name: 'Detaljlistekomponenter',
                     components:
                         'packages/ffe-details-list-react/src/[A-Z]+([A-Za-z]).js',
                 },
@@ -385,11 +386,11 @@ module.exports = {
             name: 'Tabeller',
             sections: [
                 {
-                    name: 'Bruk',
+                    name: 'Bruk av tabeller',
                     content: 'styleguide-content/komponenter/tabeller.md',
                 },
                 {
-                    name: 'Kode',
+                    name: 'Tabellkomponenter',
                     components: 'packages/ffe-tables-react/src/Table.js',
                 },
             ],
@@ -398,12 +399,12 @@ module.exports = {
             name: 'Skjemaelementer',
             sections: [
                 {
-                    name: 'Bruk',
+                    name: 'Bruk av skjemaelementer',
                     content:
                         'styleguide-content/komponenter/skjemaelementer.md',
                 },
                 {
-                    name: 'Kode',
+                    name: 'Skjemakomponenter',
                     components: () => [
                         ...glob.sync(
                             'packages/ffe-form-react/src/[A-Z]+([A-Za-z]).js',
@@ -428,14 +429,14 @@ module.exports = {
             ],
         },
         {
-            name: 'Spinners',
+            name: 'Spinnere',
             sections: [
                 {
-                    name: 'Bruk',
+                    name: 'Bruk av spinnere',
                     content: 'styleguide-content/komponenter/spinners.md',
                 },
                 {
-                    name: 'Kode',
+                    name: 'Spinnerkomponenter',
                     components:
                         'packages/ffe-spinner-react/src/[A-Z]+([A-Za-z]).js',
                 },
@@ -445,11 +446,11 @@ module.exports = {
             name: 'Faner',
             sections: [
                 {
-                    name: 'Bruk',
+                    name: 'Bruk av faner',
                     content: 'styleguide-content/komponenter/faner.md',
                 },
                 {
-                    name: 'Kode',
+                    name: 'Fanekomponenter',
                     components:
                         'packages/ffe-tabs-react/src/[A-Z]+([A-Za-z]).js',
                 },

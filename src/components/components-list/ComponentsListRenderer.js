@@ -2,8 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Link from 'rsg-components/Link';
+import getUrl from 'react-styleguidist/lib/utils/getUrl';
 
-export function ComponentsListRenderer({ items }) {
+export function ComponentsListRenderer({ items, useIsolatedLinks = false }) {
     items = items.filter(item => item.name);
 
     if (!items.length) {
@@ -25,7 +26,12 @@ export function ComponentsListRenderer({ items }) {
                         className={classNames('sb1ds-components-list__link', {
                             'sb1ds-components-list__link--heading': heading,
                         })}
-                        href={`#${slug}`}
+                        href={getUrl({
+                            name,
+                            slug,
+                            anchor: !useIsolatedLinks,
+                            isolated: useIsolatedLinks,
+                        })}
                     >
                         {name}
                     </Link>
@@ -38,6 +44,7 @@ export function ComponentsListRenderer({ items }) {
 
 ComponentsListRenderer.propTypes = {
     items: PropTypes.array.isRequired,
+    useIsolatedLinks: PropTypes.bool.isRequired,
 };
 
 export default ComponentsListRenderer;
