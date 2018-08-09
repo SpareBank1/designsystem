@@ -17,13 +17,12 @@
     "url": "ssh://git@github.com:SpareBank1/designsystem.git"
   },
   "scripts": {
-    "build": "lessc --no-ie-compat --inline-urls fonts.less fonts.css",
+    "build": "lessc fonts-inline.less fonts.css",
     "lint": "stylelint *.less",
     "test": "npm run lint"
   },
   "devDependencies": {
-    "less-plugin-inline-urls": "^1.2.0",
-    "stylelint": "^8.4.0"
+    "stylelint": "^9.4.0"
   },
   "publishConfig": {
     "access": "public"
