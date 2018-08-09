@@ -1193,19 +1193,18 @@
                   <dt>@ffe-transition-duration</dt>
                   <dd>Default lengde for transitions på mindre elementer</dd>
               
-                  <dt>@ffe-ease-in-out-back</dt>
-                  <dd>Default timing-funksjon for å transformere eller flytte mindre elementer (rotate, translate, etc)</dd>
+              <pre><code>&lt;dt&gt;@ffe-ease-in-out-back&lt;/dt&gt;
+              &lt;dd&gt;Default timing-funksjon for å transformere eller flytte mindre elementer (rotate, translate, etc)&lt;/dd&gt;
               
-                  <dt>@ffe-ease</dt>
-                  <dd>Timing-funksjon for transitions som ikke involverer plassering eller endring av form (color, opacity, etc)</dd>
-              
-              </dl>
+              &lt;dt&gt;@ffe-ease&lt;/dt&gt;
+              &lt;dd&gt;Timing-funksjon for transitions som ikke involverer plassering eller endring av form (color, opacity, etc)&lt;/dd&gt;</code></pre></dl>
               
               <hr class="ffe-divider-line">
               
               <p>Variablene brukes i LESS-filer som erstatning for <code>transition-duration</code> og <code>transition-timing-function</code>.</p>
-              <p><code>
-              // Less</p>
+              <code>
+              // Less
+              
               <p>transition: all @ffe-transition-duration @ffe-ease-in-out-back;</p>
               <p>// CSS output</p>
               <p>transition: all .2s cubic-bezier(.46, -0.265, .48, 1.38);
