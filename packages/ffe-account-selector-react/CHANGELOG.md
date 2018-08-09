@@ -3,7 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-      <a name="9.1.11"></a>
+    <a name="9.1.12"></a>
+## [9.1.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@9.1.11...@sb1/ffe-account-selector-react@9.1.12) (2018-08-09)
+
+
+
+
+**Note:** Version bump only for package @sb1/ffe-account-selector-react
+
+    <a name="9.1.11"></a>
 ## [9.1.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@9.1.10...@sb1/ffe-account-selector-react@9.1.11) (2018-06-14)
 
 
@@ -11,7 +19,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
 
-      <a name="9.1.10"></a>
+  <a name="9.1.10"></a>
 ## [9.1.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@9.1.9...@sb1/ffe-account-selector-react@9.1.10) (2018-06-04)
 
 
@@ -19,7 +27,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
 
-     <a name="9.1.9"></a>
+ <a name="9.1.9"></a>
 ## [9.1.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@9.1.8...@sb1/ffe-account-selector-react@9.1.9) (2018-06-04)
 
 
@@ -27,7 +35,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
 
-    <a name="9.1.8"></a>
+<a name="9.1.8"></a>
 ## [9.1.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@9.1.7...@sb1/ffe-account-selector-react@9.1.8) (2018-06-04)
 
 

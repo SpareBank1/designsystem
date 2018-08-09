@@ -3,7 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-      <a name="6.0.8"></a>
+    <a name="6.0.9"></a>
+## [6.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@6.0.8...@sb1/ffe-searchable-dropdown-react@6.0.9) (2018-08-09)
+
+
+
+
+**Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react
+
+    <a name="6.0.8"></a>
 ## [6.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@6.0.7...@sb1/ffe-searchable-dropdown-react@6.0.8) (2018-06-20)
 
 
@@ -14,7 +22,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="6.0.7"></a>
+  <a name="6.0.7"></a>
 ## [6.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@6.0.6...@sb1/ffe-searchable-dropdown-react@6.0.7) (2018-06-18)
 
 
@@ -26,7 +34,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-    <a name="6.0.6"></a>
+<a name="6.0.6"></a>
 ## [6.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@6.0.5...@sb1/ffe-searchable-dropdown-react@6.0.6) (2018-06-18)
 
 

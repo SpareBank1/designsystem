@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+      <a name="9.0.2"></a>
+## [9.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@9.0.1...@sb1/ffe-grid-react@9.0.2) (2018-08-09)
+
+
+
+
+**Note:** Version bump only for package @sb1/ffe-grid-react
+
       <a name="9.0.1"></a>
 ## [9.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@9.0.0...@sb1/ffe-grid-react@9.0.1) (2018-06-26)
 
@@ -14,7 +22,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-      <a name="9.0.0"></a>
+    <a name="9.0.0"></a>
 # [9.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@8.0.0...@sb1/ffe-grid-react@9.0.0) (2018-06-19)
 
 
@@ -30,7 +38,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-    <a name="8.0.0"></a>
+  <a name="8.0.0"></a>
 # [8.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@7.3.0...@sb1/ffe-grid-react@8.0.0) (2018-06-18)
 
 
@@ -52,7 +60,7 @@ The default behaviour has not been changed, so to migrate you need to
 
 
 
-  <a name="7.3.0"></a>
+<a name="7.3.0"></a>
 # [7.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@7.2.0...@sb1/ffe-grid-react@7.3.0) (2018-05-29)
 
 
