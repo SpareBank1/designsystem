@@ -3,280 +3,220 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-      <a name="9.2.10"></a>
+<a name="9.2.11"></a>
+
+## [9.2.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.2.10...@sb1/ffe-form@9.2.11) (2018-08-10)
+
+### Bug Fixes
+
+-   **ffe-form:** Remove inline js from less ([5066ced](https://github.com/SpareBank1/designsystem/commit/5066ced))
+
+<a name="9.2.10"></a>
+
 ## [9.2.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.2.9...@sb1/ffe-form@9.2.10) (2018-08-09)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-form
 
       <a name="9.2.9"></a>
-## [9.2.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.2.8...@sb1/ffe-form@9.2.9) (2018-08-07)
 
+## [9.2.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.2.8...@sb1/ffe-form@9.2.9) (2018-08-07)
 
 ### Bug Fixes
 
-* **ffe-form:** IE needs charset=utf8 to understand that utf8 is indeed the charset ([9366476](https://github.com/SpareBank1/designsystem/commit/9366476))
-
-
+-   **ffe-form:** IE needs charset=utf8 to understand that utf8 is indeed the charset ([9366476](https://github.com/SpareBank1/designsystem/commit/9366476))
 
 
     <a name="9.2.8"></a>
-## [9.2.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.2.7...@sb1/ffe-form@9.2.8) (2018-07-23)
 
+## [9.2.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.2.7...@sb1/ffe-form@9.2.8) (2018-07-23)
 
 ### Bug Fixes
 
-* **ffe-form:** Increase top margin on ffe-radio-switch ([2242738](https://github.com/SpareBank1/designsystem/commit/2242738)), closes [#349](https://github.com/SpareBank1/designsystem/issues/349)
+-   **ffe-form:** Increase top margin on ffe-radio-switch ([2242738](https://github.com/SpareBank1/designsystem/commit/2242738)), closes [#349](https://github.com/SpareBank1/designsystem/issues/349)
 
+<a name="9.2.7"></a>
 
-
-
-  <a name="9.2.7"></a>
 ## [9.2.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.2.6...@sb1/ffe-form@9.2.7) (2018-07-23)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-form
 
 <a name="9.2.6"></a>
+
 ## [9.2.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.2.5...@sb1/ffe-form@9.2.6) (2018-07-03)
 
-
 ### Bug Fixes
 
-* **ffe-form:** Base64-encode svg icons in FieldMessage ([e9e22c4](https://github.com/SpareBank1/designsystem/commit/e9e22c4))
-
-
-
+-   **ffe-form:** Base64-encode svg icons in FieldMessage ([e9e22c4](https://github.com/SpareBank1/designsystem/commit/e9e22c4))
 
 <a name="9.2.5"></a>
-## [9.2.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.2.4...@sb1/ffe-form@9.2.5) (2018-06-20)
 
+## [9.2.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.2.4...@sb1/ffe-form@9.2.5) (2018-06-20)
 
 ### Bug Fixes
 
-* **ffe-form:** added peerDependency to ffe-core@^13.0.0 ([366c0a6](https://github.com/SpareBank1/designsystem/commit/366c0a6))
-
-
-
+-   **ffe-form:** added peerDependency to ffe-core@^13.0.0 ([366c0a6](https://github.com/SpareBank1/designsystem/commit/366c0a6))
 
 <a name="9.2.4"></a>
+
 ## [9.2.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.2.3...@sb1/ffe-form@9.2.4) (2018-06-18)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-form
 
 <a name="9.2.3"></a>
+
 ## [9.2.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.2.2...@sb1/ffe-form@9.2.3) (2018-06-04)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-form
 
 <a name="9.2.2"></a>
+
 ## [9.2.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.2.1...@sb1/ffe-form@9.2.2) (2018-05-29)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-form
 
 <a name="9.2.1"></a>
-## [9.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.2.0...@sb1/ffe-form@9.2.1) (2018-05-23)
 
+## [9.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.2.0...@sb1/ffe-form@9.2.1) (2018-05-23)
 
 ### Bug Fixes
 
-* **ffe-form:** fix placeholder color for input field some more ([066cc8a](https://github.com/SpareBank1/designsystem/commit/066cc8a)), closes [#240](https://github.com/SpareBank1/designsystem/issues/240)
-* **ffe-form:** fix placeholder color for searchable dropdown ([b2ca371](https://github.com/SpareBank1/designsystem/commit/b2ca371)), closes [#240](https://github.com/SpareBank1/designsystem/issues/240)
-
-
-
+-   **ffe-form:** fix placeholder color for input field some more ([066cc8a](https://github.com/SpareBank1/designsystem/commit/066cc8a)), closes [#240](https://github.com/SpareBank1/designsystem/issues/240)
+-   **ffe-form:** fix placeholder color for searchable dropdown ([b2ca371](https://github.com/SpareBank1/designsystem/commit/b2ca371)), closes [#240](https://github.com/SpareBank1/designsystem/issues/240)
 
 <a name="9.2.0"></a>
-# [9.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.1.8...@sb1/ffe-form@9.2.0) (2018-05-23)
 
+# [9.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.1.8...@sb1/ffe-form@9.2.0) (2018-05-23)
 
 ### Features
 
-* **ffe-form:** Support hidden labels on checkbox ([9dc3554](https://github.com/SpareBank1/designsystem/commit/9dc3554))
-
-
-
+-   **ffe-form:** Support hidden labels on checkbox ([9dc3554](https://github.com/SpareBank1/designsystem/commit/9dc3554))
 
 <a name="9.1.8"></a>
+
 ## [9.1.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.1.7...@sb1/ffe-form@9.1.8) (2018-05-22)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-form
 
 <a name="9.1.7"></a>
-## [9.1.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.1.6...@sb1/ffe-form@9.1.7) (2018-05-15)
 
+## [9.1.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.1.6...@sb1/ffe-form@9.1.7) (2018-05-15)
 
 ### Bug Fixes
 
-* **ffe-form:** fix placeholder color for input field ([8c0120d](https://github.com/SpareBank1/designsystem/commit/8c0120d))
-
-
-
+-   **ffe-form:** fix placeholder color for input field ([8c0120d](https://github.com/SpareBank1/designsystem/commit/8c0120d))
 
 <a name="9.1.6"></a>
+
 ## [9.1.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.1.5...@sb1/ffe-form@9.1.6) (2018-05-15)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-form
 
 <a name="9.1.5"></a>
+
 ## [9.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.1.4...@sb1/ffe-form@9.1.5) (2018-05-08)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-form
 
 <a name="9.1.4"></a>
+
 ## [9.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.1.3...@sb1/ffe-form@9.1.4) (2018-05-04)
 
-
 ### Bug Fixes
 
-* **ffe-form:** Change design of radio switch active state ([f753319](https://github.com/SpareBank1/designsystem/commit/f753319))
-
-
-
+-   **ffe-form:** Change design of radio switch active state ([f753319](https://github.com/SpareBank1/designsystem/commit/f753319))
 
 <a name="9.1.3"></a>
-## [9.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.1.2...@sb1/ffe-form@9.1.3) (2018-05-04)
 
+## [9.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.1.2...@sb1/ffe-form@9.1.3) (2018-05-04)
 
 ### Bug Fixes
 
-* **ffe-form:** 13px left padding of .ffe-dropdown ([9a91483](https://github.com/SpareBank1/designsystem/commit/9a91483)), closes [#208](https://github.com/SpareBank1/designsystem/issues/208)
-
-
-
+-   **ffe-form:** 13px left padding of .ffe-dropdown ([9a91483](https://github.com/SpareBank1/designsystem/commit/9a91483)), closes [#208](https://github.com/SpareBank1/designsystem/issues/208)
 
 <a name="9.1.2"></a>
+
 ## [9.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.1.1...@sb1/ffe-form@9.1.2) (2018-05-03)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-form
 
 <a name="9.1.1"></a>
-## [9.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.1.0...@sb1/ffe-form@9.1.1) (2018-04-25)
 
+## [9.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.1.0...@sb1/ffe-form@9.1.1) (2018-04-25)
 
 ### Bug Fixes
 
-* **ffe-form:** Chevron in dropdown now renders properly in IE10 ([8fbcc05](https://github.com/SpareBank1/designsystem/commit/8fbcc05))
-* **ffe-form:** Make file upload icons SVGs render properly in IE10 ([8d06693](https://github.com/SpareBank1/designsystem/commit/8d06693))
-
-
-
+-   **ffe-form:** Chevron in dropdown now renders properly in IE10 ([8fbcc05](https://github.com/SpareBank1/designsystem/commit/8fbcc05))
+-   **ffe-form:** Make file upload icons SVGs render properly in IE10 ([8d06693](https://github.com/SpareBank1/designsystem/commit/8d06693))
 
 <a name="9.1.0"></a>
-# [9.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.0.6...@sb1/ffe-form@9.1.0) (2018-04-19)
 
+# [9.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.0.6...@sb1/ffe-form@9.1.0) (2018-04-19)
 
 ### Features
 
-* **ffe-form:** Adds a PhoneNumber component to ffe-form ([a7e15ee](https://github.com/SpareBank1/designsystem/commit/a7e15ee))
-
-
-
+-   **ffe-form:** Adds a PhoneNumber component to ffe-form ([a7e15ee](https://github.com/SpareBank1/designsystem/commit/a7e15ee))
 
 <a name="9.0.6"></a>
+
 ## [9.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.0.5...@sb1/ffe-form@9.0.6) (2018-04-11)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-form
 
 <a name="9.0.5"></a>
+
 ## [9.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.0.4...@sb1/ffe-form@9.0.5) (2018-04-10)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-form
 
 <a name="9.0.4"></a>
+
 ## [9.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.0.3...@sb1/ffe-form@9.0.4) (2018-03-22)
 
-
 ### Bug Fixes
 
-* **ffe-form:** Use actual icons for field messages as opposed to text intended to look like icons ([0baa0a8](https://github.com/SpareBank1/designsystem/commit/0baa0a8))
-
-
-
+-   **ffe-form:** Use actual icons for field messages as opposed to text intended to look like icons ([0baa0a8](https://github.com/SpareBank1/designsystem/commit/0baa0a8))
 
 <a name="9.0.3"></a>
+
 ## [9.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.0.2...@sb1/ffe-form@9.0.3) (2018-03-13)
 
-
 ### Bug Fixes
 
-* **ffe-form:** Add space between radio switches ([834ad26](https://github.com/SpareBank1/designsystem/commit/834ad26))
-
-
-
+-   **ffe-form:** Add space between radio switches ([834ad26](https://github.com/SpareBank1/designsystem/commit/834ad26))
 
 <a name="9.0.2"></a>
+
 ## [9.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.0.0...@sb1/ffe-form@9.0.2) (2018-03-07)
 
-
 ### Bug Fixes
 
-* Correct peerDependencies after breaking change ([aab59ce](https://github.com/SpareBank1/designsystem/commit/aab59ce))
-* **ffe-form:** Add vertical padding to textarea ([d3ffe3f](https://github.com/SpareBank1/designsystem/commit/d3ffe3f)), closes [#38](https://github.com/SpareBank1/designsystem/issues/38)
-
-
-
+-   Correct peerDependencies after breaking change ([aab59ce](https://github.com/SpareBank1/designsystem/commit/aab59ce))
+-   **ffe-form:** Add vertical padding to textarea ([d3ffe3f](https://github.com/SpareBank1/designsystem/commit/d3ffe3f)), closes [#38](https://github.com/SpareBank1/designsystem/issues/38)
 
 <a name="9.0.1"></a>
+
 ## [9.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.0.0...@sb1/ffe-form@9.0.1) (2018-03-02)
 
-
 ### Bug Fixes
 
-* Correct peerDependencies after breaking change ([4318363](https://github.com/SpareBank1/designsystem/commit/4318363))
-* **ffe-form:** Add vertical padding to textarea ([4fe4ba8](https://github.com/SpareBank1/designsystem/commit/4fe4ba8)), closes [#38](https://github.com/SpareBank1/designsystem/issues/38)
-
-
-
+-   Correct peerDependencies after breaking change ([4318363](https://github.com/SpareBank1/designsystem/commit/4318363))
+-   **ffe-form:** Add vertical padding to textarea ([4fe4ba8](https://github.com/SpareBank1/designsystem/commit/4fe4ba8)), closes [#38](https://github.com/SpareBank1/designsystem/issues/38)
 
 <a name="9.0.0"></a>
-# 9.0.0 (2018-02-25)
 
+# 9.0.0 (2018-02-25)
 
 ### Bug Fixes
 
-* remove all references to internal system ([ff22340](https://github.com/SpareBank1/designsystem/commit/ff22340))
-
+-   remove all references to internal system ([ff22340](https://github.com/SpareBank1/designsystem/commit/ff22340))
 
 ### Chores
 
-* add [@sb1](https://github.com/sb1)/ scope to all packages ([37efbb4](https://github.com/SpareBank1/designsystem/commit/37efbb4))
-
+-   add [@sb1](https://github.com/sb1)/ scope to all packages ([37efbb4](https://github.com/SpareBank1/designsystem/commit/37efbb4))
 
 ### BREAKING CHANGES
 
-* All packages have been renamed to add the @sb1 scope.
+-   All packages have been renamed to add the @sb1 scope.
 
 See links [1] and [2] to read more about package scopes.
 
@@ -349,62 +289,45 @@ JavaScript `require`:
 [2]: https://docs.npmjs.com/getting-started/scoped-packages
 [3]: https://github.com/sparebank1/designsystem/tags
 
-
-
-
 <a name="8.1.12"></a>
+
 ## [8.1.12](https://github.com/SpareBank1/designsystem/compare/ffe-form@8.1.11...ffe-form@8.1.12) (2018-02-23)
-
-
-
 
 **Note:** Version bump only for package ffe-form
 
 <a name="8.1.11"></a>
+
 ## [8.1.11](https://github.com/SpareBank1/designsystem/compare/ffe-form@8.1.10...ffe-form@8.1.11) (2018-02-22)
-
-
-
 
 **Note:** Version bump only for package ffe-form
 
 <a name="8.1.10"></a>
+
 ## [8.1.10](https://github.com/SpareBank1/designsystem/compare/ffe-form@8.1.9...ffe-form@8.1.10) (2018-02-20)
-
-
-
 
 **Note:** Version bump only for package ffe-form
 
 <a name="8.1.9"></a>
+
 ## [8.1.9](https://github.com/SpareBank1/designsystem/compare/ffe-form@8.1.8...ffe-form@8.1.9) (2018-02-15)
-
-
-
 
 **Note:** Version bump only for package ffe-form
 
 <a name="8.1.8"></a>
+
 ## [8.1.8](https://github.com/SpareBank1/designsystem/compare/ffe-form@8.1.7...ffe-form@8.1.8) (2018-02-01)
-
-
-
 
 **Note:** Version bump only for package ffe-form
 
 <a name="8.1.7"></a>
+
 ## [8.1.7](https://github.com/SpareBank1/designsystem/compare/ffe-form@8.1.6...ffe-form@8.1.7) (2018-01-19)
-
-
-
 
 **Note:** Version bump only for package ffe-form
 
 <a name="8.1.6"></a>
+
 ## [8.1.6](https://github.com/SpareBank1/designsystem/compare/ffe-form@8.1.5...ffe-form@8.1.6) (2018-01-19)
-
-
-
 
 **Note:** Version bump only for package ffe-form
 
@@ -416,96 +339,96 @@ JavaScript `require`:
 
 ## 8.1.4
 
-* Fjerne implisitt clearing i ie for input fields
+-   Fjerne implisitt clearing i ie for input fields
 
 ## 8.1.3
 
-* Fjerne implisitt clearing i ie for dropdown
+-   Fjerne implisitt clearing i ie for dropdown
 
 ## 8.1.2
 
-* Bump devDep and peerDep of `ffe-core` from `^10.1.1` to `^10.1.2`.
-* Adjust font-family of `input-field` and `textarea` from `MuseoSans-300` to `MuseoSans-500`.
+-   Bump devDep and peerDep of `ffe-core` from `^10.1.1` to `^10.1.2`.
+-   Adjust font-family of `input-field` and `textarea` from `MuseoSans-300` to `MuseoSans-500`.
 
 ## 8.1.1
 
-* Adjusted `.ffe-radio-button` focus state and transitions to more closely reflect the behaviour of `.ffe-checkbox`
+-   Adjusted `.ffe-radio-button` focus state and transitions to more closely reflect the behaviour of `.ffe-checkbox`
 
 # 8.1.0
 
-* Add new input-field modifier `--condensed`
+-   Add new input-field modifier `--condensed`
 
 # 8.0.0
 
-* BREAKING: peerDependency to `ffe-core` bumped to new major
-* Replaced hardcoded font-sizes with mixins from ffe-core
+-   BREAKING: peerDependency to `ffe-core` bumped to new major
+-   Replaced hardcoded font-sizes with mixins from ffe-core
 
 ## 7.0.3
 
-* Changed font-weight of .ffe-dropdown from 300 to 500
+-   Changed font-weight of .ffe-dropdown from 300 to 500
 
 ## 7.0.2
 
-* Fixed `peerDependencies` field for `ffe-core` that was mixed up with `devDepedencies`
+-   Fixed `peerDependencies` field for `ffe-core` that was mixed up with `devDepedencies`
 
 ## 7.0.1
 
-* Fixed bug where delete button was not visually focused on file-upload
-* Fixed vertical alignment to center on uploaded files
+-   Fixed bug where delete button was not visually focused on file-upload
+-   Fixed vertical alignment to center on uploaded files
 
 # 7.0.0
 
-* **Breaking change** in .ffe-file-upload to look like the specification from designers
-* Added option to set aria-invalid on file upload
+-   **Breaking change** in .ffe-file-upload to look like the specification from designers
+-   Added option to set aria-invalid on file upload
 
 # 6.4.0
 
-* Add new input-field modifier, `--text-like` for use in inputs that are inlined in text
+-   Add new input-field modifier, `--text-like` for use in inputs that are inlined in text
 
 ## 6.3.1
 
-* Support both versions 9 and 10 of `ffe-core`
+-   Support both versions 9 and 10 of `ffe-core`
 
 # 6.3.0
 
-* Added .ffe-file-upload
+-   Added .ffe-file-upload
 
 # 6.2.0
 
-* Added handling of invalid prop on checkbox (validation error)
+-   Added handling of invalid prop on checkbox (validation error)
 
 # 6.1.0
 
-* Added handling of invalid prop on radio button and radio switch (validation error)
+-   Added handling of invalid prop on radio button and radio switch (validation error)
 
 # 6.0.0
 
-* Removed class error-summary. The design is outdated and new class and react-component can be found in ffe-message-box and ffe-message-box-react
+-   Removed class error-summary. The design is outdated and new class and react-component can be found in ffe-message-box and ffe-message-box-react
 
 ## 5.2.1
 
-* Added missing margin on tooltip text on radio button
+-   Added missing margin on tooltip text on radio button
 
 # 5.2.0
 
-* Adding optional tooltip on radio buttons for extra information
+-   Adding optional tooltip on radio buttons for extra information
 
 ## 5.1.3
 
-* Reset border to 0 for `ffe-input-group`, so that the class can be used with `fieldset`-elements
+-   Reset border to 0 for `ffe-input-group`, so that the class can be used with `fieldset`-elements
 
 ## 5.1.2
 
-* Replaced hardcoded transition properties with variables from ffe-core
+-   Replaced hardcoded transition properties with variables from ffe-core
 
 ## 5.1.1
 
-* Remove background color on ffe-radio-button. Was set to white which made it look weird if used in containers with different colors.
+-   Remove background color on ffe-radio-button. Was set to white which made it look weird if used in containers with different colors.
 
 # 5.1.0
 
-* Set default text color for input fields and selects to `@ffe-black`
-* Remove orange text color from invalid input-fields and dropdown
+-   Set default text color for input fields and selects to `@ffe-black`
+-   Remove orange text color from invalid input-fields and dropdown
 
 # 5.0.0
 
@@ -513,47 +436,47 @@ JavaScript `require`:
 
 Bumped peer dependency version of ffe-core. No external API change, but this version requires a new major of `ffe-core`
 
-* Renamed color names to stay in sync with refactoring in ffe-core@9.x
-* Updated visual test baselines according to color changes in ffe-core
+-   Renamed color names to stay in sync with refactoring in ffe-core@9.x
+-   Updated visual test baselines according to color changes in ffe-core
 
 To migrate, update your app to ffe-core version 9.x
 
 ## 4.1.5
 
-* Removed use of `line-height` to set `ffe-radio-block__header` height, instead use `padding`. This so line breaks won't look awkward - with padding around every text row.
+-   Removed use of `line-height` to set `ffe-radio-block__header` height, instead use `padding`. This so line breaks won't look awkward - with padding around every text row.
 
 ## 4.1.4
 
-* Modified the `padding-bottom` for `ffe-form-label` from 8px to 2px
+-   Modified the `padding-bottom` for `ffe-form-label` from 8px to 2px
 
 ## 4.1.3
 
-* Changed color of option text in selects with validation errors to default blue in stead of inherited red.
+-   Changed color of option text in selects with validation errors to default blue in stead of inherited red.
 
 ## 4.1.2
 
-* Added space underneath radio-switches on small devices and updated visual tests with longer button text.
+-   Added space underneath radio-switches on small devices and updated visual tests with longer button text.
 
 ## 4.1.1
 
-* Modified the font size for dropdowns from 18px to 16px.
+-   Modified the font size for dropdowns from 18px to 16px.
 
 # 4.1.0
 
-* Remove vendor prefix on appearance property. Autoprefixer FTW!
+-   Remove vendor prefix on appearance property. Autoprefixer FTW!
 
 ## 4.0.2
 
-* Meta data for styleguide
+-   Meta data for styleguide
 
 ## 4.0.1
 
-* Remove Mozilla dropdown focus ring to fix double focus highlight on dropdown in Firefox
+-   Remove Mozilla dropdown focus ring to fix double focus highlight on dropdown in Firefox
 
 # 4.0.0
 
-* Removed layout styles from `ffe-form`. In practice all width styling is now removed and
-consumers must provide their own class on the form of
+-   Removed layout styles from `ffe-form`. In practice all width styling is now removed and
+    consumers must provide their own class on the form of
 
 ```
 [project-prefix]-input--[modifier] {
@@ -563,13 +486,13 @@ width: 120 px;
 
 Removed features:
 
-* `dropdown` no longer supports `--small` modifier
-* `dropdown` no longer has a `min-width`
-* `error-summary` no longer has a `max-width`
-* `input-field` no longer supports `--small`, `--medium` and `--large` modifiers
-* `radio-block` no longer has a `min-width` or a `max-width`
-* `radio-switch` no longer has a `min-width`
-* `text-area` no longer uses media-queries, defaults to 100% width always
+-   `dropdown` no longer supports `--small` modifier
+-   `dropdown` no longer has a `min-width`
+-   `error-summary` no longer has a `max-width`
+-   `input-field` no longer supports `--small`, `--medium` and `--large` modifiers
+-   `radio-block` no longer has a `min-width` or a `max-width`
+-   `radio-switch` no longer has a `min-width`
+-   `text-area` no longer uses media-queries, defaults to 100% width always
 
 It is recommended that each consumer set up their own regime for managing the width of
 input controls due to the distinct lack of a common set of requirements across platforms
@@ -577,79 +500,79 @@ and organizations.
 
 ## 3.1.1
 
-* Adjusted the height of ffe-dropdown to match the height of ffe-input-field.
+-   Adjusted the height of ffe-dropdown to match the height of ffe-input-field.
 
 # 3.1.0
 
-* Added class `.ffe-dropdown--small` to support narrow dropdowns.
+-   Added class `.ffe-dropdown--small` to support narrow dropdowns.
 
 ## 3.0.1
 
-* Added padding for large text to checkbox
+-   Added padding for large text to checkbox
 
 # 3.0.0
 
-* **Potentially breaking change:** Responsive implementation of ffe-input-field and ffe-dropdown.
-* ffe-input-field and ffe-dropdown has now 100% width when rendered on mobile-size screen (less than 480px)
-* Introduced new responsive class ffe-textarea.
+-   **Potentially breaking change:** Responsive implementation of ffe-input-field and ffe-dropdown.
+-   ffe-input-field and ffe-dropdown has now 100% width when rendered on mobile-size screen (less than 480px)
+-   Introduced new responsive class ffe-textarea.
 
 ## 2.0.6
 
-* Changed font-size and line height of ffe-form-label.
+-   Changed font-size and line height of ffe-form-label.
 
 ## 2.0.5
 
-* Better positioning of the Dropdown arrow down icon.
+-   Better positioning of the Dropdown arrow down icon.
 
 ## 2.0.4
 
-* Gave radio switches a white background when not selected, so that they work
-correctly on non-white backgrounds as well
+-   Gave radio switches a white background when not selected, so that they work
+    correctly on non-white backgrounds as well
 
 ## 2.0.3
 
-* Updated the focus state to have correct focus color and to not have an
-box-shadow
+-   Updated the focus state to have correct focus color and to not have an
+    box-shadow
 
 ## 2.0.2
 
-* Updated the active color of ffe-radio-switch to `ffe-blue-royal`
+-   Updated the active color of ffe-radio-switch to `ffe-blue-royal`
 
 ## 2.0.1
 
-* Fix for ffe-dropdown to insure that the color and background color set correctly for a selected option in IE.
+-   Fix for ffe-dropdown to insure that the color and background color set correctly for a selected option in IE.
 
 # 2.0.0
 
-* **Potentially breaking change:** in order to support tooltips for form labels, the block-level relationship between labels and fields has been inverted:
-* `ffe-form-label` is now an `inline-block`. In order to keep the old behaviour add the new class `ffe-form-label--block` to your labels.
-* Input fields and dropdowns are now `block`s.In order to keep the old behaviour add the corresponding `--inline` modifier class, i.e.:
-* `ffe-input-field` - `ffe-input-field--inline`
-* `ffe-dropdown` - `ffe-dropdown--inline`
-* Added `ffe-tooltip` for form label tooltips.
+-   **Potentially breaking change:** in order to support tooltips for form labels, the block-level relationship between labels and fields has been inverted:
+-   `ffe-form-label` is now an `inline-block`. In order to keep the old behaviour add the new class `ffe-form-label--block` to your labels.
+-   Input fields and dropdowns are now `block`s.In order to keep the old behaviour add the corresponding `--inline` modifier class, i.e.:
+-   `ffe-input-field` - `ffe-input-field--inline`
+-   `ffe-dropdown` - `ffe-dropdown--inline`
+-   Added `ffe-tooltip` for form label tooltips.
 
 # 1.1.0
 
-* Moved styling from ffe-dropdown into this package
-* Updated examples with dropdown in error state
+-   Moved styling from ffe-dropdown into this package
+-   Updated examples with dropdown in error state
 
 ## 1.0.2
 
-* `ffe-field-error-message` and `ffe-field-success-message` get `aria-hidden` styling
+-   `ffe-field-error-message` and `ffe-field-success-message` get `aria-hidden` styling
 
 ## 1.0.1
 
-* Add missing .ffe-sb1-radioblob mixin removed in ffe-core@8
-* Fix build commands
-* Fix class name for field-error-message
-* Fix extending field-info-message
-* Split example.html into smaller more manageable parts. Removed code snippets in the process.
-* Descriptions are hidden when visual tests run.
+-   Add missing .ffe-sb1-radioblob mixin removed in ffe-core@8
+-   Fix build commands
+-   Fix class name for field-error-message
+-   Fix extending field-info-message
+-   Split example.html into smaller more manageable parts. Removed code snippets in the process.
+-   Descriptions are hidden when visual tests run.
 
 # 1.0.0
 
-* Første versjon av ffe-form-pakken
-* Less-filene er basert på ffe-core v7.0.1 og kan brukes med ffe-core >= v8.0.0
-* ffe-info-message fra ffe-core ble døpt om til ffe-field-info-message
-* ffe-field-error-message og ffe-field-success-message er trukket ut fra ffe-message i ffe-core v7.0.1
-* ffe-input-group ble inkludert her i v1.0.0, men dens eksistens er oppe til diskusjon
+-   Første versjon av ffe-form-pakken
+-   Less-filene er basert på ffe-core v7.0.1 og kan brukes med ffe-core >= v8.0.0
+-   ffe-info-message fra ffe-core ble døpt om til ffe-field-info-message
+-   ffe-field-error-message og ffe-field-success-message er trukket ut fra ffe-message i ffe-core v7.0.1
+-   ffe-input-group ble inkludert her i v1.0.0, men dens eksistens er oppe til diskusjon
