@@ -55,7 +55,7 @@
         "husky": "^0.14.3",
         "jest": "^23.4.2",
         "kss": "^3.0.0-beta.18",
-        "lerna": "^2.8.0",
+        "lerna": "^3.0.0",
         "less": "^3.8.1",
         "less-loader": "^4.0.5",
         "less-plugin-autoprefix": "^2.0.0",
