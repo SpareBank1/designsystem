@@ -19,6 +19,13 @@ class Input extends Component {
         };
     }
 
+    static getDerivedStateFromProps(nextProps, prevState) {
+        if (!prevState.isFocused || prevState.value !== nextProps.value) {
+            return { value: nextProps.value };
+        }
+        return null;
+    }
+
     onChange(e) {
         const value = e.target.value;
         this.setState({ value });
@@ -45,12 +52,6 @@ class Input extends Component {
         this.props.onExpandOrCollapseClick();
     }
 
-    componentWillReceiveProps(nextProps) {
-        if (!this.state.isFocused || this.state.value !== nextProps.value) {
-            this.setState({ value: nextProps.value });
-        }
-    }
-
     render() {
         const {
             onKeyDown,
@@ -65,7 +66,7 @@ class Input extends Component {
             suggestionListId,
             name,
             readOnly,
-            locale
+            locale,
         } = this.props;
 
         const showReset = !readOnly && value.length > 0;
@@ -106,7 +107,7 @@ class Input extends Component {
                         type="button"
                         aria-label={txt[locale].RESET_SEARCH}
                     >
-                        <KryssIkon className="ffe-base-selector__reset-button-icon"/>
+                        <KryssIkon className="ffe-base-selector__reset-button-icon" />
                     </button>
                 )}
                 <button
@@ -114,12 +115,18 @@ class Input extends Component {
                     onMouseDown={this.onExpandOrCollapse}
                     tabIndex={-1}
                     type="button"
-                    aria-label={isSuggestionsShowing ? txt[locale].ACCOUNTSLIST_CLOSE : txt[locale].ACCOUNTSLIST_OPEN}
+                    aria-label={
+                        isSuggestionsShowing
+                            ? txt[locale].ACCOUNTSLIST_CLOSE
+                            : txt[locale].ACCOUNTSLIST_OPEN
+                    }
                 >
                     <ChevronIkon
                         className={classNames(
                             'ffe-base-selector__expand-button-icon ',
-                            { 'ffe-base-selector__expand-button-icon--invalid': ariaInvalid }
+                            {
+                                'ffe-base-selector__expand-button-icon--invalid': ariaInvalid,
+                            },
                         )}
                     />
                 </button>
@@ -146,7 +153,7 @@ Input.propTypes = {
     highlightedIndex: number,
     suggestionListId: string,
     name: string,
-    locale: Locale.isRequired
+    locale: Locale.isRequired,
 };
 
 Input.defaultProps = {
