@@ -26,10 +26,10 @@
 }
 
 .sb1ds-transition {
-    &.sb1ds-bad>* {
+    &.sb1ds-bad > * {
         transition-duration: 1s !important;
     }
-    &.sb1ds-none>* {
+    &.sb1ds-none > * {
         transition: none !important;
     }
 }
@@ -71,7 +71,7 @@
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cpath fill='%23002776' d='M2.7808,62.531,92.401,152.2c3.7342,3.7361,9.9578,3.7361,14.937,0l89.62-89.667c6.2236-6.2269,2.4894-17.435-7.4683-17.435h-179.24c-8.7131-1.248-13.692,9.961-7.4683,17.433z'/%3E%3C/svg%3E");
         background-size: 40%;
         background-repeat: no-repeat;
-        background-position: 50% 50%;
+        background-position: 50% 55%;
         background-color: rgba(255, 255, 255, 0.95);
         border-radius: 50%;
         transition: all @ffe-transition-duration @ffe-ease;
@@ -118,7 +118,7 @@
         .sb1ds-biker .play,
         .sb1ds-pensjon1 .play,
         svg {
-            animation: none!important;
+            animation: none !important;
         }
     }
 }
@@ -468,7 +468,7 @@
         }
     }
     .sb1ds-svgcontainer {
-        >div {
+        > div {
             text-align: center;
         }
     }
@@ -554,7 +554,7 @@
         line-height: 2.5em;
         min-height: 4em;
         color: @ffe-blue-azure;
-        >div {
+        > div {
             position: relative;
             padding-left: 1em;
         }
@@ -637,17 +637,17 @@
 
 .sb1ds-check {
     &.sb1ds-good {
-        .ffe-hidden-checkbox:checked+.ffe-checkbox:after {
+        .ffe-hidden-checkbox:checked + .ffe-checkbox:after {
             animation-duration: @ffe-transition-duration;
         }
     }
     &.sb1ds-bad {
-        .ffe-hidden-checkbox:checked+.ffe-checkbox:after {
+        .ffe-hidden-checkbox:checked + .ffe-checkbox:after {
             animation-duration: 1s;
         }
     }
     &.sb1ds-none {
-        .ffe-hidden-checkbox:checked+.ffe-checkbox:after {
+        .ffe-hidden-checkbox:checked + .ffe-checkbox:after {
             animation: none;
         }
     }
@@ -689,7 +689,7 @@
 .sb1ds-rain #drop1,
 .sb1ds-rain #drop2 {
     animation-name: rain;
-    animation-duration: .8s;
+    animation-duration: 0.8s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
@@ -767,13 +767,13 @@
 
 @keyframes beat {
     0% {
-        transform: scale(.9);
+        transform: scale(0.9);
     }
     50% {
         transform: scale(1);
     }
     100% {
-        transform: scale(.9);
+        transform: scale(0.9);
     }
 }
 
@@ -803,21 +803,21 @@
 }
 
 @keyframes tail {
-    from {}
+    from {
+    }
     to {
-        transform: translateX(1em) translateY(.2em) rotate3d(1, 4, 4, 20deg);
+        transform: translateX(1em) translateY(0.2em) rotate3d(1, 4, 4, 20deg);
     }
 }
 
 .sb1ds-cat #tail {
     animation-name: tail;
-    animation-duration: .8s;
+    animation-duration: 0.8s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-timing-function: ease-in-out;
     transform-origin: 8em 6em;
 }
-
 
 /* Large svgs */
 
@@ -853,94 +853,100 @@
         transform: rotate(6deg) translateY(0) translateX(0);
     }
     20% {
-        transform: rotate(12deg) translateY(.1em) translateX(.2em);
+        transform: rotate(12deg) translateY(0.1em) translateX(0.2em);
     }
     40% {
-        transform: rotate(24deg) translateY(.5em) translateX(.8em);
+        transform: rotate(24deg) translateY(0.5em) translateX(0.8em);
     }
     60% {
-        transform: rotate(36deg) translateY(.4em) translateX(.6em);
+        transform: rotate(36deg) translateY(0.4em) translateX(0.6em);
     }
     80% {
-        transform: rotate(24deg) translateY(-.3em) translateX(.2em);
+        transform: rotate(24deg) translateY(-0.3em) translateX(0.2em);
     }
     90% {
-        transform: rotate(12deg) translateY(-.2em) translateX(.2em);
+        transform: rotate(12deg) translateY(-0.2em) translateX(0.2em);
     }
 }
 
 @keyframes pedal-crank {
     from {
-        transform: rotate(0) scale(.5) skew(0);
+        transform: rotate(0) scale(0.5) skew(0);
     }
     to {
-        transform: rotate(360deg) scale(.8) skew(10deg);
+        transform: rotate(360deg) scale(0.8) skew(10deg);
     }
 }
 
 @keyframes pedal-foot {
     0% {
-        transform: translateY(.2em) translateX(0);
+        transform: translateY(0.2em) translateX(0);
     }
     20% {
-        transform: translateY(.5em) translateX(0);
+        transform: translateY(0.5em) translateX(0);
     }
     40% {
-        transform: translateY(1.2em) translateX(-.1em) rotate(30deg);
+        transform: translateY(1.2em) translateX(-0.1em) rotate(30deg);
     }
     60% {
-        transform: translateY(1.2em) translateX(-.4em) rotate(30deg);
+        transform: translateY(1.2em) translateX(-0.4em) rotate(30deg);
     }
     80% {
-        transform: translateY(.4em) translateX(-.6em);
+        transform: translateY(0.4em) translateX(-0.6em);
     }
 }
 
 @keyframes torso {
-    from {}
+    from {
+    }
     to {
-        transform: skew(2deg, 6deg) translateX(-.05em);
+        transform: skew(2deg, 6deg) translateX(-0.05em);
     }
 }
 
 @keyframes front-wheel {
-    from {}
+    from {
+    }
     to {
-        transform: translate(.05em, .075em);
+        transform: translate(0.05em, 0.075em);
     }
 }
 
 @keyframes back-wheel {
-    from {}
+    from {
+    }
     to {
-        transform: translate(.02em, .035em);
+        transform: translate(0.02em, 0.035em);
     }
 }
 
 @keyframes helmet {
-    from {}
+    from {
+    }
     to {
-        transform: rotate(1deg) translateX(.1em);
+        transform: rotate(1deg) translateX(0.1em);
     }
 }
 
 @keyframes head {
-    from {}
+    from {
+    }
     to {
-        transform: translateX(.1em) rotate(1deg);
+        transform: translateX(0.1em) rotate(1deg);
     }
 }
 
 @keyframes neck {
-    from {}
+    from {
+    }
     to {
-        transform: skewX(-.1em);
+        transform: skewX(-0.1em);
     }
 }
 
 .sb1ds-biker {
     #ground {
-        transform: translateY(-.8em);
+        transform: translateY(-0.8em);
     }
     #air {
         opacity: 0;
@@ -971,7 +977,7 @@
     #left-shin,
     #left-shin2 {
         animation-name: left-leg;
-        animation-duration: .5s;
+        animation-duration: 0.5s;
         animation-iteration-count: infinite;
         animation-direction: alternate-reverse;
         animation-timing-function: ease;
@@ -981,7 +987,7 @@
         animation-duration: 1s;
         animation-iteration-count: infinite;
         animation-direction: normal;
-        transform-origin: .2em 1em;
+        transform-origin: 0.2em 1em;
         animation-timing-function: linear;
     }
     #pedal-foot,
@@ -995,7 +1001,7 @@
     #torso,
     #torso2 {
         animation-name: torso;
-        animation-duration: .5s;
+        animation-duration: 0.5s;
         animation-iteration-count: infinite;
         animation-direction: alternate;
         animation-timing-function: ease;
@@ -1003,7 +1009,7 @@
     #front-wheel1,
     #front-wheel2 {
         animation-name: front-wheel;
-        animation-duration: .2s;
+        animation-duration: 0.2s;
         animation-iteration-count: infinite;
         animation-direction: alternate;
         animation-timing-function: ease;
@@ -1012,7 +1018,7 @@
     #back-wheel2,
     #back-wheel3 {
         animation-name: back-wheel;
-        animation-duration: .2s;
+        animation-duration: 0.2s;
         animation-iteration-count: infinite;
         animation-direction: alternate-reverse;
         animation-timing-function: ease;
@@ -1023,7 +1029,7 @@
     #helmet6,
     #helmet7 {
         animation-name: helmet;
-        animation-duration: .5s;
+        animation-duration: 0.5s;
         animation-iteration-count: infinite;
         animation-direction: alternate;
         animation-timing-function: ease;
@@ -1037,7 +1043,7 @@
     #head7,
     #head8 {
         animation-name: head;
-        animation-duration: .5s;
+        animation-duration: 0.5s;
         animation-iteration-count: infinite;
         animation-direction: alternate;
         animation-timing-function: ease;
@@ -1046,7 +1052,7 @@
     #neck2,
     #neck3 {
         animation-name: neck;
-        animation-duration: .5s;
+        animation-duration: 0.5s;
         animation-iteration-count: infinite;
         animation-direction: alternate;
         animation-timing-function: ease;
@@ -1059,38 +1065,38 @@
         #right-shin2,
         #right-shoe,
         #right-shoe2 {
-            animation-duration: .5s;
+            animation-duration: 0.5s;
         }
         #left-shin,
         #left-shin2 {
-            animation-duration: .25s;
+            animation-duration: 0.25s;
         }
         #pedal-crank {
-            animation-duration: .5s;
+            animation-duration: 0.5s;
         }
         #pedal-foot,
         #pedal-foot2 {
-            animation-duration: .5s;
+            animation-duration: 0.5s;
         }
         #torso,
         #torso2 {
-            animation-duration: .25s;
+            animation-duration: 0.25s;
         }
         #front-wheel1,
         #front-wheel2 {
-            animation-duration: .1s;
+            animation-duration: 0.1s;
         }
         #back-wheel1,
         #back-wheel2,
         #back-wheel3 {
-            animation-duration: .1s;
+            animation-duration: 0.1s;
         }
         #helmet3,
         #helmet4,
         #helmet5,
         #helmet6,
         #helmet7 {
-            animation-duration: .25s;
+            animation-duration: 0.25s;
         }
         #head1,
         #head2,
@@ -1100,12 +1106,12 @@
         #head6,
         #head7,
         #head8 {
-            animation-duration: .25s;
+            animation-duration: 0.25s;
         }
         #neck1,
         #neck2,
         #neck3 {
-            animation-duration: .25s;
+            animation-duration: 0.25s;
         }
     }
 }
@@ -1115,7 +1121,7 @@
         transform: skewX(0);
     }
     50% {
-        transform: skewX(-.25deg);
+        transform: skewX(-0.25deg);
     }
     100% {
         transform: skewX(0);
@@ -1127,7 +1133,7 @@
         transform: skewX(0);
     }
     50% {
-        transform: skewX(.15deg);
+        transform: skewX(0.15deg);
     }
     100% {
         transform: skewX(0);
@@ -1151,7 +1157,7 @@
         opacity: 0;
     }
     35% {
-        opacity: .15;
+        opacity: 0.15;
     }
     40% {
         opacity: 0;
@@ -1160,7 +1166,7 @@
         opacity: 0;
     }
     62% {
-        opacity: .5;
+        opacity: 0.5;
     }
     67% {
         opacity: 0;
@@ -1169,7 +1175,7 @@
         opacity: 0;
     }
     87% {
-        opacity: .3;
+        opacity: 0.3;
     }
     89% {
         opacity: 0;
@@ -1178,7 +1184,7 @@
 
 #hoyre-fot {
     animation-name: foot;
-    animation-duration: .6s;
+    animation-duration: 0.6s;
     animation-iteration-count: infinite;
     animation-timing-function: ease;
 }
