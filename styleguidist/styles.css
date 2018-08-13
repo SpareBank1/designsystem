@@ -6463,7 +6463,7 @@ input:not([type='radio']):not([type='checkbox']) {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cpath fill='%23002776' d='M2.7808,62.531,92.401,152.2c3.7342,3.7361,9.9578,3.7361,14.937,0l89.62-89.667c6.2236-6.2269,2.4894-17.435-7.4683-17.435h-179.24c-8.7131-1.248-13.692,9.961-7.4683,17.433z'/%3E%3C/svg%3E");
   background-size: 40%;
   background-repeat: no-repeat;
-  background-position: 50% 50%;
+  background-position: 50% 55%;
   background-color: rgba(255, 255, 255, 0.95);
   border-radius: 50%;
   -webkit-transition: all 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
@@ -6509,8 +6509,8 @@ input:not([type='radio']):not([type='checkbox']) {
 .sb1ds-svgcontainer--paused .sb1ds-biker .play,
 .sb1ds-svgcontainer--paused .sb1ds-pensjon1 .play,
 .sb1ds-svgcontainer--paused svg {
-  -webkit-animation: none!important;
-          animation: none!important;
+  -webkit-animation: none !important;
+          animation: none !important;
 }
 @-webkit-keyframes easing {
   0% {
