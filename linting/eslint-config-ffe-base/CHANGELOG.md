@@ -3,31 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.2"></a>
+
+## [3.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/eslint-config-ffe-base@3.0.1...@sb1/eslint-config-ffe-base@3.0.2) (2018-08-15)
+
+**Note:** Version bump only for package @sb1/eslint-config-ffe-base
+
 <a name="3.0.1"></a>
+
 ## [3.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/eslint-config-ffe-base@3.0.0...@sb1/eslint-config-ffe-base@3.0.1) (2018-08-09)
-
-
-
 
 **Note:** Version bump only for package @sb1/eslint-config-ffe-base
 
 <a name="3.0.0"></a>
-# 3.0.0 (2018-02-25)
 
+# 3.0.0 (2018-02-25)
 
 ### Chores
 
-* add [@sb1](https://github.com/sb1)/ scope to all packages ([37efbb4](https://github.com/SpareBank1/designsystem/commit/37efbb4))
-
+-   add [@sb1](https://github.com/sb1)/ scope to all packages ([37efbb4](https://github.com/SpareBank1/designsystem/commit/37efbb4))
 
 ### Features
 
-* **eslint-config-ffe-base:** Add contribute.md link to readme ([31483bd](https://github.com/SpareBank1/designsystem/commit/31483bd))
-
+-   **eslint-config-ffe-base:** Add contribute.md link to readme ([31483bd](https://github.com/SpareBank1/designsystem/commit/31483bd))
 
 ### BREAKING CHANGES
 
-* All packages have been renamed to add the @sb1 scope.
+-   All packages have been renamed to add the @sb1 scope.
 
 See links [1] and [2] to read more about package scopes.
 
@@ -100,46 +102,48 @@ JavaScript `require`:
 [2]: https://docs.npmjs.com/getting-started/scoped-packages
 [3]: https://github.com/sparebank1/designsystem/tags
 
-
-
-
 <a name="2.3.1"></a>
+
 ## [2.3.1](https://github.com/SpareBank1/designsystem/compare/eslint-config-ffe-base@2.3.0...eslint-config-ffe-base@2.3.1) (2018-02-22)
-
-
-
 
 **Note:** Version bump only for package eslint-config-ffe-base
 
 <a name="2.3.0"></a>
-# 2.3.0 (2017-12-22)
 
+# 2.3.0 (2017-12-22)
 
 ### Features
 
-* **eslint-config-ffe-base:** Add contribute.md link to readme
+-   **eslint-config-ffe-base:** Add contribute.md link to readme
 
 # 2.2.0 (13.12.2017)
-* Updated versions of eslint and eslint-find-rules
+
+-   Updated versions of eslint and eslint-find-rules
 
 # 2.1.0 (09.11.2017)
-* Added "import/named"-rule
-* Added "import/default"-rule
+
+-   Added "import/named"-rule
+-   Added "import/default"-rule
 
 ## 2.0.2 (18.10.2016)
-* (patch) Update peerDependency plugin-import to include v2.0.1
-* (patch) Update devDependency eslint-find-rules to include v1.11.0 which includes eslint 3.0.0 as its peerDependency
+
+-   (patch) Update peerDependency plugin-import to include v2.0.1
+-   (patch) Update devDependency eslint-find-rules to include v1.11.0 which includes eslint 3.0.0 as its peerDependency
 
 ## 2.0.1 (04.10.2016)
-* (patch) Update peerDependencies to include eslint@3.0.0
-* (patch) Update eslint-plugin-import to 1.10.1 to get updated peerDependencies
+
+-   (patch) Update peerDependencies to include eslint@3.0.0
+-   (patch) Update eslint-plugin-import to 1.10.1 to get updated peerDependencies
 
 # 2.0.0 (10.08.2016)
-* (breaking) Added "no-debugger"-rule
-* (breaking) Removed "no-eq-null"-rule
+
+-   (breaking) Added "no-debugger"-rule
+-   (breaking) Removed "no-eq-null"-rule
 
 ## 1.0.1 (12.05.2016)
-* (bugfix) Add missing rules-pattern to files in package.json
+
+-   (bugfix) Add missing rules-pattern to files in package.json
 
 # 1.0.0 (12.05.2016)
-* Initial release
+
+-   Initial release
