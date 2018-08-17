@@ -43,6 +43,7 @@ module.exports = {
                 'ffe-message-box',
                 'ffe-message-box-react',
                 'ffe-radio-button-react',
+                'ffe-sb1-logos',
                 'ffe-searchable-dropdown-react',
                 'ffe-spinner',
                 'ffe-spinner-react',
