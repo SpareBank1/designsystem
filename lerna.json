@@ -14,7 +14,8 @@
                 ".npmrc",
                 "*.md",
                 "*.spec.js",
-                "test-setup.js"
+                "test-setup.js",
+                "ffe-header/images/logo-*.svg"
             ],
             "message": "chore(release): publish"
         }
