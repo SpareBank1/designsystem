@@ -50,7 +50,10 @@ export default class ContextMessage extends Component {
         return (
             <div className="ffe-context-message-content__icon">
                 {cloneElement(icon, {
-                    className: 'ffe-context-message-content__icon-svg',
+                    className: classNames(
+                        'ffe-context-message-content__icon-svg',
+                        icon.props.className,
+                    ),
                 })}
             </div>
         );

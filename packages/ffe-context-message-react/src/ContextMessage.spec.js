@@ -77,9 +77,20 @@ describe('<ContextMessage />', () => {
         const wrapper = getMountedWrapper({
             icon: <InfoSirkelIkon />,
         });
-        expect(
-            wrapper.find('svg.ffe-context-message-content__icon-svg'),
-        ).toHaveLength(1);
+        const el = wrapper.find('svg');
+        expect(el).toHaveLength(1);
+        expect(el.hasClass('ffe-context-message-content__icon-svg')).toBe(true);
+    });
+
+    it('lets consumer add extra classes to icon', () => {
+        const wrapper = getMountedWrapper({
+            icon: <InfoSirkelIkon className="extra-extra-read-all-about-it" />,
+        });
+
+        const el = wrapper.find('svg');
+
+        expect(el.hasClass('ffe-context-message-content__icon-svg')).toBe(true);
+        expect(el.hasClass('extra-extra-read-all-about-it')).toBe(true);
     });
 
     it('renders without close button by default', () => {
