@@ -2788,11 +2788,14 @@ html {
   border-top: 3px solid transparent;
   content: '';
   display: block;
-  height: 11px;
+  height: 0;
   width: 6px;
   left: 4px;
   top: 11px;
   position: absolute;
+  -webkit-transition: height 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+  -o-transition: height 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: height 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 .ffe-hidden-checkbox {
   position: absolute;
@@ -2822,32 +2825,11 @@ html {
           box-shadow: 0 0 0 2px rgba(68, 192, 255, 0.5);
 }
 .ffe-hidden-checkbox:checked + .ffe-checkbox::after {
-  -webkit-animation: checkmark 0.4s;
-          animation: checkmark 0.4s;
   border-color: #0071CD;
+  height: 11px;
 }
 .ffe-hidden-checkbox[aria-invalid='true'] + .ffe-checkbox::before {
   border-color: #DA3D00;
-}
-@-webkit-keyframes checkmark {
-  0% {
-    height: 0;
-    width: 6px;
-  }
-  50% {
-    height: 11px;
-    width: 6px;
-  }
-}
-@keyframes checkmark {
-  0% {
-    height: 0;
-    width: 6px;
-  }
-  50% {
-    height: 11px;
-    width: 6px;
-  }
 }
 .ffe-radio-input {
   position: absolute;
