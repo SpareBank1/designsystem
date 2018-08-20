@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="9.2.12"></a>
+
+## [9.2.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.2.11...@sb1/ffe-form@9.2.12) (2018-08-20)
+
+### Bug Fixes
+
+-   **ffe-form:** rewrite checkbox animation from keyframes to transition in order to prevent animation playing on page load ([1fb502a](https://github.com/SpareBank1/designsystem/commit/1fb502a))
+
 <a name="9.2.11"></a>
 
 ## [9.2.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.2.10...@sb1/ffe-form@9.2.11) (2018-08-10)
