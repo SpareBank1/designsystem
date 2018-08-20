@@ -1,0 +1,24 @@
+{
+  "name": "@sb1/ffe-sb1-logos",
+  "version": "1.0.1",
+  "description": "Provides logos of SpareBank 1",
+  "license": "SEE LICENSE IN README.md",
+  "author": "SpareBank 1",
+  "files": [
+    "metadata.js",
+    "svg"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:SpareBank1/designsystem.git"
+  },
+  "scripts": {
+    "build": "./bin/build-preview.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "handlebars": "^4.0.11"
+  }
+}
