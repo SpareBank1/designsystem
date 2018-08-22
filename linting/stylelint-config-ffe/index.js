@@ -9,7 +9,6 @@ module.exports = {
             },
         ],
         'at-rule-no-vendor-prefix': true,
-        'color-hex-case': 'upper',
         indentation: [
             4,
             {
