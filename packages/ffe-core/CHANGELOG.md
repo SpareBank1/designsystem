@@ -3,155 +3,134 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-      <a name="13.0.3"></a>
+<a name="14.0.0"></a>
+
+# [14.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@13.0.3...@sb1/ffe-core@14.0.0) (2018-08-23)
+
+### Features
+
+-   **ffe-core:** Added visited color to link-text ([1055b32](https://github.com/SpareBank1/designsystem/commit/1055b32))
+
+### BREAKING CHANGES
+
+-   **ffe-core:** All LinkText components will get the visited color upon user interaction.
+
+<a name="13.0.3"></a>
+
 ## [13.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@13.0.2...@sb1/ffe-core@13.0.3) (2018-08-09)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-core
 
       <a name="13.0.2"></a>
-## [13.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@13.0.1...@sb1/ffe-core@13.0.2) (2018-07-23)
 
+## [13.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@13.0.1...@sb1/ffe-core@13.0.2) (2018-07-23)
 
 ### Bug Fixes
 
-* **ffe-core:** Lock line-height for ffe-link-text ([0eaf597](https://github.com/SpareBank1/designsystem/commit/0eaf597)), closes [#308](https://github.com/SpareBank1/designsystem/issues/308)
-
-
+-   **ffe-core:** Lock line-height for ffe-link-text ([0eaf597](https://github.com/SpareBank1/designsystem/commit/0eaf597)), closes [#308](https://github.com/SpareBank1/designsystem/issues/308)
 
 
     <a name="13.0.1"></a>
-## [13.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@13.0.0...@sb1/ffe-core@13.0.1) (2018-06-18)
 
+## [13.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@13.0.0...@sb1/ffe-core@13.0.1) (2018-06-18)
 
 ### Bug Fixes
 
-* **ffe-core:** Fix build issue ([faa8828](https://github.com/SpareBank1/designsystem/commit/faa8828))
-* **ffe-core:** Run babel on generated code ([43ccde7](https://github.com/SpareBank1/designsystem/commit/43ccde7))
+-   **ffe-core:** Fix build issue ([faa8828](https://github.com/SpareBank1/designsystem/commit/faa8828))
+-   **ffe-core:** Run babel on generated code ([43ccde7](https://github.com/SpareBank1/designsystem/commit/43ccde7))
 
+<a name="13.0.0"></a>
 
-
-
-  <a name="13.0.0"></a>
 # [13.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@12.2.0...@sb1/ffe-core@13.0.0) (2018-06-04)
-
 
 ### Code Refactoring
 
-* **ffe-core:** Separate layout from core ([a5df7a0](https://github.com/SpareBank1/designsystem/commit/a5df7a0)), closes [#149](https://github.com/SpareBank1/designsystem/issues/149)
-
+-   **ffe-core:** Separate layout from core ([a5df7a0](https://github.com/SpareBank1/designsystem/commit/a5df7a0)), closes [#149](https://github.com/SpareBank1/designsystem/issues/149)
 
 ### BREAKING CHANGES
 
-* **ffe-core:** The Hawaii layout system has been layed out in
-a different module, `ffe-layout-legacy`. If you're still using it then
-you will find the section-wrapper and content-container CSS
-classes there. If you're already using `ffe-grid` then there should
-be nothing breaking about this change.
-
-
-
+-   **ffe-core:** The Hawaii layout system has been layed out in
+    a different module, `ffe-layout-legacy`. If you're still using it then
+    you will find the section-wrapper and content-container CSS
+    classes there. If you're already using `ffe-grid` then there should
+    be nothing breaking about this change.
 
 <a name="12.2.0"></a>
+
 # [12.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@12.1.0...@sb1/ffe-core@12.2.0) (2018-05-29)
 
-
 ### Features
 
-* **ffe-core:** Export less vars as js ([5ba1a65](https://github.com/SpareBank1/designsystem/commit/5ba1a65))
-
-
-
+-   **ffe-core:** Export less vars as js ([5ba1a65](https://github.com/SpareBank1/designsystem/commit/5ba1a65))
 
 <a name="12.1.0"></a>
-# [12.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@12.0.6...@sb1/ffe-core@12.1.0) (2018-05-22)
 
+# [12.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@12.0.6...@sb1/ffe-core@12.1.0) (2018-05-22)
 
 ### Features
 
-* **ffe-core:** Deprecate unused color variables, add new color ([f2e77f8](https://github.com/SpareBank1/designsystem/commit/f2e77f8))
-
-
-
+-   **ffe-core:** Deprecate unused color variables, add new color ([f2e77f8](https://github.com/SpareBank1/designsystem/commit/f2e77f8))
 
 <a name="12.0.6"></a>
-## [12.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@12.0.5...@sb1/ffe-core@12.0.6) (2018-05-04)
 
+## [12.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@12.0.5...@sb1/ffe-core@12.0.6) (2018-05-04)
 
 ### Bug Fixes
 
-* **ffe-core:** Increase line height for ffe-h4 ([118fd53](https://github.com/SpareBank1/designsystem/commit/118fd53))
-
-
-
+-   **ffe-core:** Increase line height for ffe-h4 ([118fd53](https://github.com/SpareBank1/designsystem/commit/118fd53))
 
 <a name="12.0.5"></a>
+
 ## [12.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@12.0.4...@sb1/ffe-core@12.0.5) (2018-05-03)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-core
 
 <a name="12.0.4"></a>
+
 ## [12.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@12.0.3...@sb1/ffe-core@12.0.4) (2018-04-11)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-core
 
 <a name="12.0.3"></a>
+
 ## [12.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@12.0.2...@sb1/ffe-core@12.0.3) (2018-04-10)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-core
 
 <a name="12.0.2"></a>
+
 ## [12.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@12.0.0...@sb1/ffe-core@12.0.2) (2018-03-07)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-core
 
 <a name="12.0.1"></a>
+
 ## [12.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@12.0.0...@sb1/ffe-core@12.0.1) (2018-03-02)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-core
 
 <a name="12.0.0"></a>
-# 12.0.0 (2018-02-25)
 
+# 12.0.0 (2018-02-25)
 
 ### Bug Fixes
 
-* **ffe-core:** Avoid subpixel calculation error for ffe-divider-line ([133b0d0](https://github.com/SpareBank1/designsystem/commit/133b0d0))
-* **ffe-core:** Re-add property `sb1.StaticResources` in `package.json`. ([7b3e30c](https://github.com/SpareBank1/designsystem/commit/7b3e30c))
-
+-   **ffe-core:** Avoid subpixel calculation error for ffe-divider-line ([133b0d0](https://github.com/SpareBank1/designsystem/commit/133b0d0))
+-   **ffe-core:** Re-add property `sb1.StaticResources` in `package.json`. ([7b3e30c](https://github.com/SpareBank1/designsystem/commit/7b3e30c))
 
 ### Chores
 
-* add [@sb1](https://github.com/sb1)/ scope to all packages ([37efbb4](https://github.com/SpareBank1/designsystem/commit/37efbb4))
-
+-   add [@sb1](https://github.com/sb1)/ scope to all packages ([37efbb4](https://github.com/SpareBank1/designsystem/commit/37efbb4))
 
 ### Features
 
-* **ffe-core:** Add --inline modifier to headings ([1a61f28](https://github.com/SpareBank1/designsystem/commit/1a61f28))
-* **ffe-core:** Add contribute.md link to readme ([df68546](https://github.com/SpareBank1/designsystem/commit/df68546))
-* **ffe-core:** Remove webfonts ([add6353](https://github.com/SpareBank1/designsystem/commit/add6353))
-
+-   **ffe-core:** Add --inline modifier to headings ([1a61f28](https://github.com/SpareBank1/designsystem/commit/1a61f28))
+-   **ffe-core:** Add contribute.md link to readme ([df68546](https://github.com/SpareBank1/designsystem/commit/df68546))
+-   **ffe-core:** Remove webfonts ([add6353](https://github.com/SpareBank1/designsystem/commit/add6353))
 
 ### BREAKING CHANGES
 
-* All packages have been renamed to add the @sb1 scope.
+-   All packages have been renamed to add the @sb1 scope.
 
 See links [1] and [2] to read more about package scopes.
 
@@ -223,8 +202,9 @@ JavaScript `require`:
 [1]: https://docs.npmjs.com/misc/scope
 [2]: https://docs.npmjs.com/getting-started/scoped-packages
 [3]: https://github.com/sparebank1/designsystem/tags
-* **ffe-core:** Webfonts are no longer included in `ffe-core`, but were
-moved into `ffe-webfonts`.
+
+-   **ffe-core:** Webfonts are no longer included in `ffe-core`, but were
+    moved into `ffe-webfonts`.
 
 Because `ffe-webfonts` does not include TrueType fonts anymore, change
 effectively drops support for Museo Sans webfont in IE 8 and older.
@@ -236,49 +216,38 @@ no need for consumers to declare it when using less from
 Upgrade: Install ffe-webfonts and include the less file accordingly the
 package's README and change `@build-path` to `@fonts-path`.
 
-
-
-
 <a name="11.0.3"></a>
+
 ## [11.0.3](https://github.com/SpareBank1/designsystem/compare/ffe-core@11.0.2...ffe-core@11.0.3) (2018-02-23)
-
-
-
 
 **Note:** Version bump only for package ffe-core
 
 <a name="11.0.2"></a>
+
 ## [11.0.2](https://github.com/SpareBank1/designsystem/compare/ffe-core@11.0.1...ffe-core@11.0.2) (2018-02-22)
-
-
-
 
 **Note:** Version bump only for package ffe-core
 
 <a name="11.0.1"></a>
-## [11.0.1](https://github.com/SpareBank1/designsystem/compare/ffe-core@11.0.0...ffe-core@11.0.1) (2018-02-20)
 
+## [11.0.1](https://github.com/SpareBank1/designsystem/compare/ffe-core@11.0.0...ffe-core@11.0.1) (2018-02-20)
 
 ### Bug Fixes
 
-* **ffe-core:** Avoid subpixel calculation error for ffe-divider-line
-
-
-
+-   **ffe-core:** Avoid subpixel calculation error for ffe-divider-line
 
 <a name="11.0.0"></a>
-# [11.0.0](https://github.com/SpareBank1/designsystem/compare/ffe-core@10.3.1...ffe-core@11.0.0) (2018-02-15)
 
+# [11.0.0](https://github.com/SpareBank1/designsystem/compare/ffe-core@10.3.1...ffe-core@11.0.0) (2018-02-15)
 
 ### Features
 
-* **ffe-core:** Remove webfonts
-
+-   **ffe-core:** Remove webfonts
 
 ### BREAKING CHANGES
 
-* **ffe-core:** Webfonts are no longer included in `ffe-core`, but were
-moved into `ffe-webfonts`.
+-   **ffe-core:** Webfonts are no longer included in `ffe-core`, but were
+    moved into `ffe-webfonts`.
 
 Because `ffe-webfonts` does not include TrueType fonts anymore, change
 effectively drops support for Museo Sans webfont in IE 8 and older.
@@ -290,36 +259,25 @@ no need for consumers to declare it when using less from
 Upgrade: Install ffe-webfonts and include the less file accordingly the
 package's README and change `@build-path` to `@fonts-path`.
 
-
-
-
 <a name="10.3.1"></a>
-## [10.3.1](https://github.com/SpareBank1/designsystem/compare/ffe-core@10.3.0...ffe-core@10.3.1) (2018-02-01)
 
+## [10.3.1](https://github.com/SpareBank1/designsystem/compare/ffe-core@10.3.0...ffe-core@10.3.1) (2018-02-01)
 
 ### Bug Fixes
 
-* **ffe-core:** Re-add property `sb1.StaticResources` in `package.json`.
-
-
-
+-   **ffe-core:** Re-add property `sb1.StaticResources` in `package.json`.
 
 <a name="10.3.0"></a>
-# [10.3.0](https://github.com/SpareBank1/designsystem/compare/ffe-core@10.2.5...ffe-core@10.3.0) (2018-01-19)
 
+# [10.3.0](https://github.com/SpareBank1/designsystem/compare/ffe-core@10.2.5...ffe-core@10.3.0) (2018-01-19)
 
 ### Features
 
-* **ffe-core:** Add --inline modifier to headings
-
-
-
+-   **ffe-core:** Add --inline modifier to headings
 
 <a name="10.2.5"></a>
+
 ## [10.2.5](https://github.com/SpareBank1/designsystem/compare/ffe-core@10.2.4...ffe-core@10.2.5) (2018-01-19)
-
-
-
 
 **Note:** Version bump only for package ffe-core
 
@@ -353,43 +311,43 @@ package's README and change `@build-path` to `@fonts-path`.
 
 ### Features
 
-* **ffe-core:** Add contribute.md link to readme
+-   **ffe-core:** Add contribute.md link to readme
 
 ## 10.1.2
 
-* Reduced font size of `ffe-fontsize-form-input` from `18px` to `16px`.
+-   Reduced font size of `ffe-fontsize-form-input` from `18px` to `16px`.
 
 ## 10.1.1
 
-* Replaced hardcoded font-sizes with variables
+-   Replaced hardcoded font-sizes with variables
 
 # 10.1.0
 
-* Supports `--no-underline` modifier for `ffe-h*` classes. Only use these if there are anchors in menus with header-style typography when it's obvious from their context that they are clickable.
+-   Supports `--no-underline` modifier for `ffe-h*` classes. Only use these if there are anchors in menus with header-style typography when it's obvious from their context that they are clickable.
 
 # 10.0.0
 
-* BREAKING: The new default for links is the underlined version. If you want links without underlines use the `--no-underline` modifier.
-* BREAKING: Element styling (via `ffe-element-styling.less` and `element-map.less`) is removed.
+-   BREAKING: The new default for links is the underlined version. If you want links without underlines use the `--no-underline` modifier.
+-   BREAKING: Element styling (via `ffe-element-styling.less` and `element-map.less`) is removed.
 
 Element styling has been deprecated for several majors, so hopefully this will not be a heavy upgrade for most
 applications. However, for those applications that still import and use these styles, the upgrade path consists of
 adding some classes in your DOM:
 
-* Add `ffe-body-text` class to `<body />` tag.
-* Add `ffe-h[1-6]` classes to `<h[1-6] />` tags
-* Add `ffe-body-paragraph` class to `<p />` tags
-* Add `ffe-strong-text` class to `<strong />` tags
-* Add `ffe-em-text` class to `<em />` tags
-* Add `ffe-pre-text` class to `<pre />` tags
-* Add `ffe-link-text` class to `<a />` tags
-* Add `ffe-divider-line` class to `<hr />` tags
-* Add `ffe-fieldset` class to `<fieldset />` tags
+-   Add `ffe-body-text` class to `<body />` tag.
+-   Add `ffe-h[1-6]` classes to `<h[1-6] />` tags
+-   Add `ffe-body-paragraph` class to `<p />` tags
+-   Add `ffe-strong-text` class to `<strong />` tags
+-   Add `ffe-em-text` class to `<em />` tags
+-   Add `ffe-pre-text` class to `<pre />` tags
+-   Add `ffe-link-text` class to `<a />` tags
+-   Add `ffe-divider-line` class to `<hr />` tags
+-   Add `ffe-fieldset` class to `<fieldset />` tags
 
 # 9.3.0
 
-* Added cursor: pointer to `ffe-link-text`
-* Added support for modifier `--underline` to `ffe-link-text` for anchors with underline.
+-   Added cursor: pointer to `ffe-link-text`
+-   Added support for modifier `--underline` to `ffe-link-text` for anchors with underline.
 
 Prefer using the underlined variant. There will be an upcoming major release that makes it the new default.
 
@@ -398,7 +356,7 @@ the links that they don't want underlined in the next major.
 
 # 9.2.0
 
-* Added `motion.less`, which contains variables for common transitions
+-   Added `motion.less`, which contains variables for common transitions
 
 To migrate to this release, replace timing functions (including `ease-in`, `ease-out` and other functions that do not directly correspond to the variables) and duration with the variables that fit your use case. Make sure to specify which property to transition - avoid `all`.
 
@@ -406,39 +364,39 @@ For example `transition: all 0.15s ease;` may be replaced by `transition: transf
 
 # 9.1.0
 
-* Definition of breakpoints and variables related to layout (`@app-width`, ...) have their own less files: `less/breakpoints.less` and `less/app-width.less`.
-* Each less file can be independently imported.
-* Better default for `@base-url` ("." instead of "/").
+-   Definition of breakpoints and variables related to layout (`@app-width`, ...) have their own less files: `less/breakpoints.less` and `less/app-width.less`.
+-   Each less file can be independently imported.
+-   Better default for `@base-url` ("." instead of "/").
 
 ## 9.0.1
 
-* Added devDependency to ffe-lists in order to correctly style examples
+-   Added devDependency to ffe-lists in order to correctly style examples
 
 # 9.0.0
 
-* BREAKING: List styling are removed from `ffe-core`. These styles are now available in `ffe-lists`.
-* BREAKING: `.ffe-number-list` is no more - use `ffe-lists`'s `.ffe-numbered-list`.
-* BREAKING: Removed `@ffe-sand-25` from colors.less, renamed other color variables.
+-   BREAKING: List styling are removed from `ffe-core`. These styles are now available in `ffe-lists`.
+-   BREAKING: `.ffe-number-list` is no more - use `ffe-lists`'s `.ffe-numbered-list`.
+-   BREAKING: Removed `@ffe-sand-25` from colors.less, renamed other color variables.
 
 To upgrade to this release, all references to the following variables must be replaced by their new names in your LESS code:
 
-* `@ffe-blue-flat` --> `@ffe-blue-cobalt`
-* `@ffe-blue-royal-light-wcag` --> `@ffe-blue-azure`
-* `@ffe-blue-royal-light` --> `@ffe-blue-deep-sky`
-* `@ffe-blue-royal-light-50` --> `@ffe-blue-sky`
-* `@ffe-blue-royal-light-20` --> `@ffe-blue-pale`
-* `@ffe-blue-royal-light-10` --> `@ffe-blue-ice`
-* `@ffe-green-wcag` --> `@ffe-green-shamrock`
-* `@ffe-green-dark-10` --> `@ffe-green-emerald`
-* `@ffe-green-wcag-20` --> `@ffe-green-mint`
-* `@ffe-orange-wcag` --> `@ffe-orange-fire`
-* `@ffe-orange-wcag-20` --> `@ffe-orange-salmon`
-* `@ffe-purple-wcag` --> `@ffe-purple-magenta`
-* `@ffe-sand-50` --> `@ffe-sand-ivory`
-* `@ffe-sand-25` --> `@ffe-sand`
-* `@ffe-grey-light-bg` --> `@ffe-grey-cloud`
-* `@ffe-grey-light` --> `@ffe-grey-silver`
-* `@ffe-grey-dark` --> `@ffe-grey-charcoal`
+-   `@ffe-blue-flat` --> `@ffe-blue-cobalt`
+-   `@ffe-blue-royal-light-wcag` --> `@ffe-blue-azure`
+-   `@ffe-blue-royal-light` --> `@ffe-blue-deep-sky`
+-   `@ffe-blue-royal-light-50` --> `@ffe-blue-sky`
+-   `@ffe-blue-royal-light-20` --> `@ffe-blue-pale`
+-   `@ffe-blue-royal-light-10` --> `@ffe-blue-ice`
+-   `@ffe-green-wcag` --> `@ffe-green-shamrock`
+-   `@ffe-green-dark-10` --> `@ffe-green-emerald`
+-   `@ffe-green-wcag-20` --> `@ffe-green-mint`
+-   `@ffe-orange-wcag` --> `@ffe-orange-fire`
+-   `@ffe-orange-wcag-20` --> `@ffe-orange-salmon`
+-   `@ffe-purple-wcag` --> `@ffe-purple-magenta`
+-   `@ffe-sand-50` --> `@ffe-sand-ivory`
+-   `@ffe-sand-25` --> `@ffe-sand`
+-   `@ffe-grey-light-bg` --> `@ffe-grey-cloud`
+-   `@ffe-grey-light` --> `@ffe-grey-silver`
+-   `@ffe-grey-dark` --> `@ffe-grey-charcoal`
 
 To save some time on searching and replacing, run this command from inside your repository:
 
@@ -515,19 +473,19 @@ fixes problems with color contrast, and is considered a bugfix.
 
 ## 8.0.2
 
-* Fixes a bug where `box-sizing: border-box;` went missing
+-   Fixes a bug where `box-sizing: border-box;` went missing
 
 ## 8.0.1
 
-* Readded normalize.css as a static file
+-   Readded normalize.css as a static file
 
 # 8.0.0
 
-* Removing components from ffe-core (new modules created for them in their respective repos).
-* Updating examples to only include new ffe-core elements.
-* Updated normalize.css and added it as an npm dependency. (see https://github.com/necolas/normalize.css/blob/master/CHANGELOG.md for changes since v.3.0.3)
-* Cleaned up example files. Removed navigation, javascript and unused styling.
-* Added a description for migrating to v8.0.0
+-   Removing components from ffe-core (new modules created for them in their respective repos).
+-   Updating examples to only include new ffe-core elements.
+-   Updated normalize.css and added it as an npm dependency. (see https://github.com/necolas/normalize.css/blob/master/CHANGELOG.md for changes since v.3.0.3)
+-   Cleaned up example files. Removed navigation, javascript and unused styling.
+-   Added a description for migrating to v8.0.0
 
 ### Migrating to v.8.0.0
 
@@ -584,25 +542,25 @@ If you want to keep using it and don't plan on upgrading to `ffe-buttons@2.1.0` 
 
 ```less
 .ffe-button-group {
-padding: 40px 0;
+    padding: 40px 0;
 
-&--thin {
-padding: 0;
-}
+    &--thin {
+        padding: 0;
+    }
 }
 
 .ffe-button-group [class^='ffe-'][class$='-button'] {
-margin: 0 auto 10px;
+    margin: 0 auto 10px;
 
-@media screen and (min-width: @breakpoint-sm) {
-display: inline-block;
-margin: 0 0 10px 10px;
-width: auto;
+    @media screen and (min-width: @breakpoint-sm) {
+        display: inline-block;
+        margin: 0 0 10px 10px;
+        width: auto;
 
-&:first-child {
-margin-left: 0;
-}
-}
+        &:first-child {
+            margin-left: 0;
+        }
+    }
 }
 ```
 
@@ -610,133 +568,133 @@ If you have used any of the `.ffe-shadow-buttons-whatever()` mixins they are now
 
 #### "Gotchas"
 
-* `ffe-tab-button` is in `ffe-tabs`, not `ffe-buttons`
+-   `ffe-tab-button` is in `ffe-tabs`, not `ffe-buttons`
 
 ## 7.0.1
 
-* Minor fix: make button texts of loading buttons unselectable, the text is only of interest for
-screen readers and ought to remain invisible under all circumstances.
+-   Minor fix: make button texts of loading buttons unselectable, the text is only of interest for
+    screen readers and ought to remain invisible under all circumstances.
 
 # 7.0.0
 
-* Breaking: removed `--inline` support from `.ffe-form-label`. It was just setting max-width to 100% which is not the same as inlining. Removed `max-width: 85%` from `ffe-form-label`. It's layout and doesn't belong in the component. It now defaults to browser default which should be `none`. If you were using `ffe-form-label ffe-form-label--inline` you can just use `ffe-form-label`. If you were relying on the max-width being 85% then action is required.
-* Breaking: removed support for deprecated `ffe-check-box` in favor of the arguably less aptly named `ffe-checkbox`. NOTE: Filename is also changed.
-* Breaking: removed support for deprecated `ffe-select-box` in favor of the arguably less aptly named `ffe-dropdown`.
-* Added CONTRIBUTE.md to clarify release procedures.
+-   Breaking: removed `--inline` support from `.ffe-form-label`. It was just setting max-width to 100% which is not the same as inlining. Removed `max-width: 85%` from `ffe-form-label`. It's layout and doesn't belong in the component. It now defaults to browser default which should be `none`. If you were using `ffe-form-label ffe-form-label--inline` you can just use `ffe-form-label`. If you were relying on the max-width being 85% then action is required.
+-   Breaking: removed support for deprecated `ffe-check-box` in favor of the arguably less aptly named `ffe-checkbox`. NOTE: Filename is also changed.
+-   Breaking: removed support for deprecated `ffe-select-box` in favor of the arguably less aptly named `ffe-dropdown`.
+-   Added CONTRIBUTE.md to clarify release procedures.
 
 ## 6.3.2
 
-* Change background position of dropdown arrows from fluid to static
-* Rollback breaking change from v.6.3.1 - `--inline` support has been restored to `.ffe-form-label`
+-   Change background position of dropdown arrows from fluid to static
+-   Rollback breaking change from v.6.3.1 - `--inline` support has been restored to `.ffe-form-label`
 
 ## 6.3.1
 
-* Add isLoading style for ffe-dropdown-react
-* Focus state styling fix for select element in IE
-* Focus state styling fix for ghost action button
+-   Add isLoading style for ffe-dropdown-react
+-   Focus state styling fix for select element in IE
+-   Focus state styling fix for ghost action button
 
 # 6.3.0
 
-* Add description list component
-* Patch --no-space on ffe-content-container to also work on larger screens
-* Minor form examples fix: prefixed icon-info-error with ffe-
+-   Add description list component
+-   Patch --no-space on ffe-content-container to also work on larger screens
+-   Minor form examples fix: prefixed icon-info-error with ffe-
 
 ## 6.0.1
 
-* Minor radio switch fix: adjusted vertical position of the label
-* Minor form examples fix: prefixed info-message and info-message--error with ffe-
-* Added display: inline-block to ffe-primary-button\_\_label-text fix a bug in Safari. Label disappears if changing states from loading to normal.
+-   Minor radio switch fix: adjusted vertical position of the label
+-   Minor form examples fix: prefixed info-message and info-message--error with ffe-
+-   Added display: inline-block to ffe-primary-button\_\_label-text fix a bug in Safari. Label disappears if changing states from loading to normal.
 
 # 6.0.0
 
-* Several changes to sizes and line-heights of the typography. Also added ffe-sub-lead-paragraph.
+-   Several changes to sizes and line-heights of the typography. Also added ffe-sub-lead-paragraph.
 
 # 5.6.0
 
-* Adding 20% opaque green.
-* Adding 20% opaque orange.
-* Adding 20% opaque light royal blue.
-* Minor fixes to tertiary-button appearance.
+-   Adding 20% opaque green.
+-   Adding 20% opaque orange.
+-   Adding 20% opaque light royal blue.
+-   Minor fixes to tertiary-button appearance.
 
 ## 5.5.3
 
-* Removing general positioning of spinner to fix layout bug when spinner is used on secondary buttons.
-Bug happens because secondary-button reruns ffe-sb1-spinner-mixin after position is set in primary-button which it extends.
+-   Removing general positioning of spinner to fix layout bug when spinner is used on secondary buttons.
+    Bug happens because secondary-button reruns ffe-sb1-spinner-mixin after position is set in primary-button which it extends.
 
 ## 5.5.2
 
-* Fixed bug that vertically misalignes icon on info-messages. [Source of solution](http://stackoverflow.com/questions/11726442/font-rendering-line-height-issue-on-mac-pc-outside-of-element)
+-   Fixed bug that vertically misalignes icon on info-messages. [Source of solution](http://stackoverflow.com/questions/11726442/font-rendering-line-height-issue-on-mac-pc-outside-of-element)
 
 ## 5.5.1
 
-* Secondary button: Modified colors for the loading state
+-   Secondary button: Modified colors for the loading state
 
 # 5.5.0
 
-* Layout: Support `--bg-sand` and `--bg-grey` modifiers on `ffe-content-container`
+-   Layout: Support `--bg-sand` and `--bg-grey` modifiers on `ffe-content-container`
 
 # 5.4.0
 
-* ffe-dropdown replaces ffe-select-box, while ffe-select-box is kept (but deprecated) until the next major release
+-   ffe-dropdown replaces ffe-select-box, while ffe-select-box is kept (but deprecated) until the next major release
 
 ## 5.3.1
 
-* Responsive table: Fix left-alignment of table headers in Internet Explorer
+-   Responsive table: Fix left-alignment of table headers in Internet Explorer
 
 # 5.3.0
 
-* Implemented Tertiary button
-* Updated element mapping to include fieldsets. Fixes default styling set by normalize.
-* Introduce less variable `ffe-expand-button-height`
+-   Implemented Tertiary button
+-   Updated element mapping to include fieldsets. Fixes default styling set by normalize.
+-   Introduce less variable `ffe-expand-button-height`
 
 # 5.2.0
 
-* Bugfix select box text foreground color
-* New component: expand button (for controlling collapsable containers)
+-   Bugfix select box text foreground color
+-   New component: expand button (for controlling collapsable containers)
 
 # 5.1.0
 
-* Implemented ghost- and tab-button
+-   Implemented ghost- and tab-button
 
 ## 4.2.1
 
-* New build
+-   New build
 
 # 4.2.0 (16.03.2016)
 
-* Inlined svg-icons in less to avoid potential include-issues
+-   Inlined svg-icons in less to avoid potential include-issues
 
 # 4.1.0
 
-* Introduce new gateway less-file: ffe-no-reset.less
-* Add property for static resources to package.json. Fascilitates tooling that copies static resources to output folder
+-   Introduce new gateway less-file: ffe-no-reset.less
+-   Add property for static resources to package.json. Fascilitates tooling that copies static resources to output folder
 
 ## 4.0.1
 
-* Fix: `ffe-` prefix for `@breakpoint-sm` was missing for `.primary-button` making buttons have width 100% on larger screens
+-   Fix: `ffe-` prefix for `@breakpoint-sm` was missing for `.primary-button` making buttons have width 100% on larger screens
 
 # 4.0.0 (08.03.2016)
 
-* Element styling is now opt-in rather than default
+-   Element styling is now opt-in rather than default
 
 # 3.0.0 (07.03.2016)
 
-* All css classes now prefixed with `ffe-`
-* All less color variables now prefixed with `ffe-`
+-   All css classes now prefixed with `ffe-`
+-   All less color variables now prefixed with `ffe-`
 
 ## 2.1.1 (04.02.2016)
 
-* Fix: 0 vertikal margin for content-container--no-space regardless of screen size
-* Examples: it's better to use https:// URL than protocol relative
-* Styling changes for check-box
-* Styling changes for radio-button
-* Make sure --no-margin variants of headers are always valid
+-   Fix: 0 vertikal margin for content-container--no-space regardless of screen size
+-   Examples: it's better to use https:// URL than protocol relative
+-   Styling changes for check-box
+-   Styling changes for radio-button
+-   Make sure --no-margin variants of headers are always valid
 
 # 2.1.0 (04.01.2016)
 
-* FFE-3 Adding layout system
-* FFE-4 Using vendor fonts without hinting to avoid IE-issues and updated styleguide
+-   FFE-3 Adding layout system
+-   FFE-4 Using vendor fonts without hinting to avoid IE-issues and updated styleguide
 
 # 2.0.0 (26.11.2015)
 
-* Going from RSCSS to BEM
+-   Going from RSCSS to BEM

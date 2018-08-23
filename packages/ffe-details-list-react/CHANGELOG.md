@@ -3,122 +3,101 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.13"></a>
+
+## [2.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@2.0.12...@sb1/ffe-details-list-react@2.0.13) (2018-08-23)
+
+**Note:** Version bump only for package @sb1/ffe-details-list-react
+
 <a name="2.0.12"></a>
+
 ## [2.0.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@2.0.11...@sb1/ffe-details-list-react@2.0.12) (2018-08-09)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
 
 <a name="2.0.11"></a>
-## [2.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@2.0.10...@sb1/ffe-details-list-react@2.0.11) (2018-08-01)
 
+## [2.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@2.0.10...@sb1/ffe-details-list-react@2.0.11) (2018-08-01)
 
 ### Bug Fixes
 
-* **ffe-details-list-react:** Use correct grid padding ([f4745ff](https://github.com/SpareBank1/designsystem/commit/f4745ff)), closes [#356](https://github.com/SpareBank1/designsystem/issues/356)
-
-
-
+-   **ffe-details-list-react:** Use correct grid padding ([f4745ff](https://github.com/SpareBank1/designsystem/commit/f4745ff)), closes [#356](https://github.com/SpareBank1/designsystem/issues/356)
 
 <a name="2.0.10"></a>
+
 ## [2.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@2.0.9...@sb1/ffe-details-list-react@2.0.10) (2018-06-26)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
 
 <a name="2.0.9"></a>
+
 ## [2.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@2.0.8...@sb1/ffe-details-list-react@2.0.9) (2018-06-19)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
 
 <a name="2.0.8"></a>
+
 ## [2.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@2.0.7...@sb1/ffe-details-list-react@2.0.8) (2018-06-18)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
 
 <a name="2.0.7"></a>
+
 ## [2.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@2.0.6...@sb1/ffe-details-list-react@2.0.7) (2018-05-29)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
 
 <a name="2.0.6"></a>
+
 ## [2.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@2.0.5...@sb1/ffe-details-list-react@2.0.6) (2018-04-25)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
 
 <a name="2.0.5"></a>
+
 ## [2.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@2.0.4...@sb1/ffe-details-list-react@2.0.5) (2018-04-12)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
 
 <a name="2.0.4"></a>
+
 ## [2.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@2.0.3...@sb1/ffe-details-list-react@2.0.4) (2018-03-27)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
 
 <a name="2.0.3"></a>
+
 ## [2.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@2.0.2...@sb1/ffe-details-list-react@2.0.3) (2018-03-22)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
 
 <a name="2.0.2"></a>
+
 ## [2.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@2.0.0...@sb1/ffe-details-list-react@2.0.2) (2018-03-07)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
 
 <a name="2.0.1"></a>
+
 ## [2.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@2.0.0...@sb1/ffe-details-list-react@2.0.1) (2018-03-02)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
 
 <a name="2.0.0"></a>
-# 2.0.0 (2018-02-25)
 
+# 2.0.0 (2018-02-25)
 
 ### Bug Fixes
 
-* **ffe-details-list-react:** Visual adjustments ([c9ae584](https://github.com/SpareBank1/designsystem/commit/c9ae584))
-
+-   **ffe-details-list-react:** Visual adjustments ([c9ae584](https://github.com/SpareBank1/designsystem/commit/c9ae584))
 
 ### Chores
 
-* add [@sb1](https://github.com/sb1)/ scope to all packages ([37efbb4](https://github.com/SpareBank1/designsystem/commit/37efbb4))
-
+-   add [@sb1](https://github.com/sb1)/ scope to all packages ([37efbb4](https://github.com/SpareBank1/designsystem/commit/37efbb4))
 
 ### BREAKING CHANGES
 
-* All packages have been renamed to add the @sb1 scope.
+-   All packages have been renamed to add the @sb1 scope.
 
 See links [1] and [2] to read more about package scopes.
 
@@ -191,57 +170,41 @@ JavaScript `require`:
 [2]: https://docs.npmjs.com/getting-started/scoped-packages
 [3]: https://github.com/sparebank1/designsystem/tags
 
-
-
-
 <a name="1.0.6"></a>
+
 ## [1.0.6](https://github.com/SpareBank1/designsystem/compare/ffe-details-list-react@1.0.5...ffe-details-list-react@1.0.6) (2018-02-23)
-
-
-
 
 **Note:** Version bump only for package ffe-details-list-react
 
 <a name="1.0.5"></a>
+
 ## [1.0.5](https://github.com/SpareBank1/designsystem/compare/ffe-details-list-react@1.0.4...ffe-details-list-react@1.0.5) (2018-02-22)
-
-
-
 
 **Note:** Version bump only for package ffe-details-list-react
 
 <a name="1.0.4"></a>
-## [1.0.4](https://github.com/SpareBank1/designsystem/compare/ffe-details-list-react@1.0.3...ffe-details-list-react@1.0.4) (2018-02-21)
 
+## [1.0.4](https://github.com/SpareBank1/designsystem/compare/ffe-details-list-react@1.0.3...ffe-details-list-react@1.0.4) (2018-02-21)
 
 ### Bug Fixes
 
-* **ffe-details-list-react:** Visual adjustments
-
-
-
+-   **ffe-details-list-react:** Visual adjustments
 
 <a name="1.0.3"></a>
+
 ## [1.0.3](https://github.com/SpareBank1/designsystem/compare/ffe-details-list-react@1.0.2...ffe-details-list-react@1.0.3) (2018-02-20)
-
-
-
 
 **Note:** Version bump only for package ffe-details-list-react
 
 <a name="1.0.2"></a>
+
 ## [1.0.2](https://github.com/SpareBank1/designsystem/compare/ffe-details-list-react@1.0.1...ffe-details-list-react@1.0.2) (2018-02-15)
-
-
-
 
 **Note:** Version bump only for package ffe-details-list-react
 
 <a name="1.0.1"></a>
+
 ## 1.0.1 (2018-02-15)
-
-
-
 
 **Note:** Version bump only for package ffe-details-list-react
 
@@ -250,4 +213,4 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # 1.0.0
 
-* Initial release
+-   Initial release

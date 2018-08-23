@@ -3,155 +3,125 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.16"></a>
+
+## [3.0.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@3.0.15...@sb1/ffe-system-message@3.0.16) (2018-08-23)
+
+**Note:** Version bump only for package @sb1/ffe-system-message
+
 <a name="3.0.15"></a>
+
 ## [3.0.15](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@3.0.14...@sb1/ffe-system-message@3.0.15) (2018-08-09)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-system-message
 
 <a name="3.0.14"></a>
+
 ## [3.0.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@3.0.13...@sb1/ffe-system-message@3.0.14) (2018-07-23)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-system-message
 
 <a name="3.0.13"></a>
-## [3.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@3.0.12...@sb1/ffe-system-message@3.0.13) (2018-06-20)
 
+## [3.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@3.0.12...@sb1/ffe-system-message@3.0.13) (2018-06-20)
 
 ### Bug Fixes
 
-* **ffe-system-message:** added peerDependency to ffe-core@^13.0.0 ([97f07ae](https://github.com/SpareBank1/designsystem/commit/97f07ae))
-
-
-
+-   **ffe-system-message:** added peerDependency to ffe-core@^13.0.0 ([97f07ae](https://github.com/SpareBank1/designsystem/commit/97f07ae))
 
 <a name="3.0.12"></a>
+
 ## [3.0.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@3.0.11...@sb1/ffe-system-message@3.0.12) (2018-06-18)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-system-message
 
 <a name="3.0.11"></a>
+
 ## [3.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@3.0.10...@sb1/ffe-system-message@3.0.11) (2018-06-04)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-system-message
 
 <a name="3.0.10"></a>
+
 ## [3.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@3.0.9...@sb1/ffe-system-message@3.0.10) (2018-05-29)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-system-message
 
 <a name="3.0.9"></a>
+
 ## [3.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@3.0.8...@sb1/ffe-system-message@3.0.9) (2018-05-22)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-system-message
 
 <a name="3.0.8"></a>
+
 ## [3.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@3.0.7...@sb1/ffe-system-message@3.0.8) (2018-05-08)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-system-message
 
 <a name="3.0.7"></a>
+
 ## [3.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@3.0.6...@sb1/ffe-system-message@3.0.7) (2018-05-04)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-system-message
 
 <a name="3.0.6"></a>
+
 ## [3.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@3.0.5...@sb1/ffe-system-message@3.0.6) (2018-05-03)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-system-message
 
 <a name="3.0.5"></a>
+
 ## [3.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@3.0.4...@sb1/ffe-system-message@3.0.5) (2018-04-11)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-system-message
 
 <a name="3.0.4"></a>
+
 ## [3.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@3.0.3...@sb1/ffe-system-message@3.0.4) (2018-04-10)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-system-message
 
 <a name="3.0.3"></a>
+
 ## [3.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@3.0.2...@sb1/ffe-system-message@3.0.3) (2018-04-05)
 
-
 ### Bug Fixes
 
-* **ffe-system-message:** Apply its own layout ([92beb7f](https://github.com/SpareBank1/designsystem/commit/92beb7f))
-
-
-
+-   **ffe-system-message:** Apply its own layout ([92beb7f](https://github.com/SpareBank1/designsystem/commit/92beb7f))
 
 <a name="3.0.2"></a>
+
 ## [3.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@3.0.0...@sb1/ffe-system-message@3.0.2) (2018-03-07)
 
-
 ### Bug Fixes
 
-* Correct peerDependencies after breaking change ([aab59ce](https://github.com/SpareBank1/designsystem/commit/aab59ce))
-
-
-
+-   Correct peerDependencies after breaking change ([aab59ce](https://github.com/SpareBank1/designsystem/commit/aab59ce))
 
 <a name="3.0.1"></a>
+
 ## [3.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@3.0.0...@sb1/ffe-system-message@3.0.1) (2018-03-02)
 
-
 ### Bug Fixes
 
-* Correct peerDependencies after breaking change ([4318363](https://github.com/SpareBank1/designsystem/commit/4318363))
-
-
-
+-   Correct peerDependencies after breaking change ([4318363](https://github.com/SpareBank1/designsystem/commit/4318363))
 
 <a name="3.0.0"></a>
-# 3.0.0 (2018-02-25)
 
+# 3.0.0 (2018-02-25)
 
 ### Bug Fixes
 
-* remove all references to internal system ([ff22340](https://github.com/SpareBank1/designsystem/commit/ff22340))
-
+-   remove all references to internal system ([ff22340](https://github.com/SpareBank1/designsystem/commit/ff22340))
 
 ### Chores
 
-* add [@sb1](https://github.com/sb1)/ scope to all packages ([37efbb4](https://github.com/SpareBank1/designsystem/commit/37efbb4))
-
+-   add [@sb1](https://github.com/sb1)/ scope to all packages ([37efbb4](https://github.com/SpareBank1/designsystem/commit/37efbb4))
 
 ### BREAKING CHANGES
 
-* All packages have been renamed to add the @sb1 scope.
+-   All packages have been renamed to add the @sb1 scope.
 
 See links [1] and [2] to read more about package scopes.
 
@@ -224,61 +194,48 @@ JavaScript `require`:
 [2]: https://docs.npmjs.com/getting-started/scoped-packages
 [3]: https://github.com/sparebank1/designsystem/tags
 
-
-
-
 <a name="2.0.8"></a>
+
 ## [2.0.8](https://github.com/SpareBank1/designsystem/compare/ffe-system-message@2.0.7...ffe-system-message@2.0.8) (2018-02-23)
-
-
-
 
 **Note:** Version bump only for package ffe-system-message
 
 <a name="2.0.7"></a>
+
 ## [2.0.7](https://github.com/SpareBank1/designsystem/compare/ffe-system-message@2.0.6...ffe-system-message@2.0.7) (2018-02-22)
-
-
-
 
 **Note:** Version bump only for package ffe-system-message
 
 <a name="2.0.6"></a>
+
 ## [2.0.6](https://github.com/SpareBank1/designsystem/compare/ffe-system-message@2.0.5...ffe-system-message@2.0.6) (2018-02-20)
-
-
-
 
 **Note:** Version bump only for package ffe-system-message
 
 <a name="2.0.5"></a>
+
 ## [2.0.5](https://github.com/SpareBank1/designsystem/compare/ffe-system-message@2.0.4...ffe-system-message@2.0.5) (2018-02-15)
-
-
-
 
 **Note:** Version bump only for package ffe-system-message
 
 <a name="2.0.4"></a>
+
 ## [2.0.4](https://github.com/SpareBank1/designsystem/compare/ffe-system-message@2.0.3...ffe-system-message@2.0.4) (2018-02-01)
-
-
-
 
 **Note:** Version bump only for package ffe-system-message
 
 <a name="2.0.3"></a>
+
 ## 2.0.3 (2018-01-29)
-
-
-
 
 **Note:** Version bump only for package ffe-system-message
 
 ## 2.0.2
-* Support both versions 9 and 10 of `ffe-core`
+
+-   Support both versions 9 and 10 of `ffe-core`
 
 ## 2.0.1
+
 Replaced hardcoded transition properties with variables from ffe-core
 
 # 2.0.0
@@ -287,22 +244,27 @@ Replaced hardcoded transition properties with variables from ffe-core
 
 Bumped peer dependency version of ffe-core. No external API change, but this version requires a new major of `ffe-core`
 
-* Renamed color names to stay in sync with refactoring in ffe-core@9.x
-* Updated visual test baselines according to color changes in ffe-core
+-   Renamed color names to stay in sync with refactoring in ffe-core@9.x
+-   Updated visual test baselines according to color changes in ffe-core
 
 To migrate, update your app to ffe-core version 9.x
 
 # 1.0.0
+
 Bumped dependency on `ffe-core` to `^8.1.0`
 
 ## 0.1.1
+
 Tidligere versjon var laget med utgangspunkt i feil designskisser
 
 ## 0.1.0
+
 La til --success og --error modifiers
 
 ## 0.0.2
+
 Bugfix, håndterer bedre content som inneholder lite tekst
 
 ## 0.0.1
+
 Første versjon

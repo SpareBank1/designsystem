@@ -3,163 +3,131 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.17"></a>
+
+## [3.0.17](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@3.0.16...@sb1/ffe-context-message@3.0.17) (2018-08-23)
+
+**Note:** Version bump only for package @sb1/ffe-context-message
+
 <a name="3.0.16"></a>
+
 ## [3.0.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@3.0.15...@sb1/ffe-context-message@3.0.16) (2018-08-09)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-context-message
 
 <a name="3.0.15"></a>
+
 ## [3.0.15](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@3.0.14...@sb1/ffe-context-message@3.0.15) (2018-07-23)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-context-message
 
 <a name="3.0.14"></a>
-## [3.0.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@3.0.13...@sb1/ffe-context-message@3.0.14) (2018-06-20)
 
+## [3.0.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@3.0.13...@sb1/ffe-context-message@3.0.14) (2018-06-20)
 
 ### Bug Fixes
 
-* **ffe-context-message:** added peerDependency to ffe-core@^13.0.0 ([1f00885](https://github.com/SpareBank1/designsystem/commit/1f00885))
-
-
-
+-   **ffe-context-message:** added peerDependency to ffe-core@^13.0.0 ([1f00885](https://github.com/SpareBank1/designsystem/commit/1f00885))
 
 <a name="3.0.13"></a>
+
 ## [3.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@3.0.12...@sb1/ffe-context-message@3.0.13) (2018-06-18)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-context-message
 
 <a name="3.0.12"></a>
+
 ## [3.0.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@3.0.11...@sb1/ffe-context-message@3.0.12) (2018-06-04)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-context-message
 
 <a name="3.0.11"></a>
+
 ## [3.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@3.0.10...@sb1/ffe-context-message@3.0.11) (2018-05-29)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-context-message
 
 <a name="3.0.10"></a>
+
 ## [3.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@3.0.9...@sb1/ffe-context-message@3.0.10) (2018-05-22)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-context-message
 
 <a name="3.0.9"></a>
+
 ## [3.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@3.0.8...@sb1/ffe-context-message@3.0.9) (2018-05-08)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-context-message
 
 <a name="3.0.8"></a>
+
 ## [3.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@3.0.7...@sb1/ffe-context-message@3.0.8) (2018-05-04)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-context-message
 
 <a name="3.0.7"></a>
+
 ## [3.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@3.0.6...@sb1/ffe-context-message@3.0.7) (2018-05-03)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-context-message
 
 <a name="3.0.6"></a>
+
 ## [3.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@3.0.5...@sb1/ffe-context-message@3.0.6) (2018-04-11)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-context-message
 
 <a name="3.0.5"></a>
+
 ## [3.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@3.0.4...@sb1/ffe-context-message@3.0.5) (2018-04-10)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-context-message
 
 <a name="3.0.4"></a>
+
 ## [3.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@3.0.3...@sb1/ffe-context-message@3.0.4) (2018-03-27)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-context-message
 
 <a name="3.0.3"></a>
+
 ## [3.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@3.0.2...@sb1/ffe-context-message@3.0.3) (2018-03-22)
 
-
 ### Bug Fixes
 
-* **ffe-context-message:** Fix icons with wrong colors and dimensions ([aad18c6](https://github.com/SpareBank1/designsystem/commit/aad18c6))
-
-
-
+-   **ffe-context-message:** Fix icons with wrong colors and dimensions ([aad18c6](https://github.com/SpareBank1/designsystem/commit/aad18c6))
 
 <a name="3.0.2"></a>
+
 ## [3.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@3.0.0...@sb1/ffe-context-message@3.0.2) (2018-03-07)
 
-
 ### Bug Fixes
 
-* Correct peerDependencies after breaking change ([aab59ce](https://github.com/SpareBank1/designsystem/commit/aab59ce))
-
-
-
+-   Correct peerDependencies after breaking change ([aab59ce](https://github.com/SpareBank1/designsystem/commit/aab59ce))
 
 <a name="3.0.1"></a>
+
 ## [3.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@3.0.0...@sb1/ffe-context-message@3.0.1) (2018-03-02)
 
-
 ### Bug Fixes
 
-* Correct peerDependencies after breaking change ([4318363](https://github.com/SpareBank1/designsystem/commit/4318363))
-
-
-
+-   Correct peerDependencies after breaking change ([4318363](https://github.com/SpareBank1/designsystem/commit/4318363))
 
 <a name="3.0.0"></a>
-# 3.0.0 (2018-02-25)
 
+# 3.0.0 (2018-02-25)
 
 ### Bug Fixes
 
-* remove all references to internal system ([ff22340](https://github.com/SpareBank1/designsystem/commit/ff22340))
-
+-   remove all references to internal system ([ff22340](https://github.com/SpareBank1/designsystem/commit/ff22340))
 
 ### Chores
 
-* add [@sb1](https://github.com/sb1)/ scope to all packages ([37efbb4](https://github.com/SpareBank1/designsystem/commit/37efbb4))
-
+-   add [@sb1](https://github.com/sb1)/ scope to all packages ([37efbb4](https://github.com/SpareBank1/designsystem/commit/37efbb4))
 
 ### BREAKING CHANGES
 
-* All packages have been renamed to add the @sb1 scope.
+-   All packages have been renamed to add the @sb1 scope.
 
 See links [1] and [2] to read more about package scopes.
 
@@ -232,62 +200,45 @@ JavaScript `require`:
 [2]: https://docs.npmjs.com/getting-started/scoped-packages
 [3]: https://github.com/sparebank1/designsystem/tags
 
-
-
-
 <a name="2.0.17"></a>
+
 ## [2.0.17](https://github.com/SpareBank1/designsystem/compare/ffe-context-message@2.0.16...ffe-context-message@2.0.17) (2018-02-23)
-
-
-
 
 **Note:** Version bump only for package ffe-context-message
 
 <a name="2.0.16"></a>
+
 ## [2.0.16](https://github.com/SpareBank1/designsystem/compare/ffe-context-message@2.0.15...ffe-context-message@2.0.16) (2018-02-22)
-
-
-
 
 **Note:** Version bump only for package ffe-context-message
 
 <a name="2.0.15"></a>
+
 ## [2.0.15](https://github.com/SpareBank1/designsystem/compare/ffe-context-message@2.0.14...ffe-context-message@2.0.15) (2018-02-20)
-
-
-
 
 **Note:** Version bump only for package ffe-context-message
 
 <a name="2.0.14"></a>
+
 ## [2.0.14](https://github.com/SpareBank1/designsystem/compare/ffe-context-message@2.0.13...ffe-context-message@2.0.14) (2018-02-15)
-
-
-
 
 **Note:** Version bump only for package ffe-context-message
 
 <a name="2.0.13"></a>
+
 ## [2.0.13](https://github.com/SpareBank1/designsystem/compare/ffe-context-message@2.0.12...ffe-context-message@2.0.13) (2018-02-01)
-
-
-
 
 **Note:** Version bump only for package ffe-context-message
 
 <a name="2.0.12"></a>
+
 ## [2.0.12](https://github.com/SpareBank1/designsystem/compare/ffe-context-message@2.0.11...ffe-context-message@2.0.12) (2018-01-19)
-
-
-
 
 **Note:** Version bump only for package ffe-context-message
 
 <a name="2.0.11"></a>
+
 ## [2.0.11](https://github.com/SpareBank1/designsystem/compare/ffe-context-message@2.0.10...ffe-context-message@2.0.11) (2018-01-19)
-
-
-
 
 **Note:** Version bump only for package ffe-context-message
 
@@ -323,23 +274,23 @@ JavaScript `require`:
 
 ## 2.0.5
 
-* Improve responsiveness by placing the icon on the top of the box for small screens.
+-   Improve responsiveness by placing the icon on the top of the box for small screens.
 
 ## 2.0.4
 
-* Set width explicitly to 100% otherwise the box won't take all its space if it's within a container with `display: flex;`
+-   Set width explicitly to 100% otherwise the box won't take all its space if it's within a container with `display: flex;`
 
 ## 2.0.3
 
-* Support both versions 9 and 10 of `ffe-core`
+-   Support both versions 9 and 10 of `ffe-core`
 
 ## 2.0.2
 
-* Replaced hardcoded transition properties with variables from ffe-core
+-   Replaced hardcoded transition properties with variables from ffe-core
 
 ## 2.0.1
 
-* Content is now centered vertically.
+-   Content is now centered vertically.
 
 # 2.0.0
 
@@ -347,7 +298,7 @@ JavaScript `require`:
 
 Bumped peer dependency version of ffe-core. No external API change, but this version requires a new major of `ffe-core`
 
-* Renamed color names to stay in sync with refactoring in ffe-core@9.x
+-   Renamed color names to stay in sync with refactoring in ffe-core@9.x
 
 To migrate, update your app to ffe-core version 9.x
 
@@ -355,24 +306,24 @@ To migrate, update your app to ffe-core version 9.x
 
 ### Features
 
-* FFE-177: Add support for the `--compact` modifier, for creating smaller context messages
+-   FFE-177: Add support for the `--compact` modifier, for creating smaller context messages
 
 # 1.2.0
 
-* Add support for --error modifier with same bg color as `ffe-message-box--error`
+-   Add support for --error modifier with same bg color as `ffe-message-box--error`
 
 # 1.1.0
 
-* Add support for --success modifier with same bg color as `ffe-message-box--success`
+-   Add support for --success modifier with same bg color as `ffe-message-box--success`
 
 ## 1.0.4
 
-* Add rounded corners
+-   Add rounded corners
 
 ## 1.0.3
 
-* Reduce margin between header and body text.
-* Added padding to svg-icon.
+-   Reduce margin between header and body text.
+-   Added padding to svg-icon.
 
 # 1.0.0
 
