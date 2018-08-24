@@ -40,6 +40,10 @@
         white-space: nowrap;
         transition: all @ffe-transition-duration @ffe-ease;
 
+        &:visited {
+            color: @ffe-grey-charcoal;
+        }
+
         @media screen and (min-width: @breakpoint-lg) {
             padding: 0 15px;
         }
@@ -59,7 +63,8 @@
                 left: 15px;
                 right: 15px;
                 transform: translateY(-10px);
-                transition: transform @ffe-transition-duration @ffe-ease-in-out-back;
+                transition: transform @ffe-transition-duration
+                    @ffe-ease-in-out-back;
             }
 
             @media screen and (min-width: @breakpoint-xl) {
