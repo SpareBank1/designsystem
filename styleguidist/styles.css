@@ -5854,6 +5854,9 @@ input:not([type='radio']):not([type='checkbox']) {
   transition: all 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
   line-height: inherit;
 }
+.sb1ds-components-list__link:visited {
+  color: #676767;
+}
 .sb1ds-components-list__link:hover {
   color: #676767;
   background: #e6e6e6;
@@ -6008,6 +6011,9 @@ input:not([type='radio']):not([type='checkbox']) {
   -webkit-transition: all 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
   -o-transition: all 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
   transition: all 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+.sb1ds-top-menu__link:visited {
+  color: #676767;
 }
 @media screen and (min-width: 1024px) {
   .sb1ds-top-menu__link {
