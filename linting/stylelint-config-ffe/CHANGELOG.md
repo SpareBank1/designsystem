@@ -3,28 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-<a name="1.0.0"></a>
-# 1.0.0 (2018-02-25)
+<a name="1.0.1"></a>
 
+## [1.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/stylelint-config-ffe@1.0.0...@sb1/stylelint-config-ffe@1.0.1) (2018-08-29)
 
 ### Bug Fixes
 
-* **stylelint-config-ffe:** Ignore flex-flow shorthand ([0622fb7](https://github.com/SpareBank1/designsystem/commit/0622fb7))
+-   **stylelint-config-ffe:** Remove conflicting rule ([a081385](https://github.com/SpareBank1/designsystem/commit/a081385))
 
+<a name="1.0.0"></a>
+
+# 1.0.0 (2018-02-25)
+
+### Bug Fixes
+
+-   **stylelint-config-ffe:** Ignore flex-flow shorthand ([0622fb7](https://github.com/SpareBank1/designsystem/commit/0622fb7))
 
 ### Chores
 
-* add [@sb1](https://github.com/sb1)/ scope to all packages ([37efbb4](https://github.com/SpareBank1/designsystem/commit/37efbb4))
-
+-   add [@sb1](https://github.com/sb1)/ scope to all packages ([37efbb4](https://github.com/SpareBank1/designsystem/commit/37efbb4))
 
 ### Features
 
-* **stylelint-config-ffe:** Add contribute.md link to readme ([bbeafb4](https://github.com/SpareBank1/designsystem/commit/bbeafb4))
-
+-   **stylelint-config-ffe:** Add contribute.md link to readme ([bbeafb4](https://github.com/SpareBank1/designsystem/commit/bbeafb4))
 
 ### BREAKING CHANGES
 
-* All packages have been renamed to add the @sb1 scope.
+-   All packages have been renamed to add the @sb1 scope.
 
 See links [1] and [2] to read more about package scopes.
 
@@ -97,14 +102,9 @@ JavaScript `require`:
 [2]: https://docs.npmjs.com/getting-started/scoped-packages
 [3]: https://github.com/sparebank1/designsystem/tags
 
-
-
-
 <a name="0.4.4"></a>
+
 ## [0.4.4](https://github.com/SpareBank1/designsystem/compare/stylelint-config-ffe@0.4.3...stylelint-config-ffe@0.4.4) (2018-02-22)
-
-
-
 
 **Note:** Version bump only for package stylelint-config-ffe
 
@@ -126,7 +126,7 @@ JavaScript `require`:
 
 ### Bug Fixes
 
-* **stylelint-config-ffe:** Ignore flex-flow shorthand
+-   **stylelint-config-ffe:** Ignore flex-flow shorthand
 
 <a name="0.4.0"></a>
 
@@ -134,7 +134,7 @@ JavaScript `require`:
 
 ### Features
 
-* **stylelint-config-ffe:** Add contribute.md link to readme
+-   **stylelint-config-ffe:** Add contribute.md link to readme
 
 ## 0.3.0
 
