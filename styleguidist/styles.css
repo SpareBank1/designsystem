@@ -8333,6 +8333,9 @@ input:not([type='radio']):not([type='checkbox']) {
   padding: 8px 16px;
   word-break: keep-all;
 }
+body {
+  background-color: #FFF;
+}
 .sb1ds {
   font-family: 'MuseoSans-500', arial, sans-serif;
   line-height: 1.5;
@@ -8356,7 +8359,7 @@ input:not([type='radio']):not([type='checkbox']) {
 }
 @media screen and (min-width: 1024px) {
   .sb1ds-intro::after {
-    content: "";
+    content: '';
     display: block;
     height: 335px;
     position: absolute;
