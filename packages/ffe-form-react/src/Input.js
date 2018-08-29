@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import { bool, string } from 'prop-types';
 import classNames from 'classnames';
 
-const Input = ({ className, inline, textLike, ...rest }) => {
+const Input = forwardRef((props, ref) => {
+    const { className, inline, textLike, ...rest } = props;
     return (
         <input
             className={classNames(
@@ -12,9 +13,10 @@ const Input = ({ className, inline, textLike, ...rest }) => {
                 className,
             )}
             {...rest}
+            ref={ref}
         />
     );
-};
+});
 
 Input.propTypes = {
     className: string,

@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import { string } from 'prop-types';
 import classNames from 'classnames';
 
-const TextArea = ({ className, ...rest }) => {
+const TextArea = forwardRef((props, ref) => {
+    const { className, ...rest } = props;
     return (
-        <textarea className={classNames('ffe-textarea', className)} {...rest} />
+        <textarea
+            className={classNames('ffe-textarea', className)}
+            {...rest}
+            ref={ref}
+        />
     );
-};
+});
 
 TextArea.propTypes = {
     className: string,
