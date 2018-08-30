@@ -1,6 +1,8 @@
 ```js
 <fieldset className="ffe-fieldset">
-    <legend className="ffe-form-label">Hvilke aviser leser du?</legend>
+    <legend className="ffe-form-label ffe-form-label--block">
+        Hvilke aviser leser du?
+    </legend>
     <CheckBox name="newspapers" value="sport">
         VG
     </CheckBox>
@@ -33,12 +35,12 @@ Kan komme under hverandre også, ved å sende inn `inline={false}`:
 Dersom du skal ha en skjult label, brukes `hiddenLabel={true}` og label sendes inn via en `aria-label` prop og ikke som en child:
 
 ```js
-    <CheckBox
-        defaultChecked={true}
-        aria-label="Jeg har en ingen label"
-        hiddenLabel={true}
-        inline={false}
-    />
+<CheckBox
+    defaultChecked={true}
+    aria-label="Jeg har en ingen label"
+    hiddenLabel={true}
+    inline={false}
+/>
 ```
 
 Du kan merke at et felt er ugyldig ved å sette `aria-invalid="true"`:
@@ -66,7 +68,7 @@ du kan spre på labelen.
 
 ```js
 <CheckBox>
-    { labelProps => <label { ...labelProps }>Her benyttes render props</label> }
+    {labelProps => <label {...labelProps}>Her benyttes render props</label>}
 </CheckBox>
 ```
 
