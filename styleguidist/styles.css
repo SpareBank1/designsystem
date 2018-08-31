@@ -4935,7 +4935,7 @@ input:not([type='radio']):not([type='checkbox']) {
   text-align: left;
 }
 .ffe-message-box__icon {
-  background-color: #FFF;
+  background-color: #fff;
   border-radius: 50%;
   display: inline-block;
   fill: #002776;
@@ -5133,9 +5133,9 @@ input:not([type='radio']):not([type='checkbox']) {
   fill: #002776;
 }
 .ffe-system-message-wrapper--news {
-  background-color: #4A5155;
+  background-color: #4a5155;
   color: #FFF;
-  fill: #4A5155;
+  fill: #4a5155;
 }
 .ffe-system-message-wrapper--success {
   background-color: #E1F4E3;
