@@ -4,6 +4,8 @@ const logger = require('morgan');
 const webpack = require('webpack');
 const webpackDevMiddleware = require('webpack-dev-middleware');
 const webpackHotMiddleware = require('webpack-hot-middleware');
+const LessPluginCleanCSS = require('less-plugin-clean-css');
+const LessPluginAutoPrefix = require('less-plugin-autoprefix');
 
 const apiRouter = require('./apiRoutes');
 
@@ -48,7 +50,12 @@ const webpackCompiler = webpack({
                     {
                         loader: 'less-loader',
                         options: {
-                            presets: ['@babel/preset-env'],
+                            plugins: [
+                                new LessPluginCleanCSS(),
+                                new LessPluginAutoPrefix({
+                                    browsers: 'last 3 versions, IE>=9',
+                                }),
+                            ],
                         },
                     },
                 ],
