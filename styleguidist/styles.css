@@ -2749,6 +2749,7 @@ html {
   transition: width 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
   text-align: left;
   padding-left: 35px;
+  -webkit-tap-highlight-color: rgba(68, 192, 255, 0.15);
 }
 .ffe-checkbox--no-margin {
   margin-top: 0;
@@ -2852,6 +2853,7 @@ html {
   text-align: left;
   padding-left: 30px;
   padding-top: 1px;
+  -webkit-tap-highlight-color: rgba(68, 192, 255, 0.15);
 }
 .ffe-radio-button--inline {
   display: inline-block;
