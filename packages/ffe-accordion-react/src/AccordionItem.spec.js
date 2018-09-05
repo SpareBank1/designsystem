@@ -16,32 +16,34 @@ describe('<AccordionItem />', () => {
             getWrapper({ expandedContent: 'Expanded content', ...props });
         it('is hidden by default', () => {
             const wrapper = getWrapperWithExpandedContent();
-            expect(wrapper.find('Collapse').prop('isOpened')).toBe(false);
+            expect(wrapper.find('Collapse').prop('isOpen')).toBe(false);
         });
         it('can be shown to begin with', () => {
-            const wrapper = getWrapperWithExpandedContent({ defaultOpen: true });
+            const wrapper = getWrapperWithExpandedContent({
+                defaultOpen: true,
+            });
 
-            expect(wrapper.find('Collapse').prop('isOpened')).toBe(true);
+            expect(wrapper.find('Collapse').prop('isOpen')).toBe(true);
             wrapper
                 .find('.ffe-accordion-item__toggler')
                 .simulate('click', { target: { nodeName: 'div' } });
 
-            expect(wrapper.find('Collapse').prop('isOpened')).toBe(false);
+            expect(wrapper.find('Collapse').prop('isOpen')).toBe(false);
         });
         it('can be controlled from the outside', () => {
             const wrapper = getWrapperWithExpandedContent({ open: false });
-            expect(wrapper.find('Collapse').prop('isOpened')).toBe(false);
+            expect(wrapper.find('Collapse').prop('isOpen')).toBe(false);
 
             wrapper.setProps({ open: true });
 
-            expect(wrapper.find('Collapse').prop('isOpened')).toBe(true);
-        })
+            expect(wrapper.find('Collapse').prop('isOpen')).toBe(true);
+        });
         it('it toggled by clicking', () => {
             const wrapper = getWrapperWithExpandedContent();
             wrapper
                 .find('.ffe-accordion-item__toggler')
                 .simulate('click', { target: { nodeName: 'div' } });
-            expect(wrapper.find('Collapse').prop('isOpened')).toBe(true);
+            expect(wrapper.find('Collapse').prop('isOpen')).toBe(true);
         });
         it('is not toggled when clicked item is included in ignoredNodeNames prop', () => {
             const wrapper = getWrapperWithExpandedContent({
@@ -50,7 +52,7 @@ describe('<AccordionItem />', () => {
             wrapper
                 .find('.ffe-accordion-item__toggler')
                 .simulate('click', { target: { nodeName: 'button' } });
-            expect(wrapper.find('Collapse').prop('isOpened')).toBe(false);
+            expect(wrapper.find('Collapse').prop('isOpen')).toBe(false);
         });
         it('is toggled by enter or space', () => {
             const wrapper = getWrapperWithExpandedContent();
@@ -59,13 +61,13 @@ describe('<AccordionItem />', () => {
                 target: { nodeName: 'div' },
                 keyCode: 13,
             }); // enter
-            expect(wrapper.find('Collapse').prop('isOpened')).toBe(true);
+            expect(wrapper.find('Collapse').prop('isOpen')).toBe(true);
 
             wrapper.find('.ffe-accordion-item__toggler').simulate('keyup', {
                 target: { nodeName: 'div' },
                 keyCode: 32,
             }); // esc
-            expect(wrapper.find('Collapse').prop('isOpened')).toBe(false);
+            expect(wrapper.find('Collapse').prop('isOpen')).toBe(false);
         });
         it('is not toggled by other keys', () => {
             const wrapper = getWrapperWithExpandedContent();
@@ -73,7 +75,7 @@ describe('<AccordionItem />', () => {
                 target: { nodeName: 'div' },
                 keyCode: 14,
             }); // not enter
-            expect(wrapper.find('Collapse').prop('isOpened')).toBe(false);
+            expect(wrapper.find('Collapse').prop('isOpen')).toBe(false);
         });
         it('toggling onToggle prop', () => {
             const onToggleOpenSpy = jest.fn();
@@ -92,8 +94,8 @@ describe('<AccordionItem />', () => {
                 .find('.ffe-accordion-item__toggler')
                 .simulate('click', { target: { nodeName: 'div' } });
 
-                expect(onToggleOpenSpy).toHaveBeenCalledTimes(2);
-                expect(onToggleOpenSpy).toHaveBeenCalledWith(false);
+            expect(onToggleOpenSpy).toHaveBeenCalledTimes(2);
+            expect(onToggleOpenSpy).toHaveBeenCalledWith(false);
         });
     });
 });

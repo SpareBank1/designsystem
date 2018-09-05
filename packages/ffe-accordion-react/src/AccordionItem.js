@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { arrayOf, bool, func, node, number, string } from 'prop-types';
-import { Collapse } from 'react-collapse';
+import Collapse from 'react-css-collapse';
 import ChevronIkon from '@sb1/ffe-icons-react/lib/chevron-ikon';
 import classNames from 'classnames';
 
@@ -40,14 +40,7 @@ class AccordionItem extends Component {
     };
 
     render() {
-        const {
-            ariaLabel,
-            children,
-            hasNestedCollapse,
-            index,
-            title,
-            uuid,
-        } = this.props;
+        const { ariaLabel, children, index, title, uuid } = this.props;
 
         const open = this.getOpen();
 
@@ -76,7 +69,10 @@ class AccordionItem extends Component {
                         <ChevronIkon className="ffe-accordion-item__icon" />
                     </span>
                 </div>
-                <Collapse hasNestedCollapse={hasNestedCollapse} isOpened={open}>
+                <Collapse
+                    isOpen={open}
+                    className="ffe-accordion-item__content-container"
+                >
                     <div
                         className="ffe-accordion-item__content"
                         role="tabpanel"
@@ -97,8 +93,6 @@ AccordionItem.propTypes = {
     ariaLabel: string,
     /** The content shown when an accordion item is expanded */
     children: node,
-    /** Set to true if there will be nested collapsable elements inside the expandedContent prop */
-    hasNestedCollapse: bool,
     /** List of node names the toggle click handler will ignore */
     ignoredNodeNames: arrayOf(string),
     /** The index of the accordion item in the current accordion */
@@ -117,7 +111,6 @@ AccordionItem.propTypes = {
 
 AccordionItem.defaultProps = {
     defaultOpen: false,
-    hasNestedCollapse: false,
     ignoredNodeNames: [],
     onToggleOpen: f => f,
 };
