@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="11.1.24"></a>
+## [11.1.24](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@11.1.23...@sb1/ffe-header@11.1.24) (2018-09-06)
+
+
+### Bug Fixes
+
+* **ffe-header:** Increase z-index in order to overlap other positioned elements ([3410ce1](https://github.com/SpareBank1/designsystem/commit/3410ce1))
+
+
+
+
+
 <a name="11.1.23"></a>
 
 ## [11.1.23](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@11.1.22...@sb1/ffe-header@11.1.23) (2018-08-23)

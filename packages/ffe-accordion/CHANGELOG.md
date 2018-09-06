@@ -3,6 +3,38 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.0"></a>
+# [5.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@4.0.17...@sb1/ffe-accordion@5.0.0) (2018-09-06)
+
+
+### Features
+
+* **ffe-accordion:** Decrease use of modifiers ([9e5b575](https://github.com/SpareBank1/designsystem/commit/9e5b575))
+
+
+### BREAKING CHANGES
+
+* **ffe-accordion:** The modified class `ffe-accordion--blue` supersedes
+the modified class `ffe-accordion-item--blue` and all element level
+classes of `ffe-accordion-item` with the `--blue` modifier, i.e.
+`ffe-accordion-item__(toggler,icon,content)--blue` are no longer in use.
+
+The modified class `ffe-accordion-item--open` is still needed, but the
+modifier `--open` on element level classes in this block is not
+necessary any longer.
+
+Important: The collapse and expand animation of accordion items requires
+scripting, because a css transition to `height: auto` does not work. A
+script should measure the height of the child element
+`ffe-accordion-item__content` (i.e. using the DOM element's property
+`scrollHeight`) and set the height of the surrounding element with class
+name `ffe-accordion-item__content-container` by changing the inline
+style declaration accordingly (i.e. the property `style.height`).
+
+
+
+
+
 <a name="4.0.17"></a>
 
 ## [4.0.17](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@4.0.16...@sb1/ffe-accordion@4.0.17) (2018-08-31)

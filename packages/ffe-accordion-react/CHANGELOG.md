@@ -3,7 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-      <a name="6.0.7"></a>
+<a name="6.1.0"></a>
+# [6.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@6.0.7...@sb1/ffe-accordion-react@6.1.0) (2018-09-06)
+
+
+### Features
+
+* **ffe-accordion-react:** Use css transition ([8aae70c](https://github.com/SpareBank1/designsystem/commit/8aae70c))
+* **ffe-accordion-react:** Use new modifier class names ([8bf9c03](https://github.com/SpareBank1/designsystem/commit/8bf9c03))
+
+
+### BREAKING CHANGES
+
+* **ffe-accordion-react:** Replaces `react-collapse` with `react-css-collapse`,
+which is internally used for toggling the accordion items with help of
+css transitions. Further, this change drops support for property
+`hasNestedCollapse`, which is a flag used by `react-collapse`.
+
+See https://www.npmjs.com/package/react-css-collapse
+
+
+
+
+
+<a name="6.0.7"></a>
 ## [6.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@6.0.6...@sb1/ffe-accordion-react@6.0.7) (2018-08-09)
 
 
