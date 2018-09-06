@@ -958,11 +958,11 @@ html {
 .ffe-accordion-item:last-of-type {
   border-bottom: solid #CCC 1px;
 }
-.ffe-accordion-item--blue {
+.ffe-accordion--blue .ffe-accordion-item {
   border-top: 0;
   margin-bottom: 10px;
 }
-.ffe-accordion-item--blue:last-of-type {
+.ffe-accordion--blue .ffe-accordion-item:last-of-type {
   border-bottom: 0;
 }
 .ffe-accordion-item--open {
@@ -983,22 +983,36 @@ html {
   transition: transform 0.2s cubic-bezier(0.46, -0.265, 0.48, 1.38), fill 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
   transition: transform 0.2s cubic-bezier(0.46, -0.265, 0.48, 1.38), fill 0.2s cubic-bezier(0.25, 0.1, 0.25, 1), -webkit-transform 0.2s cubic-bezier(0.46, -0.265, 0.48, 1.38);
 }
-.ffe-accordion-item__icon--blue {
+.ffe-accordion--blue .ffe-accordion-item__icon {
   fill: #002776;
 }
-.ffe-accordion-item__icon--open {
+.ffe-accordion-item--open .ffe-accordion-item__icon {
   -webkit-transform: rotateZ(180deg);
       -ms-transform: rotate(180deg);
           transform: rotateZ(180deg);
   fill: #002776;
 }
-.ffe-accordion-item__icon--open.ffe-accordion-item__icon--blue {
+.ffe-accordion--blue .ffe-accordion-item--open .ffe-accordion-item__icon {
   fill: #FFF;
+}
+.ffe-accordion-item__content-container {
+  will-change: height;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  -webkit-transition: height 0.2s cubic-bezier(0.46, -0.265, 0.48, 1.38);
+  -o-transition: height 0.2s cubic-bezier(0.46, -0.265, 0.48, 1.38);
+  transition: height 0.2s cubic-bezier(0.46, -0.265, 0.48, 1.38);
+}
+.ffe-accordion-item--open .ffe-accordion-item__content-container {
+  height: auto;
+  overflow: visible;
+  visibility: visible;
 }
 .ffe-accordion-item__content {
   padding: 10px 25px;
 }
-.ffe-accordion-item__content--blue {
+.ffe-accordion--blue .ffe-accordion-item__content {
   padding: 10px 25px 0;
 }
 .ffe-accordion-item__title {
@@ -1030,24 +1044,24 @@ html {
 .ffe-accordion-item__toggler:focus .ffe-accordion-item__icon {
   fill: #002776;
 }
-.ffe-accordion-item__toggler:hover .ffe-accordion-item__icon--blue,
-.ffe-accordion-item__toggler:focus .ffe-accordion-item__icon--blue {
+.ffe-accordion--blue .ffe-accordion-item__toggler:hover .ffe-accordion-item__icon,
+.ffe-accordion--blue .ffe-accordion-item__toggler:focus .ffe-accordion-item__icon {
   fill: #FFF;
 }
-.ffe-accordion-item__toggler--open {
+.ffe-accordion-item--open .ffe-accordion-item__toggler {
   color: #002776;
 }
-.ffe-accordion-item__toggler--blue {
+.ffe-accordion--blue .ffe-accordion-item__toggler {
   color: #002776;
   background-color: #DFF1F9;
   border-radius: 3px;
 }
-.ffe-accordion-item__toggler--blue:hover,
-.ffe-accordion-item__toggler--blue:focus {
+.ffe-accordion--blue .ffe-accordion-item__toggler:hover,
+.ffe-accordion--blue .ffe-accordion-item__toggler:focus {
   color: white;
   background-color: #002776;
 }
-.ffe-accordion-item__toggler--open.ffe-accordion-item__toggler--blue {
+.ffe-accordion--blue .ffe-accordion-item--open .ffe-accordion-item__toggler {
   color: #FFF;
   background-color: #002776;
 }
@@ -4290,7 +4304,7 @@ input:not([type='radio']):not([type='checkbox']) {
 }
 .ffe-header__user-nav-list--visible,
 .ffe-header__site-nav-list--visible {
-  z-index: 1;
+  z-index: 100000;
 }
 .ffe-header__border {
   border-bottom: 1px solid #CCC;
