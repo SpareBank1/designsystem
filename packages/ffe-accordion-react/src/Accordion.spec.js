@@ -15,14 +15,6 @@ describe('<Accordion />', () => {
         const wrapper = getWrapper();
         expect(wrapper.is('ul')).toBe(true);
     });
-    it('provides type property to each child', () => {
-        const wrapper = getWrapper({ type: 'blue' });
-        expect(
-            wrapper
-                .find('AccordionItem')
-                .everyWhere(item => item.prop('type') === 'blue'),
-        ).toBe(true);
-    });
     it('provides the same uuid property to each child', () => {
         const wrapper = getWrapper();
         const children = wrapper.find('AccordionItem');

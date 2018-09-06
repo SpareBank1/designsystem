@@ -1,14 +1,8 @@
 import React, { Component } from 'react';
-import { arrayOf, bool, func, node, number, oneOf, string } from 'prop-types';
-import { Collapse } from 'react-collapse';
+import { arrayOf, bool, func, node, number, string } from 'prop-types';
+import Collapse from 'react-css-collapse';
 import ChevronIkon from '@sb1/ffe-icons-react/lib/chevron-ikon';
 import classNames from 'classnames';
-
-const createClasses = (baseClass, open, type) =>
-    classNames(baseClass, {
-        [`${baseClass}--open`]: open,
-        [`${baseClass}--blue`]: type === 'blue',
-    });
 
 class AccordionItem extends Component {
     state = {
@@ -20,7 +14,7 @@ class AccordionItem extends Component {
             return this.props.open;
         }
         return this.state.open;
-    }
+    };
 
     onClick = e => {
         if (
@@ -46,30 +40,23 @@ class AccordionItem extends Component {
     };
 
     render() {
-        const {
-            ariaLabel,
-            children,
-            hasNestedCollapse,
-            index,
-            type,
-            title,
-            uuid,
-        } = this.props;
+        const { ariaLabel, children, index, title, uuid } = this.props;
 
         const open = this.getOpen();
 
         return (
-            <li className={createClasses('ffe-accordion-item', open, type)}>
+            <li
+                className={classNames({
+                    'ffe-accordion-item': true,
+                    'ffe-accordion-item--open': open,
+                })}
+            >
                 <div
                     tabIndex={0}
                     aria-controls={`panel-${uuid}-${index}`}
                     aria-expanded={open}
                     aria-label={ariaLabel}
-                    className={createClasses(
-                        'ffe-accordion-item__toggler',
-                        open,
-                        type,
-                    )}
+                    className="ffe-accordion-item__toggler"
                     id={`tab-${uuid}-${index}`}
                     onClick={this.onClick}
                     onKeyUp={this.onClickEnterAndSpace}
@@ -79,25 +66,15 @@ class AccordionItem extends Component {
                         <span className="ffe-accordion-item__title">
                             {title}
                         </span>
-                        <ChevronIkon
-                            className={createClasses(
-                                'ffe-accordion-item__icon',
-                                open,
-                                type,
-                            )}
-                        />
+                        <ChevronIkon className="ffe-accordion-item__icon" />
                     </span>
                 </div>
                 <Collapse
-                    hasNestedCollapse={hasNestedCollapse}
-                    isOpened={open}
+                    isOpen={open}
+                    className="ffe-accordion-item__content-container"
                 >
                     <div
-                        className={createClasses(
-                            'ffe-accordion-item__content',
-                            open,
-                            type,
-                        )}
+                        className="ffe-accordion-item__content"
                         role="tabpanel"
                         id={`panel-${uuid}-${index}`}
                         aria-hidden={!open}
@@ -116,8 +93,6 @@ AccordionItem.propTypes = {
     ariaLabel: string,
     /** The content shown when an accordion item is expanded */
     children: node,
-    /** Set to true if there will be nested collapsable elements inside the expandedContent prop */
-    hasNestedCollapse: bool,
     /** List of node names the toggle click handler will ignore */
     ignoredNodeNames: arrayOf(string),
     /** The index of the accordion item in the current accordion */
@@ -130,19 +105,12 @@ AccordionItem.propTypes = {
     onToggleOpen: func,
     /** The title */
     title: node,
-    /**
-     * Decides the color and theming of the accordion item, provided by the wrapping <Accordion /> element .
-     * For internal use only
-     * @ignore
-     * */
-    type: oneOf(['blue']),
     /** A unique ID, usually provided by the wrapping <Accordion /> element */
     uuid: string,
 };
 
 AccordionItem.defaultProps = {
     defaultOpen: false,
-    hasNestedCollapse: false,
     ignoredNodeNames: [],
     onToggleOpen: f => f,
 };

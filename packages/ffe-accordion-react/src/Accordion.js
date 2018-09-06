@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { node, oneOf } from 'prop-types';
+import { node, bool } from 'prop-types';
 import uuid from 'uuid';
+import classNames from 'classnames';
 
 class Accordion extends Component {
     constructor() {
@@ -10,17 +11,20 @@ class Accordion extends Component {
     }
 
     render() {
-        const { children, type, ...rest } = this.props;
+        const { children, isBlue, ...rest } = this.props;
 
         return (
             <ul
                 {...rest}
                 aria-multiselectable="true"
-                className="ffe-accordion"
+                className={classNames({
+                    'ffe-accordion': true,
+                    'ffe-accordion--blue': isBlue,
+                })}
                 role="tablist"
             >
                 {React.Children.map(children, ele =>
-                    React.cloneElement(ele, { type, uuid: this.id }),
+                    React.cloneElement(ele, { uuid: this.id }),
                 )}
             </ul>
         );
@@ -31,10 +35,14 @@ Accordion.propTypes = {
     /** Accordion items */
     children: node.isRequired,
     /**
-     * Accordion theme - defaults to white . Used internally only.
+     * Use blue Accordion theme - defaults to white . Used internally only.
      * @ignore
      **/
-    type: oneOf(['blue']),
+    isBlue: bool,
+};
+
+Accordion.defaultProps = {
+    isBlue: false,
 };
 
 export default Accordion;

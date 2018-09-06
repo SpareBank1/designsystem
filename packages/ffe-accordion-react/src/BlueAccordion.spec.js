@@ -11,12 +11,10 @@ const getWrapper = () =>
     );
 
 describe('<Accordion />', () => {
-    it('provides the blue type property to each AccordionItem', () => {
+    it('adds modifier class to block element', () => {
         const wrapper = getWrapper();
         expect(
-            wrapper
-                .find('AccordionItem')
-                .everyWhere(item => item.prop('type') === 'blue'),
-        ).toBe(true);
+            wrapper.find('ul.ffe-accordion.ffe-accordion--blue').length,
+        ).toBe(1);
     });
 });
