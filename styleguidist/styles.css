@@ -4675,6 +4675,19 @@ input:not([type='radio']):not([type='checkbox']) {
     background-color: #FFF;
   }
 }
+@media print {
+  .ffe-header__logo {
+    text-align: left;
+  }
+  .ffe-header__user-nav,
+  .ffe-header__user-icon,
+  .ffe-header__user-chevron,
+  .ffe-header__site-nav,
+  .ffe-header__site-nav-toggle,
+  .ffe-header__notification-bubble {
+    display: none;
+  }
+}
 .ffe-numbered-list,
 .ffe-bullet-list {
   padding: 0;
