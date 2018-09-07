@@ -432,4 +432,21 @@
         }
     }
 }
+
+@media print {
+    .ffe-header {
+        &__logo {
+            text-align: left;
+        }
+
+        &__user-nav,
+        &__user-icon,
+        &__user-chevron,
+        &__site-nav,
+        &__site-nav-toggle,
+        &__notification-bubble {
+            display: none;
+        }
+    }
+}
 // stylelint-enable block-no-empty
