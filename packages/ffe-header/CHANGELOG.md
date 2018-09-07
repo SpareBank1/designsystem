@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="11.2.0"></a>
+# [11.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@11.1.24...@sb1/ffe-header@11.2.0) (2018-09-07)
+
+
+### Features
+
+* **ffe-header:** print styles ([1fd828d](https://github.com/SpareBank1/designsystem/commit/1fd828d))
+
+
+
+
+
 <a name="11.1.24"></a>
 ## [11.1.24](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@11.1.23...@sb1/ffe-header@11.1.24) (2018-09-06)
 
