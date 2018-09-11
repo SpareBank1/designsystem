@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.1"></a>
+## [5.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@5.0.0...@sb1/ffe-accordion@5.0.1) (2018-09-11)
+
+
+### Bug Fixes
+
+* **ffe-accordion:** Background transition for blue accordion ([85110f7](https://github.com/SpareBank1/designsystem/commit/85110f7)), closes [#398](https://github.com/SpareBank1/designsystem/issues/398)
+
+
+
+
+
 <a name="5.0.0"></a>
 # [5.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@4.0.17...@sb1/ffe-accordion@5.0.0) (2018-09-06)
 
