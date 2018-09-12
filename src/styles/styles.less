@@ -11,13 +11,20 @@
 
 @import 'npm-install-builder/npm-install-builder';
 
+html, body {
+    min-height: 100vh;
+}
+
 body {
     background-color: @ffe-white;
+    display: flex;
+    flex-direction: column;
 }
 
 .sb1ds {
     font-family: 'MuseoSans-500', arial, sans-serif;
     line-height: 1.5;
+    flex: 1 0 auto;
 
     @media screen and (min-width: @breakpoint-lg) {
         position: relative;
@@ -160,5 +167,42 @@ body {
         padding-top: 70px;
         margin-top: -70px;
         background-clip: content-box;
+    }
+}
+
+.sb1ds-frontpage-excerpt {
+    .ffe-product-card {
+        width: 100%;
+    }
+}
+
+.sb1ds-footer {
+    background: @ffe-grey-warm;
+    margin-top: 20px;
+    flex-shrink: 0;
+
+    &__link {
+        display: flex;
+    }
+
+    &__link-text {
+        .ffe-link-text:visited {
+            color: @ffe-blue-azure;
+        }
+    }
+
+    &__logo {
+        background-color: @ffe-white;
+        width: 90px;
+        height: 90px;
+        margin-right: 20px;
+        border-radius: 50%;
+        text-align: center;
+
+        svg {
+            height: 60px;
+            max-width: 60px;
+            margin-top: 15px;
+        }
     }
 }
