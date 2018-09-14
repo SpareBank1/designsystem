@@ -13,9 +13,5 @@ module.exports = {
             files: '*.md',
             options: { parser: 'markdown' },
         },
-        {
-            files: '*.less',
-            options: { parser: 'postcss' },
-        },
     ],
 };
