@@ -71,7 +71,7 @@ module.exports = {
             base: ['MuseoSans-500', 'arial', 'sans-serif'],
         },
     },
-    pagePerSection: true,
+    pagePerSection: false,
     assetsDir: './static',
     webpackConfig: {
         module: {
