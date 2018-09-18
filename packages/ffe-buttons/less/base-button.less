@@ -26,7 +26,6 @@
 //
 // Styleguide ffe-buttons.base-button.1
 
-
 // More Buttons
 //
 // Markup:
@@ -38,7 +37,6 @@
 // --task     - Task
 //
 // Styleguide ffe-buttons.base-button.2
-
 
 // Expand Button
 //
@@ -61,7 +59,7 @@
     color: @ffe-white;
     cursor: pointer;
     display: flex;
-    font-family: "MuseoSansRounded-500", arial, sans-serif;
+    font-family: 'MuseoSansRounded-500', arial, sans-serif;
     justify-content: center;
     line-height: 24px;
     overflow: hidden;
@@ -93,7 +91,6 @@
     }
 }
 
-
 .ffe-button--action.ffe-button--ghost {
     &,
     &:focus {
@@ -118,7 +115,7 @@
 
     &:focus {
         background-color: darken(@ffe-green-shamrock, 5%);
-        box-shadow: 0 0 0 2px @ffe-blue-focus;
+        box-shadow: 0 0 0 1px @ffe-white, 0 0 0 4px @ffe-blue-focus;
     }
 
     &:hover {
@@ -135,7 +132,7 @@
 
     &:focus {
         background-color: darken(@ffe-blue-azure, 5%);
-        box-shadow: 0 0 0 2px @ffe-blue-focus;
+        box-shadow: 0 0 0 1px @ffe-white, 0 0 0 4px @ffe-blue-focus;
     }
 
     &:hover {
@@ -161,6 +158,10 @@
         background-color: @ffe-white;
         border-color: @ffe-blue-azure;
     }
+
+    &:focus {
+        box-shadow: 0 0 0 1px @ffe-white, 0 0 0 4px @ffe-blue-focus;
+    }
 }
 
 .ffe-button--expand {
@@ -168,18 +169,18 @@
     height: 45px;
 }
 
-.ffe-button--expanded {
+.ffe-button--expanded  {
     padding: 8px;
     width: 45px;
 }
 
 .ffe-button--task {
-    background-color: @ffe-white;
+    background: transparent;
     border-radius: 0;
     box-shadow: none;
     color: @ffe-blue-azure;
     display: inline-block;
-    padding: 2px;
+    padding: 4px;
     text-align: left;
     transition: all @ffe-transition-duration @ffe-ease;
     width: auto;
@@ -187,8 +188,8 @@
     &:active,
     &:focus,
     &:hover {
-        box-shadow: none;
         color: @ffe-blue-cobalt;
+        box-shadow: none;
     }
 }
 
@@ -200,7 +201,6 @@
 .ffe-button--loading {
     pointer-events: none;
 }
-
 
 .ffe-button__label {
     align-items: center;
@@ -238,11 +238,13 @@
         border: 2px solid @ffe-grey-silver;
         border-radius: 50%;
         box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        background-color: @ffe-white;
         fill: @ffe-blue-azure;
         height: 45px;
         padding: 13px;
         margin: 0 5px 0 0;
         width: 45px;
+        transition: all @ffe-transition-duration @ffe-ease;
     }
 
     .ffe-button--task:hover & {
@@ -257,7 +259,7 @@
 
     .ffe-button--task:focus & {
         border-color: @ffe-blue-cobalt;
-        box-shadow: 0 0 0 2px @ffe-blue-focus;
+        box-shadow: 0 0 0 1px @ffe-white, 0 0 0 4px @ffe-blue-focus;
     }
 }
 
@@ -294,8 +296,12 @@
         width: 22px;
 
         @keyframes button-loading-spin {
-            from { transform: none; }
-            to { transform: rotate(360deg); }
+            from {
+                transform: none;
+            }
+            to {
+                transform: rotate(360deg);
+            }
         }
     }
 }
