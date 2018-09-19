@@ -3,33 +3,34 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-<a name="5.0.1"></a>
-## [5.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@5.0.0...@sb1/ffe-accordion@5.0.1) (2018-09-11)
+<a name="5.0.2"></a>
 
+## [5.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@5.0.1...@sb1/ffe-accordion@5.0.2) (2018-09-19)
+
+**Note:** Version bump only for package @sb1/ffe-accordion
+
+<a name="5.0.1"></a>
+
+## [5.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@5.0.0...@sb1/ffe-accordion@5.0.1) (2018-09-11)
 
 ### Bug Fixes
 
-* **ffe-accordion:** Background transition for blue accordion ([85110f7](https://github.com/SpareBank1/designsystem/commit/85110f7)), closes [#398](https://github.com/SpareBank1/designsystem/issues/398)
-
-
-
-
+-   **ffe-accordion:** Background transition for blue accordion ([85110f7](https://github.com/SpareBank1/designsystem/commit/85110f7)), closes [#398](https://github.com/SpareBank1/designsystem/issues/398)
 
 <a name="5.0.0"></a>
-# [5.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@4.0.17...@sb1/ffe-accordion@5.0.0) (2018-09-06)
 
+# [5.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@4.0.17...@sb1/ffe-accordion@5.0.0) (2018-09-06)
 
 ### Features
 
-* **ffe-accordion:** Decrease use of modifiers ([9e5b575](https://github.com/SpareBank1/designsystem/commit/9e5b575))
-
+-   **ffe-accordion:** Decrease use of modifiers ([9e5b575](https://github.com/SpareBank1/designsystem/commit/9e5b575))
 
 ### BREAKING CHANGES
 
-* **ffe-accordion:** The modified class `ffe-accordion--blue` supersedes
-the modified class `ffe-accordion-item--blue` and all element level
-classes of `ffe-accordion-item` with the `--blue` modifier, i.e.
-`ffe-accordion-item__(toggler,icon,content)--blue` are no longer in use.
+-   **ffe-accordion:** The modified class `ffe-accordion--blue` supersedes
+    the modified class `ffe-accordion-item--blue` and all element level
+    classes of `ffe-accordion-item` with the `--blue` modifier, i.e.
+    `ffe-accordion-item__(toggler,icon,content)--blue` are no longer in use.
 
 The modified class `ffe-accordion-item--open` is still needed, but the
 modifier `--open` on element level classes in this block is not
@@ -42,10 +43,6 @@ script should measure the height of the child element
 `scrollHeight`) and set the height of the surrounding element with class
 name `ffe-accordion-item__content-container` by changing the inline
 style declaration accordingly (i.e. the property `style.height`).
-
-
-
-
 
 <a name="4.0.17"></a>
 

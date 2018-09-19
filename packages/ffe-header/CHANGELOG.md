@@ -3,29 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-<a name="11.2.0"></a>
-# [11.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@11.1.24...@sb1/ffe-header@11.2.0) (2018-09-07)
+<a name="11.2.1"></a>
 
+## [11.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@11.2.0...@sb1/ffe-header@11.2.1) (2018-09-19)
+
+**Note:** Version bump only for package @sb1/ffe-header
+
+<a name="11.2.0"></a>
+
+# [11.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@11.1.24...@sb1/ffe-header@11.2.0) (2018-09-07)
 
 ### Features
 
-* **ffe-header:** print styles ([1fd828d](https://github.com/SpareBank1/designsystem/commit/1fd828d))
-
-
-
-
+-   **ffe-header:** print styles ([1fd828d](https://github.com/SpareBank1/designsystem/commit/1fd828d))
 
 <a name="11.1.24"></a>
-## [11.1.24](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@11.1.23...@sb1/ffe-header@11.1.24) (2018-09-06)
 
+## [11.1.24](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@11.1.23...@sb1/ffe-header@11.1.24) (2018-09-06)
 
 ### Bug Fixes
 
-* **ffe-header:** Increase z-index in order to overlap other positioned elements ([3410ce1](https://github.com/SpareBank1/designsystem/commit/3410ce1))
-
-
-
-
+-   **ffe-header:** Increase z-index in order to overlap other positioned elements ([3410ce1](https://github.com/SpareBank1/designsystem/commit/3410ce1))
 
 <a name="11.1.23"></a>
 

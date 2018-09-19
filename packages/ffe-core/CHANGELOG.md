@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="14.0.1"></a>
+
+## [14.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@14.0.0...@sb1/ffe-core@14.0.1) (2018-09-19)
+
+### Bug Fixes
+
+-   **ffe-core:** Update focus outline color ([68d02bc](https://github.com/SpareBank1/designsystem/commit/68d02bc))
+
 <a name="14.0.0"></a>
 
 # [14.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@13.0.3...@sb1/ffe-core@14.0.0) (2018-08-23)

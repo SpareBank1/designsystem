@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="8.0.7"></a>
+
+## [8.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@8.0.6...@sb1/ffe-buttons@8.0.7) (2018-09-19)
+
+### Bug Fixes
+
+-   **ffe-buttons:** Increased contrast in focus outline ([0ded429](https://github.com/SpareBank1/designsystem/commit/0ded429))
+
 <a name="8.0.6"></a>
 
 ## [8.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@8.0.5...@sb1/ffe-buttons@8.0.6) (2018-08-23)
