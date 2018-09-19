@@ -38,6 +38,7 @@
         color: @ffe-blue-azure;
         vertical-align: middle;
         margin-bottom: 10px;
+        transition: all @ffe-transition-duration @ffe-ease;
         .ffe-fontsize-button;
 
         @media all and (max-width: @breakpoint-sm) {
@@ -47,15 +48,12 @@
         &:active,
         &:focus,
         &:hover {
+            background-color: @ffe-white;
             border-color: @ffe-blue-azure;
         }
 
-        &:hover {
-            box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.2);
-        }
-
-        &:active {
-            box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.25);
+        &:focus {
+            box-shadow: 0 0 0 1px @ffe-white, 0 0 0 4px @ffe-blue-focus;
         }
 
         &[aria-invalid='true'] {
