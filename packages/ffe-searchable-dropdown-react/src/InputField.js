@@ -41,6 +41,7 @@ class Input extends Component {
                     id={inputId}
                     onChange={onInputChange}
                     value={inputValue}
+                    autoComplete="off"
                     {...rest}
                 />
                 {this.displayReset() && (

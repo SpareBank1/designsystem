@@ -51,4 +51,8 @@ describe('<Input>', () => {
             component.find('.ffe-searchable-dropdown__reset-button'),
         ).toHaveLength(0);
     });
+
+    it('input field should have autoComplete off', () => {
+        expect(component.find('input').prop('autoComplete')).toBe('off');
+    });
 });
