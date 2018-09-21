@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="9.2.17"></a>
+
+## [9.2.17](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.2.16...@sb1/ffe-form@9.2.17) (2018-09-21)
+
+### Bug Fixes
+
+-   **ffe-form:** Update focus outline ([4f9d7e1](https://github.com/SpareBank1/designsystem/commit/4f9d7e1))
+
 <a name="9.2.16"></a>
 
 ## [9.2.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.2.15...@sb1/ffe-form@9.2.16) (2018-09-19)
