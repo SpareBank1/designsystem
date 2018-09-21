@@ -110,13 +110,13 @@ export default (properties = {}) => TargetComponent =>
         // by requesting animation frames. If an animation frame was currently being processed, it's cancelled before
         // requesting a new one.
         componentWillReceiveProps(nextProps) {
-            this.setState(prevState =>
+            this.setState((prevState, currentProps) =>
                 Object.entries(nextProps)
                     .filter(
                         ([propName, propValue]) =>
                             prevState[propName] &&
                             (propValue !== prevState[propName].currentValue ||
-                                propValue !== this.props[propName]),
+                                propValue !== currentProps[propName]),
                     )
                     .reduce((state, [propName, propValue]) => {
                         window.cancelAnimationFrame(prevState[propName].rafId);
