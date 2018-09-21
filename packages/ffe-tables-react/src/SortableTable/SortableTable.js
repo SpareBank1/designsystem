@@ -49,14 +49,14 @@ class SortableTable extends Component {
 
     tableHeaderClicked(columnKey) {
         this.setState(
-            prevState => {
+            (prevState, currentProps) => {
                 const descending =
                     columnKey === prevState.sortBy
                         ? !prevState.descending
                         : false;
                 const tableData = sortData(
-                    this.props.columns,
-                    this.props.data,
+                    currentProps.columns,
+                    currentProps.data,
                     columnKey,
                     descending,
                 );
