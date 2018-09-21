@@ -85,54 +85,55 @@ export default (properties = {}) => TargetComponent =>
         // we need to start easing from said initial value to its target value. We do this by calling
         // requestAnimationFrame and saving its ID to state.
         componentWillMount() {
-            const nextState = Object.entries(this.state)
-                .filter(
-                    ([, propertyProps]) =>
-                        propertyProps.fromValue !== propertyProps.toValue,
-                )
-                .reduce(
-                    (state, [propName]) => ({
-                        ...state,
-                        [propName]: {
-                            ...this.state[propName],
-                            rafId: window.requestAnimationFrame(
-                                this.nextFrame.bind(this, propName),
-                            ),
-                        },
-                    }),
-                    {},
-                );
-
-            this.setState(nextState);
+            this.setState(prevState =>
+                Object.entries(prevState)
+                    .filter(
+                        ([, propertyProps]) =>
+                            propertyProps.fromValue !== propertyProps.toValue,
+                    )
+                    .reduce(
+                        (state, [propName]) => ({
+                            ...state,
+                            [propName]: {
+                                ...prevState[propName],
+                                rafId: window.requestAnimationFrame(
+                                    this.nextFrame.bind(this, propName),
+                                ),
+                            },
+                        }),
+                        {},
+                    ),
+            );
         }
 
         // When a property changes, and it's specified in the properties HoC argument, it's eased to its next state
         // by requesting animation frames. If an animation frame was currently being processed, it's cancelled before
         // requesting a new one.
         componentWillReceiveProps(nextProps) {
-            const nextState = Object.entries(nextProps)
-                .filter(
-                    ([propName, propValue]) =>
-                        this.state[propName] &&
-                        (propValue !== this.state[propName].currentValue ||
-                            propValue !== this.props[propName]),
-                )
-                .reduce((state, [propName, propValue]) => {
-                    window.cancelAnimationFrame(this.state[propName].rafId);
-                    return {
-                        ...state,
-                        [propName]: {
-                            ...this.state[propName],
-                            currentIteration: 0,
-                            fromValue: this.state[propName].currentValue,
-                            rafId: window.requestAnimationFrame(
-                                this.nextFrame.bind(this, propName),
-                            ),
-                            toValue: propValue,
-                        },
-                    };
-                }, {});
-            this.setState(nextState);
+            this.setState(prevState =>
+                Object.entries(nextProps)
+                    .filter(
+                        ([propName, propValue]) =>
+                            prevState[propName] &&
+                            (propValue !== prevState[propName].currentValue ||
+                                propValue !== this.props[propName]),
+                    )
+                    .reduce((state, [propName, propValue]) => {
+                        window.cancelAnimationFrame(prevState[propName].rafId);
+                        return {
+                            ...state,
+                            [propName]: {
+                                ...prevState[propName],
+                                currentIteration: 0,
+                                fromValue: prevState[propName].currentValue,
+                                rafId: window.requestAnimationFrame(
+                                    this.nextFrame.bind(this, propName),
+                                ),
+                                toValue: propValue,
+                            },
+                        };
+                    }, {}),
+            );
         }
 
         componentWillUnmount() {
@@ -175,9 +176,9 @@ export default (properties = {}) => TargetComponent =>
                     this.nextFrame(propName),
                 );
             }
-            this.setState({
-                [propName]: { ...this.state[propName], ...nextState },
-            });
+            this.setState(prevState => ({
+                [propName]: { ...prevState[propName], ...nextState },
+            }));
         }
 
         render() {
