@@ -2726,8 +2726,8 @@ html {
 .ffe-dropdown:focus,
 .ffe-dropdown:active {
   border-color: #0071cd;
-  -webkit-box-shadow: 0 0 0 2px #a1dfff;
-          box-shadow: 0 0 0 2px #a1dfff;
+  -webkit-box-shadow: 0 0 0 1px #fff, 0 0 0 4px #a1dfff;
+          box-shadow: 0 0 0 1px #fff, 0 0 0 4px #a1dfff;
   outline: none;
 }
 .ffe-dropdown:-moz-focusring {
@@ -3362,8 +3362,8 @@ html {
   border-color: #0071cd;
 }
 .ffe-tooltip__icon:focus {
-  -webkit-box-shadow: 0 0 0 2px #a1dfff;
-          box-shadow: 0 0 0 2px #a1dfff;
+  -webkit-box-shadow: 0 0 0 1px #fff, 0 0 0 4px #a1dfff;
+          box-shadow: 0 0 0 1px #fff, 0 0 0 4px #a1dfff;
   outline: none;
 }
 .ffe-tooltip__icon:active,
