@@ -13,7 +13,7 @@ class Tooltip extends React.Component {
     }
 
     onToggle(evt) {
-        this.setState({ isOpen: !this.state.isOpen });
+        this.setState(prevState => ({ isOpen: !prevState.isOpen }));
         if (this.props.onClick) {
             this.props.onClick(evt);
         }
