@@ -28,16 +28,16 @@ class SortableTable extends Component {
 
     componentWillReceiveProps(nextProps) {
         if (!equal(nextProps, this.props)) {
-            this.setState({
-                tableData: this.state.sortBy
+            this.setState(prevState => ({
+                tableData: prevState.sortBy
                     ? sortData(
                           nextProps.columns,
                           nextProps.data,
-                          this.state.sortBy,
-                          this.state.descending,
+                          prevState.sortBy,
+                          prevState.descending,
                       )
                     : nextProps.data,
-            });
+            }));
         }
     }
 
@@ -48,25 +48,29 @@ class SortableTable extends Component {
     }
 
     tableHeaderClicked(columnKey) {
-        const descending =
-            columnKey === this.state.sortBy ? !this.state.descending : false;
-        const tableData = sortData(
-            this.props.columns,
-            this.props.data,
-            columnKey,
-            descending,
-        );
         this.setState(
-            {
-                sortBy: columnKey,
-                descending,
-                tableData,
+            prevState => {
+                const descending =
+                    columnKey === prevState.sortBy
+                        ? !prevState.descending
+                        : false;
+                const tableData = sortData(
+                    this.props.columns,
+                    this.props.data,
+                    columnKey,
+                    descending,
+                );
+                return {
+                    sortBy: columnKey,
+                    descending,
+                    tableData,
+                };
             },
             () =>
                 this.props.onSort({
                     sortBy: columnKey,
-                    descending,
-                    tableData,
+                    descending: this.state.descending,
+                    tableData: this.state.tableData,
                 }),
         );
     }
