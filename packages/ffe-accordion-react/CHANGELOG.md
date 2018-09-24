@@ -35,13 +35,13 @@ See https://www.npmjs.com/package/react-css-collapse
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react
 
-      <a name="6.0.6"></a>
+<a name="6.0.6"></a>
 
 ## [6.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@6.0.5...@sb1/ffe-accordion-react@6.0.6) (2018-06-14)
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react
 
-    <a name="6.0.5"></a>
+<a name="6.0.5"></a>
 
 ## [6.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@6.0.4...@sb1/ffe-accordion-react@6.0.5) (2018-06-04)
 
