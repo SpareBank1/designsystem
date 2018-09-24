@@ -21,13 +21,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-lists
 
-      <a name="5.0.14"></a>
+<a name="5.0.14"></a>
 
 ## [5.0.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@5.0.13...@sb1/ffe-lists@5.0.14) (2018-07-23)
 
 **Note:** Version bump only for package @sb1/ffe-lists
 
-    <a name="5.0.13"></a>
+<a name="5.0.13"></a>
 
 ## [5.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@5.0.12...@sb1/ffe-lists@5.0.13) (2018-06-20)
 
