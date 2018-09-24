@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.0.11"></a>
+
+## [6.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@6.0.10...@sb1/ffe-searchable-dropdown-react@6.0.11) (2018-09-24)
+
+### Bug Fixes
+
+-   **ffe-searchable-dropdown-react:** set autoComplete="off" so the user do not get the browsers default suggestions in addition to our components suggestions. ([7153a82](https://github.com/SpareBank1/designsystem/commit/7153a82))
+
 <a name="6.0.10"></a>
 
 ## [6.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@6.0.9...@sb1/ffe-searchable-dropdown-react@6.0.10) (2018-09-24)
