@@ -5112,6 +5112,10 @@ input:not([type='radio']):not([type='checkbox']) {
 .ffe-searchable-dropdown__item:first-child {
   border-top: none;
 }
+.ffe-searchable-dropdown [aria-invalid='true'] {
+  border-color: #da3d00;
+  border-style: solid;
+}
 /*
     Spinner: Commonly found on buttons and loading pages
 */
