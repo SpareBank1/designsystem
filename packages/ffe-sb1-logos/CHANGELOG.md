@@ -9,8 +9,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-sb1-logos
 
-# Change Log
-
 ## 1.0.0
 
 Initial release.
