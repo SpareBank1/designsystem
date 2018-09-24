@@ -23,13 +23,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-buttons
 
-      <a name="8.0.4"></a>
+<a name="8.0.4"></a>
 
 ## [8.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@8.0.3...@sb1/ffe-buttons@8.0.4) (2018-07-23)
 
 **Note:** Version bump only for package @sb1/ffe-buttons
 
-    <a name="8.0.3"></a>
+<a name="8.0.3"></a>
 
 ## [8.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@8.0.2...@sb1/ffe-buttons@8.0.3) (2018-06-20)
 

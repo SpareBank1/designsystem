@@ -18,13 +18,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-tables-react
 
-      <a name="5.1.4"></a>
+<a name="5.1.4"></a>
 
 ## [5.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@5.1.3...@sb1/ffe-tables-react@5.1.4) (2018-06-14)
 
 **Note:** Version bump only for package @sb1/ffe-tables-react
 
-    <a name="5.1.3"></a>
+<a name="5.1.3"></a>
 
 ## [5.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@5.1.2...@sb1/ffe-tables-react@5.1.3) (2018-06-04)
 

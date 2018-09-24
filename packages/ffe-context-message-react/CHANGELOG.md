@@ -17,13 +17,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-context-message-react
 
-      <a name="4.0.11"></a>
+<a name="4.0.11"></a>
 
 ## [4.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@4.0.10...@sb1/ffe-context-message-react@4.0.11) (2018-06-14)
 
 **Note:** Version bump only for package @sb1/ffe-context-message-react
 
-    <a name="4.0.10"></a>
+<a name="4.0.10"></a>
 
 ## [4.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@4.0.9...@sb1/ffe-context-message-react@4.0.10) (2018-06-04)
 

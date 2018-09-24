@@ -62,13 +62,13 @@ style declaration accordingly (i.e. the property `style.height`).
 
 **Note:** Version bump only for package @sb1/ffe-accordion
 
-      <a name="4.0.14"></a>
+<a name="4.0.14"></a>
 
 ## [4.0.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@4.0.13...@sb1/ffe-accordion@4.0.14) (2018-07-23)
 
 **Note:** Version bump only for package @sb1/ffe-accordion
 
-    <a name="4.0.13"></a>
+<a name="4.0.13"></a>
 
 ## [4.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@4.0.12...@sb1/ffe-accordion@4.0.13) (2018-06-20)
 

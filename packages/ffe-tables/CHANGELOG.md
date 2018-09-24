@@ -21,7 +21,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-tables
 
-    <a name="9.0.13"></a>
+<a name="9.0.13"></a>
 
 ## [9.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@9.0.12...@sb1/ffe-tables@9.0.13) (2018-07-23)
 
