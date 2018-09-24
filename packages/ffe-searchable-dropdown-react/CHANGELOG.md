@@ -17,7 +17,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react
 
-    <a name="6.0.8"></a>
+<a name="6.0.8"></a>
 
 ## [6.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@6.0.7...@sb1/ffe-searchable-dropdown-react@6.0.8) (2018-06-20)
 
