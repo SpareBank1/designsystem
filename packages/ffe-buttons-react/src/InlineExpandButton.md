@@ -14,7 +14,9 @@ initialState = { isExpanded: false };
             aria-controls="inline-expand-example-details"
             aria-expanded={state.isExpanded}
             isExpanded={state.isExpanded}
-            onClick={() => setState({ isExpanded: !state.isExpanded })}
+            onClick={() =>
+                setState(prevState => ({ isExpanded: !prevState.isExpanded }))
+            }
         >
             {state.isExpanded ? 'Vis mindre' : 'Vis mer'}
         </InlineExpandButton>

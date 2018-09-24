@@ -21,16 +21,18 @@ const onFilesSelected = files => {
             })),
         )
         .then(selectedFiles =>
-            setState({
-                selectedFiles: state.selectedFiles.concat(selectedFiles),
-            }),
+            setState(prevState => ({
+                selectedFiles: prevState.selectedFiles.concat(selectedFiles),
+            })),
         );
 };
 
 const onFileDeleted = file => {
-    setState({
-        selectedFiles: state.selectedFiles.filter(f => f.name !== file.name),
-    });
+    setState(prevState => ({
+        selectedFiles: prevState.selectedFiles.filter(
+            f => f.name !== file.name,
+        ),
+    }));
 };
 
 <FileUpload
