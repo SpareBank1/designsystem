@@ -13,7 +13,7 @@
     "url": "ssh://git@github.com:SpareBank1/designsystem.git"
   },
   "scripts": {
-    "build": "./bin/build-preview.js"
+    "build": "node ./bin/build-preview.js"
   },
   "publishConfig": {
     "access": "public"
