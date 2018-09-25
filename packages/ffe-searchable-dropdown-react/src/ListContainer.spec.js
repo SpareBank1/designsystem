@@ -127,6 +127,22 @@ describe('<ListContainer>', () => {
         ).toEqual(noMatchText);
     });
 
+    it("renders noMatch's fallback items when input value doesn't match any items in droplist", () => {
+        const props = {
+            ...defaultProps,
+            noMatch: {
+                text: noMatchText,
+                items: yrker.slice(0, 4),
+            },
+            dropdownList: [],
+        };
+        const component = mountDropdownWithProps(props);
+        expect(component.find(ListItem)).toHaveLength(4);
+        expect(
+            component.find('li.ffe-searchable-dropdown__item').text(),
+        ).toEqual(noMatchText);
+    });
+
     it('highlights correct element', () => {
         const highlightedIndex = 4;
         const maxRenderedDropdownElements = 50;
