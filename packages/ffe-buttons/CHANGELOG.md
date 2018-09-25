@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="8.0.8"></a>
+
+## [8.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@8.0.7...@sb1/ffe-buttons@8.0.8) (2018-09-25)
+
+### Bug Fixes
+
+-   **ffe-buttons:** Specify buttongroup width in order to support full width ([7d693fb](https://github.com/SpareBank1/designsystem/commit/7d693fb))
+
 <a name="8.0.7"></a>
 
 ## [8.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@8.0.6...@sb1/ffe-buttons@8.0.7) (2018-09-19)
