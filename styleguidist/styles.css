@@ -1296,6 +1296,7 @@ html {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 40px 0;
+  width: 100%;
 }
 .ffe-button-group .ffe-button,
 .ffe-button-group .ffe-inline-button {
@@ -1324,6 +1325,7 @@ html {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    width: auto;
   }
   .ffe-button-group .ffe-button,
   .ffe-button-group .ffe-inline-button {
