@@ -1,5 +1,5 @@
 import React from 'react';
-import { array, string, number, func } from 'prop-types';
+import { array, string, number, func, oneOfType, shape } from 'prop-types';
 import ListItem from './ListItem';
 
 const ListContainer = ({
@@ -13,9 +13,13 @@ const ListContainer = ({
     maxRenderedDropdownElements,
 }) => {
     const itemsToRender =
-        maxRenderedDropdownElements > 0
-            ? dropdownList.slice(0, maxRenderedDropdownElements)
-            : dropdownList;
+        dropdownList.length > 0
+            ? maxRenderedDropdownElements > 0
+                ? dropdownList.slice(0, maxRenderedDropdownElements)
+                : dropdownList
+            : typeof noMatch === 'string'
+                ? []
+                : noMatch.items;
     return (
         <ul
             className="ffe-searchable-dropdown__scroll-container-list"
@@ -26,6 +30,12 @@ const ListContainer = ({
                 highlightedIndex
             }
         >
+            {dropdownList.length === 0 && (
+                <li className="ffe-searchable-dropdown__item">
+                    {typeof noMatch === 'string' ? noMatch : noMatch.text}
+                </li>
+            )}
+
             {itemsToRender.map((item, index) => {
                 return (
                     <ListItem
@@ -44,9 +54,6 @@ const ListContainer = ({
                 dropdownList.length > maxRenderedDropdownElements && (
                     <li className="ffe-searchable-dropdown__item">...</li>
                 )}
-            {dropdownList.length === 0 && (
-                <li className="ffe-searchable-dropdown__item">{noMatch}</li>
-            )}
         </ul>
     );
 };
@@ -56,7 +63,13 @@ ListContainer.propTypes = {
     dropdownList: array.isRequired,
     maxRenderedDropdownElements: number,
     highlightedIndex: number.isRequired,
-    noMatch: string.isRequired,
+    noMatch: oneOfType([
+        string,
+        shape({
+            text: string.isRequired,
+            items: array,
+        }),
+    ]).isRequired,
     onSelect: func.isRequired,
     renderDropdownElement: func,
     refHighlightedListItem: func.isRequired,
