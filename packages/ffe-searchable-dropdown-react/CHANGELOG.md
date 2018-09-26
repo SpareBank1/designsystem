@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.1.0"></a>
+
+# [6.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@6.0.11...@sb1/ffe-searchable-dropdown-react@6.1.0) (2018-09-26)
+
+### Features
+
+-   **ffe-searchable-dropdown-react:** Extended noMatch to allow for a set of fallback items. ([bea59fe](https://github.com/SpareBank1/designsystem/commit/bea59fe))
+
 <a name="6.0.11"></a>
 
 ## [6.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@6.0.10...@sb1/ffe-searchable-dropdown-react@6.0.11) (2018-09-24)
