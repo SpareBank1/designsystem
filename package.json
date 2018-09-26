@@ -12,8 +12,6 @@
         "clean": "run-s clean:lib clean:lerna",
         "clean:lib": "rimraf packages/*/lib",
         "clean:lerna": "lerna clean --yes",
-        "precommit": "pretty-quick --staged",
-        "commitmsg": "commitlint -e $GIT_PARAMS",
         "postinstall": "npm run bootstrap",
         "bootstrap": "lerna bootstrap --no-ci",
         "build": "run-s build:packages build:css",
@@ -53,7 +51,7 @@
         "eslint-config-prettier": "^3.0.0",
         "glob": "^7.1.2",
         "handlebars": "^4.0.11",
-        "husky": "^0.14.3",
+        "husky": "^1.0.0",
         "jest": "^23.4.2",
         "kss": "^3.0.0-beta.18",
         "lerna": "^3.0.1",
@@ -84,5 +82,11 @@
             "/node_modules/",
             "<rootDir>/packages/.*/lib/"
         ]
+    },
+    "husky": {
+        "hooks": {
+            "commit-msg": "commitlint -e $GIT_PARAMS",
+            "pre-commit": "pretty-quick --staged"
+        }
     }
 }
