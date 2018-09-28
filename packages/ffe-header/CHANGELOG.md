@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="11.2.3"></a>
+
+## [11.2.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@11.2.2...@sb1/ffe-header@11.2.3) (2018-09-28)
+
+### Bug Fixes
+
+-   **ffe-header:** Remove fading from transition, set z-index for expanded menu ([3cfd105](https://github.com/SpareBank1/designsystem/commit/3cfd105))
+
 <a name="11.2.2"></a>
 
 ## [11.2.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@11.2.1...@sb1/ffe-header@11.2.2) (2018-09-25)
