@@ -4324,7 +4324,12 @@ input:not([type='radio']):not([type='checkbox']) {
   z-index: 100000;
 }
 .ffe-header__border {
+  background: #fff;
   border-bottom: 1px solid #ccc;
+}
+.ffe-header__border:first-child {
+  position: relative;
+  z-index: 1000;
 }
 .ffe-header__wrapper {
   display: -webkit-box;
@@ -4658,6 +4663,7 @@ input:not([type='radio']):not([type='checkbox']) {
     visibility: hidden;
     height: 1px;
     position: absolute;
+    z-index: 999;
     right: 0;
     left: 0;
     top: 1px;
@@ -4666,11 +4672,11 @@ input:not([type='radio']):not([type='checkbox']) {
     -webkit-transform: translateY(-25px);
         -ms-transform: translateY(-25px);
             transform: translateY(-25px);
-    -webkit-transition: background-color 0.2s 0.1s, -webkit-transform 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
-    transition: background-color 0.2s 0.1s, -webkit-transform 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
-    -o-transition: transform 0.2s cubic-bezier(0.25, 0.1, 0.25, 1), background-color 0.2s 0.1s;
-    transition: transform 0.2s cubic-bezier(0.25, 0.1, 0.25, 1), background-color 0.2s 0.1s;
-    transition: transform 0.2s cubic-bezier(0.25, 0.1, 0.25, 1), background-color 0.2s 0.1s, -webkit-transform 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+    -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition: -webkit-transform 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+    -o-transition: transform 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition: transform 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition: transform 0.2s cubic-bezier(0.25, 0.1, 0.25, 1), -webkit-transform 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
   }
   .ffe-header__user-nav-list .ffe-header__list-item,
   .ffe-header__site-nav-list .ffe-header__list-item {
@@ -5916,6 +5922,9 @@ input:not([type='radio']):not([type='checkbox']) {
   -o-text-overflow: ellipsis;
      text-overflow: ellipsis;
   overflow: hidden;
+}
+.sb1ds-components-list__link--active {
+  background: #e6e6e6;
 }
 /* Unnskyld */
 .sb1ds-sidebar__menu > .sb1ds-components-list > .sb1ds-components-list__item > .sb1ds-components-list__link--heading {
