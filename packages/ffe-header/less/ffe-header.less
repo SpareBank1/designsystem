@@ -11,7 +11,13 @@
     }
 
     &__border {
+        background: @ffe-white;
         border-bottom: 1px solid @ffe-grey-silver;
+    }
+
+    &__border:first-child {
+        position: relative;
+        z-index: 1000;
     }
 
     &__wrapper {
@@ -104,12 +110,14 @@
 
         color: @ffe-blue-royal;
 
-        &:active:extend(.ffe-inline-button:active) {}
-        &:focus:extend(.ffe-inline-button:focus) {}
+        &:active:extend(.ffe-inline-button:active) {
+        }
+        &:focus:extend(.ffe-inline-button:focus) {
+        }
 
         &:extend(.ffe-inline-button--tertiary);
-        &:hover:extend(.ffe-inline-button--tertiary:hover) {}
-
+        &:hover:extend(.ffe-inline-button--tertiary:hover) {
+        }
 
         &::after {
             &:extend(.ffe-inline-button--tertiary::after);
@@ -137,12 +145,18 @@
         margin: 8px 0;
         border-radius: 20px;
 
-        &:focus:extend(.ffe-button:focus) {}
-        &:focus:extend(.ffe-button--secondary:focus) {}
-        &:hover:extend(.ffe-button:hover) {}
-        &:hover:extend(.ffe-button--secondary:hover) {}
-        &:active:extend(.ffe-button:active) {}
-        &:active:extend(.ffe-button--secondary:active) {}
+        &:focus:extend(.ffe-button:focus) {
+        }
+        &:focus:extend(.ffe-button--secondary:focus) {
+        }
+        &:hover:extend(.ffe-button:hover) {
+        }
+        &:hover:extend(.ffe-button--secondary:hover) {
+        }
+        &:active:extend(.ffe-button:active) {
+        }
+        &:active:extend(.ffe-button--secondary:active) {
+        }
 
         &--loading {
             &:extend(.ffe-button--loading);
@@ -167,11 +181,14 @@
         }
 
         @keyframes logout-button-loading-spin {
-            from { transform: none; }
-            to { transform: rotate(360deg); }
+            from {
+                transform: none;
+            }
+            to {
+                transform: rotate(360deg);
+            }
         }
     }
-
 
     &__logout-button-label {
         &:extend(.ffe-button__label);
@@ -404,14 +421,14 @@
             visibility: hidden;
             height: 1px;
             position: absolute;
+            z-index: 999;
             right: 0;
             left: 0;
             top: 1px;
             padding: 20px 0;
             border-bottom: 1px solid @ffe-grey-silver;
             transform: translateY(-25px);
-            transition: transform @ffe-transition-duration @ffe-ease,
-                background-color @ffe-transition-duration 0.1s;
+            transition: transform @ffe-transition-duration @ffe-ease;
 
             .ffe-header__list-item {
                 padding: 4px 20px;
