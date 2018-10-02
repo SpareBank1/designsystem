@@ -36,6 +36,7 @@ kan overstyres i `options`-objektet.
 ```js static
 {
     maxDecimals, // default 2
+    minDecimals, // default 0
 }
 ```
 
@@ -45,6 +46,7 @@ const formatPercentage = require('./formatPercentage').default;
 <React.Fragment>
     <div>{formatPercentage(10.00001)}</div>
     <div>{formatPercentage(12.34567, { maxDecimals: 4 })}</div>
+    <div>{formatPercentage(1, { minDecimals: 2 })}</div>
 </React.Fragment>;
 ```
 
