@@ -18,6 +18,9 @@
 //     </div>
 // </div>
 //
+// --condensed              - Grid with less internal spacing
+// --inline                 - Grid with no internal spacing
+//
 // Styleguide ffe-grid.grid.1
 
 // Grid row
@@ -134,6 +137,10 @@
             padding-top: 0;
         }
     }
+
+    &--inline {
+        padding: 0;
+    }
 }
 
 .ffe-grid__row {
@@ -233,6 +240,10 @@
                 @ffe-condensed-grid-gutter-lg;
         }
     }
+
+    .ffe-grid--inline & {
+        padding: 0;
+    }
 }
 [class*='ffe-grid__col--bg-'] {
     @media only screen and (min-width: @breakpoint-lg) {
@@ -266,6 +277,12 @@
             }
             &::after {
                 right: -(@ffe-condensed-grid-gutter-lg / 2);
+            }
+        }
+        .ffe-grid--inline & {
+            &::before,
+            &::after {
+                display: none;
             }
         }
     }
