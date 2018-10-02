@@ -33,7 +33,7 @@ export function ComponentsListRenderer({ items, useIsolatedLinks = false }) {
                             className={classNames(
                                 'sb1ds-components-list__link',
                                 {
-                                    'sb1ds-components-list__item--heading': heading,
+                                    'sb1ds-components-list__link--heading': heading,
                                 },
                                 {
                                     'sb1ds-components-list__link--active':
