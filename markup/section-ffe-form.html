@@ -18,7 +18,7 @@
   <header class="kss-header">
     <h1 class="kss-doc-title">KSS Style Guide</h1>
   </header>
-  <nav class="kss-nav">
+  <nav class="kss-nav" aria-label="Style Guide">
     <ul class="kss-nav__menu">
       <li class="kss-nav__menu-item">
         <a class="kss-nav__menu-link" href="./">
@@ -202,7 +202,8 @@
     </ul>
   </nav>
 </div>
-<article role="main" class="kss-main">
+<main class="kss-main" aria-label="Content">
+  <article>
 
     <div id="kssref-ffe-form" class="kss-section kss-section--depth-1 ">
 
@@ -218,6 +219,7 @@
             ffe-form
           </a>
         </h1>
+
 
 
 
@@ -244,16 +246,16 @@
           <p class="kss-toolbar">
               <a href="#kssref-ffe-form-checkbox" data-kss-fullscreen="kssref-ffe-form-checkbox">
                 <span class="kss-toolbar__tooltip">Toggle full screen</span>
-                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
-                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
               </a>
               <a href="item-ffe-form-checkbox.html" target="_blank">
                 <span class="kss-toolbar__tooltip">Open in new window</span>
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <rect x="0" y="20" width="40" height="44" fill="#fff"/>
                   <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
                   <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
@@ -264,7 +266,7 @@
               </a>
             <a href="#kssref-ffe-form-checkbox" data-kss-guides="true">
               <span class="kss-toolbar__tooltip">Toggle example guides</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
@@ -285,12 +287,13 @@
             </a>
             <a href="#kssref-ffe-form-checkbox" data-kss-markup="true">
               <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
                 <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
               </svg>
             </a>
           </p>
+
 
 
       </div>
@@ -347,18 +350,18 @@
             <summary>
                 Markup
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;span&gt;
-    &lt;input type&#x3D;&quot;checkbox&quot; class&#x3D;&quot;ffe-hidden-checkbox&quot; id&#x3D;&quot;checkbox1&quot; aria-invalid&#x3D;&quot;false&quot; name&#x3D;&quot;newspapers&quot; value&#x3D;&quot;moon&quot;&gt;
-    &lt;label class&#x3D;&quot;ffe-checkbox ffe-checkbox[modifier class]&quot; for&#x3D;&quot;checkbox1&quot;&gt;
+            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-hidden-checkbox"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"checkbox1"</span> <span class="hljs-attr">aria-invalid</span>=<span class="hljs-string">"false"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"newspapers"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"moon"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-checkbox ffe-checkbox[modifier class]"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"checkbox1"</span>&gt;</span>
         Aftenposten
-    &lt;/label&gt;
-&lt;/span&gt;
-&lt;span&gt;
-    &lt;input type&#x3D;&quot;checkbox&quot; class&#x3D;&quot;ffe-hidden-checkbox&quot; id&#x3D;&quot;checkbox2&quot; aria-invalid&#x3D;&quot;false&quot; name&#x3D;&quot;newspapers&quot; value&#x3D;&quot;moon&quot;&gt;
-    &lt;label class&#x3D;&quot;ffe-checkbox ffe-checkbox[modifier class]&quot; for&#x3D;&quot;checkbox2&quot;&gt;
+    <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-hidden-checkbox"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"checkbox2"</span> <span class="hljs-attr">aria-invalid</span>=<span class="hljs-string">"false"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"newspapers"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"moon"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-checkbox ffe-checkbox[modifier class]"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"checkbox2"</span>&gt;</span>
         VG
-    &lt;/label&gt;
-&lt;/span&gt;</code></pre>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span></code></pre>
           </details>
 
         <div class="kss-source kss-style">
@@ -384,16 +387,16 @@
           <p class="kss-toolbar">
               <a href="#kssref-ffe-form-dropdown" data-kss-fullscreen="kssref-ffe-form-dropdown">
                 <span class="kss-toolbar__tooltip">Toggle full screen</span>
-                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
-                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
               </a>
               <a href="item-ffe-form-dropdown.html" target="_blank">
                 <span class="kss-toolbar__tooltip">Open in new window</span>
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <rect x="0" y="20" width="40" height="44" fill="#fff"/>
                   <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
                   <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
@@ -404,7 +407,7 @@
               </a>
             <a href="#kssref-ffe-form-dropdown" data-kss-guides="true">
               <span class="kss-toolbar__tooltip">Toggle example guides</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
@@ -425,12 +428,13 @@
             </a>
             <a href="#kssref-ffe-form-dropdown" data-kss-markup="true">
               <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
                 <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
               </svg>
             </a>
           </p>
+
 
 
       </div>
@@ -459,14 +463,14 @@
             <summary>
                 Markup
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div&gt;
-    &lt;label class&#x3D;&quot;ffe-form-label&quot; for&#x3D;&quot;dropdown-example&quot;&gt;Måned&lt;/label&gt;
-    &lt;select class&#x3D;&quot;ffe-dropdown&quot; id&#x3D;&quot;dropdown-example&quot;&gt;
-        &lt;option value&#x3D;&quot;jan&quot;&gt;Januar&lt;/option&gt;
-        &lt;option value&#x3D;&quot;feb&quot;&gt;Februar&lt;/option&gt;
-        &lt;option value&#x3D;&quot;mar&quot;&gt;Mars&lt;/option&gt;
-    &lt;/select&gt;
-&lt;/div&gt;</code></pre>
+            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-form-label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"dropdown-example"</span>&gt;</span>Måned<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-dropdown"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"dropdown-example"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"jan"</span>&gt;</span>Januar<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"feb"</span>&gt;</span>Februar<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"mar"</span>&gt;</span>Mars<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></code></pre>
           </details>
 
         <div class="kss-source kss-style">
@@ -492,16 +496,16 @@
           <p class="kss-toolbar">
               <a href="#kssref-ffe-form-field-error-message" data-kss-fullscreen="kssref-ffe-form-field-error-message">
                 <span class="kss-toolbar__tooltip">Toggle full screen</span>
-                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
-                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
               </a>
               <a href="item-ffe-form-field-error-message.html" target="_blank">
                 <span class="kss-toolbar__tooltip">Open in new window</span>
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <rect x="0" y="20" width="40" height="44" fill="#fff"/>
                   <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
                   <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
@@ -512,7 +516,7 @@
               </a>
             <a href="#kssref-ffe-form-field-error-message" data-kss-guides="true">
               <span class="kss-toolbar__tooltip">Toggle example guides</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
@@ -533,12 +537,13 @@
             </a>
             <a href="#kssref-ffe-form-field-error-message" data-kss-markup="true">
               <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
                 <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
               </svg>
             </a>
           </p>
+
 
 
       </div>
@@ -560,7 +565,7 @@
             <summary>
                 Markup
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class&#x3D;&quot;ffe-field-error-message&quot;&gt;Noe er feil her&lt;/div&gt;</code></pre>
+            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-field-error-message"</span>&gt;</span>Noe er feil her<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></code></pre>
           </details>
 
         <div class="kss-source kss-style">
@@ -586,16 +591,16 @@
           <p class="kss-toolbar">
               <a href="#kssref-ffe-form-field-info-message" data-kss-fullscreen="kssref-ffe-form-field-info-message">
                 <span class="kss-toolbar__tooltip">Toggle full screen</span>
-                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
-                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
               </a>
               <a href="item-ffe-form-field-info-message.html" target="_blank">
                 <span class="kss-toolbar__tooltip">Open in new window</span>
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <rect x="0" y="20" width="40" height="44" fill="#fff"/>
                   <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
                   <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
@@ -606,7 +611,7 @@
               </a>
             <a href="#kssref-ffe-form-field-info-message" data-kss-guides="true">
               <span class="kss-toolbar__tooltip">Toggle example guides</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
@@ -627,12 +632,13 @@
             </a>
             <a href="#kssref-ffe-form-field-info-message" data-kss-markup="true">
               <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
                 <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
               </svg>
             </a>
           </p>
+
 
 
       </div>
@@ -654,7 +660,7 @@
             <summary>
                 Markup
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class&#x3D;&quot;ffe-field-info-message&quot;&gt;Jo, nå skal du høre&lt;/div&gt;</code></pre>
+            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-field-info-message"</span>&gt;</span>Jo, nå skal du høre<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></code></pre>
           </details>
 
         <div class="kss-source kss-style">
@@ -680,16 +686,16 @@
           <p class="kss-toolbar">
               <a href="#kssref-ffe-form-field-success-message" data-kss-fullscreen="kssref-ffe-form-field-success-message">
                 <span class="kss-toolbar__tooltip">Toggle full screen</span>
-                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
-                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
               </a>
               <a href="item-ffe-form-field-success-message.html" target="_blank">
                 <span class="kss-toolbar__tooltip">Open in new window</span>
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <rect x="0" y="20" width="40" height="44" fill="#fff"/>
                   <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
                   <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
@@ -700,7 +706,7 @@
               </a>
             <a href="#kssref-ffe-form-field-success-message" data-kss-guides="true">
               <span class="kss-toolbar__tooltip">Toggle example guides</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
@@ -721,12 +727,13 @@
             </a>
             <a href="#kssref-ffe-form-field-success-message" data-kss-markup="true">
               <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
                 <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
               </svg>
             </a>
           </p>
+
 
 
       </div>
@@ -748,7 +755,7 @@
             <summary>
                 Markup
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class&#x3D;&quot;ffe-field-success-message&quot;&gt;Dette gikk jo riktig så godt&lt;/div&gt;</code></pre>
+            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-field-success-message"</span>&gt;</span>Dette gikk jo riktig så godt<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></code></pre>
           </details>
 
         <div class="kss-source kss-style">
@@ -774,16 +781,16 @@
           <p class="kss-toolbar">
               <a href="#kssref-ffe-form-fieldset" data-kss-fullscreen="kssref-ffe-form-fieldset">
                 <span class="kss-toolbar__tooltip">Toggle full screen</span>
-                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
-                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
               </a>
               <a href="item-ffe-form-fieldset.html" target="_blank">
                 <span class="kss-toolbar__tooltip">Open in new window</span>
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <rect x="0" y="20" width="40" height="44" fill="#fff"/>
                   <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
                   <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
@@ -794,7 +801,7 @@
               </a>
             <a href="#kssref-ffe-form-fieldset" data-kss-guides="true">
               <span class="kss-toolbar__tooltip">Toggle example guides</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
@@ -815,12 +822,13 @@
             </a>
             <a href="#kssref-ffe-form-fieldset" data-kss-markup="true">
               <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
                 <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
               </svg>
             </a>
           </p>
+
 
 
       </div>
@@ -842,7 +850,7 @@
             <summary>
                 Markup
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;fieldset class&#x3D;&quot;ffe-fieldset&quot;&gt;Fieldset&lt;/fieldset&gt;</code></pre>
+            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-fieldset"</span>&gt;</span>Fieldset<span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span></span></code></pre>
           </details>
 
         <div class="kss-source kss-style">
@@ -868,16 +876,16 @@
           <p class="kss-toolbar">
               <a href="#kssref-ffe-form-file-upload" data-kss-fullscreen="kssref-ffe-form-file-upload">
                 <span class="kss-toolbar__tooltip">Toggle full screen</span>
-                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
-                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
               </a>
               <a href="item-ffe-form-file-upload.html" target="_blank">
                 <span class="kss-toolbar__tooltip">Open in new window</span>
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <rect x="0" y="20" width="40" height="44" fill="#fff"/>
                   <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
                   <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
@@ -888,7 +896,7 @@
               </a>
             <a href="#kssref-ffe-form-file-upload" data-kss-guides="true">
               <span class="kss-toolbar__tooltip">Toggle example guides</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
@@ -909,12 +917,13 @@
             </a>
             <a href="#kssref-ffe-form-file-upload" data-kss-markup="true">
               <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
                 <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
               </svg>
             </a>
           </p>
+
 
 
       </div>
@@ -942,13 +951,13 @@
             <summary>
                 Markup
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class&#x3D;&quot;ffe-file-upload&quot;&gt;
-    &lt;button class&#x3D;&quot;ffe-file-upload__button&quot; aria-invalid&#x3D;&quot;false&quot;&gt;
-        &lt;span class&#x3D;&quot;ffe-file-upload__button__label-icon&quot;&gt;&lt;/span&gt;
-        &lt;span id&#x3D;&quot;file-uploader-label&quot;&gt;Last opp Excel-ark&lt;/span&gt;
-    &lt;/button&gt;
-    &lt;input type&#x3D;&quot;file&quot; id&#x3D;&quot;file-uploader&quot; aria-labelledby&#x3D;&quot;file-uploader-label&quot;&gt;
-&lt;/div&gt;</code></pre>
+            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-file-upload"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-file-upload__button"</span> <span class="hljs-attr">aria-invalid</span>=<span class="hljs-string">"false"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-file-upload__button__label-icon"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"file-uploader-label"</span>&gt;</span>Last opp Excel-ark<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"file"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"file-uploader"</span> <span class="hljs-attr">aria-labelledby</span>=<span class="hljs-string">"file-uploader-label"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></code></pre>
           </details>
 
         <div class="kss-source kss-style">
@@ -974,16 +983,16 @@
           <p class="kss-toolbar">
               <a href="#kssref-ffe-form-form-label" data-kss-fullscreen="kssref-ffe-form-form-label">
                 <span class="kss-toolbar__tooltip">Toggle full screen</span>
-                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
-                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
               </a>
               <a href="item-ffe-form-form-label.html" target="_blank">
                 <span class="kss-toolbar__tooltip">Open in new window</span>
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <rect x="0" y="20" width="40" height="44" fill="#fff"/>
                   <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
                   <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
@@ -994,7 +1003,7 @@
               </a>
             <a href="#kssref-ffe-form-form-label" data-kss-guides="true">
               <span class="kss-toolbar__tooltip">Toggle example guides</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
@@ -1015,12 +1024,13 @@
             </a>
             <a href="#kssref-ffe-form-form-label" data-kss-markup="true">
               <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
                 <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
               </svg>
             </a>
           </p>
+
 
 
       </div>
@@ -1055,7 +1065,7 @@
             <summary>
                 Markup
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;label class&#x3D;&quot;ffe-form-label ffe-form-label[modifier class]&quot;&gt;Label til skjemafelt&lt;/label&gt;</code></pre>
+            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-form-label ffe-form-label[modifier class]"</span>&gt;</span>Label til skjemafelt<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span></span></code></pre>
           </details>
 
         <div class="kss-source kss-style">
@@ -1081,16 +1091,16 @@
           <p class="kss-toolbar">
               <a href="#kssref-ffe-form-input-field" data-kss-fullscreen="kssref-ffe-form-input-field">
                 <span class="kss-toolbar__tooltip">Toggle full screen</span>
-                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
-                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
               </a>
               <a href="item-ffe-form-input-field.html" target="_blank">
                 <span class="kss-toolbar__tooltip">Open in new window</span>
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <rect x="0" y="20" width="40" height="44" fill="#fff"/>
                   <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
                   <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
@@ -1101,7 +1111,7 @@
               </a>
             <a href="#kssref-ffe-form-input-field" data-kss-guides="true">
               <span class="kss-toolbar__tooltip">Toggle example guides</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
@@ -1122,12 +1132,13 @@
             </a>
             <a href="#kssref-ffe-form-input-field" data-kss-markup="true">
               <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
                 <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
               </svg>
             </a>
           </p>
+
 
 
       </div>
@@ -1194,10 +1205,10 @@
             <summary>
                 Markup
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div&gt;
-    &lt;label class&#x3D;&quot;ffe-form-label&quot; for&#x3D;&quot;input-first-name&quot;&gt;Fornavn&lt;/label&gt;
-    &lt;input class&#x3D;&quot;ffe-input-field ffe-input-field[modifier class]&quot; id&#x3D;&quot;input-first-name&quot;&gt;
-&lt;/div&gt;</code></pre>
+            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-form-label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"input-first-name"</span>&gt;</span>Fornavn<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-input-field ffe-input-field[modifier class]"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"input-first-name"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></code></pre>
           </details>
 
         <div class="kss-source kss-style">
@@ -1223,16 +1234,16 @@
           <p class="kss-toolbar">
               <a href="#kssref-ffe-form-input-group" data-kss-fullscreen="kssref-ffe-form-input-group">
                 <span class="kss-toolbar__tooltip">Toggle full screen</span>
-                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
-                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
               </a>
               <a href="item-ffe-form-input-group.html" target="_blank">
                 <span class="kss-toolbar__tooltip">Open in new window</span>
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <rect x="0" y="20" width="40" height="44" fill="#fff"/>
                   <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
                   <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
@@ -1243,7 +1254,7 @@
               </a>
             <a href="#kssref-ffe-form-input-group" data-kss-guides="true">
               <span class="kss-toolbar__tooltip">Toggle example guides</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
@@ -1264,12 +1275,13 @@
             </a>
             <a href="#kssref-ffe-form-input-group" data-kss-markup="true">
               <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
                 <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
               </svg>
             </a>
           </p>
+
 
 
       </div>
@@ -1294,10 +1306,10 @@
             <summary>
                 Markup
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class&#x3D;&quot;ffe-input-group&quot;&gt;
-    &lt;label class&#x3D;&quot;ffe-form-label&quot; for&#x3D;&quot;input-first-name&quot;&gt;Fornavn&lt;/label&gt;
-    &lt;input class&#x3D;&quot;ffe-input-field ffe-input-field&quot; id&#x3D;&quot;input-first-name&quot;&gt;
-&lt;/div&gt;</code></pre>
+            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-input-group"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-form-label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"input-first-name"</span>&gt;</span>Fornavn<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-input-field ffe-input-field"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"input-first-name"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></code></pre>
           </details>
 
         <div class="kss-source kss-style">
@@ -1323,16 +1335,16 @@
           <p class="kss-toolbar">
               <a href="#kssref-ffe-form-phone-number" data-kss-fullscreen="kssref-ffe-form-phone-number">
                 <span class="kss-toolbar__tooltip">Toggle full screen</span>
-                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
-                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
               </a>
               <a href="item-ffe-form-phone-number.html" target="_blank">
                 <span class="kss-toolbar__tooltip">Open in new window</span>
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <rect x="0" y="20" width="40" height="44" fill="#fff"/>
                   <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
                   <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
@@ -1343,7 +1355,7 @@
               </a>
             <a href="#kssref-ffe-form-phone-number" data-kss-guides="true">
               <span class="kss-toolbar__tooltip">Toggle example guides</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
@@ -1364,12 +1376,13 @@
             </a>
             <a href="#kssref-ffe-form-phone-number" data-kss-markup="true">
               <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
                 <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
               </svg>
             </a>
           </p>
+
 
 
       </div>
@@ -1405,21 +1418,21 @@
             <summary>
                 Markup
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class&#x3D;&quot;ffe-phone-number&quot;&gt;
-    &lt;div class&#x3D;&quot;ffe-phone-number__country-code&quot;&gt;
-        &lt;label class&#x3D;&quot;ffe-form-label&quot; for&#x3D;&quot;phone-countrycode&quot;&gt;Landskode&lt;/label&gt;
-        &lt;div class&#x3D;&quot;ffe-phone-number__input-group&quot;&gt;
-            &lt;span class&#x3D;&quot;ffe-phone-number__plus&quot;&gt;+&lt;/span&gt;
-            &lt;input type&#x3D;&quot;tel&quot; id&#x3D;&quot;phone-countrycode&quot; class&#x3D;&quot;ffe-input-field ffe-phone-number__country-code-input&quot;
-                value&#x3D;&quot;47&quot;&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class&#x3D;&quot;ffe-phone-number__number&quot;&gt;
-        &lt;label class&#x3D;&quot;ffe-form-label&quot; for&#x3D;&quot;phone-number&quot;&gt;Telefonnummer&lt;/label&gt;
-        &lt;input type&#x3D;&quot;tel&quot; id&#x3D;&quot;phone-number&quot; class&#x3D;&quot;ffe-input-field ffe-phone-number__phone-input&quot;
-            value&#x3D;&quot;123123123&quot;&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-phone-number"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-phone-number__country-code"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-form-label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"phone-countrycode"</span>&gt;</span>Landskode<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-phone-number__input-group"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-phone-number__plus"</span>&gt;</span>+<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"tel"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"phone-countrycode"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-input-field ffe-phone-number__country-code-input"</span>
+                <span class="hljs-attr">value</span>=<span class="hljs-string">"47"</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-phone-number__number"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-form-label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"phone-number"</span>&gt;</span>Telefonnummer<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"tel"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"phone-number"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-input-field ffe-phone-number__phone-input"</span>
+            <span class="hljs-attr">value</span>=<span class="hljs-string">"123123123"</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></code></pre>
           </details>
 
         <div class="kss-source kss-style">
@@ -1445,16 +1458,16 @@
           <p class="kss-toolbar">
               <a href="#kssref-ffe-form-radio-block" data-kss-fullscreen="kssref-ffe-form-radio-block">
                 <span class="kss-toolbar__tooltip">Toggle full screen</span>
-                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
-                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
               </a>
               <a href="item-ffe-form-radio-block.html" target="_blank">
                 <span class="kss-toolbar__tooltip">Open in new window</span>
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <rect x="0" y="20" width="40" height="44" fill="#fff"/>
                   <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
                   <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
@@ -1465,7 +1478,7 @@
               </a>
             <a href="#kssref-ffe-form-radio-block" data-kss-guides="true">
               <span class="kss-toolbar__tooltip">Toggle example guides</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
@@ -1486,12 +1499,13 @@
             </a>
             <a href="#kssref-ffe-form-radio-block" data-kss-markup="true">
               <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
                 <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
               </svg>
             </a>
           </p>
+
 
 
       </div>
@@ -1537,31 +1551,31 @@
             <summary>
                 Markup
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;fieldset class&#x3D;&quot;ffe-fieldset ffe-input-group&quot;&gt;
-    &lt;legend class&#x3D;&quot;ffe-form-label&quot;&gt;Hvem eier bilen du skal forsikre?&lt;/legend&gt;
-    &lt;div class&#x3D;&quot;ffe-radio-block&quot;&gt;
-        &lt;input type&#x3D;&quot;radio&quot; class&#x3D;&quot;ffe-radio-input&quot; id&#x3D;&quot;radio-block-1&quot; name&#x3D;&quot;owner&quot; value&#x3D;&quot;you&quot;
-            aria-invalid&#x3D;&quot;false&quot;&gt;
-        &lt;div class&#x3D;&quot;ffe-radio-block__content&quot;&gt;
-            &lt;label class&#x3D;&quot;ffe-radio-block__header&quot; for&#x3D;&quot;radio-block-1&quot;&gt;Du&lt;/label&gt;
-            &lt;div class&#x3D;&quot;ffe-radio-block__wrapper ffe-radio-block__wrapper--empty&quot;&gt;&lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class&#x3D;&quot;ffe-radio-block&quot;&gt;
-        &lt;input type&#x3D;&quot;radio&quot; class&#x3D;&quot;ffe-radio-input&quot; id&#x3D;&quot;radio-block-2&quot; name&#x3D;&quot;owner&quot; value&#x3D;&quot;partner&quot;
-            aria-invalid&#x3D;&quot;false&quot;&gt;
-        &lt;div class&#x3D;&quot;ffe-radio-block__content&quot;&gt;
-            &lt;label class&#x3D;&quot;ffe-radio-block__header&quot; for&#x3D;&quot;radio-block-2&quot;&gt;Ektefelle, samboer eller registrert partner&lt;/label&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class&#x3D;&quot;ffe-radio-block&quot;&gt;
-        &lt;input type&#x3D;&quot;radio&quot; class&#x3D;&quot;ffe-radio-input&quot; id&#x3D;&quot;radio-block-3&quot; name&#x3D;&quot;owner&quot; value&#x3D;&quot;leasing-company&quot;
-            aria-invalid&#x3D;&quot;false&quot;&gt;
-        &lt;div class&#x3D;&quot;ffe-radio-block__content&quot;&gt;
-            &lt;label class&#x3D;&quot;ffe-radio-block__header&quot; for&#x3D;&quot;radio-block-3&quot;&gt;Leasingselskap&lt;/label&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/fieldset&gt;</code></pre>
+            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-fieldset ffe-input-group"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">legend</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-form-label"</span>&gt;</span>Hvem eier bilen du skal forsikre?<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-radio-block"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-radio-input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"radio-block-1"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"owner"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"you"</span>
+            <span class="hljs-attr">aria-invalid</span>=<span class="hljs-string">"false"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-radio-block__content"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-radio-block__header"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"radio-block-1"</span>&gt;</span>Du<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-radio-block__wrapper ffe-radio-block__wrapper--empty"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-radio-block"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-radio-input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"radio-block-2"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"owner"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"partner"</span>
+            <span class="hljs-attr">aria-invalid</span>=<span class="hljs-string">"false"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-radio-block__content"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-radio-block__header"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"radio-block-2"</span>&gt;</span>Ektefelle, samboer eller registrert partner<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-radio-block"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-radio-input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"radio-block-3"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"owner"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"leasing-company"</span>
+            <span class="hljs-attr">aria-invalid</span>=<span class="hljs-string">"false"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-radio-block__content"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-radio-block__header"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"radio-block-3"</span>&gt;</span>Leasingselskap<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span></span></code></pre>
           </details>
 
         <div class="kss-source kss-style">
@@ -1587,16 +1601,16 @@
           <p class="kss-toolbar">
               <a href="#kssref-ffe-form-radio-button" data-kss-fullscreen="kssref-ffe-form-radio-button">
                 <span class="kss-toolbar__tooltip">Toggle full screen</span>
-                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
-                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
               </a>
               <a href="item-ffe-form-radio-button.html" target="_blank">
                 <span class="kss-toolbar__tooltip">Open in new window</span>
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <rect x="0" y="20" width="40" height="44" fill="#fff"/>
                   <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
                   <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
@@ -1607,7 +1621,7 @@
               </a>
             <a href="#kssref-ffe-form-radio-button" data-kss-guides="true">
               <span class="kss-toolbar__tooltip">Toggle example guides</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
@@ -1628,12 +1642,13 @@
             </a>
             <a href="#kssref-ffe-form-radio-button" data-kss-markup="true">
               <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
                 <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
               </svg>
             </a>
           </p>
+
 
 
       </div>
@@ -1711,18 +1726,18 @@
             <summary>
                 Markup
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;fieldset class&#x3D;&quot;ffe-fieldset ffe-input-group&quot;&gt;
-    &lt;legend class&#x3D;&quot;ffe-form-label&quot;&gt;Hva er din favorittfarge?&lt;/legend&gt;
-    &lt;input type&#x3D;&quot;radio&quot; aria-invalid&#x3D;&quot;false&quot; class&#x3D;&quot;ffe-radio-input&quot; id&#x3D;&quot;base-radio-button-1&quot;
-        value&#x3D;&quot;red&quot; name&#x3D;&quot;favoriteColor&quot;&gt;
-    &lt;label for&#x3D;&quot;base-radio-button-1&quot; class&#x3D;&quot;ffe-radio-button ffe-radio-button[modifier class]&quot;&gt;Rød&lt;/label&gt;
-    &lt;input type&#x3D;&quot;radio&quot; aria-invalid&#x3D;&quot;false&quot; class&#x3D;&quot;ffe-radio-input&quot; id&#x3D;&quot;base-radio-button-2&quot;
-        value&#x3D;&quot;blue&quot; name&#x3D;&quot;favoriteColor&quot;&gt;
-    &lt;label for&#x3D;&quot;base-radio-button-2&quot; class&#x3D;&quot;ffe-radio-button ffe-radio-button[modifier class]&quot;&gt;Blå&lt;/label&gt;
-    &lt;input type&#x3D;&quot;radio&quot; aria-invalid&#x3D;&quot;false&quot; class&#x3D;&quot;ffe-radio-input&quot; id&#x3D;&quot;base-radio-button-3&quot;
-        value&#x3D;&quot;yellow&quot; name&#x3D;&quot;favoriteColor&quot;&gt;
-    &lt;label for&#x3D;&quot;base-radio-button-3&quot; class&#x3D;&quot;ffe-radio-button ffe-radio-button[modifier class]&quot;&gt;Gul&lt;/label&gt;
-&lt;/fieldset&gt;</code></pre>
+            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-fieldset ffe-input-group"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">legend</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-form-label"</span>&gt;</span>Hva er din favorittfarge?<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">aria-invalid</span>=<span class="hljs-string">"false"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-radio-input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"base-radio-button-1"</span>
+        <span class="hljs-attr">value</span>=<span class="hljs-string">"red"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"favoriteColor"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"base-radio-button-1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-radio-button ffe-radio-button[modifier class]"</span>&gt;</span>Rød<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">aria-invalid</span>=<span class="hljs-string">"false"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-radio-input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"base-radio-button-2"</span>
+        <span class="hljs-attr">value</span>=<span class="hljs-string">"blue"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"favoriteColor"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"base-radio-button-2"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-radio-button ffe-radio-button[modifier class]"</span>&gt;</span>Blå<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">aria-invalid</span>=<span class="hljs-string">"false"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-radio-input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"base-radio-button-3"</span>
+        <span class="hljs-attr">value</span>=<span class="hljs-string">"yellow"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"favoriteColor"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"base-radio-button-3"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-radio-button ffe-radio-button[modifier class]"</span>&gt;</span>Gul<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span></span></code></pre>
           </details>
 
         <div class="kss-source kss-style">
@@ -1748,16 +1763,16 @@
           <p class="kss-toolbar">
               <a href="#kssref-ffe-form-radio-switch" data-kss-fullscreen="kssref-ffe-form-radio-switch">
                 <span class="kss-toolbar__tooltip">Toggle full screen</span>
-                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
-                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
               </a>
               <a href="item-ffe-form-radio-switch.html" target="_blank">
                 <span class="kss-toolbar__tooltip">Open in new window</span>
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <rect x="0" y="20" width="40" height="44" fill="#fff"/>
                   <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
                   <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
@@ -1768,7 +1783,7 @@
               </a>
             <a href="#kssref-ffe-form-radio-switch" data-kss-guides="true">
               <span class="kss-toolbar__tooltip">Toggle example guides</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
@@ -1789,12 +1804,13 @@
             </a>
             <a href="#kssref-ffe-form-radio-switch" data-kss-markup="true">
               <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
                 <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
               </svg>
             </a>
           </p>
+
 
 
       </div>
@@ -1824,15 +1840,15 @@
             <summary>
                 Markup
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;fieldset class&#x3D;&quot;ffe-fieldset ffe-input-group&quot;&gt;
-    &lt;legend class&#x3D;&quot;ffe-form-label&quot;&gt;Vil bilen bli kjørt av sjåfører under 23 år?&lt;/legend&gt;
-    &lt;input type&#x3D;&quot;radio&quot; aria-invalid&#x3D;&quot;false&quot; class&#x3D;&quot;ffe-radio-input&quot; id&#x3D;&quot;radio-switch-1&quot;
-        value&#x3D;&quot;true&quot; name&#x3D;&quot;under23&quot;&gt;
-    &lt;label for&#x3D;&quot;radio-switch-1&quot; class&#x3D;&quot;ffe-radio-switch&quot;&gt;Ja&lt;/label&gt;
-    &lt;input type&#x3D;&quot;radio&quot; aria-invalid&#x3D;&quot;false&quot; class&#x3D;&quot;ffe-radio-input&quot; id&#x3D;&quot;radio-switch-2&quot;
-        value&#x3D;&quot;false&quot; name&#x3D;&quot;under23&quot;&gt;
-    &lt;label for&#x3D;&quot;radio-switch-2&quot; class&#x3D;&quot;ffe-radio-switch&quot;&gt;Nei&lt;/label&gt;
-&lt;/fieldset&gt;</code></pre>
+            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-fieldset ffe-input-group"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">legend</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-form-label"</span>&gt;</span>Vil bilen bli kjørt av sjåfører under 23 år?<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">aria-invalid</span>=<span class="hljs-string">"false"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-radio-input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"radio-switch-1"</span>
+        <span class="hljs-attr">value</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"under23"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"radio-switch-1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-radio-switch"</span>&gt;</span>Ja<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">aria-invalid</span>=<span class="hljs-string">"false"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-radio-input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"radio-switch-2"</span>
+        <span class="hljs-attr">value</span>=<span class="hljs-string">"false"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"under23"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"radio-switch-2"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-radio-switch"</span>&gt;</span>Nei<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span></span></code></pre>
           </details>
 
         <div class="kss-source kss-style">
@@ -1858,16 +1874,16 @@
           <p class="kss-toolbar">
               <a href="#kssref-ffe-form-textarea" data-kss-fullscreen="kssref-ffe-form-textarea">
                 <span class="kss-toolbar__tooltip">Toggle full screen</span>
-                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
-                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
               </a>
               <a href="item-ffe-form-textarea.html" target="_blank">
                 <span class="kss-toolbar__tooltip">Open in new window</span>
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <rect x="0" y="20" width="40" height="44" fill="#fff"/>
                   <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
                   <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
@@ -1878,7 +1894,7 @@
               </a>
             <a href="#kssref-ffe-form-textarea" data-kss-guides="true">
               <span class="kss-toolbar__tooltip">Toggle example guides</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
@@ -1899,12 +1915,13 @@
             </a>
             <a href="#kssref-ffe-form-textarea" data-kss-markup="true">
               <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
                 <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
               </svg>
             </a>
           </p>
+
 
 
       </div>
@@ -1929,10 +1946,10 @@
             <summary>
                 Markup
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div&gt;
-    &lt;label class&#x3D;&quot;ffe-form-label&quot; for&#x3D;&quot;textarea-example&quot;&gt;Beskriv skaden&lt;/label&gt;
-    &lt;textarea class&#x3D;&quot;ffe-textarea&quot; id&#x3D;&quot;textarea-example&quot; rows&#x3D;&quot;8&quot;&gt;Dette er et tekstfelt for lengre tekster.&lt;/textarea&gt;
-&lt;/div&gt;</code></pre>
+            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-form-label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"textarea-example"</span>&gt;</span>Beskriv skaden<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">textarea</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-textarea"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"textarea-example"</span> <span class="hljs-attr">rows</span>=<span class="hljs-string">"8"</span>&gt;</span>Dette er et tekstfelt for lengre tekster.<span class="hljs-tag">&lt;/<span class="hljs-name">textarea</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></code></pre>
           </details>
 
         <div class="kss-source kss-style">
@@ -1958,16 +1975,16 @@
           <p class="kss-toolbar">
               <a href="#kssref-ffe-form-tooltip" data-kss-fullscreen="kssref-ffe-form-tooltip">
                 <span class="kss-toolbar__tooltip">Toggle full screen</span>
-                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
-                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
               </a>
               <a href="item-ffe-form-tooltip.html" target="_blank">
                 <span class="kss-toolbar__tooltip">Open in new window</span>
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <rect x="0" y="20" width="40" height="44" fill="#fff"/>
                   <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
                   <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
@@ -1978,7 +1995,7 @@
               </a>
             <a href="#kssref-ffe-form-tooltip" data-kss-guides="true">
               <span class="kss-toolbar__tooltip">Toggle example guides</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
@@ -1999,12 +2016,13 @@
             </a>
             <a href="#kssref-ffe-form-tooltip" data-kss-markup="true">
               <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
                 <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
               </svg>
             </a>
           </p>
+
 
 
       </div>
@@ -2026,7 +2044,7 @@
             <summary>
                 Markup
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;button class&#x3D;&quot;ffe-tooltip__icon&quot; type&#x3D;&quot;button&quot;&gt;?&lt;/button&gt;</code></pre>
+            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-tooltip__icon"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>?<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span></code></pre>
           </details>
 
         <div class="kss-source kss-style">
@@ -2035,16 +2053,15 @@
 
     </section>
 </article>
+</main>
 
 <!-- SCRIPTS -->
 <script src="kss-assets/kss.js"></script>
 <script src="kss-assets/scrollspy.js"></script>
-<script src="kss-assets/prettify.js"></script>
 <script src="kss-assets/kss-fullscreen.js"></script>
 <script src="kss-assets/kss-guides.js"></script>
 <script src="kss-assets/kss-markup.js"></script>
 <script>
-  prettyPrint();
   var spy = new ScrollSpy('#kss-node', {
     nav: '.kss-nav__menu-child > li > a',
     className: 'is-in-viewport'

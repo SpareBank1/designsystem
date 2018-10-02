@@ -18,7 +18,7 @@
   <header class="kss-header">
     <h1 class="kss-doc-title">KSS Style Guide</h1>
   </header>
-  <nav class="kss-nav">
+  <nav class="kss-nav" aria-label="Style Guide">
     <ul class="kss-nav__menu">
       <li class="kss-nav__menu-item">
         <a class="kss-nav__menu-link" href="./">
@@ -104,7 +104,8 @@
     </ul>
   </nav>
 </div>
-<article role="main" class="kss-main">
+<main class="kss-main" aria-label="Content">
+  <article>
 
     <div id="kssref-ffe-system-message" class="kss-section kss-section--depth-1 is-fullscreen">
 
@@ -124,7 +125,7 @@
           <p class="kss-toolbar">
             <a href="#kssref-ffe-system-message" data-kss-guides="true">
               <span class="kss-toolbar__tooltip">Toggle example guides</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
@@ -145,12 +146,13 @@
             </a>
             <a href="#kssref-ffe-system-message" data-kss-markup="true">
               <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
                 <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
               </svg>
             </a>
           </p>
+
 
 
       </div>
@@ -290,22 +292,22 @@
             <summary>
                 Markup
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class&#x3D;&quot;ffe-system-message-wrapper ffe-system-message-wrapper[modifier class]&quot;&gt;
-    &lt;div class&#x3D;&quot;ffe-system-message&quot;&gt;
-        &lt;span class&#x3D;&quot;ffe-system-message__icon&quot;&gt;
-            &lt;svg focusable&#x3D;&quot;false&quot; viewBox&#x3D;&quot;0 0 200 200&quot; height&#x3D;&quot;150&quot; width&#x3D;&quot;150&quot;&gt;
-                &lt;path d&#x3D;&quot;M 99.881897,0.6403911 A 16.561559,16.561559 0 0 0 83.588292,17.412148 l 0,93.862982 a 16.561559,16.561559 0 1 0 33.102158,0 l 0,-93.862982 A 16.561559,16.561559 0 0 0 99.881897,0.6403911 z M 100.13937,162.6938 c -9.145783,0 -16.551078,7.4053 -16.551078,16.55107 0,9.1458 7.405295,16.58787 16.551078,16.58787 9.14579,0 16.55108,-7.44207 16.55108,-16.58787 0,-9.14577 -7.40529,-16.55107 -16.55108,-16.55107 z&quot;&gt;&lt;/path&gt;
-            &lt;/svg&gt;
-        &lt;/span&gt;
-        &lt;p class&#x3D;&quot;ffe-system-message__content&quot;&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
-        &lt;button aria-label&#x3D;&quot;Lukk&quot; class&#x3D;&quot;ffe-system-message__close&quot;
-            type&#x3D;&quot;button&quot;&gt;
-            &lt;svg focusable&#x3D;&quot;false&quot; viewBox&#x3D;&quot;0 0 200 200&quot; height&#x3D;&quot;150&quot; width&#x3D;&quot;150&quot;&gt;
-                &lt;path d&#x3D;&quot;M18.77,0c-3.562,0-7.125,1.347-9.834,4.044l-4.429,4.439c-5.381,5.394-5.381,14.25,0,19.68l71.19,71.83-71.66,71.83c-5.381,5.394-5.381,14.25,0,19.68l4.429,4.439c5.381,5.394,14.22,5.394,19.64,0l71.66-71.83,71.65,71.83c5.381,5.394,14.23,5.394,19.65,0l4.429-4.439c5.381-5.394,5.381-14.25,0-19.68l-71.19-71.83,71.66-71.83c5.381-4.914,5.381-13.78,0-19.21l-4.429-4.423c-5.381-5.394-14.22-5.394-19.64,0l-72.13,71.34-71.17-71.83c-2.691-2.697-6.257-4.044-9.819-4.044z&quot;&gt;&lt;/path&gt;
-            &lt;/svg&gt;
-        &lt;/button&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-system-message-wrapper ffe-system-message-wrapper[modifier class]"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-system-message"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-system-message__icon"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">"false"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 200 200"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"150"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"150"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">d</span>=<span class="hljs-string">"M 99.881897,0.6403911 A 16.561559,16.561559 0 0 0 83.588292,17.412148 l 0,93.862982 a 16.561559,16.561559 0 1 0 33.102158,0 l 0,-93.862982 A 16.561559,16.561559 0 0 0 99.881897,0.6403911 z M 100.13937,162.6938 c -9.145783,0 -16.551078,7.4053 -16.551078,16.55107 0,9.1458 7.405295,16.58787 16.551078,16.58787 9.14579,0 16.55108,-7.44207 16.55108,-16.58787 0,-9.14577 -7.40529,-16.55107 -16.55108,-16.55107 z"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">path</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-system-message__content"</span>&gt;</span>Lorem ipsum dolor sit amet.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Lukk"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-system-message__close"</span>
+            <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">"false"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 200 200"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"150"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"150"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">d</span>=<span class="hljs-string">"M18.77,0c-3.562,0-7.125,1.347-9.834,4.044l-4.429,4.439c-5.381,5.394-5.381,14.25,0,19.68l71.19,71.83-71.66,71.83c-5.381,5.394-5.381,14.25,0,19.68l4.429,4.439c5.381,5.394,14.22,5.394,19.64,0l71.66-71.83,71.65,71.83c5.381,5.394,14.23,5.394,19.65,0l4.429-4.439c5.381-5.394,5.381-14.25,0-19.68l-71.19-71.83,71.66-71.83c5.381-4.914,5.381-13.78,0-19.21l-4.429-4.423c-5.381-5.394-14.22-5.394-19.64,0l-72.13,71.34-71.17-71.83c-2.691-2.697-6.257-4.044-9.819-4.044z"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">path</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></code></pre>
           </details>
 
         <div class="kss-source kss-style">
@@ -314,16 +316,15 @@
 
     </div>
 </article>
+</main>
 
 <!-- SCRIPTS -->
 <script src="kss-assets/kss.js"></script>
 <script src="kss-assets/scrollspy.js"></script>
-<script src="kss-assets/prettify.js"></script>
 <script src="kss-assets/kss-fullscreen.js"></script>
 <script src="kss-assets/kss-guides.js"></script>
 <script src="kss-assets/kss-markup.js"></script>
 <script>
-  prettyPrint();
   var spy = new ScrollSpy('#kss-node', {
     nav: '.kss-nav__menu-child > li > a',
     className: 'is-in-viewport'

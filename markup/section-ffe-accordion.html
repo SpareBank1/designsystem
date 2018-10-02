@@ -18,7 +18,7 @@
   <header class="kss-header">
     <h1 class="kss-doc-title">KSS Style Guide</h1>
   </header>
-  <nav class="kss-nav">
+  <nav class="kss-nav" aria-label="Style Guide">
     <ul class="kss-nav__menu">
       <li class="kss-nav__menu-item">
         <a class="kss-nav__menu-link" href="./">
@@ -104,7 +104,8 @@
     </ul>
   </nav>
 </div>
-<article role="main" class="kss-main">
+<main class="kss-main" aria-label="Content">
+  <article>
 
     <div id="kssref-ffe-accordion" class="kss-section kss-section--depth-1 ">
 
@@ -124,16 +125,16 @@
           <p class="kss-toolbar">
               <a href="#kssref-ffe-accordion" data-kss-fullscreen="kssref-ffe-accordion">
                 <span class="kss-toolbar__tooltip">Toggle full screen</span>
-                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
-                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
               </a>
               <a href="item-ffe-accordion.html" target="_blank">
                 <span class="kss-toolbar__tooltip">Open in new window</span>
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <rect x="0" y="20" width="40" height="44" fill="#fff"/>
                   <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
                   <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
@@ -144,7 +145,7 @@
               </a>
             <a href="#kssref-ffe-accordion" data-kss-guides="true">
               <span class="kss-toolbar__tooltip">Toggle example guides</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
@@ -165,12 +166,13 @@
             </a>
             <a href="#kssref-ffe-accordion" data-kss-markup="true">
               <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
                 <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
               </svg>
             </a>
           </p>
+
 
 
       </div>
@@ -297,53 +299,53 @@
             <summary>
                 Markup
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;ul aria-multiselectable&#x3D;&quot;true&quot; class&#x3D;&quot;ffe-accordion ffe-accordion[modifier class]&quot; role&#x3D;&quot;tablist&quot;&gt;
-    &lt;li class&#x3D;&quot;ffe-accordion-item&quot;&gt;
-        &lt;div tabindex&#x3D;&quot;0&quot; aria-controls&#x3D;&quot;panel-df0e51a1-cc6f-49f0-af8d-203595fe9d20-undefined&quot; aria-expanded&#x3D;&quot;false&quot; class&#x3D;&quot;ffe-accordion-item__toggler&quot; id&#x3D;&quot;tab-df0e51a1-cc6f-49f0-af8d-203595fe9d20-undefined&quot; role&#x3D;&quot;tab&quot;&gt;
-            &lt;span class&#x3D;&quot;ffe-accordion-item__toggler-content&quot;&gt;
-                &lt;span class&#x3D;&quot;ffe-accordion-item__title&quot;&gt;Tittel&lt;/span&gt;
-                &lt;svg focusable&#x3D;&quot;false&quot; class&#x3D;&quot;ffe-accordion-item__icon&quot; viewBox&#x3D;&quot;0 0 200 200&quot; height&#x3D;&quot;150&quot; width&#x3D;&quot;150&quot;&gt;
-                    &lt;path d&#x3D;&quot;m16.171492,41.999998c-4.143269,0-8.2852797,1.57464-11.4277496,4.706478-6.3249899,6.283609-6.3249899,16.499474,0,22.803034l84.0286676,83.76282c6.30496,6.30356,16.54928,6.30356,22.87426,0l83.60959-83.26412c6.32499-6.28361,6.32499-16.499477,0-22.803038-6.30496-6.30356-16.55553-6.30356-22.88051,0l-72.13806,71.893768-72.613438-72.373767c-3.14247-3.151781-7.29074-4.725174-11.433999-4.725174h-0.0188z&quot;&gt;&lt;/path&gt;
-                &lt;/svg&gt;
-            &lt;/span&gt;
-        &lt;/div&gt;
-        &lt;div class&#x3D;&quot;ffe-accordion-item__content-container&quot;&gt;
-            &lt;div class&#x3D;&quot;ffe-accordion-item__content&quot; role&#x3D;&quot;tabpanel&quot; id&#x3D;&quot;panel-df0e51a1-cc6f-49f0-af8d-203595fe9d20-undefined&quot; aria-hidden&#x3D;&quot;true&quot; aria-labelledby&#x3D;&quot;tab-df0e51a1-cc6f-49f0-af8d-203595fe9d20-undefined&quot;&gt;
+            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">aria-multiselectable</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-accordion ffe-accordion[modifier class]"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"tablist"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-accordion-item"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">"panel-df0e51a1-cc6f-49f0-af8d-203595fe9d20-undefined"</span> <span class="hljs-attr">aria-expanded</span>=<span class="hljs-string">"false"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-accordion-item__toggler"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"tab-df0e51a1-cc6f-49f0-af8d-203595fe9d20-undefined"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"tab"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-accordion-item__toggler-content"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-accordion-item__title"</span>&gt;</span>Tittel<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">"false"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-accordion-item__icon"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 200 200"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"150"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"150"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">d</span>=<span class="hljs-string">"m16.171492,41.999998c-4.143269,0-8.2852797,1.57464-11.4277496,4.706478-6.3249899,6.283609-6.3249899,16.499474,0,22.803034l84.0286676,83.76282c6.30496,6.30356,16.54928,6.30356,22.87426,0l83.60959-83.26412c6.32499-6.28361,6.32499-16.499477,0-22.803038-6.30496-6.30356-16.55553-6.30356-22.88051,0l-72.13806,71.893768-72.613438-72.373767c-3.14247-3.151781-7.29074-4.725174-11.433999-4.725174h-0.0188z"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">path</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-accordion-item__content-container"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-accordion-item__content"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"tabpanel"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"panel-df0e51a1-cc6f-49f0-af8d-203595fe9d20-undefined"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">aria-labelledby</span>=<span class="hljs-string">"tab-df0e51a1-cc6f-49f0-af8d-203595fe9d20-undefined"</span>&gt;</span>
                  Skjult innhold
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/li&gt;
-    &lt;li class&#x3D;&quot;ffe-accordion-item ffe-accordion-item--open&quot;&gt;
-        &lt;div tabindex&#x3D;&quot;0&quot; aria-controls&#x3D;&quot;panel-df0e51a1-cc6f-49f0-af8d-203595fe9d20-undefined&quot; aria-expanded&#x3D;&quot;false&quot; class&#x3D;&quot;ffe-accordion-item__toggler&quot; id&#x3D;&quot;tab-df0e51a1-cc6f-49f0-af8d-203595fe9d20-undefined&quot; role&#x3D;&quot;tab&quot;&gt;
-            &lt;span class&#x3D;&quot;ffe-accordion-item__toggler-content&quot;&gt;
-                &lt;span class&#x3D;&quot;ffe-accordion-item__title&quot;&gt;Enda en tittel&lt;/span&gt;
-                &lt;svg focusable&#x3D;&quot;false&quot; class&#x3D;&quot;ffe-accordion-item__icon&quot; viewBox&#x3D;&quot;0 0 200 200&quot; height&#x3D;&quot;150&quot; width&#x3D;&quot;150&quot;&gt;
-                    &lt;path d&#x3D;&quot;m16.171492,41.999998c-4.143269,0-8.2852797,1.57464-11.4277496,4.706478-6.3249899,6.283609-6.3249899,16.499474,0,22.803034l84.0286676,83.76282c6.30496,6.30356,16.54928,6.30356,22.87426,0l83.60959-83.26412c6.32499-6.28361,6.32499-16.499477,0-22.803038-6.30496-6.30356-16.55553-6.30356-22.88051,0l-72.13806,71.893768-72.613438-72.373767c-3.14247-3.151781-7.29074-4.725174-11.433999-4.725174h-0.0188z&quot;&gt;&lt;/path&gt;
-                &lt;/svg&gt;
-            &lt;/span&gt;
-        &lt;/div&gt;
-        &lt;div class&#x3D;&quot;ffe-accordion-item__content-container&quot;&gt;
-            &lt;div class&#x3D;&quot;ffe-accordion-item__content&quot; role&#x3D;&quot;tabpanel&quot; id&#x3D;&quot;panel-df0e51a1-cc6f-49f0-af8d-203595fe9d20-undefined&quot; aria-hidden&#x3D;&quot;true&quot; aria-labelledby&#x3D;&quot;tab-df0e51a1-cc6f-49f0-af8d-203595fe9d20-undefined&quot;&gt;
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-accordion-item ffe-accordion-item--open"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">"panel-df0e51a1-cc6f-49f0-af8d-203595fe9d20-undefined"</span> <span class="hljs-attr">aria-expanded</span>=<span class="hljs-string">"false"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-accordion-item__toggler"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"tab-df0e51a1-cc6f-49f0-af8d-203595fe9d20-undefined"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"tab"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-accordion-item__toggler-content"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-accordion-item__title"</span>&gt;</span>Enda en tittel<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">"false"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-accordion-item__icon"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 200 200"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"150"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"150"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">d</span>=<span class="hljs-string">"m16.171492,41.999998c-4.143269,0-8.2852797,1.57464-11.4277496,4.706478-6.3249899,6.283609-6.3249899,16.499474,0,22.803034l84.0286676,83.76282c6.30496,6.30356,16.54928,6.30356,22.87426,0l83.60959-83.26412c6.32499-6.28361,6.32499-16.499477,0-22.803038-6.30496-6.30356-16.55553-6.30356-22.88051,0l-72.13806,71.893768-72.613438-72.373767c-3.14247-3.151781-7.29074-4.725174-11.433999-4.725174h-0.0188z"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">path</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-accordion-item__content-container"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-accordion-item__content"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"tabpanel"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"panel-df0e51a1-cc6f-49f0-af8d-203595fe9d20-undefined"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">aria-labelledby</span>=<span class="hljs-string">"tab-df0e51a1-cc6f-49f0-af8d-203595fe9d20-undefined"</span>&gt;</span>
                 Ikke skjult innhold
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/li&gt;
-    &lt;li class&#x3D;&quot;ffe-accordion-item&quot;&gt;
-        &lt;div tabindex&#x3D;&quot;0&quot; aria-controls&#x3D;&quot;panel-df0e51a1-cc6f-49f0-af8d-203595fe9d20-undefined&quot; aria-expanded&#x3D;&quot;false&quot; class&#x3D;&quot;ffe-accordion-item__toggler&quot; id&#x3D;&quot;tab-df0e51a1-cc6f-49f0-af8d-203595fe9d20-undefined&quot; role&#x3D;&quot;tab&quot;&gt;
-            &lt;span class&#x3D;&quot;ffe-accordion-item__toggler-content&quot;&gt;
-                &lt;span class&#x3D;&quot;ffe-accordion-item__title&quot;&gt;En siste tittel&lt;/span&gt;
-                &lt;svg focusable&#x3D;&quot;false&quot; class&#x3D;&quot;ffe-accordion-item__icon&quot; viewBox&#x3D;&quot;0 0 200 200&quot; height&#x3D;&quot;150&quot; width&#x3D;&quot;150&quot;&gt;
-                    &lt;path d&#x3D;&quot;m16.171492,41.999998c-4.143269,0-8.2852797,1.57464-11.4277496,4.706478-6.3249899,6.283609-6.3249899,16.499474,0,22.803034l84.0286676,83.76282c6.30496,6.30356,16.54928,6.30356,22.87426,0l83.60959-83.26412c6.32499-6.28361,6.32499-16.499477,0-22.803038-6.30496-6.30356-16.55553-6.30356-22.88051,0l-72.13806,71.893768-72.613438-72.373767c-3.14247-3.151781-7.29074-4.725174-11.433999-4.725174h-0.0188z&quot;&gt;&lt;/path&gt;
-                &lt;/svg&gt;
-            &lt;/span&gt;
-        &lt;/div&gt;
-        &lt;div class&#x3D;&quot;ffe-accordion-item__content-container&quot;&gt;
-            &lt;div class&#x3D;&quot;ffe-accordion-item__content&quot; role&#x3D;&quot;tabpanel&quot; id&#x3D;&quot;panel-df0e51a1-cc6f-49f0-af8d-203595fe9d20-undefined&quot; aria-hidden&#x3D;&quot;true&quot; aria-labelledby&#x3D;&quot;tab-df0e51a1-cc6f-49f0-af8d-203595fe9d20-undefined&quot;&gt;
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-accordion-item"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">aria-controls</span>=<span class="hljs-string">"panel-df0e51a1-cc6f-49f0-af8d-203595fe9d20-undefined"</span> <span class="hljs-attr">aria-expanded</span>=<span class="hljs-string">"false"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-accordion-item__toggler"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"tab-df0e51a1-cc6f-49f0-af8d-203595fe9d20-undefined"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"tab"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-accordion-item__toggler-content"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-accordion-item__title"</span>&gt;</span>En siste tittel<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">focusable</span>=<span class="hljs-string">"false"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-accordion-item__icon"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 200 200"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"150"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"150"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">d</span>=<span class="hljs-string">"m16.171492,41.999998c-4.143269,0-8.2852797,1.57464-11.4277496,4.706478-6.3249899,6.283609-6.3249899,16.499474,0,22.803034l84.0286676,83.76282c6.30496,6.30356,16.54928,6.30356,22.87426,0l83.60959-83.26412c6.32499-6.28361,6.32499-16.499477,0-22.803038-6.30496-6.30356-16.55553-6.30356-22.88051,0l-72.13806,71.893768-72.613438-72.373767c-3.14247-3.151781-7.29074-4.725174-11.433999-4.725174h-0.0188z"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">path</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-accordion-item__content-container"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-accordion-item__content"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"tabpanel"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"panel-df0e51a1-cc6f-49f0-af8d-203595fe9d20-undefined"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">aria-labelledby</span>=<span class="hljs-string">"tab-df0e51a1-cc6f-49f0-af8d-203595fe9d20-undefined"</span>&gt;</span>
                 Enda mer innhold
-            &lt;/div&gt;
-        &lt;/div&gt;
-   &lt;/li&gt;
-&lt;/ul&gt;</code></pre>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+   <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></span></code></pre>
           </details>
 
         <div class="kss-source kss-style">
@@ -352,16 +354,15 @@
 
     </div>
 </article>
+</main>
 
 <!-- SCRIPTS -->
 <script src="kss-assets/kss.js"></script>
 <script src="kss-assets/scrollspy.js"></script>
-<script src="kss-assets/prettify.js"></script>
 <script src="kss-assets/kss-fullscreen.js"></script>
 <script src="kss-assets/kss-guides.js"></script>
 <script src="kss-assets/kss-markup.js"></script>
 <script>
-  prettyPrint();
   var spy = new ScrollSpy('#kss-node', {
     nav: '.kss-nav__menu-child > li > a',
     className: 'is-in-viewport'

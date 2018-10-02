@@ -2664,10 +2664,6 @@ html {
   color: #676767;
   opacity: 1;
 }
-.ffe-input-field:-ms-input-placeholder {
-  color: #676767;
-  opacity: 1;
-}
 .ffe-input-field::-ms-input-placeholder {
   color: #676767;
   opacity: 1;
@@ -2754,10 +2750,6 @@ html {
   width: auto;
 }
 .ffe-dropdown::-webkit-input-placeholder {
-  color: #676767;
-  opacity: 1;
-}
-.ffe-dropdown:-ms-input-placeholder {
   color: #676767;
   opacity: 1;
 }
@@ -4318,6 +4310,7 @@ input:not([type='radio']):not([type='checkbox']) {
 .ffe-header {
   background: #fff;
   text-align: center;
+  z-index: 999;
 }
 .ffe-header__user-nav-list--visible,
 .ffe-header__site-nav-list--visible {
