@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.7"></a>
+
+## [2.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@2.0.6...@sb1/ffe-chart-donut-react@2.0.7) (2018-10-02)
+
+### Bug Fixes
+
+-   **ffe-chart-donut-react:** include .less file in lib/ root ([763ffa4](https://github.com/SpareBank1/designsystem/commit/763ffa4)), closes [#441](https://github.com/SpareBank1/designsystem/issues/441)
+
 <a name="2.0.6"></a>
 
 ## [2.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@2.0.5...@sb1/ffe-chart-donut-react@2.0.6) (2018-09-24)

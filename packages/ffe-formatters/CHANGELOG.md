@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.1.0"></a>
+
+# [3.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-formatters@3.0.3...@sb1/ffe-formatters@3.1.0) (2018-10-02)
+
+### Features
+
+-   **ffe-formatters:** Add minDecimals option to formatPercentage. ([07cd558](https://github.com/SpareBank1/designsystem/commit/07cd558))
+
 <a name="3.0.3"></a>
 
 ## [3.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-formatters@3.0.2...@sb1/ffe-formatters@3.0.3) (2018-08-09)
