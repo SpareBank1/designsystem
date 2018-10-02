@@ -18,7 +18,7 @@
     "url": "ssh://git@github.com:SpareBank1/designsystem.git"
   },
   "scripts": {
-    "build": "babel -d lib/. --ignore=*.spec.js src/ && copyfiles src/ffe-chart-donut.less lib/",
+    "build": "babel -d lib/. --ignore=*.spec.js src/ && copyfiles -f src/ffe-chart-donut.less lib/",
     "lint": "eslint src/.",
     "test": "jest",
     "test:watch": "jest --watch"
