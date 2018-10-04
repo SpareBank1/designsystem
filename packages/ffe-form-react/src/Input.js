@@ -2,7 +2,8 @@ import React from 'react';
 import { bool, string } from 'prop-types';
 import classNames from 'classnames';
 
-const Input = ({ className, inline, textLike, ...rest }) => {
+const Input = React.forwardRef((props, ref) => {
+    const { className, inline, textLike, ...rest } = props;
     return (
         <input
             className={classNames(
@@ -11,10 +12,11 @@ const Input = ({ className, inline, textLike, ...rest }) => {
                 { 'ffe-input-field--text-like': textLike },
                 className,
             )}
+            ref={ref}
             {...rest}
         />
     );
-};
+});
 
 Input.propTypes = {
     className: string,

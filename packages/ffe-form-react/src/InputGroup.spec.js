@@ -21,7 +21,7 @@ describe('<InputGroup>', () => {
 
     it('renders the given child', () => {
         const wrapper = getWrapper();
-        expect(wrapper.find('Input')).toHaveLength(1);
+        expect(wrapper.find(Input)).toHaveLength(1);
     });
 
     it('renders a Label if a string passed from the label prop', () => {
@@ -37,7 +37,7 @@ describe('<InputGroup>', () => {
     it('renders a Label with htmlFor set to the same value of the children id', () => {
         const wrapper = getWrapper();
 
-        const inputId = wrapper.find('Input').prop('id');
+        const inputId = wrapper.find(Input).prop('id');
         expect(wrapper.find('Label').prop('htmlFor')).toBe(inputId);
     });
 
@@ -53,7 +53,7 @@ describe('<InputGroup>', () => {
         expect(wrapper.find('ErrorFieldMessage').prop('children')).toBe(
             'such error',
         );
-        expect(wrapper.find('Input').prop('aria-invalid')).toBe('true');
+        expect(wrapper.find(Input).prop('aria-invalid')).toBe('true');
     });
 
     it('renders a Label component if passed a label prop', () => {
@@ -80,7 +80,7 @@ describe('<InputGroup>', () => {
         expect(wrapper.find('ErrorFieldMessage').prop('children')).toBe(
             'Some error',
         );
-        expect(wrapper.find('Input').prop('aria-invalid')).toBe('true');
+        expect(wrapper.find(Input).prop('aria-invalid')).toBe('true');
     });
 
     it('renders a SuccessFieldMessage if passed as fieldMessage prop', () => {
@@ -94,7 +94,7 @@ describe('<InputGroup>', () => {
         expect(wrapper.find('SuccessFieldMessage').prop('children')).toBe(
             'Some success',
         );
-        expect(wrapper.find('Input').prop('aria-invalid')).toBe('false');
+        expect(wrapper.find(Input).prop('aria-invalid')).toBe('false');
     });
 
     it('throws error when receiving multiple children', () => {
@@ -146,8 +146,9 @@ describe('<InputGroup>', () => {
                 </div>
             ),
         });
-        expect(wrapper.find('Input').prop('id')).toHaveLength(42);
-        expect(wrapper.find('Input').prop('aria-invalid')).toBe('false');
+
+        expect(wrapper.find(Input).prop('id')).toHaveLength(42);
+        expect(wrapper.find(Input).prop('aria-invalid')).toBe('false');
     });
 
     it('renders a static tooltip if description is set', () => {
