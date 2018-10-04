@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@3.2.4...@sb1/ffe-form-react@4.0.0) (2018-10-04)
+
+### Features
+
+-   **ffe-form-react:** Add support for forwarding refs ([cdc58c6](https://github.com/SpareBank1/designsystem/commit/cdc58c6))
+
+### BREAKING CHANGES
+
+-   **ffe-form-react:** Requires react@^16.3
+
+This commit adds support for forwarding refs to the `Input` and
+`TextArea` components, so consumers can handle focus programmatically.
+
 <a name="3.2.4"></a>
 
 ## [3.2.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@3.2.3...@sb1/ffe-form-react@3.2.4) (2018-09-24)
