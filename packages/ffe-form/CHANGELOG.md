@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.2.19](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.2.18...@sb1/ffe-form@9.2.19) (2018-10-05)
+
+**Note:** Version bump only for package @sb1/ffe-form
+
 <a name="9.2.18"></a>
 
 ## [9.2.18](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.2.17...@sb1/ffe-form@9.2.18) (2018-09-25)

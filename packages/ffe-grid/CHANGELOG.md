@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@10.0.4...@sb1/ffe-grid@10.1.0) (2018-10-05)
+
+### Features
+
+-   **ffe-grid:** Add support for inline grid ([e5aa265](https://github.com/SpareBank1/designsystem/commit/e5aa265))
+
 <a name="10.0.4"></a>
 
 ## [10.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@10.0.3...@sb1/ffe-grid@10.0.4) (2018-09-19)

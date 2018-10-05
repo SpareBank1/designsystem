@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-details-list-react",
-  "version": "2.0.14",
+  "version": "2.0.15",
   "license": "MIT",
   "author": "SpareBank 1",
   "files": [
@@ -26,8 +26,8 @@
     "classnames": "^2.2.5"
   },
   "devDependencies": {
-    "@sb1/ffe-grid": "^10.0.4",
-    "@sb1/ffe-grid-react": "^9.0.2",
+    "@sb1/ffe-grid": "^10.1.0",
+    "@sb1/ffe-grid-react": "^9.1.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "enzyme": "^3.3.0",

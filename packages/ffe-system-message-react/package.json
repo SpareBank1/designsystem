@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-system-message-react",
-  "version": "5.1.11",
+  "version": "5.1.12",
   "description": "SpareBank 1 System Message komponent",
   "license": "MIT",
   "author": "SpareBank 1",
@@ -22,7 +22,7 @@
     "setupTestFrameworkScriptFile": "../../test-setup.js"
   },
   "dependencies": {
-    "@sb1/ffe-grid-react": "^9.0.2",
+    "@sb1/ffe-grid-react": "^9.1.0",
     "classnames": "^2.2.5",
     "prop-types": "^15.6.0",
     "react-collapse": "^4.0.3"

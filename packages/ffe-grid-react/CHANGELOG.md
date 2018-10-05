@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [9.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@9.0.2...@sb1/ffe-grid-react@9.1.0) (2018-10-05)
+
+### Features
+
+-   **ffe-grid-react:** Add support for inline grid ([9966b86](https://github.com/SpareBank1/designsystem/commit/9966b86))
+
 <a name="9.0.2"></a>
 
 ## [9.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@9.0.1...@sb1/ffe-grid-react@9.0.2) (2018-08-09)
