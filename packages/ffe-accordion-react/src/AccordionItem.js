@@ -40,16 +40,26 @@ class AccordionItem extends Component {
     };
 
     render() {
-        const { ariaLabel, children, index, title, uuid } = this.props;
+        const {
+            ariaLabel,
+            className,
+            children,
+            index,
+            title,
+            uuid,
+        } = this.props;
 
         const open = this.getOpen();
 
         return (
             <li
-                className={classNames({
-                    'ffe-accordion-item': true,
-                    'ffe-accordion-item--open': open,
-                })}
+                className={classNames(
+                    {
+                        'ffe-accordion-item': true,
+                        'ffe-accordion-item--open': open,
+                    },
+                    className,
+                )}
             >
                 <div
                     tabIndex={0}
@@ -93,6 +103,8 @@ AccordionItem.propTypes = {
     ariaLabel: string,
     /** The content shown when an accordion item is expanded */
     children: node,
+    /** Extra class names */
+    className: string,
     /** List of node names the toggle click handler will ignore */
     ignoredNodeNames: arrayOf(string),
     /** The index of the accordion item in the current accordion */
