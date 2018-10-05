@@ -1713,6 +1713,7 @@ html {
 .ffe-header__icon-button::after {
   border-bottom: solid 1px currentColor;
   content: ' ';
+  display: inherit;
   width: 100%;
 }
 .ffe-inline-button--tertiary:hover,
@@ -3458,6 +3459,9 @@ input:not([type='radio']):not([type='checkbox']) {
     padding-top: 0;
   }
 }
+.ffe-grid--inline {
+  padding: 0;
+}
 .ffe-grid__row,
 .ffe-grid__row-wrapper {
   display: -webkit-box;
@@ -3559,6 +3563,9 @@ input:not([type='radio']):not([type='checkbox']) {
     padding: 0 10px 20px;
   }
 }
+.ffe-grid--inline [class*='ffe-grid__col'] {
+  padding: 0;
+}
 @media only screen and (min-width: 1024px) {
   [class*='ffe-grid__col--bg-'] {
     position: relative;
@@ -3590,6 +3597,10 @@ input:not([type='radio']):not([type='checkbox']) {
   }
   .ffe-grid--condensed [class*='ffe-grid__col--bg-']::after {
     right: -10px;
+  }
+  .ffe-grid--inline [class*='ffe-grid__col--bg-']::before,
+  .ffe-grid--inline [class*='ffe-grid__col--bg-']::after {
+    display: none;
   }
 }
 .ffe-grid__col--bg-blue-ice {
