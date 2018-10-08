@@ -1713,7 +1713,7 @@ html {
 .ffe-header__icon-button::after {
   border-bottom: solid 1px currentColor;
   content: ' ';
-  display: inherit;
+  display: block;
   width: 100%;
 }
 .ffe-inline-button--tertiary:hover,
