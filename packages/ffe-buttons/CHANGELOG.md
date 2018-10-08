@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@8.0.9...@sb1/ffe-buttons@8.0.10) (2018-10-08)
+
+### Bug Fixes
+
+-   **ffe-buttons:** Set a safer display value on tertiary button pseudo element ([72162aa](https://github.com/SpareBank1/designsystem/commit/72162aa))
+
 ## [8.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@8.0.8...@sb1/ffe-buttons@8.0.9) (2018-10-05)
 
 ### Bug Fixes
