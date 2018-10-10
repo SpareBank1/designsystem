@@ -24,6 +24,8 @@ class Tooltip extends React.Component {
             'aria-label': ariaLabel,
             children,
             className,
+            // eslint-disable-next-line no-unused-vars
+            onClick,
             tabIndex,
             ...rest
         } = this.props;
