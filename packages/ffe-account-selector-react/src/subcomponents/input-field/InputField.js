@@ -42,7 +42,14 @@ class Input extends Component {
 
     onExpandOrCollapse(e) {
         e.preventDefault();
-        this.props.onExpandOrCollapseClick();
+
+        const { isSuggestionsShowing } = this.props;
+        if (isSuggestionsShowing) {
+            this.onBlur();
+        } else {
+            e.currentTarget.previousElementSibling.focus();
+            this.onFocus();
+        }
     }
 
     componentWillReceiveProps(nextProps) {
@@ -65,7 +72,7 @@ class Input extends Component {
             suggestionListId,
             name,
             readOnly,
-            locale
+            locale,
         } = this.props;
 
         const showReset = !readOnly && value.length > 0;
@@ -106,7 +113,7 @@ class Input extends Component {
                         type="button"
                         aria-label={txt[locale].RESET_SEARCH}
                     >
-                        <KryssIkon className="ffe-base-selector__reset-button-icon"/>
+                        <KryssIkon className="ffe-base-selector__reset-button-icon" />
                     </button>
                 )}
                 <button
@@ -114,12 +121,18 @@ class Input extends Component {
                     onMouseDown={this.onExpandOrCollapse}
                     tabIndex={-1}
                     type="button"
-                    aria-label={isSuggestionsShowing ? txt[locale].ACCOUNTSLIST_CLOSE : txt[locale].ACCOUNTSLIST_OPEN}
+                    aria-label={
+                        isSuggestionsShowing
+                            ? txt[locale].ACCOUNTSLIST_CLOSE
+                            : txt[locale].ACCOUNTSLIST_OPEN
+                    }
                 >
                     <ChevronIkon
                         className={classNames(
                             'ffe-base-selector__expand-button-icon ',
-                            { 'ffe-base-selector__expand-button-icon--invalid': ariaInvalid }
+                            {
+                                'ffe-base-selector__expand-button-icon--invalid': ariaInvalid,
+                            },
                         )}
                     />
                 </button>
@@ -131,7 +144,6 @@ class Input extends Component {
 Input.propTypes = {
     onChange: func.isRequired,
     onKeyDown: func.isRequired,
-    onExpandOrCollapseClick: func.isRequired,
     value: string.isRequired,
     onReset: func.isRequired,
     isSuggestionsShowing: bool.isRequired,
@@ -146,7 +158,7 @@ Input.propTypes = {
     highlightedIndex: number,
     suggestionListId: string,
     name: string,
-    locale: Locale.isRequired
+    locale: Locale.isRequired,
 };
 
 Input.defaultProps = {
