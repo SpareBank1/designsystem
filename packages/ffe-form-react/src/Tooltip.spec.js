@@ -35,20 +35,16 @@ describe('<Tooltip>', () => {
     it('toggles collapse if button is clicked', () => {
         const wrapper = getWrapper();
 
-        expect(wrapper.find('Collapse').prop('isOpened')).toBe(false);
+        expect(wrapper.find('Collapse').prop('isOpen')).toBe(false);
         wrapper.find('button').simulate('click');
-        expect(wrapper.find('Collapse').prop('isOpened')).toBe(true);
+        expect(wrapper.find('Collapse').prop('isOpen')).toBe(true);
     });
 
     it('toggles active state if button is clicked', () => {
         const wrapper = getWrapper();
-        expect(
-            wrapper.find('button').hasClass('ffe-tooltip__icon--active'),
-        ).toBe(false);
+        expect(wrapper.hasClass('ffe-tooltip--open')).toBe(false);
         wrapper.find('button').simulate('click');
-        expect(
-            wrapper.find('button').hasClass('ffe-tooltip__icon--active'),
-        ).toBe(true);
+        expect(wrapper.hasClass('ffe-tooltip--open')).toBe(true);
     });
 
     it('does not have a tabIndex unless otherwise specified', () => {

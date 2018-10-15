@@ -1,7 +1,14 @@
 // Tooltip
 //
 // Markup:
-// <button class="ffe-tooltip__icon" type="button">?</button>
+// <div class="ffe-tooltip ffe-tooltip{{modifier_class}}">
+//   <button class="ffe-tooltip__icon" type="button">?</button>
+//   <div class="ffe-tooltip__text" aria-expanded="true">
+//     <div class="ffe-small-text">Dette er lurt å tenke på</div>
+//   </div>
+// </div>
+//
+// --open - Tooltip text visible
 //
 // Styleguide ffe-form.tooltip
 
@@ -35,20 +42,24 @@
         }
 
         &:active,
-        &--active {
+        .ffe-tooltip--open & {
             border-color: @ffe-blue-royal;
             color: @ffe-blue-royal;
         }
     }
 
     &__text {
-        margin: 0;
-        max-height: 0;
+        will-change: height;
+        height: 0;
         overflow: hidden;
-        transition: all @ffe-transition-duration @ffe-ease;
+        visibility: hidden;
+        transition: height @ffe-transition-duration @ffe-ease;
+    }
 
-        &--active {
-            margin-bottom: 12px;
-        }
+    &--open &__text {
+        padding-bottom: 12px;
+        height: auto;
+        overflow: visible;
+        visibility: visible;
     }
 }
