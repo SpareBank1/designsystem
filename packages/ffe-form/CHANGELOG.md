@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.2.20...@sb1/ffe-form@10.0.0) (2018-10-15)
+
+### Features
+
+-   **ffe-form:** Restructure ffe-tooltip ([0ae0209](https://github.com/SpareBank1/designsystem/commit/0ae0209))
+
+### BREAKING CHANGES
+
+-   **ffe-form:** The base class `ffe-tooltip` includes
+    functionality for toggling the visibility of the tooltip.
+
+The modified class `ffe-tooltip--open` controls the visibility of a
+nested `ffe-tooltip__text` element. This modifier also deprecates the
+modifier class `ffe-tooltip__icon--active`, which is no longer in use.
+
+Important: The effect of the tooltip text `ffe-tooltip__text` appearing
+and disappearing requires some scripting, because the underlying css
+transition requires the element's `style.height` property set to an
+absolute value.
+
 ## [9.2.20](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.2.19...@sb1/ffe-form@9.2.20) (2018-10-08)
 
 **Note:** Version bump only for package @sb1/ffe-form

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.1.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@5.1.12...@sb1/ffe-system-message-react@5.1.13) (2018-10-15)
+
+### Bug Fixes
+
+-   **ffe-system-message-react:** Adds necessary dependency ([2ae1194](https://github.com/SpareBank1/designsystem/commit/2ae1194)), closes [#399](https://github.com/SpareBank1/designsystem/issues/399)
+
 ## [5.1.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@5.1.11...@sb1/ffe-system-message-react@5.1.12) (2018-10-05)
 
 **Note:** Version bump only for package @sb1/ffe-system-message-react

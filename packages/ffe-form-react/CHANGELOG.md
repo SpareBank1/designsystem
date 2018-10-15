@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@4.0.1...@sb1/ffe-form-react@4.1.0) (2018-10-15)
+
+### Features
+
+-   **ffe-form-react:** Use react-css-collapse ([3bd1f85](https://github.com/SpareBank1/designsystem/commit/3bd1f85))
+
 ## [4.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@4.0.0...@sb1/ffe-form-react@4.0.1) (2018-10-12)
 
 ### Bug Fixes
