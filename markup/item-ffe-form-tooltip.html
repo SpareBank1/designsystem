@@ -159,22 +159,50 @@
 
         <div class="kss-modifier__wrapper">
           <div class="kss-modifier__heading kss-style">
-            Example
+            Examples
           </div>
 
+            <div class="kss-modifier__default-name kss-style">
+              Default styling
+            </div>
 
           <div class="kss-modifier__example">
-            <button class="ffe-tooltip__icon" type="button">?</button>
+            <div class="ffe-tooltip ffe-tooltip">
+  <button class="ffe-tooltip__icon" type="button">?</button>
+  <div class="ffe-tooltip__text" aria-expanded="true">
+    <div class="ffe-small-text">Dette er lurt å tenke på</div>
+  </div>
+</div>
             <div class="kss-modifier__example-footer"></div>
           </div>
 
+            <div class="kss-modifier__name kss-style">
+              --open
+            </div>
+            <div class="kss-modifier__description kss-style">
+              Tooltip text visible
+            </div>
+            <div class="kss-modifier__example">
+              <div class="ffe-tooltip ffe-tooltip--open">
+  <button class="ffe-tooltip__icon" type="button">?</button>
+  <div class="ffe-tooltip__text" aria-expanded="true">
+    <div class="ffe-small-text">Dette er lurt å tenke på</div>
+  </div>
+</div>
+              <div class="kss-modifier__example-footer"></div>
+            </div>
         </div>
 
           <details class="kss-markup kss-style">
             <summary>
                 Markup
             </summary>
-            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-tooltip__icon"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>?<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span></code></pre>
+            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-tooltip ffe-tooltip[modifier class]"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-tooltip__icon"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>?<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-tooltip__text"</span> <span class="hljs-attr">aria-expanded</span>=<span class="hljs-string">"true"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ffe-small-text"</span>&gt;</span>Dette er lurt å tenke på<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></code></pre>
           </details>
 
         <div class="kss-source kss-style">

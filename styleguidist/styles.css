@@ -3362,20 +3362,24 @@ html {
   outline: none;
 }
 .ffe-tooltip__icon:active,
-.ffe-tooltip__icon--active {
+.ffe-tooltip--open .ffe-tooltip__icon {
   border-color: #002776;
   color: #002776;
 }
 .ffe-tooltip__text {
-  margin: 0;
-  max-height: 0;
+  will-change: height;
+  height: 0;
   overflow: hidden;
-  -webkit-transition: all 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
-  -o-transition: all 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
-  transition: all 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+  visibility: hidden;
+  -webkit-transition: height 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+  -o-transition: height 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: height 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
-.ffe-tooltip__text--active {
-  margin-bottom: 12px;
+.ffe-tooltip--open .ffe-tooltip__text {
+  padding-bottom: 12px;
+  height: auto;
+  overflow: visible;
+  visibility: visible;
 }
 /* Validation */
 .ffe-field-info-message,
