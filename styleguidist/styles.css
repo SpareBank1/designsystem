@@ -8570,6 +8570,10 @@ body {
 .sb1ds-frontpage-excerpt .ffe-product-card {
   width: 100%;
 }
+.sb1ds-example-dark {
+  background-color: #515d6a !important;
+  border: none !important;
+}
 .sb1ds-footer {
   background: #f6f6f3;
   margin-top: 20px;
