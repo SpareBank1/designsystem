@@ -3,6 +3,56 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.2.20...@sb1/ffe-form@10.0.0) (2018-10-15)
+
+### Features
+
+-   **ffe-form:** Restructure ffe-tooltip ([0ae0209](https://github.com/SpareBank1/designsystem/commit/0ae0209))
+
+### BREAKING CHANGES
+
+-   **ffe-form:** The base class `ffe-tooltip` includes
+    functionality for toggling the visibility of the tooltip.
+
+The modified class `ffe-tooltip--open` controls the visibility of a
+nested `ffe-tooltip__text` element. This modifier also deprecates the
+modifier class `ffe-tooltip__icon--active`, which is no longer in use.
+
+Important: The effect of the tooltip text `ffe-tooltip__text` appearing
+and disappearing requires some scripting, because the underlying css
+transition requires the element's `style.height` property set to an
+absolute value.
+
+## [9.2.20](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.2.19...@sb1/ffe-form@9.2.20) (2018-10-08)
+
+**Note:** Version bump only for package @sb1/ffe-form
+
+## [9.2.19](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.2.18...@sb1/ffe-form@9.2.19) (2018-10-05)
+
+**Note:** Version bump only for package @sb1/ffe-form
+
+<a name="9.2.18"></a>
+
+## [9.2.18](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.2.17...@sb1/ffe-form@9.2.18) (2018-09-25)
+
+**Note:** Version bump only for package @sb1/ffe-form
+
+<a name="9.2.17"></a>
+
+## [9.2.17](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.2.16...@sb1/ffe-form@9.2.17) (2018-09-21)
+
+### Bug Fixes
+
+-   **ffe-form:** Update focus outline ([4f9d7e1](https://github.com/SpareBank1/designsystem/commit/4f9d7e1))
+
+<a name="9.2.16"></a>
+
+## [9.2.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.2.15...@sb1/ffe-form@9.2.16) (2018-09-19)
+
+### Bug Fixes
+
+-   **ffe-form:** Increased contrast in focus outline ([f4b66a8](https://github.com/SpareBank1/designsystem/commit/f4b66a8))
+
 <a name="9.2.15"></a>
 
 ## [9.2.15](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.2.14...@sb1/ffe-form@9.2.15) (2018-09-05)
@@ -45,7 +95,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-form
 
-      <a name="9.2.9"></a>
+<a name="9.2.9"></a>
 
 ## [9.2.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.2.8...@sb1/ffe-form@9.2.9) (2018-08-07)
 
@@ -53,8 +103,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 -   **ffe-form:** IE needs charset=utf8 to understand that utf8 is indeed the charset ([9366476](https://github.com/SpareBank1/designsystem/commit/9366476))
 
-
-    <a name="9.2.8"></a>
+<a name="9.2.8"></a>
 
 ## [9.2.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.2.7...@sb1/ffe-form@9.2.8) (2018-07-23)
 

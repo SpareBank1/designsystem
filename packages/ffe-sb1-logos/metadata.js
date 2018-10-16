@@ -1,4 +1,5 @@
 module.exports = [
+    { bank: 'Favicon', code: 'ICO', file: 'ico/favicon.ico' },
     { bank: 'SpareBank 1', code: 'SB1', file: 'svg/logo-sb1.svg' },
     { bank: 'BV', code: 'SBV', file: 'svg/logo-bv.svg' },
     {

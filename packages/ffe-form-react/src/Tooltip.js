@@ -1,7 +1,7 @@
 import React from 'react';
 import { bool, func, node, string, number } from 'prop-types';
 import classNames from 'classnames';
-import { Collapse } from 'react-collapse';
+import Collapse from 'react-css-collapse';
 
 class Tooltip extends React.Component {
     constructor({ isOpen }) {
@@ -13,7 +13,7 @@ class Tooltip extends React.Component {
     }
 
     onToggle(evt) {
-        this.setState({ isOpen: !this.state.isOpen });
+        this.setState(prevState => ({ isOpen: !prevState.isOpen }));
         if (this.props.onClick) {
             this.props.onClick(evt);
         }
@@ -24,6 +24,8 @@ class Tooltip extends React.Component {
             'aria-label': ariaLabel,
             children,
             className,
+            // eslint-disable-next-line no-unused-vars
+            onClick,
             tabIndex,
             ...rest
         } = this.props;
@@ -31,12 +33,15 @@ class Tooltip extends React.Component {
         const { isOpen } = this.state;
 
         return (
-            <span {...rest}>
+            <span
+                {...rest}
+                className={classNames('ffe-tooltip', {
+                    'ffe-tooltip--open': isOpen,
+                })}
+            >
                 <button
                     aria-label={ariaLabel}
-                    className={classNames('ffe-tooltip__icon', {
-                        'ffe-tooltip__icon--active': isOpen,
-                    })}
+                    className="ffe-tooltip__icon"
                     onClick={this.onToggle}
                     type="button"
                     tabIndex={tabIndex}
@@ -44,7 +49,11 @@ class Tooltip extends React.Component {
                     ?
                 </button>
                 {children && (
-                    <Collapse isOpened={isOpen} aria-expanded={String(isOpen)}>
+                    <Collapse
+                        isOpen={isOpen}
+                        className="ffe-tooltip__text"
+                        aria-expanded={String(isOpen)}
+                    >
                         <div
                             className={classNames('ffe-small-text', className)}
                         >

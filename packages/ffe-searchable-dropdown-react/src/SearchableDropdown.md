@@ -93,3 +93,30 @@ const renderItem = unreadLabel => company => (
     searchAttributes={['organizationName', 'organizationNumber']}
 />;
 ```
+
+Du kan også vise ekstra resultater om søket feiler, som under.
+
+```jsx
+const yrker = require('../exampleData').yrker;
+const initialState = { inputValue: '' };
+
+const noMatchExtra = {
+    text: 'Finner ikke yrket. Søk på nytt eller velg en passende kategori:',
+    items: yrker.slice(1, 4),
+};
+
+<SearchableDropdown
+    displayResetWhenInputHasValue={true}
+    dropdownAttributes={['beskrivelse']}
+    dropdownList={yrker}
+    inputId="searchable-dropdown-single-attribute"
+    inputValue={state.inputValue}
+    label="Velg yrke"
+    noMatch={noMatchExtra}
+    onInputChange={value => setState({ inputValue: value })}
+    onReset={() => setState({ inputValue: '' })}
+    onSelect={yrke => setState({ inputValue: yrke.beskrivelse })}
+    placeholder="Velg"
+    searchAttributes={['beskrivelse']}
+/>;
+```

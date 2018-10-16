@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-chart-donut-react",
-  "version": "2.0.5",
+  "version": "2.0.7",
   "description": "Donut chart in SVG",
   "keywords": [
     "ffe"
@@ -18,7 +18,7 @@
     "url": "ssh://git@github.com:SpareBank1/designsystem.git"
   },
   "scripts": {
-    "build": "babel -d lib/. --ignore=*.spec.js src/ && copyfiles src/ffe-chart-donut.less lib/",
+    "build": "babel -d lib/. --ignore=*.spec.js src/ && copyfiles -f src/ffe-chart-donut.less lib/",
     "lint": "eslint src/.",
     "test": "jest",
     "test:watch": "jest --watch"

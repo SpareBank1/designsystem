@@ -56,4 +56,13 @@ describe('format percentage', () => {
             new RegExp(`^${ANY_MINUS_SIGN}98,765${NON_BREAKING_SPACE}%$`),
         );
     });
+
+    test('lets you specify minimum number of decimals', () => {
+        expect(formatPercentage(1, { minDecimals: 2 })).toBe(
+            `1,00${NON_BREAKING_SPACE}%`,
+        );
+        expect(formatPercentage(3.2, { minDecimals: 2 })).toBe(
+            `3,20${NON_BREAKING_SPACE}%`,
+        );
+    });
 });

@@ -3,29 +3,57 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-<a name="11.2.0"></a>
-# [11.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@11.1.24...@sb1/ffe-header@11.2.0) (2018-09-07)
+## [11.2.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@11.2.5...@sb1/ffe-header@11.2.6) (2018-10-08)
 
+**Note:** Version bump only for package @sb1/ffe-header
 
-### Features
+## [11.2.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@11.2.4...@sb1/ffe-header@11.2.5) (2018-10-05)
 
-* **ffe-header:** print styles ([1fd828d](https://github.com/SpareBank1/designsystem/commit/1fd828d))
+**Note:** Version bump only for package @sb1/ffe-header
 
+<a name="11.2.4"></a>
 
-
-
-
-<a name="11.1.24"></a>
-## [11.1.24](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@11.1.23...@sb1/ffe-header@11.1.24) (2018-09-06)
-
+## [11.2.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@11.2.3...@sb1/ffe-header@11.2.4) (2018-10-02)
 
 ### Bug Fixes
 
-* **ffe-header:** Increase z-index in order to overlap other positioned elements ([3410ce1](https://github.com/SpareBank1/designsystem/commit/3410ce1))
+-   **ffe-header:** set z-index on `.ffe-header` root ([75ad09d](https://github.com/SpareBank1/designsystem/commit/75ad09d)), closes [#436](https://github.com/SpareBank1/designsystem/issues/436)
 
+<a name="11.2.3"></a>
 
+## [11.2.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@11.2.2...@sb1/ffe-header@11.2.3) (2018-09-28)
 
+### Bug Fixes
 
+-   **ffe-header:** Remove fading from transition, set z-index for expanded menu ([3cfd105](https://github.com/SpareBank1/designsystem/commit/3cfd105))
+
+<a name="11.2.2"></a>
+
+## [11.2.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@11.2.1...@sb1/ffe-header@11.2.2) (2018-09-25)
+
+**Note:** Version bump only for package @sb1/ffe-header
+
+<a name="11.2.1"></a>
+
+## [11.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@11.2.0...@sb1/ffe-header@11.2.1) (2018-09-19)
+
+**Note:** Version bump only for package @sb1/ffe-header
+
+<a name="11.2.0"></a>
+
+# [11.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@11.1.24...@sb1/ffe-header@11.2.0) (2018-09-07)
+
+### Features
+
+-   **ffe-header:** print styles ([1fd828d](https://github.com/SpareBank1/designsystem/commit/1fd828d))
+
+<a name="11.1.24"></a>
+
+## [11.1.24](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@11.1.23...@sb1/ffe-header@11.1.24) (2018-09-06)
+
+### Bug Fixes
+
+-   **ffe-header:** Increase z-index in order to overlap other positioned elements ([3410ce1](https://github.com/SpareBank1/designsystem/commit/3410ce1))
 
 <a name="11.1.23"></a>
 
@@ -494,11 +522,11 @@ To migrate, update your app to ffe-core version 9.x
 -   Oppdatert til å bruke v4.x av ffe-core
 -   Klassen `ffe-header__profile-action` kan brukes for elementer som skal være inline
 
-##Versjon 1.0.0
+# 1.0.0
 
 -   Oppgradert avhengighet til ffe-core 2.x
 -   Bytter fra RSCSS til BEM som kodestandard for CSS.
 
-##Versjon 0.0.1
+# 0.0.1
 
 Første versjon av ffe-header.

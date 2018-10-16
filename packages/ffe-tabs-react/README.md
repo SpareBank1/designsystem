@@ -1,8 +1,7 @@
-
 ## Install
 
 ```bash
-npm install --save ffe-tabs-react
+npm install --save @sb1/ffe-tabs-react
 ```
 
 ## Usage

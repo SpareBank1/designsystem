@@ -213,16 +213,34 @@ describe('<BaseSelector> methods', () => {
         const component = mountBaseSelector({ value: 'notempty' });
         const onResetSpy = jest.spyOn(component.instance(), 'onInputReset');
         component.instance().forceUpdate();
-        component.find('.ffe-base-selector__reset-button').simulate('mousedown');
+        component
+            .find('.ffe-base-selector__reset-button')
+            .simulate('mousedown');
 
         expect(onResetSpy).toHaveBeenCalled();
     });
 
-    it('should call onExpandOrCollapseClick on expandOrCollapse button mousedown', () => {
+    it('should call onFocus on expandOrCollapse button mousedown when suggestions not showing', () => {
         const component = mountBaseSelector();
-        const onResetSpy = jest.spyOn(component.instance(), 'onExpandOrCollapseClick');
+        const onResetSpy = jest.spyOn(component.instance(), 'onFocus');
         component.instance().forceUpdate();
-        component.find('.ffe-base-selector__expand-button').simulate('mousedown');
+        component
+            .find('.ffe-base-selector__expand-button')
+            .simulate('mousedown');
+
+        expect(onResetSpy).toHaveBeenCalled();
+    });
+
+    it('should call onBlur on expandOrCollapse button mousedown when suggestions are showing', () => {
+        const component = mountBaseSelector();
+        component.setState({
+            showSuggestions: true,
+        });
+        const onResetSpy = jest.spyOn(component.instance(), 'onBlur');
+        component.instance().forceUpdate();
+        component
+            .find('.ffe-base-selector__expand-button')
+            .simulate('mousedown');
 
         expect(onResetSpy).toHaveBeenCalled();
     });
@@ -233,7 +251,9 @@ describe('<BaseSelector> methods', () => {
         const value = 'value';
         const event = { target: { value } };
         component.instance().forceUpdate();
-        component.find('.ffe-base-selector__input-field').simulate('change', event);
+        component
+            .find('.ffe-base-selector__input-field')
+            .simulate('change', event);
 
         expect(onInputChange).toHaveBeenCalledWith(value);
     });
@@ -245,8 +265,7 @@ describe('<BaseSelector> methods', () => {
         component.find('.ffe-base-selector__input-field').simulate('blur');
 
         expect(onBlur).toHaveBeenCalled();
-    })
-
+    });
 });
 
 describe('<BaseSelector> keyboard navigation', () => {

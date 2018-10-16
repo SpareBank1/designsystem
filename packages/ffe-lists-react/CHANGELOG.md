@@ -3,72 +3,57 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-       <a name="3.0.5"></a>
+<a name="3.0.5"></a>
+
 ## [3.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@3.0.4...@sb1/ffe-lists-react@3.0.5) (2018-08-09)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-lists-react
 
-       <a name="3.0.4"></a>
-## [3.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@3.0.3...@sb1/ffe-lists-react@3.0.4) (2018-04-19)
+<a name="3.0.4"></a>
 
+## [3.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@3.0.3...@sb1/ffe-lists-react@3.0.4) (2018-04-19)
 
 ### Bug Fixes
 
-* **ffe-lists-react:** Wrap dd+dt pairs in dl ([5adc23e](https://github.com/SpareBank1/designsystem/commit/5adc23e))
+-   **ffe-lists-react:** Wrap dd+dt pairs in dl ([5adc23e](https://github.com/SpareBank1/designsystem/commit/5adc23e))
 
+<a name="3.0.3"></a>
 
-
-
-  <a name="3.0.3"></a>
 ## [3.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@3.0.2...@sb1/ffe-lists-react@3.0.3) (2018-03-27)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-lists-react
 
 <a name="3.0.2"></a>
+
 ## [3.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@3.0.0...@sb1/ffe-lists-react@3.0.2) (2018-03-07)
 
-
 ### Bug Fixes
 
-* Correct peerDependencies after breaking change ([aab59ce](https://github.com/SpareBank1/designsystem/commit/aab59ce))
-
-
-
+-   Correct peerDependencies after breaking change ([aab59ce](https://github.com/SpareBank1/designsystem/commit/aab59ce))
 
 <a name="3.0.1"></a>
-## [3.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@3.0.0...@sb1/ffe-lists-react@3.0.1) (2018-03-02)
 
+## [3.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@3.0.0...@sb1/ffe-lists-react@3.0.1) (2018-03-02)
 
 ### Bug Fixes
 
-* Correct peerDependencies after breaking change ([4318363](https://github.com/SpareBank1/designsystem/commit/4318363))
-
-
-
+-   Correct peerDependencies after breaking change ([4318363](https://github.com/SpareBank1/designsystem/commit/4318363))
 
 <a name="3.0.0"></a>
-# 3.0.0 (2018-02-25)
 
+# 3.0.0 (2018-02-25)
 
 ### Chores
 
-* add [@sb1](https://github.com/sb1)/ scope to all packages ([37efbb4](https://github.com/SpareBank1/designsystem/commit/37efbb4))
-
+-   add [@sb1](https://github.com/sb1)/ scope to all packages ([37efbb4](https://github.com/SpareBank1/designsystem/commit/37efbb4))
 
 ### Features
 
-* **ffe-lists-react:** Import ffe-lists-react ([8300ab0](https://github.com/SpareBank1/designsystem/commit/8300ab0))
-
+-   **ffe-lists-react:** Import ffe-lists-react ([8300ab0](https://github.com/SpareBank1/designsystem/commit/8300ab0))
 
 ### BREAKING CHANGES
 
-* All packages have been renamed to add the @sb1 scope.
+-   All packages have been renamed to add the @sb1 scope.
 
 See links [1] and [2] to read more about package scopes.
 
@@ -141,54 +126,39 @@ JavaScript `require`:
 [2]: https://docs.npmjs.com/getting-started/scoped-packages
 [3]: https://github.com/sparebank1/designsystem/tags
 
-
-
-
 <a name="2.1.6"></a>
+
 ## [2.1.6](https://github.com/SpareBank1/designsystem/compare/ffe-lists-react@2.1.5...ffe-lists-react@2.1.6) (2018-02-23)
-
-
-
 
 **Note:** Version bump only for package ffe-lists-react
 
 <a name="2.1.5"></a>
+
 ## [2.1.5](https://github.com/SpareBank1/designsystem/compare/ffe-lists-react@2.1.4...ffe-lists-react@2.1.5) (2018-02-22)
-
-
-
 
 **Note:** Version bump only for package ffe-lists-react
 
 <a name="2.1.4"></a>
+
 ## [2.1.4](https://github.com/SpareBank1/designsystem/compare/ffe-lists-react@2.1.3...ffe-lists-react@2.1.4) (2018-02-20)
-
-
-
 
 **Note:** Version bump only for package ffe-lists-react
 
 <a name="2.1.3"></a>
+
 ## [2.1.3](https://github.com/SpareBank1/designsystem/compare/ffe-lists-react@2.1.2...ffe-lists-react@2.1.3) (2018-02-15)
-
-
-
 
 **Note:** Version bump only for package ffe-lists-react
 
 <a name="2.1.2"></a>
+
 ## [2.1.2](https://github.com/SpareBank1/designsystem/compare/ffe-lists-react@2.1.1...ffe-lists-react@2.1.2) (2018-02-01)
-
-
-
 
 **Note:** Version bump only for package ffe-lists-react
 
 <a name="2.1.1"></a>
+
 ## [2.1.1](https://github.com/SpareBank1/designsystem/compare/ffe-lists-react@2.1.0...ffe-lists-react@2.1.1) (2018-01-22)
-
-
-
 
 **Note:** Version bump only for package ffe-lists-react
 
@@ -198,36 +168,36 @@ JavaScript `require`:
 
 ### Features
 
-* **ffe-lists-react:** Import ffe-lists-react
+-   **ffe-lists-react:** Import ffe-lists-react
 
 ## 2.0.3
 
-* Use PropTypes from prop-types package
+-   Use PropTypes from prop-types package
 
 ## 2.0.2
 
-* Expand peerDep scope of `ffe-lists` to include `4.x`.
-* Remove peerDep on `ffe-core`.
+-   Expand peerDep scope of `ffe-lists` to include `4.x`.
+-   Remove peerDep on `ffe-core`.
 
 ## 2.0.1
 
-* Fixed erroneous reference to renamed file
+-   Fixed erroneous reference to renamed file
 
 # 2.0.0
 
-* Breaking:
-_ Renamed `DescriptionListFlex` to `DescriptionList`
-_ Updated `DescriptionList` and `DescriptionListMultiCol` markup to reflect refactoring in `ffe-lists` v.3.0.0
-* Added support for `medium` and `large` attributes to `DescriptionList`
+-   Breaking:
+    _ Renamed `DescriptionListFlex` to `DescriptionList`
+    _ Updated `DescriptionList` and `DescriptionListMultiCol` markup to reflect refactoring in `ffe-lists` v.3.0.0
+-   Added support for `medium` and `large` attributes to `DescriptionList`
 
 ## 1.1.1
 
-* Upgrade eslint
+-   Upgrade eslint
 
 # 1.1.0
 
-* Added className support for ffe-check-list
+-   Added className support for ffe-check-list
 
 # 1.0.0
 
-* Initial release
+-   Initial release

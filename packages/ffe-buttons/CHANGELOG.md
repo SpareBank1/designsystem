@@ -3,6 +3,34 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@8.0.9...@sb1/ffe-buttons@8.0.10) (2018-10-08)
+
+### Bug Fixes
+
+-   **ffe-buttons:** Set a safer display value on tertiary button pseudo element ([72162aa](https://github.com/SpareBank1/designsystem/commit/72162aa))
+
+## [8.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@8.0.8...@sb1/ffe-buttons@8.0.9) (2018-10-05)
+
+### Bug Fixes
+
+-   **ffe-buttons:** Make sure the underline on tertiary buttons are visible also in inline mode. ([d60ec72](https://github.com/SpareBank1/designsystem/commit/d60ec72))
+
+<a name="8.0.8"></a>
+
+## [8.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@8.0.7...@sb1/ffe-buttons@8.0.8) (2018-09-25)
+
+### Bug Fixes
+
+-   **ffe-buttons:** Specify buttongroup width in order to support full width ([7d693fb](https://github.com/SpareBank1/designsystem/commit/7d693fb))
+
+<a name="8.0.7"></a>
+
+## [8.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@8.0.6...@sb1/ffe-buttons@8.0.7) (2018-09-19)
+
+### Bug Fixes
+
+-   **ffe-buttons:** Increased contrast in focus outline ([0ded429](https://github.com/SpareBank1/designsystem/commit/0ded429))
+
 <a name="8.0.6"></a>
 
 ## [8.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@8.0.5...@sb1/ffe-buttons@8.0.6) (2018-08-23)
@@ -15,13 +43,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sb1/ffe-buttons
 
-      <a name="8.0.4"></a>
+<a name="8.0.4"></a>
 
 ## [8.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@8.0.3...@sb1/ffe-buttons@8.0.4) (2018-07-23)
 
 **Note:** Version bump only for package @sb1/ffe-buttons
 
-    <a name="8.0.3"></a>
+<a name="8.0.3"></a>
 
 ## [8.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@8.0.2...@sb1/ffe-buttons@8.0.3) (2018-06-20)
 

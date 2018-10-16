@@ -16,7 +16,7 @@ class TableRowExpandable extends Component {
     }
 
     toggleExpand() {
-        this.setState({ expanded: !this.state.expanded });
+        this.setState(prevState => ({ expanded: !prevState.expanded }));
     }
 
     handleKeyPress(event) {
@@ -24,7 +24,7 @@ class TableRowExpandable extends Component {
             (event.key === 'Enter' || event.key === ' ') &&
             event.target.tagName === 'TR'
         ) {
-            this.setState({ expanded: !this.state.expanded });
+            this.setState(prevState => ({ expanded: !prevState.expanded }));
             event.preventDefault();
         }
     }
@@ -39,7 +39,7 @@ class TableRowExpandable extends Component {
     }
 
     render() {
-        const { cells, columns, children, rowRender, rowIndex} = this.props;
+        const { cells, columns, children, rowRender, rowIndex } = this.props;
         const unexpandable = !children;
 
         return (
@@ -109,7 +109,7 @@ TableRowExpandable.propTypes = {
     rowRender: PropTypes.func,
     headerRender: PropTypes.func,
     footerRender: PropTypes.func,
-    rowIndex: PropTypes.number
+    rowIndex: PropTypes.number,
 };
 
 export default TableRowExpandable;

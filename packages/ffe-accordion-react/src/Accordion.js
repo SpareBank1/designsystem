@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { node, bool } from 'prop-types';
+import { node, bool, string } from 'prop-types';
 import uuid from 'uuid';
 import classNames from 'classnames';
 
@@ -11,16 +11,19 @@ class Accordion extends Component {
     }
 
     render() {
-        const { children, isBlue, ...rest } = this.props;
+        const { children, isBlue, className, ...rest } = this.props;
 
         return (
             <ul
                 {...rest}
                 aria-multiselectable="true"
-                className={classNames({
-                    'ffe-accordion': true,
-                    'ffe-accordion--blue': isBlue,
-                })}
+                className={classNames(
+                    {
+                        'ffe-accordion': true,
+                        'ffe-accordion--blue': isBlue,
+                    },
+                    className,
+                )}
                 role="tablist"
             >
                 {React.Children.map(children, ele =>
@@ -39,6 +42,8 @@ Accordion.propTypes = {
      * @ignore
      **/
     isBlue: bool,
+    /** Extra class names */
+    className: string,
 };
 
 Accordion.defaultProps = {

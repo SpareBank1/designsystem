@@ -3,172 +3,153 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-<a name="6.1.0"></a>
-# [6.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@6.0.7...@sb1/ffe-accordion-react@6.1.0) (2018-09-06)
+## [6.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@6.2.0...@sb1/ffe-accordion-react@6.2.1) (2018-10-15)
 
+**Note:** Version bump only for package @sb1/ffe-accordion-react
+
+# [6.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@6.1.1...@sb1/ffe-accordion-react@6.2.0) (2018-10-09)
 
 ### Features
 
-* **ffe-accordion-react:** Use css transition ([8aae70c](https://github.com/SpareBank1/designsystem/commit/8aae70c))
-* **ffe-accordion-react:** Use new modifier class names ([8bf9c03](https://github.com/SpareBank1/designsystem/commit/8bf9c03))
+-   **ffe-accordion-react:** Add classname prop for Accordion and AccordionItem ([79859cb](https://github.com/SpareBank1/designsystem/commit/79859cb))
 
+<a name="6.1.1"></a>
+
+## [6.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@6.1.0...@sb1/ffe-accordion-react@6.1.1) (2018-09-24)
+
+### Bug Fixes
+
+-   **ffe-accordion-react:** fixed async issues with setState ([706dee5](https://github.com/SpareBank1/designsystem/commit/706dee5))
+
+<a name="6.1.0"></a>
+
+# [6.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@6.0.7...@sb1/ffe-accordion-react@6.1.0) (2018-09-06)
+
+### Features
+
+-   **ffe-accordion-react:** Use css transition ([8aae70c](https://github.com/SpareBank1/designsystem/commit/8aae70c))
+-   **ffe-accordion-react:** Use new modifier class names ([8bf9c03](https://github.com/SpareBank1/designsystem/commit/8bf9c03))
 
 ### BREAKING CHANGES
 
-* **ffe-accordion-react:** Replaces `react-collapse` with `react-css-collapse`,
-which is internally used for toggling the accordion items with help of
-css transitions. Further, this change drops support for property
-`hasNestedCollapse`, which is a flag used by `react-collapse`.
+-   **ffe-accordion-react:** Replaces `react-collapse` with `react-css-collapse`,
+    which is internally used for toggling the accordion items with help of
+    css transitions. Further, this change drops support for property
+    `hasNestedCollapse`, which is a flag used by `react-collapse`.
 
 See https://www.npmjs.com/package/react-css-collapse
 
-
-
-
-
 <a name="6.0.7"></a>
+
 ## [6.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@6.0.6...@sb1/ffe-accordion-react@6.0.7) (2018-08-09)
 
-
-
-
 **Note:** Version bump only for package @sb1/ffe-accordion-react
 
-      <a name="6.0.6"></a>
+<a name="6.0.6"></a>
+
 ## [6.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@6.0.5...@sb1/ffe-accordion-react@6.0.6) (2018-06-14)
 
-
-
-
 **Note:** Version bump only for package @sb1/ffe-accordion-react
 
-    <a name="6.0.5"></a>
+<a name="6.0.5"></a>
+
 ## [6.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@6.0.4...@sb1/ffe-accordion-react@6.0.5) (2018-06-04)
 
-
-
-
 **Note:** Version bump only for package @sb1/ffe-accordion-react
 
-  <a name="6.0.4"></a>
+<a name="6.0.4"></a>
+
 ## [6.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@6.0.3...@sb1/ffe-accordion-react@6.0.4) (2018-06-04)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react
 
 <a name="6.0.3"></a>
+
 ## [6.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@6.0.2...@sb1/ffe-accordion-react@6.0.3) (2018-05-29)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react
 
 <a name="6.0.2"></a>
+
 ## [6.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@6.0.1...@sb1/ffe-accordion-react@6.0.2) (2018-05-04)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react
 
 <a name="6.0.1"></a>
+
 ## [6.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@6.0.0...@sb1/ffe-accordion-react@6.0.1) (2018-04-11)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react
 
 <a name="6.0.0"></a>
-# [6.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@5.0.5...@sb1/ffe-accordion-react@6.0.0) (2018-04-11)
 
+# [6.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@5.0.5...@sb1/ffe-accordion-react@6.0.0) (2018-04-11)
 
 ### Features
 
-* **ffe-accordion-react:** Make AccordionItems controllable ([a2761e8](https://github.com/SpareBank1/designsystem/commit/a2761e8)), closes [#155](https://github.com/SpareBank1/designsystem/issues/155)
-
+-   **ffe-accordion-react:** Make AccordionItems controllable ([a2761e8](https://github.com/SpareBank1/designsystem/commit/a2761e8)), closes [#155](https://github.com/SpareBank1/designsystem/issues/155)
 
 ### BREAKING CHANGES
 
-* **ffe-accordion-react:** `AccordionItem`'s prop `isOpen` is renamed to
-`defaultOpen`, while a new `open` prop let's the consumer control the
-open state of the accordion. To migrate, simply rename all `isOpen`
-props to `defaultOpen`.
-* **ffe-accordion-react:** `AccordionItem`'s props `onOpen` and `onClose` replaced
-with `onToggleOpen(nextIsOpen)`.
-
-
-
+-   **ffe-accordion-react:** `AccordionItem`'s prop `isOpen` is renamed to
+    `defaultOpen`, while a new `open` prop let's the consumer control the
+    open state of the accordion. To migrate, simply rename all `isOpen`
+    props to `defaultOpen`.
+-   **ffe-accordion-react:** `AccordionItem`'s props `onOpen` and `onClose` replaced
+    with `onToggleOpen(nextIsOpen)`.
 
 <a name="5.0.5"></a>
+
 ## [5.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@5.0.4...@sb1/ffe-accordion-react@5.0.5) (2018-04-06)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react
 
 <a name="5.0.4"></a>
+
 ## [5.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@5.0.3...@sb1/ffe-accordion-react@5.0.4) (2018-03-27)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react
 
 <a name="5.0.3"></a>
+
 ## [5.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@5.0.2...@sb1/ffe-accordion-react@5.0.3) (2018-03-13)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react
 
 <a name="5.0.2"></a>
+
 ## [5.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@5.0.0...@sb1/ffe-accordion-react@5.0.2) (2018-03-07)
 
-
 ### Bug Fixes
 
-* Correct peerDependencies after breaking change ([aab59ce](https://github.com/SpareBank1/designsystem/commit/aab59ce))
-
-
-
+-   Correct peerDependencies after breaking change ([aab59ce](https://github.com/SpareBank1/designsystem/commit/aab59ce))
 
 <a name="5.0.1"></a>
+
 ## [5.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@5.0.0...@sb1/ffe-accordion-react@5.0.1) (2018-03-02)
 
-
 ### Bug Fixes
 
-* Correct peerDependencies after breaking change ([4318363](https://github.com/SpareBank1/designsystem/commit/4318363))
-
-
-
+-   Correct peerDependencies after breaking change ([4318363](https://github.com/SpareBank1/designsystem/commit/4318363))
 
 <a name="5.0.0"></a>
-# 5.0.0 (2018-02-25)
 
+# 5.0.0 (2018-02-25)
 
 ### Bug Fixes
 
-* **ffe-accordion-react:** Create ID only once ([dc94925](https://github.com/SpareBank1/designsystem/commit/dc94925))
-* **ffe-accordion-react:** Remove "expandableContent" prop ([be8043d](https://github.com/SpareBank1/designsystem/commit/be8043d))
-* Treeshake ffe-icons ([6bc9d6f](https://github.com/SpareBank1/designsystem/commit/6bc9d6f))
-* Upgrade ffe-icons-react to v4 ([01bc161](https://github.com/SpareBank1/designsystem/commit/01bc161))
-
+-   **ffe-accordion-react:** Create ID only once ([dc94925](https://github.com/SpareBank1/designsystem/commit/dc94925))
+-   **ffe-accordion-react:** Remove "expandableContent" prop ([be8043d](https://github.com/SpareBank1/designsystem/commit/be8043d))
+-   Treeshake ffe-icons ([6bc9d6f](https://github.com/SpareBank1/designsystem/commit/6bc9d6f))
+-   Upgrade ffe-icons-react to v4 ([01bc161](https://github.com/SpareBank1/designsystem/commit/01bc161))
 
 ### Chores
 
-* add [@sb1](https://github.com/sb1)/ scope to all packages ([37efbb4](https://github.com/SpareBank1/designsystem/commit/37efbb4))
-
+-   add [@sb1](https://github.com/sb1)/ scope to all packages ([37efbb4](https://github.com/SpareBank1/designsystem/commit/37efbb4))
 
 ### BREAKING CHANGES
 
-* All packages have been renamed to add the @sb1 scope.
+-   All packages have been renamed to add the @sb1 scope.
 
 See links [1] and [2] to read more about package scopes.
 
@@ -240,122 +221,94 @@ JavaScript `require`:
 [1]: https://docs.npmjs.com/misc/scope
 [2]: https://docs.npmjs.com/getting-started/scoped-packages
 [3]: https://github.com/sparebank1/designsystem/tags
-* **ffe-accordion-react:** Replace "expandedContent" with children- & title- prop
+
+-   **ffe-accordion-react:** Replace "expandedContent" with children- & title- prop
 
 This commit changes the structure of ffe-accordion-react by making
 the expandable content of the accordion item the children, while the heading of the item
 is now a new "title"-prop. This previous soulution was somewhat backwards,
 while this change will be more the React way of doing things.
 
-
-
-
 <a name="4.0.10"></a>
+
 ## [4.0.10](https://github.com/SpareBank1/designsystem/compare/ffe-accordion-react@4.0.9...ffe-accordion-react@4.0.10) (2018-02-23)
-
-
-
 
 **Note:** Version bump only for package ffe-accordion-react
 
 <a name="4.0.9"></a>
+
 ## [4.0.9](https://github.com/SpareBank1/designsystem/compare/ffe-accordion-react@4.0.8...ffe-accordion-react@4.0.9) (2018-02-22)
-
-
-
 
 **Note:** Version bump only for package ffe-accordion-react
 
 <a name="4.0.8"></a>
+
 ## [4.0.8](https://github.com/SpareBank1/designsystem/compare/ffe-accordion-react@4.0.7...ffe-accordion-react@4.0.8) (2018-02-20)
-
-
-
 
 **Note:** Version bump only for package ffe-accordion-react
 
 <a name="4.0.7"></a>
+
 ## [4.0.7](https://github.com/SpareBank1/designsystem/compare/ffe-accordion-react@4.0.6...ffe-accordion-react@4.0.7) (2018-02-15)
-
-
-
 
 **Note:** Version bump only for package ffe-accordion-react
 
 <a name="4.0.6"></a>
+
 ## [4.0.6](https://github.com/SpareBank1/designsystem/compare/ffe-accordion-react@4.0.5...ffe-accordion-react@4.0.6) (2018-02-01)
-
-
-
 
 **Note:** Version bump only for package ffe-accordion-react
 
 <a name="4.0.5"></a>
-## [4.0.5](https://github.com/SpareBank1/designsystem/compare/ffe-accordion-react@4.0.4...ffe-accordion-react@4.0.5) (2018-01-31)
 
+## [4.0.5](https://github.com/SpareBank1/designsystem/compare/ffe-accordion-react@4.0.4...ffe-accordion-react@4.0.5) (2018-01-31)
 
 ### Bug Fixes
 
-* Treeshake ffe-icons
-
-
-
+-   Treeshake ffe-icons
 
 <a name="4.0.4"></a>
+
 ## [4.0.4](https://github.com/SpareBank1/designsystem/compare/ffe-accordion-react@4.0.3...ffe-accordion-react@4.0.4) (2018-01-31)
-
-
-
 
 **Note:** Version bump only for package ffe-accordion-react
 
 <a name="4.0.3"></a>
+
 ## [4.0.3](https://github.com/SpareBank1/designsystem/compare/ffe-accordion-react@4.0.2...ffe-accordion-react@4.0.3) (2018-01-19)
-
-
-
 
 **Note:** Version bump only for package ffe-accordion-react
 
 <a name="4.0.2"></a>
-## [4.0.2](https://github.com/SpareBank1/designsystem/compare/ffe-accordion-react@4.0.1...ffe-accordion-react@4.0.2) (2018-01-19)
 
+## [4.0.2](https://github.com/SpareBank1/designsystem/compare/ffe-accordion-react@4.0.1...ffe-accordion-react@4.0.2) (2018-01-19)
 
 ### Bug Fixes
 
-* Upgrade ffe-icons-react to v4
-
-
-
+-   Upgrade ffe-icons-react to v4
 
 <a name="4.0.1"></a>
+
 ## [4.0.1](https://github.com/SpareBank1/designsystem/compare/ffe-accordion-react@4.0.0...ffe-accordion-react@4.0.1) (2018-01-19)
-
-
-
 
 **Note:** Version bump only for package ffe-accordion-react
 
 <a name="4.0.0"></a>
-# [4.0.0](https://github.com/SpareBank1/designsystem/compare/ffe-accordion-react@3.1.6...ffe-accordion-react@4.0.0) (2018-01-19)
 
+# [4.0.0](https://github.com/SpareBank1/designsystem/compare/ffe-accordion-react@3.1.6...ffe-accordion-react@4.0.0) (2018-01-19)
 
 ### Bug Fixes
 
-* **ffe-accordion-react:** Remove "expandableContent" prop
-
+-   **ffe-accordion-react:** Remove "expandableContent" prop
 
 ### BREAKING CHANGES
 
-* **ffe-accordion-react:** Replace "expandedContent" with children- & title- prop
+-   **ffe-accordion-react:** Replace "expandedContent" with children- & title- prop
 
 This commit changes the structure of ffe-accordion-react by making
 the expandable content of the accordion item the children, while the heading of the item
 is now a new "title"-prop. This previous soulution was somewhat backwards,
 while this change will be more the React way of doing things.
-
-
-
 
 <a name="3.1.6"></a>
 
@@ -381,31 +334,31 @@ while this change will be more the React way of doing things.
 
 ### Bug Fixes
 
-* **ffe-accordion-react:** Create ID only once
+-   **ffe-accordion-react:** Create ID only once
 
 ## 3.1.2
 
-* Added documentation and refactored internally.
+-   Added documentation and refactored internally.
 
 ## 3.1.1
 
-* Removed button and replaced with div to fix bug in internet explorer
+-   Removed button and replaced with div to fix bug in internet explorer
 
 # 3.1.0
 
-* Upgraded to react 16. Enzyme to 3.1.1 to support react 16. Added repository to remove warning.
-Upgraded ffe-accordian to remove warning.
+-   Upgraded to react 16. Enzyme to 3.1.1 to support react 16. Added repository to remove warning.
+    Upgraded ffe-accordian to remove warning.
 
 ## 3.0.1
 
-* Fix a propType error that would happen if isOpen was not set on AccordionItem. Collapse complained that
-`this.state.isOpen` was undefined, so it now defaults to the boolean `false`.
+-   Fix a propType error that would happen if isOpen was not set on AccordionItem. Collapse complained that
+    `this.state.isOpen` was undefined, so it now defaults to the boolean `false`.
 
 # 3.0.0
 
 ### BREAKING CHANGES
 
-* Changing to use flex to align items instead of absolute positioning
+-   Changing to use flex to align items instead of absolute positioning
 
 # 2.1.0
 
@@ -418,7 +371,7 @@ Set `type="button"` for Button-toggler to prevent submit when accordion is used 
 
 ## .2.0.3
 
-* Use PropTypes from prop-types package
+-   Use PropTypes from prop-types package
 
 ## 2.0.2
 
@@ -451,8 +404,8 @@ Update eslint configuration
 
 This release fixes a few issues from v1.2.3.
 
-* Use `uuid` instead of `nfe-hash` for unique IDs.
-* Make `uuid` and `isOpen` optional props.
+-   Use `uuid` instead of `nfe-hash` for unique IDs.
+-   Make `uuid` and `isOpen` optional props.
 
 ## 1.2.3
 

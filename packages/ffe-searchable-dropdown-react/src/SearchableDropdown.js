@@ -1,5 +1,15 @@
 import React, { Component } from 'react';
-import { string, bool, array, func, arrayOf, object, number } from 'prop-types';
+import {
+    string,
+    bool,
+    array,
+    func,
+    arrayOf,
+    object,
+    number,
+    shape,
+    oneOfType,
+} from 'prop-types';
 import classNames from 'classnames';
 import Input from './InputField';
 import ScrollContainer from './ScrollContainer';
@@ -264,8 +274,15 @@ SearchableDropdown.propTypes = {
     inputId: isRequiredIf(string, props => props.label),
     /** Value of input field */
     inputValue: string,
-    /** value to be displayed in dropdown in case of search with no match */
-    noMatch: string.isRequired,
+    noMatch: oneOfType([
+        /** value to be displayed in dropdown in case of search with no match */
+        string,
+        /** or value to be display along another list of items */
+        shape({
+            text: string.isRequired,
+            items: array,
+        }),
+    ]).isRequired,
     /** Function receives value of inputField and should update inputValue */
     onInputChange: func.isRequired,
     /** Function receives no input expects no return */

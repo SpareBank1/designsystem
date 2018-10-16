@@ -3,145 +3,122 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.1.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@5.1.12...@sb1/ffe-system-message-react@5.1.13) (2018-10-15)
+
+### Bug Fixes
+
+-   **ffe-system-message-react:** Adds necessary dependency ([2ae1194](https://github.com/SpareBank1/designsystem/commit/2ae1194)), closes [#399](https://github.com/SpareBank1/designsystem/issues/399)
+
+## [5.1.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@5.1.11...@sb1/ffe-system-message-react@5.1.12) (2018-10-05)
+
+**Note:** Version bump only for package @sb1/ffe-system-message-react
+
 <a name="5.1.11"></a>
+
 ## [5.1.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@5.1.10...@sb1/ffe-system-message-react@5.1.11) (2018-08-09)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-system-message-react
 
 <a name="5.1.10"></a>
+
 ## [5.1.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@5.1.9...@sb1/ffe-system-message-react@5.1.10) (2018-06-26)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-system-message-react
 
 <a name="5.1.9"></a>
-## [5.1.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@5.1.8...@sb1/ffe-system-message-react@5.1.9) (2018-06-20)
 
+## [5.1.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@5.1.8...@sb1/ffe-system-message-react@5.1.9) (2018-06-20)
 
 ### Bug Fixes
 
-* **ffe-system-message-react:** added peerDependency to ffe-icons-react@^6.0.0 ([fe40b90](https://github.com/SpareBank1/designsystem/commit/fe40b90))
-
-
-
+-   **ffe-system-message-react:** added peerDependency to ffe-icons-react@^6.0.0 ([fe40b90](https://github.com/SpareBank1/designsystem/commit/fe40b90))
 
 <a name="5.1.8"></a>
+
 ## [5.1.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@5.1.7...@sb1/ffe-system-message-react@5.1.8) (2018-06-19)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-system-message-react
 
 <a name="5.1.7"></a>
+
 ## [5.1.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@5.1.6...@sb1/ffe-system-message-react@5.1.7) (2018-06-18)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-system-message-react
 
 <a name="5.1.6"></a>
+
 ## [5.1.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@5.1.5...@sb1/ffe-system-message-react@5.1.6) (2018-06-14)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-system-message-react
 
 <a name="5.1.5"></a>
+
 ## [5.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@5.1.4...@sb1/ffe-system-message-react@5.1.5) (2018-06-04)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-system-message-react
 
 <a name="5.1.4"></a>
+
 ## [5.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@5.1.3...@sb1/ffe-system-message-react@5.1.4) (2018-06-04)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-system-message-react
 
 <a name="5.1.3"></a>
+
 ## [5.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@5.1.2...@sb1/ffe-system-message-react@5.1.3) (2018-05-29)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-system-message-react
 
 <a name="5.1.2"></a>
+
 ## [5.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@5.1.1...@sb1/ffe-system-message-react@5.1.2) (2018-05-04)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-system-message-react
 
 <a name="5.1.1"></a>
+
 ## [5.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@5.1.0...@sb1/ffe-system-message-react@5.1.1) (2018-04-25)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-system-message-react
 
 <a name="5.1.0"></a>
-# [5.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@5.0.3...@sb1/ffe-system-message-react@5.1.0) (2018-04-19)
 
+# [5.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@5.0.3...@sb1/ffe-system-message-react@5.1.0) (2018-04-19)
 
 ### Features
 
-* **ffe-system-message-react:** Added locale prop, aria-label on Close ([86072e3](https://github.com/SpareBank1/designsystem/commit/86072e3))
-
-
-
+-   **ffe-system-message-react:** Added locale prop, aria-label on Close ([86072e3](https://github.com/SpareBank1/designsystem/commit/86072e3))
 
 <a name="5.0.3"></a>
+
 ## [5.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@5.0.2...@sb1/ffe-system-message-react@5.0.3) (2018-04-12)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-system-message-react
 
 <a name="5.0.2"></a>
+
 ## [5.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@5.0.1...@sb1/ffe-system-message-react@5.0.2) (2018-04-11)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-system-message-react
 
 <a name="5.0.1"></a>
+
 ## [5.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@5.0.0...@sb1/ffe-system-message-react@5.0.1) (2018-04-06)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-system-message-react
 
 <a name="5.0.0"></a>
-# [5.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@4.0.4...@sb1/ffe-system-message-react@5.0.0) (2018-04-05)
 
+# [5.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@4.0.4...@sb1/ffe-system-message-react@5.0.0) (2018-04-05)
 
 ### Bug Fixes
 
-* **ffe-system-message-react:** Reimplement ([1748617](https://github.com/SpareBank1/designsystem/commit/1748617))
-
+-   **ffe-system-message-react:** Reimplement ([1748617](https://github.com/SpareBank1/designsystem/commit/1748617))
 
 ### BREAKING CHANGES
 
-* **ffe-system-message-react:** This commit contributes a new implementation of the
-`ffe-system-message-react` package.
+-   **ffe-system-message-react:** This commit contributes a new implementation of the
+    `ffe-system-message-react` package.
 
 The change removes an optional `animationLengthMs` property, which
 you can now safely remove.
@@ -149,73 +126,58 @@ you can now safely remove.
 This new implementation brings a few new nice-to-haves to the
 `ffe-system-message-react` components:
 
-- Props that are not listed are passed to the outer component
-- The system message is sized after its container, with a max width
-if it's not put in a sized container
-- The close button is now a `<button />`, improving a11y
-- The test coverage is 100 %, ensuring a stable implementation with
-few bugs
-- The implementation now uses the correct colors and icons
-
-
-
+-   Props that are not listed are passed to the outer component
+-   The system message is sized after its container, with a max width
+    if it's not put in a sized container
+-   The close button is now a `<button />`, improving a11y
+-   The test coverage is 100 %, ensuring a stable implementation with
+    few bugs
+-   The implementation now uses the correct colors and icons
 
 <a name="4.0.4"></a>
+
 ## [4.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@4.0.3...@sb1/ffe-system-message-react@4.0.4) (2018-03-27)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-system-message-react
 
 <a name="4.0.3"></a>
+
 ## [4.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@4.0.2...@sb1/ffe-system-message-react@4.0.3) (2018-03-13)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-system-message-react
 
 <a name="4.0.2"></a>
+
 ## [4.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@4.0.0...@sb1/ffe-system-message-react@4.0.2) (2018-03-07)
 
-
 ### Bug Fixes
 
-* Correct peerDependencies after breaking change ([aab59ce](https://github.com/SpareBank1/designsystem/commit/aab59ce))
-
-
-
+-   Correct peerDependencies after breaking change ([aab59ce](https://github.com/SpareBank1/designsystem/commit/aab59ce))
 
 <a name="4.0.1"></a>
+
 ## [4.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@4.0.0...@sb1/ffe-system-message-react@4.0.1) (2018-03-02)
 
-
 ### Bug Fixes
 
-* Correct peerDependencies after breaking change ([4318363](https://github.com/SpareBank1/designsystem/commit/4318363))
-
-
-
+-   Correct peerDependencies after breaking change ([4318363](https://github.com/SpareBank1/designsystem/commit/4318363))
 
 <a name="4.0.0"></a>
-# 4.0.0 (2018-02-25)
 
+# 4.0.0 (2018-02-25)
 
 ### Bug Fixes
 
-* remove all references to internal system ([ff22340](https://github.com/SpareBank1/designsystem/commit/ff22340))
-
+-   remove all references to internal system ([ff22340](https://github.com/SpareBank1/designsystem/commit/ff22340))
 
 ### Chores
 
-* **ffe-system-message-react:** Import component ([6a3152c](https://github.com/SpareBank1/designsystem/commit/6a3152c))
-* add [@sb1](https://github.com/sb1)/ scope to all packages ([37efbb4](https://github.com/SpareBank1/designsystem/commit/37efbb4))
-
+-   **ffe-system-message-react:** Import component ([6a3152c](https://github.com/SpareBank1/designsystem/commit/6a3152c))
+-   add [@sb1](https://github.com/sb1)/ scope to all packages ([37efbb4](https://github.com/SpareBank1/designsystem/commit/37efbb4))
 
 ### BREAKING CHANGES
 
-* All packages have been renamed to add the @sb1 scope.
+-   All packages have been renamed to add the @sb1 scope.
 
 See links [1] and [2] to read more about package scopes.
 
@@ -287,109 +249,116 @@ JavaScript `require`:
 [1]: https://docs.npmjs.com/misc/scope
 [2]: https://docs.npmjs.com/getting-started/scoped-packages
 [3]: https://github.com/sparebank1/designsystem/tags
-* **ffe-system-message-react:** the `files` property has been changed to only include
-the `lib/` folder. If you imported anything from anywhere else you need
-to update your imports to go through the official channels.
+
+-   **ffe-system-message-react:** the `files` property has been changed to only include
+    the `lib/` folder. If you imported anything from anywhere else you need
+    to update your imports to go through the official channels.
 
 With this ffe-system-message-react lives in the monorepo. All new
 changes must be done there.
 
-
-
-
 <a name="3.0.3"></a>
+
 ## [3.0.3](https://github.com/SpareBank1/designsystem/compare/ffe-system-message-react@3.0.2...ffe-system-message-react@3.0.3) (2018-02-23)
-
-
-
 
 **Note:** Version bump only for package ffe-system-message-react
 
 <a name="3.0.2"></a>
+
 ## [3.0.2](https://github.com/SpareBank1/designsystem/compare/ffe-system-message-react@3.0.1...ffe-system-message-react@3.0.2) (2018-02-22)
-
-
-
 
 **Note:** Version bump only for package ffe-system-message-react
 
 <a name="3.0.1"></a>
+
 ## [3.0.1](https://github.com/SpareBank1/designsystem/compare/ffe-system-message-react@3.0.0...ffe-system-message-react@3.0.1) (2018-02-15)
-
-
-
 
 **Note:** Version bump only for package ffe-system-message-react
 
 <a name="3.0.0"></a>
-# 3.0.0 (2018-01-29)
 
+# 3.0.0 (2018-01-29)
 
 ### Chores
 
-* **ffe-system-message-react:** Import component
-
+-   **ffe-system-message-react:** Import component
 
 ### BREAKING CHANGES
 
-* **ffe-system-message-react:** the `files` property has been changed to only include
-the `lib/` folder. If you imported anything from anywhere else you need
-to update your imports to go through the official channels.
+-   **ffe-system-message-react:** the `files` property has been changed to only include
+    the `lib/` folder. If you imported anything from anywhere else you need
+    to update your imports to go through the official channels.
 
 With this ffe-system-message-react lives in the monorepo. All new
 changes must be done there.
 
 # 2.0.0
-* Upgraded to work with ffe-icons-react 4.x.
-* Bumped versions
+
+-   Upgraded to work with ffe-icons-react 4.x.
+-   Bumped versions
 
 ## 1.2.1
-* Added documentation for Styleguidist
+
+-   Added documentation for Styleguidist
 
 # 1.2.0
-* Added support for on close callback using onClose prop
+
+-   Added support for on close callback using onClose prop
 
 ## 1.1.5
-* Use PropTypes from prop-types package
+
+-   Use PropTypes from prop-types package
 
 ## 1.1.4
-* Removed peerDep on ffe-core
+
+-   Removed peerDep on ffe-core
 
 ## 1.1.3
-* Added description to example
+
+-   Added description to example
 
 ## 1.1.2
-* Minor bugfix in example
+
+-   Minor bugfix in example
 
 ## 1.1.1
-* Upgrade eslint to use ffe config
+
+-   Upgrade eslint to use ffe config
 
 # 1.1.0
-* Added styling support for outer container using style prop
-* Bumped ffe-icons-react dependency
+
+-   Added styling support for outer container using style prop
+-   Bumped ffe-icons-react dependency
 
 ## 1.0.1
 
 Update version number after build includes examples
 
 # 1.0.0
+
 Bumped dependency on
-* `ffe-core` to `^8.1.0`
-* `ffe-icons-react` to `1.1.1`
-* `ffe-system-message` to `1.0.0`
-* Added implicit dependency on  mkdirp
+
+-   `ffe-core` to `^8.1.0`
+-   `ffe-icons-react` to `1.1.1`
+-   `ffe-system-message` to `1.0.0`
+-   Added implicit dependency on mkdirp
 
 ## 0.1.3
+
 Oppdatert example.html til å inneholde alle meldingstyper
 
 ## 0.1.2
+
 Tidligere versjon var laget med utgangspunkt i feil designskisser
 
 ## 0.1.1
+
 Spesifiser filer som skal inkluderes i pakka
 
 ## 0.1.0
+
 La til støtte for å bruke --success og --error modifiers fra `ffe-system-message`
 
 ## 0.0.1
+
 Første versjon

@@ -3,47 +3,47 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-      <a name="3.0.3"></a>
+<a name="3.1.0"></a>
+
+# [3.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-formatters@3.0.3...@sb1/ffe-formatters@3.1.0) (2018-10-02)
+
+### Features
+
+-   **ffe-formatters:** Add minDecimals option to formatPercentage. ([07cd558](https://github.com/SpareBank1/designsystem/commit/07cd558))
+
+<a name="3.0.3"></a>
+
 ## [3.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-formatters@3.0.2...@sb1/ffe-formatters@3.0.3) (2018-08-09)
 
-
-
-
 **Note:** Version bump only for package @sb1/ffe-formatters
 
-      <a name="3.0.2"></a>
+<a name="3.0.2"></a>
+
 ## [3.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-formatters@3.0.0...@sb1/ffe-formatters@3.0.2) (2018-03-07)
 
-
-
-
 **Note:** Version bump only for package @sb1/ffe-formatters
 
-    <a name="3.0.1"></a>
+<a name="3.0.1"></a>
+
 ## [3.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-formatters@3.0.0...@sb1/ffe-formatters@3.0.1) (2018-03-02)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-formatters
 
 <a name="3.0.0"></a>
-# 3.0.0 (2018-02-25)
 
+# 3.0.0 (2018-02-25)
 
 ### Bug Fixes
 
-* remove all references to internal system ([ff22340](https://github.com/SpareBank1/designsystem/commit/ff22340))
-
+-   remove all references to internal system ([ff22340](https://github.com/SpareBank1/designsystem/commit/ff22340))
 
 ### Chores
 
-* add [@sb1](https://github.com/sb1)/ scope to all packages ([37efbb4](https://github.com/SpareBank1/designsystem/commit/37efbb4))
-
+-   add [@sb1](https://github.com/sb1)/ scope to all packages ([37efbb4](https://github.com/SpareBank1/designsystem/commit/37efbb4))
 
 ### BREAKING CHANGES
 
-* All packages have been renamed to add the @sb1 scope.
+-   All packages have been renamed to add the @sb1 scope.
 
 See links [1] and [2] to read more about package scopes.
 
@@ -116,54 +116,39 @@ JavaScript `require`:
 [2]: https://docs.npmjs.com/getting-started/scoped-packages
 [3]: https://github.com/sparebank1/designsystem/tags
 
-
-
-
 <a name="2.1.7"></a>
+
 ## [2.1.7](https://github.com/SpareBank1/designsystem/compare/ffe-formatters@2.1.6...ffe-formatters@2.1.7) (2018-02-23)
-
-
-
 
 **Note:** Version bump only for package ffe-formatters
 
 <a name="2.1.6"></a>
+
 ## [2.1.6](https://github.com/SpareBank1/designsystem/compare/ffe-formatters@2.1.5...ffe-formatters@2.1.6) (2018-02-22)
-
-
-
 
 **Note:** Version bump only for package ffe-formatters
 
 <a name="2.1.5"></a>
+
 ## [2.1.5](https://github.com/SpareBank1/designsystem/compare/ffe-formatters@2.1.4...ffe-formatters@2.1.5) (2018-01-31)
-
-
-
 
 **Note:** Version bump only for package ffe-formatters
 
 <a name="2.1.4"></a>
+
 ## [2.1.4](https://github.com/SpareBank1/designsystem/compare/ffe-formatters@2.1.3...ffe-formatters@2.1.4) (2018-01-22)
-
-
-
 
 **Note:** Version bump only for package ffe-formatters
 
 <a name="2.1.3"></a>
+
 ## [2.1.3](https://github.com/SpareBank1/designsystem/compare/ffe-formatters@2.1.2...ffe-formatters@2.1.3) (2018-01-19)
-
-
-
 
 **Note:** Version bump only for package ffe-formatters
 
 <a name="2.1.2"></a>
+
 ## [2.1.2](https://github.com/SpareBank1/designsystem/compare/ffe-formatters@2.1.1...ffe-formatters@2.1.2) (2018-01-18)
-
-
-
 
 **Note:** Version bump only for package ffe-formatters
 
@@ -175,24 +160,24 @@ JavaScript `require`:
 
 # 2.1.0
 
-* `formatNumber` now accepts additional props to the `opts`-argument. - `thousandSeparator` (defaults to NON_BREAKING_SPACE) - `decimalMark` (defaults to ',')
+-   `formatNumber` now accepts additional props to the `opts`-argument. - `thousandSeparator` (defaults to NON_BREAKING_SPACE) - `decimalMark` (defaults to ',')
 
 ## 2.0.4
 
-* Bugfix: Fixed a bug where - `formatNumber(0)` returns 0, (expected: '0') - `formatNumber(0, { decimals: 2 })` returns 0, (expected: '0,00')
+-   Bugfix: Fixed a bug where - `formatNumber(0)` returns 0, (expected: '0') - `formatNumber(0, { decimals: 2 })` returns 0, (expected: '0,00')
 
 ## 2.0.3
 
-* `formatDistance` no longer returns the empty string if the input is equal to
-the result of `formatNumber(input)` (solves part of SFO-6995)
+-   `formatDistance` no longer returns the empty string if the input is equal to
+    the result of `formatNumber(input)` (solves part of SFO-6995)
 
 ## 2.0.2
 
-* Bugfix: Include correct files in NPM package.
+-   Bugfix: Include correct files in NPM package.
 
 ## 2.0.1
 
-* Bugfix: Fix broken export of `formatFodselsnummer` from the main index file.
+-   Bugfix: Fix broken export of `formatFodselsnummer` from the main index file.
 
 # 2.0.0
 
@@ -204,10 +189,10 @@ To migrate, just make sure the value you send in is in the correct order of magn
 
 Initial version of `ffe-formatters`. Includes the following formatters:
 
-* formatAccountNumber
-* formatCurrency
-* formatDate
-* formatFodselsnummer
-* formatKm
-* formatNumber
-* formatPercentage
+-   formatAccountNumber
+-   formatCurrency
+-   formatDate
+-   formatFodselsnummer
+-   formatKm
+-   formatNumber
+-   formatPercentage

@@ -3,66 +3,69 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.7"></a>
+
+## [2.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@2.0.6...@sb1/ffe-chart-donut-react@2.0.7) (2018-10-02)
+
+### Bug Fixes
+
+-   **ffe-chart-donut-react:** include .less file in lib/ root ([763ffa4](https://github.com/SpareBank1/designsystem/commit/763ffa4)), closes [#441](https://github.com/SpareBank1/designsystem/issues/441)
+
+<a name="2.0.6"></a>
+
+## [2.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@2.0.5...@sb1/ffe-chart-donut-react@2.0.6) (2018-09-24)
+
+### Bug Fixes
+
+-   Removed usage of linux/unix command cp and use npm package copyfiles instead to make the copy, platform independent. ([07f5693](https://github.com/SpareBank1/designsystem/commit/07f5693))
+
 <a name="2.0.5"></a>
+
 ## [2.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@2.0.4...@sb1/ffe-chart-donut-react@2.0.5) (2018-08-09)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-chart-donut-react
 
 <a name="2.0.4"></a>
+
 ## [2.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@2.0.3...@sb1/ffe-chart-donut-react@2.0.4) (2018-03-27)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-chart-donut-react
 
 <a name="2.0.3"></a>
-## [2.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@2.0.2...@sb1/ffe-chart-donut-react@2.0.3) (2018-03-22)
 
+## [2.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@2.0.2...@sb1/ffe-chart-donut-react@2.0.3) (2018-03-22)
 
 ### Bug Fixes
 
-* **ffe-chart-donut-react:** Fix description position on md+ screens ([31c6026](https://github.com/SpareBank1/designsystem/commit/31c6026))
-
-
-
+-   **ffe-chart-donut-react:** Fix description position on md+ screens ([31c6026](https://github.com/SpareBank1/designsystem/commit/31c6026))
 
 <a name="2.0.2"></a>
+
 ## [2.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@2.0.0...@sb1/ffe-chart-donut-react@2.0.2) (2018-03-07)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-chart-donut-react
 
 <a name="2.0.1"></a>
+
 ## [2.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@2.0.0...@sb1/ffe-chart-donut-react@2.0.1) (2018-03-02)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-chart-donut-react
 
 <a name="2.0.0"></a>
-# 2.0.0 (2018-02-25)
 
+# 2.0.0 (2018-02-25)
 
 ### Bug Fixes
 
-* remove all references to internal system ([ff22340](https://github.com/SpareBank1/designsystem/commit/ff22340))
-
+-   remove all references to internal system ([ff22340](https://github.com/SpareBank1/designsystem/commit/ff22340))
 
 ### Chores
 
-* add [@sb1](https://github.com/sb1)/ scope to all packages ([37efbb4](https://github.com/SpareBank1/designsystem/commit/37efbb4))
-
+-   add [@sb1](https://github.com/sb1)/ scope to all packages ([37efbb4](https://github.com/SpareBank1/designsystem/commit/37efbb4))
 
 ### BREAKING CHANGES
 
-* All packages have been renamed to add the @sb1 scope.
+-   All packages have been renamed to add the @sb1 scope.
 
 See links [1] and [2] to read more about package scopes.
 
@@ -135,70 +138,51 @@ JavaScript `require`:
 [2]: https://docs.npmjs.com/getting-started/scoped-packages
 [3]: https://github.com/sparebank1/designsystem/tags
 
-
-
-
 <a name="1.0.14"></a>
+
 ## [1.0.14](https://github.com/SpareBank1/designsystem/compare/ffe-chart-donut-react@1.0.13...ffe-chart-donut-react@1.0.14) (2018-02-23)
-
-
-
 
 **Note:** Version bump only for package ffe-chart-donut-react
 
 <a name="1.0.13"></a>
+
 ## [1.0.13](https://github.com/SpareBank1/designsystem/compare/ffe-chart-donut-react@1.0.12...ffe-chart-donut-react@1.0.13) (2018-02-22)
-
-
-
 
 **Note:** Version bump only for package ffe-chart-donut-react
 
 <a name="1.0.12"></a>
+
 ## [1.0.12](https://github.com/SpareBank1/designsystem/compare/ffe-chart-donut-react@1.0.11...ffe-chart-donut-react@1.0.12) (2018-02-20)
-
-
-
 
 **Note:** Version bump only for package ffe-chart-donut-react
 
 <a name="1.0.11"></a>
+
 ## [1.0.11](https://github.com/SpareBank1/designsystem/compare/ffe-chart-donut-react@1.0.10...ffe-chart-donut-react@1.0.11) (2018-02-15)
-
-
-
 
 **Note:** Version bump only for package ffe-chart-donut-react
 
 <a name="1.0.10"></a>
+
 ## [1.0.10](https://github.com/SpareBank1/designsystem/compare/ffe-chart-donut-react@1.0.9...ffe-chart-donut-react@1.0.10) (2018-02-01)
-
-
-
 
 **Note:** Version bump only for package ffe-chart-donut-react
 
 <a name="1.0.9"></a>
+
 ## [1.0.9](https://github.com/SpareBank1/designsystem/compare/ffe-chart-donut-react@1.0.8...ffe-chart-donut-react@1.0.9) (2018-01-22)
-
-
-
 
 **Note:** Version bump only for package ffe-chart-donut-react
 
 <a name="1.0.8"></a>
+
 ## [1.0.8](https://github.com/SpareBank1/designsystem/compare/ffe-chart-donut-react@1.0.7...ffe-chart-donut-react@1.0.8) (2018-01-19)
-
-
-
 
 **Note:** Version bump only for package ffe-chart-donut-react
 
 <a name="1.0.7"></a>
+
 ## [1.0.7](https://github.com/SpareBank1/designsystem/compare/ffe-chart-donut-react@1.0.6...ffe-chart-donut-react@1.0.7) (2018-01-19)
-
-
-
 
 **Note:** Version bump only for package ffe-chart-donut-react
 
@@ -228,13 +212,13 @@ JavaScript `require`:
 
 ## 1.0.2
 
-* Added inline JSDoc comments for prop types
-* Added support for React 16
+-   Added inline JSDoc comments for prop types
+-   Added support for React 16
 
 ## 1.0.1
 
-* Use PropTypes from prop-types package
+-   Use PropTypes from prop-types package
 
 # 1.0.0
 
-* First release.
+-   First release.

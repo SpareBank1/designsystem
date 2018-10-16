@@ -13,31 +13,42 @@ export function ComponentsListRenderer({ items, useIsolatedLinks = false }) {
 
     return (
         <ul className="sb1ds-components-list">
-            {items.map(({ heading, name, slug, content }) => (
-                <li
-                    className={classNames(
-                        heading && 'sb1ds-components-list__item--heading',
-                        'sb1ds-components-list__item',
-                    )}
-                    key={name}
-                >
-                    <Link
-                        noUnderline={true}
-                        className={classNames('sb1ds-components-list__link', {
-                            'sb1ds-components-list__link--heading': heading,
+            {items.map(({ heading, name, slug, content }) => {
+                const href = getUrl({
+                    name,
+                    slug,
+                    anchor: !useIsolatedLinks,
+                    isolated: useIsolatedLinks,
+                });
+
+                return (
+                    <li
+                        className={classNames('sb1ds-components-list__item', {
+                            'sb1ds-components-list__item--heading': heading,
                         })}
-                        href={getUrl({
-                            name,
-                            slug,
-                            anchor: !useIsolatedLinks,
-                            isolated: useIsolatedLinks,
-                        })}
+                        key={name}
                     >
-                        {name}
-                    </Link>
-                    {content}
-                </li>
-            ))}
+                        <Link
+                            noUnderline={true}
+                            className={classNames(
+                                'sb1ds-components-list__link',
+                                {
+                                    'sb1ds-components-list__link--heading': heading,
+                                },
+                                {
+                                    'sb1ds-components-list__link--active':
+                                        href ===
+                                        `/${decodeURI(window.location.hash)}`,
+                                },
+                            )}
+                            href={href}
+                        >
+                            {name}
+                        </Link>
+                        {content}
+                    </li>
+                );
+            })}
         </ul>
     );
 }
