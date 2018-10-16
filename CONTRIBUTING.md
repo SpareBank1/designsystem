@@ -8,23 +8,23 @@ vårt enda bedre. Sitter du igjen med ubesvarte spørsmål etter å ha lest dett
 issue her på Github med `question`-labelen. Om du heller vil kan du også spørre på den interne HipChat-kanalen
 "Designsystem".
 
-* [Hvordan bidrar jeg?](#hvordan-bidrar-jeg)
-  * [Som designer](#som-designer)
-    * [Github-konto og varsler](#github-konto-og-varsler)
-  * [Som utvikler](#som-utvikler)
-    * [Github-konto og arbeidsflyt](#github-konto-og-arbeidsflyt)
-    * [Utviklingsmiljø](#utviklingsmiljø)
-    * [Kodestandard](#kodestandard)
-    * [Formatering](#formatering)
-    * [LESS](#less)
-    * [React](#react)
-    * [Testdekning](#testdekning)
-    * [Dokumentasjon](#dokumentasjon)
-    * [Commit-meldinger](#commit-meldinger)
-    * [Pull requests](#pull-requests)
-* [Lage en ny FFE-komponent](#lage-en-ny-ffe-komponent)
-* [Publisering](#publisering)
-* [Har du fortsatt sporsmål?](#har-du-fortsatt-spørsmål)
+-   [Hvordan bidrar jeg?](#hvordan-bidrar-jeg)
+    -   [Som designer](#som-designer)
+        -   [Github-konto og varsler](#github-konto-og-varsler)
+    -   [Som utvikler](#som-utvikler)
+        -   [Github-konto og arbeidsflyt](#github-konto-og-arbeidsflyt)
+        -   [Utviklingsmiljø](#utviklingsmiljø)
+        -   [Kodestandard](#kodestandard)
+        -   [Formatering](#formatering)
+        -   [LESS](#less)
+        -   [React](#react)
+        -   [Testdekning](#testdekning)
+        -   [Dokumentasjon](#dokumentasjon)
+        -   [Commit-meldinger](#commit-meldinger)
+        -   [Pull requests](#pull-requests)
+-   [Lage en ny FFE-komponent](#lage-en-ny-ffe-komponent)
+-   [Publisering](#publisering)
+-   [Har du fortsatt sporsmål?](#har-du-fortsatt-spørsmål)
 
 ## Hvordan bidrar jeg?
 
@@ -90,8 +90,8 @@ Workflowen for en bug eller feature blir kort oppsummert denne:
 4. Skriv en detaljert commit-melding (mer om det [her](#commit-meldinger)) :writing_hand:
 5. Push endringene til repoet eller din fork :weight_lifting_woman:
 6. Github skal se at du nylig har pushet en endring og vil tilby deg å lage en Pull Request. Hvis ikke kan du finne fram
-til branchen din og lage en pull request på den måten. Se [Github sine hjelpesider](https://help.github.com/articles/creating-a-pull-request/)
-om du ikke finner fram :female_detective:
+   til branchen din og lage en pull request på den måten. Se [Github sine hjelpesider](https://help.github.com/articles/creating-a-pull-request/)
+   om du ikke finner fram :female_detective:
 7. Vent på en review. Du kan legge til tidligere bidragsytere som reviewers. :hourglass_flowing_sand:
 8. Når pull requesten er godkjent kan den merges, og endringen blir med i neste release av pakken :tada:
 
@@ -227,6 +227,14 @@ og eksempel-filer. Alle React-komponenter har sin egen `<KomponentNavn>.md` fil,
 bruksscenarioene. Er du usikker på hvordan disse burde se ut, anbefaler vi deg å se på noen av de som eksisterer
 allerede - f.eks. [ffe-core-react](./packages/ffe-core-react/src/typography) eller [ffe-buttons-react](./packages/ffe-buttons-react/src).
 
+Noen komponenter er designet for mørke bakgrunnsfarger. Eksempelimplementasjoner kan vises på mørk bakgrunn i styleguiden ved å sende CSS-klassen `sb1ds-example-dark` med til kodeeksempelet som ligger i `<KomponentNavn>.md`, som en custom prop:
+
+````
+    ```js { "props": { "className": "sb1ds-example-dark" } }
+    /* Kodeeksempel */
+    ```
+````
+
 #### Commit-meldinger
 
 For litt inspirasjon rundt det å skrive gode commit-meldinger og holde loggen ryddig er talken [Deliberate Git av Stephen Ball](https://vimeo.com/72762735)
@@ -272,7 +280,7 @@ the Konami code `↑↑↓↓←→←→BA`.
 Hvis du skal gjøre en breaking change i `ffe-icons-react` f.eks., så kan commit-meldingen din se slik ut
 (legg spesielt merke til seksjonene merket med ```diff - skriv disse uten escaping med \\):
 
-```
+````
 refactor(ffe-icons-react): Improve API
 
 BREAKING CHANGE: Improve the API of ffe-icons-react.
@@ -305,7 +313,7 @@ and tree shaking, please make the following changes to migrate:
 \```
 
 This API change allows for cleaner usage and better documentation.
-```
+````
 
 For å dobbeltsjekke at du gjorde alt rett, har dette repoet en pre-commithook som sjekker meldingen med
 [commitlint](https://github.com/marionebl/commitlint). Hvis ikke alt stemmer overens med det forventede formatet, vil
@@ -320,9 +328,9 @@ git-loggen til koden / filen(e) du endret på, og legg til disse også. Tidliger
 
 Før du lager en pull request kan det være lurt å ta en titt gjennom denne huskelisten:
 
-* Er koden så konsis og forståelig som mulig?
-* Har du lagt til et test-case som bekrefter at endringen fungerer?
-* Trenger endringen å dokumenteres?
+-   Er koden så konsis og forståelig som mulig?
+-   Har du lagt til et test-case som bekrefter at endringen fungerer?
+-   Trenger endringen å dokumenteres?
 
 Du kan merge dine egne pull requests, men vi ber om at du får endringene dine godkjent av minst 2 andre før du gjør det.
 Dette er for å sikre oss mot regresjoner og bugs så godt vi kan.
