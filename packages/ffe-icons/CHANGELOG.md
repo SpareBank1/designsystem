@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.2.2...@sb1/ffe-icons@12.3.0) (2018-10-17)
+
+### Features
+
+-   **ffe-icons:** Added a solid circular cross icon based on kryss-sirkel-ikon.svg ([2c1b18c](https://github.com/SpareBank1/designsystem/commit/2c1b18c))
+
 <a name="12.2.2"></a>
 
 ## [12.2.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.2.1...@sb1/ffe-icons@12.2.2) (2018-08-09)
