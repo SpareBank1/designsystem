@@ -1,5 +1,5 @@
 import React from 'react';
-import { func, string, oneOf, oneOfType, node } from 'prop-types';
+import { func, string, oneOf, oneOfType, node, bool } from 'prop-types';
 import classNames from 'classnames';
 
 /**
@@ -15,6 +15,7 @@ const InlineBaseButton = (props) => {
         innerRef,
         leftIcon,
         rightIcon,
+        dark,
         ...rest
     } = props;
 
@@ -23,6 +24,7 @@ const InlineBaseButton = (props) => {
             className={classNames(
                 'ffe-inline-button',
                 `ffe-inline-button--${buttonType}`,
+                { 'ffe-inline-button--dark': dark },
                 className,
             )}
             ref={innerRef}
@@ -59,6 +61,8 @@ InlineBaseButton.propTypes = {
     leftIcon: node,
     /** Icon shown to the right of the label */
     rightIcon: node,
+    /** Dark variant */
+    dark: bool,
 };
 
 InlineBaseButton.defaultProps = {

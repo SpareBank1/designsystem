@@ -16,3 +16,17 @@ const { BindersIkon } = require('../../ffe-icons-react');
     </SecondaryButton>
 </ButtonGroup>;
 ```
+
+Variant _dark_ for interne løsninger med mørk bakgrunn.
+
+```js { "props": { "className": "sb1ds-example-dark" } }
+const ButtonGroup = require('./ButtonGroup').default;
+const { BindersIkon } = require('../../ffe-icons-react');
+
+<ButtonGroup thin={true}>
+    <SecondaryButton onClick={f => f} dark={true}>Secondary knapp</SecondaryButton>
+    <SecondaryButton leftIcon={<BindersIkon />} onClick={f => f} dark={true}>
+        Secondary m/ ikon
+    </SecondaryButton>
+</ButtonGroup>;
+```
