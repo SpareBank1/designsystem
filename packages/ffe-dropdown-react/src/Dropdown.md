@@ -30,3 +30,19 @@ const { InputGroup } = require('../../ffe-form-react/src/');
     </Dropdown>
 </InputGroup>
 ```
+
+Variant _dark_ for interne løsninger med mørk bakgrunn.
+
+```js { "props": { "className": "sb1ds-example-dark" } }
+<div>                
+    <Label htmlFor="dropdown-example" dark={true}>
+        Måned
+    </Label>
+    <Dropdown id="dropdown-example" dark={true}>
+        <option value="jan">Januar</option>
+        <option value="feb" disabled>Februar</option>
+        <option value="mar">Mars</option>
+    </Dropdown>
+</div>
+
+```
