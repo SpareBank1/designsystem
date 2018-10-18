@@ -6,10 +6,10 @@ const Label = ({ block, children, className, htmlFor, dark, ...rest }) => (
     <label
         className={classNames(
             'ffe-form-label',
-            { 'ffe-form-label--block': block },
-            { 'ffe-form-label--dark': dark},
-            className,
-        )}
+            className, {
+                'ffe-form-label--block': block,
+                'ffe-form-label--dark': dark},
+            )}
         htmlFor={htmlFor}
         {...rest}
     >
