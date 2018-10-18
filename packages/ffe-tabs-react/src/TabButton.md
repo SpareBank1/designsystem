@@ -40,3 +40,16 @@ I tillegg kan man sende inn egendefinerte props for å legge til clickhandlere a
     Dette er en tab button
 </TabButton>
 ```
+
+Variant _dark_ for interne løsninger med mørk bakgrunn.
+
+```js { "props": { "className": "sb1ds-example-dark" } }
+const { Grid, GridRow, GridCol } = require('../../ffe-grid-react/lib');
+
+<div>
+    <TabButton dark={true} condensed={true}>
+        Dette er en transparent og kompakt tab button
+    </TabButton>
+</div>
+
+```
