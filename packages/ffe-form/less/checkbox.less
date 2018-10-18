@@ -77,6 +77,14 @@
         position: absolute;
         transition: height @ffe-transition-duration @ffe-ease;
     }
+
+    &--dark {
+        color: @ffe-white;
+
+        &::before {
+            background-color: inherit;
+        }
+    }
 }
 
 .ffe-hidden-checkbox {
@@ -116,5 +124,47 @@
 
     &[aria-invalid='true'] + .ffe-checkbox::before {
         border-color: @ffe-orange-fire;
+    }
+
+    &--dark {
+        &:hover + .ffe-checkbox::before {
+            border-color: @ffe-white;
+            background-color: @ffe-grey-silver;
+            box-shadow: none;
+        }
+
+        &:active + .ffe-checkbox::before,
+        &:focus + .ffe-checkbox::before {
+            box-shadow: 0 0 0 2px @ffe-blue-focus;
+        }
+
+        &:active:hover + .ffe-checkbox::before,
+        &:focus:hover + .ffe-checkbox::before {
+            box-shadow: 0 0 0 2px @ffe-blue-focus;
+        }
+
+        &:checked + .ffe-checkbox::before {
+            border-color: @ffe-white;
+            background-color: @ffe-white;
+        }
+
+        &:checked + .ffe-checkbox::after {
+            border-color: @ffe-blue-azure;
+        }
+
+        &:checked:active + .ffe-checkbox::before,
+        &:checked:focus + .ffe-checkbox::before {
+            box-shadow: 0 0 0 2px @ffe-blue-focus;
+            background-color: @ffe-white;
+        }
+
+        &:checked:active + .ffe-checkbox::after,
+        &:checked:focus + .ffe-checkbox::after {
+            background-color: @ffe-white;
+        }
+
+        &[aria-invalid='true'] + .ffe-checkbox::before {
+            background-color: @ffe-grey-silver;
+        }
     }
 }

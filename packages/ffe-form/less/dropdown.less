@@ -77,4 +77,52 @@
         color: @ffe-grey-charcoal;
         opacity: 1;
     }
+
+    &--dark {
+        .ffe-chevron-icon-with-color(@ffe-blue-focus);
+
+        color: @ffe-white;
+        border-color: @ffe-grey-shuttle--dark;
+        background-color: @ffe-grey-shuttle--dark;
+        box-shadow: none;
+
+        &:hover {
+            border-color: @ffe-blue-focus;
+        }
+
+        &:focus,
+        &:active {
+            background-color: @ffe-grey-dark-blue--dark;
+            border-color: @ffe-grey-dark-blue--dark;
+            box-shadow: 0 0 0 2px @ffe-blue-focus;
+            outline: none;
+        }
+
+        &::placeholder {
+            color: @ffe-white;
+        }
+
+        &:disabled::-ms-value,
+        &:disabled {
+            color: @ffe-grey-silver;
+        }
+
+        &:focus::-ms-value {
+            color: @ffe-white;
+            background-color: @ffe-grey-dark-blue--dark;
+        }
+
+        option {
+            background-color: @ffe-grey-dark-blue--dark;
+
+            &:hover {
+                color: @ffe-black;
+                background-color: @ffe-blue-pale;
+            }
+
+            &:disabled {
+                color: @ffe-grey;
+            }
+        }
+    }
 }

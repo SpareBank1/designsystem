@@ -71,4 +71,22 @@
         color: @ffe-grey-charcoal;
         opacity: 1;
     }
+
+    &--dark {
+        color: @ffe-white;
+        border: 2px solid @ffe-grey-shuttle--dark;
+        background-color: @ffe-grey-shuttle--dark;
+        box-shadow: none;
+
+        &:hover {
+            border-color: @ffe-blue-focus;
+        }
+
+        &:focus,
+        &:active {
+            border-color: @ffe-grey-dark-blue--dark;
+            box-shadow: 0 0 0 2px @ffe-blue-focus;
+            outline: none;
+        }
+    }
 }
