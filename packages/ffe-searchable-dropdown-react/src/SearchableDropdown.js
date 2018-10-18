@@ -192,6 +192,7 @@ class SearchableDropdown extends Component {
             ariaInvalid,
             displayResetWhenInputHasValue,
             maxRenderedDropdownElements,
+            dark,
         } = this.props;
         const {
             highlightedElementIndex,
@@ -208,13 +209,22 @@ class SearchableDropdown extends Component {
                 {label ? (
                     // eslint-disable-next-line jsx-a11y/label-has-for
                     <label
-                        className="ffe-form-label ffe-form-label--block"
+                        className={classNames(
+                            'ffe-form-label',
+                            'ffe-form-label--block',
+                            { 'ffe-form-label--dark': dark },
+                        )}
                         htmlFor={inputId}
                     >
                         {label}
                     </label>
                 ) : null}
-                <div className="ffe-searchable-dropdown">
+                <div
+                    className={classNames(
+                        'ffe-searchable-dropdown',
+                        { 'ffe-searchable-dropdown--dark': dark },
+                    )}
+                >
                     <Input
                         displayResetWhenInputHasValue={
                             displayResetWhenInputHasValue
@@ -231,6 +241,7 @@ class SearchableDropdown extends Component {
                         searchTerm={searchTerm}
                         ariaInvalid={ariaInvalid}
                         autoComplete="off"
+                        dark={dark}
                     />
                     {showListContainer && (
                         <ScrollContainer
@@ -246,6 +257,7 @@ class SearchableDropdown extends Component {
                             noMatch={noMatch}
                             onSelect={this.onSelect}
                             renderDropdownElement={renderDropdownElement}
+                            dark={dark}
                         />
                     )}
                 </div>
@@ -309,11 +321,14 @@ SearchableDropdown.propTypes = {
     isMobilbank: bool,
     /** Dictates behvaiour if mobilbank */
     scrollToTop: isRequiredIf(func, props => props.isMobilbank),
+    /** Dark variant */
+    dark: bool,
 };
 
 SearchableDropdown.defaultProps = {
     displayResetWhenInputHasValue: false,
     ariaInvalid: false,
+    dark: false,
 };
 
 export default SearchableDropdown;

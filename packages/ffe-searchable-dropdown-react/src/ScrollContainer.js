@@ -2,6 +2,7 @@ import React from 'react';
 import { number, bool } from 'prop-types';
 import {Scrollbars} from 'react-custom-scrollbars';
 import ListContainer from "./ListContainer";
+import classNames from 'classnames';
 
 class ScrollContainer extends React.Component {
     constructor(props) {
@@ -36,10 +37,13 @@ class ScrollContainer extends React.Component {
     }
 
     render() {
-        const {heightMax, autoHeight} = this.props;
+        const {heightMax, autoHeight, dark} = this.props;
         return (
             <div
-                className='ffe-searchable-dropdown__scroll-container'
+                className={classNames(
+                    'ffe-searchable-dropdown__scroll-container',
+                    { 'ffe-searchable-dropdown--dark__scroll-container': dark },
+                )}
             >
                 <Scrollbars
                     autoHeight={autoHeight}
@@ -61,11 +65,14 @@ ScrollContainer.propTypes = {
     highlightedIndex: number.isRequired,
     heightMax: number,
     autoHeight: bool,
+    /** Dark variant */
+    dark: bool,
 };
 
 ScrollContainer.defaultProps = {
     heightMax: 300,
     autoHeight: true,
+    dark: false,
 };
 
 export default ScrollContainer;
