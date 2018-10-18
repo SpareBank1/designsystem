@@ -11,6 +11,7 @@ export default function CheckBox(props) {
         invalid,
         label,
         noMargins,
+        dark,
         ...rest
     } = props;
 
@@ -21,6 +22,7 @@ export default function CheckBox(props) {
             'ffe-checkbox--inline': inline,
             'ffe-checkbox--no-margin': noMargins,
             'ffe-checkbox--hidden-label': hiddenLabel,
+            'ffe-checkbox--dark': dark,
         }),
         htmlFor: id,
     };
@@ -28,7 +30,10 @@ export default function CheckBox(props) {
     return (
         <Fragment>
             <input
-                className="ffe-hidden-checkbox"
+                className={classNames(
+                    'ffe-hidden-checkbox',
+                    { 'ffe-hidden-checkbox--dark': dark },
+                )}
                 id={id}
                 type="checkbox"
                 aria-invalid={String(invalid)}
@@ -68,9 +73,12 @@ CheckBox.propTypes = {
     invalid: bool,
     /** The label for the checkbox */
     children: oneOfType([node, func]),
+    /** Dark variant */
+    dark: bool,
 };
 
 CheckBox.defaultProps = {
     inline: true,
     invalid: false,
+    dark: false,
 };
