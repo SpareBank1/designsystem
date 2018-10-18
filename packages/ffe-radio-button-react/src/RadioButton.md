@@ -89,3 +89,33 @@ initialState = { selected: undefined };
     )}
 </RadioButtonInputGroup>
 ```
+
+Variant _dark_ for interne løsninger med mørk bakgrunn.
+
+```js { "props": { "className": "sb1ds-example-dark" } }
+const { RadioButtonInputGroup } = require('.');
+initialState = { selected: undefined };
+<RadioButtonInputGroup
+    inline={true}
+    label="Hva er din favorittfassong?"
+    name="favoriteColorDark"
+    onChange={e => setState({ selected: e.target.value })}
+    selectedValue={state.selected}
+    dark={true}
+>
+    {inputProps => (
+        <React.Fragment>
+            <RadioButton {...inputProps} value="square" dark={true}>
+                Firkant
+            </RadioButton>
+            <RadioButton {...inputProps} value="triangle" dark={true}>
+                Trekant
+            </RadioButton>
+            <RadioButton {...inputProps} value="circle" dark={true}>
+                Sirkel
+            </RadioButton>
+        </React.Fragment>
+    )}
+</RadioButtonInputGroup>
+
+```

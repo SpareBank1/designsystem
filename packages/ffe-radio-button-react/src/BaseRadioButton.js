@@ -19,12 +19,14 @@ class BaseRadioButton extends Component {
             tooltip,
             tooltipProps,
             value,
+            dark,
             ...inputProps
         } = this.props;
 
         const labelClasses = classNames(
             { 'ffe-radio-button--invalid': ariaInvalid === 'true' },
             { 'ffe-radio-button--with-tooltip': tooltip },
+            { 'ffe-radio-button--dark': dark },
             className,
         );
 
@@ -34,7 +36,10 @@ class BaseRadioButton extends Component {
             <Fragment>
                 <input
                     aria-invalid={ariaInvalid}
-                    className="ffe-radio-input"
+                    className={classNames(
+                        'ffe-radio-input',
+                        { 'ffe-radio-input--dark': dark }
+                    )}
                     id={this.id}
                     type="radio"
                     checked={isSelected}
@@ -57,6 +62,7 @@ class BaseRadioButton extends Component {
 BaseRadioButton.defaultProps = {
     labelProps: {},
     tooltipProps: {},
+    dark: false,
 };
 
 BaseRadioButton.propTypes = {
@@ -80,6 +86,8 @@ BaseRadioButton.propTypes = {
     tooltipProps: shape({}),
     /** The value of the radio button */
     value: oneOfType([bool, string]).isRequired,
+    /** Dark variant */
+    dark: bool,
 };
 
 export default BaseRadioButton;
