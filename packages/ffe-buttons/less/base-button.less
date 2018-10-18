@@ -116,6 +116,10 @@
     &:focus {
         background-color: darken(@ffe-green-shamrock, 5%);
         box-shadow: 0 0 0 1px @ffe-white, 0 0 0 4px @ffe-blue-focus;
+
+        &.ffe-button--dark {
+            box-shadow: 0 0 0 2px @ffe-blue-focus;
+        }
     }
 
     &:hover {
@@ -133,6 +137,10 @@
     &:focus {
         background-color: darken(@ffe-blue-azure, 5%);
         box-shadow: 0 0 0 1px @ffe-white, 0 0 0 4px @ffe-blue-focus;
+
+        &.ffe-button--dark {
+            box-shadow: 0 0 0 2px @ffe-blue-focus;
+        }
     }
 
     &:hover {
@@ -152,15 +160,32 @@
     box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.05);
     color: @ffe-blue-azure;
 
+    &.ffe-button--dark {
+        background-color: transparent;
+        color: @ffe-white;
+    }
+
     &:active,
     &:focus,
     &:hover {
         background-color: @ffe-white;
         border-color: @ffe-blue-azure;
+
+        &.ffe-button--dark {
+            border-color: @ffe-blue-focus;
+            background-color: transparent;
+            color: @ffe-white;
+        }
     }
 
     &:focus {
         box-shadow: 0 0 0 1px @ffe-white, 0 0 0 4px @ffe-blue-focus;
+
+        &.ffe-button--dark {
+            background-color: @ffe-grey-dark-blue--dark;
+            border-color: @ffe-grey-dark-blue--dark;
+            box-shadow: 0 0 0 2px @ffe-blue-focus;
+        }
     }
 }
 
