@@ -2,11 +2,12 @@ import React from 'react';
 import { bool, node, string } from 'prop-types';
 import classNames from 'classnames';
 
-const Label = ({ block, children, className, htmlFor, ...rest }) => (
+const Label = ({ block, children, className, htmlFor, dark, ...rest }) => (
     <label
         className={classNames(
             'ffe-form-label',
             { 'ffe-form-label--block': block },
+            { 'ffe-form-label--dark': dark},
             className,
         )}
         htmlFor={htmlFor}
@@ -25,6 +26,8 @@ Label.propTypes = {
     children: node.isRequired,
     className: string,
     htmlFor: string,
+    /** Dark variant */
+    dark: bool,
 };
 
 export default Label;

@@ -45,3 +45,15 @@ class Example extends React.Component {
 
 <Example />;
 ```
+
+Variant _dark_ for interne løsninger med mørk bakgrunn.
+
+```js { "props": { "className": "sb1ds-example-dark" } }
+<Label htmlFor="textarea-example" dark={true}>Beskriv skaden</Label>
+<TextArea
+    defaultValue="Dette er et tekstfelt for lengre tekster."
+    id="textarea-example"
+    rows="8"
+    dark={true}
+/>
+```

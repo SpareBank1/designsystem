@@ -1,12 +1,12 @@
 import React from 'react';
-import { string } from 'prop-types';
+import { string, bool } from 'prop-types';
 import classNames from 'classnames';
 
 const TextArea = React.forwardRef((props, ref) => {
-    const { className, ...rest } = props;
+    const { className, dark,  ...rest } = props;
     return (
         <textarea
-            className={classNames('ffe-textarea', className)}
+            className={classNames('ffe-textarea', { 'ffe-textarea--dark': dark }, className)}
             ref={ref}
             {...rest}
         />
@@ -15,6 +15,8 @@ const TextArea = React.forwardRef((props, ref) => {
 
 TextArea.propTypes = {
     className: string,
+    /** Dark variant */
+    dark: bool,
 };
 
 export default TextArea;
