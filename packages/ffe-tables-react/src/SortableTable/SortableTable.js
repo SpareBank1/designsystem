@@ -1,44 +1,31 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import PilNedIkon from '@sb1/ffe-icons-react/lib/pil-ned-ikon';
 import classNames from 'classnames';
 import equal from 'deep-equal';
-import PilNedIkon from '@sb1/ffe-icons-react/lib/pil-ned-ikon';
-import sortData from './sort-data';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import Table from '../Table';
+import sortData from './sort-data';
+import memoize from 'memoize-one';
 
 class SortableTable extends Component {
     constructor(props) {
         super(props);
-        const { sortBy, descending, columns, data } = props;
+        const { sortBy, descending } = props;
         this.state = {
             sortBy,
             descending,
-            tableData: sortBy
-                ? sortData(columns, data, sortBy, descending)
-                : data,
         };
     }
+
+    sortTableData = memoize((columns, data, sortBy, descending) =>
+        sortBy ? sortData(columns, data, sortBy, descending) : data,
+    );
 
     sortStateHasChanged(nextState) {
         return (
             nextState.sortBy !== this.state.sortBy ||
             nextState.descending !== this.state.descending
         );
-    }
-
-    componentWillReceiveProps(nextProps) {
-        if (!equal(nextProps, this.props)) {
-            this.setState(prevState => ({
-                tableData: prevState.sortBy
-                    ? sortData(
-                          nextProps.columns,
-                          nextProps.data,
-                          prevState.sortBy,
-                          prevState.descending,
-                      )
-                    : nextProps.data,
-            }));
-        }
     }
 
     shouldComponentUpdate(nextProps, nextState) {
@@ -48,29 +35,30 @@ class SortableTable extends Component {
     }
 
     tableHeaderClicked(columnKey) {
+        const { columns, data } = this.props;
+
         this.setState(
             (prevState, currentProps) => {
                 const descending =
                     columnKey === prevState.sortBy
                         ? !prevState.descending
                         : false;
-                const tableData = sortData(
-                    currentProps.columns,
-                    currentProps.data,
-                    columnKey,
-                    descending,
-                );
+
                 return {
                     sortBy: columnKey,
                     descending,
-                    tableData,
                 };
             },
             () =>
                 this.props.onSort({
                     sortBy: columnKey,
                     descending: this.state.descending,
-                    tableData: this.state.tableData,
+                    tableData: this.sortTableData(
+                        columns,
+                        data,
+                        columnKey,
+                        this.state.descending,
+                    ),
                 }),
         );
     }
@@ -148,6 +136,8 @@ class SortableTable extends Component {
             rowRender,
             headerRender,
             footerRender,
+            columns,
+            data,
         } = this.props;
         const { sortBy, descending } = this.state;
 
@@ -160,6 +150,8 @@ class SortableTable extends Component {
             );
         }
 
+        const tableData = this.sortTableData(columns, data, sortBy, descending);
+
         return (
             <Table
                 caption={caption}
@@ -167,7 +159,7 @@ class SortableTable extends Component {
                 expandedContentMapper={expandedContentMapper}
                 columnLayoutMobile={columnLayoutMobile}
                 columns={sortableColumns}
-                data={this.state.tableData}
+                data={tableData}
                 condensed={condensed}
                 smallHeader={smallHeader}
                 alignLeft={alignLeft}
