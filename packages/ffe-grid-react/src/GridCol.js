@@ -11,11 +11,7 @@ import {
 import classNames from 'classnames';
 import backgroundColors, { removedColors } from './background-colors';
 
-import {
-    checkForDeprecatedModifiers,
-    checkForNestedComponent,
-    checkValidColumnCount,
-} from './utils';
+import { checkForDeprecatedModifiers, checkValidColumnCount } from './utils';
 
 function camelCaseToDashCase(str) {
     return str
@@ -86,7 +82,6 @@ export default class GridCol extends Component {
         /* istanbul ignore else: there is no else  */
         if (process.env.NODE_ENV !== 'production') {
             checkForDeprecatedModifiers(this.props);
-            checkForNestedComponent(this.props.children, GridCol);
             checkValidColumnCount(this.props);
         }
     }

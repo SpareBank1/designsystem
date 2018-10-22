@@ -1,43 +1,32 @@
-import React, { Component } from 'react';
+import React from 'react';
 import classNames from 'classnames';
 import { bool, node, string } from 'prop-types';
 
-import { checkForNestedComponent } from './utils';
+export default function Grid(props) {
+    const {
+        children,
+        className,
+        condensed,
+        element,
+        topPadding,
+        ...rest
+    } = props;
 
-export default class Grid extends Component {
-    componentDidMount() {
-        /* istanbul ignore else: there is no else  */
-        if (process.env.NODE_ENV !== 'production') {
-            checkForNestedComponent(this.props.children, Grid);
-        }
-    }
+    const Element = element || 'div';
 
-    render() {
-        const {
-            children,
-            className,
-            condensed,
-            element,
-            topPadding,
-            ...rest
-        } = this.props;
-
-        const Element = element || 'div';
-
-        return (
-            <Element
-                className={classNames(
-                    className,
-                    'ffe-grid',
-                    { 'ffe-grid--condensed': condensed },
-                    { 'ffe-grid--no-top-padding': !topPadding },
-                )}
-                {...rest}
-            >
-                {children}
-            </Element>
-        );
-    }
+    return (
+        <Element
+            className={classNames(
+                className,
+                'ffe-grid',
+                { 'ffe-grid--condensed': condensed },
+                { 'ffe-grid--no-top-padding': !topPadding },
+            )}
+            {...rest}
+        >
+            {children}
+        </Element>
+    );
 }
 
 Grid.defaultProps = {

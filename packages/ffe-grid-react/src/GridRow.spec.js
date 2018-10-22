@@ -1,5 +1,5 @@
 import React from 'react';
-import { mount, shallow } from 'enzyme';
+import { shallow } from 'enzyme';
 
 import { GridRow, GridCol } from '.';
 import backgroundColors from './background-colors';
@@ -101,36 +101,5 @@ describe('GridRow', () => {
             global.console.error = jest.fn();
         });
         afterEach(() => global.console.error.mockRestore());
-
-        it('warns about nested <GridRow> tag', () => {
-            mount(
-                <GridRow>
-                    <GridCol>
-                        <div>
-                            <div>
-                                <div>
-                                    <GridRow />
-                                </div>
-                            </div>
-                        </div>
-                    </GridCol>
-                </GridRow>,
-            );
-
-            expect(console.error).toHaveBeenCalledTimes(1);
-            expect(console.error.mock.calls[0][0]).toContain('<GridRow />');
-        });
-
-        it('does not blow up if a null-child is received', () => {
-            // The below inline check on "false" will result in the outer <GridRow>
-            // receiving children as an array-like of [<GridRow />, null] which it needs
-            // to handle when checking for nesten grid rows.
-            mount(
-                <GridRow>
-                    <GridRow />
-                    {false && <GridRow />}
-                </GridRow>,
-            );
-        });
     });
 });

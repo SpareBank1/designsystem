@@ -210,41 +210,6 @@ describe('GridCol', () => {
             );
         });
 
-        it('warns about nested <GridCol> tag', () => {
-            mount(
-                <Grid>
-                    <GridRow>
-                        <GridCol>
-                            <div>
-                                <div>
-                                    <div>
-                                        <GridCol>
-                                            <div>hadoken</div>
-                                        </GridCol>
-                                    </div>
-                                </div>
-                            </div>
-                        </GridCol>
-                    </GridRow>
-                </Grid>,
-            );
-
-            expect(console.error).toHaveBeenCalledTimes(1);
-            expect(console.error.mock.calls[0][0]).toContain('<GridCol />');
-        });
-
-        it('does not blow up if a null-child is received', () => {
-            // The below inline check on "false" will result in the outer <GridCol>
-            // receiving children as an array-like of [<GridCol />, null] which it needs
-            // to handle when checking for nesten grid columns.
-            mount(
-                <GridCol>
-                    <GridCol />
-                    {false && <GridCol />}
-                </GridCol>,
-            );
-        });
-
         describe('checks cols and offset validity', () => {
             console.error = jest.fn();
             const renderWithModifier = modifier =>
