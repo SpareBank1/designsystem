@@ -31,3 +31,7 @@ TabButton.propTypes = {
     /** Dark variant */
     dark: bool,
 };
+
+TabButton.defaultProps = {
+    dark: false,
+};
