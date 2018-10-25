@@ -29,4 +29,8 @@ PrimaryButton.propTypes = {
     dark: bool,
 };
 
+PrimaryButton.defaultProps = {
+    dark: false,
+};
+
 export default PrimaryButton;

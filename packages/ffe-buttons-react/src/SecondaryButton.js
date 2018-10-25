@@ -29,4 +29,8 @@ SecondaryButton.propTypes = {
     dark: bool,
 };
 
+SecondaryButton.defaultProps = {
+    dark: false,
+};
+
 export default SecondaryButton;

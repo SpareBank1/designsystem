@@ -96,6 +96,7 @@ BaseButton.propTypes = {
 BaseButton.defaultProps = {
     ariaLoadingMessage: 'Vennligst vent',
     element: 'button',
+    dark: false,
 };
 
 export default BaseButton;

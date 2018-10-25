@@ -2,7 +2,9 @@ import React from 'react';
 import { func, node, oneOfType, string, bool } from 'prop-types';
 import InlineButton from './InlineBaseButton';
 
-const TertiaryButton = props => <InlineButton buttonType="tertiary" {...props} />;
+const TertiaryButton = props => (
+    <InlineButton buttonType="tertiary" {...props} />
+);
 
 TertiaryButton.propTypes = {
     /** The button label */
@@ -19,6 +21,10 @@ TertiaryButton.propTypes = {
     rightIcon: node,
     /** Dark variant */
     dark: bool,
+};
+
+TertiaryButton.defaultProps = {
+    dark: false,
 };
 
 export default TertiaryButton;

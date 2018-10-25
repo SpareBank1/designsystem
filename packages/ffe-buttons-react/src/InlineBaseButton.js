@@ -6,7 +6,7 @@ import classNames from 'classnames';
  * Internal component
  * @ignore
  */
-const InlineBaseButton = (props) => {
+const InlineBaseButton = props => {
     const {
         buttonType,
         children,
@@ -31,14 +31,16 @@ const InlineBaseButton = (props) => {
             {...rest}
         >
             {leftIcon &&
-                React.cloneElement(leftIcon, { className: 'ffe-inline-button__icon ffe-inline-button__icon--left' })
-            }
-            <span className="ffe-inline-button__label">
-                {children}
-            </span>
+                React.cloneElement(leftIcon, {
+                    className:
+                        'ffe-inline-button__icon ffe-inline-button__icon--left',
+                })}
+            <span className="ffe-inline-button__label">{children}</span>
             {rightIcon &&
-                React.cloneElement(rightIcon, { className: 'ffe-inline-button__icon ffe-inline-button__icon--right' })
-            }
+                React.cloneElement(rightIcon, {
+                    className:
+                        'ffe-inline-button__icon ffe-inline-button__icon--right',
+                })}
         </Element>
     );
 };
@@ -67,6 +69,7 @@ InlineBaseButton.propTypes = {
 
 InlineBaseButton.defaultProps = {
     element: 'button',
+    dark: false,
 };
 
 export default InlineBaseButton;

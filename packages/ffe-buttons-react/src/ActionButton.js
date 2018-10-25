@@ -20,6 +20,7 @@ export default function ActionButton(props) {
 
 ActionButton.defaultProps = {
     ghost: false,
+    dark: false,
 };
 
 ActionButton.propTypes = {
