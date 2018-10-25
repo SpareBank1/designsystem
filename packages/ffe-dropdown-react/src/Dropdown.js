@@ -7,7 +7,6 @@ const Dropdown = props => {
 
     return (
         <select
-
             className={classNames(
                 'ffe-dropdown',
                 { 'ffe-dropdown--inline': inline },
@@ -25,6 +24,10 @@ Dropdown.propTypes = {
     className: string,
     /** Dark variant */
     dark: bool,
+};
+
+Dropdown.defaultProps = {
+    dark: false,
 };
 
 export default Dropdown;
