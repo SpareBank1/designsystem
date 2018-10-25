@@ -25,6 +25,7 @@ class Input extends Component {
             inputValue,
             onInputChange,
             onReset,
+            dark,
             // eslint-disable-next-line no-unused-vars
             searchTerm,
             // eslint-disable-next-line no-unused-vars
@@ -36,6 +37,7 @@ class Input extends Component {
                 <input
                     className={classNames('ffe-dropdown', {
                         'ffe-searchable-dropdown__display-reset': this.displayReset(),
+                        'ffe-dropdown--dark': dark,
                     })}
                     aria-invalid={String(ariaInvalid)}
                     id={inputId}
@@ -46,7 +48,12 @@ class Input extends Component {
                 />
                 {this.displayReset() && (
                     <button
-                        className="ffe-searchable-dropdown__reset-button"
+                        className={classNames(
+                            'ffe-searchable-dropdown__reset-button',
+                            {
+                                'ffe-searchable-dropdown--dark__reset-button': dark,
+                            },
+                        )}
                         onMouseDown={onReset}
                         onKeyDown={e => {
                             if (e.key === 'Enter') {
@@ -76,6 +83,12 @@ Input.propTypes = {
     onReset: func.isRequired,
     searchTerm: string,
     displayResetWhenInputHasValue: bool,
+    /** Dark variant */
+    dark: bool,
+};
+
+Input.defaultProps = {
+    dark: false,
 };
 
 export default Input;

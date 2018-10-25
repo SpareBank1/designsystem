@@ -1,81 +1,117 @@
 .ffe-searchable-dropdown {
-  position: relative;
-  &__display-reset {
-    background-image:none!important;
-  }
-  &__reset-button {
-    position: absolute;
-    right: 8px;
-    margin: auto;
-    top: 0;
-    bottom: 0;
-    background: transparent;
-    border: none;
-    fill: @ffe-grey-charcoal;
-    cursor:pointer;
-
-    &-icon {
-      @size : 11px;
-      width: @size;
-      height: @size;
+    position: relative;
+    &__display-reset {
+        background-image: none !important;
     }
-  }
+    &__reset-button {
+        position: absolute;
+        right: 8px;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        background: transparent;
+        border: none;
+        fill: @ffe-grey-charcoal;
+        cursor: pointer;
 
-  &__scroll-container {
-    @border : 1px solid @ffe-grey-silver;
-    z-index: 100;
-    position: absolute;
-    left: 0;
-    right: 0;
-    border : @border;
-    border-radius: 2px;
-    &-list {
-      left: 0;
-      width: 100%;
-      top: 45px;
-      box-sizing: border-box;
-      z-index: 100;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-  }
-
-  &__item {
-    cursor: pointer;
-    padding: 10px;
-    margin: 0;
-    border-top: 1px solid @ffe-grey-silver;
-    background: @ffe-white;
-    &--header {
-      .ffe-link-text;
-      line-height: 1;
-      font-size: 15px;
-      display: block;
-      padding-bottom: 6px;
-      border-bottom: none;
-    }
-    &--details {
-      color: @ffe-grey-charcoal;
-      font-size: 12px;
+        &-icon {
+            @size: 11px;
+            width: @size;
+            height: @size;
+        }
     }
 
-    &:hover,
-    &--highlighted {
-      cursor: pointer;
-      background: @ffe-blue-azure;
-      color: @ffe-white;
-      .ffe-searchable-dropdown__item--header,
-      .ffe-searchable-dropdown__item--details {
-        color: @ffe-white;
-      }
+    &__scroll-container {
+        @border: 1px solid @ffe-grey-silver;
+        z-index: 100;
+        position: absolute;
+        left: 0;
+        right: 0;
+        border: @border;
+        border-radius: 2px;
+        &-list {
+            left: 0;
+            width: 100%;
+            top: 45px;
+            box-sizing: border-box;
+            z-index: 100;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
     }
-    &:first-child {
-      border-top: none;
+
+    &__item {
+        cursor: pointer;
+        padding: 10px;
+        margin: 0;
+        border-top: 1px solid @ffe-grey-silver;
+        background: @ffe-white;
+        &--header {
+            .ffe-link-text;
+            line-height: 1;
+            font-size: 15px;
+            display: block;
+            border-bottom: none;
+        }
+        &--details {
+            color: @ffe-grey-charcoal;
+            font-size: 12px;
+        }
+
+        &:hover,
+        &--highlighted {
+            cursor: pointer;
+            background: @ffe-blue-azure;
+            color: @ffe-white;
+            .ffe-searchable-dropdown__item--header,
+            .ffe-searchable-dropdown__item--details {
+                color: @ffe-white;
+            }
+        }
+        &:first-child {
+            border-top: none;
+        }
     }
-  }
-  [aria-invalid='true'] {
-    border-color: @ffe-orange-fire;
-    border-style: solid;
-  }
+
+    [aria-invalid='true'] {
+        border-color: @ffe-orange-fire;
+        border-style: solid;
+    }
+
+    &--dark {
+        &__scroll-container {
+            border-top: 2px solid @ffe-blue-focus;
+        }
+
+        &__reset-button {
+            fill: @ffe-blue-focus;
+        }
+
+        &__item {
+            border-top: none;
+            background-color: @ffe-grey-dark-blue--dark;
+            color: @ffe-white;
+
+            &--header {
+                color: @ffe-white;
+            }
+
+            &--details {
+                color: @ffe-white;
+                font-size: 12px;
+            }
+
+            &:hover,
+            &--highlighted {
+                background-color: @ffe-blue-pale;
+                color: @ffe-grey-dark-blue--dark;
+
+                .ffe-searchable-dropdown__item--header,
+                .ffe-searchable-dropdown__item--details {
+                    color: @ffe-grey-dark-blue--dark;
+                }
+            }
+        }
+    }
 }

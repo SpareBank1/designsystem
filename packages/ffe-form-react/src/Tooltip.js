@@ -27,6 +27,7 @@ class Tooltip extends React.Component {
             // eslint-disable-next-line no-unused-vars
             onClick,
             tabIndex,
+            dark,
             ...rest
         } = this.props;
 
@@ -41,7 +42,9 @@ class Tooltip extends React.Component {
             >
                 <button
                     aria-label={ariaLabel}
-                    className="ffe-tooltip__icon"
+                    className={classNames('ffe-tooltip__icon', {
+                        'ffe-tooltip--dark__icon': dark,
+                    })}
                     onClick={this.onToggle}
                     type="button"
                     tabIndex={tabIndex}
@@ -55,7 +58,11 @@ class Tooltip extends React.Component {
                         aria-expanded={String(isOpen)}
                     >
                         <div
-                            className={classNames('ffe-small-text', className)}
+                            className={classNames(
+                                'ffe-small-text',
+                                { 'ffe-small-text--dark': dark },
+                                className,
+                            )}
                         >
                             {children}
                         </div>
@@ -77,6 +84,12 @@ Tooltip.propTypes = {
     onClick: func,
     /** Sets the tabIndex of the tooltip button. */
     tabIndex: number,
+    /** Dark variant */
+    dark: bool,
+};
+
+Tooltip.defaultProps = {
+    dark: false,
 };
 
 export default Tooltip;

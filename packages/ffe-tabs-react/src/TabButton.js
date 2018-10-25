@@ -3,7 +3,7 @@ import { bool, string } from 'prop-types';
 import classNames from 'classnames';
 
 export default function TabButton(props) {
-    const { className, selected, ghost, condensed, ...rest } = props;
+    const { className, selected, ghost, condensed, dark, ...rest } = props;
     return (
         <button
             className={classNames(
@@ -11,6 +11,7 @@ export default function TabButton(props) {
                 { 'ffe-tab-button--selected': selected },
                 { 'ffe-tab-button--ghost': ghost },
                 { 'ffe-tab-button--condensed': condensed },
+                { 'ffe-tab-button--dark': dark },
                 className,
             )}
             {...rest}
@@ -27,4 +28,10 @@ TabButton.propTypes = {
     condensed: bool,
     /** Additional css classes */
     className: string,
+    /** Dark variant */
+    dark: bool,
+};
+
+TabButton.defaultProps = {
+    dark: false,
 };

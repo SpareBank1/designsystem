@@ -20,6 +20,7 @@ export default function ActionButton(props) {
 
 ActionButton.defaultProps = {
     ghost: false,
+    dark: false,
 };
 
 ActionButton.propTypes = {
@@ -45,4 +46,6 @@ ActionButton.propTypes = {
     leftIcon: node,
     /** Icon shown to the right of the label */
     rightIcon: node,
+    /** Dark variant */
+    dark: bool,
 };

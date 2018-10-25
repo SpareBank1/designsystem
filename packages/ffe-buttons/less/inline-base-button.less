@@ -81,6 +81,27 @@
     &:hover {
         color: @ffe-blue-cobalt;
     }
+
+    &.ffe-inline-button--dark {
+        color: @ffe-blue-focus;
+        text-decoration: none;
+
+        &::after {
+            border-bottom: 2px solid @ffe-blue-focus;
+        }
+
+        &:hover {
+            color: @ffe-blue-onahau--dark;
+
+            &::after {
+                border-bottom-color: @ffe-blue-onahau--dark;
+            }
+        }
+
+        &:focus {
+            box-shadow: 0 0 0 2px @ffe-blue-focus;
+        }
+    }
 }
 
 .ffe-inline-button__icon {

@@ -1,12 +1,12 @@
 import React from 'react';
-import { func, string, oneOf, oneOfType, node } from 'prop-types';
+import { func, string, oneOf, oneOfType, node, bool } from 'prop-types';
 import classNames from 'classnames';
 
 /**
  * Internal component
  * @ignore
  */
-const InlineBaseButton = (props) => {
+const InlineBaseButton = props => {
     const {
         buttonType,
         children,
@@ -15,6 +15,7 @@ const InlineBaseButton = (props) => {
         innerRef,
         leftIcon,
         rightIcon,
+        dark,
         ...rest
     } = props;
 
@@ -23,20 +24,23 @@ const InlineBaseButton = (props) => {
             className={classNames(
                 'ffe-inline-button',
                 `ffe-inline-button--${buttonType}`,
+                { 'ffe-inline-button--dark': dark },
                 className,
             )}
             ref={innerRef}
             {...rest}
         >
             {leftIcon &&
-                React.cloneElement(leftIcon, { className: 'ffe-inline-button__icon ffe-inline-button__icon--left' })
-            }
-            <span className="ffe-inline-button__label">
-                {children}
-            </span>
+                React.cloneElement(leftIcon, {
+                    className:
+                        'ffe-inline-button__icon ffe-inline-button__icon--left',
+                })}
+            <span className="ffe-inline-button__label">{children}</span>
             {rightIcon &&
-                React.cloneElement(rightIcon, { className: 'ffe-inline-button__icon ffe-inline-button__icon--right' })
-            }
+                React.cloneElement(rightIcon, {
+                    className:
+                        'ffe-inline-button__icon ffe-inline-button__icon--right',
+                })}
         </Element>
     );
 };
@@ -59,10 +63,13 @@ InlineBaseButton.propTypes = {
     leftIcon: node,
     /** Icon shown to the right of the label */
     rightIcon: node,
+    /** Dark variant */
+    dark: bool,
 };
 
 InlineBaseButton.defaultProps = {
     element: 'button',
+    dark: false,
 };
 
 export default InlineBaseButton;

@@ -3,11 +3,11 @@ import { bool, func, oneOfType, oneOf, node, string } from 'prop-types';
 import classNames from 'classnames';
 import { ErrorFieldMessage, Tooltip } from '@sb1/ffe-form-react';
 
-const ensureComponent = Comp => input => {
+const ensureComponent = Comp => (input, dark) => {
     if (input.type === Comp) {
         return input;
     }
-    return <Comp>{input}</Comp>;
+    return <Comp dark={dark}>{input}</Comp>;
 };
 
 const ensureTooltip = ensureComponent(Tooltip);
@@ -24,6 +24,7 @@ const RadioButtonInputGroup = props => {
         name,
         selectedValue,
         tooltip,
+        dark,
         ...rest
     } = props;
 
@@ -35,7 +36,7 @@ const RadioButtonInputGroup = props => {
         selectedValue,
     };
 
-    const tooltipContent = tooltip && ensureTooltip(tooltip);
+    const tooltipContent = tooltip && ensureTooltip(tooltip, dark);
     const fieldMessageContent =
         fieldMessage && ensureFieldMessage(fieldMessage);
 
@@ -45,7 +46,13 @@ const RadioButtonInputGroup = props => {
             {...rest}
         >
             {label && (
-                <legend className="ffe-form-label ffe-form-label--block">
+                <legend
+                    className={classNames(
+                        'ffe-form-label',
+                        'ffe-form-label--block',
+                        { 'ffe-form-label--dark': dark },
+                    )}
+                >
                     {label}
                     {tooltipContent}
                 </legend>
@@ -94,6 +101,12 @@ RadioButtonInputGroup.propTypes = {
      * set
      * */
     tooltip: oneOfType([node, string]),
+    /** Dark variant */
+    dark: bool,
+};
+
+RadioButtonInputGroup.defaultProps = {
+    dark: false,
 };
 
 export default RadioButtonInputGroup;

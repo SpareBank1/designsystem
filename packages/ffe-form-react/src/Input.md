@@ -67,3 +67,15 @@ class Example extends React.Component {
 
 <Example />;
 ```
+
+Variant _dark_ for interne løsninger med mørk bakgrunn.
+
+```js { "props": { "className": "sb1ds-example-dark" } }
+const { Input } = require('.');
+
+<React.Fragment>
+    <Label htmlFor="first-name" dark={true}>Fornavn</Label>
+    <Input id="first-name" dark={true} />
+</React.Fragment>
+
+```

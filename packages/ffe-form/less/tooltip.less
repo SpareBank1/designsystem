@@ -23,7 +23,7 @@
         cursor: help;
         display: inline-block;
         height: @ffe-tooltip-size;
-        line-height: @ffe-tooltip-size;
+        line-height: 22px;
         margin: 0 0 4px 13px;
         padding: 0 0 0 1px;
         text-align: center;
@@ -61,5 +61,33 @@
         height: auto;
         overflow: visible;
         visibility: visible;
+    }
+
+    &--dark {
+        &__icon {
+            background-color: transparent;
+            border: 2px solid @ffe-grey-silver;
+            color: @ffe-blue-focus;
+
+            &:hover {
+                border-color: @ffe-white;
+                color: @ffe-grey-dark-blue--dark;
+                background-color: @ffe-grey-silver;
+            }
+
+            &:focus {
+                box-shadow: 0 0 0 2px @ffe-blue-focus;
+                border-color: @ffe-grey-silver;
+                outline: none;
+            }
+
+            &:active,
+            &--active,
+            .ffe-tooltip--open & {
+                border-color: @ffe-white;
+                color: @ffe-grey-dark-blue--dark;
+                background-color: @ffe-white;
+            }
+        }
     }
 }

@@ -99,6 +99,18 @@
             border-color: @ffe-orange-fire;
         }
     }
+
+    &--dark {
+        color: @ffe-white;
+
+        &::before {
+            border-color: @ffe-grey-silver;
+        }
+
+        &:after {
+            background-color: @ffe-grey-shuttle--dark;
+        }
+    }
 }
 
 .ffe-radio-input {
@@ -109,6 +121,7 @@
         outline: none;
     }
 
+    &:checked + .ffe-radio-button::after,
     &:hover + .ffe-radio-button::after {
         border-color: @ffe-blue-azure;
     }
@@ -116,10 +129,6 @@
     &:checked + .ffe-radio-button::before {
         background-color: @ffe-blue-azure;
         border: 5px solid @ffe-white;
-    }
-
-    &:checked + .ffe-radio-button::after {
-        border-color: @ffe-blue-azure;
     }
 
     &:active + .ffe-radio-button::after,
@@ -133,5 +142,27 @@
 
     &:checked + .ffe-radio-button--invalid::after {
         border-color: @ffe-orange-fire;
+    }
+
+    &--dark {
+        &:checked + .ffe-radio-button::after,
+        &:hover + .ffe-radio-button::after {
+            border-color: @ffe-white;
+            background-color: inherit;
+        }
+
+        &:checked + .ffe-radio-button::before {
+            border-color: @ffe-white;
+            background-color: @ffe-blue-azure;
+        }
+
+        &:checked:focus + .ffe-radio-button::before {
+            border-color: @ffe-white;
+        }
+
+        &:active + .ffe-radio-button::after,
+        &:focus + .ffe-radio-button::after {
+            box-shadow: 0 0 0 2px @ffe-blue-focus;
+        }
     }
 }

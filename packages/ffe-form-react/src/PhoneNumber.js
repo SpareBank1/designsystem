@@ -1,11 +1,11 @@
 import React from 'react';
-import {string, bool, func} from 'prop-types';
+import { string, bool, func } from 'prop-types';
 import uuid from 'uuid';
+import classNames from 'classnames';
 
 import i18n from './i18n/i18n';
 
 export default class PhoneNumber extends React.Component {
-
     numberId = uuid.v4();
     countryCodeId = uuid.v4();
 
@@ -20,22 +20,46 @@ export default class PhoneNumber extends React.Component {
             disabled,
             countryCodeInvalid,
             numberInvalid,
-            className
+            className,
+            dark,
         } = this.props;
 
         const supportedLocales = ['nb', 'nn', 'en'];
-        const text = i18n[supportedLocales.indexOf(this.props.locale) !== -1 ? this.props.locale : 'nb'];
+        const text =
+            i18n[
+                supportedLocales.indexOf(this.props.locale) !== -1
+                    ? this.props.locale
+                    : 'nb'
+            ];
 
         return (
             <div className={`ffe-input-group ${className ? className : ''}`}>
                 <div className="ffe-phone-number">
                     <div className="ffe-phone-number__country-code">
-                        <label className="ffe-form-label" htmlFor={this.countryCodeId}>{text.COUNTRY_CODE}</label>
+                        <label
+                            className={classNames('ffe-form-label', {
+                                'ffe-form-label--dark': dark,
+                            })}
+                            htmlFor={this.countryCodeId}
+                        >
+                            {text.COUNTRY_CODE}
+                        </label>
                         <div className="ffe-phone-number__input-group">
-                            <span className="ffe-phone-number__plus">+</span>
+                            <span
+                                className={classNames(
+                                    'ffe-phone-number__plus',
+                                    { 'ffe-phone-number--dark__plus': dark },
+                                )}
+                            >
+                                +
+                            </span>
                             <input
                                 id={this.countryCodeId}
-                                className="ffe-input-field ffe-phone-number__country-code-input"
+                                className={classNames(
+                                    'ffe-input-field',
+                                    'ffe-phone-number__country-code-input',
+                                    { 'ffe-input-field--dark': dark },
+                                )}
                                 type="tel"
                                 disabled={disabled}
                                 value={countryCode}
@@ -46,11 +70,22 @@ export default class PhoneNumber extends React.Component {
                         </div>
                     </div>
                     <div className="ffe-phone-number__number">
-                        <label className="ffe-form-label" htmlFor={this.numberId}>{text.PHONE_NUMBER}</label>
+                        <label
+                            className={classNames('ffe-form-label', {
+                                'ffe-form-label--dark': dark,
+                            })}
+                            htmlFor={this.numberId}
+                        >
+                            {text.PHONE_NUMBER}
+                        </label>
                         <input
                             id={this.numberId}
                             type="tel"
-                            className="ffe-input-field ffe-phone-number__phone-input"
+                            className={classNames(
+                                'ffe-input-field',
+                                'ffe-phone-number__phone-input',
+                                { 'ffe-input-field--dark': dark },
+                            )}
                             onChange={onNumberChange}
                             onBlur={onNumberBlur}
                             value={number}
@@ -64,8 +99,7 @@ export default class PhoneNumber extends React.Component {
     }
 }
 
-const noop = () => {
-};
+const noop = () => {};
 
 PhoneNumber.propTypes = {
     number: string,
@@ -78,7 +112,9 @@ PhoneNumber.propTypes = {
     disabled: bool,
     countryCodeInvalid: bool,
     numberInvalid: bool,
-    className: string
+    className: string,
+    /** Dark variant */
+    dark: bool,
 };
 
 PhoneNumber.defaultProps = {
@@ -87,5 +123,6 @@ PhoneNumber.defaultProps = {
     onCountryCodeChange: noop,
     onNumberChange: noop,
     onCountryCodeBlur: noop,
-    onNumberBlur: noop
+    onNumberBlur: noop,
+    dark: false,
 };

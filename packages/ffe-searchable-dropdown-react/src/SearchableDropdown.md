@@ -120,3 +120,27 @@ const noMatchExtra = {
     searchAttributes={['beskrivelse']}
 />;
 ```
+
+Variant _dark_ for interne løsninger med mørk bakgrunn.
+
+```js { "props": { "className": "sb1ds-example-dark" } }
+const companies = require('../exampleData').companies;
+const initialState = { inputValue: '' };
+      
+<SearchableDropdown
+    dark={true}
+    displayResetWhenInputHasValue={true}
+    dropdownAttributes={['companyName']}
+    dropdownList={companies}
+    inputId="searchable-dropdown-single-attribute"
+    inputValue={state.inputValue}
+    label="Velg bedrift"
+    noMatch="Søket ga ingen treff"
+    onInputChange={value => setState({ inputValue: value })}
+    onReset={() => setState({ inputvalue: '' })}
+    onSelect={company => setState({ inputValue: company.companyName })}
+    placeholder="Velg"
+    searchAttributes={['companyName']}
+/>
+
+```

@@ -3,13 +3,13 @@
     <legend className="ffe-form-label ffe-form-label--block">
         Hvilke aviser leser du?
     </legend>
-    <CheckBox name="newspapers" value="sport">
+    <CheckBox name="newspapers" value="vg">
         VG
     </CheckBox>
-    <CheckBox name="newspapers" value="food">
+    <CheckBox name="newspapers" value="dagbladet">
         Dagbladet
     </CheckBox>
-    <CheckBox name="newspapers" value="moon">
+    <CheckBox name="newspapers" value="aftenposten">
         Aftenposten
     </CheckBox>
 </fieldset>
@@ -70,6 +70,25 @@ du kan spre på labelen.
 <CheckBox>
     {labelProps => <label {...labelProps}>Her benyttes render props</label>}
 </CheckBox>
+```
+
+Variant _dark_ for interne løsninger med mørk bakgrunn.
+
+```js { "props": { "className": "sb1ds-example-dark" } }
+<fieldset className="ffe-fieldset">
+    <legend className="ffe-form-label ffe-form-label--block ffe-form-label--dark">
+        Hvilke TV kanal ser du på?
+    </legend>
+    <CheckBox name="newspapers" value="nrk" dark={true}>
+        NRK
+    </CheckBox>
+    <CheckBox name="newspapers" value="tv2" dark={true}>
+        TV2
+    </CheckBox>
+    <CheckBox name="newspapers" value="tvnorge" dark={true}>
+        TVNorge
+    </CheckBox>
+</fieldset>        
 ```
 
 Komponenten videresender alle udokumenterte props til `<input />`-elementet.

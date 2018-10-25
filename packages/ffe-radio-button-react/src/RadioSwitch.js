@@ -11,21 +11,31 @@ const RadioSwitch = props => {
         leftValue,
         rightLabel,
         rightValue,
+        condensed,
+        dark,
         ...rest
     } = props;
 
     return (
         <Fragment>
             <BaseRadioButton
-                className={classNames('ffe-radio-switch', className)}
+                className={classNames('ffe-radio-switch', className, {
+                    'ffe-radio-switch--condensed': condensed,
+                    'ffe-radio-switch--dark': dark,
+                })}
                 value={leftValue}
+                dark={dark}
                 {...rest}
             >
                 {leftLabel}
             </BaseRadioButton>
             <BaseRadioButton
-                className={classNames('ffe-radio-switch', className)}
+                className={classNames('ffe-radio-switch', className, {
+                    'ffe-radio-switch--condensed': condensed,
+                    'ffe-radio-switch--dark': dark,
+                })}
                 value={rightValue}
+                dark={dark}
                 {...rest}
             >
                 {rightLabel}
@@ -45,6 +55,14 @@ RadioSwitch.propTypes = {
     rightLabel: string.isRequired,
     /** The value of the choice to the right */
     rightValue: oneOfType([bool, string]).isRequired,
+    /** Condensed modifier. Use in condensed designs */
+    condensed: bool,
+    /** Dark variant */
+    dark: bool,
+};
+
+RadioSwitch.defaultProps = {
+    dark: false,
 };
 
 export default RadioSwitch;

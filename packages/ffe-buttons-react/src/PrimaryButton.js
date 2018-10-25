@@ -25,6 +25,12 @@ PrimaryButton.propTypes = {
     leftIcon: node,
     /** Icon shown to the right of the label */
     rightIcon: node,
+    /** Dark variant */
+    dark: bool,
+};
+
+PrimaryButton.defaultProps = {
+    dark: false,
 };
 
 export default PrimaryButton;
