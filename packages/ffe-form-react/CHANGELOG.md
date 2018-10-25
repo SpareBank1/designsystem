@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@4.1.0...@sb1/ffe-form-react@4.2.0) (2018-10-25)
+
+### Bug Fixes
+
+-   **ffe-form-react:** Added defaultProps false for dark variant. ([6309011](https://github.com/SpareBank1/designsystem/commit/6309011))
+-   **ffe-form-react:** Fix a classNames definition ([97a8c27](https://github.com/SpareBank1/designsystem/commit/97a8c27))
+
+### Features
+
+-   **ffe-forms-react:** Added dark property for Input, Label, PhoneNumber, TextArea and Tooltip with documentation ([0201f1c](https://github.com/SpareBank1/designsystem/commit/0201f1c))
+
 # [4.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@4.0.1...@sb1/ffe-form-react@4.1.0) (2018-10-15)
 
 ### Features

@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@8.0.10...@sb1/ffe-buttons@8.1.0) (2018-10-25)
+
+### Bug Fixes
+
+-   **ffe-buttons:** Remove some commented code ([fbdc0ec](https://github.com/SpareBank1/designsystem/commit/fbdc0ec))
+
+### Features
+
+-   **ffe-buttons:** Added multiple classes with --dark modifier ([c007bfd](https://github.com/SpareBank1/designsystem/commit/c007bfd))
+
 ## [8.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@8.0.9...@sb1/ffe-buttons@8.0.10) (2018-10-08)
 
 ### Bug Fixes

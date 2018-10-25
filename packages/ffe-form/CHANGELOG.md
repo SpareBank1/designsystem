@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@10.0.0...@sb1/ffe-form@10.1.0) (2018-10-25)
+
+### Bug Fixes
+
+-   **ffe-form:** Remove two comments with old colors no longer in use. ([efc55bc](https://github.com/SpareBank1/designsystem/commit/efc55bc))
+
+### Features
+
+-   **ffe-form:** Added multiple classes for checkbox, dropdown, form-label, input-field, phone-number, radio-button, radio-switch, textarea, tooltip with --dark modifier ([654b4d9](https://github.com/SpareBank1/designsystem/commit/654b4d9))
+
 # [10.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@9.2.20...@sb1/ffe-form@10.0.0) (2018-10-15)
 
 ### Features

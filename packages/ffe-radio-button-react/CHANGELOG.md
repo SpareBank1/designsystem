@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-radio-button-react@3.2.11...@sb1/ffe-radio-button-react@3.3.0) (2018-10-25)
+
+### Bug Fixes
+
+-   **ffe-radio-button-react:** Added defaultProps false for dark variant. ([fa6302a](https://github.com/SpareBank1/designsystem/commit/fa6302a))
+
+### Features
+
+-   **ffe-radio-button-react:** Added dark property with documentation ([69ddd52](https://github.com/SpareBank1/designsystem/commit/69ddd52))
+
 ## [3.2.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-radio-button-react@3.2.10...@sb1/ffe-radio-button-react@3.2.11) (2018-10-15)
 
 **Note:** Version bump only for package @sb1/ffe-radio-button-react

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-checkbox-react@5.2.2...@sb1/ffe-checkbox-react@5.3.0) (2018-10-25)
+
+### Features
+
+-   **ffe-checkbox-react:** Added dark property with documentation ([d38bd7c](https://github.com/SpareBank1/designsystem/commit/d38bd7c))
+
 <a name="5.2.2"></a>
 
 ## [5.2.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-checkbox-react@5.2.1...@sb1/ffe-checkbox-react@5.2.2) (2018-08-09)

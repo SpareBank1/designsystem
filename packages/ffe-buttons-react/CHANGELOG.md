@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [11.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@11.1.8...@sb1/ffe-buttons-react@11.2.0) (2018-10-25)
+
+### Bug Fixes
+
+-   **ffe-buttons-react:** Added defaultProps false for dark variant. ([98660c9](https://github.com/SpareBank1/designsystem/commit/98660c9))
+-   **ffe-buttons-react:** Revert some small changes in previous commit that should not have been included. ([e37b868](https://github.com/SpareBank1/designsystem/commit/e37b868))
+
+### Features
+
+-   **ffe-buttons-react:** Added dark property for ActionButton, PrimaryButton, SecondaryButton, TertiaryButton with documentation ([a7b68e9](https://github.com/SpareBank1/designsystem/commit/a7b68e9))
+
 ## [11.1.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@11.1.7...@sb1/ffe-buttons-react@11.1.8) (2018-10-17)
 
 ### Bug Fixes

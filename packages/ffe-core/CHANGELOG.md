@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [14.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@14.0.1...@sb1/ffe-core@14.0.2) (2018-10-25)
+
+### Bug Fixes
+
+-   **ffe-core:** Added [@ffe-blue-onahau](https://github.com/ffe-blue-onahau)--dark, [@ffe-grey-shuttle](https://github.com/ffe-grey-shuttle)--dark and [@ffe-grey-dark-blue](https://github.com/ffe-grey-dark-blue)--dark needed by --dark variant. ([8755df7](https://github.com/SpareBank1/designsystem/commit/8755df7))
+
 <a name="14.0.1"></a>
 
 ## [14.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@14.0.0...@sb1/ffe-core@14.0.1) (2018-09-19)

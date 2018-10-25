@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@6.1.1...@sb1/ffe-searchable-dropdown-react@6.2.0) (2018-10-25)
+
+### Bug Fixes
+
+-   **ffe-searchable-dropdown-react:** Added defaultProps false for dark variant. ([ecbb5b4](https://github.com/SpareBank1/designsystem/commit/ecbb5b4))
+-   **ffe-searchable-dropdown-react:** Fix test data so test work again ([ae634c0](https://github.com/SpareBank1/designsystem/commit/ae634c0))
+-   **ffe-searchable-dropdown-react:** Remove some commented code ([ab2f628](https://github.com/SpareBank1/designsystem/commit/ab2f628))
+
+### Features
+
+-   **ffe-searchable-dropdown-react:** Added dark property with documentation ([0a5e7e5](https://github.com/SpareBank1/designsystem/commit/0a5e7e5))
+
 ## [6.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@6.1.0...@sb1/ffe-searchable-dropdown-react@6.1.1) (2018-10-17)
 
 **Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react

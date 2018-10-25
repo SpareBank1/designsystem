@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@6.0.4...@sb1/ffe-tabs@6.1.0) (2018-10-25)
+
+### Features
+
+-   **ffe-tab-button:** Added ffe-tab-button--dark ([53da86e](https://github.com/SpareBank1/designsystem/commit/53da86e))
+
 <a name="6.0.4"></a>
 
 ## [6.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@6.0.3...@sb1/ffe-tabs@6.0.4) (2018-09-19)
