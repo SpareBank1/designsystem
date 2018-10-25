@@ -43,7 +43,7 @@ class Tooltip extends React.Component {
                 <button
                     aria-label={ariaLabel}
                     className={classNames('ffe-tooltip__icon', {
-                        'ffe-tooltip--dark__icon': dark
+                        'ffe-tooltip--dark__icon': dark,
                     })}
                     onClick={this.onToggle}
                     type="button"
@@ -58,7 +58,11 @@ class Tooltip extends React.Component {
                         aria-expanded={String(isOpen)}
                     >
                         <div
-                            className={classNames('ffe-small-text', {'ffe-small-text--dark': dark}, className)}
+                            className={classNames(
+                                'ffe-small-text',
+                                { 'ffe-small-text--dark': dark },
+                                className,
+                            )}
                         >
                             {children}
                         </div>
@@ -82,6 +86,10 @@ Tooltip.propTypes = {
     tabIndex: number,
     /** Dark variant */
     dark: bool,
+};
+
+Tooltip.defaultProps = {
+    dark: false,
 };
 
 export default Tooltip;

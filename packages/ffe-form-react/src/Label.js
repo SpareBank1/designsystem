@@ -4,12 +4,10 @@ import classNames from 'classnames';
 
 const Label = ({ block, children, className, htmlFor, dark, ...rest }) => (
     <label
-        className={classNames(
-            'ffe-form-label',
-            className, {
-                'ffe-form-label--block': block,
-                'ffe-form-label--dark': dark},
-            )}
+        className={classNames('ffe-form-label', className, {
+            'ffe-form-label--block': block,
+            'ffe-form-label--dark': dark,
+        })}
         htmlFor={htmlFor}
         {...rest}
     >
@@ -28,6 +26,10 @@ Label.propTypes = {
     htmlFor: string,
     /** Dark variant */
     dark: bool,
+};
+
+Label.defaultProps = {
+    dark: false,
 };
 
 export default Label;

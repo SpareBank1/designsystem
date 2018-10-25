@@ -29,4 +29,8 @@ Input.propTypes = {
     dark: bool,
 };
 
+Input.defaultProps = {
+    dark: false,
+};
+
 export default Input;
