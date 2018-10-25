@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [11.1.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@11.1.7...@sb1/ffe-buttons-react@11.1.8) (2018-10-17)
+
+### Bug Fixes
+
+-   **ffe-buttons-react:** fixed async issues with setState ([d800bcb](https://github.com/SpareBank1/designsystem/commit/d800bcb))
+
 <a name="11.1.7"></a>
 
 ## [11.1.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@11.1.6...@sb1/ffe-buttons-react@11.1.7) (2018-08-09)

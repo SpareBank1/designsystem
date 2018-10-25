@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@10.1.0...@sb1/ffe-grid@10.1.1) (2018-10-16)
+
+### Bug Fixes
+
+-   **ffe-grid:** Add example with necessary markup for grid rows with background color ([291684b](https://github.com/SpareBank1/designsystem/commit/291684b))
+
 # [10.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@10.0.4...@sb1/ffe-grid@10.1.0) (2018-10-05)
 
 ### Features
