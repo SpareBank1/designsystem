@@ -1,5 +1,13 @@
 import React from 'react';
-import { array, string, number, func, oneOfType, shape, bool } from 'prop-types';
+import {
+    array,
+    string,
+    number,
+    func,
+    oneOfType,
+    shape,
+    bool,
+} from 'prop-types';
 import ListItem from './ListItem';
 import classNames from 'classnames';
 
@@ -26,7 +34,9 @@ const ListContainer = ({
         <ul
             className={classNames(
                 'ffe-searchable-dropdown__scroll-container-list',
-                { 'ffe-searchable-dropdown--dark__scroll-container-list': dark },
+                {
+                    'ffe-searchable-dropdown--dark__scroll-container-list': dark,
+                },
             )}
             role="listbox"
             aria-activedescendant={
@@ -59,11 +69,12 @@ const ListContainer = ({
             {maxRenderedDropdownElements > 0 &&
                 dropdownList.length > maxRenderedDropdownElements && (
                     <li
-                        className={classNames(
-                            'ffe-searchable-dropdown__item',
-                            { 'ffe-searchable-dropdown--dark__item': dark },
-                        )}
-                    >...</li>
+                        className={classNames('ffe-searchable-dropdown__item', {
+                            'ffe-searchable-dropdown--dark__item': dark,
+                        })}
+                    >
+                        ...
+                    </li>
                 )}
         </ul>
     );
@@ -86,6 +97,10 @@ ListContainer.propTypes = {
     refHighlightedListItem: func.isRequired,
     /** Dark variant */
     dark: bool,
+};
+
+ListContainer.defaultProps = {
+    dark: false,
 };
 
 export default ListContainer;

@@ -48,7 +48,12 @@ class Input extends Component {
                 />
                 {this.displayReset() && (
                     <button
-                        className={classNames('ffe-searchable-dropdown__reset-button', {'ffe-searchable-dropdown--dark__reset-button' : dark})}
+                        className={classNames(
+                            'ffe-searchable-dropdown__reset-button',
+                            {
+                                'ffe-searchable-dropdown--dark__reset-button': dark,
+                            },
+                        )}
                         onMouseDown={onReset}
                         onKeyDown={e => {
                             if (e.key === 'Enter') {
@@ -80,6 +85,10 @@ Input.propTypes = {
     displayResetWhenInputHasValue: bool,
     /** Dark variant */
     dark: bool,
+};
+
+Input.defaultProps = {
+    dark: false,
 };
 
 export default Input;
