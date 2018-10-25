@@ -29,4 +29,8 @@ RadioButton.propTypes = {
     dark: bool,
 };
 
+RadioButton.defaultProps = {
+    dark: false,
+};
+
 export default RadioButton;

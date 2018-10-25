@@ -19,12 +19,10 @@ const RadioSwitch = props => {
     return (
         <Fragment>
             <BaseRadioButton
-                className={classNames(
-                    'ffe-radio-switch',
-                    className, {
-                        'ffe-radio-switch--condensed': condensed,
-                        'ffe-radio-switch--dark': dark
-                    })}
+                className={classNames('ffe-radio-switch', className, {
+                    'ffe-radio-switch--condensed': condensed,
+                    'ffe-radio-switch--dark': dark,
+                })}
                 value={leftValue}
                 dark={dark}
                 {...rest}
@@ -32,12 +30,10 @@ const RadioSwitch = props => {
                 {leftLabel}
             </BaseRadioButton>
             <BaseRadioButton
-                className={classNames(
-                    'ffe-radio-switch',
-                    className, {
-                        'ffe-radio-switch--condensed': condensed,
-                        'ffe-radio-switch--dark': dark
-                    })}
+                className={classNames('ffe-radio-switch', className, {
+                    'ffe-radio-switch--condensed': condensed,
+                    'ffe-radio-switch--dark': dark,
+                })}
                 value={rightValue}
                 dark={dark}
                 {...rest}
@@ -63,6 +59,10 @@ RadioSwitch.propTypes = {
     condensed: bool,
     /** Dark variant */
     dark: bool,
+};
+
+RadioSwitch.defaultProps = {
+    dark: false,
 };
 
 export default RadioSwitch;

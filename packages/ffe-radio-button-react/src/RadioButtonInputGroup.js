@@ -102,7 +102,11 @@ RadioButtonInputGroup.propTypes = {
      * */
     tooltip: oneOfType([node, string]),
     /** Dark variant */
-    dark: bool
+    dark: bool,
+};
+
+RadioButtonInputGroup.defaultProps = {
+    dark: false,
 };
 
 export default RadioButtonInputGroup;
