@@ -2,9 +2,9 @@
 //
 // Markup:
 // <ul class="ffe-bullet-list ffe-bullet-list{{modifier_class}}">
-//     <li>Bilforsikring</li>
-//     <li>Reiseforsikring</li>
-//     <li>Innboforsikring</li>
+//     <li class="ffe-bullet-list__item">Bilforsikring</li>
+//     <li class="ffe-bullet-list__item">Reiseforsikring</li>
+//     <li class="ffe-bullet-list__item">Innboforsikring</li>
 // </ul>
 //
 // --condensed  - Condensed
@@ -15,9 +15,10 @@
 //
 // Markup:
 // <ul class="ffe-check-list ffe-check-list{{modifier_class}}">
-//     <li>Massevis av ferdige, testede komponenter</li>
-//     <li>Likt design som resten av SpareBank 1</li>
-//     <li>Høyere utviklingshastighet</li>
+//     <li class="ffe-check-list__item">Massevis av ferdige, testede komponenter</li>
+//     <li class="ffe-check-list__item">Likt design som resten av SpareBank 1</li>
+//     <li class="ffe-check-list__item">Høyere utviklingshastighet</li>
+//     <li class="ffe-check-list__item ffe-check-list__item--cross">Null bugs</li>
 // </ul>
 //
 // --bg-sand    - Sand background
@@ -28,9 +29,9 @@
 //
 // Markup:
 // <ol class="ffe-numbered-list ffe-numbered-list{{modifier_class}}">
-//     <li>Installer pakken du vil bruke via NPM</li>
-//     <li>Importer pakken i koden din</li>
-//     <li>Profit!</li>
+//     <li class="ffe-numbered-list__item">Installer pakken du vil bruke via NPM</li>
+//     <li class="ffe-numbered-list__item">Importer pakken i koden din</li>
+//     <li class="ffe-numbered-list__item">Profit!</li>
 // </ol>
 //
 // --condensed  - Condensed
@@ -41,9 +42,9 @@
 //
 // Markup:
 // <ol class="ffe-stylized-numbered-list">
-//     <li>Installer pakken du vil bruke via NPM</li>
-//     <li>Importer pakken i koden din</li>
-//     <li>Profit!</li>
+//     <li class="ffe-stylized-numbered-list__item">Installer pakken du vil bruke via NPM</li>
+//     <li class="ffe-stylized-numbered-list__item">Importer pakken i koden din</li>
+//     <li class="ffe-stylized-numbered-list__item">Profit!</li>
 // </ol>
 //
 // Styleguide ffe-lists.regular-lists.4
@@ -54,7 +55,8 @@
     text-align: left;
     margin: 0 0 20px;
 
-    > li {
+    > .ffe-numbered-list__item,
+    > .ffe-bullet-list__item {
         margin-top: 10px;
         margin-left: 15px;
     }
@@ -70,7 +72,7 @@
     &--condensed {
         margin-left: 0;
 
-        > li {
+        > .ffe-bullet-list__item {
             margin-top: 0;
         }
     }
@@ -90,8 +92,8 @@
 
 /* Desktop */
 @media screen and (min-width: @breakpoint-md) {
-    .ffe-numbered-list > li,
-    .ffe-bullet-list > li {
+    .ffe-numbered-list > .ffe-numbered-list__item,
+    .ffe-bullet-list > .ffe-bullet-list__item {
         margin-left: 30px;
 
         &--condensed {
@@ -107,7 +109,8 @@
     margin: 0 0 20px;
     list-style: none;
 
-    > li {
+    > .ffe-check-list__item,
+    > .ffe-stylized-numbered-list__item {
         margin-top: 1.75em;
         margin-left: 2.5em;
         position: relative;
@@ -117,11 +120,13 @@
 
 @ffe-green-shamrock-escape: escape('@{ffe-green-shamrock}');
 @ffe-blue-royal-escape: escape('@{ffe-blue-royal}');
+@ffe-red-escape: escape('@{ffe-red}');
 @ffe-green-shamrock-fill: @ffe-green-shamrock-escape;
 @ffe-blue-royal-fill: @ffe-blue-royal-escape;
+@ffe-red-fill: @ffe-red-escape;
 
 .ffe-check-list {
-    > li {
+    > .ffe-check-list__item {
         &::before {
             content: '\2022';
             display: block;
@@ -138,8 +143,16 @@
         }
     }
 
+    > .ffe-check-list__item--cross {
+        &::before {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cpath fill='@{ffe-red-fill}' d='M18.77,0c-3.562,0-7.125,1.347-9.834,4.044l-4.429,4.439c-5.381,5.394-5.381,14.25,0,19.68l71.19,71.83-71.66,71.83c-5.381,5.394-5.381,14.25,0,19.68l4.429,4.439c5.381,5.394,14.22,5.394,19.64,0l71.66-71.83,71.65,71.83c5.381,5.394,14.23,5.394,19.65,0l4.429-4.439c5.381-5.394,5.381-14.25,0-19.68l-71.19-71.83,71.66-71.83c5.381-4.914,5.381-13.78,0-19.21l-4.429-4.423c-5.381-5.394-14.22-5.394-19.64,0l-72.13,71.34-71.17-71.83c-2.691-2.697-6.257-4.044-9.819-4.044z'/%3E%3C/svg%3E");
+            color: @ffe-red;
+            content: '\2717';
+        }
+    }
+
     &--bg-sand {
-        > li {
+        > .ffe-check-list__item {
             color: @ffe-blue-royal;
             background-color: @ffe-sand;
             padding: 0.85em 1em 0.85em 3em;
@@ -155,11 +168,19 @@
                 background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' width='200' height='200'%3E%3Cpath fill='@{ffe-blue-royal-fill}' d='M176.56-8.325E-7c-4.403,0-8.307,2.46595-10.288,5.89248l-90.5448,156.336-42.6109-59.77c-2.46172-2.94562-5.88534-4.89058-9.78806-4.89058h-7.3426c-4.40307,0-8.30704,2.46094-10.2884,6.36839-1.94136,3.94753-1.46102,8.8406,1.0007,12.2671l54.8007,75.963c3.4224,4.89,9.3077,7.834,15.1918,7.834,6.84477,0,12.7076-3.42654,16.13-9.31777l100.827-173.487c2.46172-3.4666,2.46547-7.83618,0.0438-11.3028-1.942-3.94755-5.886-5.8925-10.289-5.8925h-6.84226z'/%3E%3C/svg%3E");
             }
         }
+
+        > .ffe-check-list__item--cross {
+            &::before {
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cpath fill='@{ffe-blue-royal-fill}' d='M18.77,0c-3.562,0-7.125,1.347-9.834,4.044l-4.429,4.439c-5.381,5.394-5.381,14.25,0,19.68l71.19,71.83-71.66,71.83c-5.381,5.394-5.381,14.25,0,19.68l4.429,4.439c5.381,5.394,14.22,5.394,19.64,0l71.66-71.83,71.65,71.83c5.381,5.394,14.23,5.394,19.65,0l4.429-4.439c5.381-5.394,5.381-14.25,0-19.68l-71.19-71.83,71.66-71.83c5.381-4.914,5.381-13.78,0-19.21l-4.429-4.423c-5.381-5.394-14.22-5.394-19.64,0l-72.13,71.34-71.17-71.83c-2.691-2.697-6.257-4.044-9.819-4.044z'/%3E%3C/svg%3E");
+                color: @ffe-red;
+                content: '\2717';
+            }
+        }
     }
 }
 
 .ffe-stylized-numbered-list {
-    > li {
+    > .ffe-stylized-numbered-list__item {
         counter-increment: list-elements;
 
         &::before {

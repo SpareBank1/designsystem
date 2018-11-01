@@ -1,12 +1,13 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import BulletList from './BulletList';
+import BulletListItem from './BulletListItem';
 
 const getWrapper = props =>
     shallow(
         <BulletList {...props}>
-            <li>Firstly</li>
-            <li>Secondly</li>
+            <BulletListItem>Firstly</BulletListItem>
+            <BulletListItem>Secondly</BulletListItem>
         </BulletList>,
     );
 
@@ -24,6 +25,6 @@ describe('<BulletList>', () => {
     it('passes props', () => {
         const wrapper = getWrapper({ id: 'that-id' });
         expect(wrapper.prop('id')).toBe('that-id');
-        expect(wrapper.text()).toContain('Firstly');
+        expect(wrapper.html()).toContain('Firstly');
     });
 });

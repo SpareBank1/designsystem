@@ -1,14 +1,20 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import DescriptionList from './DescriptionList';
+import DescriptionListTerm from './DescriptionListTerm';
+import DescriptionListDescription from './DescriptionListDescription';
 
 const getWrapper = props =>
     shallow(
         <DescriptionList {...props}>
-            <dt>Porsche</dt>
-            <dd>German car maker</dd>
-            <dt>Toyota</dt>
-            <dd>Japanese toy maker</dd>
+            <DescriptionListTerm>Porsche</DescriptionListTerm>
+            <DescriptionListDescription>
+                German car maker
+            </DescriptionListDescription>
+            <DescriptionListTerm>Toyota</DescriptionListTerm>
+            <DescriptionListDescription>
+                Japanese toy maker
+            </DescriptionListDescription>
         </DescriptionList>,
     );
 
@@ -39,6 +45,6 @@ describe('<DescriptionList>', () => {
     it('passes props', () => {
         const wrapper = getWrapper({ id: 'that-id' });
         expect(wrapper.prop('id')).toBe('that-id');
-        expect(wrapper.text()).toContain('Porsche');
+        expect(wrapper.html()).toContain('Porsche');
     });
 });
