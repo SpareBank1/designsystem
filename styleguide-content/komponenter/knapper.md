@@ -120,7 +120,7 @@ Retningslinjene for hvilke knapper som brukes når er ikke absolutte. Du må ogs
 
 Generelt for alle knapper gjelder:
 
-*   Knappen skal tydelig kommunisere hvilken handling som skjer når brukeren trykker på den, enten ved en beskrivende tekst, et ikon eller begge deler. Tekst på knapper bør være et verb i imperativ form. Unntak er konvensjoner som "Neste".
+*   Knappen skal tydelig kommuniserer hvilken handling som skjer når brukeren trykker på den, enten ved en beskrivende tekst, et ikon eller begge deler. Tekst på knapper bør være et verb i imperativ form. Unntak er konvensjoner som "Neste".
 *   Knappen skal som hovedregel være synlig hele tiden. Knapper som dukker opp etter en rekke handlinger gjør det vanskelig for brukeren å få oversikt.
 *   Teksten på knappen skal beskrive hva som skjer når man klikker på knappen. Teksten skal være så kort som mulig og bør ikke bryte over to linjer.
 
