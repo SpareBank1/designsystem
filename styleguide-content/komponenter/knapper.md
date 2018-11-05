@@ -113,7 +113,7 @@ const {
 
 Generelt for alle knapper gjelder:
 
-*   Knappen skal tydelig kommuniserer hvilken handling som skjer når brukeren trykker på den, enten ved en beskrivende tekst, et ikon eller begge deler.
+*   Knappen skal tydelig kommunisere hvilken handling som skjer når brukeren trykker på den, enten ved en beskrivende tekst, et ikon eller begge deler.
 *   Tekst på knapper bør være et verb i imperativ form. Unntak er konvensjoner som "Neste".
 *   Teksten skal være så kort som mulig og bør ikke bryte over to linjer.
 *   Knappen skal som hovedregel være synlig hele tiden. Knapper som dukker opp etter en rekke handlinger kan gjøre det vanskelig for brukeren å få oversikt.
