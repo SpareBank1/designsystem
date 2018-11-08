@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.20](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@3.0.19...@sb1/ffe-system-message@3.0.20) (2018-11-08)
+
+### Bug Fixes
+
+-   **ffe-system-message:** Ensure close button icon doesn't get cropped on Safari ([c7e5a9c](https://github.com/SpareBank1/designsystem/commit/c7e5a9c))
+
 ## [3.0.19](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@3.0.18...@sb1/ffe-system-message@3.0.19) (2018-10-25)
 
 **Note:** Version bump only for package @sb1/ffe-system-message

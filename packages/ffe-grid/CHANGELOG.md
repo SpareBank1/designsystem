@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@10.1.2...@sb1/ffe-grid@10.1.3) (2018-11-08)
+
+**Note:** Version bump only for package @sb1/ffe-grid
+
 ## [10.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@10.1.1...@sb1/ffe-grid@10.1.2) (2018-10-25)
 
 **Note:** Version bump only for package @sb1/ffe-grid
@@ -471,14 +475,14 @@ To migrate, update your app to ffe-core version 9.x
 
 ```html
 <div class="ffe-grid__row ffe-grid__row--bg-sand ffe-grid__row--top-padding">
-<div class="ffe-grid__row-wrapper">
-<div class="ffe-grid__col--md-6">
-<div class="ffe-grid__content"></div>
-</div>
-<div class="ffe-grid__col--md-6">
-<div class="ffe-grid__content"></div>
-</div>
-</div>
+    <div class="ffe-grid__row-wrapper">
+        <div class="ffe-grid__col--md-6">
+            <div class="ffe-grid__content"></div>
+        </div>
+        <div class="ffe-grid__col--md-6">
+            <div class="ffe-grid__content"></div>
+        </div>
+    </div>
 </div>
 ```
 

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@4.2.0...@sb1/ffe-form-react@4.2.1) (2018-11-08)
+
+### Bug Fixes
+
+-   **ffe-form-react:** Fix peer dependency version ([ff0958d](https://github.com/SpareBank1/designsystem/commit/ff0958d)), closes [#469](https://github.com/SpareBank1/designsystem/issues/469)
+
 # [4.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@4.1.0...@sb1/ffe-form-react@4.2.0) (2018-10-25)
 
 ### Bug Fixes
