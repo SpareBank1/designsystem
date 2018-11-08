@@ -2,14 +2,14 @@
 <div>
     <h3 className="ffe-h4">Personalia</h3>
     <DescriptionListMultiCol>
-        <dt>Navn</dt>
-        <dd>Navn Navnesen</dd>
-        <dt>Adresse</dt>
-        <dd>Husgata 14</dd>
-        <dt>Postnummer</dt>
-        <dd>0362</dd>
-        <dt>Adresse</dt>
-        <dd>Oslo</dd>
+        <DescriptionListTerm>Navn</DescriptionListTerm>
+        <DescriptionListDescription>Navn Navnesen</DescriptionListDescription>
+        <DescriptionListTerm>Adresse</DescriptionListTerm>
+        <DescriptionListDescription>Husgata 14</DescriptionListDescription>
+        <DescriptionListTerm>Postnummer</DescriptionListTerm>
+        <DescriptionListDescription>0362</DescriptionListDescription>
+        <DescriptionListTerm>Adresse</DescriptionListTerm>
+        <DescriptionListDescription>Oslo</DescriptionListDescription>
     </DescriptionListMultiCol>
 </div>
 ```
