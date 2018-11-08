@@ -629,8 +629,8 @@ html {
 .ffe-body-text,
 .ffe-product-card__details,
 .ffe-header,
-.ffe-description-list dd,
-.ffe-description-list-multicol dd {
+.ffe-description-list .ffe-description-list__description,
+.ffe-description-list-multicol .ffe-description-list__description {
   color: #262626;
   font-family: 'MuseoSans-500', arial, sans-serif;
   line-height: 26px;
@@ -712,9 +712,9 @@ html {
   width: 100%;
 }
 .ffe-strong-text,
-.ffe-stylized-numbered-list > li::before,
-.ffe-description-list dt,
-.ffe-description-list-multicol dt,
+.ffe-stylized-numbered-list > .ffe-stylized-numbered-list__item::before,
+.ffe-description-list .ffe-description-list__term,
+.ffe-description-list-multicol .ffe-description-list__term,
 .ffe-table__footer,
 .ffe-table__heading,
 .ffe-table [data-th]::before {
@@ -816,8 +816,8 @@ html {
   .ffe-body-text,
   .ffe-product-card__details,
   .ffe-header,
-  .ffe-description-list dd,
-  .ffe-description-list-multicol dd {
+  .ffe-description-list .ffe-description-list__description,
+  .ffe-description-list-multicol .ffe-description-list__description {
     line-height: 24px;
   }
   .ffe-h1,
@@ -4988,8 +4988,10 @@ input:not([type='radio']):not([type='checkbox']) {
   text-align: left;
   margin: 0 0 20px;
 }
-.ffe-numbered-list > li,
-.ffe-bullet-list > li {
+.ffe-numbered-list > .ffe-numbered-list__item,
+.ffe-bullet-list > .ffe-numbered-list__item,
+.ffe-numbered-list > .ffe-bullet-list__item,
+.ffe-bullet-list > .ffe-bullet-list__item {
   margin-top: 10px;
   margin-left: 15px;
 }
@@ -5002,7 +5004,7 @@ input:not([type='radio']):not([type='checkbox']) {
 .ffe-bullet-list--condensed {
   margin-left: 0;
 }
-.ffe-bullet-list--condensed > li {
+.ffe-bullet-list--condensed > .ffe-bullet-list__item {
   margin-top: 0;
 }
 /* tablet/medium typography */
@@ -5018,12 +5020,12 @@ input:not([type='radio']):not([type='checkbox']) {
 }
 /* Desktop */
 @media screen and (min-width: 768px) {
-  .ffe-numbered-list > li,
-  .ffe-bullet-list > li {
+  .ffe-numbered-list > .ffe-numbered-list__item,
+  .ffe-bullet-list > .ffe-bullet-list__item {
     margin-left: 30px;
   }
-  .ffe-numbered-list > li--condensed,
-  .ffe-bullet-list > li--condensed {
+  .ffe-numbered-list > .ffe-numbered-list__item--condensed,
+  .ffe-bullet-list > .ffe-bullet-list__item--condensed {
     margin-left: 0;
   }
 }
@@ -5034,14 +5036,16 @@ input:not([type='radio']):not([type='checkbox']) {
   margin: 0 0 20px;
   list-style: none;
 }
-.ffe-check-list > li,
-.ffe-stylized-numbered-list > li {
+.ffe-check-list > .ffe-check-list__item,
+.ffe-stylized-numbered-list > .ffe-check-list__item,
+.ffe-check-list > .ffe-stylized-numbered-list__item,
+.ffe-stylized-numbered-list > .ffe-stylized-numbered-list__item {
   margin-top: 1.75em;
   margin-left: 2.5em;
   position: relative;
   line-height: 1.5em;
 }
-.ffe-check-list > li::before {
+.ffe-check-list > .ffe-check-list__item::before {
   content: '\2022';
   display: block;
   position: absolute;
@@ -5055,7 +5059,12 @@ input:not([type='radio']):not([type='checkbox']) {
   background-size: 1em 1em;
   background-repeat: no-repeat;
 }
-.ffe-check-list--bg-sand > li {
+.ffe-check-list > .ffe-check-list__item--cross::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cpath fill='%23e60000' d='M18.77,0c-3.562,0-7.125,1.347-9.834,4.044l-4.429,4.439c-5.381,5.394-5.381,14.25,0,19.68l71.19,71.83-71.66,71.83c-5.381,5.394-5.381,14.25,0,19.68l4.429,4.439c5.381,5.394,14.22,5.394,19.64,0l71.66-71.83,71.65,71.83c5.381,5.394,14.23,5.394,19.65,0l4.429-4.439c5.381-5.394,5.381-14.25,0-19.68l-71.19-71.83,71.66-71.83c5.381-4.914,5.381-13.78,0-19.21l-4.429-4.423c-5.381-5.394-14.22-5.394-19.64,0l-72.13,71.34-71.17-71.83c-2.691-2.697-6.257-4.044-9.819-4.044z'/%3E%3C/svg%3E");
+  color: #e60000;
+  content: '\2717';
+}
+.ffe-check-list--bg-sand > .ffe-check-list__item {
   color: #002776;
   background-color: #f8f5eb;
   padding: 0.85em 1em 0.85em 3em;
@@ -5065,25 +5074,30 @@ input:not([type='radio']):not([type='checkbox']) {
   font-size: 16px;
 }
 @media screen and (min-width: 480px) {
-  .ffe-check-list--bg-sand > li {
+  .ffe-check-list--bg-sand > .ffe-check-list__item {
     font-size: 16px;
   }
 }
 @media screen and (min-width: 768px) {
-  .ffe-check-list--bg-sand > li {
+  .ffe-check-list--bg-sand > .ffe-check-list__item {
     font-size: 18px;
   }
 }
-.ffe-check-list--bg-sand > li::before {
+.ffe-check-list--bg-sand > .ffe-check-list__item::before {
   left: 1em;
   top: 1em;
   background-size: 0.9em 0.9em;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' width='200' height='200'%3E%3Cpath fill='%23002776' d='M176.56-8.325E-7c-4.403,0-8.307,2.46595-10.288,5.89248l-90.5448,156.336-42.6109-59.77c-2.46172-2.94562-5.88534-4.89058-9.78806-4.89058h-7.3426c-4.40307,0-8.30704,2.46094-10.2884,6.36839-1.94136,3.94753-1.46102,8.8406,1.0007,12.2671l54.8007,75.963c3.4224,4.89,9.3077,7.834,15.1918,7.834,6.84477,0,12.7076-3.42654,16.13-9.31777l100.827-173.487c2.46172-3.4666,2.46547-7.83618,0.0438-11.3028-1.942-3.94755-5.886-5.8925-10.289-5.8925h-6.84226z'/%3E%3C/svg%3E");
 }
-.ffe-stylized-numbered-list > li {
+.ffe-check-list--bg-sand > .ffe-check-list__item--cross::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cpath fill='%23002776' d='M18.77,0c-3.562,0-7.125,1.347-9.834,4.044l-4.429,4.439c-5.381,5.394-5.381,14.25,0,19.68l71.19,71.83-71.66,71.83c-5.381,5.394-5.381,14.25,0,19.68l4.429,4.439c5.381,5.394,14.22,5.394,19.64,0l71.66-71.83,71.65,71.83c5.381,5.394,14.23,5.394,19.65,0l4.429-4.439c5.381-5.394,5.381-14.25,0-19.68l-71.19-71.83,71.66-71.83c5.381-4.914,5.381-13.78,0-19.21l-4.429-4.423c-5.381-5.394-14.22-5.394-19.64,0l-72.13,71.34-71.17-71.83c-2.691-2.697-6.257-4.044-9.819-4.044z'/%3E%3C/svg%3E");
+  color: #e60000;
+  content: '\2717';
+}
+.ffe-stylized-numbered-list > .ffe-stylized-numbered-list__item {
   counter-increment: list-elements;
 }
-.ffe-stylized-numbered-list > li::before {
+.ffe-stylized-numbered-list > .ffe-stylized-numbered-list__item::before {
   content: counter(list-elements);
   display: block;
   position: absolute;
@@ -5096,25 +5110,25 @@ input:not([type='radio']):not([type='checkbox']) {
 .ffe-description-list-multicol {
   /* Use padding rather than margin in bottom to avoid extra spacing overflowing to the top of the next column */
 }
-.ffe-description-list dt,
-.ffe-description-list-multicol dt {
+.ffe-description-list .ffe-description-list__term,
+.ffe-description-list-multicol .ffe-description-list__term {
   color: #002776;
   font-size: 16px;
 }
 @media screen and (min-width: 480px) {
-  .ffe-description-list dt,
-  .ffe-description-list-multicol dt {
+  .ffe-description-list .ffe-description-list__term,
+  .ffe-description-list-multicol .ffe-description-list__term {
     font-size: 16px;
   }
 }
 @media screen and (min-width: 768px) {
-  .ffe-description-list dt,
-  .ffe-description-list-multicol dt {
+  .ffe-description-list .ffe-description-list__term,
+  .ffe-description-list-multicol .ffe-description-list__term {
     font-size: 16px;
   }
 }
-.ffe-description-list dd,
-.ffe-description-list-multicol dd {
+.ffe-description-list .ffe-description-list__description,
+.ffe-description-list-multicol .ffe-description-list__description {
   padding-bottom: 20px;
   margin-left: 0;
 }
@@ -5129,13 +5143,13 @@ input:not([type='radio']):not([type='checkbox']) {
           align-items: flex-start;
   width: 100%;
 }
-.ffe-description-list dt {
+.ffe-description-list .ffe-description-list__term {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 35%;
           flex: 0 0 35%;
   overflow: hidden;
 }
-.ffe-description-list dd {
+.ffe-description-list .ffe-description-list__description {
   -webkit-box-flex: 65%;
       -ms-flex: 65% 0 0px;
           flex: 65% 0 0;
@@ -5143,52 +5157,52 @@ input:not([type='radio']):not([type='checkbox']) {
   max-width: 65%;
   /* Fix for IE issue in which box-sizing is not taken into account when using flex */
 }
-.ffe-description-list dd + dd {
+.ffe-description-list .ffe-description-list__description + .ffe-description-list__description {
   margin-left: 35%;
   /* Keep left margin when using multiple dd's */
 }
 @media (min-width: 480px) {
-  .ffe-description-list dt {
+  .ffe-description-list .ffe-description-list__term {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 20%;
             flex: 0 0 20%;
   }
-  .ffe-description-list dd {
+  .ffe-description-list .ffe-description-list__description {
     -webkit-box-flex: 80%;
         -ms-flex: 80% 0 0px;
             flex: 80% 0 0;
     max-width: 80%;
   }
-  .ffe-description-list dd + dd {
+  .ffe-description-list .ffe-description-list__description + .ffe-description-list__description {
     margin-left: 20%;
   }
 }
-.ffe-description-list--md dt {
+.ffe-description-list--md .ffe-description-list__term {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 40%;
           flex: 0 0 40%;
 }
-.ffe-description-list--md dd {
+.ffe-description-list--md .ffe-description-list__description {
   -webkit-box-flex: 60%;
       -ms-flex: 60% 0 0px;
           flex: 60% 0 0;
   max-width: 60%;
 }
-.ffe-description-list--md dd + dd {
+.ffe-description-list--md .ffe-description-list__description + .ffe-description-list__description {
   margin-left: 40%;
 }
-.ffe-description-list--lg dt {
+.ffe-description-list--lg .ffe-description-list__term {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 50%;
           flex: 0 0 50%;
 }
-.ffe-description-list--lg dd {
+.ffe-description-list--lg .ffe-description-list__description {
   -webkit-box-flex: 50%;
       -ms-flex: 50% 0 0px;
           flex: 50% 0 0;
   max-width: 50%;
 }
-.ffe-description-list--lg dd + dd {
+.ffe-description-list--lg .ffe-description-list__description + .ffe-description-list__description {
   margin-left: 50%;
 }
 .ffe-description-list-multicol {
@@ -5553,14 +5567,14 @@ input:not([type='radio']):not([type='checkbox']) {
   color: inherit;
   cursor: pointer;
   display: inline-block;
-  height: 14px;
+  height: 16px;
   margin: 0;
   padding: 0;
   position: absolute;
   right: 20px;
   top: 15px;
   vertical-align: middle;
-  width: 14px;
+  width: 16px;
 }
 .ffe-system-message__close > svg {
   fill: #262626;
