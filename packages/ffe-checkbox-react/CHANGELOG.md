@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.3.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-checkbox-react@5.3.0...@sb1/ffe-checkbox-react@5.3.1) (2018-11-09)
+
+**Note:** Version bump only for package @sb1/ffe-checkbox-react
+
 # [5.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-checkbox-react@5.2.2...@sb1/ffe-checkbox-react@5.3.0) (2018-10-25)
 
 ### Features
