@@ -41,7 +41,7 @@
   },
   "peerDependencies": {
     "@sb1/ffe-core": "^14.0.2",
-    "@sb1/ffe-form": "^10.0.0",
+    "@sb1/ffe-form": "^10.1.1",
     "react": "^16.3.0"
   },
   "publishConfig": {
