@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.4.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.3.0...@sb1/ffe-icons@12.4.0) (2018-11-13)
+
+### Bug Fixes
+
+-   **ffe-icons:** Add missing 'ffe-' prefix to example ([9121907](https://github.com/SpareBank1/designsystem/commit/9121907))
+
+### Features
+
+-   **ffe-icons:** Add watch icon with kr-symbol to ffe-icons ([2b77b56](https://github.com/SpareBank1/designsystem/commit/2b77b56))
+
 # [12.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.2.2...@sb1/ffe-icons@12.3.0) (2018-10-17)
 
 ### Features
