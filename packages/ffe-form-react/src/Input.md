@@ -7,7 +7,7 @@ Vi har tre varianter av inputfelt:
 3. text-like
 
 _Standard_ og _inline_ er mest relevant for utviklere. De ser helt like ut, men oppfører seg annerledes i samspillet
-med andre elementer på siden, for eksempel [tooltip](#tooltip).
+med andre elementer på siden, for eksempel [tooltip](#!/Tooltip).
 
 ```js
 const { Input } = require('.');
@@ -74,8 +74,9 @@ Variant _dark_ for interne løsninger med mørk bakgrunn.
 const { Input } = require('.');
 
 <React.Fragment>
-    <Label htmlFor="first-name" dark={true}>Fornavn</Label>
+    <Label htmlFor="first-name" dark={true}>
+        Fornavn
+    </Label>
     <Input id="first-name" dark={true} />
-</React.Fragment>
-
+</React.Fragment>;
 ```
