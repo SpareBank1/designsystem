@@ -1,4 +1,4 @@
-Markupen for eksempelet under [Bruk](#detaljliste) ser slik ut:
+Markupen for eksempelet under [Bruk](#!/Detaljliste) ser slik ut:
 
 ```jsx static
 <DetailList>
