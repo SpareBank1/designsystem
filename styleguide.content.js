@@ -31,10 +31,6 @@ module.exports = {
                     name: 'Bidra',
                     content: 'kom-i-gang/bidra.md',
                 },
-                {
-                    name: 'Hjelp',
-                    content: 'kom-i-gang/hjelp.md',
-                },
             ],
         },
         {
