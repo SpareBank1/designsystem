@@ -1,8 +1,8 @@
 En komponent for å kunne søke igjennom en lenger liste med valg. Listen med valg har støtte for å vise flere attributter ved et element, for eksempel bedriftnavn og organisasjonsnummer.
 
-Om du vet du har 10 valg eller færre er det bedre å bruke en vanlig [dropdown](#dropdown).
+Om du vet du har 10 valg eller færre er det bedre å bruke en vanlig [dropdown](#!/Dropdown).
 
-Om du er ute etter en måte å vise kontoinformasjon finnes en skreddersydd [kontovelger](#kontovelger).
+Om du er ute etter en måte å vise kontoinformasjon finnes en skreddersydd [kontovelger](#!/Kontovelger).
 
 Under vises et eksempel der vi viser ett attributt.
 
@@ -64,13 +64,12 @@ const renderItem = unreadLabel => company => (
         </a>
         <div className="ffe-searchable-dropdown__item--details">
             {company.organizationNumber}
-            {unreadLabel &&
-                company.quantityUnprocessedMessages >= 1 && (
-                    <span style={{ float: 'right' }}>
-                        {' '}
-                        {company.quantityUnprocessedMessages} {unreadLabel}
-                    </span>
-                )}
+            {unreadLabel && company.quantityUnprocessedMessages >= 1 && (
+                <span style={{ float: 'right' }}>
+                    {' '}
+                    {company.quantityUnprocessedMessages} {unreadLabel}
+                </span>
+            )}
         </div>
     </div>
 );
@@ -126,7 +125,7 @@ Variant _dark_ for interne løsninger med mørk bakgrunn.
 ```js { "props": { "className": "sb1ds-example-dark" } }
 const companies = require('../exampleData').companies;
 const initialState = { inputValue: '' };
-      
+
 <SearchableDropdown
     dark={true}
     displayResetWhenInputHasValue={true}
@@ -141,6 +140,5 @@ const initialState = { inputValue: '' };
     onSelect={company => setState({ inputValue: company.companyName })}
     placeholder="Velg"
     searchAttributes={['companyName']}
-/>
-
+/>;
 ```
