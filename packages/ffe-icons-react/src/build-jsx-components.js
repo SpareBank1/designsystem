@@ -1,8 +1,8 @@
-import caseUtil from 'case';
-import cheerio from 'cheerio';
-import fs from 'fs';
-import path from 'path';
-import mkdirp from 'mkdirp';
+const caseUtil = require('case');
+const cheerio = require('cheerio');
+const fs = require('fs');
+const path = require('path');
+const mkdirp = require('mkdirp');
 
 mkdirp.sync('./jsx');
 
@@ -16,8 +16,7 @@ const createSvgMap = () => {
         'ffe-icons',
         'icons',
     );
-    fs
-        .readdirSync(iconsPath)
+    fs.readdirSync(iconsPath)
         .filter(fileName => fileName.match(/\.svg$/))
         .forEach(fileName => {
             const iconPath = path.join(iconsPath, fileName);
