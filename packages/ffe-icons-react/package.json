@@ -4,18 +4,22 @@
   "description": "React-komponenter for ffe-icons",
   "license": "MIT",
   "files": [
-    "lib"
+    "lib",
+    "es"
   ],
   "main": "lib/index.js",
+  "module": "es/index.js",
+  "sideEffects": false,
   "repository": {
     "type": "git",
     "url": "ssh://git@github.com:SpareBank1/designsystem.git"
   },
   "scripts": {
-    "build": "npm run build:jsx-components && npm run build:babel",
+    "build": "npm run build:jsx-components && npm run build:babel && npm run build:es",
     "build:babel": "babel jsx -d lib",
-    "build:jsx-components": "babel-node ./src/build-jsx-components.js",
-    "clean": "rimraf tmp jsx lib",
+    "build:es": "cross-env BABEL_ENV=es babel jsx -d es",
+    "build:jsx-components": "node ./src/build-jsx-components.js",
+    "clean": "rimraf tmp jsx lib es",
     "lint": "eslint src/.",
     "test": "npm run lint"
   },
@@ -24,7 +28,9 @@
   },
   "devDependencies": {
     "@sb1/ffe-icons": "^12.4.0",
+    "babel-cli": "^6.26.0",
     "cheerio": "^1.0.0-rc.2",
+    "cross-env": "^5.2.0",
     "eslint": "^5.3.0",
     "eslint-loader": "^2.1.0",
     "json-loader": "^0.5.7",
