@@ -1,4 +1,4 @@
-{
+  {
   "name": "@sb1/ffe-icons-react",
   "version": "6.0.9",
   "description": "React-komponenter for ffe-icons",
@@ -16,8 +16,8 @@
   },
   "scripts": {
     "build": "npm run build:jsx-components && npm run build:babel && npm run build:es",
-    "build:babel": "babel jsx -d lib",
-    "build:es": "cross-env BABEL_ENV=es babel jsx -d es",
+    "build:babel": "babel -d lib --root-mode=upward jsx",
+    "build:es": "cross-env BABEL_ENV=es babel jsx --root-mode=upward -d es",
     "build:jsx-components": "node ./src/build-jsx-components.js",
     "clean": "rimraf tmp jsx lib es",
     "lint": "eslint src/.",
@@ -35,12 +35,12 @@
     "eslint-loader": "^2.1.0",
     "json-loader": "^0.5.7",
     "mkdirp": "^0.5.1",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
     "rimraf": "^2.6.2"
   },
   "peerDependencies": {
-    "react": "^16.2.0"
+    "react": "^16.6.3"
   },
   "publishConfig": {
     "access": "public"

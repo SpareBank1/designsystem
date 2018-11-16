@@ -17,7 +17,7 @@
     "lint": "stylelint less/*.less",
     "test": "npm run lint",
     "prebuild": "rimraf lib",
-    "build": "node ./bin/build.js && babel --out-dir lib lib"
+    "build": "node ./bin/build.js && babel --out-dir lib --root-mode=upward lib"
   },
   "devDependencies": {
     "case": "^1.5.5",
