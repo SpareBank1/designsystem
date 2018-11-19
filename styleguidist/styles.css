@@ -5094,6 +5094,25 @@ input:not([type='radio']):not([type='checkbox']) {
   color: #e60000;
   content: '\2717';
 }
+@media all and (min-width: 768px) {
+  .ffe-check-list--two-columns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .ffe-check-list--two-columns .ffe-check-list__item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+    display: block;
+    width: 40%;
+  }
+}
 .ffe-stylized-numbered-list > .ffe-stylized-numbered-list__item {
   counter-increment: list-elements;
 }
