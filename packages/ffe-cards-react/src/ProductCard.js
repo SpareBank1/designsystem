@@ -2,6 +2,9 @@ import React from 'react';
 import { oneOfType, node, func, string } from 'prop-types';
 import classNames from 'classnames';
 
+/**
+ * @deprecated This card comes with an outdated design. Use one of the new cards instead.
+ */
 const ProductCard = props => {
     const {
         className,

@@ -1,0 +1,23 @@
+.ffe-card-component {
+    &--card-name {
+        margin: 0 0 5px 0;
+    }
+
+    &--text {
+        margin: 5px 0 0 0;
+    }
+
+    &--subtext {
+        margin: 5px 0 0 0;
+        color: @ffe-grey-charcoal;
+    }
+
+    &--title {
+        &:extend(.ffe-h5);
+
+        margin: 0;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+}

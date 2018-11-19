@@ -1,0 +1,30 @@
+.ffe-card-base {
+    &:extend(.ffe-body-text);
+
+    background: @ffe-white;
+    box-shadow: 0 1px 4px 0 rgba(38, 38, 38, 0.3);
+    display: block;
+    margin: 0 0 10px;
+    padding: 0;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: border-color 0.2s;
+    outline: none;
+    cursor: pointer;
+    width: 100%;
+    text-decoration: none;
+
+    &:focus {
+        box-shadow: 0 0 0 2px @ffe-blue-focus;
+    }
+
+    &:focus,
+    &:active,
+    &:hover {
+        border-color: @ffe-blue-azure;
+    }
+
+    @media screen and (min-width: @breakpoint-md) {
+        margin-bottom: 20px;
+    }
+}

@@ -10,6 +10,9 @@ import {
 } from 'prop-types';
 import classNames from 'classnames';
 
+/**
+ * @deprecated This card comes with an outdated design. Use one of the new cards instead.
+ */
 const LinkCard = props => {
     const {
         center,

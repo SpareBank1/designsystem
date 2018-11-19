@@ -1,0 +1,72 @@
+.ffe-icon-card {
+    max-width: 440px;
+    min-height: 130px;
+    padding: 20px;
+    display: flex;
+    flex-flow: row nowrap;
+
+    &__icon {
+        align-self: center;
+        fill: @ffe-blue-royal;
+        min-width: 40px;
+        width: 40px;
+        height: 40px;
+        margin: 0 30px 0 10px;
+    }
+
+    &__body {
+        overflow: hidden;
+        text-align: left;
+        width: 100%;
+    }
+
+    @media screen and (min-width: @breakpoint-md) {
+        .ffe-icon-card__icon {
+            margin: 0 20px 0;
+        }
+    }
+
+    @media screen and (min-width: @breakpoint-lg) {
+        .ffe-icon-card__icon {
+            margin: 0 30px 0 10px;
+        }
+    }
+}
+
+.ffe-icon-card--condensed {
+    min-height: auto;
+
+    @media screen and (min-width: @breakpoint-md) {
+        min-height: 100px;
+    }
+
+    .ffe-icon-card__icon {
+        min-width: 30px;
+        width: 30px;
+        height: 30px;
+        margin: 0 25px 0 10px;
+    }
+
+    .ffe-icon-component--card-name {
+        margin: 0 0 5px;
+    }
+
+    .ffe-icon-component--subtext {
+        margin: 0;
+
+        @media screen and (min-width: @breakpoint-md) {
+            margin: 5px 0 0 0;
+        }
+    }
+}
+
+.ffe-icon-card--grey-charcoal {
+    .ffe-icon-card__icon {
+        fill: @ffe-grey-charcoal;
+    }
+
+    .ffe-card-component--title,
+    .ffe-icon-card__body {
+        color: @ffe-grey-charcoal;
+    }
+}
