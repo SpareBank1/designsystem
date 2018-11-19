@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@6.0.0...@sb1/ffe-lists@6.1.0) (2018-11-19)
+
+### Features
+
+-   **ffe-lists:** Add support for two-column check lists ([7cfa60c](https://github.com/SpareBank1/designsystem/commit/7cfa60c))
+
 # [6.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@5.0.18...@sb1/ffe-lists@6.0.0) (2018-11-08)
 
 ### Code Refactoring
