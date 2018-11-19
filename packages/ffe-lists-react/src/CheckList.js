@@ -1,9 +1,16 @@
 import React from 'react';
 import classNames from 'classnames';
-import { node, string } from 'prop-types';
+import { node, oneOf, string } from 'prop-types';
 
-const CheckList = ({ className, ...rest }) => (
-    <ul className={classNames('ffe-check-list', className)} {...rest} />
+const CheckList = ({ className, columns, ...rest }) => (
+    <ul
+        className={classNames(
+            'ffe-check-list',
+            { 'ffe-check-list--two-columns': Number(columns) === 2 },
+            className,
+        )}
+        {...rest}
+    />
 );
 
 CheckList.propTypes = {
@@ -11,6 +18,11 @@ CheckList.propTypes = {
     children: node.isRequired,
     /** Any extra classes */
     className: string,
+    columns: oneOf([1, 2, '1', '2']),
+};
+
+CheckList.defaultProps = {
+    columns: 1,
 };
 
 export default CheckList;

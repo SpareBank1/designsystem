@@ -27,6 +27,18 @@ describe('<CheckList>', () => {
         expect(wrapper.prop('id')).toBe('that-id');
         expect(wrapper.html()).toContain('Firstly');
     });
+    it('sets the correct class when columns prop is 2', () => {
+        const wrapper = getWrapper({ columns: 2 });
+        expect(wrapper.hasClass('ffe-check-list--two-columns')).toBe(true);
+        wrapper.setProps({ columns: '2' });
+        expect(wrapper.hasClass('ffe-check-list--two-columns')).toBe(true);
+    });
+    it('only supports 1 and 2 columns', () => {
+        const wrapper = getWrapper({ columns: 3 });
+        expect(wrapper.hasClass('ffe-check-list--two-columns')).toBe(false);
+        wrapper.setProps({ columns: 1 });
+        expect(wrapper.hasClass('ffe-check-list--two-columns')).toBe(false);
+    });
 });
 
 describe('<CheckListItem />', () => {
