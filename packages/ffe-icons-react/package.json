@@ -1,4 +1,4 @@
-  {
+{
   "name": "@sb1/ffe-icons-react",
   "version": "6.0.9",
   "description": "React-komponenter for ffe-icons",
@@ -28,7 +28,6 @@
   },
   "devDependencies": {
     "@sb1/ffe-icons": "^12.4.0",
-    "babel-cli": "^6.26.0",
     "cheerio": "^1.0.0-rc.2",
     "cross-env": "^5.2.0",
     "eslint": "^5.3.0",
