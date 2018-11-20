@@ -9,4 +9,9 @@ module.exports = {
         '<rootDir>/packages/*/node_modules/',
     ],
     setupTestFrameworkScriptFile: '<rootDir>/test-setup.js',
+    coveragePathIgnorePatterns: [
+        '/node_modules/',
+        '<rootDir>/packages/.*/lib/',
+        '<rootDir>/packages/.*/es/',
+    ],
 };

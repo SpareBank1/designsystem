@@ -80,15 +80,6 @@
         "stylelint-config-prettier": "^4.0.0",
         "webpack": "^4.25.1"
     },
-    "jest": {
-        "setupTestFrameworkScriptFile": "<rootDir>/test-setup.js",
-        "testURL": "http://localhost",
-        "coveragePathIgnorePatterns": [
-            "/node_modules/",
-            "<rootDir>/packages/.*/lib/",
-            "<rootDir>/packages/.*/es/"
-        ]
-    },
     "husky": {
         "hooks": {
             "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
