@@ -18,7 +18,7 @@
     "url": "ssh://git@github.com:SpareBank1/designsystem.git"
   },
   "scripts": {
-    "build": "babel -d lib/. --ignore=*.spec.js src/ && copyfiles -f src/ffe-chart-donut.less lib/",
+    "build": "babel -d lib/. --root-mode=upward --ignore=*.spec.js src/ && copyfiles -f src/ffe-chart-donut.less lib/",
     "lint": "eslint src/.",
     "test": "jest",
     "test:watch": "jest --watch"
@@ -31,14 +31,14 @@
   },
   "devDependencies": {
     "copyfiles": "^2.1.0",
-    "enzyme": "^3.3.0",
-    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.7.0",
     "jest": "^23.4.2",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
   },
   "peerDependencies": {
-    "react": "^16.2.0"
+    "react": "^16.6.3"
   },
   "publishConfig": {
     "access": "public"

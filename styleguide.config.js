@@ -30,7 +30,7 @@ const ignore = [
 module.exports = {
     title: 'SpareBank 1 Designsystem',
     require: [
-        'babel-polyfill',
+        '@babel/polyfill',
         path.join(__dirname, 'packages/ffe-all.less'),
         path.join(__dirname, 'src/styles/styles.less'),
     ],
