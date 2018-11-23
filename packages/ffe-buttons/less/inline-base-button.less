@@ -70,6 +70,7 @@
     align-content: center;
     color: @ffe-blue-azure;
     flex-wrap: wrap;
+    padding: 10px 20px 9px;
 
     &::after {
         border-bottom: solid 1px currentColor;
@@ -82,6 +83,24 @@
         color: @ffe-blue-cobalt;
     }
 
+    &:active,
+    &:focus {
+        border-radius: 4px;
+        box-shadow: none;
+    }
+
+    &:focus {
+        border: 3px solid @ffe-blue-focus;
+        color: @ffe-blue-cobalt;
+        padding: 7px 17px 6px;
+    }
+
+    &:active {
+        border: 2px solid @ffe-blue-azure;
+        color: @ffe-blue-azure;
+        padding: 8px 18px 7px;
+    }
+
     &.ffe-inline-button--dark {
         color: @ffe-blue-focus;
         text-decoration: none;
@@ -90,6 +109,7 @@
             border-bottom: 2px solid @ffe-blue-focus;
         }
 
+        &:active,
         &:hover {
             color: @ffe-blue-onahau--dark;
 
@@ -99,7 +119,13 @@
         }
 
         &:focus {
-            box-shadow: 0 0 0 2px @ffe-blue-focus;
+            border: 2px solid @ffe-blue-focus;
+            padding: 8px 18px 7px;
+        }
+
+        &:active {
+            border: none;
+            padding: 10px 20px 9px;
         }
     }
 }
