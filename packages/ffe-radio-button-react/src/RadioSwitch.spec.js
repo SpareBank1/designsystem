@@ -20,6 +20,70 @@ describe('<RadioSwitch />', () => {
         expect(wrapper.exists()).toBe(true);
     });
 
+    it('sets aria-invalid correctly', () => {
+        const wrapper = getWrapper({
+            'aria-invalid': 'true',
+            selectedValue: true,
+        });
+        expect(wrapper.find('BaseRadioButton')).toHaveLength(2);
+
+        const leftOne = wrapper.find('BaseRadioButton').first();
+        const rightOne = wrapper.find('BaseRadioButton').last();
+
+        expect(leftOne.prop('aria-invalid')).toBe('true');
+        expect(rightOne.prop('aria-invalid')).toBe('false');
+    });
+
+    it('sets aria-invalid on button with selected value, type of selected value is bool', () => {
+        const wrapper = getWrapper({
+            'aria-invalid': 'true',
+            selectedValue: defaultProps.leftValue,
+        });
+        expect(wrapper.find('BaseRadioButton')).toHaveLength(2);
+
+        const leftOne = wrapper.find('BaseRadioButton').first();
+        const rightOne = wrapper.find('BaseRadioButton').last();
+
+        expect(leftOne.prop('aria-invalid')).toBe('true');
+        expect(rightOne.prop('aria-invalid')).toBe('false');
+    });
+
+    it('sets aria-invalid on button with selected value, type of selected value is string', () => {
+        const wrapper = getWrapper({
+            'aria-invalid': 'true',
+            selectedValue: defaultProps.rightValue,
+        });
+        expect(wrapper.find('BaseRadioButton')).toHaveLength(2);
+
+        const leftOne = wrapper.find('BaseRadioButton').first();
+        const rightOne = wrapper.find('BaseRadioButton').last();
+
+        expect(leftOne.prop('aria-invalid')).toBe('false');
+        expect(rightOne.prop('aria-invalid')).toBe('true');
+    });
+
+    it('sets aria-invalid on both buttons for undefined selected value ', () => {
+        const wrapper = getWrapper({ 'aria-invalid': 'true' });
+        expect(wrapper.find('BaseRadioButton')).toHaveLength(2);
+
+        const leftOne = wrapper.find('BaseRadioButton').first();
+        const rightOne = wrapper.find('BaseRadioButton').last();
+
+        expect(leftOne.prop('aria-invalid')).toBe('true');
+        expect(rightOne.prop('aria-invalid')).toBe('true');
+    });
+
+    it('sets aria-invalid on both buttons for undefined selected value ', () => {
+        const wrapper = getWrapper({ 'aria-invalid': 'false' });
+        expect(wrapper.find('BaseRadioButton')).toHaveLength(2);
+
+        const leftOne = wrapper.find('BaseRadioButton').first();
+        const rightOne = wrapper.find('BaseRadioButton').last();
+
+        expect(leftOne.prop('aria-invalid')).toBe('false');
+        expect(rightOne.prop('aria-invalid')).toBe('false');
+    });
+
     it('passes the correct props to each radio button', () => {
         const wrapper = getWrapper();
         expect(wrapper.find('BaseRadioButton')).toHaveLength(2);

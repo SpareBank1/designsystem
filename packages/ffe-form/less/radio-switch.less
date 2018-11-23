@@ -68,7 +68,9 @@
 
 .ffe-radio-input {
     &:checked + .ffe-radio-switch {
-        border-color: @ffe-blue-royal;
+        &:not(.ffe-radio-button--invalid) {
+            border-color: @ffe-blue-royal;
+        }
         background-color: @ffe-blue-royal;
         color: @ffe-white;
     }
@@ -88,7 +90,6 @@
     }
 
     &--dark {
-
         &:hover + .ffe-radio-switch {
             border-color: @ffe-blue-focus;
         }
