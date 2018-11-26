@@ -3450,9 +3450,12 @@ html {
   /* stylelint-disable-next-line selector-max-specificity */
 }
 .ffe-radio-input:checked + .ffe-radio-switch {
-  border-color: #002776;
+  /* stylelint-disable-next-line selector-max-specificity */
   background-color: #002776;
   color: #fff;
+}
+.ffe-radio-input:checked + .ffe-radio-switch:not(.ffe-radio-button--invalid) {
+  border-color: #002776;
 }
 .ffe-radio-input:hover + .ffe-radio-switch {
   border-color: #0071cd;
