@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@10.1.2...@sb1/ffe-form@10.1.3) (2018-11-26)
+
+### Bug Fixes
+
+-   **ffe-radio-button-react:** add empty line before declaration in radio-switch.less ([b839be5](https://github.com/SpareBank1/designsystem/commit/b839be5))
+-   **ffe-radio-button-react:** show error message correctly for RadioSwitch. ([969de4e](https://github.com/SpareBank1/designsystem/commit/969de4e))
+
 ## [10.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@10.1.1...@sb1/ffe-form@10.1.2) (2018-11-26)
 
 **Note:** Version bump only for package @sb1/ffe-form

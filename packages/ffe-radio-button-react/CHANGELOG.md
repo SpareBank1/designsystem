@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.3.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-radio-button-react@3.3.3...@sb1/ffe-radio-button-react@3.3.4) (2018-11-26)
+
+### Bug Fixes
+
+-   **ffe-radio-button-react:** add check that selected value is falsy and not only undefined. In addition it has been added tests that verify this behavior. ([cc32252](https://github.com/SpareBank1/designsystem/commit/cc32252))
+-   **ffe-radio-button-react:** show error message correctly for RadioSwitch. ([969de4e](https://github.com/SpareBank1/designsystem/commit/969de4e))
+
 ## [3.3.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-radio-button-react@3.3.2...@sb1/ffe-radio-button-react@3.3.3) (2018-11-26)
 
 **Note:** Version bump only for package @sb1/ffe-radio-button-react
