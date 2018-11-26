@@ -1342,7 +1342,7 @@ html {
   }
   .ffe-button-group .ffe-button,
   .ffe-button-group .ffe-inline-button {
-    margin: 0 0 10px 10px;
+    margin: 0 0 10px 20px;
     width: auto;
   }
   .ffe-button-group .ffe-button:first-child,
@@ -1756,6 +1756,7 @@ html {
   color: #0071cd;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  padding: 10px 20px 9px;
 }
 .ffe-inline-button--tertiary::after,
 .ffe-header__icon-button::after {
@@ -1768,6 +1769,22 @@ html {
 .ffe-header__icon-button:hover {
   color: #005aa4;
 }
+.ffe-inline-button--tertiary:active,
+.ffe-inline-button--tertiary:focus {
+  border-radius: 4px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.ffe-inline-button--tertiary:focus {
+  border: 3px solid #a1dfff;
+  color: #005aa4;
+  padding: 7px 17px 6px;
+}
+.ffe-inline-button--tertiary:active {
+  border: 2px solid #0071cd;
+  color: #0071cd;
+  padding: 8px 18px 7px;
+}
 .ffe-inline-button--tertiary.ffe-inline-button--dark {
   color: #a1dfff;
   text-decoration: none;
@@ -1775,15 +1792,21 @@ html {
 .ffe-inline-button--tertiary.ffe-inline-button--dark::after {
   border-bottom: 2px solid #a1dfff;
 }
+.ffe-inline-button--tertiary.ffe-inline-button--dark:active,
 .ffe-inline-button--tertiary.ffe-inline-button--dark:hover {
   color: #c8f1ff;
 }
+.ffe-inline-button--tertiary.ffe-inline-button--dark:active::after,
 .ffe-inline-button--tertiary.ffe-inline-button--dark:hover::after {
   border-bottom-color: #c8f1ff;
 }
 .ffe-inline-button--tertiary.ffe-inline-button--dark:focus {
-  -webkit-box-shadow: 0 0 0 2px #a1dfff;
-          box-shadow: 0 0 0 2px #a1dfff;
+  border: 2px solid #a1dfff;
+  padding: 8px 18px 7px;
+}
+.ffe-inline-button--tertiary.ffe-inline-button--dark:active {
+  border: none;
+  padding: 10px 20px 9px;
 }
 .ffe-inline-button__icon {
   -ms-flex-item-align: center;
