@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { bool, oneOfType, string } from 'prop-types';
+import { bool, oneOf, oneOfType, string } from 'prop-types';
 import classNames from 'classnames';
 
 import BaseRadioButton from './BaseRadioButton';
@@ -13,8 +13,11 @@ const RadioSwitch = props => {
         rightValue,
         condensed,
         dark,
+        'aria-invalid': ariaInvalid,
         ...rest
     } = props;
+
+    const noneSelected = [null, undefined, ''].includes(props.selectedValue);
 
     return (
         <Fragment>
@@ -25,6 +28,10 @@ const RadioSwitch = props => {
                 })}
                 value={leftValue}
                 dark={dark}
+                aria-invalid={String(
+                    ariaInvalid === 'true' &&
+                        (props.selectedValue === leftValue || noneSelected),
+                )}
                 {...rest}
             >
                 {leftLabel}
@@ -36,6 +43,10 @@ const RadioSwitch = props => {
                 })}
                 value={rightValue}
                 dark={dark}
+                aria-invalid={String(
+                    ariaInvalid === 'true' &&
+                        (props.selectedValue === rightValue || noneSelected),
+                )}
                 {...rest}
             >
                 {rightLabel}
@@ -59,6 +70,11 @@ RadioSwitch.propTypes = {
     condensed: bool,
     /** Dark variant */
     dark: bool,
+    /**
+     * Indicates whether the radio buttons inside this radio button group is
+     * invalid or not. Propagated to all children.
+     * */
+    'aria-invalid': oneOf(['true', 'false']),
 };
 
 RadioSwitch.defaultProps = {
