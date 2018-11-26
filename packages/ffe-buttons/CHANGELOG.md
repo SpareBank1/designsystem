@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@8.1.1...@sb1/ffe-buttons@8.1.2) (2018-11-26)
+
+### Bug Fixes
+
+-   **ffe-buttons:** Implement tertiary buttons according to sketches in verktøykassa so it looks more like a button and less like a link ([2c74a54](https://github.com/SpareBank1/designsystem/commit/2c74a54))
+-   **ffe-buttons:** Increased margin between buttons to give them som air ([8e0f9d3](https://github.com/SpareBank1/designsystem/commit/8e0f9d3))
+-   **ffe-buttons:** Updated focus and active states for dark tertiary button according to sketches ([c8c8164](https://github.com/SpareBank1/designsystem/commit/c8c8164))
+
 ## [8.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@8.1.0...@sb1/ffe-buttons@8.1.1) (2018-11-08)
 
 **Note:** Version bump only for package @sb1/ffe-buttons

@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [14.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@14.0.2...@sb1/ffe-core@14.0.3) (2018-11-26)
+
+**Note:** Version bump only for package @sb1/ffe-core
+
 ## [14.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@14.0.1...@sb1/ffe-core@14.0.2) (2018-10-25)
 
 ### Bug Fixes
@@ -413,7 +417,7 @@ To upgrade to this release, all references to the following variables must be re
 
 To save some time on searching and replacing, run this command from inside your repository:
 
-for pair in ffe-blue-flat:ffe-blue-cobalt ffe-blue-royal-light-10:ffe-blue-ice ffe-blue-royal-light-20:ffe-blue-pale ffe-blue-royal-light-50:ffe-blue-sky ffe-blue-royal-light-wcag:ffe-blue-azure ffe-blue-royal-light:ffe-blue-deep-sky ffe-green-wcag-20:ffe-green-mint ffe-green-wcag:ffe-green-shamrock ffe-green-dark-10:ffe-green-emerald ffe-orange-wcag-20:ffe-orange-salmon ffe-orange-wcag:ffe-orange-fire ffe-purple-wcag:ffe-purple-magenta ffe-sand-50:ffe-sand-ivory ffe-sand-25:ffe-sand ffe-grey-light-bg:ffe-grey-cloud ffe-grey-light:ffe-grey-silver ffe-grey-dark:ffe-grey-charcoal; do old=${pair%%:_}; new=${pair##_:}; echo "Changing $old to $new"; find . -type f -name '\*.less' -exec sed -i "s/$old/$new/g" {} \;; done
+for pair in ffe-blue-flat:ffe-blue-cobalt ffe-blue-royal-light-10:ffe-blue-ice ffe-blue-royal-light-20:ffe-blue-pale ffe-blue-royal-light-50:ffe-blue-sky ffe-blue-royal-light-wcag:ffe-blue-azure ffe-blue-royal-light:ffe-blue-deep-sky ffe-green-wcag-20:ffe-green-mint ffe-green-wcag:ffe-green-shamrock ffe-green-dark-10:ffe-green-emerald ffe-orange-wcag-20:ffe-orange-salmon ffe-orange-wcag:ffe-orange-fire ffe-purple-wcag:ffe-purple-magenta ffe-sand-50:ffe-sand-ivory ffe-sand-25:ffe-sand ffe-grey-light-bg:ffe-grey-cloud ffe-grey-light:ffe-grey-silver ffe-grey-dark:ffe-grey-charcoal; do old=${pair%%:_}; new=${pair##\_:}; echo "Changing $old to$new"; find . -type f -name '\*.less' -exec sed -i "s/$old/$new/g" {} \;; done
 
 ## 8.2.4
 
