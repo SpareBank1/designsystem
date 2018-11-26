@@ -1,5 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import each from 'jest-each';
 
 import RadioSwitch from './RadioSwitch';
 
@@ -99,4 +100,33 @@ describe('<RadioSwitch />', () => {
         expect(rightOne.prop('value')).toBe(defaultProps.rightValue);
         expect(rightOne.prop('name')).toBe(defaultProps.name);
     });
+
+    each([
+        [undefined, undefined],
+        [null, null],
+        ['', ''],
+        [defaultProps.leftValue, defaultProps.leftValue],
+        [defaultProps.rightValue, defaultProps.rightValue],
+    ]).test(
+        'returns the correct value of selectedValue when input selected value is %s',
+        (selectedValue, expectedSelectedValue) => {
+            const wrapper = getWrapper({
+                selectedValue: selectedValue,
+            });
+            expect(wrapper.find('BaseRadioButton')).toHaveLength(2);
+
+            const leftOne = wrapper.find('BaseRadioButton').first();
+            const rightOne = wrapper.find('BaseRadioButton').last();
+
+            expect(leftOne.prop('children')).toBe(defaultProps.leftLabel);
+            expect(leftOne.prop('value')).toBe(defaultProps.leftValue);
+            expect(leftOne.prop('name')).toBe(defaultProps.name);
+            expect(leftOne.prop('selectedValue')).toBe(expectedSelectedValue);
+
+            expect(rightOne.prop('children')).toBe(defaultProps.rightLabel);
+            expect(rightOne.prop('value')).toBe(defaultProps.rightValue);
+            expect(rightOne.prop('name')).toBe(defaultProps.name);
+            expect(rightOne.prop('selectedValue')).toBe(expectedSelectedValue);
+        },
+    );
 });

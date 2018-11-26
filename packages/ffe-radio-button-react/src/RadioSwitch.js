@@ -17,7 +17,7 @@ const RadioSwitch = props => {
         ...rest
     } = props;
 
-    const noneSelected = props.selectedValue === undefined;
+    const noneSelected = [null, undefined, ''].includes(props.selectedValue);
 
     return (
         <Fragment>
