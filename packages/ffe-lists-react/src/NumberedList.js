@@ -1,9 +1,16 @@
 import React from 'react';
-import { string, node } from 'prop-types';
+import { string, node, bool } from 'prop-types';
 import classNames from 'classnames';
 
-const NumberedList = ({ className, ...rest }) => (
-    <ol className={classNames('ffe-numbered-list', className)} {...rest} />
+const NumberedList = ({ className, condensed, ...rest }) => (
+    <ol
+        className={classNames(
+            'ffe-numbered-list',
+            { 'ffe-numbered-list--condensed': condensed },
+            className,
+        )}
+        {...rest}
+    />
 );
 
 NumberedList.propTypes = {
@@ -11,6 +18,8 @@ NumberedList.propTypes = {
     children: node.isRequired,
     /** Any extra classes */
     className: string,
+    /** Condensed modifier. Use in condensed designs */
+    condensed: bool,
 };
 
 export default NumberedList;
