@@ -1,0 +1,91 @@
+// Toggle switch
+//
+// Markup:
+// <div class="ffe-toggle-switch ffe-toggle-switch{{modifier_class}}">
+//     <input type="checkbox" class="ffe-toggle-switch__input" id="toggle{{modifier_class}}" name="toggle{{modifier_class}}" value="on">
+//     <label class="ffe-toggle-switch__label" for="toggle{{modifier_class}}">
+//         Send meg spam
+//     </label>
+// </div>
+//
+// --align-right - Aligns the switch to the right
+//
+// Styleguide ffe-form.toggle-switch
+
+.ffe-toggle-switch {
+    &__input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    &__label {
+        position: relative;
+        cursor: pointer;
+        padding: 0 0 0 65px;
+        line-height: 32px;
+        height: 32px;
+        display: block;
+
+        &::before {
+            display: inline-block;
+            content: '';
+            width: 50px;
+            height: 30px;
+            background: @ffe-grey-silver;
+            border-radius: 15px;
+            position: absolute;
+            z-index: 1;
+            left: 0;
+            transition: background 0.4s @ffe-ease,
+                box-shadow @ffe-transition-duration @ffe-ease;
+        }
+
+        &::after {
+            display: inline-block;
+            content: '';
+            width: 26px;
+            height: 26px;
+            background: @ffe-white;
+            border-radius: 13px;
+            position: absolute;
+            z-index: 2;
+            left: 2px;
+            top: 2px;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+            transition: transform @ffe-transition-duration @ffe-ease-in-out-back;
+        }
+
+        &:hover::before {
+            box-shadow: 0 0 0 1px @ffe-white, 0 0 0 4px @ffe-blue-focus;
+        }
+    }
+
+    &__input:checked + .ffe-toggle-switch__label::after {
+        transform: translateX(20px);
+    }
+
+    &__input:checked + .ffe-toggle-switch__label::before {
+        background: @ffe-green-shamrock;
+    }
+
+    &__input:focus + .ffe-toggle-switch__label::before {
+        box-shadow: 0 0 0 1px @ffe-white, 0 0 0 4px @ffe-blue-focus;
+    }
+
+    &--align-right {
+        .ffe-toggle-switch__label {
+            padding: 0 65px 0 0;
+
+            &::before {
+                left: auto;
+                right: 0;
+            }
+
+            &::after {
+                left: auto;
+                right: 22px;
+            }
+        }
+    }
+}
