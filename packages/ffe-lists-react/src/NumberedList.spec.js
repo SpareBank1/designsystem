@@ -27,4 +27,11 @@ describe('<NumberedList>', () => {
         expect(wrapper.prop('id')).toBe('that-id');
         expect(wrapper.html()).toContain('Firstly');
     });
+    it('renders condensed modifier', () => {
+        const modifierClass = 'ffe-numbered-list--condensed';
+        expect(getWrapper().hasClass(modifierClass)).toBe(false);
+        expect(getWrapper({ condensed: true }).hasClass(modifierClass)).toBe(
+            true,
+        );
+    });
 });
