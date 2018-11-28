@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@3.2.1...@sb1/ffe-lists-react@3.3.0) (2018-11-28)
+
+### Features
+
+-   **ffe-lists-react:** add condensed modifier to bullet and number list ([f779f9b](https://github.com/SpareBank1/designsystem/commit/f779f9b)), closes [#525](https://github.com/SpareBank1/designsystem/issues/525)
+
 ## [3.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@3.2.0...@sb1/ffe-lists-react@3.2.1) (2018-11-26)
 
 **Note:** Version bump only for package @sb1/ffe-lists-react
