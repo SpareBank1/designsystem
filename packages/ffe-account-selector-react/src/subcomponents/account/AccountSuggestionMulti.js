@@ -1,6 +1,6 @@
 import React from 'react';
 import { bool } from 'prop-types';
-import Checkbox from '@sb1/ffe-checkbox-react';
+import { Checkbox } from '@sb1/ffe-form-react';
 
 import { accountFormatter, balanceWithCurrency } from '../../util/format';
 import { Account, Locale } from '../../util/types';
