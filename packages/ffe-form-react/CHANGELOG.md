@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@4.2.3...@sb1/ffe-form-react@4.3.0) (2018-11-29)
+
+### Features
+
+-   **ffe-form-react:** New components ([98620ce](https://github.com/SpareBank1/designsystem/commit/98620ce))
+
 ## [4.2.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@4.2.2...@sb1/ffe-form-react@4.2.3) (2018-11-26)
 
 **Note:** Version bump only for package @sb1/ffe-form-react
