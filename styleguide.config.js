@@ -11,7 +11,6 @@ const PRODUCTION = process.env.NODE_ENV === 'production';
 
 const PACKAGES_WITH_DEFAULT_EXPORT = [
     'ffe-chart-donut-react',
-    'ffe-checkbox-react',
     'ffe-dropdown-react',
     'ffe-file-upload-react',
     'ffe-searchable-dropdown-react',
@@ -411,14 +410,6 @@ module.exports = {
                     components: () => [
                         ...glob.sync(
                             'packages/ffe-form-react/src/[A-Z]+([A-Za-z]).js',
-                            { ignore },
-                        ),
-                        ...glob.sync(
-                            'packages/ffe-checkbox-react/src/[A-Z]+([A-Za-z]).js',
-                            { ignore },
-                        ),
-                        ...glob.sync(
-                            'packages/ffe-radio-button-react/src/[A-Z]+([A-Za-z]).js',
                             { ignore },
                         ),
                         'packages/ffe-datepicker-react/src/datepicker/Datepicker.js',
