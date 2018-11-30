@@ -28,7 +28,7 @@
     "setupTestFrameworkScriptFile": "../../test-setup.js"
   },
   "dependencies": {
-    "@sb1/ffe-checkbox-react": "^5.3.2",
+    "@sb1/ffe-form-react": "^4.3.0",
     "@sb1/ffe-formatters": "^3.1.0",
     "@sb1/ffe-icons-react": "^6.0.10",
     "@sb1/ffe-spinner-react": "^4.0.5",
