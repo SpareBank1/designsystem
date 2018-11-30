@@ -3,6 +3,32 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-checkbox-react@5.3.2...@sb1/ffe-checkbox-react@6.0.0) (2018-11-30)
+
+### remove
+
+-   **ffe-checkbox-react:** Merge package into ffe-form-react ([c7c8630](https://github.com/SpareBank1/designsystem/commit/c7c8630))
+
+### BREAKING CHANGES
+
+-   **ffe-checkbox-react:** This package has been removed, and the components are now found in `ffe-form-react`.
+
+Update your imports from
+
+```javascript
+import Checkbox from '@sb1/ffe-checkbox-react';
+```
+
+to
+
+```javascript
+import { Checkbox } from '@sb1/ffe-form-react';
+```
+
+in order to migrate.
+
+You will also need to update `ffe-form-react` to at least `4.3.0`
+
 ## [5.3.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-checkbox-react@5.3.1...@sb1/ffe-checkbox-react@5.3.2) (2018-11-26)
 
 **Note:** Version bump only for package @sb1/ffe-checkbox-react

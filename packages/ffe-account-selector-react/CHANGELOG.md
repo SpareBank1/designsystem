@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@9.1.20...@sb1/ffe-account-selector-react@10.0.0) (2018-11-30)
+
+### Code Refactoring
+
+-   **ffe-account-selector-react:** New dependencies ([53df20f](https://github.com/SpareBank1/designsystem/commit/53df20f))
+
+### BREAKING CHANGES
+
+-   **ffe-account-selector-react:** This package relied on `ffe-checkbox-react` which has been merged into `ffe-form-react`.
+
+As a result, you need to update your dependencies to use this version. Replace the dependency on `ffe-checkbox-react` with `ffe-form-react`.
+
+_Make sure you're at least on version_ `4.3.0` of `ffe-form-react`.
+
+No further action should be required to update this version.
+
 ## [9.1.20](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@9.1.19...@sb1/ffe-account-selector-react@9.1.20) (2018-11-26)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react

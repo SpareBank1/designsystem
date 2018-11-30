@@ -3,6 +3,42 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-radio-button-react@3.3.5...@sb1/ffe-radio-button-react@4.0.0) (2018-11-30)
+
+### remove
+
+-   **ffe-radio-button-react:** Merge package into ffe-form-react ([60cf007](https://github.com/SpareBank1/designsystem/commit/60cf007))
+
+### BREAKING CHANGES
+
+-   **ffe-radio-button-react:** This package has been removed, and the components are now found in `ffe-form-react`.
+
+Update your imports from
+
+```javascript
+import {
+    RadioBlock,
+    RadioButton,
+    RadioButtonInputGroup,
+    RadioSwitch,
+} from '@sb1/ffe-radio-button-react';
+```
+
+to
+
+```javascript
+import {
+    RadioBlock,
+    RadioButton,
+    RadioButtonInputGroup,
+    RadioSwitch,
+} from '@sb1/ffe-form-react';
+```
+
+in order to migrate.
+
+You will also need to update `ffe-form-react` to at least `4.3.0`
+
 ## [3.3.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-radio-button-react@3.3.4...@sb1/ffe-radio-button-react@3.3.5) (2018-11-29)
 
 **Note:** Version bump only for package @sb1/ffe-radio-button-react
