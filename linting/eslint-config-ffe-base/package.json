@@ -18,7 +18,7 @@
     "unused": "eslint-find-rules -u"
   },
   "devDependencies": {
-    "eslint": "^5.3.0",
+    "eslint": "^5.9.0",
     "eslint-find-rules": "^3.1.1",
     "eslint-plugin-import": "^2.0.1"
   },

@@ -44,7 +44,7 @@
         "babel-eslint": "^9.0.0",
         "babel-jest": "^23.6.0",
         "babel-loader": "^8.0.0",
-        "case": "^1.5.4",
+        "case": "^1.5.5",
         "copyfiles": "^2.1.0",
         "coveralls": "^3.0.2",
         "cross-env": "^5.2.0",
