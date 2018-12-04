@@ -19,6 +19,6 @@
     "access": "public"
   },
   "devDependencies": {
-    "handlebars": "^4.0.11"
+    "handlebars": "^4.0.12"
   }
 }
