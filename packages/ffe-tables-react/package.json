@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-tables-react",
-  "version": "5.1.10",
+  "version": "5.1.11",
   "description": "React implementation of ffe-tables",
   "license": "MIT",
   "files": [
@@ -22,7 +22,7 @@
     "setupTestFrameworkScriptFile": "../../test-setup.js"
   },
   "dependencies": {
-    "@sb1/ffe-icons-react": "^6.0.10",
+    "@sb1/ffe-icons-react": "^6.0.11",
     "classnames": "^2.2.5",
     "deep-equal": "^1.0.1",
     "prop-types": "^15.6.0",

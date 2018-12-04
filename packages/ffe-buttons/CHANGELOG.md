@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@8.1.2...@sb1/ffe-buttons@8.1.3) (2018-12-04)
+
+### Bug Fixes
+
+-   **ffe-buttons:** condense condensed task button ([78f42fd](https://github.com/SpareBank1/designsystem/commit/78f42fd))
+
 ## [8.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@8.1.1...@sb1/ffe-buttons@8.1.2) (2018-11-26)
 
 ### Bug Fixes
@@ -285,14 +291,17 @@ of this:
 
 ```html
 <button class="ffe-[button-type]-button">
-<span class="ffe-[button-type]-button__label">
-<span class="ffe-[button-type]-button__label-text">
-<img class="ffe-[button-type]-button__label-icon" alt="left icon" />
-Click me
-<img class="ffe-[button-type]-button__label-icon" alt="right icon" />
-</span>
-<span class="ffe-[button-type]-button__label-spinner" />
-</span>
+    <span class="ffe-[button-type]-button__label">
+        <span class="ffe-[button-type]-button__label-text">
+            <img class="ffe-[button-type]-button__label-icon" alt="left icon" />
+            Click me
+            <img
+                class="ffe-[button-type]-button__label-icon"
+                alt="right icon"
+            />
+        </span>
+        <span class="ffe-[button-type]-button__label-spinner" />
+    </span>
 </button>
 ```
 
@@ -301,12 +310,10 @@ required is this:
 
 ```html
 <button class="ffe-button ffe-button--[button-type]">
-<img class="ffe-button__icon ffe-button__icon--left" alt="left icon" />
-<span class="ffe-button__label">
-Click me
-</span>
-<img class="ffe-button__icon ffe-button__icon--right" alt="right icon" />
-<div class="ffe-button__spinner" />
+    <img class="ffe-button__icon ffe-button__icon--left" alt="left icon" />
+    <span class="ffe-button__label"> Click me </span>
+    <img class="ffe-button__icon ffe-button__icon--right" alt="right icon" />
+    <div class="ffe-button__spinner" />
 </button>
 ```
 
