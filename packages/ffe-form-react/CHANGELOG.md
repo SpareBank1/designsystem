@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.4.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@4.3.1...@sb1/ffe-form-react@4.4.0) (2018-12-05)
+
+### Features
+
+-   **ffe-form-react:** Allow node as label ([ef3a58f](https://github.com/SpareBank1/designsystem/commit/ef3a58f)), closes [#522](https://github.com/SpareBank1/designsystem/issues/522)
+
 ## [4.3.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@4.3.0...@sb1/ffe-form-react@4.3.1) (2018-12-04)
 
 **Note:** Version bump only for package @sb1/ffe-form-react
