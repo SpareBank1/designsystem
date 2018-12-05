@@ -90,7 +90,7 @@ RadioButtonInputGroup.propTypes = {
      * prop but provide your own label you should make sure your solution passes
      * acessibility validation using a tool such as aXe DevTools.
      */
-    label: string,
+    label: oneOfType([node, string]),
     /** The name of the radio button */
     name: string,
     /** Change handler, receives value of selected radio button */
