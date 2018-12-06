@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@8.1.3...@sb1/ffe-buttons@8.1.4) (2018-12-06)
+
+### Bug Fixes
+
+-   **ffe-buttons:** Remove :visited-styles from anchors with button styles ([0657e5b](https://github.com/SpareBank1/designsystem/commit/0657e5b)), closes [#535](https://github.com/SpareBank1/designsystem/issues/535)
+
 ## [8.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@8.1.2...@sb1/ffe-buttons@8.1.3) (2018-12-04)
 
 ### Bug Fixes

@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [11.2.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@11.2.10...@sb1/ffe-header@11.2.11) (2018-12-06)
+
+**Note:** Version bump only for package @sb1/ffe-header
+
 ## [11.2.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@11.2.9...@sb1/ffe-header@11.2.10) (2018-12-04)
 
 **Note:** Version bump only for package @sb1/ffe-header
