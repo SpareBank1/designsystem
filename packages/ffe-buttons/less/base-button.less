@@ -85,6 +85,10 @@
         box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.25);
     }
 
+    &:visited {
+        color: @ffe-white;
+    }
+
     @media screen and (min-width: @breakpoint-sm) {
         display: inline-flex;
         width: auto;
@@ -93,7 +97,8 @@
 
 .ffe-button--action.ffe-button--ghost {
     &,
-    &:focus {
+    &:focus,
+    &:visited {
         background-color: transparent;
         border: 2px solid @ffe-green-shamrock;
         color: @ffe-green-shamrock;
@@ -167,9 +172,11 @@
 
     &:active,
     &:focus,
-    &:hover {
+    &:hover,
+    &:visited {
         background-color: @ffe-white;
         border-color: @ffe-blue-azure;
+        color: @ffe-blue-azure;
 
         &.ffe-button--dark {
             border-color: @ffe-blue-focus;
@@ -212,7 +219,8 @@
 
     &:active,
     &:focus,
-    &:hover {
+    &:hover,
+    &:visited {
         color: @ffe-blue-cobalt;
         box-shadow: none;
     }
