@@ -1402,6 +1402,9 @@ html {
   -webkit-box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.25);
           box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.25);
 }
+.ffe-button:visited {
+  color: #fff;
+}
 @media screen and (min-width: 480px) {
   .ffe-button,
   .ffe-header__logout-button {
@@ -1412,7 +1415,8 @@ html {
   }
 }
 .ffe-button--action.ffe-button--ghost,
-.ffe-button--action.ffe-button--ghost:focus {
+.ffe-button--action.ffe-button--ghost:focus,
+.ffe-button--action.ffe-button--ghost:visited {
   background-color: transparent;
   border: 2px solid #008a00;
   color: #008a00;
@@ -1486,11 +1490,15 @@ html {
 .ffe-button--secondary:hover,
 .ffe-button--shortcut:hover,
 .ffe-button--expand:hover,
+.ffe-button--secondary:visited,
+.ffe-button--shortcut:visited,
+.ffe-button--expand:visited,
 .ffe-header__logout-button:focus,
 .ffe-header__logout-button:hover,
 .ffe-header__logout-button:active {
   background-color: #fff;
   border-color: #0071cd;
+  color: #0071cd;
 }
 .ffe-button--secondary:active.ffe-button--dark,
 .ffe-button--shortcut:active.ffe-button--dark,
@@ -1500,7 +1508,10 @@ html {
 .ffe-button--expand:focus.ffe-button--dark,
 .ffe-button--secondary:hover.ffe-button--dark,
 .ffe-button--shortcut:hover.ffe-button--dark,
-.ffe-button--expand:hover.ffe-button--dark {
+.ffe-button--expand:hover.ffe-button--dark,
+.ffe-button--secondary:visited.ffe-button--dark,
+.ffe-button--shortcut:visited.ffe-button--dark,
+.ffe-button--expand:visited.ffe-button--dark {
   border-color: #a1dfff;
   background-color: transparent;
   color: #fff;
@@ -1544,7 +1555,8 @@ html {
 }
 .ffe-button--task:active,
 .ffe-button--task:focus,
-.ffe-button--task:hover {
+.ffe-button--task:hover,
+.ffe-button--task:visited {
   color: #005aa4;
   -webkit-box-shadow: none;
           box-shadow: none;
