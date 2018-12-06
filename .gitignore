@@ -10,6 +10,7 @@ dist/
 lib/
 src/styleguidist.html
 tmp/
+es/
 
 # Editors
 .idea/

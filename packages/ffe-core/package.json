@@ -3,12 +3,13 @@
   "version": "14.0.3",
   "description": "Rammeverk for Felles Front End",
   "license": "MIT",
-  "main": "lib/index.js",
   "author": "SpareBank 1",
   "files": [
     "lib",
+    "es",
     "less"
   ],
+  "main": "lib/index.js",
   "repository": {
     "type": "git",
     "url": "ssh://git@github.com:SpareBank1/designsystem.git"
@@ -16,13 +17,11 @@
   "scripts": {
     "lint": "stylelint less/*.less",
     "test": "npm run lint",
-    "prebuild": "rimraf lib",
-    "build": "node ./bin/build.js && babel --out-dir lib --root-mode=upward lib"
+    "build": "node ./bin/build.js"
   },
   "devDependencies": {
     "case": "^1.5.5",
     "mkdirp": "^0.5.1",
-    "rimraf": "^2.6.2",
     "stylelint": "^9.4.0"
   },
   "publishConfig": {

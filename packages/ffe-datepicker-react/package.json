@@ -4,15 +4,19 @@
   "license": "MIT",
   "files": [
     "lib",
-    "*.js"
+    "es"
   ],
-  "main": "lib/ffe-datepicker-react.js",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "sideEffects": false,
   "repository": {
     "type": "git",
     "url": "ssh://git@github.com:SpareBank1/designsystem.git"
   },
   "scripts": {
-    "build": "babel -d lib/. --root-mode=upward --ignore=*.spec.js src/.",
+    "build": "npm run build:cjs && npm run build:es",
+    "build:cjs": "babel -d lib/. --root-mode=upward  --env-name=cjs --ignore=*.spec.js src/.",
+    "build:es": "babel -d es/. --root-mode=upward --env-name=es --ignore=*.spec.js src/.",
     "lint": "eslint src/.",
     "test": "jest",
     "test:watch": "jest --watch"
