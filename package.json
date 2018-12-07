@@ -48,7 +48,7 @@
         "copyfiles": "^2.1.0",
         "coveralls": "^3.0.2",
         "cross-env": "^5.2.0",
-        "css-loader": "^1.0.0",
+        "css-loader": "^2.0.0",
         "enzyme": "^3.7.0",
         "enzyme-adapter-react-16": "^1.7.0",
         "eslint": "^5.9.0",
