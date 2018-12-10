@@ -1,5 +1,4 @@
-Radiobrytere brukes når brukeren skal gjøre et binært valg - typisk i formen
-"ja eller nei", eller "av eller på".
+Radio switcher brukes når brukeren skal ta stilling til enkle valg - typisk i formen "ja eller nei", eller "av/på" og hvor du i tillegg har behov for en lagre knapp. Har du behov for mer enn 3 radio switcher i en liste, skal du bruke radio knapper.
 
 Radiobryter uten defaultvalg.
 
