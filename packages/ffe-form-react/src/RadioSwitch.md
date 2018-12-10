@@ -1,7 +1,6 @@
-Radiobrytere brukes når brukeren skal gjøre et binært valg - typisk i formen
-"ja eller nei", eller "av eller på".
+Radio-switcher brukes når brukeren skal ta stilling til enkle valg - typisk i formen "ja/nei", eller "av/på" og hvor du i tillegg har behov for en lagreknapp. Har du behov for mer enn 3 radio-switcher i en liste, skal du bruke radioknapper.
 
-Radiobryter uten defaultvalg.
+Radio-switcher uten defaultvalg.
 
 ```js
 const { RadioButtonInputGroup } = require('.');
@@ -27,7 +26,7 @@ initialState = { selected: undefined };
 </RadioButtonInputGroup>;
 ```
 
-Radiobrytere med defaultvalg.
+Radio-switcher med defaultvalg.
 
 ```js
 const { RadioButtonInputGroup } = require('.');
@@ -53,7 +52,7 @@ initialState = { selected: 'false' };
 </RadioButtonInputGroup>;
 ```
 
-Radiobrytere med feilmelding på brukerens valg
+Radio-switcher med feilmelding på brukerens valg
 
 ```js
 const { RadioButtonInputGroup } = require('.');
@@ -83,7 +82,7 @@ initialState = {
 </RadioButtonInputGroup>;
 ```
 
-Radiobrytere med feilmelding der brukeren ikke har gjort et valg.
+Radio-switcher med feilmelding der brukeren ikke har gjort et valg.
 
 ```js
 const { RadioButtonInputGroup } = require('.');
