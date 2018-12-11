@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@10.0.3...@sb1/ffe-account-selector-react@10.0.4) (2018-12-11)
+
+### Bug Fixes
+
+-   Build tree shakeable packages ([fb4a9ea](https://github.com/SpareBank1/designsystem/commit/fb4a9ea))
+
 ## [10.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@10.0.2...@sb1/ffe-account-selector-react@10.0.3) (2018-12-06)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react

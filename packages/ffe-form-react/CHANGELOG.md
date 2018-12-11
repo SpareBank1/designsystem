@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.4.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@4.4.0...@sb1/ffe-form-react@4.4.1) (2018-12-11)
+
+### Bug Fixes
+
+-   Build tree shakeable packages ([fb4a9ea](https://github.com/SpareBank1/designsystem/commit/fb4a9ea))
+
 # [4.4.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@4.3.1...@sb1/ffe-form-react@4.4.0) (2018-12-05)
 
 ### Features

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@5.1.11...@sb1/ffe-tables-react@5.2.0) (2018-12-11)
+
+### Bug Fixes
+
+-   **ffe-tables-react:** rows with non-expandable should not be expandable ([81d7353](https://github.com/SpareBank1/designsystem/commit/81d7353)), closes [#514](https://github.com/SpareBank1/designsystem/issues/514)
+-   Build tree shakeable packages ([fb4a9ea](https://github.com/SpareBank1/designsystem/commit/fb4a9ea))
+
+### Features
+
+-   **ffe-tables-react:** Migrate from deprecated componentWillReceiveProps to getDerivedStateFromProps ([bc969f1](https://github.com/SpareBank1/designsystem/commit/bc969f1))
+
 ## [5.1.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@5.1.10...@sb1/ffe-tables-react@5.1.11) (2018-12-04)
 
 **Note:** Version bump only for package @sb1/ffe-tables-react

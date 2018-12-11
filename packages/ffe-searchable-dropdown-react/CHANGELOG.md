@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.2.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@6.2.6...@sb1/ffe-searchable-dropdown-react@6.2.7) (2018-12-11)
+
+### Bug Fixes
+
+-   Build tree shakeable packages ([fb4a9ea](https://github.com/SpareBank1/designsystem/commit/fb4a9ea))
+
 ## [6.2.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@6.2.5...@sb1/ffe-searchable-dropdown-react@6.2.6) (2018-12-04)
 
 **Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react
