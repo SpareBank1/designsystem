@@ -26,10 +26,7 @@ class Table extends Component {
     }
 
     renderTableHeaders() {
-        const {
-            columns,
-            headerRender
-        } = this.props;
+        const { columns, headerRender } = this.props;
 
         if (!columns.length) {
             return null;
@@ -38,19 +35,28 @@ class Table extends Component {
         if (this.props.expandedContentMapper) {
             columns.push({ key: 'expandIcon', header: '', alignRight: true });
         }
-        return <TableHeaders columns={columns} headerRender={headerRender} dataWindow={this.getData()} />;
+        return (
+            <TableHeaders
+                columns={columns}
+                headerRender={headerRender}
+                dataWindow={this.getData()}
+            />
+        );
     }
 
     renderTableFooter() {
-        const {
-            columns,
-            footerRender
-        } = this.props;
+        const { columns, footerRender } = this.props;
 
         if (!columns.some(column => column.footer)) {
             return null;
         }
-        return <TableFooter columns={columns} footerRender={footerRender} dataWindow={this.getData()}/>;
+        return (
+            <TableFooter
+                columns={columns}
+                footerRender={footerRender}
+                dataWindow={this.getData()}
+            />
+        );
     }
 
     getData() {
@@ -74,17 +80,22 @@ class Table extends Component {
         if (expandedContentMapper) {
             return data.map((row, index) => {
                 const key = row.id || row.id === 0 ? row.id.toString() : index;
-                return (
-                    <TableRowExpandable
-                        cells={row}
-                        columns={columns}
-                        key={key}
-                        sort={sort}
-                        rowRender={rowRender}
-                        rowIndex={index}
-                    >
-                        {expandedContentMapper(row)}
+                const expandedContent = expandedContentMapper(row);
+                const rowProps = {
+                    cells: row,
+                    columns,
+                    sort,
+                    rowRender,
+                    rowIndex: index,
+                };
+                return expandedContent ? (
+                    <TableRowExpandable key={key} {...rowProps}>
+                        {expandedContent}
                     </TableRowExpandable>
+                ) : (
+                    <tbody key={key}>
+                        <TableRow {...rowProps} />
+                    </tbody>
                 );
             });
         }
@@ -94,7 +105,15 @@ class Table extends Component {
                 {data.map((row, index) => {
                     const key =
                         row.id || row.id === 0 ? row.id.toString() : index;
-                    return <TableRow cells={row} columns={columns} key={key} rowRender={rowRender} rowIndex={index}/>;
+                    return (
+                        <TableRow
+                            cells={row}
+                            columns={columns}
+                            key={key}
+                            rowRender={rowRender}
+                            rowIndex={index}
+                        />
+                    );
                 })}
             </tbody>
         );

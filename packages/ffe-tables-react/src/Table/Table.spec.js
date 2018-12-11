@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow, render, mount } from 'enzyme';
 
 import Table from './Table';
+import TableRowExpandable from '../TableParts/TableRowExpandable';
 
 describe('<Table />', () => {
     const columns = [
@@ -36,10 +37,7 @@ describe('<Table />', () => {
     ];
 
     const wrapperWithoutOverride = mount(
-        <Table
-            columns={columnsWithFooterContent}
-            data={data}
-        />
+        <Table columns={columnsWithFooterContent} data={data} />,
     );
 
     describe('general', () => {
@@ -165,74 +163,126 @@ describe('<Table />', () => {
         let mockCallback;
 
         const columnsForFooterRender = [
-            { key: 'name', header: 'Navn', footer: 'Sum alder'},
-            { key: 'address', header: 'Adresse' ,
-                columnFooterRender: (value, dataWindow, tdProps, spanProps, headerColumns, index)=>{return  <td {...tdProps}><span {...spanProps}>{value}</span></td>}
+            { key: 'name', header: 'Navn', footer: 'Sum alder' },
+            {
+                key: 'address',
+                header: 'Adresse',
+                columnFooterRender: (
+                    value,
+                    dataWindow,
+                    tdProps,
+                    spanProps,
+                    headerColumns,
+                    index,
+                ) => {
+                    return (
+                        <td {...tdProps}>
+                            <span {...spanProps}>{value}</span>
+                        </td>
+                    );
                 },
+            },
             { key: 'age', header: 'Alder', footer: 135, alignRight: true },
         ];
 
-        const wrapperWithDefaultOverride = wrapper = mount(
+        const wrapperWithDefaultOverride = (wrapper = mount(
             <Table
                 columns={columnsForFooterRender}
                 data={data}
                 footerRender={(trProps, columnsFooter) => {
-                    return <tr {...trProps}/>}}
-            />
-        );
-
-        beforeEach(() => {mockCallback = jest.fn()});
-        beforeEach(() => {wrapper = mount(
-            <Table
-                columns={columnsForFooterRender}
-                data={data}
-                footerRender={(trProps, columnsFooter) => {
-                    return <React.Fragment>
-                        <tr
-                            {...trProps}
-                            a="customfooter"
-                            firstkey={columnsFooter[0].key}
-                            onClick={(event) => {
-                                mockCallback();
-                            }}
-                        />
-                        <tr
-                            {...trProps}
-                            a="customfooter"
-                            firstkey={columnsFooter[0].key}
-                            onClick={(event) => {
-                                mockCallback();
-                            }}
-                        >
-                            {trProps.children[0]}{trProps.children[1]}{trProps.children[2]}
-                        </tr>
-                    </React.Fragment>
+                    return <tr {...trProps} />;
                 }}
-            />
+            />,
+        ));
 
-        )});
+        beforeEach(() => {
+            mockCallback = jest.fn();
+        });
+        beforeEach(() => {
+            wrapper = mount(
+                <Table
+                    columns={columnsForFooterRender}
+                    data={data}
+                    footerRender={(trProps, columnsFooter) => {
+                        return (
+                            <React.Fragment>
+                                <tr
+                                    {...trProps}
+                                    a="customfooter"
+                                    firstkey={columnsFooter[0].key}
+                                    onClick={event => {
+                                        mockCallback();
+                                    }}
+                                />
+                                <tr
+                                    {...trProps}
+                                    a="customfooter"
+                                    firstkey={columnsFooter[0].key}
+                                    onClick={event => {
+                                        mockCallback();
+                                    }}
+                                >
+                                    {trProps.children[0]}
+                                    {trProps.children[1]}
+                                    {trProps.children[2]}
+                                </tr>
+                            </React.Fragment>
+                        );
+                    }}
+                />,
+            );
+        });
 
         it('renders a <tfoot /> tr has custom props', () => {
-            const propKeyProp = wrapper.find('tfoot').find('tr').first().props();
+            const propKeyProp = wrapper
+                .find('tfoot')
+                .find('tr')
+                .first()
+                .props();
             expect(propKeyProp.a).toBe('customfooter');
             expect(propKeyProp.firstkey).toBe('name');
-            expect(wrapper.find('tfoot').find('tr').first().render().attr('a')).toBe('customfooter');
+            expect(
+                wrapper
+                    .find('tfoot')
+                    .find('tr')
+                    .first()
+                    .render()
+                    .attr('a'),
+            ).toBe('customfooter');
         });
 
         it('renders a <tfoot />, triggers tr onClick method', () => {
-            wrapper.find('tfoot').find('tr').first().simulate('click');
+            wrapper
+                .find('tfoot')
+                .find('tr')
+                .first()
+                .simulate('click');
             expect(mockCallback.mock.calls.length).toBe(1);
         });
 
-        it('renders a <tfoot /> that has two identical rows, the second row has array notation',() => {
-            const tr0html = wrapper.find('tfoot').find('tr').at(0).html();
-            const tr1html = wrapper.find('tfoot').find('tr').at(1).html();
+        it('renders a <tfoot /> that has two identical rows, the second row has array notation', () => {
+            const tr0html = wrapper
+                .find('tfoot')
+                .find('tr')
+                .at(0)
+                .html();
+            const tr1html = wrapper
+                .find('tfoot')
+                .find('tr')
+                .at(1)
+                .html();
             expect(tr1html).toBe(tr0html);
         });
 
         it('renders a <tfoot /> with override that should look like the default', () => {
-            const withoutOverrideHtml = wrapperWithoutOverride.find('tfoot').first().html();
-            const withDefaultOverrideHtml = wrapperWithDefaultOverride.find('tfoot').first().html();
+            const withoutOverrideHtml = wrapperWithoutOverride
+                .find('tfoot')
+                .first()
+                .html();
+            const withDefaultOverrideHtml = wrapperWithDefaultOverride
+                .find('tfoot')
+                .first()
+                .html();
             expect(withDefaultOverrideHtml).toBe(withoutOverrideHtml);
         });
     });
@@ -242,153 +292,287 @@ describe('<Table />', () => {
         let mockCallback;
 
         const columnsForFooterRender = [
-            { key: 'name', header: 'Navn', footer: 'Navn'},
+            { key: 'name', header: 'Navn', footer: 'Navn' },
             { key: 'address', header: 'Adresse' },
             { key: 'age', header: 'Alder', footer: 135, alignRight: true },
         ];
 
-        const wrapperWithDefaultOverride = wrapper = mount(
+        const wrapperWithDefaultOverride = (wrapper = mount(
             <Table
                 columns={columnsForFooterRender}
                 data={data}
                 headerRender={(trProps, headerColumns) => {
-                    return <tr {...trProps}/>}}
-            />
-        );
-
-        beforeEach(() => {mockCallback = jest.fn()});
-        beforeEach(() => {wrapper = mount(
-            <Table
-                columns={columnsForFooterRender}
-                data={data}
-                headerRender={(trProps, headerColumns) => {
-                    return <React.Fragment>
-                        <tr
-                            {...trProps}
-                            a="customfooter"
-                            firstkey={headerColumns[0].key}
-                            onClick={(event) => {
-                                mockCallback();
-                            }}
-                        />
-                        <tr
-                            {...trProps}
-                            a="customfooter"
-                            firstkey={headerColumns[0].key}
-                            onClick={(event) => {
-                                mockCallback();
-                            }}
-                        >
-                            {trProps.children[0]}{trProps.children[1]}{trProps.children[2]}
-                        </tr>
-                    </React.Fragment>
+                    return <tr {...trProps} />;
                 }}
-            />
+            />,
+        ));
 
-        )});
+        beforeEach(() => {
+            mockCallback = jest.fn();
+        });
+        beforeEach(() => {
+            wrapper = mount(
+                <Table
+                    columns={columnsForFooterRender}
+                    data={data}
+                    headerRender={(trProps, headerColumns) => {
+                        return (
+                            <React.Fragment>
+                                <tr
+                                    {...trProps}
+                                    a="customfooter"
+                                    firstkey={headerColumns[0].key}
+                                    onClick={event => {
+                                        mockCallback();
+                                    }}
+                                />
+                                <tr
+                                    {...trProps}
+                                    a="customfooter"
+                                    firstkey={headerColumns[0].key}
+                                    onClick={event => {
+                                        mockCallback();
+                                    }}
+                                >
+                                    {trProps.children[0]}
+                                    {trProps.children[1]}
+                                    {trProps.children[2]}
+                                </tr>
+                            </React.Fragment>
+                        );
+                    }}
+                />,
+            );
+        });
 
         it('renders a <thead /> tr has custom props', () => {
-            const propKeyProp = wrapper.find('thead').find('tr').first().props();
+            const propKeyProp = wrapper
+                .find('thead')
+                .find('tr')
+                .first()
+                .props();
             expect(propKeyProp.a).toBe('customfooter');
             expect(propKeyProp.firstkey).toBe('name');
-            expect(wrapper.find('thead').find('tr').first().render().attr('a')).toBe('customfooter');
+            expect(
+                wrapper
+                    .find('thead')
+                    .find('tr')
+                    .first()
+                    .render()
+                    .attr('a'),
+            ).toBe('customfooter');
         });
 
         it('renders a <thead />, triggers tr onClick method', () => {
-            wrapper.find('thead').find('tr').first().simulate('click');
+            wrapper
+                .find('thead')
+                .find('tr')
+                .first()
+                .simulate('click');
             expect(mockCallback.mock.calls.length).toBe(1);
         });
 
-        it('renders a <thead /> that has two identical rows, the second row has array notation',() => {
-            const tr0html = wrapper.find('thead').find('tr').at(0).html();
-            const tr1html = wrapper.find('thead').find('tr').at(1).html();
+        it('renders a <thead /> that has two identical rows, the second row has array notation', () => {
+            const tr0html = wrapper
+                .find('thead')
+                .find('tr')
+                .at(0)
+                .html();
+            const tr1html = wrapper
+                .find('thead')
+                .find('tr')
+                .at(1)
+                .html();
             expect(tr1html).toBe(tr0html);
         });
 
         it('renders a <thead /> with override that should look like the default', () => {
-            const withoutOverrideHtml = wrapperWithoutOverride.find('thead').first().html();
-            const withDefaultOverrideHtml = wrapperWithDefaultOverride.find('thead').first().html();
+            const withoutOverrideHtml = wrapperWithoutOverride
+                .find('thead')
+                .first()
+                .html();
+            const withDefaultOverrideHtml = wrapperWithDefaultOverride
+                .find('thead')
+                .first()
+                .html();
             expect(withDefaultOverrideHtml).toBe(withoutOverrideHtml);
         });
-    })
+    });
+
+    describe('expandable table rows', () => {
+        const wrapper = mount(
+            <Table
+                columns={[
+                    { key: 'name', header: 'Navn' },
+                    { key: 'address', header: 'Adresse' },
+                ]}
+                data={[
+                    {
+                        name: 'First',
+                        address: 'Expand me',
+                    },
+                    {
+                        name: 'Second',
+                    },
+                ]}
+                expandedContentMapper={row =>
+                    row.address && (
+                        <span className="expandedcontent">
+                            Adresse: {row.address}
+                        </span>
+                    )
+                }
+            />,
+        );
+
+        it('should render expandable rows when if expandable content is available', () => {
+            expect(wrapper.find('tbody').length).toBe(2);
+            expect(wrapper.find(TableRowExpandable).length).toBe(1);
+        });
+    });
 
     describe('table row render override', () => {
         let wrapper;
         let mockCallback;
 
         const columnsForRenderOverride = [
-            { key: 'name', header: 'Navn', footer: 'Navn', cellRender: (value,col,props)=>{return <React.Fragment>{value}</React.Fragment>}},
+            {
+                key: 'name',
+                header: 'Navn',
+                footer: 'Navn',
+                cellRender: (value, col, props) => {
+                    return <React.Fragment>{value}</React.Fragment>;
+                },
+            },
             { key: 'address', header: 'Adresse' },
             { key: 'age', header: 'Alder', footer: 135, alignRight: true },
         ];
 
         const expandedContentMapper = row =>
-            row.address && <span className="expandedcontent">Adresse: {row.address}</span>;
+            row.address && (
+                <span className="expandedcontent">Adresse: {row.address}</span>
+            );
 
-
-
-        const wrapperWithDefaultOverride = wrapper = mount(
-            <Table
-                columns={columnsForRenderOverride}
-                data={data}
-                rowRender={(trprops, props, rowIndex)=>{
-                    return <tr {...trprops}/>}}
-            />
-        );
-
-        const wrapperWithExendedRowAndRenderOverride = wrapper = mount(
-            <Table
-                columns={columnsForRenderOverride}
-                data={data}
-                expandedContentMapper={expandedContentMapper}
-                rowRender={(trprops, props, rowIndex)=>{
-                    return <tr {...trprops} onClick={(event) => {mockCallback();trprops.onClick(event);}}/>}}
-            />
-        );
-
-        beforeEach(() => {mockCallback = jest.fn()});
-        beforeEach(() => {wrapper = mount(
+        const wrapperWithDefaultOverride = (wrapper = mount(
             <Table
                 columns={columnsForRenderOverride}
                 data={data}
                 rowRender={(trprops, props, rowIndex) => {
-                    return  <tr
+                    return <tr {...trprops} />;
+                }}
+            />,
+        ));
+
+        const wrapperWithExendedRowAndRenderOverride = (wrapper = mount(
+            <Table
+                columns={columnsForRenderOverride}
+                data={data}
+                expandedContentMapper={expandedContentMapper}
+                rowRender={(trprops, props, rowIndex) => {
+                    return (
+                        <tr
+                            {...trprops}
+                            onClick={event => {
+                                mockCallback();
+                                trprops.onClick(event);
+                            }}
+                        />
+                    );
+                }}
+            />,
+        ));
+
+        beforeEach(() => {
+            mockCallback = jest.fn();
+        });
+        beforeEach(() => {
+            wrapper = mount(
+                <Table
+                    columns={columnsForRenderOverride}
+                    data={data}
+                    rowRender={(trprops, props, rowIndex) => {
+                        return (
+                            <tr
                                 {...trprops}
                                 a="customfooter"
-                                onClick={(event) => {
+                                onClick={event => {
                                     mockCallback();
                                 }}
                             />
-                }}
-            />
-
-        )});
+                        );
+                    }}
+                />,
+            );
+        });
 
         it('renders a <tbody /> tr has custom props', () => {
-            const propKeyProp = wrapper.find('tbody').find('tr').first().props();
+            const propKeyProp = wrapper
+                .find('tbody')
+                .find('tr')
+                .first()
+                .props();
             expect(propKeyProp.a).toBe('customfooter');
-            expect(wrapper.find('tbody').find('tr').first().render().attr('a')).toBe('customfooter');
+            expect(
+                wrapper
+                    .find('tbody')
+                    .find('tr')
+                    .first()
+                    .render()
+                    .attr('a'),
+            ).toBe('customfooter');
         });
 
         it('renders a <tbody />, triggers tr onClick method', () => {
-            wrapper.find('tbody').find('tr').first().simulate('click');
+            wrapper
+                .find('tbody')
+                .find('tr')
+                .first()
+                .simulate('click');
             expect(mockCallback.mock.calls.length).toBe(1);
         });
 
         it('renders a <tbody /> with extendedRow, triggers tr onClick method', () => {
-            wrapperWithExendedRowAndRenderOverride.find('tbody').first().find('tr').first().simulate('click');
-            expect(wrapperWithExendedRowAndRenderOverride.find('tbody').first().find('.ffe-table__row-expandable-content--expanded').length).toBe(1);
+            wrapperWithExendedRowAndRenderOverride
+                .find('tbody')
+                .first()
+                .find('tr')
+                .first()
+                .simulate('click');
+            expect(
+                wrapperWithExendedRowAndRenderOverride
+                    .find('tbody')
+                    .first()
+                    .find('.ffe-table__row-expandable-content--expanded')
+                    .length,
+            ).toBe(1);
             expect(mockCallback.mock.calls.length).toBe(1);
-            wrapperWithExendedRowAndRenderOverride.find('tbody').first().find('tr').first().simulate('click');
-            expect(wrapperWithExendedRowAndRenderOverride.find('tbody').first().find('.ffe-table__row-expandable-content--expanded').length).toBe(0);
+            wrapperWithExendedRowAndRenderOverride
+                .find('tbody')
+                .first()
+                .find('tr')
+                .first()
+                .simulate('click');
+            expect(
+                wrapperWithExendedRowAndRenderOverride
+                    .find('tbody')
+                    .first()
+                    .find('.ffe-table__row-expandable-content--expanded')
+                    .length,
+            ).toBe(0);
         });
 
         it('renders a <tbody /> with override that should look like the default', () => {
-            const withoutOverrideHtml = wrapperWithoutOverride.find('tbody').first().html();
-            const withDefaultOverrideHtml = wrapperWithDefaultOverride.find('tbody').first().html();
+            const withoutOverrideHtml = wrapperWithoutOverride
+                .find('tbody')
+                .first()
+                .html();
+            const withDefaultOverrideHtml = wrapperWithDefaultOverride
+                .find('tbody')
+                .first()
+                .html();
             expect(withDefaultOverrideHtml).toBe(withoutOverrideHtml);
         });
-    })
+    });
 
     describe('table body', () => {
         it('does not render a tbody if data prop is empty', () => {
@@ -481,9 +665,8 @@ describe('<Table />', () => {
         });
 
         it('sets correct class for hiding column on desktop', () => {
-            const columnsWithTopAlignment = columns.map(
-                (column, index) =>
-                    index === 0 ? { ...column, hideOnDesktop: true } : column,
+            const columnsWithTopAlignment = columns.map((column, index) =>
+                index === 0 ? { ...column, hideOnDesktop: true } : column,
             );
 
             const wrapper = render(
