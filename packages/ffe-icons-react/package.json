@@ -15,9 +15,9 @@
     "url": "ssh://git@github.com:SpareBank1/designsystem.git"
   },
   "scripts": {
-    "build": "npm run build:jsx-components && npm run build:babel && npm run build:es",
-    "build:babel": "babel -d lib --root-mode=upward jsx",
-    "build:es": "cross-env BABEL_ENV=es babel jsx --root-mode=upward -d es",
+    "build": "npm run build:jsx-components && npm run build:cjs && npm run build:es",
+    "build:cjs": "babel -d lib --env-name=cjs --root-mode=upward jsx",
+    "build:es": "babel -d es --env-name=es --root-mode=upward jsx",
     "build:jsx-components": "node ./src/build-jsx-components.js",
     "clean": "rimraf tmp jsx lib es",
     "lint": "eslint src/.",
