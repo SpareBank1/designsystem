@@ -1,8 +1,9 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
-import shallowEqual from 'shallow-equals';
 import ChevronIkon from '@sb1/ffe-icons-react/lib/chevron-ikon';
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import { polyfill } from 'react-lifecycles-compat';
+import shallowEqual from 'shallow-equals';
 import TableRow from './TableRow';
 
 class TableRowExpandable extends Component {
@@ -12,7 +13,22 @@ class TableRowExpandable extends Component {
         this.toggleExpand = this.toggleExpand.bind(this);
         this.state = {
             expanded: false,
+            sort: props.sort,
         };
+    }
+
+    static getDerivedStateFromProps(nextProps, prevState) {
+        if (
+            (!nextProps.children && prevState.expanded) ||
+            !shallowEqual(nextProps.sort, prevState.sort)
+        ) {
+            return {
+                expanded: false,
+                sort: nextProps.sort,
+            };
+        }
+
+        return null;
     }
 
     toggleExpand() {
@@ -26,15 +42,6 @@ class TableRowExpandable extends Component {
         ) {
             this.setState(prevState => ({ expanded: !prevState.expanded }));
             event.preventDefault();
-        }
-    }
-
-    componentWillReceiveProps(newProps) {
-        if (
-            (!newProps.children && this.state.expanded) ||
-            !shallowEqual(newProps.sort, this.props.sort)
-        ) {
-            this.setState({ expanded: false });
         }
     }
 
@@ -111,5 +118,7 @@ TableRowExpandable.propTypes = {
     footerRender: PropTypes.func,
     rowIndex: PropTypes.number,
 };
+
+polyfill(TableRowExpandable);
 
 export default TableRowExpandable;
