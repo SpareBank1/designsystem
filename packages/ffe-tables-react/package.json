@@ -29,7 +29,7 @@
     "@sb1/ffe-icons-react": "^6.0.12",
     "classnames": "^2.2.5",
     "deep-equal": "^1.0.1",
-    "memoize-one": "^4.0.3",
+    "memoize-one": "^5.0.0",
     "prop-types": "^15.6.0",
     "react-lifecycles-compat": "^3.0.4",
     "shallow-equals": "^1.0.0"
