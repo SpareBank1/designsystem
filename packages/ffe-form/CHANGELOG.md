@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.1.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@10.1.6...@sb1/ffe-form@10.1.7) (2018-12-17)
+
+### Bug Fixes
+
+-   **ffe-form:** remove clickable ghost checkboxes ([f7a3070](https://github.com/SpareBank1/designsystem/commit/f7a3070))
+
 ## [10.1.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@10.1.5...@sb1/ffe-form@10.1.6) (2018-12-11)
 
 **Note:** Version bump only for package @sb1/ffe-form
