@@ -3211,6 +3211,8 @@ html {
   position: absolute;
   opacity: 0;
   cursor: pointer;
+  width: 0;
+  height: 0;
 }
 .ffe-hidden-checkbox:checked + .ffe-checkbox::before,
 .ffe-hidden-checkbox:hover + .ffe-checkbox::before,
