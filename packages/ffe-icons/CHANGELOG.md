@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.5.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.4.1...@sb1/ffe-icons@12.5.0) (2018-12-18)
+
+### Features
+
+-   **ffe-icons:** Added new plasseringskonto icon, intended primarily for BM use ([2f09fa6](https://github.com/SpareBank1/designsystem/commit/2f09fa6))
+-   **ffe-icons:** Added new plasseringskonto pluss icon, intended primarily for BM use ([8dcbffe](https://github.com/SpareBank1/designsystem/commit/8dcbffe))
+-   **ffe-icons:** Added new skattetrekks-konto icon ([951d25c](https://github.com/SpareBank1/designsystem/commit/951d25c))
+
 ## [12.4.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.4.0...@sb1/ffe-icons@12.4.1) (2018-12-04)
 
 **Note:** Version bump only for package @sb1/ffe-icons
