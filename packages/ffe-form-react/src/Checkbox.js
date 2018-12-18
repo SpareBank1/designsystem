@@ -3,7 +3,7 @@ import { bool, node, string, func, oneOfType } from 'prop-types';
 import { v4 as hash } from 'uuid';
 import classNames from 'classnames';
 
-export default function CheckBox(props) {
+export default function Checkbox(props) {
     const {
         children,
         hiddenLabel,
@@ -50,7 +50,7 @@ export default function CheckBox(props) {
     );
 }
 
-CheckBox.propTypes = {
+Checkbox.propTypes = {
     /**
      * @deprecated
      * Use `children` instead
@@ -74,7 +74,7 @@ CheckBox.propTypes = {
     dark: bool,
 };
 
-CheckBox.defaultProps = {
+Checkbox.defaultProps = {
     inline: true,
     invalid: false,
     dark: false,

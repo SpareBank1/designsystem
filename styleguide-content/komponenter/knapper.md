@@ -124,11 +124,11 @@ Generelt for alle knapper gjelder:
 ### Når skal knapper ikke brukes?
 
 -   Generelt brukes ikke primær eller sekundærknapper for å navigere til sider utenfor løsningen. Bruk heller [lenke](#!/LinkText).
--   Knapper brukes vanligvis til å gjøre handlinger, ikke for å ta valg. For å ta valg, bruk [checkbox](#!/CheckBox) eller [radioknapp](#!/RadioButton) isteden og forplikt med en knapp.
+-   Knapper brukes vanligvis til å gjøre handlinger, ikke for å ta valg. For å ta valg, bruk [checkbox](#!/Checkbox) eller [radioknapp](#!/RadioButton) isteden og forplikt med en knapp.
 
 ### Relaterte komponenter
 
--   [Checkbox](#!/CheckBox)
+-   [Checkbox](#!/Checkbox)
 -   [Radioknapp](#!/RadioButton)
 -   [Lenke](#!/LinkText)
 
