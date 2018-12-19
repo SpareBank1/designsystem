@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.5.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.5.0...@sb1/ffe-icons@12.5.1) (2018-12-19)
+
+### Bug Fixes
+
+-   **ffe-icons:** fixed color bug on pose-trettien iconn ([209eacd](https://github.com/SpareBank1/designsystem/commit/209eacd))
+
 # [12.5.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.4.1...@sb1/ffe-icons@12.5.0) (2018-12-18)
 
 ### Features
