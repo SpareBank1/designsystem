@@ -2,12 +2,8 @@ import React from 'react';
 import { bool, func, node, string, oneOfType } from 'prop-types';
 import Button from './BaseButton';
 
-const TaskButton = props => (
-    <Button
-        buttonType="task"
-        leftIcon={props.icon}
-        {...props}
-    />
+const TaskButton = ({ icon, ...rest }) => (
+    <Button buttonType="task" leftIcon={icon} {...rest} />
 );
 
 TaskButton.propTypes = {
