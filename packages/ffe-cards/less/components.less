@@ -8,16 +8,20 @@
     }
 
     &--subtext {
+        &:extend(.ffe-small-text);
+
         margin: 5px 0 0 0;
-        color: @ffe-grey-charcoal;
     }
 
     &--title {
         &:extend(.ffe-h5);
 
         margin: 0;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
+
+        &--overflow-ellipsis {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
     }
 }

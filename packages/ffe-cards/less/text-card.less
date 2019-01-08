@@ -1,7 +1,16 @@
 .ffe-text-card {
-    padding: 20px;
+    padding: 20px 30px;
     display: flex;
     flex-flow: column nowrap;
     text-align: center;
     overflow: hidden;
+    min-height: auto;
+
+    @media screen and (min-width: @breakpoint-md) {
+        min-height: 100px;
+    }
+}
+
+.ffe-text-card--left-align {
+    text-align: left;
 }
