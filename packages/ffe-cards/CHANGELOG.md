@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@6.1.2...@sb1/ffe-cards@7.0.0) (2019-01-10)
+
+### Features
+
+-   **ffe-cards:** optional overflow ellipsis on title and left-align on text-card ([0f435d4](https://github.com/SpareBank1/designsystem/commit/0f435d4))
+
+### BREAKING CHANGES
+
+-   **ffe-cards:** ffe-card-component--title now requires the modifier
+    --overflow-ellipsis to limit the title to one line, and cut it off with
+    ellipsis.
+
 ## [6.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@6.1.1...@sb1/ffe-cards@6.1.2) (2018-12-11)
 
 **Note:** Version bump only for package @sb1/ffe-cards
