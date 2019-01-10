@@ -1,15 +1,22 @@
 import React from 'react';
 import classNames from 'classnames';
-import { string, func, node, oneOfType } from 'prop-types';
+import { string, func, node, oneOfType, bool } from 'prop-types';
 
 import CardBase from '../CardBase';
 import * as components from '../components';
 
 const TextCard = props => {
-    const { className, children, ...rest } = props;
+    const { className, leftAlign, children, ...rest } = props;
 
     return (
-        <CardBase className={classNames('ffe-text-card', className)} {...rest}>
+        <CardBase
+            className={classNames(
+                'ffe-text-card',
+                { 'ffe-text-card--left-align': leftAlign },
+                className,
+            )}
+            {...rest}
+        >
             {typeof children === 'function' ? children(components) : children}
         </CardBase>
     );
@@ -17,6 +24,10 @@ const TextCard = props => {
 
 TextCard.propTypes = {
     className: string,
+    /** Left-aligned text on the card */
+    leftAlign: bool,
+    /** The element to render the card as */
+    element: oneOfType([func, string]),
     /** Function that's passed available sub-components as arguments, or regular children */
     children: oneOfType([func, node]),
 };

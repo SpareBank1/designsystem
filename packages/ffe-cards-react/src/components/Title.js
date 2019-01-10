@@ -1,16 +1,28 @@
 import React from 'react';
 import classNames from 'classnames';
-import { string } from 'prop-types';
+import { string, bool } from 'prop-types';
 
 import ComponentBase from './ComponentBase';
 
-const Title = ({ className, ...rest }) => (
+const Title = ({ className, overflowEllipsis, ...rest }) => (
     <ComponentBase
-        className={classNames('ffe-card-component--title', className)}
+        className={classNames(
+            'ffe-card-component--title',
+            {
+                'ffe-card-component--title--overflow-ellipsis': overflowEllipsis,
+            },
+            className,
+        )}
         {...rest}
     />
 );
 
-Title.propTypes = { className: string };
+Title.defaultProps = { overflowEllipsis: true };
+
+Title.propTypes = {
+    className: string,
+    /** Disable wrapping and hide overflow with ellipsis */
+    overflowEllipsis: bool,
+};
 
 export default Title;
