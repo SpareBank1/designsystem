@@ -19,7 +19,7 @@ CardBase.defaultProps = {
 CardBase.propTypes = {
     className: string,
     children: node,
-    /** The element to render the card as. */
+    /** The element to render the card as */
     element: oneOfType([func, string]),
 };
 

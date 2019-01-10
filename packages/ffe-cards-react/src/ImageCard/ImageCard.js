@@ -27,6 +27,8 @@ ImageCard.propTypes = {
     className: string,
     /** A rendered image */
     image: node.isRequired,
+    /** The element to render the card as */
+    element: oneOfType([func, string]),
     /** Function that's passed available sub-components as arguments, or regular children */
     children: oneOfType([func, node]),
 };
