@@ -556,6 +556,7 @@ html {
   }
 }
 .ffe-small-text,
+.ffe-card-component--subtext,
 .ffe-calendar__weekday,
 .ffe-calendar__date,
 .ffe-radio-button__tooltip-text.ffe-tooltip__text {
@@ -790,6 +791,7 @@ html {
     line-height: 28px;
   }
   .ffe-small-text,
+  .ffe-card-component--subtext,
   .ffe-calendar__weekday,
   .ffe-calendar__date,
   .ffe-radio-button__tooltip-text.ffe-tooltip__text {
@@ -856,6 +858,7 @@ html {
     line-height: 34px;
   }
   .ffe-small-text,
+  .ffe-card-component--subtext,
   .ffe-calendar__weekday,
   .ffe-calendar__date,
   .ffe-radio-button__tooltip-text.ffe-tooltip__text {
@@ -2390,17 +2393,18 @@ html {
 }
 .ffe-card-component--subtext {
   margin: 5px 0 0 0;
-  color: #676767;
 }
 .ffe-card-component--title {
   margin: 0;
+}
+.ffe-card-component--title--overflow-ellipsis {
   -o-text-overflow: ellipsis;
      text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
 .ffe-text-card {
-  padding: 20px;
+  padding: 20px 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2410,6 +2414,15 @@ html {
           flex-flow: column nowrap;
   text-align: center;
   overflow: hidden;
+  min-height: auto;
+}
+@media screen and (min-width: 768px) {
+  .ffe-text-card {
+    min-height: 100px;
+  }
+}
+.ffe-text-card--left-align {
+  text-align: left;
 }
 .ffe-icon-card {
   max-width: 440px;
@@ -2459,7 +2472,7 @@ html {
   min-width: 30px;
   width: 30px;
   height: 30px;
-  margin: 0 25px 0 10px;
+  margin: 0 15px 0 0;
 }
 .ffe-icon-card--condensed .ffe-icon-component--card-name {
   margin: 0 0 5px;
@@ -2500,7 +2513,7 @@ html {
   border-color: #0071cd;
 }
 .ffe-image-card__image {
-  max-height: 140px;
+  max-height: 160px;
   position: relative;
   overflow: hidden;
   border-top-left-radius: 5px;
@@ -2529,7 +2542,7 @@ html {
   border-top: 0;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  min-height: 220px;
+  min-height: 200px;
 }
 @media screen and (min-width: 768px) {
   .ffe-image-card .ffe-image-card__icon {
