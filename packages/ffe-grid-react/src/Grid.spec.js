@@ -62,7 +62,11 @@ describe('Grid', () => {
     });
 
     describe('when mounting', () => {
-        console.error = jest.fn();
+        beforeEach(() => {
+            global.console.error = jest.fn();
+        });
+
+        afterEach(() => global.console.error.mockRestore());
 
         it('warns about nested <Grid> tag', () => {
             mount(

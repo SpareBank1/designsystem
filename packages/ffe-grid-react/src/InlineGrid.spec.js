@@ -1,6 +1,6 @@
 import React from 'react';
-import { shallow } from 'enzyme';
-import { InlineGrid } from '.';
+import { mount, shallow } from 'enzyme';
+import { Grid, GridRow, GridCol, InlineGrid } from '.';
 
 const defaultProps = {
     children: <p>blah</p>,
@@ -41,5 +41,42 @@ describe('InlineGrid', () => {
         const el = renderShallow({ element: 'section' });
 
         expect(el.type()).toBe('section');
+    });
+
+    describe('when mounting', () => {
+        beforeEach(() => {
+            global.console.error = jest.fn();
+        });
+
+        afterEach(() => global.console.error.mockRestore());
+
+        it('warns about a <Grid> inside an <InlineGrid>', () => {
+            mount(
+                <InlineGrid>
+                    <GridRow>
+                        <GridCol>
+                            <Grid />
+                        </GridCol>
+                    </GridRow>
+                </InlineGrid>,
+            );
+
+            expect(console.error).toHaveBeenCalled();
+            expect(console.error.mock.calls[0][0]).toContain('InlineGrid');
+        });
+
+        it('allows an <InlineGrid> inside another <InlineGrid>', () => {
+            mount(
+                <InlineGrid>
+                    <GridRow>
+                        <GridCol>
+                            <InlineGrid />
+                        </GridCol>
+                    </GridRow>
+                </InlineGrid>,
+            );
+
+            expect(console.error).not.toHaveBeenCalled();
+        });
     });
 });

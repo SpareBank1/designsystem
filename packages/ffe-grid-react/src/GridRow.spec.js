@@ -3,6 +3,7 @@ import { mount, shallow } from 'enzyme';
 
 import { GridRow, GridCol } from '.';
 import backgroundColors from './background-colors';
+import InlineGrid from './InlineGrid';
 
 const defaultProps = {
     children: <p>blah</p>,
@@ -100,6 +101,7 @@ describe('GridRow', () => {
         beforeEach(() => {
             global.console.error = jest.fn();
         });
+
         afterEach(() => global.console.error.mockRestore());
 
         it('warns about nested <GridRow> tag', () => {
@@ -119,6 +121,20 @@ describe('GridRow', () => {
 
             expect(console.error).toHaveBeenCalledTimes(1);
             expect(console.error.mock.calls[0][0]).toContain('<GridRow />');
+        });
+
+        it('does not warn about nested <GridRow> tags inside an <InlineGrid> tag', () => {
+            mount(
+                <GridRow>
+                    <GridCol>
+                        <InlineGrid>
+                            <GridRow />
+                        </InlineGrid>
+                    </GridCol>
+                </GridRow>,
+            );
+
+            expect(console.error).not.toHaveBeenCalled();
         });
 
         it('does not blow up if a null-child is received', () => {

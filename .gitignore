@@ -16,6 +16,7 @@ es/
 .idea/
 .vscode/
 *.iml
+*.code-workspace
 
 # OS
 .DS_Store

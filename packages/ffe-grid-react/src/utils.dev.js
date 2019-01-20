@@ -1,18 +1,24 @@
 import React from 'react';
 
-const checkForNestedComponent = (children, Component) =>
+import { InlineGrid } from '.';
+
+const checkForNestedComponent = (children, Component, componentName) =>
     React.Children.forEach(children, child => {
-        if (!child) {
+        if (!child || child.type === InlineGrid) {
             return;
         } else if (child.type === Component) {
             console.error(`
-                Detected a <${Component.name} /> child within another ${
-                Component.name
-            }.
+                Detected a <${
+                    Component.name
+                } /> child within an ${componentName || Component.name}.
                 Do not nest these, the result will be unpredictable.
             `);
         } else if (child.props && child.props.children) {
-            return checkForNestedComponent(child.props.children, Component);
+            return checkForNestedComponent(
+                child.props.children,
+                Component,
+                componentName,
+            );
         }
     });
 
@@ -72,7 +78,17 @@ const checkValidSmColumns = modifier => {
     }
 };
 
-const checkValidColumnCount = ({ sm, md }) => {
+const checkValidColumnCount = ({ sm, md }, domNode) => {
+    if (domNode) {
+        let parent = domNode.parentElement;
+        while (parent) {
+            if (parent.className.indexOf('--inline') !== -1) {
+                return;
+            }
+            parent = parent.parentElement;
+        }
+    }
+
     if (md) {
         checkValidMdColumns(md);
     }
