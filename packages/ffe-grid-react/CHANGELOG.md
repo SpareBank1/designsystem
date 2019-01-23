@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@9.1.3...@sb1/ffe-grid-react@9.1.4) (2019-01-23)
+
+### Bug Fixes
+
+-   **ffe-grid-react:** Reduce console.error noise with inline-grid ([697318d](https://github.com/SpareBank1/designsystem/commit/697318d))
+
 ## [9.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@9.1.2...@sb1/ffe-grid-react@9.1.3) (2018-12-11)
 
 ### Bug Fixes
