@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, createRef } from 'react';
 import {
     bool,
     node,
@@ -20,11 +20,10 @@ import {
 function camelCaseToDashCase(str) {
     return str
         .split('')
-        .reduce(
-            (previous, current) =>
-                /[A-Z]/.test(current)
-                    ? `${previous}-${current.toLowerCase()}`
-                    : `${previous}${current}`,
+        .reduce((previous, current) =>
+            /[A-Z]/.test(current)
+                ? `${previous}-${current.toLowerCase()}`
+                : `${previous}${current}`,
         );
 }
 
@@ -82,12 +81,18 @@ const backgroundClass = ({ background }) => {
 };
 
 export default class GridCol extends Component {
+    constructor() {
+        super();
+
+        this.ref = createRef();
+    }
+
     componentDidMount() {
         /* istanbul ignore else: there is no else  */
         if (process.env.NODE_ENV !== 'production') {
             checkForDeprecatedModifiers(this.props);
             checkForNestedComponent(this.props.children, GridCol);
-            checkValidColumnCount(this.props);
+            checkValidColumnCount(this.props, this.ref.current);
         }
     }
 
@@ -122,7 +127,7 @@ export default class GridCol extends Component {
             .join(' ');
 
         return (
-            <Element className={classes} {...rest}>
+            <Element className={classes} ref={this.ref} {...rest}>
                 {children}
             </Element>
         );

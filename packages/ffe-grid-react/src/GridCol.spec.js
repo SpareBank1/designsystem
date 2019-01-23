@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount, shallow } from 'enzyme';
-import { Grid, GridRow, GridCol } from '.';
+import { Grid, GridRow, GridCol, InlineGrid } from '.';
 import backgroundColors from './background-colors';
 
 const defaultProps = {
@@ -233,6 +233,20 @@ describe('GridCol', () => {
             expect(console.error.mock.calls[0][0]).toContain('<GridCol />');
         });
 
+        it('does not warn about nested <GridCol> tags inside an <InlineGrid> tag', () => {
+            mount(
+                <GridCol>
+                    <InlineGrid>
+                        <GridRow>
+                            <GridCol />
+                        </GridRow>
+                    </InlineGrid>
+                </GridCol>,
+            );
+
+            expect(console.error).not.toHaveBeenCalled();
+        });
+
         it('does not blow up if a null-child is received', () => {
             // The below inline check on "false" will result in the outer <GridCol>
             // receiving children as an array-like of [<GridCol />, null] which it needs
@@ -247,13 +261,13 @@ describe('GridCol', () => {
 
         describe('checks cols and offset validity', () => {
             console.error = jest.fn();
-            const renderWithModifier = modifier =>
+            const renderWithModifier = (modifier, Component = Grid) =>
                 mount(
-                    <Grid>
+                    <Component>
                         <GridRow>
                             <GridCol {...modifier} />
                         </GridRow>
-                    </Grid>,
+                    </Component>,
                 );
 
             it('does not warn about valid columns and offsets for "lg" screens', () => {
@@ -316,6 +330,14 @@ describe('GridCol', () => {
                 expect(console.error.mock.calls[0][0]).toContain(
                     'The grid should have 4 columns for "sm" screens',
                 );
+            });
+
+            describe('when nested inside an inline grid', () => {
+                it('does not warn about usage of cols and offsets', () => {
+                    renderWithModifier({ sm: 5 }, InlineGrid);
+
+                    expect(console.error).not.toHaveBeenCalled();
+                });
             });
         });
     });

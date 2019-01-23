@@ -1,16 +1,32 @@
-import React from 'react';
+import React, { Component } from 'react';
 import classNames from 'classnames';
 import { node, string } from 'prop-types';
 
-export default function InlineGrid(props) {
-    const { className, element: Element, ...rest } = props;
+import { checkForNestedComponent } from './utils';
+import { Grid } from '.';
 
-    return (
-        <Element
-            className={classNames(className, 'ffe-grid', 'ffe-grid--inline')}
-            {...rest}
-        />
-    );
+export default class InlineGrid extends Component {
+    componentDidMount() {
+        /* istanbul ignore else: there is no else  */
+        if (process.env.NODE_ENV !== 'production') {
+            checkForNestedComponent(this.props.children, Grid, 'InlineGrid');
+        }
+    }
+
+    render() {
+        const { className, element: Element, ...rest } = this.props;
+
+        return (
+            <Element
+                className={classNames(
+                    className,
+                    'ffe-grid',
+                    'ffe-grid--inline',
+                )}
+                {...rest}
+            />
+        );
+    }
 }
 
 InlineGrid.propTypes = {
