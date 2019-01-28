@@ -124,11 +124,7 @@ body {
 }
 
 .sb1ds-main {
-    margin-top: 20px;
-
-    @media screen and (min-width: @breakpoint-lg) {
-        margin-top: 90px;
-    }
+    margin: 20px 10px 10px;
 
     img {
         max-width: 100%;
@@ -137,6 +133,12 @@ body {
     pre {
         overflow: auto;
         max-width: 100%;
+    }
+
+    &--hero {
+        @media screen and (min-width: @breakpoint-lg) {
+            margin-top: 90px;
+        }
     }
 }
 

@@ -10,6 +10,8 @@
 
     @media screen and (min-width: @breakpoint-xl) {
         overflow: auto;
+        position: fixed;
+        min-width: 280px;
     }
 
     &__menu {
@@ -18,13 +20,13 @@
         margin-bottom: 20px;
 
         @media screen and (min-width: @breakpoint-md) {
-            padding: 0 20px 20px 20px;
             border-bottom: none;
-            margin-bottom: 0;
         }
 
         @media screen and (min-width: @breakpoint-lg) {
             margin-top: 60px;
+            margin-bottom: 0;
+            padding: 0 20px 20px 20px;
         }
 
         @media screen and (min-width: @breakpoint-xl) {
@@ -51,11 +53,10 @@
     }
 
     &__wrapper {
-        margin: 0 -10px;
-
         @media screen and (min-width: @breakpoint-md) {
             height: 100%;
             margin: 0;
+            padding-right: 20px;
         }
     }
 
