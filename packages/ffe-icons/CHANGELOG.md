@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.6.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.5.1...@sb1/ffe-icons@12.6.0) (2019-01-29)
+
+### Features
+
+-   **ffe-icons:** Added `kr-sirkel-pil-ikon.svg` ([7faa13e](https://github.com/SpareBank1/designsystem/commit/7faa13e))
+
 ## [12.5.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.5.0...@sb1/ffe-icons@12.5.1) (2018-12-19)
 
 ### Bug Fixes
