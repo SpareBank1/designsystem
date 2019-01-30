@@ -6566,6 +6566,8 @@ input:not([type='radio']):not([type='checkbox']) {
 @media screen and (min-width: 1280px) {
   .sb1ds-sidebar {
     overflow: auto;
+    position: fixed;
+    min-width: 280px;
   }
 }
 .sb1ds-sidebar__menu {
@@ -6575,14 +6577,14 @@ input:not([type='radio']):not([type='checkbox']) {
 }
 @media screen and (min-width: 768px) {
   .sb1ds-sidebar__menu {
-    padding: 0 20px 20px 20px;
     border-bottom: none;
-    margin-bottom: 0;
   }
 }
 @media screen and (min-width: 1024px) {
   .sb1ds-sidebar__menu {
     margin-top: 60px;
+    margin-bottom: 0;
+    padding: 0 20px 20px 20px;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -6605,13 +6607,11 @@ input:not([type='radio']):not([type='checkbox']) {
     background: rgba(0, 0, 0, 0.3);
   }
 }
-.sb1ds-sidebar__wrapper {
-  margin: 0 -10px;
-}
 @media screen and (min-width: 768px) {
   .sb1ds-sidebar__wrapper {
     height: 100%;
     margin: 0;
+    padding-right: 20px;
   }
 }
 .sb1ds-sidebar__toggle {
@@ -6654,11 +6654,6 @@ input:not([type='radio']):not([type='checkbox']) {
   margin: 10px 0;
   vertical-align: middle;
 }
-@media screen and (min-width: 768px) {
-  .sb1ds-top-menu__logo {
-    margin: 10px 20px;
-  }
-}
 @media screen and (min-width: 1280px) {
   .sb1ds-top-menu__logo {
     height: 40px;
@@ -6681,7 +6676,7 @@ input:not([type='radio']):not([type='checkbox']) {
 .sb1ds-top-menu__link {
   display: inline-block;
   height: 100%;
-  padding: 5px 10px;
+  padding: 10px;
   color: #676767;
   position: relative;
   white-space: nowrap;
@@ -6767,8 +6762,8 @@ input:not([type='radio']):not([type='checkbox']) {
 }
 .sb1ds-top-menu__toggle-button {
   position: absolute;
-  top: 12px;
-  right: 10px;
+  top: 3px;
+  right: 0;
 }
 .sb1ds-top-menu__toggle-button::after {
   border: none;
@@ -9120,12 +9115,7 @@ body {
   width: 100%;
 }
 .sb1ds-main {
-  margin-top: 20px;
-}
-@media screen and (min-width: 1024px) {
-  .sb1ds-main {
-    margin-top: 90px;
-  }
+  margin: 20px 10px 10px;
 }
 .sb1ds-main img {
   max-width: 100%;
@@ -9133,6 +9123,11 @@ body {
 .sb1ds-main pre {
   overflow: auto;
   max-width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  .sb1ds-main--hero {
+    margin-top: 90px;
+  }
 }
 .sb1ds-section {
   margin: 30px 0;
