@@ -1,20 +1,25 @@
 .sb1ds-example {
     width: 100%;
+    padding: 10px;
 }
 
 .sb1ds-example__header-bad-example {
-    margin: 1em 0 0.5em;
+    margin: 0;
     color: @ffe-orange-fire;
 }
 
 .sb1ds-example__header-good-example {
-    margin: 1em 0 0.5em;
+    margin: 0;
     color: @ffe-green-emerald;
 }
 
 .sb1ds-example__header-no-animation-example {
-    margin: 1em 0 0.5em;
+    margin: 0;
     color: @ffe-black;
+}
+
+.sb1ds-do-dont {
+    margin-bottom: 20px;
 }
 
 .sb1ds-svgs {
@@ -26,10 +31,10 @@
 }
 
 .sb1ds-transition {
-    &.sb1ds-bad > * {
+    &.sb1ds-bad * {
         transition-duration: 1s !important;
     }
-    &.sb1ds-none > * {
+    &.sb1ds-none * {
         transition: none !important;
     }
 }
@@ -42,6 +47,7 @@
     transition: all @ffe-transition-duration @ffe-ease;
     position: relative;
     background-color: @ffe-white;
+    text-align: center;
     cursor: pointer;
     &::before {
         content: '';
@@ -638,17 +644,17 @@
 .sb1ds-check {
     &.sb1ds-good {
         .ffe-hidden-checkbox:checked + .ffe-checkbox:after {
-            animation-duration: @ffe-transition-duration;
+            transition-duration: @ffe-transition-duration;
         }
     }
     &.sb1ds-bad {
         .ffe-hidden-checkbox:checked + .ffe-checkbox:after {
-            animation-duration: 1s;
+            transition-duration: 1s;
         }
     }
     &.sb1ds-none {
         .ffe-hidden-checkbox:checked + .ffe-checkbox:after {
-            animation: none;
+            transition: none;
         }
     }
 }
@@ -679,23 +685,24 @@
 
 @keyframes rain {
     from {
-        transform: translateY(-200%);
+        transform: translateY(-100%);
     }
     to {
-        transform: translateY(470%);
+        transform: translateY(150%);
     }
 }
 
 .sb1ds-rain #drop1,
 .sb1ds-rain #drop2 {
+    transform: translateY(-100%);
     animation-name: rain;
-    animation-duration: 0.8s;
+    animation-duration: 1s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
 
 .sb1ds-rain #drop2 {
-    animation-duration: 1s;
+    animation-duration: 1.2s;
 }
 
 @keyframes move-cloud {
@@ -806,7 +813,7 @@
     from {
     }
     to {
-        transform: translateX(1em) translateY(0.2em) rotate3d(1, 4, 4, 20deg);
+        transform: translateX(11px) translateY(-2px) rotate3d(3, 2, 3, 14deg);
     }
 }
 
@@ -816,26 +823,26 @@
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-timing-function: ease-in-out;
-    transform-origin: 8em 6em;
+    transform-origin: initial;
 }
 
 /* Large svgs */
 
 @keyframes cloud {
     from {
-        transform: translateX(100%);
+        transform: translateX(20%);
     }
     to {
-        transform: translateX(-600%);
+        transform: translateX(-100%);
     }
 }
 
 @keyframes bike-from-left {
     from {
-        transform: translateX(-500%);
+        transform: translateX(-100%);
     }
     to {
-        transform: translateX(150%);
+        transform: translateX(27%);
     }
 }
 
@@ -954,7 +961,7 @@
     #flight-cloud,
     #cloud {
         animation-name: cloud;
-        animation-duration: 45s;
+        animation-duration: 25s;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
     }

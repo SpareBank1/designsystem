@@ -6,19 +6,19 @@ Dekorative animasjoner kan i tillegg bidra til å skape levende produkter og gre
 
 ### Når bruker vi funksjonelle animasjoner?
 
-*   Visuell feedback på interaksjoner
-*   Kommunisere hvordan systemet responderer på brukerhandlinger
-*   Indikere at elementer trenger oppmerksomhet
-*   Visuelle hint om hvor og hvordan bruker må forholde seg til elementer
+-   Visuell feedback på interaksjoner
+-   Kommunisere hvordan systemet responderer på brukerhandlinger
+-   Indikere at elementer trenger oppmerksomhet
+-   Visuelle hint om hvor og hvordan bruker må forholde seg til elementer
 
 ### Når bruker vi dekorative animasjoner?
 
-*   Bevegelse i illustrasjoner/ikoner som stemningsskapende middel
-*   Må ikke konkurrere med interaksjonselementer
+-   Bevegelse i illustrasjoner/ikoner som stemningsskapende middel
+-   Må ikke konkurrere med interaksjonselementer
 
 ### Hvordan designer vi funksjonelle animasjoner?
 
-<div class="ffe-grid ffe-grid--condensed ffe-grid--no-top-padding">
+<div class="ffe-grid ffe-grid--inline sb1ds-do-dont">
     <div class="ffe-grid__row ffe-grid__row--bg-blue-ice">
         <div class="sb1ds-relocate sb1ds-good ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--middle ffe-grid__col--no-bottom-padding">
             <ul>
@@ -51,7 +51,7 @@ Dekorative animasjoner kan i tillegg bidra til å skape levende produkter og gre
     </div>
 </div>
 
-<div class="ffe-grid ffe-grid--condensed">
+<div class="ffe-grid ffe-grid--inline sb1ds-do-dont">
     <div class="ffe-grid__row ffe-grid__row--bg-blue-ice">
         <div class="sb1ds-relocate sb1ds-good ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--middle ffe-grid__col--no-bottom-padding">
             <ul>
@@ -87,7 +87,7 @@ Dekorative animasjoner kan i tillegg bidra til å skape levende produkter og gre
     </div>
 </div>
 
-<div class="ffe-grid ffe-grid--condensed">
+<div class="ffe-grid ffe-grid--inline sb1ds-do-dont">
     <div class="ffe-grid__row ffe-grid__row--bg-blue-ice">
         <div class="sb1ds-relocate sb1ds-good ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--middle ffe-grid__col--no-bottom-padding">
             <ul>
@@ -119,7 +119,7 @@ Dekorative animasjoner kan i tillegg bidra til å skape levende produkter og gre
     </div>
 </div>
 
-<div class="ffe-grid ffe-grid--condensed">
+<div class="ffe-grid ffe-grid--inline sb1ds-do-dont">
     <div class="ffe-grid__row ffe-grid__row--bg-blue-ice">
         <div class="sb1ds-relocate sb1ds-good ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--middle ffe-grid__col--no-bottom-padding">
             <ul>
@@ -150,7 +150,7 @@ Dekorative animasjoner kan i tillegg bidra til å skape levende produkter og gre
     </div>
 </div>
 
-<div class="ffe-grid ffe-grid--condensed">
+<div class="ffe-grid ffe-grid--inline sb1ds-do-dont">
     <div class="ffe-grid__row ffe-grid__row--bg-blue-ice">
         <div class="sb1ds-relocate sb1ds-good ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--middle ffe-grid__col--no-bottom-padding">
             <ul>
@@ -189,7 +189,7 @@ Dekorative animasjoner kan i tillegg bidra til å skape levende produkter og gre
     </div>
 </div>
 
-<div class="ffe-grid ffe-grid--condensed">
+<div class="ffe-grid ffe-grid--inline sb1ds-do-dont">
     <div class="ffe-grid__row ffe-grid__row--bg-blue-ice">
         <div class="sb1ds-relocate sb1ds-good ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--middle ffe-grid__col--no-bottom-padding">
             <ul>
@@ -228,7 +228,7 @@ Dekorative animasjoner kan i tillegg bidra til å skape levende produkter og gre
     </div>
 </div>
 
-<div class="ffe-grid ffe-grid--condensed">
+<div class="ffe-grid ffe-grid--inline sb1ds-do-dont">
     <div class="ffe-grid__row ffe-grid__row--bg-blue-ice">
         <div class="sb1ds-relocate sb1ds-good ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--middle ffe-grid__col--no-bottom-padding">
             <ul>
@@ -258,7 +258,7 @@ Dekorative animasjoner kan i tillegg bidra til å skape levende produkter og gre
     </div>
 </div>
 
-<div class="ffe-grid ffe-grid--condensed">
+<div class="ffe-grid ffe-grid--inline sb1ds-do-dont">
     <div class="ffe-grid__row ffe-grid__row--bg-blue-ice">
         <div class="sb1ds-relocate sb1ds-good ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--middle ffe-grid__col--no-bottom-padding">
             <ul>
@@ -290,9 +290,9 @@ Dekorative animasjoner kan i tillegg bidra til å skape levende produkter og gre
 
 ### Hvordan designer vi dekorative animasjoner?
 
-*   Naturlige bevegelser
-*   Koreografi
-*   Repeterende bevegelser/loop
+-   Naturlige bevegelser
+-   Koreografi
+-   Repeterende bevegelser/loop
 
 ### Felles variabler for utviklere av funksjonelle animasjoner
 
@@ -328,7 +328,7 @@ transition: all .2s cubic-bezier(.46, -0.265, .48, 1.38);
 
 ### Eksempler på funksjonelle animasjoner
 
-<div class="ffe-grid ffe-grid--condensed ffe-grid--no-top-padding">
+<div class="ffe-grid ffe-grid--inline ffe-grid--no-top-padding">
     <div class="ffe-grid__row ffe-grid__row--bg-sand">
         <div class="ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--center sb1ds-transition sb1ds-good">
             <h4 class="sb1ds-example__header-good-example">0.2s</h4>
@@ -340,257 +340,266 @@ transition: all .2s cubic-bezier(.46, -0.265, .48, 1.38);
             <h4 class="sb1ds-example__header-no-animation-example">Ingen animasjon</h4>
         </div>
         <div class="ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--center sb1ds-bgcolor sb1ds-transition sb1ds-good">
-            <button class="ffe-button ffe-button--action">
-                <span class="ffe-button__label">
-                    Bakgrunnsfarge
-                </span>
-            </button>
+            <div class="sb1ds-example">
+                <button class="ffe-button ffe-button--action">
+                    <span class="ffe-button__label">
+                        Bakgrunnsfarge
+                    </span>
+                </button>
+            </div>
         </div>
         <div class="ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--center sb1ds-bgcolor sb1ds-transition sb1ds-bad">
-            <button class="ffe-button ffe-button--action">
-                <span class="ffe-button__label">
-                    Bakgrunnsfarge
-                </span>
-            </button>
+            <div class="sb1ds-example">
+                <button class="ffe-button ffe-button--action">
+                    <span class="ffe-button__label">
+                        Bakgrunnsfarge
+                    </span>
+                </button>
+            </div>
         </div>
         <div class="ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--center sb1ds-bgcolor sb1ds-transition sb1ds-none">
-            <button class="ffe-button ffe-button--action">
-                <span class="ffe-button__label">
-                    Bakgrunnsfarge
-                </span>
-            </button>
+            <div class="sb1ds-example">
+                <button class="ffe-button ffe-button--action">
+                    <span class="ffe-button__label">
+                        Bakgrunnsfarge
+                    </span>
+                </button>
+            </div>
         </div>
         <div class="ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--center sb1ds-resize sb1ds-transition sb1ds-good">
-            <button class="ffe-button ffe-button--primary">
-                <span class="ffe-button__label">
-                    Resize
-                </span>
-            </button>
+            <div class="sb1ds-example">
+                <button class="ffe-button ffe-button--primary">
+                    <span class="ffe-button__label">
+                        Resize
+                    </span>
+                </button>
+            </div>
         </div>
         <div class="ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--center sb1ds-resize sb1ds-transition sb1ds-bad">
-            <button class="ffe-button ffe-button--primary">
-                <span class="ffe-button__label">
-                    Resize
-                </span>
-            </button>
+            <div class="sb1ds-example">
+                <button class="ffe-button ffe-button--primary">
+                    <span class="ffe-button__label">
+                        Resize
+                    </span>
+                </button>
+            </div>
         </div>
         <div class="ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--center sb1ds-resize sb1ds-transition sb1ds-none">
-            <button class="ffe-button ffe-button--primary">
-                <span class="ffe-button__label">
-                    Resize
-                </span>
-            </button>
+            <div class="sb1ds-example">
+                <button class="ffe-button ffe-button--primary">
+                    <span class="ffe-button__label">
+                        Resize
+                    </span>
+                </button>
+            </div>
         </div>
         <div class="ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--center sb1ds-border sb1ds-transition sb1ds-good">
-            <label
-                class="ffe-form-label"
-                for="anim-input-example-good"
-            >
-                0.2s
-            </label>
-            <input
-                class="ffe-input-field ffe-input-field--inline"
-                id="anim-input-example-good"
-                placeholder="Border"
-            >
+            <div class="sb1ds-example">
+                <input
+                    class="ffe-input-field ffe-input-field--inline"
+                    id="anim-input-example-good"
+                    placeholder="Border"
+                >
+            </div>
         </div>
         <div class="ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--center sb1ds-border sb1ds-transition sb1ds-bad">
-            <label
-                class="ffe-form-label"
-                for="anim-input-example-bad"
-            >
-                1.0s
-            </label>
-            <input
-                class="ffe-input-field ffe-input-field--inline"
-                id="anim-input-example-bad"
-                placeholder="Border"
-            >
+            <div class="sb1ds-example">
+                <input
+                    class="ffe-input-field ffe-input-field--inline"
+                    id="anim-input-example-bad"
+                    placeholder="Border"
+                >
+            </div>
         </div>
         <div class="ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--center border sb1ds-transition sb1ds-none">
-            <label
-                class="ffe-form-label"
-                for="anim-input-example-none"
-            >
-                Ingen animasjon
-            </label>
-            <input
-                class="ffe-input-field ffe-input-field--inline"
-                id="anim-input-example-none"
-                placeholder="Border"
-            >
+            <div class="sb1ds-example">
+                <input
+                    class="ffe-input-field ffe-input-field--inline"
+                    id="anim-input-example-none"
+                    placeholder="Border"
+                >
+            </div>
         </div>
         <div class="ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--center sb1ds-check sb1ds-transition sb1ds-good">
-            <input class="ffe-hidden-checkbox"
-                    type="checkbox"
-                    id="c1">
-            <label class="ffe-checkbox" for="c1">Checkbox</label>
+            <div class="sb1ds-example">
+                <input class="ffe-hidden-checkbox"
+                        type="checkbox"
+                        id="c1">
+                <label class="ffe-checkbox" for="c1">Checkbox</label>
+            </div>
         </div>
         <div class="ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--center sb1ds-check sb1ds-transition sb1ds-bad">
-            <input class="ffe-hidden-checkbox"
-                    type="checkbox"
-                    id="c2">
-            <label class="ffe-checkbox" for="c2">Checkbox</label>
+            <div class="sb1ds-example">
+                <input class="ffe-hidden-checkbox"
+                        type="checkbox"
+                        id="c2">
+                <label class="ffe-checkbox" for="c2">Checkbox</label>
+            </div>
         </div>
         <div class="ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--center sb1ds-check sb1ds-transition sb1ds-none">
-            <input class="ffe-hidden-checkbox"
-                    type="checkbox"
-                    id="c3">
-            <label class="ffe-checkbox" for="c3">Checkbox</label>
+            <div class="sb1ds-example">
+                <input class="ffe-hidden-checkbox"
+                        type="checkbox"
+                        id="c3">
+                <label class="ffe-checkbox" for="c3">Checkbox</label>
+            </div>
         </div>
         <div class="ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--center sb1ds-radio sb1ds-transition sb1ds-good">
-            <fieldset class="ffe-fieldset">
-                <legend class="ffe-form-label">
-                    0.2s
-                </legend>
-                <input
-                    class="ffe-radio-input"
-                    type="radio"
-                    name="radio-good"
-                    value="true"
-                    id="radio-example-good-1"
-                >
-                <label class="ffe-radio-button ffe-radio-button--inline" for="radio-example-good-1">
-                    Ja
-                </label>
-                <input
-                    class="ffe-radio-input"
-                    type="radio"
-                    name="radio-good"
-                    value="false"
-                    id="radio-example-good-2"
-                >
-                <label class="ffe-radio-button ffe-radio-button--inline" for="radio-example-good-2">
-                    Nei
-                </label>
-            </fieldset>
+            <div class="sb1ds-example">
+                <fieldset class="ffe-fieldset">
+                    <input
+                        class="ffe-radio-input"
+                        type="radio"
+                        name="radio-good"
+                        value="true"
+                        id="radio-example-good-1"
+                    >
+                    <label class="ffe-radio-button ffe-radio-button--inline" for="radio-example-good-1">
+                        Ja
+                    </label>
+                    <input
+                        class="ffe-radio-input"
+                        type="radio"
+                        name="radio-good"
+                        value="false"
+                        id="radio-example-good-2"
+                    >
+                    <label class="ffe-radio-button ffe-radio-button--inline" for="radio-example-good-2">
+                        Nei
+                    </label>
+                </fieldset>
+            </div>
         </div>
         <div class="ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--center sb1ds-radio sb1ds-transition sb1ds-bad">
-            <fieldset class="ffe-fieldset">
-                <legend class="ffe-form-label">
-                    1.0s
-                </legend>
-                <input
-                    class="ffe-radio-input"
-                    type="radio"
-                    name="radio-bad"
-                    value="true"
-                    id="radio-example-bad-1"
-                >
-                <label class="ffe-radio-button ffe-radio-button--inline" for="radio-example-bad-1">
-                    Ja
-                </label>
-                <input
-                    class="ffe-radio-input"
-                    type="radio"
-                    name="radio-bad"
-                    value="false"
-                    id="radio-example-bad-2"
-                >
-                <label class="ffe-radio-button ffe-radio-button--inline" for="radio-example-bad-2">
-                    Nei
-                </label>
-            </fieldset>
+            <div class="sb1ds-example">
+                <fieldset class="ffe-fieldset">
+                    <input
+                        class="ffe-radio-input"
+                        type="radio"
+                        name="radio-bad"
+                        value="true"
+                        id="radio-example-bad-1"
+                    >
+                    <label class="ffe-radio-button ffe-radio-button--inline" for="radio-example-bad-1">
+                        Ja
+                    </label>
+                    <input
+                        class="ffe-radio-input"
+                        type="radio"
+                        name="radio-bad"
+                        value="false"
+                        id="radio-example-bad-2"
+                    >
+                    <label class="ffe-radio-button ffe-radio-button--inline" for="radio-example-bad-2">
+                        Nei
+                    </label>
+                </fieldset>
+            </div>
         </div>
         <div class="ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--center sb1ds-radio sb1ds-transition sb1ds-none">
-            <fieldset class="ffe-fieldset">
-                <legend class="ffe-form-label">
-                    Ingen animasjon
-                </legend>
-                <input
-                    class="ffe-radio-input"
-                    type="radio"
-                    name="radio-none"
-                    value="true"
-                    id="radio-example-none-1"
-                >
-                <label class="ffe-radio-button ffe-radio-button--inline" for="radio-example-none-1">
-                    Ja
-                </label>
-                <input
-                    class="ffe-radio-input"
-                    type="radio"
-                    name="radio-none"
-                    value="false"
-                    id="radio-example-none-2"
-                >
-                <label class="ffe-radio-button ffe-radio-button--inline" for="radio-example-none-2">
-                    Nei
-                </label>
-            </fieldset>
+            <div class="sb1ds-example">
+                <fieldset class="ffe-fieldset">
+                    <input
+                        class="ffe-radio-input"
+                        type="radio"
+                        name="radio-none"
+                        value="true"
+                        id="radio-example-none-1"
+                    >
+                    <label class="ffe-radio-button ffe-radio-button--inline" for="radio-example-none-1">
+                        Ja
+                    </label>
+                    <input
+                        class="ffe-radio-input"
+                        type="radio"
+                        name="radio-none"
+                        value="false"
+                        id="radio-example-none-2"
+                    >
+                    <label class="ffe-radio-button ffe-radio-button--inline" for="radio-example-none-2">
+                        Nei
+                    </label>
+                </fieldset>
+            </div>
         </div>
         <div class="ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--center sb1ds-textarea-expand sb1ds-transition sb1ds-good">
-            <label
-                class="ffe-form-label"
-                for="anim-textarea-example-good"
-            >
-                0.2s
-            </label>
-            <textarea
-                class="ffe-textarea sb1ds-textarea-expandable"
-                id="anim-textarea-example-good"
-                placeholder="Expand"
-            ></textarea>
+            <div class="sb1ds-example">
+                <textarea
+                    class="ffe-textarea sb1ds-textarea-expandable"
+                    id="anim-textarea-example-good"
+                    placeholder="Expand"
+                ></textarea>
+            </div>
         </div>
         <div class="ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--center sb1ds-textarea-expand sb1ds-transition sb1ds-bad">
-            <label
-                class="ffe-form-label"
-                for="anim-textarea-example-bad"
-            >
-                1.0s
-            </label>
-            <textarea
-                class="ffe-textarea sb1ds-textarea-expandable"
-                id="anim-textarea-example-bad"
-                placeholder="Expand"
-            ></textarea>
+            <div class="sb1ds-example">
+                <textarea
+                    class="ffe-textarea sb1ds-textarea-expandable"
+                    id="anim-textarea-example-bad"
+                    placeholder="Expand"
+                ></textarea>
+            </div>
         </div>
         <div class="ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--center sb1ds-textarea-expand sb1ds-transition sb1ds-none">
-            <label
-                class="ffe-form-label"
-                for="anim-textarea-example-none"
-            >
-                Ingen animasjon
-            </label>
-            <textarea
-                class="ffe-textarea sb1ds-textarea-expandable"
-                id="anim-textarea-example-none"
-                placeholder="Expand"
-            ></textarea>
+            <div class="sb1ds-example">
+                <textarea
+                    class="ffe-textarea sb1ds-textarea-expandable"
+                    id="anim-textarea-example-none"
+                    placeholder="Expand"
+                ></textarea>
+            </div>
         </div>
         <div class="ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--center sb1ds-svgs sb1ds-transform sb1ds-transition sb1ds-good">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><path d="m16.171492,41.999998c-4.143269,0-8.2852797,1.57464-11.4277496,4.706478-6.3249899,6.283609-6.3249899,16.499474,0,22.803034l84.0286676,83.76282c6.30496,6.30356,16.54928,6.30356,22.87426,0l83.60959-83.26412c6.32499-6.28361,6.32499-16.499477,0-22.803038-6.30496-6.30356-16.55553-6.30356-22.88051,0l-72.13806,71.893768-72.613438-72.373767c-3.14247-3.151781-7.29074-4.725174-11.433999-4.725174h-0.0188z"/></svg>
+            <div class="sb1ds-example">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><path d="m16.171492,41.999998c-4.143269,0-8.2852797,1.57464-11.4277496,4.706478-6.3249899,6.283609-6.3249899,16.499474,0,22.803034l84.0286676,83.76282c6.30496,6.30356,16.54928,6.30356,22.87426,0l83.60959-83.26412c6.32499-6.28361,6.32499-16.499477,0-22.803038-6.30496-6.30356-16.55553-6.30356-22.88051,0l-72.13806,71.893768-72.613438-72.373767c-3.14247-3.151781-7.29074-4.725174-11.433999-4.725174h-0.0188z"/></svg>
+            </div>
         </div>
         <div class="ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--center sb1ds-svgs sb1ds-transform sb1ds-transition sb1ds-bad">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><path d="m16.171492,41.999998c-4.143269,0-8.2852797,1.57464-11.4277496,4.706478-6.3249899,6.283609-6.3249899,16.499474,0,22.803034l84.0286676,83.76282c6.30496,6.30356,16.54928,6.30356,22.87426,0l83.60959-83.26412c6.32499-6.28361,6.32499-16.499477,0-22.803038-6.30496-6.30356-16.55553-6.30356-22.88051,0l-72.13806,71.893768-72.613438-72.373767c-3.14247-3.151781-7.29074-4.725174-11.433999-4.725174h-0.0188z"/></svg>
+            <div class="sb1ds-example">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><path d="m16.171492,41.999998c-4.143269,0-8.2852797,1.57464-11.4277496,4.706478-6.3249899,6.283609-6.3249899,16.499474,0,22.803034l84.0286676,83.76282c6.30496,6.30356,16.54928,6.30356,22.87426,0l83.60959-83.26412c6.32499-6.28361,6.32499-16.499477,0-22.803038-6.30496-6.30356-16.55553-6.30356-22.88051,0l-72.13806,71.893768-72.613438-72.373767c-3.14247-3.151781-7.29074-4.725174-11.433999-4.725174h-0.0188z"/></svg>
+            </div>
         </div>
         <div class="ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--center sb1ds-svgs sb1ds-transform sb1ds-transition sb1ds-none">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><path d="m16.171492,41.999998c-4.143269,0-8.2852797,1.57464-11.4277496,4.706478-6.3249899,6.283609-6.3249899,16.499474,0,22.803034l84.0286676,83.76282c6.30496,6.30356,16.54928,6.30356,22.87426,0l83.60959-83.26412c6.32499-6.28361,6.32499-16.499477,0-22.803038-6.30496-6.30356-16.55553-6.30356-22.88051,0l-72.13806,71.893768-72.613438-72.373767c-3.14247-3.151781-7.29074-4.725174-11.433999-4.725174h-0.0188z"/></svg>
+            <div class="sb1ds-example">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><path d="m16.171492,41.999998c-4.143269,0-8.2852797,1.57464-11.4277496,4.706478-6.3249899,6.283609-6.3249899,16.499474,0,22.803034l84.0286676,83.76282c6.30496,6.30356,16.54928,6.30356,22.87426,0l83.60959-83.26412c6.32499-6.28361,6.32499-16.499477,0-22.803038-6.30496-6.30356-16.55553-6.30356-22.88051,0l-72.13806,71.893768-72.613438-72.373767c-3.14247-3.151781-7.29074-4.725174-11.433999-4.725174h-0.0188z"/></svg>
+            </div>
         </div>
         <div class="ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--center sb1ds-svgs sb1ds-move-right sb1ds-transition sb1ds-good">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><path d="m16.171492,41.999998c-4.143269,0-8.2852797,1.57464-11.4277496,4.706478-6.3249899,6.283609-6.3249899,16.499474,0,22.803034l84.0286676,83.76282c6.30496,6.30356,16.54928,6.30356,22.87426,0l83.60959-83.26412c6.32499-6.28361,6.32499-16.499477,0-22.803038-6.30496-6.30356-16.55553-6.30356-22.88051,0l-72.13806,71.893768-72.613438-72.373767c-3.14247-3.151781-7.29074-4.725174-11.433999-4.725174h-0.0188z"/></svg>
+            <div class="sb1ds-example">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><path d="m16.171492,41.999998c-4.143269,0-8.2852797,1.57464-11.4277496,4.706478-6.3249899,6.283609-6.3249899,16.499474,0,22.803034l84.0286676,83.76282c6.30496,6.30356,16.54928,6.30356,22.87426,0l83.60959-83.26412c6.32499-6.28361,6.32499-16.499477,0-22.803038-6.30496-6.30356-16.55553-6.30356-22.88051,0l-72.13806,71.893768-72.613438-72.373767c-3.14247-3.151781-7.29074-4.725174-11.433999-4.725174h-0.0188z"/></svg>
+            </div>
         </div>
         <div class="ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--center sb1ds-svgs sb1ds-move-right sb1ds-transition sb1ds-bad">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><path d="m16.171492,41.999998c-4.143269,0-8.2852797,1.57464-11.4277496,4.706478-6.3249899,6.283609-6.3249899,16.499474,0,22.803034l84.0286676,83.76282c6.30496,6.30356,16.54928,6.30356,22.87426,0l83.60959-83.26412c6.32499-6.28361,6.32499-16.499477,0-22.803038-6.30496-6.30356-16.55553-6.30356-22.88051,0l-72.13806,71.893768-72.613438-72.373767c-3.14247-3.151781-7.29074-4.725174-11.433999-4.725174h-0.0188z"/></svg>
+            <div class="sb1ds-example">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><path d="m16.171492,41.999998c-4.143269,0-8.2852797,1.57464-11.4277496,4.706478-6.3249899,6.283609-6.3249899,16.499474,0,22.803034l84.0286676,83.76282c6.30496,6.30356,16.54928,6.30356,22.87426,0l83.60959-83.26412c6.32499-6.28361,6.32499-16.499477,0-22.803038-6.30496-6.30356-16.55553-6.30356-22.88051,0l-72.13806,71.893768-72.613438-72.373767c-3.14247-3.151781-7.29074-4.725174-11.433999-4.725174h-0.0188z"/></svg>
+            </div>
         </div>
         <div class="ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--center sb1ds-svgs sb1ds-move-right sb1ds-transition sb1ds-none">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><path d="m16.171492,41.999998c-4.143269,0-8.2852797,1.57464-11.4277496,4.706478-6.3249899,6.283609-6.3249899,16.499474,0,22.803034l84.0286676,83.76282c6.30496,6.30356,16.54928,6.30356,22.87426,0l83.60959-83.26412c6.32499-6.28361,6.32499-16.499477,0-22.803038-6.30496-6.30356-16.55553-6.30356-22.88051,0l-72.13806,71.893768-72.613438-72.373767c-3.14247-3.151781-7.29074-4.725174-11.433999-4.725174h-0.0188z"/></svg>
+            <div class="sb1ds-example">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><path d="m16.171492,41.999998c-4.143269,0-8.2852797,1.57464-11.4277496,4.706478-6.3249899,6.283609-6.3249899,16.499474,0,22.803034l84.0286676,83.76282c6.30496,6.30356,16.54928,6.30356,22.87426,0l83.60959-83.26412c6.32499-6.28361,6.32499-16.499477,0-22.803038-6.30496-6.30356-16.55553-6.30356-22.88051,0l-72.13806,71.893768-72.613438-72.373767c-3.14247-3.151781-7.29074-4.725174-11.433999-4.725174h-0.0188z"/></svg>
+            </div>
         </div>
         <div class="ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--center sb1ds-svgs sb1ds-transform sb1ds-transition sb1ds-good">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><path d="m168.56,35c-7.3569-0.35717-8.8347,7.4883-8.1875,13.185-0.3441,2.6316,1.4556,7.407-2.8625,6.0646-29.975,0.08599-59.967-0.17224-89.931,0.12955-6.4615,1.4675-4.7348,8.8085-4.9561,13.691-0.7404,4.7598,1.1901,11.138,7.2042,10.335h90.546c0.42866,5.2767-1.1192,11.013,1.407,15.858,3.7179,5.5444,11.306,3.4092,14.587-1.3681,7.4247-7.4285,14.958-14.752,22.312-22.249,3.9564-5.5554-1.5884-10.555-5.4254-14.113-6.86-6.69-13.48-13.66-20.51-20.167-1.23-0.836-2.69-1.324-4.18-1.367zm-137.12,67.156c-6.0098,0.85502-9.1712,6.8182-13.561,10.444-5.4869,5.5897-11.271,10.909-16.559,16.68-3.8247,5.4758,1.1417,10.619,5.1085,14.076,7.2706,6.8445,13.985,14.37,21.633,20.753,6.1454,3.4359,13.04-3.0079,11.566-9.433v-8.9271c30.929-0.086,61.876,0.17226,92.794-0.12955,6.4615-1.4675,4.7348-8.8085,4.956-13.691,0.70757-4.8278-0.97702-11.394-7.2042-10.554h-90.546c-0.41449-5.3241,1.121-11.105-1.49-15.97-1.518-2.1-4.1129-3.3421-6.6975-3.2489z"/></svg>
+            <div class="sb1ds-example">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><path d="m168.56,35c-7.3569-0.35717-8.8347,7.4883-8.1875,13.185-0.3441,2.6316,1.4556,7.407-2.8625,6.0646-29.975,0.08599-59.967-0.17224-89.931,0.12955-6.4615,1.4675-4.7348,8.8085-4.9561,13.691-0.7404,4.7598,1.1901,11.138,7.2042,10.335h90.546c0.42866,5.2767-1.1192,11.013,1.407,15.858,3.7179,5.5444,11.306,3.4092,14.587-1.3681,7.4247-7.4285,14.958-14.752,22.312-22.249,3.9564-5.5554-1.5884-10.555-5.4254-14.113-6.86-6.69-13.48-13.66-20.51-20.167-1.23-0.836-2.69-1.324-4.18-1.367zm-137.12,67.156c-6.0098,0.85502-9.1712,6.8182-13.561,10.444-5.4869,5.5897-11.271,10.909-16.559,16.68-3.8247,5.4758,1.1417,10.619,5.1085,14.076,7.2706,6.8445,13.985,14.37,21.633,20.753,6.1454,3.4359,13.04-3.0079,11.566-9.433v-8.9271c30.929-0.086,61.876,0.17226,92.794-0.12955,6.4615-1.4675,4.7348-8.8085,4.956-13.691,0.70757-4.8278-0.97702-11.394-7.2042-10.554h-90.546c-0.41449-5.3241,1.121-11.105-1.49-15.97-1.518-2.1-4.1129-3.3421-6.6975-3.2489z"/></svg>
+            </div>
         </div>
         <div class="ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--center sb1ds-svgs sb1ds-transform sb1ds-transition sb1ds-bad">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><path d="m168.56,35c-7.3569-0.35717-8.8347,7.4883-8.1875,13.185-0.3441,2.6316,1.4556,7.407-2.8625,6.0646-29.975,0.08599-59.967-0.17224-89.931,0.12955-6.4615,1.4675-4.7348,8.8085-4.9561,13.691-0.7404,4.7598,1.1901,11.138,7.2042,10.335h90.546c0.42866,5.2767-1.1192,11.013,1.407,15.858,3.7179,5.5444,11.306,3.4092,14.587-1.3681,7.4247-7.4285,14.958-14.752,22.312-22.249,3.9564-5.5554-1.5884-10.555-5.4254-14.113-6.86-6.69-13.48-13.66-20.51-20.167-1.23-0.836-2.69-1.324-4.18-1.367zm-137.12,67.156c-6.0098,0.85502-9.1712,6.8182-13.561,10.444-5.4869,5.5897-11.271,10.909-16.559,16.68-3.8247,5.4758,1.1417,10.619,5.1085,14.076,7.2706,6.8445,13.985,14.37,21.633,20.753,6.1454,3.4359,13.04-3.0079,11.566-9.433v-8.9271c30.929-0.086,61.876,0.17226,92.794-0.12955,6.4615-1.4675,4.7348-8.8085,4.956-13.691,0.70757-4.8278-0.97702-11.394-7.2042-10.554h-90.546c-0.41449-5.3241,1.121-11.105-1.49-15.97-1.518-2.1-4.1129-3.3421-6.6975-3.2489z"/></svg>
+            <div class="sb1ds-example">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><path d="m168.56,35c-7.3569-0.35717-8.8347,7.4883-8.1875,13.185-0.3441,2.6316,1.4556,7.407-2.8625,6.0646-29.975,0.08599-59.967-0.17224-89.931,0.12955-6.4615,1.4675-4.7348,8.8085-4.9561,13.691-0.7404,4.7598,1.1901,11.138,7.2042,10.335h90.546c0.42866,5.2767-1.1192,11.013,1.407,15.858,3.7179,5.5444,11.306,3.4092,14.587-1.3681,7.4247-7.4285,14.958-14.752,22.312-22.249,3.9564-5.5554-1.5884-10.555-5.4254-14.113-6.86-6.69-13.48-13.66-20.51-20.167-1.23-0.836-2.69-1.324-4.18-1.367zm-137.12,67.156c-6.0098,0.85502-9.1712,6.8182-13.561,10.444-5.4869,5.5897-11.271,10.909-16.559,16.68-3.8247,5.4758,1.1417,10.619,5.1085,14.076,7.2706,6.8445,13.985,14.37,21.633,20.753,6.1454,3.4359,13.04-3.0079,11.566-9.433v-8.9271c30.929-0.086,61.876,0.17226,92.794-0.12955,6.4615-1.4675,4.7348-8.8085,4.956-13.691,0.70757-4.8278-0.97702-11.394-7.2042-10.554h-90.546c-0.41449-5.3241,1.121-11.105-1.49-15.97-1.518-2.1-4.1129-3.3421-6.6975-3.2489z"/></svg>
+            </div>
         </div>
         <div class="ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--center sb1ds-svgs sb1ds-transform sb1ds-transition sb1ds-none">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><path d="m168.56,35c-7.3569-0.35717-8.8347,7.4883-8.1875,13.185-0.3441,2.6316,1.4556,7.407-2.8625,6.0646-29.975,0.08599-59.967-0.17224-89.931,0.12955-6.4615,1.4675-4.7348,8.8085-4.9561,13.691-0.7404,4.7598,1.1901,11.138,7.2042,10.335h90.546c0.42866,5.2767-1.1192,11.013,1.407,15.858,3.7179,5.5444,11.306,3.4092,14.587-1.3681,7.4247-7.4285,14.958-14.752,22.312-22.249,3.9564-5.5554-1.5884-10.555-5.4254-14.113-6.86-6.69-13.48-13.66-20.51-20.167-1.23-0.836-2.69-1.324-4.18-1.367zm-137.12,67.156c-6.0098,0.85502-9.1712,6.8182-13.561,10.444-5.4869,5.5897-11.271,10.909-16.559,16.68-3.8247,5.4758,1.1417,10.619,5.1085,14.076,7.2706,6.8445,13.985,14.37,21.633,20.753,6.1454,3.4359,13.04-3.0079,11.566-9.433v-8.9271c30.929-0.086,61.876,0.17226,92.794-0.12955,6.4615-1.4675,4.7348-8.8085,4.956-13.691,0.70757-4.8278-0.97702-11.394-7.2042-10.554h-90.546c-0.41449-5.3241,1.121-11.105-1.49-15.97-1.518-2.1-4.1129-3.3421-6.6975-3.2489z"/></svg>
+            <div class="sb1ds-example">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><path d="m168.56,35c-7.3569-0.35717-8.8347,7.4883-8.1875,13.185-0.3441,2.6316,1.4556,7.407-2.8625,6.0646-29.975,0.08599-59.967-0.17224-89.931,0.12955-6.4615,1.4675-4.7348,8.8085-4.9561,13.691-0.7404,4.7598,1.1901,11.138,7.2042,10.335h90.546c0.42866,5.2767-1.1192,11.013,1.407,15.858,3.7179,5.5444,11.306,3.4092,14.587-1.3681,7.4247-7.4285,14.958-14.752,22.312-22.249,3.9564-5.5554-1.5884-10.555-5.4254-14.113-6.86-6.69-13.48-13.66-20.51-20.167-1.23-0.836-2.69-1.324-4.18-1.367zm-137.12,67.156c-6.0098,0.85502-9.1712,6.8182-13.561,10.444-5.4869,5.5897-11.271,10.909-16.559,16.68-3.8247,5.4758,1.1417,10.619,5.1085,14.076,7.2706,6.8445,13.985,14.37,21.633,20.753,6.1454,3.4359,13.04-3.0079,11.566-9.433v-8.9271c30.929-0.086,61.876,0.17226,92.794-0.12955,6.4615-1.4675,4.7348-8.8085,4.956-13.691,0.70757-4.8278-0.97702-11.394-7.2042-10.554h-90.546c-0.41449-5.3241,1.121-11.105-1.49-15.97-1.518-2.1-4.1129-3.3421-6.6975-3.2489z"/></svg>
+            </div>
         </div>
     </div>
 </div>
 
 ### Eksempler på dekorative animasjoner
 
-<div class="ffe-grid--no-top-padding">
+<div class="ffe-grid ffe-grid--inline">
     <div class="ffe-grid__row">
         <div class="ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--center">
             <div class="sb1ds-example">
@@ -607,8 +616,8 @@ transition: all .2s cubic-bezier(.46, -0.265, .48, 1.38);
                 <div class="sb1ds-svgcontainer sb1ds-svgcontainer--paused">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" class="sb1ds-coin-drop sb1ds-svgcontainer__svgicon">
                         <path d="M149.366 46.917c-1.566-.044-3.165.298-4.698 1.086l-19.108 9.46c-5.608-1.75-19.255-5.606-36.078-5.606-8.937 0-17.534 1.052-25.595 3.33C27.787 64.992 8 88.8 8 122.07c0 21.716 11.894 41.315 33.098 54.275v6.833c0 9.28 7.54 16.818 16.83 16.818h9.64c7.185 0 13.325-4.558 15.778-10.862 4.556.35 8.94.35 10.694.35 1.4 0 3.506 0 5.61-.175 2.45 6.32 8.56 10.7 15.57 10.7h9.466c9.463 0 17.005-7.713 17.18-16.82v-5.43c15.07-8.932 23.317-20.465 26.646-26.244h6.136c9.638 0 17.355-7.712 17.355-17.344v-21.198c0-9.632-7.718-17.344-17.355-17.344h-3.156l-.526-.876c-1.05-1.576-5.96-9.286-7.89-11.738l-1.4-1.927-2.63-25.194c-.658-5.254-4.98-8.84-9.677-8.97zm-2.77 13.35l2.805 25.368 3.683 4.555c1.226 1.576 5.61 8.235 7.012 10.687l4.207 6.832h9.992c2.804 0 5.084 2.278 5.084 5.08v21.198c0 2.802-2.28 5.08-5.084 5.08h-13.85l-1.576 3.68c-.176.175-7.195 15.56-26.47 25.893l-3.157 1.753v12.614c0 2.45-1.928 4.555-4.557 4.555h-9.64c-2.455 0-4.56-1.928-4.56-4.555v-7.534l-7.327 1.052c-1.928.35-5.61.525-9.642.525-5.783 0-11.57-.526-14.375-1.05l-7.364-1.578v8.41c0 2.45-1.93 4.554-4.558 4.554h-9.64c-2.455 0-4.56-1.928-4.56-4.555v-14.014l-3.155-1.752c-19.084-10.67-29.96-27.29-29.96-45.33 0-19.264 8.08-44.503 46.806-55.186 6.834-1.75 14.377-2.768 22.263-2.768 19.1 0 34.15 5.747 34.325 5.747l2.455 1.05 20.86-10.3zM87.374 78.45c-6.484 0-12.8.702-18.407 2.28-6.484 1.75-12.098 4.03-17.005 7.006-2.628 1.576-3.155 4.907-1.402 7.358l1.402 1.927c1.577 2.103 4.208 2.63 6.31 1.403 3.856-2.452 8.593-4.38 13.85-5.78 4.556-1.227 9.644-1.93 15.076-1.93 5.257.002 10.17.527 14.024 1.228 2.63.526 5.26-1.05 5.785-3.678l.526-2.278c.7-2.627-1.053-5.43-3.856-5.956-4.557-.876-10.17-1.577-16.303-1.577z"/>
-                        <circle id="coin" cx="80" cy="22" r="16" stroke="black" stroke-width="12" fill="white" />
-                        <path d="M59.98 96.224c-.305-.098-.7-.26-.878-.36-.568-.32-1.934-1.62-2.198-2.09-.617-1.098-.175-2.368 1.072-3.08 1.47-.837 5.405-2.396 8.265-3.273 6.617-2.03 11.65-2.824 19.294-3.048 4.068-.12 6.46-.066 9.7.215 3.183.275 4.315 1.41 3.67 3.68-.33 1.167-.597 1.582-1.315 2.042-.983.63-1.724.777-3.403.673-7.62-.472-14.025-.12-19.636 1.084-3.79.812-7.78 2.123-10.716 3.522-1.126.535-1.484.647-2.316.722-.69.062-1.148.036-1.538-.088z" fill="#000"/>
+                        <circle id="coin" cx="80" cy="22" r="16" stroke="#002776" stroke-width="12" fill="white" />
+                        <path d="M59.98 96.224c-.305-.098-.7-.26-.878-.36-.568-.32-1.934-1.62-2.198-2.09-.617-1.098-.175-2.368 1.072-3.08 1.47-.837 5.405-2.396 8.265-3.273 6.617-2.03 11.65-2.824 19.294-3.048 4.068-.12 6.46-.066 9.7.215 3.183.275 4.315 1.41 3.67 3.68-.33 1.167-.597 1.582-1.315 2.042-.983.63-1.724.777-3.403.673-7.62-.472-14.025-.12-19.636 1.084-3.79.812-7.78 2.123-10.716 3.522-1.126.535-1.484.647-2.316.722-.69.062-1.148.036-1.538-.088z" />
                         <path d="M125.254 124.502a35.16 22.13 0 1 1-70.318 0 35.16 22.13 0 1 1 70.318 0z" transform="matrix(1.07994 0 0 .9816 -9.478 -9.324)" fill="white" stroke="#fff"/>
                     </svg>
                 </div>
@@ -646,9 +655,12 @@ transition: all .2s cubic-bezier(.46, -0.265, .48, 1.38);
         <div class="ffe-grid__col--sm-12 ffe-grid__col--md-4 ffe-grid__col--center">
             <div class="sb1ds-example">
                 <div class="sb1ds-svgcontainer sb1ds-svgcontainer--paused">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" class="sb1ds-cat sb1ds-svgcontainer__svgicon">
-                        <path d="M48.882.26c-.934.082-1.88.39-2.76.958h-.41C32.267 9.904 24.2 32.036 22.96 41.963c-2.07 15.718.826 27.918 8.478 36.605 2.895 3.31 6.62 5.998 10.757 8.273L35.37 98.01c-11.788 19.44-17.99 41.77-17.99 64.52v25.44c0 6.41 5.167 11.787 11.786 11.787h96.375v-.206l.622-14.68v-19.236c0-24.818-6.825-49.222-19.647-70.317l-4.964-8.063c4.55-2.275 8.274-4.967 11.376-8.483 7.652-8.685 10.547-21.093 8.48-36.604-1.242-9.927-9.1-32.055-22.75-40.74l-.412-.213c-3.516-2.275-8.068-.206-8.895 3.724l-2.07 10.135h47.086L55.018 4.937c-.62-3.102-3.334-4.924-6.136-4.68zM45.3 19.215l1.65 8.272h40.26l1.65-8.272c5.585 7.86 9.31 18.82 9.93 24.612 1.448 11.995-.412 21.095-5.582 26.886-5.79 6.618-16.342 9.924-31.232 10.13-14.89 0-25.437-3.512-31.228-10.13-4.964-6.205-6.824-15.308-5.377-27.096.622-5.79 4.346-16.543 9.93-24.402zm26.47 31.85c-4.455 0-8.066 3.61-8.068 8.062 0 4.456 3.612 8.067 8.067 8.067 4.454 0 8.066-3.61 8.066-8.067-.002-4.453-3.613-8.063-8.067-8.062zM56.673 91.6c4.55.826 9.718 1.238 15.095 1.445h.62c5.172 0 10.135-.413 14.478-1.24l6.823 11.17c11.583 19.026 17.58 40.742 17.58 62.872v19.437H94.52V156.33H82.11v28.954H61.634V156.33h-12.41v28.954H32.27v-22.75c0-20.06 5.582-39.708 15.923-56.874l8.483-14.06z" id="path4"/>
-                        <path id="tail" d="M125.33 199.973v-.206c33.544-.373 57.08-28.33 57.08-60.594 0-11.995-3.513-23.785-10.132-33.712-1.86-2.894-5.792-4.343-8.895-2.895-4.343 1.86-5.79 7.034-3.102 10.757 5.172 7.652 7.862 16.545 7.862 25.852 0 24.197-18.614 44.05-42.19 45.91zM71.763 81.06c-105.61 65.593-52.805 32.796 0 0z" id="path4-7"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180.4 180.4" class="sb1ds-cat sb1ds-svgcontainer__svgicon">
+                        <g>
+                            <path d="M113.773 165.476v-17.11c0-22.078-6.071-43.787-17.478-62.553l-4.415-7.175c4.047-2.024 7.359-4.416 10.119-7.544 6.807-7.727 9.383-18.766 7.543-32.564-1.104-8.831-8.095-28.517-20.238-36.244l-.368-.184c-3.127-2.024-7.175-.184-7.911 3.311l-1.84 9.016H52.324l-1.84-9.016c-.736-3.679-4.783-5.335-7.911-3.311h-.368C30.247 9.829 23.071 29.515 21.967 38.346c-1.839 13.982.736 24.837 7.544 32.564 2.575 2.944 5.887 5.336 9.567 7.36l-6.072 9.934C22.519 105.499 17 125.368 17 145.606v22.63c0 5.703 4.599 10.487 10.487 10.487h85.735v-.184c.184-.012.369-.025.551-.045V180v-14.524zM33.006 39.818c.552-5.152 3.864-14.719 8.831-21.71l1.472 7.359h44.707l1.472-7.359c4.968 6.991 8.279 16.742 8.831 21.894 1.288 10.671-.368 18.766-4.967 23.917-5.152 5.887-14.535 8.831-27.781 9.015-13.247 0-22.63-3.128-27.781-9.015-4.416-5.519-6.072-13.614-4.784-24.101zm67.705 126.026H85.625v-25.757H74.586v25.757H56.372v-25.757H45.333v25.757H30.247v-20.238c0-17.846 4.967-35.324 14.166-50.594l7.543-12.511c4.048.736 8.647 1.104 13.431 1.288h.552c4.599 0 9.015-.368 12.878-1.104l6.072 9.935c10.302 16.926 15.638 36.244 15.638 55.93v17.294h.184z"/>
+                            <path id="tail" d="M106 165.844c30.25.156 45.305-19.686 45.305-41.211 0-8.28-2.391-16.191-6.991-22.998-2.392-3.312-1.104-7.911 2.76-9.567 2.76-1.288 6.255 0 7.911 2.576 5.887 8.831 9.015 19.318 9.015 29.989 0 28.513-18.25 51.992-50.778 54.09L106 174v-8.156z"/>
+                            <circle cx="65.38673342" cy="53.61624918" r="7.17521902" vector-effect="non-scaling-stroke"/>
+                        </g>
                     </svg>
                 </div>
             </div>
