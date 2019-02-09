@@ -27,10 +27,10 @@ function renderSuggestionItem(
 describe('<SuggestionItem />', () => {
     it('item is rendered', () => {
         const wrapper = renderSuggestionItem();
-        const li = wrapper.find('li');
+        const div = wrapper.find('div');
 
-        expect(li.prop('id') === 'suggestion-option-0').toBe(true);
-        expect(li.childAt(0).html()).toBe('<h1>header</h1>');
+        expect(div.prop('id') === 'suggestion-option-0').toBe(true);
+        expect(div.childAt(0).html()).toBe('<h1>header</h1>');
     });
 
     it('isHighlighted', () => {

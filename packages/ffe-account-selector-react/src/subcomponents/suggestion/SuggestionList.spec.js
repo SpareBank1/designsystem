@@ -39,6 +39,10 @@ function propsSuggestionListContainer() {
     };
 }
 
+function mountSuggestionList(props) {
+    return mount(<SuggestionList {...propsSuggestionList()} {...props} />);
+}
+
 function shallowSuggestionList(props) {
     return shallow(<SuggestionList {...propsSuggestionList()} {...props} />);
 }
@@ -49,26 +53,30 @@ function mountSuggestionListContainer(props = propsSuggestionListContainer()) {
 
 describe('<SuggestionList />', () => {
     it('highlighted <Suggestion> set to highlightedIndex', () => {
-        const wrapper = shallowSuggestionList();
-        const ul = wrapper.find('ul');
+        const wrapper = mountSuggestionList();
+        const suggestionList = wrapper.find('[role="listbox"]');
+        const firstRow = suggestionList.childAt(0);
+        const secondRow = suggestionList.childAt(1);
 
-        expect(ul.children().length).toBe(2);
-        expect(ul.childAt(0).props().isHighlighted).toBe(false);
-        expect(ul.childAt(1).props().isHighlighted).toBe(true);
+        expect(suggestionList.children().length).toBe(2);
+        expect(firstRow.children().length).toBe(1);
+        expect(secondRow.children().length).toBe(1);
+        expect(firstRow.childAt(0).props().isHighlighted).toBe(false);
+        expect(secondRow.childAt(0).props().isHighlighted).toBe(true);
         expect(wrapper.find(Spinner).length === 0).toBe(true);
     });
 
     it('should renderNoSuggestions when suggestions is empty', () => {
         const renderNoMatchesSpy = jest.fn();
-        const wrapper = shallowSuggestionList({
+        const suggestionList = mountSuggestionList({
             ...propsSuggestionList(),
             suggestions: [],
             renderNoMatches: renderNoMatchesSpy,
         });
-        const ul = wrapper.find('ul');
-        expect(ul.children().length).toBe(1);
+
+        expect(suggestionList.children().length).toBe(1);
         expect(renderNoMatchesSpy).toHaveBeenCalled();
-        expect(wrapper.find(Spinner).length === 0).toBe(true);
+        expect(suggestionList.find(Spinner).length === 0).toBe(true);
     });
 
     it('should render spinner', () => {

@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { object, bool, func, string } from 'prop-types';
 import classNames from 'classnames';
+import { bool, func, object, string } from 'prop-types';
+import React, { Component } from 'react';
 
 class SuggestionItem extends Component {
     render() {
@@ -11,9 +11,10 @@ class SuggestionItem extends Component {
             render,
             onSelect,
             refHighlightedSuggestion,
+            style,
         } = this.props;
         return (
-            <li
+            <div
                 ref={itemRef => {
                     if (itemRef && isHighlighted) {
                         refHighlightedSuggestion(itemRef);
@@ -30,9 +31,10 @@ class SuggestionItem extends Component {
                     'ffe-account-suggestion--highlighted': isHighlighted,
                 })}
                 tabIndex={-1}
+                style={style}
             >
                 {render(item)}
-            </li>
+            </div>
         );
     }
 }
@@ -44,6 +46,7 @@ SuggestionItem.propTypes = {
     render: func.isRequired,
     onSelect: func.isRequired,
     refHighlightedSuggestion: func.isRequired,
+    style: object,
 };
 
 export default SuggestionItem;

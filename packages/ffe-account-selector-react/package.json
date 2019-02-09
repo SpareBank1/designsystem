@@ -38,7 +38,8 @@
     "classnames": "^2.2.5",
     "prop-types": "^15.6.0",
     "react-auto-bind": "^0.4.2",
-    "react-custom-scrollbars": "^4.2.1"
+    "react-custom-scrollbars": "^4.2.1",
+    "react-window": "^1.5.1"
   },
   "devDependencies": {
     "enzyme": "^3.7.0",
