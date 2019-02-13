@@ -7061,30 +7061,34 @@ input:not([type='radio']):not([type='checkbox']) {
 }
 .sb1ds-example {
   width: 100%;
+  padding: 10px;
 }
 .sb1ds-example__header-bad-example {
-  margin: 1em 0 0.5em;
+  margin: 0;
   color: #da3d00;
 }
 .sb1ds-example__header-good-example {
-  margin: 1em 0 0.5em;
+  margin: 0;
   color: #007b00;
 }
 .sb1ds-example__header-no-animation-example {
-  margin: 1em 0 0.5em;
+  margin: 0;
   color: #262626;
+}
+.sb1ds-do-dont {
+  margin-bottom: 20px;
 }
 .sb1ds-svgs svg {
   width: 25px;
   height: 25px;
   fill: #0071cd;
 }
-.sb1ds-transition.sb1ds-bad > * {
+.sb1ds-transition.sb1ds-bad * {
   -webkit-transition-duration: 1s !important;
        -o-transition-duration: 1s !important;
           transition-duration: 1s !important;
 }
-.sb1ds-transition.sb1ds-none > * {
+.sb1ds-transition.sb1ds-none * {
   -webkit-transition: none !important;
   -o-transition: none !important;
   transition: none !important;
@@ -7099,6 +7103,7 @@ input:not([type='radio']):not([type='checkbox']) {
   transition: all 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
   position: relative;
   background-color: #fff;
+  text-align: center;
   cursor: pointer;
 }
 .sb1ds-svgcontainer::before {
@@ -8010,16 +8015,19 @@ input:not([type='radio']):not([type='checkbox']) {
   resize: both;
 }
 .sb1ds-check.sb1ds-good .ffe-hidden-checkbox:checked + .ffe-checkbox:after {
-  -webkit-animation-duration: 0.2s;
-          animation-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+       -o-transition-duration: 0.2s;
+          transition-duration: 0.2s;
 }
 .sb1ds-check.sb1ds-bad .ffe-hidden-checkbox:checked + .ffe-checkbox:after {
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  -webkit-transition-duration: 1s;
+       -o-transition-duration: 1s;
+          transition-duration: 1s;
 }
 .sb1ds-check.sb1ds-none .ffe-hidden-checkbox:checked + .ffe-checkbox:after {
-  -webkit-animation: none;
-          animation: none;
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
 }
 .sb1ds-radio.sb1ds-good .ffe-radio-button,
 .sb1ds-radio.sb1ds-good .ffe-radio-button::before,
@@ -8044,38 +8052,41 @@ input:not([type='radio']):not([type='checkbox']) {
 }
 @-webkit-keyframes rain {
   from {
-    -webkit-transform: translateY(-200%);
-            transform: translateY(-200%);
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
   }
   to {
-    -webkit-transform: translateY(470%);
-            transform: translateY(470%);
+    -webkit-transform: translateY(150%);
+            transform: translateY(150%);
   }
 }
 @keyframes rain {
   from {
-    -webkit-transform: translateY(-200%);
-            transform: translateY(-200%);
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
   }
   to {
-    -webkit-transform: translateY(470%);
-            transform: translateY(470%);
+    -webkit-transform: translateY(150%);
+            transform: translateY(150%);
   }
 }
 .sb1ds-rain #drop1,
 .sb1ds-rain #drop2 {
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
   -webkit-animation-name: rain;
           animation-name: rain;
-  -webkit-animation-duration: 0.8s;
-          animation-duration: 0.8s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
 }
 .sb1ds-rain #drop2 {
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
 }
 @-webkit-keyframes move-cloud {
   from {
@@ -8292,14 +8303,14 @@ input:not([type='radio']):not([type='checkbox']) {
 }
 @-webkit-keyframes tail {
   to {
-    -webkit-transform: translateX(1em) translateY(0.2em) rotate3d(1, 4, 4, 20deg);
-            transform: translateX(1em) translateY(0.2em) rotate3d(1, 4, 4, 20deg);
+    -webkit-transform: translateX(11px) translateY(-2px) rotate3d(3, 2, 3, 14deg);
+            transform: translateX(11px) translateY(-2px) rotate3d(3, 2, 3, 14deg);
   }
 }
 @keyframes tail {
   to {
-    -webkit-transform: translateX(1em) translateY(0.2em) rotate3d(1, 4, 4, 20deg);
-            transform: translateX(1em) translateY(0.2em) rotate3d(1, 4, 4, 20deg);
+    -webkit-transform: translateX(11px) translateY(-2px) rotate3d(3, 2, 3, 14deg);
+            transform: translateX(11px) translateY(-2px) rotate3d(3, 2, 3, 14deg);
   }
 }
 .sb1ds-cat #tail {
@@ -8313,49 +8324,49 @@ input:not([type='radio']):not([type='checkbox']) {
           animation-direction: alternate;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
-  -webkit-transform-origin: 8em 6em;
-      -ms-transform-origin: 8em 6em;
-          transform-origin: 8em 6em;
+  -webkit-transform-origin: initial;
+      -ms-transform-origin: initial;
+          transform-origin: initial;
 }
 /* Large svgs */
 @-webkit-keyframes cloud {
   from {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    -webkit-transform: translateX(20%);
+            transform: translateX(20%);
   }
   to {
-    -webkit-transform: translateX(-600%);
-            transform: translateX(-600%);
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
   }
 }
 @keyframes cloud {
   from {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    -webkit-transform: translateX(20%);
+            transform: translateX(20%);
   }
   to {
-    -webkit-transform: translateX(-600%);
-            transform: translateX(-600%);
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
   }
 }
 @-webkit-keyframes bike-from-left {
   from {
-    -webkit-transform: translateX(-500%);
-            transform: translateX(-500%);
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
   }
   to {
-    -webkit-transform: translateX(150%);
-            transform: translateX(150%);
+    -webkit-transform: translateX(27%);
+            transform: translateX(27%);
   }
 }
 @keyframes bike-from-left {
   from {
-    -webkit-transform: translateX(-500%);
-            transform: translateX(-500%);
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
   }
   to {
-    -webkit-transform: translateX(150%);
-            transform: translateX(150%);
+    -webkit-transform: translateX(27%);
+            transform: translateX(27%);
   }
 }
 @-webkit-keyframes left-leg {
@@ -8578,8 +8589,8 @@ input:not([type='radio']):not([type='checkbox']) {
 .sb1ds-biker #cloud {
   -webkit-animation-name: cloud;
           animation-name: cloud;
-  -webkit-animation-duration: 45s;
-          animation-duration: 45s;
+  -webkit-animation-duration: 25s;
+          animation-duration: 25s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
