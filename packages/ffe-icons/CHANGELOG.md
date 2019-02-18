@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.6.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.6.0...@sb1/ffe-icons@12.6.1) (2019-02-18)
+
+### Bug Fixes
+
+-   **package:** update yargs to version 13.1.0 ([1a3ed34](https://github.com/SpareBank1/designsystem/commit/1a3ed34))
+
 # [12.6.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.5.1...@sb1/ffe-icons@12.6.0) (2019-01-29)
 
 ### Features

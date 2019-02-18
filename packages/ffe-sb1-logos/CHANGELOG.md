@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-sb1-logos@1.1.1...@sb1/ffe-sb1-logos@1.1.2) (2019-02-18)
+
+### Bug Fixes
+
+-   **ffe-sb1-logos:** Include favicon ([f11e31d](https://github.com/SpareBank1/designsystem/commit/f11e31d))
+
 ## [1.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-sb1-logos@1.1.0...@sb1/ffe-sb1-logos@1.1.1) (2018-12-04)
 
 **Note:** Version bump only for package @sb1/ffe-sb1-logos
