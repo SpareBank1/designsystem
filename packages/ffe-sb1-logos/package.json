@@ -6,7 +6,8 @@
   "author": "SpareBank 1",
   "files": [
     "metadata.js",
-    "svg"
+    "svg",
+    "ico"
   ],
   "repository": {
     "type": "git",
