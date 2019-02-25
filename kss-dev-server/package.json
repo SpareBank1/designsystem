@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "@babel/core": "^7.0.0",
@@ -22,6 +24,8 @@
     "vue": "^2.5.17",
     "webpack": "^4.17.1",
     "webpack-dev-middleware": "^3.2.0",
-    "webpack-hot-middleware": "^2.22.3"
-  }
+    "webpack-hot-middleware": "^2.22.3",
+    "snyk": "^1.134.2"
+  },
+  "snyk": true
 }
