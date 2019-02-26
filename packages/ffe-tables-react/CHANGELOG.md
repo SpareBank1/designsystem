@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.2.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@5.2.5...@sb1/ffe-tables-react@5.2.6) (2019-02-26)
+
+### Bug Fixes
+
+-   **package:** update memoize-one to version 5.0.0 ([778a8a6](https://github.com/SpareBank1/designsystem/commit/778a8a6))
+
 ## [5.2.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@5.2.4...@sb1/ffe-tables-react@5.2.5) (2019-02-19)
 
 **Note:** Version bump only for package @sb1/ffe-tables-react
