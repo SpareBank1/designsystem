@@ -47,13 +47,14 @@ export default class Datepicker extends Component {
         this.removeGlobalEventListeners();
     }
 
-    componentWillReceiveProps(nextProps) {
+    /* eslint-disable react/no-did-update-set-state */
+    componentDidUpdate() {
         if (
-            (nextProps.minDate && nextProps.minDate !== this.state.minDate) ||
-            (nextProps.maxDate && nextProps.maxDate !== this.state.maxDate)
+            (this.props.minDate && this.props.minDate !== this.state.minDate) ||
+            (this.props.maxDate && this.props.maxDate !== this.state.maxDate)
         ) {
             this.setState(
-                { minDate: nextProps.minDate, maxDate: nextProps.maxDate },
+                { minDate: this.props.minDate, maxDate: this.props.maxDate },
                 this.validateDateIntervals,
             );
         }
@@ -369,16 +370,15 @@ export default class Datepicker extends Component {
                     )}
                 </div>
 
-                {this.state.ariaInvalid &&
-                    !hideErrors && (
-                        <div
-                            id={`date-input-validation-${this.datepickerId}`}
-                            className="ffe-body-text ffe-field-error-message"
-                            role="alert"
-                        >
-                            {this.state.errorMessage}
-                        </div>
-                    )}
+                {this.state.ariaInvalid && !hideErrors && (
+                    <div
+                        id={`date-input-validation-${this.datepickerId}`}
+                        className="ffe-body-text ffe-field-error-message"
+                        role="alert"
+                    >
+                        {this.state.errorMessage}
+                    </div>
+                )}
             </div>
         );
     }
