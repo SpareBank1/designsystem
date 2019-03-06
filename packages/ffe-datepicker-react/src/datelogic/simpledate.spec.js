@@ -1,6 +1,8 @@
 import simpleDate from './simpledate';
 import ErrorTypes from './error-types';
 
+const today = new Date();
+
 describe('simpleDate fromString', () => {
     describe('triggers', () => {
         it('onSuccess callback', () => {
@@ -50,20 +52,8 @@ describe('simpleDate fromString', () => {
         it('date format appended anything after valid date', () =>
             expect(simpleDate.fromString('10102016----')).toBeNull());
 
-        it('date without year', () =>
-            expect(simpleDate.fromString('10.10.')).toBeNull());
-
         it('date without day', () =>
             expect(simpleDate.fromString('.10.2016')).toBeNull());
-
-        it('date without month', () =>
-            expect(simpleDate.fromString('10..2016')).toBeNull());
-
-        it('date with 1 digit as year', () =>
-            expect(simpleDate.fromString('10.10.6')).toBeNull());
-
-        it('date with 3 digits as year', () =>
-            expect(simpleDate.fromString('10.10.206')).toBeNull());
 
         it('date with more than 4 digits as year', () =>
             expect(simpleDate.fromString('10.10.201673829')).toBeNull());
@@ -79,49 +69,145 @@ describe('simpleDate fromString', () => {
     });
 
     describe('accepts', () => {
-        it('single digit day', () => {
-            expect(simpleDate.fromString('5.04.2015').format()).toBe(
-                '05.04.2015',
+        /*
+         1 Digit input returns input as day together with current month and year
+          */
+        it('1 digit input', () => {
+            const expectedMonth =
+                today.getMonth() + 1 < 10
+                    ? `0${today.getMonth() + 1}`
+                    : today.getMonth() + 1;
+            return expect(simpleDate.fromString('2').format()).toBe(
+                `02.${expectedMonth}.${today.getFullYear()}`,
             );
         });
 
-        it('single digit month', () => {
-            expect(simpleDate.fromString('25.1.2015').format()).toBe(
-                '25.01.2015',
+        it('1 digit input, followed by separator', () => {
+            const expectedMonth =
+                today.getMonth() + 1 < 10
+                    ? `0${today.getMonth() + 1}`
+                    : today.getMonth() + 1;
+            return expect(simpleDate.fromString('1.').format()).toBe(
+                `01.${expectedMonth}.${today.getFullYear()}`,
             );
         });
 
-        it('double digit year', () => {
-            expect(simpleDate.fromString('10.10.17').format()).toBe(
-                '10.10.2017',
+        /*
+         2 Digit input returns input as day together with current month and year
+          */
+        it('2 digit input', () => {
+            const expectedMonth =
+                today.getMonth() + 1 < 10
+                    ? `0${today.getMonth() + 1}`
+                    : today.getMonth() + 1;
+            return expect(simpleDate.fromString('12').format()).toBe(
+                `12.${expectedMonth}.${today.getFullYear()}`,
             );
         });
 
-        it('no separators for 4 digit years', () => {
-            expect(simpleDate.fromString('10102016').format()).toBe(
-                '10.10.2016',
+        it('2 digit input, followed by separator', () => {
+            const expectedMonth =
+                today.getMonth() + 1 < 10
+                    ? `0${today.getMonth() + 1}`
+                    : today.getMonth() + 1;
+            return expect(simpleDate.fromString('13.').format()).toBe(
+                `13.${expectedMonth}.${today.getFullYear()}`,
             );
         });
 
-        it('no separators for 2 digit years', () => {
+        /*
+         3 Digit input returns input as day and month together with current year
+          */
+        it('3 digit input', () =>
+            expect(simpleDate.fromString('109').format()).toBe(
+                `10.09.${today.getFullYear()}`,
+            ));
+
+        it('3 digit input, with separator', () =>
+            expect(simpleDate.fromString('10.9').format()).toBe(
+                `10.09.${today.getFullYear()}`,
+            ));
+
+        /*
+         4 Digit input returns input as day and month together with current year
+          */
+        it('4 digit input', () =>
+            expect(simpleDate.fromString('1010').format()).toBe(
+                `10.10.${today.getFullYear()}`,
+            ));
+
+        it('4 digit input, with separator', () =>
+            expect(simpleDate.fromString('10.07').format()).toBe(
+                `10.07.${today.getFullYear()}`,
+            ));
+
+        /*
+         5 Digit input returns first two digits as day, next two as month, and last as year
+          */
+        it('5 digit input', () =>
+            expect(simpleDate.fromString('10106').format()).toBe('10.10.2006'));
+
+        it('5 digit input, with separator', () =>
+            expect(simpleDate.fromString('05.04.6').format()).toBe(
+                '05.04.2006',
+            ));
+
+        /*
+         6 Digit input returns first two digits as day, next two as month, and last two as year
+          */
+        it('6 digit input', () => {
             expect(simpleDate.fromString('101016').format()).toBe('10.10.2016');
         });
 
-        it('given separators for 4 digit years', () => {
-            '. -/'.split('').forEach(separator => {
-                const date = simpleDate.fromString(
-                    `10${separator}10${separator}2016`,
-                );
-                expect(date.format()).toBe(`10.10.2016`);
-            });
-        });
-
-        it('given separators for 2 digit years', () => {
+        it('6 digit input, all valid separators', () => {
             '. -/'.split('').forEach(separator => {
                 const date = simpleDate.fromString(
                     `10${separator}10${separator}16`,
                 );
                 expect(date.format()).toBe('10.10.2016');
+            });
+        });
+
+        /*
+         7 Digit input returns first two digits as day, next two as month, and last three as year
+          */
+        it('7 digit input', () =>
+            expect(simpleDate.fromString('0312015').format()).toBe(
+                '03.12.2015',
+            ));
+
+        it('7 digit input, with separator', () =>
+            expect(simpleDate.fromString('05.05.123').format()).toBe(
+                '05.05.2123',
+            ));
+
+        it('7 digit input, with separator and 1 digit day', () => {
+            expect(simpleDate.fromString('5.04.2015').format()).toBe(
+                '05.04.2015',
+            );
+        });
+
+        it('7 digit input, with separator and 1 digit month', () => {
+            expect(simpleDate.fromString('25.1.2015').format()).toBe(
+                '25.01.2015',
+            );
+        });
+
+        /*
+         8 Digit input returns first two digits as day, next two as month, and last four as year
+          */
+        it('8 digit input', () => {
+            expect(simpleDate.fromString('10102016').format()).toBe(
+                '10.10.2016',
+            );
+        });
+
+        it('8 digit input, all valid separators', () => {
+            '. -/'.split('').forEach(separator => {
+                const date = simpleDate.fromString(
+                    `10${separator}10${separator}2016`,
+                );
+                expect(date.format()).toBe(`10.10.2016`);
             });
         });
     });
