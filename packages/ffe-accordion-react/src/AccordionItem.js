@@ -47,6 +47,7 @@ class AccordionItem extends Component {
             index,
             title,
             uuid,
+            id,
         } = this.props;
 
         const open = this.getOpen();
@@ -67,7 +68,7 @@ class AccordionItem extends Component {
                     aria-expanded={open}
                     aria-label={ariaLabel}
                     className="ffe-accordion-item__toggler"
-                    id={`tab-${uuid}-${index}`}
+                    id={id ? id : `tab-${uuid}-${index}`}
                     onClick={this.onClick}
                     onKeyUp={this.onClickEnterAndSpace}
                     role="tab"
@@ -119,6 +120,8 @@ AccordionItem.propTypes = {
     title: node,
     /** A unique ID, usually provided by the wrapping <Accordion /> element */
     uuid: string,
+    /** An optional ID for the element, will be auto-generated if not provided */
+    id: string,
 };
 
 AccordionItem.defaultProps = {
