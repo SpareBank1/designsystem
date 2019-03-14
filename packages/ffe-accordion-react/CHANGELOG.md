@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@6.2.12...@sb1/ffe-accordion-react@6.3.0) (2019-03-14)
+
+### Features
+
+-   **ffe-accordion-react:** DIG-48762 - Added support for supplying id to AccordionItem ([1943cbf](https://github.com/SpareBank1/designsystem/commit/1943cbf))
+
 ## [6.2.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@6.2.11...@sb1/ffe-accordion-react@6.2.12) (2019-02-18)
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react
