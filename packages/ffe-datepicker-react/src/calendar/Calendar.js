@@ -38,14 +38,15 @@ export default class Calendar extends Component {
         this.renderDay = this.renderDay.bind(this);
     }
 
-    componentWillReceiveProps(nextProps) {
-        if (nextProps.selectedDate !== this.props.selectedDate) {
+    /* eslint-disable react/no-did-update-set-state */
+    componentDidUpdate(prevProps) {
+        if (prevProps.selectedDate !== this.props.selectedDate) {
             this.setState({
                 calendar: simpleCalendar(
-                    simpleDate.fromString(nextProps.selectedDate),
-                    nextProps.minDate,
-                    nextProps.maxDate,
-                    nextProps.language,
+                    simpleDate.fromString(this.props.selectedDate),
+                    this.props.minDate,
+                    this.props.maxDate,
+                    this.props.language,
                 ),
             });
         }
@@ -137,13 +138,13 @@ export default class Calendar extends Component {
     }
 
     focusHandler(evt) {
-        if(this._wrapper && this._wrapper.contains(evt.target)){
+        if (this._wrapper && this._wrapper.contains(evt.target)) {
             this.forceDateFocus = true;
         }
     }
 
-    wrapperBlurHandler(){
-            this.forceDateFocus = false;
+    wrapperBlurHandler() {
+        this.forceDateFocus = false;
     }
 
     nextMonth(evt) {
@@ -241,7 +242,7 @@ export default class Calendar extends Component {
 }
 
 Calendar.defaultProps = {
-    focusOnOpen: false
+    focusOnOpen: false,
 };
 
 Calendar.propTypes = {
