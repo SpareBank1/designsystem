@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-decorators-react@2.0.9...@sb1/ffe-decorators-react@2.0.10) (2019-03-20)
+
+### Bug Fixes
+
+-   **ffe-decorators-react:** Remove use of "componentWillReceiveProps" ([1ef3b01](https://github.com/SpareBank1/designsystem/commit/1ef3b01)), closes [#372](https://github.com/SpareBank1/designsystem/issues/372)
+
 ## [2.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-decorators-react@2.0.8...@sb1/ffe-decorators-react@2.0.9) (2019-02-19)
 
 **Note:** Version bump only for package @sb1/ffe-decorators-react
