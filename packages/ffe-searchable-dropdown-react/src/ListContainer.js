@@ -46,7 +46,11 @@ const ListContainer = ({
             }
         >
             {dropdownList.length === 0 && (
-                <li className="ffe-searchable-dropdown__item">
+                <li
+                    className={classNames('ffe-searchable-dropdown__item', {
+                        'ffe-searchable-dropdown--dark__item': dark,
+                    })}
+                >
                     {typeof noMatch === 'string' ? noMatch : noMatch.text}
                 </li>
             )}
