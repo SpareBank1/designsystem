@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.7.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.6.1...@sb1/ffe-icons@12.7.0) (2019-03-25)
+
+### Features
+
+-   **ffe-icons:** Add a widget icon ([ddc6aca](https://github.com/SpareBank1/designsystem/commit/ddc6aca))
+
 ## [12.6.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.6.0...@sb1/ffe-icons@12.6.1) (2019-02-18)
 
 ### Bug Fixes
