@@ -11,6 +11,7 @@ lib/
 src/styleguidist.html
 tmp/
 es/
+types/
 
 # Editors
 .idea/
