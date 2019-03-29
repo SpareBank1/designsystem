@@ -185,7 +185,7 @@ describe('<Datepicker />', () => {
                 const onValidationComplete = jest.fn();
                 const wrapper = getMountedWrapper({ onValidationComplete });
 
-                wrapper.setProps({ value: '14317' });
+                wrapper.setProps({ value: '140317' });
 
                 wrapper.find('input').simulate('blur');
 

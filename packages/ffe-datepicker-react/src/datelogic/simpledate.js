@@ -1,5 +1,5 @@
 import errorTypes from './error-types';
-import {validateDate} from "../util/dateUtil";
+import { validateDate } from '../util/dateUtil';
 
 function isDate(date) {
     return (
@@ -31,11 +31,11 @@ function beforeYear(year, yearLimit) {
 }
 
 /*
-  If given a two-digit year we assume this century.
+  If given a one- or two-digit year we assume this century.
   E.g: 01.01.17 will yield 01.01.2017, not 01.01.1917 (JS default)
   Else they'll have to use 4-digit year.
 */
-function deriveTwoDigitYear(year) {
+function deriveOneOrTwoDigitYear(year) {
     const yearDate = new Date(year, 0);
     const fullYear = yearDate.getFullYear();
     if (beforeYear(fullYear, 2000)) {
@@ -43,6 +43,15 @@ function deriveTwoDigitYear(year) {
     }
 
     return yearDate.getFullYear();
+}
+
+/*
+  If given a three-digit year we assume this millennium.
+  E.g: 0101017 will yield 01.01.2017, or 0101117 01.01.2117
+  Else they'll have to use 4-digit year.
+*/
+function deriveThreeDigitYear(year) {
+    return `2${year}`;
 }
 
 const noop = () => {};
@@ -59,15 +68,27 @@ SimpleDateFactory.fromString = function fromString(
         return null;
     }
 
-    const [, date, , month] = match;
+    const date = match[1];
+    let month = match[3];
     let year = match[4];
 
-    if (year.length === 2) {
-        year = deriveTwoDigitYear(year);
+    if (year.length === 1 || year.length === 2) {
+        year = deriveOneOrTwoDigitYear(year);
+    }
+    if (year.length === 3) {
+        year = deriveThreeDigitYear(year);
+    }
+
+    // If no year and/or month is input, use todays month and/or year
+    const today = new Date();
+    if (!month) {
+        month = today.getMonth() + 1;
+    }
+    if (!year) {
+        year = today.getFullYear();
     }
 
     const newDate = new SimpleDate(new Date(year, month - 1, date));
-
     if (
         newDate.date() !== date * 1 ||
         newDate.month() + 1 !== month * 1 ||
