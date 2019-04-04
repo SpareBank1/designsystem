@@ -5145,7 +5145,7 @@ input:not([type='radio']):not([type='checkbox']) {
   }
   .ffe-header__secondary-nav .ffe-header__list-item {
     display: inline-block;
-    margin: 0 5px 0 0;
+    margin: 0 16px 0 0;
   }
   .ffe-header__user-nav-toggle {
     -ms-flex-preferred-size: 30%;
