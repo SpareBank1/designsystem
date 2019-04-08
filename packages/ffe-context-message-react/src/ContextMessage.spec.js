@@ -126,6 +126,15 @@ describe('<ContextMessage />', () => {
             done();
         }, 20);
     });
+
+    it('does not have aria-labelledby when header was not specified', () => {
+        const wrapper = getMountedWrapper({
+            headerElementId: 'header-element-id',
+        });
+
+        const message = wrapper.find('.ffe-context-message');
+        expect(message.prop('aria-labelledby')).toBe(undefined);
+    });
 });
 
 describe('<ContextInfoMessage />', () => {
