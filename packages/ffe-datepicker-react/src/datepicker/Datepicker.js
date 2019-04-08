@@ -301,7 +301,7 @@ export default class Datepicker extends Component {
         } = this.state;
         const latestValue = validateDate(value) ? value : lastValidDate;
 
-        if (this.state.ariaInvalid) {
+        if (this.state.ariaInvalid && !inputProps['aria-describedby']) {
             inputProps['aria-describedby'] = `date-input-validation-${
                 this.datepickerId
             }`;

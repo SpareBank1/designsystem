@@ -66,7 +66,7 @@ describe('<Datepicker />', () => {
             ).toBeUndefined();
         });
 
-        it('renders aria-describeby if a label is given', () => {
+        it('renders aria-describedby if a label is given', () => {
             const wrapper = getShallowWrapper({
                 label: 'Velg startdato',
             });
@@ -160,6 +160,19 @@ describe('<Datepicker />', () => {
             it('has correct aria-invalid value if given prop', () => {
                 const wrapper = getMountedWrapper({ ariaInvalid: true });
                 expect(wrapper.find('input').prop('aria-invalid')).toBe('true');
+            });
+
+            it('has correct aria-describedby if aria-describedby given as input prop', () => {
+                const inputProps = {
+                    'aria-describedby': 'test',
+                };
+                const wrapper = getMountedWrapper({
+                    ariaInvalid: true,
+                    inputProps,
+                });
+                expect(wrapper.find('input').prop('aria-describedby')).toBe(
+                    'test',
+                );
             });
         });
 
