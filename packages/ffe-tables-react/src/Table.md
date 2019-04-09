@@ -129,6 +129,65 @@ const onSort = ({ sortBy, descending, tableData }) => {};
 />;
 ```
 
+Dersom tabellen har rader som kan ekspanderes kan data-arrayet også inneholder verdier som sier hvorvidt en rad skal være ekspandert som default.
+
+```js
+const Button = ({ children }) => (
+    // stopPropagation hindrer at raden ekspanderer/kollapser når vi trykker på knappen
+    <TertiaryButton onClick={e => e.stopPropagation()}>
+        {children}
+    </TertiaryButton>
+);
+
+const data = [
+    {
+        id: 0,
+        name: 'Ola Normann',
+        email: 'ola@normann.no',
+        info: 'mer spennende info',
+    },
+    {
+        id: 1,
+        name: 'Sivert Svenska',
+        email: 'sivert@svenska.se',
+        info: 'mer spennende info',
+        defaultExpanded: true,
+    },
+    {
+        id: 2,
+        name: 'Daniel Dansk',
+        email: 'daniel@dansk.dk',
+        info: 'mer spennende info',
+    },
+    {
+        id: 3,
+        name: 'Lille Ole',
+        email: 'lilleole@gmail.com',
+        info: 'mer spennende info',
+    },
+];
+
+const columns = [
+    { key: 'name', header: 'Navn', footer: 'Gjennomsnitt' },
+    { key: 'email', header: 'E-post', hideOnTablet: true, hideOnMobile: true },
+];
+
+// Rader uten address vil ikke kunne ekspanderes fordi funksjonen returnerer falsy
+const expandedContentMapper = row => row.info && <span>Info: {row.info}</span>;
+
+<Table
+    columns={columns}
+    data={data}
+    expandedContentMapper={expandedContentMapper}
+    descending={true}
+    condensed={true}
+    smallHeader={true}
+    columnLayoutMobile={true}
+    breakpoint={'none'}
+    caption="Masse spennende data, med en rad som er ekspandert"
+/>;
+```
+
 Bruk av render funksjoner for columns: cellRender, columnHeaderRender, columnFooterRender.
 
 For hele tabellen: rowRender, headerRender, footerRender.
@@ -208,9 +267,11 @@ data.map(e => {
     e.syntetic = e.age > 18 && formatNumber(e.networth) > 10000;
 });
 
-const ageSum = data.map(e => e.age).reduce((total, num) => {
-    return total + num;
-});
+const ageSum = data
+    .map(e => e.age)
+    .reduce((total, num) => {
+        return total + num;
+    });
 
 const networthSum = data
     .map(e => formatNumber(e.networth))
@@ -405,3 +466,6 @@ const onSort = ({ sortBy, descending, tableData }) => {};
     }}
 />;
 ```
+
+Det er også mulig å si at en rad skal scrolles til når tabell-komponentet mountes.
+Dette gjøres ved å sette scrollToOnMount = true i for det rad-elementet i data-arrayt som det skal scrolles til.

@@ -87,6 +87,8 @@ class Table extends Component {
                     sort,
                     rowRender,
                     rowIndex: index,
+                    defaultExpanded: row.defaultExpanded,
+                    scrollToOnMount: row.scrollToOnMount,
                 };
                 return expandedContent ? (
                     <TableRowExpandable key={key} {...rowProps}>
