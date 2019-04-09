@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@5.2.8...@sb1/ffe-tables-react@5.3.0) (2019-04-09)
+
+### Features
+
+-   **ffe-tables-react:** Expandable table rows may be expanded as default ([9217453](https://github.com/SpareBank1/designsystem/commit/9217453))
+
 ## [5.2.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@5.2.7...@sb1/ffe-tables-react@5.2.8) (2019-04-08)
 
 **Note:** Version bump only for package @sb1/ffe-tables-react
