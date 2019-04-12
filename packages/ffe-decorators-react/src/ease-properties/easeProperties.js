@@ -19,7 +19,8 @@ export default (properties = {}) => TargetComponent =>
     // {
     //      somePropertyToEase: {
     //          duration: 0.5, // duration of easing in seconds
-    //          initialValue: 0 // the initial value to start the easing from when the component mounts
+    //          initialValue: 0, // the initial value to start the easing from when the component mounts
+    //          alwaysEaseFrom: 0, // Optional. All easings will start from this value rather than the previous
     //      },
     //  }
     // , with a property for each property to ease. The duration defaults to 1 second, and there is no default
@@ -133,7 +134,11 @@ export default (properties = {}) => TargetComponent =>
                             [propName]: {
                                 ...prevState[propName],
                                 currentIteration: 0,
-                                fromValue: prevState[propName].currentValue,
+                                fromValue:
+                                    properties[propName].alwaysEaseFrom !==
+                                    undefined
+                                        ? properties[propName].alwaysEaseFrom
+                                        : prevState[propName].currentValue,
                                 rafId: window.requestAnimationFrame(
                                     this.nextFrame.bind(this, propName),
                                 ),
