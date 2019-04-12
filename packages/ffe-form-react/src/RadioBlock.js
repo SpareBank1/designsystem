@@ -14,6 +14,7 @@ class RadioBlock extends Component {
             label,
             name,
             selectedValue,
+            showChildren,
             value,
             ...inputProps
         } = this.props;
@@ -38,7 +39,7 @@ class RadioBlock extends Component {
                     >
                         {label}
                     </label>
-                    {isSelected && (
+                    {(isSelected || showChildren) && (
                         <div
                             className={classNames('ffe-radio-block__wrapper', {
                                 'ffe-radio-block__wrapper--empty': !children,
@@ -66,6 +67,8 @@ RadioBlock.propTypes = {
     name: string.isRequired,
     /** The selected value of the radio button set */
     selectedValue: string,
+    /** Whether or not children are always visible */
+    showChildren: bool,
     /** The value of the radio block */
     value: string.isRequired,
 };
