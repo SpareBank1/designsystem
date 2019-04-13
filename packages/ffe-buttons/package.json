@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "@sb1/ffe-core": "^14.0.4",
-    "stylelint": "^9.4.0"
+    "stylelint": "^10.0.0"
   },
   "peerDependencies": {
     "@sb1/ffe-core": "^14.0.2"
