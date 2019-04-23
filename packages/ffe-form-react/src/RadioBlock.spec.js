@@ -65,5 +65,12 @@ describe('<RadioBlock />', () => {
             });
             expect(wrapper.text()).toContain('sample children');
         });
+        it('is rendered if showChildren is true', () => {
+            const wrapper = getWrapper({
+                children: 'sample children',
+                showChildren: true,
+            });
+            expect(wrapper.text()).toContain('sample children');
+        });
     });
 });

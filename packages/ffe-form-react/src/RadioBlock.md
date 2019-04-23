@@ -17,6 +17,7 @@ initialState = { selected: 'you' };
             <RadioBlock
                 {...inputProps}
                 label="Ektefelle, samboer eller registrert partner"
+                showChildren={true}
                 value="partner"
             >
                 Da må ektefelle, samboer eller registrert partner skrive inn
