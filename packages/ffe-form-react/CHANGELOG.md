@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.5.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@4.4.3...@sb1/ffe-form-react@4.5.0) (2019-04-23)
+
+### Features
+
+-   **ffe-form-react:** Add showChildren prop to RadioBlock ([99db6e4](https://github.com/SpareBank1/designsystem/commit/99db6e4))
+
 ## [4.4.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@4.4.2...@sb1/ffe-form-react@4.4.3) (2019-02-19)
 
 **Note:** Version bump only for package @sb1/ffe-form-react
