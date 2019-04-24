@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.7.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.7.1...@sb1/ffe-icons@12.7.2) (2019-04-24)
+
+### Bug Fixes
+
+-   **ffe-icons:** Dont try to lint non-existing files ([5a9c3bf](https://github.com/SpareBank1/designsystem/commit/5a9c3bf))
+
 ## [12.7.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.7.0...@sb1/ffe-icons@12.7.1) (2019-04-08)
 
 ### Bug Fixes
