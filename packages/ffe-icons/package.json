@@ -14,9 +14,7 @@
   },
   "scripts": {
     "build": "mkdirp dist && node bin/build.js",
-    "lint": "run-p lint:js lint:less",
-    "lint:js": "eslint bin/.",
-    "lint:less": "stylelint less/*.less",
+    "lint": "eslint bin/.",
     "test": "npm run lint"
   },
   "dependencies": {
