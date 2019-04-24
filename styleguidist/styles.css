@@ -4943,6 +4943,8 @@ input:not([type='radio']):not([type='checkbox']) {
 }
 .ffe-header__icon-button {
   color: #002776;
+  /* stylelint-disable declaration-block-no-duplicate-properties */
+  /* stylelint-enable declaration-block-no-duplicate-properties */
 }
 .ffe-header__icon-button::after {
   border: none;
