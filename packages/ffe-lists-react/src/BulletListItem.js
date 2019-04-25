@@ -1,5 +1,5 @@
 import React from 'react';
-import { node } from 'prop-types';
+import { node, string } from 'prop-types';
 import classNames from 'classnames';
 
 const BulletListItem = props => {
@@ -14,6 +14,8 @@ const BulletListItem = props => {
 
 BulletListItem.propTypes = {
     children: node,
+    /** Any extra classes */
+    className: string,
 };
 
 export default BulletListItem;

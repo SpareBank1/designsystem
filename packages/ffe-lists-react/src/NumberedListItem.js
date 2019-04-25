@@ -1,5 +1,5 @@
 import React from 'react';
-import { node } from 'prop-types';
+import { node, string } from 'prop-types';
 import classNames from 'classnames';
 
 const NumberedListItem = props => {
@@ -14,6 +14,8 @@ const NumberedListItem = props => {
 
 NumberedListItem.propTypes = {
     children: node,
+    /** Any extra classes */
+    className: string,
 };
 
 export default NumberedListItem;

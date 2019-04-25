@@ -66,6 +66,8 @@ RadioSwitch.propTypes = {
     rightLabel: string.isRequired,
     /** The value of the choice to the right */
     rightValue: oneOfType([bool, string]).isRequired,
+    /** The selected value of the radio button set */
+    selectedValue: oneOfType([bool, string]),
     /** Condensed modifier. Use in condensed designs */
     condensed: bool,
     /** Dark variant */
