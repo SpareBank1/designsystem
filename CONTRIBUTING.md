@@ -197,6 +197,11 @@ const Button = ({ className, ...rest }) => (
 );
 ```
 
+##### TypeScript definition files
+
+Noen av React-komponentene har typedefinisjoner for TypeScript. Dersom du endrer eksterne metoder eller properties
+i en slik komponent må `index.d.ts` oppdateres tilsvarende slik at typene er i sync med JavaScript.
+
 ##### Andre ting
 
 Dette er ikke en uttømmende liste. Om det kommer opp andre standarder som brukes på tvers i code reviews, ber vi om at
