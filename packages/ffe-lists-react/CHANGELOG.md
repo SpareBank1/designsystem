@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.3.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@3.3.1...@sb1/ffe-lists-react@3.3.2) (2019-04-25)
+
+### Bug Fixes
+
+-   **ffe-lists-react:** Fix linting errors ([560c31b](https://github.com/SpareBank1/designsystem/commit/560c31b))
+
 ## [3.3.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@3.3.0...@sb1/ffe-lists-react@3.3.1) (2018-12-11)
 
 ### Bug Fixes

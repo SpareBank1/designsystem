@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [9.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@9.1.4...@sb1/ffe-grid-react@9.2.0) (2019-04-25)
+
+### Features
+
+-   **ffe-grid-react:** Added type definitions for typescript ([524cf3e](https://github.com/SpareBank1/designsystem/commit/524cf3e))
+-   **ffe-grid-react:** Added type definitions for typescript ([4dd607a](https://github.com/SpareBank1/designsystem/commit/4dd607a))
+
 ## [9.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@9.1.3...@sb1/ffe-grid-react@9.1.4) (2019-01-23)
 
 ### Bug Fixes

@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@5.1.28...@sb1/ffe-system-message-react@5.2.0) (2019-04-25)
+
+### Features
+
+-   **ffe-system-message-react:** Added type definitions for typescript ([44dc244](https://github.com/SpareBank1/designsystem/commit/44dc244))
+-   **ffe-system-message-react:** Added type definitions for typescript ([ce8aa09](https://github.com/SpareBank1/designsystem/commit/ce8aa09))
+
 ## [5.1.28](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@5.1.27...@sb1/ffe-system-message-react@5.1.28) (2019-04-24)
 
 **Note:** Version bump only for package @sb1/ffe-system-message-react

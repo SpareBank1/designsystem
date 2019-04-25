@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.5.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@4.5.0...@sb1/ffe-form-react@4.5.1) (2019-04-25)
+
+### Bug Fixes
+
+-   **ffe-form-react:** Fix linting errors ([d293f00](https://github.com/SpareBank1/designsystem/commit/d293f00))
+
 # [4.5.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@4.4.3...@sb1/ffe-form-react@4.5.0) (2019-04-23)
 
 ### Features
