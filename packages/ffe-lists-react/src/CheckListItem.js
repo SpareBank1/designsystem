@@ -1,5 +1,5 @@
 import React from 'react';
-import { bool, node } from 'prop-types';
+import { bool, node, string } from 'prop-types';
 import classNames from 'classnames';
 
 const CheckListItem = props => {
@@ -18,6 +18,8 @@ const CheckListItem = props => {
 
 CheckListItem.propTypes = {
     children: node,
+    /** Any extra classes */
+    className: string,
     /** If true, render a red cross instead of a green checkmark */
     isCross: bool,
 };
