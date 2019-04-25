@@ -14,7 +14,7 @@ export interface InlineGridProps extends React.HTMLAttributes<HTMLElement> {
     element?: string;
 }
 
-type backgroundColors =
+type BackgroundColors =
     | 'blue-ice'
     | 'blue-pale'
     | 'green-mint'
@@ -26,7 +26,7 @@ type backgroundColors =
     | 'blue-sky';
 
 export interface GridRowProps extends React.HTMLAttributes<HTMLElement> {
-    background?: backgroundColors;
+    background?: BackgroundColors;
     children: React.ReactNode;
     className?: string;
     element?: string;
@@ -34,15 +34,15 @@ export interface GridRowProps extends React.HTMLAttributes<HTMLElement> {
     topPadding?: boolean;
 }
 
-type columnsRange = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
+type ColumnsRange = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
 
 export interface GridColSize {
-    cols: columnsRange | string;
-    offset: columnsRange | string;
+    cols: ColumnsRange | string;
+    offset: ColumnsRange | string;
 }
 
 export interface GridColProps extends React.HTMLAttributes<HTMLElement> {
-    background?: backgroundColors;
+    background?: BackgroundColors;
     children: React.ReactNode;
     className?: string;
     element?: React.ReactNode;
@@ -58,9 +58,9 @@ export interface GridColProps extends React.HTMLAttributes<HTMLElement> {
     reverse?: boolean;
     start?: boolean;
     top?: boolean;
-    sm?: columnsRange | string | GridColSize;
-    md?: columnsRange | string | GridColSize;
-    lg?: columnsRange | string | GridColSize;
+    sm?: ColumnsRange | string | GridColSize;
+    md?: ColumnsRange | string | GridColSize;
+    lg?: ColumnsRange | string | GridColSize;
 }
 
 declare class Grid extends React.Component<GridProps, any> {}
