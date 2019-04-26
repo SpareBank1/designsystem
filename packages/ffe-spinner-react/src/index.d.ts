@@ -6,3 +6,5 @@ export interface SpinnerProps extends React.HTMLAttributes<HTMLSpanElement> {
 }
 
 declare class Spinner extends React.Component<SpinnerProps, any> {}
+
+export default Spinner;
