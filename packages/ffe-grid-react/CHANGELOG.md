@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@9.2.0...@sb1/ffe-grid-react@9.2.1) (2019-04-26)
+
+### Bug Fixes
+
+-   **ffe-grid-react:** Fix in typescript definition, children should not be required. ([cdfeaa8](https://github.com/SpareBank1/designsystem/commit/cdfeaa8))
+
 # [9.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@9.1.4...@sb1/ffe-grid-react@9.2.0) (2019-04-25)
 
 ### Features

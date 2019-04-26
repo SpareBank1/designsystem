@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner-react@4.1.0...@sb1/ffe-spinner-react@4.1.1) (2019-04-26)
+
+### Bug Fixes
+
+-   **ffe-spinner-react:** Fixed missing default export in typescript definitions ([82a2df2](https://github.com/SpareBank1/designsystem/commit/82a2df2))
+
 # [4.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner-react@4.0.6...@sb1/ffe-spinner-react@4.1.0) (2019-04-25)
 
 ### Features
