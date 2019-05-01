@@ -10,7 +10,7 @@ export default function TabGroup({ className, thin, ...rest }) {
                 { 'ffe-tab-group--thin': thin },
                 className,
             )}
-            role="group"
+            role="tablist"
             {...rest}
         />
     );
