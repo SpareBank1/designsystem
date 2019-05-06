@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@4.1.3...@sb1/ffe-tabs-react@4.2.0) (2019-05-06)
+
+### Features
+
+-   **ffe-tabs-react:** Add aria-selected to tabs ([b4a3fbe](https://github.com/SpareBank1/designsystem/commit/b4a3fbe))
+
 ## [4.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@4.1.2...@sb1/ffe-tabs-react@4.1.3) (2018-12-11)
 
 ### Bug Fixes
