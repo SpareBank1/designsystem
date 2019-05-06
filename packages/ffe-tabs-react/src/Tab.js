@@ -26,4 +26,6 @@ Tab.propTypes = {
     condensed: bool,
     /** Additional css classes */
     className: string,
+    /** Id of the element it controls */
+    'aria-controls': string.isRequired,
 };

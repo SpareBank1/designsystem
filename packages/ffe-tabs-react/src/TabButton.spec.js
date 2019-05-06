@@ -34,6 +34,14 @@ describe('TabButton', () => {
         expect(wrapper.prop('aria-selected')).toBe(false);
     });
 
+    it('should have aria-controls attribute when passed to it', () => {
+        const controldId = 'controlId';
+        const wrapper = shallow(
+            <TabButton aria-controls={controldId}>En tab</TabButton>,
+        );
+        expect(wrapper.prop('aria-controls')).toBe(controldId);
+    });
+
     it('passes any prop on to a tab button', () => {
         const tab = shallow(
             <TabButton data-analytics-track="logMe">En tab</TabButton>,
