@@ -60,7 +60,7 @@
         "kss": "^3.0.0-beta.23",
         "lerna": "^3.0.1",
         "less": "^3.8.1",
-        "less-loader": "^4.0.5",
+        "less-loader": "^5.0.0",
         "less-plugin-autoprefix": "^2.0.0",
         "less-plugin-clean-css": "^1.5.1",
         "marked": "^0.6.0",
