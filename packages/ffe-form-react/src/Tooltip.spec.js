@@ -36,8 +36,10 @@ describe('<Tooltip>', () => {
         const wrapper = getWrapper();
 
         expect(wrapper.find('Collapse').prop('isOpen')).toBe(false);
+        expect(wrapper.find('button').prop('aria-expanded')).toBe(false);
         wrapper.find('button').simulate('click');
         expect(wrapper.find('Collapse').prop('isOpen')).toBe(true);
+        expect(wrapper.find('button').prop('aria-expanded')).toBe(true);
     });
 
     it('toggles active state if button is clicked', () => {
@@ -55,5 +57,11 @@ describe('<Tooltip>', () => {
     it('haves a tabIndex if specified', () => {
         const wrapper = getWrapper({ tabIndex: -1 });
         expect(wrapper.find('button').prop('tabIndex')).toBe(-1);
+    });
+
+    it('connects the toggle button to the correct element', () => {
+        const wrapper = getWrapper();
+        const tipId = wrapper.find('Collapse').prop('id');
+        expect(wrapper.find('button').prop('aria-controls')).toBe(tipId);
     });
 });

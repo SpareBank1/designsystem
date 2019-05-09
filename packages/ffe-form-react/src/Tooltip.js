@@ -2,6 +2,7 @@ import React from 'react';
 import { bool, func, node, string, number } from 'prop-types';
 import classNames from 'classnames';
 import Collapse from 'react-css-collapse';
+import uuid from 'uuid';
 
 class Tooltip extends React.Component {
     constructor({ isOpen }) {
@@ -10,6 +11,7 @@ class Tooltip extends React.Component {
             isOpen: !!isOpen,
         };
         this.onToggle = this.onToggle.bind(this);
+        this.tooltipId = uuid.v4();
     }
 
     onToggle(evt) {
@@ -41,6 +43,8 @@ class Tooltip extends React.Component {
                 })}
             >
                 <button
+                    aria-expanded={isOpen}
+                    aria-controls={this.tooltipId}
                     aria-label={ariaLabel}
                     className={classNames('ffe-tooltip__icon', {
                         'ffe-tooltip--dark__icon': dark,
@@ -49,13 +53,13 @@ class Tooltip extends React.Component {
                     type="button"
                     tabIndex={tabIndex}
                 >
-                    ?
+                    <span aria-hidden={true}>?</span>
                 </button>
                 {children && (
                     <Collapse
-                        isOpen={isOpen}
                         className="ffe-tooltip__text"
-                        aria-expanded={String(isOpen)}
+                        id={this.tooltipId}
+                        isOpen={isOpen}
                     >
                         <div
                             className={classNames(
@@ -74,6 +78,7 @@ class Tooltip extends React.Component {
 }
 
 Tooltip.propTypes = {
+    /** Descriptive text for the Tooltip expand icon */
     'aria-label': string,
     /** The children are rendered in the expanded tooltip. */
     children: node,
@@ -89,6 +94,7 @@ Tooltip.propTypes = {
 };
 
 Tooltip.defaultProps = {
+    'aria-label': 'Vis hjelpetekst',
     dark: false,
 };
 
