@@ -58,7 +58,7 @@ const RadioButtonInputGroup = props => {
                     {tooltipContent}
                 </legend>
             )}
-            {children(buttonProps)}
+            {children({ ...buttonProps, dark })}
             {fieldMessageContent}
         </fieldset>
     );
