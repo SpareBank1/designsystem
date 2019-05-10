@@ -5,7 +5,7 @@ export interface SystemMessageProps {
     className?: string;
     icon?: React.ReactNode;
     locale?: 'en' | 'nb' | 'nn';
-    onClose?: () => void;
+    onClose?: (e: React.MouseEvent | undefined) => void;
 }
 
 declare class SystemErrorMessage extends React.Component<
