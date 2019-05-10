@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.4.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@5.3.1...@sb1/ffe-tables-react@5.4.0) (2019-05-10)
+
+### Features
+
+-   **ffe-tables-react:** Added type definitions for typescript ([2e25360](https://github.com/SpareBank1/designsystem/commit/2e25360))
+
 ## [5.3.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@5.3.0...@sb1/ffe-tables-react@5.3.1) (2019-04-24)
 
 **Note:** Version bump only for package @sb1/ffe-tables-react

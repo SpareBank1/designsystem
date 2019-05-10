@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [11.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@11.2.14...@sb1/ffe-buttons-react@11.3.0) (2019-05-10)
+
+### Bug Fixes
+
+-   **ffe-buttons-react:** a11y improvements to `ExpandButton` ([a0bfbb8](https://github.com/SpareBank1/designsystem/commit/a0bfbb8)), closes [#619](https://github.com/SpareBank1/designsystem/issues/619)
+
+### Features
+
+-   **ffe-buttons-react:** Add dark style back button ([444dcd7](https://github.com/SpareBank1/designsystem/commit/444dcd7))
+-   **ffe-buttons-react:** Added type definitions for typescript ([28f1208](https://github.com/SpareBank1/designsystem/commit/28f1208))
+
 ## [11.2.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@11.2.13...@sb1/ffe-buttons-react@11.2.14) (2019-04-24)
 
 **Note:** Version bump only for package @sb1/ffe-buttons-react

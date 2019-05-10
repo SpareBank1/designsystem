@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.1.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@10.1.8...@sb1/ffe-form@10.1.9) (2019-05-10)
+
+### Bug Fixes
+
+-   **ffe-form:** Fix field-message text alignment ([5660823](https://github.com/SpareBank1/designsystem/commit/5660823)), closes [#609](https://github.com/SpareBank1/designsystem/issues/609)
+
 ## [10.1.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@10.1.7...@sb1/ffe-form@10.1.8) (2019-04-24)
 
 **Note:** Version bump only for package @sb1/ffe-form

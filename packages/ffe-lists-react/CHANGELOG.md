@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.4.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@3.3.2...@sb1/ffe-lists-react@3.4.0) (2019-05-10)
+
+### Features
+
+-   **ffe-lists-react:** Added type definitions for typescript ([d17c769](https://github.com/SpareBank1/designsystem/commit/d17c769))
+
 ## [3.3.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@3.3.1...@sb1/ffe-lists-react@3.3.2) (2019-04-25)
 
 ### Bug Fixes

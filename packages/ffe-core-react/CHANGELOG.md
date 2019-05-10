@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@3.2.6...@sb1/ffe-core-react@3.3.0) (2019-05-10)
+
+### Features
+
+-   **ffe-core-react:** Added type definitions for typescript ([630b457](https://github.com/SpareBank1/designsystem/commit/630b457))
+
 ## [3.2.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@3.2.5...@sb1/ffe-core-react@3.2.6) (2018-12-11)
 
 ### Bug Fixes

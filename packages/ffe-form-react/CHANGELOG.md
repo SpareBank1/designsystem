@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.6.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@4.5.1...@sb1/ffe-form-react@4.6.0) (2019-05-10)
+
+### Bug Fixes
+
+-   **ffe-form-react:** ARIA improvements to Tooltip ([f9f0372](https://github.com/SpareBank1/designsystem/commit/f9f0372)), closes [#504](https://github.com/SpareBank1/designsystem/issues/504)
+-   **ffe-form-react:** propagate `dark` prop ([33618fe](https://github.com/SpareBank1/designsystem/commit/33618fe)), closes [#613](https://github.com/SpareBank1/designsystem/issues/613)
+
+### Features
+
+-   **ffe-form-react:** Added type definitions for typescript ([a1ac175](https://github.com/SpareBank1/designsystem/commit/a1ac175))
+
 ## [4.5.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@4.5.0...@sb1/ffe-form-react@4.5.1) (2019-04-25)
 
 ### Bug Fixes
