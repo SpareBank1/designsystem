@@ -27,11 +27,15 @@ describe('<ExpandButton />', () => {
     });
     it('renders leftIcon and rightIcon', () => {
         const wrapper = getWrapper({
-            leftIcon: (<BestikkIkon />),
-            rightIcon: (<BamseIkon />),
+            leftIcon: <BestikkIkon />,
+            rightIcon: <BamseIkon />,
         });
         expect(wrapper.find(BestikkIkon).exists()).toBe(true);
         expect(wrapper.find(BamseIkon).exists()).toBe(true);
+    });
+    it('does not use an aria-label since the button itself has a children acting as label', () => {
+        const wrapper = getWrapper();
+        expect(wrapper.prop('aria-label')).toBe(undefined);
     });
     describe('when expanded', () => {
         it('does not render children', () => {
@@ -40,9 +44,9 @@ describe('<ExpandButton />', () => {
         });
         it('does not render leftIcon and rightIcon', () => {
             const wrapper = getWrapper({
-                leftIcon: (<BestikkIkon />),
+                leftIcon: <BestikkIkon />,
                 isExpanded: true,
-                rightIcon: (<BamseIkon />),
+                rightIcon: <BamseIkon />,
             });
             expect(wrapper.find(BestikkIkon).exists()).toBe(false);
             expect(wrapper.find(BamseIkon).exists()).toBe(false);
@@ -58,7 +62,15 @@ describe('<ExpandButton />', () => {
         it('renders a KryssIkon', () => {
             const wrapper = getWrapper({ isExpanded: true });
             expect(wrapper.find(KryssIkon).exists()).toBe(true);
-            expect(wrapper.find(KryssIkon).hasClass('ffe-button__icon')).toBe(true);
+            expect(wrapper.find(KryssIkon).hasClass('ffe-button__icon')).toBe(
+                true,
+            );
+        });
+        it('uses the default aria-label property on the button', () => {
+            const wrapper = getWrapper({ isExpanded: true });
+            expect(wrapper.prop('aria-label')).toBe(
+                ExpandButton.defaultProps.closeLabel,
+            );
         });
     });
 });
