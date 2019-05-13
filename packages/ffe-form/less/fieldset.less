@@ -9,4 +9,40 @@
     border: 0;
     padding: 0;
     margin: 0;
+
+    .ffe-radio-button,
+    .ffe-radio-switch {
+        margin-bottom: 30px;
+    }
+
+    .ffe-field-error-message {
+        margin-top: -24px;
+        margin-bottom: 0;
+    }
+
+    .ffe-radio-block:last-of-type {
+        margin-bottom: 30px;
+    }
+
+    &--no-extra-margin {
+        .ffe-field-error-message {
+            margin: 5px 0 10px;
+        }
+
+        .ffe-radio-button {
+            margin: 10px 0;
+
+            &--inline {
+                margin-right: 20px;
+            }
+        }
+
+        .ffe-radio-switch {
+            margin-bottom: 0;
+        }
+
+        .ffe-radio-block:last-of-type {
+            margin-bottom: 0;
+        }
+    }
 }
