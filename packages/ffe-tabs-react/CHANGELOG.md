@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.4.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@4.3.0...@sb1/ffe-tabs-react@4.4.0) (2019-05-13)
+
+### Features
+
+-   **ffe-tabs-react:** Add aria-controls as required to tabs ([07d9676](https://github.com/SpareBank1/designsystem/commit/07d9676)), closes [#626](https://github.com/SpareBank1/designsystem/issues/626)
+-   **ffe-tabs-react:** Add tabs examples with content tied to each tab ([5b5b534](https://github.com/SpareBank1/designsystem/commit/5b5b534))
+
 # [4.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@4.2.0...@sb1/ffe-tabs-react@4.3.0) (2019-05-10)
 
 ### Features
