@@ -29,6 +29,7 @@ export interface NumberedListProps extends BaseListProps {
 export interface DescriptionListProps extends BaseListProps {
     medium?: boolean;
     large?: boolean;
+    horizontal?: boolean;
 }
 
 declare class BulletList extends React.Component<
