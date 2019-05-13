@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@3.4.0...@sb1/ffe-lists-react@4.0.0) (2019-05-13)
+
+### Features
+
+-   **ffe-lists-react:** added vertical description list ([e7b4165](https://github.com/SpareBank1/designsystem/commit/e7b4165))
+
+### BREAKING CHANGES
+
+-   **ffe-lists-react:** The description list is now vertical by default. To get old behaviour 'horizontal' prop must be passed.
+
 # [3.4.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@3.3.2...@sb1/ffe-lists-react@3.4.0) (2019-05-10)
 
 ### Features

@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@6.1.3...@sb1/ffe-lists@7.0.0) (2019-05-13)
+
+### Features
+
+-   **ffe-lists:** added vertical description list ([e3bb220](https://github.com/SpareBank1/designsystem/commit/e3bb220))
+
+### BREAKING CHANGES
+
+-   **ffe-lists:** The description list is now vertical by default. To get old behaviour 'horizontal' class modifier must be used
+
 ## [6.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@6.1.2...@sb1/ffe-lists@6.1.3) (2019-04-24)
 
 **Note:** Version bump only for package @sb1/ffe-lists
