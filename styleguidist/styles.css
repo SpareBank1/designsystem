@@ -5417,7 +5417,7 @@ input:not([type='radio']):not([type='checkbox']) {
   padding-bottom: 20px;
   margin-left: 0;
 }
-.ffe-description-list {
+.ffe-description-list--horizontal {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5428,13 +5428,13 @@ input:not([type='radio']):not([type='checkbox']) {
           align-items: flex-start;
   width: 100%;
 }
-.ffe-description-list .ffe-description-list__term {
+.ffe-description-list--horizontal .ffe-description-list__term {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 35%;
           flex: 0 0 35%;
   overflow: hidden;
 }
-.ffe-description-list .ffe-description-list__description {
+.ffe-description-list--horizontal .ffe-description-list__description {
   -webkit-box-flex: 65%;
       -ms-flex: 65% 0 0px;
           flex: 65% 0 0;
@@ -5442,52 +5442,52 @@ input:not([type='radio']):not([type='checkbox']) {
   max-width: 65%;
   /* Fix for IE issue in which box-sizing is not taken into account when using flex */
 }
-.ffe-description-list .ffe-description-list__description + .ffe-description-list__description {
+.ffe-description-list--horizontal .ffe-description-list__description + .ffe-description-list__description {
   margin-left: 35%;
   /* Keep left margin when using multiple dd's */
 }
 @media (min-width: 480px) {
-  .ffe-description-list .ffe-description-list__term {
+  .ffe-description-list--horizontal .ffe-description-list__term {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 20%;
             flex: 0 0 20%;
   }
-  .ffe-description-list .ffe-description-list__description {
+  .ffe-description-list--horizontal .ffe-description-list__description {
     -webkit-box-flex: 80%;
         -ms-flex: 80% 0 0px;
             flex: 80% 0 0;
     max-width: 80%;
   }
-  .ffe-description-list .ffe-description-list__description + .ffe-description-list__description {
+  .ffe-description-list--horizontal .ffe-description-list__description + .ffe-description-list__description {
     margin-left: 20%;
   }
 }
-.ffe-description-list--md .ffe-description-list__term {
+.ffe-description-list--horizontal--md .ffe-description-list__term {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 40%;
           flex: 0 0 40%;
 }
-.ffe-description-list--md .ffe-description-list__description {
+.ffe-description-list--horizontal--md .ffe-description-list__description {
   -webkit-box-flex: 60%;
       -ms-flex: 60% 0 0px;
           flex: 60% 0 0;
   max-width: 60%;
 }
-.ffe-description-list--md .ffe-description-list__description + .ffe-description-list__description {
+.ffe-description-list--horizontal--md .ffe-description-list__description + .ffe-description-list__description {
   margin-left: 40%;
 }
-.ffe-description-list--lg .ffe-description-list__term {
+.ffe-description-list--horizontal--lg .ffe-description-list__term {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 50%;
           flex: 0 0 50%;
 }
-.ffe-description-list--lg .ffe-description-list__description {
+.ffe-description-list--horizontal--lg .ffe-description-list__description {
   -webkit-box-flex: 50%;
       -ms-flex: 50% 0 0px;
           flex: 50% 0 0;
   max-width: 50%;
 }
-.ffe-description-list--lg .ffe-description-list__description + .ffe-description-list__description {
+.ffe-description-list--horizontal--lg .ffe-description-list__description + .ffe-description-list__description {
   margin-left: 50%;
 }
 .ffe-description-list-multicol {
