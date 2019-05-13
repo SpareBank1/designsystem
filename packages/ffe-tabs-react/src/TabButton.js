@@ -32,6 +32,8 @@ TabButton.propTypes = {
     className: string,
     /** Dark variant */
     dark: bool,
+    /** Id of the element it controls */
+    'aria-controls': string.isRequired,
 };
 
 TabButton.defaultProps = {
