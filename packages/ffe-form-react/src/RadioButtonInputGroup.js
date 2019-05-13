@@ -12,13 +12,13 @@ const ensureComponent = Comp => (input, dark) => {
 };
 
 const ensureTooltip = ensureComponent(Tooltip);
-const ensureFieldMessage = ensureComponent(ErrorFieldMessage);
 
 const RadioButtonInputGroup = props => {
     const {
         'aria-invalid': ariaInvalid,
         children,
         className,
+        extraMargin,
         fieldMessage,
         inline,
         label,
@@ -38,12 +38,15 @@ const RadioButtonInputGroup = props => {
     };
 
     const tooltipContent = tooltip && ensureTooltip(tooltip, dark);
-    const fieldMessageContent =
-        fieldMessage && ensureFieldMessage(fieldMessage);
 
     return (
         <fieldset
-            className={classNames('ffe-fieldset', 'ffe-input-group', className)}
+            className={classNames(
+                'ffe-fieldset',
+                'ffe-input-group',
+                { 'ffe-fieldset--no-extra-margin': !extraMargin },
+                className,
+            )}
             {...rest}
         >
             {label && (
@@ -59,7 +62,13 @@ const RadioButtonInputGroup = props => {
                 </legend>
             )}
             {children({ ...buttonProps, dark })}
-            {fieldMessageContent}
+
+            {typeof fieldMessage === 'string' && (
+                <ErrorFieldMessage element="p">
+                    {fieldMessage}
+                </ErrorFieldMessage>
+            )}
+            {React.isValidElement(fieldMessage) && fieldMessage}
         </fieldset>
     );
 };
@@ -78,6 +87,11 @@ RadioButtonInputGroup.propTypes = {
     children: func.isRequired,
     /** Additional class names applied to the fieldset */
     className: string,
+    /** Reserve space for showing `fieldMessage`s so content below don't move
+     *  vertically if an errormessage shows up. Note that this will only reserve
+     *  space for one line of content, so keep messages short.
+     */
+    extraMargin: bool,
     /** String or ErrorFieldMessage component with message */
     fieldMessage: oneOfType([node, string]),
     /**
@@ -107,6 +121,7 @@ RadioButtonInputGroup.propTypes = {
 };
 
 RadioButtonInputGroup.defaultProps = {
+    extraMargin: true,
     dark: false,
 };
 

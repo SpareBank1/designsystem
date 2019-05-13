@@ -22,9 +22,10 @@ export interface CheckboxProps
 }
 
 export interface BaseFieldMessageProps
-    extends React.HTMLAttributes<HTMLDivElement> {
+    extends React.HTMLAttributes<HTMLElement> {
     children: React.ReactNode;
     className?: string;
+    element?: string;
 }
 
 export interface InputProps
@@ -63,6 +64,7 @@ export interface InputGroupProps extends React.HTMLAttributes<HTMLDivElement> {
     /** Unless you only have one element in your `InputGroup` you will have to use the function-as-a-child pattern. */
     children: JSX.Element;
     className?: string;
+    extraMargin?: boolean;
     fieldMessage?: string | React.ReactNode;
     description?: string;
     label?: string | Label;
@@ -84,6 +86,12 @@ export interface RadioBlockProps
     checked?: boolean;
     children?: React.ReactNode;
     className?: string;
+    /* Support for the dark theme has not been added for this component
+     * but can still be passed down from a parent `RadioButtonInputGroup`.
+     * It should not be passed down manually unless support for dark theme
+     * is implemented.
+     */
+    dark?: boolean;
     label: string | React.ReactNode;
     name: string;
     selectedValue?: string;
@@ -115,6 +123,7 @@ export interface RadioButtonInputGroupProps
     extends React.FieldsetHTMLAttributes<HTMLFieldSetElement> {
     children: React.ReactNode;
     className?: string;
+    extraMargin?: boolean;
     fieldMessage?: string | React.ReactNode;
     inline?: boolean;
     label?: string | React.ReactNode;
