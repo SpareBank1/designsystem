@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.4.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@4.4.0...@sb1/ffe-tabs-react@4.4.1) (2019-05-14)
+
+### Bug Fixes
+
+-   **ffe-tabs-react:** Update TypeScript definitions ([918f2b2](https://github.com/SpareBank1/designsystem/commit/918f2b2))
+
 # [4.4.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@4.3.0...@sb1/ffe-tabs-react@4.4.0) (2019-05-13)
 
 ### Features

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.7.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@4.6.0...@sb1/ffe-form-react@4.7.0) (2019-05-14)
+
+### Features
+
+-   **ffe-form-react:** Bottom padding of input controls ([c5621a6](https://github.com/SpareBank1/designsystem/commit/c5621a6)), closes [#381](https://github.com/SpareBank1/designsystem/issues/381)
+
 # [4.6.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@4.5.1...@sb1/ffe-form-react@4.6.0) (2019-05-10)
 
 ### Bug Fixes
