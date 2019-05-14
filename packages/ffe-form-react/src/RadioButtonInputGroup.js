@@ -4,15 +4,6 @@ import classNames from 'classnames';
 import ErrorFieldMessage from './ErrorFieldMessage';
 import Tooltip from './Tooltip';
 
-const ensureComponent = Comp => (input, dark) => {
-    if (input.type === Comp) {
-        return input;
-    }
-    return <Comp dark={dark}>{input}</Comp>;
-};
-
-const ensureTooltip = ensureComponent(Tooltip);
-
 const RadioButtonInputGroup = props => {
     const {
         'aria-invalid': ariaInvalid,
@@ -37,8 +28,6 @@ const RadioButtonInputGroup = props => {
         selectedValue,
     };
 
-    const tooltipContent = tooltip && ensureTooltip(tooltip, dark);
-
     return (
         <fieldset
             className={classNames(
@@ -58,7 +47,10 @@ const RadioButtonInputGroup = props => {
                     )}
                 >
                     {label}
-                    {tooltipContent}
+                    {typeof tooltip === 'string' && (
+                        <Tooltip dark={dark}>{tooltip}</Tooltip>
+                    )}
+                    {React.isValidElement(tooltip) && tooltip}
                 </legend>
             )}
             {children({ ...buttonProps, dark })}
