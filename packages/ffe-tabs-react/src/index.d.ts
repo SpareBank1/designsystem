@@ -5,6 +5,7 @@ export interface TabProps
     selected?: boolean;
     condensed?: boolean;
     className?: string;
+    'aria-controls': string;
 }
 
 export interface TabButtonProps
@@ -14,6 +15,7 @@ export interface TabButtonProps
     condensed?: boolean;
     className?: string;
     dark?: boolean;
+    'aria-controls': string;
 }
 
 export interface TabGroupProps extends React.HTMLAttributes<HTMLDivElement> {
