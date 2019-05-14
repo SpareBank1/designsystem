@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@4.0.0...@sb1/ffe-lists-react@4.0.1) (2019-05-14)
+
+### Bug Fixes
+
+-   **ffe-lists-react:** updating peerDependencies ([ea9edaf](https://github.com/SpareBank1/designsystem/commit/ea9edaf))
+
 # [4.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@3.4.0...@sb1/ffe-lists-react@4.0.0) (2019-05-13)
 
 ### Features
