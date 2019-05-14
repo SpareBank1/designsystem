@@ -3807,6 +3807,27 @@ html {
   border-right-style: none;
   border-top-style: none;
 }
+.ffe-input-group .ffe-checkbox,
+.ffe-input-group .ffe-dropdown,
+.ffe-input-group .ffe-input-field,
+.ffe-input-group .ffe-textarea {
+  margin-bottom: 30px;
+}
+.ffe-input-group .ffe-field-error-message {
+  margin-top: -24px;
+  margin-bottom: 0;
+}
+.ffe-input-group--no-extra-margin .ffe-field-error-message {
+  margin: 5px 0 10px;
+}
+.ffe-input-group--no-extra-margin .ffe-checkbox {
+  margin: 10px 0;
+}
+.ffe-input-group--no-extra-margin .ffe-dropdown,
+.ffe-input-group--no-extra-margin .ffe-input-field,
+.ffe-input-group--no-extra-margin .ffe-textarea {
+  margin: 0;
+}
 .ffe-form-label {
   margin: 0;
   padding: 8px 0 2px;
@@ -3840,6 +3861,32 @@ html {
   border: 0;
   padding: 0;
   margin: 0;
+}
+.ffe-fieldset .ffe-radio-button,
+.ffe-fieldset .ffe-radio-switch {
+  margin-bottom: 30px;
+}
+.ffe-fieldset .ffe-field-error-message {
+  margin-top: -24px;
+  margin-bottom: 0;
+}
+.ffe-fieldset .ffe-radio-block:last-of-type {
+  margin-bottom: 30px;
+}
+.ffe-fieldset--no-extra-margin .ffe-field-error-message {
+  margin: 5px 0 10px;
+}
+.ffe-fieldset--no-extra-margin .ffe-radio-button {
+  margin: 10px 0;
+}
+.ffe-fieldset--no-extra-margin .ffe-radio-button--inline {
+  margin-right: 20px;
+}
+.ffe-fieldset--no-extra-margin .ffe-radio-switch {
+  margin-bottom: 0;
+}
+.ffe-fieldset--no-extra-margin .ffe-radio-block:last-of-type {
+  margin-bottom: 0;
 }
 .ffe-tooltip__icon {
   background: #fff;
