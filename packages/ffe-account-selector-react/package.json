@@ -49,7 +49,7 @@
     "react-dom": "^16.6.3"
   },
   "peerDependencies": {
-    "@sb1/ffe-form": "^10.1.1",
+    "@sb1/ffe-form": ">= 10.1.1",
     "@sb1/ffe-spinner": "^3.0.0",
     "react": "^16.6.3"
   },
