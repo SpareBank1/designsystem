@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.7.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@4.7.0...@sb1/ffe-form-react@4.7.1) (2019-05-15)
+
+### Bug Fixes
+
+-   **ffe-form-react:** Tooltip handles aria-controls better ([4d9a6be](https://github.com/SpareBank1/designsystem/commit/4d9a6be)), closes [#633](https://github.com/SpareBank1/designsystem/issues/633)
+
 # [4.7.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@4.6.0...@sb1/ffe-form-react@4.7.0) (2019-05-14)
 
 ### Features
