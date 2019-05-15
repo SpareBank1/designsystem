@@ -69,6 +69,7 @@ class InputGroup extends Component {
                 className={classNames(
                     'ffe-input-group',
                     { 'ffe-input-group--no-extra-margin': !extraMargin },
+                    { 'ffe-input-group--error': !!fieldMessage },
                     className,
                 )}
                 {...rest}

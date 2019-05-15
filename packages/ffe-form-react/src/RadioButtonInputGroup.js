@@ -45,6 +45,7 @@ const RadioButtonInputGroup = props => {
                 'ffe-fieldset',
                 'ffe-input-group',
                 { 'ffe-fieldset--no-extra-margin': !extraMargin },
+                { 'ffe-fieldset--error': !!fieldMessage },
                 className,
             )}
             {...rest}

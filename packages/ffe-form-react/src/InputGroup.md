@@ -26,12 +26,18 @@ initialState = { showErrors: false };
         tooltip="Vi bruker telefonnummer for å sende deg kvittering på SMS"
         fieldMessage={state.showErrors ? 'Ugyldig telefonnummer' : null}
     >
-        <Input
-            type="tel"
-            name="mobile"
-            onChange={e => console.log('onChange', e.target.value)}
-            onBlur={e => console.log('onBlur', e.target.value)}
-        />
+        {inputProps => (
+            <>
+                <Input
+                    type="tel"
+                    name="mobile"
+                    onChange={e => console.log('onChange', e.target.value)}
+                    onBlur={e => console.log('onBlur', e.target.value)}
+                    {...inputProps}
+                />
+                <p>Ekstra innhold</p>
+            </>
+        )}
     </InputGroup>
 
     <InputGroup
@@ -108,12 +114,18 @@ initialState = { showErrors: false };
         tooltip="Vi bruker telefonnummer for å sende deg kvittering på SMS"
         fieldMessage={state.showErrors ? 'Ugyldig telefonnummer' : null}
     >
-        <Input
-            type="tel"
-            name="mobile"
-            onChange={e => console.log('onChange', e.target.value)}
-            onBlur={e => console.log('onBlur', e.target.value)}
-        />
+        {inputProps => (
+            <>
+                <Input
+                    type="tel"
+                    name="mobile"
+                    onChange={e => console.log('onChange', e.target.value)}
+                    onBlur={e => console.log('onBlur', e.target.value)}
+                    {...inputProps}
+                />
+                <p>Ekstra innhold</p>
+            </>
+        )}
     </InputGroup>
 
     <InputGroup
