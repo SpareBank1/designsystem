@@ -35,7 +35,7 @@ initialState = {
         onChange={e => setState({ selected: e.target.value })}
     >
         {inputProps => (
-            <React.Fragment>
+            <>
                 <RadioButton {...inputProps} value="red">
                     Rød
                 </RadioButton>
@@ -45,7 +45,8 @@ initialState = {
                 <RadioButton {...inputProps} value="yellow">
                     Gul
                 </RadioButton>
-            </React.Fragment>
+                <p>Ekstra innhold</p>
+            </>
         )}
     </RadioButtonInputGroup>
 
@@ -148,17 +149,20 @@ initialState = {
         onChange={e => setState({ selected: e.target.value })}
     >
         {inputProps => (
-            <React.Fragment>
-                <RadioButton {...inputProps} value="red">
-                    Rød
-                </RadioButton>
-                <RadioButton {...inputProps} value="blue">
-                    Blå
-                </RadioButton>
-                <RadioButton {...inputProps} value="yellow">
-                    Gul
-                </RadioButton>
-            </React.Fragment>
+            <>
+                <React.Fragment>
+                    <RadioButton {...inputProps} value="red">
+                        Rød
+                    </RadioButton>
+                    <RadioButton {...inputProps} value="blue">
+                        Blå
+                    </RadioButton>
+                    <RadioButton {...inputProps} value="yellow">
+                        Gul
+                    </RadioButton>
+                </React.Fragment>
+                <p>Ekstra innhold</p>
+            </>
         )}
     </RadioButtonInputGroup>
 
