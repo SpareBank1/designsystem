@@ -206,7 +206,7 @@ class BaseSelector extends Component {
             suggestionListId,
         } = this.state;
         return (
-            <div className="base-selector ffe-input-group">
+            <div className="ffe-base-selector ffe-input-group">
                 <Input
                     inputFieldRef={input => {
                         this.input = input;
