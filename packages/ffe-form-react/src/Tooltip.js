@@ -23,6 +23,7 @@ class Tooltip extends React.Component {
 
     render() {
         const {
+            'aria-controls': ariaControls,
             'aria-label': ariaLabel,
             children,
             className,
@@ -44,7 +45,7 @@ class Tooltip extends React.Component {
             >
                 <button
                     aria-expanded={isOpen}
-                    aria-controls={this.tooltipId}
+                    aria-controls={children ? this.tooltipId : ariaControls}
                     aria-label={ariaLabel}
                     className={classNames('ffe-tooltip__icon', {
                         'ffe-tooltip--dark__icon': dark,
@@ -60,6 +61,7 @@ class Tooltip extends React.Component {
                         className="ffe-tooltip__text"
                         id={this.tooltipId}
                         isOpen={isOpen}
+                        unmountOnClose={false}
                     >
                         <div
                             className={classNames(
@@ -78,6 +80,8 @@ class Tooltip extends React.Component {
 }
 
 Tooltip.propTypes = {
+    /** Provide the id of the controlled element *unless* you're sending in children */
+    'aria-controls': string,
     /** Descriptive text for the Tooltip expand icon */
     'aria-label': string,
     /** The children are rendered in the expanded tooltip. */

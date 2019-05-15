@@ -73,6 +73,7 @@ export interface InputGroupProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 export interface TooltipProps extends React.HTMLAttributes<HTMLSpanElement> {
+    'aria-controls'?: string;
     children?: React.ReactNode;
     className?: string;
     isOpen?: boolean;
