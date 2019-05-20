@@ -10,6 +10,7 @@ const RadioButtonInputGroup = props => {
         children,
         className,
         extraMargin,
+        description,
         fieldMessage,
         inline,
         label,
@@ -19,6 +20,12 @@ const RadioButtonInputGroup = props => {
         dark,
         ...rest
     } = props;
+
+    if (tooltip && description) {
+        throw new Error(
+            'Don\'t use both "tooltip" and "description" on an <RadioButtonInputGroup />, pick one of them',
+        );
+    }
 
     const buttonProps = {
         'aria-invalid': ariaInvalid || String(!!fieldMessage),
@@ -54,6 +61,9 @@ const RadioButtonInputGroup = props => {
                     {React.isValidElement(tooltip) && tooltip}
                 </legend>
             )}
+
+            {description && <div className="ffe-small-text">{description}</div>}
+
             {children({ ...buttonProps, dark })}
 
             {typeof fieldMessage === 'string' && (
@@ -80,6 +90,8 @@ RadioButtonInputGroup.propTypes = {
     children: func.isRequired,
     /** Additional class names applied to the fieldset */
     className: string,
+    /** To just render a static, always visible tooltip, use this. */
+    description: string,
     /** Reserve space for showing `fieldMessage`s so content below don't move
      *  vertically if an errormessage shows up. Note that this will only reserve
      *  space for one line of content, so keep messages short.

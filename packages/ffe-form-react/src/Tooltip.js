@@ -61,7 +61,6 @@ class Tooltip extends React.Component {
                         className="ffe-tooltip__text"
                         id={this.tooltipId}
                         isOpen={isOpen}
-                        unmountOnClose={false}
                     >
                         <div
                             className={classNames(

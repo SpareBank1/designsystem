@@ -121,7 +121,7 @@ InputGroup.propTypes = {
     /** To just render a static, always visible tooltip, use this. */
     description: string,
     /** Use the Label component if you need more flexibility in how the content is rendered. */
-    label: oneOfType([string, instanceOfComponent(Label)]),
+    label: oneOfType([node, string]),
     onTooltipToggle: func,
     /** Use the Tooltip component if you need more flexibility in how the content is rendered. */
     tooltip: oneOfType([bool, string, instanceOfComponent(Tooltip)]),
