@@ -40,7 +40,7 @@
     "react-dom": "^16.6.3"
   },
   "peerDependencies": {
-    "@sb1/ffe-form": ">= 10.1.1",
+    "@sb1/ffe-form": ">=11.0.1",
     "react": "^16.6.3"
   },
   "publishConfig": {
