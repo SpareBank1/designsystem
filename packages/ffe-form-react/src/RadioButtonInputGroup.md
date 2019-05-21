@@ -74,6 +74,7 @@ initialState = {
     </RadioButtonInputGroup>
 
     <RadioButtonInputGroup
+        description="Du kan ikke velge begge"
         label="Velg ja eller nei"
         name="switch"
         fieldMessage={state.showErrors ? 'Feil valg' : null}
@@ -192,6 +193,7 @@ initialState = {
 
     <RadioButtonInputGroup
         extraMargin={false}
+        description="Du kan ikke velge begge"
         label="Velg ja eller nei"
         name="switch"
         fieldMessage={state.showErrors ? 'Feil valg' : null}

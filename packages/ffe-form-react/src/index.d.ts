@@ -124,6 +124,7 @@ export interface RadioButtonInputGroupProps
     extends React.FieldsetHTMLAttributes<HTMLFieldSetElement> {
     children: React.ReactNode;
     className?: string;
+    description?: string;
     extraMargin?: boolean;
     fieldMessage?: string | React.ReactNode;
     inline?: boolean;
