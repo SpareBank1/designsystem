@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.8.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@4.7.1...@sb1/ffe-form-react@4.8.0) (2019-05-21)
+
+### Bug Fixes
+
+-   **ffe-form-react:** Fix for extra error padding ([1434872](https://github.com/SpareBank1/designsystem/commit/1434872))
+-   **ffe-form-react:** Fix tooltip bug in RadioButtonInputGroup ([076b5e8](https://github.com/SpareBank1/designsystem/commit/076b5e8)), closes [#631](https://github.com/SpareBank1/designsystem/issues/631)
+
+### Features
+
+-   **ffe-form-react:** RadioButtonInputGroup supports "description" ([73b9d8d](https://github.com/SpareBank1/designsystem/commit/73b9d8d)), closes [#641](https://github.com/SpareBank1/designsystem/issues/641) [#642](https://github.com/SpareBank1/designsystem/issues/642)
+
 ## [4.7.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@4.7.0...@sb1/ffe-form-react@4.7.1) (2019-05-15)
 
 ### Bug Fixes

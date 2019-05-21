@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload-react@3.0.9...@sb1/ffe-file-upload-react@3.0.10) (2019-05-21)
+
+### Bug Fixes
+
+-   **ffe-file-upload-react:** ffe-form compat ([ece3fd3](https://github.com/SpareBank1/designsystem/commit/ece3fd3))
+
 ## [3.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload-react@3.0.8...@sb1/ffe-file-upload-react@3.0.9) (2018-12-11)
 
 ### Bug Fixes

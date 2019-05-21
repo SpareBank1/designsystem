@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-dropdown-react@4.2.0...@sb1/ffe-dropdown-react@4.2.1) (2019-05-21)
+
+### Bug Fixes
+
+-   **ffe-dropdown-react:** ffe-form compat ([d52f3bf](https://github.com/SpareBank1/designsystem/commit/d52f3bf))
+
 # [4.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-dropdown-react@4.1.4...@sb1/ffe-dropdown-react@4.2.0) (2019-05-10)
 
 ### Features
