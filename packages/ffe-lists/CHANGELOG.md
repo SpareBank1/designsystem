@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@7.0.0...@sb1/ffe-lists@7.0.1) (2019-05-28)
+
+### Bug Fixes
+
+-   **ffe-lists:** allow for long words in description term ([87af2f4](https://github.com/SpareBank1/designsystem/commit/87af2f4))
+-   **ffe-lists:** fix --md and --lg modifiers ([135eb65](https://github.com/SpareBank1/designsystem/commit/135eb65)), closes [#647](https://github.com/SpareBank1/designsystem/issues/647)
+
 # [7.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@6.1.3...@sb1/ffe-lists@7.0.0) (2019-05-13)
 
 ### Features
