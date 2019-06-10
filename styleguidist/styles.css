@@ -2983,6 +2983,10 @@ html {
   color: #676767;
   opacity: 1;
 }
+.ffe-input-field::-moz-placeholder {
+  color: #676767;
+  opacity: 1;
+}
 .ffe-input-field::-ms-input-placeholder {
   color: #676767;
   opacity: 1;
@@ -3106,6 +3110,10 @@ html {
   color: #676767;
   opacity: 1;
 }
+.ffe-dropdown::-moz-placeholder {
+  color: #676767;
+  opacity: 1;
+}
 .ffe-dropdown::-ms-input-placeholder {
   color: #676767;
   opacity: 1;
@@ -3134,6 +3142,9 @@ html {
   outline: none;
 }
 .ffe-dropdown--dark::-webkit-input-placeholder {
+  color: #fff;
+}
+.ffe-dropdown--dark::-moz-placeholder {
   color: #fff;
 }
 .ffe-dropdown--dark::-ms-input-placeholder {
