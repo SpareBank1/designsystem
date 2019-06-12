@@ -52,10 +52,15 @@
     }
 
     /* Use padding rather than margin in bottom to avoid extra spacing overflowing to the top of the next column */
+
     .ffe-description-list__description {
         padding-bottom: @description-list-vertical-seperation;
         margin-left: 0;
         &:extend(.ffe-body-text);
+    }
+
+    .ffe-description-list__description + .ffe-description-list__description {
+        margin-top: -@description-list-vertical-seperation;
     }
 }
 
