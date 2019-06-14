@@ -5475,6 +5475,10 @@ input:not([type='radio']):not([type='checkbox']) {
   padding-bottom: 20px;
   margin-left: 0;
 }
+.ffe-description-list .ffe-description-list__description + .ffe-description-list__description,
+.ffe-description-list-multicol .ffe-description-list__description + .ffe-description-list__description {
+  margin-top: -20px;
+}
 .ffe-description-list--horizontal {
   display: -webkit-box;
   display: -ms-flexbox;
