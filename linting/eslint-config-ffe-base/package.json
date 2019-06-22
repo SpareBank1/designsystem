@@ -23,7 +23,7 @@
     "eslint-plugin-import": "^2.0.1"
   },
   "peerDependencies": {
-    "eslint": ">=2",
+    "eslint": ">=6.0.0",
     "eslint-plugin-import": ">=1.10"
   },
   "publishConfig": {
