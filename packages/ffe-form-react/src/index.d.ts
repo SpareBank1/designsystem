@@ -61,6 +61,7 @@ export interface LabelProps
 }
 
 export interface InputGroupProps extends React.HTMLAttributes<HTMLDivElement> {
+    inputId?: string;
     /** Unless you only have one element in your `InputGroup` you will have to use the function-as-a-child pattern. */
     children: JSX.Element;
     className?: string;

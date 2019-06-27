@@ -10,11 +10,13 @@ class InputGroup extends Component {
     constructor(props) {
         super();
 
-        this.id = `input-${uuid.v4()}`;
+        this.id = props.inputId ? props.inputId : `input-${uuid.v4()}`;
     }
 
     render() {
         const {
+            // eslint-disable-next-line no-unused-vars
+            inputId,
             children,
             className,
             extraMargin,
@@ -108,6 +110,8 @@ class InputGroup extends Component {
 const instanceOfComponent = component => shape({ type: oneOf([component]) });
 
 InputGroup.propTypes = {
+    /** The id that will be used on the input child if you don't want a generated one */
+    inputId: string,
     /** Unless you only have one element in your `InputGroup` you will have to use the function-as-a-child pattern. */
     children: oneOfType([func, node]).isRequired,
     className: string,
