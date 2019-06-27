@@ -3,13 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.9.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@4.8.1...@sb1/ffe-form-react@4.9.0) (2019-06-27)
+
+### Features
+
+-   **ffe-form-react:** Adding inputId as an optional prop for InputGroup to be used as id on the Input child element instead of the generated one. ([05a6aaf](https://github.com/SpareBank1/designsystem/commit/05a6aaf))
+
 ## [4.8.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@4.8.0...@sb1/ffe-form-react@4.8.1) (2019-06-26)
 
 **Note:** Version bump only for package @sb1/ffe-form-react
-
-
-
-
 
 # [4.8.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@4.7.1...@sb1/ffe-form-react@4.8.0) (2019-05-21)
 
