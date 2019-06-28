@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [9.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@9.2.1...@sb1/ffe-grid-react@9.3.0) (2019-06-28)
+
+### Features
+
+-   **ffe-grid-react:** Avoid circular imports ([dbfc95b](https://github.com/SpareBank1/designsystem/commit/dbfc95b))
+
 ## [9.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@9.2.0...@sb1/ffe-grid-react@9.2.1) (2019-04-26)
 
 ### Bug Fixes
