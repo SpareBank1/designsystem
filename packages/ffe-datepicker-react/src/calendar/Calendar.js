@@ -41,14 +41,17 @@ export default class Calendar extends Component {
     /* eslint-disable react/no-did-update-set-state */
     componentDidUpdate(prevProps) {
         if (prevProps.selectedDate !== this.props.selectedDate) {
-            this.setState({
-                calendar: simpleCalendar(
-                    simpleDate.fromString(this.props.selectedDate),
-                    this.props.minDate,
-                    this.props.maxDate,
-                    this.props.language,
-                ),
-            });
+            this.setState(
+                {
+                    calendar: simpleCalendar(
+                        simpleDate.fromString(this.props.selectedDate),
+                        this.props.minDate,
+                        this.props.maxDate,
+                        this.props.language,
+                    ),
+                },
+                this.forceUpdate,
+            );
         }
     }
 
