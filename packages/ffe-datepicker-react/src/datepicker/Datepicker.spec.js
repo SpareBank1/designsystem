@@ -320,6 +320,17 @@ describe('<Datepicker />', () => {
 
                 expect(wrapper.find(ERROR_CLASS).exists()).toBe(false);
             });
+
+            it('keeps datepicker display state when keepDisplayStateOnError is true', () => {
+                const wrapper = getMountedWrapper({
+                    ...overrides,
+                    keepDisplayStateOnError: true,
+                });
+                wrapper.setProps({ minDate: '01.01.2015' });
+                wrapper.update();
+
+                expect(wrapper.find(Calendar).exists()).toBe(false);
+            });
         });
     });
 
@@ -359,6 +370,17 @@ describe('<Datepicker />', () => {
                     wrapper.update();
                     expect(wrapper.find(ERROR_CLASS).exists()).toBe(false);
                 });
+            });
+
+            it('keeps datepicker display state when keepDisplayStateOnError is true', () => {
+                const wrapper = getMountedWrapper({
+                    ...overrides,
+                    keepDisplayStateOnError: true,
+                });
+                wrapper.setProps({ maxDate: '01.01.2014' });
+                wrapper.update();
+
+                expect(wrapper.find(Calendar).exists()).toBe(false);
             });
         });
     });
