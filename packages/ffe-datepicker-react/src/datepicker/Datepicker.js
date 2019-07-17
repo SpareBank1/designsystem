@@ -87,7 +87,12 @@ export default class Datepicker extends Component {
 
     validateDateIntervals() {
         let nextState = {};
-        const { onChange, value, onValidationComplete } = this.props;
+        const {
+            onChange,
+            value,
+            onValidationComplete,
+            keepDisplayStateOnError,
+        } = this.props;
 
         const error = type => {
             const errorMessage = this.onError(type);
@@ -96,7 +101,9 @@ export default class Datepicker extends Component {
                 errorMessage,
                 openOnFocus: true,
                 ariaInvalid: true,
-                displayDatePicker: true,
+                displayDatePicker: keepDisplayStateOnError
+                    ? this.state.displayDatePicker
+                    : true,
             };
         };
 
@@ -302,9 +309,9 @@ export default class Datepicker extends Component {
         const latestValue = validateDate(value) ? value : lastValidDate;
 
         if (this.state.ariaInvalid && !inputProps['aria-describedby']) {
-            inputProps['aria-describedby'] = `date-input-validation-${
-                this.datepickerId
-            }`;
+            inputProps[
+                'aria-describedby'
+            ] = `date-input-validation-${this.datepickerId}`;
         }
 
         const calendarClassName = classNames(
@@ -386,6 +393,7 @@ export default class Datepicker extends Component {
 
 Datepicker.defaultProps = {
     language: 'nb',
+    keepDisplayStateOnError: false,
     onValidationComplete: () => {},
 };
 
@@ -406,4 +414,5 @@ Datepicker.propTypes = {
     onChange: func.isRequired,
     onError: func,
     value: string.isRequired,
+    keepDisplayStateOnError: bool.isRequired,
 };
