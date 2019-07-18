@@ -151,7 +151,7 @@
     color: @ffe-blue-royal;
     font-family: 'MuseoSansRounded-700', arial, sans-serif;
     font-weight: normal;
-    line-height: 32px;
+    line-height: 28px;
     .ffe-fontsize-h2;
 }
 
@@ -159,7 +159,7 @@
     color: @ffe-blue-royal;
     font-family: 'MuseoSansRounded-700', arial, sans-serif;
     font-weight: normal;
-    line-height: 28px;
+    line-height: 24px;
     .ffe-fontsize-h3;
 }
 
@@ -167,7 +167,7 @@
     color: @ffe-blue-royal;
     font-family: 'MuseoSansRounded-700', arial, sans-serif;
     font-weight: normal;
-    line-height: 28px;
+    line-height: 24px;
     .ffe-fontsize-h4;
 }
 
@@ -175,7 +175,7 @@
     color: @ffe-blue-royal;
     font-family: 'MuseoSansRounded-700', arial, sans-serif;
     font-weight: normal;
-    line-height: 24px;
+    line-height: 20px;
     .ffe-fontsize-h5;
 }
 
@@ -183,7 +183,7 @@
     color: @ffe-blue-royal;
     font-family: 'MuseoSansRounded-700', arial, sans-serif;
     font-weight: normal;
-    line-height: 24px;
+    line-height: 20px;
     .ffe-fontsize-h6;
 }
 
@@ -191,7 +191,7 @@
     color: @ffe-grey-charcoal;
     font-family: 'MuseoSans-500', arial, sans-serif;
     font-weight: normal;
-    line-height: 22px;
+    line-height: 20px;
     .ffe-fontsize-small-text;
     &--dark {
         color: @ffe-white;
@@ -240,13 +240,14 @@
 .ffe-body-text {
     color: @ffe-black;
     font-family: 'MuseoSans-500', arial, sans-serif;
-    line-height: 26px;
+    line-height: 24px;
     .ffe-fontsize-body-text;
 }
 
 .ffe-body-paragraph {
     margin-bottom: 1em;
     margin-top: 0;
+    line-height: 24px;
 
     &--text-center {
         text-align: center;
@@ -271,7 +272,7 @@
 
 .ffe-sub-lead-paragraph {
     color: @ffe-black;
-    line-height: 26px;
+    line-height: 24px;
     .ffe-fontsize-sub-lead-paragraph;
 }
 
@@ -330,7 +331,7 @@
 
 @media screen and (min-width: @breakpoint-sm) {
     .ffe-h1 {
-        line-height: 60px;
+        line-height: 56px;
     }
 
     .ffe-h2 {
@@ -338,7 +339,7 @@
     }
 
     .ffe-h3 {
-        line-height: 38px;
+        line-height: 36px;
     }
 
     .ffe-h4 {
@@ -350,7 +351,7 @@
     }
 
     .ffe-h6 {
-        line-height: 24px;
+        line-height: 20px;
     }
 
     .ffe-h1,
@@ -367,15 +368,20 @@
     }
 
     .ffe-lead-paragraph {
-        line-height: 34px;
+        line-height: 32px;
     }
 
     .ffe-sub-lead-paragraph {
         line-height: 28px;
     }
 
+    .ffe-body-text,
+    .ffe-body-paragraph {
+        line-height: 24px;
+    }
+
     .ffe-small-text {
-        line-height: 22px;
+        line-height: 20px;
     }
 
     .ffe-micro-text {
@@ -395,45 +401,5 @@
         &--no-margin {
             margin: 0;
         }
-    }
-
-    .ffe-body-text {
-        line-height: 24px;
-    }
-
-    .ffe-h1 {
-        line-height: 67px;
-    }
-
-    .ffe-h2 {
-        line-height: 44px;
-    }
-
-    .ffe-h3 {
-        line-height: 38px;
-    }
-
-    .ffe-h4 {
-        line-height: 24px;
-    }
-
-    .ffe-h5 {
-        line-height: 24px;
-    }
-
-    .ffe-h6 {
-        line-height: 22px;
-    }
-
-    .ffe-lead-paragraph {
-        line-height: 34px;
-    }
-
-    .ffe-small-text {
-        line-height: 22px;
-    }
-
-    .ffe-micro-text {
-        line-height: 20px;
     }
 }
