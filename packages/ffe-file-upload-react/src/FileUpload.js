@@ -1,16 +1,20 @@
 import React, { Fragment } from 'react';
-import { array, bool, func, string as stringType } from 'prop-types';
+import { object, bool, func, string as stringType } from 'prop-types';
+import FileItem from './FileItem';
 
 class FileUpload extends React.Component {
     constructor(props) {
         super(props);
 
         this.onFilesSelected = this.onFilesSelected.bind(this);
+        this.onFilesDropped = this.onFilesDropped.bind(this);
         this.onFileDeleted = this.onFileDeleted.bind(this);
         this.setFileInputElement = this.setFileInputElement.bind(this);
         this.triggerUploadFileNativeHandler = this.triggerUploadFileNativeHandler.bind(
             this,
         );
+
+        this.state = { hover: false };
     }
 
     setFileInputElement(element) {
@@ -29,97 +33,106 @@ class FileUpload extends React.Component {
         this.props.onFilesSelected(event.target.files);
     }
 
+    onFilesDropped(event) {
+        event.preventDefault();
+        this.setState({ hover: false });
+        this.props.onFilesDropped(event);
+    }
+
     onFileDeleted(event) {
-        this.props.onFileDeleted(
-            this.props.selectedFiles.find(
-                file => file.name === event.target.id,
-            ),
-        );
+        this.props.onFileDeleted(this.props.selectedFiles[event.target.id]);
     }
 
     render() {
         const {
             id,
             label,
-            selectedFilesHeaderLabel,
             selectedFiles,
-            accept,
+            cancelText,
+            deleteText,
             multiple,
-            errorMessage,
-            infoMessage,
-            successMessage,
+            infoTitle,
+            infoText,
+            infoSubText,
+            uploadTitle,
+            uploadMicroText,
+            uploadSubText,
+            onFileDeleted,
         } = this.props;
 
         return (
             <div className="ffe-file-upload">
-                <button
-                    className="ffe-file-upload__button"
-                    aria-invalid={String(!!errorMessage)}
-                    onClick={this.triggerUploadFileNativeHandler}
+                <div className="ffe-file-upload__info-section">
+                    <div className="ffe-file-upload__info-section__title">
+                        {infoTitle}
+                    </div>
+                    {Object.keys(selectedFiles).length > 0 ? (
+                        <ul className="ffe-file-upload__info-section__selected-files">
+                            {Object.keys(selectedFiles).map((file, index) => (
+                                <FileItem
+                                    key={index}
+                                    index={index}
+                                    file={selectedFiles[file]}
+                                    cancelText={cancelText}
+                                    deleteText={deleteText}
+                                    onFileDeleted={onFileDeleted}
+                                />
+                            ))}
+                        </ul>
+                    ) : (
+                        <Fragment>
+                            <div className="ffe-file-upload__info-section__text">
+                                {infoText}
+                            </div>
+                            <div className="ffe-file-upload__info-section__subtext">
+                                {infoSubText}
+                            </div>
+                        </Fragment>
+                    )}
+                </div>
+                <div
+                    className="ffe-file-upload__upload-section"
+                    role="presentation"
+                    onDrop={this.onFilesDropped}
+                    onDragOver={event => {
+                        event.preventDefault();
+                        this.setState({ hover: true });
+                    }}
+                    onDragLeave={() => this.setState({ hover: false })}
                 >
-                    <span className="ffe-file-upload__button__label-icon" />
-                    <span id={`${id}-label`}>{label}</span>
-                </button>
+                    <div
+                        className={`ffe-file-upload__upload-section__border${
+                            this.state.hover
+                                ? ' ffe-file-upload__upload-section__border__hover'
+                                : ''
+                        }`}
+                    >
+                        <div className="ffe-file-upload__upload-section__title">
+                            {uploadTitle}
+                        </div>
+                        <div className="ffe-file-upload__upload-section__microtext">
+                            {uploadMicroText}
+                        </div>
+                        <button
+                            className="ffe-file-upload__upload-section__button"
+                            onClick={this.triggerUploadFileNativeHandler}
+                        >
+                            <span className="ffe-file-upload__upload-section__button__label-icon" />
+                            <span id={`${id}-label`}>{label}</span>
+                        </button>
+                        <div className="ffe-file-upload__upload-section__subtext">
+                            {uploadSubText}
+                        </div>
+                    </div>
+                </div>
                 <input
                     id={id}
                     type="file"
-                    accept={accept}
                     multiple={multiple}
                     ref={this.setFileInputElement}
                     onChange={this.onFilesSelected}
                     aria-labelledby={`${id}-label`}
                 />
-
-                {!errorMessage &&
-                    successMessage && (
-                        <div className="ffe-field-success-message">
-                            {successMessage}
-                        </div>
-                    )}
-                {errorMessage &&
-                    !Array.isArray(errorMessage) && (
-                        <div className="ffe-field-error-message">
-                            {errorMessage}
-                        </div>
-                    )}
-                {errorMessage &&
-                    Array.isArray(errorMessage) &&
-                    errorMessage.map((message, index) => (
-                        <div key={index} className="ffe-field-error-message">
-                            {message}
-                        </div>
-                    ))}
-                {infoMessage && (
-                    <div className="ffe-field-info-message">{infoMessage}</div>
-                )}
-
-                {selectedFiles &&
-                    selectedFiles.length > 0 && (
-                        <Fragment>
-                            <div className="ffe-file-upload__filename__title">
-                                {selectedFilesHeaderLabel}
-                            </div>
-                            <ul className="ffe-file-upload__selected-files">
-                                {selectedFiles.map((file, index) => (
-                                    <li key={index}>
-                                        <div className="ffe-file-upload__filename">
-                                            {file.name}
-                                        </div>
-                                        <div className="ffe-file-upload__file-size">
-                                            {`${Math.round(
-                                                file.size / 1024,
-                                            )}kB`}
-                                        </div>
-                                        <button
-                                            id={file.name}
-                                            className="ffe-file-upload__delete-button"
-                                            onClick={this.onFileDeleted}
-                                        />
-                                    </li>
-                                ))}
-                            </ul>
-                        </Fragment>
-                    )}
             </div>
         );
     }
@@ -128,13 +141,13 @@ class FileUpload extends React.Component {
 FileUpload.propTypes = {
     /** ID for the input field. The ID is used as a base for the label ID as well. */
     id: stringType.isRequired,
-    /**
-     * Label for the button to trigger native upload handling. The label doubles as the label
-     * for the input field via aria-labelledby.
-     */
+    /** Label for the button to trigger native upload handling. */
     label: stringType.isRequired,
-    /** Array of `File` objects that the user has uploaded. Must be maintained outside of `FileUpload`. */
-    selectedFiles: array.isRequired,
+    /**
+     * A map of files, indexed by file name (check file-shape on FileItem.js propTypes), that the user has uploaded.
+     * Must be maintained outside of `FileUpload`. It is up to the implementation to deny or accept file types, sizes, etc.
+     * */
+    selectedFiles: object.isRequired,
     /**
      * Will be called with `FileList`-object containing the `File`-objects the user selected.
      * See MDN for documentation on
@@ -142,23 +155,31 @@ FileUpload.propTypes = {
      * [File](https://developer.mozilla.org/en-US/docs/Web/API/File).
      */
     onFilesSelected: func.isRequired,
+    /** Will be called when objects are dropped over the upload-section. */
+    onFilesDropped: func.isRequired,
     /**
      * Called when the user clicks the delete button for a given file. Is called with the `File`
      * object of the file in question.
      */
     onFileDeleted: func.isRequired,
+    /** Whether or not uploading multiple files at once via the native file handler is allowed*/
     multiple: bool,
-    /**
-     * Sets the `accept` attribute of the input field. Use to limit allowed file types.
-     * Takes a comma-separated list of file extensions or MIME types. See
-     * [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file#Limiting_accepted_file_types)
-     * for more information.
-     */
-    accept: stringType,
-    selectedFilesHeaderLabel: stringType,
-    errorMessage: stringType,
-    infoMessage: stringType,
-    successMessage: stringType,
+    /** Title on the info-section */
+    infoTitle: stringType.isRequired,
+    /** Text on the info-section */
+    infoText: stringType.isRequired,
+    /** Subtext on the info-section */
+    infoSubText: stringType,
+    /** Label for the cancel button */
+    cancelText: stringType,
+    /** Label for the delete button */
+    deleteText: stringType,
+    /** Title on the upload-section */
+    uploadTitle: stringType.isRequired,
+    /** MicroText on the upload-section */
+    uploadMicroText: stringType.isRequired,
+    /** SubText on the upload-section */
+    uploadSubText: stringType.isRequired,
 };
 
 export default FileUpload;

@@ -1,7 +1,7 @@
 {
   "name": "@sb1/ffe-file-upload-react",
   "version": "3.0.9",
-  "description": "Upload file button with validation and list of uploaded files.",
+  "description": "React implementation of ffe-file-upload.",
   "keywords": [
     "ffe"
   ],
