@@ -3,13 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@3.2.6...@sb1/ffe-datepicker-react@3.3.0) (2019-07-19)
+
+### Bug Fixes
+
+-   **ffe-datepicker-react:** Fixes calendar using stale state for showing selected year ([659883a](https://github.com/SpareBank1/designsystem/commit/659883a))
+
+### Features
+
+-   **ffe-datepicker-react:** Keep display state on validation error ([4942c99](https://github.com/SpareBank1/designsystem/commit/4942c99))
+
 ## [3.2.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@3.2.5...@sb1/ffe-datepicker-react@3.2.6) (2019-06-26)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker-react
-
-
-
-
 
 ## [3.2.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@3.2.4...@sb1/ffe-datepicker-react@3.2.5) (2019-05-21)
 
