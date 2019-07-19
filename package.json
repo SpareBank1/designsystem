@@ -88,8 +88,8 @@
     },
     "greenkeeper": {
         "ignore": [
-            "react-styleguidist",
-            "css-loader"
+            "css-loader",
+            "react-styleguidist"
         ]
     }
 }
