@@ -1,6 +1,7 @@
 import * as React from 'react';
 
-export interface ContextMessageProps {
+export interface ContextMessageProps
+    extends React.HTMLAttributes<HTMLDivElement> {
     animationLengthMs?: number;
     children: React.ReactNode;
     className?: string;
