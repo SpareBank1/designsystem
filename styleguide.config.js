@@ -185,16 +185,32 @@ module.exports = {
         },
         {
             name: 'Ikoner',
-            sections: [
-                {
-                    name: 'Bruk av ikoner',
-                    content: 'styleguide-content/komponenter/ikoner.md',
-                },
-                {
-                    name: 'Importering av ikoner',
-                    content: 'packages/ffe-icons-react/src/README.md',
-                },
-            ],
+            sections: !PRODUCTION
+                ? [
+                      {
+                          name: 'Bruk av ikoner',
+                          content: 'styleguide-content/komponenter/ikoner.md',
+                      },
+                      {
+                          name: 'Importering av ikoner',
+                          content: 'packages/ffe-icons-react/src/README.md',
+                      },
+                      {
+                          name: 'Nye ikoner (UTKAST)',
+                          content:
+                              'styleguide-content/komponenter/ikoner-utkast.md',
+                      },
+                  ]
+                : [
+                      {
+                          name: 'Bruk av ikoner',
+                          content: 'styleguide-content/komponenter/ikoner.md',
+                      },
+                      {
+                          name: 'Importering av ikoner',
+                          content: 'packages/ffe-icons-react/src/README.md',
+                      },
+                  ],
         },
         {
             name: 'Formatering',

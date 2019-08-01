@@ -7,15 +7,20 @@ Under ser du alle ikonene vi har i designsystemet.
 
 ```jsx
 const allIcons = require('../../packages/ffe-icons-react/lib');
+const includedIcons = Object.entries(allIcons).filter(
+    ([name]) => !name.match(/^Draft/),
+);
 
 <Grid>
     <GridRow>
-        {Object.entries(allIcons).map(([name, Icon]) => (
-            <GridCol key={name} sm="6" md="4" lg="3" center={true}>
-                <Icon className="sb1ds-icon" />
-                <p>{name}</p>
-            </GridCol>
-        ))}
+        {includedIcons.map(([name, Icon]) => {
+            return (
+                <GridCol key={name} sm="6" md="4" lg="3" center={true}>
+                    <Icon className="sb1ds-icon" />
+                    <p>{name}</p>
+                </GridCol>
+            );
+        })}
     </GridRow>
 </Grid>;
 ```

@@ -38,9 +38,9 @@ const matchesIcon = icons =>
 
 const sprite = svgstore();
 
-fs
-    .readdirSync(ICONS_PATH)
+fs.readdirSync(ICONS_PATH)
     .filter(fileName => fileName.match(/\.svg$/))
+    .filter(fileName => !fileName.match(/draft-/))
     .filter(matchesIcon(options.icons))
     .forEach(fileName => {
         const iconPath = path.join(ICONS_PATH, fileName);
@@ -49,17 +49,13 @@ fs
     });
 
 if (options.projectIcons) {
-    options.projectIcons
-        .forEach((fileName) => {
-            const iconPath = path.join(fileName);
-            const iconName = path.basename(fileName, '.svg');
-            sprite.add(iconName, fs.readFileSync(iconPath), 'utf-8');
-        });
+    options.projectIcons.forEach(fileName => {
+        const iconPath = path.join(fileName);
+        const iconName = path.basename(fileName, '.svg');
+        sprite.add(iconName, fs.readFileSync(iconPath), 'utf-8');
+    });
 }
 
 mkdirp.sync(options.dest);
 
-fs.writeFileSync(
-    path.join(options.dest, 'ffe-icons.svg'),
-    sprite
-);
+fs.writeFileSync(path.join(options.dest, 'ffe-icons.svg'), sprite);
