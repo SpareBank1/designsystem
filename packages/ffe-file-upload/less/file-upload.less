@@ -16,8 +16,8 @@
     }
 
     &__info-section {
+        width: 100%;
         max-width: 400px;
-        margin-right: 45px;
 
         &__title {
             &:extend(.ffe-h5);
@@ -30,7 +30,6 @@
             margin: 10px 0;
             color: @ffe-black;
             list-style: none;
-            width: 100%;
             max-width: @breakpoint-sm;
 
             li {
@@ -45,13 +44,9 @@
 
         &__stencil {
             display: inline-flex;
-            width: 100%;
 
             &__info {
-                width: 100%;
-
                 &__background {
-                    width: 100%;
                     height: 10px;
                     border-radius: 5px;
                     background-color: #ebebeb;
@@ -68,22 +63,41 @@
             }
         }
 
-        &__delete-button {
-            order: 2;
-            padding-right: 20px;
-            padding-top: 5px;
-            margin-left: auto;
-            background-color: transparent;
-            border: none;
-            line-height: 18px;
-            position: relative;
-            color: @ffe-blue-azure;
-            font-size: 14px;
+        &__delete {
+            &__button {
+                order: 2;
+                padding-right: 20px;
+                padding-top: 5px;
+                margin-left: auto;
+                background-color: transparent;
+                border: none;
+                line-height: 18px;
+                position: relative;
+                color: @ffe-blue-azure;
+                font-size: 14px;
 
-            &::before {
+                &:active,
+                &:focus,
+                &:hover {
+                    text-decoration: underline;
+                    color: @ffe-blue-royal;
+
+                    ~ .ffe-file-upload__info-section__filename {
+                        text-decoration: underline;
+                        color: @ffe-blue-royal;
+                    }
+
+                    ~ .ffe-file-upload__info-section__error__info
+                        > .ffe-file-upload__info-section__error__info__filename {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            &__icon {
                 right: 0;
                 content: '';
-                display: block;
+                display: inline-block;
                 position: absolute;
                 background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 200 200'%3E%3Cpath fill='@{ffe-blue-azure-fill}' d='M18.77,0c-3.562,0-7.125,1.347-9.834,4.044l-4.429,4.439c-5.381,5.394-5.381,14.25,0,19.68l71.19,71.83-71.66,71.83c-5.381,5.394-5.381,14.25,0,19.68l4.429,4.439c5.381,5.394,14.22,5.394,19.64,0l71.66-71.83,71.65,71.83c5.381,5.394,14.23,5.394,19.65,0l4.429-4.439c5.381-5.394,5.381-14.25,0-19.68l-71.19-71.83,71.66-71.83c5.381-4.914,5.381-13.78,0-19.21l-4.429-4.423c-5.381-5.394-14.22-5.394-19.64,0l-72.13,71.34-71.17-71.83c-2.691-2.697-6.257-4.044-9.819-4.044z'/%3E%3C/svg%3E");
                 background-size: 14px 14px;
@@ -91,23 +105,6 @@
                 fill: @ffe-blue-azure;
                 height: 14px;
                 width: 14px;
-            }
-
-            &:active,
-            &:focus,
-            &:hover {
-                text-decoration: underline;
-                color: @ffe-blue-royal;
-
-                ~ .ffe-file-upload__info-section__filename {
-                    text-decoration: underline;
-                    color: @ffe-blue-royal;
-                }
-
-                ~ .ffe-file-upload__info-section__error__info
-                    > .ffe-file-upload__info-section__error__info__filename {
-                    text-decoration: underline;
-                }
             }
         }
 
@@ -132,6 +129,14 @@
             &__info {
                 &__filename {
                     &:extend(.ffe-micro-text);
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    max-width: 240px;
+
+                    @media (min-width: @breakpoint-md) {
+                        max-width: 315px;
+                    }
                 }
             }
         }
@@ -142,14 +147,15 @@
     }
 
     &__upload-section {
+        margin-top: 20px;
         height: 150px;
         width: 280px;
         background-color: @ffe-blue-pale;
         border-radius: 10px;
         text-align: center;
-        margin-top: 20px;
 
         @media (min-width: @breakpoint-md) {
+            margin-left: auto;
             margin-top: 0;
             height: 220px;
         }

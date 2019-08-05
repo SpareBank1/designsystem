@@ -26,10 +26,11 @@ const FileItem = props => (
             <Fragment>
                 <button
                     id={props.file.name}
-                    className="ffe-file-upload__info-section__delete-button"
+                    className="ffe-file-upload__info-section__delete__button"
                     onClick={props.onFileDeleted}
                 >
                     {props.deleteText}
+                    <div className="ffe-file-upload__info-section__delete__icon" />
                 </button>
                 <div className="ffe-file-upload__info-section__filename">
                     {props.file.name}
@@ -42,10 +43,11 @@ const FileItem = props => (
                 <div className="ffe-file-upload__info-section__error__icon ffe-field-error-message" />
                 <button
                     id={props.file.name}
-                    className="ffe-file-upload__info-section__delete-button"
+                    className="ffe-file-upload__info-section__delete__button"
                     onClick={props.onFileDeleted}
                 >
                     {props.deleteText}
+                    <div className="ffe-file-upload__info-section__delete__icon" />
                 </button>
                 <div className="ffe-file-upload__info-section__error__info">
                     <div className="ffe-file-upload__info-section__error__info__filename">
