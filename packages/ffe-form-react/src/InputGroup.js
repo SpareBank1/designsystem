@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { bool, func, node, oneOf, oneOfType, shape, string } from 'prop-types';
+import { bool, func, node, oneOfType, string } from 'prop-types';
 import uuid from 'uuid';
 import Tooltip from './Tooltip';
 import Label from './Label';
@@ -107,8 +107,6 @@ class InputGroup extends Component {
     }
 }
 
-const instanceOfComponent = component => shape({ type: oneOf([component]) });
-
 InputGroup.propTypes = {
     /** The id that will be used on the input child if you don't want a generated one */
     inputId: string,
@@ -128,7 +126,7 @@ InputGroup.propTypes = {
     label: oneOfType([node, string]),
     onTooltipToggle: func,
     /** Use the Tooltip component if you need more flexibility in how the content is rendered. */
-    tooltip: oneOfType([bool, string, instanceOfComponent(Tooltip)]),
+    tooltip: oneOfType([bool, node]),
 };
 
 InputGroup.defaultProps = {
