@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.8.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.7.2...@sb1/ffe-icons@12.8.0) (2019-08-12)
+
+### Features
+
+-   **ffe-icons:** Add globe icon ([1b64396](https://github.com/SpareBank1/designsystem/commit/1b64396))
+
 ## [12.7.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.7.1...@sb1/ffe-icons@12.7.2) (2019-04-24)
 
 ### Bug Fixes
