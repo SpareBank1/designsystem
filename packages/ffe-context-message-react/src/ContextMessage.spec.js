@@ -93,6 +93,16 @@ describe('<ContextMessage />', () => {
         expect(el.hasClass('extra-extra-read-all-about-it')).toBe(true);
     });
 
+    it('passes unknown props on to the root DOM node', () => {
+        const wrapper = getMountedWrapper({
+            'data-foo': 'bar',
+        });
+
+        const el = wrapper.find('.ffe-context-message');
+
+        expect(el.prop('data-foo')).toBe('bar');
+    });
+
     it('renders without close button by default', () => {
         const wrapper = getMountedWrapper({
             icon: <InfoSirkelIkon />,

@@ -73,6 +73,7 @@ export default class ContextMessage extends Component {
             messageType,
             showCloseButton,
             style,
+            ...rest
         } = this.props;
 
         if (this.state.closed) {
@@ -81,6 +82,7 @@ export default class ContextMessage extends Component {
 
         return (
             <div
+                {...rest}
                 aria-describedby={contentElementId}
                 aria-labelledby={header && headerElementId}
                 className={classNames(
