@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-context-message-react",
-  "version": "4.1.1",
+  "version": "4.2.0",
   "description": "React implementation of ffe-context-message component",
   "keywords": [
     "ffe"
