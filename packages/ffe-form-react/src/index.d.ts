@@ -63,14 +63,14 @@ export interface LabelProps
 export interface InputGroupProps extends React.HTMLAttributes<HTMLDivElement> {
     inputId?: string;
     /** Unless you only have one element in your `InputGroup` you will have to use the function-as-a-child pattern. */
-    children: JSX.Element;
+    children: React.ReactNode;
     className?: string;
     extraMargin?: boolean;
     fieldMessage?: string | React.ReactNode;
     description?: string;
     label?: string | Label;
     onTooltipToggle?: (e: React.MouseEvent | undefined) => void;
-    tooltip?: boolean | string | Tooltip;
+    tooltip?: React.ReactNode;
 }
 
 export interface TooltipProps extends React.HTMLAttributes<HTMLSpanElement> {
