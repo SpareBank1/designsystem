@@ -20,7 +20,7 @@
   "dependencies": {
     "mkdirp": "^0.5.1",
     "svgstore": "^2.0.3",
-    "yargs": "^13.1.0"
+    "yargs": "^14.0.0"
   },
   "devDependencies": {
     "eslint": "^5.9.0",
