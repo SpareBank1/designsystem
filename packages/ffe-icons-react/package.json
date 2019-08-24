@@ -31,7 +31,7 @@
     "cheerio": "^1.0.0-rc.2",
     "cross-env": "^5.2.0",
     "eslint": "^5.9.0",
-    "eslint-loader": "^2.1.0",
+    "eslint-loader": "^3.0.0",
     "json-loader": "^0.5.7",
     "mkdirp": "^0.5.1",
     "react": "^16.6.3",
