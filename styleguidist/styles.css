@@ -449,12 +449,6 @@ html {
 @media screen and (min-width: 480px) {
   .ffe-h1,
   .ffe-link-card--plain > .ffe-link-card__number {
-    font-size: 40px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .ffe-h1,
-  .ffe-link-card--plain > .ffe-link-card__number {
     font-size: 46px;
   }
 }
@@ -462,32 +456,22 @@ html {
   color: #002776;
   font-family: 'MuseoSansRounded-700', arial, sans-serif;
   font-weight: normal;
-  line-height: 32px;
+  line-height: 28px;
   font-size: 24px;
 }
 @media screen and (min-width: 480px) {
   .ffe-h2 {
-    font-size: 32px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .ffe-h2 {
-    font-size: 32px;
+    font-size: 36px;
   }
 }
 .ffe-h3 {
   color: #002776;
   font-family: 'MuseoSansRounded-700', arial, sans-serif;
   font-weight: normal;
-  line-height: 28px;
+  line-height: 24px;
   font-size: 20px;
 }
 @media screen and (min-width: 480px) {
-  .ffe-h3 {
-    font-size: 27px;
-  }
-}
-@media screen and (min-width: 768px) {
   .ffe-h3 {
     font-size: 28px;
   }
@@ -497,16 +481,10 @@ html {
   color: #002776;
   font-family: 'MuseoSansRounded-700', arial, sans-serif;
   font-weight: normal;
-  line-height: 28px;
+  line-height: 24px;
   font-size: 18px;
 }
 @media screen and (min-width: 480px) {
-  .ffe-h4,
-  .ffe-table__caption {
-    font-size: 20px;
-  }
-}
-@media screen and (min-width: 768px) {
   .ffe-h4,
   .ffe-table__caption {
     font-size: 22px;
@@ -519,18 +497,10 @@ html {
   color: #002776;
   font-family: 'MuseoSansRounded-700', arial, sans-serif;
   font-weight: normal;
-  line-height: 24px;
+  line-height: 20px;
   font-size: 16px;
 }
 @media screen and (min-width: 480px) {
-  .ffe-h5,
-  .ffe-card-component--title,
-  .ffe-context-message-content__header,
-  .ffe-calendar__title {
-    font-size: 16px;
-  }
-}
-@media screen and (min-width: 768px) {
   .ffe-h5,
   .ffe-card-component--title,
   .ffe-context-message-content__header,
@@ -542,15 +512,10 @@ html {
   color: #002776;
   font-family: 'MuseoSansRounded-700', arial, sans-serif;
   font-weight: normal;
-  line-height: 24px;
-  font-size: 16px;
+  line-height: 20px;
+  font-size: 15px;
 }
 @media screen and (min-width: 480px) {
-  .ffe-h6 {
-    font-size: 16px;
-  }
-}
-@media screen and (min-width: 768px) {
   .ffe-h6 {
     font-size: 16px;
   }
@@ -563,7 +528,7 @@ html {
   color: #676767;
   font-family: 'MuseoSans-500', arial, sans-serif;
   font-weight: normal;
-  line-height: 22px;
+  line-height: 20px;
   font-size: 14px;
 }
 .ffe-small-text--dark {
@@ -639,12 +604,13 @@ html {
 .ffe-description-list-multicol .ffe-description-list__description {
   color: #262626;
   font-family: 'MuseoSans-500', arial, sans-serif;
-  line-height: 26px;
+  line-height: 24px;
   font-size: 16px;
 }
 .ffe-body-paragraph {
   margin-bottom: 1em;
   margin-top: 0;
+  line-height: 24px;
 }
 .ffe-body-paragraph--text-center {
   text-align: center;
@@ -664,25 +630,15 @@ html {
 }
 @media screen and (min-width: 480px) {
   .ffe-lead-paragraph {
-    font-size: 22px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .ffe-lead-paragraph {
-    font-size: 22px;
+    font-size: 24px;
   }
 }
 .ffe-sub-lead-paragraph {
   color: #262626;
-  line-height: 26px;
+  line-height: 24px;
   font-size: 16px;
 }
 @media screen and (min-width: 480px) {
-  .ffe-sub-lead-paragraph {
-    font-size: 18px;
-  }
-}
-@media screen and (min-width: 768px) {
   .ffe-sub-lead-paragraph {
     font-size: 18px;
   }
@@ -742,13 +698,13 @@ html {
 @media screen and (min-width: 480px) {
   .ffe-h1,
   .ffe-link-card--plain > .ffe-link-card__number {
-    line-height: 60px;
+    line-height: 56px;
   }
   .ffe-h2 {
     line-height: 44px;
   }
   .ffe-h3 {
-    line-height: 38px;
+    line-height: 36px;
   }
   .ffe-h4,
   .ffe-table__caption {
@@ -761,7 +717,7 @@ html {
     line-height: 24px;
   }
   .ffe-h6 {
-    line-height: 24px;
+    line-height: 20px;
   }
   .ffe-h1,
   .ffe-h2,
@@ -785,17 +741,26 @@ html {
     margin: 0;
   }
   .ffe-lead-paragraph {
-    line-height: 34px;
+    line-height: 32px;
   }
   .ffe-sub-lead-paragraph {
     line-height: 28px;
+  }
+  .ffe-body-text,
+  .ffe-body-paragraph,
+  .ffe-product-card__details,
+  .ffe-card-base,
+  .ffe-header,
+  .ffe-description-list .ffe-description-list__description,
+  .ffe-description-list-multicol .ffe-description-list__description {
+    line-height: 24px;
   }
   .ffe-small-text,
   .ffe-card-component--subtext,
   .ffe-calendar__weekday,
   .ffe-calendar__date,
   .ffe-radio-button__tooltip-text.ffe-tooltip__text {
-    line-height: 22px;
+    line-height: 20px;
   }
   .ffe-micro-text {
     line-height: 20px;
@@ -822,50 +787,6 @@ html {
   .ffe-h5--no-margin,
   .ffe-h6--no-margin {
     margin: 0;
-  }
-  .ffe-body-text,
-  .ffe-product-card__details,
-  .ffe-card-base,
-  .ffe-header,
-  .ffe-description-list .ffe-description-list__description,
-  .ffe-description-list-multicol .ffe-description-list__description {
-    line-height: 24px;
-  }
-  .ffe-h1,
-  .ffe-link-card--plain > .ffe-link-card__number {
-    line-height: 67px;
-  }
-  .ffe-h2 {
-    line-height: 44px;
-  }
-  .ffe-h3 {
-    line-height: 38px;
-  }
-  .ffe-h4,
-  .ffe-table__caption {
-    line-height: 24px;
-  }
-  .ffe-h5,
-  .ffe-card-component--title,
-  .ffe-context-message-content__header,
-  .ffe-calendar__title {
-    line-height: 24px;
-  }
-  .ffe-h6 {
-    line-height: 22px;
-  }
-  .ffe-lead-paragraph {
-    line-height: 34px;
-  }
-  .ffe-small-text,
-  .ffe-card-component--subtext,
-  .ffe-calendar__weekday,
-  .ffe-calendar__date,
-  .ffe-radio-button__tooltip-text.ffe-tooltip__text {
-    line-height: 22px;
-  }
-  .ffe-micro-text {
-    line-height: 20px;
   }
 }
 .ffe-icon-base {
@@ -1392,7 +1313,7 @@ html {
           user-select: none;
   white-space: nowrap;
   width: 100%;
-  font-size: 18px;
+  font-size: 16px;
 }
 .ffe-button:focus,
 .ffe-header__logout-button:focus {
@@ -3641,7 +3562,7 @@ html {
   -webkit-transition: all 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
   -o-transition: all 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
   transition: all 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
-  font-size: 18px;
+  font-size: 16px;
 }
 @media all and (max-width: 480px) {
   .ffe-file-upload__button {
@@ -3739,7 +3660,7 @@ html {
   -webkit-box-ordinal-group: 4;
       -ms-flex-order: 3;
           order: 3;
-  font-size: 18px;
+  font-size: 16px;
 }
 .ffe-file-upload__delete-button::before {
   content: '';
@@ -3849,7 +3770,7 @@ html {
   display: inline-block;
   position: relative;
   font-family: MuseoSans-500, arial, sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
@@ -3857,11 +3778,6 @@ html {
   color: #002776;
 }
 @media screen and (min-width: 480px) {
-  .ffe-form-label {
-    font-size: 16px;
-  }
-}
-@media screen and (min-width: 768px) {
   .ffe-form-label {
     font-size: 16px;
   }
@@ -3913,7 +3829,7 @@ html {
   text-align: center;
   vertical-align: middle;
   width: 25px;
-  font-size: 18px;
+  font-size: 16px;
 }
 .ffe-tooltip__icon:hover,
 .ffe-tooltip__icon:focus {
@@ -5399,11 +5315,6 @@ input:not([type='radio']):not([type='checkbox']) {
 }
 @media screen and (min-width: 480px) {
   .ffe-check-list--bg-sand > .ffe-check-list__item {
-    font-size: 16px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .ffe-check-list--bg-sand > .ffe-check-list__item {
     font-size: 18px;
   }
 }
@@ -5456,15 +5367,9 @@ input:not([type='radio']):not([type='checkbox']) {
 .ffe-description-list .ffe-description-list__term,
 .ffe-description-list-multicol .ffe-description-list__term {
   color: #002776;
-  font-size: 16px;
+  font-size: 15px;
 }
 @media screen and (min-width: 480px) {
-  .ffe-description-list .ffe-description-list__term,
-  .ffe-description-list-multicol .ffe-description-list__term {
-    font-size: 16px;
-  }
-}
-@media screen and (min-width: 768px) {
   .ffe-description-list .ffe-description-list__term,
   .ffe-description-list-multicol .ffe-description-list__term {
     font-size: 16px;
@@ -6548,13 +6453,9 @@ input:not([type='radio']):not([type='checkbox']) {
 }
 
 .sb1ds-sidebar__menu > .sb1ds-components-list > .sb1ds-components-list__item > .sb1ds-components-list__link--heading {
-  color: #002776;font-family: 'MuseoSansRounded-700', arial, sans-serif;font-weight: normal;line-height: 28px;font-size: 18px;
+  color: #002776;font-family: 'MuseoSansRounded-700', arial, sans-serif;font-weight: normal;line-height: 24px;font-size: 18px;
 }
 @media screen and (min-width: 480px) {
-  .sb1ds-sidebar__menu > .sb1ds-components-list > .sb1ds-components-list__item > .sb1ds-components-list__link--heading {
-    font-size: 20px;
-  }
-}@media screen and (min-width: 768px) {
   .sb1ds-sidebar__menu > .sb1ds-components-list > .sb1ds-components-list__item > .sb1ds-components-list__link--heading {
     font-size: 22px;
   }
@@ -6572,9 +6473,6 @@ input:not([type='radio']):not([type='checkbox']) {
 @media screen and (min-width: 768px) {
   .sb1ds-sidebar__menu > .sb1ds-components-list > .sb1ds-components-list__item > .sb1ds-components-list__link--heading {
     margin-bottom: 20px;
-  }
-  .sb1ds-sidebar__menu > .sb1ds-components-list > .sb1ds-components-list__item > .sb1ds-components-list__link--heading {
-    line-height: 24px;
   }
 }
 .sb1ds-components-list {
