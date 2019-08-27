@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.9.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.8.0...@sb1/ffe-icons@12.9.0) (2019-08-27)
+
+### Features
+
+-   **ffe-icons:** Adding 'spleis-ikon.svg' ([9b4f619](https://github.com/SpareBank1/designsystem/commit/9b4f619))
+
 # [12.8.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.7.2...@sb1/ffe-icons@12.8.0) (2019-08-12)
 
 ### Features

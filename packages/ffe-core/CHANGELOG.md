@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [15.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@14.0.5...@sb1/ffe-core@15.0.0) (2019-08-27)
+
+### Bug Fixes
+
+-   **ffe-core:** Typography adjustments ([4be784a](https://github.com/SpareBank1/designsystem/commit/4be784a))
+
+### Features
+
+-   **ffe-core:** Add common spacing variables ([77f65ee](https://github.com/SpareBank1/designsystem/commit/77f65ee))
+
+### BREAKING CHANGES
+
+-   **ffe-core:** New font-size and line-height values for all typo classes
+
 ## [14.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@14.0.4...@sb1/ffe-core@14.0.5) (2019-04-24)
 
 **Note:** Version bump only for package @sb1/ffe-core
