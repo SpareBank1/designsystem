@@ -1,7 +1,7 @@
 import React from 'react';
 import { bool, func, node, string, number } from 'prop-types';
 import classNames from 'classnames';
-import Collapse from 'react-css-collapse';
+import Collapse from '@sb1/ffe-collapse-react';
 import uuid from 'uuid';
 
 class Tooltip extends React.Component {
