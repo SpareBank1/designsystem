@@ -36,12 +36,12 @@
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.7.0",
     "jest": "^23.4.2",
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3"
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
   },
   "peerDependencies": {
     "@sb1/ffe-accordion": "^5.0.3",
-    "react": "^16.6.3"
+    "react": "^16.9.0"
   },
   "publishConfig": {
     "access": "public"

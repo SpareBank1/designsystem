@@ -41,13 +41,13 @@
     "eslint": "^5.9.0",
     "jest": "^23.4.2",
     "less": "^3.8.1",
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3"
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
   },
   "peerDependencies": {
     "@sb1/ffe-core": "^14.0.2",
     "@sb1/ffe-form": "^11.0.1",
-    "react": "^16.6.3"
+    "react": "^16.9.0"
   },
   "publishConfig": {
     "access": "public"
