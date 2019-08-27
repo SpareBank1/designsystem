@@ -16,6 +16,7 @@ const PACKAGES_WITH_DEFAULT_EXPORT = [
     'ffe-searchable-dropdown-react',
     'ffe-spinner-react',
     'ffe-tables-react',
+    'ffe-collapse-react',
 ];
 
 const ignore = [
@@ -447,6 +448,20 @@ module.exports = {
                     name: 'Fanekomponenter',
                     components:
                         'packages/ffe-tabs-react/src/[A-Z]+([A-Za-z]).js',
+                },
+            ],
+        },
+        {
+            name: 'Collapse',
+            sections: [
+                {
+                    name: 'Bruk av Collapse',
+                    content: 'styleguide-content/komponenter/collapse.md',
+                },
+                {
+                    name: 'Komponenten',
+                    components:
+                        'packages/ffe-collapse-react/src/[A-Z]+([A-Za-z]).js',
                 },
             ],
         },
