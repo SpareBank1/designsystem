@@ -34,12 +34,12 @@
     "eslint-loader": "^2.1.0",
     "json-loader": "^0.5.7",
     "mkdirp": "^0.5.1",
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
     "rimraf": "^2.6.2"
   },
   "peerDependencies": {
-    "react": "^16.6.3"
+    "react": "^16.9.0"
   },
   "publishConfig": {
     "access": "public"
