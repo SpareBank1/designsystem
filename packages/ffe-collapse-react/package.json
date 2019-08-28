@@ -9,7 +9,8 @@
     "author": "SpareBank 1",
     "files": [
         "lib",
-        "es"
+        "es",
+        "less"
     ],
     "main": "lib/index.js",
     "module": "es/index.js",
