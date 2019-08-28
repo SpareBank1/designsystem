@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@5.0.0...@sb1/ffe-form-react@5.0.1) (2019-08-28)
+
+### Bug Fixes
+
+-   **ffe-form-react:** use our own Collapse component ([548e30c](https://github.com/SpareBank1/designsystem/commit/548e30c))
+
 # [5.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@4.9.1...@sb1/ffe-form-react@5.0.0) (2019-08-27)
 
 ### chore
