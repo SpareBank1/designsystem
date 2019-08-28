@@ -6451,6 +6451,11 @@ input:not([type='radio']):not([type='checkbox']) {
     margin: 0 0 10px;
   }
 }
+.ffe-collapse-transition {
+  -webkit-transition: height 0.2s cubic-bezier(0.46, -0.265, 0.48, 1.38);
+  -o-transition: height 0.2s cubic-bezier(0.46, -0.265, 0.48, 1.38);
+  transition: height 0.2s cubic-bezier(0.46, -0.265, 0.48, 1.38);
+}
 
 .sb1ds-sidebar__menu > .sb1ds-components-list > .sb1ds-components-list__item > .sb1ds-components-list__link--heading {
   color: #002776;font-family: 'MuseoSansRounded-700', arial, sans-serif;font-weight: normal;line-height: 24px;font-size: 18px;
