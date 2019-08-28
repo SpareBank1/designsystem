@@ -22,6 +22,7 @@ module.exports = {
                 'ffe-context-message-react',
                 'ffe-core',
                 'ffe-core-react',
+                'ffe-collapse-react',
                 'ffe-datepicker',
                 'ffe-datepicker-react',
                 'ffe-decorators-react',
