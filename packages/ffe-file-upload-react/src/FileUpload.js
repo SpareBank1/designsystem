@@ -40,14 +40,14 @@ class FileUpload extends React.Component {
     }
 
     onFileDeleted(event) {
-        this.props.onFileDeleted(this.props.selectedFiles[event.target.id]);
+        this.props.onFileDeleted(this.props.files[event.target.id]);
     }
 
     render() {
         const {
             id,
             label,
-            selectedFiles,
+            files,
             cancelText,
             deleteText,
             multiple,
@@ -66,13 +66,13 @@ class FileUpload extends React.Component {
                     <div className="ffe-file-upload__info-section__title">
                         {infoTitle}
                     </div>
-                    {Object.keys(selectedFiles).length > 0 ? (
+                    {Object.keys(files).length > 0 ? (
                         <ul className="ffe-file-upload__info-section__selected-files">
-                            {Object.keys(selectedFiles).map((file, index) => (
+                            {Object.keys(files).map((file, index) => (
                                 <FileItem
                                     key={index}
                                     index={index}
-                                    file={selectedFiles[file]}
+                                    file={files[file]}
                                     cancelText={cancelText}
                                     deleteText={deleteText}
                                     onFileDeleted={onFileDeleted}
@@ -147,7 +147,7 @@ FileUpload.propTypes = {
      * A map of files, indexed by file name (check file-shape on FileItem.js propTypes), that the user has uploaded.
      * Must be maintained outside of `FileUpload`. It is up to the implementation to deny or accept file types, sizes, etc.
      * */
-    selectedFiles: object.isRequired,
+    files: object.isRequired,
     /**
      * Will be called with `FileList`-object containing the `File`-objects the user selected.
      * See MDN for documentation on

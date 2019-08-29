@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react';
-import { number, func, shape, string as stringType } from 'prop-types';
+import { number, func, shape, object, string as stringType } from 'prop-types';
 
 const FileItem = props => (
     <li key={props.index}>
         {// File is loading
-        !props.file.content && !props.file.error && (
+        !props.file.document && !props.file.error && (
             <div className="ffe-file-upload__info-section__stencil">
                 <div className="ffe-file-upload__info-section__stencil__info">
                     <div className="ffe-file-upload__info-section__stencil__info__background" />
@@ -14,15 +14,19 @@ const FileItem = props => (
                 </div>
                 <button
                     id={props.file.name}
-                    className="ffe-file-upload__info-section__delete-button"
+                    className="ffe-file-upload__info-section__delete__button"
                     onClick={props.onFileDeleted}
                 >
                     {props.cancelText}
+                    <div
+                        id={props.file.name}
+                        className="ffe-file-upload__info-section__delete__icon"
+                    />
                 </button>
             </div>
         )}
         {// File finished loading
-        props.file.content && (
+        props.file.document && (
             <Fragment>
                 <button
                     id={props.file.name}
@@ -30,7 +34,10 @@ const FileItem = props => (
                     onClick={props.onFileDeleted}
                 >
                     {props.deleteText}
-                    <div className="ffe-file-upload__info-section__delete__icon" />
+                    <div
+                        id={props.file.name}
+                        className="ffe-file-upload__info-section__delete__icon"
+                    />
                 </button>
                 <div className="ffe-file-upload__info-section__filename">
                     {props.file.name}
@@ -47,7 +54,10 @@ const FileItem = props => (
                     onClick={props.onFileDeleted}
                 >
                     {props.deleteText}
-                    <div className="ffe-file-upload__info-section__delete__icon" />
+                    <div
+                        id={props.file.name}
+                        className="ffe-file-upload__info-section__delete__icon"
+                    />
                 </button>
                 <div className="ffe-file-upload__info-section__error__info">
                     <div className="ffe-file-upload__info-section__error__info__filename">
@@ -63,10 +73,10 @@ const FileItem = props => (
 );
 
 FileItem.propTypes = {
-    /** shape of the file type */
+    /** Shape of the file type, name is required, error and document.content is optional */
     file: shape({
         name: stringType.isRequired,
-        content: stringType,
+        document: object,
         error: stringType,
     }).isRequired,
     index: number.isRequired,
