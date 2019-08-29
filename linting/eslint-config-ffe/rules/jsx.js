@@ -1,8 +1,8 @@
 module.exports = {
-    'rules': {
+    rules: {
         // Enforce boolean attributes notation in JSX
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-boolean-value.md
-        'react/jsx-boolean-value': [2, 'always' ],
+        'react/jsx-boolean-value': [2, 'always'],
 
         // Validate JSX has key prop when in array or iterator
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-key.md
@@ -30,11 +30,11 @@ module.exports = {
 
         // Ensure correct position of the first property.
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-first-prop-new-line.md
-        'react/jsx-first-prop-new-line' : [2, "multiline"],
+        'react/jsx-first-prop-new-line': [2, 'multiline'],
 
         // Enforce the closing bracket location for JSX multiline elements.
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-bracket-location.md
-        'react/jsx-closing-bracket-location' : [2],
+        'react/jsx-closing-bracket-location': [2],
 
         // Prevent usage of dangerous JSX properties
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-danger.md
@@ -58,7 +58,7 @@ module.exports = {
 
         // Prevent multiple component definition per file
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-multi-comp.md
-        'react/no-multi-comp': [2, {'ignoreStateless': true}],
+        'react/no-multi-comp': [2, { ignoreStateless: true }],
 
         // Prevent usage of unknown DOM property
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unknown-property.md
@@ -86,6 +86,14 @@ module.exports = {
 
         // Prevent missing props validation in a React component definition
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prop-types.md
-        'react/prop-types': [2]
-    }
+        'react/prop-types': [2],
+
+        // Prevent breaking rules of hooks
+        // https://reactjs.org/docs/hooks-rules.html
+        'react-hooks/rules-of-hooks': 'error',
+
+        // Warn about hook usage that is probably wrong
+        // https://reactjs.org/docs/hooks-rules.html
+        'react-hooks/exhaustive-deps': 'warn',
+    },
 };
