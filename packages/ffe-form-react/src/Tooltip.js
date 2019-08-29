@@ -53,6 +53,7 @@ class Tooltip extends React.Component {
                     onClick={this.onToggle}
                     type="button"
                     tabIndex={tabIndex}
+                    id={uuid.v4()}
                 >
                     <span aria-hidden={true}>?</span>
                 </button>
