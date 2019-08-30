@@ -1,147 +1,116 @@
 /* Because we are missing aria-controls (http://www.heydonworks.com/article/aria-controls-is-poop): */
 /* eslint jsx-a11y/role-has-required-aria-props:0 */
-import React, { Component } from 'react';
+import React from 'react';
 import { func, string, bool, number } from 'prop-types';
-import autoBind from 'react-auto-bind';
-import KryssIkon from '@sb1/ffe-icons-react/lib/kryss-ikon';
-import ChevronIkon from '@sb1/ffe-icons-react/lib/chevron-ikon';
+import { KryssIkon, ChevronIkon } from '@sb1/ffe-icons-react';
 import classNames from 'classnames';
 import txt from '../../i18n/i18n';
 import { Locale } from '../../util/types';
 
-class Input extends Component {
-    constructor(props) {
-        super(props);
-        autoBind(this);
-        this.state = {
-            value: props.value,
-            isFocused: false,
-        };
-    }
+const InputField = props => {
+    const {
+        onKeyDown,
+        id,
+        placeholder,
+        isSuggestionsShowing,
+        ariaInvalid,
+        onClick,
+        inputFieldRef,
+        highlightedIndex,
+        suggestionListId,
+        name,
+        readOnly,
+        locale,
+        value,
+        onBlur,
+        onFocus,
+        onChange,
+        onReset,
+    } = props;
+    const handleChange = ({ target: { value: newValue } }) =>
+        onChange(newValue);
 
-    onChange(e) {
-        const value = e.target.value;
-        this.setState({ value });
-        this.props.onChange(value);
-    }
-
-    onFocus() {
-        this.setState({ isFocused: true });
-        this.props.onFocus();
-    }
-
-    onBlur() {
-        this.setState({ isFocused: false });
-        this.props.onBlur();
-    }
-
-    onReset(e) {
+    const handleReset = e => {
         e.preventDefault();
-        this.props.onReset();
-    }
+        onReset();
+    };
 
-    onExpandOrCollapse(e) {
+    const onExpandOrCollapse = e => {
         e.preventDefault();
-
-        const { isSuggestionsShowing } = this.props;
         if (isSuggestionsShowing) {
-            this.onBlur();
+            onBlur();
         } else {
             e.currentTarget.previousElementSibling.focus();
-            this.onFocus();
+            onFocus();
         }
-    }
+    };
 
-    componentWillReceiveProps(nextProps) {
-        if (!this.state.isFocused || this.state.value !== nextProps.value) {
-            this.setState({ value: nextProps.value });
-        }
-    }
+    const showReset = !readOnly && value.length > 0;
 
-    render() {
-        const {
-            onKeyDown,
-            value,
-            id,
-            placeholder,
-            isSuggestionsShowing,
-            ariaInvalid,
-            onClick,
-            inputFieldRef,
-            highlightedIndex,
-            suggestionListId,
-            name,
-            readOnly,
-            locale,
-        } = this.props;
-
-        const showReset = !readOnly && value.length > 0;
-
-        return (
-            <div
-                role="combobox"
-                aria-expanded={isSuggestionsShowing}
-                onFocus={this.onFocus}
-                onBlur={this.onBlur}
-                aria-activedescendant={
-                    highlightedIndex > -1
-                        ? `suggestion-item-${highlightedIndex}`
-                        : null
-                }
-                aria-owns={suggestionListId}
-            >
-                <input
-                    className="ffe-input-field ffe-base-selector__input-field"
-                    onKeyDown={onKeyDown}
-                    autoComplete="off"
-                    value={this.state.value}
-                    id={id}
-                    placeholder={placeholder}
-                    ref={inputFieldRef}
-                    aria-invalid={ariaInvalid}
-                    aria-autocomplete="list"
-                    name={name}
-                    onClick={onClick}
-                    onChange={this.onChange}
-                    readOnly={readOnly}
-                />
-                {showReset && (
-                    <button
-                        className="ffe-base-selector__reset-button"
-                        onMouseDown={this.onReset}
-                        tabIndex={-1}
-                        type="button"
-                        aria-label={txt[locale].RESET_SEARCH}
-                    >
-                        <KryssIkon className="ffe-base-selector__reset-button-icon" />
-                    </button>
-                )}
+    return (
+        <div
+            role="combobox"
+            aria-expanded={isSuggestionsShowing}
+            onFocus={onFocus}
+            onBlur={onBlur}
+            aria-activedescendant={
+                highlightedIndex > -1
+                    ? `suggestion-item-${highlightedIndex}`
+                    : null
+            }
+            aria-owns={suggestionListId}
+        >
+            <input
+                className="ffe-input-field ffe-base-selector__input-field"
+                onKeyDown={onKeyDown}
+                autoComplete="off"
+                value={value}
+                id={id}
+                placeholder={placeholder}
+                ref={inputFieldRef}
+                aria-invalid={ariaInvalid}
+                aria-autocomplete="list"
+                name={name}
+                onClick={onClick}
+                onChange={handleChange}
+                readOnly={readOnly}
+            />
+            {showReset && (
                 <button
-                    className="ffe-base-selector__expand-button"
-                    onMouseDown={this.onExpandOrCollapse}
+                    className="ffe-base-selector__reset-button"
+                    onMouseDown={handleReset}
                     tabIndex={-1}
                     type="button"
-                    aria-label={
-                        isSuggestionsShowing
-                            ? txt[locale].ACCOUNTSLIST_CLOSE
-                            : txt[locale].ACCOUNTSLIST_OPEN
-                    }
+                    aria-label={txt[locale].RESET_SEARCH}
                 >
-                    <ChevronIkon
-                        className={classNames(
-                            'ffe-base-selector__expand-button-icon ',
-                            {
-                                'ffe-base-selector__expand-button-icon--invalid': ariaInvalid,
-                            },
-                        )}
-                    />
+                    <KryssIkon className="ffe-base-selector__reset-button-icon" />
                 </button>
-            </div>
-        );
-    }
-}
+            )}
+            <button
+                className="ffe-base-selector__expand-button"
+                onMouseDown={onExpandOrCollapse}
+                tabIndex={-1}
+                type="button"
+                aria-label={
+                    isSuggestionsShowing
+                        ? txt[locale].ACCOUNTSLIST_CLOSE
+                        : txt[locale].ACCOUNTSLIST_OPEN
+                }
+            >
+                <ChevronIkon
+                    className={classNames(
+                        'ffe-base-selector__expand-button-icon ',
+                        {
+                            'ffe-base-selector__expand-button-icon--invalid': ariaInvalid,
+                        },
+                    )}
+                />
+            </button>
+        </div>
+    );
+};
 
-Input.propTypes = {
+InputField.propTypes = {
     onChange: func.isRequired,
     onKeyDown: func.isRequired,
     value: string.isRequired,
@@ -161,7 +130,7 @@ Input.propTypes = {
     locale: Locale.isRequired,
 };
 
-Input.defaultProps = {
+InputField.defaultProps = {
     onBlur: () => {},
     onFocus: () => {},
     inputFieldRef: () => {},
@@ -169,4 +138,4 @@ Input.defaultProps = {
     readOnly: false,
 };
 
-export default Input;
+export default InputField;
