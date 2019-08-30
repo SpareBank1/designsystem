@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@11.0.3...@sb1/ffe-account-selector-react@12.0.0) (2019-08-30)
+
+### Code Refactoring
+
+-   **ffe-account-selector-react:** remove deprecated lifecycle ([88d6543](https://github.com/SpareBank1/designsystem/commit/88d6543))
+
+### BREAKING CHANGES
+
+-   **ffe-account-selector-react:** This commit removes the deprecated lifecycle method
+    `componentWillReceiveProps` from the `InputField` component. The component
+    used this lifecycle to keep the `value` prop and the internal `value`
+    state in sync. However this is a bad pattern, as there is no reason for
+    this component to keep an internal state of the field value.
+    The component _should_ be used as a controlled component, where the
+    consumer is responsible for keeping and providing the value. If you do this
+    already, you'll be fine with. However, if you've simply been listening for
+    changes through `onChange`, and not keeping your own state, this change will
+    break your UI.
+
 ## [11.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@11.0.2...@sb1/ffe-account-selector-react@11.0.3) (2019-08-30)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
