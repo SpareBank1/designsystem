@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { object, bool, func, string as stringType } from 'prop-types';
 import FileItem from './FileItem';
 
@@ -80,14 +80,14 @@ class FileUpload extends React.Component {
                             ))}
                         </ul>
                     ) : (
-                        <Fragment>
+                        <>
                             <div className="ffe-file-upload__info-section__text">
                                 {infoText}
                             </div>
                             <div className="ffe-file-upload__info-section__subtext">
                                 {infoSubText}
                             </div>
-                        </Fragment>
+                        </>
                     )}
                 </div>
                 <div

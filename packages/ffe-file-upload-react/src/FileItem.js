@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { number, func, shape, object, string as stringType } from 'prop-types';
 
 const FileItem = props => (
@@ -27,7 +27,7 @@ const FileItem = props => (
         )}
         {// File finished loading
         props.file.document && (
-            <Fragment>
+            <>
                 <button
                     id={props.file.name}
                     className="ffe-file-upload__info-section__delete__button"
@@ -42,7 +42,7 @@ const FileItem = props => (
                 <div className="ffe-file-upload__info-section__filename">
                     {props.file.name}
                 </div>
-            </Fragment>
+            </>
         )}
         {// File has error
         props.file.error && (
