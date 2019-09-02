@@ -12,6 +12,7 @@ class Tooltip extends React.Component {
         };
         this.onToggle = this.onToggle.bind(this);
         this.tooltipId = uuid.v4();
+        this.tooltipButtonId = uuid.v4();
     }
 
     onToggle(evt) {
@@ -53,7 +54,7 @@ class Tooltip extends React.Component {
                     onClick={this.onToggle}
                     type="button"
                     tabIndex={tabIndex}
-                    id={uuid.v4()}
+                    id={this.tooltipButtonId}
                 >
                     <span aria-hidden={true}>?</span>
                 </button>
