@@ -31,28 +31,24 @@
 
         &__selected-files {
             line-height: 24px;
-            padding: 0;
-            margin: 10px 0;
-            color: @ffe-black;
-            list-style: none;
-            max-width: @breakpoint-sm;
 
             li {
-                display: flex;
-                flex-flow: row nowrap;
-                align-items: center;
-                padding-top: 7px;
-                padding-bottom: 6px;
-                margin: 0;
+                display: grid;
             }
         }
 
+        &__loaded {
+            display: grid;
+            grid-template-areas: 'main right';
+        }
+
         &__stencil {
-            width: 100%;
-            display: inline-flex;
+            display: grid;
+            grid-template-areas: 'main right';
 
             &__info {
-                width: 100%;
+                display: grid;
+
                 &__background {
                     height: 10px;
                     border-radius: 5px;
@@ -72,7 +68,6 @@
 
         &__delete {
             &__button {
-                order: 2;
                 padding-right: 20px;
                 padding-top: 5px;
                 margin-left: auto;
@@ -116,7 +111,7 @@
         }
 
         &__filename {
-            order: 1;
+            grid-area: main;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -125,26 +120,25 @@
         }
 
         &__error {
-            display: inline-flex;
-            width: 100%;
+            display: grid;
+            grid-template-areas: 'menu main right';
+            grid-gap: 5px;
+            grid-template-columns: 20px;
 
             &__icon {
                 &:extend(.ffe-field-error-message);
-                margin-right: 5px;
             }
 
             &__info {
+                grid-area: main;
+                display: grid;
+
                 &__filename,
                 &__error-message {
                     &:extend(.ffe-micro-text);
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
-                    max-width: 240px;
-
-                    @media (min-width: @breakpoint-md) {
-                        max-width: 315px;
-                    }
                 }
             }
         }
@@ -165,7 +159,6 @@
         padding: 5px;
 
         @media (min-width: @breakpoint-md) {
-            margin-left: auto;
             margin-top: 0;
             height: 220px;
             width: 280px;
@@ -175,10 +168,8 @@
         &__border {
             height: 140px;
             margin: 5px;
-            border-style: dashed;
-            border-width: 2px;
+            border: 2px dashed @ffe-blue-azure;
             border-radius: 10px;
-            border-color: @ffe-blue-azure;
             position: relative;
             width: 100%;
             right: 5px;

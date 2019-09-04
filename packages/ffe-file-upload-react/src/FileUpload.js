@@ -67,7 +67,7 @@ class FileUpload extends React.Component {
                         {infoTitle}
                     </div>
                     {Object.keys(files).length > 0 ? (
-                        <ul className="ffe-file-upload__info-section__selected-files">
+                        <div className="ffe-file-upload__info-section__selected-files">
                             {Object.keys(files).map((file, index) => (
                                 <FileItem
                                     key={index}
@@ -78,7 +78,7 @@ class FileUpload extends React.Component {
                                     onFileDeleted={onFileDeleted}
                                 />
                             ))}
-                        </ul>
+                        </div>
                     ) : (
                         <>
                             <div className="ffe-file-upload__info-section__text">

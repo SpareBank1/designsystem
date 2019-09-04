@@ -27,7 +27,7 @@ const FileItem = props => (
         )}
         {// File finished loading
         props.file.document && (
-            <>
+            <div className="ffe-file-upload__info-section__loaded">
                 <button
                     id={props.file.name}
                     className="ffe-file-upload__info-section__delete__button"
@@ -42,7 +42,7 @@ const FileItem = props => (
                 <div className="ffe-file-upload__info-section__filename">
                     {props.file.name}
                 </div>
-            </>
+            </div>
         )}
         {// File has error
         props.file.error && (
@@ -81,8 +81,7 @@ FileItem.propTypes = {
     }).isRequired,
     index: number.isRequired,
     /**
-     * Called when the user clicks the delete button for a given file. Is called with the `File`
-     * object of the file in question.
+     * Called when the user clicks the delete button for a given file. Is called with the name of the file in question.
      */
     onFileDeleted: func.isRequired,
     /** Label for the cancel button */
