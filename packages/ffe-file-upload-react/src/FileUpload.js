@@ -114,6 +114,7 @@ class FileUpload extends React.Component {
                             {uploadMicroText}
                         </div>
                         <button
+                            type="button"
                             className="ffe-file-upload__upload-section__button"
                             onClick={this.triggerUploadFileNativeHandler}
                         >

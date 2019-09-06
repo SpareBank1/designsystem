@@ -13,6 +13,7 @@ const FileItem = props => (
                     </div>
                 </div>
                 <button
+                    type="button"
                     id={props.file.name}
                     className="ffe-file-upload__info-section__delete__button"
                     onClick={props.onFileDeleted}
@@ -29,6 +30,7 @@ const FileItem = props => (
         props.file.document && (
             <div className="ffe-file-upload__info-section__loaded">
                 <button
+                    type="button"
                     id={props.file.name}
                     className="ffe-file-upload__info-section__delete__button"
                     onClick={props.onFileDeleted}
@@ -49,6 +51,7 @@ const FileItem = props => (
             <div className="ffe-file-upload__info-section__error">
                 <div className="ffe-file-upload__info-section__error__icon ffe-field-error-message" />
                 <button
+                    type="button"
                     id={props.file.name}
                     className="ffe-file-upload__info-section__delete__button"
                     onClick={props.onFileDeleted}
