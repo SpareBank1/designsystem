@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { bool, func, oneOfType, string, node } from 'prop-types';
+import { bool, func, oneOfType, string, node, object, shape } from 'prop-types';
 import classNames from 'classnames';
 import KryssIkon from '@sb1/ffe-icons-react/lib/kryss-ikon';
 
@@ -61,8 +61,8 @@ ExpandButton.propTypes = {
     leftIcon: node,
     /** Icon shown to the right of the label */
     rightIcon: node,
-    /** Ref-setting function passed to the button element */
-    innerRef: func,
+    /** Ref-setting function, or ref created by useRef, passed to the button element */
+    innerRef: oneOfType([func, shape({ current: object })]),
     /** When true the component will render a circle with an X indicating whatever is controlled is in an expanded state. */
     isExpanded: bool.isRequired,
     /** Use to listen for clicks and toggle the `isExpanded` property together with whatever it is you're expanding. */

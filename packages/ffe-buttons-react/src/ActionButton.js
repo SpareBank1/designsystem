@@ -1,5 +1,5 @@
 import React from 'react';
-import { bool, func, node, string, oneOfType } from 'prop-types';
+import { bool, func, node, string, oneOfType, object, shape } from 'prop-types';
 import classNames from 'classnames';
 
 import Button from './BaseButton';
@@ -38,8 +38,8 @@ ActionButton.propTypes = {
     element: oneOfType([func, string]),
     /** Applies the ghost modifier if true. */
     ghost: bool,
-    /** Ref-setting function passed to the button element */
-    innerRef: func,
+    /** Ref-setting function, or ref created by useRef, passed to the button element */
+    innerRef: oneOfType([func, shape({ current: object })]),
     /** Shows a loader if true */
     isLoading: bool,
     /** Icon shown to the left of the label */

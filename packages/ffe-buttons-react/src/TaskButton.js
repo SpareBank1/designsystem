@@ -1,5 +1,5 @@
 import React from 'react';
-import { bool, func, node, string, oneOfType } from 'prop-types';
+import { bool, func, node, string, oneOfType, object, shape } from 'prop-types';
 import Button from './BaseButton';
 
 const TaskButton = ({ icon, ...rest }) => (
@@ -19,8 +19,8 @@ TaskButton.propTypes = {
     element: oneOfType([func, string]),
     /** Task icon, show to the left of the label */
     icon: node.isRequired,
-    /** Ref-setting function passed to the button element */
-    innerRef: func,
+    /** Ref-setting function, or ref created by useRef, passed to the button element */
+    innerRef: oneOfType([func, shape({ current: object })]),
 };
 
 export default TaskButton;
