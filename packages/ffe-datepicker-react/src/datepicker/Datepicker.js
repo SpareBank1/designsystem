@@ -47,13 +47,14 @@ export default class Datepicker extends Component {
         this.removeGlobalEventListeners();
     }
 
-    componentWillReceiveProps(nextProps) {
+    /* eslint-disable react/no-did-update-set-state */
+    componentDidUpdate() {
         if (
-            (nextProps.minDate && nextProps.minDate !== this.state.minDate) ||
-            (nextProps.maxDate && nextProps.maxDate !== this.state.maxDate)
+            (this.props.minDate && this.props.minDate !== this.state.minDate) ||
+            (this.props.maxDate && this.props.maxDate !== this.state.maxDate)
         ) {
             this.setState(
-                { minDate: nextProps.minDate, maxDate: nextProps.maxDate },
+                { minDate: this.props.minDate, maxDate: this.props.maxDate },
                 this.validateDateIntervals,
             );
         }
@@ -86,7 +87,12 @@ export default class Datepicker extends Component {
 
     validateDateIntervals() {
         let nextState = {};
-        const { onChange, value, onValidationComplete } = this.props;
+        const {
+            onChange,
+            value,
+            onValidationComplete,
+            keepDisplayStateOnError,
+        } = this.props;
 
         const error = type => {
             const errorMessage = this.onError(type);
@@ -95,7 +101,9 @@ export default class Datepicker extends Component {
                 errorMessage,
                 openOnFocus: true,
                 ariaInvalid: true,
-                displayDatePicker: true,
+                displayDatePicker: keepDisplayStateOnError
+                    ? this.state.displayDatePicker
+                    : true,
             };
         };
 
@@ -300,7 +308,7 @@ export default class Datepicker extends Component {
         } = this.state;
         const latestValue = validateDate(value) ? value : lastValidDate;
 
-        if (this.state.ariaInvalid) {
+        if (this.state.ariaInvalid && !inputProps['aria-describedby']) {
             inputProps['aria-describedby'] = `date-input-validation-${
                 this.datepickerId
             }`;
@@ -369,16 +377,15 @@ export default class Datepicker extends Component {
                     )}
                 </div>
 
-                {this.state.ariaInvalid &&
-                    !hideErrors && (
-                        <div
-                            id={`date-input-validation-${this.datepickerId}`}
-                            className="ffe-body-text ffe-field-error-message"
-                            role="alert"
-                        >
-                            {this.state.errorMessage}
-                        </div>
-                    )}
+                {this.state.ariaInvalid && !hideErrors && (
+                    <div
+                        id={`date-input-validation-${this.datepickerId}`}
+                        className="ffe-body-text ffe-field-error-message"
+                        role="alert"
+                    >
+                        {this.state.errorMessage}
+                    </div>
+                )}
             </div>
         );
     }
@@ -386,6 +393,7 @@ export default class Datepicker extends Component {
 
 Datepicker.defaultProps = {
     language: 'nb',
+    keepDisplayStateOnError: false,
     onValidationComplete: () => {},
 };
 
@@ -406,4 +414,5 @@ Datepicker.propTypes = {
     onChange: func.isRequired,
     onError: func,
     value: string.isRequired,
+    keepDisplayStateOnError: bool.isRequired,
 };

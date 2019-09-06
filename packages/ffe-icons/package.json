@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-icons",
-  "version": "12.6.1",
+  "version": "12.9.0",
   "description": "Felles Front End Icons",
   "license": "MIT",
   "author": "SpareBank 1",
@@ -14,9 +14,7 @@
   },
   "scripts": {
     "build": "mkdirp dist && node bin/build.js",
-    "lint": "run-p lint:js lint:less",
-    "lint:js": "eslint bin/.",
-    "lint:less": "stylelint less/*.less",
+    "lint": "eslint bin/.",
     "test": "npm run lint"
   },
   "dependencies": {
@@ -29,7 +27,7 @@
     "mkdirp": "^0.5.1",
     "npm-run-all": "^4.1.2",
     "run-p": "0.0.0",
-    "stylelint": "^9.4.0"
+    "stylelint": "^10.0.0"
   },
   "publishConfig": {
     "access": "public"

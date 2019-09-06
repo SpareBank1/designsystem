@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-icons-react",
-  "version": "6.0.16",
+  "version": "7.0.0",
   "description": "React-komponenter for ffe-icons",
   "license": "MIT",
   "files": [
@@ -27,19 +27,19 @@
     "prop-types": "^15.6.0"
   },
   "devDependencies": {
-    "@sb1/ffe-icons": "^12.6.1",
+    "@sb1/ffe-icons": "^12.9.0",
     "cheerio": "^1.0.0-rc.2",
     "cross-env": "^5.2.0",
     "eslint": "^5.9.0",
     "eslint-loader": "^2.1.0",
     "json-loader": "^0.5.7",
     "mkdirp": "^0.5.1",
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
     "rimraf": "^2.6.2"
   },
   "peerDependencies": {
-    "react": "^16.6.3"
+    "react": "^16.9.0"
   },
   "publishConfig": {
     "access": "public"

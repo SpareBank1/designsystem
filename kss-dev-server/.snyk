@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.13.3
+version: v1.13.5
 ignore: {}
 # patches apply the minimum changes required to fix a vulnerability
 patch:
@@ -70,3 +70,42 @@ patch:
         patched: '2019-02-25T14:12:59.371Z'
     - kss > highlight.js > gear-lib > uglify-js:
         patched: '2019-02-25T14:12:59.371Z'
+  SNYK-JS-LODASH-450202:
+    - snyk > snyk-go-plugin > graphlib > lodash:
+        patched: '2019-07-04T05:06:55.829Z'
+    - snyk > lodash:
+        patched: '2019-07-04T05:06:55.829Z'
+    - snyk > snyk-nuget-plugin > lodash:
+        patched: '2019-07-04T05:06:55.829Z'
+    - snyk > snyk-nodejs-lockfile-parser > lodash:
+        patched: '2019-07-04T05:06:55.829Z'
+    - snyk > snyk-mvn-plugin > lodash:
+        patched: '2019-07-04T05:06:55.829Z'
+    - snyk > snyk-config > lodash:
+        patched: '2019-07-04T05:06:55.829Z'
+    - snyk > inquirer > lodash:
+        patched: '2019-07-04T05:06:55.829Z'
+    - snyk > @snyk/dep-graph > lodash:
+        patched: '2019-07-04T05:06:55.829Z'
+    - '@babel/preset-env > @babel/plugin-transform-block-scoping > lodash':
+        patched: '2019-07-04T05:06:55.829Z'
+    - '@babel/core > lodash':
+        patched: '2019-07-04T05:06:55.829Z'
+    - '@babel/preset-env > @babel/helper-module-imports > @babel/types > lodash':
+        patched: '2019-07-04T05:06:55.829Z'
+    - snyk > @snyk/dep-graph > graphlib > lodash:
+        patched: '2019-07-04T05:06:55.829Z'
+    - snyk > snyk-php-plugin > @snyk/composer-lockfile-parser > lodash:
+        patched: '2019-07-04T05:06:55.829Z'
+    - snyk > snyk-nodejs-lockfile-parser > graphlib > lodash:
+        patched: '2019-07-04T05:06:55.829Z'
+    - '@babel/preset-env > @babel/plugin-transform-modules-systemjs > @babel/helper-hoist-variables > @babel/types > lodash':
+        patched: '2019-07-04T05:06:55.829Z'
+    - '@babel/preset-env > @babel/plugin-transform-classes > @babel/helper-replace-supers > @babel/helper-optimise-call-expression > @babel/types > lodash':
+        patched: '2019-07-04T05:06:55.829Z'
+    - '@babel/core > @babel/helpers > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash':
+        patched: '2019-07-04T05:06:55.829Z'
+    - '@babel/preset-env > @babel/plugin-transform-exponentiation-operator > @babel/helper-builder-binary-assignment-operator-visitor > @babel/helper-explode-assignable-expression > @babel/traverse > @babel/helper-function-name > @babel/types > lodash':
+        patched: '2019-07-04T05:06:55.829Z'
+    - '@babel/preset-env > @babel/plugin-transform-async-to-generator > @babel/helper-remap-async-to-generator > @babel/helper-wrap-function > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash':
+        patched: '2019-07-04T05:06:55.829Z'

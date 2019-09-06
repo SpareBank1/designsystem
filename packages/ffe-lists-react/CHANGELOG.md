@@ -3,6 +3,47 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@4.0.1...@sb1/ffe-lists-react@5.0.0) (2019-08-27)
+
+### chore
+
+-   bump React to 16.9 to allow for using hooks etc ([e3901f1](https://github.com/SpareBank1/designsystem/commit/e3901f1))
+
+### BREAKING CHANGES
+
+-   peerDep of React is raised to 16.9. While this in itself
+    isn't a breaking change, it allows for the use of hooks in later releases.
+    Such changes would just be a minor version, or even a patch, but without
+    this major version bump it would result in a runtime error for consumers.
+
+## [4.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@4.0.0...@sb1/ffe-lists-react@4.0.1) (2019-05-14)
+
+### Bug Fixes
+
+-   **ffe-lists-react:** updating peerDependencies ([ea9edaf](https://github.com/SpareBank1/designsystem/commit/ea9edaf))
+
+# [4.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@3.4.0...@sb1/ffe-lists-react@4.0.0) (2019-05-13)
+
+### Features
+
+-   **ffe-lists-react:** added vertical description list ([e7b4165](https://github.com/SpareBank1/designsystem/commit/e7b4165))
+
+### BREAKING CHANGES
+
+-   **ffe-lists-react:** The description list is now vertical by default. To get old behaviour 'horizontal' prop must be passed.
+
+# [3.4.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@3.3.2...@sb1/ffe-lists-react@3.4.0) (2019-05-10)
+
+### Features
+
+-   **ffe-lists-react:** Added type definitions for typescript ([d17c769](https://github.com/SpareBank1/designsystem/commit/d17c769))
+
+## [3.3.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@3.3.1...@sb1/ffe-lists-react@3.3.2) (2019-04-25)
+
+### Bug Fixes
+
+-   **ffe-lists-react:** Fix linting errors ([560c31b](https://github.com/SpareBank1/designsystem/commit/560c31b))
+
 ## [3.3.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@3.3.0...@sb1/ffe-lists-react@3.3.1) (2018-12-11)
 
 ### Bug Fixes

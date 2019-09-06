@@ -26,4 +26,37 @@
             border-top-style: none;
         }
     }
+
+    > *:nth-last-child(1) {
+        margin-bottom: 30px;
+    }
+
+    &--error {
+        > *:nth-last-child(1) {
+            margin-bottom: 0;
+        }
+
+        > *:nth-last-child(2) {
+            margin-bottom: 30px;
+        }
+    }
+
+    .ffe-field-error-message {
+        margin-top: -24px;
+        margin-bottom: 0;
+    }
+
+    &--no-extra-margin {
+        > *:nth-last-child(1) {
+            margin-bottom: initial;
+        }
+
+        > *:nth-last-child(2) {
+            margin-bottom: initial;
+        }
+
+        .ffe-field-error-message {
+            margin: 5px 0 10px;
+        }
+    }
 }

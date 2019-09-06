@@ -3,6 +3,49 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@4.2.0...@sb1/ffe-context-message-react@5.0.0) (2019-08-27)
+
+### chore
+
+-   bump React to 16.9 to allow for using hooks etc ([e3901f1](https://github.com/SpareBank1/designsystem/commit/e3901f1))
+
+### BREAKING CHANGES
+
+-   peerDep of React is raised to 16.9. While this in itself
+    isn't a breaking change, it allows for the use of hooks in later releases.
+    Such changes would just be a minor version, or even a patch, but without
+    this major version bump it would result in a runtime error for consumers.
+
+# [4.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@4.1.1...@sb1/ffe-context-message-react@4.2.0) (2019-08-14)
+
+### Features
+
+-   **ffe-context-message-react:** pass rest props to root node ([561c61c](https://github.com/SpareBank1/designsystem/commit/561c61c))
+
+## [4.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@4.1.0...@sb1/ffe-context-message-react@4.1.1) (2019-08-12)
+
+**Note:** Version bump only for package @sb1/ffe-context-message-react
+
+# [4.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@4.0.26...@sb1/ffe-context-message-react@4.1.0) (2019-05-10)
+
+### Features
+
+-   **ffe-context-message-react:** Added type definitions for typescript ([2f3d763](https://github.com/SpareBank1/designsystem/commit/2f3d763))
+
+## [4.0.26](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@4.0.25...@sb1/ffe-context-message-react@4.0.26) (2019-04-24)
+
+**Note:** Version bump only for package @sb1/ffe-context-message-react
+
+## [4.0.25](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@4.0.24...@sb1/ffe-context-message-react@4.0.25) (2019-04-08)
+
+### Bug Fixes
+
+-   **ffe-context-message-react:** Do not set aria-labelledby when referenced header is not rendered ([3da2550](https://github.com/SpareBank1/designsystem/commit/3da2550))
+
+## [4.0.24](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@4.0.23...@sb1/ffe-context-message-react@4.0.24) (2019-03-25)
+
+**Note:** Version bump only for package @sb1/ffe-context-message-react
+
 ## [4.0.23](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@4.0.22...@sb1/ffe-context-message-react@4.0.23) (2019-02-18)
 
 **Note:** Version bump only for package @sb1/ffe-context-message-react

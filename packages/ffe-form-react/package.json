@@ -1,24 +1,27 @@
 {
   "name": "@sb1/ffe-form-react",
-  "version": "4.4.3",
+  "version": "5.0.4",
   "description": "React component for form elements in ffe",
   "license": "MIT",
   "author": "SpareBank 1",
   "files": [
     "lib",
-    "es"
+    "es",
+    "types"
   ],
   "main": "lib/index.js",
   "module": "es/index.js",
+  "types": "types/index.d.ts",
   "sideEffects": false,
   "repository": {
     "type": "git",
     "url": "ssh://git@github.com:SpareBank1/designsystem.git"
   },
   "scripts": {
-    "build": "npm run build:cjs && npm run build:es",
+    "build": "npm run build:cjs && npm run build:es && npm run build:types",
     "build:cjs": "babel -d lib/. --root-mode=upward  --env-name=cjs --ignore=*.spec.js src/.",
     "build:es": "babel -d es/. --root-mode=upward --env-name=es --ignore=*.spec.js src/.",
+    "build:types": "copyfiles -f src/index.d.ts types/",
     "lint": "eslint src/.",
     "test": "jest",
     "test:watch": "jest --watch"
@@ -27,8 +30,8 @@
     "setupTestFrameworkScriptFile": "../../test-setup.js"
   },
   "dependencies": {
+    "@sb1/ffe-collapse-react": "^1.0.1",
     "classnames": "^2.2.5",
-    "react-css-collapse": "^3.6.0",
     "uuid": "^3.1.0"
   },
   "devDependencies": {
@@ -37,16 +40,16 @@
     "eslint": "^5.9.0",
     "jest": "^23.4.2",
     "prop-types": "^15.6.0",
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
     "react-motion": "^0.5.2",
     "react-test-renderer": "^16.2.0",
     "sinon": "^7.2.3"
   },
   "peerDependencies": {
     "@sb1/ffe-core": "^14.0.2",
-    "@sb1/ffe-form": "^10.1.1",
-    "react": "^16.3.0"
+    "@sb1/ffe-form": "^11.0.1",
+    "react": "^16.9.0"
   },
   "publishConfig": {
     "access": "public"

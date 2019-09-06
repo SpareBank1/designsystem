@@ -3,6 +3,77 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@3.3.1...@sb1/ffe-datepicker-react@4.0.0) (2019-08-27)
+
+### chore
+
+-   bump React to 16.9 to allow for using hooks etc ([e3901f1](https://github.com/SpareBank1/designsystem/commit/e3901f1))
+
+### BREAKING CHANGES
+
+-   peerDep of React is raised to 16.9. While this in itself
+    isn't a breaking change, it allows for the use of hooks in later releases.
+    Such changes would just be a minor version, or even a patch, but without
+    this major version bump it would result in a runtime error for consumers.
+
+## [3.3.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@3.3.0...@sb1/ffe-datepicker-react@3.3.1) (2019-08-12)
+
+**Note:** Version bump only for package @sb1/ffe-datepicker-react
+
+# [3.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@3.2.6...@sb1/ffe-datepicker-react@3.3.0) (2019-07-19)
+
+### Bug Fixes
+
+-   **ffe-datepicker-react:** Fixes calendar using stale state for showing selected year ([659883a](https://github.com/SpareBank1/designsystem/commit/659883a))
+
+### Features
+
+-   **ffe-datepicker-react:** Keep display state on validation error ([4942c99](https://github.com/SpareBank1/designsystem/commit/4942c99))
+
+## [3.2.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@3.2.5...@sb1/ffe-datepicker-react@3.2.6) (2019-06-26)
+
+**Note:** Version bump only for package @sb1/ffe-datepicker-react
+
+## [3.2.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@3.2.4...@sb1/ffe-datepicker-react@3.2.5) (2019-05-21)
+
+### Bug Fixes
+
+-   **ffe-datepicker-react:** ffe-form compat ([cd6d0fd](https://github.com/SpareBank1/designsystem/commit/cd6d0fd))
+
+## [3.2.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@3.2.3...@sb1/ffe-datepicker-react@3.2.4) (2019-05-14)
+
+**Note:** Version bump only for package @sb1/ffe-datepicker-react
+
+## [3.2.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@3.2.2...@sb1/ffe-datepicker-react@3.2.3) (2019-05-10)
+
+**Note:** Version bump only for package @sb1/ffe-datepicker-react
+
+## [3.2.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@3.2.1...@sb1/ffe-datepicker-react@3.2.2) (2019-04-24)
+
+**Note:** Version bump only for package @sb1/ffe-datepicker-react
+
+## [3.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@3.2.0...@sb1/ffe-datepicker-react@3.2.1) (2019-04-08)
+
+### Bug Fixes
+
+-   **ffe-datepicker-react:** Do not overwrite aria-describedby if given as inputProp ([419b006](https://github.com/SpareBank1/designsystem/commit/419b006))
+
+# [3.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@3.1.57...@sb1/ffe-datepicker-react@3.2.0) (2019-03-29)
+
+### Features
+
+-   **ffe-datepicker-react:** Improved formating for inputs of various lengths ([b89daed](https://github.com/SpareBank1/designsystem/commit/b89daed))
+
+## [3.1.57](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@3.1.56...@sb1/ffe-datepicker-react@3.1.57) (2019-03-25)
+
+**Note:** Version bump only for package @sb1/ffe-datepicker-react
+
+## [3.1.56](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@3.1.55...@sb1/ffe-datepicker-react@3.1.56) (2019-03-20)
+
+### Bug Fixes
+
+-   **ffe-datepicker-react:** Remove use of "componentWillReceiveProps" ([633d62b](https://github.com/SpareBank1/designsystem/commit/633d62b)), closes [#372](https://github.com/SpareBank1/designsystem/issues/372)
+
 ## [3.1.55](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@3.1.54...@sb1/ffe-datepicker-react@3.1.55) (2019-02-18)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker-react

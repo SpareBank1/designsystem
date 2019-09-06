@@ -3,6 +3,47 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@5.4.1...@sb1/ffe-tables-react@6.0.0) (2019-08-27)
+
+### chore
+
+-   bump React to 16.9 to allow for using hooks etc ([e3901f1](https://github.com/SpareBank1/designsystem/commit/e3901f1))
+
+### BREAKING CHANGES
+
+-   peerDep of React is raised to 16.9. While this in itself
+    isn't a breaking change, it allows for the use of hooks in later releases.
+    Such changes would just be a minor version, or even a patch, but without
+    this major version bump it would result in a runtime error for consumers.
+
+## [5.4.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@5.4.0...@sb1/ffe-tables-react@5.4.1) (2019-08-12)
+
+**Note:** Version bump only for package @sb1/ffe-tables-react
+
+# [5.4.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@5.3.1...@sb1/ffe-tables-react@5.4.0) (2019-05-10)
+
+### Features
+
+-   **ffe-tables-react:** Added type definitions for typescript ([2e25360](https://github.com/SpareBank1/designsystem/commit/2e25360))
+
+## [5.3.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@5.3.0...@sb1/ffe-tables-react@5.3.1) (2019-04-24)
+
+**Note:** Version bump only for package @sb1/ffe-tables-react
+
+# [5.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@5.2.8...@sb1/ffe-tables-react@5.3.0) (2019-04-09)
+
+### Features
+
+-   **ffe-tables-react:** Expandable table rows may be expanded as default ([9217453](https://github.com/SpareBank1/designsystem/commit/9217453))
+
+## [5.2.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@5.2.7...@sb1/ffe-tables-react@5.2.8) (2019-04-08)
+
+**Note:** Version bump only for package @sb1/ffe-tables-react
+
+## [5.2.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@5.2.6...@sb1/ffe-tables-react@5.2.7) (2019-03-25)
+
+**Note:** Version bump only for package @sb1/ffe-tables-react
+
 ## [5.2.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@5.2.5...@sb1/ffe-tables-react@5.2.6) (2019-02-26)
 
 ### Bug Fixes

@@ -34,10 +34,19 @@ describe('<InputGroup>', () => {
         ).toMatch(/custom label/);
     });
 
-    it('renders a Label with htmlFor set to the same value of the children id', () => {
+    it('renders a Label with htmlFor set to the same generated value of the children input id', () => {
         const wrapper = getWrapper();
-
         const inputId = wrapper.find(Input).prop('id');
+
+        expect(inputId).toMatch(/input-*/);
+        expect(wrapper.find('Label').prop('htmlFor')).toBe(inputId);
+    });
+
+    it('renders a Label with htmlFor set to the same value of the inputId', () => {
+        const wrapper = getWrapper({ inputId: 'my_id' });
+        const inputId = wrapper.find(Input).prop('id');
+
+        expect(inputId).toBe('my_id');
         expect(wrapper.find('Label').prop('htmlFor')).toBe(inputId);
     });
 

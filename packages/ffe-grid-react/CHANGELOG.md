@@ -3,6 +3,38 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@9.3.0...@sb1/ffe-grid-react@10.0.0) (2019-08-27)
+
+### chore
+
+-   bump React to 16.9 to allow for using hooks etc ([e3901f1](https://github.com/SpareBank1/designsystem/commit/e3901f1))
+
+### BREAKING CHANGES
+
+-   peerDep of React is raised to 16.9. While this in itself
+    isn't a breaking change, it allows for the use of hooks in later releases.
+    Such changes would just be a minor version, or even a patch, but without
+    this major version bump it would result in a runtime error for consumers.
+
+# [9.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@9.2.1...@sb1/ffe-grid-react@9.3.0) (2019-06-28)
+
+### Features
+
+-   **ffe-grid-react:** Avoid circular imports ([dbfc95b](https://github.com/SpareBank1/designsystem/commit/dbfc95b))
+
+## [9.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@9.2.0...@sb1/ffe-grid-react@9.2.1) (2019-04-26)
+
+### Bug Fixes
+
+-   **ffe-grid-react:** Fix in typescript definition, children should not be required. ([cdfeaa8](https://github.com/SpareBank1/designsystem/commit/cdfeaa8))
+
+# [9.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@9.1.4...@sb1/ffe-grid-react@9.2.0) (2019-04-25)
+
+### Features
+
+-   **ffe-grid-react:** Added type definitions for typescript ([524cf3e](https://github.com/SpareBank1/designsystem/commit/524cf3e))
+-   **ffe-grid-react:** Added type definitions for typescript ([4dd607a](https://github.com/SpareBank1/designsystem/commit/4dd607a))
+
 ## [9.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@9.1.3...@sb1/ffe-grid-react@9.1.4) (2019-01-23)
 
 ### Bug Fixes

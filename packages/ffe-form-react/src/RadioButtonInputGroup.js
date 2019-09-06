@@ -4,21 +4,13 @@ import classNames from 'classnames';
 import ErrorFieldMessage from './ErrorFieldMessage';
 import Tooltip from './Tooltip';
 
-const ensureComponent = Comp => (input, dark) => {
-    if (input.type === Comp) {
-        return input;
-    }
-    return <Comp dark={dark}>{input}</Comp>;
-};
-
-const ensureTooltip = ensureComponent(Tooltip);
-const ensureFieldMessage = ensureComponent(ErrorFieldMessage);
-
 const RadioButtonInputGroup = props => {
     const {
         'aria-invalid': ariaInvalid,
         children,
         className,
+        extraMargin,
+        description,
         fieldMessage,
         inline,
         label,
@@ -29,6 +21,12 @@ const RadioButtonInputGroup = props => {
         ...rest
     } = props;
 
+    if (tooltip && description) {
+        throw new Error(
+            'Don\'t use both "tooltip" and "description" on an <RadioButtonInputGroup />, pick one of them',
+        );
+    }
+
     const buttonProps = {
         'aria-invalid': ariaInvalid || String(!!fieldMessage),
         inline,
@@ -37,13 +35,15 @@ const RadioButtonInputGroup = props => {
         selectedValue,
     };
 
-    const tooltipContent = tooltip && ensureTooltip(tooltip, dark);
-    const fieldMessageContent =
-        fieldMessage && ensureFieldMessage(fieldMessage);
-
     return (
         <fieldset
-            className={classNames('ffe-fieldset', 'ffe-input-group', className)}
+            className={classNames(
+                'ffe-fieldset',
+                'ffe-input-group',
+                { 'ffe-fieldset--no-extra-margin': !extraMargin },
+                { 'ffe-fieldset--error': !!fieldMessage },
+                className,
+            )}
             {...rest}
         >
             {label && (
@@ -55,11 +55,23 @@ const RadioButtonInputGroup = props => {
                     )}
                 >
                     {label}
-                    {tooltipContent}
+                    {typeof tooltip === 'string' && (
+                        <Tooltip dark={dark}>{tooltip}</Tooltip>
+                    )}
+                    {React.isValidElement(tooltip) && tooltip}
                 </legend>
             )}
-            {children(buttonProps)}
-            {fieldMessageContent}
+
+            {description && <div className="ffe-small-text">{description}</div>}
+
+            {children({ ...buttonProps, dark })}
+
+            {typeof fieldMessage === 'string' && (
+                <ErrorFieldMessage element="p">
+                    {fieldMessage}
+                </ErrorFieldMessage>
+            )}
+            {React.isValidElement(fieldMessage) && fieldMessage}
         </fieldset>
     );
 };
@@ -78,6 +90,13 @@ RadioButtonInputGroup.propTypes = {
     children: func.isRequired,
     /** Additional class names applied to the fieldset */
     className: string,
+    /** To just render a static, always visible tooltip, use this. */
+    description: string,
+    /** Reserve space for showing `fieldMessage`s so content below don't move
+     *  vertically if an errormessage shows up. Note that this will only reserve
+     *  space for one line of content, so keep messages short.
+     */
+    extraMargin: bool,
     /** String or ErrorFieldMessage component with message */
     fieldMessage: oneOfType([node, string]),
     /**
@@ -107,6 +126,7 @@ RadioButtonInputGroup.propTypes = {
 };
 
 RadioButtonInputGroup.defaultProps = {
+    extraMargin: true,
     dark: false,
 };
 

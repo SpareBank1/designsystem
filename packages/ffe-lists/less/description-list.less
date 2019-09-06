@@ -52,14 +52,19 @@
     }
 
     /* Use padding rather than margin in bottom to avoid extra spacing overflowing to the top of the next column */
+
     .ffe-description-list__description {
         padding-bottom: @description-list-vertical-seperation;
         margin-left: 0;
         &:extend(.ffe-body-text);
     }
+
+    .ffe-description-list__description + .ffe-description-list__description {
+        margin-top: -@description-list-vertical-seperation;
+    }
 }
 
-.ffe-description-list {
+.ffe-description-list--horizontal {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
@@ -68,6 +73,7 @@
     .ffe-description-list__term {
         flex: 0 0 35%;
         overflow: hidden;
+        overflow-wrap: break-word;
     }
 
     .ffe-description-list__description {
@@ -95,37 +101,35 @@
             margin-left: 20%;
         }
     }
+}
 
-    &--md {
-        .ffe-description-list__term {
-            flex: 0 0 40%;
-        }
-
-        .ffe-description-list__description {
-            flex: 60% 0 0;
-            max-width: 60%;
-        }
-
-        .ffe-description-list__description
-            + .ffe-description-list__description {
-            margin-left: 40%;
-        }
+.ffe-description-list--md {
+    .ffe-description-list__term {
+        flex: 0 0 40%;
     }
 
-    &--lg {
-        .ffe-description-list__term {
-            flex: 0 0 50%;
-        }
+    .ffe-description-list__description {
+        flex: 60% 0 0;
+        max-width: 60%;
+    }
 
-        .ffe-description-list__description {
-            flex: 50% 0 0;
-            max-width: 50%;
-        }
+    .ffe-description-list__description + .ffe-description-list__description {
+        margin-left: 40%;
+    }
+}
 
-        .ffe-description-list__description
-            + .ffe-description-list__description {
-            margin-left: 50%;
-        }
+.ffe-description-list--lg {
+    .ffe-description-list__term {
+        flex: 0 0 50%;
+    }
+
+    .ffe-description-list__description {
+        flex: 50% 0 0;
+        max-width: 50%;
+    }
+
+    .ffe-description-list__description + .ffe-description-list__description {
+        margin-left: 50%;
     }
 }
 

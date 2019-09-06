@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [11.2.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@11.2.15...@sb1/ffe-header@11.2.16) (2019-08-27)
+
+**Note:** Version bump only for package @sb1/ffe-header
+
+## [11.2.15](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@11.2.14...@sb1/ffe-header@11.2.15) (2019-05-10)
+
+**Note:** Version bump only for package @sb1/ffe-header
+
+## [11.2.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@11.2.13...@sb1/ffe-header@11.2.14) (2019-04-24)
+
+### Bug Fixes
+
+-   **ffe-header:** Fix lint errors ([350fd75](https://github.com/SpareBank1/designsystem/commit/350fd75))
+
+## [11.2.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@11.2.12...@sb1/ffe-header@11.2.13) (2019-04-05)
+
+### Bug Fixes
+
+-   **ffe-header:** increased margin between secondary nav links ([0abe4a4](https://github.com/SpareBank1/designsystem/commit/0abe4a4))
+
 ## [11.2.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@11.2.11...@sb1/ffe-header@11.2.12) (2018-12-11)
 
 **Note:** Version bump only for package @sb1/ffe-header

@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-core",
-  "version": "14.0.4",
+  "version": "15.0.0",
   "description": "Rammeverk for Felles Front End",
   "license": "MIT",
   "author": "SpareBank 1",
@@ -22,7 +22,7 @@
   "devDependencies": {
     "case": "^1.5.5",
     "mkdirp": "^0.5.1",
-    "stylelint": "^9.4.0"
+    "stylelint": "^10.0.0"
   },
   "publishConfig": {
     "access": "public"

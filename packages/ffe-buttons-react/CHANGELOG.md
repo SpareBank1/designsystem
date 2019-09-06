@@ -3,6 +3,46 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@11.3.1...@sb1/ffe-buttons-react@12.0.0) (2019-08-27)
+
+### chore
+
+-   bump React to 16.9 to allow for using hooks etc ([e3901f1](https://github.com/SpareBank1/designsystem/commit/e3901f1))
+
+### BREAKING CHANGES
+
+-   peerDep of React is raised to 16.9. While this in itself
+    isn't a breaking change, it allows for the use of hooks in later releases.
+    Such changes would just be a minor version, or even a patch, but without
+    this major version bump it would result in a runtime error for consumers.
+
+## [11.3.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@11.3.0...@sb1/ffe-buttons-react@11.3.1) (2019-08-12)
+
+**Note:** Version bump only for package @sb1/ffe-buttons-react
+
+# [11.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@11.2.14...@sb1/ffe-buttons-react@11.3.0) (2019-05-10)
+
+### Bug Fixes
+
+-   **ffe-buttons-react:** a11y improvements to `ExpandButton` ([a0bfbb8](https://github.com/SpareBank1/designsystem/commit/a0bfbb8)), closes [#619](https://github.com/SpareBank1/designsystem/issues/619)
+
+### Features
+
+-   **ffe-buttons-react:** Add dark style back button ([444dcd7](https://github.com/SpareBank1/designsystem/commit/444dcd7))
+-   **ffe-buttons-react:** Added type definitions for typescript ([28f1208](https://github.com/SpareBank1/designsystem/commit/28f1208))
+
+## [11.2.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@11.2.13...@sb1/ffe-buttons-react@11.2.14) (2019-04-24)
+
+**Note:** Version bump only for package @sb1/ffe-buttons-react
+
+## [11.2.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@11.2.12...@sb1/ffe-buttons-react@11.2.13) (2019-04-08)
+
+**Note:** Version bump only for package @sb1/ffe-buttons-react
+
+## [11.2.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@11.2.11...@sb1/ffe-buttons-react@11.2.12) (2019-03-25)
+
+**Note:** Version bump only for package @sb1/ffe-buttons-react
+
 ## [11.2.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@11.2.10...@sb1/ffe-buttons-react@11.2.11) (2019-02-18)
 
 **Note:** Version bump only for package @sb1/ffe-buttons-react

@@ -3,6 +3,103 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@5.0.3...@sb1/ffe-form-react@5.0.4) (2019-09-02)
+
+### Bug Fixes
+
+-   **ffe-form-react:** Moved tooltip button id generation to constructor to avoid unnecessary DOM-updates. ([1c0136c](https://github.com/SpareBank1/designsystem/commit/1c0136c))
+
+## [5.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@5.0.2...@sb1/ffe-form-react@5.0.3) (2019-08-30)
+
+### Bug Fixes
+
+-   **ffe-form-react:** Added generated id on tooltip button to avoid warnings when used in forms validated with formik (expects id on every input or button field). ([6327676](https://github.com/SpareBank1/designsystem/commit/6327676))
+
+## [5.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@5.0.1...@sb1/ffe-form-react@5.0.2) (2019-08-28)
+
+**Note:** Version bump only for package @sb1/ffe-form-react
+
+## [5.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@5.0.0...@sb1/ffe-form-react@5.0.1) (2019-08-28)
+
+### Bug Fixes
+
+-   **ffe-form-react:** use our own Collapse component ([548e30c](https://github.com/SpareBank1/designsystem/commit/548e30c))
+
+# [5.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@4.9.1...@sb1/ffe-form-react@5.0.0) (2019-08-27)
+
+### chore
+
+-   bump React to 16.9 to allow for using hooks etc ([e3901f1](https://github.com/SpareBank1/designsystem/commit/e3901f1))
+
+### BREAKING CHANGES
+
+-   peerDep of React is raised to 16.9. While this in itself
+    isn't a breaking change, it allows for the use of hooks in later releases.
+    Such changes would just be a minor version, or even a patch, but without
+    this major version bump it would result in a runtime error for consumers.
+
+## [4.9.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@4.9.0...@sb1/ffe-form-react@4.9.1) (2019-08-14)
+
+### Bug Fixes
+
+-   **ffe-form-react:** Bug fixes for propType and typescript type-definitions for InputGroup: ([ad962c3](https://github.com/SpareBank1/designsystem/commit/ad962c3))
+
+# [4.9.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@4.8.1...@sb1/ffe-form-react@4.9.0) (2019-06-27)
+
+### Features
+
+-   **ffe-form-react:** Adding inputId as an optional prop for InputGroup to be used as id on the Input child element instead of the generated one. ([05a6aaf](https://github.com/SpareBank1/designsystem/commit/05a6aaf))
+
+## [4.8.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@4.8.0...@sb1/ffe-form-react@4.8.1) (2019-06-26)
+
+**Note:** Version bump only for package @sb1/ffe-form-react
+
+# [4.8.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@4.7.1...@sb1/ffe-form-react@4.8.0) (2019-05-21)
+
+### Bug Fixes
+
+-   **ffe-form-react:** Fix for extra error padding ([1434872](https://github.com/SpareBank1/designsystem/commit/1434872))
+-   **ffe-form-react:** Fix tooltip bug in RadioButtonInputGroup ([076b5e8](https://github.com/SpareBank1/designsystem/commit/076b5e8)), closes [#631](https://github.com/SpareBank1/designsystem/issues/631)
+
+### Features
+
+-   **ffe-form-react:** RadioButtonInputGroup supports "description" ([73b9d8d](https://github.com/SpareBank1/designsystem/commit/73b9d8d)), closes [#641](https://github.com/SpareBank1/designsystem/issues/641) [#642](https://github.com/SpareBank1/designsystem/issues/642)
+
+## [4.7.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@4.7.0...@sb1/ffe-form-react@4.7.1) (2019-05-15)
+
+### Bug Fixes
+
+-   **ffe-form-react:** Tooltip handles aria-controls better ([4d9a6be](https://github.com/SpareBank1/designsystem/commit/4d9a6be)), closes [#633](https://github.com/SpareBank1/designsystem/issues/633)
+
+# [4.7.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@4.6.0...@sb1/ffe-form-react@4.7.0) (2019-05-14)
+
+### Features
+
+-   **ffe-form-react:** Bottom padding of input controls ([c5621a6](https://github.com/SpareBank1/designsystem/commit/c5621a6)), closes [#381](https://github.com/SpareBank1/designsystem/issues/381)
+
+# [4.6.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@4.5.1...@sb1/ffe-form-react@4.6.0) (2019-05-10)
+
+### Bug Fixes
+
+-   **ffe-form-react:** ARIA improvements to Tooltip ([f9f0372](https://github.com/SpareBank1/designsystem/commit/f9f0372)), closes [#504](https://github.com/SpareBank1/designsystem/issues/504)
+-   **ffe-form-react:** propagate `dark` prop ([33618fe](https://github.com/SpareBank1/designsystem/commit/33618fe)), closes [#613](https://github.com/SpareBank1/designsystem/issues/613)
+
+### Features
+
+-   **ffe-form-react:** Added type definitions for typescript ([a1ac175](https://github.com/SpareBank1/designsystem/commit/a1ac175))
+
+## [4.5.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@4.5.0...@sb1/ffe-form-react@4.5.1) (2019-04-25)
+
+### Bug Fixes
+
+-   **ffe-form-react:** Fix linting errors ([d293f00](https://github.com/SpareBank1/designsystem/commit/d293f00))
+
+# [4.5.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@4.4.3...@sb1/ffe-form-react@4.5.0) (2019-04-23)
+
+### Features
+
+-   **ffe-form-react:** Add showChildren prop to RadioBlock ([99db6e4](https://github.com/SpareBank1/designsystem/commit/99db6e4))
+
 ## [4.4.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@4.4.2...@sb1/ffe-form-react@4.4.3) (2019-02-19)
 
 **Note:** Version bump only for package @sb1/ffe-form-react

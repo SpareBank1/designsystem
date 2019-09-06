@@ -66,7 +66,7 @@ describe('<Datepicker />', () => {
             ).toBeUndefined();
         });
 
-        it('renders aria-describeby if a label is given', () => {
+        it('renders aria-describedby if a label is given', () => {
             const wrapper = getShallowWrapper({
                 label: 'Velg startdato',
             });
@@ -161,6 +161,19 @@ describe('<Datepicker />', () => {
                 const wrapper = getMountedWrapper({ ariaInvalid: true });
                 expect(wrapper.find('input').prop('aria-invalid')).toBe('true');
             });
+
+            it('has correct aria-describedby if aria-describedby given as input prop', () => {
+                const inputProps = {
+                    'aria-describedby': 'test',
+                };
+                const wrapper = getMountedWrapper({
+                    ariaInvalid: true,
+                    inputProps,
+                });
+                expect(wrapper.find('input').prop('aria-describedby')).toBe(
+                    'test',
+                );
+            });
         });
 
         describe('inputProps', () => {
@@ -185,7 +198,7 @@ describe('<Datepicker />', () => {
                 const onValidationComplete = jest.fn();
                 const wrapper = getMountedWrapper({ onValidationComplete });
 
-                wrapper.setProps({ value: '14317' });
+                wrapper.setProps({ value: '140317' });
 
                 wrapper.find('input').simulate('blur');
 
@@ -307,6 +320,17 @@ describe('<Datepicker />', () => {
 
                 expect(wrapper.find(ERROR_CLASS).exists()).toBe(false);
             });
+
+            it('keeps datepicker display state when keepDisplayStateOnError is true', () => {
+                const wrapper = getMountedWrapper({
+                    ...overrides,
+                    keepDisplayStateOnError: true,
+                });
+                wrapper.setProps({ minDate: '01.01.2015' });
+                wrapper.update();
+
+                expect(wrapper.find(Calendar).exists()).toBe(false);
+            });
         });
     });
 
@@ -346,6 +370,17 @@ describe('<Datepicker />', () => {
                     wrapper.update();
                     expect(wrapper.find(ERROR_CLASS).exists()).toBe(false);
                 });
+            });
+
+            it('keeps datepicker display state when keepDisplayStateOnError is true', () => {
+                const wrapper = getMountedWrapper({
+                    ...overrides,
+                    keepDisplayStateOnError: true,
+                });
+                wrapper.setProps({ maxDate: '01.01.2014' });
+                wrapper.update();
+
+                expect(wrapper.find(Calendar).exists()).toBe(false);
             });
         });
     });

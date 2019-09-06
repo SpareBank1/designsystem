@@ -12,9 +12,16 @@ class TableRowExpandable extends Component {
         this.handleKeyPress = this.handleKeyPress.bind(this);
         this.toggleExpand = this.toggleExpand.bind(this);
         this.state = {
-            expanded: false,
+            expanded: !!props.defaultExpanded,
             sort: props.sort,
         };
+        this.rowRef = React.createRef();
+    }
+
+    componentDidMount() {
+        if (this.props.scrollToOnMount && this.rowRef.current) {
+            this.rowRef.current.scrollIntoView();
+        }
     }
 
     static getDerivedStateFromProps(nextProps, prevState) {
@@ -50,7 +57,7 @@ class TableRowExpandable extends Component {
         const unexpandable = !children;
 
         return (
-            <tbody>
+            <tbody ref={this.rowRef}>
                 <TableRow
                     cells={{
                         ...cells,
@@ -117,6 +124,8 @@ TableRowExpandable.propTypes = {
     headerRender: PropTypes.func,
     footerRender: PropTypes.func,
     rowIndex: PropTypes.number,
+    defaultExpanded: PropTypes.bool,
+    scrollToOnMount: PropTypes.bool,
 };
 
 polyfill(TableRowExpandable);

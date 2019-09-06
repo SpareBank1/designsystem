@@ -1,5 +1,5 @@
 import React from 'react';
-import { node } from 'prop-types';
+import { node, string } from 'prop-types';
 import classNames from 'classnames';
 
 const DescriptionListDescription = props => {
@@ -17,6 +17,8 @@ const DescriptionListDescription = props => {
 
 DescriptionListDescription.propTypes = {
     children: node,
+    /** Any extra classes */
+    className: string,
 };
 
 export default DescriptionListDescription;

@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@8.2.0...@sb1/ffe-buttons@8.2.1) (2019-08-27)
+
+**Note:** Version bump only for package @sb1/ffe-buttons
+
+# [8.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@8.1.6...@sb1/ffe-buttons@8.2.0) (2019-05-10)
+
+### Features
+
+-   **ffe-buttons:** Add dark style back button ([2f7110d](https://github.com/SpareBank1/designsystem/commit/2f7110d))
+
+## [8.1.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@8.1.5...@sb1/ffe-buttons@8.1.6) (2019-04-24)
+
+**Note:** Version bump only for package @sb1/ffe-buttons
+
 ## [8.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@8.1.4...@sb1/ffe-buttons@8.1.5) (2018-12-11)
 
 **Note:** Version bump only for package @sb1/ffe-buttons

@@ -3,6 +3,43 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [11.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@11.0.1...@sb1/ffe-form@11.0.2) (2019-08-27)
+
+**Note:** Version bump only for package @sb1/ffe-form
+
+## [11.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@11.0.0...@sb1/ffe-form@11.0.1) (2019-05-21)
+
+### Bug Fixes
+
+-   **ffe-form:** Fix for extra error padding ([ea5c088](https://github.com/SpareBank1/designsystem/commit/ea5c088))
+
+# [11.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@10.1.9...@sb1/ffe-form@11.0.0) (2019-05-14)
+
+### Features
+
+-   **ffe-form:** Bottom padding of input controls ([3f36c24](https://github.com/SpareBank1/designsystem/commit/3f36c24)), closes [#381](https://github.com/SpareBank1/designsystem/issues/381)
+
+### BREAKING CHANGES
+
+-   **ffe-form:** All FFE input controls that are contained within a `.ffe-input-group` or a `.ffe-fieldset` now by
+    default has added margin to the bottom. The space this creates is meant to be used up by a validation
+    message of type `.ffe-field-error-message` which now has a negative top margin once inside any of the
+    above mentioned containers. This means that if a single-line error message is added underneath an
+    input control, content further down on the page will not "jump" downwards.
+
+If you don't want this behaviour, use the `--no-extra-margin` modifier on your `.ffe-fieldset`s and
+`.ffe-input-group`s.
+
+## [10.1.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@10.1.8...@sb1/ffe-form@10.1.9) (2019-05-10)
+
+### Bug Fixes
+
+-   **ffe-form:** Fix field-message text alignment ([5660823](https://github.com/SpareBank1/designsystem/commit/5660823)), closes [#609](https://github.com/SpareBank1/designsystem/issues/609)
+
+## [10.1.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@10.1.7...@sb1/ffe-form@10.1.8) (2019-04-24)
+
+**Note:** Version bump only for package @sb1/ffe-form
+
 ## [10.1.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@10.1.6...@sb1/ffe-form@10.1.7) (2018-12-17)
 
 ### Bug Fixes

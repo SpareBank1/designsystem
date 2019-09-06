@@ -3,58 +3,51 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-webfonts@2.0.4...@sb1/ffe-webfonts@2.0.5) (2019-04-24)
+
+**Note:** Version bump only for package @sb1/ffe-webfonts
+
 <a name="2.0.4"></a>
+
 ## [2.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-webfonts@2.0.3...@sb1/ffe-webfonts@2.0.4) (2018-08-09)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-webfonts
 
 <a name="2.0.3"></a>
-## [2.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-webfonts@2.0.2...@sb1/ffe-webfonts@2.0.3) (2018-05-15)
 
+## [2.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-webfonts@2.0.2...@sb1/ffe-webfonts@2.0.3) (2018-05-15)
 
 ### Bug Fixes
 
-* **ffe-webfonts:** License text survives minification ([aaf9737](https://github.com/SpareBank1/designsystem/commit/aaf9737))
-
-
-
+-   **ffe-webfonts:** License text survives minification ([aaf9737](https://github.com/SpareBank1/designsystem/commit/aaf9737))
 
 <a name="2.0.2"></a>
+
 ## [2.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-webfonts@2.0.0...@sb1/ffe-webfonts@2.0.2) (2018-03-07)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-webfonts
 
 <a name="2.0.1"></a>
+
 ## [2.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-webfonts@2.0.0...@sb1/ffe-webfonts@2.0.1) (2018-03-02)
-
-
-
 
 **Note:** Version bump only for package @sb1/ffe-webfonts
 
 <a name="2.0.0"></a>
-# 2.0.0 (2018-02-25)
 
+# 2.0.0 (2018-02-25)
 
 ### Chores
 
-* add [@sb1](https://github.com/sb1)/ scope to all packages ([37efbb4](https://github.com/SpareBank1/designsystem/commit/37efbb4))
-
+-   add [@sb1](https://github.com/sb1)/ scope to all packages ([37efbb4](https://github.com/SpareBank1/designsystem/commit/37efbb4))
 
 ### Features
 
-* **ffe-webfonts:** New package with FFE webfonts ([f725f32](https://github.com/SpareBank1/designsystem/commit/f725f32))
-
+-   **ffe-webfonts:** New package with FFE webfonts ([f725f32](https://github.com/SpareBank1/designsystem/commit/f725f32))
 
 ### BREAKING CHANGES
 
-* All packages have been renamed to add the @sb1 scope.
+-   All packages have been renamed to add the @sb1 scope.
 
 See links [1] and [2] to read more about package scopes.
 
@@ -126,62 +119,53 @@ JavaScript `require`:
 [1]: https://docs.npmjs.com/misc/scope
 [2]: https://docs.npmjs.com/getting-started/scoped-packages
 [3]: https://github.com/sparebank1/designsystem/tags
-* **ffe-webfonts:** This package contains all webfonts and font-face
-definitions from ffe-core.
 
-*Caveat*: TrueType font files are no longer included.  This effectively
+-   **ffe-webfonts:** This package contains all webfonts and font-face
+    definitions from ffe-core.
+
+_Caveat_: TrueType font files are no longer included. This effectively
 drops support for Museo Sans webfont in IE 8 and older IEs.
 
 Upgrade from ffe-core: Install ffe-webfonts and include the less file
-accordingly the package's README.  Change your `@build-path` to `@fonts-path`.
+accordingly the package's README. Change your `@build-path` to `@fonts-path`.
 Please note that `fonts-path` is the actual `fonts`-folder and not the parent
 folder.
 
-
-
-
 <a name="1.0.3"></a>
+
 ## [1.0.3](https://github.com/SpareBank1/designsystem/compare/ffe-webfonts@1.0.2...ffe-webfonts@1.0.3) (2018-02-23)
-
-
-
 
 **Note:** Version bump only for package ffe-webfonts
 
 <a name="1.0.2"></a>
+
 ## [1.0.2](https://github.com/SpareBank1/designsystem/compare/ffe-webfonts@1.0.1...ffe-webfonts@1.0.2) (2018-02-22)
-
-
-
 
 **Note:** Version bump only for package ffe-webfonts
 
 <a name="1.0.1"></a>
+
 ## [1.0.1](https://github.com/SpareBank1/designsystem/compare/ffe-webfonts@1.0.0...ffe-webfonts@1.0.1) (2018-02-19)
-
-
-
 
 **Note:** Version bump only for package ffe-webfonts
 
 <a name="1.0.0"></a>
-# 1.0.0 (2018-02-15)
 
+# 1.0.0 (2018-02-15)
 
 ### Features
 
-* **ffe-webfonts:** New package with FFE webfonts
-
+-   **ffe-webfonts:** New package with FFE webfonts
 
 ### BREAKING CHANGES
 
-* **ffe-webfonts:** This package contains all webfonts and font-face
-definitions from ffe-core.
+-   **ffe-webfonts:** This package contains all webfonts and font-face
+    definitions from ffe-core.
 
-*Caveat*: TrueType font files are no longer included.  This effectively
+_Caveat_: TrueType font files are no longer included. This effectively
 drops support for Museo Sans webfont in IE 8 and older IEs.
 
 Upgrade from ffe-core: Install ffe-webfonts and include the less file
-accordingly the package's README.  Change your `@build-path` to `@fonts-path`.
+accordingly the package's README. Change your `@build-path` to `@fonts-path`.
 Please note that `fonts-path` is the actual `fonts`-folder and not the parent
 folder.

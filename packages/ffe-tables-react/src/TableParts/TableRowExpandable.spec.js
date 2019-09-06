@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { shallow, render } from 'enzyme';
+import { shallow, render, mount } from 'enzyme';
 import TableRowExpandable from './TableRowExpandable';
 
 const props = {
@@ -32,6 +32,12 @@ const unexpandableWrapper = shallow(
     </TableRowExpandable>,
 );
 
+const defaultExpandedWrapper = shallow(
+    <TableRowExpandable {...props} defaultExpanded={true}>
+        <p>The cake is a lie</p>
+    </TableRowExpandable>,
+);
+
 describe('<TableRowExpandable>', () => {
     it('should be collapsed by default', () => {
         expect(wrapper.state().expanded).toBe(false);
@@ -48,6 +54,36 @@ describe('<TableRowExpandable>', () => {
                 .find('.ffe-table__row-expandable-content')
                 .hasClass('ffe-table__row--collapsed'),
         ).toBe(true);
+    });
+
+    it('should be expanded if provided true defaultExpanded', () => {
+        expect(defaultExpandedWrapper.state().expanded).toBe(true);
+        expect(
+            defaultExpandedWrapper.find('.ffe-table__row--collapsed'),
+        ).toHaveLength(0);
+        expect(
+            defaultExpandedWrapper
+                .find('.ffe-table__row-expandable-content')
+                .prop('aria-hidden'),
+        ).toBe('false');
+        expect(
+            defaultExpandedWrapper
+                .find('.ffe-table__row-expandable-content')
+                .hasClass('ffe-table__row-expandable-content--expanded'),
+        ).toBe(true);
+    });
+
+    it('should scroll into view on mount if true scrollToOnMount is provided', () => {
+        const scrollIntoViewMock = jest.fn();
+        window.HTMLElement.prototype.scrollIntoView = scrollIntoViewMock;
+
+        mount(
+            <TableRowExpandable {...props} scrollToOnMount={true}>
+                <p>The cake is a lie</p>
+            </TableRowExpandable>,
+        );
+
+        expect(scrollIntoViewMock).toHaveBeenCalledTimes(1);
     });
 
     it('should render expanded content', () => {

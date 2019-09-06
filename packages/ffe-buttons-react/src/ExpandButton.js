@@ -3,10 +3,11 @@ import { bool, func, oneOfType, string, node } from 'prop-types';
 import classNames from 'classnames';
 import KryssIkon from '@sb1/ffe-icons-react/lib/kryss-ikon';
 
-const ExpandButton = (props) => {
+const ExpandButton = props => {
     const {
         children,
         className,
+        closeLabel,
         element: Element,
         innerRef,
         isExpanded,
@@ -17,6 +18,7 @@ const ExpandButton = (props) => {
     return (
         <Element
             aria-expanded={isExpanded}
+            aria-label={isExpanded ? closeLabel : undefined}
             className={classNames(
                 'ffe-button',
                 'ffe-button--expand',
@@ -27,28 +29,34 @@ const ExpandButton = (props) => {
             {...rest}
         >
             {isExpanded && <KryssIkon className="ffe-button__icon" />}
-            {!isExpanded &&
+            {!isExpanded && (
                 <Fragment>
                     {leftIcon &&
-                        React.cloneElement(leftIcon, { className: 'ffe-button__icon ffe-button__icon--left' })
-                    }
+                        React.cloneElement(leftIcon, {
+                            className:
+                                'ffe-button__icon ffe-button__icon--left',
+                        })}
                     {children}
                     {rightIcon &&
-                        React.cloneElement(rightIcon, { className: 'ffe-button__icon ffe-button__icon--right' })
-                    }
+                        React.cloneElement(rightIcon, {
+                            className:
+                                'ffe-button__icon ffe-button__icon--right',
+                        })}
                 </Fragment>
-            }
+            )}
         </Element>
     );
 };
 
 ExpandButton.propTypes = {
     /** The button label */
-    children: node,
+    children: node.isRequired,
     /** Extra class names */
     className: string,
     /** The rendered element, like an `<a />` or `<Link />` */
     element: oneOfType([func, string]),
+    /** An accessible label for the close-button, only shown in the "isExpanded" state  */
+    closeLabel: string,
     /** Icon shown to the left of the label */
     leftIcon: node,
     /** Icon shown to the right of the label */
@@ -62,7 +70,8 @@ ExpandButton.propTypes = {
 };
 
 ExpandButton.defaultProps = {
+    closeLabel: 'Lukk',
     element: 'button',
-}
+};
 
 export default ExpandButton;

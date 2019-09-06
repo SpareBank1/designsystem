@@ -116,9 +116,11 @@
         &:focus:extend(.ffe-inline-button:focus) {
         }
 
+        /* stylelint-disable declaration-block-no-duplicate-properties */
         &:extend(.ffe-inline-button--tertiary);
         &:hover:extend(.ffe-inline-button--tertiary:hover) {
         }
+        /* stylelint-enable declaration-block-no-duplicate-properties */
 
         &::after {
             &:extend(.ffe-inline-button--tertiary::after);
@@ -359,7 +361,7 @@
 
             .ffe-header__list-item {
                 display: inline-block;
-                margin: 0 5px 0 0;
+                margin: 0 16px 0 0;
             }
         }
 

@@ -3,6 +3,71 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-radio-button-react@5.0.3...@sb1/ffe-radio-button-react@5.0.4) (2019-09-02)
+
+**Note:** Version bump only for package @sb1/ffe-radio-button-react
+
+## [5.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-radio-button-react@5.0.2...@sb1/ffe-radio-button-react@5.0.3) (2019-08-30)
+
+**Note:** Version bump only for package @sb1/ffe-radio-button-react
+
+## [5.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-radio-button-react@5.0.1...@sb1/ffe-radio-button-react@5.0.2) (2019-08-28)
+
+**Note:** Version bump only for package @sb1/ffe-radio-button-react
+
+## [5.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-radio-button-react@5.0.0...@sb1/ffe-radio-button-react@5.0.1) (2019-08-28)
+
+**Note:** Version bump only for package @sb1/ffe-radio-button-react
+
+# [5.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-radio-button-react@4.0.14...@sb1/ffe-radio-button-react@5.0.0) (2019-08-27)
+
+### chore
+
+-   bump React to 16.9 to allow for using hooks etc ([e3901f1](https://github.com/SpareBank1/designsystem/commit/e3901f1))
+
+### BREAKING CHANGES
+
+-   peerDep of React is raised to 16.9. While this in itself
+    isn't a breaking change, it allows for the use of hooks in later releases.
+    Such changes would just be a minor version, or even a patch, but without
+    this major version bump it would result in a runtime error for consumers.
+
+## [4.0.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-radio-button-react@4.0.13...@sb1/ffe-radio-button-react@4.0.14) (2019-08-14)
+
+**Note:** Version bump only for package @sb1/ffe-radio-button-react
+
+## [4.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-radio-button-react@4.0.12...@sb1/ffe-radio-button-react@4.0.13) (2019-06-27)
+
+**Note:** Version bump only for package @sb1/ffe-radio-button-react
+
+## [4.0.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-radio-button-react@4.0.11...@sb1/ffe-radio-button-react@4.0.12) (2019-06-26)
+
+**Note:** Version bump only for package @sb1/ffe-radio-button-react
+
+## [4.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-radio-button-react@4.0.10...@sb1/ffe-radio-button-react@4.0.11) (2019-05-21)
+
+**Note:** Version bump only for package @sb1/ffe-radio-button-react
+
+## [4.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-radio-button-react@4.0.9...@sb1/ffe-radio-button-react@4.0.10) (2019-05-15)
+
+**Note:** Version bump only for package @sb1/ffe-radio-button-react
+
+## [4.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-radio-button-react@4.0.8...@sb1/ffe-radio-button-react@4.0.9) (2019-05-14)
+
+**Note:** Version bump only for package @sb1/ffe-radio-button-react
+
+## [4.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-radio-button-react@4.0.7...@sb1/ffe-radio-button-react@4.0.8) (2019-05-10)
+
+**Note:** Version bump only for package @sb1/ffe-radio-button-react
+
+## [4.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-radio-button-react@4.0.6...@sb1/ffe-radio-button-react@4.0.7) (2019-04-25)
+
+**Note:** Version bump only for package @sb1/ffe-radio-button-react
+
+## [4.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-radio-button-react@4.0.5...@sb1/ffe-radio-button-react@4.0.6) (2019-04-23)
+
+**Note:** Version bump only for package @sb1/ffe-radio-button-react
+
 ## [4.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-radio-button-react@4.0.4...@sb1/ffe-radio-button-react@4.0.5) (2019-02-19)
 
 **Note:** Version bump only for package @sb1/ffe-radio-button-react

@@ -1,23 +1,26 @@
 {
   "name": "@sb1/ffe-tables-react",
-  "version": "5.2.6",
+  "version": "6.0.0",
   "description": "React implementation of ffe-tables",
   "license": "MIT",
   "files": [
     "lib",
-    "es"
+    "es",
+    "types"
   ],
   "main": "lib/index.js",
   "module": "es/index.js",
+  "types": "types/index.d.ts",
   "sideEffects": false,
   "repository": {
     "type": "git",
     "url": "ssh://git@github.com:SpareBank1/designsystem.git"
   },
   "scripts": {
-    "build": "npm run build:cjs && npm run build:es",
+    "build": "npm run build:cjs && npm run build:es && npm run build:types",
     "build:cjs": "babel -d lib/. --root-mode=upward  --env-name=cjs --ignore=*.spec.js src/.",
     "build:es": "babel -d es/. --root-mode=upward --env-name=es --ignore=*.spec.js src/.",
+    "build:types": "copyfiles -f src/index.d.ts types/",
     "lint": "eslint src/.",
     "test": "jest",
     "test:watch": "jest --watch"
@@ -26,7 +29,7 @@
     "setupTestFrameworkScriptFile": "../../test-setup.js"
   },
   "dependencies": {
-    "@sb1/ffe-icons-react": "^6.0.16",
+    "@sb1/ffe-icons-react": "^7.0.0",
     "classnames": "^2.2.5",
     "deep-equal": "^1.0.1",
     "memoize-one": "^5.0.0",
@@ -38,13 +41,13 @@
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.7.0",
     "jest": "^23.4.2",
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
     "sinon": "^7.2.3"
   },
   "peerDependencies": {
     "@sb1/ffe-tables": "^9.0.0",
-    "react": "^16.6.3"
+    "react": "^16.9.0"
   },
   "publishConfig": {
     "access": "public"

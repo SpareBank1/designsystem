@@ -10,7 +10,7 @@ export default function TabButtonGroup({ className, thin, ...rest }) {
                 { 'ffe-tab-button-group--thin': thin },
                 className,
             )}
-            role="group"
+            role="tablist"
             {...rest}
         />
     );

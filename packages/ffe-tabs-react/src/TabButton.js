@@ -6,6 +6,8 @@ export default function TabButton(props) {
     const { className, selected, ghost, condensed, dark, ...rest } = props;
     return (
         <button
+            role="tab"
+            aria-selected={selected}
             className={classNames(
                 'ffe-tab-button',
                 { 'ffe-tab-button--selected': selected },
@@ -30,6 +32,8 @@ TabButton.propTypes = {
     className: string,
     /** Dark variant */
     dark: bool,
+    /** Id of the element it controls */
+    'aria-controls': string.isRequired,
 };
 
 TabButton.defaultProps = {

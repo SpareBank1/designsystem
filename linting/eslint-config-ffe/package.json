@@ -1,6 +1,6 @@
 {
   "name": "@sb1/eslint-config-ffe",
-  "version": "8.0.3",
+  "version": "8.1.0",
   "description": "",
   "license": "MIT",
   "author": "SpareBank 1",
@@ -23,12 +23,14 @@
     "eslint": "^5.9.0",
     "eslint-plugin-import": "^2.0.1",
     "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^7.0.0"
+    "eslint-plugin-react": "^7.0.0",
+    "eslint-plugin-react-hooks": "^2.0.1"
   },
   "peerDependencies": {
     "eslint": "^5.9.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": ">=6"
+    "eslint-plugin-react": ">=6",
+    "eslint-plugin-react-hooks": "^2.0.1"
   },
   "publishConfig": {
     "access": "public"

@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.9.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.8.0...@sb1/ffe-icons@12.9.0) (2019-08-27)
+
+### Features
+
+-   **ffe-icons:** Adding 'spleis-ikon.svg' ([9b4f619](https://github.com/SpareBank1/designsystem/commit/9b4f619))
+
+# [12.8.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.7.2...@sb1/ffe-icons@12.8.0) (2019-08-12)
+
+### Features
+
+-   **ffe-icons:** Add globe icon ([1b64396](https://github.com/SpareBank1/designsystem/commit/1b64396))
+
+## [12.7.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.7.1...@sb1/ffe-icons@12.7.2) (2019-04-24)
+
+### Bug Fixes
+
+-   **ffe-icons:** Dont try to lint non-existing files ([5a9c3bf](https://github.com/SpareBank1/designsystem/commit/5a9c3bf))
+
+## [12.7.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.7.0...@sb1/ffe-icons@12.7.1) (2019-04-08)
+
+### Bug Fixes
+
+-   **ffe-icons:** Replace widget icon ([5940ac6](https://github.com/SpareBank1/designsystem/commit/5940ac6))
+
+# [12.7.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.6.1...@sb1/ffe-icons@12.7.0) (2019-03-25)
+
+### Features
+
+-   **ffe-icons:** Add a widget icon ([ddc6aca](https://github.com/SpareBank1/designsystem/commit/ddc6aca))
+
 ## [12.6.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.6.0...@sb1/ffe-icons@12.6.1) (2019-02-18)
 
 ### Bug Fixes

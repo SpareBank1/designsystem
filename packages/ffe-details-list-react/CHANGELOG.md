@@ -3,6 +3,35 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@2.0.25...@sb1/ffe-details-list-react@3.0.0) (2019-08-27)
+
+### chore
+
+-   bump React to 16.9 to allow for using hooks etc ([e3901f1](https://github.com/SpareBank1/designsystem/commit/e3901f1))
+
+### BREAKING CHANGES
+
+-   peerDep of React is raised to 16.9. While this in itself
+    isn't a breaking change, it allows for the use of hooks in later releases.
+    Such changes would just be a minor version, or even a patch, but without
+    this major version bump it would result in a runtime error for consumers.
+
+## [2.0.25](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@2.0.24...@sb1/ffe-details-list-react@2.0.25) (2019-06-28)
+
+**Note:** Version bump only for package @sb1/ffe-details-list-react
+
+## [2.0.24](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@2.0.23...@sb1/ffe-details-list-react@2.0.24) (2019-04-26)
+
+**Note:** Version bump only for package @sb1/ffe-details-list-react
+
+## [2.0.23](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@2.0.22...@sb1/ffe-details-list-react@2.0.23) (2019-04-25)
+
+**Note:** Version bump only for package @sb1/ffe-details-list-react
+
+## [2.0.22](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@2.0.21...@sb1/ffe-details-list-react@2.0.22) (2019-04-24)
+
+**Note:** Version bump only for package @sb1/ffe-details-list-react
+
 ## [2.0.21](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@2.0.20...@sb1/ffe-details-list-react@2.0.21) (2019-01-23)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react

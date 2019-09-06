@@ -3,6 +3,56 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@5.2.4...@sb1/ffe-system-message-react@6.0.0) (2019-08-27)
+
+### chore
+
+-   bump React to 16.9 to allow for using hooks etc ([e3901f1](https://github.com/SpareBank1/designsystem/commit/e3901f1))
+
+### BREAKING CHANGES
+
+-   peerDep of React is raised to 16.9. While this in itself
+    isn't a breaking change, it allows for the use of hooks in later releases.
+    Such changes would just be a minor version, or even a patch, but without
+    this major version bump it would result in a runtime error for consumers.
+
+## [5.2.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@5.2.3...@sb1/ffe-system-message-react@5.2.4) (2019-08-12)
+
+**Note:** Version bump only for package @sb1/ffe-system-message-react
+
+## [5.2.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@5.2.2...@sb1/ffe-system-message-react@5.2.3) (2019-06-28)
+
+**Note:** Version bump only for package @sb1/ffe-system-message-react
+
+## [5.2.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@5.2.1...@sb1/ffe-system-message-react@5.2.2) (2019-05-10)
+
+### Bug Fixes
+
+-   **ffe-system-message-react:** Fixed typings for onClose, added event as input ([30bc1ac](https://github.com/SpareBank1/designsystem/commit/30bc1ac))
+
+## [5.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@5.2.0...@sb1/ffe-system-message-react@5.2.1) (2019-04-26)
+
+**Note:** Version bump only for package @sb1/ffe-system-message-react
+
+# [5.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@5.1.28...@sb1/ffe-system-message-react@5.2.0) (2019-04-25)
+
+### Features
+
+-   **ffe-system-message-react:** Added type definitions for typescript ([44dc244](https://github.com/SpareBank1/designsystem/commit/44dc244))
+-   **ffe-system-message-react:** Added type definitions for typescript ([ce8aa09](https://github.com/SpareBank1/designsystem/commit/ce8aa09))
+
+## [5.1.28](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@5.1.27...@sb1/ffe-system-message-react@5.1.28) (2019-04-24)
+
+**Note:** Version bump only for package @sb1/ffe-system-message-react
+
+## [5.1.27](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@5.1.26...@sb1/ffe-system-message-react@5.1.27) (2019-04-08)
+
+**Note:** Version bump only for package @sb1/ffe-system-message-react
+
+## [5.1.26](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@5.1.25...@sb1/ffe-system-message-react@5.1.26) (2019-03-25)
+
+**Note:** Version bump only for package @sb1/ffe-system-message-react
+
 ## [5.1.25](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@5.1.24...@sb1/ffe-system-message-react@5.1.25) (2019-02-18)
 
 **Note:** Version bump only for package @sb1/ffe-system-message-react

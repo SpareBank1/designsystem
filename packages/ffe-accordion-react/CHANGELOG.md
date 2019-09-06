@@ -3,6 +3,51 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@7.0.1...@sb1/ffe-accordion-react@7.0.2) (2019-08-28)
+
+**Note:** Version bump only for package @sb1/ffe-accordion-react
+
+## [7.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@7.0.0...@sb1/ffe-accordion-react@7.0.1) (2019-08-28)
+
+### Bug Fixes
+
+-   **ffe-accordion-react:** use our own Collapse component ([04db7bc](https://github.com/SpareBank1/designsystem/commit/04db7bc))
+
+# [7.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@6.3.4...@sb1/ffe-accordion-react@7.0.0) (2019-08-27)
+
+### chore
+
+-   bump React to 16.9 to allow for using hooks etc ([e3901f1](https://github.com/SpareBank1/designsystem/commit/e3901f1))
+
+### BREAKING CHANGES
+
+-   peerDep of React is raised to 16.9. While this in itself
+    isn't a breaking change, it allows for the use of hooks in later releases.
+    Such changes would just be a minor version, or even a patch, but without
+    this major version bump it would result in a runtime error for consumers.
+
+## [6.3.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@6.3.3...@sb1/ffe-accordion-react@6.3.4) (2019-08-12)
+
+**Note:** Version bump only for package @sb1/ffe-accordion-react
+
+## [6.3.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@6.3.2...@sb1/ffe-accordion-react@6.3.3) (2019-04-24)
+
+**Note:** Version bump only for package @sb1/ffe-accordion-react
+
+## [6.3.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@6.3.1...@sb1/ffe-accordion-react@6.3.2) (2019-04-08)
+
+**Note:** Version bump only for package @sb1/ffe-accordion-react
+
+## [6.3.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@6.3.0...@sb1/ffe-accordion-react@6.3.1) (2019-03-25)
+
+**Note:** Version bump only for package @sb1/ffe-accordion-react
+
+# [6.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@6.2.12...@sb1/ffe-accordion-react@6.3.0) (2019-03-14)
+
+### Features
+
+-   **ffe-accordion-react:** DIG-48762 - Added support for supplying id to AccordionItem ([1943cbf](https://github.com/SpareBank1/designsystem/commit/1943cbf))
+
 ## [6.2.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@6.2.11...@sb1/ffe-accordion-react@6.2.12) (2019-02-18)
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react

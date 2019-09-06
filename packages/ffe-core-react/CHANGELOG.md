@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@3.3.0...@sb1/ffe-core-react@4.0.0) (2019-08-27)
+
+### chore
+
+-   bump React to 16.9 to allow for using hooks etc ([e3901f1](https://github.com/SpareBank1/designsystem/commit/e3901f1))
+
+### BREAKING CHANGES
+
+-   peerDep of React is raised to 16.9. While this in itself
+    isn't a breaking change, it allows for the use of hooks in later releases.
+    Such changes would just be a minor version, or even a patch, but without
+    this major version bump it would result in a runtime error for consumers.
+
+# [3.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@3.2.6...@sb1/ffe-core-react@3.3.0) (2019-05-10)
+
+### Features
+
+-   **ffe-core-react:** Added type definitions for typescript ([630b457](https://github.com/SpareBank1/designsystem/commit/630b457))
+
 ## [3.2.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@3.2.5...@sb1/ffe-core-react@3.2.6) (2018-12-11)
 
 ### Bug Fixes

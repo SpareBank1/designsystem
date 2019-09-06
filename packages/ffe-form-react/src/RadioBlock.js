@@ -11,9 +11,16 @@ class RadioBlock extends Component {
             checked,
             children,
             className,
+            /* Support for the dark theme has not been added for this component
+             * but since we're passing props onwards to DOM nodes we need to make
+             * sure we don't pass this as part of "inputProps" since it's not being
+             * used but can still be passed down from a parent `RadioButtonInputGroup`.
+             */
+            dark, //eslint-disable-line
             label,
             name,
             selectedValue,
+            showChildren,
             value,
             ...inputProps
         } = this.props;
@@ -38,7 +45,7 @@ class RadioBlock extends Component {
                     >
                         {label}
                     </label>
-                    {isSelected && (
+                    {(isSelected || showChildren) && (
                         <div
                             className={classNames('ffe-radio-block__wrapper', {
                                 'ffe-radio-block__wrapper--empty': !children,
@@ -66,6 +73,8 @@ RadioBlock.propTypes = {
     name: string.isRequired,
     /** The selected value of the radio button set */
     selectedValue: string,
+    /** Whether or not children are always visible */
+    showChildren: bool,
     /** The value of the radio block */
     value: string.isRequired,
 };

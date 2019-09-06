@@ -24,6 +24,24 @@ describe('TabButton', () => {
         expect(wrapper.hasClass('ffe-tab-button--selected')).toBe(true);
     });
 
+    it('should have aria-selected to be true when tab button is selected', () => {
+        const wrapper = shallow(<TabButton selected={true}>En tab</TabButton>);
+        expect(wrapper.prop('aria-selected')).toBe(true);
+    });
+
+    it('should have aria-selected to be false when tab button is not selected', () => {
+        const wrapper = shallow(<TabButton selected={false}>En tab</TabButton>);
+        expect(wrapper.prop('aria-selected')).toBe(false);
+    });
+
+    it('should have aria-controls attribute when passed to it', () => {
+        const controldId = 'controlId';
+        const wrapper = shallow(
+            <TabButton aria-controls={controldId}>En tab</TabButton>,
+        );
+        expect(wrapper.prop('aria-controls')).toBe(controldId);
+    });
+
     it('passes any prop on to a tab button', () => {
         const tab = shallow(
             <TabButton data-analytics-track="logMe">En tab</TabButton>,

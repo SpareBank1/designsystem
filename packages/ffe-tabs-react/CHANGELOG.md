@@ -3,6 +3,44 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@4.4.1...@sb1/ffe-tabs-react@5.0.0) (2019-08-27)
+
+### chore
+
+-   bump React to 16.9 to allow for using hooks etc ([e3901f1](https://github.com/SpareBank1/designsystem/commit/e3901f1))
+
+### BREAKING CHANGES
+
+-   peerDep of React is raised to 16.9. While this in itself
+    isn't a breaking change, it allows for the use of hooks in later releases.
+    Such changes would just be a minor version, or even a patch, but without
+    this major version bump it would result in a runtime error for consumers.
+
+## [4.4.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@4.4.0...@sb1/ffe-tabs-react@4.4.1) (2019-05-14)
+
+### Bug Fixes
+
+-   **ffe-tabs-react:** Update TypeScript definitions ([918f2b2](https://github.com/SpareBank1/designsystem/commit/918f2b2))
+
+# [4.4.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@4.3.0...@sb1/ffe-tabs-react@4.4.0) (2019-05-13)
+
+### Features
+
+-   **ffe-tabs-react:** Add aria-controls as required to tabs ([07d9676](https://github.com/SpareBank1/designsystem/commit/07d9676)), closes [#626](https://github.com/SpareBank1/designsystem/issues/626)
+-   **ffe-tabs-react:** Add tabs examples with content tied to each tab ([5b5b534](https://github.com/SpareBank1/designsystem/commit/5b5b534))
+
+# [4.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@4.2.0...@sb1/ffe-tabs-react@4.3.0) (2019-05-10)
+
+### Features
+
+-   **ffe-tabs-react:** Added type definitions for typescript ([a524b29](https://github.com/SpareBank1/designsystem/commit/a524b29))
+
+# [4.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@4.1.3...@sb1/ffe-tabs-react@4.2.0) (2019-05-06)
+
+### Features
+
+-   **ffe-tabs-react:** Add aria-selected to tabs ([b4a3fbe](https://github.com/SpareBank1/designsystem/commit/b4a3fbe))
+
 ## [4.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@4.1.2...@sb1/ffe-tabs-react@4.1.3) (2018-12-11)
 
 ### Bug Fixes

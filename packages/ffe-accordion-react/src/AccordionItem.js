@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { arrayOf, bool, func, node, number, string } from 'prop-types';
-import Collapse from 'react-css-collapse';
+import Collapse from '@sb1/ffe-collapse-react';
 import ChevronIkon from '@sb1/ffe-icons-react/lib/chevron-ikon';
 import classNames from 'classnames';
 

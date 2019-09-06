@@ -1,10 +1,15 @@
 import React from 'react';
 
-import { InlineGrid } from '.';
+const ALLOWED_NESTED_COMPONENTS = ['InlineGrid'];
 
 const checkForNestedComponent = (children, Component, componentName) =>
     React.Children.forEach(children, child => {
-        if (!child || child.type === InlineGrid) {
+        if (
+            !child ||
+            (child.type &&
+                child.type.name &&
+                ALLOWED_NESTED_COMPONENTS.some(c => c === child.type.name))
+        ) {
             return;
         } else if (child.type === Component) {
             console.error(`

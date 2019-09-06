@@ -1,0 +1,50 @@
+{
+    "name": "@sb1/ffe-collapse-react",
+    "version": "1.0.1",
+    "description": "React component for expand/collapse",
+    "keywords": [
+        "ffe"
+    ],
+    "license": "MIT",
+    "author": "SpareBank 1",
+    "files": [
+        "lib",
+        "es",
+        "less"
+    ],
+    "main": "lib/index.js",
+    "module": "es/index.js",
+    "sideEffects": false,
+    "repository": {
+        "type": "git",
+        "url": "ssh://git@github.com:SpareBank1/designsystem.git"
+    },
+    "scripts": {
+        "build": "npm run build:cjs && npm run build:es",
+        "build:cjs": "babel -d lib/. --root-mode=upward  --env-name=cjs --ignore=*.spec.js src/.",
+        "build:es": "babel -d es/. --root-mode=upward --env-name=es --ignore=*.spec.js src/.",
+        "lint": "eslint src/.",
+        "test": "jest",
+        "test:watch": "jest --watch"
+    },
+    "jest": {
+        "setupTestFrameworkScriptFile": "../../test-setup.js"
+    },
+    "dependencies": {
+        "classnames": "^2.2.5"
+    },
+    "devDependencies": {
+        "eslint": "^5.9.0",
+        "jest": "^23.4.2",
+        "prop-types": "^15.6.0",
+        "react": "^16.9.0",
+        "react-dom": "^16.9.0"
+    },
+    "peerDependencies": {
+        "@sb1/ffe-core": "^14.0.0",
+        "react": "^16.9.0"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
+}

@@ -206,7 +206,7 @@ class BaseSelector extends Component {
             suggestionListId,
         } = this.state;
         return (
-            <div className="base-selector ffe-input-group">
+            <div className="ffe-base-selector ffe-input-group ffe-input-group--no-extra-margin">
                 <Input
                     inputFieldRef={input => {
                         this.input = input;
@@ -273,12 +273,12 @@ BaseSelector.propTypes = {
 };
 
 BaseSelector.defaultProps = {
-    onChange: () => {},
-    onBlur: () => {},
-    onClick: () => {},
-    onFocus: () => {},
-    onReset: () => {},
-    onSuggestionListChange: () => {},
+    onChange: Function.prototype,
+    onBlur: Function.prototype,
+    onClick: Function.prototype,
+    onFocus: Function.prototype,
+    onReset: Function.prototype,
+    onSuggestionListChange: Function.prototype,
     ariaInvalid: false,
     placeholder: '',
     value: '',
