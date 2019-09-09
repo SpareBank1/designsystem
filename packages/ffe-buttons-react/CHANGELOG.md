@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@12.0.0...@sb1/ffe-buttons-react@12.1.0) (2019-09-09)
+
+### Features
+
+-   **ffe-buttons-react:** accept refs created by useRef ([3a1d6e6](https://github.com/SpareBank1/designsystem/commit/3a1d6e6))
+
 # [12.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@11.3.1...@sb1/ffe-buttons-react@12.0.0) (2019-08-27)
 
 ### chore
