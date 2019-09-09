@@ -1,5 +1,14 @@
 import React from 'react';
-import { func, string, oneOf, oneOfType, node, bool } from 'prop-types';
+import {
+    func,
+    string,
+    oneOf,
+    oneOfType,
+    node,
+    bool,
+    object,
+    shape,
+} from 'prop-types';
 import classNames from 'classnames';
 
 /**
@@ -57,8 +66,8 @@ InlineBaseButton.propTypes = {
     className: string,
     /** The rendered element, like an `<a />` or `<Link />` */
     element: oneOfType([string, func]),
-    /** Ref-setting function passed to the button element */
-    innerRef: func,
+    /** Ref-setting function, or ref created by useRef, passed to the button element */
+    innerRef: oneOfType([func, shape({ current: object })]),
     /** Icon shown to the left of the label */
     leftIcon: node,
     /** Icon shown to the right of the label */

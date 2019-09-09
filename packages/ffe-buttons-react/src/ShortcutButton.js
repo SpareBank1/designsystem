@@ -1,14 +1,10 @@
 import React from 'react';
-import { bool, func, node, string, oneOfType } from 'prop-types';
+import { bool, func, node, string, oneOfType, object, shape } from 'prop-types';
 import ChevronIkon from '@sb1/ffe-icons-react/lib/chevron-ikon';
 import Button from './BaseButton';
 
 const ShortcutButton = props => (
-    <Button
-        buttonType="shortcut"
-        rightIcon={<ChevronIkon />}
-        {...props}
-    />
+    <Button buttonType="shortcut" rightIcon={<ChevronIkon />} {...props} />
 );
 
 ShortcutButton.propTypes = {
@@ -22,8 +18,8 @@ ShortcutButton.propTypes = {
     disabled: bool,
     /** The rendered element, like an `<a />` or `<Link />` */
     element: oneOfType([func, string]),
-    /** Ref-setting function passed to the button element */
-    innerRef: func,
+    /** Ref-setting function, or ref created by useRef, passed to the button element */
+    innerRef: oneOfType([func, shape({ current: object })]),
     /** Icon shown to the left of the label */
     leftIcon: node,
 };

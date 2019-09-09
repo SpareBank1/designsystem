@@ -1,5 +1,5 @@
 import React from 'react';
-import { oneOfType, func, node, string, bool } from 'prop-types';
+import { oneOfType, func, node, string, bool, object, shape } from 'prop-types';
 import InlineButton from './InlineBaseButton';
 
 const BackButton = props => <InlineButton buttonType="back" {...props} />;
@@ -11,8 +11,8 @@ BackButton.propTypes = {
     className: string,
     /** The rendered element, like an `<a />` or `<Link />` */
     element: oneOfType([func, string]),
-    /** Ref-setting function passed to the button element */
-    innerRef: func,
+    /** Ref-setting function, or ref created by useRef, passed to the button element */
+    innerRef: oneOfType([func, shape({ current: object })]),
     /** Dark variant */
     dark: bool,
 };
