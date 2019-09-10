@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@4.0.0...@sb1/ffe-core-react@4.1.0) (2019-09-10)
+
+### Features
+
+-   **ffe-core-react:** custom element for SmallText ([6240db0](https://github.com/SpareBank1/designsystem/commit/6240db0))
+
 # [4.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@3.3.0...@sb1/ffe-core-react@4.0.0) (2019-08-27)
 
 ### chore
