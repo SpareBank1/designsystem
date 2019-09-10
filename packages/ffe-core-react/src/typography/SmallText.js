@@ -1,22 +1,18 @@
 import React from 'react';
-import { node, string } from 'prop-types';
+import { oneOfType, string, func } from 'prop-types';
 import classNames from 'classnames';
 
-export default function SmallText(props) {
-    const {
-        children,
-        className,
-        ...rest
-    } = props;
+const SmallText = ({ className, element: Element, ...rest }) => (
+    <Element className={classNames('ffe-small-text', className)} {...rest} />
+);
 
-    return (
-        <span className={classNames('ffe-small-text', className)} {...rest}>
-            {children}
-        </span>
-    );
-}
+SmallText.defaultProps = {
+    element: 'span',
+};
 
 SmallText.propTypes = {
-    children: node.isRequired,
+    element: oneOfType([func, string]),
     className: string,
 };
+
+export default SmallText;
