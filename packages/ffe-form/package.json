@@ -18,7 +18,7 @@
   },
   "devDependencies": {
     "@sb1/ffe-core": "^14.0.2",
-    "stylelint": "^10.0.0"
+    "stylelint": "^11.0.0"
   },
   "optionalDependencies": {
     "@sb1/ffe-buttons": "^8.2.1",
