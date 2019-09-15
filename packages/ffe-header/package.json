@@ -25,7 +25,7 @@
     "less": "^3.8.1",
     "less-plugin-autoprefix": "^2.0.0",
     "mkdirp": "^0.5.1",
-    "stylelint": "^10.0.0"
+    "stylelint": "^11.0.0"
   },
   "peerDependencies": {
     "@sb1/ffe-buttons": "^8.1.0",
