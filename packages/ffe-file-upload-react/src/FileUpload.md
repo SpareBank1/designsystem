@@ -1,6 +1,6 @@
 En komponent for å laste opp filer, for eksempel Excel-ark eller annen dokumentasjon. Eksempel på implementasjon:
 
-```js
+```jsx
 import React from 'react';
 import FileUpload from '@sb1/ffe-file-upload-react';
 import { getFileContent } from '@sb1/ffe-file-upload-react';
