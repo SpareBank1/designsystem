@@ -8,6 +8,7 @@ export default [
     'orange-salmon',
     'red',
     'blue-sky',
+    'white',
 ];
 
 export const removedColors = ['blue-cobalt', 'blue-royal', 'purple-magenta'];
