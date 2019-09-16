@@ -151,6 +151,7 @@ GridCol.propTypes = {
         'orange-salmon',
         'red',
         'blue-sky',
+        'white',
     ]),
     /** Any extra classes are attached to the root node, in addition to ffe-grid__col classes */
     className: string,

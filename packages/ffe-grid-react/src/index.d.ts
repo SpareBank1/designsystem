@@ -23,7 +23,8 @@ type BackgroundColors =
     | 'grey-warm'
     | 'orange-salmon'
     | 'red'
-    | 'blue-sky';
+    | 'blue-sky'
+    | 'white';
 
 export interface GridRowProps extends React.HTMLAttributes<HTMLElement> {
     background?: BackgroundColors;
