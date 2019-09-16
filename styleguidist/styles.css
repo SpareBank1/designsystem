@@ -493,7 +493,9 @@ html {
 .ffe-h5,
 .ffe-card-component--title,
 .ffe-context-message-content__header,
-.ffe-calendar__title {
+.ffe-calendar__title,
+.ffe-file-upload__title,
+.ffe-file-upload__upload-section-title {
   color: #002776;
   font-family: 'MuseoSansRounded-700', arial, sans-serif;
   font-weight: normal;
@@ -504,7 +506,9 @@ html {
   .ffe-h5,
   .ffe-card-component--title,
   .ffe-context-message-content__header,
-  .ffe-calendar__title {
+  .ffe-calendar__title,
+  .ffe-file-upload__title,
+  .ffe-file-upload__upload-section-title {
     font-size: 18px;
   }
 }
@@ -524,6 +528,7 @@ html {
 .ffe-card-component--subtext,
 .ffe-calendar__weekday,
 .ffe-calendar__date,
+.ffe-file-upload__upload-section-subtext,
 .ffe-radio-button__tooltip-text.ffe-tooltip__text {
   color: #676767;
   font-family: 'MuseoSans-500', arial, sans-serif;
@@ -534,7 +539,11 @@ html {
 .ffe-small-text--dark {
   color: #fff;
 }
-.ffe-micro-text {
+.ffe-micro-text,
+.ffe-file-upload__upload-section-microtext,
+.ffe-file-upload__file-item-stencil-info-filename,
+.ffe-file-upload__file-item-error-filename,
+.ffe-file-upload__file-item-error-message {
   color: #676767;
   font-family: 'MuseoSans-500', arial, sans-serif;
   font-weight: normal;
@@ -551,6 +560,8 @@ html {
 .ffe-card-component--title,
 .ffe-context-message-content__header,
 .ffe-calendar__title,
+.ffe-file-upload__title,
+.ffe-file-upload__upload-section-title,
 .ffe-table__caption {
   margin-bottom: 10px;
   margin-top: 0;
@@ -713,7 +724,9 @@ html {
   .ffe-h5,
   .ffe-card-component--title,
   .ffe-context-message-content__header,
-  .ffe-calendar__title {
+  .ffe-calendar__title,
+  .ffe-file-upload__title,
+  .ffe-file-upload__upload-section-title {
     line-height: 24px;
   }
   .ffe-h6 {
@@ -729,6 +742,8 @@ html {
   .ffe-card-component--title,
   .ffe-context-message-content__header,
   .ffe-calendar__title,
+  .ffe-file-upload__title,
+  .ffe-file-upload__upload-section-title,
   .ffe-table__caption {
     margin-bottom: 15px;
   }
@@ -759,10 +774,15 @@ html {
   .ffe-card-component--subtext,
   .ffe-calendar__weekday,
   .ffe-calendar__date,
+  .ffe-file-upload__upload-section-subtext,
   .ffe-radio-button__tooltip-text.ffe-tooltip__text {
     line-height: 20px;
   }
-  .ffe-micro-text {
+  .ffe-micro-text,
+  .ffe-file-upload__upload-section-microtext,
+  .ffe-file-upload__file-item-stencil-info-filename,
+  .ffe-file-upload__file-item-error-filename,
+  .ffe-file-upload__file-item-error-message {
     line-height: 20px;
   }
 }
@@ -777,6 +797,8 @@ html {
   .ffe-card-component--title,
   .ffe-context-message-content__header,
   .ffe-calendar__title,
+  .ffe-file-upload__title,
+  .ffe-file-upload__upload-section-title,
   .ffe-table__caption {
     margin-bottom: 20px;
   }
@@ -2836,6 +2858,279 @@ html {
   display: inline-block;
   position: relative;
 }
+.ffe-file-upload {
+  margin-top: 45px;
+  display: grid;
+  max-width: 400px;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 768px) {
+  .ffe-file-upload {
+    max-width: 100%;
+  }
+}
+.ffe-file-upload__title {
+  margin-bottom: 0;
+}
+.ffe-file-upload input[type='file'] {
+  display: none;
+}
+.ffe-file-upload__info-section {
+  margin-bottom: 20px;
+  grid-row: 2;
+}
+@media (min-width: 768px) {
+  .ffe-file-upload__info-section {
+    margin-right: 20px;
+    margin-bottom: 0;
+    grid-column: 1;
+  }
+}
+.ffe-file-upload__info-section-text {
+  margin-bottom: 20px;
+}
+.ffe-file-upload__file-items-section {
+  margin-top: 20px;
+  line-height: 35px;
+  grid-row: 4;
+}
+@media (min-width: 768px) {
+  .ffe-file-upload__file-items-section {
+    margin-top: 0;
+    grid-row: 2;
+  }
+}
+.ffe-file-upload__file-items-section li {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.ffe-file-upload__upload-section {
+  height: 150px;
+  background-color: #dff1f9;
+  border-radius: 10px;
+  text-align: center;
+  padding: 5px;
+  grid-row: 3;
+}
+@media (min-width: 768px) {
+  .ffe-file-upload__upload-section {
+    margin-top: 0;
+    height: 220px;
+    width: 280px;
+    padding: 0;
+    grid-row: 2;
+    grid-column: 2;
+  }
+}
+.ffe-file-upload__upload-section-border {
+  height: 140px;
+  margin: 5px;
+  border: 2px dashed #0071cd;
+  border-radius: 10px;
+  position: relative;
+  width: 100%;
+  right: 5px;
+  bottom: 5px;
+}
+@media (min-width: 768px) {
+  .ffe-file-upload__upload-section-border {
+    width: 270px;
+    height: 210px;
+    right: 0;
+    bottom: 0;
+  }
+}
+.ffe-file-upload__upload-section-border--hover {
+  opacity: 0.5;
+  border-style: solid;
+}
+.ffe-file-upload__upload-section-title {
+  margin-top: 35px;
+  margin-bottom: 10px;
+  display: none;
+}
+@media (min-width: 768px) {
+  .ffe-file-upload__upload-section-title {
+    display: block;
+  }
+}
+.ffe-file-upload__upload-section-microtext {
+  display: none;
+}
+@media (min-width: 768px) {
+  .ffe-file-upload__upload-section-microtext {
+    display: block;
+  }
+}
+.ffe-file-upload__upload-section-subtext {
+  margin-top: 10px;
+}
+.ffe-file-upload__upload-button {
+  margin-top: 35px;
+  cursor: pointer;
+  background-color: #fff;
+  border: solid 2px #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.05);
+  line-height: 24px;
+  outline: none;
+  overflow: hidden;
+  padding: 8px 20px;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  width: 240px;
+}
+@media (min-width: 768px) {
+  .ffe-file-upload__upload-button {
+    margin-top: 10px;
+    width: 150px;
+  }
+}
+.ffe-file-upload__upload-button:active,
+.ffe-file-upload__upload-button:focus,
+.ffe-file-upload__upload-button:hover {
+  background-color: #fff;
+  border-color: #0071cd;
+}
+.ffe-file-upload__upload-button:focus {
+  -webkit-box-shadow: 0 0 0 1px #fff, 0 0 0 4px #a1dfff;
+          box-shadow: 0 0 0 1px #fff, 0 0 0 4px #a1dfff;
+}
+.ffe-file-upload__upload-button[aria-invalid='true'] {
+  border: solid 2px #da3d00;
+}
+.ffe-file-upload__upload-button-icon {
+  display: inline-block;
+  position: relative;
+  background: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M10.8613 2.76845L9.23529 1.15752C9.02066 0.94489 8.67265 0.94489 8.45803 1.15752L6.83197 2.76845C6.4859 3.11149 6.73096 3.6979 7.2207 3.6979H8.16238V11.1459C8.16238 11.4467 8.40841 11.6904 8.71203 11.6904H8.96989C9.2735 11.6904 9.51953 11.4467 9.51953 11.1459V3.6979H10.4728C10.9624 3.6979 11.2076 3.11149 10.8613 2.76845ZM15.9009 16.9993H2.0991C1.49206 16.9993 1 16.5119 1 15.9105V11.8652C1 11.5646 1.24603 11.3207 1.54964 11.3207H1.8075C2.11112 11.3207 2.35715 11.5646 2.35715 11.8652V15.6548H15.6429V11.8652C15.6429 11.5646 15.8889 11.3207 16.1925 11.3207H16.4505C16.754 11.3207 17 11.5646 17 11.8652V15.9105C17 16.5119 16.5079 16.9993 15.9009 16.9993Z' fill='%23002776'/%3E%3Cpath d='M9.23529 1.15752L9.41123 0.979916L9.41123 0.979916L9.23529 1.15752ZM10.8613 2.76845L10.6854 2.94605L10.6854 2.94605L10.8613 2.76845ZM8.45803 1.15752L8.28208 0.979916L8.28208 0.979916L8.45803 1.15752ZM6.83197 2.76845L6.65602 2.59085L6.65597 2.5909L6.83197 2.76845ZM8.16238 3.6979H8.41238V3.4479H8.16238V3.6979ZM9.51953 3.6979V3.4479H9.26953V3.6979H9.51953ZM2.35715 15.6548H2.10715V15.9048H2.35715V15.6548ZM15.6429 15.6548V15.9048H15.8929V15.6548H15.6429ZM9.05934 1.33512L10.6854 2.94605L11.0373 2.59085L9.41123 0.979916L9.05934 1.33512ZM8.63398 1.33512C8.75116 1.21902 8.94215 1.21902 9.05934 1.33512L9.41123 0.979916C9.09917 0.670757 8.59414 0.670757 8.28208 0.979916L8.63398 1.33512ZM7.00792 2.94605L8.63398 1.33512L8.28208 0.979916L6.65602 2.59085L7.00792 2.94605ZM7.2207 3.4479C6.94938 3.4479 6.82388 3.12848 7.00797 2.946L6.65597 2.5909C6.14792 3.09451 6.51254 3.9479 7.2207 3.9479V3.4479ZM8.16238 3.4479H7.2207V3.9479H8.16238V3.4479ZM8.41238 11.1459V3.6979H7.91238V11.1459H8.41238ZM8.71203 11.4404C8.54428 11.4404 8.41238 11.3064 8.41238 11.1459H7.91238C7.91238 11.5869 8.27255 11.9404 8.71203 11.9404V11.4404ZM8.96989 11.4404H8.71203V11.9404H8.96989V11.4404ZM9.26953 11.1459C9.26953 11.3064 9.13764 11.4404 8.96989 11.4404V11.9404C9.40936 11.9404 9.76953 11.5869 9.76953 11.1459H9.26953ZM9.26953 3.6979V11.1459H9.76953V3.6979H9.26953ZM10.4728 3.4479H9.51953V3.9479H10.4728V3.4479ZM10.6854 2.94605C10.8695 3.12846 10.744 3.4479 10.4728 3.4479V3.9479C11.1807 3.9479 11.5457 3.09452 11.0373 2.59085L10.6854 2.94605ZM2.0991 17.2493H15.9009V16.7493H2.0991V17.2493ZM0.75 15.9105C0.75 16.6521 1.3562 17.2493 2.0991 17.2493V16.7493C1.62793 16.7493 1.25 16.3716 1.25 15.9105H0.75ZM0.75 11.8652V15.9105H1.25V11.8652H0.75ZM1.54964 11.0707C1.11011 11.0707 0.75 11.4244 0.75 11.8652H1.25C1.25 11.7048 1.38195 11.5707 1.54964 11.5707V11.0707ZM1.8075 11.0707H1.54964V11.5707H1.8075V11.0707ZM2.60715 11.8652C2.60715 11.4244 2.24704 11.0707 1.8075 11.0707V11.5707C1.9752 11.5707 2.10715 11.7048 2.10715 11.8652H2.60715ZM2.60715 15.6548V11.8652H2.10715V15.6548H2.60715ZM15.6429 15.4048H2.35715V15.9048H15.6429V15.4048ZM15.3929 11.8652V15.6548H15.8929V11.8652H15.3929ZM16.1925 11.0707C15.753 11.0707 15.3929 11.4244 15.3929 11.8652H15.8929C15.8929 11.7048 16.0248 11.5707 16.1925 11.5707V11.0707ZM16.4505 11.0707H16.1925V11.5707H16.4505V11.0707ZM17.25 11.8652C17.25 11.4244 16.8899 11.0707 16.4505 11.0707V11.5707C16.618 11.5707 16.75 11.7047 16.75 11.8652H17.25ZM17.25 15.9105V11.8652H16.75V15.9105H17.25ZM15.9009 17.2493C16.6438 17.2493 17.25 16.6521 17.25 15.9105H16.75C16.75 16.3716 16.3721 16.7493 15.9009 16.7493V17.2493Z' fill='%23002776'/%3E%3C/svg%3E") no-repeat;
+  margin-right: 10px;
+  height: 22px;
+  width: 22px;
+  vertical-align: middle;
+}
+.ffe-file-upload__file-item-delete-icon {
+  right: 0;
+  content: '';
+  display: inline-block;
+  position: absolute;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 200 200'%3E%3Cpath fill='%230071cd' d='M18.77,0c-3.562,0-7.125,1.347-9.834,4.044l-4.429,4.439c-5.381,5.394-5.381,14.25,0,19.68l71.19,71.83-71.66,71.83c-5.381,5.394-5.381,14.25,0,19.68l4.429,4.439c5.381,5.394,14.22,5.394,19.64,0l71.66-71.83,71.65,71.83c5.381,5.394,14.23,5.394,19.65,0l4.429-4.439c5.381-5.394,5.381-14.25,0-19.68l-71.19-71.83,71.66-71.83c5.381-4.914,5.381-13.78,0-19.21l-4.429-4.423c-5.381-5.394-14.22-5.394-19.64,0l-72.13,71.34-71.17-71.83c-2.691-2.697-6.257-4.044-9.819-4.044z'/%3E%3C/svg%3E");
+  height: 14px;
+  width: 14px;
+}
+.ffe-file-upload__file-item-delete-button {
+  padding-right: 20px;
+  padding-top: 5px;
+  margin-left: auto;
+  background-color: transparent;
+  border: none;
+  line-height: 18px;
+  position: relative;
+  color: #0071cd;
+  font-size: 14px;
+  grid-column: 3;
+  grid-row: 1;
+}
+@media (min-width: 768px) {
+  .ffe-file-upload__file-item-delete-button {
+    margin-right: 20px;
+  }
+}
+.ffe-file-upload__file-item-delete-button:active,
+.ffe-file-upload__file-item-delete-button:focus,
+.ffe-file-upload__file-item-delete-button:hover {
+  text-decoration: underline;
+  color: #002776;
+}
+.ffe-file-upload__file-item-delete-button:active > .ffe-file-upload__file-item-delete-icon,
+.ffe-file-upload__file-item-delete-button:focus > .ffe-file-upload__file-item-delete-icon,
+.ffe-file-upload__file-item-delete-button:hover > .ffe-file-upload__file-item-delete-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 200 200'%3E%3Cpath fill='%23002776' d='M18.77,0c-3.562,0-7.125,1.347-9.834,4.044l-4.429,4.439c-5.381,5.394-5.381,14.25,0,19.68l71.19,71.83-71.66,71.83c-5.381,5.394-5.381,14.25,0,19.68l4.429,4.439c5.381,5.394,14.22,5.394,19.64,0l71.66-71.83,71.65,71.83c5.381,5.394,14.23,5.394,19.65,0l4.429-4.439c5.381-5.394,5.381-14.25,0-19.68l-71.19-71.83,71.66-71.83c5.381-4.914,5.381-13.78,0-19.21l-4.429-4.423c-5.381-5.394-14.22-5.394-19.64,0l-72.13,71.34-71.17-71.83c-2.691-2.697-6.257-4.044-9.819-4.044z'/%3E%3C/svg%3E");
+}
+.ffe-file-upload__file-item-delete-button:active ~ .ffe-file-upload__file-item-filename,
+.ffe-file-upload__file-item-delete-button:focus ~ .ffe-file-upload__file-item-filename,
+.ffe-file-upload__file-item-delete-button:hover ~ .ffe-file-upload__file-item-filename {
+  text-decoration: underline;
+}
+.ffe-file-upload__file-item-delete-button:active ~ .ffe-file-upload__file-item-error-info > .ffe-file-upload__file-item-error-filename,
+.ffe-file-upload__file-item-delete-button:focus ~ .ffe-file-upload__file-item-error-info > .ffe-file-upload__file-item-error-filename,
+.ffe-file-upload__file-item-delete-button:hover ~ .ffe-file-upload__file-item-error-info > .ffe-file-upload__file-item-error-filename {
+  text-decoration: underline;
+}
+.ffe-file-upload__file-item-delete-button:active ~ .ffe-file-upload__file-item-stencil-info > .ffe-file-upload__file-item-stencil-info-filename,
+.ffe-file-upload__file-item-delete-button:focus ~ .ffe-file-upload__file-item-stencil-info > .ffe-file-upload__file-item-stencil-info-filename,
+.ffe-file-upload__file-item-delete-button:hover ~ .ffe-file-upload__file-item-stencil-info > .ffe-file-upload__file-item-stencil-info-filename {
+  text-decoration: underline;
+}
+.ffe-file-upload__file-item-stencil {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.ffe-file-upload__file-item-stencil-info {
+  display: grid;
+  grid-column: 1;
+  grid-row: 1;
+  grid-template-columns: 1fr;
+  overflow: hidden;
+}
+.ffe-file-upload__file-item-stencil-info-background {
+  height: 10px;
+  border-radius: 5px;
+  background-color: #ebebeb;
+}
+.ffe-file-upload__file-item-stencil-info-filename {
+  margin-top: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+}
+.ffe-file-upload__file-item-loaded {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.ffe-file-upload__file-item-filename {
+  grid-row: 1;
+  grid-column: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  margin-top: 2px;
+  color: #002776;
+}
+.ffe-file-upload__file-item-error {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: 25px 1fr;
+}
+.ffe-file-upload__file-item-error-icon {
+  grid-column: 1;
+  grid-row: 1;
+}
+.ffe-file-upload__file-item-error-info {
+  display: grid;
+  grid-row: 1;
+  grid-column: 2;
+  grid-template-columns: 1fr;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+.ffe-file-upload__file-item-error-filename {
+  grid-row: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+}
+.ffe-file-upload__file-item-error-message {
+  grid-row: 2;
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+}
 /* Mixins */
 /*
     Radioblob: Small design element on "radio button"-like elements
@@ -3538,143 +3833,6 @@ html {
     padding-left: 60px;
   }
 }
-.ffe-file-upload input[type='file'] {
-  display: none;
-}
-.ffe-file-upload__button {
-  display: inline-block;
-  cursor: pointer;
-  background-color: #fff;
-  border: solid 2px #ccc;
-  border-radius: 4px;
-  -webkit-box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.05);
-          box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.05);
-  line-height: 24px;
-  outline: none;
-  overflow: hidden;
-  padding: 8px 20px;
-  text-align: center;
-  text-decoration: none;
-  white-space: nowrap;
-  color: #0071cd;
-  vertical-align: middle;
-  margin-bottom: 10px;
-  -webkit-transition: all 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
-  -o-transition: all 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
-  transition: all 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
-  font-size: 16px;
-}
-@media all and (max-width: 480px) {
-  .ffe-file-upload__button {
-    width: 100%;
-  }
-}
-.ffe-file-upload__button:active,
-.ffe-file-upload__button:focus,
-.ffe-file-upload__button:hover {
-  background-color: #fff;
-  border-color: #0071cd;
-}
-.ffe-file-upload__button:focus {
-  -webkit-box-shadow: 0 0 0 1px #fff, 0 0 0 4px #a1dfff;
-          box-shadow: 0 0 0 1px #fff, 0 0 0 4px #a1dfff;
-}
-.ffe-file-upload__button[aria-invalid='true'] {
-  border: solid 2px #da3d00;
-}
-.ffe-file-upload__button__label-icon {
-  display: inline-block;
-  position: relative;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' height='22' width='22'%3E%3Cpath fill='%23002776' d='M50.87 148.324l.264-109.678c0-20.024 16.474-37.025 36.518-36.64a35.829 35.829 0 0 1 35.078 35.87l-.263 107.79a22.459 22.459 0 0 1-19.964 22.54 22.073 22.073 0 0 1-24.122-21.992l.142-59.586a5.762 5.762 0 0 1 5.761-5.742h2.699a5.762 5.762 0 0 1 5.741 5.762l-.142 59.363a7.993 7.993 0 0 0 6.087 7.912 7.851 7.851 0 0 0 9.515-7.648l.264-107.811A21.992 21.992 0 0 0 88.99 16.309a21.607 21.607 0 0 0-23.656 21.425l-.263 110.813c0 19.598 15.946 36.336 35.565 36.072a35.098 35.098 0 0 0 34.49-34.956l.141-60.398a5.742 5.742 0 0 1 5.762-5.741h2.698a5.742 5.742 0 0 1 5.742 5.762l-.142 60.397a49.32 49.32 0 0 1-48.488 49.138c-27.552.405-50.03-22.926-49.97-50.497z'/%3E%3C/svg%3E") no-repeat;
-  background-size: 22px 22px;
-  margin-right: 10px;
-  fill: #002776;
-  height: 22px;
-  width: 22px;
-  vertical-align: middle;
-}
-.ffe-file-upload__selected-files {
-  line-height: 24px;
-  padding: 0;
-  margin: 10px 0;
-  color: #262626;
-  list-style: none;
-  width: 100%;
-  max-width: 480px;
-  border-bottom: 1px solid #ccc;
-}
-.ffe-file-upload__selected-files li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 9px 10px 11px;
-  margin: 0;
-  border-top: 1px solid #ccc;
-}
-.ffe-file-upload__filename__title {
-  color: #002776;
-  line-height: 16px;
-  margin: 20px 0 10px;
-  font-size: 16px;
-}
-.ffe-file-upload__filename {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
-  white-space: nowrap;
-  overflow: hidden;
-  -o-text-overflow: ellipsis;
-     text-overflow: ellipsis;
-  margin-top: 2px;
-}
-.ffe-file-upload__file-size {
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  margin: 2px 20px 0;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  color: #676767;
-}
-.ffe-file-upload__delete-button {
-  background-color: transparent;
-  border: none;
-  border-radius: 4px;
-  height: 24px;
-  min-width: 24px;
-  line-height: 18px;
-  padding: 2px 5px 0;
-  margin: 0;
-  text-decoration: none;
-  position: relative;
-  -webkit-box-ordinal-group: 4;
-      -ms-flex-order: 3;
-          order: 3;
-  font-size: 16px;
-}
-.ffe-file-upload__delete-button::before {
-  content: '';
-  display: block;
-  position: absolute;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 200 200'%3E%3Cpath fill='%230071cd' d='M18.77,0c-3.562,0-7.125,1.347-9.834,4.044l-4.429,4.439c-5.381,5.394-5.381,14.25,0,19.68l71.19,71.83-71.66,71.83c-5.381,5.394-5.381,14.25,0,19.68l4.429,4.439c5.381,5.394,14.22,5.394,19.64,0l71.66-71.83,71.65,71.83c5.381,5.394,14.23,5.394,19.65,0l4.429-4.439c5.381-5.394,5.381-14.25,0-19.68l-71.19-71.83,71.66-71.83c5.381-4.914,5.381-13.78,0-19.21l-4.429-4.423c-5.381-5.394-14.22-5.394-19.64,0l-72.13,71.34-71.17-71.83c-2.691-2.697-6.257-4.044-9.819-4.044z'/%3E%3C/svg%3E");
-  background-size: 14px 14px;
-  background-repeat: no-repeat;
-  bottom: 5px;
-  left: 5px;
-  fill: #0071cd;
-  height: 14px;
-  width: 14px;
-}
 .ffe-phone-number {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3886,7 +4044,8 @@ html {
 /* Validation */
 .ffe-field-info-message,
 .ffe-field-error-message,
-.ffe-field-success-message {
+.ffe-field-success-message,
+.ffe-file-upload__file-item-error-icon {
   color: #002776;
   margin: 5px 0 10px;
   display: block;
@@ -3911,7 +4070,8 @@ html {
   text-align: center;
   font-family: arial, sans-serif;
 }
-.ffe-field-error-message {
+.ffe-field-error-message,
+.ffe-file-upload__file-item-error-icon {
   color: #262626;
 }
 .ffe-field-error-message[aria-hidden='true'] {
