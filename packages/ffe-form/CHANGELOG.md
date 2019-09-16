@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@11.0.2...@sb1/ffe-form@12.0.0) (2019-09-16)
+
+### Code Refactoring
+
+-   **ffe-form:** removed file-upload dependency from package ([c3a2453](https://github.com/SpareBank1/designsystem/commit/c3a2453))
+
+### BREAKING CHANGES
+
+-   **ffe-form:** removed file-upload dependency from form since ffe-file-upload is a package in itself now
+
 ## [11.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@11.0.1...@sb1/ffe-form@11.0.2) (2019-08-27)
 
 **Note:** Version bump only for package @sb1/ffe-form

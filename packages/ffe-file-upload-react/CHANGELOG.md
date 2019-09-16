@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload-react@4.0.0...@sb1/ffe-file-upload-react@5.0.0) (2019-09-16)
+
+### Code Refactoring
+
+-   **ffe-file-upload-react:** Refactor with new design ([30400f2](https://github.com/SpareBank1/designsystem/commit/30400f2))
+
+### BREAKING CHANGES
+
+-   **ffe-file-upload-react:** Redesign of module with new design, including drag and drop support
+
 # [4.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload-react@3.0.11...@sb1/ffe-file-upload-react@4.0.0) (2019-08-27)
 
 ### chore
