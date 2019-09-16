@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@10.0.0...@sb1/ffe-grid-react@10.1.0) (2019-09-16)
+
+### Features
+
+-   **ffe-grid-react:** add white as background color ([5c64729](https://github.com/SpareBank1/designsystem/commit/5c64729))
+
 # [10.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@9.3.0...@sb1/ffe-grid-react@10.0.0) (2019-08-27)
 
 ### chore
