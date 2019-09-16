@@ -1,0 +1,27 @@
+{
+  "name": "@sb1/ffe-file-upload",
+  "version": "1.0.0",
+  "description": "File upload module",
+  "license": "MIT",
+  "author": "SpareBank 1",
+  "main": "less/ffe-file-upload.less",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:SpareBank1/designsystem.git"
+  },
+  "scripts": {
+    "lint": "stylelint less/*.less",
+    "test": "npm run lint"
+  },
+  "devDependencies": {
+    "@sb1/ffe-core": "^15.0.0",
+    "stylelint": "^9.4.0"
+  },
+  "peerDependencies": {
+    "@sb1/ffe-core": "^15.0.0",
+    "@sb1/ffe-form": "^11.0.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

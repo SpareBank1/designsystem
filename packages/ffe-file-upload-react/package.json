@@ -29,6 +29,9 @@
   "jest": {
     "setupTestFrameworkScriptFile": "../../test-setup.js"
   },
+  "dependencies": {
+    "classnames": "^2.2.5"
+  },
   "devDependencies": {
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.7.0",
