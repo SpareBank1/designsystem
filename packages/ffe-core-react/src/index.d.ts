@@ -31,6 +31,11 @@ export interface SimpleElementProps {
     className?: string;
 }
 
+export interface SmallTextProps {
+    element?: HTMLElement | string;
+    className?: string;
+}
+
 export interface ParagraphProps
     extends React.HTMLAttributes<HTMLParagraphElement> {
     children: React.ReactNode;
@@ -63,7 +68,7 @@ declare class PreformattedText extends React.Component<
     any
 > {}
 declare class SmallText extends React.Component<
-    SimpleElementProps & React.HTMLAttributes<HTMLSpanElement>,
+    SmallTextProps & React.HTMLAttributes<HTMLSpanElement>,
     any
 > {}
 declare class StrongText extends React.Component<
