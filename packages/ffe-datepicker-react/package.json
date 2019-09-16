@@ -41,7 +41,7 @@
   },
   "peerDependencies": {
     "@sb1/ffe-datepicker": "^5.0.0",
-    "@sb1/ffe-form": ">=11.0.1",
+    "@sb1/ffe-form": ">=12.0.0",
     "react": "^16.9.0"
   },
   "publishConfig": {
