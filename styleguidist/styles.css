@@ -4178,6 +4178,9 @@ input:not([type='radio']):not([type='checkbox']) {
 .ffe-grid__row--bg-blue-sky {
   background-color: #7fc6e8;
 }
+.ffe-grid__row--bg-white {
+  background-color: #fff;
+}
 .ffe-grid__row--reverse,
 .ffe-grid__row--reverse > .ffe-grid__row-wrapper {
   -webkit-box-orient: horizontal;
@@ -4294,6 +4297,9 @@ input:not([type='radio']):not([type='checkbox']) {
 }
 .ffe-grid__col--bg-blue-sky {
   background-color: #7fc6e8;
+}
+.ffe-grid__col--bg-white {
+  background-color: #fff;
 }
 .ffe-grid__col--reverse {
   -webkit-box-orient: vertical;
