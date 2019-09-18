@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-accordion",
-  "version": "5.0.8",
+  "version": "5.0.9",
   "description": "Accordion component for FFE.",
   "keywords": [
     "Accordion",
@@ -19,7 +19,7 @@
     "test": "npm run lint"
   },
   "devDependencies": {
-    "@sb1/ffe-core": "^15.0.0"
+    "@sb1/ffe-core": "^15.1.0"
   },
   "peerDependencies": {
     "@sb1/ffe-core": "^14.0.2"

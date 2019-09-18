@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [15.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@15.0.0...@sb1/ffe-core@15.1.0) (2019-09-18)
+
+### Features
+
+-   **ffe-core:** dark mode style overrides ([20ae46c](https://github.com/SpareBank1/designsystem/commit/20ae46c))
+
 # [15.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@14.0.5...@sb1/ffe-core@15.0.0) (2019-08-27)
 
 ### Bug Fixes
