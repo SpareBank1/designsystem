@@ -8,6 +8,7 @@ import {
     bool,
     object,
     shape,
+    elementType,
 } from 'prop-types';
 import classNames from 'classnames';
 
@@ -65,7 +66,7 @@ InlineBaseButton.propTypes = {
     /** Extra class names */
     className: string,
     /** The rendered element, like an `<a />` or `<Link />` */
-    element: oneOfType([string, func]),
+    element: oneOfType([string, func, elementType]),
     /** Ref-setting function, or ref created by useRef, passed to the button element */
     innerRef: oneOfType([func, shape({ current: object })]),
     /** Icon shown to the left of the label */

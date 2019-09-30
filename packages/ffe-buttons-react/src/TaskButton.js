@@ -1,5 +1,14 @@
 import React from 'react';
-import { bool, func, node, string, oneOfType, object, shape } from 'prop-types';
+import {
+    bool,
+    func,
+    node,
+    string,
+    oneOfType,
+    object,
+    shape,
+    elementType,
+} from 'prop-types';
 import Button from './BaseButton';
 
 const TaskButton = ({ icon, ...rest }) => (
@@ -16,7 +25,7 @@ TaskButton.propTypes = {
     /** Disable a button in certain situations */
     disabled: bool,
     /** The rendered element, like an `<a />` or `<Link />` */
-    element: oneOfType([func, string]),
+    element: oneOfType([func, string, elementType]),
     /** Task icon, show to the left of the label */
     icon: node.isRequired,
     /** Ref-setting function, or ref created by useRef, passed to the button element */

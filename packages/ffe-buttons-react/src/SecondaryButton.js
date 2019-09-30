@@ -1,5 +1,14 @@
 import React from 'react';
-import { bool, func, oneOfType, string, node, object, shape } from 'prop-types';
+import {
+    bool,
+    func,
+    oneOfType,
+    string,
+    node,
+    object,
+    shape,
+    elementType,
+} from 'prop-types';
 import Button from './BaseButton';
 
 const SecondaryButton = props => <Button buttonType="secondary" {...props} />;
@@ -16,7 +25,7 @@ SecondaryButton.propTypes = {
     /** Disable a button in certain situations */
     disabled: bool,
     /** The rendered element, like an `<a />` or `<Link />` */
-    element: oneOfType([func, string]),
+    element: oneOfType([func, string, elementType]),
     /** Ref-setting function, or ref created by useRef, passed to the button element */
     innerRef: oneOfType([func, shape({ current: object })]),
     /**  Shows a loader if true */

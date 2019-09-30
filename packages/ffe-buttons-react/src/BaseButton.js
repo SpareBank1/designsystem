@@ -8,6 +8,7 @@ import {
     string,
     object,
     shape,
+    elementType,
 } from 'prop-types';
 import classNames from 'classnames';
 
@@ -89,7 +90,7 @@ BaseButton.propTypes = {
     /** Disable a button in certain situations */
     disabled: bool,
     /** The rendered element, like an `<a />` or `<Link />` */
-    element: oneOfType([func, string]),
+    element: oneOfType([func, string, elementType]),
     /** Ref-setting function, or ref created by useRef, passed to the button element */
     innerRef: oneOfType([func, shape({ current: object })]),
     /** Shows a loader if true */
