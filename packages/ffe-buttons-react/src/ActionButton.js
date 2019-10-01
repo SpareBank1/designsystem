@@ -1,5 +1,14 @@
 import React from 'react';
-import { bool, func, node, string, oneOfType, object, shape } from 'prop-types';
+import {
+    bool,
+    func,
+    node,
+    string,
+    oneOfType,
+    object,
+    shape,
+    elementType,
+} from 'prop-types';
 import classNames from 'classnames';
 
 import Button from './BaseButton';
@@ -35,7 +44,7 @@ ActionButton.propTypes = {
     /** Disable a button in certain situations */
     disabled: bool,
     /** The rendered element, like an `<a />` or `<Link />` */
-    element: oneOfType([func, string]),
+    element: oneOfType([func, string, elementType]),
     /** Applies the ghost modifier if true. */
     ghost: bool,
     /** Ref-setting function, or ref created by useRef, passed to the button element */

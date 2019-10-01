@@ -1,5 +1,14 @@
 import React from 'react';
-import { func, node, oneOfType, string, bool, object, shape } from 'prop-types';
+import {
+    func,
+    node,
+    oneOfType,
+    string,
+    bool,
+    object,
+    shape,
+    elementType,
+} from 'prop-types';
 import InlineButton from './InlineBaseButton';
 
 const TertiaryButton = props => (
@@ -12,7 +21,7 @@ TertiaryButton.propTypes = {
     /** Extra class names */
     className: string,
     /** The rendered element, like an `<a />` or `<Link />` */
-    element: oneOfType([func, string]),
+    element: oneOfType([func, string, elementType]),
     /** Ref-setting function, or ref created by useRef, passed to the button element */
     innerRef: oneOfType([func, shape({ current: object })]),
     /** Icon shown to the left of the label */
