@@ -57,15 +57,16 @@
 .ffe-system-message {
     margin: 0 auto;
     max-width: @app-width;
-    position: relative;
+    align-items: center;
     padding: 10px @app-margin;
     text-align: left;
+    display: flex;
 
     &__icon {
+        flex: 0 0 auto;
         background: @ffe-white;
         border-radius: 50%;
         display: inline-flex;
-        vertical-align: middle;
         height: 1.7em;
         width: 1.7em;
         margin-right: 15px;
@@ -79,41 +80,27 @@
     }
 
     &__content {
-        display: inline-block;
-        vertical-align: middle;
         margin: 0;
         padding: 0;
-        width: 75%;
         font-size: 14px;
-
-        @media screen and (min-width: 460px) {
-            width: 84%;
-        }
 
         @media screen and (min-width: 600px) {
             font-size: 16px;
         }
-
-        @media screen and (min-width: 720px) {
-            width: 90%;
-        }
     }
 
     &__close {
+        flex: 0 0 auto;
         appearance: none;
         background: transparent;
         border: 0;
         border-radius: 0;
         color: inherit;
         cursor: pointer;
-        display: inline-block;
+        align-self: flex-start;
         height: 16px;
-        margin: 0;
+        margin: 5px 0 5px 0;
         padding: 0;
-        position: absolute;
-        right: 20px;
-        top: 15px;
-        vertical-align: middle;
         width: 16px;
 
         > svg {
