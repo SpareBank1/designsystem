@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@3.0.0...@sb1/ffe-cards-react@3.0.1) (2019-10-03)
+
+### Bug Fixes
+
+-   **ffe-cards-react:** element prop-type needs elementType ([fdff146](https://github.com/SpareBank1/designsystem/commit/fdff146))
+
 # [3.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@2.2.6...@sb1/ffe-cards-react@3.0.0) (2019-08-27)
 
 ### chore
