@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import { string, node, oneOfType, func } from 'prop-types';
+import { string, node, oneOfType, func, elementType } from 'prop-types';
 
 const ComponentBase = ({ className, element: Element, ...rest }) => (
     <Element
@@ -13,7 +13,7 @@ ComponentBase.defaultProps = { element: 'p' };
 
 ComponentBase.propTypes = {
     className: string,
-    element: oneOfType([func, string]),
+    element: oneOfType([func, string, elementType]),
     children: node,
 };
 

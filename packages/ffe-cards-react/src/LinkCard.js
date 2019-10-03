@@ -7,6 +7,7 @@ import {
     oneOf,
     oneOfType,
     string,
+    elementType,
 } from 'prop-types';
 import classNames from 'classnames';
 
@@ -69,7 +70,7 @@ LinkCard.propTypes = {
     /** Bottom text - should only be used with `size="large"` */
     details: node,
     /** The element to render the card as. Typically `'a'`, `Link` or `'button'` */
-    elementType: oneOfType([func, string]),
+    elementType: oneOfType([func, string, elementType]),
     /** Text shown at the top */
     heading: string,
     /** A rendered icon - will be sized appropriately */

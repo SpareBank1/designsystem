@@ -1,5 +1,5 @@
 import React from 'react';
-import { oneOfType, node, func, string } from 'prop-types';
+import { oneOfType, node, func, string, elementType } from 'prop-types';
 import classNames from 'classnames';
 
 /**
@@ -44,7 +44,7 @@ ProductCard.propTypes = {
     /** Bottom text - should only be used with `size="large"` */
     details: node,
     /** The element to render the card as. */
-    elementType: oneOfType([func, string]),
+    elementType: oneOfType([func, string, elementType]),
     /** Text shown at the top */
     heading: string,
     /** A rendered icon - will be sized appropriately */

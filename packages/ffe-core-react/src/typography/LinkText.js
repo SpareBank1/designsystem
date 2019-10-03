@@ -1,14 +1,9 @@
 import React from 'react';
-import { bool, func, node, oneOfType, string } from 'prop-types';
+import { bool, func, node, oneOfType, string, elementType } from 'prop-types';
 import classNames from 'classnames';
 
-const LinkText = (props) => {
-    const {
-        className,
-        element: Element,
-        underline,
-        ...rest
-    } = props;
+const LinkText = props => {
+    const { className, element: Element, underline, ...rest } = props;
 
     return (
         <Element
@@ -31,8 +26,8 @@ LinkText.propTypes = {
     children: node.isRequired,
     className: string,
     /** The rendered element, like a `react-router` `<Link />` */
-    element: oneOfType([func, string]),
+    element: oneOfType([func, string, elementType]),
     underline: bool,
 };
 
-export default LinkText
+export default LinkText;

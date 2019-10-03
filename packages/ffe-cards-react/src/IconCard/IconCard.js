@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import { node, string, bool, func, oneOfType } from 'prop-types';
+import { node, string, bool, func, oneOfType, elementType } from 'prop-types';
 
 import CardBase from '../CardBase';
 import * as components from '../components';
@@ -49,7 +49,7 @@ IconCard.propTypes = {
     /** Icon and text will all be ffe-grey-charcoal */
     greyCharcoal: bool,
     /** The element to render the card as */
-    element: oneOfType([func, string]),
+    element: oneOfType([func, string, elementType]),
     /** Function that's passed available sub-components as arguments, or regular children */
     children: oneOfType([func, node]),
 };
