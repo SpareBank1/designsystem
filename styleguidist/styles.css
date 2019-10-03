@@ -6466,17 +6466,24 @@ input:not([type='radio']):not([type='checkbox']) {
 .ffe-system-message {
   margin: 0 auto;
   max-width: 1280px;
-  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 10px 20px;
   text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .ffe-system-message__icon {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
   background: #fff;
   border-radius: 50%;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  vertical-align: middle;
   height: 1.7em;
   width: 1.7em;
   margin-right: 15px;
@@ -6488,29 +6495,19 @@ input:not([type='radio']):not([type='checkbox']) {
   width: 50%;
 }
 .ffe-system-message__content {
-  display: inline-block;
-  vertical-align: middle;
   margin: 0;
   padding: 0;
-  width: 75%;
   font-size: 14px;
-}
-@media screen and (min-width: 460px) {
-  .ffe-system-message__content {
-    width: 84%;
-  }
 }
 @media screen and (min-width: 600px) {
   .ffe-system-message__content {
     font-size: 16px;
   }
 }
-@media screen and (min-width: 720px) {
-  .ffe-system-message__content {
-    width: 90%;
-  }
-}
 .ffe-system-message__close {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -6519,14 +6516,11 @@ input:not([type='radio']):not([type='checkbox']) {
   border-radius: 0;
   color: inherit;
   cursor: pointer;
-  display: inline-block;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   height: 16px;
-  margin: 0;
+  margin: 5px 0 5px 0;
   padding: 0;
-  position: absolute;
-  right: 20px;
-  top: 15px;
-  vertical-align: middle;
   width: 16px;
 }
 .ffe-system-message__close > svg {
