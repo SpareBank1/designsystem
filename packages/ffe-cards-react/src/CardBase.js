@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import { oneOfType, node, func, string } from 'prop-types';
+import { oneOfType, node, func, string, elementType } from 'prop-types';
 
 const CardBase = props => {
     const { className, element: Element, children, ...rest } = props;
@@ -20,7 +20,7 @@ CardBase.propTypes = {
     className: string,
     children: node,
     /** The element to render the card as */
-    element: oneOfType([func, string]),
+    element: oneOfType([func, string, elementType]),
 };
 
 export default CardBase;

@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import { node, string, func, oneOfType } from 'prop-types';
+import { node, string, func, oneOfType, elementType } from 'prop-types';
 
 import CardBase from '../CardBase';
 import * as components from '../components';
@@ -28,7 +28,7 @@ ImageCard.propTypes = {
     /** A rendered image */
     image: node.isRequired,
     /** The element to render the card as */
-    element: oneOfType([func, string]),
+    element: oneOfType([func, string, elementType]),
     /** Function that's passed available sub-components as arguments, or regular children */
     children: oneOfType([func, node]),
 };
