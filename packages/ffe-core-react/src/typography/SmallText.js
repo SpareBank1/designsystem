@@ -1,5 +1,5 @@
 import React from 'react';
-import { oneOfType, string, func } from 'prop-types';
+import { oneOfType, string, func, elementType } from 'prop-types';
 import classNames from 'classnames';
 
 const SmallText = ({ className, element: Element, ...rest }) => (
@@ -11,7 +11,7 @@ SmallText.defaultProps = {
 };
 
 SmallText.propTypes = {
-    element: oneOfType([func, string]),
+    element: oneOfType([func, string, elementType]),
     className: string,
 };
 
