@@ -26,6 +26,9 @@
   "jest": {
     "setupTestFrameworkScriptFile": "../../test-setup.js"
   },
+  "dependencies": {
+    "prop-types": "^15.7.0"
+  },
   "devDependencies": {
     "@sb1/ffe-icons": "^12.9.1",
     "@sb1/ffe-icons-react": "^7.0.1",
