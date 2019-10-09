@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@4.1.2...@sb1/ffe-core-react@4.1.3) (2019-10-09)
+
+### Bug Fixes
+
+-   **ffe-core-react:** bump prop-types ([7f88f98](https://github.com/SpareBank1/designsystem/commit/7f88f98a524328efc72d62dee335cd10687aa53f))
+-   **ffe-core-react:** element-type for type script ([f041763](https://github.com/SpareBank1/designsystem/commit/f04176300b4ef9e361d5a833cdc882190a9bf3a8))
+
 ## [4.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@4.1.1...@sb1/ffe-core-react@4.1.2) (2019-10-03)
 
 ### Bug Fixes

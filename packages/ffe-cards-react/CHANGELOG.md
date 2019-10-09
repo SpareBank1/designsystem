@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@3.0.1...@sb1/ffe-cards-react@3.0.2) (2019-10-09)
+
+### Bug Fixes
+
+-   **ffe-cards-react:** bump prop-types ([a6c0103](https://github.com/SpareBank1/designsystem/commit/a6c0103305944bca21f085b0fcb383fac5d5e0c9))
+
 ## [3.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@3.0.0...@sb1/ffe-cards-react@3.0.1) (2019-10-03)
 
 ### Bug Fixes

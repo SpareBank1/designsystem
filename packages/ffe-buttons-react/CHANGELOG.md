@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@12.1.1...@sb1/ffe-buttons-react@12.1.2) (2019-10-09)
+
+### Bug Fixes
+
+-   **ffe-buttons-react:** bump prop-types ([49aa321](https://github.com/SpareBank1/designsystem/commit/49aa3219e8c1ce272aba2b1c0dc0aa32e3c2a014))
+-   **ffe-buttons-react:** element type for type script ([b889371](https://github.com/SpareBank1/designsystem/commit/b8893712997641d01f78aaf3e500f7f9d530ce80))
+
 ## [12.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@12.1.0...@sb1/ffe-buttons-react@12.1.1) (2019-10-03)
 
 ### Bug Fixes
