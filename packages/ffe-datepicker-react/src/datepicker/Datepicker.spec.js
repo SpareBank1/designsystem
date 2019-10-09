@@ -207,6 +207,18 @@ describe('<Datepicker />', () => {
                 );
             });
         });
+
+        describe('fullWidth', () => {
+            it('has correct full width class', () => {
+                const wrapper = getMountedWrapper({ fullWidth: true });
+
+                expect(
+                    wrapper
+                        .find('.ffe-datepicker')
+                        .hasClass('ffe-datepicker--full-width'),
+                ).toBe(true);
+            });
+        });
     });
 
     describe('validating input on blur', () => {

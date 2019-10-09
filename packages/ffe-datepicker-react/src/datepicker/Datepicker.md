@@ -43,6 +43,22 @@ initialState = { date: '01.01.2016' };
 />;
 ```
 
+Kan rendres i full bredde:
+
+```js
+initialState = { date: '01.01.2016' };
+<Datepicker
+    inputProps={{ id: 'datepicker-example' }}
+    label="Velg dato"
+    language="nb"
+    maxDate="31.12.2016"
+    minDate="01.01.2016"
+    onChange={date => setState({ date })}
+    value={state.date}
+    fullWidth={true}
+/>;
+```
+
 Kan rendres på engelsk og nynorsk, i tillegg til bokmål:
 
 ```js

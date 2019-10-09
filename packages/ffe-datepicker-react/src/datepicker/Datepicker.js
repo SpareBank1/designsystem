@@ -299,6 +299,7 @@ export default class Datepicker extends Component {
             language,
             onChange,
             value,
+            fullWidth,
         } = this.props;
         const {
             focusOnCalendarOpen,
@@ -319,6 +320,10 @@ export default class Datepicker extends Component {
             { 'ffe-calendar--datepicker--above': this.props.calendarAbove },
         );
 
+        const datepickerClassName = classNames('ffe-datepicker', {
+            'ffe-datepicker--full-width': fullWidth,
+        });
+
         return (
             <div>
                 {label && (
@@ -337,7 +342,7 @@ export default class Datepicker extends Component {
                             : undefined
                     }
                     aria-label={label ? undefined : i18n[language].CHOOSE_DATE}
-                    className="ffe-datepicker"
+                    className={datepickerClassName}
                     onClick={this.clickHandler}
                     ref={c => {
                         this._datepickerNode = c;
@@ -357,6 +362,7 @@ export default class Datepicker extends Component {
                             this.dateInputRef = c;
                         }}
                         value={value}
+                        fullWidth={fullWidth}
                     />
 
                     {this.state.displayDatePicker && (
@@ -395,6 +401,7 @@ Datepicker.defaultProps = {
     language: 'nb',
     keepDisplayStateOnError: false,
     onValidationComplete: () => {},
+    fullWidth: false,
 };
 
 Datepicker.propTypes = {
@@ -415,4 +422,5 @@ Datepicker.propTypes = {
     onError: func,
     value: string.isRequired,
     keepDisplayStateOnError: bool.isRequired,
+    fullWidth: bool,
 };

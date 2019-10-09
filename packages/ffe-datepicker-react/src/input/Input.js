@@ -16,6 +16,12 @@ export default class Input extends Component {
         );
     }
 
+    dateInputClassNames() {
+        return classNames('ffe-dateinput', {
+            'ffe-dateinput--full-width': this.props.fullWidth,
+        });
+    }
+
     render() {
         const {
             ariaInvalid,
@@ -28,7 +34,7 @@ export default class Input extends Component {
         } = this.props;
 
         return (
-            <div className="ffe-dateinput">
+            <div className={this.dateInputClassNames()}>
                 <input
                     aria-invalid={String(
                         this.props['aria-invalid'] || ariaInvalid,
@@ -62,4 +68,5 @@ Input.propTypes = {
     onFocus: func,
     onKeyDown: func,
     value: string.isRequired,
+    fullWidth: bool,
 };
