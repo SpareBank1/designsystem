@@ -2,7 +2,7 @@ import * as React from 'react';
 
 export interface MinimalBaseButtonProps extends React.HTMLProps<HTMLElement> {
     className?: string;
-    element?: HTMLElement | string;
+    element?: HTMLElement | string | React.ElementType;
     innerRef?: React.RefObject<HTMLElement>;
 }
 

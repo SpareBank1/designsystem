@@ -35,7 +35,7 @@
   "dependencies": {
     "@sb1/ffe-icons-react": "^7.0.1",
     "classnames": "^2.2.5",
-    "prop-types": "^15.6.0"
+    "prop-types": "^15.7.0"
   },
   "devDependencies": {
     "enzyme": "^3.7.0",

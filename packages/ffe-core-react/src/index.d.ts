@@ -22,7 +22,7 @@ export interface HeadingProps extends React.HTMLAttributes<HTMLHeadingElement> {
 export interface LinkTextProps extends React.AnchorHTMLAttributes<HTMLElement> {
     children: React.ReactNode;
     className?: string;
-    element?: HTMLElement | string;
+    element?: HTMLElement | string | React.ElementType;
     underline?: boolean;
 }
 
@@ -32,7 +32,7 @@ export interface SimpleElementProps {
 }
 
 export interface SmallTextProps {
-    element?: HTMLElement | string;
+    element?: HTMLElement | string | React.ElementType;
     className?: string;
 }
 
