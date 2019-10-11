@@ -30,7 +30,7 @@
     "@sb1/ffe-grid-react": "^10.1.0",
     "classnames": "^2.2.5",
     "prop-types": "^15.6.0",
-    "react-collapse": "^4.0.3",
+    "react-collapse": "^5.0.0",
     "react-motion": "^0.5.2"
   },
   "devDependencies": {
