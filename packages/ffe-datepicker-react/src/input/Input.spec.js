@@ -17,9 +17,21 @@ const defaultProps = {
 const getWrapper = props => shallow(<Input {...defaultProps} {...props} />);
 
 describe('<Input />', () => {
-    it('should render a wrapper for the input field', () => {
-        const wrapper = getWrapper();
-        expect(wrapper.hasClass('ffe-dateinput')).toBe(true);
+    describe('wrapper', () => {
+        it('should render a wrapper for the input field', () => {
+            const wrapper = getWrapper();
+            expect(wrapper.hasClass('ffe-dateinput')).toBe(true);
+        });
+
+        it('should not have full-width element class name if not fullWidth prop is true', () => {
+            const dateInput = getWrapper();
+            expect(dateInput.hasClass('ffe-dateinput--full-width')).toBe(false);
+        });
+
+        it('should have full-width element class name if fullWidth prop is true', () => {
+            const dateInput = getWrapper({ fullWidth: true });
+            expect(dateInput.hasClass('ffe-dateinput--full-width')).toBe(true);
+        });
     });
 
     describe('nested input field', () => {
