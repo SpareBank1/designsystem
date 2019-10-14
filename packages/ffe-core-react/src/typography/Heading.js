@@ -13,6 +13,7 @@ const makeHeading = level => {
             noMargin,
             withBorder,
             lookLike,
+            textCenter,
             ...rest
         } = props;
 
@@ -28,6 +29,7 @@ const makeHeading = level => {
                     { [`${headingClass}--inline`]: inline },
                     { [`${headingClass}--no-margin`]: noMargin },
                     { [`${headingClass}--with-border`]: withBorder },
+                    { [`${headingClass}--text-center`]: textCenter },
                     className,
                 )}
             >
@@ -44,6 +46,7 @@ const makeHeading = level => {
         lookLike: oneOf([1, 2, 3, 4, 5, 6]),
         noMargin: bool,
         withBorder: bool,
+        textCenter: bool,
     };
 
     return Heading;

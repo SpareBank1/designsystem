@@ -1,5 +1,12 @@
 ```js
-const { Heading1, Heading2, Heading3, Heading4, Heading5, Heading6 } = require('./Heading');
+const {
+    Heading1,
+    Heading2,
+    Heading3,
+    Heading4,
+    Heading5,
+    Heading6,
+} = require('./Heading');
 <div>
     <Heading1>Overskrift nivå 1</Heading1>
     <Heading2>Overskrift nivå 2</Heading2>
@@ -7,5 +14,5 @@ const { Heading1, Heading2, Heading3, Heading4, Heading5, Heading6 } = require('
     <Heading4>Overskrift nivå 4</Heading4>
     <Heading5>Overskrift nivå 5</Heading5>
     <Heading6>Overskrift nivå 6</Heading6>
-</div>
+</div>;
 ```
