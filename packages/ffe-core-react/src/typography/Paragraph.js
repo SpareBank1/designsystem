@@ -13,15 +13,19 @@ export default function Paragraph(props) {
         ...rest
     } = props;
 
+    const [mainClass] = [
+        lead && 'ffe-lead-paragraph',
+        subLead && 'ffe-sub-lead-paragraph',
+        'ffe-body-paragraph',
+    ].filter(Boolean);
+
     return (
         <p
             className={classNames(
-                { 'ffe-body-paragraph': !lead && !subLead },
-                { 'ffe-body-paragraph--text-center': !lead && !subLead && textCenter },
-                { 'ffe-body-paragraph--text-left': !lead && !subLead && textLeft },
-                { 'ffe-lead-paragraph': lead },
-                { 'ffe-sub-lead-paragraph': subLead },
-                className
+                mainClass,
+                { 'ffe-body-paragraph--text-center': textCenter },
+                { 'ffe-body-paragraph--text-left': textLeft },
+                className,
             )}
             {...rest}
         >
