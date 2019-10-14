@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [15.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@15.1.0...@sb1/ffe-core@15.2.0) (2019-10-14)
+
+### Features
+
+-   **ffe-core:** class for centering headings ([1064b49](https://github.com/SpareBank1/designsystem/commit/1064b49931729c8d346a17106fdf147d9295752f))
+
 # [15.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@15.0.0...@sb1/ffe-core@15.1.0) (2019-09-18)
 
 ### Features

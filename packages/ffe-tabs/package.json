@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-tabs",
-  "version": "6.1.6",
+  "version": "6.1.7",
   "license": "MIT",
   "author": "SpareBank1",
   "files": [
@@ -15,7 +15,7 @@
     "test": "npm run lint"
   },
   "devDependencies": {
-    "@sb1/ffe-core": "^15.1.0"
+    "@sb1/ffe-core": "^15.2.0"
   },
   "peerDependencies": {
     "@sb1/ffe-core": "^14.0.2"

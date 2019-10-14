@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@4.0.3...@sb1/ffe-datepicker-react@4.1.0) (2019-10-14)
+
+### Features
+
+-   **ffe-datepicker-react:** Option for full width Datepicker ([d9f8162](https://github.com/SpareBank1/designsystem/commit/d9f81625280f6843ec1e785fa0707ba1f7d8fcb3))
+
 ## [4.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@4.0.2...@sb1/ffe-datepicker-react@4.0.3) (2019-10-03)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker-react

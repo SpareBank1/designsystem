@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@4.1.3...@sb1/ffe-core-react@4.2.0) (2019-10-14)
+
+### Features
+
+-   **ffe-core-react:** center leading paragraph ([c12806b](https://github.com/SpareBank1/designsystem/commit/c12806b3b6602c024ea09569856e6b69f17cd755))
+-   **ffe-core-react:** possible to center heading ([4a563b1](https://github.com/SpareBank1/designsystem/commit/4a563b1186c95468865c9ed82f5429c89fda05c7))
+
 ## [4.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@4.1.2...@sb1/ffe-core-react@4.1.3) (2019-10-09)
 
 ### Bug Fixes

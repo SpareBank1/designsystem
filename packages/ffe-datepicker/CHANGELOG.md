@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@5.0.54...@sb1/ffe-datepicker@5.1.0) (2019-10-14)
+
+### Features
+
+-   **ffe-datepicker:** Add full width style for datepicker and dateinput ([df2f356](https://github.com/SpareBank1/designsystem/commit/df2f356c1b1ed63f34421127214012e40b4ad352))
+
 ## [5.0.54](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@5.0.53...@sb1/ffe-datepicker@5.0.54) (2019-09-18)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
