@@ -440,9 +440,6 @@ html {
 /* stylelint-enable */
 .ffe-h1,
 .ffe-link-card--plain > .ffe-link-card__number {
-  color: #002776;
-  font-family: 'MuseoSansRounded-700', arial, sans-serif;
-  font-weight: normal;
   line-height: 36px;
   font-size: 28px;
 }
@@ -453,9 +450,6 @@ html {
   }
 }
 .ffe-h2 {
-  color: #002776;
-  font-family: 'MuseoSansRounded-700', arial, sans-serif;
-  font-weight: normal;
   line-height: 28px;
   font-size: 24px;
 }
@@ -465,9 +459,6 @@ html {
   }
 }
 .ffe-h3 {
-  color: #002776;
-  font-family: 'MuseoSansRounded-700', arial, sans-serif;
-  font-weight: normal;
   line-height: 24px;
   font-size: 20px;
 }
@@ -478,9 +469,6 @@ html {
 }
 .ffe-h4,
 .ffe-table__caption {
-  color: #002776;
-  font-family: 'MuseoSansRounded-700', arial, sans-serif;
-  font-weight: normal;
   line-height: 24px;
   font-size: 18px;
 }
@@ -496,9 +484,6 @@ html {
 .ffe-calendar__title,
 .ffe-file-upload__title,
 .ffe-file-upload__upload-section-title {
-  color: #002776;
-  font-family: 'MuseoSansRounded-700', arial, sans-serif;
-  font-weight: normal;
   line-height: 20px;
   font-size: 16px;
 }
@@ -513,9 +498,6 @@ html {
   }
 }
 .ffe-h6 {
-  color: #002776;
-  font-family: 'MuseoSansRounded-700', arial, sans-serif;
-  font-weight: normal;
   line-height: 20px;
   font-size: 15px;
 }
@@ -563,6 +545,9 @@ html {
 .ffe-file-upload__title,
 .ffe-file-upload__upload-section-title,
 .ffe-table__caption {
+  color: #002776;
+  font-family: 'MuseoSansRounded-700', arial, sans-serif;
+  font-weight: normal;
   margin-bottom: 10px;
   margin-top: 0;
 }
@@ -606,6 +591,14 @@ html {
 .ffe-h5--no-underline,
 .ffe-h6--no-underline {
   text-decoration: none;
+}
+.ffe-h1--text-center,
+.ffe-h2--text-center,
+.ffe-h3--text-center,
+.ffe-h4--text-center,
+.ffe-h5--text-center,
+.ffe-h6--text-center {
+  text-align: center;
 }
 .ffe-body-text,
 .ffe-product-card__details,
@@ -3236,6 +3229,9 @@ html {
   position: relative;
   display: inline-block;
 }
+.ffe-dateinput--full-width {
+  display: block;
+}
 .ffe-dateinput:hover {
   color: #0071cd;
 }
@@ -3391,6 +3387,9 @@ html {
 .ffe-datepicker {
   display: inline-block;
   position: relative;
+}
+.ffe-datepicker--full-width {
+  display: block;
 }
 .ffe-file-upload {
   margin-top: 45px;
@@ -7152,14 +7151,14 @@ input:not([type='radio']):not([type='checkbox']) {
 }
 
 .sb1ds-sidebar__menu > .sb1ds-components-list > .sb1ds-components-list__item > .sb1ds-components-list__link--heading {
-  color: #002776;font-family: 'MuseoSansRounded-700', arial, sans-serif;font-weight: normal;line-height: 24px;font-size: 18px;
+  line-height: 24px;font-size: 18px;
 }
 @media screen and (min-width: 480px) {
   .sb1ds-sidebar__menu > .sb1ds-components-list > .sb1ds-components-list__item > .sb1ds-components-list__link--heading {
     font-size: 22px;
   }
 }.sb1ds-sidebar__menu > .sb1ds-components-list > .sb1ds-components-list__item > .sb1ds-components-list__link--heading {
-  margin-bottom: 10px;margin-top: 0;
+  color: #002776;font-family: 'MuseoSansRounded-700', arial, sans-serif;font-weight: normal;margin-bottom: 10px;margin-top: 0;
 }
 @media screen and (min-width: 480px) {
   .sb1ds-sidebar__menu > .sb1ds-components-list > .sb1ds-components-list__item > .sb1ds-components-list__link--heading {
