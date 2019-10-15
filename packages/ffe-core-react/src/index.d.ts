@@ -17,6 +17,7 @@ export interface HeadingProps extends React.HTMLAttributes<HTMLHeadingElement> {
     lookLike?: 1 | 2 | 3 | 4 | 5 | 6;
     noMargin?: boolean;
     withBorder?: boolean;
+    textCenter?: boolean;
 }
 
 export interface LinkTextProps extends React.AnchorHTMLAttributes<HTMLElement> {
