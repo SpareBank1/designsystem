@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@12.1.2...@sb1/ffe-buttons-react@12.1.3) (2019-10-16)
+
+### Bug Fixes
+
+-   **ffe-buttons-react:** invalid markup ([a447232](https://github.com/SpareBank1/designsystem/commit/a4472328c9cd365a890e74a007d1033bee701cef))
+
 ## [12.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@12.1.1...@sb1/ffe-buttons-react@12.1.2) (2019-10-09)
 
 ### Bug Fixes

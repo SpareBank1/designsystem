@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@4.2.0...@sb1/ffe-core-react@4.2.1) (2019-10-16)
+
+### Bug Fixes
+
+-   **ffe-core-react:** added prop-types for Heading ([f884467](https://github.com/SpareBank1/designsystem/commit/f8844673a842af78896e0f768a3fbd546482bd14))
+
 # [4.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@4.1.3...@sb1/ffe-core-react@4.2.0) (2019-10-14)
 
 ### Features

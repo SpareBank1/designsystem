@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-webfonts@2.0.5...@sb1/ffe-webfonts@2.1.0) (2019-10-16)
+
+### Features
+
+-   **ffe-webfonts:** set font loading behavior to fallback ([9cbf83b](https://github.com/SpareBank1/designsystem/commit/9cbf83bff9db2dea163a8c6b6d3fbf09a39f7f0f))
+
 ## [2.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-webfonts@2.0.4...@sb1/ffe-webfonts@2.0.5) (2019-04-24)
 
 **Note:** Version bump only for package @sb1/ffe-webfonts
