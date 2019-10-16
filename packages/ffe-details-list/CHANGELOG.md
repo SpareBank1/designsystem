@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.0.26](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list@9.0.25...@sb1/ffe-details-list@9.0.26) (2019-10-16)
+
+**Note:** Version bump only for package @sb1/ffe-details-list
+
 ## [9.0.25](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list@9.0.24...@sb1/ffe-details-list@9.0.25) (2019-10-14)
 
 **Note:** Version bump only for package @sb1/ffe-details-list
