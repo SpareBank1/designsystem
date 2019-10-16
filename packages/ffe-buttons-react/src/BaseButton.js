@@ -63,7 +63,7 @@ const BaseButton = props => {
                     })}
             </span>
             {supportsSpinner && (
-                <div
+                <span
                     aria-hidden={!isLoading}
                     aria-label={ariaLoadingMessage}
                     className="ffe-button__spinner"
