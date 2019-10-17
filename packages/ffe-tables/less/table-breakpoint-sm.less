@@ -1,5 +1,5 @@
 .ffe-table--breakpoint-sm {
-    @media screen and (min-width: @breakpoint-sm) {
+    @media (min-width: @breakpoint-sm) {
         &.ffe-table--condensed {
             .ffe-table__heading,
             .ffe-table__cell {
@@ -47,25 +47,25 @@
     .ffe-table__heading,
     .ffe-table__cell {
         &.ffe-table--hide-xlg {
-            @media screen and (min-width: @breakpoint-lg) {
+            @media (min-width: @breakpoint-lg) {
                 display: none;
             }
         }
 
         &.ffe-table--hide-lg {
-            @media screen and (min-width: @breakpoint-md) and (max-width: (@breakpoint-lg - 1px)) {
+            @media (min-width: @breakpoint-md) and (max-width: (@breakpoint-lg - 1px)) {
                 display: none;
             }
         }
 
         &.ffe-table--hide-md {
-            @media screen and (min-width: @breakpoint-sm) and (max-width: (@breakpoint-md - 1px)) {
+            @media (min-width: @breakpoint-sm) and (max-width: (@breakpoint-md - 1px)) {
                 display: none;
             }
         }
 
         &.ffe-table--hide-sm {
-            @media screen and (max-width: (@breakpoint-sm - 1px)) {
+            @media (max-width: (@breakpoint-sm - 1px)) {
                 display: none;
             }
         }
