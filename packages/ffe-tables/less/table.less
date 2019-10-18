@@ -129,7 +129,7 @@
     &__head {
         display: none;
 
-        @media screen and (min-width: @breakpoint-md) {
+        @media (min-width: @breakpoint-md) {
             display: table-header-group;
         }
     }
@@ -147,7 +147,7 @@
         display: block;
         padding: 10px 0;
 
-        @media screen and (min-width: @breakpoint-md) {
+        @media (min-width: @breakpoint-md) {
             display: table-row;
         }
     }
@@ -158,7 +158,7 @@
         color: @ffe-blue-royal;
         text-align: left;
 
-        @media screen and (min-width: @breakpoint-md) {
+        @media (min-width: @breakpoint-md) {
             display: table-cell;
             padding: 10px;
         }
@@ -181,7 +181,7 @@
             vertical-align: top;
         }
 
-        @media screen and (min-width: @breakpoint-md) {
+        @media (min-width: @breakpoint-md) {
             display: table-cell;
             padding: 19px 10px;
         }
@@ -192,7 +192,7 @@
 
         .ffe-table__heading,
         .ffe-table__cell {
-            @media screen and (min-width: @breakpoint-md) {
+            @media (min-width: @breakpoint-md) {
                 padding: 10px;
             }
         }
@@ -208,7 +208,7 @@
             text-align: right;
         }
 
-        @media screen and (min-width: @breakpoint-md) {
+        @media (min-width: @breakpoint-md) {
             display: block;
             max-width: none;
             margin-bottom: 0;
@@ -221,7 +221,7 @@
         color: @ffe-blue-royal;
         &:extend(.ffe-strong-text);
 
-        @media screen and (min-width: @breakpoint-md) {
+        @media (min-width: @breakpoint-md) {
             display: none;
         }
     }
@@ -236,7 +236,7 @@
             max-width: ~'calc(100% - 105px)';
             margin-bottom: 0;
 
-            @media screen and (min-width: @breakpoint-md) {
+            @media (min-width: @breakpoint-md) {
                 display: block;
                 max-width: none;
                 margin-bottom: 0;
@@ -248,7 +248,7 @@
             display: inline-block;
         }
 
-        @media screen and (min-width: @breakpoint-md) {
+        @media (min-width: @breakpoint-md) {
             [data-th]::before {
                 display: none;
             }
@@ -258,25 +258,25 @@
     .ffe-table__heading,
     .ffe-table__cell {
         &.ffe-table--hide-xlg {
-            @media screen and (min-width: @breakpoint-lg) {
+            @media (min-width: @breakpoint-lg) {
                 display: none;
             }
         }
 
         &.ffe-table--hide-lg {
-            @media screen and (min-width: @breakpoint-md) and (max-width: (@breakpoint-lg - 1px)) {
+            @media (min-width: @breakpoint-md) and (max-width: (@breakpoint-lg - 1px)) {
                 display: none;
             }
         }
 
         &.ffe-table--hide-md {
-            @media screen and (min-width: @breakpoint-sm) and (max-width: (@breakpoint-md - 1px)) {
+            @media (min-width: @breakpoint-sm) and (max-width: (@breakpoint-md - 1px)) {
                 display: none;
             }
         }
 
         &.ffe-table--hide-sm {
-            @media screen and (max-width: (@breakpoint-sm - 1px)) {
+            @media (max-width: (@breakpoint-sm - 1px)) {
                 display: none;
             }
         }
