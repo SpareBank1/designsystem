@@ -151,7 +151,7 @@
         padding-top: 0;
     }
 
-    @media only screen and (min-width: @breakpoint-lg) {
+    @media (min-width: @breakpoint-lg) {
         padding-top: @ffe-grid-gutter-lg;
 
         &--no-top-padding {
@@ -172,7 +172,7 @@
     max-width: @ffe-grid-width;
     width: 100%;
 
-    @media only screen and (min-width: @breakpoint-lg) {
+    @media (min-width: @breakpoint-lg) {
         margin-left: @ffe-grid-gutter-lg / 2 * -1;
         margin-right: @ffe-grid-gutter-lg / 2 * -1;
     }
@@ -226,7 +226,7 @@
     &--top-padding {
         padding-top: @ffe-grid-gutter-sm;
 
-        @media only screen and (min-width: @breakpoint-lg) {
+        @media (min-width: @breakpoint-lg) {
             padding-top: @ffe-grid-gutter-lg;
         }
     }
@@ -252,7 +252,7 @@
     max-width: 100%;
     padding: 0 (@ffe-grid-gutter-sm / 2) @ffe-grid-gutter-sm;
 
-    @media only screen and (min-width: @breakpoint-lg) {
+    @media (min-width: @breakpoint-lg) {
         padding: 0 (@ffe-grid-gutter-lg / 2) @ffe-grid-gutter-lg;
     }
 
@@ -260,7 +260,7 @@
         padding: 0 (@ffe-condensed-grid-gutter-sm / 2)
             @ffe-condensed-grid-gutter-sm;
 
-        @media only screen and (min-width: @breakpoint-lg) {
+        @media (min-width: @breakpoint-lg) {
             padding: 0 (@ffe-condensed-grid-gutter-lg / 2)
                 @ffe-condensed-grid-gutter-lg;
         }
@@ -271,7 +271,7 @@
     }
 }
 [class*='ffe-grid__col--bg-'] {
-    @media only screen and (min-width: @breakpoint-lg) {
+    @media (min-width: @breakpoint-lg) {
         position: relative;
 
         &::before,
@@ -439,7 +439,7 @@
 
 .create-column(sm, 12);
 
-@media only screen and (min-width: @breakpoint-md) {
+@media (min-width: @breakpoint-md) {
     .create-column(md, 12);
 
     .ffe-grid__col--md-offset-0 {
@@ -447,7 +447,7 @@
     }
 }
 
-@media only screen and (min-width: @breakpoint-lg) {
+@media (min-width: @breakpoint-lg) {
     .create-column(lg, 12);
 
     .ffe-grid__col--lg-offset-0 {
@@ -455,7 +455,7 @@
     }
 }
 
-@media only screen and (min-width: @breakpoint-xl) {
+@media (min-width: @breakpoint-xl) {
     .create-column(xl, 12);
 
     .ffe-grid__col--xl-offset-0 {
