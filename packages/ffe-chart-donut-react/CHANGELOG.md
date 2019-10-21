@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@3.0.0...@sb1/ffe-chart-donut-react@3.0.1) (2019-10-21)
+
+### Bug Fixes
+
+-   **ffe-chart-donut-react:** Remove screen type from media queries, see [#719](https://github.com/SpareBank1/designsystem/issues/719) ([1bf3c5b](https://github.com/SpareBank1/designsystem/commit/1bf3c5bc37d8aca7ea9c459eaccf23c88d80db1b))
+
 # [3.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@2.0.9...@sb1/ffe-chart-donut-react@3.0.0) (2019-08-27)
 
 ### chore

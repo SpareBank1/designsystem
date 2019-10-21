@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.4...@sb1/ffe-details-list-react@3.0.5) (2019-10-21)
+
+### Bug Fixes
+
+-   **ffe-details-list-react:** Remove screen type from media queries, see [#719](https://github.com/SpareBank1/designsystem/issues/719) ([a2447f7](https://github.com/SpareBank1/designsystem/commit/a2447f7cec7f7393bd4f188294faf2fb1dffa54e))
+
 ## [3.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.3...@sb1/ffe-details-list-react@3.0.4) (2019-10-16)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react

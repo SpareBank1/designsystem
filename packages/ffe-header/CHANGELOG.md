@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [11.2.21](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@11.2.20...@sb1/ffe-header@11.2.21) (2019-10-21)
+
+### Bug Fixes
+
+-   **ffe-header:** Remove screen type from media queries, see [#719](https://github.com/SpareBank1/designsystem/issues/719) ([1206ea0](https://github.com/SpareBank1/designsystem/commit/1206ea0ba1b5ecf910e90607b7777ba5bd19601b))
+
 ## [11.2.20](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@11.2.19...@sb1/ffe-header@11.2.20) (2019-10-16)
 
 **Note:** Version bump only for package @sb1/ffe-header

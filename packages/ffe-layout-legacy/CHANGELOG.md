@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-layout-legacy@1.0.4...@sb1/ffe-layout-legacy@1.0.5) (2019-10-21)
+
+### Bug Fixes
+
+-   **ffe-layout-legacy:** Remove screen type from media queries, see [#719](https://github.com/SpareBank1/designsystem/issues/719) ([00ca0ad](https://github.com/SpareBank1/designsystem/commit/00ca0adb15a7fb4e8d61776633e4e8b8e63014d3))
+
 ## [1.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-layout-legacy@1.0.3...@sb1/ffe-layout-legacy@1.0.4) (2019-10-16)
 
 **Note:** Version bump only for package @sb1/ffe-layout-legacy

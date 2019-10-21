@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.2.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@8.2.4...@sb1/ffe-buttons@8.2.5) (2019-10-21)
+
+### Bug Fixes
+
+-   **ffe-buttons:** Remove screen type from media queries, see [#719](https://github.com/SpareBank1/designsystem/issues/719) ([cad4e8a](https://github.com/SpareBank1/designsystem/commit/cad4e8a2022f77b888f984383f601f3bf1ff2d70))
+
 ## [8.2.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@8.2.3...@sb1/ffe-buttons@8.2.4) (2019-10-16)
 
 **Note:** Version bump only for package @sb1/ffe-buttons

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [15.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@15.2.0...@sb1/ffe-core@15.2.1) (2019-10-21)
+
+### Bug Fixes
+
+-   **ffe-core:** Remove screen type from media queries, see [#719](https://github.com/SpareBank1/designsystem/issues/719) ([26df98b](https://github.com/SpareBank1/designsystem/commit/26df98bdd9de5cd7007e3ec187762534b43bd416))
+
 # [15.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@15.1.0...@sb1/ffe-core@15.2.0) (2019-10-14)
 
 ### Features

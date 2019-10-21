@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.2.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@10.2.3...@sb1/ffe-grid@10.2.4) (2019-10-21)
+
+### Bug Fixes
+
+-   **ffe-grid:** Remove screen type from media queries, see [#719](https://github.com/SpareBank1/designsystem/issues/719) ([5feb6f3](https://github.com/SpareBank1/designsystem/commit/5feb6f3ed5d41539e44531550be523a7e20a4b51))
+
 ## [10.2.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@10.2.2...@sb1/ffe-grid@10.2.3) (2019-10-16)
 
 **Note:** Version bump only for package @sb1/ffe-grid

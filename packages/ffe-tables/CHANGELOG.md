@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.0.26](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@9.0.25...@sb1/ffe-tables@9.0.26) (2019-10-21)
+
+### Bug Fixes
+
+-   **ffe-tables:** Remove screen type from media queries, see [#719](https://github.com/SpareBank1/designsystem/issues/719) ([1af6589](https://github.com/SpareBank1/designsystem/commit/1af6589fa3488077e888299bb1002de440d86359))
+
 ## [9.0.25](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@9.0.24...@sb1/ffe-tables@9.0.25) (2019-10-16)
 
 **Note:** Version bump only for package @sb1/ffe-tables

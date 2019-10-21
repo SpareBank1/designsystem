@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.1.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@6.1.8...@sb1/ffe-tabs@6.1.9) (2019-10-21)
+
+### Bug Fixes
+
+-   **ffe-tabs:** Remove screen type from media queries, see [#719](https://github.com/SpareBank1/designsystem/issues/719) ([12671cc](https://github.com/SpareBank1/designsystem/commit/12671cca1b8349f08933f8ee24b9ca7ac247b58a))
+
 ## [6.1.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@6.1.7...@sb1/ffe-tabs@6.1.8) (2019-10-16)
 
 **Note:** Version bump only for package @sb1/ffe-tabs

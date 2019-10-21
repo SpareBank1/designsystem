@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@12.0.3...@sb1/ffe-form@12.0.4) (2019-10-21)
+
+### Bug Fixes
+
+-   **ffe-form:** Remove screen type from media queries, see [#719](https://github.com/SpareBank1/designsystem/issues/719) ([2527897](https://github.com/SpareBank1/designsystem/commit/2527897cfe25a781e94dad57686ab3cdbff0cb00))
+
 ## [12.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@12.0.2...@sb1/ffe-form@12.0.3) (2019-10-16)
 
 **Note:** Version bump only for package @sb1/ffe-form

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@7.0.6...@sb1/ffe-lists@7.0.7) (2019-10-21)
+
+### Bug Fixes
+
+-   **ffe-lists:** Remove screen type from media queries, see [#719](https://github.com/SpareBank1/designsystem/issues/719) ([477ac74](https://github.com/SpareBank1/designsystem/commit/477ac7484a2cd88ea69c2a821035e983fc5de9c3))
+
 ## [7.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@7.0.5...@sb1/ffe-lists@7.0.6) (2019-10-16)
 
 **Note:** Version bump only for package @sb1/ffe-lists

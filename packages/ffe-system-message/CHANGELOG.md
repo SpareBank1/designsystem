@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.29](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@3.0.28...@sb1/ffe-system-message@3.0.29) (2019-10-21)
+
+### Bug Fixes
+
+-   **ffe-system-message:** Remove screen type from media queries, see [#719](https://github.com/SpareBank1/designsystem/issues/719) ([eb070fd](https://github.com/SpareBank1/designsystem/commit/eb070fd7c233f1178698687032046ad54d274d0f))
+
 ## [3.0.28](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@3.0.27...@sb1/ffe-system-message@3.0.28) (2019-10-16)
 
 **Note:** Version bump only for package @sb1/ffe-system-message

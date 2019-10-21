@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@7.0.5...@sb1/ffe-cards@7.0.6) (2019-10-21)
+
+### Bug Fixes
+
+-   **ffe-cards:** Remove screen type from media queries, see [#719](https://github.com/SpareBank1/designsystem/issues/719) ([144f858](https://github.com/SpareBank1/designsystem/commit/144f858ae15a9b0011b4e84a9f449c5628654add))
+
 ## [7.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@7.0.4...@sb1/ffe-cards@7.0.5) (2019-10-16)
 
 **Note:** Version bump only for package @sb1/ffe-cards
