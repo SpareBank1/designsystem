@@ -200,6 +200,25 @@ const { Input } = require('.');
 </InputGroup>;
 ```
 
+Dersom du vil skjule error-meldingen ved endringer, og kun vise den når `InputGroup` mister fokus, sett `hideErrorOnChange` til `true`.
+
+```js
+const { Input } = require('.');
+
+<InputGroup
+    label="Telefonnummer"
+    fieldMessage="Jeg er en feilmelding som forsvinner ved endring"
+    hideErrorOnChange={true}
+>
+    <Input
+        type="tel"
+        name="mobile"
+        onChange={e => console.log('onChange', e.target.value)}
+        onBlur={e => console.log('onBlur', e.target.value)}
+    />
+</InputGroup>;
+```
+
 Utviklere bør merke seg at man er nødt til å bruke det såkalte _function-as-a-child_-patternet med mindre man bare har
 ett child-element til InputGroup. Dette er fordi InputGroup setter properties som ID og liknende på rot-elementet, og
 det forventes at det er et skjemaelement.

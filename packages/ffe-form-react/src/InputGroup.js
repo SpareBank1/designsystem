@@ -9,8 +9,21 @@ import ErrorFieldMessage from './ErrorFieldMessage';
 class InputGroup extends Component {
     constructor(props) {
         super();
+        this.onChange = this.onChange.bind(this);
+        this.onBlur = this.onBlur.bind(this);
+        this.state = {
+            isEditing: false,
+        };
 
         this.id = props.inputId ? props.inputId : `input-${uuid.v4()}`;
+    }
+
+    onChange() {
+        this.setState({ isEditing: true });
+    }
+
+    onBlur() {
+        this.setState({ isEditing: false });
     }
 
     render() {
@@ -25,8 +38,15 @@ class InputGroup extends Component {
             fieldMessage,
             tooltip,
             onTooltipToggle,
+            hideErrorOnChange,
             ...rest
         } = this.props;
+
+        const { isEditing } = this.state;
+
+        const shouldShowError = hideErrorOnChange
+            ? !isEditing && !!fieldMessage
+            : !!fieldMessage;
 
         if (React.Children.count(children) > 1) {
             throw new Error(
@@ -55,7 +75,7 @@ class InputGroup extends Component {
         const extraProps = {
             id: this.id,
             'aria-invalid': String(
-                !!fieldMessage &&
+                shouldShowError &&
                     (typeof fieldMessage === 'string' ||
                         fieldMessage.type === ErrorFieldMessage),
             ),
@@ -66,14 +86,25 @@ class InputGroup extends Component {
                 ? children(extraProps)
                 : React.cloneElement(children, extraProps);
 
+        const error =
+            typeof fieldMessage === 'string' ? (
+                <ErrorFieldMessage element="p">
+                    {fieldMessage}
+                </ErrorFieldMessage>
+            ) : (
+                React.isValidElement(fieldMessage) && fieldMessage
+            );
+
         return (
             <div
                 className={classNames(
                     'ffe-input-group',
                     { 'ffe-input-group--no-extra-margin': !extraMargin },
-                    { 'ffe-input-group--error': !!fieldMessage },
+                    { 'ffe-input-group--error': shouldShowError },
                     className,
                 )}
+                onChange={this.onChange}
+                onBlur={this.onBlur}
                 {...rest}
             >
                 {typeof label === 'string' && (
@@ -96,12 +127,7 @@ class InputGroup extends Component {
 
                 {modifiedChildren}
 
-                {typeof fieldMessage === 'string' && (
-                    <ErrorFieldMessage element="p">
-                        {fieldMessage}
-                    </ErrorFieldMessage>
-                )}
-                {React.isValidElement(fieldMessage) && fieldMessage}
+                {shouldShowError && error}
             </div>
         );
     }
@@ -127,10 +153,12 @@ InputGroup.propTypes = {
     onTooltipToggle: func,
     /** Use the Tooltip component if you need more flexibility in how the content is rendered. */
     tooltip: oneOfType([bool, node]),
+    hideErrorOnChange: bool,
 };
 
 InputGroup.defaultProps = {
     extraMargin: true,
+    hideErrorOnChange: false,
 };
 
 export default InputGroup;

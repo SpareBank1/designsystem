@@ -65,6 +65,24 @@ describe('<InputGroup>', () => {
         expect(wrapper.find(Input).prop('aria-invalid')).toBe('true');
     });
 
+    it('renders error only on blur, and hides it on change when hideErrorOnChange is true', () => {
+        const wrapper = getWrapper({
+            fieldMessage: 'such error',
+            hideErrorOnChange: true,
+        });
+        wrapper.simulate('change', { target: { value: 'im a value' } });
+
+        expect(wrapper.find('ErrorFieldMessage').exists()).toBe(false);
+        expect(wrapper.find(Input).prop('aria-invalid')).toBe('false');
+
+        wrapper.simulate('blur');
+
+        expect(wrapper.find('ErrorFieldMessage').prop('children')).toBe(
+            'such error',
+        );
+        expect(wrapper.find(Input).prop('aria-invalid')).toBe('true');
+    });
+
     it('renders a Label component if passed a label prop', () => {
         const wrapper = getWrapper({ label: <Label>Label text</Label> });
 

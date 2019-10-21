@@ -71,6 +71,7 @@ export interface InputGroupProps extends React.HTMLAttributes<HTMLDivElement> {
     label?: string | Label;
     onTooltipToggle?: (e: React.MouseEvent | undefined) => void;
     tooltip?: React.ReactNode;
+    hideErrorOnChange?: boolean;
 }
 
 export interface TooltipProps extends React.HTMLAttributes<HTMLSpanElement> {
