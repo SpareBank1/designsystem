@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.10.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.9.1...@sb1/ffe-icons@12.10.0) (2019-10-28)
+
+### Features
+
+-   **ffe-icons:** Added hengelas-omriss-ikon ([7ff2ec1](https://github.com/SpareBank1/designsystem/commit/7ff2ec10cc883c00c526c3dc75de7cc1eea65bda))
+-   **ffe-icons:** Added rundt-snakkeboble-ikon ([9885a9e](https://github.com/SpareBank1/designsystem/commit/9885a9e1cf33ecb956015a65e7fe8296f1629e8d))
+
 ## [12.9.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.9.0...@sb1/ffe-icons@12.9.1) (2019-10-03)
 
 **Note:** Version bump only for package @sb1/ffe-icons

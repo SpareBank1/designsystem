@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@12.0.4...@sb1/ffe-form@12.0.5) (2019-10-28)
+
+### Bug Fixes
+
+-   **ffe-form:** Fix vertical alignment of ffe-tooltip ([f3b8dcb](https://github.com/SpareBank1/designsystem/commit/f3b8dcb7a68900674d0d888507e82abd0f9d7448)), closes [#731](https://github.com/SpareBank1/designsystem/issues/731)
+
 ## [12.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@12.0.3...@sb1/ffe-form@12.0.4) (2019-10-21)
 
 ### Bug Fixes
