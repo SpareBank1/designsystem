@@ -4,7 +4,7 @@ const Case = require('case');
 const mkdirp = require('mkdirp');
 
 // These are the files we want to convert to JavaScript
-const FILES_WITH_VARIABLES = ['colors', 'breakpoints'];
+const FILES_WITH_VARIABLES = ['colors', 'breakpoints', 'spacing'];
 
 // First, create the lib directory if it doesn't exist
 mkdirp.sync(path.resolve(__dirname, '..', 'lib'));
@@ -22,9 +22,10 @@ FILES_WITH_VARIABLES.forEach(filename => {
         .split('\n')
         .map(line => line.trim())
         .filter(line => line.startsWith('@') && !line.startsWith('@import'))
-        .map(line => line.replace('@ffe-', ''))
-        .map(line => line.replace('@', ''))
         .map(line => line.split(': '))
+        .filter(([, value]) => !value.includes('@'))
+        .map(([key, value]) => [key.replace('@ffe-', ''), value])
+        .map(([key, value]) => [key.replace('@', ''), value])
         .reduce(
             (allVars, [key, value]) => ({
                 ...allVars,
