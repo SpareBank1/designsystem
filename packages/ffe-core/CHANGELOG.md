@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [15.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@15.2.1...@sb1/ffe-core@15.3.0) (2019-10-31)
+
+### Features
+
+-   **ffe-core:** export spacing to JS ([231555f](https://github.com/SpareBank1/designsystem/commit/231555f4b986d30a085fbd4fd37b60a034e53287))
+
 ## [15.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@15.2.0...@sb1/ffe-core@15.2.1) (2019-10-21)
 
 ### Bug Fixes
