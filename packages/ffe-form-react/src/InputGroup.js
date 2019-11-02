@@ -77,10 +77,15 @@ class InputGroup extends Component {
                 {...rest}
             >
                 {typeof label === 'string' && (
-                    <Label htmlFor={this.id}>{label}</Label>
+                    <Label htmlFor={this.id} id={this.props.labelId}>
+                        {label}
+                    </Label>
                 )}
                 {React.isValidElement(label) &&
-                    React.cloneElement(label, { htmlFor: this.id })}
+                    React.cloneElement(label, {
+                        htmlFor: this.id,
+                        id: this.props.labelId,
+                    })}
 
                 {typeof tooltip === 'string' && (
                     <Tooltip onClick={onTooltipToggle}>{tooltip}</Tooltip>
@@ -110,6 +115,8 @@ class InputGroup extends Component {
 InputGroup.propTypes = {
     /** The id that will be used on the input child if you don't want a generated one */
     inputId: string,
+    /** The id used on the label in this component. Could be necessary if your component needs a aria-labelledby. */
+    labelId: string,
     /** Unless you only have one element in your `InputGroup` you will have to use the function-as-a-child pattern. */
     children: oneOfType([func, node]).isRequired,
     className: string,
