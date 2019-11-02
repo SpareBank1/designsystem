@@ -1,3 +1,1 @@
-import SearchableDropdown from './SearchableDropdown';
-
-export default SearchableDropdown;
+export { default } from './SearchableDropdown';

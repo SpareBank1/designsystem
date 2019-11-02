@@ -1,86 +1,287 @@
-import { shallow } from 'enzyme';
 import React from 'react';
-import { companies } from '../exampleData';
+import { render, fireEvent } from '@testing-library/react';
+
 import SearchableDropdown from './SearchableDropdown';
-import ScrollContainer from './ScrollContainer';
-import Input from './InputField';
-const i = t => t;
 
-const mountDropdownWithProps = props =>
-    shallow(<SearchableDropdown {...props} />);
+describe('SearchableDropdown', () => {
+    const companies = [
+        {
+            organizationName: 'Bedriften',
+            organizationNumber: '912602370',
+            quantityUnprocessedMessages: 5,
+        },
+        {
+            organizationName: 'Sønn & co',
+            organizationNumber: '812602372',
+            quantityUnprocessedMessages: 3,
+        },
+        {
+            organizationName: 'Beslag skytter',
+            organizationNumber: '812602552',
+            quantityUnprocessedMessages: 1,
+        },
+    ];
 
-describe('<SearchableDropdown>', () => {
-    const props = {
-        dropdownList: companies,
-        placeholder: 'Velg',
-        noMatch: 'Søket ga ingen treff',
-        dropdownAttributes: ['companyName'],
-        searchAttributes: ['companyName'],
-        onSelect: i,
-        onInputChange: i,
-        onReset: i,
-        inputValue: '',
-        displayResetWhenInputHasValue: true,
-        label: 'Foo',
-        inputId: 'inputid',
-        errorMessage: '404',
-    };
+    it('should show filtered result', () => {
+        const placeholder = 'placeholder';
+        const { queryByText, getByPlaceholderText, getByText } = render(
+            <SearchableDropdown
+                id="id"
+                labelId="labelId"
+                inputProps={{ placeholder }}
+                dropdownAttributes={['organizationName', 'organizationNumber']}
+                dropdownList={companies}
+                searchAttributes={['organizationName', 'organizationNumber']}
+                locale="nb"
+            />,
+        );
 
-    const setHighlightedIndexSpy = jest.spyOn(
-        SearchableDropdown.prototype,
-        'setHighlightedIndex',
-    );
-    const component = mountDropdownWithProps(props);
+        const input = getByPlaceholderText(placeholder);
 
-    it('errorMessage <div> ', () =>
-        expect(component.find('.ffe-field-error-message')).toHaveLength(1));
+        fireEvent.focus(input);
 
-    it('renders', () =>
-        expect(component.find('.ffe-searchable-dropdown')).toHaveLength(1));
+        expect(getByText('Bedriften')).toBeInTheDocument();
+        expect(getByText('912602370')).toBeInTheDocument();
+        expect(getByText('Sønn & co')).toBeInTheDocument();
+        expect(getByText('812602372')).toBeInTheDocument();
+        expect(getByText('Beslag skytter')).toBeInTheDocument();
+        expect(getByText('812602552')).toBeInTheDocument();
 
-    it('renders <Input>', () => expect(component.find(Input)).toHaveLength(1));
+        fireEvent.change(input, { target: { value: 'Be' } });
 
-    it('renders <label> ', () =>
-        expect(component.find('.ffe-form-label')).toHaveLength(1));
+        expect(getByText('Bedriften')).toBeInTheDocument();
+        expect(getByText('912602370')).toBeInTheDocument();
+        expect(queryByText('Sønn & co')).toBeNull();
+        expect(queryByText('812602372')).toBeNull();
+        expect(getByText('Beslag skytter')).toBeInTheDocument();
+        expect(getByText('812602552')).toBeInTheDocument();
 
-    it('does not render <ScrollContainer> when dropdown is closed', () => {
-        expect(component.state('showListContainer')).toBe(false);
-        expect(component.find(ScrollContainer)).toHaveLength(0);
+        fireEvent.change(input, { target: { value: '8126023' } });
+
+        expect(queryByText('Bedriften')).toBeNull();
+        expect(queryByText('912602370')).toBeNull();
+        expect(getByText('Sønn & co')).toBeInTheDocument();
+        expect(getByText('812602372')).toBeInTheDocument();
+        expect(queryByText('Beslag skytter')).toBeNull();
+        expect(queryByText('812602552')).toBeNull();
     });
 
-    it('renders <ScrollContainer> on click', () => {
-        component.find(Input).prop('onClick')();
-        component.update();
-        expect(component.find(ScrollContainer)).toHaveLength(1);
-        expect(component.state('showListContainer')).toEqual(true);
+    it('should select clicked element', () => {
+        const placeholder = 'placeholder';
+        const onChange = jest.fn();
+        const { getByPlaceholderText, getByText } = render(
+            <SearchableDropdown
+                id="id"
+                labelId="labelId"
+                inputProps={{ placeholder }}
+                dropdownAttributes={['organizationName', 'organizationNumber']}
+                dropdownList={companies}
+                onChange={onChange}
+                searchAttributes={['organizationName', 'organizationNumber']}
+                locale="nb"
+            />,
+        );
+
+        const input = getByPlaceholderText(placeholder);
+        fireEvent.focus(input);
+
+        fireEvent.click(getByText('Bedriften'), { button: 1 });
+
+        expect(onChange).toHaveBeenCalledTimes(1);
+        expect(onChange).toHaveBeenCalledWith(companies[0]);
+        expect(input.value).toEqual('Bedriften');
     });
 
-    it('renders <ScrollContainer> on arrowDown', () => {
-        const arrowDownEvent = { key: 'ArrowDown', preventDefault: i };
-        component.find(Input).prop('onKeyDown')(arrowDownEvent);
-        expect(component.find(ScrollContainer)).toHaveLength(1);
-        expect(component.state('showListContainer')).toEqual(true);
+    it('should be possible to select item with keyboard', () => {
+        const placeholder = 'placeholder';
+        const onChange = jest.fn();
+        const { getByPlaceholderText } = render(
+            <SearchableDropdown
+                id="id"
+                labelId="labelId"
+                inputProps={{ placeholder }}
+                dropdownAttributes={['organizationName', 'organizationNumber']}
+                dropdownList={companies}
+                onChange={onChange}
+                searchAttributes={['organizationName', 'organizationNumber']}
+                locale="nb"
+            />,
+        );
+
+        const input = getByPlaceholderText(placeholder);
+        fireEvent.focus(input);
+
+        fireEvent.keyDown(input, { key: 'ArrowDown' });
+        fireEvent.keyDown(input, { key: 'ArrowDown' });
+        fireEvent.keyDown(input, { key: 'Enter' });
+
+        expect(onChange).toHaveBeenCalledTimes(1);
+        expect(onChange).toHaveBeenCalledWith(companies[1]);
+        expect(input.value).toEqual('Sønn & co');
     });
 
-    describe('keyDown', () => {
-        it('arrowDown', () => {
-            const arrowDownEvent = { key: 'ArrowDown', preventDefault: i };
-            component.find(Input).prop('onKeyDown')(arrowDownEvent);
-            expect(component.state('showListContainer')).toEqual(true);
-            expect(setHighlightedIndexSpy).toHaveBeenCalledWith('DOWN', -1, [
-                { companyName: 'Bedrift 1' },
-                { companyName: 'Bedrift 2' },
-            ]);
+    it('should show "noMatch" values', () => {
+        const noMatchDropDownList = [
+            {
+                organizationName: 'Rør og sånt',
+                organizationNumber: '812602399',
+                quantityUnprocessedMessages: 7,
+            },
+            {
+                organizationName: 'Kaffekoppen',
+                organizationNumber: '812602222',
+                quantityUnprocessedMessages: 8,
+            },
+        ];
+        const noMatchText = 'No result';
+
+        const placeholder = 'placeholder';
+        const { getByPlaceholderText, getByText, queryByText } = render(
+            <SearchableDropdown
+                id="id"
+                labelId="labelId"
+                inputProps={{ placeholder }}
+                dropdownAttributes={['organizationName', 'organizationNumber']}
+                dropdownList={companies}
+                noMatch={{
+                    text: noMatchText,
+                    dropdownList: noMatchDropDownList,
+                }}
+                searchAttributes={['organizationName', 'organizationNumber']}
+                locale="nb"
+            />,
+        );
+
+        const input = getByPlaceholderText(placeholder);
+        fireEvent.focus(input);
+
+        fireEvent.change(input, {
+            target: { value: 'some thing without a match' },
         });
 
-        it('arrowUp', () => {
-            const arrowUpEvent = { key: 'ArrowUp', preventDefault: i };
-            component.find(Input).prop('onKeyDown')(arrowUpEvent);
-            expect(component.state('showListContainer')).toEqual(true);
-            expect(setHighlightedIndexSpy).toHaveBeenCalledWith('UP', -1, [
-                { companyName: 'Bedrift 1' },
-                { companyName: 'Bedrift 2' },
-            ]);
-        });
+        expect(getByText(noMatchText)).toBeInTheDocument();
+        expect(getByText('Rør og sånt')).toBeInTheDocument();
+        expect(getByText('812602399')).toBeInTheDocument();
+        expect(getByText('Kaffekoppen')).toBeInTheDocument();
+        expect(getByText('812602222')).toBeInTheDocument();
+
+        fireEvent.change(input, { target: { value: '' } });
+
+        expect(queryByText(noMatchText)).toBeNull();
+        expect(queryByText('Rør og sånt')).toBeNull();
+        expect(queryByText('812602399')).toBeNull();
+        expect(queryByText('Kaffekoppen')).toBeNull();
+        expect(queryByText('812602222')).toBeNull();
+    });
+
+    it('should have clear button', () => {
+        const placeholder = 'placeholder';
+        const onChange = jest.fn();
+        const { getByPlaceholderText, getByText, getByLabelText } = render(
+            <SearchableDropdown
+                id="id"
+                labelId="labelId"
+                inputProps={{ placeholder }}
+                dropdownAttributes={['organizationName', 'organizationNumber']}
+                dropdownList={companies}
+                onChange={onChange}
+                searchAttributes={['organizationName', 'organizationNumber']}
+                locale="nb"
+            />,
+        );
+
+        const input = getByPlaceholderText(placeholder);
+        fireEvent.focus(input);
+
+        fireEvent.click(getByText('Bedriften'), { button: 1 });
+
+        expect(onChange).toHaveBeenCalledTimes(1);
+        expect(onChange).toHaveBeenLastCalledWith(companies[0]);
+        expect(input.value).toEqual('Bedriften');
+
+        const clearButton = getByLabelText('tøm feltet');
+
+        fireEvent.click(clearButton, { button: 1 });
+
+        expect(onChange).toHaveBeenCalledTimes(2);
+        expect(onChange).toHaveBeenLastCalledWith(null);
+        expect(input.value).toEqual('');
+    });
+
+    it('should render custom elements', () => {
+        /* eslint-disable react/prop-types */
+        const CustomListItemBody = ({ item, isHighlighted }) => {
+            return (
+                <div
+                    data-testid={item.organizationNumber}
+                    data-is-higlighted={isHighlighted}
+                >
+                    {item.organizationName},{item.organizationNumber},
+                    {item.quantityUnprocessedMessages}
+                </div>
+            );
+        };
+        /* eslint-enable react/prop-types */
+
+        const placeholder = 'placeholder';
+        const onChange = jest.fn();
+        const { getByPlaceholderText, getByText, getByTestId } = render(
+            <SearchableDropdown
+                id="id"
+                labelId="labelId"
+                inputProps={{ placeholder }}
+                dropdownAttributes={['organizationName', 'organizationNumber']}
+                dropdownList={companies}
+                onChange={onChange}
+                searchAttributes={['organizationName', 'organizationNumber']}
+                listElementBody={CustomListItemBody}
+                locale="nb"
+            />,
+        );
+
+        const input = getByPlaceholderText(placeholder);
+        fireEvent.focus(input);
+
+        fireEvent.keyDown(input, { key: 'ArrowDown' });
+
+        const listItemBody0 = getByTestId(companies[0].organizationNumber);
+        expect(listItemBody0).toBeInTheDocument();
+        expect(listItemBody0.getAttribute('data-is-higlighted')).toEqual(
+            'true',
+        );
+        expect(getByText('Bedriften,912602370,5')).toBeInTheDocument();
+
+        const listItemBody1 = getByTestId(companies[1].organizationNumber);
+        expect(listItemBody1).toBeInTheDocument();
+        expect(listItemBody1.getAttribute('data-is-higlighted')).toEqual(
+            'false',
+        );
+        expect(getByText('Sønn & co,812602372,3')).toBeInTheDocument();
+
+        const listItemBody2 = getByTestId(companies[2].organizationNumber);
+        expect(listItemBody2).toBeInTheDocument();
+        expect(listItemBody2.getAttribute('data-is-higlighted')).toEqual(
+            'false',
+        );
+        expect(getByText('Beslag skytter,812602552,1')).toBeInTheDocument();
+    });
+
+    it('should use initialValue', () => {
+        const placeholder = 'placeholder';
+        const { getByPlaceholderText } = render(
+            <SearchableDropdown
+                id="id"
+                labelId="labelId"
+                inputProps={{ placeholder }}
+                dropdownAttributes={['organizationName', 'organizationNumber']}
+                dropdownList={companies}
+                initialValue={companies[1]}
+                searchAttributes={['organizationName', 'organizationNumber']}
+                locale="nb"
+            />,
+        );
+
+        const input = getByPlaceholderText(placeholder);
+        expect(input.value).toEqual('Sønn & co');
     });
 });
