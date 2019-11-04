@@ -1,4 +1,4 @@
-import Datepicker from './datepicker';
+import Datepicker from './index';
 
 export { default as DateInput } from './input';
 export { default as Calendar } from './calendar';
