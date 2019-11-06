@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { bool, oneOf, oneOfType, string } from 'prop-types';
+import { bool, oneOf, oneOfType, string, number } from 'prop-types';
 import classNames from 'classnames';
 
 import BaseRadioButton from './BaseRadioButton';
@@ -61,13 +61,13 @@ RadioSwitch.propTypes = {
     /** The label of the choice to the left */
     leftLabel: string.isRequired,
     /** The value of the choice to the left */
-    leftValue: oneOfType([bool, string]).isRequired,
+    leftValue: oneOfType([bool, string, number]).isRequired,
     /** The label of the choice to the right */
     rightLabel: string.isRequired,
     /** The value of the choice to the right */
-    rightValue: oneOfType([bool, string]).isRequired,
+    rightValue: oneOfType([bool, string, number]).isRequired,
     /** The selected value of the radio button set */
-    selectedValue: oneOfType([bool, string]),
+    selectedValue: oneOfType([bool, string, number]),
     /** Condensed modifier. Use in condensed designs */
     condensed: bool,
     /** Dark variant */
