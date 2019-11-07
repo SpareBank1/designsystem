@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@5.0.5...@sb1/ffe-form-react@5.0.6) (2019-11-07)
+
+### Bug Fixes
+
+-   **ffe-form-react:** allow number values in prop types ([cb1c093](https://github.com/SpareBank1/designsystem/commit/cb1c093971599ebf59cab9b2be32e008aa876af2))
+
 ## [5.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@5.0.4...@sb1/ffe-form-react@5.0.5) (2019-10-16)
 
 **Note:** Version bump only for package @sb1/ffe-form-react
