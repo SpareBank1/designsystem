@@ -114,10 +114,10 @@ export interface RadioButtonProps extends WeakInputAttributes {
     labelProps?: object;
     inline?: boolean;
     name: string;
-    selectedValue?: boolean | string;
+    selectedValue?: boolean | string | number;
     tooltip?: string;
     tooltipProps?: TooltipProps;
-    value: boolean | string;
+    value: boolean | string | number;
     dark?: boolean;
 }
 
@@ -132,7 +132,7 @@ export interface RadioButtonInputGroupProps
     label?: string | React.ReactNode;
     name?: string;
     onChange?: React.FormEventHandler<HTMLElement>;
-    selectedValue?: string | boolean;
+    selectedValue?: string | boolean | number;
     tooltip?: string | React.ReactNode;
     dark?: boolean;
 }
@@ -144,11 +144,11 @@ export interface RadioSwitchProps
     className?: string;
     labelProps?: object;
     leftLabel: string;
-    leftValue: boolean | string;
+    leftValue: boolean | string | number;
     rightLabel: string;
-    rightValue: boolean | string;
+    rightValue: boolean | string | number;
     name: string;
-    selectedValue?: boolean | string;
+    selectedValue?: boolean | string | number;
     tooltip?: string;
     tooltipProps?: TooltipProps;
     condensed?: boolean;

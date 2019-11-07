@@ -1,5 +1,5 @@
 import React from 'react';
-import { bool, func, oneOfType, oneOf, node, string } from 'prop-types';
+import { bool, func, oneOfType, oneOf, node, string, number } from 'prop-types';
 import classNames from 'classnames';
 import ErrorFieldMessage from './ErrorFieldMessage';
 import Tooltip from './Tooltip';
@@ -115,7 +115,7 @@ RadioButtonInputGroup.propTypes = {
     /** Change handler, receives value of selected radio button */
     onChange: func,
     /** The currently selected value */
-    selectedValue: oneOfType([bool, string]),
+    selectedValue: oneOfType([bool, string, number]),
     /**
      * String or Tooltip component with further detail about the radio button
      * set
