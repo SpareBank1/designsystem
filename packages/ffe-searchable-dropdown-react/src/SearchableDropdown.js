@@ -1,334 +1,233 @@
-import React, { Component } from 'react';
+import React, { useMemo, useRef } from 'react';
 import {
     string,
-    bool,
-    array,
-    func,
     arrayOf,
-    object,
-    number,
     shape,
-    oneOfType,
+    number,
+    func,
+    bool,
+    object,
+    oneOf,
 } from 'prop-types';
 import classNames from 'classnames';
-import Input from './InputField';
-import ScrollContainer from './ScrollContainer';
-import isRequiredIf from 'react-proptype-conditional-require';
+import Downshift from 'downshift';
+import { Scrollbars } from 'react-custom-scrollbars';
+import isEqual from 'lodash.isequal';
 
-class SearchableDropdown extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            highlightedElementIndex: -1,
-            searchTerm: '',
-            showListContainer: false,
-            scrollId: 'SearchableDropDown',
-        };
+import { KryssIkon } from '@sb1/ffe-icons-react';
+import { Paragraph } from '@sb1/ffe-core-react';
 
-        this.filterList = this.filterList.bind(this);
-        this.onBlur = this.onBlur.bind(this);
-        this.onClick = this.onClick.bind(this);
-        this.onFocus = this.onFocus.bind(this);
-        this.onInputChange = this.onInputChange.bind(this);
-        this.onKeyDown = this.onKeyDown.bind(this);
-        this.onSelect = this.onSelect.bind(this);
-        this.setHighlightedIndex = this.setHighlightedIndex.bind(this);
-        this.onReset = this.onReset.bind(this);
-    }
+import filterDropdownList from './filterDropdownList';
+import ListItemContainer from './ListItemContainer';
+import ListItemBody from './ListItemBody';
+import { locales, getButtonLabel } from './translations';
+import findSelectedItem from './findSelectedItem';
 
-    onClick() {
-        this.setState({ showListContainer: true });
-        if (this.props.isMobilbank) {
-            this.props.scrollToTop(this.state.scrollId);
-        }
-    }
+const SearchableDropdown = ({
+    id,
+    labelId,
+    className,
+    dropdownList,
+    dropdownAttributes,
+    searchAttributes,
+    maxRenderedDropdownElements = Number.MAX_SAFE_INTEGER,
+    initialValue,
+    onChange = Function.prototype,
+    inputProps = {},
+    listElementBody: CustomListItemBody,
+    noMatch = {},
+    dark,
+    locale,
+}) => {
+    const inputEl = useRef(null);
 
-    onFocus() {
-        this.setState({ showListContainer: true });
-        if (this.props.isMobilbank) {
-            this.props.scrollToTop(this.state.scrollId);
-        }
-    }
+    const initialSelectedItem = useMemo(
+        () => dropdownList.find(item => isEqual(initialValue, item)),
+        [dropdownList, initialValue],
+    );
 
-    onBlur() {
-        this.setState({ showListContainer: false });
-        if (this.props.onBlur) {
-            this.props.onBlur();
-        }
-    }
+    const ListItemBodyElement = CustomListItemBody || ListItemBody;
 
-    onReset() {
-        this.setState({
-            searchTerm: '',
-        });
-        this.props.onReset();
-    }
-
-    onInputChange(event) {
-        const searchTerm = event.target.value;
-        this.setState({
-            showListContainer: true,
-            searchTerm,
-            highlightedElementIndex: -1,
-        });
-        this.props.onInputChange(searchTerm);
-    }
-
-    filterList(searchTerm) {
-        let updatedList;
-
-        if (searchTerm) {
-            const { searchAttributes } = this.props;
-            const searchTermLowerCase = searchTerm.toLowerCase().trim();
-
-            updatedList = this.props.dropdownList.filter(listItem => {
-                return searchAttributes.find(attribute =>
-                    listItem[attribute]
-                        .toLowerCase()
-                        .includes(searchTermLowerCase),
-                );
-            });
-        } else {
-            updatedList = this.props.dropdownList;
-        }
-        return updatedList;
-    }
-
-    onSelect(value) {
-        this.setState({
-            showListContainer: false,
-            searchTerm: '',
-            highlightedElementIndex: -1,
-        });
-        this.props.onSelect(value);
-    }
-
-    onKeyDown(event) {
-        const { highlightedElementIndex, searchTerm } = this.state;
-        const filteredList = this.filterList(searchTerm);
-        if (event.key === 'ArrowDown') {
-            event.preventDefault();
-            this.setState({ showListContainer: true });
-            this.setHighlightedIndex(
-                'DOWN',
-                highlightedElementIndex,
-                filteredList,
-            );
-        } else if (event.key === 'ArrowUp') {
-            event.preventDefault();
-            this.setState({ showListContainer: true });
-            this.setHighlightedIndex(
-                'UP',
-                highlightedElementIndex,
-                filteredList,
-            );
-        } else if (event.key === 'Enter') {
-            event.preventDefault();
-            if (highlightedElementIndex === -1) {
-                if (filteredList.length === 1) {
-                    this.onSelect(filteredList[0]);
-                }
-            } else {
-                this.onSelect(filteredList[highlightedElementIndex]);
+    return (
+        <Downshift
+            inputId={id}
+            labelId={labelId}
+            initialSelectedItem={
+                initialSelectedItem
+                    ? initialSelectedItem[dropdownAttributes[0]]
+                    : null
             }
-        } else if (event.key === 'Escape') {
-            this.onReset();
-        }
-    }
-
-    setHighlightedIndex(direction, highlightedElementIndex, filteredList) {
-        const filteredListLength = filteredList.length;
-        if (this.scrollContainer) {
-            if (direction === 'DOWN') {
-                const nextHighlightedIndex =
-                    highlightedElementIndex === filteredListLength - 1
-                        ? 0
-                        : highlightedElementIndex + 1;
-                this.setState({
-                    highlightedElementIndex: nextHighlightedIndex,
-                });
-
-                if (highlightedElementIndex === -1) {
-                    return;
-                }
-                if (nextHighlightedIndex === 0) {
-                    this.scrollContainer.setScrollPosStart();
-                    return;
-                }
-                this.scrollContainer.setScrollPosNext();
+            onChange={value =>
+                onChange(
+                    findSelectedItem(value, dropdownList, dropdownAttributes),
+                )
             }
+        >
+            {({
+                getInputProps,
+                getItemProps,
+                getMenuProps,
+                isOpen,
+                inputValue,
+                highlightedIndex,
+                selectedItem,
+                openMenu,
+                reset,
+                selectItem,
+            }) => {
+                const dropdownListFiltered = filterDropdownList(
+                    dropdownList,
+                    searchAttributes,
+                    inputValue,
+                ).slice(0, maxRenderedDropdownElements);
 
-            if (direction === 'UP') {
-                const nextHighlightedIndex =
-                    highlightedElementIndex === 0 ||
-                    highlightedElementIndex === -1
-                        ? filteredListLength - 1
-                        : highlightedElementIndex - 1;
-                this.setState({
-                    highlightedElementIndex: nextHighlightedIndex,
-                });
+                const listToRender = dropdownListFiltered.length
+                    ? dropdownListFiltered
+                    : noMatch.dropdownList || [];
 
-                if (nextHighlightedIndex === filteredListLength - 1) {
-                    if (this.state.showListContainer === true) {
-                        this.scrollContainer.setScrollPosEnd();
-                    }
-                    return;
-                }
-                this.scrollContainer.setScrollPosPrevious();
-            }
-        }
-    }
-
-    render() {
-        const {
-            dropdownAttributes,
-            noMatch,
-            placeholder,
-            renderDropdownElement,
-            label,
-            errorMessage,
-            inputId,
-            inputValue,
-            ariaInvalid,
-            displayResetWhenInputHasValue,
-            maxRenderedDropdownElements,
-            dark,
-        } = this.props;
-        const {
-            highlightedElementIndex,
-            showListContainer,
-            searchTerm,
-        } = this.state;
-        const filteredList = this.filterList(searchTerm);
-
-        return (
-            <div
-                className={classNames(this.props.className)}
-                id={this.state.scrollId}
-            >
-                {label ? (
-                    // eslint-disable-next-line jsx-a11y/label-has-for
-                    <label
+                return (
+                    <div
                         className={classNames(
-                            'ffe-form-label',
-                            'ffe-form-label--block',
-                            { 'ffe-form-label--dark': dark },
+                            className,
+                            'ffe-searchable-dropdown',
+                            {
+                                'ffe-searchable-dropdown--expanded':
+                                    isOpen || selectedItem,
+                                'ffe-searchable-dropdown--dark': dark,
+                            },
                         )}
-                        htmlFor={inputId}
                     >
-                        {label}
-                    </label>
-                ) : null}
-                <div
-                    className={classNames(
-                        'ffe-searchable-dropdown',
-                        { 'ffe-searchable-dropdown--dark': dark },
-                    )}
-                >
-                    <Input
-                        displayResetWhenInputHasValue={
-                            displayResetWhenInputHasValue
-                        }
-                        onBlur={this.onBlur}
-                        onInputChange={this.onInputChange}
-                        onClick={this.onClick}
-                        onFocus={this.onFocus}
-                        onKeyDown={this.onKeyDown}
-                        placeholder={placeholder}
-                        inputId={inputId}
-                        inputValue={inputValue}
-                        onReset={this.onReset}
-                        searchTerm={searchTerm}
-                        ariaInvalid={ariaInvalid}
-                        autoComplete="off"
-                        dark={dark}
-                    />
-                    {showListContainer && (
-                        <ScrollContainer
-                            ref={scrollContainer => {
-                                this.scrollContainer = scrollContainer;
-                            }}
-                            dropdownAttributes={dropdownAttributes}
-                            dropdownList={filteredList}
-                            maxRenderedDropdownElements={
-                                maxRenderedDropdownElements
-                            }
-                            highlightedIndex={highlightedElementIndex}
-                            noMatch={noMatch}
-                            onSelect={this.onSelect}
-                            renderDropdownElement={renderDropdownElement}
-                            dark={dark}
+                        <input
+                            ref={inputEl}
+                            {...getInputProps({
+                                className: 'ffe-dropdown',
+                                ...inputProps,
+                                onFocus:
+                                    typeof inputProps.onFocus === 'function'
+                                        ? e => {
+                                              openMenu();
+                                              inputProps.onFocus(e);
+                                          }
+                                        : openMenu,
+                            })}
                         />
-                    )}
-                </div>
-                {errorMessage && (
-                    <div className="ffe-field-error-message">
-                        {errorMessage}
+                        {(selectedItem || isOpen) && (
+                            <button
+                                aria-label={getButtonLabel(locale)}
+                                tabIndex={selectedItem ? 0 : -1}
+                                className="ffe-searchable-dropdown__button"
+                                onClick={() => {
+                                    selectItem(null);
+                                    reset();
+                                    inputEl.current.focus();
+                                }}
+                            >
+                                <KryssIkon />
+                            </button>
+                        )}
+                        <div
+                            className={classNames(
+                                'ffe-searchable-dropdown__list',
+                                {
+                                    'ffe-searchable-dropdown__list--open': isOpen,
+                                },
+                            )}
+                        >
+                            <Scrollbars
+                                {...getMenuProps()}
+                                autoHeight={true}
+                                autoHeightMax={300}
+                            >
+                                {!dropdownListFiltered.length && noMatch.text && (
+                                    <div className="ffe-searchable-dropdown__no-match">
+                                        <Paragraph>{noMatch.text}</Paragraph>
+                                    </div>
+                                )}
+                                {isOpen &&
+                                    listToRender.map((item, index) => {
+                                        return (
+                                            <ListItemContainer
+                                                key={
+                                                    item[dropdownAttributes[0]]
+                                                }
+                                                dropdownAttributes={
+                                                    dropdownAttributes
+                                                }
+                                                getItemProps={getItemProps}
+                                                isHighlighted={
+                                                    index === highlightedIndex
+                                                }
+                                                item={item}
+                                            >
+                                                {props => {
+                                                    return (
+                                                        <ListItemBodyElement
+                                                            {...props}
+                                                            dropdownAttributes={
+                                                                dropdownAttributes
+                                                            }
+                                                        />
+                                                    );
+                                                }}
+                                            </ListItemContainer>
+                                        );
+                                    })}
+                            </Scrollbars>
+                        </div>
                     </div>
-                )}
-            </div>
-        );
-    }
-}
-
-SearchableDropdown.propTypes = {
-    /** Display reset when input has value */
-    displayResetWhenInputHasValue: bool,
-    /** List of objects to be displayed in dropdown */
-    dropdownList: arrayOf(object).isRequired,
-    /** Array of up to 2 attributes to be displayed in list item else use custom option */
-    dropdownAttributes: array,
-    /** Initial selected value/value in input field  */
-    initialInputValue: string,
-    /** Label above dropdown */
-    label: string,
-    /** Id attribute on the input element */
-    inputId: isRequiredIf(string, props => props.label),
-    /** Value of input field */
-    inputValue: string,
-    noMatch: oneOfType([
-        /** value to be displayed in dropdown in case of search with no match */
-        string,
-        /** or value to be display along another list of items */
-        shape({
-            text: string.isRequired,
-            items: array,
-        }),
-    ]).isRequired,
-    /** Function receives value of inputField and should update inputValue */
-    onInputChange: func.isRequired,
-    /** Function receives no input expects no return */
-    onBlur: func,
-    /** Function receives selected object, should update inputValue */
-    onSelect: func.isRequired,
-    /** Function gets no input, should update inputValue */
-    onReset: func.isRequired,
-    /** Placeholder for input field when empty */
-    placeholder: string,
-    /** If you want custom input element. Function is called with object from dropdownList */
-    renderDropdownElement: func,
-    /** Limits number of rendered dropdown elements */
-    maxRenderedDropdownElements: number,
-    /** Array of attributes used when filtering search */
-    searchAttributes: array.isRequired,
-    /**Aria invalid*/
-    ariaInvalid: bool,
-    /** css class for main div searchableDropdown */
-    className: string,
-    /** Error message */
-    errorMessage: string,
-    /** Adjust user view if mobilbank */
-    isMobilbank: bool,
-    /** Dictates behvaiour if mobilbank */
-    scrollToTop: isRequiredIf(func, props => props.isMobilbank),
-    /** Dark variant */
-    dark: bool,
+                );
+            }}
+        </Downshift>
+    );
 };
 
-SearchableDropdown.defaultProps = {
-    displayResetWhenInputHasValue: false,
-    ariaInvalid: false,
-    dark: false,
+SearchableDropdown.propTypes = {
+    /** Id of drop down */
+    id: string.isRequired,
+
+    /** Id of label */
+    labelId: string.isRequired,
+
+    /** Extra class */
+    className: string,
+
+    /** List of objects to be displayed in dropdown */
+    dropdownList: arrayOf(object).isRequired,
+
+    /** Array of attributes to be displayed in list */
+    dropdownAttributes: arrayOf(string).isRequired,
+
+    /** Array of attributes used when filtering search */
+    searchAttributes: arrayOf(string).isRequired,
+
+    /** Props used on input field */
+    inputProps: shape({
+        onFocus: func,
+    }),
+
+    /** One of the elements from dropdownList to be used as default value */
+    initialValue: object,
+
+    /** Limits number of rendered dropdown elements */
+    maxRenderedDropdownElements: number,
+
+    /** Called when a value is selected */
+    onChange: func,
+
+    /** Dark variant */
+    dark: bool,
+
+    /** Custom element to use for each item in dropDownList */
+    listElementBody: func,
+
+    /** Message and a dropdownList to use when no match */
+    noMatch: shape({
+        text: string.isRequired,
+        dropdownList: arrayOf(object),
+    }),
+
+    /** Locale to use for translations */
+    locale: oneOf(Object.values(locales)),
 };
 
 export default SearchableDropdown;
