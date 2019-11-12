@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@7.0.3...@sb1/ffe-searchable-dropdown-react@8.0.0) (2019-11-12)
+
+### Features
+
+-   **ffe-searchable-dropdown-react:** downshift implmentation ([33085b6](https://github.com/SpareBank1/designsystem/commit/33085b656c2b88f81dd9fd9bbb3d665c0345f62f))
+
+### BREAKING CHANGES
+
+-   **ffe-searchable-dropdown-react:** New API for this component. Now plays good togheter
+    with InputGroup instead of having its own label and error messages. This
+    component hade som accesibilty issues that also should have been
+    improved.
+
 ## [7.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@7.0.2...@sb1/ffe-searchable-dropdown-react@7.0.3) (2019-10-28)
 
 **Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@5.0.6...@sb1/ffe-form-react@5.1.0) (2019-11-12)
+
+### Features
+
+-   **ffe-form-react:** possible to add label id to input groups ([18ae5c2](https://github.com/SpareBank1/designsystem/commit/18ae5c2c4899eaeb8c0818bab8326956d86a7dc6))
+
 ## [5.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@5.0.5...@sb1/ffe-form-react@5.0.6) (2019-11-07)
 
 ### Bug Fixes
