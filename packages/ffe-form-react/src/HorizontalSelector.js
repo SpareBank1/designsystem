@@ -4,14 +4,16 @@ import { array, object, string, func } from 'prop-types';
 
 const HorizontalSelector = ({
     options,
-    selected,
+    initialSelected,
     label,
     description,
     onChange,
     field,
     ...rest
 }) => {
-    const [selectedValue, setSelectedValue] = useState(Number(selected.value));
+    const [selectedValue, setSelectedValue] = useState(
+        Number(initialSelected.value),
+    );
 
     const optionSelected = value => {
         setSelectedValue(value);
@@ -51,8 +53,8 @@ const HorizontalSelector = ({
 HorizontalSelector.propTypes = {
     /** Options are select options available. It expects a label and a value string. */
     options: array.isRequired,
-    /** Selected is the option selected, and set the initial selected option. */
-    selected: object.isRequired,
+    /** initialSelected is the starting selected option. */
+    initialSelected: object.isRequired,
     /** This is the label for the selector component as a whole */
     label: string.isRequired,
     /** This is an optional for the selector component as a whole */
