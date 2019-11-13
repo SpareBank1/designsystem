@@ -25,7 +25,7 @@ const options = [
 ];
 <HorizontalSelector
     options={options}
-    selected={options[0]}
+    initialSelected={options[0]}
     label={'Antall barn'}
     description={'Velg hvor mange barn du har'}
     onChange={(field, value) => {
