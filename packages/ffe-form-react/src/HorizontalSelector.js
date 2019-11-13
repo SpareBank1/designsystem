@@ -9,6 +9,7 @@ const HorizontalSelector = ({
     description,
     onChange,
     field,
+    ...rest
 }) => {
     const [selectedValue, setSelectedValue] = useState(Number(selected.value));
 
@@ -18,7 +19,7 @@ const HorizontalSelector = ({
     };
 
     return (
-        <div className={'ffe-input-group'}>
+        <div className={'ffe-input-group'} {...rest}>
             {label && <label className={'ffe-form-label'}>{label}</label>}
             {description && (
                 <div className={'ffe-small-text'}>{description}</div>
@@ -28,7 +29,7 @@ const HorizontalSelector = ({
                     const isSelected = option.value === selectedValue;
                     const optionClassName = `horizontal-selector-option ${
                         isSelected ? 'horizontal-selector-selected' : ''
-                    }`;
+                    } horizontal-selector-option--text-center`;
                     return (
                         <label key={option.value} className={optionClassName}>
                             <input

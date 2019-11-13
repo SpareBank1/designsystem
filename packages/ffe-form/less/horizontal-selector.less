@@ -5,7 +5,6 @@
     label.horizontal-selector-option {
         min-width: 46px;
         margin: 0px;
-        text-align: center;
         line-height: 41px;
         font-family: 'MuseoSansRounded-500', arial, sans-serif;
         cursor: pointer;
@@ -18,20 +17,23 @@
             width: 0 !important;
             -moz-appearance: none;
         }
-        &:first-child {
-            border-radius: 25px 0px 0px 25px;
+        &--text-center {
+            text-align: center;
         }
-        &:last-child {
-            border-radius: 0px 25px 25px 0px;
-            border: 2px solid @ffe-grey-silver;
-        }
-        &.horizontal-selector-selected {
-            background-color: @ffe-blue-royal;
-            border: 2px solid @ffe-blue-azure;
-            color: @ffe-white;
-            &.horizontal-selector-selected:focus-within {
-                box-shadow: 0 0 0 1px @ffe-white, 0 0 0 4px @ffe-blue-focus;
-            }
-        }
+    }
+    .horizontal-selector-option:first-child {
+        border-radius: 25px 0px 0px 25px;
+    }
+    .horizontal-selector-option:last-child {
+        border-radius: 0px 25px 25px 0px;
+        border: 2px solid @ffe-grey-silver;
+    }
+    .horizontal-selector-selected {
+        background-color: @ffe-blue-royal;
+        border: 2px solid @ffe-blue-azure;
+        color: @ffe-white;
+    }
+    .horizontal-selector-selected:focus-within {
+        box-shadow: 0 0 0 1px @ffe-white, 0 0 0 4px @ffe-blue-focus;
     }
 }

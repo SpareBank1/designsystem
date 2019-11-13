@@ -41,7 +41,7 @@ const getWrapper = () => {
 describe('<HorizontalSelector>', () => {
     const optionClassName = 'horizontal-selector-option';
     const elementByCSS = `.${optionClassName}`;
-    const selectedClassName = `${optionClassName} horizontal-selector-selected`;
+    const selectedClassName = `${optionClassName} horizontal-selector-selected horizontal-selector-option--text-center`;
     it('renders the appropriate number options', () => {
         const wrapper = getWrapper();
         expect(wrapper.exists()).toBe(true);
