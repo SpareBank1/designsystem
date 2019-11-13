@@ -1,0 +1,37 @@
+.horizontal-selector {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    label.horizontal-selector-option {
+        min-width: 46px;
+        margin: 0px;
+        text-align: center;
+        line-height: 41px;
+        font-family: 'MuseoSansRounded-500', arial, sans-serif;
+        cursor: pointer;
+        border: 2px solid @ffe-grey-silver;
+        border-right: none;
+        transition: @ffe-transition-duration;
+        input {
+            opacity: 0;
+            float: left;
+            width: 0 !important;
+            -moz-appearance: none;
+        }
+        &:first-child {
+            border-radius: 25px 0px 0px 25px;
+        }
+        &:last-child {
+            border-radius: 0px 25px 25px 0px;
+            border: 2px solid @ffe-grey-silver;
+        }
+        &.horizontal-selector-selected {
+            background-color: @ffe-blue-royal;
+            border: 2px solid @ffe-blue-azure;
+            color: @ffe-white;
+            &.horizontal-selector-selected:focus-within {
+                box-shadow: 0 0 0 1px @ffe-white, 0 0 0 4px @ffe-blue-focus;
+            }
+        }
+    }
+}
