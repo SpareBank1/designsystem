@@ -1,6 +1,5 @@
 import React from 'react';
 import { mount } from 'enzyme';
-// import jest from 'jest';
 import HorizontalSelector from './HorizontalSelector';
 
 const options = [
@@ -44,15 +43,12 @@ describe('<HorizontalSelector>', () => {
     const selectedClassName = `${optionClassName} horizontal-selector-selected horizontal-selector-option--text-center`;
     it('renders the appropriate number options', () => {
         const wrapper = getWrapper();
-        expect(wrapper.exists()).toBe(true);
         expect(wrapper.find('.horizontal-selector').find('label').length).toBe(
             options.length,
-        ); // hasClass('ffe-field-error-message')).toBe(true);
+        );
     });
     it('sets the correct selected option when clicked', () => {
         const wrapper = getWrapper();
-        expect(wrapper.exists()).toBe(true);
-
         let initialSelectedElement = wrapper.find(elementByCSS).at(0);
         expect(initialSelectedElement.hasClass(selectedClassName)).toBe(true);
 
@@ -76,7 +72,6 @@ describe('<HorizontalSelector>', () => {
                 field={'antallbarn'}
             />,
         );
-        expect(wrapper.exists()).toBe(true);
 
         const element = wrapper.find(elementByCSS).at(3);
         element.find('input').simulate('click');
