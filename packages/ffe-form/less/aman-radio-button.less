@@ -1,0 +1,21 @@
+.aman-radio-button {
+    display: inline-flex;
+    background: red;
+    height: 48px;
+    align-items: center;
+    padding: 0 24px;
+    cursor: pointer;
+
+    &:first-of-type {
+        border-radius: 24px 0 0 24px;
+    }
+
+    &:last-of-type {
+        border-radius: 0 24px 24px 0;
+    }
+}
+
+.ffe-radio-input:checked + .aman-radio-button {
+    background: blue;
+    color: white;
+}
