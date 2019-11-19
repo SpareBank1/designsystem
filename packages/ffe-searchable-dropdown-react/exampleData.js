@@ -7,7 +7,7 @@ exports.companiesWithMessageCount = [
         quantityUnprocessedMessages: 5,
     },
     {
-        organizationName: ' Sønn & co',
+        organizationName: 'Sønn & co',
         organizationNumber: '812602372',
         quantityUnprocessedMessages: 3,
     },

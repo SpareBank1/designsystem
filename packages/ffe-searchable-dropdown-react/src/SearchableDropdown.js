@@ -139,11 +139,15 @@ const SearchableDropdown = ({
                                 autoHeight={true}
                                 autoHeightMax={300}
                             >
-                                {!dropdownListFiltered.length && noMatch.text && (
-                                    <div className="ffe-searchable-dropdown__no-match">
-                                        <Paragraph>{noMatch.text}</Paragraph>
-                                    </div>
-                                )}
+                                {!dropdownListFiltered.length &&
+                                    noMatch.text &&
+                                    isOpen && (
+                                        <div className="ffe-searchable-dropdown__no-match">
+                                            <Paragraph>
+                                                {noMatch.text}
+                                            </Paragraph>
+                                        </div>
+                                    )}
                                 {isOpen &&
                                     listToRender.map((item, index) => {
                                         return (
