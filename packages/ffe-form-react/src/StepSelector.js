@@ -3,15 +3,7 @@ import classNames from 'classnames';
 
 import RadioButtonInputGroup from './RadioButtonInputGroup';
 import RadioButton from './RadioButton';
-import {
-    arrayOf,
-    string,
-    shape,
-    object,
-    array,
-    func,
-    number,
-} from 'prop-types';
+import { arrayOf, string, shape, func, number } from 'prop-types';
 
 const StepSelector = ({
     name,
@@ -40,8 +32,12 @@ const StepSelector = ({
             selectedValue={selectedValue}
         >
             {inputProps => (
-                <div className="ffe-step-selector">
-                    {options.map(option => {
+                <div
+                    className="ffe-step-selector"
+                    id="ffe-step-selector-container"
+                    role="ffe-step-selector-container"
+                >
+                    {options.map((option, i) => {
                         const isSelected = option.value === selectedValue;
                         const optionClassName = classNames(
                             'ffe-step-selector-option',
@@ -55,6 +51,7 @@ const StepSelector = ({
                                 key={option.value}
                                 value={option.value}
                                 className={optionClassName}
+                                tabIndex={i}
                             >
                                 {option.label}
                             </RadioButton>

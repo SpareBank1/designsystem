@@ -22,16 +22,15 @@
     border-radius: 0 @ffe-spacing-md @ffe-spacing-md 0px;
     border: (@ffe-spacing-2xs / 2) solid @ffe-grey-silver;
 }
-.ffe-step-selector-option:checked {
-    background: red;
-}
-.ffe-step-selector-option-selected {
+.ffe-radio-input:checked + label {
     background-color: @ffe-blue-royal;
     border: (@ffe-spacing-2xs / 2) solid @ffe-blue-azure;
     color: @ffe-white;
 }
-.ffe-step-selector-option-selected:focus-within {
+.ffe-radio-input:checked + label:focus-within,
+.ffe-radio-input:checked + label:focus {
     box-shadow: 0 0 0 1px @ffe-white, 0 0 0 @ffe-spacing-2xs @ffe-blue-focus;
+    outline: none;
 }
 .ffe-step-selector-option::before {
     content: unset;
