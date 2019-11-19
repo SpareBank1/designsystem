@@ -113,6 +113,7 @@ const SearchableDropdown = ({
                         />
                         {(selectedItem || isOpen) && (
                             <button
+                                type="button"
                                 aria-label={getButtonLabel(locale)}
                                 tabIndex={selectedItem ? 0 : -1}
                                 className="ffe-searchable-dropdown__button"
