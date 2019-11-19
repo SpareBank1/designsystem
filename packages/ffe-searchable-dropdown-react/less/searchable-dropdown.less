@@ -1,8 +1,10 @@
 .ffe-searchable-dropdown {
     position: relative;
+    @button-width: 40px;
 
     &--expanded .ffe-dropdown {
         background-image: none;
+        padding-right: calc(@button-width + 3px);
     }
 
     &__list {
@@ -60,7 +62,7 @@
         top: 0;
         right: 0;
         border: none;
-        width: 40px;
+        width: @button-width;
         padding: 0;
         box-shadow: none;
         outline: none;

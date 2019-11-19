@@ -9,7 +9,6 @@ import ErrorFieldMessage from './ErrorFieldMessage';
 class InputGroup extends Component {
     constructor(props) {
         super();
-
         this.id = props.inputId ? props.inputId : `input-${uuid.v4()}`;
     }
 
@@ -25,6 +24,7 @@ class InputGroup extends Component {
             fieldMessage,
             tooltip,
             onTooltipToggle,
+            labelId,
             ...rest
         } = this.props;
 
@@ -77,14 +77,15 @@ class InputGroup extends Component {
                 {...rest}
             >
                 {typeof label === 'string' && (
-                    <Label htmlFor={this.id} id={this.props.labelId}>
+                    <Label htmlFor={this.id} id={labelId}>
                         {label}
                     </Label>
                 )}
+
                 {React.isValidElement(label) &&
                     React.cloneElement(label, {
                         htmlFor: this.id,
-                        id: this.props.labelId,
+                        id: labelId,
                     })}
 
                 {typeof tooltip === 'string' && (
