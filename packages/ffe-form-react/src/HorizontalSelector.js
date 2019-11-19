@@ -4,6 +4,7 @@ import { array, object, string, func } from 'prop-types';
 import classNames from 'classnames';
 
 const HorizontalSelector = ({
+    name,
     options,
     initialSelected,
     label,
@@ -35,7 +36,7 @@ const HorizontalSelector = ({
                         <label key={option.value} className={optionClassName}>
                             <input
                                 type="radio"
-                                name={option.label}
+                                name={name}
                                 value={option.value}
                                 defaultChecked={isSelected}
                                 onClick={() => optionSelected(option.value)}
@@ -50,6 +51,8 @@ const HorizontalSelector = ({
 };
 
 HorizontalSelector.propTypes = {
+    /** This is the name each radio input will get */
+    name: string.isRequired,
     /** Options are select options available. It expects a label and a value string. */
     options: array.isRequired,
     /** initialSelected is the starting selected option. */

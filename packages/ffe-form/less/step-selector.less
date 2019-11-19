@@ -1,0 +1,41 @@
+.ffe-step-selector {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.ffe-step-selector-option {
+    min-width: @ffe-spacing-2xl;
+    margin: 0px;
+    border: (@ffe-spacing-2xs / 2) solid @ffe-grey-silver;
+    border-right: none;
+    transition: @ffe-transition-duration;
+    padding: @ffe-spacing;
+    cursor: pointer;
+    &--text-center {
+        text-align: center;
+    }
+}
+.ffe-step-selector-option:nth-child(2) {
+    border-radius: @ffe-spacing-md 0px 0px @ffe-spacing-md;
+}
+.ffe-step-selector-option:last-child {
+    border-radius: 0 @ffe-spacing-md @ffe-spacing-md 0px;
+    border: (@ffe-spacing-2xs / 2) solid @ffe-grey-silver;
+}
+.ffe-step-selector-option:checked {
+    background: red;
+}
+.ffe-step-selector-option-selected {
+    background-color: @ffe-blue-royal;
+    border: (@ffe-spacing-2xs / 2) solid @ffe-blue-azure;
+    color: @ffe-white;
+}
+.ffe-step-selector-option-selected:focus-within {
+    box-shadow: 0 0 0 1px @ffe-white, 0 0 0 @ffe-spacing-2xs @ffe-blue-focus;
+}
+.ffe-step-selector-option::before {
+    content: unset;
+}
+.ffe-step-selector-option::after {
+    content: unset;
+}
