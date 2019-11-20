@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@5.1.0...@sb1/ffe-form-react@5.1.1) (2019-11-20)
+
+### Bug Fixes
+
+-   **ffe-form-react:** spreading labelId on the container causes a warning ([ccb2803](https://github.com/SpareBank1/designsystem/commit/ccb28031a5ce491fe661181453b6d42584d03e42))
+
 # [5.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@5.0.6...@sb1/ffe-form-react@5.1.0) (2019-11-12)
 
 ### Features

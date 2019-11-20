@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.11.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.10.0...@sb1/ffe-icons@12.11.0) (2019-11-20)
+
+### Features
+
+-   **ffe-icons:** added lys-mork-ikon ([ea69364](https://github.com/SpareBank1/designsystem/commit/ea69364b7beb94f52cf8c8477c7d4e3bbb55c1e6))
+
 # [12.10.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.9.1...@sb1/ffe-icons@12.10.0) (2019-10-28)
 
 ### Features

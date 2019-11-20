@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-datepicker-react",
-  "version": "4.2.0",
+  "version": "4.2.1",
   "license": "MIT",
   "files": [
     "lib",
@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "@sb1/ffe-datepicker": "^5.1.4",
-    "@sb1/ffe-icons-react": "^7.0.2",
+    "@sb1/ffe-icons-react": "^7.0.3",
     "classnames": "^2.2.5",
     "prop-types": "^15.6.0",
     "uuid": "^3.1.0"
