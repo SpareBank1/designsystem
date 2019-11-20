@@ -38,6 +38,7 @@ const SearchableDropdown = ({
     noMatch = {},
     dark,
     locale,
+    'aria-invalid': ariaInvalid,
 }) => {
     const inputEl = useRef(null);
 
@@ -110,6 +111,7 @@ const SearchableDropdown = ({
                                           }
                                         : openMenu,
                             })}
+                            aria-invalid={ariaInvalid}
                         />
                         {(selectedItem || isOpen) && (
                             <button
@@ -233,6 +235,9 @@ SearchableDropdown.propTypes = {
 
     /** Locale to use for translations */
     locale: oneOf(Object.values(locales)),
+
+    /** aria-invalid attribute  */
+    'aria-invalid': bool,
 };
 
 export default SearchableDropdown;
