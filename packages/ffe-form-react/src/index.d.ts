@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { isRequiredIf } from 'react-proptype-conditional-require';
 
 export interface CheckboxProps
     extends React.InputHTMLAttributes<HTMLInputElement> {
@@ -68,7 +67,7 @@ export interface InputGroupProps extends React.HTMLAttributes<HTMLDivElement> {
     extraMargin?: boolean;
     fieldMessage?: string | React.ReactNode;
     description?: string;
-    label?: string | Label;
+    label?: string | React.ReactNode;
     onTooltipToggle?: (e: React.MouseEvent | undefined) => void;
     tooltip?: React.ReactNode;
 }
