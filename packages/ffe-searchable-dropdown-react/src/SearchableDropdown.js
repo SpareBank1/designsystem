@@ -8,6 +8,7 @@ import {
     bool,
     object,
     oneOf,
+    oneOfType,
 } from 'prop-types';
 import classNames from 'classnames';
 import Downshift from 'downshift';
@@ -111,7 +112,11 @@ const SearchableDropdown = ({
                                           }
                                         : openMenu,
                             })}
-                            aria-invalid={ariaInvalid}
+                            aria-invalid={
+                                typeof ariaInvalid === 'string'
+                                    ? ariaInvalid
+                                    : String(ariaInvalid)
+                            }
                         />
                         {(selectedItem || isOpen) && (
                             <button
@@ -237,7 +242,7 @@ SearchableDropdown.propTypes = {
     locale: oneOf(Object.values(locales)),
 
     /** aria-invalid attribute  */
-    'aria-invalid': bool,
+    'aria-invalid': oneOfType([string, bool]),
 };
 
 export default SearchableDropdown;
