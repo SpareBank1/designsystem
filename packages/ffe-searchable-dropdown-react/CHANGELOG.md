@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@8.0.1...@sb1/ffe-searchable-dropdown-react@8.0.2) (2019-11-22)
+
+### Bug Fixes
+
+-   **ffe-searchable-dropdown-react:** aria-invalid should be a string ([9a14a59](https://github.com/SpareBank1/designsystem/commit/9a14a5950d43f5b825d917e04512af65df8bb4b1))
+
 ## [8.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@8.0.0...@sb1/ffe-searchable-dropdown-react@8.0.1) (2019-11-20)
 
 ### Bug Fixes
