@@ -51,8 +51,7 @@ const checkValidMdColumns = modifier => {
         )
     ) {
         console.error(`
-            The grid should have 6 columns for "md" screens, please stick to a total of 6 columns.
-            For "md" screensizes this means you need to stick to multiples of 2 for cols+offset.
+            For "md" screensizes, both cols and offset should be multiples of 2.
             Please consult the ffe-grid README.md for details.
 
             You've provided a <GridCol> with md={${JSON.stringify(modifier)}}
@@ -74,8 +73,7 @@ const checkValidSmColumns = modifier => {
         )
     ) {
         console.error(`
-            The grid should have 4 columns for "sm" screens, please stick to a total of 4 columns.
-            For "sm" screensizes this means you need to stick to multiples of 3 for cols+offset.
+            For "sm" screensizes, both cols and offset should be multiples of 3.
             Please consult the ffe-grid README.md for details.
 
             You've provided a <GridCol> with sm={${JSON.stringify(modifier)}}
