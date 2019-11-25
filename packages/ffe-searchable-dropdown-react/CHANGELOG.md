@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@8.0.2...@sb1/ffe-searchable-dropdown-react@8.0.3) (2019-11-25)
+
+### Bug Fixes
+
+-   **ffe-searchable-dropdown-react:** clear button was not working on device ([1cb706e](https://github.com/SpareBank1/designsystem/commit/1cb706ea79d055ba1ecac370c6a362f1d89dc0dd))
+
 ## [8.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@8.0.1...@sb1/ffe-searchable-dropdown-react@8.0.2) (2019-11-22)
 
 ### Bug Fixes
