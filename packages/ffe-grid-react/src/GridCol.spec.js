@@ -301,7 +301,7 @@ describe('GridCol', () => {
 
                 expect(console.error).toHaveBeenCalledTimes(1);
                 expect(console.error.mock.calls[0][0]).toContain(
-                    'The grid should have 6 columns for "md" screens',
+                    'For "md" screensizes, both cols and offset should be multiples of 2',
                 );
             });
 
@@ -310,7 +310,7 @@ describe('GridCol', () => {
 
                 expect(console.error).toHaveBeenCalledTimes(1);
                 expect(console.error.mock.calls[0][0]).toContain(
-                    'The grid should have 6 columns for "md" screens',
+                    'For "md" screensizes, both cols and offset should be multiples of 2',
                 );
             });
 
@@ -319,7 +319,7 @@ describe('GridCol', () => {
 
                 expect(console.error).toHaveBeenCalledTimes(1);
                 expect(console.error.mock.calls[0][0]).toContain(
-                    'The grid should have 4 columns for "sm" screens',
+                    'For "sm" screensizes, both cols and offset should be multiples of 3',
                 );
             });
 
@@ -328,7 +328,7 @@ describe('GridCol', () => {
 
                 expect(console.error).toHaveBeenCalledTimes(1);
                 expect(console.error.mock.calls[0][0]).toContain(
-                    'The grid should have 4 columns for "sm" screens',
+                    'For "sm" screensizes, both cols and offset should be multiples of 3',
                 );
             });
 
