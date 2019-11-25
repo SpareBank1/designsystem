@@ -38,15 +38,6 @@ describe('SearchableDropdown', () => {
 
         const input = getByPlaceholderText(placeholder);
 
-        fireEvent.focus(input);
-
-        expect(getByText('Bedriften')).toBeInTheDocument();
-        expect(getByText('912602370')).toBeInTheDocument();
-        expect(getByText('Sønn & co')).toBeInTheDocument();
-        expect(getByText('812602372')).toBeInTheDocument();
-        expect(getByText('Beslag skytter')).toBeInTheDocument();
-        expect(getByText('812602552')).toBeInTheDocument();
-
         fireEvent.change(input, { target: { value: 'Be' } });
 
         expect(getByText('Bedriften')).toBeInTheDocument();
@@ -83,7 +74,8 @@ describe('SearchableDropdown', () => {
         );
 
         const input = getByPlaceholderText(placeholder);
-        fireEvent.focus(input);
+
+        fireEvent.change(input, { target: { value: 'Be' } });
 
         fireEvent.click(getByText('Bedriften'), { button: 1 });
 
@@ -191,7 +183,7 @@ describe('SearchableDropdown', () => {
         );
 
         const input = getByPlaceholderText(placeholder);
-        fireEvent.focus(input);
+        fireEvent.change(input, { target: { value: 'Be' } });
 
         fireEvent.click(getByText('Bedriften'), { button: 1 });
 
@@ -199,7 +191,7 @@ describe('SearchableDropdown', () => {
         expect(onChange).toHaveBeenLastCalledWith(companies[0]);
         expect(input.value).toEqual('Bedriften');
 
-        const clearButton = getByLabelText('tøm feltet');
+        const clearButton = getByLabelText('fjern valgt');
 
         fireEvent.click(clearButton, { button: 1 });
 
@@ -283,5 +275,40 @@ describe('SearchableDropdown', () => {
 
         const input = getByPlaceholderText(placeholder);
         expect(input.value).toEqual('Sønn & co');
+    });
+
+    it('should open and close', function() {
+        const placeholder = 'placeholder';
+        const { getByLabelText, getByText, queryByText } = render(
+            <SearchableDropdown
+                id="id"
+                labelId="labelId"
+                inputProps={{ placeholder }}
+                dropdownAttributes={['organizationName', 'organizationNumber']}
+                dropdownList={companies}
+                searchAttributes={['organizationName', 'organizationNumber']}
+                locale="nb"
+            />,
+        );
+
+        const openButton = getByLabelText('åpne meny');
+        fireEvent.click(openButton, { button: 1 });
+
+        expect(getByText('Bedriften')).toBeInTheDocument();
+        expect(getByText('912602370')).toBeInTheDocument();
+        expect(getByText('Sønn & co')).toBeInTheDocument();
+        expect(getByText('812602372')).toBeInTheDocument();
+        expect(getByText('Beslag skytter')).toBeInTheDocument();
+        expect(getByText('812602552')).toBeInTheDocument();
+
+        const closeButton = getByLabelText('lukk meny');
+        fireEvent.click(closeButton, { button: 1 });
+
+        expect(queryByText('Bedriften')).toBeNull();
+        expect(queryByText('912602370')).toBeNull();
+        expect(queryByText('Sønn & co')).toBeNull();
+        expect(queryByText('812602372')).toBeNull();
+        expect(queryByText('Beslag skytter')).toBeNull();
+        expect(queryByText('812602552')).toBeNull();
     });
 });

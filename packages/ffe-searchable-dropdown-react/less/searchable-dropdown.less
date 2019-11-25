@@ -2,8 +2,7 @@
     position: relative;
     @button-width: 40px;
 
-    &--expanded .ffe-dropdown {
-        background-image: none;
+    .ffe-input-field {
         padding-right: calc(@button-width + 3px);
     }
 
@@ -84,6 +83,12 @@
             display: block;
             height: 16px;
             width: 16px;
+        }
+
+        &--flip {
+            svg {
+                transform: rotate(180deg);
+            }
         }
     }
 }
