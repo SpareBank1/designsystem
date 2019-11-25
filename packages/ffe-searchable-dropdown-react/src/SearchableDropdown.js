@@ -15,13 +15,18 @@ import Downshift from 'downshift';
 import { Scrollbars } from 'react-custom-scrollbars';
 import isEqual from 'lodash.isequal';
 
-import { KryssIkon } from '@sb1/ffe-icons-react';
+import { KryssIkon, ChevronIkon } from '@sb1/ffe-icons-react';
 import { Paragraph } from '@sb1/ffe-core-react';
 
 import filterDropdownList from './filterDropdownList';
 import ListItemContainer from './ListItemContainer';
 import ListItemBody from './ListItemBody';
-import { locales, getButtonLabel } from './translations';
+import {
+    locales,
+    getButtonLabelClear,
+    getButtonLabelClose,
+    getButtonLabelOpen,
+} from './translations';
 import findSelectedItem from './findSelectedItem';
 
 const SearchableDropdown = ({
@@ -74,8 +79,8 @@ const SearchableDropdown = ({
                 highlightedIndex,
                 selectedItem,
                 openMenu,
-                reset,
-                selectItem,
+                closeMenu,
+                clearSelection,
             }) => {
                 const dropdownListFiltered = filterDropdownList(
                     dropdownList,
@@ -93,8 +98,6 @@ const SearchableDropdown = ({
                             className,
                             'ffe-searchable-dropdown',
                             {
-                                'ffe-searchable-dropdown--expanded':
-                                    isOpen || selectedItem,
                                 'ffe-searchable-dropdown--dark': dark,
                             },
                         )}
@@ -102,15 +105,8 @@ const SearchableDropdown = ({
                         <input
                             ref={inputEl}
                             {...getInputProps({
-                                className: 'ffe-dropdown',
+                                className: 'ffe-input-field',
                                 ...inputProps,
-                                onFocus:
-                                    typeof inputProps.onFocus === 'function'
-                                        ? e => {
-                                              openMenu();
-                                              inputProps.onFocus(e);
-                                          }
-                                        : openMenu,
                             })}
                             aria-invalid={
                                 typeof ariaInvalid === 'string'
@@ -118,19 +114,32 @@ const SearchableDropdown = ({
                                     : String(ariaInvalid)
                             }
                         />
-                        {(selectedItem || isOpen) && (
+                        {selectedItem ? (
                             <button
                                 type="button"
-                                aria-label={getButtonLabel(locale)}
-                                tabIndex={selectedItem ? 0 : -1}
+                                aria-label={getButtonLabelClear(locale)}
                                 className="ffe-searchable-dropdown__button"
-                                onClick={() => {
-                                    selectItem(null);
-                                    reset();
-                                    inputEl.current.focus();
-                                }}
+                                onClick={clearSelection}
                             >
                                 <KryssIkon />
+                            </button>
+                        ) : (
+                            <button
+                                type="button"
+                                aria-label={
+                                    isOpen
+                                        ? getButtonLabelClose(locale)
+                                        : getButtonLabelOpen(locale)
+                                }
+                                className={classNames(
+                                    'ffe-searchable-dropdown__button',
+                                    {
+                                        'ffe-searchable-dropdown__button--flip': isOpen,
+                                    },
+                                )}
+                                onClick={isOpen ? closeMenu : openMenu}
+                            >
+                                <ChevronIkon />
                             </button>
                         )}
                         <div
