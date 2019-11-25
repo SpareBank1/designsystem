@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface IinputProps {
+interface InputProps {
     className?: string;
     id?: string;
 }
@@ -12,7 +12,7 @@ export interface DatepickerProps
     calendarAbove?: boolean;
     hideErrors?: boolean;
     onValidationComplete?: Function;
-    inputProps?: IinputProps;
+    inputProps?: InputProps;
     label?: string;
     language?: string;
     maxDate?: string;
