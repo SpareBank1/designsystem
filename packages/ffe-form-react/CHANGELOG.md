@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@5.1.1...@sb1/ffe-form-react@5.1.2) (2019-11-25)
+
+### Bug Fixes
+
+-   **ffe-form-react:** Ensure type definitions for type script is correct. ([5866dea](https://github.com/SpareBank1/designsystem/commit/5866dea6115adfbe389dd881b53dcd76470f3679))
+
 ## [5.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@5.1.0...@sb1/ffe-form-react@5.1.1) (2019-11-20)
 
 ### Bug Fixes
