@@ -1,57 +1,31 @@
 Dette er en numerisk, horisontal velger som ble bygd for å velge antall barn. Passer best til ha tall som verdier, tåler ikke større felt enn tall.
 
 ```js
-const options = [
-    {
-        value: 0,
-        label: '0',
-    },
-    {
-        value: 1,
-        label: '1',
-    },
-    {
-        value: 2,
-        label: '2',
-    },
-    {
-        value: 3,
-        label: '3',
-    },
-    {
-        value: 4,
-        label: '4',
-    },
-    {
-        value: 5,
-        label: '5+',
-    },
-];
-
-initialState = {
-    selectedValue: options[0],
-};
-
-const handleOnChange = val => {
-    const i = options.findIndex(o => o.value === val);
-    setState({
-        selectedValue: options[i],
-    });
-};
-
-<>
-    <StepSelector
-        options={options}
-        initialSelected={state.selectedValue}
-        label={'Antall barn'}
-        name="antallBarnVelger"
-        description={'Velg hvor mange barn du har'}
-        onChange={value => {
-            // Handle value update
-            handleOnChange(value);
-        }}
-        field={'antallbarn'}
-    />
-    <p>Antall barn {state.selectedValue.value} </p>
-</>;
+const { RadioButtonInputGroup } = require('.');
+initialState = { selected: undefined };
+<RadioButtonInputGroup
+    inline={true}
+    name="antallBarn"
+    label="Hvor mange barn har du ?"
+    description="Her kan du velge antall barn du skal ha"
+    onChange={e => setState({ selected: e.target.value })}
+    selectedValue={state.selected}
+>
+    {inputProps => (
+        <div className="ffe-step-selector">
+            <StepRadioButton {...inputProps} value="1">
+                1
+            </StepRadioButton>
+            <StepRadioButton {...inputProps} value="2">
+                2
+            </StepRadioButton>
+            <StepRadioButton {...inputProps} value="3">
+                3
+            </StepRadioButton>
+            <StepRadioButton {...inputProps} value="4">
+                4
+            </StepRadioButton>
+        </div>
+    )}
+</RadioButtonInputGroup>;
 ```
