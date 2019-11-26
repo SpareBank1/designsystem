@@ -6282,8 +6282,10 @@ input:not([type='radio']):not([type='checkbox']) {
   width: 100%;
   z-index: 100000;
   border-radius: 2px;
+  height: 0;
 }
 .ffe-searchable-dropdown__list--open {
+  height: unset;
   border: 1px solid #ccc;
 }
 .ffe-searchable-dropdown__no-match {
