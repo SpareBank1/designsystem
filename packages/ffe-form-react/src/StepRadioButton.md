@@ -4,7 +4,6 @@ Dette er en numerisk, horisontal velger som ble bygd for å velge antall barn. P
 const { RadioButtonInputGroup } = require('.');
 initialState = { selected: undefined };
 <RadioButtonInputGroup
-    inline={true}
     name="antallBarn"
     label="Hvor mange barn har du ?"
     description="Her kan du velge antall barn du skal ha"
@@ -12,7 +11,7 @@ initialState = { selected: undefined };
     selectedValue={state.selected}
 >
     {inputProps => (
-        <div className="ffe-step-selector">
+        <>
             <StepRadioButton {...inputProps} value="1">
                 1
             </StepRadioButton>
@@ -25,7 +24,7 @@ initialState = { selected: undefined };
             <StepRadioButton {...inputProps} value="4">
                 4
             </StepRadioButton>
-        </div>
+        </>
     )}
 </RadioButtonInputGroup>;
 ```
