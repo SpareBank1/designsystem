@@ -94,6 +94,7 @@ export interface RadioBlockProps
      */
     dark?: boolean;
     label: string | React.ReactNode;
+    labelClass?: string;
     name: string;
     selectedValue?: string;
     showChildren?: boolean;

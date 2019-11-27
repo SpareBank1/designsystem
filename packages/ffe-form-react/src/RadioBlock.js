@@ -18,6 +18,7 @@ class RadioBlock extends Component {
              */
             dark, //eslint-disable-line
             label,
+            labelClass,
             name,
             selectedValue,
             showChildren,
@@ -40,7 +41,10 @@ class RadioBlock extends Component {
                 />
                 <div className="ffe-radio-block__content">
                     <label
-                        className="ffe-radio-block__header"
+                        className={classNames(
+                            'ffe-radio-block__header',
+                            labelClass,
+                        )}
                         htmlFor={this.id}
                     >
                         {label}
@@ -69,6 +73,8 @@ RadioBlock.propTypes = {
     className: string,
     /** The always visible label of the radio block */
     label: oneOfType([node, string]).isRequired,
+    /** Additional class names applied to the label element */
+    labelClass: string,
     /** The name of the radio button set */
     name: string.isRequired,
     /** The selected value of the radio button set */
