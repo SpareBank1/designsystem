@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@5.1.2...@sb1/ffe-form-react@5.2.0) (2019-11-28)
+
+### Features
+
+-   **ffe-form-react:** Added new prop labelClass to RadioBlock. ([8c08838](https://github.com/SpareBank1/designsystem/commit/8c08838d385893be13d14192c4e0901c15e41af2))
+
 ## [5.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@5.1.1...@sb1/ffe-form-react@5.1.2) (2019-11-25)
 
 ### Bug Fixes
