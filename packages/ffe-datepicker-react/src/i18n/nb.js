@@ -37,6 +37,7 @@ export default {
     MONTH_10: 'Oktober',
     MONTH_11: 'November',
     MONTH_12: 'Desember',
+    TODAY: 'I dag',
     PREVIOUS: 'Forrige',
     NEXT: 'Neste',
     PREVIOUS_SHORT: 'Forrige',

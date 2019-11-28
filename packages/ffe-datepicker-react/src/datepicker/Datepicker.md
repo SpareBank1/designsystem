@@ -4,8 +4,8 @@ initialState = { date: '01.01.2016' };
     inputProps={{ id: 'datepicker-example' }}
     label="Velg dato"
     language="nb"
-    maxDate="31.12.2016"
-    minDate="01.01.2016"
+    maxDate="31.12.2020"
+    minDate="01.01.2000"
     onChange={date => setState({ date })}
     value={state.date}
 />;
@@ -20,8 +20,8 @@ initialState = { date: '01.01.2016' };
     inputProps={{ id: 'datepicker-example-aria-invalid' }}
     label="Velg dato"
     language="nn"
-    maxDate="31.12.2016"
-    minDate="01.01.2016"
+    maxDate="31.12.2020"
+    minDate="01.01.2000"
     onChange={date => setState({ date })}
     value={state.date}
 />;
@@ -36,8 +36,8 @@ initialState = { date: '01.01.2016' };
     inputProps={{ id: 'datepicker-example-calendar-above' }}
     label="Velg en dato"
     language="nb"
-    maxDate="31.12.2016"
-    minDate="01.01.2016"
+    maxDate="31.12.2020"
+    minDate="01.01.2000"
     onChange={date => setState({ date })}
     value={state.date}
 />;
@@ -51,8 +51,8 @@ initialState = { date: '01.01.2016' };
     inputProps={{ id: 'datepicker-example' }}
     label="Velg dato"
     language="nb"
-    maxDate="31.12.2016"
-    minDate="01.01.2016"
+    maxDate="31.12.2020"
+    minDate="01.01.2000"
     onChange={date => setState({ date })}
     value={state.date}
     fullWidth={true}
@@ -67,8 +67,8 @@ initialState = { date: '01.01.2016' };
     inputProps={{ id: 'datepicker-example-en' }}
     label="Pick a date"
     language="en"
-    maxDate="31.12.2016"
-    minDate="01.01.2016"
+    maxDate="31.12.2020"
+    minDate="01.01.2000"
     onChange={date => setState({ date })}
     value={state.date}
 />;
@@ -80,8 +80,8 @@ initialState = { date: '01.01.2016' };
     inputProps={{ id: 'datepicker-example-nn' }}
     label="Velg dato"
     language="nn"
-    maxDate="31.12.2016"
-    minDate="01.01.2016"
+    maxDate="31.12.2020"
+    minDate="01.01.2000"
     onChange={date => setState({ date })}
     value={state.date}
 />;

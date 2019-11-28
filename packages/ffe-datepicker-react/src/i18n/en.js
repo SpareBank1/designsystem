@@ -37,6 +37,7 @@ export default {
     MONTH_10: 'October',
     MONTH_11: 'November',
     MONTH_12: 'December',
+    TODAY: 'Today',
     PREVIOUS: 'Previous',
     NEXT: 'Next',
     PREVIOUS_SHORT: 'Prev',

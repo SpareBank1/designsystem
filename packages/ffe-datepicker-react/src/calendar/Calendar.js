@@ -30,6 +30,8 @@ export default class Calendar extends Component {
         this.mouseClick = this.mouseClick.bind(this);
         this.nextMonth = this.nextMonth.bind(this);
         this.previousMonth = this.previousMonth.bind(this);
+        this.selectYear = this.selectYear.bind(this);
+        this.today = this.today.bind(this);
         this.focusHandler = this.focusHandler.bind(this);
         this.wrapperBlurHandler = this.wrapperBlurHandler.bind(this);
 
@@ -162,6 +164,18 @@ export default class Calendar extends Component {
         this.forceUpdate();
     }
 
+    selectYear(evt) {
+        const selectedYear = parseInt(evt.currentTarget.value);
+        this.state.calendar.setYear(selectedYear);
+        this.forceUpdate();
+    }
+
+    today(evt) {
+        evt.preventDefault();
+        this.state.calendar.today();
+        this.forceUpdate();
+    }
+
     renderDate(date, index) {
         if (date.isLead) {
             return <LeadDate key={date.date} date={date} />;
@@ -217,11 +231,12 @@ export default class Calendar extends Component {
                 <Header
                     datepickerId={this.datepickerId}
                     month={calendar.focusedMonth()}
-                    nextMonthHandler={this.nextMonth}
-                    nextMonthLabel={calendar.nextName()}
-                    previousMonthHandler={this.previousMonth}
-                    previousMonthLabel={calendar.previousName()}
                     year={calendar.focusedYear()}
+                    language={this.props.language}
+                    nextMonthHandler={this.nextMonth}
+                    previousMonthHandler={this.previousMonth}
+                    todayHandler={this.today}
+                    selectYearHandler={this.selectYear}
                 />
                 <table
                     className="ffe-calendar__grid"

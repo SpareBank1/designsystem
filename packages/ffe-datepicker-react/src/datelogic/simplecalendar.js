@@ -118,6 +118,14 @@ SimpleCalendar.prototype.dayNames = function dayNames() {
     return result;
 };
 
+SimpleCalendar.prototype.setYear = function setYear(year) {
+    this.focusedDate.setYear(year);
+};
+
+SimpleCalendar.prototype.today = function today() {
+    this.focusedDate = simpleDate.today();
+};
+
 SimpleCalendar.prototype.previousName = function prevName() {
     return i18n[this.locale].PREVIOUS;
 };
