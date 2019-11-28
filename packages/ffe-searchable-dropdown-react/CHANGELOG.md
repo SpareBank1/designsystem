@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@8.0.4...@sb1/ffe-searchable-dropdown-react@8.0.5) (2019-11-28)
+
+### Bug Fixes
+
+-   **ffe-searchable-dropdown-react:** icons are to big ([6a3aefa](https://github.com/SpareBank1/designsystem/commit/6a3aefa159695eaa6666943df6f840b66747d2a1))
+
 ## [8.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@8.0.3...@sb1/ffe-searchable-dropdown-react@8.0.4) (2019-11-26)
 
 ### Bug Fixes
