@@ -6353,13 +6353,21 @@ input:not([type='radio']):not([type='checkbox']) {
 }
 .ffe-searchable-dropdown__button svg {
   display: block;
-  height: 16px;
-  width: 16px;
 }
 .ffe-searchable-dropdown__button--flip svg {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+.ffe-searchable-dropdown__button--cross svg {
+  fill: #676767;
+  height: 11px;
+  width: 11px;
+}
+.ffe-searchable-dropdown__button--arrow svg {
+  fill: #0071cd;
+  width: 17px;
+  height: 17px;
 }
 .ffe-searchable-dropdown--dark .ffe-searchable-dropdown__list {
   background: #293a4c;
