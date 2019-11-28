@@ -118,7 +118,7 @@ const SearchableDropdown = ({
                             <button
                                 type="button"
                                 aria-label={getButtonLabelClear(locale)}
-                                className="ffe-searchable-dropdown__button"
+                                className="ffe-searchable-dropdown__button ffe-searchable-dropdown__button--cross"
                                 onClick={clearSelection}
                             >
                                 <KryssIkon />
@@ -132,7 +132,7 @@ const SearchableDropdown = ({
                                         : getButtonLabelOpen(locale)
                                 }
                                 className={classNames(
-                                    'ffe-searchable-dropdown__button',
+                                    'ffe-searchable-dropdown__button ffe-searchable-dropdown__button--arrow',
                                     {
                                         'ffe-searchable-dropdown__button--flip': isOpen,
                                     },
