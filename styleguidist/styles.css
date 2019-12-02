@@ -4313,6 +4313,13 @@ html {
   -o-transition: border-color 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
   transition: border-color 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
+@media (prefers-color-scheme: dark) {
+  .native .ffe-radio-block__content {
+    border: 2px solid #292929;
+    color: #adadad;
+    background: #1c1c1c;
+  }
+}
 .ffe-radio-block__content::before {
   content: '';
   background-color: #fff;
@@ -4326,13 +4333,25 @@ html {
   top: 10px;
   z-index: 1;
 }
+@media (prefers-color-scheme: dark) {
+  .native .ffe-radio-block__content::before {
+    background: none;
+    border-color: #ffffff;
+  }
+}
 .ffe-radio-block__header {
   display: block;
   padding: 8px 60px 7px;
   cursor: pointer;
+  border-bottom: thin solid #ccc;
   -webkit-transition: background-color 0.2s cubic-bezier(0.25, 0.1, 0.25, 1), border-color 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
   -o-transition: background-color 0.2s cubic-bezier(0.25, 0.1, 0.25, 1), border-color 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
   transition: background-color 0.2s cubic-bezier(0.25, 0.1, 0.25, 1), border-color 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+@media (prefers-color-scheme: dark) {
+  .native .ffe-radio-block__header {
+    border-bottom: thin solid #292929;
+  }
 }
 .ffe-radio-block__wrapper {
   padding: 20px 20px 30px;
@@ -4344,10 +4363,9 @@ html {
 .ffe-radio-block__wrapper[aria-hidden='true'] {
   display: none;
 }
-.ffe-radio-input + .ffe-radio-block__content > .ffe-radio-block__header {
-  border-bottom: thin solid #ccc;
-}
-.ffe-radio-input + .ffe-radio-block__content[role='presentation'] > .ffe-radio-block__header {
+.ffe-radio-input,
+.ffe-radio-input + .ffe-radio-block__content[role='presentation'],
+.ffe-radio-input > .ffe-radio-block__header {
   border-bottom: none;
 }
 .ffe-radio-input:checked + .ffe-radio-block__content {
@@ -4358,9 +4376,25 @@ html {
   background-color: #002776;
   color: #fff;
 }
+@media (prefers-color-scheme: dark) {
+  .native .ffe-radio-input:checked + .ffe-radio-block__content {
+    border: 2px solid #292929;
+  }
+  .native .ffe-radio-input:checked + .ffe-radio-block__content > .ffe-radio-block__header {
+    border-bottom: thin solid #292929;
+    background-color: #292929;
+    color: #fff;
+  }
+}
 .ffe-radio-input:checked + .ffe-radio-block__content::before {
   background-color: #fff;
   border: 7px solid #0071cd;
+}
+@media (prefers-color-scheme: dark) {
+  .native .ffe-radio-input:checked + .ffe-radio-block__content::before {
+    border: 5px solid #ffffff;
+    background: #0071cd;
+  }
 }
 .ffe-radio-input:focus + .ffe-radio-block__content {
   -webkit-box-shadow: 0 0 0 1px #fff, 0 0 0 4px #a1dfff;
