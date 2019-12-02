@@ -46,6 +46,14 @@
         cursor: pointer;
         transition: border-color @ffe-transition-duration @ffe-ease;
 
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                border: 2px solid @ffe-grey-darkmode;
+                color: @ffe-grey-cloud-darkmode;
+                background: @ffe-grey-charcoal-darkmode;
+            }
+        }
+
         &::before {
             .ffe-sb1-radioblob();
 
@@ -53,14 +61,28 @@
             top: 10px;
             z-index: 1;
         }
+
+        .native &::before {
+            @media (prefers-color-scheme: dark) {
+                background: none;
+                border-color: @ffe-white-darkmode;
+            }
+        }
     }
 
     &__header {
         display: block;
         padding: 8px 60px 7px;
         cursor: pointer;
+        border-bottom: thin solid @ffe-grey-silver;
         transition: background-color @ffe-transition-duration @ffe-ease,
             border-color @ffe-transition-duration @ffe-ease;
+
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                border-bottom: thin solid @ffe-grey-darkmode;
+            }
+        }
     }
 
     &__wrapper {
@@ -79,13 +101,9 @@
 
 // Weakness: Requires specific dom structure to work. Rewrite?
 .ffe-radio-input {
-    & + .ffe-radio-block__content > .ffe-radio-block__header {
-        border-bottom: thin solid @ffe-grey-silver;
-    }
-
-    &
-        + .ffe-radio-block__content[role='presentation']
-        > .ffe-radio-block__header {
+    &,
+    + .ffe-radio-block__content[role='presentation'],
+    > .ffe-radio-block__header {
         border-bottom: none;
     }
 
@@ -99,8 +117,27 @@
         }
     }
 
+    .native &:checked + .ffe-radio-block__content {
+        @media (prefers-color-scheme: dark) {
+            border: 2px solid @ffe-grey-darkmode;
+
+            > .ffe-radio-block__header {
+                border-bottom: thin solid @ffe-grey-darkmode;
+                background-color: @ffe-grey-darkmode;
+                color: @ffe-white;
+            }
+        }
+    }
+
     &:checked + .ffe-radio-block__content::before {
         .ffe-sb1-radioblob-active();
+
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                border: 5px solid @ffe-white-darkmode;
+                background: @ffe-blue-azure;
+            }
+        }
     }
 
     &:focus + .ffe-radio-block__content {
