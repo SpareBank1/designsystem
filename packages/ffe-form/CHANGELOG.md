@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@12.0.6...@sb1/ffe-form@12.1.0) (2019-12-02)
+
+### Features
+
+-   **ffe-form:** add dark mode to RadioBlock ([62ece5f](https://github.com/SpareBank1/designsystem/commit/62ece5f81b7e9f59df4fd21c45d94a43607e25b3))
+
 ## [12.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@12.0.5...@sb1/ffe-form@12.0.6) (2019-10-31)
 
 **Note:** Version bump only for package @sb1/ffe-form
