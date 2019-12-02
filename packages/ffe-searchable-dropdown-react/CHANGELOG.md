@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@8.0.5...@sb1/ffe-searchable-dropdown-react@8.0.6) (2019-12-02)
+
+### Bug Fixes
+
+-   **ffe-searchable-dropdown-react:** ie11 did not support heigth unset ([560c786](https://github.com/SpareBank1/designsystem/commit/560c78605672a08077055bad54a4868d8b9de2db))
+
 ## [8.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@8.0.4...@sb1/ffe-searchable-dropdown-react@8.0.5) (2019-11-28)
 
 ### Bug Fixes
