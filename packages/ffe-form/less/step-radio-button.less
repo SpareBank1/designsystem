@@ -1,0 +1,28 @@
+.ffe-step-radio-button {
+    min-width: @ffe-spacing-2xl;
+    margin: 0;
+    border: (@ffe-spacing-2xs / 2) solid @ffe-grey-silver;
+    border-right: none;
+    transition: @ffe-transition-duration;
+    padding: @ffe-spacing;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+}
+.ffe-step-radio-button:first-of-type {
+    border-radius: @ffe-spacing-md 0 0 @ffe-spacing-md;
+}
+.ffe-step-radio-button:last-of-type {
+    border-radius: 0 @ffe-spacing-md @ffe-spacing-md 0;
+    border: (@ffe-spacing-2xs / 2) solid @ffe-grey-silver;
+}
+input:checked + label.ffe-step-radio-button {
+    background-color: @ffe-blue-royal;
+    border: (@ffe-spacing-2xs / 2) solid @ffe-blue-azure;
+    color: @ffe-white;
+}
+input:checked + label.ffe-step-radio-button:focus-within,
+input:checked + label.ffe-step-radio-button:focus {
+    box-shadow: 0 0 0 1 @ffe-white, 0 0 0 @ffe-spacing-2xs @ffe-blue-focus;
+    outline: none;
+}
