@@ -13,6 +13,12 @@
     cursor: pointer;
     width: 100%;
     text-decoration: none;
+    .native & {
+        @media (prefers-color-scheme: dark) {
+            background: @ffe-grey-charcoal-darkmode;
+            color: @ffe-grey-cloud-darkmode;
+        }
+    }
 
     &:focus {
         box-shadow: 0 0 0 2px @ffe-blue-focus;
@@ -22,6 +28,11 @@
     &:active,
     &:hover {
         border-color: @ffe-blue-azure;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                border-color: @ffe-blue-azure-darkmode;
+            }
+        }
     }
 
     @media (min-width: @breakpoint-md) {

@@ -9,12 +9,22 @@
 
     &--subtext {
         &:extend(.ffe-small-text);
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-grey-silver-darkmode;
+            }
+        }
 
         margin: 5px 0 0 0;
     }
 
     &--title {
         &:extend(.ffe-h5);
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-white-darkmode;
+            }
+        }
 
         margin: 0;
 

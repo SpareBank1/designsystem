@@ -38,6 +38,11 @@
     cursor: pointer;
     transition: border-color 0.2s;
     .card-sequential-animation();
+    .native & {
+        @media (prefers-color-scheme: dark) {
+            border-color: @ffe-blue-azure-darkmode;
+        }
+    }
 
     outline: none;
 
@@ -49,6 +54,12 @@
     &:active,
     &:hover {
         border-color: @ffe-blue-azure;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                border-color: lighten(@ffe-blue-azure-darkmode, 10%);
+                background-color: @ffe-grey-charcoal-darkmode;
+            }
+        }
     }
 
     &__status {
@@ -64,6 +75,11 @@
         text-align: center;
         position: relative;
         top: -10px;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-white-darkmode;
+            }
+        }
     }
 
     &__heading {
@@ -71,6 +87,11 @@
         vertical-align: middle;
         color: @ffe-blue-azure;
         max-width: 160px;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-white-darkmode;
+            }
+        }
     }
 
     &__icon {
@@ -78,6 +99,11 @@
         width: 60px;
         height: 60px;
         margin-right: 10px;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                fill: @ffe-blue-azure-darkmode;
+            }
+        }
     }
 
     &--center {
@@ -111,6 +137,11 @@
         font-family: 'MuseoSansRounded-700', arial, sans-serif;
         font-size: 20px;
         line-height: 2.2;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-white-darkmode;
+            }
+        }
     }
 
     &--large > p,
@@ -135,6 +166,12 @@
         display: inline-block;
         padding: 6px 15px;
         float: left;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                border-color: @ffe-blue-azure-darkmode;
+                color: @ffe-blue-azure-darkmode;
+            }
+        }
     }
 
     &--plain > p {
@@ -145,6 +182,12 @@
     &--plain:active,
     &--plain:hover {
         border-color: @ffe-grey-silver;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                border-color: @ffe-blue-azure-darkmode;
+                color: @ffe-blue-azure-darkmode;
+            }
+        }
     }
 }
 

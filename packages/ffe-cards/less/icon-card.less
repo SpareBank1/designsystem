@@ -12,6 +12,11 @@
         width: 40px;
         height: 40px;
         margin: 0 30px 0 10px;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                fill: @ffe-blue-azure-darkmode;
+            }
+        }
     }
 
     &__body {
@@ -63,10 +68,20 @@
 .ffe-icon-card--grey-charcoal {
     .ffe-icon-card__icon {
         fill: @ffe-grey-charcoal;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                fill: @ffe-grey-silver-darkmode;
+            }
+        }
     }
 
     .ffe-card-component--title,
     .ffe-icon-card__body {
         color: @ffe-grey-charcoal;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-grey-silver-darkmode;
+            }
+        }
     }
 }
