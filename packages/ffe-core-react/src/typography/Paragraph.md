@@ -7,6 +7,15 @@
 </Paragraph>
 ```
 
+**_Tekst som kan velges_**
+
+```js
+<Paragraph>
+    Her kan du velge tekst, f.eks med kontonr{' '}
+    <span className="ffe-body-text ffe-select">123456789101</span>
+</Paragraph>
+```
+
 **Lead paragraph**
 
 ```js
