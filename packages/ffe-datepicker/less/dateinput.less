@@ -8,6 +8,11 @@
 
     &:hover {
         color: @ffe-blue-azure;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-blue-azure-darkmode;
+            }
+        }
     }
 
     &__field {
@@ -27,5 +32,10 @@
         fill: @ffe-blue-azure;
         z-index: 1;
         pointer-events: none;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                fill: @ffe-blue-azure-darkmode;
+            }
+        }
     }
 }
