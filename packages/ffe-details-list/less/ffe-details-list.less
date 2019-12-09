@@ -70,6 +70,11 @@
         padding: 10px 0;
         margin: 0;
         position: relative;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                border-color: @ffe-grey-silver-darkmode;
+            }
+        }
 
         &--no-border {
             border-bottom: none;
