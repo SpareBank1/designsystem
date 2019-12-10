@@ -30,15 +30,32 @@
     fill: currentColor;
     transition: height @ffe-transition-duration @ffe-ease-in-out-back;
     overflow: hidden;
+    .native & {
+        @media (prefers-color-scheme: dark) {
+            color: @ffe-grey-cloud-darkmode;
+        }
+    }
 
     &--error {
         background-color: @ffe-orange-salmon;
         fill: @ffe-red;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: @ffe-grey-charcoal-darkmode;
+                fill: @ffe-red-darkmode;
+            }
+        }
     }
 
     &--info {
         background-color: @ffe-blue-pale;
         fill: @ffe-blue-royal;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: @ffe-grey-charcoal-darkmode;
+                fill: @ffe-blue-azure-darkmode;
+            }
+        }
     }
 
     // TODO: Change color to one in the style guide
@@ -46,11 +63,23 @@
         background-color: #4a5155;
         color: @ffe-white;
         fill: #4a5155;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: @ffe-grey-charcoal-darkmode;
+                color: @ffe-grey-cloud-darkmode;
+                fill: @ffe-blue-azure-darkmode;
+            }
+        }
     }
 
     &--success {
         background-color: @ffe-green-mint;
         fill: @ffe-green-shamrock;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: @ffe-grey-charcoal-darkmode;
+            }
+        }
     }
 }
 
@@ -70,6 +99,11 @@
         height: 1.7em;
         width: 1.7em;
         margin-right: 15px;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background: @ffe-grey-darkmode;
+            }
+        }
 
         > svg {
             height: 50%;
@@ -107,9 +141,19 @@
             fill: @ffe-black;
             height: 100%;
             width: 100%;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    fill: @ffe-grey-cloud-darkmode;
+                }
+            }
 
             .ffe-system-message-wrapper--news & {
                 fill: @ffe-white;
+                .native & {
+                    @media (prefers-color-scheme: dark) {
+                        fill: @ffe-grey-cloud-darkmode;
+                    }
+                }
             }
         }
     }
