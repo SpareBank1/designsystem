@@ -10,6 +10,11 @@
     margin: 5px 0 10px;
     display: block;
     .ffe-fontsize-body-text;
+    .native & {
+        @media (prefers-color-scheme: dark) {
+            color: @ffe-grey-silver-darkmode;
+        }
+    }
 
     &[aria-hidden='true'] {
         display: none;
@@ -28,5 +33,10 @@
         margin-right: 5px;
         text-align: center;
         font-family: arial, sans-serif;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: @ffe-blue-azure-darkmode;
+            }
+        }
     }
 }

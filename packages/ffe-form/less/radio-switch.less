@@ -29,9 +29,22 @@
     box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.05);
     margin-bottom: 5px;
     margin-top: 13px;
+    .native & {
+        @media (prefers-color-scheme: dark) {
+            background-color: @ffe-grey-charcoal-darkmode;
+            color: @ffe-white-darkmode;
+            border-color: @ffe-grey-charcoal-darkmode;
+        }
+    }
 
     &::before {
         .ffe-sb1-radioblob();
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                border-color: @ffe-grey-cloud-darkmode;
+                background-color: @ffe-grey-darkmode;
+            }
+        }
 
         left: 12px;
         top: 8px;
@@ -39,6 +52,11 @@
 
     &.ffe-radio-button--invalid {
         border-color: @ffe-orange-fire;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                border-color: @ffe-red-darkmode;
+            }
+        }
     }
 
     @media (min-width: @breakpoint-sm) {
@@ -58,10 +76,23 @@
         background-color: inherit;
         border-color: transparent;
         box-shadow: none;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-white;
+                background-color: inherit;
+                border-color: transparent;
+            }
+        }
 
         &::before {
             background-color: inherit;
             border-color: @ffe-white;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    background-color: inherit;
+                    border-color: @ffe-white;
+                }
+            }
         }
     }
 }
@@ -71,14 +102,31 @@
         /* stylelint-disable-next-line selector-max-specificity */
         &:not(.ffe-radio-button--invalid) {
             border-color: @ffe-blue-royal;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    border-color: @ffe-grey-darkmode;
+                }
+            }
         }
 
         background-color: @ffe-blue-royal;
         color: @ffe-white;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: @ffe-grey-darkmode;
+                color: @ffe-blue-azure-darkmode;
+                border-color: @ffe-grey-darkmode;
+            }
+        }
     }
 
     &:hover + .ffe-radio-switch {
         border-color: @ffe-blue-azure;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                border-color: @ffe-blue-azure-darkmode;
+            }
+        }
     }
 
     &:focus + .ffe-radio-switch {
@@ -89,17 +137,43 @@
     &:checked + .ffe-radio-switch::before {
         border: 5px solid @ffe-white;
         background: @ffe-blue-azure;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                border-color: @ffe-white-darkmode;
+                background: @ffe-blue-azure-darkmode;
+            }
+        }
     }
 
     &--dark {
         &:hover + .ffe-radio-switch {
             border-color: @ffe-blue-focus;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    border-color: @ffe-blue-focus;
+                }
+            }
         }
 
         &:focus + .ffe-radio-switch {
             background-color: @ffe-grey-dark-blue--dark;
             border-color: @ffe-grey-dark-blue--dark;
             box-shadow: 0 0 0 2px @ffe-blue-focus;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    background-color: @ffe-grey-dark-blue--dark;
+                    border-color: @ffe-grey-dark-blue--dark;
+                }
+            }
+        }
+
+        &:checked + .ffe-radio-switch::before {
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    border-color: @ffe-white;
+                    background: @ffe-blue-azure;
+                }
+            }
         }
 
         &:checked:hover + .ffe-radio-switch {
@@ -109,6 +183,21 @@
         &:checked + .ffe-radio-switch {
             border-color: @ffe-grey-dark-blue--dark;
             background-color: @ffe-grey-dark-blue--dark;
+            &:not(.ffe-radio-button--invalid) {
+                .native & {
+                    @media (prefers-color-scheme: dark) {
+                        background-color: @ffe-grey-dark-blue--dark;
+                        border-color: @ffe-blue-royal;
+                    }
+                }
+            }
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    border-color: @ffe-grey-dark-blue--dark;
+                    background-color: @ffe-grey-dark-blue--dark;
+                    color: @ffe-white;
+                }
+            }
         }
     }
 }
