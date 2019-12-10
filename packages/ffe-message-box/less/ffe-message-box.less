@@ -34,28 +34,74 @@
 
         &--tips {
             background-color: @ffe-sand;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    background-color: @ffe-grey-charcoal-darkmode;
+                }
+            }
         }
 
         &--info {
             background-color: @ffe-blue-pale;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    background-color: @ffe-grey-charcoal-darkmode;
+                }
+            }
         }
 
         &--success {
             background-color: @ffe-green-mint;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    background-color: @ffe-grey-charcoal-darkmode;
+                }
+            }
         }
 
         &--error {
             background-color: @ffe-orange-salmon;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    background-color: @ffe-grey-charcoal-darkmode;
+                }
+            }
         }
     }
 
     &__title {
         &--success {
             color: @ffe-black;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    color: @ffe-white-darkmode;
+                }
+            }
         }
 
         &--error {
             color: @ffe-black;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    color: @ffe-white-darkmode;
+                }
+            }
+        }
+
+        &--tips {
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    color: @ffe-white-darkmode;
+                }
+            }
+        }
+
+        &--info {
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    color: @ffe-white-darkmode;
+                }
+            }
         }
     }
 
@@ -78,13 +124,29 @@
         position: relative;
         top: 12px;
         width: 80px;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: @ffe-grey-darkmode;
+                fill: @ffe-blue-azure-darkmode;
+            }
+        }
 
         &--error svg {
             fill: @ffe-orange-fire;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    fill: @ffe-red-darkmode;
+                }
+            }
         }
 
         &--info svg {
             fill: @ffe-blue-royal;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    fill: @ffe-blue-azure-darkmode;
+                }
+            }
         }
 
         &--success svg {
@@ -93,6 +155,11 @@
 
         &--tips svg {
             fill: @ffe-blue-royal;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    fill: @ffe-blue-azure-darkmode;
+                }
+            }
         }
     }
 
