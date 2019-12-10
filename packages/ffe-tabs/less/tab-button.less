@@ -27,12 +27,26 @@
     transition: all @ffe-transition-duration @ffe-ease;
     vertical-align: middle;
     width: 100%;
+    .native & {
+        @media (prefers-color-scheme: dark) {
+            background-color: @ffe-grey-charcoal-darkmode;
+            border-color: @ffe-grey-charcoal-darkmode;
+            color: @ffe-grey-silver-darkmode;
+        }
+    }
 
     &:hover,
     &:focus,
     &:active {
         color: @ffe-blue-royal;
         border-color: @ffe-blue-royal;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                border-color: lighten(@ffe-grey-charcoal-darkmode, 5%);
+                color: @ffe-white-darkmode;
+                background-color: lighten(@ffe-grey-charcoal-darkmode, 5%);
+            }
+        }
     }
 
     &:focus,
@@ -49,12 +63,26 @@
         color: @ffe-white;
         background-color: @ffe-blue-royal;
         border-color: @ffe-blue-royal;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: @ffe-grey-darkmode;
+                border-color: @ffe-grey-darkmode;
+                color: @ffe-blue-azure-darkmode;
+            }
+        }
 
         &:hover,
         &:focus,
         &:active {
             color: @ffe-white;
             border-color: @ffe-blue-royal;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    background-color: @ffe-grey-darkmode;
+                    border-color: @ffe-grey-darkmode;
+                    color: @ffe-blue-azure-darkmode;
+                }
+            }
         }
     }
 
@@ -67,12 +95,26 @@
     &--dark {
         background-color: inherit;
         color: @ffe-white;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                border-color: @ffe-grey-silver;
+                background-color: inherit;
+                color: @ffe-white;
+            }
+        }
 
         &:hover,
         &:focus,
         &:active {
             color: @ffe-white;
             border-color: @ffe-blue-focus;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    color: @ffe-white;
+                    border-color: @ffe-blue-focus;
+                    background-color: inherit;
+                }
+            }
         }
 
         &:focus,
@@ -80,18 +122,37 @@
             background-color: @ffe-grey-dark-blue--dark;
             border-color: @ffe-grey-dark-blue--dark;
             box-shadow: 0 0 0 2px @ffe-blue-focus;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    background-color: @ffe-grey-dark-blue--dark;
+                    border-color: @ffe-grey-dark-blue--dark;
+                }
+            }
         }
 
         &--selected {
             color: @ffe-white;
             background-color: @ffe-grey-dark-blue--dark;
             border-color: @ffe-grey-dark-blue--dark;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    color: @ffe-white;
+                    background-color: @ffe-grey-dark-blue--dark;
+                    border-color: @ffe-grey-dark-blue--dark;
+                }
+            }
 
             &:hover,
             &:focus,
             &:active {
                 color: @ffe-white;
                 border-color: @ffe-grey-dark-blue--dark;
+                .native & {
+                    @media (prefers-color-scheme: dark) {
+                        color: @ffe-white;
+                        border-color: @ffe-grey-dark-blue--dark;
+                    }
+                }
             }
         }
     }
