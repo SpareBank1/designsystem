@@ -199,9 +199,19 @@
     font-weight: normal;
     margin-bottom: 10px;
     margin-top: 0;
+    .native & {
+        @media (prefers-color-scheme: dark) {
+            color: @ffe-white-darkmode;
+        }
+    }
 
     &--error {
         color: @ffe-orange-fire;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-red-darkmode;
+            }
+        }
     }
 
     &--inline {
@@ -215,6 +225,11 @@
     &--with-border {
         border-bottom: 1px solid @ffe-grey-silver;
         padding-bottom: 10px;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                border-color: @ffe-grey-silver-darkmode;
+            }
+        }
     }
 
     &--no-underline {
@@ -231,6 +246,11 @@
     font-family: 'MuseoSans-500', arial, sans-serif;
     line-height: 24px;
     .ffe-fontsize-body-text;
+    .native & {
+        @media (prefers-color-scheme: dark) {
+            color: @ffe-grey-cloud-darkmode;
+        }
+    }
 }
 
 .ffe-body-paragraph {
@@ -257,12 +277,22 @@
     color: @ffe-blue-royal;
     line-height: 28px;
     .ffe-fontsize-lead-paragraph;
+    .native & {
+        @media (prefers-color-scheme: dark) {
+            color: @ffe-white-darkmode;
+        }
+    }
 }
 
 .ffe-sub-lead-paragraph {
     color: @ffe-black;
     line-height: 24px;
     .ffe-fontsize-sub-lead-paragraph;
+    .native & {
+        @media (prefers-color-scheme: dark) {
+            color: @ffe-grey-cloud-darkmode;
+        }
+    }
 }
 
 .ffe-link-text {
@@ -272,17 +302,34 @@
     text-decoration: none;
     word-wrap: break-word;
     line-height: 1em;
+    .native & {
+        @media (prefers-color-scheme: dark) {
+            color: @ffe-blue-azure-darkmode;
+        }
+    }
 
     &:hover {
         border-bottom-color: @ffe-blue-cobalt;
         color: @ffe-blue-cobalt;
         text-decoration: none;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: ligthen(@ffe-blue-azure-darkmode, 10%);
+                border-color: ligthen(@ffe-blue-azure-darkmode, 10%);
+            }
+        }
     }
 
     &:visited {
         border-bottom-color: @ffe-purple-violet;
         color: @ffe-purple-violet;
         text-decoration: none;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: darken(@ffe-blue-azure-darkmode, 10%);
+                border-color: darken(@ffe-blue-azure-darkmode, 10%);
+            }
+        }
     }
 
     &--no-underline {
@@ -296,6 +343,11 @@
     padding-top: 1px;
     padding-bottom: 1px;
     width: 100%;
+    .native & {
+        @media (prefers-color-scheme: dark) {
+            border-color: @ffe-grey-silver-darkmode;
+        }
+    }
 }
 
 .ffe-strong-text {
@@ -312,6 +364,11 @@
     font-family: consolas, menlo, monaco, monospace;
     margin: 0;
     text-align: left;
+    .native & {
+        @media (prefers-color-scheme: dark) {
+            border-color: @ffe-grey-charcoal-darkmode;
+        }
+    }
 }
 
 .ffe-inline-separator {
