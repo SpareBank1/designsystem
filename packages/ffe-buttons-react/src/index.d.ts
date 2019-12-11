@@ -4,6 +4,7 @@ export interface MinimalBaseButtonProps extends React.HTMLProps<HTMLElement> {
     className?: string;
     element?: HTMLElement | string | React.ElementType;
     innerRef?: React.RefObject<HTMLElement>;
+    to?: string; //used in order to make buttons work with react-router functionality in typescript-files.
 }
 
 export interface BaseButtonProps extends MinimalBaseButtonProps {
