@@ -72,7 +72,7 @@ module.exports = {
         },
     },
     pagePerSection: true,
-    assetsDir: './static',
+    assetsDir: './dist',
     webpackConfig: {
         module: {
             rules: [

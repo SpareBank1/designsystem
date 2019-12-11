@@ -6,16 +6,31 @@
 .sb1ds-example__header-bad-example {
     margin: 0;
     color: @ffe-orange-fire;
+    .native & {
+        @media (prefers-color-scheme: dark) {
+            color: @ffe-red-darkmode;
+        }
+    }
 }
 
 .sb1ds-example__header-good-example {
     margin: 0;
     color: @ffe-green-emerald;
+    .native & {
+        @media (prefers-color-scheme: dark) {
+            color: @ffe-green-shamrock;
+        }
+    }
 }
 
 .sb1ds-example__header-no-animation-example {
     margin: 0;
     color: @ffe-black;
+    .native & {
+        @media (prefers-color-scheme: dark) {
+            color: @ffe-grey-cloud-darkmode;
+        }
+    }
 }
 
 .sb1ds-do-dont {
@@ -27,6 +42,11 @@
         width: 25px;
         height: 25px;
         fill: @ffe-blue-azure;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-blue-azure-darkmode;
+            }
+        }
     }
 }
 

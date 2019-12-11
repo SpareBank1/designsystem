@@ -46,6 +46,12 @@
 
         svg {
             max-width: 600px;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    padding: 2px;
+                    border: 1px solid @ffe-grey-silver-darkmode;
+                }
+            }
         }
     }
 }
@@ -53,125 +59,343 @@
 .sb1ds-color-palette__item,
 .sb1ds-color-usage__example {
     border: 1px solid transparent;
+    .native & {
+        @media (prefers-color-scheme: dark) {
+            color: @ffe-black-darkmode;
+        }
+    }
 
     &--ffe-blue-royal {
         background: @ffe-blue-royal;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-white-darkmode;
+            }
+        }
     }
 
     &--ffe-blue-cobalt {
         background: @ffe-blue-cobalt;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-white-darkmode;
+            }
+        }
     }
 
     &--ffe-blue-azure {
         background: @ffe-blue-azure;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-white-darkmode;
+            }
+        }
+    }
+
+    &--ffe-blue-azure-darkmode {
+        background: @ffe-blue-azure-darkmode;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-white-darkmode;
+            }
+        }
     }
 
     &--ffe-blue-deep-sky {
         background: @ffe-blue-deep-sky;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-black-darkmode;
+            }
+        }
     }
 
     &--ffe-blue-sky {
         background: @ffe-blue-sky;
         color: @ffe-black;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-black-darkmode;
+            }
+        }
     }
 
     &--ffe-blue-focus {
         background: @ffe-blue-focus;
         color: @ffe-black;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-black-darkmode;
+            }
+        }
     }
 
     &--ffe-blue-pale {
         background: @ffe-blue-pale;
         color: @ffe-black;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-black-darkmode;
+            }
+        }
     }
 
     &--ffe-blue-ice {
         background: @ffe-blue-ice;
         color: @ffe-black;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-black-darkmode;
+            }
+        }
     }
 
     &--ffe-green-shamrock {
         background: @ffe-green-shamrock;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-white-darkmode;
+            }
+        }
     }
 
     &--ffe-sand {
         background: @ffe-sand;
         color: @ffe-black;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-black-darkmode;
+            }
+        }
     }
 
     &--ffe-sand-ivory {
         background: @ffe-sand-ivory;
         color: @ffe-black;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-black-darkmode;
+            }
+        }
     }
 
     &--ffe-orange-fire {
         background: @ffe-orange-fire;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-white-darkmode;
+            }
+        }
     }
 
     &--ffe-orange {
         background: @ffe-orange;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-white-darkmode;
+            }
+        }
     }
 
     &--ffe-orange-salmon {
         background: @ffe-orange-salmon;
         color: @ffe-black;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-black-darkmode;
+            }
+        }
     }
 
     &--ffe-black {
         background: @ffe-black;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-white-darkmode;
+            }
+        }
+    }
+
+    &--ffe-black-darkmode {
+        background: @ffe-black-darkmode;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                border: 1px solid @ffe-grey-silver-darkmode;
+                color: @ffe-white-darkmode;
+            }
+        }
     }
 
     &--ffe-grey-charcoal {
         background: @ffe-grey-charcoal;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-white-darkmode;
+            }
+        }
+    }
+
+    &--ffe-grey-charcoal-darkmode {
+        background: @ffe-grey-charcoal-darkmode;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-white-darkmode;
+            }
+        }
     }
 
     &--ffe-grey-warm {
         background: @ffe-grey-warm;
         color: @ffe-black;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-black-darkmode;
+            }
+        }
     }
 
     &--ffe-grey {
         background: @ffe-grey;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-white-darkmode;
+            }
+        }
+    }
+
+    &--ffe-grey-darkmode {
+        background: @ffe-grey-darkmode;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-white-darkmode;
+            }
+        }
     }
 
     &--ffe-grey-silver {
         background: @ffe-grey-silver;
         color: @ffe-black;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-black-darkmode;
+            }
+        }
+    }
+
+    &--ffe-grey-silver-darkmode {
+        background: @ffe-grey-silver-darkmode;
+        color: @ffe-black;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-black-darkmode;
+            }
+        }
     }
 
     &--ffe-grey-cloud {
         background: @ffe-grey-cloud;
         color: @ffe-black;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-black-darkmode;
+            }
+        }
+    }
+
+    &--ffe-grey-cloud-darkmode {
+        background: @ffe-grey-cloud-darkmode;
+        color: @ffe-black;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-black-darkmode;
+            }
+        }
     }
 
     &--ffe-white {
         background: @ffe-white;
         color: @ffe-black;
         border: 1px solid @ffe-grey-silver;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                border: none;
+                color: @ffe-black;
+            }
+        }
+    }
+
+    &--ffe-white-darkmode {
+        background: @ffe-white-darkmode;
+        color: @ffe-black;
+        border: 1px solid @ffe-grey-silver;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-black-darkmode;
+            }
+        }
     }
 
     &--ffe-green {
         background: @ffe-green;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-white-darkmode;
+            }
+        }
     }
 
     &--ffe-green-emerald {
         background: @ffe-green-emerald;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-white-darkmode;
+            }
+        }
     }
 
     &--ffe-green-mint {
         background: @ffe-green-mint;
         color: @ffe-black;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-black-darkmode;
+            }
+        }
     }
 
     &--ffe-purple {
         background: @ffe-purple;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-white-darkmode;
+            }
+        }
     }
 
     &--ffe-purple-magenta {
         background: @ffe-purple-magenta;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-white-darkmode;
+            }
+        }
     }
 
     &--ffe-red {
         background: @ffe-red;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-white-darkmode;
+            }
+        }
+    }
+
+    &--ffe-red-darkmode {
+        background: @ffe-red-darkmode;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-black-darkmode;
+            }
+        }
     }
 }

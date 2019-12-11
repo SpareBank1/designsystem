@@ -148,6 +148,41 @@
             <div>#FFFFFF<br/>@ffe-white</div>
         </li>
     </ul>
+    <h4 class="ffe-h4">Mørk modus</h4>
+    <ul class="sb1ds-color-palette">
+        <li class="sb1ds-color-palette__item sb1ds-color-palette__item--ffe-blue-azure-darkmode">
+            <div>Hovedblå</div>
+            <div>#0A91FF<br/>@ffe-blue-azure-darkmode</div>
+        </li>
+        <li class="sb1ds-color-palette__item sb1ds-color-palette__item--ffe-black-darkmode">
+            <div>Sort</div>
+            <div>#000000<br/>@ffe-black-darkmode</div>
+        </li>
+        <li class="sb1ds-color-palette__item sb1ds-color-palette__item--ffe-grey-charcoal-darkmode">
+            <div>Koksgrå</div>
+            <div>#1C1C1C<br/>@ffe-grey-charcoal-darkmode</div>
+        </li>
+        <li class="sb1ds-color-palette__item sb1ds-color-palette__item--ffe-grey-darkmode">
+            <div>Grå</div>
+            <div>#292929<br/>@ffe-grey-darkmode</div>
+        </li>
+        <li class="sb1ds-color-palette__item sb1ds-color-palette__item--ffe-grey-silver-darkmode">
+            <div>Sølvgrå</div>
+            <div>#858585<br/>@ffe-grey-silver-darkmode</div>
+        </li>
+        <li class="sb1ds-color-palette__item sb1ds-color-palette__item--ffe-grey-cloud-darkmode">
+            <div>Skygrå</div>
+            <div>#ADADAD<br/>@ffe-grey-cloud-darkmode</div>
+        </li>
+        <li class="sb1ds-color-palette__item sb1ds-color-palette__item--ffe-white-darkmode">
+            <div>Hvit</div>
+            <div>#FFFFFF<br/>@ffe-white-darkmode</div>
+        </li>
+        <li class="sb1ds-color-palette__item sb1ds-color-palette__item--ffe-red-darkmode">
+            <div>Rød</div>
+            <div>#FF2424<br/>@ffe-red-darkmode</div>
+        </li>
+    </ul>
 <!-- ### Deprecated
 <ul class="sb1ds-color-palette">
     <li class="sb1ds-color-palette__item sb1ds-color-palette__item--ffe-blue-deep-sky">
@@ -162,8 +197,9 @@
 </div>
 
 <div class="sb1ds-color-usage sb1ds-color-section">
+    <h3 class="ffe-h3">Lys modus</h4>
     <h4 class="ffe-h4">Vekting</h4>
-    <div class="sb1ds-color-usage__illustration">
+    <div class="sb1ds-color-usage__illustration light-mode">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 368">
             <g fill="none" fill-rule="evenodd">
                 <path fill="#005AA4" d="M0 124h248.085368v120H0z"/>
@@ -635,6 +671,177 @@
             </td>
             <td class="ffe-table__cell">
                 <span class="sb1ds-color-usage__example sb1ds-color-usage__example--ffe-grey-cloud"></span>
+            </td>
+        </tr>
+    </table>
+    <h3 class="ffe-h3">Mørk modus</h4>
+    <h4 class="ffe-h4">Vekting</h4>
+    <div class="sb1ds-color-usage__illustration dark-mode">
+        <svg viewBox="0 0 600 117" xmlns="http://www.w3.org/2000/svg">
+            <g>
+                <rect width="280.11" height="116.13" fill="black"/>
+                <rect x="284.106" width="129.11" height="116.13" fill="#1C1C1C"/>
+                <rect x="417.219" width="57.59" height="116.13" fill="#292929"/>
+                <rect x="478.808" width="35.74" height="116.13" fill="#858585"/>
+                <rect x="518.543" width="36.73" height="116.13" fill="#ADADAD"/>
+                <rect x="559.772" y="0.5" width="23.81" height="115.13" fill="white" stroke="#CCCCCC"/>
+                <rect x="588.079" width="5.93" height="116.13" fill="#0A91FF"/>
+                <rect x="598.013" width="1.98676" height="116.13" fill="#FF2424"/>
+            </g>
+        </svg>
+    </div>
+    <h4 class="ffe-h4">Bruksområder</h4>
+    <table class="ffe-table sb1ds-color-usage__table">
+        <tr class="ffe-table__row">
+            <th class="ffe-table__heading" scope="col">Farge</th>
+            <th class="ffe-table__heading" scope="col">Bruksområde</th>
+            <th class="ffe-table__heading" scope="col" colspan="2">Verdi</th>
+        </tr>
+        <tr class="ffe-table__row">
+            <td class="ffe-table__cell">Hovedblå</td>
+            <td class="ffe-table__cell">
+                <ul class="sb1ds-color-usage__list">
+                    <li class="ffe-strong-text">Utførende handlingsfarge (CTA)</li>
+                    <li>Knapper, lenker</li>
+                    <li>Ikoner</li>
+                    <li>Suksessfarge</li>
+                </ul>
+            </td>
+            <td class="ffe-table__cell">
+                <ul class="sb1ds-color-usage__list">
+                    <li>#0A91FF</li>
+                    <li>@ffe-blue-azure-darkmode</li>
+                </ul>
+            </td>
+            <td class="ffe-table__cell">
+                <span class="sb1ds-color-usage__example sb1ds-color-usage__example--ffe-blue-azure-darkmode"></span>
+            </td>
+        </tr>
+        <tr class="ffe-table__row">
+            <td class="ffe-table__cell">Sort</td>
+            <td class="ffe-table__cell">
+                <ul class="sb1ds-color-usage__list">
+                    <li class="ffe-strong-text">Bakgrunnsfarge</li>
+                    <li>Hovedbakgrunnsfarge</li>
+                </ul>
+            </td>
+            <td class="ffe-table__cell">
+                <ul class="sb1ds-color-usage__list">
+                    <li>#000000</li>
+                    <li>@ffe-black-darkmode</li>
+                </ul>
+            </td>
+            <td class="ffe-table__cell">
+                <span class="sb1ds-color-usage__example sb1ds-color-usage__example--ffe-black-darkmode"></span>
+            </td>
+        </tr>
+        <tr class="ffe-table__row">
+            <td class="ffe-table__cell">Koksgrå</td>
+            <td class="ffe-table__cell">
+                <ul class="sb1ds-color-usage__list">
+                    <li class="ffe-strong-text">Bakgrunnsfarge</li>
+                    <li>Fremhevede flater</li>
+                </ul>
+            </td>
+            <td class="ffe-table__cell">
+                <ul class="sb1ds-color-usage__list">
+                    <li>#1C1C1C</li>
+                    <li>@ffe-grey-charcoal-darkmode</li>
+                </ul>
+            </td>
+            <td class="ffe-table__cell">
+                <span class="sb1ds-color-usage__example sb1ds-color-usage__example--ffe-grey-charcoal-darkmode"></span>
+            </td>
+        </tr>
+        <tr class="ffe-table__row">
+            <td class="ffe-table__cell">Grå</td>
+            <td class="ffe-table__cell">
+                <ul class="sb1ds-color-usage__list">
+                    <li class="ffe-strong-text">Bakgrunnsfarge</li>
+                    <li>Interaksjonsflater</li>
+                    <li>Fremhevede flater</li>
+                </ul>
+            </td>
+            <td class="ffe-table__cell">
+                <ul class="sb1ds-color-usage__list">
+                    <li>#292929</li>
+                    <li>@ffe-grey-darkmode</li>
+                </ul>
+            </td>
+            <td class="ffe-table__cell">
+                <span class="sb1ds-color-usage__example sb1ds-color-usage__example--ffe-grey-darkmode"></span>
+            </td>
+        </tr>
+        <tr class="ffe-table__row">
+            <td class="ffe-table__cell">Sølvgrå</td>
+            <td class="ffe-table__cell">
+                <ul class="sb1ds-color-usage__list">
+                    <li class="ffe-strong-text">Støttefarge</li>
+                </ul>
+            </td>
+            <td class="ffe-table__cell">
+                <ul class="sb1ds-color-usage__list">
+                    <li>#858585</li>
+                    <li>@ffe-grey-silver-darkmode</li>
+                </ul>
+            </td>
+            <td class="ffe-table__cell">
+                <span class="sb1ds-color-usage__example sb1ds-color-usage__example--ffe-grey-silver-darkmode"></span>
+            </td>
+        </tr>
+        <tr class="ffe-table__row">
+            <td class="ffe-table__cell">Skygrå</td>
+            <td class="ffe-table__cell">
+                <ul class="sb1ds-color-usage__list">
+                    <li class="ffe-strong-text">Tekstfarge</li>
+                    <li>Hovedfarge for tekst</li>
+                </ul>
+            </td>
+            <td class="ffe-table__cell">
+                <ul class="sb1ds-color-usage__list">
+                    <li>#ADADAD</li>
+                    <li>@ffe-grey-cloud-darkmode</li>
+                </ul>
+            </td>
+            <td class="ffe-table__cell">
+                <span class="sb1ds-color-usage__example sb1ds-color-usage__example--ffe-grey-cloud-darkmode"></span>
+            </td>
+        </tr>
+        <tr class="ffe-table__row">
+            <td class="ffe-table__cell">Hvit</td>
+            <td class="ffe-table__cell">
+                <ul class="sb1ds-color-usage__list">
+                    <li class="ffe-strong-text">Støttefarge</li>
+                    <li>Overskrifter</li>
+                    <li>Fremhevet tekst</li>
+                </ul>
+            </td>
+            <td class="ffe-table__cell">
+                <ul class="sb1ds-color-usage__list">
+                    <li>#FFFFFF</li>
+                    <li>@ffe-white-darkmode</li>
+                </ul>
+            </td>
+            <td class="ffe-table__cell">
+                <span class="sb1ds-color-usage__example sb1ds-color-usage__example--ffe-white-darkmode"></span>
+            </td>
+        </tr>
+        <tr class="ffe-table__row">
+            <td class="ffe-table__cell">Rød</td>
+            <td class="ffe-table__cell">
+                <ul class="sb1ds-color-usage__list">
+                    <li class="ffe-strong-text">Støttefarge</li>
+                    <li>Feilmeldingsfarge</li>
+                </ul>
+            </td>
+            <td class="ffe-table__cell">
+                <ul class="sb1ds-color-usage__list">
+                    <li>#FF2424</li>
+                    <li>@ffe-red-darkmode</li>
+                </ul>
+            </td>
+            <td class="ffe-table__cell">
+                <span class="sb1ds-color-usage__example sb1ds-color-usage__example--ffe-red-darkmode"></span>
             </td>
         </tr>
     </table>
