@@ -15,6 +15,11 @@
     [aria-invalid='true'] {
         border-color: @ffe-orange-fire;
         border-style: solid;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                border-color: @ffe-red-darkmode;
+            }
+        }
     }
 
     .ffe-input-field--text-like {
@@ -24,6 +29,11 @@
             border-left-style: none;
             border-right-style: none;
             border-top-style: none;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    border-color: @ffe-red-darkmode;
+                }
+            }
         }
     }
 

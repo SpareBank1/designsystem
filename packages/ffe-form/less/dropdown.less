@@ -29,6 +29,14 @@
     color: @ffe-black;
     display: block;
     .ffe-chevron-icon-with-color();
+    .native & {
+        @media (prefers-color-scheme: dark) {
+            background-color: @ffe-grey-darkmode;
+            border-color: @ffe-grey-darkmode;
+            color: @ffe-white-darkmode;
+            box-shadow: none;
+        }
+    }
 
     font-family: MuseoSans-500, arial, sans-serif;
     height: 45px;
@@ -40,6 +48,11 @@
 
     &:hover {
         border-color: @ffe-blue-azure;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                border-color: @ffe-blue-azure-darkmode;
+            }
+        }
     }
 
     &:focus,
@@ -47,6 +60,11 @@
         border-color: @ffe-blue-azure;
         box-shadow: 0 0 0 1px @ffe-white, 0 0 0 4px @ffe-blue-focus;
         outline: none;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                border-color: @ffe-blue-azure-darkmode;
+            }
+        }
     }
 
     &:-moz-focusring {
@@ -58,6 +76,12 @@
     &:focus::-ms-value {
         background: @ffe-white;
         color: @ffe-black;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background: @ffe-grey-darkmode;
+                color: @ffe-white-darkmode;
+            }
+        }
     }
 
     &::-ms-expand {
@@ -76,6 +100,11 @@
     &::placeholder {
         color: @ffe-grey-charcoal;
         opacity: 1;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-grey-darkmode;
+            }
+        }
     }
 
     &--dark {
@@ -85,9 +114,20 @@
         border-color: @ffe-grey-shuttle--dark;
         background-color: @ffe-grey-shuttle--dark;
         box-shadow: none;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                border-color: @ffe-grey-shuttle--dark;
+                background-color: @ffe-grey-shuttle--dark;
+            }
+        }
 
         &:hover {
             border-color: @ffe-blue-focus;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    border-color: @ffe-blue-focus;
+                }
+            }
         }
 
         &:focus,
@@ -96,6 +136,12 @@
             border-color: @ffe-grey-dark-blue--dark;
             box-shadow: 0 0 0 2px @ffe-blue-focus;
             outline: none;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    background-color: @ffe-grey-dark-blue--dark;
+                    border-color: @ffe-grey-dark-blue--dark;
+                }
+            }
         }
 
         &::placeholder {

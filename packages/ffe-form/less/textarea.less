@@ -18,9 +18,22 @@
     transition: all @ffe-transition-duration @ffe-ease;
     box-shadow: 0 1px 2px 0 @ffe-grey-cloud inset;
     .ffe-fontsize-form-input;
+    .native & {
+        @media (prefers-color-scheme: dark) {
+            background-color: @ffe-grey-darkmode;
+            border-color: @ffe-grey-darkmode;
+            box-shadow: none;
+            color: @ffe-white-darkmode;
+        }
+    }
 
     &:hover {
         border-color: @ffe-blue-azure;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                border-color: @ffe-blue-azure-darkmode;
+            }
+        }
     }
 
     &:focus,
@@ -28,6 +41,11 @@
         border-color: @ffe-blue-azure;
         box-shadow: 0 0 0 1px @ffe-white, 0 0 0 4px @ffe-blue-focus;
         outline: none;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                border-color: @ffe-blue-azure-darkmode;
+            }
+        }
     }
 
     &--dark {
@@ -35,9 +53,20 @@
         border: 2px solid @ffe-grey-shuttle--dark;
         background-color: @ffe-grey-shuttle--dark;
         box-shadow: none;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                border-color: @ffe-grey-shuttle--dark;
+                background-color: @ffe-grey-shuttle--dark;
+            }
+        }
 
         &:hover {
             border-color: @ffe-blue-focus;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    border-color: @ffe-blue-focus;
+                }
+            }
         }
 
         &:focus,
@@ -45,6 +74,11 @@
             border-color: @ffe-grey-dark-blue--dark;
             box-shadow: 0 0 0 2px @ffe-blue-focus;
             outline: none;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    border-color: @ffe-grey-dark-blue--dark;
+                }
+            }
         }
     }
 }

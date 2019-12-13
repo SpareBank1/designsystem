@@ -65,9 +65,19 @@
     position: relative;
     list-style: none;
     width: 100%;
+    .native & {
+        @media (prefers-color-scheme: dark) {
+            border-color: @ffe-grey-silver-darkmode;
+        }
+    }
 
     &:last-of-type {
         border-bottom: solid @ffe-grey-silver 1px;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                border-color: @ffe-grey-silver-darkmode;
+            }
+        }
     }
 
     .ffe-accordion--blue & {
@@ -94,18 +104,38 @@
     margin-left: 10px;
     transition: transform @ffe-transition-duration @ffe-ease-in-out-back,
         fill @ffe-transition-duration @ffe-ease;
+    .native & {
+        @media (prefers-color-scheme: dark) {
+            fill: @ffe-blue-azure-darkmode;
+        }
+    }
 
     .ffe-accordion--blue & {
         fill: @ffe-blue-royal;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                fill: @ffe-blue-azure-darkmode;
+            }
+        }
     }
 
     .ffe-accordion-item--open & {
         transform: rotateZ(180deg);
         fill: @ffe-blue-royal;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                fill: lighten(@ffe-blue-azure-darkmode, 10%);
+            }
+        }
     }
 
     .ffe-accordion--blue .ffe-accordion-item--open & {
         fill: @ffe-white;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                fill: lighten(@ffe-blue-azure-darkmode, 10%);
+            }
+        }
     }
 }
 
@@ -125,6 +155,11 @@
 
 .ffe-accordion-item__content {
     padding: 10px 25px;
+    .native & {
+        @media (prefers-color-scheme: dark) {
+            color: @ffe-grey-cloud-darkmode;
+        }
+    }
 
     .ffe-accordion--blue & {
         padding: 10px 25px 0;
@@ -145,22 +180,47 @@
     width: 100%;
     padding: 0;
     margin: 0;
+    .native & {
+        @media (prefers-color-scheme: dark) {
+            color: @ffe-blue-azure-darkmode;
+        }
+    }
 
     &:hover,
     &:focus {
         color: @ffe-blue-royal;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: lighten(@ffe-blue-azure-darkmode, 10%);
+            }
+        }
 
         .ffe-accordion-item__icon {
             fill: @ffe-blue-royal;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    fill: lighten(@ffe-blue-azure-darkmode, 10%);
+                }
+            }
 
             .ffe-accordion--blue & {
                 fill: @ffe-white;
+                .native & {
+                    @media (prefers-color-scheme: dark) {
+                        fill: @ffe-blue-azure-darkmode;
+                    }
+                }
             }
         }
     }
 
     .ffe-accordion-item--open & {
         color: @ffe-blue-royal;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: lighten(@ffe-blue-azure-darkmode, 10%);
+            }
+        }
     }
 
     .ffe-accordion--blue & {
@@ -168,17 +228,35 @@
         background-color: @ffe-blue-pale;
         border-radius: 3px;
         transition: background-color @ffe-transition-duration @ffe-ease;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-blue-azure-darkmode;
+                background-color: @ffe-grey-darkmode;
+            }
+        }
 
         &:hover,
         &:focus {
             color: white;
             background-color: @ffe-blue-royal;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    color: lighten(@ffe-blue-azure-darkmode, 10%);
+                    background-color: lighten(@ffe-grey-darkmode, 5%);
+                }
+            }
         }
     }
 
     .ffe-accordion--blue .ffe-accordion-item--open & {
         color: @ffe-white;
         background-color: @ffe-blue-royal;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-blue-azure-darkmode;
+                background-color: lighten(@ffe-grey-darkmode, 5%);
+            }
+        }
     }
 }
 

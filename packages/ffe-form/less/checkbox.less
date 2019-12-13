@@ -51,6 +51,12 @@
         transition: all @ffe-transition-duration @ffe-ease;
         width: 20px;
         background-color: @ffe-white;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                border-color: @ffe-grey-cloud-darkmode;
+                background-color: @ffe-grey-darkmode;
+            }
+        }
     }
 
     &--hidden-label {
@@ -103,6 +109,11 @@
 
     &:hover + .ffe-checkbox::before {
         border-color: @ffe-blue-azure;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                border-color: @ffe-blue-azure-darkmode;
+            }
+        }
     }
 
     &:active + .ffe-checkbox::before,
@@ -113,6 +124,12 @@
     &:checked + .ffe-checkbox::before {
         border-color: @ffe-blue-azure;
         background-color: @ffe-white;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                border-color: @ffe-blue-azure-darkmode;
+                background-color: @ffe-grey-darkmode;
+            }
+        }
     }
 
     &:focus + .ffe-checkbox::before {
@@ -122,10 +139,20 @@
     &:checked + .ffe-checkbox::after {
         border-color: @ffe-blue-azure;
         height: 11px;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                border-color: @ffe-blue-azure-darkmode;
+            }
+        }
     }
 
     &[aria-invalid='true'] + .ffe-checkbox::before {
         border-color: @ffe-orange-fire;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                border-color: @ffe-red-darkmode;
+            }
+        }
     }
 
     &--dark {
@@ -133,6 +160,12 @@
             border-color: @ffe-white;
             background-color: @ffe-grey-silver;
             box-shadow: none;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    border-color: @ffe-white;
+                    background-color: @ffe-grey-silver;
+                }
+            }
         }
 
         &:active + .ffe-checkbox::before,
@@ -148,10 +181,21 @@
         &:checked + .ffe-checkbox::before {
             border-color: @ffe-white;
             background-color: @ffe-white;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    border-color: @ffe-white;
+                    background-color: @ffe-white;
+                }
+            }
         }
 
         &:checked + .ffe-checkbox::after {
             border-color: @ffe-blue-azure;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    border-color: @ffe-blue-azure;
+                }
+            }
         }
 
         &:checked:active + .ffe-checkbox::before,

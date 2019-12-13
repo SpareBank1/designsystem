@@ -5,14 +5,29 @@
 
         &:hover {
             background-color: @ffe-blue-pale;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    background-color: @ffe-grey-darkmode;
+                }
+            }
         }
 
         &--expanded {
             background-color: @ffe-blue-pale;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    background-color: @ffe-grey-darkmode;
+                }
+            }
         }
 
         &--expanded:not(:last-child) {
             border-color: @ffe-blue-pale;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    background-color: @ffe-grey-darkmode;
+                }
+            }
         }
 
         .ffe-table__content {
@@ -38,6 +53,11 @@
             animation: slide-row 0.2s cubic-bezier(0.5, 0.015, 0.485, 1.445);
             background-color: @ffe-blue-ice;
             opacity: 1;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    background-color: @ffe-grey-charcoal-darkmode;
+                }
+            }
 
             .ffe-table__cell-expandable-content {
                 padding: 10px;
@@ -53,6 +73,11 @@
         position: absolute;
         top: 10px;
         right: 5px;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                fill: @ffe-blue-azure-darkmode;
+            }
+        }
 
         @media (min-width: @breakpoint-md) {
             position: static;
