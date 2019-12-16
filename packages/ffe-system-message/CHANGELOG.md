@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@3.1.0...@sb1/ffe-system-message@3.1.1) (2019-12-16)
+
+### Bug Fixes
+
+-   **ffe-system-message:** text does not take full with ([03f537b](https://github.com/SpareBank1/designsystem/commit/03f537b17b78c02f212a1b35f2f3f6d41a409e7d))
+
 # [3.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@3.0.30...@sb1/ffe-system-message@3.1.0) (2019-12-16)
 
 ### Features
