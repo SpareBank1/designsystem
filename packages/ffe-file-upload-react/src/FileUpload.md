@@ -1,6 +1,37 @@
-En komponent for å laste opp filer, for eksempel Excel-ark eller annen dokumentasjon. Eksempel på implementasjon:
+En komponent for å laste opp filer, for eksempel Excel-ark eller annen dokumentasjon.
 
 ```jsx
+const files = {};
+const onFilesSelected = () => {};
+const onFilesDropped = () => {};
+const onFileDeleted = () => {};
+
+<FileUpload
+    id="ffe-file-upload-example"
+    label={'Velg filer'}
+    title={'Dokumentasjon'}
+    infoText={
+        'Det kan være vanskelig å estimere fremtiden, derfor kan du laste opp eventuelle filer som viser til fremtidig budsjett eller inntjening.'
+    }
+    infoSubText={
+        'Husk å ikke laste opp personsensitive opplysninger eller dokumenter som bedriften ikke vil dele.'
+    }
+    uploadTitle={'Dra filene hit'}
+    uploadMicroText={'Eller'}
+    uploadSubText={'PDF-filer, maks 50 MB'}
+    files={files}
+    cancelText={'Avbryt'}
+    deleteText={'Slett'}
+    onFileDeleted={onFileDeleted}
+    onFilesSelected={onFilesSelected}
+    onFilesDropped={onFilesDropped}
+    multiple
+/>;
+```
+
+Eksempel på implementasjon:
+
+```jsx static
 import React from 'react';
 import FileUpload from '@sb1/ffe-file-upload-react';
 import { getFileContent } from '@sb1/ffe-file-upload-react';
@@ -117,8 +148,8 @@ Opplastingsprosessen er som følger:
 6. `files` objektet er indeksert på navn med selve `name` påkrevet, mens `error` og `document` er optional.
 7. Et eksempel på `files` som inkluderer de 3 mulighetene:
 
-```js
-files = {
+```js static
+const files = {
     fileBeingUploaded: {
         name: 'fileBeingUploaded',
     },
