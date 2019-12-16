@@ -7548,6 +7548,9 @@ input:not([type='radio']):not([type='checkbox']) {
   margin: 0;
   padding: 0;
   font-size: 14px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 @media (min-width: 600px) {
   .ffe-system-message__content {
@@ -7569,7 +7572,7 @@ input:not([type='radio']):not([type='checkbox']) {
   -ms-flex-item-align: start;
       align-self: flex-start;
   height: 16px;
-  margin: 5px 0 5px 0;
+  margin: 5px 0 5px 5px;
   padding: 0;
   width: 16px;
 }
