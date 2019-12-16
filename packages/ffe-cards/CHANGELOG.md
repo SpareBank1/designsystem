@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@7.0.7...@sb1/ffe-cards@7.1.0) (2019-12-16)
+
+### Features
+
+-   **ffe-cards:** add darkmode styling overrides ([077cbad](https://github.com/SpareBank1/designsystem/commit/077cbad96a1e7ec6cf8b90c06f6eefa7108fd84a))
+
 ## [7.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@7.0.6...@sb1/ffe-cards@7.0.7) (2019-10-31)
 
 **Note:** Version bump only for package @sb1/ffe-cards

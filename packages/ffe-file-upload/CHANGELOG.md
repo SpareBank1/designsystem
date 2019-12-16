@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload@2.0.5...@sb1/ffe-file-upload@2.1.0) (2019-12-16)
+
+### Features
+
+-   **ffe-file-upload:** add darkmdoe styling overrides ([0946b37](https://github.com/SpareBank1/designsystem/commit/0946b37d65c283c443e5dc23e5b71ed11c257351))
+
 ## [2.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload@2.0.4...@sb1/ffe-file-upload@2.0.5) (2019-10-31)
 
 **Note:** Version bump only for package @sb1/ffe-file-upload

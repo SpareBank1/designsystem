@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner@3.0.28...@sb1/ffe-spinner@3.1.0) (2019-12-16)
+
+### Features
+
+-   **ffe-spinner:** add darkmode styling overrides ([ac6f828](https://github.com/SpareBank1/designsystem/commit/ac6f828b2d771d3643de886dca9dda9b9bf3aab8))
+
 ## [3.0.28](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner@3.0.27...@sb1/ffe-spinner@3.0.28) (2019-10-31)
 
 **Note:** Version bump only for package @sb1/ffe-spinner

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@10.2.5...@sb1/ffe-grid@10.3.0) (2019-12-16)
+
+### Features
+
+-   **ffe-grid:** add darkmode styling overrides ([5118558](https://github.com/SpareBank1/designsystem/commit/511855815708058933a4dfc2b112411070e77b08))
+
 ## [10.2.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@10.2.4...@sb1/ffe-grid@10.2.5) (2019-10-31)
 
 **Note:** Version bump only for package @sb1/ffe-grid

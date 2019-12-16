@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@6.0.9...@sb1/ffe-message-box@6.1.0) (2019-12-16)
+
+### Features
+
+-   **ffe-message-box:** add darkmode styling overrides ([b7209d6](https://github.com/SpareBank1/designsystem/commit/b7209d6d9cefa6afd3624e4af6dd7673e2373ee4))
+
 ## [6.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@6.0.8...@sb1/ffe-message-box@6.0.9) (2019-10-21)
 
 ### Bug Fixes

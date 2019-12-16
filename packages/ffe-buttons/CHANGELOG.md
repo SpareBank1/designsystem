@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@8.2.6...@sb1/ffe-buttons@8.3.0) (2019-12-16)
+
+### Features
+
+-   **ffe-buttons:** add darkmode styling overrides ([a7dae53](https://github.com/SpareBank1/designsystem/commit/a7dae532aa2de47bcff72dc408dc62a59ffb87be))
+
 ## [8.2.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@8.2.5...@sb1/ffe-buttons@8.2.6) (2019-10-31)
 
 **Note:** Version bump only for package @sb1/ffe-buttons

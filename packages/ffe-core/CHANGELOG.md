@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [15.4.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@15.3.0...@sb1/ffe-core@15.4.0) (2019-12-16)
+
+### Features
+
+-   **ffe-core:** add default body colors for light and dark themes ([a516dc8](https://github.com/SpareBank1/designsystem/commit/a516dc885c6fc4e2169ac261cd8c86d47883ba5d))
+-   **ffe-core:** removed darkmode overrides file, added inline overrides ([289b012](https://github.com/SpareBank1/designsystem/commit/289b0123cb361ea18a1701a43b5f5cad9387e4fc))
+
 # [15.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@15.2.1...@sb1/ffe-core@15.3.0) (2019-10-31)
 
 ### Features

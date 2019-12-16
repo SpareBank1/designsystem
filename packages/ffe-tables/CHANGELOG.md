@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [9.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@9.0.27...@sb1/ffe-tables@9.1.0) (2019-12-16)
+
+### Features
+
+-   **ffe-tables:** add darkmode styling overrides ([301f4ee](https://github.com/SpareBank1/designsystem/commit/301f4ee73f009369392a4833ac0b07798e7fcb5f))
+
 ## [9.0.27](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@9.0.26...@sb1/ffe-tables@9.0.27) (2019-10-31)
 
 **Note:** Version bump only for package @sb1/ffe-tables

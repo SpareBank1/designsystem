@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@6.1.10...@sb1/ffe-tabs@6.2.0) (2019-12-16)
+
+### Features
+
+-   **ffe-tabs:** add darkmode styling overrides ([668eef5](https://github.com/SpareBank1/designsystem/commit/668eef51d1e53c77e31a7fa8c203dfb2bdb59041))
+
 ## [6.1.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@6.1.9...@sb1/ffe-tabs@6.1.10) (2019-10-31)
 
 **Note:** Version bump only for package @sb1/ffe-tabs

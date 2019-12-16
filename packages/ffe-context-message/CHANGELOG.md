@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@3.0.30...@sb1/ffe-context-message@3.1.0) (2019-12-16)
+
+### Features
+
+-   **ffe-context-message:** add darmode styling overrides ([afaa866](https://github.com/SpareBank1/designsystem/commit/afaa866344ee2c4fdfdae57616faffc9d45ebccc))
+
 ## [3.0.30](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@3.0.29...@sb1/ffe-context-message@3.0.30) (2019-10-31)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
