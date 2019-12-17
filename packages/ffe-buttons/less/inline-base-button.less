@@ -21,7 +21,7 @@
     font-family: 'MuseoSansRounded-500', arial, sans-serif;
     margin: 0 -4px; // Hack to allow box-shadow to float outside content on focus
     overflow: hidden;
-    padding: 0 4px;
+    padding: 0 @ffe-spacing-2xs;
     text-decoration: none;
     .ffe-fontsize-body-text;
 
@@ -108,7 +108,8 @@
     align-content: center;
     color: @ffe-blue-azure;
     flex-wrap: wrap;
-    padding: 10px 20px 9px;
+    padding: (@ffe-spacing-xs - 2) (@ffe-spacing-sm + 1) (@ffe-spacing-xs - 1);
+    border: 3px solid transparent;
     .native & {
         @media (prefers-color-scheme: dark) {
             color: @ffe-blue-azure-darkmode;
@@ -138,9 +139,8 @@
     }
 
     &:focus {
-        border: 3px solid @ffe-blue-focus;
+        border-color: @ffe-blue-focus;
         color: @ffe-blue-cobalt;
-        padding: 7px 17px 6px;
         .native & {
             @media (prefers-color-scheme: dark) {
                 border-color: lighten(@ffe-blue-azure-darkmode, 10%);
@@ -152,7 +152,7 @@
     &:active {
         border: 2px solid @ffe-blue-azure;
         color: @ffe-blue-azure;
-        padding: 8px 18px 7px;
+        padding: (@ffe-spacing-xs - 1) (@ffe-spacing-sm + 2) @ffe-spacing-xs;
         .native & {
             @media (prefers-color-scheme: dark) {
                 border-color: lighten(@ffe-blue-azure-darkmode, 10%);
@@ -179,13 +179,11 @@
         }
 
         &:focus {
-            border: 2px solid @ffe-blue-focus;
-            padding: 8px 18px 7px;
+            border-color: @ffe-blue-focus;
         }
 
         &:active {
-            border: none;
-            padding: 10px 20px 9px;
+            border-color: transparent;
         }
     }
 }
