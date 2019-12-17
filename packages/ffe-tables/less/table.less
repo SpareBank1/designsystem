@@ -108,7 +108,7 @@
 // Styleguide ffe-tables.table.2
 
 .ffe-table {
-    margin: 20px 0;
+    margin: @ffe-spacing-sm 0;
     min-width: 100%;
     text-align: left;
     border-collapse: collapse;
@@ -145,7 +145,7 @@
     &__row {
         border-bottom: 1px solid @ffe-grey-silver;
         display: block;
-        padding: 10px 0;
+        padding: @ffe-spacing-xs 0;
         .native & {
             @media (prefers-color-scheme: dark) {
                 border-color: @ffe-grey-silver-darkmode;
@@ -170,7 +170,7 @@
 
         @media (min-width: @breakpoint-md) {
             display: table-cell;
-            padding: 10px;
+            padding: @ffe-spacing-xs;
         }
     }
 
@@ -185,7 +185,7 @@
 
     &__cell {
         display: block;
-        padding: 0 5px;
+        padding: 0 @ffe-spacing-2xs;
 
         &--top {
             vertical-align: top;
@@ -193,7 +193,7 @@
 
         @media (min-width: @breakpoint-md) {
             display: table-cell;
-            padding: 19px 10px;
+            padding: @ffe-spacing-sm @ffe-spacing-xs;
         }
     }
 
@@ -203,7 +203,7 @@
         .ffe-table__heading,
         .ffe-table__cell {
             @media (min-width: @breakpoint-md) {
-                padding: 10px;
+                padding: @ffe-spacing-xs;
             }
         }
     }
@@ -212,7 +212,7 @@
         display: block;
         max-width: none;
         vertical-align: top;
-        margin-bottom: 15px;
+        margin-bottom: @ffe-spacing-sm;
 
         &--text-right {
             text-align: right;
