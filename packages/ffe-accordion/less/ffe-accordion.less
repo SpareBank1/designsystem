@@ -82,7 +82,7 @@
 
     .ffe-accordion--blue & {
         border-top: 0;
-        margin-bottom: 10px;
+        margin-bottom: @ffe-spacing-xs;
 
         &:last-of-type {
             border-bottom: 0;
@@ -90,7 +90,7 @@
     }
 
     &--open {
-        margin-bottom: 20px;
+        margin-bottom: @ffe-spacing-md;
     }
 }
 
@@ -101,7 +101,7 @@
     align-self: center;
     max-width: 17px;
     min-width: 17px;
-    margin-left: 10px;
+    margin-left: @ffe-spacing-xs;
     transition: transform @ffe-transition-duration @ffe-ease-in-out-back,
         fill @ffe-transition-duration @ffe-ease;
     .native & {
@@ -154,7 +154,7 @@
 }
 
 .ffe-accordion-item__content {
-    padding: 10px 25px;
+    padding: @ffe-spacing-xs @ffe-spacing-md;
     .native & {
         @media (prefers-color-scheme: dark) {
             color: @ffe-grey-cloud-darkmode;
@@ -162,7 +162,7 @@
     }
 
     .ffe-accordion--blue & {
-        padding: 10px 25px 0;
+        padding: @ffe-spacing-xs @ffe-spacing-md 0;
     }
 }
 
@@ -263,7 +263,7 @@
 .ffe-accordion-item__toggler-content {
     display: flex;
     flex-flow: row nowrap;
-    padding: 20px;
+    padding: @ffe-spacing-md;
     text-decoration: none;
     text-align: left;
     transition: background-color @ffe-transition-duration @ffe-ease,
