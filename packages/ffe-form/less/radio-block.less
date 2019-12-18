@@ -30,7 +30,7 @@
 // Styleguide ffe-form.radio-block
 
 .ffe-radio-block {
-    margin-top: 20px;
+    margin-top: @ffe-spacing-md;
     width: 100%;
     transition: width @ffe-transition-duration @ffe-ease-in-out-back;
 
@@ -40,7 +40,7 @@
         border: 2px solid @ffe-grey-silver;
         border-radius: 5px;
         display: inline-block;
-        margin-right: 10px;
+        margin-right: @ffe-spacing-xs;
         color: @ffe-black;
         background-color: @ffe-white;
         cursor: pointer;
@@ -72,7 +72,7 @@
 
     &__header {
         display: block;
-        padding: 8px 60px 7px;
+        padding: @ffe-spacing-xs @ffe-spacing-3xl @ffe-spacing-xs;
         cursor: pointer;
         border-bottom: thin solid @ffe-grey-silver;
         transition: background-color @ffe-transition-duration @ffe-ease,
@@ -86,7 +86,7 @@
     }
 
     &__wrapper {
-        padding: 20px 20px 30px;
+        padding: @ffe-spacing-sm @ffe-spacing-sm @ffe-spacing-lg;
         cursor: auto;
 
         &--empty {
@@ -147,6 +147,6 @@
 
 @media (min-width: @breakpoint-sm) {
     .ffe-radio-block__wrapper {
-        padding-left: 60px;
+        padding-left: @ffe-spacing-3xl;
     }
 }

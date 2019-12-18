@@ -27,7 +27,7 @@
         width: 100%;
         overflow: hidden;
         border: 2px solid transparent;
-        transition: border-color 0.2s;
+        transition: border-color @ffe-transition-duration;
     }
 
     &__image__overlay {
@@ -41,7 +41,7 @@
 
     &__body {
         text-align: center;
-        padding: 20px 20px 10px 20px;
+        padding: @ffe-spacing-sm @ffe-spacing-sm @ffe-spacing-xs @ffe-spacing-sm;
         border-top: 0;
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
@@ -50,13 +50,13 @@
 
     @media (min-width: @breakpoint-md) {
         .ffe-image-card__icon {
-            margin: 0 20px 0;
+            margin: 0 @ffe-spacing-md 0;
         }
     }
 
     @media (min-width: @breakpoint-lg) {
         .ffe-image-card__icon {
-            margin: 0 30px 0 10px;
+            margin: 0 @ffe-spacing-lg 0 @ffe-spacing-xs;
         }
     }
 }

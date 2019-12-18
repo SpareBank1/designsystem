@@ -14,7 +14,7 @@
 // Styleguide ffe-form.radio-switch
 
 .ffe-radio-switch {
-    padding: 6px 20px 6px 50px;
+    padding: 6px @ffe-spacing-sm 6px @ffe-spacing-2xl;
     position: relative;
     background-color: @ffe-white;
     border: 2px solid @ffe-grey-silver;
@@ -27,8 +27,8 @@
     cursor: pointer;
     transition: all @ffe-transition-duration @ffe-ease;
     box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.05);
-    margin-bottom: 5px;
-    margin-top: 13px;
+    margin-bottom: @ffe-spacing-2xs;
+    margin-top: @ffe-spacing-sm;
     .native & {
         @media (prefers-color-scheme: dark) {
             background-color: @ffe-grey-charcoal-darkmode;
@@ -64,7 +64,7 @@
     }
 
     & + input + .ffe-radio-switch {
-        margin-left: 5px;
+        margin-left: @ffe-spacing-xs;
     }
 
     &--condensed {
