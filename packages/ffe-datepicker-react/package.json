@@ -43,7 +43,7 @@
     "react-dom": "^16.9.0"
   },
   "peerDependencies": {
-    "@sb1/ffe-datepicker": "^5.0.0",
+    "@sb1/ffe-datepicker": "^6.0.0",
     "@sb1/ffe-form": ">=11.0.1",
     "react": "^16.9.0"
   },
