@@ -1,6 +1,6 @@
 .ffe-searchable-dropdown {
     position: relative;
-    @button-width: @ffe-spacing-xl;
+    @button-width: 40px;
 
     .ffe-input-field {
         padding-right: calc(@button-width + 3px);
@@ -9,7 +9,6 @@
     &__list {
         background: @ffe-white;
         position: absolute;
-        width: 100%;
         width: 100%;
         z-index: 100000;
         border-radius: 2px;
@@ -22,7 +21,7 @@
     }
 
     &__no-match {
-        padding: @ffe-spacing @ffe-spacing-sm;
+        padding: 8px 13px;
 
         & + .ffe-searchable-dropdown__list-item-container {
             border-top: 1px solid @ffe-grey-silver;
@@ -38,7 +37,7 @@
     }
 
     &__list-item-body {
-        padding: @ffe-spacing @ffe-spacing-sm;
+        padding: 8px 13px;
         color: @ffe-blue-cobalt;
         cursor: pointer;
 
@@ -95,16 +94,16 @@
         &--cross {
             svg {
                 fill: @ffe-grey-charcoal;
-                height: @ffe-spacing-sm;
-                width: @ffe-spacing-sm;
+                height: 11px;
+                width: 11px;
             }
         }
 
         &--arrow {
             svg {
                 fill: @ffe-blue-azure;
-                width: @ffe-spacing-sm;
-                height: @ffe-spacing-sm;
+                width: 17px;
+                height: 17px;
             }
         }
     }
