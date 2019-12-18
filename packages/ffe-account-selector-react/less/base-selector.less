@@ -29,6 +29,12 @@
             display: block;
             width: 17px;
             height: 17px;
+
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    fill: @ffe-white-darkmode;
+                }
+            }
         }
 
         &-icon--invalid {

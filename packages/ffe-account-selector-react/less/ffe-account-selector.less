@@ -10,6 +10,13 @@
         font-size: 14px;
         padding: 10px 6px;
         color: @ffe-black;
+
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-grey-cloud-darkmode;
+            }
+        }
+
         .ffe-clearfix;
         &--left {
             float: left;
@@ -20,7 +27,7 @@
     }
 
     &__dropdown-statusbar {
-        @border : 1px solid @ffe-grey-silver;
+        @border: 1px solid @ffe-grey-silver;
         padding: 10px;
         background: @ffe-grey-cloud;
         color: @ffe-black;
@@ -31,6 +38,13 @@
         border-right: @border;
         border-bottom: @border;
         border-radius: 2px;
+
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background: @ffe-black-darkmode;
+                color: @ffe-white-darkmode;
+            }
+        }
     }
 
     &__statusbar-button {
