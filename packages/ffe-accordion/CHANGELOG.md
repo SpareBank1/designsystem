@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@5.1.0...@sb1/ffe-accordion@6.0.0) (2019-12-18)
+
+### Bug Fixes
+
+-   **ffe-accordion:** replace hardcoded spacing with variables ([a45ed42](https://github.com/SpareBank1/designsystem/commit/a45ed429ff8098cee66fca0db721f915fe4338d3))
+
+### BREAKING CHANGES
+
+-   **ffe-accordion:** This commit is likely to cause small visual regressions caused by slightly altered margin and padding values.
+
 # [5.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@5.0.13...@sb1/ffe-accordion@5.1.0) (2019-12-16)
 
 ### Features

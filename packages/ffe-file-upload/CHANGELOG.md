@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload@2.1.0...@sb1/ffe-file-upload@3.0.0) (2019-12-18)
+
+### Bug Fixes
+
+-   **ffe-file-upload:** replace hardcoded spacing with variables ([058ebeb](https://github.com/SpareBank1/designsystem/commit/058ebeb478a57b7e5041a6f4cdd1abcbb5373520))
+
+### BREAKING CHANGES
+
+-   **ffe-file-upload:** This commit is likely to cause small visual regressions caused by slightly altered margin and padding values.
+
 # [2.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload@2.0.5...@sb1/ffe-file-upload@2.1.0) (2019-12-16)
 
 ### Features

@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@6.1.0...@sb1/ffe-message-box@7.0.0) (2019-12-18)
+
+### Bug Fixes
+
+-   **ffe-message-box:** replace hardcoded spacing with variables ([625129c](https://github.com/SpareBank1/designsystem/commit/625129c171bb493ad99b07c68ae68d30dc5e7e0e))
+
+### BREAKING CHANGES
+
+-   **ffe-message-box:** This commit is likely to cause small visual regressions caused by slightly altered margin and padding values.
+
 # [6.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@6.0.9...@sb1/ffe-message-box@6.1.0) (2019-12-16)
 
 ### Features

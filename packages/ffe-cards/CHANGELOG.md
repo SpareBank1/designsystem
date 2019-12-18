@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@7.1.0...@sb1/ffe-cards@8.0.0) (2019-12-18)
+
+### Bug Fixes
+
+-   **ffe-cards:** replace hardcoded spacing with variables ([d3d6087](https://github.com/SpareBank1/designsystem/commit/d3d6087ddb89d33a4eb23f7199e484aefd5bc544))
+
+### BREAKING CHANGES
+
+-   **ffe-cards:** This commit is likely to cause small visual regressions caused by slightly altered margin and padding values.
+
 # [7.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@7.0.7...@sb1/ffe-cards@7.1.0) (2019-12-16)
 
 ### Features

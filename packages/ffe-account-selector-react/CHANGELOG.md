@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [13.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@12.0.9...@sb1/ffe-account-selector-react@13.0.0) (2019-12-18)
+
+### Bug Fixes
+
+-   **ffe-account-selector-react:** replace hardcoded spacing with vars ([2a6c194](https://github.com/SpareBank1/designsystem/commit/2a6c1942f8f290af59747f5e82126b01a9c3c6da))
+
+### Features
+
+-   **ffe-account-selector-react:** support for dark-mode ([5af5ebe](https://github.com/SpareBank1/designsystem/commit/5af5ebedb34e7561e57c821a498c5242dd6ad598))
+
+### BREAKING CHANGES
+
+-   **ffe-account-selector-react:** This commit is likely to cause small visual regressions caused by slightly altered margin and padding values.
+
 ## [12.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@12.0.8...@sb1/ffe-account-selector-react@12.0.9) (2019-11-28)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react

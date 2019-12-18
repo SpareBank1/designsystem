@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@5.2.0...@sb1/ffe-datepicker@6.0.0) (2019-12-18)
+
+### Bug Fixes
+
+-   **ffe-datepicker:** replace hardcoded spacing with variables ([3f51706](https://github.com/SpareBank1/designsystem/commit/3f51706b69491cd5b545cf6be494f790f3cee740))
+
+### BREAKING CHANGES
+
+-   **ffe-datepicker:** This commit is likely to cause small visual regressions caused by slightly altered margin and padding values.
+
 # [5.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@5.1.5...@sb1/ffe-datepicker@5.2.0) (2019-12-16)
 
 ### Features

@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@11.2.23...@sb1/ffe-header@12.0.0) (2019-12-18)
+
+### Bug Fixes
+
+-   **ffe-header:** replace hardcoded spacing with variables ([b822137](https://github.com/SpareBank1/designsystem/commit/b8221371a04135440a9d05fa8de7936ce3ba6186))
+
+### BREAKING CHANGES
+
+-   **ffe-header:** This commit is likely to cause small visual regressions caused by slightly altered margin and padding values.
+
 ## [11.2.23](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@11.2.22...@sb1/ffe-header@11.2.23) (2019-12-16)
 
 **Note:** Version bump only for package @sb1/ffe-header

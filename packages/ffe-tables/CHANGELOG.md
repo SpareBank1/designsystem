@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@9.1.0...@sb1/ffe-tables@10.0.0) (2019-12-18)
+
+### Bug Fixes
+
+-   **ffe-tables:** replace hardcoded spacing with variables ([04bce27](https://github.com/SpareBank1/designsystem/commit/04bce27dc00793f06139b42252742de6afa2499d))
+
+### BREAKING CHANGES
+
+-   **ffe-tables:** This commit is likely to cause small visual regressions caused by slightly altered margin and padding values.
+
 # [9.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@9.0.27...@sb1/ffe-tables@9.1.0) (2019-12-16)
 
 ### Features

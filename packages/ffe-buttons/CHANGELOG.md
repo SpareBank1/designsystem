@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [9.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@8.3.0...@sb1/ffe-buttons@9.0.0) (2019-12-18)
+
+### Bug Fixes
+
+-   **ffe-buttons:** replace hardcoded spacing with variables ([d494709](https://github.com/SpareBank1/designsystem/commit/d494709c80f368a224bf889efd43685d23242243))
+
+### BREAKING CHANGES
+
+-   **ffe-buttons:** This commit is likely to cause small visual regressions caused by slightly altered margin and padding values.
+
 # [8.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@8.2.6...@sb1/ffe-buttons@8.3.0) (2019-12-16)
 
 ### Features

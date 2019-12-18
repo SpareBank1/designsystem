@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [11.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@10.3.0...@sb1/ffe-grid@11.0.0) (2019-12-18)
+
+### Bug Fixes
+
+-   **ffe-grid:** replace hardcoded spacing with variables ([92088be](https://github.com/SpareBank1/designsystem/commit/92088bee046a15a6a5a22f83576cd3342aae4300))
+
+### BREAKING CHANGES
+
+-   **ffe-grid:** This commit is likely to cause small visual regressions caused by slightly altered margin and padding values.
+
 # [10.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@10.2.5...@sb1/ffe-grid@10.3.0) (2019-12-16)
 
 ### Features

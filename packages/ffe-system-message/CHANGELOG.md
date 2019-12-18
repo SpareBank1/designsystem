@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@3.1.1...@sb1/ffe-system-message@4.0.0) (2019-12-18)
+
+### Bug Fixes
+
+-   **ffe-system-message:** replace hardcoded spacing with variables ([b34c27f](https://github.com/SpareBank1/designsystem/commit/b34c27fcdd90038b635ba632aaa1201e1a2731d3))
+
+### BREAKING CHANGES
+
+-   **ffe-system-message:** This commit is likely to cause small visual regressions caused by slightly altered margin and padding values.
+
 ## [3.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@3.1.0...@sb1/ffe-system-message@3.1.1) (2019-12-16)
 
 ### Bug Fixes

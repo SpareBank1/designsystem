@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [13.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@12.2.0...@sb1/ffe-form@13.0.0) (2019-12-18)
+
+### Bug Fixes
+
+-   **ffe-form:** replace hardcoded spacing with variables ([ef22f36](https://github.com/SpareBank1/designsystem/commit/ef22f369f4bf676fd9025d1b14f3bff4b16bef39))
+
+### BREAKING CHANGES
+
+-   **ffe-form:** This commit is likely to cause small visual regressions caused by slightly altered margin and padding values.
+
 # [12.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@12.1.0...@sb1/ffe-form@12.2.0) (2019-12-16)
 
 ### Features
