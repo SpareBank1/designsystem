@@ -1,7 +1,7 @@
 .ffe-calendar {
     border: solid 2px @ffe-grey-silver;
     border-radius: 4px;
-    padding: 0.25em;
+    padding: @ffe-spacing-2xs;
     background: @ffe-white;
     .native & {
         @media (prefers-color-scheme: dark) {
@@ -25,12 +25,12 @@
 
     &__header {
         text-align: center;
-        padding: 1em 0.25em 0.25em;
+        padding: @ffe-spacing-sm @ffe-spacing-2xs @ffe-spacing-2xs;
         width: 100%;
     }
 
     &__month {
-        padding-right: 0.4em;
+        padding-right: @ffe-spacing-xs;
     }
 
     &__month-nav {
@@ -92,7 +92,7 @@
         vertical-align: middle;
         color: @ffe-black;
         min-width: 50%;
-        margin-bottom: 8px;
+        margin-bottom: @ffe-spacing-xs;
         .native & {
             @media (prefers-color-scheme: dark) {
                 color: @ffe-white-darkmode;
@@ -131,7 +131,7 @@
     }
 
     &__day {
-        padding: 3px 0;
+        padding: @ffe-spacing-2xs 0;
         text-align: center;
         outline: none;
     }

@@ -21,11 +21,11 @@
 .ffe-checkbox {
     display: block;
     position: relative;
-    margin: 10px 0;
+    margin: @ffe-spacing-xs 0;
     cursor: pointer;
     transition: width @ffe-transition-duration @ffe-ease;
     text-align: left;
-    padding-left: 35px;
+    padding-left: @ffe-spacing-lg;
     -webkit-tap-highlight-color: fade(@ffe-blue-focus, 15%);
 
     &--no-margin {
@@ -35,7 +35,7 @@
 
     &--inline {
         display: inline-block;
-        margin-right: 20px;
+        margin-right: @ffe-spacing-sm;
     }
 
     &::before {
@@ -44,7 +44,7 @@
         content: '';
         display: inline-block;
         height: 20px;
-        margin-right: 15px;
+        margin-right: @ffe-spacing-sm;
         position: absolute;
         top: 0;
         left: 0;

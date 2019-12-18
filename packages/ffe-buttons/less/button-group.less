@@ -16,13 +16,13 @@
 .ffe-button-group {
     display: flex;
     flex-direction: column;
-    padding: 40px 0;
+    padding: @ffe-spacing-xl 0;
     width: 100%;
 
     .ffe-button,
     .ffe-inline-button {
         justify-content: center;
-        margin: 0 auto 10px;
+        margin: 0 auto @ffe-spacing-xs;
         align-self: center;
     }
 
@@ -34,7 +34,7 @@
         .ffe-button,
         .ffe-inline-button {
             display: inline;
-            margin: 0 0 10px 10px;
+            margin: 0 0 @ffe-spacing-xs @ffe-spacing-xs;
             width: auto;
         }
     }
@@ -46,11 +46,11 @@
 
         .ffe-button,
         .ffe-inline-button {
-            margin: 0 0 10px 20px;
+            margin: 0 0 @ffe-spacing-xs @ffe-spacing-sm;
             width: auto;
 
             &:first-child {
-                margin: 0 0 10px;
+                margin: 0 0 @ffe-spacing-xs;
             }
         }
     }
