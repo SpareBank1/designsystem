@@ -46,7 +46,7 @@
     "react-dom": "^16.9.0"
   },
   "peerDependencies": {
-    "@sb1/ffe-buttons": "^8.1.0",
+    "@sb1/ffe-buttons": "^9.0.0",
     "react": "^16.9.0"
   },
   "publishConfig": {
