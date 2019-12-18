@@ -5,6 +5,13 @@
     background: @ffe-white;
     cursor: pointer;
 
+    .native & {
+        @media (prefers-color-scheme: dark) {
+            background: @ffe-grey-charcoal-darkmode;
+            color: @ffe-white-darkmode;
+        }
+    }
+
     &:hover,
     &--highlighted {
         background: @ffe-blue-azure;
@@ -20,6 +27,13 @@
         color: @ffe-blue-azure;
         padding: @ffe-spacing-sm;
         cursor: default;
+
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background: @ffe-grey-charcoal-darkmode;
+                color: @ffe-white-darkmode;
+            }
+        }
     }
 
     &__account {
@@ -42,6 +56,12 @@
         color: @ffe-grey-charcoal;
         font-size: 12px;
         .ffe-clearfix;
+
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-white-darkmode;
+            }
+        }
     }
 
     &__number {

@@ -10,6 +10,13 @@
         font-size: 14px;
         padding: @ffe-spacing-xs @ffe-spacing-2xs;
         color: @ffe-black;
+
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-grey-cloud-darkmode;
+            }
+        }
+
         .ffe-clearfix;
         &--left {
             float: left;
@@ -31,6 +38,13 @@
         border-right: @border;
         border-bottom: @border;
         border-radius: 2px;
+
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background: @ffe-black-darkmode;
+                color: @ffe-white-darkmode;
+            }
+        }
     }
 
     &__statusbar-button {
