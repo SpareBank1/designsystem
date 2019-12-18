@@ -39,7 +39,7 @@
     "react-dom": "^16.9.0"
   },
   "peerDependencies": {
-    "@sb1/ffe-cards": "^7.0.0",
+    "@sb1/ffe-cards": "^8.0.0",
     "react": "^16.9.0"
   },
   "publishConfig": {
