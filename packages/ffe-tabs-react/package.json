@@ -41,7 +41,7 @@
   },
   "peerDependencies": {
     "@sb1/ffe-core": "^15.2.0",
-    "@sb1/ffe-tabs": "^6.1.0",
+    "@sb1/ffe-tabs": "^7.0.0",
     "react": "^16.9.0"
   },
   "publishConfig": {
