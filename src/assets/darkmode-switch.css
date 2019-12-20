@@ -1,13 +1,5 @@
-#darkmode-switch-list-item {
+.darkmode-button-content {
     display: flex;
-}
-
-#darkmode-switch {
-    visibility: hidden;
-    display: none;
-    height: 0;
-    width: 0;
-    margin-bottom: 40px;
 }
 
 button.darkmode-button {
@@ -16,10 +8,6 @@ button.darkmode-button {
     -webkit-appearance: none;
     border: none;
     background-color: transparent;
-}
-
-.darkmode-button-content {
-    display: flex;
 }
 
 button.darkmode-button:focus,
@@ -31,12 +19,20 @@ button.darkmode-button:focus > .darkmode-button-content {
     outline: #5e9ed6 auto 5px;
 }
 
-.darkmode-switch-icon {
+.darkmode-button__switch {
+    visibility: hidden;
+    display: none;
+    height: 0;
+    width: 0;
+    margin-bottom: 40px;
+}
+
+.darkmode-button__icon {
     margin: 14px 10px;
     height: 30px;
 }
 
-#switch-label {
+.darkmode-button__label {
     margin: 0 auto;
     border-radius: 100px;
     position: relative;
@@ -49,12 +45,12 @@ button.darkmode-button:focus > .darkmode-button-content {
     margin-top: 14px;
 }
 
-#switch-label:active,
-#switch-label:focus {
+.darkmode-button__label:active,
+.darkmode-button__label:focus {
     box-shadow: 0 0 0 1px #fff, 0 0 0 4px #a1dfff;
 }
 
-#switch-label::after {
+.darkmode-button__label::after {
     border-radius: 50%;
     position: absolute;
     content: '';
@@ -66,20 +62,16 @@ button.darkmode-button:focus > .darkmode-button-content {
     transition: ease-in-out 200ms;
 }
 
-#darkmode-switch:checked + label {
+.darkmode-button__switch:checked + label {
     background: #008a00;
 }
 
-#darkmode-switch:checked + label::after {
+.darkmode-button__switch:checked + label::after {
     left: calc(100% - 5px);
     transform: translateX(-100%);
 }
 
-#darkmode-switch {
-    background: #444;
-}
-
-.inputDisabled {
+.darkmode-button__switch--inputDisabled {
     cursor: not-allowed !important;
 }
 

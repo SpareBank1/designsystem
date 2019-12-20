@@ -1,11 +1,9 @@
 var darkModeEnabled = false;
+var button = document.getElementsByClassName('darkmode-button')[0];
+var checkbox = document.getElementsByClassName('darkmode-button__switch')[0];
 
 function isDarkModeSupported() {
-    if (window.matchMedia('(prefers-color-scheme)').media !== 'not all') {
-        return true;
-    }
-
-    return false;
+    return window.matchMedia('(prefers-color-scheme)').media !== 'not all';
 }
 
 /*
@@ -32,7 +30,7 @@ function onDarkModeSelected() {
     swapMediaQueryConditionText('(prefers-color-scheme: dark)', 'only screen');
 
     document.body.classList.add('native');
-    document.querySelectorAll('.darkmode-switch-icon').forEach(icon => {
+    document.querySelectorAll('.darkmode-button__icon').forEach(icon => {
         icon.style.filter = 'invert(100%)';
     });
 }
@@ -41,7 +39,7 @@ function onLightModeSelected() {
     swapMediaQueryConditionText('only screen', '(prefers-color-scheme: dark)');
 
     document.body.classList.remove('native');
-    document.querySelectorAll('.darkmode-switch-icon').forEach(icon => {
+    document.querySelectorAll('.darkmode-button__icon').forEach(icon => {
         icon.style.filter = '';
     });
 }
@@ -52,8 +50,6 @@ function setCookie(darkmodeEnabled) {
     document.cookie = `sb1design-darkmode=${darkmodeEnabled}; expires=${date.toGMTString()}; path=/`;
 }
 
-var checkbox = document.getElementById('darkmode-switch');
-
 let animateCssTransition = () => {
     document.documentElement.classList.add('transition');
     window.setTimeout(() => {
@@ -61,11 +57,10 @@ let animateCssTransition = () => {
     }, 1000);
 };
 
-checkbox.addEventListener('click', function(event) {
+button.addEventListener('click', function(event) {
     if (!isDarkModeSupported()) {
         alert('Sorry! Darkmode is not supported with this browser.');
         event.preventDefault();
-        return;
     }
 });
 
@@ -105,13 +100,13 @@ var mediaQueryList = window.matchMedia('(prefers-color-scheme: dark)');
 mediaQueryList.addEventListener('change', () => {
     var darkModeEndabledByOS = window.matchMedia('(prefers-color-scheme: dark)')
         .matches;
-    var labelEl = document.getElementById('switch-label');
+    var labelEl = document.getElementsByClassName('darkmode-button__label')[0];
 
     // disable manual swith if dark mode is enabled OS-wide
     checkbox.checked = darkModeEndabledByOS;
     darkModeEndabledByOS
-        ? labelEl.classList.add('inputDisabled')
-        : labelEl.classList.remove('inputDisabled');
+        ? labelEl.classList.add('darkmode-button__switch--inputDisabled')
+        : labelEl.classList.remove('darkmode-button__switch--inputDisabled');
     darkModeEndabledByOS
         ? (checkbox.disabled = true)
         : (checkbox.disabled = false);

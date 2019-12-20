@@ -5,6 +5,12 @@
     position: relative;
     z-index: 0;
 
+    .native & {
+        @media (prefers-color-scheme: dark) {
+            background-color: @ffe-black-darkmode;
+        }
+    }
+
     &__logo {
         height: 30px;
         margin: 10px 0;
@@ -306,14 +312,6 @@
             &::after {
                 transform: translateY(-8px) rotate(-45deg);
             }
-        }
-    }
-}
-
-body.native {
-    @media (prefers-color-scheme: dark) {
-        .sb1ds-top-menu {
-            background-color: @ffe-black-darkmode;
         }
     }
 }

@@ -1,6 +1,12 @@
 .sb1ds-sidebar {
     background-color: @ffe-grey-cloud;
     padding-top: 20px;
+    .native & {
+        @media (prefers-color-scheme: dark) {
+            background-color: @ffe-grey-charcoal-darkmode;
+            border-color: @ffe-grey-charcoal-darkmode;
+        }
+    }
 
     @media screen and (min-width: @breakpoint-md) {
         border-right: 1px solid @ffe-grey-silver;
@@ -75,15 +81,6 @@
 
         @media screen and (min-width: @breakpoint-md) {
             display: none;
-        }
-    }
-}
-
-body.native {
-    @media (prefers-color-scheme: dark) {
-        .sb1ds-sidebar {
-            background-color: @ffe-grey-charcoal-darkmode;
-            border-color: @ffe-grey-charcoal-darkmode;
         }
     }
 }
