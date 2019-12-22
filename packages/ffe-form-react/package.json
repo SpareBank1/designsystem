@@ -44,7 +44,7 @@
     "react-dom": "^16.9.0",
     "react-motion": "^0.5.2",
     "react-test-renderer": "^16.2.0",
-    "sinon": "^7.2.3"
+    "sinon": "^8.0.0"
   },
   "peerDependencies": {
     "@sb1/ffe-core": "^15.2.0",
