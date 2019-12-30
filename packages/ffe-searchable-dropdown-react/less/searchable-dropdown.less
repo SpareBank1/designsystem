@@ -13,10 +13,23 @@
         z-index: 100000;
         border-radius: 2px;
         height: 0;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background: @ffe-grey-charcoal-darkmode;
+                color: @ffe-white-darkmode;
+            }
+        }
 
         &--open {
             height: auto;
             border: 1px solid @ffe-grey-silver;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    border-color: @ffe-grey-silver-darkmode;
+                    background: @ffe-grey-charcoal-darkmode;
+                    color: @ffe-white-darkmode;
+                }
+            }
         }
     }
 
@@ -25,6 +38,11 @@
 
         & + .ffe-searchable-dropdown__list-item-container {
             border-top: 1px solid @ffe-grey-silver;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    border-color: @ffe-grey-silver-darkmode;
+                }
+            }
         }
 
         .ffe-body-paragraph {
@@ -34,16 +52,36 @@
 
     &__list-item-container:not(:last-child) {
         border-bottom: 1px solid @ffe-grey-silver;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                border-color: @ffe-grey-silver-darkmode;
+            }
+        }
     }
 
     &__list-item-body {
         padding: 8px 13px;
         color: @ffe-blue-cobalt;
         cursor: pointer;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-blue-azure-darkmode;
+            }
+        }
 
         &--highlighted {
             background: @ffe-blue-azure;
             color: @ffe-white;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    background: @ffe-blue-azure-darkmode;
+                    color: @ffe-white-darkmode;
+                    .ffe-searchable-dropdown__list-item-body-details
+                        .ffe-micro-text {
+                        color: @ffe-white-darkmode;
+                    }
+                }
+            }
 
             * {
                 color: @ffe-white;
@@ -54,6 +92,13 @@
     &__list-item-body-details {
         display: flex;
         justify-content: space-between;
+        .ffe-micro-text {
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    color: @ffe-grey-cloud-darkmode;
+                }
+            }
+        }
     }
 
     &__button {
@@ -74,11 +119,21 @@
 
         &:hover {
             border: 2px solid @ffe-blue-azure;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    border-color: @ffe-blue-azure-darkmode;
+                }
+            }
         }
 
         &:focus {
             border: 2px solid @ffe-blue-azure;
             box-shadow: 0 0 0 1px @ffe-white, 0 0 0 4px @ffe-blue-focus;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    border-color: @ffe-blue-azure-darkmode;
+                }
+            }
         }
 
         svg {
@@ -96,6 +151,11 @@
                 fill: @ffe-grey-charcoal;
                 height: 11px;
                 width: 11px;
+                .native & {
+                    @media (prefers-color-scheme: dark) {
+                        fill: @ffe-white-darkmode;
+                    }
+                }
             }
         }
 
@@ -104,6 +164,11 @@
                 fill: @ffe-blue-azure;
                 width: 17px;
                 height: 17px;
+                .native & {
+                    @media (prefers-color-scheme: dark) {
+                        fill: @ffe-blue-azure-darkmode;
+                    }
+                }
             }
         }
     }
@@ -112,14 +177,31 @@
 .ffe-searchable-dropdown--dark {
     .ffe-searchable-dropdown__list {
         background: @ffe-grey-dark-blue--dark;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background: @ffe-grey-dark-blue--dark;
+            }
+        }
     }
 
     .ffe-searchable-dropdown__button {
         fill: @ffe-blue-focus;
+        &--arrow svg {
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    fill: @ffe-blue-focus;
+                }
+            }
+        }
     }
 
     .ffe-searchable-dropdown__no-match {
         color: @ffe-white;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-white;
+            }
+        }
     }
 
     .ffe-dropdown {
@@ -127,13 +209,30 @@
         background: @ffe-grey-dark-blue--dark;
         border-color: @ffe-grey-dark-blue--dark;
         box-shadow: none;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-white;
+                background: @ffe-grey-dark-blue--dark;
+                border-color: @ffe-grey-dark-blue--dark;
+            }
+        }
 
         &:focus {
             border-color: @ffe-blue-focus;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    border-color: @ffe-blue-focus;
+                }
+            }
         }
 
         &::placeholder {
             color: @ffe-white;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    color: @ffe-white;
+                }
+            }
         }
 
         &[aria-invalid='true'] {
@@ -147,17 +246,38 @@
 
     .ffe-searchable-dropdown__list-item-body {
         color: @ffe-white;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-white;
+            }
+        }
 
         * {
             color: @ffe-white;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    color: @ffe-white;
+                }
+            }
         }
 
         &--highlighted {
             background-color: @ffe-blue-pale;
             color: @ffe-grey-dark-blue--dark;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    background-color: @ffe-blue-pale;
+                    color: @ffe-grey-dark-blue--dark;
+                }
+            }
 
             * {
                 color: @ffe-grey-dark-blue--dark;
+                .native & {
+                    @media (prefers-color-scheme: dark) {
+                        color: @ffe-grey-dark-blue--dark;
+                    }
+                }
             }
         }
     }
