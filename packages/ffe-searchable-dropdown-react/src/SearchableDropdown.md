@@ -114,12 +114,16 @@ const labelId = 'labelId4';
 Variant _dark_ for interne løsninger med mørk bakgrunn.
 
 ```js { "props": { "className": "sb1ds-example-dark" } }
-const { InputGroup } = require('../../ffe-form-react');
+const { InputGroup, Label } = require('../../ffe-form-react');
 const companies = require('../exampleData').companiesWithMessageCount;
 const labelId = 'labelId5';
-
-<InputGroup label="Velg bedrift" labelId={labelId}>
+const inputId = 'inputId5';
+<div className="ffe-input-group">
+    <Label htmlFor={inputId} dark={true} id={labelId}>
+        Velg bedrift
+    </Label>
     <SearchableDropdown
+        id={inputId}
         labelId={labelId}
         inputProps={{ placeholder: 'Velg' }}
         dropdownAttributes={['organizationName']}
@@ -130,5 +134,5 @@ const labelId = 'labelId5';
         dark={true}
         locale="nb"
     />
-</InputGroup>;
+</div>;
 ```

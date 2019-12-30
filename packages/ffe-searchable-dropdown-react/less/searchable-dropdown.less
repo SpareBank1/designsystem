@@ -34,7 +34,7 @@
     }
 
     &__no-match {
-        padding: 8px 13px;
+        padding: @ffe-spacing @ffe-spacing-sm;
 
         & + .ffe-searchable-dropdown__list-item-container {
             border-top: 1px solid @ffe-grey-silver;
@@ -60,7 +60,7 @@
     }
 
     &__list-item-body {
-        padding: 8px 13px;
+        padding: @ffe-spacing @ffe-spacing-sm;
         color: @ffe-blue-cobalt;
         cursor: pointer;
         .native & {
@@ -162,123 +162,37 @@
         &--arrow {
             svg {
                 fill: @ffe-blue-azure;
-                width: 17px;
                 height: 17px;
-                .native & {
-                    @media (prefers-color-scheme: dark) {
-                        fill: @ffe-blue-azure-darkmode;
-                    }
-                }
+                width: 17px;
             }
         }
     }
 }
 
 .ffe-searchable-dropdown--dark {
-    .ffe-searchable-dropdown__list {
-        background: @ffe-grey-dark-blue--dark;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                background: @ffe-grey-dark-blue--dark;
-            }
-        }
-    }
-
     .ffe-searchable-dropdown__button {
-        fill: @ffe-blue-focus;
-        &--arrow svg {
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    fill: @ffe-blue-focus;
-                }
-            }
+        &:focus,
+        &:hover {
+            border: 2px solid @ffe-blue-focus;
+        }
+
+        svg {
+            fill: @ffe-blue-focus;
         }
     }
 
+    .ffe-searchable-dropdown__list,
+    .ffe-searchable-dropdown__list-item-container {
+        border-color: @ffe-grey-silver;
+    }
+
+    .ffe-searchable-dropdown__list-item-body,
     .ffe-searchable-dropdown__no-match {
         color: @ffe-white;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-white;
-            }
-        }
+        background-color: @ffe-grey-dark-blue--dark;
     }
 
-    .ffe-dropdown {
-        color: @ffe-white;
-        background: @ffe-grey-dark-blue--dark;
-        border-color: @ffe-grey-dark-blue--dark;
-        box-shadow: none;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-white;
-                background: @ffe-grey-dark-blue--dark;
-                border-color: @ffe-grey-dark-blue--dark;
-            }
-        }
-
-        &:focus {
-            border-color: @ffe-blue-focus;
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    border-color: @ffe-blue-focus;
-                }
-            }
-        }
-
-        &::placeholder {
-            color: @ffe-white;
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    color: @ffe-white;
-                }
-            }
-        }
-
-        &[aria-invalid='true'] {
-            border: 1px solid @ffe-orange-fire;
-        }
-    }
-
-    .ffe-searchable-dropdown__list-item-container {
-        border: none;
-    }
-
-    .ffe-searchable-dropdown__list-item-body {
-        color: @ffe-white;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-white;
-            }
-        }
-
-        * {
-            color: @ffe-white;
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    color: @ffe-white;
-                }
-            }
-        }
-
-        &--highlighted {
-            background-color: @ffe-blue-pale;
-            color: @ffe-grey-dark-blue--dark;
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    background-color: @ffe-blue-pale;
-                    color: @ffe-grey-dark-blue--dark;
-                }
-            }
-
-            * {
-                color: @ffe-grey-dark-blue--dark;
-                .native & {
-                    @media (prefers-color-scheme: dark) {
-                        color: @ffe-grey-dark-blue--dark;
-                    }
-                }
-            }
-        }
+    .ffe-searchable-dropdown__list-item-body:hover {
+        background-color: @ffe-blue-azure;
     }
 }
