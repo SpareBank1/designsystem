@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@8.0.9...@sb1/ffe-searchable-dropdown-react@8.0.10) (2019-12-30)
+
+### Bug Fixes
+
+-   **ffe-searchable-dropdown-react:** fixed dark mode version ([907a6dc](https://github.com/SpareBank1/designsystem/commit/907a6dc3b39b141d42215adf81bb253fd73108c1))
+-   **ffe-searchable-dropdown-react:** use ffe-spacings ([affa325](https://github.com/SpareBank1/designsystem/commit/affa3256718db076bcc815770509474b342a7ed2))
+
 ## [8.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@8.0.8...@sb1/ffe-searchable-dropdown-react@8.0.9) (2019-12-18)
 
 **Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react

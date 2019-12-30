@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [13.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@13.0.0...@sb1/ffe-form@13.0.1) (2019-12-30)
+
+### Bug Fixes
+
+-   **ffe-form:** missing placeholder dark variant ([ed3ad56](https://github.com/SpareBank1/designsystem/commit/ed3ad56dd1f6a7c19cf772d7691bad884e5acf96))
+
 # [13.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@12.2.0...@sb1/ffe-form@13.0.0) (2019-12-18)
 
 ### Bug Fixes
