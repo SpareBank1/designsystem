@@ -105,7 +105,9 @@ const SearchableDropdown = ({
                         <input
                             ref={inputEl}
                             {...getInputProps({
-                                className: 'ffe-input-field',
+                                className: classNames('ffe-input-field', {
+                                    'ffe-input-field--dark': dark,
+                                }),
                                 ...inputProps,
                             })}
                             aria-invalid={
