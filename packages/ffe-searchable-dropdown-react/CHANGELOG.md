@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@8.0.10...@sb1/ffe-searchable-dropdown-react@8.0.11) (2020-01-03)
+
+### Bug Fixes
+
+-   **ffe-searchable-dropdown-react:** add dark mode styling to list ([0dc75d8](https://github.com/SpareBank1/designsystem/commit/0dc75d8a9e7fbea9ab33c7a3c021ade8101f58bd))
+
 ## [8.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@8.0.9...@sb1/ffe-searchable-dropdown-react@8.0.10) (2019-12-30)
 
 ### Bug Fixes
