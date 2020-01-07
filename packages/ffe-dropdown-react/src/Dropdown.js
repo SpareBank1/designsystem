@@ -1,9 +1,9 @@
 import React from 'react';
-import { bool, node, string } from 'prop-types';
+import { bool, node, string, object, func, shape, oneOfType } from 'prop-types';
 import classNames from 'classnames';
 
 const Dropdown = props => {
-    const { className, inline, dark, ...rest } = props;
+    const { className, inline, dark, innerRef, ...rest } = props;
 
     return (
         <select
@@ -13,6 +13,7 @@ const Dropdown = props => {
                 { 'ffe-dropdown--dark': dark },
                 className,
             )}
+            ref={innerRef}
             {...rest}
         />
     );
@@ -24,6 +25,8 @@ Dropdown.propTypes = {
     className: string,
     /** Dark variant */
     dark: bool,
+    /** Ref-setting function, or ref created by useRef, passed to the select element */
+    innerRef: oneOfType([func, shape({ current: object })]),
 };
 
 Dropdown.defaultProps = {
