@@ -6,6 +6,7 @@ export interface DropdownProps
     className?: string;
     inline?: boolean;
     dark?: boolean;
+    innerRef?: React.RefObject<T>;
 }
 
 declare class Dropdown extends React.Component<DropdownProps, any> {}
