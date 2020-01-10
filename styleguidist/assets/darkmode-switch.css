@@ -1,0 +1,84 @@
+.darkmode-button-content {
+    display: flex;
+}
+
+button.darkmode-button {
+    display: flex;
+    appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    background-color: transparent;
+}
+
+button.darkmode-button:focus,
+.darkmode-button-content:focus {
+    outline: none;
+}
+
+button.darkmode-button:focus > .darkmode-button-content {
+    outline: #5e9ed6 auto 5px;
+}
+
+.darkmode-button__switch {
+    visibility: hidden;
+    display: none;
+    height: 0;
+    width: 0;
+    margin-bottom: 40px;
+}
+
+.darkmode-button__icon {
+    margin: 14px 10px;
+    height: 30px;
+}
+
+.darkmode-button__label {
+    margin: 0 auto;
+    border-radius: 100px;
+    position: relative;
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 55px;
+    height: 30px;
+    background: #adadad;
+    float: right;
+    margin-top: 14px;
+}
+
+.darkmode-button__label:active,
+.darkmode-button__label:focus {
+    box-shadow: 0 0 0 1px #fff, 0 0 0 4px #a1dfff;
+}
+
+.darkmode-button__label::after {
+    border-radius: 50%;
+    position: absolute;
+    content: '';
+    background: #fff;
+    width: 20px;
+    height: 20px;
+    top: 5px;
+    left: 4px;
+    transition: ease-in-out 200ms;
+}
+
+.darkmode-button__switch:checked + label {
+    background: #008a00;
+}
+
+.darkmode-button__switch:checked + label::after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+}
+
+.darkmode-button__switch--inputDisabled {
+    cursor: not-allowed !important;
+}
+
+html.transition,
+html.transition *,
+html.transition *::before,
+html.transition *::after {
+    transition: ease-in-out 200ms !important;
+    transition-delay: 0 !important;
+}
