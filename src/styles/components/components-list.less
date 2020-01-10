@@ -24,11 +24,22 @@
 
         &:visited {
             color: @ffe-grey-charcoal;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    color: darken(@ffe-blue-azure-darkmode, 10%);
+                }
+            }
         }
 
         &:hover {
             color: @ffe-grey-charcoal;
             background: tint(@ffe-grey-silver, 50%);
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    color: lighten(@ffe-blue-azure-darkmode, 10%);
+                    background: @ffe-black-darkmode;
+                }
+            }
         }
 
         &:not(.sb1ds-components-list__link--heading) {
@@ -41,6 +52,11 @@
 
 .sb1ds-components-list__link--active {
     background: tint(@ffe-grey-silver, 50%);
+    .native & {
+        @media (prefers-color-scheme: dark) {
+            background: @ffe-grey-charcoal-darkmode;
+        }
+    }
 }
 
 /* Unnskyld */
@@ -51,6 +67,11 @@
     color: @ffe-blue-royal;
     &:extend(.ffe-h4);
     margin: 10px 0 0;
+    .native & {
+        @media (prefers-color-scheme: dark) {
+            color: @ffe-white-darkmode;
+        }
+    }
 
     &:hover {
         background: transparent;
