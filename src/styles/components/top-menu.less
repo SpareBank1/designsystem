@@ -270,6 +270,11 @@
             width: 25px;
             height: 4px;
             border-radius: 2px;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    background: @ffe-white-darkmode;
+                }
+            }
         }
 
         &__bar {
