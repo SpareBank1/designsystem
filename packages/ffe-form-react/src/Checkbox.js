@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { bool, node, string, func, oneOfType } from 'prop-types';
+import { bool, node, string, func, oneOfType, shape, object } from 'prop-types';
 import { v4 as hash } from 'uuid';
 import classNames from 'classnames';
 
@@ -9,6 +9,7 @@ export default function Checkbox(props) {
         hiddenLabel,
         inline,
         invalid,
+        innerRef,
         label,
         noMargins,
         dark,
@@ -36,6 +37,7 @@ export default function Checkbox(props) {
                 id={id}
                 type="checkbox"
                 aria-invalid={String(invalid)}
+                ref={innerRef}
                 {...rest}
             />
             {typeof children === 'function' ? (
@@ -68,6 +70,8 @@ Checkbox.propTypes = {
      * Use `aria-invalid` directly instead
      */
     invalid: bool,
+    /** Ref-setting function, or ref created by useRef, passed to the input element */
+    innerRef: oneOfType([func, shape({ current: object })]),
     /** The label for the checkbox */
     children: oneOfType([node, func]),
     /** Dark variant */
