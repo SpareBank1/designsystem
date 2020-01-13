@@ -68,6 +68,7 @@ export interface InputGroupProps extends React.HTMLAttributes<HTMLDivElement> {
     fieldMessage?: string | React.ReactNode;
     description?: string;
     label?: string | React.ReactNode;
+    labelId?: string;
     onTooltipToggle?: (e: React.MouseEvent | undefined) => void;
     tooltip?: React.ReactNode;
 }
