@@ -132,7 +132,7 @@ export interface RadioButtonInputGroupProps
     inline?: boolean;
     label?: string | React.ReactNode;
     name?: string;
-    onChange?: React.FormEventHandler<HTMLElement>;
+    onChange?: React.ChangeEventHandler<HTMLInputElement>;
     selectedValue?: string | boolean | number;
     tooltip?: string | React.ReactNode;
     dark?: boolean;
