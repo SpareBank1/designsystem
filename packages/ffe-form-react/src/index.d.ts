@@ -11,6 +11,7 @@ export interface CheckboxProps
     hiddenLabel?: boolean;
     id?: string;
     inline?: boolean;
+    innerRef?: React.Ref<T>;
     /**
      * @deprecated
      * Use `aria-invalid` directly instead
@@ -48,6 +49,8 @@ export interface PhoneNumberProps {
     numberInvalid?: boolean;
     className?: string;
     dark?: boolean;
+    countryCodeRef?: React.Ref<T>;
+    numberRef?: React.Ref<T>;
 }
 
 export interface LabelProps

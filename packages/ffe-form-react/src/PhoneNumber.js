@@ -1,5 +1,5 @@
 import React from 'react';
-import { string, bool, func } from 'prop-types';
+import { string, bool, func, oneOfType, object, shape } from 'prop-types';
 import uuid from 'uuid';
 import classNames from 'classnames';
 
@@ -22,6 +22,8 @@ export default class PhoneNumber extends React.Component {
             numberInvalid,
             className,
             dark,
+            countryCodeRef,
+            numberRef,
         } = this.props;
 
         const supportedLocales = ['nb', 'nn', 'en'];
@@ -66,6 +68,7 @@ export default class PhoneNumber extends React.Component {
                                 aria-invalid={countryCodeInvalid}
                                 onChange={onCountryCodeChange}
                                 onBlur={onCountryCodeBlur}
+                                ref={countryCodeRef}
                             />
                         </div>
                     </div>
@@ -91,6 +94,7 @@ export default class PhoneNumber extends React.Component {
                             value={number}
                             aria-invalid={numberInvalid}
                             disabled={disabled}
+                            ref={numberRef}
                         />
                     </div>
                 </div>
@@ -115,6 +119,10 @@ PhoneNumber.propTypes = {
     className: string,
     /** Dark variant */
     dark: bool,
+    /** Ref-setting function, or ref created by useRef, passed to the country code input element */
+    countryCodeRef: oneOfType([func, shape({ current: object })]),
+    /** Ref-setting function, or ref created by useRef, passed to the number input element */
+    numberRef: oneOfType([func, shape({ current: object })]),
 };
 
 PhoneNumber.defaultProps = {
