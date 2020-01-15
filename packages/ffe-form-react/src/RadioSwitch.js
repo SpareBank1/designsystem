@@ -1,5 +1,14 @@
 import React, { Fragment } from 'react';
-import { bool, oneOf, oneOfType, string, number } from 'prop-types';
+import {
+    bool,
+    oneOf,
+    oneOfType,
+    string,
+    number,
+    func,
+    object,
+    shape,
+} from 'prop-types';
 import classNames from 'classnames';
 
 import BaseRadioButton from './BaseRadioButton';
@@ -9,8 +18,10 @@ const RadioSwitch = props => {
         className,
         leftLabel,
         leftValue,
+        leftInnerRef,
         rightLabel,
         rightValue,
+        rightInnerRef,
         condensed,
         dark,
         'aria-invalid': ariaInvalid,
@@ -27,6 +38,7 @@ const RadioSwitch = props => {
                     'ffe-radio-switch--dark': dark,
                 })}
                 value={leftValue}
+                innerRef={leftInnerRef}
                 dark={dark}
                 aria-invalid={String(
                     ariaInvalid === 'true' &&
@@ -42,6 +54,7 @@ const RadioSwitch = props => {
                     'ffe-radio-switch--dark': dark,
                 })}
                 value={rightValue}
+                innerRef={rightInnerRef}
                 dark={dark}
                 aria-invalid={String(
                     ariaInvalid === 'true' &&
@@ -62,10 +75,14 @@ RadioSwitch.propTypes = {
     leftLabel: string.isRequired,
     /** The value of the choice to the left */
     leftValue: oneOfType([bool, string, number]).isRequired,
+    /** Ref-setting function, or ref created by useRef, passed to the input element */
+    leftInnerRef: oneOfType([func, shape({ current: object })]),
     /** The label of the choice to the right */
     rightLabel: string.isRequired,
     /** The value of the choice to the right */
     rightValue: oneOfType([bool, string, number]).isRequired,
+    /** Ref-setting function, or ref created by useRef, passed to the input element */
+    rightInnerRef: oneOfType([func, shape({ current: object })]),
     /** The selected value of the radio button set */
     selectedValue: oneOfType([bool, string, number]),
     /** Condensed modifier. Use in condensed designs */

@@ -97,6 +97,7 @@ export interface RadioBlockProps
      * is implemented.
      */
     dark?: boolean;
+    innerRef?: React.Ref<T>;
     label: string | React.ReactNode;
     labelClass?: string;
     name: string;
@@ -117,6 +118,7 @@ export interface RadioButtonProps extends WeakInputAttributes {
     className?: string;
     labelProps?: object;
     inline?: boolean;
+    innerRef?: React.Ref<T>;
     name: string;
     selectedValue?: boolean | string | number;
     tooltip?: string;
@@ -149,8 +151,10 @@ export interface RadioSwitchProps
     labelProps?: object;
     leftLabel: string;
     leftValue: boolean | string | number;
+    leftInnerRef?: React.Ref<T>;
     rightLabel: string;
     rightValue: boolean | string | number;
+    rightInnerRef?: React.Ref<T>;
     name: string;
     selectedValue?: boolean | string | number;
     tooltip?: string;

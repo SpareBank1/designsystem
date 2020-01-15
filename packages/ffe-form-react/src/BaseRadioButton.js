@@ -7,6 +7,8 @@ import {
     oneOfType,
     shape,
     string,
+    func,
+    object,
     number,
 } from 'prop-types';
 import uuid from 'uuid';
@@ -27,6 +29,7 @@ class BaseRadioButton extends Component {
             tooltip,
             tooltipProps,
             value,
+            innerRef,
             dark,
             ...inputProps
         } = this.props;
@@ -38,7 +41,7 @@ class BaseRadioButton extends Component {
             className,
         );
 
-        const isSelected = checked || selectedValue === value;
+        const isSelected = selectedValue ? selectedValue === value : checked;
 
         return (
             <Fragment>
@@ -48,6 +51,7 @@ class BaseRadioButton extends Component {
                         'ffe-radio-input--dark': dark,
                     })}
                     id={this.id}
+                    ref={innerRef}
                     type="radio"
                     checked={isSelected}
                     value={value}
@@ -93,6 +97,8 @@ BaseRadioButton.propTypes = {
     tooltipProps: shape({}),
     /** The value of the radio button */
     value: oneOfType([bool, string, number]).isRequired,
+    /** Ref-setting function, or ref created by useRef, passed to the input element */
+    innerRef: oneOfType([func, shape({ current: object })]),
     /** Dark variant */
     dark: bool,
 };
