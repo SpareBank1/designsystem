@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { bool, node, oneOfType, string } from 'prop-types';
+import { bool, node, oneOfType, string, func, object, shape } from 'prop-types';
 import classNames from 'classnames';
 import uuid from 'uuid';
 
@@ -17,6 +17,7 @@ class RadioBlock extends Component {
              * used but can still be passed down from a parent `RadioButtonInputGroup`.
              */
             dark, //eslint-disable-line
+            innerRef,
             label,
             labelClass,
             name,
@@ -34,6 +35,7 @@ class RadioBlock extends Component {
                     checked={isSelected}
                     className="ffe-radio-input"
                     id={this.id}
+                    ref={innerRef}
                     type="radio"
                     name={name}
                     value={value}
@@ -71,6 +73,8 @@ RadioBlock.propTypes = {
     children: node,
     /** Additional class names applied to the outer div */
     className: string,
+    /** Ref-setting function, or ref created by useRef, passed to the input element */
+    innerRef: oneOfType([func, shape({ current: object })]),
     /** The always visible label of the radio block */
     label: oneOfType([node, string]).isRequired,
     /** Additional class names applied to the label element */

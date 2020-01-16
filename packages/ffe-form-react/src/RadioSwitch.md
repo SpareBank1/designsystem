@@ -10,7 +10,7 @@ initialState = { selected: undefined };
 <RadioButtonInputGroup
     label="Vil bilen bli kjørt av sjåfører under 23 år?"
     tooltip="Unge sjåfører har en statistisk høyere sjanse for å bulke bilen."
-    name="under23"
+    name="radioButtonInputGroup"
     onChange={e => setState({ selected: e.target.value })}
     selectedValue={state.selected}
 >
@@ -36,7 +36,7 @@ initialState = { selected: 'false' };
 <RadioButtonInputGroup
     label="Vil bilen bli kjørt av sjåfører under 23 år?"
     tooltip="Unge sjåfører har en statistisk høyere sjanse for å bulke bilen."
-    name="under23"
+    name="radioButtonInputGroupWithDefault"
     onChange={e => setState({ selected: e.target.value })}
     selectedValue={state.selected}
 >
@@ -92,7 +92,7 @@ initialState = { selected: undefined, fieldMessage: 'Du må gjøre et valg' };
 <RadioButtonInputGroup
     label="Vil bilen bli kjørt av sjåfører under 23 år?"
     tooltip="Unge sjåfører har en statistisk høyere sjanse for å bulke bilen."
-    name="under23"
+    name="radioButtonInputGroupWithFieldMessage"
     onChange={e => setState({ selected: e.target.value })}
     selectedValue={state.selected}
     fieldMessage={state.fieldMessage}
