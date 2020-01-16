@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@5.3.0...@sb1/ffe-form-react@6.0.0) (2020-01-16)
+
+### Features
+
+-   **ffe-form-react:** added support for passing ref to radio buttons ([845ce6a](https://github.com/SpareBank1/designsystem/commit/845ce6ab9d1bc334763ad4d045bb630d9b7951e8))
+
+### BREAKING CHANGES
+
+-   **ffe-form-react:** selectedValue now overrides checked, when both props are passed to radio buttons
+
+This version offers new optional properties (innerRef on RadioButton and RadioBlock, leftInnerRef and rightInnerRef on RadioSwitch), which is passed as refs to input elements
+On BaseRadioButton, checked attribute is only set if the selectedValue prop is set, so that re-render is no longer required when radio buttons are clicked
+
 # [5.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@5.2.0...@sb1/ffe-form-react@5.3.0) (2020-01-16)
 
 ### Bug Fixes
