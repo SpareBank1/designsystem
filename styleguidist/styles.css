@@ -5194,10 +5194,10 @@ html {
   margin-bottom: 0;
 }
 .ffe-input-group--no-extra-margin > *:nth-last-child(1) {
-  margin-bottom: initial;
+  margin-bottom: auto;
 }
 .ffe-input-group--no-extra-margin > *:nth-last-child(2) {
-  margin-bottom: initial;
+  margin-bottom: auto;
 }
 .ffe-input-group--no-extra-margin .ffe-field-error-message {
   margin: 4px 0 8px;
@@ -8901,6 +8901,13 @@ input:not([type='radio']):not([type='checkbox']) {
   width: 25px;
   height: 4px;
   border-radius: 2px;
+}
+@media (prefers-color-scheme: dark) {
+  .native .sb1ds-top-menu__site-nav-hamburger__bar,
+  .native .sb1ds-top-menu__site-nav-hamburger::before,
+  .native .sb1ds-top-menu__site-nav-hamburger::after {
+    background: #ffffff;
+  }
 }
 .sb1ds-top-menu__site-nav-hamburger__bar {
   position: absolute;
