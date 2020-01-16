@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-dropdown-react@5.1.0...@sb1/ffe-dropdown-react@5.1.1) (2020-01-16)
+
+### Bug Fixes
+
+-   **ffe-dropdown-react:** fixed type definition of innerref ([16caf9c](https://github.com/SpareBank1/designsystem/commit/16caf9ced84d5d069d8e5682d4fefff8c2af8833))
+
 # [5.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-dropdown-react@5.0.0...@sb1/ffe-dropdown-react@5.1.0) (2020-01-08)
 
 ### Features

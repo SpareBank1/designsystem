@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.1.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@12.1.6...@sb1/ffe-buttons-react@12.1.7) (2020-01-16)
+
+### Bug Fixes
+
+-   **ffe-buttons-react:** fixed type definition of innerref ([f5c234d](https://github.com/SpareBank1/designsystem/commit/f5c234d9cb6ff5b4d16c8b1ca2edeb12e95f11fd))
+
 ## [12.1.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@12.1.5...@sb1/ffe-buttons-react@12.1.6) (2019-12-16)
 
 ### Bug Fixes

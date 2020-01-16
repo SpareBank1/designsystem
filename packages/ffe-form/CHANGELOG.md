@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [13.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@13.0.1...@sb1/ffe-form@13.0.2) (2020-01-16)
+
+### Bug Fixes
+
+-   **ffe-form:** Changing margin in input-group from initial to auto ([38a8cf4](https://github.com/SpareBank1/designsystem/commit/38a8cf4d4eed5c855b1319d173b3a51e10dcc109))
+
 ## [13.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@13.0.0...@sb1/ffe-form@13.0.1) (2019-12-30)
 
 ### Bug Fixes
