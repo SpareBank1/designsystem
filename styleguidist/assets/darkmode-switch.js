@@ -19,7 +19,11 @@ function swapMediaQueryConditionText(fromText, toText) {
         rules = sheet.cssRules || sheet.rules;
         for (ruleIndex = 0; ruleIndex < rules.length; ++ruleIndex) {
             rule = rules[ruleIndex];
-            if (rule.media && rule.conditionText === fromText) {
+            if (
+                rule.media &&
+                (rule.conditionText === fromText ||
+                    rule.media.mediaText === fromText)
+            ) {
                 rule.media.mediaText = toText;
             }
         }
@@ -56,6 +60,15 @@ let animateCssTransition = () => {
         document.documentElement.classList.remove('transition');
     }, 1000);
 };
+
+function isSafari() {
+    var ua = navigator.userAgent.toLowerCase();
+    if (ua.indexOf('safari') != -1 && ua.indexOf('chrome') != -1) {
+        return true;
+    } else {
+        return false;
+    }
+}
 
 button.addEventListener('click', function(event) {
     if (!isDarkModeSupported()) {
@@ -97,7 +110,8 @@ dmButton.addEventListener('keydown', function(e) {
 });
 
 var mediaQueryList = window.matchMedia('(prefers-color-scheme: dark)');
-mediaQueryList.addEventListener('change', () => {
+
+function onOsDarkModeSelected() {
     var darkModeEndabledByOS = window.matchMedia('(prefers-color-scheme: dark)')
         .matches;
     var labelEl = document.getElementsByClassName('darkmode-button__label')[0];
@@ -111,4 +125,10 @@ mediaQueryList.addEventListener('change', () => {
         ? (checkbox.disabled = true)
         : (checkbox.disabled = false);
     darkModeEndabledByOS ? onDarkModeSelected() : onLightModeSelected();
-});
+}
+
+if (isSafari) {
+    mediaQueryList.addListener(onOsDarkModeSelected);
+} else {
+    mediaQueryList.addEventListener('change', onOsDarkModeSelected);
+}
