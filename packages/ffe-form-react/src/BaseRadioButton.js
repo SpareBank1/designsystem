@@ -41,7 +41,8 @@ class BaseRadioButton extends Component {
             className,
         );
 
-        const isSelected = selectedValue ? selectedValue === value : checked;
+        const isSelected =
+            selectedValue !== undefined ? selectedValue === value : checked;
 
         return (
             <Fragment>
