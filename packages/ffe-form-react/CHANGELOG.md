@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@6.0.0...@sb1/ffe-form-react@6.0.1) (2020-01-24)
+
+### Bug Fixes
+
+-   **ffe-form-react:** correctly handle non-undefined selected value ([907e56a](https://github.com/SpareBank1/designsystem/commit/907e56a30acc45061bb9d20216c6dbab6fcc673e))
+
 # [6.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@5.3.0...@sb1/ffe-form-react@6.0.0) (2020-01-16)
 
 ### Features
