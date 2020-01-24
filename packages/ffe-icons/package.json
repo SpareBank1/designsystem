@@ -18,7 +18,7 @@
     "test": "npm run lint"
   },
   "dependencies": {
-    "mkdirp": "^0.5.1",
+    "mkdirp": "^1.0.0",
     "svgstore": "^2.0.3",
     "yargs": "^13.1.0"
   },
