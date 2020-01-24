@@ -47,6 +47,19 @@ describe('<BaseRadioButton />', () => {
         const wrapper = getWrapper({ checked: false, selectedValue: 'nope' });
         expect(wrapper.find('input').props()).toHaveProperty('checked', false);
     });
+    it('is not checked if checked === undefined and selectedValue is falsy, but not undefined', () => {
+        const wrapperWithNull = getWrapper({ selectedValue: null });
+        expect(wrapperWithNull.find('input').props()).toHaveProperty(
+            'checked',
+            false,
+        );
+
+        const wrapperWithEmptyString = getWrapper({ selectedValue: '' });
+        expect(wrapperWithEmptyString.find('input').props()).toHaveProperty(
+            'checked',
+            false,
+        );
+    });
     it('accepts boolean values and checks the input if it is selected', () => {
         const wrapper = getWrapper({ selectedValue: true, value: true });
         expect(wrapper.find('input').props()).toHaveProperty('checked', true);
