@@ -11,7 +11,7 @@ export interface CheckboxProps
     hiddenLabel?: boolean;
     id?: string;
     inline?: boolean;
-    innerRef?: React.Ref<T>;
+    innerRef?: React.Ref<HTMLInputElement>;
     /**
      * @deprecated
      * Use `aria-invalid` directly instead
@@ -49,8 +49,8 @@ export interface PhoneNumberProps {
     numberInvalid?: boolean;
     className?: string;
     dark?: boolean;
-    countryCodeRef?: React.Ref<T>;
-    numberRef?: React.Ref<T>;
+    countryCodeRef?: React.Ref<HTMLInputElement>;
+    numberRef?: React.Ref<HTMLInputElement>;
 }
 
 export interface LabelProps
@@ -97,7 +97,7 @@ export interface RadioBlockProps
      * is implemented.
      */
     dark?: boolean;
-    innerRef?: React.Ref<T>;
+    innerRef?: React.Ref<HTMLInputElement>;
     label: string | React.ReactNode;
     labelClass?: string;
     name: string;
@@ -116,9 +116,9 @@ export interface RadioButtonProps extends WeakInputAttributes {
     checked?: boolean;
     children: React.ReactNode;
     className?: string;
-    labelProps?: object;
+    labelProps?: {};
     inline?: boolean;
-    innerRef?: React.Ref<T>;
+    innerRef?: React.Ref<HTMLElement>;
     name: string;
     selectedValue?: boolean | string | number;
     tooltip?: string;
@@ -127,8 +127,13 @@ export interface RadioButtonProps extends WeakInputAttributes {
     dark?: boolean;
 }
 
-export interface RadioButtonInputGroupProps
+// As onChange has a different type than React.FieldsetHTMLAttributes<T> we have to weaken it
+interface WeakFieldSetAttributes
     extends React.FieldsetHTMLAttributes<HTMLFieldSetElement> {
+    onChange?: any;
+}
+
+export interface RadioButtonInputGroupProps extends WeakFieldSetAttributes {
     children: React.ReactNode;
     className?: string;
     description?: string;
@@ -148,13 +153,13 @@ export interface RadioSwitchProps
     checked?: boolean;
     children: React.ReactNode;
     className?: string;
-    labelProps?: object;
+    labelProps?: {};
     leftLabel: string;
     leftValue: boolean | string | number;
-    leftInnerRef?: React.Ref<T>;
+    leftInnerRef?: React.Ref<HTMLInputElement>;
     rightLabel: string;
     rightValue: boolean | string | number;
-    rightInnerRef?: React.Ref<T>;
+    rightInnerRef?: React.Ref<HTMLInputElement>;
     name: string;
     selectedValue?: boolean | string | number;
     tooltip?: string;
