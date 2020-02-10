@@ -18,7 +18,7 @@
   "scripts": {
     "lint": "stylelint less/*.less",
     "test": "npm run lint",
-    "build": "node ./bin/build.js; tsc lib/index.ts --declaration"
+    "build": "node ./bin/build.js && tsc tmp/index.ts --declaration --outDir lib && rm -rf tmp"
   },
   "devDependencies": {
     "case": "^1.5.5",
