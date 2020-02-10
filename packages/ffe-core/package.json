@@ -10,6 +10,7 @@
     "less"
   ],
   "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "repository": {
     "type": "git",
     "url": "ssh://git@github.com:SpareBank1/designsystem.git"
@@ -17,12 +18,13 @@
   "scripts": {
     "lint": "stylelint less/*.less",
     "test": "npm run lint",
-    "build": "node ./bin/build.js"
+    "build": "node ./bin/build.js; tsc lib/index.ts --declaration"
   },
   "devDependencies": {
     "case": "^1.5.5",
     "mkdirp": "^0.5.1",
-    "stylelint": "^10.0.0"
+    "stylelint": "^10.0.0",
+    "typescript": "^3.7.5"
   },
   "publishConfig": {
     "access": "public"
