@@ -29,7 +29,7 @@
     "@sb1/ffe-form": "^13.0.3",
     "@sb1/ffe-icons-react": "^7.0.3",
     "classnames": "^2.2.5",
-    "downshift": "^3.3.5",
+    "downshift": "^5.0.0",
     "lodash.isequal": "^4.5.0",
     "prop-types": "^15.6.0",
     "react-custom-scrollbars": "^4.2.1",
