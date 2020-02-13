@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const mkdirp = require('mkdirp');
 
-mkdirp.sync('./jsx');
+mkdirp.sync('./tsx');
 
 const createSvgMap = () => {
     const map = {};
@@ -33,7 +33,7 @@ const createSvgMap = () => {
  *
  * Should this proplem (sic!) pop up more often, another solution should be sought
  * */
-const toJsx = svgString => {
+const toTsx = svgString => {
     const $ = cheerio.load(svgString, {
         xmlMode: true,
     });
@@ -49,15 +49,22 @@ const toJsx = svgString => {
 };
 
 /**
- * Creates a new React component and a corresponding .jsx file for each icon
+ * Creates a new React component and a corresponding .tsx file for each icon
  * */
-const createStandaloneJSX = (icons, iconName) => `
-import React from 'react';
+const createStandaloneTSX = (icons, iconName) => `
+import * as React from 'react';
 import { bool, string } from 'prop-types';
 
-const svg = ${toJsx(icons[iconName])};
+const svg = ${toTsx(icons[iconName])};
 
-const Icon = ({
+interface IconProps {
+    desc?: string;
+    focusable? : boolean;
+    title?: string;
+    iconName?: string;
+}
+
+const Icon: React.FC<IconProps> = ({
     desc,
     focusable = false,
     title,
@@ -90,8 +97,8 @@ export default Icon;
 const icons = createSvgMap();
 Object.keys(icons).forEach(iconName =>
     fs.writeFileSync(
-        `./jsx/${iconName}.js`,
-        createStandaloneJSX(icons, iconName),
+        `./tsx/${iconName}.tsx`,
+        createStandaloneTSX(icons, iconName),
     ),
 );
 
@@ -107,4 +114,4 @@ const indexFileString = Object.keys(icons)
     )
     .join('\n');
 
-fs.writeFileSync('./jsx/index.js', indexFileString);
+fs.writeFileSync('./tsx/index.ts', indexFileString);

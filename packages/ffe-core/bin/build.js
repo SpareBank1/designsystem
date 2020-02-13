@@ -6,7 +6,8 @@ const mkdirp = require('mkdirp');
 // These are the files we want to convert to JavaScript
 const FILES_WITH_VARIABLES = ['colors', 'breakpoints', 'spacing'];
 
-// First, create the lib directory if it doesn't exist
+// First, create the lib and tmp directories if they don't exist
+mkdirp.sync(path.resolve(__dirname, '..', 'tmp'));
 mkdirp.sync(path.resolve(__dirname, '..', 'lib'));
 
 // Then, let's process each file!
@@ -45,7 +46,7 @@ ${Object.entries(variables)
 `;
     // Write the formatted string to its own file
     fs.writeFileSync(
-        path.resolve(__dirname, '..', 'lib', `${filename}.ts`),
+        path.resolve(__dirname, '..', 'tmp', `${filename}.ts`),
         tsContent,
     );
 });
@@ -59,6 +60,6 @@ ${FILES_WITH_VARIABLES.map(filename => `export * from './${filename}';`).join(
 `;
 
 fs.writeFileSync(
-    path.resolve(__dirname, '..', 'lib', 'index.ts'),
+    path.resolve(__dirname, '..', 'tmp', 'index.ts'),
     indexContent,
 );

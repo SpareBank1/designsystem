@@ -8,6 +8,7 @@
     "es"
   ],
   "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "module": "es/index.js",
   "sideEffects": false,
   "repository": {
@@ -15,11 +16,11 @@
     "url": "ssh://git@github.com:SpareBank1/designsystem.git"
   },
   "scripts": {
-    "build": "npm run build:jsx-components && npm run build:cjs && npm run build:es",
-    "build:cjs": "babel -d lib --env-name=cjs --root-mode=upward jsx",
-    "build:es": "babel -d es --env-name=es --root-mode=upward jsx",
-    "build:jsx-components": "node ./src/build-jsx-components.js",
-    "clean": "rimraf tmp jsx lib es",
+    "build": "npm run build:tsx-components && npm run build:cjs && npm run build:es",
+    "build:cjs": "tsc tsx/index.ts --outDir lib --module commonjs --jsx react --declaration",
+    "build:es": "tsc tsx/index.ts --outDir es --module esnext --jsx react --declaration --skipLibCheck",
+    "build:tsx-components": "node ./src/build-tsx-components.js",
+    "clean": "rimraf tmp tsx lib es",
     "lint": "eslint src/.",
     "test": "npm run lint"
   },
@@ -36,7 +37,8 @@
     "mkdirp": "^0.5.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "rimraf": "^2.6.2"
+    "rimraf": "^2.6.2",
+    "typescript": "^3.7.5"
   },
   "peerDependencies": {
     "react": "^16.9.0"
