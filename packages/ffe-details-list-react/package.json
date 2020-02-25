@@ -39,7 +39,7 @@
     "react-dom": "^16.9.0"
   },
   "peerDependencies": {
-    "@sb1/ffe-grid": "^10.1.2",
+    "@sb1/ffe-grid": "^11.0.2",
     "@sb1/ffe-grid-react": "^9.0.1",
     "react": "^16.9.0"
   },
