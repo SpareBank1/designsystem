@@ -18,6 +18,7 @@ jobs:
             - name: 'GIT: Checkout develop branch'
               uses: actions/checkout@v2
               with:
+                  token: ${{ secrets.GITHUB_USER_TOKEN }}
                   fetch-depth: '0'
 
             - name: 'GIT: Fetch master branch'
