@@ -10,7 +10,7 @@ jobs:
         runs-on: ubuntu-latest
         if: github.actor == 'steffenz' && github.ref == 'refs/heads/develop'
         steps:
-            - name: Configure NPM
+            - name: Check NPM token
               run: |
                   echo $'\n//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}' >> .npmrc
                   npm whoami
@@ -53,6 +53,12 @@ jobs:
               with:
                   action: 'lerna-changed'
 
+            - name: Configure NPM
+              run: |
+                  echo $'\n//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}' >> .npmrc
+                  npm whoami
+                  git update-index --skip-worktree .npmrc
+
             - name: Publish
               id: publish
               if: steps.changed.outputs.has_changes == 'true'
@@ -83,9 +89,12 @@ jobs:
                   action: 'slack-success'
                   success_message: 'Awesome hamburgers'
                   changed_packages: ${{ steps.changed.outputs.changed_packages }}
+
             - name: Merge back
-              if: steps.changed.outputs.has_changes == 'true' #merge back even if publish failed.
+              if: steps.publish.outputs.publish_failed == 'false'
               run: |
+                  git update-index --no-skip-worktree .npmrc
+                  git checkout .npmrc
                   git checkout develop
                   git pull
                   git merge -X theirs --no-edit master
