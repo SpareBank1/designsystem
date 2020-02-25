@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { bool, func, oneOfType, shape, string } from 'prop-types';
 import classNames from 'classnames';
-import uuid from 'uuid';
+import { v4 as uuid } from 'uuid';
 import Calendar from '../calendar';
 import KeyCode from '../util/keyCode';
 import DateInput from '../input';
@@ -24,7 +24,7 @@ export default class Datepicker extends Component {
             lastValidDate: '',
         };
 
-        this.datepickerId = uuid.v4();
+        this.datepickerId = uuid();
 
         this.openCalendar = this.openCalendar.bind(this);
         this.closeCalendar = this.closeCalendar.bind(this);

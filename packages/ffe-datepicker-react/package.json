@@ -32,7 +32,7 @@
     "@sb1/ffe-icons-react": "^7.0.3",
     "classnames": "^2.2.5",
     "prop-types": "^15.6.0",
-    "uuid": "^3.1.0"
+    "uuid": "^7.0.0"
   },
   "devDependencies": {
     "enzyme": "^3.7.0",
