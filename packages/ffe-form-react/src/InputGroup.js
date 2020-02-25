@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { bool, func, node, oneOfType, string } from 'prop-types';
-import uuid from 'uuid';
+import { v4 as uuid } from 'uuid';
 import Tooltip from './Tooltip';
 import Label from './Label';
 import classNames from 'classnames';
@@ -9,7 +9,7 @@ import ErrorFieldMessage from './ErrorFieldMessage';
 class InputGroup extends Component {
     constructor(props) {
         super();
-        this.id = props.inputId ? props.inputId : `input-${uuid.v4()}`;
+        this.id = props.inputId ? props.inputId : `input-${uuid()}`;
     }
 
     render() {
