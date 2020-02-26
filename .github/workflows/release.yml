@@ -1,14 +1,14 @@
 name: Release to NPM
 
 on:
-    watch:
-        types: [started]
+    schedule:
+        - cron: '0 6-21/5 * * *'
 
 jobs:
     release_to_npm:
         name: Release to NPM
         runs-on: ubuntu-latest
-        if: github.actor == 'steffenz' && github.ref == 'refs/heads/develop'
+        if: github.ref == 'refs/heads/develop'
         steps:
             - name: 'GIT: Checkout develop branch'
               uses: actions/checkout@v2
@@ -35,27 +35,33 @@ jobs:
                   echo "::set-output name=should_publish::true"
 
             - name: 'NPM: Install'
+              if: steps.merge.outputs.should_publish == 'true'
               id: install
               run: 'npm install'
 
             - name: 'Lerna: Check for changes'
+              if: steps.merge.outputs.should_publish == 'true'
               id: changed
               run: npm run lerna -- changed
 
             - name: 'NPM: Build'
+              if: steps.merge.outputs.should_publish == 'true'
               id: build
               run: 'npm run build'
 
-            - name: Configure NPM
+            - name: 'NPM: Configure'
+              if: steps.merge.outputs.should_publish == 'true'
               run: |
                   echo $'\n//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}' >> .npmrc
                   npm whoami
                   git update-index --skip-worktree .npmrc
 
             - name: 'Lerna: Release'
+              if: steps.merge.outputs.should_publish == 'true'
               run: 'npm run lerna -- publish --yes'
 
             - name: 'GIT: Merge master into develop'
+              if: steps.merge.outputs.should_publish == 'true'
               run: |
                   git update-index --no-skip-worktree .npmrc
                   git checkout .npmrc
