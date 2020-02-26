@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { bool, node, oneOfType, string, func, object, shape } from 'prop-types';
 import classNames from 'classnames';
-import uuid from 'uuid';
+import { v4 as uuid } from 'uuid';
 
 class RadioBlock extends Component {
-    id = `radio-block-${uuid.v4()}`;
+    id = `radio-block-${uuid()}`;
 
     render() {
         const {

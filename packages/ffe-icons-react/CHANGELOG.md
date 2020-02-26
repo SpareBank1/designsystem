@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@7.0.3...@sb1/ffe-icons-react@7.2.0) (2020-02-26)
+
+### Features
+
+-   **ffe-icons-react:** generate typescript declarations for all icons ([d444c47](https://github.com/SpareBank1/designsystem/commit/d444c477c19a63347faa3322243f363280d28fb5))
+
+# [7.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@7.0.3...@sb1/ffe-icons-react@7.1.0) (2020-02-25)
+
+### Features
+
+-   **ffe-icons-react:** generate typescript declarations for all icons ([d444c47](https://github.com/SpareBank1/designsystem/commit/d444c477c19a63347faa3322243f363280d28fb5))
+
 ## [7.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@7.0.2...@sb1/ffe-icons-react@7.0.3) (2019-11-20)
 
 **Note:** Version bump only for package @sb1/ffe-icons-react

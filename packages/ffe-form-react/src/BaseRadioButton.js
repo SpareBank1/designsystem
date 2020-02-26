@@ -11,12 +11,12 @@ import {
     object,
     number,
 } from 'prop-types';
-import uuid from 'uuid';
+import { v4 as uuid } from 'uuid';
 
 import Tooltip from './Tooltip';
 
 class BaseRadioButton extends Component {
-    id = `base-radio-button-${uuid.v4()}`;
+    id = `base-radio-button-${uuid()}`;
 
     render() {
         const {
