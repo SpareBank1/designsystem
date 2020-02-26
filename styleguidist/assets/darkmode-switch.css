@@ -2,21 +2,12 @@
     display: flex;
 }
 
-button.darkmode-button {
+.darkmode-button {
     display: flex;
     appearance: none;
     -webkit-appearance: none;
     border: none;
     background-color: transparent;
-}
-
-button.darkmode-button:focus,
-.darkmode-button-content:focus {
-    outline: none;
-}
-
-button.darkmode-button:focus > .darkmode-button-content {
-    outline: #5e9ed6 auto 5px;
 }
 
 .darkmode-button__switch {
@@ -32,6 +23,10 @@ button.darkmode-button:focus > .darkmode-button-content {
     height: 30px;
 }
 
+.native .darkmode-button__icon {
+    filter: invert(100%);
+}
+
 .darkmode-button__label {
     margin: 0 auto;
     border-radius: 100px;
@@ -43,11 +38,6 @@ button.darkmode-button:focus > .darkmode-button-content {
     background: #adadad;
     float: right;
     margin-top: 14px;
-}
-
-.darkmode-button__label:active,
-.darkmode-button__label:focus {
-    box-shadow: 0 0 0 1px #fff, 0 0 0 4px #a1dfff;
 }
 
 .darkmode-button__label::after {
@@ -71,7 +61,7 @@ button.darkmode-button:focus > .darkmode-button-content {
     transform: translateX(-100%);
 }
 
-.darkmode-button__switch--inputDisabled {
+.darkmode-button__switch--input-disabled {
     cursor: not-allowed !important;
 }
 
