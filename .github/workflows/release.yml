@@ -10,11 +10,6 @@ jobs:
         runs-on: ubuntu-latest
         if: github.actor == 'steffenz' && github.ref == 'refs/heads/develop'
         steps:
-            - name: Check NPM token
-              run: |
-                  echo $'\n//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}' >> .npmrc
-                  npm whoami
-
             - name: 'GIT: Checkout develop branch'
               uses: actions/checkout@v2
               with:
@@ -43,15 +38,13 @@ jobs:
               id: install
               run: 'npm install'
 
+            - name: 'Lerna: Check for changes'
+              id: changed
+              run: npm run lerna -- changed
+
             - name: 'NPM: Build'
               id: build
-              run: 'npm build'
-
-            - name: Changed command
-              id: changed
-              uses: sparebank1/designsystem-gh-actions/publish-to-npm@feature/output-support
-              with:
-                  action: 'lerna-changed'
+              run: 'npm run build'
 
             - name: Configure NPM
               run: |
@@ -59,39 +52,10 @@ jobs:
                   npm whoami
                   git update-index --skip-worktree .npmrc
 
-            - name: Publish
-              id: publish
-              if: steps.changed.outputs.has_changes == 'true'
-              uses: sparebank1/designsystem-gh-actions/publish-to-npm@feature/output-support
-              with:
-                  action: 'lerna-publish'
+            - name: 'Lerna: Release'
+              run: 'npm run lerna -- publish --yes'
 
-            - name: Post Error
-              id: error
-              if: steps.publish.outputs.publish_failed == 'true'
-              uses: sparebank1/designsystem-gh-actions/publish-to-npm@feature/output-support
-              env:
-                  SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
-                  SLACK_CHANNEL_ID: 'CRD325L14'
-              with:
-                  action: 'slack-error'
-                  error_message: 'This is an error message UPDATE'
-                  error_details: ${{ steps.publish.outputs.publish_error_log }}
-
-            - name: Post Success
-              id: success
-              if: steps.publish.outputs.publish_failed == 'false'
-              uses: sparebank1/designsystem-gh-actions/publish-to-npm@feature/output-support
-              env:
-                  SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
-                  SLACK_CHANNEL_ID: 'CRD325L14'
-              with:
-                  action: 'slack-success'
-                  success_message: 'Awesome hamburgers'
-                  changed_packages: ${{ steps.changed.outputs.changed_packages }}
-
-            - name: Merge back
-              if: steps.publish.outputs.publish_failed == 'false'
+            - name: 'GIT: Merge master into develop'
               run: |
                   git update-index --no-skip-worktree .npmrc
                   git checkout .npmrc
