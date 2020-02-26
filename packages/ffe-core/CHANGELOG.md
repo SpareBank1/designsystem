@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [15.5.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@15.5.0...@sb1/ffe-core@15.5.2) (2020-02-26)
+
+### Bug Fixes
+
+-   **ffe-core:** remove temporary .ts files after declaration generation ([5c8ab67](https://github.com/SpareBank1/designsystem/commit/5c8ab673c17830598c01931b4ba6c8445cfb06ba))
+
 ## [15.5.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@15.5.0...@sb1/ffe-core@15.5.1) (2020-02-25)
 
 ### Bug Fixes
