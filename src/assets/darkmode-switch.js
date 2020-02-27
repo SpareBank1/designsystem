@@ -5,6 +5,7 @@
     document.addEventListener('DOMContentLoaded', userControls.restoreDarkMode);
 
     if (getDarkModeEnabledByOS()) {
+        // TODO not sure this is a good idea
         userControls.disableUserInput();
         turnOnDarkMode();
     }
