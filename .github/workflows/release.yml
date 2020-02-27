@@ -2,7 +2,8 @@ name: Release to NPM
 
 on:
     schedule:
-        - cron: '0 6-21/5 * * *'
+        # schedule uses UTC times
+        - cron: '0 5-20/5 * * *'
 
 jobs:
     release_to_npm:
