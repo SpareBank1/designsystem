@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@8.0.17...@sb1/ffe-searchable-dropdown-react@8.1.0) (2020-02-28)
+
+### Features
+
+-   **ffe-searchable-dropdown-react:** show elements on click and focus ([456af97](https://github.com/SpareBank1/designsystem/commit/456af973eb34052783f7c5083595f9a055c39a71))
+-   **ffe-searchable-dropdown-react:** types for typescript ([713b6e0](https://github.com/SpareBank1/designsystem/commit/713b6e03235a0316489970f26e8dcc3367424827))
+
 ## [8.0.17](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@8.0.16...@sb1/ffe-searchable-dropdown-react@8.0.17) (2020-02-26)
 
 **Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react
