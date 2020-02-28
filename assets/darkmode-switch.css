@@ -61,10 +61,6 @@
     transform: translateX(-100%);
 }
 
-.darkmode-button__switch--input-disabled {
-    cursor: not-allowed !important;
-}
-
 html.transition,
 html.transition *,
 html.transition *::before,
