@@ -8960,6 +8960,91 @@ input:not([type='radio']):not([type='checkbox']) {
       -ms-flex: auto;
           flex: auto;
 }
+.darkmode-button-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.darkmode-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -moz-appearance: none;
+         appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    background-color: transparent;
+}
+
+.darkmode-button__switch {
+    visibility: hidden;
+    display: none;
+    height: 0;
+    width: 0;
+    margin-bottom: 40px;
+}
+
+.darkmode-button__icon {
+    margin: 14px 10px;
+    height: 30px;
+}
+
+.native .darkmode-button__icon {
+    -webkit-filter: invert(100%);
+            filter: invert(100%);
+}
+
+.darkmode-button__label {
+    margin: 0 auto;
+    border-radius: 100px;
+    position: relative;
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 55px;
+    height: 30px;
+    background: #adadad;
+    float: right;
+    margin-top: 14px;
+}
+
+.darkmode-button__label::after {
+    border-radius: 50%;
+    position: absolute;
+    content: '';
+    background: #fff;
+    width: 20px;
+    height: 20px;
+    top: 5px;
+    left: 4px;
+    -webkit-transition: ease-in-out 200ms;
+    -o-transition: ease-in-out 200ms;
+    transition: ease-in-out 200ms;
+}
+
+.darkmode-button__switch:checked + label {
+    background: #008a00;
+}
+
+.darkmode-button__switch:checked + label::after {
+    left: calc(100% - 5px);
+    -webkit-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+            transform: translateX(-100%);
+}
+
+html.transition,
+html.transition *,
+html.transition *::before,
+html.transition *::after {
+    -webkit-transition: ease-in-out 200ms !important;
+    -o-transition: ease-in-out 200ms !important;
+    transition: ease-in-out 200ms !important;
+    -webkit-transition-delay: 0 !important;
+         -o-transition-delay: 0 !important;
+            transition-delay: 0 !important;
+}
+
 .sb1ds-color-palette {
   margin: 0 0 40px 0;
   padding: 0;
@@ -11500,19 +11585,7 @@ body.native {
 }
 @media (prefers-color-scheme: dark) {
   body.native .sb1ds-intro::after {
-    content: '';
-    display: block;
-    height: 335px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: -1;
-    background-color: #005aa4;
     background-image: url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20948%2044%22%3E%3Cpath%20fill%3D%22%23000000%22%20fill-rule%3D%22evenodd%22%20d%3D%22M948.833324%2044c-156.014091%200-196.629091-28.783777-275.10464-28.783777-78.475549%200-87.754399%2010.982687-177.750909%2010.982687S386.900513%200%20292.210156%200C197.5198%200%20179.35287%2044-.67114%2044h949.504464z%22/%3E%3C/svg%3E');
-    background-repeat: no-repeat;
-    background-position: 80% 100.2%;
-    background-size: 948px 44px;
   }
 }
 @media (prefers-color-scheme: dark) {
