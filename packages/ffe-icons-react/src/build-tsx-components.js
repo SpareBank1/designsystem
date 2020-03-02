@@ -59,19 +59,17 @@ const svg = ${toTsx(icons[iconName])};
 
 interface IconProps extends React.SVGAttributes<SVGElement> {
     desc?: string;
-    focusable? : boolean;
     title?: string;
     iconName?: string;
 }
 
 const Icon: React.FC<IconProps> = ({
     desc,
-    focusable = false,
     title,
     iconName,
     ...rest
     }) => (
-        <svg focusable={String(focusable)} {...rest} {...svg.props}>
+        <svg {...svg.props} {...rest}>
             {title &&
                 <title>{title}</title>
             }
