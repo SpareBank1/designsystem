@@ -57,7 +57,7 @@ import { bool, string } from 'prop-types';
 
 const svg = ${toTsx(icons[iconName])};
 
-interface IconProps {
+interface IconProps extends React.SVGAttributes<SVGElement> {
     desc?: string;
     focusable? : boolean;
     title?: string;
