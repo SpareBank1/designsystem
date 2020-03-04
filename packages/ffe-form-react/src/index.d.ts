@@ -29,7 +29,10 @@ export interface BaseFieldMessageProps
 }
 
 export interface InputProps
-    extends React.InputHTMLAttributes<HTMLInputElement> {
+    extends React.DetailedHTMLProps<
+        React.InputHTMLAttributes<HTMLInputElement>,
+        HTMLInputElement
+    > {
     className?: string;
     inline?: boolean;
     textLike?: boolean;
