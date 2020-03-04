@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@6.0.3...@sb1/ffe-form-react@6.0.4) (2020-02-26)
+
+**Note:** Version bump only for package @sb1/ffe-form-react
+
+## [6.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@6.0.2...@sb1/ffe-form-react@6.0.3) (2020-02-26)
+
+### Bug Fixes
+
+-   **ffe-form-react:** update uuid to version 7.0.0 ([f8c993d](https://github.com/SpareBank1/designsystem/commit/f8c993d684b48cfc08140f9f35a6bd04daaa7048))
+
+## [6.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@6.0.1...@sb1/ffe-form-react@6.0.2) (2020-02-10)
+
+### Bug Fixes
+
+-   **ffe-form-react:** fixing incorrect types ([cd4614b](https://github.com/SpareBank1/designsystem/commit/cd4614b9724e5825aedfb33de30ce0b4f6a704ff))
+
 ## [6.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@6.0.0...@sb1/ffe-form-react@6.0.1) (2020-01-24)
 
 ### Bug Fixes

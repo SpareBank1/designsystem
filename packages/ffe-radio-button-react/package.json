@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-radio-button-react",
-  "version": "5.0.13",
+  "version": "5.0.16",
   "license": "MIT",
   "files": [
     "lib",
@@ -21,10 +21,10 @@
     "setupTestFrameworkScriptFile": "../../test-setup.js"
   },
   "dependencies": {
-    "@sb1/ffe-form-react": "^6.0.1",
+    "@sb1/ffe-form-react": "^6.0.4",
     "classnames": "^2.2.5",
     "prop-types": "^15.6.0",
-    "uuid": "^3.1.0"
+    "uuid": "^7.0.0"
   },
   "devDependencies": {
     "jest": "^23.4.2",

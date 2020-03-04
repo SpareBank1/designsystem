@@ -3,6 +3,32 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [15.5.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@15.5.3...@sb1/ffe-core@15.5.4) (2020-02-26)
+
+**Note:** Version bump only for package @sb1/ffe-core
+
+## [15.5.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@15.5.2...@sb1/ffe-core@15.5.3) (2020-02-26)
+
+**Note:** Version bump only for package @sb1/ffe-core
+
+## [15.5.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@15.5.0...@sb1/ffe-core@15.5.2) (2020-02-26)
+
+### Bug Fixes
+
+-   **ffe-core:** remove temporary .ts files after declaration generation ([5c8ab67](https://github.com/SpareBank1/designsystem/commit/5c8ab673c17830598c01931b4ba6c8445cfb06ba))
+
+## [15.5.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@15.5.0...@sb1/ffe-core@15.5.1) (2020-02-25)
+
+### Bug Fixes
+
+-   **ffe-core:** remove temporary .ts files after declaration generation ([5c8ab67](https://github.com/SpareBank1/designsystem/commit/5c8ab673c17830598c01931b4ba6c8445cfb06ba))
+
+# [15.5.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@15.4.0...@sb1/ffe-core@15.5.0) (2020-02-10)
+
+### Features
+
+-   **ffe-core:** auto-generate type declarations for core vars ([d18c68a](https://github.com/SpareBank1/designsystem/commit/d18c68a6d46c9821522e8eccbd8b99915235add8))
+
 # [15.4.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@15.3.0...@sb1/ffe-core@15.4.0) (2019-12-16)
 
 ### Features

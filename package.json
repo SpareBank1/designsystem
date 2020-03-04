@@ -27,7 +27,8 @@
         "kss:build": "kss -c kss-config.json",
         "test": "jest",
         "test:ci": "lerna run lint && jest --ci --coverage --coverageReporters lcovonly && cat ./coverage/lcov.info | coveralls",
-        "test:watch": "jest --watch"
+        "test:watch": "jest --watch",
+        "lerna": "lerna"
     },
     "devDependencies": {
         "@babel/cli": "^7.0.0",

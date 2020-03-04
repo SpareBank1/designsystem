@@ -6,7 +6,8 @@ const mkdirp = require('mkdirp');
 // These are the files we want to convert to JavaScript
 const FILES_WITH_VARIABLES = ['colors', 'breakpoints', 'spacing'];
 
-// First, create the lib directory if it doesn't exist
+// First, create the lib and tmp directories if they don't exist
+mkdirp.sync(path.resolve(__dirname, '..', 'tmp'));
 mkdirp.sync(path.resolve(__dirname, '..', 'lib'));
 
 // Then, let's process each file!
@@ -36,33 +37,29 @@ FILES_WITH_VARIABLES.forEach(filename => {
 
     // Create the output string, complete with a header explaining where it came
     // from and how to change it.
-    const jsContent = `// DO NOT MODIFY!
+    const tsContent = `// DO NOT MODIFY!
 // This file is created automatically by ffe-core/bin/build.js, and is based on
 // the ffe-core/less/${filename}.less file. Change the value there instead.
-
-module.exports = ${JSON.stringify(variables, null, 4)};
+${Object.entries(variables)
+    .map(([key, value]) => `export const ${key} = "${value}";`)
+    .join('\n')}
 `;
-
     // Write the formatted string to its own file
     fs.writeFileSync(
-        path.resolve(__dirname, '..', 'lib', `${filename}.js`),
-        jsContent,
+        path.resolve(__dirname, '..', 'tmp', `${filename}.ts`),
+        tsContent,
     );
 });
 
 // Finally, let's create an index file that exports all variables
 const indexContent = `// DO NOT MODIFY!
 // This file is created automatically by ffe-core/bin/build.js.
-
-module.exports = Object.assign(
-    {},
-${FILES_WITH_VARIABLES.map(filename => `    require('./${filename}')`).join(
-    ',\n',
+${FILES_WITH_VARIABLES.map(filename => `export * from './${filename}';`).join(
+    '\n',
 )}
-);
 `;
 
 fs.writeFileSync(
-    path.resolve(__dirname, '..', 'lib', 'index.js'),
+    path.resolve(__dirname, '..', 'tmp', 'index.ts'),
     indexContent,
 );

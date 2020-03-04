@@ -1,13 +1,13 @@
 import React from 'react';
 import { string, bool, func, oneOfType, object, shape } from 'prop-types';
-import uuid from 'uuid';
+import { v4 as uuid } from 'uuid';
 import classNames from 'classnames';
 
 import i18n from './i18n/i18n';
 
 export default class PhoneNumber extends React.Component {
-    numberId = uuid.v4();
-    countryCodeId = uuid.v4();
+    numberId = uuid();
+    countryCodeId = uuid();
 
     render() {
         const {

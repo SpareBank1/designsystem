@@ -10,12 +10,14 @@ const allIcons = require('../../packages/ffe-icons-react/lib');
 
 <Grid>
     <GridRow>
-        {Object.entries(allIcons).map(([name, Icon]) => (
-            <GridCol key={name} sm="6" md="4" lg="3" center={true}>
-                <Icon className="sb1ds-icon" />
-                <p>{name}</p>
-            </GridCol>
-        ))}
+        {Object.entries(allIcons)
+            .filter(([name]) => !name.startsWith('__'))
+            .map(([name, Icon]) => (
+                <GridCol key={name} sm="6" md="4" lg="3" center={true}>
+                    <Icon className="sb1ds-icon" />
+                    <p>{name}</p>
+                </GridCol>
+            ))}
     </GridRow>
 </Grid>;
 ```

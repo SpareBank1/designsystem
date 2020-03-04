@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.1.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@12.1.11...@sb1/ffe-buttons-react@12.1.12) (2020-02-26)
+
+**Note:** Version bump only for package @sb1/ffe-buttons-react
+
+## [12.1.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@12.1.10...@sb1/ffe-buttons-react@12.1.11) (2020-02-26)
+
+**Note:** Version bump only for package @sb1/ffe-buttons-react
+
+## [12.1.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@12.1.8...@sb1/ffe-buttons-react@12.1.10) (2020-02-26)
+
+**Note:** Version bump only for package @sb1/ffe-buttons-react
+
+## [12.1.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@12.1.8...@sb1/ffe-buttons-react@12.1.9) (2020-02-25)
+
+**Note:** Version bump only for package @sb1/ffe-buttons-react
+
+## [12.1.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@12.1.7...@sb1/ffe-buttons-react@12.1.8) (2020-02-10)
+
+### Bug Fixes
+
+-   **ffe-buttons-react:** fixing incorrect types ([654a24f](https://github.com/SpareBank1/designsystem/commit/654a24f5d3136b331d345d596117f7b22e99e759))
+
 ## [12.1.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@12.1.6...@sb1/ffe-buttons-react@12.1.7) (2020-01-16)
 
 ### Bug Fixes

@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@7.0.8...@sb1/ffe-accordion-react@7.0.9) (2020-02-26)
+
+**Note:** Version bump only for package @sb1/ffe-accordion-react
+
+## [7.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@7.0.7...@sb1/ffe-accordion-react@7.0.8) (2020-02-26)
+
+### Bug Fixes
+
+-   **ffe-accordion-react:** update uuid to version 7.0.0 ([dcf4aee](https://github.com/SpareBank1/designsystem/commit/dcf4aee5cb3341f936343e54c469fc0208bb6f0b))
+
+## [7.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@7.0.5...@sb1/ffe-accordion-react@7.0.7) (2020-02-26)
+
+**Note:** Version bump only for package @sb1/ffe-accordion-react
+
+## [7.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@7.0.5...@sb1/ffe-accordion-react@7.0.6) (2020-02-25)
+
+**Note:** Version bump only for package @sb1/ffe-accordion-react
+
 ## [7.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@7.0.4...@sb1/ffe-accordion-react@7.0.5) (2019-11-20)
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react

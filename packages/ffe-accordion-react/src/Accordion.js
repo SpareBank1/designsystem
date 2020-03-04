@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { node, bool, string } from 'prop-types';
-import uuid from 'uuid';
+import { v4 as uuid } from 'uuid';
 import classNames from 'classnames';
 
 class Accordion extends Component {
     constructor() {
         super();
 
-        this.id = uuid.v4();
+        this.id = uuid();
     }
 
     render() {

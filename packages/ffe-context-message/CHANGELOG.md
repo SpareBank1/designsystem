@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.4...@sb1/ffe-context-message@4.0.5) (2020-02-26)
+
+**Note:** Version bump only for package @sb1/ffe-context-message
+
+## [4.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.3...@sb1/ffe-context-message@4.0.4) (2020-02-26)
+
+**Note:** Version bump only for package @sb1/ffe-context-message
+
+## [4.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.1...@sb1/ffe-context-message@4.0.3) (2020-02-26)
+
+**Note:** Version bump only for package @sb1/ffe-context-message
+
+## [4.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.1...@sb1/ffe-context-message@4.0.2) (2020-02-25)
+
+**Note:** Version bump only for package @sb1/ffe-context-message
+
+## [4.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.0...@sb1/ffe-context-message@4.0.1) (2020-02-10)
+
+**Note:** Version bump only for package @sb1/ffe-context-message
+
 # [4.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@3.1.0...@sb1/ffe-context-message@4.0.0) (2019-12-18)
 
 ### Bug Fixes
