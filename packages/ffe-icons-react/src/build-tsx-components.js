@@ -53,13 +53,15 @@ const toTsx = svgString => {
  * */
 const createStandaloneTSX = (icons, iconName) => `
 import * as React from 'react';
-import { bool, string } from 'prop-types';
+import { string, bool } from 'prop-types';
+import * as PropTypes from 'prop-types';
 
 const svg = ${toTsx(icons[iconName])};
 
-interface IconProps extends React.SVGAttributes<SVGElement> {
+interface IconProps extends Omit<React.SVGAttributes<SVGElement>, 'focusable'> {
     desc?: string;
     title?: string;
+    focusable?: boolean | string;
     iconName?: string;
 }
 
@@ -82,8 +84,11 @@ const Icon: React.FC<IconProps> = ({
 
 Icon.propTypes = {
     desc: string,
-    focusable: bool,
     title: string,
+    focusable: PropTypes.oneOfType([
+        PropTypes.bool,
+        PropTypes.oneOf(["true", "false", "auto", "undefined"]),
+    ]),
     iconName: string,
 };
 
