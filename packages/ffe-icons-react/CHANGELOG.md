@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.2.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@7.2.2...@sb1/ffe-icons-react@7.2.3) (2020-03-06)
+
+### Bug Fixes
+
+-   **ffe-icons-react:** extend svg attributes in typescript interface ([8a4c541](https://github.com/SpareBank1/designsystem/commit/8a4c541050cad2d527b1d681cf6d80f9d46c4492))
+-   **ffe-icons-react:** fixed typescript props and proptype mismatch ([5676790](https://github.com/SpareBank1/designsystem/commit/567679054951b39ad4d552f25932985d802276d7))
+-   **ffe-icons-react:** remove duplicate prop + make svg props overridable ([c4b88b8](https://github.com/SpareBank1/designsystem/commit/c4b88b82dc7c82eb3e80bbab10890d227932f72e))
+
 ## [7.2.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@7.2.1...@sb1/ffe-icons-react@7.2.2) (2020-02-26)
 
 **Note:** Version bump only for package @sb1/ffe-icons-react
