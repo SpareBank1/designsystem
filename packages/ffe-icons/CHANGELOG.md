@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.12.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.11.0...@sb1/ffe-icons@12.12.0) (2020-03-10)
+
+### Features
+
+-   **ffe-icons:** add a copy icon ([50a7519](https://github.com/SpareBank1/designsystem/commit/50a75194744a40b7feb9fc507342877196d40c9b))
+-   **ffe-icons:** updated copy icon to new approved version ([5f91cb0](https://github.com/SpareBank1/designsystem/commit/5f91cb0b300320004952cb05b0ebbbc4e004e3f9))
+-   **ffe-icons:** updated icon size according to spec ([b59315a](https://github.com/SpareBank1/designsystem/commit/b59315a1f71ed74a46351f45aa4cafd1717f3642))
+
 # [12.11.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.10.0...@sb1/ffe-icons@12.11.0) (2019-11-20)
 
 ### Features
