@@ -2,7 +2,7 @@ import React from 'react';
 import { bool, func, node, string, number } from 'prop-types';
 import classNames from 'classnames';
 import Collapse from '@sb1/ffe-collapse-react';
-import uuid from 'uuid';
+import { v4 as uuid } from 'uuid';
 
 class Tooltip extends React.Component {
     constructor({ isOpen }) {
@@ -11,8 +11,8 @@ class Tooltip extends React.Component {
             isOpen: !!isOpen,
         };
         this.onToggle = this.onToggle.bind(this);
-        this.tooltipId = uuid.v4();
-        this.tooltipButtonId = uuid.v4();
+        this.tooltipId = uuid();
+        this.tooltipButtonId = uuid();
     }
 
     onToggle(evt) {

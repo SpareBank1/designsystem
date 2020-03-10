@@ -19,17 +19,30 @@
     font-size: 16px;
     outline: none;
     overflow: hidden;
-    padding: 8px 30px 7px;
+    padding: @ffe-spacing-xs @ffe-spacing-lg @ffe-spacing-xs;
     text-align: center;
     text-decoration: none;
     transition: all @ffe-transition-duration @ffe-ease;
     vertical-align: middle;
+    .native & {
+        @media (prefers-color-scheme: dark) {
+            background-color: @ffe-grey-charcoal-darkmode;
+            border-color: @ffe-grey-silver-darkmode;
+            color: @ffe-grey-cloud-darkmode;
+        }
+    }
 
     &:hover,
     &:focus,
     &:active {
         color: @ffe-blue-royal;
         background: @ffe-white;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background: @ffe-black-darkmode;
+                color: @ffe-blue-azure-darkmode;
+            }
+        }
     }
 
     &:focus,
@@ -41,12 +54,18 @@
     &--selected {
         background-color: @ffe-white;
         color: @ffe-blue-royal;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background: @ffe-black-darkmode;
+                color: @ffe-blue-azure-darkmode;
+            }
+        }
     }
 
     &--condensed {
         font-size: 14px;
-        padding-bottom: 5px;
-        padding-top: 5px;
+        padding-bottom: @ffe-spacing-2xs;
+        padding-top: @ffe-spacing-2xs;
     }
 }
 

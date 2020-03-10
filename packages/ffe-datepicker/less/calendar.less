@@ -1,8 +1,14 @@
 .ffe-calendar {
     border: solid 2px @ffe-grey-silver;
     border-radius: 4px;
-    padding: 0.25em;
+    padding: @ffe-spacing-2xs;
     background: @ffe-white;
+    .native & {
+        @media (prefers-color-scheme: dark) {
+            background-color: @ffe-grey-charcoal-darkmode;
+            border-color: @ffe-grey-darkmode;
+        }
+    }
 
     &--datepicker {
         position: absolute;
@@ -19,12 +25,12 @@
 
     &__header {
         text-align: center;
-        padding: 1em 0.25em 0.25em;
+        padding: @ffe-spacing-sm @ffe-spacing-2xs @ffe-spacing-2xs;
         width: 100%;
     }
 
     &__month {
-        padding-right: 0.4em;
+        padding-right: @ffe-spacing-xs;
     }
 
     &__month-nav {
@@ -37,6 +43,11 @@
         width: 18px;
         height: 18px;
         fill: @ffe-blue-azure;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                fill: @ffe-blue-azure-darkmode;
+            }
+        }
     }
 
     &__icon-next {
@@ -44,6 +55,11 @@
         width: 18px;
         height: 18px;
         fill: @ffe-blue-azure;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                fill: @ffe-blue-azure-darkmode;
+            }
+        }
     }
 
     &__next {
@@ -62,6 +78,11 @@
         height: 2em;
         width: 2em;
         fill: @ffe-blue-azure;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                fill: @ffe-blue-azure-darkmode;
+            }
+        }
     }
 
     &__title {
@@ -71,7 +92,12 @@
         vertical-align: middle;
         color: @ffe-black;
         min-width: 50%;
-        margin-bottom: 8px;
+        margin-bottom: @ffe-spacing-xs;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-white-darkmode;
+            }
+        }
     }
 
     &__accessible-text {
@@ -96,10 +122,16 @@
 
         border-bottom: 1px solid @ffe-grey;
         color: @ffe-blue-royal;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                border-color: @ffe-grey-silver-darkmode;
+                color: @ffe-grey-cloud-darkmode;
+            }
+        }
     }
 
     &__day {
-        padding: 3px 0;
+        padding: @ffe-spacing-2xs 0;
         text-align: center;
         outline: none;
     }
@@ -117,25 +149,55 @@
         line-height: 35px;
         border: 2px solid transparent;
         cursor: pointer;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: @ffe-grey-charcoal-darkmode;
+                color: @ffe-white-darkmode;
+            }
+        }
 
         &--today {
             border: 1px solid @ffe-grey;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    border-color: @ffe-grey-silver-darkmode;
+                }
+            }
         }
 
         &:hover {
             border: 2px solid @ffe-blue-azure;
             color: @ffe-blue-azure;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    border-color: @ffe-blue-azure-darkmode;
+                    color: @ffe-blue-azure-darkmode;
+                }
+            }
         }
 
         &--focus {
             border: 2px solid @ffe-blue-azure;
             color: @ffe-blue-azure;
             background: @ffe-white;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    border-color: @ffe-blue-azure-darkmode;
+                    color: @ffe-blue-azure-darkmode;
+                    background: @ffe-grey-darkmode;
+                }
+            }
         }
 
         &--selected {
             background: @ffe-blue-royal;
             color: @ffe-white;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    background: @ffe-grey-darkmode;
+                    color: @ffe-white-darkmode;
+                }
+            }
 
             &:focus {
                 border: 2px solid @ffe-blue-focus;
@@ -144,16 +206,32 @@
 
         &--disabled {
             color: @ffe-grey-silver;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    color: @ffe-grey-darkmode;
+                }
+            }
 
             &:focus,
             &:hover {
                 border: 2px solid @ffe-grey-silver;
                 color: @ffe-grey-silver;
+                .native & {
+                    @media (prefers-color-scheme: dark) {
+                        border-color: @ffe-grey-darkmode;
+                        color: @ffe-grey-darkmode;
+                    }
+                }
             }
         }
 
         &--disabled-focus {
             border: 2px solid @ffe-grey-silver;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    border-color: @ffe-grey-darkmode;
+                }
+            }
         }
     }
 }

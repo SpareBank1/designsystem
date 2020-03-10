@@ -1,20 +1,30 @@
 .ffe-card-component {
     &--card-name {
-        margin: 0 0 5px 0;
+        margin: 0 0 @ffe-spacing-2xs 0;
     }
 
     &--text {
-        margin: 5px 0 0 0;
+        margin: @ffe-spacing-2xs 0 0 0;
     }
 
     &--subtext {
         &:extend(.ffe-small-text);
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-grey-silver-darkmode;
+            }
+        }
 
-        margin: 5px 0 0 0;
+        margin: @ffe-spacing-2xs 0 0 0;
     }
 
     &--title {
         &:extend(.ffe-h5);
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-white-darkmode;
+            }
+        }
 
         margin: 0;
 

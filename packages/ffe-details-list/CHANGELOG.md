@@ -3,6 +3,32 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list@9.1.4...@sb1/ffe-details-list@9.1.5) (2020-02-26)
+
+**Note:** Version bump only for package @sb1/ffe-details-list
+
+## [9.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list@9.1.3...@sb1/ffe-details-list@9.1.4) (2020-02-26)
+
+**Note:** Version bump only for package @sb1/ffe-details-list
+
+## [9.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list@9.1.1...@sb1/ffe-details-list@9.1.3) (2020-02-26)
+
+**Note:** Version bump only for package @sb1/ffe-details-list
+
+## [9.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list@9.1.1...@sb1/ffe-details-list@9.1.2) (2020-02-25)
+
+**Note:** Version bump only for package @sb1/ffe-details-list
+
+## [9.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list@9.1.0...@sb1/ffe-details-list@9.1.1) (2020-02-10)
+
+**Note:** Version bump only for package @sb1/ffe-details-list
+
+# [9.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list@9.0.28...@sb1/ffe-details-list@9.1.0) (2019-12-16)
+
+### Features
+
+-   **ffe-details-list:** add darkmode styling overrides ([d42cec1](https://github.com/SpareBank1/designsystem/commit/d42cec1334136d821e0deaee353cfa318714661f))
+
 ## [9.0.28](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list@9.0.27...@sb1/ffe-details-list@9.0.28) (2019-10-31)
 
 **Note:** Version bump only for package @sb1/ffe-details-list

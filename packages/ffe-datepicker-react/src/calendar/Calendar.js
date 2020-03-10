@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { bool, func, string } from 'prop-types';
-import uuid from 'uuid';
+import { v4 as uuid } from 'uuid';
 import ActiveDate from './ActiveDate';
 import LeadDate from './LeadDate';
 import Header from './Header';
@@ -23,7 +23,7 @@ export default class Calendar extends Component {
 
         this.onBlur = props.onBlurHandler;
 
-        this.datepickerId = `ffe-calendar-${uuid.v4()}`;
+        this.datepickerId = `ffe-calendar-${uuid()}`;
         this.forceDateFocus = props.focusOnOpen;
 
         this.keyDown = this.keyDown.bind(this);

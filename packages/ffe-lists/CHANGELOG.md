@@ -3,6 +3,42 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@8.0.4...@sb1/ffe-lists@8.0.5) (2020-02-26)
+
+**Note:** Version bump only for package @sb1/ffe-lists
+
+## [8.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@8.0.3...@sb1/ffe-lists@8.0.4) (2020-02-26)
+
+**Note:** Version bump only for package @sb1/ffe-lists
+
+## [8.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@8.0.1...@sb1/ffe-lists@8.0.3) (2020-02-26)
+
+**Note:** Version bump only for package @sb1/ffe-lists
+
+## [8.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@8.0.1...@sb1/ffe-lists@8.0.2) (2020-02-25)
+
+**Note:** Version bump only for package @sb1/ffe-lists
+
+## [8.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@8.0.0...@sb1/ffe-lists@8.0.1) (2020-02-10)
+
+**Note:** Version bump only for package @sb1/ffe-lists
+
+# [8.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@7.1.0...@sb1/ffe-lists@8.0.0) (2019-12-18)
+
+### Bug Fixes
+
+-   **ffe-lists:** replace hardcoded spacing with variables ([0e37e54](https://github.com/SpareBank1/designsystem/commit/0e37e54a0a3c571a682565373aa17f932329f084))
+
+### BREAKING CHANGES
+
+-   **ffe-lists:** This commit is likely to cause small visual regressions caused by slightly altered margin and padding values.
+
+# [7.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@7.0.8...@sb1/ffe-lists@7.1.0) (2019-12-16)
+
+### Features
+
+-   **ffe-lists:** add darkmode styling overrides ([0be98e8](https://github.com/SpareBank1/designsystem/commit/0be98e8a60ddecaf845dfd7c171348acad8a3fa3))
+
 ## [7.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@7.0.7...@sb1/ffe-lists@7.0.8) (2019-10-31)
 
 **Note:** Version bump only for package @sb1/ffe-lists

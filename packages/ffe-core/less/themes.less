@@ -1,0 +1,11 @@
+// Sets default body color and background color for light and dark themes
+.ffe-body {
+    color: @ffe-black;
+    background-color: @ffe-white;
+    &.native {
+        @media (prefers-color-scheme: dark) {
+            color: @ffe-grey-cloud-darkmode;
+            background-color: @ffe-black-darkmode;
+        }
+    }
+}

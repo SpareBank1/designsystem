@@ -10,6 +10,12 @@
     border-radius: 50%;
     position: absolute;
     pointer-events: none;
+    .native & {
+        @media (prefers-color-scheme: dark) {
+            background-color: @ffe-grey-darkmode;
+            border-color: @ffe-grey-cloud-darkmode;
+        }
+    }
 }
 
 /*
@@ -18,4 +24,10 @@
 .ffe-sb1-radioblob-active() {
     background-color: @ffe-white;
     border: 7px solid @ffe-blue-azure;
+    .native & {
+        @media (prefers-color-scheme: dark) {
+            background-color: @ffe-grey-darkmode;
+            border-color: @ffe-blue-azure-darkmode;
+        }
+    }
 }

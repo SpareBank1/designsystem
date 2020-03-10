@@ -2,23 +2,49 @@
     &__header {
         color: @ffe-blue-royal;
         white-space: nowrap;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-blue-azure-darkmode;
+            }
+        }
 
         &:hover {
             cursor: pointer;
             color: @ffe-blue-azure;
             border-bottom: solid 2px;
             user-select: none;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    color: @ffe-blue-azure-darkmode;
+                    border-color: @ffe-blue-azure-darkmode;
+                }
+            }
 
             .ffe-sortable-table__sort-arrow {
                 fill: @ffe-blue-azure;
+                .native & {
+                    @media (prefers-color-scheme: dark) {
+                        fill: @ffe-blue-azure-darkmode;
+                    }
+                }
             }
         }
 
         &--active {
             border-bottom: solid 2px @ffe-blue-royal;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    border-color: @ffe-blue-azure-darkmode;
+                }
+            }
 
             .ffe-sortable-table__sort-arrow {
                 fill: @ffe-blue-royal;
+                .native & {
+                    @media (prefers-color-scheme: dark) {
+                        fill: @ffe-blue-azure-darkmode;
+                    }
+                }
             }
         }
     }
@@ -28,8 +54,13 @@
         width: 12px;
         vertical-align: middle;
         fill: @ffe-blue-royal;
-        margin-left: 8px;
+        margin-left: @ffe-spacing-xs;
         transition: transform @ffe-transition-duration @ffe-ease-in-out-back;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                fill: @ffe-blue-azure-darkmode;
+            }
+        }
 
         &--descending {
             transform: rotate(180deg);

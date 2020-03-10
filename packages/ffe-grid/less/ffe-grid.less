@@ -113,10 +113,10 @@
 // Variables
 @ffe-grid-columns: 12;
 @ffe-grid-width: 1280px;
-@ffe-grid-gutter-sm: 20px;
-@ffe-grid-gutter-lg: 40px;
-@ffe-condensed-grid-gutter-sm: 10px;
-@ffe-condensed-grid-gutter-lg: 20px;
+@ffe-grid-gutter-sm: @ffe-spacing-sm;
+@ffe-grid-gutter-lg: @ffe-spacing-xl;
+@ffe-condensed-grid-gutter-sm: @ffe-spacing-xs;
+@ffe-condensed-grid-gutter-lg: @ffe-spacing-sm;
 
 // Mixins
 .create-column(@size, @total, @current: 0) when (@current <= @total) {
@@ -179,42 +179,92 @@
 
     &--bg-blue-ice {
         background-color: @ffe-blue-ice;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: @ffe-black-darkmode;
+            }
+        }
     }
 
     &--bg-blue-pale {
         background-color: @ffe-blue-pale;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: @ffe-black-darkmode;
+            }
+        }
     }
 
     &--bg-green-mint {
         background-color: @ffe-green-mint;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: @ffe-black-darkmode;
+            }
+        }
     }
 
     &--bg-sand {
         background-color: @ffe-sand;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: @ffe-black-darkmode;
+            }
+        }
     }
 
     &--bg-grey-cloud {
         background-color: @ffe-grey-cloud;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: @ffe-black-darkmode;
+            }
+        }
     }
 
     &--bg-grey-warm {
         background-color: @ffe-grey-warm;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: @ffe-black-darkmode;
+            }
+        }
     }
 
     &--bg-orange-salmon {
         background-color: @ffe-orange-salmon;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: @ffe-black-darkmode;
+            }
+        }
     }
 
     &--bg-red {
         background-color: @ffe-red;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: @ffe-black-darkmode;
+            }
+        }
     }
 
     &--bg-blue-sky {
         background-color: @ffe-blue-sky;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: @ffe-black-darkmode;
+            }
+        }
     }
 
     &--bg-white {
         background-color: @ffe-white;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: @ffe-black-darkmode;
+            }
+        }
     }
 
     &--reverse,
@@ -316,42 +366,92 @@
 .ffe-grid__col {
     &--bg-blue-ice {
         background-color: @ffe-blue-ice;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: @ffe-black-darkmode;
+            }
+        }
     }
 
     &--bg-blue-pale {
         background-color: @ffe-blue-pale;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: @ffe-black-darkmode;
+            }
+        }
     }
 
     &--bg-green-mint {
         background-color: @ffe-green-mint;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: @ffe-black-darkmode;
+            }
+        }
     }
 
     &--bg-sand {
         background-color: @ffe-sand;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: @ffe-black-darkmode;
+            }
+        }
     }
 
     &--bg-grey-cloud {
         background-color: @ffe-grey-cloud;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: @ffe-black-darkmode;
+            }
+        }
     }
 
     &--bg-grey-warm {
         background-color: @ffe-grey-warm;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: @ffe-black-darkmode;
+            }
+        }
     }
 
     &--bg-orange-salmon {
         background-color: @ffe-orange-salmon;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: @ffe-black-darkmode;
+            }
+        }
     }
 
     &--bg-red {
         background-color: @ffe-red;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: @ffe-black-darkmode;
+            }
+        }
     }
 
     &--bg-blue-sky {
         background-color: @ffe-blue-sky;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: @ffe-black-darkmode;
+            }
+        }
     }
 
     &--bg-white {
         background-color: @ffe-white;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: @ffe-black-darkmode;
+            }
+        }
     }
 
     &--reverse {

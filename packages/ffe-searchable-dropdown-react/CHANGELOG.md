@@ -3,6 +3,62 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@8.1.0...@sb1/ffe-searchable-dropdown-react@8.1.1) (2020-03-06)
+
+**Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react
+
+# [8.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@8.0.17...@sb1/ffe-searchable-dropdown-react@8.1.0) (2020-02-28)
+
+### Features
+
+-   **ffe-searchable-dropdown-react:** show elements on click and focus ([456af97](https://github.com/SpareBank1/designsystem/commit/456af973eb34052783f7c5083595f9a055c39a71))
+-   **ffe-searchable-dropdown-react:** types for typescript ([713b6e0](https://github.com/SpareBank1/designsystem/commit/713b6e03235a0316489970f26e8dcc3367424827))
+
+## [8.0.17](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@8.0.16...@sb1/ffe-searchable-dropdown-react@8.0.17) (2020-02-26)
+
+**Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react
+
+## [8.0.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@8.0.15...@sb1/ffe-searchable-dropdown-react@8.0.16) (2020-02-26)
+
+**Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react
+
+## [8.0.15](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@8.0.13...@sb1/ffe-searchable-dropdown-react@8.0.15) (2020-02-26)
+
+**Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react
+
+## [8.0.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@8.0.13...@sb1/ffe-searchable-dropdown-react@8.0.14) (2020-02-25)
+
+**Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react
+
+## [8.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@8.0.12...@sb1/ffe-searchable-dropdown-react@8.0.13) (2020-02-10)
+
+**Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react
+
+## [8.0.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@8.0.11...@sb1/ffe-searchable-dropdown-react@8.0.12) (2020-01-16)
+
+**Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react
+
+## [8.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@8.0.10...@sb1/ffe-searchable-dropdown-react@8.0.11) (2020-01-03)
+
+### Bug Fixes
+
+-   **ffe-searchable-dropdown-react:** add dark mode styling to list ([0dc75d8](https://github.com/SpareBank1/designsystem/commit/0dc75d8a9e7fbea9ab33c7a3c021ade8101f58bd))
+
+## [8.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@8.0.9...@sb1/ffe-searchable-dropdown-react@8.0.10) (2019-12-30)
+
+### Bug Fixes
+
+-   **ffe-searchable-dropdown-react:** fixed dark mode version ([907a6dc](https://github.com/SpareBank1/designsystem/commit/907a6dc3b39b141d42215adf81bb253fd73108c1))
+-   **ffe-searchable-dropdown-react:** use ffe-spacings ([affa325](https://github.com/SpareBank1/designsystem/commit/affa3256718db076bcc815770509474b342a7ed2))
+
+## [8.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@8.0.8...@sb1/ffe-searchable-dropdown-react@8.0.9) (2019-12-18)
+
+**Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react
+
+## [8.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@8.0.7...@sb1/ffe-searchable-dropdown-react@8.0.8) (2019-12-16)
+
+**Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react
+
 ## [8.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@8.0.6...@sb1/ffe-searchable-dropdown-react@8.0.7) (2019-12-02)
 
 **Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react

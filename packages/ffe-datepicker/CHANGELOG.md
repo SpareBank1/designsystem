@@ -3,6 +3,50 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@6.0.6...@sb1/ffe-datepicker@6.0.7) (2020-02-26)
+
+**Note:** Version bump only for package @sb1/ffe-datepicker
+
+## [6.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@6.0.5...@sb1/ffe-datepicker@6.0.6) (2020-02-26)
+
+**Note:** Version bump only for package @sb1/ffe-datepicker
+
+## [6.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@6.0.3...@sb1/ffe-datepicker@6.0.5) (2020-02-26)
+
+**Note:** Version bump only for package @sb1/ffe-datepicker
+
+## [6.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@6.0.3...@sb1/ffe-datepicker@6.0.4) (2020-02-25)
+
+**Note:** Version bump only for package @sb1/ffe-datepicker
+
+## [6.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@6.0.2...@sb1/ffe-datepicker@6.0.3) (2020-02-10)
+
+**Note:** Version bump only for package @sb1/ffe-datepicker
+
+## [6.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@6.0.1...@sb1/ffe-datepicker@6.0.2) (2020-01-16)
+
+**Note:** Version bump only for package @sb1/ffe-datepicker
+
+## [6.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@6.0.0...@sb1/ffe-datepicker@6.0.1) (2019-12-30)
+
+**Note:** Version bump only for package @sb1/ffe-datepicker
+
+# [6.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@5.2.0...@sb1/ffe-datepicker@6.0.0) (2019-12-18)
+
+### Bug Fixes
+
+-   **ffe-datepicker:** replace hardcoded spacing with variables ([3f51706](https://github.com/SpareBank1/designsystem/commit/3f51706b69491cd5b545cf6be494f790f3cee740))
+
+### BREAKING CHANGES
+
+-   **ffe-datepicker:** This commit is likely to cause small visual regressions caused by slightly altered margin and padding values.
+
+# [5.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@5.1.5...@sb1/ffe-datepicker@5.2.0) (2019-12-16)
+
+### Features
+
+-   **ffe-datepicker:** added darkmode styling overrides ([5d95a2b](https://github.com/SpareBank1/designsystem/commit/5d95a2bfd2d1aece731483fb9f16a2e37969ff4d))
+
 ## [5.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@5.1.4...@sb1/ffe-datepicker@5.1.5) (2019-12-02)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker

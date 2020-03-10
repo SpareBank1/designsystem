@@ -13,7 +13,7 @@
     display: flex;
     flex-direction: column;
     padding: 0;
-    margin: 40px 0;
+    margin: @ffe-spacing-xl 0;
     position: relative;
     width: 100%;
 
@@ -31,6 +31,11 @@
         bottom: 0;
         left: 0;
         z-index: 1;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background: @ffe-grey-silver-darkmode;
+            }
+        }
     }
 
     .ffe-tab {

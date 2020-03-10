@@ -3,6 +3,48 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@4.0.4...@sb1/ffe-system-message@4.0.5) (2020-02-26)
+
+**Note:** Version bump only for package @sb1/ffe-system-message
+
+## [4.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@4.0.3...@sb1/ffe-system-message@4.0.4) (2020-02-26)
+
+**Note:** Version bump only for package @sb1/ffe-system-message
+
+## [4.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@4.0.1...@sb1/ffe-system-message@4.0.3) (2020-02-26)
+
+**Note:** Version bump only for package @sb1/ffe-system-message
+
+## [4.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@4.0.1...@sb1/ffe-system-message@4.0.2) (2020-02-25)
+
+**Note:** Version bump only for package @sb1/ffe-system-message
+
+## [4.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@4.0.0...@sb1/ffe-system-message@4.0.1) (2020-02-10)
+
+**Note:** Version bump only for package @sb1/ffe-system-message
+
+# [4.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@3.1.1...@sb1/ffe-system-message@4.0.0) (2019-12-18)
+
+### Bug Fixes
+
+-   **ffe-system-message:** replace hardcoded spacing with variables ([b34c27f](https://github.com/SpareBank1/designsystem/commit/b34c27fcdd90038b635ba632aaa1201e1a2731d3))
+
+### BREAKING CHANGES
+
+-   **ffe-system-message:** This commit is likely to cause small visual regressions caused by slightly altered margin and padding values.
+
+## [3.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@3.1.0...@sb1/ffe-system-message@3.1.1) (2019-12-16)
+
+### Bug Fixes
+
+-   **ffe-system-message:** text does not take full with ([03f537b](https://github.com/SpareBank1/designsystem/commit/03f537b17b78c02f212a1b35f2f3f6d41a409e7d))
+
+# [3.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@3.0.30...@sb1/ffe-system-message@3.1.0) (2019-12-16)
+
+### Features
+
+-   **ffe-system-message:** add darkmode styling overrides ([b30ead8](https://github.com/SpareBank1/designsystem/commit/b30ead809bb6e3f88be8b76bad83b78b5f704658))
+
 ## [3.0.30](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@3.0.29...@sb1/ffe-system-message@3.0.30) (2019-10-31)
 
 **Note:** Version bump only for package @sb1/ffe-system-message

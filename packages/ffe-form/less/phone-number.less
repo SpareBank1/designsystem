@@ -32,7 +32,7 @@
 
         label {
             white-space: nowrap;
-            margin-right: 10px;
+            margin-right: @ffe-spacing-xs;
         }
     }
 
@@ -40,16 +40,21 @@
         max-width: 60px;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
-        margin-right: 14px;
+        margin-right: @ffe-spacing-sm;
     }
 
     &__plus {
         font-weight: 400;
         line-height: 1;
-        padding: 12px 6px;
+        padding: 12px @ffe-spacing-xs;
         border: 2px solid @ffe-grey-silver;
         border-radius: 4px 0 0 4px;
         border-right: 0;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                border-color: @ffe-grey-darkmode;
+            }
+        }
     }
 
     &__number {
@@ -60,7 +65,8 @@
         }
     }
 
-    &__phone-input:disabled, &__country-code-input:disabled {
+    &__phone-input:disabled,
+    &__country-code-input:disabled {
         color: transparent;
     }
 
@@ -69,6 +75,13 @@
             border: none;
             color: @ffe-white;
             background-color: @ffe-grey-shuttle--dark;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    border: none;
+                    color: @ffe-white;
+                    background-color: @ffe-grey-shuttle--dark;
+                }
+            }
         }
     }
 }

@@ -3,6 +3,55 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [13.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@13.0.6...@sb1/ffe-form@13.0.7) (2020-02-26)
+
+**Note:** Version bump only for package @sb1/ffe-form
+
+## [13.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@13.0.5...@sb1/ffe-form@13.0.6) (2020-02-26)
+
+**Note:** Version bump only for package @sb1/ffe-form
+
+## [13.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@13.0.3...@sb1/ffe-form@13.0.5) (2020-02-26)
+
+**Note:** Version bump only for package @sb1/ffe-form
+
+## [13.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@13.0.3...@sb1/ffe-form@13.0.4) (2020-02-25)
+
+**Note:** Version bump only for package @sb1/ffe-form
+
+## [13.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@13.0.2...@sb1/ffe-form@13.0.3) (2020-02-10)
+
+**Note:** Version bump only for package @sb1/ffe-form
+
+## [13.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@13.0.1...@sb1/ffe-form@13.0.2) (2020-01-16)
+
+### Bug Fixes
+
+-   **ffe-form:** Changing margin in input-group from initial to auto ([38a8cf4](https://github.com/SpareBank1/designsystem/commit/38a8cf4d4eed5c855b1319d173b3a51e10dcc109))
+
+## [13.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@13.0.0...@sb1/ffe-form@13.0.1) (2019-12-30)
+
+### Bug Fixes
+
+-   **ffe-form:** missing placeholder dark variant ([ed3ad56](https://github.com/SpareBank1/designsystem/commit/ed3ad56dd1f6a7c19cf772d7691bad884e5acf96))
+
+# [13.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@12.2.0...@sb1/ffe-form@13.0.0) (2019-12-18)
+
+### Bug Fixes
+
+-   **ffe-form:** replace hardcoded spacing with variables ([ef22f36](https://github.com/SpareBank1/designsystem/commit/ef22f369f4bf676fd9025d1b14f3bff4b16bef39))
+
+### BREAKING CHANGES
+
+-   **ffe-form:** This commit is likely to cause small visual regressions caused by slightly altered margin and padding values.
+
+# [12.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@12.1.0...@sb1/ffe-form@12.2.0) (2019-12-16)
+
+### Features
+
+-   **ffe-form:** add dark mode to RadioBlock ([3d380f8](https://github.com/SpareBank1/designsystem/commit/3d380f8ce5dd6fc4af7b71e4c11678d4bea3bb19))
+-   **ffe-form:** add darkmode styling overrides ([8ae7c0d](https://github.com/SpareBank1/designsystem/commit/8ae7c0d9733f93256867dfd1047f000999b17e50))
+
 # [12.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@12.0.6...@sb1/ffe-form@12.1.0) (2019-12-02)
 
 ### Features

@@ -3,6 +3,48 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@4.2.12...@sb1/ffe-datepicker-react@4.2.13) (2020-03-06)
+
+**Note:** Version bump only for package @sb1/ffe-datepicker-react
+
+## [4.2.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@4.2.11...@sb1/ffe-datepicker-react@4.2.12) (2020-02-26)
+
+**Note:** Version bump only for package @sb1/ffe-datepicker-react
+
+## [4.2.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@4.2.10...@sb1/ffe-datepicker-react@4.2.11) (2020-02-26)
+
+### Bug Fixes
+
+-   **ffe-datepicker-react:** update uuid to version 7.0.0 ([287854e](https://github.com/SpareBank1/designsystem/commit/287854e0f251011d3f1efe8f063cd360deeba555))
+
+## [4.2.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@4.2.8...@sb1/ffe-datepicker-react@4.2.10) (2020-02-26)
+
+**Note:** Version bump only for package @sb1/ffe-datepicker-react
+
+## [4.2.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@4.2.8...@sb1/ffe-datepicker-react@4.2.9) (2020-02-25)
+
+**Note:** Version bump only for package @sb1/ffe-datepicker-react
+
+## [4.2.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@4.2.7...@sb1/ffe-datepicker-react@4.2.8) (2020-02-10)
+
+**Note:** Version bump only for package @sb1/ffe-datepicker-react
+
+## [4.2.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@4.2.6...@sb1/ffe-datepicker-react@4.2.7) (2020-01-16)
+
+**Note:** Version bump only for package @sb1/ffe-datepicker-react
+
+## [4.2.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@4.2.5...@sb1/ffe-datepicker-react@4.2.6) (2019-12-30)
+
+**Note:** Version bump only for package @sb1/ffe-datepicker-react
+
+## [4.2.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@4.2.4...@sb1/ffe-datepicker-react@4.2.5) (2019-12-18)
+
+**Note:** Version bump only for package @sb1/ffe-datepicker-react
+
+## [4.2.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@4.2.3...@sb1/ffe-datepicker-react@4.2.4) (2019-12-16)
+
+**Note:** Version bump only for package @sb1/ffe-datepicker-react
+
 ## [4.2.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@4.2.2...@sb1/ffe-datepicker-react@4.2.3) (2019-12-02)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker-react

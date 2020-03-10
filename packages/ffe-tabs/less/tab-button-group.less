@@ -11,7 +11,7 @@
 .ffe-tab-button-group {
     display: flex;
     flex-direction: column;
-    padding: 40px 0;
+    padding: @ffe-spacing-xl 0;
 
     &--thin {
         padding: 0;
@@ -19,18 +19,18 @@
 
     .ffe-tab-button {
         justify-content: center;
-        margin: 0 auto 10px;
+        margin: 0 auto @ffe-spacing-xs;
     }
 
     @media (min-width: @breakpoint-sm) {
         display: inline-flex;
         flex-direction: row;
         .ffe-tab-button {
-            margin: 0 0 10px 10px;
+            margin: 0 0 @ffe-spacing-xs @ffe-spacing-xs;
             width: auto;
 
             &:first-child {
-                margin: 0 0 10px;
+                margin: 0 0 @ffe-spacing-xs;
             }
         }
     }

@@ -1,0 +1,70 @@
+.darkmode-button-content {
+    display: flex;
+}
+
+.darkmode-button {
+    display: flex;
+    appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    background-color: transparent;
+}
+
+.darkmode-button__switch {
+    visibility: hidden;
+    display: none;
+    height: 0;
+    width: 0;
+    margin-bottom: 40px;
+}
+
+.darkmode-button__icon {
+    margin: 14px 10px;
+    height: 30px;
+}
+
+.native .darkmode-button__icon {
+    filter: invert(100%);
+}
+
+.darkmode-button__label {
+    margin: 0 auto;
+    border-radius: 100px;
+    position: relative;
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 55px;
+    height: 30px;
+    background: #adadad;
+    float: right;
+    margin-top: 14px;
+}
+
+.darkmode-button__label::after {
+    border-radius: 50%;
+    position: absolute;
+    content: '';
+    background: #fff;
+    width: 20px;
+    height: 20px;
+    top: 5px;
+    left: 4px;
+    transition: ease-in-out 200ms;
+}
+
+.darkmode-button__switch:checked + label {
+    background: #008a00;
+}
+
+.darkmode-button__switch:checked + label::after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+}
+
+html.transition,
+html.transition *,
+html.transition *::before,
+html.transition *::after {
+    transition: ease-in-out 200ms !important;
+    transition-delay: 0 !important;
+}

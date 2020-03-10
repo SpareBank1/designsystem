@@ -3,6 +3,42 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@6.0.4...@sb1/ffe-accordion@6.0.5) (2020-02-26)
+
+**Note:** Version bump only for package @sb1/ffe-accordion
+
+## [6.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@6.0.3...@sb1/ffe-accordion@6.0.4) (2020-02-26)
+
+**Note:** Version bump only for package @sb1/ffe-accordion
+
+## [6.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@6.0.1...@sb1/ffe-accordion@6.0.3) (2020-02-26)
+
+**Note:** Version bump only for package @sb1/ffe-accordion
+
+## [6.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@6.0.1...@sb1/ffe-accordion@6.0.2) (2020-02-25)
+
+**Note:** Version bump only for package @sb1/ffe-accordion
+
+## [6.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@6.0.0...@sb1/ffe-accordion@6.0.1) (2020-02-10)
+
+**Note:** Version bump only for package @sb1/ffe-accordion
+
+# [6.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@5.1.0...@sb1/ffe-accordion@6.0.0) (2019-12-18)
+
+### Bug Fixes
+
+-   **ffe-accordion:** replace hardcoded spacing with variables ([a45ed42](https://github.com/SpareBank1/designsystem/commit/a45ed429ff8098cee66fca0db721f915fe4338d3))
+
+### BREAKING CHANGES
+
+-   **ffe-accordion:** This commit is likely to cause small visual regressions caused by slightly altered margin and padding values.
+
+# [5.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@5.0.13...@sb1/ffe-accordion@5.1.0) (2019-12-16)
+
+### Features
+
+-   **ffe-accordion:** add darkmode styling overrides ([60a14fb](https://github.com/SpareBank1/designsystem/commit/60a14fb815887ab190dadc0a42fba3fdae5d5255))
+
 ## [5.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@5.0.12...@sb1/ffe-accordion@5.0.13) (2019-10-31)
 
 **Note:** Version bump only for package @sb1/ffe-accordion

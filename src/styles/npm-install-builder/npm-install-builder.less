@@ -2,4 +2,10 @@
     background: @ffe-grey-cloud;
     padding: 8px 16px;
     word-break: keep-all;
+    .native & {
+        @media (prefers-color-scheme: dark) {
+            color: @ffe-grey-cloud-darkmode;
+            background-color: @ffe-grey-charcoal-darkmode;
+        }
+    }
 }

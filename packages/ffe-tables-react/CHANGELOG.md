@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@6.0.7...@sb1/ffe-tables-react@6.0.8) (2020-03-06)
+
+**Note:** Version bump only for package @sb1/ffe-tables-react
+
+## [6.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@6.0.6...@sb1/ffe-tables-react@6.0.7) (2020-02-26)
+
+**Note:** Version bump only for package @sb1/ffe-tables-react
+
+## [6.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@6.0.5...@sb1/ffe-tables-react@6.0.6) (2020-02-26)
+
+**Note:** Version bump only for package @sb1/ffe-tables-react
+
+## [6.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@6.0.3...@sb1/ffe-tables-react@6.0.5) (2020-02-26)
+
+**Note:** Version bump only for package @sb1/ffe-tables-react
+
+## [6.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@6.0.3...@sb1/ffe-tables-react@6.0.4) (2020-02-25)
+
+**Note:** Version bump only for package @sb1/ffe-tables-react
+
 ## [6.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@6.0.2...@sb1/ffe-tables-react@6.0.3) (2019-11-20)
 
 **Note:** Version bump only for package @sb1/ffe-tables-react

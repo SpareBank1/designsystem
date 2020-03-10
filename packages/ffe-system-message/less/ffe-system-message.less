@@ -30,15 +30,32 @@
     fill: currentColor;
     transition: height @ffe-transition-duration @ffe-ease-in-out-back;
     overflow: hidden;
+    .native & {
+        @media (prefers-color-scheme: dark) {
+            color: @ffe-grey-cloud-darkmode;
+        }
+    }
 
     &--error {
         background-color: @ffe-orange-salmon;
         fill: @ffe-red;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: @ffe-grey-charcoal-darkmode;
+                fill: @ffe-red-darkmode;
+            }
+        }
     }
 
     &--info {
         background-color: @ffe-blue-pale;
         fill: @ffe-blue-royal;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: @ffe-grey-charcoal-darkmode;
+                fill: @ffe-blue-azure-darkmode;
+            }
+        }
     }
 
     // TODO: Change color to one in the style guide
@@ -46,11 +63,23 @@
         background-color: #4a5155;
         color: @ffe-white;
         fill: #4a5155;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: @ffe-grey-charcoal-darkmode;
+                color: @ffe-grey-cloud-darkmode;
+                fill: @ffe-blue-azure-darkmode;
+            }
+        }
     }
 
     &--success {
         background-color: @ffe-green-mint;
         fill: @ffe-green-shamrock;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: @ffe-grey-charcoal-darkmode;
+            }
+        }
     }
 }
 
@@ -58,7 +87,7 @@
     margin: 0 auto;
     max-width: @app-width;
     align-items: center;
-    padding: 10px @app-margin;
+    padding: @ffe-spacing-xs @app-margin;
     text-align: left;
     display: flex;
 
@@ -69,7 +98,12 @@
         display: inline-flex;
         height: 1.7em;
         width: 1.7em;
-        margin-right: 15px;
+        margin-right: @ffe-spacing-sm;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background: @ffe-grey-darkmode;
+            }
+        }
 
         > svg {
             height: 50%;
@@ -83,6 +117,7 @@
         margin: 0;
         padding: 0;
         font-size: 14px;
+        flex: 1 1 auto;
 
         @media (min-width: 600px) {
             font-size: 16px;
@@ -99,7 +134,7 @@
         cursor: pointer;
         align-self: flex-start;
         height: 16px;
-        margin: 5px 0 5px 0;
+        margin: @ffe-spacing-2xs 0 @ffe-spacing-2xs @ffe-spacing-2xs;
         padding: 0;
         width: 16px;
 
@@ -107,9 +142,19 @@
             fill: @ffe-black;
             height: 100%;
             width: 100%;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    fill: @ffe-grey-cloud-darkmode;
+                }
+            }
 
             .ffe-system-message-wrapper--news & {
                 fill: @ffe-white;
+                .native & {
+                    @media (prefers-color-scheme: dark) {
+                        fill: @ffe-grey-cloud-darkmode;
+                    }
+                }
             }
         }
     }

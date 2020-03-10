@@ -50,13 +50,30 @@
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    padding: 1.2em 2em 1.2em 2.3em;
+    padding: @ffe-spacing-sm @ffe-spacing-lg @ffe-spacing-sm @ffe-spacing-lg;
     text-align: left;
+    .ffe-body-text {
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-grey-cloud-darkmode;
+            }
+            a {
+                @media (prefers-color-scheme: dark) {
+                    color: @ffe-grey-cloud-darkmode;
+                }
+            }
+        }
+    }
 
     &__header {
         &:extend(.ffe-h5);
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-white-darkmode;
+            }
+        }
 
-        margin-bottom: 0.28em;
+        margin-bottom: @ffe-spacing-2xs;
     }
 
     &__icon {
@@ -70,18 +87,28 @@
         border-radius: 50%;
         height: 4em;
         width: 4em;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: @ffe-grey-darkmode;
+            }
+        }
 
         &-svg {
             height: 2.2em;
             width: 2.2em;
-            padding: 0.2em;
+            padding: @ffe-spacing-2xs;
             fill: @ffe-blue-royal;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    fill: @ffe-white-darkmode;
+                }
+            }
         }
 
         @media (min-width: @breakpoint-sm) {
             align-self: flex-start;
             margin-bottom: 0;
-            margin-right: 2.2em;
+            margin-right: @ffe-spacing-lg;
         }
     }
 
@@ -98,6 +125,11 @@
         background-color: transparent;
         height: 1em;
         width: 1em;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                fill: @ffe-grey-silver-darkmode;
+            }
+        }
 
         &:focus {
             outline: auto;
@@ -124,13 +156,13 @@
     &--compact {
         .ffe-context-message-content {
             flex-direction: row;
-            padding: 0.5em 1.2em;
+            padding: @ffe-spacing-xs @ffe-spacing-sm;
         }
 
         .ffe-context-message-content__icon {
             align-self: flex-start;
             margin-bottom: 0;
-            margin-right: 1.2em;
+            margin-right: @ffe-spacing-sm;
             border-radius: 50%;
             height: 2.2em;
             width: 2.2em;
@@ -139,21 +171,41 @@
         .ffe-context-message-content__icon-svg {
             height: 1.5em;
             width: 1.5em;
-            padding: 0.2em;
+            padding: @ffe-spacing-2xs;
             fill: @ffe-blue-royal;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    fill: @ffe-white-darkmode;
+                }
+            }
         }
     }
 
     &--info {
         background-color: @ffe-blue-pale;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: @ffe-grey-charcoal-darkmode;
+            }
+        }
     }
 
     &--tip {
         background-color: @ffe-sand;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: @ffe-grey-charcoal-darkmode;
+            }
+        }
     }
 
     &--success {
         background-color: @ffe-green-mint;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: @ffe-grey-charcoal-darkmode;
+            }
+        }
 
         .ffe-context-message-content__icon-svg {
             fill: @ffe-green-shamrock;
@@ -162,13 +214,30 @@
 
     &--error {
         background-color: @ffe-orange-salmon;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: @ffe-grey-charcoal-darkmode;
+            }
+        }
 
         .ffe-context-message-content__header {
             color: @ffe-black;
+
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    fill: @ffe-white-darkmode;
+                }
+            }
         }
 
         .ffe-context-message-content__icon-svg {
             fill: @ffe-red;
+
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    fill: @ffe-red-darkmode;
+                }
+            }
         }
     }
 }

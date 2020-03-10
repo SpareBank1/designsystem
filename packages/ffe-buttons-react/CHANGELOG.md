@@ -3,6 +3,44 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.1.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@12.1.12...@sb1/ffe-buttons-react@12.1.13) (2020-03-06)
+
+**Note:** Version bump only for package @sb1/ffe-buttons-react
+
+## [12.1.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@12.1.11...@sb1/ffe-buttons-react@12.1.12) (2020-02-26)
+
+**Note:** Version bump only for package @sb1/ffe-buttons-react
+
+## [12.1.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@12.1.10...@sb1/ffe-buttons-react@12.1.11) (2020-02-26)
+
+**Note:** Version bump only for package @sb1/ffe-buttons-react
+
+## [12.1.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@12.1.8...@sb1/ffe-buttons-react@12.1.10) (2020-02-26)
+
+**Note:** Version bump only for package @sb1/ffe-buttons-react
+
+## [12.1.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@12.1.8...@sb1/ffe-buttons-react@12.1.9) (2020-02-25)
+
+**Note:** Version bump only for package @sb1/ffe-buttons-react
+
+## [12.1.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@12.1.7...@sb1/ffe-buttons-react@12.1.8) (2020-02-10)
+
+### Bug Fixes
+
+-   **ffe-buttons-react:** fixing incorrect types ([654a24f](https://github.com/SpareBank1/designsystem/commit/654a24f5d3136b331d345d596117f7b22e99e759))
+
+## [12.1.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@12.1.6...@sb1/ffe-buttons-react@12.1.7) (2020-01-16)
+
+### Bug Fixes
+
+-   **ffe-buttons-react:** fixed type definition of innerref ([f5c234d](https://github.com/SpareBank1/designsystem/commit/f5c234d9cb6ff5b4d16c8b1ca2edeb12e95f11fd))
+
+## [12.1.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@12.1.5...@sb1/ffe-buttons-react@12.1.6) (2019-12-16)
+
+### Bug Fixes
+
+-   **ffe-buttons-react:** ensuring typedefinition for the to prop for BaseButtonProps ([9f22db6](https://github.com/SpareBank1/designsystem/commit/9f22db6102f24cfbb2989e06ab42a4398b145693))
+
 ## [12.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@12.1.4...@sb1/ffe-buttons-react@12.1.5) (2019-11-20)
 
 **Note:** Version bump only for package @sb1/ffe-buttons-react

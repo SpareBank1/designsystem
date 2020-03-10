@@ -1,7 +1,7 @@
 .ffe-icon-card {
     max-width: 440px;
     min-height: 130px;
-    padding: 20px;
+    padding: @ffe-spacing-md;
     display: flex;
     flex-flow: row nowrap;
 
@@ -11,7 +11,12 @@
         min-width: 40px;
         width: 40px;
         height: 40px;
-        margin: 0 30px 0 10px;
+        margin: 0 @ffe-spacing-lg 0 @ffe-spacing-xs;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                fill: @ffe-blue-azure-darkmode;
+            }
+        }
     }
 
     &__body {
@@ -22,13 +27,13 @@
 
     @media (min-width: @breakpoint-md) {
         .ffe-icon-card__icon {
-            margin: 0 20px 0;
+            margin: 0 @ffe-spacing-md 0;
         }
     }
 
     @media (min-width: @breakpoint-lg) {
         .ffe-icon-card__icon {
-            margin: 0 30px 0 10px;
+            margin: 0 @ffe-spacing-lg 0 @ffe-spacing-xs;
         }
     }
 }
@@ -44,18 +49,18 @@
         min-width: 30px;
         width: 30px;
         height: 30px;
-        margin: 0 15px 0 0;
+        margin: 0 @ffe-spacing-sm 0 0;
     }
 
     .ffe-icon-component--card-name {
-        margin: 0 0 5px;
+        margin: 0 0 @ffe-spacing-2xs;
     }
 
     .ffe-icon-component--subtext {
         margin: 0;
 
         @media (min-width: @breakpoint-md) {
-            margin: 5px 0 0 0;
+            margin: @ffe-spacing-2xs 0 0 0;
         }
     }
 }
@@ -63,10 +68,20 @@
 .ffe-icon-card--grey-charcoal {
     .ffe-icon-card__icon {
         fill: @ffe-grey-charcoal;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                fill: @ffe-grey-silver-darkmode;
+            }
+        }
     }
 
     .ffe-card-component--title,
     .ffe-icon-card__body {
         color: @ffe-grey-charcoal;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-grey-silver-darkmode;
+            }
+        }
     }
 }

@@ -5,6 +5,13 @@
     background: @ffe-white;
     cursor: pointer;
 
+    .native & {
+        @media (prefers-color-scheme: dark) {
+            background: @ffe-grey-charcoal-darkmode;
+            color: @ffe-white-darkmode;
+        }
+    }
+
     &:hover,
     &--highlighted {
         background: @ffe-blue-azure;
@@ -18,16 +25,23 @@
     &__nomatches {
         background: @ffe-white;
         color: @ffe-blue-azure;
-        padding: 16px;
+        padding: @ffe-spacing-sm;
         cursor: default;
+
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background: @ffe-grey-charcoal-darkmode;
+                color: @ffe-white-darkmode;
+            }
+        }
     }
 
     &__account {
-        padding: 8px 16px 8px 21px;
+        padding: @ffe-spacing-xs @ffe-spacing-sm @ffe-spacing-xs @ffe-spacing-md;
     }
 
     &__account--multi {
-        padding: 8px 16px 8px 10px;
+        padding: @ffe-spacing-xs @ffe-spacing-sm @ffe-spacing-xs @ffe-spacing-xs;
         overflow: hidden;
     }
 
@@ -35,13 +49,19 @@
         line-height: 1;
         font-size: 15px;
         display: block;
-        padding-bottom: 6px;
+        padding-bottom: @ffe-spacing-2xs;
     }
 
     &__details {
         color: @ffe-grey-charcoal;
         font-size: 12px;
         .ffe-clearfix;
+
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-white-darkmode;
+            }
+        }
     }
 
     &__number {

@@ -82,15 +82,28 @@ const SearchableDropdown = ({
                 closeMenu,
                 clearSelection,
             }) => {
-                const dropdownListFiltered = filterDropdownList(
-                    dropdownList,
-                    searchAttributes,
-                    inputValue,
-                ).slice(0, maxRenderedDropdownElements);
+                const trimmedInput = inputValue.trim();
+
+                const shouldFilter =
+                    trimmedInput.length > 0 && trimmedInput !== selectedItem;
+                const dropdownListFiltered = shouldFilter
+                    ? filterDropdownList(
+                          dropdownList,
+                          searchAttributes,
+                          trimmedInput,
+                      ).slice(0, maxRenderedDropdownElements)
+                    : dropdownList.slice(0, maxRenderedDropdownElements);
 
                 const listToRender = dropdownListFiltered.length
                     ? dropdownListFiltered
                     : noMatch.dropdownList || [];
+
+                const {
+                    onFocus = Function.prototype,
+                    onBlur = Function.prototype,
+                    onClick = Function.prototype,
+                    ...restInputProps
+                } = inputProps;
 
                 return (
                     <div
@@ -105,13 +118,27 @@ const SearchableDropdown = ({
                         <input
                             ref={inputEl}
                             {...getInputProps({
-                                className: 'ffe-input-field',
-                                ...inputProps,
+                                className: classNames('ffe-input-field', {
+                                    'ffe-input-field--dark': dark,
+                                }),
+                                onFocus: (...args) => {
+                                    openMenu();
+                                    onFocus(...args);
+                                },
+                                onBlur: (...args) => {
+                                    closeMenu();
+                                    onBlur(...args);
+                                },
+                                onClick: (...args) => {
+                                    openMenu();
+                                    onClick(...args);
+                                },
+                                ...restInputProps,
                             })}
                             aria-invalid={
                                 typeof ariaInvalid === 'string'
                                     ? ariaInvalid
-                                    : String(ariaInvalid)
+                                    : String(!!ariaInvalid)
                             }
                         />
                         {selectedItem ? (

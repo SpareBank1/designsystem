@@ -3,6 +3,34 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.2.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@7.2.2...@sb1/ffe-icons-react@7.2.3) (2020-03-06)
+
+### Bug Fixes
+
+-   **ffe-icons-react:** extend svg attributes in typescript interface ([8a4c541](https://github.com/SpareBank1/designsystem/commit/8a4c541050cad2d527b1d681cf6d80f9d46c4492))
+-   **ffe-icons-react:** fixed typescript props and proptype mismatch ([5676790](https://github.com/SpareBank1/designsystem/commit/567679054951b39ad4d552f25932985d802276d7))
+-   **ffe-icons-react:** remove duplicate prop + make svg props overridable ([c4b88b8](https://github.com/SpareBank1/designsystem/commit/c4b88b82dc7c82eb3e80bbab10890d227932f72e))
+
+## [7.2.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@7.2.1...@sb1/ffe-icons-react@7.2.2) (2020-02-26)
+
+**Note:** Version bump only for package @sb1/ffe-icons-react
+
+## [7.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@7.2.0...@sb1/ffe-icons-react@7.2.1) (2020-02-26)
+
+**Note:** Version bump only for package @sb1/ffe-icons-react
+
+# [7.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@7.0.3...@sb1/ffe-icons-react@7.2.0) (2020-02-26)
+
+### Features
+
+-   **ffe-icons-react:** generate typescript declarations for all icons ([d444c47](https://github.com/SpareBank1/designsystem/commit/d444c477c19a63347faa3322243f363280d28fb5))
+
+# [7.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@7.0.3...@sb1/ffe-icons-react@7.1.0) (2020-02-25)
+
+### Features
+
+-   **ffe-icons-react:** generate typescript declarations for all icons ([d444c47](https://github.com/SpareBank1/designsystem/commit/d444c477c19a63347faa3322243f363280d28fb5))
+
 ## [7.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@7.0.2...@sb1/ffe-icons-react@7.0.3) (2019-11-20)
 
 **Note:** Version bump only for package @sb1/ffe-icons-react

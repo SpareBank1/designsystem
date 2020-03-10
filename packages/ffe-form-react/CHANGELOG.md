@@ -3,6 +3,52 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@6.0.3...@sb1/ffe-form-react@6.0.4) (2020-02-26)
+
+**Note:** Version bump only for package @sb1/ffe-form-react
+
+## [6.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@6.0.2...@sb1/ffe-form-react@6.0.3) (2020-02-26)
+
+### Bug Fixes
+
+-   **ffe-form-react:** update uuid to version 7.0.0 ([f8c993d](https://github.com/SpareBank1/designsystem/commit/f8c993d684b48cfc08140f9f35a6bd04daaa7048))
+
+## [6.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@6.0.1...@sb1/ffe-form-react@6.0.2) (2020-02-10)
+
+### Bug Fixes
+
+-   **ffe-form-react:** fixing incorrect types ([cd4614b](https://github.com/SpareBank1/designsystem/commit/cd4614b9724e5825aedfb33de30ce0b4f6a704ff))
+
+## [6.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@6.0.0...@sb1/ffe-form-react@6.0.1) (2020-01-24)
+
+### Bug Fixes
+
+-   **ffe-form-react:** correctly handle non-undefined selected value ([907e56a](https://github.com/SpareBank1/designsystem/commit/907e56a30acc45061bb9d20216c6dbab6fcc673e))
+
+# [6.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@5.3.0...@sb1/ffe-form-react@6.0.0) (2020-01-16)
+
+### Features
+
+-   **ffe-form-react:** added support for passing ref to radio buttons ([845ce6a](https://github.com/SpareBank1/designsystem/commit/845ce6ab9d1bc334763ad4d045bb630d9b7951e8))
+
+### BREAKING CHANGES
+
+-   **ffe-form-react:** selectedValue now overrides checked, when both props are passed to radio buttons
+
+This version offers new optional properties (innerRef on RadioButton and RadioBlock, leftInnerRef and rightInnerRef on RadioSwitch), which is passed as refs to input elements
+On BaseRadioButton, checked attribute is only set if the selectedValue prop is set, so that re-render is no longer required when radio buttons are clicked
+
+# [5.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@5.2.0...@sb1/ffe-form-react@5.3.0) (2020-01-16)
+
+### Bug Fixes
+
+-   **ffe-form-react:** fix type definition for inputgroup ([ef89146](https://github.com/SpareBank1/designsystem/commit/ef89146ea6ca9638e8a560a32eedd019a8f11c1f))
+-   **ffe-form-react:** fix type definition on onchange ([6a7fc54](https://github.com/SpareBank1/designsystem/commit/6a7fc54695e98f7aabd165f03e9d9c4faf27bf05))
+
+### Features
+
+-   **ffe-form-react:** added support for passing ref to input elements ([5bb478e](https://github.com/SpareBank1/designsystem/commit/5bb478ea50c6e4085ee6503502f9755425b70f98))
+
 # [5.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@5.1.2...@sb1/ffe-form-react@5.2.0) (2019-11-28)
 
 ### Features

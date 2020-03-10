@@ -3,6 +3,42 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [11.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@11.0.4...@sb1/ffe-grid@11.0.5) (2020-02-26)
+
+**Note:** Version bump only for package @sb1/ffe-grid
+
+## [11.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@11.0.3...@sb1/ffe-grid@11.0.4) (2020-02-26)
+
+**Note:** Version bump only for package @sb1/ffe-grid
+
+## [11.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@11.0.1...@sb1/ffe-grid@11.0.3) (2020-02-26)
+
+**Note:** Version bump only for package @sb1/ffe-grid
+
+## [11.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@11.0.1...@sb1/ffe-grid@11.0.2) (2020-02-25)
+
+**Note:** Version bump only for package @sb1/ffe-grid
+
+## [11.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@11.0.0...@sb1/ffe-grid@11.0.1) (2020-02-10)
+
+**Note:** Version bump only for package @sb1/ffe-grid
+
+# [11.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@10.3.0...@sb1/ffe-grid@11.0.0) (2019-12-18)
+
+### Bug Fixes
+
+-   **ffe-grid:** replace hardcoded spacing with variables ([92088be](https://github.com/SpareBank1/designsystem/commit/92088bee046a15a6a5a22f83576cd3342aae4300))
+
+### BREAKING CHANGES
+
+-   **ffe-grid:** This commit is likely to cause small visual regressions caused by slightly altered margin and padding values.
+
+# [10.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@10.2.5...@sb1/ffe-grid@10.3.0) (2019-12-16)
+
+### Features
+
+-   **ffe-grid:** add darkmode styling overrides ([5118558](https://github.com/SpareBank1/designsystem/commit/511855815708058933a4dfc2b112411070e77b08))
+
 ## [10.2.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@10.2.4...@sb1/ffe-grid@10.2.5) (2019-10-31)
 
 **Note:** Version bump only for package @sb1/ffe-grid

@@ -11,6 +11,12 @@
     border-radius: 50%;
     visibility: visible;
     animation: spindindust 1s linear infinite;
+    .native & {
+        @media (prefers-color-scheme: dark) {
+            border-color: @ffe-blue-azure-darkmode;
+            border-top-color: transparent;
+        }
+    }
 
     @keyframes spindindust {
         0% {

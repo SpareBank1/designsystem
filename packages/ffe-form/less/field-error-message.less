@@ -7,6 +7,11 @@
 
 .ffe-field-error-message:extend(.ffe-field-info-message) {
     color: @ffe-black;
+    .native & {
+        @media (prefers-color-scheme: dark) {
+            color: @ffe-grey-silver-darkmode;
+        }
+    }
 
     &[aria-hidden='true'] {
         display: none;
@@ -15,5 +20,10 @@
     &::before:extend(.ffe-field-info-message::before) {
         content: url('data:image/svg+xml;charset=utf8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9IiNmZmYiIGhlaWdodD0iMTIiIHdpZHRoPSIxMiIgeD0iMTY1MCIgeT0iMTIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiPjxwYXRoIGQ9Ik05OS44ODIuNjRhMTYuNTYyIDE2LjU2MiAwIDAgMC0xNi4yOTQgMTYuNzcydjkzLjg2M2ExNi41NjIgMTYuNTYyIDAgMSAwIDMzLjEwMiAwVjE3LjQxMkExNi41NjIgMTYuNTYyIDAgMCAwIDk5Ljg4Mi42NHptLjI1NyAxNjIuMDU0Yy05LjE0NSAwLTE2LjU1IDcuNDA1LTE2LjU1IDE2LjU1IDAgOS4xNDcgNy40MDUgMTYuNTg5IDE2LjU1IDE2LjU4OSA5LjE0NiAwIDE2LjU1MS03LjQ0MiAxNi41NTEtMTYuNTg4cy03LjQwNS0xNi41NTEtMTYuNTUtMTYuNTUxeiIvPjwvc3ZnPg==');
         background-color: @ffe-orange-fire;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: @ffe-red-darkmode;
+            }
+        }
     }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-core",
-  "version": "15.3.0",
+  "version": "15.5.4",
   "description": "Rammeverk for Felles Front End",
   "license": "MIT",
   "author": "SpareBank 1",
@@ -10,6 +10,7 @@
     "less"
   ],
   "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "repository": {
     "type": "git",
     "url": "ssh://git@github.com:SpareBank1/designsystem.git"
@@ -17,12 +18,13 @@
   "scripts": {
     "lint": "stylelint less/*.less",
     "test": "npm run lint",
-    "build": "node ./bin/build.js"
+    "build": "node ./bin/build.js && tsc tmp/index.ts --declaration --outDir lib && rm -rf tmp"
   },
   "devDependencies": {
     "case": "^1.5.5",
     "mkdirp": "^0.5.1",
-    "stylelint": "^10.0.0"
+    "stylelint": "^10.0.0",
+    "typescript": "^3.7.5"
   },
   "publishConfig": {
     "access": "public"

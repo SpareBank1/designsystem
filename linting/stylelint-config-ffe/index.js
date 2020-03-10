@@ -18,7 +18,12 @@ module.exports = {
         ],
         'no-missing-end-of-source-newline': null,
         'number-leading-zero': null,
-        'max-nesting-depth': 3,
+        'max-nesting-depth': [
+            4,
+            {
+                ignoreAtRules: ['media'],
+            },
+        ],
         'media-feature-name-no-vendor-prefix': true,
         'property-no-vendor-prefix': true,
         'selector-list-comma-newline-after': [

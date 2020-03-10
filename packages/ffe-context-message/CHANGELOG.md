@@ -3,6 +3,42 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.4...@sb1/ffe-context-message@4.0.5) (2020-02-26)
+
+**Note:** Version bump only for package @sb1/ffe-context-message
+
+## [4.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.3...@sb1/ffe-context-message@4.0.4) (2020-02-26)
+
+**Note:** Version bump only for package @sb1/ffe-context-message
+
+## [4.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.1...@sb1/ffe-context-message@4.0.3) (2020-02-26)
+
+**Note:** Version bump only for package @sb1/ffe-context-message
+
+## [4.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.1...@sb1/ffe-context-message@4.0.2) (2020-02-25)
+
+**Note:** Version bump only for package @sb1/ffe-context-message
+
+## [4.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.0...@sb1/ffe-context-message@4.0.1) (2020-02-10)
+
+**Note:** Version bump only for package @sb1/ffe-context-message
+
+# [4.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@3.1.0...@sb1/ffe-context-message@4.0.0) (2019-12-18)
+
+### Bug Fixes
+
+-   **ffe-context-message:** replace hardcoded spacing with variables ([ffa0ca5](https://github.com/SpareBank1/designsystem/commit/ffa0ca535a14a331bdcd2e576aa266f67b4ef969))
+
+### BREAKING CHANGES
+
+-   **ffe-context-message:** This commit is likely to cause small visual regressions caused by slightly altered margin and padding values.
+
+# [3.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@3.0.30...@sb1/ffe-context-message@3.1.0) (2019-12-16)
+
+### Features
+
+-   **ffe-context-message:** add darmode styling overrides ([afaa866](https://github.com/SpareBank1/designsystem/commit/afaa866344ee2c4fdfdae57616faffc9d45ebccc))
+
 ## [3.0.30](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@3.0.29...@sb1/ffe-context-message@3.0.30) (2019-10-31)
 
 **Note:** Version bump only for package @sb1/ffe-context-message

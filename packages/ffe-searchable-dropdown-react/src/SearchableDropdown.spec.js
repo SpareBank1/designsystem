@@ -311,4 +311,48 @@ describe('SearchableDropdown', () => {
         expect(queryByText('Beslag skytter')).toBeNull();
         expect(queryByText('812602552')).toBeNull();
     });
+
+    it('should filter only when value is changed', () => {
+        const placeholder = 'placeholder';
+        const { getByText, queryByText, getByPlaceholderText } = render(
+            <SearchableDropdown
+                id="id"
+                labelId="labelId"
+                inputProps={{ placeholder }}
+                dropdownAttributes={['organizationName', 'organizationNumber']}
+                dropdownList={companies}
+                searchAttributes={['organizationName', 'organizationNumber']}
+                locale="nb"
+            />,
+        );
+
+        const input = getByPlaceholderText(placeholder);
+
+        fireEvent.focus(input);
+
+        expect(getByText('Bedriften')).toBeInTheDocument();
+        expect(getByText('912602370')).toBeInTheDocument();
+        expect(getByText('Sønn & co')).toBeInTheDocument();
+        expect(getByText('812602372')).toBeInTheDocument();
+        expect(getByText('Beslag skytter')).toBeInTheDocument();
+        expect(getByText('812602552')).toBeInTheDocument();
+
+        fireEvent.change(input, { target: { value: 'Sønn' } });
+
+        expect(queryByText('Bedriften')).toBeNull();
+        expect(queryByText('912602370')).toBeNull();
+        expect(getByText('Sønn & co')).toBeInTheDocument();
+        expect(getByText('812602372')).toBeInTheDocument();
+        expect(queryByText('Beslag skytter')).toBeNull();
+        expect(queryByText('812602552')).toBeNull();
+
+        fireEvent.change(input, { target: { value: '' } });
+
+        expect(getByText('Bedriften')).toBeInTheDocument();
+        expect(getByText('912602370')).toBeInTheDocument();
+        expect(getByText('Sønn & co')).toBeInTheDocument();
+        expect(getByText('812602372')).toBeInTheDocument();
+        expect(getByText('Beslag skytter')).toBeInTheDocument();
+        expect(getByText('812602552')).toBeInTheDocument();
+    });
 });

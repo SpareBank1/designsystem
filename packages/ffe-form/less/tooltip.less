@@ -24,16 +24,30 @@
         display: inline-block;
         height: @ffe-tooltip-size;
         line-height: 24px;
-        margin: 0 0 4px 13px;
+        margin: 0 0 @ffe-spacing-2xs @ffe-spacing-sm;
         padding: 0 0 0 1px;
         text-align: center;
         vertical-align: middle;
         width: @ffe-tooltip-size;
         .ffe-fontsize-button;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background: @ffe-grey-darkmode;
+                color: @ffe-blue-azure-darkmode;
+                border-color: @ffe-grey-darkmode;
+            }
+        }
 
         &:hover,
         &:focus {
             border-color: @ffe-blue-azure;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    color: lighten(@ffe-blue-azure-darkmode, 10%);
+                    border-color: lighten(@ffe-grey-darkmode, 5%);
+                    background: lighten(@ffe-grey-darkmode, 5%);
+                }
+            }
         }
 
         &:focus {
@@ -45,6 +59,13 @@
         .ffe-tooltip--open & {
             border-color: @ffe-blue-royal;
             color: @ffe-blue-royal;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    color: lighten(@ffe-blue-azure-darkmode, 10%);
+                    border-color: lighten(@ffe-blue-azure-darkmode, 10%);
+                    background: lighten(@ffe-grey-darkmode, 5%);
+                }
+            }
         }
     }
 
@@ -57,7 +78,7 @@
     }
 
     &--open &__text {
-        padding-bottom: 12px;
+        padding-bottom: @ffe-spacing-sm;
         height: auto;
         overflow: visible;
         visibility: visible;
@@ -68,17 +89,36 @@
             background-color: transparent;
             border: 2px solid @ffe-grey-silver;
             color: @ffe-blue-focus;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    background-color: transparent;
+                    border-color: @ffe-grey-silver;
+                    color: @ffe-blue-focus;
+                }
+            }
 
             &:hover {
                 border-color: @ffe-white;
                 color: @ffe-grey-dark-blue--dark;
                 background-color: @ffe-grey-silver;
+                .native & {
+                    @media (prefers-color-scheme: dark) {
+                        border-color: @ffe-white;
+                        color: @ffe-grey-dark-blue--dark;
+                        background-color: @ffe-grey-silver;
+                    }
+                }
             }
 
             &:focus {
                 box-shadow: 0 0 0 2px @ffe-blue-focus;
                 border-color: @ffe-grey-silver;
                 outline: none;
+                .native & {
+                    @media (prefers-color-scheme: dark) {
+                        border-color: @ffe-grey-silver;
+                    }
+                }
             }
 
             &:active,
@@ -87,6 +127,13 @@
                 border-color: @ffe-white;
                 color: @ffe-grey-dark-blue--dark;
                 background-color: @ffe-white;
+                .native & {
+                    @media (prefers-color-scheme: dark) {
+                        border-color: @ffe-white;
+                        color: @ffe-grey-dark-blue--dark;
+                        background-color: @ffe-white;
+                    }
+                }
             }
         }
     }
