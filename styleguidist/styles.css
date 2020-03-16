@@ -6913,7 +6913,7 @@ input:not([type='radio']):not([type='checkbox']) {
   line-height: 1.5em;
 }
 .ffe-check-list > .ffe-check-list__item::before {
-  content: '\2022';
+  content: '\2713';
   display: block;
   position: absolute;
   text-indent: -9999px;
@@ -6929,7 +6929,7 @@ input:not([type='radio']):not([type='checkbox']) {
 .ffe-check-list > .ffe-check-list__item--cross::before {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cpath fill='%23e60000' d='M18.77,0c-3.562,0-7.125,1.347-9.834,4.044l-4.429,4.439c-5.381,5.394-5.381,14.25,0,19.68l71.19,71.83-71.66,71.83c-5.381,5.394-5.381,14.25,0,19.68l4.429,4.439c5.381,5.394,14.22,5.394,19.64,0l71.66-71.83,71.65,71.83c5.381,5.394,14.23,5.394,19.65,0l4.429-4.439c5.381-5.394,5.381-14.25,0-19.68l-71.19-71.83,71.66-71.83c5.381-4.914,5.381-13.78,0-19.21l-4.429-4.423c-5.381-5.394-14.22-5.394-19.64,0l-72.13,71.34-71.17-71.83c-2.691-2.697-6.257-4.044-9.819-4.044z'/%3E%3C/svg%3E");
   color: #e60000;
-  content: '\2717';
+  content: '\274C';
 }
 @media (prefers-color-scheme: dark) {
   .native .ffe-check-list > .ffe-check-list__item--cross::before {
