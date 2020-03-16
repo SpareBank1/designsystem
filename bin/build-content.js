@@ -13,7 +13,7 @@ const resolveDir = dir => path.normalize(path.join(__dirname, '..', dir));
 
 require(resolveDir(settings.helpers));
 
-const mkdir = dir => promisify(mkdirp)(resolveDir(dir));
+const mkdir = dir => mkdirp(resolveDir(dir));
 
 const readFile = promisify(fs.readFile);
 const writeFile = promisify(fs.writeFile);
@@ -30,7 +30,6 @@ const dataToFileInDirWriter = dir => fname =>
     dataToFileWriter(path.join(dir, fname));
 
 const createWriter = relDir => dataToFileInDirWriter(resolveDir(relDir));
-
 
 const readFromBaseDir = createReader('.');
 
@@ -68,7 +67,7 @@ const getFrontpageCompiler = fname =>
     readFromBaseDir(fname)
         .then(template => Handlebars.compile(template))
         .then(compile => opts =>
-            Promise.resolve(compile(opts)).then(writeToOutputDir('index.html'))
+            Promise.resolve(compile(opts)).then(writeToOutputDir('index.html')),
         );
 
 const getStyleguidistCompiler = (source, destination) =>
@@ -88,25 +87,24 @@ const registerPartials = partialsDef =>
     );
 
 Promise.all([
-        prerenderSections(settings.sections),
-        getTemplateCompiler(
-            settings.template
-        ),
-        getFrontpageCompiler(settings.frontpage),
-        getStyleguidistCompiler(
-            settings.styleguidistTemplate,
-            settings.styleguidistDest,
-        ),
-        registerPartials(settings.partials),
-        mkdir(settings.outputDir),
+    prerenderSections(settings.sections),
+    getTemplateCompiler(settings.template),
+    getFrontpageCompiler(settings.frontpage),
+    getStyleguidistCompiler(
+        settings.styleguidistTemplate,
+        settings.styleguidistDest,
+    ),
+    registerPartials(settings.partials),
+    mkdir(settings.outputDir),
 ])
     .then(([sections, compile, compileFrontpage, compileStyleguidist]) =>
         Promise.all([
-            promisedMap(sections, section => compile({
+            promisedMap(sections, section =>
+                compile({
                     ...settings.context,
                     sections,
                     section,
-                }).then(writeToOutputDir(`${section.target}.html`))
+                }).then(writeToOutputDir(`${section.target}.html`)),
             ),
             compileFrontpage({
                 ...settings.context,
@@ -116,6 +114,6 @@ Promise.all([
                 ...settings.context,
                 sections,
             }),
-        ])
+        ]),
     )
     .catch(err => console.error(err));
