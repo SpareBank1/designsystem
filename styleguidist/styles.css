@@ -1764,26 +1764,7 @@ html {
 .ffe-header__logout-button:hover,
 .ffe-header__logout-button:active {
   background-color: #fff;
-  border-color: #0071cd;
   color: #0071cd;
-}
-@media (prefers-color-scheme: dark) {
-  .native .ffe-button--secondary:active,
-  .native .ffe-button--shortcut:active,
-  .native .ffe-button--expand:active,
-  .native .ffe-button--secondary:focus,
-  .native .ffe-button--shortcut:focus,
-  .native .ffe-button--expand:focus,
-  .native .ffe-button--secondary:hover,
-  .native .ffe-button--shortcut:hover,
-  .native .ffe-button--expand:hover,
-  .native .ffe-button--secondary:visited,
-  .native .ffe-button--shortcut:visited,
-  .native .ffe-button--expand:visited {
-    color: #3da8ff;
-    background-color: #292929;
-    border-color: #292929;
-  }
 }
 .ffe-button--secondary:active.ffe-button--dark,
 .ffe-button--shortcut:active.ffe-button--dark,
@@ -1797,7 +1778,6 @@ html {
 .ffe-button--secondary:visited.ffe-button--dark,
 .ffe-button--shortcut:visited.ffe-button--dark,
 .ffe-button--expand:visited.ffe-button--dark {
-  border-color: #a1dfff;
   background-color: transparent;
   color: #fff;
 }
@@ -1814,9 +1794,69 @@ html {
   .native .ffe-button--secondary:visited.ffe-button--dark,
   .native .ffe-button--shortcut:visited.ffe-button--dark,
   .native .ffe-button--expand:visited.ffe-button--dark {
-    border-color: #a1dfff;
     background-color: transparent;
     color: #fff;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .native .ffe-button--secondary:visited,
+  .native .ffe-button--shortcut:visited,
+  .native .ffe-button--expand:visited {
+    color: #0a91ff;
+    background-color: #1c1c1c;
+  }
+}
+.ffe-button--secondary:active,
+.ffe-button--shortcut:active,
+.ffe-button--expand:active,
+.ffe-button--secondary:focus,
+.ffe-button--shortcut:focus,
+.ffe-button--expand:focus,
+.ffe-button--secondary:hover,
+.ffe-button--shortcut:hover,
+.ffe-button--expand:hover,
+.ffe-header__logout-button:focus,
+.ffe-header__logout-button:hover,
+.ffe-header__logout-button:active {
+  border-color: #0071cd;
+}
+@media (prefers-color-scheme: dark) {
+  .native .ffe-button--secondary:active,
+  .native .ffe-button--shortcut:active,
+  .native .ffe-button--expand:active,
+  .native .ffe-button--secondary:focus,
+  .native .ffe-button--shortcut:focus,
+  .native .ffe-button--expand:focus,
+  .native .ffe-button--secondary:hover,
+  .native .ffe-button--shortcut:hover,
+  .native .ffe-button--expand:hover {
+    color: #3da8ff;
+    background-color: #292929;
+    border-color: #292929;
+  }
+}
+.ffe-button--secondary:active.ffe-button--dark,
+.ffe-button--shortcut:active.ffe-button--dark,
+.ffe-button--expand:active.ffe-button--dark,
+.ffe-button--secondary:focus.ffe-button--dark,
+.ffe-button--shortcut:focus.ffe-button--dark,
+.ffe-button--expand:focus.ffe-button--dark,
+.ffe-button--secondary:hover.ffe-button--dark,
+.ffe-button--shortcut:hover.ffe-button--dark,
+.ffe-button--expand:hover.ffe-button--dark {
+  border-color: #a1dfff;
+}
+@media (prefers-color-scheme: dark) {
+  .native .ffe-button--secondary:active.ffe-button--dark,
+  .native .ffe-button--shortcut:active.ffe-button--dark,
+  .native .ffe-button--expand:active.ffe-button--dark,
+  .native .ffe-button--secondary:focus.ffe-button--dark,
+  .native .ffe-button--shortcut:focus.ffe-button--dark,
+  .native .ffe-button--expand:focus.ffe-button--dark,
+  .native .ffe-button--secondary:hover.ffe-button--dark,
+  .native .ffe-button--shortcut:hover.ffe-button--dark,
+  .native .ffe-button--expand:hover.ffe-button--dark {
+    border-color: #a1dfff;
   }
 }
 .ffe-button--secondary:focus,
