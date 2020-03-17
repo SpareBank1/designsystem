@@ -292,8 +292,33 @@
     &:hover,
     &:visited {
         background-color: @ffe-white;
-        border-color: @ffe-blue-azure;
         color: @ffe-blue-azure;
+
+        &.ffe-button--dark {
+            background-color: transparent;
+            color: @ffe-white;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    background-color: transparent;
+                    color: @ffe-white;
+                }
+            }
+        }
+    }
+
+    &:visited {
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-blue-azure-darkmode;
+                background-color: @ffe-grey-charcoal-darkmode;
+            }
+        }
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+        border-color: @ffe-blue-azure;
         .native & {
             @media (prefers-color-scheme: dark) {
                 color: lighten(@ffe-blue-azure-darkmode, 10%);
@@ -304,13 +329,9 @@
 
         &.ffe-button--dark {
             border-color: @ffe-blue-focus;
-            background-color: transparent;
-            color: @ffe-white;
             .native & {
                 @media (prefers-color-scheme: dark) {
                     border-color: @ffe-blue-focus;
-                    background-color: transparent;
-                    color: @ffe-white;
                 }
             }
         }
