@@ -1069,9 +1069,9 @@ html {
   height: 0;
   overflow: hidden;
   visibility: hidden;
-  -webkit-transition: height 0.2s cubic-bezier(0.46, -0.265, 0.48, 1.38);
-  -o-transition: height 0.2s cubic-bezier(0.46, -0.265, 0.48, 1.38);
-  transition: height 0.2s cubic-bezier(0.46, -0.265, 0.48, 1.38);
+  -webkit-transition: height 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+  -o-transition: height 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: height 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 .ffe-accordion-item--open .ffe-accordion-item__content-container {
   height: auto;
@@ -8450,9 +8450,9 @@ input:not([type='radio']):not([type='checkbox']) {
   }
 }
 .ffe-collapse-transition {
-  -webkit-transition: height 0.2s cubic-bezier(0.46, -0.265, 0.48, 1.38);
-  -o-transition: height 0.2s cubic-bezier(0.46, -0.265, 0.48, 1.38);
-  transition: height 0.2s cubic-bezier(0.46, -0.265, 0.48, 1.38);
+  -webkit-transition: height 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+  -o-transition: height 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: height 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .sb1ds-sidebar__menu > .sb1ds-components-list > .sb1ds-components-list__item > .sb1ds-components-list__link--heading {
