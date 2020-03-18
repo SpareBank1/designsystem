@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.1.17](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@12.1.16...@sb1/ffe-buttons-react@12.1.17) (2020-03-18)
+
+**Note:** Version bump only for package @sb1/ffe-buttons-react
+
 ## [12.1.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@12.1.15...@sb1/ffe-buttons-react@12.1.16) (2020-03-16)
 
 **Note:** Version bump only for package @sb1/ffe-buttons-react

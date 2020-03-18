@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.12.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.12.2...@sb1/ffe-icons@12.12.3) (2020-03-18)
+
+### Bug Fixes
+
+-   packages/ffe-icons/package.json to reduce vulnerabilities ([4b8e148](https://github.com/SpareBank1/designsystem/commit/4b8e148a8ef09aa153e41d1807164703833e82cb))
+
 ## [12.12.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.12.1...@sb1/ffe-icons@12.12.2) (2020-03-16)
 
 **Note:** Version bump only for package @sb1/ffe-icons
