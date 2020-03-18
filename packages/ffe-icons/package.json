@@ -18,13 +18,13 @@
     "test": "npm run lint"
   },
   "dependencies": {
-    "mkdirp": "^0.5.1",
+    "mkdirp": "^1.0.0",
     "svgstore": "^2.0.3",
     "yargs": "^13.1.0"
   },
   "devDependencies": {
     "eslint": "^5.9.0",
-    "mkdirp": "^0.5.1",
+    "mkdirp": "^1.0.0",
     "npm-run-all": "^4.1.2",
     "run-p": "0.0.0",
     "stylelint": "^10.0.0"
