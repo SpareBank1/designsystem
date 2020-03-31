@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.13.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.12.3...@sb1/ffe-icons@12.13.0) (2020-03-31)
+
+### Features
+
+-   **ffe-icons:** Add plus and minus to magnifying glass icon ([286705b](https://github.com/SpareBank1/designsystem/commit/286705b991c198913f82efc034cea6f7f8e37f70))
+
 ## [12.12.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.12.2...@sb1/ffe-icons@12.12.3) (2020-03-18)
 
 ### Bug Fixes
