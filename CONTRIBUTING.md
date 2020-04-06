@@ -10,10 +10,10 @@ For å kunne jobbe mest mulig effektivt ønsker vi at forslag kommer inn via [Is
 
 Pull requests er måten vi foretrekker i introdusere endringer på.
 
-1. Jobber du med et issue; assign til deg og legg gjerne inn en kommentar der du forteller hva du gjør. Bruk gjerne `wip` labelen for å vise at saken jobbes med.
-2. Om du ikke allerede har gjort det, fork repoet og klon ned til maskinen din. Lag ny branch ut fra `develop`.
+1. Jobber du med et issue; assign til deg og legg gjerne inn en kommentar der du forteller hva du gjør. Du kan med fordel bruke `wip` labelen for å vise at saken er i arbeid.
+2. Om du ikke allerede har gjort det, fork repoet og klon til maskinen din. Lag ny branch ut fra `develop`.
 3. Gjør endringene dine. Husk å skrive/oppdatere tester og dokumentasjon.
-4. Skriv en detaljert committ melding. Mer informasjon får du [her](https://github.com/SpareBank1/designsystem/wiki/Bidra:-Fra-issue-til-pull-request#commit-meldinger).
+4. Skriv en detaljert committ melding i [conventional commit](https://conventionalcommits.org/) formatet. Mer informasjon finner du i [wikien vår](https://github.com/SpareBank1/designsystem/wiki/Bidra:-Fra-issue-til-pull-request#commit-meldinger).
 5. Push endringene dine, og opprett en pull request.
 6. Vent på en review. Du kan legge til tidligere bidragsytere som reviewers.
 
@@ -21,4 +21,4 @@ Når en PR blir godkjent blir den merget inn i develop som automatisk merges inn
 
 ## Mer informasjon på vår [wiki](https://github.com/SpareBank1/designsystem/wiki/)
 
-Vi har opprettet en wiki som forklarer denne prosessen i mer detalj. I dokumentet "[Bidra: Fra issue til pull request](https://github.com/SpareBank1/designsystem/wiki/Bidra:-Fra-issue-til-pull-request)" finner du detaljerte beskrivelser til hvordan du kan bidra med en endring fra start til slutt. Vi oppfordrer sterkt alle til å lese gjennom denne som tidligere var en del av dette dokumentet.
+Vi har opprettet en wiki som forklarer denne prosessen i mer detalj. I dokumentet "[Bidra: Fra issue til pull request](https://github.com/SpareBank1/designsystem/wiki/Bidra:-Fra-issue-til-pull-request)" finner du detaljerte beskrivelser til hvordan du kan bidra med en endring fra start til slutt. Vi oppfordrer sterkt alle til å lese gjennom denne, som tidligere var en del av dette dokumentet.
