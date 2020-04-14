@@ -20,7 +20,7 @@
     "less-loader": "^4.1.0",
     "less-plugin-autoprefix": "^2.0.0",
     "less-plugin-clean-css": "^1.5.1",
-    "morgan": "~1.9.0",
+    "morgan": "~1.10.0",
     "vue": "^2.5.17",
     "webpack": "^4.17.1",
     "webpack-dev-middleware": "^3.2.0",
