@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.0.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@6.0.13...@sb1/ffe-tables-react@6.0.14) (2020-04-21)
+
+
+### Bug Fixes
+
+* **ffe-tables-react:** dont mutate passed columns ([d5e4a5d](https://github.com/SpareBank1/designsystem/commit/d5e4a5d1fd0051392b2ac74a727abe22d90ce94a)), closes [#883](https://github.com/SpareBank1/designsystem/issues/883)
+
+
+
+
+
 ## [6.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@6.0.12...@sb1/ffe-tables-react@6.0.13) (2020-03-31)
 
 **Note:** Version bump only for package @sb1/ffe-tables-react
