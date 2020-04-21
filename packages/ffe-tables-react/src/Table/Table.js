@@ -32,12 +32,19 @@ class Table extends Component {
             return null;
         }
 
+        const renderColumns = [...columns];
+
         if (this.props.expandedContentMapper) {
-            columns.push({ key: 'expandIcon', header: '', alignRight: true });
+            renderColumns.push({
+                key: 'expandIcon',
+                header: '',
+                alignRight: true,
+            });
         }
+
         return (
             <TableHeaders
-                columns={columns}
+                columns={renderColumns}
                 headerRender={headerRender}
                 dataWindow={this.getData()}
             />
@@ -77,13 +84,20 @@ class Table extends Component {
             return null;
         }
 
+        const renderColumns = [...columns];
+
         if (expandedContentMapper) {
+            renderColumns.push({
+                key: 'expandIcon',
+                header: '',
+                alignRight: true,
+            });
             return data.map((row, index) => {
                 const key = row.id || row.id === 0 ? row.id.toString() : index;
                 const expandedContent = expandedContentMapper(row);
                 const rowProps = {
                     cells: row,
-                    columns,
+                    columns: renderColumns,
                     sort,
                     rowRender,
                     rowIndex: index,
