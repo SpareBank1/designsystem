@@ -4,6 +4,8 @@ import autoBind from 'react-auto-bind';
 
 import Input from '../../subcomponents/input-field';
 import { SuggestionListContainer } from '../../subcomponents/suggestion';
+import { SuggestionListContainer as SuggestionListContainerHighCapacity } from '../../subcomponents/suggestion-high-capacity';
+
 import { KeyCodes, Locale } from '../../util/types';
 
 class BaseSelector extends Component {
@@ -199,6 +201,7 @@ class BaseSelector extends Component {
             onSuggestionSelect,
             readOnly,
             locale,
+            highCapacity,
         } = this.props;
         const {
             showSuggestions,
@@ -228,8 +231,21 @@ class BaseSelector extends Component {
                     readOnly={readOnly}
                     locale={locale}
                 />
-                {showSuggestions && (
+                {showSuggestions && !highCapacity && (
                     <SuggestionListContainer
+                        {...this.props}
+                        ref={suggestionList => {
+                            this.suggestionList = suggestionList;
+                        }}
+                        highlightedIndex={highlightedSuggestionIndex}
+                        suggestions={suggestions}
+                        heightMax={suggestionsHeightMax}
+                        onSelect={onSuggestionSelect}
+                        id={suggestionListId}
+                    />
+                )}
+                {showSuggestions && highCapacity && (
+                    <SuggestionListContainerHighCapacity
                         {...this.props}
                         ref={suggestionList => {
                             this.suggestionList = suggestionList;
@@ -270,6 +286,7 @@ BaseSelector.propTypes = {
     id: string,
     name: string,
     readOnly: bool,
+    highCapacity: bool,
 };
 
 BaseSelector.defaultProps = {
@@ -283,6 +300,7 @@ BaseSelector.defaultProps = {
     placeholder: '',
     value: '',
     shouldShowSuggestionsOnFocus: true,
+    highCapacity: false,
 };
 
 export default BaseSelector;
