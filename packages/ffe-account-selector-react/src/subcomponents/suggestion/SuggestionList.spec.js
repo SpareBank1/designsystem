@@ -1,10 +1,13 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { shallow, mount, configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 
 import Spinner from '@sb1/ffe-spinner-react';
 
 import SuggestionList from './SuggestionList';
 import SuggestionListContainer from './SuggestionListContainer';
+
+configure({ adapter: new Adapter() });
 
 function suggestions() {
     return [{ header: '1' }, { header: '2' }];
@@ -39,22 +42,38 @@ function propsSuggestionListContainer() {
     };
 }
 
+function mountSuggestionList(props) {
+    return mount(<SuggestionList {...propsSuggestionList()} {...props} />);
+}
+
 function shallowSuggestionList(props) {
     return shallow(<SuggestionList {...propsSuggestionList()} {...props} />);
 }
 
 function mountSuggestionListContainer(props = propsSuggestionListContainer()) {
-    return mount(<SuggestionListContainer {...props} />);
+    const ref = React.createRef();
+    return mount(<SuggestionListContainer ref={ref} {...props} />);
 }
 
 describe('<SuggestionList />', () => {
     it('highlighted <Suggestion> set to highlightedIndex', () => {
-        const wrapper = shallowSuggestionList();
-        const ul = wrapper.find('ul');
+        // const wrapper = shallowSuggestionList();
+        // const ul = wrapper.find('ul');
+        //
+        // expect(ul.children().length).toBe(2);
+        // expect(ul.childAt(0).props().isHighlighted).toBe(false);
+        // expect(ul.childAt(1).props().isHighlighted).toBe(true);
 
-        expect(ul.children().length).toBe(2);
-        expect(ul.childAt(0).props().isHighlighted).toBe(false);
-        expect(ul.childAt(1).props().isHighlighted).toBe(true);
+        const wrapper = mountSuggestionList();
+        const suggestionList = wrapper.find('[role="listbox"]');
+        const firstRow = suggestionList.childAt(0);
+        const secondRow = suggestionList.childAt(1);
+
+        expect(suggestionList.children().length).toBe(2);
+        expect(firstRow.children().length).toBe(1);
+        expect(secondRow.children().length).toBe(1);
+        expect(firstRow.childAt(0).props().isHighlighted).toBe(false);
+        expect(secondRow.childAt(0).props().isHighlighted).toBe(true);
         expect(wrapper.find(Spinner).length === 0).toBe(true);
     });
 

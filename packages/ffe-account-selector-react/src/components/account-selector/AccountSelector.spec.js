@@ -1,9 +1,12 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { mount, configure } from 'enzyme';
 
 import AccountSelector from './AccountSelector';
 import Input from '../../subcomponents/input-field';
 import { SuggestionItem } from '../../subcomponents/suggestion';
+
+import Adapter from 'enzyme-adapter-react-16';
+configure({ adapter: new Adapter() });
 
 const accounts = [
     {

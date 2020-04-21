@@ -1,7 +1,10 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { mount, configure } from 'enzyme';
 
 import SuggestionItem from './SuggestionItem';
+
+import Adapter from 'enzyme-adapter-react-16';
+configure({ adapter: new Adapter() });
 
 function item() {
     return { header: 'header' };

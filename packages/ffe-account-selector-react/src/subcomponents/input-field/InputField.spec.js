@@ -1,7 +1,10 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { mount, configure } from 'enzyme';
 
 import InputField from './InputField';
+
+import Adapter from 'enzyme-adapter-react-16';
+configure({ adapter: new Adapter() });
 
 function renderInputField(value = 'value', readOnly = false) {
     return mount(

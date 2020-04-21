@@ -1,10 +1,13 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { mount, configure } from 'enzyme';
 
 import BaseSelector from './BaseSelector';
 import { SuggestionItem } from '../../subcomponents/suggestion';
 import Input from '../../subcomponents/input-field';
 import { KeyCodes } from '../../util/types';
+
+import Adapter from 'enzyme-adapter-react-16';
+configure({ adapter: new Adapter() });
 
 function suggestions() {
     return [{ header: '1' }, { header: '2' }, { header: '3' }];
