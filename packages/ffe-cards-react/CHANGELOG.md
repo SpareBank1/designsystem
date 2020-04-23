@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@3.0.14...@sb1/ffe-cards-react@3.1.0) (2020-04-23)
+
+
+### Features
+
+* **ffe-cards-react:** add typescript types ([4781651](https://github.com/SpareBank1/designsystem/commit/47816514664d2da4d78c072fec8347b99bc35b8e))
+
+
+
+
+
 ## [3.0.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@3.0.13...@sb1/ffe-cards-react@3.0.14) (2020-03-31)
 
 **Note:** Version bump only for package @sb1/ffe-cards-react
