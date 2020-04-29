@@ -1,4 +1,3 @@
-/* TODO: Needs an aria-role, but I'm not sure which is correct */
 /* eslint jsx-a11y/no-static-element-interactions:0 */
 import React from 'react';
 import { func, string, arrayOf, bool } from 'prop-types';
@@ -141,7 +140,13 @@ class AccountSelectorMulti extends React.Component {
     }
 
     render() {
-        const { noMatches, onAccountSelected, locale, value } = this.props;
+        const {
+            noMatches,
+            onAccountSelected,
+            locale,
+            value,
+            highCapacity,
+        } = this.props;
         return (
             <div className="ffe-account-selector" onKeyDown={this.onKeyDown}>
                 <BaseSelector
@@ -167,6 +172,7 @@ class AccountSelectorMulti extends React.Component {
                     }}
                     {...this.props}
                     onBlur={e => this.onBlur(e)}
+                    highCapacity={highCapacity}
                 />
                 {this.state.suggestionListHeight > 0 &&
                     this.renderSuggestionDetails(
@@ -217,6 +223,11 @@ AccountSelectorMulti.propTypes = {
     selectedAccounts: arrayOf(Account),
     showSelectAllOption: bool,
     value: string,
+    /*
+     * For situations where AccountSelector might be populated with hundreds of accounts
+     * uses react-window for performance optimization, default false
+     * */
+    highCapacity: bool,
 };
 
 export default AccountSelectorMulti;

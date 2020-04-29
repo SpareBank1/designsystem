@@ -6,6 +6,8 @@ import { Scrollbars } from 'react-custom-scrollbars';
 import SuggestionList from './SuggestionList';
 
 class SuggestionListContainer extends React.Component {
+    listRef = React.createRef();
+
     constructor(props) {
         super(props);
         this.refHighlightedSuggestion = this.refHighlightedSuggestion.bind(
@@ -42,6 +44,12 @@ class SuggestionListContainer extends React.Component {
         );
     }
 
+    handleScroll = ({ target }) => {
+        const { scrollTop } = target;
+
+        this.listRef.current.scrollTo(scrollTop);
+    };
+
     render() {
         const { heightMax, autoHeight } = this.props;
         return (
@@ -57,8 +65,11 @@ class SuggestionListContainer extends React.Component {
                             this.scrollbars = scrollbars;
                         }
                     }}
+                    onScroll={this.handleScroll}
                 >
                     <SuggestionList
+                        height={heightMax}
+                        refList={this.listRef}
                         refHighlightedSuggestion={this.refHighlightedSuggestion}
                         {...this.props}
                     />

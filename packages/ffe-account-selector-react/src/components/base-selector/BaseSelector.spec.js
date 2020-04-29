@@ -2,7 +2,12 @@ import React from 'react';
 import { mount } from 'enzyme';
 
 import BaseSelector from './BaseSelector';
-import { SuggestionItem } from '../../subcomponents/suggestion';
+import {
+    SuggestionItem,
+    SuggestionListContainer,
+} from '../../subcomponents/suggestion';
+import { SuggestionListContainer as SuggestionListContainerHighCapacity } from '../../subcomponents/suggestion-high-capacity';
+
 import Input from '../../subcomponents/input-field';
 import { KeyCodes } from '../../util/types';
 
@@ -389,5 +394,35 @@ describe('<BaseSelector> focus', () => {
         component.onFocus();
 
         expect(showHideSuggestionsSpy).toHaveBeenCalledWith(false, onFocus);
+    });
+});
+
+describe('<BaseSelector> highCapacity', () => {
+    it('should display default component when highCapacity=false', () => {
+        const component = mountBaseSelector({
+            shouldShowSuggestionsOnFocus: true,
+            suggestions: suggestions(),
+            highCapacity: false,
+        });
+        const input = component.find(Input);
+        input.simulate('focus');
+
+        const suggestionListContainer = component.find(SuggestionListContainer);
+        expect(suggestionListContainer.length === 1).toBe(true);
+    });
+
+    it('should display high capacity component when highCapacity=true', () => {
+        const component = mountBaseSelector({
+            shouldShowSuggestionsOnFocus: true,
+            suggestions: suggestions(),
+            highCapacity: true,
+        });
+        const input = component.find(Input);
+        input.simulate('focus');
+
+        const suggestionListContainer = component.find(
+            SuggestionListContainerHighCapacity,
+        );
+        expect(suggestionListContainer.length === 1).toBe(true);
     });
 });
