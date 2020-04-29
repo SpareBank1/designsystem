@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [13.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@13.1.13...@sb1/ffe-account-selector-react@13.2.0) (2020-04-29)
+
+
+### Features
+
+* **ffe-account-selector-react:** optimize suggestion list render ([93f2189](https://github.com/SpareBank1/designsystem/commit/93f21898c85988153091b15af7704df1d51ef105))
+
+
+
+
+
 ## [13.1.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@13.1.12...@sb1/ffe-account-selector-react@13.1.13) (2020-03-31)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
