@@ -1,4 +1,4 @@
-import { Component, HTMLAttributes, ChangeEventHandler } from 'react';
+import * as React from 'react';
 
 interface Account {
     accountNumber: string;
@@ -7,43 +7,48 @@ interface Account {
     balance?: number;
 }
 
-interface AccountSelectorProps {
+export interface AccountSelectorProps {
     accounts?: Array<Account>;
     className?: string;
     id: string;
     locale: Array<String>;
     noMatches?: string;
-    onAccountSelected: ChangeEventHandler<HTMLInputElement>;
-    onChange: ChangeEventHandler<HTMLInputElement>;
+    onAccountSelected: React.ChangeEventHandler<HTMLInputElement>;
+    onChange: React.ChangeEventHandler<HTMLInputElement>;
     selectedAccount?: Account;
     showBalance?: boolean;
     value: string;
     readonly?: boolean;
+    highCapacity?: boolean;
 }
 
-declare class AccountSelector extends Component<AccountSelectorProps, any> {}
+declare class AccountSelector extends React.Component<
+    AccountSelectorProps,
+    any
+> {}
 
-interface AccountSelectorMultiProps {
+export interface AccountSelectorMultiProps {
     accounts?: Array<Account>;
     id: string;
     isLoading?: boolean;
     locale: Array<String>;
     noMatches?: string;
-    onAccountSelected: ChangeEventHandler<HTMLInputElement>;
+    onAccountSelected: React.ChangeEventHandler<HTMLInputElement>;
     onBlur: Function;
     onSelectAll: Function;
     selectedAccounts?: Array<Account>;
     showSelectAllOption?: boolean;
     value?: string;
+    highCapacity?: boolean;
 }
 
-declare class AccountSelectorMulti extends Component<
+declare class AccountSelectorMulti extends React.Component<
     AccountSelectorMultiProps,
     any
 > {}
 
-interface BaseSelectorProps {
-    suggestions: Array<object>;
+export interface BaseSelectorProps {
+    suggestions: Array<any>;
     suggestionsFilter: Function;
     onSelect: Function;
     value: string;
@@ -54,7 +59,7 @@ interface BaseSelectorProps {
     shouldHideSuggestionsOnReset: boolean;
     shouldShowSuggestionsOnFocus?: boolean;
     onSuggestionSelect: Function;
-    onChange?: ChangeEventHandler<Element>;
+    onChange?: React.ChangeEventHandler<Element>;
     onBlur?: Function;
     onClick?: Function;
     onReset?: Function;
@@ -66,12 +71,9 @@ interface BaseSelectorProps {
     id?: string;
     name?: string;
     readonly?: boolean;
+    highCapacity?: boolean;
 }
 
-declare class BaseSelector extends Component<BaseSelectorProps, any> {}
+declare class BaseSelector extends React.Component<BaseSelectorProps, any> {}
 
-export default {
-    AccountSelector,
-    AccountSelectorMulti,
-    BaseSelector,
-};
+export { AccountSelector, AccountSelectorMulti, BaseSelector };
