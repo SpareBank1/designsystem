@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [13.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@13.2.0...@sb1/ffe-account-selector-react@13.2.1) (2020-04-30)
+
+
+### Bug Fixes
+
+* **ffe-account-selector-react:** fixed typescript file ([#891](https://github.com/SpareBank1/designsystem/issues/891)) ([3ebdc28](https://github.com/SpareBank1/designsystem/commit/3ebdc2816edfd6a6ac9b6325c60c962479ce400f))
+
+
+
+
+
 # [13.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@13.1.13...@sb1/ffe-account-selector-react@13.2.0) (2020-04-29)
 
 
