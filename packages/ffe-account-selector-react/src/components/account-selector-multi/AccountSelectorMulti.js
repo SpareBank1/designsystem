@@ -223,10 +223,10 @@ AccountSelectorMulti.propTypes = {
     selectedAccounts: arrayOf(Account),
     showSelectAllOption: bool,
     value: string,
-    /*
+    /**
      * For situations where AccountSelector might be populated with hundreds of accounts
      * uses react-window for performance optimization, default false
-     * */
+     */
     highCapacity: bool,
 };
 

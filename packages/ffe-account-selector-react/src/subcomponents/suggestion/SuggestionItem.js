@@ -1,40 +1,38 @@
-import React, { Component } from 'react';
-import { object, bool, func, string } from 'prop-types';
+import React from 'react';
+import { bool, func, object, string } from 'prop-types';
 import classNames from 'classnames';
 
-class SuggestionItem extends Component {
-    render() {
-        const {
-            item,
-            id,
-            isHighlighted,
-            render,
-            onSelect,
-            refHighlightedSuggestion,
-        } = this.props;
-        return (
-            <li
-                ref={itemRef => {
-                    if (itemRef && isHighlighted) {
-                        refHighlightedSuggestion(itemRef);
-                    }
-                }}
-                role="option"
-                aria-selected={isHighlighted}
-                id={id}
-                onMouseDown={e => {
-                    e.preventDefault();
-                    onSelect(item);
-                }}
-                className={classNames('ffe-account-suggestion', {
-                    'ffe-account-suggestion--highlighted': isHighlighted,
-                })}
-                tabIndex={-1}
-            >
-                {render(item)}
-            </li>
-        );
-    }
+function SuggestionItem(props) {
+    const {
+        item,
+        id,
+        isHighlighted,
+        render,
+        onSelect,
+        refHighlightedSuggestion,
+    } = props;
+    return (
+        <li
+            ref={itemRef => {
+                if (itemRef && isHighlighted) {
+                    refHighlightedSuggestion(itemRef);
+                }
+            }}
+            role="option"
+            aria-selected={isHighlighted}
+            id={id}
+            onMouseDown={e => {
+                e.preventDefault();
+                onSelect(item);
+            }}
+            className={classNames('ffe-account-suggestion', {
+                'ffe-account-suggestion--highlighted': isHighlighted,
+            })}
+            tabIndex={-1}
+        >
+            {render(item)}
+        </li>
+    );
 }
 
 SuggestionItem.propTypes = {
