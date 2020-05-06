@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [13.2.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@13.2.1...@sb1/ffe-account-selector-react@13.2.2) (2020-05-06)
+
+
+### Bug Fixes
+
+* **ffe-account-selector-react:** converted to functional components ([d0d6139](https://github.com/SpareBank1/designsystem/commit/d0d6139f86347229fbc1196a8bdcfd222a5ab74a))
+
+
+
+
+
 ## [13.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@13.2.0...@sb1/ffe-account-selector-react@13.2.1) (2020-04-30)
 
 
