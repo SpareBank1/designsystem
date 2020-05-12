@@ -11,7 +11,7 @@ const { HakeIkon } = require('@sb1/ffe-icons-react');
 ```
 
 ```js
-<ContextSuccessMessage heading="Hurra!">
+<ContextSuccessMessage header="Hurra!">
     Betalingen ble registrert!
 </ContextSuccessMessage>
 ```

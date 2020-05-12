@@ -13,7 +13,7 @@ const { LyspareIkon } = require('@sb1/ffe-icons-react');
 ```
 
 ```js
-<ContextTipMessage heading="Tips">
+<ContextTipMessage header="Tips">
     Visste du at du kan få en skattefordel ved sparing i IPS?
 </ContextTipMessage>
 ```
