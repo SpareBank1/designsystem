@@ -29,9 +29,7 @@
   "dependencies": {
     "@sb1/ffe-grid-react": "^10.1.1",
     "classnames": "^2.2.5",
-    "prop-types": "^15.6.0",
-    "react-collapse": "^4.0.3",
-    "react-motion": "^0.5.2"
+    "prop-types": "^15.6.0"
   },
   "devDependencies": {
     "@sb1/ffe-icons-react": "^7.2.9",

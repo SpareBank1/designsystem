@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 export interface SystemMessageProps {
+    animationLengthMs?: number;
     children: React.ReactNode;
     className?: string;
     icon?: React.ReactNode;
