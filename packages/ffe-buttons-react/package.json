@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-buttons-react",
-  "version": "12.1.19",
+  "version": "12.2.0",
   "description": "React implementation of ffe-buttons",
   "keywords": [
     "ffe"
@@ -43,8 +43,8 @@
     "eslint": "^5.9.0",
     "jest": "^23.4.2",
     "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "react-collapse": "^4.0.3"
+    "react-collapse": "^4.0.3",
+    "react-dom": "^16.9.0"
   },
   "peerDependencies": {
     "@sb1/ffe-buttons": "^8.1.0",

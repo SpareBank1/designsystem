@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@6.0.16...@sb1/ffe-system-message-react@6.1.0) (2020-06-18)
+
+
+### Features
+
+* **ffe-system-message-react:** stop using deprecated lifecycle methods ([940e0f8](https://github.com/SpareBank1/designsystem/commit/940e0f8d516eeaec85f08cbe7019b29a6e8b36cf))
+
+
+
+
+
 ## [6.0.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@6.0.15...@sb1/ffe-system-message-react@6.0.16) (2020-05-27)
 
 **Note:** Version bump only for package @sb1/ffe-system-message-react
