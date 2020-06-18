@@ -54,21 +54,35 @@ describe('<SystemMessage />', () => {
                 .hasClass('ffe-system-message-wrapper--success'),
         ).toBe(true);
     });
-    it('collapses when close button is clicked', () => {
-        const wrapper = getInfoWrapper();
-        expect(wrapper.find('UnmountClosed').prop('isOpened')).toBe(true);
-
+    it('collapses when close button is clicked', done => {
+        const wrapper = getInfoWrapper({
+            animationLengthMs: 10,
+        });
+        expect(wrapper.find('.ffe-system-message-wrapper').exists()).toBe(true);
         wrapper.find('button').simulate('click');
 
-        expect(wrapper.find('UnmountClosed').prop('isOpened')).toBe(false);
+        setTimeout(() => {
+            wrapper.update();
+            expect(wrapper.find('.ffe-system-message-wrapper').exists()).toBe(
+                false,
+            );
+            done();
+        }, 20);
     });
-    it('calls onClose prop when close button is clicked', () => {
-        const onClose = jest.fn();
-        const wrapper = getInfoWrapper({ onClose });
-
+    it('calls onClose prop when close button is clicked', done => {
+        const onClickSpy = jest.fn();
+        const wrapper = getInfoWrapper({
+            animationLengthMs: 10,
+            onClose: onClickSpy,
+        });
+        expect(wrapper.find('.ffe-system-message-wrapper').exists()).toBe(true);
         wrapper.find('button').simulate('click');
 
-        expect(onClose).toHaveBeenCalledTimes(1);
+        setTimeout(() => {
+            wrapper.update();
+            expect(onClickSpy).toHaveBeenCalledTimes(1);
+            done();
+        }, 20);
     });
     it('renders a Norwegian aria label on the close button by default', () => {
         const wrapper = getInfoWrapper();
