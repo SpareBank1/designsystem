@@ -2,7 +2,17 @@
     fill: @ffe-blue-royal;
     height: 80px;
     width: 80px;
+    .native & {
+        @media (prefers-color-scheme: dark) {
+            fill: @ffe-blue-azure-darkmode;
+        }
+    }
 }
 .sb1ds-icon-color {
     fill: @ffe-blue-royal;
+    .native & {
+        @media (prefers-color-scheme: dark) {
+            fill: @ffe-blue-azure-darkmode;
+        }
+    }
 }
