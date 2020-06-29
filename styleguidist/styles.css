@@ -9520,8 +9520,18 @@ html.transition *::after {
   height: 80px;
   width: 80px;
 }
+@media (prefers-color-scheme: dark) {
+  .native .sb1ds-icon {
+    fill: #0a91ff;
+  }
+}
 .sb1ds-icon-color {
   fill: #002776;
+}
+@media (prefers-color-scheme: dark) {
+  .native .sb1ds-icon-color {
+    fill: #0a91ff;
+  }
 }
 .sb1ds-example {
   width: 100%;
