@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.13.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.13.2...@sb1/ffe-icons@12.13.3) (2020-06-29)
+
+
+### Bug Fixes
+
+* **ffe-icons:** added correct colors for icons preview in darkmode ([863c10a](https://github.com/SpareBank1/designsystem/commit/863c10a0f98320514a4c2974170b1c9c6b9566b9))
+
+
+
+
+
 ## [12.13.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.13.1...@sb1/ffe-icons@12.13.2) (2020-06-24)
 
 **Note:** Version bump only for package @sb1/ffe-icons
