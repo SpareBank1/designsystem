@@ -2,9 +2,13 @@
 const { WhiteAccordion, AccordionItem } = require('.');
 
 <WhiteAccordion>
-    <AccordionItem title="Tittel">Skjult innhold</AccordionItem>
-    <AccordionItem title="Enda en tittel">Mer skjult innhold</AccordionItem>
-    <AccordionItem title="En siste tittel">Enda mer innhold</AccordionItem>
+    <AccordionItem accordionTitle="Tittel">Skjult innhold</AccordionItem>
+    <AccordionItem accordionTitle="Enda en tittel">
+        Mer skjult innhold
+    </AccordionItem>
+    <AccordionItem accordionTitle="En siste tittel">
+        Enda mer innhold
+    </AccordionItem>
 </WhiteAccordion>;
 ```
 
@@ -17,7 +21,9 @@ const { WhiteAccordion, AccordionItem } = require('.');
     <AccordionItem defaultOpen={true} title="Åpen!">
         Her er info du kan se med EN gang!
     </AccordionItem>
-    <AccordionItem title="Lukket">Skjult innhold</AccordionItem>
-    <AccordionItem title="Denne er også lukket">Enda mer innhold</AccordionItem>
+    <AccordionItem accordionTitle="Lukket">Skjult innhold</AccordionItem>
+    <AccordionItem accordionTitle="Denne er også lukket">
+        Enda mer innhold
+    </AccordionItem>
 </WhiteAccordion>;
 ```
