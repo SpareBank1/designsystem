@@ -7,12 +7,12 @@ høyre.
 
 På store skjermer vil listen rendres slik:
 
-![image](ffe-details-list-react/lg.png)
+![image](assets/ffe-details-list-react/lg.png)
 
 På mellomstore skjermer brekker innholdet om og stackes i høyden, slik:
 
-![image](ffe-details-list-react/md.png)
+![image](assets/ffe-details-list-react/md.png)
 
 Og på små skjermer tar innholdet i tillegg opp full bredde, slik:
 
-![image](ffe-details-list-react/sm.png)
+![image](assets/ffe-details-list-react/sm.png)
