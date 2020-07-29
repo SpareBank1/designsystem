@@ -67,7 +67,7 @@ module.exports = {
 
         // Enforce that elements with explicit or implicit roles defined contain only aria-* properties supported by that role.
         // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/role-supports-aria-props.md
-        'jsx-a11y/role-supports-aria-props': 2,
+        'jsx-a11y/role-supports-aria-props': 1,
 
         // Enforce tabIndex value is not greater than zero.
         // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/tabindex-no-positive.md
