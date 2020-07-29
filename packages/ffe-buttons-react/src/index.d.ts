@@ -42,7 +42,7 @@ export interface ExpandButtonProps extends MinimalBaseButtonProps {
     onClick: (e: React.MouseEvent | undefined) => void;
 }
 
-export interface InlineExpandButtonProps {
+export interface InlineExpandButtonProps extends MinimalBaseButtonProps {
     children?: React.ReactNode;
     innerRef?: React.Ref<HTMLElement>;
     isExpanded: boolean;
