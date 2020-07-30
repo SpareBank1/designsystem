@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.13.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.13.3...@sb1/ffe-icons@12.13.4) (2020-07-30)
+
+
+### Bug Fixes
+
+* **ffe-icons:** removed empty space around bil-pil-ikon ([fd3f7a2](https://github.com/SpareBank1/designsystem/commit/fd3f7a2c601d20bc7f6030381b0986af9626d9da))
+
+
+
+
+
 ## [12.13.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.13.2...@sb1/ffe-icons@12.13.3) (2020-06-29)
 
 

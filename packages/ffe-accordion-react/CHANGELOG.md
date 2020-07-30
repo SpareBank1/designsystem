@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@7.0.20...@sb1/ffe-accordion-react@8.0.0) (2020-07-30)
+
+
+### Bug Fixes
+
+* **ffe-accordion-react:** renamed title tag ([ee21117](https://github.com/SpareBank1/designsystem/commit/ee211179b4795e922128561140621876f69d3136))
+
+
+### BREAKING CHANGES
+
+* **ffe-accordion-react:** title is an existing property on li-elements and could cause confusion (TypeScript isn't amused when we override it, either).
+
+
+
+
+
 ## [7.0.20](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@7.0.19...@sb1/ffe-accordion-react@7.0.20) (2020-06-29)
 
 

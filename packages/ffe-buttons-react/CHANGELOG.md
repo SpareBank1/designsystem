@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.2.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@12.2.2...@sb1/ffe-buttons-react@12.2.3) (2020-07-30)
+
+
+### Bug Fixes
+
+* **ffe-buttons-react:** fix InlineExpandButton types ([88877ba](https://github.com/SpareBank1/designsystem/commit/88877ba95bf85be1868b829d15d9d22674397c1a))
+* **ffe-buttons-react:** set InlineExpandButton type to "button" ([0a02a57](https://github.com/SpareBank1/designsystem/commit/0a02a575790fed4fa178a5f3379d31c5ed7dcddc))
+
+
+
+
+
 ## [12.2.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@12.2.1...@sb1/ffe-buttons-react@12.2.2) (2020-06-29)
 
 **Note:** Version bump only for package @sb1/ffe-buttons-react
