@@ -10,6 +10,7 @@ const InlineExpandButton = props => {
     return (
         <InlineButton
             buttonType="expand"
+            type="button"
             rightIcon={
                 <ChevronIkon
                     style={{
