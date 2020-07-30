@@ -2,21 +2,10 @@ import * as React from 'react';
 
 export interface CheckboxProps
     extends React.InputHTMLAttributes<HTMLInputElement> {
-    /**
-     * @deprecated
-     * Use `children` instead
-     */
-    label?: string;
     noMargins?: boolean;
     hiddenLabel?: boolean;
     id?: string;
     inline?: boolean;
-    innerRef?: React.Ref<HTMLInputElement>;
-    /**
-     * @deprecated
-     * Use `aria-invalid` directly instead
-     */
-    invalid?: boolean;
     children?: React.ReactNode;
     dark?: boolean;
 }
