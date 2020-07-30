@@ -15,7 +15,7 @@ export interface AccordionItemProps extends React.HTMLProps<HTMLLIElement> {
     open?: boolean;
     defaultOpen?: boolean;
     onToggleOpen?: Function;
-    title?: React.ReactNode;
+    accordionTitle?: React.ReactNode;
     uuid?: string;
     id?: string;
 }
