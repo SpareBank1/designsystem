@@ -3,6 +3,39 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@6.0.6...@sb1/ffe-form-react@7.0.0) (2020-07-31)
+
+
+### Bug Fixes
+
+* **ffe-form-react:** remove checkbox props ([9e6b39b](https://github.com/SpareBank1/designsystem/commit/9e6b39b4172b09a5f62ea20727240efaffb6c248))
+
+
+### BREAKING CHANGES
+
+* **ffe-form-react:** Instead of having an `innerRef` prop, use the more modern
+approach with `React.forwardRef`. This means that instead
+of using the `innerRef` prop, refs should be passed as
+they would to any other React element.
+
+```diff
+- <Checkbox innerRef={ref} />
++ <Checkbox ref={ref} />
+```
+
+While we're doing breaking changes anyway, removed
+support from the two deprecated props `label` and
+`valid`. Use children and `aria-invalid` instead.
+
+```diff
+- <Checkbox invalid={true} label="To arr is pirate" />
++ <Checkbox aria-invalid={true}>To arr is pirate</Checkbox>
+```
+
+
+
+
+
 ## [6.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@6.0.5...@sb1/ffe-form-react@6.0.6) (2020-05-19)
 
 **Note:** Version bump only for package @sb1/ffe-form-react
