@@ -73,24 +73,10 @@ describe('<Checkbox />', () => {
         expect(wrapper.find('.ffe-checkbox--inline').exists()).toBe(true);
     });
 
-    it('should support invalid', () => {
-        const wrapper = getWrapper({ invalid: false });
+    it('should support aria-invalid', () => {
+        const wrapper = getWrapper({ 'aria-invalid': 'false' });
 
         expect(wrapper.find('input').prop('aria-invalid')).toBe('false');
-
-        wrapper.setProps({ invalid: true });
-
-        expect(wrapper.find('input').prop('aria-invalid')).toBe('true');
-    });
-
-    it('setting "aria-invalid" should override "invalid"', () => {
-        const wrapper = getWrapper({ invalid: true, 'aria-invalid': 'false' });
-
-        expect(wrapper.find('input').prop('aria-invalid')).toBe('false');
-
-        wrapper.setProps({ invalid: false, 'aria-invalid': 'true' });
-
-        expect(wrapper.find('input').prop('aria-invalid')).toBe('true');
     });
 
     it('should set arbitrary props (rest) on input', () => {
