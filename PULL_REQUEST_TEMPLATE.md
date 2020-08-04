@@ -1,15 +1,25 @@
-<!-- 
-Thanks for opening a pull request! 🎉
+<!-- Gi saken en oppsummerende tittel ovenfor. -->
 
-If your changes include some kind of UI element, please attach a screenshot of 
-how it looks.
+## Beskrivelse
 
-Before submitting a pull request, please have a look through the CONTRIBUTING.md
-document. TL;DR:
+<!-- Detaljert beskrivelse av endringene dine. Skjermskudd er lov. -->
 
-- Follow the conventional commit standard
-- Write full, explanatory commit messages
-- Follow our code standards
-- Write tests where applicable
-- Be courteous and respect our code of conduct
+## Motivasjon og kontekst
+
+<!-- Hvorfor trengs denne endringen, og hva løser den? -->
+
+## Testing
+
+<!-- Hvordan har du har testet endringene dine? Ta gjerne med systeminfo o.l -->
+
+<!--
+
+Helt til slutt, har du ..
+
+.. lest retningslinjene våre for bidrag?
+.. tatt en siste sjekk for kode og skrivefeil, debug informasjon o.l?
+.. kjørt og eventuelt oppdatert testene?
+.. kommentert og dokumentert det som trengs?
+.. knyttet denne opp til relaterte issues?
+
 -->
