@@ -3,6 +3,53 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.2.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@12.2.2...@sb1/ffe-buttons-react@12.2.3) (2020-07-30)
+
+
+### Bug Fixes
+
+* **ffe-buttons-react:** fix InlineExpandButton types ([88877ba](https://github.com/SpareBank1/designsystem/commit/88877ba95bf85be1868b829d15d9d22674397c1a))
+* **ffe-buttons-react:** set InlineExpandButton type to "button" ([0a02a57](https://github.com/SpareBank1/designsystem/commit/0a02a575790fed4fa178a5f3379d31c5ed7dcddc))
+
+
+
+
+
+## [12.2.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@12.2.1...@sb1/ffe-buttons-react@12.2.2) (2020-06-29)
+
+**Note:** Version bump only for package @sb1/ffe-buttons-react
+
+
+
+
+
+## [12.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@12.2.0...@sb1/ffe-buttons-react@12.2.1) (2020-06-24)
+
+**Note:** Version bump only for package @sb1/ffe-buttons-react
+
+
+
+
+
+# [12.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@12.1.19...@sb1/ffe-buttons-react@12.2.0) (2020-06-18)
+
+
+### Features
+
+* **ffe-system-message-react:** stop using deprecated lifecycle methods ([940e0f8](https://github.com/SpareBank1/designsystem/commit/940e0f8d516eeaec85f08cbe7019b29a6e8b36cf))
+
+
+
+
+
+## [12.1.19](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@12.1.18...@sb1/ffe-buttons-react@12.1.19) (2020-05-27)
+
+**Note:** Version bump only for package @sb1/ffe-buttons-react
+
+
+
+
+
 ## [12.1.18](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@12.1.17...@sb1/ffe-buttons-react@12.1.18) (2020-03-31)
 
 **Note:** Version bump only for package @sb1/ffe-buttons-react

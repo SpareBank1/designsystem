@@ -76,6 +76,7 @@ class AccountSelector extends Component {
             locale,
             selectedAccount,
             showBalance,
+            highCapacity,
         } = this.props;
         return (
             <div
@@ -97,6 +98,7 @@ class AccountSelector extends Component {
                     onSelect={this.onAccountSelect}
                     onChange={this.onInputChange}
                     locale={locale}
+                    highCapacity={highCapacity}
                 />
                 {selectedAccount && (
                     <AccountDetails
@@ -140,6 +142,11 @@ AccountSelector.propTypes = {
      * where the textual input and keyboard can be distracting.
      */
     readOnly: bool,
+    /**
+     * For situations where AccountSelector might be populated with hundreds of accounts
+     * uses react-window for performance optimization, default false
+     */
+    highCapacity: bool,
 };
 
 export default AccountSelector;

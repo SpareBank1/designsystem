@@ -1,23 +1,26 @@
 {
   "name": "@sb1/ffe-accordion-react",
-  "version": "7.0.16",
+  "version": "8.0.0",
   "license": "MIT",
   "author": "SpareBank 1",
   "files": [
     "lib",
-    "es"
+    "es",
+    "types"
   ],
   "main": "lib/index.js",
   "module": "es/index.js",
+  "types": "types/index.d.ts",
   "sideEffects": false,
   "repository": {
     "type": "git",
     "url": "ssh://git@github.com:SpareBank1/designsystem.git"
   },
   "scripts": {
-    "build": "npm run build:cjs && npm run build:es",
+    "build": "npm run build:cjs && npm run build:es && npm run build:types",
     "build:cjs": "babel -d lib/. --root-mode=upward  --env-name=cjs --ignore=*.spec.js src/.",
     "build:es": "babel -d es/. --root-mode=upward --env-name=es --ignore=*.spec.js src/.",
+    "build:types": "copyfiles -f src/index.d.ts types/",
     "lint": "eslint src/.",
     "test": "jest",
     "test:watch": "jest --watch"
@@ -27,10 +30,10 @@
   },
   "dependencies": {
     "@sb1/ffe-collapse-react": "^1.0.2",
-    "@sb1/ffe-icons-react": "^7.2.8",
+    "@sb1/ffe-icons-react": "^7.2.12",
     "classnames": "^2.2.5",
     "prop-types": "^15.6.0",
-    "uuid": "^7.0.0"
+    "uuid": "^8.0.0"
   },
   "devDependencies": {
     "enzyme": "^3.7.0",

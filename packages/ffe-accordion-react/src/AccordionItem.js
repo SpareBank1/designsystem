@@ -45,7 +45,7 @@ class AccordionItem extends Component {
             className,
             children,
             index,
-            title,
+            accordionTitle,
             uuid,
             id,
         } = this.props;
@@ -75,7 +75,7 @@ class AccordionItem extends Component {
                 >
                     <span className="ffe-accordion-item__toggler-content">
                         <span className="ffe-accordion-item__title">
-                            {title}
+                            {accordionTitle}
                         </span>
                         <ChevronIkon className="ffe-accordion-item__icon" />
                     </span>
@@ -117,7 +117,7 @@ AccordionItem.propTypes = {
     /** Callback that fires whenever the accordion item is opened or closed */
     onToggleOpen: func,
     /** The title */
-    title: node,
+    accordionTitle: node,
     /** A unique ID, usually provided by the wrapping <Accordion /> element */
     uuid: string,
     /** An optional ID for the element, will be auto-generated if not provided */

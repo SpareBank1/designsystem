@@ -1,25 +1,28 @@
 {
   "name": "@sb1/ffe-searchable-dropdown-react",
-  "version": "8.1.7",
+  "version": "8.1.11",
   "description": "Dropdown with search option",
   "license": "MIT",
   "author": "SpareBank 1",
   "files": [
     "lib",
     "es",
-    "less"
+    "less",
+    "types"
   ],
   "main": "lib/index.js",
   "module": "es/index.js",
+  "types": "types/index.d.ts",
   "sideEffects": false,
   "repository": {
     "type": "git",
     "url": "ssh://git@github.com:SpareBank1/designsystem.git"
   },
   "scripts": {
-    "build": "npm run build:cjs && npm run build:es",
+    "build": "npm run build:cjs && npm run build:es && npm run build:types",
     "build:cjs": "babel -d lib/. --root-mode=upward  --env-name=cjs --ignore=*.spec.js src/.",
     "build:es": "babel -d es/. --root-mode=upward --env-name=es --ignore=*.spec.js src/.",
+    "build:types": "copyfiles -f src/index.d.ts types/",
     "lint": "eslint src/.",
     "test": "jest",
     "test:watch": "jest --watch"
@@ -27,7 +30,7 @@
   "dependencies": {
     "@sb1/ffe-core-react": "^4.2.0",
     "@sb1/ffe-form": "^13.0.11",
-    "@sb1/ffe-icons-react": "^7.2.8",
+    "@sb1/ffe-icons-react": "^7.2.12",
     "classnames": "^2.2.5",
     "downshift": "^5.0.0",
     "lodash.isequal": "^4.5.0",

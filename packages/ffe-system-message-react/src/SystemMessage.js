@@ -1,21 +1,35 @@
 import React, { Component } from 'react';
-import { func, string, node, oneOf } from 'prop-types';
-import { UnmountClosed as Collapse } from 'react-collapse';
+import { func, string, number, node, oneOf } from 'prop-types';
 import classNames from 'classnames';
 import KryssIkon from '@sb1/ffe-icons-react/lib/kryss-ikon';
 
 class SystemMessage extends Component {
-    state = {
-        dismissed: false,
-    };
+    constructor() {
+        super();
+        this.close = this.close.bind(this);
+        this.state = {
+            closed: false,
+        };
+    }
 
-    onClose = () => {
-        this.setState({ dismissed: true });
-        this.props.onClose();
-    };
+    close(event) {
+        const { animationLengthMs, onClose } = this.props;
+        const self = this._self;
+        self.style.height = `${self.offsetHeight}px`;
+        setTimeout(() => {
+            self.style.height = 0;
+        }, 0);
+        setTimeout(() => {
+            this.setState({ closed: true }, () => {
+                onClose(event);
+            });
+        }, animationLengthMs);
+        return false;
+    }
 
     render() {
         const {
+            animationLengthMs,
             children,
             className,
             icon,
@@ -23,43 +37,49 @@ class SystemMessage extends Component {
             modifier,
         } = this.props;
 
+        if (this.state.closed) {
+            return null;
+        }
+
         return (
-            <Collapse isOpened={!this.state.dismissed}>
-                <div
-                    className={classNames(
-                        'ffe-system-message-wrapper',
-                        `ffe-system-message-wrapper--${modifier}`,
-                        className,
-                    )}
-                >
-                    <div className="ffe-system-message">
-                        <span className="ffe-system-message__icon">
-                            {icon}
-                        </span>
-                        <p className="ffe-system-message__content">
-                            {children}
-                        </p>
-                        <button
-                            aria-label={locale === 'en' ? 'Close' : 'Lukk'}
-                            className="ffe-system-message__close"
-                            onClick={this.onClose}
-                            type="button"
-                        >
-                            <KryssIkon />
-                        </button>
-                    </div>
+            <div
+                className={classNames(
+                    'ffe-system-message-wrapper',
+                    `ffe-system-message-wrapper--${modifier}`,
+                    className,
+                )}
+                ref={_self => {
+                    this._self = _self;
+                }}
+                style={{
+                    transition: `height ${animationLengthMs / 1000}s`,
+                }}
+            >
+                <div className="ffe-system-message">
+                    <span className="ffe-system-message__icon">{icon}</span>
+                    <p className="ffe-system-message__content">{children}</p>
+                    <button
+                        aria-label={locale === 'en' ? 'Close' : 'Lukk'}
+                        className="ffe-system-message__close"
+                        onClick={this.close}
+                        type="button"
+                    >
+                        <KryssIkon />
+                    </button>
                 </div>
-            </Collapse>
+            </div>
         );
     }
 }
 
 SystemMessage.defaultProps = {
+    animationLengthMs: 300,
     locale: 'nb',
     onClose: f => f,
 };
 
 SystemMessage.propTypes = {
+    animationLengthMs: number,
     /** The content of the system message */
     children: node.isRequired,
     /** Additional classes added to the surrounding div */

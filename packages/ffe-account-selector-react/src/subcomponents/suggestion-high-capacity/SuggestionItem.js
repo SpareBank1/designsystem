@@ -1,6 +1,6 @@
-import React from 'react';
-import { bool, func, object, string } from 'prop-types';
 import classNames from 'classnames';
+import { bool, func, object, string } from 'prop-types';
+import React from 'react';
 
 function SuggestionItem(props) {
     const {
@@ -10,6 +10,7 @@ function SuggestionItem(props) {
         render,
         onSelect,
         refHighlightedSuggestion,
+        style,
     } = props;
     return (
         <li
@@ -29,6 +30,7 @@ function SuggestionItem(props) {
                 'ffe-account-suggestion--highlighted': isHighlighted,
             })}
             tabIndex={-1}
+            style={style}
         >
             {render(item)}
         </li>
@@ -42,6 +44,7 @@ SuggestionItem.propTypes = {
     render: func.isRequired,
     onSelect: func.isRequired,
     refHighlightedSuggestion: func.isRequired,
+    style: object,
 };
 
 export default SuggestionItem;

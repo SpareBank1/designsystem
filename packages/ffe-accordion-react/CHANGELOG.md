@@ -3,6 +3,57 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@7.0.20...@sb1/ffe-accordion-react@8.0.0) (2020-07-30)
+
+
+### Bug Fixes
+
+* **ffe-accordion-react:** renamed title tag ([ee21117](https://github.com/SpareBank1/designsystem/commit/ee211179b4795e922128561140621876f69d3136))
+
+
+### BREAKING CHANGES
+
+* **ffe-accordion-react:** title is an existing property on li-elements and could cause confusion (TypeScript isn't amused when we override it, either).
+
+
+
+
+
+## [7.0.20](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@7.0.19...@sb1/ffe-accordion-react@7.0.20) (2020-06-29)
+
+
+### Bug Fixes
+
+* **ffe-accordion-react:** added types ([2634cd5](https://github.com/SpareBank1/designsystem/commit/2634cd5598156808af7e2d353279113b873a5d61))
+
+
+
+
+
+## [7.0.19](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@7.0.18...@sb1/ffe-accordion-react@7.0.19) (2020-06-24)
+
+**Note:** Version bump only for package @sb1/ffe-accordion-react
+
+
+
+
+
+## [7.0.18](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@7.0.17...@sb1/ffe-accordion-react@7.0.18) (2020-05-27)
+
+**Note:** Version bump only for package @sb1/ffe-accordion-react
+
+
+
+
+
+## [7.0.17](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@7.0.16...@sb1/ffe-accordion-react@7.0.17) (2020-05-19)
+
+**Note:** Version bump only for package @sb1/ffe-accordion-react
+
+
+
+
+
 ## [7.0.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@7.0.15...@sb1/ffe-accordion-react@7.0.16) (2020-03-31)
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react

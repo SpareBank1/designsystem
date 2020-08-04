@@ -3,6 +3,38 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.0.17](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@6.0.16...@sb1/ffe-message-box-react@6.0.17) (2020-07-30)
+
+**Note:** Version bump only for package @sb1/ffe-message-box-react
+
+
+
+
+
+## [6.0.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@6.0.15...@sb1/ffe-message-box-react@6.0.16) (2020-06-29)
+
+**Note:** Version bump only for package @sb1/ffe-message-box-react
+
+
+
+
+
+## [6.0.15](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@6.0.14...@sb1/ffe-message-box-react@6.0.15) (2020-06-24)
+
+**Note:** Version bump only for package @sb1/ffe-message-box-react
+
+
+
+
+
+## [6.0.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@6.0.13...@sb1/ffe-message-box-react@6.0.14) (2020-05-27)
+
+**Note:** Version bump only for package @sb1/ffe-message-box-react
+
+
+
+
+
 ## [6.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@6.0.12...@sb1/ffe-message-box-react@6.0.13) (2020-03-31)
 
 **Note:** Version bump only for package @sb1/ffe-message-box-react

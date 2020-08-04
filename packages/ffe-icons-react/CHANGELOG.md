@@ -3,6 +3,38 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.2.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@7.2.11...@sb1/ffe-icons-react@7.2.12) (2020-07-30)
+
+**Note:** Version bump only for package @sb1/ffe-icons-react
+
+
+
+
+
+## [7.2.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@7.2.10...@sb1/ffe-icons-react@7.2.11) (2020-06-29)
+
+**Note:** Version bump only for package @sb1/ffe-icons-react
+
+
+
+
+
+## [7.2.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@7.2.9...@sb1/ffe-icons-react@7.2.10) (2020-06-24)
+
+**Note:** Version bump only for package @sb1/ffe-icons-react
+
+
+
+
+
+## [7.2.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@7.2.8...@sb1/ffe-icons-react@7.2.9) (2020-05-27)
+
+**Note:** Version bump only for package @sb1/ffe-icons-react
+
+
+
+
+
 ## [7.2.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@7.2.7...@sb1/ffe-icons-react@7.2.8) (2020-03-31)
 
 **Note:** Version bump only for package @sb1/ffe-icons-react
