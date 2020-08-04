@@ -1,32 +1,25 @@
+<!-- Gi saken en oppsummerende tittel ovenfor. -->
+
 ## Beskrivelse
 
-Oppsummer kort hva som er gjort og hvorfor. Det er også fint om du skriver litt om motivasjon og kontekst slik at vi enklere kan forstå forutsetningene og valgene du har tatt.
+<!-- Detaljert beskrivelse av endringene dine. Skjermskudd er lov. -->
 
-## Hvilken type endring er dette?
+## Motivasjon og kontekst
 
-Legg gjerne til eller fjern valg som ikke er relevante.
+<!-- Hvorfor trengs denne endringen, og hva løser den? -->
 
--   [ ] Feilretting (non-breaking)
--   [ ] Ny funksjonalitet (non-breaking)
--   [ ] Breaking change (feilretting eller funksjon som påvirker eksisterende funksjonalitet)
+## Testing
 
-## Hvordan har du testet?
+<!-- Hvordan har du har testet endringene dine? Ta gjerne med systeminfo o.l -->
 
-Forklar hvilke tester du selv har gjort for å luke ut potensielle feil. Oppgi gjerne instruksjoner slik at disse kan etterprøves. Husk å ta med relevant konfigurasjon/og eller nødvendig programvare.
+<!--
 
--   [ ] Test A
--   [ ] Test B
+Helt til slutt, har du ..
 
-**Konfigurasjon**:
+.. lest retningslinjene våre for bidrag?
+.. tatt en siste sjekk for kode og skrivefeil, debug informasjon o.l?
+.. kjørt og eventuelt oppdatert testene?
+.. kommentert og dokumentert det som trengs?
+.. knyttet denne opp til relaterte issues?
 
--   Operativssytem:
--   Nettleserversjon:
--   Utvidelser:
-
-## Sjekkliste:
-
--   [ ] Jeg følger [retningslinjene til prosjektet](https://github.com/SpareBank1/designsystem/wiki/Bidra:-Fra-issue-til-pull-request).
--   [ ] Jeg har gjennomgått koden og sett etter feil på egenhånd.
--   [ ] Jeg har kommentert deler av koden som ikke er selvforklarende.
--   [ ] Jeg har oppdatert dokumentasjonen der dette er relevant.
--   [ ] Jeg har sjekket for skrivefeil.
+-->
