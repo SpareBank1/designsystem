@@ -3150,7 +3150,7 @@ html {
   }
 }
 .ffe-chart-donut__name {
-  color: #808285;
+  color: #676767;
   text-align: center;
 }
 .ffe-chart-donut__fractions {
@@ -3297,7 +3297,7 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  padding: 8px 16px;
+  padding: 8px 40px 8px 16px;
 }
 .ffe-context-message--compact .ffe-context-message-content__icon {
   -ms-flex-item-align: start;
