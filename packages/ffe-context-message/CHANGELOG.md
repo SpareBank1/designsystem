@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.8...@sb1/ffe-context-message@4.0.9) (2020-08-05)
+
+
+### Bug Fixes
+
+* **ffe-context-message:** add padding to compact context message ([9e5db9d](https://github.com/SpareBank1/designsystem/commit/9e5db9daba5661a95c1c413df5118915b312bd07))
+
+
+
+
+
 ## [4.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.7...@sb1/ffe-context-message@4.0.8) (2020-03-18)
 
 **Note:** Version bump only for package @sb1/ffe-context-message

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@3.0.1...@sb1/ffe-chart-donut-react@3.0.2) (2020-08-05)
+
+
+### Bug Fixes
+
+* **ffe-chart-donut-react:** accessible text color in chart name ([35989f2](https://github.com/SpareBank1/designsystem/commit/35989f29e249a9b319dd3768ec5f0370a9c71c1d))
+
+
+
+
+
 ## [3.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@3.0.0...@sb1/ffe-chart-donut-react@3.0.1) (2019-10-21)
 
 ### Bug Fixes
