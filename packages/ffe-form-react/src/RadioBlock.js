@@ -39,6 +39,9 @@ class RadioBlock extends Component {
                     type="radio"
                     name={name}
                     value={value}
+                    aria-describedby={
+                        children ? `${this.id}-described` : undefined
+                    }
                     {...inputProps}
                 />
                 <div className="ffe-radio-block__content">
@@ -56,6 +59,7 @@ class RadioBlock extends Component {
                             className={classNames('ffe-radio-block__wrapper', {
                                 'ffe-radio-block__wrapper--empty': !children,
                             })}
+                            id={`${this.id}-described`}
                         >
                             {children}
                         </div>
