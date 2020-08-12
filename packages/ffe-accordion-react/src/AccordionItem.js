@@ -53,7 +53,7 @@ class AccordionItem extends Component {
         const open = this.getOpen();
 
         return (
-            <li
+            <div
                 className={classNames(
                     {
                         'ffe-accordion-item': true,
@@ -94,7 +94,7 @@ class AccordionItem extends Component {
                         {children}
                     </div>
                 </Collapse>
-            </li>
+            </div>
         );
     }
 }

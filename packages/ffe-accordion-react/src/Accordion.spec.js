@@ -11,9 +11,9 @@ const getWrapper = props =>
     );
 
 describe('<Accordion />', () => {
-    it('renders an unorderered list', () => {
+    it('renders a tablist', () => {
         const wrapper = getWrapper();
-        expect(wrapper.is('ul')).toBe(true);
+        expect(wrapper.find('[role="tablist"]').exists()).toBe(true);
     });
     it('provides the same uuid property to each child', () => {
         const wrapper = getWrapper();
