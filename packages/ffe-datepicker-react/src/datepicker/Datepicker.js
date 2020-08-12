@@ -23,7 +23,7 @@ export default class Datepicker extends Component {
             minDate: props.minDate,
             maxDate: props.maxDate,
             lastValidDate: '',
-            calendarActiveDate: '',
+            calendarActiveDate: validateDate(props.value) ? props.value : '',
         };
 
         this.datepickerId = uuid();
@@ -252,6 +252,7 @@ export default class Datepicker extends Component {
             {
                 openOnFocus: false,
                 displayDatePicker: false,
+                calendarActiveDate: date,
             },
             () => this.dateInputRef.focus(),
         );
