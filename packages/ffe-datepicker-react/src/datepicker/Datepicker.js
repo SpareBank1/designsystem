@@ -9,6 +9,7 @@ import SimpleDate from '../datelogic/simpledate';
 import dateErrorTypes from '../datelogic/error-types';
 import i18n from '../i18n/i18n';
 import { validateDate } from '../util/dateUtil';
+import { debounce } from 'lodash';
 
 export default class Datepicker extends Component {
     constructor(props) {
@@ -22,6 +23,7 @@ export default class Datepicker extends Component {
             minDate: props.minDate,
             maxDate: props.maxDate,
             lastValidDate: '',
+            calendarActiveDate: validateDate(props.value) ? props.value : '',
         };
 
         this.datepickerId = uuid();
@@ -43,6 +45,12 @@ export default class Datepicker extends Component {
         this.onError = this.onError.bind(this);
     }
 
+    debounceCalendar = debounce(value => {
+        if (value !== this.state.lastValidDate && validateDate(value)) {
+            this.setState({ calendarActiveDate: value, lastValidDate: value });
+        }
+    }, 250);
+
     componentWillUnmount() {
         this.removeGlobalEventListeners();
     }
@@ -58,6 +66,8 @@ export default class Datepicker extends Component {
                 this.validateDateIntervals,
             );
         }
+
+        this.debounceCalendar(this.props.value);
     }
 
     onInputFocus() {
@@ -242,6 +252,7 @@ export default class Datepicker extends Component {
             {
                 openOnFocus: false,
                 displayDatePicker: false,
+                calendarActiveDate: date,
             },
             () => this.dateInputRef.focus(),
         );
@@ -301,13 +312,7 @@ export default class Datepicker extends Component {
             value,
             fullWidth,
         } = this.props;
-        const {
-            focusOnCalendarOpen,
-            minDate,
-            maxDate,
-            lastValidDate,
-        } = this.state;
-        const latestValue = validateDate(value) ? value : lastValidDate;
+        const { focusOnCalendarOpen, minDate, maxDate } = this.state;
 
         if (this.state.ariaInvalid && !inputProps['aria-describedby']) {
             inputProps[
@@ -373,7 +378,7 @@ export default class Datepicker extends Component {
                             maxDate={maxDate}
                             minDate={minDate}
                             onDatePicked={this.datePickedHandler}
-                            selectedDate={latestValue}
+                            selectedDate={this.state.calendarActiveDate}
                             onBlurHandler={this.blurHandler}
                             focusOnOpen={focusOnCalendarOpen}
                             ref={c => {
