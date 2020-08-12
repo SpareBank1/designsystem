@@ -25,25 +25,25 @@
     "build:types": "copyfiles -f src/index.d.ts types/",
     "lint": "eslint src/.",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "update": "npm-check --update"
   },
   "dependencies": {
     "@sb1/ffe-core-react": "^4.2.0",
     "@sb1/ffe-form": "^13.0.11",
     "@sb1/ffe-icons-react": "^7.2.13",
     "classnames": "^2.2.5",
-    "downshift": "^5.0.0",
+    "downshift": "^6.0.3",
     "lodash.isequal": "^4.5.0",
     "prop-types": "^15.6.0",
     "react-custom-scrollbars": "^4.2.1",
     "react-proptype-conditional-require": "^1.0.4"
   },
   "devDependencies": {
-    "enzyme": "^3.7.0",
-    "enzyme-adapter-react-16": "^1.7.0",
-    "eslint": "^5.9.0",
-    "jest": "^23.4.2",
-    "less": "^3.8.1",
+    "eslint": "^7.6.0",
+    "jest": "^26.3.0",
+    "less": "^3.12.2",
+    "npm-check": "^5.9.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0"
   },
