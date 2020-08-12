@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-datepicker-react",
-  "version": "4.2.25",
+  "version": "4.2.26",
   "license": "MIT",
   "files": [
     "lib",

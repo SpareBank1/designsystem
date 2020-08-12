@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@3.1.5...@sb1/ffe-cards-react@4.0.0) (2020-08-12)
+
+
+### Features
+
+* **ffe-cards-react:** forward ref ([08aacf1](https://github.com/SpareBank1/designsystem/commit/08aacf180574aa1bdde04e6af40a855e1f633db1))
+
+
+### BREAKING CHANGES
+
+* **ffe-cards-react:** "When you start using forwardRef in a component library, you should treat it as a breaking change and release a new major version of your library. This is because your library likely has an observably different behavior (such as what refs get assigned to, and what types are exported), and this can break apps and other libraries that depend on the old behavior."
+
+
+
+
+
 ## [3.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@3.1.4...@sb1/ffe-cards-react@3.1.5) (2020-08-04)
 
 **Note:** Version bump only for package @sb1/ffe-cards-react

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.26](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@4.2.25...@sb1/ffe-datepicker-react@4.2.26) (2020-08-12)
+
+
+### Bug Fixes
+
+* **ffe-datepicker-react:** added calendar lookup debounce ([#922](https://github.com/SpareBank1/designsystem/issues/922)) ([84ef7e2](https://github.com/SpareBank1/designsystem/commit/84ef7e2b8204282e38b975e744d21fa7b555f7c8))
+
+
+
+
+
 ## [4.2.25](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@4.2.24...@sb1/ffe-datepicker-react@4.2.25) (2020-08-04)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker-react
