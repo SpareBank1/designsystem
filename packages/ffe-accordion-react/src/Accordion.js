@@ -6,7 +6,6 @@ import classNames from 'classnames';
 class Accordion extends Component {
     constructor() {
         super();
-
         this.id = uuid();
     }
 
@@ -14,7 +13,7 @@ class Accordion extends Component {
         const { children, isBlue, className, ...rest } = this.props;
 
         return (
-            <ul
+            <div
                 {...rest}
                 aria-multiselectable="true"
                 className={classNames(
@@ -26,10 +25,10 @@ class Accordion extends Component {
                 )}
                 role="tablist"
             >
-                {React.Children.map(children, ele =>
-                    React.cloneElement(ele, { uuid: this.id }),
+                {React.Children.map(children, (ele, index) =>
+                    React.cloneElement(ele, { uuid: this.id, index }),
                 )}
-            </ul>
+            </div>
         );
     }
 }

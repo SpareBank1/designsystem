@@ -13,8 +13,8 @@ const getWrapper = () =>
 describe('<Accordion />', () => {
     it('adds modifier class to block element', () => {
         const wrapper = getWrapper();
-        expect(
-            wrapper.find('ul.ffe-accordion.ffe-accordion--blue').length,
-        ).toBe(1);
+        expect(wrapper.find('.ffe-accordion.ffe-accordion--blue').length).toBe(
+            1,
+        );
     });
 });
