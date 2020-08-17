@@ -88,7 +88,6 @@ class AccordionItem extends Component {
                         className="ffe-accordion-item__content"
                         role="tabpanel"
                         id={`panel-${uuid}-${index}`}
-                        aria-hidden={!open}
                         aria-labelledby={`tab-${uuid}-${index}`}
                     >
                         {children}
