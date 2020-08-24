@@ -557,7 +557,8 @@ html {
   .native .ffe-h3,
   .native .ffe-h4,
   .native .ffe-h5,
-  .native .ffe-h6 {
+  .native .ffe-h6,
+  .native .ffe-table__caption {
     color: #ffffff;
   }
 }
@@ -566,7 +567,8 @@ html {
 .ffe-h3--error,
 .ffe-h4--error,
 .ffe-h5--error,
-.ffe-h6--error {
+.ffe-h6--error,
+.ffe-table__caption--error {
   color: #da3d00;
 }
 @media (prefers-color-scheme: dark) {
@@ -575,7 +577,8 @@ html {
   .native .ffe-h3--error,
   .native .ffe-h4--error,
   .native .ffe-h5--error,
-  .native .ffe-h6--error {
+  .native .ffe-h6--error,
+  .native .ffe-table__caption--error {
     color: #ff2424;
   }
 }
@@ -584,7 +587,8 @@ html {
 .ffe-h3--inline,
 .ffe-h4--inline,
 .ffe-h5--inline,
-.ffe-h6--inline {
+.ffe-h6--inline,
+.ffe-table__caption--inline {
   display: inline-block;
 }
 .ffe-h1--no-margin,
@@ -592,7 +596,8 @@ html {
 .ffe-h3--no-margin,
 .ffe-h4--no-margin,
 .ffe-h5--no-margin,
-.ffe-h6--no-margin {
+.ffe-h6--no-margin,
+.ffe-table__caption--no-margin {
   margin: 0;
 }
 .ffe-h1--with-border,
@@ -600,7 +605,8 @@ html {
 .ffe-h3--with-border,
 .ffe-h4--with-border,
 .ffe-h5--with-border,
-.ffe-h6--with-border {
+.ffe-h6--with-border,
+.ffe-table__caption--with-border {
   border-bottom: 1px solid #ccc;
   padding-bottom: 10px;
 }
@@ -610,7 +616,8 @@ html {
   .native .ffe-h3--with-border,
   .native .ffe-h4--with-border,
   .native .ffe-h5--with-border,
-  .native .ffe-h6--with-border {
+  .native .ffe-h6--with-border,
+  .native .ffe-table__caption--with-border {
     border-color: #858585;
   }
 }
@@ -619,7 +626,8 @@ html {
 .ffe-h3--no-underline,
 .ffe-h4--no-underline,
 .ffe-h5--no-underline,
-.ffe-h6--no-underline {
+.ffe-h6--no-underline,
+.ffe-table__caption--no-underline {
   text-decoration: none;
 }
 .ffe-h1--text-center,
@@ -627,7 +635,8 @@ html {
 .ffe-h3--text-center,
 .ffe-h4--text-center,
 .ffe-h5--text-center,
-.ffe-h6--text-center {
+.ffe-h6--text-center,
+.ffe-table__caption--text-center {
   text-align: center;
 }
 .ffe-body-text,
@@ -817,7 +826,8 @@ html {
   .ffe-h3--no-margin,
   .ffe-h4--no-margin,
   .ffe-h5--no-margin,
-  .ffe-h6--no-margin {
+  .ffe-h6--no-margin,
+  .ffe-table__caption--no-margin {
     margin: 0;
   }
   .ffe-lead-paragraph {
@@ -872,7 +882,8 @@ html {
   .ffe-h3--no-margin,
   .ffe-h4--no-margin,
   .ffe-h5--no-margin,
-  .ffe-h6--no-margin {
+  .ffe-h6--no-margin,
+  .ffe-table__caption--no-margin {
     margin: 0;
   }
 }
