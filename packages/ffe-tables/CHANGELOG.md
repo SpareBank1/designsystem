@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@10.0.8...@sb1/ffe-tables@10.0.9) (2020-08-24)
+
+
+### Bug Fixes
+
+* **ffe-tables:** ensure caption is more visible in dark mode ([046d9ad](https://github.com/SpareBank1/designsystem/commit/046d9ad7d2ac95724e954bc87d782aff85104cb7))
+
+
+
+
+
 ## [10.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@10.0.7...@sb1/ffe-tables@10.0.8) (2020-03-18)
 
 **Note:** Version bump only for package @sb1/ffe-tables
