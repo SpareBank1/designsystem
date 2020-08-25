@@ -659,6 +659,12 @@ html {
   margin-bottom: 1em;
   margin-top: 0;
   line-height: 24px;
+  color: #262626;
+}
+@media (prefers-color-scheme: dark) {
+  .native .ffe-body-paragraph {
+    color: #adadad;
+  }
 }
 .ffe-body-paragraph--text-center {
   text-align: center;
