@@ -257,6 +257,12 @@
     margin-bottom: 1em;
     margin-top: 0;
     line-height: 24px;
+    color: @ffe-black;
+    .native & {
+        @media (prefers-color-scheme: dark) {
+            color: @ffe-grey-cloud-darkmode;
+        }
+    }
 
     &--text-center {
         text-align: center;
