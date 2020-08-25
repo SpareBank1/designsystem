@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [15.5.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@15.5.7...@sb1/ffe-core@15.5.8) (2020-08-25)
+
+
+### Bug Fixes
+
+* **ffe-core:** add dark mode styling to ffe-body-paragraph ([b521057](https://github.com/SpareBank1/designsystem/commit/b521057b012b718be23b5524e9e76d8c63d3977e))
+
+
+
+
+
 ## [15.5.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@15.5.6...@sb1/ffe-core@15.5.7) (2020-03-18)
 
 **Note:** Version bump only for package @sb1/ffe-core
