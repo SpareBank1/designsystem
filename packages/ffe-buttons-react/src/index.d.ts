@@ -1,10 +1,19 @@
 import * as React from 'react';
 
+type To =
+    | string
+    | {
+          pathname: string;
+          search?: string;
+          hash?: string;
+          state?: { [key: string]: any };
+      };
+
 export interface MinimalBaseButtonProps extends React.HTMLProps<HTMLElement> {
     className?: string;
     element?: HTMLElement | string | React.ElementType;
     innerRef?: React.Ref<HTMLElement>;
-    to?: string; //used in order to make buttons work with react-router functionality in typescript-files.
+    to?: To; //used in order to make buttons work with react-router functionality in typescript-files.
 }
 
 export interface BaseButtonProps extends MinimalBaseButtonProps {
