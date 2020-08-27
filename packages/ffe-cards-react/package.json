@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-cards-react",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "React implementation of ffe-react",
   "license": "MIT",
   "author": "SpareBank 1",
@@ -33,8 +33,8 @@
     "prop-types": "^15.7.0"
   },
   "devDependencies": {
-    "@sb1/ffe-icons": "^12.13.5",
-    "@sb1/ffe-icons-react": "^7.2.13",
+    "@sb1/ffe-icons": "^12.14.0",
+    "@sb1/ffe-icons-react": "^7.2.14",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.7.0",
     "jest": "^23.4.2",

@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.14.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.13.5...@sb1/ffe-icons@12.14.0) (2020-08-27)
+
+
+### Features
+
+* **ffe-icons:** nye hus-ikoner ([5e1aca9](https://github.com/SpareBank1/designsystem/commit/5e1aca97d5d667424997ed40b75d88c4c679e159))
+* **ffe-icons:** nytt avtalegiro ikon ([f7a4bbd](https://github.com/SpareBank1/designsystem/commit/f7a4bbd62c7a0ec017981140b1ccaea19981db88))
+
+
+
+
+
 ## [12.13.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.13.4...@sb1/ffe-icons@12.13.5) (2020-08-04)
 
 
