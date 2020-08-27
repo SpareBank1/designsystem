@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.2.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@12.2.4...@sb1/ffe-buttons-react@12.2.5) (2020-08-27)
+
+
+### Bug Fixes
+
+* **ffe-buttons-react:** to property when usin react router can be object ([8162b32](https://github.com/SpareBank1/designsystem/commit/8162b32fe7b581297060548520471acb84963ca9))
+
+
+
+
+
 ## [12.2.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@12.2.3...@sb1/ffe-buttons-react@12.2.4) (2020-08-04)
 
 **Note:** Version bump only for package @sb1/ffe-buttons-react
