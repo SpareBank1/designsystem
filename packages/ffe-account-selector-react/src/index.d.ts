@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-interface Account {
+export interface Account {
     accountNumber: string;
     name: string;
     currencyCode?: string;
@@ -11,10 +11,10 @@ export interface AccountSelectorProps {
     accounts?: Array<Account>;
     className?: string;
     id: string;
-    locale: Array<String>;
+    locale: Array<string>;
     noMatches?: string;
-    onAccountSelected: React.ChangeEventHandler<HTMLInputElement>;
-    onChange: React.ChangeEventHandler<HTMLInputElement>;
+    onAccountSelected: (account: Account) => void;
+    onChange: (value: string) => void;
     selectedAccount?: Account;
     showBalance?: boolean;
     value: string;
@@ -31,9 +31,9 @@ export interface AccountSelectorMultiProps {
     accounts?: Array<Account>;
     id: string;
     isLoading?: boolean;
-    locale: Array<String>;
+    locale: Array<string>;
     noMatches?: string;
-    onAccountSelected: React.ChangeEventHandler<HTMLInputElement>;
+    onAccountSelected: (account: Account) => void;
     onBlur: Function;
     onSelectAll: Function;
     selectedAccounts?: Array<Account>;
