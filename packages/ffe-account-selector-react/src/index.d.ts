@@ -11,7 +11,7 @@ export interface AccountSelectorProps {
     accounts?: Array<Account>;
     className?: string;
     id: string;
-    locale: Array<string>;
+    locale: string;
     noMatches?: string;
     onAccountSelected: (account: Account) => void;
     onChange: (value: string) => void;
