@@ -4469,6 +4469,11 @@ html {
   padding-left: 32px;
   -webkit-tap-highlight-color: rgba(161, 223, 255, 0.15);
 }
+@media (prefers-color-scheme: dark) {
+  .native .ffe-checkbox {
+    color: #adadad;
+  }
+}
 .ffe-checkbox--no-margin {
   margin-top: 0;
   margin-bottom: 0;
