@@ -149,6 +149,7 @@ If you've made it this far, it's time to make a pull request. If this is your fi
 
 -   [Online SVG Optimizer](https://petercollingridge.appspot.com/svg-editor)
 -   [Online SVG editor](https://github.com/SVG-Edit/svgedit)
+-   [SVGOMG](https://jakearchibald.github.io/svgomg/)
 
 ### Optimizing with Inkscape
 
@@ -161,7 +162,7 @@ If you've made it this far, it's time to make a pull request. If this is your fi
 7. SHIFT-CTRL-S Save the icon as Optimized SVG
 8. Open the icon in a text editor and check if it contains any transform attributes. If not, jump to 10.
 9. Open the icon in http://editor.method.ac/ CTRL-A and choose Object->Reorient Path - This usually removes transforms. Save the file to disk.
-10. Remove all metadata og unnecessary whitespace. The structure of the .svg file should be <svg viewBox="0 0 200 200" xmln"..."><path d="..."/></svg>
+10. Remove all metadata og unnecessary whitespace. The structure of the .svg file should be <svg viewBox="0 0 200 200" xmln"..."><path d="..."/></svg> [SVGOMG](https://jakearchibald.github.io/svgomg/) does a good job in removing cruft.
 
 ## Known issues
 
