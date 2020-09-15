@@ -126,6 +126,14 @@
 @ffe-blue-royal-fill: @ffe-blue-royal-escape;
 @ffe-red-fill: @ffe-red-escape;
 
+.ffe-check-list__item {
+    .native & {
+        @media (prefers-color-scheme: dark) {
+            color: @ffe-grey-cloud-darkmode;
+        }
+    }
+}
+
 .ffe-check-list {
     > .ffe-check-list__item {
         &::before {
