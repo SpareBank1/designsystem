@@ -6974,6 +6974,11 @@ input:not([type='radio']):not([type='checkbox']) {
   position: relative;
   line-height: 1.5em;
 }
+@media (prefers-color-scheme: dark) {
+  .native .ffe-check-list__item {
+    color: #adadad;
+  }
+}
 .ffe-check-list > .ffe-check-list__item::before {
   content: '\2713';
   display: block;
@@ -7818,6 +7823,11 @@ input:not([type='radio']):not([type='checkbox']) {
 }
 .ffe-table__content--text-right {
   text-align: right;
+}
+@media (prefers-color-scheme: dark) {
+  .native .ffe-table__content {
+    color: #adadad;
+  }
 }
 @media (min-width: 768px) {
   .ffe-table__content {
