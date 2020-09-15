@@ -218,6 +218,12 @@
             text-align: right;
         }
 
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-grey-cloud-darkmode;
+            }
+        }
+
         @media (min-width: @breakpoint-md) {
             display: block;
             max-width: none;
