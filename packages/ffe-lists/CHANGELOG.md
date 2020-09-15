@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@8.0.10...@sb1/ffe-lists@8.0.11) (2020-09-15)
+
+
+### Bug Fixes
+
+* **ffe-lists:** darkode styling missing for checklist ([290e358](https://github.com/SpareBank1/designsystem/commit/290e358e6948f2222ae398c615510f432d7f17c3))
+
+
+
+
+
 ## [8.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@8.0.9...@sb1/ffe-lists@8.0.10) (2020-08-25)
 
 **Note:** Version bump only for package @sb1/ffe-lists

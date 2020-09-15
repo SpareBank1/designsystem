@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.15.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.14.0...@sb1/ffe-icons@12.15.0) (2020-09-15)
+
+
+### Features
+
+* **ffe-icons:** legge til hus-tommer-ikon.svg og hus-hammer-ikon.svg ([838162d](https://github.com/SpareBank1/designsystem/commit/838162dba31dd26c13fbf1c77758bd6bee799542))
+
+
+
+
+
 # [12.14.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.13.5...@sb1/ffe-icons@12.14.0) (2020-08-27)
 
 
