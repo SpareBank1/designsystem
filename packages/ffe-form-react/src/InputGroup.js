@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import { bool, func, node, oneOfType, string } from 'prop-types';
 import { v4 as uuid } from 'uuid';
 import Tooltip from './Tooltip';
@@ -6,112 +6,118 @@ import Label from './Label';
 import classNames from 'classnames';
 import ErrorFieldMessage from './ErrorFieldMessage';
 
-class InputGroup extends Component {
-    constructor(props) {
-        super();
-        this.id = props.inputId ? props.inputId : `input-${uuid()}`;
-    }
+const InputGroup = ({
+    inputId,
+    children,
+    className,
+    extraMargin = true,
+    description,
+    label,
+    fieldMessage,
+    tooltip,
+    onTooltipToggle,
+    labelId,
+    ...rest
+}) => {
+    const [id] = useState(inputId ? inputId : `input-${uuid()}`);
+    const descriptionId = description ? `${id}-description` : undefined;
+    const fieldMessageId = fieldMessage
+        ? (fieldMessage.props && fieldMessage.props.id) || `${id}-fieldmessage`
+        : undefined;
 
-    render() {
-        const {
-            // eslint-disable-next-line no-unused-vars
-            inputId,
-            children,
-            className,
-            extraMargin,
-            description,
-            label,
-            fieldMessage,
-            tooltip,
-            onTooltipToggle,
-            labelId,
-            ...rest
-        } = this.props;
-
-        if (React.Children.count(children) > 1) {
-            throw new Error(
-                'This element does not support more than one child. If you need more than one element inside your ' +
-                    'InputGroup, please use the function-as-a-child pattern outlined in the documentation.',
-            );
-        }
-
-        if (
-            onTooltipToggle &&
-            typeof tooltip !== 'boolean' &&
-            typeof tooltip !== 'string'
-        ) {
-            throw new Error(
-                'Only use the "onTooltipToggle" prop if you\'re not sending a component of type ' +
-                    '<Tooltip /> in the "tooltip" prop. If you are, use "onClick" on that component instead',
-            );
-        }
-
-        if (tooltip && description) {
-            throw new Error(
-                'Don\'t use both "tooltip" and "description" on an <InputGroup />, pick one of them',
-            );
-        }
-
-        const extraProps = {
-            id: this.id,
-            'aria-invalid': String(
-                !!fieldMessage &&
-                    (typeof fieldMessage === 'string' ||
-                        fieldMessage.type === ErrorFieldMessage),
-            ),
-        };
-
-        const modifiedChildren =
-            typeof children === 'function'
-                ? children(extraProps)
-                : React.cloneElement(children, extraProps);
-
-        return (
-            <div
-                className={classNames(
-                    'ffe-input-group',
-                    { 'ffe-input-group--no-extra-margin': !extraMargin },
-                    { 'ffe-input-group--error': !!fieldMessage },
-                    className,
-                )}
-                {...rest}
-            >
-                {typeof label === 'string' && (
-                    <Label htmlFor={this.id} id={labelId}>
-                        {label}
-                    </Label>
-                )}
-
-                {React.isValidElement(label) &&
-                    React.cloneElement(label, {
-                        htmlFor: this.id,
-                        id: labelId,
-                    })}
-
-                {typeof tooltip === 'string' && (
-                    <Tooltip onClick={onTooltipToggle}>{tooltip}</Tooltip>
-                )}
-
-                {tooltip === true && <Tooltip onClick={onTooltipToggle} />}
-
-                {React.isValidElement(tooltip) && tooltip}
-
-                {description && (
-                    <div className="ffe-small-text">{description}</div>
-                )}
-
-                {modifiedChildren}
-
-                {typeof fieldMessage === 'string' && (
-                    <ErrorFieldMessage element="p">
-                        {fieldMessage}
-                    </ErrorFieldMessage>
-                )}
-                {React.isValidElement(fieldMessage) && fieldMessage}
-            </div>
+    if (React.Children.count(children) > 1) {
+        throw new Error(
+            'This element does not support more than one child. If you need more than one element inside your ' +
+                'InputGroup, please use the function-as-a-child pattern outlined in the documentation.',
         );
     }
-}
+
+    if (
+        onTooltipToggle &&
+        typeof tooltip !== 'boolean' &&
+        typeof tooltip !== 'string'
+    ) {
+        throw new Error(
+            'Only use the "onTooltipToggle" prop if you\'re not sending a component of type ' +
+                '<Tooltip /> in the "tooltip" prop. If you are, use "onClick" on that component instead',
+        );
+    }
+
+    if (tooltip && description) {
+        throw new Error(
+            'Don\'t use both "tooltip" and "description" on an <InputGroup />, pick one of them',
+        );
+    }
+
+    const isInvalid =
+        !!fieldMessage &&
+        (typeof fieldMessage === 'string' ||
+            fieldMessage.type === ErrorFieldMessage);
+
+    const ariaDescribedBy =
+        `${fieldMessageId || ''} ${descriptionId || ''}`.trim() || undefined;
+
+    const extraProps = {
+        id,
+        'aria-invalid': String(isInvalid),
+        'aria-describedby': ariaDescribedBy,
+    };
+
+    const modifiedChildren =
+        typeof children === 'function'
+            ? children(extraProps)
+            : React.cloneElement(children, extraProps);
+
+    return (
+        <div
+            className={classNames(
+                'ffe-input-group',
+                { 'ffe-input-group--no-extra-margin': !extraMargin },
+                { 'ffe-input-group--error': isInvalid },
+                className,
+            )}
+            {...rest}
+        >
+            {typeof label === 'string' && (
+                <Label htmlFor={id} id={labelId}>
+                    {label}
+                </Label>
+            )}
+
+            {React.isValidElement(label) &&
+                React.cloneElement(label, {
+                    htmlFor: id,
+                    id: labelId,
+                })}
+
+            {typeof tooltip === 'string' && (
+                <Tooltip onClick={onTooltipToggle}>{tooltip}</Tooltip>
+            )}
+
+            {tooltip === true && <Tooltip onClick={onTooltipToggle} />}
+
+            {React.isValidElement(tooltip) && tooltip}
+
+            {description && (
+                <div className="ffe-small-text" id={descriptionId}>
+                    {description}
+                </div>
+            )}
+
+            {modifiedChildren}
+
+            {typeof fieldMessage === 'string' && (
+                <ErrorFieldMessage element="p" id={fieldMessageId}>
+                    {fieldMessage}
+                </ErrorFieldMessage>
+            )}
+            {React.isValidElement(fieldMessage) &&
+                React.cloneElement(fieldMessage, {
+                    id: fieldMessageId,
+                })}
+        </div>
+    );
+};
 
 InputGroup.propTypes = {
     /** The id that will be used on the input child if you don't want a generated one */
@@ -135,10 +141,6 @@ InputGroup.propTypes = {
     onTooltipToggle: func,
     /** Use the Tooltip component if you need more flexibility in how the content is rendered. */
     tooltip: oneOfType([bool, node]),
-};
-
-InputGroup.defaultProps = {
-    extraMargin: true,
 };
 
 export default InputGroup;

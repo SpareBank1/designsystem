@@ -17,6 +17,7 @@ describe('<InputGroup>', () => {
         expect(wrapper.exists()).toBe(true);
         expect(wrapper.is('div')).toBe(true);
         expect(wrapper.hasClass('ffe-input-group')).toBe(true);
+        expect(wrapper.hasClass('ffe-input-group--error')).toBe(false);
     });
 
     it('renders the given child', () => {
@@ -56,13 +57,18 @@ describe('<InputGroup>', () => {
         expect(wrapper.find('Tooltip').prop('children')).toBe('custom tooltip');
     });
 
-    it('renders an ErrorFieldMessage and sets aria-invalid if a string is passed as fieldMessage', () => {
+    it('renders an ErrorFieldMessage and sets aria-invalid and aria-describedby if a string is passed as fieldMessage', () => {
         const wrapper = getWrapper({ fieldMessage: 'such error' });
 
-        expect(wrapper.find('ErrorFieldMessage').prop('children')).toBe(
-            'such error',
+        const errorFieldMessage = wrapper.find('ErrorFieldMessage');
+        expect(errorFieldMessage.prop('children')).toBe('such error');
+
+        const input = wrapper.find(Input);
+        expect(wrapper.hasClass('ffe-input-group--error')).toBe(true);
+        expect(input.prop('aria-invalid')).toBe('true');
+        expect(input.prop('aria-describedby')).toBe(
+            errorFieldMessage.prop('id'),
         );
-        expect(wrapper.find(Input).prop('aria-invalid')).toBe('true');
     });
 
     it('renders a Label component if passed a label prop', () => {
@@ -80,30 +86,57 @@ describe('<InputGroup>', () => {
         expect(wrapper.find('Tooltip').prop('children')).toBe('Tooltip text');
     });
 
-    it('renders a ErrorFieldMessage and sets aria-invalid if passed as fieldMessage prop', () => {
+    it('renders a ErrorFieldMessage and sets aria-invalid and aria-describedby if passed as fieldMessage prop', () => {
         const wrapper = getWrapper({
             fieldMessage: <ErrorFieldMessage>Some error</ErrorFieldMessage>,
         });
 
-        expect(wrapper.find('ErrorFieldMessage').exists()).toBe(true);
-        expect(wrapper.find('ErrorFieldMessage').prop('children')).toBe(
-            'Some error',
+        const errorFieldMessage = wrapper.find('ErrorFieldMessage');
+
+        expect(errorFieldMessage.exists()).toBe(true);
+        expect(errorFieldMessage.prop('children')).toBe('Some error');
+
+        const input = wrapper.find(Input);
+        expect(wrapper.hasClass('ffe-input-group--error')).toBe(true);
+        expect(input.prop('aria-invalid')).toBe('true');
+        expect(input.prop('aria-describedby')).toBe(
+            errorFieldMessage.prop('id'),
         );
-        expect(wrapper.find(Input).prop('aria-invalid')).toBe('true');
     });
 
-    it('renders a SuccessFieldMessage if passed as fieldMessage prop', () => {
+    it('connects an ErrorFieldMessage that specifies its own id to the correct input field', () => {
+        const wrapper = getWrapper({
+            fieldMessage: (
+                <ErrorFieldMessage id="best-id">Some error</ErrorFieldMessage>
+            ),
+        });
+
+        const errorFieldMessage = wrapper.find('ErrorFieldMessage');
+        expect(errorFieldMessage.exists()).toBe(true);
+
+        const errorFieldMessageId = errorFieldMessage.prop('id');
+        expect(errorFieldMessageId).toBe('best-id');
+        expect(wrapper.find(Input).prop('aria-describedby')).toBe(
+            errorFieldMessageId,
+        );
+    });
+
+    it('renders a SuccessFieldMessage and sets aria-describedby but not not aria-invalid if passed as fieldMessage prop', () => {
         const wrapper = getWrapper({
             fieldMessage: (
                 <SuccessFieldMessage>Some success</SuccessFieldMessage>
             ),
         });
 
-        expect(wrapper.find('SuccessFieldMessage').exists()).toBe(true);
-        expect(wrapper.find('SuccessFieldMessage').prop('children')).toBe(
-            'Some success',
+        const successFieldMessage = wrapper.find('SuccessFieldMessage');
+        expect(successFieldMessage.exists()).toBe(true);
+        expect(successFieldMessage.prop('children')).toBe('Some success');
+        expect(wrapper.hasClass('ffe-input-group--error')).toBe(false);
+        const input = wrapper.find(Input);
+        expect(input.prop('aria-invalid')).toBe('false');
+        expect(input.prop('aria-describedby')).toBe(
+            successFieldMessage.prop('id'),
         );
-        expect(wrapper.find(Input).prop('aria-invalid')).toBe('false');
     });
 
     it('throws error when receiving multiple children', () => {
@@ -160,11 +193,15 @@ describe('<InputGroup>', () => {
         expect(wrapper.find(Input).prop('aria-invalid')).toBe('false');
     });
 
-    it('renders a static tooltip if description is set', () => {
+    it('renders a static tooltip and adds aria-describedby if description is set', () => {
         const wrapper = getWrapper({
             description: 'description',
         });
-        expect(wrapper.find('.ffe-small-text').text()).toBe('description');
+        const description = wrapper.find('.ffe-small-text');
+        expect(description.text()).toBe('description');
+        expect(description.prop('id')).toBe(
+            wrapper.find(Input).prop('aria-describedby'),
+        );
     });
 
     it('throws if both tooltip and description is set', () => {
@@ -172,6 +209,47 @@ describe('<InputGroup>', () => {
             getWrapper({ description: 'asda', tooltip: 'asdsad' }),
         ).toThrow(
             'Don\'t use both "tooltip" and "description" on an <InputGroup />, pick one of them',
+        );
+    });
+
+    it('sets aria-describedby with two ids when both fieldMessage and description are defined', () => {
+        const wrapper = getWrapper({
+            description: 'description',
+            fieldMessage: 'field message',
+        });
+        const fieldMessageId = wrapper.find('ErrorFieldMessage').prop('id');
+        const descriptionId = wrapper.find('.ffe-small-text').prop('id');
+        expect(wrapper.find(Input).prop('aria-describedby')).toBe(
+            `${fieldMessageId} ${descriptionId}`,
+        );
+    });
+
+    it('does not set aria-describedby when neither fieldMessage or description is defined', () => {
+        const wrapper = getWrapper();
+        expect(wrapper.find(Input).prop('aria-describedby')).toBe(undefined);
+    });
+
+    it('adds aria-describedby when adding fieldMessage on second render', () => {
+        const wrapper = getWrapper();
+        expect(wrapper.find(Input).prop('aria-describedby')).toBe(undefined);
+        wrapper.setProps({ fieldMessage: 'field message' });
+        expect(wrapper.find(Input).prop('aria-describedby')).not.toBe(
+            undefined,
+        );
+        expect(wrapper.find(Input).prop('aria-describedby')).toBe(
+            wrapper.find('ErrorFieldMessage').prop('id'),
+        );
+    });
+
+    it('adds aria-describedby when adding description on second render', () => {
+        const wrapper = getWrapper();
+        expect(wrapper.find(Input).prop('aria-describedby')).toBe(undefined);
+        wrapper.setProps({ description: 'description' });
+        expect(wrapper.find(Input).prop('aria-describedby')).not.toBe(
+            undefined,
+        );
+        expect(wrapper.find(Input).prop('aria-describedby')).toBe(
+            wrapper.find('.ffe-small-text').prop('id'),
         );
     });
 });
