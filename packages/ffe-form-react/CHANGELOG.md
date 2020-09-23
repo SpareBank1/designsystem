@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@7.0.1...@sb1/ffe-form-react@7.1.0) (2020-09-23)
+
+
+### Features
+
+* **ffe-form-react:** add `aria-describedby` to `InputGroup` ([50610c2](https://github.com/SpareBank1/designsystem/commit/50610c25886b19424d464ee6c57ba8ba891e19f5))
+
+
+
+
+
 ## [7.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@7.0.0...@sb1/ffe-form-react@7.0.1) (2020-08-07)
 
 
