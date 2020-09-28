@@ -3408,6 +3408,15 @@ html {
 .ffe-dateinput__field::-ms-clear {
   display: none;
 }
+.ffe-dateinput__field[aria-invalid='true'] {
+  border-color: #da3d00;
+  border-style: solid;
+}
+@media (prefers-color-scheme: dark) {
+  .native .ffe-dateinput__field[aria-invalid='true'] {
+    border-color: #ff2424;
+  }
+}
 .ffe-dateinput__icon {
   position: absolute;
   right: 12px;
