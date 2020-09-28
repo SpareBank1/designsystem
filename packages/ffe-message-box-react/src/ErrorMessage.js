@@ -8,7 +8,8 @@ import BaseMessage from './BaseMessage';
 const ErrorMessage = props => (
     <BaseMessage
         type="error"
-        icon={<UtropstegnIkon />}
+        icon={<UtropstegnIkon aria-hidden="true" />}
+        role="alert"
         {...props}
     />
 );
