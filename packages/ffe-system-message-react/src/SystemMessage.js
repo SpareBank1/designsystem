@@ -35,6 +35,7 @@ class SystemMessage extends Component {
             icon,
             locale,
             modifier,
+            ...rest
         } = this.props;
 
         if (this.state.closed) {
@@ -54,6 +55,7 @@ class SystemMessage extends Component {
                 style={{
                     transition: `height ${animationLengthMs / 1000}s`,
                 }}
+                {...rest}
             >
                 <div className="ffe-system-message">
                     <span className="ffe-system-message__icon">{icon}</span>
@@ -64,7 +66,7 @@ class SystemMessage extends Component {
                         onClick={this.close}
                         type="button"
                     >
-                        <KryssIkon />
+                        <KryssIkon aria-hidden="true" />
                     </button>
                 </div>
             </div>
