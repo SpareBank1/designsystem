@@ -1,7 +1,9 @@
 import * as React from 'react';
 
 export interface ComponentBaseProps
-    extends React.HtmlHTMLAttributes<HTMLElement> {
+    extends React.HtmlHTMLAttributes<
+        HTMLElement | HTMLButtonElement | HTMLAnchorElement
+    > {
     className?: string;
     element?: HTMLElement | string | React.ElementType;
     children?: React.ReactNode;
