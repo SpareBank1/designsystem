@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@4.0.2...@sb1/ffe-cards-react@4.0.3) (2020-09-28)
+
+
+### Bug Fixes
+
+* **ffe-cards-react:** cardbase need to be able to be a button or anchor ([3cc02c1](https://github.com/SpareBank1/designsystem/commit/3cc02c181382593fb12958b9eb97a52d6a7e7715))
+
+
+
+
+
 ## [4.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@4.0.1...@sb1/ffe-cards-react@4.0.2) (2020-09-15)
 
 **Note:** Version bump only for package @sb1/ffe-cards-react
