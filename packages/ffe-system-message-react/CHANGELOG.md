@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@6.1.6...@sb1/ffe-system-message-react@6.2.0) (2020-10-02)
+
+
+### Features
+
+* **ffe-system-message-react:** add role="alert" to error message ([f9ec168](https://github.com/SpareBank1/designsystem/commit/f9ec16889e3b3003a11075c969dff52ae6b0cd09))
+
+
+
+
+
 ## [6.1.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@6.1.5...@sb1/ffe-system-message-react@6.1.6) (2020-09-15)
 
 **Note:** Version bump only for package @sb1/ffe-system-message-react

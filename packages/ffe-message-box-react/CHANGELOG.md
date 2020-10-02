@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@6.0.20...@sb1/ffe-message-box-react@6.1.0) (2020-10-02)
+
+
+### Features
+
+* **ffe-message-box-react:** add role="alert" to ErrorMessage ([6e2f73a](https://github.com/SpareBank1/designsystem/commit/6e2f73a8b14e46e724bd9b25c7ffb86b12d31c92))
+
+
+
+
+
 ## [6.0.20](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@6.0.19...@sb1/ffe-message-box-react@6.0.20) (2020-09-15)
 
 **Note:** Version bump only for package @sb1/ffe-message-box-react

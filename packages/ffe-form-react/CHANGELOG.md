@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@7.1.0...@sb1/ffe-form-react@7.2.0) (2020-10-02)
+
+
+### Features
+
+* **ffe-form-react:** add role="alert" to ErrorFieldMessage ([ff6ea6c](https://github.com/SpareBank1/designsystem/commit/ff6ea6cd367c377eb538e959f9ba6fff88230ac7))
+
+
+
+
+
 # [7.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@7.0.1...@sb1/ffe-form-react@7.1.0) (2020-09-23)
 
 
