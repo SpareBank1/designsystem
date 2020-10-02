@@ -82,7 +82,6 @@ export default class ContextMessage extends Component {
 
         return (
             <div
-                {...rest}
                 aria-describedby={contentElementId}
                 aria-labelledby={header && headerElementId}
                 className={classNames(
@@ -98,6 +97,7 @@ export default class ContextMessage extends Component {
                     ...style,
                     transition: `height ${animationLengthMs / 1000}s`,
                 }}
+                {...rest}
             >
                 <div className="ffe-context-message-content">
                     {icon && this.renderIcon()}
