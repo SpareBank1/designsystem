@@ -1,6 +1,7 @@
 import * as React from 'react';
 
-export interface MessageBoxProps {
+export interface MessageBoxProps
+    extends Omit<React.HTMLAttributes<HTMLDivElement>, 'title'> {
     children?: React.ReactNode;
     className?: string;
     /**
