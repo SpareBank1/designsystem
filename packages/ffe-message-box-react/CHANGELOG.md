@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@6.1.0...@sb1/ffe-message-box-react@6.1.1) (2020-10-06)
+
+
+### Bug Fixes
+
+* **ffe-message-box-react:** fix MessageBox Typescript types ([be1e239](https://github.com/SpareBank1/designsystem/commit/be1e2394eea4be49cccf8169375ada1b5fb267aa))
+
+
+
+
+
 # [6.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@6.0.20...@sb1/ffe-message-box-react@6.1.0) (2020-10-02)
 
 
