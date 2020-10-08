@@ -17,7 +17,7 @@ describe('<InputGroup>', () => {
         expect(wrapper.exists()).toBe(true);
         expect(wrapper.is('div')).toBe(true);
         expect(wrapper.hasClass('ffe-input-group')).toBe(true);
-        expect(wrapper.hasClass('ffe-input-group--error')).toBe(false);
+        expect(wrapper.hasClass('ffe-input-group--message')).toBe(false);
     });
 
     it('renders the given child', () => {
@@ -64,7 +64,7 @@ describe('<InputGroup>', () => {
         expect(errorFieldMessage.prop('children')).toBe('such error');
 
         const input = wrapper.find(Input);
-        expect(wrapper.hasClass('ffe-input-group--error')).toBe(true);
+        expect(wrapper.hasClass('ffe-input-group--message')).toBe(true);
         expect(input.prop('aria-invalid')).toBe('true');
         expect(input.prop('aria-describedby')).toBe(
             errorFieldMessage.prop('id'),
@@ -97,7 +97,7 @@ describe('<InputGroup>', () => {
         expect(errorFieldMessage.prop('children')).toBe('Some error');
 
         const input = wrapper.find(Input);
-        expect(wrapper.hasClass('ffe-input-group--error')).toBe(true);
+        expect(wrapper.hasClass('ffe-input-group--message')).toBe(true);
         expect(input.prop('aria-invalid')).toBe('true');
         expect(input.prop('aria-describedby')).toBe(
             errorFieldMessage.prop('id'),
@@ -131,7 +131,7 @@ describe('<InputGroup>', () => {
         const successFieldMessage = wrapper.find('SuccessFieldMessage');
         expect(successFieldMessage.exists()).toBe(true);
         expect(successFieldMessage.prop('children')).toBe('Some success');
-        expect(wrapper.hasClass('ffe-input-group--error')).toBe(false);
+        expect(wrapper.hasClass('ffe-input-group--message')).toBe(true);
         const input = wrapper.find(Input);
         expect(input.prop('aria-invalid')).toBe('false');
         expect(input.prop('aria-describedby')).toBe(
