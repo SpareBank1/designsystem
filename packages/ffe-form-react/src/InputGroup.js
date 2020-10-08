@@ -54,6 +54,8 @@ const InputGroup = ({
         (typeof fieldMessage === 'string' ||
             fieldMessage.type === ErrorFieldMessage);
 
+    const hasMessage = !!fieldMessage;
+
     const ariaDescribedBy =
         `${fieldMessageId || ''} ${descriptionId || ''}`.trim() || undefined;
 
@@ -73,7 +75,7 @@ const InputGroup = ({
             className={classNames(
                 'ffe-input-group',
                 { 'ffe-input-group--no-extra-margin': !extraMargin },
-                { 'ffe-input-group--error': isInvalid },
+                { 'ffe-input-group--message': hasMessage },
                 className,
             )}
             {...rest}
