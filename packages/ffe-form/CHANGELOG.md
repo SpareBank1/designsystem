@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [14.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@13.0.13...@sb1/ffe-form@14.0.0) (2020-10-08)
+
+
+### Bug Fixes
+
+* **ffe-form:** --error -> --message ([a054404](https://github.com/SpareBank1/designsystem/commit/a054404319d2e4b992412b0ccc0a4393c8a51fd0))
+
+
+### BREAKING CHANGES
+
+* **ffe-form:** using --message instead og --error
+The message does not have to be an error so chaning to a more appropriate class
+
+
+
+
+
 ## [13.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@13.0.12...@sb1/ffe-form@13.0.13) (2020-09-02)
 
 

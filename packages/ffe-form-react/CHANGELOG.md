@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@7.2.0...@sb1/ffe-form-react@7.2.1) (2020-10-08)
+
+
+### Bug Fixes
+
+* **ffe-form-react:** using class message instead og error ([f1b3268](https://github.com/SpareBank1/designsystem/commit/f1b3268aeaec766ce2909b8b4909af4ccbaaddba))
+
+
+
+
+
 # [7.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@7.1.0...@sb1/ffe-form-react@7.2.0) (2020-10-02)
 
 
