@@ -16,6 +16,10 @@ export interface ContextMessageProps
     style?: React.CSSProperties;
 }
 
+export interface ContextErrorMessageProps extends ContextMessageProps {
+    alert?: boolean;
+}
+
 declare class ContextInfoMessage extends React.Component<
     ContextMessageProps,
     any
@@ -29,6 +33,6 @@ declare class ContextSuccessMessage extends React.Component<
     any
 > {}
 declare class ContextErrorMessage extends React.Component<
-    ContextMessageProps,
+    ContextErrorMessageProps,
     any
 > {}
