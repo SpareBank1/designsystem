@@ -13,6 +13,10 @@ export interface MessageBoxProps
     title?: React.ReactNode;
 }
 
+export interface ErrorMessageBoxProps extends MessageBoxProps {
+    alert?: boolean;
+}
+
 export interface InfoMessageListItemProps {
     children: string;
     href?: string;
@@ -23,7 +27,7 @@ export interface InfoMessageListProps {
 }
 
 declare class SuccessMessage extends React.Component<MessageBoxProps, any> {}
-declare class ErrorMessage extends React.Component<MessageBoxProps, any> {}
+declare class ErrorMessage extends React.Component<ErrorMessageBoxProps, any> {}
 declare class InfoMessage extends React.Component<MessageBoxProps, any> {}
 declare class TipsMessage extends React.Component<MessageBoxProps, any> {}
 declare class InfoMessageList extends React.Component<
