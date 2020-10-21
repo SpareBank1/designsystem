@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@5.1.0...@sb1/ffe-context-message-react@5.1.1) (2020-10-21)
+
+
+### Bug Fixes
+
+* **ffe-context-message-react:** optout var for alert for error message ([1cca332](https://github.com/SpareBank1/designsystem/commit/1cca332fcbf83ee5324984c8e0737b4763408d52))
+
+
+
+
+
 # [5.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@5.0.20...@sb1/ffe-context-message-react@5.1.0) (2020-10-02)
 
 

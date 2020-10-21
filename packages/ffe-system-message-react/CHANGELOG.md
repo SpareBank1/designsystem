@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@6.2.0...@sb1/ffe-system-message-react@6.2.1) (2020-10-21)
+
+
+### Bug Fixes
+
+* **ffe-system-message-react:** optout param for alert for error message ([0469f5e](https://github.com/SpareBank1/designsystem/commit/0469f5e2290c4f8fdfcaad00e182d6cf83399610))
+
+
+
+
+
 # [6.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@6.1.6...@sb1/ffe-system-message-react@6.2.0) (2020-10-02)
 
 

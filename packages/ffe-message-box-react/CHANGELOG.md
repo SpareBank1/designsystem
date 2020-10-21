@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@6.1.1...@sb1/ffe-message-box-react@6.1.2) (2020-10-21)
+
+
+### Bug Fixes
+
+* **ffe-message-box-react:** opt-out param for alert for error message ([61ea63d](https://github.com/SpareBank1/designsystem/commit/61ea63de447bc5c397bfb31115dda71f1f91ce3a))
+
+
+
+
+
 ## [6.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@6.1.0...@sb1/ffe-message-box-react@6.1.1) (2020-10-06)
 
 
