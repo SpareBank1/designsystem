@@ -9,8 +9,12 @@ export interface SystemMessageProps {
     onClose?: (e: React.MouseEvent | undefined) => void;
 }
 
+export interface SystemErrorMessageProps extends SystemMessageProps {
+    alert?: boolean;
+}
+
 declare class SystemErrorMessage extends React.Component<
-    SystemMessageProps,
+    SystemErrorMessageProps,
     any
 > {}
 declare class SystemInfoMessage extends React.Component<
