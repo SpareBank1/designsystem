@@ -1,4 +1,4 @@
-Den finnes i liten og stor versjon.
+Spinner finnes i liten;
 
 ```jsx
 <div>
@@ -6,10 +6,20 @@ Den finnes i liten og stor versjon.
 </div>
 ```
 
+og stor versjon:
+
 ```jsx
 <div style={{ textAlign: 'center' }}>
     <Spinner large={true} />
     <p className="ffe-body-paragraph">Vennligst vent litt</p>
+</div>
+```
+
+Dersom du ønsker at spinneren skal vises umiddelbart uten forsinkelse kan du bruke `immediate={true}`:
+
+```jsx
+<div style={{ textAlign: 'center' }}>
+    <Spinner immediate={true} />
 </div>
 ```
 
