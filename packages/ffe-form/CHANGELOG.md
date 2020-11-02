@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [14.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@14.0.0...@sb1/ffe-form@14.0.1) (2020-11-02)
+
+
+### Bug Fixes
+
+* **ffe-form:** dropdown arrow bug ([5ffbd98](https://github.com/SpareBank1/designsystem/commit/5ffbd98887e42c7b68f5cc48a33f674856e08223))
+
+
+
+
+
 # [14.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@13.0.13...@sb1/ffe-form@14.0.0) (2020-10-08)
 
 
