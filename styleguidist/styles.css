@@ -4291,6 +4291,9 @@ html {
   }
 }
 .ffe-dropdown {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background-color: #fff;
   background-size: 18px 18px;
   background-repeat: no-repeat;
