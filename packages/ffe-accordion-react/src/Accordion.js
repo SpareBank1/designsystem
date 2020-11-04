@@ -1,52 +1,85 @@
-import React, { Component } from 'react';
-import { node, bool, string } from 'prop-types';
-import { v4 as uuid } from 'uuid';
+import React, { createRef, useEffect, useState } from 'react';
+import { node, oneOf, string } from 'prop-types';
 import classNames from 'classnames';
 
-class Accordion extends Component {
-    constructor() {
-        super();
-        this.id = uuid();
-    }
+const ARROW_UP = 'ArrowUp';
+const ARROW_DOWN = 'ArrowDown';
+const HOME = 'Home';
+const END = 'End';
 
-    render() {
-        const { children, isBlue, className, ...rest } = this.props;
+const Accordion = ({ children, headingLevel, className, ...rest }) => {
+    const [isHeadingFocused, setIsHeadingFocuses] = useState(false);
+    const [refs, setRefs] = useState([]);
 
-        return (
-            <div
-                {...rest}
-                aria-multiselectable="true"
-                className={classNames(
-                    {
-                        'ffe-accordion': true,
-                        'ffe-accordion--blue': isBlue,
-                    },
-                    className,
-                )}
-                role="tablist"
-            >
-                {React.Children.map(children, (ele, index) =>
-                    React.cloneElement(ele, { uuid: this.id, index }),
-                )}
-            </div>
+    const handleFocus = () => setIsHeadingFocuses(true);
+    const handleBlur = () => setIsHeadingFocuses(false);
+
+    useEffect(() => {
+        setRefs(prevRefs =>
+            Array(children.length)
+                .fill(null)
+                .map((_, i) => prevRefs[i] || createRef()),
         );
-    }
-}
+    }, [children.length]);
+
+    const handleKeyDown = event => {
+        if (isHeadingFocused) {
+            if (
+                [HOME, END, ARROW_UP, ARROW_DOWN].some(key => key === event.key)
+            ) {
+                event.preventDefault();
+            }
+
+            const focusIndex = refs.findIndex(
+                ref => ref.current === document.activeElement,
+            );
+            if (event.key === HOME) {
+                refs[0].current.focus();
+            } else if (event.key === END) {
+                refs[refs.length - 1].current.focus();
+            } else if (event.key === ARROW_UP) {
+                if (focusIndex === 0) {
+                    refs[refs.length - 1].current.focus();
+                } else {
+                    refs[focusIndex - 1].current.focus();
+                }
+            } else if (event.key === ARROW_DOWN) {
+                if (focusIndex === refs.length - 1) {
+                    refs[0].current.focus();
+                } else {
+                    refs[focusIndex + 1].current.focus();
+                }
+            }
+        }
+    };
+
+    return (
+        <div // eslint-disable-line jsx-a11y/no-static-element-interactions
+            onKeyDown={handleKeyDown}
+            className={classNames(className, 'ffe-accordion', {
+                'ffe-accordion--focus': isHeadingFocused,
+            })}
+            {...rest}
+        >
+            {React.Children.map(children, (child, index) => {
+                return React.cloneElement(child, {
+                    headingLevel,
+                    ref: refs[index],
+                    onFocus: handleFocus,
+                    onBlur: handleBlur,
+                });
+            })}
+        </div>
+    );
+};
 
 Accordion.propTypes = {
     /** Accordion items */
-    children: node.isRequired,
-    /**
-     * Use blue Accordion theme - defaults to white . Used internally only.
-     * @ignore
-     **/
-    isBlue: bool,
-    /** Extra class names */
+    children: node,
+    /** The level of headings in the AccordionItems */
+    headingLevel: oneOf([1, 2, 3, 4, 5, 6]).isRequired,
+    /** Class assigned the container */
     className: string,
-};
-
-Accordion.defaultProps = {
-    isBlue: false,
 };
 
 export default Accordion;

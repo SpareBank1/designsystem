@@ -1,5 +1,2 @@
-import WhiteAccordion from './Accordion';
-import BlueAccordion from './BlueAccordion';
-import AccordionItem from './AccordionItem';
-
-export { WhiteAccordion, BlueAccordion, AccordionItem };
+export { default as Accordion } from './Accordion';
+export { default as AccordionItem } from './AccordionItem';

@@ -1,133 +1,85 @@
-import React, { Component } from 'react';
-import { arrayOf, bool, func, node, number, string } from 'prop-types';
+import React, { useRef, useState } from 'react';
+import { bool, func, node, string } from 'prop-types';
+import { v4 as uuid } from 'uuid';
+import { ChevronIkon } from '@sb1/ffe-icons-react';
 import Collapse from '@sb1/ffe-collapse-react';
-import ChevronIkon from '@sb1/ffe-icons-react/lib/chevron-ikon';
 import classNames from 'classnames';
 
-class AccordionItem extends Component {
-    state = {
-        open: this.props.defaultOpen,
-    };
+const AccordionItem = ({
+    children,
+    heading,
+    defaultOpen,
+    className,
+    onToggleOpen = Function.prototype,
+    ...accordionProps
+}) => {
+    const [isExpanded, setIsExpanded] = useState(defaultOpen);
+    const buttonId = useRef(uuid());
+    const contentId = useRef(uuid());
 
-    getOpen = () => {
-        if (this.props.open !== undefined) {
-            return this.props.open;
-        }
-        return this.state.open;
-    };
+    const {
+        headingLevel,
+        onFocus,
+        onBlur,
+        forwardedRef,
+        ...rest
+    } = accordionProps;
 
-    onClick = e => {
-        if (
-            this.props.ignoredNodeNames.some(name => name === e.target.nodeName)
-        ) {
-            return;
-        }
-        this.toggle();
-    };
-
-    onClickEnterAndSpace = e => {
-        const enterKey = 13;
-        const spaceBar = 32;
-        if ([enterKey, spaceBar].includes(e.keyCode)) {
-            this.onClick(e);
-        }
-    };
-
-    toggle = () => {
-        const open = this.getOpen();
-        this.props.onToggleOpen(!open);
-        this.setState(prevState => ({ open: !prevState.open }));
-    };
-
-    render() {
-        const {
-            ariaLabel,
-            className,
-            children,
-            index,
-            accordionTitle,
-            uuid,
-            id,
-        } = this.props;
-
-        const open = this.getOpen();
-
-        return (
-            <div
-                className={classNames(
-                    {
-                        'ffe-accordion-item': true,
-                        'ffe-accordion-item--open': open,
-                    },
-                    className,
-                )}
-            >
-                <div
-                    tabIndex={0}
-                    aria-controls={`panel-${uuid}-${index}`}
-                    aria-expanded={open}
-                    aria-label={ariaLabel}
-                    className="ffe-accordion-item__toggler"
-                    id={id ? id : `tab-${uuid}-${index}`}
-                    onClick={this.onClick}
-                    onKeyUp={this.onClickEnterAndSpace}
-                    role="tab"
+    return (
+        <div className={classNames(className, 'ffe-accordion-item')} {...rest}>
+            {React.createElement(
+                `h${headingLevel}`,
+                { className: 'ffe-h6' },
+                <button
+                    id={buttonId.current}
+                    ref={forwardedRef}
+                    aria-expanded={isExpanded ? 'true' : 'false'}
+                    aria-controls={contentId.current}
+                    className={classNames('ffe-accordion__heading-button', {
+                        'ffe-accordion__heading-button--open': isExpanded,
+                    })}
+                    onClick={() => {
+                        setIsExpanded(prevState => {
+                            onToggleOpen(!prevState);
+                            return !prevState;
+                        });
+                    }}
+                    onFocus={onFocus}
+                    onBlur={onBlur}
                 >
-                    <span className="ffe-accordion-item__toggler-content">
-                        <span className="ffe-accordion-item__title">
-                            {accordionTitle}
-                        </span>
-                        <ChevronIkon className="ffe-accordion-item__icon" />
+                    <span className="ffe-accordion__heading-button-content">
+                        {heading}
+                        <ChevronIkon className="ffe-accordion__heading-icon" />
                     </span>
-                </div>
-                <Collapse
-                    isOpen={open}
-                    className="ffe-accordion-item__content-container"
-                >
-                    <div
-                        className="ffe-accordion-item__content"
-                        role="tabpanel"
-                        id={`panel-${uuid}-${index}`}
-                        aria-hidden={!open}
-                        aria-labelledby={`tab-${uuid}-${index}`}
-                    >
-                        {children}
-                    </div>
+                </button>,
+            )}
+            <div
+                id={contentId.current}
+                aria-labelledby={buttonId.current}
+                hidden={!isExpanded}
+                role="region"
+            >
+                <Collapse isOpen={isExpanded}>
+                    <div className="ffe-accordion-body">{children}</div>
                 </Collapse>
             </div>
-        );
-    }
-}
+        </div>
+    );
+};
 
 AccordionItem.propTypes = {
-    /** A label for the accordion item */
-    ariaLabel: string,
-    /** The content shown when an accordion item is expanded */
-    children: node,
-    /** Extra class names */
-    className: string,
-    /** List of node names the toggle click handler will ignore */
-    ignoredNodeNames: arrayOf(string),
-    /** The index of the accordion item in the current accordion */
-    index: number,
-    /** Controls whether the accordion item is open. If omitted, this state will be handled internally */
-    open: bool,
-    /** Sets whether the accordion item is open by default. Only use this if not specifying the `open` prop  */
+    /** The heading */
+    heading: node.isRequired,
+    /** The content to appear when expanded */
+    children: node.isRequired,
+    /** Should it be open by default */
     defaultOpen: bool,
-    /** Callback that fires whenever the accordion item is opened or closed */
+    /** Class assigned the container */
+    className: string,
+    /** Callback when the item is open/closed */
     onToggleOpen: func,
-    /** The title */
-    accordionTitle: node,
-    /** A unique ID, usually provided by the wrapping <Accordion /> element */
-    uuid: string,
-    /** An optional ID for the element, will be auto-generated if not provided */
-    id: string,
 };
 
-AccordionItem.defaultProps = {
-    defaultOpen: false,
-    ignoredNodeNames: [],
-    onToggleOpen: f => f,
-};
-
-export default AccordionItem;
+export default React.forwardRef((props, ref) => {
+    return <AccordionItem {...props} forwardedRef={ref} />;
+});

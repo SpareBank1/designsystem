@@ -249,7 +249,6 @@ module.exports = {
                     name: 'Accordionkomponenter',
                     components: () => [
                         'packages/ffe-accordion-react/src/Accordion.js',
-                        'packages/ffe-accordion-react/src/BlueAccordion.js',
                     ],
                 },
             ],
