@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [9.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@8.0.4...@sb1/ffe-accordion-react@9.0.0) (2020-11-04)
+
+
+### Features
+
+* **ffe-accordion-react:** accessibility fixes ([ee40ce7](https://github.com/SpareBank1/designsystem/commit/ee40ce752ce6f9b344dded2068ea195c65d69cdb))
+
+
+### BREAKING CHANGES
+
+* **ffe-accordion-react:** Changing the API of this component to make it more accessible
+
+
+
+
+
 ## [8.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@8.0.3...@sb1/ffe-accordion-react@8.0.4) (2020-09-15)
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react

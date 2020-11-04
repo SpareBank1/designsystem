@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@6.0.10...@sb1/ffe-accordion@7.0.0) (2020-11-04)
+
+
+### Features
+
+* **ffe-accordion:** simplified and more accessible ([c9727d8](https://github.com/SpareBank1/designsystem/commit/c9727d84f81433f534ee7e1c868984ae58a68495))
+
+
+### BREAKING CHANGES
+
+* **ffe-accordion:** New API for styling the accordion
+
+
+
+
+
 ## [6.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@6.0.9...@sb1/ffe-accordion@6.0.10) (2020-08-25)
 
 **Note:** Version bump only for package @sb1/ffe-accordion
