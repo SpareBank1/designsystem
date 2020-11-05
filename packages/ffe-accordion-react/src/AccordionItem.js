@@ -31,6 +31,7 @@ const AccordionItem = ({
                 `h${headingLevel}`,
                 { className: 'ffe-h6' },
                 <button
+                    type="button"
                     id={buttonId.current}
                     ref={forwardedRef}
                     aria-expanded={isExpanded ? 'true' : 'false'}
