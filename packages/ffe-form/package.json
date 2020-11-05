@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-form",
-  "version": "14.0.1",
+  "version": "14.1.0",
   "description": "Form components for Felles Front End",
   "license": "MIT",
   "author": "SpareBank 1",
@@ -21,8 +21,8 @@
     "stylelint": "^10.0.0"
   },
   "optionalDependencies": {
-    "@sb1/ffe-buttons": "^9.0.10",
-    "@sb1/ffe-core": "^15.5.8"
+    "@sb1/ffe-buttons": "^9.0.11",
+    "@sb1/ffe-core": "^15.6.0"
   },
   "publishConfig": {
     "access": "public"

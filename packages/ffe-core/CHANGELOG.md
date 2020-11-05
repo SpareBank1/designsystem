@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [15.6.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@15.5.8...@sb1/ffe-core@15.6.0) (2020-11-05)
+
+
+### Features
+
+* **ffe-core:** darkmode color palette & darkmode form label color tweak ([5d41e60](https://github.com/SpareBank1/designsystem/commit/5d41e602ab3087895fa994ae7843d5fb49e1593d))
+
+
+
+
+
 ## [15.5.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@15.5.7...@sb1/ffe-core@15.5.8) (2020-08-25)
 
 
