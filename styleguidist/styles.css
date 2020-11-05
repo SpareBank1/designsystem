@@ -652,7 +652,7 @@ html {
 }
 @media (prefers-color-scheme: dark) {
   .native .ffe-body-text {
-    color: #adadad;
+    color: #cccccc;
   }
 }
 .ffe-body-paragraph {
@@ -663,7 +663,7 @@ html {
 }
 @media (prefers-color-scheme: dark) {
   .native .ffe-body-paragraph {
-    color: #adadad;
+    color: #cccccc;
   }
 }
 .ffe-body-paragraph--text-center {
@@ -704,7 +704,7 @@ html {
 }
 @media (prefers-color-scheme: dark) {
   .native .ffe-sub-lead-paragraph {
-    color: #adadad;
+    color: #cccccc;
   }
 }
 .ffe-link-text,
@@ -929,7 +929,7 @@ html {
 }
 @media (prefers-color-scheme: dark) {
   .ffe-body.native {
-    color: #adadad;
+    color: #cccccc;
     background-color: #000000;
   }
 }
@@ -1276,7 +1276,7 @@ html {
 }
 @media (prefers-color-scheme: dark) {
   .native .ffe-account-selector__details {
-    color: #adadad;
+    color: #cccccc;
   }
 }
 .ffe-account-selector__details:before,
@@ -2693,7 +2693,7 @@ html {
 }
 @media (prefers-color-scheme: dark) {
   .native .ffe-product-card__details {
-    color: #adadad;
+    color: #cccccc;
   }
 }
 .ffe-product-card__details,
@@ -2721,7 +2721,7 @@ html {
 }
 @media (prefers-color-scheme: dark) {
   .native .ffe-product-card__status {
-    color: #adadad;
+    color: #cccccc;
     background-color: #292929;
   }
 }
@@ -2772,7 +2772,7 @@ html {
 @media (prefers-color-scheme: dark) {
   .native .ffe-card-base {
     background: #1c1c1c;
-    color: #adadad;
+    color: #cccccc;
   }
 }
 .ffe-card-base:focus {
@@ -3066,12 +3066,12 @@ html {
 }
 @media (prefers-color-scheme: dark) {
   .native .ffe-context-message-content .ffe-body-text {
-    color: #adadad;
+    color: #cccccc;
   }
 }
 @media (prefers-color-scheme: dark) {
   .native .ffe-context-message-content .ffe-body-text a {
-    color: #adadad;
+    color: #cccccc;
   }
 }
 .ffe-context-message-content__header {
@@ -3407,7 +3407,7 @@ html {
 @media (prefers-color-scheme: dark) {
   .native .ffe-calendar__weekday {
     border-color: #858585;
-    color: #adadad;
+    color: #cccccc;
   }
 }
 .ffe-calendar__day {
@@ -3845,7 +3845,7 @@ html {
 }
 @media (prefers-color-scheme: dark) {
   .native .ffe-file-upload__file-item-filename {
-    color: #adadad;
+    color: #cccccc;
   }
 }
 .ffe-file-upload__file-item-error {
@@ -4343,7 +4343,7 @@ html {
 }
 @media (prefers-color-scheme: dark) {
   .native .ffe-checkbox {
-    color: #adadad;
+    color: #cccccc;
   }
 }
 .ffe-checkbox--no-margin {
@@ -4372,7 +4372,7 @@ html {
 }
 @media (prefers-color-scheme: dark) {
   .native .ffe-checkbox::before {
-    border-color: #adadad;
+    border-color: #cccccc;
     background-color: #292929;
   }
 }
@@ -4540,7 +4540,7 @@ html {
 }
 @media (prefers-color-scheme: dark) {
   .native .ffe-radio-button {
-    color: #adadad;
+    color: #cccccc;
   }
 }
 .ffe-radio-button--inline {
@@ -4608,7 +4608,7 @@ html {
 }
 @media (prefers-color-scheme: dark) {
   .native .ffe-radio-button::after {
-    border-color: #adadad;
+    border-color: #cccccc;
   }
 }
 .ffe-radio-button--invalid::after {
@@ -4756,12 +4756,12 @@ html {
 @media (prefers-color-scheme: dark) {
   .native .ffe-radio-switch::before {
     background-color: #292929;
-    border-color: #adadad;
+    border-color: #cccccc;
   }
 }
 @media (prefers-color-scheme: dark) {
   .native .ffe-radio-switch::before {
-    border-color: #adadad;
+    border-color: #cccccc;
     background-color: #292929;
   }
 }
@@ -4924,7 +4924,7 @@ html {
 @media (prefers-color-scheme: dark) {
   .native .ffe-radio-block__content {
     border: 2px solid #292929;
-    color: #adadad;
+    color: #cccccc;
     background: #1c1c1c;
   }
 }
@@ -4944,7 +4944,7 @@ html {
 @media (prefers-color-scheme: dark) {
   .native .ffe-radio-block__content::before {
     background-color: #292929;
-    border-color: #adadad;
+    border-color: #cccccc;
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -5156,7 +5156,7 @@ html {
 }
 @media (prefers-color-scheme: dark) {
   .native .ffe-form-label {
-    color: #858585;
+    color: #cccccc;
   }
 }
 .ffe-form-label--block {
@@ -6848,7 +6848,7 @@ input:not([type='radio']):not([type='checkbox']) {
 }
 @media (prefers-color-scheme: dark) {
   .native .ffe-check-list__item {
-    color: #adadad;
+    color: #cccccc;
   }
 }
 .ffe-check-list > .ffe-check-list__item::before {
@@ -6983,7 +6983,7 @@ input:not([type='radio']):not([type='checkbox']) {
 @media (prefers-color-scheme: dark) {
   .native .ffe-description-list .ffe-description-list__description,
   .native .ffe-description-list-multicol .ffe-description-list__description {
-    color: #adadad;
+    color: #cccccc;
   }
 }
 .ffe-description-list .ffe-description-list__description + .ffe-description-list__description,
@@ -7322,7 +7322,7 @@ input:not([type='radio']):not([type='checkbox']) {
 }
 @media (prefers-color-scheme: dark) {
   .native .ffe-searchable-dropdown__list-item-body-details .ffe-micro-text {
-    color: #adadad;
+    color: #cccccc;
   }
 }
 .ffe-searchable-dropdown__button {
@@ -7477,7 +7477,7 @@ input:not([type='radio']):not([type='checkbox']) {
 }
 @media (prefers-color-scheme: dark) {
   .native .ffe-system-message-wrapper {
-    color: #adadad;
+    color: #cccccc;
   }
 }
 .ffe-system-message-wrapper--error {
@@ -7508,7 +7508,7 @@ input:not([type='radio']):not([type='checkbox']) {
 @media (prefers-color-scheme: dark) {
   .native .ffe-system-message-wrapper--news {
     background-color: #1c1c1c;
-    color: #adadad;
+    color: #cccccc;
     fill: #0a91ff;
   }
 }
@@ -7596,7 +7596,7 @@ input:not([type='radio']):not([type='checkbox']) {
 }
 @media (prefers-color-scheme: dark) {
   .native .ffe-system-message__close > svg {
-    fill: #adadad;
+    fill: #cccccc;
   }
 }
 .ffe-system-message-wrapper--news .ffe-system-message__close > svg {
@@ -7604,7 +7604,7 @@ input:not([type='radio']):not([type='checkbox']) {
 }
 @media (prefers-color-scheme: dark) {
   .native .ffe-system-message-wrapper--news .ffe-system-message__close > svg {
-    fill: #adadad;
+    fill: #cccccc;
   }
 }
 .ffe-table {
@@ -7698,7 +7698,7 @@ input:not([type='radio']):not([type='checkbox']) {
 }
 @media (prefers-color-scheme: dark) {
   .native .ffe-table__content {
-    color: #adadad;
+    color: #cccccc;
   }
 }
 @media (min-width: 768px) {
@@ -8101,7 +8101,7 @@ input:not([type='radio']):not([type='checkbox']) {
   .native .ffe-tab {
     background-color: #1c1c1c;
     border-color: #858585;
-    color: #adadad;
+    color: #cccccc;
   }
 }
 .ffe-tab:hover,
@@ -9314,7 +9314,7 @@ html.transition *::after {
 }
 .sb1ds-color-palette__item--ffe-grey-cloud-darkmode,
 .sb1ds-color-usage__example--ffe-grey-cloud-darkmode {
-  background: #adadad;
+  background: #cccccc;
   color: #262626;
 }
 @media (prefers-color-scheme: dark) {
@@ -9465,7 +9465,7 @@ html.transition *::after {
 }
 @media (prefers-color-scheme: dark) {
   .native .sb1ds-example__header-no-animation-example {
-    color: #adadad;
+    color: #cccccc;
   }
 }
 .sb1ds-do-dont {
@@ -11416,7 +11416,7 @@ html.transition *::after {
 }
 @media (prefers-color-scheme: dark) {
   .native .sb1ds-npm-i-builder-output {
-    color: #adadad;
+    color: #cccccc;
     background-color: #1c1c1c;
   }
 }
@@ -11550,7 +11550,7 @@ body.native {
 }
 body.native li,
 body.native p:not(.ffe-lead-paragraph) {
-  color: #adadad;
+  color: #cccccc;
 }
 body.native a:not(h1, h2, h3, h4, h5, h6) {
   color: #0a91ff;
@@ -11582,7 +11582,7 @@ body.native a:not(h1, h2, h3, h4, h5, h6):visited {
 @media (prefers-color-scheme: dark) {
   .native .sb1ds-section,
   .native .sb1ds-section-static {
-    color: #adadad;
+    color: #cccccc;
   }
   .native .sb1ds-section a:not([class*='ffe']),
   .native .sb1ds-section-static a:not([class*='ffe']) {
@@ -11615,13 +11615,13 @@ body.native a:not(h1, h2, h3, h4, h5, h6):visited {
   .native .sb1ds-section-static .rsg--cellHeading-25,
   .native .sb1ds-section .rsg--cell-26,
   .native .sb1ds-section-static .rsg--cell-26 {
-    color: #adadad;
+    color: #cccccc;
     border-color: #858585;
   }
   .native .sb1ds-section .CodeMirror-wrap,
   .native .sb1ds-section-static .CodeMirror-wrap {
     background: #1c1c1c;
-    color: #adadad;
+    color: #cccccc;
   }
 }
 .sb1ds-section {
