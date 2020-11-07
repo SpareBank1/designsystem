@@ -14,6 +14,7 @@ const AccordionItem = ({
     ...accordionProps
 }) => {
     const [isExpanded, setIsExpanded] = useState(defaultOpen);
+    const [isAnimating, setIsAnimating] = useState(false);
     const buttonId = useRef(uuid());
     const contentId = useRef(uuid());
 
@@ -40,6 +41,7 @@ const AccordionItem = ({
                         'ffe-accordion__heading-button--open': isExpanded,
                     })}
                     onClick={() => {
+                        setIsAnimating(true);
                         setIsExpanded(prevState => {
                             onToggleOpen(!prevState);
                             return !prevState;
@@ -54,16 +56,16 @@ const AccordionItem = ({
                     </span>
                 </button>,
             )}
-            <div
+            <Collapse
+                isOpen={isExpanded}
+                onRest={() => setIsAnimating(false)}
                 id={contentId.current}
                 aria-labelledby={buttonId.current}
-                hidden={!isExpanded}
+                hidden={!isExpanded && !isAnimating}
                 role="region"
             >
-                <Collapse isOpen={isExpanded}>
-                    <div className="ffe-accordion-body">{children}</div>
-                </Collapse>
-            </div>
+                <div className="ffe-accordion-body">{children}</div>
+            </Collapse>
         </div>
     );
 };

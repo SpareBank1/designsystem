@@ -3,14 +3,6 @@ import AccordionItem from './AccordionItem';
 import React from 'react';
 import { fireEvent, render, screen } from '@testing-library/react';
 
-const renderAccordion = props =>
-    render(
-        <Accordion {...props}>
-            <AccordionItem heading="heading1">content1</AccordionItem>
-            <AccordionItem heading="heading2">content2</AccordionItem>
-        </Accordion>,
-    );
-
 describe('<Accordion />', () => {
     it('should render headings', () => {
         render(
@@ -61,7 +53,12 @@ describe('<Accordion />', () => {
     });
 
     it('should expand sections', () => {
-        renderAccordion({ headingLevel: 3 });
+        render(
+            <Accordion headingLevel={3}>
+                <AccordionItem heading="heading1">content1</AccordionItem>
+                <AccordionItem heading="heading2">content2</AccordionItem>
+            </Accordion>,
+        );
 
         const firstButton = screen.getByRole('button', { name: /heading1/i });
         const secondButton = screen.getByRole('button', { name: /heading2/i });
