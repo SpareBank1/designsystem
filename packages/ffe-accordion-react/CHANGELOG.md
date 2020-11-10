@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@9.0.1...@sb1/ffe-accordion-react@9.0.2) (2020-11-10)
+
+
+### Bug Fixes
+
+* **ffe-accordion-react:** fix ts types ([b6d0e76](https://github.com/SpareBank1/designsystem/commit/b6d0e766447b7dda1263384cf4152d822289d038))
+* **ffe-accordion-react:** hidden after animation is done ([dff60ae](https://github.com/SpareBank1/designsystem/commit/dff60aee86c077e06d3bd53d0e27f9b0000c065f))
+
+
+
+
+
 ## [9.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@9.0.0...@sb1/ffe-accordion-react@9.0.1) (2020-11-05)
 
 
