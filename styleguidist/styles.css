@@ -7246,6 +7246,7 @@ input:not([type='radio']):not([type='checkbox']) {
   z-index: 100000;
   border-radius: 2px;
   height: 0;
+  overflow: hidden;
 }
 @media (prefers-color-scheme: dark) {
   .native .ffe-searchable-dropdown__list {
