@@ -1,14 +1,12 @@
-import React from 'react';
+import * as React from 'react';
 
-interface InputProps {
-    className?: string;
-    id?: string;
-}
+export type InputProps = React.InputHTMLAttributes<HTMLInputElement>;
 
-export interface DatepickerProps
-    extends React.SelectHTMLAttributes<HTMLSelectElement> {
-    'aria-invalid'?: string;
-    ariaInvalid?: boolean | string;
+type AriaInvalid = boolean | 'false' | 'true' | 'grammar' | 'spelling';
+
+export interface DatepickerProps {
+    'aria-invalid'?: AriaInvalid;
+    ariaInvalid?: AriaInvalid;
     calendarAbove?: boolean;
     hideErrors?: boolean;
     onValidationComplete?: Function;
@@ -17,13 +15,29 @@ export interface DatepickerProps
     language?: string;
     maxDate?: string;
     minDate?: string;
-    onChange: React.ChangeEventHandler<HTMLInputElement>;
-    onError?: Function;
+    onChange: (value: string) => void;
+    onError?: (event: React.SyntheticEvent<HTMLInputElement, Event>) => void;
     value: string;
     keepDisplayStateOnError: boolean;
     fullWidth?: boolean;
 }
 
 declare class Datepicker extends React.Component<DatepickerProps, any> {}
+
+export interface DateInputProps {
+    'aria-invalid'?: AriaInvalid;
+    ariaInvalid?: AriaInvalid;
+    fullWidth?: boolean;
+    inputProps?: InputProps;
+    onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
+    onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+    onFocus?: (event: React.FocusEvent<HTMLInputElement>) => void;
+    onKeyDown?: (event: React.KeyboardEvent<HTMLInputElement>) => void;
+    value: string;
+}
+
+declare class DateInput extends React.Component<DateInputProps, any> {}
+
+export { DateInput };
 
 export default Datepicker;
