@@ -7,8 +7,9 @@ export interface ContextMessageProps
     className?: string;
     compact?: boolean;
     contentElementId?: string;
-    header?: string;
+    headerText?: string;
     headerElementId?: string;
+    headerElement?: string;
     icon?: React.ReactNode;
     locale?: 'nb' | 'nn' | 'en';
     onClose?: (event: React.MouseEvent) => void;

@@ -31,20 +31,31 @@ describe('<ContextMessage />', () => {
     });
 
     it('renders with provided header', () => {
-        const header = 'header';
         const wrapper = getMountedWrapper({
-            header,
+            headerText: 'header text',
         });
-        const headerComponent = wrapper.find('header');
+        const headerComponent = wrapper.find(
+            '.ffe-context-message-content__header',
+        );
         expect(headerComponent.exists()).toBe(true);
-        expect(headerComponent.text()).toBe(header);
+        expect(headerComponent.text()).toBe('header text');
+        expect(headerComponent.type()).toBe('div');
+    });
+
+    it('renders with provided header as given tag', () => {
+        const wrapper = getMountedWrapper({
+            headerText: 'header text',
+            headerElement: 'h5',
+        });
+        const headerComponent = wrapper.find(
+            '.ffe-context-message-content__header',
+        );
+        expect(headerComponent.type()).toBe('h5');
     });
 
     it('renders without header', () => {
         const wrapper = getMountedWrapper();
-        const header = wrapper
-            .find('.ffe-context-message-content')
-            .find('header');
+        const header = wrapper.find('.ffe-context-message-content__header');
         expect(header.exists()).toBe(false);
     });
 
