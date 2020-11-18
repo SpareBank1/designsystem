@@ -97,15 +97,23 @@ module.exports = {
             content: 'universell-utforming/index.md',
             sections: [
                 {
-                    name: 'WCAG 2.0',
-                    content: 'universell-utforming/wcag.md',
+                    name: 'Generelt',
+                    content: 'universell-utforming/generelt.md',
                 },
                 {
-                    name: 'Tips og råd',
-                    content: 'universell-utforming/tips.md',
+                    name: 'Bruk tydelig språk',
+                    content: 'universell-utforming/sprak.md',
                 },
                 {
-                    name: 'Verktøy',
+                    name: 'Vær visuelt tydelig',
+                    content: 'universell-utforming/visuelt.md',
+                },
+                {
+                    name: 'Skriv semantisk HTML',
+                    content: 'universell-utforming/html.md',
+                },
+                {
+                    name: 'Nyttige verktøy',
                     content: 'universell-utforming/verktoy.md',
                 },
             ],
