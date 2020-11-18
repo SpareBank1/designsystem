@@ -8990,6 +8990,62 @@ html.transition *::after {
             transition-delay: 0 !important;
 }
 
+.sb1ds-do-dont {
+  width: 100%;
+  padding: 16px 0;
+}
+@media (min-width: 768px) {
+  .sb1ds-do-dont {
+    padding: 16px 16px 32px 0;
+  }
+}
+.sb1ds-do-dont__example {
+  padding: 24px;
+  background-color: #f6f6f3;
+}
+@media (prefers-color-scheme: dark) {
+  .native .sb1ds-do-dont__example {
+    background-color: #1c1c1c;
+  }
+}
+.sb1ds-do-dont__header {
+  margin: 0 0 8px 0;
+}
+.sb1ds-do-dont__header--dont {
+  color: #da3d00;
+}
+@media (prefers-color-scheme: dark) {
+  .native .sb1ds-do-dont__header--dont {
+    color: #ff2424;
+  }
+}
+.sb1ds-do-dont__header--do {
+  color: #007b00;
+}
+@media (prefers-color-scheme: dark) {
+  .native .sb1ds-do-dont__header--do {
+    color: #008a00;
+  }
+}
+.sb1ds-do-dont__description {
+  margin: 8px 0 24px 0;
+}
+.sb1ds-do-dont pre {
+  margin: 0;
+  white-space: pre-line;
+}
+.sb1ds-do-dont__header-no-animation-example {
+  margin: 0;
+  color: #262626;
+}
+@media (prefers-color-scheme: dark) {
+  .native .sb1ds-do-dont__header-no-animation-example {
+    color: #cccccc;
+  }
+}
+.sb1ds-dos-donts {
+  margin-bottom: 32px;
+}
 .sb1ds-color-palette {
   margin: 0 0 40px 0;
   padding: 0;
@@ -9438,40 +9494,6 @@ html.transition *::after {
     fill: #0a91ff;
   }
 }
-.sb1ds-example {
-  width: 100%;
-  padding: 10px;
-}
-.sb1ds-example__header-bad-example {
-  margin: 0;
-  color: #da3d00;
-}
-@media (prefers-color-scheme: dark) {
-  .native .sb1ds-example__header-bad-example {
-    color: #ff2424;
-  }
-}
-.sb1ds-example__header-good-example {
-  margin: 0;
-  color: #007b00;
-}
-@media (prefers-color-scheme: dark) {
-  .native .sb1ds-example__header-good-example {
-    color: #008a00;
-  }
-}
-.sb1ds-example__header-no-animation-example {
-  margin: 0;
-  color: #262626;
-}
-@media (prefers-color-scheme: dark) {
-  .native .sb1ds-example__header-no-animation-example {
-    color: #cccccc;
-  }
-}
-.sb1ds-do-dont {
-  margin-bottom: 20px;
-}
 .sb1ds-svgs svg {
   width: 25px;
   height: 25px;
@@ -9491,6 +9513,33 @@ html.transition *::after {
   -webkit-transition: none !important;
   -o-transition: none !important;
   transition: none !important;
+}
+.sb1ds-transition-examples {
+  background-color: #f6f6f3;
+}
+@media (prefers-color-scheme: dark) {
+  .native .sb1ds-transition-examples {
+    background-color: #1c1c1c;
+  }
+}
+.sb1ds-transition-example {
+  padding: 8px 0;
+}
+.sb1ds-transition-example__header-do {
+  color: #007b00;
+}
+@media (prefers-color-scheme: dark) {
+  .native .sb1ds-transition-example__header-do {
+    color: #008a00;
+  }
+}
+.sb1ds-transition-example__header-dont {
+  color: #da3d00;
+}
+@media (prefers-color-scheme: dark) {
+  .native .sb1ds-transition-example__header-dont {
+    color: #ff2424;
+  }
 }
 .sb1ds-svgcontainer {
   overflow: hidden;
@@ -10407,7 +10456,6 @@ html.transition *::after {
   height: 45px;
   line-height: 25px;
   padding: 8px 13px;
-  max-width: 80%;
 }
 .sb1ds-textarea-expandable:focus {
   height: 7.5em;
@@ -10448,967 +10496,6 @@ html.transition *::after {
   -webkit-transition: none;
   -o-transition: none;
   transition: none;
-}
-@-webkit-keyframes rain {
-  from {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
-  }
-  to {
-    -webkit-transform: translateY(150%);
-            transform: translateY(150%);
-  }
-}
-@keyframes rain {
-  from {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
-  }
-  to {
-    -webkit-transform: translateY(150%);
-            transform: translateY(150%);
-  }
-}
-.sb1ds-rain #drop1,
-.sb1ds-rain #drop2 {
-  -webkit-transform: translateY(-100%);
-      -ms-transform: translateY(-100%);
-          transform: translateY(-100%);
-  -webkit-animation-name: rain;
-          animation-name: rain;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-}
-.sb1ds-rain #drop2 {
-  -webkit-animation-duration: 1.2s;
-          animation-duration: 1.2s;
-}
-@-webkit-keyframes move-cloud {
-  from {
-    -webkit-transform: translateX(140%);
-            transform: translateX(140%);
-  }
-  to {
-    -webkit-transform: translateX(-200%);
-            transform: translateX(-200%);
-  }
-}
-@keyframes move-cloud {
-  from {
-    -webkit-transform: translateX(140%);
-            transform: translateX(140%);
-  }
-  to {
-    -webkit-transform: translateX(-200%);
-            transform: translateX(-200%);
-  }
-}
-.sb1ds-cloud #flight-cloud,
-.sb1ds-cloud #cloud {
-  -webkit-animation-name: move-cloud;
-          animation-name: move-cloud;
-  -webkit-animation-duration: 4s;
-          animation-duration: 4s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-transform-origin: 6.25em 6.25em;
-      -ms-transform-origin: 6.25em 6.25em;
-          transform-origin: 6.25em 6.25em;
-}
-@-webkit-keyframes wind {
-  0% {
-    -webkit-transform: skew(0);
-            transform: skew(0);
-  }
-  25% {
-    -webkit-transform: skew(-6deg);
-            transform: skew(-6deg);
-  }
-  50% {
-    -webkit-transform: skew(0);
-            transform: skew(0);
-  }
-  75% {
-    -webkit-transform: skew(3deg);
-            transform: skew(3deg);
-  }
-  100% {
-    -webkit-transform: skew(0);
-            transform: skew(0);
-  }
-}
-@keyframes wind {
-  0% {
-    -webkit-transform: skew(0);
-            transform: skew(0);
-  }
-  25% {
-    -webkit-transform: skew(-6deg);
-            transform: skew(-6deg);
-  }
-  50% {
-    -webkit-transform: skew(0);
-            transform: skew(0);
-  }
-  75% {
-    -webkit-transform: skew(3deg);
-            transform: skew(3deg);
-  }
-  100% {
-    -webkit-transform: skew(0);
-            transform: skew(0);
-  }
-}
-.sb1ds-house #tree {
-  -webkit-animation-name: wind;
-          animation-name: wind;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-transform-origin: bottom right;
-      -ms-transform-origin: bottom right;
-          transform-origin: bottom right;
-}
-@-webkit-keyframes drop {
-  0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  20% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  60% {
-    -webkit-transform: translateY(5.1em);
-            transform: translateY(5.1em);
-  }
-  100% {
-    -webkit-transform: translateY(5.1em);
-            transform: translateY(5.1em);
-  }
-}
-@keyframes drop {
-  0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  20% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  60% {
-    -webkit-transform: translateY(5.1em);
-            transform: translateY(5.1em);
-  }
-  100% {
-    -webkit-transform: translateY(5.1em);
-            transform: translateY(5.1em);
-  }
-}
-.sb1ds-coin-drop #coin {
-  -webkit-animation-name: drop;
-          animation-name: drop;
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
-}
-@-webkit-keyframes beat {
-  0% {
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
-  }
-  50% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  100% {
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
-  }
-}
-@keyframes beat {
-  0% {
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
-  }
-  50% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  100% {
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
-  }
-}
-.sb1ds-heart #heart {
-  -webkit-animation-name: beat;
-          animation-name: beat;
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
-  -webkit-transform-origin: 6.25em 6.25em;
-      -ms-transform-origin: 6.25em 6.25em;
-          transform-origin: 6.25em 6.25em;
-}
-@-webkit-keyframes spin {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-@keyframes spin {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-.sb1ds-rotate #wheel {
-  -webkit-animation-name: spin;
-          animation-name: spin;
-  -webkit-animation-duration: 12s;
-          animation-duration: 12s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-transform-origin: 6.25em 6.25em;
-      -ms-transform-origin: 6.25em 6.25em;
-          transform-origin: 6.25em 6.25em;
-}
-@-webkit-keyframes tail {
-  to {
-    -webkit-transform: translateX(11px) translateY(-2px) rotate3d(3, 2, 3, 14deg);
-            transform: translateX(11px) translateY(-2px) rotate3d(3, 2, 3, 14deg);
-  }
-}
-@keyframes tail {
-  to {
-    -webkit-transform: translateX(11px) translateY(-2px) rotate3d(3, 2, 3, 14deg);
-            transform: translateX(11px) translateY(-2px) rotate3d(3, 2, 3, 14deg);
-  }
-}
-.sb1ds-cat #tail {
-  -webkit-animation-name: tail;
-          animation-name: tail;
-  -webkit-animation-duration: 0.8s;
-          animation-duration: 0.8s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-transform-origin: initial;
-      -ms-transform-origin: initial;
-          transform-origin: initial;
-}
-/* Large svgs */
-@-webkit-keyframes cloud {
-  from {
-    -webkit-transform: translateX(20%);
-            transform: translateX(20%);
-  }
-  to {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-  }
-}
-@keyframes cloud {
-  from {
-    -webkit-transform: translateX(20%);
-            transform: translateX(20%);
-  }
-  to {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-  }
-}
-@-webkit-keyframes bike-from-left {
-  from {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-  }
-  to {
-    -webkit-transform: translateX(27%);
-            transform: translateX(27%);
-  }
-}
-@keyframes bike-from-left {
-  from {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-  }
-  to {
-    -webkit-transform: translateX(27%);
-            transform: translateX(27%);
-  }
-}
-@-webkit-keyframes left-leg {
-  from {
-    -webkit-transform: skew(0);
-            transform: skew(0);
-  }
-  to {
-    -webkit-transform: skew(-10deg);
-            transform: skew(-10deg);
-  }
-}
-@keyframes left-leg {
-  from {
-    -webkit-transform: skew(0);
-            transform: skew(0);
-  }
-  to {
-    -webkit-transform: skew(-10deg);
-            transform: skew(-10deg);
-  }
-}
-@-webkit-keyframes right-leg {
-  0% {
-    -webkit-transform: rotate(6deg) translateY(0) translateX(0);
-            transform: rotate(6deg) translateY(0) translateX(0);
-  }
-  20% {
-    -webkit-transform: rotate(12deg) translateY(0.1em) translateX(0.2em);
-            transform: rotate(12deg) translateY(0.1em) translateX(0.2em);
-  }
-  40% {
-    -webkit-transform: rotate(24deg) translateY(0.5em) translateX(0.8em);
-            transform: rotate(24deg) translateY(0.5em) translateX(0.8em);
-  }
-  60% {
-    -webkit-transform: rotate(36deg) translateY(0.4em) translateX(0.6em);
-            transform: rotate(36deg) translateY(0.4em) translateX(0.6em);
-  }
-  80% {
-    -webkit-transform: rotate(24deg) translateY(-0.3em) translateX(0.2em);
-            transform: rotate(24deg) translateY(-0.3em) translateX(0.2em);
-  }
-  90% {
-    -webkit-transform: rotate(12deg) translateY(-0.2em) translateX(0.2em);
-            transform: rotate(12deg) translateY(-0.2em) translateX(0.2em);
-  }
-}
-@keyframes right-leg {
-  0% {
-    -webkit-transform: rotate(6deg) translateY(0) translateX(0);
-            transform: rotate(6deg) translateY(0) translateX(0);
-  }
-  20% {
-    -webkit-transform: rotate(12deg) translateY(0.1em) translateX(0.2em);
-            transform: rotate(12deg) translateY(0.1em) translateX(0.2em);
-  }
-  40% {
-    -webkit-transform: rotate(24deg) translateY(0.5em) translateX(0.8em);
-            transform: rotate(24deg) translateY(0.5em) translateX(0.8em);
-  }
-  60% {
-    -webkit-transform: rotate(36deg) translateY(0.4em) translateX(0.6em);
-            transform: rotate(36deg) translateY(0.4em) translateX(0.6em);
-  }
-  80% {
-    -webkit-transform: rotate(24deg) translateY(-0.3em) translateX(0.2em);
-            transform: rotate(24deg) translateY(-0.3em) translateX(0.2em);
-  }
-  90% {
-    -webkit-transform: rotate(12deg) translateY(-0.2em) translateX(0.2em);
-            transform: rotate(12deg) translateY(-0.2em) translateX(0.2em);
-  }
-}
-@-webkit-keyframes pedal-crank {
-  from {
-    -webkit-transform: rotate(0) scale(0.5) skew(0);
-            transform: rotate(0) scale(0.5) skew(0);
-  }
-  to {
-    -webkit-transform: rotate(360deg) scale(0.8) skew(10deg);
-            transform: rotate(360deg) scale(0.8) skew(10deg);
-  }
-}
-@keyframes pedal-crank {
-  from {
-    -webkit-transform: rotate(0) scale(0.5) skew(0);
-            transform: rotate(0) scale(0.5) skew(0);
-  }
-  to {
-    -webkit-transform: rotate(360deg) scale(0.8) skew(10deg);
-            transform: rotate(360deg) scale(0.8) skew(10deg);
-  }
-}
-@-webkit-keyframes pedal-foot {
-  0% {
-    -webkit-transform: translateY(0.2em) translateX(0);
-            transform: translateY(0.2em) translateX(0);
-  }
-  20% {
-    -webkit-transform: translateY(0.5em) translateX(0);
-            transform: translateY(0.5em) translateX(0);
-  }
-  40% {
-    -webkit-transform: translateY(1.2em) translateX(-0.1em) rotate(30deg);
-            transform: translateY(1.2em) translateX(-0.1em) rotate(30deg);
-  }
-  60% {
-    -webkit-transform: translateY(1.2em) translateX(-0.4em) rotate(30deg);
-            transform: translateY(1.2em) translateX(-0.4em) rotate(30deg);
-  }
-  80% {
-    -webkit-transform: translateY(0.4em) translateX(-0.6em);
-            transform: translateY(0.4em) translateX(-0.6em);
-  }
-}
-@keyframes pedal-foot {
-  0% {
-    -webkit-transform: translateY(0.2em) translateX(0);
-            transform: translateY(0.2em) translateX(0);
-  }
-  20% {
-    -webkit-transform: translateY(0.5em) translateX(0);
-            transform: translateY(0.5em) translateX(0);
-  }
-  40% {
-    -webkit-transform: translateY(1.2em) translateX(-0.1em) rotate(30deg);
-            transform: translateY(1.2em) translateX(-0.1em) rotate(30deg);
-  }
-  60% {
-    -webkit-transform: translateY(1.2em) translateX(-0.4em) rotate(30deg);
-            transform: translateY(1.2em) translateX(-0.4em) rotate(30deg);
-  }
-  80% {
-    -webkit-transform: translateY(0.4em) translateX(-0.6em);
-            transform: translateY(0.4em) translateX(-0.6em);
-  }
-}
-@-webkit-keyframes torso {
-  to {
-    -webkit-transform: skew(2deg, 6deg) translateX(-0.05em);
-            transform: skew(2deg, 6deg) translateX(-0.05em);
-  }
-}
-@keyframes torso {
-  to {
-    -webkit-transform: skew(2deg, 6deg) translateX(-0.05em);
-            transform: skew(2deg, 6deg) translateX(-0.05em);
-  }
-}
-@-webkit-keyframes front-wheel {
-  to {
-    -webkit-transform: translate(0.05em, 0.075em);
-            transform: translate(0.05em, 0.075em);
-  }
-}
-@keyframes front-wheel {
-  to {
-    -webkit-transform: translate(0.05em, 0.075em);
-            transform: translate(0.05em, 0.075em);
-  }
-}
-@-webkit-keyframes back-wheel {
-  to {
-    -webkit-transform: translate(0.02em, 0.035em);
-            transform: translate(0.02em, 0.035em);
-  }
-}
-@keyframes back-wheel {
-  to {
-    -webkit-transform: translate(0.02em, 0.035em);
-            transform: translate(0.02em, 0.035em);
-  }
-}
-@-webkit-keyframes helmet {
-  to {
-    -webkit-transform: rotate(1deg) translateX(0.1em);
-            transform: rotate(1deg) translateX(0.1em);
-  }
-}
-@keyframes helmet {
-  to {
-    -webkit-transform: rotate(1deg) translateX(0.1em);
-            transform: rotate(1deg) translateX(0.1em);
-  }
-}
-@-webkit-keyframes head {
-  to {
-    -webkit-transform: translateX(0.1em) rotate(1deg);
-            transform: translateX(0.1em) rotate(1deg);
-  }
-}
-@keyframes head {
-  to {
-    -webkit-transform: translateX(0.1em) rotate(1deg);
-            transform: translateX(0.1em) rotate(1deg);
-  }
-}
-@-webkit-keyframes neck {
-  to {
-    -webkit-transform: skewX(-0.1em);
-            transform: skewX(-0.1em);
-  }
-}
-@keyframes neck {
-  to {
-    -webkit-transform: skewX(-0.1em);
-            transform: skewX(-0.1em);
-  }
-}
-.sb1ds-biker #ground {
-  -webkit-transform: translateY(-0.8em);
-      -ms-transform: translateY(-0.8em);
-          transform: translateY(-0.8em);
-}
-.sb1ds-biker #air {
-  opacity: 0;
-}
-.sb1ds-biker #flight-cloud,
-.sb1ds-biker #cloud {
-  -webkit-animation-name: cloud;
-          animation-name: cloud;
-  -webkit-animation-duration: 25s;
-          animation-duration: 25s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-}
-.sb1ds-biker #biker-all {
-  -webkit-animation-name: bike-from-left;
-          animation-name: bike-from-left;
-  -webkit-animation-duration: 15s;
-          animation-duration: 15s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-}
-.sb1ds-biker #right-shin,
-.sb1ds-biker #right-shin2,
-.sb1ds-biker #right-shoe,
-.sb1ds-biker #right-shoe2 {
-  -webkit-animation-name: right-leg;
-          animation-name: right-leg;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-}
-.sb1ds-biker #left-shin,
-.sb1ds-biker #left-shin2 {
-  -webkit-animation-name: left-leg;
-          animation-name: left-leg;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  animation-direction: alternate-reverse;
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
-}
-.sb1ds-biker #pedal-crank {
-  -webkit-animation-name: pedal-crank;
-          animation-name: pedal-crank;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-transform-origin: 0.2em 1em;
-      -ms-transform-origin: 0.2em 1em;
-          transform-origin: 0.2em 1em;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-}
-.sb1ds-biker #pedal-foot,
-.sb1ds-biker #pedal-foot2 {
-  -webkit-animation-name: pedal-foot;
-          animation-name: pedal-foot;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-}
-.sb1ds-biker #torso,
-.sb1ds-biker #torso2 {
-  -webkit-animation-name: torso;
-          animation-name: torso;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
-}
-.sb1ds-biker #front-wheel1,
-.sb1ds-biker #front-wheel2 {
-  -webkit-animation-name: front-wheel;
-          animation-name: front-wheel;
-  -webkit-animation-duration: 0.2s;
-          animation-duration: 0.2s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
-}
-.sb1ds-biker #back-wheel1,
-.sb1ds-biker #back-wheel2,
-.sb1ds-biker #back-wheel3 {
-  -webkit-animation-name: back-wheel;
-          animation-name: back-wheel;
-  -webkit-animation-duration: 0.2s;
-          animation-duration: 0.2s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  animation-direction: alternate-reverse;
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
-}
-.sb1ds-biker #helmet3,
-.sb1ds-biker #helmet4,
-.sb1ds-biker #helmet5,
-.sb1ds-biker #helmet6,
-.sb1ds-biker #helmet7 {
-  -webkit-animation-name: helmet;
-          animation-name: helmet;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
-}
-.sb1ds-biker #head1,
-.sb1ds-biker #head2,
-.sb1ds-biker #head3,
-.sb1ds-biker #head4,
-.sb1ds-biker #head5,
-.sb1ds-biker #head6,
-.sb1ds-biker #head7,
-.sb1ds-biker #head8 {
-  -webkit-animation-name: head;
-          animation-name: head;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
-}
-.sb1ds-biker #neck1,
-.sb1ds-biker #neck2,
-.sb1ds-biker #neck3 {
-  -webkit-animation-name: neck;
-          animation-name: neck;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
-}
-.sb1ds-biker.sb1ds-biker--quick #biker-all {
-  -webkit-animation-duration: 10s;
-          animation-duration: 10s;
-}
-.sb1ds-biker.sb1ds-biker--quick #right-shin,
-.sb1ds-biker.sb1ds-biker--quick #right-shin2,
-.sb1ds-biker.sb1ds-biker--quick #right-shoe,
-.sb1ds-biker.sb1ds-biker--quick #right-shoe2 {
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-}
-.sb1ds-biker.sb1ds-biker--quick #left-shin,
-.sb1ds-biker.sb1ds-biker--quick #left-shin2 {
-  -webkit-animation-duration: 0.25s;
-          animation-duration: 0.25s;
-}
-.sb1ds-biker.sb1ds-biker--quick #pedal-crank {
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-}
-.sb1ds-biker.sb1ds-biker--quick #pedal-foot,
-.sb1ds-biker.sb1ds-biker--quick #pedal-foot2 {
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-}
-.sb1ds-biker.sb1ds-biker--quick #torso,
-.sb1ds-biker.sb1ds-biker--quick #torso2 {
-  -webkit-animation-duration: 0.25s;
-          animation-duration: 0.25s;
-}
-.sb1ds-biker.sb1ds-biker--quick #front-wheel1,
-.sb1ds-biker.sb1ds-biker--quick #front-wheel2 {
-  -webkit-animation-duration: 0.1s;
-          animation-duration: 0.1s;
-}
-.sb1ds-biker.sb1ds-biker--quick #back-wheel1,
-.sb1ds-biker.sb1ds-biker--quick #back-wheel2,
-.sb1ds-biker.sb1ds-biker--quick #back-wheel3 {
-  -webkit-animation-duration: 0.1s;
-          animation-duration: 0.1s;
-}
-.sb1ds-biker.sb1ds-biker--quick #helmet3,
-.sb1ds-biker.sb1ds-biker--quick #helmet4,
-.sb1ds-biker.sb1ds-biker--quick #helmet5,
-.sb1ds-biker.sb1ds-biker--quick #helmet6,
-.sb1ds-biker.sb1ds-biker--quick #helmet7 {
-  -webkit-animation-duration: 0.25s;
-          animation-duration: 0.25s;
-}
-.sb1ds-biker.sb1ds-biker--quick #head1,
-.sb1ds-biker.sb1ds-biker--quick #head2,
-.sb1ds-biker.sb1ds-biker--quick #head3,
-.sb1ds-biker.sb1ds-biker--quick #head4,
-.sb1ds-biker.sb1ds-biker--quick #head5,
-.sb1ds-biker.sb1ds-biker--quick #head6,
-.sb1ds-biker.sb1ds-biker--quick #head7,
-.sb1ds-biker.sb1ds-biker--quick #head8 {
-  -webkit-animation-duration: 0.25s;
-          animation-duration: 0.25s;
-}
-.sb1ds-biker.sb1ds-biker--quick #neck1,
-.sb1ds-biker.sb1ds-biker--quick #neck2,
-.sb1ds-biker.sb1ds-biker--quick #neck3 {
-  -webkit-animation-duration: 0.25s;
-          animation-duration: 0.25s;
-}
-@-webkit-keyframes foot {
-  0% {
-    -webkit-transform: skewX(0);
-            transform: skewX(0);
-  }
-  50% {
-    -webkit-transform: skewX(-0.25deg);
-            transform: skewX(-0.25deg);
-  }
-  100% {
-    -webkit-transform: skewX(0);
-            transform: skewX(0);
-  }
-}
-@keyframes foot {
-  0% {
-    -webkit-transform: skewX(0);
-            transform: skewX(0);
-  }
-  50% {
-    -webkit-transform: skewX(-0.25deg);
-            transform: skewX(-0.25deg);
-  }
-  100% {
-    -webkit-transform: skewX(0);
-            transform: skewX(0);
-  }
-}
-@-webkit-keyframes bush {
-  0% {
-    -webkit-transform: skewX(0);
-            transform: skewX(0);
-  }
-  50% {
-    -webkit-transform: skewX(0.15deg);
-            transform: skewX(0.15deg);
-  }
-  100% {
-    -webkit-transform: skewX(0);
-            transform: skewX(0);
-  }
-}
-@keyframes bush {
-  0% {
-    -webkit-transform: skewX(0);
-            transform: skewX(0);
-  }
-  50% {
-    -webkit-transform: skewX(0.15deg);
-            transform: skewX(0.15deg);
-  }
-  100% {
-    -webkit-transform: skewX(0);
-            transform: skewX(0);
-  }
-}
-@-webkit-keyframes slow-cloud {
-  from {
-    -webkit-transform: translateX(22em);
-            transform: translateX(22em);
-  }
-  to {
-    -webkit-transform: translateX(-13em);
-            transform: translateX(-13em);
-  }
-}
-@keyframes slow-cloud {
-  from {
-    -webkit-transform: translateX(22em);
-            transform: translateX(22em);
-  }
-  to {
-    -webkit-transform: translateX(-13em);
-            transform: translateX(-13em);
-  }
-}
-@-webkit-keyframes blink {
-  0% {
-    opacity: 0;
-  }
-  30% {
-    opacity: 0;
-  }
-  35% {
-    opacity: 0.15;
-  }
-  40% {
-    opacity: 0;
-  }
-  58% {
-    opacity: 0;
-  }
-  62% {
-    opacity: 0.5;
-  }
-  67% {
-    opacity: 0;
-  }
-  85% {
-    opacity: 0;
-  }
-  87% {
-    opacity: 0.3;
-  }
-  89% {
-    opacity: 0;
-  }
-}
-@keyframes blink {
-  0% {
-    opacity: 0;
-  }
-  30% {
-    opacity: 0;
-  }
-  35% {
-    opacity: 0.15;
-  }
-  40% {
-    opacity: 0;
-  }
-  58% {
-    opacity: 0;
-  }
-  62% {
-    opacity: 0.5;
-  }
-  67% {
-    opacity: 0;
-  }
-  85% {
-    opacity: 0;
-  }
-  87% {
-    opacity: 0.3;
-  }
-  89% {
-    opacity: 0;
-  }
-}
-#hoyre-fot {
-  -webkit-animation-name: foot;
-          animation-name: foot;
-  -webkit-animation-duration: 0.6s;
-          animation-duration: 0.6s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
-}
-#vindu-busk1 {
-  -webkit-animation-name: bush;
-          animation-name: bush;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
-}
-#vindu-busk2 {
-  -webkit-animation-name: bush;
-          animation-name: bush;
-  -webkit-animation-duration: 2.5s;
-          animation-duration: 2.5s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  animation-direction: alternate-reverse;
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
-}
-#vindu-sky {
-  -webkit-animation-name: slow-cloud;
-          animation-name: slow-cloud;
-  -webkit-animation-duration: 55s;
-          animation-duration: 55s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-}
-#skjermlys1,
-#skjermlys2,
-#skjermlys3 {
-  -webkit-animation-name: blink;
-          animation-name: blink;
-  -webkit-animation-duration: 2.5s;
-          animation-duration: 2.5s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  animation-direction: alternate-reverse;
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
 }
 .sb1ds-npm-i-builder-output {
   background: #f4f4f4;

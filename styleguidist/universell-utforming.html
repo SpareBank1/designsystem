@@ -170,13 +170,19 @@
                                         href="#universell-utforming">Universell utforming</a>
                                     <ul class="sb1ds-components-list">
                                         <li class="sb1ds-components-list__item">
-                                          <a class="ffe-link-text ffe-link-text--no-underline sb1ds-components-list__link" href="#universell-utforming_wcag">WCAG 2.0</a>
+                                          <a class="ffe-link-text ffe-link-text--no-underline sb1ds-components-list__link" href="#universell-utforming_generelt">Generelt</a>
                                         </li>
                                         <li class="sb1ds-components-list__item">
-                                          <a class="ffe-link-text ffe-link-text--no-underline sb1ds-components-list__link" href="#universell-utforming_tips">Tips og råd</a>
+                                          <a class="ffe-link-text ffe-link-text--no-underline sb1ds-components-list__link" href="#universell-utforming_sprak">Bruk tydelig språk</a>
                                         </li>
                                         <li class="sb1ds-components-list__item">
-                                          <a class="ffe-link-text ffe-link-text--no-underline sb1ds-components-list__link" href="#universell-utforming_verktoy">Verktøy</a>
+                                          <a class="ffe-link-text ffe-link-text--no-underline sb1ds-components-list__link" href="#universell-utforming_visuelt">Vær visuelt tydelig</a>
+                                        </li>
+                                        <li class="sb1ds-components-list__item">
+                                          <a class="ffe-link-text ffe-link-text--no-underline sb1ds-components-list__link" href="#universell-utforming_html">Skriv semantisk HTML</a>
+                                        </li>
+                                        <li class="sb1ds-components-list__item">
+                                          <a class="ffe-link-text ffe-link-text--no-underline sb1ds-components-list__link" href="#universell-utforming_verktoy">Nyttige verktøy</a>
                                         </li>
                                     </ul>                                </li>
                             </ul>
@@ -191,42 +197,253 @@
                     
                       <div class="sb1ds-intro sb1ds-intro--section">
                         <p class="ffe-lead-paragraph sb1ds-intro__paragraph">
-                            Våre løsninger skal være tilgjengelige for alle. Som et minimum bør ethvert design tilfredstille nivå AA i WCAG 2.0.
+                            Våre løsninger skal være tilgjengelige for alle.
                         </p>
                     </div>
+                    
                     </section>
                     
                         <section class="sb1ds-section-static">
-                          <h2 class="ffe-h2 sb1ds-section-static__h2 sb1ds-header-offset" id="universell-utforming_wcag">WCAG 2.0</h2>
+                          <h2 class="ffe-h2 sb1ds-section-static__h2 sb1ds-header-offset" id="universell-utforming_generelt">Generelt</h2>
                         
-                          <p>WCAG 2.0 er standarden som er utgangspunkt for <a href="https://lovdata.no/dokument/SF/forskrift/2013-06-21-732">Forskrift om universell utforming av IKT-løsninger</a>.</p>
+                          <p>Løsningene vi lager skal være tilgjengelige for alle, uavhengig av funksjonsevne. De blir brukt på mange forskjellige måter og med mange forskjellige hjelpemidler. Dette må vi ta høyde for når vi designer og utvikler tjenester og produkter.</p>
+                        <p>Nedsatt funksjonsevne kan bestå av bl.a. synshemminger, bevegelseshemminger, hørselshemminger eller kognitive funksjonsnedsettelser. Bufdir anslår at <a href="https://bufdir.no/Statistikk_og_analyse/Nedsatt_funksjonsevne/Antall/">mellom 15% og 18% av befolkningen har nedsatt funksjonsevne</a>, og Norges Blindeforbund anslår at <a href="https://www.blindeforbundet.no/oyehelse-og-synshemninger/fakta-og-statistikk-om-synshemninger">mer enn 320 000 personer lever med synshemminger i Norge</a>. De fleste av oss vil i løpet av livet oppleve en midlertidig funksjonsnedsettelse, for eksempel et brukket ben eller en annen skade som setter oss ut av spill for en periode.</p>
+                        <p>Mange bruker hjelpemidler eller tilrettelagt programvare, mens andre har preferanser som har betydning for deres bruksmønstre. Løsningene våre vil brukes med for eksempel skjermlesere, tastaturnavigasjon, talegjenkjenning, skjermforstørring og forskjellige input-enheter.</p>
+                        <p>Universell utforming handler om å legge til rette for uhindret bruk, og gir til syvende og sist en bedre brukeropplevelse for alle.</p>
+                        
+                        </section>
+                        
+                        <section class="sb1ds-section-static">
+                          <h2 class="ffe-h2 sb1ds-section-static__h2 sb1ds-header-offset" id="universell-utforming_sprak">Bruk tydelig språk</h2>
+                        
+                          <p>Tydelig og forståelig språk understøtter intuitive bruksmønstre, og hjelper de med lave leseferdigheter å forstå innhold.</p>
+                        <h3 id="bruk-informativ-og-beskrivende-tekst-i-knapper-og-lenker">Bruk informativ og beskrivende tekst i knapper og lenker</h3>
+                        <p>Knapper og lenker bør ha tekst som gjør det enkelt å oppfatte hvilken handling man utfører, eller hvor lenken peker.</p>
+                        <div class="ffe-grid ffe-grid--inline sb1ds-dos-donts">
+                            <div class="ffe-grid__row">
+                                <div class="sb1ds-good ffe-grid__col--sm-12 ffe-grid__col--md-6">
+                                    <div class="sb1ds-do-dont">
+                                        <h4 class="sb1ds-do-dont__header sb1ds-do-dont__header--do">Gjør</h4>
+                                        <p class="sb1ds-do-dont__description ffe-small-text">Informativ og beskrivende tekst i knapper</p>
+                                        <div class="sb1ds-do-dont__example">
+                                            <button class="ffe-button ffe-button--primary">
+                                                <span class="ffe-button__label">Gå videre til betaling</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sb1ds-bad ffe-grid__col--sm-12 ffe-grid__col--md-6">
+                                    <div class="sb1ds-do-dont">
+                                        <h4 class="sb1ds-do-dont__header sb1ds-do-dont__header--dont">Unngå</h4>
+                                        <p class="sb1ds-do-dont__description ffe-small-text">Generisk, ukonkret tekst</p>
+                                        <div class="sb1ds-do-dont__example">
+                                            <button class="ffe-button ffe-button--primary">
+                                                <span class="ffe-button__label">Klikk her</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ffe-grid__row">
+                                <div class="sb1ds-good ffe-grid__col--sm-12 ffe-grid__col--md-6">
+                                    <div class="sb1ds-do-dont">
+                                        <h4 class="sb1ds-do-dont__header sb1ds-do-dont__header--do">Gjør</h4>
+                                        <p class="sb1ds-do-dont__description ffe-small-text">Informativ og beskrivende tekst i lenker</p>
+                                        <div class="sb1ds-do-dont__example">
+                                            <a href="#">Hvilket fond er best for meg?</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sb1ds-bad ffe-grid__col--sm-12 ffe-grid__col--md-6">
+                                    <div class="sb1ds-do-dont">
+                                        <h4 class="sb1ds-do-dont__header sb1ds-do-dont__header--dont">Unngå</h4>
+                                        <p class="sb1ds-do-dont__description ffe-small-text">Generisk, ukonkret tekst</p>
+                                        <div class="sb1ds-do-dont__example">
+                                            <a href="#">Les mer</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h3 id="bruk-informative-og-beskrivende-overskrifter">Bruk informative og beskrivende overskrifter</h3>
+                        <p>Mange brukere navigerer fra overskrift til overskrift med skjermlesere og tastaturnavigering.</p>
                         <ul>
-                        <li><a href="https://uu.difi.no/krav-og-regelverk/wcag-20-standarden">Oversikt over minimumskrav omfattet av forskriften</a></li>
+                        <li>Overskrifter bør beskrive innholdet de representerer</li>
+                        <li>Vær obs på overskriftsnivå - <code>&lt;h1&gt;</code> er sidetittel</li>
+                        </ul>
+                        <h3 id="ta-semantisk-html-til-hjelp">Ta semantisk HTML til hjelp</h3>
+                        <p>Semantisk HTML tilbyr ekstra informasjon som kan bidra til å gjøre innhold lettere å forstå.</p>
+                        <div class="sb1ds-do-dont">
+                            <h4 class="sb1ds-do-dont__header sb1ds-do-dont__header--do">Eksempel</h4>
+                            <p class="sb1ds-do-dont__description ffe-small-text"><code>&lt;abbr&gt;</code> brukes for å beskrive forkortelser.</p>
+                            <div class="sb1ds-do-dont__example">
+                                <code>&lt;abbr title=&quot;November&quot;&gt;Nov&lt;/abbr&gt;</code>
+                            </div>
+                        </div>
+                        
+                        <h3 id="tilby-alternativer-for-ikke-tekstlig-innhold">Tilby alternativer for ikke-tekstlig innhold</h3>
+                        <p>Noen brukere kan ikke se bilder eller høre lyd. Derfor er det viktig å tilby alternativer til innhold som ikke er ren tekst.</p>
+                        <ul>
+                        <li>Videoer bør ha undertekst</li>
+                        <li>Bilder bør ha en beskrivende og informativ alt-tekst</li>
+                        <li>Unngå tekst i bilder - Dette vil ikke leses ikke opp av skjermlesere</li>
                         </ul>
                         
                         </section>
                         
                         <section class="sb1ds-section-static">
-                          <h2 class="ffe-h2 sb1ds-section-static__h2 sb1ds-header-offset" id="universell-utforming_tips">Tips og råd</h2>
+                          <h2 class="ffe-h2 sb1ds-section-static__h2 sb1ds-header-offset" id="universell-utforming_visuelt">Vær visuelt tydelig</h2>
                         
-                          <p>Med universell utforming når vi alle målgrupper gjennom én og samme løsning. Tenk derfor på UU som en prosess og et virkemiddel gjennom design- og utviklingsløpet.</p>
+                          <p>Løsninger bør være lette å forstå, uten behov for forkunnskaper eller forklaring.</p>
+                        <h3 id="intuitive-brukergrensesnitt">Intuitive brukergrensesnitt</h3>
+                        <p>Fokus på brukeropplevelse går hånd i hånd med universell utforming, og løsninger bør i størst mulig grad være enkle å forstå. Løsninger som er utformet ved hjelp av etablerte mønstre og konvensjoner kan være intuitive selv om de er komplekse.</p>
+                        <h3 id="kontrast">Kontrast</h3>
+                        <p>Tekst må ha tilstrekkelig kontrast mot bakgrunn for å gi god nok lesbarhet. WCAG 2.0, nivå AA krever kontrastforhold på 4.5:1 for stor tekst og 3.0:1 for liten tekst. Kontrast kan sjekkes med en rekke verktøy, for eksempel <a href="https://webaim.org/resources/contrastchecker/">WebAIM Contrast Checker</a>.</p>
+                        <p>Vær også bevisst på kontrastforholdene i løsninger designet for dark mode.</p>
+                        <h3 id="klikkflate">Klikkflate</h3>
+                        <p>Klikkbare elementer bør være lette å treffe, blant annet for brukere med motoriske utfordringer og brukere som benytter seg av musemulering eller andre input-hjelpemidler.</p>
                         <ul>
-                        <li>For å sikre god lesbarhet er det viktig med god kontrast mellom bakgrunn og tekstfarge<ul>
-                        <li>Brødtekst må ha et kontrastforhold på minst 4.5:1, som definert i <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html">WCAG 2.0, punkt 1.4.3</a></li>
-                        <li>Stor skriftstørrelse må ha et kontrastforhold på minst 3:1</li>
+                        <li>Klikkbare elementer bør ha tilstrekkelig størrelse, ikke minst på mobilskjermer</li>
+                        <li>Avstanden mellom klikkbare elementer bør være stor nok til at faren for å klikke feil reduseres</li>
+                        <li>Radioknapper og sjekkbokser bør være tilknyttet et klikkbart <code>&lt;label&gt;</code></li>
+                        </ul>
+                        <h3 id="visuell-feedback">Visuell feedback</h3>
+                        <p>Visuell feedback hjelper brukere å forstå hvordan brukergrensesnittet reagerer på deres handlinger.</p>
+                        <ul>
+                        <li><code>:hover</code></li>
+                        <li><code>:active</code></li>
+                        <li><code>:focus</code></li>
+                        </ul>
+                        <h3 id="skjermforstørring">Skjermforstørring</h3>
+                        <p>Skjermforstørrere er hjelpemidler for svaksynte, som forstørrer skjermbildet i forskjellig grad. Løsningene våre bør kunne forstørres uten at det hindrer bruk.</p>
+                        <ul>
+                        <li>Vær bevisst på hvordan whitespace påvirker opplevelsen i forstørret tilstand</li>
+                        <li>Vær obs på avstanden mellom elementer som henger sammen, for eksempel <code>&lt;dt&gt;</code> og <code>&lt;dd&gt;</code> i description list</li>
+                        </ul>
+                        <h3 id="tekstforstørring">Tekstforstørring</h3>
+                        <p>Brukere skal kunne forstørre tekst inntil 200%, uten at det endrer grensesnittet på en slik måte at det hindrer bruk.</p>
+                        <ul>
+                        <li>Vær obs på overflow</li>
+                        <li>Unngå hardkodet høyde på elementer der forstørret innhold tar opp mer plass enn containeren</li>
+                        </ul>
+                        <div class="sb1ds-do-dont">
+                            <h4 class="sb1ds-do-dont__header sb1ds-do-dont__header--dont">Eksempel</h4>
+                            <p class="sb1ds-do-dont__description ffe-small-text">Hardkodet høyde kan by på problemer ved tekstforstørring, spesielt i kombinasjon med <code>overflow: hidden</code>.</p>
+                            <div class="sb1ds-do-dont__example">
+                                <div class="ffe-card-base ffe-text-card" style="max-width: 300px; font-size: 125%; margin-bottom: 0;"><p class="ffe-card-component ffe-card-component--card-name">Kortnavn</p><p class="ffe-card-component ffe-card-component--title ffe-card-component--title--overflow-ellipsis">Tittel</p><span class="ffe-card-component ffe-card-component--subtext">Subtext er grå</span><p class="ffe-card-component ffe-card-component--text" style="height: 115px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
+                            </div>
+                        </div>
+                        
+                        </section>
+                        
+                        <section class="sb1ds-section-static">
+                          <h2 class="ffe-h2 sb1ds-section-static__h2 sb1ds-header-offset" id="universell-utforming_html">Skriv semantisk HTML</h2>
+                        
+                          <p>Semantisk HTML hjelper både mennesker og maskiner med å forstå strukturen i websider.</p>
+                        <h3 id="bruk-tagger-som-beskriver-innhold">Bruk tagger som beskriver innhold</h3>
+                        <p>De aller fleste HTML-tagger har en semantisk betydning som beskriver dataene de inneholder. Dette gjør det lettere å tolke både struktur og innhold for skjermlesere og andre hjelpemidler.</p>
+                        <h4 id="eksempler">Eksempler</h4>
+                        <ul>
+                        <li><code>&lt;nav&gt;</code> - Navigasjon</li>
+                        <li><code>&lt;address&gt;</code> - Kontaktinformasjon</li>
+                        <li><code>&lt;main&gt;</code> - Hovedinnhold på en side</li>
+                        </ul>
+                        <p>MDN har en <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">fullstendig liste over HTML-elementer og hvordan de brukes</a>.</p>
+                        <h3 id="bruk-ikke-semantiske-elementer-kun-til-layout-eller-beskriv-de-med-aria-attributter">Bruk ikke-semantiske elementer kun til layout, eller beskriv de med ARIA-attributter</h3>
+                        <p><code>&lt;div&gt;</code> og <code>&lt;span&gt;</code> er HTML-elementer som ikke har noen semantisk betydning. Derfor egner de seg til bruk som containere for andre HTML-elementer, men de kan også brukes som innholdscontainere i kombinasjon med ARIA-attributter som beskriver innholdet.</p>
+                        <h3 id="bruk-aria-attributter">Bruk ARIA-attributter</h3>
+                        <p>WAI-ARIA tilbyr en rekke attributter som kan brukes for å gjøre innhold mer tilgjengelig. For eksempel:</p>
+                        <ul>
+                        <li>Widgeter som ikke har tilsvarende HTML-elementer<ul>
+                        <li><code>&lt;div role=”tablist”&gt;</code></li>
                         </ul>
                         </li>
-                        <li>Bilder må ha alt-attributt med alternativ tekst for skjermlesere</li>
-                        <li>Det skal være mulig å navigere med tastaturet</li>
+                        <li>Tilstand/state<ul>
+                        <li><code>aria-checked</code></li>
+                        <li><code>aria-disabled</code></li>
+                        <li><code>aria-expanded</code></li>
+                        </ul>
+                        </li>
+                        <li>Skjema<ul>
+                        <li><code>aria-required</code></li>
+                        <li><code>aria-errormessage</code></li>
+                        </ul>
+                        </li>
+                        </ul>
+                        <h4 id="bruk-semantiske-html-tagger-i-stedet-om-mulig">Bruk semantiske HTML-tagger i stedet, om mulig</h4>
+                        <p>En del ARIA-attributter har samme betydning som semantiske HTML-elementer. I slike tilfeller bør man velge HTML-elementene. For eksempel:</p>
+                        <ul>
+                        <li><code>&lt;main&gt;</code> fremfor <code>&lt;div role=&quot;main&quot;&gt;</code></li>
+                        <li><code>&lt;button&gt;</code> fremfor <code>&lt;input role=&quot;button&quot;&gt;</code></li>
+                        </ul>
+                        <p><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA">ARIA er grundig dokumentert hos MDN</a>.</p>
+                        <h3 id="vær-obs-på-rekkefølgen-på-overskrifter">Vær obs på rekkefølgen på overskrifter</h3>
+                        <ul>
+                        <li><code>&lt;h1&gt;</code> er sidetittel - bruk kun én <code>&lt;h1&gt;</code> på hver side</li>
+                        <li><code>&lt;h2&gt;</code> - <code>&lt;h6&gt;</code> er de resterende nivåene</li>
+                        <li>Unngå å hoppe over nivåer</li>
+                        </ul>
+                        <div class="ffe-grid ffe-grid--inline sb1ds-dos-donts">
+                            <div class="ffe-grid__row">
+                                <div class="sb1ds-good ffe-grid__col--sm-12 ffe-grid__col--md-6">
+                                    <div class="sb1ds-do-dont">
+                                        <h4 class="sb1ds-do-dont__header sb1ds-do-dont__header--do">Gjør</h4>
+                                        <p class="sb1ds-do-dont__description ffe-small-text">Ranger overskrifter i riktig rekkefølge</p>
+                                        <div class="sb1ds-do-dont__example">
+                                            <pre><code>&lt;h1&gt;Sidetittel&lt;/h1&gt;
+                        &nbsp;&nbsp;&lt;h2&gt;Niv&aring; 2&lt;/h2&gt;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;h3&gt;Niv&aring; 3&lt;/h3&gt;
+                        &nbsp;&nbsp;&lt;h2&gt;Niv&aring; 2&lt;/h2&gt;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;h3&gt;Niv&aring; 3&lt;/h3&gt;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;h3&gt;Niv&aring; 3&lt;/h3&gt;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h4&gt;Niv&aring; 4&lt;/h4&gt;</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sb1ds-bad ffe-grid__col--sm-12 ffe-grid__col--md-6">
+                                    <div class="sb1ds-do-dont">
+                                        <h4 class="sb1ds-do-dont__header sb1ds-do-dont__header--dont">Unngå</h4>
+                                        <p class="sb1ds-do-dont__description ffe-small-text">Unngå å hoppe over overskriftsnivåer</p>
+                                        <div class="sb1ds-do-dont__example">
+                                            <pre><code>&lt;h1&gt;Sidetittel&lt;/h1&gt;
+                        &nbsp;&nbsp;&lt;h3&gt;Niv&aring; 3&lt;/h3&gt;
+                        &nbsp;&nbsp;&lt;h3&gt;Niv&aring; 3&lt;/h3&gt;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;h5&gt;Niv&aring; 5&lt;/h5&gt;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;h5&gt;Niv&aring; 5&lt;/h5&gt;
+                        &nbsp;&nbsp;&lt;h3&gt;Niv&aring; 3&lt;/h3&gt;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;h6&gt;Niv&aring; 6&lt;/h6&gt;</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h3 id="lenker-eller-knapper">Lenker eller knapper?</h3>
+                        <ul>
+                        <li>Knapper utfører en funksjon</li>
+                        <li>Lenker tar deg videre til en annen side</li>
+                        </ul>
+                        <h3 id="bilder">Bilder</h3>
+                        <ul>
+                        <li>Bruk en beskrivende og informativ alt-tekst</li>
+                        <li>Bilder som brukes ren dekorasjon kan ha tomt alt-attributtt</li>
+                        <li>Unngå tekst i bilder</li>
                         </ul>
                         
                         </section>
                         
                         <section class="sb1ds-section-static">
-                          <h2 class="ffe-h2 sb1ds-section-static__h2 sb1ds-header-offset" id="universell-utforming_verktoy">Verktøy</h2>
+                          <h2 class="ffe-h2 sb1ds-section-static__h2 sb1ds-header-offset" id="universell-utforming_verktoy">Nyttige verktøy</h2>
                         
-                          <ul>
-                        <li><a href="https://www.w3.org/TR/WCAG20/#conformance">WCAG 2.0 conformance</a></li>
+                          <p>Browser-plugins, validering og andre automatiske verktøy kan gi verdifull informasjon underveis i utviklingen.</p>
+                        <ul>
+                        <li><a href="https://www.deque.com/axe/">Axe</a></li>
+                        <li><a href="https://wave.webaim.org/">Wave</a></li>
+                        <li><a href="https://accessibilityinsights.io/">Accessibility insights</a></li>
+                        <li><a href="https://snook.ca/technical/colour_contrast/colour.html#fg=33FF33,bg=333333">Colour Contrast Check</a></li>
+                        <li><a href="https://www.funkify.org/">Funkify</a></li>
+                        <li><a href="https://validator.w3.org/">W3C Markup Validation</a></li>
                         <li><a href="https://www.w3.org/WAI/ER/tools/">WAI valideringsverktøy</a></li>
                         <li><a href="https://webaim.org/resources/contrastchecker/">Kontrastsjekk</a></li>
                         <li><a href="https://wave.webaim.org/">WAVE Accessibility Evaluation Tool</a></li>
