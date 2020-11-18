@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.35](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@4.2.34...@sb1/ffe-datepicker-react@4.2.35) (2020-11-18)
+
+
+### Bug Fixes
+
+* **ffe-datepicker-react:** fix Datepicker and DateInput types ([bf68e10](https://github.com/SpareBank1/designsystem/commit/bf68e10fec8862a89d81c8836e253f7a4b39f5c5))
+
+
+
+
+
 ## [4.2.34](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@4.2.33...@sb1/ffe-datepicker-react@4.2.34) (2020-11-05)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker-react
