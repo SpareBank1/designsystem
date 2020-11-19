@@ -18,7 +18,7 @@ export interface AccountSelectorProps {
     selectedAccount?: Account;
     showBalance?: boolean;
     value: string;
-    readonly?: boolean;
+    readOnly?: boolean;
     highCapacity?: boolean;
 }
 
@@ -70,7 +70,7 @@ export interface BaseSelectorProps {
     suggestionsHeightMax?: number;
     id?: string;
     name?: string;
-    readonly?: boolean;
+    readOnly?: boolean;
     highCapacity?: boolean;
 }
 
