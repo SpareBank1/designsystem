@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@4.0.10...@sb1/ffe-system-message@5.0.0) (2020-11-20)
+
+
+### Bug Fixes
+
+* **ffe-system-message:** change text values to rem ([7ab0d32](https://github.com/SpareBank1/designsystem/commit/7ab0d32a7169da65bc85207a42e2067d57a3e70c))
+
+
+### BREAKING CHANGES
+
+* **ffe-system-message:** This fix changes all font-size and line-height values from px to rem,
+this is to solve an issue with zooming in iOS.
+
+
+
+
+
 ## [4.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@4.0.9...@sb1/ffe-system-message@4.0.10) (2020-11-05)
 
 **Note:** Version bump only for package @sb1/ffe-system-message

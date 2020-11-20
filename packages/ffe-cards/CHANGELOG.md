@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [9.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@8.0.10...@sb1/ffe-cards@9.0.0) (2020-11-20)
+
+
+### Bug Fixes
+
+* **ffe-cards:** change text values to rem ([0ef1fed](https://github.com/SpareBank1/designsystem/commit/0ef1fed5b9c00fcec77b7eab6a0c15a7783cc1ff))
+
+
+### BREAKING CHANGES
+
+* **ffe-cards:** This fix changes all font-size and line-height values from px to rem,
+this is to solve an issue with zooming in iOS.
+
+
+
+
+
 ## [8.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@8.0.9...@sb1/ffe-cards@8.0.10) (2020-11-05)
 
 **Note:** Version bump only for package @sb1/ffe-cards

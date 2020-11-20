@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@6.0.17...@sb1/ffe-datepicker@7.0.0) (2020-11-20)
+
+
+### Bug Fixes
+
+* **ffe-datepicker:** change text values to rem ([bb279c1](https://github.com/SpareBank1/designsystem/commit/bb279c139ea99b122e8f046199eae1ad271df9f6))
+
+
+### BREAKING CHANGES
+
+* **ffe-datepicker:** This fix changes all font-size and line-height values from px to rem,
+this is to solve an issue with zooming in iOS.
+
+
+
+
+
 ## [6.0.17](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@6.0.16...@sb1/ffe-datepicker@6.0.17) (2020-11-05)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker

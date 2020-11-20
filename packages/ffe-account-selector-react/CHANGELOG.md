@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [14.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@13.2.19...@sb1/ffe-account-selector-react@14.0.0) (2020-11-20)
+
+
+### Bug Fixes
+
+* **ffe-account-selector-react:** change text values to rem ([6cf76f4](https://github.com/SpareBank1/designsystem/commit/6cf76f4a03d87f4bae4d27615322aea0ce3bdb4c))
+
+
+### BREAKING CHANGES
+
+* **ffe-account-selector-react:** This fix changes all font-size and line-height values from px to rem,
+this is to solve an issue with zooming in iOS.
+
+
+
+
+
 ## [13.2.19](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@13.2.18...@sb1/ffe-account-selector-react@13.2.19) (2020-11-19)
 
 

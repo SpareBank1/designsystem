@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [11.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@10.0.12...@sb1/ffe-tables@11.0.0) (2020-11-20)
+
+
+### Bug Fixes
+
+* **ffe-tables:** change text values to rem ([41e25d4](https://github.com/SpareBank1/designsystem/commit/41e25d4f58f0ca5d4a2afc519852d447e0b3ff6d))
+
+
+### BREAKING CHANGES
+
+* **ffe-tables:** This fix changes all font-size and line-height values from px to rem,
+this is to solve an issue with zooming in iOS.
+
+
+
+
+
 ## [10.0.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@10.0.11...@sb1/ffe-tables@10.0.12) (2020-11-05)
 
 **Note:** Version bump only for package @sb1/ffe-tables

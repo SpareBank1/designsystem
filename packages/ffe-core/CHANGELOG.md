@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [16.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@15.6.0...@sb1/ffe-core@16.0.0) (2020-11-20)
+
+
+### Bug Fixes
+
+* **ffe-core:** change text values to rem ([fcd0bdd](https://github.com/SpareBank1/designsystem/commit/fcd0bddb77e63e9f46d67bdad8b7c79c23ead3c9))
+* **ffe-core:** move html font-size ([316cfc8](https://github.com/SpareBank1/designsystem/commit/316cfc833a42a474657bed40dfc8cf40f5f74e5d))
+
+
+### BREAKING CHANGES
+
+* **ffe-core:** Moved the html font-size defintion from font-sizes.less to ffe-normalize.
+* **ffe-core:** This fix changes all font-size and line-height values from px to rem,
+this is to solve an issue with zooming in iOS.
+
+
+
+
+
 # [15.6.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@15.5.8...@sb1/ffe-core@15.6.0) (2020-11-05)
 
 

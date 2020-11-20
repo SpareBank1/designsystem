@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload@3.0.10...@sb1/ffe-file-upload@4.0.0) (2020-11-20)
+
+
+### Bug Fixes
+
+* **ffe-file-upload:** change text values to rem ([e4f10db](https://github.com/SpareBank1/designsystem/commit/e4f10db76a54dea51910310609ea44dd376b5c2e))
+
+
+### BREAKING CHANGES
+
+* **ffe-file-upload:** This fix changes all font-size and line-height values from px to rem,
+this is to solve an issue with zooming in iOS.
+
+
+
+
+
 ## [3.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload@3.0.9...@sb1/ffe-file-upload@3.0.10) (2020-11-05)
 
 **Note:** Version bump only for package @sb1/ffe-file-upload
