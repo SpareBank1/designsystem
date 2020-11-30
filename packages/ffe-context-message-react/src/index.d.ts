@@ -11,6 +11,7 @@ export interface ContextMessageProps
     headerElementId?: string;
     icon?: React.ReactNode;
     locale?: 'nb' | 'nn' | 'en';
+    messageType: 'info' | 'tip' | 'success' | 'error';
     onClose?: (event: React.MouseEvent) => void;
     showCloseButton?: boolean;
     style?: React.CSSProperties;
@@ -24,14 +25,17 @@ declare class ContextInfoMessage extends React.Component<
     ContextMessageProps,
     any
 > {}
+
 declare class ContextTipMessage extends React.Component<
     ContextMessageProps,
     any
 > {}
+
 declare class ContextSuccessMessage extends React.Component<
     ContextMessageProps,
     any
 > {}
+
 declare class ContextErrorMessage extends React.Component<
     ContextErrorMessageProps,
     any
