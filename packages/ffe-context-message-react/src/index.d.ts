@@ -11,7 +11,6 @@ export interface ContextMessageProps
     headerElementId?: string;
     icon?: React.ReactNode;
     locale?: 'nb' | 'nn' | 'en';
-    messageType: 'info' | 'tip' | 'success' | 'error';
     onClose?: (event: React.MouseEvent) => void;
     showCloseButton?: boolean;
     style?: React.CSSProperties;
