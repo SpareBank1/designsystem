@@ -24,7 +24,7 @@ export interface DatepickerProps {
     onChange: (value: string) => void;
     onError?: (type: DatePickerErrorType, errorText: string) => void;
     value: string;
-    keepDisplayStateOnError: boolean;
+    keepDisplayStateOnError?: boolean;
     fullWidth?: boolean;
 }
 
