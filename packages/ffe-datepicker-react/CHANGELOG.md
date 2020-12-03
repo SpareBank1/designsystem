@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.38](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@4.2.37...@sb1/ffe-datepicker-react@4.2.38) (2020-12-03)
+
+
+### Bug Fixes
+
+* set correct type of onError-prop ([fcfea89](https://github.com/SpareBank1/designsystem/commit/fcfea89a96338470a6f652af66ff1c911ddfa3f5))
+* set keepDisplayStateOnError to optional, it has a default value ([4af5c41](https://github.com/SpareBank1/designsystem/commit/4af5c41f4383b83197013889ee5499ca876c1cde))
+
+
+
+
+
 ## [4.2.37](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@4.2.36...@sb1/ffe-datepicker-react@4.2.37) (2020-12-03)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker-react
