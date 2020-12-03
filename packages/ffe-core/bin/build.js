@@ -24,7 +24,10 @@ FILES_WITH_VARIABLES.forEach(filename => {
         .map(line => line.trim())
         .filter(line => line.startsWith('@') && !line.startsWith('@import'))
         .map(line => line.split(': '))
-        .filter(([, value]) => !value.includes('@'))
+        .filter(([, value]) => {
+            const [valueBeforeComment] = value.split(/\/\//);
+            return !valueBeforeComment.includes('@');
+        })
         .map(([key, value]) => [key.replace('@ffe-', ''), value])
         .map(([key, value]) => [key.replace('@', ''), value])
         .reduce(
