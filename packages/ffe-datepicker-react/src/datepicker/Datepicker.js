@@ -426,6 +426,6 @@ Datepicker.propTypes = {
     onChange: func.isRequired,
     onError: func,
     value: string.isRequired,
-    keepDisplayStateOnError: bool.isRequired,
+    keepDisplayStateOnError: bool,
     fullWidth: bool,
 };

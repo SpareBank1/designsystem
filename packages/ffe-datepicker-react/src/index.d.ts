@@ -4,6 +4,12 @@ export type InputProps = React.InputHTMLAttributes<HTMLInputElement>;
 
 type AriaInvalid = boolean | 'false' | 'true' | 'grammar' | 'spelling';
 
+export type DatePickerErrorType =
+    | 'INVALID_DATE_FORMAT'
+    | 'INVALID_DATE'
+    | 'MAX_DATE'
+    | 'MIN_DATE';
+
 export interface DatepickerProps {
     'aria-invalid'?: AriaInvalid;
     ariaInvalid?: AriaInvalid;
@@ -16,9 +22,9 @@ export interface DatepickerProps {
     maxDate?: string;
     minDate?: string;
     onChange: (value: string) => void;
-    onError?: (event: React.SyntheticEvent<HTMLInputElement, Event>) => void;
+    onError?: (type: DatePickerErrorType, errorText: string) => void;
     value: string;
-    keepDisplayStateOnError: boolean;
+    keepDisplayStateOnError?: boolean;
     fullWidth?: boolean;
 }
 
