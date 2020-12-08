@@ -14,18 +14,18 @@
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "express": "~4.17.1",
-    "highlight.js": "^9.12.0",
+    "highlight.js": "^10.4.1",
     "jsonfile": "^4.0.0",
     "kss": "^3.0.0-beta.23",
     "less-loader": "^4.1.0",
     "less-plugin-autoprefix": "^2.0.0",
     "less-plugin-clean-css": "^1.5.1",
     "morgan": "~1.10.0",
+    "snyk": "^1.316.1",
     "vue": "^2.5.17",
     "webpack": "^4.17.1",
     "webpack-dev-middleware": "^3.2.0",
-    "webpack-hot-middleware": "^2.22.3",
-    "snyk": "^1.316.1"
+    "webpack-hot-middleware": "^2.22.3"
   },
   "snyk": true
 }
