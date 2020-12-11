@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@5.1.4...@sb1/ffe-context-message-react@5.1.5) (2020-12-11)
+
+
+### Bug Fixes
+
+* **ffe-context-message-react:** Allow custom header tag ([9282f48](https://github.com/SpareBank1/designsystem/commit/9282f48247cd80f32cd98d331fc79ef07064fd3d))
+
+
+
+
+
 ## [5.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@5.1.3...@sb1/ffe-context-message-react@5.1.4) (2020-12-01)
 
 
