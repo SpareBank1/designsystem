@@ -66,8 +66,9 @@ export default class ContextMessage extends Component {
             compact,
             contentElementId,
             className,
-            header,
+            headerText,
             headerElementId,
+            headerElement,
             icon,
             locale,
             messageType,
@@ -83,7 +84,7 @@ export default class ContextMessage extends Component {
         return (
             <div
                 aria-describedby={contentElementId}
-                aria-labelledby={header && headerElementId}
+                aria-labelledby={headerText && headerElementId}
                 className={classNames(
                     'ffe-context-message',
                     `ffe-context-message--${messageType}`,
@@ -102,14 +103,16 @@ export default class ContextMessage extends Component {
                 <div className="ffe-context-message-content">
                     {icon && this.renderIcon()}
                     <div>
-                        {header && (
-                            <header
-                                className="ffe-context-message-content__header"
-                                id={headerElementId}
-                            >
-                                {header}
-                            </header>
-                        )}
+                        {headerText &&
+                            React.createElement(
+                                headerElement,
+                                {
+                                    id: headerElementId,
+                                    className:
+                                        'ffe-context-message-content__header',
+                                },
+                                headerText,
+                            )}
                         <div className="ffe-body-text" id={contentElementId}>
                             {children}
                         </div>
@@ -119,7 +122,7 @@ export default class ContextMessage extends Component {
                     <button
                         aria-label={`${
                             texts[locale].FFE_CONTEXT_MESSAGE_CLOSE
-                        } ${header || ''}`}
+                        } ${headerText || ''}`}
                         className="ffe-context-message-content__close-button"
                         onClick={this.close}
                         type="button"
@@ -145,9 +148,11 @@ ContextMessage.propTypes = {
     compact: bool,
     /** ID for the children container */
     contentElementId: string,
-    header: string,
+    headerText: string,
     /** ID for the header container */
     headerElementId: string,
+    /* HTML element for the header */
+    headerElement: string,
     icon: element,
     /** Decides the language of the aria-label for the close icon */
     locale: oneOf(acceptedLocales),
@@ -165,6 +170,7 @@ ContextMessage.defaultProps = {
     compact: false,
     contentElementId: 'contentElementId',
     headerElementId: 'headerElementId',
+    headerElement: 'div',
     locale: 'nb',
     onClose: () => {},
     showCloseButton: false,
