@@ -72,6 +72,10 @@ module.exports = {
                     content: 'visuell-identitet/typografi.md',
                 },
                 {
+                    name: 'Spacing',
+                    content: 'visuell-identitet/spacing.md',
+                },
+                {
                     name: 'Illustrasjoner',
                     content: 'visuell-identitet/illustrasjoner.md',
                 },
