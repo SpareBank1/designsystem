@@ -10499,6 +10499,51 @@ html.transition *::after {
   -o-transition: none;
   transition: none;
 }
+.sb1ds-spacing-example {
+  display: inline-block;
+  background: #7fc6e8;
+  font-size: 1px;
+  line-height: 1px;
+  width: 8px;
+  height: 8px;
+  margin-top: 8px;
+}
+.sb1ds-spacing-example--xs {
+  width: 8px;
+  height: 8px;
+}
+.sb1ds-spacing-example--sm {
+  width: 16px;
+  height: 16px;
+}
+.sb1ds-spacing-example--md {
+  width: 24px;
+  height: 24px;
+}
+.sb1ds-spacing-example--lg {
+  width: 32px;
+  height: 32px;
+}
+.sb1ds-spacing-example--xl {
+  width: 40px;
+  height: 40px;
+}
+.sb1ds-spacing-example--2xl {
+  width: 48px;
+  height: 48px;
+}
+.sb1ds-spacing-example--3xl {
+  width: 64px;
+  height: 64px;
+}
+.sb1ds-spacing-example--4xl {
+  width: 80px;
+  height: 80px;
+}
+.sb1ds-spacing-example--5xl {
+  width: 160px;
+  height: 160px;
+}
 .sb1ds-npm-i-builder-output {
   background: #f4f4f4;
   padding: 8px 16px;
