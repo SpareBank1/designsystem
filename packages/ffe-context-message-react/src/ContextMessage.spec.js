@@ -149,10 +149,7 @@ describe('<ContextMessage />', () => {
     });
 
     it('does not have aria-labelledby when header was not specified', () => {
-        const wrapper = getMountedWrapper({
-            headerElementId: 'header-element-id',
-        });
-
+        const wrapper = getMountedWrapper();
         const message = wrapper.find('.ffe-context-message');
         expect(message.prop('aria-labelledby')).toBe(undefined);
     });
