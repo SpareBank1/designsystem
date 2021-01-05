@@ -54,8 +54,6 @@ ContextErrorMessage.propTypes = {
 ContextErrorMessage.defaultProps = {
     animationLengthMs: 300,
     compact: false,
-    contentElementId: 'contentElementId',
-    headerElementId: 'headerElementId',
     locale: 'nb',
     onClose: () => {},
     showCloseButton: false,

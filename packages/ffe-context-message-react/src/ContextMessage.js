@@ -1,4 +1,4 @@
-import React, { Component, cloneElement } from 'react';
+import React, { useState, useRef, cloneElement } from 'react';
 import {
     number,
     node,
@@ -11,9 +11,9 @@ import {
 } from 'prop-types';
 import classNames from 'classnames';
 import KryssIkon from '@sb1/ffe-icons-react/lib/kryss-ikon';
-
 import acceptedLocales from './locale/accepted-locales';
 import texts from './locale/texts';
+import { v4 as uuid } from 'uuid';
 
 /**
  * Base component for all four types of context messages.
@@ -21,122 +21,111 @@ import texts from './locale/texts';
  * *Should never be used directly!*
  * Please use one of the four versions exported from this package.
  */
-export default class ContextMessage extends Component {
-    constructor() {
-        super();
-        this.close = this.close.bind(this);
-        this.state = {
-            closed: false,
-        };
-    }
+const ContextMessage = ({
+    animationLengthMs,
+    onClose,
+    icon,
+    headerText,
+    compact,
+    messageType,
+    style,
+    showCloseButton,
+    headerElement,
+    headerElementId,
+    contentElementId,
+    children,
+    className,
+    locale,
+    ...rest
+}) => {
+    const [isClosed, setIsClosed] = useState();
+    const container = useRef(null);
+    const _headerElementId = useRef(headerElementId || uuid());
+    const _contentElementId = useRef(contentElementId || uuid());
 
-    close(event) {
-        const { animationLengthMs, onClose } = this.props;
-        const self = this._self;
-        self.style.height = `${self.offsetHeight}px`;
+    const handleClose = event => {
+        container.current.style.height = `${container.current.offsetHeight}px`;
         setTimeout(() => {
-            self.style.height = 0;
+            container.current.style.height = 0;
         }, 0);
         setTimeout(() => {
-            this.setState({ closed: true }, () => {
-                onClose(event);
-            });
+            setIsClosed(true);
+            onClose(event);
         }, animationLengthMs);
         return false;
+    };
+
+    if (isClosed) {
+        return null;
     }
 
-    renderIcon() {
-        const { icon } = this.props;
-        return (
-            <div className="ffe-context-message-content__icon">
-                {cloneElement(icon, {
-                    className: classNames(
-                        'ffe-context-message-content__icon-svg',
-                        icon.props.className,
-                    ),
-                })}
-            </div>
-        );
-    }
-
-    render() {
-        const {
-            animationLengthMs,
-            children,
-            compact,
-            contentElementId,
-            className,
-            headerText,
-            headerElementId,
-            headerElement,
-            icon,
-            locale,
-            messageType,
-            showCloseButton,
-            style,
-            ...rest
-        } = this.props;
-
-        if (this.state.closed) {
-            return null;
-        }
-
-        return (
-            <div
-                aria-describedby={contentElementId}
-                aria-labelledby={headerText && headerElementId}
-                className={classNames(
-                    'ffe-context-message',
-                    `ffe-context-message--${messageType}`,
-                    { 'ffe-context-message--compact': compact },
-                    className,
+    return (
+        <div
+            ref={container}
+            aria-describedby={_contentElementId.current}
+            aria-labelledby={headerText && _headerElementId.current}
+            className={classNames(
+                'ffe-context-message',
+                `ffe-context-message--${messageType}`,
+                { 'ffe-context-message--compact': compact },
+                className,
+            )}
+            style={{
+                ...style,
+                transition: `height ${animationLengthMs / 1000}s`,
+            }}
+            {...rest}
+        >
+            <div className="ffe-context-message-content">
+                {icon && (
+                    <div className="ffe-context-message-content__icon">
+                        {cloneElement(icon, {
+                            className: classNames(
+                                'ffe-context-message-content__icon-svg',
+                                icon.props.className,
+                            ),
+                        })}
+                    </div>
                 )}
-                ref={_self => {
-                    this._self = _self;
-                }}
-                style={{
-                    ...style,
-                    transition: `height ${animationLengthMs / 1000}s`,
-                }}
-                {...rest}
-            >
-                <div className="ffe-context-message-content">
-                    {icon && this.renderIcon()}
-                    <div>
-                        {headerText &&
-                            React.createElement(
-                                headerElement,
-                                {
-                                    id: headerElementId,
-                                    className:
-                                        'ffe-context-message-content__header',
-                                },
-                                headerText,
-                            )}
-                        <div className="ffe-body-text" id={contentElementId}>
-                            {children}
-                        </div>
+                <div>
+                    {headerText &&
+                        React.createElement(
+                            headerElement,
+                            {
+                                id: _headerElementId.current,
+                                className:
+                                    'ffe-context-message-content__header',
+                            },
+                            headerText,
+                        )}
+                    <div
+                        className="ffe-body-text"
+                        id={_contentElementId.current}
+                    >
+                        {children}
                     </div>
                 </div>
-                {showCloseButton && (
-                    <button
-                        aria-label={`${
-                            texts[locale].FFE_CONTEXT_MESSAGE_CLOSE
-                        } ${headerText || ''}`}
-                        className="ffe-context-message-content__close-button"
-                        onClick={this.close}
-                        type="button"
-                    >
-                        <KryssIkon
-                            className="ffe-context-message-content__close-button-svg"
-                            aria-hidden="true"
-                        />
-                    </button>
-                )}
             </div>
-        );
-    }
-}
+            {showCloseButton && (
+                <button
+                    aria-label={`${
+                        texts[locale].FFE_CONTEXT_MESSAGE_CLOSE
+                    } ${headerText || ''}`}
+                    className="ffe-context-message-content__close-button"
+                    onClick={handleClose}
+                    type="button"
+                >
+                    <KryssIkon
+                        className="ffe-context-message-content__close-button-svg"
+                        aria-hidden="true"
+                    />
+                </button>
+            )}
+        </div>
+    );
+};
+
+export default ContextMessage;
 
 ContextMessage.propTypes = {
     animationLengthMs: number,
@@ -168,8 +157,6 @@ ContextMessage.propTypes = {
 ContextMessage.defaultProps = {
     animationLengthMs: 300,
     compact: false,
-    contentElementId: 'contentElementId',
-    headerElementId: 'headerElementId',
     headerElement: 'div',
     locale: 'nb',
     onClose: () => {},
