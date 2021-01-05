@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@5.1.5...@sb1/ffe-context-message-react@5.2.0) (2021-01-05)
+
+
+### Features
+
+* **ffe-context-message-react:** use uuid to genereate id ([6c10085](https://github.com/SpareBank1/designsystem/commit/6c100857c28d0ba8746a664b1f814544b7ac4ad8))
+
+
+
+
+
 ## [5.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@5.1.4...@sb1/ffe-context-message-react@5.1.5) (2020-12-11)
 
 
