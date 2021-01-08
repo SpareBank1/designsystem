@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.13...@sb1/ffe-context-message@4.0.14) (2021-01-08)
+
+
+### Bug Fixes
+
+* **ffe-context-message:** contrast issue ([ead4fb5](https://github.com/SpareBank1/designsystem/commit/ead4fb50626c5bf9b1d837c60a72da256243ea73))
+
+
+
+
+
 ## [4.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.12...@sb1/ffe-context-message@4.0.13) (2020-12-03)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
