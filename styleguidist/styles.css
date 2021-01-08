@@ -3238,7 +3238,7 @@ html {
 }
 @media (prefers-color-scheme: dark) {
   .native .ffe-context-message--error .ffe-context-message-content__header {
-    fill: #ffffff;
+    color: #ffffff;
   }
 }
 .ffe-context-message--error .ffe-context-message-content__icon-svg {
