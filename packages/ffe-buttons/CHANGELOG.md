@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@9.0.13...@sb1/ffe-buttons@10.0.0) (2021-01-11)
+
+
+### chore
+
+* **ffe-buttons:** bump less ([2c65bec](https://github.com/SpareBank1/designsystem/commit/2c65bec7693b3b443fe91a46287d4b710a9aa029))
+
+
+### BREAKING CHANGES
+
+* **ffe-buttons:** Requires less ^4.0.0. Fixes deprecated mixin syntax
+
+
+
+
+
 ## [9.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@9.0.12...@sb1/ffe-buttons@9.0.13) (2020-12-03)
 
 **Note:** Version bump only for package @sb1/ffe-buttons

@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-header",
-  "version": "13.0.1",
+  "version": "14.0.0",
   "description": "Felles header for SpareBank 1",
   "license": "MIT",
   "author": "SpareBank 1",
@@ -19,8 +19,8 @@
     "test": "npm run lint"
   },
   "devDependencies": {
-    "@sb1/ffe-buttons": "^9.0.13",
-    "@sb1/ffe-core": "^16.0.1",
+    "@sb1/ffe-buttons": "^10.0.0",
+    "@sb1/ffe-core": "^17.0.0",
     "@sb1/ffe-webfonts": "^2.1.0",
     "less": "^4.0.0",
     "less-plugin-autoprefix": "^2.0.0",

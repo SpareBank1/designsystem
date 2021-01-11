@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [15.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@14.0.0...@sb1/ffe-account-selector-react@15.0.0) (2021-01-11)
+
+
+### chore
+
+* **ffe-account-selector-react:** bump less ([ed49b6c](https://github.com/SpareBank1/designsystem/commit/ed49b6c26d96feb70cdb90486c6e520e3949eec0))
+
+
+### BREAKING CHANGES
+
+* **ffe-account-selector-react:** Requires less ^4.0.0. Fixes deprecated mixin syntax.
+
+
+
+
+
 # [14.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@13.2.19...@sb1/ffe-account-selector-react@14.0.0) (2020-11-20)
 
 

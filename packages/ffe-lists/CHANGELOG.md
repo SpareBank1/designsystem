@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [9.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@8.0.14...@sb1/ffe-lists@9.0.0) (2021-01-11)
+
+
+### chore
+
+* **ffe-lists:** bump less ([8d81dfb](https://github.com/SpareBank1/designsystem/commit/8d81dfb08f8457218545c7f230fd92ebd2d4a720))
+
+
+### BREAKING CHANGES
+
+* **ffe-lists:** Requires less ^4.0.0. Fixes deprecated mixin syntax.
+
+
+
+
+
 ## [8.0.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@8.0.13...@sb1/ffe-lists@8.0.14) (2020-12-03)
 
 **Note:** Version bump only for package @sb1/ffe-lists

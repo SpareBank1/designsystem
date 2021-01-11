@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [17.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@16.0.1...@sb1/ffe-core@17.0.0) (2021-01-11)
+
+
+### chore
+
+* **ffe-core:** bump less ([8f22d26](https://github.com/SpareBank1/designsystem/commit/8f22d2629ff5372e3386fae812c67742c96e4208))
+
+
+### BREAKING CHANGES
+
+* **ffe-core:** Requires less ^4.0.0. Fixes deprecated mixin syntax.
+
+
+
+
+
 ## [16.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@16.0.0...@sb1/ffe-core@16.0.1) (2020-12-03)
 
 

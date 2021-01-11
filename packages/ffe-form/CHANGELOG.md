@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [15.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@14.1.2...@sb1/ffe-form@15.0.0) (2021-01-11)
+
+
+### chore
+
+* **ffe-form:** bump less ([3a75cb1](https://github.com/SpareBank1/designsystem/commit/3a75cb1841f061d88f78dc8a5aa44ca46bccac1d))
+
+
+### BREAKING CHANGES
+
+* **ffe-form:** Requires less ^4.0.0. Fixes deprecated mixin syntax.
+
+
+
+
+
 ## [14.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@14.1.1...@sb1/ffe-form@14.1.2) (2020-12-03)
 
 **Note:** Version bump only for package @sb1/ffe-form

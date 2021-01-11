@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [14.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@13.0.1...@sb1/ffe-header@14.0.0) (2021-01-11)
+
+
+### chore
+
+* **ffe-header:** bump less ([5ba1d3d](https://github.com/SpareBank1/designsystem/commit/5ba1d3d65e992dfb2bf2551a1602e97dc5214185))
+
+
+### BREAKING CHANGES
+
+* **ffe-header:** Requires less ^4.0.0
+
+
+
+
+
 ## [13.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@13.0.0...@sb1/ffe-header@13.0.1) (2020-12-03)
 
 **Note:** Version bump only for package @sb1/ffe-header
