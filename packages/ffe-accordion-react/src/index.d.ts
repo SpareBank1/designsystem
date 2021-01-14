@@ -3,6 +3,7 @@ import * as React from 'react';
 export interface AccordionItemProps extends React.HTMLProps<HTMLDivElement> {
     heading: string | React.ReactElement;
     defaultOpen?: boolean;
+    isOpen?: boolean;
     onToggleOpen?: (isOpen: boolean) => void;
 }
 
