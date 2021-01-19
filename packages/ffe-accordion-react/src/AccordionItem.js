@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { bool, func, node, string } from 'prop-types';
 import { v4 as uuid } from 'uuid';
 import { ChevronIkon } from '@sb1/ffe-icons-react';
@@ -9,6 +9,7 @@ const AccordionItem = ({
     children,
     heading,
     defaultOpen,
+    isOpen,
     className,
     onToggleOpen = Function.prototype,
     ...accordionProps
@@ -17,6 +18,21 @@ const AccordionItem = ({
     const [isAnimating, setIsAnimating] = useState(false);
     const buttonId = useRef(uuid());
     const contentId = useRef(uuid());
+
+    useEffect(() => {
+        if (isOpen != null) {
+            setIsAnimating(true);
+            setIsExpanded(isOpen);
+        }
+    }, [isOpen]);
+
+    const handleOnClick = () => {
+        onToggleOpen(!isExpanded);
+        if (isOpen == null) {
+            setIsAnimating(true);
+            setIsExpanded(!isExpanded);
+        }
+    };
 
     const {
         headingLevel,
@@ -40,13 +56,7 @@ const AccordionItem = ({
                     className={classNames('ffe-accordion__heading-button', {
                         'ffe-accordion__heading-button--open': isExpanded,
                     })}
-                    onClick={() => {
-                        setIsAnimating(true);
-                        setIsExpanded(prevState => {
-                            onToggleOpen(!prevState);
-                            return !prevState;
-                        });
-                    }}
+                    onClick={handleOnClick}
                     onFocus={onFocus}
                     onBlur={onBlur}
                 >
@@ -77,6 +87,8 @@ AccordionItem.propTypes = {
     children: node.isRequired,
     /** Should it be open by default */
     defaultOpen: bool,
+    /** Is the item open or collapsed? Used for overriding default behaviour */
+    isOpen: bool,
     /** Class assigned the container */
     className: string,
     /** Callback when the item is open/closed */

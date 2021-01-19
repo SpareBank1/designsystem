@@ -25,3 +25,51 @@ const { Accordion, AccordionItem } = require('.');
     </AccordionItem>
 </Accordion>;
 ```
+
+Alle `<AccordionItem />`-komponenter har innebygget funksjonalitet for å styre åpning og lukking. Men om ønskelig kan du også overstyre dette. Et
+bruksområde kan være å lage en komponent som kun kan ha 1. element åpent om gangen.
+
+Bruker man `isOpen`-propen vil intern-logikk som styrer åpning og lukking være skrudd av.
+
+```js
+const { useState } = require('react');
+const { Accordion, AccordionItem } = require('.');
+
+const ManagedAccordion = () => {
+    const [openElementId, setOpenElementId] = useState(0);
+
+    const createOnToggleOpenHandler = id => isOpen => {
+        if (isOpen) {
+            setOpenElementId(id);
+        }
+    };
+
+    return (
+        <Accordion headingLevel={3}>
+            <AccordionItem
+                isOpen={openElementId === 0}
+                onToggleOpen={createOnToggleOpenHandler(0)}
+                heading="Starter åpen"
+            >
+                Element med ID=0
+            </AccordionItem>
+            <AccordionItem
+                isOpen={openElementId === 1}
+                onToggleOpen={createOnToggleOpenHandler(1)}
+                heading="Starter lukket"
+            >
+                Element med ID=1
+            </AccordionItem>
+            <AccordionItem
+                isOpen={openElementId === 2}
+                onToggleOpen={createOnToggleOpenHandler(2)}
+                heading="Starter også lukket"
+            >
+                Element med ID=2
+            </AccordionItem>
+        </Accordion>
+    );
+};
+
+<ManagedAccordion />;
+```
