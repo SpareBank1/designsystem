@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [9.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@9.0.3...@sb1/ffe-accordion-react@9.1.0) (2021-01-19)
+
+
+### Features
+
+* **ffe-accordion-react:** Add isOpen as new prop on items ([401066d](https://github.com/SpareBank1/designsystem/commit/401066dacd0071fc685efff6fcf5fc5afb18c58c))
+
+
+
+
+
 ## [9.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@9.0.2...@sb1/ffe-accordion-react@9.0.3) (2020-11-18)
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react
