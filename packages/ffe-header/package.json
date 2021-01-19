@@ -22,7 +22,7 @@
     "@sb1/ffe-buttons": "^10.0.0",
     "@sb1/ffe-core": "^17.0.0",
     "@sb1/ffe-webfonts": "^2.1.0",
-    "less": "^4.0.0",
+    "less": "^3.13.1",
     "less-plugin-autoprefix": "^2.0.0",
     "mkdirp": "^1.0.0",
     "stylelint": "^10.0.0"
