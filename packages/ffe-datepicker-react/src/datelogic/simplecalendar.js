@@ -77,7 +77,8 @@ SimpleCalendar.prototype.visibleDates = function visibleDates() {
             const date = {
                 date: currentDate.date(),
                 timestamp: currentDate.timestamp(),
-                isLead: currentDate.month() !== this.focusedDate.month(),
+                isNonClickableDate:
+                    currentDate.month() !== this.focusedDate.month(),
                 isToday: currentDate.equal(simpleDate.today()),
                 isFocus: currentDate.equal(this.focusedDate),
                 isSelected:
@@ -119,19 +120,11 @@ SimpleCalendar.prototype.dayNames = function dayNames() {
 };
 
 SimpleCalendar.prototype.previousName = function prevName() {
-    return i18n[this.locale].PREVIOUS;
-};
-
-SimpleCalendar.prototype.previousShortName = function prevName() {
-    return i18n[this.locale].PREVIOUS_SHORT;
+    return i18n[this.locale].PREVIOUS_MONTH;
 };
 
 SimpleCalendar.prototype.nextName = function nextName() {
-    return i18n[this.locale].NEXT;
-};
-
-SimpleCalendar.prototype.nextShortName = function nextName() {
-    return i18n[this.locale].NEXT_SHORT;
+    return i18n[this.locale].NEXT_MONTH;
 };
 
 SimpleCalendar.prototype.nextYear = function nextYear() {
