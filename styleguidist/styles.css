@@ -3265,7 +3265,175 @@ html {
   }
 }
 .ffe-dateinput__field {
+  display: block;
+  height: 45px;
+  padding: 0 16px;
+  font-family: MuseoSans-500, arial, sans-serif;
+  color: #262626;
+  border-radius: 4px;
+  border: 2px solid #ccc;
+  -webkit-transition: all 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+  -o-transition: all 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: all 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+  -webkit-box-shadow: 0 1px 2px 0 #f4f4f4 inset;
+          box-shadow: 0 1px 2px 0 #f4f4f4 inset;
+  width: 100%;
+  font-size: 1rem;
   min-width: 160px;
+}
+@media (prefers-color-scheme: dark) {
+  .native .ffe-dateinput__field {
+    background-color: #292929;
+    color: #ffffff;
+    border-color: #292929;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+}
+.ffe-dateinput__field:hover {
+  border-color: #0071cd;
+}
+@media (prefers-color-scheme: dark) {
+  .native .ffe-dateinput__field:hover {
+    border-color: #0a91ff;
+  }
+}
+.ffe-dateinput__field:focus,
+.ffe-dateinput__field:active {
+  border-color: #0071cd;
+  -webkit-box-shadow: 0 0 0 1px #fff, 0 0 0 4px #a1dfff;
+          box-shadow: 0 0 0 1px #fff, 0 0 0 4px #a1dfff;
+  outline: none;
+}
+@media (prefers-color-scheme: dark) {
+  .native .ffe-dateinput__field:focus,
+  .native .ffe-dateinput__field:active {
+    border-color: #0a91ff;
+  }
+}
+.ffe-dateinput__field--inline {
+  display: inline-block;
+  width: auto;
+}
+.ffe-dateinput__field--condensed {
+  height: 38px;
+}
+.ffe-dateinput__field--text-like {
+  background-color: #fff;
+  border: none;
+  border-bottom: 2px solid #002776;
+  border-radius: 4px 4px 0 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #002776;
+  display: inline-block;
+  height: 2em;
+  -webkit-transition: all 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+  -o-transition: all 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: all 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+@media (prefers-color-scheme: dark) {
+  .native .ffe-dateinput__field--text-like {
+    background-color: transparent;
+    border-color: #ffffff;
+  }
+}
+.ffe-dateinput__field--text-like:focus {
+  border-color: #0071cd;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #0071cd;
+}
+@media (prefers-color-scheme: dark) {
+  .native .ffe-dateinput__field--text-like:focus {
+    border-color: #0a91ff;
+    color: #ffffff;
+  }
+}
+.ffe-dateinput__field::-ms-clear {
+  display: none;
+}
+.ffe-dateinput__field::-webkit-input-placeholder {
+  color: #676767;
+  opacity: 1;
+}
+.ffe-dateinput__field::-moz-placeholder {
+  color: #676767;
+  opacity: 1;
+}
+.ffe-dateinput__field::-ms-input-placeholder {
+  color: #676767;
+  opacity: 1;
+}
+.ffe-dateinput__field::placeholder {
+  color: #676767;
+  opacity: 1;
+}
+@media (prefers-color-scheme: dark) {
+  .native .ffe-dateinput__field::-webkit-input-placeholder {
+    color: #858585;
+  }
+  .native .ffe-dateinput__field::-moz-placeholder {
+    color: #858585;
+  }
+  .native .ffe-dateinput__field::-ms-input-placeholder {
+    color: #858585;
+  }
+  .native .ffe-dateinput__field::placeholder {
+    color: #858585;
+  }
+}
+.ffe-dateinput__field--dark {
+  color: #fff;
+  border: 2px solid #5d6c79;
+  background-color: #5d6c79;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+@media (prefers-color-scheme: dark) {
+  .native .ffe-dateinput__field--dark {
+    color: #fff;
+    border: 2px solid #5d6c79;
+    background-color: #5d6c79;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+}
+.ffe-dateinput__field--dark::-webkit-input-placeholder {
+  color: #adadad;
+}
+.ffe-dateinput__field--dark::-moz-placeholder {
+  color: #adadad;
+}
+.ffe-dateinput__field--dark::-ms-input-placeholder {
+  color: #adadad;
+}
+.ffe-dateinput__field--dark::placeholder {
+  color: #adadad;
+}
+.ffe-dateinput__field--dark:hover {
+  border-color: #a1dfff;
+}
+@media (prefers-color-scheme: dark) {
+  .native .ffe-dateinput__field--dark:hover {
+    border-color: #a1dfff;
+  }
+}
+.ffe-dateinput__field--dark:focus,
+.ffe-dateinput__field--dark:active {
+  border-color: #293a4c;
+  -webkit-box-shadow: 0 0 0 2px #a1dfff;
+          box-shadow: 0 0 0 2px #a1dfff;
+  outline: none;
+}
+@media (prefers-color-scheme: dark) {
+  .native .ffe-dateinput__field--dark:focus,
+  .native .ffe-dateinput__field--dark:active {
+    border-color: #293a4c;
+    -webkit-box-shadow: 0 0 0 2px #a1dfff;
+            box-shadow: 0 0 0 2px #a1dfff;
+    outline: none;
+  }
 }
 .ffe-dateinput__field::-ms-clear {
   display: none;
@@ -3277,21 +3445,6 @@ html {
 @media (prefers-color-scheme: dark) {
   .native .ffe-dateinput__field[aria-invalid='true'] {
     border-color: #ff2424;
-  }
-}
-.ffe-dateinput__icon {
-  position: absolute;
-  right: 12px;
-  top: 7px;
-  width: 26px;
-  height: 26px;
-  fill: #0071cd;
-  z-index: 1;
-  pointer-events: none;
-}
-@media (prefers-color-scheme: dark) {
-  .native .ffe-dateinput__icon {
-    fill: #0a91ff;
   }
 }
 .ffe-calendar {
@@ -3328,6 +3481,15 @@ html {
 .ffe-calendar__month-nav {
   border: none;
   background: transparent;
+  cursor: pointer;
+  outline: none;
+  border-radius: 4px;
+}
+.ffe-calendar__month-nav:focus,
+.ffe-calendar__month-nav:hover,
+.ffe-calendar__month-nav.active {
+  -webkit-box-shadow: 0 0 0 1px #fff, 0 0 0 4px #a1dfff;
+          box-shadow: 0 0 0 1px #fff, 0 0 0 4px #a1dfff;
 }
 .ffe-calendar__icon-prev {
   -webkit-transform: rotate(90deg);
@@ -3336,6 +3498,7 @@ html {
   width: 18px;
   height: 18px;
   fill: #0071cd;
+  vertical-align: middle;
 }
 @media (prefers-color-scheme: dark) {
   .native .ffe-calendar__icon-prev {
@@ -3349,6 +3512,7 @@ html {
   width: 18px;
   height: 18px;
   fill: #0071cd;
+  vertical-align: middle;
 }
 @media (prefers-color-scheme: dark) {
   .native .ffe-calendar__icon-next {
@@ -3356,12 +3520,10 @@ html {
   }
 }
 .ffe-calendar__next {
-  line-height: 1em;
   width: 25px;
   height: 25px;
 }
 .ffe-calendar__previous {
-  line-height: 1em;
   width: 25px;
   height: 25px;
 }
@@ -3380,7 +3542,7 @@ html {
   vertical-align: middle;
   color: #262626;
   min-width: 50%;
-  margin-bottom: 8px;
+  margin-bottom: 0;
 }
 @media (prefers-color-scheme: dark) {
   .native .ffe-calendar__title {
@@ -3453,8 +3615,15 @@ html {
     color: #0a91ff;
   }
 }
-.ffe-calendar__date--focus {
+.ffe-calendar__date:focus {
   border: 2px solid #0071cd;
+  color: #0071cd;
+  outline: none;
+}
+.ffe-calendar__date--focus {
+  border: 2px solid transparent;
+  -webkit-box-shadow: 0 0 0 1px #fff, 0 0 0 4px #a1dfff;
+          box-shadow: 0 0 0 1px #fff, 0 0 0 4px #a1dfff;
   color: #0071cd;
   background: #fff;
 }
@@ -3466,7 +3635,7 @@ html {
   }
 }
 .ffe-calendar__date--selected {
-  background: #002776;
+  background: #0071cd;
   color: #fff;
 }
 @media (prefers-color-scheme: dark) {
@@ -3475,8 +3644,14 @@ html {
     color: #ffffff;
   }
 }
-.ffe-calendar__date--selected:focus {
-  border: 2px solid #a1dfff;
+.ffe-calendar__date--selected:focus,
+.ffe-calendar__date--selected:hover {
+  background-color: #0063b4;
+  color: #fff;
+}
+.ffe-calendar__date--focus.ffe-calendar__date--selected {
+  -webkit-box-shadow: 0 0 0 1px #fff, 0 0 0 4px #a1dfff;
+          box-shadow: 0 0 0 1px #fff, 0 0 0 4px #a1dfff;
 }
 .ffe-calendar__date--disabled {
   color: #ccc;
@@ -3512,6 +3687,45 @@ html {
 }
 .ffe-datepicker--full-width {
   display: block;
+}
+.ffe-datepicker--wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.ffe-datepicker__button {
+  background-color: transparent;
+  border-left: 2px solid #ccc;
+  border-right: none;
+  border-top: none;
+  border-bottom: none;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  padding-right: 2px;
+  padding-left: 0;
+  height: 41px;
+  width: 56px;
+  outline: none;
+  margin-left: -56px;
+}
+.ffe-datepicker__button:active,
+.ffe-datepicker__button:focus,
+.ffe-datepicker__button:hover {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-right: 0;
+  border: 2px solid #0071cd;
+  height: 45px;
+  border-radius: 0 4px 4px 0;
+}
+.ffe-datepicker__button:focus {
+  -webkit-box-shadow: 0 0 0 1px #fff, 0 0 0 4px #a1dfff;
+          box-shadow: 0 0 0 1px #fff, 0 0 0 4px #a1dfff;
+}
+.ffe-datepicker__icon {
+  vertical-align: middle;
+  width: 22px;
+  fill: #0071cd;
 }
 .ffe-file-upload {
   margin-top: 48px;
