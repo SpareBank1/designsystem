@@ -36,6 +36,15 @@
     &__month-nav {
         border: none;
         background: transparent;
+        cursor: pointer;
+        outline: none;
+        border-radius: 4px;
+
+        &:focus,
+        &:hover,
+        &.active {
+            box-shadow: 0 0 0 1px @ffe-white, 0 0 0 4px @ffe-blue-focus;
+        }
     }
 
     &__icon-prev {
@@ -43,6 +52,7 @@
         width: 18px;
         height: 18px;
         fill: @ffe-blue-azure;
+        vertical-align: middle;
         .native & {
             @media (prefers-color-scheme: dark) {
                 fill: @ffe-blue-azure-darkmode;
@@ -55,6 +65,7 @@
         width: 18px;
         height: 18px;
         fill: @ffe-blue-azure;
+        vertical-align: middle;
         .native & {
             @media (prefers-color-scheme: dark) {
                 fill: @ffe-blue-azure-darkmode;
@@ -63,13 +74,11 @@
     }
 
     &__next {
-        line-height: 1em;
         width: 25px;
         height: 25px;
     }
 
     &__previous {
-        line-height: 1em;
         width: 25px;
         height: 25px;
     }
@@ -92,7 +101,7 @@
         vertical-align: middle;
         color: @ffe-black;
         min-width: 50%;
-        margin-bottom: @ffe-spacing-xs;
+        margin-bottom: 0;
         .native & {
             @media (prefers-color-scheme: dark) {
                 color: @ffe-white-darkmode;
@@ -176,8 +185,15 @@
             }
         }
 
-        &--focus {
+        &:focus {
             border: 2px solid @ffe-blue-azure;
+            color: @ffe-blue-azure;
+            outline: none;
+        }
+
+        &--focus {
+            border: 2px solid transparent;
+            box-shadow: 0 0 0 1px @ffe-white, 0 0 0 4px @ffe-blue-focus;
             color: @ffe-blue-azure;
             background: @ffe-white;
             .native & {
@@ -190,7 +206,7 @@
         }
 
         &--selected {
-            background: @ffe-blue-royal;
+            background: @ffe-blue-azure;
             color: @ffe-white;
             .native & {
                 @media (prefers-color-scheme: dark) {
@@ -199,9 +215,15 @@
                 }
             }
 
-            &:focus {
-                border: 2px solid @ffe-blue-focus;
+            &:focus,
+            &:hover {
+                background-color: darken(@ffe-blue-azure, 5%);
+                color: @ffe-white;
             }
+        }
+
+        &--focus&--selected {
+            box-shadow: 0 0 0 1px @ffe-white, 0 0 0 4px @ffe-blue-focus;
         }
 
         &--disabled {
