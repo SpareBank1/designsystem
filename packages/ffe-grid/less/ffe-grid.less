@@ -121,8 +121,8 @@
 // Mixins
 .create-column(@size, @total, @current: 0) when (@current <= @total) {
     .ffe-grid__col--@{size}-@{current} {
-        flex-basis: (@current * 100%) / @total;
-        max-width: (@current * 100%) / @total;
+        flex-basis: calc((@current * 100%) / @total);
+        max-width: calc((@current * 100%) / @total);
 
         & when (@current = 0) {
             display: none;
@@ -133,7 +133,7 @@
     }
 
     .ffe-grid__col--@{size}-offset-@{current} {
-        margin-left: (@current * 100%) / @total;
+        margin-left: calc((@current * 100%) / @total);
     }
 
     .create-column(@size, @total, @current + 1);
@@ -173,8 +173,8 @@
     width: 100%;
 
     @media (min-width: @breakpoint-lg) {
-        margin-left: @ffe-grid-gutter-lg / 2 * -1;
-        margin-right: @ffe-grid-gutter-lg / 2 * -1;
+        margin-left: calc(@ffe-grid-gutter-lg / 2 * -1);
+        margin-right: calc(@ffe-grid-gutter-lg / 2 * -1);
     }
 
     &--bg-blue-ice {
