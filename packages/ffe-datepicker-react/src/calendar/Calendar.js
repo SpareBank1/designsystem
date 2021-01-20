@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { bool, func, string } from 'prop-types';
+import { func, string } from 'prop-types';
 import { v4 as uuid } from 'uuid';
-import ActiveDate from './ActiveDate';
-import LeadDate from './LeadDate';
+import ClickableDate from './ClickableDate';
+import NonClickableDate from './NonClickableDate';
 import Header from './Header';
 import KeyCode from '../util/keyCode';
 import simpleDate from '../datelogic/simpledate';
@@ -19,12 +19,10 @@ export default class Calendar extends Component {
                 props.maxDate,
                 props.language,
             ),
+            isFocusingHeader: false,
         };
 
-        this.onBlur = props.onBlurHandler;
-
         this.datepickerId = `ffe-calendar-${uuid()}`;
-        this.forceDateFocus = props.focusOnOpen;
 
         this.keyDown = this.keyDown.bind(this);
         this.mouseClick = this.mouseClick.bind(this);
@@ -37,6 +35,10 @@ export default class Calendar extends Component {
         this.renderWeek = this.renderWeek.bind(this);
         this.renderDay = this.renderDay.bind(this);
     }
+
+    clickableDateRef = React.createRef();
+    prevMonthButtonElementRef = React.createRef();
+    nextMonthButtonElementRef = React.createRef();
 
     /* eslint-disable react/no-did-update-set-state */
     componentDidUpdate(prevProps) {
@@ -85,13 +87,10 @@ export default class Calendar extends Component {
                 }
                 event.preventDefault();
                 break;
-            case KeyCode.TAB:
-                if (this.onBlur) {
-                    this.onBlur(event);
-                }
-                break;
             case KeyCode.ESC:
                 this.props.escKeyHandler(event);
+                break;
+            case KeyCode.TAB:
                 break;
             case KeyCode.PGUP:
                 if (event.altKey) {
@@ -163,23 +162,30 @@ export default class Calendar extends Component {
     }
 
     renderDate(date, index) {
-        if (date.isLead) {
-            return <LeadDate key={date.date} date={date} />;
+        const { calendar } = this.state;
+
+        if (date.isNonClickableDate) {
+            return <NonClickableDate key={date.date} date={date} />;
         }
+
         return (
-            <ActiveDate
+            <ClickableDate
                 date={date}
+                month={calendar.focusedMonth()}
+                year={calendar.focusedYear()}
                 headers={`header__${this.datepickerId}__${index}`}
                 key={date.date}
                 onClick={this.mouseClick}
-                forceFocus={this.forceDateFocus}
+                language={this.props.language}
+                dateButtonRef={date.isFocus ? this.clickableDateRef : undefined}
+                isFocusingHeader={this.state.isFocusingHeader}
             />
         );
     }
 
     renderWeek(week) {
         return (
-            <tr key={`week-${week.number}`} role="row">
+            <tr key={`week-${week.number}`} role="presentation">
                 {week.dates.map(this.renderDate)}
             </tr>
         );
@@ -192,66 +198,97 @@ export default class Calendar extends Component {
                 className="ffe-calendar__weekday"
                 id={`header__${this.datepickerId}__${index}`}
                 key={day.name}
-                role="columnheader"
             >
                 <span title={day.name}>{day.shortName}</span>
             </th>
         );
     }
 
+    focusTrap = event => {
+        const activeElement = document.activeElement;
+
+        if (event.keyCode === KeyCode.TAB) {
+            event.preventDefault();
+            if (event.shiftKey) {
+                if (activeElement === this.clickableDateRef.current) {
+                    this.nextMonthButtonElementRef.current.focus();
+                    this.setState({ isFocusingHeader: true });
+                }
+                if (activeElement === this.nextMonthButtonElementRef.current) {
+                    this.prevMonthButtonElementRef.current.focus();
+                }
+                if (activeElement === this.prevMonthButtonElementRef.current) {
+                    this.clickableDateRef.current.focus();
+                    this.setState({ isFocusingHeader: false });
+                    this.forceUpdate();
+                }
+            } else {
+                if (activeElement === this.clickableDateRef.current) {
+                    this.prevMonthButtonElementRef.current.focus();
+                    this.setState({ isFocusingHeader: true });
+                }
+                if (activeElement === this.prevMonthButtonElementRef.current) {
+                    this.nextMonthButtonElementRef.current.focus();
+                }
+                if (activeElement === this.nextMonthButtonElementRef.current) {
+                    this.clickableDateRef.current.focus();
+                    this.setState({ isFocusingHeader: false });
+                    this.forceUpdate();
+                }
+            }
+        }
+    };
+
     render() {
         const { calendar } = this.state;
 
         /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
         return (
-            <div
-                ref={c => {
-                    this._wrapper = c;
-                }}
-                aria-labelledby={`${this.datepickerId}-title`}
-                className={this.props.calendarClassName || 'ffe-calendar'}
-                onFocus={this.focusHandler}
-                onBlur={this.wrapperBlurHandler}
-                role="region"
-            >
-                <Header
-                    datepickerId={this.datepickerId}
-                    month={calendar.focusedMonth()}
-                    nextMonthHandler={this.nextMonth}
-                    nextMonthLabel={calendar.nextName()}
-                    previousMonthHandler={this.previousMonth}
-                    previousMonthLabel={calendar.previousName()}
-                    year={calendar.focusedYear()}
-                />
-                <table
-                    className="ffe-calendar__grid"
-                    role="grid"
-                    onKeyDown={this.keyDown}
-                    aria-labelledby={`${this.datepickerId}__month-label`}
+            <div role="dialog" aria-modal={true}>
+                <div
+                    ref={c => {
+                        this._wrapper = c;
+                    }}
+                    aria-labelledby={`${this.datepickerId}-title`}
+                    className={this.props.calendarClassName || 'ffe-calendar'}
+                    onFocus={this.focusHandler}
+                    onBlur={this.wrapperBlurHandler}
+                    role="application"
+                    onKeyDown={this.focusTrap}
                 >
-                    <thead>
-                        <tr role="row">
-                            {calendar.dayNames().map(this.renderDay)}
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {calendar.visibleDates().map(this.renderWeek)}
-                    </tbody>
-                </table>
+                    <Header
+                        datepickerId={this.datepickerId}
+                        month={calendar.focusedMonth()}
+                        nextMonthHandler={this.nextMonth}
+                        nextMonthLabel={calendar.nextName()}
+                        previousMonthHandler={this.previousMonth}
+                        previousMonthLabel={calendar.previousName()}
+                        year={calendar.focusedYear()}
+                        prevMonthButtonElement={this.prevMonthButtonElementRef}
+                        nextMonthButtonElement={this.nextMonthButtonElementRef}
+                    />
+                    <table
+                        className="ffe-calendar__grid"
+                        onKeyDown={this.keyDown}
+                        role="presentation"
+                    >
+                        <thead>
+                            <tr>{calendar.dayNames().map(this.renderDay)}</tr>
+                        </thead>
+                        <tbody>
+                            {calendar.visibleDates().map(this.renderWeek)}
+                        </tbody>
+                    </table>
+                </div>
             </div>
         );
         /* eslint-enable jsx-a11y/no-noninteractive-element-interactions */
     }
 }
 
-Calendar.defaultProps = {
-    focusOnOpen: false,
-};
-
 Calendar.propTypes = {
     calendarClassName: string,
     escKeyHandler: func,
-    focusOnOpen: bool,
     language: string.isRequired,
     maxDate: string,
     minDate: string,

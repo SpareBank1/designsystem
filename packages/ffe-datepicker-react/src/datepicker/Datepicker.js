@@ -5,6 +5,7 @@ import { v4 as uuid } from 'uuid';
 import Calendar from '../calendar';
 import KeyCode from '../util/keyCode';
 import DateInput from '../input';
+import CalendarButton from '../button';
 import SimpleDate from '../datelogic/simpledate';
 import dateErrorTypes from '../datelogic/error-types';
 import i18n from '../i18n/i18n';
@@ -16,10 +17,7 @@ export default class Datepicker extends Component {
         super(props);
 
         this.state = {
-            closeAfter: false,
             displayDatePicker: false,
-            focusOnCalendarOpen: false,
-            openOnFocus: true,
             minDate: props.minDate,
             maxDate: props.maxDate,
             lastValidDate: '',
@@ -33,17 +31,19 @@ export default class Datepicker extends Component {
         this.closeCalendarSetInputFocus = this.closeCalendarSetInputFocus.bind(
             this,
         );
-        this.clickHandler = this.clickHandler.bind(this);
+        this.calendarButtonClickHandler = this.calendarButtonClickHandler.bind(
+            this,
+        );
         this.globalClickHandler = this.globalClickHandler.bind(this);
         this.escKeyHandler = this.escKeyHandler.bind(this);
         this.datePickedHandler = this.datePickedHandler.bind(this);
-        this.blurHandler = this.blurHandler.bind(this);
         this.divBlurHandler = this.divBlurHandler.bind(this);
         this.onInputKeydown = this.onInputKeydown.bind(this);
-        this.onInputFocus = this.onInputFocus.bind(this);
         this.onInputBlur = this.onInputBlur.bind(this);
         this.onError = this.onError.bind(this);
     }
+
+    buttonRef = React.createRef();
 
     debounceCalendar = debounce(value => {
         if (value !== this.state.lastValidDate && validateDate(value)) {
@@ -56,7 +56,11 @@ export default class Datepicker extends Component {
     }
 
     /* eslint-disable react/no-did-update-set-state */
-    componentDidUpdate() {
+    componentDidUpdate(prevProps, prevState) {
+        const valueChangedAndDatepickerIsToggled =
+            prevProps.value !== this.props.value &&
+            prevState.displayDatePicker &&
+            !this.state.displayDatePicker;
         if (
             (this.props.minDate && this.props.minDate !== this.state.minDate) ||
             (this.props.maxDate && this.props.maxDate !== this.state.maxDate)
@@ -67,25 +71,11 @@ export default class Datepicker extends Component {
             );
         }
 
-        this.debounceCalendar(this.props.value);
-    }
+        if (valueChangedAndDatepickerIsToggled) {
+            this.validateDateIntervals();
+        }
 
-    onInputFocus() {
-        this.setState({
-            focusOnCalendarOpen: false,
-        });
-        if (this.state.closeAfter === true) {
-            this.setState({
-                closeAfter: false,
-                openOnFocus: true,
-            });
-            return;
-        }
-        this.validateDateIntervals();
-        if (this.state.openOnFocus) {
-            this.openCalendar();
-            this._datepickerNode.click();
-        }
+        this.debounceCalendar(this.props.value);
     }
 
     onError(type) {
@@ -97,23 +87,15 @@ export default class Datepicker extends Component {
 
     validateDateIntervals() {
         let nextState = {};
-        const {
-            onChange,
-            value,
-            onValidationComplete,
-            keepDisplayStateOnError,
-        } = this.props;
+        const { onChange, value, onValidationComplete } = this.props;
 
         const error = type => {
             const errorMessage = this.onError(type);
 
             nextState = {
                 errorMessage,
-                openOnFocus: true,
+
                 ariaInvalid: true,
-                displayDatePicker: keepDisplayStateOnError
-                    ? this.state.displayDatePicker
-                    : true,
             };
         };
 
@@ -121,7 +103,6 @@ export default class Datepicker extends Component {
             value,
             date => {
                 nextState = {
-                    openOnFocus: true,
                     ariaInvalid: false,
                 };
 
@@ -153,17 +134,14 @@ export default class Datepicker extends Component {
 
                 if (emptyValue && this.state.errorMessage) {
                     nextState = {
-                        openOnFocus: true,
                         ariaInvalid: false,
                         errorMessage: null,
-                        displayDatePicker: false,
                     };
                     onValidationComplete(value);
                     return;
                 } else if (emptyValue) {
                     nextState = {
                         ...this.state,
-                        openOnFocus: true,
                     };
                     onValidationComplete(value);
                     return;
@@ -183,18 +161,7 @@ export default class Datepicker extends Component {
     onInputKeydown(evt) {
         if (evt.which === KeyCode.ENTER) {
             evt.preventDefault();
-
-            if (!this.state.displayDatePicker) {
-                this.setState({
-                    focusOnCalendarOpen: true,
-                });
-                this.openCalendar();
-            } else {
-                this.validateDateIntervals();
-                this.closeCalendar();
-            }
-        } else if (evt.shiftKey && evt.which === KeyCode.TAB) {
-            this.closeCalendarSetInputFocus();
+            this.validateDateIntervals();
         }
     }
 
@@ -213,19 +180,13 @@ export default class Datepicker extends Component {
         }
     }
 
-    clickHandler() {
-        if (!this.state.displayDatePicker && this.state.openOnFocus) {
-            this.openCalendar();
-        }
-    }
+    calendarButtonClickHandler() {
+        this.validateDateIntervals();
 
-    blurHandler(evt) {
-        if (evt.shiftKey && evt.which === KeyCode.TAB) {
-            this.setState({
-                openOnFocus: false,
-            });
-        } else if (evt.which === KeyCode.TAB) {
-            this.closeCalendarSetInputFocus();
+        if (!this.state.displayDatePicker) {
+            this.openCalendar();
+        } else {
+            this.closeCalendar();
         }
     }
 
@@ -236,11 +197,6 @@ export default class Datepicker extends Component {
             !this.state.displayDatePicker;
         if (isBluringWithDisplayDatePickerFalse) {
             this.removeGlobalEventListeners();
-            this.setState({
-                openOnFocus: true,
-                displayDatePicker: false,
-                closeAfter: false,
-            });
         }
     }
 
@@ -250,11 +206,10 @@ export default class Datepicker extends Component {
         this.removeGlobalEventListeners();
         this.setState(
             {
-                openOnFocus: false,
                 displayDatePicker: false,
                 calendarActiveDate: date,
             },
-            () => this.dateInputRef.focus(),
+            () => this.buttonRef.current.focus(),
         );
     }
 
@@ -269,18 +224,18 @@ export default class Datepicker extends Component {
     closeCalendar() {
         this.removeGlobalEventListeners();
         this.setState({ displayDatePicker: false });
+        this.validateDateIntervals();
     }
 
     closeCalendarSetInputFocus() {
         this.removeGlobalEventListeners();
         this.setState(
             {
-                openOnFocus: true,
                 displayDatePicker: false,
-                closeAfter: true,
             },
-            () => this.dateInputRef._input.focus(),
+            () => this.buttonRef.current.focus(),
         );
+        this.validateDateIntervals();
     }
 
     addGlobalEventListeners() {
@@ -312,7 +267,7 @@ export default class Datepicker extends Component {
             value,
             fullWidth,
         } = this.props;
-        const { focusOnCalendarOpen, minDate, maxDate } = this.state;
+        const { minDate, maxDate } = this.state;
 
         if (this.state.ariaInvalid && !inputProps['aria-describedby']) {
             inputProps[
@@ -348,27 +303,32 @@ export default class Datepicker extends Component {
                     }
                     aria-label={label ? undefined : i18n[language].CHOOSE_DATE}
                     className={datepickerClassName}
-                    onClick={this.clickHandler}
                     ref={c => {
                         this._datepickerNode = c;
                     }}
-                    role="button"
                     tabIndex={-1}
-                    onBlur={this.divBlurHandler}
                 >
-                    <DateInput
-                        aria-invalid={this.ariaInvalid()}
-                        inputProps={inputProps}
-                        onBlur={this.onInputBlur}
-                        onChange={evt => onChange(evt.target.value)}
-                        onFocus={this.onInputFocus}
-                        onKeyDown={this.onInputKeydown}
-                        ref={c => {
-                            this.dateInputRef = c;
-                        }}
-                        value={value}
-                        fullWidth={fullWidth}
-                    />
+                    <div className="ffe-datepicker--wrapper">
+                        <DateInput
+                            aria-invalid={this.ariaInvalid()}
+                            inputProps={inputProps}
+                            onBlur={this.onInputBlur}
+                            onChange={evt => onChange(evt.target.value)}
+                            onKeyDown={this.onInputKeydown}
+                            ref={c => {
+                                this.dateInputRef = c;
+                            }}
+                            value={value}
+                            fullWidth={fullWidth}
+                            language={language}
+                        />
+                        <CalendarButton
+                            onClick={this.calendarButtonClickHandler}
+                            value={value}
+                            language={language}
+                            buttonRef={this.buttonRef}
+                        />
+                    </div>
 
                     {this.state.displayDatePicker && (
                         <Calendar
@@ -380,7 +340,6 @@ export default class Datepicker extends Component {
                             onDatePicked={this.datePickedHandler}
                             selectedDate={this.state.calendarActiveDate}
                             onBlurHandler={this.blurHandler}
-                            focusOnOpen={focusOnCalendarOpen}
                             ref={c => {
                                 this.datepickerCalendar = c;
                             }}

@@ -1,3 +1,5 @@
+@import (reference) '../node_modules/@sb1/ffe-form/less/input-field';
+
 .ffe-dateinput {
     position: relative;
     display: inline-block;
@@ -16,8 +18,9 @@
     }
 
     &__field {
-        min-width: 160px;
+        .ffe-input-field();
 
+        min-width: 160px;
         &::-ms-clear {
             display: none;
         }
@@ -29,22 +32,6 @@
                 @media (prefers-color-scheme: dark) {
                     border-color: @ffe-red-darkmode;
                 }
-            }
-        }
-    }
-
-    &__icon {
-        position: absolute;
-        right: 12px;
-        top: 7px;
-        width: 26px;
-        height: 26px;
-        fill: @ffe-blue-azure;
-        z-index: 1;
-        pointer-events: none;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                fill: @ffe-blue-azure-darkmode;
             }
         }
     }

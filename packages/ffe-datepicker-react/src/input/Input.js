@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { bool, func, oneOfType, string, shape } from 'prop-types';
 import classNames from 'classnames';
-import KalenderIkon from '@sb1/ffe-icons-react/lib/kalender-ikon';
+import i18n from '../i18n/i18n';
 
 export default class Input extends Component {
     focus() {
@@ -9,17 +9,7 @@ export default class Input extends Component {
     }
 
     inputClassNames(extraClassNames) {
-        return classNames(
-            'ffe-dateinput__field',
-            'ffe-input-field',
-            extraClassNames,
-        );
-    }
-
-    dateInputClassNames() {
-        return classNames('ffe-dateinput', {
-            'ffe-dateinput--full-width': this.props.fullWidth,
-        });
+        return classNames('ffe-dateinput__field', extraClassNames);
     }
 
     render() {
@@ -28,31 +18,26 @@ export default class Input extends Component {
             inputProps = {},
             onBlur,
             onChange,
-            onFocus,
             onKeyDown,
             value,
+            language,
         } = this.props;
 
         return (
-            <div className={this.dateInputClassNames()}>
-                <input
-                    aria-invalid={String(
-                        this.props['aria-invalid'] || ariaInvalid,
-                    )}
-                    maxLength="10"
-                    onFocus={onFocus}
-                    onBlur={onBlur}
-                    onChange={onChange}
-                    onKeyDown={onKeyDown}
-                    ref={c => {
-                        this._input = c;
-                    }}
-                    value={value}
-                    {...inputProps}
-                    className={this.inputClassNames(inputProps.className)}
-                />
-                <KalenderIkon className="ffe-dateinput__icon" />
-            </div>
+            <input
+                aria-invalid={String(this.props['aria-invalid'] || ariaInvalid)}
+                maxLength="10"
+                onBlur={onBlur}
+                onChange={onChange}
+                onKeyDown={onKeyDown}
+                ref={c => {
+                    this._input = c;
+                }}
+                aria-placeholder={i18n[language].DATE_FORMAT}
+                value={value}
+                {...inputProps}
+                className={this.inputClassNames(inputProps.className)}
+            />
         );
     }
 }
@@ -65,8 +50,8 @@ Input.propTypes = {
     }),
     onBlur: func,
     onChange: func.isRequired,
-    onFocus: func,
     onKeyDown: func,
     value: string.isRequired,
     fullWidth: bool,
+    language: string,
 };

@@ -1,19 +1,19 @@
 import React from 'react';
 import { shape, number } from 'prop-types';
 
-export default function LeadDate(props) {
+export default function NonClickableDate(props) {
     return (
         <td
             aria-disabled="true"
             aria-selected="false"
             className="ffe-calendar__day"
             key={props.date.timestamp}
-            role="gridcell"
+            role="button"
         />
     );
 }
 
-LeadDate.propTypes = {
+NonClickableDate.propTypes = {
     date: shape({
         timestamp: number.isRequired,
     }).isRequired,

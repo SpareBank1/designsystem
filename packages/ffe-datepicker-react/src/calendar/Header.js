@@ -1,5 +1,5 @@
 import React from 'react';
-import { func, number, string } from 'prop-types';
+import { func, number, object, string } from 'prop-types';
 import ChevronIkon from '@sb1/ffe-icons-react/lib/chevron-ikon';
 
 export default function Header(props) {
@@ -11,6 +11,8 @@ export default function Header(props) {
         previousMonthHandler,
         previousMonthLabel,
         year,
+        prevMonthButtonElement,
+        nextMonthButtonElement,
     } = props;
 
     return (
@@ -19,15 +21,15 @@ export default function Header(props) {
                 <button
                     className="ffe-calendar__month-nav ffe-calendar__previous"
                     onClick={previousMonthHandler}
-                    tabIndex="-1"
-                    title={previousMonthLabel}
+                    aria-label={previousMonthLabel}
                     type="button"
+                    ref={prevMonthButtonElement}
+                    tabIndex={-1}
                 >
                     <ChevronIkon className="ffe-calendar__icon-prev" />
                 </button>
                 <header
-                    aria-live="assertive"
-                    aria-atomic="true"
+                    aria-live="polite"
                     className="ffe-calendar__title"
                     id={`${datepickerId}-title`}
                 >
@@ -39,9 +41,10 @@ export default function Header(props) {
                 <button
                     className="ffe-calendar__month-nav ffe-calendar__next"
                     onClick={nextMonthHandler}
-                    title={nextMonthLabel}
-                    tabIndex="-1"
+                    aria-label={nextMonthLabel}
                     type="button"
+                    ref={nextMonthButtonElement}
+                    tabIndex={-1}
                 >
                     <ChevronIkon className="ffe-calendar__icon-next" />
                 </button>
@@ -58,4 +61,6 @@ Header.propTypes = {
     previousMonthHandler: func.isRequired,
     previousMonthLabel: string.isRequired,
     year: number.isRequired,
+    prevMonthButtonElement: object.isRequired,
+    nextMonthButtonElement: object.isRequired,
 };

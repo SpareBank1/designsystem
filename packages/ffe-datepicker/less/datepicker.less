@@ -210,4 +210,45 @@
     &--full-width {
         display: block;
     }
+
+    &--wrapper {
+        display: flex;
+    }
+
+    &__button {
+        background-color: transparent;
+        border-left: 2px solid @ffe-grey-silver;
+        border-right: none;
+        border-top: none;
+        border-bottom: none;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        padding-right: 2px;
+        padding-left: 0;
+        height: 41px;
+        width: 56px;
+        outline: none;
+        margin-left: -56px;
+
+        &:active,
+        &:focus,
+        &:hover {
+            margin-top: 0;
+            margin-bottom: 0;
+            padding-right: 0;
+            border: 2px solid @ffe-blue-azure;
+            height: 45px;
+            border-radius: 0 4px 4px 0;
+        }
+
+        &:focus {
+            box-shadow: 0 0 0 1px @ffe-white, 0 0 0 4px @ffe-blue-focus;
+        }
+    }
+
+    &__icon {
+        vertical-align: middle;
+        width: 22px;
+        fill: @ffe-blue-azure;
+    }
 }

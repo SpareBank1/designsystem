@@ -79,21 +79,12 @@ describe('<Datepicker />', () => {
         });
     });
 
-    describe('with focus on DateInput', () => {
+    describe('with click on button', () => {
         it('contains a Calendar', () => {
             const wrapper = getMountedWrapper();
-            const input = wrapper.find('input');
-            input.simulate('focus');
-
-            expect(wrapper.find(Calendar)).toHaveLength(1);
-        });
-    });
-
-    describe('with click on DateInput', () => {
-        it('contains a Calendar', () => {
-            const wrapper = getMountedWrapper();
-            const input = wrapper.find('input');
+            const input = wrapper.find('button');
             input.simulate('click');
+
             expect(wrapper.find(Calendar)).toHaveLength(1);
         });
     });
@@ -101,11 +92,10 @@ describe('<Datepicker />', () => {
     describe('with click after errors', () => {
         it('works when field contains invalid input', () => {
             const wrapper = getMountedWrapper();
-            const input = wrapper.find('input');
+            const button = wrapper.find('button');
             wrapper.setProps({ value: 'invalid date' });
 
-            input.simulate('blur');
-            input.simulate('click');
+            button.simulate('click');
 
             expect(wrapper.find(ERROR_CLASS).exists()).toBe(true);
             expect(wrapper.find(Calendar).exists()).toBe(true);
@@ -128,7 +118,7 @@ describe('<Datepicker />', () => {
         describe('calendarAbove', () => {
             it('has correct calendar above class', () => {
                 const wrapper = getMountedWrapper({ calendarAbove: true });
-                wrapper.find('input').simulate('focus');
+                wrapper.find('button').simulate('click');
 
                 expect(
                     wrapper
@@ -397,17 +387,15 @@ describe('<Datepicker />', () => {
         });
     });
 
-    describe('validate correct visibility of Calendar on DateInput blur', () => {
-        const openCalendarAndBlurDateInput = wrapper => {
-            const input = wrapper.find('input');
-            input.simulate('click');
-            input.simulate('blur');
+    describe('validate correct visibility of Calendar when calendar button clicked', () => {
+        const openCalendar = wrapper => {
+            wrapper.find('button').simulate('click');
         };
 
         describe('should not be visible on invalid date value', () => {
             it('has an error message', () => {
                 const wrapper = getMountedWrapper({ value: 'iamturtles' });
-                openCalendarAndBlurDateInput(wrapper);
+                openCalendar(wrapper);
                 expect(wrapper.find(ERROR_CLASS).exists()).toBe(true);
             });
 
@@ -416,13 +404,13 @@ describe('<Datepicker />', () => {
                     value: 'iamturtles',
                     hideErrors: true,
                 });
-                openCalendarAndBlurDateInput(wrapper);
+                openCalendar(wrapper);
                 expect(wrapper.find(ERROR_CLASS).exists()).toBe(false);
             });
 
             it('stays open on input blur since calendar should handle own blur event', () => {
                 const wrapper = getMountedWrapper({ value: 'iamturtles' });
-                openCalendarAndBlurDateInput(wrapper);
+                openCalendar(wrapper);
                 expect(wrapper.find(Calendar).exists()).toBe(true);
             });
         });
@@ -434,7 +422,7 @@ describe('<Datepicker />', () => {
                         value: '31.12.2014',
                         minDate: '01.01.2016',
                     });
-                    openCalendarAndBlurDateInput(wrapper);
+                    openCalendar(wrapper);
                     expect(wrapper.find(ERROR_CLASS).exists()).toBe(true);
                 });
 
@@ -443,7 +431,7 @@ describe('<Datepicker />', () => {
                         value: '31.12.2014',
                         minDate: '01.01.2016',
                     });
-                    openCalendarAndBlurDateInput(wrapper);
+                    openCalendar(wrapper);
                     expect(wrapper.find(ERROR_CLASS).text()).toBe(
                         i18n.nb.MIN_DATE,
                     );
@@ -454,7 +442,7 @@ describe('<Datepicker />', () => {
                         value: '31.12.2014',
                         minDate: '01.01.2016',
                     });
-                    openCalendarAndBlurDateInput(wrapper);
+                    openCalendar(wrapper);
                     expect(wrapper.find(Calendar)).toHaveLength(1);
                 });
             });
@@ -465,7 +453,7 @@ describe('<Datepicker />', () => {
                         value: '31.12.2016',
                         maxDate: '01.01.2016',
                     });
-                    openCalendarAndBlurDateInput(wrapper);
+                    openCalendar(wrapper);
                     expect(wrapper.find(ERROR_CLASS).exists()).toBe(true);
                 });
 
@@ -474,7 +462,7 @@ describe('<Datepicker />', () => {
                         value: '31.12.2016',
                         maxDate: '01.01.2016',
                     });
-                    openCalendarAndBlurDateInput(wrapper);
+                    openCalendar(wrapper);
                     expect(wrapper.find(ERROR_CLASS).text()).toBe(
                         i18n.nb.MAX_DATE,
                     );
@@ -485,7 +473,7 @@ describe('<Datepicker />', () => {
                         value: '31.12.2016',
                         maxDate: '01.01.2016',
                     });
-                    openCalendarAndBlurDateInput(wrapper);
+                    openCalendar(wrapper);
                     expect(wrapper.find(Calendar)).toHaveLength(1);
                 });
             });
@@ -508,37 +496,9 @@ describe('<Datepicker />', () => {
         });
     });
 
-    describe('validate correct focus changes of Calendar on focus and blur events', () => {
-        const openCalendar = wrapper => {
-            const input = wrapper.find('input');
-            input.simulate('click');
-        };
-
-        it('calendar should set calendar forceDateFocus to false when bluring', () => {
-            const wrapper = getMountedWrapper({
-                value: '01.06.2016',
-                minDate: '01.01.2016',
-                maxDate: '31.12.2016',
-                focusOnCalendarOpen: true,
-            });
-
-            expect(wrapper.props().focusOnCalendarOpen).toBe(true);
-
-            openCalendar(wrapper);
-            const calendar = wrapper.find(Calendar);
-            const calInstance = wrapper.instance().datepickerCalendar;
-            calendar.simulate('focus');
-            expect(calInstance.forceDateFocus).toBe(true);
-            calendar.simulate('blur');
-
-            expect(calInstance.forceDateFocus).toBe(false);
-            expect(calendar.props().focusOnOpen).toBe(false);
-        });
-    });
-
     describe('validate correct visibility of Calendar on DateInput key press', () => {
-        const openCalendar = wrapper => {
-            const input = wrapper.find('input');
+        const toggleCalendar = wrapper => {
+            const input = wrapper.find('.ffe-datepicker__button');
             input.simulate('click');
         };
         const keyDownInInput = (wrapper, keyCode, preventDefault = f => f) => {
@@ -557,45 +517,28 @@ describe('<Datepicker />', () => {
                 expect(spy).toHaveBeenCalledTimes(1);
             });
 
-            it('should close and open calendar if pressed twice', () => {
-                const wrapper = getMountedWrapper({
-                    value: '31.12.2016',
-                    maxDate: '01.01.2016',
-                });
-                openCalendar(wrapper);
-                expect(wrapper.find(Calendar).exists()).toBe(true);
-
-                keyDownInInput(wrapper, KeyCode.ENTER);
-                expect(wrapper.find(Calendar).exists()).toBe(false);
-
-                keyDownInInput(wrapper, KeyCode.ENTER);
-                expect(wrapper.find(Calendar).exists()).toBe(true);
-            });
-
             it('with invalid date it has correct error-class', () => {
                 const wrapper = getMountedWrapper({
                     value: '31.12.2016',
                     maxDate: '01.01.2016',
                 });
-                openCalendar(wrapper);
-                expect(wrapper.find(ERROR_CLASS).exists()).toBe(false);
-                keyDownInInput(wrapper, KeyCode.ENTER);
+                toggleCalendar(wrapper);
                 expect(wrapper.find(ERROR_CLASS).exists()).toBe(true);
             });
 
-            it('with invalid date it has correct error-class and opens on change', () => {
+            it('with invalid date it has correct error-class and opens on calendar on click', () => {
                 const wrapper = getMountedWrapper({
                     value: '31.12.201',
                     maxDate: '01.01.2016',
                 });
-                openCalendar(wrapper);
+
                 expect(wrapper.find(ERROR_CLASS).exists()).toBe(false);
                 keyDownInInput(wrapper, KeyCode.ENTER);
                 expect(wrapper.find(ERROR_CLASS).exists()).toBe(true);
-                expect(wrapper.find(Calendar).exists()).toBe(false);
-                keyDownInInput(wrapper, KeyCode.ENTER);
+                toggleCalendar(wrapper);
                 expect(wrapper.find(ERROR_CLASS).exists()).toBe(true);
-                expect(wrapper.find(Calendar).exists()).toBe(true);
+                toggleCalendar(wrapper);
+                expect(wrapper.find(ERROR_CLASS).exists()).toBe(true);
             });
         });
 
