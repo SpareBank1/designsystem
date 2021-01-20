@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@4.2.39...@sb1/ffe-datepicker-react@5.0.0) (2021-01-20)
+
+
+### Features
+
+* **ffe-datepicker-react:** Make calendar readable for screenreaders ([904b3dc](https://github.com/SpareBank1/designsystem/commit/904b3dc109043aab7e1b31f0bfc836fe77fe9b8b))
+
+
+### BREAKING CHANGES
+
+* **ffe-datepicker-react:** Improve usability of datepicker.
+
+This commit separates date-input and calendar-button to improve accessibility
+
+Previously, datepicker toggled on focus on input field. Now calendar-button will now toggle the datepicker, and tab-key will move focus between date in datepicker and prev- and next-month buttons. Select date, esc-key and click outside datepicker will close datepicker
+
+This version adds aria label to each date in datpicker to improve readability for screen readers
+
+
+
+
+
 ## [4.2.39](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@4.2.38...@sb1/ffe-datepicker-react@4.2.39) (2021-01-11)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker-react

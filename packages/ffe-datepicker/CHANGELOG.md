@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@7.0.2...@sb1/ffe-datepicker@8.0.0) (2021-01-20)
+
+
+### Features
+
+* **ffe-datepicker:** Make calendar readable for screenreaders ([6a9d416](https://github.com/SpareBank1/designsystem/commit/6a9d4166d31a1fd86c563c6cf2f7555746547ee7))
+
+
+### BREAKING CHANGES
+
+* **ffe-datepicker:** Improve usability of datepicker.
+
+This commit separates date-input and calendar-button to improve accessibility
+
+
+
+
+
 ## [7.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@7.0.1...@sb1/ffe-datepicker@7.0.2) (2021-01-11)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
