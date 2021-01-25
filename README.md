@@ -13,7 +13,7 @@ designsystemet til å passe dine behov.
 
 ### Kom i gang
 
-Ta kontakt med faglederne (heidi.stolen@sparebank1.no eller siri.corneliussen@sparebank1.no), så hjelper de deg med tilgang til Verktøykassa til Sketch.
+Ta kontakt med faglederne (heidi.stolen@sparebank1.no eller siri.corneliussen@sparebank1.no), så hjelper de deg med tilgang til Verktøykassa til Figma.
 
 Verktøykassa blir oppdatert av faglederene ved endringer eller når nye ting legges til. Endringene annonseres enn så
 lenge via interne kanaler - spør fagleder, så blir du pekt i riktig retning for å få med deg disse beskjedene :+1:
@@ -32,7 +32,6 @@ Resten av denne READMEen hjelper deg med å komme i gang med utvikling på selve
 
 Klon ned repoet, og kjør `npm install`. Dette vil installere alle dependencies for alle pakker, så du kan begynne
 kjøre opp alt lokalt. Når denne kommandoen er ferdig, kan du kjøre følgende kommandoer fra rotpakken:
-
 
 ```bash
 npm start              # Starter en lokal server på localhost:6060
@@ -59,5 +58,5 @@ bidrag. Ta en titt på [CONTRIBUTING.md](CONTRIBUTING.md) for hvordan du går fr
 
 ## Licenses
 
-* Source code is licensed under MIT
-* The MuseoSans fonts are licensed separately. See LICENSE-fonts.md.
+-   Source code is licensed under MIT
+-   The MuseoSans fonts are licensed separately. See LICENSE-fonts.md.
