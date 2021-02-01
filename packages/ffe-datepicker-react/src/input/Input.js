@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { bool, func, oneOfType, string, shape } from 'prop-types';
+import { bool, func, oneOfType, string, shape, oneOf } from 'prop-types';
 import classNames from 'classnames';
 import i18n from '../i18n/i18n';
 
@@ -23,7 +23,7 @@ export default class Input extends Component {
             onChange,
             onKeyDown,
             value,
-            language,
+            language = 'nb',
         } = this.props;
 
         return (
@@ -56,5 +56,5 @@ Input.propTypes = {
     onKeyDown: func,
     value: string.isRequired,
     fullWidth: bool,
-    language: string,
+    language: oneOf(['nb', 'nn', 'en']),
 };

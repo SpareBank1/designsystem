@@ -18,7 +18,7 @@ export interface DatepickerProps {
     onValidationComplete?: Function;
     inputProps?: InputProps;
     label?: string;
-    language?: string;
+    language?: 'nb' | 'en' | 'nn';
     maxDate?: string;
     minDate?: string;
     onChange: (value: string) => void;
