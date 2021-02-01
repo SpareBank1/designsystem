@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@8.0.0...@sb1/ffe-datepicker@8.0.1) (2021-02-01)
+
+
+### Bug Fixes
+
+* **ffe-datepicker:** remove import of ffe-form ([b759db0](https://github.com/SpareBank1/designsystem/commit/b759db0f38152b47121f59b6547d5e43fd7510b6))
+
+
+
+
+
 # [8.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@7.0.2...@sb1/ffe-datepicker@8.0.0) (2021-01-20)
 
 

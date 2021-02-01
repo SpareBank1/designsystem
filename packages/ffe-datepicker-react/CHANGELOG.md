@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@5.0.0...@sb1/ffe-datepicker-react@5.0.1) (2021-02-01)
+
+
+### Bug Fixes
+
+* **ffe-datepicker-react:** add ffe-input-field class to datepicker input ([f7337e8](https://github.com/SpareBank1/designsystem/commit/f7337e819839cdf7ee86cacb9f0c56d533308352))
+
+
+
+
+
 # [5.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@4.2.39...@sb1/ffe-datepicker-react@5.0.0) (2021-01-20)
 
 
