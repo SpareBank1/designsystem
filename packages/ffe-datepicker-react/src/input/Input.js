@@ -9,7 +9,10 @@ export default class Input extends Component {
     }
 
     inputClassNames(extraClassNames) {
-        return classNames('ffe-dateinput__field', extraClassNames);
+        return classNames(
+            'ffe-input-field ffe-dateinput__field',
+            extraClassNames,
+        );
     }
 
     render() {
