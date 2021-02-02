@@ -78,7 +78,7 @@
         "react": "^16.9.0",
         "react-dom": "^16.9.0",
         "react-scrollspy": "^3.3.5",
-        "react-styleguidist": "11.1.2",
+        "react-styleguidist": "7.0.5",
         "regenerator-runtime": "^0.13.2",
         "replace": "^1.1.1",
         "rimraf": "^2.6.2",
