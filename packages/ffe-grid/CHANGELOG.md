@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [11.0.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@11.0.13...@sb1/ffe-grid@11.0.14) (2021-02-02)
+
+
+### Bug Fixes
+
+* **ffe-grid:** add parentheses to division in less ([6ab32ad](https://github.com/SpareBank1/designsystem/commit/6ab32ad10d35936555c6d23d7a694a0a252c26ed))
+
+
+
+
+
 ## [11.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@11.0.12...@sb1/ffe-grid@11.0.13) (2021-01-11)
 
 **Note:** Version bump only for package @sb1/ffe-grid
