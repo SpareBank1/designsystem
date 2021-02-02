@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-checkbox-react@7.0.3...@sb1/ffe-checkbox-react@7.0.4) (2021-02-02)
+
+
+### Bug Fixes
+
+* **ffe-checkbox-react:** upgrade to hoisted version of uuid ([5718e17](https://github.com/SpareBank1/designsystem/commit/5718e177fe035c60b4150f7e8d373f52de4918db))
+
+
+
+
+
 ## [7.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-checkbox-react@7.0.2...@sb1/ffe-checkbox-react@7.0.3) (2021-02-02)
 
 

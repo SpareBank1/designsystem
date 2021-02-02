@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.26](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-radio-button-react@5.0.25...@sb1/ffe-radio-button-react@5.0.26) (2021-02-02)
+
+
+### Bug Fixes
+
+* **ffe-radio-button-react:** upgrade to hoisted version of uuid ([b4c88a5](https://github.com/SpareBank1/designsystem/commit/b4c88a55181b8d827f193a2d5332c240141c4c8d))
+
+
+
+
+
 ## [5.0.25](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-radio-button-react@5.0.24...@sb1/ffe-radio-button-react@5.0.25) (2021-02-02)
 
 
