@@ -14,7 +14,7 @@
     "test": "npm run lint"
   },
   "devDependencies": {
-    "stylelint": "^10.0.0"
+    "stylelint": "^13.0.0"
   },
   "peerDependencies": {
     "@sb1/ffe-core": "^15.2.0"
