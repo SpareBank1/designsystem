@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [15.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@15.0.0...@sb1/ffe-form@15.0.1) (2021-02-02)
+
+
+### Bug Fixes
+
+* **ffe-form:** reduce vulnerabilities ([00f0a98](https://github.com/SpareBank1/designsystem/commit/00f0a98a98e45650de5642066b4bce9ed7069fe4))
+
+
+
+
+
 # [15.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@14.1.2...@sb1/ffe-form@15.0.0) (2021-01-11)
 
 

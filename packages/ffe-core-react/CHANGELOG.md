@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@4.2.2...@sb1/ffe-core-react@4.2.3) (2021-02-02)
+
+
+### Bug Fixes
+
+* **ffe-core-react:** reduce vulnerabilities ([add5cba](https://github.com/SpareBank1/designsystem/commit/add5cbaabf058aea4faa0f54f0654d2a3bae5a5e))
+
+
+
+
+
 ## [4.2.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@4.2.1...@sb1/ffe-core-react@4.2.2) (2019-10-16)
 
 **Note:** Version bump only for package @sb1/ffe-core-react

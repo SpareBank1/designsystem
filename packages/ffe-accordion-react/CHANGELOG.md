@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@9.1.1...@sb1/ffe-accordion-react@9.1.2) (2021-02-02)
+
+
+### Bug Fixes
+
+* **ffe-accordion-react:** reduce vulnerabilities ([7bb8af5](https://github.com/SpareBank1/designsystem/commit/7bb8af5bf84c3cfcaba1f6087b0a6091efce21a7))
+
+
+
+
+
 ## [9.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@9.1.0...@sb1/ffe-accordion-react@9.1.1) (2021-01-27)
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react

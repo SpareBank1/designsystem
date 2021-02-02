@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@10.0.0...@sb1/ffe-buttons@10.0.1) (2021-02-02)
+
+
+### Bug Fixes
+
+* **ffe-buttons:** reduce vulnerabilities ([d6319c4](https://github.com/SpareBank1/designsystem/commit/d6319c4deb31c72c2a326c38d505b5a4a82fbc97))
+
+
+
+
+
 # [10.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@9.0.13...@sb1/ffe-buttons@10.0.0) (2021-01-11)
 
 

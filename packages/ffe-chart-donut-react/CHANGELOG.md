@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@3.0.2...@sb1/ffe-chart-donut-react@3.0.3) (2021-02-02)
+
+
+### Bug Fixes
+
+* **ffe-chart-donut-react:** reduce vulnerabilities ([97e5ee0](https://github.com/SpareBank1/designsystem/commit/97e5ee05602952bc8ee58e45e5b048c2f8e118c7))
+
+
+
+
+
 ## [3.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@3.0.1...@sb1/ffe-chart-donut-react@3.0.2) (2020-08-05)
 
 

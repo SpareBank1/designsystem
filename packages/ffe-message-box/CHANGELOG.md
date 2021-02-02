@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@7.0.0...@sb1/ffe-message-box@7.0.1) (2021-02-02)
+
+
+### Bug Fixes
+
+* **ffe-message-box:** reduce vulnerabilities ([47d4634](https://github.com/SpareBank1/designsystem/commit/47d4634958605cfe691b102ec72e6ec06ad7e15d))
+
+
+
+
+
 # [7.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@6.1.0...@sb1/ffe-message-box@7.0.0) (2019-12-18)
 
 ### Bug Fixes

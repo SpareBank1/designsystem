@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-formatters@3.1.3...@sb1/ffe-formatters@3.1.4) (2021-02-02)
+
+
+### Bug Fixes
+
+* **ffe-formatters:** reduce vulnerabilities ([d07213f](https://github.com/SpareBank1/designsystem/commit/d07213fd7c223612efcec50818c14330f9726385))
+
+
+
+
+
 ## [3.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-formatters@3.1.2...@sb1/ffe-formatters@3.1.3) (2018-12-11)
 
 ### Bug Fixes

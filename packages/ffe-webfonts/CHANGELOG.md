@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-webfonts@2.1.0...@sb1/ffe-webfonts@2.1.1) (2021-02-02)
+
+
+### Bug Fixes
+
+* **ffe-webfonts:** reduce vulnerabilities ([15d2ec4](https://github.com/SpareBank1/designsystem/commit/15d2ec491b711a7fe3eedda32793d82fa16751be))
+
+
+
+
+
 # [2.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-webfonts@2.0.5...@sb1/ffe-webfonts@2.1.0) (2019-10-16)
 
 ### Features

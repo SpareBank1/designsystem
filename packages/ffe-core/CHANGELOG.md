@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [17.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@17.0.0...@sb1/ffe-core@17.0.1) (2021-02-02)
+
+
+### Bug Fixes
+
+* **ffe-core:** reduce vulnerabilities ([e1c55e2](https://github.com/SpareBank1/designsystem/commit/e1c55e2fce341db6c5d0fbf376df68d3962cfbb2))
+
+
+
+
+
 # [17.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@16.0.1...@sb1/ffe-core@17.0.0) (2021-01-11)
 
 

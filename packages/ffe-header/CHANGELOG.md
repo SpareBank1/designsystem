@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [14.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@14.0.2...@sb1/ffe-header@14.0.3) (2021-02-02)
+
+
+### Bug Fixes
+
+* **ffe-header:** reduce vulnerabilities ([041d79f](https://github.com/SpareBank1/designsystem/commit/041d79f3fd30f9a9a62ff409b392e59094e9c8cc))
+
+
+
+
+
 ## [14.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@14.0.1...@sb1/ffe-header@14.0.2) (2021-02-02)
 
 

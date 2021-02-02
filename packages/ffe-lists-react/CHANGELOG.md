@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@5.0.0...@sb1/ffe-lists-react@5.0.1) (2021-02-02)
+
+
+### Bug Fixes
+
+* **ffe-lists-react:** reduce vulnerabilities ([3bd41f1](https://github.com/SpareBank1/designsystem/commit/3bd41f1eddb5356ffe45729012aae98411887ecf))
+
+
+
+
+
 # [5.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@4.0.1...@sb1/ffe-lists-react@5.0.0) (2019-08-27)
 
 ### chore

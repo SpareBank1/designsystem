@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner-react@5.0.0...@sb1/ffe-spinner-react@5.0.1) (2021-02-02)
+
+
+### Bug Fixes
+
+* **ffe-spinner-react:** reduce vulnerabilities ([c502167](https://github.com/SpareBank1/designsystem/commit/c502167b80add31dae531e466a7c03e549ed740a))
+
+
+
+
+
 # [5.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner-react@4.1.1...@sb1/ffe-spinner-react@5.0.0) (2019-08-27)
 
 ### chore

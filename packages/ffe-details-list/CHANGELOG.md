@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.1.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list@9.1.13...@sb1/ffe-details-list@9.1.14) (2021-02-02)
+
+
+### Bug Fixes
+
+* **ffe-details-list:** reduce vulnerabilities ([7a8d0ad](https://github.com/SpareBank1/designsystem/commit/7a8d0ad70b590d379b4ca72fd2ae0f523a0c864d))
+
+
+
+
+
 ## [9.1.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list@9.1.12...@sb1/ffe-details-list@9.1.13) (2021-01-11)
 
 **Note:** Version bump only for package @sb1/ffe-details-list
