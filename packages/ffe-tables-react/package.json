@@ -40,7 +40,7 @@
   "devDependencies": {
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.7.0",
-    "jest": "^23.4.2",
+    "jest": "^24.0.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "sinon": "^7.2.3"
