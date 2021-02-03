@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@10.1.2...@sb1/ffe-grid-react@10.1.3) (2021-02-03)
+
+
+### Bug Fixes
+
+* packages/ffe-grid-react/package.json to reduce vulnerabilities ([d81834c](https://github.com/SpareBank1/designsystem/commit/d81834cc927050296e7d06657b897f854a5f58a4))
+
+
+
+
+
 ## [10.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@10.1.1...@sb1/ffe-grid-react@10.1.2) (2021-02-02)
 
 

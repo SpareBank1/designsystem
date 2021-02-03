@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.2.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@6.2.3...@sb1/ffe-system-message-react@6.2.4) (2021-02-03)
+
+
+### Bug Fixes
+
+* packages/ffe-system-message-react/package.json to reduce vulnerabilities ([4e8a6d3](https://github.com/SpareBank1/designsystem/commit/4e8a6d3a92552846f11a230afc91658c75b08ccb))
+
+
+
+
+
 ## [6.2.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@6.2.2...@sb1/ffe-system-message-react@6.2.3) (2021-02-02)
 
 

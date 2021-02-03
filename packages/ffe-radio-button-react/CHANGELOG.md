@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.27](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-radio-button-react@5.0.26...@sb1/ffe-radio-button-react@5.0.27) (2021-02-03)
+
+
+### Bug Fixes
+
+* packages/ffe-radio-button-react/package.json to reduce vulnerabilities ([717b95e](https://github.com/SpareBank1/designsystem/commit/717b95e9f90d59747090cc45ef780b8ae6b781de))
+
+
+
+
+
 ## [5.0.26](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-radio-button-react@5.0.25...@sb1/ffe-radio-button-react@5.0.26) (2021-02-02)
 
 

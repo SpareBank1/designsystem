@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.25](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.24...@sb1/ffe-details-list-react@3.0.25) (2021-02-03)
+
+
+### Bug Fixes
+
+* packages/ffe-details-list-react/package.json to reduce vulnerabilities ([6c91bbe](https://github.com/SpareBank1/designsystem/commit/6c91bbe9b8dcee3b66098e9261f67e1c002493ed))
+
+
+
+
+
 ## [3.0.24](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.23...@sb1/ffe-details-list-react@3.0.24) (2021-02-02)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.0.24](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@6.0.23...@sb1/ffe-tables-react@6.0.24) (2021-02-03)
+
+
+### Bug Fixes
+
+* packages/ffe-tables-react/package.json to reduce vulnerabilities ([c8ac722](https://github.com/SpareBank1/designsystem/commit/c8ac722507b50c965c5cbbb768a6593e07ffc3a9))
+
+
+
+
+
 ## [6.0.23](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@6.0.22...@sb1/ffe-tables-react@6.0.23) (2021-02-02)
 
 
