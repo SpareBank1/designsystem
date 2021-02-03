@@ -70,7 +70,7 @@ export interface TooltipProps extends React.HTMLAttributes<HTMLSpanElement> {
     children?: React.ReactNode;
     className?: string;
     isOpen?: boolean;
-    onClick: (e: React.MouseEvent | undefined) => void;
+    onClick?: (e: React.MouseEvent | undefined) => void;
     tabIndex?: number;
     dark?: boolean;
 }
