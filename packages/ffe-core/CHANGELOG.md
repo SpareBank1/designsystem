@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [17.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@17.0.1...@sb1/ffe-core@17.1.0) (2021-02-03)
+
+
+### Features
+
+* **ffe-core:** legger til farger fra ny identitet ([b24f606](https://github.com/SpareBank1/designsystem/commit/b24f606c327f82c370ea1d533accc6863cf1021d))
+
+
+
+
+
 ## [17.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@17.0.0...@sb1/ffe-core@17.0.1) (2021-02-02)
 
 

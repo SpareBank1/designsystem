@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-webfonts@2.1.1...@sb1/ffe-webfonts@2.2.0) (2021-02-03)
+
+
+### Features
+
+* **ffe-webfonts:** legger til fonter fra ny identitet ([521426d](https://github.com/SpareBank1/designsystem/commit/521426ddeee2c1f4fa191bddfd44392ae64957af))
+
+
+
+
+
 ## [2.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-webfonts@2.1.0...@sb1/ffe-webfonts@2.1.1) (2021-02-02)
 
 

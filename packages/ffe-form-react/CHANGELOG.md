@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.2.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@7.2.4...@sb1/ffe-form-react@7.2.5) (2021-02-03)
+
+
+### Bug Fixes
+
+* **ffe-form-react:** onclick on tooltip should be optional(ts) ([4921274](https://github.com/SpareBank1/designsystem/commit/4921274fe2aff93057babb9bbb86711196824b44))
+
+
+
+
+
 ## [7.2.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@7.2.3...@sb1/ffe-form-react@7.2.4) (2021-02-03)
 
 
