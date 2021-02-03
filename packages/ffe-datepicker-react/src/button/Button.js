@@ -17,6 +17,7 @@ export default class Button extends Component {
                 onClick={onClick}
                 className="ffe-datepicker__button"
                 aria-label={buttonLabel}
+                type="button"
             >
                 <KalenderIkon className="ffe-datepicker__icon" />
             </button>
