@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-interface CollapseProps extends React.HTMLProps<HTMLDivElement> {
+export interface CollapseProps extends React.HTMLProps<HTMLDivElement> {
     isOpen: boolean;
     onRest?: () => void;
 }
