@@ -3,39 +3,9 @@
   "version": "7.0.5",
   "license": "MIT",
   "author": "SpareBank 1",
-  "files": [
-    "lib",
-    "*.js"
-  ],
-  "main": "lib/Checkbox.js",
   "repository": {
     "type": "git",
     "url": "ssh://git@github.com:SpareBank1/designsystem.git"
-  },
-  "scripts": {
-    "build": "echo \"removed\"",
-    "lint": "echo \"removed\"",
-    "test": "jest",
-    "test:watch": "jest --watch"
-  },
-  "jest": {
-    "setupTestFrameworkScriptFile": "../../test-setup.js"
-  },
-  "dependencies": {
-    "classnames": "^2.2.5",
-    "prop-types": "^15.6.0",
-    "uuid": "^8.0.0"
-  },
-  "devDependencies": {
-    "enzyme": "^3.7.0",
-    "enzyme-adapter-react-16": "^1.7.0",
-    "jest": "^26.0.0",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0"
-  },
-  "peerDependencies": {
-    "@sb1/ffe-form": "^10.1.1",
-    "react": "^16.9.0"
   },
   "publishConfig": {
     "access": "public"
