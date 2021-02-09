@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-checkbox-react@7.0.5...@sb1/ffe-checkbox-react@7.0.6) (2021-02-09)
+
+
+### Bug Fixes
+
+* **ffe-checkbox-react:** end of life ([8cd84f2](https://github.com/SpareBank1/designsystem/commit/8cd84f2cbfe56d3de088da45907452d0de1c62dc))
+
+
+
+
+
 ## [7.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-checkbox-react@7.0.4...@sb1/ffe-checkbox-react@7.0.5) (2021-02-03)
 
 
