@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.2.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@7.2.7...@sb1/ffe-form-react@7.2.8) (2021-02-11)
+
+
+### Bug Fixes
+
+* **ffe-form-react:** Add role="status" to expanded content in Tooltip ([db63aea](https://github.com/SpareBank1/designsystem/commit/db63aeae17ecda2dc1fe36738533bc1a90dbd2d3))
+
+
+
+
+
 ## [7.2.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@7.2.6...@sb1/ffe-form-react@7.2.7) (2021-02-05)
 
 **Note:** Version bump only for package @sb1/ffe-form-react

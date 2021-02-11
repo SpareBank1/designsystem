@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-formatters@3.1.5...@sb1/ffe-formatters@4.0.0) (2021-02-11)
+
+
+### Features
+
+* **ffe-formatters:** added types ([a26264d](https://github.com/SpareBank1/designsystem/commit/a26264d1fa4e80939ed45ceccb6f4997d6ed2abb))
+
+
+### BREAKING CHANGES
+
+* **ffe-formatters:** formatDate does not accept moment any more.
+
+
+
+
+
 ## [3.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-formatters@3.1.4...@sb1/ffe-formatters@3.1.5) (2021-02-02)
 
 
