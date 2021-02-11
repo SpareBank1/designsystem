@@ -70,6 +70,7 @@ class Tooltip extends React.Component {
                                 { 'ffe-small-text--dark': dark },
                                 className,
                             )}
+                            role="status"
                         >
                             {children}
                         </div>
