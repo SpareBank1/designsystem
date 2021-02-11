@@ -116,14 +116,13 @@ const formatNumber = require('./formatNumber').default;
 import formatDate from '@sb1/ffe-formatters/lib/formatDate';
 ```
 
-Formaterer timestamps, `Date`- og `moment`-objekter. **Støtter kun norsk locale!**
+Formaterer timestamps og `Date`-objekter. **Støtter kun norsk locale!**
 
 ```jsx
 const formatDate = require('./formatDate').default;
 
 <React.Fragment>
     <div>{formatDate(new Date('2000', 0, 1))}</div>
-    {/* <div>{formatDate(moment('20000101'))}</div> */}
     <div>{formatDate(946681200000)}</div>
 </React.Fragment>;
 ```
