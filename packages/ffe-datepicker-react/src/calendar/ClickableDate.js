@@ -86,7 +86,7 @@ ClickableDate.propTypes = {
         isToday: bool,
     }).isRequired,
     month: string.isRequired,
-    year: string.isRequired,
+    year: number.isRequired,
     headers: string.isRequired,
     onClick: func.isRequired,
     language: string.isRequired,
