@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-webfonts@2.2.0...@sb1/ffe-webfonts@2.2.1) (2021-02-19)
+
+
+### Bug Fixes
+
+* **ffe-webfonts:** Makes SpareBank1-font family opt-in ([712c758](https://github.com/SpareBank1/designsystem/commit/712c7580573d001b499d00a950366dbc28601ed3))
+
+
+
+
+
 # [2.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-webfonts@2.1.1...@sb1/ffe-webfonts@2.2.0) (2021-02-03)
 
 
