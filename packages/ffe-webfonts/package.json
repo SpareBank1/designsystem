@@ -8,6 +8,8 @@
     "fonts",
     "fonts.css",
     "fonts.less",
+    "sb1-fonts.css",
+    "sb1-fonts.less",
     "LICENSE-fonts.md",
     "LICENSE.md",
     "README.md"
@@ -17,7 +19,7 @@
     "url": "ssh://git@github.com:SpareBank1/designsystem.git"
   },
   "scripts": {
-    "build": "lessc fonts-inline.less fonts.css",
+    "build": "lessc fonts-inline.less fonts.css && lessc sb1-fonts-inline.less sb1-fonts.css",
     "lint": "stylelint *.less",
     "test": "npm run lint"
   },
