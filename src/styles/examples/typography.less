@@ -1,0 +1,144 @@
+.sb1ds-typography-hierarchy {
+    margin: 0 0 @ffe-spacing-lg 0;
+    padding: 0;
+    border-top: 1px solid @ffe-farge-lysgraa;
+    font-family: 'SpareBank1-regular', arial, sans-serif;
+
+    @media (min-width: @breakpoint-md) {
+        display: inline-grid;
+        grid-template-columns: auto 1fr auto;
+        column-gap: 3rem;
+        align-items: baseline;
+    }
+
+    &__description,
+    &__element,
+    &__font-size {
+        margin: @ffe-spacing-xs 0;
+        padding: 0;
+
+        @media (min-width: @breakpoint-md) {
+            margin: @ffe-spacing-sm 0;
+        }
+    }
+
+    &__example {
+        margin: 0;
+
+        &--h1 {
+            font-family: 'SpareBank1-title-medium';
+            font-size: 46px;
+
+            .sb1ds-typography-hierarchy--mobile & {
+                font-size: 28px;
+            }
+        }
+
+        &--h2 {
+            font-family: 'SpareBank1-title-medium';
+            font-size: 36px;
+
+            .sb1ds-typography-hierarchy--mobile & {
+                font-size: 24px;
+            }
+        }
+
+        &--h3 {
+            font-family: 'SpareBank1-title-medium';
+            font-size: 28px;
+
+            .sb1ds-typography-hierarchy--mobile & {
+                font-size: 20px;
+            }
+        }
+
+        &--h4 {
+            font-family: 'SpareBank1-title-medium';
+            font-size: 22px;
+
+            .sb1ds-typography-hierarchy--mobile & {
+                font-size: 18px;
+            }
+        }
+
+        &--h5 {
+            font-family: 'SpareBank1-title-medium';
+            font-size: 18px;
+
+            .sb1ds-typography-hierarchy--mobile & {
+                font-size: 17px;
+            }
+        }
+
+        &--h6 {
+            font-family: 'SpareBank1-title-medium';
+            font-size: 16px;
+
+            .sb1ds-typography-hierarchy--mobile & {
+                font-size: 16px;
+            }
+        }
+
+        &--lead {
+            font-family: 'SpareBank1-regular';
+            font-size: 24px;
+
+            .sb1ds-typography-hierarchy--mobile & {
+                font-size: 18px;
+            }
+        }
+
+        &--sub-lead {
+            font-family: 'SpareBank1-regular';
+            font-size: 18px;
+
+            .sb1ds-typography-hierarchy--mobile & {
+                font-size: 17px;
+            }
+        }
+
+        &--body-text {
+            font-family: 'SpareBank1-regular';
+            font-size: 16px;
+
+            .sb1ds-typography-hierarchy--mobile & {
+                font-size: 16px;
+            }
+        }
+
+        &--strong-text {
+            font-family: 'SpareBank1-medium';
+            font-size: 16px;
+
+            .sb1ds-typography-hierarchy--mobile & {
+                font-size: 16px;
+            }
+        }
+
+        &--small-text {
+            font-family: 'SpareBank1-regular';
+            font-size: 14px;
+
+            .sb1ds-typography-hierarchy--mobile & {
+                font-size: 14px;
+            }
+        }
+
+        &--micro-text {
+            font-family: 'SpareBank1-regular';
+            font-size: 12px;
+
+            .sb1ds-typography-hierarchy--mobile & {
+                font-size: 12px;
+            }
+        }
+    }
+
+    &__font-size {
+        color: @ffe-farge-fjell;
+
+        @media (max-width: (@breakpoint-md - 1)) {
+            margin-bottom: @ffe-spacing-md;
+        }
+    }
+}
