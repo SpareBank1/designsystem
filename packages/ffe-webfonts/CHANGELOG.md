@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-webfonts@2.2.1...@sb1/ffe-webfonts@3.0.0) (2021-02-22)
+
+
+### Bug Fixes
+
+* **ffe-webfonts:** fjerner fonter som ikke skal brukes ([e22fb2b](https://github.com/SpareBank1/designsystem/commit/e22fb2b6313bb49b779236efe4164669b0e13bf7))
+
+
+### BREAKING CHANGES
+
+* **ffe-webfonts:** fjerner fonter som ikke skal brukes på web for å redusere filstørrelse og lastetid
+
+
+
+
+
 ## [2.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-webfonts@2.2.0...@sb1/ffe-webfonts@2.2.1) (2021-02-19)
 
 
