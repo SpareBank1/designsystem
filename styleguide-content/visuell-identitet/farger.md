@@ -1,848 +1,513 @@
-<div class="ffe-tab-button-group" role="group">
-    <button class="ffe-tab-button sb1ds-color-toggle ffe-tab-button--selected" id="sb1ds-color-overview">Oversikt</button>
-    <button class="ffe-tab-button sb1ds-color-toggle" id="sb1ds-color-usage">Bruksområder</button>
-</div>
+Fargepaletten er justert for å varme opp SpareBank 1s uttrykk og tydeligere fremstå som banken for det lune segmentet. En rik fargepalett gir rom for lokale variasjoner, samt at primærpaletten sørger for et enhetlig etterlatt uttrykk.
 
-<div class="sb1ds-color-overview sb1ds-color-section sb1ds-color-section--active">
-    <p class="ffe-lead-paragraph">
-        Det er utviklet en egen fargepalett for det digitale rammeverket. Fargepaletten er basert på SpareBank 1 sin visuelle identitet og skal være med på å bidra til en konsistent opplevelse på tvers av alle digitale flater.
-    </p>
-    <h4 class="ffe-h4">Hovedfarger</h4>
-    <p>
-        En blå signatur skal være gjennomgående i vår visuelle profil og er en sterk bærer av SpareBank 1 sin visuelle identitet. Blåfargene balanseres med et lysere uttrykk for at løsningene skal være intuitive for brukeren.
-    </p>
-    <ul class="sb1ds-color-palette">
-        <li class="sb1ds-color-palette__item sb1ds-color-palette__item--ffe-blue-royal">
-            <div>Royal blå</div>
-            <div>#002776<br/>@ffe-blue-royal</div>
-        </li>
-        <li class="sb1ds-color-palette__item sb1ds-color-palette__item--ffe-blue-cobalt">
-            <div>Hovedblå</div>
-            <div>#005AA4<br/>@ffe-blue-cobalt</div>
-        </li>
-    </ul>
-    <h4 class="ffe-h4">Støttefarger</h4>
-    <p>
-        Sekundærpalettene består av varme komplementærfarger og skal benyttes for å gi varme til et uttrykk, fange noens oppmerksomhet eller motivere. Være forsiktig når du bruker støttefargene, husk at blå alltid spiller hovedrollen!
-    </p>
-    <h5 class="ffe-h5">Støttefarger GUI</h5>
-    <ul class="sb1ds-color-palette">
-        <li class="sb1ds-color-palette__item sb1ds-color-palette__item--ffe-blue-azure">
-            <div>Mellomblå</div>
-            <div>#0071CD<br/>@ffe-blue-azure</div>
-        </li>
-        <li class="sb1ds-color-palette__item sb1ds-color-palette__item--ffe-blue-focus">
-            <div>Fokusblå</div>
-            <div>#A1DFFF<br/>@ffe-blue-focus</div>
-        </li>
-        <li class="sb1ds-color-palette__item sb1ds-color-palette__item--ffe-green-shamrock">
-            <div>Grønn WCAG</div>
-            <div>#008A00<br/>@ffe-green-shamrock</div>
-        </li>
-        <li class="sb1ds-color-palette__item sb1ds-color-palette__item--ffe-green-emerald">
-            <div>Grønn Hover</div>
-            <div>#007B00<br/>@ffe-green-emerald</div>
-        </li>
-        <li class="sb1ds-color-palette__item sb1ds-color-palette__item--ffe-purple-violet">
-            <div>Fiolett besøkte lenker</div>
-            <div>#551A8B<br/>@ffe-purple-violet</div>
-        </li>
-    </ul>
-    <h4 class="ffe-h5">Støttefarger visuell identitet</h5>
-    <ul class="sb1ds-color-palette">
-        <li class="sb1ds-color-palette__item sb1ds-color-palette__item--ffe-purple">
-            <div>Lilla</div>
-            <div>#C94096<br/>@ffe-purple</div>
-        </li>
-        <li class="sb1ds-color-palette__item sb1ds-color-palette__item--ffe-purple-magenta">
-            <div>Lilla WCAG</div>
-            <div>#A20076<br/>@ffe-purple-magenta</div>
-        </li>
-        <li class="sb1ds-color-palette__item sb1ds-color-palette__item--ffe-orange">
-            <div>Oransje</div>
-            <div>#FF9100<br/>@ffe-orange</div>
-        </li>
-        <li class="sb1ds-color-palette__item sb1ds-color-palette__item--ffe-orange-fire">
-            <div>Oransje WCAG</div>
-            <div>#DA3D00<br/>@ffe-orange-fire</div>
-        </li>
-        <li class="sb1ds-color-palette__item sb1ds-color-palette__item--ffe-green">
-            <div>Grønn</div>
-            <div>#37B441<br/>@ffe-green</div>
-        </li>
-    </ul>
-    <h4 class="ffe-h4">Bakgrunnsfarger</h4>
-    <p>
-        Hovedbakgrunnsfargen i rammeverket til SpareBank 1 er hvit. Den subtile tertiærpaletten benyttes til differensiering og gruppering av innhold. Spekteret imellom kan benyttes for å gi en komplett og fleksibel palett for digitale flater.
-    </p>
-    <h5 class="ffe-h5">Bakgrunnsfarger GUI</h5>
-    <ul class="sb1ds-color-palette">
-        <li class="sb1ds-color-palette__item sb1ds-color-palette__item--ffe-white">
-            <div>Hvit</div>
-            <div>#FFFFFF<br/>@ffe-white</div>
-        </li>
-        <li class="sb1ds-color-palette__item sb1ds-color-palette__item--ffe-grey-warm">
-            <div>Lys varm grå</div>
-            <div>#F6F6F3<br/>@ffe-grey-warm</div>
-        </li>
-        <li class="sb1ds-color-palette__item sb1ds-color-palette__item--ffe-sand">
-            <div>Sand</div>
-            <div>#F8F5EB<br/>@ffe-sand</div>
-        </li>
-        <li class="sb1ds-color-palette__item sb1ds-color-palette__item--ffe-green-mint">
-            <div>Lys grønn</div>
-            <div>#E1F4E3<br/>@ffe-green-mint</div>
-        </li>
-        <li class="sb1ds-color-palette__item sb1ds-color-palette__item--ffe-blue-pale">
-            <div>Lys blå</div>
-            <div>#DFF1F9<br/>@ffe-blue-pale</div>
-        </li>
-        <li class="sb1ds-color-palette__item sb1ds-color-palette__item--ffe-orange-salmon">
-            <div>Lys oransje</div>
-            <div>#F3BBAA<br/>@ffe-orange-salmon</div>
-        </li>
-        <li class="sb1ds-color-palette__item sb1ds-color-palette__item--ffe-red">
-            <div>Rød</div>
-            <div>#E60000<br/>@ffe-red</div>
-        </li>
-    </ul>
-    <h5 class="ffe-h5">Bakgrunnsfarger tabeller</h5>
-    <ul class="sb1ds-color-palette">
-        <li class="sb1ds-color-palette__item sb1ds-color-palette__item--ffe-blue-sky">
-            <div>Himmelblå (Accordion)</div>
-            <div>#7FC6E8<br/>@ffe-blue-sky</div>
-        </li>
-        <li class="sb1ds-color-palette__item sb1ds-color-palette__item--ffe-blue-pale">
-            <div>Lys blå (Hover/markering)</div>
-            <div>#DFF1F9<br/>@ffe-blue-pale</div>
-        </li>
-        <li class="sb1ds-color-palette__item sb1ds-color-palette__item--ffe-blue-ice">
-            <div>Isblå (Hover)</div>
-            <div>#EFF8FC<br/>@ffe-blue-ice</div>
-        </li>
-    </ul>
-    <h4 class="ffe-h4">Nøytrale farger</h4>
-    <ul class="sb1ds-color-palette">
-        <li class="sb1ds-color-palette__item sb1ds-color-palette__item--ffe-black">
-            <div>Sort</div>
-            <div>#262626<br/>@ffe-black</div>
-        </li>
-        <li class="sb1ds-color-palette__item sb1ds-color-palette__item--ffe-grey-charcoal">
-            <div>Koksgrå</div>
-            <div>#676767<br/>@ffe-grey-charcoal</div>
-        </li>
-        <li class="sb1ds-color-palette__item sb1ds-color-palette__item--ffe-grey">
-            <div>Grå</div>
-            <div>#ADADAD<br/>@ffe-grey</div>
-        </li>
-        <li class="sb1ds-color-palette__item sb1ds-color-palette__item--ffe-grey-silver">
-            <div>Sølvgrå</div>
-            <div>#CCCCCC<br/>@ffe-grey-silver</div>
-        </li>
-        <li class="sb1ds-color-palette__item sb1ds-color-palette__item--ffe-grey-cloud">
-            <div>Skygrå</div>
-            <div>#F4F4F4<br/>@ffe-grey-cloud</div>
-        </li>
-        <li class="sb1ds-color-palette__item sb1ds-color-palette__item--ffe-white">
-            <div>Hvit</div>
-            <div>#FFFFFF<br/>@ffe-white</div>
-        </li>
-    </ul>
-    <h4 class="ffe-h4">Mørk modus</h4>
-    <ul class="sb1ds-color-palette">
-        <li class="sb1ds-color-palette__item sb1ds-color-palette__item--ffe-blue-azure-darkmode">
-            <div>Hovedblå</div>
-            <div>#0A91FF<br/>@ffe-blue-azure-darkmode</div>
-        </li>
-        <li class="sb1ds-color-palette__item sb1ds-color-palette__item--ffe-black-darkmode">
-            <div>Sort</div>
-            <div>#000000<br/>@ffe-black-darkmode</div>
-        </li>
-        <li class="sb1ds-color-palette__item sb1ds-color-palette__item--ffe-grey-charcoal-darkmode">
-            <div>Koksgrå</div>
-            <div>#1C1C1C<br/>@ffe-grey-charcoal-darkmode</div>
-        </li>
-        <li class="sb1ds-color-palette__item sb1ds-color-palette__item--ffe-grey-darkmode">
-            <div>Grå</div>
-            <div>#292929<br/>@ffe-grey-darkmode</div>
-        </li>
-        <li class="sb1ds-color-palette__item sb1ds-color-palette__item--ffe-grey-silver-darkmode">
-            <div>Sølvgrå</div>
-            <div>#858585<br/>@ffe-grey-silver-darkmode</div>
-        </li>
-        <li class="sb1ds-color-palette__item sb1ds-color-palette__item--ffe-grey-cloud-darkmode">
-            <div>Skygrå</div>
-            <div>#CCCCCC<br/>@ffe-grey-cloud-darkmode</div>
-        </li>
-        <li class="sb1ds-color-palette__item sb1ds-color-palette__item--ffe-white-darkmode">
-            <div>Hvit</div>
-            <div>#FFFFFF<br/>@ffe-white-darkmode</div>
-        </li>
-        <li class="sb1ds-color-palette__item sb1ds-color-palette__item--ffe-red-darkmode">
-            <div>Rød</div>
-            <div>#FF2424<br/>@ffe-red-darkmode</div>
-        </li>
-    </ul>
-<!-- ### Deprecated
-<ul class="sb1ds-color-palette">
-    <li class="sb1ds-color-palette__item sb1ds-color-palette__item--ffe-blue-deep-sky">
-        <div>Dyp himmelblå</div>
-        <div>#008ED2<br/>@ffe-blue-deep-sky</div>
-    </li>
-    <li class="sb1ds-color-palette__item sb1ds-color-palette__item--ffe-sand-ivory">
-        <div>Sand Ivory</div>
-        <div>#FBFAF5<br/>@ffe-sand-ivory</div>
-    </li>
-</ul> -->
-</div>
+### Primærpalett
 
-<div class="sb1ds-color-usage sb1ds-color-section">
-    <h3 class="ffe-h3">Lys modus</h4>
-    <h4 class="ffe-h4">Vekting</h4>
-    <div class="sb1ds-color-usage__illustration light-mode">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 368">
-            <g fill="none" fill-rule="evenodd">
-                <path fill="#005AA4" d="M0 124h248.085368v120H0z"/>
-                <path fill="#F4F2EA" d="M0 248h290v120H0z"/>
-                <path fill="#DFF1F9" d="M0 0h130v120H0z"/>
-                <path fill="#E1F4E3" d="M134 0h55v120h-55z"/>
-                <path fill="#F8D7CC" d="M193 0h55v120h-55z"/>
-                <path fill="#F4F4F4" d="M252 0h55v120h-55z"/>
-                <path fill="#FFF" stroke="#CCC" d="M294.5 248.5h325v119h-325z"/>
-                <path fill="#002776" d="M252 124h120v120H252z"/>
-                <path fill="#0071CD" d="M376 124h84v120h-84z"/>
-                <path fill="#008A00" d="M464 124h34v120h-34z"/>
-                <path fill="#DA3D00" d="M502 124h30v120h-30z"/>
-                <path fill="#FF9100" d="M536 124h30v120h-30z"/>
-                <path fill="#C94096" d="M570 124h30v120h-30z"/>
-                <path fill="#000" d="M604 124h16v120h-16z"/>
-            </g>
-        </svg>
-    </div>
-    <h4 class="ffe-h4">Bruksområder</h4>
-    <table class="ffe-table sb1ds-color-usage__table">
-        <tr class="ffe-table__row">
-            <th class="ffe-table__heading" scope="col">Farge</th>
-            <th class="ffe-table__heading" scope="col">Bruksområde</th>
-            <th class="ffe-table__heading" scope="col" colspan="2">Verdi</th>
-        </tr>
-        <tr class="ffe-table__row">
-            <td class="ffe-table__cell">Royal blå</td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li class="ffe-strong-text">Hovedfarge</li>
-                    <li>Overskrifter</li>
-                    <li>Ikonfarge</li>
-                    <li>Valgte/aktive states</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li>#002776</li>
-                    <li>@ffe-blue-royal</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <span class="sb1ds-color-usage__example sb1ds-color-usage__example--ffe-blue-royal"></span>
-            </td>
-        </tr>
-        <tr class="ffe-table__row">
-            <td class="ffe-table__cell">Hovedblå</td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li class="ffe-strong-text">Hovedfarge</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li>#005AA4</li>
-                    <li>@ffe-blue-cobalt</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <span class="sb1ds-color-usage__example sb1ds-color-usage__example--ffe-blue-cobalt"></span>
-            </td>
-        </tr>
-        <tr class="ffe-table__row">
-            <td class="ffe-table__cell">Mellomblå</td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li class="ffe-strong-text">Støttefarge</li>
-                    <li>Bakgrunnsfarge</li>
-                    <li>Hover state</li>
-                    <li>Lenkefarge</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li>#0071CD</li>
-                    <li>@ffe-blue-azure</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <span class="sb1ds-color-usage__example sb1ds-color-usage__example--ffe-blue-azure"></span>
-            </td>
-        </tr>
-        <tr class="ffe-table__row">
-            <td class="ffe-table__cell">Fokusblå</td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li class="ffe-strong-text">Støttefarge</li>
-                    <li>Fokus state, knapper og skjemafelter</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li>#A1DFFF</li>
-                    <li>@ffe-blue-focus</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <span class="sb1ds-color-usage__example sb1ds-color-usage__example--ffe-blue-focus"></span>
-            </td>
-        </tr>
-        <tr class="ffe-table__row">
-            <td class="ffe-table__cell">Grønn WCAG</td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li class="ffe-strong-text">Støttefarge</li>
-                    <li>Utførende handlingsfarge (CTA)</li>
-                    <li>Suksessfarge</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li>#008A00</li>
-                    <li>@ffe-green-shamrock</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <span class="sb1ds-color-usage__example sb1ds-color-usage__example--ffe-green-shamrock"></span>
-            </td>
-        </tr>
-        <tr class="ffe-table__row">
-            <td class="ffe-table__cell">Grønn Hover</td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li class="ffe-strong-text">Støttefarge</li>
-                    <li>Hover state av utførende handlingsfarge</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li>#007B00</li>
-                    <li>@ffe-green-emerald</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <span class="sb1ds-color-usage__example sb1ds-color-usage__example--ffe-green-emerald"></span>
-            </td>
-        </tr>
-        <tr class="ffe-table__row">
-            <td class="ffe-table__cell">Lilla</td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li class="ffe-strong-text">Støttefarge</li>
-                    <li>Illustrasjoner</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li>#C94096</li>
-                    <li>@ffe-purple</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <span class="sb1ds-color-usage__example sb1ds-color-usage__example--ffe-purple"></span>
-            </td>
-        </tr>
-        <tr class="ffe-table__row">
-            <td class="ffe-table__cell">Lilla WCAG</td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li class="ffe-strong-text">Støttefarge</li>
-                    <li>Bakgrunnsfarge</li>
-                    <li>Fremheving av designelementer</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li>#A20076</li>
-                    <li>@ffe-purple-magenta</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <span class="sb1ds-color-usage__example sb1ds-color-usage__example--ffe-purple-magenta"></span>
-            </td>
-        </tr>
-        <tr class="ffe-table__row">
-            <td class="ffe-table__cell">Oransje</td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li class="ffe-strong-text">Støttefarge</li>
-                    <li>Illustrasjoner</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li>#FF9100</li>
-                    <li>@ffe-orange</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <span class="sb1ds-color-usage__example sb1ds-color-usage__example--ffe-orange"></span>
-            </td>
-        </tr>
-        <tr class="ffe-table__row">
-            <td class="ffe-table__cell">Oransje WCAG</td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li class="ffe-strong-text">Støttefarge</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li>#DA3D00</li>
-                    <li>@ffe-orange-fire</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <span class="sb1ds-color-usage__example sb1ds-color-usage__example--ffe-orange-fire"></span>
-            </td>
-        </tr>
-        <tr class="ffe-table__row">
-            <td class="ffe-table__cell">Grønn</td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li class="ffe-strong-text">Støttefarge</li>
-                    <li>Illustrasjoner</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li>#37B441</li>
-                    <li>@ffe-green</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <span class="sb1ds-color-usage__example sb1ds-color-usage__example--ffe-green"></span>
-            </td>
-        </tr>
-        <tr class="ffe-table__row">
-            <td class="ffe-table__cell">Hvit</td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li class="ffe-strong-text">Tekst/bakgrunn</li>
-                    <li>Hovedbakgrunnsfarge</li>
-                    <li>Produktkort</li>
-                    <li>Klikkbare kort</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li>#FFFFFF</li>
-                    <li>@ffe-white</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <span class="sb1ds-color-usage__example sb1ds-color-usage__example--ffe-white"></span>
-            </td>
-        </tr>
-        <tr class="ffe-table__row">
-            <td class="ffe-table__cell">Lys varm grå</td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li class="ffe-strong-text">Bakgrunnsfarge</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li>#F6F6F3</li>
-                    <li>@ffe-grey-warm</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <span class="sb1ds-color-usage__example sb1ds-color-usage__example--ffe-grey-warm"></span>
-            </td>
-        </tr>
-        <tr class="ffe-table__row">
-            <td class="ffe-table__cell">Sand</td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li class="ffe-strong-text">Bakgrunnsfarge</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li>#F8F5EB</li>
-                    <li>@ffe-sand</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <span class="sb1ds-color-usage__example sb1ds-color-usage__example--ffe-sand"></span>
-            </td>
-        </tr>
-        <tr class="ffe-table__row">
-            <td class="ffe-table__cell">Lys grønn</td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li class="ffe-strong-text">Bakgrunnsfarge</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li>#E1F4E3</li>
-                    <li>@ffe-green-mint</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <span class="sb1ds-color-usage__example sb1ds-color-usage__example--ffe-green-mint"></span>
-            </td>
-        </tr>
-        <tr class="ffe-table__row">
-            <td class="ffe-table__cell">Lys blå</td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li class="ffe-strong-text">Bakgrunnsfarge</li>
-                    <li>Tabeller - hover/markering</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li>#DFF1F9</li>
-                    <li>@ffe-blue-pale</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <span class="sb1ds-color-usage__example sb1ds-color-usage__example--ffe-blue-pale"></span>
-            </td>
-        </tr>
-        <tr class="ffe-table__row">
-            <td class="ffe-table__cell">Lys oransje</td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li class="ffe-strong-text">Bakgrunnsfarge</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li>#F3BBAA</li>
-                    <li>@ffe-orange-salmon</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <span class="sb1ds-color-usage__example sb1ds-color-usage__example--ffe-orange-salmon"></span>
-            </td>
-        </tr>
-        <tr class="ffe-table__row">
-            <td class="ffe-table__cell">Rød</td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li class="ffe-strong-text">Bakgrunnsfarge</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li>#E60000</li>
-                    <li>@ffe-red</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <span class="sb1ds-color-usage__example sb1ds-color-usage__example--ffe-red"></span>
-            </td>
-        </tr>
-        <tr class="ffe-table__row">
-            <td class="ffe-table__cell">Himmelblå</td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li class="ffe-strong-text">Bakgrunnsfarge</li>
-                    <li>Tabeller</li>
-                    <li>Accordion</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li>#7FC6E8</li>
-                    <li>@ffe-blue-sky</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <span class="sb1ds-color-usage__example sb1ds-color-usage__example--ffe-blue-sky"></span>
-            </td>
-        </tr>
-        <tr class="ffe-table__row">
-            <td class="ffe-table__cell">Isblå</td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li class="ffe-strong-text">Bakgrunnsfarge</li>
-                    <li>Tabeller - Hover</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li>#EFF8FC</li>
-                    <li>@ffe-blue-ice</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <span class="sb1ds-color-usage__example sb1ds-color-usage__example--ffe-blue-ice"></span>
-            </td>
-        </tr>
-        <tr class="ffe-table__row">
-            <td class="ffe-table__cell">Sort</td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li class="ffe-strong-text">Tekst</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li>#262626</li>
-                    <li>@ffe-black</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <span class="sb1ds-color-usage__example sb1ds-color-usage__example--ffe-black"></span>
-            </td>
-        </tr>
-        <tr class="ffe-table__row">
-            <td class="ffe-table__cell">Koksgrå</td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li class="ffe-strong-text">Tekst</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li>#676767</li>
-                    <li>@ffe-grey-charcoal</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <span class="sb1ds-color-usage__example sb1ds-color-usage__example--ffe-grey-charcoal"></span>
-            </td>
-        </tr>
-        <tr class="ffe-table__row">
-            <td class="ffe-table__cell">Grå</td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li class="ffe-strong-text">Tekst</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li>#ADADAD</li>
-                    <li>@ffe-grey</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <span class="sb1ds-color-usage__example sb1ds-color-usage__example--ffe-grey"></span>
-            </td>
-        </tr>
-        <tr class="ffe-table__row">
-            <td class="ffe-table__cell">Sølvgrå</td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li class="ffe-strong-text">Tekst</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li>#CCCCCC</li>
-                    <li>@ffe-grey-silver</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <span class="sb1ds-color-usage__example sb1ds-color-usage__example--ffe-grey-silver"></span>
-            </td>
-        </tr>
-        <tr class="ffe-table__row">
-            <td class="ffe-table__cell">Skygrå</td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li class="ffe-strong-text">Tekst</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li>#F4F4F4</li>
-                    <li>@ffe-grey-cloud</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <span class="sb1ds-color-usage__example sb1ds-color-usage__example--ffe-grey-cloud"></span>
-            </td>
-        </tr>
-    </table>
-    <h3 class="ffe-h3">Mørk modus</h4>
-    <h4 class="ffe-h4">Vekting</h4>
-    <div class="sb1ds-color-usage__illustration dark-mode">
-        <svg viewBox="0 0 600 117" xmlns="http://www.w3.org/2000/svg">
-            <g>
-                <rect width="280.11" height="116.13" fill="black"/>
-                <rect x="284.106" width="129.11" height="116.13" fill="#1C1C1C"/>
-                <rect x="417.219" width="57.59" height="116.13" fill="#292929"/>
-                <rect x="478.808" width="35.74" height="116.13" fill="#858585"/>
-                <rect x="518.543" width="36.73" height="116.13" fill="#CCCCCC"/>
-                <rect x="559.772" y="0.5" width="23.81" height="115.13" fill="white" stroke="#CCCCCC"/>
-                <rect x="588.079" width="5.93" height="116.13" fill="#0A91FF"/>
-                <rect x="598.013" width="1.98676" height="116.13" fill="#FF2424"/>
-            </g>
-        </svg>
-    </div>
-    <h4 class="ffe-h4">Bruksområder</h4>
-    <table class="ffe-table sb1ds-color-usage__table">
-        <tr class="ffe-table__row">
-            <th class="ffe-table__heading" scope="col">Farge</th>
-            <th class="ffe-table__heading" scope="col">Bruksområde</th>
-            <th class="ffe-table__heading" scope="col" colspan="2">Verdi</th>
-        </tr>
-        <tr class="ffe-table__row">
-            <td class="ffe-table__cell">Hovedblå</td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li class="ffe-strong-text">Utførende handlingsfarge (CTA)</li>
-                    <li>Knapper, lenker</li>
-                    <li>Ikoner</li>
-                    <li>Suksessfarge</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li>#0A91FF</li>
-                    <li>@ffe-blue-azure-darkmode</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <span class="sb1ds-color-usage__example sb1ds-color-usage__example--ffe-blue-azure-darkmode"></span>
-            </td>
-        </tr>
-        <tr class="ffe-table__row">
-            <td class="ffe-table__cell">Sort</td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li class="ffe-strong-text">Bakgrunnsfarge</li>
-                    <li>Hovedbakgrunnsfarge</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li>#000000</li>
-                    <li>@ffe-black-darkmode</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <span class="sb1ds-color-usage__example sb1ds-color-usage__example--ffe-black-darkmode"></span>
-            </td>
-        </tr>
-        <tr class="ffe-table__row">
-            <td class="ffe-table__cell">Koksgrå</td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li class="ffe-strong-text">Bakgrunnsfarge</li>
-                    <li>Fremhevede flater</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li>#1C1C1C</li>
-                    <li>@ffe-grey-charcoal-darkmode</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <span class="sb1ds-color-usage__example sb1ds-color-usage__example--ffe-grey-charcoal-darkmode"></span>
-            </td>
-        </tr>
-        <tr class="ffe-table__row">
-            <td class="ffe-table__cell">Grå</td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li class="ffe-strong-text">Bakgrunnsfarge</li>
-                    <li>Interaksjonsflater</li>
-                    <li>Fremhevede flater</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li>#292929</li>
-                    <li>@ffe-grey-darkmode</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <span class="sb1ds-color-usage__example sb1ds-color-usage__example--ffe-grey-darkmode"></span>
-            </td>
-        </tr>
-        <tr class="ffe-table__row">
-            <td class="ffe-table__cell">Sølvgrå</td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li class="ffe-strong-text">Støttefarge</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li>#858585</li>
-                    <li>@ffe-grey-silver-darkmode</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <span class="sb1ds-color-usage__example sb1ds-color-usage__example--ffe-grey-silver-darkmode"></span>
-            </td>
-        </tr>
-        <tr class="ffe-table__row">
-            <td class="ffe-table__cell">Skygrå</td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li class="ffe-strong-text">Tekstfarge</li>
-                    <li>Hovedfarge for tekst</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li>#CCCCCC</li>
-                    <li>@ffe-grey-cloud-darkmode</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <span class="sb1ds-color-usage__example sb1ds-color-usage__example--ffe-grey-cloud-darkmode"></span>
-            </td>
-        </tr>
-        <tr class="ffe-table__row">
-            <td class="ffe-table__cell">Hvit</td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li class="ffe-strong-text">Støttefarge</li>
-                    <li>Overskrifter</li>
-                    <li>Fremhevet tekst</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li>#FFFFFF</li>
-                    <li>@ffe-white-darkmode</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <span class="sb1ds-color-usage__example sb1ds-color-usage__example--ffe-white-darkmode"></span>
-            </td>
-        </tr>
-        <tr class="ffe-table__row">
-            <td class="ffe-table__cell">Rød</td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li class="ffe-strong-text">Støttefarge</li>
-                    <li>Feilmeldingsfarge</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <ul class="sb1ds-color-usage__list">
-                    <li>#FF2424</li>
-                    <li>@ffe-red-darkmode</li>
-                </ul>
-            </td>
-            <td class="ffe-table__cell">
-                <span class="sb1ds-color-usage__example sb1ds-color-usage__example--ffe-red-darkmode"></span>
-            </td>
-        </tr>
-    </table>
-</div>
+SpareBank 1 er den lune blå banken. Vi beholder blått som våre hovedfarger og har utviklet støttefarger som varmer opp det blå uttrykket i primærpaletten. Fargene i paletten er naturlige og basert på farger vi finner i norske landskap.
+
+Primærpaletten består av fargene
+
+-   Vann
+-   Fjell
+-   Sand
+-   Frost
+-   Syrin
+
+Fargene i paletten kan også brukes i valører (prosentvis) i 70% eller 30% av solid farge, som vist i fargeplakatene under.
+
+<ul class="sb1ds-color-palette sb1ds-color-palette--primary">
+    <li class="sb1ds-color-palette__item">
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--vann">
+            <h4 class="sb1ds-color-palette__color-name">Vann</h4>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-vann</dd>
+                <dt>HEX:</dt>
+                <dd>#005AA4</dd>
+                <dt>RGB:</dt>
+                <dd>0, 90, 164</dd>
+            </dl>
+        </div>
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--vann-70">
+            <h5 class="sb1ds-color-palette__color-tint-name">70%</h5>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-vann-70</dd>
+            </dl>
+        </div>
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--vann-30">
+            <h5 class="sb1ds-color-palette__color-tint-name">30%</h5>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-vann-30</dd>
+            </dl>
+        </div>
+    </li>
+    <li class="sb1ds-color-palette__item">
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--fjell">
+            <h4 class="sb1ds-color-palette__color-name">Fjell</h4>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-fjell</dd>
+                <dt>HEX:</dt>
+                <dd>#002776</dd>
+                <dt>RGB:</dt>
+                <dd>0, 39, 118</dd>
+            </dl>
+        </div>
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--fjell-70">
+            <h5 class="sb1ds-color-palette__color-tint-name">70%</h5>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-fjell-70</dd>
+            </dl>
+        </div>
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--fjell-30">
+            <h5 class="sb1ds-color-palette__color-tint-name">30%</h5>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-fjell-30</dd>
+            </dl>
+        </div>
+    </li>
+    <li class="sb1ds-color-palette__item">
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--frost">
+            <h4 class="sb1ds-color-palette__color-name">Frost</h4>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-frost</dd>
+                <dt>HEX:</dt>
+                <dd>#7EB5D2</dd>
+                <dt>RGB:</dt>
+                <dd>126, 181, 210</dd>
+            </dl>
+        </div>
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--frost-70">
+            <h5 class="sb1ds-color-palette__color-tint-name">70%</h5>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-frost-70</dd>
+            </dl>
+        </div>
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--frost-30">
+            <h5 class="sb1ds-color-palette__color-tint-name">30%</h5>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-frost-30</dd>
+            </dl>
+        </div>
+    </li>
+    <li class="sb1ds-color-palette__item">
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--sand">
+            <h4 class="sb1ds-color-palette__color-name">Sand</h4>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-sand</dd>
+                <dt>HEX:</dt>
+                <dd>#F8E9DD</dd>
+                <dt>RGB:</dt>
+                <dd>248, 233, 221</dd>
+            </dl>
+        </div>
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--sand-70">
+            <h5 class="sb1ds-color-palette__color-tint-name">70%</h5>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-sand-70</dd>
+            </dl>
+        </div>
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--sand-30">
+            <h5 class="sb1ds-color-palette__color-tint-name">30%</h5>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-sand-30</dd>
+            </dl>
+        </div>
+    </li>
+    <li class="sb1ds-color-palette__item">
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--syrin">
+            <h4 class="sb1ds-color-palette__color-name">Syrin</h4>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-syrin</dd>
+                <dt>HEX:</dt>
+                <dd>#D3D3EA</dd>
+                <dt>RGB:</dt>
+                <dd>211, 211, 234</dd>
+            </dl>
+        </div>
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--syrin-70">
+            <h5 class="sb1ds-color-palette__color-tint-name">70%</h5>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-syrin-70</dd>
+            </dl>
+        </div>
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--syrin-30">
+            <h5 class="sb1ds-color-palette__color-tint-name">30%</h5>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-syrin-30</dd>
+            </dl>
+        </div>
+    </li>
+</ul>
+
+### Støttefarger
+
+Støttefargene til SpareBank 1 består av rødtoner som er gjenkjennelige fra logoen og som skal bidra til å varme opp den blå primærpaletten. I tillegg består den av grønne og gule toner hentet fra naturen, disse er utviklet for å tilføre varme og naturlige toner, i blant annet illustrasjon og infografikk. Støttefargene kan brukes ved behov for å tilføre lokalt særpreg og bedre reflektere de ulike lokalsamfunnene.
+
+<ul class="sb1ds-color-palette sb1ds-color-palette--secondary">
+    <li class="sb1ds-color-palette__item">
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--myrull">
+            <h4 class="sb1ds-color-palette__color-name">Myrull</h4>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-myrull</dd>
+                <dt>HEX:</dt>
+                <dd>#FAE4E0</dd>
+                <dt>RGB:</dt>
+                <dd>250, 228, 224</dd>
+            </dl>
+        </div>
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--myrull-70">
+            <h5 class="sb1ds-color-palette__color-tint-name">70%</h5>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-myrull-70</dd>
+            </dl>
+        </div>
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--myrull-30">
+            <h5 class="sb1ds-color-palette__color-tint-name">30%</h5>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-myrull-30</dd>
+            </dl>
+        </div>
+    </li>
+    <li class="sb1ds-color-palette__item">
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--villblomst">
+            <h4 class="sb1ds-color-palette__color-name">Villblomst</h4>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-villblomst</dd>
+                <dt>HEX:</dt>
+                <dd>#EE8D9C</dd>
+                <dt>RGB:</dt>
+                <dd>238, 141, 156</dd>
+            </dl>
+        </div>
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--villblomst-70">
+            <h5 class="sb1ds-color-palette__color-tint-name">70%</h5>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-villblomst-70</dd>
+            </dl>
+        </div>
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--villblomst-30">
+            <h5 class="sb1ds-color-palette__color-tint-name">30%</h5>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-villblomst-30</dd>
+            </dl>
+        </div>
+    </li>
+    <li class="sb1ds-color-palette__item">
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--nordlys">
+            <h4 class="sb1ds-color-palette__color-name">Nordlys</h4>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-nordlys</dd>
+                <dt>HEX:</dt>
+                <dd>#33AF85</dd>
+                <dt>RGB:</dt>
+                <dd>51, 175, 133</dd>
+            </dl>
+        </div>
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--nordlys-70">
+            <h5 class="sb1ds-color-palette__color-tint-name">70%</h5>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-nordlys-70</dd>
+            </dl>
+        </div>
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--nordlys-30">
+            <h5 class="sb1ds-color-palette__color-tint-name">30%</h5>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-nordlys-30</dd>
+            </dl>
+        </div>
+    </li>
+    <li class="sb1ds-color-palette__item">
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--lyng">
+            <h4 class="sb1ds-color-palette__color-name">Lyng</h4>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-lyng</dd>
+                <dt>HEX:</dt>
+                <dd>#873953</dd>
+                <dt>RGB:</dt>
+                <dd>135, 57, 83</dd>
+            </dl>
+        </div>
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--lyng-70">
+            <h5 class="sb1ds-color-palette__color-tint-name">70%</h5>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-lyng-70</dd>
+            </dl>
+        </div>
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--lyng-30">
+            <h5 class="sb1ds-color-palette__color-tint-name">30%</h5>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-lyng-30</dd>
+            </dl>
+        </div>
+    </li>
+    <li class="sb1ds-color-palette__item">
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--baer">
+            <h4 class="sb1ds-color-palette__color-name">Bær</h4>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-baer</dd>
+                <dt>HEX:</dt>
+                <dd>#E44244</dd>
+                <dt>RGB:</dt>
+                <dd>228, 66, 68</dd>
+            </dl>
+        </div>
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--baer-70">
+            <h5 class="sb1ds-color-palette__color-tint-name">70%</h5>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-baer-70</dd>
+            </dl>
+        </div>
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--baer-30">
+            <h5 class="sb1ds-color-palette__color-tint-name">30%</h5>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-baer-30</dd>
+            </dl>
+        </div>
+    </li>
+    <li class="sb1ds-color-palette__item">
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--skog">
+            <h4 class="sb1ds-color-palette__color-name">Skog</h4>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-skog</dd>
+                <dt>HEX:</dt>
+                <dd>#285949</dd>
+                <dt>RGB:</dt>
+                <dd>40, 89, 73</dd>
+            </dl>
+        </div>
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--skog-70">
+            <h5 class="sb1ds-color-palette__color-tint-name">70%</h5>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-skog-70</dd>
+            </dl>
+        </div>
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--skog-30">
+            <h5 class="sb1ds-color-palette__color-tint-name">30%</h5>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-skog-30</dd>
+            </dl>
+        </div>
+    </li>
+    <li class="sb1ds-color-palette__item">
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--multe">
+            <h4 class="sb1ds-color-palette__color-name">Multe</h4>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-multe</dd>
+                <dt>HEX:</dt>
+                <dd>#F8B181</dd>
+                <dt>RGB:</dt>
+                <dd>248, 177, 129</dd>
+            </dl>
+        </div>
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--multe-70">
+            <h5 class="sb1ds-color-palette__color-tint-name">70%</h5>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-multe-70</dd>
+            </dl>
+        </div>
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--multe-30">
+            <h5 class="sb1ds-color-palette__color-tint-name">30%</h5>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-multe-30</dd>
+            </dl>
+        </div>
+    </li>
+    <li class="sb1ds-color-palette__item">
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--sol">
+            <h4 class="sb1ds-color-palette__color-name">Sol</h4>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-sol</dd>
+                <dt>HEX:</dt>
+                <dd>#DC8000</dd>
+                <dt>RGB:</dt>
+                <dd>220, 128, 0</dd>
+            </dl>
+        </div>
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--sol-70">
+            <h5 class="sb1ds-color-palette__color-tint-name">70%</h5>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-sol-70</dd>
+            </dl>
+        </div>
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--sol-30">
+            <h5 class="sb1ds-color-palette__color-tint-name">30%</h5>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-sol-30</dd>
+            </dl>
+        </div>
+    </li>
+</ul>
+
+### Nøytrale farger
+
+Her er en oversikt over gråtoner, svart og andre nøytrale farger vi har behov for. Bestående av en blåsvart, basert på blåtonene i hovedpaletten, og resten rene svart-farger i fem fasetter + 3 varme gråtoner.
+
+<ul class="sb1ds-color-palette sb1ds-color-palette--neutral">
+    <li class="sb1ds-color-palette__item">
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--natt">
+            <h4 class="sb1ds-color-palette__color-name">Natt</h4>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-natt</dd>
+                <dt>HEX:</dt>
+                <dd>#001032</dd>
+                <dt>RGB:</dt>
+                <dd>0, 16, 50</dd>
+            </dl>
+        </div>
+    </li>
+    <li class="sb1ds-color-palette__item">
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--svart">
+            <h4 class="sb1ds-color-palette__color-name">Svart</h4>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-svart</dd>
+                <dt>HEX:</dt>
+                <dd>#020A0A</dd>
+                <dt>RGB:</dt>
+                <dd>2, 10, 10</dd>
+            </dl>
+        </div>
+    </li>
+    <li class="sb1ds-color-palette__item">
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--koksgraa">
+            <h4 class="sb1ds-color-palette__color-name">Koksgrå</h4>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-koksgraa</dd>
+                <dt>HEX:</dt>
+                <dd>#323232</dd>
+                <dt>RGB:</dt>
+                <dd>50, 50, 50</dd>
+            </dl>
+        </div>
+    </li>
+    <li class="sb1ds-color-palette__item">
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--moerkgraa">
+            <h4 class="sb1ds-color-palette__color-name">Mørk grå</h4>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-moerkgraa</dd>
+                <dt>HEX:</dt>
+                <dd>#676767</dd>
+                <dt>RGB:</dt>
+                <dd>103, 103, 103</dd>
+            </dl>
+        </div>
+    </li>
+    <li class="sb1ds-color-palette__item">
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--graa">
+            <h4 class="sb1ds-color-palette__color-name">Grå</h4>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-graa</dd>
+                <dt>HEX:</dt>
+                <dd>#ADADAD</dd>
+                <dt>RGB:</dt>
+                <dd>173, 173, 173</dd>
+            </dl>
+        </div>
+    </li>
+    <li class="sb1ds-color-palette__item">
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--lysgraa">
+            <h4 class="sb1ds-color-palette__color-name">Lys grå</h4>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-lysgraa</dd>
+                <dt>HEX:</dt>
+                <dd>#D8D8D8</dd>
+                <dt>RGB:</dt>
+                <dd>216, 216, 216</dd>
+            </dl>
+        </div>
+    </li>
+    <li class="sb1ds-color-palette__item">
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--moerkvarmgraa">
+            <h4 class="sb1ds-color-palette__color-name">Mørk varmgrå</h4>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-moerkvarmgraa</dd>
+                <dt>HEX:</dt>
+                <dd>#848383</dd>
+                <dt>RGB:</dt>
+                <dd>132, 131, 131</dd>
+            </dl>
+        </div>
+    </li>
+    <li class="sb1ds-color-palette__item">
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--varmgraa">
+            <h4 class="sb1ds-color-palette__color-name">Varm grå</h4>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-varmgraa</dd>
+                <dt>HEX:</dt>
+                <dd>#9B9797</dd>
+                <dt>RGB:</dt>
+                <dd>155, 151, 151</dd>
+            </dl>
+        </div>
+    </li>
+    <li class="sb1ds-color-palette__item">
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--lysvarmgraa">
+            <h4 class="sb1ds-color-palette__color-name">Lys varmgrå</h4>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-lysvarmgraa</dd>
+                <dt>HEX:</dt>
+                <dd>#D7D2CB</dd>
+                <dt>RGB:</dt>
+                <dd>215, 210, 203</dd>
+            </dl>
+        </div>
+    </li>
+    <li class="sb1ds-color-palette__item">
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--hvit">
+            <h4 class="sb1ds-color-palette__color-name">Hvit</h4>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-hvit</dd>
+                <dt>HEX:</dt>
+                <dd>#FFFFFF</dd>
+                <dt>RGB:</dt>
+                <dd>255, 255, 255</dd>
+            </dl>
+        </div>
+    </li>
+</ul>

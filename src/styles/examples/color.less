@@ -1,401 +1,292 @@
 .sb1ds-color-palette {
-    margin: 0 0 40px 0;
-    padding: 0;
     list-style: none;
-    text-align: right;
+    margin: 0;
+    padding: 0;
+
+    @media (min-width: @breakpoint-md) {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
 
     &__item {
+        @media (min-width: @breakpoint-md) {
+            grid-column: span 4;
+
+            .sb1ds-color-palette--neutral & {
+                grid-column: span 3;
+            }
+
+            &:nth-child(1) {
+                grid-column: span 6;
+            }
+
+            &:nth-child(2) {
+                grid-column: span 6;
+            }
+        }
+    }
+
+    &__color {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 20px;
-        color: @ffe-white;
-    }
-}
+        flex-direction: column;
+        padding: @ffe-spacing-sm @ffe-spacing-md;
 
-.sb1ds-color-section:not(.sb1ds-color-section--active) {
-    display: none;
-}
-
-.sb1ds-color-usage {
-    &__example {
-        display: inline-block;
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-    }
-
-    &__table {
-        tr {
-            border-bottom: 1px solid @ffe-grey-silver;
+        &:first-child {
+            min-height: 300px;
         }
 
-        td {
-            vertical-align: top;
+        &--vann {
+            background-color: @ffe-farge-vann;
+            color: @ffe-farge-hvit;
+        }
+
+        &--vann-70 {
+            background-color: @ffe-farge-vann-70;
+            color: @ffe-farge-fjell;
+        }
+
+        &--vann-30 {
+            background-color: @ffe-farge-vann-30;
+            color: @ffe-farge-fjell;
+        }
+
+        &--fjell {
+            background-color: @ffe-farge-fjell;
+            color: @ffe-farge-hvit;
+        }
+
+        &--fjell-70 {
+            background-color: @ffe-farge-fjell-70;
+            color: @ffe-farge-hvit;
+        }
+
+        &--fjell-30 {
+            background-color: @ffe-farge-fjell-30;
+            color: @ffe-farge-fjell;
+        }
+
+        &--sand {
+            background-color: @ffe-farge-sand;
+            color: @ffe-farge-fjell;
+        }
+
+        &--sand-70 {
+            background-color: @ffe-farge-sand-70;
+            color: @ffe-farge-fjell;
+        }
+
+        &--sand-30 {
+            background-color: @ffe-farge-sand-30;
+            color: @ffe-farge-fjell;
+        }
+
+        &--frost {
+            background-color: @ffe-farge-frost;
+            color: @ffe-farge-fjell;
+        }
+
+        &--frost-70 {
+            background-color: @ffe-farge-frost-70;
+            color: @ffe-farge-fjell;
+        }
+
+        &--frost-30 {
+            background-color: @ffe-farge-frost-30;
+            color: @ffe-farge-fjell;
+        }
+
+        &--syrin {
+            background-color: @ffe-farge-syrin;
+            color: @ffe-farge-fjell;
+        }
+
+        &--syrin-70 {
+            background-color: @ffe-farge-syrin-70;
+            color: @ffe-farge-fjell;
+        }
+
+        &--syrin-30 {
+            background-color: @ffe-farge-syrin-30;
+            color: @ffe-farge-fjell;
+        }
+
+        &--myrull {
+            background-color: @ffe-farge-myrull;
+            color: @ffe-farge-lyng;
+        }
+
+        &--myrull-70 {
+            background-color: @ffe-farge-myrull-70;
+            color: @ffe-farge-lyng;
+        }
+
+        &--myrull-30 {
+            background-color: @ffe-farge-myrull-30;
+            color: @ffe-farge-lyng;
+        }
+
+        &--villblomst {
+            background-color: @ffe-farge-villblomst;
+        }
+
+        &--villblomst-70 {
+            background-color: @ffe-farge-villblomst-70;
+        }
+
+        &--villblomst-30 {
+            background-color: @ffe-farge-villblomst-30;
+        }
+
+        &--nordlys {
+            background-color: @ffe-farge-nordlys;
+        }
+
+        &--nordlys-70 {
+            background-color: @ffe-farge-nordlys-70;
+        }
+
+        &--nordlys-30 {
+            background-color: @ffe-farge-nordlys-30;
+        }
+
+        &--lyng {
+            background-color: @ffe-farge-lyng;
+            color: @ffe-farge-hvit;
+        }
+
+        &--lyng-70 {
+            background-color: @ffe-farge-lyng-70;
+            color: @ffe-farge-hvit;
+        }
+
+        &--lyng-30 {
+            background-color: @ffe-farge-lyng-30;
+        }
+
+        &--baer {
+            background-color: @ffe-farge-baer;
+            color: @ffe-farge-hvit;
+        }
+
+        &--baer-70 {
+            background-color: @ffe-farge-baer-70;
+            color: @ffe-farge-hvit;
+        }
+
+        &--baer-30 {
+            background-color: @ffe-farge-baer-30;
+        }
+
+        &--skog {
+            background-color: @ffe-farge-skog;
+            color: @ffe-farge-hvit;
+        }
+
+        &--skog-70 {
+            background-color: @ffe-farge-skog-70;
+            color: @ffe-farge-hvit;
+        }
+
+        &--skog-30 {
+            background-color: @ffe-farge-skog-30;
+        }
+
+        &--multe {
+            background-color: @ffe-farge-multe;
+        }
+
+        &--multe-70 {
+            background-color: @ffe-farge-multe-70;
+        }
+
+        &--multe-30 {
+            background-color: @ffe-farge-multe-30;
+        }
+
+        &--sol {
+            background-color: @ffe-farge-sol;
+        }
+
+        &--sol-70 {
+            background-color: @ffe-farge-sol-70;
+        }
+
+        &--sol-30 {
+            background-color: @ffe-farge-sol-30;
+        }
+
+        &--natt {
+            background-color: @ffe-farge-natt;
+            color: @ffe-farge-hvit;
+        }
+
+        &--svart {
+            background-color: @ffe-farge-svart;
+            color: @ffe-farge-hvit;
+        }
+
+        &--koksgraa {
+            background-color: @ffe-farge-koksgraa;
+            color: @ffe-farge-hvit;
+        }
+
+        &--moerkgraa {
+            background-color: @ffe-farge-moerkgraa;
+            color: @ffe-farge-hvit;
+        }
+
+        &--graa {
+            background-color: @ffe-farge-graa;
+            color: @ffe-farge-hvit;
+        }
+
+        &--lysgraa {
+            background-color: @ffe-farge-lysgraa;
+        }
+
+        &--moerkvarmgraa {
+            background-color: @ffe-farge-moerkvarmgraa;
+            color: @ffe-farge-hvit;
+        }
+
+        &--varmgraa {
+            background-color: @ffe-farge-varmgraa;
+            color: @ffe-farge-hvit;
+        }
+
+        &--lysvarmgraa {
+            background-color: @ffe-farge-lysvarmgraa;
+        }
+
+        &--hvit {
+            background-color: @ffe-farge-hvit;
         }
     }
 
-    &__list {
-        list-style: none;
-        padding: 0;
+    &__color-properties {
         margin: 0;
-    }
+        padding: 0;
+        display: inline-grid;
+        grid-template-columns: auto 1fr;
+        column-gap: 1rem;
+        font-size: 0.9rem;
 
-    &__illustration {
-        margin-bottom: 40px;
-
-        svg {
-            max-width: 600px;
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    padding: 2px;
-                    border: 1px solid @ffe-grey-silver-darkmode;
-                }
-            }
-        }
-    }
-}
-
-.sb1ds-color-palette__item,
-.sb1ds-color-usage__example {
-    border: 1px solid transparent;
-    .native & {
-        @media (prefers-color-scheme: dark) {
-            color: @ffe-black-darkmode;
+        dt,
+        dd {
+            margin: 0;
+            padding: 0;
         }
     }
 
-    &--ffe-blue-royal {
-        background: @ffe-blue-royal;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-white-darkmode;
-            }
-        }
+    &__color-name {
+        font-size: 1.5rem;
+        margin: 0 0 @ffe-spacing-sm 0;
+        padding: 0;
     }
 
-    &--ffe-blue-cobalt {
-        background: @ffe-blue-cobalt;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-white-darkmode;
-            }
-        }
-    }
-
-    &--ffe-blue-azure {
-        background: @ffe-blue-azure;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-white-darkmode;
-            }
-        }
-    }
-
-    &--ffe-blue-azure-darkmode {
-        background: @ffe-blue-azure-darkmode;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-white-darkmode;
-            }
-        }
-    }
-
-    &--ffe-blue-deep-sky {
-        background: @ffe-blue-deep-sky;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-black-darkmode;
-            }
-        }
-    }
-
-    &--ffe-blue-sky {
-        background: @ffe-blue-sky;
-        color: @ffe-black;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-black-darkmode;
-            }
-        }
-    }
-
-    &--ffe-blue-focus {
-        background: @ffe-blue-focus;
-        color: @ffe-black;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-black-darkmode;
-            }
-        }
-    }
-
-    &--ffe-blue-pale {
-        background: @ffe-blue-pale;
-        color: @ffe-black;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-black-darkmode;
-            }
-        }
-    }
-
-    &--ffe-blue-ice {
-        background: @ffe-blue-ice;
-        color: @ffe-black;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-black-darkmode;
-            }
-        }
-    }
-
-    &--ffe-green-shamrock {
-        background: @ffe-green-shamrock;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-white-darkmode;
-            }
-        }
-    }
-
-    &--ffe-sand {
-        background: @ffe-sand;
-        color: @ffe-black;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-black-darkmode;
-            }
-        }
-    }
-
-    &--ffe-sand-ivory {
-        background: @ffe-sand-ivory;
-        color: @ffe-black;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-black-darkmode;
-            }
-        }
-    }
-
-    &--ffe-orange-fire {
-        background: @ffe-orange-fire;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-white-darkmode;
-            }
-        }
-    }
-
-    &--ffe-orange {
-        background: @ffe-orange;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-white-darkmode;
-            }
-        }
-    }
-
-    &--ffe-orange-salmon {
-        background: @ffe-orange-salmon;
-        color: @ffe-black;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-black-darkmode;
-            }
-        }
-    }
-
-    &--ffe-black {
-        background: @ffe-black;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-white-darkmode;
-            }
-        }
-    }
-
-    &--ffe-black-darkmode {
-        background: @ffe-black-darkmode;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                border: 1px solid @ffe-grey-silver-darkmode;
-                color: @ffe-white-darkmode;
-            }
-        }
-    }
-
-    &--ffe-grey-charcoal {
-        background: @ffe-grey-charcoal;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-white-darkmode;
-            }
-        }
-    }
-
-    &--ffe-grey-charcoal-darkmode {
-        background: @ffe-grey-charcoal-darkmode;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-white-darkmode;
-            }
-        }
-    }
-
-    &--ffe-grey-warm {
-        background: @ffe-grey-warm;
-        color: @ffe-black;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-black-darkmode;
-            }
-        }
-    }
-
-    &--ffe-grey {
-        background: @ffe-grey;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-white-darkmode;
-            }
-        }
-    }
-
-    &--ffe-grey-darkmode {
-        background: @ffe-grey-darkmode;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-white-darkmode;
-            }
-        }
-    }
-
-    &--ffe-grey-silver {
-        background: @ffe-grey-silver;
-        color: @ffe-black;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-black-darkmode;
-            }
-        }
-    }
-
-    &--ffe-grey-silver-darkmode {
-        background: @ffe-grey-silver-darkmode;
-        color: @ffe-black;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-black-darkmode;
-            }
-        }
-    }
-
-    &--ffe-grey-cloud {
-        background: @ffe-grey-cloud;
-        color: @ffe-black;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-black-darkmode;
-            }
-        }
-    }
-
-    &--ffe-grey-cloud-darkmode {
-        background: @ffe-grey-cloud-darkmode;
-        color: @ffe-black;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-black-darkmode;
-            }
-        }
-    }
-
-    &--ffe-white {
-        background: @ffe-white;
-        color: @ffe-black;
-        border: 1px solid @ffe-grey-silver;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                border: none;
-                color: @ffe-black;
-            }
-        }
-    }
-
-    &--ffe-white-darkmode {
-        background: @ffe-white-darkmode;
-        color: @ffe-black;
-        border: 1px solid @ffe-grey-silver;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-black-darkmode;
-            }
-        }
-    }
-
-    &--ffe-green {
-        background: @ffe-green;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-white-darkmode;
-            }
-        }
-    }
-
-    &--ffe-green-emerald {
-        background: @ffe-green-emerald;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-white-darkmode;
-            }
-        }
-    }
-
-    &--ffe-green-mint {
-        background: @ffe-green-mint;
-        color: @ffe-black;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-black-darkmode;
-            }
-        }
-    }
-
-    &--ffe-purple {
-        background: @ffe-purple;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-white-darkmode;
-            }
-        }
-    }
-
-    &--ffe-purple-magenta {
-        background: @ffe-purple-magenta;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-white-darkmode;
-            }
-        }
-    }
-
-    &--ffe-red {
-        background: @ffe-red;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-white-darkmode;
-            }
-        }
-    }
-
-    &--ffe-red-darkmode {
-        background: @ffe-red-darkmode;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-black-darkmode;
-            }
-        }
+    &__color-tint-name {
+        font-size: 1.2rem;
+        margin: 0;
+        padding: 0;
     }
 }
