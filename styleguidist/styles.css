@@ -3539,6 +3539,7 @@ html {
   width: 56px;
   outline: none;
   margin-left: -56px;
+  cursor: pointer;
 }
 .ffe-datepicker__button:active,
 .ffe-datepicker__button:focus,
