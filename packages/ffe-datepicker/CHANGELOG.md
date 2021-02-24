@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@8.0.3...@sb1/ffe-datepicker@8.0.4) (2021-02-24)
+
+
+### Bug Fixes
+
+* **ffe-datepicker:** add cursor pointer to button ([0b8713f](https://github.com/SpareBank1/designsystem/commit/0b8713f8a05d3881f10658b64cd36c5d735c51b0))
+
+
+
+
+
 ## [8.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@8.0.2...@sb1/ffe-datepicker@8.0.3) (2021-02-03)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
