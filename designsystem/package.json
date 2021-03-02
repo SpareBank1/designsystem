@@ -15,6 +15,7 @@
   },
   "scripts": {
     "build": "make all",
+    "start": "snowpack dev",
     "clean": "make clean"
   },
   "dependencies": {
@@ -65,6 +66,7 @@
   },
   "devDependencies": {
     "@rollup/plugin-json": "^4.1.0",
+    "@snowpack/plugin-react-refresh": "^2.4.0",
     "acorn": "^8.0.5",
     "acorn-jsx": "^5.3.1",
     "acorn-walk": "^8.0.2",
@@ -72,6 +74,7 @@
     "react": "^16.9.0",
     "react-docgen": "^5.3.1",
     "react-dom": "^16.9.0",
-    "rollup": "^2.40.0"
+    "rollup": "^2.40.0",
+    "snowpack": "^3.0.13"
   }
 }
