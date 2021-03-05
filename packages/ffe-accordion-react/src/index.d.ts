@@ -5,6 +5,7 @@ export interface AccordionItemProps extends React.HTMLProps<HTMLDivElement> {
     defaultOpen?: boolean;
     isOpen?: boolean;
     onToggleOpen?: (isOpen: boolean) => void;
+    ariaLabel?: string;
 }
 
 export interface AccordionProps extends React.HTMLProps<HTMLDivElement> {
