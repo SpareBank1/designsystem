@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [9.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@9.1.6...@sb1/ffe-accordion-react@9.2.0) (2021-03-08)
+
+
+### Features
+
+* **ffe-accordion-react:** possible to pass properties to button ([4bb3d34](https://github.com/SpareBank1/designsystem/commit/4bb3d3466fbe4817d22cf5f4039bc88f871a14ae))
+
+
+
+
+
 ## [9.1.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@9.1.5...@sb1/ffe-accordion-react@9.1.6) (2021-02-05)
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react
