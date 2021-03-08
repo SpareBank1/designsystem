@@ -12,6 +12,7 @@ const AccordionItem = ({
     isOpen,
     className,
     onToggleOpen = Function.prototype,
+    ariaLabel,
     ...accordionProps
 }) => {
     const [isExpanded, setIsExpanded] = useState(defaultOpen);
@@ -43,7 +44,12 @@ const AccordionItem = ({
     } = accordionProps;
 
     return (
-        <div className={classNames(className, 'ffe-accordion-item')} {...rest}>
+        <div
+            className={classNames(className, 'ffe-accordion-item', {
+                'ffe-accordion-item--open': isExpanded,
+            })}
+            {...rest}
+        >
             {React.createElement(
                 `h${headingLevel}`,
                 { className: 'ffe-h6' },
@@ -53,6 +59,7 @@ const AccordionItem = ({
                     ref={forwardedRef}
                     aria-expanded={isExpanded ? 'true' : 'false'}
                     aria-controls={contentId.current}
+                    aria-label={ariaLabel}
                     className={classNames('ffe-accordion__heading-button', {
                         'ffe-accordion__heading-button--open': isExpanded,
                     })}
@@ -93,6 +100,8 @@ AccordionItem.propTypes = {
     className: string,
     /** Callback when the item is open/closed */
     onToggleOpen: func,
+    /** aria-label for the button */
+    ariaLabel: string,
 };
 
 export default React.forwardRef((props, ref) => {
