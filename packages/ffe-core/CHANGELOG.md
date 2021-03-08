@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [17.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@17.1.0...@sb1/ffe-core@17.1.1) (2021-03-08)
+
+
+### Bug Fixes
+
+* **ffe-core:** legger til manglende variabel for hvit farge ([19cbb97](https://github.com/SpareBank1/designsystem/commit/19cbb974720110cca416bec0ab83f5091082a001))
+
+
+
+
+
 # [17.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@17.0.1...@sb1/ffe-core@17.1.0) (2021-02-03)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-lists",
-  "version": "9.0.2",
+  "version": "9.0.3",
   "description": "Lists in ffe",
   "license": "MIT",
   "author": "SpareBank 1",
@@ -17,7 +17,7 @@
     "test": "npm run lint"
   },
   "devDependencies": {
-    "@sb1/ffe-core": "^17.1.0"
+    "@sb1/ffe-core": "^17.1.1"
   },
   "peerDependencies": {
     "@sb1/ffe-core": "^15.2.0"
