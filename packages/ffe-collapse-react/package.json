@@ -1,53 +1,53 @@
 {
-    "name": "@sb1/ffe-collapse-react",
-    "version": "1.1.5",
-    "description": "React component for expand/collapse",
-    "keywords": [
-        "ffe"
-    ],
-    "license": "MIT",
-    "author": "SpareBank 1",
-    "files": [
-        "lib",
-        "es",
-        "less",
-        "types"
-    ],
-    "main": "lib/index.js",
-    "module": "es/index.js",
-    "types": "types/index.d.ts",
-    "sideEffects": false,
-    "repository": {
-        "type": "git",
-        "url": "ssh://git@github.com:SpareBank1/designsystem.git"
-    },
-    "scripts": {
-        "build": "npm run build:cjs && npm run build:es && npm run build:types",
-        "build:cjs": "babel -d lib/. --root-mode=upward  --env-name=cjs --ignore=*.spec.js src/.",
-        "build:es": "babel -d es/. --root-mode=upward --env-name=es --ignore=*.spec.js src/.",
-        "build:types": "copyfiles -f src/index.d.ts types/",
-        "lint": "eslint src/.",
-        "test": "jest",
-        "test:watch": "jest --watch"
-    },
-    "jest": {
-        "setupTestFrameworkScriptFile": "../../test-setup.js"
-    },
-    "dependencies": {
-        "classnames": "^2.2.5"
-    },
-    "devDependencies": {
-        "eslint": "^5.9.0",
-        "jest": "^26.0.0",
-        "prop-types": "^15.6.0",
-        "react": "^16.9.0",
-        "react-dom": "^16.9.0"
-    },
-    "peerDependencies": {
-        "@sb1/ffe-core": "^14.0.0",
-        "react": "^16.9.0"
-    },
-    "publishConfig": {
-        "access": "public"
-    }
+  "name": "@sb1/ffe-collapse-react",
+  "version": "1.1.5",
+  "description": "React component for expand/collapse",
+  "keywords": [
+    "ffe"
+  ],
+  "license": "MIT",
+  "author": "SpareBank 1",
+  "files": [
+    "lib",
+    "es",
+    "less",
+    "types"
+  ],
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "types": "types/index.d.ts",
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:SpareBank1/designsystem.git"
+  },
+  "scripts": {
+    "build": "npm run build:cjs && npm run build:es && npm run build:types",
+    "build:cjs": "babel -d lib/. --root-mode=upward  --env-name=cjs --ignore=*.spec.js src/.",
+    "build:es": "babel -d es/. --root-mode=upward --env-name=es --ignore=*.spec.js src/.",
+    "build:types": "copyfiles -f src/index.d.ts types/",
+    "lint": "eslint src/.",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "../../test-setup.js"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5"
+  },
+  "devDependencies": {
+    "eslint": "^5.9.0",
+    "jest": "^26.0.0",
+    "prop-types": "^15.6.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  },
+  "peerDependencies": {
+    "@sb1/ffe-core": "*",
+    "react": ">=16.9.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }
