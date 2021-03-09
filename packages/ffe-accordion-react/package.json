@@ -43,8 +43,8 @@
     "react-dom": "^16.9.0"
   },
   "peerDependencies": {
-    "@sb1/ffe-accordion": "^5.0.3",
-    "react": "^16.9.0"
+    "@sb1/ffe-accordion": "*",
+    "react": ">=16.9.0"
   },
   "publishConfig": {
     "access": "public"
