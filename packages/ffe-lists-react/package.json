@@ -41,8 +41,8 @@
     "react-dom": "^16.9.0"
   },
   "peerDependencies": {
-    "@sb1/ffe-lists": "^7.0.0",
-    "react": "^16.9.0"
+    "@sb1/ffe-lists": "*",
+    "react": ">=16.9.0"
   },
   "publishConfig": {
     "access": "public"
