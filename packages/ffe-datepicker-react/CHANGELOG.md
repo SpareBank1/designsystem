@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@5.0.8...@sb1/ffe-datepicker-react@5.0.9) (2021-03-10)
+
+
+### Bug Fixes
+
+* **ffe-datepicker-react:** import lodash.debounce instead of lodash ([730c837](https://github.com/SpareBank1/designsystem/commit/730c837b0093947996b3b7596576aebb934a9764))
+
+
+
+
+
 ## [5.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@5.0.7...@sb1/ffe-datepicker-react@5.0.8) (2021-03-08)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker-react
