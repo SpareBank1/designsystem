@@ -10,7 +10,7 @@ import SimpleDate from '../datelogic/simpledate';
 import dateErrorTypes from '../datelogic/error-types';
 import i18n from '../i18n/i18n';
 import { validateDate } from '../util/dateUtil';
-import { debounce } from 'lodash';
+import debounce from 'lodash.debounce';
 
 export default class Datepicker extends Component {
     constructor(props) {
