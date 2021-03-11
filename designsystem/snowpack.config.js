@@ -7,7 +7,7 @@ module.exports = {
     },
     alias: { '@designsystem': './lib' },
     plugins: ['@snowpack/plugin-react-refresh'],
-    routes: [],
+    routes: [{ match: 'routes', src: '.*', dest: '/index.html' }],
     optimize: {},
     packageOptions: {},
     devOptions: {},

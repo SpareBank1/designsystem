@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './App.jsx';
+
 import '@designsystem/style.css';
-import * as ds from '@designsystem/esm';
-//import App from './App.jsx';
-import { Heading1 } from '@sb1/ffe-core-react';
+import '@sb1/ffe-webfonts/sb1-fonts.css';
+import './index.css';
 
 ReactDOM.render(
     <React.StrictMode>
-        <Heading1>it works</Heading1>
-        <pre>{JSON.stringify(Object.keys(ds.examples), null, 2)}</pre>
+        <App />
     </React.StrictMode>,
     document.getElementById('root'),
 );
