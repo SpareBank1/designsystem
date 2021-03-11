@@ -7,7 +7,7 @@ node_modules
 # Built files
 coverage/
 dist/
-lib/
+packages/*/lib/
 src/styleguidist.html
 tmp/
 es/

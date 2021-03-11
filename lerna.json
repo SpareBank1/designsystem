@@ -1,5 +1,5 @@
 {
-    "packages": ["packages/*", "linting/*"],
+    "packages": ["packages/*", "linting/*", "designsystem/"],
     "version": "independent",
     "hoist": true,
     "command": {
