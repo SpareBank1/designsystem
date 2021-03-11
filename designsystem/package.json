@@ -73,7 +73,7 @@
     "estree-walker": "^2.0.2",
     "lodash.map": "^4.6.0",
     "react": "^16.9.0",
-    "react-docgen": "^5.3.1",
+    "react-docgen": "^3.0.0",
     "react-dom": "^16.9.0",
     "react-live": "^2.2.3",
     "react-router-dom": "^5.2.0",
