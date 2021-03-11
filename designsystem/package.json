@@ -4,9 +4,18 @@
   "description": "Designsystemet",
   "license": "MIT",
   "author": "SpareBank 1 Utvikling",
+  "main": "./lib/index.js",
+  "module": "./lib/esm/index.js",
+  "files": [
+    "lib"
+  ],
   "repository": {
     "type": "git",
     "url": "ssh://git@github.com:SpareBank1/designsystem.git"
+  },
+  "scripts": {
+    "build": "make all",
+    "clean": "make clean"
   },
   "dependencies": {
     "@sb1/ffe-accordion": "^7.0.10",
@@ -53,5 +62,16 @@
     "@sb1/ffe-tabs": "^9.0.1",
     "@sb1/ffe-tabs-react": "^5.0.4",
     "@sb1/ffe-webfonts": "^3.0.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-json": "^4.1.0",
+    "acorn": "^8.0.5",
+    "acorn-jsx": "^5.3.1",
+    "acorn-walk": "^8.0.2",
+    "estree-walker": "^2.0.2",
+    "react": "^16.9.0",
+    "react-docgen": "^5.3.1",
+    "react-dom": "^16.9.0",
+    "rollup": "^2.40.0"
   }
 }
