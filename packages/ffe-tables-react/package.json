@@ -46,8 +46,8 @@
     "sinon": "^7.2.3"
   },
   "peerDependencies": {
-    "@sb1/ffe-tables": "^9.0.0",
-    "react": "^16.9.0"
+    "@sb1/ffe-tables": "*",
+    "react": ">=16.9.0"
   },
   "publishConfig": {
     "access": "public"

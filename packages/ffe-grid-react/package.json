@@ -39,8 +39,8 @@
     "react-dom": "^16.9.0"
   },
   "peerDependencies": {
-    "@sb1/ffe-grid": "^10.1.2",
-    "react": "^16.9.0"
+    "@sb1/ffe-grid": "*",
+    "react": ">=16.9.0"
   },
   "publishConfig": {
     "access": "public"

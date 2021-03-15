@@ -41,7 +41,7 @@
     "sinon": "^7.2.3"
   },
   "peerDependencies": {
-    "react": "^16.9.0"
+    "react": ">=16.9.0"
   },
   "publishConfig": {
     "access": "public"

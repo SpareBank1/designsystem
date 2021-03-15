@@ -20,7 +20,7 @@
     "@sb1/ffe-core": "^17.1.1"
   },
   "peerDependencies": {
-    "@sb1/ffe-core": "^15.2.0"
+    "@sb1/ffe-core": "*"
   },
   "publishConfig": {
     "access": "public"

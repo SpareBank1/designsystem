@@ -53,9 +53,9 @@
     "react-dom": "^16.9.0"
   },
   "peerDependencies": {
-    "@sb1/ffe-form": ">=11.0.1",
-    "@sb1/ffe-spinner": "^3.0.0",
-    "react": "^16.9.0"
+    "@sb1/ffe-form": "*",
+    "@sb1/ffe-spinner": "*",
+    "react": ">=16.9.0"
   },
   "publishConfig": {
     "access": "public"

@@ -40,9 +40,9 @@
     "react-dom": "^16.9.0"
   },
   "peerDependencies": {
-    "@sb1/ffe-core": "^15.2.0",
-    "@sb1/ffe-tabs": "^6.1.0",
-    "react": "^16.9.0"
+    "@sb1/ffe-core": "*",
+    "@sb1/ffe-tabs": "*",
+    "react": ">=16.9.0"
   },
   "publishConfig": {
     "access": "public"
