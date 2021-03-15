@@ -23,7 +23,7 @@
     "morgan": "~1.10.0",
     "snyk": "^1.316.1",
     "vue": "^2.5.17",
-    "webpack": "^4.17.1",
+    "webpack": "^5.0.0",
     "webpack-dev-middleware": "^3.2.0",
     "webpack-hot-middleware": "^2.22.3"
   },
