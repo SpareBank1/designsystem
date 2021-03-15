@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [11.0.18](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@11.0.17...@sb1/ffe-grid@11.0.18) (2021-03-15)
+
+
+### Bug Fixes
+
+* **ffe-grid:** broadens version of peer dependencies ([3c5d47b](https://github.com/SpareBank1/designsystem/commit/3c5d47bc5e928237b211f3b90f4128cf915a5ef3))
+
+
+
+
+
 ## [11.0.17](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@11.0.16...@sb1/ffe-grid@11.0.17) (2021-03-08)
 
 **Note:** Version bump only for package @sb1/ffe-grid

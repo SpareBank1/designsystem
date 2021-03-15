@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.2.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@12.2.10...@sb1/ffe-buttons-react@12.2.11) (2021-03-15)
+
+
+### Bug Fixes
+
+* **ffe-buttons-react:** broadens version of peer dependencies ([2ab2e5c](https://github.com/SpareBank1/designsystem/commit/2ab2e5cf784c2444b692a248d8f117712860631c))
+
+
+
+
+
 ## [12.2.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@12.2.9...@sb1/ffe-buttons-react@12.2.10) (2021-02-03)
 
 

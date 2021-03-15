@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@4.2.4...@sb1/ffe-core-react@4.2.5) (2021-03-15)
+
+
+### Bug Fixes
+
+* **ffe-core-react:** broadens version of peer dependencies ([cec30c6](https://github.com/SpareBank1/designsystem/commit/cec30c69822ca8d6566e34d7493cd383809d3e67))
+
+
+
+
+
 ## [4.2.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@4.2.3...@sb1/ffe-core-react@4.2.4) (2021-02-03)
 
 

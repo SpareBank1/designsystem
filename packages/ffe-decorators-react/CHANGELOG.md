@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-decorators-react@3.0.2...@sb1/ffe-decorators-react@3.0.3) (2021-03-15)
+
+
+### Bug Fixes
+
+* **ffe-decorators-react:** broadens version of peer dependencies ([66a6dfd](https://github.com/SpareBank1/designsystem/commit/66a6dfd65d67fa5aba3122b8152aa45ae050fb73))
+
+
+
+
+
 ## [3.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-decorators-react@3.0.1...@sb1/ffe-decorators-react@3.0.2) (2021-02-03)
 
 

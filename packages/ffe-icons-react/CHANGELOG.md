@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.2.18](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@7.2.17...@sb1/ffe-icons-react@7.2.18) (2021-03-15)
+
+
+### Bug Fixes
+
+* **ffe-icons-react:** broadens version of peer dependencies ([34d2fec](https://github.com/SpareBank1/designsystem/commit/34d2fecb8b64ffc6461b202a92cb47112894edb6))
+
+
+
+
+
 ## [7.2.17](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@7.2.16...@sb1/ffe-icons-react@7.2.17) (2021-02-02)
 
 **Note:** Version bump only for package @sb1/ffe-icons-react

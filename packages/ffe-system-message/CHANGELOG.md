@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@5.0.5...@sb1/ffe-system-message@5.0.6) (2021-03-15)
+
+
+### Bug Fixes
+
+* **ffe-system-message:** broadens version of peer dependencies ([fe5d14e](https://github.com/SpareBank1/designsystem/commit/fe5d14e2a20543fa95909edd104bef02dc0f0594))
+
+
+
+
+
 ## [5.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@5.0.4...@sb1/ffe-system-message@5.0.5) (2021-03-08)
 
 **Note:** Version bump only for package @sb1/ffe-system-message

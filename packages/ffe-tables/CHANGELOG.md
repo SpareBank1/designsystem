@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [11.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@11.0.5...@sb1/ffe-tables@11.0.6) (2021-03-15)
+
+
+### Bug Fixes
+
+* **ffe-tables:** broadens version of peer dependencies ([1efd247](https://github.com/SpareBank1/designsystem/commit/1efd2477f234694c139566c1ac6c3b3ace906c26))
+
+
+
+
+
 ## [11.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@11.0.4...@sb1/ffe-tables@11.0.5) (2021-03-08)
 
 **Note:** Version bump only for package @sb1/ffe-tables

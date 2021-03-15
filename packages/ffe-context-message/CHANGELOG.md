@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.19](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.18...@sb1/ffe-context-message@4.0.19) (2021-03-15)
+
+
+### Bug Fixes
+
+* **ffe-context-message:** broadens version of peer dependencies ([1167b98](https://github.com/SpareBank1/designsystem/commit/1167b98ab163a75178e172a1d87e4c353a81d386))
+
+
+
+
+
 ## [4.0.18](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.17...@sb1/ffe-context-message@4.0.18) (2021-03-08)
 
 **Note:** Version bump only for package @sb1/ffe-context-message

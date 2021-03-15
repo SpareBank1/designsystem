@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@4.0.6...@sb1/ffe-cards-react@4.0.7) (2021-03-15)
+
+
+### Bug Fixes
+
+* **ffe-cards-react:** broadens version of peer dependencies ([45f5004](https://github.com/SpareBank1/designsystem/commit/45f5004d24eb11d5743c73935c91f0efccee2cbd))
+
+
+
+
+
 ## [4.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@4.0.5...@sb1/ffe-cards-react@4.0.6) (2021-02-02)
 
 

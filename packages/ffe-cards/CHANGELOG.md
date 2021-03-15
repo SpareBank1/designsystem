@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@9.0.5...@sb1/ffe-cards@9.0.6) (2021-03-15)
+
+
+### Bug Fixes
+
+* **ffe-cards:** broadens version of peer dependencies ([c3d21b0](https://github.com/SpareBank1/designsystem/commit/c3d21b05c9ae434853c17e9975a38613eaba4d09))
+
+
+
+
+
 ## [9.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@9.0.4...@sb1/ffe-cards@9.0.5) (2021-03-08)
 
 **Note:** Version bump only for package @sb1/ffe-cards

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.0.25](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@6.0.24...@sb1/ffe-tables-react@6.0.25) (2021-03-15)
+
+
+### Bug Fixes
+
+* **ffe-tables-react:** broadens version of peer dependencies ([8f9101a](https://github.com/SpareBank1/designsystem/commit/8f9101abe601d3812e2e8ce7ea7372a9c03d1af9))
+
+
+
+
+
 ## [6.0.24](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@6.0.23...@sb1/ffe-tables-react@6.0.24) (2021-02-03)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.17](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner@3.1.16...@sb1/ffe-spinner@3.1.17) (2021-03-15)
+
+
+### Bug Fixes
+
+* **ffe-spinner:** broadens version of peer dependencies ([a398bdb](https://github.com/SpareBank1/designsystem/commit/a398bdb3a37cb1ec98728e2096bdc2ec2fcd7a31))
+
+
+
+
+
 ## [3.1.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner@3.1.15...@sb1/ffe-spinner@3.1.16) (2021-03-08)
 
 **Note:** Version bump only for package @sb1/ffe-spinner

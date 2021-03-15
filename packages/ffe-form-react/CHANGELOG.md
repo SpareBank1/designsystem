@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.2.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@7.2.9...@sb1/ffe-form-react@7.2.10) (2021-03-15)
+
+
+### Bug Fixes
+
+* **ffe-form-react:** broadens version of peer dependencies ([79a58a7](https://github.com/SpareBank1/designsystem/commit/79a58a7d3b5b95efa1674be45f258899f1c489bf))
+
+
+
+
+
 ## [7.2.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@7.2.8...@sb1/ffe-form-react@7.2.9) (2021-03-03)
 
 

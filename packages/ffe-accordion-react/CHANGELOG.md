@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.2.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@9.2.1...@sb1/ffe-accordion-react@9.2.2) (2021-03-15)
+
+
+### Bug Fixes
+
+* **ffe-accordion-react:** broadens version of peer dependencies ([c3540a5](https://github.com/SpareBank1/designsystem/commit/c3540a59c6ae4702cff153f08a664113b1ebb6a4))
+
+
+
+
+
 ## [9.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@9.2.0...@sb1/ffe-accordion-react@9.2.1) (2021-03-08)
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-collapse-react@1.1.5...@sb1/ffe-collapse-react@1.1.6) (2021-03-15)
+
+
+### Bug Fixes
+
+* **ffe-collapse-react:** broadens version of peer dependencies ([2db907d](https://github.com/SpareBank1/designsystem/commit/2db907d88e81630645fb865c92f5c6494275b452))
+
+
+
+
+
 ## [1.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-collapse-react@1.1.4...@sb1/ffe-collapse-react@1.1.5) (2021-02-05)
 
 

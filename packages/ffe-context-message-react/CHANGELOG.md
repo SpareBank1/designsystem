@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.2.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@5.2.2...@sb1/ffe-context-message-react@5.2.3) (2021-03-15)
+
+
+### Bug Fixes
+
+* **ffe-context-message-react:** broadens version of peer dependencies ([fdd06cd](https://github.com/SpareBank1/designsystem/commit/fdd06cdd7614f8a0b9c20f03be1c4fa5ca05b3b8))
+
+
+
+
+
 ## [5.2.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@5.2.1...@sb1/ffe-context-message-react@5.2.2) (2021-02-02)
 
 

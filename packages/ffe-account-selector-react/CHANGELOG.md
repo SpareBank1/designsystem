@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [15.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@15.0.9...@sb1/ffe-account-selector-react@15.0.10) (2021-03-15)
+
+
+### Bug Fixes
+
+* **ffe-account-selector-react:** broadens version of peer dependencies ([e25ea2c](https://github.com/SpareBank1/designsystem/commit/e25ea2c91a17fb2c1087e419bf047d4e4688c2d9))
+
+
+
+
+
 ## [15.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@15.0.8...@sb1/ffe-account-selector-react@15.0.9) (2021-03-03)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react

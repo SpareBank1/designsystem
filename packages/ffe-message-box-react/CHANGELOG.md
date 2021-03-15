@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.1.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@6.1.5...@sb1/ffe-message-box-react@6.1.6) (2021-03-15)
+
+
+### Bug Fixes
+
+* **ffe-message-box-react:** broadens version of peer dependencies ([cee3a33](https://github.com/SpareBank1/designsystem/commit/cee3a33cddc4bd482e40dd497542ee86b62999c8))
+
+
+
+
+
 ## [6.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@6.1.4...@sb1/ffe-message-box-react@6.1.5) (2021-02-03)
 
 
