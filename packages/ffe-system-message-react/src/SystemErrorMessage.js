@@ -31,7 +31,7 @@ SystemErrorMessage.propTypes = {
     /** Additional classes added to the surrounding div */
     className: string,
     /** Override the default icon - use with caution! */
-    icon: node.isRequired,
+    icon: node,
     /** 'nb', 'nn', or 'en' */
     locale: oneOf(['en', 'nb', 'nn']),
     /**
