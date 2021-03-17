@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@7.0.2...@sb1/ffe-message-box@8.0.0) (2021-03-17)
+
+
+### Bug Fixes
+
+* **ffe-message-box:** bytter ut museo sans med ny sparebank1-font ([a3f396e](https://github.com/SpareBank1/designsystem/commit/a3f396ee27ea4a581431864a2cc7b27ff0589fcd))
+
+
+### BREAKING CHANGES
+
+* **ffe-message-box:** ny font i alt innhold
+
+
+
+
+
 ## [7.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@7.0.1...@sb1/ffe-message-box@7.0.2) (2021-03-15)
 
 

@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [16.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@15.0.4...@sb1/ffe-form@16.0.0) (2021-03-17)
+
+
+### Bug Fixes
+
+* **ffe-form:** bytter ut museo sans med ny sparebank1-font ([c1ddf3c](https://github.com/SpareBank1/designsystem/commit/c1ddf3cc02e2b47be21093e54b7048f10babde9e))
+
+
+### BREAKING CHANGES
+
+* **ffe-form:** ny font i alt innhold
+
+
+
+
+
 ## [15.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@15.0.3...@sb1/ffe-form@15.0.4) (2021-03-15)
 
 **Note:** Version bump only for package @sb1/ffe-form

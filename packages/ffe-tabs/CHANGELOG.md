@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [9.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@8.0.6...@sb1/ffe-tabs@9.0.0) (2021-03-17)
+
+
+### Bug Fixes
+
+* **ffe-tabs:** bytter ut museo sans med ny sparebank1-font ([e3728b4](https://github.com/SpareBank1/designsystem/commit/e3728b43e4c995be4cd1ce30c909f94fb3000de0))
+
+
+### BREAKING CHANGES
+
+* **ffe-tabs:** ny font i alt innhold
+
+
+
+
+
 ## [8.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@8.0.5...@sb1/ffe-tabs@8.0.6) (2021-03-15)
 
 

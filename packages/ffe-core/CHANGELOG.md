@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [18.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@17.1.1...@sb1/ffe-core@18.0.0) (2021-03-17)
+
+
+### Bug Fixes
+
+* **ffe-core:** bytter ut museo sans med ny sparebank1-font ([ffa8833](https://github.com/SpareBank1/designsystem/commit/ffa8833f269d9697e416ca383bb4f34b2d9d09e2))
+
+
+### BREAKING CHANGES
+
+* **ffe-core:** ny font i alt innhold
+
+
+
+
+
 ## [17.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@17.1.0...@sb1/ffe-core@17.1.1) (2021-03-08)
 
 

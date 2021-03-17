@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@9.0.6...@sb1/ffe-cards@10.0.0) (2021-03-17)
+
+
+### Bug Fixes
+
+* **ffe-cards:** bytter ut museo sans med ny sparebank1-font ([f0b9ac9](https://github.com/SpareBank1/designsystem/commit/f0b9ac93d3d7fbe8961593743a7b712b65fa77a9))
+
+
+### BREAKING CHANGES
+
+* **ffe-cards:** ny font i alt innhold
+
+
+
+
+
 ## [9.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@9.0.5...@sb1/ffe-cards@9.0.6) (2021-03-15)
 
 

@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [11.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@10.0.4...@sb1/ffe-buttons@11.0.0) (2021-03-17)
+
+
+### Bug Fixes
+
+* **ffe-buttons:** bytter ut museo sans med ny sparebank1-font ([81dc093](https://github.com/SpareBank1/designsystem/commit/81dc093d0e3dcbcbe62ef214474891f004ebe210))
+
+
+### BREAKING CHANGES
+
+* **ffe-buttons:** ny font i alt innhold
+
+
+
+
+
 ## [10.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@10.0.3...@sb1/ffe-buttons@10.0.4) (2021-03-15)
 
 
