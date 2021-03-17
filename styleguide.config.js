@@ -68,7 +68,7 @@ module.exports = {
             codeBackground: '#F8F5EB',
         },
         fontFamily: {
-            base: ['MuseoSans-500', 'arial', 'sans-serif'],
+            base: ['SpareBank1-regular', 'arial', 'sans-serif'],
         },
     },
     pagePerSection: true,

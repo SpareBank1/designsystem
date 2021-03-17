@@ -16,22 +16,22 @@ Vi har ulike regler for skriftstørrelser på mobil og desktop. Her er en oversi
 
 <dl class="sb1ds-typography-hierarchy sb1ds-typography-hierarchy--desktop">
     <dt class="sb1ds-typography-hierarchy__description">Overskrift 1</dt>
-    <dd class="sb1ds-typography-hierarchy__element"><span class="ffe-h1 sb1ds-typography-hierarchy__example sb1ds-typography-hierarchy__example--h1">SpareBank 1 Title</span></dd>
+    <dd class="sb1ds-typography-hierarchy__element"><span class="ffe-h1 sb1ds-typography-hierarchy__example sb1ds-typography-hierarchy__example--h1">SpareBank 1 Title Medium</span></dd>
     <dd class="sb1ds-typography-hierarchy__font-size">46 px</dd>
     <dt class="sb1ds-typography-hierarchy__description">Overskrift 2</dt>
-    <dd class="sb1ds-typography-hierarchy__element"><span class="ffe-h2 sb1ds-typography-hierarchy__example sb1ds-typography-hierarchy__example--h2">SpareBank 1 Title</span></dd>
+    <dd class="sb1ds-typography-hierarchy__element"><span class="ffe-h2 sb1ds-typography-hierarchy__example sb1ds-typography-hierarchy__example--h2">SpareBank 1 Title Medium</span></dd>
     <dd class="sb1ds-typography-hierarchy__font-size">36 px</dd>
     <dt class="sb1ds-typography-hierarchy__description">Overskrift 3</dt>
-    <dd class="sb1ds-typography-hierarchy__element"><span class="ffe-h3 sb1ds-typography-hierarchy__example sb1ds-typography-hierarchy__example--h3">SpareBank 1 Title</span></dd>
+    <dd class="sb1ds-typography-hierarchy__element"><span class="ffe-h3 sb1ds-typography-hierarchy__example sb1ds-typography-hierarchy__example--h3">SpareBank 1 Medium</span></dd>
     <dd class="sb1ds-typography-hierarchy__font-size">28 px</dd>
     <dt class="sb1ds-typography-hierarchy__description">Overskrift 4</dt>
-    <dd class="sb1ds-typography-hierarchy__element"><span class="ffe-h4 sb1ds-typography-hierarchy__example sb1ds-typography-hierarchy__example--h4">SpareBank 1 Title</span></dd>
+    <dd class="sb1ds-typography-hierarchy__element"><span class="ffe-h4 sb1ds-typography-hierarchy__example sb1ds-typography-hierarchy__example--h4">SpareBank 1 Medium</span></dd>
     <dd class="sb1ds-typography-hierarchy__font-size">22 px</dd>
     <dt class="sb1ds-typography-hierarchy__description">Overskrift 5</dt>
-    <dd class="sb1ds-typography-hierarchy__element"><span class="ffe-h5 sb1ds-typography-hierarchy__example sb1ds-typography-hierarchy__example--h5">SpareBank 1 Title</span></dd>
+    <dd class="sb1ds-typography-hierarchy__element"><span class="ffe-h5 sb1ds-typography-hierarchy__example sb1ds-typography-hierarchy__example--h5">SpareBank 1 Medium</span></dd>
     <dd class="sb1ds-typography-hierarchy__font-size">18 px</dd>
     <dt class="sb1ds-typography-hierarchy__description">Overskrift 6</dt>
-    <dd class="sb1ds-typography-hierarchy__element"><span class="ffe-h6 sb1ds-typography-hierarchy__example sb1ds-typography-hierarchy__example--h6">SpareBank 1 Title</span></dd>
+    <dd class="sb1ds-typography-hierarchy__element"><span class="ffe-h6 sb1ds-typography-hierarchy__example sb1ds-typography-hierarchy__example--h6">SpareBank 1 Medium</span></dd>
     <dd class="sb1ds-typography-hierarchy__font-size">16 px</dd>
     <dt class="sb1ds-typography-hierarchy__description">Lead</dt>
     <dd class="sb1ds-typography-hierarchy__element"><span class="ffe-lead-paragraph sb1ds-typography-hierarchy__example sb1ds-typography-hierarchy__example--lead-paragraph">SpareBank 1 Regular</span></dd>
@@ -57,22 +57,22 @@ Vi har ulike regler for skriftstørrelser på mobil og desktop. Her er en oversi
 
 <dl class="sb1ds-typography-hierarchy sb1ds-typography-hierarchy--mobile">
     <dt class="sb1ds-typography-hierarchy__description">Overskrift 1</dt>
-    <dd class="sb1ds-typography-hierarchy__element"><span class="ffe-h1 sb1ds-typography-hierarchy__example sb1ds-typography-hierarchy__example--h1">SpareBank 1 Title</span></dd>
+    <dd class="sb1ds-typography-hierarchy__element"><span class="ffe-h1 sb1ds-typography-hierarchy__example sb1ds-typography-hierarchy__example--h1">SpareBank 1 Title Medium</span></dd>
     <dd class="sb1ds-typography-hierarchy__font-size">28 px</dd>
     <dt class="sb1ds-typography-hierarchy__description">Overskrift 2</dt>
-    <dd class="sb1ds-typography-hierarchy__element"><span class="ffe-h2 sb1ds-typography-hierarchy__example sb1ds-typography-hierarchy__example--h2">SpareBank 1 Title</span></dd>
+    <dd class="sb1ds-typography-hierarchy__element"><span class="ffe-h2 sb1ds-typography-hierarchy__example sb1ds-typography-hierarchy__example--h2">SpareBank 1 Title Medium</span></dd>
     <dd class="sb1ds-typography-hierarchy__font-size">24 px</dd>
     <dt class="sb1ds-typography-hierarchy__description">Overskrift 3</dt>
-    <dd class="sb1ds-typography-hierarchy__element"><span class="ffe-h3 sb1ds-typography-hierarchy__example sb1ds-typography-hierarchy__example--h3">SpareBank 1 Title</span></dd>
+    <dd class="sb1ds-typography-hierarchy__element"><span class="ffe-h3 sb1ds-typography-hierarchy__example sb1ds-typography-hierarchy__example--h3">SpareBank 1 Medium</span></dd>
     <dd class="sb1ds-typography-hierarchy__font-size">20 px</dd>
     <dt class="sb1ds-typography-hierarchy__description">Overskrift 4</dt>
-    <dd class="sb1ds-typography-hierarchy__element"><span class="ffe-h4 sb1ds-typography-hierarchy__example sb1ds-typography-hierarchy__example--h4">SpareBank 1 Title</span></dd>
+    <dd class="sb1ds-typography-hierarchy__element"><span class="ffe-h4 sb1ds-typography-hierarchy__example sb1ds-typography-hierarchy__example--h4">SpareBank 1 Medium</span></dd>
     <dd class="sb1ds-typography-hierarchy__font-size">18 px</dd>
     <dt class="sb1ds-typography-hierarchy__description">Overskrift 5</dt>
-    <dd class="sb1ds-typography-hierarchy__element"><span class="ffe-h5 sb1ds-typography-hierarchy__example sb1ds-typography-hierarchy__example--h5">SpareBank 1 Title</span></dd>
+    <dd class="sb1ds-typography-hierarchy__element"><span class="ffe-h5 sb1ds-typography-hierarchy__example sb1ds-typography-hierarchy__example--h5">SpareBank 1 Medium</span></dd>
     <dd class="sb1ds-typography-hierarchy__font-size">17 px</dd>
     <dt class="sb1ds-typography-hierarchy__description">Overskrift 6</dt>
-    <dd class="sb1ds-typography-hierarchy__element"><span class="ffe-h6 sb1ds-typography-hierarchy__example sb1ds-typography-hierarchy__example--h6">SpareBank 1 Title</span></dd>
+    <dd class="sb1ds-typography-hierarchy__element"><span class="ffe-h6 sb1ds-typography-hierarchy__example sb1ds-typography-hierarchy__example--h6">SpareBank 1 Medium</span></dd>
     <dd class="sb1ds-typography-hierarchy__font-size">16 px</dd>
     <dt class="sb1ds-typography-hierarchy__description">Lead</dt>
     <dd class="sb1ds-typography-hierarchy__element"><span class="ffe-lead-paragraph sb1ds-typography-hierarchy__example sb1ds-typography-hierarchy__example--lead-paragraph">SpareBank 1 Regular</span></dd>
