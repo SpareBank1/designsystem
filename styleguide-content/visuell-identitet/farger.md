@@ -511,3 +511,114 @@ Her er en oversikt over gråtoner, svart og andre nøytrale farger vi har behov 
         </div>
     </li>
 </ul>
+
+### Dark mode
+
+Oversikt over farger som brukes når dark mode er aktivert.
+
+<ul class="sb1ds-color-palette sb1ds-color-palette--darkmode">
+    <li class="sb1ds-color-palette__item">
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--darkmode-svart">
+            <h4 class="sb1ds-color-palette__color-name">Svart</h4>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-darkmode-svart</dd>
+                <dt>HEX:</dt>
+                <dd>#000000</dd>
+                <dt>RGB:</dt>
+                <dd>0, 0, 0</dd>
+            </dl>
+        </div>
+    </li>
+    <li class="sb1ds-color-palette__item">
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--darkmode-koksgraa">
+            <h4 class="sb1ds-color-palette__color-name">Koksgrå</h4>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-darkmode-koksgraa</dd>
+                <dt>HEX:</dt>
+                <dd>#1c1c1c</dd>
+                <dt>RGB:</dt>
+                <dd>28, 28, 28</dd>
+            </dl>
+        </div>
+    </li>
+    <li class="sb1ds-color-palette__item">
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--darkmode-moerkgraa">
+            <h4 class="sb1ds-color-palette__color-name">Mørk grå</h4>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-darkmode-moerkgraa</dd>
+                <dt>HEX:</dt>
+                <dd>#292929</dd>
+                <dt>RGB:</dt>
+                <dd>41, 41, 41</dd>
+            </dl>
+        </div>
+    </li>
+    <li class="sb1ds-color-palette__item">
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--darkmode-graa">
+            <h4 class="sb1ds-color-palette__color-name">Grå</h4>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-darkmode-graa</dd>
+                <dt>HEX:</dt>
+                <dd>#858585</dd>
+                <dt>RGB:</dt>
+                <dd>133, 133, 133</dd>
+            </dl>
+        </div>
+    </li>
+    <li class="sb1ds-color-palette__item">
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--darkmode-lysgraa">
+            <h4 class="sb1ds-color-palette__color-name">Lys grå</h4>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-darkmode-lysgraa</dd>
+                <dt>HEX:</dt>
+                <dd>#cccccc</dd>
+                <dt>RGB:</dt>
+                <dd>204, 204, 204</dd>
+            </dl>
+        </div>
+    </li>
+    <li class="sb1ds-color-palette__item">
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--darkmode-vann">
+            <h4 class="sb1ds-color-palette__color-name">Vann</h4>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-darkmode-vann</dd>
+                <dt>HEX:</dt>
+                <dd>#0a91ff</dd>
+                <dt>RGB:</dt>
+                <dd>10, 145, 255</dd>
+            </dl>
+        </div>
+    </li>
+    <li class="sb1ds-color-palette__item">
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--darkmode-baer">
+            <h4 class="sb1ds-color-palette__color-name">Bær</h4>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-darkmode-baer</dd>
+                <dt>HEX:</dt>
+                <dd>#ff2424</dd>
+                <dt>RGB:</dt>
+                <dd>255, 36, 36</dd>
+            </dl>
+        </div>
+    </li>
+    <li class="sb1ds-color-palette__item">
+        <div class="sb1ds-color-palette__color sb1ds-color-palette__color--darkmode-hvit">
+            <h4 class="sb1ds-color-palette__color-name">Hvit</h4>
+            <dl class="sb1ds-color-palette__color-properties">
+                <dt>LESS:</dt>
+                <dd>@ffe-farge-darkmode-hvit</dd>
+                <dt>HEX:</dt>
+                <dd>#ffffff</dd>
+                <dt>RGB:</dt>
+                <dd>255, 255, 255</dd>
+            </dl>
+        </div>
+    </li>
+</ul>
