@@ -16,11 +16,7 @@ export default function SuggestionList(props) {
     return isLoading ? (
         <Spinner center={true} large={true} />
     ) : (
-        <ul
-            className="ffe-base-selector__suggestion-container-list"
-            role="listbox"
-            id={id}
-        >
+        <ul className="ffe-base-selector__suggestion-container-list" id={id}>
             {suggestions.length > 0 ? (
                 suggestions.map((item, index) => (
                     <SuggestionItem

@@ -55,7 +55,6 @@ function mountSuggestionListContainer(props = propsSuggestionListContainer()) {
 describe('<SuggestionList />', () => {
     it('highlighted <Suggestion> set to highlightedIndex', () => {
         const wrapper = mountSuggestionList();
-        const suggestionList = wrapper.find('[role="listbox"]');
         const firstRow = suggestionList.childAt(0);
         const secondRow = suggestionList.childAt(1);
 

@@ -69,7 +69,6 @@ export default function SuggestionList(props) {
                     ref={ref}
                     id={id}
                     className={'ffe-base-selector__suggestion-container-list'}
-                    role="listbox"
                     {...forwardProps}
                 />
             ))}
@@ -87,11 +86,7 @@ export default function SuggestionList(props) {
             {Row}
         </List>
     ) : (
-        <ul
-            className="ffe-base-selector__suggestion-container-list"
-            role="listbox"
-            id={id}
-        >
+        <ul className="ffe-base-selector__suggestion-container-list" id={id}>
             <li>{renderNoMatches()}</li>
         </ul>
     );
