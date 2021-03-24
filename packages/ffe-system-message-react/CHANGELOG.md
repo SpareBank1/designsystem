@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.2.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@6.2.5...@sb1/ffe-system-message-react@6.2.6) (2021-03-24)
+
+
+### Bug Fixes
+
+* **ffe-system-message-react:** make icon prop in SystemErrorMessage optional ([765f0c6](https://github.com/SpareBank1/designsystem/commit/765f0c6ddd191d3bfa483ea2ea317474aaf67f45))
+
+
+
+
+
 ## [6.2.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@6.2.4...@sb1/ffe-system-message-react@6.2.5) (2021-03-15)
 
 
