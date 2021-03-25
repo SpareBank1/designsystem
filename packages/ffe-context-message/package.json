@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-context-message",
-  "version": "4.0.20",
+  "version": "4.0.21",
   "description": "Messagebox showing non-critical tip or information about a page or product",
   "keywords": [
     "ffe"
@@ -19,7 +19,7 @@
     "test": "npm run lint"
   },
   "devDependencies": {
-    "@sb1/ffe-core": "^18.0.0"
+    "@sb1/ffe-core": "^18.1.0"
   },
   "peerDependencies": {
     "@sb1/ffe-core": "*"

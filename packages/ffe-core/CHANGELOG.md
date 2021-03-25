@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [18.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@18.0.0...@sb1/ffe-core@18.1.0) (2021-03-25)
+
+
+### Features
+
+* **ffe-core:** oppdatert darkmode-spesifikk fargepalett ([e98d98a](https://github.com/SpareBank1/designsystem/commit/e98d98ab7c5a969e09d96eac03eee34adad6baa0))
+
+
+
+
+
 # [18.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@17.1.1...@sb1/ffe-core@18.0.0) (2021-03-17)
 
 

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [16.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@16.0.0...@sb1/ffe-form@16.0.1) (2021-03-25)
+
+**Note:** Version bump only for package @sb1/ffe-form
+
+
+
+
+
 # [16.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@15.0.4...@sb1/ffe-form@16.0.0) (2021-03-17)
 
 
