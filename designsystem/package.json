@@ -78,6 +78,6 @@
     "react-live": "^2.2.3",
     "react-router-dom": "^5.2.0",
     "rollup": "^2.40.0",
-    "snowpack": "^3.0.13"
+    "snowpack": "~3.0.13"
   }
 }
