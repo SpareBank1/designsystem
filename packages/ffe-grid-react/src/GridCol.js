@@ -11,12 +11,6 @@ import {
 import classNames from 'classnames';
 import backgroundColors, { removedColors } from './background-colors';
 
-import {
-    checkForDeprecatedModifiers,
-    checkForNestedComponent,
-    checkValidColumnCount,
-} from './utils';
-
 function camelCaseToDashCase(str) {
     return str
         .split('')
@@ -85,15 +79,6 @@ export default class GridCol extends Component {
         super();
 
         this.ref = createRef();
-    }
-
-    componentDidMount() {
-        /* istanbul ignore else: there is no else  */
-        if (process.env.NODE_ENV !== 'production') {
-            checkForDeprecatedModifiers(this.props);
-            checkForNestedComponent(this.props.children, GridCol);
-            checkValidColumnCount(this.props, this.ref.current);
-        }
     }
 
     render() {

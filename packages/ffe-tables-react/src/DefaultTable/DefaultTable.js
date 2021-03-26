@@ -6,7 +6,7 @@ import TableFooter from '../TableParts/TableFooter';
 import TableRow from '../TableParts/TableRow';
 import TableRowExpandable from '../TableParts/TableRowExpandable';
 
-class Table extends Component {
+class DefaultTable extends Component {
     renderTableCaption() {
         const { caption, srOnlyCaption } = this.props;
 
@@ -165,7 +165,7 @@ class Table extends Component {
     }
 }
 
-Table.propTypes = {
+DefaultTable.propTypes = {
     alignLeft: PropTypes.bool,
     columnLayoutMobile: PropTypes.bool,
     caption: PropTypes.node,
@@ -190,11 +190,11 @@ Table.propTypes = {
     className: PropTypes.string,
 };
 
-Table.defaultProps = {
+DefaultTable.defaultProps = {
     columns: [],
     data: [],
     offset: 0,
     limit: 0,
 };
 
-export default Table;
+export default DefaultTable;

@@ -10,15 +10,15 @@ import {
     shape,
     string,
 } from 'prop-types';
-import TableComponent from './Table/Table';
-import SortableTableComponent from './SortableTable/SortableTable';
+import DefaultTable from './DefaultTable/DefaultTable';
+import SortableTable from './SortableTable/SortableTable';
 
 const Table = props => {
     const { sortable, ...rest } = props;
     if (sortable) {
-        return <SortableTableComponent {...rest} />;
+        return <SortableTable {...rest} />;
     }
-    return <TableComponent {...rest} />;
+    return <DefaultTable {...rest} />;
 };
 
 Table.propTypes = {

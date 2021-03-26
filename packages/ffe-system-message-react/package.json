@@ -9,6 +9,7 @@
     "types"
   ],
   "main": "lib/index.js",
+  "module": "es/index.js",
   "types": "types/index.d.ts",
   "repository": {
     "type": "git",
