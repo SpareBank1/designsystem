@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.2.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@6.2.6...@sb1/ffe-system-message-react@6.2.7) (2021-03-26)
+
+
+### Bug Fixes
+
+* **ffe-system-message-react:** add npm module path ([ab74c15](https://github.com/SpareBank1/designsystem/commit/ab74c15fe0c468720eeb7f187d1224df1cf4dbeb))
+
+
+
+
+
 ## [6.2.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@6.2.5...@sb1/ffe-system-message-react@6.2.6) (2021-03-24)
 
 

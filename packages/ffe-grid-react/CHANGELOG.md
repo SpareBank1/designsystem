@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@10.1.4...@sb1/ffe-grid-react@10.1.5) (2021-03-26)
+
+
+### Bug Fixes
+
+* **ffe-grid-react:** remove check for nested grids ([6304ddc](https://github.com/SpareBank1/designsystem/commit/6304ddcbfdc6373bec426484c116463069c3772a))
+
+
+
+
+
 ## [10.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@10.1.3...@sb1/ffe-grid-react@10.1.4) (2021-03-15)
 
 
