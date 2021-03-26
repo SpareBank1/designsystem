@@ -65,7 +65,7 @@ jobs:
 
             - name: 'Lerna: Release'
               if: steps.merge.outputs.should_publish == 'true'
-              run: 'npm run lerna -- publish --yes --scope="@sb1/*"'
+              run: 'npm run lerna -- publish --yes'
 
             - name: 'GIT: Merge master into develop'
               if: steps.merge.outputs.should_publish == 'true'
