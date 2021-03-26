@@ -1,0 +1,100 @@
+:root {
+    --ffe-farge-vann: #005aa4;
+    --ffe-farge-fjell: #002776;
+    --ffe-farge-sand: #f8e9dd;
+    --ffe-farge-frost: #7eb5d2;
+    --ffe-farge-syrin: #d3d3ea;
+    --ffe-farge-villblomst: #ee8d9c;
+    --ffe-farge-hvit: #fff;
+
+    --toc-column-count: 1;
+}
+
+@media (min-width: 768px) {
+    :root {
+        --toc-column-count: 2;
+    }
+}
+
+@media (min-width: 1024px) {
+    :root {
+        --toc-column-count: 3;
+    }
+}
+
+@media (min-width: 1280px) {
+    :root {
+        --toc-column-count: 4;
+    }
+}
+
+body {
+    margin: 0;
+    background-color: var(--ffe-farge-vann);
+    color: white;
+}
+
+.sb1ex-header {
+    background-color: var(--ffe-farge-fjell);
+    color: var(--ffe-farge-syrin);
+    padding: 16px;
+}
+
+.sb1ex-header__headline {
+    font-family: 'SpareBank1-title-medium', arial, sans-serif;
+    font-weight: 400;
+    margin: 0;
+}
+
+.sb1ex-main {
+    background-color: var(--ffe-farge-hvit);
+    color: var(--ffe-farge-fjell);
+    padding: 18px 12px 0;
+}
+
+.sb1ex-toc {
+    column-count: var(--toc-column-count);
+}
+
+.sb1ex-toc__group {
+    break-inside: avoid;
+}
+
+.sb1ex-toc__example-list {
+    padding-bottom: 32px;
+}
+
+.sb1ex-toc__example-list-item {
+    margin-bottom: 6px;
+}
+
+.sb1ex-live__editor {
+    background-color: white;
+    margin-top: 48px;
+}
+
+.sb1ex-live__error {
+    background-color: var(--ffe-farge-villblomst);
+    margin: 0;
+    padding: 8px 16px;
+}
+
+.sb1ex-aside {
+    background-color: var(--ffe-farge-syrin);
+    padding: 12px;
+    margin: 48px -12px 0;
+}
+
+.sb1ex-aside__link {
+    display: inline-block;
+    margin-right: 12px;
+}
+
+.sb1ex-aside__icon {
+    fill: var(--ffe-farge-fjell);
+    width: 40px;
+}
+
+.sb1ex-aside__example-id {
+    text-align: right;
+}
