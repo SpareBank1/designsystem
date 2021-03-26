@@ -65,6 +65,7 @@
     "@sb1/ffe-webfonts": "^3.0.0"
   },
   "devDependencies": {
+    "@axe-core/react": "^4.1.1",
     "@rollup/plugin-json": "^4.1.0",
     "@snowpack/plugin-react-refresh": "^2.4.0",
     "acorn": "^8.0.5",
