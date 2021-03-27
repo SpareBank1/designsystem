@@ -13,6 +13,7 @@
     "type": "git",
     "url": "ssh://git@github.com:SpareBank1/designsystem.git"
   },
+  "private": true,
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
