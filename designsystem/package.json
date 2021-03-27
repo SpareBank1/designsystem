@@ -1,6 +1,6 @@
 {
   "name": "@sparebank1/designsystem",
-  "version": "1.0.0-alpha",
+  "version": "1.0.0-alpha.0",
   "description": "Designsystemet",
   "license": "MIT",
   "author": "SpareBank 1 Utvikling",
@@ -14,7 +14,7 @@
     "url": "ssh://git@github.com:SpareBank1/designsystem.git"
   },
   "publishConfig": {
-    "registry":"https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com"
   },
   "scripts": {
     "build": "make all",
