@@ -1,20 +1,9 @@
 import React from 'react';
-import { func, object, bool, arrayOf, string } from 'prop-types';
+import { func, object, bool } from 'prop-types';
 
-const ListItemContainer = ({
-    getItemProps,
-    item,
-    isHighlighted,
-    dropdownAttributes,
-    children,
-}) => {
-    const [titleAttribute] = dropdownAttributes;
-    const itemProps = getItemProps({
-        item: item[titleAttribute],
-        key: item[titleAttribute],
-    });
+const ListItemContainer = ({ item, isHighlighted, children, ...itemProps }) => {
     return (
-        <div
+        <li
             {...itemProps}
             className="ffe-searchable-dropdown__list-item-container"
         >
@@ -22,15 +11,13 @@ const ListItemContainer = ({
                 item,
                 isHighlighted,
             })}
-        </div>
+        </li>
     );
 };
 
 ListItemContainer.propTypes = {
-    getItemProps: func.isRequired,
     item: object.isRequired,
     isHighlighted: bool.isRequired,
-    dropdownAttributes: arrayOf(string).isRequired,
     children: func.isRequired,
 };
 

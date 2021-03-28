@@ -1,33 +1,32 @@
-import React, { useMemo, useRef } from 'react';
+import React, { useMemo } from 'react';
 import {
-    string,
     arrayOf,
-    shape,
-    number,
-    func,
     bool,
+    func,
+    number,
     object,
     oneOf,
     oneOfType,
+    shape,
+    string,
 } from 'prop-types';
 import classNames from 'classnames';
-import Downshift from 'downshift';
-import { Scrollbars } from 'react-custom-scrollbars';
+import { useCombobox } from 'downshift';
 import isEqual from 'lodash.isequal';
 
-import { KryssIkon, ChevronIkon } from '@sb1/ffe-icons-react';
+import { ChevronIkon, KryssIkon } from '@sb1/ffe-icons-react';
 import { Paragraph } from '@sb1/ffe-core-react';
+import Scrollbars from 'react-custom-scrollbars';
 
 import filterDropdownList from './filterDropdownList';
 import ListItemContainer from './ListItemContainer';
 import ListItemBody from './ListItemBody';
 import {
-    locales,
     getButtonLabelClear,
     getButtonLabelClose,
     getButtonLabelOpen,
+    locales,
 } from './translations';
-import findSelectedItem from './findSelectedItem';
 
 const SearchableDropdown = ({
     id,
@@ -46,186 +45,162 @@ const SearchableDropdown = ({
     locale,
     'aria-invalid': ariaInvalid,
 }) => {
-    const inputEl = useRef(null);
-
     const initialSelectedItem = useMemo(
         () => dropdownList.find(item => isEqual(initialValue, item)),
         [dropdownList, initialValue],
     );
-
     const ListItemBodyElement = CustomListItemBody || ListItemBody;
 
+    const {
+        isOpen,
+        getToggleButtonProps,
+        getMenuProps,
+        getInputProps,
+        getComboboxProps,
+        highlightedIndex,
+        getItemProps,
+        inputValue,
+        selectedItem,
+        reset,
+        openMenu,
+    } = useCombobox({
+        items: dropdownList,
+        itemToString: item => item[searchAttributes[0]],
+        labelId,
+        initialSelectedItem,
+        onSelectedItemChange: ({ selectedItem: _selectedItem }) =>
+            onChange(_selectedItem),
+    });
+
+    const trimmedInput = inputValue.trim();
+
+    const shouldFilter =
+        trimmedInput.length > 0 && trimmedInput !== selectedItem;
+    const dropdownListFiltered = shouldFilter
+        ? filterDropdownList(
+              dropdownList,
+              searchAttributes,
+              trimmedInput,
+          ).slice(0, maxRenderedDropdownElements)
+        : dropdownList.slice(0, maxRenderedDropdownElements);
+
+    const listToRender = dropdownListFiltered.length
+        ? dropdownListFiltered
+        : noMatch.dropdownList || [];
+
+    const {
+        onFocus = Function.prototype,
+        className: inputClassName,
+        ...restInputProps
+    } = inputProps;
+
     return (
-        <Downshift
-            inputId={id}
-            labelId={labelId}
-            initialSelectedItem={
-                initialSelectedItem
-                    ? initialSelectedItem[dropdownAttributes[0]]
-                    : null
-            }
-            onChange={value =>
-                onChange(
-                    findSelectedItem(value, dropdownList, dropdownAttributes),
-                )
-            }
-        >
-            {({
-                getInputProps,
-                getItemProps,
-                getMenuProps,
-                isOpen,
-                inputValue,
-                highlightedIndex,
-                selectedItem,
-                openMenu,
-                closeMenu,
-                clearSelection,
-            }) => {
-                const trimmedInput = inputValue.trim();
-
-                const shouldFilter =
-                    trimmedInput.length > 0 && trimmedInput !== selectedItem;
-                const dropdownListFiltered = shouldFilter
-                    ? filterDropdownList(
-                          dropdownList,
-                          searchAttributes,
-                          trimmedInput,
-                      ).slice(0, maxRenderedDropdownElements)
-                    : dropdownList.slice(0, maxRenderedDropdownElements);
-
-                const listToRender = dropdownListFiltered.length
-                    ? dropdownListFiltered
-                    : noMatch.dropdownList || [];
-
-                const {
-                    onFocus = Function.prototype,
-                    onBlur = Function.prototype,
-                    onClick = Function.prototype,
-                    ...restInputProps
-                } = inputProps;
-
-                return (
-                    <div
-                        className={classNames(
-                            className,
-                            'ffe-searchable-dropdown',
+        <>
+            <div
+                className={classNames(className, 'ffe-searchable-dropdown', {
+                    'ffe-searchable-dropdown--dark': dark,
+                })}
+                {...getComboboxProps()}
+            >
+                <input
+                    {...getInputProps({
+                        id,
+                        className: classNames(
+                            'ffe-input-field',
+                            inputClassName,
                             {
-                                'ffe-searchable-dropdown--dark': dark,
+                                'ffe-input-field--dark': dark,
+                            },
+                        ),
+                        ...restInputProps,
+                    })}
+                    aria-invalid={
+                        typeof ariaInvalid === 'string'
+                            ? ariaInvalid
+                            : String(!!ariaInvalid)
+                    }
+                    onFocus={e => {
+                        e.preventDefault();
+                        onFocus(e);
+                        if (!selectedItem) {
+                            openMenu();
+                        }
+                    }}
+                />
+                {selectedItem ? (
+                    <button
+                        type="button"
+                        aria-label={getButtonLabelClear(locale)}
+                        className="ffe-searchable-dropdown__button ffe-searchable-dropdown__button--cross"
+                        onClick={reset}
+                    >
+                        <KryssIkon aria-hidden="true" />
+                    </button>
+                ) : (
+                    <button
+                        {...getToggleButtonProps()}
+                        aria-label={
+                            isOpen
+                                ? getButtonLabelClose(locale)
+                                : getButtonLabelOpen(locale)
+                        }
+                        className={classNames(
+                            'ffe-searchable-dropdown__button ffe-searchable-dropdown__button--arrow',
+                            {
+                                'ffe-searchable-dropdown__button--flip': isOpen,
                             },
                         )}
                     >
-                        <input
-                            ref={inputEl}
-                            {...getInputProps({
-                                className: classNames('ffe-input-field', {
-                                    'ffe-input-field--dark': dark,
-                                }),
-                                onFocus: (...args) => {
-                                    openMenu();
-                                    onFocus(...args);
-                                },
-                                onBlur: (...args) => {
-                                    closeMenu();
-                                    onBlur(...args);
-                                },
-                                onClick: (...args) => {
-                                    openMenu();
-                                    onClick(...args);
-                                },
-                                ...restInputProps,
+                        <ChevronIkon aria-hidden="true" />
+                    </button>
+                )}
+            </div>
+            <div
+                className={classNames('ffe-searchable-dropdown__list', {
+                    'ffe-searchable-dropdown__list--open': isOpen,
+                })}
+            >
+                <Scrollbars autoHeight={true} autoHeightMax={300}>
+                    <ul {...getMenuProps({})}>
+                        {isOpen &&
+                            listToRender.map((item, index) => {
+                                return (
+                                    <ListItemContainer
+                                        {...getItemProps({ item, index })}
+                                        key={item[dropdownAttributes[0]]}
+                                        isHighlighted={
+                                            index === highlightedIndex
+                                        }
+                                        item={item}
+                                    >
+                                        {props => {
+                                            return (
+                                                <ListItemBodyElement
+                                                    {...props}
+                                                    dropdownAttributes={
+                                                        dropdownAttributes
+                                                    }
+                                                />
+                                            );
+                                        }}
+                                    </ListItemContainer>
+                                );
                             })}
-                            aria-invalid={
-                                typeof ariaInvalid === 'string'
-                                    ? ariaInvalid
-                                    : String(!!ariaInvalid)
-                            }
-                        />
-                        {selectedItem ? (
-                            <button
-                                type="button"
-                                aria-label={getButtonLabelClear(locale)}
-                                className="ffe-searchable-dropdown__button ffe-searchable-dropdown__button--cross"
-                                onClick={clearSelection}
-                            >
-                                <KryssIkon />
-                            </button>
-                        ) : (
-                            <button
-                                type="button"
-                                aria-label={
-                                    isOpen
-                                        ? getButtonLabelClose(locale)
-                                        : getButtonLabelOpen(locale)
-                                }
-                                className={classNames(
-                                    'ffe-searchable-dropdown__button ffe-searchable-dropdown__button--arrow',
-                                    {
-                                        'ffe-searchable-dropdown__button--flip': isOpen,
-                                    },
-                                )}
-                                onClick={isOpen ? closeMenu : openMenu}
-                            >
-                                <ChevronIkon />
-                            </button>
-                        )}
-                        <div
-                            className={classNames(
-                                'ffe-searchable-dropdown__list',
-                                {
-                                    'ffe-searchable-dropdown__list--open': isOpen,
-                                },
-                            )}
-                        >
-                            <Scrollbars
-                                {...getMenuProps()}
-                                autoHeight={true}
-                                autoHeightMax={300}
-                            >
-                                {!dropdownListFiltered.length &&
-                                    noMatch.text &&
-                                    isOpen && (
-                                        <div className="ffe-searchable-dropdown__no-match">
-                                            <Paragraph>
-                                                {noMatch.text}
-                                            </Paragraph>
-                                        </div>
-                                    )}
-                                {isOpen &&
-                                    listToRender.map((item, index) => {
-                                        return (
-                                            <ListItemContainer
-                                                key={
-                                                    item[dropdownAttributes[0]]
-                                                }
-                                                dropdownAttributes={
-                                                    dropdownAttributes
-                                                }
-                                                getItemProps={getItemProps}
-                                                isHighlighted={
-                                                    index === highlightedIndex
-                                                }
-                                                item={item}
-                                            >
-                                                {props => {
-                                                    return (
-                                                        <ListItemBodyElement
-                                                            {...props}
-                                                            dropdownAttributes={
-                                                                dropdownAttributes
-                                                            }
-                                                        />
-                                                    );
-                                                }}
-                                            </ListItemContainer>
-                                        );
-                                    })}
-                            </Scrollbars>
-                        </div>
+                    </ul>
+                </Scrollbars>
+            </div>
+            {!dropdownListFiltered.length && noMatch.text && isOpen && (
+                <div
+                    className={classNames('ffe-searchable-dropdown__list', {
+                        'ffe-searchable-dropdown__list--open': isOpen,
+                    })}
+                >
+                    <div className="ffe-searchable-dropdown__no-match">
+                        <Paragraph>{noMatch.text}</Paragraph>
                     </div>
-                );
-            }}
-        </Downshift>
+                </div>
+            )}
+        </>
     );
 };
 
