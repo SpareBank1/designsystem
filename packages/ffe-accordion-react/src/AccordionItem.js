@@ -43,6 +43,8 @@ const AccordionItem = ({
         ...rest
     } = accordionProps;
 
+    const collapseHidden = !isExpanded && !isAnimating;
+
     return (
         <div
             className={classNames(className, 'ffe-accordion-item', {
@@ -78,10 +80,12 @@ const AccordionItem = ({
                 onRest={() => setIsAnimating(false)}
                 id={contentId.current}
                 aria-labelledby={buttonId.current}
-                hidden={!isExpanded && !isAnimating}
+                hidden={collapseHidden}
                 role="region"
             >
-                <div className="ffe-accordion-body">{children}</div>
+                {!collapseHidden && (
+                    <div className="ffe-accordion-body">{children}</div>
+                )}
             </Collapse>
         </div>
     );
