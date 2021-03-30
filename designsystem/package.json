@@ -1,6 +1,6 @@
 {
   "name": "@sparebank1/designsystem",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0-alpha.1",
   "description": "Designsystemet",
   "license": "MIT",
   "author": "SpareBank 1 Utvikling",
@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "@sb1/ffe-accordion": "^7.0.10",
-    "@sb1/ffe-accordion-react": "^9.2.2",
+    "@sb1/ffe-accordion-react": "^9.2.3",
     "@sb1/ffe-account-selector-react": "^15.0.10",
     "@sb1/ffe-buttons": "^11.0.1",
     "@sb1/ffe-buttons-react": "^12.2.11",

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.2.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@9.2.2...@sb1/ffe-accordion-react@9.2.3) (2021-03-30)
+
+
+### Performance Improvements
+
+* **ffe-accordion-react:** dont render collapsed content when closed ([b500738](https://github.com/SpareBank1/designsystem/commit/b500738fb54937f32cb64431e3c4d72114520766))
+
+
+
+
+
 ## [9.2.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@9.2.1...@sb1/ffe-accordion-react@9.2.2) (2021-03-15)
 
 
