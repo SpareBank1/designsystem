@@ -21,9 +21,6 @@ const InputGroup = ({
 }) => {
     const [id] = useState(inputId ? inputId : `input-${uuid()}`);
     const descriptionId = description ? `${id}-description` : undefined;
-    const fieldMessageId = fieldMessage
-        ? (fieldMessage.props && fieldMessage.props.id) || `${id}-fieldmessage`
-        : undefined;
 
     if (React.Children.count(children) > 1) {
         throw new Error(
@@ -56,8 +53,7 @@ const InputGroup = ({
 
     const hasMessage = !!fieldMessage;
 
-    const ariaDescribedBy =
-        `${fieldMessageId || ''} ${descriptionId || ''}`.trim() || undefined;
+    const ariaDescribedBy = `${descriptionId || ''}`.trim() || null;
 
     const extraProps = {
         id,
@@ -109,14 +105,11 @@ const InputGroup = ({
             {modifiedChildren}
 
             {typeof fieldMessage === 'string' && (
-                <ErrorFieldMessage element="p" id={fieldMessageId}>
+                <ErrorFieldMessage element="p">
                     {fieldMessage}
                 </ErrorFieldMessage>
             )}
-            {React.isValidElement(fieldMessage) &&
-                React.cloneElement(fieldMessage, {
-                    id: fieldMessageId,
-                })}
+            {React.isValidElement(fieldMessage) && fieldMessage}
         </div>
     );
 };
