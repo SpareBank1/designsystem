@@ -7,6 +7,7 @@
     }
 
     &__list {
+        display: none;
         background: @ffe-white;
         position: absolute;
         width: 100%;
@@ -22,6 +23,7 @@
         }
 
         &--open {
+            display: block;
             height: auto;
             border: 1px solid @ffe-grey-silver;
             .native & {
@@ -117,6 +119,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        &--hidden {
+            display: none;
+        }
 
         &:hover {
             border: 2px solid @ffe-blue-azure;
