@@ -53,6 +53,7 @@ function assertHomeEnd(keyCode, stubMethodName) {
 describe('<BaseSelector> methods', () => {
     it('should show suggestions on input change', done => {
         const value = 'test';
+        const event = { target: { value } };
         const onChangeSpy = jest.fn();
         const onSuggestionListChangeSpy = jest.fn();
         const component = mountBaseSelector({
@@ -60,9 +61,9 @@ describe('<BaseSelector> methods', () => {
             onSuggestionListChange: onSuggestionListChangeSpy,
         }).instance();
 
-        component.onInputChange(value);
+        component.onInputChange(event);
         expect(component.state.showSuggestions).toBe(true);
-        expect(onChangeSpy).toHaveBeenCalledWith(value);
+        expect(onChangeSpy).toHaveBeenCalledWith(value, event);
         setTimeout(() => {
             expect(onSuggestionListChangeSpy).toHaveBeenCalledTimes(1);
             done();
@@ -260,7 +261,7 @@ describe('<BaseSelector> methods', () => {
             .find('.ffe-base-selector__input-field')
             .simulate('change', event);
 
-        expect(onInputChange).toHaveBeenCalledWith(value);
+        expect(onInputChange).toHaveBeenCalledTimes(1);
     });
 
     it('should call onBlur on input blur', () => {

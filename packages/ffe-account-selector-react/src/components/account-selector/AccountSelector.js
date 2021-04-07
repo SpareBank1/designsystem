@@ -50,9 +50,9 @@ class AccountSelector extends Component {
         this.props.onAccountSelected(account);
     }
 
-    onInputChange(value) {
+    onInputChange(value, event) {
         this.enableFilter = true;
-        this.props.onChange(value);
+        this.props.onChange(value, event);
     }
 
     onSuggestionSelect(suggestion) {

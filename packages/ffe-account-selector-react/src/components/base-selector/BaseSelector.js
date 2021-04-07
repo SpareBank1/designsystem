@@ -44,15 +44,13 @@ class BaseSelector extends Component {
         return 0;
     }
 
-    onInputChange(val) {
-        if (val !== this.props.value) {
+    onInputChange(event) {
+        if (event.target.value !== this.props.value) {
             this.setState(
                 { showSuggestions: true, highlightedSuggestionIndex: -1 },
-                () => {
-                    this.props.onChange(val);
-                    this._onSuggestionListChange();
-                },
+                () => this._onSuggestionListChange(),
             );
+            this.props.onChange(event.target.value, event);
         }
     }
 

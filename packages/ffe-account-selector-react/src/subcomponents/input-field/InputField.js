@@ -27,8 +27,6 @@ const InputField = props => {
         onChange,
         onReset,
     } = props;
-    const handleChange = ({ target: { value: newValue } }) =>
-        onChange(newValue);
 
     const handleReset = e => {
         e.preventDefault();
@@ -72,7 +70,7 @@ const InputField = props => {
                 aria-autocomplete="list"
                 name={name}
                 onClick={onClick}
-                onChange={handleChange}
+                onChange={onChange}
                 readOnly={readOnly}
             />
             {showReset && (

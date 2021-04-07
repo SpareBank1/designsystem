@@ -42,5 +42,5 @@ initialState = { value: '' };
         value={state.value}
         selectedAccount={state.selectedAccount}
     />
-</React.Fragment>
+</React.Fragment>;
 ```
