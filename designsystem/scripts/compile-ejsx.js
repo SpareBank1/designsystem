@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 const path = require('path');
-const { writeFile, readFile, mkdir } = require('fs/promises');
+const { writeFile, readFile, mkdir } = require('fs').promises;
 const transformSourceCode = require('./lib/transformExampleCode');
 const createExampleModule = require('./lib/createExampleModule');
 
