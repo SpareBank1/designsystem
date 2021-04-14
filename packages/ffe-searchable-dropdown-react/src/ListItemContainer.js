@@ -1,21 +1,25 @@
-import React from 'react';
-import { func, object, bool, arrayOf, string } from 'prop-types';
+import React, { useRef } from 'react';
+import { any, bool, func, object, oneOfType, shape } from 'prop-types';
+import { v4 as uuid } from 'uuid';
 
 const ListItemContainer = ({
-    getItemProps,
     item,
     isHighlighted,
-    dropdownAttributes,
     children,
+    forwardedRef,
+    onMouseEnter,
+    onClick,
 }) => {
-    const [titleAttribute] = dropdownAttributes;
-    const itemProps = getItemProps({
-        item: item[titleAttribute],
-        key: item[titleAttribute],
-    });
+    const id = useRef(`ìtem-${uuid()}`);
     return (
+        // eslint-disable-next-line jsx-a11y/interactive-supports-focus
         <div
-            {...itemProps}
+            id={id.current}
+            role="option"
+            onMouseEnter={onMouseEnter}
+            aria-selected={isHighlighted}
+            ref={forwardedRef}
+            onClick={onClick}
             className="ffe-searchable-dropdown__list-item-container"
         >
             {children({
@@ -27,11 +31,14 @@ const ListItemContainer = ({
 };
 
 ListItemContainer.propTypes = {
-    getItemProps: func.isRequired,
     item: object.isRequired,
     isHighlighted: bool.isRequired,
-    dropdownAttributes: arrayOf(string).isRequired,
     children: func.isRequired,
+    forwardedRef: oneOfType([func, shape({ current: any })]),
+    onMouseEnter: func,
+    onClick: func,
 };
 
-export default ListItemContainer;
+export default React.forwardRef((props, ref) => {
+    return <ListItemContainer {...props} forwardedRef={ref} />;
+});
