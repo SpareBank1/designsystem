@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [15.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@15.0.1...@sb1/ffe-header@15.1.0) (2021-04-14)
+
+
+### Features
+
+* **ffe-header:** adds MuseoSans font as fallback font ([f217fa7](https://github.com/SpareBank1/designsystem/commit/f217fa7f248b5c9b2722325acf951acc7666632c))
+
+
+
+
+
 ## [15.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@15.0.0...@sb1/ffe-header@15.0.1) (2021-03-25)
 
 **Note:** Version bump only for package @sb1/ffe-header

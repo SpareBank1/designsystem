@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [9.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@9.0.1...@sb1/ffe-tabs@9.1.0) (2021-04-14)
+
+
+### Features
+
+* **ffe-tabs:** adds MuseoSans font as fallback font ([9287223](https://github.com/SpareBank1/designsystem/commit/92872237c8a7896c127f3dacb7d94f9c024ac5b4))
+
+
+
+
+
 ## [9.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@9.0.0...@sb1/ffe-tabs@9.0.1) (2021-03-25)
 
 **Note:** Version bump only for package @sb1/ffe-tabs

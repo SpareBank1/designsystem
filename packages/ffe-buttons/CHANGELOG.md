@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [11.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@11.0.1...@sb1/ffe-buttons@11.1.0) (2021-04-14)
+
+
+### Features
+
+* **ffe-buttons:** adds MuseoSans font as fallback font ([b7e5e42](https://github.com/SpareBank1/designsystem/commit/b7e5e429657542ed7c21987d2a4a4c91acf831ae))
+
+
+
+
+
 ## [11.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@11.0.0...@sb1/ffe-buttons@11.0.1) (2021-03-25)
 
 **Note:** Version bump only for package @sb1/ffe-buttons

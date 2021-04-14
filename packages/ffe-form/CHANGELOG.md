@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [16.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@16.0.1...@sb1/ffe-form@16.1.0) (2021-04-14)
+
+
+### Features
+
+* **ffe-form:** adds MuseoSans font as fallback font ([078e4db](https://github.com/SpareBank1/designsystem/commit/078e4dbf94ad62cbf7f5b4b1203008a39813ae8a))
+
+
+
+
+
 ## [16.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@16.0.0...@sb1/ffe-form@16.0.1) (2021-03-25)
 
 **Note:** Version bump only for package @sb1/ffe-form

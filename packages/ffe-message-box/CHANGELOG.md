@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@8.0.0...@sb1/ffe-message-box@8.1.0) (2021-04-14)
+
+
+### Features
+
+* **ffe-message-box:** adds MuseoSans font as fallback font ([893cd34](https://github.com/SpareBank1/designsystem/commit/893cd346f7741a38da46c50427e1207ffa6dcff9))
+
+
+
+
+
 # [8.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@7.0.2...@sb1/ffe-message-box@8.0.0) (2021-03-17)
 
 

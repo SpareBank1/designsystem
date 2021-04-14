@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [18.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@18.1.0...@sb1/ffe-core@18.2.0) (2021-04-14)
+
+
+### Features
+
+* **ffe-core:** adds MuseoSans font as fallback font ([7947c53](https://github.com/SpareBank1/designsystem/commit/7947c53fd823f2ad43e44a212d933c08773a67e5))
+
+
+
+
+
 # [18.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@18.0.0...@sb1/ffe-core@18.1.0) (2021-03-25)
 
 
