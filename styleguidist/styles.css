@@ -515,7 +515,7 @@ html {
 .ffe-file-upload__upload-section-subtext,
 .ffe-radio-button__tooltip-text.ffe-tooltip__text {
   color: #676767;
-  font-family: 'SpareBank1-regular', arial, sans-serif;
+  font-family: 'SpareBank1-regular', 'MuseoSans-500', arial, sans-serif;
   font-weight: normal;
   line-height: 1.25rem;
   font-size: 0.875rem;
@@ -529,7 +529,7 @@ html {
 .ffe-file-upload__file-item-error-filename,
 .ffe-file-upload__file-item-error-message {
   color: #676767;
-  font-family: 'SpareBank1-regular', arial, sans-serif;
+  font-family: 'SpareBank1-regular', 'MuseoSans-500', arial, sans-serif;
   font-weight: normal;
   line-height: 1.25rem;
   font-size: 0.75rem;
@@ -643,7 +643,7 @@ html {
 .ffe-h1,
 .ffe-h2,
 .ffe-link-card--plain > .ffe-link-card__number {
-  font-family: 'SpareBank1-title-medium', arial, sans-serif;
+  font-family: 'SpareBank1-title-medium', 'MuseoSansRounded-700', arial, sans-serif;
 }
 .ffe-h3,
 .ffe-h4,
@@ -655,7 +655,7 @@ html {
 .ffe-file-upload__title,
 .ffe-file-upload__upload-section-title,
 .ffe-table__caption {
-  font-family: 'SpareBank1-medium', arial, sans-serif;
+  font-family: 'SpareBank1-medium', 'MuseoSansRounded-700', arial, sans-serif;
 }
 .ffe-body-text,
 .ffe-product-card__details,
@@ -664,7 +664,7 @@ html {
 .ffe-description-list .ffe-description-list__description,
 .ffe-description-list-multicol .ffe-description-list__description {
   color: #262626;
-  font-family: 'SpareBank1-regular', arial, sans-serif;
+  font-family: 'SpareBank1-regular', 'MuseoSans-500', arial, sans-serif;
   line-height: 1.5rem;
   font-size: 1rem;
 }
@@ -692,7 +692,7 @@ html {
 }
 .ffe-lead-paragraph,
 .ffe-sub-lead-paragraph {
-  font-family: 'SpareBank1-regular', arial, sans-serif;
+  font-family: 'SpareBank1-regular', 'MuseoSans-500', arial, sans-serif;
   margin-top: 0;
 }
 .ffe-lead-paragraph {
@@ -784,7 +784,7 @@ html {
 .ffe-table__footer,
 .ffe-table__heading,
 .ffe-table [data-th]::before {
-  font-family: 'SpareBank1-medium', arial, sans-serif;
+  font-family: 'SpareBank1-medium', 'MuseoSansRounded-700', arial, sans-serif;
   font-weight: normal;
 }
 .ffe-em-text {
@@ -1422,7 +1422,7 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-family: 'SpareBank1-regular', arial, sans-serif;
+  font-family: 'SpareBank1-regular', 'MuseoSans-500', arial, sans-serif;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -2023,7 +2023,7 @@ html {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  font-family: 'SpareBank1-regular', arial, sans-serif;
+  font-family: 'SpareBank1-regular', 'MuseoSans-500', arial, sans-serif;
   margin: 0 -4px;
   overflow: hidden;
   padding: 0 4px;
@@ -2482,7 +2482,7 @@ html {
 }
 .ffe-link-card--large > .ffe-link-card__details {
   color: #002776;
-  font-family: 'SpareBank1-medium', arial, sans-serif;
+  font-family: 'SpareBank1-medium', 'MuseoSansRounded-700', arial, sans-serif;
   font-size: 1.25rem;
   line-height: 2.2rem;
 }
@@ -2578,7 +2578,7 @@ html {
   }
   .ffe-link-card--medium > .ffe-link-card__heading,
   .ffe-link-card--large > .ffe-link-card__heading {
-    font-family: 'SpareBank1-regular', arial, sans-serif;
+    font-family: 'SpareBank1-regular', 'MuseoSans-500', arial, sans-serif;
     font-size: 1.25rem;
     margin-bottom: 20px;
     margin-top: 0;
@@ -2591,7 +2591,7 @@ html {
   .ffe-link-card--medium > .ffe-link-card__details,
   .ffe-link-card--large > .ffe-link-card__details {
     color: #002776;
-    font-family: 'SpareBank1-medium', arial, sans-serif;
+    font-family: 'SpareBank1-medium', 'MuseoSansRounded-700', arial, sans-serif;
     font-size: 1.5rem;
     line-height: 6.875rem;
     position: absolute;
@@ -2768,7 +2768,7 @@ html {
     margin-top: 18px;
   }
   .ffe-product-card__heading {
-    font-family: 'SpareBank1-regular', arial, sans-serif;
+    font-family: 'SpareBank1-regular', 'MuseoSans-500', arial, sans-serif;
     font-size: 1.25rem;
     max-width: 100%;
     margin-top: 17px;
@@ -3987,7 +3987,7 @@ html {
   display: block;
   height: 45px;
   padding: 0 16px;
-  font-family: 'SpareBank1-regular', arial, sans-serif;
+  font-family: 'SpareBank1-regular', 'MuseoSans-500', arial, sans-serif;
   color: #262626;
   border-radius: 4px;
   border: 2px solid #ccc;
@@ -4157,7 +4157,7 @@ html {
   display: block;
   width: 100%;
   padding: 16px;
-  font-family: 'SpareBank1-regular', arial, sans-serif;
+  font-family: 'SpareBank1-regular', 'MuseoSans-500', arial, sans-serif;
   border-radius: 4px;
   border: 2px solid #ccc;
   -webkit-transition: all 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
@@ -4246,7 +4246,7 @@ html {
   color: #262626;
   display: block;
   background-image: url('data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3Asvg%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20x%3D%220%22%20y%3D%220%22%20viewBox%3D%220%200%201000%201000%22%20width%3D%2218%22%20height%3D%2218%22%20xml%3Aspace%3D%22preserve%22%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%230071cd%22%20d%3D%22M111.1%20228.6c19.2%200%2038.4%207.3%2053%2022l336.7%20336.7%20334.5-334.5c29.3-29.3%2076.8-29.3%20106.1%200%2029.3%2029.3%2029.3%2076.8%200%20106.1L553.8%20746.3c-29.3%2029.3-76.8%2029.3-106.1%200L58.1%20356.6c-29.3-29.3-29.3-76.8%200-106.1C72.7%20235.9%2091.9%20228.6%20111.1%20228.6z%22%20%2F%3E%0A%3C%2Fsvg%3E%0A');
-  font-family: 'SpareBank1-regular', arial, sans-serif;
+  font-family: 'SpareBank1-regular', 'MuseoSans-500', arial, sans-serif;
   height: 45px;
   padding: 0 32px 0 16px;
   line-height: 20px;
@@ -4805,7 +4805,7 @@ html {
   min-width: 100px;
   text-align: left;
   color: #0071cd;
-  font-family: 'SpareBank1-medium', arial, sans-serif;
+  font-family: 'SpareBank1-medium', 'MuseoSansRounded-700', arial, sans-serif;
   cursor: pointer;
   -webkit-transition: all 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
   -o-transition: all 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
@@ -5222,7 +5222,7 @@ html {
   padding: 8px 0 4px;
   display: inline-block;
   position: relative;
-  font-family: 'SpareBank1-regular', arial, sans-serif;
+  font-family: 'SpareBank1-regular', 'MuseoSans-500', arial, sans-serif;
   font-size: 0.9375rem;
   font-weight: 500;
   font-style: normal;
@@ -6723,7 +6723,7 @@ input:not([type='radio']):not([type='checkbox']) {
   text-transform: uppercase;
 }
 .ffe-header__notification-bubble {
-  font-family: 'SpareBank1-medium', arial, sans-serif;
+  font-family: 'SpareBank1-medium', 'MuseoSansRounded-700', arial, sans-serif;
   font-weight: normal;
   font-size: 0.75rem;
   display: inline-block;
@@ -7312,7 +7312,7 @@ input:not([type='radio']):not([type='checkbox']) {
 }
 .ffe-message-box__link:hover,
 .ffe-message-box__link:focus {
-  font-family: 'SpareBank1-medium', arial, sans-serif;
+  font-family: 'SpareBank1-medium', 'MuseoSansRounded-700', arial, sans-serif;
 }
 .ffe-searchable-dropdown {
   position: relative;
@@ -7321,6 +7321,7 @@ input:not([type='radio']):not([type='checkbox']) {
   padding-right: calc(40px + 3px);
 }
 .ffe-searchable-dropdown__list {
+  display: none;
   background: #fff;
   position: absolute;
   width: 100%;
@@ -7336,6 +7337,7 @@ input:not([type='radio']):not([type='checkbox']) {
   }
 }
 .ffe-searchable-dropdown__list--open {
+  display: block;
   height: auto;
   border: 1px solid #ccc;
 }
@@ -7429,6 +7431,9 @@ input:not([type='radio']):not([type='checkbox']) {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.ffe-searchable-dropdown__button--hidden {
+  display: none;
 }
 .ffe-searchable-dropdown__button:hover {
   border: 2px solid #0071cd;
@@ -8167,7 +8172,7 @@ input:not([type='radio']):not([type='checkbox']) {
   color: #676767;
   cursor: pointer;
   display: block;
-  font-family: 'SpareBank1-regular', arial, sans-serif;
+  font-family: 'SpareBank1-regular', 'MuseoSans-500', arial, sans-serif;
   font-size: 1rem;
   outline: none;
   overflow: hidden;
@@ -8290,7 +8295,7 @@ input:not([type='radio']):not([type='checkbox']) {
   color: #676767;
   cursor: pointer;
   display: block;
-  font-family: 'SpareBank1-regular', arial, sans-serif;
+  font-family: 'SpareBank1-regular', 'MuseoSans-500', arial, sans-serif;
   font-size: 1rem;
   outline: none;
   overflow: hidden;
@@ -8492,7 +8497,7 @@ input:not([type='radio']):not([type='checkbox']) {
   color: #002776;font-weight: normal;margin-bottom: 10px;margin-top: 0;
 }
 .sb1ds-sidebar__menu > .sb1ds-components-list > .sb1ds-components-list__item > .sb1ds-components-list__link--heading {
-  font-family: 'SpareBank1-medium', arial, sans-serif;
+  font-family: 'SpareBank1-medium', 'MuseoSansRounded-700', arial, sans-serif;
 }
 @media (min-width: 480px) {
   .sb1ds-sidebar__menu > .sb1ds-components-list > .sb1ds-components-list__item > .sb1ds-components-list__link--heading {
@@ -10694,7 +10699,7 @@ body {
 .sb1ds h4,
 .sb1ds h5,
 .sb1ds h6 {
-  font-family: 'SpareBank1-medium', arial, sans-serif;
+  font-family: 'SpareBank1-medium', 'MuseoSansRounded-700', arial, sans-serif;
   font-weight: normal;
 }
 @media screen and (min-width: 1024px) {
