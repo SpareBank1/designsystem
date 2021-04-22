@@ -1,3 +1,13 @@
+@details-height: 32px;
+
+.ffe-account-selector-container {
+    /*
+     * Disables margin collapse, which allows styling based on
+     * withSpaceForDetails even when AccountSelector is wrapped in InputGroup
+     */
+    padding: 0.05px;
+}
+
 .ffe-account-selector {
     @import 'account-suggestion';
     @import 'mixins';
@@ -6,10 +16,14 @@
     position: relative;
     display: block;
 
+    &--with-space-for-details {
+        margin-bottom: @details-height;
+    }
+
     &__details {
-        font-size: 0.875rem;
-        padding: @ffe-spacing-xs @ffe-spacing-2xs;
+        padding: @ffe-spacing-2xs;
         color: @ffe-black;
+        min-height: @details-height;
 
         .native & {
             @media (prefers-color-scheme: dark) {

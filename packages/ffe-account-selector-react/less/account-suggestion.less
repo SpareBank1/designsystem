@@ -16,6 +16,12 @@
     &--highlighted {
         background: @ffe-blue-azure;
         color: @ffe-white;
+
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background: @ffe-blue-azure;
+            }
+        }
         .ffe-account-suggestion__name,
         .ffe-account-suggestion__details {
             color: @ffe-white;
