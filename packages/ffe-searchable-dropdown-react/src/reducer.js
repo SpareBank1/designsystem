@@ -1,7 +1,6 @@
 import { getListToRender } from './getListToRender';
 
 export const stateChangeTypes = {
-    InputBlur: 'InputBlur',
     InputFocus: 'InputFocus',
     InputClick: 'InputClick',
     InputChange: 'InputChange',
@@ -10,6 +9,7 @@ export const stateChangeTypes = {
     InputKeyDownArrowDown: 'InputKeyDownArrowDown',
     InputKeyDownArrowUp: 'InputKeyDownArrowUp',
     ClearButtonPressed: 'ClearButtonPressed',
+    ClearedInputField: 'ClearedInputField',
     ToggleButtonPressed: 'ToggleButtonPressed',
     ItemOnClick: 'ItemOnMouseDown',
     ItemOnMouseEnter: 'ItemOnMouseEnter',
@@ -21,9 +21,9 @@ export const createReducer = ({
     dropdownList,
     noMatchDropdownList,
     maxRenderedDropdownElements,
+    searchMatcher,
 }) => (state, action) => {
     switch (action.type) {
-        case stateChangeTypes.InputBlur:
         case stateChangeTypes.InputKeyDownEscape:
             return {
                 ...state,
@@ -41,6 +41,7 @@ export const createReducer = ({
                 maxRenderedDropdownElements,
                 dropdownList,
                 noMatchDropdownList,
+                searchMatcher,
             });
 
             return {
@@ -58,6 +59,7 @@ export const createReducer = ({
                 maxRenderedDropdownElements,
                 dropdownList,
                 noMatchDropdownList,
+                searchMatcher,
             });
 
             return {
@@ -66,9 +68,15 @@ export const createReducer = ({
                 inputValue: action.payload.inputValue,
                 prevResultCount: state.listToRender.length,
                 listToRender,
+                highlightedIndex:
+                    action.payload.inputValue.trim() === '' ||
+                    state.listToRender.length === 0
+                        ? -1
+                        : 0,
                 noMatch,
             };
         }
+        case stateChangeTypes.ClearedInputField:
         case stateChangeTypes.ClearButtonPressed: {
             const { noMatch, listToRender } = getListToRender({
                 inputValue: '',
@@ -77,6 +85,7 @@ export const createReducer = ({
                 dropdownList,
                 prevResultCount: state.listToRender.length,
                 noMatchDropdownList,
+                searchMatcher,
             });
             return {
                 ...state,
@@ -122,6 +131,10 @@ export const createReducer = ({
                 ...state,
                 isExpanded: false,
                 highlightedIndex: -1,
+                inputValue:
+                    state.selectedItem && state.inputValue !== ''
+                        ? state.selectedItem[searchAttributes[0]]
+                        : '',
             };
         }
         default:

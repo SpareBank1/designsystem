@@ -1,5 +1,6 @@
 import React from 'react';
-import { render, fireEvent, screen } from '@testing-library/react';
+import { render, screen, act } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 
 import SearchableDropdown from './SearchableDropdown';
 
@@ -36,7 +37,7 @@ describe('SearchableDropdown', () => {
 
         const input = screen.getByRole('combobox');
 
-        fireEvent.change(input, { target: { value: 'Be' } });
+        userEvent.type(input, 'Be');
 
         expect(screen.getByText('Bedriften')).toBeInTheDocument();
         expect(screen.getByText('912602370')).toBeInTheDocument();
@@ -45,7 +46,8 @@ describe('SearchableDropdown', () => {
         expect(screen.getByText('Beslag skytter')).toBeInTheDocument();
         expect(screen.getByText('812602552')).toBeInTheDocument();
 
-        fireEvent.change(input, { target: { value: '8126023' } });
+        userEvent.clear(input);
+        userEvent.type(input, '8126023');
 
         expect(screen.queryByText('Bedriften')).toBeNull();
         expect(screen.queryByText('912602370')).toBeNull();
@@ -71,9 +73,9 @@ describe('SearchableDropdown', () => {
 
         const input = screen.getByRole('combobox');
 
-        fireEvent.change(input, { target: { value: 'Be' } });
+        userEvent.type(input, 'Be');
 
-        fireEvent.click(screen.getByText('Bedriften'), { button: 1 });
+        userEvent.click(screen.getByText('Bedriften'), { button: 1 });
 
         expect(onChange).toHaveBeenCalledTimes(1);
         expect(onChange).toHaveBeenCalledWith(companies[0]);
@@ -95,11 +97,11 @@ describe('SearchableDropdown', () => {
         );
 
         const input = screen.getByRole('combobox');
-        fireEvent.click(input);
+        userEvent.click(input);
 
-        fireEvent.keyDown(input, { key: 'ArrowDown' });
-        fireEvent.keyDown(input, { key: 'ArrowDown' });
-        fireEvent.keyDown(input, { key: 'Enter' });
+        userEvent.type(input, '{arrowdown}');
+        userEvent.type(input, '{arrowdown}');
+        userEvent.type(input, '{enter}');
 
         expect(onChange).toHaveBeenCalledTimes(1);
         expect(onChange).toHaveBeenCalledWith(companies[1]);
@@ -137,10 +139,8 @@ describe('SearchableDropdown', () => {
         );
 
         const input = screen.getByRole('combobox');
-        fireEvent.click(input);
-        fireEvent.change(input, {
-            target: { value: 'some thing without a match' },
-        });
+        userEvent.click(input);
+        userEvent.type(input, 'some thing without a match');
 
         expect(screen.getByText(noMatchText)).toBeInTheDocument();
         expect(screen.getByText('Rør og sånt')).toBeInTheDocument();
@@ -148,7 +148,7 @@ describe('SearchableDropdown', () => {
         expect(screen.getByText('Kaffekoppen')).toBeInTheDocument();
         expect(screen.getByText('812602222')).toBeInTheDocument();
 
-        fireEvent.change(input, { target: { value: '' } });
+        userEvent.clear(input);
 
         expect(screen.queryByText(noMatchText)).toBeNull();
         expect(screen.queryByText('Rør og sånt')).toBeNull();
@@ -172,9 +172,9 @@ describe('SearchableDropdown', () => {
         );
 
         const input = screen.getByRole('combobox');
-        fireEvent.change(input, { target: { value: 'Be' } });
+        userEvent.type(input, 'Be');
 
-        fireEvent.click(screen.getByText('Bedriften'), { button: 1 });
+        userEvent.click(screen.getByText('Bedriften'), { button: 1 });
 
         expect(onChange).toHaveBeenCalledTimes(1);
         expect(onChange).toHaveBeenLastCalledWith(companies[0]);
@@ -184,7 +184,7 @@ describe('SearchableDropdown', () => {
             name: /fjern valgt/i,
         });
 
-        fireEvent.click(clearButton, { button: 1 });
+        userEvent.click(clearButton);
 
         expect(onChange).toHaveBeenCalledTimes(2);
         expect(onChange).toHaveBeenLastCalledWith(null);
@@ -221,9 +221,9 @@ describe('SearchableDropdown', () => {
         );
 
         const input = screen.getByRole('combobox');
-        fireEvent.click(input);
+        userEvent.click(input);
 
-        fireEvent.keyDown(input, { key: 'ArrowDown' });
+        userEvent.type(input, '{arrowdown}');
 
         const listItemBody0 = screen.getByTestId(
             companies[0].organizationNumber,
@@ -288,7 +288,7 @@ describe('SearchableDropdown', () => {
             name: /åpne alternativer/i,
         });
 
-        fireEvent.click(openButton, { button: 1 });
+        userEvent.click(openButton, { button: 1 });
 
         expect(screen.getByText('Bedriften')).toBeInTheDocument();
         expect(screen.getByText('912602370')).toBeInTheDocument();
@@ -301,7 +301,7 @@ describe('SearchableDropdown', () => {
             name: /lukk alternativer/i,
         });
 
-        fireEvent.click(closeButton, { button: 1 });
+        userEvent.click(closeButton, { button: 1 });
 
         expect(screen.queryByText('Bedriften')).toBeNull();
         expect(screen.queryByText('912602370')).toBeNull();
@@ -325,7 +325,7 @@ describe('SearchableDropdown', () => {
 
         const input = screen.getByRole('combobox');
 
-        fireEvent.click(input);
+        userEvent.click(input);
 
         expect(screen.getByText('Bedriften')).toBeInTheDocument();
         expect(screen.getByText('912602370')).toBeInTheDocument();
@@ -334,7 +334,7 @@ describe('SearchableDropdown', () => {
         expect(screen.getByText('Beslag skytter')).toBeInTheDocument();
         expect(screen.getByText('812602552')).toBeInTheDocument();
 
-        fireEvent.change(input, { target: { value: 'Sønn' } });
+        userEvent.type(input, 'Sønn');
 
         expect(screen.queryByText('Bedriften')).toBeNull();
         expect(screen.queryByText('912602370')).toBeNull();
@@ -343,7 +343,7 @@ describe('SearchableDropdown', () => {
         expect(screen.queryByText('Beslag skytter')).toBeNull();
         expect(screen.queryByText('812602552')).toBeNull();
 
-        fireEvent.change(input, { target: { value: '' } });
+        userEvent.clear(input);
 
         expect(screen.getByText('Bedriften')).toBeInTheDocument();
         expect(screen.getByText('912602370')).toBeInTheDocument();
@@ -367,9 +367,9 @@ describe('SearchableDropdown', () => {
 
         const input = screen.getByRole('combobox');
 
-        fireEvent.click(input);
-        fireEvent.keyDown(input, { key: 'ArrowDown' });
-        fireEvent.keyDown(input, { key: 'ArrowDown' });
+        userEvent.click(input);
+        userEvent.type(input, '{arrowdown}');
+        userEvent.type(input, '{arrowdown}');
 
         const listBox = screen.getByRole('listbox');
         const options = screen.getAllByRole('option');
@@ -389,5 +389,234 @@ describe('SearchableDropdown', () => {
                 index === 1 ? 'true' : 'false',
             ),
         );
+    });
+
+    it('should highlight the first element when typing', () => {
+        const onChange = jest.fn();
+        const { container } = render(
+            <SearchableDropdown
+                id="id"
+                labelId="labelId"
+                dropdownAttributes={['organizationName', 'organizationNumber']}
+                dropdownList={companies}
+                onChange={onChange}
+                searchAttributes={['organizationName', 'organizationNumber']}
+                locale="nb"
+            />,
+        );
+
+        const input = screen.getByRole('combobox');
+        userEvent.click(input);
+
+        userEvent.type(input, 'Be');
+
+        const highlightedElements = container.querySelectorAll(
+            '.ffe-searchable-dropdown__list-item-body--highlighted',
+        );
+        expect(highlightedElements).toHaveLength(1);
+        expect(highlightedElements[0].innerHTML).toContain('Bedriften');
+    });
+
+    it('should call onChange(null) when emptying the input field and moving focus away', () => {
+        const onChange = jest.fn();
+        render(
+            <div>
+                <button>Knapp</button>
+                <SearchableDropdown
+                    id="id"
+                    labelId="labelId"
+                    dropdownAttributes={[
+                        'organizationName',
+                        'organizationNumber',
+                    ]}
+                    dropdownList={companies}
+                    onChange={onChange}
+                    searchAttributes={[
+                        'organizationName',
+                        'organizationNumber',
+                    ]}
+                    locale="nb"
+                />
+            </div>,
+        );
+
+        const input = screen.getByRole('combobox');
+
+        userEvent.type(input, 'Be');
+
+        userEvent.click(screen.getByText('Bedriften'), { button: 1 });
+
+        userEvent.clear(input);
+
+        act(() => {
+            userEvent.click(screen.getByText('Knapp'));
+        });
+
+        expect(onChange).toHaveBeenCalledTimes(2);
+        expect(onChange).toHaveBeenCalledWith(null);
+        expect(input.value).toEqual('');
+    });
+
+    it('should reset the input field value to the saved selected element when pressing Escape', () => {
+        const onChange = jest.fn();
+        render(
+            <SearchableDropdown
+                id="id"
+                labelId="labelId"
+                dropdownAttributes={['organizationName', 'organizationNumber']}
+                dropdownList={companies}
+                onChange={onChange}
+                searchAttributes={['organizationName', 'organizationNumber']}
+                locale="nb"
+            />,
+        );
+
+        const input = screen.getByRole('combobox');
+
+        userEvent.type(input, 'Be');
+
+        userEvent.click(screen.getByText('Bedriften'), { button: 1 });
+
+        expect(onChange).toHaveBeenCalledTimes(1);
+        expect(onChange).toHaveBeenCalledWith(companies[0]);
+        expect(input.value).toEqual('Bedriften');
+
+        userEvent.clear(input);
+        userEvent.type(input, 'Sø');
+        expect(input.value).toEqual('Sø');
+
+        userEvent.type(input, '{esc}');
+        expect(input.value).toEqual('Bedriften');
+    });
+
+    it('should move focus to input field when selecting from dropdown, and to toggle button when clicking clear button', () => {
+        const onChange = jest.fn();
+        render(
+            <SearchableDropdown
+                id="id"
+                labelId="labelId"
+                dropdownAttributes={['organizationName', 'organizationNumber']}
+                dropdownList={companies}
+                onChange={onChange}
+                searchAttributes={['organizationName', 'organizationNumber']}
+                locale="nb"
+            />,
+        );
+
+        const input = screen.getByRole('combobox');
+        userEvent.click(input);
+        userEvent.click(screen.getByText('Bedriften'), { button: 1 });
+        expect(document.activeElement).toEqual(input);
+
+        const clearButton = screen.getByLabelText('fjern valgt');
+        userEvent.click(clearButton, { button: 1 });
+        const toggleButton = screen.getByLabelText('åpne alternativer');
+        expect(document.activeElement).toEqual(toggleButton);
+    });
+
+    it('should reset the input value to the selected item when losing focus', () => {
+        const onChange = jest.fn();
+        render(
+            <div>
+                <button>Knapp</button>
+                <SearchableDropdown
+                    id="id"
+                    labelId="labelId"
+                    dropdownAttributes={[
+                        'organizationName',
+                        'organizationNumber',
+                    ]}
+                    dropdownList={companies}
+                    onChange={onChange}
+                    searchAttributes={[
+                        'organizationName',
+                        'organizationNumber',
+                    ]}
+                    locale="nb"
+                />
+            </div>,
+        );
+
+        const input = screen.getByRole('combobox');
+
+        userEvent.type(input, 'Be');
+        userEvent.click(screen.getByText('Bedriften'), { button: 1 });
+        expect(input.value).toEqual('Bedriften');
+
+        userEvent.clear(input);
+        userEvent.type(input, 'Besla');
+        expect(input.value).toEqual('Besla');
+
+        act(() => {
+            userEvent.click(screen.getByText('Knapp'));
+        });
+        expect(input.value).toEqual('Bedriften');
+    });
+
+    it('should format input value when passing formatter', () => {
+        const onChange = jest.fn();
+        const formatter = jest.fn(text => {
+            return text
+                .split('')
+                .map(char => `${char}!?_`)
+                .join('');
+        });
+
+        render(
+            <SearchableDropdown
+                id="id"
+                labelId="labelId"
+                dropdownAttributes={['organizationName', 'organizationNumber']}
+                dropdownList={companies}
+                onChange={onChange}
+                searchAttributes={['organizationName', 'organizationNumber']}
+                locale="nb"
+                formatter={formatter}
+            />,
+        );
+
+        const input = screen.getByRole('combobox');
+        userEvent.type(input, 'H');
+        expect(input.value).toEqual('H!?_');
+    });
+
+    it('allows using a custom search matcher', () => {
+        const onChange = jest.fn();
+        const cleanString = value => `${value}`.replace(/h/g, 'sky');
+
+        const searchMatcher = jest.fn(
+            (inputValue, searchAttributes) => item => {
+                const cleanedInputValue = cleanString(inputValue);
+                return searchAttributes
+                    .map(searchAttribute => cleanString(item[searchAttribute]))
+                    .some(cleanedItemAttribute =>
+                        cleanedItemAttribute.includes(cleanedInputValue),
+                    );
+            },
+        );
+
+        render(
+            <SearchableDropdown
+                id="id"
+                labelId="labelId"
+                dropdownAttributes={['organizationName', 'organizationNumber']}
+                dropdownList={companies}
+                onChange={onChange}
+                searchAttributes={['organizationName', 'organizationNumber']}
+                locale="nb"
+                searchMatcher={searchMatcher}
+            />,
+        );
+
+        const input = screen.getByRole('combobox');
+        userEvent.type(input, 'Beslag htter');
+        expect(input.value).toEqual('Beslag htter');
+
+        expect(screen.queryByText('Bedriften')).toBeNull();
+        expect(screen.queryByText('912602370')).toBeNull();
+        expect(screen.queryByText('Sønn & co')).toBeNull();
+        expect(screen.queryByText('812602372')).toBeNull();
+        expect(screen.getByText('Beslag skytter')).toBeInTheDocument();
+        expect(screen.getByText('812602552')).toBeInTheDocument();
     });
 });

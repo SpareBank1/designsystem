@@ -1,10 +1,20 @@
-const filterDropdownList = (dropdownList, searchAttributes, inputValue) => {
-    const inputValueLowerCase = inputValue.toLowerCase();
-    return dropdownList.filter(item =>
-        searchAttributes
-            .map(searchAttribute => item[searchAttribute].toLowerCase())
-            .some(itemAttribute => itemAttribute.includes(inputValueLowerCase)),
-    );
+const toLowerCase = value => `${value}`.toLowerCase();
+
+const filterDropdownList = (
+    dropdownList,
+    searchAttributes,
+    inputValue,
+    searchMatcher,
+) => {
+    const filter = searchMatcher
+        ? searchMatcher(inputValue, searchAttributes)
+        : item =>
+              searchAttributes
+                  .map(searchAttribute => toLowerCase(item[searchAttribute]))
+                  .some(cleanItemAttribute =>
+                      cleanItemAttribute.includes(toLowerCase(inputValue)),
+                  );
+    return dropdownList.filter(filter);
 };
 
 export const getListToRender = ({
@@ -13,6 +23,7 @@ export const getListToRender = ({
     maxRenderedDropdownElements,
     dropdownList,
     noMatchDropdownList,
+    searchMatcher,
 }) => {
     const trimmedInput = inputValue ? inputValue.trim() : '';
 
@@ -23,6 +34,7 @@ export const getListToRender = ({
               dropdownList,
               searchAttributes,
               trimmedInput,
+              searchMatcher,
           ).slice(0, maxRenderedDropdownElements)
         : dropdownList.slice(0, maxRenderedDropdownElements);
 
