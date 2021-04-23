@@ -367,9 +367,12 @@ const SearchableDropdown = ({
                     <div id={listBoxRef.current} role="listbox">
                         {state.isExpanded &&
                             state.listToRender.map((item, index) => {
+                                const key = Object.values(item)
+                                    .join('-')
+                                    .replace(/\s/g, '-');
                                 return (
                                     <ListItemContainer
-                                        key={item[dropdownAttributes[0]]}
+                                        key={key}
                                         ref={refs[index]}
                                         isHighlighted={
                                             state.highlightedIndex === index
