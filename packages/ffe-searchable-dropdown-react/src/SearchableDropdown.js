@@ -1,7 +1,6 @@
 import React, {
     createRef,
     useLayoutEffect,
-    useMemo,
     useReducer,
     useRef,
     useState,
@@ -56,7 +55,6 @@ const SearchableDropdown = ({
     dropdownAttributes,
     searchAttributes,
     maxRenderedDropdownElements = Number.MAX_SAFE_INTEGER,
-    initialValue,
     onChange = Function.prototype,
     inputProps = {},
     listElementBody: CustomListItemBody,
@@ -66,12 +64,8 @@ const SearchableDropdown = ({
     ariaInvalid,
     formatter = value => value,
     searchMatcher,
+    selectedItem,
 }) => {
-    const initialSelectedItem = useMemo(
-        () => dropdownList.find(item => isEqual(initialValue, item)),
-        [dropdownList, initialValue],
-    );
-
     const [state, dispatch] = useReducer(
         createReducer({
             dropdownList,
@@ -83,12 +77,10 @@ const SearchableDropdown = ({
         {
             isExpanded: false,
             prevResultCount: 0,
-            prevSelectedItem: initialSelectedItem,
-            selectedItem: initialSelectedItem,
+            prevSelectedItem: selectedItem,
+            selectedItem,
             highlightedIndex: -1,
-            inputValue: initialSelectedItem
-                ? initialSelectedItem[dropdownAttributes[0]]
-                : '',
+            inputValue: selectedItem ? selectedItem[dropdownAttributes[0]] : '',
         },
         initialState => {
             return {
@@ -132,6 +124,22 @@ const SearchableDropdown = ({
             onChange(null);
         }
     };
+
+    useEffect(() => {
+        if (
+            selectedItem &&
+            dropdownList.some(item => isEqual(item, selectedItem))
+        ) {
+            dispatch({
+                type: stateChangeTypes.ItemSelectedProgrammatically,
+                payload: { selectedItem },
+            });
+        } else {
+            dispatch({
+                type: stateChangeTypes.ItemClearedProgrammatically,
+            });
+        }
+    }, [selectedItem, dropdownList, dispatch]);
 
     useSetAllyMessageItemSelection({
         searchAttributes,
@@ -431,6 +439,9 @@ SearchableDropdown.propTypes = {
     /** List of objects to be displayed in dropdown */
     dropdownList: arrayOf(object).isRequired,
 
+    /** The selected item to be displayed in the input field. If not specified, uses internal state to decide. */
+    selectedItem: object,
+
     /** Array of attributes to be displayed in list */
     dropdownAttributes: arrayOf(string).isRequired,
 
@@ -441,9 +452,6 @@ SearchableDropdown.propTypes = {
     inputProps: shape({
         onFocus: func,
     }),
-
-    /** One of the elements from dropdownList to be used as default value */
-    initialValue: object,
 
     /** Limits number of rendered dropdown elements */
     maxRenderedDropdownElements: number,

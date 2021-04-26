@@ -143,13 +143,36 @@ const searchMatcher = (inputValue, searchAttributes) => item => {
 </InputGroup>;
 ```
 
+Du kan sende inn et `selectedItem` for å programmatisk bestemme hvilket element som skal vises som valgt.
+
+```js
+const { InputGroup } = require('../../ffe-form-react');
+const companies = require('../exampleData').companiesWithMessageCount;
+const labelId = 'labelId5';
+
+initialState = { item: companies[2] };
+
+<InputGroup label="Velg bedrift" labelId={labelId}>
+    <SearchableDropdown
+        labelId={labelId}
+        inputProps={{ placeholder: 'Velg' }}
+        dropdownAttributes={['organizationName', 'organizationNumber']}
+        dropdownList={companies}
+        onChange={item => setState({ item })}
+        searchAttributes={['organizationName', 'organizationNumber']}
+        locale="nb"
+        selectedItem={state.item}
+    />
+</InputGroup>;
+```
+
 Variant _dark_ for interne løsninger med mørk bakgrunn.
 
 ```js { "props": { "className": "sb1ds-example-dark" } }
 const { InputGroup, Label } = require('../../ffe-form-react');
 const companies = require('../exampleData').companiesWithMessageCount;
-const labelId = 'labelId5';
-const inputId = 'inputId5';
+const labelId = 'labelId6';
+const inputId = 'inputId6';
 <div className="ffe-input-group">
     <Label htmlFor={inputId} dark={true} id={labelId}>
         Velg bedrift
