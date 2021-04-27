@@ -3,6 +3,32 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@9.0.11...@sb1/ffe-searchable-dropdown-react@10.0.0) (2021-04-27)
+
+
+### Bug Fixes
+
+* **ffe-searchable-dropdown-react:** Option list keys now use more than one attribute ([911c03e](https://github.com/SpareBank1/designsystem/commit/911c03e370a7747cf839d01162979a3025362517))
+
+
+### Features
+
+* **ffe-searchable-dropdown-react:** Fix some bugs and add some features ([06aca67](https://github.com/SpareBank1/designsystem/commit/06aca6731c930c1f13544df556d063ad0a0c6690))
+
+
+### BREAKING CHANGES
+
+* **ffe-searchable-dropdown-react:** Changed `aria-invalid` to `ariaInvalid`
+
+Add optional input value formatter prop `formatter`.
+Add optional search matcher prop `searchMatcher`.
+Fix clearing when emptying input field.
+Change `aria-invalid` to `ariaInvalid`.
+
+
+
+
+
 ## [9.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@9.0.10...@sb1/ffe-searchable-dropdown-react@9.0.11) (2021-04-14)
 
 

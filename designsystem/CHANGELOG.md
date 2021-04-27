@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.3](https://github.com/SpareBank1/designsystem/compare/@sparebank1/designsystem@1.0.0-alpha.2...@sparebank1/designsystem@1.0.0-alpha.3) (2021-04-27)
+
+
+### Bug Fixes
+
+* **designsystem:** exclude webfonts from css bundle ([574f1da](https://github.com/SpareBank1/designsystem/commit/574f1da94677fdd3ddd77d963d51b10b691ccc71))
+
+
+
+
+
 # [1.0.0-alpha.2](https://github.com/SpareBank1/designsystem/compare/@sparebank1/designsystem@1.0.0-alpha.1...@sparebank1/designsystem@1.0.0-alpha.2) (2021-04-14)
 
 
