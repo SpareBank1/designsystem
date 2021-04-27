@@ -111,6 +111,38 @@ const labelId = 'labelId4';
 </InputGroup>;
 ```
 
+Du kan sende inn en egen matcher-funksjon for søket, for eksempel hvis du vil ignorere mellomrom.
+
+```js
+const { InputGroup } = require('../../ffe-form-react');
+const companies = require('../exampleData').companiesWithMessageCount;
+const labelId = 'labelId4';
+
+const cleanString = value => `${value}`.replace(/\s/g, '').toLowerCase();
+
+const searchMatcher = (inputValue, searchAttributes) => item => {
+    const cleanedInputValue = cleanString(inputValue);
+    return searchAttributes
+        .map(searchAttribute => cleanString(item[searchAttribute]))
+        .some(cleanedItemAttribute =>
+            cleanedItemAttribute.includes(cleanedInputValue),
+        );
+};
+
+<InputGroup label="Velg bedrift" labelId={labelId}>
+    <SearchableDropdown
+        labelId={labelId}
+        inputProps={{ placeholder: 'Velg' }}
+        dropdownAttributes={['organizationName', 'organizationNumber']}
+        dropdownList={companies}
+        onChange={item => setState({ item })}
+        searchAttributes={['organizationName', 'organizationNumber']}
+        locale="nb"
+        searchMatcher={searchMatcher}
+    />
+</InputGroup>;
+```
+
 Variant _dark_ for interne løsninger med mørk bakgrunn.
 
 ```js { "props": { "className": "sb1ds-example-dark" } }

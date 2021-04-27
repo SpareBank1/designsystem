@@ -63,7 +63,9 @@ const SearchableDropdown = ({
     noMatch = {},
     dark,
     locale,
-    'aria-invalid': ariaInvalid,
+    ariaInvalid,
+    formatter = value => value,
+    searchMatcher,
 }) => {
     const initialSelectedItem = useMemo(
         () => dropdownList.find(item => isEqual(initialValue, item)),
@@ -76,6 +78,7 @@ const SearchableDropdown = ({
             searchAttributes,
             maxRenderedDropdownElements,
             noMatchDropdownList: noMatch.dropdownList,
+            searchMatcher,
         }),
         {
             isExpanded: false,
@@ -95,6 +98,7 @@ const SearchableDropdown = ({
                     searchAttributes,
                     maxRenderedDropdownElements,
                     dropdownList,
+                    searchMatcher,
                 }),
             };
         },
@@ -113,6 +117,20 @@ const SearchableDropdown = ({
 
     const handleInputClick = () => {
         dispatch({ type: stateChangeTypes.InputClick });
+    };
+
+    const handleInputBlur = e => {
+        if (inputProps.onBlur) {
+            inputProps.onBlur(e);
+        }
+
+        const hasEmptiedInputFieldWithoutClearButton =
+            state.inputValue.trim() === '' && state.selectedItem;
+
+        if (hasEmptiedInputFieldWithoutClearButton) {
+            dispatch({ type: stateChangeTypes.ClearedInputField });
+            onChange(null);
+        }
     };
 
     useSetAllyMessageItemSelection({
@@ -166,6 +184,7 @@ const SearchableDropdown = ({
 
     const handleKeyDown = event => {
         if (event.key === ENTER && state.highlightedIndex >= 0) {
+            event.preventDefault();
             dispatch({
                 type: stateChangeTypes.InputKeyDownEnter,
                 payload: {
@@ -173,6 +192,7 @@ const SearchableDropdown = ({
                 },
             });
             onChange(state.listToRender[state.highlightedIndex]);
+            shouldFocusInput.current = true;
             return;
         } else if (event.key === ESCAPE) {
             dispatch({ type: stateChangeTypes.InputKeyDownEscape });
@@ -181,34 +201,38 @@ const SearchableDropdown = ({
 
         if (event.key === ARROW_UP) {
             event.preventDefault();
-            const newHighlightedIndex = getNewHighlightedIndexUp(
-                state.highlightedIndex,
-                state.listToRender.length,
-            );
-            dispatch({
-                type: stateChangeTypes.InputKeyDownArrowUp,
-                payload: { highlightedIndex: newHighlightedIndex },
-            });
-            scrollIntoView(
-                refs[newHighlightedIndex].current,
-                listBoxRef.current,
-            );
+            if (state.listToRender.length) {
+                const newHighlightedIndex = getNewHighlightedIndexUp(
+                    state.highlightedIndex,
+                    state.listToRender.length,
+                );
+                dispatch({
+                    type: stateChangeTypes.InputKeyDownArrowUp,
+                    payload: { highlightedIndex: newHighlightedIndex },
+                });
+                scrollIntoView(
+                    refs[newHighlightedIndex].current,
+                    listBoxRef.current,
+                );
+            }
             return;
         }
         if (event.key === ARROW_DOWN) {
             event.preventDefault();
-            const newHighlightedIndex = getNewHighlightedIndexDown(
-                state.highlightedIndex,
-                state.listToRender.length,
-            );
-            dispatch({
-                type: stateChangeTypes.InputKeyDownArrowDown,
-                payload: { highlightedIndex: newHighlightedIndex },
-            });
-            scrollIntoView(
-                refs[newHighlightedIndex].current,
-                listBoxRef.current,
-            );
+            if (state.listToRender.length) {
+                const newHighlightedIndex = getNewHighlightedIndexDown(
+                    state.highlightedIndex,
+                    state.listToRender.length,
+                );
+                dispatch({
+                    type: stateChangeTypes.InputKeyDownArrowDown,
+                    payload: { highlightedIndex: newHighlightedIndex },
+                });
+                scrollIntoView(
+                    refs[newHighlightedIndex].current,
+                    listBoxRef.current,
+                );
+            }
             return;
         }
     };
@@ -240,6 +264,7 @@ const SearchableDropdown = ({
                             payload: { inputValue: e.target.value },
                         });
                     }}
+                    onBlur={handleInputBlur}
                     aria-describedby={
                         [
                             inputProps['aria-describedby'],
@@ -248,7 +273,7 @@ const SearchableDropdown = ({
                             .filter(Boolean)
                             .join(' ') || null
                     }
-                    value={state.inputValue}
+                    value={formatter(state.inputValue)}
                     type="text"
                     role="combobox"
                     autoComplete="off"
@@ -262,7 +287,7 @@ const SearchableDropdown = ({
                         state.highlightedIndex >= 0
                             ? refs[
                                   state.highlightedIndex
-                              ]?.current.getAttribute('id')
+                              ]?.current?.getAttribute('id')
                             : null
                     }
                     aria-invalid={
@@ -328,21 +353,26 @@ const SearchableDropdown = ({
                                     </Paragraph>
                                 </div>
                             ) : (
-                                <Paragraph
-                                    id={notMatchMessageId.current}
-                                    className="ffe-screenreader-only"
-                                >
-                                    {getNotMatchText()}
-                                </Paragraph>
+                                state.listToRender.length === 0 && (
+                                    <Paragraph
+                                        id={notMatchMessageId.current}
+                                        className="ffe-screenreader-only"
+                                    >
+                                        {getNotMatchText()}
+                                    </Paragraph>
+                                )
                             )}
                         </>
                     )}
                     <div id={listBoxRef.current} role="listbox">
                         {state.isExpanded &&
                             state.listToRender.map((item, index) => {
+                                const key = Object.values(item)
+                                    .join('-')
+                                    .replace(/\s/g, '-');
                                 return (
                                     <ListItemContainer
-                                        key={item[dropdownAttributes[0]]}
+                                        key={key}
                                         ref={refs[index]}
                                         isHighlighted={
                                             state.highlightedIndex === index
@@ -374,6 +404,7 @@ const SearchableDropdown = ({
                                                     dropdownAttributes={
                                                         dropdownAttributes
                                                     }
+                                                    locale={locale}
                                                 />
                                             );
                                         }}
@@ -428,7 +459,7 @@ SearchableDropdown.propTypes = {
 
     /** Message and a dropdownList to use when no match */
     noMatch: shape({
-        text: string.isRequired,
+        text: string,
         dropdownList: arrayOf(object),
     }),
 
@@ -436,7 +467,16 @@ SearchableDropdown.propTypes = {
     locale: oneOf(Object.values(locales)),
 
     /** aria-invalid attribute  */
-    'aria-invalid': oneOfType([string, bool]),
+    ariaInvalid: oneOfType([string, bool]),
+
+    /** Function used to format the input field value */
+    formatter: func,
+
+    /**
+     * Function used to decide if an item matches the input field value
+     * (inputValue: string, searchAttributes: string[]) => (item) => boolean
+     */
+    searchMatcher: func,
 };
 
 export default SearchableDropdown;

@@ -6,7 +6,7 @@ interface ListElementBodyProps<T> {
 }
 
 interface NoMatch<T> {
-    text: string;
+    text?: string;
     dropdownList?: T[];
 }
 
@@ -27,7 +27,12 @@ export interface SearchableDropdownProps<T> {
     ) => React.FC<HTMLDivElement>;
     noMatch?: NoMatch<T>;
     locale: 'nn' | 'nb' | 'en';
-    'aria-invalid': 'true' | 'false' | boolean;
+    ariaInvalid: 'true' | 'false' | boolean;
+    formatter?: (value: string) => string;
+    searchMatcher?: (
+        inputValue: string,
+        searchAttributes: (keyof T)[],
+    ) => (item: T) => boolean;
 }
 
 declare class SearchableDropdown<T> extends React.Component<
