@@ -255,23 +255,6 @@ describe('SearchableDropdown', () => {
         ).toBeInTheDocument();
     });
 
-    it('should use initialValue', () => {
-        render(
-            <SearchableDropdown
-                id="id"
-                labelId="labelId"
-                dropdownAttributes={['organizationName', 'organizationNumber']}
-                dropdownList={companies}
-                initialValue={companies[1]}
-                searchAttributes={['organizationName', 'organizationNumber']}
-                locale="nb"
-            />,
-        );
-
-        const input = screen.getByRole('combobox');
-        expect(input.value).toEqual('Sønn & co');
-    });
-
     it('should open and close', function() {
         render(
             <SearchableDropdown
@@ -618,5 +601,145 @@ describe('SearchableDropdown', () => {
         expect(screen.queryByText('812602372')).toBeNull();
         expect(screen.getByText('Beslag skytter')).toBeInTheDocument();
         expect(screen.getByText('812602552')).toBeInTheDocument();
+    });
+
+    it('allows passing a selected item', () => {
+        const onChange = jest.fn();
+
+        const { rerender } = render(
+            <SearchableDropdown
+                id="id"
+                labelId="labelId"
+                dropdownAttributes={['organizationName', 'organizationNumber']}
+                dropdownList={companies}
+                onChange={onChange}
+                searchAttributes={['organizationName', 'organizationNumber']}
+                locale="nb"
+            />,
+        );
+
+        const input = screen.getByRole('combobox');
+
+        expect(input.value).toBe('');
+
+        rerender(
+            <SearchableDropdown
+                id="id"
+                labelId="labelId"
+                dropdownAttributes={['organizationName', 'organizationNumber']}
+                dropdownList={companies}
+                onChange={onChange}
+                searchAttributes={['organizationName', 'organizationNumber']}
+                locale="nb"
+                selectedItem={companies[2]}
+            />,
+        );
+
+        expect(input.value).toBe('Beslag skytter');
+    });
+
+    it('allows for writing and selecting even when passing selectedItem', () => {
+        const onChange = jest.fn();
+        render(
+            <SearchableDropdown
+                id="id"
+                labelId="labelId"
+                dropdownAttributes={['organizationName', 'organizationNumber']}
+                dropdownList={companies}
+                onChange={onChange}
+                searchAttributes={['organizationName', 'organizationNumber']}
+                locale="nb"
+                selectedItem={companies[1]}
+            />,
+        );
+
+        const input = screen.getByRole('combobox');
+
+        expect(input.value).toBe('Sønn & co');
+
+        userEvent.clear(input);
+        userEvent.type(input, 'Be');
+
+        userEvent.click(screen.getByText('Beslag skytter'), { button: 1 });
+
+        expect(onChange).toHaveBeenCalledTimes(1);
+        expect(onChange).toHaveBeenCalledWith(companies[2]);
+        expect(input.value).toEqual('Beslag skytter');
+    });
+
+    it('clears selected item dropdownList changes so that it no longer contains the item in the selectedItem prop', () => {
+        const onChange = jest.fn();
+
+        const { rerender } = render(
+            <SearchableDropdown
+                id="id"
+                labelId="labelId"
+                dropdownAttributes={['organizationName', 'organizationNumber']}
+                dropdownList={companies}
+                onChange={onChange}
+                searchAttributes={['organizationName', 'organizationNumber']}
+                locale="nb"
+                selectedItem={companies[2]}
+            />,
+        );
+
+        const input = screen.getByRole('combobox');
+
+        expect(input.value).toBe('Beslag skytter');
+
+        rerender(
+            <SearchableDropdown
+                id="id"
+                labelId="labelId"
+                dropdownAttributes={['organizationName', 'organizationNumber']}
+                dropdownList={companies.slice(0, 2)}
+                onChange={onChange}
+                searchAttributes={['organizationName', 'organizationNumber']}
+                locale="nb"
+                selectedItem={companies[2]}
+            />,
+        );
+
+        expect(input.value).toBe('');
+    });
+
+    it('clears selected item if the selectedItem prop changes to something that does not exist in dropdownList', () => {
+        const onChange = jest.fn();
+
+        const { rerender } = render(
+            <SearchableDropdown
+                id="id"
+                labelId="labelId"
+                dropdownAttributes={['organizationName', 'organizationNumber']}
+                dropdownList={companies}
+                onChange={onChange}
+                searchAttributes={['organizationName', 'organizationNumber']}
+                locale="nb"
+                selectedItem={companies[2]}
+            />,
+        );
+
+        const input = screen.getByRole('combobox');
+
+        expect(input.value).toBe('Beslag skytter');
+
+        rerender(
+            <SearchableDropdown
+                id="id"
+                labelId="labelId"
+                dropdownAttributes={['organizationName', 'organizationNumber']}
+                dropdownList={companies}
+                onChange={onChange}
+                searchAttributes={['organizationName', 'organizationNumber']}
+                locale="nb"
+                selectedItem={{
+                    organizationName: 'Min nye bedrift',
+                    organizationNumber: '8888',
+                    quantityUnprocessedMessages: 9,
+                }}
+            />,
+        );
+
+        expect(input.value).toBe('');
     });
 });
