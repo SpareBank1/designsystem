@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [11.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@10.0.0...@sb1/ffe-searchable-dropdown-react@11.0.0) (2021-04-30)
+
+
+### Features
+
+* **ffe-searchable-dropdown-react:** Allow selecting item programmatically ([838372a](https://github.com/SpareBank1/designsystem/commit/838372adff7d09ee0be622817d68204318906ceb))
+
+
+### BREAKING CHANGES
+
+* **ffe-searchable-dropdown-react:** Replaced `initialValue` with `selectedItem`
+
+`selectedItem` is an OPTIONAL prop which enables you to programmatically decide which item
+is displayed in the input field. When the user selects a different item, you should
+update the `selectedItem` value to reflect this newly chosen item. If not, your props
+and the internal state of SearchableDropdown will become out of sync.
+
+
+
+
+
 # [10.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@9.0.11...@sb1/ffe-searchable-dropdown-react@10.0.0) (2021-04-27)
 
 
