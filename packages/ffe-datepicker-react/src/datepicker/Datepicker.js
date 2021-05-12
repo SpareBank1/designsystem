@@ -172,10 +172,7 @@ export default class Datepicker extends Component {
     }
 
     globalClickHandler(evt) {
-        if (
-            this.state.displayDatePicker &&
-            !this._datepickerNode.contains(evt.target)
-        ) {
+        if (this.state.displayDatePicker && !evt.__isEventFromFFEDatepicker) {
             this.closeCalendar();
         }
     }
@@ -188,6 +185,16 @@ export default class Datepicker extends Component {
         } else {
             this.closeCalendar();
         }
+    }
+
+    /**
+     * Adds a flag on the click event so that the globalClickHandler()
+     * can determine whether or not this event originated from this
+     * component
+     */
+    addFlagOnClickEventClickHandler(evt) {
+        // eslint-disable-next-line no-param-reassign
+        evt.nativeEvent.__isEventFromFFEDatepicker = true;
     }
 
     divBlurHandler(evt) {
@@ -301,8 +308,10 @@ export default class Datepicker extends Component {
                             ? `ffe-datepicker-label-${this.datepickerId}`
                             : undefined
                     }
+                    role="none"
                     aria-label={label ? undefined : i18n[language].CHOOSE_DATE}
                     className={datepickerClassName}
+                    onClick={this.addFlagOnClickEventClickHandler}
                     ref={c => {
                         this._datepickerNode = c;
                     }}
