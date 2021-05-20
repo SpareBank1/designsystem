@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@5.0.13...@sb1/ffe-datepicker-react@5.0.14) (2021-05-20)
+
+
+### Bug Fixes
+
+* **ffe-datepicker-react:** make the datepicker work in shadow dom ([3b8ee15](https://github.com/SpareBank1/designsystem/commit/3b8ee15ce8fbd5864f98b0751fd809b37225b5ed))
+
+
+
+
+
 ## [5.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@5.0.12...@sb1/ffe-datepicker-react@5.0.13) (2021-04-14)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker-react
