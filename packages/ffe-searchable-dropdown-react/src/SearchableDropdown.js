@@ -18,18 +18,15 @@ import {
     string,
 } from 'prop-types';
 import classNames from 'classnames';
-import { Scrollbars } from 'react-custom-scrollbars';
 import isEqual from 'lodash.isequal';
 import { ChevronIkon, KryssIkon } from '@sb1/ffe-icons-react';
-import { Paragraph } from '@sb1/ffe-core-react';
 
-import ListItemContainer from './ListItemContainer';
+import List from './List';
 import ListItemBody from './ListItemBody';
 import {
     getButtonLabelClear,
     getButtonLabelClose,
     getButtonLabelOpen,
-    getNotMatchText,
     locales,
 } from './translations';
 import { v4 as uuid } from 'uuid';
@@ -103,7 +100,7 @@ const SearchableDropdown = ({
 
     const ListItemBodyElement = CustomListItemBody || ListItemBody;
     const listBoxRef = useRef(uuid());
-    const notMatchMessageId = useRef(uuid());
+    const noMatchMessageId = useRef(uuid());
     const shouldFocusToggleButton = useRef(false);
     const shouldFocusInput = useRef(false);
 
@@ -189,6 +186,14 @@ const SearchableDropdown = ({
             document.removeEventListener('focusin', handleContainerFocus);
         };
     }, []);
+
+    const focusToggleButton = () => {
+        shouldFocusToggleButton.current = true;
+    };
+
+    const focusInput = () => {
+        shouldFocusInput.current = true;
+    };
 
     const handleKeyDown = event => {
         if (event.key === ENTER && state.highlightedIndex >= 0) {
@@ -276,7 +281,7 @@ const SearchableDropdown = ({
                     aria-describedby={
                         [
                             inputProps['aria-describedby'],
-                            state.noMatch && notMatchMessageId.current,
+                            state.noMatch && noMatchMessageId.current,
                         ]
                             .filter(Boolean)
                             .join(' ') || null
@@ -316,7 +321,7 @@ const SearchableDropdown = ({
                     onClick={() => {
                         dispatch({ type: stateChangeTypes.ClearButtonPressed });
                         onChange(null);
-                        shouldFocusToggleButton.current = true;
+                        focusToggleButton();
                     }}
                 >
                     <KryssIkon />
@@ -351,76 +356,25 @@ const SearchableDropdown = ({
                     'ffe-searchable-dropdown__list--open': state.isExpanded,
                 })}
             >
-                <Scrollbars autoHeight={true} autoHeightMax={300}>
-                    {state.noMatch && (
-                        <>
-                            {noMatch.text ? (
-                                <div className="ffe-searchable-dropdown__no-match">
-                                    <Paragraph id={notMatchMessageId.current}>
-                                        {noMatch.text}
-                                    </Paragraph>
-                                </div>
-                            ) : (
-                                state.listToRender.length === 0 && (
-                                    <Paragraph
-                                        id={notMatchMessageId.current}
-                                        className="ffe-screenreader-only"
-                                    >
-                                        {getNotMatchText()}
-                                    </Paragraph>
-                                )
-                            )}
-                        </>
+                <div id={listBoxRef.current} role="listbox">
+                    {state.isExpanded && (
+                        <List
+                            listBoxRef={listBoxRef}
+                            listToRender={state.listToRender}
+                            ListItemBodyElement={ListItemBodyElement}
+                            highlightedIndex={state.highlightedIndex}
+                            dispatch={dispatch}
+                            dropdownAttributes={dropdownAttributes}
+                            locale={locale}
+                            refs={refs}
+                            onChange={onChange}
+                            isNoMatch={state.noMatch}
+                            noMatch={noMatch}
+                            noMatchMessageId={noMatchMessageId.current}
+                            focusInput={focusInput}
+                        />
                     )}
-                    <div id={listBoxRef.current} role="listbox">
-                        {state.isExpanded &&
-                            state.listToRender.map((item, index) => {
-                                const key = Object.values(item)
-                                    .join('-')
-                                    .replace(/\s/g, '-');
-                                return (
-                                    <ListItemContainer
-                                        key={key}
-                                        ref={refs[index]}
-                                        isHighlighted={
-                                            state.highlightedIndex === index
-                                        }
-                                        onMouseEnter={e => {
-                                            dispatch({
-                                                type:
-                                                    stateChangeTypes.ItemOnMouseEnter,
-                                                payload: {
-                                                    highlightedIndex: index,
-                                                },
-                                            });
-                                        }}
-                                        onClick={() => {
-                                            onChange(item);
-                                            dispatch({
-                                                type:
-                                                    stateChangeTypes.ItemOnClick,
-                                                payload: { selectedItem: item },
-                                            });
-                                            shouldFocusInput.current = true;
-                                        }}
-                                        item={item}
-                                    >
-                                        {props => {
-                                            return (
-                                                <ListItemBodyElement
-                                                    {...props}
-                                                    dropdownAttributes={
-                                                        dropdownAttributes
-                                                    }
-                                                    locale={locale}
-                                                />
-                                            );
-                                        }}
-                                    </ListItemContainer>
-                                );
-                            })}
-                    </div>
-                </Scrollbars>
+                </div>
             </div>
         </div>
     );

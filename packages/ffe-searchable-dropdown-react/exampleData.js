@@ -235,3 +235,9 @@ exports.yrker = [
     { kode: '203', beskrivelse: 'Betongarbeider' },
     { kode: '204', beskrivelse: 'Betongpumpeoperatør' },
 ];
+
+const listWithThirtyThousandElements = new Array(30000)
+    .fill(null)
+    .map((_, i) => ({ organizationName: `Navn ${i}` }));
+
+exports.listWithThirtyThousandElements = listWithThirtyThousandElements;

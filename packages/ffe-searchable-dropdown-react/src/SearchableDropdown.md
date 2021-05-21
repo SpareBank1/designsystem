@@ -14,7 +14,6 @@ const labelId = 'labelId1';
 <InputGroup label="Velg bedrift" labelId={labelId}>
     <SearchableDropdown
         labelId={labelId}
-        initialValue={companies[1]}
         inputProps={{ placeholder: 'Velg' }}
         dropdownAttributes={['organizationName']}
         dropdownList={companies}
@@ -190,4 +189,26 @@ const inputId = 'inputId6';
         locale="nb"
     />
 </div>;
+```
+
+Kan rendre titusenvis av valgalternativer uten ytelsesproblemer.
+
+```js
+const { InputGroup } = require('../../ffe-form-react');
+const listWithThirtyThousandElements = require('../exampleData')
+    .listWithThirtyThousandElements;
+const labelId = 'labelId1';
+
+<InputGroup label="Velg bedrift" labelId={labelId}>
+    <SearchableDropdown
+        labelId={labelId}
+        inputProps={{ placeholder: 'Velg' }}
+        dropdownAttributes={['organizationName']}
+        dropdownList={listWithThirtyThousandElements}
+        noMatch={{ text: 'Søket ga ingen treff' }}
+        onChange={item => setState({ item })}
+        searchAttributes={['organizationName']}
+        locale="nb"
+    />
+</InputGroup>;
 ```

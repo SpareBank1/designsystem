@@ -72,6 +72,15 @@
             }
         }
 
+        &:hover {
+            background: @ffe-blue-pale;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    background: @ffe-grey-darkmode;
+                }
+            }
+        }
+
         &--highlighted {
             background: @ffe-blue-azure;
             color: @ffe-white;
