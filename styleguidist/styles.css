@@ -7380,6 +7380,14 @@ input:not([type='radio']):not([type='checkbox']) {
     color: #0a91ff;
   }
 }
+.ffe-searchable-dropdown__list-item-body:hover {
+  background: #dff1f9;
+}
+@media (prefers-color-scheme: dark) {
+  .native .ffe-searchable-dropdown__list-item-body:hover {
+    background: #292929;
+  }
+}
 .ffe-searchable-dropdown__list-item-body--highlighted {
   background: #0071cd;
   color: #fff;
