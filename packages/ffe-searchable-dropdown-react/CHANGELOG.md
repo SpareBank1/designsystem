@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [11.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@11.0.0...@sb1/ffe-searchable-dropdown-react@11.1.0) (2021-05-21)
+
+
+### Features
+
+* **ffe-searchable-dropdown-react:** Add support for tens of thousands of options ([d5dc190](https://github.com/SpareBank1/designsystem/commit/d5dc190bbb34986da928b6925a6396d6a78d62c6))
+
+
+
+
+
 # [11.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@10.0.0...@sb1/ffe-searchable-dropdown-react@11.0.0) (2021-04-30)
 
 
