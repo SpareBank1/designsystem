@@ -1117,6 +1117,13 @@ html {
 .ffe-accordion-item .ffe-h6 {
   margin: 0;
 }
+.ffe-account-selector-container {
+  /*
+     * Disables margin collapse, which allows styling based on
+     * withSpaceForDetails even when AccountSelector is wrapped in InputGroup
+     */
+  padding: 0.05px;
+}
 .ffe-account-selector {
   position: relative;
   display: block;
@@ -1138,6 +1145,12 @@ html {
 .ffe-account-selector .ffe-account-suggestion--highlighted {
   background: #0071cd;
   color: #fff;
+}
+@media (prefers-color-scheme: dark) {
+  .native .ffe-account-selector .ffe-account-suggestion:hover,
+  .native .ffe-account-selector .ffe-account-suggestion--highlighted {
+    background: #0071cd;
+  }
 }
 .ffe-account-selector .ffe-account-suggestion:hover .ffe-account-suggestion__name,
 .ffe-account-selector .ffe-account-suggestion--highlighted .ffe-account-suggestion__name,
@@ -1303,10 +1316,13 @@ html {
   padding: 0;
   list-style: none;
 }
+.ffe-account-selector--with-space-for-details {
+  margin-bottom: 32px;
+}
 .ffe-account-selector__details {
-  font-size: 0.875rem;
-  padding: 8px 4px;
+  padding: 4px;
   color: #262626;
+  min-height: 32px;
 }
 @media (prefers-color-scheme: dark) {
   .native .ffe-account-selector__details {
