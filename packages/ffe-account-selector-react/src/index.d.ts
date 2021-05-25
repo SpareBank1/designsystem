@@ -7,25 +7,38 @@ export interface Account {
     balance?: number;
 }
 
+interface ListElementBodyProps {
+    item: Account;
+    isHighlighted: boolean;
+    locale: string;
+    dropdownAttributes: string[];
+}
+
+interface NoMatch {
+    text: string;
+    dropdownList?: Account[];
+}
+
 export interface AccountSelectorProps {
-    accounts?: Array<Account>;
+    accounts: Array<Account>;
     className?: string;
     id: string;
     locale: string;
-    noMatches?: string;
+    noMatches?: NoMatch;
+    inputProps?: React.InputHTMLAttributes<HTMLInputElement>;
     onAccountSelected: (account: Account) => void;
-    onChange: (value: string) => void;
+    onReset: () => void;
     selectedAccount?: Account;
     showBalance?: boolean;
-    value: string;
-    readOnly?: boolean;
-    highCapacity?: boolean;
+    formatAccountNumber?: boolean;
+    labelId: string;
+    allowCustomAccount?: boolean;
+    listElementBody?: (props: ListElementBodyProps) => React.FC<HTMLDivElement>;
+    withSpaceForDetails?: boolean;
+    ariaInvalid: boolean;
 }
 
-declare class AccountSelector extends React.Component<
-    AccountSelectorProps,
-    any
-> {}
+declare class AccountSelector extends React.Component<AccountSelectorProps> {}
 
 export interface AccountSelectorMultiProps {
     accounts?: Array<Account>;

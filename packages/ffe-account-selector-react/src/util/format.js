@@ -41,3 +41,20 @@ export function balanceWithCurrency(balance = '', locale, currencyCode) {
         ? `${currencyAffix} ${amount}`
         : `${amount} ${currencyAffix}`;
 }
+
+export const formatIncompleteAccountNumber = accountNumber => {
+    const matchDigits = /^\d+$/;
+
+    if (typeof accountNumber !== 'string' || !accountNumber) {
+        return accountNumber;
+    }
+
+    const accountNumberWithoutSpaces = accountNumber.replace(/\s/g, ''); // remove spaces
+
+    if (matchDigits.test(accountNumberWithoutSpaces)) {
+        return accountNumberWithoutSpaces
+            .replace(/(\d{4})(\d{1})/, '$1 $2')
+            .replace(/ (\d{2})(\d{1})/, ' $1 $2');
+    }
+    return accountNumber || '';
+};

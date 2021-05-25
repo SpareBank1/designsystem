@@ -38,6 +38,7 @@
     "@sb1/ffe-formatters": "^4.0.0",
     "@sb1/ffe-icons-react": "^7.2.18",
     "@sb1/ffe-spinner-react": "^5.0.3",
+    "@sb1/ffe-searchable-dropdown-react": "^11.1.0",
     "classnames": "^2.2.5",
     "prop-types": "^15.6.0",
     "react-auto-bind": "^0.4.2",
