@@ -3,6 +3,71 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [16.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@15.0.10...@sb1/ffe-account-selector-react@16.0.0) (2021-05-25)
+
+
+### Features
+
+* **ffe-account-selector-react:** Make AccountSelector use SearchableDropdown under the hood ([f3ef452](https://github.com/SpareBank1/designsystem/commit/f3ef4520c75e285aa085204c9d24477572a39b41))
+
+
+### BREAKING CHANGES
+
+* **ffe-account-selector-react:** Make `AccountSelector` use `SearchableDropdown` under the hood
+
+This means many of the props and some of the details of the functionality of
+`AccountSelector` have changed.
+Reusing SearchableDropdown in `AccountSelector` means we don't have to reinvent the wheel.
+Note: The `highCapacity` prop has been removed as windowing is now enabled by default.
+
+`AccountSelectorMulti` remains the same as before.
+
+New props:
+```
+export interface AccountSelectorProps<T> {
+    accounts: Array<Account>;
+    className?: string;
+    id: string;
+    locale: string;
+    noMatches?: NoMatch<T>;
+    inputProps?: React.InputHTMLAttributes<HTMLInputElement>;
+    onAccountSelected: (account: Account) => void;
+    onReset: () => void;
+    selectedAccount?: Account;
+    showBalance?: boolean;
+    formatAccountNumber?: boolean;
+    labelId: string;
+    allowCustomAccount?: boolean;
+    listElementBody?: (
+        props: ListElementBodyProps<T>,
+    ) => React.FC<HTMLDivElement>;
+    saveSpaceForDetails?: boolean;
+    ariaInvalid: boolean;
+}
+```
+
+Old props:
+```
+export interface AccountSelectorProps {
+    accounts?: Array<Account>;
+    className?: string;
+    id: string;
+    locale: string;
+    noMatches?: string;
+    onAccountSelected: (account: Account) => void;
+    onChange: (value: string) => void;
+    selectedAccount?: Account;
+    showBalance?: boolean;
+    value: string;
+    readOnly?: boolean;
+    highCapacity?: boolean;
+}
+```
+
+
+
+
+
 ## [15.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@15.0.9...@sb1/ffe-account-selector-react@15.0.10) (2021-03-15)
 
 

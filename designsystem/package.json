@@ -1,6 +1,6 @@
 {
   "name": "@sparebank1/designsystem",
-  "version": "1.0.0-alpha.6",
+  "version": "1.0.0-alpha.7",
   "description": "Designsystemet",
   "license": "MIT",
   "author": "SpareBank 1 Utvikling",
@@ -25,7 +25,7 @@
   "dependencies": {
     "@sb1/ffe-accordion": "^7.0.11",
     "@sb1/ffe-accordion-react": "^9.2.3",
-    "@sb1/ffe-account-selector-react": "^15.0.10",
+    "@sb1/ffe-account-selector-react": "^16.0.0",
     "@sb1/ffe-buttons": "^11.1.0",
     "@sb1/ffe-buttons-react": "^12.2.11",
     "@sb1/ffe-cards": "^10.1.0",
@@ -57,7 +57,7 @@
     "@sb1/ffe-message-box": "^8.1.0",
     "@sb1/ffe-message-box-react": "^6.1.6",
     "@sb1/ffe-sb1-logos": "^1.1.3",
-    "@sb1/ffe-searchable-dropdown-react": "^11.1.0",
+    "@sb1/ffe-searchable-dropdown-react": "^11.1.1",
     "@sb1/ffe-spinner": "^3.1.20",
     "@sb1/ffe-spinner-react": "^5.0.3",
     "@sb1/ffe-system-message": "^5.0.9",
