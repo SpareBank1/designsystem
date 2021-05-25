@@ -170,8 +170,16 @@ const SearchableDropdown = ({
         isInitialMountRef.current = false;
     }, []);
 
+    /**
+     * Because of changes in event handling between react v16 and v17, the check for the
+     * event flag will only work in react v17. Therefore, we also check Element.contains()
+     * to keep react v16 compatibility.
+     */
     const handleContainerFocus = e => {
-        if (!containerRef.current.contains(e.target)) {
+        const isFocusInside =
+            containerRef.current.contains(e.target) ||
+            e.__isEventFromFFESearchableDropdown;
+        if (!isFocusInside) {
             dispatch({
                 type: stateChangeTypes.FocusMovedOutSide,
             });
@@ -194,6 +202,16 @@ const SearchableDropdown = ({
     const focusInput = () => {
         shouldFocusInput.current = true;
     };
+
+    /**
+     * Adds a flag on the event so that handleContainerFocus()
+     * can determine whether or not this event originated from this
+     * component
+     */
+    function addFlagOnEventHandler(event) {
+        // eslint-disable-next-line no-param-reassign
+        event.nativeEvent.__isEventFromFFESearchableDropdown = true;
+    }
 
     const handleKeyDown = event => {
         if (event.key === ENTER && state.highlightedIndex >= 0) {
@@ -257,6 +275,8 @@ const SearchableDropdown = ({
                 'ffe-searchable-dropdown--dark': dark,
             })}
             ref={containerRef}
+            onMouseDown={addFlagOnEventHandler}
+            onFocus={addFlagOnEventHandler}
         >
             <div>
                 <input
