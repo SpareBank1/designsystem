@@ -1,3 +1,4 @@
+import isEqual from 'lodash.isequal';
 import { getListToRender } from './getListToRender';
 
 export const stateChangeTypes = {
@@ -131,14 +132,34 @@ export const createReducer = ({
             };
         }
         case stateChangeTypes.FocusMovedOutSide: {
+            const { listToRender } = getListToRender({
+                inputValue: state.inputValue,
+                searchAttributes,
+                maxRenderedDropdownElements,
+                dropdownList,
+                noMatchDropdownList,
+                searchMatcher,
+            });
+
+            const matchingItem = listToRender.find(item =>
+                searchAttributes.some(searchAttribute =>
+                    isEqual(item[searchAttribute], state.inputValue),
+                ),
+            );
+            const selectedItem =
+                listToRender.length === 1 && matchingItem
+                    ? matchingItem
+                    : state.selectedItem;
+
             return {
                 ...state,
                 isExpanded: false,
                 highlightedIndex: -1,
                 inputValue:
-                    state.selectedItem && state.inputValue !== ''
-                        ? state.selectedItem[searchAttributes[0]]
+                    selectedItem && state.inputValue !== ''
+                        ? selectedItem[searchAttributes[0]]
                         : '',
+                selectedItem,
             };
         }
         default:

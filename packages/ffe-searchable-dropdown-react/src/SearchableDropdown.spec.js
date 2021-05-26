@@ -761,4 +761,37 @@ describe('SearchableDropdown', () => {
 
         expect(input.value).toBe('');
     });
+
+    it('should set selected item to the single item matching element in dropdown list when losing focus', () => {
+        const onChange = jest.fn();
+        render(
+            <div>
+                <button>Knapp</button>
+                <SearchableDropdown
+                    id="id"
+                    labelId="labelId"
+                    dropdownAttributes={[
+                        'organizationName',
+                        'organizationNumber',
+                    ]}
+                    dropdownList={companies}
+                    onChange={onChange}
+                    searchAttributes={[
+                        'organizationName',
+                        'organizationNumber',
+                    ]}
+                    locale="nb"
+                />
+            </div>,
+        );
+
+        const input = screen.getByRole('combobox');
+        userEvent.type(input, 'Bedriften');
+
+        act(() => {
+            userEvent.click(screen.getByText('Knapp'));
+        });
+
+        expect(input.value).toEqual('Bedriften');
+    });
 });

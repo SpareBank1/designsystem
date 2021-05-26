@@ -62,6 +62,7 @@ const SearchableDropdown = ({
     formatter = value => value,
     searchMatcher,
     selectedItem,
+    allowCustomItem = false,
 }) => {
     const [state, dispatch] = useReducer(
         createReducer({
@@ -123,10 +124,11 @@ const SearchableDropdown = ({
     };
 
     useEffect(() => {
-        if (
-            selectedItem &&
-            dropdownList.some(item => isEqual(item, selectedItem))
-        ) {
+        const isSelectedItemInDropdownList = dropdownList.some(item =>
+            isEqual(item, selectedItem),
+        );
+
+        if (selectedItem && (isSelectedItemInDropdownList || allowCustomItem)) {
             dispatch({
                 type: stateChangeTypes.ItemSelectedProgrammatically,
                 payload: { selectedItem },
@@ -136,7 +138,7 @@ const SearchableDropdown = ({
                 type: stateChangeTypes.ItemClearedProgrammatically,
             });
         }
-    }, [selectedItem, dropdownList, dispatch]);
+    }, [selectedItem, dropdownList, dispatch, allowCustomItem]);
 
     useSetAllyMessageItemSelection({
         searchAttributes,
@@ -459,6 +461,8 @@ SearchableDropdown.propTypes = {
      * (inputValue: string, searchAttributes: string[]) => (item) => boolean
      */
     searchMatcher: func,
+    /** Allow selectedItem to not match any of the elements in dropdownList */
+    allowCustomItem: bool,
 };
 
 export default SearchableDropdown;
