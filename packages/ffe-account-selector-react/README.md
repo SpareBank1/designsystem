@@ -22,6 +22,12 @@ For custom components:
 @import 'path/to/node_modules/@sb1/ffe-account-selector-react/less/base-selector';
 ```
 
+## FFE less Dependencies:
+
+@import "~ffe-searchable-dropdown-react/less/searchable-dropdown";
+
+```
+
 Run Styleguidist from the repository root to see live examples and documentation,
 or see the markdown files next to the component code in `src/`.
 
@@ -29,3 +35,4 @@ or see the markdown files next to the component code in `src/`.
 
 This component supports TypeScript - please keep in mind updating `index.d.ts` if you change any
 of the external methods or properties in this component.
+```
