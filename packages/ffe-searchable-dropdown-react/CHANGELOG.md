@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [11.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@11.1.1...@sb1/ffe-searchable-dropdown-react@11.2.0) (2021-05-27)
+
+
+### Features
+
+* **ffe-searchable-dropdown-react:** Set selectedItem to item in dropdownList matching inputValue ([ec99c54](https://github.com/SpareBank1/designsystem/commit/ec99c5429f9e2eebd255ec86e6c43f65a9a525b2))
+
+
+
+
+
 ## [11.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@11.1.0...@sb1/ffe-searchable-dropdown-react@11.1.1) (2021-05-25)
 
 
