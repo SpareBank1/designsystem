@@ -212,3 +212,41 @@ const labelId = 'labelId1';
     />
 </InputGroup>;
 ```
+
+Du kan sende inn et `selectedItem` som ikke matcher noen av elementene i lista ved å sende inn proppen `allowCustomItem`.
+
+```js
+const { InputGroup } = require('../../ffe-form-react');
+const companies = require('../exampleData').companiesWithMessageCount;
+const labelId = 'labelId5';
+
+initialState = {
+    item: {
+        organizationName: 'Kaffekoppene',
+        organizationNumber: '812602221234',
+        quantityUnprocessedMessages: 1,
+    },
+};
+
+<InputGroup label="Velg bedrift" labelId={labelId}>
+    <SearchableDropdown
+        labelId={labelId}
+        inputProps={{ placeholder: 'Velg' }}
+        dropdownAttributes={['organizationName', 'organizationNumber']}
+        dropdownList={companies}
+        onChange={item => setState({ item })}
+        searchAttributes={['organizationName', 'organizationNumber']}
+        locale="nb"
+        selectedItem={state.item}
+        allowCustomItem
+        noMatch={{
+            dropdownList: [
+                {
+                    organizationName: 'Kaffekoppene',
+                    organizationNumber: '812602221234',
+                },
+            ],
+        }}
+    />
+</InputGroup>;
+```
