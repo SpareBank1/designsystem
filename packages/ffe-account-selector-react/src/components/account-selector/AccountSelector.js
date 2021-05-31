@@ -66,7 +66,12 @@ const AccountSelector = ({
     };
 
     const handleBlur = () => {
-        if (allowCustomAccount) {
+        const shouldSetCustomAccount =
+            inputValue &&
+            inputValue !== selectedAccount?.name &&
+            allowCustomAccount;
+
+        if (shouldSetCustomAccount) {
             onAccountSelected({
                 name: inputValue,
                 accountNumber: inputValue,
@@ -88,8 +93,10 @@ const AccountSelector = ({
                 name: value.name,
                 accountNumber: value.name,
             });
+            setInputValue(value.name);
         } else {
             onAccountSelected(value);
+            setInputValue(value.name);
         }
     };
 

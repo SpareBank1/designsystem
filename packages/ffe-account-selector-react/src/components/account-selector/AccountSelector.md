@@ -35,7 +35,7 @@ const label1 = 'label1';
         id="account-selector-single"
         locale="nb"
         onAccountSelected={value => setState({ value })}
-        onReset={() => setState({ value: '' })}
+        onReset={() => setState({ value: undefined })}
         selectedAccount={state.value}
         labelId={label1}
     />
@@ -79,7 +79,7 @@ const label2 = 'label2';
         id="account-selector-single"
         locale="nb"
         onAccountSelected={value => setState({ value })}
-        onReset={() => setState({ value: '' })}
+        onReset={() => setState({ value: undefined })}
         selectedAccount={state.value}
         showBalance
         labelId={label2}
@@ -124,7 +124,7 @@ const label4 = 'label4';
         id="account-selector-single"
         locale="nb"
         onAccountSelected={value => setState({ value })}
-        onReset={() => setState({ value: '' })}
+        onReset={() => setState({ value: undefined })}
         selectedAccount={state.value}
         allowCustomAccount
         labelId={label4}
@@ -169,7 +169,7 @@ const label3 = 'label3';
         id="account-selector-single"
         locale="nb"
         onAccountSelected={value => setState({ value })}
-        onReset={() => setState({ value: '' })}
+        onReset={() => setState({ value: undefined })}
         selectedAccount={state.value}
         formatAccountNumber={false}
         labelId={label3}
@@ -214,7 +214,7 @@ const label4 = 'label4';
         id="account-selector-single"
         locale="nb"
         onAccountSelected={value => setState({ value })}
-        onReset={() => setState({ value: '' })}
+        onReset={() => setState({ value: undefined })}
         selectedAccount={state.value}
         allowCustomAccount
         labelId={label4}
@@ -277,7 +277,7 @@ const CustomListElementBody = ({ item, isHighlighted }) => {
         id="account-selector-single"
         locale="nb"
         onAccountSelected={value => setState({ value })}
-        onReset={() => setState({ value: '' })}
+        onReset={() => setState({ value: undefined })}
         selectedAccount={state.value}
         labelId={label5}
         listElementBody={CustomListElementBody}
