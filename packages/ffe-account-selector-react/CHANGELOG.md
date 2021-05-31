@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [16.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@16.1.0...@sb1/ffe-account-selector-react@16.2.0) (2021-05-31)
+
+
+### Features
+
+* **ffe-account-selector-react:** Show account number in input field when customAccount is allowed ([607529f](https://github.com/SpareBank1/designsystem/commit/607529f9aa3cb059a0ddbbca3ab03d74a472ed3f))
+
+
+
+
+
 # [16.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@16.0.0...@sb1/ffe-account-selector-react@16.1.0) (2021-05-27)
 
 
