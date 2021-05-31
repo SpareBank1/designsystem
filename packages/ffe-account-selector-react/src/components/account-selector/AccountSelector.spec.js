@@ -350,6 +350,81 @@ describe('AccountSelector', () => {
         );
     });
 
+    it('should set custom account number when account number is valid on blur', () => {
+        const validNorwegianAccountNumber = '4200 02 31376';
+        const inValidNorwegianAccountNumber = '4200 02 31377';
+        const handleAccountSelected = jest.fn();
+
+        render(
+            <div>
+                <button>Knapp</button>
+                <AccountSelector
+                    id="id"
+                    labelId="labelId"
+                    accounts={accounts}
+                    locale="nb"
+                    onAccountSelected={handleAccountSelected}
+                    onReset={onReset}
+                    selectedAccount={selectedAccount}
+                    allowCustomAccount={true}
+                    ariaInvalid={false}
+                />
+            </div>,
+        );
+
+        const input = screen.getByRole('combobox');
+        userEvent.type(input, inValidNorwegianAccountNumber);
+        userEvent.click(screen.getByText('Knapp'));
+
+        expect(handleAccountSelected).toHaveBeenCalledWith({
+            name: inValidNorwegianAccountNumber,
+            accountNumber: '',
+        });
+
+        userEvent.clear(input);
+        userEvent.type(input, validNorwegianAccountNumber);
+        userEvent.click(screen.getByText('Knapp'));
+
+        expect(handleAccountSelected).toHaveBeenCalledWith({
+            name: validNorwegianAccountNumber,
+            accountNumber: validNorwegianAccountNumber,
+        });
+    });
+
+    it('should not set custom account on blur when allowCustomAccount is not specified', () => {
+        const validNorwegianAccountNumber = '4200 02 31376';
+        const inValidNorwegianAccountNumber = '4200 02 31377';
+        const handleAccountSelected = jest.fn();
+
+        render(
+            <div>
+                <button>Knapp</button>
+                <AccountSelector
+                    id="id"
+                    labelId="labelId"
+                    accounts={accounts}
+                    locale="nb"
+                    onAccountSelected={handleAccountSelected}
+                    onReset={onReset}
+                    selectedAccount={selectedAccount}
+                    ariaInvalid={false}
+                />
+            </div>,
+        );
+
+        const input = screen.getByRole('combobox');
+        userEvent.type(input, inValidNorwegianAccountNumber);
+        userEvent.click(screen.getByText('Knapp'));
+
+        expect(input.getAttribute('value')).toEqual('');
+
+        userEvent.clear(input);
+        userEvent.type(input, validNorwegianAccountNumber);
+        userEvent.click(screen.getByText('Knapp'));
+
+        expect(input.getAttribute('value')).toEqual('');
+    });
+
     it('should be able to render custom list items', () => {
         const CustomListItemBody = ({
             // eslint-disable-next-line react/prop-types
