@@ -2,6 +2,7 @@ import React from 'react';
 import { render, fireEvent, screen } from '@testing-library/react';
 
 import AccountSelector from './AccountSelector';
+import userEvent from '@testing-library/user-event';
 
 describe('AccountSelector', () => {
     beforeAll(() => {
@@ -294,6 +295,31 @@ describe('AccountSelector', () => {
         );
 
         expect(screen.getByText('BrukskoABC')).toBeInTheDocument();
+    });
+
+    it('should allow selecting custom account when specified on blur', () => {
+        const handleAccountSelected = jest.fn();
+        render(
+            <div>
+                <button>Knapp</button>
+                <AccountSelector
+                    id="id"
+                    labelId="labelId"
+                    accounts={accounts}
+                    locale="nb"
+                    onAccountSelected={handleAccountSelected}
+                    onReset={onReset}
+                    selectedAccount={selectedAccount}
+                    allowCustomAccount={true}
+                />
+            </div>,
+        );
+
+        const input = screen.getByRole('combobox');
+        userEvent.type(input, 'BrukskoABC');
+        userEvent.click(screen.getByText('Knapp'));
+        expect(handleAccountSelected).toHaveBeenCalledTimes(1);
+        expect(input.value).toEqual('BrukskoABC');
     });
 
     it('should not show custom account when some account matches search', () => {

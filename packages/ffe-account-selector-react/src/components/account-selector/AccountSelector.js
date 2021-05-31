@@ -35,6 +35,11 @@ const AccountSelector = ({
 }) => {
     const [inputValue, setInputValue] = useState('');
 
+    let formatter;
+    if (formatAccountNumber) {
+        formatter = formatIncompleteAccountNumber;
+    }
+
     /*
      * This matcher function closely resembles the default one of SearchableDropdown,
      * but it ignores all spaces and periods so that account number formatting won't mess with the search.
@@ -55,8 +60,20 @@ const AccountSelector = ({
 
     const onInputChange = event => {
         setInputValue(event.target.value);
-        if (inputProps && inputProps.onChange) {
+        if (inputProps?.onChange) {
             inputProps.onChange();
+        }
+    };
+
+    const handleBlur = () => {
+        if (allowCustomAccount) {
+            onAccountSelected({
+                name: inputValue,
+                accountNumber: inputValue,
+            });
+        }
+        if (inputProps?.onBlur) {
+            inputProps.onBlur();
         }
     };
 
@@ -67,16 +84,14 @@ const AccountSelector = ({
             setInputValue('');
             onReset();
         } else if (hasSelectedCustomAccount) {
-            onAccountSelected({ name: '', accountNumber: value.name });
+            onAccountSelected({
+                name: value.name,
+                accountNumber: value.name,
+            });
         } else {
             onAccountSelected(value);
         }
     };
-
-    let formatter;
-    if (formatAccountNumber) {
-        formatter = formatIncompleteAccountNumber;
-    }
 
     const customNoMatch = allowCustomAccount
         ? {
@@ -109,6 +124,7 @@ const AccountSelector = ({
                     inputProps={{
                         ...inputProps,
                         onChange: onInputChange,
+                        onBlur: handleBlur,
                     }}
                     dropdownAttributes={dropdownAttributes}
                     dropdownList={accounts}
@@ -121,6 +137,7 @@ const AccountSelector = ({
                     ariaInvalid={ariaInvalid}
                     searchMatcher={searchMatcherIgnoringAccountNumberFormatting}
                     selectedItem={selectedAccount}
+                    allowCustomItem={allowCustomAccount}
                 />
                 {selectedAccount && (
                     <AccountDetails
