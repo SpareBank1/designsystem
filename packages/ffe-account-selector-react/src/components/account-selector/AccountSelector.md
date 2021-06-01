@@ -1,7 +1,7 @@
 Kontovelger for én konto.
 
 ```js
-initialState = { value: undefined };
+initialState = { value: null };
 const label1 = 'label1';
 
 <InputGroup label="Velg konto" extraMargin={false} labelId={label1}>
@@ -35,9 +35,10 @@ const label1 = 'label1';
         id="account-selector-single"
         locale="nb"
         onAccountSelected={value => setState({ value })}
-        onReset={() => setState({ value: '' })}
+        onReset={() => setState({ value: null })}
         selectedAccount={state.value}
         labelId={label1}
+        ariaInvalid={false}
     />
 </InputGroup>;
 ```
@@ -45,7 +46,7 @@ const label1 = 'label1';
 Kan vise beløp
 
 ```js
-initialState = { value: undefined };
+initialState = { value: null };
 const label2 = 'label2';
 
 <InputGroup label="Velg konto" extraMargin={false} labelId={label2}>
@@ -79,10 +80,11 @@ const label2 = 'label2';
         id="account-selector-single"
         locale="nb"
         onAccountSelected={value => setState({ value })}
-        onReset={() => setState({ value: '' })}
+        onReset={() => setState({ value: null })}
         selectedAccount={state.value}
         showBalance
         labelId={label2}
+        ariaInvalid={false}
     />
 </InputGroup>;
 ```
@@ -90,7 +92,7 @@ const label2 = 'label2';
 Kan tillate egeninnskrevet konto
 
 ```js
-initialState = { value: undefined };
+initialState = { value: null };
 const label4 = 'label4';
 
 <InputGroup label="Velg konto" extraMargin={false} labelId={label4}>
@@ -124,10 +126,11 @@ const label4 = 'label4';
         id="account-selector-single"
         locale="nb"
         onAccountSelected={value => setState({ value })}
-        onReset={() => setState({ value: '' })}
+        onReset={() => setState({ value: null })}
         selectedAccount={state.value}
         allowCustomAccount
         labelId={label4}
+        ariaInvalid={false}
     />
 </InputGroup>;
 ```
@@ -135,7 +138,7 @@ const label4 = 'label4';
 Kan skru av at kontonummer blir formattert mens man skriver
 
 ```js
-initialState = { value: undefined };
+initialState = { value: null };
 const label3 = 'label3';
 
 <InputGroup label="Velg konto" extraMargin={false} labelId={label3}>
@@ -169,10 +172,11 @@ const label3 = 'label3';
         id="account-selector-single"
         locale="nb"
         onAccountSelected={value => setState({ value })}
-        onReset={() => setState({ value: '' })}
+        onReset={() => setState({ value: null })}
         selectedAccount={state.value}
         formatAccountNumber={false}
         labelId={label3}
+        ariaInvalid={false}
     />
 </InputGroup>;
 ```
@@ -180,7 +184,7 @@ const label3 = 'label3';
 Kan velge å ikke holde av plass for visning av valgt konto
 
 ```js
-initialState = { value: undefined };
+initialState = { value: null };
 const label4 = 'label4';
 
 <InputGroup label="Velg konto" extraMargin={false} labelId={label4}>
@@ -214,11 +218,12 @@ const label4 = 'label4';
         id="account-selector-single"
         locale="nb"
         onAccountSelected={value => setState({ value })}
-        onReset={() => setState({ value: '' })}
+        onReset={() => setState({ value: null })}
         selectedAccount={state.value}
         allowCustomAccount
         labelId={label4}
         withSpaceForDetails={false}
+        ariaInvalid={false}
     />
 </InputGroup>;
 ```
@@ -226,7 +231,7 @@ const label4 = 'label4';
 Med egendefinert listeutseende
 
 ```js
-initialState = { value: undefined };
+initialState = { value: null };
 const label5 = 'label5';
 
 const CustomListElementBody = ({ item, isHighlighted }) => {
@@ -277,10 +282,11 @@ const CustomListElementBody = ({ item, isHighlighted }) => {
         id="account-selector-single"
         locale="nb"
         onAccountSelected={value => setState({ value })}
-        onReset={() => setState({ value: '' })}
+        onReset={() => setState({ value: null })}
         selectedAccount={state.value}
         labelId={label5}
         listElementBody={CustomListElementBody}
+        ariaInvalid={false}
     />
 </InputGroup>;
 ```
