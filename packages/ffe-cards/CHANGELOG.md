@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@10.1.0...@sb1/ffe-cards@10.1.1) (2021-06-02)
+
+
+### Bug Fixes
+
+* **ffe-cards:** Added dark background-color for ffe-product-card to support darkmode ([95b2f8d](https://github.com/SpareBank1/designsystem/commit/95b2f8d003eff5f628b487ea327a09f31bb79ac5))
+
+
+
+
+
 # [10.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@10.0.1...@sb1/ffe-cards@10.1.0) (2021-04-14)
 
 
