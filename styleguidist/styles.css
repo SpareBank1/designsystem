@@ -2693,7 +2693,8 @@ html {
 }
 @media (prefers-color-scheme: dark) {
   .native .ffe-product-card {
-    border-color: #0a91ff;
+    background-color: #292929;
+    border-color: #292929;
   }
 }
 .ffe-product-card:focus {
