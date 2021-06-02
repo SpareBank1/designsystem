@@ -71,6 +71,7 @@ const SearchableDropdown = ({
             maxRenderedDropdownElements,
             noMatchDropdownList: noMatch.dropdownList,
             searchMatcher,
+            allowCustomItem,
         }),
         {
             isExpanded: false,

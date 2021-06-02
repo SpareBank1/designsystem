@@ -794,4 +794,38 @@ describe('SearchableDropdown', () => {
 
         expect(input.value).toEqual('Bedriften');
     });
+
+    it('should set input value as the selected item if specified', () => {
+        const onChange = jest.fn();
+        render(
+            <div>
+                <button>Knapp</button>
+                <SearchableDropdown
+                    id="id"
+                    labelId="labelId"
+                    dropdownAttributes={[
+                        'organizationName',
+                        'organizationNumber',
+                    ]}
+                    dropdownList={companies}
+                    onChange={onChange}
+                    searchAttributes={[
+                        'organizationName',
+                        'organizationNumber',
+                    ]}
+                    locale="nb"
+                    allowCustomItem={true}
+                />
+            </div>,
+        );
+
+        const input = screen.getByRole('combobox');
+        userEvent.type(input, 'Hallopådeg');
+
+        act(() => {
+            userEvent.click(screen.getByText('Knapp'));
+        });
+
+        expect(input.value).toEqual('Hallopådeg');
+    });
 });

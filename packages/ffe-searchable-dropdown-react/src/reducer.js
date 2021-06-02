@@ -25,6 +25,7 @@ export const createReducer = ({
     noMatchDropdownList,
     maxRenderedDropdownElements,
     searchMatcher,
+    allowCustomItem,
 }) => (state, action) => {
     switch (action.type) {
         case stateChangeTypes.InputKeyDownEscape:
@@ -146,20 +147,29 @@ export const createReducer = ({
                     isEqual(item[searchAttribute], state.inputValue),
                 ),
             );
-            const selectedItem =
-                listToRender.length === 1 && matchingItem
-                    ? matchingItem
-                    : state.selectedItem;
+
+            const selectedItem = () => {
+                if (listToRender.length === 1 && matchingItem) {
+                    return matchingItem;
+                } else if (allowCustomItem) {
+                    return {
+                        [searchAttributes[0]]: state.inputValue,
+                    };
+                }
+                return state.selectedItem;
+            };
+
+            const inputValue =
+                selectedItem() && state.inputValue !== ''
+                    ? selectedItem()[searchAttributes[0]]
+                    : '';
 
             return {
                 ...state,
                 isExpanded: false,
                 highlightedIndex: -1,
-                inputValue:
-                    selectedItem && state.inputValue !== ''
-                        ? selectedItem[searchAttributes[0]]
-                        : '',
-                selectedItem,
+                inputValue,
+                selectedItem: selectedItem(),
             };
         }
         default:
