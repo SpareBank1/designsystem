@@ -125,7 +125,7 @@ interface WeakFieldSetAttributes
 export interface RadioButtonInputGroupProps extends WeakFieldSetAttributes {
     children: React.ReactNode;
     className?: string;
-    description?: string;
+    description?: string | React.ReactNode;
     extraMargin?: boolean;
     fieldMessage?: string | React.ReactNode;
     inline?: boolean;
