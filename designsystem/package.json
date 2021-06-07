@@ -20,6 +20,7 @@
   "scripts": {
     "build": "make all",
     "start": "snowpack dev",
+    "ghpages": "snowpack build --polyfill-node",
     "clean": "make clean"
   },
   "dependencies": {
