@@ -828,4 +828,39 @@ describe('SearchableDropdown', () => {
 
         expect(input.value).toEqual('Hallopådeg');
     });
+
+    it('should not set selectedItem on blur if inputValue is empty', () => {
+        const onChange = jest.fn();
+        render(
+            <div>
+                <button>Knapp</button>
+                <SearchableDropdown
+                    id="id"
+                    labelId="labelId"
+                    dropdownAttributes={[
+                        'organizationName',
+                        'organizationNumber',
+                    ]}
+                    dropdownList={companies}
+                    onChange={onChange}
+                    searchAttributes={[
+                        'organizationName',
+                        'organizationNumber',
+                    ]}
+                    locale="nb"
+                    allowCustomItem={true}
+                    selectedItem={companies[2]}
+                />
+            </div>,
+        );
+
+        userEvent.click(screen.getByLabelText('fjern valgt'));
+        userEvent.click(screen.getByText('Knapp'));
+        expect(screen.getByLabelText('åpne alternativer')).toHaveClass(
+            'ffe-searchable-dropdown__button ffe-searchable-dropdown__button--arrow',
+        );
+        expect(screen.getByLabelText('fjern valgt')).toHaveClass(
+            'ffe-searchable-dropdown__button ffe-searchable-dropdown__button--cross ffe-searchable-dropdown__button--hidden',
+        );
+    });
 });
