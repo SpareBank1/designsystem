@@ -160,6 +160,22 @@ describe('<RadioButtonInputGroup />', () => {
             );
         });
     });
+    describe('description', () => {
+        it('renders if string', () => {
+            const wrapper = getWrapper({ description: 'description text' });
+            expect(wrapper.text().includes('description text')).toBe(true);
+        });
+        it('renders if ReactNode', () => {
+            const wrapper = getWrapper({
+                description: (
+                    <Tooltip>Description text as Tooltip component</Tooltip>
+                ),
+            });
+            expect(wrapper.find('Tooltip').prop('children')).toBe(
+                'Description text as Tooltip component',
+            );
+        });
+    });
     describe('fieldMessage', () => {
         it('does not render if not set', () => {
             const wrapper = getWrapper({ fieldMessage: undefined });

@@ -62,7 +62,10 @@ const RadioButtonInputGroup = props => {
                 </legend>
             )}
 
-            {description && <div className="ffe-small-text">{description}</div>}
+            {typeof description === 'string' && (
+                <div className="ffe-small-text">{description}</div>
+            )}
+            {React.isValidElement(description) && description}
 
             {children({ ...buttonProps, dark })}
 
@@ -91,7 +94,7 @@ RadioButtonInputGroup.propTypes = {
     /** Additional class names applied to the fieldset */
     className: string,
     /** To just render a static, always visible tooltip, use this. */
-    description: string,
+    description: oneOfType([node, string]),
     /** Reserve space for showing `fieldMessage`s so content below don't move
      *  vertically if an errormessage shows up. Note that this will only reserve
      *  space for one line of content, so keep messages short.
