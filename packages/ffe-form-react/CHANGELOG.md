@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@7.2.10...@sb1/ffe-form-react@7.3.0) (2021-06-08)
+
+
+### Features
+
+* **ffe-form-react:** Extend Description prop in RadioButtonInputGroup ([bcd1642](https://github.com/SpareBank1/designsystem/commit/bcd1642699315b5eb316313bbdbd2ebf22c40bea))
+
+
+
+
+
 ## [7.2.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@7.2.9...@sb1/ffe-form-react@7.2.10) (2021-03-15)
 
 
