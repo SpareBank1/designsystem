@@ -151,7 +151,7 @@ export const createReducer = ({
             const selectedItem = () => {
                 if (listToRender.length === 1 && matchingItem) {
                     return matchingItem;
-                } else if (allowCustomItem) {
+                } else if (allowCustomItem && state.inputValue !== '') {
                     return {
                         [searchAttributes[0]]: state.inputValue,
                     };
