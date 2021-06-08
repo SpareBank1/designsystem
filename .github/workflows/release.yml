@@ -15,7 +15,7 @@ jobs:
     release_to_npm:
         name: Release to NPM
         runs-on: ubuntu-latest
-        if: github.ref == 'refs/heads/develop'
+        if: ${{ github.repository == 'SpareBank1/designsystem' && github.ref == 'refs/heads/develop' }}
         steps:
             - name: 'GIT: Checkout develop branch'
               uses: actions/checkout@v2
