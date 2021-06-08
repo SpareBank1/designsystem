@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [11.2.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@11.2.1...@sb1/ffe-searchable-dropdown-react@11.2.2) (2021-06-08)
+
+
+### Bug Fixes
+
+* **ffe-searchable-dropdown-react:** Should set selectedItem to null when input field is empty ([e325abb](https://github.com/SpareBank1/designsystem/commit/e325abbd0259ccf878597f641d24242dfe124c40))
+
+
+
+
+
 ## [11.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@11.2.0...@sb1/ffe-searchable-dropdown-react@11.2.1) (2021-06-02)
 
 
