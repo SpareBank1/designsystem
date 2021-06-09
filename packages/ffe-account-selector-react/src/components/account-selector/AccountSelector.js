@@ -127,16 +127,17 @@ const AccountSelector = ({
         }
     };
 
-    const customNoMatch = allowCustomAccount
-        ? {
-              dropdownList: [
-                  {
-                      name: formatter ? formatter(inputValue) : inputValue,
-                      accountNumber: '',
-                  },
-              ],
-          }
-        : noMatches;
+    const customNoMatch =
+        allowCustomAccount && inputValue.trim() !== ''
+            ? {
+                  dropdownList: [
+                      {
+                          name: formatter ? formatter(inputValue) : inputValue,
+                          accountNumber: '',
+                      },
+                  ],
+              }
+            : noMatches;
 
     const dropdownAttributes = showBalance
         ? ['name', 'accountNumber', 'balance']
