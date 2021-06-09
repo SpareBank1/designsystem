@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [16.2.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@16.2.4...@sb1/ffe-account-selector-react@16.2.5) (2021-06-09)
+
+
+### Bug Fixes
+
+* **ffe-account-selector-react:** Empty dropdownList in noMatch if inputValue is not set ([5b4f28e](https://github.com/SpareBank1/designsystem/commit/5b4f28ebadedffece8782701009fbbfd5cc33e98))
+
+
+
+
+
 ## [16.2.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@16.2.3...@sb1/ffe-account-selector-react@16.2.4) (2021-06-08)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
