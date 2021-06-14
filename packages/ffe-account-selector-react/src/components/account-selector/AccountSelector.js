@@ -13,10 +13,7 @@ import SearchableDropdown from '@sb1/ffe-searchable-dropdown-react';
 
 import { AccountDetails, AccountSuggestion } from '../../subcomponents/account';
 import { Account, Locale } from '../../util/types';
-import {
-    formatIncompleteAccountNumber,
-    isValidNorwegianAccountNumber,
-} from '../../util/format';
+import { formatIncompleteAccountNumber } from '../../util/format';
 
 const AccountSelector = ({
     className,
@@ -68,47 +65,6 @@ const AccountSelector = ({
         }
     };
 
-    const handleBlur = () => {
-        const accountsMatchingInputValue = accounts.filter(
-            searchMatcherIgnoringAccountNumberFormatting(inputValue, [
-                'name',
-                'accountNumber',
-            ]),
-        );
-
-        const inputValueWithoutSpacesAndPeriods = inputValue.replace(
-            /(\s|\.)/g,
-            '',
-        );
-
-        const shouldSetCustomName =
-            inputValue &&
-            inputValue !== selectedAccount?.name &&
-            allowCustomAccount;
-
-        const shouldSetCustomAccount =
-            isValidNorwegianAccountNumber(inputValueWithoutSpacesAndPeriods) &&
-            allowCustomAccount;
-
-        if (accountsMatchingInputValue.length === 1) {
-            onAccountSelected(accountsMatchingInputValue[0]);
-        } else if (shouldSetCustomAccount) {
-            onAccountSelected({
-                name: inputValue,
-                accountNumber: inputValue,
-            });
-        } else if (shouldSetCustomName) {
-            onAccountSelected({
-                name: inputValue,
-                accountNumber: '',
-            });
-        }
-
-        if (inputProps?.onBlur) {
-            inputProps.onBlur();
-        }
-    };
-
     const handleAccountSelected = value => {
         const hasResetSelection = value === null;
         const hasSelectedCustomAccount = !value?.accountNumber;
@@ -116,14 +72,9 @@ const AccountSelector = ({
             setInputValue('');
             onReset();
         } else if (hasSelectedCustomAccount) {
-            onAccountSelected({
-                name: value.name,
-                accountNumber: value.name,
-            });
-            setInputValue(value.name);
+            onAccountSelected({ name: '', accountNumber: value.name });
         } else {
             onAccountSelected(value);
-            setInputValue(value.name);
         }
     };
 
@@ -159,7 +110,6 @@ const AccountSelector = ({
                     inputProps={{
                         ...inputProps,
                         onChange: onInputChange,
-                        onBlur: handleBlur,
                     }}
                     dropdownAttributes={dropdownAttributes}
                     dropdownList={accounts}
@@ -172,7 +122,6 @@ const AccountSelector = ({
                     ariaInvalid={ariaInvalid}
                     searchMatcher={searchMatcherIgnoringAccountNumberFormatting}
                     selectedItem={selectedAccount}
-                    allowCustomItem={allowCustomAccount}
                 />
                 {selectedAccount && (
                     <AccountDetails
