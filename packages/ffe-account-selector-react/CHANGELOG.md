@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [16.2.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@16.2.5...@sb1/ffe-account-selector-react@16.2.6) (2021-06-14)
+
+
+### Bug Fixes
+
+* **ffe-account-selector-react:** Remove onBlur functionality ([bd84aaf](https://github.com/SpareBank1/designsystem/commit/bd84aaf26f13bc17532b2dd644e8609e8aaa9503))
+
+
+
+
+
 ## [16.2.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@16.2.4...@sb1/ffe-account-selector-react@16.2.5) (2021-06-09)
 
 

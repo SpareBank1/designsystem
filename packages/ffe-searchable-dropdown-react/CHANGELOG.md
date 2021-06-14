@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [11.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@11.2.2...@sb1/ffe-searchable-dropdown-react@11.3.0) (2021-06-14)
+
+
+### Features
+
+* **ffe-searchable-dropdown-react:** Remove onBlur functionality and programmatically selecting item ([ba1b103](https://github.com/SpareBank1/designsystem/commit/ba1b103b3de741974867af4e1d8d2cdee5e9ed18))
+
+
+
+
+
 ## [11.2.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@11.2.1...@sb1/ffe-searchable-dropdown-react@11.2.2) (2021-06-08)
 
 
