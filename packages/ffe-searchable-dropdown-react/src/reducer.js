@@ -1,4 +1,3 @@
-import isEqual from 'lodash.isequal';
 import { getListToRender } from './getListToRender';
 
 export const stateChangeTypes = {
@@ -16,7 +15,6 @@ export const stateChangeTypes = {
     ItemOnMouseEnter: 'ItemOnMouseEnter',
     FocusMovedOutSide: 'FocusMovedOutSide',
     ItemSelectedProgrammatically: 'ItemSelectedProgrammatically',
-    ItemClearedProgrammatically: 'ItemClearedProgrammatically',
 };
 
 export const createReducer = ({
@@ -25,7 +23,6 @@ export const createReducer = ({
     noMatchDropdownList,
     maxRenderedDropdownElements,
     searchMatcher,
-    allowCustomItem,
 }) => (state, action) => {
     switch (action.type) {
         case stateChangeTypes.InputKeyDownEscape:
@@ -80,7 +77,6 @@ export const createReducer = ({
                 noMatch,
             };
         }
-        case stateChangeTypes.ItemClearedProgrammatically:
         case stateChangeTypes.ClearedInputField:
         case stateChangeTypes.ClearButtonPressed: {
             const { noMatch, listToRender } = getListToRender({
@@ -115,7 +111,8 @@ export const createReducer = ({
                 highlightedIndex: -1,
                 prevSelectedItem: state.selectedItem,
                 selectedItem: action.payload.selectedItem,
-                inputValue: action.payload.selectedItem[searchAttributes[0]],
+                inputValue:
+                    action.payload.selectedItem?.[searchAttributes[0]] || '',
             };
 
         case stateChangeTypes.InputKeyDownArrowDown:
@@ -133,43 +130,14 @@ export const createReducer = ({
             };
         }
         case stateChangeTypes.FocusMovedOutSide: {
-            const { listToRender } = getListToRender({
-                inputValue: state.inputValue,
-                searchAttributes,
-                maxRenderedDropdownElements,
-                dropdownList,
-                noMatchDropdownList,
-                searchMatcher,
-            });
-
-            const matchingItem = listToRender.find(item =>
-                searchAttributes.some(searchAttribute =>
-                    isEqual(item[searchAttribute], state.inputValue),
-                ),
-            );
-
-            const selectedItem = () => {
-                if (listToRender.length === 1 && matchingItem) {
-                    return matchingItem;
-                } else if (allowCustomItem && state.inputValue !== '') {
-                    return {
-                        [searchAttributes[0]]: state.inputValue,
-                    };
-                }
-                return state.selectedItem;
-            };
-
-            const inputValue =
-                selectedItem() && state.inputValue !== ''
-                    ? selectedItem()[searchAttributes[0]]
-                    : '';
-
             return {
                 ...state,
                 isExpanded: false,
                 highlightedIndex: -1,
-                inputValue,
-                selectedItem: selectedItem(),
+                inputValue:
+                    state.selectedItem && state.inputValue !== ''
+                        ? state.selectedItem[searchAttributes[0]]
+                        : '',
             };
         }
         default:

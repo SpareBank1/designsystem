@@ -18,7 +18,6 @@ import {
     string,
 } from 'prop-types';
 import classNames from 'classnames';
-import isEqual from 'lodash.isequal';
 import { ChevronIkon, KryssIkon } from '@sb1/ffe-icons-react';
 
 import List from './List';
@@ -62,7 +61,6 @@ const SearchableDropdown = ({
     formatter = value => value,
     searchMatcher,
     selectedItem,
-    allowCustomItem = false,
 }) => {
     const [state, dispatch] = useReducer(
         createReducer({
@@ -71,7 +69,6 @@ const SearchableDropdown = ({
             maxRenderedDropdownElements,
             noMatchDropdownList: noMatch.dropdownList,
             searchMatcher,
-            allowCustomItem,
         }),
         {
             isExpanded: false,
@@ -125,21 +122,11 @@ const SearchableDropdown = ({
     };
 
     useEffect(() => {
-        const isSelectedItemInDropdownList = dropdownList.some(item =>
-            isEqual(item, selectedItem),
-        );
-
-        if (selectedItem && (isSelectedItemInDropdownList || allowCustomItem)) {
-            dispatch({
-                type: stateChangeTypes.ItemSelectedProgrammatically,
-                payload: { selectedItem },
-            });
-        } else {
-            dispatch({
-                type: stateChangeTypes.ItemClearedProgrammatically,
-            });
-        }
-    }, [selectedItem, dropdownList, dispatch, allowCustomItem]);
+        dispatch({
+            type: stateChangeTypes.ItemSelectedProgrammatically,
+            payload: { selectedItem },
+        });
+    }, [selectedItem, dispatch]);
 
     useSetAllyMessageItemSelection({
         searchAttributes,
@@ -462,8 +449,6 @@ SearchableDropdown.propTypes = {
      * (inputValue: string, searchAttributes: string[]) => (item) => boolean
      */
     searchMatcher: func,
-    /** Allow selectedItem to not match any of the elements in dropdownList */
-    allowCustomItem: bool,
 };
 
 export default SearchableDropdown;
