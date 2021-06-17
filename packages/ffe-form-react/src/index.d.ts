@@ -34,9 +34,11 @@ export interface PhoneNumberProps {
     onNumberBlur?: React.FocusEventHandler<HTMLInputElement>;
     locale?: string;
     disabled?: boolean;
-    countryCodeInvalid?: boolean;
-    numberInvalid?: boolean;
+    countryCodeFieldMessage?: string | React.ReactNode;
+    numberFieldMessage?: string | React.ReactNode;
+    countryCodeAndNumberFieldMessage?: string | React.ReactNode;
     className?: string;
+    extraMargin?: boolean;
     dark?: boolean;
     countryCodeRef?: React.Ref<HTMLInputElement>;
     numberRef?: React.Ref<HTMLInputElement>;
