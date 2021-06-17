@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [18.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@18.2.0...@sb1/ffe-core@18.3.0) (2021-06-17)
+
+
+### Features
+
+* **ffe-core:** add more colour variants for WCAG purposes ([5640953](https://github.com/SpareBank1/designsystem/commit/5640953f8a0cf690bb890084f8cc0b56abc777b3))
+
+
+
+
+
 # [18.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@18.1.0...@sb1/ffe-core@18.2.0) (2021-04-14)
 
 
