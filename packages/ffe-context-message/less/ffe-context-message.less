@@ -50,7 +50,7 @@
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    padding: @ffe-spacing-sm @ffe-spacing-lg @ffe-spacing-sm @ffe-spacing-lg;
+    padding: @ffe-spacing-sm;
     text-align: left;
     .ffe-body-text {
         .native & {
@@ -114,13 +114,14 @@
 
     &__close-button {
         position: absolute;
-        top: 1em;
+        top: 3px;
         right: 1em;
         cursor: pointer;
-        color: @ffe-grey-charcoal;
-        fill: @ffe-grey-charcoal;
+        color: @ffe-farge-svart;
+        fill: @ffe-farge-svart;
         border: none;
-        padding: 0;
+        box-sizing: content-box;
+        padding: @ffe-spacing-sm;
         outline: none;
         background-color: transparent;
         height: 1em;
@@ -130,7 +131,6 @@
                 fill: @ffe-grey-silver-darkmode;
             }
         }
-
         &:focus {
             outline: auto;
         }
@@ -156,8 +156,7 @@
     &--compact {
         .ffe-context-message-content {
             flex-direction: row;
-            padding: @ffe-spacing-xs @ffe-spacing-xl @ffe-spacing-xs
-                @ffe-spacing-sm;
+            padding: @ffe-spacing-xs @ffe-spacing-sm;
         }
 
         .ffe-context-message-content__icon {
@@ -173,7 +172,7 @@
             height: 1.5em;
             width: 1.5em;
             padding: @ffe-spacing-2xs;
-            fill: @ffe-blue-royal;
+            fill: @ffe-farge-fjell;
             .native & {
                 @media (prefers-color-scheme: dark) {
                     fill: @ffe-white-darkmode;
@@ -183,7 +182,7 @@
     }
 
     &--info {
-        background-color: @ffe-blue-pale;
+        background-color: @ffe-farge-frost-30;
         .native & {
             @media (prefers-color-scheme: dark) {
                 background-color: @ffe-grey-charcoal-darkmode;
@@ -192,7 +191,7 @@
     }
 
     &--tip {
-        background-color: @ffe-sand;
+        background-color: @ffe-farge-sand-70;
         .native & {
             @media (prefers-color-scheme: dark) {
                 background-color: @ffe-grey-charcoal-darkmode;
@@ -201,7 +200,7 @@
     }
 
     &--success {
-        background-color: @ffe-green-mint;
+        background-color: @ffe-farge-nordlys-30;
         .native & {
             @media (prefers-color-scheme: dark) {
                 background-color: @ffe-grey-charcoal-darkmode;
@@ -209,12 +208,12 @@
         }
 
         .ffe-context-message-content__icon-svg {
-            fill: @ffe-green-shamrock;
+            fill: @ffe-farge-nordlys-wcag;
         }
     }
 
     &--error {
-        background-color: @ffe-orange-salmon;
+        background-color: @ffe-farge-baer-30;
         .native & {
             @media (prefers-color-scheme: dark) {
                 background-color: @ffe-grey-charcoal-darkmode;
@@ -232,7 +231,7 @@
         }
 
         .ffe-context-message-content__icon-svg {
-            fill: @ffe-red;
+            fill: @ffe-farge-baer-wcag;
 
             .native & {
                 @media (prefers-color-scheme: dark) {
