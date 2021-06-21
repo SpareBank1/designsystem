@@ -5123,11 +5123,6 @@ html {
     padding-left: 64px;
   }
 }
-.ffe-phone-number {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
 .ffe-phone-number__input-group {
   display: -webkit-box;
   display: -ms-flexbox;
