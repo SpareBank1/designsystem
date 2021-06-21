@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [17.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@16.1.1...@sb1/ffe-form@17.0.0) (2021-06-21)
+
+
+### Features
+
+* **ffe-form:** Update styling for PhoneNumber component ([55e6adf](https://github.com/SpareBank1/designsystem/commit/55e6adf7603fc4d76ada4637dadbba92ed1cd636))
+
+
+### BREAKING CHANGES
+
+* **ffe-form:** Updates styling of PhoneNumber component after introducing fieldMessage props
+
+
+
+
+
 ## [16.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@16.1.0...@sb1/ffe-form@16.1.1) (2021-06-17)
 
 **Note:** Version bump only for package @sb1/ffe-form

@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@7.3.0...@sb1/ffe-form-react@8.0.0) (2021-06-21)
+
+
+### Features
+
+* **ffe-form-react:** Make PhoneNumber accept FieldMessage ([755c10b](https://github.com/SpareBank1/designsystem/commit/755c10b90d216ba1a4bf5a67914b07e90c2013e5))
+
+
+### BREAKING CHANGES
+
+* **ffe-form-react:** Replaces countryCodeInvalid and numberInvalid with countryCodeFieldMessage, numberFieldMessage and countryCodeAndNumberFieldMessage.
+
+This commit changes how the components shows invalidation errors. It replaces countryCodeInvalid and numberInvalid with countryCodeFieldMessage, numberFieldMessage and countryCodeAndNumberFieldMessage. This makes it possible to render an error message instead of just making the input field red.
+
+
+
+
+
 # [7.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@7.2.10...@sb1/ffe-form-react@7.3.0) (2021-06-08)
 
 
