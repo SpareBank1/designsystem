@@ -114,11 +114,11 @@
 
     &__close-button {
         position: absolute;
-        top: 3px;
+        top: 3.5px;
         right: 1em;
         cursor: pointer;
-        color: @ffe-farge-svart;
-        fill: @ffe-farge-svart;
+        color: @ffe-farge-moerkgraa;
+        fill: @ffe-farge-moerkgraa;
         border: none;
         box-sizing: content-box;
         padding: @ffe-spacing-sm;
@@ -131,8 +131,12 @@
                 fill: @ffe-grey-silver-darkmode;
             }
         }
+        &:hover {
+            fill: @ffe-farge-svart;
+        }
         &:focus {
-            outline: auto;
+            outline: 2px solid @ffe-farge-vann;
+            border-radius: 5px;
         }
 
         &-svg {
