@@ -21,7 +21,8 @@
     "build": "make all",
     "start": "snowpack dev",
     "ghpages": "snowpack build --polyfill-node",
-    "clean": "make clean"
+    "clean": "make clean",
+    "test": "npx playwright test"
   },
   "dependencies": {
     "@sb1/ffe-accordion": "^7.0.12",
@@ -71,11 +72,13 @@
   },
   "devDependencies": {
     "@axe-core/react": "^4.1.1",
+    "@playwright/test": "^1.12.2",
     "@rollup/plugin-json": "^4.1.0",
     "@snowpack/plugin-react-refresh": "^2.4.0",
     "acorn": "^8.0.5",
     "acorn-jsx": "^5.3.1",
     "acorn-walk": "^8.0.2",
+    "axe-playwright": "^1.1.8",
     "estree-walker": "^2.0.2",
     "lodash.map": "^4.6.0",
     "react": "^16.9.0",
