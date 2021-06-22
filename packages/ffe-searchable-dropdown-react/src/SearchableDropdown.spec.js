@@ -484,8 +484,8 @@ describe('SearchableDropdown', () => {
         expect(input.value).toEqual('Bedriften');
 
         userEvent.clear(input);
-        userEvent.type(input, 'Sø');
-        expect(input.value).toEqual('Sø');
+        userEvent.type(input, 'B');
+        expect(input.value).toEqual('B');
 
         userEvent.type(input, '{esc}');
         expect(input.value).toEqual('Bedriften');
@@ -516,7 +516,7 @@ describe('SearchableDropdown', () => {
         expect(document.activeElement).toEqual(toggleButton);
     });
 
-    it('should reset the input value to the selected item when losing focus', () => {
+    it('should select item when losing focus if there is one single match', () => {
         const onChange = jest.fn();
         render(
             <div>
@@ -541,10 +541,6 @@ describe('SearchableDropdown', () => {
 
         const input = screen.getByRole('combobox');
 
-        userEvent.type(input, 'Be');
-        userEvent.click(screen.getByText('Bedriften'), { button: 1 });
-        expect(input.value).toEqual('Bedriften');
-
         userEvent.clear(input);
         userEvent.type(input, 'Besla');
         expect(input.value).toEqual('Besla');
@@ -552,7 +548,7 @@ describe('SearchableDropdown', () => {
         act(() => {
             userEvent.click(screen.getByText('Knapp'));
         });
-        expect(input.value).toEqual('Bedriften');
+        expect(input.value).toEqual('Beslag skytter');
     });
 
     it('should format input value when passing formatter', () => {
