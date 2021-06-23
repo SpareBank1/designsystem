@@ -69,6 +69,7 @@ const SearchableDropdown = ({
             maxRenderedDropdownElements,
             noMatchDropdownList: noMatch.dropdownList,
             searchMatcher,
+            onChange,
         }),
         {
             isExpanded: false,
@@ -87,6 +88,7 @@ const SearchableDropdown = ({
                     maxRenderedDropdownElements,
                     dropdownList,
                     searchMatcher,
+                    showAllItemsInDropdown: !!selectedItem,
                 }),
             };
         },
@@ -110,14 +112,6 @@ const SearchableDropdown = ({
     const handleInputBlur = e => {
         if (inputProps.onBlur) {
             inputProps.onBlur(e);
-        }
-
-        const hasEmptiedInputFieldWithoutClearButton =
-            state.inputValue.trim() === '' && state.selectedItem;
-
-        if (hasEmptiedInputFieldWithoutClearButton) {
-            dispatch({ type: stateChangeTypes.ClearedInputField });
-            onChange(null);
         }
     };
 

@@ -9,7 +9,6 @@ export const stateChangeTypes = {
     InputKeyDownArrowDown: 'InputKeyDownArrowDown',
     InputKeyDownArrowUp: 'InputKeyDownArrowUp',
     ClearButtonPressed: 'ClearButtonPressed',
-    ClearedInputField: 'ClearedInputField',
     ToggleButtonPressed: 'ToggleButtonPressed',
     ItemOnClick: 'ItemOnMouseDown',
     ItemOnMouseEnter: 'ItemOnMouseEnter',
@@ -23,6 +22,7 @@ export const createReducer = ({
     noMatchDropdownList,
     maxRenderedDropdownElements,
     searchMatcher,
+    onChange,
 }) => (state, action) => {
     switch (action.type) {
         case stateChangeTypes.InputKeyDownEscape:
@@ -43,6 +43,7 @@ export const createReducer = ({
                 dropdownList,
                 noMatchDropdownList,
                 searchMatcher,
+                showAllItemsInDropdown: true,
             });
 
             return {
@@ -61,6 +62,7 @@ export const createReducer = ({
                 dropdownList,
                 noMatchDropdownList,
                 searchMatcher,
+                showAllItemsInDropdown: false,
             });
 
             return {
@@ -77,7 +79,6 @@ export const createReducer = ({
                 noMatch,
             };
         }
-        case stateChangeTypes.ClearedInputField:
         case stateChangeTypes.ClearButtonPressed: {
             const { noMatch, listToRender } = getListToRender({
                 inputValue: '',
@@ -87,6 +88,7 @@ export const createReducer = ({
                 prevResultCount: state.listToRender.length,
                 noMatchDropdownList,
                 searchMatcher,
+                showAllItemsInDropdown: true,
             });
             return {
                 ...state,
@@ -130,14 +132,38 @@ export const createReducer = ({
             };
         }
         case stateChangeTypes.FocusMovedOutSide: {
+            const { listToRender } = getListToRender({
+                inputValue: state.inputValue,
+                searchAttributes,
+                maxRenderedDropdownElements,
+                dropdownList,
+                noMatchDropdownList,
+                searchMatcher,
+                showAllItemsInDropdown: false,
+            });
+
+            const selectedItem =
+                state.inputValue !== ''
+                    ? listToRender.length === 1
+                        ? listToRender[0]
+                        : state.selectedItem
+                    : null;
+
+            const inputValue =
+                selectedItem && state.inputValue !== ''
+                    ? selectedItem[searchAttributes[0]]
+                    : '';
+
+            if (selectedItem !== state.selectedItem) {
+                onChange(selectedItem);
+            }
+
             return {
                 ...state,
                 isExpanded: false,
                 highlightedIndex: -1,
-                inputValue:
-                    state.selectedItem && state.inputValue !== ''
-                        ? state.selectedItem[searchAttributes[0]]
-                        : '',
+                inputValue,
+                selectedItem,
             };
         }
         default:

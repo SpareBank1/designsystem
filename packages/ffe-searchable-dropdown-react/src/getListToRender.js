@@ -24,6 +24,7 @@ export const getListToRender = ({
     dropdownList,
     noMatchDropdownList,
     searchMatcher,
+    showAllItemsInDropdown,
 }) => {
     const trimmedInput = inputValue ? inputValue.trim() : '';
 
@@ -38,10 +39,19 @@ export const getListToRender = ({
           ).slice(0, maxRenderedDropdownElements)
         : dropdownList.slice(0, maxRenderedDropdownElements);
 
+    const listToRender = () => {
+        if (showAllItemsInDropdown) {
+            return dropdownList;
+        } else if (dropdownListFiltered.length) {
+            return dropdownListFiltered;
+        } else if (noMatchDropdownList) {
+            return noMatchDropdownList;
+        }
+        return [];
+    };
+
     return {
-        listToRender: dropdownListFiltered.length
-            ? dropdownListFiltered
-            : noMatchDropdownList || [],
+        listToRender: listToRender(),
         noMatch: !dropdownListFiltered.length,
     };
 };
