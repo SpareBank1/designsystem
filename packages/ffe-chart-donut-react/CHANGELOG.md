@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@3.0.5...@sb1/ffe-chart-donut-react@3.1.0) (2021-06-23)
+
+
+### Features
+
+* **ffe-chart-donut-react:** support single label prop ([23be07c](https://github.com/SpareBank1/designsystem/commit/23be07c60da9953275c1c9c387b739d34f734f7a))
+
+
+
+
+
 ## [3.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@3.0.4...@sb1/ffe-chart-donut-react@3.0.5) (2021-03-15)
 
 

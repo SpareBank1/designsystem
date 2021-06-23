@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [11.4.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@11.3.2...@sb1/ffe-searchable-dropdown-react@11.4.0) (2021-06-23)
+
+
+### Features
+
+* **ffe-searchable-dropdown-react:** Select single matching item on blur ([0a36ba5](https://github.com/SpareBank1/designsystem/commit/0a36ba568ee0abd6e9f05bf6cea061f6d13c2445))
+
+
+
+
+
 ## [11.3.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@11.3.1...@sb1/ffe-searchable-dropdown-react@11.3.2) (2021-06-21)
 
 **Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react
