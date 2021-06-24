@@ -296,6 +296,31 @@ describe('AccountSelector', () => {
         expect(screen.getByText('BrukskoABC')).toBeInTheDocument();
     });
 
+    it('should allow passing custom selected account when specified', () => {
+        render(
+            <AccountSelector
+                id="id"
+                labelId="labelId"
+                accounts={accounts}
+                locale="nb"
+                onAccountSelected={onAccountSelected}
+                onReset={onReset}
+                selectedAccount={{
+                    accountNumber: '2234 56 789101',
+                    name: 'Brukskonto 9',
+                    currencyCode: 'NOK',
+                    balance: 133,
+                }}
+                allowCustomAccount={true}
+            />,
+        );
+
+        const input = screen.getByRole('combobox');
+
+        expect(input.getAttribute('value')).toEqual('Brukskonto 9');
+        expect(screen.getByText('2234 56 789101')).toBeInTheDocument();
+    });
+
     it('should not show custom account when some account matches search', () => {
         render(
             <AccountSelector

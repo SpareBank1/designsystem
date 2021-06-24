@@ -15,6 +15,18 @@ import { AccountDetails, AccountSuggestion } from '../../subcomponents/account';
 import { Account, Locale } from '../../util/types';
 import { formatIncompleteAccountNumber } from '../../util/format';
 
+const getAccountsWithCustomAccounts = ({ accounts, selectedAccount }) => {
+    const shouldAddSelectedAccountNotFoundInList =
+        selectedAccount &&
+        !accounts.find(
+            account => account.accountNumber === selectedAccount.accountNumber,
+        );
+
+    return shouldAddSelectedAccountNotFoundInList
+        ? [...accounts, selectedAccount]
+        : accounts;
+};
+
 const AccountSelector = ({
     className,
     id,
@@ -61,7 +73,7 @@ const AccountSelector = ({
     const onInputChange = event => {
         setInputValue(event.target.value);
         if (inputProps?.onChange) {
-            inputProps.onChange();
+            inputProps.onChange(event);
         }
     };
 
@@ -94,6 +106,13 @@ const AccountSelector = ({
         ? ['name', 'accountNumber', 'balance']
         : ['name', 'accountNumber'];
 
+    const dropdownList = allowCustomAccount
+        ? getAccountsWithCustomAccounts({
+              selectedAccount,
+              accounts,
+          })
+        : accounts;
+
     return (
         <div className="ffe-account-selector-container">
             <div
@@ -112,7 +131,7 @@ const AccountSelector = ({
                         onChange: onInputChange,
                     }}
                     dropdownAttributes={dropdownAttributes}
-                    dropdownList={accounts}
+                    dropdownList={dropdownList}
                     noMatch={customNoMatch}
                     formatter={formatter}
                     onChange={handleAccountSelected}
