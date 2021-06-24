@@ -25,7 +25,7 @@ const variations = [
     'ContextErrorMessage-alertFalse',
 ];
 
-function visitPage(pageurl, doInjectAxe) {
+function visitPage(pageurl, doInjectAxe = false) {
     test.beforeEach(async ({ page }) => {
         await page.goto('https://sb1ds-examples.netlify.app/');
         await page.click(`text='${pageurl}.jsx'`);
@@ -33,17 +33,17 @@ function visitPage(pageurl, doInjectAxe) {
     });
 }
 
-function hasNoAxeViolations() {
+function expectNoAxeViolations() {
     test('pass Axe test', async ({ page }) => {
         const violations = await getViolations(page, '.sb1ex-live__preview');
         expect(violations).toHaveLength(0);
     });
 }
 
-variations.map(variation =>
+variations.forEach(variation =>
     test.describe(variation, () => {
         visitPage(variation, true);
-        hasNoAxeViolations();
+        expectNoAxeViolations();
     }),
 );
 
