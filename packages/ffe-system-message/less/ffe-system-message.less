@@ -26,7 +26,7 @@
 // Styleguide ffe-system-message
 
 .ffe-system-message-wrapper {
-    color: @ffe-black;
+    color: @ffe-farge-svart;
     fill: currentColor;
     transition: height @ffe-transition-duration @ffe-ease-in-out-back;
     overflow: hidden;
@@ -37,8 +37,8 @@
     }
 
     &--error {
-        background-color: @ffe-orange-salmon;
-        fill: @ffe-red;
+        background-color: @ffe-farge-baer-30;
+        fill: @ffe-farge-baer-wcag;
         .native & {
             @media (prefers-color-scheme: dark) {
                 background-color: @ffe-grey-charcoal-darkmode;
@@ -48,8 +48,8 @@
     }
 
     &--info {
-        background-color: @ffe-blue-pale;
-        fill: @ffe-blue-royal;
+        background-color: @ffe-farge-frost-30;
+        fill: @ffe-farge-fjell;
         .native & {
             @media (prefers-color-scheme: dark) {
                 background-color: @ffe-grey-charcoal-darkmode;
@@ -58,11 +58,10 @@
         }
     }
 
-    // TODO: Change color to one in the style guide
     &--news {
-        background-color: #4a5155;
+        background-color: @ffe-farge-moerkgraa-wcag;
         color: @ffe-white;
-        fill: #4a5155;
+        fill: @ffe-farge-fjell;
         .native & {
             @media (prefers-color-scheme: dark) {
                 background-color: @ffe-grey-charcoal-darkmode;
@@ -73,8 +72,8 @@
     }
 
     &--success {
-        background-color: @ffe-green-mint;
-        fill: @ffe-green-shamrock;
+        background-color: @ffe-farge-nordlys-30;
+        fill: @ffe-farge-nordlys-wcag;
         .native & {
             @media (prefers-color-scheme: dark) {
                 background-color: @ffe-grey-charcoal-darkmode;
@@ -96,8 +95,8 @@
         background: @ffe-white;
         border-radius: 50%;
         display: inline-flex;
-        height: 1.7em;
-        width: 1.7em;
+        height: 2rem;
+        width: 2rem;
         margin-right: @ffe-spacing-sm;
         .native & {
             @media (prefers-color-scheme: dark) {
@@ -133,13 +132,18 @@
         color: inherit;
         cursor: pointer;
         align-self: flex-start;
-        height: 16px;
-        margin: @ffe-spacing-2xs 0 @ffe-spacing-2xs @ffe-spacing-2xs;
-        padding: 0;
-        width: 16px;
+        height: 1em;
+        padding: @ffe-spacing-sm;
+        box-sizing: content-box;
+        fill: @ffe-farge-moerkgraa;
 
+        &:hover {
+            fill: @ffe-farge-svart;
+        }
+        &:focus {
+            outline: 2px solid @ffe-farge-vann;
+        }
         > svg {
-            fill: @ffe-black;
             height: 100%;
             width: 100%;
             .native & {
@@ -147,13 +151,15 @@
                     fill: @ffe-grey-cloud-darkmode;
                 }
             }
-
-            .ffe-system-message-wrapper--news & {
-                fill: @ffe-white;
-                .native & {
-                    @media (prefers-color-scheme: dark) {
-                        fill: @ffe-grey-cloud-darkmode;
-                    }
+        }
+        .ffe-system-message-wrapper--news & {
+            fill: @ffe-farge-hvit;
+            &:hover {
+                fill: @ffe-farge-lysvarmgraa;
+            }
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    fill: @ffe-grey-cloud-darkmode;
                 }
             }
         }
