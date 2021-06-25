@@ -3112,7 +3112,7 @@ html {
           flex-direction: column;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  padding: 16px 32px 16px 32px;
+  padding: 16px;
   text-align: left;
 }
 @media (prefers-color-scheme: dark) {
@@ -3179,13 +3179,15 @@ html {
 }
 .ffe-context-message-content__close-button {
   position: absolute;
-  top: 1em;
+  top: 3.5px;
   right: 1em;
   cursor: pointer;
   color: #676767;
   fill: #676767;
   border: none;
-  padding: 0;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  padding: 16px;
   outline: none;
   background-color: transparent;
   height: 1em;
@@ -3196,8 +3198,12 @@ html {
     fill: #858585;
   }
 }
+.ffe-context-message-content__close-button:hover {
+  fill: #020a0a;
+}
 .ffe-context-message-content__close-button:focus {
-  outline: auto;
+  outline: 2px solid #005aa4;
+  border-radius: 5px;
 }
 .ffe-context-message-content__close-button-svg {
   height: 100%;
@@ -3225,7 +3231,7 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  padding: 8px 40px 8px 16px;
+  padding: 8px 16px;
 }
 .ffe-context-message--compact .ffe-context-message-content__icon {
   -ms-flex-item-align: start;
@@ -3248,7 +3254,7 @@ html {
   }
 }
 .ffe-context-message--info {
-  background-color: #dff1f9;
+  background-color: #d8e9f2;
 }
 @media (prefers-color-scheme: dark) {
   .native .ffe-context-message--info {
@@ -3256,7 +3262,7 @@ html {
   }
 }
 .ffe-context-message--tip {
-  background-color: #f8f5eb;
+  background-color: #faf0e7;
 }
 @media (prefers-color-scheme: dark) {
   .native .ffe-context-message--tip {
@@ -3264,7 +3270,7 @@ html {
   }
 }
 .ffe-context-message--success {
-  background-color: #e1f4e3;
+  background-color: #c2e7da;
 }
 @media (prefers-color-scheme: dark) {
   .native .ffe-context-message--success {
@@ -3272,10 +3278,10 @@ html {
   }
 }
 .ffe-context-message--success .ffe-context-message-content__icon-svg {
-  fill: #008a00;
+  fill: #257e60;
 }
 .ffe-context-message--error {
-  background-color: #f3bbaa;
+  background-color: #f7c6c7;
 }
 @media (prefers-color-scheme: dark) {
   .native .ffe-context-message--error {
@@ -3291,7 +3297,7 @@ html {
   }
 }
 .ffe-context-message--error .ffe-context-message-content__icon-svg {
-  fill: #e60000;
+  fill: #e12d2f;
 }
 @media (prefers-color-scheme: dark) {
   .native .ffe-context-message--error .ffe-context-message-content__icon-svg {
