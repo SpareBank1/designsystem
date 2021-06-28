@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [16.2.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@16.2.10...@sb1/ffe-account-selector-react@16.2.11) (2021-06-28)
+
+
+### Bug Fixes
+
+* **ffe-account-selector-react:** Set inputValue when account is selected ([2056aef](https://github.com/SpareBank1/designsystem/commit/2056aef8769774fb40d5385d46633304b08bcec3))
+
+
+
+
+
 ## [16.2.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@16.2.9...@sb1/ffe-account-selector-react@16.2.10) (2021-06-24)
 
 
