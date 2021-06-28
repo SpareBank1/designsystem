@@ -15,9 +15,14 @@ import { AccountDetails, AccountSuggestion } from '../../subcomponents/account';
 import { Account, Locale } from '../../util/types';
 import { formatIncompleteAccountNumber } from '../../util/format';
 
-const getAccountsWithCustomAccounts = ({ accounts, selectedAccount }) => {
+const getAccountsWithCustomAccounts = ({
+    accounts,
+    selectedAccount,
+    inputValue,
+}) => {
     const shouldAddSelectedAccountNotFoundInList =
         selectedAccount &&
+        selectedAccount.name === inputValue &&
         !accounts.find(
             account => account.accountNumber === selectedAccount.accountNumber,
         );
@@ -45,7 +50,7 @@ const AccountSelector = ({
     ariaInvalid,
     withSpaceForDetails = true,
 }) => {
-    const [inputValue, setInputValue] = useState('');
+    const [inputValue, setInputValue] = useState(selectedAccount?.name || '');
 
     let formatter;
     if (formatAccountNumber) {
@@ -84,9 +89,11 @@ const AccountSelector = ({
             setInputValue('');
             onReset();
         } else if (hasSelectedCustomAccount) {
-            onAccountSelected({ name: '', accountNumber: value.name });
+            onAccountSelected({ name: value.name, accountNumber: value.name });
+            setInputValue(value.name);
         } else {
             onAccountSelected(value);
+            setInputValue(value.name);
         }
     };
 
@@ -110,6 +117,7 @@ const AccountSelector = ({
         ? getAccountsWithCustomAccounts({
               selectedAccount,
               accounts,
+              inputValue,
           })
         : accounts;
 
