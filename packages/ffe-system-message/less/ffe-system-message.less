@@ -127,11 +127,12 @@
         flex: 0 0 auto;
         appearance: none;
         background: transparent;
-        border: 0;
+        border: 2px solid transparent;
         border-radius: 0;
         color: inherit;
         cursor: pointer;
         align-self: flex-start;
+        width: 1em;
         height: 1em;
         padding: @ffe-spacing-sm;
         box-sizing: content-box;
@@ -141,7 +142,8 @@
             fill: @ffe-farge-svart;
         }
         &:focus {
-            outline: 2px solid @ffe-farge-vann;
+            border: 2px solid @ffe-farge-vann;
+            border-radius: 5px;
         }
         > svg {
             height: 100%;
