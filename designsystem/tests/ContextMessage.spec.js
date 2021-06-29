@@ -1,6 +1,5 @@
 const { test, expect } = require('@playwright/test');
-const { injectAxe, getViolations } = require('axe-playwright');
-
+const { visitPage, expectNoAxeViolations } = require('./utils');
 const variations = [
     'ContextErrorMessage',
     'ContextInfoMessage',
@@ -25,30 +24,15 @@ const variations = [
     'ContextErrorMessage-alertFalse',
 ];
 
-function visitPage(pageurl, doInjectAxe = false) {
-    test.beforeEach(async ({ page }) => {
-        await page.goto('https://sb1ds-examples.netlify.app/');
-        await page.click(`text='${pageurl}.jsx'`);
-        if (doInjectAxe) await injectAxe(page);
-    });
-}
-
-function expectNoAxeViolations() {
-    test('pass Axe test', async ({ page }) => {
-        const violations = await getViolations(page, '.sb1ex-live__preview');
-        expect(violations).toHaveLength(0);
-    });
-}
-
 variations.forEach(variation =>
     test.describe(variation, () => {
-        visitPage(variation, true);
+        test.beforeEach(async ({ page }) => visitPage(page, variation, true));
         expectNoAxeViolations();
     }),
 );
 
 test.describe('ContextErrorMessage', () => {
-    visitPage('ContextErrorMessage');
+    test.beforeEach(async ({ page }) => visitPage(page, 'ContextErrorMessage'));
     test('have role="alert" attribute', async ({ page }) => {
         const messageBox = await (
             await page.$('.ffe-context-message--error')
@@ -58,7 +42,9 @@ test.describe('ContextErrorMessage', () => {
 });
 
 test.describe('ContextErrorMessage-alertFalse', () => {
-    visitPage('ContextErrorMessage-alertFalse');
+    test.beforeEach(async ({ page }) =>
+        visitPage(page, 'ContextErrorMessage-alertFalse'),
+    );
     test('dont have role="alert" attribute', async ({ page }) => {
         const messageBox = await (
             await page.$('.ffe-context-message--error')
@@ -69,7 +55,9 @@ test.describe('ContextErrorMessage-alertFalse', () => {
 
 /* Test that cover scenarios shared by all ContextMessage components */
 test.describe('ContextSuccessMessage-showCloseButton', () => {
-    visitPage('ContextSuccessMessage-showCloseButton');
+    test.beforeEach(async ({ page }) =>
+        visitPage(page, 'ContextSuccessMessage-showCloseButton'),
+    );
     test('has clickable area larger than 44 x 44px', async ({ page }) => {
         const button = await (
             await page.$('.ffe-context-message-content__close-button')

@@ -22,7 +22,8 @@
     "start": "snowpack dev",
     "ghpages": "snowpack build --polyfill-node",
     "clean": "make clean",
-    "test": "npx playwright test"
+    "test": "npx playwright test",
+    "playwright:install": "npx playwright install"
   },
   "dependencies": {
     "@sb1/ffe-accordion": "^7.0.12",
