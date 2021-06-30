@@ -11,7 +11,6 @@ export const stateChangeTypes = {
     ClearButtonPressed: 'ClearButtonPressed',
     ToggleButtonPressed: 'ToggleButtonPressed',
     ItemOnClick: 'ItemOnMouseDown',
-    ItemOnMouseEnter: 'ItemOnMouseEnter',
     FocusMovedOutSide: 'FocusMovedOutSide',
     ItemSelectedProgrammatically: 'ItemSelectedProgrammatically',
 };
@@ -125,12 +124,6 @@ export const createReducer = ({
             };
         }
 
-        case stateChangeTypes.ItemOnMouseEnter: {
-            return {
-                ...state,
-                highlightedIndex: action.payload.highlightedIndex,
-            };
-        }
         case stateChangeTypes.FocusMovedOutSide: {
             const { listToRender } = getListToRender({
                 inputValue: state.inputValue,
