@@ -36,6 +36,7 @@ export interface AccountSelectorProps {
     listElementBody?: (props: ListElementBodyProps) => React.FC<HTMLDivElement>;
     withSpaceForDetails?: boolean;
     ariaInvalid: boolean;
+    highCapacity?: boolean;
 }
 
 declare class AccountSelector extends React.Component<AccountSelectorProps> {}
