@@ -33,6 +33,7 @@ export interface SearchableDropdownProps<T> {
         inputValue: string,
         searchAttributes: (keyof T)[],
     ) => (item: T) => boolean;
+    hichCapacity?: boolean;
 }
 
 declare class SearchableDropdown<T> extends React.Component<

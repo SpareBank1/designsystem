@@ -20,7 +20,7 @@ import {
 import classNames from 'classnames';
 import { ChevronIkon, KryssIkon } from '@sb1/ffe-icons-react';
 
-import List from './List';
+import HighCapacityResults from './HighCapacityResults';
 import ListItemBody from './ListItemBody';
 import {
     getButtonLabelClear,
@@ -37,6 +37,7 @@ import {
     getNewHighlightedIndexDown,
 } from './getNewHighlightedIndex';
 import { useSetAllyMessageItemSelection } from './a11y';
+import Results from './Results';
 
 const ARROW_UP = 'ArrowUp';
 const ARROW_DOWN = 'ArrowDown';
@@ -61,6 +62,7 @@ const SearchableDropdown = ({
     formatter = value => value,
     searchMatcher,
     selectedItem,
+    highCapacity = false,
 }) => {
     const [state, dispatch] = useReducer(
         createReducer({
@@ -252,6 +254,8 @@ const SearchableDropdown = ({
         }
     };
 
+    const ResultsElement = highCapacity ? HighCapacityResults : Results;
+
     return (
         <div // eslint-disable-line jsx-a11y/no-static-element-interactions
             onKeyDown={handleKeyDown}
@@ -362,7 +366,7 @@ const SearchableDropdown = ({
             >
                 <div id={listBoxRef.current} role="listbox">
                     {state.isExpanded && (
-                        <List
+                        <ResultsElement
                             listBoxRef={listBoxRef}
                             listToRender={state.listToRender}
                             ListItemBodyElement={ListItemBodyElement}
@@ -443,6 +447,12 @@ SearchableDropdown.propTypes = {
      * (inputValue: string, searchAttributes: string[]) => (item) => boolean
      */
     searchMatcher: func,
+
+    /**
+     * For situations where SearchableDropdown might be populated with hundreds of accounts
+     * uses react-window for performance optimization, default false
+     */
+    highCapacity: bool,
 };
 
 export default SearchableDropdown;

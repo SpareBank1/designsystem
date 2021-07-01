@@ -209,6 +209,7 @@ const labelId = 'labelId1';
         onChange={item => setState({ item })}
         searchAttributes={['organizationName']}
         locale="nb"
+        highCapacity={true}
     />
 </InputGroup>;
 ```

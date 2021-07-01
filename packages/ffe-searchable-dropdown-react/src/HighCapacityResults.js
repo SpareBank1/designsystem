@@ -23,7 +23,7 @@ import ListItemContainer from './ListItemContainer';
 import { stateChangeTypes } from './reducer';
 import NoMatch from './NoMatch';
 
-export default class List extends React.PureComponent {
+export default class HighCapacityResults extends React.PureComponent {
     state = {
         optionHeight: 40,
     };
@@ -172,7 +172,7 @@ export default class List extends React.PureComponent {
     }
 }
 
-List.propTypes = {
+HighCapacityResults.propTypes = {
     listToRender: arrayOf(object).isRequired,
     noMatch: shape({
         text: string,
