@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [11.4.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@11.4.0...@sb1/ffe-searchable-dropdown-react@11.4.1) (2021-07-01)
+
+
+### Bug Fixes
+
+* **ffe-searchable-dropdown-react:** Have separate list for highCapacity and lowCapacity ([68faffb](https://github.com/SpareBank1/designsystem/commit/68faffb3da676ad2bdc33033db745dce4297797f))
+
+
+
+
+
 # [11.4.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@11.3.2...@sb1/ffe-searchable-dropdown-react@11.4.0) (2021-06-23)
 
 
