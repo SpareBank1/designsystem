@@ -6,15 +6,16 @@
 Dette repositoryet inneholder designdokumentasjon, teknisk dokumentasjon, og kode for SpareBank 1 sitt designsystem og
 implementasjonen av det - Felles frontend (FFE).
 
-Designsystemet består av innholdet i dette repoet + verktøykassen i Figma. Begge deler håndteres av designsystem teamet, som kan nås på #ext-designsystem kanalen på slack, eller via github issues. 
+Designsystemet består av innholdet i dette repoet + verktøykassen i Figma. Begge deler håndteres av designsystem-teamet, som kan nås på #ext-designsystem på slack, eller via github issues.
 
 ## :art: Kom i gang - Figma
 
 Verktøykassen i Figma inneholder (nesten) alle komponentene som finnes i FFE, og oppdateres regelmessig sammen med resten av FFE.
-For tilgang, ta kontakt med designsystem teamet på #ext-designsystem kanalen på slack, så hjelper de deg. 
+For tilgang, ta kontakt med designsystem-teamet på #ext-designsystem på slack, så hjelper de deg.
 
 ### Holde seg oppdatert
-Verktøykassa blir oppdatert av designsystem teamet ved endringer, eller når nye ting legges til. Endringene annonseres enn så
+
+Verktøykassa blir oppdatert av designsystem-teamet ved endringer, eller når nye ting legges til. Endringene annonseres enn så
 lenge via interne kanaler - spør fagleder, så blir du pekt i riktig retning for å få med deg disse beskjedene :+1:
 
 Har du en idé til en forbedring eller et nytt konsept? Så bra! :tada: Ta kontakt via slack i #ext-designsystem kanelen, så
