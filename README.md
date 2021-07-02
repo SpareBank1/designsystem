@@ -6,23 +6,22 @@
 Dette repositoryet inneholder designdokumentasjon, teknisk dokumentasjon, og kode for SpareBank 1 sitt designsystem og
 implementasjonen av det - Felles frontend (FFE).
 
-## Designer?
+Designsystemet består av innholdet i dette repoet + verktøykassen i Figma. Begge deler håndteres av designsystem-teamet, som kan nås på #ext-designsystem på slack, eller via github issues.
 
-Designsystemet er i stadig endring. Bruk fagleder og miljøet rundt deg for å holde deg oppdatert og forbedre
-designsystemet til å passe dine behov.
+## :art: Kom i gang - Figma
 
-### Kom i gang
+Verktøykassen i Figma inneholder (nesten) alle komponentene som finnes i FFE, og oppdateres regelmessig sammen med resten av FFE.
+For tilgang, ta kontakt med designsystem-teamet på #ext-designsystem på slack, så hjelper de deg.
 
-Ta kontakt med faglederne (heidi.stolen@sparebank1.no eller siri.corneliussen@sparebank1.no), så hjelper de deg med tilgang til Verktøykassa til Figma.
+### Holde seg oppdatert
 
-Verktøykassa blir oppdatert av faglederene ved endringer eller når nye ting legges til. Endringene annonseres enn så
+Verktøykassa blir oppdatert av designsystem-teamet ved endringer, eller når nye ting legges til. Endringene annonseres enn så
 lenge via interne kanaler - spør fagleder, så blir du pekt i riktig retning for å få med deg disse beskjedene :+1:
 
-Har du en idé til en forbedring eller et nytt konsept? Så bra! :tada: Snakk om den med kollegene dine i fagforumet,
-så blir det en felles vurdering om idéen tas inn i designsystemet. Derfra blir det til at Verktøykassa oppdateres,
-så åpnes et issue her på Github så en utvikler kan plukke oppgaven og gjøre endringen i FFE.
+Har du en idé til en forbedring eller et nytt konsept? Så bra! :tada: Ta kontakt via slack i #ext-designsystem kanelen, så
+kan vi diskutere det videre! Er det derimot en bug, så si gjerne fra ved å åpne ett issue her på Github.
 
-## Utvikler?
+## :computer: Kom i gang - FFE
 
 **Skal du bruke FFE for første gang? Se på dokumentasjonen under [Kom i gang](https://design.sparebank1.no/kom-i-gang.html#kom-i-gang_for-utviklere)** :book:
 
