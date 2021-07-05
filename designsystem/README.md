@@ -12,5 +12,5 @@ which host all the different components on independent pages.
 ### How to run?
 
 To run the playwright tests, you need to navigate to this folder, and run
-`npm run test`, if you fail to run the tests, try running the `npm run playwright:install`
+`npm test`, if you fail to run the tests, try running the `npm run playwright:install`
 command to install the browsers needed to run the tests.
