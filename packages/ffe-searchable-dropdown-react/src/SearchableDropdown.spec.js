@@ -681,4 +681,85 @@ describe('SearchableDropdown', () => {
         expect(onChange).toHaveBeenCalledWith(companies[2]);
         expect(input.value).toEqual('Beslag skytter');
     });
+
+    it('should not automatically change selectedItem if object structure is different from previous but the actual content is still the same content', () => {
+        const onChange = jest.fn();
+        render(
+            <div>
+                <button>Knapp</button>
+                <SearchableDropdown
+                    id="id"
+                    labelId="labelId"
+                    dropdownAttributes={[
+                        'organizationName',
+                        'organizationNumber',
+                    ]}
+                    dropdownList={companies}
+                    onChange={onChange}
+                    searchAttributes={[
+                        'organizationName',
+                        'organizationNumber',
+                    ]}
+                    selectedItem={{
+                        organizationNumber: '912602370',
+                        quantityUnprocessedMessages: 5,
+                        organizationName: 'Bedriften',
+                    }}
+                    locale="nb"
+                />
+            </div>,
+        );
+
+        const input = screen.getByRole('combobox');
+        userEvent.click(input);
+        act(() => {
+            userEvent.click(screen.getByText('Knapp'));
+        });
+        expect(onChange).not.toHaveBeenCalled();
+    });
+
+    it('should allow passing a selectedItem with same organizationName as dropdownListItems but different organizationNumber without it being changed', () => {
+        const onChange = jest.fn();
+
+        const noMatchDropDownList = [
+            {
+                organizationName: 'Bedriften',
+                organizationNumber: '1111111',
+                quantityUnprocessedMessages: 7,
+            },
+        ];
+
+        render(
+            <div>
+                <button>Knapp</button>
+                <SearchableDropdown
+                    id="id"
+                    labelId="labelId"
+                    dropdownAttributes={[
+                        'organizationName',
+                        'organizationNumber',
+                    ]}
+                    dropdownList={companies}
+                    onChange={onChange}
+                    searchAttributes={[
+                        'organizationName',
+                        'organizationNumber',
+                    ]}
+                    locale="nb"
+                    noMatch={{
+                        text: '',
+                        dropdownList: noMatchDropDownList,
+                    }}
+                    selectedItem={noMatchDropDownList[0]}
+                />
+            </div>,
+        );
+
+        const input = screen.getByRole('combobox');
+        userEvent.click(input);
+        act(() => {
+            userEvent.click(screen.getByText('Knapp'));
+        });
+        expect(onChange).not.toHaveBeenCalled();
+    });
 });

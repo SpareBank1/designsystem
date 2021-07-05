@@ -2,6 +2,7 @@ import { getListToRender } from './getListToRender';
 
 export const stateChangeTypes = {
     InputFocus: 'InputFocus',
+    InputBlur: 'InputBlur',
     InputClick: 'InputClick',
     InputChange: 'InputChange',
     InputKeyDownEscape: 'InputKeyDownEscape',
@@ -125,6 +126,14 @@ export const createReducer = ({
         }
 
         case stateChangeTypes.FocusMovedOutSide: {
+            return {
+                ...state,
+                isExpanded: false,
+                highlightedIndex: -1,
+            };
+        }
+
+        case stateChangeTypes.InputBlur: {
             const { listToRender } = getListToRender({
                 inputValue: state.inputValue,
                 searchAttributes,
@@ -132,31 +141,42 @@ export const createReducer = ({
                 dropdownList,
                 noMatchDropdownList,
                 searchMatcher,
-                showAllItemsInDropdown: false,
+                showAllItemsInDropdown: true,
             });
 
-            const selectedItem =
-                state.inputValue !== ''
-                    ? listToRender.length === 1
-                        ? listToRender[0]
-                        : state.selectedItem
-                    : null;
+            const shouldEmptySelectedItem =
+                state.inputValue === '' && !!state.selectedItem;
 
-            const inputValue =
-                selectedItem && state.inputValue !== ''
-                    ? selectedItem[searchAttributes[0]]
-                    : '';
+            const shouldAutomaticallySetSelectedItem = !!(
+                state.listToRender.length === 1 &&
+                searchAttributes
+                    .map(
+                        searchAttribute =>
+                            state.listToRender[0][searchAttribute] ===
+                            state.selectedItem?.[searchAttribute],
+                    )
+                    .includes(false)
+            );
 
-            if (selectedItem !== state.selectedItem) {
-                onChange(selectedItem);
+            let selectedItem = state.selectedItem;
+
+            if (shouldEmptySelectedItem) {
+                onChange(null);
+                selectedItem = null;
+            } else if (shouldAutomaticallySetSelectedItem) {
+                onChange(state.listToRender[0]);
+                selectedItem = state.listToRender[0];
             }
+
+            const inputValue = selectedItem
+                ? selectedItem[searchAttributes[0]]
+                : '';
 
             return {
                 ...state,
-                isExpanded: false,
-                highlightedIndex: -1,
                 inputValue,
                 selectedItem,
+                listToRender,
             };
         }
         default:

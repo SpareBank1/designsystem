@@ -115,6 +115,7 @@ const SearchableDropdown = ({
         if (inputProps.onBlur) {
             inputProps.onBlur(e);
         }
+        dispatch({ type: stateChangeTypes.InputBlur });
     };
 
     useEffect(() => {
