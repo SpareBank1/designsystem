@@ -30,21 +30,11 @@
     fill: currentColor;
     transition: height @ffe-transition-duration @ffe-ease-in-out-back;
     overflow: hidden;
-    .native & {
-        @media (prefers-color-scheme: dark) {
-            color: @ffe-grey-cloud-darkmode;
-        }
-    }
+    border-radius: 5px;
 
     &--error {
         background-color: @ffe-farge-baer-30;
         fill: @ffe-farge-baer-wcag;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                background-color: @ffe-grey-charcoal-darkmode;
-                fill: @ffe-red-darkmode;
-            }
-        }
     }
 
     &--info {
@@ -52,8 +42,7 @@
         fill: @ffe-farge-fjell;
         .native & {
             @media (prefers-color-scheme: dark) {
-                background-color: @ffe-grey-charcoal-darkmode;
-                fill: @ffe-blue-azure-darkmode;
+                background-color: @ffe-farge-vann-30;
             }
         }
     }
@@ -62,23 +51,11 @@
         background-color: @ffe-farge-moerkgraa-wcag;
         color: @ffe-white;
         fill: @ffe-farge-fjell;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                background-color: @ffe-grey-charcoal-darkmode;
-                color: @ffe-grey-cloud-darkmode;
-                fill: @ffe-blue-azure-darkmode;
-            }
-        }
     }
 
     &--success {
         background-color: @ffe-farge-nordlys-30;
         fill: @ffe-farge-nordlys-wcag;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                background-color: @ffe-grey-charcoal-darkmode;
-            }
-        }
     }
 }
 
@@ -98,11 +75,6 @@
         height: 2rem;
         width: 2rem;
         margin-right: @ffe-spacing-sm;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                background: @ffe-grey-darkmode;
-            }
-        }
 
         > svg {
             height: 50%;
@@ -150,7 +122,7 @@
             width: 100%;
             .native & {
                 @media (prefers-color-scheme: dark) {
-                    fill: @ffe-grey-cloud-darkmode;
+                    fill: inherit;
                 }
             }
         }
@@ -159,10 +131,8 @@
             &:hover {
                 fill: @ffe-farge-lysvarmgraa;
             }
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    fill: @ffe-grey-cloud-darkmode;
-                }
+            &:focus {
+                border: 2px solid @ffe-farge-hvit;
             }
         }
     }
