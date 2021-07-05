@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.24](https://github.com/SpareBank1/designsystem/compare/@sparebank1/designsystem@1.0.0-alpha.23...@sparebank1/designsystem@1.0.0-alpha.24) (2021-07-05)
+
+
+### Features
+
+* **designsystem:** add a11y tests to context message components ([#1133](https://github.com/SpareBank1/designsystem/issues/1133)) ([52cdf7b](https://github.com/SpareBank1/designsystem/commit/52cdf7b54f7f57653b8e46a893e97d4c86e41b3b))
+
+
+
+
+
 # [1.0.0-alpha.23](https://github.com/SpareBank1/designsystem/compare/@sparebank1/designsystem@1.0.0-alpha.22...@sparebank1/designsystem@1.0.0-alpha.23) (2021-07-01)
 
 **Note:** Version bump only for package @sparebank1/designsystem

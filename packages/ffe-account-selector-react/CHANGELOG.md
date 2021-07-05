@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [16.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@16.2.12...@sb1/ffe-account-selector-react@16.3.0) (2021-07-05)
+
+
+### Features
+
+* **ffe-account-selector-react:** Add possibility to use a highCapacity account selector ([ffe2b41](https://github.com/SpareBank1/designsystem/commit/ffe2b410938fe338bcc179587c8d6d33f2c0abfd))
+
+
+
+
+
 ## [16.2.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@16.2.11...@sb1/ffe-account-selector-react@16.2.12) (2021-07-01)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
