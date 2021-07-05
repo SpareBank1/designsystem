@@ -49,6 +49,7 @@ const AccountSelector = ({
     formatAccountNumber = true,
     ariaInvalid,
     withSpaceForDetails = true,
+    highCapacity = false,
 }) => {
     const [inputValue, setInputValue] = useState(selectedAccount?.name || '');
 
@@ -149,6 +150,7 @@ const AccountSelector = ({
                     ariaInvalid={ariaInvalid}
                     searchMatcher={searchMatcherIgnoringAccountNumberFormatting}
                     selectedItem={selectedAccount}
+                    highCapacity={highCapacity}
                 />
                 {selectedAccount && (
                     <AccountDetails
@@ -211,6 +213,13 @@ AccountSelector.propTypes = {
     withSpaceForDetails: bool,
     /** Sets aria-invalid on input field  */
     ariaInvalid: oneOfType([string, bool]).isRequired,
+    /**
+     * For situations where AccountSelector might be populated with hundreds of accounts,
+     * uses react-window for performance optimization, default false.
+     * This prop will be passed on to SearchableDropdown.
+     * The account selector with highCapacity is currently not working with VoiceOver on ios.
+     */
+    highCapacity: bool,
 };
 
 export default AccountSelector;
