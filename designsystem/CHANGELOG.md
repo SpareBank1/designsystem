@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.25](https://github.com/SpareBank1/designsystem/compare/@sparebank1/designsystem@1.0.0-alpha.24...@sparebank1/designsystem@1.0.0-alpha.25) (2021-07-06)
+
+**Note:** Version bump only for package @sparebank1/designsystem
+
+
+
+
+
 # [1.0.0-alpha.24](https://github.com/SpareBank1/designsystem/compare/@sparebank1/designsystem@1.0.0-alpha.23...@sparebank1/designsystem@1.0.0-alpha.24) (2021-07-05)
 
 
