@@ -115,7 +115,6 @@ const SearchableDropdown = ({
         if (inputProps.onBlur) {
             inputProps.onBlur(e);
         }
-        dispatch({ type: stateChangeTypes.InputBlur });
     };
 
     useEffect(() => {
@@ -166,9 +165,18 @@ const SearchableDropdown = ({
         const isFocusInside =
             containerRef.current.contains(e.target) ||
             e.__isEventFromFFESearchableDropdown;
+
         if (!isFocusInside) {
             dispatch({
                 type: stateChangeTypes.FocusMovedOutSide,
+            });
+        }
+
+        const hasBlurred =
+            !isFocusInside && document.activeElement === inputRef.current;
+        if (hasBlurred) {
+            dispatch({
+                type: stateChangeTypes.InputBlur,
             });
         }
     };
