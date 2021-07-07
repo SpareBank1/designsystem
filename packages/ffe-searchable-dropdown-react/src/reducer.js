@@ -126,14 +126,6 @@ export const createReducer = ({
         }
 
         case stateChangeTypes.FocusMovedOutSide: {
-            return {
-                ...state,
-                isExpanded: false,
-                highlightedIndex: -1,
-            };
-        }
-
-        case stateChangeTypes.InputBlur: {
             const { listToRender } = getListToRender({
                 inputValue: state.inputValue,
                 searchAttributes,
@@ -171,9 +163,10 @@ export const createReducer = ({
             const inputValue = selectedItem
                 ? selectedItem[searchAttributes[0]]
                 : '';
-
             return {
                 ...state,
+                isExpanded: false,
+                highlightedIndex: -1,
                 inputValue,
                 selectedItem,
                 listToRender,

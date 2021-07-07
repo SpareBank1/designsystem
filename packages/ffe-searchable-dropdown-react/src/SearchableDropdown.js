@@ -171,14 +171,6 @@ const SearchableDropdown = ({
                 type: stateChangeTypes.FocusMovedOutSide,
             });
         }
-
-        const hasBlurred =
-            !isFocusInside && document.activeElement === inputRef.current;
-        if (hasBlurred) {
-            dispatch({
-                type: stateChangeTypes.InputBlur,
-            });
-        }
     };
 
     useEffect(() => {
