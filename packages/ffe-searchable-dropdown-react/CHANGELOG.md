@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [11.4.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@11.4.4...@sb1/ffe-searchable-dropdown-react@11.4.5) (2021-07-07)
+
+
+### Bug Fixes
+
+* **ffe-searchable-dropdown-react:** Dont auto select if list has one element and no highlightedIndex ([00fb8e7](https://github.com/SpareBank1/designsystem/commit/00fb8e774aa568c0de977df4072c3eaa93b1f567))
+
+
+
+
+
 ## [11.4.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@11.4.3...@sb1/ffe-searchable-dropdown-react@11.4.4) (2021-07-07)
 
 
