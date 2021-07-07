@@ -762,4 +762,35 @@ describe('SearchableDropdown', () => {
         });
         expect(onChange).not.toHaveBeenCalled();
     });
+
+    it('should not automatically change selectedItem when list contains one element if there is no highlightedIndex', () => {
+        const onChange = jest.fn();
+        render(
+            <div>
+                <button>Knapp</button>
+                <SearchableDropdown
+                    id="id"
+                    labelId="labelId"
+                    dropdownAttributes={[
+                        'organizationName',
+                        'organizationNumber',
+                    ]}
+                    dropdownList={[companies[0]]}
+                    onChange={onChange}
+                    searchAttributes={[
+                        'organizationName',
+                        'organizationNumber',
+                    ]}
+                    locale="nb"
+                />
+            </div>,
+        );
+
+        const input = screen.getByRole('combobox');
+        act(() => {
+            userEvent.click(screen.getByText('Knapp'));
+        });
+        expect(onChange).not.toHaveBeenCalled();
+        expect(input.value).toEqual('');
+    });
 });

@@ -147,7 +147,8 @@ export const createReducer = ({
                             state.listToRender[0][searchAttribute] ===
                             state.selectedItem?.[searchAttribute],
                     )
-                    .includes(false)
+                    .includes(false) &&
+                state.highlightedIndex !== -1
             );
 
             let selectedItem = state.selectedItem;
