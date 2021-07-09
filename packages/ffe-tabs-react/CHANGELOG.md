@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@5.0.4...@sb1/ffe-tabs-react@5.0.5) (2021-07-09)
+
+
+### Bug Fixes
+
+* **ffe-tabs-react:** tab-button default type to button ([14417f6](https://github.com/SpareBank1/designsystem/commit/14417f68319c6c1b401c08f359830091150799a5))
+
+
+
+
+
 ## [5.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@5.0.3...@sb1/ffe-tabs-react@5.0.4) (2021-03-15)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@5.0.10...@sb1/ffe-system-message@5.0.11) (2021-07-09)
+
+
+### Bug Fixes
+
+* **ffe-system-message:** colour update to match new profile ([#1137](https://github.com/SpareBank1/designsystem/issues/1137)) ([711c444](https://github.com/SpareBank1/designsystem/commit/711c44495ef07bc8d15711c8a9410b5e614b1c19))
+
+
+
+
+
 ## [5.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@5.0.9...@sb1/ffe-system-message@5.0.10) (2021-06-17)
 
 **Note:** Version bump only for package @sb1/ffe-system-message

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.25](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.24...@sb1/ffe-context-message@4.0.25) (2021-07-09)
+
+
+### Bug Fixes
+
+* **ffe-context-message:** oppdater darkmode styling til ny visuell profil ([b012687](https://github.com/SpareBank1/designsystem/commit/b0126873e7699f1e4b546af194b34f23e64212d1))
+
+
+
+
+
 ## [4.0.24](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.23...@sb1/ffe-context-message@4.0.24) (2021-06-25)
 
 
