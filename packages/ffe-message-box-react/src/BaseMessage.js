@@ -44,7 +44,7 @@ const BaseMessage = props => {
                         {title}
                     </div>
                 )}
-                {content && <p className="ffe-body-text">{content}</p>}
+                {content && <p>{content}</p>}
                 {!content && children}
             </div>
         </div>
