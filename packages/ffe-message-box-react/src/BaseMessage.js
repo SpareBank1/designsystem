@@ -38,7 +38,7 @@ const BaseMessage = props => {
                     <div
                         className={classNames(
                             'ffe-h4',
-                            `ffe-message-box__title--${type}`,
+                            `ffe-message-box__title`,
                         )}
                     >
                         {title}
