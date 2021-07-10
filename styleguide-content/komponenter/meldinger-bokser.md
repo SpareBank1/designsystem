@@ -1,7 +1,5 @@
-
 Hold det kort og konsist! Det skal være reelle tips/informasjon til brukeren, ikke informasjon vi ønsker å forklare her
-fordi vi ikke finner noe annet sted å gjøre det. For mye tekst kan føre til at komponenten mister sin verdi. 
-
+fordi vi ikke finner noe annet sted å gjøre det. For mye tekst kan føre til at komponenten mister sin verdi.
 
 Det finnes fire forskjellige typer:
 
@@ -21,9 +19,7 @@ const {
         <GridRow>
             <GridCol md={6}>
                 <TipsMessage title="Overskrift">
-                    <p className="ffe-body-paragraph">
-                        Brødtekst som beskriver i mer detalj
-                    </p>
+                    Brødtekst som beskriver i mer detalj
                 </TipsMessage>
             </GridCol>
             <GridCol md={6}>
@@ -38,9 +34,7 @@ const {
         <GridRow>
             <GridCol md={6}>
                 <InfoMessage title="Overskrift">
-                    <p className="ffe-body-paragraph">
-                        Brødtekst som beskriver i mer detalj
-                    </p>
+                    Brødtekst som beskriver i mer detalj
                 </InfoMessage>
             </GridCol>
             <GridCol md={6}>
@@ -55,9 +49,7 @@ const {
         <GridRow>
             <GridCol md={6}>
                 <SuccessMessage title="Overskrift">
-                    <p className="ffe-body-paragraph">
-                        Brødtekst som beskriver i mer detalj hva som har skjedd
-                    </p>
+                    Brødtekst som beskriver i mer detalj hva som har skjedd
                 </SuccessMessage>
             </GridCol>
             <GridCol md={6}>
@@ -72,9 +64,7 @@ const {
         <GridRow>
             <GridCol md={6}>
                 <ErrorMessage title="Overskrift">
-                    <p className="ffe-body-paragraph">
-                        Brødtekst som beskriver feilsituasjonen i mer detalj
-                    </p>
+                    Brødtekst som beskriver feilsituasjonen i mer detalj
                 </ErrorMessage>
             </GridCol>
             <GridCol md={6}>
