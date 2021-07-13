@@ -29,7 +29,7 @@ const Results = ({
     dispatch,
     locale,
     onChange,
-    focusInput,
+    focusClearButton,
 }) => {
     return (
         <Scrollbars autoHeight={true} autoHeightMax={300}>
@@ -51,7 +51,7 @@ const Results = ({
                             type: stateChangeTypes.ItemOnClick,
                             payload: { selectedItem: item },
                         });
-                        focusInput();
+                        focusClearButton();
                     }}
                     item={item}
                 >
@@ -82,7 +82,7 @@ Results.propTypes = {
     locale: oneOf(Object.values(locales)).isRequired,
     refs: arrayOf(any).isRequired,
     onChange: func.isRequired,
-    focusInput: func.isRequired,
+    focusClearButton: func.isRequired,
     isNoMatch: bool.isRequired,
 };
 
