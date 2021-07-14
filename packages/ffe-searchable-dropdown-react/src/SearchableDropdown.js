@@ -98,13 +98,15 @@ const SearchableDropdown = ({
     const isInitialMountRef = useRef(true);
     const [refs, setRefs] = useState([]);
     const inputRef = useRef();
-    const toggleButtonRef = useRef();
+    const openButtonRef = useRef();
+    const clearButtonRef = useRef();
     const containerRef = useRef();
 
     const ListItemBodyElement = CustomListItemBody || ListItemBody;
     const listBoxRef = useRef(uuid());
     const noMatchMessageId = useRef(uuid());
-    const shouldFocusToggleButton = useRef(false);
+    const shouldFocusOpenButton = useRef(false);
+    const shouldFocusClearButton = useRef(false);
     const shouldFocusInput = useRef(false);
 
     const handleInputClick = () => {
@@ -143,12 +145,15 @@ const SearchableDropdown = ({
     }, [state.listToRender.length]);
 
     useLayoutEffect(() => {
-        if (shouldFocusToggleButton.current) {
-            toggleButtonRef.current.focus();
-            shouldFocusToggleButton.current = false;
+        if (shouldFocusOpenButton.current) {
+            openButtonRef.current.focus();
+            shouldFocusOpenButton.current = false;
         } else if (shouldFocusInput.current) {
             inputRef.current.focus();
             shouldFocusInput.current = false;
+        } else if (shouldFocusClearButton.current) {
+            clearButtonRef.current.focus();
+            shouldFocusClearButton.current = false;
         }
     });
 
@@ -182,12 +187,12 @@ const SearchableDropdown = ({
         };
     }, []);
 
-    const focusToggleButton = () => {
-        shouldFocusToggleButton.current = true;
+    const focusOpenButton = () => {
+        shouldFocusOpenButton.current = true;
     };
 
-    const focusInput = () => {
-        shouldFocusInput.current = true;
+    const focusClearButton = () => {
+        shouldFocusClearButton.current = true;
     };
 
     /**
@@ -210,7 +215,7 @@ const SearchableDropdown = ({
                 },
             });
             onChange(state.listToRender[state.highlightedIndex]);
-            shouldFocusInput.current = true;
+            focusClearButton();
             return;
         } else if (event.key === ESCAPE) {
             dispatch({ type: stateChangeTypes.InputKeyDownEscape });
@@ -320,6 +325,7 @@ const SearchableDropdown = ({
                 />
                 <button
                     type="button"
+                    ref={clearButtonRef}
                     aria-label={getButtonLabelClear(locale)}
                     className={classNames(
                         'ffe-searchable-dropdown__button ffe-searchable-dropdown__button--cross',
@@ -330,14 +336,14 @@ const SearchableDropdown = ({
                     onClick={() => {
                         dispatch({ type: stateChangeTypes.ClearButtonPressed });
                         onChange(null);
-                        focusToggleButton();
+                        focusOpenButton();
                     }}
                 >
                     <KryssIkon />
                 </button>
                 <button
                     type="button"
-                    ref={toggleButtonRef}
+                    ref={openButtonRef}
                     aria-label={
                         state.isExpanded
                             ? getButtonLabelClose(locale)
@@ -380,7 +386,7 @@ const SearchableDropdown = ({
                             isNoMatch={state.noMatch}
                             noMatch={noMatch}
                             noMatchMessageId={noMatchMessageId.current}
-                            focusInput={focusInput}
+                            focusClearButton={focusClearButton}
                         />
                     )}
                 </div>

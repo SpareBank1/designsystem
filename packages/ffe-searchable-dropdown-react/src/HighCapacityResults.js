@@ -126,7 +126,7 @@ export default class HighCapacityResults extends React.PureComponent {
             locale,
             refs,
             onChange,
-            focusInput,
+            focusClearButton,
         } = this.props;
         const item = listToRender[index];
         const itemKey = Object.values(item).join('-');
@@ -151,7 +151,7 @@ export default class HighCapacityResults extends React.PureComponent {
                                     type: stateChangeTypes.ItemOnClick,
                                     payload: { selectedItem: item },
                                 });
-                                focusInput();
+                                focusClearButton();
                             }}
                             item={item}
                         >
@@ -186,6 +186,6 @@ HighCapacityResults.propTypes = {
     locale: oneOf(Object.values(locales)).isRequired,
     refs: arrayOf(any).isRequired,
     onChange: func.isRequired,
-    focusInput: func.isRequired,
+    focusClearButton: func.isRequired,
     isNoMatch: bool.isRequired,
 };
