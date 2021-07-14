@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import {
     getItemClearedA11yStatus,
     getItemSelectedA11yStatus,
@@ -110,15 +110,25 @@ export const useSetAllyMessageItemSelection = ({
     previousResultCount,
     isExpanded,
 }) => {
+    const selectedItemRef = useRef(null);
+    const prevSelectedItemRef = useRef(null);
+
     useEffect(() => {
         if (isInitialMount) {
             return;
         }
 
+        const selectedItemValue = selectedItem?.[searchAttributes[0]];
+        const prevSelectedItemValue = prevSelectedItem?.[searchAttributes[0]];
+        const selectedItemHasChanged =
+            selectedItemRef.current !== selectedItemValue &&
+            prevSelectedItemRef.current !== prevSelectedItemValue;
         if (
-            selectedItem?.[searchAttributes[0]] !==
-            prevSelectedItem?.[searchAttributes[0]]
+            selectedItemValue !== prevSelectedItemValue &&
+            selectedItemHasChanged
         ) {
+            selectedItemRef.current = selectedItemValue;
+            prevSelectedItemRef.current = prevSelectedItemValue;
             updateA11yStatus(() => {
                 return getItemSelectedMessage({
                     selectedItem,
