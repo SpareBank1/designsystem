@@ -21,9 +21,10 @@ const InputGroup = ({
 }) => {
     const [id] = useState(inputId ? inputId : `input-${uuid()}`);
     const descriptionId = description ? `${id}-description` : undefined;
-    const fieldMessageId = fieldMessage
-        ? (fieldMessage.props && fieldMessage.props.id) || `${id}-fieldmessage`
-        : undefined;
+    const fieldMessageReturn =
+        typeof fieldMessage === 'function'
+            ? fieldMessage(`${id}-fieldmessage`)
+            : null;
 
     if (React.Children.count(children) > 1) {
         throw new Error(
@@ -31,6 +32,16 @@ const InputGroup = ({
                 'InputGroup, please use the function-as-a-child pattern outlined in the documentation.',
         );
     }
+
+    const getFieldMessageId = () => {
+        if (fieldMessage?.props?.id) {
+            return fieldMessage.props.id;
+        } else if (typeof fieldMessage === 'string' || fieldMessageReturn) {
+            return `${id}-fieldmessage`;
+        }
+    };
+
+    const fieldMessageId = getFieldMessageId();
 
     if (
         onTooltipToggle &&
@@ -52,7 +63,8 @@ const InputGroup = ({
     const isInvalid =
         !!fieldMessage &&
         (typeof fieldMessage === 'string' ||
-            fieldMessage.type === ErrorFieldMessage);
+            fieldMessage.type === ErrorFieldMessage ||
+            !!fieldMessageReturn);
 
     const hasMessage = !!fieldMessage;
 
@@ -117,6 +129,7 @@ const InputGroup = ({
                 React.cloneElement(fieldMessage, {
                     id: fieldMessageId,
                 })}
+            {fieldMessageReturn}
         </div>
     );
 };
@@ -135,7 +148,7 @@ InputGroup.propTypes = {
      */
     extraMargin: bool,
     /** Use the ErrorFieldMessage component if you need more flexibility in how the content is rendered. */
-    fieldMessage: oneOfType([string, node]),
+    fieldMessage: oneOfType([string, node, func]),
     /** To just render a static, always visible tooltip, use this. */
     description: string,
     /** Use the Label component if you need more flexibility in how the content is rendered. */
