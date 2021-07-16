@@ -264,5 +264,16 @@ const { Input } = require('.');
             onBlur={e => console.log('onBlur', e.target.value)}
         />
     </InputGroup>
+
+    <InputGroup
+        label="Email"
+        fieldMessage={fieldMessageId => (
+            <ErrorFieldMessage id={fieldMessageId}>
+                Jeg er en returverdi av en funksjon
+            </ErrorFieldMessage>
+        )}
+    >
+        <Input name="email" />
+    </InputGroup>
 </React.Fragment>;
 ```
