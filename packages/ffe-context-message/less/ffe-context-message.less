@@ -57,11 +57,9 @@
             @media (prefers-color-scheme: dark) {
                 color: @ffe-farge-svart;
             }
-            a {
-                @media (prefers-color-scheme: dark) {
-                    color: @ffe-farge-svart;
-                }
-            }
+        }
+        .ffe-link-text {
+            color: @ffe-farge-fjell;
         }
     }
 
@@ -69,7 +67,7 @@
         &:extend(.ffe-h5);
         .native & {
             @media (prefers-color-scheme: dark) {
-                color: @ffe-white-darkmode;
+                color: @ffe-farge-hvit;
             }
         }
 
@@ -83,7 +81,7 @@
         flex-shrink: 0;
         justify-content: center;
         margin-bottom: @app-margin;
-        background-color: @ffe-white;
+        background-color: @ffe-farge-hvit;
         border-radius: 50%;
         height: 4em;
         width: 4em;
@@ -92,12 +90,7 @@
             height: 2.2em;
             width: 2.2em;
             padding: @ffe-spacing-2xs;
-            fill: @ffe-blue-royal;
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    fill: @ffe-farge-fjell;
-                }
-            }
+            fill: @ffe-farge-fjell;
         }
 
         @media (min-width: @breakpoint-sm) {
@@ -121,11 +114,7 @@
         background-color: transparent;
         height: 1em;
         width: 1em;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                fill: @ffe-grey-silver-darkmode;
-            }
-        }
+
         &:hover {
             fill: @ffe-farge-svart;
         }
@@ -172,11 +161,6 @@
             width: 1.5em;
             padding: @ffe-spacing-2xs;
             fill: @ffe-farge-fjell;
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    fill: @ffe-white-darkmode;
-                }
-            }
         }
     }
 
@@ -209,23 +193,11 @@
         background-color: @ffe-farge-baer-30;
 
         .ffe-context-message-content__header {
-            color: @ffe-black;
-
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    color: @ffe-white-darkmode;
-                }
-            }
+            color: @ffe-farge-svart;
         }
 
         .ffe-context-message-content__icon-svg {
             fill: @ffe-farge-baer-wcag;
-
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    fill: @ffe-red-darkmode;
-                }
-            }
         }
     }
 }
