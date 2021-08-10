@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import Tooltip from './Tooltip';
-import sinon from 'sinon';
+import { spy } from 'sinon';
 
 const defaultProps = { children: 'Tooltip text' };
 const getWrapper = props => shallow(<Tooltip {...defaultProps} {...props} />);
@@ -14,7 +14,7 @@ describe('<Tooltip>', () => {
     });
 
     it('renders a "?" button', () => {
-        const onClick = sinon.spy();
+        const onClick = spy();
         const wrapper = getWrapper({ 'aria-label': 'button-label', onClick });
 
         expect(wrapper.find('button').exists()).toBe(true);

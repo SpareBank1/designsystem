@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import sinon from 'sinon';
+import { stub } from 'sinon';
 import createRafMock from 'mock-raf';
 
 import easeProperties from './easeProperties';
@@ -15,8 +15,8 @@ describe('easeProperties decorator', () => {
     beforeEach(() => {
         window.requestAnimationFrame = f => f;
         window.cancelAnimationFrame = f => f;
-        sinon.stub(window, 'requestAnimationFrame').callsFake(rafMock.raf);
-        sinon.stub(window, 'cancelAnimationFrame').callsFake(rafMock.cancel);
+        stub(window, 'requestAnimationFrame').callsFake(rafMock.raf);
+        stub(window, 'cancelAnimationFrame').callsFake(rafMock.cancel);
     });
 
     afterEach(() => {
