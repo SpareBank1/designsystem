@@ -2,7 +2,7 @@ declare module '@sb1/ffe-formatters' {
     export function formatAccountNumber(accountNumber: string): string;
 
     export function formatCurrency(
-        amount: string,
+        amount: number | string,
         opts?: { prefix?: string; postfix?: string },
     ): string;
 
