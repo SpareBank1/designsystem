@@ -23,6 +23,13 @@
 
 .ffe-message-box {
     text-align: center;
+    .ffe-body-paragraph {
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-farge-svart;
+            }
+        }
+    }
 
     &__box {
         padding: @ffe-spacing-xl @ffe-spacing-lg;
@@ -62,12 +69,12 @@
     }
 
     &__title {
-        color: @ffe-black;
+        color: @ffe-farge-svart;
         font-size: 18px;
         margin-bottom: @ffe-spacing-sm;
         .native & {
             @media (prefers-color-scheme: dark) {
-                color: @ffe-black;
+                color: @ffe-farge-svart;
             }
         }
     }
@@ -77,6 +84,11 @@
         margin: 0;
         line-height: 2;
         text-align: left;
+        .native {
+            li {
+                color: @ffe-farge-svart;
+            }
+        }
     }
 
     &__icon {
@@ -103,11 +115,11 @@
 
     @media print {
         &__box {
-            border: 2px dashed @ffe-black;
+            border: 2px dashed @ffe-farge-svart;
         }
 
         &__icon {
-            border-bottom: 2px dashed @ffe-black;
+            border-bottom: 2px dashed @ffe-farge-svart;
             margin-bottom: -33.5px;
         }
     }
