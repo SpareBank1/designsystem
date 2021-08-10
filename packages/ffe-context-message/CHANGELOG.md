@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.25...@sb1/ffe-context-message@5.0.0) (2021-08-10)
+
+
+### Bug Fixes
+
+* **ffe-context-message:** fjerner overstyring av linkfarge samt oppdaterte farger ([1b4bda8](https://github.com/SpareBank1/designsystem/commit/1b4bda8e2163a687453094b3c0a980b01ca0e1f6))
+
+
+### BREAKING CHANGES
+
+* **ffe-context-message:** dersom man bruker lenker i en kontekstmelding må fargen på disse spesifiseres
+
+
+
+
+
 ## [4.0.25](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.24...@sb1/ffe-context-message@4.0.25) (2021-07-09)
 
 
