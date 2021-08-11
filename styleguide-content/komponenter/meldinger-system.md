@@ -1,16 +1,14 @@
-Denne typen meldinger skal kun benyttes til viktige meldinger som skal eksponeres til brukeren, men som
-er av midlertidig art.
+Systemmeldinger skal kun benyttes til viktige, men midlertidige meldinger. Disse meldingene plasseres direkte under headeren, og det skal helst kun brukes 1 per side.
 
-Systemmeldingen plasseres direkte under headeren. Teksten venstrejusteres, og venstre marg følger det øvrige innholdet
-på siden. Lukk-knappen høyrejusteres til å være på linje med høyre marg. Meldingen plasseres i vanlig layout flow. Dersom
-flere meldinger skal vises samtidig (frarådes) legges disse under hverandre som i listen under.
+Bruk systemmelding:
 
-Det finnes fire typer:
+✅ Der meldingen skal vises i en gitt tidsperiode
 
-1.  Info
-2.  News
-3.  Success
-4.  Error
+✅ Når det skal brukes til informasjon, som ikke krever en handling fra bruker.
+
+❌ Ikke bruk der det ikke gir mening at meldingen er rett under header.
+
+❌ Ikke bruk om der det skal vises mange meldinger samtidig.
 
 ```jsx
 <React.Fragment>
@@ -18,11 +16,9 @@ Det finnes fire typer:
         Mobilbanken vil være utilgjengelig førstkommende fredag kl 19-20.
     </SystemInfoMessage>
     <SystemNewsMessage>
-        Mobilbanken vil være utilgjengelig førstkommende fredag kl 19-20.
+        Kontoret holdes stengt tilogmed fredag kl 14.
     </SystemNewsMessage>
-    <SystemSuccessMessage>
-        Mobilbanken vil være utilgjengelig førstkommende fredag kl 19-20.
-    </SystemSuccessMessage>
+    <SystemSuccessMessage>Pengene er overført!</SystemSuccessMessage>
     <SystemErrorMessage>
         Noen av systemene våre er dessverre utilgjengelige akkurat nå.
     </SystemErrorMessage>

@@ -302,6 +302,11 @@ module.exports = {
                     content: 'styleguide-content/komponenter/meldinger.md',
                     sections: [
                         {
+                            name: 'Valg av farge-variant',
+                            content:
+                                'styleguide-content/komponenter/meldinger-farger.md',
+                        },
+                        {
                             name: 'Meldingsbokser',
                             content:
                                 'styleguide-content/komponenter/meldinger-bokser.md',

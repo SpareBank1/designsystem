@@ -1,14 +1,9 @@
-Målet med meldinger er å bekrefte og skape trygghet hos brukeren, slik at hun/han opplever kontroll over situasjonen.
+I designsystemet finnes det 3 forskjellige meldingskomponenter, og hvilken som skal brukes kommer ann på hva slags type informasjon man ønsker å gi brukeren. Felles for alle er at de bør holdes korte og konsiste, innholde relevante tips eller informasjon som brukeren trenger å vite. Eksempler på situasjoner der meldinger kan brukes er f.eks når systemet er nede, betaling er gjennomført eller at det kommer en eller flere endringer på en tjeneste.
 
-Prinsipper:
+Målet med meldinger er å bekrefte å skape trygghet hos brukere slik at de opplever kontroll over situasjonen.
 
--   Relevante og informative
--   Meldingsboksen er responsive, tilpasses innholdets lengde og skaleres etter flaten den vises i.
--   Teksten skal være forståelig og vennlig (følge retningslinjer for [stil og tone](/stil-og-tone.html))
--   Vi skiller på meldinger som er fra systemet og de som er fra SpareBank 1.
--   Boksene skal ha overskrift, og teksten skal være midtstilt, men i de tilfellene man har punkter vil teksten være    
-    venstrejustert.
+Noen prinsipper som bør følges er:
 
-Meldingsbokser brukes når man skal informere brukeren om diverse endringer/oppdateringer. Dette kan f.eks være når
-systemet er nede eller at betalingen er gjennomført. Hold innholdet kort og konsist, det skal være relevante tips
-eller informasjon som brukeren behøver å vite.
+-   Meldingene skal være relevante og informative
+-   Selve meldingsboksen skal være responsive, og tilpasses innholdets lengde og skaleres etter flaten den vises i. (f.eks full bredde på mobil)
+-   Teksten skal følge retningslinjene nevnt i [Stil og tone](/stil-og-tone.html).

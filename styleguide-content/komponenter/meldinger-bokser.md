@@ -1,14 +1,44 @@
+Meldingsbokser inneholder reelle tips eller informasjon til brukere. Disse holdes konsise, og ikke brukes til å forklare ting "man ikke finner noe annet sted til".
 
-Hold det kort og konsist! Det skal være reelle tips/informasjon til brukeren, ikke informasjon vi ønsker å forklare her
-fordi vi ikke finner noe annet sted å gjøre det. For mye tekst kan føre til at komponenten mister sin verdi. 
+Bruk Meldingsbokser når:
 
+✅ Du trenger å informere kort om ett tema
 
-Det finnes fire forskjellige typer:
+✅ Du trenger å utheve noe informasjon fra enn større sammenheng.
 
-1.  Tips
-2.  Info
-3.  Suksess
-4.  Error
+✅ Du har innhold som skal utheves, men som er selvforklarende uten kontekst.
+
+```jsx
+<React.Fragment>
+    <div className="sb1ds-example--grid__col-2">
+        <TipsMessage title="Kjøre bil i utlandet?">
+            <p className="ffe-body-paragraph">
+                Dersom du skal ha med bilen til utlandet, anbefaler vi at du har
+                med deg grønt kort. Grønt kort er et internasjonalt
+                forsikringsbevis som viser at du har en gyldig
+                ansvarsforsikring.
+            </p>
+        </TipsMessage>
+        <InfoMessage title="Ingen transaksjoner">
+            <p className="ffe-body-paragraph">
+                Fant ingen transaksoner å vise for den valgte perioden.
+            </p>
+        </InfoMessage>
+        <SuccessMessage title="Overskrift">
+            <p className="ffe-body-paragraph">
+                Brødtekst som beskriver i mer detalj hva som har skjedd
+            </p>
+        </SuccessMessage>
+        <ErrorMessage title="Overskrift">
+            <p className="ffe-body-paragraph">
+                Brødtekst som beskriver feilsituasjonen i mer detalj
+            </p>
+        </ErrorMessage>
+    </div>
+</React.Fragment>
+```
+
+#### Med liste
 
 ```jsx
 const {
@@ -17,75 +47,19 @@ const {
 } = require('../../packages/ffe-message-box-react/src');
 
 <React.Fragment>
-    <Grid>
-        <GridRow>
-            <GridCol md={6}>
-                <TipsMessage title="Overskrift">
-                    <p className="ffe-body-paragraph">
-                        Brødtekst som beskriver i mer detalj
-                    </p>
-                </TipsMessage>
-            </GridCol>
-            <GridCol md={6}>
-                <TipsMessage title="Overskrift">
-                    <InfoMessageList>
-                        <InfoMessageListItem>Punkt én</InfoMessageListItem>
-                        <InfoMessageListItem>Punkt to</InfoMessageListItem>
-                    </InfoMessageList>
-                </TipsMessage>
-            </GridCol>
-        </GridRow>
-        <GridRow>
-            <GridCol md={6}>
-                <InfoMessage title="Overskrift">
-                    <p className="ffe-body-paragraph">
-                        Brødtekst som beskriver i mer detalj
-                    </p>
-                </InfoMessage>
-            </GridCol>
-            <GridCol md={6}>
-                <InfoMessage title="Overskrift">
-                    <InfoMessageList>
-                        <InfoMessageListItem>Punkt én</InfoMessageListItem>
-                        <InfoMessageListItem>Punkt to</InfoMessageListItem>
-                    </InfoMessageList>
-                </InfoMessage>
-            </GridCol>
-        </GridRow>
-        <GridRow>
-            <GridCol md={6}>
-                <SuccessMessage title="Overskrift">
-                    <p className="ffe-body-paragraph">
-                        Brødtekst som beskriver i mer detalj hva som har skjedd
-                    </p>
-                </SuccessMessage>
-            </GridCol>
-            <GridCol md={6}>
-                <SuccessMessage title="Overskrift">
-                    <InfoMessageList>
-                        <InfoMessageListItem>Punkt én</InfoMessageListItem>
-                        <InfoMessageListItem>Punkt to</InfoMessageListItem>
-                    </InfoMessageList>
-                </SuccessMessage>
-            </GridCol>
-        </GridRow>
-        <GridRow>
-            <GridCol md={6}>
-                <ErrorMessage title="Overskrift">
-                    <p className="ffe-body-paragraph">
-                        Brødtekst som beskriver feilsituasjonen i mer detalj
-                    </p>
-                </ErrorMessage>
-            </GridCol>
-            <GridCol md={6}>
-                <ErrorMessage title="Overskrift">
-                    <InfoMessageList>
-                        <InfoMessageListItem>Feil én</InfoMessageListItem>
-                        <InfoMessageListItem>Feil to</InfoMessageListItem>
-                    </InfoMessageList>
-                </ErrorMessage>
-            </GridCol>
-        </GridRow>
-    </Grid>
+    <div className="sb1ds-example--grid__col-2">
+        <TipsMessage title="Overskrift">
+            <InfoMessageList>
+                <InfoMessageListItem>Punkt én</InfoMessageListItem>
+                <InfoMessageListItem>Punkt to</InfoMessageListItem>
+            </InfoMessageList>
+        </TipsMessage>
+        <InfoMessage title="Overskrift">
+            <InfoMessageList>
+                <InfoMessageListItem>Punkt én</InfoMessageListItem>
+                <InfoMessageListItem>Punkt to</InfoMessageListItem>
+            </InfoMessageList>
+        </InfoMessage>
+    </div>
 </React.Fragment>;
 ```
