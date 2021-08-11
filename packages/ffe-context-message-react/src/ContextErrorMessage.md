@@ -15,7 +15,7 @@ const { UtropstegnIkon } = require('@sb1/ffe-icons-react');
 ```
 
 ```js
-<ContextErrorMessage header="Opps...">
+<ContextErrorMessage headerText="Opps...">
     Dette gikk ikke som forventet i det hele tatt!
 </ContextErrorMessage>
 ```

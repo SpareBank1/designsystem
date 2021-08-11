@@ -13,7 +13,7 @@ const { InfoIkon } = require('@sb1/ffe-icons-react');
 ```
 
 ```js
-<ContextInfoMessage header="Til info">
+<ContextInfoMessage headerText="Til info">
     Nå har det kommet noe nytt og spennende fra SpareBank 1!
 </ContextInfoMessage>
 ```
