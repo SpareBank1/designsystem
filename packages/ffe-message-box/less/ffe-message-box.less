@@ -23,84 +23,58 @@
 
 .ffe-message-box {
     text-align: center;
-
-    &__box {
-        padding: @ffe-spacing-xl @ffe-spacing-lg;
-        border-radius: 5px;
-
-        @media (min-width: @breakpoint-md) {
-            padding: @ffe-spacing-xl @ffe-spacing-xl;
-        }
-
-        &--tips {
-            background-color: @ffe-sand;
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    background-color: @ffe-grey-charcoal-darkmode;
-                }
-            }
-        }
-
-        &--info {
-            background-color: @ffe-blue-pale;
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    background-color: @ffe-grey-charcoal-darkmode;
-                }
-            }
-        }
-
-        &--success {
-            background-color: @ffe-green-mint;
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    background-color: @ffe-grey-charcoal-darkmode;
-                }
-            }
-        }
-
-        &--error {
-            background-color: @ffe-orange-salmon;
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    background-color: @ffe-grey-charcoal-darkmode;
-                }
+    .ffe-body-paragraph {
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-farge-svart;
             }
         }
     }
 
-    &__title {
-        &--success {
-            color: @ffe-black;
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    color: @ffe-white-darkmode;
-                }
-            }
-        }
-
-        &--error {
-            color: @ffe-black;
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    color: @ffe-white-darkmode;
-                }
+    &__box {
+        padding: @ffe-spacing-xl @ffe-spacing-lg;
+        border-radius: 5px;
+        color: @ffe-farge-svart;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-farge-svart;
             }
         }
 
         &--tips {
+            background-color: @ffe-farge-sand-70;
             .native & {
                 @media (prefers-color-scheme: dark) {
-                    color: @ffe-white-darkmode;
+                    background-color: @ffe-farge-sand;
                 }
             }
         }
 
         &--info {
+            background-color: @ffe-farge-frost-30;
             .native & {
                 @media (prefers-color-scheme: dark) {
-                    color: @ffe-white-darkmode;
+                    background-color: @ffe-farge-vann-30;
                 }
+            }
+        }
+
+        &--success {
+            background-color: @ffe-farge-nordlys-30;
+        }
+
+        &--error {
+            background-color: @ffe-farge-baer-30;
+        }
+    }
+
+    &__title {
+        color: @ffe-farge-svart;
+        font-size: 18px;
+        margin-bottom: @ffe-spacing-sm;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-farge-svart;
             }
         }
     }
@@ -110,66 +84,42 @@
         margin: 0;
         line-height: 2;
         text-align: left;
+        .native {
+            li {
+                color: @ffe-farge-svart;
+            }
+        }
     }
 
     &__icon {
-        background-color: #fff;
+        background-color: @ffe-farge-hvit;
         border-radius: 50%;
-        display: inline-block;
-        fill: #002776;
-        height: 80px;
+        display: inline-flex;
+        fill: @ffe-farge-fjell;
+        height: 64px;
         margin-bottom: -16px;
-        padding: @ffe-spacing-xs;
-        padding-top: @ffe-spacing-sm;
+        align-items: center;
+        justify-content: center;
         position: relative;
-        top: 12px;
-        width: 80px;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                background-color: @ffe-grey-darkmode;
-                fill: @ffe-blue-azure-darkmode;
-            }
-        }
+        top: 16px;
+        width: 64px;
 
         &--error svg {
-            fill: @ffe-orange-fire;
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    fill: @ffe-red-darkmode;
-                }
-            }
-        }
-
-        &--info svg {
-            fill: @ffe-blue-royal;
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    fill: @ffe-blue-azure-darkmode;
-                }
-            }
+            fill: @ffe-farge-baer-wcag;
         }
 
         &--success svg {
-            fill: @ffe-green-shamrock;
-        }
-
-        &--tips svg {
-            fill: @ffe-blue-royal;
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    fill: @ffe-blue-azure-darkmode;
-                }
-            }
+            fill: @ffe-farge-nordlys-wcag;
         }
     }
 
     @media print {
         &__box {
-            border: 2px dashed @ffe-black;
+            border: 2px dashed @ffe-farge-svart;
         }
 
         &__icon {
-            border-bottom: 2px dashed @ffe-black;
+            border-bottom: 2px dashed @ffe-farge-svart;
             margin-bottom: -33.5px;
         }
     }

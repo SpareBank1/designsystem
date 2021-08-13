@@ -23,10 +23,11 @@ describe('<BaseMessage />', () => {
             expect(
                 typedWrapper.find(`.ffe-message-box__icon--${type}`).exists(),
             ).toBe(true);
-            expect(
-                typedWrapper.find(`.ffe-message-box__title--${type}`).exists(),
-            ).toBe(true);
         });
+    });
+    it('renders with correct title class', () => {
+        const wrapper = getWrapper({ title: 'test title' });
+        expect(wrapper.find(`.ffe-message-box__title`).exists()).toBe(true);
     });
     it('renders an icon by default', () => {
         const wrapper = getWrapper();
