@@ -1,12 +1,12 @@
 .ffe-calendar {
-    border: solid 2px @ffe-grey-silver;
+    border: solid 2px @ffe-farge-graa-wcag;
     border-radius: 4px;
     padding: @ffe-spacing-2xs;
-    background: @ffe-white;
+    background: @ffe-farge-hvit;
     .native & {
         @media (prefers-color-scheme: dark) {
-            background-color: @ffe-grey-charcoal-darkmode;
-            border-color: @ffe-grey-darkmode;
+            background-color: @ffe-farge-svart;
+            border-color: @ffe-farge-graa;
         }
     }
 
@@ -43,7 +43,14 @@
         &:focus,
         &:hover,
         &.active {
-            box-shadow: 0 0 0 1px @ffe-white, 0 0 0 4px @ffe-blue-focus;
+            box-shadow: 0 0 0 2px @ffe-farge-hvit, 0 0 0 4px @ffe-farge-vann;
+
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    box-shadow: 0 0 0 2px @ffe-farge-svart,
+                        0 0 0 4px @ffe-farge-vann-70;
+                }
+            }
         }
     }
 
@@ -51,11 +58,11 @@
         transform: rotate(90deg);
         width: 18px;
         height: 18px;
-        fill: @ffe-blue-azure;
+        fill: @ffe-farge-vann;
         vertical-align: middle;
         .native & {
             @media (prefers-color-scheme: dark) {
-                fill: @ffe-blue-azure-darkmode;
+                fill: @ffe-farge-vann-70;
             }
         }
     }
@@ -64,11 +71,11 @@
         transform: rotate(-90deg);
         width: 18px;
         height: 18px;
-        fill: @ffe-blue-azure;
+        fill: @ffe-farge-vann;
         vertical-align: middle;
         .native & {
             @media (prefers-color-scheme: dark) {
-                fill: @ffe-blue-azure-darkmode;
+                fill: @ffe-farge-vann-70;
             }
         }
     }
@@ -86,10 +93,10 @@
     &__month-nav-icon {
         height: 2em;
         width: 2em;
-        fill: @ffe-blue-azure;
+        fill: @ffe-farge-vann;
         .native & {
             @media (prefers-color-scheme: dark) {
-                fill: @ffe-blue-azure-darkmode;
+                fill: @ffe-farge-vann-70;
             }
         }
     }
@@ -99,12 +106,12 @@
 
         display: inline-block;
         vertical-align: middle;
-        color: @ffe-black;
+        color: @ffe-farge-svart;
         min-width: 50%;
         margin-bottom: 0;
         .native & {
             @media (prefers-color-scheme: dark) {
-                color: @ffe-white-darkmode;
+                color: @ffe-farge-vann-70;
             }
         }
     }
@@ -121,20 +128,19 @@
 
         &:focus {
             outline: none;
-            box-shadow: 0 0 0 2px @ffe-blue-focus;
+            box-shadow: 0 0 0 2px @ffe-farge-vann;
             border-radius: 4px;
         }
     }
 
     &__weekday {
         &:extend(.ffe-small-text);
-
-        border-bottom: 1px solid @ffe-grey;
-        color: @ffe-blue-royal;
+        border-bottom: 1px solid @ffe-farge-lysgraa;
+        color: @ffe-farge-graa-wcag;
         .native & {
             @media (prefers-color-scheme: dark) {
-                border-color: @ffe-grey-silver-darkmode;
-                color: @ffe-grey-cloud-darkmode;
+                border-color: @ffe-farge-graa-wcag;
+                color: @ffe-farge-graa;
             }
         }
     }
@@ -149,7 +155,7 @@
         &:extend(.ffe-small-text);
 
         font-size: 1rem;
-        background-color: @ffe-white;
+        background-color: @ffe-farge-hvit;
         width: 35px;
         height: 35px;
         color: @ffe-black;
@@ -160,98 +166,106 @@
         cursor: pointer;
         .native & {
             @media (prefers-color-scheme: dark) {
-                background-color: @ffe-grey-charcoal-darkmode;
-                color: @ffe-white-darkmode;
+                background-color: @ffe-farge-svart;
+                color: @ffe-farge-hvit;
             }
         }
 
         &--today {
-            border: 1px solid @ffe-grey;
+            border: 1px solid @ffe-farge-graa-wcag;
             .native & {
                 @media (prefers-color-scheme: dark) {
-                    border-color: @ffe-grey-silver-darkmode;
+                    border-color: @ffe-farge-graa;
                 }
             }
         }
 
         &:hover {
-            border: 2px solid @ffe-blue-azure;
-            color: @ffe-blue-azure;
+            border: 2px solid @ffe-farge-vann;
+            color: @ffe-farge-vann;
             .native & {
                 @media (prefers-color-scheme: dark) {
-                    border-color: @ffe-blue-azure-darkmode;
-                    color: @ffe-blue-azure-darkmode;
+                    border-color: @ffe-farge-vann-70;
+                    color: @ffe-farge-vann-70;
                 }
             }
         }
 
         &:focus {
-            border: 2px solid @ffe-blue-azure;
-            color: @ffe-blue-azure;
+            border: 2px solid @ffe-farge-vann;
+            color: @ffe-farge-vann;
             outline: none;
         }
 
         &--focus {
-            border: 2px solid transparent;
-            box-shadow: 0 0 0 1px @ffe-white, 0 0 0 4px @ffe-blue-focus;
-            color: @ffe-blue-azure;
-            background: @ffe-white;
+            border: 2px solid @ffe-farge-vann;
+            background: @ffe-farge-hvit;
             .native & {
                 @media (prefers-color-scheme: dark) {
-                    border-color: @ffe-blue-azure-darkmode;
-                    color: @ffe-blue-azure-darkmode;
-                    background: @ffe-grey-darkmode;
+                    border-color: @ffe-farge-vann-70;
+                    background: @ffe-farge-svart;
                 }
             }
         }
 
         &--selected {
-            background: @ffe-blue-azure;
-            color: @ffe-white;
+            background: @ffe-farge-vann;
+            color: @ffe-farge-hvit;
             .native & {
                 @media (prefers-color-scheme: dark) {
-                    background: @ffe-grey-darkmode;
-                    color: @ffe-white-darkmode;
+                    background: @ffe-farge-vann-70;
+                    color: @ffe-farge-svart;
                 }
             }
 
-            &:focus,
             &:hover {
-                background-color: darken(@ffe-blue-azure, 5%);
-                color: @ffe-white;
+                color: @ffe-farge-hvit;
+
+                .native & {
+                    @media (prefers-color-scheme: dark) {
+                        background: @ffe-farge-vann-70;
+                        color: @ffe-farge-svart;
+                    }
+                }
             }
         }
 
         &--focus&--selected {
-            box-shadow: 0 0 0 1px @ffe-white, 0 0 0 4px @ffe-blue-focus;
+            box-shadow: 0 0 0 2px @ffe-farge-hvit, 0 0 0 4px @ffe-farge-vann;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    box-shadow: 0 0 0 2px @ffe-farge-svart,
+                        0 0 0 4px @ffe-farge-vann-70;
+                }
+            }
         }
 
         &--disabled {
-            color: @ffe-grey-silver;
+            color: @ffe-farge-graa-wcag;
             .native & {
                 @media (prefers-color-scheme: dark) {
-                    color: @ffe-grey-darkmode;
+                    color: @ffe-farge-graa;
                 }
             }
 
             &:focus,
             &:hover {
-                border: 2px solid @ffe-grey-silver;
-                color: @ffe-grey-silver;
+                border: 2px solid @ffe-farge-graa-wcag;
+                color: @ffe-farge-graa-wcag;
                 .native & {
                     @media (prefers-color-scheme: dark) {
-                        border-color: @ffe-grey-darkmode;
-                        color: @ffe-grey-darkmode;
+                        border-color: @ffe-farge-graa;
+                        color: @ffe-farge-graa;
                     }
                 }
             }
         }
 
         &--disabled-focus {
-            border: 2px solid @ffe-grey-silver;
+            border: 2px solid @ffe-farge-graa-wcag;
             .native & {
                 @media (prefers-color-scheme: dark) {
-                    border-color: @ffe-grey-darkmode;
+                    border-color: @ffe-farge-graa;
                 }
             }
         }

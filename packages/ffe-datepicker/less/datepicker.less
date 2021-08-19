@@ -217,39 +217,60 @@
 
     &__button {
         background-color: transparent;
-        border-left: 2px solid @ffe-grey-silver;
-        border-right: none;
-        border-top: none;
-        border-bottom: none;
-        margin-top: 2px;
-        margin-bottom: 2px;
-        padding-right: 2px;
-        padding-left: 0;
-        height: 41px;
+        border: 2px solid transparent;
+        height: 45px;
         width: 56px;
         outline: none;
         margin-left: -56px;
         cursor: pointer;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+        transition: all @ffe-transition-duration @ffe-ease;
 
-        &:active,
+        &:hover,
         &:focus,
-        &:hover {
-            margin-top: 0;
-            margin-bottom: 0;
-            padding-right: 0;
-            border: 2px solid @ffe-blue-azure;
-            height: 45px;
-            border-radius: 0 4px 4px 0;
+        &:active {
+            border-color: @ffe-farge-vann;
+
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    border-color: @ffe-farge-vann-70;
+                }
+            }
         }
 
-        &:focus {
-            box-shadow: 0 0 0 1px @ffe-white, 0 0 0 4px @ffe-blue-focus;
+        .ffe-dateinput__field:focus + &:hover {
+            border-color: transparent;
+            box-shadow: 0 0 0 2px @ffe-farge-vann;
+
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    box-shadow: 0 0 0 2px @ffe-farge-vann-70;
+                }
+            }
         }
     }
 
     &__icon {
         vertical-align: middle;
         width: 22px;
-        fill: @ffe-blue-azure;
+        fill: @ffe-farge-vann;
+        transition: fill @ffe-transition-duration @ffe-ease;
+
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                fill: @ffe-farge-vann-70;
+            }
+        }
+
+        .ffe-datepicker__button:hover & {
+            fill: @ffe-farge-fjell;
+
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    fill: @ffe-farge-vann-30;
+                }
+            }
+        }
     }
 }
