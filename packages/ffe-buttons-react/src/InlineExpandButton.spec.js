@@ -25,7 +25,7 @@ describe('<InlineExpandButton />', () => {
         const wrapper = getWrapper();
         expect(wrapper.props()).toHaveProperty(
             'rightIcon',
-            <ChevronIkon style={{ marginLeft: '5px', transform: 'none' }} />,
+            <ChevronIkon style={{ marginLeft: '8px', transform: 'none' }} />,
         );
     });
     it('sends an upside down <ChevronIcon /> as rightIcon if isExpanded prop is true', () => {
@@ -33,7 +33,7 @@ describe('<InlineExpandButton />', () => {
         expect(wrapper.props()).toHaveProperty(
             'rightIcon',
             <ChevronIkon
-                style={{ marginLeft: '5px', transform: 'rotateX(180deg)' }}
+                style={{ marginLeft: '8px', transform: 'rotateZ(180deg)' }}
             />,
         );
     });
