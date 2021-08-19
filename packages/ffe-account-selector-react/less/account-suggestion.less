@@ -1,43 +1,37 @@
 .ffe-account-suggestion {
     padding: 0;
     margin: 0;
-    border-top: 1px solid @ffe-grey-silver;
-    background: @ffe-white;
+    background: @ffe-farge-hvit;
     cursor: pointer;
 
     .native & {
         @media (prefers-color-scheme: dark) {
-            background: @ffe-grey-charcoal-darkmode;
-            color: @ffe-white-darkmode;
+            background: @ffe-farge-svart;
+            color: @ffe-farge-graa;
         }
     }
 
     &:hover,
     &--highlighted {
-        background: @ffe-blue-azure;
-        color: @ffe-white;
+        background: @ffe-farge-frost-30;
 
         .native & {
             @media (prefers-color-scheme: dark) {
-                background: @ffe-blue-azure;
+                background: lighten(@ffe-farge-svart, 5%);
             }
-        }
-        .ffe-account-suggestion__name,
-        .ffe-account-suggestion__details {
-            color: @ffe-white;
         }
     }
 
     &__nomatches {
-        background: @ffe-white;
-        color: @ffe-blue-azure;
+        background: @ffe-farge-hvit;
+        color: @ffe-farge-vann;
         padding: @ffe-spacing-sm;
         cursor: default;
 
         .native & {
             @media (prefers-color-scheme: dark) {
-                background: @ffe-grey-charcoal-darkmode;
-                color: @ffe-white-darkmode;
+                background: @ffe-farge-svart;
+                color: @ffe-farge-hvit;
             }
         }
     }
@@ -56,16 +50,22 @@
         font-size: 0.9375rem;
         display: block;
         padding-bottom: @ffe-spacing-2xs;
+
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-farge-vann-70;
+            }
+        }
     }
 
     &__details {
-        color: @ffe-grey-charcoal;
+        color: @ffe-farge-moerkgraa;
         font-size: 0.75rem;
         .ffe-clearfix();
 
         .native & {
             @media (prefers-color-scheme: dark) {
-                color: @ffe-white-darkmode;
+                color: @ffe-farge-graa;
             }
         }
     }
@@ -93,12 +93,10 @@
         top: -3px;
     }
     &__select-all {
-        background: @ffe-grey-cloud;
         &:hover,
         &--highlighted {
             cursor: pointer;
-            background: @ffe-blue-azure;
-            color: @ffe-white;
+            background: @ffe-farge-frost-30;
         }
     }
 

@@ -22,12 +22,12 @@
 
     &__details {
         padding: @ffe-spacing-2xs;
-        color: @ffe-black;
+        color: @ffe-farge-svart;
         min-height: @details-height;
 
         .native & {
             @media (prefers-color-scheme: dark) {
-                color: @ffe-grey-cloud-darkmode;
+                color: @ffe-farge-hvit;
             }
         }
 
@@ -41,22 +41,21 @@
     }
 
     &__dropdown-statusbar {
-        @border: 1px solid @ffe-grey-silver;
+        border: 1px solid @ffe-farge-graa-wcag;
         padding: @ffe-spacing-xs;
-        background: @ffe-grey-cloud;
-        color: @ffe-black;
+        background: @ffe-farge-lysgraa;
+        color: @ffe-farge-svart;
         height: 60px;
         display: table;
         width: 100%;
-        border-left: @border;
-        border-right: @border;
-        border-bottom: @border;
-        border-radius: 2px;
+        border-bottom-left-radius: 2px;
+        border-bottom-right-radius: 2px;
 
         .native & {
             @media (prefers-color-scheme: dark) {
-                background: @ffe-black-darkmode;
-                color: @ffe-white-darkmode;
+                border-color: @ffe-farge-graa;
+                background: @ffe-farge-svart;
+                color: @ffe-farge-hvit;
             }
         }
     }
@@ -65,7 +64,7 @@
         padding: 0 @ffe-spacing-md;
         font-size: 0.875rem;
         line-height: 2.125rem;
-        background: @ffe-blue-azure;
+        background: @ffe-farge-vann;
     }
 
     &__selection-status {

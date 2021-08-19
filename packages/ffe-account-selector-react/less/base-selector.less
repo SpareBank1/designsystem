@@ -25,20 +25,26 @@
         cursor: pointer;
 
         &-icon {
-            fill: @ffe-blue-azure;
+            fill: @ffe-farge-vann;
             display: block;
             width: 17px;
             height: 17px;
 
             .native & {
                 @media (prefers-color-scheme: dark) {
-                    fill: @ffe-white-darkmode;
+                    fill: @ffe-farge-vann-70;
                 }
             }
         }
 
         &-icon--invalid {
-            fill: @ffe-orange-fire;
+            fill: @ffe-farge-baer-wcag;
+
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    fill: @ffe-farge-baer;
+                }
+            }
         }
     }
 
@@ -50,7 +56,7 @@
         right: 35px;
         background: transparent;
         border: none;
-        fill: @ffe-grey-charcoal;
+        fill: @ffe-farge-vann;
         cursor: pointer;
 
         &-icon {
@@ -61,14 +67,14 @@
     }
 
     &__suggestion-container {
-        @border: 1px solid @ffe-grey-silver;
+        @border: 1px solid @ffe-farge-graa-wcag;
         z-index: 100;
         position: absolute;
         left: 0;
         right: 0;
         border: @border;
         border-radius: 2px;
-        background: @ffe-white;
+        background: @ffe-farge-hvit;
         &-list {
             left: 0;
             width: 100%;
