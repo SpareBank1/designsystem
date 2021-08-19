@@ -54,9 +54,8 @@
     align-items: center;
     appearance: none;
     border: 2px solid transparent;
-    border-radius: 4px;
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
-    color: @ffe-white;
+    border-radius: 1.375rem;
+    color: @ffe-farge-hvit;
     cursor: pointer;
     display: flex;
     font-family: 'SpareBank1-regular', 'MuseoSans-500', arial, sans-serif;
@@ -72,31 +71,42 @@
     white-space: nowrap;
     width: 100%;
     .ffe-fontsize-button();
-    .native & {
-        @media (prefers-color-scheme: dark) {
-            color: @ffe-blue-azure-darkmode;
+
+    &::after {
+        content: '';
+        opacity: 0;
+        display: block;
+        position: absolute;
+        background: transparent;
+        border-radius: 1.5rem;
+        top: -5px;
+        left: -5px;
+        right: -5px;
+        bottom: -5px;
+        box-shadow: 0 0 0 2px @ffe-farge-vann;
+        transition: opacity @ffe-transition-duration @ffe-ease;
+
+        .native & {
+            box-shadow: 0 0 0 2px @ffe-farge-hvit;
         }
+    }
+
+    &:focus::after {
+        opacity: 1;
     }
 
     &:focus {
         outline: none;
-    }
-
-    &:hover {
-        box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.2);
+        position: relative;
+        overflow: unset;
     }
 
     &:active {
-        box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.25);
+        transform: scale(0.97);
     }
 
     &:visited {
         color: @ffe-white;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-blue-azure-darkmode;
-            }
-        }
     }
 
     @media (min-width: @breakpoint-sm) {
@@ -110,154 +120,143 @@
     &:focus,
     &:visited {
         background-color: transparent;
-        border: 2px solid @ffe-green-shamrock;
-        color: @ffe-green-shamrock;
+        border: 2px solid @ffe-farge-nordlys-wcag;
+        color: @ffe-farge-svart;
         .native & {
             @media (prefers-color-scheme: dark) {
-                color: @ffe-blue-azure-darkmode;
-                border-color: @ffe-blue-azure-darkmode;
+                color: @ffe-farge-nordlys-30;
+                border-color: @ffe-farge-nordlys;
                 background-color: transparent;
             }
         }
     }
 
     &:hover {
-        background-color: darken(@ffe-green-shamrock, 5%);
-        border-color: darken(@ffe-green-shamrock, 5%);
-        color: @ffe-white;
+        background-color: @ffe-farge-skog;
+        border-color: @ffe-farge-skog;
+        color: @ffe-farge-hvit;
         .native & {
             @media (prefers-color-scheme: dark) {
-                color: lighten(@ffe-blue-azure-darkmode, 10%);
-                border-color: lighten(@ffe-blue-azure-darkmode, 10%);
-                background-color: @ffe-grey-darkmode;
+                color: @ffe-farge-hvit;
+                border-color: @ffe-farge-nordlys-30;
+                background-color: transparent;
             }
         }
     }
 
     &:active {
-        background-color: darken(@ffe-green-shamrock, 10%);
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                background-color: lighten(@ffe-grey-darkmode, 5%);
-            }
-        }
+        background-color: @ffe-farge-nordlys-wcag;
     }
 }
 
 .ffe-button--action {
-    background-color: @ffe-green-shamrock;
+    background-color: @ffe-farge-nordlys-wcag;
+
     .native & {
         @media (prefers-color-scheme: dark) {
-            background-color: @ffe-grey-darkmode;
-            border: 2px solid @ffe-blue-azure-darkmode;
-            &.ffe-button--dark {
-                background-color: @ffe-green-shamrock;
-                border-color: @ffe-green-shamrock;
-                color: @ffe-white;
-            }
+            background-color: @ffe-farge-nordlys;
+            border: 2px solid transparent;
+            color: @ffe-farge-svart;
         }
     }
 
+    &.ffe-button--dark {
+        background-color: @ffe-green-shamrock;
+        border-color: @ffe-green-shamrock;
+        color: @ffe-white;
+    }
+
     &:focus {
-        background-color: darken(@ffe-green-shamrock, 5%);
-        box-shadow: 0 0 0 1px @ffe-white, 0 0 0 4px @ffe-blue-focus;
+        background-color: @ffe-farge-nordlys-wcag;
+
         .native & {
             @media (prefers-color-scheme: dark) {
-                background-color: lighten(@ffe-grey-darkmode, 5%);
-                &.ffe-button--dark {
-                    background-color: darken(@ffe-green-shamrock, 5%);
-                    border-color: @ffe-green-shamrock;
-                    color: @ffe-white;
-                }
+                background-color: @ffe-farge-nordlys;
             }
         }
 
         &.ffe-button--dark {
+            background-color: darken(@ffe-green-shamrock, 5%);
+            border-color: @ffe-green-shamrock;
+            color: @ffe-white;
             box-shadow: 0 0 0 2px @ffe-blue-focus;
         }
     }
 
     &:hover {
-        background-color: darken(@ffe-green-shamrock, 5%);
+        background-color: @ffe-farge-skog;
         .native & {
             @media (prefers-color-scheme: dark) {
-                color: lighten(@ffe-blue-azure-darkmode, 10%);
-                border-color: lighten(@ffe-blue-azure-darkmode, 10%);
-                background-color: lighten(@ffe-grey-darkmode, 5%);
-                &.ffe-button--dark {
-                    background-color: darken(@ffe-green-shamrock, 5%);
-                    border-color: darken(@ffe-green-shamrock, 5%);
-                    color: @ffe-white;
-                }
+                background-color: @ffe-farge-nordlys-30;
             }
+        }
+
+        &.ffe-button--dark {
+            background-color: darken(@ffe-green-shamrock, 5%);
+            border-color: darken(@ffe-green-shamrock, 5%);
+            color: @ffe-white;
         }
     }
 
     &:active {
-        background-color: darken(@ffe-green-shamrock, 10%);
+        background-color: @ffe-farge-nordlys-wcag;
         .native & {
             @media (prefers-color-scheme: dark) {
-                background-color: lighten(@ffe-grey-darkmode, 5%);
+                background-color: @ffe-farge-nordlys-70;
             }
         }
     }
 }
 
 .ffe-button--primary {
-    background-color: @ffe-blue-azure;
+    background-color: @ffe-farge-vann;
     .native & {
         @media (prefers-color-scheme: dark) {
-            background-color: @ffe-grey-darkmode;
-            &.ffe-button--dark {
-                color: @ffe-white;
-                background-color: @ffe-blue-azure;
-            }
+            background-color: @ffe-farge-vann-70;
+            color: @ffe-farge-svart;
         }
     }
 
+    &.ffe-button--dark {
+        color: @ffe-white;
+        background-color: @ffe-blue-azure;
+    }
+
     &:focus {
-        background-color: darken(@ffe-blue-azure, 5%);
-        box-shadow: 0 0 0 1px @ffe-white, 0 0 0 4px @ffe-blue-focus;
+        background-color: @ffe-farge-vann;
+
         .native & {
             @media (prefers-color-scheme: dark) {
-                color: lighten(@ffe-blue-azure-darkmode, 10%);
-                background-color: lighten(@ffe-grey-darkmode, 5%);
-                &.ffe-button--dark {
-                    color: @ffe-white;
-                    background-color: darken(@ffe-blue-azure, 5%);
-                }
+                background-color: @ffe-farge-vann-70;
             }
         }
 
         &.ffe-button--dark {
+            color: @ffe-white;
+            background-color: darken(@ffe-blue-azure, 5%);
             box-shadow: 0 0 0 2px @ffe-blue-focus;
         }
     }
 
     &:hover {
-        background-color: darken(@ffe-blue-azure, 5%);
+        background-color: @ffe-farge-fjell;
         .native & {
             @media (prefers-color-scheme: dark) {
-                color: lighten(@ffe-blue-azure-darkmode, 10%);
-                background-color: lighten(@ffe-grey-darkmode, 5%);
-                &.ffe-button--dark {
-                    color: @ffe-white;
-                    background-color: darken(@ffe-blue-azure, 5%);
-                }
+                background-color: @ffe-farge-vann-30;
             }
+        }
+        &.ffe-button--dark {
+            color: @ffe-white;
+            background-color: darken(@ffe-blue-azure, 5%);
         }
     }
 
     &:active {
-        background-color: darken(@ffe-blue-azure, 10%);
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                background-color: lighten(@ffe-grey-darkmode, 5%);
-                &.ffe-button--dark {
-                    color: @ffe-white;
-                    background-color: darken(@ffe-blue-azure, 10%);
-                }
-            }
+        background-color: @ffe-farge-vann-hover;
+
+        &.ffe-button--dark {
+            color: @ffe-white;
+            background-color: darken(@ffe-blue-azure, 10%);
         }
     }
 }
@@ -265,21 +264,20 @@
 .ffe-button--secondary,
 .ffe-button--shortcut,
 .ffe-button--expand {
-    background-color: @ffe-white;
-    border: solid 2px @ffe-grey-silver;
-    box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.05);
-    color: @ffe-blue-azure;
+    background-color: @ffe-farge-hvit;
+    border: solid 2px @ffe-farge-vann;
+    color: @ffe-farge-vann;
     .native & {
         @media (prefers-color-scheme: dark) {
-            color: @ffe-blue-azure-darkmode;
-            background-color: @ffe-grey-charcoal-darkmode;
-            border-color: @ffe-grey-charcoal-darkmode;
-            &.ffe-button--dark {
-                background-color: transparent;
-                color: @ffe-white;
-                border: solid 2px @ffe-grey-silver;
-            }
+            color: @ffe-farge-vann-30;
+            background-color: transparent;
+            border-color: @ffe-farge-vann-70;
         }
+    }
+    &.ffe-button--dark {
+        background-color: transparent;
+        color: @ffe-white;
+        border: solid 2px @ffe-grey-silver;
     }
 
     &.ffe-button--dark {
@@ -289,66 +287,47 @@
 
     &:active,
     &:focus,
-    &:hover,
     &:visited {
-        background-color: @ffe-white;
-        color: @ffe-blue-azure;
+        color: @ffe-farge-vann;
+
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: transparent;
+                color: @ffe-farge-vann-30;
+            }
+        }
 
         &.ffe-button--dark {
             background-color: transparent;
             color: @ffe-white;
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    background-color: transparent;
-                    color: @ffe-white;
-                }
-            }
-        }
-    }
-
-    &:visited {
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-blue-azure-darkmode;
-                background-color: @ffe-grey-charcoal-darkmode;
-            }
-        }
-    }
-
-    &:active,
-    &:focus,
-    &:hover {
-        border-color: @ffe-blue-azure;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: lighten(@ffe-blue-azure-darkmode, 10%);
-                background-color: lighten(@ffe-grey-charcoal-darkmode, 5%);
-                border-color: lighten(@ffe-grey-charcoal-darkmode, 5%);
-            }
-        }
-
-        &.ffe-button--dark {
-            border-color: @ffe-blue-focus;
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    border-color: @ffe-blue-focus;
-                }
-            }
         }
     }
 
     &:focus {
-        box-shadow: 0 0 0 1px @ffe-white, 0 0 0 4px @ffe-blue-focus;
-
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: transparent;
+                border-color: @ffe-farge-vann-70;
+                color: @ffe-farge-vann-30;
+            }
+        }
         &.ffe-button--dark {
             background-color: @ffe-grey-dark-blue--dark;
             border-color: @ffe-grey-dark-blue--dark;
             box-shadow: 0 0 0 2px @ffe-blue-focus;
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    background-color: @ffe-grey-dark-blue--dark;
-                    border-color: @ffe-grey-dark-blue--dark;
-                }
+        }
+    }
+
+    &:hover {
+        background-color: @ffe-farge-vann-30-hover;
+        border-color: @ffe-farge-fjell;
+        color: @ffe-farge-fjell;
+
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: transparent;
+                border-color: @ffe-farge-vann-30;
+                color: @ffe-farge-hvit;
             }
         }
     }
@@ -359,37 +338,51 @@
     height: 45px;
 }
 
-.ffe-button--expanded  {
+.ffe-button--expanded {
     padding: @ffe-spacing-xs;
     width: 45px;
 }
 
 .ffe-button--task {
     background: transparent;
-    border-radius: 0;
+    border-radius: 1.75rem;
+    border: 2px solid transparent;
     box-shadow: none;
-    color: @ffe-blue-azure;
+    color: @ffe-farge-vann;
     display: inline-block;
-    padding: @ffe-spacing-2xs;
+    padding: @ffe-spacing-2xs @ffe-spacing-sm @ffe-spacing-2xs @ffe-spacing-2xs;
     text-align: left;
     transition: all @ffe-transition-duration @ffe-ease;
     width: auto;
     .native & {
         @media (prefers-color-scheme: dark) {
-            color: @ffe-blue-azure-darkmode;
+            color: @ffe-farge-vann-30;
         }
     }
 
-    &:active,
-    &:focus,
     &:hover,
     &:visited {
-        color: @ffe-blue-cobalt;
+        color: @ffe-farge-vann;
         box-shadow: none;
+
         .native & {
             @media (prefers-color-scheme: dark) {
-                color: lighten(@ffe-blue-azure-darkmode, 10%);
+                color: @ffe-farge-hvit;
             }
+        }
+    }
+
+    &:focus {
+        border-color: @ffe-farge-vann;
+
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                border-color: @ffe-farge-hvit;
+            }
+        }
+
+        &::after {
+            display: none;
         }
     }
 }
@@ -397,6 +390,11 @@
 .ffe-button--condensed {
     padding: @ffe-spacing-2xs @ffe-spacing-sm;
     .ffe-fontsize-button-condensed();
+
+    &.ffe-button--task {
+        padding: @ffe-spacing-2xs @ffe-spacing-sm @ffe-spacing-2xs
+            @ffe-spacing-2xs;
+    }
 }
 
 .ffe-button--loading {
@@ -436,21 +434,36 @@
     }
 
     .ffe-button--task & {
-        border: 2px solid @ffe-grey-silver;
+        border: 2px solid @ffe-farge-vann;
         border-radius: 50%;
-        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-        background-color: @ffe-white;
+        background-color: @ffe-farge-hvit;
         fill: @ffe-blue-azure;
         height: 45px;
         padding: 13px;
-        margin: 0 5px 0 0;
+        margin: 0 @ffe-spacing-xs 0 0;
         width: 45px;
         transition: all @ffe-transition-duration @ffe-ease;
         .native & {
             @media (prefers-color-scheme: dark) {
-                border-color: @ffe-blue-azure-darkmode;
-                background-color: @ffe-grey-darkmode;
-                fill: @ffe-blue-azure-darkmode;
+                border-color: @ffe-farge-vann-70;
+                background-color: transparent;
+                fill: @ffe-farge-vann-30;
+            }
+        }
+    }
+
+    .ffe-button--expand & {
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                fill: @ffe-farge-vann-30;
+            }
+        }
+    }
+
+    .ffe-button--expand:hover & {
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                fill: @ffe-farge-hvit;
             }
         }
     }
@@ -462,33 +475,13 @@
     }
 
     .ffe-button--task:hover & {
-        border-color: @ffe-blue-cobalt;
-        box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.2);
+        border-color: @ffe-farge-vann-hover;
+        background-color: @ffe-farge-vann-30-hover;
         .native & {
             @media (prefers-color-scheme: dark) {
-                border-color: lighten(@ffe-blue-azure-darkmode, 10%);
-                background-color: lighten(@ffe-grey-darkmode, 5%);
-                fill: lighten(@ffe-blue-azure-darkmode, 10%);
-            }
-        }
-    }
-
-    .ffe-button--task:active & {
-        border-color: @ffe-blue-cobalt;
-        box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.25);
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                border-color: lighten(@ffe-blue-azure-darkmode, 10%);
-            }
-        }
-    }
-
-    .ffe-button--task:focus & {
-        border-color: @ffe-blue-cobalt;
-        box-shadow: 0 0 0 1px @ffe-white, 0 0 0 4px @ffe-blue-focus;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                border-color: lighten(@ffe-blue-azure-darkmode, 10%);
+                border-color: @ffe-farge-vann-30;
+                background-color: transparent;
+                fill: @ffe-farge-hvit;
             }
         }
     }
