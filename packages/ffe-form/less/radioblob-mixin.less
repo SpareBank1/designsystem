@@ -3,8 +3,8 @@
 */
 .ffe-sb1-radioblob() {
     content: '';
-    background-color: @ffe-white;
-    border: 2px solid @ffe-grey;
+    background-color: @ffe-farge-hvit;
+    border: 2px solid @ffe-farge-graa-wcag;
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -12,8 +12,8 @@
     pointer-events: none;
     .native & {
         @media (prefers-color-scheme: dark) {
-            background-color: @ffe-grey-darkmode;
-            border-color: @ffe-grey-cloud-darkmode;
+            background-color: @ffe-farge-svart!important;
+            border-color: @ffe-farge-graa!important;
         }
     }
 }
@@ -22,12 +22,12 @@
     Radioblob: Active state of the blob
 */
 .ffe-sb1-radioblob-active() {
-    background-color: @ffe-white;
-    border: 7px solid @ffe-blue-azure;
+    background-color: @ffe-farge-vann;
+    border: 5px solid @ffe-farge-hvit;
     .native & {
         @media (prefers-color-scheme: dark) {
-            background-color: @ffe-grey-darkmode;
-            border-color: @ffe-blue-azure-darkmode;
+            background-color: @ffe-farge-vann-70!important;
+            border-color: @ffe-farge-svart!important;
         }
     }
 }

@@ -6,13 +6,13 @@
 // Styleguide ffe-form.field-info-message
 
 .ffe-field-info-message {
-    color: @ffe-blue-royal;
+    color: @ffe-farge-fjell;
     margin: @ffe-spacing-2xs 0 @ffe-spacing-xs;
     display: block;
     .ffe-fontsize-body-text();
     .native & {
         @media (prefers-color-scheme: dark) {
-            color: @ffe-grey-silver-darkmode;
+            color: @ffe-farge-hvit;
         }
     }
 
@@ -21,9 +21,9 @@
     }
 
     &::before {
-        content: url('data:image/svg+xml;charset=utf8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9IiNmZmYiIGhlaWdodD0iMTIiIHdpZHRoPSIxMiIgeD0iNzUwIiB5PSIxMDUwIiB2aWV3Qm94PSIwIDAgMjAwIDIwMCI+PHBhdGggZD0iTTk2LjE5IDE5OS45OWg3Ljg0NmM3LjE1NCAwIDExLjMwOC00LjM5OCAxMS4zMDgtMTEuODA1Vjg1LjE5NWMwLTcuNDA3LTQuMTU0LTExLjgwNS0xMS4zMDgtMTEuODA1SDk2LjE5Yy03LjM4NCAwLTExLjc2OSA0LjM5OC0xMS43NjkgMTEuODA1djEwM0M4NC42NDggMTk1LjYgODguODAxIDIwMCA5Ni4xODYgMjAwek0xMTYuNSAxMS44MDVDMTE2LjUgNC4zOTggMTEyLjM1IDAgMTA1LjE5IDBIOTQuODA4Qzg3LjY1IDAgODMuNSA0LjM5OCA4My41IDExLjgwNVYyNi44NWMwIDcuNDA3IDMuOTIzIDExLjM0MiAxMS4zMDggMTEuMzQyaDEwLjM4NWM3LjM4NCAwIDExLjMwOC0zLjkzNSAxMS4zMDgtMTEuMzQyVjExLjgwNXoiLz48L3N2Zz4=');
-        color: @ffe-white;
-        background-color: @ffe-blue-royal;
+        content: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23fff" height="12" width="12" x="750" y="1050" viewBox="0 0 200 200"%3E%3Cpath d="M96.19 199.99h7.846c7.154 0 11.308-4.398 11.308-11.805V85.195c0-7.407-4.154-11.805-11.308-11.805H96.19c-7.384 0-11.769 4.398-11.769 11.805v103C84.648 195.6 88.801 200 96.186 200zM116.5 11.805C116.5 4.398 112.35 0 105.19 0H94.808C87.65 0 83.5 4.398 83.5 11.805V26.85c0 7.407 3.923 11.342 11.308 11.342h10.385c7.384 0 11.308-3.935 11.308-11.342V11.805z"/%3E%3C/svg%3E');
+        color: @ffe-farge-hvit;
+        background-color: @ffe-farge-fjell;
         border-radius: 50%;
         padding: 2px;
         width: 18px;
@@ -35,7 +35,8 @@
         font-family: arial, sans-serif;
         .native & {
             @media (prefers-color-scheme: dark) {
-                background-color: @ffe-blue-azure-darkmode;
+                content: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23002776" height="12" width="12" x="750" y="1050" viewBox="0 0 200 200"%3E%3Cpath d="M96.19 199.99h7.846c7.154 0 11.308-4.398 11.308-11.805V85.195c0-7.407-4.154-11.805-11.308-11.805H96.19c-7.384 0-11.769 4.398-11.769 11.805v103C84.648 195.6 88.801 200 96.186 200zM116.5 11.805C116.5 4.398 112.35 0 105.19 0H94.808C87.65 0 83.5 4.398 83.5 11.805V26.85c0 7.407 3.923 11.342 11.308 11.342h10.385c7.384 0 11.308-3.935 11.308-11.342V11.805z"/%3E%3C/svg%3E');
+                background-color: @ffe-farge-vann-70;
             }
         }
     }

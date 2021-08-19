@@ -22,17 +22,17 @@
 .ffe-radio-button {
     display: block;
     position: relative;
-    color: @ffe-black;
+    color: @ffe-farge-svart;
     cursor: pointer;
     margin: @ffe-spacing-xs 0;
     transition: width @ffe-transition-duration @ffe-ease-in-out-back;
     text-align: left;
     padding-left: @ffe-spacing-lg;
     padding-top: 1px;
-    -webkit-tap-highlight-color: fade(@ffe-blue-focus, 15%);
+    -webkit-tap-highlight-color: fade(@ffe-farge-vann, 15%);
     .native & {
         @media (prefers-color-scheme: dark) {
-            color: @ffe-grey-cloud-darkmode;
+            color: @ffe-farge-hvit;
         }
     }
 
@@ -74,8 +74,8 @@
 
     &::before {
         content: '';
-        background-color: @ffe-white;
-        border: 10px solid @ffe-white;
+        background-color: @ffe-farge-hvit;
+        border: 10px solid @ffe-farge-hvit;
         width: 20px;
         height: 20px;
         border-radius: 50%;
@@ -86,15 +86,15 @@
         transition: all @ffe-transition-duration @ffe-ease;
         .native & {
             @media (prefers-color-scheme: dark) {
-                background-color: @ffe-grey-darkmode;
-                border-color: @ffe-grey-darkmode;
+                background-color: @ffe-farge-svart;
+                border-color: @ffe-farge-svart;
             }
         }
     }
 
     &::after {
         content: '';
-        border: 2px solid @ffe-grey;
+        border: 2px solid @ffe-farge-graa-wcag;
         width: 20px;
         height: 20px;
         border-radius: 50%;
@@ -105,17 +105,17 @@
         transition: all @ffe-transition-duration @ffe-ease;
         .native & {
             @media (prefers-color-scheme: dark) {
-                border-color: @ffe-grey-cloud-darkmode;
+                border-color: @ffe-farge-graa;
             }
         }
     }
 
     &--invalid {
         &::after {
-            border-color: @ffe-orange-fire;
+            border-color: @ffe-farge-baer-wcag;
             .native & {
                 @media (prefers-color-scheme: dark) {
-                    border-color: @ffe-red-darkmode;
+                    border-color: @ffe-farge-baer;
                 }
             }
         }
@@ -144,44 +144,62 @@
 
     &:checked + .ffe-radio-button::after,
     &:hover + .ffe-radio-button::after {
-        border-color: @ffe-blue-azure;
+        border-color: @ffe-farge-vann;
         .native & {
             @media (prefers-color-scheme: dark) {
-                border-color: @ffe-blue-azure-darkmode;
+                border-color: @ffe-farge-vann-70;
             }
         }
     }
 
     &:checked + .ffe-radio-button::before {
-        background-color: @ffe-blue-azure;
-        border: 5px solid @ffe-white;
+        background-color: @ffe-farge-vann;
+        border: 5px solid @ffe-farge-hvit;
         .native & {
             @media (prefers-color-scheme: dark) {
-                background-color: @ffe-blue-azure-darkmode;
-                border-color: @ffe-grey-darkmode;
+                background-color: @ffe-farge-vann-30;
+                border-color: @ffe-farge-svart;
             }
         }
     }
 
     &:active + .ffe-radio-button::after,
     &:focus + .ffe-radio-button::after {
-        box-shadow: 0 0 0 1px @ffe-white, 0 0 0 4px @ffe-blue-focus;
+        box-shadow: 0 0 0 3px @ffe-farge-hvit, 0 0 0 5px @ffe-farge-vann;
+
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                box-shadow: 0 0 0 3px @ffe-farge-svart,
+                    0 0 0 5px @ffe-farge-hvit;
+            }
+        }
+    }
+
+    &:checked:focus + .ffe-radio-button::after {
+        box-shadow: 0 0 0 3px @ffe-farge-hvit, 0 0 0 5px @ffe-farge-graa-wcag;
+
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                box-shadow: 0 0 0 3px @ffe-farge-svart,
+                    0 0 0 5px @ffe-farge-hvit;
+            }
+        }
     }
 
     &:hover + .ffe-radio-button--invalid::after {
-        border-color: @ffe-orange-fire;
+        border-color: @ffe-farge-baer-wcag;
         .native & {
             @media (prefers-color-scheme: dark) {
-                border-color: @ffe-red-darkmode;
+                border-color: @ffe-farge-baer;
             }
         }
     }
 
     &:checked + .ffe-radio-button--invalid::after {
-        border-color: @ffe-orange-fire;
+        border-color: @ffe-farge-baer-wcag;
         .native & {
             @media (prefers-color-scheme: dark) {
-                border-color: @ffe-red-darkmode;
+                border-color: @ffe-farge-baer;
             }
         }
     }

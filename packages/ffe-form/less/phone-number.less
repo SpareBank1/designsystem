@@ -45,12 +45,15 @@
         font-weight: 400;
         line-height: 1;
         padding: 12px @ffe-spacing-xs;
-        border: 2px solid @ffe-grey-silver;
+        background-color: @ffe-farge-hvit;
+        border: 2px solid @ffe-farge-graa-wcag;
         border-radius: 4px 0 0 4px;
         border-right: 0;
+        transition: all @ffe-transition-duration @ffe-ease;
         .native & {
             @media (prefers-color-scheme: dark) {
-                border-color: @ffe-grey-darkmode;
+                background-color: @ffe-farge-svart;
+                border-color: @ffe-farge-graa;
             }
         }
     }

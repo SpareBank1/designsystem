@@ -13,11 +13,23 @@
     position: relative;
 
     [aria-invalid='true'] {
-        border-color: @ffe-orange-fire;
+        border-color: @ffe-farge-baer-wcag;
         border-style: solid;
         .native & {
             @media (prefers-color-scheme: dark) {
-                border-color: @ffe-red-darkmode;
+                border-color: @ffe-farge-baer;
+            }
+        }
+
+        &:focus {
+            border-color: @ffe-farge-hvit;
+            box-shadow: 0 0 0 2px @ffe-farge-baer-wcag;
+
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    border-color: @ffe-farge-svart;
+                    box-shadow: 0 0 0 2px @ffe-farge-baer;
+                }
             }
         }
     }
@@ -25,7 +37,7 @@
     .ffe-input-field--text-like {
         &[aria-invalid='true'] {
             border-bottom: 2px solid;
-            border-color: @ffe-orange-fire;
+            border-color: @ffe-farge-baer-wcag;
             border-left-style: none;
             border-right-style: none;
             border-top-style: none;

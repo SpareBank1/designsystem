@@ -16,54 +16,62 @@
     @ffe-tooltip-size: 25px;
 
     &__icon {
-        background: @ffe-white;
+        background: @ffe-farge-hvit;
         border-radius: 50%;
-        border: 2px solid @ffe-grey-silver;
-        color: @ffe-blue-azure;
+        border: 2px solid @ffe-farge-graa-wcag;
+        color: @ffe-farge-vann;
         cursor: help;
-        display: inline-block;
         height: @ffe-tooltip-size;
-        line-height: 24px;
         margin: 0 0 @ffe-spacing-2xs @ffe-spacing-sm;
-        padding: 0 0 0 1px;
-        text-align: center;
-        vertical-align: middle;
+        transition: border-color @ffe-transition-duration @ffe-ease;
         width: @ffe-tooltip-size;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        font-family: sans-serif;
         .ffe-fontsize-button();
         .native & {
             @media (prefers-color-scheme: dark) {
-                background: @ffe-grey-darkmode;
-                color: @ffe-blue-azure-darkmode;
-                border-color: @ffe-grey-darkmode;
+                background: @ffe-farge-svart;
+                color: @ffe-farge-vann-70;
+                border-color: @ffe-farge-graa;
             }
         }
 
-        &:hover,
-        &:focus {
-            border-color: @ffe-blue-azure;
+        > span {
+            margin-top: 2px;
+        }
+
+        &:hover {
+            border-color: @ffe-farge-vann;
             .native & {
                 @media (prefers-color-scheme: dark) {
-                    color: lighten(@ffe-blue-azure-darkmode, 10%);
-                    border-color: lighten(@ffe-grey-darkmode, 5%);
-                    background: lighten(@ffe-grey-darkmode, 5%);
+                    border-color: @ffe-farge-vann-70;
+                    color: @ffe-farge-vann-70;
                 }
             }
         }
 
         &:focus {
-            box-shadow: 0 0 0 1px @ffe-white, 0 0 0 4px @ffe-blue-focus;
+            box-shadow: 0 0 0 3px @ffe-farge-hvit, 0 0 0 5px @ffe-farge-vann;
             outline: none;
+
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    box-shadow: 0 0 0 3px @ffe-farge-svart,
+                        0 0 0 5px @ffe-farge-hvit;
+                }
+            }
         }
 
         &:active,
         .ffe-tooltip--open & {
-            border-color: @ffe-blue-royal;
-            color: @ffe-blue-royal;
+            border-color: @ffe-farge-vann;
+            color: @ffe-farge-fjell;
             .native & {
                 @media (prefers-color-scheme: dark) {
-                    color: lighten(@ffe-blue-azure-darkmode, 10%);
-                    border-color: lighten(@ffe-blue-azure-darkmode, 10%);
-                    background: lighten(@ffe-grey-darkmode, 5%);
+                    border-color: @ffe-farge-vann-70;
+                    color: @ffe-farge-vann-70;
                 }
             }
         }

@@ -17,39 +17,39 @@
     height: 45px;
     padding: 0 @ffe-spacing-sm;
     font-family: 'SpareBank1-regular', 'MuseoSans-500', arial, sans-serif;
-    color: @ffe-black;
+    color: @ffe-farge-svart;
     border-radius: 4px;
-    border: 2px solid @ffe-grey-silver;
+    border: 2px solid @ffe-farge-graa-wcag;
     transition: all @ffe-transition-duration @ffe-ease;
-    box-shadow: 0 1px 2px 0 @ffe-grey-cloud inset;
     width: 100%;
     .ffe-fontsize-form-input();
     .native & {
         @media (prefers-color-scheme: dark) {
-            background-color: @ffe-grey-darkmode;
-            color: @ffe-white-darkmode;
-            border-color: @ffe-grey-darkmode;
+            background-color: @ffe-farge-svart;
+            color: @ffe-farge-hvit;
+            border-color: @ffe-farge-graa;
             box-shadow: none;
         }
     }
 
     &:hover {
-        border-color: @ffe-blue-azure;
+        border-color: @ffe-farge-vann;
         .native & {
             @media (prefers-color-scheme: dark) {
-                border-color: @ffe-blue-azure-darkmode;
+                border-color: @ffe-farge-vann-70;
             }
         }
     }
 
     &:focus,
     &:active {
-        border-color: @ffe-blue-azure;
-        box-shadow: 0 0 0 1px @ffe-white, 0 0 0 4px @ffe-blue-focus;
+        border-color: @ffe-farge-hvit;
+        box-shadow: 0 0 0 2px @ffe-farge-vann;
         outline: none;
         .native & {
             @media (prefers-color-scheme: dark) {
-                border-color: @ffe-blue-azure-darkmode;
+                border-color: @ffe-farge-svart;
+                box-shadow: 0 0 0 2px @ffe-farge-vann-70;
             }
         }
     }
@@ -64,30 +64,30 @@
     }
 
     &--text-like {
-        background-color: @ffe-white;
+        background-color: @ffe-farge-hvit;
         border: none;
-        border-bottom: 2px solid @ffe-blue-royal;
+        border-bottom: 2px solid @ffe-farge-graa-wcag;
         border-radius: 4px 4px 0 0;
         box-shadow: none;
-        color: @ffe-blue-royal;
+        color: @ffe-farge-fjell;
         display: inline-block;
         height: 2em;
         transition: all @ffe-transition-duration @ffe-ease;
         .native & {
             @media (prefers-color-scheme: dark) {
+                color: @ffe-farge-vann-30;
                 background-color: transparent;
-                border-color: @ffe-white-darkmode;
+                border-color: @ffe-farge-graa;
+                box-shadow: none !important;
             }
         }
 
         &:focus {
-            border-color: @ffe-blue-azure;
             box-shadow: none;
-            color: @ffe-blue-azure;
+            border-color: @ffe-farge-vann;
             .native & {
                 @media (prefers-color-scheme: dark) {
-                    border-color: @ffe-blue-azure-darkmode;
-                    color: @ffe-white-darkmode;
+                    border-color: @ffe-farge-vann-70;
                 }
             }
         }
@@ -98,7 +98,7 @@
     }
 
     &::placeholder {
-        color: @ffe-grey-charcoal;
+        color: @ffe-farge-moerkgraa;
         opacity: 1;
         .native & {
             @media (prefers-color-scheme: dark) {
