@@ -8,7 +8,7 @@
 
     &__list {
         display: none;
-        background: @ffe-white;
+        background: @ffe-farge-hvit;
         position: absolute;
         width: 100%;
         z-index: 100000;
@@ -17,20 +17,20 @@
         overflow: hidden;
         .native & {
             @media (prefers-color-scheme: dark) {
-                background: @ffe-grey-charcoal-darkmode;
-                color: @ffe-white-darkmode;
+                background: @ffe-farge-svart;
+                color: @ffe-farge-hvit;
             }
         }
 
         &--open {
             display: block;
             height: auto;
-            border: 1px solid @ffe-grey-silver;
+            border: 1px solid @ffe-farge-graa-wcag;
             .native & {
                 @media (prefers-color-scheme: dark) {
-                    border-color: @ffe-grey-silver-darkmode;
-                    background: @ffe-grey-charcoal-darkmode;
-                    color: @ffe-white-darkmode;
+                    border-color: @ffe-farge-graa;
+                    background: @ffe-farge-svart;
+                    color: @ffe-farge-hvit;
                 }
             }
         }
@@ -40,10 +40,10 @@
         padding: @ffe-spacing @ffe-spacing-sm;
 
         & + .ffe-searchable-dropdown__list-item-container {
-            border-top: 1px solid @ffe-grey-silver;
+            border-top: 1px solid @ffe-farge-graa-wcag;
             .native & {
                 @media (prefers-color-scheme: dark) {
-                    border-color: @ffe-grey-silver-darkmode;
+                    border-color: @ffe-farge-graa;
                 }
             }
         }
@@ -54,50 +54,40 @@
     }
 
     &__list-item-container:not(:last-child) {
-        border-bottom: 1px solid @ffe-grey-silver;
+        border-bottom: 1px solid @ffe-farge-graa-wcag;
         .native & {
             @media (prefers-color-scheme: dark) {
-                border-color: @ffe-grey-silver-darkmode;
+                border-color: @ffe-farge-graa;
             }
         }
     }
 
     &__list-item-body {
         padding: @ffe-spacing @ffe-spacing-sm;
-        color: @ffe-blue-cobalt;
+        color: @ffe-farge-vann;
         cursor: pointer;
         .native & {
             @media (prefers-color-scheme: dark) {
-                color: @ffe-blue-azure-darkmode;
+                color: @ffe-farge-vann-70;
             }
         }
 
         &:hover {
-            background: @ffe-blue-pale;
+            background: @ffe-farge-frost-30;
             .native & {
                 @media (prefers-color-scheme: dark) {
-                    background: @ffe-grey-darkmode;
+                    background: lighten(@ffe-farge-svart, 5%);
                 }
             }
         }
 
         &--highlighted,
         &--highlighted:hover {
-            background: @ffe-blue-azure;
-            color: @ffe-white;
+            background: @ffe-farge-frost-30;
             .native & {
                 @media (prefers-color-scheme: dark) {
-                    background: @ffe-blue-azure-darkmode;
-                    color: @ffe-white-darkmode;
-                    .ffe-searchable-dropdown__list-item-body-details
-                        .ffe-micro-text {
-                        color: @ffe-white-darkmode;
-                    }
+                    background: lighten(@ffe-farge-svart, 5%);
                 }
-            }
-
-            * {
-                color: @ffe-white;
             }
         }
     }
@@ -108,7 +98,7 @@
         .ffe-micro-text {
             .native & {
                 @media (prefers-color-scheme: dark) {
-                    color: @ffe-grey-cloud-darkmode;
+                    color: @ffe-farge-graa;
                 }
             }
         }
@@ -120,7 +110,7 @@
         height: 100%;
         top: 0;
         right: 0;
-        border: none;
+        border: 2px solid transparent;
         width: @button-width;
         padding: 0;
         box-shadow: none;
@@ -129,48 +119,75 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+        transition: all @ffe-transition-duration @ffe-ease;
 
         &--hidden {
             display: none;
         }
 
         &:hover {
-            border: 2px solid @ffe-blue-azure;
+            border-color: @ffe-farge-vann;
             .native & {
                 @media (prefers-color-scheme: dark) {
-                    border-color: @ffe-blue-azure-darkmode;
+                    border-color: @ffe-farge-vann-70;
                 }
             }
         }
 
         &:focus {
-            border: 2px solid @ffe-blue-azure;
-            box-shadow: 0 0 0 1px @ffe-white, 0 0 0 4px @ffe-blue-focus;
+            border: 2px solid @ffe-farge-vann;
             .native & {
                 @media (prefers-color-scheme: dark) {
-                    border-color: @ffe-blue-azure-darkmode;
+                    border-color: @ffe-farge-vann-70;
+                }
+            }
+        }
+
+        .ffe-input-field:focus ~ &:hover {
+            border-color: transparent;
+            box-shadow: 0 0 0 2px @ffe-farge-vann;
+
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    box-shadow: 0 0 0 2px @ffe-farge-vann-70;
                 }
             }
         }
 
         svg {
             display: block;
+            transition: transform @ffe-transition-duration @ffe-ease-in-out-back;
         }
 
         &--flip {
             svg {
-                transform: rotate(180deg);
+                transform: rotateZ(180deg);
             }
         }
 
         &--cross {
             svg {
-                fill: @ffe-grey-charcoal;
-                height: 11px;
-                width: 11px;
+                fill: @ffe-farge-vann;
+                height: 14px;
+                width: 14px;
+                transition: fill @ffe-transition-duration @ffe-ease;
                 .native & {
                     @media (prefers-color-scheme: dark) {
-                        fill: @ffe-white-darkmode;
+                        fill: @ffe-farge-vann-70;
+                    }
+                }
+            }
+
+            &:hover {
+                svg {
+                    fill: @ffe-farge-fjell;
+
+                    .native & {
+                        @media (prefers-color-scheme: dark) {
+                            fill: @ffe-farge-vann-30;
+                        }
                     }
                 }
             }
@@ -178,12 +195,26 @@
 
         &--arrow {
             svg {
-                fill: @ffe-blue-azure;
+                fill: @ffe-farge-vann;
                 height: 17px;
                 width: 17px;
+                transition: fill @ffe-transition-duration @ffe-ease;
+
                 .native & {
                     @media (prefers-color-scheme: dark) {
-                        fill: @ffe-blue-azure-darkmode;
+                        fill: @ffe-farge-vann-70;
+                    }
+                }
+            }
+
+            &:hover {
+                svg {
+                    fill: @ffe-farge-fjell;
+
+                    .native & {
+                        @media (prefers-color-scheme: dark) {
+                            fill: @ffe-farge-vann-30;
+                        }
                     }
                 }
             }
