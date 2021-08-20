@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@9.0.8...@sb1/ffe-lists@9.0.9) (2021-08-20)
+
+
+### Bug Fixes
+
+* **ffe-lists:** update colour variables ([#1164](https://github.com/SpareBank1/designsystem/issues/1164)) ([dd146ea](https://github.com/SpareBank1/designsystem/commit/dd146eaf65288bc839b75f046954307e10c88a02))
+
+
+
+
+
 ## [9.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@9.0.7...@sb1/ffe-lists@9.0.8) (2021-06-17)
 
 **Note:** Version bump only for package @sb1/ffe-lists
