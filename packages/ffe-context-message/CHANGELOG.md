@@ -3,156 +3,89 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [4.0.25](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.24...@sb1/ffe-context-message@4.0.25) (2021-07-09)
-
+## [4.0.26](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.25...@sb1/ffe-context-message@4.0.26) (2021-08-23)
 
 ### Bug Fixes
 
-* **ffe-context-message:** oppdater darkmode styling til ny visuell profil ([b012687](https://github.com/SpareBank1/designsystem/commit/b0126873e7699f1e4b546af194b34f23e64212d1))
+-   **ffe-context-message:** revert "oppdater darkmode styling til ny visuell profil" ([bf7f917](https://github.com/SpareBank1/designsystem/commit/bf7f9177fb177b5f2e8054b8fe1062ae7a3cf62e))
 
+## [4.0.25](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.24...@sb1/ffe-context-message@4.0.25) (2021-07-09)
 
+### Bug Fixes
 
-
+-   **ffe-context-message:** oppdater darkmode styling til ny visuell profil ([b012687](https://github.com/SpareBank1/designsystem/commit/b0126873e7699f1e4b546af194b34f23e64212d1))
 
 ## [4.0.24](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.23...@sb1/ffe-context-message@4.0.24) (2021-06-25)
 
-
 ### Bug Fixes
 
-* **ffe-context-message:** colour update to match new profile ([#1128](https://github.com/SpareBank1/designsystem/issues/1128)) ([3218c6c](https://github.com/SpareBank1/designsystem/commit/3218c6c408a03d26931d3ba47223ca694b64c5c3))
-
-
-
-
+-   **ffe-context-message:** colour update to match new profile ([#1128](https://github.com/SpareBank1/designsystem/issues/1128)) ([3218c6c](https://github.com/SpareBank1/designsystem/commit/3218c6c408a03d26931d3ba47223ca694b64c5c3))
 
 ## [4.0.23](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.22...@sb1/ffe-context-message@4.0.23) (2021-06-17)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
 
-
-
-
-
 ## [4.0.22](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.21...@sb1/ffe-context-message@4.0.22) (2021-04-14)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
-
-
-
-
 
 ## [4.0.21](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.20...@sb1/ffe-context-message@4.0.21) (2021-03-25)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
 
-
-
-
-
 ## [4.0.20](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.19...@sb1/ffe-context-message@4.0.20) (2021-03-17)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
 
-
-
-
-
 ## [4.0.19](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.18...@sb1/ffe-context-message@4.0.19) (2021-03-15)
-
 
 ### Bug Fixes
 
-* **ffe-context-message:** broadens version of peer dependencies ([1167b98](https://github.com/SpareBank1/designsystem/commit/1167b98ab163a75178e172a1d87e4c353a81d386))
-
-
-
-
+-   **ffe-context-message:** broadens version of peer dependencies ([1167b98](https://github.com/SpareBank1/designsystem/commit/1167b98ab163a75178e172a1d87e4c353a81d386))
 
 ## [4.0.18](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.17...@sb1/ffe-context-message@4.0.18) (2021-03-08)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
 
-
-
-
-
 ## [4.0.17](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.16...@sb1/ffe-context-message@4.0.17) (2021-02-03)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
-
-
-
-
 
 ## [4.0.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.15...@sb1/ffe-context-message@4.0.16) (2021-02-02)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
 
-
-
-
-
 ## [4.0.15](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.14...@sb1/ffe-context-message@4.0.15) (2021-01-11)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
 
-
-
-
-
 ## [4.0.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.13...@sb1/ffe-context-message@4.0.14) (2021-01-08)
-
 
 ### Bug Fixes
 
-* **ffe-context-message:** contrast issue ([ead4fb5](https://github.com/SpareBank1/designsystem/commit/ead4fb50626c5bf9b1d837c60a72da256243ea73))
-
-
-
-
+-   **ffe-context-message:** contrast issue ([ead4fb5](https://github.com/SpareBank1/designsystem/commit/ead4fb50626c5bf9b1d837c60a72da256243ea73))
 
 ## [4.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.12...@sb1/ffe-context-message@4.0.13) (2020-12-03)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
 
-
-
-
-
 ## [4.0.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.11...@sb1/ffe-context-message@4.0.12) (2020-11-20)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
-
-
-
-
 
 ## [4.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.10...@sb1/ffe-context-message@4.0.11) (2020-11-05)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
 
-
-
-
-
 ## [4.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.9...@sb1/ffe-context-message@4.0.10) (2020-08-25)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
 
-
-
-
-
 ## [4.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.8...@sb1/ffe-context-message@4.0.9) (2020-08-05)
-
 
 ### Bug Fixes
 
-* **ffe-context-message:** add padding to compact context message ([9e5db9d](https://github.com/SpareBank1/designsystem/commit/9e5db9daba5661a95c1c413df5118915b312bd07))
-
-
-
-
+-   **ffe-context-message:** add padding to compact context message ([9e5db9d](https://github.com/SpareBank1/designsystem/commit/9e5db9daba5661a95c1c413df5118915b312bd07))
 
 ## [4.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.7...@sb1/ffe-context-message@4.0.8) (2020-03-18)
 
