@@ -26,60 +26,36 @@
 // Styleguide ffe-system-message
 
 .ffe-system-message-wrapper {
-    color: @ffe-black;
+    color: @ffe-farge-svart;
     fill: currentColor;
     transition: height @ffe-transition-duration @ffe-ease-in-out-back;
     overflow: hidden;
-    .native & {
-        @media (prefers-color-scheme: dark) {
-            color: @ffe-grey-cloud-darkmode;
-        }
-    }
+    border-radius: 5px;
 
     &--error {
-        background-color: @ffe-orange-salmon;
-        fill: @ffe-red;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                background-color: @ffe-grey-charcoal-darkmode;
-                fill: @ffe-red-darkmode;
-            }
-        }
+        background-color: @ffe-farge-baer-30;
+        fill: @ffe-farge-baer-wcag;
     }
 
     &--info {
-        background-color: @ffe-blue-pale;
-        fill: @ffe-blue-royal;
+        background-color: @ffe-farge-frost-30;
+        fill: @ffe-farge-fjell;
         .native & {
             @media (prefers-color-scheme: dark) {
-                background-color: @ffe-grey-charcoal-darkmode;
-                fill: @ffe-blue-azure-darkmode;
+                background-color: @ffe-farge-vann-30;
             }
         }
     }
 
-    // TODO: Change color to one in the style guide
     &--news {
-        background-color: #4a5155;
+        background-color: @ffe-farge-moerkgraa-wcag;
         color: @ffe-white;
-        fill: #4a5155;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                background-color: @ffe-grey-charcoal-darkmode;
-                color: @ffe-grey-cloud-darkmode;
-                fill: @ffe-blue-azure-darkmode;
-            }
-        }
+        fill: @ffe-farge-fjell;
     }
 
     &--success {
-        background-color: @ffe-green-mint;
-        fill: @ffe-green-shamrock;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                background-color: @ffe-grey-charcoal-darkmode;
-            }
-        }
+        background-color: @ffe-farge-nordlys-30;
+        fill: @ffe-farge-nordlys-wcag;
     }
 }
 
@@ -96,14 +72,9 @@
         background: @ffe-white;
         border-radius: 50%;
         display: inline-flex;
-        height: 1.7em;
-        width: 1.7em;
+        height: 2rem;
+        width: 2rem;
         margin-right: @ffe-spacing-sm;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                background: @ffe-grey-darkmode;
-            }
-        }
 
         > svg {
             height: 50%;
@@ -128,33 +99,39 @@
         flex: 0 0 auto;
         appearance: none;
         background: transparent;
-        border: 0;
-        border-radius: 0;
+        border: 2px solid transparent;
+        border-radius: 5px;
         color: inherit;
         cursor: pointer;
         align-self: flex-start;
-        height: 16px;
-        margin: @ffe-spacing-2xs 0 @ffe-spacing-2xs @ffe-spacing-2xs;
-        padding: 0;
-        width: 16px;
+        width: 1em;
+        height: 1em;
+        padding: @ffe-spacing-sm;
+        box-sizing: content-box;
+        fill: @ffe-farge-moerkgraa;
 
+        &:hover {
+            fill: @ffe-farge-svart;
+        }
+        &:focus {
+            border: 2px solid @ffe-farge-vann;
+        }
         > svg {
-            fill: @ffe-black;
             height: 100%;
             width: 100%;
             .native & {
                 @media (prefers-color-scheme: dark) {
-                    fill: @ffe-grey-cloud-darkmode;
+                    fill: inherit;
                 }
             }
-
-            .ffe-system-message-wrapper--news & {
-                fill: @ffe-white;
-                .native & {
-                    @media (prefers-color-scheme: dark) {
-                        fill: @ffe-grey-cloud-darkmode;
-                    }
-                }
+        }
+        .ffe-system-message-wrapper--news & {
+            fill: @ffe-farge-hvit;
+            &:hover {
+                fill: @ffe-farge-lysvarmgraa;
+            }
+            &:focus {
+                border: 2px solid @ffe-farge-hvit;
             }
         }
     }
