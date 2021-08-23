@@ -55,11 +55,11 @@
     .ffe-body-text {
         .native & {
             @media (prefers-color-scheme: dark) {
-                color: @ffe-farge-svart;
+                color: @ffe-grey-cloud-darkmode;
             }
             a {
                 @media (prefers-color-scheme: dark) {
-                    color: @ffe-farge-svart;
+                    color: @ffe-grey-cloud-darkmode;
                 }
             }
         }
@@ -87,6 +87,11 @@
         border-radius: 50%;
         height: 4em;
         width: 4em;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: @ffe-grey-darkmode;
+            }
+        }
 
         &-svg {
             height: 2.2em;
@@ -95,7 +100,7 @@
             fill: @ffe-blue-royal;
             .native & {
                 @media (prefers-color-scheme: dark) {
-                    fill: @ffe-farge-fjell;
+                    fill: @ffe-white-darkmode;
                 }
             }
         }
@@ -184,7 +189,7 @@
         background-color: @ffe-farge-frost-30;
         .native & {
             @media (prefers-color-scheme: dark) {
-                background-color: @ffe-farge-vann-30;
+                background-color: @ffe-grey-charcoal-darkmode;
             }
         }
     }
@@ -193,13 +198,19 @@
         background-color: @ffe-farge-sand-70;
         .native & {
             @media (prefers-color-scheme: dark) {
-                background-color: @ffe-farge-sand;
+                background-color: @ffe-grey-charcoal-darkmode;
             }
         }
     }
 
     &--success {
         background-color: @ffe-farge-nordlys-30;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: @ffe-grey-charcoal-darkmode;
+            }
+        }
+
         .ffe-context-message-content__icon-svg {
             fill: @ffe-farge-nordlys-wcag;
         }
@@ -207,6 +218,11 @@
 
     &--error {
         background-color: @ffe-farge-baer-30;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: @ffe-grey-charcoal-darkmode;
+            }
+        }
 
         .ffe-context-message-content__header {
             color: @ffe-black;
