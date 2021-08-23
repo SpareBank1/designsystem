@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.1.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@6.1.7...@sb1/ffe-message-box-react@6.1.8) (2021-08-23)
+
+
+### Bug Fixes
+
+* **ffe-message-box-react:** revert "Update message box styling ([#1152](https://github.com/SpareBank1/designsystem/issues/1152))" ([5efe26f](https://github.com/SpareBank1/designsystem/commit/5efe26fd915da4fc22a3a8c8ded27765de9afc3c))
+
+
+
+
+
 ## [6.1.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@6.1.6...@sb1/ffe-message-box-react@6.1.7) (2021-08-13)
 
 **Note:** Version bump only for package @sb1/ffe-message-box-react

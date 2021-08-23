@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.36](https://github.com/SpareBank1/designsystem/compare/@sparebank1/designsystem@1.0.0-alpha.35...@sparebank1/designsystem@1.0.0-alpha.36) (2021-08-23)
+
+
+### Bug Fixes
+
+* **designsystem:** revert "Update message box styling ([#1152](https://github.com/SpareBank1/designsystem/issues/1152))" ([3daa0a7](https://github.com/SpareBank1/designsystem/commit/3daa0a752552424a4d7c3af4b4bcb5aadad66734))
+
+
+
+
+
 # [1.0.0-alpha.35](https://github.com/SpareBank1/designsystem/compare/@sparebank1/designsystem@1.0.0-alpha.34...@sparebank1/designsystem@1.0.0-alpha.35) (2021-08-20)
 
 **Note:** Version bump only for package @sparebank1/designsystem
