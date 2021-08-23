@@ -23,58 +23,84 @@
 
 .ffe-message-box {
     text-align: center;
-    .ffe-body-paragraph {
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-farge-svart;
-            }
-        }
-    }
 
     &__box {
         padding: @ffe-spacing-xl @ffe-spacing-lg;
         border-radius: 5px;
-        color: @ffe-farge-svart;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-farge-svart;
-            }
+
+        @media (min-width: @breakpoint-md) {
+            padding: @ffe-spacing-xl @ffe-spacing-xl;
         }
 
         &--tips {
-            background-color: @ffe-farge-sand-70;
+            background-color: @ffe-sand;
             .native & {
                 @media (prefers-color-scheme: dark) {
-                    background-color: @ffe-farge-sand;
+                    background-color: @ffe-grey-charcoal-darkmode;
                 }
             }
         }
 
         &--info {
-            background-color: @ffe-farge-frost-30;
+            background-color: @ffe-blue-pale;
             .native & {
                 @media (prefers-color-scheme: dark) {
-                    background-color: @ffe-farge-vann-30;
+                    background-color: @ffe-grey-charcoal-darkmode;
                 }
             }
         }
 
         &--success {
-            background-color: @ffe-farge-nordlys-30;
+            background-color: @ffe-green-mint;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    background-color: @ffe-grey-charcoal-darkmode;
+                }
+            }
         }
 
         &--error {
-            background-color: @ffe-farge-baer-30;
+            background-color: @ffe-orange-salmon;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    background-color: @ffe-grey-charcoal-darkmode;
+                }
+            }
         }
     }
 
     &__title {
-        color: @ffe-farge-svart;
-        font-size: 18px;
-        margin-bottom: @ffe-spacing-sm;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-farge-svart;
+        &--success {
+            color: @ffe-black;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    color: @ffe-white-darkmode;
+                }
+            }
+        }
+
+        &--error {
+            color: @ffe-black;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    color: @ffe-white-darkmode;
+                }
+            }
+        }
+
+        &--tips {
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    color: @ffe-white-darkmode;
+                }
+            }
+        }
+
+        &--info {
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    color: @ffe-white-darkmode;
+                }
             }
         }
     }
@@ -84,42 +110,66 @@
         margin: 0;
         line-height: 2;
         text-align: left;
-        .native {
-            li {
-                color: @ffe-farge-svart;
-            }
-        }
     }
 
     &__icon {
-        background-color: @ffe-farge-hvit;
+        background-color: #fff;
         border-radius: 50%;
-        display: inline-flex;
-        fill: @ffe-farge-fjell;
-        height: 64px;
+        display: inline-block;
+        fill: #002776;
+        height: 80px;
         margin-bottom: -16px;
-        align-items: center;
-        justify-content: center;
+        padding: @ffe-spacing-xs;
+        padding-top: @ffe-spacing-sm;
         position: relative;
-        top: 16px;
-        width: 64px;
+        top: 12px;
+        width: 80px;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: @ffe-grey-darkmode;
+                fill: @ffe-blue-azure-darkmode;
+            }
+        }
 
         &--error svg {
-            fill: @ffe-farge-baer-wcag;
+            fill: @ffe-orange-fire;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    fill: @ffe-red-darkmode;
+                }
+            }
+        }
+
+        &--info svg {
+            fill: @ffe-blue-royal;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    fill: @ffe-blue-azure-darkmode;
+                }
+            }
         }
 
         &--success svg {
-            fill: @ffe-farge-nordlys-wcag;
+            fill: @ffe-green-shamrock;
+        }
+
+        &--tips svg {
+            fill: @ffe-blue-royal;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    fill: @ffe-blue-azure-darkmode;
+                }
+            }
         }
     }
 
     @media print {
         &__box {
-            border: 2px dashed @ffe-farge-svart;
+            border: 2px dashed @ffe-black;
         }
 
         &__icon {
-            border-bottom: 2px dashed @ffe-farge-svart;
+            border-bottom: 2px dashed @ffe-black;
             margin-bottom: -33.5px;
         }
     }
