@@ -26,36 +26,60 @@
 // Styleguide ffe-system-message
 
 .ffe-system-message-wrapper {
-    color: @ffe-farge-svart;
+    color: @ffe-black;
     fill: currentColor;
     transition: height @ffe-transition-duration @ffe-ease-in-out-back;
     overflow: hidden;
-    border-radius: 5px;
-
-    &--error {
-        background-color: @ffe-farge-baer-30;
-        fill: @ffe-farge-baer-wcag;
+    .native & {
+        @media (prefers-color-scheme: dark) {
+            color: @ffe-grey-cloud-darkmode;
+        }
     }
 
-    &--info {
-        background-color: @ffe-farge-frost-30;
-        fill: @ffe-farge-fjell;
+    &--error {
+        background-color: @ffe-orange-salmon;
+        fill: @ffe-red;
         .native & {
             @media (prefers-color-scheme: dark) {
-                background-color: @ffe-farge-vann-30;
+                background-color: @ffe-grey-charcoal-darkmode;
+                fill: @ffe-red-darkmode;
             }
         }
     }
 
+    &--info {
+        background-color: @ffe-blue-pale;
+        fill: @ffe-blue-royal;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: @ffe-grey-charcoal-darkmode;
+                fill: @ffe-blue-azure-darkmode;
+            }
+        }
+    }
+
+    // TODO: Change color to one in the style guide
     &--news {
-        background-color: @ffe-farge-moerkgraa-wcag;
+        background-color: #4a5155;
         color: @ffe-white;
-        fill: @ffe-farge-fjell;
+        fill: #4a5155;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: @ffe-grey-charcoal-darkmode;
+                color: @ffe-grey-cloud-darkmode;
+                fill: @ffe-blue-azure-darkmode;
+            }
+        }
     }
 
     &--success {
-        background-color: @ffe-farge-nordlys-30;
-        fill: @ffe-farge-nordlys-wcag;
+        background-color: @ffe-green-mint;
+        fill: @ffe-green-shamrock;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: @ffe-grey-charcoal-darkmode;
+            }
+        }
     }
 }
 
@@ -72,9 +96,14 @@
         background: @ffe-white;
         border-radius: 50%;
         display: inline-flex;
-        height: 2rem;
-        width: 2rem;
+        height: 1.7em;
+        width: 1.7em;
         margin-right: @ffe-spacing-sm;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background: @ffe-grey-darkmode;
+            }
+        }
 
         > svg {
             height: 50%;
@@ -99,39 +128,33 @@
         flex: 0 0 auto;
         appearance: none;
         background: transparent;
-        border: 2px solid transparent;
-        border-radius: 5px;
+        border: 0;
+        border-radius: 0;
         color: inherit;
         cursor: pointer;
         align-self: flex-start;
-        width: 1em;
-        height: 1em;
-        padding: @ffe-spacing-sm;
-        box-sizing: content-box;
-        fill: @ffe-farge-moerkgraa;
+        height: 16px;
+        margin: @ffe-spacing-2xs 0 @ffe-spacing-2xs @ffe-spacing-2xs;
+        padding: 0;
+        width: 16px;
 
-        &:hover {
-            fill: @ffe-farge-svart;
-        }
-        &:focus {
-            border: 2px solid @ffe-farge-vann;
-        }
         > svg {
+            fill: @ffe-black;
             height: 100%;
             width: 100%;
             .native & {
                 @media (prefers-color-scheme: dark) {
-                    fill: inherit;
+                    fill: @ffe-grey-cloud-darkmode;
                 }
             }
-        }
-        .ffe-system-message-wrapper--news & {
-            fill: @ffe-farge-hvit;
-            &:hover {
-                fill: @ffe-farge-lysvarmgraa;
-            }
-            &:focus {
-                border: 2px solid @ffe-farge-hvit;
+
+            .ffe-system-message-wrapper--news & {
+                fill: @ffe-white;
+                .native & {
+                    @media (prefers-color-scheme: dark) {
+                        fill: @ffe-grey-cloud-darkmode;
+                    }
+                }
             }
         }
     }
