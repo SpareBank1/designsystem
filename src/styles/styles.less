@@ -145,10 +145,12 @@ body.native {
     }
 
     background-color: @ffe-black-darkmode;
-    li[class^='rsg'],
-    p[class^='rsg'] {
+
+    li,
+    p:not(.ffe-lead-paragraph) {
         color: @ffe-grey-cloud-darkmode;
     }
+
     a:not(h1, h2, h3, h4, h5, h6) {
         color: @ffe-blue-azure-darkmode;
         border-color: @ffe-blue-azure-darkmode;

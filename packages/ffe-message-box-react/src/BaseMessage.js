@@ -38,13 +38,13 @@ const BaseMessage = props => {
                     <div
                         className={classNames(
                             'ffe-h4',
-                            `ffe-message-box__title`,
+                            `ffe-message-box__title--${type}`,
                         )}
                     >
                         {title}
                     </div>
                 )}
-                {content && <p>{content}</p>}
+                {content && <p className="ffe-body-text">{content}</p>}
                 {!content && children}
             </div>
         </div>

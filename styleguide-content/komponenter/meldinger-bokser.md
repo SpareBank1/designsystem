@@ -19,7 +19,9 @@ const {
         <GridRow>
             <GridCol md={6}>
                 <TipsMessage title="Overskrift">
-                    Brødtekst som beskriver i mer detalj
+                    <p className="ffe-body-paragraph">
+                        Brødtekst som beskriver i mer detalj
+                    </p>
                 </TipsMessage>
             </GridCol>
             <GridCol md={6}>
@@ -34,7 +36,9 @@ const {
         <GridRow>
             <GridCol md={6}>
                 <InfoMessage title="Overskrift">
-                    Brødtekst som beskriver i mer detalj
+                    <p className="ffe-body-paragraph">
+                        Brødtekst som beskriver i mer detalj
+                    </p>
                 </InfoMessage>
             </GridCol>
             <GridCol md={6}>
@@ -49,7 +53,9 @@ const {
         <GridRow>
             <GridCol md={6}>
                 <SuccessMessage title="Overskrift">
-                    Brødtekst som beskriver i mer detalj hva som har skjedd
+                    <p className="ffe-body-paragraph">
+                        Brødtekst som beskriver i mer detalj hva som har skjedd
+                    </p>
                 </SuccessMessage>
             </GridCol>
             <GridCol md={6}>
@@ -64,7 +70,9 @@ const {
         <GridRow>
             <GridCol md={6}>
                 <ErrorMessage title="Overskrift">
-                    Brødtekst som beskriver feilsituasjonen i mer detalj
+                    <p className="ffe-body-paragraph">
+                        Brødtekst som beskriver feilsituasjonen i mer detalj
+                    </p>
                 </ErrorMessage>
             </GridCol>
             <GridCol md={6}>
