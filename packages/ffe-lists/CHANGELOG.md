@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@9.0.10...@sb1/ffe-lists@10.0.0) (2021-08-23)
+
+
+### Features
+
+* **ffe-lists:** update colour variables ([#1164](https://github.com/SpareBank1/designsystem/issues/1164)) ([c4f4951](https://github.com/SpareBank1/designsystem/commit/c4f4951ff7d427b129b2f8bbfeb80a8505a8a877))
+
+
+### BREAKING CHANGES
+
+* **ffe-lists:** requires ffe-core@18.3
+
+
+
+
+
 ## [9.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@9.0.9...@sb1/ffe-lists@9.0.10) (2021-08-23)
 
 
