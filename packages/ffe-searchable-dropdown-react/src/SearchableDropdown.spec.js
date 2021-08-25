@@ -491,7 +491,7 @@ describe('SearchableDropdown', () => {
         expect(input.value).toEqual('Bedriften');
     });
 
-    it('should move focus to input field when selecting from dropdown, and to toggle button when clicking clear button', () => {
+    it('should move focus to clear button when selecting from dropdown, and to toggle button when clicking clear button', () => {
         const onChange = jest.fn();
         render(
             <SearchableDropdown
@@ -508,9 +508,9 @@ describe('SearchableDropdown', () => {
         const input = screen.getByRole('combobox');
         userEvent.click(input);
         userEvent.click(screen.getByText('Bedriften'), { button: 1 });
-        expect(document.activeElement).toEqual(input);
-
         const clearButton = screen.getByLabelText('fjern valgt');
+        expect(document.activeElement).toEqual(clearButton);
+
         userEvent.click(clearButton, { button: 1 });
         const toggleButton = screen.getByLabelText('åpne alternativer');
         expect(document.activeElement).toEqual(toggleButton);

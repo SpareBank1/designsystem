@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [11.5.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@11.4.5...@sb1/ffe-searchable-dropdown-react@11.5.0) (2021-07-14)
+
+
+### Features
+
+* **ffe-searchable-dropdown-react:** Fix a11y message when just opening and closing the dropdown ([03bfb05](https://github.com/SpareBank1/designsystem/commit/03bfb059f6dd9c4926d2a048f22313441e05c30b))
+* **ffe-searchable-dropdown-react:** focus clear button instead of input field on option selection ([0c24147](https://github.com/SpareBank1/designsystem/commit/0c241479696deeaa37f18d05abb463ab929e26d2))
+
+
+
+
+
 ## [11.4.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@11.4.4...@sb1/ffe-searchable-dropdown-react@11.4.5) (2021-07-07)
 
 

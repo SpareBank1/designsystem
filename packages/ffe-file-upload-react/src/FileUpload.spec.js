@@ -1,5 +1,5 @@
 import React from 'react';
-import sinon from 'sinon';
+import { spy } from 'sinon';
 import { shallow } from 'enzyme';
 
 import FileUpload from '../src/FileUpload';
@@ -11,9 +11,9 @@ describe('<FileUpload/>', () => {
     let onFilesDropped;
 
     beforeEach(() => {
-        onFilesSelected = sinon.spy();
-        onFileDeleted = sinon.spy();
-        onFilesDropped = sinon.spy();
+        onFilesSelected = spy();
+        onFileDeleted = spy();
+        onFilesDropped = spy();
     });
 
     describe('initial state', () => {

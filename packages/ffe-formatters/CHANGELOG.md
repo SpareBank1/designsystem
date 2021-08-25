@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-formatters@4.0.0...@sb1/ffe-formatters@4.0.1) (2021-08-11)
+
+
+### Bug Fixes
+
+* **ffe-formatters:** formatCurrency also accepts a number ([306c4b8](https://github.com/SpareBank1/designsystem/commit/306c4b8b36408372fcb5039ef490b555a10d20a3))
+
+
+
+
+
 # [4.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-formatters@3.1.5...@sb1/ffe-formatters@4.0.0) (2021-02-11)
 
 

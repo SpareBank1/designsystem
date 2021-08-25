@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, shallow } from 'enzyme';
-import sinon from 'sinon';
+import { assert, match, spy } from 'sinon';
 import SortableTable from './SortableTable';
 
 describe('<SortableTable>', () => {
@@ -59,14 +59,14 @@ describe('<SortableTable>', () => {
     });
 
     it('should call onSort after sorting table', () => {
-        const onSort = sinon.spy();
+        const onSort = spy();
         const table = shallow(
             <SortableTable columns={columns} data={data} onSort={onSort} />,
         );
         table.instance().tableHeaderClicked('name');
-        sinon.assert.calledWith(
+        assert.calledWith(
             onSort,
-            sinon.match(val => {
+            match(val => {
                 return (
                     'sortBy' in val && 'descending' in val && 'tableData' in val
                 );

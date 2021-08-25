@@ -1,7 +1,5 @@
-
 Hold det kort og konsist! Det skal være reelle tips/informasjon til brukeren, ikke informasjon vi ønsker å forklare her
-fordi vi ikke finner noe annet sted å gjøre det. For mye tekst kan føre til at komponenten mister sin verdi. 
-
+fordi vi ikke finner noe annet sted å gjøre det. For mye tekst kan føre til at komponenten mister sin verdi.
 
 Det finnes fire forskjellige typer:
 

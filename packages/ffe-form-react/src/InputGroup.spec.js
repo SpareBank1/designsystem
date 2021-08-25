@@ -252,4 +252,38 @@ describe('<InputGroup>', () => {
             wrapper.find('.ffe-small-text').prop('id'),
         );
     });
+
+    describe('function as fieldMessage', () => {
+        it('should set up aria-describedby and call function with fieldMessageId', () => {
+            const wrapper = getWrapper({
+                fieldMessage: fieldMessageId => (
+                    <div id={fieldMessageId} data-testid="error-element">
+                        Jag er en feil
+                    </div>
+                ),
+            });
+
+            const input = wrapper.find(Input);
+
+            const ariaDescribedBy = input.prop('aria-describedby');
+            const errorMessageId = wrapper
+                .find({ 'data-testid': 'error-element' })
+                .prop('id');
+            expect(ariaDescribedBy).toEqual(errorMessageId);
+            expect(input.prop('aria-invalid')).toEqual('true');
+        });
+
+        it('should be possible to return falsy value', () => {
+            const wrapper = getWrapper({
+                fieldMessage: () => null,
+            });
+            const input = wrapper.find(Input);
+            const ariaDescribedBy = input.prop('aria-describedby');
+            expect(ariaDescribedBy).toBeUndefined();
+            expect(
+                wrapper.find({ 'data-testid': 'error-element' }).exists(),
+            ).toBeFalsy();
+            expect(input.prop('aria-invalid')).toEqual('false');
+        });
+    });
 });

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@8.0.0...@sb1/ffe-form-react@8.1.0) (2021-07-16)
+
+
+### Features
+
+* **ffe-form-react:** fieldMessage as function ([16137d2](https://github.com/SpareBank1/designsystem/commit/16137d27a1c91d9e65c27189b74d06e6bc786df1))
+
+
+
+
+
 # [8.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@7.3.0...@sb1/ffe-form-react@8.0.0) (2021-06-21)
 
 

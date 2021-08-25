@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@5.0.0...@sb1/ffe-context-message@5.0.1) (2021-08-18)
+
+**Note:** Version bump only for package @sb1/ffe-context-message
+
+# [5.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.25...@sb1/ffe-context-message@5.0.0) (2021-08-10)
+
+### Bug Fixes
+
+-   **ffe-context-message:** oppdater darkmode styling til ny visuell profil ([b012687](https://github.com/SpareBank1/designsystem/commit/b0126873e7699f1e4b546af194b34f23e64212d1))
+
+
+### BREAKING CHANGES
+
+- **ffe-context-message:** dersom man bruker lenker i en kontekstmelding må fargen på disse spesifiseres
+
 ## [4.0.27](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.25...@sb1/ffe-context-message@4.0.27) (2021-08-24)
 
 ### Bug Fixes
@@ -19,12 +34,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ### Bug Fixes
 
 -   **ffe-context-message:** oppdater darkmode styling til ny visuell profil ([b012687](https://github.com/SpareBank1/designsystem/commit/b0126873e7699f1e4b546af194b34f23e64212d1))
-
-## [4.0.24](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.23...@sb1/ffe-context-message@4.0.24) (2021-06-25)
-
-### Bug Fixes
-
--   **ffe-context-message:** colour update to match new profile ([#1128](https://github.com/SpareBank1/designsystem/issues/1128)) ([3218c6c](https://github.com/SpareBank1/designsystem/commit/3218c6c408a03d26931d3ba47223ca694b64c5c3))
 
 ## [4.0.23](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.22...@sb1/ffe-context-message@4.0.23) (2021-06-17)
 
