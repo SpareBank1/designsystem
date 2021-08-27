@@ -1,0 +1,39 @@
+name: Merge develop branch into main branch
+
+on:
+    schedule:
+        # Run every day at 6:00, 11:00, 16:00 and 21:00, Norwegian time.
+        # schedule uses UTC time, so this cron expression has to be adjusted twice a year
+        # because of daylight saving time.
+        #
+        # Central European Time (CET): '0 5-20/5 * * *'
+        # Central European Summer Time (CEST): '0 4-19/5 * * *'
+        #
+        - cron: '0 4-19/5 * * *'
+
+jobs:
+    merge:
+        name: Merge develop branch into main branch
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+              with:
+                  ref: main
+                  fetch-depth: 0
+                  # `token` cannot be `secrets.GITHUB_TOKEN` as commits
+                  # with this token will not trigger workflow runs.
+                  # https://docs.github.com/en/actions/reference/authentication-in-a-workflow#using-the-github_token-in-a-workflow
+                  token: ${{ secrets.GITHUB_USER_TOKEN }}
+
+            - name: Check if main branch is ahead of develop branch
+              id: git-rev-list
+              run: |
+                  git fetch origin develop:develop
+                  echo "::set-output name=count::$(git rev-list --count main..develop)"
+            - name: Update main branch
+              if: steps.git-rev-list.outputs.count > 0
+              run: |
+                  git config user.email "designsystem@sparebank1.no"
+                  git config user.name "sb1-designsystem"
+                  git merge --no-edit develop
+                  git push origin main
