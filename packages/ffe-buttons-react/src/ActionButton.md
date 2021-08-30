@@ -14,23 +14,7 @@ const ButtonGroup = require('./ButtonGroup').default;
             </ActionButton>
         </ButtonGroup>
     </div>
-    <div>
-        <ButtonGroup thin={true}>
-            <ActionButton onClick={f => f} ghost={true}>
-                Action knapp
-            </ActionButton>
-
-            <ActionButton
-                ariaLoadingMessage="Vennligst vent..."
-                isLoading={true}
-                ghost={true}
-                onClick={f => f}
-            >
-                Action knapp
-            </ActionButton>
-        </ButtonGroup>
-    </div>
-</React.Fragment>
+</React.Fragment>;
 ```
 
 Variant _dark_ for interne løsninger med mørk bakgrunn.
@@ -41,8 +25,10 @@ const ButtonGroup = require('./ButtonGroup').default;
 <React.Fragment>
     <div>
         <ButtonGroup thin={true}>
-            <ActionButton onClick={f => f} dark={true}>Action knapp</ActionButton>
+            <ActionButton onClick={f => f} dark={true}>
+                Action knapp
+            </ActionButton>
         </ButtonGroup>
     </div>
-</React.Fragment>
+</React.Fragment>;
 ```
