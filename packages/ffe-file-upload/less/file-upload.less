@@ -185,9 +185,13 @@
                 @media (prefers-color-scheme: dark) {
                     border-color: @ffe-farge-vann-30;
                     color: @ffe-farge-hvit;
-                    background-color: transparent;
+                    background-color: @ffe-farge-natt;
                 }
             }
+        }
+
+        &:active {
+            transform: scale(0.97);
         }
 
         &:focus {
@@ -198,6 +202,10 @@
                         0 0 0 5px @ffe-farge-hvit;
                 }
             }
+        }
+
+        &:focus:not(:focus-visible) {
+            box-shadow: none;
         }
 
         &[aria-invalid='true'] {
