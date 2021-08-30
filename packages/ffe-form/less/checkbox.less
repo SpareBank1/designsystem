@@ -120,7 +120,6 @@
         }
     }
 
-    &:active + .ffe-checkbox::before,
     &:focus + .ffe-checkbox::before {
         box-shadow: 0 0 0 3px @ffe-farge-hvit, 0 0 0 5px @ffe-farge-vann;
 
@@ -130,6 +129,10 @@
                     0 0 0 5px @ffe-farge-hvit;
             }
         }
+    }
+
+    &:focus:not(:focus-visible) + .ffe-checkbox::before {
+        box-shadow: none;
     }
 
     &:checked + .ffe-checkbox::before {

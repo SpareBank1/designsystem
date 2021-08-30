@@ -163,7 +163,6 @@
         }
     }
 
-    &:active + .ffe-radio-button::after,
     &:focus + .ffe-radio-button::after {
         box-shadow: 0 0 0 3px @ffe-farge-hvit, 0 0 0 5px @ffe-farge-vann;
 
@@ -175,15 +174,8 @@
         }
     }
 
-    &:checked:focus + .ffe-radio-button::after {
-        box-shadow: 0 0 0 3px @ffe-farge-hvit, 0 0 0 5px @ffe-farge-graa-wcag;
-
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                box-shadow: 0 0 0 3px @ffe-farge-svart,
-                    0 0 0 5px @ffe-farge-hvit;
-            }
-        }
+    &:focus:not(:focus-visible) + .ffe-radio-button::after {
+        box-shadow: none;
     }
 
     &:hover + .ffe-radio-button--invalid::after {
