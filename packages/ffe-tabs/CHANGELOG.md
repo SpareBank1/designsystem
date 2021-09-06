@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@9.1.1...@sb1/ffe-tabs@10.0.0) (2021-09-06)
+
+
+### Features
+
+* **ffe-tabs:** oppdaterte farger iht ny profil ([fcd3d74](https://github.com/SpareBank1/designsystem/commit/fcd3d744e0bc3be4fc0d067bb055e8b58111243f))
+
+
+### BREAKING CHANGES
+
+* **ffe-tabs:** visuelle endringer i komponenten kan medføre regresjonsfeil
+
+
+
+
+
 ## [9.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@9.1.0...@sb1/ffe-tabs@9.1.1) (2021-06-17)
 
 **Note:** Version bump only for package @sb1/ffe-tabs
