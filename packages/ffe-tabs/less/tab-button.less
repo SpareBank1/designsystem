@@ -10,11 +10,10 @@
 // Styleguide ffe-tabs.tab-button
 
 .ffe-tab-button {
-    background-color: @ffe-white;
-    border: solid 2px @ffe-grey-silver;
+    background-color: @ffe-farge-hvit;
+    border: solid 2px @ffe-farge-fjell;
     border-radius: 100px;
-    box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.05);
-    color: @ffe-grey-charcoal;
+    color: @ffe-farge-fjell;
     cursor: pointer;
     display: block;
     font-family: 'SpareBank1-regular', 'MuseoSans-500', arial, sans-serif;
@@ -29,30 +28,34 @@
     width: 100%;
     .native & {
         @media (prefers-color-scheme: dark) {
-            background-color: @ffe-grey-charcoal-darkmode;
-            border-color: @ffe-grey-charcoal-darkmode;
-            color: @ffe-grey-silver-darkmode;
+            background-color: @ffe-farge-svart;
+            border-color: @ffe-farge-vann-30;
+            color: @ffe-farge-vann-30;
         }
     }
 
-    &:hover,
-    &:focus,
-    &:active {
-        color: @ffe-blue-royal;
-        border-color: @ffe-blue-royal;
+    &:hover {
+        color: @ffe-farge-natt;
+        border-color: @ffe-farge-natt;
         .native & {
             @media (prefers-color-scheme: dark) {
-                border-color: lighten(@ffe-grey-charcoal-darkmode, 5%);
-                color: @ffe-white-darkmode;
-                background-color: lighten(@ffe-grey-charcoal-darkmode, 5%);
+                border-color: @ffe-farge-hvit;
+                color: @ffe-farge-hvit;
             }
         }
     }
 
     &:focus,
     &:active {
-        box-shadow: 0 0 0 2px @ffe-blue-focus;
+        box-shadow: 0 0 0 3px @ffe-farge-hvit, 0 0 0 5px @ffe-farge-vann;
         outline: 0;
+
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                box-shadow: 0 0 0 3px @ffe-farge-svart,
+                    0 0 0 5px @ffe-farge-hvit;
+            }
+        }
     }
 
     &--ghost {
@@ -60,27 +63,26 @@
     }
 
     &--selected {
-        color: @ffe-white;
-        background-color: @ffe-blue-royal;
-        border-color: @ffe-blue-royal;
+        color: @ffe-farge-hvit;
+        background-color: @ffe-farge-fjell;
+        border-color: @ffe-farge-fjell;
         .native & {
             @media (prefers-color-scheme: dark) {
-                background-color: @ffe-grey-darkmode;
-                border-color: @ffe-grey-darkmode;
-                color: @ffe-blue-azure-darkmode;
+                background-color: @ffe-farge-vann-30;
+                border-color: @ffe-farge-vann-30;
+                color: @ffe-farge-svart;
             }
         }
 
-        &:hover,
-        &:focus,
-        &:active {
-            color: @ffe-white;
-            border-color: @ffe-blue-royal;
+        &:hover {
+            color: @ffe-farge-hvit;
+            background-color: @ffe-farge-natt;
+            border-color: @ffe-farge-natt;
             .native & {
                 @media (prefers-color-scheme: dark) {
-                    background-color: @ffe-grey-darkmode;
-                    border-color: @ffe-grey-darkmode;
-                    color: @ffe-blue-azure-darkmode;
+                    background-color: @ffe-farge-hvit;
+                    border-color: @ffe-farge-hvit;
+                    color: @ffe-farge-svart;
                 }
             }
         }

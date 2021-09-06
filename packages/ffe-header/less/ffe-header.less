@@ -2,7 +2,7 @@
 .ffe-header {
     &:extend(.ffe-body-text);
 
-    background: @ffe-white;
+    background: @ffe-farge-hvit;
     text-align: center;
     z-index: 999;
 
@@ -12,8 +12,8 @@
     }
 
     &__border {
-        background: @ffe-white;
-        border-bottom: 1px solid @ffe-grey-silver;
+        background: @ffe-farge-hvit;
+        border-bottom: 1px solid @ffe-farge-lysgraa;
     }
 
     &__border:first-child {
@@ -47,25 +47,25 @@
         &:link,
         &:visited,
         &:active {
-            color: @ffe-grey-charcoal;
+            color: @ffe-farge-moerkgraa-wcag;
             text-decoration: none;
         }
 
         &:hover,
         &:focus {
-            color: @ffe-blue-azure;
+            color: @ffe-farge-vann;
         }
 
         &--active:link,
         &--active:visited {
             position: relative;
-            color: @ffe-blue-royal;
+            color: @ffe-farge-fjell;
         }
 
         &--active::after {
             content: '';
             display: inline-block;
-            border-bottom: 2px solid @ffe-blue-royal;
+            border-bottom: 2px solid @ffe-farge-fjell;
             position: absolute;
             width: 100%;
             bottom: -2px;
@@ -73,7 +73,7 @@
         }
 
         &--disabled {
-            color: @ffe-grey;
+            color: @ffe-farge-graa;
             cursor: default;
         }
 
@@ -109,7 +109,7 @@
     &__icon-button {
         &:extend(.ffe-inline-button);
 
-        color: @ffe-blue-royal;
+        color: @ffe-farge-fjell;
 
         &:active:extend(.ffe-inline-button:active) {
         }
@@ -148,11 +148,15 @@
         margin: @ffe-spacing-xs 0;
         border-radius: 20px;
 
+        &::after:extend(.ffe-button::after) {
+        }
+        &:focus::after:extend(.ffe-button:focus::after) {
+        }
+        &:focus:not(:focus-visible)::after:extend(.ffe-button:focus:not(:focus-visible)::after) {
+        }
         &:focus:extend(.ffe-button:focus) {
         }
         &:focus:extend(.ffe-button--secondary:focus) {
-        }
-        &:hover:extend(.ffe-button:hover) {
         }
         &:hover:extend(.ffe-button--secondary:hover) {
         }
@@ -200,7 +204,7 @@
     &__user-icon,
     &__user-chevron-icon,
     &__site-nav-icon {
-        fill: @ffe-blue-royal;
+        fill: @ffe-farge-fjell;
     }
 
     &__user-icon,
@@ -251,7 +255,7 @@
         &::before,
         &::after {
             display: inline-block;
-            background: @ffe-blue-royal;
+            background: @ffe-farge-fjell;
             width: 25px;
             height: 4px;
             border-radius: 2px;
@@ -373,7 +377,7 @@
 
         &__user-nav {
             .ffe-header__link:hover {
-                background: @ffe-blue-ice;
+                background: @ffe-farge-vann-30-hover;
             }
         }
 
@@ -382,9 +386,8 @@
             right: 20px;
             top: -16px;
             min-width: 225px;
-            background: @ffe-white;
-            border: 2px solid @ffe-blue-azure;
-            outline: 2px solid @ffe-blue-focus;
+            background: @ffe-farge-hvit;
+            border: 2px solid @ffe-farge-vann;
         }
 
         &__logout-button {
@@ -430,7 +433,7 @@
             left: 0;
             top: 1px;
             padding: @ffe-spacing-sm 0;
-            border-bottom: 1px solid @ffe-grey-silver;
+            border-bottom: 1px solid @ffe-farge-graa;
             transform: translateY(-25px);
             transition: transform @ffe-transition-duration @ffe-ease;
 
@@ -448,7 +451,7 @@
                 height: auto;
                 width: 100%;
                 transform: translateY(0);
-                background-color: @ffe-white;
+                background-color: @ffe-farge-hvit;
             }
         }
     }

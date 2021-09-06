@@ -14,8 +14,8 @@ const InlineExpandButton = props => {
             rightIcon={
                 <ChevronIkon
                     style={{
-                        marginLeft: '5px',
-                        transform: isExpanded ? 'rotateX(180deg)' : 'none',
+                        marginLeft: '8px',
+                        transform: isExpanded ? 'rotateZ(180deg)' : 'none',
                     }}
                 />
             }

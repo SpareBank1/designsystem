@@ -14,36 +14,36 @@
     padding: @ffe-spacing-sm;
     font-family: 'SpareBank1-regular', 'MuseoSans-500', arial, sans-serif;
     border-radius: 4px;
-    border: 2px solid @ffe-grey-silver;
+    border: 2px solid @ffe-farge-graa-wcag;
     transition: all @ffe-transition-duration @ffe-ease;
-    box-shadow: 0 1px 2px 0 @ffe-grey-cloud inset;
     .ffe-fontsize-form-input();
     .native & {
         @media (prefers-color-scheme: dark) {
-            background-color: @ffe-grey-darkmode;
-            border-color: @ffe-grey-darkmode;
+            background-color: @ffe-farge-svart;
+            border-color: @ffe-farge-graa-wcag;
             box-shadow: none;
-            color: @ffe-white-darkmode;
+            color: @ffe-farge-hvit;
         }
     }
 
     &:hover {
-        border-color: @ffe-blue-azure;
+        border-color: @ffe-farge-vann;
         .native & {
             @media (prefers-color-scheme: dark) {
-                border-color: @ffe-blue-azure-darkmode;
+                border-color: @ffe-farge-vann-70;
             }
         }
     }
 
     &:focus,
     &:active {
-        border-color: @ffe-blue-azure;
-        box-shadow: 0 0 0 1px @ffe-white, 0 0 0 4px @ffe-blue-focus;
+        border-color: @ffe-farge-hvit;
+        box-shadow: 0 0 0 2px @ffe-farge-vann;
         outline: none;
         .native & {
             @media (prefers-color-scheme: dark) {
-                border-color: @ffe-blue-azure-darkmode;
+                border-color: @ffe-farge-svart;
+                box-shadow: 0 0 0 2px @ffe-farge-vann-70;
             }
         }
     }
