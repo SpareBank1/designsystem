@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [13.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@12.2.11...@sb1/ffe-buttons-react@13.0.0) (2021-09-06)
+
+
+### Bug Fixes
+
+* **ffe-buttons-react:** justering av utseende og transition ([d192089](https://github.com/SpareBank1/designsystem/commit/d19208944424551ebeb5e03efbff09e933132337))
+
+
+### BREAKING CHANGES
+
+* **ffe-buttons-react:** chevron animeres nå i Z-aksen
+
+
+
+
+
 ## [12.2.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@12.2.10...@sb1/ffe-buttons-react@12.2.11) (2021-03-15)
 
 

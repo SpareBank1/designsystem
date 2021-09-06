@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [17.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@16.3.6...@sb1/ffe-account-selector-react@17.0.0) (2021-09-06)
+
+
+### Features
+
+* **ffe-account-selector-react:** oppdaterte farger iht ny profil ([616d05b](https://github.com/SpareBank1/designsystem/commit/616d05b7af9f84be0a9dfcf4b080df1ac7cc2fe5))
+
+
+### BREAKING CHANGES
+
+* **ffe-account-selector-react:** visuelle endringer i komponenten kan medføre regresjonsfeil
+
+
+
+
+
 ## [16.3.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@16.3.5...@sb1/ffe-account-selector-react@16.3.6) (2021-08-11)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react

@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@11.1.1...@sb1/ffe-buttons@12.0.0) (2021-09-06)
+
+
+### Bug Fixes
+
+* **ffe-buttons:** fjerner duplikat av css-klasse ([def6617](https://github.com/SpareBank1/designsystem/commit/def6617a54970472d63853e5caff5f828c252e9b))
+* **ffe-buttons:** focus-outline skal kun vises på keyboard-fokus - ikke active-state ([da01361](https://github.com/SpareBank1/designsystem/commit/da01361dc339b8f7bacf8dd7cb4076c683b95546))
+* **ffe-buttons:** retter opp i farge på inline-button hover ([dc284f2](https://github.com/SpareBank1/designsystem/commit/dc284f2dc3ac5cc652811d01897540d565f04d55))
+
+
+### Features
+
+* **ffe-buttons:** justert design på knapper iht ny identitet ([dca0ef0](https://github.com/SpareBank1/designsystem/commit/dca0ef02b7386f9b906c1f56420e93fcd59581ee))
+
+
+### BREAKING CHANGES
+
+* **ffe-buttons:** alle knapper har nye farger og ny utforming
+
+
+
+
+
 ## [11.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@11.1.0...@sb1/ffe-buttons@11.1.1) (2021-06-17)
 
 **Note:** Version bump only for package @sb1/ffe-buttons

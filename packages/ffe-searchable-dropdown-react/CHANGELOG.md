@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@11.5.0...@sb1/ffe-searchable-dropdown-react@12.0.0) (2021-09-06)
+
+
+### Features
+
+* **ffe-searchable-dropdown-react:** oppdaterte farger iht ny profil ([9f10a87](https://github.com/SpareBank1/designsystem/commit/9f10a87b55bdaebd50bbb2c3a7c65e99ed04869c))
+
+
+### BREAKING CHANGES
+
+* **ffe-searchable-dropdown-react:** visuelle endringer i komponenten kan medføre regresjonsfeil
+
+
+
+
+
 # [11.5.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@11.4.5...@sb1/ffe-searchable-dropdown-react@11.5.0) (2021-07-14)
 
 

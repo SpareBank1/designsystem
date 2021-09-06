@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload@4.0.10...@sb1/ffe-file-upload@5.0.0) (2021-09-06)
+
+
+### Bug Fixes
+
+* **ffe-file-upload:** focus-outline skal kun vises på keyboard-fokus - ikke active-state ([ed13768](https://github.com/SpareBank1/designsystem/commit/ed137684150f7a27aba4b4a0295a0f0ebe03892b))
+
+
+### Features
+
+* **ffe-file-upload:** oppdaterte farger iht ny profil ([dfd1dc1](https://github.com/SpareBank1/designsystem/commit/dfd1dc10f107297b414e6d56b4d49538c42da26a))
+
+
+### BREAKING CHANGES
+
+* **ffe-file-upload:** visuelle endringer i komponenten kan medføre regresjonsfeil
+
+
+
+
+
 ## [4.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload@4.0.9...@sb1/ffe-file-upload@4.0.10) (2021-06-17)
 
 **Note:** Version bump only for package @sb1/ffe-file-upload
