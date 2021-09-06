@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [18.5.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@18.3.0...@sb1/ffe-core@18.5.0) (2021-09-06)
+
+
+### Features
+
+* **ffe-core:** nye fargevariabler til knapper ([05a98a4](https://github.com/SpareBank1/designsystem/commit/05a98a432aecf08e9742d704235df279121baf1a))
+
+
+
+
+
 # [18.4.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@18.3.0...@sb1/ffe-core@18.4.0) (2021-09-06)
 
 

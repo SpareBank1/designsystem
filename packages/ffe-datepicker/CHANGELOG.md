@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@8.0.11...@sb1/ffe-datepicker@10.0.0) (2021-09-06)
+
+
+### Bug Fixes
+
+* **ffe-datepicker:** legger til tom linje for å fikse stylelint-feil ([d631d37](https://github.com/SpareBank1/designsystem/commit/d631d374232a1b1d2d4583706dce037a08baec18))
+
+
+### Features
+
+* **ffe-datepicker:** oppdaterte farger iht ny profil ([40be92e](https://github.com/SpareBank1/designsystem/commit/40be92eeda6efbe645009607ff610e88711b8bae))
+
+
+### BREAKING CHANGES
+
+* **ffe-datepicker:** visuelle endringer i komponenten kan medføre regresjonsfeil
+
+
+
+
+
 # [9.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@8.0.11...@sb1/ffe-datepicker@9.0.0) (2021-09-06)
 
 

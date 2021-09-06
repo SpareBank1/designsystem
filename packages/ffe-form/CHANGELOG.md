@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [19.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@17.0.0...@sb1/ffe-form@19.0.0) (2021-09-06)
+
+
+### Bug Fixes
+
+* **ffe-form:** endrer enkelte fargenyanser ([fbb5c41](https://github.com/SpareBank1/designsystem/commit/fbb5c4118a0504794b7d4820ad98e6d2ee5a5be3))
+* **ffe-form:** fikser stylelint-feil ([067b7a1](https://github.com/SpareBank1/designsystem/commit/067b7a1a07974d7a647c23983bc93d3757c1771b))
+* **ffe-form:** focus-outline skal kun vises på keyboard-fokus - ikke active-state ([5b324b5](https://github.com/SpareBank1/designsystem/commit/5b324b57b2a324c6c6a4668c1fbc7ff520cf6f88))
+
+
+### Features
+
+* **ffe-form:** oppdaterte farger og utforming iht ny profil ([e35c9ca](https://github.com/SpareBank1/designsystem/commit/e35c9ca1c1fd54dd488e2fa2d6b69c602135e94c))
+
+
+### BREAKING CHANGES
+
+* **ffe-form:** alle skjemaelementer har endringer i utseende og bør regresjonstestes
+
+
+
+
+
 # [18.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@17.0.0...@sb1/ffe-form@18.0.0) (2021-09-06)
 
 
