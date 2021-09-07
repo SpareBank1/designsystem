@@ -38,9 +38,9 @@ jobs:
             - name: Build packages
               if: ${{ steps.lerna-changed.outputs.count > 0 }}
               run: |
-                  npm run lint
-                  npm test
                   npm run build
+                  npm run lint
+                  npm test -- --ci
 
             - name: lerna publish to registry.npmjs.com
               if: ${{ steps.lerna-changed.outputs.count > 0 }}
