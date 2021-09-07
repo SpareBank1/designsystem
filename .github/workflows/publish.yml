@@ -35,6 +35,13 @@ jobs:
               id: lerna-changed
               run: echo "::set-output name=count::$(lerna changed|wc -l)"
 
+            - name: Build packages
+              if: ${{ steps.lerna-changed.outputs.count > 0 }}
+              run: |
+                  npm run lint
+                  npm test
+                  npm run build
+
             - name: lerna publish to registry.npmjs.com
               if: ${{ steps.lerna-changed.outputs.count > 0 }}
               run: lerna publish --yes --force-git-tag --create-release github
