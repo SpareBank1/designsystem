@@ -170,22 +170,32 @@
 }
 
 .ffe-small-text {
-    color: @ffe-grey-charcoal;
+    color: @ffe-farge-svart;
     font-family: 'SpareBank1-regular', 'MuseoSans-500', arial, sans-serif;
     font-weight: normal;
     line-height: 1.25rem;
     .ffe-fontsize-small-text();
+    .native & {
+        @media (prefers-color-scheme: dark) {
+            color: @ffe-farge-lysgraa;
+        }
+    }
     &--dark {
         color: @ffe-white;
     }
 }
 
 .ffe-micro-text {
-    color: @ffe-grey-charcoal;
+    color: @ffe-farge-svart;
     font-family: 'SpareBank1-regular', 'MuseoSans-500', arial, sans-serif;
     font-weight: normal;
     line-height: 1.25rem;
     .ffe-fontsize-micro-text();
+    .native & {
+        @media (prefers-color-scheme: dark) {
+            color: @ffe-farge-lysgraa;
+        }
+    }
 }
 
 .ffe-h1,
@@ -194,21 +204,21 @@
 .ffe-h4,
 .ffe-h5,
 .ffe-h6 {
-    color: @ffe-blue-royal;
+    color: @ffe-farge-fjell;
     font-weight: normal;
     margin-bottom: 10px;
     margin-top: 0;
     .native & {
         @media (prefers-color-scheme: dark) {
-            color: @ffe-white-darkmode;
+            color: @ffe-farge-vann-70;
         }
     }
 
     &--error {
-        color: @ffe-orange-fire;
+        color: @ffe-farge-baer-wcag;
         .native & {
             @media (prefers-color-scheme: dark) {
-                color: @ffe-red-darkmode;
+                color: @ffe-farge-baer;
             }
         }
     }
@@ -222,11 +232,11 @@
     }
 
     &--with-border {
-        border-bottom: 1px solid @ffe-grey-silver;
+        border-bottom: 1px solid @ffe-farge-lysgraa;
         padding-bottom: 10px;
         .native & {
             @media (prefers-color-scheme: dark) {
-                border-color: @ffe-grey-silver-darkmode;
+                border-color: @ffe-farge-graa;
             }
         }
     }
@@ -254,13 +264,13 @@
 }
 
 .ffe-body-text {
-    color: @ffe-black;
+    color: @ffe-farge-svart;
     font-family: 'SpareBank1-regular', 'MuseoSans-500', arial, sans-serif;
     line-height: 1.5rem;
     .ffe-fontsize-body-text();
     .native & {
         @media (prefers-color-scheme: dark) {
-            color: @ffe-grey-cloud-darkmode;
+            color: @ffe-farge-lysgraa;
         }
     }
 }
@@ -269,10 +279,10 @@
     margin-bottom: 1em;
     margin-top: 0;
     line-height: 1.5rem;
-    color: @ffe-black;
+    color: @ffe-farge-svart;
     .native & {
         @media (prefers-color-scheme: dark) {
-            color: @ffe-grey-cloud-darkmode;
+            color: @ffe-farge-lysgraa;
         }
     }
 
@@ -292,60 +302,60 @@
 }
 
 .ffe-lead-paragraph {
-    color: @ffe-blue-royal;
+    color: @ffe-farge-fjell;
     line-height: 1.75rem;
     .ffe-fontsize-lead-paragraph();
     .native & {
         @media (prefers-color-scheme: dark) {
-            color: @ffe-white-darkmode;
+            color: @ffe-farge-hvit;
         }
     }
 }
 
 .ffe-sub-lead-paragraph {
-    color: @ffe-black;
+    color: @ffe-farge-svart;
     line-height: 1.5rem;
     .ffe-fontsize-sub-lead-paragraph();
     .native & {
         @media (prefers-color-scheme: dark) {
-            color: @ffe-grey-cloud-darkmode;
+            color: @ffe-farge-lysgraa;
         }
     }
 }
 
 .ffe-link-text {
-    border-bottom: 1px solid @ffe-blue-azure;
-    color: @ffe-blue-azure;
+    border-bottom: 1px solid @ffe-farge-vann;
+    color: @ffe-farge-vann;
     cursor: pointer;
     text-decoration: none;
     word-wrap: break-word;
     line-height: 1em;
     .native & {
         @media (prefers-color-scheme: dark) {
-            color: @ffe-blue-azure-darkmode;
+            color: @ffe-farge-vann-70;
         }
     }
 
     &:hover {
-        border-bottom-color: @ffe-blue-cobalt;
-        color: @ffe-blue-cobalt;
+        border-bottom-color: @ffe-farge-fjell;
+        color: @ffe-farge-fjell;
         text-decoration: none;
         .native & {
             @media (prefers-color-scheme: dark) {
-                color: ligthen(@ffe-blue-azure-darkmode, 10%);
-                border-color: ligthen(@ffe-blue-azure-darkmode, 10%);
+                color: @ffe-farge-vann-30;
+                border-color: @ffe-farge-vann-30;
             }
         }
     }
 
     &:visited {
-        border-bottom-color: @ffe-purple-violet;
-        color: @ffe-purple-violet;
+        border-bottom-color: @ffe-farge-lyng;
+        color: @ffe-farge-lyng;
         text-decoration: none;
         .native & {
             @media (prefers-color-scheme: dark) {
-                color: darken(@ffe-blue-azure-darkmode, 10%);
-                border-color: darken(@ffe-blue-azure-darkmode, 10%);
+                color: @ffe-farge-lyng-30;
+                border-color: @ffe-farge-lyng-30;
             }
         }
     }
@@ -357,13 +367,13 @@
 
 .ffe-divider-line {
     border: none;
-    border-bottom: solid 1px @ffe-grey-silver;
+    border-bottom: solid 1px @ffe-farge-lysgraa;
     padding-top: 1px;
     padding-bottom: 1px;
     width: 100%;
     .native & {
         @media (prefers-color-scheme: dark) {
-            border-color: @ffe-grey-silver-darkmode;
+            border-color: @ffe-farge-graa;
         }
     }
 }
@@ -378,13 +388,13 @@
 }
 
 .ffe-pre-text {
-    background-color: @ffe-sand-ivory;
+    background-color: @ffe-farge-sand-70;
     font-family: consolas, menlo, monaco, monospace;
     margin: 0;
     text-align: left;
     .native & {
         @media (prefers-color-scheme: dark) {
-            border-color: @ffe-grey-charcoal-darkmode;
+            background-color: @ffe-farge-koksgraa;
         }
     }
 }
