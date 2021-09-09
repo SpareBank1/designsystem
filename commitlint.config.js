@@ -7,7 +7,7 @@ module.exports = {
             'always',
             [
                 'release',
-                'designsystem',
+                'component-overview',
                 'eslint-config-ffe',
                 'eslint-config-ffe-base',
                 'stylelint-config-ffe',
