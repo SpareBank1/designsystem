@@ -1,7 +1,7 @@
 {
   "name": "@sb1/ffe-component-index",
   "version": "1.0.0",
-  "description": "Designsystemet",
+  "description": "Index of FFE compontents",
   "license": "MIT",
   "author": "SpareBank 1 Utvikling",
   "main": "./lib/index.js",
