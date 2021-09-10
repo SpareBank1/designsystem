@@ -282,15 +282,6 @@ module.exports = {
                         'packages/ffe-cards-react/src/IconCard/IconCard.js',
                         'packages/ffe-cards-react/src/ImageCard/ImageCard.js',
                     ],
-                    sections: [
-                        {
-                            name: 'Utdaterte kort',
-                            components: [
-                                'packages/ffe-cards-react/src/LinkCard.js',
-                                'packages/ffe-cards-react/src/ProductCard.js',
-                            ],
-                        },
-                    ],
                 },
             ],
         },
