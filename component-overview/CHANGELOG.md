@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.1.0 (2021-09-10)
+
+
+### Bug Fixes
+
+* **component-overview:** correct path in build script ([4fcc6a3](https://github.com/SpareBank1/designsystem/commit/4fcc6a3ce4b049931278e45df64b82ad722701f3))
+
+
+### Features
+
+* **component-overview:** Legg til flere eksempler ([b25921c](https://github.com/SpareBank1/designsystem/commit/b25921cf9f60ab6b7bc5798d8d20a4dcd7c11f21))
+
+
+
+
+
 # [1.0.0-alpha.39](https://github.com/SpareBank1/designsystem/compare/@sparebank1/designsystem@1.0.0-alpha.37...@sparebank1/designsystem@1.0.0-alpha.39) (2021-09-06)
 
 **Note:** Version bump only for package @sparebank1/designsystem
