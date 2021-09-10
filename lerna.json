@@ -1,5 +1,5 @@
 {
-    "packages": ["packages/*", "linting/*", "component-overiew/"],
+    "packages": ["packages/*", "linting/*", "component-overview/"],
     "version": "independent",
     "hoist": true,
     "command": {
