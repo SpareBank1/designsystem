@@ -34,11 +34,11 @@ gen-src/examples/index.js: $(EXAMPLE_FILES)
 
 gen-src/reactdoc.json:
 	mkdir -p $(dir $@)
-	cd ../packages; $(reactDocgen) --pretty --out ../designsystem/$@ $(REACT_FILES)
+	cd ../packages; $(reactDocgen) --pretty --out ../component-overview/$@ $(REACT_FILES)
 
 gen-src/package-list.json:
 	mkdir -p $(dir $@)
-	cd ..; ($(lerna) list --json --loglevel error --scope '@sb1/ffe-*'| sed 's?'`pwd`'??'>designsystem/$@)
+	cd ..; ($(lerna) list --json --loglevel error --scope '@sb1/ffe-*' --ignore '@sb1/ffe-component-index'| sed 's?'`pwd`'??'>component-overview/$@)
 
 pack: lib/index.js lib/style.css
 	npm pack
