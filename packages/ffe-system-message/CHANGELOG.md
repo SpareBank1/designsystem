@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@6.0.2...@sb1/ffe-system-message@6.0.3) (2021-09-10)
+
+
+### Bug Fixes
+
+* **ffe-system-message:** erstatter moerkgraa-wcag med moerkgraa som bakgrunn ([d73a8a3](https://github.com/SpareBank1/designsystem/commit/d73a8a3e820d8d1463899239c95c898ebf07bd5e))
+
+
+
+
+
 ## [6.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@6.0.0...@sb1/ffe-system-message@6.0.2) (2021-09-06)
 
 **Note:** Version bump only for package @sb1/ffe-system-message

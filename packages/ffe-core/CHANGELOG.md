@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [19.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@18.5.0...@sb1/ffe-core@19.0.0) (2021-09-10)
+
+
+### Features
+
+* **ffe-core:** oppdaterte farger iht ny visuell profil ([f64e689](https://github.com/SpareBank1/designsystem/commit/f64e6895bdeff9d1088651cfb8d998968e96ba82))
+
+
+### BREAKING CHANGES
+
+* **ffe-core:** visuelle endringer kan medføre regresjonsfeil, unødvendige fargevariabler slettes
+Sletter @ffe-farge-vann-hover, @ffe-farge-moerkgraa-wcag, @ffe-farge-darkmode-svart,
+@ffe-farge-darkmode-hvit, @ffe-farge-darkmode-koksgraa, @ffe-farge-darkmode-moerkgraa,
+@ffe-farge-darkmode-graa, @ffe-farge-darkmode-lysgraa, @ffe-farge-darkmode-vann,
+@ffe-farge-darkmode-baer
+
+
+
+
+
 # [18.5.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@18.3.0...@sb1/ffe-core@18.5.0) (2021-09-06)
 
 

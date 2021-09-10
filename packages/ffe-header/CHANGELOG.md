@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [17.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@17.0.0...@sb1/ffe-header@17.0.1) (2021-09-10)
+
+
+### Bug Fixes
+
+* **ffe-header:** erstatter moerkgraa-wcag med moerkgraa i lenker ([bf4885c](https://github.com/SpareBank1/designsystem/commit/bf4885c795f4511e7844e27445f27c9ab6d32964))
+
+
+
+
+
 # [17.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@15.1.1...@sb1/ffe-header@17.0.0) (2021-09-06)
 
 
