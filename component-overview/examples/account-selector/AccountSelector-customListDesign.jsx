@@ -1,13 +1,30 @@
 import { useState } from 'react';
 import { AccountSelector } from '@sb1/ffe-account-selector-react';
 import { InputGroup } from '@sb1/ffe-form-react';
+import { SmallText } from '@sb1/ffe-core-react';
 
 () => {
-    const [selectedAccount, setSelectedAccount] = useState();
-
-    const label1 = 'label1';
+    const [selectedAccount, setSelectedAccount] = useState(null);
+    const label5 = 'label5';
+    const CustomListElementBody = ({ item, isHighlighted }) => {
     return (
-        <InputGroup label="Velg konto" extraMargin={false} labelId={label1} >
+        <div
+            style={{
+                padding: '8px',
+                background: isHighlighted ? '#ff9100' : 'white',
+            }}
+        >
+            <div>{item.name}</div>
+            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <SmallText>{item.accountNumber}</SmallText>
+                <SmallText>{item.amount}</SmallText>
+            </div>
+        </div>
+    );
+    };
+
+    return(
+        <InputGroup label="Velg konto" extraMargin={false} labelId={label5}>
             <AccountSelector
                 accounts={[
                     {
@@ -37,11 +54,13 @@ import { InputGroup } from '@sb1/ffe-form-react';
                 ]}
                 id="account-selector-single"
                 locale="nb"
-                onAccountSelected={val => setSelectedAccount(val)}
+                onAccountSelected={value => setSelectedAccount(value)}
                 onReset={() => setSelectedAccount(null)}
                 selectedAccount={selectedAccount}
-                labelId={label1}
+                labelId={label5}
+                listElementBody={CustomListElementBody}
                 ariaInvalid={false}
             />
-        </InputGroup>);
+        </InputGroup>
+    )
 }

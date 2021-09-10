@@ -3,11 +3,11 @@ import { AccountSelector } from '@sb1/ffe-account-selector-react';
 import { InputGroup } from '@sb1/ffe-form-react';
 
 () => {
-    const [selectedAccount, setSelectedAccount] = useState();
+    const [selectedAccount, setSelectedAccount] = useState(null);
+    const label2 = 'label2';
 
-    const label1 = 'label1';
     return (
-        <InputGroup label="Velg konto" extraMargin={false} labelId={label1} >
+        <InputGroup label="Velg konto" extraMargin={false} labelId={label2}>
             <AccountSelector
                 accounts={[
                     {
@@ -25,7 +25,7 @@ import { InputGroup } from '@sb1/ffe-form-react';
                     {
                         accountNumber: '2234 56 789102',
                         name: 'Sparekonto1',
-                        currencyCode: 'NOK',
+                        currencyCode: 'EUR',
                         balance: 109236,
                     },
                     {
@@ -37,11 +37,13 @@ import { InputGroup } from '@sb1/ffe-form-react';
                 ]}
                 id="account-selector-single"
                 locale="nb"
-                onAccountSelected={val => setSelectedAccount(val)}
+                onAccountSelected={value => setSelectedAccount(value)}
                 onReset={() => setSelectedAccount(null)}
                 selectedAccount={selectedAccount}
-                labelId={label1}
+                allowCustomAccount={true}
+                labelId={label2}
                 ariaInvalid={false}
             />
-        </InputGroup>);
-}
+        </InputGroup>
+    );
+};
