@@ -27,11 +27,6 @@ export default function ActionButton(props) {
     );
 }
 
-ActionButton.defaultProps = {
-    ghost: false,
-    dark: false,
-};
-
 ActionButton.propTypes = {
     /** Aria label for loading indicator */
     ariaLoadingMessage: string,
@@ -57,4 +52,9 @@ ActionButton.propTypes = {
     rightIcon: node,
     /** Dark variant */
     dark: bool,
+};
+
+ActionButton.defaultProps = {
+    ghost: false,
+    dark: false,
 };
