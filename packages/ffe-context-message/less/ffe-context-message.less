@@ -97,9 +97,7 @@
     }
 
     &__close-button {
-        position: absolute;
-        top: 3.5px;
-        right: 1em;
+        flex: 0 0 auto;
         cursor: pointer;
         color: @ffe-farge-moerkgraa;
         fill: @ffe-farge-moerkgraa;
@@ -110,6 +108,7 @@
         background-color: transparent;
         height: 1em;
         width: 1em;
+        margin: 0.2rem 0.2rem 0 0;
 
         &:hover {
             fill: @ffe-farge-svart;
@@ -136,6 +135,8 @@
     position: relative;
     border-radius: 5px;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
 
     &--compact {
         .ffe-context-message-content {
