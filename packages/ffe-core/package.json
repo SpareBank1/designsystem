@@ -6,8 +6,8 @@
   "author": "SpareBank 1",
   "files": [
     "lib",
-    "es",
-    "less"
+    "less",
+    "css"
   ],
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -18,11 +18,13 @@
   "scripts": {
     "lint": "stylelint less/*.less",
     "test": "npm run lint",
-    "build": "node ./bin/build.js && tsc tmp/index.ts --declaration --outDir lib && rm -rf tmp"
+    "clean": "rm -rf css/ gen-src/ lib/",
+    "build": "./scripts/build.js tokens.config.js && tsc gen-src/index.ts --declaration --outDir lib"
   },
   "devDependencies": {
     "case": "^1.5.5",
     "mkdirp": "^1.0.0",
+    "postcss": "^8.3.6",
     "stylelint": "^13.0.0",
     "typescript": "^3.7.5"
   },
