@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@5.0.4...@sb1/ffe-context-message@5.0.5) (2021-09-13)
+
+
+### Bug Fixes
+
+* **ffe-context-message:** endre lukke-knapp posisjonering fra absolute til flex ([3edefd0](https://github.com/SpareBank1/designsystem/commit/3edefd04fec362eb25b6dd991c1f8bd529ae4a3a))
+
+
+
+
+
 ## [5.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@5.0.3...@sb1/ffe-context-message@5.0.4) (2021-09-10)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
