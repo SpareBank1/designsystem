@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [11.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@10.1.5...@sb1/ffe-cards@11.0.0) (2021-09-13)
+
+
+### Features
+
+* **ffe-cards:** fjern deprecated link og product cards ([1a8f2fc](https://github.com/SpareBank1/designsystem/commit/1a8f2fcede901716550b357bee15e78f0b9009c0))
+
+
+### BREAKING CHANGES
+
+* **ffe-cards:** LinkCard og ProductCard har vært deprecated i flere år,
+nå fjernes de fra koden.
+
+
+
+
+
 ## [10.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@10.1.4...@sb1/ffe-cards@10.1.5) (2021-09-10)
 
 **Note:** Version bump only for package @sb1/ffe-cards

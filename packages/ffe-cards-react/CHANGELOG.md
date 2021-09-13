@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@4.0.7...@sb1/ffe-cards-react@5.0.0) (2021-09-13)
+
+
+### Features
+
+* **ffe-cards-react:** fjern deprecated link og product card ([0a86013](https://github.com/SpareBank1/designsystem/commit/0a86013faf1f343bbdb2e98ea58e805ab12c51b2))
+
+
+### BREAKING CHANGES
+
+* **ffe-cards-react:** LinkCard og ProductCard har vært deprecated i flere år,
+nå fjernes de helt fra koden
+
+
+
+
+
 ## [4.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@4.0.6...@sb1/ffe-cards-react@4.0.7) (2021-03-15)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@1.1.2...@sb1/ffe-component-index@1.1.3) (2021-09-13)
+
+
+### Bug Fixes
+
+* fjern referanser til slettede komponenter ([e716c19](https://github.com/SpareBank1/designsystem/commit/e716c1954f5231251b85dd1f6fcf52daf232c8f4))
+
+
+
+
+
 ## [1.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@1.1.1...@sb1/ffe-component-index@1.1.2) (2021-09-12)
 
 **Note:** Version bump only for package @sb1/ffe-component-index
