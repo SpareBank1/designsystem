@@ -1,51 +1,73 @@
 .ffe-sortable-table {
     &__header {
-        color: @ffe-blue-royal;
+        color: @ffe-farge-fjell;
         white-space: nowrap;
+        display: inline-block;
+        border-bottom: solid 2px transparent;
+        border-radius: 4px 4px 0 0;
+        padding-top: 2px;
+
         .native & {
             @media (prefers-color-scheme: dark) {
-                color: @ffe-blue-azure-darkmode;
+                color: @ffe-farge-vann-70;
             }
         }
 
         &:hover {
             cursor: pointer;
-            color: @ffe-blue-azure;
-            border-bottom: solid 2px;
+            color: @ffe-farge-natt;
+            border-color: inherit;
             user-select: none;
             .native & {
                 @media (prefers-color-scheme: dark) {
-                    color: @ffe-blue-azure-darkmode;
-                    border-color: @ffe-blue-azure-darkmode;
+                    color: @ffe-farge-vann-30;
+                    border-color: @ffe-farge-vann-30;
                 }
             }
 
             .ffe-sortable-table__sort-arrow {
-                fill: @ffe-blue-azure;
+                fill: @ffe-farge-fjell;
                 .native & {
                     @media (prefers-color-scheme: dark) {
-                        fill: @ffe-blue-azure-darkmode;
+                        fill: @ffe-farge-vann-70;
                     }
                 }
             }
         }
 
         &--active {
-            border-bottom: solid 2px @ffe-blue-royal;
+            border-bottom: solid 2px @ffe-farge-fjell;
             .native & {
                 @media (prefers-color-scheme: dark) {
-                    border-color: @ffe-blue-azure-darkmode;
+                    border-color: @ffe-farge-vann-70;
                 }
             }
 
             .ffe-sortable-table__sort-arrow {
-                fill: @ffe-blue-royal;
+                fill: @ffe-farge-fjell;
                 .native & {
                     @media (prefers-color-scheme: dark) {
-                        fill: @ffe-blue-azure-darkmode;
+                        fill: @ffe-farge-vann-70;
                     }
                 }
             }
+        }
+
+        &:focus {
+            outline: none;
+            border-radius: 4px;
+            box-shadow: 0 0 0 2px @ffe-farge-vann;
+
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    box-shadow: 0 0 0 2px @ffe-farge-hvit;
+                }
+            }
+        }
+
+        &:focus:not(:focus-visible) {
+            box-shadow: none;
+            border-radius: 4px 4px 0 0;
         }
     }
 
@@ -53,12 +75,12 @@
         height: 12px;
         width: 12px;
         vertical-align: middle;
-        fill: @ffe-blue-royal;
+        fill: @ffe-farge-fjell;
         margin-left: @ffe-spacing-xs;
         transition: transform @ffe-transition-duration @ffe-ease-in-out-back;
         .native & {
             @media (prefers-color-scheme: dark) {
-                fill: @ffe-blue-azure-darkmode;
+                fill: @ffe-farge-vann-70;
             }
         }
 
