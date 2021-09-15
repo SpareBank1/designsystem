@@ -4,28 +4,42 @@
         position: relative;
 
         &:hover {
-            background-color: @ffe-blue-pale;
+            background-color: @ffe-farge-syrin-70;
             .native & {
                 @media (prefers-color-scheme: dark) {
-                    background-color: @ffe-grey-darkmode;
+                    background-color: @ffe-farge-natt;
                 }
             }
         }
 
-        &--expanded {
-            background-color: @ffe-blue-pale;
+        &:focus {
+            outline: 2px solid @ffe-farge-vann;
+
             .native & {
                 @media (prefers-color-scheme: dark) {
-                    background-color: @ffe-grey-darkmode;
+                    outline: 2px solid @ffe-farge-hvit;
+                }
+            }
+        }
+
+        &:focus:not(:focus-visible) {
+            outline: none;
+        }
+
+        &--expanded {
+            background-color: @ffe-farge-syrin-70;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    background-color: @ffe-farge-natt;
                 }
             }
         }
 
         &--expanded:not(:last-child) {
-            border-color: @ffe-blue-pale;
+            border-color: @ffe-farge-syrin-70;
             .native & {
                 @media (prefers-color-scheme: dark) {
-                    background-color: @ffe-grey-darkmode;
+                    border-color: @ffe-farge-natt;
                 }
             }
         }
@@ -51,11 +65,11 @@
         &--expanded {
             transition: background-color @ffe-transition-duration 0.1s;
             animation: slide-row 0.2s cubic-bezier(0.5, 0.015, 0.485, 1.445);
-            background-color: @ffe-blue-ice;
+            background-color: @ffe-farge-syrin-30;
             opacity: 1;
             .native & {
                 @media (prefers-color-scheme: dark) {
-                    background-color: @ffe-grey-charcoal-darkmode;
+                    background-color: @ffe-farge-svart;
                 }
             }
 
@@ -68,14 +82,14 @@
     &__expand-icon {
         width: 17px;
         height: 17px;
-        fill: @ffe-blue-azure;
+        fill: @ffe-farge-vann;
         transition: transform @ffe-transition-duration @ffe-ease-in-out-back;
         position: absolute;
         top: 10px;
         right: 5px;
         .native & {
             @media (prefers-color-scheme: dark) {
-                fill: @ffe-blue-azure-darkmode;
+                fill: @ffe-farge-vann-70;
             }
         }
 
