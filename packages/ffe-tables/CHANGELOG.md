@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@11.0.13...@sb1/ffe-tables@12.0.0) (2021-09-15)
+
+
+### Features
+
+* **ffe-tables:** oppdaterte farger iht ny profil ([77f1e03](https://github.com/SpareBank1/designsystem/commit/77f1e03969d812ae7a05bd6b1e123d1e2a209825))
+
+
+### BREAKING CHANGES
+
+* **ffe-tables:** nye farger og endret focus-state
+
+
+
+
+
 ## [11.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@11.0.12...@sb1/ffe-tables@11.0.13) (2021-09-10)
 
 **Note:** Version bump only for package @sb1/ffe-tables
