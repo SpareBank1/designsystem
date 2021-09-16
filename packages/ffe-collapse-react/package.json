@@ -37,7 +37,7 @@
     "classnames": "^2.2.5"
   },
   "devDependencies": {
-    "eslint": "^5.9.0",
+    "eslint": "^7.16.0",
     "jest": "^26.0.0",
     "prop-types": "^15.6.0",
     "react": "^16.9.0",
