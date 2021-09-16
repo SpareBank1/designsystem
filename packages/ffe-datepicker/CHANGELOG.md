@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.1...@sb1/ffe-datepicker@10.0.2) (2021-09-16)
+
+
+### Bug Fixes
+
+* **ffe-datepicker:** legg til min-høyde ([fa59c22](https://github.com/SpareBank1/designsystem/commit/fa59c2226b0d66b65da95a8d8a0310c66a8410b1))
+
+
+
+
+
 ## [10.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.0...@sb1/ffe-datepicker@10.0.1) (2021-09-10)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
