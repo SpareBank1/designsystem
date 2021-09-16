@@ -33,7 +33,7 @@
     "underscore.string": "^3.3.4"
   },
   "devDependencies": {
-    "eslint": "^5.9.0",
+    "eslint": "^7.16.0",
     "jest": "^26.0.0"
   },
   "publishConfig": {
