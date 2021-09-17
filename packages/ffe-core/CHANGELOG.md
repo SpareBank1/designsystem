@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [19.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@19.0.0...@sb1/ffe-core@19.1.0) (2021-09-17)
+
+
+### Features
+
+* **ffe-core:** add design tokens as css ([cce16f9](https://github.com/SpareBank1/designsystem/commit/cce16f9b9fca4371eac7845fa3531b002c8f1579))
+* **ffe-core:** include breakpoints as css custom media queries ([ccabb6f](https://github.com/SpareBank1/designsystem/commit/ccabb6f3de8738482d1b093a56cce6f74c1b19bb))
+
+
+
+
+
 # [19.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@18.5.0...@sb1/ffe-core@19.0.0) (2021-09-10)
 
 
