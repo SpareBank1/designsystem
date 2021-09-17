@@ -9,7 +9,6 @@ export const stateChangeTypes = {
     InputKeyDownEnter: 'InputKeyDownEnter',
     InputKeyDownArrowDown: 'InputKeyDownArrowDown',
     InputKeyDownArrowUp: 'InputKeyDownArrowUp',
-    ClearButtonPressed: 'ClearButtonPressed',
     ToggleButtonPressed: 'ToggleButtonPressed',
     ItemOnClick: 'ItemOnMouseDown',
     FocusMovedOutSide: 'FocusMovedOutSide',
@@ -76,26 +75,6 @@ export const createReducer = ({
                     state.listToRender.length === 0
                         ? -1
                         : 0,
-                noMatch,
-            };
-        }
-        case stateChangeTypes.ClearButtonPressed: {
-            const { noMatch, listToRender } = getListToRender({
-                inputValue: '',
-                searchAttributes,
-                maxRenderedDropdownElements,
-                dropdownList,
-                prevResultCount: state.listToRender.length,
-                noMatchDropdownList,
-                searchMatcher,
-                showAllItemsInDropdown: true,
-            });
-            return {
-                ...state,
-                inputValue: '',
-                prevSelectedItem: state.selectedItem,
-                selectedItem: null,
-                listToRender,
                 noMatch,
             };
         }

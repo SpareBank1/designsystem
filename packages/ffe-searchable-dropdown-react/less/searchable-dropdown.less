@@ -167,32 +167,6 @@
             }
         }
 
-        &--cross {
-            svg {
-                fill: @ffe-farge-vann;
-                height: 14px;
-                width: 14px;
-                transition: fill @ffe-transition-duration @ffe-ease;
-                .native & {
-                    @media (prefers-color-scheme: dark) {
-                        fill: @ffe-farge-vann-70;
-                    }
-                }
-            }
-
-            &:hover {
-                svg {
-                    fill: @ffe-farge-fjell;
-
-                    .native & {
-                        @media (prefers-color-scheme: dark) {
-                            fill: @ffe-farge-vann-30;
-                        }
-                    }
-                }
-            }
-        }
-
         &--arrow {
             svg {
                 fill: @ffe-farge-vann;
