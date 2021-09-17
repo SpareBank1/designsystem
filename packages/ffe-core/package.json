@@ -19,7 +19,7 @@
     "lint": "stylelint less/*.less",
     "test": "npm run lint",
     "clean": "rm -rf css/ gen-src/ lib/",
-    "build": "./scripts/build.js tokens.config.js && tsc gen-src/index.ts --declaration --outDir lib"
+    "build": "./scripts/build.js tokens.config.js && ./scripts/build-custom-mq.js less/breakpoints.less css/custom-media-queries.css && tsc gen-src/index.ts --declaration --outDir lib"
   },
   "devDependencies": {
     "case": "^1.5.5",
