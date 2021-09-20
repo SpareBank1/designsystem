@@ -38,6 +38,12 @@
     &__name {
         color: @ffe-farge-koksgraa;
         text-align: center;
+
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-farge-graa;
+            }
+        }
     }
 
     &__fractions {
@@ -49,6 +55,12 @@
         > .ffe-chart-donut__amount {
             color: @ffe-farge-koksgraa;
             text-align: center;
+
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    color: @ffe-farge-graa;
+                }
+            }
         }
 
         &:last-child {
