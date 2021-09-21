@@ -213,3 +213,29 @@ const labelId = 'labelId1';
     />
 </InputGroup>;
 ```
+
+Kan signalisere at vi venter på lasting av en liste med elementer ved å sende inn `isLoading`.
+
+```js
+const { InputGroup } = require('../../ffe-form-react');
+const labelId = 'labelId7';
+const isLoading = true;
+
+<InputGroup label="Velg bedrift" labelId={labelId}>
+    <SearchableDropdown
+        labelId={labelId}
+        inputProps={{ placeholder: 'Velg' }}
+        dropdownAttributes={['organizationName']}
+        dropdownList={[]}
+        noMatch={
+            isLoading
+                ? { text: 'Laster bedrifter...' }
+                : { text: 'Søket ga ingen treff' }
+        }
+        onChange={item => setState({ item })}
+        searchAttributes={['organizationName']}
+        locale="nb"
+        isLoading={isLoading}
+    />
+</InputGroup>;
+```
