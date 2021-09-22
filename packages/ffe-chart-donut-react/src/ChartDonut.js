@@ -31,7 +31,7 @@ function ChartDonut({ name, percentage, firstLabel, lastLabel, label }) {
             >
                 {percentage < 95.7 && (
                     <circle
-                        className="ffe-chart-donut--cobalt"
+                        className="ffe-chart-donut--vann"
                         fill="none"
                         strokeWidth="15"
                         strokeLinecap="round"
@@ -56,7 +56,7 @@ function ChartDonut({ name, percentage, firstLabel, lastLabel, label }) {
             >
                 {percentage > 3.2 && (
                     <circle
-                        className="ffe-chart-donut--sky"
+                        className="ffe-chart-donut--frost"
                         fill="none"
                         strokeWidth="15"
                         strokeLinecap="round"
@@ -78,7 +78,7 @@ function ChartDonut({ name, percentage, firstLabel, lastLabel, label }) {
                 </div>
                 {firstLabel && lastLabel && (
                     <div className="ffe-chart-donut__fractions">
-                        <div className="ffe-chart-donut__fraction ffe-chart-donut__fraction--cobalt">
+                        <div className="ffe-chart-donut__fraction ffe-chart-donut__fraction--vann">
                             <div className="ffe-chart-donut__amount ffe-strong-text">
                                 {`${Number(100 - percentage).toFixed(
                                     0,
@@ -88,7 +88,7 @@ function ChartDonut({ name, percentage, firstLabel, lastLabel, label }) {
                                 {firstLabel}
                             </div>
                         </div>
-                        <div className="ffe-chart-donut__fraction ffe-chart-donut__fraction--sky">
+                        <div className="ffe-chart-donut__fraction ffe-chart-donut__fraction--frost">
                             <div className="ffe-chart-donut__amount ffe-strong-text">
                                 {`${Number(percentage).toFixed(
                                     0,

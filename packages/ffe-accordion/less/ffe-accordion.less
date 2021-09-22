@@ -2,18 +2,25 @@
     width: 100%;
     border: 1px solid transparent;
     &--focus {
-        border-color: @ffe-blue-focus;
+        border-color: @ffe-farge-vann;
+
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                border-color: @ffe-farge-vann-70;
+            }
+        }
     }
 }
 
 .ffe-accordion__heading-icon {
     flex: 0 0 auto;
-    fill: @ffe-blue-azure;
+    fill: @ffe-farge-vann;
     width: @ffe-spacing-sm;
     height: @ffe-spacing-sm;
+    transition: transform @ffe-transition-duration @ffe-ease-in-out-back;
     .native & {
         @media (prefers-color-scheme: dark) {
-            fill: lighten(@ffe-blue-azure-darkmode, 10%);
+            fill: @ffe-farge-vann-70;
         }
     }
 }
@@ -26,24 +33,29 @@
     font: inherit;
     cursor: pointer;
     outline: none;
-    color: @ffe-blue-azure;
+    color: @ffe-farge-vann;
+    transition: all @ffe-transition-duration @ffe-ease;
 
     &--open,
     &:hover,
     &:focus {
-        color: @ffe-blue-royal;
+        color: @ffe-farge-fjell;
         .ffe-accordion__heading-icon {
-            fill: @ffe-blue-royal;
+            fill: @ffe-farge-fjell;
         }
     }
 
     .native & {
-        &--open,
-        &:hover,
-        &:focus {
-            color: lighten(@ffe-blue-azure-darkmode, 10%);
-            .ffe-accordion__heading-icon {
-                fill: lighten(@ffe-blue-azure-darkmode, 10%);
+        @media (prefers-color-scheme: dark) {
+            color: @ffe-farge-vann-70;
+
+            &--open,
+            &:hover,
+            &:focus {
+                color: @ffe-farge-vann-30;
+                .ffe-accordion__heading-icon {
+                    fill: @ffe-farge-vann-30;
+                }
             }
         }
     }
@@ -55,7 +67,13 @@
     }
     &:focus {
         .ffe-accordion__heading-button-content {
-            border-color: @ffe-blue-focus;
+            border-color: @ffe-farge-vann;
+
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    border-color: @ffe-farge-vann-70;
+                }
+            }
         }
     }
 }
@@ -65,8 +83,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid transparent;
-    padding: 2px 4px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    padding: @ffe-spacing-2xs;
 }
 
 .ffe-accordion-body {
@@ -74,9 +93,9 @@
 }
 
 .ffe-accordion-item {
-    border-top: solid @ffe-grey-silver 1px;
+    border-top: solid @ffe-farge-graa 1px;
     &:last-of-type {
-        border-bottom: solid @ffe-grey-silver 1px;
+        border-bottom: solid @ffe-farge-graa 1px;
     }
     .ffe-h6 {
         margin: 0;
