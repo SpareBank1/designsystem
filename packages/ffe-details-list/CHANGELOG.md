@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list@9.1.25...@sb1/ffe-details-list@10.0.0) (2021-09-22)
+
+
+### Features
+
+* **ffe-details-list:** justerte farger iht ny profil ([13ca2c1](https://github.com/SpareBank1/designsystem/commit/13ca2c16ca7eb8a3b8e8f2f97eceb12e43ddc561))
+
+
+### BREAKING CHANGES
+
+* **ffe-details-list:** nye farger kan medføre regresjonsfeil
+
+
+
+
+
 ## [9.1.25](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list@9.1.24...@sb1/ffe-details-list@9.1.25) (2021-09-17)
 
 **Note:** Version bump only for package @sb1/ffe-details-list

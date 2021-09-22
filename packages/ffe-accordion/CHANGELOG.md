@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@7.0.16...@sb1/ffe-accordion@8.0.0) (2021-09-22)
+
+
+### Features
+
+* **ffe-accordion:** justerte farger iht ny profil ([952695c](https://github.com/SpareBank1/designsystem/commit/952695cfb65bf0a655374667a165a0b9a50be9f0))
+
+
+### BREAKING CHANGES
+
+* **ffe-accordion:** nye farger kan medføre regresjonsfeil
+
+
+
+
+
 ## [7.0.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@7.0.15...@sb1/ffe-accordion@7.0.16) (2021-09-17)
 
 **Note:** Version bump only for package @sb1/ffe-accordion

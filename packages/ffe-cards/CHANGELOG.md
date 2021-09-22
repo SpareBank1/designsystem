@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@11.0.1...@sb1/ffe-cards@12.0.0) (2021-09-22)
+
+
+### Bug Fixes
+
+* **ffe-cards:** fikser linting-feil ([87eff31](https://github.com/SpareBank1/designsystem/commit/87eff31a17ef059287d440821a4a85818a3d4351))
+
+
+### Features
+
+* **ffe-cards:** justerte farger iht ny profil ([2b94020](https://github.com/SpareBank1/designsystem/commit/2b94020f8767b359bd9d9c4b7d6121633293fb65))
+
+
+### BREAKING CHANGES
+
+* **ffe-cards:** nye farger kan medføre regresjonsfeil
+
+
+
+
+
 ## [11.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@11.0.0...@sb1/ffe-cards@11.0.1) (2021-09-17)
 
 **Note:** Version bump only for package @sb1/ffe-cards

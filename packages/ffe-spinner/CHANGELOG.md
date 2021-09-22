@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner@3.1.25...@sb1/ffe-spinner@4.0.0) (2021-09-22)
+
+
+### Features
+
+* **ffe-spinner:** justerte farger iht ny profil ([17c82fe](https://github.com/SpareBank1/designsystem/commit/17c82fe15148c82fb8e832c7508cd0598b5a0a9f))
+
+
+### BREAKING CHANGES
+
+* **ffe-spinner:** nye farger kan medføre regresjonsfeil
+
+
+
+
+
 ## [3.1.25](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner@3.1.24...@sb1/ffe-spinner@3.1.25) (2021-09-17)
 
 **Note:** Version bump only for package @sb1/ffe-spinner

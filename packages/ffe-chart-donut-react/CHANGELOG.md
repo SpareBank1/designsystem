@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@3.1.0...@sb1/ffe-chart-donut-react@4.0.0) (2021-09-22)
+
+
+### Bug Fixes
+
+* **ffe-chart-donut-react:** legger til tekstfarge i darkmode ([259674d](https://github.com/SpareBank1/designsystem/commit/259674ddadc20d1828844b2e8c5aa9ed154463c0))
+
+
+### Features
+
+* **ffe-chart-donut-react:** justerte faeger iht ny profil ([5fd3809](https://github.com/SpareBank1/designsystem/commit/5fd380915e3100f801db9df9e04e7a6f3f9cf63e))
+
+
+### BREAKING CHANGES
+
+* **ffe-chart-donut-react:** nye farger kan medføre regresjonsfeil
+
+
+
+
+
 # [3.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@3.0.5...@sb1/ffe-chart-donut-react@3.1.0) (2021-06-23)
 
 
