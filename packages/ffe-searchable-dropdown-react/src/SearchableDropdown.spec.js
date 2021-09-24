@@ -176,40 +176,6 @@ describe('SearchableDropdown', () => {
         expect(screen.queryByText('812602222')).toBeNull();
     });
 
-    it('should have clear button', () => {
-        const onChange = jest.fn();
-        render(
-            <SearchableDropdown
-                id="id"
-                labelId="labelId"
-                dropdownAttributes={['organizationName', 'organizationNumber']}
-                dropdownList={companies}
-                onChange={onChange}
-                searchAttributes={['organizationName', 'organizationNumber']}
-                locale="nb"
-            />,
-        );
-
-        const input = screen.getByRole('combobox');
-        userEvent.type(input, 'Be');
-
-        userEvent.click(screen.getByText('Bedriften'), { button: 1 });
-
-        expect(onChange).toHaveBeenCalledTimes(1);
-        expect(onChange).toHaveBeenLastCalledWith(companies[0]);
-        expect(input.value).toEqual('Bedriften');
-
-        const clearButton = screen.getByRole('button', {
-            name: /fjern valgt/i,
-        });
-
-        userEvent.click(clearButton);
-
-        expect(onChange).toHaveBeenCalledTimes(2);
-        expect(onChange).toHaveBeenLastCalledWith(null);
-        expect(input.value).toEqual('');
-    });
-
     it('should render custom elements', () => {
         /* eslint-disable react/prop-types */
         const CustomListItemBody = ({ item, isHighlighted }) => {
@@ -491,7 +457,7 @@ describe('SearchableDropdown', () => {
         expect(input.value).toEqual('Bedriften');
     });
 
-    it('should move focus to clear button when selecting from dropdown, and to toggle button when clicking clear button', () => {
+    it('should move focus to toggle button when selecting from dropdown', () => {
         const onChange = jest.fn();
         render(
             <SearchableDropdown
@@ -508,10 +474,7 @@ describe('SearchableDropdown', () => {
         const input = screen.getByRole('combobox');
         userEvent.click(input);
         userEvent.click(screen.getByText('Bedriften'), { button: 1 });
-        const clearButton = screen.getByLabelText('fjern valgt');
-        expect(document.activeElement).toEqual(clearButton);
 
-        userEvent.click(clearButton, { button: 1 });
         const toggleButton = screen.getByLabelText('åpne alternativer');
         expect(document.activeElement).toEqual(toggleButton);
     });

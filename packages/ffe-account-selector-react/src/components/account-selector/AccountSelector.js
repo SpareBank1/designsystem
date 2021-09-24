@@ -191,8 +191,7 @@ AccountSelector.propTypes = {
     /** Returns the selected account object */
     onAccountSelected: func.isRequired,
     /**
-     * Called when clicking the clear button X or when
-     * emptying the input field and moving focus away from the account selector
+     * Called when emptying the input field and moving focus away from the account selector
      * */
     onReset: func.isRequired,
     selectedAccount: Account,

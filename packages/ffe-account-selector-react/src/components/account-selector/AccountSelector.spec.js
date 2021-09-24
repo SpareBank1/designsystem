@@ -73,6 +73,7 @@ describe('AccountSelector', () => {
                 locale="nb"
                 onAccountSelected={onAccountSelected}
                 onReset={onReset}
+                ariaInvalid={false}
             />,
         );
 
@@ -117,6 +118,7 @@ describe('AccountSelector', () => {
                 locale="nb"
                 onAccountSelected={onAccountSelected}
                 onReset={onReset}
+                ariaInvalid={false}
             />,
         );
 
@@ -172,6 +174,7 @@ describe('AccountSelector', () => {
                 onAccountSelected={onAccountSelected}
                 onReset={onReset}
                 selectedAccount={selectedAccount}
+                ariaInvalid={false}
             />,
         );
         expect(screen.queryByText('1234 56 789102')).toBeNull();
@@ -190,6 +193,7 @@ describe('AccountSelector', () => {
                 onAccountSelected={onAccountSelected}
                 onReset={onReset}
                 selectedAccount={selectedAccount}
+                ariaInvalid={false}
             />,
         );
 
@@ -207,6 +211,7 @@ describe('AccountSelector', () => {
                 onReset={onReset}
                 selectedAccount={selectedAccount}
                 showBalance={true}
+                ariaInvalid={false}
             />,
         );
 
@@ -226,6 +231,7 @@ describe('AccountSelector', () => {
                 onReset={onReset}
                 selectedAccount={selectedAccount}
                 showBalance={true}
+                ariaInvalid={false}
             />,
         );
 
@@ -242,6 +248,7 @@ describe('AccountSelector', () => {
                 onReset={onReset}
                 selectedAccount={selectedAccount}
                 showBalance={false}
+                ariaInvalid={false}
             />,
         );
 
@@ -263,6 +270,7 @@ describe('AccountSelector', () => {
                 onReset={onReset}
                 selectedAccount={selectedAccount}
                 allowCustomAccount={true}
+                ariaInvalid={false}
             />,
         );
 
@@ -290,6 +298,7 @@ describe('AccountSelector', () => {
                 onReset={onReset}
                 selectedAccount={selectedAccount}
                 allowCustomAccount={true}
+                ariaInvalid={false}
             />,
         );
 
@@ -312,6 +321,7 @@ describe('AccountSelector', () => {
                     balance: 133,
                 }}
                 allowCustomAccount={true}
+                ariaInvalid={false}
             />,
         );
 
@@ -332,6 +342,7 @@ describe('AccountSelector', () => {
                 onReset={onReset}
                 selectedAccount={selectedAccount}
                 allowCustomAccount={true}
+                ariaInvalid={false}
             />,
         );
 
@@ -371,6 +382,7 @@ describe('AccountSelector', () => {
                 onAccountSelected={onAccountSelected}
                 onReset={onReset}
                 listElementBody={CustomListItemBody}
+                ariaInvalid={false}
             />,
         );
 
@@ -393,6 +405,7 @@ describe('AccountSelector', () => {
                 locale="nb"
                 onAccountSelected={onAccountSelected}
                 onReset={onReset}
+                ariaInvalid={false}
             />,
         );
 
@@ -433,6 +446,7 @@ describe('AccountSelector', () => {
                 onAccountSelected={onAccountSelected}
                 onReset={onReset}
                 formatAccountNumber={false}
+                ariaInvalid={false}
             />,
         );
 
@@ -443,54 +457,6 @@ describe('AccountSelector', () => {
 
         fireEvent.change(input, { target: { value: '543216789101' } });
         expect(input.getAttribute('value')).toEqual('543216789101');
-    });
-
-    it('should reset input field and selected account on reset', () => {
-        const { rerender } = render(
-            <AccountSelector
-                id="id"
-                labelId="labelId"
-                accounts={accounts}
-                locale="nb"
-                onAccountSelected={onAccountSelected}
-                onReset={onReset}
-            />,
-        );
-
-        const input = screen.getByRole('combobox');
-
-        fireEvent.click(input);
-        fireEvent.click(screen.getByText('Jeg er en konto'));
-
-        rerender(
-            <AccountSelector
-                id="id"
-                labelId="labelId"
-                accounts={accounts}
-                locale="nb"
-                onAccountSelected={onAccountSelected}
-                onReset={onReset}
-                selectedAccount={selectedAccount}
-            />,
-        );
-
-        expect(screen.getByText('1234 56 789102')).toBeInTheDocument();
-
-        fireEvent.click(screen.getByLabelText('fjern valgt'));
-
-        rerender(
-            <AccountSelector
-                id="id"
-                labelId="labelId"
-                accounts={accounts}
-                locale="nb"
-                onAccountSelected={onAccountSelected}
-                onReset={onReset}
-                selectedAccount={selectedAccount}
-            />,
-        );
-
-        expect(screen.queryByText('1234 56 789102')).toBeNull();
     });
 
     it('should allow changing selectedAccount even if selectedAccount is defined on first render (initial value)', () => {
@@ -504,8 +470,8 @@ describe('AccountSelector', () => {
                 locale="nb"
                 onAccountSelected={onAccountSelected}
                 onReset={onReset}
-                ariaInvalid={false}
                 selectedAccount={selectedAccount}
+                ariaInvalid={false}
             />,
         );
 
@@ -515,7 +481,6 @@ describe('AccountSelector', () => {
         expect(screen.queryByText('1234 56 789102')).toBeNull();
         expect(input.value).toBe('Sparekonto');
 
-        fireEvent.click(screen.getByLabelText('fjern valgt'));
         fireEvent.click(input);
         fireEvent.click(screen.getByText('Jeg er en konto'));
 
@@ -527,8 +492,8 @@ describe('AccountSelector', () => {
                 locale="nb"
                 onAccountSelected={onAccountSelected}
                 onReset={onReset}
-                ariaInvalid={false}
                 selectedAccount={selectedAccount}
+                ariaInvalid={false}
             />,
         );
 
