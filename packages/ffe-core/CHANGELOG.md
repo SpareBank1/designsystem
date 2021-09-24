@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [19.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@19.1.0...@sb1/ffe-core@19.1.1) (2021-09-24)
+
+
+### Bug Fixes
+
+* **ffe-core:** endrer farge på visited i darkmode ([cffffeb](https://github.com/SpareBank1/designsystem/commit/cffffeba38c3bebdba2e7106ad08a4b2455950a8))
+
+
+
+
+
 # [19.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@19.0.0...@sb1/ffe-core@19.1.0) (2021-09-17)
 
 

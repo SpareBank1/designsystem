@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [13.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@13.0.2...@sb1/ffe-searchable-dropdown-react@13.1.0) (2021-09-24)
+
+
+### Features
+
+* **ffe-searchable-dropdown-react:** Remove clear button from dropdown ([0c2fccc](https://github.com/SpareBank1/designsystem/commit/0c2fccc6d6bdcc12f167ceff8b0bdfbcbbba03b0))
+
+
+
+
+
 ## [13.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@13.0.1...@sb1/ffe-searchable-dropdown-react@13.0.2) (2021-09-17)
 
 **Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react
