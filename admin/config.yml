@@ -1,0 +1,57 @@
+backend:
+  name: github
+  repo: sparebank1/designsystem-cms
+  
+# backend:
+#   name: test-repo
+
+media_folder: static/img
+public_folder: /img
+locale: 'nb_no'
+publish_mode: editorial_workflow
+
+collections:
+  - name: 'help'
+    label: 'Hjelp'
+    publish: false
+    delete: false
+    files:
+      - label: 'README'
+        name: 'readme'
+        file: 'src/cms/README.md'
+        editor:
+          preview: false
+        summary: "{{filename}} {{commit_date}}"
+        fields:
+          - name: 'body'
+            label: 'README'
+            widget: 'markdown'
+            modes: ['rich_text']
+  - name: 'pages'
+    label: 'Sider'
+    label_singular: 'side'
+    folder: 'src/pages'
+    create: true
+    filter: {field: 'template', value: 'default'}
+    fields:
+      - { name: 'template', default: 'default', widget: 'hidden' }
+      - { name: 'title', label: 'Tittel', widget: 'string' }
+      - { name: 'body', label: 'Innhold', widget: 'mdx'}
+  - name: 'subpages1'
+    label: 'Visuell identitet'
+    folder: 'src/pages/visuell-identitet'
+    create: true
+    filter: {field: 'template', value: 'default'}
+    fields:
+      - { name: 'template', default: 'default', widget: 'hidden' }
+      - { name: 'title', label: 'Tittel', widget: 'string' }
+      - { name: 'body', label: 'Innhold', widget: 'mdx'}
+  - name: 'subpages2'
+    label: 'Komponenter'
+    folder: 'src/pages/komponenter'
+    create: true
+    filter: {field: 'template', value: 'default'}
+    fields:
+      - { name: 'template', default: 'default', widget: 'hidden' }
+      - { name: 'title', label: 'Tittel', widget: 'string' }
+      - { name: 'body', label: 'Innhold', widget: 'mdx'}

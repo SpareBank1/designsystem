@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-react-package-page-jsx",
+    "path": "/package/@sb1/ffe-collapse-react",
+    "result": {"pageContext":{"packageName":"@sb1/ffe-collapse-react","reactDocs":[{"package":"@sb1/ffe-collapse-react","sourceFile":"src/Collapse.js","repoFile":"/packages/ffe-collapse-react/src/Collapse.js","description":"","displayName":"Collapse","methods":[],"props":{"className":{"type":{"name":"string"},"required":false,"description":""},"style":{"type":{"name":"object"},"required":false,"description":""},"isOpen":{"type":{"name":"bool"},"required":false,"description":""},"onRest":{"type":{"name":"func"},"required":false,"description":""}}}]}},
+    "staticQueryHashes": ["1244094555","434851935","643354845"]}
