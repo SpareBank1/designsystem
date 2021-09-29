@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@1.1.9...@sb1/ffe-component-index@1.1.10) (2021-09-29)
+
+
+### Bug Fixes
+
+* **component-overview:** remove example of ghost-action-button ([69f5618](https://github.com/SpareBank1/designsystem/commit/69f56189a9917a5ba1d636855ecebf194c4c9f8d))
+
+
+
+
+
 ## [1.1.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@1.1.8...@sb1/ffe-component-index@1.1.9) (2021-09-24)
 
 **Note:** Version bump only for package @sb1/ffe-component-index
