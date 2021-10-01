@@ -18,7 +18,7 @@
   },
   "scripts": {
     "build": "make all",
-    "start": "snowpack dev",
+    "start": "snowpack dev --polyfill-node",
     "ghpages": "snowpack build --polyfill-node",
     "clean": "make clean",
     "test": "npx playwright test",
