@@ -1,14 +1,15 @@
 import { useState } from 'react';
 import Collapse from '@sb1/ffe-collapse-react';
+import { ExpandButton } from '@sb1/ffe-buttons-react';
 
 () => {
     const [isOpen, setOpen] = useState(false);
 
     return (
         <>
-            <button onClick={() => setOpen(!isOpen)}>
+            <ExpandButton isExpanded={isOpen} onClick={() => setOpen(!isOpen)}>
                 {isOpen ? 'Collapse' : 'Expand'}
-            </button>
+            </ExpandButton>
             <Collapse isOpen={isOpen}>
                 <div>
                     <p>Hello world</p>
