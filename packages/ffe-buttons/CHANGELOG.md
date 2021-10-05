@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [13.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@13.0.3...@sb1/ffe-buttons@13.0.4) (2021-10-05)
+
+
+### Bug Fixes
+
+* **ffe-buttons:** Endre bakgrunnsfarge på secondary button i darkmode ([33f830e](https://github.com/SpareBank1/designsystem/commit/33f830e57f1087f6c3e5bf4d8a2f156aef9f1c3a))
+
+
+
+
+
 ## [13.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@13.0.2...@sb1/ffe-buttons@13.0.3) (2021-09-24)
 
 **Note:** Version bump only for package @sb1/ffe-buttons
