@@ -17,7 +17,6 @@ const RadioButtonInputGroup = props => {
         name,
         selectedValue,
         tooltip,
-        dark,
         ...rest
     } = props;
 
@@ -51,12 +50,11 @@ const RadioButtonInputGroup = props => {
                     className={classNames(
                         'ffe-form-label',
                         'ffe-form-label--block',
-                        { 'ffe-form-label--dark': dark },
                     )}
                 >
                     {label}
                     {typeof tooltip === 'string' && (
-                        <Tooltip dark={dark}>{tooltip}</Tooltip>
+                        <Tooltip>{tooltip}</Tooltip>
                     )}
                     {React.isValidElement(tooltip) && tooltip}
                 </legend>
@@ -67,7 +65,7 @@ const RadioButtonInputGroup = props => {
             )}
             {React.isValidElement(description) && description}
 
-            {children({ ...buttonProps, dark })}
+            {children({ ...buttonProps })}
 
             {typeof fieldMessage === 'string' && (
                 <ErrorFieldMessage element="p">
@@ -124,13 +122,10 @@ RadioButtonInputGroup.propTypes = {
      * set
      * */
     tooltip: oneOfType([node, string]),
-    /** Dark variant */
-    dark: bool,
 };
 
 RadioButtonInputGroup.defaultProps = {
     extraMargin: true,
-    dark: false,
 };
 
 export default RadioButtonInputGroup;

@@ -30,14 +30,12 @@ class BaseRadioButton extends Component {
             tooltipProps,
             value,
             innerRef,
-            dark,
             ...inputProps
         } = this.props;
 
         const labelClasses = classNames(
             { 'ffe-radio-button--invalid': ariaInvalid === 'true' },
             { 'ffe-radio-button--with-tooltip': tooltip },
-            { 'ffe-radio-button--dark': dark },
             className,
         );
 
@@ -48,9 +46,7 @@ class BaseRadioButton extends Component {
             <Fragment>
                 <input
                     aria-invalid={ariaInvalid}
-                    className={classNames('ffe-radio-input', {
-                        'ffe-radio-input--dark': dark,
-                    })}
+                    className="ffe-radio-input"
                     id={this.id}
                     ref={innerRef}
                     type="radio"
@@ -74,7 +70,6 @@ class BaseRadioButton extends Component {
 BaseRadioButton.defaultProps = {
     labelProps: {},
     tooltipProps: {},
-    dark: false,
 };
 
 BaseRadioButton.propTypes = {
@@ -100,8 +95,6 @@ BaseRadioButton.propTypes = {
     value: oneOfType([bool, string, number]).isRequired,
     /** Ref-setting function, or ref created by useRef, passed to the input element */
     innerRef: oneOfType([func, shape({ current: object })]),
-    /** Dark variant */
-    dark: bool,
 };
 
 export default BaseRadioButton;
