@@ -5,7 +5,6 @@ import {
     oneOf,
     oneOfType,
     node,
-    bool,
     object,
     shape,
     elementType,
@@ -25,7 +24,6 @@ const InlineBaseButton = props => {
         innerRef,
         leftIcon,
         rightIcon,
-        dark,
         ...rest
     } = props;
 
@@ -34,7 +32,6 @@ const InlineBaseButton = props => {
             className={classNames(
                 'ffe-inline-button',
                 `ffe-inline-button--${buttonType}`,
-                { 'ffe-inline-button--dark': dark },
                 className,
             )}
             ref={innerRef}
@@ -73,13 +70,10 @@ InlineBaseButton.propTypes = {
     leftIcon: node,
     /** Icon shown to the right of the label */
     rightIcon: node,
-    /** Dark variant */
-    dark: bool,
 };
 
 InlineBaseButton.defaultProps = {
     element: 'button',
-    dark: false,
 };
 
 export default InlineBaseButton;

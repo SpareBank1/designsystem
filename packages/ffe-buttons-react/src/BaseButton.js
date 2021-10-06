@@ -28,7 +28,6 @@ const BaseButton = props => {
         isLoading,
         leftIcon,
         rightIcon,
-        dark,
         ...rest
     } = props;
 
@@ -43,7 +42,6 @@ const BaseButton = props => {
                 'ffe-button',
                 `ffe-button--${buttonType}`,
                 { 'ffe-button--condensed': condensed },
-                { 'ffe-button--dark': dark },
                 { 'ffe-button--loading': isLoading && supportsSpinner },
                 className,
             )}
@@ -99,14 +97,11 @@ BaseButton.propTypes = {
     leftIcon: node,
     /** Icon shown to the right of the label */
     rightIcon: node,
-    /** Dark variant */
-    dark: bool,
 };
 
 BaseButton.defaultProps = {
     ariaLoadingMessage: 'Vennligst vent',
     element: 'button',
-    dark: false,
 };
 
 export default BaseButton;
