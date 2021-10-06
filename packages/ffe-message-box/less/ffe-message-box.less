@@ -103,13 +103,18 @@
         position: relative;
         top: 16px;
         width: 64px;
-
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: @ffe-farge-svart;
+                fill: @ffe-farge-vann-70;
+            }
+        }
         &--error svg {
-            fill: @ffe-farge-baer-wcag;
+            fill: @ffe-farge-baer;
         }
 
         &--success svg {
-            fill: @ffe-farge-nordlys-wcag;
+            fill: @ffe-farge-nordlys;
         }
     }
 
