@@ -55,7 +55,6 @@ const SearchableDropdown = ({
     inputProps = {},
     listElementBody: CustomListItemBody,
     noMatch = {},
-    dark,
     locale,
     ariaInvalid,
     formatter = value => value,
@@ -254,9 +253,7 @@ const SearchableDropdown = ({
     return (
         <div // eslint-disable-line jsx-a11y/no-static-element-interactions
             onKeyDown={handleKeyDown}
-            className={classNames(className, 'ffe-searchable-dropdown', {
-                'ffe-searchable-dropdown--dark': dark,
-            })}
+            className={classNames(className, 'ffe-searchable-dropdown')}
             ref={containerRef}
             onMouseDown={addFlagOnEventHandler}
             onFocus={addFlagOnEventHandler}
@@ -267,9 +264,7 @@ const SearchableDropdown = ({
                     ref={inputRef}
                     id={id}
                     aria-labelledby={labelId}
-                    className={classNames('ffe-input-field', {
-                        'ffe-input-field--dark': dark,
-                    })}
+                    className="ffe-input-field"
                     onClick={handleInputClick}
                     onChange={e => {
                         if (inputProps.onChange) {
@@ -397,9 +392,6 @@ SearchableDropdown.propTypes = {
 
     /** Called when a value is selected */
     onChange: func,
-
-    /** Dark variant */
-    dark: bool,
 
     /** Custom element to use for each item in dropDownList */
     listElementBody: func,
