@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [19.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@19.1.1...@sb1/ffe-core@19.1.2) (2021-10-06)
+
+
+### Bug Fixes
+
+* **ffe-core:** justere lead og sublead ([ff40797](https://github.com/SpareBank1/designsystem/commit/ff40797c03de5bb3db73963ecc8966ea908711fc))
+
+
+
+
+
 ## [19.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@19.1.0...@sb1/ffe-core@19.1.1) (2021-09-24)
 
 

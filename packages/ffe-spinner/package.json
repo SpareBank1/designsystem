@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-spinner",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "license": "MIT",
   "author": "SpareBank1",
   "files": [
@@ -17,7 +17,7 @@
     "test": "npm run lint"
   },
   "devDependencies": {
-    "@sb1/ffe-core": "^19.1.1"
+    "@sb1/ffe-core": "^19.1.2"
   },
   "peerDependencies": {
     "@sb1/ffe-core": "*"

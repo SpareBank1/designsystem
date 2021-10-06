@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@9.0.0...@sb1/ffe-message-box@9.0.1) (2021-10-06)
+
+
+### Bug Fixes
+
+* **ffe-message-box:** gjør sirkel sort og juster ikon farger i darkmode ([e36a4b5](https://github.com/SpareBank1/designsystem/commit/e36a4b5dd91f0e56d382b5e5f6aa9b84a0757fb4))
+
+
+
+
+
 # [9.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@8.1.2...@sb1/ffe-message-box@9.0.0) (2021-08-23)
 
 

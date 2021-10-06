@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@5.0.7...@sb1/ffe-context-message@5.0.8) (2021-10-06)
+
+
+### Bug Fixes
+
+* **ffe-context-message:** gjør sirkel sort og justere ikon farger i darkmode ([65e5648](https://github.com/SpareBank1/designsystem/commit/65e56484a29b073ff526a7087ba0b5f92ef84bcc))
+
+
+
+
+
 ## [5.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@5.0.6...@sb1/ffe-context-message@5.0.7) (2021-09-24)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
