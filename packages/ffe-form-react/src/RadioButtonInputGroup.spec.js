@@ -79,26 +79,6 @@ describe('<RadioButtonInputGroup />', () => {
                 }),
             );
         });
-        it('passes down "dark" property if set', () => {
-            const childrenSpy = jest.fn();
-            const wrapper = getWrapper({
-                dark: true,
-                children: childrenSpy,
-            });
-
-            expect(childrenSpy).toHaveBeenCalledWith(
-                expect.objectContaining({
-                    dark: true,
-                }),
-            );
-
-            wrapper.setProps({ dark: false });
-            expect(childrenSpy).toHaveBeenCalledWith(
-                expect.objectContaining({
-                    dark: false,
-                }),
-            );
-        });
         it(`passes down a default noop function to silence intermittent propType
             warnings about the radio buttons being controlled components without
             an onChange listener (which is a lie - the onChange is in RadioButtonInputGroup)`, () => {
