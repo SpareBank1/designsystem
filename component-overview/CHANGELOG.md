@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@1.1.13...@sb1/ffe-component-index@1.2.0) (2021-10-07)
+
+
+### Features
+
+* **component-overview:** add example for SearchableDropdown.isLoading ([3834e5c](https://github.com/SpareBank1/designsystem/commit/3834e5c11cee5a4882a6423104e515a52ed12250))
+
+
+
+
+
 ## [1.1.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@1.1.12...@sb1/ffe-component-index@1.1.13) (2021-10-06)
 
 **Note:** Version bump only for package @sb1/ffe-component-index

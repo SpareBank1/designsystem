@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [13.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@13.1.2...@sb1/ffe-searchable-dropdown-react@13.2.0) (2021-10-07)
+
+
+### Features
+
+* **ffe-searchable-dropdown-react:** loading indicator + support for updatable dropdownList-prop ([b297934](https://github.com/SpareBank1/designsystem/commit/b297934996c492bac5c449c6d42f8fc7016b14f3))
+
+
+
+
+
 ## [13.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@13.1.1...@sb1/ffe-searchable-dropdown-react@13.1.2) (2021-10-06)
 
 **Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react
