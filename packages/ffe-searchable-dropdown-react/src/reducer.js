@@ -13,6 +13,7 @@ export const stateChangeTypes = {
     ItemOnClick: 'ItemOnMouseDown',
     FocusMovedOutSide: 'FocusMovedOutSide',
     ItemSelectedProgrammatically: 'ItemSelectedProgrammatically',
+    DropdownListPropUpdated: 'DropdownListPropUpdated',
 };
 
 export const createReducer = ({
@@ -150,6 +151,19 @@ export const createReducer = ({
                 inputValue,
                 selectedItem,
                 listToRender,
+            };
+        }
+        case stateChangeTypes.DropdownListPropUpdated: {
+            return {
+                ...state,
+                ...getListToRender({
+                    inputValue: state.inputValue,
+                    searchAttributes,
+                    maxRenderedDropdownElements,
+                    dropdownList,
+                    searchMatcher,
+                    showAllItemsInDropdown: !!state.selectedItem,
+                }),
             };
         }
         default:

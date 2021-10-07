@@ -1,6 +1,7 @@
 import React from 'react';
 import { render, screen, act } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import 'regenerator-runtime';
 
 import SearchableDropdown from './SearchableDropdown';
 
@@ -755,5 +756,97 @@ describe('SearchableDropdown', () => {
         });
         expect(onChange).not.toHaveBeenCalled();
         expect(input.value).toEqual('');
+    });
+
+    it('should show updated result list after loading completes', () => {
+        const onChange = jest.fn();
+
+        const { rerender } = render(
+            <div>
+                <button>Knapp</button>
+                <SearchableDropdown
+                    id="id"
+                    labelId="labelId"
+                    dropdownAttributes={[
+                        'organizationName',
+                        'organizationNumber',
+                    ]}
+                    dropdownList={[]}
+                    onChange={onChange}
+                    searchAttributes={[
+                        'organizationName',
+                        'organizationNumber',
+                    ]}
+                    locale="nb"
+                    isLoading={true}
+                />
+            </div>,
+        );
+
+        const input = screen.getByRole('combobox');
+        userEvent.click(input);
+        userEvent.type(input, 'Beslag');
+
+        expect(screen.queryByText('Beslag skytter')).toBeNull();
+
+        rerender(
+            <div>
+                <button>Knapp</button>
+                <SearchableDropdown
+                    id="id"
+                    labelId="labelId"
+                    dropdownAttributes={[
+                        'organizationName',
+                        'organizationNumber',
+                    ]}
+                    dropdownList={[
+                        {
+                            organizationName: 'Beslag skytter',
+                            organizationNumber: '812602552',
+                        },
+                    ]}
+                    onChange={onChange}
+                    searchAttributes={[
+                        'organizationName',
+                        'organizationNumber',
+                    ]}
+                    locale="nb"
+                    isLoading={false}
+                />
+            </div>,
+        );
+
+        expect(screen.getByText('Beslag skytter')).toBeInTheDocument();
+    });
+
+    it('should broadcast loading status when dropdown list is loading', async () => {
+        const onChange = jest.fn();
+
+        render(
+            <div>
+                <button>Knapp</button>
+                <SearchableDropdown
+                    id="id"
+                    labelId="labelId"
+                    dropdownAttributes={[
+                        'organizationName',
+                        'organizationNumber',
+                    ]}
+                    dropdownList={[]}
+                    onChange={onChange}
+                    searchAttributes={[
+                        'organizationName',
+                        'organizationNumber',
+                    ]}
+                    locale="nb"
+                    isLoading={true}
+                />
+            </div>,
+        );
+
+        const input = screen.getByRole('combobox');
+        userEvent.click(input);
+
+        await screen.findByText('Laster inn alternativer.');
     });
 });

@@ -95,3 +95,14 @@ export const getResultCountChangedA11yStatus = (locale, nrOfItems) => {
             } er tilgjengelig, bruk opp- og nedpiltastene for å navigere. Trykk Enter for å velge.`;
     }
 };
+
+export const getIsLoadingItemsA11yStatus = locale => {
+    switch (locale) {
+        case nn:
+            return 'Lastar inn alternativ.';
+        case en:
+            return 'Loading options.';
+        default:
+            return 'Laster inn alternativer.';
+    }
+};

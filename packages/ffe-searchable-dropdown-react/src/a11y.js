@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import {
+    getIsLoadingItemsA11yStatus,
     getItemClearedA11yStatus,
     getItemSelectedA11yStatus,
     getNoResultA11yStatus,
@@ -100,6 +101,10 @@ const getStateChangeMessage = ({
     return '';
 };
 
+const getIsLoadingItemsMessage = locale => {
+    return getIsLoadingItemsA11yStatus(locale);
+};
+
 export const useSetAllyMessageItemSelection = ({
     isInitialMount,
     selectedItem,
@@ -109,11 +114,20 @@ export const useSetAllyMessageItemSelection = ({
     resultCount,
     previousResultCount,
     isExpanded,
+    isLoading,
+    hasFocus,
 }) => {
     const selectedItemRef = useRef(null);
     const prevSelectedItemRef = useRef(null);
 
     useEffect(() => {
+        if (isLoading && hasFocus) {
+            updateA11yStatus(() => {
+                return getIsLoadingItemsMessage(locale);
+            });
+            return;
+        }
+
         if (isInitialMount) {
             return;
         }
@@ -156,5 +170,7 @@ export const useSetAllyMessageItemSelection = ({
         isExpanded,
         resultCount,
         previousResultCount,
+        hasFocus,
+        isLoading,
     ]);
 };

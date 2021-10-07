@@ -37,6 +37,7 @@ import {
 } from './getNewHighlightedIndex';
 import { useSetAllyMessageItemSelection } from './a11y';
 import Results from './Results';
+import Spinner from '@sb1/ffe-spinner-react';
 
 const ARROW_UP = 'ArrowUp';
 const ARROW_DOWN = 'ArrowDown';
@@ -62,6 +63,7 @@ const SearchableDropdown = ({
     searchMatcher,
     selectedItem,
     highCapacity = false,
+    isLoading = false,
 }) => {
     const [state, dispatch] = useReducer(
         createReducer({
@@ -94,8 +96,9 @@ const SearchableDropdown = ({
             };
         },
     );
-    const isInitialMountRef = useRef(true);
     const [refs, setRefs] = useState([]);
+    const [hasFocus, setHasFocus] = useState(false);
+    const isInitialMountRef = useRef(true);
     const inputRef = useRef();
     const toggleButtonRef = useRef();
     const containerRef = useRef();
@@ -131,6 +134,8 @@ const SearchableDropdown = ({
         isExpanded: state.isExpanded,
         resultCount: state.listToRender.length,
         prevResultCount: state.prevResultCount,
+        isLoading,
+        hasFocus,
     });
 
     useLayoutEffect(() => {
@@ -154,6 +159,12 @@ const SearchableDropdown = ({
     useEffect(() => {
         isInitialMountRef.current = false;
     }, []);
+
+    useEffect(() => {
+        dispatch({
+            type: stateChangeTypes.DropdownListPropUpdated,
+        });
+    }, [dropdownList, dispatch]);
 
     /**
      * Because of changes in event handling between react v16 and v17, the check for the
@@ -280,6 +291,7 @@ const SearchableDropdown = ({
                             payload: { inputValue: e.target.value },
                         });
                     }}
+                    onFocus={() => setHasFocus(true)}
                     onBlur={handleInputBlur}
                     aria-describedby={
                         [
@@ -333,7 +345,7 @@ const SearchableDropdown = ({
                         });
                     }}
                 >
-                    <ChevronIkon />
+                    {isLoading ? <Spinner /> : <ChevronIkon />}
                 </button>
             </div>
             <div
@@ -430,6 +442,13 @@ SearchableDropdown.propTypes = {
      * uses react-window for performance optimization, default false
      */
     highCapacity: bool,
+
+    /**
+     * For situations where the dropdownList prop will be updated at a later point in time.
+     * That is, if the consumer first sends down an initial value before sending down data
+     * that has loaded.
+     */
+    isLoading: bool,
 };
 
 export default SearchableDropdown;
