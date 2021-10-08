@@ -4,7 +4,7 @@ import { v4 as hash } from 'uuid';
 import classNames from 'classnames';
 
 const Checkbox = React.forwardRef((props, ref) => {
-    const { children, hiddenLabel, inline, noMargins, dark, ...rest } = props;
+    const { children, hiddenLabel, inline, noMargins, ...rest } = props;
 
     const id = props.id || `checkbox-${hash()}`;
     const labelProps = {
@@ -13,7 +13,6 @@ const Checkbox = React.forwardRef((props, ref) => {
             'ffe-checkbox--inline': inline,
             'ffe-checkbox--no-margin': noMargins,
             'ffe-checkbox--hidden-label': hiddenLabel,
-            'ffe-checkbox--dark': dark,
         }),
         htmlFor: id,
     };
@@ -22,9 +21,7 @@ const Checkbox = React.forwardRef((props, ref) => {
         <Fragment>
             <input
                 ref={ref}
-                className={classNames('ffe-hidden-checkbox', {
-                    'ffe-hidden-checkbox--dark': dark,
-                })}
+                className="ffe-hidden-checkbox"
                 id={id}
                 type="checkbox"
                 {...rest}
@@ -49,13 +46,10 @@ Checkbox.propTypes = {
     inline: bool,
     /** The label for the checkbox */
     children: oneOfType([node, func]),
-    /** Dark variant */
-    dark: bool,
 };
 
 Checkbox.defaultProps = {
     inline: true,
-    dark: false,
 };
 
 export default Checkbox;

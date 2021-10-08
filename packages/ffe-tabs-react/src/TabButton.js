@@ -3,7 +3,7 @@ import { bool, string } from 'prop-types';
 import classNames from 'classnames';
 
 export default function TabButton(props) {
-    const { className, selected, ghost, condensed, dark, ...rest } = props;
+    const { className, selected, ghost, condensed, ...rest } = props;
     return (
         <button
             type="button"
@@ -14,7 +14,6 @@ export default function TabButton(props) {
                 { 'ffe-tab-button--selected': selected },
                 { 'ffe-tab-button--ghost': ghost },
                 { 'ffe-tab-button--condensed': condensed },
-                { 'ffe-tab-button--dark': dark },
                 className,
             )}
             {...rest}
@@ -31,12 +30,6 @@ TabButton.propTypes = {
     condensed: bool,
     /** Additional css classes */
     className: string,
-    /** Dark variant */
-    dark: bool,
     /** Id of the element it controls */
     'aria-controls': string.isRequired,
-};
-
-TabButton.defaultProps = {
-    dark: false,
 };

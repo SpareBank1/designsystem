@@ -72,23 +72,4 @@ du kan spre på labelen.
 </Checkbox>
 ```
 
-Variant _dark_ for interne løsninger med mørk bakgrunn.
-
-```js { "props": { "className": "sb1ds-example-dark" } }
-<fieldset className="ffe-fieldset">
-    <legend className="ffe-form-label ffe-form-label--block ffe-form-label--dark">
-        Hvilke TV kanal ser du på?
-    </legend>
-    <Checkbox name="newspapers" value="nrk" dark={true}>
-        NRK
-    </Checkbox>
-    <Checkbox name="newspapers" value="tv2" dark={true}>
-        TV2
-    </Checkbox>
-    <Checkbox name="newspapers" value="tvnorge" dark={true}>
-        TVNorge
-    </Checkbox>
-</fieldset>
-```
-
 Komponenten videresender alle udokumenterte props til `<input />`-elementet.

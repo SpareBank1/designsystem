@@ -25,7 +25,6 @@ export default class PhoneNumber extends React.Component {
             countryCodeAndNumberFieldMessage,
             className,
             extraMargin,
-            dark,
             countryCodeRef,
             numberRef,
         } = this.props;
@@ -66,28 +65,18 @@ export default class PhoneNumber extends React.Component {
                 <div className="ffe-phone-number__input-group">
                     <div className="ffe-phone-number__country-code">
                         <label
-                            className={classNames('ffe-form-label', {
-                                'ffe-form-label--dark': dark,
-                            })}
+                            className="ffe-form-label"
                             htmlFor={this.countryCodeId}
                         >
                             {text.COUNTRY_CODE}
                         </label>
                         <div className="ffe-phone-number__input-group">
-                            <span
-                                className={classNames(
-                                    'ffe-phone-number__plus',
-                                    { 'ffe-phone-number--dark__plus': dark },
-                                )}
-                            >
-                                +
-                            </span>
+                            <span className="ffe-phone-number__plus">+</span>
                             <input
                                 id={this.countryCodeId}
                                 className={classNames(
                                     'ffe-input-field',
                                     'ffe-phone-number__country-code-input',
-                                    { 'ffe-input-field--dark': dark },
                                 )}
                                 type="tel"
                                 disabled={disabled}
@@ -114,9 +103,7 @@ export default class PhoneNumber extends React.Component {
                     </div>
                     <div className="ffe-phone-number__number">
                         <label
-                            className={classNames('ffe-form-label', {
-                                'ffe-form-label--dark': dark,
-                            })}
+                            className="ffe-form-label"
                             htmlFor={this.numberId}
                         >
                             {text.PHONE_NUMBER}
@@ -127,7 +114,6 @@ export default class PhoneNumber extends React.Component {
                             className={classNames(
                                 'ffe-input-field',
                                 'ffe-phone-number__phone-input',
-                                { 'ffe-input-field--dark': dark },
                             )}
                             onChange={onNumberChange}
                             onBlur={onNumberBlur}
@@ -192,8 +178,6 @@ PhoneNumber.propTypes = {
      *  space for one line of content, so keep messages short.
      */
     extraMargin: bool,
-    /** Dark variant */
-    dark: bool,
     /** Ref-setting function, or ref created by useRef, passed to the country code input element */
     countryCodeRef: oneOfType([func, shape({ current: object })]),
     /** Ref-setting function, or ref created by useRef, passed to the number input element */
@@ -207,6 +191,5 @@ PhoneNumber.defaultProps = {
     onNumberChange: noop,
     onCountryCodeBlur: noop,
     onNumberBlur: noop,
-    dark: false,
     extraMargin: true,
 };

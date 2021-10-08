@@ -23,7 +23,6 @@ const RadioSwitch = props => {
         rightValue,
         rightInnerRef,
         condensed,
-        dark,
         'aria-invalid': ariaInvalid,
         ...rest
     } = props;
@@ -35,11 +34,9 @@ const RadioSwitch = props => {
             <BaseRadioButton
                 className={classNames('ffe-radio-switch', className, {
                     'ffe-radio-switch--condensed': condensed,
-                    'ffe-radio-switch--dark': dark,
                 })}
                 value={leftValue}
                 innerRef={leftInnerRef}
-                dark={dark}
                 aria-invalid={String(
                     ariaInvalid === 'true' &&
                         (props.selectedValue === leftValue || noneSelected),
@@ -51,11 +48,9 @@ const RadioSwitch = props => {
             <BaseRadioButton
                 className={classNames('ffe-radio-switch', className, {
                     'ffe-radio-switch--condensed': condensed,
-                    'ffe-radio-switch--dark': dark,
                 })}
                 value={rightValue}
                 innerRef={rightInnerRef}
-                dark={dark}
                 aria-invalid={String(
                     ariaInvalid === 'true' &&
                         (props.selectedValue === rightValue || noneSelected),
@@ -87,17 +82,11 @@ RadioSwitch.propTypes = {
     selectedValue: oneOfType([bool, string, number]),
     /** Condensed modifier. Use in condensed designs */
     condensed: bool,
-    /** Dark variant */
-    dark: bool,
     /**
      * Indicates whether the radio buttons inside this radio button group is
      * invalid or not. Propagated to all children.
      * */
     'aria-invalid': oneOf(['true', 'false']),
-};
-
-RadioSwitch.defaultProps = {
-    dark: false,
 };
 
 export default RadioSwitch;
