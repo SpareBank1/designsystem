@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@1.2.0...@sb1/ffe-component-index@1.2.1) (2021-10-08)
+
+
+### Bug Fixes
+
+* **component-overview:** endre collapse knapp til expandbutton komponent ([33d08bd](https://github.com/SpareBank1/designsystem/commit/33d08bda3b9f1426480364a30d53cc806b454bf2))
+
+
+
+
+
 # [1.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@1.1.13...@sb1/ffe-component-index@1.2.0) (2021-10-07)
 
 
