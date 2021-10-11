@@ -1,6 +1,5 @@
 import {
     ButtonGroup,
-    ActionButton,
     PrimaryButton,
     SecondaryButton,
     TertiaryButton,
@@ -8,31 +7,10 @@ import {
 
 <>
     <ButtonGroup>
-        <ActionButton>Neste</ActionButton>
-        <ActionButton element="a" href="#buttongroup">
-            Lenke
-        </ActionButton>
-        <SecondaryButton>Avbryt</SecondaryButton>
-        <SecondaryButton element="a" href="#buttongroup">
-            Lenke
-        </SecondaryButton>
-        <TertiaryButton>Hopp over</TertiaryButton>
-        <TertiaryButton element="a" href="#buttongroup">
-            Lenke
-        </TertiaryButton>
+        <SecondaryButton>Forrige</SecondaryButton>
+        <PrimaryButton>Neste</PrimaryButton>
     </ButtonGroup>
     <ButtonGroup>
-        <PrimaryButton>Neste</PrimaryButton>
-        <PrimaryButton element="a" href="#buttongroup">
-            Lenke
-        </PrimaryButton>
-        <SecondaryButton>Avbryt</SecondaryButton>
-        <SecondaryButton element="a" href="#buttongroup">
-            Lenke
-        </SecondaryButton>
-        <TertiaryButton>Hopp over</TertiaryButton>
-        <TertiaryButton element="a" href="#buttongroup">
-            Lenke
-        </TertiaryButton>
+        <TertiaryButton>Avbryt</TertiaryButton>
     </ButtonGroup>
 </>;
