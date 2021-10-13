@@ -165,32 +165,6 @@ initialState = { item: companies[2] };
 </InputGroup>;
 ```
 
-Variant _dark_ for interne løsninger med mørk bakgrunn.
-
-```js { "props": { "className": "sb1ds-example-dark" } }
-const { InputGroup, Label } = require('../../ffe-form-react');
-const companies = require('../exampleData').companiesWithMessageCount;
-const labelId = 'labelId6';
-const inputId = 'inputId6';
-<div className="ffe-input-group">
-    <Label htmlFor={inputId} dark={true} id={labelId}>
-        Velg bedrift
-    </Label>
-    <SearchableDropdown
-        id={inputId}
-        labelId={labelId}
-        inputProps={{ placeholder: 'Velg' }}
-        dropdownAttributes={['organizationName']}
-        dropdownList={companies}
-        noMatch={{ text: 'Søket ga ingen treff' }}
-        onChange={item => setState({ item })}
-        searchAttributes={['organizationName']}
-        dark={true}
-        locale="nb"
-    />
-</div>;
-```
-
 Kan rendre titusenvis av valgalternativer uten ytelsesproblemer.
 
 ```js
