@@ -34,12 +34,6 @@ SecondaryButton.propTypes = {
     leftIcon: node,
     /** Icon shown to the right of the label */
     rightIcon: node,
-    /** Dark variant */
-    dark: bool,
-};
-
-SecondaryButton.defaultProps = {
-    dark: false,
 };
 
 export default SecondaryButton;

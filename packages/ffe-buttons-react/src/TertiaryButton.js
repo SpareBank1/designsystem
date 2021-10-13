@@ -4,7 +4,6 @@ import {
     node,
     oneOfType,
     string,
-    bool,
     object,
     shape,
     elementType,
@@ -28,12 +27,6 @@ TertiaryButton.propTypes = {
     leftIcon: node,
     /** Icon shown to the right of the label */
     rightIcon: node,
-    /** Dark variant */
-    dark: bool,
-};
-
-TertiaryButton.defaultProps = {
-    dark: false,
 };
 
 export default TertiaryButton;

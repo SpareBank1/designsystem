@@ -10,14 +10,5 @@ const ButtonGroup = require('./ButtonGroup').default;
     >
         Primary knapp
     </PrimaryButton>
-</ButtonGroup>
-```
-
-Variant _dark_ for interne løsninger med mørk bakgrunn.
-
-```js { "props": { "className": "sb1ds-example-dark" } }
-
-<ButtonGroup thin={true}>
-    <PrimaryButton onClick={f => f} dark={true}>Primary knapp</PrimaryButton>
-</ButtonGroup>
+</ButtonGroup>;
 ```

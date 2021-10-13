@@ -4,7 +4,6 @@ import {
     func,
     node,
     string,
-    bool,
     object,
     shape,
     elementType,
@@ -22,12 +21,6 @@ BackButton.propTypes = {
     element: oneOfType([func, string, elementType]),
     /** Ref-setting function, or ref created by useRef, passed to the button element */
     innerRef: oneOfType([func, shape({ current: object })]),
-    /** Dark variant */
-    dark: bool,
-};
-
-BackButton.defaultProps = {
-    dark: false,
 };
 
 export default BackButton;
