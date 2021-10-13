@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [18.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@18.1.4...@sb1/ffe-account-selector-react@18.2.0) (2021-10-13)
+
+
+### Features
+
+* **ffe-account-selector-react:** add open and close prop to account-selector ([33898df](https://github.com/SpareBank1/designsystem/commit/33898df2719c9fac9471c95890a33cad665dd3f2))
+
+
+
+
+
 ## [18.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@18.1.3...@sb1/ffe-account-selector-react@18.1.4) (2021-10-08)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react

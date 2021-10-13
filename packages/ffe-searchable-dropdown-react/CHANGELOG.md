@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [13.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@13.2.1...@sb1/ffe-searchable-dropdown-react@13.3.0) (2021-10-13)
+
+
+### Features
+
+* **ffe-searchable-dropdown-react:** add open and close prop to account-selector ([1550160](https://github.com/SpareBank1/designsystem/commit/1550160d5f4ff6df1df8f2db54328f8598ca7bc0))
+
+
+
+
+
 ## [13.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@13.2.0...@sb1/ffe-searchable-dropdown-react@13.2.1) (2021-10-08)
 
 **Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react

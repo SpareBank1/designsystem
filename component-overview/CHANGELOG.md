@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@1.2.2...@sb1/ffe-component-index@1.3.0) (2021-10-13)
+
+
+### Bug Fixes
+
+* **component-overview:** oppdater buttongroup eksempler ([081a05d](https://github.com/SpareBank1/designsystem/commit/081a05d3d6253531a9e4881cfd982d3136a2300c))
+
+
+### Features
+
+* **component-overview:** add header example ([f61539e](https://github.com/SpareBank1/designsystem/commit/f61539e452e2401b08b65f942ff32a5b49ac71e3))
+
+
+
+
+
 ## [1.2.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@1.2.1...@sb1/ffe-component-index@1.2.2) (2021-10-13)
 
 **Note:** Version bump only for package @sb1/ffe-component-index
