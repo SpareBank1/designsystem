@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [17.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@17.0.6...@sb1/ffe-header@17.0.7) (2021-10-13)
+
+
+### Bug Fixes
+
+* **ffe-header:** update colours to improve UU ([4ac7ad4](https://github.com/SpareBank1/designsystem/commit/4ac7ad4277fc195f8632a8070dedac3392412256))
+
+
+
+
+
 ## [17.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@17.0.5...@sb1/ffe-header@17.0.6) (2021-10-08)
 
 **Note:** Version bump only for package @sb1/ffe-header
