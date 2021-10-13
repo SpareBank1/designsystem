@@ -63,6 +63,8 @@ const SearchableDropdown = ({
     selectedItem,
     highCapacity = false,
     isLoading = false,
+    onOpen,
+    onClose,
 }) => {
     const [state, dispatch] = useReducer(
         createReducer({
@@ -164,6 +166,15 @@ const SearchableDropdown = ({
             type: stateChangeTypes.DropdownListPropUpdated,
         });
     }, [dropdownList, dispatch]);
+
+    useEffect(() => {
+        if (state.isExpanded && typeof onOpen === 'function') {
+            onOpen();
+        }
+        if (!state.isExpanded && typeof onClose === 'function') {
+            onClose();
+        }
+    }, [state.isExpanded]);
 
     /**
      * Because of changes in event handling between react v16 and v17, the check for the
@@ -441,6 +452,12 @@ SearchableDropdown.propTypes = {
      * that has loaded.
      */
     isLoading: bool,
+
+    /** Function used when dropdown opens */
+    onOpen: func,
+
+    /**  Function used when dropdown closes */
+    onClose: func,
 };
 
 export default SearchableDropdown;

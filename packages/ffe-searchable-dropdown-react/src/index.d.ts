@@ -35,6 +35,8 @@ export interface SearchableDropdownProps<T> {
     ) => (item: T) => boolean;
     hichCapacity?: boolean;
     isLoading?: boolean;
+    onOpen?: () => void;
+    onClose?: () => void;
 }
 
 declare class SearchableDropdown<T> extends React.Component<
