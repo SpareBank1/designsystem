@@ -50,6 +50,8 @@ const AccountSelector = ({
     ariaInvalid,
     withSpaceForDetails = true,
     highCapacity = false,
+    onOpen,
+    onClose,
 }) => {
     const [inputValue, setInputValue] = useState(selectedAccount?.name || '');
 
@@ -57,11 +59,11 @@ const AccountSelector = ({
     if (formatAccountNumber) {
         formatter = formatIncompleteAccountNumber;
     }
-
     /*
      * This matcher function closely resembles the default one of SearchableDropdown,
      * but it ignores all spaces and periods so that account number formatting won't mess with the search.
      */
+
     const searchMatcherIgnoringAccountNumberFormatting = (
         searchString,
         searchAttributes,
@@ -75,7 +77,6 @@ const AccountSelector = ({
             cleanString(item[searchAttribute]).includes(cleanedSearchString),
         );
     };
-
     const onInputChange = event => {
         setInputValue(event.target.value);
         if (inputProps?.onChange) {
@@ -151,6 +152,8 @@ const AccountSelector = ({
                     searchMatcher={searchMatcherIgnoringAccountNumberFormatting}
                     selectedItem={selectedAccount}
                     highCapacity={highCapacity}
+                    onOpen={onOpen}
+                    onClose={onClose}
                 />
                 {selectedAccount && (
                     <AccountDetails
@@ -219,6 +222,10 @@ AccountSelector.propTypes = {
      * The account selector with highCapacity is currently not working with VoiceOver on ios.
      */
     highCapacity: bool,
+    /** Prop passed to the dropdown list */
+    onClose: func,
+    /** Prop passed to the dropdown list */
+    onOpen: func,
 };
 
 export default AccountSelector;

@@ -37,6 +37,8 @@ export interface AccountSelectorProps {
     withSpaceForDetails?: boolean;
     ariaInvalid: boolean;
     highCapacity?: boolean;
+    onOpen?: () => void;
+    onClose?: () => void;
 }
 
 declare class AccountSelector extends React.Component<AccountSelectorProps> {}
