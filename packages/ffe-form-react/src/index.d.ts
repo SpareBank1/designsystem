@@ -7,7 +7,6 @@ export interface CheckboxProps
     id?: string;
     inline?: boolean;
     children?: React.ReactNode;
-    dark?: boolean;
 }
 
 export interface BaseFieldMessageProps
@@ -22,7 +21,6 @@ export interface InputProps
     className?: string;
     inline?: boolean;
     textLike?: boolean;
-    dark?: boolean;
 }
 
 export interface PhoneNumberProps {
@@ -39,7 +37,6 @@ export interface PhoneNumberProps {
     countryCodeAndNumberFieldMessage?: string | React.ReactNode;
     className?: string;
     extraMargin?: boolean;
-    dark?: boolean;
     countryCodeRef?: React.Ref<HTMLInputElement>;
     numberRef?: React.Ref<HTMLInputElement>;
 }
@@ -50,7 +47,6 @@ export interface LabelProps
     children: React.ReactNode;
     className?: string;
     htmlFor?: string;
-    dark?: boolean;
 }
 
 export interface InputGroupProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -74,7 +70,6 @@ export interface TooltipProps extends React.HTMLAttributes<HTMLSpanElement> {
     isOpen?: boolean;
     onClick?: (e: React.MouseEvent | undefined) => void;
     tabIndex?: number;
-    dark?: boolean;
 }
 
 export interface RadioBlockProps
@@ -82,12 +77,6 @@ export interface RadioBlockProps
     checked?: boolean;
     children?: React.ReactNode;
     className?: string;
-    /* Support for the dark theme has not been added for this component
-     * but can still be passed down from a parent `RadioButtonInputGroup`.
-     * It should not be passed down manually unless support for dark theme
-     * is implemented.
-     */
-    dark?: boolean;
     innerRef?: React.Ref<HTMLInputElement>;
     label: string | React.ReactNode;
     labelClass?: string;
@@ -115,7 +104,6 @@ export interface RadioButtonProps extends WeakInputAttributes {
     tooltip?: string;
     tooltipProps?: TooltipProps;
     value: boolean | string | number;
-    dark?: boolean;
 }
 
 // As onChange has a different type than React.FieldsetHTMLAttributes<T> we have to weaken it
@@ -136,7 +124,6 @@ export interface RadioButtonInputGroupProps extends WeakFieldSetAttributes {
     onChange?: React.ChangeEventHandler<HTMLInputElement>;
     selectedValue?: string | boolean | number;
     tooltip?: string | React.ReactNode;
-    dark?: boolean;
 }
 
 export interface RadioSwitchProps
@@ -156,13 +143,11 @@ export interface RadioSwitchProps
     tooltip?: string;
     tooltipProps?: TooltipProps;
     condensed?: boolean;
-    dark?: boolean;
 }
 
 export interface TextAreaProps
     extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
     className?: string;
-    dark?: boolean;
 }
 
 declare class Checkbox extends React.Component<CheckboxProps, any> {}

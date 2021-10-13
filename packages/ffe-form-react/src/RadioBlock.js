@@ -11,12 +11,6 @@ class RadioBlock extends Component {
             checked,
             children,
             className,
-            /* Support for the dark theme has not been added for this component
-             * but since we're passing props onwards to DOM nodes we need to make
-             * sure we don't pass this as part of "inputProps" since it's not being
-             * used but can still be passed down from a parent `RadioButtonInputGroup`.
-             */
-            dark, //eslint-disable-line
             innerRef,
             label,
             labelClass,

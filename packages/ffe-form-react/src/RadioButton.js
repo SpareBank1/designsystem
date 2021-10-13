@@ -5,7 +5,7 @@ import classNames from 'classnames';
 import BaseRadioButton from './BaseRadioButton';
 
 const RadioButton = props => {
-    const { className, inline, dark, ...rest } = props;
+    const { className, inline, ...rest } = props;
 
     return (
         <BaseRadioButton
@@ -14,7 +14,6 @@ const RadioButton = props => {
                 { 'ffe-radio-button--inline': inline },
                 className,
             )}
-            dark={dark}
             {...rest}
         />
     );
@@ -25,12 +24,6 @@ RadioButton.propTypes = {
     className: string,
     /** Indicates whether the radio button is rendered inline or as a block */
     inline: bool,
-    /** Dark variant */
-    dark: bool,
-};
-
-RadioButton.defaultProps = {
-    dark: false,
 };
 
 export default RadioButton;
