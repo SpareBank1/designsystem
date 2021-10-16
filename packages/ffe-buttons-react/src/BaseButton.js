@@ -47,7 +47,6 @@ const BaseButton = props => {
                 { 'ffe-button--loading': isLoading && supportsSpinner },
                 className,
             )}
-            disabled={disabled || (isLoading && supportsSpinner)}
             ref={innerRef}
             {...rest}
         >
