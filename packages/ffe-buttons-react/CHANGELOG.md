@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [14.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@14.0.2...@sb1/ffe-buttons-react@14.0.3) (2021-10-18)
+
+
+### Bug Fixes
+
+* **ffe-buttons-react:** remove disabled attribute when is-loading ([d666aa1](https://github.com/SpareBank1/designsystem/commit/d666aa1716756e4f878695b5455a09d3b3cd4ecb))
+
+
+
+
+
 ## [14.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@14.0.1...@sb1/ffe-buttons-react@14.0.2) (2021-10-08)
 
 **Note:** Version bump only for package @sb1/ffe-buttons-react
