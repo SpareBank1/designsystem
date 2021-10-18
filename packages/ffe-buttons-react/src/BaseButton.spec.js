@@ -70,7 +70,6 @@ describe('<BaseButton />', () => {
                 isLoading: true,
             });
             expect(wrapper.prop('aria-disabled')).toBe(true);
-            expect(wrapper.prop('disabled')).toBe(true);
         });
         it('does nothing for unsupported button type', () => {
             const wrapper = getWrapper({
@@ -80,7 +79,6 @@ describe('<BaseButton />', () => {
             expect(wrapper.hasClass('ffe-button--loading')).toBe(false);
             expect(wrapper.prop('aria-busy')).toBe(false);
             expect(wrapper.prop('aria-disabled')).toBe(false);
-            expect(wrapper.prop('disabled')).toBe(false);
         });
     });
 });
