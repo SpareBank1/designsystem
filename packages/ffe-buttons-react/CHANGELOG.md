@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [14.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@14.0.3...@sb1/ffe-buttons-react@14.0.4) (2021-10-19)
+
+
+### Bug Fixes
+
+* **ffe-buttons-react:** fjerner gjenglemte referanser til --dark ([8728a6b](https://github.com/SpareBank1/designsystem/commit/8728a6ba7657f21e9a4bd10b8c419eb9e21532dc))
+
+
+
+
+
 ## [14.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@14.0.2...@sb1/ffe-buttons-react@14.0.3) (2021-10-18)
 
 

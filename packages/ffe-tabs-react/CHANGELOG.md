@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@5.0.6...@sb1/ffe-tabs-react@5.0.7) (2021-10-19)
+
+
+### Bug Fixes
+
+* **ffe-tabs-react:** fjerner gjenglemte referanser til --dark ([79c1fa6](https://github.com/SpareBank1/designsystem/commit/79c1fa634d7cefbd5b3a3bba0b88b9c5ab58b623))
+
+
+
+
+
 ## [5.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@5.0.5...@sb1/ffe-tabs-react@5.0.6) (2021-10-08)
 
 **Note:** Version bump only for package @sb1/ffe-tabs-react

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [13.3.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@13.3.0...@sb1/ffe-searchable-dropdown-react@13.3.1) (2021-10-19)
+
+
+### Bug Fixes
+
+* **ffe-searchable-dropdown-react:** fjerner gjenglemte referanser til --dark ([fe381db](https://github.com/SpareBank1/designsystem/commit/fe381dbf67679b4dfeb8d9b885095942e346d79c))
+
+
+
+
+
 # [13.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@13.2.1...@sb1/ffe-searchable-dropdown-react@13.3.0) (2021-10-13)
 
 

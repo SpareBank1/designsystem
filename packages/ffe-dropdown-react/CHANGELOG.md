@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.1.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-dropdown-react@5.1.6...@sb1/ffe-dropdown-react@5.1.7) (2021-10-19)
+
+
+### Bug Fixes
+
+* **ffe-dropdown-react:** fjerner gjenglemte referanser til --dark ([e89f245](https://github.com/SpareBank1/designsystem/commit/e89f2455dee35b147a14eb3ff79a34b7261ced0c))
+
+
+
+
+
 ## [5.1.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-dropdown-react@5.1.5...@sb1/ffe-dropdown-react@5.1.6) (2021-10-08)
 
 **Note:** Version bump only for package @sb1/ffe-dropdown-react
