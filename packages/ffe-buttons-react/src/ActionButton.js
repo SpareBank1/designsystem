@@ -50,11 +50,8 @@ ActionButton.propTypes = {
     leftIcon: node,
     /** Icon shown to the right of the label */
     rightIcon: node,
-    /** Dark variant */
-    dark: bool,
 };
 
 ActionButton.defaultProps = {
     ghost: false,
-    dark: false,
 };

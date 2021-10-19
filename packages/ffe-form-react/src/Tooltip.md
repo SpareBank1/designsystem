@@ -21,9 +21,3 @@ const initialState = { open: false };
     </div>
 </>;
 ```
-
-Variant _dark_ for interne løsninger med mørk bakgrunn.
-
-```js { "props": { "className": "sb1ds-example-dark" } }
-<Tooltip dark={true}>Dette er ett godt tips</Tooltip>
-```

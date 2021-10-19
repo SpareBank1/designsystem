@@ -24,7 +24,6 @@ export interface BaseButtonProps extends MinimalBaseButtonProps {
     isLoading?: boolean;
     leftIcon?: React.ReactNode;
     rightIcon?: React.ReactNode;
-    dark?: boolean;
 }
 
 export interface ActionButtonProps extends BaseButtonProps {
@@ -33,7 +32,6 @@ export interface ActionButtonProps extends BaseButtonProps {
 
 export interface BackButtonProps extends MinimalBaseButtonProps {
     children?: React.ReactNode;
-    dark?: boolean;
 }
 
 export interface ButtonGroupProps {
@@ -80,7 +78,6 @@ export interface TertiaryButtonProps extends MinimalBaseButtonProps {
     children?: React.ReactNode;
     leftIcon?: React.ReactNode;
     rightIcon?: React.ReactNode;
-    dark?: boolean;
 }
 
 declare class ActionButton extends React.Component<ActionButtonProps, any> {}

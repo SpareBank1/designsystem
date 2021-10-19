@@ -5,7 +5,6 @@ export interface DropdownProps
     children?: React.ReactNode;
     className?: string;
     inline?: boolean;
-    dark?: boolean;
     innerRef?: React.Ref<HTMLSelectElement>;
 }
 

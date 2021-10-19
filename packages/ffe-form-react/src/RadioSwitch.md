@@ -108,31 +108,3 @@ initialState = { selected: undefined, fieldMessage: 'Du må gjøre et valg' };
     )}
 </RadioButtonInputGroup>;
 ```
-
-Variant _dark_ for interne løsninger med mørk bakgrunn.
-
-```js { "props": { "className": "sb1ds-example-dark" } }
-const { RadioButtonInputGroup } = require('.');
-
-initialState = { selected: undefined };
-
-<RadioButtonInputGroup
-    label="Røykfri siste 2 år?"
-    tooltip="Røyk er ikke bra for deg!"
-    name="non-smoker"
-    onChange={e => setState({ selected: e.target.value })}
-    selectedValue={state.selected}
-    dark={true}
->
-    {inputProps => (
-        <RadioSwitch
-            leftLabel="Ja"
-            leftValue="true"
-            rightLabel="Nei"
-            rightValue="false"
-            dark={true}
-            {...inputProps}
-        />
-    )}
-</RadioButtonInputGroup>;
-```

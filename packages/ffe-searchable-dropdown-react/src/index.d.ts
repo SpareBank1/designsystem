@@ -21,7 +21,6 @@ export interface SearchableDropdownProps<T> {
     selectedItem?: T;
     maxRenderedDropdownElements?: number;
     onChange?: (dropdownListItem: T) => any;
-    dark?: boolean;
     listElementBody?: (
         props: ListElementBodyProps<T>,
     ) => React.FC<HTMLDivElement>;

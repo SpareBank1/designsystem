@@ -14,7 +14,6 @@ export interface TabButtonProps
     ghost?: boolean;
     condensed?: boolean;
     className?: string;
-    dark?: boolean;
     'aria-controls': string;
 }
 
