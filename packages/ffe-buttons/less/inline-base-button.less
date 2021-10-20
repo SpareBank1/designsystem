@@ -30,7 +30,6 @@
         transform: scale(0.97);
     }
 
-    &:active,
     &:focus {
         box-shadow: 0 0 0 2px @ffe-farge-vann;
         outline: none;
@@ -39,6 +38,10 @@
                 box-shadow: 0 0 0 2px @ffe-farge-hvit;
             }
         }
+    }
+
+    &:focus:not(:focus-visible) {
+        box-shadow: none;
     }
 }
 
@@ -132,7 +135,6 @@
         width: 100%;
     }
 
-    &:active,
     &:focus {
         box-shadow: none;
         border-color: @ffe-farge-vann;
@@ -145,6 +147,10 @@
                 color: @ffe-farge-vann-30;
             }
         }
+    }
+
+    &:focus:not(:focus-visible) {
+        border-color: transparent;
     }
 
     &:hover {

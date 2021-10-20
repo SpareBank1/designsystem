@@ -327,9 +327,13 @@
     text-decoration: none;
     word-wrap: break-word;
     line-height: 1em;
+    display: inline-block;
+    transition: all @ffe-transition-duration @ffe-ease;
+
     .native & {
         @media (prefers-color-scheme: dark) {
             color: @ffe-farge-vann-70;
+            border-color: @ffe-farge-vann-70;
         }
     }
 
@@ -359,6 +363,24 @@
 
     &--no-underline {
         border-bottom: none;
+    }
+
+    &:focus {
+        border-color: @ffe-farge-hvit;
+        border-radius: 1px;
+        background-color: @ffe-farge-vann;
+        box-shadow: 0 0 0 2px @ffe-farge-vann;
+        color: @ffe-farge-hvit;
+        outline: none;
+
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                border-color: @ffe-farge-svart !important;
+                background-color: @ffe-farge-vann-70;
+                box-shadow: 0 0 0 2px @ffe-farge-vann-70;
+                color: @ffe-farge-svart !important;
+            }
+        }
     }
 }
 
