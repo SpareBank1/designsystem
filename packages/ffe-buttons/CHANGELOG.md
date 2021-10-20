@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [13.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@13.0.6...@sb1/ffe-buttons@13.0.7) (2021-10-20)
+
+
+### Bug Fixes
+
+* **ffe-buttons:** fjerner fokus-markering fra active state ([6401b81](https://github.com/SpareBank1/designsystem/commit/6401b814e44b6c45b4d8193902bad7015af7a25c))
+
+
+
+
+
 ## [13.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@13.0.5...@sb1/ffe-buttons@13.0.6) (2021-10-08)
 
 **Note:** Version bump only for package @sb1/ffe-buttons
