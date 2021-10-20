@@ -3,33 +3,36 @@ import SearchableDropdown from '@sb1/ffe-searchable-dropdown-react';
 import { useState } from 'react';
 
 () => {
-    const companies = [{
-        organizationName: 'Bedriften',
-        organizationNumber: '912602370',
-        quantityUnprocessedMessages: 5,
-    },
-    {
-        organizationName: 'Sønn & co',
-        organizationNumber: '812602372',
-        quantityUnprocessedMessages: 3,
-    },
-    {
-        organizationName: 'Beslag skytter',
-        organizationNumber: '812602552',
-        quantityUnprocessedMessages: 1,
-    }, 
-    {
-        organizationName: 'Kaffekoppen',
-        organizationNumber: '812602222',
-        quantityUnprocessedMessages: 8,
-    },
-    {
-        organizationName: 'Sats',
-        organizationNumber: '809602772',
-        quantityUnprocessedMessages: 2,
-    }];
-    
-    const labelId = 'labelId1';
+    const companies = [
+        {
+            organizationName: 'Bedriften',
+            organizationNumber: '912602370',
+            quantityUnprocessedMessages: 5,
+        },
+        {
+            organizationName: 'Sønn & co',
+            organizationNumber: '812602372',
+            quantityUnprocessedMessages: 3,
+        },
+        {
+            organizationName: 'Beslag skytter',
+            organizationNumber: '812602552',
+            quantityUnprocessedMessages: 1,
+        },
+        {
+            organizationName: 'Kaffekoppen',
+            organizationNumber: '812602222',
+            quantityUnprocessedMessages: 8,
+        },
+        {
+            organizationName: 'Sats',
+            organizationNumber: '809602772',
+            quantityUnprocessedMessages: 2,
+        },
+    ];
+
+    const id = 'searchabledropdow-customMatchFunc';
+    const labelId = `${id}-label`;
     const [selectedOption, setSelectedOption] = useState(null);
     const cleanString = value => `${value}`.replace(/\s/g, '').toLowerCase();
     const searchMatcher = (inputValue, searchAttributes) => item => {
@@ -43,6 +46,7 @@ import { useState } from 'react';
     return (
         <InputGroup label="Velg bedrift" labelId={labelId}>
             <SearchableDropdown
+                id={id}
                 labelId={labelId}
                 inputProps={{ placeholder: 'Velg' }}
                 dropdownAttributes={['organizationName', 'organizationNumber']}
@@ -54,4 +58,4 @@ import { useState } from 'react';
             />
         </InputGroup>
     );
-}
+};
