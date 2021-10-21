@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@1.3.3...@sb1/ffe-component-index@1.3.4) (2021-10-21)
+
+
+### Bug Fixes
+
+* **component-overview:** add id-prop to SearchableDrowpdown examples ([9230d15](https://github.com/SpareBank1/designsystem/commit/9230d15f9f1578e984c7fb4d703363d55c16a039))
+
+
+
+
+
 ## [1.3.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@1.3.2...@sb1/ffe-component-index@1.3.3) (2021-10-20)
 
 **Note:** Version bump only for package @sb1/ffe-component-index

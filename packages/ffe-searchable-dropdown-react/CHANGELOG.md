@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [13.3.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@13.3.2...@sb1/ffe-searchable-dropdown-react@13.3.3) (2021-10-21)
+
+
+### Bug Fixes
+
+* **ffe-searchable-dropdown-react:** correct name of focusToggleButton prop ([e2a7275](https://github.com/SpareBank1/designsystem/commit/e2a7275d56f6c87c45baf34e9a29fe25a25dc905))
+
+
+
+
+
 ## [13.3.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@13.3.1...@sb1/ffe-searchable-dropdown-react@13.3.2) (2021-10-20)
 
 **Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react
