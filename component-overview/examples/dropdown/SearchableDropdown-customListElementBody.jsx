@@ -4,22 +4,25 @@ import { useState } from 'react';
 import { SmallText } from '@sb1/ffe-core-react';
 
 () => {
-    const companies = [{
-        organizationName: 'Bedriften',
-        organizationNumber: '912602370',
-        quantityUnprocessedMessages: 5,
-    },
-    {
-        organizationName: 'Sønn & co',
-        organizationNumber: '812602372',
-        quantityUnprocessedMessages: 3,
-    },
-    {
-        organizationName: 'Beslag skytter',
-        organizationNumber: '812602552',
-        quantityUnprocessedMessages: 1,
-    }]
-    const labelId = 'labelId1';
+    const companies = [
+        {
+            organizationName: 'Bedriften',
+            organizationNumber: '912602370',
+            quantityUnprocessedMessages: 5,
+        },
+        {
+            organizationName: 'Sønn & co',
+            organizationNumber: '812602372',
+            quantityUnprocessedMessages: 3,
+        },
+        {
+            organizationName: 'Beslag skytter',
+            organizationNumber: '812602552',
+            quantityUnprocessedMessages: 1,
+        },
+    ];
+    const id = 'searchabledropdow-customlistelembody';
+    const labelId = `${id}-label`;
     const [selectedOption, setSelectedOption] = useState(null);
     const CustomListElementBody = ({ item, isHighlighted }) => {
         return (
@@ -30,9 +33,13 @@ import { SmallText } from '@sb1/ffe-core-react';
                 }}
             >
                 <div>{item.organizationName}</div>
-                <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <div
+                    style={{ display: 'flex', justifyContent: 'space-between' }}
+                >
                     <SmallText>{item.organizationNumber}</SmallText>
-                    <SmallText>{item.quantityUnprocessedMessages} ulest</SmallText>
+                    <SmallText>
+                        {item.quantityUnprocessedMessages} ulest
+                    </SmallText>
                 </div>
             </div>
         );
@@ -40,6 +47,7 @@ import { SmallText } from '@sb1/ffe-core-react';
     return (
         <InputGroup label="Velg bedrift" labelId={labelId}>
             <SearchableDropdown
+                id={id}
                 labelId={labelId}
                 inputProps={{ placeholder: 'Velg' }}
                 dropdownAttributes={['organizationName', 'organizationNumber']}
@@ -52,4 +60,4 @@ import { SmallText } from '@sb1/ffe-core-react';
             />
         </InputGroup>
     );
-}
+};

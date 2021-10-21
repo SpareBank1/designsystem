@@ -3,25 +3,26 @@ import SearchableDropdown from '@sb1/ffe-searchable-dropdown-react';
 import { useState } from 'react';
 
 () => {
-    const isLoading = true;
-    const labelId = 'labelId1';
+    const listWithThirtyThousandElements = new Array(30000)
+        .fill(null)
+        .map((_, i) => ({ organizationName: `Navn ${i}` }));
+
+    const id = 'searchabledropdow-highCapacity';
+    const labelId = `${id}-label`;
     const [selectedOption, setSelectedOption] = useState(null);
     return (
         <InputGroup label="Velg bedrift" labelId={labelId}>
             <SearchableDropdown
+                id={id}
                 labelId={labelId}
                 inputProps={{ placeholder: 'Velg' }}
-                dropdownList={[]}
                 dropdownAttributes={['organizationName']}
-                isLoading={isLoading}
-                noMatch={
-                    isLoading
-                        ? { text: 'Laster bedrifter...' }
-                        : { text: 'Søket ga ingen treff' }
-                }
+                dropdownList={listWithThirtyThousandElements}
+                noMatch={{ text: 'Søket ga ingen treff' }}
                 onChange={item => setSelectedOption(item)}
                 searchAttributes={['organizationName']}
                 locale="nb"
+                highCapacity={true}
             />
         </InputGroup>
     );
