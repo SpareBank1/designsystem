@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [17.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@17.0.8...@sb1/ffe-header@17.0.9) (2021-10-22)
+
+
+### Bug Fixes
+
+* **ffe-header:** focus state i tråd med visuell identitet ([9043bd0](https://github.com/SpareBank1/designsystem/commit/9043bd0276fed5a5e12247a1c13eca0e73ae603f))
+
+
+
+
+
 ## [17.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@17.0.7...@sb1/ffe-header@17.0.8) (2021-10-20)
 
 **Note:** Version bump only for package @sb1/ffe-header

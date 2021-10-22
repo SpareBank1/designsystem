@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@5.0.10...@sb1/ffe-context-message@5.0.11) (2021-10-22)
+
+
+### Bug Fixes
+
+* **ffe-context-message:** unngå å overstyre default farge på focus ([7c709a6](https://github.com/SpareBank1/designsystem/commit/7c709a6767fe340f2c132aea4e8ff00cfcf83878))
+
+
+
+
+
 ## [5.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@5.0.9...@sb1/ffe-context-message@5.0.10) (2021-10-20)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
