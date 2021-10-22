@@ -44,6 +44,8 @@
     }
 
     &__link {
+        transition: all @ffe-transition-duration @ffe-ease;
+
         &:link,
         &:visited,
         &:active {
@@ -51,8 +53,7 @@
             text-decoration: none;
         }
 
-        &:hover,
-        &:focus {
+        &:hover {
             color: @ffe-farge-vann;
         }
 
@@ -70,6 +71,28 @@
             width: 100%;
             bottom: -2px;
             left: 0;
+        }
+
+        &--active:focus::after {
+            border-color: @ffe-farge-hvit;
+        }
+
+        &:focus {
+            border-radius: 1px;
+            background-color: @ffe-farge-vann;
+            box-shadow: 0 0 0 4px @ffe-farge-vann;
+            color: @ffe-farge-hvit;
+            outline: none;
+
+            .ffe-header__user-nav & {
+                box-shadow: none;
+            }
+        }
+
+        &:focus:not(:focus-visible) {
+            background-color: transparent;
+            box-shadow: none;
+            color: @ffe-farge-fjell;
         }
 
         &--disabled {
@@ -318,7 +341,7 @@
         min-width: 19px;
         height: 19px;
         padding: 0 @ffe-spacing-2xs;
-        line-height: 1.25rem;
+        line-height: 1.4rem;
         background: @ffe-farge-nordlys-wcag;
         color: @ffe-white;
         border-radius: 10px;
@@ -338,6 +361,13 @@
                 display: inline-block;
                 height: 60px;
                 line-height: 3.75rem;
+                transition: box-shadow @ffe-transition-duration @ffe-ease;
+
+                &:focus {
+                    outline: none;
+                    box-shadow: 0 0 0 2px @ffe-farge-vann;
+                    border-radius: 1px;
+                }
             }
         }
 
@@ -396,8 +426,8 @@
 
         &__icon-button--user-nav {
             .ffe-header__notification-bubble {
-                left: -17px;
-                bottom: 10px;
+                left: -8px;
+                bottom: 12px;
             }
         }
     }
