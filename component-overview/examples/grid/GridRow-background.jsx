@@ -5,15 +5,15 @@ import { Label } from '@sb1/ffe-form-react';
 
 () => {
     const backgroundColors = [
-        'blue-ice',
-        'blue-pale',
-        'green-mint',
-        'grey-cloud',
+        'frost-30',
         'sand',
-        'grey-warm',
-        'orange-salmon',
-        'red',
-        'blue-sky',
+        'sand-70',
+        'sand-30',
+        'syrin-70',
+        'syrin-30',
+        'vann',
+        'fjell',
+        'hvit',
     ];
     const [bgColor, setBgColor] = useState(backgroundColors[0]);
 
