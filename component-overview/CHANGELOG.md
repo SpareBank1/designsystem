@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@1.3.5...@sb1/ffe-component-index@1.4.0) (2021-10-28)
+
+
+### Bug Fixes
+
+* **component-overview:** add npmrc file to not generate package-lock ([2f0f52f](https://github.com/SpareBank1/designsystem/commit/2f0f52faf34681770e9abad6658713b5c2f64458))
+
+
+### Features
+
+* **component-overview:** add darkmode toggling ([9d1d766](https://github.com/SpareBank1/designsystem/commit/9d1d766dc1497cb3abce32078a6da988e8ac641a))
+
+
+
+
+
 ## [1.3.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@1.3.4...@sb1/ffe-component-index@1.3.5) (2021-10-22)
 
 **Note:** Version bump only for package @sb1/ffe-component-index
