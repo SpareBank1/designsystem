@@ -19,14 +19,6 @@ npm install --save-dev less less-plugin-npm-import    # less-plugin is optional,
 @import '../path/to/node_modules/@sb1/ffe-core/less/ffe'; // direct reference
 ```
 
-In previous versions of `ffe-core`, some styling was applied directly to DOM
-elements. This practice is discouraged, but if you require it for legacy
-reasons, it is still available as an optional import:
-
-```less
-@import '~@sb1/ffe-core/less/ffe-element-styling';
-```
-
 ### Importing piece by piece
 
 In some cases, you don't require everything in this package. You can import the
