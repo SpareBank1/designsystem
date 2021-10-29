@@ -30,7 +30,6 @@
   "devDependencies": {
     "@sb1/ffe-icons": "^12.15.2",
     "cheerio": "^1.0.0-rc.2",
-    "cross-env": "^5.2.0",
     "eslint": "^5.9.0",
     "eslint-loader": "^2.1.0",
     "json-loader": "^0.5.7",
