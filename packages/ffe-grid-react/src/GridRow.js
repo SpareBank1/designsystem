@@ -53,16 +53,15 @@ GridRow.defaultProps = {
 GridRow.propTypes = {
     /** Supported background colors */
     background: oneOf([
-        'blue-ice',
-        'blue-pale',
-        'green-mint',
-        'grey-cloud',
+        'frost-30',
         'sand',
-        'grey-warm',
-        'orange-salmon',
-        'red',
-        'blue-sky',
-        'white',
+        'sand-70',
+        'sand-30',
+        'syrin-70',
+        'syrin-30',
+        'vann',
+        'fjell',
+        'hvit',
     ]),
     /** Any extra classes are attached to the root node, in addition to ffe-grid__row classes */
     className: string,

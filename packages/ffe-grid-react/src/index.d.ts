@@ -15,16 +15,13 @@ export interface InlineGridProps extends React.HTMLAttributes<HTMLElement> {
 }
 
 type BackgroundColors =
-    | 'blue-ice'
-    | 'blue-pale'
-    | 'green-mint'
-    | 'grey-cloud'
+    | 'frost-30'
     | 'sand'
-    | 'grey-warm'
-    | 'orange-salmon'
-    | 'red'
-    | 'blue-sky'
-    | 'white';
+    | 'sand-70'
+    | 'sand-30'
+    | 'vann'
+    | 'fjell'
+    | 'hvit';
 
 export interface GridRowProps extends React.HTMLAttributes<HTMLElement> {
     background?: BackgroundColors;
