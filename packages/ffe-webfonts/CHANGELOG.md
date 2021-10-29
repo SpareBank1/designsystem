@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-webfonts@3.0.0...@sb1/ffe-webfonts@3.0.1) (2021-10-29)
+
+
+### Bug Fixes
+
+* **ffe-webfonts:** legger til italic font ([2f14bf1](https://github.com/SpareBank1/designsystem/commit/2f14bf131a46ae1046546b6dca25c688852ea66c))
+
+
+
+
+
 # [3.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-webfonts@2.2.1...@sb1/ffe-webfonts@3.0.0) (2021-02-22)
 
 

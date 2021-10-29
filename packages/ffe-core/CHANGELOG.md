@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [19.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@19.2.0...@sb1/ffe-core@19.2.1) (2021-10-29)
+
+
+### Bug Fixes
+
+* **ffe-core:** bytter til riktig font i emphasized text ([99f3a00](https://github.com/SpareBank1/designsystem/commit/99f3a0009c464e7716f8ea001d2e99c304823a31))
+* **ffe-core:** setter italic fallback til en font som ikke er bold ([558ce88](https://github.com/SpareBank1/designsystem/commit/558ce8844c4e78b6cb69948f5def0a8e08414cae))
+
+
+
+
+
 # [19.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@19.1.3...@sb1/ffe-core@19.2.0) (2021-10-20)
 
 
