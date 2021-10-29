@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@1.4.0...@sb1/ffe-component-index@1.4.1) (2021-10-29)
+
+
+### Bug Fixes
+
+* **component-overview:** oppdater liste over grid bakgrunnsfarger ([1ec5206](https://github.com/SpareBank1/designsystem/commit/1ec520678d4f5f868ca51c29a7d77d93ae7d3041))
+
+
+
+
+
 # [1.4.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@1.3.5...@sb1/ffe-component-index@1.4.0) (2021-10-28)
 
 

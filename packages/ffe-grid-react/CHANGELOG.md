@@ -3,6 +3,34 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [11.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@10.1.5...@sb1/ffe-grid-react@11.0.0) (2021-10-29)
+
+
+### Features
+
+* **ffe-grid-react:** oppdater bakgrunnsfarger ([35271a8](https://github.com/SpareBank1/designsystem/commit/35271a8b4d6e2bd248439f818c590aba25051049))
+
+
+### BREAKING CHANGES
+
+* **ffe-grid-react:** Alle bakgrunnsfarge properties har fått nye navn til
+å passe den nye visuelle profilen. Bruk av gamle navn/verdier vil gi feilmelding.
+Det er også fjernet en del alternativer som ikke lenger skal bli brukt.
+
+Nye fargealternativer er:
+- frost-30
+- sand
+- sand-70
+- sand-30
+- syrin-70
+- syrin-30
+- vann
+- fjell
+
+
+
+
+
 ## [10.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@10.1.4...@sb1/ffe-grid-react@10.1.5) (2021-03-26)
 
 

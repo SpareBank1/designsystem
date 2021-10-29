@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@11.0.30...@sb1/ffe-grid@12.0.0) (2021-10-29)
+
+
+### Features
+
+* **ffe-grid:** oppdater alle bakgrunnsfarger ([d7ce1ce](https://github.com/SpareBank1/designsystem/commit/d7ce1ce07363026173b9e3271ec3bcc97aa71e47))
+
+
+### BREAKING CHANGES
+
+* **ffe-grid:** Alle klassenavn og fargealternativer for bakgrunnsfarge på row og col
+er oppdatert med farger fra den nye visuelle profilen.
+
+
+
+
+
 ## [11.0.30](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@11.0.29...@sb1/ffe-grid@11.0.30) (2021-10-20)
 
 **Note:** Version bump only for package @sb1/ffe-grid
