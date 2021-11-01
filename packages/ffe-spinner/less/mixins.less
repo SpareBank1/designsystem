@@ -9,8 +9,14 @@
     border: 3px solid @color;
     border-top-color: transparent;
     border-radius: 50%;
-    visibility: visible;
     animation: spindindust 1s linear infinite;
+
+    /*
+     Avoid 'flashing' spinners - don't display spinner until some time has passed
+    */
+    visibility: hidden;
+    animation-delay: 500ms;
+
     .native & {
         @media (prefers-color-scheme: dark) {
             border-color: @ffe-farge-vann-70;
@@ -20,6 +26,7 @@
 
     @keyframes spindindust {
         0% {
+            visibility: visible;
             transform: rotate(0);
         }
         100% {
