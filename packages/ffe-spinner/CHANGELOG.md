@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner@4.0.6...@sb1/ffe-spinner@4.1.0) (2021-11-01)
+
+
+### Features
+
+* **ffe-spinner:** allow for time to pass before making spinner visible ([e4ad563](https://github.com/SpareBank1/designsystem/commit/e4ad56327c67dc2661572c5b51eec291580dd820))
+
+
+
+
+
 ## [4.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner@4.0.5...@sb1/ffe-spinner@4.0.6) (2021-11-01)
 
 **Note:** Version bump only for package @sb1/ffe-spinner

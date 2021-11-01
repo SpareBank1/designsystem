@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner-react@5.0.3...@sb1/ffe-spinner-react@5.1.0) (2021-11-01)
+
+
+### Features
+
+* **ffe-spinner-react:** override new defaults wrt. delaying visibility ([758a3b0](https://github.com/SpareBank1/designsystem/commit/758a3b07ff3a0e9d899e3cef0a68fb4d84525675))
+
+
+
+
+
 ## [5.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner-react@5.0.2...@sb1/ffe-spinner-react@5.0.3) (2021-03-15)
 
 
