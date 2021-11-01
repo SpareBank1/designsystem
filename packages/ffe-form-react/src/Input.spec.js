@@ -35,4 +35,14 @@ describe('<Input />', () => {
         wrapper.setProps({ textLike: true });
         expect(wrapper.hasClass('ffe-input-field--text-like')).toBe(true);
     });
+    it('sets the correct class for textRightAlign', () => {
+        const wrapper = getWrapper();
+        expect(wrapper.hasClass('ffe-input-field--text-right-align')).toBe(
+            false,
+        );
+        wrapper.setProps({ textRightAlign: true });
+        expect(wrapper.hasClass('ffe-input-field--text-right-align')).toBe(
+            true,
+        );
+    });
 });
