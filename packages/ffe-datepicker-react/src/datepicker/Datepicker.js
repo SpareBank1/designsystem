@@ -34,6 +34,9 @@ export default class Datepicker extends Component {
         this.calendarButtonClickHandler = this.calendarButtonClickHandler.bind(
             this,
         );
+        this.addFlagOnClickEventClickHandler = this.addFlagOnClickEventClickHandler.bind(
+            this,
+        );
         this.globalClickHandler = this.globalClickHandler.bind(this);
         this.escKeyHandler = this.escKeyHandler.bind(this);
         this.datePickedHandler = this.datePickedHandler.bind(this);
@@ -172,7 +175,10 @@ export default class Datepicker extends Component {
     }
 
     globalClickHandler(evt) {
-        if (this.state.displayDatePicker && !evt.__isEventFromFFEDatepicker) {
+        if (
+            this.state.displayDatePicker &&
+            evt.__datepickerID !== this.datepickerId
+        ) {
             this.closeCalendar();
         }
     }
@@ -189,12 +195,11 @@ export default class Datepicker extends Component {
 
     /**
      * Adds a flag on the click event so that the globalClickHandler()
-     * can determine whether or not this event originated from this
-     * component
+     * can determine whether or not the ID matches. Makes it so that only one datepicker can be open at the same time
      */
     addFlagOnClickEventClickHandler(evt) {
         // eslint-disable-next-line no-param-reassign
-        evt.nativeEvent.__isEventFromFFEDatepicker = true;
+        evt.nativeEvent.__datepickerID = this.datepickerId;
     }
 
     divBlurHandler(evt) {
