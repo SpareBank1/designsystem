@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@8.1.2...@sb1/ffe-form-react@8.2.0) (2021-11-02)
+
+
+### Features
+
+* **ffe-form-react:** legg til textRightAlign prop for å høyre justere tekst i inputfelt ([46bf73d](https://github.com/SpareBank1/designsystem/commit/46bf73d59881febcb0b998319e457d54fd46d765))
+
+
+
+
+
 ## [8.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@8.1.1...@sb1/ffe-form-react@8.1.2) (2021-10-19)
 
 

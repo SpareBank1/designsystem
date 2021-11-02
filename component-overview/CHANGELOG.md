@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@1.4.4...@sb1/ffe-component-index@1.5.0) (2021-11-02)
+
+
+### Features
+
+* **component-overview:** add example with 2 datepickers on one page ([752b3b1](https://github.com/SpareBank1/designsystem/commit/752b3b104baa3f7affbf249b8725049534b08b1f))
+
+
+
+
+
 ## [1.4.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@1.4.3...@sb1/ffe-component-index@1.4.4) (2021-11-01)
 
 **Note:** Version bump only for package @sb1/ffe-component-index

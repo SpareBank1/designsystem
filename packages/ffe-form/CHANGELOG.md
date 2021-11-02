@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [19.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@19.0.10...@sb1/ffe-form@19.1.0) (2021-11-02)
+
+
+### Features
+
+* **ffe-form:** legg til class for å høyre justere teksten i ett input felt ([070f10c](https://github.com/SpareBank1/designsystem/commit/070f10ce38ae468e24d5d7bc11f13eb5426d39df))
+
+
+
+
+
 ## [19.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@19.0.9...@sb1/ffe-form@19.0.10) (2021-11-01)
 
 **Note:** Version bump only for package @sb1/ffe-form

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.30](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@5.0.29...@sb1/ffe-datepicker-react@5.0.30) (2021-11-02)
+
+
+### Bug Fixes
+
+* **ffe-datepicker-react:** fix issue where multiple datepickers could be open at the same time ([fb1ce95](https://github.com/SpareBank1/designsystem/commit/fb1ce95ff8d098039f9c2cb815183bdf5dad981c))
+
+
+
+
+
 ## [5.0.29](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@5.0.28...@sb1/ffe-datepicker-react@5.0.29) (2021-11-01)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker-react
