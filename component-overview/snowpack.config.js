@@ -9,7 +9,7 @@ module.exports = {
     plugins: ['@snowpack/plugin-react-refresh'],
     routes: [{ match: 'routes', src: '.*', dest: '/index.html' }],
     optimize: {},
-    packageOptions: {},
-    devOptions: {},
+    packageOptions: { polyfillNode: true },
+    devOptions: { output: 'stream' },
     buildOptions: {},
 };
