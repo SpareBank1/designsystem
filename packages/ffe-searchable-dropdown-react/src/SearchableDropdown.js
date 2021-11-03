@@ -351,6 +351,7 @@ const SearchableDropdown = ({
                 </button>
             </div>
             <div
+                tabIndex="-1"
                 className={classNames('ffe-searchable-dropdown__list', {
                     'ffe-searchable-dropdown__list--open': state.isExpanded,
                 })}
