@@ -9,7 +9,7 @@ on:
         # Central European Time (CET): '0 5-20/5 * * *'
         # Central European Summer Time (CEST): '0 4-19/5 * * *'
         #
-        - cron: '0 4-19/5 * * *'
+        - cron: '0 5-20/5 * * *'
 
 jobs:
     merge:
