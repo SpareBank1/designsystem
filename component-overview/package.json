@@ -18,8 +18,8 @@
   },
   "scripts": {
     "build": "make all",
-    "start": "snowpack dev --polyfill-node",
-    "ghpages": "snowpack build --polyfill-node",
+    "start": "snowpack dev --reload",
+    "ghpages": "snowpack build",
     "clean": "make clean",
     "test": "npx playwright test",
     "playwright:install": "npx playwright install"
