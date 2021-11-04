@@ -4,7 +4,6 @@
   "description": "Felles Front End Icons",
   "license": "MIT",
   "author": "SpareBank 1",
-  "main": "bin/build.js",
   "bin": {
     "ffe-icons": "bin/build.js"
   },
@@ -13,7 +12,7 @@
     "url": "ssh://git@github.com:SpareBank1/designsystem.git"
   },
   "scripts": {
-    "build": "mkdirp dist && node bin/build.js",
+    "build": "node bin/build.js",
     "lint": "eslint bin/.",
     "test": "npm run lint"
   },
@@ -23,11 +22,7 @@
     "yargs": "^16.0.0"
   },
   "devDependencies": {
-    "eslint": "^5.9.0",
-    "mkdirp": "^1.0.0",
-    "npm-run-all": "^4.1.2",
-    "run-p": "0.0.0",
-    "stylelint": "^13.0.0"
+    "eslint": "^5.9.0"
   },
   "publishConfig": {
     "access": "public"

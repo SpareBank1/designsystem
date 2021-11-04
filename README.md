@@ -33,11 +33,10 @@ Klon ned repoet, og kjør `npm install`. Dette vil installere alle dependencies 
 kjøre opp alt lokalt. Når denne kommandoen er ferdig, kan du kjøre følgende kommandoer fra rotpakken:
 
 ```bash
-npm start              # Starter en lokal server på localhost:6060
+npm start              # Starter en lokal server på localhost:8080
 npm test               # Kjør alle tester for alle pakker
 npm run lint           # Lint alle pakker
 npm run build          # Bygg alle pakker
-npm run build:all      # Bygg alle pakker og dokumentasjon
 ```
 
 ### Hvordan ser jeg hva som er nytt?

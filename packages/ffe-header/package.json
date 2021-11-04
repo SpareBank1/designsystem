@@ -24,7 +24,6 @@
     "@sb1/ffe-webfonts": "^3.0.1",
     "less": "^4.1.1",
     "less-plugin-autoprefix": "^2.0.0",
-    "mkdirp": "^1.0.0",
     "stylelint": "^13.0.0"
   },
   "peerDependencies": {
