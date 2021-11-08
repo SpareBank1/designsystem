@@ -15,7 +15,7 @@ jobs:
                   fetch-depth: '0'
                   ref: 'main'
                   # Use personnel access token for bot account
-                  token: ${{ secrets.GITHUB_USER_TOKEN }}
+                  token: ${{ secrets.GH_USER_PAT }}
 
             - name: git config user
               run: |
