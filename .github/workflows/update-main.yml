@@ -23,7 +23,7 @@ jobs:
                   # `token` cannot be `secrets.GITHUB_TOKEN` as commits
                   # with this token will not trigger workflow runs.
                   # https://docs.github.com/en/actions/reference/authentication-in-a-workflow#using-the-github_token-in-a-workflow
-                  token: ${{ secrets.GITHUB_USER_TOKEN }}
+                  token: ${{ secrets.GH_USER_PAT }}
 
             - name: Check if main branch is ahead of develop branch
               id: git-rev-list
