@@ -202,10 +202,6 @@ const SearchableDropdown = ({
         };
     }, []);
 
-    const focusToggleButton = () => {
-        shouldFocusToggleButton.current = true;
-    };
-
     /**
      * Adds a flag on the event so that handleContainerFocus()
      * can determine whether or not this event originated from this
@@ -355,6 +351,7 @@ const SearchableDropdown = ({
                 </button>
             </div>
             <div
+                tabIndex="-1"
                 className={classNames('ffe-searchable-dropdown__list', {
                     'ffe-searchable-dropdown__list--open': state.isExpanded,
                 })}
@@ -366,15 +363,20 @@ const SearchableDropdown = ({
                             listToRender={state.listToRender}
                             ListItemBodyElement={ListItemBodyElement}
                             highlightedIndex={state.highlightedIndex}
-                            dispatch={dispatch}
                             dropdownAttributes={dropdownAttributes}
                             locale={locale}
                             refs={refs}
-                            onChange={onChange}
+                            onChange={item => {
+                                shouldFocusToggleButton.current = true;
+                                dispatch({
+                                    type: stateChangeTypes.ItemOnClick,
+                                    payload: { selectedItem: item },
+                                });
+                                onChange(item);
+                            }}
                             isNoMatch={state.noMatch}
                             noMatch={noMatch}
                             noMatchMessageId={noMatchMessageId.current}
-                            focusToggleButton={focusToggleButton}
                         />
                     )}
                 </div>
