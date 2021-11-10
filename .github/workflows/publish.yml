@@ -47,7 +47,7 @@ jobs:
               run: lerna publish --yes --no-verify-access --force-git-tag --create-release github
               env:
                   NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-                  GH_TOKEN: ${{ secrets.GITHUB_USER_TOKEN }}
+                  GH_TOKEN: ${{ secrets.GH_USER_PAT }}
 
             - name: Build gh-pages
               if: ${{ steps.lerna-changed.outputs.count > 0 }}
