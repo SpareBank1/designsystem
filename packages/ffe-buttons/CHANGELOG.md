@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [13.0.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@13.0.11...@sb1/ffe-buttons@13.0.12) (2021-11-11)
+
+
+### Bug Fixes
+
+* **ffe-buttons:** øker max border-radius ([074e50e](https://github.com/SpareBank1/designsystem/commit/074e50e7177476e1e7155fef65b9ef791b9ed248))
+
+
+
+
+
 ## [13.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@13.0.10...@sb1/ffe-buttons@13.0.11) (2021-11-04)
 
 **Note:** Version bump only for package @sb1/ffe-buttons
