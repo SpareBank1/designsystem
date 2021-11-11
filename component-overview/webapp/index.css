@@ -1,17 +1,4 @@
 :root {
-    --ffe-farge-vann: #005aa4;
-    --ffe-farge-vann-70: #4d8cbf;
-    --ffe-farge-vann-30: #b3cee4;
-    --ffe-farge-fjell: #002776;
-    --ffe-farge-sand: #f8e9dd;
-    --ffe-farge-frost: #7eb5d2;
-    --ffe-farge-syrin: #d3d3ea;
-    --ffe-farge-villblomst: #ee8d9c;
-    --ffe-farge-hvit: #fff;
-    --ffe-farge-nordlys: #33af85;
-    --ffe-black: #020a0a;
-    --ffe-farge-lyng: #873953;
-    --ffe-farge-lyng-70: #ab7487;
     --toc-column-count: 1;
 }
 
@@ -36,7 +23,7 @@
 body {
     margin: 0;
     background-color: var(--ffe-farge-vann);
-    color: white;
+    color: var(--ffe-farge-hvit);
 }
 
 .sb1ex-header {
@@ -115,6 +102,7 @@ body {
 .sb1ex-toc____example-list-item a:not(h1, h2, h3, h4, h5, h6):visited {
     color: var(--ffe-farge-lyng);
 }
+
 @media (prefers-color-scheme: dark) {
     body.regard-color-scheme-preference .sb1ex-main {
         background-color: var(--ffe-black);
@@ -123,6 +111,7 @@ body {
     body.regard-color-scheme-preference a:not(h1, h2, h3, h4, h5, h6) {
         color: var(--ffe-farge-vann-70);
     }
+
     body.regard-color-scheme-preference a:not(h1, h2, h3, h4, h5, h6):hover {
         color: var(--ffe-farge-vann-30);
     }
