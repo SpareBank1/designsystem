@@ -62,6 +62,13 @@ body {
     margin-bottom: 6px;
 }
 
+.sb1ex-live__preview,
+.sb1ex-live__editor,
+.sb1ex-live__error {
+    max-width: var(--app-width);
+    margin: 0 auto;
+}
+
 .sb1ex-live__editor {
     background-color: white;
     margin-top: 48px;
