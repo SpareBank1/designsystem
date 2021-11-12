@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.6.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@1.6.0...@sb1/ffe-component-index@1.6.1) (2021-11-12)
+
+
+### Bug Fixes
+
+* **component-overview:** use relative path to main js file ([88dd02f](https://github.com/SpareBank1/designsystem/commit/88dd02fccf11b390abc729b4747f1af12837e1e7))
+
+
+
+
+
 # [1.6.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@1.5.3...@sb1/ffe-component-index@1.6.0) (2021-11-12)
 
 
