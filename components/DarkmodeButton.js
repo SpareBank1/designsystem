@@ -1,6 +1,6 @@
 import React from "../_snowpack/pkg/react.js";
 import {Helmet} from "../_snowpack/pkg/react-helmet.js";
-import useDarkColorSchemePreference from "../../util/useDarkColorSchemePreference.js";
+import useDarkColorSchemePreference from "../util/useDarkColorSchemePreference.js";
 import "../styles/sb1ds-darkmode-button.css.proxy.js";
 export default function DarkmodeButton() {
   const {prefersDarkMode, toggleDarkMode} = useDarkColorSchemePreference();
