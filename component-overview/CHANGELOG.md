@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@1.5.3...@sb1/ffe-component-index@1.6.0) (2021-11-12)
+
+
+### Features
+
+* **component-overview:** dogfooding design tokens for colors ([ab590c8](https://github.com/SpareBank1/designsystem/commit/ab590c8393a1b6da4aea3a685ff3f738e1cc1e7e))
+* **component-overview:** set max-width on examples ([22e16d5](https://github.com/SpareBank1/designsystem/commit/22e16d5193e9e01dd7e6b0e1d5ebabedbd001cf1))
+
+
+
+
+
 ## [1.5.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@1.5.2...@sb1/ffe-component-index@1.5.3) (2021-11-11)
 
 **Note:** Version bump only for package @sb1/ffe-component-index
