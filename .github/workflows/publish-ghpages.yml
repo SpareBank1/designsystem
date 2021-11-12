@@ -1,8 +1,7 @@
 name: Publish GitHub pages
 
 on:
-    push:
-        workflow_dispatch:
+    workflow_dispatch:
 
 jobs:
     publish:
@@ -10,19 +9,9 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v2
-              with:
-                  fetch-depth: '0'
-                  ref: 'main'
-
-            - name: git config user
-              run: |
-                  git config user.email "designsystem@sparebank1.no"
-                  git config user.name "sb1-designsystem"
-
             - uses: actions/setup-node@v2
               with:
                   node-version: '16'
-                  registry-url: 'https://registry.npmjs.com'
 
             - run: |
                   npm install
