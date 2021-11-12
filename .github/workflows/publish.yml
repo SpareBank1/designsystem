@@ -59,6 +59,7 @@ jobs:
               with:
                   folder: component-overview/build/
                   branch: gh-pages
+                  token: ${{ secrets.GH_USER_PAT }}
 
             - name: Merge back changes to development branch
               if: ${{ steps.lerna-changed.outputs.count > 0 }}
