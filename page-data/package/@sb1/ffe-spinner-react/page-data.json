@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-react-package-page-jsx",
-    "path": "/package/@sb1/ffe-spinner-react",
-    "result": {"pageContext":{"packageName":"@sb1/ffe-spinner-react","reactDocs":[{"package":"@sb1/ffe-spinner-react","sourceFile":"src/Spinner.js","repoFile":"/packages/ffe-spinner-react/src/Spinner.js","description":"","displayName":"Spinner","methods":[],"props":{"className":{"type":{"name":"string"},"required":false,"description":""},"immediate":{"type":{"name":"bool"},"required":false,"description":"","defaultValue":{"value":"false","computed":false}},"large":{"type":{"name":"bool"},"required":false,"description":"","defaultValue":{"value":"false","computed":false}}}}]}},
-    "staticQueryHashes": ["1244094555","434851935","643354845"]}

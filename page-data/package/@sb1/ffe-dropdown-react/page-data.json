@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-react-package-page-jsx",
-    "path": "/package/@sb1/ffe-dropdown-react",
-    "result": {"pageContext":{"packageName":"@sb1/ffe-dropdown-react","reactDocs":[{"package":"@sb1/ffe-dropdown-react","sourceFile":"src/Dropdown.js","repoFile":"/packages/ffe-dropdown-react/src/Dropdown.js","description":"","displayName":"Dropdown","methods":[],"props":{"children":{"type":{"name":"node"},"required":false,"description":""},"inline":{"type":{"name":"bool"},"required":false,"description":""},"className":{"type":{"name":"string"},"required":false,"description":""},"innerRef":{"type":{"name":"union","value":[{"name":"func"},{"name":"shape","value":{"current":{"name":"object","required":false}}}]},"required":false,"description":"Ref-setting function, or ref created by useRef, passed to the select element"}}}]}},
-    "staticQueryHashes": ["1244094555","434851935","643354845"]}

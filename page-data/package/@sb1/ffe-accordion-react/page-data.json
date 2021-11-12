@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-react-package-page-jsx",
-    "path": "/package/@sb1/ffe-accordion-react",
-    "result": {"pageContext":{"packageName":"@sb1/ffe-accordion-react","reactDocs":[{"package":"@sb1/ffe-accordion-react","sourceFile":"src/Accordion.js","repoFile":"/packages/ffe-accordion-react/src/Accordion.js","description":"","displayName":"Accordion","methods":[],"props":{"children":{"type":{"name":"node"},"required":false,"description":"Accordion items"},"headingLevel":{"type":{"name":"enum","value":[{"value":"1","computed":false},{"value":"2","computed":false},{"value":"3","computed":false},{"value":"4","computed":false},{"value":"5","computed":false},{"value":"6","computed":false}]},"required":true,"description":"The level of headings in the AccordionItems"},"className":{"type":{"name":"string"},"required":false,"description":"Class assigned the container"}}},{"package":"@sb1/ffe-accordion-react","sourceFile":"src/AccordionItem.js","repoFile":"/packages/ffe-accordion-react/src/AccordionItem.js","description":"","methods":[]}]}},
-    "staticQueryHashes": ["1244094555","434851935","643354845"]}
