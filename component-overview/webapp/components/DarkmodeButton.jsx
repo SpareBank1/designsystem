@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import useDarkColorSchemePreference from '../../util/useDarkColorSchemePreference.js';
+import useDarkColorSchemePreference from '../util/useDarkColorSchemePreference.js';
 import '../styles/sb1ds-darkmode-button.css';
 export default function DarkmodeButton() {
     const { prefersDarkMode, toggleDarkMode } = useDarkColorSchemePreference();
