@@ -4,21 +4,13 @@
     background: @ffe-farge-hvit;
     cursor: pointer;
 
-    .native & {
-        @media (prefers-color-scheme: dark) {
-            background: @ffe-farge-svart;
-            color: @ffe-farge-graa;
-        }
-    }
-
     &:hover,
     &--highlighted {
-        background: @ffe-farge-frost-30;
+        background: @ffe-farge-vann;
+        color: @ffe-farge-hvit;
 
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                background: lighten(@ffe-farge-svart, 5%);
-            }
+        & .ffe-account-suggestion__details {
+            color: @ffe-farge-hvit;
         }
     }
 
@@ -27,13 +19,6 @@
         color: @ffe-farge-vann;
         padding: @ffe-spacing-sm;
         cursor: default;
-
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                background: @ffe-farge-svart;
-                color: @ffe-farge-hvit;
-            }
-        }
     }
 
     &__account {
@@ -47,27 +32,15 @@
 
     &__name {
         line-height: 1;
-        font-size: 0.9375rem;
+        font-size: 1rem;
         display: block;
         padding-bottom: @ffe-spacing-2xs;
-
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-farge-vann-70;
-            }
-        }
     }
 
     &__details {
-        color: @ffe-farge-moerkgraa;
-        font-size: 0.75rem;
+        color: @ffe-farge-svart;
+        font-size: 0.95rem;
         .ffe-clearfix();
-
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-farge-graa;
-            }
-        }
     }
 
     &__number {
@@ -102,5 +75,35 @@
 
     &:first-child {
         border-top: none;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .ffe-account-suggestion {
+        background: @ffe-black-darkmode;
+
+        &:hover,
+        &--highlighted {
+            background: @ffe-farge-vann;
+            color: @ffe-white-darkmode;
+
+            .ffe-account-suggestion__details,
+            .ffe-account-suggestion__name {
+                color: @ffe-white-darkmode;
+            }
+        }
+
+        &__nomatches {
+            background: @ffe-black-darkmode;
+            color: @ffe-white-darkmode;
+        }
+
+        &__name {
+            color: @ffe-white-darkmode;
+        }
+
+        &__details {
+            color: @ffe-grey-cloud-darkmode;
+        }
     }
 }
