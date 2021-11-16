@@ -134,6 +134,7 @@ GridCol.propTypes = {
         'syrin-70',
         'syrin-30',
         'vann',
+        'vann-30',
         'fjell',
         'hvit',
     ]),
