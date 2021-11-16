@@ -12,6 +12,7 @@ import { Label } from '@sb1/ffe-form-react';
         'syrin-70',
         'syrin-30',
         'vann',
+        'vann-30',
         'fjell',
         'hvit',
     ];
