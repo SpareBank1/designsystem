@@ -15,24 +15,11 @@
         border-radius: 2px;
         height: 0;
         overflow: hidden;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                background: @ffe-farge-svart;
-                color: @ffe-farge-hvit;
-            }
-        }
 
         &--open {
             display: block;
             height: auto;
             border: 1px solid @ffe-farge-graa-wcag;
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    border-color: @ffe-farge-graa;
-                    background: @ffe-farge-svart;
-                    color: @ffe-farge-hvit;
-                }
-            }
         }
     }
 
@@ -41,11 +28,6 @@
 
         & + .ffe-searchable-dropdown__list-item-container {
             border-top: 1px solid @ffe-farge-graa-wcag;
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    border-color: @ffe-farge-graa;
-                }
-            }
         }
 
         .ffe-body-paragraph {
@@ -55,53 +37,23 @@
 
     &__list-item-container:not(:last-child) {
         border-bottom: 1px solid @ffe-farge-graa-wcag;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                border-color: @ffe-farge-graa;
-            }
-        }
     }
 
     &__list-item-body {
         padding: @ffe-spacing @ffe-spacing-sm;
-        color: @ffe-farge-vann;
         cursor: pointer;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-farge-vann-70;
-            }
-        }
 
-        &:hover {
-            background: @ffe-farge-frost-30;
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    background: lighten(@ffe-farge-svart, 5%);
-                }
-            }
-        }
-
+        &:hover,
         &--highlighted,
         &--highlighted:hover {
-            background: @ffe-farge-frost-30;
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    background: lighten(@ffe-farge-svart, 5%);
-                }
-            }
+            background: @ffe-farge-vann;
+            color: @ffe-farge-hvit;
         }
     }
 
     &__list-item-body-details {
         display: flex;
         justify-content: space-between;
-        .ffe-micro-text {
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    color: @ffe-farge-graa;
-                }
-            }
-        }
     }
 
     &__button {
@@ -129,31 +81,15 @@
 
         &:hover {
             border-color: @ffe-farge-vann;
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    border-color: @ffe-farge-vann-70;
-                }
-            }
         }
 
         &:focus {
             border: 2px solid @ffe-farge-vann;
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    border-color: @ffe-farge-vann-70;
-                }
-            }
         }
 
         .ffe-input-field:focus ~ &:hover {
             border-color: transparent;
             box-shadow: 0 0 0 2px @ffe-farge-vann;
-
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    box-shadow: 0 0 0 2px @ffe-farge-vann-70;
-                }
-            }
         }
 
         svg {
@@ -173,22 +109,48 @@
                 height: 17px;
                 width: 17px;
                 transition: fill @ffe-transition-duration @ffe-ease;
-
-                .native & {
-                    @media (prefers-color-scheme: dark) {
-                        fill: @ffe-farge-vann-70;
-                    }
-                }
             }
 
             &:hover {
                 svg {
                     fill: @ffe-farge-fjell;
+                }
+            }
+        }
+    }
+}
 
-                    .native & {
-                        @media (prefers-color-scheme: dark) {
-                            fill: @ffe-farge-vann-30;
-                        }
+@media (prefers-color-scheme: dark) {
+    .ffe-searchable-dropdown {
+        &__list {
+            background: @ffe-black-darkmode;
+            color: @ffe-white-darkmode;
+        }
+
+        &__list-item-body {
+            color: @ffe-white-darkmode;
+        }
+
+        &__list-item-body-details {
+            .ffe-micro-text {
+                color: @ffe-grey-cloud-darkmode;
+            }
+        }
+
+        &__button {
+            &:hover,
+            &:focus {
+                border-color: @ffe-farge-vann-70;
+            }
+
+            &--arrow {
+                svg {
+                    fill: @ffe-farge-vann-70;
+                }
+
+                &:hover {
+                    svg {
+                        fill: @ffe-farge-vann-30;
                     }
                 }
             }
