@@ -20,6 +20,7 @@ type BackgroundColors =
     | 'sand-70'
     | 'sand-30'
     | 'vann'
+    | 'vann-30'
     | 'fjell'
     | 'hvit';
 
