@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.7.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@1.6.1...@sb1/ffe-component-index@1.7.0) (2021-11-18)
+
+
+### Features
+
+* **component-overview:** legg til vann-30 som bakgrunnsfarge i grid eksempel ([1962ce0](https://github.com/SpareBank1/designsystem/commit/1962ce07faeccac74c92b5f5b11bd32d0400644b))
+
+
+
+
+
 ## [1.6.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@1.6.0...@sb1/ffe-component-index@1.6.1) (2021-11-12)
 
 

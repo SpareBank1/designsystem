@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@12.0.5...@sb1/ffe-grid@12.1.0) (2021-11-18)
+
+
+### Features
+
+* **ffe-grid:** legg til vann-30 som bakgrunnsfarge i grid ([2ccb24b](https://github.com/SpareBank1/designsystem/commit/2ccb24bd95f222cf58e47c207290d32741a51971))
+
+
+
+
+
 ## [12.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@12.0.4...@sb1/ffe-grid@12.0.5) (2021-11-04)
 
 **Note:** Version bump only for package @sb1/ffe-grid

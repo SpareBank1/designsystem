@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [11.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@11.0.0...@sb1/ffe-grid-react@11.1.0) (2021-11-18)
+
+
+### Features
+
+* **ffe-grid-react:** legg til vann-30 som bakgrunnsfarge ([a3b5346](https://github.com/SpareBank1/designsystem/commit/a3b5346cdf9cab924356d6d6953e877a49a30e32))
+
+
+
+
+
 # [11.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@10.1.5...@sb1/ffe-grid-react@11.0.0) (2021-10-29)
 
 
