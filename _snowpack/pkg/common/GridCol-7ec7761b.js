@@ -46,7 +46,7 @@ Grid.propTypes = {
   topPadding: propTypes.bool
 };
 
-var backgroundColors = ['frost-30', 'sand', 'sand-70', 'sand-30', 'syrin-70', 'syrin-30', 'vann', 'fjell', 'hvit'];
+var backgroundColors = ['frost-30', 'sand', 'sand-70', 'sand-30', 'syrin-70', 'syrin-30', 'vann', 'vann-30', 'fjell', 'hvit'];
 var removedColors = ['blue-cobalt', 'blue-royal', 'purple-magenta', 'blue-ice', 'blue-pale', 'green-mint', 'grey-cloud', 'grey-warm', 'orange-salmon', 'red', 'blue-sky', 'white'];
 
 var _excluded$1 = ["background", "className", "children", "element", "reverse", "topPadding"];
@@ -95,7 +95,7 @@ GridRow.defaultProps = {
 };
 GridRow.propTypes = {
   /** Supported background colors */
-  background: propTypes.oneOf(['frost-30', 'sand', 'sand-70', 'sand-30', 'syrin-70', 'syrin-30', 'vann', 'fjell', 'hvit']),
+  background: propTypes.oneOf(['frost-30', 'sand', 'sand-70', 'sand-30', 'syrin-70', 'syrin-30', 'vann', 'vann-30', 'fjell', 'hvit']),
 
   /** Any extra classes are attached to the root node, in addition to ffe-grid__row classes */
   className: propTypes.string,
@@ -241,7 +241,7 @@ GridCol.defaultProps = {
 };
 GridCol.propTypes = {
   /** Supported background colors */
-  background: propTypes.oneOf(['frost-30', 'sand', 'sand-70', 'sand-30', 'syrin-70', 'syrin-30', 'vann', 'fjell', 'hvit']),
+  background: propTypes.oneOf(['frost-30', 'sand', 'sand-70', 'sand-30', 'syrin-70', 'syrin-30', 'vann', 'vann-30', 'fjell', 'hvit']),
 
   /** Any extra classes are attached to the root node, in addition to ffe-grid__col classes */
   className: propTypes.string,

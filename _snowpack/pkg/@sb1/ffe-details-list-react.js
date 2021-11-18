@@ -1,6 +1,6 @@
 import { r as react } from '../common/index-09a9c4ff.js';
 import { p as propTypes } from '../common/index-8de1816d.js';
-import { G as Grid, a as GridRow, b as GridCol } from '../common/GridCol-bc3c4fd1.js';
+import { G as Grid, a as GridRow, b as GridCol } from '../common/GridCol-7ec7761b.js';
 import { c as classnames } from '../common/index-5100710e.js';
 import '../common/_commonjsHelpers-4f955397.js';
 
