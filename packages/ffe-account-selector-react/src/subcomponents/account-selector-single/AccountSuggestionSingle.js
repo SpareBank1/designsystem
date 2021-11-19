@@ -16,20 +16,17 @@ const AccountSuggestionItem = ({
         dropdownAttributes.includes('balance') && typeof balance === 'number';
     return (
         <div
-            className={classNames(
-                'ffe-account-suggestion ffe-account-suggestion__account',
-                {
-                    'ffe-account-suggestion--highlighted': isHighlighted,
-                },
-            )}
+            className={classNames('ffe-account-suggestion-single', {
+                'ffe-account-suggestion-single--highlighted': isHighlighted,
+            })}
         >
-            <span className="ffe-account-suggestion__name">{name}</span>
-            <div className="ffe-account-suggestion__details">
-                <span className="ffe-account-suggestion__number">
+            <span className="ffe-account-suggestion-single__name">{name}</span>
+            <div className="ffe-account-suggestion-single__details">
+                <span className="ffe-account-suggestion-single__number">
                     {accountFormatter(accountNumber)}
                 </span>
                 {shouldShowBalance && (
-                    <span className="ffe-account-suggestion__balance">
+                    <span className="ffe-account-suggestion-single__balance">
                         {balanceWithCurrency(balance, locale, currencyCode)}
                     </span>
                 )}

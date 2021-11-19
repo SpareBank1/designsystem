@@ -1,0 +1,60 @@
+@details-height: 32px;
+
+.ffe-account-selector-multi-container {
+    /*
+     * Disables margin collapse, which allows styling based on
+     * withSpaceForDetails even when AccountSelector is wrapped in InputGroup
+     */
+    padding: 0.05px;
+}
+
+.ffe-account-selector-multi {
+    @import 'base-selector';
+    @import 'account-suggestion-multi';
+
+    position: relative;
+    display: block;
+
+    &--with-space-for-details {
+        margin-bottom: @details-height;
+    }
+
+    &__details {
+        padding: @ffe-spacing-2xs;
+        color: @ffe-farge-svart;
+        min-height: @details-height;
+        display: flex;
+        justify-content: space-between;
+
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-white-darkmode;
+            }
+        }
+    }
+
+    &__dropdown-statusbar {
+        border: 1px solid @ffe-farge-graa-wcag;
+        padding: @ffe-spacing-xs;
+        background: @ffe-farge-lysgraa;
+        color: @ffe-farge-svart;
+        height: 60px;
+        display: table;
+        width: 100%;
+        border-bottom-left-radius: 2px;
+        border-bottom-right-radius: 2px;
+
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                border-color: @ffe-farge-graa;
+                background: @ffe-black-darkmode;
+                color: @ffe-white-darkmode;
+            }
+        }
+    }
+
+    &__selection-status {
+        display: table-cell;
+        width: 100%;
+    }
+}

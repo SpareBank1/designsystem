@@ -1,4 +1,3 @@
-import classNames from 'classnames';
 import { bool, func, object, string } from 'prop-types';
 import React from 'react';
 
@@ -26,9 +25,6 @@ function SuggestionItem(props) {
                 e.preventDefault();
                 onSelect(item);
             }}
-            className={classNames('ffe-account-suggestion', {
-                'ffe-account-suggestion--highlighted': isHighlighted,
-            })}
             tabIndex={-1}
             style={style}
         >

@@ -33,32 +33,22 @@ describe('<SuggestionItem />', () => {
         expect(li.childAt(0).html()).toBe('<h1>header</h1>');
     });
 
-    it('isHighlighted', () => {
+    it('is aria-selected', () => {
         const refHighlightedSuggestionSpy = jest.fn();
         const wrapper = renderSuggestionItem(true, refHighlightedSuggestionSpy);
 
-        expect(
-            wrapper.children().hasClass('ffe-account-suggestion--highlighted'),
-        ).toBe(true);
-        expect(wrapper.children().hasClass('ffe-account-suggestion')).toBe(
-            true,
-        );
+        expect(wrapper.children().prop('aria-selected')).toBe(true);
         expect(refHighlightedSuggestionSpy).toHaveBeenCalledTimes(1);
     });
 
-    it('not Highlighted', () => {
+    it('not aria-selected', () => {
         const refHighlightedSuggestionSpy = jest.fn();
         const wrapper = renderSuggestionItem(
             false,
             refHighlightedSuggestionSpy,
         );
 
-        expect(
-            wrapper.children().hasClass('ffe-account-suggestion--highlighted'),
-        ).toBe(false);
-        expect(wrapper.children().hasClass('ffe-account-suggestion')).toBe(
-            true,
-        );
+        expect(wrapper.children().prop('aria-selected')).toBe(false);
         expect(refHighlightedSuggestionSpy).not.toHaveBeenCalled();
     });
 
