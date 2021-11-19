@@ -111,8 +111,8 @@ RadioButtonInputGroup.propTypes = {
      * acessibility validation using a tool such as aXe DevTools.
      */
     label: oneOfType([node, string]),
-    /** The name of the radio button */
-    name: string,
+    /** The name of the radio button, required to avoid missing name */
+    name: string.isRequired,
     /** Change handler, receives value of selected radio button */
     onChange: func,
     /** The currently selected value */
