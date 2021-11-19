@@ -247,7 +247,7 @@ var AccountSuggestionItem = function AccountSuggestionItem(_ref) {
       'ffe-account-suggestion--highlighted': isHighlighted
     })
   }, /*#__PURE__*/react.createElement("span", {
-    className: "ffe-account-suggestion__name ffe-link-text ffe-link-text--no-underline"
+    className: "ffe-account-suggestion__name"
   }, name), /*#__PURE__*/react.createElement("div", {
     className: "ffe-account-suggestion__details"
   }, /*#__PURE__*/react.createElement("span", {
