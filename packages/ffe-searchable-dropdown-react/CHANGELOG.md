@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [13.4.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@13.3.10...@sb1/ffe-searchable-dropdown-react@13.4.0) (2021-11-19)
+
+
+### Features
+
+* **ffe-searchable-dropdown-react:** slightly tweak colors ([3ba782f](https://github.com/SpareBank1/designsystem/commit/3ba782f5bbcc4c7c44a6287c012a9bf07a9b7331))
+
+
+
+
+
 ## [13.3.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@13.3.9...@sb1/ffe-searchable-dropdown-react@13.3.10) (2021-11-11)
 
 **Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react
