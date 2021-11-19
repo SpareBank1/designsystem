@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [9.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@8.2.0...@sb1/ffe-form-react@9.0.0) (2021-11-19)
+
+
+### Bug Fixes
+
+* **ffe-form-react:** gjør name prop required ([a6ad97e](https://github.com/SpareBank1/designsystem/commit/a6ad97e6592d49c21fb4f5cd4de5bb519fc7cabf))
+
+
+### BREAKING CHANGES
+
+* **ffe-form-react:** Name property i RadioButtonInputGroup er nå required da alle
+radio buttons skal ha navn.
+
+
+
+
+
 # [8.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@8.1.2...@sb1/ffe-form-react@8.2.0) (2021-11-02)
 
 

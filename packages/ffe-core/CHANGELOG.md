@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [19.3.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@19.3.2...@sb1/ffe-core@19.3.3) (2021-11-19)
+
+
+### Bug Fixes
+
+* **ffe-core:** fjerner inline-block fra lenker ([2dcf692](https://github.com/SpareBank1/designsystem/commit/2dcf692aa0c29e23c9507d5a0093da5967c233c1))
+
+
+
+
+
 ## [19.3.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@19.3.1...@sb1/ffe-core@19.3.2) (2021-11-04)
 
 **Note:** Version bump only for package @sb1/ffe-core
