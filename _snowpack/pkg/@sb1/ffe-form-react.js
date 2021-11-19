@@ -1022,8 +1022,8 @@ RadioButtonInputGroup.propTypes = {
    */
   label: propTypes.oneOfType([propTypes.node, propTypes.string]),
 
-  /** The name of the radio button */
-  name: propTypes.string,
+  /** The name of the radio button, required to avoid missing name */
+  name: propTypes.string.isRequired,
 
   /** Change handler, receives value of selected radio button */
   onChange: propTypes.func,
