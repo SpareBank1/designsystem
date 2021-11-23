@@ -7,12 +7,12 @@ import { Account, Locale } from '../../util/types';
 function AccountDetails({ account, locale, showBalance = true }) {
     const { balance, accountNumber, currencyCode } = account;
     return (
-        <div className="ffe-small-text ffe-account-selector__details">
-            <div className="ffe-account-selector__details--left">
+        <div className="ffe-small-text ffe-account-selector-single__details">
+            <div className="ffe-account-selector-single__details--left">
                 {accountFormatter(accountNumber)}
             </div>
             {showBalance && (
-                <div className="ffe-account-selector__details--right">
+                <div className="ffe-account-selector-single__details--right">
                     {balanceWithCurrency(balance, locale, currencyCode)}
                 </div>
             )}

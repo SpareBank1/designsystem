@@ -19,6 +19,18 @@ import { Label } from '@sb1/ffe-form-react';
             currencyCode: 'NOK',
             balance: 13337,
         },
+        {
+            accountNumber: '123456789103',
+            name: 'Min ekstrakonto',
+            currencyCode: 'NOK',
+            balance: 12345,
+        },
+        {
+            accountNumber: '123456789104',
+            name: 'Min siste konto',
+            currencyCode: 'NOK',
+            balance: 54321,
+        },
     ];
 
     const onAccountSelected = acc => {
@@ -36,6 +48,20 @@ import { Label } from '@sb1/ffe-form-react';
         }
     };
 
+    const onBlur = () => {
+        setValue(selectedAccounts.map(acc => acc.name).join(', '));
+    };
+
+    const onFocus = () => {
+        setValue('');
+    };
+
+    const onSelectAll = () => {
+        selectedAccounts.length === accounts.length
+            ? setSelectedAccounts([])
+            : setSelectedAccounts(accounts);
+    };
+
     return (
         <>
             <Label htmlFor="account-selector-multi">Velg konto</Label>
@@ -44,9 +70,13 @@ import { Label } from '@sb1/ffe-form-react';
                 locale="nb"
                 accounts={accounts}
                 onAccountSelected={onAccountSelected}
-                onBlur={f => f}
                 selectedAccounts={selectedAccounts}
                 value={value}
+                onChange={val => setValue(val)}
+                showSelectAllOption={true}
+                onSelectAll={onSelectAll}
+                onBlur={onBlur}
+                onFocus={onFocus}
             />
         </>
     );

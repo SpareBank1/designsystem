@@ -11,7 +11,10 @@ import {
 import classNames from 'classnames';
 import SearchableDropdown from '@sb1/ffe-searchable-dropdown-react';
 
-import { AccountDetails, AccountSuggestion } from '../../subcomponents/account';
+import {
+    AccountDetails,
+    AccountSuggestionSingle,
+} from '../../subcomponents/account-selector-single';
 import { Account, Locale } from '../../util/types';
 import { formatIncompleteAccountNumber } from '../../util/format';
 
@@ -124,10 +127,10 @@ const AccountSelector = ({
         : accounts;
 
     return (
-        <div className="ffe-account-selector-container">
+        <div className="ffe-account-selector-single-container">
             <div
-                className={classNames('ffe-account-selector', {
-                    'ffe-account-selector--with-space-for-details':
+                className={classNames('ffe-account-selector-single', {
+                    'ffe-account-selector-single--with-space-for-details':
                         !selectedAccount && withSpaceForDetails,
                     className,
                 })}
@@ -147,7 +150,7 @@ const AccountSelector = ({
                     onChange={handleAccountSelected}
                     searchAttributes={['name', 'accountNumber']}
                     locale={locale}
-                    listElementBody={listElementBody || AccountSuggestion}
+                    listElementBody={listElementBody || AccountSuggestionSingle}
                     ariaInvalid={ariaInvalid}
                     searchMatcher={searchMatcherIgnoringAccountNumberFormatting}
                     selectedItem={selectedAccount}

@@ -50,6 +50,8 @@ export interface AccountSelectorMultiProps {
     locale: Array<string>;
     noMatches?: string;
     onAccountSelected: (account: Account) => void;
+    onChange?: (value: string) => void;
+    onFocus?: Function;
     onBlur: Function;
     onSelectAll: Function;
     selectedAccounts?: Array<Account>;

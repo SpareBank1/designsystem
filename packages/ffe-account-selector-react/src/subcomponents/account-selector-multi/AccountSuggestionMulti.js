@@ -9,7 +9,7 @@ function AccountSuggestionMulti({ account, locale, selected }) {
     const { accountNumber, balance, name, currencyCode } = account;
     const hasBalance = balance !== null;
     return (
-        <div className="ffe-account-suggestion__account--multi">
+        <div className="ffe-account-suggestion-multi">
             <Checkbox
                 checked={selected}
                 name="my-checkbox-label"
@@ -17,16 +17,16 @@ function AccountSuggestionMulti({ account, locale, selected }) {
                 tabIndex={-1}
                 disabled={true}
             />
-            <div className="ffe-account-suggestion__content-wrapper">
-                <span className="ffe-account-suggestion__name ffe-link-text ffe-link-text--no-underline">
+            <div className="ffe-account-suggestion-multi__content-wrapper">
+                <span className="ffe-account-suggestion-multi__name">
                     {name}
                 </span>
-                <div className="ffe-account-suggestion__details">
-                    <span className="ffe-account-suggestion__number">
+                <div className="ffe-account-suggestion-multi__details">
+                    <span className="ffe-account-suggestion-multi__number">
                         {accountFormatter(accountNumber)}
                     </span>
                     {hasBalance && (
-                        <span className="ffe-account-suggestion__balance">
+                        <span className="ffe-account-suggestion-multi__balance">
                             {balanceWithCurrency(balance, locale, currencyCode)}
                         </span>
                     )}

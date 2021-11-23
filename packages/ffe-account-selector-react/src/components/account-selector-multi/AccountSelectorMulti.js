@@ -9,25 +9,25 @@ import BaseSelector from '../base-selector';
 import {
     AccountNoMatch,
     AccountSuggestionMulti,
-} from '../../subcomponents/account';
+    SuggestionListStatusBar,
+} from '../../subcomponents/account-selector-multi';
 import { Account, Locale, KeyCodes } from '../../util/types';
 import { accountFilter } from '../../filter/filters';
-import { SuggestionListStatusBar } from '../../subcomponents/suggestion';
 import txt from '../../i18n/i18n';
 
 const allAccountsElement = { id: 'all-accounts', accountNumber: '' };
 
 const renderSelectAll = (allSelected, locale) => (
-    <div className="ffe-account-suggestion__account--multi ffe-account-suggestion__select-all">
+    <div className="ffe-account-suggestion-multi ffe-account-suggestion-multi__select-all">
         <Checkbox
             checked={allSelected}
-            name="ffe-account-suggestion__select-all-label"
+            name="ffe-account-suggestion-multi__select-all-label"
             inline={false}
             tabIndex={-1}
             disabled={true}
         />
-        <div className="ffe-account-suggestion__content-wrapper">
-            <span className="ffe-account-suggestion__name ffe-link-text ffe-link-text--no-underline">
+        <div className="ffe-account-suggestion-multi__content-wrapper">
+            <span className="ffe-account-suggestion-multi__name">
                 {txt[locale].SELECT_ALL}
             </span>
         </div>
@@ -148,7 +148,10 @@ class AccountSelectorMulti extends React.Component {
             highCapacity,
         } = this.props;
         return (
-            <div className="ffe-account-selector" onKeyDown={this.onKeyDown}>
+            <div
+                className="ffe-account-selector-multi"
+                onKeyDown={this.onKeyDown}
+            >
                 <BaseSelector
                     renderSuggestion={account => this.renderSuggestion(account)}
                     renderNoMatches={() => (
@@ -209,6 +212,8 @@ AccountSelectorMulti.propTypes = {
     noMatches: string,
     /** Called when an account is clicked */
     onAccountSelected: func.isRequired,
+    onChange: func,
+    onFocus: func,
     onBlur: func.isRequired,
     onSelectAll: func,
     /**

@@ -19,13 +19,16 @@ const StatusBar = ({
     };
 
     return (
-        <div className="ffe-account-selector__dropdown-statusbar" style={style}>
-            <div className="ffe-account-selector__selection-status">
+        <div
+            className="ffe-account-selector-multi__dropdown-statusbar"
+            style={style}
+        >
+            <div className="ffe-account-selector-multi__selection-status">
                 {renderSelectionStatus()}
             </div>
             <button
                 type="button"
-                className="ffe-button ffe-button--primary ffe-account-selector__statusbar-button"
+                className="ffe-button ffe-button--primary"
                 tabIndex="0"
                 onMouseDown={onDone}
                 onKeyDown={onKeyDown}
