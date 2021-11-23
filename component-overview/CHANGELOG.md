@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.8.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@1.7.2...@sb1/ffe-component-index@1.8.0) (2021-11-23)
+
+
+### Features
+
+* **ffe-account-selector-react:** refactor multi- and single account selector ([2f4b90d](https://github.com/SpareBank1/designsystem/commit/2f4b90d68eec568d9867f9951c5524945ed978d6))
+
+
+
+
+
 ## [1.7.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@1.7.1...@sb1/ffe-component-index@1.7.2) (2021-11-19)
 
 **Note:** Version bump only for package @sb1/ffe-component-index
