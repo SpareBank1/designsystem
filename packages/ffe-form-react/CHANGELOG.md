@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@9.0.0...@sb1/ffe-form-react@9.0.1) (2021-11-25)
+
+
+### Bug Fixes
+
+* **ffe-form-react:** gjør name prop required i TS ([64a29c7](https://github.com/SpareBank1/designsystem/commit/64a29c79ca33df6dac2a2f3892b70132db9d5550)), closes [#1275](https://github.com/SpareBank1/designsystem/issues/1275) [#1264](https://github.com/SpareBank1/designsystem/issues/1264)
+
+
+
+
+
 # [9.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@8.2.0...@sb1/ffe-form-react@9.0.0) (2021-11-19)
 
 
