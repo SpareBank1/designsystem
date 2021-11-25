@@ -120,7 +120,7 @@ export interface RadioButtonInputGroupProps extends WeakFieldSetAttributes {
     fieldMessage?: string | React.ReactNode;
     inline?: boolean;
     label?: string | React.ReactNode;
-    name?: string;
+    name: string;
     onChange?: React.ChangeEventHandler<HTMLInputElement>;
     selectedValue?: string | boolean | number;
     tooltip?: string | React.ReactNode;
