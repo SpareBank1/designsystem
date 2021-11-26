@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [18.5.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@18.4.1...@sb1/ffe-account-selector-react@18.5.0) (2021-11-26)
+
+
+### Features
+
+* **ffe-account-selector-react:** Fix missing color for top line of suggestion ([2a64f91](https://github.com/SpareBank1/designsystem/commit/2a64f913c0321e4a1fc8db7c2718e7ee16f833d5))
+
+
+
+
+
 ## [18.4.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@18.4.0...@sb1/ffe-account-selector-react@18.4.1) (2021-11-25)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react

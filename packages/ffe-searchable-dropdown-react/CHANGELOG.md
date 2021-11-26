@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [13.5.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@13.4.2...@sb1/ffe-searchable-dropdown-react@13.5.0) (2021-11-26)
+
+
+### Features
+
+* **ffe-searchable-dropdown-react:** open dropdown when using arrow keys ([1a60f41](https://github.com/SpareBank1/designsystem/commit/1a60f4181375d7b32aa6bde49bebb7d7dc692af2))
+
+
+
+
+
 ## [13.4.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@13.4.1...@sb1/ffe-searchable-dropdown-react@13.4.2) (2021-11-25)
 
 **Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react
