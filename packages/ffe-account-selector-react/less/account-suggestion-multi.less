@@ -39,6 +39,7 @@
         font-size: 1rem;
         display: block;
         padding-bottom: @ffe-spacing-2xs;
+        color: @ffe-farge-fjell;
     }
 
     &__details {
@@ -73,40 +74,42 @@
     }
 }
 
-@media (prefers-color-scheme: dark) {
-    .ffe-account-suggestion-multi {
-        background: @ffe-black-darkmode;
-
-        &__nomatches {
+.native & {
+    @media (prefers-color-scheme: dark) {
+        .ffe-account-suggestion-multi {
             background: @ffe-black-darkmode;
-            color: @ffe-white-darkmode;
-        }
 
-        &:hover,
-        &--highlighted {
-            background: @ffe-farge-vann;
-            color: @ffe-white-darkmode;
-
-            .ffe-account-suggestion-single__details,
-            .ffe-account-suggestion-single__name {
+            &__nomatches {
+                background: @ffe-black-darkmode;
                 color: @ffe-white-darkmode;
+            }
+
+            &:hover,
+            &--highlighted {
+                background: @ffe-farge-vann;
+                color: @ffe-white-darkmode;
+
+                .ffe-account-suggestion-single__details,
+                .ffe-account-suggestion-single__name {
+                    color: @ffe-white-darkmode;
+                }
+            }
+
+            &__name {
+                color: @ffe-white-darkmode;
+            }
+
+            &__details {
+                color: @ffe-grey-cloud-darkmode;
             }
         }
 
-        &__name {
-            color: @ffe-white-darkmode;
-        }
-
-        &__details {
-            color: @ffe-grey-cloud-darkmode;
-        }
-    }
-
-    &__select-all {
-        &:hover,
-        &--highlighted {
-            background: @ffe-farge-vann;
-            color: @ffe-white-darkmode;
+        &__select-all {
+            &:hover,
+            &--highlighted {
+                background: @ffe-farge-vann;
+                color: @ffe-white-darkmode;
+            }
         }
     }
 }

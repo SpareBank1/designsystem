@@ -9,7 +9,8 @@
         background: @ffe-farge-vann;
         color: @ffe-farge-hvit;
 
-        & .ffe-account-suggestion-single__details {
+        & .ffe-account-suggestion-single__details,
+        & .ffe-account-suggestion-single__name {
             color: @ffe-farge-hvit;
         }
     }
@@ -19,6 +20,7 @@
         font-size: 1rem;
         display: block;
         padding-bottom: @ffe-spacing-2xs;
+        color: @ffe-farge-fjell;
     }
 
     &__details {
@@ -33,27 +35,29 @@
     }
 }
 
-@media (prefers-color-scheme: dark) {
-    .ffe-account-suggestion-single {
-        background: @ffe-black-darkmode;
+.native & {
+    @media (prefers-color-scheme: dark) {
+        .ffe-account-suggestion-single {
+            background: @ffe-black-darkmode;
 
-        &:hover,
-        &--highlighted {
-            background: @ffe-farge-vann;
-            color: @ffe-white-darkmode;
+            &:hover,
+            &--highlighted {
+                background: @ffe-farge-vann;
+                color: @ffe-white-darkmode;
 
-            .ffe-account-suggestion-single__details,
-            .ffe-account-suggestion-single__name {
+                .ffe-account-suggestion-single__details,
+                .ffe-account-suggestion-single__name {
+                    color: @ffe-white-darkmode;
+                }
+            }
+
+            &__name {
                 color: @ffe-white-darkmode;
             }
-        }
 
-        &__name {
-            color: @ffe-white-darkmode;
-        }
-
-        &__details {
-            color: @ffe-grey-cloud-darkmode;
+            &__details {
+                color: @ffe-grey-cloud-darkmode;
+            }
         }
     }
 }
