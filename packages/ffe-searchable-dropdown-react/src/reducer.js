@@ -101,6 +101,7 @@ export const createReducer = ({
         case stateChangeTypes.InputKeyDownArrowUp: {
             return {
                 ...state,
+                isExpanded: true,
                 highlightedIndex: action.payload.highlightedIndex,
             };
         }
