@@ -68,8 +68,7 @@
     "@sb1/ffe-tables-react": "^6.0.27",
     "@sb1/ffe-tabs": "^11.0.12",
     "@sb1/ffe-tabs-react": "^5.0.7",
-    "@sb1/ffe-webfonts": "^3.0.1",
-    "react-helmet": "^6.1.0"
+    "@sb1/ffe-webfonts": "^3.0.1"
   },
   "devDependencies": {
     "@axe-core/react": "^4.1.1",
@@ -85,6 +84,7 @@
     "react": "^16.9.0",
     "react-docgen": "^3.0.0",
     "react-dom": "^16.9.0",
+    "react-helmet": "^6.1.0",
     "react-live": "^2.2.3",
     "react-router-dom": "^5.2.0",
     "rollup": "^2.40.0",
