@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [19.4.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@19.3.3...@sb1/ffe-core@19.4.0) (2021-11-30)
+
+
+### Features
+
+* **ffe-core:** default fontstørrelse med prosent ([8c53929](https://github.com/SpareBank1/designsystem/commit/8c539296d369202007fe64b4fd295e2eab4d8ab1))
+
+
+
+
+
 ## [19.3.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@19.3.2...@sb1/ffe-core@19.3.3) (2021-11-19)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-details-list",
-  "version": "10.0.9",
+  "version": "10.0.10",
   "description": "Opplisting av attributter i en grid",
   "license": "MIT",
   "author": "SpareBank 1",
@@ -14,7 +14,7 @@
     "test": "npm run lint"
   },
   "devDependencies": {
-    "@sb1/ffe-core": "^19.3.3",
+    "@sb1/ffe-core": "^19.4.0",
     "stylelint": "^13.0.0"
   },
   "peerDependencies": {
