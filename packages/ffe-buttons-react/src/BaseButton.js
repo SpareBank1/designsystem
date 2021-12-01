@@ -22,12 +22,12 @@ const BaseButton = props => {
         children,
         className,
         condensed,
-        disabled,
         element: Element,
         innerRef,
         isLoading,
         leftIcon,
         rightIcon,
+        onClick,
         ...rest
     } = props;
 
@@ -37,7 +37,7 @@ const BaseButton = props => {
     return (
         <Element
             aria-busy={isLoading && supportsSpinner}
-            aria-disabled={disabled || (isLoading && supportsSpinner)}
+            aria-disabled={rest.disabled || (isLoading && supportsSpinner)}
             className={classNames(
                 'ffe-button',
                 `ffe-button--${buttonType}`,
@@ -46,6 +46,14 @@ const BaseButton = props => {
                 className,
             )}
             ref={innerRef}
+            onClick={event => {
+                if (isLoading && supportsSpinner) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                } else if (onClick) {
+                    onClick(event);
+                }
+            }}
             {...rest}
         >
             <span className="ffe-button__label">
@@ -96,6 +104,8 @@ BaseButton.propTypes = {
     leftIcon: node,
     /** Icon shown to the right of the label */
     rightIcon: node,
+    /** Called when button is clicked if not loading or disabled */
+    onClick: func,
 };
 
 BaseButton.defaultProps = {
