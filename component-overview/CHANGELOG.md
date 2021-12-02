@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.8.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@1.8.3...@sb1/ffe-component-index@1.8.4) (2021-12-02)
+
+**Note:** Version bump only for package @sb1/ffe-component-index
+
+
+
+
+
 ## [1.8.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@1.8.2...@sb1/ffe-component-index@1.8.3) (2021-11-30)
 
 **Note:** Version bump only for package @sb1/ffe-component-index
