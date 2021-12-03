@@ -12,7 +12,10 @@ export default function formatCurrency(amount, opts = {}) {
     // A ',-' postfix is not allowed for amounts with øre, see:
     // http://www.sprakradet.no/svardatabase/sporsmal-og-svar/kronebelop-rekkjefolgje-komma-og-strek/
     if (parseNumber(amount) % 1 !== 0) {
-        return `${prefix}${formatNumber(amount, { decimals: 2 })}`;
+        const decimalPostfix = ![',–', ',-'].includes(postfix) ? postfix : '';
+        return `${prefix}${formatNumber(amount, {
+            decimals: 2,
+        })}${decimalPostfix}`;
     }
 
     return `${prefix}${formatNumber(amount)}${postfix}`;
