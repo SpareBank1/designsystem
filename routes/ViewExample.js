@@ -1,7 +1,7 @@
 import React from "../_snowpack/pkg/react.js";
 import {LiveProvider, LivePreview, LiveError} from "../_snowpack/pkg/react-live.js";
 import {Link} from "../_snowpack/pkg/react-router-dom.js";
-import {DokumentMedTekstIkon, HusIkon} from "../_snowpack/pkg/@sb1/ffe-icons-react.js";
+import {DokumentMedTekstIkon, HusIkon} from "../_snowpack/link/packages/ffe-icons-react/es/index.js";
 import PageLayout from "../components/PageLayout.js";
 export default function ViewExample({match, exampleId, example}) {
   return /* @__PURE__ */ React.createElement(PageLayout, {

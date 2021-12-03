@@ -1,6 +1,6 @@
-import { p as propTypes } from './common/index-8de1816d.js';
-import { r as react, o as objectAssign } from './common/index-09a9c4ff.js';
-import './common/_commonjsHelpers-4f955397.js';
+import { p as propTypes } from './common/index-8e00d51f.js';
+import { r as react, o as objectAssign } from './common/index-14c068ad.js';
+import './common/_commonjsHelpers-c99fd594.js';
 
 function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
 
@@ -278,7 +278,7 @@ var TAG_NAMES = {
     TITLE: "title"
 };
 
-Object.keys(TAG_NAMES).map(function (name) {
+var VALID_TAG_NAMES = Object.keys(TAG_NAMES).map(function (name) {
     return TAG_NAMES[name];
 });
 

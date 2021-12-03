@@ -1,7 +1,14 @@
-import { c as createCommonjsModule, a as commonjsGlobal } from '../common/_commonjsHelpers-4f955397.js';
+import { g as getDefaultExportFromNamespaceIfNotNamed, c as createCommonjsModule, a as commonjsGlobal } from '../common/_commonjsHelpers-c99fd594.js';
 import { p as process } from '../common/process-2545f00a.js';
 
-var require$$0 = {};
+var _polyfillNode_crypto = {};
+
+var _polyfillNode_crypto$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  'default': _polyfillNode_crypto
+});
+
+var require$$0 = /*@__PURE__*/getDefaultExportFromNamespaceIfNotNamed(_polyfillNode_crypto$1);
 
 var axe = createCommonjsModule(function (module) {
 /*! axe v4.3.5
@@ -33,7 +40,7 @@ var axe = createCommonjsModule(function (module) {
   }
   var axe = axe || {};
   axe.version = '4.3.5';
-  if ((_typeof(module)) === 'object' && module.exports && typeof axeFunction.toString === 'function') {
+  if (( _typeof(module)) === 'object' && module.exports && typeof axeFunction.toString === 'function') {
     axe.source = '(' + axeFunction.toString() + ')(typeof window === "object" ? window : this);';
     module.exports = axe;
   }
@@ -3616,7 +3623,7 @@ var axe = createCommonjsModule(function (module) {
     });
     var require_es6_promise = __commonJS(function(exports, module) {
       (function(global2, factory) {
-        _typeof(exports) === 'object' && typeof module !== 'undefined' ? module.exports = factory() : global2.ES6Promise = factory();
+        _typeof(exports) === 'object' && typeof module !== 'undefined' ? module.exports = factory() :  global2.ES6Promise = factory();
       })(exports, function() {
         function objectOrFunction(x) {
           var type = _typeof(x);
@@ -10465,7 +10472,7 @@ var axe = createCommonjsModule(function (module) {
           if (!realArray.length) {
             realArray = getSlotChildren(node);
           }
-          window.getComputedStyle(node);
+          var styl = window.getComputedStyle(node);
           {
             return realArray.reduce(function(res, child) {
               return reduceShadowDOM(res, child, parent);
@@ -20646,7 +20653,7 @@ var axe = createCommonjsModule(function (module) {
     var memoizee2 = __toModule(require_memoizee());
     var es6_promise = __toModule(require_es6_promise());
     var typedarray = __toModule(require_typedarray());
-    __toModule(require_weakmap_polyfill());
+    var weakmap_polyfill = __toModule(require_weakmap_polyfill());
     dot2['default'].templateSettings.strip = false;
     if (!('Promise' in window)) {
       es6_promise['default'].polyfill();
@@ -24316,7 +24323,7 @@ var axe = createCommonjsModule(function (module) {
 
 var requestidlecallback = createCommonjsModule(function (module) {
 (function (factory) {
-	if (module.exports) {
+	if ( module.exports) {
 		module.exports = factory();
 	} else {
 		window.idleCallbackShim = factory();
@@ -24914,4 +24921,4 @@ function reactAxe(_React, _ReactDOM, _timeout, _conf, _context, _logger) {
 }
 var dist = reactAxe;
 
-export { dist as default };
+export default dist;

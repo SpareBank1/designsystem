@@ -22,8 +22,10 @@ const withExampleById = (WrappedComponent) => ({match}) => {
     ...{match, exampleId, example}
   });
 };
-export default function App() {
-  return /* @__PURE__ */ React.createElement(Router, null, /* @__PURE__ */ React.createElement(Switch, null, /* @__PURE__ */ React.createElement(Route, {
+export default function App({baseUrl}) {
+  return /* @__PURE__ */ React.createElement(Router, {
+    basename: baseUrl
+  }, /* @__PURE__ */ React.createElement(Switch, null, /* @__PURE__ */ React.createElement(Route, {
     path: "/:exampleId/edit"
   }, withExampleById(EditExample)), /* @__PURE__ */ React.createElement(Route, {
     path: "/:exampleId"
