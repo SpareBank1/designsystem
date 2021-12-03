@@ -30,9 +30,9 @@ const withExampleById = WrappedComponent => ({ match }) => {
     return <WrappedComponent {...{ match, exampleId, example }} />;
 };
 
-export default function App() {
+export default function App({ baseUrl }) {
     return (
-        <Router>
+        <Router basename={baseUrl}>
             <Switch>
                 <Route path="/:exampleId/edit">
                     {withExampleById(EditExample)}

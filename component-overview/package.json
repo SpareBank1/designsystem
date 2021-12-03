@@ -19,7 +19,7 @@
   "scripts": {
     "build": "make all",
     "start": "snowpack dev --reload",
-    "ghpages": "snowpack build",
+    "ghpages": "snowpack build --baseUrl /designsystem/",
     "clean": "make clean",
     "test": "npx playwright test",
     "playwright:install": "npx playwright install"
