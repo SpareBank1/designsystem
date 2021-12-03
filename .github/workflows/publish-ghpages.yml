@@ -22,9 +22,9 @@ jobs:
               with:
                   name: component-overview-site
                   path: component-overview/build/
-            #- name: Deploy gh-pages
-            #  uses: JamesIves/github-pages-deploy-action@4.1.5
-            #  with:
-            #      folder: component-overview/build/
-            #      branch: gh-pages
-            #      token: ${{ secrets.GH_USER_PAT }}
+            - name: Deploy gh-pages
+              uses: JamesIves/github-pages-deploy-action@4.1.5
+              with:
+                  folder: component-overview/build/
+                  branch: gh-pages
+                  token: ${{ secrets.GH_USER_PAT }}
