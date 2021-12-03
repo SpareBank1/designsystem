@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [14.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@14.0.5...@sb1/ffe-buttons-react@14.0.6) (2021-12-03)
+
+
+### Bug Fixes
+
+* **ffe-buttons-react:** swallow klicks when button is loading ([6daa3b8](https://github.com/SpareBank1/designsystem/commit/6daa3b89a13d21976880d0514edd5b8ab7384c79))
+
+
+
+
+
 ## [14.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@14.0.4...@sb1/ffe-buttons-react@14.0.5) (2021-11-04)
 
 **Note:** Version bump only for package @sb1/ffe-buttons-react
