@@ -1,8 +1,7 @@
-import React from 'react';
-import formatPercentage from '@sb1/ffe-formatters/lib/formatPercentage';
+import { formatPercentage } from '@sb1/ffe-formatters';
 
-<React.Fragment>
+<>
     <div>{formatPercentage(10.00001)}</div>
     <div>{formatPercentage(12.34567, { maxDecimals: 4 })}</div>
     <div>{formatPercentage(1, { minDecimals: 2 })}</div>
-</React.Fragment>;
+</>;

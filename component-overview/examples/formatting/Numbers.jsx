@@ -1,8 +1,6 @@
-import React from 'react';
-import formatNumber from '@sb1/ffe-formatters/lib/formatNumber';
+import { formatNumber } from '@sb1/ffe-formatters';
 
-
-<React.Fragment>
+<>
     <div>{formatNumber(1000000)}</div>
     <div>{formatNumber(1234.567)}</div>
     <div>{formatNumber(1234.567, { decimals: 2 })}</div>
@@ -13,4 +11,4 @@ import formatNumber from '@sb1/ffe-formatters/lib/formatNumber';
             decimalMark: '.',
         })}
     </div>
-</React.Fragment>;
+</>;

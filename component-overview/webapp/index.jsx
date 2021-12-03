@@ -11,7 +11,9 @@ import './index.css';
 
 axe(React, ReactDOM, 1000);
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const baseUrl = document.querySelector('meta[name=x-base-url]')?.content || '/';
+
+ReactDOM.render(<App baseUrl={baseUrl} />, document.getElementById('root'));
 
 // Hot Module Replacement (HMR) - Remove this snippet to remove HMR.
 // Learn more: https://www.snowpack.dev/concepts/hot-module-replacement
