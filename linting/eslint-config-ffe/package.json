@@ -27,10 +27,10 @@
     "eslint-plugin-react-hooks": "^2.0.1"
   },
   "peerDependencies": {
-    "eslint": "^5.9.0",
-    "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": ">=6",
-    "eslint-plugin-react-hooks": "^2.0.1"
+    "eslint": "*",
+    "eslint-plugin-jsx-a11y": "*",
+    "eslint-plugin-react": "*",
+    "eslint-plugin-react-hooks": "*"
   },
   "publishConfig": {
     "access": "public"
