@@ -11,6 +11,7 @@ module.exports = {
                 'eslint-config-ffe',
                 'eslint-config-ffe-base',
                 'stylelint-config-ffe',
+                'buildtool',
                 'ffe-accordion',
                 'ffe-accordion-react',
                 'ffe-account-selector-react',

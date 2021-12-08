@@ -1,5 +1,10 @@
 {
-    "packages": ["packages/*", "linting/*", "component-overview/"],
+    "packages": [
+        "packages/*",
+        "linting/*",
+        "buildtool/",
+        "component-overview/"
+    ],
     "version": "independent",
     "hoist": true,
     "command": {
