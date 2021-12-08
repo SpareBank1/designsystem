@@ -10,7 +10,7 @@
     },
     "scripts": {
         "clean": "run-s clean:lib clean:lerna:clean clean:lerna",
-        "clean:lib": "rimraf packages/*/lib packages/*/es",
+        "clean:lib": "rimraf packages/*/lib packages/*/es packages/*/types",
         "clean:lerna": "lerna clean --yes",
         "clean:lerna:clean": "lerna run clean",
         "postinstall": "npm run bootstrap",
