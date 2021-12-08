@@ -3,7 +3,7 @@
     "parser": "babel-eslint",
     "overrides": [
         {
-            "files": ["packages/**/*.spec.js"],
+            "files": ["**/*.spec.js"],
             "env": {
                 "jest": true
             }
