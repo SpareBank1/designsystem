@@ -36,8 +36,8 @@
     "@sb1/ffe-icons-react": "^7.2.19",
     "@sb1/ffe-searchable-dropdown-react": "^13.5.1",
     "@sb1/ffe-spinner-react": "^5.1.0",
-    "classnames": "^2.2.5",
-    "prop-types": "^15.6.0",
+    "classnames": "^2.3.1",
+    "prop-types": "^15.7.2",
     "react-auto-bind": "^0.4.2",
     "react-custom-scrollbars": "^4.2.1",
     "react-window": "^1.8.5"
