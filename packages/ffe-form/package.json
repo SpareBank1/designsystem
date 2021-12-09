@@ -17,12 +17,13 @@
     "test": "npm run lint"
   },
   "devDependencies": {
-    "@sb1/ffe-core": "^15.2.0",
+    "@sb1/ffe-buttons": "^13.0.16",
+    "@sb1/ffe-core": "^19.4.0",
     "stylelint": "^13.0.0"
   },
-  "optionalDependencies": {
-    "@sb1/ffe-buttons": "^13.0.16",
-    "@sb1/ffe-core": "^19.4.0"
+  "peerDependencies": {
+    "@sb1/ffe-buttons": "*",
+    "@sb1/ffe-core": "*"
   },
   "publishConfig": {
     "access": "public"
