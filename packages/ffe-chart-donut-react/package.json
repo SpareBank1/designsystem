@@ -29,7 +29,7 @@
     "setupTestFrameworkScriptFile": "../../test-setup.js"
   },
   "dependencies": {
-    "prop-types": "^15.6.0"
+    "prop-types": "^15.7.2"
   },
   "devDependencies": {
     "@sb1/ffe-buildtool": "^0.0.1",
