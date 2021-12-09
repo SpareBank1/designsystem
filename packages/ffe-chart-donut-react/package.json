@@ -20,8 +20,7 @@
     "url": "ssh://git@github.com:SpareBank1/designsystem.git"
   },
   "scripts": {
-    "build": "ffe-buildtool babel && npm run build:less",
-    "build:less": "copyfiles -f src/ffe-chart-donut.less lib/",
+    "build": "ffe-buildtool babel",
     "lint": "eslint src",
     "test": "jest",
     "test:watch": "jest --watch"
@@ -34,7 +33,6 @@
   },
   "devDependencies": {
     "@sb1/ffe-buildtool": "^0.0.1",
-    "copyfiles": "^2.4.1",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.7.0",
     "jest": "^26.0.0",
