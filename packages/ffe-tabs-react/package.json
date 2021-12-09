@@ -17,11 +17,8 @@
     "url": "ssh://git@github.com:SpareBank1/designsystem.git"
   },
   "scripts": {
-    "build": "npm run build:cjs && npm run build:es && npm run build:types",
-    "build:cjs": "babel -d lib/. --root-mode=upward  --env-name=cjs --ignore=*.spec.js src/.",
-    "build:es": "babel -d es/. --root-mode=upward --env-name=es --ignore=*.spec.js src/.",
-    "build:types": "copyfiles -f src/index.d.ts types/",
-    "lint": "eslint src/.",
+    "build": "ffe-buildtool babel",
+    "lint": "eslint src",
     "test": "jest",
     "test:watch": "jest --watch"
   },
@@ -33,6 +30,7 @@
     "prop-types": "^15.6.0"
   },
   "devDependencies": {
+    "@sb1/ffe-buildtool": "^0.0.1",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.7.0",
     "jest": "^26.0.0",
