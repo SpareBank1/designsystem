@@ -22,7 +22,8 @@
         "test": "jest",
         "test:ci": "lerna run lint && jest --ci --coverage --coverageReporters lcovonly && cat ./coverage/lcov.info | coveralls",
         "test:watch": "jest --watch",
-        "lerna": "lerna"
+        "lerna": "lerna",
+        "prepare": "husky install"
     },
     "devDependencies": {
         "@babel/cli": "^7.16.0",
@@ -30,8 +31,8 @@
         "@babel/polyfill": "^7.0.0",
         "@babel/preset-env": "^7.16.4",
         "@babel/preset-react": "^7.16.0",
-        "@commitlint/cli": "^9.1.2",
-        "@commitlint/config-conventional": "^10.0.0",
+        "@commitlint/cli": "^15.0.0",
+        "@commitlint/config-conventional": "^15.0.0",
         "@testing-library/dom": "^7.30.3",
         "@testing-library/jest-dom": "^4.2.3",
         "@testing-library/react": "^9.3.1",
@@ -45,7 +46,7 @@
         "enzyme-adapter-react-16": "^1.7.0",
         "eslint": "^5.9.0",
         "eslint-config-prettier": "^4.1.0",
-        "husky": "^2.0.0",
+        "husky": "^7.0.4",
         "jest": "^26.0.0",
         "lerna": "^4.0.0",
         "less": "^4.1.1",
@@ -60,11 +61,5 @@
         "regenerator-runtime": "^0.13.2",
         "rimraf": "^2.6.2",
         "stylelint-config-prettier": "^5.0.0"
-    },
-    "husky": {
-        "hooks": {
-            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-            "pre-commit": "pretty-quick --staged"
-        }
     }
 }
