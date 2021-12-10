@@ -18,7 +18,7 @@ Also there is `lib/style.css` with everything.
 
 ## Component overview
 
-Preview ./examples on localhost:8080
+Preview ./examples on localhost:1234
 
 ```
 npm install

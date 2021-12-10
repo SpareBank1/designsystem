@@ -5,10 +5,12 @@ rollup := node_modules/.bin/rollup
 lessc := ../node_modules/.bin/lessc
 reactDocgen := ../node_modules/.bin/react-docgen
 lerna := ./node_modules/.bin/lerna
+parcel := ./node_modules/.bin/parcel
 
 EXAMPLE_FILES = $(shell find examples/ -type f -name '*.jsx')
 REACT_FILES = $(shell cd ../packages && find ffe-*-react/src -type f -name '*.js'| grep '\/[A-Z][A-Za-z]\+.js\>')
 
+GH_PUBLIC_URL := /designsystem
 
 all: build
 
@@ -44,5 +46,15 @@ pack: lib/index.js lib/style.css
 	npm pack
 
 
+ghpages: build/index.html build/404.html
+
+build/index.html: webapp/index.html
+	PUBLIC_URL=$(GH_PUBLIC_URL) $(parcel) build $< --dist-dir $(dir $@) --public-url $(GH_PUBLIC_URL)
+
+build/404.html: webapp/404.html
+	mkdir -p $(dir $@)
+	cp $< $@
+
+
 clean:
-	rm -rf gen-src/ lib/
+	rm -rf gen-src/ lib/ .parcel-cache/ build/
