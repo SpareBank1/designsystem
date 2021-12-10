@@ -13,11 +13,11 @@
   },
   "scripts": {
     "build": "node bin/build.js",
-    "lint": "eslint bin/.",
+    "lint": "eslint bin",
     "test": "npm run lint"
   },
   "dependencies": {
-    "mkdirp": "^1.0.0",
+    "mkdirp": "^1.0.4",
     "svgstore": "^2.0.3",
     "yargs": "^16.0.0"
   },

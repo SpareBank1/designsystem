@@ -1,0 +1,30 @@
+{
+    "name": "@sb1/ffe-buildtool",
+    "version": "0.0.1",
+    "private": true,
+    "description": "FFE build tool",
+    "author": "SpareBank 1 Utvikling",
+    "license": "MIT",
+    "files": [
+        "bin",
+        "config",
+        "src"
+    ],
+    "bin": {
+        "ffe-buildtool": "./bin/cli.js"
+    },
+    "scripts": {
+        "test": "jest"
+    },
+    "dependencies": {
+        "@babel/cli": "^7.16.0",
+        "@babel/core": "^7.16.0",
+        "@babel/preset-env": "^7.16.4",
+        "@babel/preset-react": "^7.16.0",
+        "commander": "^8.3.0",
+        "copyfiles": "^2.4.1"
+    },
+    "devDependencies": {
+        "jest": "^26.0.0"
+    }
+}

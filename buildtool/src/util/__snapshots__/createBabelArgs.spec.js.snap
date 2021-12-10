@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`createBabelArgs cjs only 1`] = `
+Array [
+  Array [
+    "babel",
+    "--config-file",
+    "config/babel.config.js",
+    "--ignore",
+    "**/*.spec.js",
+    "--env-name",
+    "cjs",
+    "-d",
+    "cjsDir",
+    "sourceDir",
+  ],
+]
+`;
+
+exports[`createBabelArgs esm only 1`] = `
+Array [
+  Array [
+    "babel",
+    "--config-file",
+    "config/babel.config.js",
+    "--ignore",
+    "**/*.spec.js",
+    "--env-name",
+    "es",
+    "-d",
+    "esDir",
+    "sourceDir",
+  ],
+]
+`;
+
+exports[`createBabelArgs minimal args 1`] = `
+Array [
+  Array [
+    "babel",
+    "--config-file",
+    "config/babel.config.js",
+    "--ignore",
+    "**/*.spec.js",
+    "--env-name",
+    "es",
+    "-d",
+    "esDir",
+    "sourceDir",
+  ],
+  Array [
+    "babel",
+    "--config-file",
+    "config/babel.config.js",
+    "--ignore",
+    "**/*.spec.js",
+    "--env-name",
+    "cjs",
+    "-d",
+    "cjsDir",
+    "sourceDir",
+  ],
+]
+`;
