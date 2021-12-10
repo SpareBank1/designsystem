@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@5.0.1...@sb1/ffe-cards-react@5.0.2) (2021-12-10)
+
+
+### Bug Fixes
+
+* **ffe-cards-react:** use buildtool for transpiling ([305defd](https://github.com/SpareBank1/designsystem/commit/305defdd7eb2b66ff37563fd3c8dff9ec6e836e2)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
+
+
+
+
+
 ## [5.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@5.0.0...@sb1/ffe-cards-react@5.0.1) (2021-11-04)
 
 **Note:** Version bump only for package @sb1/ffe-cards-react

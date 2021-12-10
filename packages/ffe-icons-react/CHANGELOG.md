@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.2.20](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@7.2.19...@sb1/ffe-icons-react@7.2.20) (2021-12-10)
+
+
+### Bug Fixes
+
+* **ffe-icons-react:** use buildtool for transpiling ([3f34310](https://github.com/SpareBank1/designsystem/commit/3f34310fa1c36715e6709afdf7123166f99c3957)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
+
+
+
+
+
 ## [7.2.19](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@7.2.18...@sb1/ffe-icons-react@7.2.19) (2021-11-04)
 
 **Note:** Version bump only for package @sb1/ffe-icons-react

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload-react@5.0.4...@sb1/ffe-file-upload-react@5.0.5) (2021-12-10)
+
+
+### Bug Fixes
+
+* **ffe-file-upload-react:** use buildtool for transpiling ([4231efd](https://github.com/SpareBank1/designsystem/commit/4231efde54cbdf1ad606d882cd281de5be4ee2ad)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
+
+
+
+
+
 ## [5.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload-react@5.0.3...@sb1/ffe-file-upload-react@5.0.4) (2021-03-15)
 
 

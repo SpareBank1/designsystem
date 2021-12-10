@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-collapse-react@1.1.6...@sb1/ffe-collapse-react@1.1.7) (2021-12-10)
+
+
+### Bug Fixes
+
+* **ffe-collapse-react:** use buildtool for transpiling ([c65a57c](https://github.com/SpareBank1/designsystem/commit/c65a57cc5adb4ec191d9d25f66f28a9c8264e70d)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
+
+
+
+
+
 ## [1.1.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-collapse-react@1.1.5...@sb1/ffe-collapse-react@1.1.6) (2021-03-15)
 
 

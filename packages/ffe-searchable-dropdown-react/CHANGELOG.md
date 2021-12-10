@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [13.5.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@13.5.1...@sb1/ffe-searchable-dropdown-react@13.5.2) (2021-12-10)
+
+
+### Bug Fixes
+
+* **ffe-searchable-dropdown-react:** use buildtool for transpiling ([3baba25](https://github.com/SpareBank1/designsystem/commit/3baba25ed90685469ba9058af2b9557c1414ba00)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
+
+
+
+
+
 ## [13.5.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@13.5.0...@sb1/ffe-searchable-dropdown-react@13.5.1) (2021-11-30)
 
 **Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react

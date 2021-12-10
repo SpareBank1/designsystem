@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [11.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@11.1.0...@sb1/ffe-grid-react@11.1.1) (2021-12-10)
+
+
+### Bug Fixes
+
+* **ffe-grid-react:** use buildtool for transpiling ([9c7c78d](https://github.com/SpareBank1/designsystem/commit/9c7c78d2eefacdcd30b4dc413be6aa4bd592503a)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
+
+
+
+
+
 # [11.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@11.0.0...@sb1/ffe-grid-react@11.1.0) (2021-11-18)
 
 

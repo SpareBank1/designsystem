@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@4.2.5...@sb1/ffe-core-react@4.2.6) (2021-12-10)
+
+
+### Bug Fixes
+
+* **ffe-core-react:** use buildtool for transpiling ([71b8776](https://github.com/SpareBank1/designsystem/commit/71b87768d6918612efedf9b9ac17f27bd59af514)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
+
+
+
+
+
 ## [4.2.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@4.2.4...@sb1/ffe-core-react@4.2.5) (2021-03-15)
 
 

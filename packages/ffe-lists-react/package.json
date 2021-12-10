@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-lists-react",
-  "version": "5.0.3",
+  "version": "5.0.4",
   "description": "React implementation of ffe-lists",
   "license": "MIT",
   "author": "SpareBank 1",
@@ -31,7 +31,7 @@
     "prop-types": "^15.7.2"
   },
   "devDependencies": {
-    "@sb1/ffe-buildtool": "^0.0.1",
+    "@sb1/ffe-buildtool": "^0.1.0",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.7.0",
     "jest": "^26.0.0",

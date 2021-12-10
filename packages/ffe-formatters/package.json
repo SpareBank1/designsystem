@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-formatters",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "description": "JavaScript general use string formatters",
   "keywords": [
     "ffe"
@@ -30,7 +30,7 @@
     "underscore.string": "^3.3.4"
   },
   "devDependencies": {
-    "@sb1/ffe-buildtool": "^0.0.1",
+    "@sb1/ffe-buildtool": "^0.1.0",
     "eslint": "^5.9.0",
     "jest": "^26.0.0"
   },

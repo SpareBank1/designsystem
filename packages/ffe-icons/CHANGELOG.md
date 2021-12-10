@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.15.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.15.3...@sb1/ffe-icons@12.15.4) (2021-12-10)
+
+
+### Bug Fixes
+
+* **ffe-icons:** use buildtool for transpiling ([3e11f6b](https://github.com/SpareBank1/designsystem/commit/3e11f6be485fb4ba40975a6e9cf792ebeaeea8da)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
+
+
+
+
+
 ## [12.15.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.15.2...@sb1/ffe-icons@12.15.3) (2021-11-04)
 
 **Note:** Version bump only for package @sb1/ffe-icons

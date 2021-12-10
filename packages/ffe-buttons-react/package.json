@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-buttons-react",
-  "version": "14.0.6",
+  "version": "14.0.7",
   "description": "React implementation of ffe-buttons",
   "keywords": [
     "ffe"
@@ -30,12 +30,12 @@
     "setupTestFrameworkScriptFile": "../../test-setup.js"
   },
   "dependencies": {
-    "@sb1/ffe-icons-react": "^7.2.19",
+    "@sb1/ffe-icons-react": "^7.2.20",
     "classnames": "^2.3.1",
     "prop-types": "^15.7.2"
   },
   "devDependencies": {
-    "@sb1/ffe-buildtool": "^0.0.1",
+    "@sb1/ffe-buildtool": "^0.1.0",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.7.0",
     "eslint": "^5.9.0",

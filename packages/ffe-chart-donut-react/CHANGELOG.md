@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@4.0.0...@sb1/ffe-chart-donut-react@5.0.0) (2021-12-10)
+
+
+### Bug Fixes
+
+* **ffe-chart-donut-react:** move less files ([8703a37](https://github.com/SpareBank1/designsystem/commit/8703a37b254eb51fb52d23d271b8ac87ae1472dc))
+* **ffe-chart-donut-react:** use buildtool for transpiling ([20fdd8e](https://github.com/SpareBank1/designsystem/commit/20fdd8ed3118c5a86aecce275c5b2c49110c64c5)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
+
+
+### BREAKING CHANGES
+
+* **ffe-chart-donut-react:** `ffe-chart-donut.less` has moved from `lib/` to
+`less/`. Consumers need to update their less imports.
+
+```css
+@import '@sb1/ffe-chart-donut-react/less/ffe-chart-donut';
+```
+
+
+
+
+
 # [4.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@3.1.0...@sb1/ffe-chart-donut-react@4.0.0) (2021-09-22)
 
 

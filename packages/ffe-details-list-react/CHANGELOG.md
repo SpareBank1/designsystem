@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.51](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.50...@sb1/ffe-details-list-react@3.0.51) (2021-12-10)
+
+
+### Bug Fixes
+
+* **ffe-details-list-react:** use buildtool for transpiling ([907b90f](https://github.com/SpareBank1/designsystem/commit/907b90f3eff054045a245b969a326b0f717a74a8)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
+
+
+
+
+
 ## [3.0.50](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.49...@sb1/ffe-details-list-react@3.0.50) (2021-11-30)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react

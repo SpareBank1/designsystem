@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@5.0.7...@sb1/ffe-tabs-react@5.0.8) (2021-12-10)
+
+
+### Bug Fixes
+
+* **ffe-tabs-react:** use buildtool for transpiling ([287763f](https://github.com/SpareBank1/designsystem/commit/287763fe94e7abc1f3e8ff4aa9b45c9acc5e5e7b)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
+
+
+
+
+
 ## [5.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@5.0.6...@sb1/ffe-tabs-react@5.0.7) (2021-10-19)
 
 

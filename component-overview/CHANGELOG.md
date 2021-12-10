@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@1.8.5...@sb1/ffe-component-index@2.0.0) (2021-12-10)
+
+
+### Bug Fixes
+
+* **ffe-chart-donut-react:** move less files ([8703a37](https://github.com/SpareBank1/designsystem/commit/8703a37b254eb51fb52d23d271b8ac87ae1472dc))
+
+
+### BREAKING CHANGES
+
+* **ffe-chart-donut-react:** `ffe-chart-donut.less` has moved from `lib/` to
+`less/`. Consumers need to update their less imports.
+
+```css
+@import '@sb1/ffe-chart-donut-react/less/ffe-chart-donut';
+```
+
+
+
+
+
 ## [1.8.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@1.8.4...@sb1/ffe-component-index@1.8.5) (2021-12-03)
 
 

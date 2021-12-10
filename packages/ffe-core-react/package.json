@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-core-react",
-  "version": "4.2.5",
+  "version": "4.2.6",
   "description": "React components for ffe-core components",
   "keywords": [
     "ffe"
@@ -34,7 +34,7 @@
     "prop-types": "^15.7.2"
   },
   "devDependencies": {
-    "@sb1/ffe-buildtool": "^0.0.1",
+    "@sb1/ffe-buildtool": "^0.1.0",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.7.0",
     "eslint": "^5.9.0",

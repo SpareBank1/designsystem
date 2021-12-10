@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.1.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-dropdown-react@5.1.7...@sb1/ffe-dropdown-react@5.1.8) (2021-12-10)
+
+
+### Bug Fixes
+
+* **ffe-dropdown-react:** use buildtool for transpiling ([7d4c40c](https://github.com/SpareBank1/designsystem/commit/7d4c40ca2953541e9200e8e6ba57e6c5440ae365)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
+
+
+
+
+
 ## [5.1.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-dropdown-react@5.1.6...@sb1/ffe-dropdown-react@5.1.7) (2021-10-19)
 
 

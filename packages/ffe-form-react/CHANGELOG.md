@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@9.0.1...@sb1/ffe-form-react@9.0.2) (2021-12-10)
+
+
+### Bug Fixes
+
+* **ffe-form-react:** use buildtool for transpiling ([4d46c6a](https://github.com/SpareBank1/designsystem/commit/4d46c6a64ea5a23861a169a317f3e9ef36e573b7)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
+
+
+
+
+
 ## [9.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@9.0.0...@sb1/ffe-form-react@9.0.1) (2021-11-25)
 
 

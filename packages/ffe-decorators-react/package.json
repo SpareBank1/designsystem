@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-decorators-react",
-  "version": "3.0.3",
+  "version": "3.0.4",
   "description": "",
   "keywords": [
     "ffe"
@@ -28,7 +28,7 @@
     "setupTestFrameworkScriptFile": "../../test-setup.js"
   },
   "devDependencies": {
-    "@sb1/ffe-buildtool": "^0.0.1",
+    "@sb1/ffe-buildtool": "^0.1.0",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.7.0",
     "eslint": "^5.9.0",

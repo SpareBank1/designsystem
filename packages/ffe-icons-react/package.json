@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-icons-react",
-  "version": "7.2.19",
+  "version": "7.2.20",
   "description": "React-komponenter for ffe-icons",
   "license": "MIT",
   "files": [
@@ -28,7 +28,7 @@
     "prop-types": "^15.7.2"
   },
   "devDependencies": {
-    "@sb1/ffe-icons": "^12.15.3",
+    "@sb1/ffe-icons": "^12.15.4",
     "cheerio": "^1.0.0-rc.2",
     "eslint": "^5.9.0",
     "eslint-loader": "^2.1.0",
