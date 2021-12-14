@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [13.0.17](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@13.0.16...@sb1/ffe-buttons@13.0.17) (2021-12-14)
+
+
+### Bug Fixes
+
+* **ffe-buttons:** mindre padding på sidene ([9b9ec2c](https://github.com/SpareBank1/designsystem/commit/9b9ec2c87bbaab42081c99cc6e345148dd2165bb))
+
+
+
+
+
 ## [13.0.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@13.0.15...@sb1/ffe-buttons@13.0.16) (2021-11-30)
 
 **Note:** Version bump only for package @sb1/ffe-buttons
