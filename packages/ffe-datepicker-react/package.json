@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-datepicker-react",
-  "version": "5.0.38",
+  "version": "5.0.39",
   "license": "MIT",
   "files": [
     "lib",
@@ -33,7 +33,7 @@
     "uuid": "^8.3.2"
   },
   "devDependencies": {
-    "@sb1/ffe-buildtool": "^0.1.0",
+    "@sb1/ffe-buildtool": "^0.2.0",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.7.0",
     "eslint": "^5.9.0",

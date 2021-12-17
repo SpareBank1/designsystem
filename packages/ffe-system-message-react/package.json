@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-system-message-react",
-  "version": "6.2.11",
+  "version": "6.2.12",
   "description": "SpareBank 1 System Message komponent",
   "license": "MIT",
   "author": "SpareBank 1",
@@ -25,12 +25,12 @@
     "setupTestFrameworkScriptFile": "../../test-setup.js"
   },
   "dependencies": {
-    "@sb1/ffe-grid-react": "^11.1.1",
+    "@sb1/ffe-grid-react": "^11.1.2",
     "classnames": "^2.3.1",
     "prop-types": "^15.7.2"
   },
   "devDependencies": {
-    "@sb1/ffe-buildtool": "^0.1.0",
+    "@sb1/ffe-buildtool": "^0.2.0",
     "@sb1/ffe-icons-react": "^7.2.20",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.7.0",

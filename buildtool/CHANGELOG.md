@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buildtool@0.1.0...@sb1/ffe-buildtool@0.2.0) (2021-12-17)
+
+
+### Features
+
+* **component-overview:** replace snowpack with parcel ([e90d4f9](https://github.com/SpareBank1/designsystem/commit/e90d4f9ca5e74701e03a2691925dfd23127a1e4c))
+
+
+
+
+
 # 0.1.0 (2021-12-10)
 
 
