@@ -2,6 +2,8 @@ const path = require('path');
 
 module.exports = function(opts) {
     const shared = [
+        '--package',
+        '@babel/cli',
         'babel',
         '--config-file',
         path.relative(

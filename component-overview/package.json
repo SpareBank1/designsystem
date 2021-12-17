@@ -6,6 +6,10 @@
   "author": "SpareBank 1 Utvikling",
   "main": "./lib/index.js",
   "module": "./lib/esm/index.js",
+  "targets": {
+    "main": false,
+    "module": false
+  },
   "files": [
     "lib"
   ],
@@ -18,8 +22,8 @@
   },
   "scripts": {
     "build": "make all",
-    "start": "snowpack dev --reload",
-    "ghpages": "snowpack build --baseUrl /designsystem/",
+    "start": "parcel webapp/index.html --open",
+    "ghpages": "make ghpages",
     "clean": "make clean",
     "test": "npx playwright test",
     "playwright:install": "npx playwright install"
@@ -68,26 +72,25 @@
     "@sb1/ffe-tables-react": "^6.0.28",
     "@sb1/ffe-tabs": "^11.0.12",
     "@sb1/ffe-tabs-react": "^5.0.8",
-    "@sb1/ffe-webfonts": "^3.0.1"
+    "@sb1/ffe-webfonts": "^3.0.1",
+    "@axe-core/react": "^4.1.1",
+    "lodash.map": "^4.6.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-helmet": "^6.1.0",
+    "react-live": "^2.2.3",
+    "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
-    "@axe-core/react": "^4.1.1",
     "@playwright/test": "^1.12.2",
     "@rollup/plugin-json": "^4.1.0",
-    "@snowpack/plugin-react-refresh": "^2.5.0",
     "acorn": "^8.6.0",
     "acorn-jsx": "^5.3.2",
     "acorn-walk": "^8.2.0",
     "axe-playwright": "^1.1.8",
     "estree-walker": "^2.0.2",
-    "lodash.map": "^4.6.0",
-    "react": "^16.9.0",
+    "parcel": "^2.0.1",
     "react-docgen": "^3.0.0",
-    "react-dom": "^16.9.0",
-    "react-helmet": "^6.1.0",
-    "react-live": "^2.2.3",
-    "react-router-dom": "^5.2.0",
-    "rollup": "^2.60.2",
-    "snowpack": "^3.8.8"
+    "rollup": "^2.60.2"
   }
 }
