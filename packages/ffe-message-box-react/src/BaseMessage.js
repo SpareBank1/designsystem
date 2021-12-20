@@ -1,5 +1,5 @@
 import React from 'react';
-import { node, oneOf, string } from 'prop-types';
+import { bool, node, oneOf, string } from 'prop-types';
 import classNames from 'classnames';
 
 const iconStyles = {
@@ -15,34 +15,26 @@ const BaseMessage = props => {
         content,
         children,
         className = '',
+        onColoredBg,
         ...rest
     } = props;
 
     return (
-        <div className={classNames('ffe-message-box', className)} {...rest}>
-            <span
-                className={classNames(
-                    'ffe-message-box__icon',
-                    `ffe-message-box__icon--${type}`,
-                )}
-            >
+        <div
+            className={classNames(
+                'ffe-message-box',
+                `ffe-message-box--${type}`,
+                { 'ffe-message-box--coloredbg': onColoredBg },
+                className,
+            )}
+            {...rest}
+        >
+            <span className="ffe-message-box__icon">
                 {React.cloneElement(icon, { style: iconStyles, ...icon.props })}
             </span>
-            <div
-                className={classNames(
-                    'ffe-message-box__box',
-                    `ffe-message-box__box--${type}`,
-                )}
-            >
+            <div className="ffe-message-box__box">
                 {title && (
-                    <div
-                        className={classNames(
-                            'ffe-h4',
-                            `ffe-message-box__title`,
-                        )}
-                    >
-                        {title}
-                    </div>
+                    <div className="ffe-h4 ffe-message-box__title">{title}</div>
                 )}
                 {content && <p>{content}</p>}
                 {!content && children}
@@ -62,6 +54,8 @@ BaseMessage.propTypes = {
      * @ignore
      */
     type: oneOf(['success', 'error', 'tips', 'info']).isRequired,
+    /* Adds alternative styling for better contrast on certain backgrounds */
+    onColoredBg: bool,
 };
 
 export default BaseMessage;
