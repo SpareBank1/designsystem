@@ -27,4 +27,19 @@ describe('format currency', () => {
             `1${NON_BREAKING_SPACE}234`,
         );
     });
+
+    test.each([',–', `,-`])(
+        'does not allow %s postfix for decimals',
+        postfix => {
+            expect(formatCurrency('999.99', { postfix })).toBe(
+                `kr${NON_BREAKING_SPACE}999,99`,
+            );
+        },
+    );
+
+    test('does allow postfix not equal ,– for decimals', () => {
+        expect(formatCurrency('999.99', { prefix: '', postfix: 'kr' })).toBe(
+            `999,99kr`,
+        );
+    });
 });
