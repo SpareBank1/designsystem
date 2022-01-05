@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-formatters@4.0.3...@sb1/ffe-formatters@4.0.4) (2022-01-05)
+
+
+### Bug Fixes
+
+* **ffe-formatters:** allow non commadash-postfixes ([1b6cc52](https://github.com/SpareBank1/designsystem/commit/1b6cc52d3228da39660e1b482ccbab90071f37a2))
+
+
+
+
+
 ## [4.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-formatters@4.0.2...@sb1/ffe-formatters@4.0.3) (2021-12-17)
 
 **Note:** Version bump only for package @sb1/ffe-formatters
