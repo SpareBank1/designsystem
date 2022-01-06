@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { func, string, number, node, oneOf } from 'prop-types';
+import { func, string, number, node, oneOf, bool } from 'prop-types';
 import classNames from 'classnames';
 import KryssIkon from '@sb1/ffe-icons-react/lib/kryss-ikon';
 
@@ -35,6 +35,7 @@ class SystemMessage extends Component {
             icon,
             locale,
             modifier,
+            onColoredBg,
             ...rest
         } = this.props;
 
@@ -47,6 +48,7 @@ class SystemMessage extends Component {
                 className={classNames(
                     'ffe-system-message-wrapper',
                     `ffe-system-message-wrapper--${modifier}`,
+                    { 'ffe-system-message-wrapper--coloredbg': onColoredBg },
                     className,
                 )}
                 ref={_self => {
@@ -97,6 +99,8 @@ SystemMessage.propTypes = {
     modifier: oneOf(['error', 'info', 'success', 'news']),
     /** Callback for when the system message has been closed (after animation ends) */
     onClose: func,
+    /* Adds alternative styling for better contrast on certain backgrounds */
+    onColoredBg: bool,
 };
 
 export default SystemMessage;
