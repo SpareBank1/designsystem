@@ -1,0 +1,149 @@
+// Toggle switch
+//
+// Markup:
+// <div class="ffe-toggle-switch ffe-toggle-switch{{modifier_class}}">
+//     <input type="checkbox" class="ffe-toggle-switch__input" id="toggle{{modifier_class}}" name="toggle{{modifier_class}}" value="on">
+//     <label class="ffe-toggle-switch__label" for="toggle{{modifier_class}}">
+//         Send meg spam
+//     </label>
+// </div>
+//
+// --align-right - Aligns the switch to the right
+//
+// Styleguide ffe-form.toggle-switch
+
+.ffe-toggle-switch {
+    &__input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    &__label {
+        position: relative;
+        cursor: pointer;
+        padding: 0 0 0 65px;
+        line-height: 32px;
+        height: 32px;
+        display: block;
+        color: @ffe-farge-fjell;
+
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-farge-hvit;
+            }
+        }
+
+        &::before {
+            display: inline-block;
+            content: '';
+            width: 50px;
+            height: 30px;
+            background: @ffe-farge-graa;
+            border-radius: 15px;
+            position: absolute;
+            z-index: 1;
+            left: 0;
+            transition: background 0.4s @ffe-ease,
+                box-shadow @ffe-transition-duration @ffe-ease;
+
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    background: @ffe-farge-varmgraa;
+                }
+            }
+        }
+
+        &::after {
+            display: inline-block;
+            content: '';
+            width: 24px;
+            height: 24px;
+            background: @ffe-farge-hvit;
+            border-radius: 13px;
+            position: absolute;
+            z-index: 2;
+            left: 3px;
+            top: 3px;
+            transition: transform @ffe-transition-duration @ffe-ease-in-out-back;
+
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    background: @ffe-farge-svart;
+                }
+            }
+        }
+
+        &:hover::before {
+            background: @ffe-farge-varmgraa;
+
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    background: @ffe-farge-graa;
+                }
+            }
+        }
+    }
+
+    &__input:checked + .ffe-toggle-switch__label::after {
+        transform: translateX(20px);
+    }
+
+    &__input:checked + .ffe-toggle-switch__label::before {
+        background: @ffe-farge-fjell;
+
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background: @ffe-farge-vann-70;
+            }
+        }
+    }
+
+    &__input:checked + .ffe-toggle-switch__label:hover::before {
+        background: @ffe-farge-fjell-70;
+
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background: @ffe-farge-vann-30;
+            }
+        }
+    }
+
+    &__input:focus:not(:focus-visible) + .ffe-toggle-switch__label::before {
+        box-shadow: none;
+
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                box-shadow: none;
+            }
+        }
+    }
+
+    &__input:focus + .ffe-toggle-switch__label::before {
+        box-shadow: 0 0 0 3px @ffe-farge-hvit, 0 0 0 5px @ffe-farge-fjell;
+
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                box-shadow: 0 0 0 3px @ffe-farge-svart,
+                    0 0 0 5px @ffe-farge-hvit;
+            }
+        }
+    }
+
+    &--align-right {
+        .ffe-toggle-switch__label {
+            padding: 0 65px 0 0;
+            text-align: right;
+
+            &::before {
+                left: auto;
+                right: 0;
+            }
+
+            &::after {
+                left: auto;
+                right: 23px;
+            }
+        }
+    }
+}
