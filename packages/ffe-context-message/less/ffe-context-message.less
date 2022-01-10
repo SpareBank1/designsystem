@@ -43,12 +43,12 @@
 // --success   - Success message
 // --error     - Error message
 //
-// Styleguide ffe-context-message.context-message.2
+// Styleguide ffe-context-message.context-message.
 
 .ffe-context-message-content {
     align-items: center;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: nowrap;
     padding: @ffe-spacing-sm;
     text-align: left;
@@ -65,7 +65,7 @@
     }
 
     &__header {
-        &:extend(.ffe-h5);
+        &:extend(.ffe-strong-text);
 
         color: @ffe-farge-svart;
         margin-bottom: @ffe-spacing-2xs;
@@ -77,33 +77,30 @@
         display: flex;
         flex-shrink: 0;
         justify-content: center;
-        margin-bottom: @app-margin;
-        background-color: @ffe-farge-hvit;
+        border: 2px solid;
         border-radius: 50%;
-        height: 4em;
-        width: 4em;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                background-color: @ffe-farge-svart;
-            }
-        }
-        &-svg {
-            height: 2.2em;
-            width: 2.2em;
-            padding: @ffe-spacing-2xs;
-            fill: @ffe-farge-fjell;
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    fill: @ffe-farge-vann-70;
-                }
-            }
-        }
+        margin-right: @ffe-spacing-sm;
+        height: 2em;
+        width: 2em;
 
         @media (min-width: @breakpoint-sm) {
             align-self: flex-start;
             margin-bottom: 0;
-            margin-right: @ffe-spacing-lg;
+            height: 4em;
+            width: 4em;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    background-color: @ffe-farge-svart;
+                }
+            }
         }
+    }
+
+    &__icon-svg {
+        height: 2em;
+        width: 2em;
+        padding: @ffe-spacing-2xs;
+        fill: @ffe-farge-hvit;
     }
 
     &__close-button {
@@ -111,27 +108,27 @@
         cursor: pointer;
         color: @ffe-farge-moerkgraa;
         fill: @ffe-farge-moerkgraa;
-        border: none;
-        box-sizing: content-box;
-        padding: @ffe-spacing-sm;
+        border: 2px solid transparent;
+        box-sizing: border-box;
+        padding-top: @ffe-spacing-xs;
         outline: none;
         background-color: transparent;
-        height: 1em;
-        width: 1em;
-        margin: 0.2rem 0.2rem 0 0;
+        align-self: start;
+        height: 3rem;
+        width: 3rem;
 
         &:hover {
             fill: @ffe-farge-svart;
         }
         &:focus {
-            outline: 2px solid @ffe-farge-vann;
+            border: 2px solid @ffe-farge-vann;
             border-radius: 5px;
         }
+    }
 
-        &-svg {
-            height: 100%;
-            width: 100%;
-        }
+    &__close-button-svg {
+        height: 1rem;
+        width: 1rem;
     }
 
     @media (min-width: @breakpoint-sm) {
@@ -159,20 +156,15 @@
             margin-bottom: 0;
             margin-right: @ffe-spacing-sm;
             border-radius: 50%;
-            height: 2.2em;
-            width: 2.2em;
+            height: 2em;
+            width: 2em;
+            border: none;
         }
 
         .ffe-context-message-content__icon-svg {
             height: 1.5em;
             width: 1.5em;
             padding: @ffe-spacing-2xs;
-            fill: @ffe-farge-fjell;
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    fill: @ffe-farge-vann-70;
-                }
-            }
         }
     }
 
@@ -183,10 +175,80 @@
                 background-color: @ffe-farge-vann-30;
             }
         }
+
+        .ffe-context-message-content__icon {
+            background-color: @ffe-farge-vann;
+            border-color: @ffe-farge-vann;
+        }
+
+        .ffe-context-message-content__icon-svg {
+            fill: @ffe-farge-hvit;
+        }
+
+        @media (min-width: @breakpoint-sm) {
+            .ffe-context-message-content__icon {
+                background-color: @ffe-farge-hvit;
+                border-color: @ffe-farge-vann;
+                .native & {
+                    @media (prefers-color-scheme: dark) {
+                        background-color: @ffe-farge-svart;
+                        border-color: @ffe-farge-vann-70;
+                    }
+                }
+            }
+            .ffe-context-message-content__icon-svg {
+                fill: @ffe-farge-vann;
+                .native & {
+                    @media (prefers-color-scheme: dark) {
+                        fill: @ffe-farge-vann-70;
+                    }
+                }
+            }
+        }
+    }
+
+    &--info&--coloredbg {
+        background-color: @ffe-farge-hvit;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: @ffe-farge-vann-30;
+            }
+        }
+    }
+
+    &--info&--compact {
+        .ffe-context-message-content__icon {
+            background-color: @ffe-farge-vann;
+        }
+        .ffe-context-message-content__icon-svg {
+            fill: @ffe-farge-hvit;
+        }
     }
 
     &--tip {
-        background-color: @ffe-farge-sand-70;
+        background-color: @ffe-farge-sand;
+        .ffe-context-message-content__icon {
+            background-color: @ffe-farge-sol;
+            border-color: @ffe-farge-sol;
+        }
+
+        @media (min-width: @breakpoint-sm) {
+            .ffe-context-message-content__icon {
+                background-color: @ffe-farge-hvit;
+                border-color: @ffe-farge-sol;
+                .native & {
+                    @media (prefers-color-scheme: dark) {
+                        background-color: @ffe-farge-svart;
+                    }
+                }
+            }
+            .ffe-context-message-content__icon-svg {
+                fill: @ffe-farge-sol;
+            }
+        }
+    }
+    &--tip&--coloredbg {
+        background-color: @ffe-farge-hvit;
         .native & {
             @media (prefers-color-scheme: dark) {
                 background-color: @ffe-farge-sand;
@@ -194,22 +256,103 @@
         }
     }
 
+    &--tip&--compact {
+        .ffe-context-message-content__icon {
+            background-color: @ffe-farge-sol;
+        }
+        .ffe-context-message-content__icon-svg {
+            fill: @ffe-farge-hvit;
+        }
+    }
+
     &--success {
         background-color: @ffe-farge-nordlys-30;
+        .ffe-context-message-content__icon {
+            background-color: @ffe-farge-nordlys-wcag;
+            border-color: @ffe-farge-nordlys-wcag;
+        }
+
+        @media (min-width: @breakpoint-sm) {
+            .ffe-context-message-content__icon {
+                background-color: @ffe-farge-hvit;
+                border-color: @ffe-farge-nordlys-wcag;
+                .native & {
+                    @media (prefers-color-scheme: dark) {
+                        background-color: @ffe-farge-svart;
+                        border-color: @ffe-farge-nordlys;
+                    }
+                }
+            }
+            .ffe-context-message-content__icon-svg {
+                fill: @ffe-farge-nordlys-wcag;
+                .native & {
+                    @media (prefers-color-scheme: dark) {
+                        fill: @ffe-farge-nordlys;
+                    }
+                }
+            }
+        }
+    }
+
+    &--success&--coloredbg {
+        background-color: @ffe-farge-hvit;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: @ffe-farge-nordlys-30;
+            }
+        }
+    }
+
+    &--success&--compact {
+        .ffe-context-message-content__icon {
+            background-color: @ffe-farge-nordlys-wcag;
+        }
         .ffe-context-message-content__icon-svg {
-            fill: @ffe-farge-nordlys;
+            fill: @ffe-farge-hvit;
         }
     }
 
     &--error {
         background-color: @ffe-farge-baer-30;
-
-        .ffe-context-message-content__header {
-            color: @ffe-farge-svart;
+        .ffe-context-message-content__icon {
+            background-color: @ffe-farge-baer;
+            border-color: @ffe-farge-baer;
+        }
+        .ffe-context-message-content__icon-svg {
+            fill: @ffe-farge-hvit;
         }
 
+        @media (min-width: @breakpoint-sm) {
+            .ffe-context-message-content__icon {
+                background-color: @ffe-farge-hvit;
+                border-color: @ffe-farge-baer;
+                .native & {
+                    @media (prefers-color-scheme: dark) {
+                        background-color: @ffe-farge-svart;
+                    }
+                }
+            }
+            .ffe-context-message-content__icon-svg {
+                fill: @ffe-farge-baer;
+            }
+        }
+    }
+
+    &--error&--coloredbg {
+        background-color: @ffe-farge-hvit;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: @ffe-farge-baer-30;
+            }
+        }
+    }
+
+    &--error&--compact {
+        .ffe-context-message-content__icon {
+            background-color: @ffe-farge-baer;
+        }
         .ffe-context-message-content__icon-svg {
-            fill: @ffe-farge-baer;
+            fill: @ffe-farge-hvit;
         }
     }
 }
