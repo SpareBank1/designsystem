@@ -157,7 +157,7 @@ describe('<ContextMessage />', () => {
 
 describe('<ContextInfoMessage />', () => {
     const wrapper = mount(
-        <ContextInfoMessage icon={<InfoSirkelIkon />} showCloseButton={true}>
+        <ContextInfoMessage showCloseButton={true}>
             <p>content</p>
         </ContextInfoMessage>,
     );
@@ -170,7 +170,7 @@ describe('<ContextInfoMessage />', () => {
 
 describe('<ContextTipMessage />', () => {
     const wrapper = mount(
-        <ContextTipMessage icon={<InfoSirkelIkon />} showCloseButton={true}>
+        <ContextTipMessage showCloseButton={true}>
             <p>content</p>
         </ContextTipMessage>,
     );
@@ -183,7 +183,7 @@ describe('<ContextTipMessage />', () => {
 
 describe('Test ContextSuccessMessage', () => {
     const wrapper = mount(
-        <ContextSuccessMessage icon={<InfoSirkelIkon />} showCloseButton={true}>
+        <ContextSuccessMessage showCloseButton={true}>
             <p>content</p>
         </ContextSuccessMessage>,
     );
@@ -196,7 +196,7 @@ describe('Test ContextSuccessMessage', () => {
 
 describe('<ContextErrorMessage />', () => {
     const wrapper = mount(
-        <ContextErrorMessage icon={<InfoSirkelIkon />} showCloseButton={true}>
+        <ContextErrorMessage showCloseButton={true}>
             <p>content</p>
         </ContextErrorMessage>,
     );

@@ -36,6 +36,7 @@ const ContextMessage = ({
     children,
     className,
     locale,
+    onColoredBg,
     ...rest
 }) => {
     const [isClosed, setIsClosed] = useState();
@@ -67,7 +68,10 @@ const ContextMessage = ({
             className={classNames(
                 'ffe-context-message',
                 `ffe-context-message--${messageType}`,
-                { 'ffe-context-message--compact': compact },
+                {
+                    'ffe-context-message--compact': compact,
+                    'ffe-context-message--coloredbg': onColoredBg,
+                },
                 className,
             )}
             style={{
@@ -142,7 +146,7 @@ ContextMessage.propTypes = {
     headerElementId: string,
     /* HTML element for the header */
     headerElement: string,
-    icon: element,
+    icon: element.isRequired,
     /** Decides the language of the aria-label for the close icon */
     locale: oneOf(acceptedLocales),
     /** Provided by the wrapper component */
@@ -152,6 +156,8 @@ ContextMessage.propTypes = {
     showCloseButton: bool,
     /** Styles applied to the outermost element. `height` will be overridden */
     style: object,
+    /* Adds alternative styling for better contrast on certain backgrounds */
+    onColoredBg: bool,
 };
 
 ContextMessage.defaultProps = {
