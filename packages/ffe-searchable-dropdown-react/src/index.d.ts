@@ -12,7 +12,7 @@ interface NoMatch<T> {
 
 export interface SearchableDropdownProps<T> {
     id: string;
-    labelId: string;
+    labelledById?: string;
     className?: string;
     dropdownList: T[];
     dropdownAttributes: (keyof T)[];
