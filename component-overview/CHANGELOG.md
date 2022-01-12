@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@2.1.1...@sb1/ffe-component-index@2.1.2) (2022-01-12)
+
+
+### Bug Fixes
+
+* **component-overview:** oppdater farge i inlinegrid eksempel ([06ea649](https://github.com/SpareBank1/designsystem/commit/06ea649de0865cc3fa92785b13351fdfaef72c7b))
+
+
+
+
+
 ## [2.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@2.1.0...@sb1/ffe-component-index@2.1.1) (2022-01-05)
 
 **Note:** Version bump only for package @sb1/ffe-component-index
