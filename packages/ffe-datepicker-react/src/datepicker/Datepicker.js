@@ -307,13 +307,18 @@ export default class Datepicker extends Component {
                         {label}
                     </label>
                 )}
+                {/*
+                 * This element is not an actual button, but the onClick is something that happens under the hood,
+                 * that the user is not aware of. So it is not a semantic button for the user.
+                 * Thus we do not want to add a role, so we suppress the linting rule.
+                 */}
+                {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions */}
                 <div
                     aria-labelledby={
                         label
                             ? `ffe-datepicker-label-${this.datepickerId}`
                             : undefined
                     }
-                    role="none"
                     aria-label={label ? undefined : i18n[language].CHOOSE_DATE}
                     className={datepickerClassName}
                     onClick={this.addFlagOnClickEventClickHandler}
