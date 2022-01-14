@@ -46,7 +46,7 @@ const ENTER = 'Enter';
 
 const SearchableDropdown = ({
     id,
-    labelId,
+    labelledById,
     className,
     dropdownList,
     dropdownAttributes,
@@ -281,7 +281,7 @@ const SearchableDropdown = ({
                     {...inputProps}
                     ref={inputRef}
                     id={id}
-                    aria-labelledby={labelId}
+                    aria-labelledby={labelledById}
                     className="ffe-input-field"
                     onClick={handleInputClick}
                     onChange={e => {
@@ -389,8 +389,8 @@ SearchableDropdown.propTypes = {
     /** Id of drop down */
     id: string.isRequired,
 
-    /** Id of label */
-    labelId: string.isRequired,
+    /** Id of element that labels input field */
+    labelledById: string,
 
     /** Extra class */
     className: string,

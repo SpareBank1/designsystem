@@ -7,7 +7,7 @@ import { InputGroup } from '@sb1/ffe-form-react';
 
     const label1 = 'label1';
     return (
-        <InputGroup label="Velg konto" extraMargin={false} labelId={label1} >
+        <InputGroup label="Velg konto" extraMargin={false} labelId={label1}>
             <AccountSelector
                 accounts={[
                     {
@@ -40,8 +40,8 @@ import { InputGroup } from '@sb1/ffe-form-react';
                 onAccountSelected={val => setSelectedAccount(val)}
                 onReset={() => setSelectedAccount(null)}
                 selectedAccount={selectedAccount}
-                labelId={label1}
                 ariaInvalid={false}
             />
-        </InputGroup>);
-}
+        </InputGroup>
+    );
+};

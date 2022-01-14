@@ -31,7 +31,7 @@ export interface AccountSelectorProps {
     selectedAccount?: Account;
     showBalance?: boolean;
     formatAccountNumber?: boolean;
-    labelId: string;
+    labelledById?: string;
     allowCustomAccount?: boolean;
     listElementBody?: (props: ListElementBodyProps) => React.FC<HTMLDivElement>;
     withSpaceForDetails?: boolean;

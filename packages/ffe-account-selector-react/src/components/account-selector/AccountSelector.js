@@ -45,7 +45,7 @@ const AccountSelector = ({
     accounts,
     onAccountSelected,
     allowCustomAccount = false,
-    labelId,
+    labelledById,
     listElementBody,
     onReset,
     inputProps,
@@ -138,7 +138,7 @@ const AccountSelector = ({
             >
                 <SearchableDropdown
                     id={id}
-                    labelId={labelId}
+                    labelledById={labelledById}
                     inputProps={{
                         ...inputProps,
                         onChange: onInputChange,
@@ -193,7 +193,8 @@ AccountSelector.propTypes = {
         text: string.isRequired,
         dropdownList: arrayOf(object),
     }),
-    labelId: string.isRequired,
+    /** Id of element that labels input field */
+    labelledById: string,
     /** Returns the selected account object */
     onAccountSelected: func.isRequired,
     /**
