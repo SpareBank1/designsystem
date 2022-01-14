@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@2.1.3...@sb1/ffe-component-index@3.0.0) (2022-01-14)
+
+
+### Features
+
+* **ffe-account-selector-react:** change labelId to labelledById ([f184abe](https://github.com/SpareBank1/designsystem/commit/f184abe2725fb5b307073f444d450f3ea636f5b0))
+* **ffe-searchable-dropdown-react:** change labelId to labelledById ([c0d5354](https://github.com/SpareBank1/designsystem/commit/c0d5354ef9a6878e798f7195f4c86548c283d62a))
+
+
+### BREAKING CHANGES
+
+* **ffe-account-selector-react:** Change labelId to labelledById, and make it optional.
+* **ffe-searchable-dropdown-react:** Change labelId to labelledById, and make it optional.
+
+
+
+
+
 ## [2.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@2.1.2...@sb1/ffe-component-index@2.1.3) (2022-01-12)
 
 **Note:** Version bump only for package @sb1/ffe-component-index

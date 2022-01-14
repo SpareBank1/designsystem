@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [14.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@13.5.4...@sb1/ffe-searchable-dropdown-react@14.0.0) (2022-01-14)
+
+
+### Features
+
+* **ffe-searchable-dropdown-react:** change labelId to labelledById ([c0d5354](https://github.com/SpareBank1/designsystem/commit/c0d5354ef9a6878e798f7195f4c86548c283d62a))
+
+
+### BREAKING CHANGES
+
+* **ffe-searchable-dropdown-react:** Change labelId to labelledById, and make it optional.
+
+
+
+
+
 ## [13.5.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@13.5.3...@sb1/ffe-searchable-dropdown-react@13.5.4) (2021-12-17)
 
 **Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react

@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [19.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@18.5.5...@sb1/ffe-account-selector-react@19.0.0) (2022-01-14)
+
+
+### Features
+
+* **ffe-account-selector-react:** change labelId to labelledById ([f184abe](https://github.com/SpareBank1/designsystem/commit/f184abe2725fb5b307073f444d450f3ea636f5b0))
+
+
+### BREAKING CHANGES
+
+* **ffe-account-selector-react:** Change labelId to labelledById, and make it optional.
+
+
+
+
+
 ## [18.5.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@18.5.4...@sb1/ffe-account-selector-react@18.5.5) (2022-01-05)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
