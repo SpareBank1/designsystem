@@ -6,3 +6,5 @@ export interface CollapseProps extends React.HTMLProps<HTMLDivElement> {
 }
 
 declare class Collapse extends React.Component<CollapseProps, any> {}
+
+export default Collapse;
