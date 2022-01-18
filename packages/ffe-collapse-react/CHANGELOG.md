@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-collapse-react@1.1.8...@sb1/ffe-collapse-react@1.1.9) (2022-01-18)
+
+
+### Bug Fixes
+
+* **ffe-collapse-react:** add missing types for constructor ([a38365b](https://github.com/SpareBank1/designsystem/commit/a38365bbec5f8afc058cfe37c8030a96f0cfa52d))
+
+
+
+
+
 ## [1.1.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-collapse-react@1.1.7...@sb1/ffe-collapse-react@1.1.8) (2021-12-17)
 
 **Note:** Version bump only for package @sb1/ffe-collapse-react
