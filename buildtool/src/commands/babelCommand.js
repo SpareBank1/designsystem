@@ -10,6 +10,9 @@ module.exports = function(options) {
         cmd.stdout.setEncoding('utf8');
         cmd.stdout.on('data', d => {
             data += d;
+            if (options.watch) {
+                console.log(d.trim());
+            }
         });
 
         cmd.stderr.setEncoding('utf8');

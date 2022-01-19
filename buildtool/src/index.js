@@ -31,6 +31,15 @@ program
         }
     });
 
+program
+    .command('babel-watch')
+    .description('continously compile code with babel')
+    .argument('[source]', 'directory with source code', 'src')
+    .option('--es <esDir>', 'where to output es modules', 'es')
+    .action((source, options) => {
+        babelCommand({ source, ...options, watch: true });
+    });
+
 program.parse(process.argv);
 
 if (!process.argv.slice(2).length) {
