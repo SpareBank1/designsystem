@@ -20,6 +20,7 @@
   },
   "scripts": {
     "build": "ffe-buildtool babel",
+    "watch": "ffe-buildtool babel-watch",
     "lint": "eslint src",
     "test": "jest",
     "test:watch": "jest --watch",

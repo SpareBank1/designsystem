@@ -16,6 +16,7 @@
         "postinstall": "npm run bootstrap",
         "bootstrap": "lerna bootstrap --no-ci",
         "build": "lerna run build",
+        "watch": "lerna run --parallel watch",
         "ghpages": "lerna run ghpages",
         "lint": "lerna run --parallel lint",
         "start": "npm run build && cd component-overview  && npm start",
