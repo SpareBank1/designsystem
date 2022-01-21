@@ -27,4 +27,14 @@ describe('createBabelArgs', () => {
                 es: 'esDir',
             }),
         ).toMatchSnapshot());
+
+    test('with watch', () =>
+        expect(
+            createBabelArgs({
+                source: 'sourceDir',
+                cjs: false,
+                es: 'esDir',
+                watch: true,
+            }),
+        ).toMatchSnapshot());
 });

@@ -3,6 +3,8 @@
 exports[`createBabelArgs cjs only 1`] = `
 Array [
   Array [
+    "--package",
+    "@babel/cli",
     "babel",
     "--config-file",
     "config/babel.config.js",
@@ -20,6 +22,8 @@ Array [
 exports[`createBabelArgs esm only 1`] = `
 Array [
   Array [
+    "--package",
+    "@babel/cli",
     "babel",
     "--config-file",
     "config/babel.config.js",
@@ -37,6 +41,8 @@ Array [
 exports[`createBabelArgs minimal args 1`] = `
 Array [
   Array [
+    "--package",
+    "@babel/cli",
     "babel",
     "--config-file",
     "config/babel.config.js",
@@ -49,6 +55,8 @@ Array [
     "sourceDir",
   ],
   Array [
+    "--package",
+    "@babel/cli",
     "babel",
     "--config-file",
     "config/babel.config.js",
@@ -58,6 +66,26 @@ Array [
     "cjs",
     "-d",
     "cjsDir",
+    "sourceDir",
+  ],
+]
+`;
+
+exports[`createBabelArgs with watch 1`] = `
+Array [
+  Array [
+    "--package",
+    "@babel/cli",
+    "babel",
+    "--config-file",
+    "config/babel.config.js",
+    "--ignore",
+    "**/*.spec.js",
+    "--env-name",
+    "es",
+    "-d",
+    "esDir",
+    "--watch",
     "sourceDir",
   ],
 ]
