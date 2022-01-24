@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.16.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.15.4...@sb1/ffe-icons@12.16.0) (2022-01-24)
+
+
+### Features
+
+* **ffe-icons:** added two new icons ([c8dc813](https://github.com/SpareBank1/designsystem/commit/c8dc813659e4d93e386784e468faae5b72b8d5c4))
+
+
+
+
+
 ## [12.15.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.15.3...@sb1/ffe-icons@12.15.4) (2021-12-10)
 
 

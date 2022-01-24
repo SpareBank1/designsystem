@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-message-box-react",
-  "version": "7.0.3",
+  "version": "7.0.4",
   "license": "MIT",
   "author": "SpareBank 1",
   "files": [
@@ -26,7 +26,7 @@
     "setupTestFrameworkScriptFile": "../../test-setup.js"
   },
   "dependencies": {
-    "@sb1/ffe-icons-react": "^7.2.20",
+    "@sb1/ffe-icons-react": "^7.2.21",
     "classnames": "^2.3.1"
   },
   "devDependencies": {
