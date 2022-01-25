@@ -17,7 +17,12 @@ module.exports = function(opts) {
     const args = [];
 
     if (opts.es) {
-        args.push([...shared, '--env-name', 'es', '-d', opts.es, opts.source]);
+        let cmd = [...shared, '--env-name', 'es', '-d', opts.es];
+        if (opts.watch) {
+            cmd = cmd.concat(['--watch']);
+        }
+
+        args.push([...cmd, opts.source]);
     }
 
     if (opts.cjs) {

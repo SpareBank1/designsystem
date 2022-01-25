@@ -1,8 +1,8 @@
 
-.PHONY: all build codegen pack clean
+.PHONY: all build clean ghpages
 
-rollup := node_modules/.bin/rollup
-lessc := ../node_modules/.bin/lessc
+rollup := ./node_modules/.bin/rollup
+lessc := ./node_modules/.bin/lessc
 reactDocgen := ../node_modules/.bin/react-docgen
 lerna := ./node_modules/.bin/lerna
 parcel := ./node_modules/.bin/parcel
@@ -16,17 +16,14 @@ all: build
 
 build: lib/index.js lib/style.css
 
-codegen: gen-src/reactdoc.json gen-src/package-list.json gen-src/examples/index.js
-
-
 lib/index.js: gen-src/package-list.json gen-src/reactdoc.json gen-src/examples/index.js
 	$(rollup) -c
 
 
 lib/style.css: src/style.less
 	mkdir -p gen-src
-	$(lessc) --depends $< $@ > gen-src/style.css.d
-	$(lessc) --clean-css --autoprefix="last 3 versions, IE>=9" $< $@
+	$(lessc) --include-path=.:./node_modules --depends $< $@ > gen-src/style.css.d
+	$(lessc) --include-path=.:./node_modules --clean-css --autoprefix="last 3 versions, IE>=9" $< $@
 
 -include gen-src/styles.css.d
 
@@ -41,9 +38,6 @@ gen-src/reactdoc.json:
 gen-src/package-list.json:
 	mkdir -p $(dir $@)
 	cd ..; ($(lerna) list --json --loglevel error --scope '@sb1/ffe-*' --ignore '@sb1/ffe-component-index'| sed 's?'`pwd`'??'>component-overview/$@)
-
-pack: lib/index.js lib/style.css
-	npm pack
 
 
 ghpages: build/index.html build/404.html

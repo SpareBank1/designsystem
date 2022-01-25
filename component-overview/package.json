@@ -22,14 +22,15 @@
   },
   "scripts": {
     "build": "make all",
-    "start": "parcel webapp/index.html --open",
+    "start": "parcel webapp/index.html --no-cache --open",
+    "watch": "run-p watch:es watch:less watch:examples",
+    "watch:es": "chokidar \"node_modules/@sb1/ffe-*/es/**/*.js\" --follow-symlinks -c \"touch package.json\"",
+    "watch:less": "chokidar \"node_modules/@sb1/ffe-*/less/**/*.less\" --follow-symlinks -c \"make -B lib/style.css\"",
+    "watch:examples": "chokidar \"examples/**/*.jsx\" -c \"make lib/index.js\"",
     "ghpages": "make ghpages",
-    "clean": "make clean",
-    "test": "npx playwright test",
-    "playwright:install": "npx playwright install"
+    "clean": "make clean"
   },
   "dependencies": {
-    "@axe-core/react": "^4.1.1",
     "@sb1/ffe-accordion": "^8.0.10",
     "@sb1/ffe-accordion-react": "^9.2.8",
     "@sb1/ffe-account-selector-react": "^19.0.2",
@@ -82,13 +83,16 @@
     "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
-    "@playwright/test": "^1.12.2",
     "@rollup/plugin-json": "^4.1.0",
     "acorn": "^8.6.0",
     "acorn-jsx": "^5.3.2",
     "acorn-walk": "^8.2.0",
-    "axe-playwright": "^1.1.8",
+    "chokidar-cli": "^3.0.0",
     "estree-walker": "^2.0.2",
+    "less": "^4.1.2",
+    "less-plugin-autoprefix": "^2.0.0",
+    "less-plugin-clean-css": "^1.5.1",
+    "npm-run-all": "^4.1.5",
     "parcel": "^2.0.1",
     "react-docgen": "^3.0.0",
     "rollup": "^2.60.2"
