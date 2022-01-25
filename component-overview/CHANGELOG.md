@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.0.2...@sb1/ffe-component-index@3.1.0) (2022-01-25)
+
+
+### Features
+
+* **component-overview:** rebuild/reload webapp on code changes ([646a0c7](https://github.com/SpareBank1/designsystem/commit/646a0c7bbd3cd6afb66f3808a74bfb16caa4556b))
+
+
+
+
+
 ## [3.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.0.1...@sb1/ffe-component-index@3.0.2) (2022-01-24)
 
 **Note:** Version bump only for package @sb1/ffe-component-index

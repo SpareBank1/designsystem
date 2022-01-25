@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-context-message-react",
-  "version": "5.2.7",
+  "version": "5.2.8",
   "description": "React implementation of ffe-context-message component",
   "keywords": [
     "ffe"
@@ -37,7 +37,7 @@
     "uuid": "^8.3.2"
   },
   "devDependencies": {
-    "@sb1/ffe-buildtool": "^0.2.0",
+    "@sb1/ffe-buildtool": "^0.3.0",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.7.0",
     "jest": "^26.0.0",
