@@ -6,6 +6,11 @@
             "files": ["**/*.spec.js"],
             "env": {
                 "jest": true
+            },
+            "globals": {
+                "shallow": "readonly",
+                "mount": "readonly",
+                "render": "readonly"
             }
         }
     ]
