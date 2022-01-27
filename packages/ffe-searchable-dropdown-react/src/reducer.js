@@ -73,7 +73,7 @@ export const createReducer = ({
                 listToRender,
                 highlightedIndex:
                     action.payload.inputValue.trim() === '' ||
-                    state.listToRender.length === 0
+                    listToRender.length === 0
                         ? -1
                         : 0,
                 noMatch,
