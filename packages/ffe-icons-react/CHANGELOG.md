@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.2.22](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@7.2.21...@sb1/ffe-icons-react@7.2.22) (2022-01-27)
+
+
+### Bug Fixes
+
+* **ffe-icons-react:** corrects wrong use of ts types instead of propTypes ([986ce3a](https://github.com/SpareBank1/designsystem/commit/986ce3a8ed58909b75ef60cb42b905b558f456a8))
+
+
+
+
+
 ## [7.2.21](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@7.2.20...@sb1/ffe-icons-react@7.2.21) (2022-01-24)
 
 **Note:** Version bump only for package @sb1/ffe-icons-react

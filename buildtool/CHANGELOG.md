@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buildtool@0.3.0...@sb1/ffe-buildtool@0.3.1) (2022-01-27)
+
+
+### Bug Fixes
+
+* **buildtool:** update tests ([4778a15](https://github.com/SpareBank1/designsystem/commit/4778a15146aa5872ab7e0885dabab21e38a8c5c8))
+
+
+
+
+
 # [0.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buildtool@0.2.0...@sb1/ffe-buildtool@0.3.0) (2022-01-25)
 
 
