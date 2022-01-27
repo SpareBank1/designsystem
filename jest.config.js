@@ -1,6 +1,9 @@
 module.exports = {
     moduleFileExtensions: ['js', 'jsx'],
-    testMatch: ['<rootDir>/packages/*/src/**/*.spec.(js|jsx)'],
+    testMatch: [
+        '<rootDir>/packages/*/src/**/*.spec.(js|jsx)',
+        '<rootDir>/buildtool/src/**/*.spec.(js|jsx)',
+    ],
     transform: {
         '^.+\\.(js|jsx|mjs)$': '<rootDir>/transform.js',
     },

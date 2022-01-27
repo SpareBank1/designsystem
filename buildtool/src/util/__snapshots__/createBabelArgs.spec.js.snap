@@ -4,10 +4,12 @@ exports[`createBabelArgs cjs only 1`] = `
 Array [
   Array [
     "--package",
+    "@babel/core",
+    "--package",
     "@babel/cli",
     "babel",
     "--config-file",
-    "config/babel.config.js",
+    "buildtool/config/babel.config.js",
     "--ignore",
     "**/*.spec.js",
     "--env-name",
@@ -23,10 +25,12 @@ exports[`createBabelArgs esm only 1`] = `
 Array [
   Array [
     "--package",
+    "@babel/core",
+    "--package",
     "@babel/cli",
     "babel",
     "--config-file",
-    "config/babel.config.js",
+    "buildtool/config/babel.config.js",
     "--ignore",
     "**/*.spec.js",
     "--env-name",
@@ -42,10 +46,12 @@ exports[`createBabelArgs minimal args 1`] = `
 Array [
   Array [
     "--package",
+    "@babel/core",
+    "--package",
     "@babel/cli",
     "babel",
     "--config-file",
-    "config/babel.config.js",
+    "buildtool/config/babel.config.js",
     "--ignore",
     "**/*.spec.js",
     "--env-name",
@@ -56,10 +62,12 @@ Array [
   ],
   Array [
     "--package",
+    "@babel/core",
+    "--package",
     "@babel/cli",
     "babel",
     "--config-file",
-    "config/babel.config.js",
+    "buildtool/config/babel.config.js",
     "--ignore",
     "**/*.spec.js",
     "--env-name",
@@ -75,10 +83,12 @@ exports[`createBabelArgs with watch 1`] = `
 Array [
   Array [
     "--package",
+    "@babel/core",
+    "--package",
     "@babel/cli",
     "babel",
     "--config-file",
-    "config/babel.config.js",
+    "buildtool/config/babel.config.js",
     "--ignore",
     "**/*.spec.js",
     "--env-name",
