@@ -53,7 +53,6 @@ const toTsx = svgString => {
  * */
 const createStandaloneTSX = (icons, iconName) => `
 import * as React from 'react';
-import { string, bool } from 'prop-types';
 import * as PropTypes from 'prop-types';
 
 const svg = ${toTsx(icons[iconName])};
@@ -83,13 +82,13 @@ const Icon: React.FC<IconProps> = ({
     );
 
 Icon.propTypes = {
-    desc: string,
-    title: string,
+    desc: PropTypes.string,
+    title: PropTypes.string,
     focusable: PropTypes.oneOfType([
         PropTypes.bool,
-        PropTypes.oneOf(["true", "false", "auto", "undefined"]),
+        PropTypes.oneOf(['true', 'false', 'auto', 'undefined']),
     ]),
-    iconName: string,
+    iconName: PropTypes.string,
 };
 
 Icon.displayName = '${caseUtil.pascal(iconName)}';
