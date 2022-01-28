@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@5.2.10...@sb1/ffe-context-message-react@6.0.0) (2022-01-28)
+
+
+### Features
+
+* **ffe-context-message-react:** fjern custom ikon og legg til ny prop ([1d7fea2](https://github.com/SpareBank1/designsystem/commit/1d7fea29a68bc5636bfc3655e732f02aac698c97))
+
+
+### BREAKING CHANGES
+
+* **ffe-context-message-react:** fjerner muligheten til å legge inn custom ikon og setter faste ikoner pr type
+
+Legger inn onColoredBg prop som skrur på styling til bruk på farget bakgrunn
+
+
+
+
+
 ## [5.2.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@5.2.9...@sb1/ffe-context-message-react@5.2.10) (2022-01-27)
 
 **Note:** Version bump only for package @sb1/ffe-context-message-react

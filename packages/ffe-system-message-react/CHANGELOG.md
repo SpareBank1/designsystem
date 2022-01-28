@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@6.2.16...@sb1/ffe-system-message-react@6.3.0) (2022-01-28)
+
+
+### Features
+
+* **ffe-system-message-react:** legg til alternativ versjon for farget bakgrunn ([120a38f](https://github.com/SpareBank1/designsystem/commit/120a38fcb0ebfa5b66e61619c05352407757bdf0))
+
+
+
+
+
 ## [6.2.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@6.2.15...@sb1/ffe-system-message-react@6.2.16) (2022-01-27)
 
 **Note:** Version bump only for package @sb1/ffe-system-message-react

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@5.0.17...@sb1/ffe-context-message@5.1.0) (2022-01-28)
+
+
+### Features
+
+* **ffe-context-message:** farge tweaks og styling for bruk på farget bakgrunn ([c470f0a](https://github.com/SpareBank1/designsystem/commit/c470f0ab5ffb8d20d537b3a884457d5c9dbcaf5e))
+
+
+
+
+
 ## [5.0.17](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@5.0.16...@sb1/ffe-context-message@5.0.17) (2021-11-30)
 
 **Note:** Version bump only for package @sb1/ffe-context-message

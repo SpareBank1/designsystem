@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@9.0.1...@sb1/ffe-message-box@10.0.0) (2022-01-28)
+
+
+### Features
+
+* **ffe-message-box:** legg til alt styling og farge tweaks ([f7578c8](https://github.com/SpareBank1/designsystem/commit/f7578c859aeeb667e88c858829ccbbfce8c7037b))
+
+
+### BREAKING CHANGES
+
+* **ffe-message-box:** endrer klasse hierarkiet ved å flytte type modifieren
+Små fargeendringer på meldingsboksene, samt en ny modifier klasse som gir
+meldingsboksene hvit bakgrunn i lightmode. Denne modifier-klassen brukes for å oppnå
+god nok kontrast i scenarioer der man tar i bruk meldingsboksene på fargede bakgrunner.
+
+
+
+
+
 ## [9.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@9.0.0...@sb1/ffe-message-box@9.0.1) (2021-10-06)
 
 

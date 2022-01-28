@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.1.2...@sb1/ffe-component-index@3.2.0) (2022-01-28)
+
+
+### Features
+
+* **component-overview:** oppdater eksempler for meldingsbokser ([d650af9](https://github.com/SpareBank1/designsystem/commit/d650af9405135ba2c99e48b4d38a0ee513eb049d))
+
+
+
+
+
 ## [3.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.1.1...@sb1/ffe-component-index@3.1.2) (2022-01-27)
 
 **Note:** Version bump only for package @sb1/ffe-component-index

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@7.0.7...@sb1/ffe-message-box-react@7.1.0) (2022-01-28)
+
+
+### Features
+
+* **ffe-message-box-react:** legg til alt styling for fargede bakgrunner ([01f5593](https://github.com/SpareBank1/designsystem/commit/01f559307a632d0c35c4015a146e419d00341283))
+
+
+
+
+
 ## [7.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@7.0.6...@sb1/ffe-message-box-react@7.0.7) (2022-01-27)
 
 **Note:** Version bump only for package @sb1/ffe-message-box-react
