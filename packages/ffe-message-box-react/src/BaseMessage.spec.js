@@ -18,11 +18,11 @@ describe('<BaseMessage />', () => {
         ['info', 'error', 'success', 'tips'].forEach(type => {
             const typedWrapper = getWrapper({ type, title: 'test' });
             expect(
-                typedWrapper.find(`.ffe-message-box__box--${type}`).exists(),
+                typedWrapper.find(`.ffe-message-box--${type}`).exists(),
             ).toBe(true);
-            expect(
-                typedWrapper.find(`.ffe-message-box__icon--${type}`).exists(),
-            ).toBe(true);
+            expect(typedWrapper.find('.ffe-message-box__icon').exists()).toBe(
+                true,
+            );
         });
     });
     it('renders with correct title class', () => {
@@ -40,5 +40,9 @@ describe('<BaseMessage />', () => {
     it('renders children if specified', () => {
         const wrapper = getWrapper({ children: <p>children</p> });
         expect(wrapper.text()).toContain('children');
+    });
+    it('renders onColoredBg styling if specified', () => {
+        const wrapper = getWrapper({ onColoredBg: true });
+        expect(wrapper.find('.ffe-message-box--coloredbg').exists()).toBe(true);
     });
 });

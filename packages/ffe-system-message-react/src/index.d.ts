@@ -7,6 +7,7 @@ export interface SystemMessageProps {
     icon?: React.ReactNode;
     locale?: 'en' | 'nb' | 'nn';
     onClose?: (e: React.MouseEvent | undefined) => void;
+    onColoredBg?: boolean;
 }
 
 export interface SystemErrorMessageProps extends SystemMessageProps {

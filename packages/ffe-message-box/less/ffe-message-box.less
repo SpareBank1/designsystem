@@ -40,31 +40,62 @@
                 color: @ffe-farge-svart;
             }
         }
+    }
 
-        &--tips {
-            background-color: @ffe-farge-sand-70;
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    background-color: @ffe-farge-sand;
-                }
+    &--tips &__box {
+        background-color: @ffe-farge-sand;
+    }
+
+    &--tips&--coloredbg &__box {
+        background-color: @ffe-farge-hvit;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: @ffe-farge-sand;
             }
         }
+    }
 
-        &--info {
-            background-color: @ffe-farge-frost-30;
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    background-color: @ffe-farge-vann-30;
-                }
+    &--info &__box {
+        background-color: @ffe-farge-frost-30;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: @ffe-farge-vann-30;
             }
         }
+    }
 
-        &--success {
-            background-color: @ffe-farge-nordlys-30;
+    &--info&--coloredbg &__box {
+        background-color: @ffe-farge-hvit;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: @ffe-farge-vann-30;
+            }
         }
+    }
 
-        &--error {
-            background-color: @ffe-farge-baer-30;
+    &--success &__box {
+        background-color: @ffe-farge-nordlys-30;
+    }
+
+    &--success&--coloredbg &__box {
+        background-color: @ffe-farge-hvit;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: @ffe-farge-nordlys-30;
+            }
+        }
+    }
+
+    &--error &__box {
+        background-color: @ffe-farge-baer-30;
+    }
+
+    &--error&--coloredbg &__box {
+        background-color: @ffe-farge-hvit;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: @ffe-farge-baer-30;
+            }
         }
     }
 
@@ -95,7 +126,7 @@
         background-color: @ffe-farge-hvit;
         border-radius: 50%;
         display: inline-flex;
-        fill: @ffe-farge-fjell;
+        fill: @ffe-farge-vann;
         height: 64px;
         margin-bottom: -16px;
         align-items: center;
@@ -103,18 +134,40 @@
         position: relative;
         top: 16px;
         width: 64px;
+        border: 2px solid @ffe-farge-vann;
         .native & {
             @media (prefers-color-scheme: dark) {
                 background-color: @ffe-farge-svart;
                 fill: @ffe-farge-vann-70;
+                border-color: @ffe-farge-vann-70;
             }
         }
-        &--error svg {
+    }
+
+    &--tips &__icon {
+        border-color: @ffe-farge-sol;
+        svg {
+            fill: @ffe-farge-sol;
+        }
+    }
+
+    &--error &__icon {
+        border-color: @ffe-farge-baer;
+        svg {
             fill: @ffe-farge-baer;
         }
+    }
 
-        &--success svg {
-            fill: @ffe-farge-nordlys;
+    &--success &__icon {
+        border-color: @ffe-farge-nordlys-wcag;
+        svg {
+            fill: @ffe-farge-nordlys-wcag;
+        }
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                fill: @ffe-farge-nordlys;
+                border-color: @ffe-farge-nordlys;
+            }
         }
     }
 

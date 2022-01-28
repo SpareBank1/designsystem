@@ -11,6 +11,7 @@ export interface MessageBoxProps
     content?: React.ReactNode;
     icon?: React.ReactNode;
     title?: React.ReactNode;
+    onColoredBg?: boolean;
 }
 
 export interface ErrorMessageBoxProps extends MessageBoxProps {

@@ -15,6 +15,7 @@ export interface ContextMessageProps
     onClose?: (event: React.MouseEvent) => void;
     showCloseButton?: boolean;
     style?: React.CSSProperties;
+    onColoredBg?: boolean;
 }
 
 export interface ContextErrorMessageProps extends ContextMessageProps {

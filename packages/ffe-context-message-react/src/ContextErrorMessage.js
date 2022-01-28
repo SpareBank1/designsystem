@@ -11,6 +11,7 @@ import {
 } from 'prop-types';
 import acceptedLocales from './locale/accepted-locales';
 import ContextMessage from './ContextMessage';
+import UtropstegnIkon from '@sb1/ffe-icons-react/lib/utropstegn-ikon';
 
 const ContextErrorMessage = props => {
     const { alert, ...rest } = props;
@@ -19,6 +20,7 @@ const ContextErrorMessage = props => {
         <ContextMessage
             messageType="error"
             role={alert ? 'alert' : false}
+            icon={<UtropstegnIkon />}
             {...rest}
         />
     );
