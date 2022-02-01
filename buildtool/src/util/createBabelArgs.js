@@ -9,7 +9,7 @@ module.exports = function(opts) {
         'babel',
         '--config-file',
         path.relative(
-            process.cwd(),
+            opts.cwd || process.cwd(),
             path.join(__dirname, '../../config/babel.config.js'),
         ),
         '--ignore',
