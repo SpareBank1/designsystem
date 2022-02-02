@@ -11,7 +11,7 @@ import {
 } from 'prop-types';
 import acceptedLocales from './locale/accepted-locales';
 import ContextMessage from './ContextMessage';
-import UtropstegnIkon from '@sb1/ffe-icons-react/lib/utropstegn-ikon';
+import { UtropstegnIkon } from '@sb1/ffe-icons-react';
 
 const ContextErrorMessage = props => {
     const { alert, ...rest } = props;
