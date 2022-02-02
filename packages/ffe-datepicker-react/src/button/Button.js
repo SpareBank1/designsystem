@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { string, func, object } from 'prop-types';
-import KalenderIkon from '@sb1/ffe-icons-react/lib/kalender-ikon';
+import { KalenderIkon } from '@sb1/ffe-icons-react';
 import { validateDate } from '../util/dateUtil';
 import i18n from '../i18n/i18n';
 
