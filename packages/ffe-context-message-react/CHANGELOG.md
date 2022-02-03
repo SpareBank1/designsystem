@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@6.0.0...@sb1/ffe-context-message-react@6.0.1) (2022-02-03)
+
+
+### Bug Fixes
+
+* **ffe-context-message-react:** icon override not possible anymore ([2a26d1a](https://github.com/SpareBank1/designsystem/commit/2a26d1ae91084e269d22b6f4da1a3704d0e2c398))
+
+
+
+
+
 # [6.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@5.2.10...@sb1/ffe-context-message-react@6.0.0) (2022-01-28)
 
 
