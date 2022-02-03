@@ -22,9 +22,8 @@
     "build": "ffe-buildtool babel",
     "watch": "ffe-buildtool babel-watch",
     "lint": "eslint src",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "update": "npm-check --update"
+    "test": "ffe-buildtool jest",
+    "test:watch": "ffe-buildtool jest --watch"
   },
   "dependencies": {
     "@sb1/ffe-core-react": "^4.2.10",
@@ -41,8 +40,6 @@
   "devDependencies": {
     "@sb1/ffe-buildtool": "^0.3.2",
     "eslint": "^5.9.0",
-    "jest": "^26.0.0",
-    "npm-check": "^5.9.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0"
   },
