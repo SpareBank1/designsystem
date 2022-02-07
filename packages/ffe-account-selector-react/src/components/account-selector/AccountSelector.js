@@ -126,12 +126,17 @@ const AccountSelector = ({
           })
         : accounts;
 
+    const showAccountDetails = !!(
+        selectedAccount &&
+        (selectedAccount.accountNumber || selectedAccount.balance)
+    );
+
     return (
         <div className="ffe-account-selector-single-container">
             <div
                 className={classNames('ffe-account-selector-single', {
                     'ffe-account-selector-single--with-space-for-details':
-                        !selectedAccount && withSpaceForDetails,
+                        !showAccountDetails && withSpaceForDetails,
                     className,
                 })}
                 id={`${id}-account-selector-container`}
@@ -158,7 +163,7 @@ const AccountSelector = ({
                     onOpen={onOpen}
                     onClose={onClose}
                 />
-                {selectedAccount && (
+                {showAccountDetails && (
                     <AccountDetails
                         account={selectedAccount}
                         locale={locale}
