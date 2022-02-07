@@ -3,8 +3,8 @@ import { bool, node, oneOf, string } from 'prop-types';
 import classNames from 'classnames';
 
 const iconStyles = {
-    width: '40px',
-    height: '40px',
+    width: '32px',
+    height: '32px',
 };
 
 const BaseMessage = props => {
@@ -33,9 +33,7 @@ const BaseMessage = props => {
                 {React.cloneElement(icon, { style: iconStyles, ...icon.props })}
             </span>
             <div className="ffe-message-box__box">
-                {title && (
-                    <div className="ffe-h4 ffe-message-box__title">{title}</div>
-                )}
+                {title && <div className="ffe-message-box__title">{title}</div>}
                 {content && <p>{content}</p>}
                 {!content && children}
             </div>
