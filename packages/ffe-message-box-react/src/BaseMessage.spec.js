@@ -35,7 +35,9 @@ describe('<BaseMessage />', () => {
     });
     it('renders a title if specified', () => {
         const wrapper = getWrapper({ title: 'test title' });
-        expect(wrapper.find('.ffe-h4').text()).toBe('test title');
+        expect(wrapper.find('.ffe-message-box__title').text()).toBe(
+            'test title',
+        );
     });
     it('renders children if specified', () => {
         const wrapper = getWrapper({ children: <p>children</p> });
