@@ -1,5 +1,4 @@
 import React from 'react';
-import { shallow } from 'enzyme';
 
 import ButtonGroup from './ButtonGroup';
 
@@ -7,7 +6,8 @@ const defaultProps = {
     thin: false,
 };
 
-const getWrapper = props => shallow(<ButtonGroup {...defaultProps} {...props} />);
+const getWrapper = props =>
+    shallow(<ButtonGroup {...defaultProps} {...props} />);
 
 describe('<ButtonGroup />', () => {
     it('renders without exploding', () => {

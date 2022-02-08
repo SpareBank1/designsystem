@@ -1,5 +1,4 @@
 import React from 'react';
-import { shallow } from 'enzyme';
 
 import { BamseIkon, BestikkIkon, KryssIkon } from '@sb1/ffe-icons-react';
 
