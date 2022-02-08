@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@7.1.0...@sb1/ffe-message-box-react@7.1.1) (2022-02-08)
+
+
+### Bug Fixes
+
+* **ffe-message-box-react:** endre ikon størrelse og fjern ubrukt klasse ([abcceab](https://github.com/SpareBank1/designsystem/commit/abcceab38f0f5fd87848e2bac525113d7d503bec))
+
+
+
+
+
 # [7.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@7.0.7...@sb1/ffe-message-box-react@7.1.0) (2022-01-28)
 
 

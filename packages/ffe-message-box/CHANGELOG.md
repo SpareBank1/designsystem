@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@10.0.0...@sb1/ffe-message-box@10.0.1) (2022-02-08)
+
+
+### Bug Fixes
+
+* **ffe-message-box:** fjern ubrukt link klasse ([cb3e9ef](https://github.com/SpareBank1/designsystem/commit/cb3e9ef4bf527fd776dc1775372101a72a10d7b4))
+
+
+
+
+
 # [10.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@9.0.1...@sb1/ffe-message-box@10.0.0) (2022-01-28)
 
 
