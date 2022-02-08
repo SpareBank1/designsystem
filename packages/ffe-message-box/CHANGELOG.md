@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@10.0.1...@sb1/ffe-message-box@10.0.2) (2022-02-08)
+
+
+### Bug Fixes
+
+* **ffe-message-box:** legg til ffe-strong-text styling på tittel i meldingsboks ([5eb7614](https://github.com/SpareBank1/designsystem/commit/5eb7614bf39fab52b4e69ac70e9f8feaa0b74b8a))
+
+
+
+
+
 ## [10.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@10.0.0...@sb1/ffe-message-box@10.0.1) (2022-02-08)
 
 
