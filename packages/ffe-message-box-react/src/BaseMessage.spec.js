@@ -1,5 +1,4 @@
 import React from 'react';
-import { shallow } from 'enzyme';
 import BaseMessage from './BaseMessage';
 
 const defaultProps = { type: 'info', icon: <svg id="icon" /> };
