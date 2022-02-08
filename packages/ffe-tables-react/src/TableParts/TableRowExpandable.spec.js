@@ -1,6 +1,5 @@
 import React from 'react';
 
-import { shallow, render, mount } from 'enzyme';
 import TableRowExpandable from './TableRowExpandable';
 
 const props = {
