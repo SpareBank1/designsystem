@@ -1,5 +1,4 @@
 import React from 'react';
-import each from 'jest-each';
 
 import RadioSwitch from './RadioSwitch';
 
@@ -100,13 +99,13 @@ describe('<RadioSwitch />', () => {
         expect(rightOne.prop('name')).toBe(defaultProps.name);
     });
 
-    each([
+    test.each([
         [undefined, undefined],
         [null, null],
         ['', ''],
         [defaultProps.leftValue, defaultProps.leftValue],
         [defaultProps.rightValue, defaultProps.rightValue],
-    ]).test(
+    ])(
         'returns the correct value of selectedValue when input selected value is %s',
         (selectedValue, expectedSelectedValue) => {
             const wrapper = getWrapper({
