@@ -1,5 +1,4 @@
 import React from 'react';
-import { shallow } from 'enzyme';
 import InputGroup from './InputGroup';
 import Input from './Input';
 import Label from './Label';

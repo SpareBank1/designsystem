@@ -1,5 +1,4 @@
 import React from 'react';
-import { shallow } from 'enzyme';
 import each from 'jest-each';
 
 import RadioSwitch from './RadioSwitch';
