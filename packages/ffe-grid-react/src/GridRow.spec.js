@@ -1,5 +1,4 @@
 import React from 'react';
-import { shallow } from 'enzyme';
 
 import { GridRow, GridCol } from '.';
 import backgroundColors from './background-colors';
