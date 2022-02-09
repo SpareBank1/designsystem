@@ -10,7 +10,8 @@ scripts section of your package.json.
 ```json
 {
     "scripts": {
-        "build": "ffe-buildtool babel"
+        "build": "ffe-buildtool babel",
+        "test": "ffe-buildtool jest"
     }
 }
 ```
@@ -22,11 +23,13 @@ $ ffe-buildtool --help
 Usage: ffe-buildtool [options] [command]
 
 Options:
-  -h, --help                display help for command
+  -h, --help                      display help for command
 
 Commands:
-  babel [options] [source]  compile code with babel
-  help [command]            display help for command
+  babel [options] [source]        compile code with babel
+  babel-watch [options] [source]  continously compile code with babel
+  jest [options]                  test code with jest
+  help [command]                  display help for command
 ```
 
 ### babel
@@ -57,4 +60,29 @@ Options:
   --copy-typedef-outdir <outdir>  where to copy typescript definitions to
                                   (default: "types")
   -h, --help                      display help for command
+```
+
+### jest
+
+The jest-command is a wrapper around the test runner jest. It uses the
+configuration from [./config/jest.config.js] and adds support for
+(enzyme)[https://enzymejs.github.io/enzyme/] and
+(jest-dom-matchers)[https://github.com/testing-library/jest-dom].
+
+Enzymes rendering functions `shallow`, `mount` and `render` are available as
+globals in the test cases. See [./config/jest.setup.js] for details.
+
+Any parameter passed to this command will be forwarded to jest, e.g.
+`ffe-buildtool jtest --coverage` will invoke `jest --coverage` behind the
+scenes.
+
+```
+$ ffe-buildtool help jest
+Usage: ffe-buildtool jest [options]
+
+test code with jest
+
+Options:
+  --watch     Watch files for changes and rerun tests. Same as jest --watchAll
+  -h, --help  display help for command
 ```

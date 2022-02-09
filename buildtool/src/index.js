@@ -1,6 +1,7 @@
 const { Command } = require('commander');
 const babelCommand = require('./commands/babelCommand');
 const copyfileCommand = require('./commands/copyfileCommand');
+const jestCommand = require('./commands/jestCommand');
 
 const program = new Command();
 
@@ -38,6 +39,22 @@ program
     .option('--es <esDir>', 'where to output es modules', 'es')
     .action((source, options) => {
         babelCommand({ source, ...options, watch: true });
+    });
+
+program
+    .command('jest')
+    .description('test code with jest')
+    .option(
+        '--watch',
+        'Watch files for changes and rerun tests. Same as jest --watchAll',
+    )
+    .allowUnknownOption()
+    .action((options, { args }) => {
+        if (options.watch) {
+            args.push('--watchAll');
+        }
+
+        jestCommand(args);
     });
 
 program.parse(process.argv);

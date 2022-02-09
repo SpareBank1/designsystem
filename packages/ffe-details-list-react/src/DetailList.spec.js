@@ -1,5 +1,4 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
 
 import { DetailList, Detail, DetailContent } from '.';
 
@@ -20,11 +19,15 @@ describe('<DetailContent />', () => {
 
     it('adds correct class based on cta prop', () => {
         const wrapper = getWrapper({ cta: false });
-        expect(wrapper.hasClass('ffe-details-list-react__content--action')).toBe(false);
+        expect(
+            wrapper.hasClass('ffe-details-list-react__content--action'),
+        ).toBe(false);
 
         wrapper.setProps({ cta: true });
 
-        expect(wrapper.hasClass('ffe-details-list-react__content--action')).toBe(true);
+        expect(
+            wrapper.hasClass('ffe-details-list-react__content--action'),
+        ).toBe(true);
     });
 
     it('adds any extra classes if provided', () => {
@@ -79,7 +82,9 @@ describe('<Detail />', () => {
 
     it('provides its children with its index and the number of children provided', () => {
         const wrapper = getWrapper();
-        expect(wrapper.find('div[childCount]')
+        expect(
+            wrapper
+                .find('div[childCount]')
                 .first()
                 .prop('childCount'),
         ).toBe(2);
@@ -92,9 +97,7 @@ describe('<Detail />', () => {
 
         wrapper.setProps({ children: <div /> });
 
-        expect(
-            wrapper
-                .find('div[childCount]').prop('childCount')).toBe(1);
+        expect(wrapper.find('div[childCount]').prop('childCount')).toBe(1);
     });
 });
 

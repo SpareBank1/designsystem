@@ -1,5 +1,4 @@
 import React from 'react';
-import { shallow } from 'enzyme';
 import BaseFieldMessage from './BaseFieldMessage';
 
 const getWrapper = props =>

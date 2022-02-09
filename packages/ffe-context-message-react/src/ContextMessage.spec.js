@@ -1,5 +1,4 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
 
 import { InfoSirkelIkon } from '@sb1/ffe-icons-react';
 
@@ -15,6 +14,7 @@ import ContextMessage from './ContextMessage';
 const defaultProps = {
     children: <p>content</p>,
     messageType: 'tip',
+    icon: <InfoSirkelIkon />,
 };
 
 const getShallowWrapper = props =>
@@ -85,9 +85,7 @@ describe('<ContextMessage />', () => {
     });
 
     it('renders with context icon', () => {
-        const wrapper = getMountedWrapper({
-            icon: <InfoSirkelIkon />,
-        });
+        const wrapper = getMountedWrapper({});
         const el = wrapper.find('svg');
         expect(el).toHaveLength(1);
         expect(el.hasClass('ffe-context-message-content__icon-svg')).toBe(true);

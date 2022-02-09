@@ -1,5 +1,4 @@
 import React from 'react';
-import { mount } from 'enzyme';
 
 import Tooltip from './Tooltip';
 import ErrorFieldMessage from './ErrorFieldMessage';

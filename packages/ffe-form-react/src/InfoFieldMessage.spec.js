@@ -1,5 +1,4 @@
 import React from 'react';
-import { mount } from 'enzyme';
 import InfoFieldMessage from './InfoFieldMessage';
 
 const getWrapper = () =>
@@ -9,6 +8,8 @@ describe('<InfoFieldMessage>', () => {
     it('renders the correct class name based on type prop', () => {
         const wrapper = getWrapper();
         expect(wrapper.exists()).toBe(true);
-        expect(wrapper.find('div').hasClass('ffe-field-info-message')).toBe(true);
+        expect(wrapper.find('div').hasClass('ffe-field-info-message')).toBe(
+            true,
+        );
     });
 });

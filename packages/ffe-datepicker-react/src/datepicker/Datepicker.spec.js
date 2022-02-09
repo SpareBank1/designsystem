@@ -1,4 +1,3 @@
-import { shallow, mount } from 'enzyme';
 import React from 'react';
 
 import DateInput from '../input';
