@@ -1,5 +1,4 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
 
 import Spinner from '@sb1/ffe-spinner-react';
 
