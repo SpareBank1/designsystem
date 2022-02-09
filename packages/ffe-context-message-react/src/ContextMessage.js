@@ -10,7 +10,7 @@ import {
     object,
 } from 'prop-types';
 import classNames from 'classnames';
-import KryssIkon from '@sb1/ffe-icons-react/lib/kryss-ikon';
+import { KryssIkon } from '@sb1/ffe-icons-react';
 import acceptedLocales from './locale/accepted-locales';
 import texts from './locale/texts';
 import { v4 as uuid } from 'uuid';

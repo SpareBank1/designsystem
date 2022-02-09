@@ -9,7 +9,7 @@ import {
     shape,
     elementType,
 } from 'prop-types';
-import ChevronIkon from '@sb1/ffe-icons-react/lib/chevron-ikon';
+import { ChevronIkon } from '@sb1/ffe-icons-react';
 import Button from './BaseButton';
 
 const ShortcutButton = props => (

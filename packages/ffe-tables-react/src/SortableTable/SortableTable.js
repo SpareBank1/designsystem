@@ -1,4 +1,4 @@
-import PilNedIkon from '@sb1/ffe-icons-react/lib/pil-ned-ikon';
+import { PilNedIkon } from '@sb1/ffe-icons-react';
 import classNames from 'classnames';
 import equal from 'deep-equal';
 import PropTypes from 'prop-types';

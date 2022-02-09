@@ -10,7 +10,7 @@ import {
     elementType,
 } from 'prop-types';
 import classNames from 'classnames';
-import KryssIkon from '@sb1/ffe-icons-react/lib/kryss-ikon';
+import { KryssIkon } from '@sb1/ffe-icons-react';
 
 const ExpandButton = props => {
     const {

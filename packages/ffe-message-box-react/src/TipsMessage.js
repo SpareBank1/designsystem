@@ -1,16 +1,12 @@
 import React from 'react';
 import { node, string } from 'prop-types';
 
-import LyspareIkon from '@sb1/ffe-icons-react/lib/lyspare-ikon';
+import { LyspareIkon } from '@sb1/ffe-icons-react';
 
 import BaseMessage from './BaseMessage';
 
 const TipsMessage = props => (
-    <BaseMessage
-        type="tips"
-        icon={<LyspareIkon />}
-        {...props}
-    />
+    <BaseMessage type="tips" icon={<LyspareIkon />} {...props} />
 );
 
 TipsMessage.propTypes = {

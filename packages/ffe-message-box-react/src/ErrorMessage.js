@@ -1,7 +1,7 @@
 import React from 'react';
 import { node, string, bool } from 'prop-types';
 
-import UtropstegnIkon from '@sb1/ffe-icons-react/lib/utropstegn-ikon';
+import { UtropstegnIkon } from '@sb1/ffe-icons-react';
 
 import BaseMessage from './BaseMessage';
 

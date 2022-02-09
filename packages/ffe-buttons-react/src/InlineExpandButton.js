@@ -1,6 +1,6 @@
 import React from 'react';
 import { bool, func, node, oneOfType, object, shape } from 'prop-types';
-import ChevronIkon from '@sb1/ffe-icons-react/lib/chevron-ikon';
+import { ChevronIkon } from '@sb1/ffe-icons-react';
 
 import InlineButton from './InlineBaseButton';
 

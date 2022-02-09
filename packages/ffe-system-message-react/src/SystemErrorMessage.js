@@ -1,6 +1,6 @@
 import React from 'react';
 import { func, string, number, node, oneOf, bool } from 'prop-types';
-import UtropstegnIkon from '@sb1/ffe-icons-react/lib/utropstegn-ikon';
+import { UtropstegnIkon } from '@sb1/ffe-icons-react';
 
 import SystemMessage from './SystemMessage';
 

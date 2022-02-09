@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 
-import InfoSirkelIkon from '@sb1/ffe-icons-react/lib/info-sirkel-ikon';
+import { InfoSirkelIkon } from '@sb1/ffe-icons-react';
 
 import {
     ContextErrorMessage,

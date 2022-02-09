@@ -9,4 +9,12 @@ module.exports = api => ({
         ],
         '@babel/react',
     ],
+    plugins: [
+        [
+            '../src/util/babel-plugin-ffe-icons',
+            {
+                sourceSubpath: api.env('es') ? 'es' : 'lib',
+            },
+        ],
+    ],
 });

@@ -1,4 +1,4 @@
-import ChevronIkon from '@sb1/ffe-icons-react/lib/chevron-ikon';
+import { ChevronIkon } from '@sb1/ffe-icons-react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
