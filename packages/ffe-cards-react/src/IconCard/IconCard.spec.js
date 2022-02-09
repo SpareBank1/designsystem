@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 import IconCard from './IconCard';
-import SparegrisIkon from '../../../ffe-icons-react/lib/sparegris-ikon';
+import { SparegrisIkon } from '@sb1/ffe-icons-react';
 import { Text } from '../components';
 
 const getWrapper = props =>
