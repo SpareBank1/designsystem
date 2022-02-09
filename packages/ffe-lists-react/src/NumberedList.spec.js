@@ -1,5 +1,4 @@
 import React from 'react';
-import { shallow } from 'enzyme';
 import NumberedList from './NumberedList';
 import NumberedListItem from './NumberedListItem';
 

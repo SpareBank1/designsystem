@@ -1,5 +1,4 @@
 import React from 'react';
-import { shallow } from 'enzyme';
 import BulletList from './BulletList';
 import BulletListItem from './BulletListItem';
 

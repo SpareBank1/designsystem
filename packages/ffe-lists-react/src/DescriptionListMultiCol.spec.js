@@ -1,5 +1,4 @@
 import React from 'react';
-import { shallow } from 'enzyme';
 import DescriptionListMultiCol from './DescriptionListMultiCol';
 import DescriptionListTerm from './DescriptionListTerm';
 import DescriptionListDescription from './DescriptionListDescription';

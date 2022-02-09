@@ -1,5 +1,4 @@
 import React from 'react';
-import { shallow } from 'enzyme';
 import CheckList from './CheckList';
 import CheckListItem from './CheckListItem';
 
