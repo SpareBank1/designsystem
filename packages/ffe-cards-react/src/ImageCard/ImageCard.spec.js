@@ -1,5 +1,4 @@
 import React from 'react';
-import { shallow } from 'enzyme';
 
 import ImageCard from './ImageCard';
 import { Text } from '../components';

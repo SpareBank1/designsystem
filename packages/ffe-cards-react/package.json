@@ -21,11 +21,8 @@
     "build": "ffe-buildtool babel",
     "watch": "ffe-buildtool babel-watch",
     "lint": "eslint src",
-    "test": "jest",
-    "test:watch": "jest --watch"
-  },
-  "jest": {
-    "setupTestFrameworkScriptFile": "../../test-setup.js"
+    "test": "ffe-buildtool jest",
+    "test:watch": "ffe-buildtool jest --watch"
   },
   "dependencies": {
     "prop-types": "^15.7.2"
@@ -33,9 +30,6 @@
   "devDependencies": {
     "@sb1/ffe-buildtool": "^0.3.2",
     "@sb1/ffe-icons-react": "^7.2.22",
-    "enzyme": "^3.7.0",
-    "enzyme-adapter-react-16": "^1.7.0",
-    "jest": "^26.0.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0"
   },
