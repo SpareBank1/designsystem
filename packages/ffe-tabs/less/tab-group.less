@@ -12,13 +12,24 @@
 .ffe-tab-group {
     display: flex;
     flex-direction: column;
-    padding: 0;
-    margin: @ffe-spacing-xl 0;
-    position: relative;
-    width: 100%;
+    border-radius: 25px;
+    background-color: @ffe-farge-hvit;
+    border: 2px solid @ffe-farge-fjell;
+    align-items: center;
 
-    &--thin {
-        margin: 0;
+    &--noBreak {
+        display: flex;
+        flex-direction: row;
+        border-radius: 40px;
+        align-items: center;
+        max-width: max-content;
+    }
+
+    .native & {
+        @media (prefers-color-scheme: dark) {
+            background-color: @ffe-farge-svart;
+            border: 2px solid @ffe-farge-vann-30;
+        }
     }
 
     &::after {
@@ -26,20 +37,15 @@
         display: block;
         width: 100%;
         height: 2px;
-        background: @ffe-grey-silver;
         position: absolute;
         bottom: 0;
         left: 0;
         z-index: 1;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                background: @ffe-grey-silver-darkmode;
-            }
-        }
     }
 
     .ffe-tab {
         justify-content: center;
+        width: auto;
 
         &--selected {
             z-index: 2;
@@ -47,7 +53,20 @@
     }
 
     @media (min-width: @breakpoint-sm) {
-        display: inline-flex;
+        display: flex;
         flex-direction: row;
+        border-radius: 40px;
+        align-items: center;
+        width: max-content;
+
+        .ffe-tab {
+            &:first-child {
+                margin-right: @ffe-spacing-xs;
+            }
+
+            &:nth-last-child(2) {
+                margin-right: @ffe-spacing-xs;
+            }
+        }
     }
 }

@@ -2,12 +2,12 @@ import React from 'react';
 import { node, string, bool } from 'prop-types';
 import classNames from 'classnames';
 
-export default function TabGroup({ className, thin, ...rest }) {
+export default function TabGroup({ className, noBreak, ...rest }) {
     return (
         <div
             className={classNames(
                 'ffe-tab-group',
-                { 'ffe-tab-group--thin': thin },
+                { 'ffe-tab-group--noBreak': noBreak },
                 className,
             )}
             role="tablist"
@@ -21,6 +21,6 @@ TabGroup.propTypes = {
     children: node.isRequired,
     /** Additional css classes */
     className: string,
-    /** Applies the thin modifier to remove margins */
-    thin: bool,
+    /** Applies the noBreak modifier to avoid breaking */
+    noBreak: bool,
 };
