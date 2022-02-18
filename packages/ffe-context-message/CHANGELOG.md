@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@5.1.0...@sb1/ffe-context-message@5.1.1) (2022-02-08)
+
+
+### Bug Fixes
+
+* **ffe-context-message:** fjerne padding rundt ikonet og justere størrelsen ([cf28e75](https://github.com/SpareBank1/designsystem/commit/cf28e753a8e3ad5709a91e027e09e99a83108bef))
+
+
+
+
+
 # [5.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@5.0.17...@sb1/ffe-context-message@5.1.0) (2022-01-28)
 
 

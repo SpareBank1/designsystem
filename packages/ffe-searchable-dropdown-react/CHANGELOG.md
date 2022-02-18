@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [14.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@14.0.4...@sb1/ffe-searchable-dropdown-react@14.0.5) (2022-02-10)
+
+
+### Bug Fixes
+
+* **ffe-searchable-dropdown-react:** fix missing noMatch list on first render ([bcbcad2](https://github.com/SpareBank1/designsystem/commit/bcbcad252099856d4e3490004052f5f59dd525f9))
+
+
+
+
+
 ## [14.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@14.0.3...@sb1/ffe-searchable-dropdown-react@14.0.4) (2022-01-27)
 
 

@@ -162,6 +162,7 @@ export const createReducer = ({
                     searchAttributes,
                     maxRenderedDropdownElements,
                     dropdownList,
+                    noMatchDropdownList,
                     searchMatcher,
                     showAllItemsInDropdown: !!state.selectedItem,
                 }),

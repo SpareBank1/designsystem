@@ -1,14 +1,5 @@
 import React from 'react';
-import {
-    number,
-    node,
-    string,
-    bool,
-    element,
-    oneOf,
-    func,
-    object,
-} from 'prop-types';
+import { number, node, string, bool, oneOf, func, object } from 'prop-types';
 import acceptedLocales from './locale/accepted-locales';
 import ContextMessage from './ContextMessage';
 import { UtropstegnIkon } from '@sb1/ffe-icons-react';
@@ -18,10 +9,10 @@ const ContextErrorMessage = props => {
 
     return (
         <ContextMessage
+            {...rest}
             messageType="error"
             role={alert ? 'alert' : false}
             icon={<UtropstegnIkon />}
-            {...rest}
         />
     );
 };
@@ -39,7 +30,6 @@ ContextErrorMessage.propTypes = {
     header: string,
     /** ID for the header container */
     headerElementId: string,
-    icon: element,
     /** Decides the language of the aria-label for the close icon */
     locale: oneOf(acceptedLocales),
     /** Provided by the wrapper component */

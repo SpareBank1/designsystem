@@ -91,6 +91,7 @@ const SearchableDropdown = ({
                     searchAttributes,
                     maxRenderedDropdownElements,
                     dropdownList,
+                    noMatchDropdownList: noMatch.dropdownList,
                     searchMatcher,
                     showAllItemsInDropdown: !!selectedItem,
                 }),

@@ -3,6 +3,41 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.2.3...@sb1/ffe-component-index@3.2.4) (2022-02-10)
+
+**Note:** Version bump only for package @sb1/ffe-component-index
+
+
+
+
+
+## [3.2.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.2.2...@sb1/ffe-component-index@3.2.3) (2022-02-08)
+
+**Note:** Version bump only for package @sb1/ffe-component-index
+
+
+
+
+
+## [3.2.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.2.1...@sb1/ffe-component-index@3.2.2) (2022-02-08)
+
+
+### Bug Fixes
+
+* **component-overview:** legg til og juster meldingsboks eksempler ([66d5731](https://github.com/SpareBank1/designsystem/commit/66d57310e36256e2465a73f96a8dcba7aa1cef3c))
+
+
+
+
+
+## [3.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.2.0...@sb1/ffe-component-index@3.2.1) (2022-02-03)
+
+**Note:** Version bump only for package @sb1/ffe-component-index
+
+
+
+
+
 # [3.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.1.2...@sb1/ffe-component-index@3.2.0) (2022-01-28)
 
 
