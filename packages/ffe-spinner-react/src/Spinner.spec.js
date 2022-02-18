@@ -1,5 +1,4 @@
 import React from 'react';
-import { shallow } from 'enzyme';
 import Spinner from '.';
 
 const getWrapper = props => shallow(<Spinner {...props} />);

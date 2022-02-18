@@ -1,16 +1,12 @@
 import React from 'react';
 import { node, string } from 'prop-types';
 
-import InfoIkon from '@sb1/ffe-icons-react/lib/info-ikon';
+import { InfoIkon } from '@sb1/ffe-icons-react';
 
 import BaseMessage from './BaseMessage';
 
 const InfoMessage = props => (
-    <BaseMessage
-        type="info"
-        icon={<InfoIkon />}
-        {...props}
-    />
+    <BaseMessage type="info" icon={<InfoIkon />} {...props} />
 );
 
 InfoMessage.propTypes = {

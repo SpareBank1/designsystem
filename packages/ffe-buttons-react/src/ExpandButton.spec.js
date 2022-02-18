@@ -1,9 +1,6 @@
 import React from 'react';
-import { shallow } from 'enzyme';
 
-import BamseIkon from '@sb1/ffe-icons-react/lib/bamse-ikon';
-import BestikkIkon from '@sb1/ffe-icons-react/lib/bestikk-ikon';
-import KryssIkon from '@sb1/ffe-icons-react/lib/kryss-ikon';
+import { BamseIkon, BestikkIkon, KryssIkon } from '@sb1/ffe-icons-react';
 
 import ExpandButton from './ExpandButton';
 

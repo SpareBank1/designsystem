@@ -1,5 +1,4 @@
 import React from 'react';
-import { render, shallow } from 'enzyme';
 import { assert, match, spy } from 'sinon';
 import SortableTable from './SortableTable';
 

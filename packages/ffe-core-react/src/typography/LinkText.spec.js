@@ -1,5 +1,4 @@
 import React from 'react';
-import { shallow } from 'enzyme';
 
 import LinkText from './LinkText';
 
@@ -8,11 +7,7 @@ const defaultProps = {
     href: '/avtale/abc123',
 };
 
-const Link = props => (
-    <span
-        {...props}
-    />
-);
+const Link = props => <span {...props} />;
 
 const getWrapper = props => shallow(<LinkText {...defaultProps} {...props} />);
 

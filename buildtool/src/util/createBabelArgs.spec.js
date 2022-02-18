@@ -4,6 +4,7 @@ describe('createBabelArgs', () => {
     test('minimal args', () =>
         expect(
             createBabelArgs({
+                cwd: __dirname,
                 source: 'sourceDir',
                 cjs: 'cjsDir',
                 es: 'esDir',
@@ -13,6 +14,7 @@ describe('createBabelArgs', () => {
     test('cjs only', () =>
         expect(
             createBabelArgs({
+                cwd: __dirname,
                 source: 'sourceDir',
                 cjs: 'cjsDir',
                 es: false,
@@ -22,6 +24,7 @@ describe('createBabelArgs', () => {
     test('esm only', () =>
         expect(
             createBabelArgs({
+                cwd: __dirname,
                 source: 'sourceDir',
                 cjs: false,
                 es: 'esDir',
@@ -31,6 +34,7 @@ describe('createBabelArgs', () => {
     test('with watch', () =>
         expect(
             createBabelArgs({
+                cwd: __dirname,
                 source: 'sourceDir',
                 cjs: false,
                 es: 'esDir',

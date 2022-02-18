@@ -1,6 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
-import ChevronIkon from '@sb1/ffe-icons-react/lib/chevron-ikon';
+import { ChevronIkon } from '@sb1/ffe-icons-react';
 
 import InlineExpandButton from './InlineExpandButton';
 

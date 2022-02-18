@@ -1,4 +1,1 @@
-# Specific ignores for ffe-icons-react
-jsx/
-es/
-tsx/
+gen-src/

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { func, string, number, node, oneOf, bool } from 'prop-types';
 import classNames from 'classnames';
-import KryssIkon from '@sb1/ffe-icons-react/lib/kryss-ikon';
+import { KryssIkon } from '@sb1/ffe-icons-react';
 
 class SystemMessage extends Component {
     constructor() {

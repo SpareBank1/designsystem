@@ -1,5 +1,4 @@
 import React from 'react';
-import { shallow } from 'enzyme';
 import Tooltip from './Tooltip';
 import { spy } from 'sinon';
 

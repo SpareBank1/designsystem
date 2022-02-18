@@ -1,16 +1,12 @@
 import React from 'react';
 import { node, string } from 'prop-types';
 
-import HakeIkon from '@sb1/ffe-icons-react/lib/hake-ikon';
+import { HakeIkon } from '@sb1/ffe-icons-react';
 
 import BaseMessage from './BaseMessage';
 
 const SuccessMessage = props => (
-    <BaseMessage
-        type="success"
-        icon={<HakeIkon />}
-        {...props}
-    />
+    <BaseMessage type="success" icon={<HakeIkon />} {...props} />
 );
 
 SuccessMessage.propTypes = {
