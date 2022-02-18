@@ -97,9 +97,14 @@
     }
 
     &__icon-svg {
-        height: 2em;
-        width: 2em;
+        height: 1em;
+        width: 1em;
         fill: @ffe-farge-hvit;
+
+        @media (min-width: @breakpoint-sm) {
+            height: 2em;
+            width: 2em;
+        }
     }
 
     &__close-button {
