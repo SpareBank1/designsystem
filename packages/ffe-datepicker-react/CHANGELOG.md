@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@5.0.44...@sb1/ffe-datepicker-react@5.1.0) (2022-02-18)
+
+
+### Features
+
+* **ffe-datepicker-react:** import icons without need for tree shaking ([0f44e65](https://github.com/SpareBank1/designsystem/commit/0f44e654db3db034cb7ce3a95ea68ccac8e1cfc6))
+
+
+
+
+
 ## [5.0.44](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@5.0.43...@sb1/ffe-datepicker-react@5.0.44) (2022-01-27)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker-react

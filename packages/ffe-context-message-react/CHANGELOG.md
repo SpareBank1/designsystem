@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@6.0.1...@sb1/ffe-context-message-react@6.1.0) (2022-02-18)
+
+
+### Features
+
+* **ffe-context-message-react:** import icons without need for tree shaking ([d14bb11](https://github.com/SpareBank1/designsystem/commit/d14bb1135dda5c54b6046c9c994276ae8df3bde2))
+
+
+
+
+
 ## [6.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@6.0.0...@sb1/ffe-context-message-react@6.0.1) (2022-02-03)
 
 

@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buildtool@0.3.2...@sb1/ffe-buildtool@0.4.0) (2022-02-18)
+
+
+### Bug Fixes
+
+* **buildtool:** makes snapshot testing less dependent on cwd ([d0a76bc](https://github.com/SpareBank1/designsystem/commit/d0a76bcacbfb7400df7899e631a16982b9fcb006))
+* **buildtool:** run jest tests with jsdom environment ([c032574](https://github.com/SpareBank1/designsystem/commit/c0325741d0d3f7afe685d94112307c7b70ad86f2))
+
+
+### Features
+
+* **buildtool:** babel plugin for ffe-icons-react ([4e33507](https://github.com/SpareBank1/designsystem/commit/4e3350725e15877b5a578b00928f07f844231ffc))
+* **buildtool:** new command `ffe-buildtool jest` ([0ef3658](https://github.com/SpareBank1/designsystem/commit/0ef3658e530e5cad4285b8c02bd9b0361abbf3a9))
+
+
+
+
+
 ## [0.3.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buildtool@0.3.1...@sb1/ffe-buildtool@0.3.2) (2022-01-27)
 
 

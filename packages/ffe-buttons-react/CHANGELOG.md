@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [14.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@14.0.12...@sb1/ffe-buttons-react@14.1.0) (2022-02-18)
+
+
+### Features
+
+* **ffe-buttons-react:** import icons without need for tree shaking ([f856288](https://github.com/SpareBank1/designsystem/commit/f8562889018e6f47ecbae1953b1752bcdb362f8f))
+
+
+
+
+
 ## [14.0.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@14.0.11...@sb1/ffe-buttons-react@14.0.12) (2022-01-27)
 
 **Note:** Version bump only for package @sb1/ffe-buttons-react

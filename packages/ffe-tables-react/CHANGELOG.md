@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@6.0.33...@sb1/ffe-tables-react@6.1.0) (2022-02-18)
+
+
+### Features
+
+* **ffe-tables-react:** import icons without need for tree shaking ([c5eb179](https://github.com/SpareBank1/designsystem/commit/c5eb179f091c7fbe5377d56e8a445d8eae8ccb5a))
+
+
+
+
+
 ## [6.0.33](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@6.0.32...@sb1/ffe-tables-react@6.0.33) (2022-01-27)
 
 **Note:** Version bump only for package @sb1/ffe-tables-react

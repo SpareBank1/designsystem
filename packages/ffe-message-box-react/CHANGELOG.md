@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@7.1.1...@sb1/ffe-message-box-react@7.2.0) (2022-02-18)
+
+
+### Features
+
+* **ffe-message-box-react:** import icons without need for tree shaking ([a0c0291](https://github.com/SpareBank1/designsystem/commit/a0c029179459d2d65988e44cd89669f765bad9e4))
+
+
+
+
+
 ## [7.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@7.1.0...@sb1/ffe-message-box-react@7.1.1) (2022-02-08)
 
 
