@@ -4,7 +4,9 @@
   "description": "Kort for bruk i oversikter",
   "license": "MIT",
   "author": "SpareBank 1",
-  "main": "index.js",
+  "files": [
+    "less"
+  ],
   "repository": {
     "type": "git",
     "url": "ssh://git@github.com:SpareBank1/designsystem.git"
