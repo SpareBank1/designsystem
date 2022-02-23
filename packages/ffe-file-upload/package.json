@@ -4,7 +4,9 @@
   "description": "File upload module",
   "license": "MIT",
   "author": "SpareBank 1",
-  "main": "less/ffe-file-upload.less",
+  "files": [
+    "less"
+  ],
   "repository": {
     "type": "git",
     "url": "ssh://git@github.com:SpareBank1/designsystem.git"
