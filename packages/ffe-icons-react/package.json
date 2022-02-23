@@ -3,6 +3,7 @@
   "version": "7.3.0",
   "description": "React-komponenter for ffe-icons",
   "license": "MIT",
+  "author": "SpareBank 1",
   "files": [
     "lib",
     "types",
