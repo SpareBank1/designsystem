@@ -2,14 +2,11 @@
   "name": "@sb1/ffe-accordion",
   "version": "8.0.10",
   "description": "Accordion component for FFE.",
-  "keywords": [
-    "Accordion",
-    "FFE",
-    "SpareBank1"
-  ],
   "license": "MIT",
   "author": "SpareBank 1",
-  "main": "index.js",
+  "files": [
+    "less"
+  ],
   "repository": {
     "type": "git",
     "url": "ssh://git@github.com:SpareBank1/designsystem.git"
