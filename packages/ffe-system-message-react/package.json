@@ -6,6 +6,7 @@
   "author": "SpareBank 1",
   "files": [
     "lib",
+    "es",
     "types"
   ],
   "main": "lib/index.js",
