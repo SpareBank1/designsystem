@@ -4,7 +4,9 @@
   "description": "Meldingsboks",
   "license": "MIT",
   "author": "SpareBank 1",
-  "main": "less/ffe-message-box",
+  "files": [
+    "less"
+  ],
   "repository": {
     "type": "git",
     "url": "ssh://git@github.com:SpareBank1/designsystem.git"
