@@ -7,7 +7,6 @@
   "files": [
     "less"
   ],
-  "main": "less/lists.less",
   "repository": {
     "type": "git",
     "url": "ssh://git@github.com:SpareBank1/designsystem.git"
