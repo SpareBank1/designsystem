@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-tables-react",
-  "version": "6.1.0",
+  "version": "6.1.1",
   "description": "React implementation of ffe-tables",
   "license": "MIT",
   "files": [
@@ -24,7 +24,7 @@
     "test:watch": "ffe-buildtool jest --watch"
   },
   "dependencies": {
-    "@sb1/ffe-icons-react": "^7.3.0",
+    "@sb1/ffe-icons-react": "^7.3.1",
     "classnames": "^2.3.1",
     "deep-equal": "^1.0.1",
     "memoize-one": "^5.0.0",

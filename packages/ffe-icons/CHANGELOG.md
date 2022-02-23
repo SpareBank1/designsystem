@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.17.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.16.0...@sb1/ffe-icons@12.17.0) (2022-02-23)
+
+
+### Features
+
+* **ffe-icons:** legg til filter ikon ([be3cdb4](https://github.com/SpareBank1/designsystem/commit/be3cdb42300cc7e998e0d47fb8d14a24ca2708f0))
+
+
+
+
+
 # [12.16.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.15.4...@sb1/ffe-icons@12.16.0) (2022-01-24)
 
 
