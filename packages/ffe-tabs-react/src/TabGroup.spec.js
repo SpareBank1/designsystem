@@ -28,13 +28,13 @@ describe('TabGroup', () => {
         ).toBe(true);
     });
 
-    it('should apply thin modifier class when the thin prop is true', () => {
+    it('should apply noBreak modifier class when the noBreak prop is true', () => {
         const wrapper = shallow(
-            <TabGroup thin={true}>
+            <TabGroup noBreak={true}>
                 <Tab aria-controls="div">En tab</Tab>
             </TabGroup>,
         );
-        expect(wrapper.hasClass('ffe-tab-group--thin')).toBe(true);
+        expect(wrapper.hasClass('ffe-tab-group--no-break')).toBe(true);
     });
 
     it('should accept custom classes', () => {

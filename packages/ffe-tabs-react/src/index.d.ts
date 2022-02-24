@@ -3,7 +3,6 @@ import * as React from 'react';
 export interface TabProps
     extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     selected?: boolean;
-    condensed?: boolean;
     className?: string;
     'aria-controls': string;
 }
@@ -20,7 +19,7 @@ export interface TabButtonProps
 export interface TabGroupProps extends React.HTMLAttributes<HTMLDivElement> {
     children: React.ReactNode;
     className?: string;
-    thin?: boolean;
+    noBreak?: boolean;
 }
 
 declare class Tab extends React.Component<TabProps, any> {}

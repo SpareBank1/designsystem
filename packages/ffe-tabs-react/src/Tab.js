@@ -3,7 +3,7 @@ import { bool, string } from 'prop-types';
 import classNames from 'classnames';
 
 export default function Tab(props) {
-    const { className, selected, condensed, ...rest } = props;
+    const { className, selected, ...rest } = props;
     return (
         <button
             role="tab"
@@ -11,7 +11,6 @@ export default function Tab(props) {
             className={classNames(
                 'ffe-tab',
                 { 'ffe-tab--selected': selected },
-                { 'ffe-tab--condensed': condensed },
                 className,
             )}
             {...rest}
@@ -22,8 +21,6 @@ export default function Tab(props) {
 Tab.propTypes = {
     /** Selected tab button */
     selected: bool,
-    /** Compact style tab button */
-    condensed: bool,
     /** Additional css classes */
     className: string,
     /** Id of the element it controls */
