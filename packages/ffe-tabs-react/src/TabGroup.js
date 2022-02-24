@@ -7,7 +7,7 @@ export default function TabGroup({ className, noBreak, ...rest }) {
         <div
             className={classNames(
                 'ffe-tab-group',
-                { 'ffe-tab-group--noBreak': noBreak },
+                { 'ffe-tab-group--no-break': noBreak },
                 className,
             )}
             role="tablist"
