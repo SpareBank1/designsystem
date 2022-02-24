@@ -150,6 +150,18 @@ export interface TextAreaProps
     className?: string;
 }
 
+export interface ToggleSwitchProps
+    extends React.InputHTMLAttributes<HTMLInputElement> {
+    children: React.ReactNode;
+    className: string;
+    id: string;
+    description: string;
+    onText: string;
+    offText: string;
+    hideOnOff: boolean;
+    value: string;
+}
+
 declare class Checkbox extends React.Component<CheckboxProps, any> {}
 declare class ErrorFieldMessage extends React.Component<
     BaseFieldMessageProps,
@@ -168,6 +180,7 @@ declare class PhoneNumber extends React.Component<PhoneNumberProps, any> {}
 declare class Label extends React.Component<LabelProps, any> {}
 declare class InputGroup extends React.Component<InputGroupProps, any> {}
 declare class Tooltip extends React.Component<TooltipProps, any> {}
+declare class ToggleSwitch extends React.Component<ToggleSwitchProps, any> {}
 declare class RadioBlock extends React.Component<RadioBlockProps, any> {}
 declare class RadioButton extends React.Component<RadioButtonProps, any> {}
 declare class RadioButtonInputGroup extends React.Component<

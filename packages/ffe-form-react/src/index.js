@@ -12,6 +12,7 @@ import RadioButtonInputGroup from './RadioButtonInputGroup';
 import RadioSwitch from './RadioSwitch';
 import TextArea from './TextArea';
 import Tooltip from './Tooltip';
+import ToggleSwitch from './ToggleSwitch';
 
 export {
     Checkbox,
@@ -28,4 +29,5 @@ export {
     RadioSwitch,
     TextArea,
     Tooltip,
+    ToggleSwitch,
 };
