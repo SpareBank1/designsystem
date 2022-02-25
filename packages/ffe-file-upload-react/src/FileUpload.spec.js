@@ -35,16 +35,12 @@ describe('<FileUpload/>', () => {
         });
 
         it('should have a button and input', () => {
-            expect(
-                component.find('.ffe-file-upload__upload-button').exists(),
-            ).toBe(true);
+            expect(component.find('#file-upload-button').exists()).toBe(true);
             expect(component.find('#file-upload').exists()).toBe(true);
         });
 
         it('should render input label', () => {
-            expect(
-                component.find('.ffe-file-upload__upload-button').text(),
-            ).toBe('label');
+            expect(component.find('#file-upload-label').text()).toBe('label');
         });
 
         it('should add label as aria-label', () => {
