@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [20.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@19.4.0...@sb1/ffe-core@20.0.0) (2022-02-28)
+
+
+### Bug Fixes
+
+* **ffe-core:** fjern ffe-farge-vann-30-hover farge ([c8806b3](https://github.com/SpareBank1/designsystem/commit/c8806b344a801ba4d85067555f4e718645f3bfba))
+
+
+### BREAKING CHANGES
+
+* **ffe-core:** fjernet ffe-farge-vann-30-hover
+
+
+
+
+
 # [19.4.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@19.3.3...@sb1/ffe-core@19.4.0) (2021-11-30)
 
 

@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.2.6...@sb1/ffe-component-index@3.2.7) (2022-02-28)
+
+
+### Bug Fixes
+
+* **component-overview:** typo in start up script ([b325b9b](https://github.com/SpareBank1/designsystem/commit/b325b9be8967e8c60c7246285123a20aa99c34b3))
+* **component-overview:** workaround for en bug i parcel ([a26082a](https://github.com/SpareBank1/designsystem/commit/a26082a072ea8583b6b9c1ce08f70d12dc2d206b))
+
+
+
+
+
 ## [3.2.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.2.5...@sb1/ffe-component-index@3.2.6) (2022-02-23)
 
 **Note:** Version bump only for package @sb1/ffe-component-index

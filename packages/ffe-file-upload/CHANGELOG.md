@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload@6.0.12...@sb1/ffe-file-upload@7.0.0) (2022-02-28)
+
+
+### Bug Fixes
+
+* **ffe-file-upload:** fjern upload knapp styling ([3374c48](https://github.com/SpareBank1/designsystem/commit/3374c482e9b9820040c26ffc92cbdd7ca9f71d1b))
+
+
+### BREAKING CHANGES
+
+* **ffe-file-upload:** fjerner styling for upload knapp som nå bare er en secondary button
+
+
+
+
+
 ## [6.0.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload@6.0.11...@sb1/ffe-file-upload@6.0.12) (2021-11-30)
 
 **Note:** Version bump only for package @sb1/ffe-file-upload

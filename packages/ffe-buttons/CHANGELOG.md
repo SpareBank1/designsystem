@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [13.0.18](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@13.0.17...@sb1/ffe-buttons@13.0.18) (2022-02-28)
+
+
+### Bug Fixes
+
+* **ffe-buttons:** bytt ut vann-30-hover farge ([df4ae16](https://github.com/SpareBank1/designsystem/commit/df4ae16f82a25dbe046ba5cca3fba050d3ab9fa1))
+
+
+
+
+
 ## [13.0.17](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@13.0.16...@sb1/ffe-buttons@13.0.17) (2021-12-14)
 
 

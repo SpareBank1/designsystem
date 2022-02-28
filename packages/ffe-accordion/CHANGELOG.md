@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@8.0.10...@sb1/ffe-accordion@8.0.11) (2022-02-28)
+
+**Note:** Version bump only for package @sb1/ffe-accordion
+
+
+
+
+
 ## [8.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@8.0.9...@sb1/ffe-accordion@8.0.10) (2021-11-30)
 
 **Note:** Version bump only for package @sb1/ffe-accordion

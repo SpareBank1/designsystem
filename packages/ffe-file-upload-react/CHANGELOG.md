@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload-react@5.0.10...@sb1/ffe-file-upload-react@6.0.0) (2022-02-28)
+
+
+### Bug Fixes
+
+* **ffe-file-upload-react:** erstatt knapp med secondarybutton ([200f351](https://github.com/SpareBank1/designsystem/commit/200f351ae80329a7e45f7d3f5dfeb9e3ac927940))
+
+
+### BREAKING CHANGES
+
+* **ffe-file-upload-react:** fjerner custom knapp og erstatter den med secondaryButton
+
+
+
+
+
 ## [5.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload-react@5.0.9...@sb1/ffe-file-upload-react@5.0.10) (2022-02-18)
 
 **Note:** Version bump only for package @sb1/ffe-file-upload-react

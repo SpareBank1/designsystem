@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [17.0.21](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@17.0.20...@sb1/ffe-header@17.0.21) (2022-02-28)
+
+
+### Bug Fixes
+
+* **ffe-header:** replace hover color with frost-30 ([72a21e6](https://github.com/SpareBank1/designsystem/commit/72a21e67d75ce6744390f47ebfc3aa4b67b52196))
+
+
+
+
+
 ## [17.0.20](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@17.0.19...@sb1/ffe-header@17.0.20) (2022-01-25)
 
 **Note:** Version bump only for package @sb1/ffe-header
