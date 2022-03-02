@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [20.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@20.0.2...@sb1/ffe-form@20.0.3) (2022-03-02)
+
+
+### Bug Fixes
+
+* **ffe-form:** remove main entry field from package.json ([e0b2e2d](https://github.com/SpareBank1/designsystem/commit/e0b2e2dcbc24e4d12c163c6d216656caea1d5691))
+
+
+
+
+
 ## [20.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@20.0.1...@sb1/ffe-form@20.0.2) (2022-02-28)
 
 **Note:** Version bump only for package @sb1/ffe-form

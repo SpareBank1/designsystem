@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@6.1.1...@sb1/ffe-tables-react@6.1.2) (2022-03-02)
+
+
+### Bug Fixes
+
+* **ffe-tables-react:** add missing author field to package.json ([8049e4f](https://github.com/SpareBank1/designsystem/commit/8049e4f1b0cdeb4f003d6b083621d51cb82607d3))
+
+
+
+
+
 ## [6.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@6.1.0...@sb1/ffe-tables-react@6.1.1) (2022-02-23)
 
 **Note:** Version bump only for package @sb1/ffe-tables-react

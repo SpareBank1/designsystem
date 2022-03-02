@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.1.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-dropdown-react@5.1.13...@sb1/ffe-dropdown-react@5.1.14) (2022-03-02)
+
+
+### Bug Fixes
+
+* **ffe-dropdown-react:** add author to package.json ([4ee9a22](https://github.com/SpareBank1/designsystem/commit/4ee9a228f3fa2ff368ded8dd874db5c9aa49822a))
+
+
+
+
+
 ## [5.1.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-dropdown-react@5.1.12...@sb1/ffe-dropdown-react@5.1.13) (2022-02-18)
 
 **Note:** Version bump only for package @sb1/ffe-dropdown-react

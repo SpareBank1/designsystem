@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@8.0.11...@sb1/ffe-accordion@8.0.12) (2022-03-02)
+
+
+### Bug Fixes
+
+* **ffe-accordion:** cleanup meta data in package.json ([4ff2fbd](https://github.com/SpareBank1/designsystem/commit/4ff2fbd58c4fdf1df2d095b06ea0b41ee6706529))
+
+
+
+
+
 ## [8.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@8.0.10...@sb1/ffe-accordion@8.0.11) (2022-02-28)
 
 **Note:** Version bump only for package @sb1/ffe-accordion

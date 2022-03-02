@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner@4.1.4...@sb1/ffe-spinner@4.1.5) (2022-03-02)
+
+
+### Bug Fixes
+
+* **ffe-spinner:** remove main entry field from package.json ([608e803](https://github.com/SpareBank1/designsystem/commit/608e8037ab02ac1fb855128279b213b1287241e9))
+
+
+
+
+
 ## [4.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner@4.1.3...@sb1/ffe-spinner@4.1.4) (2022-02-28)
 
 **Note:** Version bump only for package @sb1/ffe-spinner

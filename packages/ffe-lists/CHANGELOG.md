@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.0.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@10.0.15...@sb1/ffe-lists@10.0.16) (2022-03-02)
+
+
+### Bug Fixes
+
+* **ffe-lists:** remove main entry field from package.json ([aa76078](https://github.com/SpareBank1/designsystem/commit/aa7607851d823fd6ee4e362a846d2bea43396fdf))
+
+
+
+
+
 ## [10.0.15](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@10.0.14...@sb1/ffe-lists@10.0.15) (2022-02-28)
 
 **Note:** Version bump only for package @sb1/ffe-lists

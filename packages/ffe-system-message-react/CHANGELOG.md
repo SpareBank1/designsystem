@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.4.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@6.4.1...@sb1/ffe-system-message-react@6.4.2) (2022-03-02)
+
+
+### Bug Fixes
+
+* **ffe-system-message-react:** add module field for esm entry point ([806afc2](https://github.com/SpareBank1/designsystem/commit/806afc21a1f2fd11c85038c4e3143f996978d957))
+
+
+
+
+
 ## [6.4.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@6.4.0...@sb1/ffe-system-message-react@6.4.1) (2022-02-23)
 
 **Note:** Version bump only for package @sb1/ffe-system-message-react

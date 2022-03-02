@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@5.1.2...@sb1/ffe-datepicker-react@5.1.3) (2022-03-02)
+
+
+### Bug Fixes
+
+* **ffe-datepicker-react:** add author to package.json ([af0f662](https://github.com/SpareBank1/designsystem/commit/af0f6622561e39fb739c8d257ca11e28dfeae398))
+
+
+
+
+
 ## [5.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@5.1.1...@sb1/ffe-datepicker-react@5.1.2) (2022-02-28)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker-react

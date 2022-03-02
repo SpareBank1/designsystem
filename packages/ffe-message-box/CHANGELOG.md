@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@10.0.2...@sb1/ffe-message-box@10.0.3) (2022-03-02)
+
+
+### Bug Fixes
+
+* **ffe-message-box:** remove main entry field from package.json ([fbed9c6](https://github.com/SpareBank1/designsystem/commit/fbed9c601aef2b959f66c9f305b98d0671dc1603))
+
+
+
+
+
 ## [10.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@10.0.1...@sb1/ffe-message-box@10.0.2) (2022-02-08)
 
 

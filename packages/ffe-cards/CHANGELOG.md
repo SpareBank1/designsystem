@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.0.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@12.0.11...@sb1/ffe-cards@12.0.12) (2022-03-02)
+
+
+### Bug Fixes
+
+* **ffe-cards:** remove main entry field from package.json ([60fbd5c](https://github.com/SpareBank1/designsystem/commit/60fbd5cc47311a2628d8d176b540a1ddcf2cf1dd))
+
+
+
+
+
 ## [12.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@12.0.10...@sb1/ffe-cards@12.0.11) (2022-02-28)
 
 **Note:** Version bump only for package @sb1/ffe-cards

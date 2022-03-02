@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload@7.0.0...@sb1/ffe-file-upload@7.0.1) (2022-03-02)
+
+
+### Bug Fixes
+
+* **ffe-file-upload:** remove main entry field from package.json ([b7c3605](https://github.com/SpareBank1/designsystem/commit/b7c3605dd7ff55f184c88071cfad116c2401af89))
+
+
+
+
+
 # [7.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload@6.0.12...@sb1/ffe-file-upload@7.0.0) (2022-02-28)
 
 
