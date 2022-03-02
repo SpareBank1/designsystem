@@ -3,6 +3,7 @@
   "version": "6.1.1",
   "description": "React implementation of ffe-tables",
   "license": "MIT",
+  "author": "SpareBank 1",
   "files": [
     "lib",
     "es",

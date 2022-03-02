@@ -4,7 +4,9 @@
   "description": "FFE Datepicker",
   "license": "MIT",
   "author": "SpareBank 1",
-  "main": "less/datepicker",
+  "files": [
+    "less"
+  ],
   "repository": {
     "type": "git",
     "url": "ssh://git@github.com:SpareBank1/designsystem.git"
