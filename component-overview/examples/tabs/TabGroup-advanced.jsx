@@ -8,6 +8,10 @@ import { IconCard } from '@sb1/ffe-cards-react';
         display: 'none',
     };
 
+    const spacing = {
+        marginTop: '8px',
+    };
+
     const loan = { house: 'house', car: 'car' };
     const [activeTabId, setActiveTabId] = useState(loan.house);
 
@@ -34,7 +38,7 @@ import { IconCard } from '@sb1/ffe-cards-react';
             <IconCard
                 icon={<HusIkon />}
                 id={loan.house}
-                style={activeTabId === loan.house ? null : displayNone}
+                style={activeTabId === loan.house ? spacing : displayNone}
             >
                 {({ Title, Subtext }) => (
                     <>
@@ -47,7 +51,7 @@ import { IconCard } from '@sb1/ffe-cards-react';
             <IconCard
                 icon={<BilIkon />}
                 id={loan.car}
-                style={activeTabId === loan.car ? null : displayNone}
+                style={activeTabId === loan.car ? spacing : displayNone}
             >
                 {({ Title, Subtext }) => (
                     <>
