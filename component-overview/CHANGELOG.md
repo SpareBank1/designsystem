@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.2.8...@sb1/ffe-component-index@3.3.0) (2022-03-03)
+
+
+### Features
+
+* **component-overview:** redesign av faner ([68d3359](https://github.com/SpareBank1/designsystem/commit/68d33592ffae7c5cefe543f1af7469030a071363))
+
+
+
+
+
 ## [3.2.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.2.7...@sb1/ffe-component-index@3.2.8) (2022-03-02)
 
 **Note:** Version bump only for package @sb1/ffe-component-index

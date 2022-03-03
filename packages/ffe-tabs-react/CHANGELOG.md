@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@5.0.13...@sb1/ffe-tabs-react@6.0.0) (2022-03-03)
+
+
+### Features
+
+* **ffe-tabs-react:** redesign av faner ([32cdd2d](https://github.com/SpareBank1/designsystem/commit/32cdd2dd79346651ef76fe54d0bef210e2838c6d))
+
+
+### BREAKING CHANGES
+
+* **ffe-tabs-react:** Fjerne thin prop fra TabGroup og condensed fra Tab. Lagt til ny prop noBreak
+
+This reverts commit f136d98e4e74dd57091c95a50d5815bbfb4bed2f.
+
+feat(ffe-tabs-react): redesign av faner
+
+feat(ffe-tabs-react): redesign av faner
+
+
+
+
+
 ## [5.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@5.0.12...@sb1/ffe-tabs-react@5.0.13) (2022-02-18)
 
 **Note:** Version bump only for package @sb1/ffe-tabs-react
