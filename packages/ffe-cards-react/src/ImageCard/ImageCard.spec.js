@@ -3,7 +3,7 @@ import React from 'react';
 import ImageCard from './ImageCard';
 import { Text } from '../components';
 
-const image = <img alt="" />;
+const image = <img alt="" className="my-custom-image" />;
 const getWrapper = props => shallow(<ImageCard {...props} image={image} />);
 const children = <div>Hello world</div>;
 
@@ -12,25 +12,35 @@ describe('ImageCard', () => {
         const wrapper = getWrapper();
 
         expect(wrapper.hasClass('ffe-image-card')).toBe(true);
-        expect(wrapper.find('div.ffe-image-card__image').exists()).toBe(true);
+        expect(
+            wrapper.find('div.ffe-image-card__image-container').exists(),
+        ).toBe(true);
     });
 
     it('should render image and overlay alongside each other', () => {
         const wrapper = getWrapper();
 
-        const imageEl = wrapper.find('.ffe-image-card__image');
+        const imageEl = wrapper.find('.ffe-image-card__image-container');
         expect(
             imageEl
                 .children()
                 .first()
                 .hasClass('ffe-image-card__image-overlay'),
         ).toBe(true);
+
         expect(
             imageEl
                 .children()
                 .last()
-                .getElement(),
-        ).toEqual(image);
+                .hasClass('my-custom-image'),
+        ).toBe(true);
+
+        expect(
+            imageEl
+                .children()
+                .last()
+                .hasClass('ffe-image-card__image'),
+        ).toBe(true);
     });
 
     it('should render children inside a div with body class', () => {

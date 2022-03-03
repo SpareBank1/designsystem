@@ -10,9 +10,14 @@ const ImageCard = props => {
 
     return (
         <CardBase className={classNames('ffe-image-card', className)} {...rest}>
-            <div className="ffe-image-card__image">
+            <div className="ffe-image-card__image-container">
                 <div className="ffe-image-card__image-overlay" />
-                {image}
+                {React.cloneElement(image, {
+                    className: classNames(
+                        'ffe-image-card__image',
+                        image.props.className,
+                    ),
+                })}
             </div>
             <div className="ffe-image-card__body">
                 {typeof children === 'function'
