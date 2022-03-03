@@ -11,7 +11,7 @@ const ImageCard = props => {
     return (
         <CardBase className={classNames('ffe-image-card', className)} {...rest}>
             <div className="ffe-image-card__image">
-                <div className="ffe-image-card__image__overlay" />
+                <div className="ffe-image-card__image-overlay" />
                 {image}
             </div>
             <div className="ffe-image-card__body">

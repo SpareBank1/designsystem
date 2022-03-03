@@ -23,7 +23,7 @@ describe('ImageCard', () => {
             imageEl
                 .children()
                 .first()
-                .hasClass('ffe-image-card__image__overlay'),
+                .hasClass('ffe-image-card__image-overlay'),
         ).toBe(true);
         expect(
             imageEl
