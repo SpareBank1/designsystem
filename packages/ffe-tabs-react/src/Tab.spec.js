@@ -8,15 +8,6 @@ describe('Tab', () => {
         expect(wrapper.hasClass('ffe-tab')).toBe(true);
     });
 
-    it('should render a condensed tab', () => {
-        const wrapper = shallow(
-            <Tab aria-controls="div1" condensed={true}>
-                En tab
-            </Tab>,
-        );
-        expect(wrapper.hasClass('ffe-tab--condensed')).toBe(true);
-    });
-
     it('should render a selected tab', () => {
         const wrapper = shallow(
             <Tab aria-controls="div1" selected={true}>
