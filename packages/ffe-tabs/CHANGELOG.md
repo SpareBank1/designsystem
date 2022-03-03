@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@12.0.0...@sb1/ffe-tabs@12.0.1) (2022-03-03)
+
+
+### Bug Fixes
+
+* **ffe-tabs:** fikse bug på desktop ([b7a2d25](https://github.com/SpareBank1/designsystem/commit/b7a2d25bfc7ceddb270230fe95a6e4dbbe21d366))
+
+
+
+
+
 # [12.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@11.1.0...@sb1/ffe-tabs@12.0.0) (2022-03-03)
 
 
