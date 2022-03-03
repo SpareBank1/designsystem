@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@6.0.0...@sb1/ffe-tabs-react@7.0.0) (2022-03-03)
+
+
+### Features
+
+* **ffe-tabs-react:** fjerner TabButton og TabButtonGroup ([406e37b](https://github.com/SpareBank1/designsystem/commit/406e37b98633efa163f9f74e2c4b18d063ae709c))
+
+
+### BREAKING CHANGES
+
+* **ffe-tabs-react:** fjerner tabButton og TabButtonGroup komponentene
+
+
+
+
+
 # [6.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@5.0.13...@sb1/ffe-tabs-react@6.0.0) (2022-03-03)
 
 

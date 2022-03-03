@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@11.1.0...@sb1/ffe-tabs@12.0.0) (2022-03-03)
+
+
+### Features
+
+* **ffe-tabs:** fjerner tabButton og tabButtonGroup ([c2ee132](https://github.com/SpareBank1/designsystem/commit/c2ee1321af06c535e544a8d28a1d3f79967dfb65))
+
+
+### BREAKING CHANGES
+
+* **ffe-tabs:** fjerner styling knyttet til tabButton og tabButtonGroup
+
+
+
+
+
 # [11.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@11.0.13...@sb1/ffe-tabs@11.1.0) (2022-03-03)
 
 

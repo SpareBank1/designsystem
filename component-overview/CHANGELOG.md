@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.3.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.3.0...@sb1/ffe-component-index@3.3.1) (2022-03-03)
+
+
+### Bug Fixes
+
+* **component-overview:** fjerner eksempler knyttet til tabbutton og tabbuttongroup ([46a1d6d](https://github.com/SpareBank1/designsystem/commit/46a1d6daabce14dced46f651613b24a89c6711a3))
+* **component-overview:** legg til spacing i eksempel ([918b2c6](https://github.com/SpareBank1/designsystem/commit/918b2c6375e42306b91487a99b05fc95ac8832d1))
+
+
+
+
+
 # [3.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.2.8...@sb1/ffe-component-index@3.3.0) (2022-03-03)
 
 
