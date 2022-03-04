@@ -6,7 +6,7 @@ import ComponentBase from './ComponentBase';
 
 const CardName = ({ className, ...rest }) => (
     <ComponentBase
-        className={classNames('ffe-card-component--card-name', className)}
+        className={classNames('ffe-card-body__card-name', className)}
         {...rest}
     />
 );

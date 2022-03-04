@@ -7,9 +7,9 @@ import ComponentBase from './ComponentBase';
 const Title = ({ className, overflowEllipsis, ...rest }) => (
     <ComponentBase
         className={classNames(
-            'ffe-card-component--title',
+            'ffe-card-body__title',
             {
-                'ffe-card-component--title--overflow-ellipsis': overflowEllipsis,
+                'ffe-card-body__title--overflow-ellipsis': overflowEllipsis,
             },
             className,
         )}

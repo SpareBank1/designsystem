@@ -3,10 +3,7 @@ import classNames from 'classnames';
 import { string, node, oneOfType, func, elementType } from 'prop-types';
 
 const ComponentBase = ({ className, element: Element, ...rest }) => (
-    <Element
-        className={classNames('ffe-card-component', className)}
-        {...rest}
-    />
+    <Element className={classNames(className)} {...rest} />
 );
 
 ComponentBase.defaultProps = { element: 'p' };
