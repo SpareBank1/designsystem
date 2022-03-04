@@ -1,0 +1,160 @@
+// Toggle switch
+//
+// Markup:
+// <div class="ffe-toggle-switch ffe-toggle-switch{{modifier_class}}">
+//     <input type="checkbox" class="ffe-toggle-switch__input" id="toggle{{modifier_class}}" name="toggle{{modifier_class}}" value="on">
+//     <label class="ffe-toggle-switch__label" for="toggle{{modifier_class}}">
+//         Send meg spam
+//     </label>
+// </div>
+//
+// --align-right - Aligns the switch to the right
+//
+// Styleguide ffe-form.toggle-switch
+
+.ffe-toggle-switch {
+    &__input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    &__label {
+        display: flex;
+        align-items: center;
+        position: relative;
+        cursor: pointer;
+        color: @ffe-farge-fjell;
+        font-family: 'SpareBank1-regular', 'MuseoSans-500', arial, sans-serif;
+        min-height: 44px;
+        transition: color @ffe-transition-duration @ffe-ease;
+        .ffe-fontsize-h6();
+
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-farge-vann-70;
+            }
+        }
+    }
+
+    &__label-text {
+        margin-right: auto;
+        padding-right: @ffe-spacing-sm;
+    }
+
+    &__label-on,
+    &__label-off {
+        .ffe-small-text();
+    }
+
+    &__label-description {
+        display: block;
+        margin-top: @ffe-spacing-2xs;
+        .ffe-small-text();
+    }
+
+    &__switch {
+        position: relative;
+        margin: 0 @ffe-spacing-sm;
+
+        .ffe-toggle-switch--hide-on-off & {
+            margin: 0;
+        }
+
+        &::before {
+            display: inline-block;
+            content: '';
+            width: 56px;
+            height: 30px;
+            background: @ffe-farge-graa-wcag;
+            border-radius: 15px;
+            z-index: 1;
+            left: auto;
+            right: 0;
+            transition: background 0.4s @ffe-ease,
+                box-shadow @ffe-transition-duration @ffe-ease;
+
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    background: @ffe-farge-graa;
+                }
+            }
+        }
+
+        &::after {
+            display: inline-block;
+            content: '';
+            width: 24px;
+            height: 24px;
+            background: @ffe-farge-hvit;
+            border-radius: 13px;
+            position: absolute;
+            z-index: 2;
+            left: auto;
+            right: 29px;
+            top: 3px;
+            transition: transform @ffe-transition-duration @ffe-ease-in-out-back;
+
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    background: @ffe-farge-svart;
+                }
+            }
+        }
+
+        .ffe-toggle-switch__label:hover &::before {
+            background: @ffe-farge-moerkgraa;
+
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    background: @ffe-farge-lysgraa;
+                }
+            }
+        }
+    }
+
+    &__input:checked + &__label &__switch::after {
+        transform: translateX(26px);
+    }
+
+    &__input:checked + &__label &__switch::before {
+        background: @ffe-farge-vann;
+
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background: @ffe-farge-vann-70;
+            }
+        }
+    }
+
+    &__input:checked + &__label:hover &__switch::before {
+        background: @ffe-farge-fjell;
+
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background: @ffe-farge-vann-30;
+            }
+        }
+    }
+
+    &__input:focus:not(:focus-visible) + &__label &__switch::before {
+        box-shadow: none;
+
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                box-shadow: none;
+            }
+        }
+    }
+
+    &__input:focus + &__label &__switch::before {
+        box-shadow: 0 0 0 3px @ffe-farge-hvit, 0 0 0 5px @ffe-farge-vann;
+
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                box-shadow: 0 0 0 3px @ffe-farge-svart,
+                    0 0 0 5px @ffe-farge-hvit;
+            }
+        }
+    }
+}
