@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [20.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@20.0.3...@sb1/ffe-form@20.1.0) (2022-03-04)
+
+
+### Bug Fixes
+
+* **ffe-form:** fiks for oval tooltip i ios ([3845d78](https://github.com/SpareBank1/designsystem/commit/3845d78656621c04d60a6afd92a1218daa38da9a))
+* **ffe-form:** retter fargevariabler ([de8589a](https://github.com/SpareBank1/designsystem/commit/de8589a39dcdd0caf79715618360f38b2c60d9ca))
+
+
+### Features
+
+* **ffe-form:** ny toggleswitch-komponent ([449670f](https://github.com/SpareBank1/designsystem/commit/449670f9f33c66ebc8883961e18df1b4381faaa7))
+
+
+
+
+
 ## [20.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@20.0.2...@sb1/ffe-form@20.0.3) (2022-03-02)
 
 

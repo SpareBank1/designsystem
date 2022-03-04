@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [9.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@9.0.8...@sb1/ffe-form-react@9.1.0) (2022-03-04)
+
+
+### Features
+
+* **ffe-form-react:** i18n for av- og på-tekst ([2558da7](https://github.com/SpareBank1/designsystem/commit/2558da73948ad2810732a81313bf73458ef34ded))
+* **ffe-form-react:** ny toggleswitch-komponent ([816100e](https://github.com/SpareBank1/designsystem/commit/816100ea01a73756006ac34e00062346b98366f7))
+
+
+
+
+
 ## [9.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@9.0.7...@sb1/ffe-form-react@9.0.8) (2022-02-18)
 
 **Note:** Version bump only for package @sb1/ffe-form-react

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.4.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.3.2...@sb1/ffe-component-index@3.4.0) (2022-03-04)
+
+
+### Features
+
+* **component-overview:** ny toggleswitch-komponent ([f281af9](https://github.com/SpareBank1/designsystem/commit/f281af99a09998961d511df65b5a1ac33ca671c8))
+
+
+
+
+
 ## [3.3.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.3.1...@sb1/ffe-component-index@3.3.2) (2022-03-03)
 
 **Note:** Version bump only for package @sb1/ffe-component-index
