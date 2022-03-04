@@ -1,6 +1,4 @@
 export default {
     COUNTRY_CODE: 'Country code',
-    PHONE_NUMBER: 'Phone number',
-    OFF: 'Off',
-    ON: 'On',
+    PHONE_NUMBER: 'Phone number'
 };

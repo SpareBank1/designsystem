@@ -2,7 +2,6 @@ import React from 'react';
 import { bool, node, string } from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 import classNames from 'classnames';
-import i18n from './i18n/i18n';
 
 class ToggleSwitch extends React.Component {
     id = `toggle-${uuidv4()}`;
@@ -11,7 +10,6 @@ class ToggleSwitch extends React.Component {
         const {
             children,
             className,
-            locale,
             description,
             hideOnOff,
             onText,
@@ -19,14 +17,6 @@ class ToggleSwitch extends React.Component {
             id,
             ...rest
         } = this.props;
-
-        const supportedLocales = ['nb', 'nn', 'en'];
-        const text =
-            i18n[
-                supportedLocales.indexOf(this.props.locale) !== -1
-                    ? this.props.locale
-                    : 'nb'
-            ];
 
         return (
             <div
@@ -59,7 +49,7 @@ class ToggleSwitch extends React.Component {
                             className="ffe-toggle-switch__label-off"
                             aria-hidden="true"
                         >
-                            {offText ? offText : text.OFF}
+                            {offText}
                         </span>
                     )}
                     <span
@@ -69,10 +59,9 @@ class ToggleSwitch extends React.Component {
                     {!hideOnOff && (
                         <span
                             className="ffe-toggle-switch__label-on"
-                            id="test"
                             aria-hidden="true"
                         >
-                            {onText ? onText : text.ON}
+                            {onText}
                         </span>
                     )}
                 </label>
@@ -87,8 +76,6 @@ ToggleSwitch.propTypes = {
     /** Any extra classes */
     className: string,
     /** A second line of text in the label */
-    locale: string,
-    /** On/Off text language */
     description: string,
     /** Custom text to specify the on-option */
     onText: string,
@@ -104,8 +91,9 @@ ToggleSwitch.propTypes = {
 
 ToggleSwitch.defaultProps = {
     value: 'on',
-    locale: 'nb',
     hideOnOff: false,
+    onText: 'På',
+    offText: 'Av',
 };
 
 export default ToggleSwitch;
