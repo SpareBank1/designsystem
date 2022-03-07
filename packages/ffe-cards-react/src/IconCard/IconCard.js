@@ -2,7 +2,6 @@ import React from 'react';
 import classNames from 'classnames';
 import { node, string, bool, func, oneOfType, elementType } from 'prop-types';
 
-import CardBase from '../CardBase';
 import * as components from '../components';
 
 const IconCard = props => {
@@ -11,12 +10,13 @@ const IconCard = props => {
         icon,
         condensed,
         greyCharcoal,
+        element: Element,
         children,
         ...rest
     } = props;
 
     return (
-        <CardBase
+        <Element
             className={classNames(
                 'ffe-icon-card',
                 { 'ffe-icon-card--condensed': condensed },
@@ -36,8 +36,12 @@ const IconCard = props => {
                     ? children(components)
                     : children}
             </div>
-        </CardBase>
+        </Element>
     );
+};
+
+IconCard.defaultProps = {
+    element: 'div',
 };
 
 IconCard.propTypes = {

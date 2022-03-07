@@ -2,14 +2,13 @@ import React from 'react';
 import classNames from 'classnames';
 import { string, func, node, oneOfType, bool, elementType } from 'prop-types';
 
-import CardBase from '../CardBase';
 import * as components from '../components';
 
 const TextCard = props => {
-    const { className, leftAlign, children, ...rest } = props;
+    const { className, leftAlign, element: Element, children, ...rest } = props;
 
     return (
-        <CardBase
+        <Element
             className={classNames(
                 'ffe-text-card',
                 { 'ffe-text-card--left-align': leftAlign },
@@ -18,8 +17,12 @@ const TextCard = props => {
             {...rest}
         >
             {typeof children === 'function' ? children(components) : children}
-        </CardBase>
+        </Element>
     );
+};
+
+TextCard.defaultProps = {
+    element: 'div',
 };
 
 TextCard.propTypes = {

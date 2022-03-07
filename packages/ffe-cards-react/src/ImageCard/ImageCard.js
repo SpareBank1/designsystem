@@ -2,14 +2,13 @@ import React from 'react';
 import classNames from 'classnames';
 import { node, string, func, oneOfType, elementType } from 'prop-types';
 
-import CardBase from '../CardBase';
 import * as components from '../components';
 
 const ImageCard = props => {
-    const { className, image, children, ...rest } = props;
+    const { className, image, element: Element, children, ...rest } = props;
 
     return (
-        <CardBase className={classNames('ffe-image-card', className)} {...rest}>
+        <Element className={classNames('ffe-image-card', className)} {...rest}>
             <div className="ffe-image-card__image-container">
                 <div className="ffe-image-card__image-overlay" />
                 {React.cloneElement(image, {
@@ -24,8 +23,12 @@ const ImageCard = props => {
                     ? children(components)
                     : children}
             </div>
-        </CardBase>
+        </Element>
     );
+};
+
+ImageCard.defaultProps = {
+    element: 'div',
 };
 
 ImageCard.propTypes = {
