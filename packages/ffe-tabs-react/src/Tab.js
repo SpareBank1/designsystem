@@ -6,6 +6,7 @@ export default function Tab(props) {
     const { className, selected, ...rest } = props;
     return (
         <button
+            type="button"
             role="tab"
             aria-selected={selected}
             className={classNames(
