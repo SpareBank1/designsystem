@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@7.0.0...@sb1/ffe-tabs-react@7.0.1) (2022-03-08)
+
+
+### Bug Fixes
+
+* **ffe-tabs-react:** add type button to tab ([a703d8a](https://github.com/SpareBank1/designsystem/commit/a703d8ae4684b19d3e461bece38d58d2fe2c35dd))
+
+
+
+
+
 # [7.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@6.0.0...@sb1/ffe-tabs-react@7.0.0) (2022-03-03)
 
 
