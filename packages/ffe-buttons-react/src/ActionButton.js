@@ -14,14 +14,12 @@ import classNames from 'classnames';
 import Button from './BaseButton';
 
 export default function ActionButton(props) {
-    const { className, ghost, ...rest } = props;
+    const { className, ...rest } = props;
 
     return (
         <Button
             buttonType="action"
-            className={classNames(className, {
-                'ffe-button--ghost': ghost,
-            })}
+            className={classNames(className)}
             {...rest}
         />
     );
@@ -40,8 +38,6 @@ ActionButton.propTypes = {
     disabled: bool,
     /** The rendered element, like an `<a />` or `<Link />` */
     element: oneOfType([func, string, elementType]),
-    /** Applies the ghost modifier if true. */
-    ghost: bool,
     /** Ref-setting function, or ref created by useRef, passed to the button element */
     innerRef: oneOfType([func, shape({ current: object })]),
     /** Shows a loader if true */
@@ -50,8 +46,4 @@ ActionButton.propTypes = {
     leftIcon: node,
     /** Icon shown to the right of the label */
     rightIcon: node,
-};
-
-ActionButton.defaultProps = {
-    ghost: false,
 };

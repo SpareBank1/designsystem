@@ -119,36 +119,6 @@
     }
 }
 
-.ffe-button--action.ffe-button--ghost {
-    &,
-    &:focus,
-    &:visited {
-        background-color: transparent;
-        border: 2px solid @ffe-farge-nordlys-wcag;
-        color: @ffe-farge-svart;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-farge-nordlys-30;
-                border-color: @ffe-farge-nordlys;
-                background-color: transparent;
-            }
-        }
-    }
-
-    &:hover {
-        background-color: @ffe-farge-skog;
-        border-color: @ffe-farge-skog;
-        color: @ffe-farge-hvit;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-farge-hvit;
-                border-color: @ffe-farge-nordlys-30;
-                background-color: transparent;
-            }
-        }
-    }
-}
-
 .ffe-button--action {
     background-color: @ffe-farge-nordlys-wcag;
 
