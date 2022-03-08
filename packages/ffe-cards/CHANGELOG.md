@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [13.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@12.0.12...@sb1/ffe-cards@13.0.0) (2022-03-08)
+
+
+### Bug Fixes
+
+* **ffe-cards:** sletter gammel ubrukt fil ([5149d9a](https://github.com/SpareBank1/designsystem/commit/5149d9aff4699c38735e65c65cbe16fbf4fb85d9))
+
+
+### BREAKING CHANGES
+
+* **ffe-cards:** sletter animasjoner som ikke lenger er i bruk
+
+
+
+
+
 ## [12.0.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@12.0.11...@sb1/ffe-cards@12.0.12) (2022-03-02)
 
 

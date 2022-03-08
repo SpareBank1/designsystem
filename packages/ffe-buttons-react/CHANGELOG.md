@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [15.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@14.1.2...@sb1/ffe-buttons-react@15.0.0) (2022-03-08)
+
+
+### Bug Fixes
+
+* **ffe-buttons-react:** fjerner --ghost ([428cbf7](https://github.com/SpareBank1/designsystem/commit/428cbf7cd642701a5683390d9af7d2cf181a0588))
+
+
+### BREAKING CHANGES
+
+* **ffe-buttons-react:** sletter --ghost og tilhørende prop i react-implementasjonen
+
+
+
+
+
 ## [14.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@14.1.1...@sb1/ffe-buttons-react@14.1.2) (2022-03-02)
 
 **Note:** Version bump only for package @sb1/ffe-buttons-react

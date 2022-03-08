@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [14.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@13.0.18...@sb1/ffe-buttons@14.0.0) (2022-03-08)
+
+
+### Bug Fixes
+
+* **ffe-buttons:** fjerner --ghost ([5741673](https://github.com/SpareBank1/designsystem/commit/5741673c03df1c5bdda5a33b91fa1297f4fc8c15))
+
+
+### BREAKING CHANGES
+
+* **ffe-buttons:** modifieren --ghost slettes
+
+
+
+
+
 ## [13.0.18](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@13.0.17...@sb1/ffe-buttons@13.0.18) (2022-02-28)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.4.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.4.1...@sb1/ffe-component-index@3.4.2) (2022-03-08)
+
+
+### Bug Fixes
+
+* **component-overview:** legger til et ekstra eksempel på toggleswitch ([e481396](https://github.com/SpareBank1/designsystem/commit/e481396301d58c68810ded216298ec4125cc8e03))
+
+
+
+
+
 ## [3.4.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.4.0...@sb1/ffe-component-index@3.4.1) (2022-03-08)
 
 **Note:** Version bump only for package @sb1/ffe-component-index
