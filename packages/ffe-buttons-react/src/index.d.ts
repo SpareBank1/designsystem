@@ -26,9 +26,7 @@ export interface BaseButtonProps extends MinimalBaseButtonProps {
     rightIcon?: React.ReactNode;
 }
 
-export interface ActionButtonProps extends BaseButtonProps {
-    ghost?: boolean;
-}
+export interface ActionButtonProps extends BaseButtonProps {}
 
 export interface BackButtonProps extends MinimalBaseButtonProps {
     children?: React.ReactNode;

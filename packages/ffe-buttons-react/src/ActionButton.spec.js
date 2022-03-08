@@ -17,10 +17,4 @@ describe('<ActionButton />', () => {
         });
         expect(wrapper.props()).toHaveProperty('aria-label', 'some label');
     });
-    it('sets correct class when ghost prop is true', () => {
-        const wrapper = getWrapper({
-            ghost: true,
-        });
-        expect(wrapper.hasClass('ffe-button--ghost')).toBe(true);
-    });
 });
