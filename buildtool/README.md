@@ -36,8 +36,8 @@ Commands:
 
 This command uses babel to transpile code to commonjs and es modules and copies
 typescript definitions to a given directory. It uses a babel configuration in
-[./config/babel.config.js] and provides some sensible defaults which can be
-overridden by parameters.
+[config/babel.config.js](./config/babel.config.js) and provides some sensible
+defaults which can be overridden by parameters.
 
 ```
 $ ffe-buildtool help babel
@@ -65,12 +65,12 @@ Options:
 ### jest
 
 The jest-command is a wrapper around the test runner jest. It uses the
-configuration from [./config/jest.config.js] and adds support for
-(enzyme)[https://enzymejs.github.io/enzyme/] and
-(jest-dom-matchers)[https://github.com/testing-library/jest-dom].
+configuration from [config/jest.config.js](./config/jest.config.js) and
+adds support for [enzyme](https://enzymejs.github.io/enzyme/) and
+[jest-dom-matchers](https://github.com/testing-library/jest-dom).
 
 Enzymes rendering functions `shallow`, `mount` and `render` are available as
-globals in the test cases. See [./config/jest.setup.js] for details.
+globals in the test cases. See [jest.setup.js](./config/jest.setup.js) for details.
 
 Any parameter passed to this command will be forwarded to jest, e.g.
 `ffe-buildtool jtest --coverage` will invoke `jest --coverage` behind the
