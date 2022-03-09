@@ -1,0 +1,46 @@
+.common-card-styling() {
+    &:extend(.ffe-body-text);
+
+    background: @ffe-farge-hvit;
+    box-shadow: 0 1px 4px 0 rgba(38, 38, 38, 0.3);
+    margin: 0 0 @ffe-spacing-xs;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: border-color 0.2s;
+    outline: none;
+    cursor: pointer;
+    width: 100%;
+    text-decoration: none;
+    .native & {
+        @media (prefers-color-scheme: dark) {
+            box-shadow: 0 0 0 1px @ffe-farge-moerkgraa;
+            background: @ffe-farge-svart;
+            color: @ffe-farge-hvit;
+        }
+    }
+
+    &:focus {
+        box-shadow: 0 0 0 2px @ffe-farge-vann;
+
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                box-shadow: 0 0 0 2px @ffe-farge-vann-70;
+            }
+        }
+    }
+
+    &:focus,
+    &:active,
+    &:hover {
+        border-color: @ffe-farge-vann;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                border-color: @ffe-farge-vann-70;
+            }
+        }
+    }
+
+    @media (min-width: @breakpoint-md) {
+        margin-bottom: @ffe-spacing-md;
+    }
+}

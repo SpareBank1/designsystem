@@ -1,13 +1,13 @@
-.ffe-card-component {
-    &--card-name {
+.ffe-card-body {
+    &__card-name {
         margin: 0 0 @ffe-spacing-2xs 0;
     }
 
-    &--text {
+    &__text {
         margin: @ffe-spacing-2xs 0 0 0;
     }
 
-    &--subtext {
+    &__subtext {
         &:extend(.ffe-small-text);
 
         color: @ffe-farge-moerkgraa;
@@ -20,13 +20,8 @@
         margin: @ffe-spacing-2xs 0 0 0;
     }
 
-    &--title {
+    &__title {
         &:extend(.ffe-h5);
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-farge-vann-70;
-            }
-        }
 
         margin: 0;
 

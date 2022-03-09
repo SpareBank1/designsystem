@@ -1,8 +1,10 @@
 .ffe-icon-card {
+    .common-card-styling();
+
+    display: flex;
+    padding: @ffe-spacing-md;
     max-width: 440px;
     min-height: 130px;
-    padding: @ffe-spacing-md;
-    display: flex;
     flex-flow: row nowrap;
 
     &__icon {
@@ -52,11 +54,7 @@
         margin: 0 @ffe-spacing-sm 0 0;
     }
 
-    .ffe-icon-component--card-name {
-        margin: 0 0 @ffe-spacing-2xs;
-    }
-
-    .ffe-icon-component--subtext {
+    .ffe-card-body__subtext {
         margin: 0;
 
         @media (min-width: @breakpoint-md) {
@@ -75,7 +73,7 @@
         }
     }
 
-    .ffe-card-component--title,
+    .ffe-card-body__title,
     .ffe-icon-card__body {
         color: @ffe-farge-moerkgraa;
         .native & {

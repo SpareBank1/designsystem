@@ -6,7 +6,7 @@ import ComponentBase from './ComponentBase';
 
 const Subtext = ({ className, ...rest }) => (
     <ComponentBase
-        className={classNames('ffe-card-component--subtext', className)}
+        className={classNames('ffe-card-body__subtext', className)}
         {...rest}
     />
 );
