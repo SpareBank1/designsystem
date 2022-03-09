@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [21.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@20.0.0...@sb1/ffe-core@21.0.0) (2022-03-09)
+
+
+### Features
+
+* **ffe-core:** upgrade normalize.css ([ef3777d](https://github.com/SpareBank1/designsystem/commit/ef3777d7ab854aac7dda67ce192d879b2d0ffc79)), closes [#1284](https://github.com/SpareBank1/designsystem/issues/1284)
+
+
+### BREAKING CHANGES
+
+* **ffe-core:** upgrade to normalize.css@8.0.1. This change drops
+support for some older browser and normalizes the behaviour of some
+more current browsers.
+
+
+
+
+
 # [20.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@19.4.0...@sb1/ffe-core@20.0.0) (2022-02-28)
 
 
