@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [14.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@13.0.0...@sb1/ffe-cards@14.0.0) (2022-03-09)
+
+
+### Bug Fixes
+
+* **ffe-cards:** add class for sizing image of image-card ([ed0e540](https://github.com/SpareBank1/designsystem/commit/ed0e540dd8c0efd18a8d9915479f5a5d14202c84))
+* **ffe-cards:** decouple card classes from card-base ([5036082](https://github.com/SpareBank1/designsystem/commit/5036082505159f9463f02254f360f741bc83b1a7)), closes [#1333](https://github.com/SpareBank1/designsystem/issues/1333)
+* **ffe-cards:** fix css class name inconsistency ([2ba6ff4](https://github.com/SpareBank1/designsystem/commit/2ba6ff443cef56f5d2063a9095d6a276f64c1440))
+* **ffe-cards:** removes unnecessary overloads ([a083ca2](https://github.com/SpareBank1/designsystem/commit/a083ca2575ea0e30851bd301aa065d9e91621d2e))
+* **ffe-cards:** rename ffe-card-components--* ([89f3678](https://github.com/SpareBank1/designsystem/commit/89f367805c385644ad386be6f6c51aa59423ff92))
+
+
+### BREAKING CHANGES
+
+* **ffe-cards:** .ffe-card-componet--* have been renamed to
+.ffe-card-body__* to better match BEM convention.
+
+
+
+
+
 # [13.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@12.0.12...@sb1/ffe-cards@13.0.0) (2022-03-08)
 
 

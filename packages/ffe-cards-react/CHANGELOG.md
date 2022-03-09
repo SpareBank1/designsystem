@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@5.0.10...@sb1/ffe-cards-react@6.0.0) (2022-03-09)
+
+
+### Bug Fixes
+
+* **ffe-cards-react:** decouple card classes from card-base ([f6c0927](https://github.com/SpareBank1/designsystem/commit/f6c092758db19a6bf4b5ed6d97a49b667c561076)), closes [#1333](https://github.com/SpareBank1/designsystem/issues/1333)
+* **ffe-cards-react:** fix css class name inconsistency ([4a1ad79](https://github.com/SpareBank1/designsystem/commit/4a1ad792fb3490d6328aea2f2b1d2e360b4e73e6))
+* **ffe-cards-react:** refactor class names of ImageCard ([49a2f6a](https://github.com/SpareBank1/designsystem/commit/49a2f6a1365b97b1533285f8ead1cec143843e41))
+* **ffe-cards-react:** use renamed class names for card-components ([6c4eff8](https://github.com/SpareBank1/designsystem/commit/6c4eff87d72f9128b27a302e54551fe66e1fa480))
+
+
+### BREAKING CHANGES
+
+* **ffe-cards-react:** IconCard, ImageCard an TextCard do not use the css
+class `ffe-card-base` anymore.
+* **ffe-cards-react:** Card components now use the renamed css classes
+`ffe-card-body__*` (see 961a3502).
+
+
+
+
+
 ## [5.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@5.0.9...@sb1/ffe-cards-react@5.0.10) (2022-03-02)
 
 **Note:** Version bump only for package @sb1/ffe-cards-react
