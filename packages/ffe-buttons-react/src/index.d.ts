@@ -19,7 +19,6 @@ export interface MinimalBaseButtonProps extends React.HTMLProps<HTMLElement> {
 export interface BaseButtonProps extends MinimalBaseButtonProps {
     children?: React.ReactNode;
     ariaLoadingMessage?: string;
-    condensed?: boolean;
     disabled?: boolean;
     isLoading?: boolean;
     leftIcon?: React.ReactNode;
@@ -60,14 +59,12 @@ export interface SecondaryButtonProps extends BaseButtonProps {}
 
 export interface ShortcutButtonProps extends MinimalBaseButtonProps {
     children?: React.ReactNode;
-    condensed?: boolean;
     disabled?: boolean;
     leftIcon?: React.ReactNode;
 }
 
 export interface TaskButtonProps extends MinimalBaseButtonProps {
     children?: React.ReactNode;
-    condensed?: boolean;
     disabled?: boolean;
     icon: React.ReactNode;
 }

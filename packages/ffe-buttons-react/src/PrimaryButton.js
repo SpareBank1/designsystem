@@ -20,8 +20,6 @@ PrimaryButton.propTypes = {
     children: node,
     /** Extra class names */
     className: string,
-    /** Condensed modifier. Use in condensed designs */
-    condensed: bool,
     /** Disable a button in certain situations */
     disabled: bool,
     /** The rendered element, like an `<a />` or `<Link />` */
