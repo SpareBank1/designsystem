@@ -3,7 +3,6 @@ import { Paragraph } from '@sb1/ffe-core-react';
 
 <InfoMessage title="Du har ingen kort">
     <Paragraph>
-        Denne tjenesten er kun tilgjengelig for deg med et debitkort eller
-        kredittkort fra SpareBank 1.
+        For å bruke denne tjenesten må du ha et debetkort eller kredittkort fra SpareBank 1.
     </Paragraph>
 </InfoMessage>;
