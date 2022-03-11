@@ -32,8 +32,6 @@ ContextErrorMessage.propTypes = {
     headerElementId: string,
     /** Decides the language of the aria-label for the close icon */
     locale: oneOf(acceptedLocales),
-    /** Provided by the wrapper component */
-    messageType: oneOf(['info', 'tip', 'success', 'error']),
     /** Callback for when the context message has been closed (after the animation) */
     onClose: func,
     showCloseButton: bool,

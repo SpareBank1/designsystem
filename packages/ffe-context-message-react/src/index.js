@@ -1,11 +1,11 @@
 import ContextInfoMessage from './ContextInfoMessage';
-import ContextTipMessage from './ContextTipMessage';
+import ContextTipsMessage from './ContextTipsMessage';
 import ContextSuccessMessage from './ContextSuccessMessage';
 import ContextErrorMessage from './ContextErrorMessage';
 
 export {
     ContextInfoMessage,
-    ContextTipMessage,
+    ContextTipsMessage,
     ContextSuccessMessage,
     ContextErrorMessage,
 };
