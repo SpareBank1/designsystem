@@ -21,7 +21,6 @@ const BaseButton = props => {
         buttonType,
         children,
         className,
-        condensed,
         element: Element,
         innerRef,
         isLoading,
@@ -41,7 +40,6 @@ const BaseButton = props => {
             className={classNames(
                 'ffe-button',
                 `ffe-button--${buttonType}`,
-                { 'ffe-button--condensed': condensed },
                 { 'ffe-button--loading': isLoading && supportsSpinner },
                 className,
             )}
@@ -90,8 +88,6 @@ BaseButton.propTypes = {
     children: node,
     /** Extra class names */
     className: string,
-    /** Condensed modifier. Use in condensed designs */
-    condensed: bool,
     /** Disable a button in certain situations */
     disabled: bool,
     /** The rendered element, like an `<a />` or `<Link />` */
