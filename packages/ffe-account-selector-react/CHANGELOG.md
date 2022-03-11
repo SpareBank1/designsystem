@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [19.0.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@19.0.13...@sb1/ffe-account-selector-react@19.0.14) (2022-03-11)
+
+
+### Bug Fixes
+
+* **ffe-account-selector-react:** exclude the less-mixin `highlighted` from css ([c51842a](https://github.com/SpareBank1/designsystem/commit/c51842a42d62fb7dc47197473babe4970af813e6)), closes [#921](https://github.com/SpareBank1/designsystem/issues/921)
+
+
+
+
+
 ## [19.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@19.0.12...@sb1/ffe-account-selector-react@19.0.13) (2022-03-09)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react

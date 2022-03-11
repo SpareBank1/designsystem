@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [16.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@15.0.0...@sb1/ffe-buttons-react@16.0.0) (2022-03-11)
+
+
+### Features
+
+* **ffe-buttons-react:** remove condensed variant of buttons ([c0df577](https://github.com/SpareBank1/designsystem/commit/c0df57709d751589e4c60db9eee10e0661ff2160)), closes [#1251](https://github.com/SpareBank1/designsystem/issues/1251)
+
+
+### BREAKING CHANGES
+
+* **ffe-buttons-react:** remove condensed variant of buttons, i.e. the prop `condensed`.
+
+
+
+
+
 # [15.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@14.1.2...@sb1/ffe-buttons-react@15.0.0) (2022-03-08)
 
 

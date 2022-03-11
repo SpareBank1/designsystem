@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.0.26](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.25...@sb1/ffe-datepicker@10.0.26) (2022-03-11)
+
+
+### Bug Fixes
+
+* **ffe-datepicker:** fix pseudo-class ([cd38334](https://github.com/SpareBank1/designsystem/commit/cd3833475f7bdfb1832120807f16119c80627748)), closes [#921](https://github.com/SpareBank1/designsystem/issues/921)
+
+
+
+
+
 ## [10.0.25](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.24...@sb1/ffe-datepicker@10.0.25) (2022-03-09)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker

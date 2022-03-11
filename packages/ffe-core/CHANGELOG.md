@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [21.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@21.0.0...@sb1/ffe-core@21.0.1) (2022-03-11)
+
+
+### Bug Fixes
+
+* **ffe-core:** remove unused fontsize mixins for ffe-buttons ([b39aa13](https://github.com/SpareBank1/designsystem/commit/b39aa1368a576c7228a6ebf3640a07282d7b4a66)), closes [#1251](https://github.com/SpareBank1/designsystem/issues/1251)
+
+
+
+
+
 # [21.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@20.0.0...@sb1/ffe-core@21.0.0) (2022-03-09)
 
 

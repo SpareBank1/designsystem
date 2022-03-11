@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [15.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@14.0.1...@sb1/ffe-buttons@15.0.0) (2022-03-11)
+
+
+### Features
+
+* **ffe-buttons:** remove condensed variant of buttons ([c49b318](https://github.com/SpareBank1/designsystem/commit/c49b3183cf26ca82d5b7e5d60e40c7115c5c93fd)), closes [#1251](https://github.com/SpareBank1/designsystem/issues/1251)
+
+
+### BREAKING CHANGES
+
+* **ffe-buttons:** remove condensed variant of buttons, i.e. all
+ffe-butons classes with the modifier `--condensed`.
+
+
+
+
+
 ## [14.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@14.0.0...@sb1/ffe-buttons@14.0.1) (2022-03-09)
 
 **Note:** Version bump only for package @sb1/ffe-buttons

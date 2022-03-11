@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.5.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.4.4...@sb1/ffe-component-index@3.5.0) (2022-03-11)
+
+
+### Bug Fixes
+
+* **component-overview:** Rette opp tekst i meldingeksempeler ([832d5a4](https://github.com/SpareBank1/designsystem/commit/832d5a4c6438cf7018acd27c44f6f5f2f2b388a1))
+
+
+### Features
+
+* **component-overview:** remove example of condensed button ([1c495df](https://github.com/SpareBank1/designsystem/commit/1c495df2e0f0e6803ef8a232506d327f95403203)), closes [#1251](https://github.com/SpareBank1/designsystem/issues/1251)
+
+
+
+
+
 ## [3.4.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.4.3...@sb1/ffe-component-index@3.4.4) (2022-03-09)
 
 **Note:** Version bump only for package @sb1/ffe-component-index
