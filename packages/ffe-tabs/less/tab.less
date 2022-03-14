@@ -20,10 +20,14 @@
     font-family: 'SpareBank1-regular', 'MuseoSans-500', arial, sans-serif;
     align-self: stretch;
     justify-content: center;
+    align-items: center;
     transition: all @ffe-transition-duration @ffe-ease;
     cursor: pointer;
     width: auto;
     position: relative;
+    flex: none;
+    order: 0;
+    flex-grow: 1;
 
     .native & {
         @media (prefers-color-scheme: dark) {
