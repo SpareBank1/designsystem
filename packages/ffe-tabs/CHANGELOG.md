@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@12.0.3...@sb1/ffe-tabs@12.0.4) (2022-03-14)
+
+
+### Bug Fixes
+
+* **ffe-tabs:** fikse at TabGroup går ut til kanten på mobil ([cae360a](https://github.com/SpareBank1/designsystem/commit/cae360af073ee11c37b74cef68fbbc970ef817f1))
+
+
+
+
+
 ## [12.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@12.0.2...@sb1/ffe-tabs@12.0.3) (2022-03-11)
 
 **Note:** Version bump only for package @sb1/ffe-tabs
