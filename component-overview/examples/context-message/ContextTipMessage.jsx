@@ -1,5 +1,5 @@
-import { ContextTipMessage } from '@sb1/ffe-context-message-react';
+import { ContextTipsMessage } from '@sb1/ffe-context-message-react';
 
-<ContextTipMessage>
+<ContextTipsMessage>
     Visste du at du kan få en skattefordel ved sparing i IPS?
-</ContextTipMessage>;
+</ContextTipsMessage>;
