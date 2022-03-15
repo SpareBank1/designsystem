@@ -26,7 +26,7 @@ declare class ContextInfoMessage extends React.Component<
     any
 > {}
 
-declare class ContextTipMessage extends React.Component<
+declare class ContextTipsMessage extends React.Component<
     ContextMessageProps,
     any
 > {}

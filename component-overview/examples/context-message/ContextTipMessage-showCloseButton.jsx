@@ -1,5 +1,5 @@
-import { ContextTipMessage } from '@sb1/ffe-context-message-react';
+import { ContextTipsMessage } from '@sb1/ffe-context-message-react';
 
-<ContextTipMessage showCloseButton={true}>
+<ContextTipsMessage showCloseButton={true}>
     Jeg kan også lukkes
-</ContextTipMessage>;
+</ContextTipsMessage>;

@@ -6,14 +6,14 @@ import {
     ContextErrorMessage,
     ContextInfoMessage,
     ContextSuccessMessage,
-    ContextTipMessage,
+    ContextTipsMessage,
 } from '.';
 
 import ContextMessage from './ContextMessage';
 
 const defaultProps = {
     children: <p>content</p>,
-    messageType: 'tip',
+    messageType: 'tips',
     icon: <InfoSirkelIkon />,
 };
 
@@ -166,11 +166,11 @@ describe('<ContextInfoMessage />', () => {
     });
 });
 
-describe('<ContextTipMessage />', () => {
+describe('<ContextTipsMessage />', () => {
     const wrapper = mount(
-        <ContextTipMessage showCloseButton={true}>
+        <ContextTipsMessage showCloseButton={true}>
             <p>content</p>
-        </ContextTipMessage>,
+        </ContextTipsMessage>,
     );
 
     it('renders ContextInfoMessage', () => {
