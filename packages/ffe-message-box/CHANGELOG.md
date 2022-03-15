@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@10.0.3...@sb1/ffe-message-box@10.1.0) (2022-03-15)
+
+
+### Features
+
+* **ffe-message-box:** make border radius more round ([1ec1ab1](https://github.com/SpareBank1/designsystem/commit/1ec1ab1a971b7571c8eac793f61d29de84118ee0))
+
+
+
+
+
 ## [10.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@10.0.2...@sb1/ffe-message-box@10.0.3) (2022-03-02)
 
 

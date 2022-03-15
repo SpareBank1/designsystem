@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@6.1.2...@sb1/ffe-context-message-react@7.0.0) (2022-03-15)
+
+
+### Bug Fixes
+
+* **ffe-context-message-react:** endre navn og meldingtype verdi for tips ([6197e38](https://github.com/SpareBank1/designsystem/commit/6197e3857579a1baf2d129556a8c5b17e5c62515))
+
+
+### BREAKING CHANGES
+
+* **ffe-context-message-react:** For å bruke tips varianten av ContextMessage må du nå sende "tips" og ikke "tip".
+Tips komponenten har også endret navn til ContextTipsMessage
+
+
+
+
+
 ## [6.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@6.1.1...@sb1/ffe-context-message-react@6.1.2) (2022-03-02)
 
 **Note:** Version bump only for package @sb1/ffe-context-message-react

@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@5.1.5...@sb1/ffe-context-message@6.0.0) (2022-03-15)
+
+
+### Bug Fixes
+
+* **ffe-context-message:** oppdater klassenavn til å passe ny meldingstype verdi ([99b3006](https://github.com/SpareBank1/designsystem/commit/99b300651f23f3b9dba1ddb9ed04007221110f5b))
+
+
+### Features
+
+* **ffe-context-message:** make border radius more round ([6ca6de5](https://github.com/SpareBank1/designsystem/commit/6ca6de51aaa11dd665c31a98369c5916e4d76db1))
+
+
+### BREAKING CHANGES
+
+* **ffe-context-message:** klassenavn for tips meldinger har nå tips og ikke tip i navnet.
+
+
+
+
+
 ## [5.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@5.1.4...@sb1/ffe-context-message@5.1.5) (2022-03-11)
 
 **Note:** Version bump only for package @sb1/ffe-context-message

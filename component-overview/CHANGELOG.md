@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.5.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.5.1...@sb1/ffe-component-index@3.5.2) (2022-03-15)
+
+
+### Bug Fixes
+
+* **component-overview:** oppdater eksempeler til å matche nytt komponentnavn ([b05b6de](https://github.com/SpareBank1/designsystem/commit/b05b6de4e2364e2f180d6c6a23b6c58848f1ead4))
+
+
+
+
+
 ## [3.5.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.5.0...@sb1/ffe-component-index@3.5.1) (2022-03-14)
 
 **Note:** Version bump only for package @sb1/ffe-component-index

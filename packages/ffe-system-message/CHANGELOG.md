@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@6.1.3...@sb1/ffe-system-message@6.2.0) (2022-03-15)
+
+
+### Features
+
+* **ffe-system-message:** make border radius more round ([6327d76](https://github.com/SpareBank1/designsystem/commit/6327d76ea33c151f766ca49e6c6bbb133ed7d1fc))
+
+
+
+
+
 ## [6.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@6.1.2...@sb1/ffe-system-message@6.1.3) (2022-03-11)
 
 **Note:** Version bump only for package @sb1/ffe-system-message
