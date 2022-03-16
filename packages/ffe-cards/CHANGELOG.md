@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [14.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@14.0.2...@sb1/ffe-cards@14.0.3) (2022-03-16)
+
+
+### Bug Fixes
+
+* **ffe-cards:** remove need of importing internal mixin definitions ([ec448da](https://github.com/SpareBank1/designsystem/commit/ec448da95a6995bc8301611fb1007251fe5966f6))
+
+
+
+
+
 ## [14.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@14.0.1...@sb1/ffe-cards@14.0.2) (2022-03-11)
 
 **Note:** Version bump only for package @sb1/ffe-cards
