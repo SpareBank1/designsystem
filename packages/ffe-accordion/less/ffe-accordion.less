@@ -1,6 +1,8 @@
 .ffe-accordion {
     width: 100%;
     border: 1px solid transparent;
+    font-family: 'SpareBank1-regular', 'MuseoSans-500', arial, sans-serif;
+
     &--focus {
         border-color: @ffe-farge-vann;
 
@@ -30,7 +32,7 @@
     background: none;
     border: none;
     padding: @ffe-spacing-md;
-    font: inherit;
+    font-family: 'SpareBank1-medium', 'MuseoSansRounded-700', arial, sans-serif;
     cursor: pointer;
     outline: none;
     color: @ffe-farge-vann;
@@ -90,6 +92,13 @@
 
 .ffe-accordion-body {
     padding: @ffe-spacing-xs @ffe-spacing-md @ffe-spacing-md;
+    color: @ffe-farge-svart;
+
+    .native & {
+        @media (prefers-color-scheme: dark) {
+            color: @ffe-farge-hvit;
+        }
+    }
 }
 
 .ffe-accordion-item {
