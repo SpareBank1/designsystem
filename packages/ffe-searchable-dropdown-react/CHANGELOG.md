@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [14.0.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@14.0.13...@sb1/ffe-searchable-dropdown-react@14.0.14) (2022-03-21)
+
+
+### Bug Fixes
+
+* **ffe-searchable-dropdown-react:** legger til default font ([e002e74](https://github.com/SpareBank1/designsystem/commit/e002e7461f265f45d583576bddfe36cd054cfffe))
+
+
+
+
+
 ## [14.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@14.0.12...@sb1/ffe-searchable-dropdown-react@14.0.13) (2022-03-11)
 
 **Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@6.2.0...@sb1/ffe-system-message@6.2.1) (2022-03-21)
+
+
+### Bug Fixes
+
+* **ffe-system-message:** legger til default font ([75ad441](https://github.com/SpareBank1/designsystem/commit/75ad44104796540686f33705e1a013e9a4653c3e))
+
+
+
+
+
 # [6.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@6.1.3...@sb1/ffe-system-message@6.2.0) (2022-03-15)
 
 

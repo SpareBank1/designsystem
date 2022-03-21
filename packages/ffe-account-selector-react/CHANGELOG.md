@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [19.0.15](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@19.0.14...@sb1/ffe-account-selector-react@19.0.15) (2022-03-21)
+
+
+### Bug Fixes
+
+* **ffe-account-selector-react:** legger til default font ([e0d81c4](https://github.com/SpareBank1/designsystem/commit/e0d81c44b5b9e1a3546e046cfc3e1937bde0b7f1))
+
+
+
+
+
 ## [19.0.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@19.0.13...@sb1/ffe-account-selector-react@19.0.14) (2022-03-11)
 
 

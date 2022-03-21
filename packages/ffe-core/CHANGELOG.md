@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [21.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@21.0.1...@sb1/ffe-core@21.0.2) (2022-03-21)
+
+
+### Bug Fixes
+
+* **ffe-core:** legger til default font ([a6bbbc8](https://github.com/SpareBank1/designsystem/commit/a6bbbc8f2bc7831946b140dcd6b5cebe54dd8d13))
+
+
+
+
+
 ## [21.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@21.0.0...@sb1/ffe-core@21.0.1) (2022-03-11)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-accordion",
-  "version": "8.0.14",
+  "version": "8.0.15",
   "description": "Accordion component for FFE.",
   "license": "MIT",
   "author": "SpareBank 1",
@@ -16,7 +16,7 @@
     "test": "npm run lint"
   },
   "devDependencies": {
-    "@sb1/ffe-core": "^21.0.1"
+    "@sb1/ffe-core": "^21.0.2"
   },
   "peerDependencies": {
     "@sb1/ffe-core": "*"

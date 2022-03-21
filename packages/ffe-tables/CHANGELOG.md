@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.0.15](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@12.0.14...@sb1/ffe-tables@12.0.15) (2022-03-21)
+
+
+### Bug Fixes
+
+* **ffe-tables:** legger til default font ([0bba263](https://github.com/SpareBank1/designsystem/commit/0bba26392785ba501693ba7fbc999293b21fa2a0))
+
+
+
+
+
 ## [12.0.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@12.0.13...@sb1/ffe-tables@12.0.14) (2022-03-11)
 
 **Note:** Version bump only for package @sb1/ffe-tables

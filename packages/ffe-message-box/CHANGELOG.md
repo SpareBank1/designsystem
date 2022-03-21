@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@10.1.0...@sb1/ffe-message-box@10.1.1) (2022-03-21)
+
+
+### Bug Fixes
+
+* **ffe-message-box:** legger til default font ([e36b96a](https://github.com/SpareBank1/designsystem/commit/e36b96a30c9087fb08bfd61b6cb68810e7563f65))
+
+
+
+
+
 # [10.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@10.0.3...@sb1/ffe-message-box@10.1.0) (2022-03-15)
 
 

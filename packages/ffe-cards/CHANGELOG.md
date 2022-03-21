@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [14.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@14.0.3...@sb1/ffe-cards@14.0.4) (2022-03-21)
+
+
+### Bug Fixes
+
+* **ffe-cards:** adds correct dark mode color for card title ([a8ed8c3](https://github.com/SpareBank1/designsystem/commit/a8ed8c39f0c44176f3307eb795fad96edb347949)), closes [#1357](https://github.com/SpareBank1/designsystem/issues/1357)
+
+
+
+
+
 ## [14.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@14.0.2...@sb1/ffe-cards@14.0.3) (2022-03-16)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.15](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@8.0.14...@sb1/ffe-accordion@8.0.15) (2022-03-21)
+
+
+### Bug Fixes
+
+* **ffe-accordion:** legger til default font ([0e1b3cb](https://github.com/SpareBank1/designsystem/commit/0e1b3cba4ca5193aaae64f4d256e59fd7642ce73))
+
+
+
+
+
 ## [8.0.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@8.0.13...@sb1/ffe-accordion@8.0.14) (2022-03-11)
 
 **Note:** Version bump only for package @sb1/ffe-accordion

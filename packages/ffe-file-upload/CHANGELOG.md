@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload@7.0.3...@sb1/ffe-file-upload@7.0.4) (2022-03-21)
+
+
+### Bug Fixes
+
+* **ffe-file-upload:** legger til default font ([2f32e0e](https://github.com/SpareBank1/designsystem/commit/2f32e0e1560cc8a127856c989bc2464abd79af78))
+
+
+
+
+
 ## [7.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload@7.0.2...@sb1/ffe-file-upload@7.0.3) (2022-03-11)
 
 **Note:** Version bump only for package @sb1/ffe-file-upload
