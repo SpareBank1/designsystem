@@ -1,11 +1,12 @@
 import React from 'react';
-import PageLayout from '../components/PageLayout';
 import { Link } from 'react-router-dom';
 import map from 'lodash.map';
+import Header from '../components/Header';
 
 export default function Home({ exampleGroups }) {
     return (
-        <PageLayout title="@sb1/ffe-*-react by example">
+        <>
+            <Header title="@sb1/ffe-*-react by example" />
             <div className="sb1ex-toc">
                 {map(exampleGroups, (examples, group) => (
                     <div key={group} className="sb1ex-toc__group">
@@ -25,6 +26,6 @@ export default function Home({ exampleGroups }) {
                     </div>
                 ))}
             </div>
-        </PageLayout>
+        </>
     );
 }

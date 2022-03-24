@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './routes/Home';
-import EditExample from './routes/EditExample';
 import ViewExample from './routes/ViewExample';
 import * as designsystem from '../lib/esm';
 
@@ -28,7 +27,7 @@ const withExampleById = WrappedComponent => ({ match }) => {
         );
     }
 
-    return <WrappedComponent {...{ match, exampleId, example }} />;
+    return <WrappedComponent {...{ exampleId, example }} />;
 };
 
 const baseUrl = process.env.PUBLIC_URL || '/';
@@ -37,9 +36,6 @@ export default function App() {
     return (
         <Router basename={baseUrl}>
             <Switch>
-                <Route path="/:exampleId/edit">
-                    {withExampleById(EditExample)}
-                </Route>
                 <Route path="/:exampleId">{withExampleById(ViewExample)}</Route>
                 <Route path="/">
                     <Home exampleGroups={exampleGroups} />
