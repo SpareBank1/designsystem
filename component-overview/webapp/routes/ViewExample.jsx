@@ -1,33 +1,76 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import { LiveProvider, LivePreview, LiveError } from 'react-live';
-import { Link } from 'react-router-dom';
-import { DokumentMedTekstIkon, HusIkon } from '@sb1/ffe-icons-react';
-import PageLayout from '../components/PageLayout';
+import theme from 'prism-react-renderer/themes/vsDark';
+import { withRouter } from 'react-router-dom';
+import { HamburgerButton, Panels, Navigation } from '../components';
 
-export default function ViewExample({ match, exampleId, example }) {
-    return (
-        <PageLayout title={example.sourceFileName}>
-            <LiveProvider code={example.code} scope={example.scope}>
-                <LivePreview className="sb1ex-live__preview" />
-                <LiveError className="sb1ex-live__error" />
-            </LiveProvider>
-            <div className="sb1ex-aside">
-                <Link
-                    to={'/'}
-                    className="sb1ex-aside__link"
-                    aria-label="Tilbake til oversikten"
-                >
-                    <HusIkon className="sb1ex-aside__icon" />
-                </Link>
-                <Link
-                    to={`${match.url}/edit`}
-                    className="sb1ex-aside__link"
-                    aria-label="Rediger dette eksempel"
-                >
-                    <DokumentMedTekstIkon className="sb1ex-aside__icon" />
-                </Link>
-                <div className="sb1ex-aside__example-id">id: {exampleId}</div>
-            </div>
-        </PageLayout>
+const ViewExample = ({ history, exampleId, example }) => {
+    const [showOverlayMenu, setShowOverlayMenu] = useState(false);
+    const [expandedPanelId, setExpandedPanelId] = useState(null);
+
+    useEffect(
+        () =>
+            history.listen(() => {
+                if (history.location.hash.startsWith('#toc_')) {
+                    // most likely a click on an item of the inpage navigation in the overlay menu
+                    return;
+                }
+
+                // hidde overlay and panels on navigation to new page
+                setShowOverlayMenu(false);
+                setExpandedPanelId(null);
+            }),
+        [history],
     );
-}
+
+    return (
+        <LiveProvider code={example.code} scope={example.scope} theme={theme}>
+            <div
+                className={classNames({
+                    'sb1ex-page': true,
+                    'sb1ex-page--with-nav-overlay': showOverlayMenu,
+                })}
+            >
+                <header className="sb1ex-header sb1ex-page__header">
+                    <h1 className="sb1ex-header__headline">
+                        {example.sourceFileName}
+                    </h1>
+                    <HamburgerButton
+                        isOpen={showOverlayMenu}
+                        onToggle={() => setShowOverlayMenu(prev => !prev)}
+                    />
+                </header>
+
+                <div className="sb1ex-page__nav-overlay">
+                    <Navigation focusable={showOverlayMenu} />
+                </div>
+
+                <div className="sb1ex-page__panels">
+                    <Panels
+                        {...{
+                            exampleId,
+                            example,
+                            expandedPanelId,
+                            setExpandedPanelId,
+                        }}
+                    />
+                </div>
+
+                <div className="sb1ex-page__main-content">
+                    <LivePreview className="sb1ex-live__preview" />
+                    <LiveError className="sb1ex-live__error" />
+                </div>
+            </div>
+        </LiveProvider>
+    );
+};
+
+ViewExample.propTypes = {
+    exampleId: PropTypes.string.isRequired,
+    example: PropTypes.object.isRequired,
+    history: PropTypes.object.isRequired,
+};
+
+export default withRouter(ViewExample);

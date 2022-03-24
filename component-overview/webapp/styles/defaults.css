@@ -1,0 +1,15 @@
+html,
+body,
+.sb1ex-app-container {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    color: var(--ffe-farge-svart);
+    background-color: var(--ffe-farge-hvit);
+}
+
+:root {
+    --sb1ex-page-bg: var(--ffe-farge-hvit);
+}
