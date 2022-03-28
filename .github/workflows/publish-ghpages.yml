@@ -1,6 +1,8 @@
 name: Publish GitHub pages
 
 on:
+    push:
+        branches: [redesign-component-overview]
     workflow_dispatch:
 
 jobs:
