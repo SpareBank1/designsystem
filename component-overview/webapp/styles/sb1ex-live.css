@@ -1,0 +1,26 @@
+.sb1ex-live__preview,
+.sb1ex-live__editor,
+.sb1ex-live__error {
+    margin: 0 auto;
+}
+
+.sb1ex-live__preview {
+    padding: 8px;
+}
+
+.sb1ex-live__editor {
+    background-color: var(--ffe-farge-syrin-30);
+}
+.sb1ex-live__imports {
+    background-color: var(--ffe-farge-koksgraa);
+    color: var(--ffe-farge-lysvarmgraa);
+    white-space: pre-wrap;
+    font-family: 'SpareBank1-medium', 'MuseoSansRounded-700', arial, sans-serif;
+    padding: 8px;
+}
+
+.sb1ex-live__error {
+    background-color: var(--ffe-farge-baer);
+    margin: 0;
+    padding: 8px 16px;
+}

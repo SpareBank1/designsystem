@@ -1,0 +1,18 @@
+.sb1ex-header {
+    background-color: var(--ffe-farge-syrin-30);
+    color: var(--ffe-farge-fjell);
+    padding: 8px 16px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-column-gap: 8px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--ffe-farge-fjell-30);
+}
+
+.sb1ex-header__headline {
+    font-family: 'SpareBank1-title-medium', arial, sans-serif;
+    font-weight: 400;
+    margin: 0;
+    font-size: 18px;
+}

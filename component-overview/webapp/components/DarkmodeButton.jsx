@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import useDarkColorSchemePreference from '../util/useDarkColorSchemePreference.js';
-import '../styles/sb1ds-darkmode-button.css';
 import { ToggleSwitch } from '@sb1/ffe-form-react';
 
 export default function DarkmodeButton() {
