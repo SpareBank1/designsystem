@@ -28,7 +28,6 @@ module.exports = {
                 'ffe-datepicker',
                 'ffe-datepicker-react',
                 'ffe-decorators-react',
-                'ffe-details-list',
                 'ffe-details-list-react',
                 'ffe-dropdown-react',
                 'ffe-file-upload',
