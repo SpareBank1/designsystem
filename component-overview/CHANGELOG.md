@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.5.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.5.4...@sb1/ffe-component-index@3.5.5) (2022-03-28)
+
+
+### Bug Fixes
+
+* **component-overview:** groups examples also on Mac ([6820295](https://github.com/SpareBank1/designsystem/commit/68202956de0bb74b56ec06206bc0aa83c45e7cbc))
+* **component-overview:** remove dependency to ffe-details-list ([97ea589](https://github.com/SpareBank1/designsystem/commit/97ea589374c6bcf42d2f3c82d8862f367c46a40b))
+
+
+
+
+
 ## [3.5.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.5.3...@sb1/ffe-component-index@3.5.4) (2022-03-21)
 
 **Note:** Version bump only for package @sb1/ffe-component-index
