@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [21.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@21.0.2...@sb1/ffe-core@21.0.3) (2022-03-31)
+
+
+### Bug Fixes
+
+* **ffe-core:** retter font-size på h5 og h6 ([0c37981](https://github.com/SpareBank1/designsystem/commit/0c37981231ad93aebb64fb46cfdecac131fa649f))
+
+
+
+
+
 ## [21.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@21.0.1...@sb1/ffe-core@21.0.2) (2022-03-21)
 
 
