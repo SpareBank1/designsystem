@@ -15,7 +15,7 @@ export default function withExampleById(Component) {
             );
         }
 
-        return <Component {...{ match, exampleId, example }} />;
+        return <Component {...{ exampleId, example }} />;
     };
 
     WrappedComponent.propTypes = {
