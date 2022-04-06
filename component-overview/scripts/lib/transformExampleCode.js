@@ -24,6 +24,7 @@ const generateModuleCode = ({
     code,
     imports,
     importSpecifiers,
+    importsMap,
     sourceCode,
     sourceFileName,
     dependencies,
@@ -31,6 +32,7 @@ const generateModuleCode = ({
     `${imports.join('\n')}
 export const scope = {${importSpecifiers.join(',')}};
 export const code = ${JSON.stringify(code)};
+export const importsMap = ${JSON.stringify(importsMap)};
 export const sourceCode = ${JSON.stringify(sourceCode)};
 export const sourceImports = ${JSON.stringify(imports.join('\n'))};
 export const dependencies = ${JSON.stringify(dependencies)};
@@ -40,6 +42,7 @@ module.exports = function(sourceCode, sourceFileName) {
     let importSpecifiers = [];
     const importPositions = [];
     const imports = [];
+    const importsMap = {};
     const dependencies = [];
 
     let ast;
@@ -57,8 +60,9 @@ module.exports = function(sourceCode, sourceFileName) {
     walk(ast, {
         enter(node) {
             if (node.type === 'ImportDeclaration') {
+                importsMap[node.source.value] = getImportSpecifiers(node);
                 importSpecifiers = importSpecifiers.concat(
-                    getImportSpecifiers(node),
+                    importsMap[node.source.value],
                 );
                 imports.push(sourceCode.slice(node.start, node.end));
                 importPositions.push([node.start, node.end]);
@@ -71,6 +75,7 @@ module.exports = function(sourceCode, sourceFileName) {
         code: removePositions(sourceCode, importPositions),
         imports,
         importSpecifiers,
+        importsMap,
         sourceCode,
         sourceFileName,
         dependencies,

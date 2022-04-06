@@ -7,7 +7,7 @@ reactDocgen := ../node_modules/.bin/react-docgen
 lerna := ./node_modules/.bin/lerna
 parcel := ./node_modules/.bin/parcel
 
-EXAMPLE_FILES = $(shell find examples/ -type f -name '*.jsx')
+EXAMPLE_FILES = $(shell find examples -type f -name '*.jsx')
 REACT_FILES = $(shell cd ../packages && find ffe-*-react/src -type f -name '*.js'| grep '\/[A-Z][A-Za-z]\+.js\>')
 
 GH_PUBLIC_URL := /designsystem

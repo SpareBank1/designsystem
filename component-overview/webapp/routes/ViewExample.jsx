@@ -9,7 +9,6 @@ import CodeEditor from '../components/CodeEditor';
 import BackgroundColors from '../components/BackgroundColors';
 
 export default function ViewExample({ exampleId, example }) {
-    console.log(example);
     const [expandedMenuItem, setExpandedMenuItem] = useState(null);
 
     const setExpandedContent = () => {

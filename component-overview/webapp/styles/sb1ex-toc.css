@@ -1,0 +1,45 @@
+.sb1ex-toc-container {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    column-gap: 1.5rem;
+}
+
+.sb1ex-toc__group {
+    margin-bottom: var(--ffe-spacing-md);
+}
+
+.sb1ex-toc__example-list {
+    font-family: 'SpareBank1-regular', 'MuseoSans-500', arial, sans-serif;
+    line-height: 1.5rem;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sb1ex-toc__example-list-item {
+    margin: 0 0 var(--ffe-spacing-xs) 0;
+}
+
+.sb1ex-inpage-nav__list {
+    font-family: 'SpareBank1-regular', 'MuseoSans-500', arial, sans-serif;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sb1ex-inpage-nav__list-item {
+    margin: 0 0 var(--ffe-spacing-xs) 0;
+    color: var(--ffe-farge-moerkgraa);
+}
+
+.sb1ex-inpage-nav__link {
+    display: inline-block;
+    color: var(--ffe-farge-fjell);
+    text-decoration: none;
+    cursor: pointer;
+    padding: var(--ffe-spacing-3xs) 0;
+}
+
+.sb1ex-inpage-nav__link:hover {
+    color: var(--ffe-farge-vann);
+}
