@@ -1,0 +1,16 @@
+.sb1ex-expanded__container {
+    background-color: var(--ffe-farge-syrin-30);
+    color: var(--ffe-farge-svart);
+    padding: 8px 16px;
+}
+
+.sb1ex-expanded__background {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+}
+
+.sb1ex-expanded__background-preview {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}

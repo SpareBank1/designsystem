@@ -38,8 +38,7 @@
     text-decoration: none;
     cursor: pointer;
     padding: var(--ffe-spacing-3xs) 0;
-}
-
-.sb1ex-inpage-nav__link:hover {
-    color: var(--ffe-farge-vann);
+    &:hover {
+        color: var(--ffe-farge-vann);
+    }
 }

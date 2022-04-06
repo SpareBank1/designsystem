@@ -1,98 +1,11 @@
+@import 'npm:@sb1/ffe-core/css/colors.css';
+@import 'npm:@sb1/ffe-core/css/dimensions.css';
+@import 'npm:@sb1/ffe-core/css/spacing.css';
+@import 'npm:@sb1/ffe-webfonts/sb1-fonts.css';
+@import 'styles/defaults.css';
+@import 'styles/sb1ex-header.css';
+@import 'styles/sb1ex-expanded.css';
+@import 'styles/sb1ex-main.css';
 @import 'styles/sb1ex-toc.css';
-
-body {
-    margin: 0;
-    color: var(--ffe-farge-hvit);
-}
-
-.sb1ex-header {
-    background-color: var(--ffe-farge-syrin-30);
-    color: var(--ffe-farge-fjell);
-    padding: 8px 16px;
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    grid-column-gap: 8px;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid var(--ffe-farge-fjell-30);
-}
-
-.sb1ex-header__headline {
-    font-family: 'SpareBank1-title-medium', arial, sans-serif;
-    font-weight: 400;
-    margin: 0;
-    font-size: 18px;
-}
-
-.sb1ex-expanded__container {
-    background-color: var(--ffe-farge-syrin-30);
-    color: var(--ffe-farge-svart);
-    padding: 8px 16px;
-}
-.sb1ex-expanded__background {
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-}
-.sb1ex-expanded__background-preview {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-}
-
-.sb1ex-main {
-    background-color: var(--ffe-farge-hvit);
-    color: var(--ffe-farge-fjell);
-}
-
-.sb1ex-live__preview,
-.sb1ex-live__editor,
-.sb1ex-live__error {
-    margin: 0 auto;
-}
-
-.sb1ex-live__preview {
-    padding: 8px;
-}
-
-.sb1ex-live__editor {
-    background-color: var(--ffe-farge-syrin-30);
-}
-.sb1ex-live__imports {
-    background-color: var(--ffe-farge-koksgraa);
-    color: var(--ffe-farge-lysvarmgraa);
-    white-space: pre-wrap;
-    font-family: 'SpareBank1-medium', 'MuseoSansRounded-700', arial, sans-serif;
-    padding: 8px;
-}
-
-.sb1ex-live__error {
-    background-color: var(--ffe-farge-baer);
-    margin: 0;
-    padding: 8px 16px;
-}
-
-@media (prefers-color-scheme: dark) {
-    .regard-color-scheme-preference .sb1ex-header {
-        background-color: var(--ffe-farge-svart);
-        color: var(--ffe-farge-vann-30);
-    }
-    .regard-color-scheme-preference .sb1ex-expanded__container {
-        background-color: var(--ffe-farge-svart);
-    }
-
-    body.regard-color-scheme-preference .sb1ex-main {
-        background-color: var(--ffe-black);
-    }
-
-    body.regard-color-scheme-preference a:not(h1, h2, h3, h4, h5, h6) {
-        color: var(--ffe-farge-vann-70);
-    }
-
-    body.regard-color-scheme-preference a:not(h1, h2, h3, h4, h5, h6):hover {
-        color: var(--ffe-farge-vann-30);
-    }
-
-    body.regard-color-scheme-preference a:not(h1, h2, h3, h4, h5, h6):visited {
-        color: var(--ffe-farge-lyng-70);
-    }
-}
+@import 'styles/sb1ex-live.css';
+@import 'styles/prefers-color-scheme-dark.css';

@@ -1,0 +1,28 @@
+body.regard-color-scheme-preference {
+    @media (prefers-color-scheme: dark) {
+        & a:not(h1, h2, h3, h4, h5, h6) {
+            color: var(--ffe-farge-vann-70);
+        }
+
+        & a:not(h1, h2, h3, h4, h5, h6):hover {
+            color: var(--ffe-farge-vann-30);
+        }
+
+        & a:not(h1, h2, h3, h4, h5, h6):visited {
+            color: var(--ffe-farge-lyng-70);
+        }
+
+        & .sb1ex-header {
+            background-color: var(--ffe-farge-svart);
+            color: var(--ffe-farge-vann-30);
+        }
+
+        & .sb1ex-expanded__container {
+            background-color: var(--ffe-farge-svart);
+        }
+
+        & .sb1ex-main {
+            background-color: var(--ffe-black);
+        }
+    }
+}
