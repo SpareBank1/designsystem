@@ -5,7 +5,7 @@
 @import 'styles/defaults.css';
 @import 'styles/sb1ex-header.css';
 @import 'styles/sb1ex-expanded.css';
-@import 'styles/sb1ex-main.css';
+@import 'styles/sb1ex-wrapper.css';
 @import 'styles/sb1ex-toc.css';
 @import 'styles/sb1ex-live.css';
 @import 'styles/prefers-color-scheme-dark.css';

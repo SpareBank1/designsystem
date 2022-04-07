@@ -1,9 +1,18 @@
 .sb1ex-toc-container {
     display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-columns: 4fr 1fr;
+    align-content: start;
+    min-height: 100%;
     column-gap: 1.5rem;
+    padding: 16px;
+    background-color: var(--ffe-farge-syrin-30);
 }
 
+.sb1ex-toc-filter {
+    grid-column: 1 / span 2;
+    display: flex;
+    align-items: center;
+}
 .sb1ex-toc__group {
     margin-bottom: var(--ffe-spacing-md);
 }

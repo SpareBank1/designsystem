@@ -21,8 +21,8 @@ body.regard-color-scheme-preference {
             background-color: var(--ffe-farge-svart);
         }
 
-        & .sb1ex-main {
-            background-color: var(--ffe-black);
+        & .sb1ex-toc-container {
+            background-color: var(--ffe-farge-svart);
         }
     }
 }

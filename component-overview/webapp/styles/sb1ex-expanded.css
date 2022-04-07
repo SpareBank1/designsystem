@@ -5,8 +5,8 @@
 }
 
 .sb1ex-expanded__background {
-    display: grid;
-    grid-template-columns: repeat(4, auto);
+    max-width: 500px;
+    margin-bottom: 8px;
 }
 
 .sb1ex-expanded__background-preview {

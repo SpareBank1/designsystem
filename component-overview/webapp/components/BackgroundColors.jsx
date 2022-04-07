@@ -1,30 +1,27 @@
 import React from 'react';
+import { useThemeProvider } from '../context/ThemeContext';
+import Dropdown from '@sb1/ffe-dropdown-react';
+import { Label } from '@sb1/ffe-form-react';
 
 export default function BackgroundColors() {
-    const backgroundColors = [
-        'frost-30',
-        'sand',
-        'sand-70',
-        'sand-30',
-        'syrin-70',
-        'syrin-30',
-        'vann',
-        'vann-30',
-        'fjell',
-        'hvit',
-    ];
+    const context = useThemeProvider();
 
     return (
         <div className="sb1ex-expanded__background">
-            {backgroundColors.map(color => (
-                <span key={color}>
-                    <div
-                        className="sb1ex-expanded__background-preview"
-                        style={{ backgroundColor: `var(--ffe-farge-${color})` }}
-                    />
-                    {color}
-                </span>
-            ))}
+            <Label htmlFor="background-dropdown">Velg bakgrunnsfarge</Label>
+            <Dropdown
+                id="background-dropdown"
+                onChange={e => {
+                    context.setTheme(e.target.value);
+                }}
+                value={context.chosenTheme}
+            >
+                {context.allThemes.map(color => (
+                    <option key={`color-${color}`} value={color}>
+                        {color}
+                    </option>
+                ))}
+            </Dropdown>
         </div>
     );
 }

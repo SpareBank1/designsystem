@@ -18,7 +18,7 @@ export default function TocFilter({ value = '', onChange = () => {} }) {
             </InputGroup>
             {value.length > 0 && (
                 <TertiaryButton onClick={() => onChange('')}>
-                    nullstill
+                    Nullstill
                 </TertiaryButton>
             )}
         </div>
