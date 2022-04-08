@@ -7,7 +7,6 @@
     grid-column-gap: 8px;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid var(--ffe-farge-fjell-30);
 }
 
 .sb1ex-header__headline {

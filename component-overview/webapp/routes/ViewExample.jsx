@@ -7,7 +7,7 @@ import Header from '../components/Header';
 import ExpandInfo from '../components/ExpandInfo';
 import CodeEditor from '../components/CodeEditor';
 import BackgroundColors from '../components/BackgroundColors';
-
+import { ThemeProvider } from '../context/ThemeContext';
 export default function ViewExample({ exampleId, example }) {
     const [expandedMenuItem, setExpandedMenuItem] = useState(null);
 
@@ -30,7 +30,7 @@ export default function ViewExample({ exampleId, example }) {
         }
     };
     return (
-        <>
+        <ThemeProvider>
             <Header title={example.sourceFileName}>
                 <nav>
                     <InlineExpandButton
@@ -82,7 +82,7 @@ export default function ViewExample({ exampleId, example }) {
                 <LivePreview className="sb1ex-live__preview" />
                 <LiveError className="sb1ex-live__error" />
             </LiveProvider>
-        </>
+        </ThemeProvider>
     );
 }
 
