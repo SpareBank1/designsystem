@@ -35,6 +35,7 @@ export interface ButtonGroupProps {
     className?: string;
     thin?: boolean;
     inline?: boolean;
+    children: React.ReactNode;
 }
 
 export interface ExpandButtonProps extends MinimalBaseButtonProps {
