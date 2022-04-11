@@ -49,10 +49,17 @@ export interface LabelProps
     htmlFor?: string;
 }
 
-export interface InputGroupProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface InputGroupProps
+    extends Omit<React.HTMLAttributes<HTMLDivElement>, 'children'> {
     inputId?: string;
     /** Unless you only have one element in your `InputGroup` you will have to use the function-as-a-child pattern. */
-    children: React.ReactNode;
+    children:
+        | React.ReactNode
+        | ((extraProps: {
+              id: string;
+              'aria-invalid': string;
+              'aria-describedby': string;
+          }) => React.ReactNode);
     className?: string;
     extraMargin?: boolean;
     fieldMessage?: string | React.ReactNode;
@@ -112,8 +119,17 @@ interface WeakFieldSetAttributes
     onChange?: any;
 }
 
-export interface RadioButtonInputGroupProps extends WeakFieldSetAttributes {
-    children: React.ReactNode;
+export interface RadioButtonInputGroupProps
+    extends Omit<WeakFieldSetAttributes, 'children'> {
+    children:
+        | React.ReactNode
+        | ((inputProps: {
+              'aria-invalid'?: 'true' | 'false';
+              inline?: boolean;
+              name: string;
+              onChange: (...args: any) => any;
+              selectedValue?: boolean | string | number;
+          }) => React.ReactNode);
     className?: string;
     description?: string | React.ReactNode;
     extraMargin?: boolean;
