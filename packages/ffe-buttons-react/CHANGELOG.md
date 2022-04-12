@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [16.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@16.0.0...@sb1/ffe-buttons-react@16.0.1) (2022-04-12)
+
+
+### Bug Fixes
+
+* **ffe-buttons-react:** add children type on ButtonGruop ([e151283](https://github.com/SpareBank1/designsystem/commit/e15128302c2fd5b45a8f038a69e36070bb7c9728))
+
+
+
+
+
 # [16.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@15.0.0...@sb1/ffe-buttons-react@16.0.0) (2022-03-11)
 
 
