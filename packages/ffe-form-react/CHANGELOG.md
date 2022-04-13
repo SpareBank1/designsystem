@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@9.1.0...@sb1/ffe-form-react@9.1.1) (2022-04-13)
+
+
+### Bug Fixes
+
+* **ffe-form-react:** add children props for render-as-a-child ([44834ed](https://github.com/SpareBank1/designsystem/commit/44834ed8584d21cd70064a099f7df8e342f97a73))
+
+
+
+
+
 # [9.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@9.0.8...@sb1/ffe-form-react@9.1.0) (2022-03-04)
 
 
