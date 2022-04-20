@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@6.0.0...@sb1/ffe-cards-react@7.0.0) (2022-04-20)
+
+
+### Bug Fixes
+
+* **ffe-cards-react:** add children props for render-as-a-child for card components ([b55773e](https://github.com/SpareBank1/designsystem/commit/b55773e518a551844bd6e0e5fd7b03ee79d237ee))
+
+
+### BREAKING CHANGES
+
+* **ffe-cards-react:** TextRenderProps is replaced with CardRenderProps.
+It no longer needs to be manually specified.
+
+
+
+
+
 # [6.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@5.0.10...@sb1/ffe-cards-react@6.0.0) (2022-03-09)
 
 
