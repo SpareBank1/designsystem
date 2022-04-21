@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.5.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.5.9...@sb1/ffe-component-index@3.5.10) (2022-04-21)
+
+
+### Bug Fixes
+
+* **component-overview:** rett feil i radioswitch eksempler ([80ed550](https://github.com/SpareBank1/designsystem/commit/80ed55074300c28723f489575b875efe5a817f1d))
+
+
+
+
+
 ## [3.5.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.5.8...@sb1/ffe-component-index@3.5.9) (2022-04-20)
 
 **Note:** Version bump only for package @sb1/ffe-component-index

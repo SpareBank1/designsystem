@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@9.1.1...@sb1/ffe-form-react@9.1.2) (2022-04-21)
+
+
+### Bug Fixes
+
+* **ffe-form-react:** remove children prop from RadioSwitch ([f1041fe](https://github.com/SpareBank1/designsystem/commit/f1041fe2ec22f83febb44d04e750d86f160646e2))
+
+
+
+
+
 ## [9.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@9.1.0...@sb1/ffe-form-react@9.1.1) (2022-04-13)
 
 
