@@ -12,7 +12,7 @@ export default function TocFilter({ value = '', onChange = () => {} }) {
         <div className="sb1ex-toc-filter">
             <InputGroup
                 className="sb1ex-toc-filter__input-group"
-                label="filter"
+                label="Filtrer"
             >
                 <Input value={value} onChange={cb} />
             </InputGroup>

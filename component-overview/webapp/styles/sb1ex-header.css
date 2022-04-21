@@ -1,17 +1,64 @@
 .sb1ex-header {
-    background-color: var(--ffe-farge-syrin-30);
     color: var(--ffe-farge-fjell);
     padding: 8px 16px;
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-areas:
+        'darkmode menu'
+        'title title'
+        'nav nav';
+    grid-template-columns: 1fr auto;
     grid-column-gap: 8px;
+    grid-row-gap: 8px;
     align-items: center;
     justify-content: space-between;
 }
 
+.sb1ex-header--with-background {
+    background-color: var(--ffe-farge-syrin-30);
+    grid-template-areas: 'title darkmode';
+    & .sb1ex-header__headline {
+        justify-self: start;
+    }
+}
 .sb1ex-header__headline {
     font-family: 'SpareBank1-title-medium', arial, sans-serif;
     font-weight: 400;
     margin: 0;
     font-size: 18px;
+    grid-area: title;
+    justify-self: center;
+}
+
+.sb1ex-header > .ffe-toggle-switch {
+    grid-area: darkmode;
+    justify-self: start;
+}
+.sb1ex-header > .sb1ex-hamburger-button {
+    grid-area: menu;
+}
+.sb1ex-header__nav {
+    grid-area: nav;
+    justify-self: center;
+}
+
+@media (min-width: 768px) {
+    .sb1ex-header {
+        grid-template-columns: 1fr 2fr auto auto;
+        grid-template-areas: 'title nav darkmode menu';
+        grid-column-gap: 8px;
+    }
+    .sb1ex-header__nav {
+        justify-self: start;
+    }
+}
+
+body.regard-color-scheme-preference {
+    @media (prefers-color-scheme: dark) {
+        & .sb1ex-header {
+            color: var(--ffe-farge-vann-30);
+        }
+        & .sb1ex-header--with-background {
+            background-color: var(--ffe-farge-svart);
+        }
+    }
 }

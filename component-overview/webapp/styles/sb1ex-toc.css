@@ -6,12 +6,16 @@
     column-gap: 1.5rem;
     padding: 16px;
     background-color: var(--ffe-farge-syrin-30);
+    grid-template-areas: 'filter inpage';
 }
 
 .sb1ex-toc-filter {
     grid-column: 1 / span 2;
     display: flex;
     align-items: center;
+}
+.sb1ex-toc__search {
+    grid-area: filter;
 }
 .sb1ex-toc__group {
     margin-bottom: var(--ffe-spacing-md);
@@ -27,6 +31,10 @@
 
 .sb1ex-toc__example-list-item {
     margin: 0 0 var(--ffe-spacing-xs) 0;
+}
+.sb1ex-inpage-nav {
+    display: none;
+    grid-area: inpage;
 }
 
 .sb1ex-inpage-nav__list {
@@ -49,5 +57,19 @@
     padding: var(--ffe-spacing-3xs) 0;
     &:hover {
         color: var(--ffe-farge-vann);
+    }
+}
+
+@media (min-width: 768px) {
+    .sb1ex-inpage-nav {
+        display: block;
+    }
+}
+
+body.regard-color-scheme-preference {
+    @media (prefers-color-scheme: dark) {
+        & .sb1ex-toc-container {
+            background-color: var(--ffe-farge-svart);
+        }
     }
 }

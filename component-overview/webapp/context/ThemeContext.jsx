@@ -1,18 +1,16 @@
 import React, { createContext, useState } from 'react';
 import PropTypes from 'prop-types';
+import useDarkColorSchemePreference from '../util/useDarkColorSchemePreference';
 
-const allThemes = [
+const allLightThemes = [
     'frost-30',
-    'sand',
-    'sand-70',
     'sand-30',
-    'syrin-70',
+    'sand-70',
     'syrin-30',
-    'vann',
-    'vann-30',
-    'fjell',
+    'syrin-70',
     'hvit',
 ];
+const allDarkThemes = ['svart', 'natt', 'koksgraa'];
 
 const ThemeContext = createContext();
 
@@ -25,14 +23,27 @@ function useThemeProvider() {
 }
 
 function ThemeProvider({ children }) {
-    const [chosenTheme, setChosenTheme] = useState('syrin-30');
-    const setTheme = bgcolor => setChosenTheme(bgcolor);
-    const bgColor = { backgroundColor: `var(--ffe-farge-${chosenTheme}` };
+    const [chosenDarkTheme, setChosenDarkTheme] = useState('svart');
+    const [chosenLightTheme, setChosenLightTheme] = useState('syrin-30');
+    const { prefersDarkMode, toggleDarkMode } = useDarkColorSchemePreference();
+    const setTheme = bgcolor =>
+        prefersDarkMode
+            ? setChosenDarkTheme(bgcolor)
+            : setChosenLightTheme(bgcolor);
+    const chosenTheme = prefersDarkMode ? chosenDarkTheme : chosenLightTheme;
+
     return (
-        <ThemeContext.Provider value={{ allThemes, chosenTheme, setTheme }}>
-            <div className="sb1ex-wrapper" style={bgColor}>
-                {children}
-            </div>
+        <ThemeContext.Provider
+            value={{
+                allDarkThemes,
+                allLightThemes,
+                setTheme,
+                chosenTheme,
+                prefersDarkMode,
+                toggleDarkMode,
+            }}
+        >
+            {children}
         </ThemeContext.Provider>
     );
 }

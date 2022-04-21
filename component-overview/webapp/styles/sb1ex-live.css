@@ -6,6 +6,8 @@
 
 .sb1ex-live__preview {
     padding: 8px;
+    display: flex;
+    justify-content: center;
 }
 
 .sb1ex-live__editor {
