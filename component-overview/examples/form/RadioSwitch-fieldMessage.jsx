@@ -12,7 +12,7 @@ import { RadioSwitch, RadioButtonInputGroup } from '@sb1/ffe-form-react';
             name="hasLeasing"
             onChange={e => setSelected(e.target.value)}
             selectedValue={selected}
-            fieldMessage={fieldMessageLeasing}
+            fieldMessage={selected === 'ja' && fieldMessageLeasing}
         >
             {inputProps => (
                 <RadioSwitch

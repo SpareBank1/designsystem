@@ -3,8 +3,6 @@ import { RadioSwitch, RadioButtonInputGroup } from '@sb1/ffe-form-react';
 
 () => {
     const [selected, setSelected] = useState();
-    const fieldMessageLeasing =
-        'Bilen kan ikke være leaset hvis du har billån med pant i bilen.';
 
     return (
         <RadioButtonInputGroup
@@ -13,7 +11,7 @@ import { RadioSwitch, RadioButtonInputGroup } from '@sb1/ffe-form-react';
             name="radioButtonInputGroupWithFieldMessage"
             onChange={e => setSelected(e.target.value)}
             selectedValue={selected}
-            fieldMessage="Du må gjøre et valg"
+            fieldMessage={!selected && 'Du må gjøre et valg'}
         >
             {inputProps => (
                 <RadioSwitch
