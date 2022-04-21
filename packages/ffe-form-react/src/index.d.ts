@@ -145,7 +145,6 @@ export interface RadioButtonInputGroupProps
 export interface RadioSwitchProps
     extends React.InputHTMLAttributes<HTMLInputElement> {
     checked?: boolean;
-    children: React.ReactNode;
     className?: string;
     labelProps?: {};
     leftLabel: string;
