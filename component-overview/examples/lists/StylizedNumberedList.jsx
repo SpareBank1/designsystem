@@ -14,4 +14,4 @@ import {
         </StylizedNumberedListItem>
         <StylizedNumberedListItem>Profit!</StylizedNumberedListItem>
     </StylizedNumberedList>
-</div>;
+</div>

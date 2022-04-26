@@ -6,4 +6,4 @@ import { Paragraph } from '@sb1/ffe-core-react';
         Reiseforsikringen gjelder ikke bare når du er på ferie. Les mer om hva
         som dekkes i vilkårene.
     </Paragraph>
-</TipsMessage>;
+</TipsMessage>

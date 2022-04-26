@@ -18,4 +18,4 @@ import { ExpandButton } from '@sb1/ffe-buttons-react';
             </Collapse>
         </>
     );
-};
+}

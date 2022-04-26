@@ -9,4 +9,4 @@ import { Paragraph } from '@sb1/ffe-core-react';
         textLike={true}
     />{' '}
     år gammel
-</Paragraph>;
+</Paragraph>

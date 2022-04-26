@@ -4,4 +4,4 @@ import { HandlevognIkon } from '@sb1/ffe-icons-react';
 
 <InfoMessage title="Handlevognen din er tom" icon={<HandlevognIkon />}>
     <Paragraph>Du har ingenting i handlevognen din.</Paragraph>
-</InfoMessage>;
+</InfoMessage>

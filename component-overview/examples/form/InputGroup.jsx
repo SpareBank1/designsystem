@@ -81,4 +81,4 @@ import { SecondaryButton } from '@sb1/ffe-buttons-react';
             </InputGroup>
         </>
     );
-};
+}

@@ -281,4 +281,4 @@ import { HakeIkon, KryssIkon } from '@sb1/ffe-icons-react';
             }}
         />
     );
-};
+}

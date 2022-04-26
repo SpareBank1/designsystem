@@ -20,4 +20,4 @@ import { ExpandButton } from '@sb1/ffe-buttons-react';
             <p>This number will change on transition complete: {rand}</p>
         </>
     );
-};
+}

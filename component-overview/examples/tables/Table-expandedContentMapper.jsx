@@ -55,4 +55,4 @@ import Table from '@sb1/ffe-tables-react';
             caption="Masse spennende data, med en rad som er ekspandert"
         />
     );
-};
+}

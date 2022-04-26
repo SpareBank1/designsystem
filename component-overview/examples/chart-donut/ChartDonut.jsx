@@ -5,4 +5,4 @@ import ChartDonut from '@sb1/ffe-chart-donut-react';
     lastLabel="Last label"
     name="Name"
     percentage={42}
-/>;
+/>

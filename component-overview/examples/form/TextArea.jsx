@@ -7,4 +7,4 @@ import { TextArea, Label } from '@sb1/ffe-form-react';
         id="textarea-example"
         rows="8"
     />
-</>;
+</>

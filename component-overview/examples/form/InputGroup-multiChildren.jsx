@@ -39,4 +39,4 @@ import { InputGroup, Input, ErrorFieldMessage } from '@sb1/ffe-form-react';
             onBlur={e => console.log('onBlur', e.target.value)}
         />
     </InputGroup>
-</>;
+</>

@@ -10,4 +10,4 @@ import { InputGroup, Input } from '@sb1/ffe-form-react';
         onChange={e => console.log('onChange', e.target.value)}
         onBlur={e => console.log('onBlur', e.target.value)}
     />
-</InputGroup>;
+</InputGroup>

@@ -46,4 +46,4 @@ import { InputGroup } from '@sb1/ffe-form-react';
             />
         </InputGroup>
     );
-};
+}

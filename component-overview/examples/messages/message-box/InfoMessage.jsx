@@ -6,4 +6,4 @@ import { Paragraph } from '@sb1/ffe-core-react';
         For å bruke denne tjenesten må du ha et debetkort eller kredittkort fra
         SpareBank 1.
     </Paragraph>
-</InfoMessage>;
+</InfoMessage>

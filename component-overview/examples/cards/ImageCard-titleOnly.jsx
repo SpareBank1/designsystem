@@ -10,4 +10,4 @@ import { ImageCard } from '@sb1/ffe-cards-react';
     }
 >
     {({ Title }) => <Title>Tittel</Title>}
-</ImageCard>;
+</ImageCard>

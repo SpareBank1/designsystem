@@ -17,4 +17,4 @@ import { DividerLine, Paragraph } from '@sb1/ffe-core-react';
             <Paragraph>Noe under</Paragraph>
         </GridCol>
     </GridRow>
-</Grid>;
+</Grid>

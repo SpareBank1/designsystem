@@ -13,4 +13,4 @@ import {
     <ButtonGroup>
         <TertiaryButton>Avbryt</TertiaryButton>
     </ButtonGroup>
-</>;
+</>

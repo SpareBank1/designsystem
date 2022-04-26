@@ -11,4 +11,4 @@ import { formatNumber } from '@sb1/ffe-formatters';
             decimalMark: '.',
         })}
     </div>
-</>;
+</>

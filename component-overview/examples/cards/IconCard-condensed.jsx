@@ -8,4 +8,4 @@ import { SparegrisIkon } from '@sb1/ffe-icons-react';
             <Subtext>7 004,00</Subtext>
         </>
     )}
-</IconCard>;
+</IconCard>

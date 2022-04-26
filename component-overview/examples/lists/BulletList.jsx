@@ -7,4 +7,4 @@ import { BulletList, BulletListItem } from '@sb1/ffe-lists-react';
         <BulletListItem>Reiseforsikring</BulletListItem>
         <BulletListItem>Innboforsikring</BulletListItem>
     </BulletList>
-</div>;
+</div>

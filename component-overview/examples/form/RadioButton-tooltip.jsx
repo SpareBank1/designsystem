@@ -31,4 +31,4 @@ import { RadioButton, RadioButtonInputGroup } from '@sb1/ffe-form-react';
             )}
         </RadioButtonInputGroup>
     );
-};
+}

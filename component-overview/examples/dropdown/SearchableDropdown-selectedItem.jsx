@@ -49,4 +49,4 @@ import { useState } from 'react';
             />
         </InputGroup>
     );
-};
+}
