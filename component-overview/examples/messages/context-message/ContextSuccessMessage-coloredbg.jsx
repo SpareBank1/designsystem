@@ -4,4 +4,4 @@ import { ContextSuccessMessage } from '@sb1/ffe-context-message-react';
     <ContextSuccessMessage onColoredBg={true}>
         Betalingen ble gjennomført!
     </ContextSuccessMessage>
-</div>;
+</div>

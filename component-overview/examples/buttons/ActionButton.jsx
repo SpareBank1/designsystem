@@ -11,4 +11,4 @@ import { ActionButton, ButtonGroup } from '@sb1/ffe-buttons-react';
             Action knapp
         </ActionButton>
     </ButtonGroup>
-</>;
+</>

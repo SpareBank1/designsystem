@@ -9,4 +9,4 @@ import { PrimaryButton, ButtonGroup } from '@sb1/ffe-buttons-react';
     >
         Primary knapp
     </PrimaryButton>
-</ButtonGroup>;
+</ButtonGroup>

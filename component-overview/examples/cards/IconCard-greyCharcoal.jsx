@@ -12,4 +12,4 @@ import { KryssSirkelIkon } from '@sb1/ffe-icons-react';
             <Subtext>Det er mange måter å spare på</Subtext>
         </>
     )}
-</IconCard>;
+</IconCard>

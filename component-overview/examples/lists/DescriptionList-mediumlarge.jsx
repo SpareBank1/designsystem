@@ -26,4 +26,4 @@ import {
             description
         </DescriptionListDescription>
     </DescriptionList>
-</div>;
+</div>

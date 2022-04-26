@@ -8,4 +8,4 @@ import { Paragraph } from '@sb1/ffe-core-react';
             fra SpareBank 1.
         </Paragraph>
     </InfoMessage>
-</div>;
+</div>

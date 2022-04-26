@@ -104,4 +104,4 @@ import { TertiaryButton } from '@sb1/ffe-buttons-react';
             onSort={onSort}
         />
     );
-};
+}

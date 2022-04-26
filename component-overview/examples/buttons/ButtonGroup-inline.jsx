@@ -9,4 +9,4 @@ import {
         <SecondaryButton>Forrige</SecondaryButton>
         <PrimaryButton>Neste</PrimaryButton>
     </ButtonGroup>
-</>;
+</>

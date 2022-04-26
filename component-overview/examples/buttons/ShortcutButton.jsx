@@ -4,4 +4,4 @@ import { ButtonGroup, ShortcutButton } from '@sb1/ffe-buttons-react';
     <ShortcutButton element="a" href="#shortcutbutton">
         Snarvei
     </ShortcutButton>
-</ButtonGroup>;
+</ButtonGroup>

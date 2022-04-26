@@ -24,4 +24,4 @@ import { Paragraph } from '@sb1/ffe-core-react';
     <SystemInfoMessage>
         Mobilbanken vil være utilgjengelig førstkommende fredag kl 19-20.
     </SystemInfoMessage>
-</>;
+</>

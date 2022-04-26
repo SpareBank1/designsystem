@@ -6,4 +6,4 @@ import { SnakkebobleIkon } from '@sb1/ffe-icons-react';
         alt="Snakk med oss"
         style={{ fill: 'darkblue', height: '80px' }}
     />
-</LinkText>;
+</LinkText>

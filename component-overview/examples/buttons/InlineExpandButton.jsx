@@ -52,4 +52,4 @@ import { Paragraph } from '@sb1/ffe-core-react';
             </Collapse>
         </>
     );
-};
+}

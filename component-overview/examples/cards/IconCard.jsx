@@ -10,4 +10,4 @@ import { GrafOppIkon } from '@sb1/ffe-icons-react';
             <Text>Her kan man ha tekst</Text>
         </>
     )}
-</IconCard>;
+</IconCard>

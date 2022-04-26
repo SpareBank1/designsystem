@@ -9,4 +9,4 @@ import { CheckList, CheckListItem } from '@sb1/ffe-lists-react';
         <CheckListItem isCross={true}>Flere bugs</CheckListItem>
         <CheckListItem isCross={true}>Mindre tid</CheckListItem>
     </CheckList>
-</div>;
+</div>

@@ -6,4 +6,4 @@ import { Checkbox } from '@sb1/ffe-form-react';
             Her benyttes render props
         </label>
     )}
-</Checkbox>;
+</Checkbox>

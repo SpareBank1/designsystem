@@ -9,4 +9,4 @@ import { NumberedList, NumberedListItem } from '@sb1/ffe-lists-react';
         <NumberedListItem>Importer pakken i koden din</NumberedListItem>
         <NumberedListItem>Profit!</NumberedListItem>
     </NumberedList>
-</div>;
+</div>

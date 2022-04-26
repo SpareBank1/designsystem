@@ -29,4 +29,4 @@ import { TertiaryButton } from '@sb1/ffe-buttons-react';
             <TertiaryButton onClick={f => f}>ENDRE</TertiaryButton>
         </DetailContent>
     </Detail>
-</DetailList>;
+</DetailList>

@@ -13,4 +13,4 @@ import {
             Ikke vær redd for å ta kontakt
         </InfoMessageListItem>
     </InfoMessageList>
-</InfoMessage>;
+</InfoMessage>

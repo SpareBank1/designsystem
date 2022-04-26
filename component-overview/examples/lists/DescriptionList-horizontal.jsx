@@ -14,4 +14,4 @@ import {
         <DescriptionListTerm>Postnummer og sted</DescriptionListTerm>
         <DescriptionListDescription>1337 Sandvika</DescriptionListDescription>
     </DescriptionList>
-</div>;
+</div>

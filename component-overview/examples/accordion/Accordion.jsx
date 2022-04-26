@@ -6,4 +6,4 @@ import { Accordion, AccordionItem } from '@sb1/ffe-accordion-react';
         Mer skjult innhold
     </AccordionItem>
     <AccordionItem heading="En siste tittel">Enda mer innhold</AccordionItem>
-</Accordion>;
+</Accordion>

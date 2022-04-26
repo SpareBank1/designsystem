@@ -4,4 +4,4 @@ import { ContextInfoMessage } from '@sb1/ffe-context-message-react';
     <ContextInfoMessage onColoredBg={true}>
         Dette gikk ikke som forventet i det hele tatt!
     </ContextInfoMessage>
-</div>;
+</div>

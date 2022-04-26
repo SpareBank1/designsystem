@@ -8,4 +8,4 @@ import { CheckList, CheckListItem } from '@sb1/ffe-lists-react';
         <CheckListItem>Høyere utviklingshastighet</CheckListItem>
         <CheckListItem isCross={true}>Flere bugs</CheckListItem>
     </CheckList>
-</div>;
+</div>

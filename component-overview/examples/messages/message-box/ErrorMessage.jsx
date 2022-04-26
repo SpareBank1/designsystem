@@ -7,4 +7,4 @@ import { Paragraph } from '@sb1/ffe-core-react';
         våre akkurat nå. Hvis problemet vedvarer, kan du ta kontakt med
         kundesupport, så hjelper vi deg.
     </Paragraph>
-</ErrorMessage>;
+</ErrorMessage>

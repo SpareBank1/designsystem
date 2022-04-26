@@ -15,4 +15,4 @@ import { Grid, GridRow, GridCol } from '@sb1/ffe-grid-react';
             Litt innhold
         </GridCol>
     </GridRow>
-</Grid>;
+</Grid>

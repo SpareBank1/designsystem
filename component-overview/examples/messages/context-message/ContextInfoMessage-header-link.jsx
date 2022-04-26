@@ -6,4 +6,4 @@ import { Paragraph, LinkText } from '@sb1/ffe-core-react';
         Nå har det kommet noe nytt og spennende fra SpareBank 1!
     </Paragraph>
     <LinkText href="#">Les mer om spennende nyhet</LinkText>
-</ContextInfoMessage>;
+</ContextInfoMessage>

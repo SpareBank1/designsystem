@@ -11,4 +11,4 @@ import { Checkbox } from '@sb1/ffe-form-react';
     <Checkbox name="interests" value="moon" inline={false}>
         Månen
     </Checkbox>
-</fieldset>;
+</fieldset>

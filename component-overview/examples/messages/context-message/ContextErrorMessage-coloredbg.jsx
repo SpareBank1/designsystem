@@ -4,4 +4,4 @@ import { ContextErrorMessage } from '@sb1/ffe-context-message-react';
     <ContextErrorMessage onColoredBg={true}>
         Dette gikk ikke helt som forventet!
     </ContextErrorMessage>
-</div>;
+</div>
