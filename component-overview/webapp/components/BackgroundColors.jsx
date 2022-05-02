@@ -5,7 +5,9 @@ import { Label } from '@sb1/ffe-form-react';
 
 export default function BackgroundColors() {
     const context = useThemeProvider();
-
+    const backgroundColors = context.prefersDarkMode
+        ? context.allDarkThemes
+        : context.allLightThemes;
     return (
         <div className="sb1ex-expanded__background">
             <Label htmlFor="background-dropdown">Velg bakgrunnsfarge</Label>
@@ -16,7 +18,7 @@ export default function BackgroundColors() {
                 }}
                 value={context.chosenTheme}
             >
-                {context.allThemes.map(color => (
+                {backgroundColors.map(color => (
                     <option key={`color-${color}`} value={color}>
                         {color}
                     </option>

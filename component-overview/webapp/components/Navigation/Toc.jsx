@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { title } from 'case';
 import { Link } from 'react-router-dom';
-
+import { LinkText } from '@sb1/ffe-core-react';
 const TocGroup = ({ group, level = 1 }) => {
     const { leafs, subtrees } = group.children.reduce(
         (acc, child) => {
@@ -38,9 +38,12 @@ const TocGroup = ({ group, level = 1 }) => {
                                 key={leaf.edge}
                                 className="sb1ex-toc____example-list-item"
                             >
-                                <Link to={`/${leaf.value.key}`}>
+                                <LinkText
+                                    element={Link}
+                                    to={`/${leaf.value.key}`}
+                                >
                                     {leaf.edge}
-                                </Link>
+                                </LinkText>
                             </li>
                         ))}
                     </ul>
@@ -64,11 +67,11 @@ TocGroup.propTypes = {
 
 export default function Toc({ exampleTree }) {
     return (
-        <div className="sb1ex-toc">
+        <nav className="sb1ex-toc">
             {exampleTree.children.map(example => (
                 <TocGroup key={example.edge} group={example} />
             ))}
-        </div>
+        </nav>
     );
 }
 

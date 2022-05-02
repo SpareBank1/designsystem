@@ -1,7 +1,6 @@
 .sb1ex-expanded__container {
-    background-color: var(--ffe-farge-syrin-30);
     color: var(--ffe-farge-svart);
-    padding: 8px 16px;
+    padding: 0 16px 16px 16px;
 }
 
 .sb1ex-expanded__background {
