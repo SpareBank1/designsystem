@@ -17,8 +17,9 @@ const TocGroup = ({ group, level = 1 }) => {
         { leafs: [], subtrees: [] },
     );
 
-    const Hx = `h${Math.min(level + 1, 6)}`;
-    const hxClass = `ffe-h${Math.min(level + 1, 6)}`;
+    const hLevel = Math.min(level + 1, 6);
+    const Hx = `h${hLevel}`;
+    const hxClass = `ffe-h${hLevel}`;
 
     return (
         <>

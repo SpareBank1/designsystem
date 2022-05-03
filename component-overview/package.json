@@ -97,6 +97,7 @@
     "acorn-walk": "^8.2.0",
     "case": "^1.6.3",
     "chokidar-cli": "^3.0.0",
+    "classnames": "^2.3.1",
     "estree-walker": "^2.0.2",
     "less": "^4.1.2",
     "less-plugin-autoprefix": "^2.0.0",
