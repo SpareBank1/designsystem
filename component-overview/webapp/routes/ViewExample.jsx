@@ -13,31 +13,50 @@ import {
 } from '../components';
 import { useThemeProvider } from '../context';
 
+const menuItem = {
+    INFO: 'i',
+    CODE: 'c',
+    BG_COLOR: 'b',
+};
+
+const renderExpandedContent = (menuItemKey, { exampleId, example }) => {
+    switch (menuItemKey) {
+        case menuItem.INFO:
+            return (
+                <ExpandInfo
+                    id={exampleId}
+                    filename={example.sourceFileName}
+                    dependencies={example.dependencies}
+                />
+            );
+
+        case menuItem.CODE:
+            return <CodeEditor imports={example.sourceImports} />;
+
+        case menuItem.BG_COLOR:
+            return <BackgroundColors />;
+    }
+};
+
 export default function ViewExample({ exampleId, example }) {
     const [expandedMenuItem, setExpandedMenuItem] = useState(null);
     const [showOverlayMenu, setShowOverlayMenu] = useState(false);
     const context = useThemeProvider();
+
     const bgColor = {
         backgroundColor: `var(--ffe-farge-${context.chosenTheme}`,
     };
-    const setExpandedContent = () => {
-        switch (expandedMenuItem) {
-            case 'Kode':
-                return <CodeEditor imports={example.sourceImports} />;
 
-            case 'Info':
-                return (
-                    <ExpandInfo
-                        id={exampleId}
-                        filename={example.sourceFileName}
-                        dependencies={example.dependencies}
-                    />
-                );
+    const expandButtonProps = menuItemKey => {
+        const isExpanded = expandedMenuItem === menuItemKey;
 
-            case 'Bakgrunn':
-                return <BackgroundColors />;
-        }
+        return {
+            isExpanded,
+            'aria-expanded': isExpanded,
+            onClick: () => setExpandedMenuItem(isExpanded ? null : menuItemKey),
+        };
     };
+
     return (
         <>
             {showOverlayMenu && (
@@ -58,35 +77,17 @@ export default function ViewExample({ exampleId, example }) {
                         </h1>
                         <nav className="sb1ex-header__nav">
                             <InlineExpandButton
-                                aria-expanded={expandedMenuItem === 'Info'}
-                                isExpanded={expandedMenuItem === 'Info'}
-                                onClick={() =>
-                                    expandedMenuItem !== 'Info'
-                                        ? setExpandedMenuItem('Info')
-                                        : setExpandedMenuItem(null)
-                                }
+                                {...expandButtonProps(menuItem.INFO)}
                             >
                                 Info
                             </InlineExpandButton>
                             <InlineExpandButton
-                                aria-expanded={expandedMenuItem === 'Kode'}
-                                isExpanded={expandedMenuItem === 'Kode'}
-                                onClick={() =>
-                                    expandedMenuItem !== 'Kode'
-                                        ? setExpandedMenuItem('Kode')
-                                        : setExpandedMenuItem(null)
-                                }
+                                {...expandButtonProps(menuItem.CODE)}
                             >
                                 Kode
                             </InlineExpandButton>
                             <InlineExpandButton
-                                aria-expanded={expandedMenuItem === 'Bakgrunn'}
-                                isExpanded={expandedMenuItem === 'Bakgrunn'}
-                                onClick={() =>
-                                    expandedMenuItem !== 'Bakgrunn'
-                                        ? setExpandedMenuItem('Bakgrunn')
-                                        : setExpandedMenuItem(null)
-                                }
+                                {...expandButtonProps(menuItem.BG_COLOR)}
                             >
                                 Bakgrunnsfarger
                             </InlineExpandButton>
@@ -104,7 +105,10 @@ export default function ViewExample({ exampleId, example }) {
                     >
                         {expandedMenuItem && (
                             <div className="sb1ex-expanded__container">
-                                {setExpandedContent()}
+                                {renderExpandedContent(expandedMenuItem, {
+                                    exampleId,
+                                    example,
+                                })}
                             </div>
                         )}
                         <LivePreview className="sb1ex-live__preview" />
