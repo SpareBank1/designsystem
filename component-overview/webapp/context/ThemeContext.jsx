@@ -1,6 +1,6 @@
 import React, { createContext, useState } from 'react';
 import PropTypes from 'prop-types';
-import useDarkColorSchemePreference from '../util/useDarkColorSchemePreference';
+import { useDarkColorSchemePreference } from '../util';
 
 const allLightThemes = [
     'frost-30',
@@ -14,7 +14,7 @@ const allDarkThemes = ['svart', 'natt', 'koksgraa'];
 
 const ThemeContext = createContext();
 
-function useThemeProvider() {
+export function useThemeProvider() {
     const themeContext = React.useContext(ThemeContext);
     if (themeContext === undefined) {
         throw new Error('useThemeProvider må ligge inni ThemeProvider');
@@ -22,7 +22,7 @@ function useThemeProvider() {
     return themeContext;
 }
 
-function ThemeProvider({ children }) {
+export function ThemeProvider({ children }) {
     const [chosenDarkTheme, setChosenDarkTheme] = useState('svart');
     const [chosenLightTheme, setChosenLightTheme] = useState('syrin-30');
     const { prefersDarkMode, toggleDarkMode } = useDarkColorSchemePreference();
@@ -51,5 +51,3 @@ function ThemeProvider({ children }) {
 ThemeProvider.propTypes = {
     children: PropTypes.node.isRequired,
 };
-
-export { ThemeProvider, useThemeProvider };

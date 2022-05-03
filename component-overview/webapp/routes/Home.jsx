@@ -1,6 +1,5 @@
 import React from 'react';
-import Navigation from '../components/Navigation';
-import DarkmodeButton from '../components/DarkmodeButton';
+import { Navigation, DarkmodeButton } from '../components';
 
 export default function Home() {
     return (

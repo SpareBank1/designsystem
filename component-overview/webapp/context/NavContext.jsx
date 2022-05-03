@@ -1,7 +1,7 @@
 import React, { createContext, useState } from 'react';
 import PropTypes from 'prop-types';
-import createExampleTree from '../util/createExampleTree';
 import { examples } from '../../lib/esm';
+import { createExampleTree } from '../util';
 
 const NavContext = createContext();
 

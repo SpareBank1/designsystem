@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
-import { LiveProvider, LivePreview, LiveError } from 'react-live';
-import { InlineExpandButton } from '@sb1/ffe-buttons-react';
 import PropTypes from 'prop-types';
+import { LiveProvider, LivePreview, LiveError } from 'react-live';
 import theme from 'prism-react-renderer/themes/vsDark';
-import DarkmodeButton from '../components/DarkmodeButton';
-import ExpandInfo from '../components/ExpandInfo';
-import CodeEditor from '../components/CodeEditor';
-import BackgroundColors from '../components/BackgroundColors';
-import OverlayMenu from '../components/OverlayMenu';
-import HamburgerButton from '../components/HamburgerButton';
-import { useThemeProvider } from '../context/ThemeContext';
+import { InlineExpandButton } from '@sb1/ffe-buttons-react';
+import {
+    BackgroundColors,
+    CodeEditor,
+    DarkmodeButton,
+    ExpandInfo,
+    HamburgerButton,
+    OverlayMenu,
+} from '../components';
+import { useThemeProvider } from '../context';
 
 export default function ViewExample({ exampleId, example }) {
     const [expandedMenuItem, setExpandedMenuItem] = useState(null);

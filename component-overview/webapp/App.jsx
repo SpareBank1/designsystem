@@ -1,10 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Home from './routes/Home';
-import ViewExample from './routes/ViewExample';
-import withExampleById from './util/withExampleById';
-import { NavProvider } from './context/NavContext';
-import { ThemeProvider } from './context/ThemeContext';
+import { Home, ViewExample } from './routes';
+import { NavProvider, ThemeProvider } from './context';
+import { withExampleById } from './util';
 
 const baseUrl = process.env.PUBLIC_URL || '/';
 
