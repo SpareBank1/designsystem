@@ -1,17 +1,18 @@
-import { bool, func } from 'prop-types';
 import React from 'react';
-import { KryssIkon } from '@sb1/ffe-icons-react';
+import { bool, func } from 'prop-types';
+import classNames from 'classnames';
 
 const HamburgerButton = ({ isOpen, onToggle }) => {
+    const cns = classNames({
+        'sb1ex-hamburger-button': true,
+        'sb1ex-hamburger-button--expanded': isOpen,
+    });
+
     return (
-        <button className="sb1ex-hamburger-button" onClick={onToggle}>
-            {isOpen ? (
-                <KryssIkon className="sb1ex-hamburger-button__close-icon" />
-            ) : (
-                <span className="sb1ex-hamburger-button-icon">
-                    <span className="sb1ex-hamburger-button-icon__bar" />
-                </span>
-            )}
+        <button className={cns} onClick={onToggle}>
+            <span className="sb1ex-hamburger-button-icon">
+                <span className="sb1ex-hamburger-button-icon__bar" />
+            </span>
         </button>
     );
 };

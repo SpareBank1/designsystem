@@ -1,5 +1,8 @@
 body.regard-color-scheme-preference {
     @media (prefers-color-scheme: dark) {
+        & body {
+            background-color: var(--ffe-farge-svart);
+        }
         & a:not(h1, h2, h3, h4, h5, h6) {
             color: var(--ffe-farge-vann-70);
         }

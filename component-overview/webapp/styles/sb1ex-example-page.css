@@ -1,0 +1,33 @@
+.sb1ex-example-page {
+    position: relative;
+    height: 100%;
+    transition: background-color 0.2s;
+}
+
+.sb1ex-example-page__expaneded-content {
+    color: var(--ffe-farge-svart);
+    padding: 0 16px 16px 16px;
+}
+
+.sb1ex-example-page__main-content {
+    height: 100%;
+}
+
+.sb1ex-example-page__nav-overlay {
+    height: 100%;
+    display: none;
+}
+
+.sb1ex-example-page--with-nav-overlay {
+    & .sb1ex-example-page__expand-menu-button {
+        visibility: hidden;
+    }
+
+    & .sb1ex-example-page__nav-overlay {
+        display: block;
+    }
+
+    & .sb1ex-example-page__main-content {
+        display: none;
+    }
+}

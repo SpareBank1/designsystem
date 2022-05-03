@@ -3,10 +3,10 @@
 @import 'npm:@sb1/ffe-core/css/spacing.css';
 @import 'npm:@sb1/ffe-webfonts/sb1-fonts.css';
 @import 'styles/defaults.css';
+@import 'styles/prefers-color-scheme-dark.css';
 @import 'styles/sb1ex-header.css';
-@import 'styles/sb1ex-expanded.css';
-@import 'styles/sb1ex-wrapper.css';
 @import 'styles/sb1ex-toc.css';
 @import 'styles/sb1ex-live.css';
-@import 'styles/prefers-color-scheme-dark.css';
 @import 'styles/sb1ex-hamburger-button.css';
+@import 'styles/sb1ex-background-colors-select.css';
+@import 'styles/sb1ex-example-page.css';

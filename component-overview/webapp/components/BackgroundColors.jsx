@@ -9,7 +9,7 @@ export default function BackgroundColors() {
         ? context.allDarkThemes
         : context.allLightThemes;
     return (
-        <div className="sb1ex-expanded__background">
+        <div className="sb1ex-background-colors-select">
             <Label htmlFor="background-dropdown">Velg bakgrunnsfarge</Label>
             <Dropdown
                 id="background-dropdown"
