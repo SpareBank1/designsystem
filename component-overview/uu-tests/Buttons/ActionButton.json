@@ -1,0 +1,25 @@
+{
+    "navn": "ActionButton",
+    "id": "ActionButton-test",
+    "krav": [
+        {
+            "status": "Ikke testet",
+            "navn": "1.1.1 Ikke-tekstlig innhold (Nivå A)",
+            "url": "",
+            "komponentversjon": "",
+            "dato": "",
+            "enheter": [
+                {
+                    "enhet": "Iphone 11 Pro",
+                    "os": "iOS 15.3.1",
+                    "nettleser": "Chrome"
+                }
+            ],
+            "tilstander": [""],
+            "varianter": ["Med ikon", "Element link", "Element Button"],
+            "metode": ["Inspisere kode", "Skjermleser"],
+            "fargemodus": "Light, Dark",
+            "kommentar": ""
+        }
+    ]
+}
