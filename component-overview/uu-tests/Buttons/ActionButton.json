@@ -1,5 +1,5 @@
 {
-    "navn": "ActionButton",
+    "komponentnavn": "ActionButton",
     "id": "ActionButton-test",
     "krav": [
         {
