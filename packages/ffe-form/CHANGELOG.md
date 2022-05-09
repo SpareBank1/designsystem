@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [20.1.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@20.1.5...@sb1/ffe-form@20.1.6) (2022-05-09)
+
+
+### Bug Fixes
+
+* **ffe-form:** definert farge på ffe-phone-number__plus ([5efdd2f](https://github.com/SpareBank1/designsystem/commit/5efdd2f0d0e10aeb495f788cbf2f56aa721b02f5))
+* **ffe-form:** legger til line-height ([f960f44](https://github.com/SpareBank1/designsystem/commit/f960f449e17cb74c559a44f8c7e6485726ed2c89))
+
+
+
+
+
 ## [20.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@20.1.4...@sb1/ffe-form@20.1.5) (2022-03-31)
 
 **Note:** Version bump only for package @sb1/ffe-form
