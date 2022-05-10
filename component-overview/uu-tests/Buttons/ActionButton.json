@@ -21,5 +21,12 @@
             "fargemodus": "Light, Dark",
             "kommentar": ""
         }
+    ],
+    "ikke_relevant": [
+        {
+            "navn": "1.2.2 Teksting (forhåndsinnspilt, Nivå A)",
+            "url": "",
+            "kommentar": ""
+        }
     ]
 }
