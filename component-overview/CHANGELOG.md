@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.5.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.5.11...@sb1/ffe-component-index@3.5.12) (2022-05-10)
+
+
+### Bug Fixes
+
+* **component-overview:** legg til knappe eksempler med ikon ([a4c6f2a](https://github.com/SpareBank1/designsystem/commit/a4c6f2a0ad1261165657ab509bcd02ba9c67eadf))
+
+
+
+
+
 ## [3.5.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.5.10...@sb1/ffe-component-index@3.5.11) (2022-05-09)
 
 **Note:** Version bump only for package @sb1/ffe-component-index
