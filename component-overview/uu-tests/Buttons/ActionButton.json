@@ -4,8 +4,9 @@
     "krav": [
         {
             "navn": "1.4.1 Bruk av farge (Nivå A)",
-            "status": "Godkjent",
+            "status": "godkjent",
             "kravbeskrivelse": "https://www.uutilsynet.no/wcag-standarden/141-bruk-av-farge-niva/93",
+            "anbefalt_testprosedyre": "https://www.uutilsynet.no/regelverk/testprosedyrar-nettstader/709#suksesskriterium_141_bruk_av_farge",
             "versjon": {
                 "react": "16.0.1",
                 "styling": "15.0.2"
@@ -13,16 +14,17 @@
             "dato": "11.05.2022",
             "enheter": false,
             "varianter": ["default", "hover", "loading"],
+            "fargemodus": ["light", "dark"],
             "metode": [
                 "Observer knappen i ulike tilstander. Der farge brukes som en måte til å formidle noe, sjekk at informasjonen også gis på andre måter."
             ],
-            "fargemodus": ["Light", "Dark"],
-            "kommentar": "Testen godkjennes fordi vi i tillegg til fargeendring viser musepeker på hover."
+            "kommentar": "Testen godkjennes fordi vi viser musepeker på hover i tillegg til fargeendringen."
         },
         {
             "navn": "1.4.3 Kontrast (minimum, Nivå AA)",
-            "status": "Godkjent",
+            "status": "godkjent",
             "kravbeskrivelse": "https://www.uutilsynet.no/wcag-standarden/143-kontrast-minimum-niva-aa/95",
+            "anbefalt_testprosedyre": "https://www.uutilsynet.no/regelverk/testprosedyrar-nettstader/709#suksesskriterium_143_kontrast",
             "versjon": {
                 "react": "16.0.1",
                 "styling": "15.0.2"
@@ -30,16 +32,17 @@
             "dato": "10.05.2022",
             "enheter": false,
             "varianter": ["default", "hover"],
+            "fargemodus": ["light", "dark"],
             "metode": [
-                "Hex-fargekode av bakgrunn og tekst testet mot hverandre i Color Contrast Analyser (TPGi)"
+                "Test bakgrunnsfargen på knappen mot fargen på teksten i knappen (hex-kodene). Bruk gjerne Color Contrast Analyser (TPGi)."
             ],
-            "fargemodus": ["Light", "Dark"],
-            "kommentar": "Tekststørrelsen i knappene settes basert på brukers nettleserinnstillinger og kan variere. Derfor baserer vi testene på høyeste kontrastkrav (4.5:1) for å sikre at kravet ivaretas i alle størrelsene."
+            "kommentar": "Tekststørrelsen i knappene kan variere fordi den settes basert på brukerens nettleserinnstillinger. For å sikre at kravet er ivaretatt på alle ulike tekststørrelser baserer vi testene på det høyeste kontrastkravet (4.5:1)."
         },
         {
             "navn": "1.4.4 Endring av tekststørrelse (Nivå AA)",
-            "status": "Godkjent",
+            "status": "godkjent",
             "kravbeskrivelse": "https://www.uutilsynet.no/wcag-standarden/144-endring-av-tekststorrelse-niva-aa/96",
+            "anbefalt_testprosedyre": "https://www.uutilsynet.no/regelverk/testprosedyrar-nettstader/709#suksesskriterium_144_endring_av_tekststrrelse",
             "versjon": {
                 "react": "16.0.1",
                 "styling": "15.0.2"
@@ -68,17 +71,18 @@
                 }
             ],
             "varianter": false,
-            "metode": [
-                "Zoom inn eller sett text scaling til 200% i nettleser og sjekk at innholdet fortsatt vises riktig.",
-                "Inspiser koden og sett font-size på root elementet (f.eks html-tag), sjekk at teksten endrer størrelse."
-            ],
             "fargemodus": false,
-            "kommentar": "Zoom fungerer på samme måte uavhengig av varianter og fargemodus."
+            "metode": [
+                "I nettleser: Zoom inn til 200% eller sett text scaling til 200%. Sjekk at innholdet i knappen endrer størrelse og fortsatt vises riktig.",
+                "Inspiser koden og sett font-size på root elementet (f.eks html-tag). Sjekk at teksten endrer størrelse."
+            ],
+            "kommentar": "For å skalere tekst i mobilbank-appene for iOS og Android må brukerne endre innstillingene for tekststørrelse i selve OS-et, i tilgjengelighetsinnstillingene. Testene som er gjennomført skal være tilstrekkelige for å teste at komponenten er satt opp riktig for å støtte tekstskalering, inkludert tekstskalering i iOS- og Android-appene. For at tekstskaleringen skal fungere iOS- og Android-appene må fontstørrelsene spesifiseres på en spesiell måte i appene (root-elementet må endre fontstørrelse basert på preferanser fra OS-et: https://dev.to/gualtierofr/dynamic-fonts-in-wkwebview-2c0f). I denne testen sjekker vi at komponenten har støtte for tekstskalering. For at skaleringen skal fungere må utviklerne også spesifiserer fontstørrelsene riktig i appene. Det går utenfor selve komponenten og designsystemet."
         },
         {
             "navn": "2.1.1 Tastatur (Nivå A)",
-            "status": "Godkjent",
+            "status": "godkjent",
             "kravbeskrivelse": "https://www.uutilsynet.no/wcag-standarden/211-tastatur-niva/98",
+            "anbefalt_testprosedyre": "https://www.uutilsynet.no/regelverk/testprosedyrar-nettstader/709#suksesskriterium_211_tastatur",
             "versjon": {
                 "react": "16.0.1",
                 "styling": "15.0.2"
@@ -86,44 +90,18 @@
             "dato": "11.05.2022",
             "enheter": false,
             "varianter": ["default"],
-            "metode": [
-                "Bruk tastaturet og sjekk at du kan navigere til knappen. Deretter, sjekk at knappen fungerer når du klikker på den med enter/space."
-            ],
             "fargemodus": false,
+            "metode": [
+                "Bruk tastaturet og sjekk at du kan navigere til knappen.",
+                "Sjekk også at knappen fungerer når du klikker på den med enter/space.",
+            ],
             "kommentar": "Vi testet med å legge inn en console.log på knappens onClick funksjon som da logget til konsollen hver gang knappen ble trykket."
         },
         {
             "navn": "2.1.2 Ingen tastaturfelle (Nivå A)",
-            "status": "Godkjent",
+            "status": "godkjent",
             "kravbeskrivelse": "https://www.uutilsynet.no/wcag-standarden/212-ingen-tastaturfelle-niva/99",
-            "versjon": {
-                "react": "16.0.1",
-                "styling": "15.0.2"
-            },
-            "dato": "11.05.2022",
-            "enheter": [
-                {
-                    "enhet": "Macbook Pro",
-                    "os": "MacOS Monterey 12.2.1",
-                    "nettleser": "Firefox 100.0"
-                },
-                {
-                    "enhet": "Macbook Pro",
-                    "os": "MacOS Big Sur 11.6.1",
-                    "nettleser": "Chrome 101.0.4951.64"
-                }
-            ],
-            "varianter": ["default"],
-            "metode": [
-                "Bruk tastaturet til å navigere til komponenten og naviger deg videre til neste element på siden for å sjekke at fokuset ikke er «fanget» i komponenten."
-            ],
-            "fargemodus": false,
-            "kommentar": ""
-        },
-        {
-            "navn": "2.4.7 Synlig fokus (Nivå AA)",
-            "status": "Godkjent",
-            "kravbeskrivelse": "https://www.uutilsynet.no/wcag-standarden/247-synlig-fokus-niva-aa/109",
+            "anbefalt_testprosedyre": "https://www.uutilsynet.no/regelverk/testprosedyrar-nettstader/709#suksesskriterium_212_ingen_tastaturfelle",
             "versjon": {
                 "react": "16.0.1",
                 "styling": "15.0.2"
@@ -142,17 +120,48 @@
                 }
             ],
             "varianter": ["default", "loading"],
+            "fargemodus": false,
+            "metode": [
+                "Bruk tastaturet til å navigere til komponenten.",
+                "Naviger deg videre til neste element på siden for å sjekke at fokuset ikke er «fanget» i komponenten.",
+            ],
+            "kommentar": ""
+        },
+        {
+            "navn": "2.4.7 Synlig fokus (Nivå AA)",
+            "status": "godkjent",
+            "kravbeskrivelse": "https://www.uutilsynet.no/wcag-standarden/247-synlig-fokus-niva-aa/109",
+            "anbefalt_testprosedyre": "https://www.uutilsynet.no/regelverk/testprosedyrar-nettstader/709#suksesskriterium_247_synleg_fokus",
+            "versjon": {
+                "react": "16.0.1",
+                "styling": "15.0.2"
+            },
+            "dato": "11.05.2022",
+            "enheter": [
+                {
+                    "enhet": "Macbook Pro",
+                    "os": "MacOS Monterey 12.2.1",
+                    "nettleser": "Firefox 100.0"
+                },
+                {
+                    "enhet": "Macbook Pro",
+                    "os": "MacOS Big Sur 11.6.1",
+                    "nettleser": "Chrome 101.0.4951.64"
+                }
+            ],
+            "varianter": ["default", "loading"],
+            "fargemodus": ["light", "dark"],
             "metode": [
                 "Bruk tastaturet til å navigere til komponenten og sjekk at fokusmarkeringen er synlig.",
-                "Finn hex-fargekoden til fokusmarkeringen og sjekk den opp mot fargekoden på typiske bakgrunnsfarger vi bruker i løsningene våre. Fargekontrasten bør være minst 3:1."
+                "Finn hex-fargekoden til fokusmarkeringen og sjekk den opp mot fargekoden på typiske bakgrunnsfarger vi bruker i løsningene våre. Bruk gjerne Color Contrast Analyser (TPGi). Fargekontrasten bør være minst 3:1."
             ],
-            "fargemodus": ["Light", "Dark"],
-            "kommentar": "Det norske lovkravet spesifiserer ingen tall på hva fargekontrasten må være, bare at kontrasten skal være «synlig». I våre tester har vi basert oss på at kontrasten skal være minimum 3:1, siden det er anbefalt minimumskontrast i WCAG 2.1, 1.4.11 Kontrast for ikke-tekstlig innhold (Nivå AA) https://www.uutilsynet.no/wcag-standarden/1411-kontrast-ikke-tekstlig-innhold-niva-aa/145. Testet på disse bakgrunnsfargene i light mode: #F2F2F9 (syrin-30), #D8E9F2 (frost-30), #FDF8F5 (sand-30), #fff (hvit), #faf0e7 (sand-70), #e0e0f0 (syrin-70). Testet på disse bakgrunnsfargene i dark mode: #020a0a (svart),  #001032 (natt), #323232(koksgrå)"
+            "kommentar": "Det norske lovkravet spesifiserer ingen tall på hva fargekontrasten må være, bare at kontrasten skal være «synlig». I våre tester har vi basert oss på at kontrasten skal være minimum 3:1, siden det er anbefalt minimumskontrast i WCAG 2.1, 1.4.11 Kontrast for ikke-tekstlig innhold (Nivå AA) https://www.uutilsynet.no/wcag-standarden/1411-kontrast-ikke-tekstlig-innhold-niva-aa/145. Testet på disse bakgrunnsfargene i light mode: #F2F2F9 (syrin-30), #D8E9F2 (frost-30), #FDF8F5 (sand-30), #fff (hvit), #faf0e7 (sand-70), #e0e0f0 (syrin-70). Testet på disse bakgrunnsfargene i dark mode: #020a0a (svart), #001032 (natt), #323232 (koksgrå)."
         },
         {
             "navn": "4.1.1 Parsing (oppdeling, Nivå A)",
-            "status": "Godkjent",
+            "status": "godkjent",
             "kravbeskrivelse": "https://www.uutilsynet.no/wcag-standarden/411-parsing-oppdeling-niva/120",
+            "anbefalt_testprosedyre": "https://www.uutilsynet.no/regelverk/testprosedyrar-nettstader/709#suksesskriterium_411_parsing_oppdeling",
             "versjon": {
                 "react": "16.0.1",
                 "styling": "15.0.2"
@@ -160,30 +169,63 @@
             "dato": "11.05.2022",
             "enheter": false,
             "varianter": ["default", "loading"],
-            "metode": [
-                "Inspiser koden og kopier all relevant HTML-kode og lim den inn i kode-validator (https://validator.w3.org). Sjekk at det ikke dukker opp valideringsfeil av typen «Fatal error»"
-            ],
             "fargemodus": false,
-            "kommentar": "Testet også i loading, da loading krever ulike aria-elementer.  Testen ga 1 advarsel (ikke type «fatal error») om bruk av aria-label. Vi har laget ett GitHub-issue på dette. "
+            "metode": [
+                "Inspiser koden.",
+                "Kopier all relevant HTML-kode og lim den inn i kode-validator (https://validator.w3.org).",
+                "Sjekk at det ikke dukker opp valideringsfeil av typen «Fatal error»."
+            ],
+            "kommentar": "Testet også i loading, siden loading krever ulike aria-elementer. Testen ga 1 advarsel (ikke type «fatal error») om bruk av aria-label. Vi laget GitHub-issue på dette."
         },
         {
             "navn": "4.1.2 Navn, rolle, verdi (Nivå A)",
-            "status": "Godkjent",
+            "status": "godkjent",
             "kravbeskrivelse": "https://www.uutilsynet.no/wcag-standarden/412-navn-rolle-verdi-niva/121",
+            "anbefalt_testprosedyre": "https://www.uutilsynet.no/regelverk/testprosedyrar-nettstader/709#suksesskriterium_412_navn_rolle_verdi",
             "versjon": {
                 "react": "16.0.1",
                 "styling": "15.0.2"
             },
             "dato": "13.05.2022",
-            "enheter": false,
-            "varianter": ["default", "loading"],
-            "metode": [
-                "Default-variant som er kodet som knapp: Inspiser koden. Sjekk at teksten ligger inne i button-taggen.",
-                "Default-variant som er kodet som link: Sjekk at teksten ligger inne i link-taggen",
-                "Loading-variant som er kodet som knapp: Sjekk at det finnes aria-label inne i button-taggen. Aktiver skjermleser og naviger til loading-knappen. Test at aria-meldingen leses opp når knappen får fokus.",
-                "Loading-variant som er kodet som link: Samme metode som for loading knapp"
+            "enheter": [
+                {
+                    "enhet": "Macbook Pro",
+                    "os": "MacOS Big Sur 11.6.1",
+                    "nettleser": "Safari 15.0"
+                },
+                {
+                    "enhet": "Macbook Pro",
+                    "os": "MacOS Big Sur 11.6.1",
+                    "nettleser": "Chrome 101.0.4951.64"
+                }
             ],
+            "varianter": ["default", "loading"],
             "fargemodus": false,
+            "metode": [
+                "Default: Inspiser koden. Sjekk at teksten ligger inne i button-taggen.",
+                "Loading: Inspiser koden. Sjekk at det finnes aria-label på spinner-ikoet. Aktiver skjermleser og naviger til loading-knappen. Test at aria-meldingen leses opp når knappen får fokus."
+            ],
+            "kommentar": "Brukte skjermleser av typen VoiceOver."
+        },
+        {
+            "navn": "1.1.1 Ikke-tekstlig innhold (Nivå A)",
+            "status": "ikke_testet",
+            "kravbeskrivelse": "https://www.uutilsynet.no/wcag-standarden/111-ikke-tekstlig-innhold-niva/87",
+            "anbefalt_testprosedyre": "hhttps://www.uutilsynet.no/regelverk/testprosedyrar-nettstader/709#suksesskriterium_111_ikkjetekstleg_innhald",
+            "versjon": "",
+            "dato": "",
+            "enheter": [
+                {
+                    "enhet": "",
+                    "os": "",
+                    "nettleser": ""
+                }
+            ],
+            "varianter": "",
+            "fargemodus": "",
+            "metode": [
+                ""
+            ],
             "kommentar": ""
         }
     ],
