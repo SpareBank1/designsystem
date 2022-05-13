@@ -231,8 +231,133 @@
     ],
     "ikke_relevant": [
         {
+            "navn": "1.2.1 Bare lyd og bare video (forhåndsinnspilt, Nivå A)",
+            "kravbeskrivelse": "https://www.uutilsynet.no/wcag-standarden/121-bare-lyd-og-bare-video-forhandsinnspilt-niva/88",
+            "kommentar": ""
+        },
+        {
             "navn": "1.2.2 Teksting (forhåndsinnspilt, Nivå A)",
-            "kravbeskrivelse": "",
+            "kravbeskrivelse": "https://www.uutilsynet.no/wcag-standarden/122-teksting-forhandsinnspilt-niva/89",
+            "kommentar": ""
+        },
+        {
+            "navn": "1.3.1 Informasjon og relasjoner (Nivå A)",
+            "kravbeskrivelse": "https://www.uutilsynet.no/wcag-standarden/131-informasjon-og-relasjoner-niva/90",
+            "kommentar": ""
+        },
+        {
+            "navn": "1.3.2 Meningsfylt rekkefølge (Nivå A)",
+            "kravbeskrivelse": "https://www.uutilsynet.no/wcag-standarden/132-meningsfylt-rekkefolge-niva/91 ",
+            "kommentar": ""
+        },
+        {
+            "navn": "1.3.3 Sensoriske egenskaper (Nivå A)",
+            "kravbeskrivelse": "https://www.uutilsynet.no/wcag-standarden/133-sensoriske-egenskaper-niva/92",
+            "kommentar": ""
+        },
+        {
+            "navn": "1.4.2 Styring av lyd (Nivå A)",
+            "kravbeskrivelse": "https://www.uutilsynet.no/wcag-standarden/142-styring-av-lyd-niva/94",
+            "kommentar": ""
+        },
+        {
+            "navn": "1.4.5 Bilder av tekst (Nivå AA)",
+            "kravbeskrivelse": "https://www.uutilsynet.no/wcag-standarden/145-bilder-av-tekst-niva-aa/97",
+            "kommentar": ""
+        },
+        {
+            "navn": "2.2.1 Justerbar hastighet (Nivå A)",
+            "kravbeskrivelse": "https://www.uutilsynet.no/wcag-standarden/221-justerbar-hastighet-niva/100",
+            "kommentar": ""
+        },
+        {
+            "navn": "2.2.2 Pause, stopp, skjul (Nivå A)",
+            "kravbeskrivelse": "https://www.uutilsynet.no/wcag-standarden/222-pause-stopp-skjul-niva/101",
+            "kommentar": ""
+        },
+        {
+            "navn": "2.3.1 Terskelverdi på maksimalt tre glimt (Nivå A)",
+            "kravbeskrivelse": "https://www.uutilsynet.no/wcag-standarden/231-terskelverdi-pa-maksimalt-tre-glimt-niva/102",
+            "kommentar": ""
+        },
+        {
+            "navn": "2.4.1 Hoppe over blokker (Nivå A)",
+            "kravbeskrivelse": "https://www.uutilsynet.no/wcag-standarden/241-hoppe-over-blokker-niva/103",
+            "kommentar": ""
+        },
+        {
+            "navn": "2.4.2 Sidetitler (Nivå A)",
+            "kravbeskrivelse": "https://www.uutilsynet.no/wcag-standarden/242-sidetitler-niva/104",
+            "kommentar": ""
+        },
+        {
+            "navn": "2.4.3 Fokusrekkefølge (Nivå A)",
+            "kravbeskrivelse": "https://www.uutilsynet.no/wcag-standarden/243-fokusrekkefolge-niva/105",
+            "kommentar": ""
+        },
+        {
+            "navn": "2.4.4 Formål med lenke (i kontekst, Nivå A)",
+            "kravbeskrivelse": "https://www.uutilsynet.no/wcag-standarden/244-formal-med-lenke-i-kontekst-niva/106",
+            "kommentar": ""
+        },
+        {
+            "navn": "2.4.5 Flere måter (Nivå AA)",
+            "kravbeskrivelse": "https://www.uutilsynet.no/wcag-standarden/245-flere-mater-niva-aa/107",
+            "kommentar": ""
+        },
+        {
+            "navn": "2.4.6 Overskrifter og ledetekster (Nivå AA)",
+            "kravbeskrivelse": "https://www.uutilsynet.no/wcag-standarden/246-overskrifter-og-ledetekster-niva-aa/108",
+            "kommentar": ""
+        },
+        {
+            "navn": "3.1.1 Språk på siden (Nivå A)",
+            "kravbeskrivelse": "https://www.uutilsynet.no/wcag-standarden/311-sprak-pa-siden-niva/110",
+            "kommentar": ""
+        },
+        {
+            "navn": "3.1.2 Språk på deler av innhold (Nivå AA)",
+            "kravbeskrivelse": "https://www.uutilsynet.no/wcag-standarden/312-sprak-pa-deler-av-innhold-niva-aa/111",
+            "kommentar": ""
+        },
+        {
+            "navn": "3.2.1 Fokus (Nivå A)",
+            "kravbeskrivelse": "https://www.uutilsynet.no/wcag-standarden/321-fokus-niva/112",
+            "kommentar": ""
+        },
+        {
+            "navn": "3.2.2 Inndata (Nivå A)",
+            "kravbeskrivelse": "https://www.uutilsynet.no/wcag-standarden/322-inndata-niva/114",
+            "kommentar": ""
+        },
+        {
+            "navn": "3.2.3 Konsekvent navigering (Nivå AA)",
+            "kravbeskrivelse": "https://www.uutilsynet.no/wcag-standarden/323-konsekvent-navigering-niva-aa/113",
+            "kommentar": ""
+        },
+        {
+            "navn": "3.2.4 Konsekvent identifikasjon (Nivå AA)",
+            "kravbeskrivelse": "https://www.uutilsynet.no/wcag-standarden/324-konsekvent-identifikasjon-niva-aa/115",
+            "kommentar": ""
+        },
+        {
+            "navn": "3.3.1 Identifikasjon av feil (Nivå A)",
+            "kravbeskrivelse": "https://www.uutilsynet.no/wcag-standarden/331-identifikasjon-av-feil-niva/116",
+            "kommentar": ""
+        },
+        {
+            "navn": "3.3.2 Ledetekster eller instruksjoner (Nivå A)",
+            "kravbeskrivelse": "https://www.uutilsynet.no/wcag-standarden/332-ledetekster-eller-instruksjoner-niva/117",
+            "kommentar": ""
+        },
+        {
+            "navn": "3.3.3 Forslag ved feil (Nivå AA)",
+            "kravbeskrivelse": "https://www.uutilsynet.no/wcag-standarden/333-forslag-ved-feil-niva-aa/118",
+            "kommentar": ""
+        },
+        {
+            "navn": "3.3.4 Forhindring av feil (juridiske feil, økonomiske feil, datafeil, Nivå AA)",
+            "kravbeskrivelse": "https://www.uutilsynet.no/wcag-standarden/334-forhindring-av-feil-juridiske-feil-okonomiske-feil-datafeil-niva-aa/119",
             "kommentar": ""
         }
     ]
