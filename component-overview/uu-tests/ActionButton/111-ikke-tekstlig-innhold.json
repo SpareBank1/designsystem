@@ -1,27 +1,19 @@
-[
-    {
-        "komponentnavn": "ActionButton",
-        "id": "ActionButton-test",
-        "krav": [
-            {
-                "navn": "1.1.1 Ikke-tekstlig innhold (Nivå A)",
-                "status": "ikke_testet",
-                "kravbeskrivelse": "https://www.uutilsynet.no/wcag-standarden/111-ikke-tekstlig-innhold-niva/87",
-                "anbefalt_testprosedyre": "hhttps://www.uutilsynet.no/regelverk/testprosedyrar-nettstader/709#suksesskriterium_111_ikkjetekstleg_innhald",
-                "versjon": "",
-                "dato": "",
-                "enheter": [
-                    {
-                        "enhet": "",
-                        "os": "",
-                        "nettleser": ""
-                    }
-                ],
-                "varianter": "",
-                "fargemodus": "",
-                "metode": [""],
-                "kommentar": ""
-            }
-        ]
-    }
-]
+{
+    "navn": "1.1.1 Ikke-tekstlig innhold (Nivå A)",
+    "status": "ikke_testet",
+    "kravbeskrivelse": "https://www.uutilsynet.no/wcag-standarden/111-ikke-tekstlig-innhold-niva/87",
+    "anbefalt_testprosedyre": "hhttps://www.uutilsynet.no/regelverk/testprosedyrar-nettstader/709#suksesskriterium_111_ikkjetekstleg_innhald",
+    "versjon": "",
+    "dato": "",
+    "enheter": [
+        {
+            "enhet": "",
+            "os": "",
+            "nettleser": ""
+        }
+    ],
+    "varianter": "",
+    "fargemodus": "",
+    "metode": [""],
+    "kommentar": ""
+}

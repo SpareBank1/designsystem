@@ -1,21 +1,19 @@
-[
-    {
-        "navn": "2.1.1 Tastatur (Nivå A)",
-        "status": "godkjent",
-        "kravbeskrivelse": "https://www.uutilsynet.no/wcag-standarden/211-tastatur-niva/98",
-        "anbefalt_testprosedyre": "https://www.uutilsynet.no/regelverk/testprosedyrar-nettstader/709#suksesskriterium_211_tastatur",
-        "versjon": {
-            "react": "16.0.1",
-            "styling": "15.0.2"
-        },
-        "dato": "11.05.2022",
-        "enheter": false,
-        "varianter": ["default"],
-        "fargemodus": false,
-        "metode": [
-            "Bruk tastaturet og sjekk at du kan navigere til knappen.",
-            "Sjekk også at knappen fungerer når du klikker på den med enter/space."
-        ],
-        "kommentar": "Vi testet med å legge inn en console.log på knappens onClick funksjon som da logget til konsollen hver gang knappen ble trykket."
-    }
-]
+{
+    "navn": "2.1.1 Tastatur (Nivå A)",
+    "status": "godkjent",
+    "kravbeskrivelse": "https://www.uutilsynet.no/wcag-standarden/211-tastatur-niva/98",
+    "anbefalt_testprosedyre": "https://www.uutilsynet.no/regelverk/testprosedyrar-nettstader/709#suksesskriterium_211_tastatur",
+    "versjon": {
+        "react": "16.0.1",
+        "styling": "15.0.2"
+    },
+    "dato": "11.05.2022",
+    "enheter": false,
+    "varianter": ["default"],
+    "fargemodus": false,
+    "metode": [
+        "Bruk tastaturet og sjekk at du kan navigere til knappen.",
+        "Sjekk også at knappen fungerer når du klikker på den med enter/space."
+    ],
+    "kommentar": "Vi testet med å legge inn en console.log på knappens onClick funksjon som da logget til konsollen hver gang knappen ble trykket."
+}

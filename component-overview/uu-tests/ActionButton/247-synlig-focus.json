@@ -1,32 +1,30 @@
-[
-    {
-        "navn": "2.4.7 Synlig fokus (Nivå AA)",
-        "status": "godkjent",
-        "kravbeskrivelse": "https://www.uutilsynet.no/wcag-standarden/247-synlig-fokus-niva-aa/109",
-        "anbefalt_testprosedyre": "https://www.uutilsynet.no/regelverk/testprosedyrar-nettstader/709#suksesskriterium_247_synleg_fokus",
-        "versjon": {
-            "react": "16.0.1",
-            "styling": "15.0.2"
+{
+    "navn": "2.4.7 Synlig fokus (Nivå AA)",
+    "status": "godkjent",
+    "kravbeskrivelse": "https://www.uutilsynet.no/wcag-standarden/247-synlig-fokus-niva-aa/109",
+    "anbefalt_testprosedyre": "https://www.uutilsynet.no/regelverk/testprosedyrar-nettstader/709#suksesskriterium_247_synleg_fokus",
+    "versjon": {
+        "react": "16.0.1",
+        "styling": "15.0.2"
+    },
+    "dato": "11.05.2022",
+    "enheter": [
+        {
+            "enhet": "Macbook Pro",
+            "os": "MacOS Monterey 12.2.1",
+            "nettleser": "Firefox 100.0"
         },
-        "dato": "11.05.2022",
-        "enheter": [
-            {
-                "enhet": "Macbook Pro",
-                "os": "MacOS Monterey 12.2.1",
-                "nettleser": "Firefox 100.0"
-            },
-            {
-                "enhet": "Macbook Pro",
-                "os": "MacOS Big Sur 11.6.1",
-                "nettleser": "Chrome 101.0.4951.64"
-            }
-        ],
-        "varianter": ["default", "loading"],
-        "fargemodus": ["light", "dark"],
-        "metode": [
-            "Bruk tastaturet til å navigere til komponenten og sjekk at fokusmarkeringen er synlig.",
-            "Finn hex-fargekoden til fokusmarkeringen og sjekk den opp mot fargekoden på typiske bakgrunnsfarger vi bruker i løsningene våre. Bruk gjerne Color Contrast Analyser (TPGi). Fargekontrasten bør være minst 3:1."
-        ],
-        "kommentar": "Det norske lovkravet spesifiserer ingen tall på hva fargekontrasten må være, bare at kontrasten skal være «synlig». I våre tester har vi basert oss på at kontrasten skal være minimum 3:1, siden det er anbefalt minimumskontrast i WCAG 2.1, 1.4.11 Kontrast for ikke-tekstlig innhold (Nivå AA) https://www.uutilsynet.no/wcag-standarden/1411-kontrast-ikke-tekstlig-innhold-niva-aa/145. Testet på disse bakgrunnsfargene i light mode: #F2F2F9 (syrin-30), #D8E9F2 (frost-30), #FDF8F5 (sand-30), #fff (hvit), #faf0e7 (sand-70), #e0e0f0 (syrin-70). Testet på disse bakgrunnsfargene i dark mode: #020a0a (svart), #001032 (natt), #323232 (koksgrå)."
-    }
-]
+        {
+            "enhet": "Macbook Pro",
+            "os": "MacOS Big Sur 11.6.1",
+            "nettleser": "Chrome 101.0.4951.64"
+        }
+    ],
+    "varianter": ["default", "loading"],
+    "fargemodus": ["light", "dark"],
+    "metode": [
+        "Bruk tastaturet til å navigere til komponenten og sjekk at fokusmarkeringen er synlig.",
+        "Finn hex-fargekoden til fokusmarkeringen og sjekk den opp mot fargekoden på typiske bakgrunnsfarger vi bruker i løsningene våre. Bruk gjerne Color Contrast Analyser (TPGi). Fargekontrasten bør være minst 3:1."
+    ],
+    "kommentar": "Det norske lovkravet spesifiserer ingen tall på hva fargekontrasten må være, bare at kontrasten skal være «synlig». I våre tester har vi basert oss på at kontrasten skal være minimum 3:1, siden det er anbefalt minimumskontrast i WCAG 2.1, 1.4.11 Kontrast for ikke-tekstlig innhold (Nivå AA) https://www.uutilsynet.no/wcag-standarden/1411-kontrast-ikke-tekstlig-innhold-niva-aa/145. Testet på disse bakgrunnsfargene i light mode: #F2F2F9 (syrin-30), #D8E9F2 (frost-30), #FDF8F5 (sand-30), #fff (hvit), #faf0e7 (sand-70), #e0e0f0 (syrin-70). Testet på disse bakgrunnsfargene i dark mode: #020a0a (svart), #001032 (natt), #323232 (koksgrå)."
+}

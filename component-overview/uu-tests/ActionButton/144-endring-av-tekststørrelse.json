@@ -1,42 +1,40 @@
-[
-    {
-        "navn": "1.4.4 Endring av tekststørrelse (Nivå AA)",
-        "status": "godkjent",
-        "kravbeskrivelse": "https://www.uutilsynet.no/wcag-standarden/144-endring-av-tekststorrelse-niva-aa/96",
-        "anbefalt_testprosedyre": "https://www.uutilsynet.no/regelverk/testprosedyrar-nettstader/709#suksesskriterium_144_endring_av_tekststrrelse",
-        "versjon": {
-            "react": "16.0.1",
-            "styling": "15.0.2"
+{
+    "navn": "1.4.4 Endring av tekststørrelse (Nivå AA)",
+    "status": "godkjent",
+    "kravbeskrivelse": "https://www.uutilsynet.no/wcag-standarden/144-endring-av-tekststorrelse-niva-aa/96",
+    "anbefalt_testprosedyre": "https://www.uutilsynet.no/regelverk/testprosedyrar-nettstader/709#suksesskriterium_144_endring_av_tekststrrelse",
+    "versjon": {
+        "react": "16.0.1",
+        "styling": "15.0.2"
+    },
+    "dato": "11.05.2022",
+    "enheter": [
+        {
+            "enhet": "Macbook Pro",
+            "os": "MacOS Monterey 12.2.1",
+            "nettleser": "Firefox 100.0"
         },
-        "dato": "11.05.2022",
-        "enheter": [
-            {
-                "enhet": "Macbook Pro",
-                "os": "MacOS Monterey 12.2.1",
-                "nettleser": "Firefox 100.0"
-            },
-            {
-                "enhet": "Macbook Pro",
-                "os": "MacOS Big Sur 11.6.1",
-                "nettleser": "Chrome 101.0.4951.64"
-            },
-            {
-                "enhet": "iPhone 11 Pro",
-                "os": "iOS 15.3.1",
-                "nettleser": "Safari 15"
-            },
-            {
-                "enhet": "Samsung S20 FE",
-                "os": "Android 12",
-                "nettleser": "Edge 100.0.1185.50"
-            }
-        ],
-        "varianter": false,
-        "fargemodus": false,
-        "metode": [
-            "I nettleser: Zoom inn til 200% eller sett text scaling til 200%. Sjekk at innholdet i knappen endrer størrelse og fortsatt vises riktig.",
-            "Inspiser koden og sett font-size på root elementet (f.eks html-tag). Sjekk at teksten endrer størrelse."
-        ],
-        "kommentar": "For å skalere tekst i mobilbank-appene for iOS og Android må brukerne endre innstillingene for tekststørrelse i selve OS-et, i tilgjengelighetsinnstillingene. Testene som er gjennomført skal være tilstrekkelige for å teste at komponenten er satt opp riktig for å støtte tekstskalering, inkludert tekstskalering i iOS- og Android-appene. For at tekstskaleringen skal fungere iOS- og Android-appene må fontstørrelsene spesifiseres på en spesiell måte i appene (root-elementet må endre fontstørrelse basert på preferanser fra OS-et: https://dev.to/gualtierofr/dynamic-fonts-in-wkwebview-2c0f). I denne testen sjekker vi at komponenten har støtte for tekstskalering. For at skaleringen skal fungere må utviklerne også spesifiserer fontstørrelsene riktig i appene. Det går utenfor selve komponenten og designsystemet."
-    }
-]
+        {
+            "enhet": "Macbook Pro",
+            "os": "MacOS Big Sur 11.6.1",
+            "nettleser": "Chrome 101.0.4951.64"
+        },
+        {
+            "enhet": "iPhone 11 Pro",
+            "os": "iOS 15.3.1",
+            "nettleser": "Safari 15"
+        },
+        {
+            "enhet": "Samsung S20 FE",
+            "os": "Android 12",
+            "nettleser": "Edge 100.0.1185.50"
+        }
+    ],
+    "varianter": false,
+    "fargemodus": false,
+    "metode": [
+        "I nettleser: Zoom inn til 200% eller sett text scaling til 200%. Sjekk at innholdet i knappen endrer størrelse og fortsatt vises riktig.",
+        "Inspiser koden og sett font-size på root elementet (f.eks html-tag). Sjekk at teksten endrer størrelse."
+    ],
+    "kommentar": "For å skalere tekst i mobilbank-appene for iOS og Android må brukerne endre innstillingene for tekststørrelse i selve OS-et, i tilgjengelighetsinnstillingene. Testene som er gjennomført skal være tilstrekkelige for å teste at komponenten er satt opp riktig for å støtte tekstskalering, inkludert tekstskalering i iOS- og Android-appene. For at tekstskaleringen skal fungere iOS- og Android-appene må fontstørrelsene spesifiseres på en spesiell måte i appene (root-elementet må endre fontstørrelse basert på preferanser fra OS-et: https://dev.to/gualtierofr/dynamic-fonts-in-wkwebview-2c0f). I denne testen sjekker vi at komponenten har støtte for tekstskalering. For at skaleringen skal fungere må utviklerne også spesifiserer fontstørrelsene riktig i appene. Det går utenfor selve komponenten og designsystemet."
+}

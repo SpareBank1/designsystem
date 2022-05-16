@@ -1,20 +1,18 @@
-[
-    {
-        "navn": "1.4.3 Kontrast (minimum, Nivå AA)",
-        "status": "godkjent",
-        "kravbeskrivelse": "https://www.uutilsynet.no/wcag-standarden/143-kontrast-minimum-niva-aa/95",
-        "anbefalt_testprosedyre": "https://www.uutilsynet.no/regelverk/testprosedyrar-nettstader/709#suksesskriterium_143_kontrast",
-        "versjon": {
-            "react": "16.0.1",
-            "styling": "15.0.2"
-        },
-        "dato": "10.05.2022",
-        "enheter": false,
-        "varianter": ["default", "hover"],
-        "fargemodus": ["light", "dark"],
-        "metode": [
-            "Test bakgrunnsfargen på knappen mot fargen på teksten i knappen (hex-kodene). Bruk gjerne Color Contrast Analyser (TPGi)."
-        ],
-        "kommentar": "Tekststørrelsen i knappene kan variere fordi den settes basert på brukerens nettleserinnstillinger. For å sikre at kravet er ivaretatt på alle ulike tekststørrelser baserer vi testene på det høyeste kontrastkravet (4.5:1)."
-    }
-]
+{
+    "navn": "1.4.3 Kontrast (minimum, Nivå AA)",
+    "status": "godkjent",
+    "kravbeskrivelse": "https://www.uutilsynet.no/wcag-standarden/143-kontrast-minimum-niva-aa/95",
+    "anbefalt_testprosedyre": "https://www.uutilsynet.no/regelverk/testprosedyrar-nettstader/709#suksesskriterium_143_kontrast",
+    "versjon": {
+        "react": "16.0.1",
+        "styling": "15.0.2"
+    },
+    "dato": "10.05.2022",
+    "enheter": false,
+    "varianter": ["default", "hover"],
+    "fargemodus": ["light", "dark"],
+    "metode": [
+        "Test bakgrunnsfargen på knappen mot fargen på teksten i knappen (hex-kodene). Bruk gjerne Color Contrast Analyser (TPGi)."
+    ],
+    "kommentar": "Tekststørrelsen i knappene kan variere fordi den settes basert på brukerens nettleserinnstillinger. For å sikre at kravet er ivaretatt på alle ulike tekststørrelser baserer vi testene på det høyeste kontrastkravet (4.5:1)."
+}

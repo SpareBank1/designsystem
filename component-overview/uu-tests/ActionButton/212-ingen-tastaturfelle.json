@@ -1,32 +1,30 @@
-[
-    {
-        "navn": "2.1.2 Ingen tastaturfelle (Nivå A)",
-        "status": "godkjent",
-        "kravbeskrivelse": "https://www.uutilsynet.no/wcag-standarden/212-ingen-tastaturfelle-niva/99",
-        "anbefalt_testprosedyre": "https://www.uutilsynet.no/regelverk/testprosedyrar-nettstader/709#suksesskriterium_212_ingen_tastaturfelle",
-        "versjon": {
-            "react": "16.0.1",
-            "styling": "15.0.2"
+{
+    "navn": "2.1.2 Ingen tastaturfelle (Nivå A)",
+    "status": "godkjent",
+    "kravbeskrivelse": "https://www.uutilsynet.no/wcag-standarden/212-ingen-tastaturfelle-niva/99",
+    "anbefalt_testprosedyre": "https://www.uutilsynet.no/regelverk/testprosedyrar-nettstader/709#suksesskriterium_212_ingen_tastaturfelle",
+    "versjon": {
+        "react": "16.0.1",
+        "styling": "15.0.2"
+    },
+    "dato": "11.05.2022",
+    "enheter": [
+        {
+            "enhet": "Macbook Pro",
+            "os": "MacOS Monterey 12.2.1",
+            "nettleser": "Firefox 100.0"
         },
-        "dato": "11.05.2022",
-        "enheter": [
-            {
-                "enhet": "Macbook Pro",
-                "os": "MacOS Monterey 12.2.1",
-                "nettleser": "Firefox 100.0"
-            },
-            {
-                "enhet": "Macbook Pro",
-                "os": "MacOS Big Sur 11.6.1",
-                "nettleser": "Chrome 101.0.4951.64"
-            }
-        ],
-        "varianter": ["default", "loading"],
-        "fargemodus": false,
-        "metode": [
-            "Bruk tastaturet til å navigere til komponenten.",
-            "Naviger deg videre til neste element på siden for å sjekke at fokuset ikke er «fanget» i komponenten."
-        ],
-        "kommentar": ""
-    }
-]
+        {
+            "enhet": "Macbook Pro",
+            "os": "MacOS Big Sur 11.6.1",
+            "nettleser": "Chrome 101.0.4951.64"
+        }
+    ],
+    "varianter": ["default", "loading"],
+    "fargemodus": false,
+    "metode": [
+        "Bruk tastaturet til å navigere til komponenten.",
+        "Naviger deg videre til neste element på siden for å sjekke at fokuset ikke er «fanget» i komponenten."
+    ],
+    "kommentar": ""
+}
