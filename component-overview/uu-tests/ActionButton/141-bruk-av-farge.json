@@ -1,0 +1,20 @@
+[
+    {
+        "navn": "1.4.1 Bruk av farge (Nivå A)",
+        "status": "godkjent",
+        "kravbeskrivelse": "https://www.uutilsynet.no/wcag-standarden/141-bruk-av-farge-niva/93",
+        "anbefalt_testprosedyre": "https://www.uutilsynet.no/regelverk/testprosedyrar-nettstader/709#suksesskriterium_141_bruk_av_farge",
+        "versjon": {
+            "react": "16.0.1",
+            "styling": "15.0.2"
+        },
+        "dato": "11.05.2022",
+        "enheter": false,
+        "varianter": ["default", "hover", "loading"],
+        "fargemodus": ["light", "dark"],
+        "metode": [
+            "Observer knappen i ulike tilstander. Der farge brukes som en måte til å formidle noe, sjekk at informasjonen også gis på andre måter."
+        ],
+        "kommentar": "Testen godkjennes fordi vi viser musepeker på hover i tillegg til fargeendringen."
+    }
+]

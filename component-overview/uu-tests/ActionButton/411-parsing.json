@@ -1,0 +1,22 @@
+[
+    {
+        "navn": "4.1.1 Parsing (oppdeling, Nivå A)",
+        "status": "godkjent",
+        "kravbeskrivelse": "https://www.uutilsynet.no/wcag-standarden/411-parsing-oppdeling-niva/120",
+        "anbefalt_testprosedyre": "https://www.uutilsynet.no/regelverk/testprosedyrar-nettstader/709#suksesskriterium_411_parsing_oppdeling",
+        "versjon": {
+            "react": "16.0.1",
+            "styling": "15.0.2"
+        },
+        "dato": "11.05.2022",
+        "enheter": false,
+        "varianter": ["default", "loading"],
+        "fargemodus": false,
+        "metode": [
+            "Inspiser koden.",
+            "Kopier all relevant HTML-kode og lim den inn i kode-validator (https://validator.w3.org).",
+            "Sjekk at det ikke dukker opp valideringsfeil av typen «Fatal error»."
+        ],
+        "kommentar": "Testet også i loading, siden loading krever ulike aria-elementer. Testen ga 1 advarsel (ikke type «fatal error») om bruk av aria-label. Vi laget GitHub-issue på dette."
+    }
+]

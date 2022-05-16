@@ -1,0 +1,32 @@
+[
+    {
+        "navn": "4.1.2 Navn, rolle, verdi (Nivå A)",
+        "status": "godkjent",
+        "kravbeskrivelse": "https://www.uutilsynet.no/wcag-standarden/412-navn-rolle-verdi-niva/121",
+        "anbefalt_testprosedyre": "https://www.uutilsynet.no/regelverk/testprosedyrar-nettstader/709#suksesskriterium_412_navn_rolle_verdi",
+        "versjon": {
+            "react": "16.0.1",
+            "styling": "15.0.2"
+        },
+        "dato": "13.05.2022",
+        "enheter": [
+            {
+                "enhet": "Macbook Pro",
+                "os": "MacOS Big Sur 11.6.1",
+                "nettleser": "Safari 15.0"
+            },
+            {
+                "enhet": "Macbook Pro",
+                "os": "MacOS Big Sur 11.6.1",
+                "nettleser": "Chrome 101.0.4951.64"
+            }
+        ],
+        "varianter": ["default", "loading"],
+        "fargemodus": false,
+        "metode": [
+            "Default: Inspiser koden. Sjekk at teksten ligger inne i button-taggen.",
+            "Loading: Inspiser koden. Sjekk at det finnes aria-label på spinner-ikoet. Aktiver skjermleser og naviger til loading-knappen. Test at aria-meldingen leses opp når knappen får fokus."
+        ],
+        "kommentar": "Brukte skjermleser av typen VoiceOver."
+    }
+]
