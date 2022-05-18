@@ -46,11 +46,11 @@
     align-items: center;
     appearance: none;
     border: 2px solid transparent;
-    border-radius: 6em;
+    border-radius: var(--ffe-v-buttons-border-radius);
     color: @ffe-farge-hvit;
     cursor: pointer;
     display: flex;
-    font-family: 'SpareBank1-regular', 'MuseoSans-500', arial, sans-serif;
+    font-family: var(--ffe-g-font);
     justify-content: center;
     line-height: 24px;
     overflow: hidden;
@@ -102,7 +102,7 @@
     }
 
     &:visited {
-        color: @ffe-white;
+        color: @ffe-farge-hvit;
     }
 
     @media (min-width: @breakpoint-sm) {
@@ -112,113 +112,61 @@
 }
 
 .ffe-button--action {
-    background-color: @ffe-farge-nordlys-wcag;
+    background-color: var(--ffe-v-button-action-color);
+    color: var(--ffe-v-button-text-color);
 
     .native & {
         @media (prefers-color-scheme: dark) {
-            background-color: @ffe-farge-nordlys;
             border: 2px solid transparent;
-            color: @ffe-farge-svart;
         }
     }
     &:focus {
-        background-color: @ffe-farge-nordlys-wcag;
-
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                background-color: @ffe-farge-nordlys;
-            }
-        }
+        background-color: var(--ffe-v-button-action-color);
     }
 
     &:hover {
-        background-color: @ffe-farge-skog;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                background-color: @ffe-farge-nordlys-30;
-            }
-        }
+        background-color: var(--ffe-v-button-action-color-hover);
     }
 }
 
 .ffe-button--primary {
-    background-color: @ffe-farge-vann;
-    .native & {
-        @media (prefers-color-scheme: dark) {
-            background-color: @ffe-farge-vann-70;
-            color: @ffe-farge-svart;
-        }
-    }
+    background-color: var(--ffe-v-button-primary-color);
+    color: var(--ffe-v-button-text-color);
 
     &:focus {
-        background-color: @ffe-farge-vann;
-
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                background-color: @ffe-farge-vann-70;
-            }
-        }
+        background-color: var(--ffe-v-button-primary-color);
     }
 
     &:hover {
-        background-color: @ffe-farge-fjell;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                background-color: @ffe-farge-vann-30;
-            }
-        }
+        background-color: var(--ffe-v-button-primary-color-hover);
     }
 }
 
 .ffe-button--secondary,
 .ffe-button--shortcut,
 .ffe-button--expand {
-    background-color: @ffe-farge-hvit;
-    border: solid 2px @ffe-farge-vann;
-    color: @ffe-farge-vann;
-    .native & {
-        @media (prefers-color-scheme: dark) {
-            color: @ffe-farge-vann-30;
-            background-color: @ffe-farge-svart;
-            border-color: @ffe-farge-vann-70;
-        }
-    }
+    background-color: var(--ffe-v-button-secondary-color-bg);
+    border: solid 2px var(--ffe-v-button-secondary-color);
+    color: var(--ffe-v-button-secondary-color);
 
     &:active,
     &:focus,
     &:visited {
-        color: @ffe-farge-vann;
-
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                background-color: transparent;
-                color: @ffe-farge-vann-30;
-            }
-        }
+        color: var(--ffe-v-button-secondary-color);
     }
 
     &:focus {
         .native & {
             @media (prefers-color-scheme: dark) {
                 background-color: transparent;
-                border-color: @ffe-farge-vann-70;
-                color: @ffe-farge-vann-30;
             }
         }
     }
 
     &:hover {
-        background-color: @ffe-farge-vann;
-        border-color: @ffe-farge-vann;
-        color: @ffe-farge-hvit;
-
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                background-color: @ffe-farge-vann-70;
-                border-color: @ffe-farge-vann-70;
-                color: @ffe-farge-svart;
-            }
-        }
+        background-color: var(--ffe-v-button-secondary-color);
+        border-color: var(--ffe-v-button-secondary-color);
+        color: var(--ffe-v-button-secondary-color-bg);
     }
 }
 
