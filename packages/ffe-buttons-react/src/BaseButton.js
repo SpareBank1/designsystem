@@ -58,16 +58,17 @@ const BaseButton = props => {
                 {leftIcon &&
                     React.cloneElement(leftIcon, {
                         className: 'ffe-button__icon ffe-button__icon--left',
+                        'aria-hidden': 'true',
                     })}
                 {children}
                 {rightIcon &&
                     React.cloneElement(rightIcon, {
                         className: 'ffe-button__icon ffe-button__icon--right',
+                        'aria-hidden': 'true',
                     })}
             </span>
-            {supportsSpinner && (
+            {supportsSpinner && isLoading && (
                 <span
-                    aria-hidden={!isLoading}
                     aria-label={ariaLoadingMessage}
                     className="ffe-button__spinner"
                 />

@@ -173,9 +173,9 @@ describe('<ContextTipsMessage />', () => {
         </ContextTipsMessage>,
     );
 
-    it('renders ContextInfoMessage', () => {
+    it('renders ContextTipsMessage', () => {
         const component = wrapper.find('.ffe-context-message');
-        expect(component.hasClass('ffe-context-message--tip')).toBe(true);
+        expect(component.hasClass('ffe-context-message--tips')).toBe(true);
     });
 });
 
