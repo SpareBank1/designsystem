@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-webfonts@3.0.1...@sb1/ffe-webfonts@3.0.2) (2022-05-19)
+
+
+### Bug Fixes
+
+* **ffe-webfonts:** add missing development dependency to less ([5db2d80](https://github.com/SpareBank1/designsystem/commit/5db2d807b5e0743d0b6385c1da9a35f93abf1910))
+
+
+
+
+
 ## [3.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-webfonts@3.0.0...@sb1/ffe-webfonts@3.0.1) (2021-10-29)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [16.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@16.0.1...@sb1/ffe-buttons-react@16.0.2) (2022-05-19)
+
+
+### Bug Fixes
+
+* **ffe-buttons-react:** fikser [#1382](https://github.com/SpareBank1/designsystem/issues/1382) og [#1386](https://github.com/SpareBank1/designsystem/issues/1386) ([e61ec8f](https://github.com/SpareBank1/designsystem/commit/e61ec8f30935dc96f279e39869cffa86d064aa3e))
+
+
+
+
+
 ## [16.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@16.0.0...@sb1/ffe-buttons-react@16.0.1) (2022-04-12)
 
 
