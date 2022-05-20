@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [20.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@20.1.7...@sb1/ffe-form@20.2.0) (2022-05-20)
+
+
+### Features
+
+* **ffe-form:** Adds padding under error message to improve usability ([c202187](https://github.com/SpareBank1/designsystem/commit/c2021879ff208c1d51aa737d74cc47d5eefbb4b3))
+
+
+
+
+
 ## [20.1.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@20.1.6...@sb1/ffe-form@20.1.7) (2022-05-19)
 
 **Note:** Version bump only for package @sb1/ffe-form
