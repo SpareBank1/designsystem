@@ -553,4 +553,42 @@ describe('<Datepicker />', () => {
             });
         });
     });
+
+    describe('try to be smart in which century to place an input of two digit years', () => {
+        it('defaults to the 20th century', () => {
+            const onChange = jest.fn();
+            const wrapper = getMountedWrapper({ onChange });
+
+            wrapper.setProps({ value: '101099' });
+            wrapper.find('input').simulate('blur');
+
+            expect(onChange).toHaveBeenCalledWith('10.10.2099');
+        });
+
+        it('assumes last century if maxDate is today-ish', () => {
+            const onChange = jest.fn();
+            const wrapper = getMountedWrapper({
+                maxDate: '02.02.2022',
+                onChange,
+            });
+
+            wrapper.setProps({ value: '111199' });
+            wrapper.find('input').simulate('blur');
+
+            expect(onChange).toHaveBeenCalledWith('11.11.1999');
+        });
+
+        it('assumes this century if maxDate is today-ish but input is rather close to it', () => {
+            const onChange = jest.fn();
+            const wrapper = getMountedWrapper({
+                maxDate: '02.02.2022',
+                onChange,
+            });
+
+            wrapper.setProps({ value: '121220' });
+            wrapper.find('input').simulate('blur');
+
+            expect(onChange).toHaveBeenCalledWith('12.12.2020');
+        });
+    });
 });

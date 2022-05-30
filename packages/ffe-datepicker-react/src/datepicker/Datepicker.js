@@ -9,7 +9,7 @@ import CalendarButton from '../button';
 import SimpleDate from '../datelogic/simpledate';
 import dateErrorTypes from '../datelogic/error-types';
 import i18n from '../i18n/i18n';
-import { validateDate } from '../util/dateUtil';
+import { validateDate, isDateInputWithTwoDigitYear } from '../util/dateUtil';
 import debounce from 'lodash.debounce';
 
 export default class Datepicker extends Component {
@@ -109,21 +109,28 @@ export default class Datepicker extends Component {
                     ariaInvalid: false,
                 };
 
+                const maxDate = SimpleDate.fromString(this.state.maxDate);
+
+                // SimpleDate.fromString assumes years written as two digits
+                // are in the 20th century.  This can be unwanted behaviour
+                // when asking for dates in the past, like birth dates.
+                // This little hack should catch most of these cases.
+                if (
+                    maxDate?.isBefore(date) &&
+                    isDateInputWithTwoDigitYear(value)
+                ) {
+                    date.adjust('Y', -100);
+                }
+
                 const formattedDate = date.format();
 
                 if (formattedDate !== value) {
                     onChange(formattedDate);
                 }
 
-                const minDate = SimpleDate.fromString(this.state.minDate);
-                const maxDate = SimpleDate.fromString(this.state.maxDate);
-                if (this.state.minDate && minDate && date.isBefore(minDate)) {
+                if (SimpleDate.fromString(this.state.minDate)?.isAfter(date)) {
                     error(dateErrorTypes.MIN_DATE);
-                } else if (
-                    this.state.maxDate &&
-                    maxDate &&
-                    date.isAfter(maxDate)
-                ) {
+                } else if (maxDate?.isBefore(date)) {
                     error(dateErrorTypes.MAX_DATE);
                 }
                 this.setState({
