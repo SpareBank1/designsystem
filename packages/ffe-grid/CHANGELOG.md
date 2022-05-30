@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.1.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@12.1.8...@sb1/ffe-grid@12.1.9) (2022-05-30)
+
+**Note:** Version bump only for package @sb1/ffe-grid
+
+
+
+
+
 ## [12.1.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@12.1.7...@sb1/ffe-grid@12.1.8) (2022-05-19)
 
 **Note:** Version bump only for package @sb1/ffe-grid

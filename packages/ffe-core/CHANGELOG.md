@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [21.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@21.0.4...@sb1/ffe-core@21.1.0) (2022-05-30)
+
+
+### Features
+
+* **ffe-core:** definerer font-variant-numeric i tekst ([f8983d1](https://github.com/SpareBank1/designsystem/commit/f8983d14dae53b690b242835d5762de920930ee0))
+
+
+
+
+
 ## [21.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@21.0.3...@sb1/ffe-core@21.0.4) (2022-05-19)
 
 

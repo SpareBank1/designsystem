@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [20.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@20.2.0...@sb1/ffe-form@20.3.0) (2022-05-30)
+
+
+### Bug Fixes
+
+* **ffe-form:** legger til default farger som mangler ([6bf60c6](https://github.com/SpareBank1/designsystem/commit/6bf60c6e9c573615bd8378323b020cf2c79a49b8))
+
+
+### Features
+
+* **ffe-form:** definerer font-variant-numeric i tekst ([fe7579f](https://github.com/SpareBank1/designsystem/commit/fe7579f257812b28bfdc354d06f938a241d51ba8))
+
+
+
+
+
 # [20.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@20.1.7...@sb1/ffe-form@20.2.0) (2022-05-20)
 
 
