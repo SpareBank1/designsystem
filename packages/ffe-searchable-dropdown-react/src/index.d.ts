@@ -21,18 +21,16 @@ export interface SearchableDropdownProps<T> {
     selectedItem?: T;
     maxRenderedDropdownElements?: number;
     onChange?: (dropdownListItem: T) => any;
-    listElementBody?: (
-        props: ListElementBodyProps<T>,
-    ) => React.FC<HTMLDivElement>;
+    listElementBody?: (props: ListElementBodyProps<T>) => React.ReactNode;
     noMatch?: NoMatch<T>;
     locale: 'nn' | 'nb' | 'en';
-    ariaInvalid: 'true' | 'false' | boolean;
+    ariaInvalid?: 'true' | 'false' | boolean;
     formatter?: (value: string) => string;
     searchMatcher?: (
         inputValue: string,
         searchAttributes: (keyof T)[],
     ) => (item: T) => boolean;
-    hichCapacity?: boolean;
+    highCapacity?: boolean;
     isLoading?: boolean;
     onOpen?: () => void;
     onClose?: () => void;
