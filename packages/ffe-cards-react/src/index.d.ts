@@ -30,19 +30,19 @@ export interface CardRenderProps {
     Text: React.FC<TextProps>;
 }
 
-export interface ImageCardProps extends CardBaseProps {
+export interface ImageCardProps extends Omit<CardBaseProps, 'children'> {
     image: React.ReactNode;
     children?: React.ReactNode | ((props: CardRenderProps) => React.ReactNode);
 }
 
-export interface IconCardProps extends CardBaseProps {
+export interface IconCardProps extends Omit<CardBaseProps, 'children'> {
     icon: React.ReactNode;
     condensed?: boolean;
     greyCharcoal?: boolean;
     children?: React.ReactNode | ((props: CardRenderProps) => React.ReactNode);
 }
 
-export interface TextCardProps extends CardBaseProps {
+export interface TextCardProps extends Omit<CardBaseProps, 'children'> {
     leftAlign?: boolean;
     children: React.ReactNode | ((props: CardRenderProps) => React.ReactNode);
 }
