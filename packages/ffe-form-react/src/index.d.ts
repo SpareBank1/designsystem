@@ -57,7 +57,7 @@ export interface InputGroupProps
         | React.ReactNode
         | ((extraProps: {
               id: string;
-              'aria-invalid': string;
+              'aria-invalid': 'true' | 'false';
               'aria-describedby': string;
           }) => React.ReactNode);
     className?: string;
@@ -88,7 +88,7 @@ export interface RadioBlockProps
     label: string | React.ReactNode;
     labelClass?: string;
     name: string;
-    selectedValue?: string;
+    selectedValue?: boolean | string | number;
     showChildren?: boolean;
     value: string;
 }
