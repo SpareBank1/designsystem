@@ -8,10 +8,10 @@ export interface Account {
 }
 
 interface ListElementBodyProps {
-    item: Account;
-    isHighlighted: boolean;
-    locale: string;
-    dropdownAttributes: string[];
+    item?: Account;
+    isHighlighted?: boolean;
+    locale?: 'nb' | 'nn' | 'en';
+    dropdownAttributes?: string[];
 }
 
 interface NoMatch {
@@ -23,7 +23,7 @@ export interface AccountSelectorProps {
     accounts: Array<Account>;
     className?: string;
     id: string;
-    locale: string;
+    locale: 'nb' | 'nn' | 'en';
     noMatches?: NoMatch;
     inputProps?: React.InputHTMLAttributes<HTMLInputElement>;
     onAccountSelected: (account: Account) => void;
@@ -33,7 +33,7 @@ export interface AccountSelectorProps {
     formatAccountNumber?: boolean;
     labelledById?: string;
     allowCustomAccount?: boolean;
-    listElementBody?: (props: ListElementBodyProps) => React.FC<HTMLDivElement>;
+    listElementBody?: (props: ListElementBodyProps) => React.ReactElement;
     withSpaceForDetails?: boolean;
     ariaInvalid: boolean;
     highCapacity?: boolean;
@@ -47,7 +47,7 @@ export interface AccountSelectorMultiProps {
     accounts?: Array<Account>;
     id: string;
     isLoading?: boolean;
-    locale: Array<string>;
+    locale: 'nb' | 'nn' | 'en';
     noMatches?: string;
     onAccountSelected: (account: Account) => void;
     onChange?: (value: string) => void;
@@ -70,7 +70,7 @@ export interface BaseSelectorProps {
     suggestionsFilter: Function;
     onSelect: Function;
     value: string;
-    locale: Array<String>;
+    locale: 'nb' | 'nn' | 'en';
     shouldHideSuggestionsOnSelect: boolean;
     shouldSelectHighlightedOnTab: boolean;
     shouldHideSuggestionsOnBlur: boolean;
