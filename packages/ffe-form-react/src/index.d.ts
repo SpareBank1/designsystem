@@ -1,12 +1,17 @@
 import * as React from 'react';
 
 export interface CheckboxProps
-    extends React.InputHTMLAttributes<HTMLInputElement> {
+    extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'children'> {
     noMargins?: boolean;
     hiddenLabel?: boolean;
     id?: string;
     inline?: boolean;
-    children?: React.ReactNode;
+    children?:
+        | React.ReactNode
+        | ((labelProps: {
+              className: string;
+              htmlFor: string;
+          }) => React.ReactNode);
 }
 
 export interface BaseFieldMessageProps
@@ -168,13 +173,14 @@ export interface TextAreaProps
 export interface ToggleSwitchProps
     extends React.InputHTMLAttributes<HTMLInputElement> {
     children: React.ReactNode;
-    className: string;
-    id: string;
-    description: string;
-    onText: string;
-    offText: string;
-    hideOnOff: boolean;
-    value: string;
+    className?: string;
+    locale?: 'nb' | 'nn' | 'en';
+    id?: string;
+    description?: string;
+    onText?: string;
+    offText?: string;
+    hideOnOff?: boolean;
+    value?: string;
 }
 
 declare class Checkbox extends React.Component<CheckboxProps, any> {}
