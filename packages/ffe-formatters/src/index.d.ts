@@ -24,7 +24,7 @@ declare module '@sb1/ffe-formatters' {
 
     export function formatPercentage(
         amount: number,
-        opts?: { minDecimals?: number; maxDecimals?: string },
+        opts?: { minDecimals?: number; maxDecimals?: number },
     ): string;
 
     export function formatFodselsnummer(ssn: string): string;
