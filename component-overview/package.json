@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-component-index",
-  "version": "3.5.16",
+  "version": "3.6.0",
   "description": "Index of FFE compontents",
   "license": "MIT",
   "author": "SpareBank 1 Utvikling",
@@ -48,7 +48,7 @@
     "@sb1/ffe-core": "^21.1.0",
     "@sb1/ffe-core-react": "^4.2.11",
     "@sb1/ffe-datepicker": "^10.0.32",
-    "@sb1/ffe-datepicker-react": "^5.1.13",
+    "@sb1/ffe-datepicker-react": "^5.2.0",
     "@sb1/ffe-decorators-react": "^3.0.9",
     "@sb1/ffe-details-list-react": "^3.0.63",
     "@sb1/ffe-dropdown-react": "^5.1.14",

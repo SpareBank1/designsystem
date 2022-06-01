@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.6.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.5.16...@sb1/ffe-component-index@3.6.0) (2022-06-01)
+
+
+### Features
+
+* **ffe-datepicker-react:** be smarter about year input ([1a88466](https://github.com/SpareBank1/designsystem/commit/1a88466276cd78d6f79d29b041966e6e913aec89))
+
+
+
+
+
 ## [3.5.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.5.15...@sb1/ffe-component-index@3.5.16) (2022-05-31)
 
 **Note:** Version bump only for package @sb1/ffe-component-index
