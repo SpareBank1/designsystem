@@ -16,7 +16,7 @@ describe('<ClickableDate />', () => {
             isBlured={false}
             activeRef={activeDateRef}
             month={'Mai'}
-            year={'2016'}
+            year={2016}
             isFocusingHeader={false}
         />
     );
