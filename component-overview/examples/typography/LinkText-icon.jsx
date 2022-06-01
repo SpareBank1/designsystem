@@ -3,7 +3,7 @@ import { SnakkebobleIkon } from '@sb1/ffe-icons-react';
 
 <LinkText href="https://www.sparebank1.no" underline={false}>
     <SnakkebobleIkon
-        alt="Snakk med oss"
+        title="Snakk med oss"
         style={{ fill: 'darkblue', height: '80px' }}
     />
 </LinkText>

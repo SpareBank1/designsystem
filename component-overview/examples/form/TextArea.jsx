@@ -5,6 +5,6 @@ import { TextArea, Label } from '@sb1/ffe-form-react';
     <TextArea
         defaultValue="Dette er et tekstfelt for lengre tekster."
         id="textarea-example"
-        rows="8"
+        rows={8}
     />
 </>

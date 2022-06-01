@@ -41,7 +41,7 @@ return (
         onReset={() => setSelectedAccount(null)}
         selectedAccount={selectedAccount}
         showBalance
-        labelId={label2}
+        labelledById={label2}
         ariaInvalid={false}
     />
 </InputGroup>

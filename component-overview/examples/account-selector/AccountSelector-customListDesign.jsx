@@ -57,7 +57,7 @@ import { SmallText } from '@sb1/ffe-core-react';
                 onAccountSelected={value => setSelectedAccount(value)}
                 onReset={() => setSelectedAccount(null)}
                 selectedAccount={selectedAccount}
-                labelId={label5}
+                labelledById={label5}
                 listElementBody={CustomListElementBody}
                 ariaInvalid={false}
             />

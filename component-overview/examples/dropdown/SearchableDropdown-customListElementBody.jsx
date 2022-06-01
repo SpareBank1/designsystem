@@ -48,7 +48,7 @@ import { SmallText } from '@sb1/ffe-core-react';
         <InputGroup label="Velg bedrift" labelId={labelId}>
             <SearchableDropdown
                 id={id}
-                labelId={labelId}
+                labelledById={labelId}
                 inputProps={{ placeholder: 'Velg' }}
                 dropdownAttributes={['organizationName', 'organizationNumber']}
                 dropdownList={companies}

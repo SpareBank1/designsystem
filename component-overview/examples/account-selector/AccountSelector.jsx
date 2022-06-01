@@ -37,6 +37,7 @@ import { InputGroup } from '@sb1/ffe-form-react';
                 ]}
                 id="account-selector-single"
                 locale="nb"
+                labelledById={label1}
                 onAccountSelected={val => setSelectedAccount(val)}
                 onReset={() => setSelectedAccount(null)}
                 selectedAccount={selectedAccount}
