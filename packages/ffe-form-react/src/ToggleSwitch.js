@@ -1,5 +1,5 @@
 import React from 'react';
-import { bool, node, string } from 'prop-types';
+import { bool, node, string, oneOf } from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 import classNames from 'classnames';
 import i18n from './i18n/i18n';
@@ -86,7 +86,7 @@ ToggleSwitch.propTypes = {
     /** Any extra classes */
     className: string,
     /** A second line of text in the label */
-    locale: string,
+    locale: oneOf(['nb', 'nn', 'en']),
     /** On/Off text language */
     description: string,
     /** Custom text to specify the on-option */

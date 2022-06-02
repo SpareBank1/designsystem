@@ -4,7 +4,6 @@ export interface TabProps
     extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     selected?: boolean;
     className?: string;
-    'aria-controls': string;
 }
 
 export interface TabGroupProps extends React.HTMLAttributes<HTMLDivElement> {

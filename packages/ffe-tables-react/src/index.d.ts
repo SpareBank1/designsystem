@@ -90,12 +90,19 @@ export interface HeaderRenderTrProps {
     children: any;
 }
 
+export type OnSortParam = {
+    sortBy: string;
+    descending: boolean;
+    tableData: Data[];
+};
+
 export interface TableProps {
     caption?: React.ReactNode;
     srOnlyCaption?: boolean;
     expandedContentMapper?: (data: Data) => JSX.Element | false;
     sortable?: boolean;
     sortBy?: string;
+    onSort?: (config: OnSortParam) => void;
     descending?: boolean;
     offset?: number;
     limit?: number;
