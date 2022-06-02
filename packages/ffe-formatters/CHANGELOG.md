@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-formatters@4.0.8...@sb1/ffe-formatters@4.0.9) (2022-06-02)
+
+
+### Bug Fixes
+
+* **ffe-formatters:** minor fix of typescript declarations ([ec9614a](https://github.com/SpareBank1/designsystem/commit/ec9614a2d41c2683523c7423d4a885b3ad156987))
+
+
+
+
+
 ## [4.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-formatters@4.0.7...@sb1/ffe-formatters@4.0.8) (2022-02-18)
 
 **Note:** Version bump only for package @sb1/ffe-formatters

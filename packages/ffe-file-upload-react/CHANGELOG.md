@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload-react@6.0.5...@sb1/ffe-file-upload-react@6.1.0) (2022-06-02)
+
+
+### Features
+
+* **ffe-file-upload:** add typescript declarations ([058f392](https://github.com/SpareBank1/designsystem/commit/058f392487728b71eaf86e26ef931ad62d6cf373)), closes [#1291](https://github.com/SpareBank1/designsystem/issues/1291)
+
+
+
+
+
 ## [6.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload-react@6.0.4...@sb1/ffe-file-upload-react@6.0.5) (2022-05-19)
 
 **Note:** Version bump only for package @sb1/ffe-file-upload-react

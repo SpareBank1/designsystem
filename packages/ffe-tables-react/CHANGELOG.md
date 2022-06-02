@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@6.1.2...@sb1/ffe-tables-react@6.1.3) (2022-06-02)
+
+
+### Bug Fixes
+
+* **ffe-tables-react:** add typescript declaration for `onSort` prop ([0cb8099](https://github.com/SpareBank1/designsystem/commit/0cb80999b8998b31f339b4c5d68b7adf46020598))
+
+
+
+
+
 ## [6.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@6.1.1...@sb1/ffe-tables-react@6.1.2) (2022-03-02)
 
 

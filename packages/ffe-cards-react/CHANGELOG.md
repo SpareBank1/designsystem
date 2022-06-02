@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@7.0.0...@sb1/ffe-cards-react@7.0.1) (2022-06-02)
+
+
+### Bug Fixes
+
+* **ffe-cards-react:** fix hierarchy of Cards declaration ([1327170](https://github.com/SpareBank1/designsystem/commit/13271705cd4df14d1381e363c89e1ce07b112d90))
+
+
+
+
+
 # [7.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@6.0.0...@sb1/ffe-cards-react@7.0.0) (2022-04-20)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@7.0.1...@sb1/ffe-tabs-react@7.0.2) (2022-06-02)
+
+
+### Bug Fixes
+
+* **ffe-tabs-react:** make aria-controls-prop not required ([d6c7982](https://github.com/SpareBank1/designsystem/commit/d6c798262044fad75b935fd160f564b2313315a5))
+
+
+
+
+
 ## [7.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@7.0.0...@sb1/ffe-tabs-react@7.0.1) (2022-03-08)
 
 

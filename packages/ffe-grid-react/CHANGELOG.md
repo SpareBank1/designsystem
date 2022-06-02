@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [11.1.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@11.1.6...@sb1/ffe-grid-react@11.1.7) (2022-06-02)
+
+
+### Bug Fixes
+
+* **ffe-grid-react:** add missing background colors to typescript declarations ([0816855](https://github.com/SpareBank1/designsystem/commit/0816855c40f07d8f812d33dfa34017ea053723a2))
+
+
+
+
+
 ## [11.1.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@11.1.5...@sb1/ffe-grid-react@11.1.6) (2022-02-18)
 
 **Note:** Version bump only for package @sb1/ffe-grid-react

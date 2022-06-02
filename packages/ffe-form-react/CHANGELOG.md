@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@9.1.3...@sb1/ffe-form-react@9.1.4) (2022-06-02)
+
+
+### Bug Fixes
+
+* **ffe-form-react:** fix declaration for ToggleSwitch and Checkbox ([ea2baee](https://github.com/SpareBank1/designsystem/commit/ea2baeefe7df0bc2d5955d56ba24910e68ed0c45))
+
+
+
+
+
 ## [9.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@9.1.2...@sb1/ffe-form-react@9.1.3) (2022-05-31)
 
 
