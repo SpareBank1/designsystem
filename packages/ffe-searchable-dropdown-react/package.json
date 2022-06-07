@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-searchable-dropdown-react",
-  "version": "14.0.20",
+  "version": "14.0.21",
   "description": "Dropdown with search option",
   "license": "MIT",
   "author": "SpareBank 1",
@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "@sb1/ffe-core-react": "^4.2.11",
-    "@sb1/ffe-form": "^20.3.0",
+    "@sb1/ffe-form": "^20.3.1",
     "@sb1/ffe-icons-react": "^7.3.2",
     "@sb1/ffe-spinner-react": "^5.1.6",
     "classnames": "^2.3.1",

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [21.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@21.1.0...@sb1/ffe-core@21.1.1) (2022-06-07)
+
+
+### Bug Fixes
+
+* **ffe-core:** legg til margin bottom på lead og sub lead ([ae717a7](https://github.com/SpareBank1/designsystem/commit/ae717a7aaec63b999ed3a3604d5167485b9340a0))
+
+
+
+
+
 # [21.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@21.0.4...@sb1/ffe-core@21.1.0) (2022-05-30)
 
 
