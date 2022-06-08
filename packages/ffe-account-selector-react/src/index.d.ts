@@ -7,33 +7,33 @@ export interface Account {
     balance?: number;
 }
 
-interface ListElementBodyProps {
-    item?: Account;
-    isHighlighted?: boolean;
+export interface ListElementBodyProps<T extends Account> {
+    item: T;
+    isHighlighted: boolean;
     locale?: 'nb' | 'nn' | 'en';
     dropdownAttributes?: string[];
 }
 
-interface NoMatch {
+interface NoMatch<T extends Account> {
     text: string;
-    dropdownList?: Account[];
+    dropdownList?: T[];
 }
 
-export interface AccountSelectorProps {
-    accounts: Array<Account>;
+export interface AccountSelectorProps<T extends Account = Account> {
+    accounts: Array<T>;
     className?: string;
     id: string;
     locale: 'nb' | 'nn' | 'en';
-    noMatches?: NoMatch;
+    noMatches?: NoMatch<T>;
     inputProps?: React.InputHTMLAttributes<HTMLInputElement>;
-    onAccountSelected: (account: Account) => void;
+    onAccountSelected: (account: T) => void;
     onReset: () => void;
-    selectedAccount?: Account;
+    selectedAccount?: T;
     showBalance?: boolean;
     formatAccountNumber?: boolean;
     labelledById?: string;
     allowCustomAccount?: boolean;
-    listElementBody?: (props: ListElementBodyProps) => React.ReactElement;
+    listElementBody?: (props: ListElementBodyProps<T>) => React.ReactElement;
     withSpaceForDetails?: boolean;
     ariaInvalid: boolean;
     highCapacity?: boolean;
@@ -41,29 +41,30 @@ export interface AccountSelectorProps {
     onClose?: () => void;
 }
 
-declare class AccountSelector extends React.Component<AccountSelectorProps> {}
+declare class AccountSelector<
+    T extends Account = Account
+> extends React.Component<AccountSelectorProps<T>> {}
 
-export interface AccountSelectorMultiProps {
-    accounts?: Array<Account>;
+export interface AccountSelectorMultiProps<T extends Account = Account> {
+    accounts?: Array<T>;
     id: string;
     isLoading?: boolean;
     locale: 'nb' | 'nn' | 'en';
     noMatches?: string;
-    onAccountSelected: (account: Account) => void;
+    onAccountSelected: (account: T) => void;
     onChange?: (value: string) => void;
     onFocus?: Function;
     onBlur: Function;
     onSelectAll: Function;
-    selectedAccounts?: Array<Account>;
+    selectedAccounts?: Array<T>;
     showSelectAllOption?: boolean;
     value?: string;
     highCapacity?: boolean;
 }
 
-declare class AccountSelectorMulti extends React.Component<
-    AccountSelectorMultiProps,
-    any
-> {}
+declare class AccountSelectorMulti<
+    T extends Account = Account
+> extends React.Component<AccountSelectorMultiProps<T>, any> {}
 
 export interface BaseSelectorProps {
     suggestions: Array<any>;
