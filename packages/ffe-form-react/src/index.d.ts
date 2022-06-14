@@ -93,7 +93,7 @@ export interface RadioBlockProps
     label: string | React.ReactNode;
     labelClass?: string;
     name: string;
-    selectedValue?: boolean | string | number;
+    selectedValue?: boolean | string | number | null;
     showChildren?: boolean;
     value: string;
 }
@@ -112,7 +112,7 @@ export interface RadioButtonProps extends WeakInputAttributes {
     inline?: boolean;
     innerRef?: React.Ref<HTMLElement>;
     name: string;
-    selectedValue?: boolean | string | number;
+    selectedValue?: boolean | string | number | null;
     tooltip?: string;
     tooltipProps?: TooltipProps;
     value: boolean | string | number;
@@ -133,7 +133,7 @@ export interface RadioButtonInputGroupProps
               inline?: boolean;
               name: string;
               onChange: (...args: any) => any;
-              selectedValue?: boolean | string | number;
+              selectedValue?: boolean | string | number | null;
           }) => React.ReactNode);
     className?: string;
     description?: string | React.ReactNode;
@@ -143,7 +143,7 @@ export interface RadioButtonInputGroupProps
     label?: string | React.ReactNode;
     name: string;
     onChange?: React.ChangeEventHandler<HTMLInputElement>;
-    selectedValue?: string | boolean | number;
+    selectedValue?: string | boolean | number | null;
     tooltip?: string | React.ReactNode;
 }
 
@@ -159,7 +159,7 @@ export interface RadioSwitchProps
     rightValue: boolean | string | number;
     rightInnerRef?: React.Ref<HTMLInputElement>;
     name: string;
-    selectedValue?: boolean | string | number;
+    selectedValue?: boolean | string | number | null;
     tooltip?: string;
     tooltipProps?: TooltipProps;
     condensed?: boolean;
