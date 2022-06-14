@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@9.1.4...@sb1/ffe-form-react@9.1.5) (2022-06-14)
+
+
+### Bug Fixes
+
+* **ffe-form-react:** Tillat null som selectedValue når ingen radiobutton er valgt, siden undefined gjør at den blir uncontrolled ([36bd432](https://github.com/SpareBank1/designsystem/commit/36bd4329d08b0624b67118f50ac549d445499b58))
+
+
+
+
+
 ## [9.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@9.1.3...@sb1/ffe-form-react@9.1.4) (2022-06-02)
 
 
