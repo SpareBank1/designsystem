@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload-react@6.1.0...@sb1/ffe-file-upload-react@6.1.1) (2022-06-23)
+
+
+### Bug Fixes
+
+* **ffe-file-upload-react:** show uploaded files with error only once ([e0601c4](https://github.com/SpareBank1/designsystem/commit/e0601c43285ca71b6999b2af61a0447df1a436de))
+
+
+
+
+
 # [6.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload-react@6.0.5...@sb1/ffe-file-upload-react@6.1.0) (2022-06-02)
 
 
