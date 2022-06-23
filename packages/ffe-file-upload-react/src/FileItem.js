@@ -26,8 +26,8 @@ const FileItem = ({ file, onFileDeleted, cancelText, deleteText }) => (
                 </div>
             </div>
         )}
-        {// File finished loading
-        file.document && (
+        {// File finished loading without error
+        file.document && !file.error && (
             <div className="ffe-file-upload__file-item-loaded">
                 <button
                     type="button"
