@@ -287,6 +287,7 @@
     align-items: center;
     display: flex;
     transition: transform @ffe-transition-duration @ffe-ease;
+    gap: @ffe-spacing-xs;
     .ffe-button--loading & {
         transform: translateY(-32px);
         opacity: 0;
@@ -297,7 +298,6 @@
     display: inline-block;
     fill: currentColor;
     height: 16px;
-    margin: 0 @ffe-spacing-2xs;
     width: 16px;
 
     .ffe-button--shortcut & {
