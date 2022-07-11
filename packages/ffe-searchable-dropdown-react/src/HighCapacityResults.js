@@ -71,7 +71,7 @@ export default class HighCapacityResults extends React.PureComponent {
         } = this.props;
         const { optionHeight } = this.state;
 
-        const maxHeight = 300;
+        const maxHeight = 335;
         const heightOfAllOptions =
             optionHeight * listToRender.length +
             (isNoMatch && noMatch.text ? optionHeight : 0);

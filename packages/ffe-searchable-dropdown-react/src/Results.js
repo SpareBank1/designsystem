@@ -29,7 +29,7 @@ const Results = ({
     onChange,
 }) => {
     return (
-        <Scrollbars autoHeight={true} autoHeightMax={300}>
+        <Scrollbars autoHeight={true} autoHeightMax={335}>
             {isNoMatch && (
                 <NoMatch
                     noMatch={noMatch}
