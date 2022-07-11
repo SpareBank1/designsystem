@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [15.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@15.0.5...@sb1/ffe-buttons@15.1.0) (2022-07-11)
+
+
+### Features
+
+* **ffe-buttons:** legge til spacing mellom ikon og label på knapper ([3fb4c4e](https://github.com/SpareBank1/designsystem/commit/3fb4c4ee94fe24aad19fe0c1380642f3b5015d7f))
+
+
+
+
+
 ## [15.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@15.0.4...@sb1/ffe-buttons@15.0.5) (2022-06-07)
 
 **Note:** Version bump only for package @sb1/ffe-buttons

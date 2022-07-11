@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.0.34](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.33...@sb1/ffe-datepicker@10.0.34) (2022-07-11)
+
+**Note:** Version bump only for package @sb1/ffe-datepicker
+
+
+
+
+
 ## [10.0.33](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.32...@sb1/ffe-datepicker@10.0.33) (2022-06-07)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
