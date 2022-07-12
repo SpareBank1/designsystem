@@ -41,6 +41,7 @@ jobs:
                   npm run build
                   npm run lint
                   npm test -- --ci
+                  npm run ghpages
 
             - name: lerna publish to registry.npmjs.com
               if: ${{ steps.lerna-changed.outputs.count > 0 }}
@@ -49,6 +50,13 @@ jobs:
                   NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
                   GH_TOKEN: ${{ secrets.GH_USER_PAT }}
 
+            - name: Deploy component-overview as gh-pages
+              if: ${{ steps.lerna-changed.outputs.count > 0 }}
+              uses: JamesIves/github-pages-deploy-action@4.1.5
+              with:
+                  folder: component-overview/build/
+                  branch: gh-pages
+                  token: ${{ secrets.GH_USER_PAT }}
             - name: Merge back changes to development branch
               if: ${{ steps.lerna-changed.outputs.count > 0 }}
               run: |
