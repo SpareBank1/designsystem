@@ -14,4 +14,4 @@ import { Tooltip } from '@sb1/ffe-form-react';
             </div>
         </>
     );
-};
+}

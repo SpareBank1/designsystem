@@ -7,4 +7,4 @@ import { Tab } from '@sb1/ffe-tabs-react';
     data-analytics-track="logMe"
 >
     Dette er en fane
-</Tab>;
+</Tab>

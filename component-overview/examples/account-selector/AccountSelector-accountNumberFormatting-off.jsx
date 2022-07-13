@@ -41,7 +41,7 @@ import { InputGroup } from '@sb1/ffe-form-react';
             onReset={() => setSelectedAccount(null)}
             selectedAccount={selectedAccount}
             formatAccountNumber={false}
-            labelId={label3}
+            labelledById={label3}
             ariaInvalid={false}
         />
     </InputGroup>);

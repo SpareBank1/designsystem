@@ -13,4 +13,4 @@ import { BindersIkon } from '@sb1/ffe-icons-react';
     >
         Secondary knapp
     </SecondaryButton>
-</ButtonGroup>;
+</ButtonGroup>

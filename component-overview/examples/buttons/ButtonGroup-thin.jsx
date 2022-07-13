@@ -13,4 +13,4 @@ import {
     <ButtonGroup thin={true}>
         <TertiaryButton>Avbryt</TertiaryButton>
     </ButtonGroup>
-</>;
+</>

@@ -18,4 +18,4 @@ import { InlineGrid, GridRow, GridCol } from '@sb1/ffe-grid-react';
             </InlineGrid>
         </GridCol>
     </GridRow>
-</InlineGrid>;
+</InlineGrid>

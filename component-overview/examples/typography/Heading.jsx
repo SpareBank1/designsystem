@@ -14,4 +14,4 @@ import {
     <Heading4>Overskrift nivå 4</Heading4>
     <Heading5>Overskrift nivå 5</Heading5>
     <Heading6>Overskrift nivå 6</Heading6>
-</div>;
+</div>

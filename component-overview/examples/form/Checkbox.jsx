@@ -13,4 +13,4 @@ import { Checkbox } from '@sb1/ffe-form-react';
     <Checkbox name="newspapers" value="aftenposten">
         Aftenposten
     </Checkbox>
-</fieldset>;
+</fieldset>

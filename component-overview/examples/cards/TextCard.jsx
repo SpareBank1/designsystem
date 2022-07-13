@@ -14,4 +14,4 @@ import { TextCard } from '@sb1/ffe-cards-react';
             </Text>
         </>
     )}
-</TextCard>;
+</TextCard>

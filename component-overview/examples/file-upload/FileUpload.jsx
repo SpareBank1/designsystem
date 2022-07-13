@@ -20,4 +20,4 @@ import FileUpload from '@sb1/ffe-file-upload-react';
     onFilesSelected={() => {}}
     onFilesDropped={() => {}}
     multiple
-/>;
+/>

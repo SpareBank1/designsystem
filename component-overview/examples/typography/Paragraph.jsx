@@ -18,4 +18,4 @@ import { Paragraph } from '@sb1/ffe-core-react';
         mobilbank får du med en gang, og bankkortet kommer i posten om en ukes
         tid.
     </Paragraph>
-</>;
+</>

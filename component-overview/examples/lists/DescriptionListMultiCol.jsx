@@ -16,4 +16,4 @@ import {
         <DescriptionListTerm>Adresse</DescriptionListTerm>
         <DescriptionListDescription>Oslo</DescriptionListDescription>
     </DescriptionListMultiCol>
-</div>;
+</div>

@@ -4,4 +4,4 @@ import { PhoneNumber } from '@sb1/ffe-form-react';
     number=""
     countryCode=""
     countryCodeAndNumberFieldMessage="Både landkode og telefonnummer feltene er påkrevd"
-/>;
+/>

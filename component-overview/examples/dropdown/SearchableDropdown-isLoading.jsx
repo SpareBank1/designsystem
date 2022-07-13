@@ -11,7 +11,7 @@ import { useState } from 'react';
         <InputGroup label="Velg bedrift" labelId={labelId}>
             <SearchableDropdown
                 id={id}
-                labelId={labelId}
+                labelledById={labelId}
                 inputProps={{ placeholder: 'Velg' }}
                 dropdownList={[]}
                 dropdownAttributes={['organizationName']}
@@ -27,4 +27,4 @@ import { useState } from 'react';
             />
         </InputGroup>
     );
-};
+}

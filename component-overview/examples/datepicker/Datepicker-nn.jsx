@@ -15,4 +15,4 @@ import Datepicker from '@sb1/ffe-datepicker-react';
             value={date}
         />
     );
-};
+}

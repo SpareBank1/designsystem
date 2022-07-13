@@ -62,4 +62,4 @@ import { Label } from '@sb1/ffe-form-react';
             </GridRow>
         </Grid>
     );
-};
+}

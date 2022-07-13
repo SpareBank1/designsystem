@@ -8,4 +8,4 @@ import { Accordion, AccordionItem } from '@sb1/ffe-accordion-react';
     <AccordionItem heading="Denne er også lukket">
         Enda mer innhold
     </AccordionItem>
-</Accordion>;
+</Accordion>

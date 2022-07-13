@@ -5,4 +5,4 @@ import { Checkbox } from '@sb1/ffe-form-react';
     aria-label="Jeg har en ingen label"
     hiddenLabel={true}
     inline={false}
-/>;
+/>

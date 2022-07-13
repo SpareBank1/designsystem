@@ -27,4 +27,4 @@ import {
     >
         Secondary knapp
     </SecondaryButton>
-</ButtonGroup>;
+</ButtonGroup>

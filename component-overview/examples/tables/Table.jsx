@@ -14,4 +14,4 @@ import Table from '@sb1/ffe-tables-react';
     ];
 
     return <Table caption="Utviklere" columns={columns} data={data} />;
-};
+}

@@ -10,4 +10,4 @@ import { Label } from '@sb1/ffe-form-react';
         <option value="apr">April</option>
         <option value="mai">Mai</option>
     </Dropdown>
-</>;
+</>

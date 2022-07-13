@@ -62,4 +62,4 @@ import { IconCard } from '@sb1/ffe-cards-react';
             </IconCard>
         </>
     );
-};
+}

@@ -35,4 +35,4 @@ import { Accordion, AccordionItem } from '@sb1/ffe-accordion-react';
             </AccordionItem>
         </Accordion>
     );
-};
+}
