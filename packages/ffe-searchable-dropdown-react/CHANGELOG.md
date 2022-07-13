@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [14.0.23](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@14.0.22...@sb1/ffe-searchable-dropdown-react@14.0.23) (2022-07-13)
+
+
+### Bug Fixes
+
+* **ffe-searchable-dropdown-react:** add more height to dropdown list ([d1ee118](https://github.com/SpareBank1/designsystem/commit/d1ee1181608b26ddda7ff0bb4efe3ea52bd3bfde))
+
+
+
+
+
 ## [14.0.22](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@14.0.21...@sb1/ffe-searchable-dropdown-react@14.0.22) (2022-07-11)
 
 **Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react

@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.7.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.6.6...@sb1/ffe-component-index@3.7.0) (2022-07-13)
+
+
+### Bug Fixes
+
+* **component-overview:** fix props of multiple examples ([1d827c4](https://github.com/SpareBank1/designsystem/commit/1d827c45466169e465cc258a2229f230e3e94fa2))
+* **component-overview:** group examples for messages ([3565dab](https://github.com/SpareBank1/designsystem/commit/3565dabc4a106c3fd2da0c755d96b6e083405754))
+* **component-overview:** removes semicolon at end of examples ([eeb23b0](https://github.com/SpareBank1/designsystem/commit/eeb23b05077123ebfa57854493f3a81e87ca8d31))
+* **component-overview:** solve issues related to examples path ([5a2d266](https://github.com/SpareBank1/designsystem/commit/5a2d266def70f80bea530250b83b2e8340b67b19))
+
+
+### Features
+
+* **component-overview:** haptic button example ([5894c32](https://github.com/SpareBank1/designsystem/commit/5894c32c383ddf6fc6296a7e603a8a033af02afe))
+* **component-overview:** redesign of component overview ([104a2a3](https://github.com/SpareBank1/designsystem/commit/104a2a3cb603b76f371a2c9040e917cdfef4fa14))
+* **component-overview:** upgrade parcel to get better css-support ([10aaced](https://github.com/SpareBank1/designsystem/commit/10aaced269c5a34be66a141a2e3240124eb31604))
+
+
+
+
+
 ## [3.6.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.6.5...@sb1/ffe-component-index@3.6.6) (2022-07-11)
 
 **Note:** Version bump only for package @sb1/ffe-component-index
