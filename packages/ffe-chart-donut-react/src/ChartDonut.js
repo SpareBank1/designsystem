@@ -1,12 +1,19 @@
 import React from 'react';
-import { node, number, string } from 'prop-types';
+import { node, number, oneOf, string } from 'prop-types';
 
 const NON_BREAKING_SPACE = '\u00A0';
 
 const RADIUS = 150;
 const CIRCUMFERENCE = 2 * Math.PI * RADIUS;
 
-function ChartDonut({ name, percentage, firstLabel, lastLabel, label }) {
+function ChartDonut({
+    name,
+    percentage,
+    firstLabel,
+    lastLabel,
+    label,
+    background,
+}) {
     const offset = CIRCUMFERENCE - (CIRCUMFERENCE / 100) * percentage;
 
     /*
@@ -32,7 +39,7 @@ function ChartDonut({ name, percentage, firstLabel, lastLabel, label }) {
                 {percentage < 95.7 && (
                     <circle
                         className="ffe-chart-donut--vann"
-                        fill="none"
+                        fill={background}
                         strokeWidth="15"
                         strokeLinecap="round"
                         strokeLinejoin="round"
@@ -57,7 +64,7 @@ function ChartDonut({ name, percentage, firstLabel, lastLabel, label }) {
                 {percentage > 3.2 && (
                     <circle
                         className="ffe-chart-donut--frost"
-                        fill="none"
+                        fill={percentage >= 95.7 ? background : 'none'}
                         strokeWidth="15"
                         strokeLinecap="round"
                         strokeLinejoin="round"
@@ -106,7 +113,13 @@ function ChartDonut({ name, percentage, firstLabel, lastLabel, label }) {
     );
 }
 
+ChartDonut.defaultProps = {
+    background: 'none',
+};
+
 ChartDonut.propTypes = {
+    /** Background color of the donut-circle */
+    background: oneOf(['white', 'none']),
     /** Short text labeling left value, like "empty", "said yes" etc */
     firstLabel: string,
     /** Short text labeling right value, like "full", "said no" etc */

@@ -26,6 +26,71 @@ describe('ChartDonut', () => {
         expect(el.find('.ffe-chart-donut__name').text()).toBe('Baz');
     });
 
+    it('renders a default background of "none"', () => {
+        const el = renderShallow();
+
+        expect(
+            el
+                .find('circle')
+                .at(0)
+                .prop('fill'),
+        ).toEqual('none');
+        expect(
+            el
+                .find('circle')
+                .at(1)
+                .prop('fill'),
+        ).toEqual('none');
+    });
+
+    it('renders a background of "white" on one circle when two are rendered', () => {
+        const el = renderShallow({
+            background: 'white',
+            percentage: 50,
+        });
+
+        expect(
+            el
+                .find('circle')
+                .at(0)
+                .prop('fill'),
+        ).toEqual('white');
+        expect(
+            el
+                .find('circle')
+                .at(1)
+                .prop('fill'),
+        ).toEqual('none');
+    });
+
+    it('renders a background of "white" on one circle when one is rendered', () => {
+        const el = renderShallow({
+            background: 'white',
+            percentage: 99,
+        });
+
+        expect(
+            el
+                .find('circle')
+                .at(0)
+                .prop('fill'),
+        ).toEqual('white');
+    });
+
+    it('renders a background of "white" on one circle when one is rendered', () => {
+        const el = renderShallow({
+            background: 'white',
+            percentage: 1,
+        });
+
+        expect(
+            el
+                .find('circle')
+                .at(0)
+                .prop('fill'),
+        ).toEqual('white');
+    });
+
     it('renders html for the labels and their percentages', () => {
         const el = renderShallow();
 
