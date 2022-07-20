@@ -13,6 +13,7 @@ const InlineExpandButton = props => {
             type="button"
             rightIcon={
                 <ChevronIkon
+                    aria-hidden="true"
                     style={{
                         marginLeft: '8px',
                         transform: isExpanded ? 'rotateZ(180deg)' : 'none',

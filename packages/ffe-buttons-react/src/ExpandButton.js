@@ -42,12 +42,14 @@ const ExpandButton = props => {
                 <Fragment>
                     {leftIcon &&
                         React.cloneElement(leftIcon, {
+                            'aria-hidden': true,
                             className:
                                 'ffe-button__icon ffe-button__icon--left',
                         })}
                     {children}
                     {rightIcon &&
                         React.cloneElement(rightIcon, {
+                            'aria-hidden': true,
                             className:
                                 'ffe-button__icon ffe-button__icon--right',
                         })}
