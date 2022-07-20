@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [16.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@16.0.2...@sb1/ffe-buttons-react@16.0.3) (2022-07-20)
+
+
+### Bug Fixes
+
+* **ffe-buttons-react:** legg til aria-hidden på inline og expand button ikoner ([9aa7b59](https://github.com/SpareBank1/designsystem/commit/9aa7b59203d9bb4b89b2e5d44f215c3b4aa7221b))
+
+
+
+
+
 ## [16.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@16.0.1...@sb1/ffe-buttons-react@16.0.2) (2022-05-19)
 
 
