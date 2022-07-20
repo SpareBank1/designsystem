@@ -30,6 +30,20 @@ describe('<ExpandButton />', () => {
         expect(wrapper.find(BestikkIkon).exists()).toBe(true);
         expect(wrapper.find(BamseIkon).exists()).toBe(true);
     });
+    it('renders leftIcon and rightIcon with aria-hidden true', () => {
+        const wrapper = getWrapper({
+            leftIcon: <BestikkIkon />,
+            rightIcon: <BamseIkon />,
+        });
+        expect(wrapper.find(BestikkIkon).props()).toHaveProperty(
+            'aria-hidden',
+            true,
+        );
+        expect(wrapper.find(BamseIkon).props()).toHaveProperty(
+            'aria-hidden',
+            true,
+        );
+    });
     it('does not use an aria-label since the button itself has a children acting as label', () => {
         const wrapper = getWrapper();
         expect(wrapper.prop('aria-label')).toBe(undefined);
