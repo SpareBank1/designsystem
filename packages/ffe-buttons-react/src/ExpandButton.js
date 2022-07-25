@@ -37,7 +37,9 @@ const ExpandButton = props => {
             ref={innerRef}
             {...rest}
         >
-            {isExpanded && <KryssIkon className="ffe-button__icon" />}
+            {isExpanded && (
+                <KryssIkon className="ffe-button__icon" aria-hidden="true" />
+            )}
             {!isExpanded && (
                 <Fragment>
                     {leftIcon &&
