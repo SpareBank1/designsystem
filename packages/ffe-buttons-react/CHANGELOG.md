@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [16.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@16.0.3...@sb1/ffe-buttons-react@16.0.4) (2022-07-29)
+
+
+### Bug Fixes
+
+* **ffe-buttons-react:** legg til aria-hidden på kryssikon ([7ed2dc7](https://github.com/SpareBank1/designsystem/commit/7ed2dc7bb824cf06204c902e3d8dc7abb06e380d))
+
+
+
+
+
 ## [16.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@16.0.2...@sb1/ffe-buttons-react@16.0.3) (2022-07-20)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@5.0.9...@sb1/ffe-lists-react@5.0.10) (2022-07-29)
+
+
+### Bug Fixes
+
+* **ffe-lists-react:** grupper elementene med div istedenfor dl ([9d15e67](https://github.com/SpareBank1/designsystem/commit/9d15e6746d280d5d46e411e37798232c4841b519))
+
+
+
+
+
 ## [5.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@5.0.8...@sb1/ffe-lists-react@5.0.9) (2022-02-18)
 
 **Note:** Version bump only for package @sb1/ffe-lists-react
