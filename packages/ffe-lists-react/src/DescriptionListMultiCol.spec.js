@@ -21,7 +21,7 @@ describe('<DescriptionListMultiCol>', () => {
     it('renders without exploding', () => {
         const wrapper = getWrapper();
         expect(wrapper.exists()).toBe(true);
-        expect(wrapper.is('div')).toBe(true);
+        expect(wrapper.is('dl')).toBe(true);
     });
     it('has the correct class', () => {
         const wrapper = getWrapper({ className: 'test-class' });
@@ -33,12 +33,12 @@ describe('<DescriptionListMultiCol>', () => {
         expect(wrapper.prop('id')).toBe('that-id');
         expect(wrapper.html()).toContain('Porsche');
     });
-    it('wraps pairs in `dl`', () => {
+    it('wraps pairs in `div`', () => {
         const wrapper = getWrapper();
         expect(
             wrapper
                 .find('.ffe-description-list-multicol__avoid-break')
-                .every('dl'),
+                .every('div'),
         ).toBe(true);
     });
     it('supports several columns', () => {
