@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.8.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.7.2...@sb1/ffe-component-index@3.8.0) (2022-08-01)
+
+
+### Features
+
+* **component-overview:** show dependency versions ([d1abfc3](https://github.com/SpareBank1/designsystem/commit/d1abfc314b6e30a3e0b64fe181d3a14e60bbf548))
+
+
+
+
+
 ## [3.7.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.7.1...@sb1/ffe-component-index@3.7.2) (2022-07-29)
 
 **Note:** Version bump only for package @sb1/ffe-component-index
