@@ -11,7 +11,7 @@ export default function SystemErrorMessage(props) {
         <SystemMessage
             modifier="error"
             icon={<UtropstegnIkon aria-hidden="true" />}
-            role={alert ? 'alert' : false}
+            role={alert ? 'alert' : undefined}
             {...rest}
         />
     );
