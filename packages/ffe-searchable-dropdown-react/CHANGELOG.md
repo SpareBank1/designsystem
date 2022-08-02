@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [14.0.24](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@14.0.23...@sb1/ffe-searchable-dropdown-react@14.0.24) (2022-08-02)
+
+
+### Bug Fixes
+
+* **ffe-searchable-dropdown-react:** require .native for darkmode ([83683c4](https://github.com/SpareBank1/designsystem/commit/83683c47adb4113ccf8e38b4f8fb1b1a2f9b2b8b)), closes [#1420](https://github.com/SpareBank1/designsystem/issues/1420)
+
+
+
+
+
 ## [14.0.23](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@14.0.22...@sb1/ffe-searchable-dropdown-react@14.0.23) (2022-07-13)
 
 

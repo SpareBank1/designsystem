@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@7.0.0...@sb1/ffe-context-message-react@7.0.1) (2022-08-02)
+
+
+### Bug Fixes
+
+* **ffe-context-message-react:** fikse feilmeldinger i konsollet ved alert=false ([ee63216](https://github.com/SpareBank1/designsystem/commit/ee6321630cd778fb448cff0e80ad3820d08faeb4))
+* **ffe-context-message-react:** fix failing test ([0f5f136](https://github.com/SpareBank1/designsystem/commit/0f5f136fbedc3f5c8ebf94d6712c722c1f48db80))
+
+
+
+
+
 # [7.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@6.1.2...@sb1/ffe-context-message-react@7.0.0) (2022-03-15)
 
 

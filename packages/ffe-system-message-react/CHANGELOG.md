@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.4.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@6.4.3...@sb1/ffe-system-message-react@6.4.4) (2022-08-02)
+
+
+### Bug Fixes
+
+* **ffe-system-message-react:** fikse feilmeldinger i konsollet ved alert=false ([5997146](https://github.com/SpareBank1/designsystem/commit/5997146a56ecf2fae916f1d1fc4843a55179e821))
+
+
+
+
+
 ## [6.4.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@6.4.2...@sb1/ffe-system-message-react@6.4.3) (2022-06-02)
 
 **Note:** Version bump only for package @sb1/ffe-system-message-react
