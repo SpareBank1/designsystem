@@ -12,7 +12,7 @@ const ErrorMessage = props => {
         <BaseMessage
             type="error"
             icon={<UtropstegnIkon aria-hidden="true" />}
-            role={alert ? 'alert' : false}
+            role={alert ? 'alert' : undefined}
             {...rest}
         />
     );
