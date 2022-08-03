@@ -185,7 +185,6 @@ PhoneNumber.propTypes = {
 };
 
 PhoneNumber.defaultProps = {
-    countryCode: '47',
     locale: 'nb',
     onCountryCodeChange: noop,
     onNumberChange: noop,
