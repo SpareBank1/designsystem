@@ -11,6 +11,7 @@ const CheckListItem = props => {
                 { 'ffe-check-list__item--cross': isCross },
                 className,
             )}
+            aria-label={isCross ? 'kryss' : 'hake'}
             {...rest}
         />
     );
