@@ -50,4 +50,10 @@ describe('<CheckListItem />', () => {
 
         expect(wrapper.hasClass('ffe-check-list__item--cross')).toBe(true);
     });
+    it('sets correct aria-label based on isCross value', () => {
+        const wrapper = shallow(<CheckListItem>An item</CheckListItem>);
+        expect(wrapper.prop('aria-label')).toBe('hake');
+        wrapper.setProps({ isCross: true });
+        expect(wrapper.prop('aria-label')).toBe('kryss');
+    });
 });
