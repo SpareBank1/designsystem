@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@5.0.10...@sb1/ffe-lists-react@5.0.11) (2022-08-04)
+
+
+### Bug Fixes
+
+* **ffe-lists-react:** legg til aria-label på listelement ([12e7ed0](https://github.com/SpareBank1/designsystem/commit/12e7ed02accb52228bc6bd50802afebeb2bff70e))
+
+
+
+
+
 ## [5.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@5.0.9...@sb1/ffe-lists-react@5.0.10) (2022-07-29)
 
 
