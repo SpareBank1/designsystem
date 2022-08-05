@@ -70,6 +70,7 @@ const BaseButton = props => {
             {supportsSpinner && isLoading && (
                 <span
                     aria-label={ariaLoadingMessage}
+                    role="img"
                     className="ffe-button__spinner"
                 />
             )}
