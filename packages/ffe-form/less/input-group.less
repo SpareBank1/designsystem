@@ -13,22 +13,16 @@
     position: relative;
 
     [aria-invalid='true'] {
-        border-color: @ffe-farge-baer-wcag;
+        border-color: @ffe-farge-baer;
         border-style: solid;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                border-color: @ffe-farge-baer;
-            }
-        }
 
         &:focus {
             border-color: @ffe-farge-hvit;
-            box-shadow: 0 0 0 2px @ffe-farge-baer-wcag;
+            box-shadow: 0 0 0 2px @ffe-farge-baer;
 
             .native & {
                 @media (prefers-color-scheme: dark) {
                     border-color: @ffe-farge-svart;
-                    box-shadow: 0 0 0 2px @ffe-farge-baer;
                 }
             }
         }
@@ -37,7 +31,7 @@
     .ffe-input-field--text-like {
         &[aria-invalid='true'] {
             border-bottom: 2px solid;
-            border-color: @ffe-farge-baer-wcag;
+            border-color: @ffe-farge-baer;
             border-left-style: none;
             border-right-style: none;
             border-top-style: none;
