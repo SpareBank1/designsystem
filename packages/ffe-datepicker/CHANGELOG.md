@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.0.35](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.34...@sb1/ffe-datepicker@10.0.35) (2022-08-05)
+
+
+### Bug Fixes
+
+* **ffe-datepicker:** erstatt ffe-farge-baer-wcag med ffe-farge-baer ([c946db4](https://github.com/SpareBank1/designsystem/commit/c946db4367d61ba3e695dbdc1051aefa6cf30c2f))
+
+
+
+
+
 ## [10.0.34](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.33...@sb1/ffe-datepicker@10.0.34) (2022-07-11)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker

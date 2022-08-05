@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [16.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@16.0.4...@sb1/ffe-buttons-react@16.0.5) (2022-08-05)
+
+
+### Bug Fixes
+
+* **ffe-buttons-react:** legg til role på span som inneholder loading ikon ([a987d11](https://github.com/SpareBank1/designsystem/commit/a987d11911a66c70d08737d91b2aa6af11f2152a))
+
+
+
+
+
 ## [16.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@16.0.3...@sb1/ffe-buttons-react@16.0.4) (2022-07-29)
 
 

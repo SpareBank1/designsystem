@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-system-message",
-  "version": "6.2.5",
+  "version": "6.2.6",
   "description": "Systemmelding",
   "license": "MIT",
   "author": "SpareBank 1",
@@ -16,7 +16,7 @@
     "test": "npm run lint"
   },
   "devDependencies": {
-    "@sb1/ffe-core": "^21.1.1"
+    "@sb1/ffe-core": "^22.0.0"
   },
   "peerDependencies": {
     "@sb1/ffe-core": "*"

@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [22.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@21.1.1...@sb1/ffe-core@22.0.0) (2022-08-05)
+
+
+### Bug Fixes
+
+* **ffe-core:** fjern ffe-farge-baer-wcag og bytt ut med ffe-farge-baer ([0d51c63](https://github.com/SpareBank1/designsystem/commit/0d51c63be4574aab9ee8ed354bb30ab7d4b14d92))
+
+
+### BREAKING CHANGES
+
+* **ffe-core:** fjerner ffe-farge-baer wcag
+
+
+
+
+
 ## [21.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@21.1.0...@sb1/ffe-core@21.1.1) (2022-06-07)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [19.0.31](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@19.0.30...@sb1/ffe-account-selector-react@19.0.31) (2022-08-05)
+
+
+### Bug Fixes
+
+* **ffe-account-selector-react:** erstatt ffe-farge-baer-wcag med ffe-farge-baer ([c68046c](https://github.com/SpareBank1/designsystem/commit/c68046cdf7fda5fd93032a58b2d079f121c2a746))
+
+
+
+
+
 ## [19.0.30](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@19.0.29...@sb1/ffe-account-selector-react@19.0.30) (2022-08-02)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react

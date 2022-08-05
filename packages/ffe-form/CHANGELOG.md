@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [20.3.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@20.3.2...@sb1/ffe-form@20.3.3) (2022-08-05)
+
+
+### Bug Fixes
+
+* **ffe-form:** erstatt ffe-farge-baer-wcag med ffe-farge-baer ([df9375f](https://github.com/SpareBank1/designsystem/commit/df9375fc69e9187145f89a14bd0ab7611fe31c37))
+
+
+
+
+
 ## [20.3.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@20.3.1...@sb1/ffe-form@20.3.2) (2022-07-11)
 
 **Note:** Version bump only for package @sb1/ffe-form
