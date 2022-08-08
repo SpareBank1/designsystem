@@ -47,6 +47,23 @@ export interface ParagraphProps
     textLeft?: boolean;
 }
 
+export interface WaveProps {
+    waveHeight: 'small' | 'medium' | 'large';
+    position?: string;
+    rotate?: bool;
+    color:
+        | 'hvit'
+        | 'frost-30'
+        | 'sand-30'
+        | 'sand-70'
+        | 'syrin-30'
+        | 'syrin-70'
+        | 'vann'
+        | 'vann-30'
+        | 'fjell';
+    darkmodeColor: 'svart' | 'natt';
+}
+
 declare class DividerLine extends React.Component<DividerLineProps, any> {}
 declare class EmphasizedText extends React.Component<
     EmphasizedTextProps,
@@ -76,3 +93,4 @@ declare class StrongText extends React.Component<
     SimpleElementProps & React.HTMLAttributes<HTMLElement>,
     any
 > {}
+declare class Wave extends React.Component<WaveProps, any> {}

@@ -1,0 +1,87 @@
+@import 'colors';
+
+.ffe-wave {
+    min-height: 1000px;
+    mask-repeat: repeat-x;
+    mask-size: 469px;
+    mask-position: 431px;
+
+    @media (min-width: @breakpoint-sm) {
+        mask-size: 875px;
+        mask-position: 897px;
+    }
+
+    @media (min-width: @breakpoint-md) {
+        mask-size: 2000px;
+        mask-position: 1806px;
+    }
+}
+
+.ffe-wave--rotate {
+    rotate: 180deg;
+}
+
+.ffe-wave--small {
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 479.9 148' style='enable-background:new 0 0 479.9 148' xml:space='preserve'%3E%3Cpath d='M0 530V0c60.7 0 91.6 13.8 121.4 27.1 30.4 13.6 59.1 26.4 118.1 26.4s87.7-12.8 118.1-26.4C387.4 13.8 418.2 0 478.9 0s91.6 13.8 121.4 27.1c30.4 13.6 59.1 26.4 118.1 26.4s87.7-12.8 118.1-26.4C866.3 13.8 897.1 0 957.8 0s91.6 13.8 121.4 27.1c30.4 13.6 59.1 26.4 118.1 26.4s87.7-12.8 118.1-26.4C1345.2 13.8 1376 0 1436.7 0c60.7 0 91.6 13.8 121.4 27.1 30.4 13.6 59.1 26.4 118.1 26.4s87.7-12.8 118.1-26.4C1824.1 13.8 1854.9 0 1915.7 0v530'/%3E%3C/svg%3E");
+}
+
+.ffe-wave--medium {
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='1 0 482.8 148' style='enable-background:new 0 0 482.8 148' xml:space='preserve'%3E%3Cpath d='M0 595V0c61.3 0 92.3 21.7 122.4 42.7 30.4 21.2 59.1 41.2 118.1 41.2 59 0 87.7-20.1 118.1-41.2C388.6 21.7 419.7 0 481 0s92.3 21.7 122.4 42.7c30.4 21.2 59.1 41.2 118.1 41.2 58.9 0 87.7-20.1 118.1-41.2 29.9-21 61-42.7 122.2-42.7 61.3 0 92.3 21.7 122.4 42.7 30.4 21.2 59.1 41.2 118.1 41.2 58.9 0 87.7-20.1 118.1-41.2 30-20.9 61.1-42.7 122.4-42.7 61.3 0 92.3 21.7 122.4 42.7 30.4 21.2 59.1 41.2 118.1 41.2s87.7-20.1 118.1-41.2C1831.6 21.7 1862.7 0 1924 0v595'/%3E%3C/svg%3E");
+}
+
+.ffe-wave--large {
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480.8 148' style='enable-background:new 0 0 480.8 148' xml:space='preserve'%3E%3Cpath d='M0 537V0c61.4 0 92.5 27.8 122.5 54.6 30.2 27 58.8 52.6 117.1 52.6 58.4 0 86.9-25.5 117.1-52.6C386.8 27.8 417.8 0 479.3 0c61.4 0 92.5 27.8 122.5 54.6 30.2 27 58.8 52.6 117.1 52.6 58.4 0 86.9-25.5 117.1-52.6C866.1 27.8 897.1 0 958.6 0c61.4 0 92.5 27.8 122.5 54.6 30.2 27 58.8 52.6 117.1 52.6 58.4 0 86.9-25.5 117.1-52.6 30-26.9 61.1-54.6 122.5-54.6s92.5 27.8 122.5 54.6c30.2 27 58.8 52.6 117.1 52.6 58.4 0 86.9-25.5 117.1-52.6C1824.5 27.7 1855.6 0 1917 0v537'/%3E%3C/svg%3E");
+}
+
+// Tilgjengelige farger
+.ffe-wave--bg-hvit {
+    background-color: @ffe-farge-hvit;
+}
+
+.ffe-wave--bg-frost-30 {
+    background-color: @ffe-farge-frost-30;
+}
+
+.ffe-wave--bg-sand-30 {
+    background-color: @ffe-farge-sand-30;
+}
+
+.ffe-wave--bg-sand-70 {
+    background-color: @ffe-farge-sand-70;
+}
+
+.ffe-wave--bg-syrin-30 {
+    background-color: @ffe-farge-syrin-30;
+}
+
+.ffe-wave--bg-syrin-70 {
+    background-color: @ffe-farge-syrin-70;
+}
+
+.ffe-wave--bg-vann {
+    background-color: @ffe-farge-vann;
+}
+
+.ffe-wave--bg-vann-30 {
+    background-color: @ffe-farge-vann-30;
+}
+
+.ffe-wave--bg-fjell {
+    background-color: @ffe-farge-fjell;
+}
+
+.ffe-wave--dm-bg-svart {
+    .native & {
+        @media (prefers-color-scheme: dark) {
+            background-color: @ffe-farge-svart;
+        }
+    }
+}
+
+.ffe-wave--dm-bg-natt {
+    .native & {
+        @media (prefers-color-scheme: dark) {
+            background-color: @ffe-farge-natt;
+        }
+    }
+}
