@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [22.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@22.0.0...@sb1/ffe-core@22.1.0) (2022-08-08)
+
+
+### Features
+
+* **ffe-core:** add styles for waves ([f93772c](https://github.com/SpareBank1/designsystem/commit/f93772ceebcfe382759ee943d9aad22cde5be56f))
+
+
+
+
+
 # [22.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@21.1.1...@sb1/ffe-core@22.0.0) (2022-08-05)
 
 

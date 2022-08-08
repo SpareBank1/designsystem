@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@4.2.11...@sb1/ffe-core-react@4.3.0) (2022-08-08)
+
+
+### Features
+
+* **ffe-core-react:** add wave component ([647156a](https://github.com/SpareBank1/designsystem/commit/647156aa0d546e4fbaa33395a3dcb9ec51a4c084))
+
+
+
+
+
 ## [4.2.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@4.2.10...@sb1/ffe-core-react@4.2.11) (2022-02-18)
 
 **Note:** Version bump only for package @sb1/ffe-core-react

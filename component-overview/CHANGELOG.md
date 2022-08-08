@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.9.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.8.3...@sb1/ffe-component-index@3.9.0) (2022-08-08)
+
+
+### Features
+
+* **component-overview:** add wave examples ([476408b](https://github.com/SpareBank1/designsystem/commit/476408bca646bb56eb5db5e75da3cf34eea73f66))
+
+
+
+
+
 ## [3.8.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.8.2...@sb1/ffe-component-index@3.8.3) (2022-08-05)
 
 **Note:** Version bump only for package @sb1/ffe-component-index
