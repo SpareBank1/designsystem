@@ -31,7 +31,7 @@ function ChartDonut({ name, percentage, firstLabel, lastLabel, label }) {
             >
                 {percentage < 95.7 && (
                     <circle
-                        className="ffe-chart-donut--vann"
+                        className="ffe-chart-donut--first"
                         fill="none"
                         strokeWidth="15"
                         strokeLinecap="round"
@@ -56,7 +56,7 @@ function ChartDonut({ name, percentage, firstLabel, lastLabel, label }) {
             >
                 {percentage > 3.2 && (
                     <circle
-                        className="ffe-chart-donut--frost"
+                        className="ffe-chart-donut--last"
                         fill="none"
                         strokeWidth="15"
                         strokeLinecap="round"
