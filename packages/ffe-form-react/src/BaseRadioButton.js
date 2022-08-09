@@ -3,7 +3,6 @@ import classNames from 'classnames';
 import {
     bool,
     node,
-    oneOf,
     oneOfType,
     shape,
     string,
@@ -20,7 +19,6 @@ class BaseRadioButton extends Component {
 
     render() {
         const {
-            'aria-invalid': ariaInvalid,
             children,
             checked,
             className,
@@ -34,7 +32,6 @@ class BaseRadioButton extends Component {
         } = this.props;
 
         const labelClasses = classNames(
-            { 'ffe-radio-button--invalid': ariaInvalid === 'true' },
             { 'ffe-radio-button--with-tooltip': tooltip },
             className,
         );
@@ -45,7 +42,6 @@ class BaseRadioButton extends Component {
         return (
             <Fragment>
                 <input
-                    aria-invalid={ariaInvalid}
                     className="ffe-radio-input"
                     id={this.id}
                     ref={innerRef}
@@ -73,8 +69,6 @@ BaseRadioButton.defaultProps = {
 };
 
 BaseRadioButton.propTypes = {
-    /** Indicates whether the radio button is invalid or not */
-    'aria-invalid': oneOf(['true', 'false']),
     /** Whether or not the radio button is selected */
     checked: bool,
     /** The label of the radio button */
