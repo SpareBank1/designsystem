@@ -137,7 +137,11 @@ export default class HighCapacityResults extends React.PureComponent {
                 parent={parent}
             >
                 {({ registerChild }) => (
-                    <div ref={registerChild} style={style}>
+                    <div
+                        ref={registerChild}
+                        style={style}
+                        className="ffe-searchable-dropdown__list-item-high-capacity-container"
+                    >
                         <ListItemContainer
                             key={itemKey}
                             ref={refs[index]}
