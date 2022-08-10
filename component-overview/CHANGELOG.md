@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.9.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.9.1...@sb1/ffe-component-index@3.9.2) (2022-08-10)
+
+
+### Bug Fixes
+
+* **ffe-context-message:** Now supports using Paragraphs in darkmode ([d06716b](https://github.com/SpareBank1/designsystem/commit/d06716bc0da781e1ef8b020d6ee2a9de13df8e01))
+
+
+
+
+
 ## [3.9.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.9.0...@sb1/ffe-component-index@3.9.1) (2022-08-09)
 
 **Note:** Version bump only for package @sb1/ffe-component-index

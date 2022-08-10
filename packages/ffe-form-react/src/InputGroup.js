@@ -113,7 +113,10 @@ const InputGroup = ({
             {React.isValidElement(tooltip) && tooltip}
 
             {description && (
-                <div className="ffe-small-text" id={descriptionId}>
+                <div
+                    className="ffe-small-text ffe-input-group__description"
+                    id={descriptionId}
+                >
                     {description}
                 </div>
             )}
