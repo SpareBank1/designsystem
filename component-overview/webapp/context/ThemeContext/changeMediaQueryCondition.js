@@ -9,13 +9,16 @@ const changeMediaQueryCondition = (fromCondition, toCondition) => () =>
                 .filter(
                     rule =>
                         rule.media &&
-                        [rule.conditionText, rule.media.mediaText].includes(
-                            fromCondition,
-                        ),
+                        [rule.conditionText, rule.media.mediaText]
+                            .join(' ')
+                            .includes(fromCondition),
                 )
                 .forEach(rule => {
                     /* eslint-disable-next-line no-param-reassign */
-                    rule.media.mediaText = toCondition;
+                    rule.media.mediaText = rule.media.mediaText.replaceAll(
+                        fromCondition,
+                        toCondition,
+                    );
                 });
         } catch (err) {
             // never mind
@@ -24,10 +27,10 @@ const changeMediaQueryCondition = (fromCondition, toCondition) => () =>
 
 export const turnOnDarkMode = changeMediaQueryCondition(
     '(prefers-color-scheme: dark)',
-    'only screen',
+    '(prefers-color-scheme: light)',
 );
 
 export const turnOffDarkMode = changeMediaQueryCondition(
-    'only screen',
+    '(prefers-color-scheme: light)',
     '(prefers-color-scheme: dark)',
 );
