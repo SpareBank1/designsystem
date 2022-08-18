@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [20.3.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@20.3.4...@sb1/ffe-form@20.3.5) (2022-08-18)
+
+
+### Bug Fixes
+
+* **ffe-form:** la til spacing mellom description og input-felt ([8e516d5](https://github.com/SpareBank1/designsystem/commit/8e516d51225303878894cd96fd229b4ebb28b95c))
+
+
+
+
+
 ## [20.3.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@20.3.3...@sb1/ffe-form@20.3.4) (2022-08-08)
 
 **Note:** Version bump only for package @sb1/ffe-form

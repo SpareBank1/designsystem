@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.1.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@9.1.5...@sb1/ffe-form-react@9.1.6) (2022-08-18)
+
+
+### Bug Fixes
+
+* **ffe-form:** la til spacing mellom description og input-felt ([8e516d5](https://github.com/SpareBank1/designsystem/commit/8e516d51225303878894cd96fd229b4ebb28b95c))
+
+
+
+
+
 ## [9.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@9.1.4...@sb1/ffe-form-react@9.1.5) (2022-06-14)
 
 
