@@ -6,7 +6,6 @@ import Tooltip from './Tooltip';
 
 const RadioButtonInputGroup = props => {
     const {
-        'aria-invalid': ariaInvalid,
         children,
         className,
         extraMargin,
@@ -27,7 +26,6 @@ const RadioButtonInputGroup = props => {
     }
 
     const buttonProps = {
-        'aria-invalid': ariaInvalid || String(!!fieldMessage),
         inline,
         name,
         onChange: /* istanbul ignore next */ f => f,

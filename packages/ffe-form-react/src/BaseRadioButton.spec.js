@@ -110,18 +110,4 @@ describe('<BaseRadioButton />', () => {
             ).toBe(true);
         });
     });
-    describe('aria-invalid', () => {
-        it('does not add the class if false', () => {
-            const wrapper = getWrapper({ 'aria-invalid': 'false' });
-            expect(wrapper.find('.ffe-radio-button--invalid').exists()).toBe(
-                false,
-            );
-        });
-        it('adds the correct class if true', () => {
-            const wrapper = getWrapper({ 'aria-invalid': 'true' });
-            expect(wrapper.find('.ffe-radio-button--invalid').exists()).toBe(
-                true,
-            );
-        });
-    });
 });

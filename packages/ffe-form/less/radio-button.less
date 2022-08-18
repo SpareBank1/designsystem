@@ -112,13 +112,11 @@
         }
     }
 
-    &--invalid {
-        &::after {
-            border-color: @ffe-farge-baer;
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    border-color: @ffe-farge-baer;
-                }
+    [aria-invalid='true'] &::after {
+        border-color: @ffe-farge-baer;
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                border-color: @ffe-farge-baer;
             }
         }
     }
@@ -168,7 +166,7 @@
         box-shadow: none;
     }
 
-    &:hover + .ffe-radio-button--invalid::after {
+    [aria-invalid='true'] &:hover + .ffe-radio-button::after {
         border-color: @ffe-farge-baer;
         .native & {
             @media (prefers-color-scheme: dark) {
@@ -177,7 +175,7 @@
         }
     }
 
-    &:checked + .ffe-radio-button--invalid::after {
+    [aria-invalid='true'] &:checked + .ffe-radio-button::after {
         border-color: @ffe-farge-baer;
         .native & {
             @media (prefers-color-scheme: dark) {
