@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [21.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@20.3.5...@sb1/ffe-form@21.0.0) (2022-08-18)
+
+
+### Bug Fixes
+
+* **ffe-form:** invalid styling settes nå via aria-invalid fra radioButtonInputGroup ([ab55a34](https://github.com/SpareBank1/designsystem/commit/ab55a3463626514523980c54720c94b12258ddef))
+
+
+### BREAKING CHANGES
+
+* **ffe-form:** endring av hierarki på invalid styling
+
+
+
+
+
 ## [20.3.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@20.3.4...@sb1/ffe-form@20.3.5) (2022-08-18)
 
 

@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@9.1.6...@sb1/ffe-form-react@10.0.0) (2022-08-18)
+
+
+### Bug Fixes
+
+* **ffe-form-react:** fjern støtte for aria-invalid på radiobtn ([49e1d75](https://github.com/SpareBank1/designsystem/commit/49e1d750008ec3325a1faafcb4601604ca1f2250))
+
+
+### BREAKING CHANGES
+
+* **ffe-form-react:** fjerner støtte for aria-invalid på radiobtn/BaseRadioButton
+
+
+
+
+
 ## [9.1.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@9.1.5...@sb1/ffe-form-react@9.1.6) (2022-08-18)
 
 
