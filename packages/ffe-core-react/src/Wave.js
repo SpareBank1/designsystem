@@ -1,35 +1,43 @@
 import React from 'react';
-import { string, bool, oneOf } from 'prop-types';
+import { string, bool, oneOf, node } from 'prop-types';
 import classNames from 'classnames';
 
 export default function Wave(props) {
     const {
         waveHeight,
         position,
-        rotate,
+        flip,
         color,
         darkmodeColor,
+        children,
         ...rest
     } = props;
 
     return (
         <div
-            aria-hidden="true"
             className={classNames(
                 'ffe-wave',
                 `ffe-wave--${waveHeight}`,
                 `ffe-wave--bg-${color}`,
                 `ffe-wave--dm-bg-${darkmodeColor}`,
                 {
-                    'ffe-wave--rotate': rotate,
+                    'ffe-wave--flip': flip,
                 },
             )}
-            style={{
-                maskPosition: position,
-                WebkitMaskPosition: position,
-            }}
-            {...rest}
-        />
+        >
+            {children ? (
+                <div className="ffe-wave__content">{children}</div>
+            ) : null}
+            <div
+                className="ffe-wave__wave"
+                aria-hidden="true"
+                style={{
+                    maskPosition: position,
+                    WebkitMaskPosition: position,
+                }}
+                {...rest}
+            />
+        </div>
     );
 }
 
@@ -38,8 +46,8 @@ Wave.propTypes = {
     waveHeight: oneOf(['small', 'medium', 'large']).isRequired,
     /** Sets the mask-position property, setting a px/rem value will move the starting position of the wave */
     position: string,
-    /** Rotates the wave 180 degrees :*/
-    rotate: bool,
+    /** Rotate the wave 180 degrees :*/
+    flip: bool,
     /** Sets the color of the wave. Accepts ffe-color variables without the "ffe-farge-" bit of the name. */
     color: oneOf([
         'hvit',
@@ -54,4 +62,5 @@ Wave.propTypes = {
     ]).isRequired,
     /** Set the background color in darkmode */
     darkmodeColor: oneOf(['svart', 'natt']).isRequired,
+    children: node,
 };

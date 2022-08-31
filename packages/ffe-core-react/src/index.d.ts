@@ -50,7 +50,7 @@ export interface ParagraphProps
 export interface WaveProps {
     waveHeight: 'small' | 'medium' | 'large';
     position?: string;
-    rotate?: bool;
+    flip?: bool;
     color:
         | 'hvit'
         | 'frost-30'
@@ -62,6 +62,7 @@ export interface WaveProps {
         | 'vann-30'
         | 'fjell';
     darkmodeColor: 'svart' | 'natt';
+    children: React.ReactNode;
 }
 
 declare class DividerLine extends React.Component<DividerLineProps, any> {}
