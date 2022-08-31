@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@4.3.0...@sb1/ffe-core-react@5.0.0) (2022-08-31)
+
+
+### Bug Fixes
+
+* **ffe-core-react:** restrukturering for å fikse plasseringsissue og endre propnavn ([7417320](https://github.com/SpareBank1/designsystem/commit/74173207bc5c9df9888de3b9f56a2294d57567d7))
+
+
+### BREAKING CHANGES
+
+* **ffe-core-react:** endrer propnavn fra rotate til flip
+
+
+
+
+
 # [4.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@4.2.11...@sb1/ffe-core-react@4.3.0) (2022-08-08)
 
 

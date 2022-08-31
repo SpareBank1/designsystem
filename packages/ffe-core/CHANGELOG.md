@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [23.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@22.1.0...@sb1/ffe-core@23.0.0) (2022-08-31)
+
+
+### Bug Fixes
+
+* **ffe-core:** fiks issue med plassering av bølge og navnendring ([70b07af](https://github.com/SpareBank1/designsystem/commit/70b07af351dad565e9e09571b6c3800745a8670c))
+
+
+### BREAKING CHANGES
+
+* **ffe-core:** endrer klassenavn fra rotate til flip for å matche endring i prop navn
+
+
+
+
+
 # [22.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@22.0.0...@sb1/ffe-core@22.1.0) (2022-08-08)
 
 

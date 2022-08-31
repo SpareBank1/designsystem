@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.10.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.9.4...@sb1/ffe-component-index@3.10.0) (2022-08-31)
+
+
+### Features
+
+* **component-overview:** legg til eksempel for plassering av bølge og rename av fil ([80864fb](https://github.com/SpareBank1/designsystem/commit/80864fb9be5139a6fdeda1c5a84de437c89f67e8))
+
+
+
+
+
 ## [3.9.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.9.3...@sb1/ffe-component-index@3.9.4) (2022-08-18)
 
 **Note:** Version bump only for package @sb1/ffe-component-index
