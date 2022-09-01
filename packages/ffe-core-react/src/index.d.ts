@@ -50,7 +50,7 @@ export interface ParagraphProps
 export interface WaveProps {
     waveHeight: 'small' | 'medium' | 'large';
     position?: string;
-    flip?: bool;
+    flip?: boolean;
     color:
         | 'hvit'
         | 'frost-30'
