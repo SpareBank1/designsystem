@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-tabs-react",
-  "version": "7.0.2",
+  "version": "7.0.3",
   "license": "MIT",
   "author": "SpareBank 1",
   "files": [
@@ -28,7 +28,7 @@
     "prop-types": "^15.7.2"
   },
   "devDependencies": {
-    "@sb1/ffe-buildtool": "^0.4.0",
+    "@sb1/ffe-buildtool": "^0.4.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0"
   },

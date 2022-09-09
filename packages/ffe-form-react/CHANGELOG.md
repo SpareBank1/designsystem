@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@10.0.0...@sb1/ffe-form-react@10.0.1) (2022-09-09)
+
+
+### Bug Fixes
+
+* **ffe-form-react:** fjern tester der aria-invalid blir passed down til radiobutton ([0d22d7a](https://github.com/SpareBank1/designsystem/commit/0d22d7a7c5722e6ed4854851e36680e37f37eb07))
+
+
+
+
+
 # [10.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@9.1.6...@sb1/ffe-form-react@10.0.0) (2022-08-18)
 
 

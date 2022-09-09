@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-chart-donut-react",
-  "version": "5.1.0",
+  "version": "5.1.1",
   "description": "Donut chart in SVG",
   "keywords": [
     "ffe"
@@ -30,7 +30,7 @@
     "prop-types": "^15.7.2"
   },
   "devDependencies": {
-    "@sb1/ffe-buildtool": "^0.4.0",
+    "@sb1/ffe-buildtool": "^0.4.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0"
   },

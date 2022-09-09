@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-collapse-react",
-  "version": "1.1.13",
+  "version": "1.1.14",
   "description": "React component for expand/collapse",
   "keywords": [
     "ffe"
@@ -32,7 +32,7 @@
     "classnames": "^2.3.1"
   },
   "devDependencies": {
-    "@sb1/ffe-buildtool": "^0.4.0",
+    "@sb1/ffe-buildtool": "^0.4.1",
     "eslint": "^5.9.0",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",

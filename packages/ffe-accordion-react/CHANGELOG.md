@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.2.15](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@9.2.14...@sb1/ffe-accordion-react@9.2.15) (2022-09-09)
+
+
+### Bug Fixes
+
+* **ffe-accordion-react:** Add hint about ffe-collapse to README ([e451dd7](https://github.com/SpareBank1/designsystem/commit/e451dd7409bc24fa7e41cf88fb325916c43a2e28)), closes [#1323](https://github.com/SpareBank1/designsystem/issues/1323)
+
+
+
+
+
 ## [9.2.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@9.2.13...@sb1/ffe-accordion-react@9.2.14) (2022-03-02)
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@6.1.3...@sb1/ffe-tables-react@6.1.4) (2022-09-09)
+
+
+### Bug Fixes
+
+* **ffe-tables-react:** fix linting errors in test case ([55212bb](https://github.com/SpareBank1/designsystem/commit/55212bbe92dc2cf72ca8382cd5077510b53c6328))
+
+
+
+
+
 ## [6.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@6.1.2...@sb1/ffe-tables-react@6.1.3) (2022-06-02)
 
 

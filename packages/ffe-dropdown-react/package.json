@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-dropdown-react",
-  "version": "5.1.14",
+  "version": "5.1.15",
   "license": "MIT",
   "author": "SpareBank 1",
   "files": [
@@ -27,7 +27,7 @@
     "classnames": "^2.3.1"
   },
   "devDependencies": {
-    "@sb1/ffe-buildtool": "^0.4.0",
+    "@sb1/ffe-buildtool": "^0.4.1",
     "eslint": "^5.9.0",
     "react": "^16.9.0",
     "react-addons-test-utils": "^15.6.2",

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buildtool@0.4.0...@sb1/ffe-buildtool@0.4.1) (2022-09-09)
+
+
+### Bug Fixes
+
+* **buildtool:** fail with exit code if jest fails ([57897ae](https://github.com/SpareBank1/designsystem/commit/57897aece8c6af251cb18d4e052a2f383058fe22))
+
+
+
+
+
 # [0.4.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buildtool@0.3.2...@sb1/ffe-buildtool@0.4.0) (2022-02-18)
 
 
