@@ -207,16 +207,14 @@ describe('<Table />', () => {
                             <React.Fragment>
                                 <tr
                                     {...trProps}
-                                    a="customfooter"
-                                    firstkey={columnsFooter[0].key}
+                                    data-abc="aaa123"
                                     onClick={event => {
                                         mockCallback();
                                     }}
                                 />
                                 <tr
                                     {...trProps}
-                                    a="customfooter"
-                                    firstkey={columnsFooter[0].key}
+                                    data-abc="aaa123"
                                     onClick={event => {
                                         mockCallback();
                                     }}
@@ -234,26 +232,22 @@ describe('<Table />', () => {
 
         it('renders a <tfoot /> tr has custom props', () => {
             const propKeyProp = wrapper
-                .find('tfoot')
-                .find('tr')
+                .find('tfoot tr')
                 .first()
                 .props();
-            expect(propKeyProp.a).toBe('customfooter');
-            expect(propKeyProp.firstkey).toBe('name');
+            expect(propKeyProp).toHaveProperty('data-abc', 'aaa123');
             expect(
                 wrapper
-                    .find('tfoot')
-                    .find('tr')
+                    .find('tfoot tr')
                     .first()
                     .render()
-                    .attr('a'),
-            ).toBe('customfooter');
+                    .attr('data-abc'),
+            ).toBe('aaa123');
         });
 
         it('renders a <tfoot />, triggers tr onClick method', () => {
             wrapper
-                .find('tfoot')
-                .find('tr')
+                .find('tfoot tr')
                 .first()
                 .simulate('click');
             expect(mockCallback.mock.calls.length).toBe(1);
@@ -261,13 +255,11 @@ describe('<Table />', () => {
 
         it('renders a <tfoot /> that has two identical rows, the second row has array notation', () => {
             const tr0html = wrapper
-                .find('tfoot')
-                .find('tr')
+                .find('tfoot tr')
                 .at(0)
                 .html();
             const tr1html = wrapper
-                .find('tfoot')
-                .find('tr')
+                .find('tfoot tr')
                 .at(1)
                 .html();
             expect(tr1html).toBe(tr0html);
@@ -319,16 +311,14 @@ describe('<Table />', () => {
                             <React.Fragment>
                                 <tr
                                     {...trProps}
-                                    a="customfooter"
-                                    firstkey={headerColumns[0].key}
+                                    data-abc="aaa123"
                                     onClick={event => {
                                         mockCallback();
                                     }}
                                 />
                                 <tr
                                     {...trProps}
-                                    a="customfooter"
-                                    firstkey={headerColumns[0].key}
+                                    data-abc="aaa123"
                                     onClick={event => {
                                         mockCallback();
                                     }}
@@ -346,20 +336,17 @@ describe('<Table />', () => {
 
         it('renders a <thead /> tr has custom props', () => {
             const propKeyProp = wrapper
-                .find('thead')
-                .find('tr')
+                .find('thead tr')
                 .first()
                 .props();
-            expect(propKeyProp.a).toBe('customfooter');
-            expect(propKeyProp.firstkey).toBe('name');
+            expect(propKeyProp).toHaveProperty('data-abc', 'aaa123');
             expect(
                 wrapper
-                    .find('thead')
-                    .find('tr')
+                    .find('thead tr')
                     .first()
                     .render()
-                    .attr('a'),
-            ).toBe('customfooter');
+                    .attr('data-abc'),
+            ).toBe('aaa123');
         });
 
         it('renders a <thead />, triggers tr onClick method', () => {
@@ -493,7 +480,7 @@ describe('<Table />', () => {
                         return (
                             <tr
                                 {...trprops}
-                                a="customfooter"
+                                data-my-prop="12345"
                                 onClick={event => {
                                     mockCallback();
                                 }}
@@ -510,15 +497,14 @@ describe('<Table />', () => {
                 .find('tr')
                 .first()
                 .props();
-            expect(propKeyProp.a).toBe('customfooter');
+            expect(propKeyProp).toHaveProperty('data-my-prop', '12345');
             expect(
                 wrapper
-                    .find('tbody')
-                    .find('tr')
+                    .find('tbody tr')
                     .first()
                     .render()
-                    .attr('a'),
-            ).toBe('customfooter');
+                    .attr('data-my-prop'),
+            ).toBe('12345');
         });
 
         it('renders a <tbody />, triggers tr onClick method', () => {
