@@ -38,46 +38,6 @@ describe('<RadioButtonInputGroup />', () => {
                 }),
             );
         });
-        it('passes down aria-invalid as true if fieldMessage is set', () => {
-            const childrenSpy = jest.fn();
-            const wrapper = getWrapper({
-                children: childrenSpy,
-                fieldMessage: undefined,
-            });
-
-            expect(childrenSpy).toHaveBeenCalledWith(
-                expect.objectContaining({
-                    'aria-invalid': 'false',
-                }),
-            );
-
-            wrapper.setProps({ fieldMessage: 'such error' });
-            expect(childrenSpy).toHaveBeenCalledWith(
-                expect.objectContaining({
-                    'aria-invalid': 'true',
-                }),
-            );
-        });
-        it('passes down aria-invalid if aria-invalid is set', () => {
-            const childrenSpy = jest.fn();
-            const wrapper = getWrapper({
-                'aria-invalid': 'false',
-                children: childrenSpy,
-            });
-
-            expect(childrenSpy).toHaveBeenCalledWith(
-                expect.objectContaining({
-                    'aria-invalid': 'false',
-                }),
-            );
-
-            wrapper.setProps({ 'aria-invalid': 'true' });
-            expect(childrenSpy).toHaveBeenCalledWith(
-                expect.objectContaining({
-                    'aria-invalid': 'true',
-                }),
-            );
-        });
         it(`passes down a default noop function to silence intermittent propType
             warnings about the radio buttons being controlled components without
             an onChange listener (which is a lie - the onChange is in RadioButtonInputGroup)`, () => {
