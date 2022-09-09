@@ -17,5 +17,9 @@ module.exports = function(args) {
     return spawn('npx', arg, {
         cwd: process.cwd(),
         stdio: 'inherit',
+    }).on('exit', code => {
+        if (code) {
+            process.exit(code);
+        }
     });
 };
