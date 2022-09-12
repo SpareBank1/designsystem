@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.0.27](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@10.0.26...@sb1/ffe-lists@10.0.27) (2022-09-12)
+
+
+### Bug Fixes
+
+* **ffe-lists:** tøm content så ikon ikke leses dobbelt av skjermleser ([6fda298](https://github.com/SpareBank1/designsystem/commit/6fda298eaa808d48f4f67fac24a96b2b1fdc203d))
+
+
+
+
+
 ## [10.0.26](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@10.0.25...@sb1/ffe-lists@10.0.26) (2022-08-31)
 
 **Note:** Version bump only for package @sb1/ffe-lists

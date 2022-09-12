@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [15.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@15.1.3...@sb1/ffe-buttons@15.1.4) (2022-09-12)
+
+
+### Bug Fixes
+
+* **ffe-buttons:** fikser fargefeil i expandbutton dark mode ([bbdfa8f](https://github.com/SpareBank1/designsystem/commit/bbdfa8fe4cbe79627a2bf6e83279fc1b5b06c96b)), closes [#1441](https://github.com/SpareBank1/designsystem/issues/1441)
+
+
+
+
+
 ## [15.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@15.1.2...@sb1/ffe-buttons@15.1.3) (2022-08-31)
 
 **Note:** Version bump only for package @sb1/ffe-buttons
