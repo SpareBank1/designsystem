@@ -34,7 +34,7 @@
         "eslint": "^5.9.0",
         "eslint-config-prettier": "^4.1.0",
         "husky": "^7.0.4",
-        "lerna": "^4.0.0",
+        "lerna": "^5.5.1",
         "mkdirp": "^1.0.4",
         "npm-run-all": "^4.1.5",
         "prettier": "^1.15.2",
