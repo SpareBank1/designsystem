@@ -6,6 +6,7 @@ on:
 
 jobs:
     test-ci:
+        name: 'build, test, build overview'
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v2
@@ -16,3 +17,9 @@ jobs:
             - run: npm run build
             - run: npm run lint
             - run: npm test -- --ci
+            - name: Make component-overview
+              run: GH_PUBLIC_URL=/ make -e -C component-overview/ ghpages
+            - uses: actions/upload-artifact@v3
+              with:
+                  name: component-overview
+                  path: component-overview/build/
