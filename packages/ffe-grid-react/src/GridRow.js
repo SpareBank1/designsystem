@@ -9,18 +9,12 @@ export default function GridRow({
     className,
     children,
     element,
-    reverse,
-    topPadding,
+    padding,
+    margin,
     ...rest
 }) {
-    let content = children;
-
     const hasBackgroundColor = backgroundColors.includes(background);
     const hasRemovedColor = removedColors.includes(background);
-
-    if (hasBackgroundColor) {
-        content = <div className="ffe-grid__row-wrapper">{children}</div>;
-    }
 
     if (hasRemovedColor) {
         throw new Error(
@@ -36,18 +30,19 @@ export default function GridRow({
                 className,
                 'ffe-grid__row',
                 { [`ffe-grid__row--bg-${background}`]: hasBackgroundColor },
-                { 'ffe-grid__row--reverse': reverse },
-                { 'ffe-grid__row--top-padding': topPadding },
+                { 'ffe-grid__row--padding': padding },
+                { 'ffe-grid__row--margin': margin },
             )}
             {...rest}
         >
-            {content}
+            {children}
         </Element>
     );
 }
 
 GridRow.defaultProps = {
-    topPadding: false,
+    padding: false,
+    margin: false,
 };
 
 GridRow.propTypes = {
@@ -70,8 +65,8 @@ GridRow.propTypes = {
     children: node,
     /** Specify the DOM element being used to create the GridRow */
     element: string,
-    /** If true, columns are reversed */
-    reverse: bool,
-    /** If true, row receives top padding. Useful for when you have background colored rows */
-    topPadding: bool,
+    /** Padding in the top and bottom of the row */
+    padding: bool,
+    /** Margin in the top and bottom of the row */
+    margin: bool,
 };

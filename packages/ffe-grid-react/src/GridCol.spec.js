@@ -53,39 +53,9 @@ describe('GridCol', () => {
     });
 
     it('sets the center modifier if the value is boolean true', () => {
-        const el = renderShallow({ center: true });
-
-        expect(el.hasClass('ffe-grid__col--center')).toBe(true);
-    });
-
-    it('sets the center modifier if the value is boolean true', () => {
         const el = renderShallow({ centerText: true });
 
         expect(el.hasClass('ffe-grid__col--center-text')).toBe(true);
-    });
-
-    it('sets the center modifier as a string', () => {
-        const el = renderShallow({ center: 'true' });
-
-        expect(el.hasClass('ffe-grid__col--center')).toBe(true);
-    });
-
-    it('sets the center modifier if the value is truthy', () => {
-        const el = renderShallow({ center: 'wombats' });
-
-        expect(el.hasClass('ffe-grid__col--center')).toBe(true);
-    });
-
-    it('does not set the center modifier if the value is boolean false', () => {
-        const el = renderShallow({ center: false });
-
-        expect(el.hasClass('ffe-grid__col--center')).not.toBe(true);
-    });
-
-    it('sets the top modifier', () => {
-        const el = renderShallow({ top: true });
-
-        expect(el.hasClass('ffe-grid__col--top')).toBe(true);
     });
 
     it('sets background color class if valid', () => {
@@ -114,24 +84,14 @@ describe('GridCol', () => {
             sm: { cols: '6', offset: 2 },
             md: 8,
             lg: { cols: 2 },
-            center: true,
             centerText: true,
-            bottom: true,
-            between: true,
-            horizontal: true,
-            reverse: true,
         });
 
         expect(el.hasClass('ffe-grid__col--sm-6')).toBe(true);
         expect(el.hasClass('ffe-grid__col--sm-offset-2')).toBe(true);
         expect(el.hasClass('ffe-grid__col--md-8')).toBe(true);
         expect(el.hasClass('ffe-grid__col--lg-2')).toBe(true);
-        expect(el.hasClass('ffe-grid__col--center')).toBe(true);
         expect(el.hasClass('ffe-grid__col--center-text')).toBe(true);
-        expect(el.hasClass('ffe-grid__col--bottom')).toBe(true);
-        expect(el.hasClass('ffe-grid__col--between')).toBe(true);
-        expect(el.hasClass('ffe-grid__col--horizontal')).toBe(true);
-        expect(el.hasClass('ffe-grid__col--reverse')).toBe(true);
     });
 
     it('preserves other attributes that are passed to it', () => {
@@ -147,13 +107,6 @@ describe('GridCol', () => {
         const el = renderShallow({ element: 'section' });
 
         expect(el.type()).toBe('section');
-    });
-
-    it('does not pass on known properties to its root element', () => {
-        const el = renderShallow({ center: true, reverse: true });
-
-        expect(el.props().center).toBe(undefined);
-        expect(el.props().reverse).toBe(undefined);
     });
 
     it('can render with offset 0 and columns 0', () => {
@@ -174,17 +127,5 @@ describe('GridCol', () => {
         const el = renderShallow();
 
         expect(el.hasClass('ffe-grid__col--sm-12')).toBe(true);
-    });
-
-    it('defaults to not setting the "--no-bottom-padding" modifier', () => {
-        const el = renderShallow();
-
-        expect(el.hasClass('ffe-grid__col--no-bottom-padding')).toBe(false);
-    });
-
-    it('sets the "--no-bottom-padding" modifier if "bottomPadding" prop is false', () => {
-        const el = renderShallow({ bottomPadding: false });
-
-        expect(el.hasClass('ffe-grid__col--no-bottom-padding')).toBe(true);
     });
 });

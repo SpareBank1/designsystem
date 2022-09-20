@@ -5,7 +5,6 @@ export interface GridProps extends React.HTMLAttributes<HTMLElement> {
     className?: string;
     condensed?: boolean;
     element?: string;
-    topPadding?: boolean;
 }
 
 export interface InlineGridProps extends React.HTMLAttributes<HTMLElement> {
@@ -31,8 +30,8 @@ export interface GridRowProps extends React.HTMLAttributes<HTMLElement> {
     children: React.ReactNode;
     className?: string;
     element?: string;
-    reverse?: boolean;
-    topPadding?: boolean;
+    padding?: boolean;
+    margin?: boolean;
 }
 
 type ColumnsRange = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
@@ -47,18 +46,7 @@ export interface GridColProps extends React.HTMLAttributes<HTMLElement> {
     children?: React.ReactNode;
     className?: string;
     element?: React.ReactNode;
-    around?: boolean;
-    between?: boolean;
-    bottom?: boolean;
-    center?: boolean;
     centerText?: boolean;
-    end?: boolean;
-    horizontal?: boolean;
-    middle?: boolean;
-    bottomPadding?: boolean;
-    reverse?: boolean;
-    start?: boolean;
-    top?: boolean;
     sm?: ColumnsRange | string | GridColSize;
     md?: ColumnsRange | string | GridColSize;
     lg?: ColumnsRange | string | GridColSize;

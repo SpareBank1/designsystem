@@ -7,19 +7,15 @@ export default function Grid({
     className,
     condensed,
     element,
-    topPadding,
     ...rest
 }) {
     const Element = element || 'div';
 
     return (
         <Element
-            className={classNames(
-                className,
-                'ffe-grid',
-                { 'ffe-grid--condensed': condensed },
-                { 'ffe-grid--no-top-padding': !topPadding },
-            )}
+            className={classNames(className, 'ffe-grid', {
+                'ffe-grid--condensed': condensed,
+            })}
             {...rest}
         >
             {children}
@@ -40,6 +36,4 @@ Grid.propTypes = {
     condensed: bool,
     /** Specify the DOM element being used to create the Grid */
     element: string,
-    /** Add top padding */
-    topPadding: bool,
 };
