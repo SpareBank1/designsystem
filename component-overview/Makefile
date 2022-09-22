@@ -42,12 +42,8 @@ gen-src/package-list.json:
 
 ghpages: build/index.html build/404.html
 
-build/index.html: webapp/index.html
+build/%.html: webapp/%.html
 	PUBLIC_URL=$(GH_PUBLIC_URL) $(parcel) build $< --dist-dir $(dir $@) --public-url $(GH_PUBLIC_URL)
-
-build/404.html: webapp/404.html
-	mkdir -p $(dir $@)
-	cp $< $@
 
 
 clean:
