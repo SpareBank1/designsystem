@@ -24,16 +24,13 @@
     margin: @ffe-spacing-xs 0;
     cursor: pointer;
     transition: width @ffe-transition-duration @ffe-ease;
-    font-family: 'SpareBank1-regular', 'MuseoSans-500', arial, sans-serif;
+    font-family: var(--ffe-g-font);
     font-variant-numeric: tabular-nums;
     text-align: left;
     padding-left: @ffe-spacing-lg;
     -webkit-tap-highlight-color: fade(@ffe-farge-vann, 15%);
-    .native & {
-        @media (prefers-color-scheme: dark) {
-            color: @ffe-farge-hvit;
-        }
-    }
+    color: var(--ffe-v-input-color);
+
     &--no-margin {
         margin-top: 0;
         margin-bottom: 0;
@@ -45,8 +42,8 @@
     }
 
     &::before {
-        border: solid 2px @ffe-farge-varmgraa;
-        border-radius: 4px;
+        border: solid 2px var(--ffe-v-checkbox-color);
+        border-radius: var(--ffe-g-border-radius);
         content: '';
         display: inline-block;
         height: 20px;
@@ -56,13 +53,7 @@
         left: 0;
         transition: all @ffe-transition-duration @ffe-ease;
         width: 20px;
-        background-color: @ffe-farge-hvit;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                border-color: @ffe-farge-graa;
-                background-color: @ffe-farge-svart;
-            }
-        }
+        background-color: var(--ffe-v-input-bg-color);
     }
 
     &--hidden-label {
@@ -106,23 +97,12 @@
     }
 
     &:hover + .ffe-checkbox::before {
-        border-color: @ffe-farge-vann;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                border-color: @ffe-farge-vann-70;
-            }
-        }
+        border-color: var(--ffe-v-checkbox-color);
     }
 
     &:focus + .ffe-checkbox::before {
-        box-shadow: 0 0 0 3px @ffe-farge-hvit, 0 0 0 5px @ffe-farge-vann;
-
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                box-shadow: 0 0 0 3px @ffe-farge-svart,
-                    0 0 0 5px @ffe-farge-hvit;
-            }
-        }
+        box-shadow: 0 0 0 3px var(--ffe-v-input-bg-color),
+            0 0 0 5px var(--ffe-v-checkbox-focus-outline-color);
     }
 
     &:focus:not(:focus-visible) + .ffe-checkbox::before {
@@ -130,32 +110,16 @@
     }
 
     &:checked + .ffe-checkbox::before {
-        border-color: @ffe-farge-vann;
-        background-color: @ffe-farge-hvit;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                border-color: @ffe-farge-vann-70;
-                background-color: @ffe-farge-svart;
-            }
-        }
+        border-color: var(--ffe-v-checkbox-selected-color);
+        background-color: var(--ffe-v-input-bg-color);
     }
 
     &:checked + .ffe-checkbox::after {
-        border-color: @ffe-farge-vann;
+        border-color: var(--ffe-v-checkbox-marker-color);
         height: 11px;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                border-color: @ffe-farge-vann-30;
-            }
-        }
     }
 
     &[aria-invalid='true'] + .ffe-checkbox::before {
-        border-color: @ffe-farge-baer;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                border-color: @ffe-farge-baer;
-            }
-        }
+        border-color: var(--ffe-g-error-color);
     }
 }

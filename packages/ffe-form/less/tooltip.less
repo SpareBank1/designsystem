@@ -13,68 +13,42 @@
 // Styleguide ffe-form.tooltip
 
 .ffe-tooltip {
-    @ffe-tooltip-size: 25px;
-
     &__icon {
-        background: @ffe-farge-hvit;
+        background: var(--ffe-v-input-bg-color);
         border-radius: 50%;
-        border: 2px solid @ffe-farge-varmgraa;
-        color: @ffe-farge-vann;
+        border: 2px solid var(--ffe-v-tooltip-border-color);
+        color: var(--ffe-v-tooltip-icon-color);
         cursor: help;
-        height: @ffe-tooltip-size;
+        height: 25px;
         margin: 0 0 @ffe-spacing-2xs @ffe-spacing-sm;
         padding: 0;
         transition: border-color @ffe-transition-duration @ffe-ease;
-        width: @ffe-tooltip-size;
+        width: 25px;
         display: inline-flex;
         justify-content: center;
         align-items: center;
         font-family: sans-serif;
-        .ffe-fontsize-button();
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                background: @ffe-farge-svart;
-                color: @ffe-farge-vann-70;
-                border-color: @ffe-farge-graa;
-            }
-        }
+        font-size: var(--ffe-fontsize-button);
 
         > span {
             margin-top: 2px;
         }
 
         &:hover {
-            border-color: @ffe-farge-vann;
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    border-color: @ffe-farge-vann-70;
-                    color: @ffe-farge-vann-70;
-                }
-            }
+            border-color: var(--ffe-v-checkbox-selected-color);
+            color: var(--ffe-v-tooltip-icon-color);
         }
 
         &:focus {
-            box-shadow: 0 0 0 3px @ffe-farge-hvit, 0 0 0 5px @ffe-farge-vann;
+            box-shadow: 0 0 0 3px var(--ffe-v-input-bg-color),
+                0 0 0 5px var(--ffe-v-checkbox-focus-outline-color);
             outline: none;
-
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    box-shadow: 0 0 0 3px @ffe-farge-svart,
-                        0 0 0 5px @ffe-farge-hvit;
-                }
-            }
         }
 
         &:active,
         .ffe-tooltip--open & {
-            border-color: @ffe-farge-vann;
-            color: @ffe-farge-fjell;
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    border-color: @ffe-farge-vann-70;
-                    color: @ffe-farge-vann-70;
-                }
-            }
+            border-color: var(--ffe-v-checkbox-selected-color);
+            color: var(--ffe-v-tooltip-icon-color);
         }
     }
 

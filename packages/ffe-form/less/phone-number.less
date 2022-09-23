@@ -45,19 +45,12 @@
         font-weight: 400;
         line-height: 1;
         padding: 12px @ffe-spacing-xs;
-        background-color: @ffe-farge-hvit;
-        border: 2px solid @ffe-farge-varmgraa;
-        border-radius: 4px 0 0 4px;
+        background-color: var(--ffe-v-input-bg-color);
+        border: 2px solid var(--ffe-g-border-color);
+        border-radius: var(--ffe-g-border-radius) 0 0 var(--ffe-g-border-radius);
         border-right: 0;
         transition: all @ffe-transition-duration @ffe-ease;
-        color: @ffe-farge-svart;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                background-color: @ffe-farge-svart;
-                border-color: @ffe-farge-graa;
-                color: @ffe-farge-hvit;
-            }
-        }
+        color: var(--ffe-v-input-color);
     }
 
     &__number {

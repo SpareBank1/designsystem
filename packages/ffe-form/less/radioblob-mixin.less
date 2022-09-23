@@ -4,7 +4,7 @@
 .ffe-sb1-radioblob() {
     content: '';
     background-color: @ffe-farge-hvit;
-    border: 2px solid @ffe-farge-varmgraa;
+    border: 2px solid var(--ffe-g-border-color);
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -22,7 +22,7 @@
     Radioblob: Active state of the blob
 */
 .ffe-sb1-radioblob-active() {
-    background-color: @ffe-farge-vann;
+    background-color: var(--ffe-g-primary-color);
     border: 5px solid @ffe-farge-hvit;
     .native & {
         @media (prefers-color-scheme: dark) {
