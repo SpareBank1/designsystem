@@ -170,31 +170,21 @@
 }
 
 .ffe-small-text {
-    color: @ffe-farge-svart;
-    font-family: 'SpareBank1-regular', 'MuseoSans-500', arial, sans-serif;
+    color: var(--ffe-g-text-color);
+    font-family: var(--ffe-g-font);
     font-weight: normal;
     font-variant-numeric: tabular-nums;
     line-height: 1.25rem;
     .ffe-fontsize-small-text();
-    .native & {
-        @media (prefers-color-scheme: dark) {
-            color: @ffe-farge-lysgraa;
-        }
-    }
 }
 
 .ffe-micro-text {
-    color: @ffe-farge-svart;
-    font-family: 'SpareBank1-regular', 'MuseoSans-500', arial, sans-serif;
+    color: var(--ffe-g-text-color);
+    font-family: var(--ffe-g-font);
     font-weight: normal;
     font-variant-numeric: tabular-nums;
     line-height: 1.25rem;
     .ffe-fontsize-micro-text();
-    .native & {
-        @media (prefers-color-scheme: dark) {
-            color: @ffe-farge-lysgraa;
-        }
-    }
 }
 
 .ffe-h1,
@@ -203,23 +193,13 @@
 .ffe-h4,
 .ffe-h5,
 .ffe-h6 {
-    color: @ffe-farge-fjell;
+    color: var(--ffe-g-heading-color);
     font-weight: normal;
     margin-bottom: 10px;
     margin-top: 0;
-    .native & {
-        @media (prefers-color-scheme: dark) {
-            color: @ffe-farge-vann-70;
-        }
-    }
 
     &--error {
-        color: @ffe-farge-baer;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-farge-baer;
-            }
-        }
+        color: var(--ffe-g-error-color);
     }
 
     &--inline {
@@ -251,43 +231,32 @@
 
 .ffe-h1,
 .ffe-h2 {
-    font-family: 'SpareBank1-title-medium', 'MuseoSansRounded-700', arial,
-        sans-serif;
+    font-family: var(--ffe-g-font-heading);
 }
 
 .ffe-h3,
 .ffe-h4,
 .ffe-h5,
 .ffe-h6 {
-    font-family: 'SpareBank1-medium', 'MuseoSansRounded-700', arial, sans-serif;
+    font-family: var(--ffe-g-font-heading-small);
     font-variant-numeric: tabular-nums;
 }
 
 .ffe-body-text {
-    color: @ffe-farge-svart;
-    font-family: 'SpareBank1-regular', 'MuseoSans-500', arial, sans-serif;
+    color: var(--ffe-g-text-color);
+    font-family: var(--ffe-g-font);
     font-variant-numeric: tabular-nums;
     line-height: 1.5rem;
     .ffe-fontsize-body-text();
-    .native & {
-        @media (prefers-color-scheme: dark) {
-            color: @ffe-farge-lysgraa;
-        }
-    }
 }
 
 .ffe-body-paragraph {
-    font-family: 'SpareBank1-regular', 'MuseoSans-500', arial, sans-serif;
+    font-family: var(--ffe-g-font);
     font-variant-numeric: tabular-nums;
     margin-bottom: 1em;
     margin-top: 0;
     line-height: 1.5rem;
-    color: @ffe-farge-svart;
-    .native & {
-        @media (prefers-color-scheme: dark) {
-            color: @ffe-farge-lysgraa;
-        }
-    }
+    color: var(--ffe-g-text-color);
 
     &--text-center {
         text-align: center;
@@ -300,72 +269,43 @@
 
 .ffe-lead-paragraph,
 .ffe-sub-lead-paragraph {
-    font-family: 'SpareBank1-regular', 'MuseoSans-500', arial, sans-serif;
+    font-family: var(--ffe-g-font);
     font-variant-numeric: tabular-nums;
     margin-top: 0;
     margin-bottom: 1em;
 }
 
 .ffe-lead-paragraph {
-    color: @ffe-farge-fjell;
+    color: var(--ffe-g-lead-color);
     line-height: 1.5rem;
     .ffe-fontsize-lead-paragraph();
-    .native & {
-        @media (prefers-color-scheme: dark) {
-            color: @ffe-farge-hvit;
-        }
-    }
 }
 
 .ffe-sub-lead-paragraph {
-    color: @ffe-farge-svart;
+    color: var(--ffe-g-text-color);
     line-height: 1.5rem;
     .ffe-fontsize-sub-lead-paragraph();
-    .native & {
-        @media (prefers-color-scheme: dark) {
-            color: @ffe-farge-lysgraa;
-        }
-    }
 }
 
 .ffe-link-text {
-    border-bottom: 1px solid @ffe-farge-vann;
-    color: @ffe-farge-vann;
+    border-bottom: 1px solid var(--ffe-g-link-color);
+    color: var(--ffe-g-link-color);
     cursor: pointer;
     text-decoration: none;
     word-wrap: break-word;
     line-height: 1em;
     transition: all @ffe-transition-duration @ffe-ease;
 
-    .native & {
-        @media (prefers-color-scheme: dark) {
-            color: @ffe-farge-vann-70;
-            border-color: @ffe-farge-vann-70;
-        }
-    }
-
     &:hover {
-        border-bottom-color: @ffe-farge-fjell;
-        color: @ffe-farge-fjell;
+        border-bottom-color: var(--ffe-g-link-color-hover);
+        color: var(--ffe-g-link-color-hover);
         text-decoration: none;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-farge-vann-30;
-                border-color: @ffe-farge-vann-30;
-            }
-        }
     }
 
     &:visited {
-        border-bottom-color: @ffe-farge-lyng;
-        color: @ffe-farge-lyng;
+        border-bottom-color: var(--ffe-g-link-color-visited);
+        color: var(--ffe-g-link-color-visited);
         text-decoration: none;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-farge-lyng-70;
-                border-color: @ffe-farge-lyng-70;
-            }
-        }
     }
 
     &--no-underline {
@@ -375,16 +315,14 @@
     &:focus {
         border-color: @ffe-farge-hvit;
         border-radius: 1px;
-        background-color: @ffe-farge-vann;
-        box-shadow: 0 0 0 2px @ffe-farge-vann;
+        background-color: var(--ffe-g-link-color);
+        box-shadow: 0 0 0 2px var(--ffe-g-link-color);
         color: @ffe-farge-hvit;
         outline: none;
 
         .native & {
             @media (prefers-color-scheme: dark) {
                 border-color: @ffe-farge-svart !important;
-                background-color: @ffe-farge-vann-70;
-                box-shadow: 0 0 0 2px @ffe-farge-vann-70;
                 color: @ffe-farge-svart !important;
             }
         }
@@ -405,13 +343,13 @@
 }
 
 .ffe-strong-text {
-    font-family: 'SpareBank1-medium', 'MuseoSansRounded-700', arial, sans-serif;
+    font-family: var(--ffe-g-font-strong);
     font-variant-numeric: tabular-nums;
     font-weight: normal;
 }
 
 .ffe-em-text {
-    font-family: 'SpareBank1-italic', 'MuseoSans-500', arial, sans-serif;
+    font-family: var(--ffe-g-font-italic);
     font-variant-numeric: tabular-nums;
     font-weight: normal;
     font-style: normal;
