@@ -47,9 +47,9 @@ const AccordionItem = ({
 
     return (
         <div
-            className={classNames(className, 'ffe-accordion-item', {
+            className={classNames('ffe-accordion-item', {
                 'ffe-accordion-item--open': isExpanded,
-            })}
+            }, className)}
             {...rest}
         >
             {React.createElement(
