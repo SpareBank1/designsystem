@@ -1,5 +1,5 @@
 import React from 'react';
-import { bool, node, oneOf, string } from 'prop-types';
+import { node, oneOf, string } from 'prop-types';
 import classNames from 'classnames';
 
 import backgroundColors, { removedColors } from './background-colors';
@@ -30,8 +30,8 @@ export default function GridRow({
                 className,
                 'ffe-grid__row',
                 { [`ffe-grid__row--bg-${background}`]: hasBackgroundColor },
-                { 'ffe-grid__row--padding': padding },
-                { 'ffe-grid__row--margin': margin },
+                { [`ffe-grid__row--padding-${padding}`]: padding },
+                { [`ffe-grid__row--margin-${margin}`]: margin },
             )}
             {...rest}
         >
@@ -39,11 +39,6 @@ export default function GridRow({
         </Element>
     );
 }
-
-GridRow.defaultProps = {
-    padding: false,
-    margin: false,
-};
 
 GridRow.propTypes = {
     /** Supported background colors */
@@ -59,14 +54,36 @@ GridRow.propTypes = {
         'fjell',
         'hvit',
     ]),
+    /** Padding in the top and bottom of the row */
+    padding: oneOf([
+        '2xs',
+        'xs',
+        'sm',
+        'md',
+        'lg',
+        'xl',
+        '2xl',
+        '3xl',
+        '4xl',
+        '5xl',
+    ]),
+    /** Margin in the top and bottom of the row */
+    margin: oneOf([
+        '2xs',
+        'xs',
+        'sm',
+        'md',
+        'lg',
+        'xl',
+        '2xl',
+        '3xl',
+        '4xl',
+        '5xl',
+    ]),
     /** Any extra classes are attached to the root node, in addition to ffe-grid__row classes */
     className: string,
     /** All children of a `<GridRow />` must be `<GridCol />`. */
     children: node,
     /** Specify the DOM element being used to create the GridRow */
     element: string,
-    /** Padding in the top and bottom of the row */
-    padding: bool,
-    /** Margin in the top and bottom of the row */
-    margin: bool,
 };

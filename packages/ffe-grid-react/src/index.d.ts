@@ -1,16 +1,12 @@
 import * as React from 'react';
 
+type Gap = 'none' | '2xs' | 'xs' | 'md' | 'lg';
+
 export interface GridProps extends React.HTMLAttributes<HTMLElement> {
     children: React.ReactNode;
     className?: string;
-    condensed?: boolean;
     element?: string;
-}
-
-export interface InlineGridProps extends React.HTMLAttributes<HTMLElement> {
-    children: React.ReactNode;
-    className?: string;
-    element?: string;
+    gap?: Gap;
 }
 
 type BackgroundColors =
@@ -25,13 +21,37 @@ type BackgroundColors =
     | 'fjell'
     | 'hvit';
 
+type Margin =
+    | '2xs'
+    | 'xs'
+    | 'sm'
+    | 'md'
+    | 'lg'
+    | 'xl'
+    | '2xl'
+    | '3xl'
+    | '4xl'
+    | '5xl';
+
+type Padding =
+    | '2xs'
+    | 'xs'
+    | 'sm'
+    | 'md'
+    | 'lg'
+    | 'xl'
+    | '2xl'
+    | '3xl'
+    | '4xl'
+    | '5xl';
+
 export interface GridRowProps extends React.HTMLAttributes<HTMLElement> {
     background?: BackgroundColors;
     children: React.ReactNode;
     className?: string;
     element?: string;
-    padding?: boolean;
-    margin?: boolean;
+    padding?: Padding;
+    margin?: Margin;
 }
 
 type ColumnsRange = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
@@ -53,6 +73,5 @@ export interface GridColProps extends React.HTMLAttributes<HTMLElement> {
 }
 
 declare class Grid extends React.Component<GridProps, any> {}
-declare class InlineGrid extends React.Component<InlineGridProps, any> {}
 declare class GridRow extends React.Component<GridRowProps, any> {}
 declare class GridCol extends React.Component<GridColProps, any> {}
