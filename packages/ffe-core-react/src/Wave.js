@@ -19,8 +19,8 @@ export default function Wave(props) {
                 'ffe-wave',
                 `ffe-wave--${waveHeight}`,
                 `ffe-wave--bg-${color}`,
-                `ffe-wave--dm-bg-${darkmodeColor}`,
                 {
+                    [`ffe-wave--dm-bg-${darkmodeColor}`]: darkmodeColor,
                     'ffe-wave--flip': flip,
                 },
             )}
@@ -61,6 +61,6 @@ Wave.propTypes = {
         'fjell',
     ]).isRequired,
     /** Set the background color in darkmode */
-    darkmodeColor: oneOf(['svart', 'natt']).isRequired,
+    darkmodeColor: oneOf(['svart', 'natt']),
     children: node,
 };

@@ -61,8 +61,8 @@ export interface WaveProps {
         | 'vann'
         | 'vann-30'
         | 'fjell';
-    darkmodeColor: 'svart' | 'natt';
-    children: React.ReactNode;
+    darkmodeColor?: 'svart' | 'natt';
+    children?: React.ReactNode;
 }
 
 declare class DividerLine extends React.Component<DividerLineProps, any> {}
