@@ -60,24 +60,27 @@ devices, and 50 % on medium and large screens).
 
 ### Offset
 
-The pattern is like so: `ffe-grid__col--{size}-offset-{num-of-cols}`
+The pattern is like so: `.ffe-grid__col--{size}-offset-{num-of-cols}`
 
 The offsets work in a similar fashion to the width specification modifiers. Each breakpoint
 can have its own offset if needed.
 
-### Condensed
+### Margin and padding
 
-#### `.ffe-grid--condensed`
+Margin and padding in the top and bottom of grid rows can be applied using the margin and padding modifiers:
 
-Changes the gap between columns from `16px` to `8px`.
+`.ffe-grid__row--padding-{size}`
+`.ffe-grid__row--margin-{size}`
 
-### Inline grid
+Available sizes correspond to the [ffe spacing variables](https://design.sparebank1.no/profil/spacing/). For example, the required modifier to add a `4xl` (80px) margin to a row is `ffe-grid__row-padding-4xl`.
 
-#### `.ffe-grid--inline`
+By default, rows have no padding or margin.
 
-Removes the gap between columns entirely.
+### Gap
 
-### Spacing i topp og bunn
+The gutter/gap between columns can be controlled using the `.ffe-grid--gap-{size}` modifier. Available sizes correspond to the [ffe spacing variables](https://design.sparebank1.no/profil/spacing/), however the largest available size is `lg`.
+
+The default gap is 16px, equivalent to `.ffe-grid--gap-sm`.
 
 ### Background colors
 
