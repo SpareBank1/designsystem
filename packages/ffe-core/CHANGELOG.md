@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [23.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@23.0.0...@sb1/ffe-core@23.0.1) (2022-09-28)
+
+
+### Bug Fixes
+
+* **ffe-core:** sett wave og wave__content til 100% bredde ([dda708d](https://github.com/SpareBank1/designsystem/commit/dda708d58dc7cc3539231322e26e995b4b17c3c8))
+
+
+
+
+
 # [23.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@22.1.0...@sb1/ffe-core@23.0.0) (2022-08-31)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.10.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.10.4...@sb1/ffe-component-index@3.10.5) (2022-09-28)
+
+
+### Bug Fixes
+
+* **component-overview:** endre eksempel til å vise plassering av grid ([ea84626](https://github.com/SpareBank1/designsystem/commit/ea8462683f5e7aab011c301ef87dcff45c77a3cc))
+
+
+
+
+
 ## [3.10.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.10.3...@sb1/ffe-component-index@3.10.4) (2022-09-22)
 
 **Note:** Version bump only for package @sb1/ffe-component-index

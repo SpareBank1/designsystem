@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.1.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner@4.1.15...@sb1/ffe-spinner@4.1.16) (2022-09-28)
+
+**Note:** Version bump only for package @sb1/ffe-spinner
+
+
+
+
+
 ## [4.1.15](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner@4.1.14...@sb1/ffe-spinner@4.1.15) (2022-08-31)
 
 **Note:** Version bump only for package @sb1/ffe-spinner
