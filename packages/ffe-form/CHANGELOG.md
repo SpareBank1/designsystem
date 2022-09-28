@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [21.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@21.0.3...@sb1/ffe-form@21.0.4) (2022-09-28)
+
+
+### Bug Fixes
+
+* **ffe-form:** fix html native date input styling ([cdb1746](https://github.com/SpareBank1/designsystem/commit/cdb1746c187004c38e12cb1f91981e4cf303caab))
+
+
+
+
+
 ## [21.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@21.0.2...@sb1/ffe-form@21.0.3) (2022-09-28)
 
 **Note:** Version bump only for package @sb1/ffe-form
