@@ -80,8 +80,13 @@
     }
 
     &__upload-section-border {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         height: 140px;
         margin: @ffe-spacing-2xs;
+        padding: 0 @ffe-spacing-lg;
         border: 2px dashed @ffe-farge-vann;
         border-radius: 10px;
         position: relative;
@@ -115,7 +120,6 @@
             }
         }
 
-        margin-top: @ffe-spacing-lg;
         margin-bottom: @ffe-spacing-xs;
         display: none;
 
