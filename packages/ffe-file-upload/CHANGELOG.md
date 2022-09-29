@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload@7.0.12...@sb1/ffe-file-upload@7.0.13) (2022-09-29)
+
+
+### Bug Fixes
+
+* **ffe-file-upload:** fikser layout-bug i file upload ([9c0f412](https://github.com/SpareBank1/designsystem/commit/9c0f412f71395d9e0af39713325363e4869c76c9))
+
+
+
+
+
 ## [7.0.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload@7.0.11...@sb1/ffe-file-upload@7.0.12) (2022-09-28)
 
 **Note:** Version bump only for package @sb1/ffe-file-upload
