@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [24.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@23.0.1...@sb1/ffe-core@24.0.0) (2022-10-04)
+
+
+### Bug Fixes
+
+* **ffe-core:** fjerner ffe-farge-graa-wcag ([a1f2172](https://github.com/SpareBank1/designsystem/commit/a1f2172a39e979ee765ba7458a7591af69e2f275))
+
+
+### BREAKING CHANGES
+
+* **ffe-core:** ffe-farge-graa-wcag fjernes helt og erstattes med ffe-farge-varmgraa
+
+
+
+
+
 ## [23.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@23.0.0...@sb1/ffe-core@23.0.1) (2022-09-28)
 
 

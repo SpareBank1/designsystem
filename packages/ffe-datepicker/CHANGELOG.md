@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.0.43](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.42...@sb1/ffe-datepicker@10.0.43) (2022-10-04)
+
+
+### Bug Fixes
+
+* **ffe-datepicker:** bytter ut utfaset farge ([4c4d6d5](https://github.com/SpareBank1/designsystem/commit/4c4d6d5fce5f94e545f9467a46ed7068ddb9d85b))
+
+
+
+
+
 ## [10.0.42](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.41...@sb1/ffe-datepicker@10.0.42) (2022-09-28)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
