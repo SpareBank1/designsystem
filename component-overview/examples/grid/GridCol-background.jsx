@@ -43,7 +43,6 @@ import { Label } from '@sb1/ffe-form-react';
                     sm={12}
                     lg={{ cols: 6, offset: 3 }}
                     background={bgColor}
-                    bottomPadding={false}
                 >
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.

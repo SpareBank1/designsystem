@@ -21,20 +21,7 @@ function camelCaseToDashCase(str) {
         );
 }
 
-const MODIFIER_LIST = [
-    'around',
-    'background',
-    'between',
-    'bottom',
-    'center',
-    'end',
-    'horizontal',
-    'middle',
-    'reverse',
-    'start',
-    'centerText',
-    'top',
-];
+const MODIFIER_LIST = ['background', 'centerText'];
 
 const sizeClasses = (size, def) => {
     switch (typeof def) {
@@ -83,7 +70,6 @@ export default class GridCol extends Component {
 
     render() {
         const {
-            bottomPadding,
             children,
             className,
             element: Element,
@@ -106,7 +92,6 @@ export default class GridCol extends Component {
             sizeClasses('sm', !sm && !lg && !md ? 12 : sm),
             modifiers(this.props),
             backgroundClass(this.props),
-            !bottomPadding ? 'ffe-grid__col--no-bottom-padding' : null,
         ]
             .filter(x => x)
             .join(' ');
@@ -120,7 +105,6 @@ export default class GridCol extends Component {
 }
 
 GridCol.defaultProps = {
-    bottomPadding: true,
     element: 'div',
 };
 
@@ -142,32 +126,10 @@ GridCol.propTypes = {
     className: string,
     /** Specify the DOM element being used to create the GridCol */
     element: node,
-    /** Distribute remaining space around the content elements */
-    around: bool,
-    /** Distribute remaining space between the content elements */
-    between: bool,
-    /** Place content elements at the bottom of the column */
-    bottom: bool,
-    /** Center content horizontally */
-    center: bool,
     /** Center text content horizontally */
     centerText: bool,
     /** The content of the column */
     children: node,
-    /** Place content elements to the right of the column */
-    end: bool,
-    /** Layout column content horizontally and flip flex direction */
-    horizontal: bool,
-    /** Center content vertically */
-    middle: bool,
-    /** Add bottom padding */
-    bottomPadding: bool,
-    /** Reverse layout direction */
-    reverse: bool,
-    /** Place content elements to the left of the column */
-    start: bool,
-    /** Place content elements at the top of the column */
-    top: bool,
     /** Size modifiers for small screen sizes */
     sm: oneOfType([
         /** Number of columns, 0-12 */

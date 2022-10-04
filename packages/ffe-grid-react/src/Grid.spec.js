@@ -27,22 +27,11 @@ describe('Grid', () => {
         expect(el.containsMatchingElement(<p>blah</p>)).toBe(true);
     });
 
-    it('defaults to not setting the "--no-top-padding" modifier', () => {
-        const el = renderShallow();
-
-        expect(el.hasClass('ffe-grid--no-top-padding')).toBe(false);
-    });
-
-    it('sets the "--no-top-padding" modifier if "topPadding" prop is false', () => {
-        const el = renderShallow({ topPadding: false });
-        expect(el.hasClass('ffe-grid--no-top-padding')).toBe(true);
-    });
-
-    it('sets the condensed modifier', () => {
-        const el = renderShallow({ condensed: true });
+    it('sets the gap modifier', () => {
+        const el = renderShallow({ gap: 'xs' });
 
         expect(el.hasClass('ffe-grid')).toBe(true);
-        expect(el.hasClass('ffe-grid--condensed')).toBe(true);
+        expect(el.hasClass('ffe-grid--gap-xs')).toBe(true);
     });
 
     it('preserves other attributes that are passed to it', () => {

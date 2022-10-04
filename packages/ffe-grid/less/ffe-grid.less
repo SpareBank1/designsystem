@@ -1,186 +1,134 @@
-// Grid
-//
-// Markup:
-// <div class="ffe-grid">
-//     <div class="ffe-grid__row">
-//         <div class="ffe-grid__col--lg-3 ffe-grid__col--md-4 ffe-grid__col--sm-6">
-//             3 kolonner bred på store skjermer
-//         </div>
-//         <div class="ffe-grid__col--lg-3 ffe-grid__col--md-4 ffe-grid__col--sm-6">
-//             4 kolonner bred på medium skjermer (tablet)
-//         </div>
-//         <div class="ffe-grid__col--lg-3 ffe-grid__col--md-4 ffe-grid__col--sm-6">
-//             6 kolonner bred på små skjermer (mobil)
-//         </div>
-//         <div class="ffe-grid__col--lg-3 ffe-grid__col--md-4 ffe-grid__col--sm-6">
-//             Litt innhold
-//         </div>
-//     </div>
-// </div>
-//
-// --condensed              - Grid with less internal spacing
-// --inline                 - Grid with no internal spacing
-//
-// Styleguide ffe-grid.grid.1
-
-// Grid row
-//
-// Markup:
-// <div class="ffe-grid">
-//     <div class="ffe-grid__row ffe-grid__row{{modifier_class}}">
-//         <div class="ffe-grid__col--lg-6 ffe-grid__col--md-6 ffe-grid__col--sm-12">
-//             6 kolonner bred på store og medium skjermer
-//         </div>
-//         <div class="ffe-grid__col--lg-6 ffe-grid__col--md-6 ffe-grid__col--sm-12">
-//             12 kolonner bred på små skjermer
-//         </div>
-//     </div>
-// </div>
-//
-// --reverse               - Reverse order
-// --top-padding           - Add top padding
-//
-// Styleguide ffe-grid.grid.2
-
-// Grid row with background color
-//
-// Markup:
-// <div class="ffe-grid">
-//     <div class="ffe-grid__row ffe-grid__row{{modifier_class}}">
-//         <div class="ffe-grid__row-wrapper">
-//             <div class="ffe-grid__col--lg-6 ffe-grid__col--md-6 ffe-grid__col--sm-12">
-//                 6 kolonner bred på store og medium skjermer
-//             </div>
-//             <div class="ffe-grid__col--lg-6 ffe-grid__col--md-6 ffe-grid__col--sm-12">
-//                 12 kolonner bred på små skjermer
-//             </div>
-//         </div>
-//     </div>
-// </div>
-//
-// --bg-blue-ice           - Blue ice background
-// --bg-blue-pale          - Blue pale background
-// --bg-green-mint         - Green mint background
-// --bg-sand               - Sand background
-// --bg-grey-cloud         - Grey cloud background
-// --bg-grey-warm          - Grey warm background
-// --bg-orange-salmon      - Orange salmon background
-// --bg-red                - Red background
-// --bg-blue-sky           - Blue sky background
-// --bg-white              - White background
-//
-// Styleguide ffe-grid.grid.3
-
-// Grid column
-//
-// Markup:
-// <div class="ffe-grid">
-//     <div class="ffe-grid__row ffe-grid__row">
-//         <div class="ffe-grid__col--lg-6 ffe-grid__col--md-6 ffe-grid__col--sm-12 ffe-grid__col{{modifier_class}}">
-//             6 kolonner bred på store og medium skjermer
-//         </div>
-//         <div class="ffe-grid__col--lg-6 ffe-grid__col--md-6 ffe-grid__col--sm-12 ffe-grid__col{{modifier_class}}">
-//             12 kolonner bred på små skjermer
-//         </div>
-//     </div>
-// </div>
-//
-// --bg-blue-ice           - Blue ice background
-// --bg-blue-pale          - Blue pale background
-// --bg-green-mint         - Green mint background
-// --bg-sand               - Sand background
-// --bg-grey-cloud         - Grey cloud background
-// --bg-grey-warm          - Grey warm background
-// --bg-orange-salmon      - Orange salmon background
-// --bg-red                - Red background
-// --bg-blue-sky           - Blue sky background
-// --bg-white              - White background
-// --horizontal            - Set column direction to horizontal
-// --start                 - Align content to start
-// --center                - Center contents
-// --end                   - Align contents to end
-// --top                   - Align contents to top
-// --middle                - Align contents to middle
-// --bottom                - Align contents to bottom
-// --reverse               - Reverse order
-// --around                - Space around
-// --between               - Space between
-// --center-text           - Aligns text to center
-// --no-bottom-padding     - Removes bottom padding
-//
-// Styleguide ffe-grid.grid.4
-
-// Variables
-@ffe-grid-columns: 12;
-@ffe-grid-width: 1280px;
-@ffe-grid-gutter-sm: @ffe-spacing-sm;
-@ffe-grid-gutter-lg: @ffe-spacing-xl;
-@ffe-condensed-grid-gutter-sm: @ffe-spacing-xs;
-@ffe-condensed-grid-gutter-lg: @ffe-spacing-sm;
-
 // Mixins
-.create-column(@size, @total, @current: 0) when (@current <= @total) {
+.create-column(@size, @total, @current: 1) when (@current <= @total) {
     .ffe-grid__col--@{size}-@{current} {
-        flex-basis: ((@current * 100%) / @total);
-        max-width: ((@current * 100%) / @total);
-
-        & when (@current = 0) {
-            display: none;
-        }
-        & when (@current > 0) {
-            display: flex;
-        }
-    }
-
-    .ffe-grid__col--@{size}-offset-@{current} {
-        margin-left: ((@current * 100%) / @total);
+        grid-column: auto / span (@current);
     }
 
     .create-column(@size, @total, @current + 1);
 }
 
-.ffe-grid {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0;
-    padding: @ffe-grid-gutter-sm 0 0;
-    width: 100%;
-
-    &--no-top-padding {
-        padding-top: 0;
+.create-column-offset(@size, @total, @current: 1) when (@current <= @total) {
+    .ffe-grid__col--@{size}-offset-@{current} {
+        grid-column-start: ((@current) + 1);
     }
 
-    @media (min-width: @breakpoint-lg) {
-        padding-top: @ffe-grid-gutter-lg;
-
-        &--no-top-padding {
-            padding-top: 0;
-        }
-    }
-
-    &--inline {
-        padding: 0;
-    }
+    .create-column-offset(@size, @total, @current + 1);
 }
 
 .ffe-grid__row {
-    display: flex;
-    flex: 0 1 auto;
-    flex-direction: row;
-    flex-wrap: wrap;
-    max-width: @ffe-grid-width;
-    width: 100%;
+    display: grid;
+    gap: @ffe-spacing-sm;
+    grid-template-columns: repeat(12, 1fr);
 
-    @media (min-width: @breakpoint-lg) {
-        margin-left: (@ffe-grid-gutter-lg / 2 * -1);
-        margin-right: (@ffe-grid-gutter-lg / 2 * -1);
+    .ffe-grid--gap-none & {
+        gap: 0;
     }
+
+    .ffe-grid--gap-2xs & {
+        gap: @ffe-spacing-2xs;
+    }
+
+    .ffe-grid--gap-xs & {
+        gap: @ffe-spacing-xs;
+    }
+
+    .ffe-grid--gap-sm & {
+        gap: @ffe-spacing-sm;
+    }
+
+    .ffe-grid--gap-md & {
+        gap: @ffe-spacing-md;
+    }
+
+    .ffe-grid--gap-lg & {
+        gap: @ffe-spacing-lg;
+    }
+
+    &--padding-2xs {
+        padding: @ffe-spacing-2xs 0;
+    }
+
+    &--padding-xs {
+        padding: @ffe-spacing-xs 0;
+    }
+
+    &--padding-sm {
+        padding: @ffe-spacing-sm 0;
+    }
+
+    &--padding-md {
+        padding: @ffe-spacing-md 0;
+    }
+
+    &--padding-lg {
+        padding: @ffe-spacing-lg 0;
+    }
+
+    &--padding-xl {
+        padding: @ffe-spacing-xl 0;
+    }
+
+    &--padding-2xl {
+        padding: @ffe-spacing-2xl 0;
+    }
+
+    &--padding-3xl {
+        padding: @ffe-spacing-3xl 0;
+    }
+
+    &--padding-4xl {
+        padding: @ffe-spacing-4xl 0;
+    }
+
+    &--padding-5xl {
+        padding: @ffe-spacing-5xl 0;
+    }
+
+    &--margin-2xs {
+        margin: @ffe-spacing-2xs 0;
+    }
+
+    &--margin-xs {
+        margin: @ffe-spacing-xs 0;
+    }
+
+    &--margin-sm {
+        margin: @ffe-spacing-sm 0;
+    }
+
+    &--margin-md {
+        margin: @ffe-spacing-md 0;
+    }
+
+    &--margin-lg {
+        margin: @ffe-spacing-lg 0;
+    }
+
+    &--margin-xl {
+        margin: @ffe-spacing-xl 0;
+    }
+
+    &--margin-2xl {
+        margin: @ffe-spacing-2xl 0;
+    }
+
+    &--margin-3xl {
+        margin: @ffe-spacing-3xl 0;
+    }
+
+    &--margin-4xl {
+        margin: @ffe-spacing-4xl 0;
+    }
+
+    &--margin-5xl {
+        margin: @ffe-spacing-5xl 0;
+    }
+
     &--bg-frost-30 {
         background-color: @ffe-farge-frost-30;
         .native & {
             @media (prefers-color-scheme: dark) {
-                background-color: @ffe-black-darkmode;
+                background-color: @ffe-farge-svart;
             }
         }
     }
@@ -189,7 +137,7 @@
         background-color: @ffe-farge-sand;
         .native & {
             @media (prefers-color-scheme: dark) {
-                background-color: @ffe-black-darkmode;
+                background-color: @ffe-farge-svart;
             }
         }
     }
@@ -198,7 +146,7 @@
         background-color: @ffe-farge-sand-70;
         .native & {
             @media (prefers-color-scheme: dark) {
-                background-color: @ffe-black-darkmode;
+                background-color: @ffe-farge-svart;
             }
         }
     }
@@ -207,7 +155,7 @@
         background-color: @ffe-farge-sand-30;
         .native & {
             @media (prefers-color-scheme: dark) {
-                background-color: @ffe-black-darkmode;
+                background-color: @ffe-farge-svart;
             }
         }
     }
@@ -215,7 +163,7 @@
         background-color: @ffe-farge-syrin-70;
         .native & {
             @media (prefers-color-scheme: dark) {
-                background-color: @ffe-black-darkmode;
+                background-color: @ffe-farge-svart;
             }
         }
     }
@@ -223,7 +171,7 @@
         background-color: @ffe-farge-syrin-30;
         .native & {
             @media (prefers-color-scheme: dark) {
-                background-color: @ffe-black-darkmode;
+                background-color: @ffe-farge-svart;
             }
         }
     }
@@ -233,7 +181,7 @@
         color: @ffe-farge-hvit;
         .native & {
             @media (prefers-color-scheme: dark) {
-                background-color: @ffe-black-darkmode;
+                background-color: @ffe-farge-svart;
             }
         }
     }
@@ -241,7 +189,7 @@
         background-color: @ffe-farge-vann-30;
         .native & {
             @media (prefers-color-scheme: dark) {
-                background-color: @ffe-black-darkmode;
+                background-color: @ffe-farge-svart;
             }
         }
     }
@@ -251,7 +199,7 @@
         color: @ffe-farge-hvit;
         .native & {
             @media (prefers-color-scheme: dark) {
-                background-color: @ffe-black-darkmode;
+                background-color: @ffe-farge-svart;
             }
         }
     }
@@ -260,102 +208,7 @@
         background-color: @ffe-farge-hvit;
         .native & {
             @media (prefers-color-scheme: dark) {
-                background-color: @ffe-black-darkmode;
-            }
-        }
-    }
-
-    &--reverse,
-    &--reverse > &-wrapper {
-        flex-direction: row-reverse;
-        flex-wrap: wrap-reverse;
-    }
-
-    &--top-padding {
-        padding-top: @ffe-grid-gutter-sm;
-
-        @media (min-width: @breakpoint-lg) {
-            padding-top: @ffe-grid-gutter-lg;
-        }
-    }
-}
-
-[class*='ffe-grid__row--bg-'] {
-    max-width: 100%;
-}
-
-[class^='ffe-grid__col'] > * {
-    max-width: 100%;
-}
-
-.ffe-grid__row-wrapper {
-    &:extend(.ffe-grid__row);
-
-    margin: 0 auto;
-}
-
-[class*='ffe-grid__col'] {
-    flex: 1 1;
-    flex-direction: column;
-    max-width: 100%;
-    padding: 0 (@ffe-grid-gutter-sm / 2) @ffe-grid-gutter-sm;
-
-    @media (min-width: @breakpoint-lg) {
-        padding: 0 (@ffe-grid-gutter-lg / 2) @ffe-grid-gutter-lg;
-    }
-
-    .ffe-grid--condensed & {
-        padding: 0 (@ffe-condensed-grid-gutter-sm / 2)
-            @ffe-condensed-grid-gutter-sm;
-
-        @media (min-width: @breakpoint-lg) {
-            padding: 0 (@ffe-condensed-grid-gutter-lg / 2)
-                @ffe-condensed-grid-gutter-lg;
-        }
-    }
-
-    .ffe-grid--inline & {
-        padding: 0;
-    }
-}
-[class*='ffe-grid__col--bg-'] {
-    @media (min-width: @breakpoint-lg) {
-        position: relative;
-
-        &::before,
-        &::after {
-            background-color: inherit;
-            bottom: 0;
-            content: '';
-            position: absolute;
-            top: 0;
-            width: (@ffe-grid-gutter-lg / 2);
-        }
-        &::before {
-            left: -(@ffe-grid-gutter-lg / 2);
-        }
-        &::after {
-            right: -(@ffe-grid-gutter-lg / 2);
-        }
-        .ffe-grid--condensed & {
-            &::before,
-            &::after {
-                bottom: 0;
-                position: absolute;
-                top: 0;
-                width: (@ffe-condensed-grid-gutter-lg / 2);
-            }
-            &::before {
-                left: -(@ffe-condensed-grid-gutter-lg / 2);
-            }
-            &::after {
-                right: -(@ffe-condensed-grid-gutter-lg / 2);
-            }
-        }
-        .ffe-grid--inline & {
-            &::before,
-            &::after {
-                display: none;
+                background-color: @ffe-farge-svart;
             }
         }
     }
@@ -366,7 +219,7 @@
         background-color: @ffe-farge-frost-30;
         .native & {
             @media (prefers-color-scheme: dark) {
-                background-color: @ffe-black-darkmode;
+                background-color: @ffe-farge-svart;
             }
         }
     }
@@ -375,7 +228,7 @@
         background-color: @ffe-farge-sand;
         .native & {
             @media (prefers-color-scheme: dark) {
-                background-color: @ffe-black-darkmode;
+                background-color: @ffe-farge-svart;
             }
         }
     }
@@ -384,7 +237,7 @@
         background-color: @ffe-farge-sand-70;
         .native & {
             @media (prefers-color-scheme: dark) {
-                background-color: @ffe-black-darkmode;
+                background-color: @ffe-farge-svart;
             }
         }
     }
@@ -393,7 +246,7 @@
         background-color: @ffe-farge-sand-30;
         .native & {
             @media (prefers-color-scheme: dark) {
-                background-color: @ffe-black-darkmode;
+                background-color: @ffe-farge-svart;
             }
         }
     }
@@ -401,7 +254,7 @@
         background-color: @ffe-farge-syrin-70;
         .native & {
             @media (prefers-color-scheme: dark) {
-                background-color: @ffe-black-darkmode;
+                background-color: @ffe-farge-svart;
             }
         }
     }
@@ -409,7 +262,7 @@
         background-color: @ffe-farge-syrin-30;
         .native & {
             @media (prefers-color-scheme: dark) {
-                background-color: @ffe-black-darkmode;
+                background-color: @ffe-farge-svart;
             }
         }
     }
@@ -419,7 +272,7 @@
         color: @ffe-farge-hvit;
         .native & {
             @media (prefers-color-scheme: dark) {
-                background-color: @ffe-black-darkmode;
+                background-color: @ffe-farge-svart;
             }
         }
     }
@@ -427,7 +280,7 @@
         background-color: @ffe-farge-vann-30;
         .native & {
             @media (prefers-color-scheme: dark) {
-                background-color: @ffe-black-darkmode;
+                background-color: @ffe-farge-svart;
             }
         }
     }
@@ -436,7 +289,7 @@
         color: @ffe-farge-hvit;
         .native & {
             @media (prefers-color-scheme: dark) {
-                background-color: @ffe-black-darkmode;
+                background-color: @ffe-farge-svart;
             }
         }
     }
@@ -445,116 +298,30 @@
         background-color: @ffe-farge-hvit;
         .native & {
             @media (prefers-color-scheme: dark) {
-                background-color: @ffe-black-darkmode;
+                background-color: @ffe-farge-svart;
             }
         }
-    }
-
-    &--reverse {
-        flex-direction: column-reverse;
-    }
-
-    &--horizontal {
-        flex-direction: row;
-    }
-
-    &--horizontal&--start {
-        justify-content: flex-start;
-    }
-
-    &--horizontal&--center {
-        align-items: normal;
-        justify-content: center;
-    }
-
-    &--horizontal&--end {
-        align-items: normal;
-        justify-content: flex-end;
-    }
-
-    &--horizontal&--top {
-        justify-content: normal;
-        align-items: flex-start;
-    }
-
-    &--horizontal&--middle {
-        justify-content: normal;
-        align-items: center;
-    }
-
-    &--horizontal&--bottom {
-        justify-content: normal;
-        align-items: flex-end;
-    }
-
-    &--horizontal&--reverse {
-        flex-direction: row-reverse;
-    }
-
-    &--start {
-        align-items: flex-start;
-    }
-
-    &--center {
-        align-items: center;
-    }
-
-    &--end {
-        align-items: flex-end;
-    }
-
-    &--top {
-        justify-content: flex-start;
-    }
-
-    &--middle {
-        justify-content: center;
-    }
-
-    &--bottom {
-        justify-content: flex-end;
-    }
-
-    &--around {
-        justify-content: space-around;
-    }
-
-    &--between {
-        justify-content: space-between;
     }
 
     &--center-text {
         text-align: center;
     }
-
-    &--no-bottom-padding,
-    .ffe-grid--condensed &--no-bottom-padding {
-        padding-bottom: 0;
-    }
 }
 
 .create-column(sm, 12);
+.create-column-offset(sm, 12);
 
 @media (min-width: @breakpoint-md) {
     .create-column(md, 12);
-
-    .ffe-grid__col--md-offset-0 {
-        margin-left: 0;
-    }
+    .create-column-offset(md, 12);
 }
 
 @media (min-width: @breakpoint-lg) {
     .create-column(lg, 12);
-
-    .ffe-grid__col--lg-offset-0 {
-        margin-left: 0;
-    }
+    .create-column-offset(lg, 12);
 }
 
 @media (min-width: @breakpoint-xl) {
     .create-column(xl, 12);
-
-    .ffe-grid__col--xl-offset-0 {
-        margin-left: 0;
-    }
+    .create-column-offset(xl, 12);
 }

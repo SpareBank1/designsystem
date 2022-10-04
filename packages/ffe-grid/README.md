@@ -38,11 +38,13 @@ It's easier to explain with an example:
 ```html
 <div class="ffe-grid">
     <div class="ffe-grid__row">
-        <div class="
+        <div
+            class="
             ffe-grid__col--sm-12
             ffe-grid__col--md-6
             ffe-grid__col--lg-3
-        ">
+        "
+        >
             <!-- content -->
         </div>
     </div>
@@ -56,131 +58,81 @@ You only have to specify one of these if you want - each column defaults to a 10
 for viewports that are not specified (i.e. `.ffe-grid__col--md-6` will be 100 % wide on small
 devices, and 50 % on medium and large screens).
 
-You can set the colum size to 0, e.g. `ffe-grid__col--md-0`. This enabled you to remove/add columns for specific screen-sizes.
-See the "Disappearing columns example" in the example html for more details.
-
 ### Offset
 
-The pattern is like so: `ffe-grid__col--{size}-offset-{num-of-cols}`
+The pattern is like so: `.ffe-grid__col--{size}-offset-{num-of-cols}`
 
 The offsets work in a similar fashion to the width specification modifiers. Each breakpoint
 can have its own offset if needed.
 
-### Condensed
+### Margin and padding
 
-#### `.ffe-grid--condensed`
+Margin and padding in the top and bottom of grid rows can be applied using the margin and padding modifiers:
 
-Reduce gutter width to 20px, resp. 10px on smaller screens.
+`.ffe-grid__row--padding-{size}`
+`.ffe-grid__row--margin-{size}`
 
-### Padding
+Available sizes correspond to the [ffe spacing variables](https://design.sparebank1.no/profil/spacing/). For example, the required modifier to add a `4xl` (80px) margin to a row is `ffe-grid__row-padding-4xl`.
 
-#### `.ffe-grid--no-top-padding`
+By default, rows have no padding or margin.
 
-Remove the default top padding from the grid itself
+### Gap
 
-#### `.ffe-grid__row--top-padding`
+The gutter/gap between columns can be controlled using the `.ffe-grid--gap-{size}` modifier. Available sizes correspond to the [ffe spacing variables](https://design.sparebank1.no/profil/spacing/), however the largest available size is `lg`.
 
-Add padding to the top of a grid row
+The default gap is 16px, equivalent to `.ffe-grid--gap-sm`.
 
-#### `.ffe-grid__col--no-bottom-padding`
+### Background colors
 
-Remove the default bottom padding from the column
-
-### Colours
-
-Use a background colour on the rows. This requires that the children is wrapped in `.ffe-grid__row-wrapper`
+The background color of rows can be changed using modifiers
 
 ```html
-<div class="ffe-grid__row ffe-grid__row--bg-sand ffe-grid__row--top-padding">
-  <div class="ffe-grid__row-wrapper">
-      <div class="ffe-grid__col--md-6">
-          <div class="ffe-grid__content"></div>
-      </div>
-      <div class="ffe-grid__col--md-6">
-          <div class="ffe-grid__content"></div>
-      </div>
-  </div>
+<div class="ffe-grid__row ffe-grid__row--bg-sand">
+    <div class="ffe-grid__col--md-6">
+        <!-- content -->
+    </div>
+    <div class="ffe-grid__col--md-6">
+        <!-- content -->
+    </div>
 </div>
 ```
 
-#### `.ffe-grid__row--bg-blue-pale`
+#### `.ffe-grid__row--bg-frost-30`
 
-Adds the `@ffe-blue-pale` colour as a background for the row
-
-#### `.ffe-grid__row--bg-blue-cobalt`
-
-Adds the `@ffe-blue-cobalt` colour as a background for the row
-
-#### `.ffe-grid__row--bg-blue-ice`
-
-Adds the `@ffe-blue-ice` colour as a background for the row
-
-#### `.ffe-grid__row--bg-purple-magenta`
-
-Adds the `@ffe-purple-magenta` colour as a background for the row
-
-#### `.ffe-grid__row--bg-green-mint`
-
-Adds the `@ffe-green-mint` colour as a background for the row
+Sets the row background color to `@ffe-farge-frost-30`
 
 #### `.ffe-grid__row--bg-sand`
 
-Adds the `@ffe-sand` colour as a background for the row
+Sets the row background color to `@ffe-farge-sand`
 
-#### `.ffe-grid__row--bg-grey-cloud`
+#### `.ffe-grid__row--bg-sand-70`
 
-Adds the `@ffe-grey-cloud` colour as a background for the row
+Sets the row background color to `@ffe-farge-sand-70`
 
-### Flexbox
+#### `.ffe-grid__row--bg-sand-30`
 
-Since the grid is based on the flexbox layout model, there's a few extra modifiers that's available
-to you.
+Sets the row background color to `@ffe-farge-sand-30`
 
-#### Rows
+#### `.ffe-grid__row--bg-syrin-70`
 
-##### `.ffe-grid__row--reverse`
+Sets the row background color to `@ffe-farge-syrin-70`
 
-Reverses the grid columns so that they're laid out right to left instead
+#### `.ffe-grid__row--bg-syrin-30`
 
-#### Columns
+Sets the row background color to `@ffe-farge-syrin-30`
 
-##### `.ffe-grid__col--horizontal`
+#### `.ffe-grid__row--bg-vann`
 
-Aligns the content of a cell horizontally
+Sets the row background color to `@ffe-farge-vann`
 
-##### `.ffe-grid__col--reverse`
+#### `.ffe-grid__row--bg-vann-30`
 
-Aligns the content of a cell in the reverse order
-(Can be used with `--horizontal` for a reversed horizontal order)
+Sets the row background color to `@ffe-farge-vann-30`
 
-##### `.ffe-grid__col--start`
+#### `.ffe-grid__row--bg-fjell`
 
-Aligns the content of a cell to the left
+Sets the row background color to `@ffe-farge-fjell`
 
-##### `.ffe-grid__col--center`
+#### `.ffe-grid__row--bg-hvit`
 
-Aligns the content of a cell to the center
-
-##### `.ffe-grid__col--end`
-
-Aligns the content of a cell to the right
-
-##### `.ffe-grid__col--top`
-
-Aligns the content of a cell to the top
-
-##### `.ffe-grid__col--middle`
-
-Aligns the content of a cell to the vertical middle
-
-##### `.ffe-grid__col--bottom`
-
-Aligns the content of a cell to the bottom
-
-##### `.ffe-grid__col--around`
-
-Space the content out with space around each item
-
-##### `.ffe-grid__col--between`
-
-Space the content out with space between each item
+Sets the row background color to `@ffe-farge-hvit`

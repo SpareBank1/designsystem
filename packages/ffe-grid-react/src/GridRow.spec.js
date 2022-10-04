@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { GridRow, GridCol } from '.';
+import { GridRow } from '.';
 import backgroundColors from './background-colors';
 
 const defaultProps = {
@@ -29,13 +29,6 @@ describe('GridRow', () => {
         expect(el.containsMatchingElement(<p>blah</p>)).toBe(true);
     });
 
-    it('sets the reverse modifier', () => {
-        const el = renderShallow({ reverse: true });
-
-        expect(el.hasClass('ffe-grid__row')).toBe(true);
-        expect(el.hasClass('ffe-grid__row--reverse')).toBe(true);
-    });
-
     it('adds correct class for all valid background colors', () => {
         const el = renderShallow();
         backgroundColors.forEach(background => {
@@ -57,27 +50,6 @@ describe('GridRow', () => {
         expect(() => renderShallow({ background: 'blue-cobalt' })).toThrow(
             'Support for the blue-cobalt background on <GridRow> has been removed, please see the CHANGELOG',
         );
-    });
-
-    it('renders coloured rows with extra wrappers', () => {
-        backgroundColors.forEach(background => {
-            const el = renderShallow({
-                background,
-                children: (
-                    <GridCol lg={12}>
-                        <p>blah</p>
-                    </GridCol>
-                ),
-            });
-            expect(el.childAt(0).hasClass('ffe-grid__row-wrapper')).toBe(true);
-        });
-    });
-
-    it('sets the topPadding modifier', () => {
-        const el = renderShallow({ topPadding: true });
-
-        expect(el.hasClass('ffe-grid__row')).toBe(true);
-        expect(el.hasClass('ffe-grid__row--top-padding')).toBe(true);
     });
 
     it('preserves other attributes that are passed to it', () => {
