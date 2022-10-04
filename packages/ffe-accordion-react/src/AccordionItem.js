@@ -4,6 +4,7 @@ import { v4 as uuid } from 'uuid';
 import { ChevronIkon } from '@sb1/ffe-icons-react';
 import Collapse from '@sb1/ffe-collapse-react';
 import classNames from 'classnames';
+import { Heading6 } from '@sb1/ffe-core-react';
 
 const AccordionItem = ({
     children,
@@ -17,6 +18,7 @@ const AccordionItem = ({
 }) => {
     const [isExpanded, setIsExpanded] = useState(defaultOpen);
     const [isAnimating, setIsAnimating] = useState(false);
+    const [isFocused, setFocus] = useState(false);
     const buttonId = useRef(uuid());
     const contentId = useRef(uuid());
 
@@ -35,13 +37,7 @@ const AccordionItem = ({
         }
     };
 
-    const {
-        headingLevel,
-        onFocus,
-        onBlur,
-        forwardedRef,
-        ...rest
-    } = accordionProps;
+    const { headingLevel, forwardedRef, ...rest } = accordionProps;
 
     const collapseHidden = !isExpanded && !isAnimating;
 
@@ -49,12 +45,14 @@ const AccordionItem = ({
         <div
             className={classNames(className, 'ffe-accordion-item', {
                 'ffe-accordion-item--open': isExpanded,
+                'ffe-accordion-item--focus': isFocused,
             })}
             {...rest}
         >
-            {React.createElement(
-                `h${headingLevel}`,
-                { className: 'ffe-h6' },
+            <Heading6
+                className="ffe-accordion-item__heading"
+                aria-level={headingLevel}
+            >
                 <button
                     type="button"
                     id={buttonId.current}
@@ -62,19 +60,24 @@ const AccordionItem = ({
                     aria-expanded={isExpanded ? 'true' : 'false'}
                     aria-controls={contentId.current}
                     aria-label={ariaLabel}
-                    className={classNames('ffe-accordion__heading-button', {
-                        'ffe-accordion__heading-button--open': isExpanded,
-                    })}
+                    className={classNames(
+                        'ffe-accordion-item__heading-button',
+                        {
+                            'ffe-accordion-item__heading-button--open': isExpanded,
+                        },
+                    )}
                     onClick={handleOnClick}
-                    onFocus={onFocus}
-                    onBlur={onBlur}
+                    onFocus={() => setFocus(true)}
+                    onBlur={() => setFocus(false)}
                 >
-                    <span className="ffe-accordion__heading-button-content">
+                    <span className="ffe-accordion-item__heading-button-content">
                         {heading}
-                        <ChevronIkon className="ffe-accordion__heading-icon" />
+                        <span className="ffe-accordion-item__heading-icon-wrapper">
+                            <ChevronIkon className="ffe-accordion-item__heading-icon" />
+                        </span>
                     </span>
-                </button>,
-            )}
+                </button>
+            </Heading6>
             <Collapse
                 isOpen={isExpanded}
                 onRest={() => setIsAnimating(false)}
@@ -84,7 +87,7 @@ const AccordionItem = ({
                 role="region"
             >
                 {!collapseHidden && (
-                    <div className="ffe-accordion-body">{children}</div>
+                    <div className="ffe-accordion-item__body">{children}</div>
                 )}
             </Collapse>
         </div>
