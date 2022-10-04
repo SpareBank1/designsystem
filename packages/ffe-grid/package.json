@@ -1,6 +1,6 @@
 {
   "name": "@sb1/ffe-grid",
-  "version": "12.1.14",
+  "version": "13.0.0",
   "description": "A grid component for use within the FFE framework",
   "keywords": [
     "ffe"

@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@11.1.8...@sb1/ffe-grid-react@12.0.0) (2022-10-04)
+
+
+### Features
+
+* **ffe-grid-react:** fjerner condensed og inline, legger til modifiere for gap og spacing ([453e254](https://github.com/SpareBank1/designsystem/commit/453e2547e75070772f3cbeb5ff7113b34bdf9272))
+* **ffe-grid-react:** omskriving av grid ([bf429d8](https://github.com/SpareBank1/designsystem/commit/bf429d89cb6e5af8553026ca562d57d51888edcf))
+
+
+### BREAKING CHANGES
+
+* **ffe-grid-react:** og -modifieren fjernes, og erstattes med modifiere for gap, margin og padding
+* **ffe-grid-react:** grid-styling er skrevet om, og mange modifiere er fjernet
+
+
+
+
+
 ## [11.1.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@11.1.7...@sb1/ffe-grid-react@11.1.8) (2022-09-09)
 
 **Note:** Version bump only for package @sb1/ffe-grid-react

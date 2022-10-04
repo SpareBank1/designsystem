@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.10.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.10.7...@sb1/ffe-component-index@3.10.8) (2022-10-04)
+
+
+### Bug Fixes
+
+* **component-overview:** fjerner ubrukt prop ([df3bf06](https://github.com/SpareBank1/designsystem/commit/df3bf064f7269609c88392552592c5a04db3a042))
+* **component-overview:** oppdaterte eksempler på grid ([eda3ab8](https://github.com/SpareBank1/designsystem/commit/eda3ab8d2240edf3a76aa9240a82293ada7aa012))
+
+
+
+
+
 ## [3.10.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.10.6...@sb1/ffe-component-index@3.10.7) (2022-09-29)
 
 **Note:** Version bump only for package @sb1/ffe-component-index

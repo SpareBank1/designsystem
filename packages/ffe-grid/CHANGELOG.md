@@ -3,6 +3,37 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [13.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@12.1.14...@sb1/ffe-grid@13.0.0) (2022-10-04)
+
+
+### Features
+
+* **ffe-grid:** fjerner condensed og inline, legger til modifiere for gap og spacing ([ba0f8ad](https://github.com/SpareBank1/designsystem/commit/ba0f8ad2025b4a65d1ca250a73de0b3c3e8a5ab1))
+* **ffe-grid:** omskriving av grid-styling ([c2f9d59](https://github.com/SpareBank1/designsystem/commit/c2f9d5993a082db9bd2af5a7d5e43ed1d29757d9))
+
+
+### BREAKING CHANGES
+
+* **ffe-grid:** og  fjernes, og erstattes med modifiere for gap, margin og padding
+* **ffe-grid:** grid-styling er skrevet om, og disse modifierne er fjernet
+
+* .ffe-grid__row--reverse
+* .ffe-grid__row--horizontal
+* .ffe-grid__col--reverse
+* .ffe-grid__col--horizontal
+* .ffe-grid__col--start
+* .ffe-grid__col--center
+* .ffe-grid__col--end
+* .ffe-grid__col--top
+* .ffe-grid__col--middle
+* .ffe-grid__col--bottom
+* .ffe-grid__col--around
+* .ffe-grid__col--between
+
+
+
+
+
 ## [12.1.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@12.1.13...@sb1/ffe-grid@12.1.14) (2022-09-28)
 
 **Note:** Version bump only for package @sb1/ffe-grid
