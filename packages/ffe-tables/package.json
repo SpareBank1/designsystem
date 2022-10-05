@@ -11,12 +11,12 @@
         "url": "ssh://git@github.com:SpareBank1/designsystem.git"
     },
     "scripts": {
-        "lint": "stylelint less/*.less",
+        "lint": "ffe-buildtool stylelint less/*.less",
         "test": "npm run lint"
     },
     "devDependencies": {
-        "@sb1/ffe-core": "^26.0.0",
-        "stylelint": "^13.0.0"
+        "@sb1/ffe-buildtool": "^0.4.1",
+        "@sb1/ffe-core": "^26.0.0"
     },
     "peerDependencies": {
         "@sb1/ffe-core": "*"
