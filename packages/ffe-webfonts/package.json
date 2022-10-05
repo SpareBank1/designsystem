@@ -20,12 +20,12 @@
   },
   "scripts": {
     "build": "lessc fonts-inline.less fonts.css && lessc sb1-fonts-inline.less sb1-fonts.css",
-    "lint": "stylelint *.less",
+    "lint": "ffe-buildtool stylelint *.less",
     "test": "npm run lint"
   },
   "devDependencies": {
-    "less": "^4.1.2",
-    "stylelint": "^13.0.0"
+    "@sb1/ffe-buildtool": "^0.4.1",
+    "less": "^4.1.2"
   },
   "publishConfig": {
     "access": "public"
