@@ -2,6 +2,7 @@ const { Command } = require('commander');
 const babelCommand = require('./commands/babelCommand');
 const copyfileCommand = require('./commands/copyfileCommand');
 const jestCommand = require('./commands/jestCommand');
+const stylelintCommand = require('./commands/stylelintCommand');
 
 const program = new Command();
 
@@ -55,6 +56,14 @@ program
         }
 
         jestCommand(args);
+    });
+
+program
+    .command('stylelint')
+    .description('lint code with stylelint')
+    .allowUnknownOption()
+    .action((options, { args }) => {
+        stylelintCommand(args);
     });
 
 program.parse(process.argv);

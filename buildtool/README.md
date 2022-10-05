@@ -29,6 +29,7 @@ Commands:
   babel [options] [source]        compile code with babel
   babel-watch [options] [source]  continously compile code with babel
   jest [options]                  test code with jest
+  stylelint                       lint code with stylelint
   help [command]                  display help for command
 ```
 
@@ -84,5 +85,24 @@ test code with jest
 
 Options:
   --watch     Watch files for changes and rerun tests. Same as jest --watchAll
+  -h, --help  display help for command
+```
+
+### stylelint
+
+This command is a wrapper around [stylelint](https://stylelint.io/), a linter for css.
+
+Any parameter passed to this command will be forwarded to stylelint.
+
+The config file [config/stylelint.config.js](./config/stylelint.config.js)
+provides some formatting rules used in this monorepo.
+
+```
+$ ffe-buildtool help stylelint
+Usage: ffe-buildtool stylelint [options]
+
+lint code with stylelint
+
+Options:
   -h, --help  display help for command
 ```
