@@ -16,16 +16,16 @@
         "url": "ssh://git@github.com:SpareBank1/designsystem.git"
     },
     "scripts": {
-        "lint": "stylelint less/*.less",
+        "lint": "ffe-buildtool stylelint less/*.less",
         "test": "npm run lint",
         "clean": "rm -rf css/ gen-src/ lib/",
         "build": "./scripts/build.js tokens.config.js && ./scripts/build-custom-mq.js less/breakpoints.less css/custom-media-queries.css && tsc gen-src/index.ts --declaration --outDir lib"
     },
     "devDependencies": {
+        "@sb1/ffe-buildtool": "^0.4.1",
         "case": "^1.5.5",
         "less": "^4.1.2",
         "postcss": "^8.3.6",
-        "stylelint": "^13.0.0",
         "typescript": "^4.6.4"
     },
     "publishConfig": {
