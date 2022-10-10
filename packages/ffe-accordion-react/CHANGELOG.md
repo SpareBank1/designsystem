@@ -3,346 +3,192 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [9.2.15](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@9.2.14...@sb1/ffe-accordion-react@9.2.15) (2022-09-09)
+# [9.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@9.2.15...@sb1/ffe-accordion-react@9.3.0) (2022-10-10)
 
+### Features
+
+-   **ffe-accordion-react:** update design ([063916e](https://github.com/SpareBank1/designsystem/commit/063916e1e17cd3d1417ffe56fad7c1590d8ec741))
+
+## [9.2.15](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@9.2.14...@sb1/ffe-accordion-react@9.2.15) (2022-09-09)
 
 ### Bug Fixes
 
-* **ffe-accordion-react:** Add hint about ffe-collapse to README ([e451dd7](https://github.com/SpareBank1/designsystem/commit/e451dd7409bc24fa7e41cf88fb325916c43a2e28)), closes [#1323](https://github.com/SpareBank1/designsystem/issues/1323)
-
-
-
-
+-   **ffe-accordion-react:** Add hint about ffe-collapse to README ([e451dd7](https://github.com/SpareBank1/designsystem/commit/e451dd7409bc24fa7e41cf88fb325916c43a2e28)), closes [#1323](https://github.com/SpareBank1/designsystem/issues/1323)
 
 ## [9.2.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@9.2.13...@sb1/ffe-accordion-react@9.2.14) (2022-03-02)
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react
 
-
-
-
-
 ## [9.2.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@9.2.12...@sb1/ffe-accordion-react@9.2.13) (2022-02-23)
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react
-
-
-
-
 
 ## [9.2.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@9.2.11...@sb1/ffe-accordion-react@9.2.12) (2022-02-18)
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react
 
-
-
-
-
 ## [9.2.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@9.2.10...@sb1/ffe-accordion-react@9.2.11) (2022-01-27)
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react
-
-
-
-
 
 ## [9.2.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@9.2.9...@sb1/ffe-accordion-react@9.2.10) (2022-01-27)
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react
 
-
-
-
-
 ## [9.2.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@9.2.8...@sb1/ffe-accordion-react@9.2.9) (2022-01-25)
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react
-
-
-
-
 
 ## [9.2.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@9.2.7...@sb1/ffe-accordion-react@9.2.8) (2022-01-24)
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react
 
-
-
-
-
 ## [9.2.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@9.2.6...@sb1/ffe-accordion-react@9.2.7) (2022-01-18)
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react
-
-
-
-
 
 ## [9.2.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@9.2.5...@sb1/ffe-accordion-react@9.2.6) (2021-12-17)
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react
 
-
-
-
-
 ## [9.2.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@9.2.4...@sb1/ffe-accordion-react@9.2.5) (2021-12-10)
-
 
 ### Bug Fixes
 
-* **ffe-accordion-react:** use ffe-buildtool for transpiling ([4e44d6f](https://github.com/SpareBank1/designsystem/commit/4e44d6f7eb68c281eb8ba59ff708e552b2612aae)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
-
-
-
-
+-   **ffe-accordion-react:** use ffe-buildtool for transpiling ([4e44d6f](https://github.com/SpareBank1/designsystem/commit/4e44d6f7eb68c281eb8ba59ff708e552b2612aae)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
 
 ## [9.2.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@9.2.3...@sb1/ffe-accordion-react@9.2.4) (2021-11-04)
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react
 
-
-
-
-
 ## [9.2.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@9.2.2...@sb1/ffe-accordion-react@9.2.3) (2021-03-30)
-
 
 ### Performance Improvements
 
-* **ffe-accordion-react:** dont render collapsed content when closed ([b500738](https://github.com/SpareBank1/designsystem/commit/b500738fb54937f32cb64431e3c4d72114520766))
-
-
-
-
+-   **ffe-accordion-react:** dont render collapsed content when closed ([b500738](https://github.com/SpareBank1/designsystem/commit/b500738fb54937f32cb64431e3c4d72114520766))
 
 ## [9.2.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@9.2.1...@sb1/ffe-accordion-react@9.2.2) (2021-03-15)
 
-
 ### Bug Fixes
 
-* **ffe-accordion-react:** broadens version of peer dependencies ([c3540a5](https://github.com/SpareBank1/designsystem/commit/c3540a59c6ae4702cff153f08a664113b1ebb6a4))
-
-
-
-
+-   **ffe-accordion-react:** broadens version of peer dependencies ([c3540a5](https://github.com/SpareBank1/designsystem/commit/c3540a59c6ae4702cff153f08a664113b1ebb6a4))
 
 ## [9.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@9.2.0...@sb1/ffe-accordion-react@9.2.1) (2021-03-08)
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react
 
-
-
-
-
 # [9.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@9.1.6...@sb1/ffe-accordion-react@9.2.0) (2021-03-08)
-
 
 ### Features
 
-* **ffe-accordion-react:** possible to pass properties to button ([4bb3d34](https://github.com/SpareBank1/designsystem/commit/4bb3d3466fbe4817d22cf5f4039bc88f871a14ae))
-
-
-
-
+-   **ffe-accordion-react:** possible to pass properties to button ([4bb3d34](https://github.com/SpareBank1/designsystem/commit/4bb3d3466fbe4817d22cf5f4039bc88f871a14ae))
 
 ## [9.1.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@9.1.5...@sb1/ffe-accordion-react@9.1.6) (2021-02-05)
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react
 
-
-
-
-
 ## [9.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@9.1.4...@sb1/ffe-accordion-react@9.1.5) (2021-02-04)
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react
-
-
-
-
 
 ## [9.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@9.1.3...@sb1/ffe-accordion-react@9.1.4) (2021-02-03)
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react
 
-
-
-
-
 ## [9.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@9.1.2...@sb1/ffe-accordion-react@9.1.3) (2021-02-03)
-
 
 ### Bug Fixes
 
-* packages/ffe-accordion-react/package.json to reduce vulnerabilities ([88b1e26](https://github.com/SpareBank1/designsystem/commit/88b1e26a8280ad7811689d93f45f165ea135c79c))
-
-
-
-
+-   packages/ffe-accordion-react/package.json to reduce vulnerabilities ([88b1e26](https://github.com/SpareBank1/designsystem/commit/88b1e26a8280ad7811689d93f45f165ea135c79c))
 
 ## [9.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@9.1.1...@sb1/ffe-accordion-react@9.1.2) (2021-02-02)
 
-
 ### Bug Fixes
 
-* **ffe-accordion-react:** reduce vulnerabilities ([7bb8af5](https://github.com/SpareBank1/designsystem/commit/7bb8af5bf84c3cfcaba1f6087b0a6091efce21a7))
-
-
-
-
+-   **ffe-accordion-react:** reduce vulnerabilities ([7bb8af5](https://github.com/SpareBank1/designsystem/commit/7bb8af5bf84c3cfcaba1f6087b0a6091efce21a7))
 
 ## [9.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@9.1.0...@sb1/ffe-accordion-react@9.1.1) (2021-01-27)
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react
 
-
-
-
-
 # [9.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@9.0.3...@sb1/ffe-accordion-react@9.1.0) (2021-01-19)
-
 
 ### Features
 
-* **ffe-accordion-react:** Add isOpen as new prop on items ([401066d](https://github.com/SpareBank1/designsystem/commit/401066dacd0071fc685efff6fcf5fc5afb18c58c))
-
-
-
-
+-   **ffe-accordion-react:** Add isOpen as new prop on items ([401066d](https://github.com/SpareBank1/designsystem/commit/401066dacd0071fc685efff6fcf5fc5afb18c58c))
 
 ## [9.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@9.0.2...@sb1/ffe-accordion-react@9.0.3) (2020-11-18)
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react
 
-
-
-
-
 ## [9.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@9.0.1...@sb1/ffe-accordion-react@9.0.2) (2020-11-10)
-
 
 ### Bug Fixes
 
-* **ffe-accordion-react:** fix ts types ([b6d0e76](https://github.com/SpareBank1/designsystem/commit/b6d0e766447b7dda1263384cf4152d822289d038))
-* **ffe-accordion-react:** hidden after animation is done ([dff60ae](https://github.com/SpareBank1/designsystem/commit/dff60aee86c077e06d3bd53d0e27f9b0000c065f))
-
-
-
-
+-   **ffe-accordion-react:** fix ts types ([b6d0e76](https://github.com/SpareBank1/designsystem/commit/b6d0e766447b7dda1263384cf4152d822289d038))
+-   **ffe-accordion-react:** hidden after animation is done ([dff60ae](https://github.com/SpareBank1/designsystem/commit/dff60aee86c077e06d3bd53d0e27f9b0000c065f))
 
 ## [9.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@9.0.0...@sb1/ffe-accordion-react@9.0.1) (2020-11-05)
 
-
 ### Bug Fixes
 
-* **ffe-accordion-react:** set type of button ([7612ac5](https://github.com/SpareBank1/designsystem/commit/7612ac50f4f3c3c13ea37b204e022ff38091052b))
-
-
-
-
+-   **ffe-accordion-react:** set type of button ([7612ac5](https://github.com/SpareBank1/designsystem/commit/7612ac50f4f3c3c13ea37b204e022ff38091052b))
 
 # [9.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@8.0.4...@sb1/ffe-accordion-react@9.0.0) (2020-11-04)
 
-
 ### Features
 
-* **ffe-accordion-react:** accessibility fixes ([ee40ce7](https://github.com/SpareBank1/designsystem/commit/ee40ce752ce6f9b344dded2068ea195c65d69cdb))
-
+-   **ffe-accordion-react:** accessibility fixes ([ee40ce7](https://github.com/SpareBank1/designsystem/commit/ee40ce752ce6f9b344dded2068ea195c65d69cdb))
 
 ### BREAKING CHANGES
 
-* **ffe-accordion-react:** Changing the API of this component to make it more accessible
-
-
-
-
+-   **ffe-accordion-react:** Changing the API of this component to make it more accessible
 
 ## [8.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@8.0.3...@sb1/ffe-accordion-react@8.0.4) (2020-09-15)
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react
 
-
-
-
-
 ## [8.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@8.0.2...@sb1/ffe-accordion-react@8.0.3) (2020-08-27)
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react
 
-
-
-
-
 ## [8.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@8.0.1...@sb1/ffe-accordion-react@8.0.2) (2020-08-12)
-
 
 ### Bug Fixes
 
-* **ffe-accordion-react:** a11y fixes ([837abf4](https://github.com/SpareBank1/designsystem/commit/837abf475adb0f248f26da85b8ec2ebb38bb6f77))
-
-
-
-
+-   **ffe-accordion-react:** a11y fixes ([837abf4](https://github.com/SpareBank1/designsystem/commit/837abf475adb0f248f26da85b8ec2ebb38bb6f77))
 
 ## [8.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@8.0.0...@sb1/ffe-accordion-react@8.0.1) (2020-08-04)
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react
 
-
-
-
-
 # [8.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@7.0.20...@sb1/ffe-accordion-react@8.0.0) (2020-07-30)
-
 
 ### Bug Fixes
 
-* **ffe-accordion-react:** renamed title tag ([ee21117](https://github.com/SpareBank1/designsystem/commit/ee211179b4795e922128561140621876f69d3136))
-
+-   **ffe-accordion-react:** renamed title tag ([ee21117](https://github.com/SpareBank1/designsystem/commit/ee211179b4795e922128561140621876f69d3136))
 
 ### BREAKING CHANGES
 
-* **ffe-accordion-react:** title is an existing property on li-elements and could cause confusion (TypeScript isn't amused when we override it, either).
-
-
-
-
+-   **ffe-accordion-react:** title is an existing property on li-elements and could cause confusion (TypeScript isn't amused when we override it, either).
 
 ## [7.0.20](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@7.0.19...@sb1/ffe-accordion-react@7.0.20) (2020-06-29)
 
-
 ### Bug Fixes
 
-* **ffe-accordion-react:** added types ([2634cd5](https://github.com/SpareBank1/designsystem/commit/2634cd5598156808af7e2d353279113b873a5d61))
-
-
-
-
+-   **ffe-accordion-react:** added types ([2634cd5](https://github.com/SpareBank1/designsystem/commit/2634cd5598156808af7e2d353279113b873a5d61))
 
 ## [7.0.19](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@7.0.18...@sb1/ffe-accordion-react@7.0.19) (2020-06-24)
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react
 
-
-
-
-
 ## [7.0.18](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@7.0.17...@sb1/ffe-accordion-react@7.0.18) (2020-05-27)
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react
 
-
-
-
-
 ## [7.0.17](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@7.0.16...@sb1/ffe-accordion-react@7.0.17) (2020-05-19)
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react
-
-
-
-
 
 ## [7.0.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@7.0.15...@sb1/ffe-accordion-react@7.0.16) (2020-03-31)
 

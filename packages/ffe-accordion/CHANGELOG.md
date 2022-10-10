@@ -3,374 +3,201 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@8.0.24...@sb1/ffe-accordion@8.1.0) (2022-10-10)
+
+### Features
+
+-   **ffe-accordion:** update design ([c265a12](https://github.com/SpareBank1/designsystem/commit/c265a126c505a0c6e2583d7407365808698f2c3e))
+
 ## [8.0.24](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@8.0.23...@sb1/ffe-accordion@8.0.24) (2022-10-04)
 
 **Note:** Version bump only for package @sb1/ffe-accordion
-
-
-
-
 
 ## [8.0.23](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@8.0.22...@sb1/ffe-accordion@8.0.23) (2022-09-28)
 
 **Note:** Version bump only for package @sb1/ffe-accordion
 
-
-
-
-
 ## [8.0.22](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@8.0.21...@sb1/ffe-accordion@8.0.22) (2022-08-31)
 
 **Note:** Version bump only for package @sb1/ffe-accordion
-
-
-
-
 
 ## [8.0.21](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@8.0.20...@sb1/ffe-accordion@8.0.21) (2022-08-08)
 
 **Note:** Version bump only for package @sb1/ffe-accordion
 
-
-
-
-
 ## [8.0.20](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@8.0.19...@sb1/ffe-accordion@8.0.20) (2022-08-05)
 
 **Note:** Version bump only for package @sb1/ffe-accordion
-
-
-
-
 
 ## [8.0.19](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@8.0.18...@sb1/ffe-accordion@8.0.19) (2022-06-07)
 
 **Note:** Version bump only for package @sb1/ffe-accordion
 
-
-
-
-
 ## [8.0.18](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@8.0.17...@sb1/ffe-accordion@8.0.18) (2022-05-30)
 
 **Note:** Version bump only for package @sb1/ffe-accordion
-
-
-
-
 
 ## [8.0.17](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@8.0.16...@sb1/ffe-accordion@8.0.17) (2022-05-19)
 
 **Note:** Version bump only for package @sb1/ffe-accordion
 
-
-
-
-
 ## [8.0.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@8.0.15...@sb1/ffe-accordion@8.0.16) (2022-03-31)
 
 **Note:** Version bump only for package @sb1/ffe-accordion
 
-
-
-
-
 ## [8.0.15](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@8.0.14...@sb1/ffe-accordion@8.0.15) (2022-03-21)
-
 
 ### Bug Fixes
 
-* **ffe-accordion:** legger til default font ([0e1b3cb](https://github.com/SpareBank1/designsystem/commit/0e1b3cba4ca5193aaae64f4d256e59fd7642ce73))
-
-
-
-
+-   **ffe-accordion:** legger til default font ([0e1b3cb](https://github.com/SpareBank1/designsystem/commit/0e1b3cba4ca5193aaae64f4d256e59fd7642ce73))
 
 ## [8.0.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@8.0.13...@sb1/ffe-accordion@8.0.14) (2022-03-11)
 
 **Note:** Version bump only for package @sb1/ffe-accordion
 
-
-
-
-
 ## [8.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@8.0.12...@sb1/ffe-accordion@8.0.13) (2022-03-09)
 
 **Note:** Version bump only for package @sb1/ffe-accordion
 
-
-
-
-
 ## [8.0.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@8.0.11...@sb1/ffe-accordion@8.0.12) (2022-03-02)
-
 
 ### Bug Fixes
 
-* **ffe-accordion:** cleanup meta data in package.json ([4ff2fbd](https://github.com/SpareBank1/designsystem/commit/4ff2fbd58c4fdf1df2d095b06ea0b41ee6706529))
-
-
-
-
+-   **ffe-accordion:** cleanup meta data in package.json ([4ff2fbd](https://github.com/SpareBank1/designsystem/commit/4ff2fbd58c4fdf1df2d095b06ea0b41ee6706529))
 
 ## [8.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@8.0.10...@sb1/ffe-accordion@8.0.11) (2022-02-28)
 
 **Note:** Version bump only for package @sb1/ffe-accordion
 
-
-
-
-
 ## [8.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@8.0.9...@sb1/ffe-accordion@8.0.10) (2021-11-30)
 
 **Note:** Version bump only for package @sb1/ffe-accordion
-
-
-
-
 
 ## [8.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@8.0.8...@sb1/ffe-accordion@8.0.9) (2021-11-19)
 
 **Note:** Version bump only for package @sb1/ffe-accordion
 
-
-
-
-
 ## [8.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@8.0.7...@sb1/ffe-accordion@8.0.8) (2021-11-04)
 
 **Note:** Version bump only for package @sb1/ffe-accordion
-
-
-
-
 
 ## [8.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@8.0.6...@sb1/ffe-accordion@8.0.7) (2021-11-01)
 
 **Note:** Version bump only for package @sb1/ffe-accordion
 
-
-
-
-
 ## [8.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@8.0.5...@sb1/ffe-accordion@8.0.6) (2021-11-01)
 
 **Note:** Version bump only for package @sb1/ffe-accordion
-
-
-
-
 
 ## [8.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@8.0.4...@sb1/ffe-accordion@8.0.5) (2021-10-29)
 
 **Note:** Version bump only for package @sb1/ffe-accordion
 
-
-
-
-
 ## [8.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@8.0.3...@sb1/ffe-accordion@8.0.4) (2021-10-20)
 
 **Note:** Version bump only for package @sb1/ffe-accordion
-
-
-
-
 
 ## [8.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@8.0.2...@sb1/ffe-accordion@8.0.3) (2021-10-08)
 
 **Note:** Version bump only for package @sb1/ffe-accordion
 
-
-
-
-
 ## [8.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@8.0.1...@sb1/ffe-accordion@8.0.2) (2021-10-06)
 
 **Note:** Version bump only for package @sb1/ffe-accordion
-
-
-
-
 
 ## [8.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@8.0.0...@sb1/ffe-accordion@8.0.1) (2021-09-24)
 
 **Note:** Version bump only for package @sb1/ffe-accordion
 
-
-
-
-
 # [8.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@7.0.16...@sb1/ffe-accordion@8.0.0) (2021-09-22)
-
 
 ### Features
 
-* **ffe-accordion:** justerte farger iht ny profil ([952695c](https://github.com/SpareBank1/designsystem/commit/952695cfb65bf0a655374667a165a0b9a50be9f0))
-
+-   **ffe-accordion:** justerte farger iht ny profil ([952695c](https://github.com/SpareBank1/designsystem/commit/952695cfb65bf0a655374667a165a0b9a50be9f0))
 
 ### BREAKING CHANGES
 
-* **ffe-accordion:** nye farger kan medføre regresjonsfeil
-
-
-
-
+-   **ffe-accordion:** nye farger kan medføre regresjonsfeil
 
 ## [7.0.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@7.0.15...@sb1/ffe-accordion@7.0.16) (2021-09-17)
 
 **Note:** Version bump only for package @sb1/ffe-accordion
 
-
-
-
-
 ## [7.0.15](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@7.0.14...@sb1/ffe-accordion@7.0.15) (2021-09-10)
 
 **Note:** Version bump only for package @sb1/ffe-accordion
-
-
-
-
 
 ## [7.0.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@7.0.12...@sb1/ffe-accordion@7.0.14) (2021-09-06)
 
 **Note:** Version bump only for package @sb1/ffe-accordion
 
-
-
-
-
 ## [7.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@7.0.12...@sb1/ffe-accordion@7.0.13) (2021-09-06)
 
 **Note:** Version bump only for package @sb1/ffe-accordion
-
-
-
-
 
 ## [7.0.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@7.0.11...@sb1/ffe-accordion@7.0.12) (2021-06-17)
 
 **Note:** Version bump only for package @sb1/ffe-accordion
 
-
-
-
-
 ## [7.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@7.0.10...@sb1/ffe-accordion@7.0.11) (2021-04-14)
 
 **Note:** Version bump only for package @sb1/ffe-accordion
-
-
-
-
 
 ## [7.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@7.0.9...@sb1/ffe-accordion@7.0.10) (2021-03-25)
 
 **Note:** Version bump only for package @sb1/ffe-accordion
 
-
-
-
-
 ## [7.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@7.0.8...@sb1/ffe-accordion@7.0.9) (2021-03-17)
 
 **Note:** Version bump only for package @sb1/ffe-accordion
 
-
-
-
-
 ## [7.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@7.0.7...@sb1/ffe-accordion@7.0.8) (2021-03-15)
-
 
 ### Bug Fixes
 
-* **ffe-accordion:** broadens version of peer dependencies ([1e1c3ef](https://github.com/SpareBank1/designsystem/commit/1e1c3efbe665a22eda647581de0d966395c582b9))
-
-
-
-
+-   **ffe-accordion:** broadens version of peer dependencies ([1e1c3ef](https://github.com/SpareBank1/designsystem/commit/1e1c3efbe665a22eda647581de0d966395c582b9))
 
 ## [7.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@7.0.6...@sb1/ffe-accordion@7.0.7) (2021-03-08)
 
 **Note:** Version bump only for package @sb1/ffe-accordion
 
-
-
-
-
 ## [7.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@7.0.5...@sb1/ffe-accordion@7.0.6) (2021-02-03)
 
 **Note:** Version bump only for package @sb1/ffe-accordion
-
-
-
-
 
 ## [7.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@7.0.4...@sb1/ffe-accordion@7.0.5) (2021-02-02)
 
 **Note:** Version bump only for package @sb1/ffe-accordion
 
-
-
-
-
 ## [7.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@7.0.3...@sb1/ffe-accordion@7.0.4) (2021-01-11)
 
 **Note:** Version bump only for package @sb1/ffe-accordion
-
-
-
-
 
 ## [7.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@7.0.2...@sb1/ffe-accordion@7.0.3) (2020-12-03)
 
 **Note:** Version bump only for package @sb1/ffe-accordion
 
-
-
-
-
 ## [7.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@7.0.1...@sb1/ffe-accordion@7.0.2) (2020-11-20)
 
 **Note:** Version bump only for package @sb1/ffe-accordion
-
-
-
-
 
 ## [7.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@7.0.0...@sb1/ffe-accordion@7.0.1) (2020-11-05)
 
 **Note:** Version bump only for package @sb1/ffe-accordion
 
-
-
-
-
 # [7.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@6.0.10...@sb1/ffe-accordion@7.0.0) (2020-11-04)
-
 
 ### Features
 
-* **ffe-accordion:** simplified and more accessible ([c9727d8](https://github.com/SpareBank1/designsystem/commit/c9727d84f81433f534ee7e1c868984ae58a68495))
-
+-   **ffe-accordion:** simplified and more accessible ([c9727d8](https://github.com/SpareBank1/designsystem/commit/c9727d84f81433f534ee7e1c868984ae58a68495))
 
 ### BREAKING CHANGES
 
-* **ffe-accordion:** New API for styling the accordion
-
-
-
-
+-   **ffe-accordion:** New API for styling the accordion
 
 ## [6.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@6.0.9...@sb1/ffe-accordion@6.0.10) (2020-08-25)
 
 **Note:** Version bump only for package @sb1/ffe-accordion
-
-
-
-
 
 ## [6.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@6.0.8...@sb1/ffe-accordion@6.0.9) (2020-03-18)
 
