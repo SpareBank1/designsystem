@@ -1,19 +1,53 @@
 # @sb1/stylelint-config-ffe
 
-A shareable stylelint configuration object for FFE components
+A (stylelint)[https://stylelint.io/] extension with rules for working with FFE components.
 
-## Install
+## Usage
+
+Add stylelint and this package to your project:
 
 ```bash
 npm install --save-dev stylelint @sb1/stylelint-config-ffe
 ```
 
-## Usage
+Configure your stylelint configuration file to extend this package:
 
-Create `.stylelintrc` in the same directory as your `package.json` and extend this config:
+```javascript
+module.export = {
+    extends: ['@sb1/stylelint-config-ffe'],
+};
+```
 
-```json
-{
-  "extends": "@sb1/stylelint-config-ffe"
+## References
+
+### @sb1/ffe-no-deprecated-color-vars
+
+Disallow deprecated less color variables.
+
+```javascript
+module.export = {
+    extends: ['@sb1/stylelint-config-ffe']
+    overrides: [
+        {
+            files: ['**/*.less'],
+            customSyntax: 'postcss-less',
+            rules: {
+                '@sb1/ffe-no-deprecated-color-vars': true
+            }
+        }
+    ]
+}
+```
+
+#### Options
+
+#### `true`
+
+The following code is considered a problem:
+
+```less
+a {
+    color: @ffe-blue-deep-sky;
+    /** ffe-blue-deep-sky is deprecated */
 }
 ```
