@@ -25,7 +25,6 @@
     },
     "dependencies": {
         "@sb1/ffe-collapse-react": "^1.1.14",
-        "@sb1/ffe-core-react": "^6.0.0",
         "@sb1/ffe-icons-react": "^7.3.3",
         "classnames": "^2.3.1",
         "prop-types": "^15.7.2",

@@ -4,7 +4,6 @@ import { v4 as uuid } from 'uuid';
 import { ChevronIkon } from '@sb1/ffe-icons-react';
 import Collapse from '@sb1/ffe-collapse-react';
 import classNames from 'classnames';
-import { Heading6 } from '@sb1/ffe-core-react';
 
 const AccordionItem = ({
     children,
@@ -41,6 +40,8 @@ const AccordionItem = ({
 
     const collapseHidden = !isExpanded && !isAnimating;
 
+    const H = `h${headingLevel}`;
+
     return (
         <div
             className={classNames(className, 'ffe-accordion-item', {
@@ -49,10 +50,7 @@ const AccordionItem = ({
             })}
             {...rest}
         >
-            <Heading6
-                className="ffe-accordion-item__heading"
-                aria-level={headingLevel}
-            >
+            <H className="ffe-h6 ffe-accordion-item__heading">
                 <button
                     type="button"
                     id={buttonId.current}
@@ -77,7 +75,7 @@ const AccordionItem = ({
                         </span>
                     </span>
                 </button>
-            </Heading6>
+            </H>
             <Collapse
                 isOpen={isExpanded}
                 onRest={() => setIsAnimating(false)}
