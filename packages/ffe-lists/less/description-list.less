@@ -48,7 +48,8 @@
     .ffe-description-list__term {
         color: @ffe-farge-fjell;
         &:extend(.ffe-strong-text);
-        .ffe-fontsize-h6();
+
+        font-size: var(--ffe-fontsize-h6);
         .native & {
             @media (prefers-color-scheme: dark) {
                 color: @ffe-farge-hvit;
