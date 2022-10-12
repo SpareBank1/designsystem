@@ -32,8 +32,6 @@ pieces you require if you want:
 @import '~@sb1/ffe-core/less/motion';
 @import '~@sb1/ffe-core/less/spacing';
 
-// Font size mixins
-@import '~@sb1/ffe-core/less/font-sizes';
 // Basic typography
 @import '~@sb1/ffe-core/less/typography';
 // Accessibility helpers
