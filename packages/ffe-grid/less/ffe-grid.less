@@ -1,7 +1,12 @@
 // Mixins
-.create-column(@size, @total, @current: 1) when (@current <= @total) {
+.create-column(@size, @total, @current: 0) when (@current <= @total) {
     .ffe-grid__col--@{size}-@{current} {
+        display: block;
         grid-column: auto / span (@current);
+
+        & when (@current = 0) {
+            display: none;
+        }
     }
 
     .create-column(@size, @total, @current + 1);
@@ -13,6 +18,36 @@
     }
 
     .create-column-offset(@size, @total, @current + 1);
+}
+
+.ffe-grid {
+    margin: 0 auto;
+    padding: 0 @ffe-spacing-sm;
+    max-width: @app-width;
+
+    &--gap-none {
+        padding: 0;
+    }
+
+    &--gap-2xs {
+        padding: 0 @ffe-spacing-2xs;
+    }
+
+    &--gap-xs {
+        padding: 0 @ffe-spacing-xs;
+    }
+
+    &--gap-sm {
+        padding: 0 @ffe-spacing-sm;
+    }
+
+    &--gap-md {
+        padding: 0 @ffe-spacing-md;
+    }
+
+    &--gap-lg {
+        padding: 0 @ffe-spacing-lg;
+    }
 }
 
 .ffe-grid__row {
@@ -215,6 +250,8 @@
 }
 
 .ffe-grid__col {
+    grid-column: auto / span 12;
+
     &--bg-frost-30 {
         background-color: @ffe-farge-frost-30;
         .native & {
@@ -324,4 +361,10 @@
 @media (min-width: @breakpoint-xl) {
     .create-column(xl, 12);
     .create-column-offset(xl, 12);
+}
+
+.ffe-grid__col--center {
+    display: flex;
+    place-items: center;
+    place-content: center;
 }

@@ -58,6 +58,8 @@ You only have to specify one of these if you want - each column defaults to a 10
 for viewports that are not specified (i.e. `.ffe-grid__col--md-6` will be 100 % wide on small
 devices, and 50 % on medium and large screens).
 
+A column can be hidden entirely on a given breakpoint by setting the value to `0`, e.g. `.ffe-grid__col--sm-0` to hide it on small screens.
+
 ### Offset
 
 The pattern is like so: `.ffe-grid__col--{size}-offset-{num-of-cols}`
@@ -81,6 +83,16 @@ By default, rows have no padding or margin.
 The gutter/gap between columns can be controlled using the `.ffe-grid--gap-{size}` modifier. Available sizes correspond to the [ffe spacing variables](https://design.sparebank1.no/profil/spacing/), however the largest available size is `lg`.
 
 The default gap is 16px, equivalent to `.ffe-grid--gap-sm`.
+
+The gap value is also applied as a padding to the left and right of the grid.
+
+### Center
+
+Contents of a grid column can be centered horizontally and vertically using the `.ffe-grid__col--center` modifier.
+
+### Center text
+
+Text inside a grid column can be centered using the `.ffe-grid__col--center-text` modifier.
 
 ### Background colors
 
