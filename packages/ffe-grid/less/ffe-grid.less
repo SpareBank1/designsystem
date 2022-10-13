@@ -22,61 +22,49 @@
 
 .ffe-grid {
     margin: 0 auto;
-    padding: 0 @ffe-spacing-sm;
     max-width: @app-width;
-
-    &--gap-none {
-        padding: 0;
-    }
-
-    &--gap-2xs {
-        padding: 0 @ffe-spacing-2xs;
-    }
-
-    &--gap-xs {
-        padding: 0 @ffe-spacing-xs;
-    }
-
-    &--gap-sm {
-        padding: 0 @ffe-spacing-sm;
-    }
-
-    &--gap-md {
-        padding: 0 @ffe-spacing-md;
-    }
-
-    &--gap-lg {
-        padding: 0 @ffe-spacing-lg;
-    }
 }
 
 .ffe-grid__row {
     display: grid;
     gap: @ffe-spacing-sm;
+    padding-right: @ffe-spacing-sm;
+    padding-left: @ffe-spacing-sm;
     grid-template-columns: repeat(12, 1fr);
 
     .ffe-grid--gap-none & {
         gap: 0;
+        padding: 0;
     }
 
     .ffe-grid--gap-2xs & {
         gap: @ffe-spacing-2xs;
+        padding-right: @ffe-spacing-2xs;
+        padding-left: @ffe-spacing-2xs;
     }
 
     .ffe-grid--gap-xs & {
         gap: @ffe-spacing-xs;
+        padding-right: @ffe-spacing-xs;
+        padding-left: @ffe-spacing-xs;
     }
 
     .ffe-grid--gap-sm & {
         gap: @ffe-spacing-sm;
+        padding-right: @ffe-spacing-sm;
+        padding-left: @ffe-spacing-sm;
     }
 
     .ffe-grid--gap-md & {
         gap: @ffe-spacing-md;
+        padding-right: @ffe-spacing-md;
+        padding-left: @ffe-spacing-md;
     }
 
     .ffe-grid--gap-lg & {
         gap: @ffe-spacing-lg;
+        padding-right: @ffe-spacing-lg;
+        padding-left: @ffe-spacing-lg;
     }
 
     &--padding-2xs {
