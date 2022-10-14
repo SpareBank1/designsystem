@@ -1,41 +1,41 @@
 {
-  "name": "@sb1/ffe-grid-react",
-  "version": "12.0.0",
-  "license": "MIT",
-  "author": "SpareBank1",
-  "files": [
-    "lib",
-    "es",
-    "types"
-  ],
-  "main": "lib/index.js",
-  "module": "es/index.js",
-  "types": "types/index.d.ts",
-  "sideEffects": false,
-  "repository": {
-    "type": "git",
-    "url": "ssh://git@github.com:SpareBank1/designsystem.git"
-  },
-  "scripts": {
-    "build": "ffe-buildtool babel",
-    "watch": "ffe-buildtool babel-watch",
-    "lint": "eslint src",
-    "test": "ffe-buildtool jest",
-    "test:watch": "ffe-buildtool jest --watch"
-  },
-  "dependencies": {
-    "classnames": "^2.3.1"
-  },
-  "devDependencies": {
-    "@sb1/ffe-buildtool": "^0.4.1",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0"
-  },
-  "peerDependencies": {
-    "@sb1/ffe-grid": "*",
-    "react": ">=16.9.0"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+    "name": "@sb1/ffe-grid-react",
+    "version": "12.0.1",
+    "license": "MIT",
+    "author": "SpareBank1",
+    "files": [
+        "lib",
+        "es",
+        "types"
+    ],
+    "main": "lib/index.js",
+    "module": "es/index.js",
+    "types": "types/index.d.ts",
+    "sideEffects": false,
+    "repository": {
+        "type": "git",
+        "url": "ssh://git@github.com:SpareBank1/designsystem.git"
+    },
+    "scripts": {
+        "build": "ffe-buildtool babel",
+        "watch": "ffe-buildtool babel-watch",
+        "lint": "eslint src",
+        "test": "ffe-buildtool jest",
+        "test:watch": "ffe-buildtool jest --watch"
+    },
+    "dependencies": {
+        "classnames": "^2.3.1"
+    },
+    "devDependencies": {
+        "@sb1/ffe-buildtool": "^0.4.1",
+        "react": "^16.9.0",
+        "react-dom": "^16.9.0"
+    },
+    "peerDependencies": {
+        "@sb1/ffe-grid": "*",
+        "react": ">=16.9.0"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
 }

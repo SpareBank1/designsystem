@@ -3,412 +3,230 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [13.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@13.0.1...@sb1/ffe-grid@13.0.2) (2022-10-14)
+
+### Bug Fixes
+
+-   **ffe-grid:** flytter padding fra container til kolonne ([46c0511](https://github.com/SpareBank1/designsystem/commit/46c0511827504533d9a6aad77bc9c5c3fe540f11))
+-   **ffe-grid:** legger tilbake modifiere og defaults fra tidligere versjon ([d2217fe](https://github.com/SpareBank1/designsystem/commit/d2217fedf2ff37ba81cb05b682964bf5be7df82d))
+
 ## [13.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@13.0.0...@sb1/ffe-grid@13.0.1) (2022-10-04)
 
 **Note:** Version bump only for package @sb1/ffe-grid
 
-
-
-
-
 # [13.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@12.1.14...@sb1/ffe-grid@13.0.0) (2022-10-04)
-
 
 ### Features
 
-* **ffe-grid:** fjerner condensed og inline, legger til modifiere for gap og spacing ([ba0f8ad](https://github.com/SpareBank1/designsystem/commit/ba0f8ad2025b4a65d1ca250a73de0b3c3e8a5ab1))
-* **ffe-grid:** omskriving av grid-styling ([c2f9d59](https://github.com/SpareBank1/designsystem/commit/c2f9d5993a082db9bd2af5a7d5e43ed1d29757d9))
-
+-   **ffe-grid:** fjerner condensed og inline, legger til modifiere for gap og spacing ([ba0f8ad](https://github.com/SpareBank1/designsystem/commit/ba0f8ad2025b4a65d1ca250a73de0b3c3e8a5ab1))
+-   **ffe-grid:** omskriving av grid-styling ([c2f9d59](https://github.com/SpareBank1/designsystem/commit/c2f9d5993a082db9bd2af5a7d5e43ed1d29757d9))
 
 ### BREAKING CHANGES
 
-* **ffe-grid:** og  fjernes, og erstattes med modifiere for gap, margin og padding
-* **ffe-grid:** grid-styling er skrevet om, og disse modifierne er fjernet
+-   **ffe-grid:** og fjernes, og erstattes med modifiere for gap, margin og padding
+-   **ffe-grid:** grid-styling er skrevet om, og disse modifierne er fjernet
 
-* .ffe-grid__row--reverse
-* .ffe-grid__row--horizontal
-* .ffe-grid__col--reverse
-* .ffe-grid__col--horizontal
-* .ffe-grid__col--start
-* .ffe-grid__col--center
-* .ffe-grid__col--end
-* .ffe-grid__col--top
-* .ffe-grid__col--middle
-* .ffe-grid__col--bottom
-* .ffe-grid__col--around
-* .ffe-grid__col--between
-
-
-
-
+-   .ffe-grid\_\_row--reverse
+-   .ffe-grid\_\_row--horizontal
+-   .ffe-grid\_\_col--reverse
+-   .ffe-grid\_\_col--horizontal
+-   .ffe-grid\_\_col--start
+-   .ffe-grid\_\_col--center
+-   .ffe-grid\_\_col--end
+-   .ffe-grid\_\_col--top
+-   .ffe-grid\_\_col--middle
+-   .ffe-grid\_\_col--bottom
+-   .ffe-grid\_\_col--around
+-   .ffe-grid\_\_col--between
 
 ## [12.1.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@12.1.13...@sb1/ffe-grid@12.1.14) (2022-09-28)
 
 **Note:** Version bump only for package @sb1/ffe-grid
 
-
-
-
-
 ## [12.1.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@12.1.12...@sb1/ffe-grid@12.1.13) (2022-08-31)
 
 **Note:** Version bump only for package @sb1/ffe-grid
-
-
-
-
 
 ## [12.1.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@12.1.11...@sb1/ffe-grid@12.1.12) (2022-08-08)
 
 **Note:** Version bump only for package @sb1/ffe-grid
 
-
-
-
-
 ## [12.1.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@12.1.10...@sb1/ffe-grid@12.1.11) (2022-08-05)
 
 **Note:** Version bump only for package @sb1/ffe-grid
-
-
-
-
 
 ## [12.1.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@12.1.9...@sb1/ffe-grid@12.1.10) (2022-06-07)
 
 **Note:** Version bump only for package @sb1/ffe-grid
 
-
-
-
-
 ## [12.1.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@12.1.8...@sb1/ffe-grid@12.1.9) (2022-05-30)
 
 **Note:** Version bump only for package @sb1/ffe-grid
-
-
-
-
 
 ## [12.1.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@12.1.7...@sb1/ffe-grid@12.1.8) (2022-05-19)
 
 **Note:** Version bump only for package @sb1/ffe-grid
 
-
-
-
-
 ## [12.1.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@12.1.6...@sb1/ffe-grid@12.1.7) (2022-03-31)
 
 **Note:** Version bump only for package @sb1/ffe-grid
-
-
-
-
 
 ## [12.1.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@12.1.5...@sb1/ffe-grid@12.1.6) (2022-03-21)
 
 **Note:** Version bump only for package @sb1/ffe-grid
 
-
-
-
-
 ## [12.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@12.1.4...@sb1/ffe-grid@12.1.5) (2022-03-11)
 
 **Note:** Version bump only for package @sb1/ffe-grid
-
-
-
-
 
 ## [12.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@12.1.3...@sb1/ffe-grid@12.1.4) (2022-03-09)
 
 **Note:** Version bump only for package @sb1/ffe-grid
 
-
-
-
-
 ## [12.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@12.1.2...@sb1/ffe-grid@12.1.3) (2022-02-28)
 
 **Note:** Version bump only for package @sb1/ffe-grid
-
-
-
-
 
 ## [12.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@12.1.1...@sb1/ffe-grid@12.1.2) (2021-11-30)
 
 **Note:** Version bump only for package @sb1/ffe-grid
 
-
-
-
-
 ## [12.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@12.1.0...@sb1/ffe-grid@12.1.1) (2021-11-19)
 
 **Note:** Version bump only for package @sb1/ffe-grid
 
-
-
-
-
 # [12.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@12.0.5...@sb1/ffe-grid@12.1.0) (2021-11-18)
-
 
 ### Features
 
-* **ffe-grid:** legg til vann-30 som bakgrunnsfarge i grid ([2ccb24b](https://github.com/SpareBank1/designsystem/commit/2ccb24bd95f222cf58e47c207290d32741a51971))
-
-
-
-
+-   **ffe-grid:** legg til vann-30 som bakgrunnsfarge i grid ([2ccb24b](https://github.com/SpareBank1/designsystem/commit/2ccb24bd95f222cf58e47c207290d32741a51971))
 
 ## [12.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@12.0.4...@sb1/ffe-grid@12.0.5) (2021-11-04)
 
 **Note:** Version bump only for package @sb1/ffe-grid
 
-
-
-
-
 ## [12.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@12.0.3...@sb1/ffe-grid@12.0.4) (2021-11-02)
-
 
 ### Bug Fixes
 
-* **ffe-grid:** legg til hvit tekst på mørkere bakgrunner ([5d68186](https://github.com/SpareBank1/designsystem/commit/5d68186f337fc34f105fd2bd547cee04cc46bce3))
-
-
-
-
+-   **ffe-grid:** legg til hvit tekst på mørkere bakgrunner ([5d68186](https://github.com/SpareBank1/designsystem/commit/5d68186f337fc34f105fd2bd547cee04cc46bce3))
 
 ## [12.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@12.0.2...@sb1/ffe-grid@12.0.3) (2021-11-01)
 
 **Note:** Version bump only for package @sb1/ffe-grid
 
-
-
-
-
 ## [12.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@12.0.1...@sb1/ffe-grid@12.0.2) (2021-11-01)
 
 **Note:** Version bump only for package @sb1/ffe-grid
-
-
-
-
 
 ## [12.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@12.0.0...@sb1/ffe-grid@12.0.1) (2021-10-29)
 
 **Note:** Version bump only for package @sb1/ffe-grid
 
-
-
-
-
 # [12.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@11.0.30...@sb1/ffe-grid@12.0.0) (2021-10-29)
-
 
 ### Features
 
-* **ffe-grid:** oppdater alle bakgrunnsfarger ([d7ce1ce](https://github.com/SpareBank1/designsystem/commit/d7ce1ce07363026173b9e3271ec3bcc97aa71e47))
-
+-   **ffe-grid:** oppdater alle bakgrunnsfarger ([d7ce1ce](https://github.com/SpareBank1/designsystem/commit/d7ce1ce07363026173b9e3271ec3bcc97aa71e47))
 
 ### BREAKING CHANGES
 
-* **ffe-grid:** Alle klassenavn og fargealternativer for bakgrunnsfarge på row og col
-er oppdatert med farger fra den nye visuelle profilen.
-
-
-
-
+-   **ffe-grid:** Alle klassenavn og fargealternativer for bakgrunnsfarge på row og col
+    er oppdatert med farger fra den nye visuelle profilen.
 
 ## [11.0.30](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@11.0.29...@sb1/ffe-grid@11.0.30) (2021-10-20)
 
 **Note:** Version bump only for package @sb1/ffe-grid
 
-
-
-
-
 ## [11.0.29](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@11.0.28...@sb1/ffe-grid@11.0.29) (2021-10-08)
 
 **Note:** Version bump only for package @sb1/ffe-grid
-
-
-
-
 
 ## [11.0.28](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@11.0.27...@sb1/ffe-grid@11.0.28) (2021-10-06)
 
 **Note:** Version bump only for package @sb1/ffe-grid
 
-
-
-
-
 ## [11.0.27](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@11.0.26...@sb1/ffe-grid@11.0.27) (2021-09-24)
 
 **Note:** Version bump only for package @sb1/ffe-grid
-
-
-
-
 
 ## [11.0.26](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@11.0.25...@sb1/ffe-grid@11.0.26) (2021-09-17)
 
 **Note:** Version bump only for package @sb1/ffe-grid
 
-
-
-
-
 ## [11.0.25](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@11.0.24...@sb1/ffe-grid@11.0.25) (2021-09-10)
 
 **Note:** Version bump only for package @sb1/ffe-grid
-
-
-
-
 
 ## [11.0.24](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@11.0.22...@sb1/ffe-grid@11.0.24) (2021-09-06)
 
 **Note:** Version bump only for package @sb1/ffe-grid
 
-
-
-
-
 ## [11.0.23](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@11.0.22...@sb1/ffe-grid@11.0.23) (2021-09-06)
 
 **Note:** Version bump only for package @sb1/ffe-grid
-
-
-
-
 
 ## [11.0.22](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@11.0.21...@sb1/ffe-grid@11.0.22) (2021-06-17)
 
 **Note:** Version bump only for package @sb1/ffe-grid
 
-
-
-
-
 ## [11.0.21](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@11.0.20...@sb1/ffe-grid@11.0.21) (2021-04-14)
 
 **Note:** Version bump only for package @sb1/ffe-grid
-
-
-
-
 
 ## [11.0.20](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@11.0.19...@sb1/ffe-grid@11.0.20) (2021-03-25)
 
 **Note:** Version bump only for package @sb1/ffe-grid
 
-
-
-
-
 ## [11.0.19](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@11.0.18...@sb1/ffe-grid@11.0.19) (2021-03-17)
 
 **Note:** Version bump only for package @sb1/ffe-grid
 
-
-
-
-
 ## [11.0.18](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@11.0.17...@sb1/ffe-grid@11.0.18) (2021-03-15)
-
 
 ### Bug Fixes
 
-* **ffe-grid:** broadens version of peer dependencies ([3c5d47b](https://github.com/SpareBank1/designsystem/commit/3c5d47bc5e928237b211f3b90f4128cf915a5ef3))
-
-
-
-
+-   **ffe-grid:** broadens version of peer dependencies ([3c5d47b](https://github.com/SpareBank1/designsystem/commit/3c5d47bc5e928237b211f3b90f4128cf915a5ef3))
 
 ## [11.0.17](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@11.0.16...@sb1/ffe-grid@11.0.17) (2021-03-08)
 
 **Note:** Version bump only for package @sb1/ffe-grid
 
-
-
-
-
 ## [11.0.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@11.0.15...@sb1/ffe-grid@11.0.16) (2021-02-03)
 
 **Note:** Version bump only for package @sb1/ffe-grid
 
-
-
-
-
 ## [11.0.15](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@11.0.14...@sb1/ffe-grid@11.0.15) (2021-02-02)
-
 
 ### Bug Fixes
 
-* **ffe-grid:** reduce vulnerabilities ([4157dd5](https://github.com/SpareBank1/designsystem/commit/4157dd540e307df271a1ad4195133aebe9b220a5))
-
-
-
-
+-   **ffe-grid:** reduce vulnerabilities ([4157dd5](https://github.com/SpareBank1/designsystem/commit/4157dd540e307df271a1ad4195133aebe9b220a5))
 
 ## [11.0.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@11.0.13...@sb1/ffe-grid@11.0.14) (2021-02-02)
 
-
 ### Bug Fixes
 
-* **ffe-grid:** add parentheses to division in less ([6ab32ad](https://github.com/SpareBank1/designsystem/commit/6ab32ad10d35936555c6d23d7a694a0a252c26ed))
-
-
-
-
+-   **ffe-grid:** add parentheses to division in less ([6ab32ad](https://github.com/SpareBank1/designsystem/commit/6ab32ad10d35936555c6d23d7a694a0a252c26ed))
 
 ## [11.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@11.0.12...@sb1/ffe-grid@11.0.13) (2021-01-11)
 
 **Note:** Version bump only for package @sb1/ffe-grid
 
-
-
-
-
 ## [11.0.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@11.0.11...@sb1/ffe-grid@11.0.12) (2020-12-03)
 
 **Note:** Version bump only for package @sb1/ffe-grid
-
-
-
-
 
 ## [11.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@11.0.10...@sb1/ffe-grid@11.0.11) (2020-11-20)
 
 **Note:** Version bump only for package @sb1/ffe-grid
 
-
-
-
-
 ## [11.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@11.0.9...@sb1/ffe-grid@11.0.10) (2020-11-05)
 
 **Note:** Version bump only for package @sb1/ffe-grid
 
-
-
-
-
 ## [11.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@11.0.8...@sb1/ffe-grid@11.0.9) (2020-08-25)
 
 **Note:** Version bump only for package @sb1/ffe-grid
-
-
-
-
 
 ## [11.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@11.0.7...@sb1/ffe-grid@11.0.8) (2020-03-18)
 

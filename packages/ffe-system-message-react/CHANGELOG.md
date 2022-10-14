@@ -3,308 +3,167 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [6.4.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@6.4.5...@sb1/ffe-system-message-react@6.4.6) (2022-10-04)
+## [6.4.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@6.4.6...@sb1/ffe-system-message-react@6.4.7) (2022-10-14)
 
 **Note:** Version bump only for package @sb1/ffe-system-message-react
 
+## [6.4.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@6.4.5...@sb1/ffe-system-message-react@6.4.6) (2022-10-04)
 
-
-
+**Note:** Version bump only for package @sb1/ffe-system-message-react
 
 ## [6.4.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@6.4.4...@sb1/ffe-system-message-react@6.4.5) (2022-09-09)
 
 **Note:** Version bump only for package @sb1/ffe-system-message-react
 
-
-
-
-
 ## [6.4.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@6.4.3...@sb1/ffe-system-message-react@6.4.4) (2022-08-02)
-
 
 ### Bug Fixes
 
-* **ffe-system-message-react:** fikse feilmeldinger i konsollet ved alert=false ([5997146](https://github.com/SpareBank1/designsystem/commit/5997146a56ecf2fae916f1d1fc4843a55179e821))
-
-
-
-
+-   **ffe-system-message-react:** fikse feilmeldinger i konsollet ved alert=false ([5997146](https://github.com/SpareBank1/designsystem/commit/5997146a56ecf2fae916f1d1fc4843a55179e821))
 
 ## [6.4.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@6.4.2...@sb1/ffe-system-message-react@6.4.3) (2022-06-02)
 
 **Note:** Version bump only for package @sb1/ffe-system-message-react
 
-
-
-
-
 ## [6.4.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@6.4.1...@sb1/ffe-system-message-react@6.4.2) (2022-03-02)
-
 
 ### Bug Fixes
 
-* **ffe-system-message-react:** add module field for esm entry point ([806afc2](https://github.com/SpareBank1/designsystem/commit/806afc21a1f2fd11c85038c4e3143f996978d957))
-
-
-
-
+-   **ffe-system-message-react:** add module field for esm entry point ([806afc2](https://github.com/SpareBank1/designsystem/commit/806afc21a1f2fd11c85038c4e3143f996978d957))
 
 ## [6.4.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@6.4.0...@sb1/ffe-system-message-react@6.4.1) (2022-02-23)
 
 **Note:** Version bump only for package @sb1/ffe-system-message-react
 
-
-
-
-
 # [6.4.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@6.3.0...@sb1/ffe-system-message-react@6.4.0) (2022-02-18)
-
 
 ### Features
 
-* **ffe-system-message-react:** import icons without need for tree shaking ([d37e9b3](https://github.com/SpareBank1/designsystem/commit/d37e9b3b86aca0815f3b317b03294f3475c186d9))
-
-
-
-
+-   **ffe-system-message-react:** import icons without need for tree shaking ([d37e9b3](https://github.com/SpareBank1/designsystem/commit/d37e9b3b86aca0815f3b317b03294f3475c186d9))
 
 # [6.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@6.2.16...@sb1/ffe-system-message-react@6.3.0) (2022-01-28)
 
-
 ### Features
 
-* **ffe-system-message-react:** legg til alternativ versjon for farget bakgrunn ([120a38f](https://github.com/SpareBank1/designsystem/commit/120a38fcb0ebfa5b66e61619c05352407757bdf0))
-
-
-
-
+-   **ffe-system-message-react:** legg til alternativ versjon for farget bakgrunn ([120a38f](https://github.com/SpareBank1/designsystem/commit/120a38fcb0ebfa5b66e61619c05352407757bdf0))
 
 ## [6.2.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@6.2.15...@sb1/ffe-system-message-react@6.2.16) (2022-01-27)
 
 **Note:** Version bump only for package @sb1/ffe-system-message-react
 
-
-
-
-
 ## [6.2.15](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@6.2.14...@sb1/ffe-system-message-react@6.2.15) (2022-01-27)
 
 **Note:** Version bump only for package @sb1/ffe-system-message-react
-
-
-
-
 
 ## [6.2.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@6.2.13...@sb1/ffe-system-message-react@6.2.14) (2022-01-25)
 
 **Note:** Version bump only for package @sb1/ffe-system-message-react
 
-
-
-
-
 ## [6.2.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@6.2.12...@sb1/ffe-system-message-react@6.2.13) (2022-01-24)
 
 **Note:** Version bump only for package @sb1/ffe-system-message-react
-
-
-
-
 
 ## [6.2.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@6.2.11...@sb1/ffe-system-message-react@6.2.12) (2021-12-17)
 
 **Note:** Version bump only for package @sb1/ffe-system-message-react
 
-
-
-
-
 ## [6.2.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@6.2.10...@sb1/ffe-system-message-react@6.2.11) (2021-12-10)
-
 
 ### Bug Fixes
 
-* **ffe-system-message-react:** use buildtool for transpiling ([78c1a26](https://github.com/SpareBank1/designsystem/commit/78c1a26b6505a260b0c7d9068a67f3db1b90d424)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
-
-
-
-
+-   **ffe-system-message-react:** use buildtool for transpiling ([78c1a26](https://github.com/SpareBank1/designsystem/commit/78c1a26b6505a260b0c7d9068a67f3db1b90d424)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
 
 ## [6.2.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@6.2.9...@sb1/ffe-system-message-react@6.2.10) (2021-11-18)
 
 **Note:** Version bump only for package @sb1/ffe-system-message-react
 
-
-
-
-
 ## [6.2.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@6.2.8...@sb1/ffe-system-message-react@6.2.9) (2021-11-04)
 
 **Note:** Version bump only for package @sb1/ffe-system-message-react
-
-
-
-
 
 ## [6.2.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@6.2.7...@sb1/ffe-system-message-react@6.2.8) (2021-10-29)
 
 **Note:** Version bump only for package @sb1/ffe-system-message-react
 
-
-
-
-
 ## [6.2.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@6.2.6...@sb1/ffe-system-message-react@6.2.7) (2021-03-26)
-
 
 ### Bug Fixes
 
-* **ffe-system-message-react:** add npm module path ([ab74c15](https://github.com/SpareBank1/designsystem/commit/ab74c15fe0c468720eeb7f187d1224df1cf4dbeb))
-
-
-
-
+-   **ffe-system-message-react:** add npm module path ([ab74c15](https://github.com/SpareBank1/designsystem/commit/ab74c15fe0c468720eeb7f187d1224df1cf4dbeb))
 
 ## [6.2.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@6.2.5...@sb1/ffe-system-message-react@6.2.6) (2021-03-24)
 
-
 ### Bug Fixes
 
-* **ffe-system-message-react:** make icon prop in SystemErrorMessage optional ([765f0c6](https://github.com/SpareBank1/designsystem/commit/765f0c6ddd191d3bfa483ea2ea317474aaf67f45))
-
-
-
-
+-   **ffe-system-message-react:** make icon prop in SystemErrorMessage optional ([765f0c6](https://github.com/SpareBank1/designsystem/commit/765f0c6ddd191d3bfa483ea2ea317474aaf67f45))
 
 ## [6.2.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@6.2.4...@sb1/ffe-system-message-react@6.2.5) (2021-03-15)
 
-
 ### Bug Fixes
 
-* **ffe-system-message-react:** broadens version of peer dependencies ([1b676dd](https://github.com/SpareBank1/designsystem/commit/1b676dd29d53c067ece956a5608d87e717574a48))
-
-
-
-
+-   **ffe-system-message-react:** broadens version of peer dependencies ([1b676dd](https://github.com/SpareBank1/designsystem/commit/1b676dd29d53c067ece956a5608d87e717574a48))
 
 ## [6.2.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@6.2.3...@sb1/ffe-system-message-react@6.2.4) (2021-02-03)
 
-
 ### Bug Fixes
 
-* packages/ffe-system-message-react/package.json to reduce vulnerabilities ([4e8a6d3](https://github.com/SpareBank1/designsystem/commit/4e8a6d3a92552846f11a230afc91658c75b08ccb))
-
-
-
-
+-   packages/ffe-system-message-react/package.json to reduce vulnerabilities ([4e8a6d3](https://github.com/SpareBank1/designsystem/commit/4e8a6d3a92552846f11a230afc91658c75b08ccb))
 
 ## [6.2.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@6.2.2...@sb1/ffe-system-message-react@6.2.3) (2021-02-02)
 
-
 ### Bug Fixes
 
-* **ffe-system-message-react:** reduce vulnerabilities ([12c1566](https://github.com/SpareBank1/designsystem/commit/12c1566a104ad560cbf6923f151bfbe4f717c576))
-
-
-
-
+-   **ffe-system-message-react:** reduce vulnerabilities ([12c1566](https://github.com/SpareBank1/designsystem/commit/12c1566a104ad560cbf6923f151bfbe4f717c576))
 
 ## [6.2.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@6.2.1...@sb1/ffe-system-message-react@6.2.2) (2020-11-18)
 
 **Note:** Version bump only for package @sb1/ffe-system-message-react
 
-
-
-
-
 ## [6.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@6.2.0...@sb1/ffe-system-message-react@6.2.1) (2020-10-21)
-
 
 ### Bug Fixes
 
-* **ffe-system-message-react:** optout param for alert for error message ([0469f5e](https://github.com/SpareBank1/designsystem/commit/0469f5e2290c4f8fdfcaad00e182d6cf83399610))
-
-
-
-
+-   **ffe-system-message-react:** optout param for alert for error message ([0469f5e](https://github.com/SpareBank1/designsystem/commit/0469f5e2290c4f8fdfcaad00e182d6cf83399610))
 
 # [6.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@6.1.6...@sb1/ffe-system-message-react@6.2.0) (2020-10-02)
 
-
 ### Features
 
-* **ffe-system-message-react:** add role="alert" to error message ([f9ec168](https://github.com/SpareBank1/designsystem/commit/f9ec16889e3b3003a11075c969dff52ae6b0cd09))
-
-
-
-
+-   **ffe-system-message-react:** add role="alert" to error message ([f9ec168](https://github.com/SpareBank1/designsystem/commit/f9ec16889e3b3003a11075c969dff52ae6b0cd09))
 
 ## [6.1.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@6.1.5...@sb1/ffe-system-message-react@6.1.6) (2020-09-15)
 
 **Note:** Version bump only for package @sb1/ffe-system-message-react
 
-
-
-
-
 ## [6.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@6.1.4...@sb1/ffe-system-message-react@6.1.5) (2020-08-27)
 
 **Note:** Version bump only for package @sb1/ffe-system-message-react
-
-
-
-
 
 ## [6.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@6.1.3...@sb1/ffe-system-message-react@6.1.4) (2020-08-04)
 
 **Note:** Version bump only for package @sb1/ffe-system-message-react
 
-
-
-
-
 ## [6.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@6.1.2...@sb1/ffe-system-message-react@6.1.3) (2020-07-30)
 
 **Note:** Version bump only for package @sb1/ffe-system-message-react
-
-
-
-
 
 ## [6.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@6.1.1...@sb1/ffe-system-message-react@6.1.2) (2020-06-29)
 
 **Note:** Version bump only for package @sb1/ffe-system-message-react
 
-
-
-
-
 ## [6.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@6.1.0...@sb1/ffe-system-message-react@6.1.1) (2020-06-24)
 
 **Note:** Version bump only for package @sb1/ffe-system-message-react
 
-
-
-
-
 # [6.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@6.0.16...@sb1/ffe-system-message-react@6.1.0) (2020-06-18)
-
 
 ### Features
 
-* **ffe-system-message-react:** stop using deprecated lifecycle methods ([940e0f8](https://github.com/SpareBank1/designsystem/commit/940e0f8d516eeaec85f08cbe7019b29a6e8b36cf))
-
-
-
-
+-   **ffe-system-message-react:** stop using deprecated lifecycle methods ([940e0f8](https://github.com/SpareBank1/designsystem/commit/940e0f8d516eeaec85f08cbe7019b29a6e8b36cf))
 
 ## [6.0.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@6.0.15...@sb1/ffe-system-message-react@6.0.16) (2020-05-27)
 
 **Note:** Version bump only for package @sb1/ffe-system-message-react
-
-
-
-
 
 ## [6.0.15](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@6.0.14...@sb1/ffe-system-message-react@6.0.15) (2020-03-31)
 

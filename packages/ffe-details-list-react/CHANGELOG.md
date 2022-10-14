@@ -3,460 +3,239 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [3.0.72](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.71...@sb1/ffe-details-list-react@3.0.72) (2022-10-04)
+## [3.0.73](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.72...@sb1/ffe-details-list-react@3.0.73) (2022-10-14)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
 
+## [3.0.72](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.71...@sb1/ffe-details-list-react@3.0.72) (2022-10-04)
 
-
-
+**Note:** Version bump only for package @sb1/ffe-details-list-react
 
 ## [3.0.71](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.70...@sb1/ffe-details-list-react@3.0.71) (2022-10-04)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
 
-
-
-
-
 ## [3.0.70](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.69...@sb1/ffe-details-list-react@3.0.70) (2022-09-28)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
-
-
-
-
 
 ## [3.0.69](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.68...@sb1/ffe-details-list-react@3.0.69) (2022-09-09)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
 
-
-
-
-
 ## [3.0.68](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.67...@sb1/ffe-details-list-react@3.0.68) (2022-08-31)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
-
-
-
-
 
 ## [3.0.67](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.66...@sb1/ffe-details-list-react@3.0.67) (2022-08-08)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
 
-
-
-
-
 ## [3.0.66](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.65...@sb1/ffe-details-list-react@3.0.66) (2022-08-05)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
-
-
-
-
 
 ## [3.0.65](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.64...@sb1/ffe-details-list-react@3.0.65) (2022-06-07)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
 
-
-
-
-
 ## [3.0.64](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.63...@sb1/ffe-details-list-react@3.0.64) (2022-06-02)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
-
-
-
-
 
 ## [3.0.63](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.62...@sb1/ffe-details-list-react@3.0.63) (2022-05-30)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
 
-
-
-
-
 ## [3.0.62](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.61...@sb1/ffe-details-list-react@3.0.62) (2022-05-19)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
 
-
-
-
-
 ## [3.0.61](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.60...@sb1/ffe-details-list-react@3.0.61) (2022-03-31)
-
 
 ### Bug Fixes
 
-* **ffe-details-list-react:** update README ([ba40a2b](https://github.com/SpareBank1/designsystem/commit/ba40a2b6a400f5470f0665c52396747eeed2fcbe))
-
-
-
-
+-   **ffe-details-list-react:** update README ([ba40a2b](https://github.com/SpareBank1/designsystem/commit/ba40a2b6a400f5470f0665c52396747eeed2fcbe))
 
 ## [3.0.60](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.59...@sb1/ffe-details-list-react@3.0.60) (2022-03-21)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
 
-
-
-
-
 ## [3.0.59](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.58...@sb1/ffe-details-list-react@3.0.59) (2022-03-11)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
-
-
-
-
 
 ## [3.0.58](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.57...@sb1/ffe-details-list-react@3.0.58) (2022-03-09)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
 
-
-
-
-
 ## [3.0.57](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.56...@sb1/ffe-details-list-react@3.0.57) (2022-02-28)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
-
-
-
-
 
 ## [3.0.56](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.55...@sb1/ffe-details-list-react@3.0.56) (2022-02-18)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
 
-
-
-
-
 ## [3.0.55](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.54...@sb1/ffe-details-list-react@3.0.55) (2022-01-27)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
-
-
-
-
 
 ## [3.0.54](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.53...@sb1/ffe-details-list-react@3.0.54) (2022-01-27)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
 
-
-
-
-
 ## [3.0.53](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.52...@sb1/ffe-details-list-react@3.0.53) (2022-01-25)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
-
-
-
-
 
 ## [3.0.52](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.51...@sb1/ffe-details-list-react@3.0.52) (2021-12-17)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
 
-
-
-
-
 ## [3.0.51](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.50...@sb1/ffe-details-list-react@3.0.51) (2021-12-10)
-
 
 ### Bug Fixes
 
-* **ffe-details-list-react:** use buildtool for transpiling ([907b90f](https://github.com/SpareBank1/designsystem/commit/907b90f3eff054045a245b969a326b0f717a74a8)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
-
-
-
-
+-   **ffe-details-list-react:** use buildtool for transpiling ([907b90f](https://github.com/SpareBank1/designsystem/commit/907b90f3eff054045a245b969a326b0f717a74a8)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
 
 ## [3.0.50](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.49...@sb1/ffe-details-list-react@3.0.50) (2021-11-30)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
 
-
-
-
-
 ## [3.0.49](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.48...@sb1/ffe-details-list-react@3.0.49) (2021-11-19)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
-
-
-
-
 
 ## [3.0.48](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.47...@sb1/ffe-details-list-react@3.0.48) (2021-11-18)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
 
-
-
-
-
 ## [3.0.47](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.46...@sb1/ffe-details-list-react@3.0.47) (2021-11-04)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
-
-
-
-
 
 ## [3.0.46](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.45...@sb1/ffe-details-list-react@3.0.46) (2021-11-02)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
 
-
-
-
-
 ## [3.0.45](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.44...@sb1/ffe-details-list-react@3.0.45) (2021-11-01)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
-
-
-
-
 
 ## [3.0.44](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.43...@sb1/ffe-details-list-react@3.0.44) (2021-11-01)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
 
-
-
-
-
 ## [3.0.43](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.42...@sb1/ffe-details-list-react@3.0.43) (2021-10-29)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
-
-
-
-
 
 ## [3.0.42](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.41...@sb1/ffe-details-list-react@3.0.42) (2021-10-29)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
 
-
-
-
-
 ## [3.0.41](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.40...@sb1/ffe-details-list-react@3.0.41) (2021-10-20)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
-
-
-
-
 
 ## [3.0.40](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.39...@sb1/ffe-details-list-react@3.0.40) (2021-10-08)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
 
-
-
-
-
 ## [3.0.39](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.38...@sb1/ffe-details-list-react@3.0.39) (2021-10-06)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
-
-
-
-
 
 ## [3.0.38](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.37...@sb1/ffe-details-list-react@3.0.38) (2021-09-24)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
 
-
-
-
-
 ## [3.0.37](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.36...@sb1/ffe-details-list-react@3.0.37) (2021-09-17)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
-
-
-
-
 
 ## [3.0.36](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.35...@sb1/ffe-details-list-react@3.0.36) (2021-09-10)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
 
-
-
-
-
 ## [3.0.35](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.33...@sb1/ffe-details-list-react@3.0.35) (2021-09-06)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
-
-
-
-
 
 ## [3.0.34](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.33...@sb1/ffe-details-list-react@3.0.34) (2021-09-06)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
 
-
-
-
-
 ## [3.0.33](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.32...@sb1/ffe-details-list-react@3.0.33) (2021-06-17)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
-
-
-
-
 
 ## [3.0.32](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.31...@sb1/ffe-details-list-react@3.0.32) (2021-04-14)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
 
-
-
-
-
 ## [3.0.31](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.30...@sb1/ffe-details-list-react@3.0.31) (2021-03-26)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
-
-
-
-
 
 ## [3.0.30](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.29...@sb1/ffe-details-list-react@3.0.30) (2021-03-25)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
 
-
-
-
-
 ## [3.0.29](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.28...@sb1/ffe-details-list-react@3.0.29) (2021-03-17)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
 
-
-
-
-
 ## [3.0.28](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.27...@sb1/ffe-details-list-react@3.0.28) (2021-03-15)
-
 
 ### Bug Fixes
 
-* **ffe-details-list-react:** broadens version of peer dependencies ([3f97fa8](https://github.com/SpareBank1/designsystem/commit/3f97fa8236eba39e84dfb8383efd3df70ac96d1e))
-
-
-
-
+-   **ffe-details-list-react:** broadens version of peer dependencies ([3f97fa8](https://github.com/SpareBank1/designsystem/commit/3f97fa8236eba39e84dfb8383efd3df70ac96d1e))
 
 ## [3.0.27](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.26...@sb1/ffe-details-list-react@3.0.27) (2021-03-08)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
 
-
-
-
-
 ## [3.0.26](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.25...@sb1/ffe-details-list-react@3.0.26) (2021-02-03)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
 
-
-
-
-
 ## [3.0.25](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.24...@sb1/ffe-details-list-react@3.0.25) (2021-02-03)
-
 
 ### Bug Fixes
 
-* packages/ffe-details-list-react/package.json to reduce vulnerabilities ([6c91bbe](https://github.com/SpareBank1/designsystem/commit/6c91bbe9b8dcee3b66098e9261f67e1c002493ed))
-
-
-
-
+-   packages/ffe-details-list-react/package.json to reduce vulnerabilities ([6c91bbe](https://github.com/SpareBank1/designsystem/commit/6c91bbe9b8dcee3b66098e9261f67e1c002493ed))
 
 ## [3.0.24](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.23...@sb1/ffe-details-list-react@3.0.24) (2021-02-02)
 
-
 ### Bug Fixes
 
-* **ffe-details-list-react:** reduce vulnerabilities ([fd25b14](https://github.com/SpareBank1/designsystem/commit/fd25b147d6df730d23d6006b333874ddb4310e2b))
-
-
-
-
+-   **ffe-details-list-react:** reduce vulnerabilities ([fd25b14](https://github.com/SpareBank1/designsystem/commit/fd25b147d6df730d23d6006b333874ddb4310e2b))
 
 ## [3.0.23](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.22...@sb1/ffe-details-list-react@3.0.23) (2021-02-02)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
 
-
-
-
-
 ## [3.0.22](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.21...@sb1/ffe-details-list-react@3.0.22) (2021-01-11)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
-
-
-
-
 
 ## [3.0.21](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.20...@sb1/ffe-details-list-react@3.0.21) (2020-12-03)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
 
-
-
-
-
 ## [3.0.20](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.19...@sb1/ffe-details-list-react@3.0.20) (2020-11-20)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
-
-
-
-
 
 ## [3.0.19](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.18...@sb1/ffe-details-list-react@3.0.19) (2020-11-05)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
 
-
-
-
-
 ## [3.0.18](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.17...@sb1/ffe-details-list-react@3.0.18) (2020-08-25)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
-
-
-
-
 
 ## [3.0.17](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.16...@sb1/ffe-details-list-react@3.0.17) (2020-03-18)
 

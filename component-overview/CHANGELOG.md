@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.11.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.10.10...@sb1/ffe-component-index@3.11.0) (2022-10-14)
+
+### Features
+
+-   **component-overview:** grid-eksempler med modifiere ([0e0ee1a](https://github.com/SpareBank1/designsystem/commit/0e0ee1a8fecc4580bee6d40b06659c01fa601347))
+
 ## [3.10.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.10.9...@sb1/ffe-component-index@3.10.10) (2022-10-10)
 
 **Note:** Version bump only for package @sb1/ffe-component-index

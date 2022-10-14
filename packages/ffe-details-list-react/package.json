@@ -1,43 +1,43 @@
 {
-  "name": "@sb1/ffe-details-list-react",
-  "version": "3.0.72",
-  "license": "MIT",
-  "author": "SpareBank 1",
-  "files": [
-    "lib",
-    "es",
-    "less"
-  ],
-  "main": "lib/index.js",
-  "module": "es/index.js",
-  "sideEffects": false,
-  "repository": {
-    "type": "git",
-    "url": "ssh://git@github.com:SpareBank1/designsystem.git"
-  },
-  "scripts": {
-    "build": "ffe-buildtool babel --no-copy-typedef",
-    "watch": "ffe-buildtool babel-watch",
-    "lint": "eslint src",
-    "test": "ffe-buildtool jest",
-    "test:watch": "ffe-buildtool jest --watch"
-  },
-  "dependencies": {
-    "classnames": "^2.3.1"
-  },
-  "devDependencies": {
-    "@sb1/ffe-buildtool": "^0.4.1",
-    "@sb1/ffe-grid": "^13.0.1",
-    "@sb1/ffe-grid-react": "^12.0.0",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0"
-  },
-  "peerDependencies": {
-    "@sb1/ffe-grid": "*",
-    "@sb1/ffe-grid-react": "*",
-    "react": ">=16.9.0"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+    "name": "@sb1/ffe-details-list-react",
+    "version": "3.0.73",
+    "license": "MIT",
+    "author": "SpareBank 1",
+    "files": [
+        "lib",
+        "es",
+        "less"
+    ],
+    "main": "lib/index.js",
+    "module": "es/index.js",
+    "sideEffects": false,
+    "repository": {
+        "type": "git",
+        "url": "ssh://git@github.com:SpareBank1/designsystem.git"
+    },
+    "scripts": {
+        "build": "ffe-buildtool babel --no-copy-typedef",
+        "watch": "ffe-buildtool babel-watch",
+        "lint": "eslint src",
+        "test": "ffe-buildtool jest",
+        "test:watch": "ffe-buildtool jest --watch"
+    },
+    "dependencies": {
+        "classnames": "^2.3.1"
+    },
+    "devDependencies": {
+        "@sb1/ffe-buildtool": "^0.4.1",
+        "@sb1/ffe-grid": "^13.0.2",
+        "@sb1/ffe-grid-react": "^12.0.1",
+        "react": "^16.9.0",
+        "react-dom": "^16.9.0"
+    },
+    "peerDependencies": {
+        "@sb1/ffe-grid": "*",
+        "@sb1/ffe-grid-react": "*",
+        "react": ">=16.9.0"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
 }

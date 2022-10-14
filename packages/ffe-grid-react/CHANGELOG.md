@@ -3,176 +3,113 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [12.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@11.1.8...@sb1/ffe-grid-react@12.0.0) (2022-10-04)
+## [12.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@12.0.0...@sb1/ffe-grid-react@12.0.1) (2022-10-14)
 
+### Bug Fixes
+
+-   **ffe-grid-react:** legger til center i ts-props ([83f07bd](https://github.com/SpareBank1/designsystem/commit/83f07bd5773b3b96f4e4fd5f8f8df2c142f1da00))
+-   **ffe-grid-react:** legger tilbake prop for sentrert innhold ([7860022](https://github.com/SpareBank1/designsystem/commit/786002268fee6bde4800b92e98848cbdc2f438ab))
+
+# [12.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@11.1.8...@sb1/ffe-grid-react@12.0.0) (2022-10-04)
 
 ### Features
 
-* **ffe-grid-react:** fjerner condensed og inline, legger til modifiere for gap og spacing ([453e254](https://github.com/SpareBank1/designsystem/commit/453e2547e75070772f3cbeb5ff7113b34bdf9272))
-* **ffe-grid-react:** omskriving av grid ([bf429d8](https://github.com/SpareBank1/designsystem/commit/bf429d89cb6e5af8553026ca562d57d51888edcf))
-
+-   **ffe-grid-react:** fjerner condensed og inline, legger til modifiere for gap og spacing ([453e254](https://github.com/SpareBank1/designsystem/commit/453e2547e75070772f3cbeb5ff7113b34bdf9272))
+-   **ffe-grid-react:** omskriving av grid ([bf429d8](https://github.com/SpareBank1/designsystem/commit/bf429d89cb6e5af8553026ca562d57d51888edcf))
 
 ### BREAKING CHANGES
 
-* **ffe-grid-react:** og -modifieren fjernes, og erstattes med modifiere for gap, margin og padding
-* **ffe-grid-react:** grid-styling er skrevet om, og mange modifiere er fjernet
-
-
-
-
+-   **ffe-grid-react:** og -modifieren fjernes, og erstattes med modifiere for gap, margin og padding
+-   **ffe-grid-react:** grid-styling er skrevet om, og mange modifiere er fjernet
 
 ## [11.1.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@11.1.7...@sb1/ffe-grid-react@11.1.8) (2022-09-09)
 
 **Note:** Version bump only for package @sb1/ffe-grid-react
 
-
-
-
-
 ## [11.1.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@11.1.6...@sb1/ffe-grid-react@11.1.7) (2022-06-02)
-
 
 ### Bug Fixes
 
-* **ffe-grid-react:** add missing background colors to typescript declarations ([0816855](https://github.com/SpareBank1/designsystem/commit/0816855c40f07d8f812d33dfa34017ea053723a2))
-
-
-
-
+-   **ffe-grid-react:** add missing background colors to typescript declarations ([0816855](https://github.com/SpareBank1/designsystem/commit/0816855c40f07d8f812d33dfa34017ea053723a2))
 
 ## [11.1.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@11.1.5...@sb1/ffe-grid-react@11.1.6) (2022-02-18)
 
 **Note:** Version bump only for package @sb1/ffe-grid-react
 
-
-
-
-
 ## [11.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@11.1.4...@sb1/ffe-grid-react@11.1.5) (2022-01-27)
 
 **Note:** Version bump only for package @sb1/ffe-grid-react
-
-
-
-
 
 ## [11.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@11.1.3...@sb1/ffe-grid-react@11.1.4) (2022-01-27)
 
 **Note:** Version bump only for package @sb1/ffe-grid-react
 
-
-
-
-
 ## [11.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@11.1.2...@sb1/ffe-grid-react@11.1.3) (2022-01-25)
 
 **Note:** Version bump only for package @sb1/ffe-grid-react
-
-
-
-
 
 ## [11.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@11.1.1...@sb1/ffe-grid-react@11.1.2) (2021-12-17)
 
 **Note:** Version bump only for package @sb1/ffe-grid-react
 
-
-
-
-
 ## [11.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@11.1.0...@sb1/ffe-grid-react@11.1.1) (2021-12-10)
-
 
 ### Bug Fixes
 
-* **ffe-grid-react:** use buildtool for transpiling ([9c7c78d](https://github.com/SpareBank1/designsystem/commit/9c7c78d2eefacdcd30b4dc413be6aa4bd592503a)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
-
-
-
-
+-   **ffe-grid-react:** use buildtool for transpiling ([9c7c78d](https://github.com/SpareBank1/designsystem/commit/9c7c78d2eefacdcd30b4dc413be6aa4bd592503a)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
 
 # [11.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@11.0.0...@sb1/ffe-grid-react@11.1.0) (2021-11-18)
 
-
 ### Features
 
-* **ffe-grid-react:** legg til vann-30 som bakgrunnsfarge ([a3b5346](https://github.com/SpareBank1/designsystem/commit/a3b5346cdf9cab924356d6d6953e877a49a30e32))
-
-
-
-
+-   **ffe-grid-react:** legg til vann-30 som bakgrunnsfarge ([a3b5346](https://github.com/SpareBank1/designsystem/commit/a3b5346cdf9cab924356d6d6953e877a49a30e32))
 
 # [11.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@10.1.5...@sb1/ffe-grid-react@11.0.0) (2021-10-29)
 
-
 ### Features
 
-* **ffe-grid-react:** oppdater bakgrunnsfarger ([35271a8](https://github.com/SpareBank1/designsystem/commit/35271a8b4d6e2bd248439f818c590aba25051049))
-
+-   **ffe-grid-react:** oppdater bakgrunnsfarger ([35271a8](https://github.com/SpareBank1/designsystem/commit/35271a8b4d6e2bd248439f818c590aba25051049))
 
 ### BREAKING CHANGES
 
-* **ffe-grid-react:** Alle bakgrunnsfarge properties har fått nye navn til
-å passe den nye visuelle profilen. Bruk av gamle navn/verdier vil gi feilmelding.
-Det er også fjernet en del alternativer som ikke lenger skal bli brukt.
+-   **ffe-grid-react:** Alle bakgrunnsfarge properties har fått nye navn til
+    å passe den nye visuelle profilen. Bruk av gamle navn/verdier vil gi feilmelding.
+    Det er også fjernet en del alternativer som ikke lenger skal bli brukt.
 
 Nye fargealternativer er:
-- frost-30
-- sand
-- sand-70
-- sand-30
-- syrin-70
-- syrin-30
-- vann
-- fjell
 
-
-
-
+-   frost-30
+-   sand
+-   sand-70
+-   sand-30
+-   syrin-70
+-   syrin-30
+-   vann
+-   fjell
 
 ## [10.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@10.1.4...@sb1/ffe-grid-react@10.1.5) (2021-03-26)
 
-
 ### Bug Fixes
 
-* **ffe-grid-react:** remove check for nested grids ([6304ddc](https://github.com/SpareBank1/designsystem/commit/6304ddcbfdc6373bec426484c116463069c3772a))
-
-
-
-
+-   **ffe-grid-react:** remove check for nested grids ([6304ddc](https://github.com/SpareBank1/designsystem/commit/6304ddcbfdc6373bec426484c116463069c3772a))
 
 ## [10.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@10.1.3...@sb1/ffe-grid-react@10.1.4) (2021-03-15)
 
-
 ### Bug Fixes
 
-* **ffe-grid-react:** broadens version of peer dependencies ([1827e12](https://github.com/SpareBank1/designsystem/commit/1827e12d8decd0ee3d2fe37c7c8689a952826b9e))
-
-
-
-
+-   **ffe-grid-react:** broadens version of peer dependencies ([1827e12](https://github.com/SpareBank1/designsystem/commit/1827e12d8decd0ee3d2fe37c7c8689a952826b9e))
 
 ## [10.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@10.1.2...@sb1/ffe-grid-react@10.1.3) (2021-02-03)
 
-
 ### Bug Fixes
 
-* packages/ffe-grid-react/package.json to reduce vulnerabilities ([d81834c](https://github.com/SpareBank1/designsystem/commit/d81834cc927050296e7d06657b897f854a5f58a4))
-
-
-
-
+-   packages/ffe-grid-react/package.json to reduce vulnerabilities ([d81834c](https://github.com/SpareBank1/designsystem/commit/d81834cc927050296e7d06657b897f854a5f58a4))
 
 ## [10.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@10.1.1...@sb1/ffe-grid-react@10.1.2) (2021-02-02)
 
-
 ### Bug Fixes
 
-* **ffe-grid-react:** reduce vulnerabilities ([680ad96](https://github.com/SpareBank1/designsystem/commit/680ad969eeafc1eb6fffb4e074cc0fed50f06435))
-
-
-
-
+-   **ffe-grid-react:** reduce vulnerabilities ([680ad96](https://github.com/SpareBank1/designsystem/commit/680ad969eeafc1eb6fffb4e074cc0fed50f06435))
 
 ## [10.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@10.1.0...@sb1/ffe-grid-react@10.1.1) (2019-11-25)
 
