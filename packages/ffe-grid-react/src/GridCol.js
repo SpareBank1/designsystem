@@ -21,7 +21,7 @@ function camelCaseToDashCase(str) {
         );
 }
 
-const MODIFIER_LIST = ['background', 'centerText'];
+const MODIFIER_LIST = ['background', 'centerText', 'center'];
 
 const sizeClasses = (size, def) => {
     switch (typeof def) {
@@ -86,6 +86,7 @@ export default class GridCol extends Component {
         });
 
         const classes = [
+            'ffe-grid__col',
             className,
             sizeClasses('lg', lg),
             sizeClasses('md', md),
@@ -128,6 +129,8 @@ GridCol.propTypes = {
     element: node,
     /** Center text content horizontally */
     centerText: bool,
+    /** Center content vertically */
+    center: bool,
     /** The content of the column */
     children: node,
     /** Size modifiers for small screen sizes */

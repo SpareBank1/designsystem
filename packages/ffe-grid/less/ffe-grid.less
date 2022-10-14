@@ -1,7 +1,12 @@
 // Mixins
-.create-column(@size, @total, @current: 1) when (@current <= @total) {
+.create-column(@size, @total, @current: 0) when (@current <= @total) {
     .ffe-grid__col--@{size}-@{current} {
+        display: block;
         grid-column: auto / span (@current);
+
+        & when (@current = 0) {
+            display: none;
+        }
     }
 
     .create-column(@size, @total, @current + 1);
@@ -15,33 +20,51 @@
     .create-column-offset(@size, @total, @current + 1);
 }
 
+.ffe-grid {
+    margin: 0 auto;
+    max-width: @app-width;
+}
+
 .ffe-grid__row {
     display: grid;
     gap: @ffe-spacing-sm;
+    padding-right: @ffe-spacing-sm;
+    padding-left: @ffe-spacing-sm;
     grid-template-columns: repeat(12, 1fr);
 
     .ffe-grid--gap-none & {
         gap: 0;
+        padding: 0;
     }
 
     .ffe-grid--gap-2xs & {
         gap: @ffe-spacing-2xs;
+        padding-right: @ffe-spacing-2xs;
+        padding-left: @ffe-spacing-2xs;
     }
 
     .ffe-grid--gap-xs & {
         gap: @ffe-spacing-xs;
+        padding-right: @ffe-spacing-xs;
+        padding-left: @ffe-spacing-xs;
     }
 
     .ffe-grid--gap-sm & {
         gap: @ffe-spacing-sm;
+        padding-right: @ffe-spacing-sm;
+        padding-left: @ffe-spacing-sm;
     }
 
     .ffe-grid--gap-md & {
         gap: @ffe-spacing-md;
+        padding-right: @ffe-spacing-md;
+        padding-left: @ffe-spacing-md;
     }
 
     .ffe-grid--gap-lg & {
         gap: @ffe-spacing-lg;
+        padding-right: @ffe-spacing-lg;
+        padding-left: @ffe-spacing-lg;
     }
 
     &--padding-2xs {
@@ -215,6 +238,8 @@
 }
 
 .ffe-grid__col {
+    grid-column: auto / span 12;
+
     &--bg-frost-30 {
         background-color: @ffe-farge-frost-30;
         .native & {
@@ -324,4 +349,10 @@
 @media (min-width: @breakpoint-xl) {
     .create-column(xl, 12);
     .create-column-offset(xl, 12);
+}
+
+.ffe-grid__col--center {
+    display: flex;
+    place-items: center;
+    place-content: center;
 }

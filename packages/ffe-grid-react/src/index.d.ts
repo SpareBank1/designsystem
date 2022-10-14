@@ -66,6 +66,7 @@ export interface GridColProps extends React.HTMLAttributes<HTMLElement> {
     children?: React.ReactNode;
     className?: string;
     element?: React.ReactNode;
+    center?: boolean;
     centerText?: boolean;
     sm?: ColumnsRange | string | GridColSize;
     md?: ColumnsRange | string | GridColSize;
