@@ -3,459 +3,256 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [14.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@14.0.12...@sb1/ffe-cards@14.0.13) (2022-10-04)
+## [14.0.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@14.0.13...@sb1/ffe-cards@14.0.14) (2022-10-18)
 
 **Note:** Version bump only for package @sb1/ffe-cards
 
+## [14.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@14.0.12...@sb1/ffe-cards@14.0.13) (2022-10-04)
 
-
-
+**Note:** Version bump only for package @sb1/ffe-cards
 
 ## [14.0.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@14.0.11...@sb1/ffe-cards@14.0.12) (2022-09-28)
 
 **Note:** Version bump only for package @sb1/ffe-cards
 
-
-
-
-
 ## [14.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@14.0.10...@sb1/ffe-cards@14.0.11) (2022-08-31)
 
 **Note:** Version bump only for package @sb1/ffe-cards
-
-
-
-
 
 ## [14.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@14.0.9...@sb1/ffe-cards@14.0.10) (2022-08-08)
 
 **Note:** Version bump only for package @sb1/ffe-cards
 
-
-
-
-
 ## [14.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@14.0.8...@sb1/ffe-cards@14.0.9) (2022-08-05)
 
 **Note:** Version bump only for package @sb1/ffe-cards
-
-
-
-
 
 ## [14.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@14.0.7...@sb1/ffe-cards@14.0.8) (2022-06-07)
 
 **Note:** Version bump only for package @sb1/ffe-cards
 
-
-
-
-
 ## [14.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@14.0.6...@sb1/ffe-cards@14.0.7) (2022-05-30)
 
 **Note:** Version bump only for package @sb1/ffe-cards
-
-
-
-
 
 ## [14.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@14.0.5...@sb1/ffe-cards@14.0.6) (2022-05-19)
 
 **Note:** Version bump only for package @sb1/ffe-cards
 
-
-
-
-
 ## [14.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@14.0.4...@sb1/ffe-cards@14.0.5) (2022-03-31)
 
 **Note:** Version bump only for package @sb1/ffe-cards
 
-
-
-
-
 ## [14.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@14.0.3...@sb1/ffe-cards@14.0.4) (2022-03-21)
-
 
 ### Bug Fixes
 
-* **ffe-cards:** adds correct dark mode color for card title ([a8ed8c3](https://github.com/SpareBank1/designsystem/commit/a8ed8c39f0c44176f3307eb795fad96edb347949)), closes [#1357](https://github.com/SpareBank1/designsystem/issues/1357)
-
-
-
-
+-   **ffe-cards:** adds correct dark mode color for card title ([a8ed8c3](https://github.com/SpareBank1/designsystem/commit/a8ed8c39f0c44176f3307eb795fad96edb347949)), closes [#1357](https://github.com/SpareBank1/designsystem/issues/1357)
 
 ## [14.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@14.0.2...@sb1/ffe-cards@14.0.3) (2022-03-16)
 
-
 ### Bug Fixes
 
-* **ffe-cards:** remove need of importing internal mixin definitions ([ec448da](https://github.com/SpareBank1/designsystem/commit/ec448da95a6995bc8301611fb1007251fe5966f6))
-
-
-
-
+-   **ffe-cards:** remove need of importing internal mixin definitions ([ec448da](https://github.com/SpareBank1/designsystem/commit/ec448da95a6995bc8301611fb1007251fe5966f6))
 
 ## [14.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@14.0.1...@sb1/ffe-cards@14.0.2) (2022-03-11)
 
 **Note:** Version bump only for package @sb1/ffe-cards
 
-
-
-
-
 ## [14.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@14.0.0...@sb1/ffe-cards@14.0.1) (2022-03-09)
 
 **Note:** Version bump only for package @sb1/ffe-cards
 
-
-
-
-
 # [14.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@13.0.0...@sb1/ffe-cards@14.0.0) (2022-03-09)
-
 
 ### Bug Fixes
 
-* **ffe-cards:** add class for sizing image of image-card ([ed0e540](https://github.com/SpareBank1/designsystem/commit/ed0e540dd8c0efd18a8d9915479f5a5d14202c84))
-* **ffe-cards:** decouple card classes from card-base ([5036082](https://github.com/SpareBank1/designsystem/commit/5036082505159f9463f02254f360f741bc83b1a7)), closes [#1333](https://github.com/SpareBank1/designsystem/issues/1333)
-* **ffe-cards:** fix css class name inconsistency ([2ba6ff4](https://github.com/SpareBank1/designsystem/commit/2ba6ff443cef56f5d2063a9095d6a276f64c1440))
-* **ffe-cards:** removes unnecessary overloads ([a083ca2](https://github.com/SpareBank1/designsystem/commit/a083ca2575ea0e30851bd301aa065d9e91621d2e))
-* **ffe-cards:** rename ffe-card-components--* ([89f3678](https://github.com/SpareBank1/designsystem/commit/89f367805c385644ad386be6f6c51aa59423ff92))
-
+-   **ffe-cards:** add class for sizing image of image-card ([ed0e540](https://github.com/SpareBank1/designsystem/commit/ed0e540dd8c0efd18a8d9915479f5a5d14202c84))
+-   **ffe-cards:** decouple card classes from card-base ([5036082](https://github.com/SpareBank1/designsystem/commit/5036082505159f9463f02254f360f741bc83b1a7)), closes [#1333](https://github.com/SpareBank1/designsystem/issues/1333)
+-   **ffe-cards:** fix css class name inconsistency ([2ba6ff4](https://github.com/SpareBank1/designsystem/commit/2ba6ff443cef56f5d2063a9095d6a276f64c1440))
+-   **ffe-cards:** removes unnecessary overloads ([a083ca2](https://github.com/SpareBank1/designsystem/commit/a083ca2575ea0e30851bd301aa065d9e91621d2e))
+-   **ffe-cards:** rename ffe-card-components--\* ([89f3678](https://github.com/SpareBank1/designsystem/commit/89f367805c385644ad386be6f6c51aa59423ff92))
 
 ### BREAKING CHANGES
 
-* **ffe-cards:** .ffe-card-componet--* have been renamed to
-.ffe-card-body__* to better match BEM convention.
-
-
-
-
+-   **ffe-cards:** .ffe-card-componet--_ have been renamed to
+    .ffe-card-body\_\__ to better match BEM convention.
 
 # [13.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@12.0.12...@sb1/ffe-cards@13.0.0) (2022-03-08)
 
-
 ### Bug Fixes
 
-* **ffe-cards:** sletter gammel ubrukt fil ([5149d9a](https://github.com/SpareBank1/designsystem/commit/5149d9aff4699c38735e65c65cbe16fbf4fb85d9))
-
+-   **ffe-cards:** sletter gammel ubrukt fil ([5149d9a](https://github.com/SpareBank1/designsystem/commit/5149d9aff4699c38735e65c65cbe16fbf4fb85d9))
 
 ### BREAKING CHANGES
 
-* **ffe-cards:** sletter animasjoner som ikke lenger er i bruk
-
-
-
-
+-   **ffe-cards:** sletter animasjoner som ikke lenger er i bruk
 
 ## [12.0.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@12.0.11...@sb1/ffe-cards@12.0.12) (2022-03-02)
 
-
 ### Bug Fixes
 
-* **ffe-cards:** remove main entry field from package.json ([60fbd5c](https://github.com/SpareBank1/designsystem/commit/60fbd5cc47311a2628d8d176b540a1ddcf2cf1dd))
-
-
-
-
+-   **ffe-cards:** remove main entry field from package.json ([60fbd5c](https://github.com/SpareBank1/designsystem/commit/60fbd5cc47311a2628d8d176b540a1ddcf2cf1dd))
 
 ## [12.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@12.0.10...@sb1/ffe-cards@12.0.11) (2022-02-28)
 
 **Note:** Version bump only for package @sb1/ffe-cards
 
-
-
-
-
 ## [12.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@12.0.9...@sb1/ffe-cards@12.0.10) (2021-11-30)
 
 **Note:** Version bump only for package @sb1/ffe-cards
-
-
-
-
 
 ## [12.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@12.0.8...@sb1/ffe-cards@12.0.9) (2021-11-19)
 
 **Note:** Version bump only for package @sb1/ffe-cards
 
-
-
-
-
 ## [12.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@12.0.7...@sb1/ffe-cards@12.0.8) (2021-11-04)
 
 **Note:** Version bump only for package @sb1/ffe-cards
-
-
-
-
 
 ## [12.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@12.0.6...@sb1/ffe-cards@12.0.7) (2021-11-01)
 
 **Note:** Version bump only for package @sb1/ffe-cards
 
-
-
-
-
 ## [12.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@12.0.5...@sb1/ffe-cards@12.0.6) (2021-11-01)
 
 **Note:** Version bump only for package @sb1/ffe-cards
-
-
-
-
 
 ## [12.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@12.0.4...@sb1/ffe-cards@12.0.5) (2021-10-29)
 
 **Note:** Version bump only for package @sb1/ffe-cards
 
-
-
-
-
 ## [12.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@12.0.3...@sb1/ffe-cards@12.0.4) (2021-10-20)
 
 **Note:** Version bump only for package @sb1/ffe-cards
-
-
-
-
 
 ## [12.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@12.0.2...@sb1/ffe-cards@12.0.3) (2021-10-08)
 
 **Note:** Version bump only for package @sb1/ffe-cards
 
-
-
-
-
 ## [12.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@12.0.1...@sb1/ffe-cards@12.0.2) (2021-10-06)
 
 **Note:** Version bump only for package @sb1/ffe-cards
-
-
-
-
 
 ## [12.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@12.0.0...@sb1/ffe-cards@12.0.1) (2021-09-24)
 
 **Note:** Version bump only for package @sb1/ffe-cards
 
-
-
-
-
 # [12.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@11.0.1...@sb1/ffe-cards@12.0.0) (2021-09-22)
-
 
 ### Bug Fixes
 
-* **ffe-cards:** fikser linting-feil ([87eff31](https://github.com/SpareBank1/designsystem/commit/87eff31a17ef059287d440821a4a85818a3d4351))
-
+-   **ffe-cards:** fikser linting-feil ([87eff31](https://github.com/SpareBank1/designsystem/commit/87eff31a17ef059287d440821a4a85818a3d4351))
 
 ### Features
 
-* **ffe-cards:** justerte farger iht ny profil ([2b94020](https://github.com/SpareBank1/designsystem/commit/2b94020f8767b359bd9d9c4b7d6121633293fb65))
-
+-   **ffe-cards:** justerte farger iht ny profil ([2b94020](https://github.com/SpareBank1/designsystem/commit/2b94020f8767b359bd9d9c4b7d6121633293fb65))
 
 ### BREAKING CHANGES
 
-* **ffe-cards:** nye farger kan medføre regresjonsfeil
-
-
-
-
+-   **ffe-cards:** nye farger kan medføre regresjonsfeil
 
 ## [11.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@11.0.0...@sb1/ffe-cards@11.0.1) (2021-09-17)
 
 **Note:** Version bump only for package @sb1/ffe-cards
 
-
-
-
-
 # [11.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@10.1.5...@sb1/ffe-cards@11.0.0) (2021-09-13)
-
 
 ### Features
 
-* **ffe-cards:** fjern deprecated link og product cards ([1a8f2fc](https://github.com/SpareBank1/designsystem/commit/1a8f2fcede901716550b357bee15e78f0b9009c0))
-
+-   **ffe-cards:** fjern deprecated link og product cards ([1a8f2fc](https://github.com/SpareBank1/designsystem/commit/1a8f2fcede901716550b357bee15e78f0b9009c0))
 
 ### BREAKING CHANGES
 
-* **ffe-cards:** LinkCard og ProductCard har vært deprecated i flere år,
-nå fjernes de fra koden.
-
-
-
-
+-   **ffe-cards:** LinkCard og ProductCard har vært deprecated i flere år,
+    nå fjernes de fra koden.
 
 ## [10.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@10.1.4...@sb1/ffe-cards@10.1.5) (2021-09-10)
 
 **Note:** Version bump only for package @sb1/ffe-cards
 
-
-
-
-
 ## [10.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@10.1.2...@sb1/ffe-cards@10.1.4) (2021-09-06)
 
 **Note:** Version bump only for package @sb1/ffe-cards
-
-
-
-
 
 ## [10.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@10.1.2...@sb1/ffe-cards@10.1.3) (2021-09-06)
 
 **Note:** Version bump only for package @sb1/ffe-cards
 
-
-
-
-
 ## [10.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@10.1.1...@sb1/ffe-cards@10.1.2) (2021-06-17)
 
 **Note:** Version bump only for package @sb1/ffe-cards
 
-
-
-
-
 ## [10.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@10.1.0...@sb1/ffe-cards@10.1.1) (2021-06-02)
-
 
 ### Bug Fixes
 
-* **ffe-cards:** Added dark background-color for ffe-product-card to support darkmode ([95b2f8d](https://github.com/SpareBank1/designsystem/commit/95b2f8d003eff5f628b487ea327a09f31bb79ac5))
-
-
-
-
+-   **ffe-cards:** Added dark background-color for ffe-product-card to support darkmode ([95b2f8d](https://github.com/SpareBank1/designsystem/commit/95b2f8d003eff5f628b487ea327a09f31bb79ac5))
 
 # [10.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@10.0.1...@sb1/ffe-cards@10.1.0) (2021-04-14)
 
-
 ### Features
 
-* **ffe-cards:** adds MuseoSans font as fallback font ([50b7e1e](https://github.com/SpareBank1/designsystem/commit/50b7e1e3c3bd0abdfb3f194a47311750d9ec8921))
-
-
-
-
+-   **ffe-cards:** adds MuseoSans font as fallback font ([50b7e1e](https://github.com/SpareBank1/designsystem/commit/50b7e1e3c3bd0abdfb3f194a47311750d9ec8921))
 
 ## [10.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@10.0.0...@sb1/ffe-cards@10.0.1) (2021-03-25)
 
 **Note:** Version bump only for package @sb1/ffe-cards
 
-
-
-
-
 # [10.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@9.0.6...@sb1/ffe-cards@10.0.0) (2021-03-17)
-
 
 ### Bug Fixes
 
-* **ffe-cards:** bytter ut museo sans med ny sparebank1-font ([f0b9ac9](https://github.com/SpareBank1/designsystem/commit/f0b9ac93d3d7fbe8961593743a7b712b65fa77a9))
-
+-   **ffe-cards:** bytter ut museo sans med ny sparebank1-font ([f0b9ac9](https://github.com/SpareBank1/designsystem/commit/f0b9ac93d3d7fbe8961593743a7b712b65fa77a9))
 
 ### BREAKING CHANGES
 
-* **ffe-cards:** ny font i alt innhold
-
-
-
-
+-   **ffe-cards:** ny font i alt innhold
 
 ## [9.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@9.0.5...@sb1/ffe-cards@9.0.6) (2021-03-15)
 
-
 ### Bug Fixes
 
-* **ffe-cards:** broadens version of peer dependencies ([c3d21b0](https://github.com/SpareBank1/designsystem/commit/c3d21b05c9ae434853c17e9975a38613eaba4d09))
-
-
-
-
+-   **ffe-cards:** broadens version of peer dependencies ([c3d21b0](https://github.com/SpareBank1/designsystem/commit/c3d21b05c9ae434853c17e9975a38613eaba4d09))
 
 ## [9.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@9.0.4...@sb1/ffe-cards@9.0.5) (2021-03-08)
 
 **Note:** Version bump only for package @sb1/ffe-cards
 
-
-
-
-
 ## [9.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@9.0.3...@sb1/ffe-cards@9.0.4) (2021-02-03)
 
 **Note:** Version bump only for package @sb1/ffe-cards
-
-
-
-
 
 ## [9.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@9.0.2...@sb1/ffe-cards@9.0.3) (2021-02-02)
 
 **Note:** Version bump only for package @sb1/ffe-cards
 
-
-
-
-
 ## [9.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@9.0.1...@sb1/ffe-cards@9.0.2) (2021-01-11)
 
 **Note:** Version bump only for package @sb1/ffe-cards
-
-
-
-
 
 ## [9.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@9.0.0...@sb1/ffe-cards@9.0.1) (2020-12-03)
 
 **Note:** Version bump only for package @sb1/ffe-cards
 
-
-
-
-
 # [9.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@8.0.10...@sb1/ffe-cards@9.0.0) (2020-11-20)
-
 
 ### Bug Fixes
 
-* **ffe-cards:** change text values to rem ([0ef1fed](https://github.com/SpareBank1/designsystem/commit/0ef1fed5b9c00fcec77b7eab6a0c15a7783cc1ff))
-
+-   **ffe-cards:** change text values to rem ([0ef1fed](https://github.com/SpareBank1/designsystem/commit/0ef1fed5b9c00fcec77b7eab6a0c15a7783cc1ff))
 
 ### BREAKING CHANGES
 
-* **ffe-cards:** This fix changes all font-size and line-height values from px to rem,
-this is to solve an issue with zooming in iOS.
-
-
-
-
+-   **ffe-cards:** This fix changes all font-size and line-height values from px to rem,
+    this is to solve an issue with zooming in iOS.
 
 ## [8.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@8.0.9...@sb1/ffe-cards@8.0.10) (2020-11-05)
 
 **Note:** Version bump only for package @sb1/ffe-cards
 
-
-
-
-
 ## [8.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@8.0.8...@sb1/ffe-cards@8.0.9) (2020-08-25)
 
 **Note:** Version bump only for package @sb1/ffe-cards
-
-
-
-
 
 ## [8.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@8.0.7...@sb1/ffe-cards@8.0.8) (2020-03-18)
 

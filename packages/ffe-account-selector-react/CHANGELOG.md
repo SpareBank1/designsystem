@@ -3,841 +3,443 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [19.0.42](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@19.0.41...@sb1/ffe-account-selector-react@19.0.42) (2022-10-04)
+## [19.0.43](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@19.0.42...@sb1/ffe-account-selector-react@19.0.43) (2022-10-18)
 
+**Note:** Version bump only for package @sb1/ffe-account-selector-react
+
+## [19.0.42](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@19.0.41...@sb1/ffe-account-selector-react@19.0.42) (2022-10-04)
 
 ### Bug Fixes
 
-* **ffe-account-selector-react:** bytter ut utfaset farge ([3d30c20](https://github.com/SpareBank1/designsystem/commit/3d30c206bf976a130ca83ea7410514ae89b567f2))
-
-
-
-
+-   **ffe-account-selector-react:** bytter ut utfaset farge ([3d30c20](https://github.com/SpareBank1/designsystem/commit/3d30c206bf976a130ca83ea7410514ae89b567f2))
 
 ## [19.0.41](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@19.0.40...@sb1/ffe-account-selector-react@19.0.41) (2022-09-28)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
 
-
-
-
-
 ## [19.0.40](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@19.0.39...@sb1/ffe-account-selector-react@19.0.40) (2022-09-28)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
-
-
-
-
 
 ## [19.0.39](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@19.0.38...@sb1/ffe-account-selector-react@19.0.39) (2022-09-12)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
 
-
-
-
-
 ## [19.0.38](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@19.0.37...@sb1/ffe-account-selector-react@19.0.38) (2022-09-09)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
-
-
-
-
 
 ## [19.0.37](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@19.0.36...@sb1/ffe-account-selector-react@19.0.37) (2022-09-01)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
 
-
-
-
-
 ## [19.0.36](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@19.0.35...@sb1/ffe-account-selector-react@19.0.36) (2022-08-31)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
-
-
-
-
 
 ## [19.0.35](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@19.0.34...@sb1/ffe-account-selector-react@19.0.35) (2022-08-18)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
 
-
-
-
-
 ## [19.0.34](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@19.0.33...@sb1/ffe-account-selector-react@19.0.34) (2022-08-18)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
-
-
-
-
 
 ## [19.0.33](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@19.0.32...@sb1/ffe-account-selector-react@19.0.33) (2022-08-09)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
 
-
-
-
-
 ## [19.0.32](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@19.0.31...@sb1/ffe-account-selector-react@19.0.32) (2022-08-08)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
 
-
-
-
-
 ## [19.0.31](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@19.0.30...@sb1/ffe-account-selector-react@19.0.31) (2022-08-05)
-
 
 ### Bug Fixes
 
-* **ffe-account-selector-react:** erstatt ffe-farge-baer-wcag med ffe-farge-baer ([c68046c](https://github.com/SpareBank1/designsystem/commit/c68046cdf7fda5fd93032a58b2d079f121c2a746))
-
-
-
-
+-   **ffe-account-selector-react:** erstatt ffe-farge-baer-wcag med ffe-farge-baer ([c68046c](https://github.com/SpareBank1/designsystem/commit/c68046cdf7fda5fd93032a58b2d079f121c2a746))
 
 ## [19.0.30](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@19.0.29...@sb1/ffe-account-selector-react@19.0.30) (2022-08-02)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
 
-
-
-
-
 ## [19.0.29](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@19.0.28...@sb1/ffe-account-selector-react@19.0.29) (2022-07-13)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
-
-
-
-
 
 ## [19.0.28](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@19.0.27...@sb1/ffe-account-selector-react@19.0.28) (2022-07-11)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
 
-
-
-
-
 ## [19.0.27](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@19.0.26...@sb1/ffe-account-selector-react@19.0.27) (2022-06-14)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
 
-
-
-
-
 ## [19.0.26](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@19.0.25...@sb1/ffe-account-selector-react@19.0.26) (2022-06-13)
-
 
 ### Bug Fixes
 
-* **ffe-account-selector-react:** make Account type in account selector generic ([ec80110](https://github.com/SpareBank1/designsystem/commit/ec801100429b31a51367888ac842396fafcd6101))
-
-
-
-
+-   **ffe-account-selector-react:** make Account type in account selector generic ([ec80110](https://github.com/SpareBank1/designsystem/commit/ec801100429b31a51367888ac842396fafcd6101))
 
 ## [19.0.25](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@19.0.24...@sb1/ffe-account-selector-react@19.0.25) (2022-06-07)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
 
-
-
-
-
 ## [19.0.24](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@19.0.23...@sb1/ffe-account-selector-react@19.0.24) (2022-06-02)
-
 
 ### Bug Fixes
 
-* **ffe-account-selector-react:** fix declaration for AccountSelector ([fb24af9](https://github.com/SpareBank1/designsystem/commit/fb24af905b88f7ac2e5f7093375018723b46329e))
-
-
-
-
+-   **ffe-account-selector-react:** fix declaration for AccountSelector ([fb24af9](https://github.com/SpareBank1/designsystem/commit/fb24af905b88f7ac2e5f7093375018723b46329e))
 
 ## [19.0.23](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@19.0.22...@sb1/ffe-account-selector-react@19.0.23) (2022-05-31)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
 
-
-
-
-
 ## [19.0.22](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@19.0.21...@sb1/ffe-account-selector-react@19.0.22) (2022-05-30)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
-
-
-
-
 
 ## [19.0.21](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@19.0.20...@sb1/ffe-account-selector-react@19.0.21) (2022-05-20)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
 
-
-
-
-
 ## [19.0.20](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@19.0.19...@sb1/ffe-account-selector-react@19.0.20) (2022-05-19)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
-
-
-
-
 
 ## [19.0.19](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@19.0.18...@sb1/ffe-account-selector-react@19.0.19) (2022-05-09)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
 
-
-
-
-
 ## [19.0.18](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@19.0.17...@sb1/ffe-account-selector-react@19.0.18) (2022-04-21)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
-
-
-
-
 
 ## [19.0.17](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@19.0.16...@sb1/ffe-account-selector-react@19.0.17) (2022-04-13)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
 
-
-
-
-
 ## [19.0.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@19.0.15...@sb1/ffe-account-selector-react@19.0.16) (2022-03-31)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
 
-
-
-
-
 ## [19.0.15](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@19.0.14...@sb1/ffe-account-selector-react@19.0.15) (2022-03-21)
-
 
 ### Bug Fixes
 
-* **ffe-account-selector-react:** legger til default font ([e0d81c4](https://github.com/SpareBank1/designsystem/commit/e0d81c44b5b9e1a3546e046cfc3e1937bde0b7f1))
-
-
-
-
+-   **ffe-account-selector-react:** legger til default font ([e0d81c4](https://github.com/SpareBank1/designsystem/commit/e0d81c44b5b9e1a3546e046cfc3e1937bde0b7f1))
 
 ## [19.0.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@19.0.13...@sb1/ffe-account-selector-react@19.0.14) (2022-03-11)
 
-
 ### Bug Fixes
 
-* **ffe-account-selector-react:** exclude the less-mixin `highlighted` from css ([c51842a](https://github.com/SpareBank1/designsystem/commit/c51842a42d62fb7dc47197473babe4970af813e6)), closes [#921](https://github.com/SpareBank1/designsystem/issues/921)
-
-
-
-
+-   **ffe-account-selector-react:** exclude the less-mixin `highlighted` from css ([c51842a](https://github.com/SpareBank1/designsystem/commit/c51842a42d62fb7dc47197473babe4970af813e6)), closes [#921](https://github.com/SpareBank1/designsystem/issues/921)
 
 ## [19.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@19.0.12...@sb1/ffe-account-selector-react@19.0.13) (2022-03-09)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
 
-
-
-
-
 ## [19.0.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@19.0.11...@sb1/ffe-account-selector-react@19.0.12) (2022-03-08)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
-
-
-
-
 
 ## [19.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@19.0.10...@sb1/ffe-account-selector-react@19.0.11) (2022-03-04)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
 
-
-
-
-
 ## [19.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@19.0.9...@sb1/ffe-account-selector-react@19.0.10) (2022-03-02)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
-
-
-
-
 
 ## [19.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@19.0.8...@sb1/ffe-account-selector-react@19.0.9) (2022-02-28)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
 
-
-
-
-
 ## [19.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@19.0.7...@sb1/ffe-account-selector-react@19.0.8) (2022-02-23)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
-
-
-
-
 
 ## [19.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@19.0.6...@sb1/ffe-account-selector-react@19.0.7) (2022-02-18)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
 
-
-
-
-
 ## [19.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@19.0.5...@sb1/ffe-account-selector-react@19.0.6) (2022-02-10)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
-
-
-
-
 
 ## [19.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@19.0.4...@sb1/ffe-account-selector-react@19.0.5) (2022-01-27)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
 
-
-
-
-
 ## [19.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@19.0.3...@sb1/ffe-account-selector-react@19.0.4) (2022-01-27)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
-
-
-
-
 
 ## [19.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@19.0.2...@sb1/ffe-account-selector-react@19.0.3) (2022-01-25)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
 
-
-
-
-
 ## [19.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@19.0.1...@sb1/ffe-account-selector-react@19.0.2) (2022-01-24)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
-
-
-
-
 
 ## [19.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@19.0.0...@sb1/ffe-account-selector-react@19.0.1) (2022-01-18)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
 
-
-
-
-
 # [19.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@18.5.5...@sb1/ffe-account-selector-react@19.0.0) (2022-01-14)
-
 
 ### Features
 
-* **ffe-account-selector-react:** change labelId to labelledById ([f184abe](https://github.com/SpareBank1/designsystem/commit/f184abe2725fb5b307073f444d450f3ea636f5b0))
-
+-   **ffe-account-selector-react:** change labelId to labelledById ([f184abe](https://github.com/SpareBank1/designsystem/commit/f184abe2725fb5b307073f444d450f3ea636f5b0))
 
 ### BREAKING CHANGES
 
-* **ffe-account-selector-react:** Change labelId to labelledById, and make it optional.
-
-
-
-
+-   **ffe-account-selector-react:** Change labelId to labelledById, and make it optional.
 
 ## [18.5.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@18.5.4...@sb1/ffe-account-selector-react@18.5.5) (2022-01-05)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
 
-
-
-
-
 ## [18.5.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@18.5.3...@sb1/ffe-account-selector-react@18.5.4) (2021-12-17)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
-
-
-
-
 
 ## [18.5.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@18.5.2...@sb1/ffe-account-selector-react@18.5.3) (2021-12-14)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
 
-
-
-
-
 ## [18.5.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@18.5.1...@sb1/ffe-account-selector-react@18.5.2) (2021-12-10)
-
 
 ### Bug Fixes
 
-* **ffe-account-selector-react:** use ffe-buildtool for transpiling ([c328b5d](https://github.com/SpareBank1/designsystem/commit/c328b5d25ee464d533b7ab81b72ed10fdfa03780)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
-
-
-
-
+-   **ffe-account-selector-react:** use ffe-buildtool for transpiling ([c328b5d](https://github.com/SpareBank1/designsystem/commit/c328b5d25ee464d533b7ab81b72ed10fdfa03780)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
 
 ## [18.5.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@18.5.0...@sb1/ffe-account-selector-react@18.5.1) (2021-11-30)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
 
-
-
-
-
 # [18.5.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@18.4.1...@sb1/ffe-account-selector-react@18.5.0) (2021-11-26)
-
 
 ### Features
 
-* **ffe-account-selector-react:** Fix missing color for top line of suggestion ([2a64f91](https://github.com/SpareBank1/designsystem/commit/2a64f913c0321e4a1fc8db7c2718e7ee16f833d5))
-
-
-
-
+-   **ffe-account-selector-react:** Fix missing color for top line of suggestion ([2a64f91](https://github.com/SpareBank1/designsystem/commit/2a64f913c0321e4a1fc8db7c2718e7ee16f833d5))
 
 ## [18.4.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@18.4.0...@sb1/ffe-account-selector-react@18.4.1) (2021-11-25)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
 
-
-
-
-
 # [18.4.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@18.3.1...@sb1/ffe-account-selector-react@18.4.0) (2021-11-23)
-
 
 ### Features
 
-* **ffe-account-selector-react:** refactor multi- and single account selector ([2f4b90d](https://github.com/SpareBank1/designsystem/commit/2f4b90d68eec568d9867f9951c5524945ed978d6))
-
-
-
-
+-   **ffe-account-selector-react:** refactor multi- and single account selector ([2f4b90d](https://github.com/SpareBank1/designsystem/commit/2f4b90d68eec568d9867f9951c5524945ed978d6))
 
 ## [18.3.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@18.3.0...@sb1/ffe-account-selector-react@18.3.1) (2021-11-19)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
 
-
-
-
-
 # [18.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@18.2.10...@sb1/ffe-account-selector-react@18.3.0) (2021-11-19)
-
 
 ### Features
 
-* **ffe-account-selector-react:** slightly tweak colors ([e8e7164](https://github.com/SpareBank1/designsystem/commit/e8e7164088d4b9e52cbf97db249db532edc7ef84))
-
-
-
-
+-   **ffe-account-selector-react:** slightly tweak colors ([e8e7164](https://github.com/SpareBank1/designsystem/commit/e8e7164088d4b9e52cbf97db249db532edc7ef84))
 
 ## [18.2.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@18.2.9...@sb1/ffe-account-selector-react@18.2.10) (2021-11-11)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
 
-
-
-
-
 ## [18.2.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@18.2.8...@sb1/ffe-account-selector-react@18.2.9) (2021-11-10)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
-
-
-
-
 
 ## [18.2.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@18.2.7...@sb1/ffe-account-selector-react@18.2.8) (2021-11-04)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
 
-
-
-
-
 ## [18.2.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@18.2.6...@sb1/ffe-account-selector-react@18.2.7) (2021-11-02)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
-
-
-
-
 
 ## [18.2.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@18.2.5...@sb1/ffe-account-selector-react@18.2.6) (2021-11-01)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
 
-
-
-
-
 ## [18.2.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@18.2.4...@sb1/ffe-account-selector-react@18.2.5) (2021-11-01)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
-
-
-
-
 
 ## [18.2.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@18.2.3...@sb1/ffe-account-selector-react@18.2.4) (2021-10-29)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
 
-
-
-
-
 ## [18.2.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@18.2.2...@sb1/ffe-account-selector-react@18.2.3) (2021-10-21)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
-
-
-
-
 
 ## [18.2.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@18.2.1...@sb1/ffe-account-selector-react@18.2.2) (2021-10-20)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
 
-
-
-
-
 ## [18.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@18.2.0...@sb1/ffe-account-selector-react@18.2.1) (2021-10-19)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
 
-
-
-
-
 # [18.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@18.1.4...@sb1/ffe-account-selector-react@18.2.0) (2021-10-13)
-
 
 ### Features
 
-* **ffe-account-selector-react:** add open and close prop to account-selector ([33898df](https://github.com/SpareBank1/designsystem/commit/33898df2719c9fac9471c95890a33cad665dd3f2))
-
-
-
-
+-   **ffe-account-selector-react:** add open and close prop to account-selector ([33898df](https://github.com/SpareBank1/designsystem/commit/33898df2719c9fac9471c95890a33cad665dd3f2))
 
 ## [18.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@18.1.3...@sb1/ffe-account-selector-react@18.1.4) (2021-10-08)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
 
-
-
-
-
 ## [18.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@18.1.2...@sb1/ffe-account-selector-react@18.1.3) (2021-10-07)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
-
-
-
-
 
 ## [18.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@18.1.1...@sb1/ffe-account-selector-react@18.1.2) (2021-10-06)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
 
-
-
-
-
 ## [18.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@18.1.0...@sb1/ffe-account-selector-react@18.1.1) (2021-10-05)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
 
-
-
-
-
 # [18.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@18.0.2...@sb1/ffe-account-selector-react@18.1.0) (2021-09-24)
-
 
 ### Features
 
-* **ffe-account-selector-react:** Remove clear button from dropdown ([e54955f](https://github.com/SpareBank1/designsystem/commit/e54955f07b26383cff47b032d50fbdf0bbd59558))
-
-
-
-
+-   **ffe-account-selector-react:** Remove clear button from dropdown ([e54955f](https://github.com/SpareBank1/designsystem/commit/e54955f07b26383cff47b032d50fbdf0bbd59558))
 
 ## [18.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@18.0.1...@sb1/ffe-account-selector-react@18.0.2) (2021-09-17)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
 
-
-
-
-
 ## [18.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@18.0.0...@sb1/ffe-account-selector-react@18.0.1) (2021-09-10)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
 
-
-
-
-
 # [18.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@16.3.6...@sb1/ffe-account-selector-react@18.0.0) (2021-09-06)
-
 
 ### Features
 
-* **ffe-account-selector-react:** oppdaterte farger iht ny profil ([616d05b](https://github.com/SpareBank1/designsystem/commit/616d05b7af9f84be0a9dfcf4b080df1ac7cc2fe5))
-
+-   **ffe-account-selector-react:** oppdaterte farger iht ny profil ([616d05b](https://github.com/SpareBank1/designsystem/commit/616d05b7af9f84be0a9dfcf4b080df1ac7cc2fe5))
 
 ### BREAKING CHANGES
 
-* **ffe-account-selector-react:** visuelle endringer i komponenten kan medføre regresjonsfeil
-
-
-
-
+-   **ffe-account-selector-react:** visuelle endringer i komponenten kan medføre regresjonsfeil
 
 # [17.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@16.3.6...@sb1/ffe-account-selector-react@17.0.0) (2021-09-06)
 
-
 ### Features
 
-* **ffe-account-selector-react:** oppdaterte farger iht ny profil ([616d05b](https://github.com/SpareBank1/designsystem/commit/616d05b7af9f84be0a9dfcf4b080df1ac7cc2fe5))
-
+-   **ffe-account-selector-react:** oppdaterte farger iht ny profil ([616d05b](https://github.com/SpareBank1/designsystem/commit/616d05b7af9f84be0a9dfcf4b080df1ac7cc2fe5))
 
 ### BREAKING CHANGES
 
-* **ffe-account-selector-react:** visuelle endringer i komponenten kan medføre regresjonsfeil
-
-
-
-
+-   **ffe-account-selector-react:** visuelle endringer i komponenten kan medføre regresjonsfeil
 
 ## [16.3.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@16.3.5...@sb1/ffe-account-selector-react@16.3.6) (2021-08-11)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
 
-
-
-
-
 ## [16.3.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@16.3.4...@sb1/ffe-account-selector-react@16.3.5) (2021-07-16)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
-
-
-
-
 
 ## [16.3.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@16.3.3...@sb1/ffe-account-selector-react@16.3.4) (2021-07-14)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
 
-
-
-
-
 ## [16.3.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@16.3.2...@sb1/ffe-account-selector-react@16.3.3) (2021-07-07)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
-
-
-
-
 
 ## [16.3.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@16.3.1...@sb1/ffe-account-selector-react@16.3.2) (2021-07-07)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
 
-
-
-
-
 ## [16.3.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@16.3.0...@sb1/ffe-account-selector-react@16.3.1) (2021-07-06)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
 
-
-
-
-
 # [16.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@16.2.12...@sb1/ffe-account-selector-react@16.3.0) (2021-07-05)
-
 
 ### Features
 
-* **ffe-account-selector-react:** Add possibility to use a highCapacity account selector ([ffe2b41](https://github.com/SpareBank1/designsystem/commit/ffe2b410938fe338bcc179587c8d6d33f2c0abfd))
-
-
-
-
+-   **ffe-account-selector-react:** Add possibility to use a highCapacity account selector ([ffe2b41](https://github.com/SpareBank1/designsystem/commit/ffe2b410938fe338bcc179587c8d6d33f2c0abfd))
 
 ## [16.2.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@16.2.11...@sb1/ffe-account-selector-react@16.2.12) (2021-07-01)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
 
-
-
-
-
 ## [16.2.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@16.2.10...@sb1/ffe-account-selector-react@16.2.11) (2021-06-28)
-
 
 ### Bug Fixes
 
-* **ffe-account-selector-react:** Set inputValue when account is selected ([2056aef](https://github.com/SpareBank1/designsystem/commit/2056aef8769774fb40d5385d46633304b08bcec3))
-
-
-
-
+-   **ffe-account-selector-react:** Set inputValue when account is selected ([2056aef](https://github.com/SpareBank1/designsystem/commit/2056aef8769774fb40d5385d46633304b08bcec3))
 
 ## [16.2.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@16.2.9...@sb1/ffe-account-selector-react@16.2.10) (2021-06-24)
 
-
 ### Bug Fixes
 
-* **ffe-account-selector-react:** Add selectedAccount not found in accounts list to accounts list ([88d049c](https://github.com/SpareBank1/designsystem/commit/88d049cbaf9db1a2941557024cf6880ac8388712))
-
-
-
-
+-   **ffe-account-selector-react:** Add selectedAccount not found in accounts list to accounts list ([88d049c](https://github.com/SpareBank1/designsystem/commit/88d049cbaf9db1a2941557024cf6880ac8388712))
 
 ## [16.2.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@16.2.8...@sb1/ffe-account-selector-react@16.2.9) (2021-06-23)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
 
-
-
-
-
 ## [16.2.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@16.2.7...@sb1/ffe-account-selector-react@16.2.8) (2021-06-21)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
-
-
-
-
 
 ## [16.2.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@16.2.6...@sb1/ffe-account-selector-react@16.2.7) (2021-06-17)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
 
-
-
-
-
 ## [16.2.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@16.2.5...@sb1/ffe-account-selector-react@16.2.6) (2021-06-14)
-
 
 ### Bug Fixes
 
-* **ffe-account-selector-react:** Remove onBlur functionality ([bd84aaf](https://github.com/SpareBank1/designsystem/commit/bd84aaf26f13bc17532b2dd644e8609e8aaa9503))
-
-
-
-
+-   **ffe-account-selector-react:** Remove onBlur functionality ([bd84aaf](https://github.com/SpareBank1/designsystem/commit/bd84aaf26f13bc17532b2dd644e8609e8aaa9503))
 
 ## [16.2.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@16.2.4...@sb1/ffe-account-selector-react@16.2.5) (2021-06-09)
 
-
 ### Bug Fixes
 
-* **ffe-account-selector-react:** Empty dropdownList in noMatch if inputValue is not set ([5b4f28e](https://github.com/SpareBank1/designsystem/commit/5b4f28ebadedffece8782701009fbbfd5cc33e98))
-
-
-
-
+-   **ffe-account-selector-react:** Empty dropdownList in noMatch if inputValue is not set ([5b4f28e](https://github.com/SpareBank1/designsystem/commit/5b4f28ebadedffece8782701009fbbfd5cc33e98))
 
 ## [16.2.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@16.2.3...@sb1/ffe-account-selector-react@16.2.4) (2021-06-08)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
 
-
-
-
-
 ## [16.2.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@16.2.2...@sb1/ffe-account-selector-react@16.2.3) (2021-06-08)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
-
-
-
-
 
 ## [16.2.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@16.2.1...@sb1/ffe-account-selector-react@16.2.2) (2021-06-02)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
 
-
-
-
-
 ## [16.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@16.2.0...@sb1/ffe-account-selector-react@16.2.1) (2021-06-01)
-
 
 ### Bug Fixes
 
-* **ffe-account-selector-react:** Do not set account to inputValue if account is chosen from dropdown ([a290b5f](https://github.com/SpareBank1/designsystem/commit/a290b5fc6dcc7237e1da090f951a8e86288289c6))
-
-
-
-
+-   **ffe-account-selector-react:** Do not set account to inputValue if account is chosen from dropdown ([a290b5f](https://github.com/SpareBank1/designsystem/commit/a290b5fc6dcc7237e1da090f951a8e86288289c6))
 
 # [16.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@16.1.0...@sb1/ffe-account-selector-react@16.2.0) (2021-05-31)
 
-
 ### Features
 
-* **ffe-account-selector-react:** Show account number in input field when customAccount is allowed ([607529f](https://github.com/SpareBank1/designsystem/commit/607529f9aa3cb059a0ddbbca3ab03d74a472ed3f))
-
-
-
-
+-   **ffe-account-selector-react:** Show account number in input field when customAccount is allowed ([607529f](https://github.com/SpareBank1/designsystem/commit/607529f9aa3cb059a0ddbbca3ab03d74a472ed3f))
 
 # [16.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@16.0.0...@sb1/ffe-account-selector-react@16.1.0) (2021-05-27)
 
-
 ### Features
 
-* **ffe-account-selector-react:** Update CHANGELOG.md and README.md ([51ac7c3](https://github.com/SpareBank1/designsystem/commit/51ac7c3474548965db98b76e6a016d018009b7ec))
-
-
-
-
+-   **ffe-account-selector-react:** Update CHANGELOG.md and README.md ([51ac7c3](https://github.com/SpareBank1/designsystem/commit/51ac7c3474548965db98b76e6a016d018009b7ec))
 
 # [16.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@15.0.10...@sb1/ffe-account-selector-react@16.0.0) (2021-05-25)
 

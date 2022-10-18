@@ -3,605 +3,326 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [10.0.43](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.42...@sb1/ffe-datepicker@10.0.43) (2022-10-04)
+## [10.0.44](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.43...@sb1/ffe-datepicker@10.0.44) (2022-10-18)
 
+**Note:** Version bump only for package @sb1/ffe-datepicker
+
+## [10.0.43](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.42...@sb1/ffe-datepicker@10.0.43) (2022-10-04)
 
 ### Bug Fixes
 
-* **ffe-datepicker:** bytter ut utfaset farge ([4c4d6d5](https://github.com/SpareBank1/designsystem/commit/4c4d6d5fce5f94e545f9467a46ed7068ddb9d85b))
-
-
-
-
+-   **ffe-datepicker:** bytter ut utfaset farge ([4c4d6d5](https://github.com/SpareBank1/designsystem/commit/4c4d6d5fce5f94e545f9467a46ed7068ddb9d85b))
 
 ## [10.0.42](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.41...@sb1/ffe-datepicker@10.0.42) (2022-09-28)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
 
-
-
-
-
 ## [10.0.41](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.40...@sb1/ffe-datepicker@10.0.41) (2022-09-28)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
-
-
-
-
 
 ## [10.0.40](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.39...@sb1/ffe-datepicker@10.0.40) (2022-09-12)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
 
-
-
-
-
 ## [10.0.39](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.38...@sb1/ffe-datepicker@10.0.39) (2022-08-31)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
-
-
-
-
 
 ## [10.0.38](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.37...@sb1/ffe-datepicker@10.0.38) (2022-08-18)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
 
-
-
-
-
 ## [10.0.37](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.36...@sb1/ffe-datepicker@10.0.37) (2022-08-18)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
-
-
-
-
 
 ## [10.0.36](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.35...@sb1/ffe-datepicker@10.0.36) (2022-08-08)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
 
-
-
-
-
 ## [10.0.35](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.34...@sb1/ffe-datepicker@10.0.35) (2022-08-05)
-
 
 ### Bug Fixes
 
-* **ffe-datepicker:** erstatt ffe-farge-baer-wcag med ffe-farge-baer ([c946db4](https://github.com/SpareBank1/designsystem/commit/c946db4367d61ba3e695dbdc1051aefa6cf30c2f))
-
-
-
-
+-   **ffe-datepicker:** erstatt ffe-farge-baer-wcag med ffe-farge-baer ([c946db4](https://github.com/SpareBank1/designsystem/commit/c946db4367d61ba3e695dbdc1051aefa6cf30c2f))
 
 ## [10.0.34](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.33...@sb1/ffe-datepicker@10.0.34) (2022-07-11)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
 
-
-
-
-
 ## [10.0.33](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.32...@sb1/ffe-datepicker@10.0.33) (2022-06-07)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
-
-
-
-
 
 ## [10.0.32](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.31...@sb1/ffe-datepicker@10.0.32) (2022-05-30)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
 
-
-
-
-
 ## [10.0.31](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.30...@sb1/ffe-datepicker@10.0.31) (2022-05-20)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
-
-
-
-
 
 ## [10.0.30](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.29...@sb1/ffe-datepicker@10.0.30) (2022-05-19)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
 
-
-
-
-
 ## [10.0.29](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.28...@sb1/ffe-datepicker@10.0.29) (2022-05-09)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
-
-
-
-
 
 ## [10.0.28](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.27...@sb1/ffe-datepicker@10.0.28) (2022-03-31)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
 
-
-
-
-
 ## [10.0.27](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.26...@sb1/ffe-datepicker@10.0.27) (2022-03-21)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
 
-
-
-
-
 ## [10.0.26](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.25...@sb1/ffe-datepicker@10.0.26) (2022-03-11)
-
 
 ### Bug Fixes
 
-* **ffe-datepicker:** fix pseudo-class ([cd38334](https://github.com/SpareBank1/designsystem/commit/cd3833475f7bdfb1832120807f16119c80627748)), closes [#921](https://github.com/SpareBank1/designsystem/issues/921)
-
-
-
-
+-   **ffe-datepicker:** fix pseudo-class ([cd38334](https://github.com/SpareBank1/designsystem/commit/cd3833475f7bdfb1832120807f16119c80627748)), closes [#921](https://github.com/SpareBank1/designsystem/issues/921)
 
 ## [10.0.25](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.24...@sb1/ffe-datepicker@10.0.25) (2022-03-09)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
 
-
-
-
-
 ## [10.0.24](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.23...@sb1/ffe-datepicker@10.0.24) (2022-03-08)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
-
-
-
-
 
 ## [10.0.23](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.22...@sb1/ffe-datepicker@10.0.23) (2022-03-04)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
 
-
-
-
-
 ## [10.0.22](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.21...@sb1/ffe-datepicker@10.0.22) (2022-03-02)
-
 
 ### Bug Fixes
 
-* **ffe-datepicker:** remove main entry field from package.json ([59a8935](https://github.com/SpareBank1/designsystem/commit/59a89358ebec652b3bd82ea74f99934ff4d62d3b))
-
-
-
-
+-   **ffe-datepicker:** remove main entry field from package.json ([59a8935](https://github.com/SpareBank1/designsystem/commit/59a89358ebec652b3bd82ea74f99934ff4d62d3b))
 
 ## [10.0.21](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.20...@sb1/ffe-datepicker@10.0.21) (2022-02-28)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
 
-
-
-
-
 ## [10.0.20](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.19...@sb1/ffe-datepicker@10.0.20) (2021-12-14)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
-
-
-
-
 
 ## [10.0.19](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.18...@sb1/ffe-datepicker@10.0.19) (2021-12-10)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
 
-
-
-
-
 ## [10.0.18](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.17...@sb1/ffe-datepicker@10.0.18) (2021-11-30)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
-
-
-
-
 
 ## [10.0.17](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.16...@sb1/ffe-datepicker@10.0.17) (2021-11-25)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
 
-
-
-
-
 ## [10.0.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.15...@sb1/ffe-datepicker@10.0.16) (2021-11-19)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
-
-
-
-
 
 ## [10.0.15](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.14...@sb1/ffe-datepicker@10.0.15) (2021-11-19)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
 
-
-
-
-
 ## [10.0.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.13...@sb1/ffe-datepicker@10.0.14) (2021-11-11)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
-
-
-
-
 
 ## [10.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.12...@sb1/ffe-datepicker@10.0.13) (2021-11-04)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
 
-
-
-
-
 ## [10.0.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.11...@sb1/ffe-datepicker@10.0.12) (2021-11-02)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
-
-
-
-
 
 ## [10.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.10...@sb1/ffe-datepicker@10.0.11) (2021-11-01)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
 
-
-
-
-
 ## [10.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.9...@sb1/ffe-datepicker@10.0.10) (2021-11-01)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
-
-
-
-
 
 ## [10.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.8...@sb1/ffe-datepicker@10.0.9) (2021-10-29)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
 
-
-
-
-
 ## [10.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.7...@sb1/ffe-datepicker@10.0.8) (2021-10-20)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
-
-
-
-
 
 ## [10.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.6...@sb1/ffe-datepicker@10.0.7) (2021-10-08)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
 
-
-
-
-
 ## [10.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.5...@sb1/ffe-datepicker@10.0.6) (2021-10-06)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
-
-
-
-
 
 ## [10.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.4...@sb1/ffe-datepicker@10.0.5) (2021-10-05)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
 
-
-
-
-
 ## [10.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.3...@sb1/ffe-datepicker@10.0.4) (2021-09-24)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
-
-
-
-
 
 ## [10.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.2...@sb1/ffe-datepicker@10.0.3) (2021-09-17)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
 
-
-
-
-
 ## [10.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.1...@sb1/ffe-datepicker@10.0.2) (2021-09-16)
-
 
 ### Bug Fixes
 
-* **ffe-datepicker:** legg til min-høyde ([fa59c22](https://github.com/SpareBank1/designsystem/commit/fa59c2226b0d66b65da95a8d8a0310c66a8410b1))
-
-
-
-
+-   **ffe-datepicker:** legg til min-høyde ([fa59c22](https://github.com/SpareBank1/designsystem/commit/fa59c2226b0d66b65da95a8d8a0310c66a8410b1))
 
 ## [10.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.0...@sb1/ffe-datepicker@10.0.1) (2021-09-10)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
 
-
-
-
-
 # [10.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@8.0.11...@sb1/ffe-datepicker@10.0.0) (2021-09-06)
-
 
 ### Bug Fixes
 
-* **ffe-datepicker:** legger til tom linje for å fikse stylelint-feil ([d631d37](https://github.com/SpareBank1/designsystem/commit/d631d374232a1b1d2d4583706dce037a08baec18))
-
+-   **ffe-datepicker:** legger til tom linje for å fikse stylelint-feil ([d631d37](https://github.com/SpareBank1/designsystem/commit/d631d374232a1b1d2d4583706dce037a08baec18))
 
 ### Features
 
-* **ffe-datepicker:** oppdaterte farger iht ny profil ([40be92e](https://github.com/SpareBank1/designsystem/commit/40be92eeda6efbe645009607ff610e88711b8bae))
-
+-   **ffe-datepicker:** oppdaterte farger iht ny profil ([40be92e](https://github.com/SpareBank1/designsystem/commit/40be92eeda6efbe645009607ff610e88711b8bae))
 
 ### BREAKING CHANGES
 
-* **ffe-datepicker:** visuelle endringer i komponenten kan medføre regresjonsfeil
-
-
-
-
+-   **ffe-datepicker:** visuelle endringer i komponenten kan medføre regresjonsfeil
 
 # [9.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@8.0.11...@sb1/ffe-datepicker@9.0.0) (2021-09-06)
 
-
 ### Bug Fixes
 
-* **ffe-datepicker:** legger til tom linje for å fikse stylelint-feil ([d631d37](https://github.com/SpareBank1/designsystem/commit/d631d374232a1b1d2d4583706dce037a08baec18))
-
+-   **ffe-datepicker:** legger til tom linje for å fikse stylelint-feil ([d631d37](https://github.com/SpareBank1/designsystem/commit/d631d374232a1b1d2d4583706dce037a08baec18))
 
 ### Features
 
-* **ffe-datepicker:** oppdaterte farger iht ny profil ([40be92e](https://github.com/SpareBank1/designsystem/commit/40be92eeda6efbe645009607ff610e88711b8bae))
-
+-   **ffe-datepicker:** oppdaterte farger iht ny profil ([40be92e](https://github.com/SpareBank1/designsystem/commit/40be92eeda6efbe645009607ff610e88711b8bae))
 
 ### BREAKING CHANGES
 
-* **ffe-datepicker:** visuelle endringer i komponenten kan medføre regresjonsfeil
-
-
-
-
+-   **ffe-datepicker:** visuelle endringer i komponenten kan medføre regresjonsfeil
 
 ## [8.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@8.0.10...@sb1/ffe-datepicker@8.0.11) (2021-06-21)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
 
-
-
-
-
 ## [8.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@8.0.9...@sb1/ffe-datepicker@8.0.10) (2021-06-17)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
-
-
-
-
 
 ## [8.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@8.0.8...@sb1/ffe-datepicker@8.0.9) (2021-04-14)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
 
-
-
-
-
 ## [8.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@8.0.7...@sb1/ffe-datepicker@8.0.8) (2021-03-25)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
-
-
-
-
 
 ## [8.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@8.0.6...@sb1/ffe-datepicker@8.0.7) (2021-03-17)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
 
-
-
-
-
 ## [8.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@8.0.5...@sb1/ffe-datepicker@8.0.6) (2021-03-15)
-
 
 ### Bug Fixes
 
-* **ffe-datepicker:** broadens version of peer dependencies ([5a53025](https://github.com/SpareBank1/designsystem/commit/5a53025fe3eda027b70ca9cda04cd58c64c2764b))
-
-
-
-
+-   **ffe-datepicker:** broadens version of peer dependencies ([5a53025](https://github.com/SpareBank1/designsystem/commit/5a53025fe3eda027b70ca9cda04cd58c64c2764b))
 
 ## [8.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@8.0.4...@sb1/ffe-datepicker@8.0.5) (2021-03-08)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
 
-
-
-
-
 ## [8.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@8.0.3...@sb1/ffe-datepicker@8.0.4) (2021-02-24)
-
 
 ### Bug Fixes
 
-* **ffe-datepicker:** add cursor pointer to button ([0b8713f](https://github.com/SpareBank1/designsystem/commit/0b8713f8a05d3881f10658b64cd36c5d735c51b0))
-
-
-
-
+-   **ffe-datepicker:** add cursor pointer to button ([0b8713f](https://github.com/SpareBank1/designsystem/commit/0b8713f8a05d3881f10658b64cd36c5d735c51b0))
 
 ## [8.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@8.0.2...@sb1/ffe-datepicker@8.0.3) (2021-02-03)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
 
-
-
-
-
 ## [8.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@8.0.1...@sb1/ffe-datepicker@8.0.2) (2021-02-02)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
 
-
-
-
-
 ## [8.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@8.0.0...@sb1/ffe-datepicker@8.0.1) (2021-02-01)
-
 
 ### Bug Fixes
 
-* **ffe-datepicker:** remove import of ffe-form ([b759db0](https://github.com/SpareBank1/designsystem/commit/b759db0f38152b47121f59b6547d5e43fd7510b6))
-
-
-
-
+-   **ffe-datepicker:** remove import of ffe-form ([b759db0](https://github.com/SpareBank1/designsystem/commit/b759db0f38152b47121f59b6547d5e43fd7510b6))
 
 # [8.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@7.0.2...@sb1/ffe-datepicker@8.0.0) (2021-01-20)
 
-
 ### Features
 
-* **ffe-datepicker:** Make calendar readable for screenreaders ([6a9d416](https://github.com/SpareBank1/designsystem/commit/6a9d4166d31a1fd86c563c6cf2f7555746547ee7))
-
+-   **ffe-datepicker:** Make calendar readable for screenreaders ([6a9d416](https://github.com/SpareBank1/designsystem/commit/6a9d4166d31a1fd86c563c6cf2f7555746547ee7))
 
 ### BREAKING CHANGES
 
-* **ffe-datepicker:** Improve usability of datepicker.
+-   **ffe-datepicker:** Improve usability of datepicker.
 
 This commit separates date-input and calendar-button to improve accessibility
-
-
-
-
 
 ## [7.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@7.0.1...@sb1/ffe-datepicker@7.0.2) (2021-01-11)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
 
-
-
-
-
 ## [7.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@7.0.0...@sb1/ffe-datepicker@7.0.1) (2020-12-03)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
 
-
-
-
-
 # [7.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@6.0.17...@sb1/ffe-datepicker@7.0.0) (2020-11-20)
-
 
 ### Bug Fixes
 
-* **ffe-datepicker:** change text values to rem ([bb279c1](https://github.com/SpareBank1/designsystem/commit/bb279c139ea99b122e8f046199eae1ad271df9f6))
-
+-   **ffe-datepicker:** change text values to rem ([bb279c1](https://github.com/SpareBank1/designsystem/commit/bb279c139ea99b122e8f046199eae1ad271df9f6))
 
 ### BREAKING CHANGES
 
-* **ffe-datepicker:** This fix changes all font-size and line-height values from px to rem,
-this is to solve an issue with zooming in iOS.
-
-
-
-
+-   **ffe-datepicker:** This fix changes all font-size and line-height values from px to rem,
+    this is to solve an issue with zooming in iOS.
 
 ## [6.0.17](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@6.0.16...@sb1/ffe-datepicker@6.0.17) (2020-11-05)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
 
-
-
-
-
 ## [6.0.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@6.0.15...@sb1/ffe-datepicker@6.0.16) (2020-11-02)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
-
-
-
-
 
 ## [6.0.15](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@6.0.14...@sb1/ffe-datepicker@6.0.15) (2020-10-08)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
 
-
-
-
-
 ## [6.0.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@6.0.13...@sb1/ffe-datepicker@6.0.14) (2020-09-28)
-
 
 ### Bug Fixes
 
-* **ffe-datepicker:** fix date input error styling on aria-invalid="true" ([dc51cd1](https://github.com/SpareBank1/designsystem/commit/dc51cd114aadfcfc18125d98049c2d227ec59174))
-
-
-
-
+-   **ffe-datepicker:** fix date input error styling on aria-invalid="true" ([dc51cd1](https://github.com/SpareBank1/designsystem/commit/dc51cd114aadfcfc18125d98049c2d227ec59174))
 
 ## [6.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@6.0.12...@sb1/ffe-datepicker@6.0.13) (2020-09-02)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
 
-
-
-
-
 ## [6.0.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@6.0.11...@sb1/ffe-datepicker@6.0.12) (2020-08-25)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
-
-
-
-
 
 ## [6.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@6.0.10...@sb1/ffe-datepicker@6.0.11) (2020-03-18)
 

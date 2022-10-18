@@ -3,486 +3,261 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [6.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@6.0.10...@sb1/ffe-context-message@6.0.11) (2022-10-04)
+## [6.0.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@6.0.11...@sb1/ffe-context-message@6.0.12) (2022-10-18)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
 
+## [6.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@6.0.10...@sb1/ffe-context-message@6.0.11) (2022-10-04)
 
-
-
+**Note:** Version bump only for package @sb1/ffe-context-message
 
 ## [6.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@6.0.9...@sb1/ffe-context-message@6.0.10) (2022-09-28)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
 
-
-
-
-
 ## [6.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@6.0.8...@sb1/ffe-context-message@6.0.9) (2022-08-31)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
 
-
-
-
-
 ## [6.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@6.0.7...@sb1/ffe-context-message@6.0.8) (2022-08-10)
-
 
 ### Bug Fixes
 
-* **ffe-context-message:** Now supports using Paragraphs in darkmode ([d06716b](https://github.com/SpareBank1/designsystem/commit/d06716bc0da781e1ef8b020d6ee2a9de13df8e01))
-
-
-
-
+-   **ffe-context-message:** Now supports using Paragraphs in darkmode ([d06716b](https://github.com/SpareBank1/designsystem/commit/d06716bc0da781e1ef8b020d6ee2a9de13df8e01))
 
 ## [6.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@6.0.6...@sb1/ffe-context-message@6.0.7) (2022-08-08)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
 
-
-
-
-
 ## [6.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@6.0.5...@sb1/ffe-context-message@6.0.6) (2022-08-05)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
-
-
-
-
 
 ## [6.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@6.0.4...@sb1/ffe-context-message@6.0.5) (2022-06-07)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
 
-
-
-
-
 ## [6.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@6.0.3...@sb1/ffe-context-message@6.0.4) (2022-05-30)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
-
-
-
-
 
 ## [6.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@6.0.2...@sb1/ffe-context-message@6.0.3) (2022-05-19)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
 
-
-
-
-
 ## [6.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@6.0.1...@sb1/ffe-context-message@6.0.2) (2022-03-31)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
-
-
-
-
 
 ## [6.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@6.0.0...@sb1/ffe-context-message@6.0.1) (2022-03-21)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
 
-
-
-
-
 # [6.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@5.1.5...@sb1/ffe-context-message@6.0.0) (2022-03-15)
-
 
 ### Bug Fixes
 
-* **ffe-context-message:** oppdater klassenavn til å passe ny meldingstype verdi ([99b3006](https://github.com/SpareBank1/designsystem/commit/99b300651f23f3b9dba1ddb9ed04007221110f5b))
-
+-   **ffe-context-message:** oppdater klassenavn til å passe ny meldingstype verdi ([99b3006](https://github.com/SpareBank1/designsystem/commit/99b300651f23f3b9dba1ddb9ed04007221110f5b))
 
 ### Features
 
-* **ffe-context-message:** make border radius more round ([6ca6de5](https://github.com/SpareBank1/designsystem/commit/6ca6de51aaa11dd665c31a98369c5916e4d76db1))
-
+-   **ffe-context-message:** make border radius more round ([6ca6de5](https://github.com/SpareBank1/designsystem/commit/6ca6de51aaa11dd665c31a98369c5916e4d76db1))
 
 ### BREAKING CHANGES
 
-* **ffe-context-message:** klassenavn for tips meldinger har nå tips og ikke tip i navnet.
-
-
-
-
+-   **ffe-context-message:** klassenavn for tips meldinger har nå tips og ikke tip i navnet.
 
 ## [5.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@5.1.4...@sb1/ffe-context-message@5.1.5) (2022-03-11)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
 
-
-
-
-
 ## [5.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@5.1.3...@sb1/ffe-context-message@5.1.4) (2022-03-09)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
-
-
-
-
 
 ## [5.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@5.1.2...@sb1/ffe-context-message@5.1.3) (2022-02-28)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
 
-
-
-
-
 ## [5.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@5.1.1...@sb1/ffe-context-message@5.1.2) (2022-02-18)
-
 
 ### Bug Fixes
 
-* **ffe-context-message:** gjør ikon mindre på mobil ([770f70d](https://github.com/SpareBank1/designsystem/commit/770f70d9f2d37af1c2c1dfc88eb4cf78cfa63fda))
-
-
-
-
+-   **ffe-context-message:** gjør ikon mindre på mobil ([770f70d](https://github.com/SpareBank1/designsystem/commit/770f70d9f2d37af1c2c1dfc88eb4cf78cfa63fda))
 
 ## [5.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@5.1.0...@sb1/ffe-context-message@5.1.1) (2022-02-08)
 
-
 ### Bug Fixes
 
-* **ffe-context-message:** fjerne padding rundt ikonet og justere størrelsen ([cf28e75](https://github.com/SpareBank1/designsystem/commit/cf28e753a8e3ad5709a91e027e09e99a83108bef))
-
-
-
-
+-   **ffe-context-message:** fjerne padding rundt ikonet og justere størrelsen ([cf28e75](https://github.com/SpareBank1/designsystem/commit/cf28e753a8e3ad5709a91e027e09e99a83108bef))
 
 # [5.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@5.0.17...@sb1/ffe-context-message@5.1.0) (2022-01-28)
 
-
 ### Features
 
-* **ffe-context-message:** farge tweaks og styling for bruk på farget bakgrunn ([c470f0a](https://github.com/SpareBank1/designsystem/commit/c470f0ab5ffb8d20d537b3a884457d5c9dbcaf5e))
-
-
-
-
+-   **ffe-context-message:** farge tweaks og styling for bruk på farget bakgrunn ([c470f0a](https://github.com/SpareBank1/designsystem/commit/c470f0ab5ffb8d20d537b3a884457d5c9dbcaf5e))
 
 ## [5.0.17](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@5.0.16...@sb1/ffe-context-message@5.0.17) (2021-11-30)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
 
-
-
-
-
 ## [5.0.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@5.0.15...@sb1/ffe-context-message@5.0.16) (2021-11-19)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
-
-
-
-
 
 ## [5.0.15](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@5.0.14...@sb1/ffe-context-message@5.0.15) (2021-11-04)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
 
-
-
-
-
 ## [5.0.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@5.0.13...@sb1/ffe-context-message@5.0.14) (2021-11-01)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
-
-
-
-
 
 ## [5.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@5.0.12...@sb1/ffe-context-message@5.0.13) (2021-11-01)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
 
-
-
-
-
 ## [5.0.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@5.0.11...@sb1/ffe-context-message@5.0.12) (2021-10-29)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
 
-
-
-
-
 ## [5.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@5.0.10...@sb1/ffe-context-message@5.0.11) (2021-10-22)
-
 
 ### Bug Fixes
 
-* **ffe-context-message:** unngå å overstyre default farge på focus ([7c709a6](https://github.com/SpareBank1/designsystem/commit/7c709a6767fe340f2c132aea4e8ff00cfcf83878))
-
-
-
-
+-   **ffe-context-message:** unngå å overstyre default farge på focus ([7c709a6](https://github.com/SpareBank1/designsystem/commit/7c709a6767fe340f2c132aea4e8ff00cfcf83878))
 
 ## [5.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@5.0.9...@sb1/ffe-context-message@5.0.10) (2021-10-20)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
 
-
-
-
-
 ## [5.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@5.0.8...@sb1/ffe-context-message@5.0.9) (2021-10-08)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
 
-
-
-
-
 ## [5.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@5.0.7...@sb1/ffe-context-message@5.0.8) (2021-10-06)
-
 
 ### Bug Fixes
 
-* **ffe-context-message:** gjør sirkel sort og justere ikon farger i darkmode ([65e5648](https://github.com/SpareBank1/designsystem/commit/65e56484a29b073ff526a7087ba0b5f92ef84bcc))
-
-
-
-
+-   **ffe-context-message:** gjør sirkel sort og justere ikon farger i darkmode ([65e5648](https://github.com/SpareBank1/designsystem/commit/65e56484a29b073ff526a7087ba0b5f92ef84bcc))
 
 ## [5.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@5.0.6...@sb1/ffe-context-message@5.0.7) (2021-09-24)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
 
-
-
-
-
 ## [5.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@5.0.5...@sb1/ffe-context-message@5.0.6) (2021-09-17)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
 
-
-
-
-
 ## [5.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@5.0.4...@sb1/ffe-context-message@5.0.5) (2021-09-13)
-
 
 ### Bug Fixes
 
-* **ffe-context-message:** endre lukke-knapp posisjonering fra absolute til flex ([3edefd0](https://github.com/SpareBank1/designsystem/commit/3edefd04fec362eb25b6dd991c1f8bd529ae4a3a))
-
-
-
-
+-   **ffe-context-message:** endre lukke-knapp posisjonering fra absolute til flex ([3edefd0](https://github.com/SpareBank1/designsystem/commit/3edefd04fec362eb25b6dd991c1f8bd529ae4a3a))
 
 ## [5.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@5.0.3...@sb1/ffe-context-message@5.0.4) (2021-09-10)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
 
-
-
-
-
 ## [5.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@5.0.1...@sb1/ffe-context-message@5.0.3) (2021-09-06)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
-
-
-
-
 
 ## [5.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@5.0.1...@sb1/ffe-context-message@5.0.2) (2021-09-06)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
 
-
-
-
-
 ## [5.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@5.0.0...@sb1/ffe-context-message@5.0.1) (2021-08-18)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
 
-
-
-
-
 # [5.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.25...@sb1/ffe-context-message@5.0.0) (2021-08-10)
-
 
 ### Bug Fixes
 
-* **ffe-context-message:** fjerner overstyring av linkfarge samt oppdaterte farger ([1b4bda8](https://github.com/SpareBank1/designsystem/commit/1b4bda8e2163a687453094b3c0a980b01ca0e1f6))
-
+-   **ffe-context-message:** fjerner overstyring av linkfarge samt oppdaterte farger ([1b4bda8](https://github.com/SpareBank1/designsystem/commit/1b4bda8e2163a687453094b3c0a980b01ca0e1f6))
 
 ### BREAKING CHANGES
 
-* **ffe-context-message:** dersom man bruker lenker i en kontekstmelding må fargen på disse spesifiseres
-
-
-
-
+-   **ffe-context-message:** dersom man bruker lenker i en kontekstmelding må fargen på disse spesifiseres
 
 ## [4.0.25](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.24...@sb1/ffe-context-message@4.0.25) (2021-07-09)
 
-
 ### Bug Fixes
 
-* **ffe-context-message:** oppdater darkmode styling til ny visuell profil ([b012687](https://github.com/SpareBank1/designsystem/commit/b0126873e7699f1e4b546af194b34f23e64212d1))
-
-
-
-
+-   **ffe-context-message:** oppdater darkmode styling til ny visuell profil ([b012687](https://github.com/SpareBank1/designsystem/commit/b0126873e7699f1e4b546af194b34f23e64212d1))
 
 ## [4.0.24](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.23...@sb1/ffe-context-message@4.0.24) (2021-06-25)
 
-
 ### Bug Fixes
 
-* **ffe-context-message:** colour update to match new profile ([#1128](https://github.com/SpareBank1/designsystem/issues/1128)) ([3218c6c](https://github.com/SpareBank1/designsystem/commit/3218c6c408a03d26931d3ba47223ca694b64c5c3))
-
-
-
-
+-   **ffe-context-message:** colour update to match new profile ([#1128](https://github.com/SpareBank1/designsystem/issues/1128)) ([3218c6c](https://github.com/SpareBank1/designsystem/commit/3218c6c408a03d26931d3ba47223ca694b64c5c3))
 
 ## [4.0.23](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.22...@sb1/ffe-context-message@4.0.23) (2021-06-17)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
 
-
-
-
-
 ## [4.0.22](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.21...@sb1/ffe-context-message@4.0.22) (2021-04-14)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
-
-
-
-
 
 ## [4.0.21](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.20...@sb1/ffe-context-message@4.0.21) (2021-03-25)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
 
-
-
-
-
 ## [4.0.20](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.19...@sb1/ffe-context-message@4.0.20) (2021-03-17)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
 
-
-
-
-
 ## [4.0.19](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.18...@sb1/ffe-context-message@4.0.19) (2021-03-15)
-
 
 ### Bug Fixes
 
-* **ffe-context-message:** broadens version of peer dependencies ([1167b98](https://github.com/SpareBank1/designsystem/commit/1167b98ab163a75178e172a1d87e4c353a81d386))
-
-
-
-
+-   **ffe-context-message:** broadens version of peer dependencies ([1167b98](https://github.com/SpareBank1/designsystem/commit/1167b98ab163a75178e172a1d87e4c353a81d386))
 
 ## [4.0.18](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.17...@sb1/ffe-context-message@4.0.18) (2021-03-08)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
 
-
-
-
-
 ## [4.0.17](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.16...@sb1/ffe-context-message@4.0.17) (2021-02-03)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
-
-
-
-
 
 ## [4.0.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.15...@sb1/ffe-context-message@4.0.16) (2021-02-02)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
 
-
-
-
-
 ## [4.0.15](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.14...@sb1/ffe-context-message@4.0.15) (2021-01-11)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
 
-
-
-
-
 ## [4.0.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.13...@sb1/ffe-context-message@4.0.14) (2021-01-08)
-
 
 ### Bug Fixes
 
-* **ffe-context-message:** contrast issue ([ead4fb5](https://github.com/SpareBank1/designsystem/commit/ead4fb50626c5bf9b1d837c60a72da256243ea73))
-
-
-
-
+-   **ffe-context-message:** contrast issue ([ead4fb5](https://github.com/SpareBank1/designsystem/commit/ead4fb50626c5bf9b1d837c60a72da256243ea73))
 
 ## [4.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.12...@sb1/ffe-context-message@4.0.13) (2020-12-03)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
 
-
-
-
-
 ## [4.0.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.11...@sb1/ffe-context-message@4.0.12) (2020-11-20)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
-
-
-
-
 
 ## [4.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.10...@sb1/ffe-context-message@4.0.11) (2020-11-05)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
 
-
-
-
-
 ## [4.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.9...@sb1/ffe-context-message@4.0.10) (2020-08-25)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
 
-
-
-
-
 ## [4.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.8...@sb1/ffe-context-message@4.0.9) (2020-08-05)
-
 
 ### Bug Fixes
 
-* **ffe-context-message:** add padding to compact context message ([9e5db9d](https://github.com/SpareBank1/designsystem/commit/9e5db9daba5661a95c1c413df5118915b312bd07))
-
-
-
-
+-   **ffe-context-message:** add padding to compact context message ([9e5db9d](https://github.com/SpareBank1/designsystem/commit/9e5db9daba5661a95c1c413df5118915b312bd07))
 
 ## [4.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@4.0.7...@sb1/ffe-context-message@4.0.8) (2020-03-18)
 

@@ -1,36 +1,36 @@
 {
-  "name": "@sb1/ffe-header",
-  "version": "17.0.36",
-  "description": "Felles header for SpareBank 1",
-  "license": "MIT",
-  "author": "SpareBank 1",
-  "files": [
-    "less",
-    "css"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "ssh://git@github.com:SpareBank1/designsystem.git"
-  },
-  "scripts": {
-    "build": "lessc less/ffe-header-nodeps.less css/ffe-header.css --autoprefix",
-    "build:examples": "lessc less/ffe-header-nodeps.less examples/ffe-header.css --autoprefix && lessc examples/examples.less examples/examples.css",
-    "lint": "stylelint less/*.less",
-    "test": "npm run lint"
-  },
-  "devDependencies": {
-    "@sb1/ffe-buttons": "^15.1.6",
-    "@sb1/ffe-core": "^24.0.0",
-    "@sb1/ffe-webfonts": "^3.0.2",
-    "less": "^4.1.2",
-    "less-plugin-autoprefix": "^2.0.0",
-    "stylelint": "^13.0.0"
-  },
-  "peerDependencies": {
-    "@sb1/ffe-buttons": "*",
-    "@sb1/ffe-core": "*"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+    "name": "@sb1/ffe-header",
+    "version": "17.0.37",
+    "description": "Felles header for SpareBank 1",
+    "license": "MIT",
+    "author": "SpareBank 1",
+    "files": [
+        "less",
+        "css"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "ssh://git@github.com:SpareBank1/designsystem.git"
+    },
+    "scripts": {
+        "build": "lessc less/ffe-header-nodeps.less css/ffe-header.css --autoprefix",
+        "build:examples": "lessc less/ffe-header-nodeps.less examples/ffe-header.css --autoprefix && lessc examples/examples.less examples/examples.css",
+        "lint": "stylelint less/*.less",
+        "test": "npm run lint"
+    },
+    "devDependencies": {
+        "@sb1/ffe-buttons": "^15.1.7",
+        "@sb1/ffe-core": "^25.0.0",
+        "@sb1/ffe-webfonts": "^3.0.2",
+        "less": "^4.1.2",
+        "less-plugin-autoprefix": "^2.0.0",
+        "stylelint": "^13.0.0"
+    },
+    "peerDependencies": {
+        "@sb1/ffe-buttons": "*",
+        "@sb1/ffe-core": "*"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
 }

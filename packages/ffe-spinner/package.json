@@ -1,26 +1,26 @@
 {
-  "name": "@sb1/ffe-spinner",
-  "version": "4.1.17",
-  "license": "MIT",
-  "author": "SpareBank 1",
-  "files": [
-    "less"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "ssh://git@github.com:SpareBank1/designsystem.git"
-  },
-  "scripts": {
-    "lint": "stylelint less/*.less",
-    "test": "npm run lint"
-  },
-  "devDependencies": {
-    "@sb1/ffe-core": "^24.0.0"
-  },
-  "peerDependencies": {
-    "@sb1/ffe-core": "*"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+    "name": "@sb1/ffe-spinner",
+    "version": "4.1.18",
+    "license": "MIT",
+    "author": "SpareBank 1",
+    "files": [
+        "less"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "ssh://git@github.com:SpareBank1/designsystem.git"
+    },
+    "scripts": {
+        "lint": "stylelint less/*.less",
+        "test": "npm run lint"
+    },
+    "devDependencies": {
+        "@sb1/ffe-core": "^25.0.0"
+    },
+    "peerDependencies": {
+        "@sb1/ffe-core": "*"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
 }

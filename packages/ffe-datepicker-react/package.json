@@ -1,48 +1,48 @@
 {
-  "name": "@sb1/ffe-datepicker-react",
-  "version": "5.2.12",
-  "license": "MIT",
-  "author": "SpareBank 1",
-  "files": [
-    "lib",
-    "es",
-    "types"
-  ],
-  "main": "lib/index.js",
-  "module": "es/index.js",
-  "types": "types/index.d.ts",
-  "sideEffects": false,
-  "repository": {
-    "type": "git",
-    "url": "ssh://git@github.com:SpareBank1/designsystem.git"
-  },
-  "scripts": {
-    "build": "ffe-buildtool babel",
-    "watch": "ffe-buildtool babel-watch",
-    "lint": "eslint src",
-    "test": "ffe-buildtool jest",
-    "test:watch": "ffe-buildtool jest --watch"
-  },
-  "dependencies": {
-    "@sb1/ffe-datepicker": "^10.0.43",
-    "@sb1/ffe-icons-react": "^7.3.3",
-    "classnames": "^2.3.1",
-    "lodash.debounce": "^4.0.8",
-    "prop-types": "^15.7.2",
-    "uuid": "^8.3.2"
-  },
-  "devDependencies": {
-    "@sb1/ffe-buildtool": "^0.4.1",
-    "eslint": "^5.9.0",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0"
-  },
-  "peerDependencies": {
-    "@sb1/ffe-datepicker": "*",
-    "@sb1/ffe-form": "*",
-    "react": ">=16.9.0"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+    "name": "@sb1/ffe-datepicker-react",
+    "version": "5.2.13",
+    "license": "MIT",
+    "author": "SpareBank 1",
+    "files": [
+        "lib",
+        "es",
+        "types"
+    ],
+    "main": "lib/index.js",
+    "module": "es/index.js",
+    "types": "types/index.d.ts",
+    "sideEffects": false,
+    "repository": {
+        "type": "git",
+        "url": "ssh://git@github.com:SpareBank1/designsystem.git"
+    },
+    "scripts": {
+        "build": "ffe-buildtool babel",
+        "watch": "ffe-buildtool babel-watch",
+        "lint": "eslint src",
+        "test": "ffe-buildtool jest",
+        "test:watch": "ffe-buildtool jest --watch"
+    },
+    "dependencies": {
+        "@sb1/ffe-datepicker": "^10.0.44",
+        "@sb1/ffe-icons-react": "^7.3.3",
+        "classnames": "^2.3.1",
+        "lodash.debounce": "^4.0.8",
+        "prop-types": "^15.7.2",
+        "uuid": "^8.3.2"
+    },
+    "devDependencies": {
+        "@sb1/ffe-buildtool": "^0.4.1",
+        "eslint": "^5.9.0",
+        "react": "^16.9.0",
+        "react-dom": "^16.9.0"
+    },
+    "peerDependencies": {
+        "@sb1/ffe-datepicker": "*",
+        "@sb1/ffe-form": "*",
+        "react": ">=16.9.0"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
 }

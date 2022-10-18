@@ -3,384 +3,206 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [12.0.24](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@12.0.23...@sb1/ffe-tables@12.0.24) (2022-10-04)
+## [12.0.25](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@12.0.24...@sb1/ffe-tables@12.0.25) (2022-10-18)
 
+**Note:** Version bump only for package @sb1/ffe-tables
+
+## [12.0.24](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@12.0.23...@sb1/ffe-tables@12.0.24) (2022-10-04)
 
 ### Bug Fixes
 
-* **ffe-tables:** bytter ut utfaset farge ([d2e326e](https://github.com/SpareBank1/designsystem/commit/d2e326eab0483cdd601cb917541364190d021ffb))
-
-
-
-
+-   **ffe-tables:** bytter ut utfaset farge ([d2e326e](https://github.com/SpareBank1/designsystem/commit/d2e326eab0483cdd601cb917541364190d021ffb))
 
 ## [12.0.23](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@12.0.22...@sb1/ffe-tables@12.0.23) (2022-09-28)
 
 **Note:** Version bump only for package @sb1/ffe-tables
 
-
-
-
-
 ## [12.0.22](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@12.0.21...@sb1/ffe-tables@12.0.22) (2022-08-31)
 
 **Note:** Version bump only for package @sb1/ffe-tables
-
-
-
-
 
 ## [12.0.21](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@12.0.20...@sb1/ffe-tables@12.0.21) (2022-08-08)
 
 **Note:** Version bump only for package @sb1/ffe-tables
 
-
-
-
-
 ## [12.0.20](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@12.0.19...@sb1/ffe-tables@12.0.20) (2022-08-05)
 
 **Note:** Version bump only for package @sb1/ffe-tables
-
-
-
-
 
 ## [12.0.19](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@12.0.18...@sb1/ffe-tables@12.0.19) (2022-06-07)
 
 **Note:** Version bump only for package @sb1/ffe-tables
 
-
-
-
-
 ## [12.0.18](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@12.0.17...@sb1/ffe-tables@12.0.18) (2022-05-30)
 
 **Note:** Version bump only for package @sb1/ffe-tables
-
-
-
-
 
 ## [12.0.17](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@12.0.16...@sb1/ffe-tables@12.0.17) (2022-05-19)
 
 **Note:** Version bump only for package @sb1/ffe-tables
 
-
-
-
-
 ## [12.0.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@12.0.15...@sb1/ffe-tables@12.0.16) (2022-03-31)
 
 **Note:** Version bump only for package @sb1/ffe-tables
 
-
-
-
-
 ## [12.0.15](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@12.0.14...@sb1/ffe-tables@12.0.15) (2022-03-21)
-
 
 ### Bug Fixes
 
-* **ffe-tables:** legger til default font ([0bba263](https://github.com/SpareBank1/designsystem/commit/0bba26392785ba501693ba7fbc999293b21fa2a0))
-
-
-
-
+-   **ffe-tables:** legger til default font ([0bba263](https://github.com/SpareBank1/designsystem/commit/0bba26392785ba501693ba7fbc999293b21fa2a0))
 
 ## [12.0.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@12.0.13...@sb1/ffe-tables@12.0.14) (2022-03-11)
 
 **Note:** Version bump only for package @sb1/ffe-tables
 
-
-
-
-
 ## [12.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@12.0.12...@sb1/ffe-tables@12.0.13) (2022-03-09)
 
 **Note:** Version bump only for package @sb1/ffe-tables
-
-
-
-
 
 ## [12.0.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@12.0.11...@sb1/ffe-tables@12.0.12) (2022-02-28)
 
 **Note:** Version bump only for package @sb1/ffe-tables
 
-
-
-
-
 ## [12.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@12.0.10...@sb1/ffe-tables@12.0.11) (2021-11-30)
 
 **Note:** Version bump only for package @sb1/ffe-tables
-
-
-
-
 
 ## [12.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@12.0.9...@sb1/ffe-tables@12.0.10) (2021-11-19)
 
 **Note:** Version bump only for package @sb1/ffe-tables
 
-
-
-
-
 ## [12.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@12.0.8...@sb1/ffe-tables@12.0.9) (2021-11-04)
 
 **Note:** Version bump only for package @sb1/ffe-tables
-
-
-
-
 
 ## [12.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@12.0.7...@sb1/ffe-tables@12.0.8) (2021-11-01)
 
 **Note:** Version bump only for package @sb1/ffe-tables
 
-
-
-
-
 ## [12.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@12.0.6...@sb1/ffe-tables@12.0.7) (2021-11-01)
 
 **Note:** Version bump only for package @sb1/ffe-tables
-
-
-
-
 
 ## [12.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@12.0.5...@sb1/ffe-tables@12.0.6) (2021-10-29)
 
 **Note:** Version bump only for package @sb1/ffe-tables
 
-
-
-
-
 ## [12.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@12.0.4...@sb1/ffe-tables@12.0.5) (2021-10-20)
 
 **Note:** Version bump only for package @sb1/ffe-tables
-
-
-
-
 
 ## [12.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@12.0.3...@sb1/ffe-tables@12.0.4) (2021-10-08)
 
 **Note:** Version bump only for package @sb1/ffe-tables
 
-
-
-
-
 ## [12.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@12.0.2...@sb1/ffe-tables@12.0.3) (2021-10-06)
 
 **Note:** Version bump only for package @sb1/ffe-tables
-
-
-
-
 
 ## [12.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@12.0.1...@sb1/ffe-tables@12.0.2) (2021-09-24)
 
 **Note:** Version bump only for package @sb1/ffe-tables
 
-
-
-
-
 ## [12.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@12.0.0...@sb1/ffe-tables@12.0.1) (2021-09-17)
 
 **Note:** Version bump only for package @sb1/ffe-tables
 
-
-
-
-
 # [12.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@11.0.13...@sb1/ffe-tables@12.0.0) (2021-09-15)
-
 
 ### Features
 
-* **ffe-tables:** oppdaterte farger iht ny profil ([77f1e03](https://github.com/SpareBank1/designsystem/commit/77f1e03969d812ae7a05bd6b1e123d1e2a209825))
-
+-   **ffe-tables:** oppdaterte farger iht ny profil ([77f1e03](https://github.com/SpareBank1/designsystem/commit/77f1e03969d812ae7a05bd6b1e123d1e2a209825))
 
 ### BREAKING CHANGES
 
-* **ffe-tables:** nye farger og endret focus-state
-
-
-
-
+-   **ffe-tables:** nye farger og endret focus-state
 
 ## [11.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@11.0.12...@sb1/ffe-tables@11.0.13) (2021-09-10)
 
 **Note:** Version bump only for package @sb1/ffe-tables
 
-
-
-
-
 ## [11.0.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@11.0.10...@sb1/ffe-tables@11.0.12) (2021-09-06)
 
 **Note:** Version bump only for package @sb1/ffe-tables
-
-
-
-
 
 ## [11.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@11.0.10...@sb1/ffe-tables@11.0.11) (2021-09-06)
 
 **Note:** Version bump only for package @sb1/ffe-tables
 
-
-
-
-
 ## [11.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@11.0.9...@sb1/ffe-tables@11.0.10) (2021-06-17)
 
 **Note:** Version bump only for package @sb1/ffe-tables
-
-
-
-
 
 ## [11.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@11.0.8...@sb1/ffe-tables@11.0.9) (2021-04-14)
 
 **Note:** Version bump only for package @sb1/ffe-tables
 
-
-
-
-
 ## [11.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@11.0.7...@sb1/ffe-tables@11.0.8) (2021-03-25)
 
 **Note:** Version bump only for package @sb1/ffe-tables
-
-
-
-
 
 ## [11.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@11.0.6...@sb1/ffe-tables@11.0.7) (2021-03-17)
 
 **Note:** Version bump only for package @sb1/ffe-tables
 
-
-
-
-
 ## [11.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@11.0.5...@sb1/ffe-tables@11.0.6) (2021-03-15)
-
 
 ### Bug Fixes
 
-* **ffe-tables:** broadens version of peer dependencies ([1efd247](https://github.com/SpareBank1/designsystem/commit/1efd2477f234694c139566c1ac6c3b3ace906c26))
-
-
-
-
+-   **ffe-tables:** broadens version of peer dependencies ([1efd247](https://github.com/SpareBank1/designsystem/commit/1efd2477f234694c139566c1ac6c3b3ace906c26))
 
 ## [11.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@11.0.4...@sb1/ffe-tables@11.0.5) (2021-03-08)
 
 **Note:** Version bump only for package @sb1/ffe-tables
 
-
-
-
-
 ## [11.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@11.0.3...@sb1/ffe-tables@11.0.4) (2021-02-03)
 
 **Note:** Version bump only for package @sb1/ffe-tables
 
-
-
-
-
 ## [11.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@11.0.2...@sb1/ffe-tables@11.0.3) (2021-02-02)
-
 
 ### Bug Fixes
 
-* **ffe-tables:** reduce vulnerabilities ([5be05b7](https://github.com/SpareBank1/designsystem/commit/5be05b7db227de7da9018a3d44e4764541e71c41))
-
-
-
-
+-   **ffe-tables:** reduce vulnerabilities ([5be05b7](https://github.com/SpareBank1/designsystem/commit/5be05b7db227de7da9018a3d44e4764541e71c41))
 
 ## [11.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@11.0.1...@sb1/ffe-tables@11.0.2) (2021-01-11)
 
 **Note:** Version bump only for package @sb1/ffe-tables
 
-
-
-
-
 ## [11.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@11.0.0...@sb1/ffe-tables@11.0.1) (2020-12-03)
 
 **Note:** Version bump only for package @sb1/ffe-tables
 
-
-
-
-
 # [11.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@10.0.12...@sb1/ffe-tables@11.0.0) (2020-11-20)
-
 
 ### Bug Fixes
 
-* **ffe-tables:** change text values to rem ([41e25d4](https://github.com/SpareBank1/designsystem/commit/41e25d4f58f0ca5d4a2afc519852d447e0b3ff6d))
-
+-   **ffe-tables:** change text values to rem ([41e25d4](https://github.com/SpareBank1/designsystem/commit/41e25d4f58f0ca5d4a2afc519852d447e0b3ff6d))
 
 ### BREAKING CHANGES
 
-* **ffe-tables:** This fix changes all font-size and line-height values from px to rem,
-this is to solve an issue with zooming in iOS.
-
-
-
-
+-   **ffe-tables:** This fix changes all font-size and line-height values from px to rem,
+    this is to solve an issue with zooming in iOS.
 
 ## [10.0.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@10.0.11...@sb1/ffe-tables@10.0.12) (2020-11-05)
 
 **Note:** Version bump only for package @sb1/ffe-tables
 
-
-
-
-
 ## [10.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@10.0.10...@sb1/ffe-tables@10.0.11) (2020-09-15)
-
 
 ### Bug Fixes
 
-* **ffe-tables:** darkmode styling missing for table cell ([d5b0728](https://github.com/SpareBank1/designsystem/commit/d5b0728b4242e9899af64901d175ba413fb279e0))
-
-
-
-
+-   **ffe-tables:** darkmode styling missing for table cell ([d5b0728](https://github.com/SpareBank1/designsystem/commit/d5b0728b4242e9899af64901d175ba413fb279e0))
 
 ## [10.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@10.0.9...@sb1/ffe-tables@10.0.10) (2020-08-25)
 
 **Note:** Version bump only for package @sb1/ffe-tables
 
-
-
-
-
 ## [10.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@10.0.8...@sb1/ffe-tables@10.0.9) (2020-08-24)
-
 
 ### Bug Fixes
 
-* **ffe-tables:** ensure caption is more visible in dark mode ([046d9ad](https://github.com/SpareBank1/designsystem/commit/046d9ad7d2ac95724e954bc87d782aff85104cb7))
-
-
-
-
+-   **ffe-tables:** ensure caption is more visible in dark mode ([046d9ad](https://github.com/SpareBank1/designsystem/commit/046d9ad7d2ac95724e954bc87d782aff85104cb7))
 
 ## [10.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@10.0.7...@sb1/ffe-tables@10.0.8) (2020-03-18)
 

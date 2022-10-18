@@ -3,634 +3,358 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [21.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@21.0.4...@sb1/ffe-form@21.0.5) (2022-10-04)
+## [21.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@21.0.5...@sb1/ffe-form@21.0.6) (2022-10-18)
 
+**Note:** Version bump only for package @sb1/ffe-form
+
+## [21.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@21.0.4...@sb1/ffe-form@21.0.5) (2022-10-04)
 
 ### Bug Fixes
 
-* **ffe-form:** bytter ut utfaset farge ([88e8b65](https://github.com/SpareBank1/designsystem/commit/88e8b65648a58412ef9d5ea4a5ec201e7dd5bfe2))
-
-
-
-
+-   **ffe-form:** bytter ut utfaset farge ([88e8b65](https://github.com/SpareBank1/designsystem/commit/88e8b65648a58412ef9d5ea4a5ec201e7dd5bfe2))
 
 ## [21.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@21.0.3...@sb1/ffe-form@21.0.4) (2022-09-28)
 
-
 ### Bug Fixes
 
-* **ffe-form:** fix html native date input styling ([cdb1746](https://github.com/SpareBank1/designsystem/commit/cdb1746c187004c38e12cb1f91981e4cf303caab))
-
-
-
-
+-   **ffe-form:** fix html native date input styling ([cdb1746](https://github.com/SpareBank1/designsystem/commit/cdb1746c187004c38e12cb1f91981e4cf303caab))
 
 ## [21.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@21.0.2...@sb1/ffe-form@21.0.3) (2022-09-28)
 
 **Note:** Version bump only for package @sb1/ffe-form
 
-
-
-
-
 ## [21.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@21.0.1...@sb1/ffe-form@21.0.2) (2022-09-12)
 
 **Note:** Version bump only for package @sb1/ffe-form
-
-
-
-
 
 ## [21.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@21.0.0...@sb1/ffe-form@21.0.1) (2022-08-31)
 
 **Note:** Version bump only for package @sb1/ffe-form
 
-
-
-
-
 # [21.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@20.3.5...@sb1/ffe-form@21.0.0) (2022-08-18)
-
 
 ### Bug Fixes
 
-* **ffe-form:** invalid styling settes nå via aria-invalid fra radioButtonInputGroup ([ab55a34](https://github.com/SpareBank1/designsystem/commit/ab55a3463626514523980c54720c94b12258ddef))
-
+-   **ffe-form:** invalid styling settes nå via aria-invalid fra radioButtonInputGroup ([ab55a34](https://github.com/SpareBank1/designsystem/commit/ab55a3463626514523980c54720c94b12258ddef))
 
 ### BREAKING CHANGES
 
-* **ffe-form:** endring av hierarki på invalid styling
-
-
-
-
+-   **ffe-form:** endring av hierarki på invalid styling
 
 ## [20.3.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@20.3.4...@sb1/ffe-form@20.3.5) (2022-08-18)
 
-
 ### Bug Fixes
 
-* **ffe-form:** la til spacing mellom description og input-felt ([8e516d5](https://github.com/SpareBank1/designsystem/commit/8e516d51225303878894cd96fd229b4ebb28b95c))
-
-
-
-
+-   **ffe-form:** la til spacing mellom description og input-felt ([8e516d5](https://github.com/SpareBank1/designsystem/commit/8e516d51225303878894cd96fd229b4ebb28b95c))
 
 ## [20.3.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@20.3.3...@sb1/ffe-form@20.3.4) (2022-08-08)
 
 **Note:** Version bump only for package @sb1/ffe-form
 
-
-
-
-
 ## [20.3.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@20.3.2...@sb1/ffe-form@20.3.3) (2022-08-05)
-
 
 ### Bug Fixes
 
-* **ffe-form:** erstatt ffe-farge-baer-wcag med ffe-farge-baer ([df9375f](https://github.com/SpareBank1/designsystem/commit/df9375fc69e9187145f89a14bd0ab7611fe31c37))
-
-
-
-
+-   **ffe-form:** erstatt ffe-farge-baer-wcag med ffe-farge-baer ([df9375f](https://github.com/SpareBank1/designsystem/commit/df9375fc69e9187145f89a14bd0ab7611fe31c37))
 
 ## [20.3.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@20.3.1...@sb1/ffe-form@20.3.2) (2022-07-11)
 
 **Note:** Version bump only for package @sb1/ffe-form
 
-
-
-
-
 ## [20.3.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@20.3.0...@sb1/ffe-form@20.3.1) (2022-06-07)
 
 **Note:** Version bump only for package @sb1/ffe-form
 
-
-
-
-
 # [20.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@20.2.0...@sb1/ffe-form@20.3.0) (2022-05-30)
-
 
 ### Bug Fixes
 
-* **ffe-form:** legger til default farger som mangler ([6bf60c6](https://github.com/SpareBank1/designsystem/commit/6bf60c6e9c573615bd8378323b020cf2c79a49b8))
-
+-   **ffe-form:** legger til default farger som mangler ([6bf60c6](https://github.com/SpareBank1/designsystem/commit/6bf60c6e9c573615bd8378323b020cf2c79a49b8))
 
 ### Features
 
-* **ffe-form:** definerer font-variant-numeric i tekst ([fe7579f](https://github.com/SpareBank1/designsystem/commit/fe7579f257812b28bfdc354d06f938a241d51ba8))
-
-
-
-
+-   **ffe-form:** definerer font-variant-numeric i tekst ([fe7579f](https://github.com/SpareBank1/designsystem/commit/fe7579f257812b28bfdc354d06f938a241d51ba8))
 
 # [20.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@20.1.7...@sb1/ffe-form@20.2.0) (2022-05-20)
 
-
 ### Features
 
-* **ffe-form:** Adds padding under error message to improve usability ([c202187](https://github.com/SpareBank1/designsystem/commit/c2021879ff208c1d51aa737d74cc47d5eefbb4b3))
-
-
-
-
+-   **ffe-form:** Adds padding under error message to improve usability ([c202187](https://github.com/SpareBank1/designsystem/commit/c2021879ff208c1d51aa737d74cc47d5eefbb4b3))
 
 ## [20.1.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@20.1.6...@sb1/ffe-form@20.1.7) (2022-05-19)
 
 **Note:** Version bump only for package @sb1/ffe-form
 
-
-
-
-
 ## [20.1.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@20.1.5...@sb1/ffe-form@20.1.6) (2022-05-09)
-
 
 ### Bug Fixes
 
-* **ffe-form:** definert farge på ffe-phone-number__plus ([5efdd2f](https://github.com/SpareBank1/designsystem/commit/5efdd2f0d0e10aeb495f788cbf2f56aa721b02f5))
-* **ffe-form:** legger til line-height ([f960f44](https://github.com/SpareBank1/designsystem/commit/f960f449e17cb74c559a44f8c7e6485726ed2c89))
-
-
-
-
+-   **ffe-form:** definert farge på ffe-phone-number\_\_plus ([5efdd2f](https://github.com/SpareBank1/designsystem/commit/5efdd2f0d0e10aeb495f788cbf2f56aa721b02f5))
+-   **ffe-form:** legger til line-height ([f960f44](https://github.com/SpareBank1/designsystem/commit/f960f449e17cb74c559a44f8c7e6485726ed2c89))
 
 ## [20.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@20.1.4...@sb1/ffe-form@20.1.5) (2022-03-31)
 
 **Note:** Version bump only for package @sb1/ffe-form
 
-
-
-
-
 ## [20.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@20.1.3...@sb1/ffe-form@20.1.4) (2022-03-21)
-
 
 ### Bug Fixes
 
-* **ffe-form:** legger til default font ([7a0fd27](https://github.com/SpareBank1/designsystem/commit/7a0fd2725b79889b211f897740ea4ee0cda59e1b))
-
-
-
-
+-   **ffe-form:** legger til default font ([7a0fd27](https://github.com/SpareBank1/designsystem/commit/7a0fd2725b79889b211f897740ea4ee0cda59e1b))
 
 ## [20.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@20.1.2...@sb1/ffe-form@20.1.3) (2022-03-11)
 
 **Note:** Version bump only for package @sb1/ffe-form
 
-
-
-
-
 ## [20.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@20.1.1...@sb1/ffe-form@20.1.2) (2022-03-09)
 
 **Note:** Version bump only for package @sb1/ffe-form
-
-
-
-
 
 ## [20.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@20.1.0...@sb1/ffe-form@20.1.1) (2022-03-08)
 
 **Note:** Version bump only for package @sb1/ffe-form
 
-
-
-
-
 # [20.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@20.0.3...@sb1/ffe-form@20.1.0) (2022-03-04)
-
 
 ### Bug Fixes
 
-* **ffe-form:** fiks for oval tooltip i ios ([3845d78](https://github.com/SpareBank1/designsystem/commit/3845d78656621c04d60a6afd92a1218daa38da9a))
-* **ffe-form:** retter fargevariabler ([de8589a](https://github.com/SpareBank1/designsystem/commit/de8589a39dcdd0caf79715618360f38b2c60d9ca))
-
+-   **ffe-form:** fiks for oval tooltip i ios ([3845d78](https://github.com/SpareBank1/designsystem/commit/3845d78656621c04d60a6afd92a1218daa38da9a))
+-   **ffe-form:** retter fargevariabler ([de8589a](https://github.com/SpareBank1/designsystem/commit/de8589a39dcdd0caf79715618360f38b2c60d9ca))
 
 ### Features
 
-* **ffe-form:** ny toggleswitch-komponent ([449670f](https://github.com/SpareBank1/designsystem/commit/449670f9f33c66ebc8883961e18df1b4381faaa7))
-
-
-
-
+-   **ffe-form:** ny toggleswitch-komponent ([449670f](https://github.com/SpareBank1/designsystem/commit/449670f9f33c66ebc8883961e18df1b4381faaa7))
 
 ## [20.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@20.0.2...@sb1/ffe-form@20.0.3) (2022-03-02)
 
-
 ### Bug Fixes
 
-* **ffe-form:** remove main entry field from package.json ([e0b2e2d](https://github.com/SpareBank1/designsystem/commit/e0b2e2dcbc24e4d12c163c6d216656caea1d5691))
-
-
-
-
+-   **ffe-form:** remove main entry field from package.json ([e0b2e2d](https://github.com/SpareBank1/designsystem/commit/e0b2e2dcbc24e4d12c163c6d216656caea1d5691))
 
 ## [20.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@20.0.1...@sb1/ffe-form@20.0.2) (2022-02-28)
 
 **Note:** Version bump only for package @sb1/ffe-form
 
-
-
-
-
 ## [20.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@20.0.0...@sb1/ffe-form@20.0.1) (2021-12-14)
 
 **Note:** Version bump only for package @sb1/ffe-form
 
-
-
-
-
 # [20.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@19.1.6...@sb1/ffe-form@20.0.0) (2021-12-10)
-
 
 ### Bug Fixes
 
-* **ffe-form:** fix peerDependencies to other ffe-packages ([c2c0034](https://github.com/SpareBank1/designsystem/commit/c2c0034bcb329546f8ea0ecec0951bb3d7e237d3))
-
+-   **ffe-form:** fix peerDependencies to other ffe-packages ([c2c0034](https://github.com/SpareBank1/designsystem/commit/c2c0034bcb329546f8ea0ecec0951bb3d7e237d3))
 
 ### BREAKING CHANGES
 
-* **ffe-form:** ffe-form had optional dependencies to ffe-core and
-ffe-buttons, which should be development and peer dependencies similarly
-to how it is done in all of our other style packages.
-
-
-
-
+-   **ffe-form:** ffe-form had optional dependencies to ffe-core and
+    ffe-buttons, which should be development and peer dependencies similarly
+    to how it is done in all of our other style packages.
 
 ## [19.1.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@19.1.5...@sb1/ffe-form@19.1.6) (2021-11-30)
 
 **Note:** Version bump only for package @sb1/ffe-form
 
-
-
-
-
 ## [19.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@19.1.4...@sb1/ffe-form@19.1.5) (2021-11-25)
 
 **Note:** Version bump only for package @sb1/ffe-form
-
-
-
-
 
 ## [19.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@19.1.3...@sb1/ffe-form@19.1.4) (2021-11-19)
 
 **Note:** Version bump only for package @sb1/ffe-form
 
-
-
-
-
 ## [19.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@19.1.2...@sb1/ffe-form@19.1.3) (2021-11-19)
 
 **Note:** Version bump only for package @sb1/ffe-form
-
-
-
-
 
 ## [19.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@19.1.1...@sb1/ffe-form@19.1.2) (2021-11-11)
 
 **Note:** Version bump only for package @sb1/ffe-form
 
-
-
-
-
 ## [19.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@19.1.0...@sb1/ffe-form@19.1.1) (2021-11-04)
 
 **Note:** Version bump only for package @sb1/ffe-form
 
-
-
-
-
 # [19.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@19.0.10...@sb1/ffe-form@19.1.0) (2021-11-02)
-
 
 ### Features
 
-* **ffe-form:** legg til class for å høyre justere teksten i ett input felt ([070f10c](https://github.com/SpareBank1/designsystem/commit/070f10ce38ae468e24d5d7bc11f13eb5426d39df))
-
-
-
-
+-   **ffe-form:** legg til class for å høyre justere teksten i ett input felt ([070f10c](https://github.com/SpareBank1/designsystem/commit/070f10ce38ae468e24d5d7bc11f13eb5426d39df))
 
 ## [19.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@19.0.9...@sb1/ffe-form@19.0.10) (2021-11-01)
 
 **Note:** Version bump only for package @sb1/ffe-form
 
-
-
-
-
 ## [19.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@19.0.8...@sb1/ffe-form@19.0.9) (2021-11-01)
 
 **Note:** Version bump only for package @sb1/ffe-form
-
-
-
-
 
 ## [19.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@19.0.7...@sb1/ffe-form@19.0.8) (2021-10-29)
 
 **Note:** Version bump only for package @sb1/ffe-form
 
-
-
-
-
 ## [19.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@19.0.6...@sb1/ffe-form@19.0.7) (2021-10-20)
 
 **Note:** Version bump only for package @sb1/ffe-form
-
-
-
-
 
 ## [19.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@19.0.5...@sb1/ffe-form@19.0.6) (2021-10-08)
 
 **Note:** Version bump only for package @sb1/ffe-form
 
-
-
-
-
 ## [19.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@19.0.4...@sb1/ffe-form@19.0.5) (2021-10-06)
 
 **Note:** Version bump only for package @sb1/ffe-form
-
-
-
-
 
 ## [19.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@19.0.3...@sb1/ffe-form@19.0.4) (2021-10-05)
 
 **Note:** Version bump only for package @sb1/ffe-form
 
-
-
-
-
 ## [19.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@19.0.2...@sb1/ffe-form@19.0.3) (2021-09-24)
 
 **Note:** Version bump only for package @sb1/ffe-form
-
-
-
-
 
 ## [19.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@19.0.1...@sb1/ffe-form@19.0.2) (2021-09-17)
 
 **Note:** Version bump only for package @sb1/ffe-form
 
-
-
-
-
 ## [19.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@19.0.0...@sb1/ffe-form@19.0.1) (2021-09-10)
 
 **Note:** Version bump only for package @sb1/ffe-form
 
-
-
-
-
 # [19.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@17.0.0...@sb1/ffe-form@19.0.0) (2021-09-06)
-
 
 ### Bug Fixes
 
-* **ffe-form:** endrer enkelte fargenyanser ([fbb5c41](https://github.com/SpareBank1/designsystem/commit/fbb5c4118a0504794b7d4820ad98e6d2ee5a5be3))
-* **ffe-form:** fikser stylelint-feil ([067b7a1](https://github.com/SpareBank1/designsystem/commit/067b7a1a07974d7a647c23983bc93d3757c1771b))
-* **ffe-form:** focus-outline skal kun vises på keyboard-fokus - ikke active-state ([5b324b5](https://github.com/SpareBank1/designsystem/commit/5b324b57b2a324c6c6a4668c1fbc7ff520cf6f88))
-
+-   **ffe-form:** endrer enkelte fargenyanser ([fbb5c41](https://github.com/SpareBank1/designsystem/commit/fbb5c4118a0504794b7d4820ad98e6d2ee5a5be3))
+-   **ffe-form:** fikser stylelint-feil ([067b7a1](https://github.com/SpareBank1/designsystem/commit/067b7a1a07974d7a647c23983bc93d3757c1771b))
+-   **ffe-form:** focus-outline skal kun vises på keyboard-fokus - ikke active-state ([5b324b5](https://github.com/SpareBank1/designsystem/commit/5b324b57b2a324c6c6a4668c1fbc7ff520cf6f88))
 
 ### Features
 
-* **ffe-form:** oppdaterte farger og utforming iht ny profil ([e35c9ca](https://github.com/SpareBank1/designsystem/commit/e35c9ca1c1fd54dd488e2fa2d6b69c602135e94c))
-
+-   **ffe-form:** oppdaterte farger og utforming iht ny profil ([e35c9ca](https://github.com/SpareBank1/designsystem/commit/e35c9ca1c1fd54dd488e2fa2d6b69c602135e94c))
 
 ### BREAKING CHANGES
 
-* **ffe-form:** alle skjemaelementer har endringer i utseende og bør regresjonstestes
-
-
-
-
+-   **ffe-form:** alle skjemaelementer har endringer i utseende og bør regresjonstestes
 
 # [18.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@17.0.0...@sb1/ffe-form@18.0.0) (2021-09-06)
 
-
 ### Bug Fixes
 
-* **ffe-form:** endrer enkelte fargenyanser ([fbb5c41](https://github.com/SpareBank1/designsystem/commit/fbb5c4118a0504794b7d4820ad98e6d2ee5a5be3))
-* **ffe-form:** fikser stylelint-feil ([067b7a1](https://github.com/SpareBank1/designsystem/commit/067b7a1a07974d7a647c23983bc93d3757c1771b))
-* **ffe-form:** focus-outline skal kun vises på keyboard-fokus - ikke active-state ([5b324b5](https://github.com/SpareBank1/designsystem/commit/5b324b57b2a324c6c6a4668c1fbc7ff520cf6f88))
-
+-   **ffe-form:** endrer enkelte fargenyanser ([fbb5c41](https://github.com/SpareBank1/designsystem/commit/fbb5c4118a0504794b7d4820ad98e6d2ee5a5be3))
+-   **ffe-form:** fikser stylelint-feil ([067b7a1](https://github.com/SpareBank1/designsystem/commit/067b7a1a07974d7a647c23983bc93d3757c1771b))
+-   **ffe-form:** focus-outline skal kun vises på keyboard-fokus - ikke active-state ([5b324b5](https://github.com/SpareBank1/designsystem/commit/5b324b57b2a324c6c6a4668c1fbc7ff520cf6f88))
 
 ### Features
 
-* **ffe-form:** oppdaterte farger og utforming iht ny profil ([e35c9ca](https://github.com/SpareBank1/designsystem/commit/e35c9ca1c1fd54dd488e2fa2d6b69c602135e94c))
-
+-   **ffe-form:** oppdaterte farger og utforming iht ny profil ([e35c9ca](https://github.com/SpareBank1/designsystem/commit/e35c9ca1c1fd54dd488e2fa2d6b69c602135e94c))
 
 ### BREAKING CHANGES
 
-* **ffe-form:** alle skjemaelementer har endringer i utseende og bør regresjonstestes
-
-
-
-
+-   **ffe-form:** alle skjemaelementer har endringer i utseende og bør regresjonstestes
 
 # [17.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@16.1.1...@sb1/ffe-form@17.0.0) (2021-06-21)
 
-
 ### Features
 
-* **ffe-form:** Update styling for PhoneNumber component ([55e6adf](https://github.com/SpareBank1/designsystem/commit/55e6adf7603fc4d76ada4637dadbba92ed1cd636))
-
+-   **ffe-form:** Update styling for PhoneNumber component ([55e6adf](https://github.com/SpareBank1/designsystem/commit/55e6adf7603fc4d76ada4637dadbba92ed1cd636))
 
 ### BREAKING CHANGES
 
-* **ffe-form:** Updates styling of PhoneNumber component after introducing fieldMessage props
-
-
-
-
+-   **ffe-form:** Updates styling of PhoneNumber component after introducing fieldMessage props
 
 ## [16.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@16.1.0...@sb1/ffe-form@16.1.1) (2021-06-17)
 
 **Note:** Version bump only for package @sb1/ffe-form
 
-
-
-
-
 # [16.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@16.0.1...@sb1/ffe-form@16.1.0) (2021-04-14)
-
 
 ### Features
 
-* **ffe-form:** adds MuseoSans font as fallback font ([078e4db](https://github.com/SpareBank1/designsystem/commit/078e4dbf94ad62cbf7f5b4b1203008a39813ae8a))
-
-
-
-
+-   **ffe-form:** adds MuseoSans font as fallback font ([078e4db](https://github.com/SpareBank1/designsystem/commit/078e4dbf94ad62cbf7f5b4b1203008a39813ae8a))
 
 ## [16.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@16.0.0...@sb1/ffe-form@16.0.1) (2021-03-25)
 
 **Note:** Version bump only for package @sb1/ffe-form
 
-
-
-
-
 # [16.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@15.0.4...@sb1/ffe-form@16.0.0) (2021-03-17)
-
 
 ### Bug Fixes
 
-* **ffe-form:** bytter ut museo sans med ny sparebank1-font ([c1ddf3c](https://github.com/SpareBank1/designsystem/commit/c1ddf3cc02e2b47be21093e54b7048f10babde9e))
-
+-   **ffe-form:** bytter ut museo sans med ny sparebank1-font ([c1ddf3c](https://github.com/SpareBank1/designsystem/commit/c1ddf3cc02e2b47be21093e54b7048f10babde9e))
 
 ### BREAKING CHANGES
 
-* **ffe-form:** ny font i alt innhold
-
-
-
-
+-   **ffe-form:** ny font i alt innhold
 
 ## [15.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@15.0.3...@sb1/ffe-form@15.0.4) (2021-03-15)
 
 **Note:** Version bump only for package @sb1/ffe-form
 
-
-
-
-
 ## [15.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@15.0.2...@sb1/ffe-form@15.0.3) (2021-03-08)
 
 **Note:** Version bump only for package @sb1/ffe-form
-
-
-
-
 
 ## [15.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@15.0.1...@sb1/ffe-form@15.0.2) (2021-02-03)
 
 **Note:** Version bump only for package @sb1/ffe-form
 
-
-
-
-
 ## [15.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@15.0.0...@sb1/ffe-form@15.0.1) (2021-02-02)
-
 
 ### Bug Fixes
 
-* **ffe-form:** reduce vulnerabilities ([00f0a98](https://github.com/SpareBank1/designsystem/commit/00f0a98a98e45650de5642066b4bce9ed7069fe4))
-
-
-
-
+-   **ffe-form:** reduce vulnerabilities ([00f0a98](https://github.com/SpareBank1/designsystem/commit/00f0a98a98e45650de5642066b4bce9ed7069fe4))
 
 # [15.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@14.1.2...@sb1/ffe-form@15.0.0) (2021-01-11)
 
-
 ### chore
 
-* **ffe-form:** bump less ([3a75cb1](https://github.com/SpareBank1/designsystem/commit/3a75cb1841f061d88f78dc8a5aa44ca46bccac1d))
-
+-   **ffe-form:** bump less ([3a75cb1](https://github.com/SpareBank1/designsystem/commit/3a75cb1841f061d88f78dc8a5aa44ca46bccac1d))
 
 ### BREAKING CHANGES
 
-* **ffe-form:** Requires less ^4.0.0. Fixes deprecated mixin syntax.
-
-
-
-
+-   **ffe-form:** Requires less ^4.0.0. Fixes deprecated mixin syntax.
 
 ## [14.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@14.1.1...@sb1/ffe-form@14.1.2) (2020-12-03)
 
 **Note:** Version bump only for package @sb1/ffe-form
 
-
-
-
-
 ## [14.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@14.1.0...@sb1/ffe-form@14.1.1) (2020-11-20)
 
 **Note:** Version bump only for package @sb1/ffe-form
 
-
-
-
-
 # [14.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@14.0.1...@sb1/ffe-form@14.1.0) (2020-11-05)
-
 
 ### Features
 
-* **ffe-core:** darkmode color palette & darkmode form label color tweak ([5d41e60](https://github.com/SpareBank1/designsystem/commit/5d41e602ab3087895fa994ae7843d5fb49e1593d))
-
-
-
-
+-   **ffe-core:** darkmode color palette & darkmode form label color tweak ([5d41e60](https://github.com/SpareBank1/designsystem/commit/5d41e602ab3087895fa994ae7843d5fb49e1593d))
 
 ## [14.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@14.0.0...@sb1/ffe-form@14.0.1) (2020-11-02)
 
-
 ### Bug Fixes
 
-* **ffe-form:** dropdown arrow bug ([5ffbd98](https://github.com/SpareBank1/designsystem/commit/5ffbd98887e42c7b68f5cc48a33f674856e08223))
-
-
-
-
+-   **ffe-form:** dropdown arrow bug ([5ffbd98](https://github.com/SpareBank1/designsystem/commit/5ffbd98887e42c7b68f5cc48a33f674856e08223))
 
 # [14.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@13.0.13...@sb1/ffe-form@14.0.0) (2020-10-08)
 
-
 ### Bug Fixes
 
-* **ffe-form:** --error -> --message ([a054404](https://github.com/SpareBank1/designsystem/commit/a054404319d2e4b992412b0ccc0a4393c8a51fd0))
-
+-   **ffe-form:** --error -> --message ([a054404](https://github.com/SpareBank1/designsystem/commit/a054404319d2e4b992412b0ccc0a4393c8a51fd0))
 
 ### BREAKING CHANGES
 
-* **ffe-form:** using --message instead og --error
-The message does not have to be an error so chaning to a more appropriate class
-
-
-
-
+-   **ffe-form:** using --message instead og --error
+    The message does not have to be an error so chaning to a more appropriate class
 
 ## [13.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@13.0.12...@sb1/ffe-form@13.0.13) (2020-09-02)
 
-
 ### Bug Fixes
 
-* **ffe-form:** add darkmode styling to ffe-checkbox ([facee58](https://github.com/SpareBank1/designsystem/commit/facee5838a438db97b26ef24beffe99d94626e16))
-
-
-
-
+-   **ffe-form:** add darkmode styling to ffe-checkbox ([facee58](https://github.com/SpareBank1/designsystem/commit/facee5838a438db97b26ef24beffe99d94626e16))
 
 ## [13.0.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@13.0.11...@sb1/ffe-form@13.0.12) (2020-08-25)
 
 **Note:** Version bump only for package @sb1/ffe-form
-
-
-
-
 
 ## [13.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@13.0.10...@sb1/ffe-form@13.0.11) (2020-03-18)
 

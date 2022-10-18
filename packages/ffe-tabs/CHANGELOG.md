@@ -3,413 +3,226 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [12.0.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@12.0.13...@sb1/ffe-tabs@12.0.14) (2022-10-04)
+## [12.0.15](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@12.0.14...@sb1/ffe-tabs@12.0.15) (2022-10-18)
 
 **Note:** Version bump only for package @sb1/ffe-tabs
 
+## [12.0.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@12.0.13...@sb1/ffe-tabs@12.0.14) (2022-10-04)
 
-
-
+**Note:** Version bump only for package @sb1/ffe-tabs
 
 ## [12.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@12.0.12...@sb1/ffe-tabs@12.0.13) (2022-09-28)
 
 **Note:** Version bump only for package @sb1/ffe-tabs
 
-
-
-
-
 ## [12.0.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@12.0.11...@sb1/ffe-tabs@12.0.12) (2022-08-31)
 
 **Note:** Version bump only for package @sb1/ffe-tabs
-
-
-
-
 
 ## [12.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@12.0.10...@sb1/ffe-tabs@12.0.11) (2022-08-08)
 
 **Note:** Version bump only for package @sb1/ffe-tabs
 
-
-
-
-
 ## [12.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@12.0.9...@sb1/ffe-tabs@12.0.10) (2022-08-05)
 
 **Note:** Version bump only for package @sb1/ffe-tabs
-
-
-
-
 
 ## [12.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@12.0.8...@sb1/ffe-tabs@12.0.9) (2022-06-07)
 
 **Note:** Version bump only for package @sb1/ffe-tabs
 
-
-
-
-
 ## [12.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@12.0.7...@sb1/ffe-tabs@12.0.8) (2022-05-30)
 
 **Note:** Version bump only for package @sb1/ffe-tabs
-
-
-
-
 
 ## [12.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@12.0.6...@sb1/ffe-tabs@12.0.7) (2022-05-19)
 
 **Note:** Version bump only for package @sb1/ffe-tabs
 
-
-
-
-
 ## [12.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@12.0.5...@sb1/ffe-tabs@12.0.6) (2022-03-31)
 
 **Note:** Version bump only for package @sb1/ffe-tabs
-
-
-
-
 
 ## [12.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@12.0.4...@sb1/ffe-tabs@12.0.5) (2022-03-21)
 
 **Note:** Version bump only for package @sb1/ffe-tabs
 
-
-
-
-
 ## [12.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@12.0.3...@sb1/ffe-tabs@12.0.4) (2022-03-14)
-
 
 ### Bug Fixes
 
-* **ffe-tabs:** fikse at TabGroup går ut til kanten på mobil ([cae360a](https://github.com/SpareBank1/designsystem/commit/cae360af073ee11c37b74cef68fbbc970ef817f1))
-
-
-
-
+-   **ffe-tabs:** fikse at TabGroup går ut til kanten på mobil ([cae360a](https://github.com/SpareBank1/designsystem/commit/cae360af073ee11c37b74cef68fbbc970ef817f1))
 
 ## [12.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@12.0.2...@sb1/ffe-tabs@12.0.3) (2022-03-11)
 
 **Note:** Version bump only for package @sb1/ffe-tabs
 
-
-
-
-
 ## [12.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@12.0.1...@sb1/ffe-tabs@12.0.2) (2022-03-09)
 
 **Note:** Version bump only for package @sb1/ffe-tabs
 
-
-
-
-
 ## [12.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@12.0.0...@sb1/ffe-tabs@12.0.1) (2022-03-03)
-
 
 ### Bug Fixes
 
-* **ffe-tabs:** fikse bug på desktop ([b7a2d25](https://github.com/SpareBank1/designsystem/commit/b7a2d25bfc7ceddb270230fe95a6e4dbbe21d366))
-
-
-
-
+-   **ffe-tabs:** fikse bug på desktop ([b7a2d25](https://github.com/SpareBank1/designsystem/commit/b7a2d25bfc7ceddb270230fe95a6e4dbbe21d366))
 
 # [12.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@11.1.0...@sb1/ffe-tabs@12.0.0) (2022-03-03)
 
-
 ### Features
 
-* **ffe-tabs:** fjerner tabButton og tabButtonGroup ([c2ee132](https://github.com/SpareBank1/designsystem/commit/c2ee1321af06c535e544a8d28a1d3f79967dfb65))
-
+-   **ffe-tabs:** fjerner tabButton og tabButtonGroup ([c2ee132](https://github.com/SpareBank1/designsystem/commit/c2ee1321af06c535e544a8d28a1d3f79967dfb65))
 
 ### BREAKING CHANGES
 
-* **ffe-tabs:** fjerner styling knyttet til tabButton og tabButtonGroup
-
-
-
-
+-   **ffe-tabs:** fjerner styling knyttet til tabButton og tabButtonGroup
 
 # [11.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@11.0.13...@sb1/ffe-tabs@11.1.0) (2022-03-03)
 
-
 ### Features
 
-* **ffe-tabs:** redesign av faner ([6febd6c](https://github.com/SpareBank1/designsystem/commit/6febd6ce746ac7e01b4b76d8b1c717c5f1faa492))
-
-
-
-
+-   **ffe-tabs:** redesign av faner ([6febd6c](https://github.com/SpareBank1/designsystem/commit/6febd6ce746ac7e01b4b76d8b1c717c5f1faa492))
 
 ## [11.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@11.0.12...@sb1/ffe-tabs@11.0.13) (2022-02-28)
 
 **Note:** Version bump only for package @sb1/ffe-tabs
 
-
-
-
-
 ## [11.0.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@11.0.11...@sb1/ffe-tabs@11.0.12) (2021-11-30)
 
 **Note:** Version bump only for package @sb1/ffe-tabs
-
-
-
-
 
 ## [11.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@11.0.10...@sb1/ffe-tabs@11.0.11) (2021-11-19)
 
 **Note:** Version bump only for package @sb1/ffe-tabs
 
-
-
-
-
 ## [11.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@11.0.9...@sb1/ffe-tabs@11.0.10) (2021-11-04)
 
 **Note:** Version bump only for package @sb1/ffe-tabs
-
-
-
-
 
 ## [11.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@11.0.8...@sb1/ffe-tabs@11.0.9) (2021-11-01)
 
 **Note:** Version bump only for package @sb1/ffe-tabs
 
-
-
-
-
 ## [11.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@11.0.7...@sb1/ffe-tabs@11.0.8) (2021-11-01)
 
 **Note:** Version bump only for package @sb1/ffe-tabs
-
-
-
-
 
 ## [11.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@11.0.6...@sb1/ffe-tabs@11.0.7) (2021-10-29)
 
 **Note:** Version bump only for package @sb1/ffe-tabs
 
-
-
-
-
 ## [11.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@11.0.5...@sb1/ffe-tabs@11.0.6) (2021-10-20)
 
 **Note:** Version bump only for package @sb1/ffe-tabs
-
-
-
-
 
 ## [11.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@11.0.4...@sb1/ffe-tabs@11.0.5) (2021-10-08)
 
 **Note:** Version bump only for package @sb1/ffe-tabs
 
-
-
-
-
 ## [11.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@11.0.3...@sb1/ffe-tabs@11.0.4) (2021-10-06)
 
 **Note:** Version bump only for package @sb1/ffe-tabs
-
-
-
-
 
 ## [11.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@11.0.2...@sb1/ffe-tabs@11.0.3) (2021-09-24)
 
 **Note:** Version bump only for package @sb1/ffe-tabs
 
-
-
-
-
 ## [11.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@11.0.1...@sb1/ffe-tabs@11.0.2) (2021-09-17)
 
 **Note:** Version bump only for package @sb1/ffe-tabs
-
-
-
-
 
 ## [11.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@11.0.0...@sb1/ffe-tabs@11.0.1) (2021-09-10)
 
 **Note:** Version bump only for package @sb1/ffe-tabs
 
-
-
-
-
 # [11.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@9.1.1...@sb1/ffe-tabs@11.0.0) (2021-09-06)
-
 
 ### Features
 
-* **ffe-tabs:** oppdaterte farger iht ny profil ([fcd3d74](https://github.com/SpareBank1/designsystem/commit/fcd3d744e0bc3be4fc0d067bb055e8b58111243f))
-
+-   **ffe-tabs:** oppdaterte farger iht ny profil ([fcd3d74](https://github.com/SpareBank1/designsystem/commit/fcd3d744e0bc3be4fc0d067bb055e8b58111243f))
 
 ### BREAKING CHANGES
 
-* **ffe-tabs:** visuelle endringer i komponenten kan medføre regresjonsfeil
-
-
-
-
+-   **ffe-tabs:** visuelle endringer i komponenten kan medføre regresjonsfeil
 
 # [10.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@9.1.1...@sb1/ffe-tabs@10.0.0) (2021-09-06)
 
-
 ### Features
 
-* **ffe-tabs:** oppdaterte farger iht ny profil ([fcd3d74](https://github.com/SpareBank1/designsystem/commit/fcd3d744e0bc3be4fc0d067bb055e8b58111243f))
-
+-   **ffe-tabs:** oppdaterte farger iht ny profil ([fcd3d74](https://github.com/SpareBank1/designsystem/commit/fcd3d744e0bc3be4fc0d067bb055e8b58111243f))
 
 ### BREAKING CHANGES
 
-* **ffe-tabs:** visuelle endringer i komponenten kan medføre regresjonsfeil
-
-
-
-
+-   **ffe-tabs:** visuelle endringer i komponenten kan medføre regresjonsfeil
 
 ## [9.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@9.1.0...@sb1/ffe-tabs@9.1.1) (2021-06-17)
 
 **Note:** Version bump only for package @sb1/ffe-tabs
 
-
-
-
-
 # [9.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@9.0.1...@sb1/ffe-tabs@9.1.0) (2021-04-14)
-
 
 ### Features
 
-* **ffe-tabs:** adds MuseoSans font as fallback font ([9287223](https://github.com/SpareBank1/designsystem/commit/92872237c8a7896c127f3dacb7d94f9c024ac5b4))
-
-
-
-
+-   **ffe-tabs:** adds MuseoSans font as fallback font ([9287223](https://github.com/SpareBank1/designsystem/commit/92872237c8a7896c127f3dacb7d94f9c024ac5b4))
 
 ## [9.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@9.0.0...@sb1/ffe-tabs@9.0.1) (2021-03-25)
 
 **Note:** Version bump only for package @sb1/ffe-tabs
 
-
-
-
-
 # [9.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@8.0.6...@sb1/ffe-tabs@9.0.0) (2021-03-17)
-
 
 ### Bug Fixes
 
-* **ffe-tabs:** bytter ut museo sans med ny sparebank1-font ([e3728b4](https://github.com/SpareBank1/designsystem/commit/e3728b43e4c995be4cd1ce30c909f94fb3000de0))
-
+-   **ffe-tabs:** bytter ut museo sans med ny sparebank1-font ([e3728b4](https://github.com/SpareBank1/designsystem/commit/e3728b43e4c995be4cd1ce30c909f94fb3000de0))
 
 ### BREAKING CHANGES
 
-* **ffe-tabs:** ny font i alt innhold
-
-
-
-
+-   **ffe-tabs:** ny font i alt innhold
 
 ## [8.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@8.0.5...@sb1/ffe-tabs@8.0.6) (2021-03-15)
 
-
 ### Bug Fixes
 
-* **ffe-tabs:** broadens version of peer dependencies ([57b12e9](https://github.com/SpareBank1/designsystem/commit/57b12e9448edb1d84bcf2f1b119a707405551ba8))
-
-
-
-
+-   **ffe-tabs:** broadens version of peer dependencies ([57b12e9](https://github.com/SpareBank1/designsystem/commit/57b12e9448edb1d84bcf2f1b119a707405551ba8))
 
 ## [8.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@8.0.4...@sb1/ffe-tabs@8.0.5) (2021-03-08)
 
 **Note:** Version bump only for package @sb1/ffe-tabs
 
-
-
-
-
 ## [8.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@8.0.3...@sb1/ffe-tabs@8.0.4) (2021-02-03)
 
 **Note:** Version bump only for package @sb1/ffe-tabs
-
-
-
-
 
 ## [8.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@8.0.2...@sb1/ffe-tabs@8.0.3) (2021-02-02)
 
 **Note:** Version bump only for package @sb1/ffe-tabs
 
-
-
-
-
 ## [8.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@8.0.1...@sb1/ffe-tabs@8.0.2) (2021-01-11)
 
 **Note:** Version bump only for package @sb1/ffe-tabs
-
-
-
-
 
 ## [8.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@8.0.0...@sb1/ffe-tabs@8.0.1) (2020-12-03)
 
 **Note:** Version bump only for package @sb1/ffe-tabs
 
-
-
-
-
 # [8.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@7.0.10...@sb1/ffe-tabs@8.0.0) (2020-11-20)
-
 
 ### Bug Fixes
 
-* **ffe-tabs:** change text values to rem ([5049122](https://github.com/SpareBank1/designsystem/commit/5049122824d97724f325dab54f5f109cc9adad6f))
-
+-   **ffe-tabs:** change text values to rem ([5049122](https://github.com/SpareBank1/designsystem/commit/5049122824d97724f325dab54f5f109cc9adad6f))
 
 ### BREAKING CHANGES
 
-* **ffe-tabs:** This fix changes all font-size and line-height values from px to rem,
-this is to solve an issue with zooming in iOS.
-
-
-
-
+-   **ffe-tabs:** This fix changes all font-size and line-height values from px to rem,
+    this is to solve an issue with zooming in iOS.
 
 ## [7.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@7.0.9...@sb1/ffe-tabs@7.0.10) (2020-11-05)
 
 **Note:** Version bump only for package @sb1/ffe-tabs
 
-
-
-
-
 ## [7.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@7.0.8...@sb1/ffe-tabs@7.0.9) (2020-08-25)
 
 **Note:** Version bump only for package @sb1/ffe-tabs
-
-
-
-
 
 ## [7.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@7.0.7...@sb1/ffe-tabs@7.0.8) (2020-03-18)
 

@@ -3,413 +3,221 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [10.0.29](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@10.0.28...@sb1/ffe-lists@10.0.29) (2022-10-04)
+## [10.0.30](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@10.0.29...@sb1/ffe-lists@10.0.30) (2022-10-18)
 
 **Note:** Version bump only for package @sb1/ffe-lists
 
+## [10.0.29](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@10.0.28...@sb1/ffe-lists@10.0.29) (2022-10-04)
 
-
-
+**Note:** Version bump only for package @sb1/ffe-lists
 
 ## [10.0.28](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@10.0.27...@sb1/ffe-lists@10.0.28) (2022-09-28)
 
 **Note:** Version bump only for package @sb1/ffe-lists
 
-
-
-
-
 ## [10.0.27](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@10.0.26...@sb1/ffe-lists@10.0.27) (2022-09-12)
-
 
 ### Bug Fixes
 
-* **ffe-lists:** tøm content så ikon ikke leses dobbelt av skjermleser ([6fda298](https://github.com/SpareBank1/designsystem/commit/6fda298eaa808d48f4f67fac24a96b2b1fdc203d))
-
-
-
-
+-   **ffe-lists:** tøm content så ikon ikke leses dobbelt av skjermleser ([6fda298](https://github.com/SpareBank1/designsystem/commit/6fda298eaa808d48f4f67fac24a96b2b1fdc203d))
 
 ## [10.0.26](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@10.0.25...@sb1/ffe-lists@10.0.26) (2022-08-31)
 
 **Note:** Version bump only for package @sb1/ffe-lists
 
-
-
-
-
 ## [10.0.25](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@10.0.24...@sb1/ffe-lists@10.0.25) (2022-08-08)
 
 **Note:** Version bump only for package @sb1/ffe-lists
 
-
-
-
-
 ## [10.0.24](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@10.0.23...@sb1/ffe-lists@10.0.24) (2022-08-05)
-
 
 ### Bug Fixes
 
-* **ffe-lists:** erstatt ffe-farge-baer-wcag med ffe-farge-baer ([7ee8ff2](https://github.com/SpareBank1/designsystem/commit/7ee8ff226cd3addd66e1988d8eef611faf146063))
-
-
-
-
+-   **ffe-lists:** erstatt ffe-farge-baer-wcag med ffe-farge-baer ([7ee8ff2](https://github.com/SpareBank1/designsystem/commit/7ee8ff226cd3addd66e1988d8eef611faf146063))
 
 ## [10.0.23](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@10.0.22...@sb1/ffe-lists@10.0.23) (2022-06-07)
 
 **Note:** Version bump only for package @sb1/ffe-lists
 
-
-
-
-
 ## [10.0.22](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@10.0.21...@sb1/ffe-lists@10.0.22) (2022-05-30)
 
 **Note:** Version bump only for package @sb1/ffe-lists
-
-
-
-
 
 ## [10.0.21](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@10.0.20...@sb1/ffe-lists@10.0.21) (2022-05-19)
 
 **Note:** Version bump only for package @sb1/ffe-lists
 
-
-
-
-
 ## [10.0.20](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@10.0.19...@sb1/ffe-lists@10.0.20) (2022-03-31)
 
 **Note:** Version bump only for package @sb1/ffe-lists
 
-
-
-
-
 ## [10.0.19](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@10.0.18...@sb1/ffe-lists@10.0.19) (2022-03-21)
-
 
 ### Bug Fixes
 
-* **ffe-lists:** legger til default font ([223ab05](https://github.com/SpareBank1/designsystem/commit/223ab05eb25793683452ad83a01ead88f1e84c4e))
-
-
-
-
+-   **ffe-lists:** legger til default font ([223ab05](https://github.com/SpareBank1/designsystem/commit/223ab05eb25793683452ad83a01ead88f1e84c4e))
 
 ## [10.0.18](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@10.0.17...@sb1/ffe-lists@10.0.18) (2022-03-11)
 
 **Note:** Version bump only for package @sb1/ffe-lists
 
-
-
-
-
 ## [10.0.17](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@10.0.16...@sb1/ffe-lists@10.0.17) (2022-03-09)
 
 **Note:** Version bump only for package @sb1/ffe-lists
 
-
-
-
-
 ## [10.0.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@10.0.15...@sb1/ffe-lists@10.0.16) (2022-03-02)
-
 
 ### Bug Fixes
 
-* **ffe-lists:** remove main entry field from package.json ([aa76078](https://github.com/SpareBank1/designsystem/commit/aa7607851d823fd6ee4e362a846d2bea43396fdf))
-
-
-
-
+-   **ffe-lists:** remove main entry field from package.json ([aa76078](https://github.com/SpareBank1/designsystem/commit/aa7607851d823fd6ee4e362a846d2bea43396fdf))
 
 ## [10.0.15](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@10.0.14...@sb1/ffe-lists@10.0.15) (2022-02-28)
 
 **Note:** Version bump only for package @sb1/ffe-lists
 
-
-
-
-
 ## [10.0.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@10.0.13...@sb1/ffe-lists@10.0.14) (2021-11-30)
 
 **Note:** Version bump only for package @sb1/ffe-lists
-
-
-
-
 
 ## [10.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@10.0.12...@sb1/ffe-lists@10.0.13) (2021-11-19)
 
 **Note:** Version bump only for package @sb1/ffe-lists
 
-
-
-
-
 ## [10.0.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@10.0.11...@sb1/ffe-lists@10.0.12) (2021-11-04)
 
 **Note:** Version bump only for package @sb1/ffe-lists
-
-
-
-
 
 ## [10.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@10.0.10...@sb1/ffe-lists@10.0.11) (2021-11-01)
 
 **Note:** Version bump only for package @sb1/ffe-lists
 
-
-
-
-
 ## [10.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@10.0.9...@sb1/ffe-lists@10.0.10) (2021-11-01)
 
 **Note:** Version bump only for package @sb1/ffe-lists
-
-
-
-
 
 ## [10.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@10.0.8...@sb1/ffe-lists@10.0.9) (2021-10-29)
 
 **Note:** Version bump only for package @sb1/ffe-lists
 
-
-
-
-
 ## [10.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@10.0.7...@sb1/ffe-lists@10.0.8) (2021-10-20)
 
 **Note:** Version bump only for package @sb1/ffe-lists
-
-
-
-
 
 ## [10.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@10.0.6...@sb1/ffe-lists@10.0.7) (2021-10-08)
 
 **Note:** Version bump only for package @sb1/ffe-lists
 
-
-
-
-
 ## [10.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@10.0.5...@sb1/ffe-lists@10.0.6) (2021-10-06)
 
 **Note:** Version bump only for package @sb1/ffe-lists
-
-
-
-
 
 ## [10.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@10.0.4...@sb1/ffe-lists@10.0.5) (2021-09-24)
 
 **Note:** Version bump only for package @sb1/ffe-lists
 
-
-
-
-
 ## [10.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@10.0.3...@sb1/ffe-lists@10.0.4) (2021-09-17)
 
 **Note:** Version bump only for package @sb1/ffe-lists
-
-
-
-
 
 ## [10.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@10.0.2...@sb1/ffe-lists@10.0.3) (2021-09-10)
 
 **Note:** Version bump only for package @sb1/ffe-lists
 
-
-
-
-
 ## [10.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@10.0.0...@sb1/ffe-lists@10.0.2) (2021-09-06)
 
 **Note:** Version bump only for package @sb1/ffe-lists
-
-
-
-
 
 ## [10.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@10.0.0...@sb1/ffe-lists@10.0.1) (2021-09-06)
 
 **Note:** Version bump only for package @sb1/ffe-lists
 
-
-
-
-
 # [10.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@9.0.10...@sb1/ffe-lists@10.0.0) (2021-08-23)
-
 
 ### Features
 
-* **ffe-lists:** update colour variables ([#1164](https://github.com/SpareBank1/designsystem/issues/1164)) ([c4f4951](https://github.com/SpareBank1/designsystem/commit/c4f4951ff7d427b129b2f8bbfeb80a8505a8a877))
-
+-   **ffe-lists:** update colour variables ([#1164](https://github.com/SpareBank1/designsystem/issues/1164)) ([c4f4951](https://github.com/SpareBank1/designsystem/commit/c4f4951ff7d427b129b2f8bbfeb80a8505a8a877))
 
 ### BREAKING CHANGES
 
-* **ffe-lists:** requires ffe-core@18.3
-
-
-
-
+-   **ffe-lists:** requires ffe-core@18.3
 
 ## [9.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@9.0.9...@sb1/ffe-lists@9.0.10) (2021-08-23)
 
-
 ### Bug Fixes
 
-* **ffe-lists:** revert "update colour variables ([#1164](https://github.com/SpareBank1/designsystem/issues/1164))" ([cd2695a](https://github.com/SpareBank1/designsystem/commit/cd2695ae59f1ce68241de77b6e560c8971ac5d76))
-
-
-
-
+-   **ffe-lists:** revert "update colour variables ([#1164](https://github.com/SpareBank1/designsystem/issues/1164))" ([cd2695a](https://github.com/SpareBank1/designsystem/commit/cd2695ae59f1ce68241de77b6e560c8971ac5d76))
 
 ## [9.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@9.0.8...@sb1/ffe-lists@9.0.9) (2021-08-20)
 
-
 ### Bug Fixes
 
-* **ffe-lists:** update colour variables ([#1164](https://github.com/SpareBank1/designsystem/issues/1164)) ([dd146ea](https://github.com/SpareBank1/designsystem/commit/dd146eaf65288bc839b75f046954307e10c88a02))
-
-
-
-
+-   **ffe-lists:** update colour variables ([#1164](https://github.com/SpareBank1/designsystem/issues/1164)) ([dd146ea](https://github.com/SpareBank1/designsystem/commit/dd146eaf65288bc839b75f046954307e10c88a02))
 
 ## [9.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@9.0.7...@sb1/ffe-lists@9.0.8) (2021-06-17)
 
 **Note:** Version bump only for package @sb1/ffe-lists
 
-
-
-
-
 ## [9.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@9.0.6...@sb1/ffe-lists@9.0.7) (2021-04-14)
 
 **Note:** Version bump only for package @sb1/ffe-lists
-
-
-
-
 
 ## [9.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@9.0.5...@sb1/ffe-lists@9.0.6) (2021-03-25)
 
 **Note:** Version bump only for package @sb1/ffe-lists
 
-
-
-
-
 ## [9.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@9.0.4...@sb1/ffe-lists@9.0.5) (2021-03-17)
 
 **Note:** Version bump only for package @sb1/ffe-lists
 
-
-
-
-
 ## [9.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@9.0.3...@sb1/ffe-lists@9.0.4) (2021-03-15)
-
 
 ### Bug Fixes
 
-* **ffe-lists:** broadens version of peer dependencies ([2fcb29e](https://github.com/SpareBank1/designsystem/commit/2fcb29ebb3fb93813812eea77738a011883c171e))
-
-
-
-
+-   **ffe-lists:** broadens version of peer dependencies ([2fcb29e](https://github.com/SpareBank1/designsystem/commit/2fcb29ebb3fb93813812eea77738a011883c171e))
 
 ## [9.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@9.0.2...@sb1/ffe-lists@9.0.3) (2021-03-08)
 
 **Note:** Version bump only for package @sb1/ffe-lists
 
-
-
-
-
 ## [9.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@9.0.1...@sb1/ffe-lists@9.0.2) (2021-02-03)
 
 **Note:** Version bump only for package @sb1/ffe-lists
-
-
-
-
 
 ## [9.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@9.0.0...@sb1/ffe-lists@9.0.1) (2021-02-02)
 
 **Note:** Version bump only for package @sb1/ffe-lists
 
-
-
-
-
 # [9.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@8.0.14...@sb1/ffe-lists@9.0.0) (2021-01-11)
-
 
 ### chore
 
-* **ffe-lists:** bump less ([8d81dfb](https://github.com/SpareBank1/designsystem/commit/8d81dfb08f8457218545c7f230fd92ebd2d4a720))
-
+-   **ffe-lists:** bump less ([8d81dfb](https://github.com/SpareBank1/designsystem/commit/8d81dfb08f8457218545c7f230fd92ebd2d4a720))
 
 ### BREAKING CHANGES
 
-* **ffe-lists:** Requires less ^4.0.0. Fixes deprecated mixin syntax.
-
-
-
-
+-   **ffe-lists:** Requires less ^4.0.0. Fixes deprecated mixin syntax.
 
 ## [8.0.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@8.0.13...@sb1/ffe-lists@8.0.14) (2020-12-03)
 
 **Note:** Version bump only for package @sb1/ffe-lists
 
-
-
-
-
 ## [8.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@8.0.12...@sb1/ffe-lists@8.0.13) (2020-11-20)
 
 **Note:** Version bump only for package @sb1/ffe-lists
-
-
-
-
 
 ## [8.0.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@8.0.11...@sb1/ffe-lists@8.0.12) (2020-11-05)
 
 **Note:** Version bump only for package @sb1/ffe-lists
 
-
-
-
-
 ## [8.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@8.0.10...@sb1/ffe-lists@8.0.11) (2020-09-15)
-
 
 ### Bug Fixes
 
-* **ffe-lists:** darkode styling missing for checklist ([290e358](https://github.com/SpareBank1/designsystem/commit/290e358e6948f2222ae398c615510f432d7f17c3))
-
-
-
-
+-   **ffe-lists:** darkode styling missing for checklist ([290e358](https://github.com/SpareBank1/designsystem/commit/290e358e6948f2222ae398c615510f432d7f17c3))
 
 ## [8.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@8.0.9...@sb1/ffe-lists@8.0.10) (2020-08-25)
 
 **Note:** Version bump only for package @sb1/ffe-lists
-
-
-
-
 
 ## [8.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@8.0.8...@sb1/ffe-lists@8.0.9) (2020-03-18)
 

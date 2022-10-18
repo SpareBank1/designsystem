@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.11.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.11.0...@sb1/ffe-component-index@3.11.1) (2022-10-18)
+
+### Bug Fixes
+
+-   **component-overview:** fjern waveheight eksempler og legg til layout og bgcolor eksempler ([b395236](https://github.com/SpareBank1/designsystem/commit/b395236b1539954b797dde1c233ff03a97392a30))
+
 # [3.11.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.10.10...@sb1/ffe-component-index@3.11.0) (2022-10-14)
 
 ### Features

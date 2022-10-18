@@ -3,481 +3,290 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [24.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@23.0.1...@sb1/ffe-core@24.0.0) (2022-10-04)
-
+# [25.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@24.0.0...@sb1/ffe-core@25.0.0) (2022-10-18)
 
 ### Bug Fixes
 
-* **ffe-core:** fjerner ffe-farge-graa-wcag ([a1f2172](https://github.com/SpareBank1/designsystem/commit/a1f2172a39e979ee765ba7458a7591af69e2f275))
-
+-   **ffe-core:** fjern medium og large bølge. Hierarki endringer ([a531bc2](https://github.com/SpareBank1/designsystem/commit/a531bc220ea882cdb86b10dd4fd3cd1162a732b4))
 
 ### BREAKING CHANGES
 
-* **ffe-core:** ffe-farge-graa-wcag fjernes helt og erstattes med ffe-farge-varmgraa
+-   **ffe-core:** fjerner medium og large bølgen. Endrer også default mask-size og endrer hierarkiet på diverse css klasser
 
+# [24.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@23.0.1...@sb1/ffe-core@24.0.0) (2022-10-04)
 
+### Bug Fixes
 
+-   **ffe-core:** fjerner ffe-farge-graa-wcag ([a1f2172](https://github.com/SpareBank1/designsystem/commit/a1f2172a39e979ee765ba7458a7591af69e2f275))
 
+### BREAKING CHANGES
+
+-   **ffe-core:** ffe-farge-graa-wcag fjernes helt og erstattes med ffe-farge-varmgraa
 
 ## [23.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@23.0.0...@sb1/ffe-core@23.0.1) (2022-09-28)
 
-
 ### Bug Fixes
 
-* **ffe-core:** sett wave og wave__content til 100% bredde ([dda708d](https://github.com/SpareBank1/designsystem/commit/dda708d58dc7cc3539231322e26e995b4b17c3c8))
-
-
-
-
+-   **ffe-core:** sett wave og wave\_\_content til 100% bredde ([dda708d](https://github.com/SpareBank1/designsystem/commit/dda708d58dc7cc3539231322e26e995b4b17c3c8))
 
 # [23.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@22.1.0...@sb1/ffe-core@23.0.0) (2022-08-31)
 
-
 ### Bug Fixes
 
-* **ffe-core:** fiks issue med plassering av bølge og navnendring ([70b07af](https://github.com/SpareBank1/designsystem/commit/70b07af351dad565e9e09571b6c3800745a8670c))
-
+-   **ffe-core:** fiks issue med plassering av bølge og navnendring ([70b07af](https://github.com/SpareBank1/designsystem/commit/70b07af351dad565e9e09571b6c3800745a8670c))
 
 ### BREAKING CHANGES
 
-* **ffe-core:** endrer klassenavn fra rotate til flip for å matche endring i prop navn
-
-
-
-
+-   **ffe-core:** endrer klassenavn fra rotate til flip for å matche endring i prop navn
 
 # [22.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@22.0.0...@sb1/ffe-core@22.1.0) (2022-08-08)
 
-
 ### Features
 
-* **ffe-core:** add styles for waves ([f93772c](https://github.com/SpareBank1/designsystem/commit/f93772ceebcfe382759ee943d9aad22cde5be56f))
-
-
-
-
+-   **ffe-core:** add styles for waves ([f93772c](https://github.com/SpareBank1/designsystem/commit/f93772ceebcfe382759ee943d9aad22cde5be56f))
 
 # [22.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@21.1.1...@sb1/ffe-core@22.0.0) (2022-08-05)
 
-
 ### Bug Fixes
 
-* **ffe-core:** fjern ffe-farge-baer-wcag og bytt ut med ffe-farge-baer ([0d51c63](https://github.com/SpareBank1/designsystem/commit/0d51c63be4574aab9ee8ed354bb30ab7d4b14d92))
-
+-   **ffe-core:** fjern ffe-farge-baer-wcag og bytt ut med ffe-farge-baer ([0d51c63](https://github.com/SpareBank1/designsystem/commit/0d51c63be4574aab9ee8ed354bb30ab7d4b14d92))
 
 ### BREAKING CHANGES
 
-* **ffe-core:** fjerner ffe-farge-baer wcag
-
-
-
-
+-   **ffe-core:** fjerner ffe-farge-baer wcag
 
 ## [21.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@21.1.0...@sb1/ffe-core@21.1.1) (2022-06-07)
 
-
 ### Bug Fixes
 
-* **ffe-core:** legg til margin bottom på lead og sub lead ([ae717a7](https://github.com/SpareBank1/designsystem/commit/ae717a7aaec63b999ed3a3604d5167485b9340a0))
-
-
-
-
+-   **ffe-core:** legg til margin bottom på lead og sub lead ([ae717a7](https://github.com/SpareBank1/designsystem/commit/ae717a7aaec63b999ed3a3604d5167485b9340a0))
 
 # [21.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@21.0.4...@sb1/ffe-core@21.1.0) (2022-05-30)
 
-
 ### Features
 
-* **ffe-core:** definerer font-variant-numeric i tekst ([f8983d1](https://github.com/SpareBank1/designsystem/commit/f8983d14dae53b690b242835d5762de920930ee0))
-
-
-
-
+-   **ffe-core:** definerer font-variant-numeric i tekst ([f8983d1](https://github.com/SpareBank1/designsystem/commit/f8983d14dae53b690b242835d5762de920930ee0))
 
 ## [21.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@21.0.3...@sb1/ffe-core@21.0.4) (2022-05-19)
 
-
 ### Bug Fixes
 
-* **ffe-core:** update development dependencies ([93fe953](https://github.com/SpareBank1/designsystem/commit/93fe953333f08f782a5170c667349d3723864d31))
-
-
-
-
+-   **ffe-core:** update development dependencies ([93fe953](https://github.com/SpareBank1/designsystem/commit/93fe953333f08f782a5170c667349d3723864d31))
 
 ## [21.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@21.0.2...@sb1/ffe-core@21.0.3) (2022-03-31)
 
-
 ### Bug Fixes
 
-* **ffe-core:** retter font-size på h5 og h6 ([0c37981](https://github.com/SpareBank1/designsystem/commit/0c37981231ad93aebb64fb46cfdecac131fa649f))
-
-
-
-
+-   **ffe-core:** retter font-size på h5 og h6 ([0c37981](https://github.com/SpareBank1/designsystem/commit/0c37981231ad93aebb64fb46cfdecac131fa649f))
 
 ## [21.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@21.0.1...@sb1/ffe-core@21.0.2) (2022-03-21)
 
-
 ### Bug Fixes
 
-* **ffe-core:** legger til default font ([a6bbbc8](https://github.com/SpareBank1/designsystem/commit/a6bbbc8f2bc7831946b140dcd6b5cebe54dd8d13))
-
-
-
-
+-   **ffe-core:** legger til default font ([a6bbbc8](https://github.com/SpareBank1/designsystem/commit/a6bbbc8f2bc7831946b140dcd6b5cebe54dd8d13))
 
 ## [21.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@21.0.0...@sb1/ffe-core@21.0.1) (2022-03-11)
 
-
 ### Bug Fixes
 
-* **ffe-core:** remove unused fontsize mixins for ffe-buttons ([b39aa13](https://github.com/SpareBank1/designsystem/commit/b39aa1368a576c7228a6ebf3640a07282d7b4a66)), closes [#1251](https://github.com/SpareBank1/designsystem/issues/1251)
-
-
-
-
+-   **ffe-core:** remove unused fontsize mixins for ffe-buttons ([b39aa13](https://github.com/SpareBank1/designsystem/commit/b39aa1368a576c7228a6ebf3640a07282d7b4a66)), closes [#1251](https://github.com/SpareBank1/designsystem/issues/1251)
 
 # [21.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@20.0.0...@sb1/ffe-core@21.0.0) (2022-03-09)
 
-
 ### Features
 
-* **ffe-core:** upgrade normalize.css ([ef3777d](https://github.com/SpareBank1/designsystem/commit/ef3777d7ab854aac7dda67ce192d879b2d0ffc79)), closes [#1284](https://github.com/SpareBank1/designsystem/issues/1284)
-
+-   **ffe-core:** upgrade normalize.css ([ef3777d](https://github.com/SpareBank1/designsystem/commit/ef3777d7ab854aac7dda67ce192d879b2d0ffc79)), closes [#1284](https://github.com/SpareBank1/designsystem/issues/1284)
 
 ### BREAKING CHANGES
 
-* **ffe-core:** upgrade to normalize.css@8.0.1. This change drops
-support for some older browser and normalizes the behaviour of some
-more current browsers.
-
-
-
-
+-   **ffe-core:** upgrade to normalize.css@8.0.1. This change drops
+    support for some older browser and normalizes the behaviour of some
+    more current browsers.
 
 # [20.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@19.4.0...@sb1/ffe-core@20.0.0) (2022-02-28)
 
-
 ### Bug Fixes
 
-* **ffe-core:** fjern ffe-farge-vann-30-hover farge ([c8806b3](https://github.com/SpareBank1/designsystem/commit/c8806b344a801ba4d85067555f4e718645f3bfba))
-
+-   **ffe-core:** fjern ffe-farge-vann-30-hover farge ([c8806b3](https://github.com/SpareBank1/designsystem/commit/c8806b344a801ba4d85067555f4e718645f3bfba))
 
 ### BREAKING CHANGES
 
-* **ffe-core:** fjernet ffe-farge-vann-30-hover
-
-
-
-
+-   **ffe-core:** fjernet ffe-farge-vann-30-hover
 
 # [19.4.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@19.3.3...@sb1/ffe-core@19.4.0) (2021-11-30)
 
-
 ### Features
 
-* **ffe-core:** default fontstørrelse med prosent ([8c53929](https://github.com/SpareBank1/designsystem/commit/8c539296d369202007fe64b4fd295e2eab4d8ab1))
-
-
-
-
+-   **ffe-core:** default fontstørrelse med prosent ([8c53929](https://github.com/SpareBank1/designsystem/commit/8c539296d369202007fe64b4fd295e2eab4d8ab1))
 
 ## [19.3.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@19.3.2...@sb1/ffe-core@19.3.3) (2021-11-19)
 
-
 ### Bug Fixes
 
-* **ffe-core:** fjerner inline-block fra lenker ([2dcf692](https://github.com/SpareBank1/designsystem/commit/2dcf692aa0c29e23c9507d5a0093da5967c233c1))
-
-
-
-
+-   **ffe-core:** fjerner inline-block fra lenker ([2dcf692](https://github.com/SpareBank1/designsystem/commit/2dcf692aa0c29e23c9507d5a0093da5967c233c1))
 
 ## [19.3.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@19.3.1...@sb1/ffe-core@19.3.2) (2021-11-04)
 
 **Note:** Version bump only for package @sb1/ffe-core
 
-
-
-
-
 ## [19.3.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@19.3.0...@sb1/ffe-core@19.3.1) (2021-11-01)
 
 **Note:** Version bump only for package @sb1/ffe-core
 
-
-
-
-
 # [19.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@19.2.1...@sb1/ffe-core@19.3.0) (2021-11-01)
-
 
 ### Features
 
-* **ffe-core:** add correct font sizes for tablet size ([38c1a87](https://github.com/SpareBank1/designsystem/commit/38c1a875a970b6702a444aaa4acde5a01cdd04fe))
-
-
-
-
+-   **ffe-core:** add correct font sizes for tablet size ([38c1a87](https://github.com/SpareBank1/designsystem/commit/38c1a875a970b6702a444aaa4acde5a01cdd04fe))
 
 ## [19.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@19.2.0...@sb1/ffe-core@19.2.1) (2021-10-29)
 
-
 ### Bug Fixes
 
-* **ffe-core:** bytter til riktig font i emphasized text ([99f3a00](https://github.com/SpareBank1/designsystem/commit/99f3a0009c464e7716f8ea001d2e99c304823a31))
-* **ffe-core:** setter italic fallback til en font som ikke er bold ([558ce88](https://github.com/SpareBank1/designsystem/commit/558ce8844c4e78b6cb69948f5def0a8e08414cae))
-
-
-
-
+-   **ffe-core:** bytter til riktig font i emphasized text ([99f3a00](https://github.com/SpareBank1/designsystem/commit/99f3a0009c464e7716f8ea001d2e99c304823a31))
+-   **ffe-core:** setter italic fallback til en font som ikke er bold ([558ce88](https://github.com/SpareBank1/designsystem/commit/558ce8844c4e78b6cb69948f5def0a8e08414cae))
 
 # [19.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@19.1.3...@sb1/ffe-core@19.2.0) (2021-10-20)
 
-
 ### Features
 
-* **ffe-core:** fokus-markering på linker i tråd med visuell identitet ([bfdd289](https://github.com/SpareBank1/designsystem/commit/bfdd2894dbd98e8bbdb813b2da451609333bab49))
-
-
-
-
+-   **ffe-core:** fokus-markering på linker i tråd med visuell identitet ([bfdd289](https://github.com/SpareBank1/designsystem/commit/bfdd2894dbd98e8bbdb813b2da451609333bab49))
 
 ## [19.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@19.1.2...@sb1/ffe-core@19.1.3) (2021-10-08)
 
 **Note:** Version bump only for package @sb1/ffe-core
 
-
-
-
-
 ## [19.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@19.1.1...@sb1/ffe-core@19.1.2) (2021-10-06)
-
 
 ### Bug Fixes
 
-* **ffe-core:** justere lead og sublead ([ff40797](https://github.com/SpareBank1/designsystem/commit/ff40797c03de5bb3db73963ecc8966ea908711fc))
-
-
-
-
+-   **ffe-core:** justere lead og sublead ([ff40797](https://github.com/SpareBank1/designsystem/commit/ff40797c03de5bb3db73963ecc8966ea908711fc))
 
 ## [19.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@19.1.0...@sb1/ffe-core@19.1.1) (2021-09-24)
 
-
 ### Bug Fixes
 
-* **ffe-core:** endrer farge på visited i darkmode ([cffffeb](https://github.com/SpareBank1/designsystem/commit/cffffeba38c3bebdba2e7106ad08a4b2455950a8))
-
-
-
-
+-   **ffe-core:** endrer farge på visited i darkmode ([cffffeb](https://github.com/SpareBank1/designsystem/commit/cffffeba38c3bebdba2e7106ad08a4b2455950a8))
 
 # [19.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@19.0.0...@sb1/ffe-core@19.1.0) (2021-09-17)
 
-
 ### Features
 
-* **ffe-core:** add design tokens as css ([cce16f9](https://github.com/SpareBank1/designsystem/commit/cce16f9b9fca4371eac7845fa3531b002c8f1579))
-* **ffe-core:** include breakpoints as css custom media queries ([ccabb6f](https://github.com/SpareBank1/designsystem/commit/ccabb6f3de8738482d1b093a56cce6f74c1b19bb))
-
-
-
-
+-   **ffe-core:** add design tokens as css ([cce16f9](https://github.com/SpareBank1/designsystem/commit/cce16f9b9fca4371eac7845fa3531b002c8f1579))
+-   **ffe-core:** include breakpoints as css custom media queries ([ccabb6f](https://github.com/SpareBank1/designsystem/commit/ccabb6f3de8738482d1b093a56cce6f74c1b19bb))
 
 # [19.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@18.5.0...@sb1/ffe-core@19.0.0) (2021-09-10)
 
-
 ### Features
 
-* **ffe-core:** oppdaterte farger iht ny visuell profil ([f64e689](https://github.com/SpareBank1/designsystem/commit/f64e6895bdeff9d1088651cfb8d998968e96ba82))
-
+-   **ffe-core:** oppdaterte farger iht ny visuell profil ([f64e689](https://github.com/SpareBank1/designsystem/commit/f64e6895bdeff9d1088651cfb8d998968e96ba82))
 
 ### BREAKING CHANGES
 
-* **ffe-core:** visuelle endringer kan medføre regresjonsfeil, unødvendige fargevariabler slettes
-Sletter @ffe-farge-vann-hover, @ffe-farge-moerkgraa-wcag, @ffe-farge-darkmode-svart,
-@ffe-farge-darkmode-hvit, @ffe-farge-darkmode-koksgraa, @ffe-farge-darkmode-moerkgraa,
-@ffe-farge-darkmode-graa, @ffe-farge-darkmode-lysgraa, @ffe-farge-darkmode-vann,
-@ffe-farge-darkmode-baer
-
-
-
-
+-   **ffe-core:** visuelle endringer kan medføre regresjonsfeil, unødvendige fargevariabler slettes
+    Sletter @ffe-farge-vann-hover, @ffe-farge-moerkgraa-wcag, @ffe-farge-darkmode-svart,
+    @ffe-farge-darkmode-hvit, @ffe-farge-darkmode-koksgraa, @ffe-farge-darkmode-moerkgraa,
+    @ffe-farge-darkmode-graa, @ffe-farge-darkmode-lysgraa, @ffe-farge-darkmode-vann,
+    @ffe-farge-darkmode-baer
 
 # [18.5.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@18.3.0...@sb1/ffe-core@18.5.0) (2021-09-06)
 
-
 ### Features
 
-* **ffe-core:** nye fargevariabler til knapper ([05a98a4](https://github.com/SpareBank1/designsystem/commit/05a98a432aecf08e9742d704235df279121baf1a))
-
-
-
-
+-   **ffe-core:** nye fargevariabler til knapper ([05a98a4](https://github.com/SpareBank1/designsystem/commit/05a98a432aecf08e9742d704235df279121baf1a))
 
 # [18.4.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@18.3.0...@sb1/ffe-core@18.4.0) (2021-09-06)
 
-
 ### Features
 
-* **ffe-core:** nye fargevariabler til knapper ([05a98a4](https://github.com/SpareBank1/designsystem/commit/05a98a432aecf08e9742d704235df279121baf1a))
-
-
-
-
+-   **ffe-core:** nye fargevariabler til knapper ([05a98a4](https://github.com/SpareBank1/designsystem/commit/05a98a432aecf08e9742d704235df279121baf1a))
 
 # [18.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@18.2.0...@sb1/ffe-core@18.3.0) (2021-06-17)
 
-
 ### Features
 
-* **ffe-core:** add more colour variants for WCAG purposes ([5640953](https://github.com/SpareBank1/designsystem/commit/5640953f8a0cf690bb890084f8cc0b56abc777b3))
-
-
-
-
+-   **ffe-core:** add more colour variants for WCAG purposes ([5640953](https://github.com/SpareBank1/designsystem/commit/5640953f8a0cf690bb890084f8cc0b56abc777b3))
 
 # [18.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@18.1.0...@sb1/ffe-core@18.2.0) (2021-04-14)
 
-
 ### Features
 
-* **ffe-core:** adds MuseoSans font as fallback font ([7947c53](https://github.com/SpareBank1/designsystem/commit/7947c53fd823f2ad43e44a212d933c08773a67e5))
-
-
-
-
+-   **ffe-core:** adds MuseoSans font as fallback font ([7947c53](https://github.com/SpareBank1/designsystem/commit/7947c53fd823f2ad43e44a212d933c08773a67e5))
 
 # [18.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@18.0.0...@sb1/ffe-core@18.1.0) (2021-03-25)
 
-
 ### Features
 
-* **ffe-core:** oppdatert darkmode-spesifikk fargepalett ([e98d98a](https://github.com/SpareBank1/designsystem/commit/e98d98ab7c5a969e09d96eac03eee34adad6baa0))
-
-
-
-
+-   **ffe-core:** oppdatert darkmode-spesifikk fargepalett ([e98d98a](https://github.com/SpareBank1/designsystem/commit/e98d98ab7c5a969e09d96eac03eee34adad6baa0))
 
 # [18.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@17.1.1...@sb1/ffe-core@18.0.0) (2021-03-17)
 
-
 ### Bug Fixes
 
-* **ffe-core:** bytter ut museo sans med ny sparebank1-font ([ffa8833](https://github.com/SpareBank1/designsystem/commit/ffa8833f269d9697e416ca383bb4f34b2d9d09e2))
-
+-   **ffe-core:** bytter ut museo sans med ny sparebank1-font ([ffa8833](https://github.com/SpareBank1/designsystem/commit/ffa8833f269d9697e416ca383bb4f34b2d9d09e2))
 
 ### BREAKING CHANGES
 
-* **ffe-core:** ny font i alt innhold
-
-
-
-
+-   **ffe-core:** ny font i alt innhold
 
 ## [17.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@17.1.0...@sb1/ffe-core@17.1.1) (2021-03-08)
 
-
 ### Bug Fixes
 
-* **ffe-core:** legger til manglende variabel for hvit farge ([19cbb97](https://github.com/SpareBank1/designsystem/commit/19cbb974720110cca416bec0ab83f5091082a001))
-
-
-
-
+-   **ffe-core:** legger til manglende variabel for hvit farge ([19cbb97](https://github.com/SpareBank1/designsystem/commit/19cbb974720110cca416bec0ab83f5091082a001))
 
 # [17.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@17.0.1...@sb1/ffe-core@17.1.0) (2021-02-03)
 
-
 ### Features
 
-* **ffe-core:** legger til farger fra ny identitet ([b24f606](https://github.com/SpareBank1/designsystem/commit/b24f606c327f82c370ea1d533accc6863cf1021d))
-
-
-
-
+-   **ffe-core:** legger til farger fra ny identitet ([b24f606](https://github.com/SpareBank1/designsystem/commit/b24f606c327f82c370ea1d533accc6863cf1021d))
 
 ## [17.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@17.0.0...@sb1/ffe-core@17.0.1) (2021-02-02)
 
-
 ### Bug Fixes
 
-* **ffe-core:** reduce vulnerabilities ([e1c55e2](https://github.com/SpareBank1/designsystem/commit/e1c55e2fce341db6c5d0fbf376df68d3962cfbb2))
-
-
-
-
+-   **ffe-core:** reduce vulnerabilities ([e1c55e2](https://github.com/SpareBank1/designsystem/commit/e1c55e2fce341db6c5d0fbf376df68d3962cfbb2))
 
 # [17.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@16.0.1...@sb1/ffe-core@17.0.0) (2021-01-11)
 
-
 ### chore
 
-* **ffe-core:** bump less ([8f22d26](https://github.com/SpareBank1/designsystem/commit/8f22d2629ff5372e3386fae812c67742c96e4208))
-
+-   **ffe-core:** bump less ([8f22d26](https://github.com/SpareBank1/designsystem/commit/8f22d2629ff5372e3386fae812c67742c96e4208))
 
 ### BREAKING CHANGES
 
-* **ffe-core:** Requires less ^4.0.0. Fixes deprecated mixin syntax.
-
-
-
-
+-   **ffe-core:** Requires less ^4.0.0. Fixes deprecated mixin syntax.
 
 ## [16.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@16.0.0...@sb1/ffe-core@16.0.1) (2020-12-03)
 
-
 ### Bug Fixes
 
-* **ffe-core:** some variables where ignored due to comments ([a1d6596](https://github.com/SpareBank1/designsystem/commit/a1d659638283e26b3f4babb0d54b8b697579f4d7))
-
-
-
-
+-   **ffe-core:** some variables where ignored due to comments ([a1d6596](https://github.com/SpareBank1/designsystem/commit/a1d659638283e26b3f4babb0d54b8b697579f4d7))
 
 # [16.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@15.6.0...@sb1/ffe-core@16.0.0) (2020-11-20)
 
-
 ### Bug Fixes
 
-* **ffe-core:** change text values to rem ([fcd0bdd](https://github.com/SpareBank1/designsystem/commit/fcd0bddb77e63e9f46d67bdad8b7c79c23ead3c9))
-* **ffe-core:** move html font-size ([316cfc8](https://github.com/SpareBank1/designsystem/commit/316cfc833a42a474657bed40dfc8cf40f5f74e5d))
-
+-   **ffe-core:** change text values to rem ([fcd0bdd](https://github.com/SpareBank1/designsystem/commit/fcd0bddb77e63e9f46d67bdad8b7c79c23ead3c9))
+-   **ffe-core:** move html font-size ([316cfc8](https://github.com/SpareBank1/designsystem/commit/316cfc833a42a474657bed40dfc8cf40f5f74e5d))
 
 ### BREAKING CHANGES
 
-* **ffe-core:** Moved the html font-size defintion from font-sizes.less to ffe-normalize.
-* **ffe-core:** This fix changes all font-size and line-height values from px to rem,
-this is to solve an issue with zooming in iOS.
-
-
-
-
+-   **ffe-core:** Moved the html font-size defintion from font-sizes.less to ffe-normalize.
+-   **ffe-core:** This fix changes all font-size and line-height values from px to rem,
+    this is to solve an issue with zooming in iOS.
 
 # [15.6.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@15.5.8...@sb1/ffe-core@15.6.0) (2020-11-05)
 
-
 ### Features
 
-* **ffe-core:** darkmode color palette & darkmode form label color tweak ([5d41e60](https://github.com/SpareBank1/designsystem/commit/5d41e602ab3087895fa994ae7843d5fb49e1593d))
-
-
-
-
+-   **ffe-core:** darkmode color palette & darkmode form label color tweak ([5d41e60](https://github.com/SpareBank1/designsystem/commit/5d41e602ab3087895fa994ae7843d5fb49e1593d))
 
 ## [15.5.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@15.5.7...@sb1/ffe-core@15.5.8) (2020-08-25)
 
-
 ### Bug Fixes
 
-* **ffe-core:** add dark mode styling to ffe-body-paragraph ([b521057](https://github.com/SpareBank1/designsystem/commit/b521057b012b718be23b5524e9e76d8c63d3977e))
-
-
-
-
+-   **ffe-core:** add dark mode styling to ffe-body-paragraph ([b521057](https://github.com/SpareBank1/designsystem/commit/b521057b012b718be23b5524e9e76d8c63d3977e))
 
 ## [15.5.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@15.5.6...@sb1/ffe-core@15.5.7) (2020-03-18)
 

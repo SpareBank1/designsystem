@@ -3,513 +3,278 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [17.0.36](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@17.0.35...@sb1/ffe-header@17.0.36) (2022-10-04)
+## [17.0.37](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@17.0.36...@sb1/ffe-header@17.0.37) (2022-10-18)
 
 **Note:** Version bump only for package @sb1/ffe-header
 
+## [17.0.36](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@17.0.35...@sb1/ffe-header@17.0.36) (2022-10-04)
 
-
-
+**Note:** Version bump only for package @sb1/ffe-header
 
 ## [17.0.35](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@17.0.34...@sb1/ffe-header@17.0.35) (2022-09-28)
 
 **Note:** Version bump only for package @sb1/ffe-header
 
-
-
-
-
 ## [17.0.34](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@17.0.33...@sb1/ffe-header@17.0.34) (2022-09-12)
 
 **Note:** Version bump only for package @sb1/ffe-header
-
-
-
-
 
 ## [17.0.33](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@17.0.32...@sb1/ffe-header@17.0.33) (2022-08-31)
 
 **Note:** Version bump only for package @sb1/ffe-header
 
-
-
-
-
 ## [17.0.32](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@17.0.31...@sb1/ffe-header@17.0.32) (2022-08-08)
 
 **Note:** Version bump only for package @sb1/ffe-header
-
-
-
-
 
 ## [17.0.31](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@17.0.30...@sb1/ffe-header@17.0.31) (2022-08-05)
 
 **Note:** Version bump only for package @sb1/ffe-header
 
-
-
-
-
 ## [17.0.30](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@17.0.29...@sb1/ffe-header@17.0.30) (2022-07-11)
 
 **Note:** Version bump only for package @sb1/ffe-header
-
-
-
-
 
 ## [17.0.29](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@17.0.28...@sb1/ffe-header@17.0.29) (2022-06-07)
 
 **Note:** Version bump only for package @sb1/ffe-header
 
-
-
-
-
 ## [17.0.28](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@17.0.27...@sb1/ffe-header@17.0.28) (2022-05-30)
 
 **Note:** Version bump only for package @sb1/ffe-header
-
-
-
-
 
 ## [17.0.27](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@17.0.26...@sb1/ffe-header@17.0.27) (2022-05-19)
 
 **Note:** Version bump only for package @sb1/ffe-header
 
-
-
-
-
 ## [17.0.26](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@17.0.25...@sb1/ffe-header@17.0.26) (2022-03-31)
 
 **Note:** Version bump only for package @sb1/ffe-header
-
-
-
-
 
 ## [17.0.25](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@17.0.24...@sb1/ffe-header@17.0.25) (2022-03-21)
 
 **Note:** Version bump only for package @sb1/ffe-header
 
-
-
-
-
 ## [17.0.24](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@17.0.23...@sb1/ffe-header@17.0.24) (2022-03-11)
 
 **Note:** Version bump only for package @sb1/ffe-header
-
-
-
-
 
 ## [17.0.23](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@17.0.22...@sb1/ffe-header@17.0.23) (2022-03-09)
 
 **Note:** Version bump only for package @sb1/ffe-header
 
-
-
-
-
 ## [17.0.22](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@17.0.21...@sb1/ffe-header@17.0.22) (2022-03-08)
 
 **Note:** Version bump only for package @sb1/ffe-header
 
-
-
-
-
 ## [17.0.21](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@17.0.20...@sb1/ffe-header@17.0.21) (2022-02-28)
-
 
 ### Bug Fixes
 
-* **ffe-header:** replace hover color with frost-30 ([72a21e6](https://github.com/SpareBank1/designsystem/commit/72a21e67d75ce6744390f47ebfc3aa4b67b52196))
-
-
-
-
+-   **ffe-header:** replace hover color with frost-30 ([72a21e6](https://github.com/SpareBank1/designsystem/commit/72a21e67d75ce6744390f47ebfc3aa4b67b52196))
 
 ## [17.0.20](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@17.0.19...@sb1/ffe-header@17.0.20) (2022-01-25)
 
 **Note:** Version bump only for package @sb1/ffe-header
 
-
-
-
-
 ## [17.0.19](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@17.0.18...@sb1/ffe-header@17.0.19) (2021-12-14)
 
 **Note:** Version bump only for package @sb1/ffe-header
-
-
-
-
 
 ## [17.0.18](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@17.0.17...@sb1/ffe-header@17.0.18) (2021-11-30)
 
 **Note:** Version bump only for package @sb1/ffe-header
 
-
-
-
-
 ## [17.0.17](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@17.0.16...@sb1/ffe-header@17.0.17) (2021-11-25)
 
 **Note:** Version bump only for package @sb1/ffe-header
-
-
-
-
 
 ## [17.0.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@17.0.15...@sb1/ffe-header@17.0.16) (2021-11-19)
 
 **Note:** Version bump only for package @sb1/ffe-header
 
-
-
-
-
 ## [17.0.15](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@17.0.14...@sb1/ffe-header@17.0.15) (2021-11-19)
 
 **Note:** Version bump only for package @sb1/ffe-header
-
-
-
-
 
 ## [17.0.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@17.0.13...@sb1/ffe-header@17.0.14) (2021-11-11)
 
 **Note:** Version bump only for package @sb1/ffe-header
 
-
-
-
-
 ## [17.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@17.0.12...@sb1/ffe-header@17.0.13) (2021-11-04)
 
 **Note:** Version bump only for package @sb1/ffe-header
-
-
-
-
 
 ## [17.0.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@17.0.11...@sb1/ffe-header@17.0.12) (2021-11-01)
 
 **Note:** Version bump only for package @sb1/ffe-header
 
-
-
-
-
 ## [17.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@17.0.10...@sb1/ffe-header@17.0.11) (2021-11-01)
 
 **Note:** Version bump only for package @sb1/ffe-header
-
-
-
-
 
 ## [17.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@17.0.9...@sb1/ffe-header@17.0.10) (2021-10-29)
 
 **Note:** Version bump only for package @sb1/ffe-header
 
-
-
-
-
 ## [17.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@17.0.8...@sb1/ffe-header@17.0.9) (2021-10-22)
-
 
 ### Bug Fixes
 
-* **ffe-header:** focus state i tråd med visuell identitet ([9043bd0](https://github.com/SpareBank1/designsystem/commit/9043bd0276fed5a5e12247a1c13eca0e73ae603f))
-
-
-
-
+-   **ffe-header:** focus state i tråd med visuell identitet ([9043bd0](https://github.com/SpareBank1/designsystem/commit/9043bd0276fed5a5e12247a1c13eca0e73ae603f))
 
 ## [17.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@17.0.7...@sb1/ffe-header@17.0.8) (2021-10-20)
 
 **Note:** Version bump only for package @sb1/ffe-header
 
-
-
-
-
 ## [17.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@17.0.6...@sb1/ffe-header@17.0.7) (2021-10-13)
-
 
 ### Bug Fixes
 
-* **ffe-header:** update colours to improve UU ([4ac7ad4](https://github.com/SpareBank1/designsystem/commit/4ac7ad4277fc195f8632a8070dedac3392412256))
-
-
-
-
+-   **ffe-header:** update colours to improve UU ([4ac7ad4](https://github.com/SpareBank1/designsystem/commit/4ac7ad4277fc195f8632a8070dedac3392412256))
 
 ## [17.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@17.0.5...@sb1/ffe-header@17.0.6) (2021-10-08)
 
 **Note:** Version bump only for package @sb1/ffe-header
 
-
-
-
-
 ## [17.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@17.0.4...@sb1/ffe-header@17.0.5) (2021-10-06)
 
 **Note:** Version bump only for package @sb1/ffe-header
-
-
-
-
 
 ## [17.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@17.0.3...@sb1/ffe-header@17.0.4) (2021-10-05)
 
 **Note:** Version bump only for package @sb1/ffe-header
 
-
-
-
-
 ## [17.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@17.0.2...@sb1/ffe-header@17.0.3) (2021-09-24)
 
 **Note:** Version bump only for package @sb1/ffe-header
-
-
-
-
 
 ## [17.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@17.0.1...@sb1/ffe-header@17.0.2) (2021-09-17)
 
 **Note:** Version bump only for package @sb1/ffe-header
 
-
-
-
-
 ## [17.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@17.0.0...@sb1/ffe-header@17.0.1) (2021-09-10)
-
 
 ### Bug Fixes
 
-* **ffe-header:** erstatter moerkgraa-wcag med moerkgraa i lenker ([bf4885c](https://github.com/SpareBank1/designsystem/commit/bf4885c795f4511e7844e27445f27c9ab6d32964))
-
-
-
-
+-   **ffe-header:** erstatter moerkgraa-wcag med moerkgraa i lenker ([bf4885c](https://github.com/SpareBank1/designsystem/commit/bf4885c795f4511e7844e27445f27c9ab6d32964))
 
 # [17.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@15.1.1...@sb1/ffe-header@17.0.0) (2021-09-06)
 
-
 ### Features
 
-* **ffe-header:** oppdaterte farger iht ny profil ([9729c51](https://github.com/SpareBank1/designsystem/commit/9729c518c70b9c8ed58c7818cd9184f70e46417b))
-
+-   **ffe-header:** oppdaterte farger iht ny profil ([9729c51](https://github.com/SpareBank1/designsystem/commit/9729c518c70b9c8ed58c7818cd9184f70e46417b))
 
 ### BREAKING CHANGES
 
-* **ffe-header:** visuelle endringer i komponenten kan medføre regresjonsfeil
-
-
-
-
+-   **ffe-header:** visuelle endringer i komponenten kan medføre regresjonsfeil
 
 # [16.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@15.1.1...@sb1/ffe-header@16.0.0) (2021-09-06)
 
-
 ### Features
 
-* **ffe-header:** oppdaterte farger iht ny profil ([9729c51](https://github.com/SpareBank1/designsystem/commit/9729c518c70b9c8ed58c7818cd9184f70e46417b))
-
+-   **ffe-header:** oppdaterte farger iht ny profil ([9729c51](https://github.com/SpareBank1/designsystem/commit/9729c518c70b9c8ed58c7818cd9184f70e46417b))
 
 ### BREAKING CHANGES
 
-* **ffe-header:** visuelle endringer i komponenten kan medføre regresjonsfeil
-
-
-
-
+-   **ffe-header:** visuelle endringer i komponenten kan medføre regresjonsfeil
 
 ## [15.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@15.1.0...@sb1/ffe-header@15.1.1) (2021-06-17)
 
 **Note:** Version bump only for package @sb1/ffe-header
 
-
-
-
-
 # [15.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@15.0.1...@sb1/ffe-header@15.1.0) (2021-04-14)
-
 
 ### Features
 
-* **ffe-header:** adds MuseoSans font as fallback font ([f217fa7](https://github.com/SpareBank1/designsystem/commit/f217fa7f248b5c9b2722325acf951acc7666632c))
-
-
-
-
+-   **ffe-header:** adds MuseoSans font as fallback font ([f217fa7](https://github.com/SpareBank1/designsystem/commit/f217fa7f248b5c9b2722325acf951acc7666632c))
 
 ## [15.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@15.0.0...@sb1/ffe-header@15.0.1) (2021-03-25)
 
 **Note:** Version bump only for package @sb1/ffe-header
 
-
-
-
-
 # [15.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@14.0.8...@sb1/ffe-header@15.0.0) (2021-03-17)
-
 
 ### Bug Fixes
 
-* **ffe-header:** bytter ut museo sans med ny sparebank1-font ([bc71779](https://github.com/SpareBank1/designsystem/commit/bc717799a537d94b0870b5117274b440737531b9))
-
+-   **ffe-header:** bytter ut museo sans med ny sparebank1-font ([bc71779](https://github.com/SpareBank1/designsystem/commit/bc717799a537d94b0870b5117274b440737531b9))
 
 ### BREAKING CHANGES
 
-* **ffe-header:** ny font i alt innhold
-
-
-
-
+-   **ffe-header:** ny font i alt innhold
 
 ## [14.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@14.0.7...@sb1/ffe-header@14.0.8) (2021-03-15)
 
-
 ### Bug Fixes
 
-* **ffe-header:** broadens version of peer dependencies ([5afcf8b](https://github.com/SpareBank1/designsystem/commit/5afcf8be76bd2867b1b43052bc50b19d4d3dbf69))
-
-
-
-
+-   **ffe-header:** broadens version of peer dependencies ([5afcf8b](https://github.com/SpareBank1/designsystem/commit/5afcf8be76bd2867b1b43052bc50b19d4d3dbf69))
 
 ## [14.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@14.0.6...@sb1/ffe-header@14.0.7) (2021-03-08)
 
 **Note:** Version bump only for package @sb1/ffe-header
 
-
-
-
-
 ## [14.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@14.0.5...@sb1/ffe-header@14.0.6) (2021-02-22)
 
 **Note:** Version bump only for package @sb1/ffe-header
-
-
-
-
 
 ## [14.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@14.0.4...@sb1/ffe-header@14.0.5) (2021-02-19)
 
 **Note:** Version bump only for package @sb1/ffe-header
 
-
-
-
-
 ## [14.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@14.0.3...@sb1/ffe-header@14.0.4) (2021-02-03)
 
 **Note:** Version bump only for package @sb1/ffe-header
 
-
-
-
-
 ## [14.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@14.0.2...@sb1/ffe-header@14.0.3) (2021-02-02)
-
 
 ### Bug Fixes
 
-* **ffe-header:** reduce vulnerabilities ([041d79f](https://github.com/SpareBank1/designsystem/commit/041d79f3fd30f9a9a62ff409b392e59094e9c8cc))
-
-
-
-
+-   **ffe-header:** reduce vulnerabilities ([041d79f](https://github.com/SpareBank1/designsystem/commit/041d79f3fd30f9a9a62ff409b392e59094e9c8cc))
 
 ## [14.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@14.0.1...@sb1/ffe-header@14.0.2) (2021-02-02)
 
-
 ### Bug Fixes
 
-* **ffe-header:** revert downgrade of less ([cead6ef](https://github.com/SpareBank1/designsystem/commit/cead6ef67a6659a26b9ed7ab2e03ec3520da4258))
-
-
-
-
+-   **ffe-header:** revert downgrade of less ([cead6ef](https://github.com/SpareBank1/designsystem/commit/cead6ef67a6659a26b9ed7ab2e03ec3520da4258))
 
 ## [14.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@14.0.0...@sb1/ffe-header@14.0.1) (2021-01-20)
 
-
 ### Bug Fixes
 
-* **ffe-header:** revert upgrade of less ([841fc2a](https://github.com/SpareBank1/designsystem/commit/841fc2ae1171d6e5898bb64e1aabfd9aabbdc77b))
-
-
-
-
+-   **ffe-header:** revert upgrade of less ([841fc2a](https://github.com/SpareBank1/designsystem/commit/841fc2ae1171d6e5898bb64e1aabfd9aabbdc77b))
 
 # [14.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@13.0.1...@sb1/ffe-header@14.0.0) (2021-01-11)
 
-
 ### chore
 
-* **ffe-header:** bump less ([5ba1d3d](https://github.com/SpareBank1/designsystem/commit/5ba1d3d65e992dfb2bf2551a1602e97dc5214185))
-
+-   **ffe-header:** bump less ([5ba1d3d](https://github.com/SpareBank1/designsystem/commit/5ba1d3d65e992dfb2bf2551a1602e97dc5214185))
 
 ### BREAKING CHANGES
 
-* **ffe-header:** Requires less ^4.0.0
-
-
-
-
+-   **ffe-header:** Requires less ^4.0.0
 
 ## [13.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@13.0.0...@sb1/ffe-header@13.0.1) (2020-12-03)
 
 **Note:** Version bump only for package @sb1/ffe-header
 
-
-
-
-
 # [13.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@12.0.11...@sb1/ffe-header@13.0.0) (2020-11-20)
-
 
 ### Bug Fixes
 
-* **ffe-header:** change text values to rem ([76ed245](https://github.com/SpareBank1/designsystem/commit/76ed2455569f27306996683d6d69fd123d49c40c))
-
+-   **ffe-header:** change text values to rem ([76ed245](https://github.com/SpareBank1/designsystem/commit/76ed2455569f27306996683d6d69fd123d49c40c))
 
 ### BREAKING CHANGES
 
-* **ffe-header:** This fix changes all font-size and line-height values from px to rem,
-this is to solve an issue with zooming in iOS.
-
-
-
-
+-   **ffe-header:** This fix changes all font-size and line-height values from px to rem,
+    this is to solve an issue with zooming in iOS.
 
 ## [12.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@12.0.10...@sb1/ffe-header@12.0.11) (2020-11-05)
 
 **Note:** Version bump only for package @sb1/ffe-header
 
-
-
-
-
 ## [12.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@12.0.9...@sb1/ffe-header@12.0.10) (2020-08-25)
 
 **Note:** Version bump only for package @sb1/ffe-header
-
-
-
-
 
 ## [12.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@12.0.8...@sb1/ffe-header@12.0.9) (2020-03-18)
 

@@ -3,146 +3,91 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [5.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@5.0.2...@sb1/ffe-core-react@5.0.3) (2022-09-28)
-
+# [6.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@5.0.3...@sb1/ffe-core-react@6.0.0) (2022-10-18)
 
 ### Bug Fixes
 
-* **ffe-core-react:** gjør darkmodeColor og children optional ([7881d8e](https://github.com/SpareBank1/designsystem/commit/7881d8e04645c50ee3dee07328ccad454155670a))
+-   **ffe-core-react:** fjern waveHeight og legger til bgColor og bgDarkmodeColor props ([00706cf](https://github.com/SpareBank1/designsystem/commit/00706cf947a99d1aad98eee8e72a8336365e83a1))
 
+### BREAKING CHANGES
 
+-   **ffe-core-react:** fjerner waveHeight prop
 
+## [5.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@5.0.2...@sb1/ffe-core-react@5.0.3) (2022-09-28)
 
+### Bug Fixes
+
+-   **ffe-core-react:** gjør darkmodeColor og children optional ([7881d8e](https://github.com/SpareBank1/designsystem/commit/7881d8e04645c50ee3dee07328ccad454155670a))
 
 ## [5.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@5.0.1...@sb1/ffe-core-react@5.0.2) (2022-09-09)
 
 **Note:** Version bump only for package @sb1/ffe-core-react
 
-
-
-
-
 ## [5.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@5.0.0...@sb1/ffe-core-react@5.0.1) (2022-09-01)
-
 
 ### Bug Fixes
 
-* correct type for prop in Wave, closes [#1436](https://github.com/SpareBank1/designsystem/issues/1436) ([4c9486f](https://github.com/SpareBank1/designsystem/commit/4c9486f37db1b7099aa5b286c44254d8ee43ab9b))
-
-
-
-
+-   correct type for prop in Wave, closes [#1436](https://github.com/SpareBank1/designsystem/issues/1436) ([4c9486f](https://github.com/SpareBank1/designsystem/commit/4c9486f37db1b7099aa5b286c44254d8ee43ab9b))
 
 # [5.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@4.3.0...@sb1/ffe-core-react@5.0.0) (2022-08-31)
 
-
 ### Bug Fixes
 
-* **ffe-core-react:** restrukturering for å fikse plasseringsissue og endre propnavn ([7417320](https://github.com/SpareBank1/designsystem/commit/74173207bc5c9df9888de3b9f56a2294d57567d7))
-
+-   **ffe-core-react:** restrukturering for å fikse plasseringsissue og endre propnavn ([7417320](https://github.com/SpareBank1/designsystem/commit/74173207bc5c9df9888de3b9f56a2294d57567d7))
 
 ### BREAKING CHANGES
 
-* **ffe-core-react:** endrer propnavn fra rotate til flip
-
-
-
-
+-   **ffe-core-react:** endrer propnavn fra rotate til flip
 
 # [4.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@4.2.11...@sb1/ffe-core-react@4.3.0) (2022-08-08)
 
-
 ### Features
 
-* **ffe-core-react:** add wave component ([647156a](https://github.com/SpareBank1/designsystem/commit/647156aa0d546e4fbaa33395a3dcb9ec51a4c084))
-
-
-
-
+-   **ffe-core-react:** add wave component ([647156a](https://github.com/SpareBank1/designsystem/commit/647156aa0d546e4fbaa33395a3dcb9ec51a4c084))
 
 ## [4.2.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@4.2.10...@sb1/ffe-core-react@4.2.11) (2022-02-18)
 
 **Note:** Version bump only for package @sb1/ffe-core-react
 
-
-
-
-
 ## [4.2.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@4.2.9...@sb1/ffe-core-react@4.2.10) (2022-01-27)
 
 **Note:** Version bump only for package @sb1/ffe-core-react
-
-
-
-
 
 ## [4.2.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@4.2.8...@sb1/ffe-core-react@4.2.9) (2022-01-27)
 
 **Note:** Version bump only for package @sb1/ffe-core-react
 
-
-
-
-
 ## [4.2.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@4.2.7...@sb1/ffe-core-react@4.2.8) (2022-01-25)
 
 **Note:** Version bump only for package @sb1/ffe-core-react
-
-
-
-
 
 ## [4.2.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@4.2.6...@sb1/ffe-core-react@4.2.7) (2021-12-17)
 
 **Note:** Version bump only for package @sb1/ffe-core-react
 
-
-
-
-
 ## [4.2.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@4.2.5...@sb1/ffe-core-react@4.2.6) (2021-12-10)
-
 
 ### Bug Fixes
 
-* **ffe-core-react:** use buildtool for transpiling ([71b8776](https://github.com/SpareBank1/designsystem/commit/71b87768d6918612efedf9b9ac17f27bd59af514)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
-
-
-
-
+-   **ffe-core-react:** use buildtool for transpiling ([71b8776](https://github.com/SpareBank1/designsystem/commit/71b87768d6918612efedf9b9ac17f27bd59af514)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
 
 ## [4.2.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@4.2.4...@sb1/ffe-core-react@4.2.5) (2021-03-15)
 
-
 ### Bug Fixes
 
-* **ffe-core-react:** broadens version of peer dependencies ([cec30c6](https://github.com/SpareBank1/designsystem/commit/cec30c69822ca8d6566e34d7493cd383809d3e67))
-
-
-
-
+-   **ffe-core-react:** broadens version of peer dependencies ([cec30c6](https://github.com/SpareBank1/designsystem/commit/cec30c69822ca8d6566e34d7493cd383809d3e67))
 
 ## [4.2.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@4.2.3...@sb1/ffe-core-react@4.2.4) (2021-02-03)
 
-
 ### Bug Fixes
 
-* packages/ffe-core-react/package.json to reduce vulnerabilities ([94d6ae8](https://github.com/SpareBank1/designsystem/commit/94d6ae8a259fd148247fac23687c65510b2bfdb4))
-
-
-
-
+-   packages/ffe-core-react/package.json to reduce vulnerabilities ([94d6ae8](https://github.com/SpareBank1/designsystem/commit/94d6ae8a259fd148247fac23687c65510b2bfdb4))
 
 ## [4.2.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@4.2.2...@sb1/ffe-core-react@4.2.3) (2021-02-02)
 
-
 ### Bug Fixes
 
-* **ffe-core-react:** reduce vulnerabilities ([add5cba](https://github.com/SpareBank1/designsystem/commit/add5cbaabf058aea4faa0f54f0654d2a3bae5a5e))
-
-
-
-
+-   **ffe-core-react:** reduce vulnerabilities ([add5cba](https://github.com/SpareBank1/designsystem/commit/add5cbaabf058aea4faa0f54f0654d2a3bae5a5e))
 
 ## [4.2.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@4.2.1...@sb1/ffe-core-react@4.2.2) (2019-10-16)
 

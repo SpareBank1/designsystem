@@ -3,488 +3,274 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [15.1.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@15.1.5...@sb1/ffe-buttons@15.1.6) (2022-10-04)
+## [15.1.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@15.1.6...@sb1/ffe-buttons@15.1.7) (2022-10-18)
 
 **Note:** Version bump only for package @sb1/ffe-buttons
 
+## [15.1.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@15.1.5...@sb1/ffe-buttons@15.1.6) (2022-10-04)
 
-
-
+**Note:** Version bump only for package @sb1/ffe-buttons
 
 ## [15.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@15.1.4...@sb1/ffe-buttons@15.1.5) (2022-09-28)
 
 **Note:** Version bump only for package @sb1/ffe-buttons
 
-
-
-
-
 ## [15.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@15.1.3...@sb1/ffe-buttons@15.1.4) (2022-09-12)
-
 
 ### Bug Fixes
 
-* **ffe-buttons:** fikser fargefeil i expandbutton dark mode ([bbdfa8f](https://github.com/SpareBank1/designsystem/commit/bbdfa8fe4cbe79627a2bf6e83279fc1b5b06c96b)), closes [#1441](https://github.com/SpareBank1/designsystem/issues/1441)
-
-
-
-
+-   **ffe-buttons:** fikser fargefeil i expandbutton dark mode ([bbdfa8f](https://github.com/SpareBank1/designsystem/commit/bbdfa8fe4cbe79627a2bf6e83279fc1b5b06c96b)), closes [#1441](https://github.com/SpareBank1/designsystem/issues/1441)
 
 ## [15.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@15.1.2...@sb1/ffe-buttons@15.1.3) (2022-08-31)
 
 **Note:** Version bump only for package @sb1/ffe-buttons
 
-
-
-
-
 ## [15.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@15.1.1...@sb1/ffe-buttons@15.1.2) (2022-08-08)
 
 **Note:** Version bump only for package @sb1/ffe-buttons
-
-
-
-
 
 ## [15.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@15.1.0...@sb1/ffe-buttons@15.1.1) (2022-08-05)
 
 **Note:** Version bump only for package @sb1/ffe-buttons
 
-
-
-
-
 # [15.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@15.0.5...@sb1/ffe-buttons@15.1.0) (2022-07-11)
-
 
 ### Features
 
-* **ffe-buttons:** legge til spacing mellom ikon og label på knapper ([3fb4c4e](https://github.com/SpareBank1/designsystem/commit/3fb4c4ee94fe24aad19fe0c1380642f3b5015d7f))
-
-
-
-
+-   **ffe-buttons:** legge til spacing mellom ikon og label på knapper ([3fb4c4e](https://github.com/SpareBank1/designsystem/commit/3fb4c4ee94fe24aad19fe0c1380642f3b5015d7f))
 
 ## [15.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@15.0.4...@sb1/ffe-buttons@15.0.5) (2022-06-07)
 
 **Note:** Version bump only for package @sb1/ffe-buttons
 
-
-
-
-
 ## [15.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@15.0.3...@sb1/ffe-buttons@15.0.4) (2022-05-30)
 
 **Note:** Version bump only for package @sb1/ffe-buttons
-
-
-
-
 
 ## [15.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@15.0.2...@sb1/ffe-buttons@15.0.3) (2022-05-19)
 
 **Note:** Version bump only for package @sb1/ffe-buttons
 
-
-
-
-
 ## [15.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@15.0.1...@sb1/ffe-buttons@15.0.2) (2022-03-31)
 
 **Note:** Version bump only for package @sb1/ffe-buttons
-
-
-
-
 
 ## [15.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@15.0.0...@sb1/ffe-buttons@15.0.1) (2022-03-21)
 
 **Note:** Version bump only for package @sb1/ffe-buttons
 
-
-
-
-
 # [15.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@14.0.1...@sb1/ffe-buttons@15.0.0) (2022-03-11)
-
 
 ### Features
 
-* **ffe-buttons:** remove condensed variant of buttons ([c49b318](https://github.com/SpareBank1/designsystem/commit/c49b3183cf26ca82d5b7e5d60e40c7115c5c93fd)), closes [#1251](https://github.com/SpareBank1/designsystem/issues/1251)
-
+-   **ffe-buttons:** remove condensed variant of buttons ([c49b318](https://github.com/SpareBank1/designsystem/commit/c49b3183cf26ca82d5b7e5d60e40c7115c5c93fd)), closes [#1251](https://github.com/SpareBank1/designsystem/issues/1251)
 
 ### BREAKING CHANGES
 
-* **ffe-buttons:** remove condensed variant of buttons, i.e. all
-ffe-butons classes with the modifier `--condensed`.
-
-
-
-
+-   **ffe-buttons:** remove condensed variant of buttons, i.e. all
+    ffe-butons classes with the modifier `--condensed`.
 
 ## [14.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@14.0.0...@sb1/ffe-buttons@14.0.1) (2022-03-09)
 
 **Note:** Version bump only for package @sb1/ffe-buttons
 
-
-
-
-
 # [14.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@13.0.18...@sb1/ffe-buttons@14.0.0) (2022-03-08)
-
 
 ### Bug Fixes
 
-* **ffe-buttons:** fjerner --ghost ([5741673](https://github.com/SpareBank1/designsystem/commit/5741673c03df1c5bdda5a33b91fa1297f4fc8c15))
-
+-   **ffe-buttons:** fjerner --ghost ([5741673](https://github.com/SpareBank1/designsystem/commit/5741673c03df1c5bdda5a33b91fa1297f4fc8c15))
 
 ### BREAKING CHANGES
 
-* **ffe-buttons:** modifieren --ghost slettes
-
-
-
-
+-   **ffe-buttons:** modifieren --ghost slettes
 
 ## [13.0.18](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@13.0.17...@sb1/ffe-buttons@13.0.18) (2022-02-28)
 
-
 ### Bug Fixes
 
-* **ffe-buttons:** bytt ut vann-30-hover farge ([df4ae16](https://github.com/SpareBank1/designsystem/commit/df4ae16f82a25dbe046ba5cca3fba050d3ab9fa1))
-
-
-
-
+-   **ffe-buttons:** bytt ut vann-30-hover farge ([df4ae16](https://github.com/SpareBank1/designsystem/commit/df4ae16f82a25dbe046ba5cca3fba050d3ab9fa1))
 
 ## [13.0.17](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@13.0.16...@sb1/ffe-buttons@13.0.17) (2021-12-14)
 
-
 ### Bug Fixes
 
-* **ffe-buttons:** mindre padding på sidene ([9b9ec2c](https://github.com/SpareBank1/designsystem/commit/9b9ec2c87bbaab42081c99cc6e345148dd2165bb))
-
-
-
-
+-   **ffe-buttons:** mindre padding på sidene ([9b9ec2c](https://github.com/SpareBank1/designsystem/commit/9b9ec2c87bbaab42081c99cc6e345148dd2165bb))
 
 ## [13.0.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@13.0.15...@sb1/ffe-buttons@13.0.16) (2021-11-30)
 
 **Note:** Version bump only for package @sb1/ffe-buttons
 
-
-
-
-
 ## [13.0.15](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@13.0.14...@sb1/ffe-buttons@13.0.15) (2021-11-25)
-
 
 ### Bug Fixes
 
-* **ffe-buttons:** skjuler label når knapper har spinner ([d8ebfd7](https://github.com/SpareBank1/designsystem/commit/d8ebfd79238918a3d5a52cd4e5228fd8ec9b2da0))
-
-
-
-
+-   **ffe-buttons:** skjuler label når knapper har spinner ([d8ebfd7](https://github.com/SpareBank1/designsystem/commit/d8ebfd79238918a3d5a52cd4e5228fd8ec9b2da0))
 
 ## [13.0.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@13.0.13...@sb1/ffe-buttons@13.0.14) (2021-11-19)
 
 **Note:** Version bump only for package @sb1/ffe-buttons
 
-
-
-
-
 ## [13.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@13.0.12...@sb1/ffe-buttons@13.0.13) (2021-11-19)
-
 
 ### Bug Fixes
 
-* **ffe-buttons:** litt mindre padding på mobil ([55c185f](https://github.com/SpareBank1/designsystem/commit/55c185fdd0a4cb5b2654039c6a551707a311ade2))
-
-
-
-
+-   **ffe-buttons:** litt mindre padding på mobil ([55c185f](https://github.com/SpareBank1/designsystem/commit/55c185fdd0a4cb5b2654039c6a551707a311ade2))
 
 ## [13.0.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@13.0.11...@sb1/ffe-buttons@13.0.12) (2021-11-11)
 
-
 ### Bug Fixes
 
-* **ffe-buttons:** øker max border-radius ([074e50e](https://github.com/SpareBank1/designsystem/commit/074e50e7177476e1e7155fef65b9ef791b9ed248))
-
-
-
-
+-   **ffe-buttons:** øker max border-radius ([074e50e](https://github.com/SpareBank1/designsystem/commit/074e50e7177476e1e7155fef65b9ef791b9ed248))
 
 ## [13.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@13.0.10...@sb1/ffe-buttons@13.0.11) (2021-11-04)
 
 **Note:** Version bump only for package @sb1/ffe-buttons
 
-
-
-
-
 ## [13.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@13.0.9...@sb1/ffe-buttons@13.0.10) (2021-11-01)
 
 **Note:** Version bump only for package @sb1/ffe-buttons
-
-
-
-
 
 ## [13.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@13.0.8...@sb1/ffe-buttons@13.0.9) (2021-11-01)
 
 **Note:** Version bump only for package @sb1/ffe-buttons
 
-
-
-
-
 ## [13.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@13.0.7...@sb1/ffe-buttons@13.0.8) (2021-10-29)
 
 **Note:** Version bump only for package @sb1/ffe-buttons
 
-
-
-
-
 ## [13.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@13.0.6...@sb1/ffe-buttons@13.0.7) (2021-10-20)
-
 
 ### Bug Fixes
 
-* **ffe-buttons:** fjerner fokus-markering fra active state ([6401b81](https://github.com/SpareBank1/designsystem/commit/6401b814e44b6c45b4d8193902bad7015af7a25c))
-
-
-
-
+-   **ffe-buttons:** fjerner fokus-markering fra active state ([6401b81](https://github.com/SpareBank1/designsystem/commit/6401b814e44b6c45b4d8193902bad7015af7a25c))
 
 ## [13.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@13.0.5...@sb1/ffe-buttons@13.0.6) (2021-10-08)
 
 **Note:** Version bump only for package @sb1/ffe-buttons
 
-
-
-
-
 ## [13.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@13.0.4...@sb1/ffe-buttons@13.0.5) (2021-10-06)
 
 **Note:** Version bump only for package @sb1/ffe-buttons
 
-
-
-
-
 ## [13.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@13.0.3...@sb1/ffe-buttons@13.0.4) (2021-10-05)
-
 
 ### Bug Fixes
 
-* **ffe-buttons:** Endre bakgrunnsfarge på secondary button i darkmode ([33f830e](https://github.com/SpareBank1/designsystem/commit/33f830e57f1087f6c3e5bf4d8a2f156aef9f1c3a))
-
-
-
-
+-   **ffe-buttons:** Endre bakgrunnsfarge på secondary button i darkmode ([33f830e](https://github.com/SpareBank1/designsystem/commit/33f830e57f1087f6c3e5bf4d8a2f156aef9f1c3a))
 
 ## [13.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@13.0.2...@sb1/ffe-buttons@13.0.3) (2021-09-24)
 
 **Note:** Version bump only for package @sb1/ffe-buttons
 
-
-
-
-
 ## [13.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@13.0.1...@sb1/ffe-buttons@13.0.2) (2021-09-17)
 
 **Note:** Version bump only for package @sb1/ffe-buttons
-
-
-
-
 
 ## [13.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@13.0.0...@sb1/ffe-buttons@13.0.1) (2021-09-10)
 
 **Note:** Version bump only for package @sb1/ffe-buttons
 
-
-
-
-
 # [13.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@11.1.1...@sb1/ffe-buttons@13.0.0) (2021-09-06)
-
 
 ### Bug Fixes
 
-* **ffe-buttons:** fjerner duplikat av css-klasse ([def6617](https://github.com/SpareBank1/designsystem/commit/def6617a54970472d63853e5caff5f828c252e9b))
-* **ffe-buttons:** focus-outline skal kun vises på keyboard-fokus - ikke active-state ([da01361](https://github.com/SpareBank1/designsystem/commit/da01361dc339b8f7bacf8dd7cb4076c683b95546))
-* **ffe-buttons:** retter opp i farge på inline-button hover ([dc284f2](https://github.com/SpareBank1/designsystem/commit/dc284f2dc3ac5cc652811d01897540d565f04d55))
-
+-   **ffe-buttons:** fjerner duplikat av css-klasse ([def6617](https://github.com/SpareBank1/designsystem/commit/def6617a54970472d63853e5caff5f828c252e9b))
+-   **ffe-buttons:** focus-outline skal kun vises på keyboard-fokus - ikke active-state ([da01361](https://github.com/SpareBank1/designsystem/commit/da01361dc339b8f7bacf8dd7cb4076c683b95546))
+-   **ffe-buttons:** retter opp i farge på inline-button hover ([dc284f2](https://github.com/SpareBank1/designsystem/commit/dc284f2dc3ac5cc652811d01897540d565f04d55))
 
 ### Features
 
-* **ffe-buttons:** justert design på knapper iht ny identitet ([dca0ef0](https://github.com/SpareBank1/designsystem/commit/dca0ef02b7386f9b906c1f56420e93fcd59581ee))
-
+-   **ffe-buttons:** justert design på knapper iht ny identitet ([dca0ef0](https://github.com/SpareBank1/designsystem/commit/dca0ef02b7386f9b906c1f56420e93fcd59581ee))
 
 ### BREAKING CHANGES
 
-* **ffe-buttons:** alle knapper har nye farger og ny utforming
-
-
-
-
+-   **ffe-buttons:** alle knapper har nye farger og ny utforming
 
 # [12.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@11.1.1...@sb1/ffe-buttons@12.0.0) (2021-09-06)
 
-
 ### Bug Fixes
 
-* **ffe-buttons:** fjerner duplikat av css-klasse ([def6617](https://github.com/SpareBank1/designsystem/commit/def6617a54970472d63853e5caff5f828c252e9b))
-* **ffe-buttons:** focus-outline skal kun vises på keyboard-fokus - ikke active-state ([da01361](https://github.com/SpareBank1/designsystem/commit/da01361dc339b8f7bacf8dd7cb4076c683b95546))
-* **ffe-buttons:** retter opp i farge på inline-button hover ([dc284f2](https://github.com/SpareBank1/designsystem/commit/dc284f2dc3ac5cc652811d01897540d565f04d55))
-
+-   **ffe-buttons:** fjerner duplikat av css-klasse ([def6617](https://github.com/SpareBank1/designsystem/commit/def6617a54970472d63853e5caff5f828c252e9b))
+-   **ffe-buttons:** focus-outline skal kun vises på keyboard-fokus - ikke active-state ([da01361](https://github.com/SpareBank1/designsystem/commit/da01361dc339b8f7bacf8dd7cb4076c683b95546))
+-   **ffe-buttons:** retter opp i farge på inline-button hover ([dc284f2](https://github.com/SpareBank1/designsystem/commit/dc284f2dc3ac5cc652811d01897540d565f04d55))
 
 ### Features
 
-* **ffe-buttons:** justert design på knapper iht ny identitet ([dca0ef0](https://github.com/SpareBank1/designsystem/commit/dca0ef02b7386f9b906c1f56420e93fcd59581ee))
-
+-   **ffe-buttons:** justert design på knapper iht ny identitet ([dca0ef0](https://github.com/SpareBank1/designsystem/commit/dca0ef02b7386f9b906c1f56420e93fcd59581ee))
 
 ### BREAKING CHANGES
 
-* **ffe-buttons:** alle knapper har nye farger og ny utforming
-
-
-
-
+-   **ffe-buttons:** alle knapper har nye farger og ny utforming
 
 ## [11.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@11.1.0...@sb1/ffe-buttons@11.1.1) (2021-06-17)
 
 **Note:** Version bump only for package @sb1/ffe-buttons
 
-
-
-
-
 # [11.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@11.0.1...@sb1/ffe-buttons@11.1.0) (2021-04-14)
-
 
 ### Features
 
-* **ffe-buttons:** adds MuseoSans font as fallback font ([b7e5e42](https://github.com/SpareBank1/designsystem/commit/b7e5e429657542ed7c21987d2a4a4c91acf831ae))
-
-
-
-
+-   **ffe-buttons:** adds MuseoSans font as fallback font ([b7e5e42](https://github.com/SpareBank1/designsystem/commit/b7e5e429657542ed7c21987d2a4a4c91acf831ae))
 
 ## [11.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@11.0.0...@sb1/ffe-buttons@11.0.1) (2021-03-25)
 
 **Note:** Version bump only for package @sb1/ffe-buttons
 
-
-
-
-
 # [11.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@10.0.4...@sb1/ffe-buttons@11.0.0) (2021-03-17)
-
 
 ### Bug Fixes
 
-* **ffe-buttons:** bytter ut museo sans med ny sparebank1-font ([81dc093](https://github.com/SpareBank1/designsystem/commit/81dc093d0e3dcbcbe62ef214474891f004ebe210))
-
+-   **ffe-buttons:** bytter ut museo sans med ny sparebank1-font ([81dc093](https://github.com/SpareBank1/designsystem/commit/81dc093d0e3dcbcbe62ef214474891f004ebe210))
 
 ### BREAKING CHANGES
 
-* **ffe-buttons:** ny font i alt innhold
-
-
-
-
+-   **ffe-buttons:** ny font i alt innhold
 
 ## [10.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@10.0.3...@sb1/ffe-buttons@10.0.4) (2021-03-15)
 
-
 ### Bug Fixes
 
-* **ffe-buttons:** broadens version of peer dependencies ([690d023](https://github.com/SpareBank1/designsystem/commit/690d02365de8e4541a96a2ebf8087fceebf5b7c0))
-
-
-
-
+-   **ffe-buttons:** broadens version of peer dependencies ([690d023](https://github.com/SpareBank1/designsystem/commit/690d02365de8e4541a96a2ebf8087fceebf5b7c0))
 
 ## [10.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@10.0.2...@sb1/ffe-buttons@10.0.3) (2021-03-08)
 
 **Note:** Version bump only for package @sb1/ffe-buttons
 
-
-
-
-
 ## [10.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@10.0.1...@sb1/ffe-buttons@10.0.2) (2021-02-03)
 
 **Note:** Version bump only for package @sb1/ffe-buttons
 
-
-
-
-
 ## [10.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@10.0.0...@sb1/ffe-buttons@10.0.1) (2021-02-02)
-
 
 ### Bug Fixes
 
-* **ffe-buttons:** reduce vulnerabilities ([d6319c4](https://github.com/SpareBank1/designsystem/commit/d6319c4deb31c72c2a326c38d505b5a4a82fbc97))
-
-
-
-
+-   **ffe-buttons:** reduce vulnerabilities ([d6319c4](https://github.com/SpareBank1/designsystem/commit/d6319c4deb31c72c2a326c38d505b5a4a82fbc97))
 
 # [10.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@9.0.13...@sb1/ffe-buttons@10.0.0) (2021-01-11)
 
-
 ### chore
 
-* **ffe-buttons:** bump less ([2c65bec](https://github.com/SpareBank1/designsystem/commit/2c65bec7693b3b443fe91a46287d4b710a9aa029))
-
+-   **ffe-buttons:** bump less ([2c65bec](https://github.com/SpareBank1/designsystem/commit/2c65bec7693b3b443fe91a46287d4b710a9aa029))
 
 ### BREAKING CHANGES
 
-* **ffe-buttons:** Requires less ^4.0.0. Fixes deprecated mixin syntax
-
-
-
-
+-   **ffe-buttons:** Requires less ^4.0.0. Fixes deprecated mixin syntax
 
 ## [9.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@9.0.12...@sb1/ffe-buttons@9.0.13) (2020-12-03)
 
 **Note:** Version bump only for package @sb1/ffe-buttons
 
-
-
-
-
 ## [9.0.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@9.0.11...@sb1/ffe-buttons@9.0.12) (2020-11-20)
 
 **Note:** Version bump only for package @sb1/ffe-buttons
-
-
-
-
 
 ## [9.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@9.0.10...@sb1/ffe-buttons@9.0.11) (2020-11-05)
 
 **Note:** Version bump only for package @sb1/ffe-buttons
 
-
-
-
-
 ## [9.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@9.0.9...@sb1/ffe-buttons@9.0.10) (2020-08-25)
 
 **Note:** Version bump only for package @sb1/ffe-buttons
-
-
-
-
 
 ## [9.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@9.0.8...@sb1/ffe-buttons@9.0.9) (2020-03-18)
 
