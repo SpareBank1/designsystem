@@ -96,15 +96,17 @@ Text inside a grid column can be centered using the `.ffe-grid__col--center-text
 
 ### Background colors
 
-The background color of rows can be changed using modifiers
+The background color of rows can be changed using modifiers. This requires that the children of `.ffe-grid__row` are wrapped in `.ffe-grid__row-wrapper`.
 
 ```html
 <div class="ffe-grid__row ffe-grid__row--bg-sand">
-    <div class="ffe-grid__col--md-6">
-        <!-- content -->
-    </div>
-    <div class="ffe-grid__col--md-6">
-        <!-- content -->
+    <div class="ffe-grid__row-wrapper">
+        <div class="ffe-grid__col--md-6">
+            <!-- content -->
+        </div>
+        <div class="ffe-grid__col--md-6">
+            <!-- content -->
+        </div>
     </div>
 </div>
 ```
