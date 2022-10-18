@@ -13,8 +13,14 @@ export default function GridRow({
     margin,
     ...rest
 }) {
+    let content = children;
+
     const hasBackgroundColor = backgroundColors.includes(background);
     const hasRemovedColor = removedColors.includes(background);
+
+    if (hasBackgroundColor) {
+        content = <div className="ffe-grid__row-wrapper">{children}</div>;
+    }
 
     if (hasRemovedColor) {
         throw new Error(
@@ -35,7 +41,7 @@ export default function GridRow({
             )}
             {...rest}
         >
-            {children}
+            {content}
         </Element>
     );
 }

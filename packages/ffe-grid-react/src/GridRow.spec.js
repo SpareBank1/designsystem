@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { GridRow } from '.';
+import { GridRow, GridCol } from '.';
 import backgroundColors from './background-colors';
 
 const defaultProps = {
@@ -50,6 +50,20 @@ describe('GridRow', () => {
         expect(() => renderShallow({ background: 'blue-cobalt' })).toThrow(
             'Support for the blue-cobalt background on <GridRow> has been removed, please see the CHANGELOG',
         );
+    });
+
+    it('renders coloured rows with extra wrappers', () => {
+        backgroundColors.forEach(background => {
+            const el = renderShallow({
+                background,
+                children: (
+                    <GridCol lg={12}>
+                        <p>blah</p>
+                    </GridCol>
+                ),
+            });
+            expect(el.childAt(0).hasClass('ffe-grid__row-wrapper')).toBe(true);
+        });
     });
 
     it('preserves other attributes that are passed to it', () => {
