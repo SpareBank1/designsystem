@@ -7,7 +7,7 @@ import { Grid, GridRow, GridCol } from '@sb1/ffe-grid-react';
             <GridCol sm="6">Litt innhold til høyre</GridCol>
         </GridRow>
     </Grid>
-    <Wave waveHeight='small' color='vann-30' darkmodeColor='natt'>
+    <Wave color='vann-30' darkmodeColor='natt'>
         <Grid>
             <GridRow>
                 <GridCol sm={{ cols: 5, offset: 2 }}>Litt innhold</GridCol>

@@ -48,7 +48,6 @@ export interface ParagraphProps
 }
 
 export interface WaveProps {
-    waveHeight: 'small' | 'medium' | 'large';
     position?: string;
     flip?: boolean;
     color:
@@ -61,7 +60,18 @@ export interface WaveProps {
         | 'vann'
         | 'vann-30'
         | 'fjell';
+    bgColor?:
+        | 'hvit'
+        | 'frost-30'
+        | 'sand-30'
+        | 'sand-70'
+        | 'syrin-30'
+        | 'syrin-70'
+        | 'vann'
+        | 'vann-30'
+        | 'fjell';
     darkmodeColor?: 'svart' | 'natt';
+    bgDarkmodeColor?: 'svart' | 'natt';
     children?: React.ReactNode;
 }
 
