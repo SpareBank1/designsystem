@@ -1,19 +1,27 @@
 import React from 'react';
 import { bool, node, string } from 'prop-types';
 import classNames from 'classnames';
+import { HakeIkon, KryssIkon } from '@sb1/ffe-icons-react';
 
 const CheckListItem = props => {
     const { className, isCross, ...rest } = props;
     return (
-        <li
-            className={classNames(
-                'ffe-check-list__item',
-                { 'ffe-check-list__item--cross': isCross },
-                className,
+        <li className={classNames('ffe-check-list__item', className)} {...rest}>
+            {isCross ? (
+                <KryssIkon
+                    className="ffe-check-list__icon ffe-check-list__icon--cross"
+                    role="img"
+                    title="kryss"
+                />
+            ) : (
+                <HakeIkon
+                    className="ffe-check-list__icon ffe-check-list__icon--check"
+                    role="img"
+                    title="hake"
+                />
             )}
-            aria-label={isCross ? 'kryss' : 'hake'}
-            {...rest}
-        />
+            {rest.children}
+        </li>
     );
 };
 
