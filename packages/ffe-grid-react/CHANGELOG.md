@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@12.0.1...@sb1/ffe-grid-react@12.0.2) (2022-10-19)
+
+### Bug Fixes
+
+-   **ffe-grid-react:** erstatter let med const for bakgrunnsfarge ([1f3e81e](https://github.com/SpareBank1/designsystem/commit/1f3e81ed64d3c38f1369d00235b1a09c3d47d76f))
+-   **ffe-grid-react:** støtte for bakgrunnsfarge i full bredde ([ee027ba](https://github.com/SpareBank1/designsystem/commit/ee027ba162327a59ea536a4d975e4aad93b73387))
+
 ## [12.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@12.0.0...@sb1/ffe-grid-react@12.0.1) (2022-10-14)
 
 ### Bug Fixes

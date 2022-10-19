@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.3.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@9.3.1...@sb1/ffe-accordion-react@9.3.2) (2022-10-19)
+
+### Bug Fixes
+
+-   **ffe-accordion-react:** replace aria-level on heading with heading-tags ([db5b211](https://github.com/SpareBank1/designsystem/commit/db5b211987f513aa812509ce811a2e642143dcf7))
+
 ## [9.3.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@9.3.0...@sb1/ffe-accordion-react@9.3.1) (2022-10-18)
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react

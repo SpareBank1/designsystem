@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [13.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@13.0.3...@sb1/ffe-grid@13.0.4) (2022-10-19)
+
+### Bug Fixes
+
+-   **ffe-grid:** støtte for bakgrunnsfarge i full bredde ([d5d0747](https://github.com/SpareBank1/designsystem/commit/d5d0747d9f696744f21ba0ef130b148565f293f4))
+
 ## [13.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@13.0.2...@sb1/ffe-grid@13.0.3) (2022-10-18)
 
 **Note:** Version bump only for package @sb1/ffe-grid
