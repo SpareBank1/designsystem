@@ -1,0 +1,160 @@
+/**
+ * These variables are intended to support theming of components. Override any value to create your own look and feel.
+ */
+
+:root {
+    /** Primærpalett */
+    --ffe-farge-fjell: @ffe-farge-fjell;
+    --ffe-farge-fjell-70: @ffe-farge-fjell-70;
+    --ffe-farge-fjell-30: @ffe-farge-fjell-30;
+    --ffe-farge-vann: @ffe-farge-vann;
+    --ffe-farge-vann-70: @ffe-farge-vann-70;
+    --ffe-farge-vann-30: @ffe-farge-vann-30;
+    --ffe-farge-sand: @ffe-farge-sand;
+    --ffe-farge-sand-70: @ffe-farge-sand-70;
+    --ffe-farge-sand-30: @ffe-farge-sand-30;
+    --ffe-farge-frost: @ffe-farge-frost;
+    --ffe-farge-frost-70: @ffe-farge-frost-70;
+    --ffe-farge-frost-30: @ffe-farge-frost-30;
+    --ffe-farge-syrin: @ffe-farge-syrin;
+    --ffe-farge-syrin-70: @ffe-farge-syrin-70;
+    --ffe-farge-syrin-30: @ffe-farge-syrin-30;
+
+    /** Støttefarger */
+    --ffe-farge-myrull: @ffe-farge-myrull;
+    --ffe-farge-myrull-70: @ffe-farge-myrull-70;
+    --ffe-farge-myrull-30: @ffe-farge-myrull-30;
+    --ffe-farge-villblomst: @ffe-farge-villblomst;
+    --ffe-farge-villblomst-70: @ffe-farge-villblomst-70;
+    --ffe-farge-villblomst-30: @ffe-farge-villblomst-30;
+    --ffe-farge-nordlys: @ffe-farge-nordlys;
+    --ffe-farge-nordlys-wcag: @ffe-farge-nordlys-wcag;
+    --ffe-farge-nordlys-70: @ffe-farge-nordlys-70;
+    --ffe-farge-nordlys-30: @ffe-farge-nordlys-30;
+    --ffe-farge-lyng: @ffe-farge-lyng;
+    --ffe-farge-lyng-70: @ffe-farge-lyng-70;
+    --ffe-farge-lyng-30: @ffe-farge-lyng-30;
+    --ffe-farge-baer: @ffe-farge-baer;
+    --ffe-farge-baer-70: @ffe-farge-baer-70;
+    --ffe-farge-baer-30: @ffe-farge-baer-30;
+    --ffe-farge-skog: @ffe-farge-skog;
+    --ffe-farge-skog-70: @ffe-farge-skog-70;
+    --ffe-farge-skog-30: @ffe-farge-skog-30;
+    --ffe-farge-multe: @ffe-farge-multe;
+    --ffe-farge-multe-70: @ffe-farge-multe-70;
+    --ffe-farge-multe-30: @ffe-farge-multe-30;
+    --ffe-farge-sol: @ffe-farge-sol;
+    --ffe-farge-sol-70: @ffe-farge-sol-70;
+    --ffe-farge-sol-30: @ffe-farge-sol-30;
+
+    /** Nøytrale farger */
+    --ffe-farge-natt: @ffe-farge-natt;
+    --ffe-farge-svart: @ffe-farge-svart;
+    --ffe-farge-koksgraa: @ffe-farge-koksgraa;
+    --ffe-farge-moerkgraa: @ffe-farge-moerkgraa;
+    --ffe-farge-graa: @ffe-farge-graa;
+    --ffe-farge-lysgraa: @ffe-farge-lysgraa;
+    --ffe-farge-moerkvarmgraa: @ffe-farge-moerkvarmgraa;
+    --ffe-farge-varmgraa: @ffe-farge-varmgraa;
+    --ffe-farge-lysvarmgraa: @ffe-farge-lysvarmgraa;
+    --ffe-farge-hvit: @ffe-farge-hvit;
+
+    /** Font sizes */
+    --ffe-fontsize-body-text: 1rem;
+    --ffe-fontsize-small-text: 0.875rem;
+    --ffe-fontsize-micro-text: 0.75rem;
+    --ffe-fontsize-lead-paragraph: 1.125rem;
+    --ffe-fontsize-sub-lead-paragraph: 1.063rem;
+    --ffe-fontsize-h1: 1.75rem;
+    --ffe-fontsize-h2: 1.5rem;
+    --ffe-fontsize-h3: 1.25rem;
+    --ffe-fontsize-h4: 1.125rem;
+    --ffe-fontsize-h5: 1.0625rem;
+    --ffe-fontsize-h6: 1rem;
+    --ffe-fontsize-form-input: 1rem;
+    --ffe-fontsize-form-dropdown: 1rem;
+    --ffe-fontsize-button: 1rem;
+
+    @media (min-width: @breakpoint-sm) {
+        --ffe-fontsize-lead-paragraph: 1.5rem;
+        --ffe-fontsize-sub-lead-paragraph: 1.125rem;
+        --ffe-fontsize-h1: 2.5rem;
+        --ffe-fontsize-h2: 2rem;
+        --ffe-fontsize-h3: 1.688rem;
+        --ffe-fontsize-h4: 1.375rem;
+        --ffe-fontsize-h5: 1.125rem;
+    }
+
+    @media (min-width: @breakpoint-md) {
+        --ffe-fontsize-h1: 2.875rem;
+        --ffe-fontsize-h2: 2.25rem;
+        --ffe-fontsize-h3: 1.75rem;
+    }
+
+    /** Theme base colors */
+
+    /* Links, buttons and similar */
+    --ffe-g-primary-color: var(--ffe-farge-vann);
+
+    /* Headings, labels, hover, etc */
+    --ffe-g-secondary-color: var(--ffe-farge-fjell);
+
+    /* Error messages, invalid inputs, etc  */
+    --ffe-g-error-color: var(--ffe-farge-baer);
+
+    /** Theme borders */
+
+    /* Form element borders */
+    --ffe-g-border-color: var(--ffe-farge-varmgraa);
+    --ffe-g-border-radius: 4px;
+
+    /** Fonts */
+
+    /* Default font */
+    --ffe-g-font: 'SpareBank1-regular', 'MuseoSans-500', arial, sans-serif;
+
+    /* h1 - h2 */
+    --ffe-g-font-heading: 'SpareBank1-title-medium', 'MuseoSansRounded-700',
+        arial, sans-serif;
+
+    /* h3 - h6 */
+    --ffe-g-font-heading-small: 'SpareBank1-medium', 'MuseoSansRounded-700',
+        arial, sans-serif;
+
+    /* Bold text */
+    --ffe-g-font-strong: 'SpareBank1-medium', 'MuseoSansRounded-700', arial,
+        sans-serif;
+
+    /* Emphasized text */
+    --ffe-g-font-italic: 'SpareBank1-italic', 'MuseoSans-500', arial, sans-serif;
+
+    /** Typography */
+
+    /* Default body text color */
+    --ffe-g-text-color: var(--ffe-farge-svart);
+
+    /* Lead paragraph */
+    --ffe-g-lead-color: var(--ffe-farge-fjell);
+
+    /* Headings */
+    --ffe-g-heading-color: var(--ffe-farge-fjell);
+
+    /* Links */
+    --ffe-g-link-color: var(--ffe-farge-vann);
+    --ffe-g-link-color-hover: var(--ffe-farge-fjell);
+    --ffe-g-link-color-visited: var(--ffe-farge-lyng);
+
+    @media (prefers-color-scheme: dark) {
+        .native {
+            --ffe-g-primary-color: var(--ffe-farge-vann-70);
+            --ffe-g-secondary-color: var(--ffe-farge-vann-70);
+            --ffe-g-border-color: var(--ffe-farge-graa);
+            --ffe-g-text-color: var(--ffe-farge-lysgraa);
+            --ffe-g-lead-color: var(--ffe-farge-hvit);
+            --ffe-g-heading-color: var(--ffe-farge-vann-70);
+            --ffe-g-link-color: var(--ffe-farge-vann-70);
+            --ffe-g-link-color-hover: var(--ffe-farge-vann-30);
+            --ffe-g-link-color-visited: var(--ffe-farge-lyng-70);
+        }
+    }
+}

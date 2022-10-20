@@ -1,0 +1,47 @@
+:root {
+    /** Buttons */
+
+    /* Common button text color */
+    --ffe-v-button-text-color: var(--ffe-farge-hvit);
+
+    /* Button border radius renders as 50% */
+    --ffe-v-buttons-border-radius: 6em;
+
+    /** Action button */
+    --ffe-v-button-action-color: var(--ffe-farge-nordlys-wcag);
+    --ffe-v-button-action-color-hover: var(--ffe-farge-skog);
+    --ffe-v-button-action-color-text: var(--ffe-farge-hvit);
+
+    /** Primary button */
+    --ffe-v-button-primary-color: var(--ffe-farge-vann);
+    --ffe-v-button-primary-color-hover: var(--ffe-farge-fjell);
+    --ffe-v-button-primary-color-text: var(--ffe-farge-hvit);
+
+    /** Secondary buttons (+ task, back, expand, etc) are inverted */
+    --ffe-v-button-secondary-color: var(--ffe-farge-vann);
+    --ffe-v-button-secondary-color-hover: var(--ffe-farge-fjell);
+    --ffe-v-button-secondary-color-bg: var(--ffe-farge-hvit);
+
+    /** Tertiary button */
+    --ffe-v-button-tertiary-color: var(--ffe-farge-vann);
+    --ffe-v-button-tertiary-color-hover: var(--ffe-farge-fjell);
+    --ffe-v-button-tertiary-color-text: var(--ffe-farge-hvit);
+
+    @media (prefers-color-scheme: dark) {
+        .native {
+            --ffe-v-button-text-color: var(--ffe-farge-svart);
+            --ffe-v-button-action-color: var(--ffe-farge-nordlys);
+            --ffe-v-button-action-color-hover: var(--ffe-farge-nordlys-30);
+            --ffe-v-button-action-color-text: var(--ffe-farge-svart);
+            --ffe-v-button-primary-color: var(--ffe-farge-vann-70);
+            --ffe-v-button-primary-color-hover: var(--ffe-farge-vann-30);
+            --ffe-v-button-primary-color-text: var(--ffe-farge-svart);
+            --ffe-v-button-secondary-color: var(--ffe-farge-vann-70);
+            --ffe-v-button-secondary-color-hover: var(--ffe-farge-vann-30);
+            --ffe-v-button-secondary-color-bg: var(--ffe-farge-svart);
+            --ffe-v-button-tertiary-color: var(--ffe-farge-vann-70);
+            --ffe-v-button-tertiary-color-hover: var(--ffe-farge-vann-30);
+            --ffe-v-button-tertiary-color-text: var(--ffe-farge-svart);
+        }
+    }
+}

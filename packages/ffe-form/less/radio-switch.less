@@ -16,14 +16,14 @@
 .ffe-radio-switch {
     padding: 6px @ffe-spacing-sm 6px @ffe-spacing-2xl;
     position: relative;
-    background-color: @ffe-farge-hvit;
-    border: 2px solid @ffe-farge-varmgraa;
+    background-color: var(--ffe-v-input-bg-color);
+    border: 2px solid var(--ffe-g-border-color);
     border-radius: 22px;
     display: inline-block;
     min-width: 100px;
     text-align: left;
-    color: @ffe-farge-vann;
-    font-family: 'SpareBank1-medium', 'MuseoSansRounded-700', arial, sans-serif;
+    color: var(--ffe-v-radio-button-label-color);
+    font-family: var(--ffe-g-font-strong);
     font-variant-numeric: tabular-nums;
     cursor: pointer;
     transition: all @ffe-transition-duration @ffe-ease;
@@ -31,32 +31,25 @@
     margin-bottom: @ffe-spacing-2xs;
     margin-top: @ffe-spacing-sm;
     line-height: 1.5;
-    .native & {
-        @media (prefers-color-scheme: dark) {
-            background-color: @ffe-farge-svart;
-            color: @ffe-farge-hvit;
-            border-color: @ffe-farge-graa;
-        }
-    }
 
     &::before {
-        .ffe-sb1-radioblob();
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                border-color: @ffe-grey-cloud-darkmode;
-                background-color: @ffe-grey-darkmode;
-            }
-        }
-
+        content: '';
         left: 12px;
         top: 8px;
+        background-color: var(--ffe-v-input-bg-color);
+        border: 2px solid var(--ffe-g-border-color);
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        position: absolute;
+        pointer-events: none;
     }
 
     &.ffe-radio-button--invalid {
-        border-color: @ffe-orange-fire;
+        border-color: @ffe-farge-baer;
         .native & {
             @media (prefers-color-scheme: dark) {
-                border-color: @ffe-red-darkmode;
+                border-color: @ffe-farge-baer;
             }
         }
     }
@@ -78,53 +71,25 @@
     &:checked + .ffe-radio-switch {
         /* stylelint-disable-next-line selector-max-specificity */
         &:not(.ffe-radio-button--invalid) {
-            border-color: @ffe-farge-fjell;
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    border-color: @ffe-farge-vann-70;
-                }
-            }
+            border-color: var(--ffe-g-secondary-color);
         }
 
-        background-color: @ffe-farge-fjell;
-        color: @ffe-white;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                background-color: @ffe-farge-vann-70;
-                color: @ffe-farge-svart;
-            }
-        }
+        background-color: var(--ffe-g-secondary-color);
+        color: var(--ffe-v-input-bg-color);
     }
 
     &:hover + .ffe-radio-switch {
-        border-color: @ffe-farge-fjell;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                border-color: @ffe-farge-vann-70;
-            }
-        }
+        border-color: var(--ffe-g-secondary-color);
     }
 
     &:focus + .ffe-radio-switch {
-        box-shadow: 0 0 0 3px @ffe-farge-hvit, 0 0 0 5px @ffe-farge-vann;
-
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                box-shadow: 0 0 0 3px @ffe-farge-svart,
-                    0 0 0 5px @ffe-farge-hvit;
-            }
-        }
+        box-shadow: 0 0 0 3px var(--ffe-v-input-bg-color),
+            0 0 0 5px var(--ffe-v-checkbox-focus-outline-color);
     }
 
     /* stylelint-disable-next-line selector-max-specificity */
     &:checked + .ffe-radio-switch::before {
-        border: 5px solid @ffe-farge-hvit;
-        background: @ffe-farge-vann;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                border-color: @ffe-farge-svart !important;
-                background: @ffe-farge-vann-70 !important;
-            }
-        }
+        border: 5px solid var(--ffe-v-input-bg-color);
+        background-color: var(--ffe-v-checkbox-selected-color);
     }
 }

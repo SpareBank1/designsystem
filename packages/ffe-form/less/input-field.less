@@ -16,15 +16,15 @@
     display: block;
     height: 45px;
     padding: 0 @ffe-spacing-sm;
-    font-family: 'SpareBank1-regular', 'MuseoSans-500', arial, sans-serif;
+    font-family: var(--ffe-g-font);
     font-variant-numeric: tabular-nums;
-    background-color: @ffe-farge-hvit;
-    color: @ffe-farge-svart;
-    border-radius: 4px;
-    border: 2px solid @ffe-farge-varmgraa;
+    background-color: var(--ffe-v-input-bg-color);
+    color: var(--ffe-v-input-color);
+    border-radius: var(--ffe-g-border-radius);
+    border: 2px solid var(--ffe-g-border-color);
     transition: all @ffe-transition-duration @ffe-ease;
     width: 100%;
-    .ffe-fontsize-form-input();
+    font-size: var(--ffe-fontsize-form-input);
 
     &[type='date'] {
         display: flex;
@@ -36,35 +36,19 @@
 
     .native & {
         @media (prefers-color-scheme: dark) {
-            background-color: @ffe-farge-svart;
-            color: @ffe-farge-hvit;
-            border-color: @ffe-farge-graa;
             box-shadow: none;
         }
     }
 
     &:hover {
-        border-color: @ffe-farge-vann;
-
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                border-color: @ffe-farge-vann-70;
-            }
-        }
+        border-color: var(--ffe-g-primary-color);
     }
 
     &:focus,
     &:active {
-        border-color: @ffe-farge-hvit;
-        box-shadow: 0 0 0 2px @ffe-farge-vann;
+        border-color: var(--ffe-v-input-bg-color);
+        box-shadow: 0 0 0 2px var(--ffe-g-primary-color);
         outline: none;
-
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                border-color: @ffe-farge-svart;
-                box-shadow: 0 0 0 2px @ffe-farge-vann-70;
-            }
-        }
     }
 
     &--inline {
@@ -81,34 +65,24 @@
     }
 
     &--text-like {
-        background-color: @ffe-farge-hvit;
         border: none;
-        border-bottom: 2px solid @ffe-farge-varmgraa;
+        border-bottom: 2px solid var(--ffe-g-border-color);
         border-radius: 4px 4px 0 0;
         box-shadow: none;
-        color: @ffe-farge-svart;
         display: inline-block;
         height: 2em;
         transition: all @ffe-transition-duration @ffe-ease;
 
         .native & {
             @media (prefers-color-scheme: dark) {
-                color: @ffe-farge-hvit;
                 background-color: transparent;
-                border-color: @ffe-farge-graa;
                 box-shadow: none !important;
             }
         }
 
         &:focus {
             box-shadow: none;
-            border-color: @ffe-farge-vann;
-
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    border-color: @ffe-farge-vann-70;
-                }
-            }
+            border-color: var(--ffe-g-primary-color);
         }
     }
 
@@ -117,13 +91,7 @@
     }
 
     &::placeholder {
-        color: @ffe-farge-moerkgraa;
+        color: var(--ffe-v-input-placeholder-color);
         opacity: 1;
-
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-grey-silver-darkmode;
-            }
-        }
     }
 }

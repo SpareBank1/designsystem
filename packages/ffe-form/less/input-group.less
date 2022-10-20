@@ -13,33 +13,22 @@
     position: relative;
 
     [aria-invalid='true'] {
-        border-color: @ffe-farge-baer;
+        border-color: var(--ffe-g-error-color);
         border-style: solid;
 
         &:focus {
-            border-color: @ffe-farge-hvit;
-            box-shadow: 0 0 0 2px @ffe-farge-baer;
-
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    border-color: @ffe-farge-svart;
-                }
-            }
+            border-color: var(--ffe-v-input-bg-color);
+            box-shadow: 0 0 0 2px var(--ffe-g-error-color);
         }
     }
 
     .ffe-input-field--text-like {
         &[aria-invalid='true'] {
             border-bottom: 2px solid;
-            border-color: @ffe-farge-baer;
+            border-color: var(--ffe-g-error-color);
             border-left-style: none;
             border-right-style: none;
             border-top-style: none;
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    border-color: @ffe-red-darkmode;
-                }
-            }
         }
     }
 

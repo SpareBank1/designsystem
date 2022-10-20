@@ -18,13 +18,13 @@
     border-radius: 1.375rem;
     cursor: pointer;
     display: inline-flex;
-    font-family: 'SpareBank1-regular', 'MuseoSans-500', arial, sans-serif;
+    font-family: var(--ffe-g-font);
     margin: 0 -4px; // Hack to allow box-shadow to float outside content on focus
     transition: all @ffe-transition-duration @ffe-ease;
     overflow: hidden;
     padding: 0 @ffe-spacing-2xs;
     text-decoration: none;
-    .ffe-fontsize-body-text();
+    font-size: var(--ffe-fontsize-body-text);
 
     &:active {
         transform: scale(0.97);
@@ -49,13 +49,12 @@
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='0.85em' height='1.6em' viewBox='0 0 200 200'%3E%3Cpath transform = 'rotate(90 100 100)' fill = '%23005aa4' d='m16.171492,41.999998c-4.143269,0-8.2852797,1.57464-11.4277496,4.706478-6.3249899,6.283609-6.3249899,16.499474,0,22.803034l84.0286676,83.76282c6.30496,6.30356,16.54928,6.30356,22.87426,0l83.60959-83.26412c6.32499-6.28361,6.32499-16.499477,0-22.803038-6.30496-6.30356-16.55553-6.30356-22.88051,0l-72.13806,71.893768-72.613438-72.373767c-3.14247-3.151781-7.29074-4.725174-11.433999-4.725174h-0.0188z'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: 1.375rem center;
-    color: @ffe-farge-vann;
+    color: var(--ffe-v-button-secondary-color);
     line-height: 24px;
     padding: @ffe-spacing-xs @ffe-spacing-md @ffe-spacing-xs @ffe-spacing-2xl;
     outline: none;
     .native & {
         @media (prefers-color-scheme: dark) {
-            color: @ffe-farge-vann-70;
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='0.85em' height='1.6em' viewBox='0 0 200 200'%3E%3Cpath transform = 'rotate(90 100 100)' fill = '%234d8cbf' d='m16.171492,41.999998c-4.143269,0-8.2852797,1.57464-11.4277496,4.706478-6.3249899,6.283609-6.3249899,16.499474,0,22.803034l84.0286676,83.76282c6.30496,6.30356,16.54928,6.30356,22.87426,0l83.60959-83.26412c6.32499-6.28361,6.32499-16.499477,0-22.803038-6.30496-6.30356-16.55553-6.30356-22.88051,0l-72.13806,71.893768-72.613438-72.373767c-3.14247-3.151781-7.29074-4.725174-11.433999-4.725174h-0.0188z'/%3E%3C/svg%3E");
         }
     }
@@ -63,14 +62,6 @@
     .ffe-inline-button__label {
         transition: all @ffe-transition-duration @ffe-ease;
         border-bottom: 1px solid transparent;
-    }
-
-    &:focus {
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-farge-vann-70;
-            }
-        }
     }
 
     &:hover {
@@ -84,49 +75,27 @@
     }
 
     &:hover .ffe-inline-button__label {
-        color: @ffe-farge-fjell;
-        border-bottom-color: @ffe-farge-fjell;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-farge-vann-30;
-                border-bottom-color: @ffe-farge-vann-30;
-            }
-        }
+        color: var(--ffe-v-button-secondary-color-hover);
+        border-bottom-color: var(--ffe-v-button-secondary-color-hover);
     }
 }
 
 .ffe-inline-button--expand {
-    color: @ffe-farge-vann;
+    color: var(--ffe-v-button-secondary-color);
     padding: 0 @ffe-spacing-xs;
     margin: 0;
 
-    .native & {
-        @media (prefers-color-scheme: dark) {
-            color: @ffe-farge-vann-70;
-        }
-    }
-
     &:hover {
-        color: @ffe-farge-fjell;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-farge-vann-30;
-            }
-        }
+        color: var(--ffe-v-button-secondary-color-hover);
     }
 }
 
 .ffe-inline-button--tertiary {
     align-content: center;
-    color: @ffe-farge-vann;
+    color: var(--ffe-v-button-tertiary-color);
     flex-wrap: wrap;
     padding: @ffe-spacing-xs (@ffe-spacing-sm + 1);
     border: 2px solid transparent;
-    .native & {
-        @media (prefers-color-scheme: dark) {
-            color: @ffe-farge-vann-30;
-        }
-    }
 
     &::after {
         border-bottom: solid 1px currentColor;
@@ -137,14 +106,13 @@
 
     &:focus {
         box-shadow: none;
-        border-color: @ffe-farge-vann;
-        color: @ffe-farge-vann;
+        border-color: var(--ffe-v-button-tertiary-color);
+        color: var(--ffe-v-button-tertiary-color);
 
         .native & {
             @media (prefers-color-scheme: dark) {
                 border-color: @ffe-farge-hvit;
                 box-shadow: none;
-                color: @ffe-farge-vann-30;
             }
         }
     }
@@ -154,7 +122,7 @@
     }
 
     &:hover {
-        color: @ffe-farge-fjell;
+        color: var(--ffe-v-button-tertiary-color-hover);
         .native & {
             @media (prefers-color-scheme: dark) {
                 color: @ffe-farge-hvit;

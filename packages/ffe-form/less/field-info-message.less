@@ -6,16 +6,11 @@
 // Styleguide ffe-form.field-info-message
 
 .ffe-field-info-message {
-    font-family: 'SpareBank1-regular', 'MuseoSans-500', arial, sans-serif;
-    color: @ffe-farge-svart;
+    font-family: var(--ffe-g-font);
+    color: var(--ffe-v-input-color);
     margin: @ffe-spacing-2xs 0 @ffe-spacing-xs;
     display: block;
-    .ffe-fontsize-body-text();
-    .native & {
-        @media (prefers-color-scheme: dark) {
-            color: @ffe-farge-hvit;
-        }
-    }
+    font-size: var(--ffe-fontsize-body-text);
 
     &[aria-hidden='true'] {
         display: none;
@@ -23,8 +18,7 @@
 
     &::before {
         content: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23fff" height="12" width="12" x="750" y="1050" viewBox="0 0 200 200"%3E%3Cpath d="M96.19 199.99h7.846c7.154 0 11.308-4.398 11.308-11.805V85.195c0-7.407-4.154-11.805-11.308-11.805H96.19c-7.384 0-11.769 4.398-11.769 11.805v103C84.648 195.6 88.801 200 96.186 200zM116.5 11.805C116.5 4.398 112.35 0 105.19 0H94.808C87.65 0 83.5 4.398 83.5 11.805V26.85c0 7.407 3.923 11.342 11.308 11.342h10.385c7.384 0 11.308-3.935 11.308-11.342V11.805z"/%3E%3C/svg%3E');
-        color: @ffe-farge-hvit;
-        background-color: @ffe-farge-fjell;
+        background-color: var(--ffe-v-info-message-icon-color);
         border-radius: 50%;
         padding: 2px;
         width: 18px;
@@ -37,7 +31,6 @@
         .native & {
             @media (prefers-color-scheme: dark) {
                 content: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23002776" height="12" width="12" x="750" y="1050" viewBox="0 0 200 200"%3E%3Cpath d="M96.19 199.99h7.846c7.154 0 11.308-4.398 11.308-11.805V85.195c0-7.407-4.154-11.805-11.308-11.805H96.19c-7.384 0-11.769 4.398-11.769 11.805v103C84.648 195.6 88.801 200 96.186 200zM116.5 11.805C116.5 4.398 112.35 0 105.19 0H94.808C87.65 0 83.5 4.398 83.5 11.805V26.85c0 7.407 3.923 11.342 11.308 11.342h10.385c7.384 0 11.308-3.935 11.308-11.342V11.805z"/%3E%3C/svg%3E');
-                background-color: @ffe-farge-vann-70;
             }
         }
     }

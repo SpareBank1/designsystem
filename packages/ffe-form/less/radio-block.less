@@ -30,61 +30,54 @@
 // Styleguide ffe-form.radio-block
 
 .ffe-radio-block {
-    font-family: 'SpareBank1-regular', 'MuseoSans-500', arial, sans-serif;
+    --ffe-radio-block-border-color: var(--ffe-g-border-color);
+    --ffe-radio-block-header-color: var(--ffe-v-input-color);
+    --ffe-radio-block-header-bg-color: none;
+    --ffe-radio-block-header-selected-bg-color: var(--ffe-g-secondary-color);
+
+    font-family: var(--ffe-g-font);
     font-variant-numeric: tabular-nums;
     margin-top: @ffe-spacing-md;
     width: 100%;
     transition: width @ffe-transition-duration @ffe-ease-in-out-back;
 
-    &__content {
-        width: 100%;
-        position: relative;
-        border: 2px solid @ffe-farge-varmgraa;
-        border-radius: 5px;
-        display: inline-block;
-        margin-right: @ffe-spacing-xs;
-        color: @ffe-black;
-        background-color: @ffe-farge-hvit;
+    &__content,
+    &__header {
         cursor: pointer;
         transition: all @ffe-transition-duration @ffe-ease;
+    }
 
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                border: 2px solid @ffe-farge-graa;
-                color: @ffe-farge-hvit;
-                background: @ffe-farge-svart;
-            }
-        }
+    &__content {
+        width: 100%;
+        display: inline-block;
+        position: relative;
+        border: 2px solid var(--ffe-radio-block-border-color);
+        border-radius: var(--ffe-g-border-radius);
+        margin-right: @ffe-spacing-xs;
+        color: var(--ffe-v-input-color);
+        background-color: var(--ffe-v-input-bg-color);
 
         &::before {
-            .ffe-sb1-radioblob();
-
+            content: '';
             left: 20px;
             top: 10px;
             z-index: 1;
-        }
-
-        .native &::before {
-            @media (prefers-color-scheme: dark) {
-                background: none;
-                border-color: @ffe-white-darkmode;
-            }
+            background-color: var(--ffe-v-input-bg-color);
+            border: 2px solid var(--ffe-radio-block-border-color);
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            position: absolute;
+            pointer-events: none;
         }
     }
 
     &__header {
         display: block;
         padding: @ffe-spacing-xs @ffe-spacing-3xl @ffe-spacing-xs;
-        cursor: pointer;
-        border-bottom: thin solid @ffe-farge-varmgraa;
-        transition: background-color @ffe-transition-duration @ffe-ease,
-            border-color @ffe-transition-duration @ffe-ease;
-
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                border-bottom: thin solid @ffe-farge-graa;
-            }
-        }
+        border-bottom: thin solid var(--ffe-radio-block-border-color);
+        color: var(--ffe-radio-block-header-color);
+        background-color: var(--ffe-radio-block-header-bg-color);
     }
 
     &__wrapper {
@@ -98,50 +91,18 @@
         &[aria-hidden='true'] {
             display: none;
         }
+
+        @media (min-width: @breakpoint-sm) {
+            padding-left: @ffe-spacing-3xl;
+        }
     }
 
     &:hover {
-        .ffe-radio-block__content {
-            border-color: @ffe-farge-fjell;
-
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    border-color: @ffe-farge-vann-70;
-                }
-            }
-        }
-
-        .ffe-radio-block__header {
-            border-color: @ffe-farge-fjell;
-
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    border-color: @ffe-farge-vann-70;
-                }
-            }
-        }
+        --ffe-radio-block-border-color: var(--ffe-g-primary-color);
     }
 
     .ffe-fieldset--error & {
-        .ffe-radio-block__content {
-            border-color: @ffe-farge-baer;
-
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    border-color: @ffe-farge-baer;
-                }
-            }
-        }
-
-        .ffe-radio-block__header {
-            border-color: @ffe-farge-baer;
-
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    border-color: @ffe-farge-baer;
-                }
-            }
-        }
+        --ffe-radio-block-border-color: var(--ffe-g-error-color);
     }
 }
 
@@ -154,52 +115,22 @@
     }
 
     &:checked + .ffe-radio-block__content {
-        border: 2px solid @ffe-farge-fjell;
-
-        > .ffe-radio-block__header {
-            border-bottom: thin solid @ffe-farge-fjell;
-            background-color: @ffe-farge-fjell;
-            color: @ffe-farge-hvit;
-        }
-    }
-
-    .native &:checked + .ffe-radio-block__content {
-        @media (prefers-color-scheme: dark) {
-            border: 2px solid @ffe-farge-vann-70;
-
-            > .ffe-radio-block__header {
-                border-bottom: thin solid @ffe-farge-vann-70;
-                background-color: @ffe-farge-vann-70;
-                color: @ffe-farge-svart;
-            }
-        }
+        --ffe-radio-block-header-color: var(--ffe-v-input-bg-color);
+        --ffe-radio-block-header-bg-color: var(
+            --ffe-radio-block-header-selected-bg-color
+        );
+        --ffe-radio-block-border-color: var(
+            --ffe-radio-block-header-selected-bg-color
+        );
     }
 
     &:checked + .ffe-radio-block__content::before {
-        .ffe-sb1-radioblob-active();
-
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                border: 5px solid @ffe-white-darkmode;
-                background: @ffe-blue-azure;
-            }
-        }
+        background-color: var(--ffe-g-primary-color);
+        border: 5px solid var(--ffe-v-input-bg-color);
     }
 
     &:focus + .ffe-radio-block__content {
-        box-shadow: 0 0 0 3px @ffe-farge-hvit, 0 0 0 5px @ffe-farge-vann;
-
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                box-shadow: 0 0 0 3px @ffe-farge-svart,
-                    0 0 0 5px @ffe-farge-hvit;
-            }
-        }
-    }
-}
-
-@media (min-width: @breakpoint-sm) {
-    .ffe-radio-block__wrapper {
-        padding-left: @ffe-spacing-3xl;
+        box-shadow: 0 0 0 3px var(--ffe-v-input-bg-color),
+            0 0 0 5px var(--ffe-v-checkbox-focus-outline-color);
     }
 }

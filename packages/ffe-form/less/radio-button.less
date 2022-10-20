@@ -20,7 +20,7 @@
 // Styleguide ffe-form.radio-button
 
 .ffe-radio-button {
-    font-family: 'SpareBank1-regular', 'MuseoSans-500', arial, sans-serif;
+    font-family: var(--ffe-g-font);
     font-variant-numeric: tabular-nums;
     display: block;
     position: relative;
@@ -96,7 +96,7 @@
 
     &::after {
         content: '';
-        border: 2px solid @ffe-farge-varmgraa;
+        border: 2px solid var(--ffe-g-border-color);
         width: 20px;
         height: 20px;
         border-radius: 50%;
@@ -105,20 +105,10 @@
         top: 2px;
         pointer-events: none;
         transition: all @ffe-transition-duration @ffe-ease;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                border-color: @ffe-farge-graa;
-            }
-        }
     }
 
     [aria-invalid='true'] &::after {
-        border-color: @ffe-farge-baer;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                border-color: @ffe-farge-baer;
-            }
-        }
+        border-color: var(--ffe-g-error-color);
     }
 }
 
@@ -132,16 +122,11 @@
 
     &:checked + .ffe-radio-button::after,
     &:hover + .ffe-radio-button::after {
-        border-color: @ffe-farge-vann;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                border-color: @ffe-farge-vann-70;
-            }
-        }
+        border-color: var(--ffe-g-primary-color);
     }
 
     &:checked + .ffe-radio-button::before {
-        background-color: @ffe-farge-vann;
+        background-color: var(--ffe-g-primary-color);
         border: 5px solid @ffe-farge-hvit;
         .native & {
             @media (prefers-color-scheme: dark) {
@@ -152,7 +137,8 @@
     }
 
     &:focus + .ffe-radio-button::after {
-        box-shadow: 0 0 0 3px @ffe-farge-hvit, 0 0 0 5px @ffe-farge-vann;
+        box-shadow: 0 0 0 3px @ffe-farge-hvit,
+            0 0 0 5px var(--ffe-g-primary-color);
 
         .native & {
             @media (prefers-color-scheme: dark) {
@@ -166,21 +152,8 @@
         box-shadow: none;
     }
 
-    [aria-invalid='true'] &:hover + .ffe-radio-button::after {
-        border-color: @ffe-farge-baer;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                border-color: @ffe-farge-baer;
-            }
-        }
-    }
-
+    [aria-invalid='true'] &:hover + .ffe-radio-button::after,
     [aria-invalid='true'] &:checked + .ffe-radio-button::after {
-        border-color: @ffe-farge-baer;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                border-color: @ffe-farge-baer;
-            }
-        }
+        border-color: var(--ffe-g-error-color);
     }
 }
