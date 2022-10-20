@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.2.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@6.2.11...@sb1/ffe-system-message@6.2.12) (2022-10-20)
+
+**Note:** Version bump only for package @sb1/ffe-system-message
+
 ## [6.2.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@6.2.10...@sb1/ffe-system-message@6.2.11) (2022-10-18)
 
 **Note:** Version bump only for package @sb1/ffe-system-message

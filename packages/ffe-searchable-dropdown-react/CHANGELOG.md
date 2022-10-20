@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [14.0.38](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@14.0.37...@sb1/ffe-searchable-dropdown-react@14.0.38) (2022-10-20)
+
+### Bug Fixes
+
+-   **ffe-searchable-dropdown-react:** setter riktig transition på chevron ([c709811](https://github.com/SpareBank1/designsystem/commit/c709811ac7c4816b35d765144e8aa5d278182133))
+
 ## [14.0.37](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@14.0.36...@sb1/ffe-searchable-dropdown-react@14.0.37) (2022-10-18)
 
 **Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react

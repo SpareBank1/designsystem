@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [26.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@25.0.0...@sb1/ffe-core@26.0.0) (2022-10-20)
+
+### Features
+
+-   **ffe-core:** add custom props for font sizes ([1175803](https://github.com/SpareBank1/designsystem/commit/1175803fdeaf0009db77a18ac165a531bebb0211))
+-   **ffe-core:** removes .ffe-icon-base ([3d390ba](https://github.com/SpareBank1/designsystem/commit/3d390baa4dcf37a473a9ce948a5a1500745212c2))
+-   **ffe-core:** theming med custom properties ([09876ff](https://github.com/SpareBank1/designsystem/commit/09876ff18b8e8690524b843c8f323258c7355ca1))
+
+### BREAKING CHANGES
+
+-   **ffe-core:** this change removes the less mixins `ffe-fontsize-*`.
+-   **ffe-core:** removes outdated css class .ffe-icon-base.
+-   **ffe-core:** introduces css custom properties for colors and fonts.
+
 # [25.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@24.0.0...@sb1/ffe-core@25.0.0) (2022-10-18)
 
 ### Bug Fixes

@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [11.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@10.0.31...@sb1/ffe-lists@11.0.0) (2022-10-20)
+
+### Bug Fixes
+
+-   **ffe-lists:** fjerner checklist ikoner og sand-bg variant ([5c92650](https://github.com/SpareBank1/designsystem/commit/5c92650795ff68cf181bc88f8880749f584c9a08))
+
+### Features
+
+-   **ffe-lists:** use custom props for font sizes ([2ac39e8](https://github.com/SpareBank1/designsystem/commit/2ac39e8b413a33e0e06b8dad6f1b4234077a785e))
+
+### BREAKING CHANGES
+
+-   **ffe-lists:** fjerner checklist ikonene og sand-bg varianten.
+    For å oppfylle wcag krav flyttes checkliste ikonene inn i react-komponenten
+    det fører med seg endringer på klasse hierarki og navngivning
+
 ## [10.0.31](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@10.0.30...@sb1/ffe-lists@10.0.31) (2022-10-18)
 
 ### Bug Fixes

@@ -3,119 +3,71 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@5.0.12...@sb1/ffe-lists-react@5.0.13) (2022-10-20)
+
+### Bug Fixes
+
+-   **ffe-lists-react:** erstatter checkliste ikoner med ffe-icons-react ([0fdeeb2](https://github.com/SpareBank1/designsystem/commit/0fdeeb20668288f2193b4fd75d5d0e6377bead09))
+
 ## [5.0.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@5.0.11...@sb1/ffe-lists-react@5.0.12) (2022-09-09)
 
 **Note:** Version bump only for package @sb1/ffe-lists-react
 
-
-
-
-
 ## [5.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@5.0.10...@sb1/ffe-lists-react@5.0.11) (2022-08-04)
-
 
 ### Bug Fixes
 
-* **ffe-lists-react:** legg til aria-label på listelement ([12e7ed0](https://github.com/SpareBank1/designsystem/commit/12e7ed02accb52228bc6bd50802afebeb2bff70e))
-
-
-
-
+-   **ffe-lists-react:** legg til aria-label på listelement ([12e7ed0](https://github.com/SpareBank1/designsystem/commit/12e7ed02accb52228bc6bd50802afebeb2bff70e))
 
 ## [5.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@5.0.9...@sb1/ffe-lists-react@5.0.10) (2022-07-29)
 
-
 ### Bug Fixes
 
-* **ffe-lists-react:** grupper elementene med div istedenfor dl ([9d15e67](https://github.com/SpareBank1/designsystem/commit/9d15e6746d280d5d46e411e37798232c4841b519))
-
-
-
-
+-   **ffe-lists-react:** grupper elementene med div istedenfor dl ([9d15e67](https://github.com/SpareBank1/designsystem/commit/9d15e6746d280d5d46e411e37798232c4841b519))
 
 ## [5.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@5.0.8...@sb1/ffe-lists-react@5.0.9) (2022-02-18)
 
 **Note:** Version bump only for package @sb1/ffe-lists-react
 
-
-
-
-
 ## [5.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@5.0.7...@sb1/ffe-lists-react@5.0.8) (2022-01-27)
 
 **Note:** Version bump only for package @sb1/ffe-lists-react
-
-
-
-
 
 ## [5.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@5.0.6...@sb1/ffe-lists-react@5.0.7) (2022-01-27)
 
 **Note:** Version bump only for package @sb1/ffe-lists-react
 
-
-
-
-
 ## [5.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@5.0.5...@sb1/ffe-lists-react@5.0.6) (2022-01-25)
 
 **Note:** Version bump only for package @sb1/ffe-lists-react
-
-
-
-
 
 ## [5.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@5.0.4...@sb1/ffe-lists-react@5.0.5) (2021-12-17)
 
 **Note:** Version bump only for package @sb1/ffe-lists-react
 
-
-
-
-
 ## [5.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@5.0.3...@sb1/ffe-lists-react@5.0.4) (2021-12-10)
-
 
 ### Bug Fixes
 
-* **ffe-lists-react:** use buildtool for transpiling ([d871bf1](https://github.com/SpareBank1/designsystem/commit/d871bf118d0c163289c5fe73334bc2eb0a015bab)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
-
-
-
-
+-   **ffe-lists-react:** use buildtool for transpiling ([d871bf1](https://github.com/SpareBank1/designsystem/commit/d871bf118d0c163289c5fe73334bc2eb0a015bab)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
 
 ## [5.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@5.0.2...@sb1/ffe-lists-react@5.0.3) (2021-03-15)
 
-
 ### Bug Fixes
 
-* **ffe-lists-react:** broadens version of peer dependencies ([051d784](https://github.com/SpareBank1/designsystem/commit/051d7840b95c98cc558b3753c8f4ab3e7f2dd5ca))
-
-
-
-
+-   **ffe-lists-react:** broadens version of peer dependencies ([051d784](https://github.com/SpareBank1/designsystem/commit/051d7840b95c98cc558b3753c8f4ab3e7f2dd5ca))
 
 ## [5.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@5.0.1...@sb1/ffe-lists-react@5.0.2) (2021-02-03)
 
-
 ### Bug Fixes
 
-* packages/ffe-lists-react/package.json to reduce vulnerabilities ([5523aa1](https://github.com/SpareBank1/designsystem/commit/5523aa1e7f189034a1bb895d3b6830c6d9d0e822))
-
-
-
-
+-   packages/ffe-lists-react/package.json to reduce vulnerabilities ([5523aa1](https://github.com/SpareBank1/designsystem/commit/5523aa1e7f189034a1bb895d3b6830c6d9d0e822))
 
 ## [5.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@5.0.0...@sb1/ffe-lists-react@5.0.1) (2021-02-02)
 
-
 ### Bug Fixes
 
-* **ffe-lists-react:** reduce vulnerabilities ([3bd41f1](https://github.com/SpareBank1/designsystem/commit/3bd41f1eddb5356ffe45729012aae98411887ecf))
-
-
-
-
+-   **ffe-lists-react:** reduce vulnerabilities ([3bd41f1](https://github.com/SpareBank1/designsystem/commit/3bd41f1eddb5356ffe45729012aae98411887ecf))
 
 # [5.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@4.0.1...@sb1/ffe-lists-react@5.0.0) (2019-08-27)
 

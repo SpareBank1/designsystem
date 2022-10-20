@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [16.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@15.1.7...@sb1/ffe-buttons@16.0.0) (2022-10-20)
+
+### Features
+
+-   **ffe-buttons:** theming med custom properties ([be148cb](https://github.com/SpareBank1/designsystem/commit/be148cb703840db96bba7103d1a3bea2c58db9e5))
+-   **ffe-buttons:** use custom props for font sizes ([9fe99d5](https://github.com/SpareBank1/designsystem/commit/9fe99d5b42ec2c6068e828df544c5223c0f0ded6))
+
+### BREAKING CHANGES
+
+-   **ffe-buttons:** introduces css custom properties for colors.
+
 ## [15.1.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@15.1.6...@sb1/ffe-buttons@15.1.7) (2022-10-18)
 
 **Note:** Version bump only for package @sb1/ffe-buttons

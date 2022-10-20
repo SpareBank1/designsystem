@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [22.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@21.0.6...@sb1/ffe-form@22.0.0) (2022-10-20)
+
+### Features
+
+-   **ffe-form:** theming med custom properties ([5648844](https://github.com/SpareBank1/designsystem/commit/564884448b83a16baa98656f1b2688acfe5061d9))
+-   **ffe-form:** use custom props for font sizes ([516ea88](https://github.com/SpareBank1/designsystem/commit/516ea8827ba27af6c68428de2e73ccffb0219649))
+
+### BREAKING CHANGES
+
+-   **ffe-form:** introduces css custom properties for colors.
+-   **ffe-form:** removes the less mixin `ffe-sb1-radioblob()`.
+
 ## [21.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@21.0.5...@sb1/ffe-form@21.0.6) (2022-10-18)
 
 **Note:** Version bump only for package @sb1/ffe-form

@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.12.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.11.3...@sb1/ffe-component-index@3.12.0) (2022-10-20)
+
+### Features
+
+-   **component-overview:** legger til et eksempel av theming ([bfdfe0c](https://github.com/SpareBank1/designsystem/commit/bfdfe0c9ced274b8b91e5ff51a22a21f8cfe6351))
+-   **component-overview:** use css properties from less, not css ([5fa9f1f](https://github.com/SpareBank1/designsystem/commit/5fa9f1ff0eb682968297dc210f30befa9c08c89b))
+
 ## [3.11.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.11.2...@sb1/ffe-component-index@3.11.3) (2022-10-19)
 
 **Note:** Version bump only for package @sb1/ffe-component-index
