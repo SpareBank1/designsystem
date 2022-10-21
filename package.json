@@ -15,7 +15,7 @@
         "build": "lerna run build",
         "watch": "lerna run --parallel watch",
         "ghpages": "lerna run ghpages",
-        "lint": "lerna run --parallel lint",
+        "lint": "lerna run lint",
         "start": "run-p watch start:component-overview",
         "start:component-overview": "lerna run start --scope='@sb1/ffe-component-index'",
         "test": "./buildtool/bin/cli.js jest",
@@ -43,6 +43,6 @@
         "react-dom": "^16.9.0",
         "regenerator-runtime": "^0.13.2",
         "rimraf": "^3.0.2",
-        "stylelint-config-prettier": "^5.0.0"
+        "stylelint-config-prettier": "^9.0.3"
     }
 }
