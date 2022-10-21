@@ -11,12 +11,13 @@ export default function Wave(props) {
         bgColor,
         bgDarkmodeColor,
         children,
+        className,
         ...rest
     } = props;
 
     return (
         <div
-            className={classNames('ffe-wave', {
+            className={classNames('ffe-wave', className, {
                 [`ffe-wave--bg-${bgColor}`]: bgColor,
                 [`ffe-wave--dm-bg-${bgDarkmodeColor}`]: bgDarkmodeColor,
             })}
@@ -45,6 +46,8 @@ export default function Wave(props) {
 }
 
 Wave.propTypes = {
+    /** Adds additional class */
+    className: string,
     /** Sets the mask-position property, setting a px/rem value will move the starting position of the wave */
     position: string,
     /** Rotate the wave 180 degrees :*/
