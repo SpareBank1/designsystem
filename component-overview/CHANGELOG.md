@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.12.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.12.0...@sb1/ffe-component-index@3.12.1) (2022-10-21)
+
+### Bug Fixes
+
+-   **component-overview:** fix 404-redirect on github pages ([5f9286a](https://github.com/SpareBank1/designsystem/commit/5f9286a27d8c14c5f6318021789fabe65f7954f3))
+
 # [3.12.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.11.3...@sb1/ffe-component-index@3.12.0) (2022-10-20)
 
 ### Features

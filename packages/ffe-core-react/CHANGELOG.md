@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@6.0.0...@sb1/ffe-core-react@6.0.1) (2022-10-21)
+
+### Bug Fixes
+
+-   **ffe-core-react:** possible to add additional class to wave ([ed51373](https://github.com/SpareBank1/designsystem/commit/ed51373ebd54bafc24db5cdd795dc059c5527764))
+
 # [6.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@5.0.3...@sb1/ffe-core-react@6.0.0) (2022-10-18)
 
 ### Bug Fixes
