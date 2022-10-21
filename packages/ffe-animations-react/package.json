@@ -1,0 +1,26 @@
+{
+  "name": "ffe-animations-react",
+  "version": "1.0.0",
+  "description": "Lottie player for FFE animasjoner",
+  "main": "index.js",
+  "scripts": {
+    "build": "ffe-buildtool babel",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/SpareBank1/designsystem.git"
+  },
+  "keywords": [
+    "ffe"
+  ],
+  "author": "SpareBank 1",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SpareBank1/designsystem/issues"
+  },
+  "homepage": "https://github.com/SpareBank1/designsystem#readme",
+  "dependencies": {
+    "lottie-react": "^2.3.1"
+  }
+}
