@@ -15,6 +15,7 @@ module.exports = {
                 'ffe-accordion',
                 'ffe-accordion-react',
                 'ffe-account-selector-react',
+                'ffe-animations-react',
                 'ffe-buttons',
                 'ffe-buttons-react',
                 'ffe-cards',
