@@ -48,6 +48,7 @@ export interface ParagraphProps
 }
 
 export interface WaveProps {
+    className?: string;
     position?: string;
     flip?: boolean;
     color:
