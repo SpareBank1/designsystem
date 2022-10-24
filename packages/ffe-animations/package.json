@@ -1,0 +1,23 @@
+{
+  "name": "ffe-animations",
+  "version": "1.0.0",
+  "description": "Lottie animations for FFE animations",
+  "main": "index.js",
+  "scripts": {
+    "build": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/SpareBank1/designsystem.git"
+  },
+  "keywords": [
+    "ffe"
+  ],
+  "author": "SpareBank 1",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SpareBank1/designsystem/issues"
+  },
+  "homepage": "https://github.com/SpareBank1/designsystem#readme"
+}
