@@ -3,323 +3,181 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@7.0.2...@sb1/ffe-context-message-react@7.0.3) (2022-10-25)
+
+**Note:** Version bump only for package @sb1/ffe-context-message-react
+
 ## [7.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@7.0.1...@sb1/ffe-context-message-react@7.0.2) (2022-09-09)
 
 **Note:** Version bump only for package @sb1/ffe-context-message-react
 
-
-
-
-
 ## [7.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@7.0.0...@sb1/ffe-context-message-react@7.0.1) (2022-08-02)
-
 
 ### Bug Fixes
 
-* **ffe-context-message-react:** fikse feilmeldinger i konsollet ved alert=false ([ee63216](https://github.com/SpareBank1/designsystem/commit/ee6321630cd778fb448cff0e80ad3820d08faeb4))
-* **ffe-context-message-react:** fix failing test ([0f5f136](https://github.com/SpareBank1/designsystem/commit/0f5f136fbedc3f5c8ebf94d6712c722c1f48db80))
-
-
-
-
+-   **ffe-context-message-react:** fikse feilmeldinger i konsollet ved alert=false ([ee63216](https://github.com/SpareBank1/designsystem/commit/ee6321630cd778fb448cff0e80ad3820d08faeb4))
+-   **ffe-context-message-react:** fix failing test ([0f5f136](https://github.com/SpareBank1/designsystem/commit/0f5f136fbedc3f5c8ebf94d6712c722c1f48db80))
 
 # [7.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@6.1.2...@sb1/ffe-context-message-react@7.0.0) (2022-03-15)
 
-
 ### Bug Fixes
 
-* **ffe-context-message-react:** endre navn og meldingtype verdi for tips ([6197e38](https://github.com/SpareBank1/designsystem/commit/6197e3857579a1baf2d129556a8c5b17e5c62515))
-
+-   **ffe-context-message-react:** endre navn og meldingtype verdi for tips ([6197e38](https://github.com/SpareBank1/designsystem/commit/6197e3857579a1baf2d129556a8c5b17e5c62515))
 
 ### BREAKING CHANGES
 
-* **ffe-context-message-react:** For å bruke tips varianten av ContextMessage må du nå sende "tips" og ikke "tip".
-Tips komponenten har også endret navn til ContextTipsMessage
-
-
-
-
+-   **ffe-context-message-react:** For å bruke tips varianten av ContextMessage må du nå sende "tips" og ikke "tip".
+    Tips komponenten har også endret navn til ContextTipsMessage
 
 ## [6.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@6.1.1...@sb1/ffe-context-message-react@6.1.2) (2022-03-02)
 
 **Note:** Version bump only for package @sb1/ffe-context-message-react
 
-
-
-
-
 ## [6.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@6.1.0...@sb1/ffe-context-message-react@6.1.1) (2022-02-23)
 
 **Note:** Version bump only for package @sb1/ffe-context-message-react
 
-
-
-
-
 # [6.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@6.0.1...@sb1/ffe-context-message-react@6.1.0) (2022-02-18)
-
 
 ### Features
 
-* **ffe-context-message-react:** import icons without need for tree shaking ([d14bb11](https://github.com/SpareBank1/designsystem/commit/d14bb1135dda5c54b6046c9c994276ae8df3bde2))
-
-
-
-
+-   **ffe-context-message-react:** import icons without need for tree shaking ([d14bb11](https://github.com/SpareBank1/designsystem/commit/d14bb1135dda5c54b6046c9c994276ae8df3bde2))
 
 ## [6.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@6.0.0...@sb1/ffe-context-message-react@6.0.1) (2022-02-03)
 
-
 ### Bug Fixes
 
-* **ffe-context-message-react:** icon override not possible anymore ([2a26d1a](https://github.com/SpareBank1/designsystem/commit/2a26d1ae91084e269d22b6f4da1a3704d0e2c398))
-
-
-
-
+-   **ffe-context-message-react:** icon override not possible anymore ([2a26d1a](https://github.com/SpareBank1/designsystem/commit/2a26d1ae91084e269d22b6f4da1a3704d0e2c398))
 
 # [6.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@5.2.10...@sb1/ffe-context-message-react@6.0.0) (2022-01-28)
 
-
 ### Features
 
-* **ffe-context-message-react:** fjern custom ikon og legg til ny prop ([1d7fea2](https://github.com/SpareBank1/designsystem/commit/1d7fea29a68bc5636bfc3655e732f02aac698c97))
-
+-   **ffe-context-message-react:** fjern custom ikon og legg til ny prop ([1d7fea2](https://github.com/SpareBank1/designsystem/commit/1d7fea29a68bc5636bfc3655e732f02aac698c97))
 
 ### BREAKING CHANGES
 
-* **ffe-context-message-react:** fjerner muligheten til å legge inn custom ikon og setter faste ikoner pr type
+-   **ffe-context-message-react:** fjerner muligheten til å legge inn custom ikon og setter faste ikoner pr type
 
 Legger inn onColoredBg prop som skrur på styling til bruk på farget bakgrunn
-
-
-
-
 
 ## [5.2.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@5.2.9...@sb1/ffe-context-message-react@5.2.10) (2022-01-27)
 
 **Note:** Version bump only for package @sb1/ffe-context-message-react
 
-
-
-
-
 ## [5.2.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@5.2.8...@sb1/ffe-context-message-react@5.2.9) (2022-01-27)
 
 **Note:** Version bump only for package @sb1/ffe-context-message-react
-
-
-
-
 
 ## [5.2.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@5.2.7...@sb1/ffe-context-message-react@5.2.8) (2022-01-25)
 
 **Note:** Version bump only for package @sb1/ffe-context-message-react
 
-
-
-
-
 ## [5.2.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@5.2.6...@sb1/ffe-context-message-react@5.2.7) (2022-01-24)
 
 **Note:** Version bump only for package @sb1/ffe-context-message-react
-
-
-
-
 
 ## [5.2.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@5.2.5...@sb1/ffe-context-message-react@5.2.6) (2021-12-17)
 
 **Note:** Version bump only for package @sb1/ffe-context-message-react
 
-
-
-
-
 ## [5.2.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@5.2.4...@sb1/ffe-context-message-react@5.2.5) (2021-12-10)
-
 
 ### Bug Fixes
 
-* **ffe-context-message-react:** use buildtool for transpiling ([aa9b971](https://github.com/SpareBank1/designsystem/commit/aa9b971934a1374f28196d0f4cbc9d28137b705c)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
-
-
-
-
+-   **ffe-context-message-react:** use buildtool for transpiling ([aa9b971](https://github.com/SpareBank1/designsystem/commit/aa9b971934a1374f28196d0f4cbc9d28137b705c)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
 
 ## [5.2.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@5.2.3...@sb1/ffe-context-message-react@5.2.4) (2021-11-04)
 
 **Note:** Version bump only for package @sb1/ffe-context-message-react
 
-
-
-
-
 ## [5.2.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@5.2.2...@sb1/ffe-context-message-react@5.2.3) (2021-03-15)
-
 
 ### Bug Fixes
 
-* **ffe-context-message-react:** broadens version of peer dependencies ([fdd06cd](https://github.com/SpareBank1/designsystem/commit/fdd06cdd7614f8a0b9c20f03be1c4fa5ca05b3b8))
-
-
-
-
+-   **ffe-context-message-react:** broadens version of peer dependencies ([fdd06cd](https://github.com/SpareBank1/designsystem/commit/fdd06cdd7614f8a0b9c20f03be1c4fa5ca05b3b8))
 
 ## [5.2.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@5.2.1...@sb1/ffe-context-message-react@5.2.2) (2021-02-02)
 
-
 ### Bug Fixes
 
-* packages/ffe-context-message-react/package.json to reduce vulnerabilities ([f20b5c2](https://github.com/SpareBank1/designsystem/commit/f20b5c29759e8eda6c48bd6140527a8ae277c701))
-
-
-
-
+-   packages/ffe-context-message-react/package.json to reduce vulnerabilities ([f20b5c2](https://github.com/SpareBank1/designsystem/commit/f20b5c29759e8eda6c48bd6140527a8ae277c701))
 
 ## [5.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@5.2.0...@sb1/ffe-context-message-react@5.2.1) (2021-02-02)
 
-
 ### Bug Fixes
 
-* **ffe-context-message-react:** reduce vulnerabilities ([9158417](https://github.com/SpareBank1/designsystem/commit/91584177f07cf16c6332ff79dd54ec0ce94f00b0))
-
-
-
-
+-   **ffe-context-message-react:** reduce vulnerabilities ([9158417](https://github.com/SpareBank1/designsystem/commit/91584177f07cf16c6332ff79dd54ec0ce94f00b0))
 
 # [5.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@5.1.5...@sb1/ffe-context-message-react@5.2.0) (2021-01-05)
 
-
 ### Features
 
-* **ffe-context-message-react:** use uuid to genereate id ([6c10085](https://github.com/SpareBank1/designsystem/commit/6c100857c28d0ba8746a664b1f814544b7ac4ad8))
-
-
-
-
+-   **ffe-context-message-react:** use uuid to genereate id ([6c10085](https://github.com/SpareBank1/designsystem/commit/6c100857c28d0ba8746a664b1f814544b7ac4ad8))
 
 ## [5.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@5.1.4...@sb1/ffe-context-message-react@5.1.5) (2020-12-11)
 
-
 ### Bug Fixes
 
-* **ffe-context-message-react:** Allow custom header tag ([9282f48](https://github.com/SpareBank1/designsystem/commit/9282f48247cd80f32cd98d331fc79ef07064fd3d))
-
-
-
-
+-   **ffe-context-message-react:** Allow custom header tag ([9282f48](https://github.com/SpareBank1/designsystem/commit/9282f48247cd80f32cd98d331fc79ef07064fd3d))
 
 ## [5.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@5.1.3...@sb1/ffe-context-message-react@5.1.4) (2020-12-01)
 
-
 ### Bug Fixes
 
-* **ffe-context-message-react:** fiks typerna ([313902d](https://github.com/SpareBank1/designsystem/commit/313902d1ec6cb90cc478ce4a80172b5c1770753a))
-
-
-
-
+-   **ffe-context-message-react:** fiks typerna ([313902d](https://github.com/SpareBank1/designsystem/commit/313902d1ec6cb90cc478ce4a80172b5c1770753a))
 
 ## [5.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@5.1.2...@sb1/ffe-context-message-react@5.1.3) (2020-11-30)
 
-
 ### Bug Fixes
 
-* **ffe-context-message-react:** added missing ts type ([cf2ab8f](https://github.com/SpareBank1/designsystem/commit/cf2ab8f98b154b057a15780ebde819d6427a64a0))
-
-
-
-
+-   **ffe-context-message-react:** added missing ts type ([cf2ab8f](https://github.com/SpareBank1/designsystem/commit/cf2ab8f98b154b057a15780ebde819d6427a64a0))
 
 ## [5.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@5.1.1...@sb1/ffe-context-message-react@5.1.2) (2020-11-18)
 
 **Note:** Version bump only for package @sb1/ffe-context-message-react
 
-
-
-
-
 ## [5.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@5.1.0...@sb1/ffe-context-message-react@5.1.1) (2020-10-21)
-
 
 ### Bug Fixes
 
-* **ffe-context-message-react:** optout var for alert for error message ([1cca332](https://github.com/SpareBank1/designsystem/commit/1cca332fcbf83ee5324984c8e0737b4763408d52))
-
-
-
-
+-   **ffe-context-message-react:** optout var for alert for error message ([1cca332](https://github.com/SpareBank1/designsystem/commit/1cca332fcbf83ee5324984c8e0737b4763408d52))
 
 # [5.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@5.0.20...@sb1/ffe-context-message-react@5.1.0) (2020-10-02)
 
-
 ### Features
 
-* **ffe-context-message-react:** add role="alert" to error message ([e3aeaef](https://github.com/SpareBank1/designsystem/commit/e3aeaef8c1786b1fd993eed61f164bc4648360be))
-
-
-
-
+-   **ffe-context-message-react:** add role="alert" to error message ([e3aeaef](https://github.com/SpareBank1/designsystem/commit/e3aeaef8c1786b1fd993eed61f164bc4648360be))
 
 ## [5.0.20](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@5.0.19...@sb1/ffe-context-message-react@5.0.20) (2020-09-15)
 
 **Note:** Version bump only for package @sb1/ffe-context-message-react
 
-
-
-
-
 ## [5.0.19](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@5.0.18...@sb1/ffe-context-message-react@5.0.19) (2020-08-27)
 
 **Note:** Version bump only for package @sb1/ffe-context-message-react
-
-
-
-
 
 ## [5.0.18](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@5.0.17...@sb1/ffe-context-message-react@5.0.18) (2020-08-04)
 
 **Note:** Version bump only for package @sb1/ffe-context-message-react
 
-
-
-
-
 ## [5.0.17](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@5.0.16...@sb1/ffe-context-message-react@5.0.17) (2020-07-30)
 
 **Note:** Version bump only for package @sb1/ffe-context-message-react
-
-
-
-
 
 ## [5.0.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@5.0.15...@sb1/ffe-context-message-react@5.0.16) (2020-06-29)
 
 **Note:** Version bump only for package @sb1/ffe-context-message-react
 
-
-
-
-
 ## [5.0.15](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@5.0.14...@sb1/ffe-context-message-react@5.0.15) (2020-06-24)
 
 **Note:** Version bump only for package @sb1/ffe-context-message-react
 
-
-
-
-
 ## [5.0.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@5.0.13...@sb1/ffe-context-message-react@5.0.14) (2020-05-27)
-
 
 ### Bug Fixes
 
-* typo in docs for header prop in ctx msg ([078e142](https://github.com/SpareBank1/designsystem/commit/078e142555908c9d23993946bbe985527ff47b10))
-
-
-
-
+-   typo in docs for header prop in ctx msg ([078e142](https://github.com/SpareBank1/designsystem/commit/078e142555908c9d23993946bbe985527ff47b10))
 
 ## [5.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@5.0.12...@sb1/ffe-context-message-react@5.0.13) (2020-03-31)
 
