@@ -31,7 +31,7 @@
     "@sb1/ffe-icons-react": "^7.3.3",
     "classnames": "^2.3.1",
     "prop-types": "^15.7.2",
-    "uuid": "^8.3.2"
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "@sb1/ffe-buildtool": "^0.4.1",
