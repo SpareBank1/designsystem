@@ -4,6 +4,7 @@ import classNames from 'classnames';
 
 const StylizedNumberedList = ({ className, ...rest }) => (
     <ol
+        role="list"
         className={classNames('ffe-stylized-numbered-list', className)}
         {...rest}
     />
