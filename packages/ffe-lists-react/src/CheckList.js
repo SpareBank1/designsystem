@@ -4,6 +4,7 @@ import { node, oneOf, string } from 'prop-types';
 
 const CheckList = ({ className, columns, ...rest }) => (
     <ul
+        role="list"
         className={classNames(
             'ffe-check-list',
             { 'ffe-check-list--two-columns': Number(columns) === 2 },
