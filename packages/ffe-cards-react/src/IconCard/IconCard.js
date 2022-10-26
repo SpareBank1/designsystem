@@ -30,6 +30,7 @@ const IconCard = props => {
                     'ffe-icon-card__icon',
                     icon.props.className,
                 ),
+                'aria-hidden': 'true',
             })}
             <div className="ffe-icon-card__body">
                 {typeof children === 'function'
