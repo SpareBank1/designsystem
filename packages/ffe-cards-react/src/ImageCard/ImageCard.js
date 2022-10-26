@@ -28,7 +28,7 @@ const ImageCard = props => {
 };
 
 ImageCard.defaultProps = {
-    element: 'div',
+    element: 'a',
 };
 
 ImageCard.propTypes = {

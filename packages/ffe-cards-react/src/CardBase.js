@@ -16,7 +16,7 @@ const CardBase = React.forwardRef((props, ref) => {
 });
 
 CardBase.defaultProps = {
-    element: 'div',
+    element: 'a',
 };
 
 CardBase.propTypes = {

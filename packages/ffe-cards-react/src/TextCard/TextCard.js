@@ -22,7 +22,7 @@ const TextCard = props => {
 };
 
 TextCard.defaultProps = {
-    element: 'div',
+    element: 'a',
 };
 
 TextCard.propTypes = {
