@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [11.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@11.0.0...@sb1/ffe-lists@11.0.1) (2022-10-26)
+
+### Bug Fixes
+
+-   **ffe-lists:** fjerner display: block fra checklist items ([771c0f7](https://github.com/SpareBank1/designsystem/commit/771c0f74ee22b2f2839f5289c66367b0a2fd5e1f))
+
 # [11.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@10.0.31...@sb1/ffe-lists@11.0.0) (2022-10-20)
 
 ### Bug Fixes
