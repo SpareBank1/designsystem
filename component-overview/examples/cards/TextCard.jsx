@@ -1,6 +1,6 @@
 import { TextCard } from '@sb1/ffe-cards-react';
 
-<TextCard element="div">
+<TextCard href="https://design.sparebank1.no">
     {({ CardName, Title, Subtext, Text }) => (
         <>
             <CardName>Kortnavn</CardName>

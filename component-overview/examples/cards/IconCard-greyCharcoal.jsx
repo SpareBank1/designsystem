@@ -2,6 +2,7 @@ import { IconCard } from '@sb1/ffe-cards-react';
 import { KryssSirkelIkon } from '@sb1/ffe-icons-react';
 
 <IconCard
+    href="https://design.sparebank1.no"
     icon={<KryssSirkelIkon style={{ transform: 'rotate(45deg)' }} />}
     greyCharcoal={true}
     condensed={true}
