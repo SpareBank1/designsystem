@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@8.0.0...@sb1/ffe-cards-react@8.0.1) (2022-10-26)
+
+### Bug Fixes
+
+-   **ffe-cards-react:** legger til aria-hidden="true" i IconCard ([7cb3972](https://github.com/SpareBank1/designsystem/commit/7cb3972cf5a66793082fd7714c32abf94e8f3284))
+
 # [8.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@7.0.2...@sb1/ffe-cards-react@8.0.0) (2022-10-26)
 
 ### Bug Fixes

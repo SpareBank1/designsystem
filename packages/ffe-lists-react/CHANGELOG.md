@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@5.0.13...@sb1/ffe-lists-react@5.0.14) (2022-10-26)
+
+### Bug Fixes
+
+-   **ffe-lists-react:** legger til role="list" i CheckList og StylizedNumberedList ([37dcbec](https://github.com/SpareBank1/designsystem/commit/37dcbec6fa782e27b403cf046ab4b3e1ae35781b))
+
 ## [5.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@5.0.12...@sb1/ffe-lists-react@5.0.13) (2022-10-20)
 
 ### Bug Fixes
