@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.12.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.12.3...@sb1/ffe-component-index@3.12.4) (2022-10-26)
+
+### Bug Fixes
+
+-   **component-overview:** oppdaterer eksempler med nytt default element ([0b8156b](https://github.com/SpareBank1/designsystem/commit/0b8156b789cfa7cdaf12e0b83b25379c16001c1d))
+
 ## [3.12.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.12.2...@sb1/ffe-component-index@3.12.3) (2022-10-26)
 
 **Note:** Version bump only for package @sb1/ffe-component-index

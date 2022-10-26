@@ -3,298 +3,177 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@7.0.2...@sb1/ffe-cards-react@8.0.0) (2022-10-26)
+
+### Bug Fixes
+
+-   **ffe-cards-react:** endrer default element fra div til a ([f2baec2](https://github.com/SpareBank1/designsystem/commit/f2baec2500f1d49384c8b8ea6db21db10d3871d7))
+
+### BREAKING CHANGES
+
+-   **ffe-cards-react:** alle kort er nå a by default og må ha href eller et spesifisert custom element
+
 ## [7.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@7.0.1...@sb1/ffe-cards-react@7.0.2) (2022-09-09)
 
 **Note:** Version bump only for package @sb1/ffe-cards-react
 
-
-
-
-
 ## [7.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@7.0.0...@sb1/ffe-cards-react@7.0.1) (2022-06-02)
-
 
 ### Bug Fixes
 
-* **ffe-cards-react:** fix hierarchy of Cards declaration ([1327170](https://github.com/SpareBank1/designsystem/commit/13271705cd4df14d1381e363c89e1ce07b112d90))
-
-
-
-
+-   **ffe-cards-react:** fix hierarchy of Cards declaration ([1327170](https://github.com/SpareBank1/designsystem/commit/13271705cd4df14d1381e363c89e1ce07b112d90))
 
 # [7.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@6.0.0...@sb1/ffe-cards-react@7.0.0) (2022-04-20)
 
-
 ### Bug Fixes
 
-* **ffe-cards-react:** add children props for render-as-a-child for card components ([b55773e](https://github.com/SpareBank1/designsystem/commit/b55773e518a551844bd6e0e5fd7b03ee79d237ee))
-
+-   **ffe-cards-react:** add children props for render-as-a-child for card components ([b55773e](https://github.com/SpareBank1/designsystem/commit/b55773e518a551844bd6e0e5fd7b03ee79d237ee))
 
 ### BREAKING CHANGES
 
-* **ffe-cards-react:** TextRenderProps is replaced with CardRenderProps.
-It no longer needs to be manually specified.
-
-
-
-
+-   **ffe-cards-react:** TextRenderProps is replaced with CardRenderProps.
+    It no longer needs to be manually specified.
 
 # [6.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@5.0.10...@sb1/ffe-cards-react@6.0.0) (2022-03-09)
 
-
 ### Bug Fixes
 
-* **ffe-cards-react:** decouple card classes from card-base ([f6c0927](https://github.com/SpareBank1/designsystem/commit/f6c092758db19a6bf4b5ed6d97a49b667c561076)), closes [#1333](https://github.com/SpareBank1/designsystem/issues/1333)
-* **ffe-cards-react:** fix css class name inconsistency ([4a1ad79](https://github.com/SpareBank1/designsystem/commit/4a1ad792fb3490d6328aea2f2b1d2e360b4e73e6))
-* **ffe-cards-react:** refactor class names of ImageCard ([49a2f6a](https://github.com/SpareBank1/designsystem/commit/49a2f6a1365b97b1533285f8ead1cec143843e41))
-* **ffe-cards-react:** use renamed class names for card-components ([6c4eff8](https://github.com/SpareBank1/designsystem/commit/6c4eff87d72f9128b27a302e54551fe66e1fa480))
-
+-   **ffe-cards-react:** decouple card classes from card-base ([f6c0927](https://github.com/SpareBank1/designsystem/commit/f6c092758db19a6bf4b5ed6d97a49b667c561076)), closes [#1333](https://github.com/SpareBank1/designsystem/issues/1333)
+-   **ffe-cards-react:** fix css class name inconsistency ([4a1ad79](https://github.com/SpareBank1/designsystem/commit/4a1ad792fb3490d6328aea2f2b1d2e360b4e73e6))
+-   **ffe-cards-react:** refactor class names of ImageCard ([49a2f6a](https://github.com/SpareBank1/designsystem/commit/49a2f6a1365b97b1533285f8ead1cec143843e41))
+-   **ffe-cards-react:** use renamed class names for card-components ([6c4eff8](https://github.com/SpareBank1/designsystem/commit/6c4eff87d72f9128b27a302e54551fe66e1fa480))
 
 ### BREAKING CHANGES
 
-* **ffe-cards-react:** IconCard, ImageCard an TextCard do not use the css
-class `ffe-card-base` anymore.
-* **ffe-cards-react:** Card components now use the renamed css classes
-`ffe-card-body__*` (see 961a3502).
-
-
-
-
+-   **ffe-cards-react:** IconCard, ImageCard an TextCard do not use the css
+    class `ffe-card-base` anymore.
+-   **ffe-cards-react:** Card components now use the renamed css classes
+    `ffe-card-body__*` (see 961a3502).
 
 ## [5.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@5.0.9...@sb1/ffe-cards-react@5.0.10) (2022-03-02)
 
 **Note:** Version bump only for package @sb1/ffe-cards-react
 
-
-
-
-
 ## [5.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@5.0.8...@sb1/ffe-cards-react@5.0.9) (2022-02-23)
 
 **Note:** Version bump only for package @sb1/ffe-cards-react
-
-
-
-
 
 ## [5.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@5.0.7...@sb1/ffe-cards-react@5.0.8) (2022-02-18)
 
 **Note:** Version bump only for package @sb1/ffe-cards-react
 
-
-
-
-
 ## [5.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@5.0.6...@sb1/ffe-cards-react@5.0.7) (2022-01-27)
 
 **Note:** Version bump only for package @sb1/ffe-cards-react
-
-
-
-
 
 ## [5.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@5.0.5...@sb1/ffe-cards-react@5.0.6) (2022-01-27)
 
 **Note:** Version bump only for package @sb1/ffe-cards-react
 
-
-
-
-
 ## [5.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@5.0.4...@sb1/ffe-cards-react@5.0.5) (2022-01-25)
 
 **Note:** Version bump only for package @sb1/ffe-cards-react
-
-
-
-
 
 ## [5.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@5.0.3...@sb1/ffe-cards-react@5.0.4) (2022-01-24)
 
 **Note:** Version bump only for package @sb1/ffe-cards-react
 
-
-
-
-
 ## [5.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@5.0.2...@sb1/ffe-cards-react@5.0.3) (2021-12-17)
 
 **Note:** Version bump only for package @sb1/ffe-cards-react
 
-
-
-
-
 ## [5.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@5.0.1...@sb1/ffe-cards-react@5.0.2) (2021-12-10)
-
 
 ### Bug Fixes
 
-* **ffe-cards-react:** use buildtool for transpiling ([305defd](https://github.com/SpareBank1/designsystem/commit/305defdd7eb2b66ff37563fd3c8dff9ec6e836e2)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
-
-
-
-
+-   **ffe-cards-react:** use buildtool for transpiling ([305defd](https://github.com/SpareBank1/designsystem/commit/305defdd7eb2b66ff37563fd3c8dff9ec6e836e2)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
 
 ## [5.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@5.0.0...@sb1/ffe-cards-react@5.0.1) (2021-11-04)
 
 **Note:** Version bump only for package @sb1/ffe-cards-react
 
-
-
-
-
 # [5.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@4.0.7...@sb1/ffe-cards-react@5.0.0) (2021-09-13)
-
 
 ### Features
 
-* **ffe-cards-react:** fjern deprecated link og product card ([0a86013](https://github.com/SpareBank1/designsystem/commit/0a86013faf1f343bbdb2e98ea58e805ab12c51b2))
-
+-   **ffe-cards-react:** fjern deprecated link og product card ([0a86013](https://github.com/SpareBank1/designsystem/commit/0a86013faf1f343bbdb2e98ea58e805ab12c51b2))
 
 ### BREAKING CHANGES
 
-* **ffe-cards-react:** LinkCard og ProductCard har vært deprecated i flere år,
-nå fjernes de helt fra koden
-
-
-
-
+-   **ffe-cards-react:** LinkCard og ProductCard har vært deprecated i flere år,
+    nå fjernes de helt fra koden
 
 ## [4.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@4.0.6...@sb1/ffe-cards-react@4.0.7) (2021-03-15)
 
-
 ### Bug Fixes
 
-* **ffe-cards-react:** broadens version of peer dependencies ([45f5004](https://github.com/SpareBank1/designsystem/commit/45f5004d24eb11d5743c73935c91f0efccee2cbd))
-
-
-
-
+-   **ffe-cards-react:** broadens version of peer dependencies ([45f5004](https://github.com/SpareBank1/designsystem/commit/45f5004d24eb11d5743c73935c91f0efccee2cbd))
 
 ## [4.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@4.0.5...@sb1/ffe-cards-react@4.0.6) (2021-02-02)
 
-
 ### Bug Fixes
 
-* packages/ffe-cards-react/package.json to reduce vulnerabilities ([2fdb9c8](https://github.com/SpareBank1/designsystem/commit/2fdb9c8dd37b1aa005ed77f3009bb613dc1c0ab8))
-
-
-
-
+-   packages/ffe-cards-react/package.json to reduce vulnerabilities ([2fdb9c8](https://github.com/SpareBank1/designsystem/commit/2fdb9c8dd37b1aa005ed77f3009bb613dc1c0ab8))
 
 ## [4.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@4.0.4...@sb1/ffe-cards-react@4.0.5) (2021-02-02)
 
-
 ### Bug Fixes
 
-* **ffe-cards-react:** reduce vulnerabilities ([5d5b8c3](https://github.com/SpareBank1/designsystem/commit/5d5b8c36df973908e5823100f7a967f9fb0442bd))
-
-
-
-
+-   **ffe-cards-react:** reduce vulnerabilities ([5d5b8c3](https://github.com/SpareBank1/designsystem/commit/5d5b8c36df973908e5823100f7a967f9fb0442bd))
 
 ## [4.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@4.0.3...@sb1/ffe-cards-react@4.0.4) (2020-11-18)
 
 **Note:** Version bump only for package @sb1/ffe-cards-react
 
-
-
-
-
 ## [4.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@4.0.2...@sb1/ffe-cards-react@4.0.3) (2020-09-28)
-
 
 ### Bug Fixes
 
-* **ffe-cards-react:** cardbase need to be able to be a button or anchor ([3cc02c1](https://github.com/SpareBank1/designsystem/commit/3cc02c181382593fb12958b9eb97a52d6a7e7715))
-
-
-
-
+-   **ffe-cards-react:** cardbase need to be able to be a button or anchor ([3cc02c1](https://github.com/SpareBank1/designsystem/commit/3cc02c181382593fb12958b9eb97a52d6a7e7715))
 
 ## [4.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@4.0.1...@sb1/ffe-cards-react@4.0.2) (2020-09-15)
 
 **Note:** Version bump only for package @sb1/ffe-cards-react
 
-
-
-
-
 ## [4.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@4.0.0...@sb1/ffe-cards-react@4.0.1) (2020-08-27)
 
 **Note:** Version bump only for package @sb1/ffe-cards-react
 
-
-
-
-
 # [4.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@3.1.5...@sb1/ffe-cards-react@4.0.0) (2020-08-12)
-
 
 ### Features
 
-* **ffe-cards-react:** forward ref ([08aacf1](https://github.com/SpareBank1/designsystem/commit/08aacf180574aa1bdde04e6af40a855e1f633db1))
-
+-   **ffe-cards-react:** forward ref ([08aacf1](https://github.com/SpareBank1/designsystem/commit/08aacf180574aa1bdde04e6af40a855e1f633db1))
 
 ### BREAKING CHANGES
 
-* **ffe-cards-react:** "When you start using forwardRef in a component library, you should treat it as a breaking change and release a new major version of your library. This is because your library likely has an observably different behavior (such as what refs get assigned to, and what types are exported), and this can break apps and other libraries that depend on the old behavior."
-
-
-
-
+-   **ffe-cards-react:** "When you start using forwardRef in a component library, you should treat it as a breaking change and release a new major version of your library. This is because your library likely has an observably different behavior (such as what refs get assigned to, and what types are exported), and this can break apps and other libraries that depend on the old behavior."
 
 ## [3.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@3.1.4...@sb1/ffe-cards-react@3.1.5) (2020-08-04)
 
 **Note:** Version bump only for package @sb1/ffe-cards-react
 
-
-
-
-
 ## [3.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@3.1.3...@sb1/ffe-cards-react@3.1.4) (2020-07-30)
 
 **Note:** Version bump only for package @sb1/ffe-cards-react
-
-
-
-
 
 ## [3.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@3.1.2...@sb1/ffe-cards-react@3.1.3) (2020-06-29)
 
 **Note:** Version bump only for package @sb1/ffe-cards-react
 
-
-
-
-
 ## [3.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@3.1.1...@sb1/ffe-cards-react@3.1.2) (2020-06-24)
 
 **Note:** Version bump only for package @sb1/ffe-cards-react
-
-
-
-
 
 ## [3.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@3.1.0...@sb1/ffe-cards-react@3.1.1) (2020-05-27)
 
 **Note:** Version bump only for package @sb1/ffe-cards-react
 
-
-
-
-
 # [3.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@3.0.14...@sb1/ffe-cards-react@3.1.0) (2020-04-23)
-
 
 ### Features
 
-* **ffe-cards-react:** add typescript types ([4781651](https://github.com/SpareBank1/designsystem/commit/47816514664d2da4d78c072fec8347b99bc35b8e))
-
-
-
-
+-   **ffe-cards-react:** add typescript types ([4781651](https://github.com/SpareBank1/designsystem/commit/47816514664d2da4d78c072fec8347b99bc35b8e))
 
 ## [3.0.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@3.0.13...@sb1/ffe-cards-react@3.0.14) (2020-03-31)
 
