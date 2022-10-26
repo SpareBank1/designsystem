@@ -41,7 +41,7 @@ const IconCard = props => {
 };
 
 IconCard.defaultProps = {
-    element: 'div',
+    element: 'a',
 };
 
 IconCard.propTypes = {

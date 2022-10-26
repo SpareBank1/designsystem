@@ -6,10 +6,10 @@ const getWrapper = props => shallow(<CardBase {...props} />);
 const children = <div>Hello world</div>;
 
 describe('CardBase', () => {
-    it('should render a div element with correct class and children inside', () => {
+    it('should render an a element with correct class and children inside', () => {
         const wrapper = getWrapper({ children });
 
-        expect(wrapper.find('div').exists()).toBe(true);
+        expect(wrapper.find('a').exists()).toBe(true);
         expect(wrapper.hasClass('ffe-card-base')).toBe(true);
         expect(
             wrapper
