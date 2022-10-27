@@ -27,6 +27,12 @@ export interface LinkTextProps extends React.AnchorHTMLAttributes<HTMLElement> {
     underline?: boolean;
 }
 
+export interface LinkIconProps extends React.AnchorHTMLAttributes<HTMLElement> {
+    children: React.ReactNode;
+    className?: string;
+    element?: HTMLElement | string | React.ElementType;
+}
+
 export interface SimpleElementProps {
     children: React.ReactNode;
     className?: string;
@@ -88,6 +94,7 @@ declare class Heading4 extends React.Component<HeadingProps, any> {}
 declare class Heading5 extends React.Component<HeadingProps, any> {}
 declare class Heading6 extends React.Component<HeadingProps, any> {}
 declare class LinkText extends React.Component<LinkTextProps, any> {}
+declare class LinkIcon extends React.Component<LinkIconProps, any> {}
 declare class MicroText extends React.Component<
     SimpleElementProps & React.HTMLAttributes<HTMLSpanElement>,
     any
