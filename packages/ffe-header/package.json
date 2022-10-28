@@ -15,16 +15,16 @@
     "scripts": {
         "build": "lessc less/ffe-header-nodeps.less css/ffe-header.css --autoprefix",
         "build:examples": "lessc less/ffe-header-nodeps.less examples/ffe-header.css --autoprefix && lessc examples/examples.less examples/examples.css",
-        "lint": "stylelint less/*.less",
+        "lint": "ffe-buildtool stylelint less/*.less",
         "test": "npm run lint"
     },
     "devDependencies": {
+        "@sb1/ffe-buildtool": "^0.4.1",
         "@sb1/ffe-buttons": "^16.0.0",
         "@sb1/ffe-core": "^26.0.0",
         "@sb1/ffe-webfonts": "^3.0.2",
         "less": "^4.1.2",
-        "less-plugin-autoprefix": "^2.0.0",
-        "stylelint": "^13.0.0"
+        "less-plugin-autoprefix": "^2.0.0"
     },
     "peerDependencies": {
         "@sb1/ffe-buttons": "*",

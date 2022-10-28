@@ -69,7 +69,6 @@
 
 .ffe-radio-input {
     &:checked + .ffe-radio-switch {
-        /* stylelint-disable-next-line selector-max-specificity */
         &:not(.ffe-radio-button--invalid) {
             border-color: var(--ffe-g-secondary-color);
         }
@@ -87,7 +86,6 @@
             0 0 0 5px var(--ffe-v-checkbox-focus-outline-color);
     }
 
-    /* stylelint-disable-next-line selector-max-specificity */
     &:checked + .ffe-radio-switch::before {
         border: 5px solid var(--ffe-v-input-bg-color);
         background-color: var(--ffe-v-checkbox-selected-color);

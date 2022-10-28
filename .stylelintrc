@@ -1,3 +1,6 @@
 {
-    "extends": "./linting/stylelint-config-ffe"
+    "extends": [
+        "./buildtool/config/stylelint.config",
+        "stylelint-config-prettier"
+    ]
 }
