@@ -328,6 +328,21 @@
     }
 }
 
+.ffe-link-icon {
+    fill: var(--ffe-g-link-color);
+    display: inline-flex;
+    border-radius: 1.5rem;
+    border: 2px solid transparent;
+    outline: 0;
+    padding: @ffe-spacing-2xs;
+    &:hover {
+        fill: var(--ffe-g-link-icon-color-hover);
+    }
+    &:focus {
+        box-shadow: 0 0 0 2px var(--ffe-g-link-icon-color-focus);
+    }
+}
+
 .ffe-divider-line {
     border: none;
     border-bottom: solid 1px @ffe-farge-lysgraa;
