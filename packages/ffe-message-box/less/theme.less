@@ -1,0 +1,32 @@
+:root {
+    /** Common */
+    --ffe-v-message-box-icon-bg-color: var(--ffe-farge-hvit);
+
+    /** onColoredBg variant */
+    --ffe-v-message-box-variant-bg-color: var(--ffe-farge-hvit);
+
+    /** Tips */
+    --ffe-v-message-box-tips-bg-color: var(--ffe-farge-sand);
+    --ffe-v-message-box-tips-icon-color: var(--ffe-farge-sol);
+
+    /** Info */
+    --ffe-v-message-box-info-bg-color: var(--ffe-farge-frost-30);
+    --ffe-v-message-box-info-icon-color: var(--ffe-farge-vann);
+
+    /** Success */
+    --ffe-v-message-box-success-bg-color: var(--ffe-farge-nordlys-30);
+    --ffe-v-message-box-success-icon-color: var(--ffe-farge-nordlys-wcag);
+
+    /** Error */
+    --ffe-v-message-box-error-bg-color: var(--ffe-farge-baer-30);
+    --ffe-v-message-box-error-icon-color: var(--ffe-farge-baer);
+
+    @media (prefers-color-scheme: dark) {
+        .native {
+            --ffe-v-message-box-info-bg-color: var(--ffe-farge-vann-30);
+            --ffe-v-message-box-icon-bg-color: var(--ffe-farge-svart);
+            --ffe-v-message-box-info-icon-color: var(--ffe-farge-vann-70);
+            --ffe-v-message-box-success-icon-color: var(--ffe-farge-nordlys);
+        }
+    }
+}

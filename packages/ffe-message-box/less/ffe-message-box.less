@@ -23,12 +23,12 @@
 
 .ffe-message-box {
     text-align: center;
-    font-family: 'SpareBank1-regular', 'MuseoSans-500', arial, sans-serif;
+    font-family: var(--ffe-g-font);
 
     .ffe-body-paragraph {
         .native & {
             @media (prefers-color-scheme: dark) {
-                color: @ffe-farge-svart;
+                color: var(--ffe-farge-svart);
             }
         }
     }
@@ -36,78 +36,73 @@
     &__box {
         padding: @ffe-spacing-xl @ffe-spacing-lg;
         border-radius: @ffe-spacing-xs;
-        color: @ffe-farge-svart;
+        color: var(--ffe-farge-svart);
         .native & {
             @media (prefers-color-scheme: dark) {
-                color: @ffe-farge-svart;
+                color: var(--ffe-farge-svart);
             }
         }
     }
 
     &--tips &__box {
-        background-color: @ffe-farge-sand;
+        background-color: var(--ffe-v-message-box-tips-bg-color);
     }
 
     &--tips&--coloredbg &__box {
-        background-color: @ffe-farge-hvit;
+        background-color: var(--ffe-v-message-box-variant-bg-color);
         .native & {
             @media (prefers-color-scheme: dark) {
-                background-color: @ffe-farge-sand;
+                background-color: var(--ffe-v-message-box-tips-bg-color);
             }
         }
     }
 
     &--info &__box {
-        background-color: @ffe-farge-frost-30;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                background-color: @ffe-farge-vann-30;
-            }
-        }
+        background-color: var(--ffe-v-message-box-info-bg-color);
     }
 
     &--info&--coloredbg &__box {
-        background-color: @ffe-farge-hvit;
+        background-color: var(--ffe-v-message-box-variant-bg-color);
         .native & {
             @media (prefers-color-scheme: dark) {
-                background-color: @ffe-farge-vann-30;
+                background-color: var(--ffe-v-message-box-info-bg-color);
             }
         }
     }
 
     &--success &__box {
-        background-color: @ffe-farge-nordlys-30;
+        background-color: var(--ffe-v-message-box-success-bg-color);
     }
 
     &--success&--coloredbg &__box {
-        background-color: @ffe-farge-hvit;
+        background-color: var(--ffe-v-message-box-variant-bg-color);
         .native & {
             @media (prefers-color-scheme: dark) {
-                background-color: @ffe-farge-nordlys-30;
+                background-color: var(--ffe-v-message-box-success-bg-color);
             }
         }
     }
 
     &--error &__box {
-        background-color: @ffe-farge-baer-30;
+        background-color: var(--ffe-v-message-box-error-bg-color);
     }
 
     &--error&--coloredbg &__box {
-        background-color: @ffe-farge-hvit;
+        background-color: var(--ffe-v-message-box-variant-bg-color);
         .native & {
             @media (prefers-color-scheme: dark) {
-                background-color: @ffe-farge-baer-30;
+                background-color: var(--ffe-v-message-box-error-bg-color);
             }
         }
     }
 
     &__title {
-        color: @ffe-farge-svart;
+        color: var(--ffe-farge-svart);
         font-size: 18px;
         margin-bottom: @ffe-spacing-sm;
         .native & {
             @media (prefers-color-scheme: dark) {
-                color: @ffe-farge-svart;
+                color: var(--ffe-farge-svart);
             }
         }
         .ffe-strong-text();
@@ -120,16 +115,16 @@
         text-align: left;
         .native {
             li {
-                color: @ffe-farge-svart;
+                color: var(--ffe-farge-svart);
             }
         }
     }
 
     &__icon {
-        background-color: @ffe-farge-hvit;
+        background-color: var(--ffe-v-message-box-icon-bg-color);
         border-radius: 50%;
         display: inline-flex;
-        fill: @ffe-farge-vann;
+        fill: var(--ffe-v-message-box-info-icon-color);
         height: 64px;
         margin-bottom: -16px;
         align-items: center;
@@ -137,50 +132,37 @@
         position: relative;
         top: 16px;
         width: 64px;
-        border: 2px solid @ffe-farge-vann;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                background-color: @ffe-farge-svart;
-                fill: @ffe-farge-vann-70;
-                border-color: @ffe-farge-vann-70;
-            }
-        }
+        border: 2px solid var(--ffe-v-message-box-info-icon-color);
     }
 
     &--tips &__icon {
-        border-color: @ffe-farge-sol;
+        border-color: var(--ffe-v-message-box-tips-icon-color);
         svg {
-            fill: @ffe-farge-sol;
+            fill: var(--ffe-v-message-box-tips-icon-color);
         }
     }
 
     &--error &__icon {
-        border-color: @ffe-farge-baer;
+        border-color: var(--ffe-v-message-box-error-icon-color);
         svg {
-            fill: @ffe-farge-baer;
+            fill: var(--ffe-v-message-box-error-icon-color);
         }
     }
 
     &--success &__icon {
-        border-color: @ffe-farge-nordlys-wcag;
+        border-color: var(--ffe-v-message-box-success-icon-color);
         svg {
-            fill: @ffe-farge-nordlys-wcag;
-        }
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                fill: @ffe-farge-nordlys;
-                border-color: @ffe-farge-nordlys;
-            }
+            fill: var(--ffe-v-message-box-success-icon-color);
         }
     }
 
     @media print {
         &__box {
-            border: 2px dashed @ffe-farge-svart;
+            border: 2px dashed var(--ffe-farge-svart);
         }
 
         &__icon {
-            border-bottom: 2px dashed @ffe-farge-svart;
+            border-bottom: 2px dashed var(--ffe-farge-svart);
             margin-bottom: -33.5px;
         }
     }
