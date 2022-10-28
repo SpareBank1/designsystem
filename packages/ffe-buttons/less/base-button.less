@@ -185,37 +185,20 @@
     border-radius: 1.75rem;
     border: 2px solid transparent;
     box-shadow: none;
-    color: @ffe-farge-vann;
+    color: var(--ffe-v-button-task-primary-color);
     display: inline-block;
     padding: @ffe-spacing-2xs @ffe-spacing-sm @ffe-spacing-2xs @ffe-spacing-2xs;
     text-align: left;
     transition: all @ffe-transition-duration @ffe-ease;
     width: auto;
-    .native & {
-        @media (prefers-color-scheme: dark) {
-            color: @ffe-farge-vann-30;
-        }
-    }
 
     &:hover {
-        color: @ffe-farge-fjell;
+        color: var(--ffe-v-button-task-text-color-hover);
         box-shadow: none;
-
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-farge-hvit;
-            }
-        }
     }
 
     &:focus {
-        border-color: @ffe-farge-vann;
-
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                border-color: @ffe-farge-hvit;
-            }
-        }
+        border-color: var(--ffe-v-button-task-border-focus);
 
         &::after {
             display: none;
@@ -260,10 +243,10 @@
     }
 
     .ffe-button--task & {
-        border: 2px solid @ffe-farge-vann;
+        border: 2px solid var(--ffe-v-button-primary-color);
         border-radius: 50%;
         background-color: @ffe-farge-hvit;
-        fill: @ffe-farge-vann;
+        fill: var(--ffe-v-button-task-primary-color);
         height: 45px;
         padding: 13px;
         margin: 0 @ffe-spacing-xs 0 0;
@@ -271,22 +254,16 @@
         transition: all @ffe-transition-duration @ffe-ease;
         .native & {
             @media (prefers-color-scheme: dark) {
-                border-color: @ffe-farge-vann-70;
                 background-color: transparent;
-                fill: @ffe-farge-vann-30;
             }
         }
     }
 
     .ffe-button--expand & {
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                fill: @ffe-farge-vann-30;
-            }
-        }
+        fill: var(--ffe-v-button-task-primary-color);
     }
-
     .ffe-button--expand:hover & {
+        fill: @ffe-farge-hvit;
         .native & {
             @media (prefers-color-scheme: dark) {
                 fill: @ffe-farge-svart;
@@ -295,16 +272,9 @@
     }
 
     .ffe-button--task:hover & {
-        border-color: @ffe-farge-vann;
-        background-color: @ffe-farge-vann;
-        fill: @ffe-farge-hvit;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                border-color: @ffe-farge-vann-70;
-                background-color: @ffe-farge-vann-70;
-                fill: @ffe-farge-svart;
-            }
-        }
+        border-color: var(--ffe-v-button-primary-color);
+        background-color: var(--ffe-v-button-primary-color);
+        fill: var(--ffe-v-button-primary-color-text);
     }
 }
 
