@@ -3,393 +3,220 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [16.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@16.0.6...@sb1/ffe-buttons-react@16.0.7) (2022-10-28)
+
+**Note:** Version bump only for package @sb1/ffe-buttons-react
+
 ## [16.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@16.0.5...@sb1/ffe-buttons-react@16.0.6) (2022-09-09)
 
 **Note:** Version bump only for package @sb1/ffe-buttons-react
 
-
-
-
-
 ## [16.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@16.0.4...@sb1/ffe-buttons-react@16.0.5) (2022-08-05)
-
 
 ### Bug Fixes
 
-* **ffe-buttons-react:** legg til role på span som inneholder loading ikon ([a987d11](https://github.com/SpareBank1/designsystem/commit/a987d11911a66c70d08737d91b2aa6af11f2152a))
-
-
-
-
+-   **ffe-buttons-react:** legg til role på span som inneholder loading ikon ([a987d11](https://github.com/SpareBank1/designsystem/commit/a987d11911a66c70d08737d91b2aa6af11f2152a))
 
 ## [16.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@16.0.3...@sb1/ffe-buttons-react@16.0.4) (2022-07-29)
 
-
 ### Bug Fixes
 
-* **ffe-buttons-react:** legg til aria-hidden på kryssikon ([7ed2dc7](https://github.com/SpareBank1/designsystem/commit/7ed2dc7bb824cf06204c902e3d8dc7abb06e380d))
-
-
-
-
+-   **ffe-buttons-react:** legg til aria-hidden på kryssikon ([7ed2dc7](https://github.com/SpareBank1/designsystem/commit/7ed2dc7bb824cf06204c902e3d8dc7abb06e380d))
 
 ## [16.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@16.0.2...@sb1/ffe-buttons-react@16.0.3) (2022-07-20)
 
-
 ### Bug Fixes
 
-* **ffe-buttons-react:** legg til aria-hidden på inline og expand button ikoner ([9aa7b59](https://github.com/SpareBank1/designsystem/commit/9aa7b59203d9bb4b89b2e5d44f215c3b4aa7221b))
-
-
-
-
+-   **ffe-buttons-react:** legg til aria-hidden på inline og expand button ikoner ([9aa7b59](https://github.com/SpareBank1/designsystem/commit/9aa7b59203d9bb4b89b2e5d44f215c3b4aa7221b))
 
 ## [16.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@16.0.1...@sb1/ffe-buttons-react@16.0.2) (2022-05-19)
 
-
 ### Bug Fixes
 
-* **ffe-buttons-react:** fikser [#1382](https://github.com/SpareBank1/designsystem/issues/1382) og [#1386](https://github.com/SpareBank1/designsystem/issues/1386) ([e61ec8f](https://github.com/SpareBank1/designsystem/commit/e61ec8f30935dc96f279e39869cffa86d064aa3e))
-
-
-
-
+-   **ffe-buttons-react:** fikser [#1382](https://github.com/SpareBank1/designsystem/issues/1382) og [#1386](https://github.com/SpareBank1/designsystem/issues/1386) ([e61ec8f](https://github.com/SpareBank1/designsystem/commit/e61ec8f30935dc96f279e39869cffa86d064aa3e))
 
 ## [16.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@16.0.0...@sb1/ffe-buttons-react@16.0.1) (2022-04-12)
 
-
 ### Bug Fixes
 
-* **ffe-buttons-react:** add children type on ButtonGruop ([e151283](https://github.com/SpareBank1/designsystem/commit/e15128302c2fd5b45a8f038a69e36070bb7c9728))
-
-
-
-
+-   **ffe-buttons-react:** add children type on ButtonGruop ([e151283](https://github.com/SpareBank1/designsystem/commit/e15128302c2fd5b45a8f038a69e36070bb7c9728))
 
 # [16.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@15.0.0...@sb1/ffe-buttons-react@16.0.0) (2022-03-11)
 
-
 ### Features
 
-* **ffe-buttons-react:** remove condensed variant of buttons ([c0df577](https://github.com/SpareBank1/designsystem/commit/c0df57709d751589e4c60db9eee10e0661ff2160)), closes [#1251](https://github.com/SpareBank1/designsystem/issues/1251)
-
+-   **ffe-buttons-react:** remove condensed variant of buttons ([c0df577](https://github.com/SpareBank1/designsystem/commit/c0df57709d751589e4c60db9eee10e0661ff2160)), closes [#1251](https://github.com/SpareBank1/designsystem/issues/1251)
 
 ### BREAKING CHANGES
 
-* **ffe-buttons-react:** remove condensed variant of buttons, i.e. the prop `condensed`.
-
-
-
-
+-   **ffe-buttons-react:** remove condensed variant of buttons, i.e. the prop `condensed`.
 
 # [15.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@14.1.2...@sb1/ffe-buttons-react@15.0.0) (2022-03-08)
 
-
 ### Bug Fixes
 
-* **ffe-buttons-react:** fjerner --ghost ([428cbf7](https://github.com/SpareBank1/designsystem/commit/428cbf7cd642701a5683390d9af7d2cf181a0588))
-
+-   **ffe-buttons-react:** fjerner --ghost ([428cbf7](https://github.com/SpareBank1/designsystem/commit/428cbf7cd642701a5683390d9af7d2cf181a0588))
 
 ### BREAKING CHANGES
 
-* **ffe-buttons-react:** sletter --ghost og tilhørende prop i react-implementasjonen
-
-
-
-
+-   **ffe-buttons-react:** sletter --ghost og tilhørende prop i react-implementasjonen
 
 ## [14.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@14.1.1...@sb1/ffe-buttons-react@14.1.2) (2022-03-02)
 
 **Note:** Version bump only for package @sb1/ffe-buttons-react
 
-
-
-
-
 ## [14.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@14.1.0...@sb1/ffe-buttons-react@14.1.1) (2022-02-23)
 
 **Note:** Version bump only for package @sb1/ffe-buttons-react
 
-
-
-
-
 # [14.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@14.0.12...@sb1/ffe-buttons-react@14.1.0) (2022-02-18)
-
 
 ### Features
 
-* **ffe-buttons-react:** import icons without need for tree shaking ([f856288](https://github.com/SpareBank1/designsystem/commit/f8562889018e6f47ecbae1953b1752bcdb362f8f))
-
-
-
-
+-   **ffe-buttons-react:** import icons without need for tree shaking ([f856288](https://github.com/SpareBank1/designsystem/commit/f8562889018e6f47ecbae1953b1752bcdb362f8f))
 
 ## [14.0.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@14.0.11...@sb1/ffe-buttons-react@14.0.12) (2022-01-27)
 
 **Note:** Version bump only for package @sb1/ffe-buttons-react
 
-
-
-
-
 ## [14.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@14.0.10...@sb1/ffe-buttons-react@14.0.11) (2022-01-27)
 
 **Note:** Version bump only for package @sb1/ffe-buttons-react
-
-
-
-
 
 ## [14.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@14.0.9...@sb1/ffe-buttons-react@14.0.10) (2022-01-25)
 
 **Note:** Version bump only for package @sb1/ffe-buttons-react
 
-
-
-
-
 ## [14.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@14.0.8...@sb1/ffe-buttons-react@14.0.9) (2022-01-24)
 
 **Note:** Version bump only for package @sb1/ffe-buttons-react
-
-
-
-
 
 ## [14.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@14.0.7...@sb1/ffe-buttons-react@14.0.8) (2021-12-17)
 
 **Note:** Version bump only for package @sb1/ffe-buttons-react
 
-
-
-
-
 ## [14.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@14.0.6...@sb1/ffe-buttons-react@14.0.7) (2021-12-10)
-
 
 ### Bug Fixes
 
-* **ffe-buttons-react:** use buildtool for transpiling ([0510533](https://github.com/SpareBank1/designsystem/commit/0510533dd523920e1805855e7c35778ca24e524b)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
-
-
-
-
+-   **ffe-buttons-react:** use buildtool for transpiling ([0510533](https://github.com/SpareBank1/designsystem/commit/0510533dd523920e1805855e7c35778ca24e524b)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
 
 ## [14.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@14.0.5...@sb1/ffe-buttons-react@14.0.6) (2021-12-03)
 
-
 ### Bug Fixes
 
-* **ffe-buttons-react:** swallow klicks when button is loading ([6daa3b8](https://github.com/SpareBank1/designsystem/commit/6daa3b89a13d21976880d0514edd5b8ab7384c79))
-
-
-
-
+-   **ffe-buttons-react:** swallow klicks when button is loading ([6daa3b8](https://github.com/SpareBank1/designsystem/commit/6daa3b89a13d21976880d0514edd5b8ab7384c79))
 
 ## [14.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@14.0.4...@sb1/ffe-buttons-react@14.0.5) (2021-11-04)
 
 **Note:** Version bump only for package @sb1/ffe-buttons-react
 
-
-
-
-
 ## [14.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@14.0.3...@sb1/ffe-buttons-react@14.0.4) (2021-10-19)
-
 
 ### Bug Fixes
 
-* **ffe-buttons-react:** fjerner gjenglemte referanser til --dark ([8728a6b](https://github.com/SpareBank1/designsystem/commit/8728a6ba7657f21e9a4bd10b8c419eb9e21532dc))
-
-
-
-
+-   **ffe-buttons-react:** fjerner gjenglemte referanser til --dark ([8728a6b](https://github.com/SpareBank1/designsystem/commit/8728a6ba7657f21e9a4bd10b8c419eb9e21532dc))
 
 ## [14.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@14.0.2...@sb1/ffe-buttons-react@14.0.3) (2021-10-18)
 
-
 ### Bug Fixes
 
-* **ffe-buttons-react:** remove disabled attribute when is-loading ([d666aa1](https://github.com/SpareBank1/designsystem/commit/d666aa1716756e4f878695b5455a09d3b3cd4ecb))
-
-
-
-
+-   **ffe-buttons-react:** remove disabled attribute when is-loading ([d666aa1](https://github.com/SpareBank1/designsystem/commit/d666aa1716756e4f878695b5455a09d3b3cd4ecb))
 
 ## [14.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@14.0.1...@sb1/ffe-buttons-react@14.0.2) (2021-10-08)
 
 **Note:** Version bump only for package @sb1/ffe-buttons-react
 
-
-
-
-
 ## [14.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@14.0.0...@sb1/ffe-buttons-react@14.0.1) (2021-09-12)
-
 
 ### Bug Fixes
 
-* **ffe-buttons-react:** minor refactoring ([222cc5f](https://github.com/SpareBank1/designsystem/commit/222cc5fdba0fe7fcb50ff1c803ab645237e5846a))
-
-
-
-
+-   **ffe-buttons-react:** minor refactoring ([222cc5f](https://github.com/SpareBank1/designsystem/commit/222cc5fdba0fe7fcb50ff1c803ab645237e5846a))
 
 # [14.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@12.2.11...@sb1/ffe-buttons-react@14.0.0) (2021-09-06)
 
-
 ### Bug Fixes
 
-* **ffe-buttons-react:** justering av utseende og transition ([d192089](https://github.com/SpareBank1/designsystem/commit/d19208944424551ebeb5e03efbff09e933132337))
-
+-   **ffe-buttons-react:** justering av utseende og transition ([d192089](https://github.com/SpareBank1/designsystem/commit/d19208944424551ebeb5e03efbff09e933132337))
 
 ### BREAKING CHANGES
 
-* **ffe-buttons-react:** chevron animeres nå i Z-aksen
-
-
-
-
+-   **ffe-buttons-react:** chevron animeres nå i Z-aksen
 
 # [13.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@12.2.11...@sb1/ffe-buttons-react@13.0.0) (2021-09-06)
 
-
 ### Bug Fixes
 
-* **ffe-buttons-react:** justering av utseende og transition ([d192089](https://github.com/SpareBank1/designsystem/commit/d19208944424551ebeb5e03efbff09e933132337))
-
+-   **ffe-buttons-react:** justering av utseende og transition ([d192089](https://github.com/SpareBank1/designsystem/commit/d19208944424551ebeb5e03efbff09e933132337))
 
 ### BREAKING CHANGES
 
-* **ffe-buttons-react:** chevron animeres nå i Z-aksen
-
-
-
-
+-   **ffe-buttons-react:** chevron animeres nå i Z-aksen
 
 ## [12.2.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@12.2.10...@sb1/ffe-buttons-react@12.2.11) (2021-03-15)
 
-
 ### Bug Fixes
 
-* **ffe-buttons-react:** broadens version of peer dependencies ([2ab2e5c](https://github.com/SpareBank1/designsystem/commit/2ab2e5cf784c2444b692a248d8f117712860631c))
-
-
-
-
+-   **ffe-buttons-react:** broadens version of peer dependencies ([2ab2e5c](https://github.com/SpareBank1/designsystem/commit/2ab2e5cf784c2444b692a248d8f117712860631c))
 
 ## [12.2.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@12.2.9...@sb1/ffe-buttons-react@12.2.10) (2021-02-03)
 
-
 ### Bug Fixes
 
-* packages/ffe-buttons-react/package.json to reduce vulnerabilities ([7b4412e](https://github.com/SpareBank1/designsystem/commit/7b4412e5adafeba5dc699a34602cab212f4c471e))
-
-
-
-
+-   packages/ffe-buttons-react/package.json to reduce vulnerabilities ([7b4412e](https://github.com/SpareBank1/designsystem/commit/7b4412e5adafeba5dc699a34602cab212f4c471e))
 
 ## [12.2.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@12.2.8...@sb1/ffe-buttons-react@12.2.9) (2021-02-02)
 
-
 ### Bug Fixes
 
-* **ffe-buttons-react:** reduce vulnerabilities ([414cf6f](https://github.com/SpareBank1/designsystem/commit/414cf6fea3d75ca95c321ee65342f2d140642cf5))
-
-
-
-
+-   **ffe-buttons-react:** reduce vulnerabilities ([414cf6f](https://github.com/SpareBank1/designsystem/commit/414cf6fea3d75ca95c321ee65342f2d140642cf5))
 
 ## [12.2.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@12.2.7...@sb1/ffe-buttons-react@12.2.8) (2020-11-18)
 
 **Note:** Version bump only for package @sb1/ffe-buttons-react
 
-
-
-
-
 ## [12.2.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@12.2.6...@sb1/ffe-buttons-react@12.2.7) (2020-09-15)
 
 **Note:** Version bump only for package @sb1/ffe-buttons-react
-
-
-
-
 
 ## [12.2.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@12.2.5...@sb1/ffe-buttons-react@12.2.6) (2020-08-27)
 
 **Note:** Version bump only for package @sb1/ffe-buttons-react
 
-
-
-
-
 ## [12.2.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@12.2.4...@sb1/ffe-buttons-react@12.2.5) (2020-08-27)
-
 
 ### Bug Fixes
 
-* **ffe-buttons-react:** to property when usin react router can be object ([8162b32](https://github.com/SpareBank1/designsystem/commit/8162b32fe7b581297060548520471acb84963ca9))
-
-
-
-
+-   **ffe-buttons-react:** to property when usin react router can be object ([8162b32](https://github.com/SpareBank1/designsystem/commit/8162b32fe7b581297060548520471acb84963ca9))
 
 ## [12.2.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@12.2.3...@sb1/ffe-buttons-react@12.2.4) (2020-08-04)
 
 **Note:** Version bump only for package @sb1/ffe-buttons-react
 
-
-
-
-
 ## [12.2.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@12.2.2...@sb1/ffe-buttons-react@12.2.3) (2020-07-30)
-
 
 ### Bug Fixes
 
-* **ffe-buttons-react:** fix InlineExpandButton types ([88877ba](https://github.com/SpareBank1/designsystem/commit/88877ba95bf85be1868b829d15d9d22674397c1a))
-* **ffe-buttons-react:** set InlineExpandButton type to "button" ([0a02a57](https://github.com/SpareBank1/designsystem/commit/0a02a575790fed4fa178a5f3379d31c5ed7dcddc))
-
-
-
-
+-   **ffe-buttons-react:** fix InlineExpandButton types ([88877ba](https://github.com/SpareBank1/designsystem/commit/88877ba95bf85be1868b829d15d9d22674397c1a))
+-   **ffe-buttons-react:** set InlineExpandButton type to "button" ([0a02a57](https://github.com/SpareBank1/designsystem/commit/0a02a575790fed4fa178a5f3379d31c5ed7dcddc))
 
 ## [12.2.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@12.2.1...@sb1/ffe-buttons-react@12.2.2) (2020-06-29)
 
 **Note:** Version bump only for package @sb1/ffe-buttons-react
 
-
-
-
-
 ## [12.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@12.2.0...@sb1/ffe-buttons-react@12.2.1) (2020-06-24)
 
 **Note:** Version bump only for package @sb1/ffe-buttons-react
 
-
-
-
-
 # [12.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@12.1.19...@sb1/ffe-buttons-react@12.2.0) (2020-06-18)
-
 
 ### Features
 
-* **ffe-system-message-react:** stop using deprecated lifecycle methods ([940e0f8](https://github.com/SpareBank1/designsystem/commit/940e0f8d516eeaec85f08cbe7019b29a6e8b36cf))
-
-
-
-
+-   **ffe-system-message-react:** stop using deprecated lifecycle methods ([940e0f8](https://github.com/SpareBank1/designsystem/commit/940e0f8d516eeaec85f08cbe7019b29a6e8b36cf))
 
 ## [12.1.19](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@12.1.18...@sb1/ffe-buttons-react@12.1.19) (2020-05-27)
 
 **Note:** Version bump only for package @sb1/ffe-buttons-react
-
-
-
-
 
 ## [12.1.18](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@12.1.17...@sb1/ffe-buttons-react@12.1.18) (2020-03-31)
 

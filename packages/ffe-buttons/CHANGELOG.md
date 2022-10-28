@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [16.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@16.0.0...@sb1/ffe-buttons@16.1.0) (2022-10-28)
+
+### Features
+
+-   **ffe-buttons:** legg til mer theming muligheter i ffe-buttons ([7bf2ebc](https://github.com/SpareBank1/designsystem/commit/7bf2ebc99cf959b3e745847a864ebfa2e0262cdf))
+
 # [16.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@15.1.7...@sb1/ffe-buttons@16.0.0) (2022-10-20)
 
 ### Features

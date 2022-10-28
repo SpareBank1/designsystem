@@ -1,47 +1,47 @@
 {
-  "name": "@sb1/ffe-icons-react",
-  "version": "7.3.3",
-  "description": "React-komponenter for ffe-icons",
-  "license": "MIT",
-  "author": "SpareBank 1",
-  "files": [
-    "lib",
-    "types",
-    "es"
-  ],
-  "main": "lib/index.js",
-  "types": "types/index.d.ts",
-  "module": "es/index.js",
-  "sideEffects": false,
-  "repository": {
-    "type": "git",
-    "url": "ssh://git@github.com:SpareBank1/designsystem.git"
-  },
-  "scripts": {
-    "build": "node scripts/build.js && ffe-buildtool babel --copy-typedef=gen-src/index.d.ts gen-src",
-    "clean": "rimraf gen-src lib es types",
-    "lint": "eslint scripts",
-    "test": "eslint gen-src"
-  },
-  "dependencies": {
-    "prop-types": "^15.7.2"
-  },
-  "devDependencies": {
-    "@sb1/ffe-buildtool": "^0.4.1",
-    "@sb1/ffe-icons": "^12.17.0",
-    "cheerio": "^1.0.0-rc.10",
-    "eslint": "^5.9.0",
-    "eslint-loader": "^2.1.0",
-    "glob": "^7.2.0",
-    "mkdirp": "^1.0.4",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "rimraf": "^3.0.2"
-  },
-  "peerDependencies": {
-    "react": ">=16.9.0"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+    "name": "@sb1/ffe-icons-react",
+    "version": "7.3.4",
+    "description": "React-komponenter for ffe-icons",
+    "license": "MIT",
+    "author": "SpareBank 1",
+    "files": [
+        "lib",
+        "types",
+        "es"
+    ],
+    "main": "lib/index.js",
+    "types": "types/index.d.ts",
+    "module": "es/index.js",
+    "sideEffects": false,
+    "repository": {
+        "type": "git",
+        "url": "ssh://git@github.com:SpareBank1/designsystem.git"
+    },
+    "scripts": {
+        "build": "node scripts/build.js && ffe-buildtool babel --copy-typedef=gen-src/index.d.ts gen-src",
+        "clean": "rimraf gen-src lib es types",
+        "lint": "eslint scripts",
+        "test": "eslint gen-src"
+    },
+    "dependencies": {
+        "prop-types": "^15.7.2"
+    },
+    "devDependencies": {
+        "@sb1/ffe-buildtool": "^0.5.0",
+        "@sb1/ffe-icons": "^12.17.0",
+        "cheerio": "^1.0.0-rc.10",
+        "eslint": "^5.9.0",
+        "eslint-loader": "^2.1.0",
+        "glob": "^7.2.0",
+        "mkdirp": "^1.0.4",
+        "react": "^16.9.0",
+        "react-dom": "^16.9.0",
+        "rimraf": "^3.0.2"
+    },
+    "peerDependencies": {
+        "react": ">=16.9.0"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
 }

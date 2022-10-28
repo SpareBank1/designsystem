@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [26.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@26.0.0...@sb1/ffe-core@26.1.0) (2022-10-28)
+
+### Features
+
+-   **ffe-core:** add LinkIcon component ([2f7df0c](https://github.com/SpareBank1/designsystem/commit/2f7df0cae402c18f72aed046b761821a2b636773))
+
 # [26.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@25.0.0...@sb1/ffe-core@26.0.0) (2022-10-20)
 
 ### Features

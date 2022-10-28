@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/stylelint-config-ffe@1.0.2...@sb1/stylelint-config-ffe@2.0.0) (2022-10-28)
+
+### Bug Fixes
+
+-   **stylelint-config-ffe:** remove formatting rules and extensions ([254bf4e](https://github.com/SpareBank1/designsystem/commit/254bf4e9bc258a3105e01ca251ddac3d49505323))
+
+### Features
+
+-   **stylelint-config-ffe:** new rule checking for deprecated vars ([78dbfec](https://github.com/SpareBank1/designsystem/commit/78dbfece2d7f866bc5e3aa515af2a99622c46df7))
+
+### BREAKING CHANGES
+
+-   **stylelint-config-ffe:** stylelint-config-ffe does not any formatting rules, nor
+    does it any provide third party rules anymore. Consider using
+    stylelint-config-standard or a similar shared configuration in addition
+    to this package.
+
 ## [1.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/stylelint-config-ffe@1.0.1...@sb1/stylelint-config-ffe@1.0.2) (2019-12-10)
 
 ### Bug Fixes

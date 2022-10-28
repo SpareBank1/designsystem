@@ -3,299 +3,165 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.2.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@7.2.4...@sb1/ffe-message-box-react@7.2.5) (2022-10-28)
+
+**Note:** Version bump only for package @sb1/ffe-message-box-react
+
 ## [7.2.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@7.2.3...@sb1/ffe-message-box-react@7.2.4) (2022-09-09)
 
 **Note:** Version bump only for package @sb1/ffe-message-box-react
 
-
-
-
-
 ## [7.2.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@7.2.2...@sb1/ffe-message-box-react@7.2.3) (2022-08-02)
-
 
 ### Bug Fixes
 
-* **ffe-message-box-react:** fikse feilmeldinger i konsollet ved alert=false ([32f0861](https://github.com/SpareBank1/designsystem/commit/32f0861e0a47bdf5dfd747f7ffddf1a18dbfbd60))
-
-
-
-
+-   **ffe-message-box-react:** fikse feilmeldinger i konsollet ved alert=false ([32f0861](https://github.com/SpareBank1/designsystem/commit/32f0861e0a47bdf5dfd747f7ffddf1a18dbfbd60))
 
 ## [7.2.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@7.2.1...@sb1/ffe-message-box-react@7.2.2) (2022-03-02)
 
 **Note:** Version bump only for package @sb1/ffe-message-box-react
 
-
-
-
-
 ## [7.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@7.2.0...@sb1/ffe-message-box-react@7.2.1) (2022-02-23)
 
 **Note:** Version bump only for package @sb1/ffe-message-box-react
 
-
-
-
-
 # [7.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@7.1.1...@sb1/ffe-message-box-react@7.2.0) (2022-02-18)
-
 
 ### Features
 
-* **ffe-message-box-react:** import icons without need for tree shaking ([a0c0291](https://github.com/SpareBank1/designsystem/commit/a0c029179459d2d65988e44cd89669f765bad9e4))
-
-
-
-
+-   **ffe-message-box-react:** import icons without need for tree shaking ([a0c0291](https://github.com/SpareBank1/designsystem/commit/a0c029179459d2d65988e44cd89669f765bad9e4))
 
 ## [7.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@7.1.0...@sb1/ffe-message-box-react@7.1.1) (2022-02-08)
 
-
 ### Bug Fixes
 
-* **ffe-message-box-react:** endre ikon størrelse og fjern ubrukt klasse ([abcceab](https://github.com/SpareBank1/designsystem/commit/abcceab38f0f5fd87848e2bac525113d7d503bec))
-
-
-
-
+-   **ffe-message-box-react:** endre ikon størrelse og fjern ubrukt klasse ([abcceab](https://github.com/SpareBank1/designsystem/commit/abcceab38f0f5fd87848e2bac525113d7d503bec))
 
 # [7.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@7.0.7...@sb1/ffe-message-box-react@7.1.0) (2022-01-28)
 
-
 ### Features
 
-* **ffe-message-box-react:** legg til alt styling for fargede bakgrunner ([01f5593](https://github.com/SpareBank1/designsystem/commit/01f559307a632d0c35c4015a146e419d00341283))
-
-
-
-
+-   **ffe-message-box-react:** legg til alt styling for fargede bakgrunner ([01f5593](https://github.com/SpareBank1/designsystem/commit/01f559307a632d0c35c4015a146e419d00341283))
 
 ## [7.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@7.0.6...@sb1/ffe-message-box-react@7.0.7) (2022-01-27)
 
 **Note:** Version bump only for package @sb1/ffe-message-box-react
 
-
-
-
-
 ## [7.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@7.0.5...@sb1/ffe-message-box-react@7.0.6) (2022-01-27)
 
 **Note:** Version bump only for package @sb1/ffe-message-box-react
-
-
-
-
 
 ## [7.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@7.0.4...@sb1/ffe-message-box-react@7.0.5) (2022-01-25)
 
 **Note:** Version bump only for package @sb1/ffe-message-box-react
 
-
-
-
-
 ## [7.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@7.0.3...@sb1/ffe-message-box-react@7.0.4) (2022-01-24)
 
 **Note:** Version bump only for package @sb1/ffe-message-box-react
-
-
-
-
 
 ## [7.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@7.0.2...@sb1/ffe-message-box-react@7.0.3) (2021-12-17)
 
 **Note:** Version bump only for package @sb1/ffe-message-box-react
 
-
-
-
-
 ## [7.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@7.0.1...@sb1/ffe-message-box-react@7.0.2) (2021-12-10)
-
 
 ### Bug Fixes
 
-* **ffe-message-box-react:** use buildtool for transpiling ([3a578bc](https://github.com/SpareBank1/designsystem/commit/3a578bc6d2d8a7b96c0969452b2d7eac52c45e34)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
-
-
-
-
+-   **ffe-message-box-react:** use buildtool for transpiling ([3a578bc](https://github.com/SpareBank1/designsystem/commit/3a578bc6d2d8a7b96c0969452b2d7eac52c45e34)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
 
 ## [7.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@7.0.0...@sb1/ffe-message-box-react@7.0.1) (2021-11-04)
 
 **Note:** Version bump only for package @sb1/ffe-message-box-react
 
-
-
-
-
 # [7.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@6.1.8...@sb1/ffe-message-box-react@7.0.0) (2021-08-23)
-
 
 ### Features
 
-* **ffe-message-box-react:** Update message box styling ([#1152](https://github.com/SpareBank1/designsystem/issues/1152)) ([3d89954](https://github.com/SpareBank1/designsystem/commit/3d89954fbf86d64963b5b47af550549512892b24))
-
+-   **ffe-message-box-react:** Update message box styling ([#1152](https://github.com/SpareBank1/designsystem/issues/1152)) ([3d89954](https://github.com/SpareBank1/designsystem/commit/3d89954fbf86d64963b5b47af550549512892b24))
 
 ### BREAKING CHANGES
 
-* **ffe-message-box-react:** requires ffe-core@18.3
+-   **ffe-message-box-react:** requires ffe-core@18.3
 
 This reverts commit 5efe26fd915da4fc22a3a8c8ded27765de9afc3c.
 
-
-
-
-
 ## [6.1.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@6.1.7...@sb1/ffe-message-box-react@6.1.8) (2021-08-23)
-
 
 ### Bug Fixes
 
-* **ffe-message-box-react:** revert "Update message box styling ([#1152](https://github.com/SpareBank1/designsystem/issues/1152))" ([5efe26f](https://github.com/SpareBank1/designsystem/commit/5efe26fd915da4fc22a3a8c8ded27765de9afc3c))
-
-
-
-
+-   **ffe-message-box-react:** revert "Update message box styling ([#1152](https://github.com/SpareBank1/designsystem/issues/1152))" ([5efe26f](https://github.com/SpareBank1/designsystem/commit/5efe26fd915da4fc22a3a8c8ded27765de9afc3c))
 
 ## [6.1.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@6.1.6...@sb1/ffe-message-box-react@6.1.7) (2021-08-13)
 
 **Note:** Version bump only for package @sb1/ffe-message-box-react
 
-
-
-
-
 ## [6.1.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@6.1.5...@sb1/ffe-message-box-react@6.1.6) (2021-03-15)
-
 
 ### Bug Fixes
 
-* **ffe-message-box-react:** broadens version of peer dependencies ([cee3a33](https://github.com/SpareBank1/designsystem/commit/cee3a33cddc4bd482e40dd497542ee86b62999c8))
-
-
-
-
+-   **ffe-message-box-react:** broadens version of peer dependencies ([cee3a33](https://github.com/SpareBank1/designsystem/commit/cee3a33cddc4bd482e40dd497542ee86b62999c8))
 
 ## [6.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@6.1.4...@sb1/ffe-message-box-react@6.1.5) (2021-02-03)
 
-
 ### Bug Fixes
 
-* packages/ffe-message-box-react/package.json to reduce vulnerabilities ([e41dd4c](https://github.com/SpareBank1/designsystem/commit/e41dd4cd0f9f0585bbd8c7bb85e47734feb9b203))
-
-
-
-
+-   packages/ffe-message-box-react/package.json to reduce vulnerabilities ([e41dd4c](https://github.com/SpareBank1/designsystem/commit/e41dd4cd0f9f0585bbd8c7bb85e47734feb9b203))
 
 ## [6.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@6.1.3...@sb1/ffe-message-box-react@6.1.4) (2021-02-02)
 
-
 ### Bug Fixes
 
-* **ffe-message-box-react:** reduce vulnerabilities ([4d8e6d6](https://github.com/SpareBank1/designsystem/commit/4d8e6d6ebbe5a231d2f82a502071b2ded4b7639a))
-
-
-
-
+-   **ffe-message-box-react:** reduce vulnerabilities ([4d8e6d6](https://github.com/SpareBank1/designsystem/commit/4d8e6d6ebbe5a231d2f82a502071b2ded4b7639a))
 
 ## [6.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@6.1.2...@sb1/ffe-message-box-react@6.1.3) (2020-11-18)
 
 **Note:** Version bump only for package @sb1/ffe-message-box-react
 
-
-
-
-
 ## [6.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@6.1.1...@sb1/ffe-message-box-react@6.1.2) (2020-10-21)
-
 
 ### Bug Fixes
 
-* **ffe-message-box-react:** opt-out param for alert for error message ([61ea63d](https://github.com/SpareBank1/designsystem/commit/61ea63de447bc5c397bfb31115dda71f1f91ce3a))
-
-
-
-
+-   **ffe-message-box-react:** opt-out param for alert for error message ([61ea63d](https://github.com/SpareBank1/designsystem/commit/61ea63de447bc5c397bfb31115dda71f1f91ce3a))
 
 ## [6.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@6.1.0...@sb1/ffe-message-box-react@6.1.1) (2020-10-06)
 
-
 ### Bug Fixes
 
-* **ffe-message-box-react:** fix MessageBox Typescript types ([be1e239](https://github.com/SpareBank1/designsystem/commit/be1e2394eea4be49cccf8169375ada1b5fb267aa))
-
-
-
-
+-   **ffe-message-box-react:** fix MessageBox Typescript types ([be1e239](https://github.com/SpareBank1/designsystem/commit/be1e2394eea4be49cccf8169375ada1b5fb267aa))
 
 # [6.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@6.0.20...@sb1/ffe-message-box-react@6.1.0) (2020-10-02)
 
-
 ### Features
 
-* **ffe-message-box-react:** add role="alert" to ErrorMessage ([6e2f73a](https://github.com/SpareBank1/designsystem/commit/6e2f73a8b14e46e724bd9b25c7ffb86b12d31c92))
-
-
-
-
+-   **ffe-message-box-react:** add role="alert" to ErrorMessage ([6e2f73a](https://github.com/SpareBank1/designsystem/commit/6e2f73a8b14e46e724bd9b25c7ffb86b12d31c92))
 
 ## [6.0.20](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@6.0.19...@sb1/ffe-message-box-react@6.0.20) (2020-09-15)
 
 **Note:** Version bump only for package @sb1/ffe-message-box-react
 
-
-
-
-
 ## [6.0.19](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@6.0.18...@sb1/ffe-message-box-react@6.0.19) (2020-08-27)
 
 **Note:** Version bump only for package @sb1/ffe-message-box-react
-
-
-
-
 
 ## [6.0.18](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@6.0.17...@sb1/ffe-message-box-react@6.0.18) (2020-08-04)
 
 **Note:** Version bump only for package @sb1/ffe-message-box-react
 
-
-
-
-
 ## [6.0.17](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@6.0.16...@sb1/ffe-message-box-react@6.0.17) (2020-07-30)
 
 **Note:** Version bump only for package @sb1/ffe-message-box-react
-
-
-
-
 
 ## [6.0.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@6.0.15...@sb1/ffe-message-box-react@6.0.16) (2020-06-29)
 
 **Note:** Version bump only for package @sb1/ffe-message-box-react
 
-
-
-
-
 ## [6.0.15](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@6.0.14...@sb1/ffe-message-box-react@6.0.15) (2020-06-24)
 
 **Note:** Version bump only for package @sb1/ffe-message-box-react
 
-
-
-
-
 ## [6.0.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@6.0.13...@sb1/ffe-message-box-react@6.0.14) (2020-05-27)
 
 **Note:** Version bump only for package @sb1/ffe-message-box-react
-
-
-
-
 
 ## [6.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@6.0.12...@sb1/ffe-message-box-react@6.0.13) (2020-03-31)
 

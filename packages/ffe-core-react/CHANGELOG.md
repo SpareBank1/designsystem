@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@6.0.1...@sb1/ffe-core-react@6.1.0) (2022-10-28)
+
+### Features
+
+-   **ffe-core-react:** add LinkIcon component ([29ed631](https://github.com/SpareBank1/designsystem/commit/29ed6311cf606eb64644407bb636e36fa06689ff))
+
 ## [6.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@6.0.0...@sb1/ffe-core-react@6.0.1) (2022-10-21)
 
 ### Bug Fixes

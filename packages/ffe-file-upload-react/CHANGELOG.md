@@ -3,199 +3,111 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [6.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload-react@6.1.4...@sb1/ffe-file-upload-react@6.1.5) (2022-09-09)
+## [6.1.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload-react@6.1.5...@sb1/ffe-file-upload-react@6.1.6) (2022-10-28)
 
 **Note:** Version bump only for package @sb1/ffe-file-upload-react
 
+## [6.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload-react@6.1.4...@sb1/ffe-file-upload-react@6.1.5) (2022-09-09)
 
-
-
+**Note:** Version bump only for package @sb1/ffe-file-upload-react
 
 ## [6.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload-react@6.1.3...@sb1/ffe-file-upload-react@6.1.4) (2022-08-05)
 
 **Note:** Version bump only for package @sb1/ffe-file-upload-react
 
-
-
-
-
 ## [6.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload-react@6.1.2...@sb1/ffe-file-upload-react@6.1.3) (2022-07-29)
 
 **Note:** Version bump only for package @sb1/ffe-file-upload-react
-
-
-
-
 
 ## [6.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload-react@6.1.1...@sb1/ffe-file-upload-react@6.1.2) (2022-07-20)
 
 **Note:** Version bump only for package @sb1/ffe-file-upload-react
 
-
-
-
-
 ## [6.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload-react@6.1.0...@sb1/ffe-file-upload-react@6.1.1) (2022-06-23)
-
 
 ### Bug Fixes
 
-* **ffe-file-upload-react:** show uploaded files with error only once ([e0601c4](https://github.com/SpareBank1/designsystem/commit/e0601c43285ca71b6999b2af61a0447df1a436de))
-
-
-
-
+-   **ffe-file-upload-react:** show uploaded files with error only once ([e0601c4](https://github.com/SpareBank1/designsystem/commit/e0601c43285ca71b6999b2af61a0447df1a436de))
 
 # [6.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload-react@6.0.5...@sb1/ffe-file-upload-react@6.1.0) (2022-06-02)
 
-
 ### Features
 
-* **ffe-file-upload:** add typescript declarations ([058f392](https://github.com/SpareBank1/designsystem/commit/058f392487728b71eaf86e26ef931ad62d6cf373)), closes [#1291](https://github.com/SpareBank1/designsystem/issues/1291)
-
-
-
-
+-   **ffe-file-upload:** add typescript declarations ([058f392](https://github.com/SpareBank1/designsystem/commit/058f392487728b71eaf86e26ef931ad62d6cf373)), closes [#1291](https://github.com/SpareBank1/designsystem/issues/1291)
 
 ## [6.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload-react@6.0.4...@sb1/ffe-file-upload-react@6.0.5) (2022-05-19)
 
 **Note:** Version bump only for package @sb1/ffe-file-upload-react
 
-
-
-
-
 ## [6.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload-react@6.0.3...@sb1/ffe-file-upload-react@6.0.4) (2022-04-12)
 
 **Note:** Version bump only for package @sb1/ffe-file-upload-react
-
-
-
-
 
 ## [6.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload-react@6.0.2...@sb1/ffe-file-upload-react@6.0.3) (2022-03-11)
 
 **Note:** Version bump only for package @sb1/ffe-file-upload-react
 
-
-
-
-
 ## [6.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload-react@6.0.1...@sb1/ffe-file-upload-react@6.0.2) (2022-03-08)
 
 **Note:** Version bump only for package @sb1/ffe-file-upload-react
-
-
-
-
 
 ## [6.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload-react@6.0.0...@sb1/ffe-file-upload-react@6.0.1) (2022-03-02)
 
 **Note:** Version bump only for package @sb1/ffe-file-upload-react
 
-
-
-
-
 # [6.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload-react@5.0.10...@sb1/ffe-file-upload-react@6.0.0) (2022-02-28)
-
 
 ### Bug Fixes
 
-* **ffe-file-upload-react:** erstatt knapp med secondarybutton ([200f351](https://github.com/SpareBank1/designsystem/commit/200f351ae80329a7e45f7d3f5dfeb9e3ac927940))
-
+-   **ffe-file-upload-react:** erstatt knapp med secondarybutton ([200f351](https://github.com/SpareBank1/designsystem/commit/200f351ae80329a7e45f7d3f5dfeb9e3ac927940))
 
 ### BREAKING CHANGES
 
-* **ffe-file-upload-react:** fjerner custom knapp og erstatter den med secondaryButton
-
-
-
-
+-   **ffe-file-upload-react:** fjerner custom knapp og erstatter den med secondaryButton
 
 ## [5.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload-react@5.0.9...@sb1/ffe-file-upload-react@5.0.10) (2022-02-18)
 
 **Note:** Version bump only for package @sb1/ffe-file-upload-react
 
-
-
-
-
 ## [5.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload-react@5.0.8...@sb1/ffe-file-upload-react@5.0.9) (2022-01-27)
 
 **Note:** Version bump only for package @sb1/ffe-file-upload-react
-
-
-
-
 
 ## [5.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload-react@5.0.7...@sb1/ffe-file-upload-react@5.0.8) (2022-01-27)
 
 **Note:** Version bump only for package @sb1/ffe-file-upload-react
 
-
-
-
-
 ## [5.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload-react@5.0.6...@sb1/ffe-file-upload-react@5.0.7) (2022-01-25)
 
 **Note:** Version bump only for package @sb1/ffe-file-upload-react
-
-
-
-
 
 ## [5.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload-react@5.0.5...@sb1/ffe-file-upload-react@5.0.6) (2021-12-17)
 
 **Note:** Version bump only for package @sb1/ffe-file-upload-react
 
-
-
-
-
 ## [5.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload-react@5.0.4...@sb1/ffe-file-upload-react@5.0.5) (2021-12-10)
-
 
 ### Bug Fixes
 
-* **ffe-file-upload-react:** use buildtool for transpiling ([4231efd](https://github.com/SpareBank1/designsystem/commit/4231efde54cbdf1ad606d882cd281de5be4ee2ad)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
-
-
-
-
+-   **ffe-file-upload-react:** use buildtool for transpiling ([4231efd](https://github.com/SpareBank1/designsystem/commit/4231efde54cbdf1ad606d882cd281de5be4ee2ad)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
 
 ## [5.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload-react@5.0.3...@sb1/ffe-file-upload-react@5.0.4) (2021-03-15)
 
-
 ### Bug Fixes
 
-* **ffe-file-upload-react:** broadens version of peer dependencies ([627577b](https://github.com/SpareBank1/designsystem/commit/627577b9a8fa4850f025d7d42e5d77be5af73626))
-
-
-
-
+-   **ffe-file-upload-react:** broadens version of peer dependencies ([627577b](https://github.com/SpareBank1/designsystem/commit/627577b9a8fa4850f025d7d42e5d77be5af73626))
 
 ## [5.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload-react@5.0.2...@sb1/ffe-file-upload-react@5.0.3) (2021-02-02)
 
-
 ### Bug Fixes
 
-* packages/ffe-file-upload-react/package.json to reduce vulnerabilities ([ac3ee52](https://github.com/SpareBank1/designsystem/commit/ac3ee52514b4a65093f09a38e9a40f3d1799b180))
-
-
-
-
+-   packages/ffe-file-upload-react/package.json to reduce vulnerabilities ([ac3ee52](https://github.com/SpareBank1/designsystem/commit/ac3ee52514b4a65093f09a38e9a40f3d1799b180))
 
 ## [5.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload-react@5.0.1...@sb1/ffe-file-upload-react@5.0.2) (2021-02-02)
 
-
 ### Bug Fixes
 
-* **ffe-file-upload-react:** reduce vulnerabilities ([9af58e1](https://github.com/SpareBank1/designsystem/commit/9af58e1b015455647460f2f22e4b51ca6ca680ce))
-
-
-
-
+-   **ffe-file-upload-react:** reduce vulnerabilities ([9af58e1](https://github.com/SpareBank1/designsystem/commit/9af58e1b015455647460f2f22e4b51ca6ca680ce))
 
 ## [5.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload-react@5.0.0...@sb1/ffe-file-upload-react@5.0.1) (2019-10-16)
 

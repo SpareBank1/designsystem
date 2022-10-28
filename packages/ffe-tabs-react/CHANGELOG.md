@@ -3,63 +3,45 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@7.0.3...@sb1/ffe-tabs-react@7.0.4) (2022-10-28)
+
+**Note:** Version bump only for package @sb1/ffe-tabs-react
+
 ## [7.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@7.0.2...@sb1/ffe-tabs-react@7.0.3) (2022-09-09)
 
 **Note:** Version bump only for package @sb1/ffe-tabs-react
 
-
-
-
-
 ## [7.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@7.0.1...@sb1/ffe-tabs-react@7.0.2) (2022-06-02)
-
 
 ### Bug Fixes
 
-* **ffe-tabs-react:** make aria-controls-prop not required ([d6c7982](https://github.com/SpareBank1/designsystem/commit/d6c798262044fad75b935fd160f564b2313315a5))
-
-
-
-
+-   **ffe-tabs-react:** make aria-controls-prop not required ([d6c7982](https://github.com/SpareBank1/designsystem/commit/d6c798262044fad75b935fd160f564b2313315a5))
 
 ## [7.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@7.0.0...@sb1/ffe-tabs-react@7.0.1) (2022-03-08)
 
-
 ### Bug Fixes
 
-* **ffe-tabs-react:** add type button to tab ([a703d8a](https://github.com/SpareBank1/designsystem/commit/a703d8ae4684b19d3e461bece38d58d2fe2c35dd))
-
-
-
-
+-   **ffe-tabs-react:** add type button to tab ([a703d8a](https://github.com/SpareBank1/designsystem/commit/a703d8ae4684b19d3e461bece38d58d2fe2c35dd))
 
 # [7.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@6.0.0...@sb1/ffe-tabs-react@7.0.0) (2022-03-03)
 
-
 ### Features
 
-* **ffe-tabs-react:** fjerner TabButton og TabButtonGroup ([406e37b](https://github.com/SpareBank1/designsystem/commit/406e37b98633efa163f9f74e2c4b18d063ae709c))
-
+-   **ffe-tabs-react:** fjerner TabButton og TabButtonGroup ([406e37b](https://github.com/SpareBank1/designsystem/commit/406e37b98633efa163f9f74e2c4b18d063ae709c))
 
 ### BREAKING CHANGES
 
-* **ffe-tabs-react:** fjerner tabButton og TabButtonGroup komponentene
-
-
-
-
+-   **ffe-tabs-react:** fjerner tabButton og TabButtonGroup komponentene
 
 # [6.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@5.0.13...@sb1/ffe-tabs-react@6.0.0) (2022-03-03)
 
-
 ### Features
 
-* **ffe-tabs-react:** redesign av faner ([32cdd2d](https://github.com/SpareBank1/designsystem/commit/32cdd2dd79346651ef76fe54d0bef210e2838c6d))
-
+-   **ffe-tabs-react:** redesign av faner ([32cdd2d](https://github.com/SpareBank1/designsystem/commit/32cdd2dd79346651ef76fe54d0bef210e2838c6d))
 
 ### BREAKING CHANGES
 
-* **ffe-tabs-react:** Fjerne thin prop fra TabGroup og condensed fra Tab. Lagt til ny prop noBreak
+-   **ffe-tabs-react:** Fjerne thin prop fra TabGroup og condensed fra Tab. Lagt til ny prop noBreak
 
 This reverts commit f136d98e4e74dd57091c95a50d5815bbfb4bed2f.
 
@@ -67,123 +49,65 @@ feat(ffe-tabs-react): redesign av faner
 
 feat(ffe-tabs-react): redesign av faner
 
-
-
-
-
 ## [5.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@5.0.12...@sb1/ffe-tabs-react@5.0.13) (2022-02-18)
 
 **Note:** Version bump only for package @sb1/ffe-tabs-react
-
-
-
-
 
 ## [5.0.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@5.0.11...@sb1/ffe-tabs-react@5.0.12) (2022-01-27)
 
 **Note:** Version bump only for package @sb1/ffe-tabs-react
 
-
-
-
-
 ## [5.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@5.0.10...@sb1/ffe-tabs-react@5.0.11) (2022-01-27)
 
 **Note:** Version bump only for package @sb1/ffe-tabs-react
-
-
-
-
 
 ## [5.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@5.0.9...@sb1/ffe-tabs-react@5.0.10) (2022-01-25)
 
 **Note:** Version bump only for package @sb1/ffe-tabs-react
 
-
-
-
-
 ## [5.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@5.0.8...@sb1/ffe-tabs-react@5.0.9) (2021-12-17)
 
 **Note:** Version bump only for package @sb1/ffe-tabs-react
 
-
-
-
-
 ## [5.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@5.0.7...@sb1/ffe-tabs-react@5.0.8) (2021-12-10)
-
 
 ### Bug Fixes
 
-* **ffe-tabs-react:** use buildtool for transpiling ([287763f](https://github.com/SpareBank1/designsystem/commit/287763fe94e7abc1f3e8ff4aa9b45c9acc5e5e7b)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
-
-
-
-
+-   **ffe-tabs-react:** use buildtool for transpiling ([287763f](https://github.com/SpareBank1/designsystem/commit/287763fe94e7abc1f3e8ff4aa9b45c9acc5e5e7b)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
 
 ## [5.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@5.0.6...@sb1/ffe-tabs-react@5.0.7) (2021-10-19)
 
-
 ### Bug Fixes
 
-* **ffe-tabs-react:** fjerner gjenglemte referanser til --dark ([79c1fa6](https://github.com/SpareBank1/designsystem/commit/79c1fa634d7cefbd5b3a3bba0b88b9c5ab58b623))
-
-
-
-
+-   **ffe-tabs-react:** fjerner gjenglemte referanser til --dark ([79c1fa6](https://github.com/SpareBank1/designsystem/commit/79c1fa634d7cefbd5b3a3bba0b88b9c5ab58b623))
 
 ## [5.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@5.0.5...@sb1/ffe-tabs-react@5.0.6) (2021-10-08)
 
 **Note:** Version bump only for package @sb1/ffe-tabs-react
 
-
-
-
-
 ## [5.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@5.0.4...@sb1/ffe-tabs-react@5.0.5) (2021-07-09)
-
 
 ### Bug Fixes
 
-* **ffe-tabs-react:** tab-button default type to button ([14417f6](https://github.com/SpareBank1/designsystem/commit/14417f68319c6c1b401c08f359830091150799a5))
-
-
-
-
+-   **ffe-tabs-react:** tab-button default type to button ([14417f6](https://github.com/SpareBank1/designsystem/commit/14417f68319c6c1b401c08f359830091150799a5))
 
 ## [5.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@5.0.3...@sb1/ffe-tabs-react@5.0.4) (2021-03-15)
 
-
 ### Bug Fixes
 
-* **ffe-tabs-react:** broadens version of peer dependencies ([05a39f0](https://github.com/SpareBank1/designsystem/commit/05a39f00544d1d1e87aa5d38dd5ff4d6a9d3939b))
-
-
-
-
+-   **ffe-tabs-react:** broadens version of peer dependencies ([05a39f0](https://github.com/SpareBank1/designsystem/commit/05a39f00544d1d1e87aa5d38dd5ff4d6a9d3939b))
 
 ## [5.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@5.0.2...@sb1/ffe-tabs-react@5.0.3) (2021-02-03)
 
-
 ### Bug Fixes
 
-* packages/ffe-tabs-react/package.json to reduce vulnerabilities ([501daa3](https://github.com/SpareBank1/designsystem/commit/501daa3bd3aefb484f8aec11072378785345e6b8))
-
-
-
-
+-   packages/ffe-tabs-react/package.json to reduce vulnerabilities ([501daa3](https://github.com/SpareBank1/designsystem/commit/501daa3bd3aefb484f8aec11072378785345e6b8))
 
 ## [5.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@5.0.1...@sb1/ffe-tabs-react@5.0.2) (2021-02-02)
 
-
 ### Bug Fixes
 
-* **ffe-tabs-react:** reduce vulnerabilities ([28ff9b1](https://github.com/SpareBank1/designsystem/commit/28ff9b1657744bfd7ddd7dc7eb9ceae042795b20))
-
-
-
-
+-   **ffe-tabs-react:** reduce vulnerabilities ([28ff9b1](https://github.com/SpareBank1/designsystem/commit/28ff9b1657744bfd7ddd7dc7eb9ceae042795b20))
 
 ## [5.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@5.0.0...@sb1/ffe-tabs-react@5.0.1) (2019-10-16)
 

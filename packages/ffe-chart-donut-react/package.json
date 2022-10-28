@@ -1,43 +1,43 @@
 {
-  "name": "@sb1/ffe-chart-donut-react",
-  "version": "5.1.1",
-  "description": "Donut chart in SVG",
-  "keywords": [
-    "ffe"
-  ],
-  "license": "MIT",
-  "author": "SpareBank 1",
-  "files": [
-    "lib",
-    "es",
-    "less"
-  ],
-  "main": "lib/index.js",
-  "module": "es/index.js",
-  "sideEffects": false,
-  "repository": {
-    "type": "git",
-    "url": "ssh://git@github.com:SpareBank1/designsystem.git"
-  },
-  "scripts": {
-    "build": "ffe-buildtool babel",
-    "watch": "ffe-buildtool babel-watch",
-    "lint": "eslint src",
-    "test": "ffe-buildtool jest",
-    "test:watch": "ffe-buildtool jest --watch"
-  },
-  "dependencies": {
-    "prop-types": "^15.7.2"
-  },
-  "devDependencies": {
-    "@sb1/ffe-buildtool": "^0.4.1",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0"
-  },
-  "peerDependencies": {
-    "react": ">=16.9.0"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+    "name": "@sb1/ffe-chart-donut-react",
+    "version": "5.1.2",
+    "description": "Donut chart in SVG",
+    "keywords": [
+        "ffe"
+    ],
+    "license": "MIT",
+    "author": "SpareBank 1",
+    "files": [
+        "lib",
+        "es",
+        "less"
+    ],
+    "main": "lib/index.js",
+    "module": "es/index.js",
+    "sideEffects": false,
+    "repository": {
+        "type": "git",
+        "url": "ssh://git@github.com:SpareBank1/designsystem.git"
+    },
+    "scripts": {
+        "build": "ffe-buildtool babel",
+        "watch": "ffe-buildtool babel-watch",
+        "lint": "eslint src",
+        "test": "ffe-buildtool jest",
+        "test:watch": "ffe-buildtool jest --watch"
+    },
+    "dependencies": {
+        "prop-types": "^15.7.2"
+    },
+    "devDependencies": {
+        "@sb1/ffe-buildtool": "^0.5.0",
+        "react": "^16.9.0",
+        "react-dom": "^16.9.0"
+    },
+    "peerDependencies": {
+        "react": ">=16.9.0"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
 }

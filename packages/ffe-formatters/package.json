@@ -1,40 +1,40 @@
 {
-  "name": "@sb1/ffe-formatters",
-  "version": "4.0.10",
-  "description": "JavaScript general use string formatters",
-  "keywords": [
-    "ffe"
-  ],
-  "license": "MIT",
-  "author": "SpareBank 1",
-  "files": [
-    "lib",
-    "es",
-    "types"
-  ],
-  "main": "lib/index.js",
-  "module": "es/index.js",
-  "types": "types/index.d.ts",
-  "sideEffects": false,
-  "repository": {
-    "type": "git",
-    "url": "ssh://git@github.com:SpareBank1/designsystem.git"
-  },
-  "scripts": {
-    "build": "ffe-buildtool babel",
-    "watch": "ffe-buildtool babel-watch",
-    "lint": "eslint src",
-    "test": "jest",
-    "test:watch": "jest --watch"
-  },
-  "dependencies": {
-    "underscore.string": "^3.3.4"
-  },
-  "devDependencies": {
-    "@sb1/ffe-buildtool": "^0.4.1",
-    "eslint": "^5.9.0"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+    "name": "@sb1/ffe-formatters",
+    "version": "4.0.11",
+    "description": "JavaScript general use string formatters",
+    "keywords": [
+        "ffe"
+    ],
+    "license": "MIT",
+    "author": "SpareBank 1",
+    "files": [
+        "lib",
+        "es",
+        "types"
+    ],
+    "main": "lib/index.js",
+    "module": "es/index.js",
+    "types": "types/index.d.ts",
+    "sideEffects": false,
+    "repository": {
+        "type": "git",
+        "url": "ssh://git@github.com:SpareBank1/designsystem.git"
+    },
+    "scripts": {
+        "build": "ffe-buildtool babel",
+        "watch": "ffe-buildtool babel-watch",
+        "lint": "eslint src",
+        "test": "jest",
+        "test:watch": "jest --watch"
+    },
+    "dependencies": {
+        "underscore.string": "^3.3.4"
+    },
+    "devDependencies": {
+        "@sb1/ffe-buildtool": "^0.5.0",
+        "eslint": "^5.9.0"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
 }

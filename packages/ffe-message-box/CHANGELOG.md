@@ -3,174 +3,106 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [10.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@10.1.0...@sb1/ffe-message-box@10.1.1) (2022-03-21)
+## [10.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@10.1.1...@sb1/ffe-message-box@10.1.2) (2022-10-28)
 
+**Note:** Version bump only for package @sb1/ffe-message-box
+
+## [10.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@10.1.0...@sb1/ffe-message-box@10.1.1) (2022-03-21)
 
 ### Bug Fixes
 
-* **ffe-message-box:** legger til default font ([e36b96a](https://github.com/SpareBank1/designsystem/commit/e36b96a30c9087fb08bfd61b6cb68810e7563f65))
-
-
-
-
+-   **ffe-message-box:** legger til default font ([e36b96a](https://github.com/SpareBank1/designsystem/commit/e36b96a30c9087fb08bfd61b6cb68810e7563f65))
 
 # [10.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@10.0.3...@sb1/ffe-message-box@10.1.0) (2022-03-15)
 
-
 ### Features
 
-* **ffe-message-box:** make border radius more round ([1ec1ab1](https://github.com/SpareBank1/designsystem/commit/1ec1ab1a971b7571c8eac793f61d29de84118ee0))
-
-
-
-
+-   **ffe-message-box:** make border radius more round ([1ec1ab1](https://github.com/SpareBank1/designsystem/commit/1ec1ab1a971b7571c8eac793f61d29de84118ee0))
 
 ## [10.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@10.0.2...@sb1/ffe-message-box@10.0.3) (2022-03-02)
 
-
 ### Bug Fixes
 
-* **ffe-message-box:** remove main entry field from package.json ([fbed9c6](https://github.com/SpareBank1/designsystem/commit/fbed9c601aef2b959f66c9f305b98d0671dc1603))
-
-
-
-
+-   **ffe-message-box:** remove main entry field from package.json ([fbed9c6](https://github.com/SpareBank1/designsystem/commit/fbed9c601aef2b959f66c9f305b98d0671dc1603))
 
 ## [10.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@10.0.1...@sb1/ffe-message-box@10.0.2) (2022-02-08)
 
-
 ### Bug Fixes
 
-* **ffe-message-box:** legg til ffe-strong-text styling på tittel i meldingsboks ([5eb7614](https://github.com/SpareBank1/designsystem/commit/5eb7614bf39fab52b4e69ac70e9f8feaa0b74b8a))
-
-
-
-
+-   **ffe-message-box:** legg til ffe-strong-text styling på tittel i meldingsboks ([5eb7614](https://github.com/SpareBank1/designsystem/commit/5eb7614bf39fab52b4e69ac70e9f8feaa0b74b8a))
 
 ## [10.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@10.0.0...@sb1/ffe-message-box@10.0.1) (2022-02-08)
 
-
 ### Bug Fixes
 
-* **ffe-message-box:** fjern ubrukt link klasse ([cb3e9ef](https://github.com/SpareBank1/designsystem/commit/cb3e9ef4bf527fd776dc1775372101a72a10d7b4))
-
-
-
-
+-   **ffe-message-box:** fjern ubrukt link klasse ([cb3e9ef](https://github.com/SpareBank1/designsystem/commit/cb3e9ef4bf527fd776dc1775372101a72a10d7b4))
 
 # [10.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@9.0.1...@sb1/ffe-message-box@10.0.0) (2022-01-28)
 
-
 ### Features
 
-* **ffe-message-box:** legg til alt styling og farge tweaks ([f7578c8](https://github.com/SpareBank1/designsystem/commit/f7578c859aeeb667e88c858829ccbbfce8c7037b))
-
+-   **ffe-message-box:** legg til alt styling og farge tweaks ([f7578c8](https://github.com/SpareBank1/designsystem/commit/f7578c859aeeb667e88c858829ccbbfce8c7037b))
 
 ### BREAKING CHANGES
 
-* **ffe-message-box:** endrer klasse hierarkiet ved å flytte type modifieren
-Små fargeendringer på meldingsboksene, samt en ny modifier klasse som gir
-meldingsboksene hvit bakgrunn i lightmode. Denne modifier-klassen brukes for å oppnå
-god nok kontrast i scenarioer der man tar i bruk meldingsboksene på fargede bakgrunner.
-
-
-
-
+-   **ffe-message-box:** endrer klasse hierarkiet ved å flytte type modifieren
+    Små fargeendringer på meldingsboksene, samt en ny modifier klasse som gir
+    meldingsboksene hvit bakgrunn i lightmode. Denne modifier-klassen brukes for å oppnå
+    god nok kontrast i scenarioer der man tar i bruk meldingsboksene på fargede bakgrunner.
 
 ## [9.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@9.0.0...@sb1/ffe-message-box@9.0.1) (2021-10-06)
 
-
 ### Bug Fixes
 
-* **ffe-message-box:** gjør sirkel sort og juster ikon farger i darkmode ([e36a4b5](https://github.com/SpareBank1/designsystem/commit/e36a4b5dd91f0e56d382b5e5f6aa9b84a0757fb4))
-
-
-
-
+-   **ffe-message-box:** gjør sirkel sort og juster ikon farger i darkmode ([e36a4b5](https://github.com/SpareBank1/designsystem/commit/e36a4b5dd91f0e56d382b5e5f6aa9b84a0757fb4))
 
 # [9.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@8.1.2...@sb1/ffe-message-box@9.0.0) (2021-08-23)
 
-
 ### Features
 
-* **ffe-message-box:** Update message box styling ([#1152](https://github.com/SpareBank1/designsystem/issues/1152)) ([ec78bf2](https://github.com/SpareBank1/designsystem/commit/ec78bf2b0626871dc2765a38aebc7515d7c1e6d0))
-
+-   **ffe-message-box:** Update message box styling ([#1152](https://github.com/SpareBank1/designsystem/issues/1152)) ([ec78bf2](https://github.com/SpareBank1/designsystem/commit/ec78bf2b0626871dc2765a38aebc7515d7c1e6d0))
 
 ### BREAKING CHANGES
 
-* **ffe-message-box:** requires ffe-core@18.3
-
-
-
-
+-   **ffe-message-box:** requires ffe-core@18.3
 
 ## [8.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@8.1.1...@sb1/ffe-message-box@8.1.2) (2021-08-23)
 
-
 ### Bug Fixes
 
-* **ffe-message-box:** revert "Update message box styling ([#1152](https://github.com/SpareBank1/designsystem/issues/1152))" ([6007da4](https://github.com/SpareBank1/designsystem/commit/6007da40a39cfcb16b38ebe5c9be2683a849eb2a))
-
-
-
-
+-   **ffe-message-box:** revert "Update message box styling ([#1152](https://github.com/SpareBank1/designsystem/issues/1152))" ([6007da4](https://github.com/SpareBank1/designsystem/commit/6007da40a39cfcb16b38ebe5c9be2683a849eb2a))
 
 ## [8.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@8.1.0...@sb1/ffe-message-box@8.1.1) (2021-08-13)
 
 **Note:** Version bump only for package @sb1/ffe-message-box
 
-
-
-
-
 # [8.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@8.0.0...@sb1/ffe-message-box@8.1.0) (2021-04-14)
-
 
 ### Features
 
-* **ffe-message-box:** adds MuseoSans font as fallback font ([893cd34](https://github.com/SpareBank1/designsystem/commit/893cd346f7741a38da46c50427e1207ffa6dcff9))
-
-
-
-
+-   **ffe-message-box:** adds MuseoSans font as fallback font ([893cd34](https://github.com/SpareBank1/designsystem/commit/893cd346f7741a38da46c50427e1207ffa6dcff9))
 
 # [8.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@7.0.2...@sb1/ffe-message-box@8.0.0) (2021-03-17)
 
-
 ### Bug Fixes
 
-* **ffe-message-box:** bytter ut museo sans med ny sparebank1-font ([a3f396e](https://github.com/SpareBank1/designsystem/commit/a3f396ee27ea4a581431864a2cc7b27ff0589fcd))
-
+-   **ffe-message-box:** bytter ut museo sans med ny sparebank1-font ([a3f396e](https://github.com/SpareBank1/designsystem/commit/a3f396ee27ea4a581431864a2cc7b27ff0589fcd))
 
 ### BREAKING CHANGES
 
-* **ffe-message-box:** ny font i alt innhold
-
-
-
-
+-   **ffe-message-box:** ny font i alt innhold
 
 ## [7.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@7.0.1...@sb1/ffe-message-box@7.0.2) (2021-03-15)
 
-
 ### Bug Fixes
 
-* **ffe-message-box:** broadens version of peer dependencies ([b31aa75](https://github.com/SpareBank1/designsystem/commit/b31aa75013dbefa5deb722765785e7f02eb61c81))
-
-
-
-
+-   **ffe-message-box:** broadens version of peer dependencies ([b31aa75](https://github.com/SpareBank1/designsystem/commit/b31aa75013dbefa5deb722765785e7f02eb61c81))
 
 ## [7.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@7.0.0...@sb1/ffe-message-box@7.0.1) (2021-02-02)
 
-
 ### Bug Fixes
 
-* **ffe-message-box:** reduce vulnerabilities ([47d4634](https://github.com/SpareBank1/designsystem/commit/47d4634958605cfe691b102ec72e6ec06ad7e15d))
-
-
-
-
+-   **ffe-message-box:** reduce vulnerabilities ([47d4634](https://github.com/SpareBank1/designsystem/commit/47d4634958605cfe691b102ec72e6ec06ad7e15d))
 
 # [7.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@6.1.0...@sb1/ffe-message-box@7.0.0) (2019-12-18)
 

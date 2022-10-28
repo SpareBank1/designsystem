@@ -3,127 +3,73 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.1.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-dropdown-react@5.1.15...@sb1/ffe-dropdown-react@5.1.16) (2022-10-28)
+
+**Note:** Version bump only for package @sb1/ffe-dropdown-react
+
 ## [5.1.15](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-dropdown-react@5.1.14...@sb1/ffe-dropdown-react@5.1.15) (2022-09-09)
 
 **Note:** Version bump only for package @sb1/ffe-dropdown-react
 
-
-
-
-
 ## [5.1.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-dropdown-react@5.1.13...@sb1/ffe-dropdown-react@5.1.14) (2022-03-02)
-
 
 ### Bug Fixes
 
-* **ffe-dropdown-react:** add author to package.json ([4ee9a22](https://github.com/SpareBank1/designsystem/commit/4ee9a228f3fa2ff368ded8dd874db5c9aa49822a))
-
-
-
-
+-   **ffe-dropdown-react:** add author to package.json ([4ee9a22](https://github.com/SpareBank1/designsystem/commit/4ee9a228f3fa2ff368ded8dd874db5c9aa49822a))
 
 ## [5.1.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-dropdown-react@5.1.12...@sb1/ffe-dropdown-react@5.1.13) (2022-02-18)
 
 **Note:** Version bump only for package @sb1/ffe-dropdown-react
 
-
-
-
-
 ## [5.1.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-dropdown-react@5.1.11...@sb1/ffe-dropdown-react@5.1.12) (2022-01-27)
 
 **Note:** Version bump only for package @sb1/ffe-dropdown-react
-
-
-
-
 
 ## [5.1.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-dropdown-react@5.1.10...@sb1/ffe-dropdown-react@5.1.11) (2022-01-27)
 
 **Note:** Version bump only for package @sb1/ffe-dropdown-react
 
-
-
-
-
 ## [5.1.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-dropdown-react@5.1.9...@sb1/ffe-dropdown-react@5.1.10) (2022-01-25)
 
 **Note:** Version bump only for package @sb1/ffe-dropdown-react
-
-
-
-
 
 ## [5.1.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-dropdown-react@5.1.8...@sb1/ffe-dropdown-react@5.1.9) (2021-12-17)
 
 **Note:** Version bump only for package @sb1/ffe-dropdown-react
 
-
-
-
-
 ## [5.1.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-dropdown-react@5.1.7...@sb1/ffe-dropdown-react@5.1.8) (2021-12-10)
-
 
 ### Bug Fixes
 
-* **ffe-dropdown-react:** use buildtool for transpiling ([7d4c40c](https://github.com/SpareBank1/designsystem/commit/7d4c40ca2953541e9200e8e6ba57e6c5440ae365)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
-
-
-
-
+-   **ffe-dropdown-react:** use buildtool for transpiling ([7d4c40c](https://github.com/SpareBank1/designsystem/commit/7d4c40ca2953541e9200e8e6ba57e6c5440ae365)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
 
 ## [5.1.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-dropdown-react@5.1.6...@sb1/ffe-dropdown-react@5.1.7) (2021-10-19)
 
-
 ### Bug Fixes
 
-* **ffe-dropdown-react:** fjerner gjenglemte referanser til --dark ([e89f245](https://github.com/SpareBank1/designsystem/commit/e89f2455dee35b147a14eb3ff79a34b7261ced0c))
-
-
-
-
+-   **ffe-dropdown-react:** fjerner gjenglemte referanser til --dark ([e89f245](https://github.com/SpareBank1/designsystem/commit/e89f2455dee35b147a14eb3ff79a34b7261ced0c))
 
 ## [5.1.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-dropdown-react@5.1.5...@sb1/ffe-dropdown-react@5.1.6) (2021-10-08)
 
 **Note:** Version bump only for package @sb1/ffe-dropdown-react
 
-
-
-
-
 ## [5.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-dropdown-react@5.1.4...@sb1/ffe-dropdown-react@5.1.5) (2021-03-15)
-
 
 ### Bug Fixes
 
-* **ffe-dropdown-react:** broadens version of peer dependencies ([09f3640](https://github.com/SpareBank1/designsystem/commit/09f364091814ca77e5f4c7a8b18c2a3c4a27b02c))
-
-
-
-
+-   **ffe-dropdown-react:** broadens version of peer dependencies ([09f3640](https://github.com/SpareBank1/designsystem/commit/09f364091814ca77e5f4c7a8b18c2a3c4a27b02c))
 
 ## [5.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-dropdown-react@5.1.3...@sb1/ffe-dropdown-react@5.1.4) (2021-02-03)
 
-
 ### Bug Fixes
 
-* packages/ffe-dropdown-react/package.json to reduce vulnerabilities ([9493e8c](https://github.com/SpareBank1/designsystem/commit/9493e8cd7fe5d970f16cd910d03a25f14f954478))
-
-
-
-
+-   packages/ffe-dropdown-react/package.json to reduce vulnerabilities ([9493e8c](https://github.com/SpareBank1/designsystem/commit/9493e8cd7fe5d970f16cd910d03a25f14f954478))
 
 ## [5.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-dropdown-react@5.1.2...@sb1/ffe-dropdown-react@5.1.3) (2021-02-02)
 
-
 ### Bug Fixes
 
-* **ffe-dropdown-react:** reduce vulnerabilities ([f0eb019](https://github.com/SpareBank1/designsystem/commit/f0eb01913c24163a04c3c3346481cf1fc40f6758))
-
-
-
-
+-   **ffe-dropdown-react:** reduce vulnerabilities ([f0eb019](https://github.com/SpareBank1/designsystem/commit/f0eb01913c24163a04c3c3346481cf1fc40f6758))
 
 ## [5.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-dropdown-react@5.1.1...@sb1/ffe-dropdown-react@5.1.2) (2020-02-10)
 

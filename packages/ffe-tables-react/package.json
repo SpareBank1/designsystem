@@ -1,49 +1,49 @@
 {
-  "name": "@sb1/ffe-tables-react",
-  "version": "6.1.4",
-  "description": "React implementation of ffe-tables",
-  "license": "MIT",
-  "author": "SpareBank 1",
-  "files": [
-    "lib",
-    "es",
-    "types"
-  ],
-  "main": "lib/index.js",
-  "module": "es/index.js",
-  "types": "types/index.d.ts",
-  "sideEffects": false,
-  "repository": {
-    "type": "git",
-    "url": "ssh://git@github.com:SpareBank1/designsystem.git"
-  },
-  "scripts": {
-    "build": "ffe-buildtool babel",
-    "watch": "ffe-buildtool babel-watch",
-    "lint": "eslint src",
-    "test": "ffe-buildtool jest",
-    "test:watch": "ffe-buildtool jest --watch"
-  },
-  "dependencies": {
-    "@sb1/ffe-icons-react": "^7.3.3",
-    "classnames": "^2.3.1",
-    "deep-equal": "^1.0.1",
-    "memoize-one": "^5.0.0",
-    "prop-types": "^15.7.2",
-    "react-lifecycles-compat": "^3.0.4",
-    "shallow-equals": "^1.0.0"
-  },
-  "devDependencies": {
-    "@sb1/ffe-buildtool": "^0.4.1",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "sinon": "^7.2.3"
-  },
-  "peerDependencies": {
-    "@sb1/ffe-tables": "*",
-    "react": ">=16.9.0"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+    "name": "@sb1/ffe-tables-react",
+    "version": "6.1.5",
+    "description": "React implementation of ffe-tables",
+    "license": "MIT",
+    "author": "SpareBank 1",
+    "files": [
+        "lib",
+        "es",
+        "types"
+    ],
+    "main": "lib/index.js",
+    "module": "es/index.js",
+    "types": "types/index.d.ts",
+    "sideEffects": false,
+    "repository": {
+        "type": "git",
+        "url": "ssh://git@github.com:SpareBank1/designsystem.git"
+    },
+    "scripts": {
+        "build": "ffe-buildtool babel",
+        "watch": "ffe-buildtool babel-watch",
+        "lint": "eslint src",
+        "test": "ffe-buildtool jest",
+        "test:watch": "ffe-buildtool jest --watch"
+    },
+    "dependencies": {
+        "@sb1/ffe-icons-react": "^7.3.4",
+        "classnames": "^2.3.1",
+        "deep-equal": "^1.0.1",
+        "memoize-one": "^5.0.0",
+        "prop-types": "^15.7.2",
+        "react-lifecycles-compat": "^3.0.4",
+        "shallow-equals": "^1.0.0"
+    },
+    "devDependencies": {
+        "@sb1/ffe-buildtool": "^0.5.0",
+        "react": "^16.9.0",
+        "react-dom": "^16.9.0",
+        "sinon": "^7.2.3"
+    },
+    "peerDependencies": {
+        "@sb1/ffe-tables": "*",
+        "react": ">=16.9.0"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
 }

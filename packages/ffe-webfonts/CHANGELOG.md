@@ -3,76 +3,49 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [3.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-webfonts@3.0.1...@sb1/ffe-webfonts@3.0.2) (2022-05-19)
+## [3.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-webfonts@3.0.2...@sb1/ffe-webfonts@3.0.3) (2022-10-28)
 
+**Note:** Version bump only for package @sb1/ffe-webfonts
+
+## [3.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-webfonts@3.0.1...@sb1/ffe-webfonts@3.0.2) (2022-05-19)
 
 ### Bug Fixes
 
-* **ffe-webfonts:** add missing development dependency to less ([5db2d80](https://github.com/SpareBank1/designsystem/commit/5db2d807b5e0743d0b6385c1da9a35f93abf1910))
-
-
-
-
+-   **ffe-webfonts:** add missing development dependency to less ([5db2d80](https://github.com/SpareBank1/designsystem/commit/5db2d807b5e0743d0b6385c1da9a35f93abf1910))
 
 ## [3.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-webfonts@3.0.0...@sb1/ffe-webfonts@3.0.1) (2021-10-29)
 
-
 ### Bug Fixes
 
-* **ffe-webfonts:** legger til italic font ([2f14bf1](https://github.com/SpareBank1/designsystem/commit/2f14bf131a46ae1046546b6dca25c688852ea66c))
-
-
-
-
+-   **ffe-webfonts:** legger til italic font ([2f14bf1](https://github.com/SpareBank1/designsystem/commit/2f14bf131a46ae1046546b6dca25c688852ea66c))
 
 # [3.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-webfonts@2.2.1...@sb1/ffe-webfonts@3.0.0) (2021-02-22)
 
-
 ### Bug Fixes
 
-* **ffe-webfonts:** fjerner fonter som ikke skal brukes ([e22fb2b](https://github.com/SpareBank1/designsystem/commit/e22fb2b6313bb49b779236efe4164669b0e13bf7))
-
+-   **ffe-webfonts:** fjerner fonter som ikke skal brukes ([e22fb2b](https://github.com/SpareBank1/designsystem/commit/e22fb2b6313bb49b779236efe4164669b0e13bf7))
 
 ### BREAKING CHANGES
 
-* **ffe-webfonts:** fjerner fonter som ikke skal brukes på web for å redusere filstørrelse og lastetid
-
-
-
-
+-   **ffe-webfonts:** fjerner fonter som ikke skal brukes på web for å redusere filstørrelse og lastetid
 
 ## [2.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-webfonts@2.2.0...@sb1/ffe-webfonts@2.2.1) (2021-02-19)
 
-
 ### Bug Fixes
 
-* **ffe-webfonts:** Makes SpareBank1-font family opt-in ([712c758](https://github.com/SpareBank1/designsystem/commit/712c7580573d001b499d00a950366dbc28601ed3))
-
-
-
-
+-   **ffe-webfonts:** Makes SpareBank1-font family opt-in ([712c758](https://github.com/SpareBank1/designsystem/commit/712c7580573d001b499d00a950366dbc28601ed3))
 
 # [2.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-webfonts@2.1.1...@sb1/ffe-webfonts@2.2.0) (2021-02-03)
 
-
 ### Features
 
-* **ffe-webfonts:** legger til fonter fra ny identitet ([521426d](https://github.com/SpareBank1/designsystem/commit/521426ddeee2c1f4fa191bddfd44392ae64957af))
-
-
-
-
+-   **ffe-webfonts:** legger til fonter fra ny identitet ([521426d](https://github.com/SpareBank1/designsystem/commit/521426ddeee2c1f4fa191bddfd44392ae64957af))
 
 ## [2.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-webfonts@2.1.0...@sb1/ffe-webfonts@2.1.1) (2021-02-02)
 
-
 ### Bug Fixes
 
-* **ffe-webfonts:** reduce vulnerabilities ([15d2ec4](https://github.com/SpareBank1/designsystem/commit/15d2ec491b711a7fe3eedda32793d82fa16751be))
-
-
-
-
+-   **ffe-webfonts:** reduce vulnerabilities ([15d2ec4](https://github.com/SpareBank1/designsystem/commit/15d2ec491b711a7fe3eedda32793d82fa16751be))
 
 # [2.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-webfonts@2.0.5...@sb1/ffe-webfonts@2.1.0) (2019-10-16)
 

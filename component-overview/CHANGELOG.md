@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.12.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.12.5...@sb1/ffe-component-index@3.12.6) (2022-10-28)
+
+### Bug Fixes
+
+-   **component-overview:** force compile before building gh-pages ([9673986](https://github.com/SpareBank1/designsystem/commit/9673986fed18e16a29b750c5853268e3b5e94e15))
+-   **component-overview:** rename linktext-icon example and show new LinkIcon component ([af162c5](https://github.com/SpareBank1/designsystem/commit/af162c56c48e0f9deb998bf7ae60fad080ba2cdb))
+
 ## [3.12.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.12.4...@sb1/ffe-component-index@3.12.5) (2022-10-26)
 
 **Note:** Version bump only for package @sb1/ffe-component-index

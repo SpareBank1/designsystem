@@ -3,97 +3,57 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [3.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-decorators-react@3.0.9...@sb1/ffe-decorators-react@3.0.10) (2022-09-09)
+## [3.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-decorators-react@3.0.10...@sb1/ffe-decorators-react@3.0.11) (2022-10-28)
 
 **Note:** Version bump only for package @sb1/ffe-decorators-react
 
+## [3.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-decorators-react@3.0.9...@sb1/ffe-decorators-react@3.0.10) (2022-09-09)
 
-
-
+**Note:** Version bump only for package @sb1/ffe-decorators-react
 
 ## [3.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-decorators-react@3.0.8...@sb1/ffe-decorators-react@3.0.9) (2022-02-18)
 
 **Note:** Version bump only for package @sb1/ffe-decorators-react
 
-
-
-
-
 ## [3.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-decorators-react@3.0.7...@sb1/ffe-decorators-react@3.0.8) (2022-01-27)
 
 **Note:** Version bump only for package @sb1/ffe-decorators-react
-
-
-
-
 
 ## [3.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-decorators-react@3.0.6...@sb1/ffe-decorators-react@3.0.7) (2022-01-27)
 
 **Note:** Version bump only for package @sb1/ffe-decorators-react
 
-
-
-
-
 ## [3.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-decorators-react@3.0.5...@sb1/ffe-decorators-react@3.0.6) (2022-01-25)
 
 **Note:** Version bump only for package @sb1/ffe-decorators-react
-
-
-
-
 
 ## [3.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-decorators-react@3.0.4...@sb1/ffe-decorators-react@3.0.5) (2021-12-17)
 
 **Note:** Version bump only for package @sb1/ffe-decorators-react
 
-
-
-
-
 ## [3.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-decorators-react@3.0.3...@sb1/ffe-decorators-react@3.0.4) (2021-12-10)
-
 
 ### Bug Fixes
 
-* **ffe-decorators-react:** use buildtool for transpiling ([4beb0da](https://github.com/SpareBank1/designsystem/commit/4beb0daf6345e0b29ce515fb231c91a8d23b3477)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
-
-
-
-
+-   **ffe-decorators-react:** use buildtool for transpiling ([4beb0da](https://github.com/SpareBank1/designsystem/commit/4beb0daf6345e0b29ce515fb231c91a8d23b3477)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
 
 ## [3.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-decorators-react@3.0.2...@sb1/ffe-decorators-react@3.0.3) (2021-03-15)
 
-
 ### Bug Fixes
 
-* **ffe-decorators-react:** broadens version of peer dependencies ([66a6dfd](https://github.com/SpareBank1/designsystem/commit/66a6dfd65d67fa5aba3122b8152aa45ae050fb73))
-
-
-
-
+-   **ffe-decorators-react:** broadens version of peer dependencies ([66a6dfd](https://github.com/SpareBank1/designsystem/commit/66a6dfd65d67fa5aba3122b8152aa45ae050fb73))
 
 ## [3.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-decorators-react@3.0.1...@sb1/ffe-decorators-react@3.0.2) (2021-02-03)
 
-
 ### Bug Fixes
 
-* packages/ffe-decorators-react/package.json to reduce vulnerabilities ([209ac75](https://github.com/SpareBank1/designsystem/commit/209ac7546447012c8e71d14babdd73be5949f707))
-
-
-
-
+-   packages/ffe-decorators-react/package.json to reduce vulnerabilities ([209ac75](https://github.com/SpareBank1/designsystem/commit/209ac7546447012c8e71d14babdd73be5949f707))
 
 ## [3.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-decorators-react@3.0.0...@sb1/ffe-decorators-react@3.0.1) (2021-02-02)
 
-
 ### Bug Fixes
 
-* **ffe-decorators-react:** reduce vulnerabilities ([f858925](https://github.com/SpareBank1/designsystem/commit/f858925bcd834eb7ac1512797ee45c2978b006a6))
-
-
-
-
+-   **ffe-decorators-react:** reduce vulnerabilities ([f858925](https://github.com/SpareBank1/designsystem/commit/f858925bcd834eb7ac1512797ee45c2978b006a6))
 
 # [3.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-decorators-react@2.0.10...@sb1/ffe-decorators-react@3.0.0) (2019-08-27)
 

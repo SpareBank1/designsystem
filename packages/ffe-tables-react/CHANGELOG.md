@@ -3,235 +3,129 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [6.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@6.1.3...@sb1/ffe-tables-react@6.1.4) (2022-09-09)
+## [6.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@6.1.4...@sb1/ffe-tables-react@6.1.5) (2022-10-28)
 
+**Note:** Version bump only for package @sb1/ffe-tables-react
+
+## [6.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@6.1.3...@sb1/ffe-tables-react@6.1.4) (2022-09-09)
 
 ### Bug Fixes
 
-* **ffe-tables-react:** fix linting errors in test case ([55212bb](https://github.com/SpareBank1/designsystem/commit/55212bbe92dc2cf72ca8382cd5077510b53c6328))
-
-
-
-
+-   **ffe-tables-react:** fix linting errors in test case ([55212bb](https://github.com/SpareBank1/designsystem/commit/55212bbe92dc2cf72ca8382cd5077510b53c6328))
 
 ## [6.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@6.1.2...@sb1/ffe-tables-react@6.1.3) (2022-06-02)
 
-
 ### Bug Fixes
 
-* **ffe-tables-react:** add typescript declaration for `onSort` prop ([0cb8099](https://github.com/SpareBank1/designsystem/commit/0cb80999b8998b31f339b4c5d68b7adf46020598))
-
-
-
-
+-   **ffe-tables-react:** add typescript declaration for `onSort` prop ([0cb8099](https://github.com/SpareBank1/designsystem/commit/0cb80999b8998b31f339b4c5d68b7adf46020598))
 
 ## [6.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@6.1.1...@sb1/ffe-tables-react@6.1.2) (2022-03-02)
 
-
 ### Bug Fixes
 
-* **ffe-tables-react:** add missing author field to package.json ([8049e4f](https://github.com/SpareBank1/designsystem/commit/8049e4f1b0cdeb4f003d6b083621d51cb82607d3))
-
-
-
-
+-   **ffe-tables-react:** add missing author field to package.json ([8049e4f](https://github.com/SpareBank1/designsystem/commit/8049e4f1b0cdeb4f003d6b083621d51cb82607d3))
 
 ## [6.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@6.1.0...@sb1/ffe-tables-react@6.1.1) (2022-02-23)
 
 **Note:** Version bump only for package @sb1/ffe-tables-react
 
-
-
-
-
 # [6.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@6.0.33...@sb1/ffe-tables-react@6.1.0) (2022-02-18)
-
 
 ### Features
 
-* **ffe-tables-react:** import icons without need for tree shaking ([c5eb179](https://github.com/SpareBank1/designsystem/commit/c5eb179f091c7fbe5377d56e8a445d8eae8ccb5a))
-
-
-
-
+-   **ffe-tables-react:** import icons without need for tree shaking ([c5eb179](https://github.com/SpareBank1/designsystem/commit/c5eb179f091c7fbe5377d56e8a445d8eae8ccb5a))
 
 ## [6.0.33](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@6.0.32...@sb1/ffe-tables-react@6.0.33) (2022-01-27)
 
 **Note:** Version bump only for package @sb1/ffe-tables-react
 
-
-
-
-
 ## [6.0.32](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@6.0.31...@sb1/ffe-tables-react@6.0.32) (2022-01-27)
 
 **Note:** Version bump only for package @sb1/ffe-tables-react
-
-
-
-
 
 ## [6.0.31](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@6.0.30...@sb1/ffe-tables-react@6.0.31) (2022-01-25)
 
 **Note:** Version bump only for package @sb1/ffe-tables-react
 
-
-
-
-
 ## [6.0.30](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@6.0.29...@sb1/ffe-tables-react@6.0.30) (2022-01-24)
 
 **Note:** Version bump only for package @sb1/ffe-tables-react
-
-
-
-
 
 ## [6.0.29](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@6.0.28...@sb1/ffe-tables-react@6.0.29) (2021-12-17)
 
 **Note:** Version bump only for package @sb1/ffe-tables-react
 
-
-
-
-
 ## [6.0.28](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@6.0.27...@sb1/ffe-tables-react@6.0.28) (2021-12-10)
-
 
 ### Bug Fixes
 
-* **ffe-tables-react:** use buildtool for transpiling ([9ae0253](https://github.com/SpareBank1/designsystem/commit/9ae0253bf7d5360bed23fa96ed6bbf15611b09cd)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
-
-
-
-
+-   **ffe-tables-react:** use buildtool for transpiling ([9ae0253](https://github.com/SpareBank1/designsystem/commit/9ae0253bf7d5360bed23fa96ed6bbf15611b09cd)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
 
 ## [6.0.27](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@6.0.26...@sb1/ffe-tables-react@6.0.27) (2021-11-04)
 
 **Note:** Version bump only for package @sb1/ffe-tables-react
 
-
-
-
-
 ## [6.0.26](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@6.0.25...@sb1/ffe-tables-react@6.0.26) (2021-03-26)
-
 
 ### Bug Fixes
 
-* **ffe-tables-react:** fix naming of source directory ([a760192](https://github.com/SpareBank1/designsystem/commit/a7601927fc3aabb066f859ce22b2886467bcbf64))
-
-
-
-
+-   **ffe-tables-react:** fix naming of source directory ([a760192](https://github.com/SpareBank1/designsystem/commit/a7601927fc3aabb066f859ce22b2886467bcbf64))
 
 ## [6.0.25](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@6.0.24...@sb1/ffe-tables-react@6.0.25) (2021-03-15)
 
-
 ### Bug Fixes
 
-* **ffe-tables-react:** broadens version of peer dependencies ([8f9101a](https://github.com/SpareBank1/designsystem/commit/8f9101abe601d3812e2e8ce7ea7372a9c03d1af9))
-
-
-
-
+-   **ffe-tables-react:** broadens version of peer dependencies ([8f9101a](https://github.com/SpareBank1/designsystem/commit/8f9101abe601d3812e2e8ce7ea7372a9c03d1af9))
 
 ## [6.0.24](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@6.0.23...@sb1/ffe-tables-react@6.0.24) (2021-02-03)
 
-
 ### Bug Fixes
 
-* packages/ffe-tables-react/package.json to reduce vulnerabilities ([c8ac722](https://github.com/SpareBank1/designsystem/commit/c8ac722507b50c965c5cbbb768a6593e07ffc3a9))
-
-
-
-
+-   packages/ffe-tables-react/package.json to reduce vulnerabilities ([c8ac722](https://github.com/SpareBank1/designsystem/commit/c8ac722507b50c965c5cbbb768a6593e07ffc3a9))
 
 ## [6.0.23](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@6.0.22...@sb1/ffe-tables-react@6.0.23) (2021-02-02)
 
-
 ### Bug Fixes
 
-* **ffe-tables-react:** reduce vulnerabilities ([0bf6476](https://github.com/SpareBank1/designsystem/commit/0bf647686aa7e604ef5a2d84be29bb7c441539e6))
-
-
-
-
+-   **ffe-tables-react:** reduce vulnerabilities ([0bf6476](https://github.com/SpareBank1/designsystem/commit/0bf647686aa7e604ef5a2d84be29bb7c441539e6))
 
 ## [6.0.22](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@6.0.21...@sb1/ffe-tables-react@6.0.22) (2020-11-18)
 
 **Note:** Version bump only for package @sb1/ffe-tables-react
 
-
-
-
-
 ## [6.0.21](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@6.0.20...@sb1/ffe-tables-react@6.0.21) (2020-09-15)
 
 **Note:** Version bump only for package @sb1/ffe-tables-react
-
-
-
-
 
 ## [6.0.20](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@6.0.19...@sb1/ffe-tables-react@6.0.20) (2020-08-27)
 
 **Note:** Version bump only for package @sb1/ffe-tables-react
 
-
-
-
-
 ## [6.0.19](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@6.0.18...@sb1/ffe-tables-react@6.0.19) (2020-08-04)
 
 **Note:** Version bump only for package @sb1/ffe-tables-react
-
-
-
-
 
 ## [6.0.18](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@6.0.17...@sb1/ffe-tables-react@6.0.18) (2020-07-30)
 
 **Note:** Version bump only for package @sb1/ffe-tables-react
 
-
-
-
-
 ## [6.0.17](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@6.0.16...@sb1/ffe-tables-react@6.0.17) (2020-06-29)
 
 **Note:** Version bump only for package @sb1/ffe-tables-react
-
-
-
-
 
 ## [6.0.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@6.0.15...@sb1/ffe-tables-react@6.0.16) (2020-06-24)
 
 **Note:** Version bump only for package @sb1/ffe-tables-react
 
-
-
-
-
 ## [6.0.15](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@6.0.14...@sb1/ffe-tables-react@6.0.15) (2020-05-27)
 
 **Note:** Version bump only for package @sb1/ffe-tables-react
 
-
-
-
-
 ## [6.0.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@6.0.13...@sb1/ffe-tables-react@6.0.14) (2020-04-21)
-
 
 ### Bug Fixes
 
-* **ffe-tables-react:** dont mutate passed columns ([d5e4a5d](https://github.com/SpareBank1/designsystem/commit/d5e4a5d1fd0051392b2ac74a727abe22d90ce94a)), closes [#883](https://github.com/SpareBank1/designsystem/issues/883)
-
-
-
-
+-   **ffe-tables-react:** dont mutate passed columns ([d5e4a5d](https://github.com/SpareBank1/designsystem/commit/d5e4a5d1fd0051392b2ac74a727abe22d90ce94a)), closes [#883](https://github.com/SpareBank1/designsystem/issues/883)
 
 ## [6.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@6.0.12...@sb1/ffe-tables-react@6.0.13) (2020-03-31)
 

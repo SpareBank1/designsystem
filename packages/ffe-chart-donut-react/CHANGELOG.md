@@ -3,162 +3,99 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@5.1.1...@sb1/ffe-chart-donut-react@5.1.2) (2022-10-28)
+
+**Note:** Version bump only for package @sb1/ffe-chart-donut-react
+
 ## [5.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@5.1.0...@sb1/ffe-chart-donut-react@5.1.1) (2022-09-09)
 
 **Note:** Version bump only for package @sb1/ffe-chart-donut-react
 
-
-
-
-
 # [5.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@5.0.5...@sb1/ffe-chart-donut-react@5.1.0) (2022-08-08)
-
 
 ### Features
 
-* **ffe-chart-donut-react:** Colour tweaks ([f396545](https://github.com/SpareBank1/designsystem/commit/f396545d424329c92cc709824a1238337940db01))
-
-
-
-
+-   **ffe-chart-donut-react:** Colour tweaks ([f396545](https://github.com/SpareBank1/designsystem/commit/f396545d424329c92cc709824a1238337940db01))
 
 ## [5.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@5.0.4...@sb1/ffe-chart-donut-react@5.0.5) (2022-02-18)
 
 **Note:** Version bump only for package @sb1/ffe-chart-donut-react
 
-
-
-
-
 ## [5.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@5.0.3...@sb1/ffe-chart-donut-react@5.0.4) (2022-01-27)
 
 **Note:** Version bump only for package @sb1/ffe-chart-donut-react
-
-
-
-
 
 ## [5.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@5.0.2...@sb1/ffe-chart-donut-react@5.0.3) (2022-01-27)
 
 **Note:** Version bump only for package @sb1/ffe-chart-donut-react
 
-
-
-
-
 ## [5.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@5.0.1...@sb1/ffe-chart-donut-react@5.0.2) (2022-01-25)
 
 **Note:** Version bump only for package @sb1/ffe-chart-donut-react
-
-
-
-
 
 ## [5.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@5.0.0...@sb1/ffe-chart-donut-react@5.0.1) (2021-12-17)
 
 **Note:** Version bump only for package @sb1/ffe-chart-donut-react
 
-
-
-
-
 # [5.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@4.0.0...@sb1/ffe-chart-donut-react@5.0.0) (2021-12-10)
-
 
 ### Bug Fixes
 
-* **ffe-chart-donut-react:** move less files ([8703a37](https://github.com/SpareBank1/designsystem/commit/8703a37b254eb51fb52d23d271b8ac87ae1472dc))
-* **ffe-chart-donut-react:** use buildtool for transpiling ([20fdd8e](https://github.com/SpareBank1/designsystem/commit/20fdd8ed3118c5a86aecce275c5b2c49110c64c5)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
-
+-   **ffe-chart-donut-react:** move less files ([8703a37](https://github.com/SpareBank1/designsystem/commit/8703a37b254eb51fb52d23d271b8ac87ae1472dc))
+-   **ffe-chart-donut-react:** use buildtool for transpiling ([20fdd8e](https://github.com/SpareBank1/designsystem/commit/20fdd8ed3118c5a86aecce275c5b2c49110c64c5)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
 
 ### BREAKING CHANGES
 
-* **ffe-chart-donut-react:** `ffe-chart-donut.less` has moved from `lib/` to
-`less/`. Consumers need to update their less imports.
+-   **ffe-chart-donut-react:** `ffe-chart-donut.less` has moved from `lib/` to
+    `less/`. Consumers need to update their less imports.
 
 ```css
 @import '@sb1/ffe-chart-donut-react/less/ffe-chart-donut';
 ```
 
-
-
-
-
 # [4.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@3.1.0...@sb1/ffe-chart-donut-react@4.0.0) (2021-09-22)
-
 
 ### Bug Fixes
 
-* **ffe-chart-donut-react:** legger til tekstfarge i darkmode ([259674d](https://github.com/SpareBank1/designsystem/commit/259674ddadc20d1828844b2e8c5aa9ed154463c0))
-
+-   **ffe-chart-donut-react:** legger til tekstfarge i darkmode ([259674d](https://github.com/SpareBank1/designsystem/commit/259674ddadc20d1828844b2e8c5aa9ed154463c0))
 
 ### Features
 
-* **ffe-chart-donut-react:** justerte faeger iht ny profil ([5fd3809](https://github.com/SpareBank1/designsystem/commit/5fd380915e3100f801db9df9e04e7a6f3f9cf63e))
-
+-   **ffe-chart-donut-react:** justerte faeger iht ny profil ([5fd3809](https://github.com/SpareBank1/designsystem/commit/5fd380915e3100f801db9df9e04e7a6f3f9cf63e))
 
 ### BREAKING CHANGES
 
-* **ffe-chart-donut-react:** nye farger kan medføre regresjonsfeil
-
-
-
-
+-   **ffe-chart-donut-react:** nye farger kan medføre regresjonsfeil
 
 # [3.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@3.0.5...@sb1/ffe-chart-donut-react@3.1.0) (2021-06-23)
 
-
 ### Features
 
-* **ffe-chart-donut-react:** support single label prop ([23be07c](https://github.com/SpareBank1/designsystem/commit/23be07c60da9953275c1c9c387b739d34f734f7a))
-
-
-
-
+-   **ffe-chart-donut-react:** support single label prop ([23be07c](https://github.com/SpareBank1/designsystem/commit/23be07c60da9953275c1c9c387b739d34f734f7a))
 
 ## [3.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@3.0.4...@sb1/ffe-chart-donut-react@3.0.5) (2021-03-15)
 
-
 ### Bug Fixes
 
-* **ffe-chart-donut-react:** broadens version of peer dependencies ([ea9388a](https://github.com/SpareBank1/designsystem/commit/ea9388a2616e6c5ca226a7a84362697073083fa5))
-
-
-
-
+-   **ffe-chart-donut-react:** broadens version of peer dependencies ([ea9388a](https://github.com/SpareBank1/designsystem/commit/ea9388a2616e6c5ca226a7a84362697073083fa5))
 
 ## [3.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@3.0.3...@sb1/ffe-chart-donut-react@3.0.4) (2021-02-03)
 
-
 ### Bug Fixes
 
-* packages/ffe-chart-donut-react/package.json to reduce vulnerabilities ([595d956](https://github.com/SpareBank1/designsystem/commit/595d9565477c791c92ad0e389f792dd38f8bcded))
-
-
-
-
+-   packages/ffe-chart-donut-react/package.json to reduce vulnerabilities ([595d956](https://github.com/SpareBank1/designsystem/commit/595d9565477c791c92ad0e389f792dd38f8bcded))
 
 ## [3.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@3.0.2...@sb1/ffe-chart-donut-react@3.0.3) (2021-02-02)
 
-
 ### Bug Fixes
 
-* **ffe-chart-donut-react:** reduce vulnerabilities ([97e5ee0](https://github.com/SpareBank1/designsystem/commit/97e5ee05602952bc8ee58e45e5b048c2f8e118c7))
-
-
-
-
+-   **ffe-chart-donut-react:** reduce vulnerabilities ([97e5ee0](https://github.com/SpareBank1/designsystem/commit/97e5ee05602952bc8ee58e45e5b048c2f8e118c7))
 
 ## [3.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@3.0.1...@sb1/ffe-chart-donut-react@3.0.2) (2020-08-05)
 
-
 ### Bug Fixes
 
-* **ffe-chart-donut-react:** accessible text color in chart name ([35989f2](https://github.com/SpareBank1/designsystem/commit/35989f29e249a9b319dd3768ec5f0370a9c71c1d))
-
-
-
-
+-   **ffe-chart-donut-react:** accessible text color in chart name ([35989f2](https://github.com/SpareBank1/designsystem/commit/35989f29e249a9b319dd3768ec5f0370a9c71c1d))
 
 ## [3.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@3.0.0...@sb1/ffe-chart-donut-react@3.0.1) (2019-10-21)
 

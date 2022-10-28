@@ -3,108 +3,63 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [5.1.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner-react@5.1.6...@sb1/ffe-spinner-react@5.1.7) (2022-09-09)
+## [5.1.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner-react@5.1.7...@sb1/ffe-spinner-react@5.1.8) (2022-10-28)
 
 **Note:** Version bump only for package @sb1/ffe-spinner-react
 
+## [5.1.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner-react@5.1.6...@sb1/ffe-spinner-react@5.1.7) (2022-09-09)
 
-
-
+**Note:** Version bump only for package @sb1/ffe-spinner-react
 
 ## [5.1.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner-react@5.1.5...@sb1/ffe-spinner-react@5.1.6) (2022-02-18)
 
 **Note:** Version bump only for package @sb1/ffe-spinner-react
 
-
-
-
-
 ## [5.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner-react@5.1.4...@sb1/ffe-spinner-react@5.1.5) (2022-01-27)
 
 **Note:** Version bump only for package @sb1/ffe-spinner-react
-
-
-
-
 
 ## [5.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner-react@5.1.3...@sb1/ffe-spinner-react@5.1.4) (2022-01-27)
 
 **Note:** Version bump only for package @sb1/ffe-spinner-react
 
-
-
-
-
 ## [5.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner-react@5.1.2...@sb1/ffe-spinner-react@5.1.3) (2022-01-25)
 
 **Note:** Version bump only for package @sb1/ffe-spinner-react
-
-
-
-
 
 ## [5.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner-react@5.1.1...@sb1/ffe-spinner-react@5.1.2) (2021-12-17)
 
 **Note:** Version bump only for package @sb1/ffe-spinner-react
 
-
-
-
-
 ## [5.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner-react@5.1.0...@sb1/ffe-spinner-react@5.1.1) (2021-12-10)
-
 
 ### Bug Fixes
 
-* **ffe-spinner-react:** use buildtool for transpiling ([7036166](https://github.com/SpareBank1/designsystem/commit/7036166cde09921b5337081816770b7df63734a9)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
-
-
-
-
+-   **ffe-spinner-react:** use buildtool for transpiling ([7036166](https://github.com/SpareBank1/designsystem/commit/7036166cde09921b5337081816770b7df63734a9)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
 
 # [5.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner-react@5.0.3...@sb1/ffe-spinner-react@5.1.0) (2021-11-01)
 
-
 ### Features
 
-* **ffe-spinner-react:** override new defaults wrt. delaying visibility ([758a3b0](https://github.com/SpareBank1/designsystem/commit/758a3b07ff3a0e9d899e3cef0a68fb4d84525675))
-
-
-
-
+-   **ffe-spinner-react:** override new defaults wrt. delaying visibility ([758a3b0](https://github.com/SpareBank1/designsystem/commit/758a3b07ff3a0e9d899e3cef0a68fb4d84525675))
 
 ## [5.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner-react@5.0.2...@sb1/ffe-spinner-react@5.0.3) (2021-03-15)
 
-
 ### Bug Fixes
 
-* **ffe-spinner-react:** broadens version of peer dependencies ([78bdddc](https://github.com/SpareBank1/designsystem/commit/78bdddcec94641d07a68b267eb7995769a50a310))
-
-
-
-
+-   **ffe-spinner-react:** broadens version of peer dependencies ([78bdddc](https://github.com/SpareBank1/designsystem/commit/78bdddcec94641d07a68b267eb7995769a50a310))
 
 ## [5.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner-react@5.0.1...@sb1/ffe-spinner-react@5.0.2) (2021-02-02)
 
-
 ### Bug Fixes
 
-* packages/ffe-spinner-react/package.json to reduce vulnerabilities ([020a0f8](https://github.com/SpareBank1/designsystem/commit/020a0f87f3aef2af602019d6c3f19d01338dbd0d))
-
-
-
-
+-   packages/ffe-spinner-react/package.json to reduce vulnerabilities ([020a0f8](https://github.com/SpareBank1/designsystem/commit/020a0f87f3aef2af602019d6c3f19d01338dbd0d))
 
 ## [5.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner-react@5.0.0...@sb1/ffe-spinner-react@5.0.1) (2021-02-02)
 
-
 ### Bug Fixes
 
-* **ffe-spinner-react:** reduce vulnerabilities ([c502167](https://github.com/SpareBank1/designsystem/commit/c502167b80add31dae531e466a7c03e549ed740a))
-
-
-
-
+-   **ffe-spinner-react:** reduce vulnerabilities ([c502167](https://github.com/SpareBank1/designsystem/commit/c502167b80add31dae531e466a7c03e549ed740a))
 
 # [5.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner-react@4.1.1...@sb1/ffe-spinner-react@5.0.0) (2019-08-27)
 

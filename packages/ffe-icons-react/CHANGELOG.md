@@ -3,164 +3,91 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.3.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@7.3.3...@sb1/ffe-icons-react@7.3.4) (2022-10-28)
+
+**Note:** Version bump only for package @sb1/ffe-icons-react
+
 ## [7.3.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@7.3.2...@sb1/ffe-icons-react@7.3.3) (2022-09-09)
 
 **Note:** Version bump only for package @sb1/ffe-icons-react
 
-
-
-
-
 ## [7.3.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@7.3.1...@sb1/ffe-icons-react@7.3.2) (2022-03-02)
-
 
 ### Bug Fixes
 
-* **ffe-icons-react:** add author to package.json ([2851f42](https://github.com/SpareBank1/designsystem/commit/2851f42770f9894f36d03bd59197a60edb435b64))
-
-
-
-
+-   **ffe-icons-react:** add author to package.json ([2851f42](https://github.com/SpareBank1/designsystem/commit/2851f42770f9894f36d03bd59197a60edb435b64))
 
 ## [7.3.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@7.3.0...@sb1/ffe-icons-react@7.3.1) (2022-02-23)
 
 **Note:** Version bump only for package @sb1/ffe-icons-react
 
-
-
-
-
 # [7.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@7.2.22...@sb1/ffe-icons-react@7.3.0) (2022-02-18)
-
 
 ### Features
 
-* **ffe-icons-react:** improved build ([eec4061](https://github.com/SpareBank1/designsystem/commit/eec4061809717bc05a9bc2d27841ce2aceb96fe4))
-
-
-
-
+-   **ffe-icons-react:** improved build ([eec4061](https://github.com/SpareBank1/designsystem/commit/eec4061809717bc05a9bc2d27841ce2aceb96fe4))
 
 ## [7.2.22](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@7.2.21...@sb1/ffe-icons-react@7.2.22) (2022-01-27)
 
-
 ### Bug Fixes
 
-* **ffe-icons-react:** corrects wrong use of ts types instead of propTypes ([986ce3a](https://github.com/SpareBank1/designsystem/commit/986ce3a8ed58909b75ef60cb42b905b558f456a8))
-
-
-
-
+-   **ffe-icons-react:** corrects wrong use of ts types instead of propTypes ([986ce3a](https://github.com/SpareBank1/designsystem/commit/986ce3a8ed58909b75ef60cb42b905b558f456a8))
 
 ## [7.2.21](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@7.2.20...@sb1/ffe-icons-react@7.2.21) (2022-01-24)
 
 **Note:** Version bump only for package @sb1/ffe-icons-react
 
-
-
-
-
 ## [7.2.20](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@7.2.19...@sb1/ffe-icons-react@7.2.20) (2021-12-10)
-
 
 ### Bug Fixes
 
-* **ffe-icons-react:** use buildtool for transpiling ([3f34310](https://github.com/SpareBank1/designsystem/commit/3f34310fa1c36715e6709afdf7123166f99c3957)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
-
-
-
-
+-   **ffe-icons-react:** use buildtool for transpiling ([3f34310](https://github.com/SpareBank1/designsystem/commit/3f34310fa1c36715e6709afdf7123166f99c3957)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
 
 ## [7.2.19](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@7.2.18...@sb1/ffe-icons-react@7.2.19) (2021-11-04)
 
 **Note:** Version bump only for package @sb1/ffe-icons-react
 
-
-
-
-
 ## [7.2.18](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@7.2.17...@sb1/ffe-icons-react@7.2.18) (2021-03-15)
-
 
 ### Bug Fixes
 
-* **ffe-icons-react:** broadens version of peer dependencies ([34d2fec](https://github.com/SpareBank1/designsystem/commit/34d2fecb8b64ffc6461b202a92cb47112894edb6))
-
-
-
-
+-   **ffe-icons-react:** broadens version of peer dependencies ([34d2fec](https://github.com/SpareBank1/designsystem/commit/34d2fecb8b64ffc6461b202a92cb47112894edb6))
 
 ## [7.2.17](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@7.2.16...@sb1/ffe-icons-react@7.2.17) (2021-02-02)
 
 **Note:** Version bump only for package @sb1/ffe-icons-react
 
-
-
-
-
 ## [7.2.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@7.2.15...@sb1/ffe-icons-react@7.2.16) (2020-11-18)
 
 **Note:** Version bump only for package @sb1/ffe-icons-react
-
-
-
-
 
 ## [7.2.15](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@7.2.14...@sb1/ffe-icons-react@7.2.15) (2020-09-15)
 
 **Note:** Version bump only for package @sb1/ffe-icons-react
 
-
-
-
-
 ## [7.2.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@7.2.13...@sb1/ffe-icons-react@7.2.14) (2020-08-27)
 
 **Note:** Version bump only for package @sb1/ffe-icons-react
-
-
-
-
 
 ## [7.2.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@7.2.12...@sb1/ffe-icons-react@7.2.13) (2020-08-04)
 
 **Note:** Version bump only for package @sb1/ffe-icons-react
 
-
-
-
-
 ## [7.2.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@7.2.11...@sb1/ffe-icons-react@7.2.12) (2020-07-30)
 
 **Note:** Version bump only for package @sb1/ffe-icons-react
-
-
-
-
 
 ## [7.2.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@7.2.10...@sb1/ffe-icons-react@7.2.11) (2020-06-29)
 
 **Note:** Version bump only for package @sb1/ffe-icons-react
 
-
-
-
-
 ## [7.2.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@7.2.9...@sb1/ffe-icons-react@7.2.10) (2020-06-24)
 
 **Note:** Version bump only for package @sb1/ffe-icons-react
 
-
-
-
-
 ## [7.2.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@7.2.8...@sb1/ffe-icons-react@7.2.9) (2020-05-27)
 
 **Note:** Version bump only for package @sb1/ffe-icons-react
-
-
-
-
 
 ## [7.2.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@7.2.7...@sb1/ffe-icons-react@7.2.8) (2020-03-31)
 

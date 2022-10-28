@@ -1,48 +1,48 @@
 {
-  "name": "@sb1/ffe-collapse-react",
-  "version": "1.1.14",
-  "description": "React component for expand/collapse",
-  "keywords": [
-    "ffe"
-  ],
-  "license": "MIT",
-  "author": "SpareBank 1",
-  "files": [
-    "lib",
-    "es",
-    "less",
-    "types"
-  ],
-  "main": "lib/index.js",
-  "module": "es/index.js",
-  "types": "types/index.d.ts",
-  "sideEffects": false,
-  "repository": {
-    "type": "git",
-    "url": "ssh://git@github.com:SpareBank1/designsystem.git"
-  },
-  "scripts": {
-    "build": "ffe-buildtool babel",
-    "watch": "ffe-buildtool babel-watch",
-    "lint": "eslint src",
-    "test": "ffe-buildtool jest",
-    "test:watch": "ffe-buildtool jest --watch"
-  },
-  "dependencies": {
-    "classnames": "^2.3.1"
-  },
-  "devDependencies": {
-    "@sb1/ffe-buildtool": "^0.4.1",
-    "eslint": "^5.9.0",
-    "prop-types": "^15.7.2",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0"
-  },
-  "peerDependencies": {
-    "@sb1/ffe-core": "*",
-    "react": ">=16.9.0"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+    "name": "@sb1/ffe-collapse-react",
+    "version": "1.1.15",
+    "description": "React component for expand/collapse",
+    "keywords": [
+        "ffe"
+    ],
+    "license": "MIT",
+    "author": "SpareBank 1",
+    "files": [
+        "lib",
+        "es",
+        "less",
+        "types"
+    ],
+    "main": "lib/index.js",
+    "module": "es/index.js",
+    "types": "types/index.d.ts",
+    "sideEffects": false,
+    "repository": {
+        "type": "git",
+        "url": "ssh://git@github.com:SpareBank1/designsystem.git"
+    },
+    "scripts": {
+        "build": "ffe-buildtool babel",
+        "watch": "ffe-buildtool babel-watch",
+        "lint": "eslint src",
+        "test": "ffe-buildtool jest",
+        "test:watch": "ffe-buildtool jest --watch"
+    },
+    "dependencies": {
+        "classnames": "^2.3.1"
+    },
+    "devDependencies": {
+        "@sb1/ffe-buildtool": "^0.5.0",
+        "eslint": "^5.9.0",
+        "prop-types": "^15.7.2",
+        "react": "^16.9.0",
+        "react-dom": "^16.9.0"
+    },
+    "peerDependencies": {
+        "@sb1/ffe-core": "*",
+        "react": ">=16.9.0"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
 }

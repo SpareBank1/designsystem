@@ -3,135 +3,79 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-formatters@4.0.10...@sb1/ffe-formatters@4.0.11) (2022-10-28)
+
+**Note:** Version bump only for package @sb1/ffe-formatters
+
 ## [4.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-formatters@4.0.9...@sb1/ffe-formatters@4.0.10) (2022-09-09)
 
 **Note:** Version bump only for package @sb1/ffe-formatters
 
-
-
-
-
 ## [4.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-formatters@4.0.8...@sb1/ffe-formatters@4.0.9) (2022-06-02)
-
 
 ### Bug Fixes
 
-* **ffe-formatters:** minor fix of typescript declarations ([ec9614a](https://github.com/SpareBank1/designsystem/commit/ec9614a2d41c2683523c7423d4a885b3ad156987))
-
-
-
-
+-   **ffe-formatters:** minor fix of typescript declarations ([ec9614a](https://github.com/SpareBank1/designsystem/commit/ec9614a2d41c2683523c7423d4a885b3ad156987))
 
 ## [4.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-formatters@4.0.7...@sb1/ffe-formatters@4.0.8) (2022-02-18)
 
 **Note:** Version bump only for package @sb1/ffe-formatters
 
-
-
-
-
 ## [4.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-formatters@4.0.6...@sb1/ffe-formatters@4.0.7) (2022-01-27)
 
 **Note:** Version bump only for package @sb1/ffe-formatters
-
-
-
-
 
 ## [4.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-formatters@4.0.5...@sb1/ffe-formatters@4.0.6) (2022-01-27)
 
 **Note:** Version bump only for package @sb1/ffe-formatters
 
-
-
-
-
 ## [4.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-formatters@4.0.4...@sb1/ffe-formatters@4.0.5) (2022-01-25)
 
 **Note:** Version bump only for package @sb1/ffe-formatters
 
-
-
-
-
 ## [4.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-formatters@4.0.3...@sb1/ffe-formatters@4.0.4) (2022-01-05)
-
 
 ### Bug Fixes
 
-* **ffe-formatters:** allow non commadash-postfixes ([1b6cc52](https://github.com/SpareBank1/designsystem/commit/1b6cc52d3228da39660e1b482ccbab90071f37a2))
-
-
-
-
+-   **ffe-formatters:** allow non commadash-postfixes ([1b6cc52](https://github.com/SpareBank1/designsystem/commit/1b6cc52d3228da39660e1b482ccbab90071f37a2))
 
 ## [4.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-formatters@4.0.2...@sb1/ffe-formatters@4.0.3) (2021-12-17)
 
 **Note:** Version bump only for package @sb1/ffe-formatters
 
-
-
-
-
 ## [4.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-formatters@4.0.1...@sb1/ffe-formatters@4.0.2) (2021-12-10)
-
 
 ### Bug Fixes
 
-* **ffe-formatters:** use buildtool for transpiling ([c164f5d](https://github.com/SpareBank1/designsystem/commit/c164f5dd4989993d7532c4489f4faac28163a43c)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
-
-
-
-
+-   **ffe-formatters:** use buildtool for transpiling ([c164f5d](https://github.com/SpareBank1/designsystem/commit/c164f5dd4989993d7532c4489f4faac28163a43c)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
 
 ## [4.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-formatters@4.0.0...@sb1/ffe-formatters@4.0.1) (2021-08-11)
 
-
 ### Bug Fixes
 
-* **ffe-formatters:** formatCurrency also accepts a number ([306c4b8](https://github.com/SpareBank1/designsystem/commit/306c4b8b36408372fcb5039ef490b555a10d20a3))
-
-
-
-
+-   **ffe-formatters:** formatCurrency also accepts a number ([306c4b8](https://github.com/SpareBank1/designsystem/commit/306c4b8b36408372fcb5039ef490b555a10d20a3))
 
 # [4.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-formatters@3.1.5...@sb1/ffe-formatters@4.0.0) (2021-02-11)
 
-
 ### Features
 
-* **ffe-formatters:** added types ([a26264d](https://github.com/SpareBank1/designsystem/commit/a26264d1fa4e80939ed45ceccb6f4997d6ed2abb))
-
+-   **ffe-formatters:** added types ([a26264d](https://github.com/SpareBank1/designsystem/commit/a26264d1fa4e80939ed45ceccb6f4997d6ed2abb))
 
 ### BREAKING CHANGES
 
-* **ffe-formatters:** formatDate does not accept moment any more.
-
-
-
-
+-   **ffe-formatters:** formatDate does not accept moment any more.
 
 ## [3.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-formatters@3.1.4...@sb1/ffe-formatters@3.1.5) (2021-02-02)
 
-
 ### Bug Fixes
 
-* packages/ffe-formatters/package.json to reduce vulnerabilities ([8b90ace](https://github.com/SpareBank1/designsystem/commit/8b90ace5def900bd093f75269f116caf4cc04db2))
-
-
-
-
+-   packages/ffe-formatters/package.json to reduce vulnerabilities ([8b90ace](https://github.com/SpareBank1/designsystem/commit/8b90ace5def900bd093f75269f116caf4cc04db2))
 
 ## [3.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-formatters@3.1.3...@sb1/ffe-formatters@3.1.4) (2021-02-02)
 
-
 ### Bug Fixes
 
-* **ffe-formatters:** reduce vulnerabilities ([d07213f](https://github.com/SpareBank1/designsystem/commit/d07213fd7c223612efcec50818c14330f9726385))
-
-
-
-
+-   **ffe-formatters:** reduce vulnerabilities ([d07213f](https://github.com/SpareBank1/designsystem/commit/d07213fd7c223612efcec50818c14330f9726385))
 
 ## [3.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-formatters@3.1.2...@sb1/ffe-formatters@3.1.3) (2018-12-11)
 

@@ -1,43 +1,43 @@
 {
-  "name": "@sb1/ffe-decorators-react",
-  "version": "3.0.10",
-  "description": "",
-  "keywords": [
-    "ffe"
-  ],
-  "license": "MIT",
-  "author": "SpareBank 1",
-  "files": [
-    "lib",
-    "es"
-  ],
-  "main": "lib/index.js",
-  "module": "es/index.js",
-  "sideEffects": false,
-  "repository": {
-    "type": "git",
-    "url": "ssh://git@github.com:SpareBank1/designsystem.git"
-  },
-  "scripts": {
-    "build": "ffe-buildtool babel --no-copy-typedef",
-    "watch": "ffe-buildtool babel-watch",
-    "lint": "eslint src",
-    "test": "ffe-buildtool jest",
-    "test:watch": "ffe-buildtool jest --watch"
-  },
-  "devDependencies": {
-    "@sb1/ffe-buildtool": "^0.4.1",
-    "eslint": "^5.9.0",
-    "mock-raf": "^1.0.0",
-    "react": "^16.9.0",
-    "react-addons-test-utils": "^15.6.2",
-    "react-dom": "^16.9.0",
-    "sinon": "^7.2.3"
-  },
-  "peerDependencies": {
-    "react": ">=16.9.0"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+    "name": "@sb1/ffe-decorators-react",
+    "version": "3.0.11",
+    "description": "",
+    "keywords": [
+        "ffe"
+    ],
+    "license": "MIT",
+    "author": "SpareBank 1",
+    "files": [
+        "lib",
+        "es"
+    ],
+    "main": "lib/index.js",
+    "module": "es/index.js",
+    "sideEffects": false,
+    "repository": {
+        "type": "git",
+        "url": "ssh://git@github.com:SpareBank1/designsystem.git"
+    },
+    "scripts": {
+        "build": "ffe-buildtool babel --no-copy-typedef",
+        "watch": "ffe-buildtool babel-watch",
+        "lint": "eslint src",
+        "test": "ffe-buildtool jest",
+        "test:watch": "ffe-buildtool jest --watch"
+    },
+    "devDependencies": {
+        "@sb1/ffe-buildtool": "^0.5.0",
+        "eslint": "^5.9.0",
+        "mock-raf": "^1.0.0",
+        "react": "^16.9.0",
+        "react-addons-test-utils": "^15.6.2",
+        "react-dom": "^16.9.0",
+        "sinon": "^7.2.3"
+    },
+    "peerDependencies": {
+        "react": ">=16.9.0"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
 }
