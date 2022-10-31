@@ -52,23 +52,25 @@
     flex-wrap: nowrap;
     padding: @ffe-spacing-sm;
     text-align: left;
+
     .ffe-body-paragraph,
     .ffe-body-text {
         .native & {
             @media (prefers-color-scheme: dark) {
-                color: @ffe-farge-svart;
+                color: var(--ffe-farge-svart);
             }
         }
+
         .ffe-link-text:not(:focus) {
-            color: @ffe-farge-fjell;
-            border-color: @ffe-farge-fjell;
+            color: var(--ffe-farge-fjell);
+            border-color: var(--ffe-farge-fjell);
         }
     }
 
     &__header {
         &:extend(.ffe-strong-text);
 
-        color: @ffe-farge-svart;
+        color: var(--ffe-farge-svart);
         margin-bottom: @ffe-spacing-2xs;
     }
 
@@ -89,9 +91,10 @@
             margin-bottom: 0;
             height: 4em;
             width: 4em;
+
             .native & {
                 @media (prefers-color-scheme: dark) {
-                    background-color: @ffe-farge-svart;
+                    background-color: var(--ffe-farge-svart);
                 }
             }
         }
@@ -100,19 +103,25 @@
     &__icon-svg {
         height: 1em;
         width: 1em;
-        fill: @ffe-farge-hvit;
+        fill: var(--ffe-farge-svart);
 
         @media (min-width: @breakpoint-sm) {
             height: 2em;
             width: 2em;
+        }
+
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                fill: var(--ffe-farge-hvit);
+            }
         }
     }
 
     &__close-button {
         flex: 0 0 auto;
         cursor: pointer;
-        color: @ffe-farge-moerkgraa;
-        fill: @ffe-farge-moerkgraa;
+        color: var(--ffe-v-context-message-close-button-color);
+        fill: var(--ffe-v-context-message-close-button-color);
         border: 2px solid transparent;
         box-sizing: border-box;
         padding-top: @ffe-spacing-xs;
@@ -123,10 +132,12 @@
         width: 3rem;
 
         &:hover {
-            fill: @ffe-farge-svart;
+            fill: var(--ffe-v-context-message-close-button-color-hover);
         }
+
         &:focus {
-            border: 2px solid @ffe-farge-vann;
+            border: 2px solid
+                var(--ffe-v-context-message-close-button-border-color-focus);
             border-radius: 5px;
         }
     }
@@ -173,190 +184,185 @@
     }
 
     &--info {
-        background-color: @ffe-farge-frost-30;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                background-color: @ffe-farge-vann-30;
-            }
-        }
+        background-color: var(--ffe-v-context-message-info-bg-color);
 
         .ffe-context-message-content__icon {
-            background-color: @ffe-farge-vann;
-            border-color: @ffe-farge-vann;
+            background-color: var(
+                --ffe-v-context-message-info-icon-compact-color
+            );
+            border-color: var(--ffe-v-context-message-info-icon-compact-color);
         }
 
         .ffe-context-message-content__icon-svg {
-            fill: @ffe-farge-hvit;
+            fill: var(--ffe-farge-hvit);
         }
 
         @media (min-width: @breakpoint-sm) {
             .ffe-context-message-content__icon {
-                background-color: @ffe-farge-hvit;
-                border-color: @ffe-farge-vann;
-                .native & {
-                    @media (prefers-color-scheme: dark) {
-                        background-color: @ffe-farge-svart;
-                        border-color: @ffe-farge-vann-70;
-                    }
-                }
+                background-color: var(--ffe-v-context-message-icon-bg-color);
+                border-color: var(--ffe-v-context-message-info-icon-color);
             }
+
             .ffe-context-message-content__icon-svg {
-                fill: @ffe-farge-vann;
-                .native & {
-                    @media (prefers-color-scheme: dark) {
-                        fill: @ffe-farge-vann-70;
-                    }
-                }
+                fill: var(--ffe-v-context-message-info-icon-color);
             }
         }
     }
 
     &--info&--coloredbg {
-        background-color: @ffe-farge-hvit;
+        background-color: var(--ffe-v-context-message-variant-bg-color);
+
         .native & {
             @media (prefers-color-scheme: dark) {
-                background-color: @ffe-farge-vann-30;
+                background-color: var(--ffe-v-context-message-info-bg-color);
             }
         }
     }
 
     &--info&--compact {
         .ffe-context-message-content__icon {
-            background-color: @ffe-farge-vann;
+            background-color: var(
+                --ffe-v-context-message-info-icon-compact-color
+            );
         }
+
         .ffe-context-message-content__icon-svg {
-            fill: @ffe-farge-hvit;
+            fill: var(--ffe-farge-hvit);
         }
     }
 
     &--tips {
-        background-color: @ffe-farge-sand;
+        background-color: var(--ffe-v-context-message-tips-bg-color);
+
         .ffe-context-message-content__icon {
-            background-color: @ffe-farge-sol;
-            border-color: @ffe-farge-sol;
+            background-color: var(--ffe-v-context-message-tips-icon-color);
+            border-color: var(--ffe-v-context-message-tips-icon-color);
+        }
+
+        .ffe-context-message-content__icon-svg {
+            fill: var(--ffe-farge-hvit);
         }
 
         @media (min-width: @breakpoint-sm) {
             .ffe-context-message-content__icon {
-                background-color: @ffe-farge-hvit;
-                border-color: @ffe-farge-sol;
-                .native & {
-                    @media (prefers-color-scheme: dark) {
-                        background-color: @ffe-farge-svart;
-                    }
-                }
+                background-color: var(--ffe-v-context-message-icon-bg-color);
+                border-color: var(--ffe-v-context-message-tips-icon-color);
             }
+
             .ffe-context-message-content__icon-svg {
-                fill: @ffe-farge-sol;
+                fill: var(--ffe-v-context-message-tips-icon-color);
             }
         }
     }
+
     &--tips&--coloredbg {
-        background-color: @ffe-farge-hvit;
+        background-color: var(--ffe-v-context-message-variant-bg-color);
+
         .native & {
             @media (prefers-color-scheme: dark) {
-                background-color: @ffe-farge-sand;
+                background-color: var(--ffe-v-context-message-tips-bg-color);
             }
         }
     }
 
     &--tips&--compact {
         .ffe-context-message-content__icon {
-            background-color: @ffe-farge-sol;
+            background-color: var(--ffe-v-context-message-tips-icon-color);
         }
+
         .ffe-context-message-content__icon-svg {
-            fill: @ffe-farge-hvit;
+            fill: var(--ffe-farge-hvit);
         }
     }
 
     &--success {
-        background-color: @ffe-farge-nordlys-30;
+        background-color: var(--ffe-v-context-message-success-bg-color);
+
         .ffe-context-message-content__icon {
-            background-color: @ffe-farge-nordlys-wcag;
-            border-color: @ffe-farge-nordlys-wcag;
+            background-color: var(
+                --ffe-v-context-message-success-compact-color
+            );
+            border-color: var(--ffe-v-context-message-success-compact-color);
+        }
+        .ffe-context-message-content__icon-svg {
+            fill: var(--ffe-farge-hvit);
         }
 
         @media (min-width: @breakpoint-sm) {
             .ffe-context-message-content__icon {
-                background-color: @ffe-farge-hvit;
-                border-color: @ffe-farge-nordlys-wcag;
-                .native & {
-                    @media (prefers-color-scheme: dark) {
-                        background-color: @ffe-farge-svart;
-                        border-color: @ffe-farge-nordlys;
-                    }
-                }
+                background-color: var(--ffe-v-context-message-icon-bg-color);
+                border-color: var(--ffe-v-context-message-success-icon-color);
             }
+
             .ffe-context-message-content__icon-svg {
-                fill: @ffe-farge-nordlys-wcag;
-                .native & {
-                    @media (prefers-color-scheme: dark) {
-                        fill: @ffe-farge-nordlys;
-                    }
-                }
+                fill: var(--ffe-v-context-message-success-icon-color);
             }
         }
     }
 
     &--success&--coloredbg {
-        background-color: @ffe-farge-hvit;
+        background-color: var(--ffe-v-context-message-variant-bg-color);
+
         .native & {
             @media (prefers-color-scheme: dark) {
-                background-color: @ffe-farge-nordlys-30;
+                background-color: var(--ffe-v-context-message-success-bg-color);
             }
         }
     }
 
     &--success&--compact {
         .ffe-context-message-content__icon {
-            background-color: @ffe-farge-nordlys-wcag;
+            background-color: var(
+                --ffe-v-context-message-success-compact-color
+            );
         }
+
         .ffe-context-message-content__icon-svg {
-            fill: @ffe-farge-hvit;
+            fill: var(--ffe-farge-hvit);
         }
     }
 
     &--error {
-        background-color: @ffe-farge-baer-30;
+        background-color: var(--ffe-v-context-message-error-bg-color);
+
         .ffe-context-message-content__icon {
-            background-color: @ffe-farge-baer;
-            border-color: @ffe-farge-baer;
+            background-color: var(--ffe-v-context-message-error-icon-color);
+            border-color: var(--ffe-v-context-message-error-icon-color);
         }
+
         .ffe-context-message-content__icon-svg {
-            fill: @ffe-farge-hvit;
+            fill: var(--ffe-farge-hvit);
         }
 
         @media (min-width: @breakpoint-sm) {
             .ffe-context-message-content__icon {
-                background-color: @ffe-farge-hvit;
-                border-color: @ffe-farge-baer;
-                .native & {
-                    @media (prefers-color-scheme: dark) {
-                        background-color: @ffe-farge-svart;
-                    }
-                }
+                background-color: var(--ffe-v-context-message-icon-bg-color);
+                border-color: var(--ffe-v-context-message-error-icon-color);
             }
+
             .ffe-context-message-content__icon-svg {
-                fill: @ffe-farge-baer;
+                fill: var(--ffe-v-context-message-error-icon-color);
             }
         }
     }
 
     &--error&--coloredbg {
-        background-color: @ffe-farge-hvit;
+        background-color: var(--ffe-v-context-message-variant-bg-color);
+
         .native & {
             @media (prefers-color-scheme: dark) {
-                background-color: @ffe-farge-baer-30;
+                background-color: var(--ffe-v-context-message-error-bg-color);
             }
         }
     }
 
     &--error&--compact {
         .ffe-context-message-content__icon {
-            background-color: @ffe-farge-baer;
+            background-color: var(--ffe-v-context-message-error-icon-color);
         }
+
         .ffe-context-message-content__icon-svg {
-            fill: @ffe-farge-hvit;
+            fill: var(--ffe-farge-hvit);
         }
     }
 }

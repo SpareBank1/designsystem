@@ -1,0 +1,33 @@
+:root {
+    /** Close button */
+    --ffe-v-system-message-close-button-color: var(--ffe-farge-moerkgraa);
+    --ffe-v-system-message-close-button-color-hover: var(--ffe-farge-svart);
+    --ffe-v-system-message-close-button-border-color-focus: var(
+        --ffe-farge-vann
+    );
+
+    /** onColoredBg variant */
+    --ffe-v-system-message-variant-bg-color: var(--ffe-farge-hvit);
+
+    /** Error */
+    --ffe-v-system-message-error-bg-color: var(--ffe-farge-baer-30);
+    --ffe-v-system-message-error-icon-bg-color: var(--ffe-farge-baer);
+
+    /** Info */
+    --ffe-v-system-message-info-bg-color: var(--ffe-farge-frost-30);
+    --ffe-v-system-message-info-icon-bg-color: var(--ffe-farge-vann);
+
+    /** News */
+    --ffe-v-system-message-news-bg-color: var(--ffe-farge-koksgraa);
+    --ffe-v-system-message-news-icon-color: var(--ffe-farge-fjell);
+
+    /** Success */
+    --ffe-v-system-message-success-bg-color: var(--ffe-farge-nordlys-30);
+    --ffe-v-system-message-news-icon-bg-color: var(--ffe-farge-nordlys-wcag);
+
+    @media (prefers-color-scheme: dark) {
+        .native {
+            --ffe-v-system-message-info-bg-color: var(--ffe-farge-vann-30);
+        }
+    }
+}

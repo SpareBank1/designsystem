@@ -1,0 +1,45 @@
+:root {
+    /** Close button */
+    --ffe-v-context-message-close-button-color: var(--ffe-farge-moerkgraa);
+    --ffe-v-context-message-close-button-color-hover: var(--ffe-farge-svart);
+    --ffe-v-context-message-close-button-border-color-focus: var(
+        --ffe-farge-vann
+    );
+
+    /** onColoredBg variant */
+    --ffe-v-context-message-variant-bg-color: var(--ffe-farge-hvit);
+
+    /* Common */
+    --ffe-v-context-message-icon-bg-color: var(--ffe-farge-hvit);
+
+    /** Info */
+    --ffe-v-context-message-info-bg-color: var(--ffe-farge-frost-30);
+    --ffe-v-context-message-info-icon-color: var(--ffe-farge-vann);
+    --ffe-v-context-message-info-icon-compact-color: var(--ffe-farge-vann);
+
+    /** Tips */
+    --ffe-v-context-message-tips-bg-color: var(--ffe-farge-sand);
+    --ffe-v-context-message-tips-icon-color: var(--ffe-farge-sol);
+
+    /** Success */
+    --ffe-v-context-message-success-bg-color: var(--ffe-farge-nordlys-30);
+    --ffe-v-context-message-success-compact-color: var(
+        --ffe-farge-nordlys-wcag
+    );
+    --ffe-v-context-message-success-icon-color: var(--ffe-farge-nordlys-wcag);
+
+    /** Error */
+    --ffe-v-context-message-error-bg-color: var(--ffe-farge-baer-30);
+    --ffe-v-context-message-error-icon-color: var(--ffe-farge-baer);
+
+    @media (prefers-color-scheme: dark) {
+        .native {
+            --ffe-v-context-message-icon-bg-color: var(--ffe-farge-svart);
+            --ffe-v-context-message-info-bg-color: var(--ffe-farge-vann-30);
+            --ffe-v-context-message-info-color: var(--ffe-farge-vann-70);
+            --ffe-v-context-message-success-icon-color: var(
+                --ffe-farge-nordlys
+            );
+        }
+    }
+}
