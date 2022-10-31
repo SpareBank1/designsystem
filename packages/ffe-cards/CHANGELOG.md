@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [14.0.17](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@14.0.16...@sb1/ffe-cards@14.0.17) (2022-10-31)
+
+### Bug Fixes
+
+-   **ffe-cards:** sett riktig farge på visited linker i cards i darkmode ([85f9a62](https://github.com/SpareBank1/designsystem/commit/85f9a620d353dee7f8e72c4dcc354a187f587508))
+
 ## [14.0.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@14.0.15...@sb1/ffe-cards@14.0.16) (2022-10-28)
 
 **Note:** Version bump only for package @sb1/ffe-cards

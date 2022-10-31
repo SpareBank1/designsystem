@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [16.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@16.1.0...@sb1/ffe-buttons@16.1.1) (2022-10-31)
+
+### Bug Fixes
+
+-   **ffe-buttons:** gjør at shortcut button får riktig link farge i darkmode ([e26836f](https://github.com/SpareBank1/designsystem/commit/e26836f5c192b6c023cfca1e08eac70abf76f2ed))
+
 # [16.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@16.0.0...@sb1/ffe-buttons@16.1.0) (2022-10-28)
 
 ### Features
