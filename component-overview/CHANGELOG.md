@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.12.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.12.7...@sb1/ffe-component-index@3.12.8) (2022-10-31)
+
+### Bug Fixes
+
+-   **component-overview:** få in-page nav til å følge siden ([1dfc759](https://github.com/SpareBank1/designsystem/commit/1dfc75915307c896feea894b4fd8178693960811))
+-   **component-overview:** oppdater less import ([7e75ecb](https://github.com/SpareBank1/designsystem/commit/7e75ecbae9d6725f0f0a4946ef607c909be2e0fc))
+
 ## [3.12.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.12.6...@sb1/ffe-component-index@3.12.7) (2022-10-31)
 
 **Note:** Version bump only for package @sb1/ffe-component-index

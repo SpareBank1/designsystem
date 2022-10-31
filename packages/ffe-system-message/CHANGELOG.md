@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@6.2.13...@sb1/ffe-system-message@6.3.0) (2022-10-31)
+
+### Features
+
+-   **ffe-system-message:** legg til theming muligheter ([46a11fd](https://github.com/SpareBank1/designsystem/commit/46a11fdb96c5471647ea0ec0aed9ccbbee6aa1f5))
+
 ## [6.2.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@6.2.12...@sb1/ffe-system-message@6.2.13) (2022-10-28)
 
 **Note:** Version bump only for package @sb1/ffe-system-message

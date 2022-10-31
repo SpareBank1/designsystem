@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@10.1.2...@sb1/ffe-message-box@10.2.0) (2022-10-31)
+
+### Features
+
+-   **ffe-message-box:** legg til mulighet for theming ([0d63f73](https://github.com/SpareBank1/designsystem/commit/0d63f73bc591c317eeebf952ad90d748cdb5d2ab))
+
 ## [10.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@10.1.1...@sb1/ffe-message-box@10.1.2) (2022-10-28)
 
 **Note:** Version bump only for package @sb1/ffe-message-box

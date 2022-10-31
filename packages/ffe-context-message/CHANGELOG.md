@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@6.0.14...@sb1/ffe-context-message@6.1.0) (2022-10-31)
+
+### Features
+
+-   **ffe-context-message:** add theming ([b597b07](https://github.com/SpareBank1/designsystem/commit/b597b070326ca10453e8876c9b3dc0bd61139eb8))
+
 ## [6.0.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@6.0.13...@sb1/ffe-context-message@6.0.14) (2022-10-28)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
