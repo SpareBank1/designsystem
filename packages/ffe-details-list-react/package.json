@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-details-list-react",
-    "version": "3.0.78",
+    "version": "3.1.0",
     "license": "MIT",
     "author": "SpareBank 1",
     "files": [
@@ -10,7 +10,7 @@
     ],
     "main": "lib/index.js",
     "module": "es/index.js",
-    "types" : "types/index.d.ts",
+    "types": "types/index.d.ts",
     "sideEffects": false,
     "repository": {
         "type": "git",

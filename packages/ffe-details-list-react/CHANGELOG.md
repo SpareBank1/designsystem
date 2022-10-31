@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.78...@sb1/ffe-details-list-react@3.1.0) (2022-10-31)
+
+### Features
+
+-   **ffe-details-list-react:** add types ([a6dc656](https://github.com/SpareBank1/designsystem/commit/a6dc656d079ca29d3b20f923543213cda9211e52))
+
 ## [3.0.78](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.0.77...@sb1/ffe-details-list-react@3.0.78) (2022-10-28)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
