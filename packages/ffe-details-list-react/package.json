@@ -10,13 +10,14 @@
     ],
     "main": "lib/index.js",
     "module": "es/index.js",
+    "types" : "types/index.d.ts",
     "sideEffects": false,
     "repository": {
         "type": "git",
         "url": "ssh://git@github.com:SpareBank1/designsystem.git"
     },
     "scripts": {
-        "build": "ffe-buildtool babel --no-copy-typedef",
+        "build": "ffe-buildtool babel",
         "watch": "ffe-buildtool babel-watch",
         "lint": "eslint src",
         "test": "ffe-buildtool jest",
