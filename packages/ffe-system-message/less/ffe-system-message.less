@@ -26,92 +26,88 @@
 // Styleguide ffe-system-message
 
 .ffe-system-message-wrapper {
-    color: @ffe-farge-svart;
+    color: var(--ffe-farge-svart);
     fill: currentColor;
     transition: height @ffe-transition-duration @ffe-ease-in-out-back;
     overflow: hidden;
     border-radius: @ffe-spacing-xs;
 
     &--error&--coloredbg {
-        background-color: @ffe-farge-hvit;
+        background-color: var(--ffe-v-system-message-variant-bg-color);
         .native & {
             @media (prefers-color-scheme: dark) {
-                background-color: @ffe-farge-baer-30;
+                background-color: var(--ffe-v-system-message-error-bg-color);
             }
         }
     }
     &--error {
-        background-color: @ffe-farge-baer-30;
-        fill: @ffe-farge-hvit;
+        background-color: var(--ffe-v-system-message-error-bg-color);
+        fill: var(--ffe-farge-hvit);
 
         .ffe-system-message__icon {
-            background: @ffe-farge-baer;
+            background: var(--ffe-v-system-message-error-icon-bg-color);
         }
     }
 
     &--info&--coloredbg {
-        background-color: @ffe-farge-hvit;
+        background-color: var(--ffe-v-system-message-variant-bg-color);
         .native & {
             @media (prefers-color-scheme: dark) {
-                background-color: @ffe-farge-vann-30;
+                background-color: var(--ffe-v-system-message-info-bg-color);
             }
         }
     }
     &--info {
-        background-color: @ffe-farge-frost-30;
-        fill: @ffe-farge-hvit;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                background-color: @ffe-farge-vann-30;
-            }
-        }
+        background-color: var(--ffe-v-system-message-info-bg-color);
+        fill: var(--ffe-farge-hvit);
+
         .ffe-system-message__icon {
-            background: @ffe-farge-vann;
+            background: var(--ffe-v-system-message-info-icon-bg-color);
         }
     }
 
     &--news&--coloredbg {
-        background-color: @ffe-farge-hvit;
-        color: @ffe-farge-svart;
-        fill: @ffe-farge-hvit;
+        background-color: var(--ffe-v-system-message-variant-bg-color);
+        color: var(--ffe-farge-svart);
+        fill: var(--ffe-farge-hvit);
         .native & {
             @media (prefers-color-scheme: dark) {
-                background-color: @ffe-farge-koksgraa;
-                color: @ffe-farge-hvit;
-                fill: @ffe-farge-fjell;
+                background-color: var(--ffe-v-system-message-news-bg-color);
+                color: var(--ffe-farge-hvit);
+                fill: var(--ffe-v-system-message-news-icon-color);
             }
         }
         .ffe-system-message__icon {
-            background: @ffe-farge-fjell;
+            background: var(--ffe-v-system-message-news-icon-color);
             .native & {
                 @media (prefers-color-scheme: dark) {
-                    background: @ffe-farge-hvit;
+                    background: var(--ffe-farge-hvit);
                 }
             }
         }
     }
     &--news {
-        background-color: @ffe-farge-koksgraa;
-        color: @ffe-white;
-        fill: @ffe-farge-fjell;
+        background-color: var(--ffe-v-system-message-news-bg-color);
+        color: var(--ffe-farge-hvit);
+        fill: var(--ffe-v-system-message-news-icon-color);
         .ffe-system-message__icon {
-            background: @ffe-farge-hvit;
+            background: var(--ffe-farge-hvit);
         }
     }
 
     &--success&--coloredbg {
-        background-color: @ffe-farge-hvit;
+        background-color: var(--ffe-v-system-message-variant-bg-color);
         .native & {
             @media (prefers-color-scheme: dark) {
-                background: @ffe-farge-nordlys-30;
+                background: var(--ffe-v-system-message-success-bg-color);
             }
         }
     }
     &--success {
-        background-color: @ffe-farge-nordlys-30;
-        fill: @ffe-farge-hvit;
+        background-color: var(--ffe-v-system-message-success-bg-color);
+        fill: var(--ffe-farge-hvit);
         .ffe-system-message__icon {
-            background: @ffe-farge-nordlys-wcag;
+            background: var(--ffe-v-system-message-news-icon-bg-color);
         }
     }
 }
@@ -121,13 +117,13 @@
     max-width: @app-width;
     align-items: center;
     padding: @ffe-spacing-xs @app-margin;
-    font-family: 'SpareBank1-regular', 'MuseoSans-500', arial, sans-serif;
+    font-family: var(--ffe-g-font);
     text-align: left;
     display: flex;
 
     &__icon {
         flex: 0 0 auto;
-        background: @ffe-white;
+        background: var(--ffe-farge-hvit);
         border-radius: 50%;
         display: inline-flex;
         height: 2rem;
@@ -166,13 +162,14 @@
         height: 3rem;
         padding-top: @ffe-spacing-xs;
         box-sizing: border-box;
-        fill: @ffe-farge-moerkgraa;
+        fill: var(--ffe-v-system-message-close-button-color);
 
         &:hover {
-            fill: @ffe-farge-svart;
+            fill: var(--ffe-v-system-message-close-button-color-hover);
         }
         &:focus {
-            border: 2px solid @ffe-farge-vann;
+            border: 2px solid
+                var(--ffe-v-system-message-close-button-border-color-focus);
         }
         > svg {
             height: 1rem;
@@ -184,12 +181,12 @@
             }
         }
         .ffe-system-message-wrapper--news & {
-            fill: @ffe-farge-hvit;
+            fill: var(--ffe-farge-hvit);
             &:hover {
-                fill: @ffe-farge-lysvarmgraa;
+                fill: var(--ffe-farge-lysvarmgraa);
             }
             &:focus {
-                border: 2px solid @ffe-farge-hvit;
+                border: 2px solid var(--ffe-farge-hvit);
             }
         }
     }
