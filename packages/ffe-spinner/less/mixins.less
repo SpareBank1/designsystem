@@ -1,7 +1,7 @@
 /*
     Spinner: Commonly found on buttons and loading pages
 */
-.ffe-sb1-spinner(@color: @ffe-farge-vann, @size: 20px) {
+.ffe-sb1-spinner(@color: var(--ffe-g-primary-color), @size: 20px) {
     content: ' ';
     display: inline-block;
     width: @size;
@@ -19,7 +19,7 @@
 
     .native & {
         @media (prefers-color-scheme: dark) {
-            border-color: @ffe-farge-vann-70;
+            border-color: var(--ffe-g-primary-color);
             border-top-color: transparent;
         }
     }
