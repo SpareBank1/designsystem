@@ -153,6 +153,11 @@
     &:focus,
     &:visited {
         color: var(--ffe-v-button-secondary-color);
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: var(--ffe-v-button-secondary-color);
+            }
+        }
     }
 
     &:focus {
@@ -167,6 +172,11 @@
         background-color: var(--ffe-v-button-secondary-color);
         border-color: var(--ffe-v-button-secondary-color);
         color: var(--ffe-v-button-secondary-color-bg);
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: var(--ffe-v-button-secondary-color-bg);
+            }
+        }
     }
 }
 

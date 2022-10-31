@@ -19,6 +19,14 @@
         }
     }
 
+    &:visited {
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: @ffe-farge-hvit;
+            }
+        }
+    }
+
     &:focus {
         box-shadow: 0 0 0 2px @ffe-farge-vann;
 
