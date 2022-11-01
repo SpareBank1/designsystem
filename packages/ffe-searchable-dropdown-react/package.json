@@ -35,7 +35,8 @@
         "lodash.isequal": "^4.5.0",
         "prop-types": "^15.7.2",
         "react-custom-scrollbars": "^4.2.1",
-        "react-virtualized": "^9.22.3"
+        "react-virtualized": "^9.22.3",
+        "uuid": "^9.0.0"
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.5.0",
