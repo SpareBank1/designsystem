@@ -1,2 +1,193 @@
-@import 'theme';
-@import 'ffe-system-message';
+// System message
+//
+// Markup:
+// <div class="ffe-system-message-wrapper ffe-system-message-wrapper{{modifier_class}}">
+//     <div class="ffe-system-message">
+//         <span class="ffe-system-message__icon">
+//             <svg focusable="false" viewBox="0 0 200 200" height="150" width="150">
+//                 <path d="M 99.881897,0.6403911 A 16.561559,16.561559 0 0 0 83.588292,17.412148 l 0,93.862982 a 16.561559,16.561559 0 1 0 33.102158,0 l 0,-93.862982 A 16.561559,16.561559 0 0 0 99.881897,0.6403911 z M 100.13937,162.6938 c -9.145783,0 -16.551078,7.4053 -16.551078,16.55107 0,9.1458 7.405295,16.58787 16.551078,16.58787 9.14579,0 16.55108,-7.44207 16.55108,-16.58787 0,-9.14577 -7.40529,-16.55107 -16.55108,-16.55107 z"></path>
+//             </svg>
+//         </span>
+//         <p class="ffe-system-message__content">Lorem ipsum dolor sit amet.</p>
+//         <button aria-label="Lukk" class="ffe-system-message__close"
+//             type="button">
+//             <svg focusable="false" viewBox="0 0 200 200" height="150" width="150">
+//                 <path d="M18.77,0c-3.562,0-7.125,1.347-9.834,4.044l-4.429,4.439c-5.381,5.394-5.381,14.25,0,19.68l71.19,71.83-71.66,71.83c-5.381,5.394-5.381,14.25,0,19.68l4.429,4.439c5.381,5.394,14.22,5.394,19.64,0l71.66-71.83,71.65,71.83c5.381,5.394,14.23,5.394,19.65,0l4.429-4.439c5.381-5.394,5.381-14.25,0-19.68l-71.19-71.83,71.66-71.83c5.381-4.914,5.381-13.78,0-19.21l-4.429-4.423c-5.381-5.394-14.22-5.394-19.64,0l-72.13,71.34-71.17-71.83c-2.691-2.697-6.257-4.044-9.819-4.044z"></path>
+//             </svg>
+//         </button>
+//     </div>
+// </div>
+//
+// --error      - Error message
+// --info       - Generic info
+// --news       - News
+// --success    - Success message
+//
+// Styleguide ffe-system-message
+
+.ffe-system-message-wrapper {
+    color: var(--ffe-farge-svart);
+    fill: currentColor;
+    transition: height @ffe-transition-duration @ffe-ease-in-out-back;
+    overflow: hidden;
+    border-radius: @ffe-spacing-xs;
+
+    &--error&--coloredbg {
+        background-color: var(--ffe-v-system-message-variant-bg-color);
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: var(--ffe-v-system-message-error-bg-color);
+            }
+        }
+    }
+    &--error {
+        background-color: var(--ffe-v-system-message-error-bg-color);
+        fill: var(--ffe-farge-hvit);
+
+        .ffe-system-message__icon {
+            background: var(--ffe-v-system-message-error-icon-bg-color);
+        }
+    }
+
+    &--info&--coloredbg {
+        background-color: var(--ffe-v-system-message-variant-bg-color);
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: var(--ffe-v-system-message-info-bg-color);
+            }
+        }
+    }
+    &--info {
+        background-color: var(--ffe-v-system-message-info-bg-color);
+        fill: var(--ffe-farge-hvit);
+
+        .ffe-system-message__icon {
+            background: var(--ffe-v-system-message-info-icon-bg-color);
+        }
+    }
+
+    &--news&--coloredbg {
+        background-color: var(--ffe-v-system-message-variant-bg-color);
+        color: var(--ffe-farge-svart);
+        fill: var(--ffe-farge-hvit);
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background-color: var(--ffe-v-system-message-news-bg-color);
+                color: var(--ffe-farge-hvit);
+                fill: var(--ffe-v-system-message-news-icon-color);
+            }
+        }
+        .ffe-system-message__icon {
+            background: var(--ffe-v-system-message-news-icon-color);
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    background: var(--ffe-farge-hvit);
+                }
+            }
+        }
+    }
+    &--news {
+        background-color: var(--ffe-v-system-message-news-bg-color);
+        color: var(--ffe-farge-hvit);
+        fill: var(--ffe-v-system-message-news-icon-color);
+        .ffe-system-message__icon {
+            background: var(--ffe-farge-hvit);
+        }
+    }
+
+    &--success&--coloredbg {
+        background-color: var(--ffe-v-system-message-variant-bg-color);
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                background: var(--ffe-v-system-message-success-bg-color);
+            }
+        }
+    }
+    &--success {
+        background-color: var(--ffe-v-system-message-success-bg-color);
+        fill: var(--ffe-farge-hvit);
+        .ffe-system-message__icon {
+            background: var(--ffe-v-system-message-news-icon-bg-color);
+        }
+    }
+}
+
+.ffe-system-message {
+    margin: 0 auto;
+    max-width: @app-width;
+    align-items: center;
+    padding: @ffe-spacing-xs @app-margin;
+    font-family: var(--ffe-g-font);
+    text-align: left;
+    display: flex;
+
+    &__icon {
+        flex: 0 0 auto;
+        background: var(--ffe-farge-hvit);
+        border-radius: 50%;
+        display: inline-flex;
+        height: 2rem;
+        width: 2rem;
+        margin-right: @ffe-spacing-sm;
+
+        > svg {
+            height: 50%;
+            position: relative;
+            margin: auto;
+            width: 50%;
+        }
+    }
+
+    &__content {
+        margin: 0;
+        padding: 0;
+        font-size: 0.875rem;
+        flex: 1 1 auto;
+
+        @media (min-width: 600px) {
+            font-size: 1rem;
+        }
+    }
+
+    &__close {
+        flex: 0 0 auto;
+        appearance: none;
+        background: transparent;
+        border: 2px solid transparent;
+        border-radius: 5px;
+        color: inherit;
+        cursor: pointer;
+        align-self: flex-start;
+        width: 3rem;
+        height: 3rem;
+        padding-top: @ffe-spacing-xs;
+        box-sizing: border-box;
+        fill: var(--ffe-v-system-message-close-button-color);
+
+        &:hover {
+            fill: var(--ffe-v-system-message-close-button-color-hover);
+        }
+        &:focus {
+            border: 2px solid
+                var(--ffe-v-system-message-close-button-border-color-focus);
+        }
+        > svg {
+            height: 1rem;
+            width: 1rem;
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    fill: inherit;
+                }
+            }
+        }
+        .ffe-system-message-wrapper--news & {
+            fill: var(--ffe-farge-hvit);
+            &:hover {
+                fill: var(--ffe-farge-lysvarmgraa);
+            }
+            &:focus {
+                border: 2px solid var(--ffe-farge-hvit);
+            }
+        }
+    }
+}
