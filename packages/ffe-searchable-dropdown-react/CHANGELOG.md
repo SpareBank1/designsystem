@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [14.0.42](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@14.0.41...@sb1/ffe-searchable-dropdown-react@14.0.42) (2022-11-02)
+
+### Bug Fixes
+
+-   **ffe-searchable-dropdown-react:** add missing uuid dependency ([d59433a](https://github.com/SpareBank1/designsystem/commit/d59433af9c0b46fa8a4c0bffffda029cf4b0b0ca))
+
 ## [14.0.41](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@14.0.40...@sb1/ffe-searchable-dropdown-react@14.0.41) (2022-10-31)
 
 **Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react
