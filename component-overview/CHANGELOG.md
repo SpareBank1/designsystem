@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.12.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.12.10...@sb1/ffe-component-index@3.12.11) (2022-11-02)
+
+### Bug Fixes
+
+-   **component-overview:** revert less import endringer ([c639d5d](https://github.com/SpareBank1/designsystem/commit/c639d5df2da9a70d6d1a43d5a5d8f408e57ed7d3))
+
 ## [3.12.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.12.9...@sb1/ffe-component-index@3.12.10) (2022-11-02)
 
 **Note:** Version bump only for package @sb1/ffe-component-index

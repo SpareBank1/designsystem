@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.3.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@6.3.0...@sb1/ffe-system-message@6.3.1) (2022-11-02)
+
+### Bug Fixes
+
+-   **ffe-system-message:** rett navn på less filer ([5f513a8](https://github.com/SpareBank1/designsystem/commit/5f513a8b16f8fa6980ab8143a42276c5e776b484))
+
 # [6.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@6.2.13...@sb1/ffe-system-message@6.3.0) (2022-10-31)
 
 ### Features

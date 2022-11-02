@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@10.2.0...@sb1/ffe-message-box@10.2.1) (2022-11-02)
+
+### Bug Fixes
+
+-   **ffe-message-box:** sett riktig navn på less filer ([1184db8](https://github.com/SpareBank1/designsystem/commit/1184db854bd132bb9d454524e3ce19cc5edf18a1))
+
 # [10.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@10.1.2...@sb1/ffe-message-box@10.2.0) (2022-10-31)
 
 ### Features
