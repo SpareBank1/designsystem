@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [22.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@22.0.2...@sb1/ffe-form@22.0.3) (2022-11-03)
+
+### Bug Fixes
+
+-   **ffe-form:** bytter ut less-variabler med css properties ([fe427e8](https://github.com/SpareBank1/designsystem/commit/fe427e8d2196494e568b38ec6a104e8ef6b22c56))
+
 ## [22.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@22.0.1...@sb1/ffe-form@22.0.2) (2022-10-31)
 
 **Note:** Version bump only for package @sb1/ffe-form
