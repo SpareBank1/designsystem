@@ -52,7 +52,7 @@
 
 .ffe-numbered-list,
 .ffe-bullet-list {
-    font-family: 'SpareBank1-regular', 'MuseoSans-500', arial, sans-serif;
+    font-family: var(--ffe-g-font);
     padding: 0;
     text-align: left;
     margin: 0 0 @ffe-spacing-sm;
@@ -106,7 +106,7 @@
 
 .ffe-check-list,
 .ffe-stylized-numbered-list {
-    font-family: 'SpareBank1-regular', 'MuseoSans-500', arial, sans-serif;
+    font-family: var(--ffe-g-font);
     padding: 0;
     text-align: left;
     margin: 0 0 @ffe-spacing-sm;
@@ -127,7 +127,7 @@
 
     .native & {
         @media (prefers-color-scheme: dark) {
-            color: @ffe-farge-hvit;
+            color: var(--ffe-farge-hvit);
         }
     }
 }
@@ -139,17 +139,11 @@
         margin-right: @ffe-spacing-sm;
 
         &--check {
-            fill: @ffe-farge-nordlys-wcag;
-
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    fill: @ffe-farge-nordlys;
-                }
-            }
+            fill: var(--ffe-v-lists-check-list-check-icon-color);
         }
 
         &--cross {
-            fill: @ffe-farge-baer;
+            fill: var(--ffe-v-lists-check-list-cross-icon-color);
         }
     }
 
@@ -179,14 +173,8 @@
             left: -1.8em;
             top: 0.05em;
             font-size: 1.1em;
-            color: @ffe-farge-fjell;
+            color: var(--ffe-v-lists-title-color);
             &:extend(.ffe-strong-text);
-
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    color: @ffe-farge-hvit;
-                }
-            }
         }
     }
 }
