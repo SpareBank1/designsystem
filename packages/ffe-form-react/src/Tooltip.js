@@ -4,65 +4,70 @@ import classNames from 'classnames';
 import Collapse from '@sb1/ffe-collapse-react';
 import { v4 as uuid } from 'uuid';
 
-const Tooltip = ({
-    isOpen,
-    'aria-controls': ariaControls,
-    'aria-label': ariaLabel,
-    children,
-    className,
-    // eslint-disable-next-line no-unused-vars
-    onClick,
-    tabIndex,
-    ...rest
-}) => {
-    const tooltipButtonId = useRef(uuid).current;
-    const tooltipId = useRef(uuid).current;
+const Tooltip = React.forwardRef(
+    (
+        {
+            isOpen,
+            'aria-controls': ariaControls,
+            'aria-label': ariaLabel,
+            children,
+            className,
+            onClick,
+            tabIndex,
+            ...rest
+        },
+        ref,
+    ) => {
+        const tooltipButtonId = useRef(uuid()).current;
+        const tooltipId = useRef(uuid()).current;
 
-    const [_isOpen, setIsOpen] = useState(!!isOpen);
+        const [_isOpen, setIsOpen] = useState(!!isOpen);
 
-    const handleToogle = evt => {
-        setIsOpen(prev => !prev);
-        if (onClick) {
-            onClick(evt);
-        }
-    };
+        const handleClick = evt => {
+            setIsOpen(prev => !prev);
+            if (onClick) {
+                onClick(evt);
+            }
+        };
 
-    return (
-        <span
-            {...rest}
-            className={classNames('ffe-tooltip', {
-                'ffe-tooltip--open': _isOpen,
-            })}
-        >
-            <button
-                aria-expanded={_isOpen}
-                aria-controls={children ? tooltipId : ariaControls}
-                aria-label={ariaLabel}
-                className="ffe-tooltip__icon"
-                onClick={handleToogle}
-                type="button"
-                tabIndex={tabIndex}
-                id={tooltipButtonId}
+        return (
+            <span
+                {...rest}
+                className={classNames('ffe-tooltip', {
+                    'ffe-tooltip--open': _isOpen,
+                })}
             >
-                <span aria-hidden={true}>?</span>
-            </button>
-            {children && (
-                <Collapse
-                    className="ffe-tooltip__text"
-                    id={tooltipId}
-                    isOpen={_isOpen}
+                <button
+                    ref={ref}
+                    aria-expanded={_isOpen}
+                    aria-controls={children ? tooltipId : ariaControls}
+                    aria-label={ariaLabel}
+                    className="ffe-tooltip__icon"
+                    onClick={handleClick}
+                    type="button"
+                    tabIndex={tabIndex}
+                    id={tooltipButtonId}
                 >
-                    <div
-                        className={classNames('ffe-small-text', className)}
-                        role={_isOpen ? 'status' : 'none'}
+                    <span aria-hidden={true}>?</span>
+                </button>
+                {children && (
+                    <Collapse
+                        className="ffe-tooltip__text"
+                        id={tooltipId}
+                        isOpen={_isOpen}
                     >
-                        {children}
-                    </div>
-                </Collapse>
-            )}
-        </span>
-    );
-};
+                        <div
+                            className={classNames('ffe-small-text', className)}
+                            role={_isOpen ? 'status' : 'none'}
+                        >
+                            {children}
+                        </div>
+                    </Collapse>
+                )}
+            </span>
+        );
+    },
+);
 
 Tooltip.propTypes = {
     /** Provide the id of the controlled element *unless* you're sending in children */

@@ -82,6 +82,7 @@ export interface TooltipProps extends React.HTMLAttributes<HTMLSpanElement> {
     isOpen?: boolean;
     onClick?: (e: React.MouseEvent | undefined) => void;
     tabIndex?: number;
+    ref?: React.ForwardedRef<HTMLButtonElement>;
 }
 
 export interface RadioBlockProps
