@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [11.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@11.0.2...@sb1/ffe-lists@11.1.0) (2022-11-07)
+
+### Features
+
+-   **ffe-lists:** legg til theming ([89dea6c](https://github.com/SpareBank1/designsystem/commit/89dea6c1e6bf6531867f56980e6fea1380cdd738))
+
 ## [11.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@11.0.1...@sb1/ffe-lists@11.0.2) (2022-10-28)
 
 **Note:** Version bump only for package @sb1/ffe-lists
