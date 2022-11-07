@@ -1,0 +1,16 @@
+:root {
+    --ffe-v-lists-title-color: var(--ffe-farge-fjell);
+    --ffe-v-lists-description-description-color: var(--ffe-farge-svart);
+    --ffe-v-lists-check-list-check-icon-color: var(--ffe-farge-nordlys-wcag);
+    --ffe-v-lists-check-list-cross-icon-color: var(--ffe-farge-baer);
+
+    @media (prefers-color-scheme: dark) {
+        .native {
+            --ffe-v-lists-title-color: var(--ffe-farge-hvit);
+            --ffe-v-lists-description-description-color: var(
+                --ffe-farge-lysgraa
+            );
+            --ffe-v-lists-check-list-check-icon-color: var(--ffe-farge-nordlys);
+        }
+    }
+}
