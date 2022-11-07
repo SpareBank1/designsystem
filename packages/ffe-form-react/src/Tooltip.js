@@ -1,78 +1,68 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import { bool, func, node, string, number } from 'prop-types';
 import classNames from 'classnames';
 import Collapse from '@sb1/ffe-collapse-react';
 import { v4 as uuid } from 'uuid';
 
-class Tooltip extends React.Component {
-    constructor({ isOpen }) {
-        super();
-        this.state = {
-            isOpen: !!isOpen,
-        };
-        this.onToggle = this.onToggle.bind(this);
-        this.tooltipId = uuid();
-        this.tooltipButtonId = uuid();
-    }
+const Tooltip = ({
+    isOpen,
+    'aria-controls': ariaControls,
+    'aria-label': ariaLabel,
+    children,
+    className,
+    // eslint-disable-next-line no-unused-vars
+    onClick,
+    tabIndex,
+    ...rest
+}) => {
+    const tooltipButtonId = useRef(uuid).current;
+    const tooltipId = useRef(uuid).current;
 
-    onToggle(evt) {
-        this.setState(prevState => ({ isOpen: !prevState.isOpen }));
-        if (this.props.onClick) {
-            this.props.onClick(evt);
+    const [_isOpen, setIsOpen] = useState(!!isOpen);
+
+    const handleToogle = evt => {
+        setIsOpen(prev => !prev);
+        if (onClick) {
+            onClick(evt);
         }
-    }
+    };
 
-    render() {
-        const {
-            'aria-controls': ariaControls,
-            'aria-label': ariaLabel,
-            children,
-            className,
-            // eslint-disable-next-line no-unused-vars
-            onClick,
-            tabIndex,
-            ...rest
-        } = this.props;
-
-        const { isOpen } = this.state;
-
-        return (
-            <span
-                {...rest}
-                className={classNames('ffe-tooltip', {
-                    'ffe-tooltip--open': isOpen,
-                })}
+    return (
+        <span
+            {...rest}
+            className={classNames('ffe-tooltip', {
+                'ffe-tooltip--open': _isOpen,
+            })}
+        >
+            <button
+                aria-expanded={_isOpen}
+                aria-controls={children ? tooltipId : ariaControls}
+                aria-label={ariaLabel}
+                className="ffe-tooltip__icon"
+                onClick={handleToogle}
+                type="button"
+                tabIndex={tabIndex}
+                id={tooltipButtonId}
             >
-                <button
-                    aria-expanded={isOpen}
-                    aria-controls={children ? this.tooltipId : ariaControls}
-                    aria-label={ariaLabel}
-                    className="ffe-tooltip__icon"
-                    onClick={this.onToggle}
-                    type="button"
-                    tabIndex={tabIndex}
-                    id={this.tooltipButtonId}
+                <span aria-hidden={true}>?</span>
+            </button>
+            {children && (
+                <Collapse
+                    className="ffe-tooltip__text"
+                    id={tooltipId}
+                    isOpen={_isOpen}
                 >
-                    <span aria-hidden={true}>?</span>
-                </button>
-                {children && (
-                    <Collapse
-                        className="ffe-tooltip__text"
-                        id={this.tooltipId}
-                        isOpen={isOpen}
+                    <div
+                        className={classNames('ffe-small-text', className)}
+                        role={_isOpen ? 'status' : 'none'}
                     >
-                        <div
-                            className={classNames('ffe-small-text', className)}
-                            role={isOpen ? 'status' : 'none'}
-                        >
-                            {children}
-                        </div>
-                    </Collapse>
-                )}
-            </span>
-        );
-    }
-}
+                        {children}
+                    </div>
+                </Collapse>
+            )}
+        </span>
+    );
+};
 
 Tooltip.propTypes = {
     /** Provide the id of the controlled element *unless* you're sending in children */
