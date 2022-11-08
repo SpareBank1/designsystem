@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@8.1.4...@sb1/ffe-accordion@8.1.5) (2022-11-08)
+
+### Bug Fixes
+
+-   **ffe-accordion:** add gap between button and text ([259e5d3](https://github.com/SpareBank1/designsystem/commit/259e5d3caa2fedf058ab009ea7ea33ef167e0b5a))
+
 ## [8.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@8.1.3...@sb1/ffe-accordion@8.1.4) (2022-11-04)
 
 ### Bug Fixes

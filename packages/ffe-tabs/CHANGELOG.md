@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@12.0.17...@sb1/ffe-tabs@12.1.0) (2022-11-08)
+
+### Features
+
+-   **ffe-tabs:** legg til theming ([d6e8101](https://github.com/SpareBank1/designsystem/commit/d6e8101cbdf76379c988c0e00e90d401da5f3c4f))
+
 ## [12.0.17](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs@12.0.16...@sb1/ffe-tabs@12.0.17) (2022-10-28)
 
 **Note:** Version bump only for package @sb1/ffe-tabs
