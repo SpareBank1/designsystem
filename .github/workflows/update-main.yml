@@ -1,4 +1,4 @@
-name: Merge develop branch into main branch
+name: update main
 
 on:
     schedule:
@@ -13,10 +13,10 @@ on:
 
 jobs:
     merge:
-        name: Merge develop branch into main branch
+        name: Merge develop into main branch
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v3
               with:
                   ref: main
                   fetch-depth: 0
@@ -29,9 +29,9 @@ jobs:
               id: git-rev-list
               run: |
                   git fetch origin develop:develop
-                  echo "::set-output name=count::$(git rev-list --count main..develop)"
+                  echo "REVLIST_COUNT=$(git rev-list --count main..develop)" >> $GITHUB_OUTPUT
             - name: Update main branch
-              if: steps.git-rev-list.outputs.count > 0
+              if: steps.git-rev-list.outputs.REVLIST_COUNT > 0
               run: |
                   git config user.email "designsystem@sparebank1.no"
                   git config user.name "sb1-designsystem"

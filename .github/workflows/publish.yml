@@ -1,4 +1,4 @@
-name: Publish main
+name: Publish
 
 on:
     push:
@@ -10,7 +10,7 @@ jobs:
         name: Build and publish npm packages with lerna
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v3
               with:
                   fetch-depth: '0'
                   ref: 'main'
@@ -22,9 +22,9 @@ jobs:
                   git config user.email "designsystem@sparebank1.no"
                   git config user.name "sb1-designsystem"
 
-            - uses: actions/setup-node@v2
+            - uses: actions/setup-node@v3
               with:
-                  node-version: '18'
+                  node-version: 18
                   registry-url: 'https://registry.npmjs.com'
 
             - run: |
@@ -33,24 +33,24 @@ jobs:
 
             - name: lerna changed
               id: lerna-changed
-              run: echo "::set-output name=count::$(lerna changed|wc -l)"
+              run: echo "CHANGED_COUNT=$(lerna changed|wc -l)" >> $GITHUB_OUTPUT
 
             - name: Build packages
-              if: ${{ steps.lerna-changed.outputs.count > 0 }}
+              if: ${{ steps.lerna-changed.outputs.CHANGED_COUNT > 0 }}
               run: |
                   npm run build
                   npm run lint
                   npm test -- --ci
 
             - name: lerna publish to registry.npmjs.com
-              if: ${{ steps.lerna-changed.outputs.count > 0 }}
+              if: ${{ steps.lerna-changed.outputs.CHANGED_COUNT > 0 }}
               run: lerna publish --yes --no-verify-access --force-git-tag --create-release github
               env:
                   NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
                   GH_TOKEN: ${{ secrets.GH_USER_PAT }}
 
             - name: Merge back changes to development branch
-              if: ${{ steps.lerna-changed.outputs.count > 0 }}
+              if: ${{ steps.lerna-changed.outputs.CHANGED_COUNT > 0 }}
               run: |
                   git checkout develop
                   git pull
@@ -59,14 +59,14 @@ jobs:
                   git push --tags
 
             - name: Build component-overview
-              if: ${{ steps.lerna-changed.outputs.count > 0 }}
+              if: ${{ steps.lerna-changed.outputs.CHANGED_COUNT > 0 }}
               run: |
                   npm run build
                   npm run ghpages
 
             - name: Deploy component-overview as gh-pages
-              if: ${{ steps.lerna-changed.outputs.count > 0 }}
-              uses: JamesIves/github-pages-deploy-action@4.1.5
+              if: ${{ steps.lerna-changed.outputs.CHANGED_COUNT > 0 }}
+              uses: JamesIves/github-pages-deploy-action@v4
               with:
                   folder: component-overview/build/
                   branch: gh-pages
