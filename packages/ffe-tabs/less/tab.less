@@ -10,14 +10,14 @@
 
 .ffe-tab {
     display: flex;
-    background-color: @ffe-farge-hvit;
-    color: @ffe-farge-fjell;
+    background-color: var(--ffe-v-tabs-secondary-color);
+    color: var(--ffe-v-tabs-primary-color);
     padding: @ffe-spacing-xs @ffe-spacing-md;
     border-radius: 40px;
     white-space: nowrap;
     border: 2px solid transparent;
     margin: @ffe-spacing-2xs;
-    font-family: 'SpareBank1-regular', 'MuseoSans-500', arial, sans-serif;
+    font-family: var(--ffe-g-font);
     align-self: stretch;
     justify-content: center;
     align-items: center;
@@ -28,13 +28,6 @@
     flex: none;
     order: 0;
     flex-grow: 1;
-
-    .native & {
-        @media (prefers-color-scheme: dark) {
-            color: @ffe-farge-vann-30;
-            background-color: @ffe-farge-svart;
-        }
-    }
 
     &::after {
         content: '';
@@ -47,12 +40,8 @@
         left: -5px;
         right: -5px;
         bottom: -5px;
-        box-shadow: 0 0 0 2px @ffe-farge-vann;
+        box-shadow: 0 0 0 2px var(--ffe-v-tabs-tab-focus-color);
         transition: opacity @ffe-transition-duration @ffe-ease;
-
-        .native & {
-            box-shadow: 0 0 0 2px @ffe-farge-hvit;
-        }
     }
 
     &:focus::after {
@@ -70,38 +59,18 @@
     }
 
     &:hover {
-        color: @ffe-farge-hvit;
-        background-color: @ffe-farge-vann;
-
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                background-color: @ffe-farge-vann-70;
-                color: @ffe-farge-svart;
-            }
-        }
+        color: var(--ffe-v-tabs-secondary-color);
+        background-color: var(--ffe-v-tabs-tab-hover-color);
     }
 
     &--selected,
     &:active {
-        background-color: @ffe-farge-fjell;
-        color: @ffe-farge-hvit;
+        background-color: var(--ffe-v-tabs-primary-color);
+        color: var(--ffe-v-tabs-secondary-color);
         z-index: 2;
 
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                background-color: @ffe-farge-vann-30;
-                color: @ffe-farge-svart;
-            }
-        }
-
         &:hover {
-            background-color: @ffe-farge-natt;
-
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    background-color: @ffe-farge-hvit;
-                }
-            }
+            background-color: var(--ffe-v-tabs-tab-active-hover-color);
         }
     }
 

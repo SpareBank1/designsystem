@@ -13,21 +13,14 @@
     display: flex;
     flex-direction: column;
     border-radius: 25px;
-    background-color: @ffe-farge-hvit;
-    border: 2px solid @ffe-farge-fjell;
+    background-color: var(--ffe-v-tabs-secondary-color);
+    border: 2px solid var(--ffe-v-tabs-primary-color);
     align-items: center;
 
     &--no-break {
         flex-direction: row;
         border-radius: 40px;
         align-items: center;
-    }
-
-    .native & {
-        @media (prefers-color-scheme: dark) {
-            background-color: @ffe-farge-svart;
-            border: 2px solid @ffe-farge-vann-30;
-        }
     }
 
     &::after {
