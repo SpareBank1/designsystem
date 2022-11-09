@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [19.0.51](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@19.0.50...@sb1/ffe-account-selector-react@19.0.51) (2022-11-09)
+
+**Note:** Version bump only for package @sb1/ffe-account-selector-react
+
 ## [19.0.50](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@19.0.49...@sb1/ffe-account-selector-react@19.0.50) (2022-11-03)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react

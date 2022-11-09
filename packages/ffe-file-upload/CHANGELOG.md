@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload@7.0.17...@sb1/ffe-file-upload@7.1.0) (2022-11-09)
+
+### Features
+
+-   **ffe-file-upload:** legger til støtte for theming ([d20b793](https://github.com/SpareBank1/designsystem/commit/d20b7934c00c82bca20ac49acd423e4cf12e7ff8))
+
 ## [7.0.17](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload@7.0.16...@sb1/ffe-file-upload@7.0.17) (2022-10-28)
 
 **Note:** Version bump only for package @sb1/ffe-file-upload
