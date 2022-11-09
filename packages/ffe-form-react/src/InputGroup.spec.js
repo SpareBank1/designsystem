@@ -53,7 +53,11 @@ describe('<InputGroup>', () => {
     it('renders a Tooltip if a string is passed as tooltip prop', () => {
         const wrapper = getWrapper({ tooltip: 'custom tooltip' });
 
-        expect(wrapper.find('Tooltip').prop('children')).toBe('custom tooltip');
+        expect(
+            wrapper
+                .find('ForwardRef[aria-label="Vis hjelpetekst"]')
+                .prop('children'),
+        ).toBe('custom tooltip');
     });
 
     it('renders an ErrorFieldMessage and sets aria-invalid and aria-describedby if a string is passed as fieldMessage', () => {
@@ -81,8 +85,14 @@ describe('<InputGroup>', () => {
             tooltip: <Tooltip>Tooltip text</Tooltip>,
         });
 
-        expect(wrapper.find('Tooltip').exists()).toBe(true);
-        expect(wrapper.find('Tooltip').prop('children')).toBe('Tooltip text');
+        expect(
+            wrapper.find('ForwardRef[aria-label="Vis hjelpetekst"]').exists(),
+        ).toBe(true);
+        expect(
+            wrapper
+                .find('ForwardRef[aria-label="Vis hjelpetekst"]')
+                .prop('children'),
+        ).toBe('Tooltip text');
     });
 
     it('renders a ErrorFieldMessage and sets aria-invalid and aria-describedby if passed as fieldMessage prop', () => {

@@ -91,11 +91,19 @@ describe('<BaseRadioButton />', () => {
     describe('tooltip', () => {
         it('does not render if not present', () => {
             const wrapper = getWrapper({ tooltip: undefined });
-            expect(wrapper.find('Tooltip').exists()).toBe(false);
+            expect(
+                wrapper
+                    .find('ForwardRef[aria-label="Vis hjelpetekst"]')
+                    .exists(),
+            ).toBe(false);
         });
         it('renders if present', () => {
             const wrapper = getWrapper({ tooltip: 'Tip generously' });
-            expect(wrapper.find('Tooltip').exists()).toBe(true);
+            expect(
+                wrapper
+                    .find('ForwardRef[aria-label="Vis hjelpetekst"]')
+                    .exists(),
+            ).toBe(true);
         });
         it('does not add the correct class if not present', () => {
             const wrapper = getWrapper({ tooltip: undefined });
