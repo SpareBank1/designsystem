@@ -1,0 +1,71 @@
+.ffe-chart-donut {
+    height: 200px;
+    position: relative;
+    text-align: left;
+    width: 200px;
+
+    &--first {
+        stroke: var(--ffe-v-chart-donut-first-color);
+    }
+
+    &--last {
+        stroke: var(--ffe-v-chart-donut-last-color);
+    }
+
+    &__circle {
+        height: 100%;
+        margin: 0 auto;
+        position: absolute;
+        width: 100%;
+
+        @media (min-width: @breakpoint-md) {
+            margin: inherit;
+            width: 200px;
+        }
+    }
+
+    &__description {
+        left: calc(~'50% - 75px');
+        position: absolute;
+        top: 60px;
+        width: 150px;
+
+        @media (min-width: @breakpoint-md) {
+            left: 25px;
+        }
+    }
+
+    &__name {
+        color: var(--ffe-v-chart-donut-text-color);
+        text-align: center;
+    }
+
+    &__fractions {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__fraction {
+        > .ffe-chart-donut__amount {
+            color: var(--ffe-v-chart-donut-text-color);
+            text-align: center;
+        }
+
+        &:last-child {
+            > .ffe-chart-donut__type {
+                padding-left: 20px;
+            }
+
+            > .ffe-chart-donut__amount {
+                border-left: 1px solid var(--ffe-farge-graa);
+                padding-left: 20px;
+
+                .native & {
+                    @media (prefers-color-scheme: dark) {
+                        color: var(--ffe-v-chart-donut-text-color);
+                    }
+                }
+            }
+        }
+    }
+}
