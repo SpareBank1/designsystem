@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [14.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@14.0.17...@sb1/ffe-cards@14.1.0) (2022-11-11)
+
+### Features
+
+-   **ffe-cards:** legg til theming i cards ([4004339](https://github.com/SpareBank1/designsystem/commit/400433936a94a60463823e181f966e1cbeebf9bb))
+
 ## [14.0.17](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@14.0.16...@sb1/ffe-cards@14.0.17) (2022-10-31)
 
 ### Bug Fixes
