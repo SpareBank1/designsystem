@@ -1,8 +1,8 @@
 .common-card-styling() {
     &:extend(.ffe-body-text);
 
-    background: @ffe-farge-hvit;
-    box-shadow: 0 1px 4px 0 rgba(38, 38, 38, 0.3);
+    background: var(--ffe-v-cards-common-card-background-color);
+    box-shadow: 0 1px 4px 0 var(--ffe-v-cards-common-card-box-shadow-color);
     margin: 0 0 @ffe-spacing-xs;
     border: 2px solid transparent;
     border-radius: 5px;
@@ -13,39 +13,28 @@
     text-decoration: none;
     .native & {
         @media (prefers-color-scheme: dark) {
-            box-shadow: 0 0 0 1px @ffe-farge-moerkgraa;
-            background: @ffe-farge-svart;
-            color: @ffe-farge-hvit;
+            box-shadow: 0 0 0 1px
+                var(--ffe-v-cards-common-card-box-shadow-color);
+            color: var(--ffe-farge-hvit);
         }
     }
 
     &:visited {
         .native & {
             @media (prefers-color-scheme: dark) {
-                color: @ffe-farge-hvit;
+                color: var(--ffe-farge-hvit);
             }
         }
     }
 
     &:focus {
-        box-shadow: 0 0 0 2px @ffe-farge-vann;
-
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                box-shadow: 0 0 0 2px @ffe-farge-vann-70;
-            }
-        }
+        box-shadow: 0 0 0 2px var(--ffe-g-primary-color);
     }
 
     &:focus,
     &:active,
     &:hover {
-        border-color: @ffe-farge-vann;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                border-color: @ffe-farge-vann-70;
-            }
-        }
+        border-color: var(--ffe-g-primary-color);
     }
 
     @media (min-width: @breakpoint-md) {

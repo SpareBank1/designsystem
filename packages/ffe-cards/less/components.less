@@ -10,13 +10,7 @@
     &__subtext {
         &:extend(.ffe-small-text);
 
-        color: @ffe-farge-moerkgraa;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-farge-graa;
-            }
-        }
-
+        color: var(--ffe-v-cards-text-color);
         margin: @ffe-spacing-2xs 0 0 0;
     }
 
