@@ -30,7 +30,6 @@
         "@sb1/ffe-buildtool": "^0.5.0",
         "eslint": "^5.9.0",
         "react": "^16.9.0",
-        "react-addons-test-utils": "^15.6.2",
         "react-dom": "^16.9.0"
     },
     "peerDependencies": {
