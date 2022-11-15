@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [19.0.52](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@19.0.51...@sb1/ffe-account-selector-react@19.0.52) (2022-11-15)
+
+### Bug Fixes
+
+-   **ffe-account-selector-react:** upgrade scrollbars ([cd7d1bf](https://github.com/SpareBank1/designsystem/commit/cd7d1bf63f8f39eb4128954256ea5134a87e62a7)), closes [#1511](https://github.com/SpareBank1/designsystem/issues/1511)
+
 ## [19.0.51](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@19.0.50...@sb1/ffe-account-selector-react@19.0.51) (2022-11-09)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react

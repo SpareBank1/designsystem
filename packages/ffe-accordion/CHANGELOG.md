@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@8.1.5...@sb1/ffe-accordion@8.2.0) (2022-11-15)
+
+### Features
+
+-   **ffe-accordion:** legg til theming og rett fargefeil ([b261c75](https://github.com/SpareBank1/designsystem/commit/b261c7564138d4529585f774ad82fff014a78254))
+
 ## [8.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@8.1.4...@sb1/ffe-accordion@8.1.5) (2022-11-08)
 
 ### Bug Fixes

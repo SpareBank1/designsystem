@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [14.0.44](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@14.0.43...@sb1/ffe-searchable-dropdown-react@14.0.44) (2022-11-15)
+
+### Bug Fixes
+
+-   **ffe-searchable-dropdown-react:** upgrade scrollbars ([91d625e](https://github.com/SpareBank1/designsystem/commit/91d625e5d6a1a70c3843d277d63e20df0da78322)), closes [#1511](https://github.com/SpareBank1/designsystem/issues/1511)
+
 ## [14.0.43](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@14.0.42...@sb1/ffe-searchable-dropdown-react@14.0.43) (2022-11-03)
 
 **Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react
