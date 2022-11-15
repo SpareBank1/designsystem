@@ -1,7 +1,7 @@
 /* eslint jsx-a11y/no-static-element-interactions:0 */
 import React from 'react';
 import { bool, number } from 'prop-types';
-import { Scrollbars } from 'react-custom-scrollbars';
+import { Scrollbars } from 'react-custom-scrollbars-2';
 
 import SuggestionList from './SuggestionList';
 

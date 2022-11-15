@@ -5,7 +5,7 @@ import {
     AutoSizer,
 } from 'react-virtualized';
 import React from 'react';
-import { Scrollbars } from 'react-custom-scrollbars';
+import { Scrollbars } from 'react-custom-scrollbars-2';
 import {
     arrayOf,
     any,
