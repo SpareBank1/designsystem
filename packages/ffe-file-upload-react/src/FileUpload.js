@@ -60,7 +60,6 @@ class FileUpload extends React.Component {
             uploadTitle,
             uploadMicroText,
             uploadSubText,
-            onFileDeleted,
         } = this.props;
 
         return (
@@ -74,7 +73,7 @@ class FileUpload extends React.Component {
                                 file={files[file]}
                                 cancelText={cancelText}
                                 deleteText={deleteText}
-                                onFileDeleted={onFileDeleted}
+                                onFileDeleted={this.onFileDeleted}
                             />
                         ))}
                     </div>

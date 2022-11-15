@@ -59,11 +59,11 @@ import { InputGroup, Input, Checkbox } from '@sb1/ffe-form-react';
         }
     };
 
-    const deleteAttachement = fileName => {
-        sendDeleteRequest('/delete', fileName);
+    const deleteAttachement = file => {
+        sendDeleteRequest('/delete', file);
         setAttachments(prevState => {
             const { ...nextState } = prevState;
-            delete nextState[fileName];
+            delete nextState[file.name];
             return nextState;
         });
     };
@@ -97,8 +97,8 @@ import { InputGroup, Input, Checkbox } from '@sb1/ffe-form-react';
                         uploadAttachments(dragEvent.dataTransfer.files);
                     }
                 }}
-                onFileDeleted={evt =>
-                    deleteAttachement(evt.target.id)
+                onFileDeleted={file =>
+                    deleteAttachement(file)
                 }
                 multiple={true}
             />
