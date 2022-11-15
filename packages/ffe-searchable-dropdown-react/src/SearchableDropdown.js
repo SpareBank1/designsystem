@@ -169,13 +169,11 @@ const SearchableDropdown = ({
     }, [dropdownList, dispatch]);
 
     useEffect(() => {
-        if (state.isExpanded && typeof onOpen === 'function') {
-            onOpen();
+        const cb = state.isExpanded ? onOpen : onClose;
+        if (cb) {
+            cb();
         }
-        if (!state.isExpanded && typeof onClose === 'function') {
-            onClose();
-        }
-    }, [state.isExpanded]);
+    }, [state.isExpanded, onOpen, onClose]);
 
     /**
      * Because of changes in event handling between react v16 and v17, the check for the
