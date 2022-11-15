@@ -21,37 +21,25 @@
 
     &__details {
         padding: @ffe-spacing-2xs;
-        color: @ffe-farge-svart;
+        color: var(--ffe-v-accountselector-text-color);
         min-height: @details-height;
         display: flex;
         justify-content: space-between;
-
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-white-darkmode;
-            }
-        }
     }
 
     &__dropdown-statusbar {
-        border: 1px solid @ffe-farge-varmgraa;
+        border: 1px solid var(--ffe-g-border-color);
         padding: @ffe-spacing-xs;
-        background: @ffe-farge-lysgraa;
-        color: @ffe-farge-svart;
+        background: var(
+            --ffe-v-accountselector-dropdown-statusbar-background-color
+        );
+        color: var(--ffe-v-accountselector-text-color);
         height: 60px;
         display: table;
         width: 100%;
         border-bottom-left-radius: 2px;
         border-bottom-right-radius: 2px;
-        font-family: 'SpareBank1-regular', 'MuseoSans-500', arial, sans-serif;
-
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                border-color: @ffe-farge-graa;
-                background: @ffe-black-darkmode;
-                color: @ffe-white-darkmode;
-            }
-        }
+        font-family: var(--ffe-g-font);
     }
 
     &__selection-status {
