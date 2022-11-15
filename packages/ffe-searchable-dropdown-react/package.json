@@ -34,7 +34,7 @@
         "compute-scroll-into-view": "^1.0.17",
         "lodash.isequal": "^4.5.0",
         "prop-types": "^15.7.2",
-        "react-custom-scrollbars": "^4.2.1",
+        "react-custom-scrollbars-2": "^4.3.0",
         "react-virtualized": "^9.22.3",
         "uuid": "^9.0.0"
     },
