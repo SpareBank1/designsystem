@@ -20,15 +20,9 @@
 
     &__details {
         padding: @ffe-spacing-2xs;
-        color: @ffe-farge-svart;
+        color: var(--ffe-v-accountselector-text-color);
         min-height: @details-height;
         display: flex;
         justify-content: space-between;
-
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-white-darkmode;
-            }
-        }
     }
 }

@@ -1,10 +1,10 @@
 .highlighted() {
-    background: @ffe-farge-vann;
-    color: @ffe-farge-hvit;
+    background: var(--ffe-g-primary-color);
+    color: var(--ffe-v-accountselector-option-primary-color);
 
     .ffe-account-suggestion-multi__details,
     .ffe-account-suggestion-multi__name {
-        color: @ffe-farge-hvit;
+        color: var(--ffe-v-accountselector-option-primary-color);
     }
 }
 
@@ -16,7 +16,7 @@
 
 .ffe-account-suggestion-multi {
     margin: 0;
-    background: @ffe-farge-hvit;
+    background: var(--ffe-v-accountselector-option-primary-color);
     cursor: pointer;
     padding: @ffe-spacing-xs @ffe-spacing-sm @ffe-spacing-xs @ffe-spacing-xs;
     overflow: hidden;
@@ -28,8 +28,8 @@
     }
 
     &__nomatches {
-        background: @ffe-farge-hvit;
-        color: @ffe-farge-vann;
+        background: var(--ffe-v-accountselector-option-primary-color);
+        color: var(--ffe-g-lead-color);
         padding: @ffe-spacing-sm;
         cursor: default;
     }
@@ -39,11 +39,11 @@
         font-size: 1rem;
         display: block;
         padding-bottom: @ffe-spacing-2xs;
-        color: @ffe-farge-fjell;
+        color: var(--ffe-g-lead-color);
     }
 
     &__details {
-        color: @ffe-farge-svart;
+        color: var(--ffe-g-text-color);
         font-size: 0.9rem;
         display: flex;
         justify-content: space-between;
@@ -77,38 +77,9 @@
 .native & {
     @media (prefers-color-scheme: dark) {
         .ffe-account-suggestion-multi {
-            background: @ffe-black-darkmode;
-
-            &__nomatches {
-                background: @ffe-black-darkmode;
-                color: @ffe-white-darkmode;
-            }
-
             &:hover,
             &--highlighted {
-                background: @ffe-farge-vann;
-                color: @ffe-white-darkmode;
-
-                .ffe-account-suggestion-single__details,
-                .ffe-account-suggestion-single__name {
-                    color: @ffe-white-darkmode;
-                }
-            }
-
-            &__name {
-                color: @ffe-white-darkmode;
-            }
-
-            &__details {
-                color: @ffe-grey-cloud-darkmode;
-            }
-        }
-
-        &__select-all {
-            &:hover,
-            &--highlighted {
-                background: @ffe-farge-vann;
-                color: @ffe-white-darkmode;
+                background: var(--ffe-g-primary-color);
             }
         }
     }

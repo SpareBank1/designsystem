@@ -1,17 +1,17 @@
 .ffe-account-suggestion-single {
     margin: 0;
-    background: @ffe-farge-hvit;
+    background: var(--ffe-v-accountselector-option-primary-color);
     cursor: pointer;
     padding: @ffe-spacing-xs @ffe-spacing-sm @ffe-spacing-xs @ffe-spacing-md;
 
     &:hover,
     &--highlighted {
-        background: @ffe-farge-vann;
-        color: @ffe-farge-hvit;
+        background: var(--ffe-g-primary-color);
+        color: var(--ffe-v-accountselector-option-primary-color);
 
         & .ffe-account-suggestion-single__details,
         & .ffe-account-suggestion-single__name {
-            color: @ffe-farge-hvit;
+            color: var(--ffe-v-accountselector-option-primary-color);
         }
     }
 
@@ -20,11 +20,11 @@
         font-size: 1rem;
         display: block;
         padding-bottom: @ffe-spacing-2xs;
-        color: @ffe-farge-fjell;
+        color: var(--ffe-g-lead-color);
     }
 
     &__details {
-        color: @ffe-farge-svart;
+        color: var(--ffe-g-text-color);
         font-size: 0.9rem;
         display: flex;
         justify-content: space-between;
@@ -32,32 +32,5 @@
 
     &:first-child {
         border-top: none;
-    }
-}
-
-.native & {
-    @media (prefers-color-scheme: dark) {
-        .ffe-account-suggestion-single {
-            background: @ffe-black-darkmode;
-
-            &:hover,
-            &--highlighted {
-                background: @ffe-farge-vann;
-                color: @ffe-white-darkmode;
-
-                .ffe-account-suggestion-single__details,
-                .ffe-account-suggestion-single__name {
-                    color: @ffe-white-darkmode;
-                }
-            }
-
-            &__name {
-                color: @ffe-white-darkmode;
-            }
-
-            &__details {
-                color: @ffe-grey-cloud-darkmode;
-            }
-        }
     }
 }

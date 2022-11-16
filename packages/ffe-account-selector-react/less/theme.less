@@ -1,0 +1,19 @@
+:root {
+    --ffe-v-accountselector-text-color: var(--ffe-farge-svart);
+    --ffe-v-accountselector-dropdown-statusbar-background-color: var(
+        --ffe-farge-lysgraa
+    );
+    --ffe-v-accountselector-option-primary-color: var(--ffe-farge-hvit);
+
+    @media (prefers-color-scheme: dark) {
+        .native {
+            --ffe-v-accountselector-text-color: var(--ffe-farge-hvit);
+            --ffe-v-accountselector-dropdown-statusbar-background-color: var(
+                --ffe-farge-svart
+            );
+            --ffe-v-accountselector-option-primary-color: var(
+                --ffe-farge-svart
+            );
+        }
+    }
+}
