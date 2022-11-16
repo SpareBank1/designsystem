@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.13.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.13.4...@sb1/ffe-component-index@3.13.5) (2022-11-16)
+
+### Bug Fixes
+
+-   **ffe-file-upload-react:** use correct onFileDeleted() ([eb0116c](https://github.com/SpareBank1/designsystem/commit/eb0116cd55e906f3e6319601b2e7e0525e9b1827))
+
 ## [3.13.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.13.3...@sb1/ffe-component-index@3.13.4) (2022-11-15)
 
 **Note:** Version bump only for package @sb1/ffe-component-index
