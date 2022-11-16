@@ -1,18 +1,18 @@
 import * as React from 'react';
 
-export interface FileItem {
+export interface FileItem<T> {
     name: string;
-    document?: File;
+    document?: T;
     error?: string;
 }
 
-export interface FileUploadProps {
+export interface FileUploadProps<T> {
     id: string;
     label: string;
-    files: Record<string, FileItem>;
+    files: Record<string, FileItem<T>>;
     onFilesSelected(fileList: FileList): void;
     onFilesDropped(fileList: FileList): void;
-    onFileDeleted(file: File): void;
+    onFileDeleted(file: FileItem<T>): void;
     multiple?: boolean;
     title: string;
     infoText: string;
@@ -23,9 +23,9 @@ export interface FileUploadProps {
     uploadMicroText: string;
     uploadSubText: string;
 }
-declare class FileUpload extends React.Component<FileUploadProps, any> {}
+declare class FileUpload<T> extends React.Component<FileUploadProps<T>, any> {}
 
-declare function getFileContent(file: File): Promise<any>;
+declare function getFileContent(file: File): Promise<string>;
 
 export default FileUpload;
 export { getFileContent };
