@@ -8,6 +8,7 @@ jobs:
     test-ci:
         name: Build, test, and deploy preview of component-overview
         runs-on: ubuntu-latest
+        if: github.event.repository.full_name == 'SpareBank1/designsystem'
         steps:
             - uses: actions/checkout@v3
             - uses: actions/setup-node@v3
