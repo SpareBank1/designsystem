@@ -7,12 +7,7 @@
     }
 
     &:hover {
-        color: @ffe-farge-vann;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-farge-vann-70;
-            }
-        }
+        color: var(--ffe-g-primary-color);
     }
 
     &__field {
@@ -22,13 +17,80 @@
         }
 
         &[aria-invalid='true'] {
-            border-color: @ffe-farge-baer;
+            border-color: var(--ffe-g-error-color);
             border-style: solid;
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    border-color: @ffe-farge-baer;
-                }
-            }
+        }
+    }
+}
+
+.ffe-datepicker {
+    display: inline-block;
+    position: relative;
+
+    &--full-width {
+        display: block;
+    }
+
+    &--wrapper {
+        display: flex;
+    }
+
+    &__button {
+        background-color: transparent;
+        border: 2px solid transparent;
+        height: 45px;
+        width: 56px;
+        outline: none;
+        margin-left: -56px;
+        cursor: pointer;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+        transition: all @ffe-transition-duration @ffe-ease;
+
+        &:hover,
+        &:focus,
+        &:active {
+            border-color: var(--ffe-v-datepicker-border-hover-color);
+
+            // .native & {
+            //     @media (prefers-color-scheme: dark) {
+            //         border-color: @ffe-farge-vann-70;
+            //     }
+            // }
+        }
+
+        .ffe-dateinput__field:focus + &:hover {
+            border-color: transparent;
+            box-shadow: 0 0 0 2px var(--ffe-v-datepicker-border-hover-color);
+
+            // .native & {
+            //     @media (prefers-color-scheme: dark) {
+            //         box-shadow: 0 0 0 2px @ffe-farge-vann-70;
+            //     }
+            // }
+        }
+    }
+
+    &__icon {
+        vertical-align: middle;
+        width: 22px;
+        fill: var(--ffe-v-datepicker-icon-color);
+        transition: fill @ffe-transition-duration @ffe-ease;
+
+        // .native & {
+        //     @media (prefers-color-scheme: dark) {
+        //         fill: @ffe-farge-vann-70;
+        //     }
+        // }
+
+        .ffe-datepicker__button:hover & {
+            fill: var(--ffe-v-datepicker-icon-color-hover);
+
+            // .native & {
+            //     @media (prefers-color-scheme: dark) {
+            //         fill: @ffe-farge-vann-30;
+            //     }
+            // }
         }
     }
 }
