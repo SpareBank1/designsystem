@@ -1,0 +1,36 @@
+:root {
+    --ffe-v-background-color: @ffe-farge-hvit;
+    --ffe-v-primary-color: @ffe-farge-fjell;
+    --ffe-v-header-border-bottom-color: @ffe-farge-lysgraa;
+    --ffe-v-link-color: @ffe-farge-svart;
+    --ffe-v-link-hover-color: @ffe-farge-vann;
+    --ffe-v-link-focus-box-shadow-color: @ffe-farge-vann;
+    --ffe-v-link-disabled-color: @ffe-farge-moerkgraa;
+    --ffe-v-notification-bubble-background-color: @ffe-farge-nordlys-wcag;
+    --ffe-v-notification-bubble-text-color: @ffe-farge-hvit;
+    --ffe-v-font-strong: 'SpareBank1-medium', 'MuseoSansRounded-700', arial,
+        sans-serif;
+
+    /* User nav menu */
+    --ffe-v-usernav-link-hover-background-color: @ffe-farge-frost-30;
+    --ffe-v-usernav-link-focus-background-color: @ffe-farge-frost-30;
+    --ffe-v-usernav-list-border-color: @ffe-farge-vann;
+
+    @media (prefers-color-scheme: dark) {
+        .native {
+            --ffe-v-background-color: @ffe-farge-svart;
+            --ffe-v-primary-color: @ffe-farge-vann-70;
+            --ffe-v-header-border-bottom-color: @ffe-farge-moerkgraa;
+            --ffe-v-link-color: @ffe-farge-varmgraa;
+            --ffe-v-link-hover-color: @ffe-farge-vann-70;
+            --ffe-v-link-focus-box-shadow-color: @ffe-farge-hvit;
+            --ffe-v-notification-bubble-background-color: @ffe-farge-nordlys;
+            --ffe-v-notification-bubble-text-color: @ffe-farge-svart;
+
+            /* User nav menu */
+            --ffe-v-usernav-link-hover-background-color: @ffe-farge-vann-30;
+            --ffe-v-usernav-list-border-color: @ffe-farge-vann-70;
+            --ffe-v-usernav-header-link-hover-focus-color: @ffe-farge-svart;
+        }
+    }
+}
