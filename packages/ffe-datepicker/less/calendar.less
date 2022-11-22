@@ -1,12 +1,11 @@
 .ffe-calendar {
-    border: solid 2px @ffe-farge-varmgraa;
-    border-radius: 4px;
+    border: solid 2px var(--ffe-g-border-color);
+    border-radius: var(--ffe-g-border-radius);
     padding: @ffe-spacing-2xs;
-    background: @ffe-farge-hvit;
+    background: var(--ffe-farge-hvit);
     .native & {
         @media (prefers-color-scheme: dark) {
-            background-color: @ffe-farge-svart;
-            border-color: @ffe-farge-graa;
+            background-color: var(--ffe-farge-svart);
         }
     }
 
@@ -44,14 +43,8 @@
         &:focus,
         &:hover,
         &:active {
-            box-shadow: 0 0 0 2px @ffe-farge-hvit, 0 0 0 4px @ffe-farge-vann;
-
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    box-shadow: 0 0 0 2px @ffe-farge-svart,
-                        0 0 0 4px @ffe-farge-vann-70;
-                }
-            }
+            box-shadow: 0 0 0 2px var(--ffe-v-datepicker-bg-color),
+                0 0 0 4px var(--ffe-v-datepicker-border-hover-color);
         }
     }
 
@@ -59,26 +52,16 @@
         transform: rotate(90deg);
         width: 18px;
         height: 18px;
-        fill: @ffe-farge-vann;
+        fill: var(--ffe-v-datepicker-icon-color);
         vertical-align: middle;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                fill: @ffe-farge-vann-70;
-            }
-        }
     }
 
     &__icon-next {
         transform: rotate(-90deg);
         width: 18px;
         height: 18px;
-        fill: @ffe-farge-vann;
+        fill: var(--ffe-v-datepicker-icon-color);
         vertical-align: middle;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                fill: @ffe-farge-vann-70;
-            }
-        }
     }
 
     &__next {
@@ -94,27 +77,17 @@
     &__month-nav-icon {
         height: 2em;
         width: 2em;
-        fill: @ffe-farge-vann;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                fill: @ffe-farge-vann-70;
-            }
-        }
+        fill: var(--ffe-v-datepicker-icon-color);
     }
 
     &__title {
-        &:extend(.ffe-h5);
-
+        font-family: var(--ffe-g-font-heading-small);
+        font-size: var(--ffe-fontsize-h5);
+        color: var(--ffe-v-datepicker-title-color);
         display: inline-block;
         vertical-align: middle;
-        color: @ffe-farge-svart;
         min-width: 50%;
         margin-bottom: 0;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-farge-vann-70;
-            }
-        }
     }
 
     &__accessible-text {
@@ -135,16 +108,10 @@
     }
 
     &__weekday {
-        &:extend(.ffe-small-text);
+        .ffe-small-text();
 
-        border-bottom: 1px solid @ffe-farge-lysgraa;
-        color: @ffe-farge-varmgraa;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                border-color: @ffe-farge-varmgraa;
-                color: @ffe-farge-graa;
-            }
-        }
+        border-bottom: 1px solid var(--ffe-v-datepicker-weekday-border-color);
+        color: var(--ffe-v-datepicker-weekday-color);
     }
 
     &__day {
@@ -154,122 +121,64 @@
     }
 
     &__date {
-        &:extend(.ffe-small-text);
+        .ffe-small-text();
 
         font-size: 1rem;
-        background-color: @ffe-farge-hvit;
+        background-color: var(--ffe-v-datepicker-bg-color);
         width: 35px;
         height: 35px;
-        color: @ffe-black;
+        color: var(--ffe-v-datepicker-date-color);
         border-radius: 4px;
         display: inline-block;
         line-height: 2.1875rem;
         border: 2px solid transparent;
         cursor: pointer;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                background-color: @ffe-farge-svart;
-                color: @ffe-farge-hvit;
-            }
-        }
 
         &--today {
-            border: 1px solid @ffe-farge-varmgraa;
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    border-color: @ffe-farge-graa;
-                }
-            }
+            border: 1px solid var(--ffe-v-datepicker-date-color-today);
         }
 
-        &:hover {
-            border: 2px solid @ffe-farge-vann;
-            color: @ffe-farge-vann;
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    border-color: @ffe-farge-vann-70;
-                    color: @ffe-farge-vann-70;
-                }
-            }
+        &:hover,
+        &:focus {
+            border: 2px solid var(--ffe-v-datepicker-border-hover-color);
+            color: var(--ffe-v-datepicker-date-color-hover);
         }
 
         &:focus {
-            border: 2px solid @ffe-farge-vann;
-            color: @ffe-farge-vann;
             outline: none;
         }
 
         &--focus {
-            border: 2px solid @ffe-farge-vann;
-            background: @ffe-farge-hvit;
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    border-color: @ffe-farge-vann-70;
-                    background: @ffe-farge-svart;
-                }
-            }
+            border: 2px solid var(--ffe-v-datepicker-border-hover-color);
+            background: var(--ffe-v-datepicker-bg-color);
         }
 
         &--selected {
-            background: @ffe-farge-vann;
-            color: @ffe-farge-hvit;
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    background: @ffe-farge-vann-70;
-                    color: @ffe-farge-svart;
-                }
-            }
+            background: var(--ffe-v-datepicker-border-hover-color);
+            color: var(--ffe-v-datepicker-bg-color);
 
             &:hover {
-                color: @ffe-farge-hvit;
-
-                .native & {
-                    @media (prefers-color-scheme: dark) {
-                        background: @ffe-farge-vann-70;
-                        color: @ffe-farge-svart;
-                    }
-                }
+                color: var(--ffe-v-datepicker-bg-color);
             }
         }
 
         &--focus&--selected {
-            box-shadow: 0 0 0 2px @ffe-farge-hvit, 0 0 0 4px @ffe-farge-vann;
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    box-shadow: 0 0 0 2px @ffe-farge-svart,
-                        0 0 0 4px @ffe-farge-vann-70;
-                }
-            }
+            box-shadow: 0 0 0 2px var(--ffe-v-datepicker-bg-color),
+                0 0 0 4px var(--ffe-v-datepicker-border-hover-color);
         }
 
         &--disabled {
-            color: @ffe-farge-varmgraa;
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    color: @ffe-farge-graa;
-                }
-            }
+            color: var(--ffe-v-datepicker-date-color-disabled);
 
             &:focus,
             &:hover {
-                border: 2px solid @ffe-farge-varmgraa;
-                color: @ffe-farge-varmgraa;
-                .native & {
-                    @media (prefers-color-scheme: dark) {
-                        border-color: @ffe-farge-graa;
-                        color: @ffe-farge-graa;
-                    }
-                }
+                border: 2px solid var(--ffe-v-datepicker-date-color-disabled);
+                color: var(--ffe-v-datepicker-date-color-disabled);
             }
         }
 
         &--disabled-focus {
-            border: 2px solid @ffe-farge-varmgraa;
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    border-color: @ffe-farge-graa;
-                }
-            }
+            border: 2px solid var(--ffe-v-datepicker-date-color-disabled);
         }
     }
 }
