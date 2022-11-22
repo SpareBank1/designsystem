@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.48...@sb1/ffe-datepicker@10.1.0) (2022-11-22)
+
+### Features
+
+-   **ffe-datepicker:** støtte for theming ([039288b](https://github.com/SpareBank1/designsystem/commit/039288be69d54a21c24c8d624443785a073a8cc0))
+
 ## [10.0.48](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.0.47...@sb1/ffe-datepicker@10.0.48) (2022-11-03)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
