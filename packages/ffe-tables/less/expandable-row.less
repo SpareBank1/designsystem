@@ -4,22 +4,11 @@
         position: relative;
 
         &:hover {
-            background-color: @ffe-farge-syrin-70;
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    background-color: @ffe-farge-natt;
-                }
-            }
+            background-color: var(--ffe-v-table-expandable-row-hover);
         }
 
         &:focus {
-            outline: 2px solid @ffe-farge-vann;
-
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    outline: 2px solid @ffe-farge-hvit;
-                }
-            }
+            outline: 2px solid var(--ffe-v-table-expandable-focus-outline);
         }
 
         &:focus:not(:focus-visible) {
@@ -27,21 +16,11 @@
         }
 
         &--expanded {
-            background-color: @ffe-farge-syrin-70;
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    background-color: @ffe-farge-natt;
-                }
-            }
+            background-color: var(--ffe-v-table-expanded-row-bg);
         }
 
         &--expanded:not(:last-child) {
-            border-color: @ffe-farge-syrin-70;
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    border-color: @ffe-farge-natt;
-                }
-            }
+            border-color: var(--ffe-v-table-expanded-row-bg);
         }
 
         .ffe-table__content {
@@ -65,13 +44,8 @@
         &--expanded {
             transition: background-color @ffe-transition-duration 0.1s;
             animation: slide-row 0.2s cubic-bezier(0.5, 0.015, 0.485, 1.445);
-            background-color: @ffe-farge-syrin-30;
+            background-color: var(--ffe-v-table-expanded-content-bg);
             opacity: 1;
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    background-color: @ffe-farge-svart;
-                }
-            }
 
             .ffe-table__cell-expandable-content {
                 padding: @ffe-spacing-xs;
@@ -82,16 +56,11 @@
     &__expand-icon {
         width: 17px;
         height: 17px;
-        fill: @ffe-farge-vann;
+        fill: var(--ffe-v-table-expand-icon-fill);
         transition: transform @ffe-transition-duration @ffe-ease-in-out-back;
         position: absolute;
         top: 10px;
         right: 5px;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                fill: @ffe-farge-vann-70;
-            }
-        }
 
         @media (min-width: @breakpoint-md) {
             position: static;
