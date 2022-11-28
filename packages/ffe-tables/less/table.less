@@ -1,112 +1,3 @@
-// Table
-//
-// Markup:
-// <table class="ffe-table ffe-table{{modifier_class}}">
-//     <caption class="ffe-table__caption">Utviklere</caption>
-//     <thead class="ffe-table__head">
-//         <tr class="ffe-table__row">
-//             <th class="ffe-table__heading" scope="col">
-//                 <span class="ffe-table__content">Navn</span>
-//             </th>
-//             <th class="ffe-table__heading" scope="col">
-//                 <span class="ffe-table__content">Alder</span>
-//             </th>
-//         </tr>
-//     </thead>
-//     <tbody>
-//         <tr class="ffe-table__row">
-//             <td class="ffe-table__cell" data-th="Navn">
-//                 <span class="ffe-table__content">Anders</span>
-//             </td>
-//             <td class="ffe-table__cell" data-th="Alder">
-//                 <span class="ffe-table__content">32</span>
-//             </td>
-//         </tr>
-//         <tr class="ffe-table__row">
-//             <td class="ffe-table__cell" data-th="Navn">
-//                 <span class="ffe-table__content">Erik</span>
-//             </td>
-//             <td class="ffe-table__cell" data-th="Alder">
-//                 <span class="ffe-table__content">25</span>
-//             </td>
-//         </tr>
-//         <tr class="ffe-table__row">
-//             <td class="ffe-table__cell" data-th="Navn">
-//                 <span class="ffe-table__content">Gunn</span>
-//             </td>
-//             <td class="ffe-table__cell" data-th="Alder">
-//                 <span class="ffe-table__content">29</span>
-//             </td>
-//         </tr>
-//     </tbody>
-// </table>
-//
-// --condensed  - Condensed table
-//
-// Styleguide ffe-tables.table.1
-
-// Table cell
-//
-// Markup:
-// <table class="ffe-table">
-//     <caption class="ffe-table__caption">Utviklere</caption>
-//     <thead class="ffe-table__head">
-//         <tr class="ffe-table__row">
-//             <th class="ffe-table__heading" scope="col">
-//                 <span class="ffe-table__content">Navn</span>
-//             </th>
-//             <th class="ffe-table__heading" scope="col">
-//                 <span class="ffe-table__content">Stilling</span>
-//             </th>
-//             <th class="ffe-table__heading ffe-table{{modifier_class}}" scope="col">
-//                 <span class="ffe-table__content">Alder</span>
-//             </th>
-//         </tr>
-//     </thead>
-//     <tbody>
-//         <tr class="ffe-table__row">
-//             <td class="ffe-table__cell" data-th="Navn">
-//                 <span class="ffe-table__content">Anders</span>
-//             </td>
-//             <td class="ffe-table__cell" data-th="Navn">
-//                 <span class="ffe-table__content">Utvikler</span>
-//             </td>
-//             <td class="ffe-table__cell ffe-table{{modifier_class}}" data-th="Alder">
-//                 <span class="ffe-table__content">32</span>
-//             </td>
-//         </tr>
-//         <tr class="ffe-table__row">
-//             <td class="ffe-table__cell" data-th="Navn">
-//                 <span class="ffe-table__content">Erik</span>
-//             </td>
-//             <td class="ffe-table__cell" data-th="Navn">
-//                 <span class="ffe-table__content">Utvikler</span>
-//             </td>
-//             <td class="ffe-table__cell ffe-table{{modifier_class}}" data-th="Alder">
-//                 <span class="ffe-table__content">25</span>
-//             </td>
-//         </tr>
-//         <tr class="ffe-table__row">
-//             <td class="ffe-table__cell" data-th="Navn">
-//                 <span class="ffe-table__content">Gunn</span>
-//             </td>
-//             <td class="ffe-table__cell" data-th="Navn">
-//                 <span class="ffe-table__content">Utvikler</span>
-//             </td>
-//             <td class="ffe-table__cell ffe-table{{modifier_class}}" data-th="Alder">
-//                 <span class="ffe-table__content">29</span>
-//             </td>
-//         </tr>
-//     </tbody>
-// </table>
-//
-// --hide-xlg   - Hide cell on extra large screens
-// --hide-lg    - Hide cell on large screens
-// --hide-md    - Hide cell on medium screens
-// --hide-sm    - Hide cell on small screens
-//
-// Styleguide ffe-tables.table.2
-
 .ffe-table {
     font-family: 'SpareBank1-regular', 'MuseoSans-500', arial, sans-serif;
     margin: @ffe-spacing-sm 0;
@@ -136,7 +27,7 @@
     }
 
     &__footer {
-        &:extend(.ffe-strong-text);
+        .ffe-strong-text();
 
         .ffe-table__row {
             border-bottom: none;
@@ -144,14 +35,9 @@
     }
 
     &__row {
-        border-bottom: 1px solid @ffe-farge-varmgraa;
+        border-bottom: 1px solid var(--ffe-v-table-row-bordercolor);
         display: block;
         padding: @ffe-spacing-xs 0;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                border-color: @ffe-farge-graa;
-            }
-        }
 
         @media (min-width: @breakpoint-md) {
             display: table-row;
@@ -159,15 +45,10 @@
     }
 
     &__heading {
-        &:extend(.ffe-strong-text);
+        .ffe-strong-text();
 
-        color: @ffe-farge-fjell;
+        color: var(--ffe-v-table-heading-color);
         text-align: left;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-farge-vann-70;
-            }
-        }
 
         @media (min-width: @breakpoint-md) {
             display: table-cell;
@@ -214,15 +95,10 @@
         max-width: none;
         vertical-align: top;
         margin-bottom: @ffe-spacing-sm;
+        color: var(--ffe-v-table-content-color);
 
         &--text-right {
             text-align: right;
-        }
-
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-farge-lysgraa;
-            }
         }
 
         @media (min-width: @breakpoint-md) {
@@ -235,13 +111,8 @@
     [data-th]::before {
         content: attr(data-th);
         display: block;
-        color: @ffe-farge-fjell;
-        &:extend(.ffe-strong-text);
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-farge-vann-70;
-            }
-        }
+        color: var(--ffe-v-table-heading-color);
+        .ffe-strong-text();
 
         @media (min-width: @breakpoint-md) {
             display: none;
