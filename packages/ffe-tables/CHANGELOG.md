@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@12.0.27...@sb1/ffe-tables@12.1.0) (2022-11-28)
+
+### Features
+
+-   **ffe-tables:** legger til støtte for theming ([d62f63f](https://github.com/SpareBank1/designsystem/commit/d62f63f286f3d063c211da966383a7c7c74b636f))
+
 ## [12.0.27](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@12.0.26...@sb1/ffe-tables@12.0.27) (2022-10-28)
 
 **Note:** Version bump only for package @sb1/ffe-tables
