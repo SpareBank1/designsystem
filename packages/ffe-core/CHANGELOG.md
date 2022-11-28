@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [26.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@26.1.0...@sb1/ffe-core@26.1.1) (2022-11-28)
+
+### Bug Fixes
+
+-   **ffe-core:** spacing-variabler i overskrifter ([e29da5c](https://github.com/SpareBank1/designsystem/commit/e29da5c5befb4b166b84ce640c60b1042d1676ff))
+
 # [26.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@26.0.0...@sb1/ffe-core@26.1.0) (2022-10-28)
 
 ### Features

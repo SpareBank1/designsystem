@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-grid",
-    "version": "13.0.8",
+    "version": "13.0.9",
     "description": "A grid component for use within the FFE framework",
     "keywords": [
         "ffe"
@@ -20,7 +20,7 @@
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.5.0",
-        "@sb1/ffe-core": "^26.1.0"
+        "@sb1/ffe-core": "^26.1.1"
     },
     "peerDependencies": {
         "@sb1/ffe-core": "*"
