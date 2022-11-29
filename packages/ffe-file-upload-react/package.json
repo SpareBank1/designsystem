@@ -29,6 +29,8 @@
     },
     "dependencies": {
         "@sb1/ffe-buttons-react": "^16.0.7",
+        "@sb1/ffe-file-upload": "^7.1.0",
+        "@sb1/ffe-form": "^22.0.3",
         "@sb1/ffe-icons-react": "^7.3.4",
         "classnames": "^2.3.1"
     },
@@ -38,8 +40,6 @@
         "react-dom": "^16.9.0"
     },
     "peerDependencies": {
-        "@sb1/ffe-core": "*",
-        "@sb1/ffe-form": "*",
         "react": ">=16.9.0"
     },
     "publishConfig": {
