@@ -25,6 +25,7 @@
         "test:watch": "ffe-buildtool jest --watch"
     },
     "dependencies": {
+        "@sb1/ffe-cards": "^14.1.0",
         "prop-types": "^15.7.2"
     },
     "devDependencies": {
@@ -34,7 +35,6 @@
         "react-dom": "^16.9.0"
     },
     "peerDependencies": {
-        "@sb1/ffe-cards": "*",
         "react": ">=16.9.0"
     },
     "publishConfig": {
