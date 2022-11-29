@@ -1,47 +1,3 @@
-// Buttons
-//
-// Base buttons with loading state support.
-//
-// Markup:
-// <button class="ffe-button ffe-button{{modifier_class}}">
-//   <span class="ffe-button__label">Click bait</span>
-//   <span class="ffe-button__spinner" aria-hidden="true" aria-label="Vennligst vent"></span>
-// </button>
-// <button class="ffe-button ffe-button{{modifier_class}} ffe-button--loading" disabled>
-//   <span class="ffe-button__label">Click bait</span>
-//   <span class="ffe-button__spinner" aria-hidden="false" aria-label="Vennligst vent"></span>
-// </button>
-//
-// --action    - Action
-// --primary   - Primary
-// --secondary - Secondary
-//
-// Styleguide ffe-buttons.base-button.1
-
-// More Buttons
-//
-// Markup:
-// <button class="ffe-button ffe-button{{modifier_class}}">
-//   <span class="ffe-button__label">Click bait</span>
-// </button>
-//
-// --shortcut - Short cut
-// --task     - Task
-//
-// Styleguide ffe-buttons.base-button.2
-
-// Expand Button
-//
-// Markup:
-// <button class="ffe-button ffe-button--expand" aria-expanded="false">
-//   <span class="ffe-button__label">Vis mer</span>
-// </button>
-// <button class="ffe-button ffe-button--expand ffe-button--expanded" aria-expanded="true">
-//   <svg focusable="false" class="ffe-button__icon" viewBox="0 0 200 200" width="150" height="150" x="1200" y="1200" xmlns="http://www.w3.org/2000/svg"><path d="M18.77 0c-3.562 0-7.125 1.347-9.834 4.044L4.507 8.483c-5.381 5.394-5.381 14.25 0 19.68l71.19 71.83-71.66 71.83c-5.381 5.394-5.381 14.25 0 19.68l4.429 4.439c5.381 5.394 14.22 5.394 19.64 0l71.66-71.83 71.65 71.83c5.381 5.394 14.23 5.394 19.65 0l4.429-4.439c5.381-5.394 5.381-14.25 0-19.68l-71.19-71.83 71.66-71.83c5.381-4.914 5.381-13.78 0-19.21l-4.429-4.423c-5.381-5.394-14.22-5.394-19.64 0l-72.13 71.34-71.17-71.83c-2.691-2.697-6.257-4.044-9.819-4.044z"></path></svg>
-// </button>
-//
-// Styleguide ffe-buttons.base-button.3
-
 .ffe-button {
     align-items: center;
     appearance: none;
@@ -146,7 +102,7 @@
 .ffe-button--shortcut,
 .ffe-button--expand {
     background-color: var(--ffe-v-button-secondary-color-bg);
-    border: solid 2px var(--ffe-v-button-secondary-color);
+    border: solid 2px var(--ffe-v-button-secondary-border-color);
     color: var(--ffe-v-button-secondary-color);
 
     &:active,
@@ -160,20 +116,14 @@
         }
     }
 
-    &:focus {
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                background-color: transparent;
-            }
-        }
-    }
-
     &:hover {
         background-color: var(--ffe-v-button-secondary-color);
         border-color: var(--ffe-v-button-secondary-color);
         color: var(--ffe-v-button-secondary-color-bg);
         .native & {
             @media (prefers-color-scheme: dark) {
+                background-color: var(--ffe-v-button-secondary-border-color);
+                border-color: var(--ffe-v-button-secondary-border-color);
                 color: var(--ffe-v-button-secondary-color-bg);
             }
         }
