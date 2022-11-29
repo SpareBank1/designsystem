@@ -24,6 +24,7 @@
         "test:watch": "ffe-buildtool jest --watch"
     },
     "dependencies": {
+        "@sb1/ffe-spinner": "^4.2.0",
         "prop-types": "^15.7.2"
     },
     "devDependencies": {
@@ -32,7 +33,6 @@
         "react-dom": "^16.9.0"
     },
     "peerDependencies": {
-        "@sb1/ffe-spinner": "*",
         "react": ">=16.9.0"
     },
     "publishConfig": {
