@@ -26,6 +26,7 @@
     },
     "dependencies": {
         "@sb1/ffe-icons-react": "^7.3.4",
+        "@sb1/ffe-lists": "^11.1.0",
         "classnames": "^2.3.1",
         "prop-types": "^15.7.2"
     },
@@ -35,7 +36,6 @@
         "react-dom": "^16.9.0"
     },
     "peerDependencies": {
-        "@sb1/ffe-lists": "*",
         "react": ">=16.9.0"
     },
     "publishConfig": {
