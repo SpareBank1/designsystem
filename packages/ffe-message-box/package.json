@@ -15,11 +15,11 @@
         "lint": "ffe-buildtool stylelint less/*.less",
         "test": "npm run lint"
     },
+    "dependencies": {
+        "@sb1/ffe-core": "^26.1.0"
+    },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.5.0"
-    },
-    "peerDependencies": {
-        "@sb1/ffe-core": "*"
     },
     "publishConfig": {
         "access": "public"

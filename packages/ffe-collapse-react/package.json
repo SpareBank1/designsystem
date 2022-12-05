@@ -29,6 +29,7 @@
         "test:watch": "ffe-buildtool jest --watch"
     },
     "dependencies": {
+        "@sb1/ffe-core": "^26.1.0",
         "classnames": "^2.3.1"
     },
     "devDependencies": {
@@ -39,7 +40,6 @@
         "react-dom": "^16.9.0"
     },
     "peerDependencies": {
-        "@sb1/ffe-core": "*",
         "react": ">=16.9.0"
     },
     "publishConfig": {

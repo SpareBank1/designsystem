@@ -26,10 +26,6 @@
         "less": "^4.1.2",
         "less-plugin-autoprefix": "^2.0.0"
     },
-    "peerDependencies": {
-        "@sb1/ffe-buttons": "*",
-        "@sb1/ffe-core": "*"
-    },
     "publishConfig": {
         "access": "public"
     }

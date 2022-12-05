@@ -24,18 +24,16 @@
         "test:watch": "ffe-buildtool jest --watch"
     },
     "dependencies": {
+        "@sb1/ffe-grid": "^13.0.9",
+        "@sb1/ffe-grid-react": "^12.0.3",
         "classnames": "^2.3.1"
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.5.0",
-        "@sb1/ffe-grid": "^13.0.9",
-        "@sb1/ffe-grid-react": "^12.0.3",
         "react": "^16.9.0",
         "react-dom": "^16.9.0"
     },
     "peerDependencies": {
-        "@sb1/ffe-grid": "*",
-        "@sb1/ffe-grid-react": "*",
         "react": ">=16.9.0"
     },
     "publishConfig": {
