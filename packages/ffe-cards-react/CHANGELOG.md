@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [9.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@8.0.2...@sb1/ffe-cards-react@9.0.0) (2022-12-05)
+
+### Features
+
+-   **ffe-cards-react:** update internal dependencies ([e2587f9](https://github.com/SpareBank1/designsystem/commit/e2587f961353c2cf6ae80bd5c6ae2d2cb0c9e274))
+
+### BREAKING CHANGES
+
+-   **ffe-cards-react:** Makes the styling package @sb1/ffe-cards a required
+    dependency and removes it as peer dependency.
+
 ## [8.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@8.0.1...@sb1/ffe-cards-react@8.0.2) (2022-10-28)
 
 **Note:** Version bump only for package @sb1/ffe-cards-react

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@7.0.4...@sb1/ffe-tabs-react@8.0.0) (2022-12-05)
+
+### Features
+
+-   **ffe-tabs-react:** update internal dependencies ([2543cb0](https://github.com/SpareBank1/designsystem/commit/2543cb08767614a11977e7b110238d6510a6ba4d))
+
+### BREAKING CHANGES
+
+-   **ffe-tabs-react:** Makes the styling package @sb1/ffe-tabs a required
+    dependency and removes it as peer dependency.
+
 ## [7.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@7.0.3...@sb1/ffe-tabs-react@7.0.4) (2022-10-28)
 
 **Note:** Version bump only for package @sb1/ffe-tabs-react

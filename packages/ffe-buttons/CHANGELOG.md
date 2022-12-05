@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [17.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@16.1.3...@sb1/ffe-buttons@17.0.0) (2022-12-05)
+
+### Features
+
+-   **ffe-buttons:** update internal dependencies ([c69201c](https://github.com/SpareBank1/designsystem/commit/c69201c149a1fb5513b41ca285723e0faaf23e50))
+
+### BREAKING CHANGES
+
+-   **ffe-buttons:** Makes the styling package @sb1/ffe-buttons a required
+    dependency and removes it as peer dependency.
+
 ## [16.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@16.1.2...@sb1/ffe-buttons@16.1.3) (2022-11-29)
 
 ### Bug Fixes

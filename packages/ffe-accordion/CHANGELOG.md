@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [9.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@8.2.1...@sb1/ffe-accordion@9.0.0) (2022-12-05)
+
+### Features
+
+-   **ffe-accordion:** update internal dependencies ([1b298ff](https://github.com/SpareBank1/designsystem/commit/1b298ff9cc419a72b6f6abd5fded3c8a413aab77))
+
+### BREAKING CHANGES
+
+-   **ffe-accordion:** Makes the styling package @sb1/ffe-core a required
+    dependency and removes it as peer dependency.
+
 ## [8.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@8.2.0...@sb1/ffe-accordion@8.2.1) (2022-11-28)
 
 **Note:** Version bump only for package @sb1/ffe-accordion

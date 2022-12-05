@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [23.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@22.0.5...@sb1/ffe-form@23.0.0) (2022-12-05)
+
+### Features
+
+-   **ffe-form:** update internal dependencies ([ee8632d](https://github.com/SpareBank1/designsystem/commit/ee8632dbcf9bd134053ead45541e6b534b2ca2eb))
+
+### BREAKING CHANGES
+
+-   **ffe-form:** Makes the styling packages @sb1/ffe-core and
+    @sb1/ffe-buttons required dependencies and removes these as peer
+    dependencies.
+
 ## [22.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@22.0.4...@sb1/ffe-form@22.0.5) (2022-11-29)
 
 **Note:** Version bump only for package @sb1/ffe-form

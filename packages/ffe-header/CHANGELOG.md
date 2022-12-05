@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [18.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@17.0.42...@sb1/ffe-header@18.0.0) (2022-12-05)
+
+### Features
+
+-   **ffe-header:** remove internal dependencies ([e9ae5e7](https://github.com/SpareBank1/designsystem/commit/e9ae5e728f37eec70d494d7f53e02e7ffdb1a653))
+
+### BREAKING CHANGES
+
+-   **ffe-header:** Remove internal styling packages as peer dependencies.
+
 ## [17.0.42](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@17.0.41...@sb1/ffe-header@17.0.42) (2022-11-29)
 
 **Note:** Version bump only for package @sb1/ffe-header

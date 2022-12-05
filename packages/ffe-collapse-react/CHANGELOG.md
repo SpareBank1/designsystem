@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-collapse-react@1.1.15...@sb1/ffe-collapse-react@2.0.0) (2022-12-05)
+
+### Features
+
+-   **ffe-collapse-react:** update internal dependencies ([b89ccc6](https://github.com/SpareBank1/designsystem/commit/b89ccc6b82aa4e8e55cdfda5153c263b05c9933c))
+
+### BREAKING CHANGES
+
+-   **ffe-collapse-react:** Makes the styling package @sb1/ffe-core a required
+    dependency and removes it as peer dependency.
+
 ## [1.1.15](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-collapse-react@1.1.14...@sb1/ffe-collapse-react@1.1.15) (2022-10-28)
 
 **Note:** Version bump only for package @sb1/ffe-collapse-react

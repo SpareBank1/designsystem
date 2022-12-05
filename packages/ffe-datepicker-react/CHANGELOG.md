@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@5.2.21...@sb1/ffe-datepicker-react@6.0.0) (2022-12-05)
+
+### Features
+
+-   **ffe-datepicker-react:** update internal dependencies ([fedf7bb](https://github.com/SpareBank1/designsystem/commit/fedf7bb601aa39da8f1a7a355236a5fc70f2b624))
+
+### BREAKING CHANGES
+
+-   **ffe-datepicker-react:** Makes the styling package @sb1/ffe-form a required
+    dependency and removes it as peer dependency.
+
 ## [5.2.21](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@5.2.20...@sb1/ffe-datepicker-react@5.2.21) (2022-11-29)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker-react

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [14.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@14.1.0...@sb1/ffe-searchable-dropdown-react@14.1.1) (2022-12-05)
+
+### Bug Fixes
+
+-   **ffe-searchable-dropdown-react:** adds missing dep. to useEffect ([87383a8](https://github.com/SpareBank1/designsystem/commit/87383a8969ab414d8f21750ce8ef1215bc222b4b))
+
 # [14.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@14.0.45...@sb1/ffe-searchable-dropdown-react@14.1.0) (2022-11-29)
 
 ### Features

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@6.1.2...@sb1/ffe-context-message@7.0.0) (2022-12-05)
+
+### Features
+
+-   **ffe-context-message:** update internal dependencies ([4c75032](https://github.com/SpareBank1/designsystem/commit/4c7503226c5843bd347c11fb99bc73bbf60e719f))
+
+### BREAKING CHANGES
+
+-   **ffe-context-message:** Makes the styling package @sb1/ffe-core a required
+    dependency and removes it as peer dependency.
+
 ## [6.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@6.1.1...@sb1/ffe-context-message@6.1.2) (2022-11-28)
 
 **Note:** Version bump only for package @sb1/ffe-context-message

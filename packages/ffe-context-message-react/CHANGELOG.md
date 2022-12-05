@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@7.0.4...@sb1/ffe-context-message-react@8.0.0) (2022-12-05)
+
+### Features
+
+-   **ffe-context-message-react:** update internal dependencies ([67203d1](https://github.com/SpareBank1/designsystem/commit/67203d15d0628743b3682c517de0369a7a25a4c7))
+
+### BREAKING CHANGES
+
+-   **ffe-context-message-react:** Makes the styling package @sb1/ffe-context-message a
+    required dependency and removes it as peer dependency.
+
 ## [7.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@7.0.3...@sb1/ffe-context-message-react@7.0.4) (2022-10-28)
 
 **Note:** Version bump only for package @sb1/ffe-context-message-react

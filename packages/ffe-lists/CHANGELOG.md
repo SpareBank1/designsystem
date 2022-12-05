@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@11.1.1...@sb1/ffe-lists@12.0.0) (2022-12-05)
+
+### Features
+
+-   **ffe-lists:** update internal dependencies ([cd84535](https://github.com/SpareBank1/designsystem/commit/cd8453554e141d4b76964bed1c895006cf4679e9))
+
+### BREAKING CHANGES
+
+-   **ffe-lists:** Makes the styling package @sb1/ffe-core a required
+    dependency and removes it as peer dependency.
+
 ## [11.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@11.1.0...@sb1/ffe-lists@11.1.1) (2022-11-28)
 
 **Note:** Version bump only for package @sb1/ffe-lists

@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload-react@6.1.7...@sb1/ffe-file-upload-react@7.0.0) (2022-12-05)
+
+### Features
+
+-   **ffe-file-upload-react:** update internal dependencies ([157b1f2](https://github.com/SpareBank1/designsystem/commit/157b1f2dccceb14f5a0a6d30e1a18cc7294540e1))
+
+### BREAKING CHANGES
+
+-   **ffe-file-upload-react:** Makes the styling packages @sb1/ffe-form and
+    @sb1/ffe-file-upload required dependencies and removes these as peer
+    dependencies.
+
 ## [6.1.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload-react@6.1.6...@sb1/ffe-file-upload-react@6.1.7) (2022-11-16)
 
 ### Bug Fixes

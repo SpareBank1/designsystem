@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [20.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@19.1.2...@sb1/ffe-account-selector-react@20.0.0) (2022-12-05)
+
+### Features
+
+-   **ffe-account-selector-react:** update internal dependencies ([139236a](https://github.com/SpareBank1/designsystem/commit/139236a81043b273707733c57548b1af1ac8cd67))
+
+### BREAKING CHANGES
+
+-   **ffe-account-selector-react:** Makes the styling package @sb1/ffe-form a required
+    dependency and removes it as peer dependency.
+
 ## [19.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@19.1.1...@sb1/ffe-account-selector-react@19.1.2) (2022-11-29)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react

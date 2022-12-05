@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@5.0.15...@sb1/ffe-lists-react@6.0.0) (2022-12-05)
+
+### Features
+
+-   **ffe-lists-react:** update internal dependencies ([61f58a7](https://github.com/SpareBank1/designsystem/commit/61f58a7f1bf21d348111921342d1d07b30e0c0e2))
+
+### BREAKING CHANGES
+
+-   **ffe-lists-react:** Makes the styling package @sb1/ffe-lists a required
+    dependency and removes it as peer dependency.
+
 ## [5.0.15](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@5.0.14...@sb1/ffe-lists-react@5.0.15) (2022-10-28)
 
 **Note:** Version bump only for package @sb1/ffe-lists-react

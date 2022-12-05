@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@6.3.2...@sb1/ffe-system-message@7.0.0) (2022-12-05)
+
+### Features
+
+-   **ffe-system-message:** update internal dependencies ([288a8b7](https://github.com/SpareBank1/designsystem/commit/288a8b790bf50f6bb990cb1f8df0b8b06ba203bb))
+
+### BREAKING CHANGES
+
+-   **ffe-system-message:** Makes the styling package @sb1/ffe-core a required
+    dependency and removes it as peer dependency.
+
 ## [6.3.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@6.3.1...@sb1/ffe-system-message@6.3.2) (2022-11-28)
 
 **Note:** Version bump only for package @sb1/ffe-system-message

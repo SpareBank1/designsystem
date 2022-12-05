@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [11.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@10.2.1...@sb1/ffe-message-box@11.0.0) (2022-12-05)
+
+### Features
+
+-   **ffe-message-box:** update internal dependencies ([7f07147](https://github.com/SpareBank1/designsystem/commit/7f07147054545f2389cdaf11bd430e7359941201))
+
+### BREAKING CHANGES
+
+-   **ffe-message-box:** Makes the styling package @sb1/ffe-core a required
+    dependency and removes it as peer dependency.
+
 ## [10.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@10.2.0...@sb1/ffe-message-box@10.2.1) (2022-11-02)
 
 ### Bug Fixes

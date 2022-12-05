@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.1.2...@sb1/ffe-details-list-react@4.0.0) (2022-12-05)
+
+### Features
+
+-   **ffe-details-list-react:** update internal dependencies ([412398b](https://github.com/SpareBank1/designsystem/commit/412398bebb5b83cdc77a91f3fc21c686a0cd5e62))
+
+### BREAKING CHANGES
+
+-   **ffe-details-list-react:** Makes the styling packages @sb1/ffe-grid and
+    @sb1/ffe-grid-react required dependencies and removes these as peer
+    dependencies.
+
 ## [3.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@3.1.1...@sb1/ffe-details-list-react@3.1.2) (2022-11-28)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react

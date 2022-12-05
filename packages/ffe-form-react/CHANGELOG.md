@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [11.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@10.1.0...@sb1/ffe-form-react@11.0.0) (2022-12-05)
+
+### Features
+
+-   **ffe-form-react:** update internal dependencies ([7a13c1c](https://github.com/SpareBank1/designsystem/commit/7a13c1c411b789d0c3de1d47820cadb006682aec))
+
+### BREAKING CHANGES
+
+-   **ffe-form-react:** Makes the styling package @sb1/ffe-form a required
+    dependency and removes it as peer dependency.
+
 # [10.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@10.0.3...@sb1/ffe-form-react@10.1.0) (2022-11-09)
 
 ### Features

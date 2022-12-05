@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-dropdown-react@5.1.17...@sb1/ffe-dropdown-react@6.0.0) (2022-12-05)
+
+### Features
+
+-   **ffe-dropdown-react:** update internal dependencies ([c6e79e4](https://github.com/SpareBank1/designsystem/commit/c6e79e4aa641aeda9c7126c193f77f8c0d3ee4f4))
+
+### BREAKING CHANGES
+
+-   **ffe-dropdown-react:** Makes the styling package @sb1/ffe-form a required
+    dependency and removes it as peer dependency.
+
 ## [5.1.17](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-dropdown-react@5.1.16...@sb1/ffe-dropdown-react@5.1.17) (2022-11-14)
 
 **Note:** Version bump only for package @sb1/ffe-dropdown-react

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@9.3.4...@sb1/ffe-accordion-react@10.0.0) (2022-12-05)
+
+### Features
+
+-   **ffe-accordion-react:** update internal dependencies ([793e63b](https://github.com/SpareBank1/designsystem/commit/793e63b1dbde9b222a76f39cfcf88396c2c45c7b))
+
+### BREAKING CHANGES
+
+-   **ffe-accordion-react:** Makes the styling package @sb1/ffe-core a required dependency and
+    removes it as peer dependency.
+
 ## [9.3.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@9.3.3...@sb1/ffe-accordion-react@9.3.4) (2022-10-28)
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react

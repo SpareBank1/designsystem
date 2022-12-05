@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [13.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@12.1.1...@sb1/ffe-tables@13.0.0) (2022-12-05)
+
+### Features
+
+-   **ffe-tables:** update internal dependencies ([b75c5ee](https://github.com/SpareBank1/designsystem/commit/b75c5ee041cd339373576f289a43ced2138db43b))
+
+### BREAKING CHANGES
+
+-   **ffe-tables:** Makes the styling package @sb1/ffe-core a required
+    dependency and removes it as peer dependency.
+
 ## [12.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@12.1.0...@sb1/ffe-tables@12.1.1) (2022-11-28)
 
 **Note:** Version bump only for package @sb1/ffe-tables

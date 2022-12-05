@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@6.1.0...@sb1/ffe-core-react@7.0.0) (2022-12-05)
+
+### Features
+
+-   **ffe-core-react:** update internal dependencies ([dd5d0d0](https://github.com/SpareBank1/designsystem/commit/dd5d0d0a74e350d03a6e0d382a8fcc2d7010f13e))
+
+### BREAKING CHANGES
+
+-   **ffe-core-react:** Makes the styling package @sb1/ffe-core a required dependency and
+    removes it as peer dependency.
+
 # [6.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@6.0.1...@sb1/ffe-core-react@6.1.0) (2022-10-28)
 
 ### Features

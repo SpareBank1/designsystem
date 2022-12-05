@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner-react@5.1.8...@sb1/ffe-spinner-react@6.0.0) (2022-12-05)
+
+### Features
+
+-   **ffe-spinner-react:** update internal dependencies ([6b51c0f](https://github.com/SpareBank1/designsystem/commit/6b51c0faea1aba9a9e21324d3265668e336c2afd))
+
+### BREAKING CHANGES
+
+-   **ffe-spinner-react:** Makes the styling package @sb1/ffe-spinner a required
+    dependency and removes it as peer dependency.
+
 ## [5.1.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner-react@5.1.7...@sb1/ffe-spinner-react@5.1.8) (2022-10-28)
 
 **Note:** Version bump only for package @sb1/ffe-spinner-react

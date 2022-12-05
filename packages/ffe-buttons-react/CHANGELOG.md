@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [17.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@16.0.7...@sb1/ffe-buttons-react@17.0.0) (2022-12-05)
+
+### Features
+
+-   **ffe-buttons-react:** update internal dependencies ([961e579](https://github.com/SpareBank1/designsystem/commit/961e5790318bf3fe27bdcc79ae610df18a76ad6b))
+
+### BREAKING CHANGES
+
+-   **ffe-buttons-react:** Makes the styling package @sb1/ffe-buttons a required
+    dependency and removes it as peer dependency.
+
 ## [16.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@16.0.6...@sb1/ffe-buttons-react@16.0.7) (2022-10-28)
 
 **Note:** Version bump only for package @sb1/ffe-buttons-react

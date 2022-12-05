@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload@7.1.1...@sb1/ffe-file-upload@8.0.0) (2022-12-05)
+
+### Features
+
+-   **ffe-file-upload:** update internal dependencies ([fff83d3](https://github.com/SpareBank1/designsystem/commit/fff83d3c8b9b5c9f7996d634009a4db8aa03b125))
+
+### BREAKING CHANGES
+
+-   **ffe-file-upload:** Makes the styling packages @sb1/ffe-core and
+    @sb1/ffe-form required dependencies and removes these as peer
+    dependencies.
+
 ## [7.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload@7.1.0...@sb1/ffe-file-upload@7.1.1) (2022-11-28)
 
 **Note:** Version bump only for package @sb1/ffe-file-upload

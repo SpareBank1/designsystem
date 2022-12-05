@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [14.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@13.0.9...@sb1/ffe-grid@14.0.0) (2022-12-05)
+
+### Features
+
+-   **ffe-grid:** update internal dependencies ([aa85f6c](https://github.com/SpareBank1/designsystem/commit/aa85f6c4c6ed6f6ee2c8e81adcd54b9eef1ea88d))
+
+### BREAKING CHANGES
+
+-   **ffe-grid:** Makes the styling package @sb1/ffe-core a required
+    dependency and removes it as peer dependency.
+
 ## [13.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@13.0.8...@sb1/ffe-grid@13.0.9) (2022-11-28)
 
 **Note:** Version bump only for package @sb1/ffe-grid

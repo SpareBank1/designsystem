@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@6.1.5...@sb1/ffe-tables-react@7.0.0) (2022-12-05)
+
+### Features
+
+-   **ffe-tables-react:** update internal dependencies ([a5e00c3](https://github.com/SpareBank1/designsystem/commit/a5e00c34f8ac793288b516f47a56b8efd5706502))
+
+### BREAKING CHANGES
+
+-   **ffe-tables-react:** Makes the styling package @sb1/ffe-tables a required
+    dependency and removes it as peer dependency.
+
 ## [6.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@6.1.4...@sb1/ffe-tables-react@6.1.5) (2022-10-28)
 
 **Note:** Version bump only for package @sb1/ffe-tables-react

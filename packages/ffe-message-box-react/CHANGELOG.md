@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@7.2.6...@sb1/ffe-message-box-react@8.0.0) (2022-12-05)
+
+### Features
+
+-   **ffe-message-box-react:** update internal dependencies ([0477daf](https://github.com/SpareBank1/designsystem/commit/0477daf72d761fe6a4358875da04a345e507c579))
+
+### BREAKING CHANGES
+
+-   **ffe-message-box-react:** Makes the styling package @sb1/ffe-message-box a
+    required dependency and removes it as peer dependency.
+
 ## [7.2.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@7.2.5...@sb1/ffe-message-box-react@7.2.6) (2022-11-14)
 
 **Note:** Version bump only for package @sb1/ffe-message-box-react

@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [11.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.1.2...@sb1/ffe-datepicker@11.0.0) (2022-12-05)
+
+### Features
+
+-   **ffe-datepicker:** update internal dependencies ([54ac0d4](https://github.com/SpareBank1/designsystem/commit/54ac0d40eb3fe5d96340682fef95738c8d1290d1))
+
+### BREAKING CHANGES
+
+-   **ffe-datepicker:** Makes the styling packages @sb1/ffe-form and
+    @sb1/ffe-datepicker required dependencies and removes these as peer
+    dependencies.
+
 ## [10.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@10.1.1...@sb1/ffe-datepicker@10.1.2) (2022-11-29)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
