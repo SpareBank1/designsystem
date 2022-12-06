@@ -60,10 +60,31 @@
                 color: var(--ffe-farge-svart);
             }
         }
+    }
 
-        .ffe-link-text:not(:focus) {
-            color: var(--ffe-farge-fjell);
-            border-color: var(--ffe-farge-fjell);
+    .ffe-link-text {
+        border-bottom: 1px solid var(--ffe-v-context-message-link-color);
+        color: var(--ffe-v-context-message-link-color);
+
+        &:hover {
+            border-bottom-color: var(--ffe-v-context-message-link-color-hover);
+            color: var(--ffe-v-context-message-link-color-hover);
+        }
+
+        &:visited {
+            border-bottom-color: var(
+                --ffe-v-context-message-link-color-visited
+            );
+            color: var(--ffe-v-context-message-link-color-visited);
+        }
+
+        &:focus {
+            border-color: var(
+                --ffe-v-context-message-link-color-focus
+            ) !important;
+            background-color: var(--ffe-v-context-message-link-color);
+            box-shadow: 0 0 0 2px var(--ffe-v-context-message-link-color);
+            color: var(--ffe-v-context-message-link-color-focus) !important;
         }
     }
 
