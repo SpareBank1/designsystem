@@ -1,26 +1,3 @@
-// Message box
-//
-// Markup:
-// <div class="ffe-message-box">
-//     <span class="ffe-message-box__icon ffe-message-box__icon{{modifier_class}}">
-//         <svg focusable="false" viewBox="0 0 200 200" height="150" width="150" style="width: 40px; height: 40px;">
-//             <path d="m96.19,199.99h7.846c7.1536,0,11.308-4.398,11.308-11.805v-102.99c0-7.407-4.1537-11.805-11.308-11.805h-7.846c-7.3844,0-11.769,4.3979-11.769,11.805v103c0.227,7.4054,4.38,11.805,11.765,11.805z"></path>
-//             <path d="M116.5,11.805c0-7.4072-4.15-11.805-11.31-11.805h-10.382c-7.1577,0-11.308,4.3978-11.308,11.805v15.045c0,7.407,3.923,11.342,11.308,11.342h10.385c7.3844,0,11.308-3.935,11.308-11.342v-15.045z"></path>
-//         </svg>
-//     </span>
-//     <div class="ffe-message-box__box ffe-message-box__box{{modifier_class}}">
-//         <div class="ffe-h4 ffe-message-box__title{{modifier_class}}">Betalingen ble gjennomført</div>
-//         <p class="ffe-body-paragraph">Nå er du helt gjeldsfri! Hurra!</p>
-//     </div>
-// </div>
-//
-// --tips      - Helpful tips
-// --info      - Generic info
-// --success   - Success message
-// --error     - Error message
-//
-// Styleguide ffe-message-box
-
 .ffe-message-box {
     text-align: center;
     font-family: var(--ffe-g-font);
@@ -30,6 +7,28 @@
             @media (prefers-color-scheme: dark) {
                 color: var(--ffe-farge-svart);
             }
+        }
+    }
+
+    .ffe-link-text {
+        border-bottom: 1px solid var(--ffe-v-message-box-link-color);
+        color: var(--ffe-v-message-box-link-color);
+
+        &:hover {
+            border-bottom-color: var(--ffe-v-message-box-link-color-hover);
+            color: var(--ffe-v-message-box-link-color-hover);
+        }
+
+        &:visited {
+            border-bottom-color: var(--ffe-v-message-box-link-color-visited);
+            color: var(--ffe-v-message-box-link-color-visited);
+        }
+
+        &:focus {
+            border-color: var(--ffe-v-message-box-link-color-focus) !important;
+            background-color: var(--ffe-v-message-box-link-color);
+            box-shadow: 0 0 0 2px var(--ffe-v-message-box-link-color);
+            color: var(--ffe-v-message-box-link-color-focus) !important;
         }
     }
 
