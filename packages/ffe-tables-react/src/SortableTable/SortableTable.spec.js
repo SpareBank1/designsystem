@@ -73,6 +73,26 @@ describe('<SortableTable>', () => {
         );
     });
 
+    it('should call onSort after initial sort', () => {
+        const onSort = spy();
+        shallow(
+            <SortableTable
+                columns={columns}
+                data={data}
+                onSort={onSort}
+                sortBy={'name'}
+            />,
+        );
+        assert.calledWith(
+            onSort,
+            match(val => {
+                return (
+                    'sortBy' in val && 'descending' in val && 'tableData' in val
+                );
+            }),
+        );
+    });
+
     describe('condensed', () => {
         it('should by default not be condensed', () =>
             expect(wrapper.find('.ffe-table--condensed')).toHaveLength(0));
