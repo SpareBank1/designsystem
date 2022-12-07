@@ -163,7 +163,7 @@ ContextMessage.propTypes = {
 ContextMessage.defaultProps = {
     animationLengthMs: 300,
     compact: false,
-    headerElement: 'div',
+    headerElement: 'h2',
     locale: 'nb',
     onClose: () => {},
     showCloseButton: false,
