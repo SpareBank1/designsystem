@@ -32,6 +32,36 @@
     overflow: hidden;
     border-radius: @ffe-spacing-xs;
 
+    &:not(&--news) {
+        .ffe-link-text {
+            border-bottom: 1px solid var(--ffe-v-system-message-link-color);
+            color: var(--ffe-v-system-message-link-color);
+
+            &:hover {
+                border-bottom-color: var(
+                    --ffe-v-system-message-link-color-hover
+                );
+                color: var(--ffe-v-system-message-link-color-hover);
+            }
+
+            &:visited {
+                border-bottom-color: var(
+                    --ffe-v-system-message-link-color-visited
+                );
+                color: var(--ffe-v-system-message-link-color-visited);
+            }
+
+            &:focus {
+                border-color: var(
+                    --ffe-v-system-message-link-color-focus
+                ) !important;
+                background-color: var(--ffe-v-system-message-link-color);
+                box-shadow: 0 0 0 2px var(--ffe-v-system-message-link-color);
+                color: var(--ffe-v-system-message-link-color-focus) !important;
+            }
+        }
+    }
+
     &--error&--coloredbg {
         background-color: var(--ffe-v-system-message-variant-bg-color);
         .native & {
