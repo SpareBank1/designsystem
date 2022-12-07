@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@7.0.0...@sb1/ffe-tables-react@7.0.1) (2022-12-07)
+
+### Bug Fixes
+
+-   **ffe-tables-react:** onSort ble ikke kalt ved initiell sortering ([e9c5746](https://github.com/SpareBank1/designsystem/commit/e9c5746871fd43692d89799b14ac36b109919ff7))
+
 # [7.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@6.1.5...@sb1/ffe-tables-react@7.0.0) (2022-12-05)
 
 ### Features

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [11.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@11.0.0...@sb1/ffe-message-box@11.0.1) (2022-12-07)
+
+### Bug Fixes
+
+-   **ffe-message-box:** overstyrer lenkefarge i dark mode ([cb69d4d](https://github.com/SpareBank1/designsystem/commit/cb69d4d8b6fa2a7f83873c833724e9f0ce4df11a))
+
 # [11.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@10.2.1...@sb1/ffe-message-box@11.0.0) (2022-12-05)
 
 ### Features

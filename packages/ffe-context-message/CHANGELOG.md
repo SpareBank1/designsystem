@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@7.0.0...@sb1/ffe-context-message@7.0.1) (2022-12-07)
+
+### Bug Fixes
+
+-   **ffe-context-message:** overstyrer lenkefarge i dark mode ([6a82643](https://github.com/SpareBank1/designsystem/commit/6a8264337d7b2de84d3d30199fe025e1947500bf))
+
 # [7.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@6.1.2...@sb1/ffe-context-message@7.0.0) (2022-12-05)
 
 ### Features
