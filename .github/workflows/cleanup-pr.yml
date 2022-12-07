@@ -8,7 +8,7 @@ on:
 
 jobs:
     close_pull_request:
-        if: github.event.repository.full_name == 'SpareBank1/designsystem' && github.event_name == 'pull_request' && github.event.action == 'closed'
+        if: github.event.repository.full_name == 'SpareBank1/designsystem' && github.event_name == 'pull_request' && github.event.action == 'closed' && !github.event.pull_request.head.repo.fork
         runs-on: ubuntu-latest
         name: Close Pull Request Job
         steps:
