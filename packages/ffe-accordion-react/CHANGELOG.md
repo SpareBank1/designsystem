@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@10.0.0...@sb1/ffe-accordion-react@10.0.1) (2022-12-14)
+
+### Bug Fixes
+
+-   **ffe-accordion-react:** aria-hidden på ikoner ([36dfaf2](https://github.com/SpareBank1/designsystem/commit/36dfaf2066336bc51cfd5d02a9484e8b08adf66c))
+
 # [10.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@9.3.4...@sb1/ffe-accordion-react@10.0.0) (2022-12-05)
 
 ### Features
