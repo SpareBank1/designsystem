@@ -71,7 +71,10 @@ const AccordionItem = ({
                     <span className="ffe-accordion-item__heading-button-content">
                         {heading}
                         <span className="ffe-accordion-item__heading-icon-wrapper">
-                            <ChevronIkon className="ffe-accordion-item__heading-icon" />
+                            <ChevronIkon
+                                className="ffe-accordion-item__heading-icon"
+                                aria-hidden="true"
+                            />
                         </span>
                     </span>
                 </button>
