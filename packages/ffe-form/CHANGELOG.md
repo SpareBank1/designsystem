@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [23.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@23.0.0...@sb1/ffe-form@23.0.1) (2022-12-16)
+
+### Bug Fixes
+
+-   **ffe-form:** max-width på label med tooltip ([34d43e6](https://github.com/SpareBank1/designsystem/commit/34d43e6fa78cb6ecc9b213d4c551d3a21e68a215))
+
 # [23.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@22.0.5...@sb1/ffe-form@23.0.0) (2022-12-05)
 
 ### Features
