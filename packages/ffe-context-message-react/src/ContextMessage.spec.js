@@ -39,7 +39,7 @@ describe('<ContextMessage />', () => {
         );
         expect(headerComponent.exists()).toBe(true);
         expect(headerComponent.text()).toBe('header text');
-        expect(headerComponent.type()).toBe('div');
+        expect(headerComponent.type()).toBe('h2');
     });
 
     it('renders with provided header as given tag', () => {

@@ -11,6 +11,7 @@ const BaseMessage = props => {
     const {
         type,
         title,
+        titleElement,
         icon,
         content,
         children,
@@ -33,7 +34,14 @@ const BaseMessage = props => {
                 {React.cloneElement(icon, { style: iconStyles, ...icon.props })}
             </span>
             <div className="ffe-message-box__box">
-                {title && <div className="ffe-message-box__title">{title}</div>}
+                {title &&
+                    React.createElement(
+                        titleElement,
+                        {
+                            className: 'ffe-message-box__title',
+                        },
+                        title,
+                    )}
                 {content && <p>{content}</p>}
                 {!content && children}
             </div>
@@ -47,6 +55,8 @@ BaseMessage.propTypes = {
     content: node,
     icon: node.isRequired,
     title: node,
+    /** HTML element for the title */
+    titleElement: string,
     /**
      * Internal type enum for specifying the style of message box. Should not be used directly
      * @ignore
@@ -56,4 +66,8 @@ BaseMessage.propTypes = {
     onColoredBg: bool,
 };
 
+BaseMessage.defaultProps = {
+    titleElement: 'h2',
+    onColoredBg: false,
+};
 export default BaseMessage;
