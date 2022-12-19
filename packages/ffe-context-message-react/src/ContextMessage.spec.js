@@ -14,6 +14,7 @@ import ContextMessage from './ContextMessage';
 const defaultProps = {
     children: <p>content</p>,
     messageType: 'tips',
+    role: 'group',
     icon: <InfoSirkelIkon />,
 };
 
@@ -58,6 +59,11 @@ describe('<ContextMessage />', () => {
         const header = wrapper.find('.ffe-context-message-content__header');
         expect(header.exists()).toBe(false);
     });
+    it('set role="group" on outer container', () => {
+        const wrapper = getMountedWrapper();
+        const container = wrapper.find('.ffe-context-message');
+        expect(container.prop('role')).toBe('group');
+    });
 
     it('renders provided styles to outermost container', () => {
         const wrapper = getShallowWrapper({
@@ -89,6 +95,13 @@ describe('<ContextMessage />', () => {
         const el = wrapper.find('svg');
         expect(el).toHaveLength(1);
         expect(el.hasClass('ffe-context-message-content__icon-svg')).toBe(true);
+    });
+
+    it('renders with role="img" on icon', () => {
+        const wrapper = getMountedWrapper({});
+        const el = wrapper.find('svg');
+        expect(el).toHaveLength(1);
+        expect(el.prop('role')).toBe('img');
     });
 
     it('lets consumer add extra classes to icon', () => {
