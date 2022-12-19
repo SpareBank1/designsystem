@@ -6,7 +6,12 @@ import { LyspareIkon } from '@sb1/ffe-icons-react';
 import BaseMessage from './BaseMessage';
 
 const TipsMessage = props => (
-    <BaseMessage type="tips" icon={<LyspareIkon />} {...props} />
+    <BaseMessage
+        type="tips"
+        aria-label="Tipsmelding"
+        icon={<LyspareIkon title="Lyspære, ikon" />}
+        {...props}
+    />
 );
 
 TipsMessage.propTypes = {
