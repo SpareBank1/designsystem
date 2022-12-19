@@ -53,6 +53,20 @@ describe('<SystemMessage />', () => {
                 .hasClass('ffe-system-message-wrapper--success'),
         ).toBe(true);
     });
+    it('renders with correct aria-label', () => {
+        const infoWrapper = getInfoWrapper();
+        const successWrapper = getSuccessWrapper();
+        const infoEl = infoWrapper.find('.ffe-system-message-wrapper');
+        const successEl = successWrapper.find('.ffe-system-message-wrapper');
+        expect(infoEl.prop('aria-label')).toBe('Infomelding');
+        expect(successEl.prop('aria-label')).toBe('Suksessmelding');
+    });
+    it('renders with role group on container', () => {
+        const infoWrapper = getInfoWrapper();
+        const infoEl = infoWrapper.find('.ffe-system-message-wrapper');
+        expect(infoEl.prop('role')).toBe('group');
+    });
+
     it('collapses when close button is clicked', done => {
         const wrapper = getInfoWrapper({
             animationLengthMs: 10,
