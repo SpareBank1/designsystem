@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [26.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@26.1.1...@sb1/ffe-core@26.1.2) (2022-12-19)
+
+### Bug Fixes
+
+-   **ffe-core:** bytter farge på lead paragraph i dark mode ([3689f7f](https://github.com/SpareBank1/designsystem/commit/3689f7fe0c2e0dfd7eb733d08be16fb917cb5835))
+
 ## [26.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@26.1.0...@sb1/ffe-core@26.1.1) (2022-11-28)
 
 ### Bug Fixes

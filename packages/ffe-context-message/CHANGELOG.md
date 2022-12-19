@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@7.1.0...@sb1/ffe-context-message@7.1.1) (2022-12-19)
+
+### Bug Fixes
+
+-   **ffe-context-message:** Fikser at tittel endrer seg når det er h-element ([0a8d011](https://github.com/SpareBank1/designsystem/commit/0a8d011cd1b6e2092975b8c70fd8e59d65f4a5c8))
+
 # [7.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@7.0.1...@sb1/ffe-context-message@7.1.0) (2022-12-16)
 
 ### Features

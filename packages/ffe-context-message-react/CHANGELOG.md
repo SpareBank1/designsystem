@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@8.0.2...@sb1/ffe-context-message-react@8.0.3) (2022-12-19)
+
+### Bug Fixes
+
+-   **ffe-context-message-react:** Endre default tittel element fra div til h2 ([7c2a0c2](https://github.com/SpareBank1/designsystem/commit/7c2a0c2672eb454ccb8d92780614666d8408ccf3))
+
 ## [8.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@8.0.1...@sb1/ffe-context-message-react@8.0.2) (2022-12-16)
 
 **Note:** Version bump only for package @sb1/ffe-context-message-react

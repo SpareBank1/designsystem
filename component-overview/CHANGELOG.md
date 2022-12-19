@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.13.15](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.13.14...@sb1/ffe-component-index@3.13.15) (2022-12-19)
+
+### Bug Fixes
+
+-   **component-overview:** legg til eksempel for bruk av titleElement i messagebox ([0efe5c5](https://github.com/SpareBank1/designsystem/commit/0efe5c54fb5d8fc46c81ee209ff73bcbe11aaded))
+
 ## [3.13.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.13.13...@sb1/ffe-component-index@3.13.14) (2022-12-16)
 
 **Note:** Version bump only for package @sb1/ffe-component-index

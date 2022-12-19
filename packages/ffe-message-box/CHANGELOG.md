@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [11.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@11.0.1...@sb1/ffe-message-box@11.0.2) (2022-12-19)
+
+### Bug Fixes
+
+-   **ffe-message-box:** fjern margin-top på tittel ([9c6f1b3](https://github.com/SpareBank1/designsystem/commit/9c6f1b3f524042b62bb9ba6cba8485fe727b1e8e))
+
 ## [11.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@11.0.0...@sb1/ffe-message-box@11.0.1) (2022-12-07)
 
 ### Bug Fixes
