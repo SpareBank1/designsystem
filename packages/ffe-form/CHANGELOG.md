@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [23.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@23.0.2...@sb1/ffe-form@23.0.3) (2022-12-20)
+
+### Bug Fixes
+
+-   **ffe-form:** Setter `min-width: 0` på `.ffe-fieldset` ([a8113e7](https://github.com/SpareBank1/designsystem/commit/a8113e7202b6d679fc319fdaa01b7610850f47a0)), closes [#1544](https://github.com/SpareBank1/designsystem/issues/1544)
+
 ## [23.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@23.0.1...@sb1/ffe-form@23.0.2) (2022-12-19)
 
 **Note:** Version bump only for package @sb1/ffe-form
