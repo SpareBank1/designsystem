@@ -3,8 +3,14 @@ import React from 'react';
 import ImageCard from './ImageCard';
 import { Text } from '../components';
 
-const image = <img alt="" className="my-custom-image" />;
-const getWrapper = props => shallow(<ImageCard {...props} image={image} />);
+const getWrapper = props =>
+    shallow(
+        <ImageCard
+            {...props}
+            imageURL="random/path"
+            imageAltText="Image alt text"
+        />,
+    );
 const children = <div>Hello world</div>;
 
 describe('ImageCard', () => {
@@ -32,17 +38,15 @@ describe('ImageCard', () => {
             imageEl
                 .children()
                 .last()
-                .hasClass('my-custom-image'),
-        ).toBe(true);
-
-        expect(
-            imageEl
-                .children()
-                .last()
                 .hasClass('ffe-image-card__image'),
         ).toBe(true);
     });
 
+    it('should set alt text on image correctly', () => {
+        const wrapper = getWrapper();
+        const imageEl = wrapper.find('.ffe-image-card__image');
+        expect(imageEl.prop('alt')).toBe('Image alt text');
+    });
     it('should render children inside a div with body class', () => {
         const wrapper = getWrapper({ children });
 
