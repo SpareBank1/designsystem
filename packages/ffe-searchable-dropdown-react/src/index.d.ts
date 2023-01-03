@@ -30,14 +30,20 @@ export interface SearchableDropdownProps<T> {
         inputValue: string,
         searchAttributes: (keyof T)[],
     ) => (item: T) => boolean;
-    highCapacity?: boolean;
     isLoading?: boolean;
     onOpen?: () => void;
     onClose?: () => void;
 }
 
+export interface SearchableDropdownHighCapacityProps<T>
+    extends SearchableDropdownProps<T> {}
+
 declare class SearchableDropdown<T> extends React.Component<
     SearchableDropdownProps<T>
+> {}
+
+declare class SearchableDropdownHighCapacity<T> extends React.Component<
+    SearchableDropdownHighCapacityProps<T>
 > {}
 
 export default SearchableDropdown;

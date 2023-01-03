@@ -1,1 +1,2 @@
-export { default } from './SearchableDropdown';
+export { SearchableDropdown } from './SearchableDropdown';
+export { SearchableDropdownHighCapacity } from './SearchableDropdownHighCapacity';

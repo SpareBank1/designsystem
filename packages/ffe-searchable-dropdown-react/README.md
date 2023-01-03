@@ -11,7 +11,7 @@ npm install --save ffe-searchable-dropdown-react
 ## Usage
 
 ```javascript
-import SearchableDropdown from '@sb1/ffe-searchable-dropdown-react';
+import { SearchableDropdown } from '@sb1/ffe-searchable-dropdown-react';
 ```
 
 styling:

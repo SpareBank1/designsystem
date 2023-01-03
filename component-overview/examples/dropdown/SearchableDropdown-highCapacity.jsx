@@ -1,5 +1,5 @@
 import { InputGroup } from '@sb1/ffe-form-react';
-import SearchableDropdown from '@sb1/ffe-searchable-dropdown-react';
+import { SearchableDropdownHighCapacity } from '@sb1/ffe-searchable-dropdown-react';
 import { useState } from 'react';
 
 () => {
@@ -12,7 +12,7 @@ import { useState } from 'react';
     const [selectedOption, setSelectedOption] = useState(null);
     return (
         <InputGroup label="Velg bedrift" labelId={labelId}>
-            <SearchableDropdown
+            <SearchableDropdownHighCapacity
                 id={id}
                 labelledById={labelId}
                 inputProps={{ placeholder: 'Velg' }}

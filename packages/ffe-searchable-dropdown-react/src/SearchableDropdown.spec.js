@@ -3,7 +3,7 @@ import { render, screen, act } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import 'regenerator-runtime';
 
-import SearchableDropdown from './SearchableDropdown';
+import { SearchableDropdown } from './SearchableDropdown';
 
 describe('SearchableDropdown', () => {
     beforeAll(() => {
