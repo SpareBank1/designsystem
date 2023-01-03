@@ -11,8 +11,9 @@ const ContextErrorMessage = props => {
         <ContextMessage
             {...rest}
             messageType="error"
-            role={alert ? 'alert' : undefined}
-            icon={<UtropstegnIkon />}
+            aria-label="Feilmelding"
+            role={alert ? 'alert' : 'group'}
+            icon={<UtropstegnIkon title="Utropstegn, ikon" />}
         />
     );
 };

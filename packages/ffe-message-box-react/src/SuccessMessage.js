@@ -6,7 +6,12 @@ import { HakeIkon } from '@sb1/ffe-icons-react';
 import BaseMessage from './BaseMessage';
 
 const SuccessMessage = props => (
-    <BaseMessage type="success" icon={<HakeIkon />} {...props} />
+    <BaseMessage
+        type="success"
+        aria-label="Suksessmelding"
+        icon={<HakeIkon title="Hake, ikon" />}
+        {...props}
+    />
 );
 
 SuccessMessage.propTypes = {

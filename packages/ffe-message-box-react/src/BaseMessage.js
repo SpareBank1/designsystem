@@ -28,10 +28,15 @@ const BaseMessage = props => {
                 { 'ffe-message-box--coloredbg': onColoredBg },
                 className,
             )}
+            role="group"
             {...rest}
         >
             <span className="ffe-message-box__icon">
-                {React.cloneElement(icon, { style: iconStyles, ...icon.props })}
+                {React.cloneElement(icon, {
+                    style: iconStyles,
+                    role: 'img',
+                    ...icon.props,
+                })}
             </span>
             <div className="ffe-message-box__box">
                 {title &&

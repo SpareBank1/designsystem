@@ -63,8 +63,6 @@ const ContextMessage = ({
     return (
         <div
             ref={container}
-            aria-describedby={_contentElementId.current}
-            aria-labelledby={headerText && _headerElementId.current}
             className={classNames(
                 'ffe-context-message',
                 `ffe-context-message--${messageType}`,
@@ -88,6 +86,8 @@ const ContextMessage = ({
                                 'ffe-context-message-content__icon-svg',
                                 icon.props.className,
                             ),
+                            title: icon.props.title,
+                            role: 'img',
                         })}
                     </div>
                 )}

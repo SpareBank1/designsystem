@@ -51,6 +51,7 @@ class SystemMessage extends Component {
                     { 'ffe-system-message-wrapper--coloredbg': onColoredBg },
                     className,
                 )}
+                role="group"
                 ref={_self => {
                     this._self = _self;
                 }}
@@ -60,7 +61,13 @@ class SystemMessage extends Component {
                 {...rest}
             >
                 <div className="ffe-system-message">
-                    <span className="ffe-system-message__icon">{icon}</span>
+                    <span className="ffe-system-message__icon">
+                        {icon &&
+                            React.cloneElement(icon, {
+                                role: 'img',
+                                ...icon.props,
+                            })}
+                    </span>
                     <p className="ffe-system-message__content">{children}</p>
                     <button
                         aria-label={locale === 'en' ? 'Close' : 'Lukk'}
