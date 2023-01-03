@@ -4,7 +4,12 @@ import classNames from 'classnames';
 
 const Accordion = ({ children, headingLevel, className, ...rest }) => {
     return (
-        <div className={classNames(className, 'ffe-accordion')} {...rest}>
+        <div
+            className={classNames(className, 'ffe-accordion')}
+            role="group"
+            aria-label="Trekkspillmeny"
+            {...rest}
+        >
             {React.Children.map(children, (child, index) => {
                 return React.cloneElement(child, {
                     headingLevel,
