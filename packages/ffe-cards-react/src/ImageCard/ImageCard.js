@@ -5,18 +5,24 @@ import { node, string, func, oneOfType, elementType } from 'prop-types';
 import * as components from '../components';
 
 const ImageCard = props => {
-    const { className, image, element: Element, children, ...rest } = props;
+    const {
+        className,
+        imageSrc,
+        imageAltText,
+        element: Element,
+        children,
+        ...rest
+    } = props;
 
     return (
         <Element className={classNames('ffe-image-card', className)} {...rest}>
             <div className="ffe-image-card__image-container">
                 <div className="ffe-image-card__image-overlay" />
-                {React.cloneElement(image, {
-                    className: classNames(
-                        'ffe-image-card__image',
-                        image.props.className,
-                    ),
-                })}
+                <img
+                    src={imageSrc}
+                    alt={imageAltText}
+                    className="ffe-image-card__image"
+                />
             </div>
             <div className="ffe-image-card__body">
                 {typeof children === 'function'
@@ -33,8 +39,10 @@ ImageCard.defaultProps = {
 
 ImageCard.propTypes = {
     className: string,
-    /** A rendered image */
-    image: node.isRequired,
+    /** The src for the image */
+    imageSrc: string.isRequired,
+    /** The alt text for the image */
+    imageAltText: string.isRequired,
     /** The element to render the card as */
     element: oneOfType([func, string, elementType]),
     /** Function that's passed available sub-components as arguments, or regular children */
