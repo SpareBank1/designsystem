@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.13.17](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.13.16...@sb1/ffe-component-index@3.13.17) (2023-01-03)
+
+### Bug Fixes
+
+-   **component-overview:** legg til title på ikon i eksempel ([1197e23](https://github.com/SpareBank1/designsystem/commit/1197e23694cb5781eb1c4a1d421446c1294fbf0b))
+-   **component-overview:** oppdater imagecard eksempler etter prop endringer ([59dd0d2](https://github.com/SpareBank1/designsystem/commit/59dd0d2300d16b6ec33230a5cfdbfdaf709baad6))
+
 ## [3.13.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.13.15...@sb1/ffe-component-index@3.13.16) (2022-12-20)
 
 **Note:** Version bump only for package @sb1/ffe-component-index

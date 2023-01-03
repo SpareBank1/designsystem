@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@10.0.2...@sb1/ffe-accordion-react@10.0.3) (2023-01-03)
+
+### Bug Fixes
+
+-   **ffe-accordion-react:** legger til role group og aria-label ([b9af352](https://github.com/SpareBank1/designsystem/commit/b9af352a4d17558dd813d1378145d0253236d2a7))
+
 ## [10.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@10.0.1...@sb1/ffe-accordion-react@10.0.2) (2022-12-19)
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react

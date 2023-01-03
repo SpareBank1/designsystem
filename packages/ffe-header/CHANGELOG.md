@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [19.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@18.0.1...@sb1/ffe-header@19.0.0) (2023-01-03)
+
+### Features
+
+-   **ffe-header:** legg til darkmode styling og fix [#1516](https://github.com/SpareBank1/designsystem/issues/1516) ([4ce4c4b](https://github.com/SpareBank1/designsystem/commit/4ce4c4b63cb2b687825cde69c9b0171a6b7fbafb))
+
+### BREAKING CHANGES
+
+-   **ffe-header:** legger til darkmode styling så sjekk om alt ser riktig ut
+
 ## [18.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@18.0.0...@sb1/ffe-header@18.0.1) (2022-12-19)
 
 **Note:** Version bump only for package @sb1/ffe-header

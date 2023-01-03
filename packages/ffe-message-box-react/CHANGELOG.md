@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@8.0.2...@sb1/ffe-message-box-react@8.0.3) (2023-01-03)
+
+### Bug Fixes
+
+-   **ffe-message-box-react:** legger til role og title ([400edd6](https://github.com/SpareBank1/designsystem/commit/400edd6d4bd350df10495537a5deaaf2089a72a7))
+
 ## [8.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@8.0.1...@sb1/ffe-message-box-react@8.0.2) (2022-12-19)
 
 ### Bug Fixes

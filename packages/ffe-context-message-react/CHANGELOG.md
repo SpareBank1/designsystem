@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@8.0.3...@sb1/ffe-context-message-react@8.0.4) (2023-01-03)
+
+### Bug Fixes
+
+-   **ffe-context-message-react:** legg til aria attributer på wrapper og ikoner ([6253dd4](https://github.com/SpareBank1/designsystem/commit/6253dd4aa5eee69031ed334f2c09482a429916b9))
+
 ## [8.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@8.0.2...@sb1/ffe-context-message-react@8.0.3) (2022-12-19)
 
 ### Bug Fixes

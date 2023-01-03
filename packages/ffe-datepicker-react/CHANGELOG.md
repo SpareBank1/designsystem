@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@6.0.3...@sb1/ffe-datepicker-react@6.0.4) (2023-01-03)
+
+### Bug Fixes
+
+-   **ffe-datepicker-react:** endre fra aria-selected til aria-current ([cc48598](https://github.com/SpareBank1/designsystem/commit/cc48598a9f722a337b55960dd39c122b031d1fd1))
+
 ## [6.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@6.0.2...@sb1/ffe-datepicker-react@6.0.3) (2022-12-20)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker-react

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@9.0.1...@sb1/ffe-cards-react@10.0.0) (2023-01-03)
+
+### Bug Fixes
+
+-   **ffe-cards-react:** endre hvordan man sender med bilde inn i ImageCard ([945f319](https://github.com/SpareBank1/designsystem/commit/945f3198623d9b1bd828efbfccee2a288d6afd93))
+
+### BREAKING CHANGES
+
+-   **ffe-cards-react:** Fjerner muligheten til å sende med element som bilde i imageCard.
+    legger til imageSrc og imageAltText props istedenfor.
+
 ## [9.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@9.0.0...@sb1/ffe-cards-react@9.0.1) (2022-12-19)
 
 **Note:** Version bump only for package @sb1/ffe-cards-react
