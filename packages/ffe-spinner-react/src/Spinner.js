@@ -4,6 +4,7 @@ import classNames from 'classnames';
 
 const Spinner = ({ className, immediate, large, ...rest }) => (
     <span
+        aria-live="assertive"
         className={classNames(
             'ffe-loading-spinner',
             { 'ffe-loading-spinner--immediate': immediate },
