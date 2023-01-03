@@ -64,7 +64,7 @@ export default class ClickableDate extends Component {
                 role="button"
                 ref={dateButtonRef}
                 aria-disabled={!date.isEnabled}
-                aria-selected={date.isSelected}
+                aria-current={date.isSelected}
                 aria-label={`${date.date}. ${monthName} ${year}`}
                 tabIndex={this.tabIndex()}
                 onClick={() => onClick(date)}

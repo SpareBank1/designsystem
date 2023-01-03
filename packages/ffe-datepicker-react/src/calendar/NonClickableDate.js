@@ -5,7 +5,7 @@ export default function NonClickableDate(props) {
     return (
         <td
             aria-disabled="true"
-            aria-selected="false"
+            aria-current="false"
             className="ffe-calendar__day"
             key={props.date.timestamp}
             role="button"
