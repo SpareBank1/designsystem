@@ -36,14 +36,20 @@ export interface AccountSelectorProps<T extends Account = Account> {
     listElementBody?: (props: ListElementBodyProps<T>) => React.ReactElement;
     withSpaceForDetails?: boolean;
     ariaInvalid: boolean;
-    highCapacity?: boolean;
     onOpen?: () => void;
     onClose?: () => void;
 }
 
+export interface AccountSelectorHighCapacityProps<T extends Account = Account>
+    extends AccountSelectorProps<T> {}
+
 declare class AccountSelector<
     T extends Account = Account
 > extends React.Component<AccountSelectorProps<T>> {}
+
+declare class AccountSelectorHighCapacity<
+    T extends Account = Account
+> extends React.Component<AccountSelectorHighCapacityProps<T>> {}
 
 export interface AccountSelectorMultiProps<T extends Account = Account> {
     accounts?: Array<T>;

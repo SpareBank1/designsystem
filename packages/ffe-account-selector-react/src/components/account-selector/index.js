@@ -1,3 +1,2 @@
-import AccountSelector from './AccountSelector';
-
-export default AccountSelector;
+export { AccountSelector } from './AccountSelector';
+export { AccountSelectorHighCapacity } from './AccountSelectorHighCapacity';
