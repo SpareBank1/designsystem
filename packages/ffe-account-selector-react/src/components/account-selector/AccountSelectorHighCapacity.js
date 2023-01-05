@@ -8,11 +8,11 @@ import {
     object,
     oneOfType,
 } from 'prop-types';
-import { SearchableDropdown } from '@sb1/ffe-searchable-dropdown-react';
+import { SearchableDropdownHighCapacity } from '@sb1/ffe-searchable-dropdown-react';
 import { Account, Locale } from '../../util/types';
 import { BaseAccountSelector } from './BaseAccountSelector';
 
-export const AccountSelector = ({
+export const AccountSelectorHighCapacity = ({
     id,
     className,
     locale,
@@ -53,12 +53,12 @@ export const AccountSelector = ({
             formatAccountNumber={formatAccountNumber}
             withSpaceForDetails={withSpaceForDetails}
         >
-            {props => <SearchableDropdown {...props} />}
+            {props => <SearchableDropdownHighCapacity {...props} />}
         </BaseAccountSelector>
     );
 };
 
-AccountSelector.propTypes = {
+AccountSelectorHighCapacity.propTypes = {
     id: string.isRequired,
     className: string,
     /** 'nb', 'nn', or 'en' */

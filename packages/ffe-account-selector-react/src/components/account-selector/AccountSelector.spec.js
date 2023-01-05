@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, fireEvent, screen } from '@testing-library/react';
 
-import AccountSelector from './AccountSelector';
+import { AccountSelector } from './AccountSelector';
 
 describe('AccountSelector', () => {
     beforeAll(() => {

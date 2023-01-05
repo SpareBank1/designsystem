@@ -1,5 +1,5 @@
 import { InputGroup } from '@sb1/ffe-form-react';
-import SearchableDropdown from '@sb1/ffe-searchable-dropdown-react';
+import { SearchableDropdown } from '@sb1/ffe-searchable-dropdown-react';
 import { useState } from 'react';
 import { SmallText } from '@sb1/ffe-core-react';
 
