@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.13.17...@sb1/ffe-component-index@4.0.0) (2023-01-05)
+
+### Features
+
+-   **ffe-account-selector-react:** remove high capacity prop ([0c66d68](https://github.com/SpareBank1/designsystem/commit/0c66d686fb13f9393078c905e517c7115800ed13))
+-   **ffe-searchable-dropdown-react:** remove high capacity prop ([f5a6612](https://github.com/SpareBank1/designsystem/commit/f5a66129f7cecbb1d3ad32815bfeb5dd1128624b))
+
+### BREAKING CHANGES
+
+-   **ffe-account-selector-react:** use AccountSelectorHighCapacity for high capacity
+-   **ffe-searchable-dropdown-react:** use SearchableDropdownHighCapacity instead og prop
+
 ## [3.13.17](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@3.13.16...@sb1/ffe-component-index@3.13.17) (2023-01-03)
 
 ### Bug Fixes
