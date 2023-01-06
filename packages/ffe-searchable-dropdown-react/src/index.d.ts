@@ -46,4 +46,4 @@ declare class SearchableDropdownHighCapacity<T> extends React.Component<
     SearchableDropdownHighCapacityProps<T>
 > {}
 
-export default SearchableDropdown;
+export { SearchableDropdown, SearchableDropdownHighCapacity };
