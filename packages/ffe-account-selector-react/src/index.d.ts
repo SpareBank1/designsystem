@@ -101,4 +101,9 @@ export interface BaseSelectorProps {
 
 declare class BaseSelector extends React.Component<BaseSelectorProps, any> {}
 
-export { AccountSelector, AccountSelectorMulti, BaseSelector };
+export {
+    AccountSelector,
+    AccountSelectorMulti,
+    BaseSelector,
+    AccountSelectorHighCapacity,
+};
