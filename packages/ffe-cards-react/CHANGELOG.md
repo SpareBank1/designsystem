@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@10.0.0...@sb1/ffe-cards-react@10.0.1) (2023-01-09)
+
+### Bug Fixes
+
+-   **ffe-cards-react:** oppdater typings etter endringer på imagecard ([176a990](https://github.com/SpareBank1/designsystem/commit/176a990e7817b833d93850b8b303f4ffd06d1534))
+
 # [10.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@9.0.1...@sb1/ffe-cards-react@10.0.0) (2023-01-03)
 
 ### Bug Fixes
