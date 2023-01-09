@@ -31,7 +31,8 @@ export interface CardRenderProps {
 }
 
 export interface ImageCardProps extends Omit<CardBaseProps, 'children'> {
-    image: React.ReactNode;
+    imageSrc: string;
+    imageAltText: string;
     children?: React.ReactNode | ((props: CardRenderProps) => React.ReactNode);
 }
 
