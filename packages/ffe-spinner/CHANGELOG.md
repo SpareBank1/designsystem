@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner@5.0.1...@sb1/ffe-spinner@5.0.2) (2023-01-17)
+
+### Bug Fixes
+
+-   **ffe-spinner:** fjern mixins fil og flytt innholdet inn i spinner.less fil ([3a02512](https://github.com/SpareBank1/designsystem/commit/3a025128cdeffee72f5c749fe1f5fb726d328300))
+
 ## [5.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner@5.0.0...@sb1/ffe-spinner@5.0.1) (2022-12-19)
 
 **Note:** Version bump only for package @sb1/ffe-spinner
