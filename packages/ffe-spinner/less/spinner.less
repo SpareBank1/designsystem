@@ -10,14 +10,36 @@
 //
 // Styleguide ffe-spinner
 
-@import 'mixins';
-
 .ffe-loading-spinner {
     display: inline-block;
     vertical-align: middle;
 
     &::before {
-        .ffe-sb1-spinner();
+        content: ' ';
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: 3px solid var(--ffe-g-primary-color);
+        border-top-color: transparent;
+        border-radius: 50%;
+        animation: spindindust 1s linear infinite;
+
+        /*
+            Avoid 'flashing' spinners - don't display spinner until some time has passed
+        */
+        visibility: hidden;
+        animation-delay: 500ms;
+
+        @keyframes spindindust {
+            0% {
+                visibility: visible;
+                transform: rotate(0);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
     }
 
     &--stop-animation::before {
