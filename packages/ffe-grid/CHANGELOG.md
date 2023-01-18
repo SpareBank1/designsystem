@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [14.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@14.0.1...@sb1/ffe-grid@14.0.2) (2023-01-18)
+
+### Bug Fixes
+
+-   **ffe-grid:** fjern padding fra wrapper klasse ([6ed2291](https://github.com/SpareBank1/designsystem/commit/6ed2291a20aade549aaa97226b2808a9c965473e))
+
 ## [14.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@14.0.0...@sb1/ffe-grid@14.0.1) (2022-12-19)
 
 **Note:** Version bump only for package @sb1/ffe-grid
