@@ -20,12 +20,15 @@
     .create-column-offset(@size, @total, @current + 1);
 }
 
+.ffe-grid__row {
+    padding-right: @ffe-spacing-sm;
+    padding-left: @ffe-spacing-sm;
+}
+
 .ffe-grid__row,
 .ffe-grid__row-wrapper {
     display: grid;
     gap: @ffe-spacing-sm;
-    padding-right: @ffe-spacing-sm;
-    padding-left: @ffe-spacing-sm;
     margin: 0 auto;
     max-width: @app-width;
     grid-template-columns: repeat(12, 1fr);
