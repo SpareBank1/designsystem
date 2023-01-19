@@ -26,6 +26,7 @@ export interface InputProps
     className?: string;
     inline?: boolean;
     textLike?: boolean;
+    textRightAlign: boolean;
 }
 
 export interface PhoneNumberProps {
