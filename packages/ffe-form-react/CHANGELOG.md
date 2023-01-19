@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [11.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@11.0.3...@sb1/ffe-form-react@11.0.4) (2023-01-19)
+
+### Bug Fixes
+
+-   **ffe-form-react:** legg til manglende textRightAlign prop i ts ([1c9e63d](https://github.com/SpareBank1/designsystem/commit/1c9e63d8712877ea08f09c0c40b6705f45f09b92))
+-   **ffe-form-react:** make text alig right ts type optional ([e54999d](https://github.com/SpareBank1/designsystem/commit/e54999d7c9af7601c266b5d38bb5fa523f19b230))
+
 ## [11.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@11.0.2...@sb1/ffe-form-react@11.0.3) (2022-12-20)
 
 **Note:** Version bump only for package @sb1/ffe-form-react
