@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [19.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@19.0.0...@sb1/ffe-header@19.0.1) (2023-02-08)
+
+### Bug Fixes
+
+-   **ffe-header:** endre notification bubble bakgrunnsfarge til skog ([c643f7d](https://github.com/SpareBank1/designsystem/commit/c643f7df902422b94e8a572f1d1cb2d634256a36))
+
 # [19.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@18.0.1...@sb1/ffe-header@19.0.0) (2023-01-03)
 
 ### Features

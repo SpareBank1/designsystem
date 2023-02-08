@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [27.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@26.1.2...@sb1/ffe-core@27.0.0) (2023-02-08)
+
+### Bug Fixes
+
+-   **ffe-core:** justere skog farge og fjerne nordlys wcag farge ([d1d2b47](https://github.com/SpareBank1/designsystem/commit/d1d2b470d48c5f5e97cd31a9ac40061977fb9b8b))
+
+### BREAKING CHANGES
+
+-   **ffe-core:** fjerner nordlys wcag farge
+
 ## [26.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@26.1.1...@sb1/ffe-core@26.1.2) (2022-12-19)
 
 ### Bug Fixes

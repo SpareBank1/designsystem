@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [23.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@23.0.3...@sb1/ffe-form@23.0.4) (2023-02-08)
+
+### Bug Fixes
+
+-   **ffe-form:** endre fieldmessage ikon farge til skog ([42a96a1](https://github.com/SpareBank1/designsystem/commit/42a96a1f2c6aebf5fcb9409be660fc9820f58185))
+
 ## [23.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@23.0.2...@sb1/ffe-form@23.0.3) (2022-12-20)
 
 ### Bug Fixes

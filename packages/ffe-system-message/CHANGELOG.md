@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@7.0.2...@sb1/ffe-system-message@7.0.3) (2023-02-08)
+
+### Bug Fixes
+
+-   **ffe-system-message:** endre suksessikon farge til skog ([37f7a4c](https://github.com/SpareBank1/designsystem/commit/37f7a4cdfeceae58d3d734cc362c2f544d5e38ad))
+
 ## [7.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@7.0.1...@sb1/ffe-system-message@7.0.2) (2022-12-19)
 
 **Note:** Version bump only for package @sb1/ffe-system-message

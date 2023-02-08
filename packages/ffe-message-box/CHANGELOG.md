@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [11.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@11.0.2...@sb1/ffe-message-box@11.0.3) (2023-02-08)
+
+### Bug Fixes
+
+-   **ffe-message-box:** endre suksessmelding ikon farge til skog ([3076e51](https://github.com/SpareBank1/designsystem/commit/3076e51f16d218509cb5a0d5ee1a8b19fba11fd7))
+
 ## [11.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@11.0.1...@sb1/ffe-message-box@11.0.2) (2022-12-19)
 
 ### Bug Fixes
