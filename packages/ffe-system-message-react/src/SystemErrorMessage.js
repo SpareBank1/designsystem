@@ -12,7 +12,7 @@ export default function SystemErrorMessage(props) {
             modifier="error"
             aria-label="Feilmelding"
             icon={<UtropstegnIkon title="Utropstegn, ikon" />}
-            role={alert ? 'alert' : undefined}
+            role={alert ? 'alert' : 'group'}
             {...rest}
         />
     );
