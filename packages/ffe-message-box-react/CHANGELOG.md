@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@8.0.4...@sb1/ffe-message-box-react@8.0.5) (2023-02-13)
+
+### Bug Fixes
+
+-   **ffe-message-box-react:** sett role til group når alert er satt til false på ErrorMessage ([53a330a](https://github.com/SpareBank1/designsystem/commit/53a330a7d185988ef58d2b7a592488bbfcb36408))
+
 ## [8.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@8.0.3...@sb1/ffe-message-box-react@8.0.4) (2023-02-08)
 
 **Note:** Version bump only for package @sb1/ffe-message-box-react

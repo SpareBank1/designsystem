@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@7.0.5...@sb1/ffe-system-message-react@7.0.6) (2023-02-13)
+
+### Bug Fixes
+
+-   **ffe-system-message-react:** sett role=group når alert er satt til false på error ([0c89721](https://github.com/SpareBank1/designsystem/commit/0c8972107b34eb3f1a14bb8a9c0812c71b29e8f1))
+
 ## [7.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@7.0.4...@sb1/ffe-system-message-react@7.0.5) (2023-02-08)
 
 **Note:** Version bump only for package @sb1/ffe-system-message-react
