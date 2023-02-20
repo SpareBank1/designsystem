@@ -4,7 +4,7 @@ export interface Account {
     accountNumber: string;
     name: string;
     currencyCode?: string;
-    balance?: number;
+    balance?: number | string;
 }
 
 export interface ListElementBodyProps<T extends Account> {
