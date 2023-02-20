@@ -13,7 +13,8 @@ const AccountSuggestionItem = ({
 }) => {
     const { accountNumber, balance, name, currencyCode } = item;
     const shouldShowBalance =
-        dropdownAttributes.includes('balance') && typeof balance === 'number';
+        dropdownAttributes.includes('balance') &&
+        ['string', 'number'].includes(typeof balance);
     return (
         <div
             className={classNames('ffe-account-suggestion-single', {
