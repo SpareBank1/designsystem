@@ -160,7 +160,9 @@ export const BaseAccountSelector = ({
                         locale={locale}
                         showBalance={
                             showBalance &&
-                            typeof selectedAccount.balance === 'number'
+                            ['string', 'number'].includes(
+                                typeof selectedAccount.balance,
+                            )
                         }
                     />
                 )}
