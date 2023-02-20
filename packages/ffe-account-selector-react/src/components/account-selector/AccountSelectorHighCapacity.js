@@ -69,7 +69,7 @@ AccountSelectorHighCapacity.propTypes = {
      *  {
      *      accountNumber: string.isRequired,
      *      name: string.isRequired,
-     *      balance: number,
+     *      balance: number | string,
      *      currencyCode: string,
      *  }
      */

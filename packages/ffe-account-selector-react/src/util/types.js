@@ -30,7 +30,7 @@ export const Account = shape({
     accountNumber: string.isRequired,
     name: string.isRequired,
     currencyCode: string,
-    balance: number,
+    balance: oneOf([string, number]),
 });
 
 export const Locale = oneOf([nb, nn, en]);
