@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [21.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@21.0.4...@sb1/ffe-account-selector-react@21.1.0) (2023-02-20)
+
+### Features
+
+-   **ffe-account-selector-react:** Tillat string som verdi for balance ([e2d65c0](https://github.com/SpareBank1/designsystem/commit/e2d65c02f39bc27f3f8702ca1a656de4ef3f35d2))
+
 ## [21.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@21.0.3...@sb1/ffe-account-selector-react@21.0.4) (2023-02-08)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
