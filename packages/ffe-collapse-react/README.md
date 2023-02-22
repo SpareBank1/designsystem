@@ -10,8 +10,7 @@ npm install --save @sb1/ffe-collapse-react
 
 ## Usage
 
-Run Styleguidist from the repository root to see live examples and documentation,
-or see the markdown files next to the component code in `src/`.
+Full documentation on collapse usage is available at https://design.sparebank1.no/komponenter/collapse/.
 
 Please note the component depends on transition styling for `height`.\
 This can preferably be done by importing the less-file from the less-folder
@@ -23,3 +22,17 @@ through the `className` property or by styling it directly through the `style` p
 ## TypeScript definition files
 
 This component does not yet have TypeScript definitions.
+
+## Development
+
+To start a local development server, run the following from the designsystem root folder:
+
+```bash
+npm install
+npm run build
+npm start
+```
+
+A local instance of `component-overview` with live reloading will run at http://localhost:1234/.
+
+Example implementations using the latest versions of all components are also available at https://sparebank1.github.io/designsystem.
