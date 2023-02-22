@@ -10,6 +10,8 @@ npm install --save @sb1/ffe-datepicker
 
 ## Usage
 
+Full documentation on datepicker usage is available at https://design.sparebank1.no/komponenter/skjemaelementer/#datepicker.
+
 The styles for this package can be used in 3 different ways depending on what you want.
 For All styles or Only date input you will need the `@sb1/ffe-form` package in your project.
 
@@ -42,9 +44,9 @@ Example HTML stucture with classes. (Aria-tags and other attributes have been re
 
 ```html
 <div class="ffe-dateinput">
-    <input class="ffe-dateinput__field ffe-input-field" type="text">
+    <input class="ffe-dateinput__field ffe-input-field" type="text" />
     <svg class="ffe-dateinput__icon">
-        <path .../>
+        <path ... />
     </svg>
 </div>
 ```
@@ -63,7 +65,7 @@ Example HTML stucture with classes. (Aria-tags and other attributes have been re
         <div class="ffe-calendar__header-inner-wrapper">
             <button class="ffe-calendar__month-nav ffe-calendar__previous">
                 <svg class="ffe-calendar__icon-prev">
-                    <path .../>
+                    <path ... />
                 </svg>
             </button>
             <header class="ffe-calendar__title">
@@ -74,7 +76,7 @@ Example HTML stucture with classes. (Aria-tags and other attributes have been re
             </header>
             <button class="ffe-calendar__month-nav ffe-calendar__next">
                 <svg class="ffe-calendar__icon-next">
-                    <path .../>
+                    <path ... />
                 </svg>
             </button>
         </div>
@@ -145,3 +147,27 @@ Example HTML stucture with classes. (Aria-tags and other attributes have been re
     </table>
 </div>
 ```
+
+## Theming with CSS custom properties
+
+In order to support theming of components, this package contains styling that depends on a set of custom properties, defined in `less/theme.less`. These properties in turn depend on a base theme defined in `ffe-core`.
+
+If your project uses the `ffe-core`, you're probably good to go. If not, make sure to import the core properties in `theme.less`:
+
+```css
+@import '~@sb1/ffe-core/less/theme';
+```
+
+## Development
+
+To start a local development server, run the following from the designsystem root folder:
+
+```bash
+npm install
+npm run build
+npm start
+```
+
+A local instance of `component-overview` with live reloading will run at http://localhost:1234/.
+
+Example implementations using the latest versions of all components are also available at https://sparebank1.github.io/designsystem.
