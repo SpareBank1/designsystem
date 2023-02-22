@@ -8,6 +8,8 @@ npm install @sb1/ffe-webfonts
 
 ## Usage
 
+Full documentation on typgraphy usage is available at https://design.sparebank1.no/komponenter/typografi/.
+
 There are two ways to use `ffe-webfonts`:
 
 1. Copy the font files from `node_modules/@sb1/ffe-webfonts/fonts/` and use `sb1-fonts.less`
@@ -54,3 +56,17 @@ MuseoSans is distributed through `fonts.less`, `fonts.css` and `fonts-inline.les
 
 -   Source code is licensed under MIT
 -   The MuseoSans fonts are licensed separately. See LICENSE-fonts.md.
+
+## Development
+
+To start a local development server, run the following from the designsystem root folder:
+
+```bash
+npm install
+npm run build
+npm start
+```
+
+A local instance of `component-overview` with live reloading will run at http://localhost:1234/.
+
+Example implementations using the latest versions of all components are also available at https://sparebank1.github.io/designsystem.
