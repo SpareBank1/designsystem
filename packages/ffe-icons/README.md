@@ -28,6 +28,8 @@ npm install --save @sb1/ffe-icons
 
 ## Usage
 
+Full documentation on icon usage is available at https://design.sparebank1.no/komponenter/ikoner/.
+
 See also `@sb1/ffe-icons-react`.
 
 First add an `icons.json` file to your project where you define what icons you want. Additionally, you can
@@ -169,3 +171,17 @@ If you've made it this far, it's time to make a pull request. If this is your fi
 See the current status on browser support for SVG fragments on [caniuse.com](caniuse.com/svg-fragment).
 
 -   At time of writing, the generated SVG sprite cannot be used as a source for `background-image` in your CSS like "single" SVGs can
+
+## Development
+
+To start a local development server, run the following from the designsystem root folder:
+
+```bash
+npm install
+npm run build
+npm start
+```
+
+A local instance of `component-overview` with live reloading will run at http://localhost:1234/.
+
+Example implementations using the latest versions of all components are also available at https://sparebank1.github.io/designsystem.

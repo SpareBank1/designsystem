@@ -36,3 +36,17 @@ Der `foobar` er propertyen man er interessert i, `initialValue` er start-verdien
 
 Det er frivillig å oppgi en `initialValue`.
 Dersom det ikke angis en `duration` blir 1s brukt som default.
+
+## Development
+
+To start a local development server, run the following from the designsystem root folder:
+
+```bash
+npm install
+npm run build
+npm start
+```
+
+A local instance of `component-overview` with live reloading will run at http://localhost:1234/.
+
+Example implementations using the latest versions of all components are also available at https://sparebank1.github.io/designsystem.

@@ -16,6 +16,8 @@ Remember to include the less-file in your main less-file:
 
 ## Usage
 
+Full documentation on grid usage is available at https://design.sparebank1.no/komponenter/grid/.
+
 See also `@sb1/ffe-grid-react`.
 
 All you need to remember is `.ffe-grid`, `.ffe-grid__row` and `.ffe-grid__col`.
@@ -150,3 +152,17 @@ Sets the row background color to `@ffe-farge-fjell`
 #### `.ffe-grid__row--bg-hvit`
 
 Sets the row background color to `@ffe-farge-hvit`
+
+## Development
+
+To start a local development server, run the following from the designsystem root folder:
+
+```bash
+npm install
+npm run build
+npm start
+```
+
+A local instance of `component-overview` with live reloading will run at http://localhost:1234/.
+
+Example implementations using the latest versions of all components are also available at https://sparebank1.github.io/designsystem.

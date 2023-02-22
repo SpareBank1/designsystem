@@ -19,7 +19,7 @@ Komponentene i FFE er delt opp i to NPM-pakker hver. Pakker med `-react` i navne
 Klon ned repoet, og kjør `npm install`. Dette vil installere alle dependencies for alle pakker, og må kjøres før du kan kjøre noen av de andre kommandoene.
 
 ```bash
-npm start              # Starter en lokal server på localhost:8080
+npm start              # Starter en lokal server på localhost:1234
 npm test               # Kjør alle tester for alle pakker
 npm run lint           # Lint alle pakker
 npm run build          # Bygg alle pakker
