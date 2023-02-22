@@ -10,6 +10,8 @@ npm install --save ffe-searchable-dropdown-react
 
 ## Usage
 
+Full documentation on searchable dropdown usage is available at https://design.sparebank1.no/komponenter/dropdown/#searchabledropdown.
+
 ```javascript
 import { SearchableDropdown } from '@sb1/ffe-searchable-dropdown-react';
 ```
@@ -20,29 +22,26 @@ styling:
 @import "npm://ffe-searchable-dropdown-react/less/searchable-dropdown";
 ```
 
-## FFE less Dependencies:
+## FFE less Dependencies
 
+```
 @import "~ffe-core/less/colors";
-
 ```
 
 ## Available props
+
 See propTypes in [SearchableDropdown.js](src/SearchableDropdown.js)
 
 ## Development
-```
 
+To start a local development server, run the following from the designsystem root folder:
+
+```bash
 npm install
-
 npm run build
-
 npm start
-
 ```
-Open
-http://0.0.0.0:6060
 
-## Examples
+A local instance of `component-overview` with live reloading will run at http://localhost:1234/.
 
-See [SearchableDropdown.md](src/SearchableDropdown.md)
-```
+Example implementations using the latest versions of all components are also available at https://sparebank1.github.io/designsystem.
