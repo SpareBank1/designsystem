@@ -11,7 +11,7 @@ npm install --save @sb1/ffe-core @sb1/ffe-form
 Full documentation on form usage is available at https://design.sparebank1.no/komponenter/skjemaelementer/.
 
 ```less
-@import 'path/to/node_modules/@sb1/ffe-form/less/ffe-form';
+@import 'path/to/node_modules/@sb1/ffe-form/less/form';
 ```
 
 See also `@sb1/ffe-form-react`.
@@ -24,6 +24,13 @@ If your project uses the `ffe-core`, you're probably good to go. If not, make su
 
 ```css
 @import '~@sb1/ffe-core/less/theme';
+```
+
+This package consists of several components, each with their own styling. If you choose to use only one component, e.g. `checkbox.less` in your app, make sure to also import `theme.less` in order to have access to the necessary CSS properties.
+
+```css
+@import '~@sb1/ffe-form/less/theme';
+@import '~@sb1/ffe-form/less/checkbox';
 ```
 
 ## Development
