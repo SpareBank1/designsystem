@@ -32,8 +32,8 @@ export interface InputProps
 export interface PhoneNumberProps {
     number?: string;
     countryCode?: string;
-    onCountryCodeChange?: React.FormEventHandler<HTMLInputElement>;
-    onNumberChange?: React.FormEventHandler<HTMLInputElement>;
+    onCountryCodeChange?: React.ChangeEventHandler<HTMLInputElement>;
+    onNumberChange?: React.ChangeEventHandler<HTMLInputElement>;
     onCountryCodeBlur?: React.FocusEventHandler<HTMLInputElement>;
     onNumberBlur?: React.FocusEventHandler<HTMLInputElement>;
     locale?: string;
