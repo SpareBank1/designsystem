@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [21.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@21.1.2...@sb1/ffe-account-selector-react@21.1.3) (2023-02-24)
+
+### Bug Fixes
+
+-   **ffe-account-selector-react:** retter setting av className på BaseAccountSelector ([95574c5](https://github.com/SpareBank1/designsystem/commit/95574c5baa5deefe971ac6fd58a950e3ab364ac0))
+
 ## [21.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@21.1.1...@sb1/ffe-account-selector-react@21.1.2) (2023-02-23)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
