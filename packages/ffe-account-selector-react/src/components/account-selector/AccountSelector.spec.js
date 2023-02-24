@@ -501,4 +501,22 @@ describe('AccountSelector', () => {
         expect(screen.getByText('1234 56 789102')).toBeInTheDocument();
         expect(input.value).toBe('Jeg er en konto');
     });
+
+    it('should apply the given className prop', () => {
+        const component = shallow(
+            <AccountSelector
+                className="testClass"
+                id="id"
+                labelId="labelId"
+                accounts={accounts}
+                locale="nb"
+                onAccountSelected={onAccountSelected}
+                onReset={onReset}
+                selectedAccount={selectedAccount}
+                ariaInvalid={false}
+            />,
+        );
+
+        expect(component.hasClass('testClass')).toBe(true);
+    });
 });
