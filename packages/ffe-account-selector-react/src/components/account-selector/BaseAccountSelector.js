@@ -126,11 +126,14 @@ export const BaseAccountSelector = ({
     return (
         <div className="ffe-account-selector-single-container">
             <div
-                className={classNames('ffe-account-selector-single', {
-                    'ffe-account-selector-single--with-space-for-details':
-                        !selectedAccount && withSpaceForDetails,
+                className={classNames(
+                    'ffe-account-selector-single',
+                    {
+                        'ffe-account-selector-single--with-space-for-details':
+                            !selectedAccount && withSpaceForDetails,
+                    },
                     className,
-                })}
+                )}
                 id={`${id}-account-selector-container`}
             >
                 {children({
