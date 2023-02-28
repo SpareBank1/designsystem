@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [21.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@21.1.3...@sb1/ffe-account-selector-react@21.1.4) (2023-02-28)
+
+### Bug Fixes
+
+-   **ffe-account-selector-react:** bytt til oneOfType for balance ([3ca716e](https://github.com/SpareBank1/designsystem/commit/3ca716e80db242f4d6aea21a263537ce20bf9bc3))
+
 ## [21.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@21.1.2...@sb1/ffe-account-selector-react@21.1.3) (2023-02-24)
 
 ### Bug Fixes
