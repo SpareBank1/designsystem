@@ -1,4 +1,4 @@
-import { shape, string, number, oneOf } from 'prop-types';
+import { shape, string, number, oneOf, oneOfType } from 'prop-types';
 
 export const nb = 'nb';
 export const en = 'en';
@@ -30,7 +30,7 @@ export const Account = shape({
     accountNumber: string.isRequired,
     name: string.isRequired,
     currencyCode: string,
-    balance: oneOf([string, number]),
+    balance: oneOfType([string, number]),
 });
 
 export const Locale = oneOf([nb, nn, en]);
