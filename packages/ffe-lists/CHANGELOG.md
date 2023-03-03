@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@12.0.2...@sb1/ffe-lists@12.0.3) (2023-03-03)
+
+### Bug Fixes
+
+-   **ffe-lists:** fikser tekstbryting ved checklistitem over flere linjer ([8f583d3](https://github.com/SpareBank1/designsystem/commit/8f583d3a8b0ae798cd58a0ec1f8410506db71726))
+
 ## [12.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@12.0.1...@sb1/ffe-lists@12.0.2) (2023-02-08)
 
 ### Bug Fixes
