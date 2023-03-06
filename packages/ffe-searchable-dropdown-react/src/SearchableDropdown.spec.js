@@ -849,4 +849,33 @@ describe('SearchableDropdown', () => {
 
         await screen.findByText('Laster inn alternativer.');
     });
+
+    it('should show postListElement when postListElement is passed as props', async () => {
+        const onChange = jest.fn();
+        render(
+            <div>
+                <button>Knapp</button>
+                <SearchableDropdown
+                    id="id"
+                    labelId="labelId"
+                    dropdownAttributes={[
+                        'organizationName',
+                        'organizationNumber',
+                    ]}
+                    dropdownList={[]}
+                    postListElement={<span>Dette er et postListElement!</span>}
+                    onChange={onChange}
+                    searchAttributes={[
+                        'organizationName',
+                        'organizationNumber',
+                    ]}
+                    locale="nb"
+                    isLoading={true}
+                />
+            </div>,
+        );
+        const input = screen.getByRole('combobox');
+        userEvent.click(input);
+        await screen.findByText('Dette er et postListElement!');
+    });
 });
