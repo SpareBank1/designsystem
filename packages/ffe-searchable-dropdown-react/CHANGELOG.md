@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [15.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@15.0.3...@sb1/ffe-searchable-dropdown-react@15.1.0) (2023-03-07)
+
+### Bug Fixes
+
+-   **ffe-searchable-dropdown-react:** kebab-case css class name ([596c707](https://github.com/SpareBank1/designsystem/commit/596c7079a493c0abe9659e6c1d60849f373335ca))
+
+### Features
+
+-   **ffe-searchable-dropdown-react:** Lagt til postListElement ([3688435](https://github.com/SpareBank1/designsystem/commit/3688435f24472e56c5eb352263e28ce3746ae18b))
+
 ## [15.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@15.0.2...@sb1/ffe-searchable-dropdown-react@15.0.3) (2023-02-08)
 
 **Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react

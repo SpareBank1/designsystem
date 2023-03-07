@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@4.0.13...@sb1/ffe-component-index@4.1.0) (2023-03-07)
+
+### Features
+
+-   **ffe-account-selector-react:** Lagt til postListElement ([458b98d](https://github.com/SpareBank1/designsystem/commit/458b98d4403a31a0d0d305b5d16fbd2e849b59b2))
+-   **ffe-searchable-dropdown-react:** Lagt til postListElement ([3688435](https://github.com/SpareBank1/designsystem/commit/3688435f24472e56c5eb352263e28ce3746ae18b))
+
 ## [4.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@4.0.12...@sb1/ffe-component-index@4.0.13) (2023-03-03)
 
 **Note:** Version bump only for package @sb1/ffe-component-index

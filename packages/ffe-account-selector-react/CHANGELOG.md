@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [21.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@21.1.4...@sb1/ffe-account-selector-react@21.2.0) (2023-03-07)
+
+### Features
+
+-   **ffe-account-selector-react:** Lagt til postListElement ([458b98d](https://github.com/SpareBank1/designsystem/commit/458b98d4403a31a0d0d305b5d16fbd2e849b59b2))
+
 ## [21.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@21.1.3...@sb1/ffe-account-selector-react@21.1.4) (2023-02-28)
 
 ### Bug Fixes
