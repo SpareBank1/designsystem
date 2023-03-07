@@ -362,7 +362,7 @@ export const SearchableDropdown = ({
                         />
                     )}
                     {postListElement && (
-                        <div className="ffe-searchable-dropdown__list--postListElement">
+                        <div className="ffe-searchable-dropdown__list--post-list-element">
                             {postListElement}
                         </div>
                     )}
