@@ -34,6 +34,7 @@ export interface AccountSelectorProps<T extends Account = Account> {
     labelledById?: string;
     allowCustomAccount?: boolean;
     listElementBody?: (props: ListElementBodyProps<T>) => React.ReactElement;
+    postListElement?: React.ReactNode;
     withSpaceForDetails?: boolean;
     ariaInvalid: boolean;
     onOpen?: () => void;

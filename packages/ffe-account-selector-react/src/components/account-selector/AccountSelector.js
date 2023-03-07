@@ -7,6 +7,7 @@ import {
     shape,
     object,
     oneOfType,
+    node,
 } from 'prop-types';
 import { SearchableDropdown } from '@sb1/ffe-searchable-dropdown-react';
 import { Account, Locale } from '../../util/types';
@@ -24,6 +25,7 @@ export const AccountSelector = ({
     allowCustomAccount,
     labelledById,
     listElementBody,
+    postListElement,
     onReset,
     inputProps,
     formatAccountNumber,
@@ -40,6 +42,7 @@ export const AccountSelector = ({
             inputProps={inputProps}
             locale={locale}
             listElementBody={listElementBody}
+            postListElement={postListElement}
             ariaInvalid={ariaInvalid}
             selectedAccount={selectedAccount}
             onOpen={onOpen}
@@ -92,6 +95,8 @@ AccountSelector.propTypes = {
     labelledById: string,
     /** Custom element to use for each item in the dropdown list */
     listElementBody: func,
+    /** Element to be shown below dropDownList */
+    postListElement: node,
     /**
      * Called when emptying the input field and moving focus away from the account selector
      * */

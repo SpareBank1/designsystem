@@ -1,6 +1,7 @@
 import { locales } from './translations';
 import {
     arrayOf,
+    node,
     bool,
     func,
     number,
@@ -47,6 +48,9 @@ export const propTypes = {
 
     /** Custom element to use for each item in dropDownList */
     listElementBody: func,
+
+    /** Element to be shown below dropDownList */
+    postListElement: node,
 
     /** Message and a dropdownList to use when no match */
     noMatch: shape({

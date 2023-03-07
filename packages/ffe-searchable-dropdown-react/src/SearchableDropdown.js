@@ -40,6 +40,7 @@ export const SearchableDropdown = ({
     onChange = Function.prototype,
     inputProps = {},
     listElementBody: CustomListItemBody,
+    postListElement,
     noMatch = {},
     locale,
     ariaInvalid,
@@ -359,6 +360,11 @@ export const SearchableDropdown = ({
                             noMatch={noMatch}
                             noMatchMessageId={noMatchMessageId.current}
                         />
+                    )}
+                    {postListElement && (
+                        <div className="ffe-searchable-dropdown__list--post-list-element">
+                            {postListElement}
+                        </div>
                     )}
                 </div>
             </div>

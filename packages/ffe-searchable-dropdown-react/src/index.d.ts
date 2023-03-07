@@ -22,6 +22,7 @@ export interface SearchableDropdownProps<T> {
     maxRenderedDropdownElements?: number;
     onChange?: (dropdownListItem: T) => any;
     listElementBody?: (props: ListElementBodyProps<T>) => React.ReactNode;
+    postListElement?: React.ReactNode;
     noMatch?: NoMatch<T>;
     locale: 'nn' | 'nb' | 'en';
     ariaInvalid?: 'true' | 'false' | boolean;

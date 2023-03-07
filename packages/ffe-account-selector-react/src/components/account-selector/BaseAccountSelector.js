@@ -7,6 +7,7 @@ import {
     shape,
     object,
     oneOfType,
+    node,
 } from 'prop-types';
 import classNames from 'classnames';
 import {
@@ -45,6 +46,7 @@ export const BaseAccountSelector = ({
     allowCustomAccount = false,
     labelledById,
     listElementBody,
+    postListElement,
     onReset,
     inputProps,
     formatAccountNumber = true,
@@ -144,6 +146,7 @@ export const BaseAccountSelector = ({
                         onChange: onInputChange,
                     },
                     dropdownAttributes,
+                    postListElement,
                     dropdownList,
                     noMatch: customNoMatch,
                     formatter,
@@ -208,6 +211,8 @@ BaseAccountSelector.propTypes = {
     labelledById: string,
     /** Custom element to use for each item in the dropdown list */
     listElementBody: func,
+    /** Element to be shown below dropDownList */
+    postListElement: node,
     /**
      * Called when emptying the input field and moving focus away from the account selector
      * */
