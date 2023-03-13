@@ -519,4 +519,23 @@ describe('AccountSelector', () => {
 
         expect(component.hasClass('testClass')).toBe(true);
     });
+
+    it.only('Should not show account details when hideAccountDetails is set to false', async () => {
+        const component = render(
+            <AccountSelector
+                className="testClass"
+                id="id"
+                labelId="labelId"
+                accounts={accounts}
+                locale="nb"
+                onAccountSelected={onAccountSelected}
+                onReset={onReset}
+                selectedAccount={accounts[0]}
+                ariaInvalid={false}
+                hideAccountDetails={true}
+            />,
+        );
+
+        expect(component.queryByText(accounts[0].accountNumber)).toBeNull();
+    });
 });
