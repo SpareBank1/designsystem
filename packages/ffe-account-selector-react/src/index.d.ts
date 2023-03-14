@@ -29,6 +29,7 @@ export interface AccountSelectorProps<T extends Account = Account> {
     onAccountSelected: (account: T) => void;
     onReset: () => void;
     selectedAccount?: T;
+    hideAccountDetails?: boolean;
     showBalance?: boolean;
     formatAccountNumber?: boolean;
     labelledById?: string;

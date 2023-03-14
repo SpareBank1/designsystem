@@ -39,6 +39,7 @@ export const BaseAccountSelector = ({
     className,
     locale,
     selectedAccount,
+    hideAccountDetails = false,
     showBalance = false,
     noMatches,
     accounts,
@@ -160,7 +161,7 @@ export const BaseAccountSelector = ({
                     onOpen,
                     onClose,
                 })}
-                {selectedAccount && (
+                {!hideAccountDetails && selectedAccount && (
                     <AccountDetails
                         account={selectedAccount}
                         locale={locale}
@@ -193,6 +194,10 @@ BaseAccountSelector.propTypes = {
      *  }
      */
     accounts: arrayOf(Account).isRequired,
+    /** Determines if account details should be shown (balance and account number under the input field)
+     * @default false
+     */
+    hideAccountDetails: bool,
     /** Default false. */
     showBalance: bool,
     /** Overrides default string for all locales. */
