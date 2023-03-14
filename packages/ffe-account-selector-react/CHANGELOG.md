@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [21.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@21.2.0...@sb1/ffe-account-selector-react@21.3.0) (2023-03-14)
+
+### Features
+
+-   **ffe-account-selector-react:** lagt til mulighet for å skjule AccountDetails ([fb3a0ee](https://github.com/SpareBank1/designsystem/commit/fb3a0eed5522b2ceb05f4447c12ec83e41ce49db))
+
 # [21.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@21.1.4...@sb1/ffe-account-selector-react@21.2.0) (2023-03-07)
 
 ### Features
