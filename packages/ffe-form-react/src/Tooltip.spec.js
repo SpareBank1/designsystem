@@ -6,10 +6,10 @@ const defaultProps = { children: 'Tooltip text' };
 const getWrapper = props => shallow(<Tooltip {...defaultProps} {...props} />);
 
 describe('<Tooltip>', () => {
-    it('renders a span', () => {
+    it('renders a div', () => {
         const wrapper = getWrapper();
         expect(wrapper.exists()).toBe(true);
-        expect(wrapper.is('span')).toBe(true);
+        expect(wrapper.is('div')).toBe(true);
     });
 
     it('renders a "?" button', () => {
