@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "mkdirp": "^1.0.4",
-    "svgstore": "^2.0.3",
+    "svgstore": "^3.0.1",
     "yargs": "^16.0.0"
   },
   "devDependencies": {
