@@ -3,141 +3,85 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [12.17.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.16.0...@sb1/ffe-icons@12.17.0) (2022-02-23)
-
-
-### Features
-
-* **ffe-icons:** legg til filter ikon ([be3cdb4](https://github.com/SpareBank1/designsystem/commit/be3cdb42300cc7e998e0d47fb8d14a24ca2708f0))
-
-
-
-
-
-# [12.16.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.15.4...@sb1/ffe-icons@12.16.0) (2022-01-24)
-
-
-### Features
-
-* **ffe-icons:** added two new icons ([c8dc813](https://github.com/SpareBank1/designsystem/commit/c8dc813659e4d93e386784e468faae5b72b8d5c4))
-
-
-
-
-
-## [12.15.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.15.3...@sb1/ffe-icons@12.15.4) (2021-12-10)
-
+## [12.17.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.17.0...@sb1/ffe-icons@12.17.1) (2023-04-11)
 
 ### Bug Fixes
 
-* **ffe-icons:** use buildtool for transpiling ([3e11f6b](https://github.com/SpareBank1/designsystem/commit/3e11f6be485fb4ba40975a6e9cf792ebeaeea8da)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
+-   **ffe-icons:** oppdater svgstore dependency ([907e777](https://github.com/SpareBank1/designsystem/commit/907e7776b942b8b3804542c4c74845c1a90a5913))
 
+# [12.17.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.16.0...@sb1/ffe-icons@12.17.0) (2022-02-23)
 
+### Features
 
+-   **ffe-icons:** legg til filter ikon ([be3cdb4](https://github.com/SpareBank1/designsystem/commit/be3cdb42300cc7e998e0d47fb8d14a24ca2708f0))
 
+# [12.16.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.15.4...@sb1/ffe-icons@12.16.0) (2022-01-24)
+
+### Features
+
+-   **ffe-icons:** added two new icons ([c8dc813](https://github.com/SpareBank1/designsystem/commit/c8dc813659e4d93e386784e468faae5b72b8d5c4))
+
+## [12.15.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.15.3...@sb1/ffe-icons@12.15.4) (2021-12-10)
+
+### Bug Fixes
+
+-   **ffe-icons:** use buildtool for transpiling ([3e11f6b](https://github.com/SpareBank1/designsystem/commit/3e11f6be485fb4ba40975a6e9cf792ebeaeea8da)), closes [#1294](https://github.com/SpareBank1/designsystem/issues/1294)
 
 ## [12.15.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.15.2...@sb1/ffe-icons@12.15.3) (2021-11-04)
 
 **Note:** Version bump only for package @sb1/ffe-icons
 
-
-
-
-
 ## [12.15.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.15.1...@sb1/ffe-icons@12.15.2) (2021-02-02)
-
 
 ### Bug Fixes
 
-* **ffe-icons:** reduce vulnerabilities ([248319d](https://github.com/SpareBank1/designsystem/commit/248319db6ac0a488c2885e852101b109d0c7fdfb))
-
-
-
-
+-   **ffe-icons:** reduce vulnerabilities ([248319d](https://github.com/SpareBank1/designsystem/commit/248319db6ac0a488c2885e852101b109d0c7fdfb))
 
 ## [12.15.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.15.0...@sb1/ffe-icons@12.15.1) (2020-11-18)
 
-
 ### Bug Fixes
 
-* packages/ffe-icons/package.json to reduce vulnerabilities ([01fa1e5](https://github.com/SpareBank1/designsystem/commit/01fa1e5323555ec90bb3fd39e62715c815b264a8))
-
-
-
-
+-   packages/ffe-icons/package.json to reduce vulnerabilities ([01fa1e5](https://github.com/SpareBank1/designsystem/commit/01fa1e5323555ec90bb3fd39e62715c815b264a8))
 
 # [12.15.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.14.0...@sb1/ffe-icons@12.15.0) (2020-09-15)
 
-
 ### Features
 
-* **ffe-icons:** legge til hus-tommer-ikon.svg og hus-hammer-ikon.svg ([838162d](https://github.com/SpareBank1/designsystem/commit/838162dba31dd26c13fbf1c77758bd6bee799542))
-
-
-
-
+-   **ffe-icons:** legge til hus-tommer-ikon.svg og hus-hammer-ikon.svg ([838162d](https://github.com/SpareBank1/designsystem/commit/838162dba31dd26c13fbf1c77758bd6bee799542))
 
 # [12.14.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.13.5...@sb1/ffe-icons@12.14.0) (2020-08-27)
 
-
 ### Features
 
-* **ffe-icons:** nye hus-ikoner ([5e1aca9](https://github.com/SpareBank1/designsystem/commit/5e1aca97d5d667424997ed40b75d88c4c679e159))
-* **ffe-icons:** nytt avtalegiro ikon ([f7a4bbd](https://github.com/SpareBank1/designsystem/commit/f7a4bbd62c7a0ec017981140b1ccaea19981db88))
-
-
-
-
+-   **ffe-icons:** nye hus-ikoner ([5e1aca9](https://github.com/SpareBank1/designsystem/commit/5e1aca97d5d667424997ed40b75d88c4c679e159))
+-   **ffe-icons:** nytt avtalegiro ikon ([f7a4bbd](https://github.com/SpareBank1/designsystem/commit/f7a4bbd62c7a0ec017981140b1ccaea19981db88))
 
 ## [12.13.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.13.4...@sb1/ffe-icons@12.13.5) (2020-08-04)
 
-
 ### Bug Fixes
 
-* **ffe-icons:** removed whitespace and unnecessary code ([7c6dcb8](https://github.com/SpareBank1/designsystem/commit/7c6dcb8cdea80c58f1480c982cf1e759e2502e50))
-* **ffe-icons:** updated README and moved requirements ([8e1cb56](https://github.com/SpareBank1/designsystem/commit/8e1cb564de68a68c2a49eb78b885e082a2f6a289))
-
-
-
-
+-   **ffe-icons:** removed whitespace and unnecessary code ([7c6dcb8](https://github.com/SpareBank1/designsystem/commit/7c6dcb8cdea80c58f1480c982cf1e759e2502e50))
+-   **ffe-icons:** updated README and moved requirements ([8e1cb56](https://github.com/SpareBank1/designsystem/commit/8e1cb564de68a68c2a49eb78b885e082a2f6a289))
 
 ## [12.13.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.13.3...@sb1/ffe-icons@12.13.4) (2020-07-30)
 
-
 ### Bug Fixes
 
-* **ffe-icons:** removed empty space around bil-pil-ikon ([fd3f7a2](https://github.com/SpareBank1/designsystem/commit/fd3f7a2c601d20bc7f6030381b0986af9626d9da))
-
-
-
-
+-   **ffe-icons:** removed empty space around bil-pil-ikon ([fd3f7a2](https://github.com/SpareBank1/designsystem/commit/fd3f7a2c601d20bc7f6030381b0986af9626d9da))
 
 ## [12.13.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.13.2...@sb1/ffe-icons@12.13.3) (2020-06-29)
 
-
 ### Bug Fixes
 
-* **ffe-icons:** added correct colors for icons preview in darkmode ([863c10a](https://github.com/SpareBank1/designsystem/commit/863c10a0f98320514a4c2974170b1c9c6b9566b9))
-
-
-
-
+-   **ffe-icons:** added correct colors for icons preview in darkmode ([863c10a](https://github.com/SpareBank1/designsystem/commit/863c10a0f98320514a4c2974170b1c9c6b9566b9))
 
 ## [12.13.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.13.1...@sb1/ffe-icons@12.13.2) (2020-06-24)
 
 **Note:** Version bump only for package @sb1/ffe-icons
 
-
-
-
-
 ## [12.13.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.13.0...@sb1/ffe-icons@12.13.1) (2020-05-27)
 
 **Note:** Version bump only for package @sb1/ffe-icons
-
-
-
-
 
 # [12.13.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.12.3...@sb1/ffe-icons@12.13.0) (2020-03-31)
 

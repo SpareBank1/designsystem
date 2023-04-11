@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-context-message-react",
-    "version": "8.0.5",
+    "version": "8.0.6",
     "description": "React implementation of ffe-context-message component",
     "keywords": [
         "ffe"
@@ -29,7 +29,7 @@
     },
     "dependencies": {
         "@sb1/ffe-context-message": "^7.1.2",
-        "@sb1/ffe-icons-react": "^7.3.4",
+        "@sb1/ffe-icons-react": "^7.3.5",
         "classnames": "^2.3.1",
         "prop-types": "^15.7.2",
         "uuid": "^9.0.0"

@@ -1,30 +1,30 @@
 {
-  "name": "@sb1/ffe-icons",
-  "version": "12.17.0",
-  "description": "Felles Front End Icons",
-  "license": "MIT",
-  "author": "SpareBank 1",
-  "bin": {
-    "ffe-icons": "bin/build.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "ssh://git@github.com:SpareBank1/designsystem.git"
-  },
-  "scripts": {
-    "build": "node bin/build.js",
-    "lint": "eslint bin",
-    "test": "npm run lint"
-  },
-  "dependencies": {
-    "mkdirp": "^1.0.4",
-    "svgstore": "^3.0.1",
-    "yargs": "^16.0.0"
-  },
-  "devDependencies": {
-    "eslint": "^5.9.0"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+    "name": "@sb1/ffe-icons",
+    "version": "12.17.1",
+    "description": "Felles Front End Icons",
+    "license": "MIT",
+    "author": "SpareBank 1",
+    "bin": {
+        "ffe-icons": "bin/build.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "ssh://git@github.com:SpareBank1/designsystem.git"
+    },
+    "scripts": {
+        "build": "node bin/build.js",
+        "lint": "eslint bin",
+        "test": "npm run lint"
+    },
+    "dependencies": {
+        "mkdirp": "^1.0.4",
+        "svgstore": "^3.0.1",
+        "yargs": "^16.0.0"
+    },
+    "devDependencies": {
+        "eslint": "^5.9.0"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
 }
