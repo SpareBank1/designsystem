@@ -31,7 +31,7 @@ const Tooltip = React.forwardRef(
         };
 
         return (
-            <span
+            <div
                 {...rest}
                 className={classNames('ffe-tooltip', {
                     'ffe-tooltip--open': _isOpen,
@@ -56,15 +56,15 @@ const Tooltip = React.forwardRef(
                         id={tooltipId}
                         isOpen={_isOpen}
                     >
-                        <div
+                        <span
                             className={classNames('ffe-small-text', className)}
                             role={_isOpen ? 'status' : 'none'}
                         >
                             {children}
-                        </div>
+                        </span>
                     </Collapse>
                 )}
-            </span>
+            </div>
         );
     },
 );
