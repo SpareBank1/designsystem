@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [23.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@23.0.4...@sb1/ffe-form@23.0.5) (2023-04-18)
+
+### Bug Fixes
+
+-   **ffe-form:** add display inline to div ([8583262](https://github.com/SpareBank1/designsystem/commit/85832627883f2632fc3c37a0e5428cbbaa0be55b))
+-   **ffe-form:** retter skrivefeil i readme ([cfe3b00](https://github.com/SpareBank1/designsystem/commit/cfe3b00b353874cffc504e9890f16e12eee5ef8b))
+
 ## [23.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@23.0.3...@sb1/ffe-form@23.0.4) (2023-02-08)
 
 ### Bug Fixes

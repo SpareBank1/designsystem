@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [11.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@11.0.6...@sb1/ffe-form-react@11.0.7) (2023-04-18)
+
+### Bug Fixes
+
+-   **ffe-form-react:** bytte plassering på span og div i tooltip ([0cba1b6](https://github.com/SpareBank1/designsystem/commit/0cba1b63e797789383c89757275f4929245b4365))
+
 ## [11.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@11.0.5...@sb1/ffe-form-react@11.0.6) (2023-02-23)
 
 ### Bug Fixes

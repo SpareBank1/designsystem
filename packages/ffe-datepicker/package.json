@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-datepicker",
-    "version": "11.0.4",
+    "version": "11.0.5",
     "description": "FFE Datepicker",
     "license": "MIT",
     "author": "SpareBank 1",
@@ -17,7 +17,7 @@
     },
     "dependencies": {
         "@sb1/ffe-core": "^27.0.0",
-        "@sb1/ffe-form": "^23.0.4"
+        "@sb1/ffe-form": "^23.0.5"
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.5.0"
