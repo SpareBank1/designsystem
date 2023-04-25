@@ -1,20 +1,9 @@
 import * as React from 'react';
 
-type To =
-    | string
-    | {
-          pathname: string;
-          search?: string;
-          hash?: string;
-          state?: { [key: string]: any };
-      };
-
-export interface MinimalBaseButtonProps
-    extends React.ComponentPropsWithoutRef<'html'> {
+export interface MinimalBaseButtonProps extends React.ComponentPropsWithoutRef<'html'> {
     className?: string;
     element?: HTMLElement | string | React.ElementType;
     innerRef?: React.Ref<HTMLElement>;
-    to?: To; //used in order to make buttons work with react-router functionality in typescript-files.
 }
 
 export interface BaseButtonProps extends MinimalBaseButtonProps {
@@ -77,25 +66,45 @@ export interface TertiaryButtonProps extends MinimalBaseButtonProps {
     rightIcon?: React.ReactNode;
 }
 
-declare class ActionButton extends React.Component<ActionButtonProps, any> {}
-declare class BackButton extends React.Component<BackButtonProps, any> {}
-declare class ButtonGroup extends React.Component<ButtonGroupProps, any> {}
-declare class ExpandButton extends React.Component<ExpandButtonProps, any> {}
-declare class InlineExpandButton extends React.Component<
-    InlineExpandButtonProps,
+type NoInfer<T> = [T][T extends any ? 0 : never];
+
+declare class ActionButton<T = {}> extends React.Component<
+    NoInfer<T> & ActionButtonProps,
     any
 > {}
-declare class PrimaryButton extends React.Component<PrimaryButtonProps, any> {}
-declare class SecondaryButton extends React.Component<
-    SecondaryButtonProps,
+declare class BackButton<T = {}> extends React.Component<
+    NoInfer<T> & BackButtonProps,
     any
 > {}
-declare class ShortcutButton extends React.Component<
-    ShortcutButtonProps,
+declare class ButtonGroup<T = {}> extends React.Component<
+    NoInfer<T> & ButtonGroupProps,
     any
 > {}
-declare class TaskButton extends React.Component<TaskButtonProps, any> {}
-declare class TertiaryButton extends React.Component<
-    TertiaryButtonProps,
+declare class ExpandButton<T = {}> extends React.Component<
+    NoInfer<T> & ExpandButtonProps,
+    any
+> {}
+declare class InlineExpandButton<T = {}> extends React.Component<
+    NoInfer<T> & InlineExpandButtonProps,
+    any
+> {}
+declare class PrimaryButton<T = {}> extends React.Component<
+    NoInfer<T> & PrimaryButtonProps,
+    any
+> {}
+declare class SecondaryButton<T = {}> extends React.Component<
+    NoInfer<T> & SecondaryButtonProps,
+    any
+> {}
+declare class ShortcutButton<T = {}> extends React.Component<
+    NoInfer<T> & ShortcutButtonProps,
+    any
+> {}
+declare class TaskButton<T = {}> extends React.Component<
+    NoInfer<T> & TaskButtonProps,
+    any
+> {}
+declare class TertiaryButton<T = {}> extends React.Component<
+    NoInfer<T> & TertiaryButtonProps,
     any
 > {}
