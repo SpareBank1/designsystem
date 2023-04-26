@@ -1,7 +1,6 @@
 import * as React from 'react';
 
-export interface RowRenderTrProps
-    extends React.HTMLAttributes<HTMLTableRowElement> {}
+export interface RowRenderTrProps extends React.ComponentProps<'tr'> {}
 
 export interface TableRowProps {
     cells: Data;
