@@ -2,7 +2,7 @@ import * as React from 'react';
 
 type Gap = 'none' | '2xs' | 'xs' | 'md' | 'lg';
 
-export interface GridProps extends React.HTMLAttributes<HTMLElement> {
+export interface GridProps extends React.ComponentProps<'html'> {
     children: React.ReactNode;
     className?: string;
     element?: string;
@@ -45,7 +45,7 @@ type Padding =
     | '4xl'
     | '5xl';
 
-export interface GridRowProps extends React.HTMLAttributes<HTMLElement> {
+export interface GridRowProps extends React.ComponentProps<'html'> {
     background?: BackgroundColors;
     children: React.ReactNode;
     className?: string;
@@ -61,7 +61,7 @@ export interface GridColSize {
     offset: ColumnsRange | string;
 }
 
-export interface GridColProps extends React.HTMLAttributes<HTMLElement> {
+export interface GridColProps extends React.ComponentProps<'html'> {
     background?: BackgroundColors;
     children?: React.ReactNode;
     className?: string;
