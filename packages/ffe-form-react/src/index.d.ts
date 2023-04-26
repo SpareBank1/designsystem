@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 export interface CheckboxProps
-    extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'children'> {
+    extends Omit<React.ComponentProps<'input'>, 'children'> {
     noMargins?: boolean;
     hiddenLabel?: boolean;
     id?: string;
@@ -14,15 +14,13 @@ export interface CheckboxProps
           }) => React.ReactNode);
 }
 
-export interface BaseFieldMessageProps
-    extends React.HTMLAttributes<HTMLElement> {
+export interface BaseFieldMessageProps extends React.ComponentProps<'html'> {
     children: React.ReactNode;
     className?: string;
     element?: string;
 }
 
-export interface InputProps
-    extends React.InputHTMLAttributes<HTMLInputElement> {
+export interface InputProps extends React.ComponentProps<'input'> {
     className?: string;
     inline?: boolean;
     textLike?: boolean;
@@ -47,8 +45,7 @@ export interface PhoneNumberProps {
     numberRef?: React.Ref<HTMLInputElement>;
 }
 
-export interface LabelProps
-    extends React.LabelHTMLAttributes<HTMLLabelElement> {
+export interface LabelProps extends React.ComponentProps<'label'> {
     block?: boolean;
     children: React.ReactNode;
     className?: string;
@@ -56,7 +53,7 @@ export interface LabelProps
 }
 
 export interface InputGroupProps
-    extends Omit<React.HTMLAttributes<HTMLDivElement>, 'children'> {
+    extends Omit<React.ComponentProps<'div'>, 'children'> {
     inputId?: string;
     /** Unless you only have one element in your `InputGroup` you will have to use the function-as-a-child pattern. */
     children:
@@ -76,7 +73,7 @@ export interface InputGroupProps
     tooltip?: React.ReactNode;
 }
 
-export interface TooltipProps extends React.HTMLAttributes<HTMLSpanElement> {
+export interface TooltipProps extends React.ComponentProps<'span'> {
     'aria-controls'?: string;
     children?: React.ReactNode;
     className?: string;
@@ -86,8 +83,7 @@ export interface TooltipProps extends React.HTMLAttributes<HTMLSpanElement> {
     ref?: React.ForwardedRef<HTMLButtonElement>;
 }
 
-export interface RadioBlockProps
-    extends React.InputHTMLAttributes<HTMLInputElement> {
+export interface RadioBlockProps extends React.ComponentProps<'input'> {
     checked?: boolean;
     children?: React.ReactNode;
     className?: string;
@@ -101,8 +97,7 @@ export interface RadioBlockProps
 }
 
 // As value has a different type than InputHTMLAttributes<T> we have to weaken it
-interface WeakInputAttributes
-    extends React.InputHTMLAttributes<HTMLInputElement> {
+interface WeakInputAttributes extends React.ComponentProps<'input'> {
     value: any;
 }
 
@@ -121,8 +116,7 @@ export interface RadioButtonProps extends WeakInputAttributes {
 }
 
 // As onChange has a different type than React.FieldsetHTMLAttributes<T> we have to weaken it
-interface WeakFieldSetAttributes
-    extends React.FieldsetHTMLAttributes<HTMLFieldSetElement> {
+interface WeakFieldSetAttributes extends React.ComponentProps<'fieldset'> {
     onChange?: any;
 }
 
@@ -149,8 +143,7 @@ export interface RadioButtonInputGroupProps
     tooltip?: string | React.ReactNode;
 }
 
-export interface RadioSwitchProps
-    extends React.InputHTMLAttributes<HTMLInputElement> {
+export interface RadioSwitchProps extends React.ComponentProps<'input'> {
     checked?: boolean;
     className?: string;
     labelProps?: {};
@@ -167,13 +160,11 @@ export interface RadioSwitchProps
     condensed?: boolean;
 }
 
-export interface TextAreaProps
-    extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
+export interface TextAreaProps extends React.ComponentProps<'textarea'> {
     className?: string;
 }
 
-export interface ToggleSwitchProps
-    extends React.InputHTMLAttributes<HTMLInputElement> {
+export interface ToggleSwitchProps extends React.ComponentProps<'input'> {
     children: React.ReactNode;
     className?: string;
     locale?: 'nb' | 'nn' | 'en';
