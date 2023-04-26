@@ -1,27 +1,25 @@
 import * as React from 'react';
 
-export interface ComponentBaseProps
-    extends React.HtmlHTMLAttributes<
-        HTMLElement | HTMLButtonElement | HTMLAnchorElement
-    > {
-    className?: string;
-    element?: HTMLElement | string | React.ElementType;
-    children?: React.ReactNode;
-}
+type ComponentBaseProps =
+    | ({
+          className?: string;
+          element?: HTMLElement | string | React.ElementType;
+          children?: React.ReactNode;
+      } & React.ComponentProps<'html'>)
+    | React.ComponentProps<'button'>
+    | React.ComponentProps<'a'>;
 
-export interface CardBaseProps extends ComponentBaseProps {
+type CardBaseProps = {
     to?: string;
-}
+} & ComponentBaseProps;
 
-export interface TitleProps extends ComponentBaseProps {
+type TitleProps = {
     overflowEllipsis?: boolean;
-}
+} & ComponentBaseProps;
 
-export interface SubtextProps extends ComponentBaseProps {}
-
-export interface TextProps extends ComponentBaseProps {}
-
-export interface CardNameProps extends ComponentBaseProps {}
+type SubtextProps = ComponentBaseProps;
+type TextProps = ComponentBaseProps;
+type CardNameProps = ComponentBaseProps;
 
 export interface CardRenderProps {
     CardName: React.FC<CardNameProps>;
