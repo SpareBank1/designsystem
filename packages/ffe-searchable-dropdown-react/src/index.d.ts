@@ -17,7 +17,7 @@ export interface SearchableDropdownProps<T> {
     dropdownList: T[];
     dropdownAttributes: (keyof T)[];
     searchAttributes: (keyof T)[];
-    inputProps?: React.InputHTMLAttributes<HTMLInputElement>;
+    inputProps?: React.ComponentProps<'input'>;
     selectedItem?: T;
     maxRenderedDropdownElements?: number;
     onChange?: (dropdownListItem: T) => any;
