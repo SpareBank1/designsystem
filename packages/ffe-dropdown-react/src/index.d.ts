@@ -1,7 +1,6 @@
 import * as React from 'react';
 
-export interface DropdownProps
-    extends React.SelectHTMLAttributes<HTMLSelectElement> {
+export interface DropdownProps extends React.ComponentProps<'select'> {
     children?: React.ReactNode;
     className?: string;
     inline?: boolean;
