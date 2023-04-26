@@ -9,7 +9,8 @@ type To =
           state?: { [key: string]: any };
       };
 
-export interface MinimalBaseButtonProps extends React.HTMLProps<HTMLElement> {
+export interface MinimalBaseButtonProps
+    extends React.ComponentPropsWithoutRef<'html'> {
     className?: string;
     element?: HTMLElement | string | React.ElementType;
     innerRef?: React.Ref<HTMLElement>;
