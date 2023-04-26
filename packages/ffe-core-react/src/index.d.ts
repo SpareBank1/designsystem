@@ -1,15 +1,15 @@
 import * as React from 'react';
 
-export interface DividerLineProps extends React.HTMLAttributes<HTMLHRElement> {
+export interface DividerLineProps extends React.ComponentProps<'hr'> {
     className?: string;
 }
 
-export interface EmphasizedTextProps extends React.HTMLAttributes<HTMLElement> {
+export interface EmphasizedTextProps extends React.ComponentProps<'html'> {
     children: React.ReactNode;
     className?: string;
 }
 
-export interface HeadingProps extends React.HTMLAttributes<HTMLHeadingElement> {
+export interface HeadingProps extends React.ComponentProps<'header'> {
     children: React.ReactNode;
     className?: string;
     error?: boolean;
@@ -20,14 +20,14 @@ export interface HeadingProps extends React.HTMLAttributes<HTMLHeadingElement> {
     textCenter?: boolean;
 }
 
-export interface LinkTextProps extends React.AnchorHTMLAttributes<HTMLElement> {
+export interface LinkTextProps extends React.ComponentProps<'a'> {
     children: React.ReactNode;
     className?: string;
     element?: HTMLElement | string | React.ElementType;
     underline?: boolean;
 }
 
-export interface LinkIconProps extends React.AnchorHTMLAttributes<HTMLElement> {
+export interface LinkIconProps extends React.ComponentProps<'html'> {
     children: React.ReactNode;
     className?: string;
     element?: HTMLElement | string | React.ElementType;
@@ -43,8 +43,7 @@ export interface SmallTextProps {
     className?: string;
 }
 
-export interface ParagraphProps
-    extends React.HTMLAttributes<HTMLParagraphElement> {
+export interface ParagraphProps extends React.ComponentProps<'p'> {
     children: React.ReactNode;
     className?: string;
     lead?: boolean;
@@ -96,20 +95,20 @@ declare class Heading6 extends React.Component<HeadingProps, any> {}
 declare class LinkText extends React.Component<LinkTextProps, any> {}
 declare class LinkIcon extends React.Component<LinkIconProps, any> {}
 declare class MicroText extends React.Component<
-    SimpleElementProps & React.HTMLAttributes<HTMLSpanElement>,
+    SimpleElementProps & React.ComponentProps<'span'>,
     any
 > {}
 declare class Paragraph extends React.Component<ParagraphProps, any> {}
 declare class PreformattedText extends React.Component<
-    SimpleElementProps & React.HTMLAttributes<HTMLPreElement>,
+    SimpleElementProps & React.ComponentProps<'pre'>,
     any
 > {}
 declare class SmallText extends React.Component<
-    SmallTextProps & React.HTMLAttributes<HTMLSpanElement>,
+    SmallTextProps & React.ComponentProps<'span'>,
     any
 > {}
 declare class StrongText extends React.Component<
-    SimpleElementProps & React.HTMLAttributes<HTMLElement>,
+    SimpleElementProps & React.ComponentProps<'strong'>,
     any
 > {}
 declare class Wave extends React.Component<WaveProps, any> {}
