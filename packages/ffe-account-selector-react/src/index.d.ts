@@ -25,7 +25,7 @@ export interface AccountSelectorProps<T extends Account = Account> {
     id: string;
     locale: 'nb' | 'nn' | 'en';
     noMatches?: NoMatch<T>;
-    inputProps?: React.InputHTMLAttributes<HTMLInputElement>;
+    inputProps?: React.ComponentPropsWithoutRef<'input'>;
     onAccountSelected: (account: T) => void;
     onReset: () => void;
     selectedAccount?: T;
