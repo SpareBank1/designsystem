@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [11.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@11.0.7...@sb1/ffe-form-react@11.0.8) (2023-04-27)
+
+### Bug Fixes
+
+-   **ffe-form-react:** use react.componentsprops instead of react.htmlprops ([f1860d2](https://github.com/SpareBank1/designsystem/commit/f1860d22e024a4c8a6209a64561ab94416e5b9c4))
+
 ## [11.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@11.0.6...@sb1/ffe-form-react@11.0.7) (2023-04-18)
 
 ### Bug Fixes

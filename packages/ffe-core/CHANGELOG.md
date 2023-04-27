@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [27.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@27.0.0...@sb1/ffe-core@27.0.1) (2023-04-27)
+
+### Bug Fixes
+
+-   **ffe-core:** fikser høyde på bakgrunnen til bølgen ([d06438b](https://github.com/SpareBank1/designsystem/commit/d06438bfbc2b9a585cb7003e609b4cc0edd75aee))
+
 # [27.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@26.1.2...@sb1/ffe-core@27.0.0) (2023-02-08)
 
 ### Bug Fixes

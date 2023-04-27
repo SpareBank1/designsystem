@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [15.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@15.1.2...@sb1/ffe-searchable-dropdown-react@15.1.3) (2023-04-27)
+
+### Bug Fixes
+
+-   **ffe-searchable-dropdown-react:** use react.componentsprops instead of react.htmlprops ([cefa5f7](https://github.com/SpareBank1/designsystem/commit/cefa5f79e15cb1bedca614b899e5ca5cd5c61e4e))
+
 ## [15.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@15.1.1...@sb1/ffe-searchable-dropdown-react@15.1.2) (2023-04-18)
 
 **Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react

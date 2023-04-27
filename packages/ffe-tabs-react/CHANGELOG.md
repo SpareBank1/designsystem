@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@8.0.2...@sb1/ffe-tabs-react@8.0.3) (2023-04-27)
+
+### Bug Fixes
+
+-   **ffe-tabs-react:** use react.componentsprops instead of react.htmlprops ([cb53798](https://github.com/SpareBank1/designsystem/commit/cb537985f169deae87d8e10dbf0fb2bc01d44a2b))
+
 ## [8.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@8.0.1...@sb1/ffe-tabs-react@8.0.2) (2023-02-08)
 
 **Note:** Version bump only for package @sb1/ffe-tabs-react

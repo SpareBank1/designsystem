@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-dropdown-react@6.0.5...@sb1/ffe-dropdown-react@6.0.6) (2023-04-27)
+
+### Bug Fixes
+
+-   **ffe-dropdown-react:** use react.componentsprops instead of react.htmlprops ([6d98b0c](https://github.com/SpareBank1/designsystem/commit/6d98b0c79b100b56eaed93d1acaea491ba6c18e7))
+
 ## [6.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-dropdown-react@6.0.4...@sb1/ffe-dropdown-react@6.0.5) (2023-04-18)
 
 **Note:** Version bump only for package @sb1/ffe-dropdown-react

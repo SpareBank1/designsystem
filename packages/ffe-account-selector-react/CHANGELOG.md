@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [21.3.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@21.3.2...@sb1/ffe-account-selector-react@21.3.3) (2023-04-27)
+
+### Bug Fixes
+
+-   **ffe-account-selector-react:** use react.componentsprops instead of react.htmlprops ([5ff895c](https://github.com/SpareBank1/designsystem/commit/5ff895c1beb5d238ec100d0006a52792a5f15a1f))
+
 ## [21.3.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@21.3.1...@sb1/ffe-account-selector-react@21.3.2) (2023-04-18)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react

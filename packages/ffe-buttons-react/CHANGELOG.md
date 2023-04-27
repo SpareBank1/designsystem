@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [18.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@17.0.3...@sb1/ffe-buttons-react@18.0.0) (2023-04-27)
+
+### Bug Fixes
+
+-   **ffe-buttons-react:** use react.componentsprops instead of react.htmlprops ([6639e09](https://github.com/SpareBank1/designsystem/commit/6639e092f63aa20ed06566b2c8c582b39dde2c6c))
+
+### Features
+
+-   **ffe-buttons-react:** fix button type ([5017312](https://github.com/SpareBank1/designsystem/commit/50173123a257ff7903c3c1163c998bdafe5e54d4))
+
+### BREAKING CHANGES
+
+-   **ffe-buttons-react:** "to" prop is removed. To use react router props
+    or similar a generic must be provided.
+
+import { LinkProps } from "react-router-dom";
+
+return <PrimaryButton<LinkProps> to={'somUrl'} />
+
 ## [17.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@17.0.2...@sb1/ffe-buttons-react@17.0.3) (2023-04-11)
 
 **Note:** Version bump only for package @sb1/ffe-buttons-react

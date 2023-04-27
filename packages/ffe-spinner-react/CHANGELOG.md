@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner-react@6.0.4...@sb1/ffe-spinner-react@6.0.5) (2023-04-27)
+
+### Bug Fixes
+
+-   **ffe-spinner-react:** use react.componentsprops instead of react.htmlprops ([01046ae](https://github.com/SpareBank1/designsystem/commit/01046ae90f98cc4fc93f83eba2e6e98a32788149))
+
 ## [6.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner-react@6.0.3...@sb1/ffe-spinner-react@6.0.4) (2023-02-08)
 
 **Note:** Version bump only for package @sb1/ffe-spinner-react

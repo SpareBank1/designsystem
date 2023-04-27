@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@7.0.4...@sb1/ffe-tables-react@7.0.5) (2023-04-27)
+
+### Bug Fixes
+
+-   **ffe-tables-react:** use react.componentsprops instead of react.htmlprops ([716f2d7](https://github.com/SpareBank1/designsystem/commit/716f2d753e16588062246918c04b8e4e76fa8fc1))
+
 ## [7.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@7.0.3...@sb1/ffe-tables-react@7.0.4) (2023-04-11)
 
 **Note:** Version bump only for package @sb1/ffe-tables-react

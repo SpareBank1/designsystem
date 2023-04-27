@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@8.0.6...@sb1/ffe-context-message-react@8.0.7) (2023-04-27)
+
+### Bug Fixes
+
+-   **ffe-context-message-react:** use react.componentsprops instead of react.htmlprops ([1036f5f](https://github.com/SpareBank1/designsystem/commit/1036f5fc2d5039461a96415c3385562e26f0e3c7))
+
 ## [8.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@8.0.5...@sb1/ffe-context-message-react@8.0.6) (2023-04-11)
 
 **Note:** Version bump only for package @sb1/ffe-context-message-react
