@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-export type InputProps = React.InputHTMLAttributes<HTMLInputElement>;
+export type InputProps = React.ComponentProps<'input'>;
 
 type AriaInvalid = boolean | 'false' | 'true' | 'grammar' | 'spelling';
 

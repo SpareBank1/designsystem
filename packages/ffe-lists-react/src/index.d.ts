@@ -33,50 +33,50 @@ export interface DescriptionListProps extends BaseListProps {
 }
 
 declare class BulletList extends React.Component<
-    BulletListProps & React.HTMLAttributes<HTMLUListElement>,
+    BulletListProps & React.ComponentProps<'ul'>,
     any
 > {}
 declare class BulletListItem extends React.Component<
-    BaseListItemProps & React.LiHTMLAttributes<HTMLLIElement>,
+    BaseListItemProps & React.ComponentProps<'li'>,
     any
 > {}
 declare class CheckList extends React.Component<
-    CheckListProps & React.HTMLAttributes<HTMLUListElement>,
+    CheckListProps & React.ComponentProps<'ul'>,
     any
 > {}
 declare class CheckListItem extends React.Component<
-    CheckListItemProps & React.LiHTMLAttributes<HTMLLIElement>,
+    CheckListItemProps & React.ComponentProps<'li'>,
     any
 > {}
 declare class NumberedList extends React.Component<
-    NumberedListProps & React.OlHTMLAttributes<HTMLOListElement>,
+    NumberedListProps & React.ComponentProps<'ol'>,
     any
 > {}
 declare class NumberedListItem extends React.Component<
-    BaseListItemProps & React.LiHTMLAttributes<HTMLLIElement>,
+    BaseListItemProps & React.ComponentProps<'li'>,
     any
 > {}
 declare class StylizedNumberedList extends React.Component<
-    BaseListProps & React.OlHTMLAttributes<HTMLOListElement>,
+    BaseListProps & React.ComponentProps<'ol'>,
     any
 > {}
 declare class StylizedNumberedListItem extends React.Component<
-    BaseListItemProps & React.LiHTMLAttributes<HTMLLIElement>,
+    BaseListItemProps & React.ComponentProps<'li'>,
     any
 > {}
 declare class DescriptionList extends React.Component<
-    DescriptionListProps & React.HTMLAttributes<HTMLDListElement>,
+    DescriptionListProps & React.ComponentProps<'dl'>,
     any
 > {}
 declare class DescriptionListMultiCol extends React.Component<
-    BaseListProps & React.HTMLAttributes<HTMLDivElement>,
+    BaseListProps & React.ComponentProps<'div'>,
     any
 > {}
 declare class DescriptionListTerm extends React.Component<
-    BaseListItemProps & React.HTMLAttributes<HTMLElement>,
+    BaseListItemProps & React.ComponentProps<'html'>,
     any
 > {}
 declare class DescriptionListDescription extends React.Component<
-    BaseListItemProps & React.HTMLAttributes<HTMLElement>,
+    BaseListItemProps & React.ComponentProps<'html'>,
     any
 > {}

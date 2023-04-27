@@ -1,12 +1,11 @@
 import * as React from 'react';
 
-export interface TabProps
-    extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface TabProps extends React.ComponentProps<'button'> {
     selected?: boolean;
     className?: string;
 }
 
-export interface TabGroupProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface TabGroupProps extends React.ComponentProps<'div'> {
     children: React.ReactNode;
     className?: string;
     noBreak?: boolean;
