@@ -9,10 +9,6 @@ type ComponentBaseProps =
     | React.ComponentProps<'button'>
     | React.ComponentProps<'a'>;
 
-type CardBaseProps = {
-    to?: string;
-} & ComponentBaseProps;
-
 type TitleProps = {
     overflowEllipsis?: boolean;
 } & ComponentBaseProps;
@@ -28,26 +24,45 @@ export interface CardRenderProps {
     Text: React.FC<TextProps>;
 }
 
-export interface ImageCardProps extends Omit<CardBaseProps, 'children'> {
+type NoInfer<T> = [T][T extends any ? 0 : never];
+
+export interface ImageCardProps<T = {}>
+    extends Omit<ComponentBaseProps, 'children'> {
     imageSrc: string;
     imageAltText: string;
     children?: React.ReactNode | ((props: CardRenderProps) => React.ReactNode);
 }
 
-export interface IconCardProps extends Omit<CardBaseProps, 'children'> {
+export interface IconCardProps<T = {}>
+    extends Omit<ComponentBaseProps, 'children'> {
     icon: React.ReactNode;
     condensed?: boolean;
     greyCharcoal?: boolean;
     children?: React.ReactNode | ((props: CardRenderProps) => React.ReactNode);
 }
 
-export interface TextCardProps extends Omit<CardBaseProps, 'children'> {
+export interface TextCardProps extends Omit<ComponentBaseProps, 'children'> {
     leftAlign?: boolean;
     children: React.ReactNode | ((props: CardRenderProps) => React.ReactNode);
 }
 
-declare class CardBase extends React.Component<CardBaseProps, any> {}
-declare class IconCard extends React.Component<IconCardProps, any> {}
-declare class ImageCard extends React.Component<ImageCardProps, any> {}
-declare class TextCard extends React.Component<TextCardProps, any> {}
-declare class ComponentBase extends React.Component<ComponentBaseProps, any> {}
+declare class CardBase<T = {}> extends React.Component<
+    NoInfer<T> & ComponentBaseProps,
+    any
+> {}
+declare class IconCard<T = {}> extends React.Component<
+    NoInfer<T> & IconCardProps,
+    any
+> {}
+declare class ImageCard<T = {}> extends React.Component<
+    NoInfer<T> & ImageCardProps,
+    any
+> {}
+declare class TextCard<T = {}> extends React.Component<
+    NoInfer<T> & TextCardProps,
+    any
+> {}
+declare class ComponentBase<T = {}> extends React.Component<
+    NoInfer<T> & ComponentBaseProps,
+    any
+> {}

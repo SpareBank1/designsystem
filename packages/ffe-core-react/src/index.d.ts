@@ -81,6 +81,8 @@ export interface WaveProps {
     children?: React.ReactNode;
 }
 
+type NoInfer<T> = [T][T extends any ? 0 : never];
+
 declare class DividerLine extends React.Component<DividerLineProps, any> {}
 declare class EmphasizedText extends React.Component<
     EmphasizedTextProps,
@@ -92,7 +94,10 @@ declare class Heading3 extends React.Component<HeadingProps, any> {}
 declare class Heading4 extends React.Component<HeadingProps, any> {}
 declare class Heading5 extends React.Component<HeadingProps, any> {}
 declare class Heading6 extends React.Component<HeadingProps, any> {}
-declare class LinkText extends React.Component<LinkTextProps, any> {}
+declare class LinkText<T = {}> extends React.Component<
+    NoInfer<T> & LinkTextProps,
+    any
+> {}
 declare class LinkIcon extends React.Component<LinkIconProps, any> {}
 declare class MicroText extends React.Component<
     SimpleElementProps & React.ComponentProps<'span'>,
