@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [11.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@10.0.4...@sb1/ffe-cards-react@11.0.0) (2023-04-27)
+
+### Features
+
+-   **ffe-cards-react:** fix card to typing ([6bfde7b](https://github.com/SpareBank1/designsystem/commit/6bfde7b2de411e3748f0f8394f6b71afa4c3d554))
+
+### BREAKING CHANGES
+
+-   **ffe-cards-react:** "to" prop is removed. To use react router props
+    or similar a generic must be provided.
+
 ## [10.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@10.0.3...@sb1/ffe-cards-react@10.0.4) (2023-04-27)
 
 ### Bug Fixes

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@7.0.3...@sb1/ffe-core-react@7.1.0) (2023-04-27)
+
+### Features
+
+-   **ffe-core-react:** add generic linktext ([26590af](https://github.com/SpareBank1/designsystem/commit/26590af8a25c7747be647bd0cc15b9393df2ac39))
+
 ## [7.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@7.0.2...@sb1/ffe-core-react@7.0.3) (2023-04-27)
 
 ### Bug Fixes
