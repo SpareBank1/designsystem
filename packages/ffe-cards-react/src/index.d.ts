@@ -1,12 +1,11 @@
 import * as React from 'react';
 
-export type ComponentBaseProps =
-    | ({
-          className?: string;
-          element?: HTMLElement | string | React.ElementType;
-          children?: React.ReactNode;
-      } & React.ComponentProps<'button'>)
-    | React.ComponentProps<'a'>;
+export type ComponentBaseProps = {
+    className?: string;
+    element?: HTMLElement | string | React.ElementType;
+    innerRef?: React.Ref<HTMLElement>;
+} & React.ComponentProps<'button'> &
+    React.ComponentProps<'a'>;
 
 type TitleProps = {
     overflowEllipsis?: boolean;
