@@ -1,25 +1,27 @@
 import * as React from 'react';
 
-export interface MinimalBaseButtonProps extends React.ComponentPropsWithoutRef<'html'> {
-    className?: string;
-    element?: HTMLElement | string | React.ElementType;
-    innerRef?: React.Ref<HTMLElement>;
-}
+export type MinimalBaseButtonProps =
+    | ({
+          className?: string;
+          element?: HTMLElement | string | React.ElementType;
+          innerRef?: React.Ref<HTMLElement>;
+      } & React.ComponentProps<'button'>)
+    | React.ComponentProps<'a'>;
 
-export interface BaseButtonProps extends MinimalBaseButtonProps {
+export type BaseButtonProps = {
     children?: React.ReactNode;
     ariaLoadingMessage?: string;
     disabled?: boolean;
     isLoading?: boolean;
     leftIcon?: React.ReactNode;
     rightIcon?: React.ReactNode;
-}
+} & MinimalBaseButtonProps;
 
-export interface ActionButtonProps extends BaseButtonProps {}
+type ActionButtonProps = BaseButtonProps;
 
-export interface BackButtonProps extends MinimalBaseButtonProps {
+export type BackButtonProps = {
     children?: React.ReactNode;
-}
+} & MinimalBaseButtonProps;
 
 export interface ButtonGroupProps {
     className?: string;
@@ -28,43 +30,43 @@ export interface ButtonGroupProps {
     children: React.ReactNode;
 }
 
-export interface ExpandButtonProps extends MinimalBaseButtonProps {
+export type ExpandButtonProps = {
     children: React.ReactNode;
     closeLabel?: string;
     leftIcon?: React.ReactNode;
     rightIcon?: React.ReactNode;
     isExpanded: boolean;
     onClick: (e: React.MouseEvent | undefined) => void;
-}
+} & MinimalBaseButtonProps;
 
-export interface InlineExpandButtonProps extends MinimalBaseButtonProps {
+export type InlineExpandButtonProps = {
     children?: React.ReactNode;
     innerRef?: React.Ref<HTMLElement>;
     isExpanded: boolean;
     onClick: (e: React.MouseEvent | undefined) => void;
-}
+} & MinimalBaseButtonProps;
 
-export interface PrimaryButtonProps extends BaseButtonProps {}
+export type PrimaryButtonProps = BaseButtonProps;
 
-export interface SecondaryButtonProps extends BaseButtonProps {}
+export type SecondaryButtonProps = BaseButtonProps;
 
-export interface ShortcutButtonProps extends MinimalBaseButtonProps {
+export type ShortcutButtonProps = {
     children?: React.ReactNode;
     disabled?: boolean;
     leftIcon?: React.ReactNode;
-}
+} & MinimalBaseButtonProps;
 
-export interface TaskButtonProps extends MinimalBaseButtonProps {
+export type TaskButtonProps = {
     children?: React.ReactNode;
     disabled?: boolean;
     icon: React.ReactNode;
-}
+} & MinimalBaseButtonProps;
 
-export interface TertiaryButtonProps extends MinimalBaseButtonProps {
+export type TertiaryButtonProps = {
     children?: React.ReactNode;
     leftIcon?: React.ReactNode;
     rightIcon?: React.ReactNode;
-}
+} & MinimalBaseButtonProps;
 
 type NoInfer<T> = [T][T extends any ? 0 : never];
 
