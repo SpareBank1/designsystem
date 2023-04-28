@@ -73,10 +73,10 @@ declare class DescriptionListMultiCol extends React.Component<
     any
 > {}
 declare class DescriptionListTerm extends React.Component<
-    BaseListItemProps & React.ComponentProps<'html'>,
+    BaseListItemProps & React.ComponentProps<'dt'>,
     any
 > {}
 declare class DescriptionListDescription extends React.Component<
-    BaseListItemProps & React.ComponentProps<'html'>,
+    BaseListItemProps & React.ComponentProps<'dd'>,
     any
 > {}

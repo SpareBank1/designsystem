@@ -1,12 +1,11 @@
 import * as React from 'react';
 
-type ComponentBaseProps =
+export type ComponentBaseProps =
     | ({
           className?: string;
           element?: HTMLElement | string | React.ElementType;
           children?: React.ReactNode;
-      } & React.ComponentProps<'html'>)
-    | React.ComponentProps<'button'>
+      } & React.ComponentProps<'button'>)
     | React.ComponentProps<'a'>;
 
 type TitleProps = {
