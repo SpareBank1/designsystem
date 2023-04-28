@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [11.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@11.0.1...@sb1/ffe-cards-react@11.0.2) (2023-04-28)
+
+### Bug Fixes
+
+-   **ffe-cards-react:** minimal base button props ([f32787e](https://github.com/SpareBank1/designsystem/commit/f32787e00a3fa7764dd67c9081f6caa681cca84f))
+
 ## [11.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@11.0.0...@sb1/ffe-cards-react@11.0.1) (2023-04-28)
 
 ### Bug Fixes
