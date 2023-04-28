@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [13.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@13.0.4...@sb1/ffe-grid-react@13.0.5) (2023-04-28)
+
+### Bug Fixes
+
+-   **ffe-grid-react:** use react.htmlprops instead of react.componentprops ([c583b38](https://github.com/SpareBank1/designsystem/commit/c583b384da788ca10487255479033c097e874a0b))
+
 ## [13.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@13.0.3...@sb1/ffe-grid-react@13.0.4) (2023-04-27)
 
 ### Bug Fixes

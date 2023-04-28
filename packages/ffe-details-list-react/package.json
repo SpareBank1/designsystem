@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-details-list-react",
-    "version": "4.0.4",
+    "version": "4.0.5",
     "license": "MIT",
     "author": "SpareBank 1",
     "files": [
@@ -25,7 +25,7 @@
     },
     "dependencies": {
         "@sb1/ffe-grid": "^14.0.4",
-        "@sb1/ffe-grid-react": "^13.0.4",
+        "@sb1/ffe-grid-react": "^13.0.5",
         "classnames": "^2.3.1"
     },
     "devDependencies": {

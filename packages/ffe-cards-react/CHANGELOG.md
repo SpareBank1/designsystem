@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [11.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@11.0.0...@sb1/ffe-cards-react@11.0.1) (2023-04-28)
+
+### Bug Fixes
+
+-   **ffe-cards-react:** use react.htmlprops instead of react.componentprops ([60e9c68](https://github.com/SpareBank1/designsystem/commit/60e9c6882a874c18ed0d46a60db134e3d3986064))
+
 # [11.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@10.0.4...@sb1/ffe-cards-react@11.0.0) (2023-04-27)
 
 ### Features

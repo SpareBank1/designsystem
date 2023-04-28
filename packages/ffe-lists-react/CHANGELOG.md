@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@6.0.5...@sb1/ffe-lists-react@6.0.6) (2023-04-28)
+
+### Bug Fixes
+
+-   **ffe-lists-react:** use react.htmlprops instead of react.componentprops ([d9ee867](https://github.com/SpareBank1/designsystem/commit/d9ee86713e83eda5bbf42c111cc5d49fba6ad7cc))
+
 ## [6.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@6.0.4...@sb1/ffe-lists-react@6.0.5) (2023-04-27)
 
 ### Bug Fixes

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [18.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@18.0.0...@sb1/ffe-buttons-react@18.0.1) (2023-04-28)
+
+### Bug Fixes
+
+-   **ffe-buttons-react:** use react.htmlprops instead of react.componentprops ([8cd93e5](https://github.com/SpareBank1/designsystem/commit/8cd93e5897f211baf0d79b086561acc91d17c739))
+
 # [18.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@17.0.3...@sb1/ffe-buttons-react@18.0.0) (2023-04-27)
 
 ### Bug Fixes
