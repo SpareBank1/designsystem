@@ -14,7 +14,7 @@ export interface CheckboxProps
           }) => React.ReactNode);
 }
 
-export interface BaseFieldMessageProps extends React.ComponentProps<'html'> {
+export interface BaseFieldMessageProps extends React.ComponentProps<'div'> {
     children: React.ReactNode;
     className?: string;
     element?: string;
