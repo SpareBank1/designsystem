@@ -4,7 +4,7 @@ export interface DividerLineProps extends React.ComponentProps<'hr'> {
     className?: string;
 }
 
-export interface EmphasizedTextProps extends React.ComponentProps<'html'> {
+export interface EmphasizedTextProps extends React.ComponentProps<'em'> {
     children: React.ReactNode;
     className?: string;
 }
@@ -27,7 +27,7 @@ export interface LinkTextProps extends React.ComponentProps<'a'> {
     underline?: boolean;
 }
 
-export interface LinkIconProps extends React.ComponentProps<'html'> {
+export interface LinkIconProps extends React.ComponentProps<'a'> {
     children: React.ReactNode;
     className?: string;
     element?: HTMLElement | string | React.ElementType;
