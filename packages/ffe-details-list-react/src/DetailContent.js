@@ -27,7 +27,6 @@ export default function DetailContent(props) {
             sm={12}
             md={{ cols: 8, offset: 2 }}
             lg={{ cols: getColCount(childCount, index), offset: 0 }}
-            bottomPadding={false}
             {...rest}
         >
             {children}
