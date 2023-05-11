@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@4.0.5...@sb1/ffe-details-list-react@4.0.6) (2023-05-11)
+
+### Bug Fixes
+
+-   **ffe-details-list-react:** removed bottomPadding prod from GridCol ([3add437](https://github.com/SpareBank1/designsystem/commit/3add43741b38f339ce61c80f9cf053bf541b9fec))
+
 ## [4.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@4.0.4...@sb1/ffe-details-list-react@4.0.5) (2023-04-28)
 
 **Note:** Version bump only for package @sb1/ffe-details-list-react
