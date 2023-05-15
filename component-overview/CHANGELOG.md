@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@4.2.11...@sb1/ffe-component-index@4.3.0) (2023-05-15)
+
+### Features
+
+-   **component-overview:** legg til eksempler på RadioButtonInputGroup brukes til UU testing ([cf78a45](https://github.com/SpareBank1/designsystem/commit/cf78a4566ddf78662d18237e1645f6c4a2d79110))
+
 ## [4.2.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@4.2.10...@sb1/ffe-component-index@4.2.11) (2023-05-12)
 
 **Note:** Version bump only for package @sb1/ffe-component-index
