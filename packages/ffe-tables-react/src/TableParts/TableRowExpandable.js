@@ -107,7 +107,7 @@ class TableRowExpandable extends Component {
                         colSpan={columns.length}
                         className="ffe-table__cell-expandable-content"
                     >
-                        <div>{this.state.expanded && children}</div>
+                        <>{this.state.expanded && children}</>
                     </td>
                 </tr>
             </tbody>
