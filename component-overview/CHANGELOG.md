@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.4.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@4.3.0...@sb1/ffe-component-index@4.4.0) (2023-05-24)
+
+### Features
+
+-   **component-overview:** legg til tabell inni tabell eksempel ([db4ddee](https://github.com/SpareBank1/designsystem/commit/db4ddeeb358b7c1bacc66c827176aa5bdefd6898))
+
 # [4.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@4.2.11...@sb1/ffe-component-index@4.3.0) (2023-05-15)
 
 ### Features
