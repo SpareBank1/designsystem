@@ -104,13 +104,11 @@ const InputGroup = ({
                     id: labelId,
                 })}
 
-            {typeof tooltip === 'string' && (
+            {(typeof tooltip === 'string' || React.isValidElement(tooltip)) && (
                 <Tooltip onClick={onTooltipToggle}>{tooltip}</Tooltip>
             )}
 
             {tooltip === true && <Tooltip onClick={onTooltipToggle} />}
-
-            {React.isValidElement(tooltip) && tooltip}
 
             {description && (
                 <div
