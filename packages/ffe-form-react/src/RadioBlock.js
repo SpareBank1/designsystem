@@ -34,7 +34,9 @@ class RadioBlock extends Component {
                     name={name}
                     value={value}
                     aria-describedby={
-                        children ? `${this.id}-described` : undefined
+                        (children && showChildren) || (children && isSelected)
+                            ? `${this.id}-described`
+                            : undefined
                     }
                     {...inputProps}
                 />
