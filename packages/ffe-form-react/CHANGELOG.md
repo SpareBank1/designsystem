@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [11.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@11.0.10...@sb1/ffe-form-react@11.0.11) (2023-06-02)
+
+### Bug Fixes
+
+-   **ffe-form-react:** dont set aria-describedby when child element is hidden ([e348e55](https://github.com/SpareBank1/designsystem/commit/e348e5583aca53233611f7d149c4965b46ff8d9a))
+
 ## [11.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@11.0.9...@sb1/ffe-form-react@11.0.10) (2023-05-24)
 
 **Note:** Version bump only for package @sb1/ffe-form-react
