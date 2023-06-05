@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [21.3.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@21.3.7...@sb1/ffe-account-selector-react@21.3.8) (2023-06-05)
+
+### Bug Fixes
+
+-   **ffe-account-selector-react:** fikser padding-issue i \_\_selection-status ([bd9677c](https://github.com/SpareBank1/designsystem/commit/bd9677ca8240e1fec8b5e47e22f57de79f2fcb3e))
+
 ## [21.3.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@21.3.6...@sb1/ffe-account-selector-react@21.3.7) (2023-06-02)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
