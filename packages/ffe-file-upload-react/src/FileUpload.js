@@ -60,6 +60,7 @@ class FileUpload extends React.Component {
             uploadTitle,
             uploadMicroText,
             uploadSubText,
+            accept,
         } = this.props;
 
         return (
@@ -131,6 +132,7 @@ class FileUpload extends React.Component {
                     ref={this.setFileInputElement}
                     onChange={this.onFilesSelected}
                     aria-labelledby={`${id}-label`}
+                    accept={accept || '*'}
                 />
             </div>
         );
@@ -180,6 +182,11 @@ FileUpload.propTypes = {
     uploadMicroText: stringType.isRequired,
     /** SubText on the upload-section */
     uploadSubText: stringType.isRequired,
+    /** Unique file type specifier that describes a type of file that may be selected by the user, e.g. ".pdf"
+     *  See MDN for documentation on
+     *  [Unique file type specifiers](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file#unique_file_type_specifiers)
+     */
+    accept: stringType,
 };
 
 export default FileUpload;
