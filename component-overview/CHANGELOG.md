@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.4.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@4.4.3...@sb1/ffe-component-index@4.4.4) (2023-06-06)
+
+### Bug Fixes
+
+-   **component-overview:** legg til eksempel med radioswitch uten group ([17eb51e](https://github.com/SpareBank1/designsystem/commit/17eb51ef4b494f5ca96e2db42e81131d81933d16))
+
 ## [4.4.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@4.4.2...@sb1/ffe-component-index@4.4.3) (2023-06-06)
 
 **Note:** Version bump only for package @sb1/ffe-component-index
