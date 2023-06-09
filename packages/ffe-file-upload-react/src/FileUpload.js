@@ -39,7 +39,7 @@ class FileUpload extends React.Component {
     onFilesDropped(event) {
         event.preventDefault();
         this.setState({ hover: false });
-        this.props.onFilesDropped(event);
+        this.props.onFilesDropped(event.dataTransfer.files);
     }
 
     onFileDeleted(event) {
