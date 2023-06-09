@@ -22,7 +22,7 @@ export interface FileUploadProps<T> {
     uploadTitle: string;
     uploadMicroText: string;
     uploadSubText: string;
-    accept: string;
+    accept?: string;
 }
 declare class FileUpload<T> extends React.Component<FileUploadProps<T>, any> {}
 
