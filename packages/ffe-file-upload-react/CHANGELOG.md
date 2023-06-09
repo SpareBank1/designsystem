@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload-react@7.1.0...@sb1/ffe-file-upload-react@7.1.1) (2023-06-09)
+
+### Bug Fixes
+
+-   **ffe-file-upload-react:** make accept prop optional ([10b9af9](https://github.com/SpareBank1/designsystem/commit/10b9af9c53731fbd355912e287becb25e891780b))
+
 # [7.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload-react@7.0.10...@sb1/ffe-file-upload-react@7.1.0) (2023-06-06)
 
 ### Features
