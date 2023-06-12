@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@4.0.6...@sb1/ffe-details-list-react@4.0.7) (2023-06-12)
+
+### Bug Fixes
+
+-   **ffe-details-list-react:** eksporterer typer ([9300eea](https://github.com/SpareBank1/designsystem/commit/9300eeaa4e7bb1dcf10a5b84f1bcf7c7a1014bcc))
+-   **ffe-details-list-react:** remove bottomPadding from grid ([ece75f8](https://github.com/SpareBank1/designsystem/commit/ece75f8c74fc4ba79379d189793c013d2aacb038))
+
 ## [4.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-details-list-react@4.0.5...@sb1/ffe-details-list-react@4.0.6) (2023-05-11)
 
 ### Bug Fixes
