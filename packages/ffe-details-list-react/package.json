@@ -6,7 +6,8 @@
     "files": [
         "lib",
         "es",
-        "less"
+        "less",
+        "types"
     ],
     "main": "lib/index.js",
     "module": "es/index.js",
