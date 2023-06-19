@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [18.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@18.0.2...@sb1/ffe-buttons-react@18.0.3) (2023-06-19)
+
+### Bug Fixes
+
+-   **ffe-buttons-react:** fix MinimalBaseButtonProps ([8853839](https://github.com/SpareBank1/designsystem/commit/8853839b5d5860b1471662823f099b25c0fa8fc8))
+
 ## [18.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@18.0.1...@sb1/ffe-buttons-react@18.0.2) (2023-04-28)
 
 ### Bug Fixes
