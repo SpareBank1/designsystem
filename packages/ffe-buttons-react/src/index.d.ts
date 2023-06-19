@@ -4,8 +4,7 @@ export type MinimalBaseButtonProps = {
     className?: string;
     element?: HTMLElement | string | React.ElementType;
     innerRef?: React.Ref<HTMLElement>;
-} & React.ComponentProps<'button'> &
-    React.ComponentProps<'a'>;
+} & (React.ComponentProps<'button'> | React.ComponentProps<'a'>);
 
 export type BaseButtonProps = {
     children?: React.ReactNode;
