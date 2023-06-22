@@ -4,8 +4,7 @@ export type ComponentBaseProps = {
     className?: string;
     element?: HTMLElement | string | React.ElementType;
     innerRef?: React.Ref<HTMLElement>;
-} & React.ComponentProps<'button'> &
-    React.ComponentProps<'a'>;
+} & (React.ComponentProps<'button'> | React.ComponentProps<'a'>);
 
 type TitleProps = {
     overflowEllipsis?: boolean;
