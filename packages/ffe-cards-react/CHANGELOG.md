@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [11.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@11.0.2...@sb1/ffe-cards-react@11.0.3) (2023-06-22)
+
+### Bug Fixes
+
+-   **ffe-cards-react:** fix ts types ([f922132](https://github.com/SpareBank1/designsystem/commit/f9221326625b54de438211233e8e87ce3f81e762))
+
 ## [11.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@11.0.1...@sb1/ffe-cards-react@11.0.2) (2023-04-28)
 
 ### Bug Fixes
