@@ -51,6 +51,7 @@ export const SearchableDropdown = ({
     onOpen,
     onClose,
     results: ResultsElement = Results,
+    innerRef,
 }) => {
     const [state, dispatch] = useReducer(
         createReducer({
@@ -87,7 +88,8 @@ export const SearchableDropdown = ({
     const [refs, setRefs] = useState([]);
     const [hasFocus, setHasFocus] = useState(false);
     const isInitialMountRef = useRef(true);
-    const inputRef = useRef();
+    const internalRef = useRef();
+    const inputRef = innerRef || internalRef;
     const toggleButtonRef = useRef();
     const containerRef = useRef();
 
