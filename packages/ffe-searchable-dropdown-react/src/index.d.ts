@@ -34,6 +34,7 @@ export interface SearchableDropdownProps<T> {
     isLoading?: boolean;
     onOpen?: () => void;
     onClose?: () => void;
+    innerRef?: React.Ref<HTMLInputElement>;
 }
 
 export interface SearchableDropdownHighCapacityProps<T>
