@@ -18,6 +18,7 @@ export interface BaseFieldMessageProps extends React.ComponentProps<'div'> {
     children: React.ReactNode;
     className?: string;
     element?: string;
+    role?: 'status' | 'alert' | 'none';
 }
 
 export interface InputProps extends React.ComponentProps<'input'> {
