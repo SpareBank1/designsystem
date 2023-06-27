@@ -49,7 +49,7 @@ const FileItem = ({ file, onFileDeleted, cancelText, deleteText }) => (
         {// File has error
         file.error && (
             <div className="ffe-file-upload__file-item-error">
-                <div className="ffe-file-upload__file-item-error-icon ffe-field-error-message" />
+                <div className="ffe-file-upload__file-item-error-icon ffe-field-message ffe-field-message--error" />
                 <button
                     type="button"
                     id={file.name}
