@@ -1,0 +1,50 @@
+.ffe-field-message {
+    font-family: var(--ffe-g-font);
+    color: var(--ffe-v-input-color);
+    margin: @ffe-spacing-2xs 0 @ffe-spacing-xs;
+    display: block;
+    font-size: var(--ffe-fontsize-body-text);
+
+    &[aria-hidden='true'] {
+        display: none;
+    }
+
+    &__icon {
+        background-color: var(--ffe-v-info-message-icon-color);
+        border-radius: 50%;
+        padding: 3px;
+        width: 18px;
+        height: 18px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: @ffe-spacing-2xs;
+        vertical-align: text-top;
+        text-align: center;
+        font-family: arial, sans-serif;
+
+        > svg {
+            fill: var(--ffe-v-info-message-icon-fill);
+            width: 12px;
+            height: 12px;
+        }
+    }
+}
+
+.ffe-field-message--success .ffe-field-message__icon {
+    background-color: var(--ffe-v-success-message-icon-color);
+
+    > svg {
+        fill: var(--ffe-v-success-message-icon-fill);
+        width: 11px;
+        height: 11px;
+    }
+}
+
+.ffe-field-message--error .ffe-field-message__icon {
+    background-color: var(--ffe-v-error-message-icon-color);
+
+    > svg {
+        fill: var(--ffe-v-error-message-icon-fill);
+    }
+}
