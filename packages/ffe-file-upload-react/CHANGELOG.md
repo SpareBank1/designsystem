@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [9.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload-react@8.0.1...@sb1/ffe-file-upload-react@9.0.0) (2023-06-28)
+
+### Bug Fixes
+
+-   **ffe-file-upload-react:** endrer feilmelding til å gjenspeile oppdatert fieldmessage ([f63bc99](https://github.com/SpareBank1/designsystem/commit/f63bc99c87a95e9fbe251640246f2fd05a8fabbe))
+
+### BREAKING CHANGES
+
+-   **ffe-file-upload-react:** fieldmessage har ny styling- og markupstruktur, dette påvirker også fileupload
+
 ## [8.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload-react@8.0.0...@sb1/ffe-file-upload-react@8.0.1) (2023-06-19)
 
 **Note:** Version bump only for package @sb1/ffe-file-upload-react

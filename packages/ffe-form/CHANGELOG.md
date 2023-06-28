@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [24.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@23.0.7...@sb1/ffe-form@24.0.0) (2023-06-28)
+
+### Bug Fixes
+
+-   **ffe-form:** tar i bruk ikoner fra ffe-icons i fieldmessage ([ae81f73](https://github.com/SpareBank1/designsystem/commit/ae81f739d8d0935a5035593b63f64b4be74e1522))
+
+### BREAKING CHANGES
+
+-   **ffe-form:** fieldmessage har ny styling- og markupstruktur
+
 ## [23.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@23.0.6...@sb1/ffe-form@23.0.7) (2023-05-24)
 
 ### Bug Fixes

@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@11.0.11...@sb1/ffe-form-react@12.0.0) (2023-06-28)
+
+### Bug Fixes
+
+-   **ffe-form-react:** tar i bruk ikoner fra ffe-icons i fieldmessage ([b6e5f68](https://github.com/SpareBank1/designsystem/commit/b6e5f688383bd7286fa3c122559c0fe2762d144c))
+
+### BREAKING CHANGES
+
+-   **ffe-form-react:** fieldmessage har ny styling- og markupstruktur
+
+feat(ffe-form-react): default aria-role på fieldmessage
+
+fix(ffe-form-react): begrenser role-proptype til utvalgte verdier
+
 ## [11.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@11.0.10...@sb1/ffe-form-react@11.0.11) (2023-06-02)
 
 ### Bug Fixes

@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [9.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload@8.0.7...@sb1/ffe-file-upload@9.0.0) (2023-06-28)
+
+### Bug Fixes
+
+-   **ffe-file-upload:** endrer feilmelding til å gjenspeile oppdatert fieldmessage ([25618ac](https://github.com/SpareBank1/designsystem/commit/25618ace5451bace2cecc2a7508e2883f33d2df5))
+
+### BREAKING CHANGES
+
+-   **ffe-file-upload:** fieldmessage har ny styling- og markupstruktur, dette påvirker også fileupload
+
 ## [8.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload@8.0.6...@sb1/ffe-file-upload@8.0.7) (2023-05-24)
 
 **Note:** Version bump only for package @sb1/ffe-file-upload
