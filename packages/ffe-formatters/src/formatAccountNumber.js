@@ -1,12 +1,24 @@
 import { NON_BREAKING_SPACE } from './internal/unicode';
 
 export default function formatAccountNumber(accountNumber) {
-    if (!accountNumber || accountNumber.length !== 11) {
+    if (!accountNumber) {
         return accountNumber;
     }
-    return [
-        accountNumber.substring(0, 4),
-        accountNumber.substring(4, 6),
-        accountNumber.substring(6, 11),
-    ].join(NON_BREAKING_SPACE);
+    let formattedAccountNumber = '';
+
+    if (accountNumber.length > 0) {
+        formattedAccountNumber += accountNumber.substring(0, 4);
+    }
+
+    if (accountNumber.length > 4) {
+        formattedAccountNumber +=
+            NON_BREAKING_SPACE + accountNumber.substring(4, 6);
+    }
+
+    if (accountNumber.length > 6) {
+        formattedAccountNumber +=
+            NON_BREAKING_SPACE + accountNumber.substring(6);
+    }
+
+    return formattedAccountNumber;
 }
