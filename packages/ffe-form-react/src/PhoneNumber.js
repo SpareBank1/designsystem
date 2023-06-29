@@ -27,6 +27,7 @@ export default class PhoneNumber extends React.Component {
             extraMargin,
             countryCodeRef,
             numberRef,
+            isMobileNumber,
         } = this.props;
 
         let fieldMessage;
@@ -106,7 +107,9 @@ export default class PhoneNumber extends React.Component {
                             className="ffe-form-label"
                             htmlFor={this.numberId}
                         >
-                            {text.PHONE_NUMBER}
+                            {isMobileNumber
+                                ? text.MOBILE_NUMBER
+                                : text.PHONE_NUMBER}
                         </label>
                         <input
                             id={this.numberId}
@@ -182,6 +185,8 @@ PhoneNumber.propTypes = {
     countryCodeRef: oneOfType([func, shape({ current: object })]),
     /** Ref-setting function, or ref created by useRef, passed to the number input element */
     numberRef: oneOfType([func, shape({ current: object })]),
+    /** If True label is changed from "Phone number" to "Mobile number" */
+    isMobileNumber: bool,
 };
 
 PhoneNumber.defaultProps = {
@@ -192,4 +197,5 @@ PhoneNumber.defaultProps = {
     onCountryCodeBlur: noop,
     onNumberBlur: noop,
     extraMargin: true,
+    isMobileNumber: false,
 };

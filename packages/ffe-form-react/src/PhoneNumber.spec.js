@@ -50,6 +50,26 @@ describe('renders correctly', () => {
         expect(inputs.at(1).prop('aria-invalid')).toBe(false);
     });
 
+    it('should set label to phonenumber by default', function() {
+        const wrapper = getWrapper({});
+        const input = wrapper
+            .find('label')
+            .at(1)
+            .props().children;
+        expect(input).toEqual('Telefonnummer');
+    });
+
+    it('should set label to mobilenumber when isMobileNumber true', function() {
+        const wrapper = getWrapper({
+            isMobileNumber: true,
+        });
+        const input = wrapper
+            .find('label')
+            .at(1)
+            .props().children;
+        expect(input).toEqual('Mobilnummer');
+    });
+
     it('should render using numberFieldMessage prop', function() {
         const wrapper = getWrapper({ numberFieldMessage: 'Denne ble feil' });
         const inputs = wrapper.find('input');
