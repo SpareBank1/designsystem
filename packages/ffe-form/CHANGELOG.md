@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [24.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@24.0.0...@sb1/ffe-form@24.0.1) (2023-07-03)
+
+### Bug Fixes
+
+-   **ffe-form:** retter klassenavn ([14b8807](https://github.com/SpareBank1/designsystem/commit/14b8807fa836d69311bfddba1c6d6ef96b8e1998))
+
 # [24.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@23.0.7...@sb1/ffe-form@24.0.0) (2023-06-28)
 
 ### Bug Fixes

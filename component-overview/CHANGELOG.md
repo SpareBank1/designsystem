@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.5.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@4.4.14...@sb1/ffe-component-index@4.5.0) (2023-07-03)
+
+### Features
+
+-   **component-overview:** legg til eksempel for isMobileNumber prop ([94d4a7c](https://github.com/SpareBank1/designsystem/commit/94d4a7c7d8f0c299277dd0514927a355a7081b8d))
+
 ## [4.4.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@4.4.13...@sb1/ffe-component-index@4.4.14) (2023-06-28)
 
 **Note:** Version bump only for package @sb1/ffe-component-index

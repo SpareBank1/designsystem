@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@12.0.0...@sb1/ffe-form-react@12.1.0) (2023-07-03)
+
+### Features
+
+-   **ffe-form-react:** legg til isMobileNumber prop for å endre labeltekst ([007a30e](https://github.com/SpareBank1/designsystem/commit/007a30e06e326041e2dc10bb937f0ffcee884545))
+
 # [12.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@11.0.11...@sb1/ffe-form-react@12.0.0) (2023-06-28)
 
 ### Bug Fixes

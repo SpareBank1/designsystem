@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-formatters@4.0.11...@sb1/ffe-formatters@4.0.12) (2023-07-03)
+
+### Bug Fixes
+
+-   **ffe-formatters:** formatter kontonummer mens man skriver ([d1ad119](https://github.com/SpareBank1/designsystem/commit/d1ad119956e606945a69131f514bfd756473a448))
+
 ## [4.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-formatters@4.0.10...@sb1/ffe-formatters@4.0.11) (2022-10-28)
 
 **Note:** Version bump only for package @sb1/ffe-formatters
