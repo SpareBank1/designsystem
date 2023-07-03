@@ -14,8 +14,10 @@ describe('format account number', () => {
         expect(formatAccountNumber('')).toBe('');
     });
 
-    test('returns input when account number length is not 11', () => {
-        expect(formatAccountNumber('1234567890')).toBe('1234567890');
+    test('Formats account number even when less than 11 digits', () => {
+        expect(formatAccountNumber('12345678')).toBe(
+            `1234${NON_BREAKING_SPACE}56${NON_BREAKING_SPACE}78`,
+        );
     });
 
     test('formats account number correctly', () => {
