@@ -44,6 +44,7 @@ export interface PhoneNumberProps {
     extraMargin?: boolean;
     countryCodeRef?: React.Ref<HTMLInputElement>;
     numberRef?: React.Ref<HTMLInputElement>;
+    isMobileNumber?: boolean;
 }
 
 export interface LabelProps extends React.ComponentProps<'label'> {
