@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@12.1.0...@sb1/ffe-form-react@12.1.1) (2023-07-04)
+
+### Bug Fixes
+
+-   **ffe-form-react:** add isMobileNumber to PhoneNumberProps ([24f01e7](https://github.com/SpareBank1/designsystem/commit/24f01e721c151a2cb023130d1d74105d27345b05))
+
 # [12.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@12.0.0...@sb1/ffe-form-react@12.1.0) (2023-07-03)
 
 ### Features
