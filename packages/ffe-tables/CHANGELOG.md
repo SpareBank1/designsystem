@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [13.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@13.0.3...@sb1/ffe-tables@13.0.4) (2023-07-12)
+
+### Bug Fixes
+
+-   **ffe-tables:** retter farge på table-headinger ([acd2e20](https://github.com/SpareBank1/designsystem/commit/acd2e20bd8875d5a1649ccdf683e70ec8cf56903))
+
 ## [13.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@13.0.2...@sb1/ffe-tables@13.0.3) (2023-04-27)
 
 **Note:** Version bump only for package @sb1/ffe-tables
