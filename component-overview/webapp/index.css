@@ -1,6 +1,7 @@
 @import 'npm:@sb1/ffe-core/css/dimensions.css';
 @import 'npm:@sb1/ffe-core/css/spacing.css';
 @import 'npm:@sb1/ffe-webfonts/sb1-fonts.css';
+@import 'npm:@sb1/ffe-symbols/ffe-symbol.css';
 @import 'styles/defaults.css';
 @import 'styles/prefers-color-scheme-dark.css';
 @import 'styles/sb1ex-header.css';
