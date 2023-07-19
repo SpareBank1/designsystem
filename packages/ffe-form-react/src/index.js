@@ -3,6 +3,7 @@ import ErrorFieldMessage from './ErrorFieldMessage';
 import InfoFieldMessage from './InfoFieldMessage';
 import SuccessFieldMessage from './SuccessFieldMessage';
 import Input from './Input';
+import InputTextLike from './InputTextLike';
 import InputGroup from './InputGroup';
 import Label from './Label';
 import PhoneNumber from './PhoneNumber';
@@ -20,6 +21,7 @@ export {
     InfoFieldMessage,
     SuccessFieldMessage,
     Input,
+    InputTextLike,
     PhoneNumber,
     InputGroup,
     Label,
