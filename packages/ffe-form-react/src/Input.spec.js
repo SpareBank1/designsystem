@@ -28,12 +28,6 @@ describe('<Input />', () => {
         expect(wrapper.hasClass('ffe-input-field--inline')).toBe(true);
     });
 
-    it('sets the correct class for textLike-modifer', () => {
-        const wrapper = getWrapper();
-        expect(wrapper.hasClass('ffe-input-field--text-like')).toBe(false);
-        wrapper.setProps({ textLike: true });
-        expect(wrapper.hasClass('ffe-input-field--text-like')).toBe(true);
-    });
     it('sets the correct class for textRightAlign', () => {
         const wrapper = getWrapper();
         expect(wrapper.hasClass('ffe-input-field--text-right-align')).toBe(

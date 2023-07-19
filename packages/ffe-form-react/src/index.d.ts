@@ -24,8 +24,12 @@ export interface BaseFieldMessageProps extends React.ComponentProps<'div'> {
 export interface InputProps extends React.ComponentProps<'input'> {
     className?: string;
     inline?: boolean;
-    textLike?: boolean;
     textRightAlign?: boolean;
+}
+
+export interface InputTextLikeProps extends React.ComponentProps<'input'> {
+    ariaLabel: string;
+    className?: string;
 }
 
 export interface PhoneNumberProps {
