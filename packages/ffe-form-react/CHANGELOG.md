@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [13.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@12.1.1...@sb1/ffe-form-react@13.0.0) (2023-07-20)
+
+### Features
+
+-   **ffe-form-react:** skiller ut textlike input i egen komponent ([f0fd633](https://github.com/SpareBank1/designsystem/commit/f0fd63322cc3240156213704b818b2409a854961))
+
+### BREAKING CHANGES
+
+-   **ffe-form-react:** Input som bruker textLike-modifieren må ta i bruk InputTextLike
+
 ## [12.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@12.1.0...@sb1/ffe-form-react@12.1.1) (2023-07-04)
 
 ### Bug Fixes
