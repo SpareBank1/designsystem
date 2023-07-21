@@ -196,6 +196,7 @@ declare class SuccessFieldMessage extends React.Component<
     any
 > {}
 declare class Input extends React.Component<InputProps, any> {}
+declare class InputTextLike extends React.Component<InputTextLikeProps, any> {}
 declare class PhoneNumber extends React.Component<PhoneNumberProps, any> {}
 declare class Label extends React.Component<LabelProps, any> {}
 declare class InputGroup extends React.Component<InputGroupProps, any> {}
