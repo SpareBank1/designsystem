@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [13.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@13.0.0...@sb1/ffe-form-react@13.0.1) (2023-07-21)
+
+### Bug Fixes
+
+-   **ffe-form-react:** legger til manglende klassedeklarasjon ([d94533b](https://github.com/SpareBank1/designsystem/commit/d94533bea6b7a383c32cee7ee65f62b975a6d0c2))
+
 # [13.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@12.1.1...@sb1/ffe-form-react@13.0.0) (2023-07-20)
 
 ### Features
