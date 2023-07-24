@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [13.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@13.0.1...@sb1/ffe-form-react@13.0.2) (2023-07-24)
+
+### Bug Fixes
+
+-   **ffe-form-react:** definerer proptypes på errorfieldmessage ([7c453ae](https://github.com/SpareBank1/designsystem/commit/7c453ae0b27d051a8db959579b0d12410eb4eb22))
+
 ## [13.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@13.0.0...@sb1/ffe-form-react@13.0.1) (2023-07-21)
 
 ### Bug Fixes
