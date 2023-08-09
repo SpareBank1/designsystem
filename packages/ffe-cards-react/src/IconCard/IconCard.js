@@ -9,7 +9,6 @@ const IconCard = props => {
         className,
         icon,
         condensed,
-        greyCharcoal,
         element: Element,
         children,
         ...rest
@@ -20,7 +19,6 @@ const IconCard = props => {
             className={classNames(
                 'ffe-icon-card',
                 { 'ffe-icon-card--condensed': condensed },
-                { 'ffe-icon-card--grey-charcoal': greyCharcoal },
                 className,
             )}
             {...rest}
@@ -51,8 +49,6 @@ IconCard.propTypes = {
     icon: node.isRequired,
     /** Smaller icon and less space */
     condensed: bool,
-    /** Icon and text will all be ffe-grey-charcoal */
-    greyCharcoal: bool,
     /** The element to render the card as */
     element: oneOfType([func, string, elementType]),
     /** Function that's passed available sub-components as arguments, or regular children */

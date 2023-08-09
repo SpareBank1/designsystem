@@ -4,6 +4,21 @@ import { GrafOppIkon } from '@sb1/ffe-icons-react';
 
 
 <div>
+    <StippledCard href="https://design.sparebank1.no">
+        {({ CardName, Title, Subtext, Text }) => (
+            <>
+                <CardName>CardName</CardName>
+                <Title>Tittel</Title>
+                <Subtext element="span">Subtext er grå</Subtext>
+                <Text>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat.
+                </Text>
+            </>
+        )}
+    </StippledCard>
     <StippledCard href="https://design.sparebank1.no" img={{ type: 'icon', element: <GrafOppIkon  /> } }>
         {({ CardName, Title, Subtext, Text }) => (
             <>
