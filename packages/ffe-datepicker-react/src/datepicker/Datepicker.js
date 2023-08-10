@@ -89,79 +89,85 @@ export default class Datepicker extends Component {
     }
 
     validateDateIntervals() {
-        let nextState = {};
-        const { onChange, value, onValidationComplete } = this.props;
+        this.setState((prevState, props) => {
+            let nextState = {};
+            const { onChange, value, onValidationComplete } = props;
 
-        const error = type => {
-            const errorMessage = this.onError(type);
+            const error = type => {
+                const errorMessage = this.onError(type);
 
-            nextState = {
-                errorMessage,
-
-                ariaInvalid: true,
-            };
-        };
-
-        SimpleDate.fromString(
-            value,
-            date => {
                 nextState = {
-                    ariaInvalid: false,
+                    errorMessage,
+                    ariaInvalid: true,
                 };
+            };
 
-                const maxDate = SimpleDate.fromString(this.state.maxDate);
-
-                // SimpleDate.fromString assumes years written as two digits
-                // are in the 20th century.  This can be unwanted behaviour
-                // when asking for dates in the past, like birth dates.
-                // This little hack should catch most of these cases.
-                if (
-                    maxDate?.isBefore(date) &&
-                    isDateInputWithTwoDigitYear(value)
-                ) {
-                    date.adjust('Y', -100);
-                }
-
-                const formattedDate = date.format();
-
-                if (formattedDate !== value) {
-                    onChange(formattedDate);
-                }
-
-                if (SimpleDate.fromString(this.state.minDate)?.isAfter(date)) {
-                    error(dateErrorTypes.MIN_DATE);
-                } else if (maxDate?.isBefore(date)) {
-                    error(dateErrorTypes.MAX_DATE);
-                }
-                this.setState({
-                    lastValidDate: formattedDate,
-                });
-
-                onValidationComplete(formattedDate);
-            },
-            errorType => {
-                const emptyValue = value === '';
-
-                if (emptyValue && this.state.errorMessage) {
+            SimpleDate.fromString(
+                value,
+                date => {
                     nextState = {
                         ariaInvalid: false,
-                        errorMessage: null,
                     };
-                    onValidationComplete(value);
-                    return;
-                } else if (emptyValue) {
-                    nextState = {
-                        ...this.state,
-                    };
-                    onValidationComplete(value);
-                    return;
-                }
-                error(errorType);
 
-                onValidationComplete(value);
-            },
-        );
-        this.setState(nextState);
+                    const maxDate = SimpleDate.fromString(prevState.maxDate);
+
+                    // SimpleDate.fromString assumes years written as two digits
+                    // are in the 20th century.  This can be unwanted behaviour
+                    // when asking for dates in the past, like birth dates.
+                    // This little hack should catch most of these cases.
+                    if (
+                        maxDate?.isBefore(date) &&
+                        isDateInputWithTwoDigitYear(value)
+                    ) {
+                        date.adjust('Y', -100);
+                    }
+
+                    const formattedDate = date.format();
+
+                    if (formattedDate !== value) {
+                        onChange(formattedDate);
+                    }
+
+                    if (
+                        SimpleDate.fromString(prevState.minDate)?.isAfter(date)
+                    ) {
+                        error(dateErrorTypes.MIN_DATE);
+                    } else if (maxDate?.isBefore(date)) {
+                        error(dateErrorTypes.MAX_DATE);
+                    }
+
+                    nextState = {
+                        ...nextState,
+                        lastValidDate: formattedDate,
+                    };
+
+                    onValidationComplete(formattedDate);
+                },
+                errorType => {
+                    const emptyValue = value === '';
+
+                    if (emptyValue && prevState.errorMessage) {
+                        nextState = {
+                            ariaInvalid: false,
+                            errorMessage: null,
+                        };
+                        onValidationComplete(value);
+                        return;
+                    } else if (emptyValue) {
+                        nextState = {
+                            ...prevState,
+                        };
+                        onValidationComplete(value);
+                        return;
+                    }
+                    error(errorType);
+
+                    onValidationComplete(value);
+                },
+            );
+
+            return nextState;
+        });
     }
 
     onInputBlur() {
