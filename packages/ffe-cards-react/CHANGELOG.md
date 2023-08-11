@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@11.0.3...@sb1/ffe-cards-react@12.0.0) (2023-08-11)
+
+### Features
+
+-   **ffe-cards-react:** added StrippledCard ([7e884d4](https://github.com/SpareBank1/designsystem/commit/7e884d48ec241f42bb34585b9be51f7c03fc5de7))
+
+### BREAKING CHANGES
+
+-   **ffe-cards-react:** removed greyChoral modifier on IconCard
+
 ## [11.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@11.0.2...@sb1/ffe-cards-react@11.0.3) (2023-06-22)
 
 ### Bug Fixes

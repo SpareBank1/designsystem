@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [16.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@15.0.3...@sb1/ffe-cards@16.0.0) (2023-08-11)
+
+### Features
+
+-   **ffe-cards-react:** added StrippledCard ([7e884d4](https://github.com/SpareBank1/designsystem/commit/7e884d48ec241f42bb34585b9be51f7c03fc5de7))
+-   **ffe-cards:** added stippled card ([8694400](https://github.com/SpareBank1/designsystem/commit/86944005f7186734a658a4deb7d5e493f3279658))
+
+### BREAKING CHANGES
+
+-   **ffe-cards-react:** removed greyChoral modifier on IconCard
+-   **ffe-cards:** removed grey-choral modifier on icon-card
+
 ## [15.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@15.0.2...@sb1/ffe-cards@15.0.3) (2023-04-27)
 
 **Note:** Version bump only for package @sb1/ffe-cards

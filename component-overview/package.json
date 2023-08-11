@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-component-index",
-    "version": "4.5.5",
+    "version": "5.0.0",
     "description": "Index of FFE compontents",
     "license": "MIT",
     "author": "SpareBank 1 Utvikling",
@@ -45,8 +45,8 @@
         "@sb1/ffe-account-selector-react": "^21.3.16",
         "@sb1/ffe-buttons": "^17.0.3",
         "@sb1/ffe-buttons-react": "^18.0.3",
-        "@sb1/ffe-cards": "^15.0.3",
-        "@sb1/ffe-cards-react": "^11.0.3",
+        "@sb1/ffe-cards": "^16.0.0",
+        "@sb1/ffe-cards-react": "^12.0.0",
         "@sb1/ffe-chart-donut-react": "^5.2.0",
         "@sb1/ffe-collapse-react": "^2.0.3",
         "@sb1/ffe-context-message": "^7.1.4",
