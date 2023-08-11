@@ -1,0 +1,41 @@
+@import 'common-card-styling';
+@import 'components';
+
+.ffe-stippled-card {
+    .common-card-styling();
+
+    background: transparent;
+    border: 2px dashed var(--ffe-v-cards-stippled-border-color);
+    box-shadow: none;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    padding: @ffe-spacing-md;
+    gap: @ffe-spacing-sm;
+
+    &:hover,
+    &:focus,
+    &:active {
+        border-style: solid;
+        box-shadow: none;
+    }
+
+    .native & {
+        @media (prefers-color-scheme: dark) {
+            box-shadow: none;
+        }
+    }
+}
+
+.ffe-stippled-card__img--icon {
+    margin: 0 @ffe-spacing-md 0 @ffe-spacing-xs;
+    fill: var(--ffe-v-cards-stippled-icon-color);
+    height: 40px;
+    width: 40px;
+}
+
+.ffe-stippled-card--condensed .ffe-stippled-card__img--icon {
+    margin: 0 @ffe-spacing-xs 0 0;
+    height: 30px;
+    width: 30px;
+}

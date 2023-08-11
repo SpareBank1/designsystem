@@ -1,39 +1,19 @@
 import React from 'react';
 
-import IconCard from './IconCard';
+import StippledCard from './StippledCard';
 import { SparegrisIkon } from '@sb1/ffe-icons-react';
 import { Text } from '../components';
 
 const getWrapper = props =>
-    shallow(<IconCard icon={<SparegrisIkon />} {...props} />);
+    shallow(<StippledCard img={<SparegrisIkon />} {...props} />);
 const children = <div>Hello world</div>;
 
-describe('IconCard', () => {
+describe('StippledCard', () => {
     it('should render correct class and contain a div with body class', () => {
         const wrapper = getWrapper({ children });
 
-        expect(wrapper.hasClass('ffe-icon-card')).toBe(true);
-        expect(wrapper.find('.ffe-icon-card__body').exists()).toBe(true);
-        expect(
-            wrapper
-                .find('.ffe-icon-card__body')
-                .children()
-                .first()
-                .getElement(),
-        ).toEqual(children);
-    });
-
-    it('should render icon, with an added class', () => {
-        const wrapper = getWrapper({
-            icon: <SparegrisIkon className="my-custom-class" />,
-        });
-
-        expect(
-            wrapper.find(SparegrisIkon).hasClass('ffe-icon-card__icon'),
-        ).toBe(true);
-        expect(wrapper.find(SparegrisIkon).hasClass('my-custom-class')).toBe(
-            true,
-        );
+        expect(wrapper.hasClass('ffe-stippled-card')).toBe(true);
+        expect(wrapper.containsMatchingElement(children)).toBe(true);
     });
 
     it('should add modifying classes when modifiers are given', () => {
@@ -41,7 +21,7 @@ describe('IconCard', () => {
             condensed: true,
         });
 
-        expect(wrapper.hasClass('ffe-icon-card--condensed')).toBe(true);
+        expect(wrapper.hasClass('ffe-stippled-card--condensed')).toBe(true);
     });
 
     it('should render children as a function', () => {

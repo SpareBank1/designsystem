@@ -23,8 +23,8 @@
         max-height: 160px;
         position: relative;
         overflow: hidden;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
+        border-top-left-radius: var(--ffe-v-cards-common-card-border-radius);
+        border-top-right-radius: var(--ffe-v-cards-common-card-border-radius);
     }
 
     &__image {
@@ -43,8 +43,8 @@
         z-index: 10;
         height: 100%;
         border-bottom: 0;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
+        border-top-left-radius: var(--ffe-v-cards-common-card-border-radius);
+        border-top-right-radius: var(--ffe-v-cards-common-card-border-radius);
         position: absolute;
     }
 
@@ -52,8 +52,10 @@
         text-align: center;
         padding: @ffe-spacing-sm @ffe-spacing-sm @ffe-spacing-xs @ffe-spacing-sm;
         border-top: 0;
-        border-bottom-left-radius: 5px;
-        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: var(--ffe-v-cards-common-card-border-radius);
+        border-bottom-right-radius: var(
+            --ffe-v-cards-common-card-border-radius
+        );
         min-height: 200px;
     }
 

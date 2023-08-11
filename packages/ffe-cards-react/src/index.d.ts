@@ -1,9 +1,7 @@
 import * as React from 'react';
 
 export type ComponentBaseProps = {
-    className?: string;
     element?: HTMLElement | string | React.ElementType;
-    innerRef?: React.Ref<HTMLElement>;
 } & (React.ComponentProps<'button'> | React.ComponentProps<'a'>);
 
 type TitleProps = {
@@ -34,7 +32,16 @@ export interface IconCardProps<T = {}>
     extends Omit<ComponentBaseProps, 'children'> {
     icon: React.ReactNode;
     condensed?: boolean;
-    greyCharcoal?: boolean;
+    children?: React.ReactNode | ((props: CardRenderProps) => React.ReactNode);
+}
+
+export interface StrippledCardProps<T = {}>
+    extends Omit<ComponentBaseProps, 'children'> {
+    img?: {
+        element: React.ReactNode;
+        type: 'icon' | 'custom';
+    };
+    condensed?: boolean;
     children?: React.ReactNode | ((props: CardRenderProps) => React.ReactNode);
 }
 
@@ -51,6 +58,12 @@ declare class IconCard<T = {}> extends React.Component<
     NoInfer<T> & IconCardProps,
     any
 > {}
+
+declare class StrippledCard<T = {}> extends React.Component<
+    NoInfer<T> & StrippledCardProps,
+    any
+> {}
+
 declare class ImageCard<T = {}> extends React.Component<
     NoInfer<T> & ImageCardProps,
     any
