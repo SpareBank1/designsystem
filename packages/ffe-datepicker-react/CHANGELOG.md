@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.0.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@6.0.11...@sb1/ffe-datepicker-react@6.0.12) (2023-08-14)
+
+### Bug Fixes
+
+-   **ffe-datepicker-react:** fiks lukking av calendar ved tomt input ([c19bf3d](https://github.com/SpareBank1/designsystem/commit/c19bf3d52898561e7861e330685d2e0e2d7c75ff))
+
 ## [6.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@6.0.10...@sb1/ffe-datepicker-react@6.0.11) (2023-07-03)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker-react
