@@ -86,6 +86,15 @@ describe('<Datepicker />', () => {
 
             expect(wrapper.find(Calendar)).toHaveLength(1);
         });
+
+        it('does not contain Calendar on two clicks', () => {
+            const wrapper = getMountedWrapper();
+            const input = wrapper.find('button');
+            input.simulate('click');
+            input.simulate('click');
+
+            expect(wrapper.find(Calendar).exists()).toBe(false);
+        });
     });
 
     describe('with click after errors', () => {
