@@ -35,7 +35,7 @@ export interface IconCardProps<T = {}>
     children?: React.ReactNode | ((props: CardRenderProps) => React.ReactNode);
 }
 
-export interface StrippledCardProps<T = {}>
+export interface StippledCardProps<T = {}>
     extends Omit<ComponentBaseProps, 'children'> {
     img?: {
         element: React.ReactNode;
@@ -59,8 +59,8 @@ declare class IconCard<T = {}> extends React.Component<
     any
 > {}
 
-declare class StrippledCard<T = {}> extends React.Component<
-    NoInfer<T> & StrippledCardProps,
+declare class StippledCard<T = {}> extends React.Component<
+    NoInfer<T> & StippledCardProps,
     any
 > {}
 
