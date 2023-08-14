@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@12.0.0...@sb1/ffe-cards-react@12.0.1) (2023-08-14)
+
+### Bug Fixes
+
+-   **ffe-cards-react:** typo in StippledCard ts definitions ([80564f9](https://github.com/SpareBank1/designsystem/commit/80564f91cf922aa1128a03706692b76ba89b2008))
+
 # [12.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@11.0.3...@sb1/ffe-cards-react@12.0.0) (2023-08-11)
 
 ### Features
