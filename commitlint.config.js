@@ -50,6 +50,8 @@ module.exports = {
                 'ffe-spinner-react',
                 'ffe-system-message',
                 'ffe-system-message-react',
+                'ffe-symbols',
+                'ffe-symbols-react',
                 'ffe-tables',
                 'ffe-tables-react',
                 'ffe-tabs',
