@@ -18,24 +18,24 @@ describe('<Symbol />', () => {
         const wrapper = getWrapper();
         expect(wrapper.get(0).props.style).toHaveProperty(
             'fontVariationSettings',
-            "'FILL' 0, 'GRAD' var(--ffe-v-symbol-grade), 'wght' 400",
+            "'FILL' 0, 'GRAD' 0, 'wght' 400",
         );
         const filled = getWrapper({ fill: true });
         expect(filled.get(0).props.style).toHaveProperty(
             'fontVariationSettings',
-            "'FILL' 1, 'GRAD' var(--ffe-v-symbol-grade), 'wght' 400",
+            "'FILL' 1, 'GRAD' 0, 'wght' 400",
         );
     });
     it('set correct symbol weight', () => {
         const wrapper = getWrapper();
         expect(wrapper.get(0).props.style).toHaveProperty(
             'fontVariationSettings',
-            "'FILL' 0, 'GRAD' var(--ffe-v-symbol-grade), 'wght' 400",
+            "'FILL' 0, 'GRAD' 0, 'wght' 400",
         );
         const filled = getWrapper({ weight: 600 });
         expect(filled.get(0).props.style).toHaveProperty(
             'fontVariationSettings',
-            "'FILL' 0, 'GRAD' var(--ffe-v-symbol-grade), 'wght' 600",
+            "'FILL' 0, 'GRAD' 0, 'wght' 600",
         );
     });
     it('set correct color based of prop', () => {
