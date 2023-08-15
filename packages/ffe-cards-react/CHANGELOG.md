@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@12.0.1...@sb1/ffe-cards-react@12.0.2) (2023-08-15)
+
+### Bug Fixes
+
+-   **ffe-cards-react:** proptype img.element had wrong type ([586acb1](https://github.com/SpareBank1/designsystem/commit/586acb1431ea37d0b6e711fa9a619fc3958a10cd))
+
 ## [12.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@12.0.0...@sb1/ffe-cards-react@12.0.1) (2023-08-14)
 
 ### Bug Fixes
