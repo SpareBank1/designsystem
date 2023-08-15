@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import {
     bool,
     elementType,
+    element,
     func,
     node,
     oneOfType,
@@ -58,7 +59,7 @@ StippledCard.propTypes = {
     children: oneOfType([func, node]).isRequired,
     /** Image to be rendered*/
     img: shape({
-        element: elementType.isRequired,
+        element: element.isRequired,
         type: oneOf(['icon', 'custom']).isRequired,
     }),
     /** Smaller icon and less space */
