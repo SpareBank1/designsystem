@@ -24,7 +24,7 @@ const Symbol = props => {
             style={{
                 fontVariationSettings: `'FILL' ${
                     fill ? 1 : 0
-                }, 'GRAD' var(--ffe-v-symbol-grade), 'wght' ${weight}`,
+                }, 'GRAD' 0, 'wght' ${weight}`,
                 color: `var(--${color})`,
             }}
             aria-label={ariaLabel ? ariaLabel : null}
