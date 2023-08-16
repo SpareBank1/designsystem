@@ -19,31 +19,31 @@ Approach 1 is probably what you want for performance reasons.
 
 ### Using Less
 
-Copy the font files from `node_modules/@sb1/ffe-symbol/icons/` to a folder that will be shipped with your app. You can use npm-scripts, (if you use Webpack) [copy-webpack-plugin](https://github.com/webpack-contrib/copy-webpack-plugin), or whatever you see fit to get the files to where they need to be.
+Copy the font files from `node_modules/@sb1/ffe-symbols/icons/` to a folder that will be shipped with your app. You can use npm-scripts, (if you use Webpack) [copy-webpack-plugin](https://github.com/webpack-contrib/copy-webpack-plugin), or whatever you see fit to get the files to where they need to be.
 
 Import `node_modules/@sb1/ffe-symbols/ffe-symbol.less` in your app:
 
 ```less
-@import 'npm://@sb1/ffe-symbol/ffe-symbol.less'; // with less-plugin
-@import '~@sb1/ffe-symbol/ffe-symbol.less'; // with webpack and less-loader
-@import '../path/to/node_modules/@sb1/ffe-symbol/ffe-symbol.less'; // by path
+@import 'npm://@sb1/ffe-symbols/ffe-symbol.less'; // with less-plugin
+@import '~@sb1/ffe-symbols/ffe-symbol.less'; // with webpack and less-loader
+@import '../path/to/node_modules/@sb1/ffe-symbols/ffe-symbol.less'; // by path
 ```
 
 You need to provide a constant named `@icons-url` after the `@import` with a URL path to the fonts folder so the browser knows where to download the font files.
 
 ```less
-@import '~@sb1/ffe-symbol/ffe-symbol.less';
+@import '~@sb1/ffe-symbols/ffe-symbol.less';
 @icons-url: '/privat/forsikring/icons';
 ```
 
 ### CSS with inline fonts
 
 ```css
-@import url('~@sb1/ffe-symbol/ffe-symbol.css');
+@import url('~@sb1/ffe-symbols/ffe-symbol.css');
 ```
 
 ```less
-@import (inline) '~@sb1/ffe-symbol/ffe-symbol.css';
+@import (inline) '~@sb1/ffe-symbols/ffe-symbol.css';
 ```
 
 ## React component
