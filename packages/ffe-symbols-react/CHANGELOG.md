@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-symbols-react@1.1.2...@sb1/ffe-symbols-react@1.1.3) (2023-08-16)
+
+### Bug Fixes
+
+-   **ffe-symbols-react:** rett path til main i package.json ([f1cbcf6](https://github.com/SpareBank1/designsystem/commit/f1cbcf65866fa9a73ede4ee5b5194213dd816663))
+
 ## [1.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-symbols-react@1.1.1...@sb1/ffe-symbols-react@1.1.2) (2023-08-16)
 
 ### Bug Fixes
