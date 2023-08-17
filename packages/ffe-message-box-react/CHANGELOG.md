@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [9.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@8.0.7...@sb1/ffe-message-box-react@9.0.0) (2023-08-17)
+
+### Bug Fixes
+
+-   **ffe-message-box-react:** remove deprecated property 'content' because of typescript errors ([6236513](https://github.com/SpareBank1/designsystem/commit/62365135a1fb230bf3a8f66057ac8a4c3d2f7dfd))
+
+### BREAKING CHANGES
+
+-   **ffe-message-box-react:** Remove deprecated property 'content'
+
 ## [8.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@8.0.6...@sb1/ffe-message-box-react@8.0.7) (2023-04-27)
 
 ### Bug Fixes
