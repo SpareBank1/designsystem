@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { bool, func, node, string } from 'prop-types';
 import { v4 as uuid } from 'uuid';
-import { ChevronIkon } from '@sb1/ffe-icons-react';
+import Symbol from '@sb1/ffe-symbols-react';
 import Collapse from '@sb1/ffe-collapse-react';
 import classNames from 'classnames';
 
@@ -71,10 +71,13 @@ const AccordionItem = ({
                     <span className="ffe-accordion-item__heading-button-content">
                         {heading}
                         <span className="ffe-accordion-item__heading-icon-wrapper">
-                            <ChevronIkon
+                            <Symbol
                                 className="ffe-accordion-item__heading-icon"
-                                aria-hidden="true"
-                            />
+                                ariaLabel=""
+                                size="sm"
+                            >
+                                expand_more
+                            </Symbol>
                         </span>
                     </span>
                 </button>
