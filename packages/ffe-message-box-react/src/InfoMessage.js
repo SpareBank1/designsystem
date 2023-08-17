@@ -19,11 +19,6 @@ InfoMessage.propTypes = {
     children: node,
     /** Any extra class names to the wrapping DOM node */
     className: string,
-    /**
-     * Deprecated. Use `children` instead.
-     * @deprecated
-     */
-    content: node,
     /** The icon to show. Has a default value, but can be overridden */
     icon: node,
     /** An optional title for the message */

@@ -13,7 +13,6 @@ const BaseMessage = props => {
         title,
         titleElement,
         icon,
-        content,
         children,
         className = '',
         onColoredBg,
@@ -47,8 +46,7 @@ const BaseMessage = props => {
                         },
                         title,
                     )}
-                {content && <p>{content}</p>}
-                {!content && children}
+                {children}
             </div>
         </div>
     );
@@ -57,7 +55,6 @@ const BaseMessage = props => {
 BaseMessage.propTypes = {
     children: node,
     className: string,
-    content: node,
     icon: node.isRequired,
     title: node,
     /** HTML element for the title */
