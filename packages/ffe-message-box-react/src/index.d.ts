@@ -4,11 +4,6 @@ export interface MessageBoxProps
     extends Omit<React.ComponentProps<'div'>, 'title'> {
     children?: React.ReactNode;
     className?: string;
-    /**
-     * Deprecated. Use `children` instead.
-     * @deprecated
-     */
-    content?: React.ReactNode;
     icon?: React.ReactNode;
     title?: React.ReactNode;
     onColoredBg?: boolean;
