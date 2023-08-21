@@ -1,6 +1,6 @@
 import React from "react";
 import { StippledCard } from '@sb1/ffe-cards-react';
-import { GrafOppIkon } from '@sb1/ffe-icons-react';
+import Symbol from '@sb1/ffe-symbols-react';
 
 
 <div>
@@ -19,7 +19,7 @@ import { GrafOppIkon } from '@sb1/ffe-icons-react';
             </>
         )}
     </StippledCard>
-    <StippledCard href="https://design.sparebank1.no" img={{ type: 'icon', element: <GrafOppIkon  /> } }>
+    <StippledCard href="https://design.sparebank1.no" img={{ type: 'icon', element: <Symbol ariaLabel={true}>monitoring</Symbol> } }>
         {({ CardName, Title, Subtext, Text }) => (
             <>
                 <CardName>CardName</CardName>
