@@ -17,7 +17,7 @@ const Title = ({ className, overflowEllipsis, ...rest }) => (
     />
 );
 
-Title.defaultProps = { overflowEllipsis: true };
+Title.defaultProps = { overflowEllipsis: false };
 
 Title.propTypes = {
     className: string,
