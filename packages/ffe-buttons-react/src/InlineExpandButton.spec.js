@@ -1,5 +1,4 @@
 import React from 'react';
-import { ChevronIkon } from '@sb1/ffe-icons-react';
 
 import InlineExpandButton from './InlineExpandButton';
 
@@ -20,24 +19,8 @@ describe('<InlineExpandButton />', () => {
         const wrapper = getWrapper({ 'aria-label': 'some label' });
         expect(wrapper.props()).toHaveProperty('aria-label', 'some label');
     });
-    it('sends a <ChevronIcon /> as a default rightIcon prop', () => {
-        const wrapper = getWrapper();
-        expect(wrapper.props()).toHaveProperty(
-            'rightIcon',
-            <ChevronIkon
-                aria-hidden="true"
-                style={{ marginLeft: '8px', transform: 'none' }}
-            />,
-        );
-    });
-    it('sends an upside down <ChevronIcon /> as rightIcon if isExpanded prop is true', () => {
+    it('add ffe-inline-button--expanded class when expanded', () => {
         const wrapper = getWrapper({ isExpanded: true });
-        expect(wrapper.props()).toHaveProperty(
-            'rightIcon',
-            <ChevronIkon
-                aria-hidden="true"
-                style={{ marginLeft: '8px', transform: 'rotateZ(180deg)' }}
-            />,
-        );
+        expect(wrapper.hasClass('ffe-inline-button--expanded')).toBe(true);
     });
 });

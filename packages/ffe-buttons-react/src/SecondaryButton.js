@@ -10,8 +10,31 @@ import {
     elementType,
 } from 'prop-types';
 import Button from './BaseButton';
+import Symbol from '@sb1/ffe-symbols-react';
 
-const SecondaryButton = props => <Button buttonType="secondary" {...props} />;
+const SecondaryButton = props => {
+    const { leftIcon, rightIcon, ...rest } = props;
+    return (
+        <Button
+            buttonType="secondary"
+            leftIcon={
+                leftIcon && (
+                    <Symbol ariaLabel="" size="sm">
+                        {leftIcon}
+                    </Symbol>
+                )
+            }
+            rightIcon={
+                rightIcon && (
+                    <Symbol ariaLabel="" size="sm">
+                        {rightIcon}
+                    </Symbol>
+                )
+            }
+            {...rest}
+        />
+    );
+};
 
 SecondaryButton.propTypes = {
     /** Aria label for loading indicator */
@@ -28,10 +51,10 @@ SecondaryButton.propTypes = {
     innerRef: oneOfType([func, shape({ current: object })]),
     /**  Shows a loader if true */
     isLoading: bool,
-    /** Icon shown to the left of the label */
-    leftIcon: node,
-    /** Icon shown to the right of the label */
-    rightIcon: node,
+    /** Name of icon shown to the left of the label */
+    leftIcon: string,
+    /** Name of icon shown to the right of the label */
+    rightIcon: string,
 };
 
 export default SecondaryButton;

@@ -9,11 +9,19 @@ import {
     shape,
     elementType,
 } from 'prop-types';
-import { ChevronIkon } from '@sb1/ffe-icons-react';
 import Button from './BaseButton';
+import Symbol from '@sb1/ffe-symbols-react';
 
 const ShortcutButton = props => (
-    <Button buttonType="shortcut" rightIcon={<ChevronIkon />} {...props} />
+    <Button
+        buttonType="shortcut"
+        rightIcon={
+            <Symbol ariaLabel="" size="md">
+                chevron_right
+            </Symbol>
+        }
+        {...props}
+    />
 );
 
 ShortcutButton.propTypes = {
@@ -27,8 +35,6 @@ ShortcutButton.propTypes = {
     element: oneOfType([func, string, elementType]),
     /** Ref-setting function, or ref created by useRef, passed to the button element */
     innerRef: oneOfType([func, shape({ current: object })]),
-    /** Icon shown to the left of the label */
-    leftIcon: node,
 };
 
 export default ShortcutButton;
