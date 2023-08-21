@@ -1,5 +1,5 @@
 import React from 'react';
-import { ChevronIkon } from '@sb1/ffe-icons-react';
+import Symbol from '@sb1/ffe-symbols-react';
 
 import ShortcutButton from './ShortcutButton';
 
@@ -16,8 +16,13 @@ describe('<ShortcutButton />', () => {
         const wrapper = getWrapper({ 'aria-label': 'some label' });
         expect(wrapper.props()).toHaveProperty('aria-label', 'some label');
     });
-    it('sends a <ChevronIcon /> as a default rightIcon prop', () => {
+    it('sends a chevron_right as a default rightIcon prop', () => {
         const wrapper = getWrapper();
-        expect(wrapper.props()).toHaveProperty('rightIcon', <ChevronIkon />);
+        expect(wrapper.props()).toHaveProperty(
+            'rightIcon',
+            <Symbol ariaLabel="" size="md">
+                chevron_right
+            </Symbol>,
+        );
     });
 });

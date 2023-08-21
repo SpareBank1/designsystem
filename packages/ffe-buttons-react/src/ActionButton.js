@@ -10,16 +10,31 @@ import {
     elementType,
 } from 'prop-types';
 import classNames from 'classnames';
+import Symbol from '@sb1/ffe-symbols-react';
 
 import Button from './BaseButton';
 
 export default function ActionButton(props) {
-    const { className, ...rest } = props;
+    const { className, leftIcon, rightIcon, ...rest } = props;
 
     return (
         <Button
             buttonType="action"
             className={classNames(className)}
+            leftIcon={
+                leftIcon && (
+                    <Symbol ariaLabel="" size="sm">
+                        {leftIcon}
+                    </Symbol>
+                )
+            }
+            rightIcon={
+                rightIcon && (
+                    <Symbol ariaLabel="" size="sm">
+                        {rightIcon}
+                    </Symbol>
+                )
+            }
             {...rest}
         />
     );
@@ -40,8 +55,8 @@ ActionButton.propTypes = {
     innerRef: oneOfType([func, shape({ current: object })]),
     /** Shows a loader if true */
     isLoading: bool,
-    /** Icon shown to the left of the label */
-    leftIcon: node,
-    /** Icon shown to the right of the label */
-    rightIcon: node,
+    /** Name of Icon shown to the left of the label */
+    leftIcon: string,
+    /** Name of Icon shown to the right of the label */
+    rightIcon: string,
 };
