@@ -186,29 +186,25 @@
 }
 
 .ffe-button__icon {
-    display: inline-block;
-    fill: currentColor;
-    height: 16px;
-    width: 16px;
-
     .ffe-button--shortcut & {
-        transform: rotate(-90deg);
         transition: all @ffe-transition-duration @ffe-ease;
         will-change: transform;
     }
 
     .ffe-button--shortcut:focus &,
     .ffe-button--shortcut:hover & {
-        transform: rotate(-90deg) translateY(12px);
+        transform: translateX(12px);
     }
 
     .ffe-button--task & {
         border: 2px solid var(--ffe-v-button-primary-color);
         border-radius: 50%;
         background-color: @ffe-farge-hvit;
-        fill: var(--ffe-v-button-task-primary-color);
+        color: var(--ffe-v-button-task-primary-color);
         height: 45px;
-        padding: 13px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         margin: 0 @ffe-spacing-xs 0 0;
         width: 45px;
         transition: all @ffe-transition-duration @ffe-ease;
@@ -234,7 +230,7 @@
     .ffe-button--task:hover & {
         border-color: var(--ffe-v-button-primary-color);
         background-color: var(--ffe-v-button-primary-color);
-        fill: var(--ffe-v-button-primary-color-text);
+        color: var(--ffe-v-button-primary-color-text);
     }
 }
 
