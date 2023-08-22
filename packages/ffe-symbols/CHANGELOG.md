@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-symbols@1.1.1...@sb1/ffe-symbols@1.1.2) (2023-08-22)
+
+### Bug Fixes
+
+-   **ffe-symbols:** fjern default farge ([41f28d6](https://github.com/SpareBank1/designsystem/commit/41f28d626b7668e4a33b8e5365ce259a576556f9))
+-   **ffe-symbols:** oppdater path i readme ([7678bcf](https://github.com/SpareBank1/designsystem/commit/7678bcfea3c18ee5a20728d744e843f2302d1739))
+
 ## [1.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-symbols@1.1.0...@sb1/ffe-symbols@1.1.1) (2023-08-16)
 
 ### Bug Fixes

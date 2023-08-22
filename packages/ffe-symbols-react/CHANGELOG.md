@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-symbols-react@1.1.3...@sb1/ffe-symbols-react@1.1.4) (2023-08-22)
+
+### Bug Fixes
+
+-   **ffe-symbols-react:** legg til dependency og fjern default farge ([75b5423](https://github.com/SpareBank1/designsystem/commit/75b5423a6d6df5dc12107c6b0c85449b226980af))
+
 ## [1.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-symbols-react@1.1.2...@sb1/ffe-symbols-react@1.1.3) (2023-08-16)
 
 ### Bug Fixes
