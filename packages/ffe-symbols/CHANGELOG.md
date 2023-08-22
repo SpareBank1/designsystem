@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-symbols@1.1.2...@sb1/ffe-symbols@1.1.3) (2023-08-22)
+
+### Bug Fixes
+
+-   **ffe-symbols:** legg til missing files i package.json ([377c928](https://github.com/SpareBank1/designsystem/commit/377c928047d234a614b4e41fe49704890583e81a))
+
 ## [1.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-symbols@1.1.1...@sb1/ffe-symbols@1.1.2) (2023-08-22)
 
 ### Bug Fixes
