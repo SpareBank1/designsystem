@@ -19,6 +19,8 @@
     "author": "SpareBank1",
     "files": [
         "icons",
+        "symbol.less",
+        "theme.less",
         "ffe-symbol.less",
         "ffe-symbol-font-inline.less",
         "ffe-symbol.css"
