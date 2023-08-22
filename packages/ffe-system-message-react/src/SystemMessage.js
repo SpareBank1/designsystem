@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { func, string, number, node, oneOf, bool } from 'prop-types';
 import classNames from 'classnames';
-import { KryssIkon } from '@sb1/ffe-icons-react';
+import Symbol from '@sb1/ffe-symbols-react';
 
 class SystemMessage extends Component {
     constructor() {
@@ -64,8 +64,9 @@ class SystemMessage extends Component {
                     <span className="ffe-system-message__icon">
                         {icon &&
                             React.cloneElement(icon, {
-                                role: 'img',
                                 ...icon.props,
+                                size: 'sm',
+                                weight: 300,
                             })}
                     </span>
                     <p className="ffe-system-message__content">{children}</p>
@@ -75,7 +76,9 @@ class SystemMessage extends Component {
                         onClick={this.close}
                         type="button"
                     >
-                        <KryssIkon aria-hidden="true" />
+                        <Symbol ariaLabel="" size="sm" weight={300}>
+                            close
+                        </Symbol>
                     </button>
                 </div>
             </div>

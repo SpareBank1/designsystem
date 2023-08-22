@@ -25,14 +25,13 @@
     },
     "dependencies": {
         "@sb1/ffe-grid-react": "^13.0.6",
-        "@sb1/ffe-icons-react": "^7.3.5",
         "@sb1/ffe-system-message": "^7.1.0",
+        "@sb1/ffe-symbols-react": "^2.0.1",
         "classnames": "^2.3.1",
         "prop-types": "^15.7.2"
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.5.0",
-        "@sb1/ffe-icons-react": "^7.3.4",
         "react": "^16.9.0",
         "react-dom": "^16.9.0"
     },
