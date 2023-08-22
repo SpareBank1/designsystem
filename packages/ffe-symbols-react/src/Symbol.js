@@ -25,7 +25,7 @@ const Symbol = props => {
                 fontVariationSettings: `'FILL' ${
                     fill ? 1 : 0
                 }, 'GRAD' 0, 'wght' ${weight}`,
-                color: `var(--${color})`,
+                color: color ? `var(--${color})` : null,
             }}
             aria-label={ariaLabel ? ariaLabel : null}
             aria-hidden={ariaLabel ? false : true}
@@ -40,7 +40,6 @@ Symbol.defaultProps = {
     fill: false,
     size: 'md',
     weight: 400,
-    color: 'ffe-v-symbol-default-color',
 };
 
 Symbol.propTypes = {
