@@ -1,7 +1,6 @@
 import React from 'react';
 import { node, string } from 'prop-types';
-
-import { LyspareIkon } from '@sb1/ffe-icons-react';
+import Symbol from '@sb1/ffe-symbols-react';
 
 import BaseMessage from './BaseMessage';
 
@@ -9,7 +8,7 @@ const TipsMessage = props => (
     <BaseMessage
         type="tips"
         aria-label="Tipsmelding"
-        icon={<LyspareIkon title="Lyspære, ikon" />}
+        icon={<Symbol ariaLabel="Lyspære">lightbulb</Symbol>}
         {...props}
     />
 );
