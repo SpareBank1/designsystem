@@ -2,7 +2,7 @@ import React from 'react';
 import { string, bool, oneOf } from 'prop-types';
 import classNames from 'classnames';
 
-const Symbol = props => {
+export const Symbol = props => {
     const {
         className,
         children,
@@ -28,7 +28,7 @@ const Symbol = props => {
                 color: color ? `var(--${color})` : null,
             }}
             aria-label={ariaLabel ? ariaLabel : null}
-            aria-hidden={ariaLabel ? false : true}
+            aria-hidden={!ariaLabel}
             {...rest}
         >
             {children}
