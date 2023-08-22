@@ -1,8 +1,6 @@
 import React from 'react';
 import { node, string, bool } from 'prop-types';
-
-import { UtropstegnIkon } from '@sb1/ffe-icons-react';
-
+import Symbol from '@sb1/ffe-symbols-react';
 import BaseMessage from './BaseMessage';
 
 const ErrorMessage = props => {
@@ -12,7 +10,7 @@ const ErrorMessage = props => {
         <BaseMessage
             type="error"
             aria-label="Feilmelding"
-            icon={<UtropstegnIkon title="Utropstegn, ikon" />}
+            icon={<Symbol ariaLabel="Utropstegn">priority_high</Symbol>}
             role={alert ? 'alert' : 'group'}
             {...rest}
         />

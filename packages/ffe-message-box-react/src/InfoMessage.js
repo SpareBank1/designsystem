@@ -1,7 +1,6 @@
 import React from 'react';
 import { node, string } from 'prop-types';
-
-import { InfoIkon } from '@sb1/ffe-icons-react';
+import Symbol from '@sb1/ffe-symbols-react';
 
 import BaseMessage from './BaseMessage';
 
@@ -9,7 +8,7 @@ const InfoMessage = props => (
     <BaseMessage
         type="info"
         aria-label="Infomelding"
-        icon={<InfoIkon title="Infotegn, ikon" />}
+        icon={<Symbol ariaLabel="Infotegn">info_i</Symbol>}
         {...props}
     />
 );
