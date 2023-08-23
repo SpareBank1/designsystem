@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 export interface MessageBoxProps
-    extends Omit<React.ComponentProps<'div'>, 'title'> {
+    extends Omit<React.ComponentProps<'div'>, 'title' | 'content'> {
     children?: React.ReactNode;
     className?: string;
     icon?: React.ReactNode;
