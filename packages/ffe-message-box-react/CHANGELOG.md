@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@9.0.0...@sb1/ffe-message-box-react@9.0.1) (2023-08-23)
+
+### Bug Fixes
+
+-   **ffe-message-box-react:** remove content from message box prop ([2434145](https://github.com/SpareBank1/designsystem/commit/24341458e2f9acd61f40bbe232559e808dedf2fb))
+
 # [9.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@8.0.7...@sb1/ffe-message-box-react@9.0.0) (2023-08-17)
 
 ### Bug Fixes
