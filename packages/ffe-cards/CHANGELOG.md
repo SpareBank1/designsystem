@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [16.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@16.1.0...@sb1/ffe-cards@16.1.1) (2023-08-24)
+
+### Bug Fixes
+
+-   **ffe-cards:** support ffe-symbols ([af58f68](https://github.com/SpareBank1/designsystem/commit/af58f687813d572a62ecae650518bf1088582020))
+
 # [16.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@16.0.0...@sb1/ffe-cards@16.1.0) (2023-08-21)
 
 ### Features
