@@ -1,3 +1,1 @@
-import Symbol from './Symbol';
-
-export default Symbol;
+export { default, Symbol } from './Symbol';

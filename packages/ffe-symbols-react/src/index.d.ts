@@ -1,3 +1,5 @@
+import * as React from 'react';
+
 export interface SymbolProps {
     fill?: boolean;
     size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl';
@@ -7,3 +9,5 @@ export interface SymbolProps {
     className?: string;
     ariaLabel: string;
 }
+
+declare class Symbol extends React.Component<SymbolProps, any> {}
