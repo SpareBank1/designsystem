@@ -38,13 +38,6 @@ describe('<Symbol />', () => {
             "'FILL' 0, 'GRAD' 0, 'wght' 600",
         );
     });
-    it('set correct color based of prop', () => {
-        const wrapper = getWrapper({ color: 'ffe-farge-fjell' });
-        expect(wrapper.get(0).props.style).toHaveProperty(
-            'color',
-            'var(--ffe-farge-fjell)',
-        );
-    });
     it('renders classes correctly', () => {
         const wrapper = getWrapper({ className: 'test-class' });
         expect(wrapper.hasClass('ffe-symbol')).toBe(true);

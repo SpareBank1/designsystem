@@ -9,15 +9,15 @@ export const Symbol = props => {
         size,
         weight,
         fill,
-        color,
         ariaLabel,
         ...rest
     } = props;
+
     return (
         <span
             className={classNames(
                 'ffe-symbol',
-                `ffe-symbol--${size}`,
+                size && `ffe-symbol--${size}`,
                 className,
             )}
             role="img"
@@ -25,7 +25,6 @@ export const Symbol = props => {
                 fontVariationSettings: `'FILL' ${
                     fill ? 1 : 0
                 }, 'GRAD' 0, 'wght' ${weight}`,
-                color: color ? `var(--${color})` : null,
             }}
             aria-label={ariaLabel ? ariaLabel : null}
             aria-hidden={!ariaLabel}
@@ -38,7 +37,6 @@ export const Symbol = props => {
 
 Symbol.defaultProps = {
     fill: false,
-    size: 'md',
     weight: 400,
 };
 
@@ -47,16 +45,23 @@ Symbol.propTypes = {
     fill: bool,
     /** The name of the icon that should be shown */
     children: string.isRequired,
-    /** Size of the icon, medium is default */
+    /** Size of the icon, default is the closest defined font-size */
     size: oneOf(['xs', 'sm', 'md', 'lg', 'xl', '2xl']),
     /** Symbols stroke weight. This can affect overall size of symbol, 400 is default */
     weight: oneOf([300, 400, 500, 600]),
-    /** Color of the symbol, value should be name of FFE color variable example: ffe-farge-vann */
-    color: string,
     /** Additional classnames */
     className: string,
-    /** Aria label text. If empty aria-hidden is automatically set to true */
-    ariaLabel: string.isRequired,
+    /** Aria label text. If null, aria-hidden is automatically set to true */
+    ariaLabel: function(props, propName, componentName) {
+        const propValue = props[propName];
+
+        if (propValue !== null && typeof propValue !== 'string') {
+            return new Error(
+                `Invalid prop '${propName}' supplied to '${componentName}'. ` +
+                    `'${propName}' must be a string or null.`,
+            );
+        }
+    },
 };
 
 export default Symbol;
