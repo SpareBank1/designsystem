@@ -29,7 +29,7 @@ const BaseMessage = props => {
                 {React.cloneElement(icon, {
                     ...icon.props,
                     size: 'xl',
-                    weight: 400,
+                    weight: 300,
                 })}
             </span>
             <div className="ffe-message-box__box">

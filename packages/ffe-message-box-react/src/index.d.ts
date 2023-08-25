@@ -6,6 +6,7 @@ export interface MessageBoxProps
     className?: string;
     icon?: React.ReactNode;
     title?: React.ReactNode;
+    titleElement?: string;
     onColoredBg?: boolean;
 }
 
