@@ -76,8 +76,13 @@
         "@sb1/ffe-searchable-dropdown-react": "^15.2.3",
         "@sb1/ffe-spinner": "^5.0.4",
         "@sb1/ffe-spinner-react": "^6.0.5",
+<<<<<<< HEAD
         "@sb1/ffe-symbols": "^2.0.0",
         "@sb1/ffe-symbols-react": "^2.0.1",
+=======
+        "@sb1/ffe-symbols": "^1.1.4",
+        "@sb1/ffe-symbols-react": "^2.0.0",
+>>>>>>> 3c8f1c57f (chore(release): publish)
         "@sb1/ffe-system-message": "^7.0.4",
         "@sb1/ffe-system-message-react": "^7.0.9",
         "@sb1/ffe-tables": "^13.0.4",
