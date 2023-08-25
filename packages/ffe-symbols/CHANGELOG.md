@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-symbols@1.1.3...@sb1/ffe-symbols@1.1.4) (2023-08-25)
+
+### Bug Fixes
+
+-   **ffe-symbols:** endre font fil til mindre ([f1a6ba4](https://github.com/SpareBank1/designsystem/commit/f1a6ba4f6886061b7215ee944a341e88fb057fbf))
+
 ## [1.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-symbols@1.1.2...@sb1/ffe-symbols@1.1.3) (2023-08-22)
 
 ### Bug Fixes

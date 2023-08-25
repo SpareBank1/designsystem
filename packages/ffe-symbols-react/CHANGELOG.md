@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-symbols-react@1.1.6...@sb1/ffe-symbols-react@2.0.0) (2023-08-25)
+
+### Bug Fixes
+
+-   **ffe-symbols-react:** fjerner color prop ([b609d98](https://github.com/SpareBank1/designsystem/commit/b609d9827e1d0d56256c61ba10f0482af087c526))
+
+### BREAKING CHANGES
+
+-   **ffe-symbols-react:** fjerner color-prop da styling skal skje gjennom css
+
 ## [1.1.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-symbols-react@1.1.5...@sb1/ffe-symbols-react@1.1.6) (2023-08-24)
 
 ### Bug Fixes
