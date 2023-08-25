@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.1.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@5.1.9...@sb1/ffe-component-index@5.1.10) (2023-08-25)
+
+### Bug Fixes
+
+-   **component-overview:** fjern symbol color eksempel ([60e6b4b](https://github.com/SpareBank1/designsystem/commit/60e6b4b6985148f7177156495aeec7c17ff9b56d))
+
 ## [5.1.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@5.1.8...@sb1/ffe-component-index@5.1.9) (2023-08-24)
 
 **Note:** Version bump only for package @sb1/ffe-component-index
