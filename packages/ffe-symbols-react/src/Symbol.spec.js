@@ -16,27 +16,13 @@ describe('<Symbol />', () => {
     });
     it('renders filled symbol correctly', () => {
         const wrapper = getWrapper();
-        expect(wrapper.get(0).props.style).toHaveProperty(
-            'fontVariationSettings',
-            "'FILL' 0, 'GRAD' 0, 'wght' 400",
-        );
+        expect(wrapper.hasClass('ffe-symbol--400')).toBe(true);
         const filled = getWrapper({ fill: true });
-        expect(filled.get(0).props.style).toHaveProperty(
-            'fontVariationSettings',
-            "'FILL' 1, 'GRAD' 0, 'wght' 400",
-        );
+        expect(filled.hasClass('ffe-symbol--filled-400')).toBe(true);
     });
     it('set correct symbol weight', () => {
-        const wrapper = getWrapper();
-        expect(wrapper.get(0).props.style).toHaveProperty(
-            'fontVariationSettings',
-            "'FILL' 0, 'GRAD' 0, 'wght' 400",
-        );
-        const filled = getWrapper({ weight: 600 });
-        expect(filled.get(0).props.style).toHaveProperty(
-            'fontVariationSettings',
-            "'FILL' 0, 'GRAD' 0, 'wght' 600",
-        );
+        const wrapper = getWrapper({ weight: 500 });
+        expect(wrapper.hasClass('ffe-symbol--500')).toBe(true);
     });
     it('renders classes correctly', () => {
         const wrapper = getWrapper({ className: 'test-class' });
