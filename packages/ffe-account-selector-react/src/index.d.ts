@@ -42,16 +42,9 @@ export interface AccountSelectorProps<T extends Account = Account> {
     onClose?: () => void;
 }
 
-export interface AccountSelectorHighCapacityProps<T extends Account = Account>
-    extends AccountSelectorProps<T> {}
-
 declare class AccountSelector<
     T extends Account = Account
 > extends React.Component<AccountSelectorProps<T>> {}
-
-declare class AccountSelectorHighCapacity<
-    T extends Account = Account
-> extends React.Component<AccountSelectorHighCapacityProps<T>> {}
 
 export interface AccountSelectorMultiProps<T extends Account = Account> {
     accounts?: Array<T>;
@@ -67,7 +60,6 @@ export interface AccountSelectorMultiProps<T extends Account = Account> {
     selectedAccounts?: Array<T>;
     showSelectAllOption?: boolean;
     value?: string;
-    highCapacity?: boolean;
 }
 
 declare class AccountSelectorMulti<
@@ -98,14 +90,8 @@ export interface BaseSelectorProps {
     id?: string;
     name?: string;
     readOnly?: boolean;
-    highCapacity?: boolean;
 }
 
 declare class BaseSelector extends React.Component<BaseSelectorProps, any> {}
 
-export {
-    AccountSelector,
-    AccountSelectorMulti,
-    BaseSelector,
-    AccountSelectorHighCapacity,
-};
+export { AccountSelector, AccountSelectorMulti, BaseSelector };
