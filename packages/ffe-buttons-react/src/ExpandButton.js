@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import {
     bool,
     func,
@@ -41,7 +41,7 @@ const ExpandButton = props => {
                 <KryssIkon className="ffe-button__icon" aria-hidden="true" />
             )}
             {!isExpanded && (
-                <Fragment>
+                <span>
                     {leftIcon &&
                         React.cloneElement(leftIcon, {
                             'aria-hidden': true,
@@ -55,7 +55,7 @@ const ExpandButton = props => {
                             className:
                                 'ffe-button__icon ffe-button__icon--right',
                         })}
-                </Fragment>
+                </span>
             )}
         </Element>
     );
