@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [18.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@18.0.3...@sb1/ffe-buttons-react@18.0.4) (2023-08-29)
+
+### Bug Fixes
+
+-   **ffe-buttons-react:** erstatter fragment i expandbutton med span ([f4ebf37](https://github.com/SpareBank1/designsystem/commit/f4ebf379e4c7f4eac284c453dd1905c79b9adef2))
+
 ## [18.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@18.0.2...@sb1/ffe-buttons-react@18.0.3) (2023-06-19)
 
 ### Bug Fixes

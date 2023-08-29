@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-symbols-react@2.0.0...@sb1/ffe-symbols-react@2.0.1) (2023-08-29)
+
+### Bug Fixes
+
+-   **ffe-symbols-react:** endringer relatert til at det nå er flere fontfiler ([8809cbc](https://github.com/SpareBank1/designsystem/commit/8809cbc3fde43a35576077c27c8a9355e134a971))
+
 # [2.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-symbols-react@1.1.6...@sb1/ffe-symbols-react@2.0.0) (2023-08-25)
 
 ### Bug Fixes

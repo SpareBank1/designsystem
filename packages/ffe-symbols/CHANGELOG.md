@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-symbols@1.1.4...@sb1/ffe-symbols@2.0.0) (2023-08-29)
+
+### Bug Fixes
+
+-   **ffe-symbols:** deler opp ikon font-filen ([777fec8](https://github.com/SpareBank1/designsystem/commit/777fec869c2b7b9460670846365451982b29e1dd))
+
+### BREAKING CHANGES
+
+-   **ffe-symbols:** fjerner gammel ikon font og deler den opp i flere
+    legger til klasser for alle ulike weights og om ikonet er filled eller ikke
+
 ## [1.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-symbols@1.1.3...@sb1/ffe-symbols@1.1.4) (2023-08-25)
 
 ### Bug Fixes
