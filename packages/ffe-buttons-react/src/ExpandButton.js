@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import {
     bool,
     func,
@@ -48,7 +48,7 @@ const ExpandButton = props => {
                 </Symbol>
             )}
             {!isExpanded && (
-                <Fragment>
+                <span>
                     {leftIcon && (
                         <Symbol
                             className="ffe-button__icon ffe-button__icon--left"
@@ -68,7 +68,7 @@ const ExpandButton = props => {
                             {rightIcon}
                         </Symbol>
                     )}
-                </Fragment>
+                </span>
             )}
         </Element>
     );
