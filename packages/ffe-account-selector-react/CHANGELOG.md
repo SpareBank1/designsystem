@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [22.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@21.3.16...@sb1/ffe-account-selector-react@22.0.0) (2023-08-31)
+
+-   chore(ffe-account-selector-react)!: remove AccountSelectorHighCapacity ([c8190b9](https://github.com/SpareBank1/designsystem/commit/c8190b9b95645b4ce1dc8ba06841e0233d42393e))
+
+### BREAKING CHANGES
+
+-   AccountSelectorHighCapacity is no longer exported.
+    Use AccountSelectorMulti or BaseSelector with prop highCapacity=true
+
 ## [21.3.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@21.3.15...@sb1/ffe-account-selector-react@21.3.16) (2023-07-24)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
