@@ -25,4 +25,10 @@ describe('format account number', () => {
             `1234${NON_BREAKING_SPACE}56${NON_BREAKING_SPACE}78901`,
         );
     });
+
+    test('formats foreign account number correctly', () => {
+        expect(formatAccountNumber('AB12345678901234')).toBe(
+            `AB12${NON_BREAKING_SPACE}3456${NON_BREAKING_SPACE}7890${NON_BREAKING_SPACE}1234`,
+        );
+    });
 });
