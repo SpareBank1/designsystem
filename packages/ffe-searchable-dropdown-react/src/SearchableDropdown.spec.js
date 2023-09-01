@@ -6,25 +6,6 @@ import 'regenerator-runtime';
 import { SearchableDropdown } from './SearchableDropdown';
 
 describe('SearchableDropdown', () => {
-    beforeAll(() => {
-        /*
-         * Mocking offsetHeight and offsetWidth makes AutoSizer from react-virtualized work as expected.
-         * Based on https://github.com/bvaughn/react-virtualized/issues/493#issuecomment-640084107.
-         */
-        jest.spyOn(
-            HTMLElement.prototype,
-            'offsetHeight',
-            'get',
-        ).mockReturnValue(50);
-        jest.spyOn(HTMLElement.prototype, 'offsetWidth', 'get').mockReturnValue(
-            50,
-        );
-    });
-
-    afterAll(() => {
-        jest.restoreAllMocks();
-    });
-
     const companies = [
         {
             organizationName: 'Bedriften',
