@@ -2,7 +2,7 @@ import React from 'react';
 import { number, node, string, bool, oneOf, func, object } from 'prop-types';
 import acceptedLocales from './locale/accepted-locales';
 import ContextMessage from './ContextMessage';
-import { UtropstegnIkon } from '@sb1/ffe-icons-react';
+import Symbol from '@sb1/ffe-symbols-react';
 
 const ContextErrorMessage = props => {
     const { alert, ...rest } = props;
@@ -13,7 +13,7 @@ const ContextErrorMessage = props => {
             messageType="error"
             aria-label="Feilmelding"
             role={alert ? 'alert' : 'group'}
-            icon={<UtropstegnIkon title="Utropstegn, ikon" />}
+            icon={<Symbol ariaLabel="Utropstegn">priority_high</Symbol>}
         />
     );
 };

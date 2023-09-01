@@ -1,6 +1,6 @@
 import React from 'react';
 import ContextMessage from './ContextMessage';
-import { LyspareIkon } from '@sb1/ffe-icons-react';
+import { Symbol } from '@sb1/ffe-symbols-react';
 
 const ContextTipsMessage = props => (
     <ContextMessage
@@ -8,7 +8,7 @@ const ContextTipsMessage = props => (
         messageType="tips"
         aria-label="Tipsmelding"
         role="group"
-        icon={<LyspareIkon title="Lyspære, ikon" />}
+        icon={<Symbol ariaLabel="Lyspære">lightbulb</Symbol>}
     />
 );
 

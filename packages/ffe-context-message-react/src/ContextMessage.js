@@ -10,7 +10,7 @@ import {
     object,
 } from 'prop-types';
 import classNames from 'classnames';
-import { KryssIkon } from '@sb1/ffe-icons-react';
+import Symbol from '@sb1/ffe-symbols-react';
 import acceptedLocales from './locale/accepted-locales';
 import texts from './locale/texts';
 import { v4 as uuid } from 'uuid';
@@ -83,11 +83,10 @@ const ContextMessage = ({
                     <div className="ffe-context-message-content__icon">
                         {cloneElement(icon, {
                             className: classNames(
-                                'ffe-context-message-content__icon-svg',
+                                'ffe-context-message-content__icon-span',
                                 icon.props.className,
                             ),
-                            title: icon.props.title,
-                            role: 'img',
+                            weight: 300,
                         })}
                     </div>
                 )}
@@ -119,10 +118,9 @@ const ContextMessage = ({
                     onClick={handleClose}
                     type="button"
                 >
-                    <KryssIkon
-                        className="ffe-context-message-content__close-button-svg"
-                        aria-hidden="true"
-                    />
+                    <Symbol ariaLabel={null} weight={300} size="sm">
+                        close
+                    </Symbol>
                 </button>
             )}
         </div>
