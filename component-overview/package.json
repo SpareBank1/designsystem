@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-component-index",
-    "version": "5.1.13",
+    "version": "5.1.14",
     "description": "Index of FFE compontents",
     "license": "MIT",
     "author": "SpareBank 1 Utvikling",
@@ -42,7 +42,7 @@
     "dependencies": {
         "@sb1/ffe-accordion": "^9.0.4",
         "@sb1/ffe-accordion-react": "^10.0.7",
-        "@sb1/ffe-account-selector-react": "^22.0.1",
+        "@sb1/ffe-account-selector-react": "^22.0.2",
         "@sb1/ffe-buttons": "^17.0.3",
         "@sb1/ffe-buttons-react": "^18.0.4",
         "@sb1/ffe-cards": "^16.1.1",
@@ -73,7 +73,7 @@
         "@sb1/ffe-message-box": "^11.0.4",
         "@sb1/ffe-message-box-react": "^9.0.2",
         "@sb1/ffe-sb1-logos": "^1.1.3",
-        "@sb1/ffe-searchable-dropdown-react": "^15.2.3",
+        "@sb1/ffe-searchable-dropdown-react": "^16.0.0",
         "@sb1/ffe-spinner": "^5.0.4",
         "@sb1/ffe-spinner-react": "^6.0.5",
         "@sb1/ffe-symbols": "^2.0.0",
