@@ -29,7 +29,7 @@
     },
     "dependencies": {
         "@sb1/ffe-context-message": "^7.2.0",
-        "@sb1/ffe-icons-react": "^7.3.5",
+        "@sb1/ffe-symbols-react": "^2.0.1",
         "classnames": "^2.3.1",
         "prop-types": "^15.7.2",
         "uuid": "^9.0.0"

@@ -1,6 +1,6 @@
 import React from 'react';
 import ContextMessage from './ContextMessage';
-import { InfoIkon } from '@sb1/ffe-icons-react';
+import Symbol from '@sb1/ffe-symbols-react';
 
 const ContextInfoMessage = props => (
     <ContextMessage
@@ -8,7 +8,7 @@ const ContextInfoMessage = props => (
         messageType="info"
         aria-label="Infomelding"
         role="group"
-        icon={<InfoIkon title="Infotegn, ikon" />}
+        icon={<Symbol ariaLabel="Infotegn">info_i</Symbol>}
     />
 );
 

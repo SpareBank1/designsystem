@@ -1,6 +1,6 @@
 import React from 'react';
 import ContextMessage from './ContextMessage';
-import { HakeIkon } from '@sb1/ffe-icons-react';
+import { Symbol } from '@sb1/ffe-symbols-react';
 
 const ContextSuccessMessage = props => (
     <ContextMessage
@@ -8,7 +8,7 @@ const ContextSuccessMessage = props => (
         messageType="success"
         aria-label="Suksessmelding"
         role="group"
-        icon={<HakeIkon title="Hake, ikon" />}
+        icon={<Symbol ariaLabel="hake">check</Symbol>}
     />
 );
 

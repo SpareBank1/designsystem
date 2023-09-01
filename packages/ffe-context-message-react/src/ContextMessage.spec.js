@@ -1,6 +1,5 @@
 import React from 'react';
-
-import { InfoSirkelIkon } from '@sb1/ffe-icons-react';
+import Symbol from '@sb1/ffe-symbols-react';
 
 import {
     ContextErrorMessage,
@@ -15,7 +14,7 @@ const defaultProps = {
     children: <p>content</p>,
     messageType: 'tips',
     role: 'group',
-    icon: <InfoSirkelIkon />,
+    icon: <Symbol ariaLabel="info">info_i</Symbol>,
 };
 
 const getShallowWrapper = props =>
@@ -92,26 +91,30 @@ describe('<ContextMessage />', () => {
 
     it('renders with context icon', () => {
         const wrapper = getMountedWrapper({});
-        const el = wrapper.find('svg');
+        const el = wrapper.find(Symbol);
         expect(el).toHaveLength(1);
-        expect(el.hasClass('ffe-context-message-content__icon-svg')).toBe(true);
-    });
-
-    it('renders with role="img" on icon', () => {
-        const wrapper = getMountedWrapper({});
-        const el = wrapper.find('svg');
-        expect(el).toHaveLength(1);
-        expect(el.prop('role')).toBe('img');
+        expect(el.hasClass('ffe-context-message-content__icon-span')).toBe(
+            true,
+        );
     });
 
     it('lets consumer add extra classes to icon', () => {
         const wrapper = getMountedWrapper({
-            icon: <InfoSirkelIkon className="extra-extra-read-all-about-it" />,
+            icon: (
+                <Symbol
+                    ariaLabel={null}
+                    className="extra-extra-read-all-about-it"
+                >
+                    info_i
+                </Symbol>
+            ),
         });
 
-        const el = wrapper.find('svg');
+        const el = wrapper.find(Symbol);
 
-        expect(el.hasClass('ffe-context-message-content__icon-svg')).toBe(true);
+        expect(el.hasClass('ffe-context-message-content__icon-span')).toBe(
+            true,
+        );
         expect(el.hasClass('extra-extra-read-all-about-it')).toBe(true);
     });
 
@@ -127,13 +130,8 @@ describe('<ContextMessage />', () => {
 
     it('renders without close button by default', () => {
         const wrapper = getMountedWrapper({
-            icon: <InfoSirkelIkon />,
+            icon: <Symbol ariaLabel="info">info_i</Symbol>,
         });
-        expect(
-            wrapper
-                .find('.ffe-context-message-content__close-button-svg')
-                .exists(),
-        ).toBe(false);
         expect(
             wrapper.find('.ffe-context-message-content__close-button').exists(),
         ).toBe(false);
