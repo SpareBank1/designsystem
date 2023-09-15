@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [17.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@17.0.3...@sb1/ffe-buttons@17.1.0) (2023-09-15)
+
+### Features
+
+-   **ffe-buttons:** add :host for shadow dom support ([840315c](https://github.com/SpareBank1/designsystem/commit/840315c9f080664842743c99007303b1c9d37eef))
+
 ## [17.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@17.0.2...@sb1/ffe-buttons@17.0.3) (2023-04-27)
 
 **Note:** Version bump only for package @sb1/ffe-buttons

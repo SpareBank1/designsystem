@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-symbols@2.0.0...@sb1/ffe-symbols@2.1.0) (2023-09-15)
+
+### Features
+
+-   **ffe-symbols:** add :host for shadow dom support ([42e8d91](https://github.com/SpareBank1/designsystem/commit/42e8d91308d70054ab666d932c85c0f4bf8fb2c6))
+
 # [2.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-symbols@1.1.4...@sb1/ffe-symbols@2.0.0) (2023-08-29)
 
 ### Bug Fixes

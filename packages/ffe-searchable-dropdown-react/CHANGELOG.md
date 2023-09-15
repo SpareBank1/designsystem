@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [16.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@16.0.0...@sb1/ffe-searchable-dropdown-react@16.1.0) (2023-09-15)
+
+### Features
+
+-   **ffe-searchable-dropdown-react:** add :host for shadow dom support ([7753099](https://github.com/SpareBank1/designsystem/commit/775309925a34c5f0320ef701aab453a0872cc2bf))
+
 # [16.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@15.2.3...@sb1/ffe-searchable-dropdown-react@16.0.0) (2023-09-01)
 
 -   chore(ffe-searchable-dropdown-react)!: remove SearchableDropdownHighCapacity ([9b3cde8](https://github.com/SpareBank1/designsystem/commit/9b3cde8b7c910c70bec17a26fef2d4bb86088357))

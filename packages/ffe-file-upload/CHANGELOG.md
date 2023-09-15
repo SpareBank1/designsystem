@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [9.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload@9.0.2...@sb1/ffe-file-upload@9.1.0) (2023-09-15)
+
+### Features
+
+-   **ffe-file-upload:** add :host for shadow dom support ([e337278](https://github.com/SpareBank1/designsystem/commit/e337278778cde97dc5b0e52224fd7ffa68c882f8))
+
 ## [9.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload@9.0.1...@sb1/ffe-file-upload@9.0.2) (2023-07-12)
 
 ### Bug Fixes

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [19.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@19.0.2...@sb1/ffe-header@19.1.0) (2023-09-15)
+
+### Features
+
+-   **ffe-header:** add :host for shadow dom support ([51ba249](https://github.com/SpareBank1/designsystem/commit/51ba249ba9ae8fc69c116ec51eb79d5cfbe2b9f5))
+
 ## [19.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@19.0.1...@sb1/ffe-header@19.0.2) (2023-04-27)
 
 **Note:** Version bump only for package @sb1/ffe-header
