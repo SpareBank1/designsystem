@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-form",
-    "version": "24.0.1",
+    "version": "24.1.0",
     "description": "Form components for Felles Front End",
     "license": "MIT",
     "author": "SpareBank 1",
@@ -16,8 +16,8 @@
         "test": "npm run lint"
     },
     "dependencies": {
-        "@sb1/ffe-buttons": "^17.0.3",
-        "@sb1/ffe-core": "^27.0.1"
+        "@sb1/ffe-buttons": "^17.1.0",
+        "@sb1/ffe-core": "^27.1.0"
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.5.0"

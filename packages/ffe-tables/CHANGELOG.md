@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [13.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@13.0.4...@sb1/ffe-tables@13.1.0) (2023-09-15)
+
+### Features
+
+-   **ffe-tables:** add :host for shadow dom support ([5063227](https://github.com/SpareBank1/designsystem/commit/506322713129cad63c39e5d0dec80e488b99e0bc))
+
 ## [13.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@13.0.3...@sb1/ffe-tables@13.0.4) (2023-07-12)
 
 ### Bug Fixes

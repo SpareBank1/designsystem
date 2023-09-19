@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [9.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@9.0.4...@sb1/ffe-accordion@9.1.0) (2023-09-15)
+
+### Features
+
+-   **ffe-accordion:** add :host for shadow dom support ([7f59333](https://github.com/SpareBank1/designsystem/commit/7f5933378ffc9ad51ac944c576e2bffc50b4b8cb))
+
 ## [9.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@9.0.3...@sb1/ffe-accordion@9.0.4) (2023-04-27)
 
 **Note:** Version bump only for package @sb1/ffe-accordion

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [11.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@11.0.4...@sb1/ffe-message-box@11.1.0) (2023-09-15)
+
+### Features
+
+-   **ffe-message-box:** add :host for shadow dom support ([7347fba](https://github.com/SpareBank1/designsystem/commit/7347fbabbc281e6c9a80d90e3b02661646c32b95))
+
 ## [11.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@11.0.3...@sb1/ffe-message-box@11.0.4) (2023-04-27)
 
 **Note:** Version bump only for package @sb1/ffe-message-box
