@@ -1,7 +1,7 @@
 import React from 'react';
 import CheckList from './CheckList';
 import CheckListItem from './CheckListItem';
-import { HakeIkon, KryssIkon } from '@sb1/ffe-icons-react';
+import Symbol from '@sb1/ffe-symbols-react';
 const getWrapper = props =>
     shallow(
         <CheckList {...props}>
@@ -43,8 +43,12 @@ describe('<CheckList>', () => {
 describe('<CheckListItem />', () => {
     it('render correct icon based on isCross value', () => {
         const wrapper = shallow(<CheckListItem>An item</CheckListItem>);
-        expect(wrapper.find(HakeIkon)).toHaveLength(1);
+        expect(
+            wrapper.find(Symbol).hasClass('ffe-check-list__icon--check'),
+        ).toBe(true);
         wrapper.setProps({ isCross: true });
-        expect(wrapper.find(KryssIkon)).toHaveLength(1);
+        expect(
+            wrapper.find(Symbol).hasClass('ffe-check-list__icon--cross'),
+        ).toBe(true);
     });
 });
