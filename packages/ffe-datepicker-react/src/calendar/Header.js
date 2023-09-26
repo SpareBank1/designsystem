@@ -1,6 +1,6 @@
 import React from 'react';
 import { func, number, object, string } from 'prop-types';
-import { ChevronIkon } from '@sb1/ffe-icons-react';
+import Symbol from '@sb1/ffe-symbols-react';
 
 export default function Header(props) {
     const {
@@ -26,7 +26,13 @@ export default function Header(props) {
                     ref={prevMonthButtonElement}
                     tabIndex={-1}
                 >
-                    <ChevronIkon className="ffe-calendar__icon-prev" />
+                    <Symbol
+                        ariaLabel=""
+                        size="md"
+                        className="ffe-calendar__icon-prev"
+                    >
+                        arrow_back_ios
+                    </Symbol>
                 </button>
                 <header
                     aria-live="polite"
@@ -46,7 +52,13 @@ export default function Header(props) {
                     ref={nextMonthButtonElement}
                     tabIndex={-1}
                 >
-                    <ChevronIkon className="ffe-calendar__icon-next" />
+                    <Symbol
+                        ariaLabel=""
+                        size="md"
+                        className="ffe-calendar__icon-next"
+                    >
+                        arrow_forward_ios
+                    </Symbol>
                 </button>
             </div>
         </div>
