@@ -1,6 +1,6 @@
 import React from 'react';
 import { func, shape, object, string as stringType } from 'prop-types';
-import { UtropstegnIkon } from '@sb1/ffe-icons-react';
+import Symbol from '@sb1/ffe-symbols-react';
 
 const FileItem = ({ file, onFileDeleted, cancelText, deleteText }) => (
     <li>
@@ -13,11 +13,16 @@ const FileItem = ({ file, onFileDeleted, cancelText, deleteText }) => (
                     className="ffe-file-upload__file-item-delete-button"
                     onClick={onFileDeleted}
                 >
-                    {cancelText}
-                    <div
-                        id={file.name}
+                    <span className="ffe-file-upload__file-item-delete-button-text">
+                        {cancelText}
+                    </span>
+                    <Symbol
+                        ariaLabel=""
+                        size="md"
                         className="ffe-file-upload__file-item-delete-icon"
-                    />
+                    >
+                        close
+                    </Symbol>
                 </button>
                 <div className="ffe-file-upload__file-item-stencil-info">
                     <div className="ffe-file-upload__file-item-stencil-info-background" />
@@ -36,11 +41,16 @@ const FileItem = ({ file, onFileDeleted, cancelText, deleteText }) => (
                     className="ffe-file-upload__file-item-delete-button"
                     onClick={onFileDeleted}
                 >
-                    {deleteText}
-                    <div
-                        id={file.name}
+                    <span className="ffe-file-upload__file-item-delete-button-text">
+                        {deleteText}
+                    </span>
+                    <Symbol
+                        ariaLabel=""
+                        size="md"
                         className="ffe-file-upload__file-item-delete-icon"
-                    />
+                    >
+                        close
+                    </Symbol>
                 </button>
                 <div className="ffe-file-upload__file-item-filename">
                     {file.name}
@@ -51,7 +61,9 @@ const FileItem = ({ file, onFileDeleted, cancelText, deleteText }) => (
         file.error && (
             <div className="ffe-file-upload__file-item-error" role="alert">
                 <div className="ffe-file-upload__file-item-error-icon">
-                    <UtropstegnIkon role="img" title="utropstegn-ikon" />
+                    <Symbol ariaLabel="" size="sm">
+                        exclamation
+                    </Symbol>
                 </div>
                 <button
                     type="button"
@@ -59,11 +71,16 @@ const FileItem = ({ file, onFileDeleted, cancelText, deleteText }) => (
                     className="ffe-file-upload__file-item-delete-button"
                     onClick={onFileDeleted}
                 >
-                    {deleteText}
-                    <div
-                        id={file.name}
+                    <span className="ffe-file-upload__file-item-delete-button-text">
+                        {deleteText}
+                    </span>
+                    <Symbol
+                        ariaLabel=""
+                        size="md"
                         className="ffe-file-upload__file-item-delete-icon"
-                    />
+                    >
+                        close
+                    </Symbol>
                 </button>
                 <div className="ffe-file-upload__file-item-error-info">
                     <div className="ffe-file-upload__file-item-error-filename">
