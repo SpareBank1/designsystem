@@ -1,4 +1,4 @@
-import { ChevronIkon } from '@sb1/ffe-icons-react';
+import Symbol from '@sb1/ffe-symbols-react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
@@ -64,7 +64,7 @@ class TableRowExpandable extends Component {
                         expandIcon: unexpandable ? (
                             ' '
                         ) : (
-                            <ChevronIkon
+                            <Symbol
                                 className={classNames(
                                     'ffe-table__expand-icon',
                                     {
@@ -72,7 +72,11 @@ class TableRowExpandable extends Component {
                                             .state.expanded,
                                     },
                                 )}
-                            />
+                                ariaLabel=""
+                                size="lg"
+                            >
+                                expand_more
+                            </Symbol>
                         ),
                     }}
                     trClasses={classNames(
