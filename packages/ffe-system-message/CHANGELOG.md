@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@7.0.4...@sb1/ffe-system-message@7.1.0) (2023-09-15)
+
+### Features
+
+-   **ffe-system-message:** add :host for shadow dom support ([b471536](https://github.com/SpareBank1/designsystem/commit/b47153683f43a738aef31356b06d3af735e9307b))
+
 ## [7.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@7.0.3...@sb1/ffe-system-message@7.0.4) (2023-04-27)
 
 **Note:** Version bump only for package @sb1/ffe-system-message

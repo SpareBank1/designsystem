@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@5.2.0...@sb1/ffe-chart-donut-react@5.3.0) (2023-09-15)
+
+### Features
+
+-   **ffe-chart-donut-react:** add :host for shadow dom support ([52bd551](https://github.com/SpareBank1/designsystem/commit/52bd5515ea768348cbba3afae8f2d764ea7e32c3))
+
 # [5.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-chart-donut-react@5.1.2...@sb1/ffe-chart-donut-react@5.2.0) (2022-11-11)
 
 ### Features

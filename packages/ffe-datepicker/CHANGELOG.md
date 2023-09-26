@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [11.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@11.0.9...@sb1/ffe-datepicker@11.1.0) (2023-09-15)
+
+### Features
+
+-   **ffe-datepicker:** add :host for shadow dom support ([83fed60](https://github.com/SpareBank1/designsystem/commit/83fed60f275cbcb1a463d6e5923133211f72c1b4))
+
 ## [11.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@11.0.8...@sb1/ffe-datepicker@11.0.9) (2023-07-03)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker

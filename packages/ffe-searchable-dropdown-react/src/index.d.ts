@@ -37,15 +37,8 @@ export interface SearchableDropdownProps<T> {
     innerRef?: React.Ref<HTMLInputElement>;
 }
 
-export interface SearchableDropdownHighCapacityProps<T>
-    extends SearchableDropdownProps<T> {}
-
 declare class SearchableDropdown<T> extends React.Component<
     SearchableDropdownProps<T>
 > {}
 
-declare class SearchableDropdownHighCapacity<T> extends React.Component<
-    SearchableDropdownHighCapacityProps<T>
-> {}
-
-export { SearchableDropdown, SearchableDropdownHighCapacity };
+export { SearchableDropdown };

@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [22.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@22.0.2...@sb1/ffe-account-selector-react@22.1.0) (2023-09-15)
+
+### Features
+
+-   **ffe-account-selector-react:** add :host for shadow dom support ([cefa37e](https://github.com/SpareBank1/designsystem/commit/cefa37e5f4eb23f859395516ae77fd1371668c3e))
+
+## [22.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@22.0.1...@sb1/ffe-account-selector-react@22.0.2) (2023-09-01)
+
+**Note:** Version bump only for package @sb1/ffe-account-selector-react
+
+## [22.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@22.0.0...@sb1/ffe-account-selector-react@22.0.1) (2023-09-01)
+
+**Note:** Version bump only for package @sb1/ffe-account-selector-react
+
+# [22.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@21.3.16...@sb1/ffe-account-selector-react@22.0.0) (2023-08-31)
+
+-   chore(ffe-account-selector-react)!: remove AccountSelectorHighCapacity ([c8190b9](https://github.com/SpareBank1/designsystem/commit/c8190b9b95645b4ce1dc8ba06841e0233d42393e))
+
+### BREAKING CHANGES
+
+-   AccountSelectorHighCapacity is no longer exported.
+    Use AccountSelectorMulti or BaseSelector with prop highCapacity=true
+
 ## [21.3.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@21.3.15...@sb1/ffe-account-selector-react@21.3.16) (2023-07-24)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react

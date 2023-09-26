@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [16.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@16.1.1...@sb1/ffe-cards@16.2.0) (2023-09-15)
+
+### Features
+
+-   **ffe-cards:** add :host for shadow dom support ([d43f43a](https://github.com/SpareBank1/designsystem/commit/d43f43a58217388062f13d6c7cddfac3569e4246))
+
 ## [16.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@16.1.0...@sb1/ffe-cards@16.1.1) (2023-08-24)
 
 ### Bug Fixes

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [24.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@24.0.1...@sb1/ffe-form@24.1.0) (2023-09-15)
+
+### Features
+
+-   **ffe-form:** add :host for shadow dom support ([19d14a1](https://github.com/SpareBank1/designsystem/commit/19d14a15e4a27e413f1f3dda64896ba445dae64a))
+
 ## [24.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@24.0.0...@sb1/ffe-form@24.0.1) (2023-07-03)
 
 ### Bug Fixes

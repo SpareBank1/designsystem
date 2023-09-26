@@ -113,12 +113,6 @@ AccountSelector.propTypes = {
     ariaInvalid: oneOfType([string, bool]).isRequired,
     /** Defines if you should save space for account details that is shown when an account is selected */
     withSpaceForDetails: bool,
-    /**
-     * For situations where AccountSelector might be populated with hundreds of accounts,
-     * uses react-window for performance optimization, default false.
-     * This prop will be passed on to SearchableDropdown.
-     * The account selector with highCapacity is currently not working with VoiceOver on ios.
-     */
     onClose: func,
     /** Prop passed to the dropdown list */
     onOpen: func,
