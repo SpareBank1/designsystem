@@ -1,7 +1,7 @@
 import { IconCard } from '@sb1/ffe-cards-react';
-import { GrafOppIkon } from '@sb1/ffe-icons-react';
+import Symbol from "@sb1/ffe-symbols-react";
 
-<IconCard href="https://design.sparebank1.no" icon={<GrafOppIkon />}>
+<IconCard href="https://design.sparebank1.no" icon={<Symbol ariaLabel={null}>savings</Symbol>}>
     {({ CardName, Title, Subtext, Text }) => (
         <>
             <CardName>Kortnavn</CardName>
