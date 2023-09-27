@@ -1,11 +1,16 @@
 import React from 'react';
 
 import IconCard from './IconCard';
-import { SparegrisIkon } from '@sb1/ffe-icons-react';
+import Symbol from '@sb1/ffe-symbols-react';
 import { Text } from '../components';
 
 const getWrapper = props =>
-    shallow(<IconCard icon={<SparegrisIkon />} {...props} />);
+    shallow(
+        <IconCard
+            icon={<Symbol ariaLabel={null}>savings</Symbol>}
+            {...props}
+        />,
+    );
 const children = <div>Hello world</div>;
 
 describe('IconCard', () => {
@@ -25,15 +30,15 @@ describe('IconCard', () => {
 
     it('should render icon, with an added class', () => {
         const wrapper = getWrapper({
-            icon: <SparegrisIkon className="my-custom-class" />,
+            icon: (
+                <Symbol ariaLabel={null} className="my-custom-class">
+                    savings
+                </Symbol>
+            ),
         });
 
-        expect(
-            wrapper.find(SparegrisIkon).hasClass('ffe-icon-card__icon'),
-        ).toBe(true);
-        expect(wrapper.find(SparegrisIkon).hasClass('my-custom-class')).toBe(
-            true,
-        );
+        expect(wrapper.find(Symbol).hasClass('ffe-icon-card__icon')).toBe(true);
+        expect(wrapper.find(Symbol).hasClass('my-custom-class')).toBe(true);
     });
 
     it('should add modifying classes when modifiers are given', () => {

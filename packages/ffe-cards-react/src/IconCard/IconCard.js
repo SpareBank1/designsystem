@@ -24,11 +24,12 @@ const IconCard = props => {
             {...rest}
         >
             {React.cloneElement(icon, {
+                ...icon.props,
                 className: classNames(
                     'ffe-icon-card__icon',
                     icon.props.className,
                 ),
-                'aria-hidden': 'true',
+                weight: 300,
             })}
             <div className="ffe-icon-card__body">
                 {typeof children === 'function'
@@ -45,7 +46,7 @@ IconCard.defaultProps = {
 
 IconCard.propTypes = {
     className: string,
-    /** A rendered icon */
+    /** Element of icon */
     icon: node.isRequired,
     /** Smaller icon and less space */
     condensed: bool,
