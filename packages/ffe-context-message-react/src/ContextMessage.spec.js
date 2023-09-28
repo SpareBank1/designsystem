@@ -101,7 +101,10 @@ describe('<ContextMessage />', () => {
     it('lets consumer add extra classes to icon', () => {
         const wrapper = getMountedWrapper({
             icon: (
-                <Symbol className="extra-extra-read-all-about-it">
+                <Symbol
+                    ariaLabel={null}
+                    className="extra-extra-read-all-about-it"
+                >
                     info_i
                 </Symbol>
             ),
