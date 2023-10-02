@@ -10,3 +10,5 @@ export interface SymbolProps {
 }
 
 declare class Symbol extends React.Component<SymbolProps, any> {}
+
+export default Symbol;
