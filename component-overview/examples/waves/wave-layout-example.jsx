@@ -16,7 +16,7 @@ import {PrimaryButton} from '@sb1/ffe-buttons-react';
                 </Paragraph>
             </GridCol>
         </GridRow>
-        <Wave color='vann-30' flip="true" darkmodeColor='natt' bgColor='frost-30'/>
+        <Wave color='vann-30' flip="true" darkmodeColor='natt' bgColor='frost-30' bgDarkmodeColor='svart'/>
     </Grid>
     <Grid>
         <GridRow background='frost-30'>
@@ -51,7 +51,7 @@ import {PrimaryButton} from '@sb1/ffe-buttons-react';
             </GridCol>
         </GridRow>
     </Grid>
-    <Wave color='fjell' darkmodeColor='natt' bgColor='frost-30'>
+    <Wave color='fjell' darkmodeColor='natt' bgColor='frost-30' bgDarkmodeColor='svart'>
         <Grid>
             <GridRow>
                 <GridCol sm={{ cols: 5, offset: 2 }}>Litt innhold</GridCol>
