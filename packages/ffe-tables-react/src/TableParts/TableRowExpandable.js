@@ -73,7 +73,7 @@ class TableRowExpandable extends Component {
                                     },
                                 )}
                                 ariaLabel=""
-                                size="lg"
+                                size="md"
                             >
                                 expand_more
                             </Symbol>
