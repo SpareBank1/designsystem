@@ -10,3 +10,11 @@ html,
 *::after {
     box-sizing: inherit;
 }
+
+/* stylelint-disable */
+@supports (font: -apple-system-body) {
+    :root,
+    :host {
+        font: -apple-system-body;
+    }
+}
