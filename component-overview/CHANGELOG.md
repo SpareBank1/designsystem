@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.1.20](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@5.1.19...@sb1/ffe-component-index@5.1.20) (2023-10-12)
+
+### Bug Fixes
+
+-   **component-overview:** endrer fra string til number i eksempel så det blir riktig ([35c2b1f](https://github.com/SpareBank1/designsystem/commit/35c2b1f8fcbe57333d95fde7ad3906c19873818e))
+
 ## [5.1.19](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@5.1.18...@sb1/ffe-component-index@5.1.19) (2023-10-11)
 
 **Note:** Version bump only for package @sb1/ffe-component-index
