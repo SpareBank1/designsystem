@@ -52,4 +52,5 @@ export default {
     CHANGE_DATE: 'Endre dato',
     CHOSEN_DATE: 'valt dato er',
     DATE_FORMAT: 'dd.mm.åååå',
+    CALENDAR_LABEL: 'Kalender',
 };

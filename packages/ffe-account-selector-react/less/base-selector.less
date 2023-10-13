@@ -16,41 +16,43 @@
 
     &__expand-button {
         position: absolute;
-        padding: @ffe-spacing-2xs;
-        top: 50%;
-        transform: translateY(-50%);
-        right: 10px;
+        padding: 0 @ffe-spacing-2xs;
         background: transparent;
         border: none;
         cursor: pointer;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 2.5em;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
 
         &-icon {
-            fill: var(--ffe-g-primary-color);
-            display: block;
-            width: 17px;
-            height: 17px;
+            color: var(--ffe-g-primary-color);
         }
 
         &-icon--invalid {
-            fill: var(--ffe-g-error-color);
+            color: var(--ffe-g-error-color);
         }
     }
 
     &__reset-button {
-        padding: @ffe-spacing-xs;
         position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        right: 35px;
+        z-index: 1;
+        padding: 0 @ffe-spacing-2xs;
         background: transparent;
         border: none;
-        fill: var(--ffe-g-primary-color);
         cursor: pointer;
+        top: 0;
+        bottom: 0;
+        right: 2.5em;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
 
         &-icon {
-            display: block;
-            width: 11px;
-            height: 11px;
+            color: var(--ffe-g-primary-color);
         }
     }
 

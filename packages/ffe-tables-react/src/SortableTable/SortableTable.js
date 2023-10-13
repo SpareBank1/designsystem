@@ -1,4 +1,4 @@
-import { PilNedIkon } from '@sb1/ffe-icons-react';
+import Symbol from '@sb1/ffe-symbols-react';
 import classNames from 'classnames';
 import equal from 'deep-equal';
 import PropTypes from 'prop-types';
@@ -91,7 +91,7 @@ class SortableTable extends Component {
                 onClick={this.tableHeaderClicked.bind(this, column.key)}
             >
                 {column.header}
-                <PilNedIkon
+                <Symbol
                     className={classNames(
                         'icon',
                         'ffe-sortable-table__sort-arrow',
@@ -101,7 +101,11 @@ class SortableTable extends Component {
                                 this.state.descending,
                         },
                     )}
-                />
+                    ariaLabel=""
+                    size="md"
+                >
+                    arrow_drop_down
+                </Symbol>
             </span>
         );
     }

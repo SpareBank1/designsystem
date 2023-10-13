@@ -8,7 +8,7 @@ import React, {
 } from 'react';
 import { propTypes } from './propTypes';
 import classNames from 'classnames';
-import { ChevronIkon } from '@sb1/ffe-icons-react';
+import Symbol from '@sb1/ffe-symbols-react';
 
 import ListItemBody from './ListItemBody';
 import { getButtonLabelClose, getButtonLabelOpen } from './translations';
@@ -318,20 +318,28 @@ export const SearchableDropdown = ({
                             ? getButtonLabelClose(locale)
                             : getButtonLabelOpen(locale)
                     }
-                    className={classNames(
-                        'ffe-searchable-dropdown__button ffe-searchable-dropdown__button--arrow',
-                        {
-                            'ffe-searchable-dropdown__button--flip':
-                                state.isExpanded,
-                        },
-                    )}
+                    className={classNames('ffe-searchable-dropdown__button', {
+                        'ffe-searchable-dropdown__button--flip':
+                            state.isExpanded,
+                    })}
                     onClick={() => {
                         dispatch({
                             type: stateChangeTypes.ToggleButtonPressed,
                         });
                     }}
                 >
-                    {isLoading ? <Spinner /> : <ChevronIkon />}
+                    {isLoading ? (
+                        <Spinner />
+                    ) : (
+                        <Symbol
+                            ariaLabel=""
+                            size="md"
+                            weight="300"
+                            className="ffe-searchable-dropdown__button-icon"
+                        >
+                            expand_more
+                        </Symbol>
+                    )}
                 </button>
             </div>
             <div

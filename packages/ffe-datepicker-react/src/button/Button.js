@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { string, func, object } from 'prop-types';
-import { KalenderIkon } from '@sb1/ffe-icons-react';
+import Symbol from '@sb1/ffe-symbols-react';
 import { validateDate } from '../util/dateUtil';
 import i18n from '../i18n/i18n';
 
@@ -19,7 +19,13 @@ export default class Button extends Component {
                 aria-label={buttonLabel}
                 type="button"
             >
-                <KalenderIkon className="ffe-datepicker__icon" />
+                <Symbol
+                    ariaLabel={i18n[language].CALENDAR_LABEL}
+                    size="md"
+                    className="ffe-datepicker__icon"
+                >
+                    calendar_month
+                </Symbol>
             </button>
         );
     }

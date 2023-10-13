@@ -2,7 +2,7 @@
 /* eslint jsx-a11y/role-has-required-aria-props:0 */
 import React from 'react';
 import { func, string, bool, number } from 'prop-types';
-import { KryssIkon, ChevronIkon } from '@sb1/ffe-icons-react';
+import Symbol from '@sb1/ffe-symbols-react';
 import classNames from 'classnames';
 import txt from '../../i18n/i18n';
 import { Locale } from '../../util/types';
@@ -83,7 +83,14 @@ const InputField = props => {
                     type="button"
                     aria-label={txt[locale].RESET_SEARCH}
                 >
-                    <KryssIkon className="ffe-base-selector__reset-button-icon" />
+                    <Symbol
+                        ariaLabel=""
+                        size="sm"
+                        weight="300"
+                        className="ffe-base-selector__reset-button-icon"
+                    >
+                        close
+                    </Symbol>
                 </button>
             )}
             <button
@@ -97,14 +104,19 @@ const InputField = props => {
                         : txt[locale].ACCOUNTSLIST_OPEN
                 }
             >
-                <ChevronIkon
+                <Symbol
+                    ariaLabel=""
+                    size="md"
+                    weight="300"
                     className={classNames(
-                        'ffe-base-selector__expand-button-icon ',
+                        'ffe-base-selector__expand-button-icon',
                         {
                             'ffe-base-selector__expand-button-icon--invalid': ariaInvalid,
                         },
                     )}
-                />
+                >
+                    expand_more
+                </Symbol>
             </button>
         </div>
     );

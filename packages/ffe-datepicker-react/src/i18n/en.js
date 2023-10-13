@@ -52,4 +52,5 @@ export default {
     CHANGE_DATE: 'Change date',
     CHOSEN_DATE: 'chosen date is',
     DATE_FORMAT: 'dd.mm.yyyy',
+    CALENDAR_LABEL: 'Calendar',
 };

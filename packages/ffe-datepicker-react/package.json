@@ -24,9 +24,9 @@
         "test:watch": "ffe-buildtool jest --watch"
     },
     "dependencies": {
+        "@sb1/ffe-symbols-react": "^2.0.0",
         "@sb1/ffe-datepicker": "^11.1.1",
         "@sb1/ffe-form": "^24.1.1",
-        "@sb1/ffe-icons-react": "^7.3.5",
         "classnames": "^2.3.1",
         "lodash.debounce": "^4.0.8",
         "prop-types": "^15.7.2",

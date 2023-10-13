@@ -3,7 +3,7 @@ import { object, bool, func, string as stringType } from 'prop-types';
 import FileItem from './FileItem';
 import classNames from 'classnames';
 import { SecondaryButton } from '@sb1/ffe-buttons-react';
-import { PilNedIBoksIkon } from '@sb1/ffe-icons-react';
+import Symbol from '@sb1/ffe-symbols-react';
 
 class FileUpload extends React.Component {
     constructor(props) {
@@ -114,7 +114,11 @@ class FileUpload extends React.Component {
                             {uploadMicroText}
                         </div>
                         <SecondaryButton
-                            leftIcon={<PilNedIBoksIkon />}
+                            leftIcon={
+                                <Symbol ariaLabel="" size="sm">
+                                    download
+                                </Symbol>
+                            }
                             onClick={this.triggerUploadFileNativeHandler}
                             id={`${id}-button`}
                         >

@@ -51,46 +51,21 @@
         &:focus,
         &:active {
             border-color: var(--ffe-v-datepicker-border-hover-color);
-
-            // .native & {
-            //     @media (prefers-color-scheme: dark) {
-            //         border-color: @ffe-farge-vann-70;
-            //     }
-            // }
         }
 
         .ffe-dateinput__field:focus + &:hover {
             border-color: transparent;
             box-shadow: 0 0 0 2px var(--ffe-v-datepicker-border-hover-color);
-
-            // .native & {
-            //     @media (prefers-color-scheme: dark) {
-            //         box-shadow: 0 0 0 2px @ffe-farge-vann-70;
-            //     }
-            // }
         }
     }
 
     &__icon {
         vertical-align: middle;
-        width: 22px;
-        fill: var(--ffe-v-datepicker-icon-color);
-        transition: fill @ffe-transition-duration @ffe-ease;
-
-        // .native & {
-        //     @media (prefers-color-scheme: dark) {
-        //         fill: @ffe-farge-vann-70;
-        //     }
-        // }
+        color: var(--ffe-v-datepicker-icon-color);
+        transition: color @ffe-transition-duration @ffe-ease;
 
         .ffe-datepicker__button:hover & {
-            fill: var(--ffe-v-datepicker-icon-color-hover);
-
-            // .native & {
-            //     @media (prefers-color-scheme: dark) {
-            //         fill: @ffe-farge-vann-30;
-            //     }
-            // }
+            color: var(--ffe-v-datepicker-icon-color-hover);
         }
     }
 }

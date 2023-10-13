@@ -1,6 +1,6 @@
 import React from 'react';
 import { node, string, oneOf } from 'prop-types';
-import { InfoIkon, HakeIkon, UtropstegnIkon } from '@sb1/ffe-icons-react';
+import Symbol from '@sb1/ffe-symbols-react';
 import classNames from 'classnames';
 
 /**
@@ -37,17 +37,28 @@ const BaseFieldMessage = props => {
                     switch (type) {
                         case 'error':
                             return (
-                                <UtropstegnIkon
-                                    role="img"
-                                    title="utropstegn-ikon"
-                                />
+                                <Symbol ariaLabel="Utropstegn" size="xs">
+                                    priority_high
+                                </Symbol>
                             );
                         case 'success':
-                            return <HakeIkon role="img" title="hake-ikon" />;
+                            return (
+                                <Symbol ariaLabel="hake-ikon" size="sm">
+                                    check
+                                </Symbol>
+                            );
                         case 'info':
-                            return <InfoIkon role="img" title="info-ikon" />;
+                            return (
+                                <Symbol ariaLabel="info-ikon" size="xs">
+                                    info_i
+                                </Symbol>
+                            );
                         default:
-                            return <InfoIkon role="img" title="info-ikon" />;
+                            return (
+                                <Symbol ariaLabel="info-ikon" size="xs">
+                                    info_i
+                                </Symbol>
+                            );
                     }
                 })()}
             </span>
