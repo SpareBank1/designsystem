@@ -41,12 +41,14 @@ const InlineBaseButton = props => {
                 React.cloneElement(leftIcon, {
                     className:
                         'ffe-inline-button__icon ffe-inline-button__icon--left',
+                    weight: 300,
                 })}
             <span className="ffe-inline-button__label">{children}</span>
             {rightIcon &&
                 React.cloneElement(rightIcon, {
                     className:
                         'ffe-inline-button__icon ffe-inline-button__icon--right',
+                    weight: 300,
                 })}
         </Element>
     );

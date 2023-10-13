@@ -24,8 +24,8 @@
         "test:watch": "ffe-buildtool jest --watch"
     },
     "dependencies": {
-        "@sb1/ffe-icons-react": "^7.3.5",
         "@sb1/ffe-message-box": "^11.1.1",
+        "@sb1/ffe-symbols-react": "^2.0.1",
         "classnames": "^2.3.1"
     },
     "devDependencies": {

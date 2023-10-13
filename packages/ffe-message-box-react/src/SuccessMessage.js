@@ -1,7 +1,6 @@
 import React from 'react';
 import { node, string } from 'prop-types';
-
-import { HakeIkon } from '@sb1/ffe-icons-react';
+import Symbol from '@sb1/ffe-symbols-react';
 
 import BaseMessage from './BaseMessage';
 
@@ -9,7 +8,7 @@ const SuccessMessage = props => (
     <BaseMessage
         type="success"
         aria-label="Suksessmelding"
-        icon={<HakeIkon title="Hake, ikon" />}
+        icon={<Symbol ariaLabel="Hake">check</Symbol>}
         {...props}
     />
 );

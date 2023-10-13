@@ -1,5 +1,5 @@
 import React from 'react';
-import { InfoIkon } from '@sb1/ffe-icons-react';
+import Symbol from '@sb1/ffe-symbols-react';
 
 import SystemMessage from './SystemMessage';
 
@@ -8,7 +8,7 @@ export default function SystemInfoMessage(props) {
         <SystemMessage
             modifier="info"
             aria-label="Infomelding"
-            icon={<InfoIkon title="Infotegn, ikon" />}
+            icon={<Symbol ariaLabel="Infotegn">info_i</Symbol>}
             {...props}
         />
     );

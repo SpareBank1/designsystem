@@ -1,6 +1,6 @@
 import React from 'react';
 import { func, string, number, node, oneOf, bool } from 'prop-types';
-import { UtropstegnIkon } from '@sb1/ffe-icons-react';
+import Symbol from '@sb1/ffe-symbols-react';
 
 import SystemMessage from './SystemMessage';
 
@@ -11,7 +11,7 @@ export default function SystemErrorMessage(props) {
         <SystemMessage
             modifier="error"
             aria-label="Feilmelding"
-            icon={<UtropstegnIkon title="Utropstegn, ikon" />}
+            icon={<Symbol ariaLabel="Utropstegn">priority_high</Symbol>}
             role={alert ? 'alert' : 'group'}
             {...rest}
         />
@@ -31,8 +31,6 @@ SystemErrorMessage.propTypes = {
     children: node.isRequired,
     /** Additional classes added to the surrounding div */
     className: string,
-    /** Override the default icon - use with caution! */
-    icon: node,
     /** 'nb', 'nn', or 'en' */
     locale: oneOf(['en', 'nb', 'nn']),
     /**

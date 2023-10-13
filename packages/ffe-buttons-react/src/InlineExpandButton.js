@@ -1,6 +1,6 @@
 import React from 'react';
 import { bool, func, node, oneOfType, object, shape } from 'prop-types';
-import { ChevronIkon } from '@sb1/ffe-icons-react';
+import Symbol from '@sb1/ffe-symbols-react';
 
 import InlineButton from './InlineBaseButton';
 
@@ -11,14 +11,11 @@ const InlineExpandButton = props => {
         <InlineButton
             buttonType="expand"
             type="button"
+            className={isExpanded ? 'ffe-inline-button--expanded' : ''}
             rightIcon={
-                <ChevronIkon
-                    aria-hidden="true"
-                    style={{
-                        marginLeft: '8px',
-                        transform: isExpanded ? 'rotateZ(180deg)' : 'none',
-                    }}
-                />
+                <Symbol size="md" ariaLabel="">
+                    expand_more
+                </Symbol>
             }
             {...rest}
         />

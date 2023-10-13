@@ -9,8 +9,21 @@ import {
     elementType,
 } from 'prop-types';
 import InlineButton from './InlineBaseButton';
+import Symbol from '@sb1/ffe-symbols-react';
 
-const BackButton = props => <InlineButton buttonType="back" {...props} />;
+const BackButton = props => {
+    return (
+        <InlineButton
+            buttonType="back"
+            leftIcon={
+                <Symbol ariaLabel="" size="md">
+                    chevron_left
+                </Symbol>
+            }
+            {...props}
+        />
+    );
+};
 
 BackButton.propTypes = {
     /** The button label */

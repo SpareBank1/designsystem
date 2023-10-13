@@ -1,7 +1,10 @@
 import React from 'react';
 import BaseMessage from './BaseMessage';
-
-const defaultProps = { type: 'info', icon: <svg id="icon" /> };
+import Symbol from '@sb1/ffe-symbols-react';
+const defaultProps = {
+    type: 'info',
+    icon: <Symbol ariaLabel="">priority_high</Symbol>,
+};
 const getWrapper = props =>
     shallow(<BaseMessage {...defaultProps} {...props} />);
 
@@ -31,11 +34,6 @@ describe('<BaseMessage />', () => {
     it('renders an icon by default', () => {
         const wrapper = getWrapper();
         expect(wrapper.find('.ffe-message-box__icon').exists()).toBe(true);
-    });
-    it('renders the icon with role="img" by default', () => {
-        const wrapper = getWrapper();
-        const el = wrapper.find('svg');
-        expect(el.prop('role')).toBe('img');
     });
     it('renders the container with role="group" by default', () => {
         const wrapper = getWrapper();

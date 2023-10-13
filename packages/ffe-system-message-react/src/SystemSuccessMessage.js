@@ -1,5 +1,5 @@
 import React from 'react';
-import { HakeIkon } from '@sb1/ffe-icons-react';
+import Symbol from '@sb1/ffe-symbols-react';
 
 import SystemMessage from './SystemMessage';
 
@@ -8,7 +8,7 @@ export default function SystemSuccessMessage(props) {
         <SystemMessage
             modifier="success"
             aria-label="Suksessmelding"
-            icon={<HakeIkon title="Hake, ikon" />}
+            icon={<Symbol ariaLabel="Hake">check</Symbol>}
             {...props}
         />
     );

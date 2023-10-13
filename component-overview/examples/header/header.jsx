@@ -71,25 +71,28 @@ import { useState } from 'react';
                             <span className="ffe-header__user-name">
                                 Jomar Beate Skrothaug
                                 <span className="ffe-header__user-chevron">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 200 200"
-                                        className="ffe-header__svg-icon ffe-header__user-chevron-icon"
+                                    <span
+                                        className="ffe-symbol ffe-symbol--400 ffe-symbol--md ffe-header__svg-icon ffe-header__user-chevron-icon"
+                                        role="graphics-symbol img"
+                                        aria-label='utvid'
                                     >
-                                        <path d="m16.171492,41.999998c-4.143269,0-8.2852797,1.57464-11.4277496,4.706478-6.3249899,6.283609-6.3249899,16.499474,0,22.803034l84.0286676,83.76282c6.30496,6.30356,16.54928,6.30356,22.87426,0l83.60959-83.26412c6.32499-6.28361,6.32499-16.499477,0-22.803038-6.30496-6.30356-16.55553-6.30356-22.88051,0l-72.13806,71.893768-72.613438-72.373767c-3.14247-3.151781-7.29074-4.725174-11.433999-4.725174h-0.0188z" />
-                                    </svg>
+                                        expand_more
+                                    </span>
                                 </span>
                             </span>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 200 200"
-                                className="ffe-header__svg-icon ffe-header__user-icon"
-                            >
-                                <path d="M99.656,0c-21.96,0-39.812,17.913-39.812,39.938v13.468c0,22.025,17.852,39.938,39.812,39.938h0.684c21.97,0,39.82-17.913,39.82-39.938v-13.468c0-22.025-17.86-39.938-39.82-39.938h-0.684zm0,14.031h0.684c14.24,0,25.82,11.625,25.82,25.907v13.437c0,14.284-11.58,25.906-25.82,25.906h-0.684c-14.24,0-25.812-11.622-25.812-25.906v-13.437c0-14.282,11.572-25.907,25.812-25.907zm-46.094,87.749c-0.973,0.1-1.932,0.46-2.781,1.1-14.196,10.54-22.781,27.37-22.781,45.28v40.46c0,6.29,5.082,11.38,11.344,11.38h121.32c6.26,0,11.34-5.09,11.34-11.38v-40.46c0-17.91-8.59-34.74-22.78-45.28-2.72-2.02-6.59-1.19-8.28,1.74l-1.35,2.32c-1.42,2.46-0.83,5.64,1.44,7.34,10.57,7.93,16.97,20.5,16.97,33.88v37.81h-116v-37.81c0-13.38,6.399-25.96,16.969-33.88,2.276-1.7,2.859-4.88,1.437-7.34l-1.344-2.32c-1.163-2.01-3.359-3.05-5.5-2.84z" />
-                            </svg>
-                            <span className="ffe-header__notification-bubble">
-                                5
-                            </span>
+                            <div className="ffe-header__svg-icon ffe-header__user-icon">
+                                <span
+                                    className="ffe-symbol ffe-symbol--400 ffe-symbol--xl ffe-header__svg-icon ffe-header__user-icon"
+                                    role="graphics-symbol img"
+                                    aria-label='bruker'
+                                >
+                                    person
+                                </span>
+                                <span className="ffe-header__notification-bubble">
+                                    5
+                                </span>
+                            </div>
+
                         </button>
                     </div>
 

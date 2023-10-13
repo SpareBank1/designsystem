@@ -1,9 +1,9 @@
 import React from 'react';
-import { ChevronIkon } from '@sb1/ffe-icons-react';
+import Symbol from '@sb1/ffe-symbols-react';
 
 import TaskButton from './TaskButton';
 
-const defaultProps = { children: 'Click me', icon: <svg /> };
+const defaultProps = { children: 'Click me', icon: 'check' };
 const getWrapper = props =>
     shallow(<TaskButton {...defaultProps} {...props} />);
 
@@ -17,7 +17,12 @@ describe('<TaskButton />', () => {
         expect(wrapper.props()).toHaveProperty('aria-label', 'some label');
     });
     it('sends icon prop on as leftIcon prop', () => {
-        const wrapper = getWrapper({ icon: <ChevronIkon /> });
-        expect(wrapper.props()).toHaveProperty('leftIcon', <ChevronIkon />);
+        const wrapper = getWrapper({ icon: 'add' });
+        expect(wrapper.props()).toHaveProperty(
+            'leftIcon',
+            <Symbol ariaLabel="" size="sm">
+                add
+            </Symbol>,
+        );
     });
 });
