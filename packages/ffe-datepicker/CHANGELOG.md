@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@11.1.1...@sb1/ffe-datepicker@12.0.0) (2023-10-13)
+
+### Bug Fixes
+
+-   **ffe-datepicker:** bytter ut ffe-icons med ffe-symbols ([13900f2](https://github.com/SpareBank1/designsystem/commit/13900f2799719657b429471292f970f51f860e30))
+
+### BREAKING CHANGES
+
+-   **ffe-datepicker:** ikoner hentes nå inn via en ny pakke og med en ny implementasjon
+
 ## [11.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@11.1.0...@sb1/ffe-datepicker@11.1.1) (2023-10-11)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker

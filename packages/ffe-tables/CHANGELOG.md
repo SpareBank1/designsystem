@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [14.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@13.1.1...@sb1/ffe-tables@14.0.0) (2023-10-13)
+
+### Bug Fixes
+
+-   **ffe-tables:** bytter ut ffe-icons med ffe-symbols ([179aa34](https://github.com/SpareBank1/designsystem/commit/179aa3487b3b156424823cd2b17bc90a38518850))
+
+### BREAKING CHANGES
+
+-   **ffe-tables:** ikoner hentes nå inn via en ny pakke og med en ny implementasjon
+
 ## [13.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@13.1.0...@sb1/ffe-tables@13.1.1) (2023-10-11)
 
 **Note:** Version bump only for package @sb1/ffe-tables

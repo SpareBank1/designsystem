@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-searchable-dropdown-react",
-    "version": "16.1.1",
+    "version": "17.0.0",
     "description": "Dropdown with search option",
     "license": "MIT",
     "author": "SpareBank 1",
@@ -26,10 +26,10 @@
         "test:watch": "ffe-buildtool jest --watch"
     },
     "dependencies": {
-        "@sb1/ffe-symbols-react": "^2.0.0",
         "@sb1/ffe-core-react": "^7.1.3",
-        "@sb1/ffe-form": "^24.1.1",
+        "@sb1/ffe-form": "^25.0.0",
         "@sb1/ffe-spinner-react": "^6.0.7",
+        "@sb1/ffe-symbols-react": "^2.0.0",
         "classnames": "^2.3.1",
         "compute-scroll-into-view": "^1.0.17",
         "lodash.isequal": "^4.5.0",

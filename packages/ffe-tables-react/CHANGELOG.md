@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@7.0.8...@sb1/ffe-tables-react@8.0.0) (2023-10-13)
+
+### Bug Fixes
+
+-   **ffe-tables-react:** bytter ut ffe-icons med ffe-symbols ([28b7b54](https://github.com/SpareBank1/designsystem/commit/28b7b542d738e835d1cd46f8e5a475e4ab2b75b6))
+-   **ffe-tables-react:** endrer størrelse på ikon ([eb26de8](https://github.com/SpareBank1/designsystem/commit/eb26de841526af45a7a6e727a13cc8b506e9f224))
+
+### BREAKING CHANGES
+
+-   **ffe-tables-react:** ikoner hentes nå inn via en ny pakke og med en ny implementasjon
+
 ## [7.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@7.0.7...@sb1/ffe-tables-react@7.0.8) (2023-10-11)
 
 **Note:** Version bump only for package @sb1/ffe-tables-react

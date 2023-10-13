@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [23.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@22.1.1...@sb1/ffe-account-selector-react@23.0.0) (2023-10-13)
+
+### Bug Fixes
+
+-   **ffe-account-selector-react:** bytter ut ffe-icons med ffe-symbols ([84868c9](https://github.com/SpareBank1/designsystem/commit/84868c97503f93743cc867ad1776e104baeedc6c))
+
+### BREAKING CHANGES
+
+-   **ffe-account-selector-react:** ikoner hentes nå inn via en ny pakke og med en ny implementasjon
+
 ## [22.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@22.1.0...@sb1/ffe-account-selector-react@22.1.1) (2023-10-11)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react

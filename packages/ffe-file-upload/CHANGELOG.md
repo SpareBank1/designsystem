@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload@9.1.1...@sb1/ffe-file-upload@10.0.0) (2023-10-13)
+
+### Bug Fixes
+
+-   **ffe-file-upload:** bytter ut ffe-icons med ffe-symbols ([41f299e](https://github.com/SpareBank1/designsystem/commit/41f299e07f94581f572b324d443670a8159693f7))
+
+### BREAKING CHANGES
+
+-   **ffe-file-upload:** ikoner hentes nå inn via en ny pakke og med en ny implementasjon
+
 ## [9.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload@9.1.0...@sb1/ffe-file-upload@9.1.1) (2023-10-11)
 
 **Note:** Version bump only for package @sb1/ffe-file-upload

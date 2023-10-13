@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload-react@9.0.5...@sb1/ffe-file-upload-react@10.0.0) (2023-10-13)
+
+### Bug Fixes
+
+-   **ffe-file-upload-react:** bytter ut ffe-icons med ffe-symbols ([3ec200a](https://github.com/SpareBank1/designsystem/commit/3ec200a162a981fde679c676d1a3f97fa400cef9))
+
+### BREAKING CHANGES
+
+-   **ffe-file-upload-react:** ikoner hentes nå inn via en ny pakke og med en ny implementasjon
+
 ## [9.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload-react@9.0.4...@sb1/ffe-file-upload-react@9.0.5) (2023-10-11)
 
 **Note:** Version bump only for package @sb1/ffe-file-upload-react

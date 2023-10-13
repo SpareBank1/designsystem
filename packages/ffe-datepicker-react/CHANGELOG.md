@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@6.0.14...@sb1/ffe-datepicker-react@7.0.0) (2023-10-13)
+
+### Bug Fixes
+
+-   **ffe-datepicker-react:** bytter ut ffe-icons med ffe-symbols ([49f52a5](https://github.com/SpareBank1/designsystem/commit/49f52a53011da1e4c88065f3038986a8648cd7ad))
+
+### BREAKING CHANGES
+
+-   **ffe-datepicker-react:** ikoner hentes nå inn via en ny pakke og med en ny implementasjon
+
 ## [6.0.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@6.0.13...@sb1/ffe-datepicker-react@6.0.14) (2023-10-11)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker-react
