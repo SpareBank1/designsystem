@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@8.0.4...@sb1/ffe-tabs-react@8.0.5) (2023-10-11)
+
+**Note:** Version bump only for package @sb1/ffe-tabs-react
+
 ## [8.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tabs-react@8.0.3...@sb1/ffe-tabs-react@8.0.4) (2023-09-15)
 
 **Note:** Version bump only for package @sb1/ffe-tabs-react

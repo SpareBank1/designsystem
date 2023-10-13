@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [27.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@27.1.0...@sb1/ffe-core@27.1.1) (2023-10-11)
+
+### Bug Fixes
+
+-   **ffe-core:** sørge for at fontscalering arves fra innstillinger i ios ([70f19cd](https://github.com/SpareBank1/designsystem/commit/70f19cdcb12646357cd72810dbc13cf234717484))
+
 # [27.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@27.0.1...@sb1/ffe-core@27.1.0) (2023-09-15)
 
 ### Features
