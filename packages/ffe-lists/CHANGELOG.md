@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [13.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@12.1.1...@sb1/ffe-lists@13.0.0) (2023-10-13)
+
+### Bug Fixes
+
+-   **ffe-lists:** endre styling til å passe ffe-symbols ([57dabfa](https://github.com/SpareBank1/designsystem/commit/57dabfac2537214a329bcdb3a06373fcef7437f0))
+
+### BREAKING CHANGES
+
+-   **ffe-lists:** endrer fra fill til color, fjerner størrelse og top margins
+
 ## [12.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@12.1.0...@sb1/ffe-lists@12.1.1) (2023-10-11)
 
 **Note:** Version bump only for package @sb1/ffe-lists

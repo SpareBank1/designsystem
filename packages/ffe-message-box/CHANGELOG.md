@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@11.1.1...@sb1/ffe-message-box@12.0.0) (2023-10-13)
+
+### Bug Fixes
+
+-   **ffe-message-box:** tilpasser styling til nye ikoner ([3bf55e2](https://github.com/SpareBank1/designsystem/commit/3bf55e23b05fdc6186f8626062b67e21260e704d))
+
+### BREAKING CHANGES
+
+-   **ffe-message-box:** Ikonfarge settes nå gjennom color og ikke fill.
+    Fjerner også referanse til SVG som ikke lenger brukes.
+
 ## [11.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@11.1.0...@sb1/ffe-message-box@11.1.1) (2023-10-11)
 
 **Note:** Version bump only for package @sb1/ffe-message-box

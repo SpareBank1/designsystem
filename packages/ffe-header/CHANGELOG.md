@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [20.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@19.1.1...@sb1/ffe-header@20.0.0) (2023-10-13)
+
+### Bug Fixes
+
+-   **ffe-header:** endre fra svg til ffe-symbols ([504612e](https://github.com/SpareBank1/designsystem/commit/504612ea4550c6fbda1f7e9c50b0bd6ad0a143fc))
+
+### BREAKING CHANGES
+
+-   **ffe-header:** fjerner svg-ikoner og bytter de ut med ffe-symbols
+    ikon font-filene må derfor importeres før bruk
+
 ## [19.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@19.1.0...@sb1/ffe-header@19.1.1) (2023-10-11)
 
 **Note:** Version bump only for package @sb1/ffe-header

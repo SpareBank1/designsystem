@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [19.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@18.0.6...@sb1/ffe-buttons-react@19.0.0) (2023-10-13)
+
+### Features
+
+-   **ffe-buttons-react:** bytt ikoner til material symbols ([1f56628](https://github.com/SpareBank1/designsystem/commit/1f5662869f60c2b444744b4ee46aeae5edc691cf))
+
+### BREAKING CHANGES
+
+-   **ffe-buttons-react:** endrer hvordan man sender med ikon. Fjerner leftIcon på shortcutbutton
+
 ## [18.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@18.0.5...@sb1/ffe-buttons-react@18.0.6) (2023-10-11)
 
 **Note:** Version bump only for package @sb1/ffe-buttons-react

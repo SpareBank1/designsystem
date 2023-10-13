@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [13.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@12.1.3...@sb1/ffe-cards-react@13.0.0) (2023-10-13)
+
+### Bug Fixes
+
+-   **ffe-cards-react:** endrer til ffe-symbols ([111ea20](https://github.com/SpareBank1/designsystem/commit/111ea20e75097e059b7055112d94c6e93ccd8667))
+
+### BREAKING CHANGES
+
+-   **ffe-cards-react:** Endrer fra ffe-icons-react til ffe-symbols-react
+    endringen innebærer at man må bytte ut hvilke ikoner man sender inn til
+    IconCard og StippledCard.
+
 ## [12.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@12.1.2...@sb1/ffe-cards-react@12.1.3) (2023-10-11)
 
 **Note:** Version bump only for package @sb1/ffe-cards-react

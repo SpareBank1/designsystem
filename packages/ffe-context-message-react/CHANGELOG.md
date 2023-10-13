@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [9.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@8.0.10...@sb1/ffe-context-message-react@9.0.0) (2023-10-13)
+
+### Bug Fixes
+
+-   **ffe-context-message-react:** endrer fra ffe-icons til ffe-symbols ([f913565](https://github.com/SpareBank1/designsystem/commit/f913565e277d265e2a07056e6214f41f4e820c59))
+
+### BREAKING CHANGES
+
+-   **ffe-context-message-react:** Bytter fra ffe-icons til ffe-symbols
+    Bytter ut ikonene med ikoner fra ffe-symbols. Det betyr at ffe-icons-react
+    fjernes som dependency og ffe-symbols-react legges til
+
 ## [8.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@8.0.9...@sb1/ffe-context-message-react@8.0.10) (2023-10-11)
 
 **Note:** Version bump only for package @sb1/ffe-context-message-react

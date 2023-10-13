@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@7.1.1...@sb1/ffe-system-message@8.0.0) (2023-10-13)
+
+### Bug Fixes
+
+-   **ffe-system-message:** endre til material symbols ([c2fe894](https://github.com/SpareBank1/designsystem/commit/c2fe8941ae74a593be1882482659ad7206a79c63))
+
+### BREAKING CHANGES
+
+-   **ffe-system-message:** Endrer fra fill til color, fjerner svg-relatert styling
+
 ## [7.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@7.1.0...@sb1/ffe-system-message@7.1.1) (2023-10-11)
 
 **Note:** Version bump only for package @sb1/ffe-system-message

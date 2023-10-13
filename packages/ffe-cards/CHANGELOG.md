@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [17.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@16.2.1...@sb1/ffe-cards@17.0.0) (2023-10-13)
+
+### Bug Fixes
+
+-   **ffe-cards:** endrer til ffe-symbols ([bd90c8e](https://github.com/SpareBank1/designsystem/commit/bd90c8ee423bafb5598a9e620f72543faf0d5d54))
+
+### BREAKING CHANGES
+
+-   **ffe-cards:** endrer styling til å passe de nye ikonene.
+    innebærer blant annet at fargene settes med color og ikke fill
+
 ## [16.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@16.2.0...@sb1/ffe-cards@16.2.1) (2023-10-11)
 
 **Note:** Version bump only for package @sb1/ffe-cards

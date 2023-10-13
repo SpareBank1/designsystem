@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@7.0.11...@sb1/ffe-system-message-react@8.0.0) (2023-10-13)
+
+### Bug Fixes
+
+-   **ffe-system-message-react:** endrer ikon til material symbols ([5908e88](https://github.com/SpareBank1/designsystem/commit/5908e88f7275aedf823ac742855447eb64adb496))
+
+### BREAKING CHANGES
+
+-   **ffe-system-message-react:** Bytter fra ffe-icons til ffe-symbols
+
 ## [7.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@7.0.10...@sb1/ffe-system-message-react@7.0.11) (2023-10-11)
 
 **Note:** Version bump only for package @sb1/ffe-system-message-react

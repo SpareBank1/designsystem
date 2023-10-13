@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@9.0.4...@sb1/ffe-message-box-react@10.0.0) (2023-10-13)
+
+### Bug Fixes
+
+-   **ffe-message-box-react:** endrer ikon til material symbols ([d5f3d9b](https://github.com/SpareBank1/designsystem/commit/d5f3d9bb7a8d00e93a5b23aee60873bcd20fdb82))
+
+### BREAKING CHANGES
+
+-   **ffe-message-box-react:** BaseMessage legger til props-spesifikt for Symbol-komponenten,
+    fjerner depedency til ffe-icons-react og legger til ffe-symbols-react
+
 ## [9.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@9.0.3...@sb1/ffe-message-box-react@9.0.4) (2023-10-11)
 
 **Note:** Version bump only for package @sb1/ffe-message-box-react

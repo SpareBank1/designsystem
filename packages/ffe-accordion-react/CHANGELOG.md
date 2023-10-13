@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [11.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@10.0.9...@sb1/ffe-accordion-react@11.0.0) (2023-10-13)
+
+### Features
+
+-   **ffe-accordion-react:** bytter ikon til material ([7df52e9](https://github.com/SpareBank1/designsystem/commit/7df52e9360c20b09bd8504527e9998863a9c845c))
+
+### BREAKING CHANGES
+
+-   **ffe-accordion-react:** Bytter fra ffe-icons til ffe-symbols
+
 ## [10.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@10.0.8...@sb1/ffe-accordion-react@10.0.9) (2023-10-11)
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react

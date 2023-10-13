@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [18.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@17.1.1...@sb1/ffe-buttons@18.0.0) (2023-10-13)
+
+### Bug Fixes
+
+-   **ffe-buttons:** endringer relatert til ikonbytte ([15c8746](https://github.com/SpareBank1/designsystem/commit/15c8746556a9011dcb4d40a9f1ab80c4c029028a))
+
+### BREAKING CHANGES
+
+-   **ffe-buttons:** fjerner ikon fra backButton definert i css og
+    legger til klasse for toggling i inlineExpandButton++
+
 ## [17.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@17.1.0...@sb1/ffe-buttons@17.1.1) (2023-10-11)
 
 **Note:** Version bump only for package @sb1/ffe-buttons

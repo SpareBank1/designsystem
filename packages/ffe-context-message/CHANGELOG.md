@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@7.2.1...@sb1/ffe-context-message@8.0.0) (2023-10-13)
+
+### Bug Fixes
+
+-   **ffe-context-message:** stil endringer for å passe nye ikoner ([14e98cb](https://github.com/SpareBank1/designsystem/commit/14e98cb1ace9cd5041e5e35ef03817d4bc8db838))
+
+### BREAKING CHANGES
+
+-   **ffe-context-message:** endrer måten vi setter farge på ikon fra fill til color
+
 ## [7.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@7.2.0...@sb1/ffe-context-message@7.2.1) (2023-10-11)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
