@@ -37,7 +37,11 @@ class DefaultTable extends Component {
         if (this.props.expandedContentMapper) {
             renderColumns.push({
                 key: 'expandIcon',
-                header: '',
+                header: (
+                    <span className="ffe-screenreader-only">
+                        Valg for raden
+                    </span>
+                ),
                 alignRight: true,
             });
         }
