@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [20.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@19.0.0...@sb1/ffe-buttons-react@20.0.0) (2023-10-18)
+
+### Bug Fixes
+
+-   **ffe-buttons-react:** fjern left/right ikon på ExpandButton ([5eff4e0](https://github.com/SpareBank1/designsystem/commit/5eff4e0c56ceca350f393459f57663ecf0b3d40f))
+
+### BREAKING CHANGES
+
+-   **ffe-buttons-react:** fjerner leftIcon og rightIcon prop på ExpandButton
+
 # [19.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@18.0.6...@sb1/ffe-buttons-react@19.0.0) (2023-10-13)
 
 ### Features
