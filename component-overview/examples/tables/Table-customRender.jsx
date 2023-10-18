@@ -1,15 +1,27 @@
 import Table from '@sb1/ffe-tables-react';
 import { TertiaryButton } from '@sb1/ffe-buttons-react';
-import { HakeIkon, KryssIkon } from '@sb1/ffe-icons-react';
+import Symbol from '@sb1/ffe-symbols-react';
 
 () => {
     const generateCheckbox = value => {
         return (
             <div style={{ width: '100%', textAlign: 'center' }}>
                 {value ? (
-                    <HakeIkon className="ffe-table__expand-icon" />
+                    <Symbol
+                        ariaLabel={null}
+                        size="md"
+                        className="ffe-table__expand-icon"
+                    >
+                        check
+                    </Symbol>
                 ) : (
-                    <KryssIkon className="ffe-table__expand-icon" />
+                    <Symbol
+                        ariaLabel={null}
+                        size="md"
+                        className="ffe-table__expand-icon"
+                    >
+                        close
+                    </Symbol>
                 )}
             </div>
         );
