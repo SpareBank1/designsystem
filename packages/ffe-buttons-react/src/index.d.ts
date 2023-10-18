@@ -31,8 +31,6 @@ export interface ButtonGroupProps {
 export type ExpandButtonProps = {
     children: React.ReactNode;
     closeLabel?: string;
-    leftIcon?: React.ReactNode;
-    rightIcon?: React.ReactNode;
     isExpanded: boolean;
     onClick: (e: React.MouseEvent | undefined) => void;
 } & MinimalBaseButtonProps;

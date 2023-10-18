@@ -20,8 +20,6 @@ const ExpandButton = props => {
         element: Element,
         innerRef,
         isExpanded,
-        leftIcon,
-        rightIcon,
         ...rest
     } = props;
     return (
@@ -47,29 +45,7 @@ const ExpandButton = props => {
                     close
                 </Symbol>
             )}
-            {!isExpanded && (
-                <span>
-                    {leftIcon && (
-                        <Symbol
-                            className="ffe-button__icon ffe-button__icon--left"
-                            ariaLabel=""
-                            weight={300}
-                        >
-                            {leftIcon}
-                        </Symbol>
-                    )}
-                    {children}
-                    {rightIcon && (
-                        <Symbol
-                            className="ffe-button__icon ffe-button__icon--right"
-                            ariaLabel=""
-                            weight={300}
-                        >
-                            {rightIcon}
-                        </Symbol>
-                    )}
-                </span>
-            )}
+            {!isExpanded && <span>{children}</span>}
         </Element>
     );
 };
@@ -83,10 +59,6 @@ ExpandButton.propTypes = {
     element: oneOfType([func, string, elementType]),
     /** An accessible label for the close-button, only shown in the "isExpanded" state  */
     closeLabel: string,
-    /** Name of Icon shown to the left of the label */
-    leftIcon: string,
-    /** Name of Icon shown to the right of the label */
-    rightIcon: string,
     /** Ref-setting function, or ref created by useRef, passed to the button element */
     innerRef: oneOfType([func, shape({ current: object })]),
     /** When true the component will render a circle with an X indicating whatever is controlled is in an expanded state. */
