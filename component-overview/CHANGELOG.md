@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.1.24](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@5.1.23...@sb1/ffe-component-index@5.1.24) (2023-10-18)
+
+### Bug Fixes
+
+-   **component-overview:** oppdaterer eksempel-tabell som brukte gamle ikoner ([27c0958](https://github.com/SpareBank1/designsystem/commit/27c0958d12a876a1f911b162210b88580a25022b))
+-   **component-overview:** retter feil i eksempel tooltip-external ([69732e9](https://github.com/SpareBank1/designsystem/commit/69732e9b38cb3a487b0c19de32615c0a503550e2))
+
 ## [5.1.23](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@5.1.22...@sb1/ffe-component-index@5.1.23) (2023-10-18)
 
 **Note:** Version bump only for package @sb1/ffe-component-index
