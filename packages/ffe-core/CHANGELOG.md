@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [27.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@27.1.1...@sb1/ffe-core@27.1.2) (2023-10-19)
+
+### Bug Fixes
+
+-   **ffe-core:** added :host to generated css files ([0c63444](https://github.com/SpareBank1/designsystem/commit/0c63444a9c07efeb62f94bcd27cdee0da01a42f2))
+
 ## [27.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@27.1.0...@sb1/ffe-core@27.1.1) (2023-10-11)
 
 ### Bug Fixes

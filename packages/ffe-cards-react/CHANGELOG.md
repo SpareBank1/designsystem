@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [13.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@13.0.0...@sb1/ffe-cards-react@13.0.1) (2023-10-19)
+
+**Note:** Version bump only for package @sb1/ffe-cards-react
+
 # [13.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@12.1.3...@sb1/ffe-cards-react@13.0.0) (2023-10-13)
 
 ### Bug Fixes
