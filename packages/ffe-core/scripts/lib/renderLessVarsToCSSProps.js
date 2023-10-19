@@ -16,7 +16,7 @@ module.exports = async inputFile => {
     const { css } = await less.render(
         `@import '${inputFile}';` +
             `@props: ${propertyNames.join(', ')};` +
-            `:root { each(@props, { --@{value}: @@value; }); }`,
+            `:root, :host { each(@props, { --@{value}: @@value; }); }`,
     );
 
     return css;
