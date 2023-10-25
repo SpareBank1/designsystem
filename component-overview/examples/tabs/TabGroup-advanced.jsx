@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Tab, TabGroup } from '@sb1/ffe-tabs-react';
-import { HusIkon, BilIkon } from '@sb1/ffe-icons-react';
+import Symbol from '@sb1/ffe-symbols-react';
 import { IconCard } from '@sb1/ffe-cards-react';
 
 () => {
@@ -36,7 +36,7 @@ import { IconCard } from '@sb1/ffe-cards-react';
             </TabGroup>
 
             <IconCard
-                icon={<HusIkon />}
+                icon={<Symbol ariaLabel="hus">house</Symbol>}
                 id={loan.house}
                 style={activeTabId === loan.house ? spacing : displayNone}
             >
@@ -49,7 +49,7 @@ import { IconCard } from '@sb1/ffe-cards-react';
             </IconCard>
 
             <IconCard
-                icon={<BilIkon />}
+                icon={<Symbol ariaLabel="bil">directions_car</Symbol>}
                 id={loan.car}
                 style={activeTabId === loan.car ? spacing : displayNone}
             >
