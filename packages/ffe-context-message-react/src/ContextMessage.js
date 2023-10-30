@@ -118,9 +118,7 @@ const ContextMessage = ({
                     onClick={handleClose}
                     type="button"
                 >
-                    <Symbol ariaLabel={null} weight={300} size="sm">
-                        close
-                    </Symbol>
+                    <Symbol icon="close" weight={300} size="sm" />
                 </button>
             )}
         </div>

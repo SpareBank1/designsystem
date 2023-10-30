@@ -8,7 +8,7 @@ const ContextSuccessMessage = props => (
         messageType="success"
         aria-label="Suksessmelding"
         role="group"
-        icon={<Symbol ariaLabel="hake">check</Symbol>}
+        icon={<Symbol ariaLabel="hake" icon="check" />}
     />
 );
 

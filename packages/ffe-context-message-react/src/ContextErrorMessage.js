@@ -13,7 +13,7 @@ const ContextErrorMessage = props => {
             messageType="error"
             aria-label="Feilmelding"
             role={alert ? 'alert' : 'group'}
-            icon={<Symbol ariaLabel="Utropstegn">priority_high</Symbol>}
+            icon={<Symbol ariaLabel="Utropstegn" icon="priority_high" />}
         />
     );
 };

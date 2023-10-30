@@ -8,7 +8,7 @@ const ContextInfoMessage = props => (
         messageType="info"
         aria-label="Infomelding"
         role="group"
-        icon={<Symbol ariaLabel="Infotegn">info_i</Symbol>}
+        icon={<Symbol ariaLabel="Infotegn" icon="info_i" />}
     />
 );
 

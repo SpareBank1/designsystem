@@ -8,7 +8,7 @@ const ContextTipsMessage = props => (
         messageType="tips"
         aria-label="Tipsmelding"
         role="group"
-        icon={<Symbol ariaLabel="Lyspære">lightbulb</Symbol>}
+        icon={<Symbol ariaLabel="Lyspære" icon="lightbulb" />}
     />
 );
 
