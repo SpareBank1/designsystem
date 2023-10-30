@@ -1,12 +1,7 @@
 import React from 'react';
 import Symbol from '.';
 
-const getWrapper = props =>
-    shallow(
-        <Symbol ariaLabel="hus icon" {...props}>
-            home
-        </Symbol>,
-    );
+const getWrapper = props => shallow(<Symbol icon="home" {...props} />);
 
 describe('<Symbol />', () => {
     it('renders without exploding', () => {
@@ -37,12 +32,12 @@ describe('<Symbol />', () => {
         const wrapper = getWrapper({ id: 'test-id' });
         expect(wrapper.prop('id')).toBe('test-id');
     });
-    it('set aria-hidden to false when aria-label is set', () => {
+    it('set aria-hidden to true when aria-label is undefined', () => {
         const wrapper = getWrapper();
-        expect(wrapper.prop('aria-hidden')).toBe(false);
-    });
-    it('set aria-hidden to true when aria-label is empty string', () => {
-        const wrapper = getWrapper({ ariaLabel: '' });
         expect(wrapper.prop('aria-hidden')).toBe(true);
+    });
+    it('set aria-hidden to false when aria-label is set', () => {
+        const wrapper = getWrapper({ ariaLabel: 'hus icon' });
+        expect(wrapper.prop('aria-hidden')).toBe(false);
     });
 });
