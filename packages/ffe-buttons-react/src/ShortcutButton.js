@@ -15,11 +15,7 @@ import Symbol from '@sb1/ffe-symbols-react';
 const ShortcutButton = props => (
     <Button
         buttonType="shortcut"
-        rightIcon={
-            <Symbol ariaLabel="" size="md">
-                chevron_right
-            </Symbol>
-        }
+        rightIcon={<Symbol icon="chevron_right" size="md" />}
         {...props}
     />
 );

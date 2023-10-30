@@ -12,11 +12,7 @@ const InlineExpandButton = props => {
             buttonType="expand"
             type="button"
             className={isExpanded ? 'ffe-inline-button--expanded' : ''}
-            rightIcon={
-                <Symbol size="md" ariaLabel="">
-                    expand_more
-                </Symbol>
-            }
+            rightIcon={<Symbol size="md" icon="expand_more" />}
             {...rest}
         />
     );
