@@ -76,9 +76,7 @@ class SystemMessage extends Component {
                         onClick={this.close}
                         type="button"
                     >
-                        <Symbol ariaLabel="" size="sm" weight={300}>
-                            close
-                        </Symbol>
+                        <Symbol icon="close" size="sm" weight={300} />
                     </button>
                 </div>
             </div>
