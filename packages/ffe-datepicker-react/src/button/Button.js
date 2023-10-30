@@ -23,9 +23,8 @@ export default class Button extends Component {
                     ariaLabel={i18n[language].CALENDAR_LABEL}
                     size="md"
                     className="ffe-datepicker__icon"
-                >
-                    calendar_month
-                </Symbol>
+                    icon="calendar_month"
+                />
             </button>
         );
     }
