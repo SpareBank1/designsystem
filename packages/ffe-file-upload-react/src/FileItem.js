@@ -17,12 +17,10 @@ const FileItem = ({ file, onFileDeleted, cancelText, deleteText }) => (
                         {cancelText}
                     </span>
                     <Symbol
-                        ariaLabel=""
+                        icon="close"
                         size="md"
                         className="ffe-file-upload__file-item-delete-icon"
-                    >
-                        close
-                    </Symbol>
+                    />
                 </button>
                 <div className="ffe-file-upload__file-item-stencil-info">
                     <div className="ffe-file-upload__file-item-stencil-info-background" />
@@ -45,12 +43,10 @@ const FileItem = ({ file, onFileDeleted, cancelText, deleteText }) => (
                         {deleteText}
                     </span>
                     <Symbol
-                        ariaLabel=""
+                        icon="close"
                         size="md"
                         className="ffe-file-upload__file-item-delete-icon"
-                    >
-                        close
-                    </Symbol>
+                    />
                 </button>
                 <div className="ffe-file-upload__file-item-filename">
                     {file.name}
@@ -61,9 +57,7 @@ const FileItem = ({ file, onFileDeleted, cancelText, deleteText }) => (
         file.error && (
             <div className="ffe-file-upload__file-item-error" role="alert">
                 <div className="ffe-file-upload__file-item-error-icon">
-                    <Symbol ariaLabel="" size="sm">
-                        exclamation
-                    </Symbol>
+                    <Symbol icon="exclamation" size="sm" />
                 </div>
                 <button
                     type="button"
@@ -75,12 +69,10 @@ const FileItem = ({ file, onFileDeleted, cancelText, deleteText }) => (
                         {deleteText}
                     </span>
                     <Symbol
-                        ariaLabel=""
+                        icon="close"
                         size="md"
                         className="ffe-file-upload__file-item-delete-icon"
-                    >
-                        close
-                    </Symbol>
+                    />
                 </button>
                 <div className="ffe-file-upload__file-item-error-info">
                     <div className="ffe-file-upload__file-item-error-filename">
