@@ -8,7 +8,7 @@ const InfoMessage = props => (
     <BaseMessage
         type="info"
         aria-label="Infomelding"
-        icon={<Symbol ariaLabel="Infotegn">info_i</Symbol>}
+        icon={<Symbol ariaLabel="Infotegn" icon="info_i" />}
         {...props}
     />
 );

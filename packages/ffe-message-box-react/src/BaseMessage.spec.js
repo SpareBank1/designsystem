@@ -3,7 +3,7 @@ import BaseMessage from './BaseMessage';
 import Symbol from '@sb1/ffe-symbols-react';
 const defaultProps = {
     type: 'info',
-    icon: <Symbol ariaLabel="">priority_high</Symbol>,
+    icon: <Symbol icon="priority_high" />,
 };
 const getWrapper = props =>
     shallow(<BaseMessage {...defaultProps} {...props} />);
