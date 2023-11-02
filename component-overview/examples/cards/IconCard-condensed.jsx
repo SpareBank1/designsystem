@@ -1,7 +1,7 @@
 import { IconCard } from '@sb1/ffe-cards-react';
 import Symbol from "@sb1/ffe-symbols-react";
 
-<IconCard href="https://design.sparebank1.no" icon={<Symbol ariaLabel={null}>savings</Symbol>} condensed={true}>
+<IconCard href="https://design.sparebank1.no" icon={<Symbol icon="savings" />} condensed={true}>
     {({ Title, Subtext }) => (
         <>
             <Title>Sparekonto voksen 25</Title>

@@ -19,7 +19,7 @@ import Symbol from '@sb1/ffe-symbols-react';
             </>
         )}
     </StippledCard>
-    <StippledCard href="https://design.sparebank1.no" img={{ type: 'icon', element: <Symbol ariaLabel={true}>monitoring</Symbol> } }>
+    <StippledCard href="https://design.sparebank1.no" img={{ type: 'icon', element: <Symbol icon="monitoring" /> } }>
         {({ CardName, Title, Subtext, Text }) => (
             <>
                 <CardName>CardName</CardName>

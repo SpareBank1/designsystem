@@ -1,7 +1,7 @@
 import { StippledCard } from '@sb1/ffe-cards-react';
 import Symbol from '@sb1/ffe-symbols-react';
 
-<StippledCard href="https://design.sparebank1.no" img={{ type: 'icon', element: <Symbol ariaLabel={null}>monitoring</Symbol> } } condensed={true}>
+<StippledCard href="https://design.sparebank1.no" img={{ type: 'icon', element: <Symbol icon="monitoring" /> } } condensed={true}>
     {({ Title, Subtext }) => (
         <>
             <Title>Sparekonto voksen 25</Title>

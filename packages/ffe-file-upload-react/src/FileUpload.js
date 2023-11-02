@@ -114,11 +114,7 @@ class FileUpload extends React.Component {
                             {uploadMicroText}
                         </div>
                         <SecondaryButton
-                            leftIcon={
-                                <Symbol ariaLabel="" size="sm">
-                                    download
-                                </Symbol>
-                            }
+                            leftIcon={<Symbol icon="download" size="sm" />}
                             onClick={this.triggerUploadFileNativeHandler}
                             id={`${id}-button`}
                         >

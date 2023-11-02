@@ -15,11 +15,7 @@ const BackButton = props => {
     return (
         <InlineButton
             buttonType="back"
-            leftIcon={
-                <Symbol ariaLabel="" size="md">
-                    chevron_left
-                </Symbol>
-            }
+            leftIcon={<Symbol icon="chevron_left" size="md" />}
             {...props}
         />
     );

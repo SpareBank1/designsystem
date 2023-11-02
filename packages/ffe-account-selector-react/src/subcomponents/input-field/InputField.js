@@ -84,13 +84,11 @@ const InputField = props => {
                     aria-label={txt[locale].RESET_SEARCH}
                 >
                     <Symbol
-                        ariaLabel=""
+                        icon="close"
                         size="sm"
-                        weight="300"
+                        weight={300}
                         className="ffe-base-selector__reset-button-icon"
-                    >
-                        close
-                    </Symbol>
+                    />
                 </button>
             )}
             <button
@@ -105,18 +103,16 @@ const InputField = props => {
                 }
             >
                 <Symbol
-                    ariaLabel=""
+                    icon="expand_more"
                     size="md"
-                    weight="300"
+                    weight={300}
                     className={classNames(
                         'ffe-base-selector__expand-button-icon',
                         {
                             'ffe-base-selector__expand-button-icon--invalid': ariaInvalid,
                         },
                     )}
-                >
-                    expand_more
-                </Symbol>
+                />
             </button>
         </div>
     );

@@ -15,11 +15,7 @@ import Symbol from '@sb1/ffe-symbols-react';
 const TaskButton = ({ icon, ...rest }) => (
     <Button
         buttonType="task"
-        leftIcon={
-            <Symbol ariaLabel="" size="sm">
-                {icon}
-            </Symbol>
-        }
+        leftIcon={<Symbol icon={icon} size="sm" />}
         {...rest}
     />
 );

@@ -11,20 +11,18 @@ const CheckListItem = props => {
                 <Symbol
                     className="ffe-check-list__icon ffe-check-list__icon--cross"
                     ariaLabel="kryss"
+                    icon="close"
                     weight={400}
                     size="md"
-                >
-                    close
-                </Symbol>
+                />
             ) : (
                 <Symbol
                     className="ffe-check-list__icon ffe-check-list__icon--check"
                     size="md"
                     weight={400}
                     ariaLabel="hake"
-                >
-                    check
-                </Symbol>
+                    icon="check"
+                />
             )}
             {rest.children}
         </li>

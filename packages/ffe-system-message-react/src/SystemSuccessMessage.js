@@ -8,7 +8,7 @@ export default function SystemSuccessMessage(props) {
         <SystemMessage
             modifier="success"
             aria-label="Suksessmelding"
-            icon={<Symbol ariaLabel="Hake">check</Symbol>}
+            icon={<Symbol ariaLabel="Hake" icon="check" />}
             {...props}
         />
     );

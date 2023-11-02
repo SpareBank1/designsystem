@@ -11,7 +11,7 @@ export default function SystemErrorMessage(props) {
         <SystemMessage
             modifier="error"
             aria-label="Feilmelding"
-            icon={<Symbol ariaLabel="Utropstegn">priority_high</Symbol>}
+            icon={<Symbol ariaLabel="Utropstegn" icon="priority_high" />}
             role={alert ? 'alert' : 'group'}
             {...rest}
         />

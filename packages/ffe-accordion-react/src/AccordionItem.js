@@ -73,11 +73,9 @@ const AccordionItem = ({
                         <span className="ffe-accordion-item__heading-icon-wrapper">
                             <Symbol
                                 className="ffe-accordion-item__heading-icon"
-                                ariaLabel=""
+                                icon="expand_more"
                                 size="sm"
-                            >
-                                expand_more
-                            </Symbol>
+                            />
                         </span>
                     </span>
                 </button>

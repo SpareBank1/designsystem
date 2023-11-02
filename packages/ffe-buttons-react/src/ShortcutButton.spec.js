@@ -20,9 +20,7 @@ describe('<ShortcutButton />', () => {
         const wrapper = getWrapper();
         expect(wrapper.props()).toHaveProperty(
             'rightIcon',
-            <Symbol ariaLabel="" size="md">
-                chevron_right
-            </Symbol>,
+            <Symbol icon="chevron_right" size="md" />,
         );
     });
 });

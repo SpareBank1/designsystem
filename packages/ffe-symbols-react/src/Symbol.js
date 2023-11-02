@@ -3,15 +3,7 @@ import { string, bool, oneOf } from 'prop-types';
 import classNames from 'classnames';
 
 export const Symbol = props => {
-    const {
-        className,
-        children,
-        size,
-        weight,
-        fill,
-        ariaLabel,
-        ...rest
-    } = props;
+    const { className, size, weight, fill, ariaLabel, icon, ...rest } = props;
 
     return (
         <span
@@ -26,7 +18,7 @@ export const Symbol = props => {
             aria-hidden={!ariaLabel}
             {...rest}
         >
-            {children}
+            {icon}
         </span>
     );
 };
@@ -40,24 +32,15 @@ Symbol.propTypes = {
     /**  Fills the icon with color */
     fill: bool,
     /** The name of the icon that should be shown */
-    children: string.isRequired,
+    icon: string.isRequired,
     /** Size of the icon, default is the closest defined font-size */
     size: oneOf(['xs', 'sm', 'md', 'lg', 'xl', '2xl']),
     /** Symbols stroke weight. This can affect overall size of symbol, 400 is default */
     weight: oneOf([300, 400, 500]),
     /** Additional classnames */
     className: string,
-    /** Aria label text. If null, aria-hidden is automatically set to true */
-    ariaLabel: function(props, propName, componentName) {
-        const propValue = props[propName];
-
-        if (propValue !== null && typeof propValue !== 'string') {
-            return new Error(
-                `Invalid prop '${propName}' supplied to '${componentName}'. ` +
-                    `'${propName}' must be a string or null.`,
-            );
-        }
-    },
+    /** Aria label text. If null/undefined, aria-hidden is automatically set to true */
+    ariaLabel: string,
 };
 
 export default Symbol;

@@ -332,13 +332,11 @@ export const SearchableDropdown = ({
                         <Spinner />
                     ) : (
                         <Symbol
-                            ariaLabel=""
+                            icon="expand_more"
                             size="md"
-                            weight="300"
+                            weight={300}
                             className="ffe-searchable-dropdown__button-icon"
-                        >
-                            expand_more
-                        </Symbol>
+                        />
                     )}
                 </button>
             </div>

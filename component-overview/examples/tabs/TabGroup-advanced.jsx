@@ -36,7 +36,7 @@ import { IconCard } from '@sb1/ffe-cards-react';
             </TabGroup>
 
             <IconCard
-                icon={<Symbol ariaLabel="hus">house</Symbol>}
+                icon={<Symbol ariaLabel="hus" icon="house" />}
                 id={loan.house}
                 style={activeTabId === loan.house ? spacing : displayNone}
             >
@@ -49,7 +49,7 @@ import { IconCard } from '@sb1/ffe-cards-react';
             </IconCard>
 
             <IconCard
-                icon={<Symbol ariaLabel="bil">directions_car</Symbol>}
+                icon={<Symbol ariaLabel="bil" icon="directions_car" />}
                 id={loan.car}
                 style={activeTabId === loan.car ? spacing : displayNone}
             >

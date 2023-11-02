@@ -101,11 +101,9 @@ class SortableTable extends Component {
                                 this.state.descending,
                         },
                     )}
-                    ariaLabel=""
+                    icon="arrow_drop_down"
                     size="md"
-                >
-                    arrow_drop_down
-                </Symbol>
+                />
             </span>
         );
     }

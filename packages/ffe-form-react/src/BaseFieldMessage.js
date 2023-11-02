@@ -37,27 +37,35 @@ const BaseFieldMessage = props => {
                     switch (type) {
                         case 'error':
                             return (
-                                <Symbol ariaLabel="Utropstegn" size="xs">
-                                    priority_high
-                                </Symbol>
+                                <Symbol
+                                    ariaLabel="Utropstegn"
+                                    icon="priority_high"
+                                    size="xs"
+                                />
                             );
                         case 'success':
                             return (
-                                <Symbol ariaLabel="hake-ikon" size="sm">
-                                    check
-                                </Symbol>
+                                <Symbol
+                                    ariaLabel="hake-ikon"
+                                    icon="check"
+                                    size="sm"
+                                />
                             );
                         case 'info':
                             return (
-                                <Symbol ariaLabel="info-ikon" size="xs">
-                                    info_i
-                                </Symbol>
+                                <Symbol
+                                    ariaLabel="info-ikon"
+                                    icon="info_i"
+                                    size="xs"
+                                />
                             );
                         default:
                             return (
-                                <Symbol ariaLabel="info-ikon" size="xs">
-                                    info_i
-                                </Symbol>
+                                <Symbol
+                                    ariaLabel="info-ikon"
+                                    icon="info_i"
+                                    size="xs"
+                                />
                             );
                     }
                 })()}

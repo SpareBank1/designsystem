@@ -8,20 +8,16 @@ import Symbol from '@sb1/ffe-symbols-react';
             <div style={{ width: '100%', textAlign: 'center' }}>
                 {value ? (
                     <Symbol
-                        ariaLabel={null}
+                        icon="check"
                         size="md"
                         className="ffe-table__expand-icon"
-                    >
-                        check
-                    </Symbol>
+                    />
                 ) : (
                     <Symbol
-                        ariaLabel={null}
+                        icon="close"
                         size="md"
                         className="ffe-table__expand-icon"
-                    >
-                        close
-                    </Symbol>
+                    />
                 )}
             </div>
         );

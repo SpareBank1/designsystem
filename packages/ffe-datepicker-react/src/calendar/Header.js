@@ -27,12 +27,10 @@ export default function Header(props) {
                     tabIndex={-1}
                 >
                     <Symbol
-                        ariaLabel=""
+                        icon="arrow_back_ios"
                         size="md"
                         className="ffe-calendar__icon-prev"
-                    >
-                        arrow_back_ios
-                    </Symbol>
+                    />
                 </button>
                 <header
                     aria-live="polite"
@@ -53,12 +51,10 @@ export default function Header(props) {
                     tabIndex={-1}
                 >
                     <Symbol
-                        ariaLabel=""
+                        icon="arrow_forward_ios"
                         size="md"
                         className="ffe-calendar__icon-next"
-                    >
-                        arrow_forward_ios
-                    </Symbol>
+                    />
                 </button>
             </div>
         </div>

@@ -38,12 +38,10 @@ const ExpandButton = props => {
             {isExpanded && (
                 <Symbol
                     className="ffe-button__icon"
-                    ariaLabel=""
+                    icon="close"
                     size="sm"
                     weight={300}
-                >
-                    close
-                </Symbol>
+                />
             )}
             {!isExpanded && <span>{children}</span>}
         </Element>

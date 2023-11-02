@@ -5,12 +5,7 @@ import Symbol from '@sb1/ffe-symbols-react';
 import { Text } from '../components';
 
 const getWrapper = props =>
-    shallow(
-        <IconCard
-            icon={<Symbol ariaLabel={null}>savings</Symbol>}
-            {...props}
-        />,
-    );
+    shallow(<IconCard icon={<Symbol icon="savings" />} {...props} />);
 const children = <div>Hello world</div>;
 
 describe('IconCard', () => {
@@ -30,11 +25,7 @@ describe('IconCard', () => {
 
     it('should render icon, with an added class', () => {
         const wrapper = getWrapper({
-            icon: (
-                <Symbol ariaLabel={null} className="my-custom-class">
-                    savings
-                </Symbol>
-            ),
+            icon: <Symbol icon="savings" className="my-custom-class" />,
         });
 
         expect(wrapper.find(Symbol).hasClass('ffe-icon-card__icon')).toBe(true);

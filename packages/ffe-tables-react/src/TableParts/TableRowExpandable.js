@@ -72,11 +72,9 @@ class TableRowExpandable extends Component {
                                             .state.expanded,
                                     },
                                 )}
-                                ariaLabel=""
+                                icon="expand_more"
                                 size="md"
-                            >
-                                expand_more
-                            </Symbol>
+                            />
                         ),
                     }}
                     trClasses={classNames(

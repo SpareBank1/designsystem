@@ -8,7 +8,7 @@ export default function SystemNewsMessage(props) {
         <SystemMessage
             modifier="news"
             aria-label="Nyhetsmelding"
-            icon={<Symbol ariaLabel="Infotegn">info_i</Symbol>}
+            icon={<Symbol ariaLabel="Infotegn" icon="info_i" />}
             {...props}
         />
     );

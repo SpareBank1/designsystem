@@ -14,7 +14,7 @@ const defaultProps = {
     children: <p>content</p>,
     messageType: 'tips',
     role: 'group',
-    icon: <Symbol ariaLabel="info">info_i</Symbol>,
+    icon: <Symbol ariaLabel="info" icon="info_i" />,
 };
 
 const getShallowWrapper = props =>
@@ -102,11 +102,9 @@ describe('<ContextMessage />', () => {
         const wrapper = getMountedWrapper({
             icon: (
                 <Symbol
-                    ariaLabel={null}
+                    icon="info_i"
                     className="extra-extra-read-all-about-it"
-                >
-                    info_i
-                </Symbol>
+                />
             ),
         });
 
@@ -130,7 +128,7 @@ describe('<ContextMessage />', () => {
 
     it('renders without close button by default', () => {
         const wrapper = getMountedWrapper({
-            icon: <Symbol ariaLabel="info">info_i</Symbol>,
+            icon: <Symbol ariaLabel="info" icon="info_i" />,
         });
         expect(
             wrapper.find('.ffe-context-message-content__close-button').exists(),

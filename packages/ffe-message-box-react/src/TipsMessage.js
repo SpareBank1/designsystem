@@ -8,7 +8,7 @@ const TipsMessage = props => (
     <BaseMessage
         type="tips"
         aria-label="Tipsmelding"
-        icon={<Symbol ariaLabel="Lyspære">lightbulb</Symbol>}
+        icon={<Symbol ariaLabel="Lyspære" icon="lightbulb" />}
         {...props}
     />
 );

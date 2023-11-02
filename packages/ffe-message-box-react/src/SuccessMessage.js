@@ -8,7 +8,7 @@ const SuccessMessage = props => (
     <BaseMessage
         type="success"
         aria-label="Suksessmelding"
-        icon={<Symbol ariaLabel="Hake">check</Symbol>}
+        icon={<Symbol ariaLabel="Hake" icon="check" />}
         {...props}
     />
 );
