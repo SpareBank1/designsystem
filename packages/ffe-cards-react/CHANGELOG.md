@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [13.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@13.0.1...@sb1/ffe-cards-react@13.0.2) (2023-11-02)
+
+### Bug Fixes
+
+-   **ffe-cards-react:** rett symbol implementering i tester ([04a96c9](https://github.com/SpareBank1/designsystem/commit/04a96c9bb16f84ad92926007a623afc0070f7f65))
+
 ## [13.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@13.0.0...@sb1/ffe-cards-react@13.0.1) (2023-10-19)
 
 **Note:** Version bump only for package @sb1/ffe-cards-react

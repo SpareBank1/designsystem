@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@9.0.1...@sb1/ffe-context-message-react@9.0.2) (2023-11-02)
+
+### Bug Fixes
+
+-   **ffe-context-message-react:** oppdater symbol implementering ([820ddd4](https://github.com/SpareBank1/designsystem/commit/820ddd43d6e0313130d7e81e7b46c7b6776f9dce))
+
 ## [9.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@9.0.0...@sb1/ffe-context-message-react@9.0.1) (2023-10-19)
 
 **Note:** Version bump only for package @sb1/ffe-context-message-react

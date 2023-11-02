@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [14.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@14.0.2...@sb1/ffe-form-react@14.0.3) (2023-11-02)
+
+### Bug Fixes
+
+-   **ffe-form-react:** oppdater symbol implementasjon) ([cf3d8c8](https://github.com/SpareBank1/designsystem/commit/cf3d8c849321f86a699db91349f8b125c1f1edbf))
+
 ## [14.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@14.0.1...@sb1/ffe-form-react@14.0.2) (2023-10-19)
 
 **Note:** Version bump only for package @sb1/ffe-form-react

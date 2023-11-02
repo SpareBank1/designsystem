@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@8.0.2...@sb1/ffe-tables-react@8.0.3) (2023-11-02)
+
+### Bug Fixes
+
+-   **ffe-tables-react:** oppdater symbol implementasjon ([48137fe](https://github.com/SpareBank1/designsystem/commit/48137fe51eeb561ec9aa21239fed802044274383))
+
 ## [8.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@8.0.1...@sb1/ffe-tables-react@8.0.2) (2023-10-25)
 
 ### Bug Fixes

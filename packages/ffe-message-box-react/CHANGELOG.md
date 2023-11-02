@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@10.0.1...@sb1/ffe-message-box-react@10.0.2) (2023-11-02)
+
+### Bug Fixes
+
+-   **ffe-message-box-react:** oppdater symbol implementasjon ([06df842](https://github.com/SpareBank1/designsystem/commit/06df8425b466ab7b6bb435068f08ac760187d6fb))
+
 ## [10.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@10.0.0...@sb1/ffe-message-box-react@10.0.1) (2023-10-19)
 
 **Note:** Version bump only for package @sb1/ffe-message-box-react

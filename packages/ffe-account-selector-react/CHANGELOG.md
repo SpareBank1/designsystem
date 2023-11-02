@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [23.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@23.0.2...@sb1/ffe-account-selector-react@23.0.3) (2023-11-02)
+
+### Bug Fixes
+
+-   **ffe-account-selector-react:** oppdater symbol implementasjon ([2ce61e5](https://github.com/SpareBank1/designsystem/commit/2ce61e5fbe887d6869ae2ae27bf05e6e3618a255))
+
 ## [23.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@23.0.1...@sb1/ffe-account-selector-react@23.0.2) (2023-10-19)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react

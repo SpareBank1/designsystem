@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@7.0.1...@sb1/ffe-lists-react@7.0.2) (2023-11-02)
+
+### Bug Fixes
+
+-   **ffe-lists-react:** oppdater symbol implementasjon ([4472356](https://github.com/SpareBank1/designsystem/commit/4472356a2e108495421d3598583db8b5527c794a))
+
 ## [7.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@7.0.0...@sb1/ffe-lists-react@7.0.1) (2023-10-19)
 
 **Note:** Version bump only for package @sb1/ffe-lists-react

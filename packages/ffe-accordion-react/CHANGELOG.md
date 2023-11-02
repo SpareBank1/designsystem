@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [11.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@11.0.1...@sb1/ffe-accordion-react@11.0.2) (2023-11-02)
+
+### Bug Fixes
+
+-   **ffe-accordion-react:** oppdater symbol implementering ([2565522](https://github.com/SpareBank1/designsystem/commit/2565522094f884efcc9f5eecda61c9790da0b2cd))
+
 ## [11.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@11.0.0...@sb1/ffe-accordion-react@11.0.1) (2023-10-19)
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react

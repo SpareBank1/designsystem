@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [17.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@17.0.2...@sb1/ffe-searchable-dropdown-react@17.0.3) (2023-11-02)
+
+### Bug Fixes
+
+-   **ffe-searchable-dropdown-react:** oppdaterer symbol implementasjon ([a9529fd](https://github.com/SpareBank1/designsystem/commit/a9529fdf204d78d67e1419c53162d6cb375d0fa7))
+
 ## [17.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@17.0.1...@sb1/ffe-searchable-dropdown-react@17.0.2) (2023-10-19)
 
 **Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react

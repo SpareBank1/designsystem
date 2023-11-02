@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [20.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@20.0.1...@sb1/ffe-buttons-react@20.0.2) (2023-11-02)
+
+### Bug Fixes
+
+-   **ffe-buttons-react:** oppdater Symbol implementering ([3e91fba](https://github.com/SpareBank1/designsystem/commit/3e91fbaaa6d0c9fd01625b687944d68566a78c30))
+
 ## [20.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@20.0.0...@sb1/ffe-buttons-react@20.0.1) (2023-10-19)
 
 **Note:** Version bump only for package @sb1/ffe-buttons-react

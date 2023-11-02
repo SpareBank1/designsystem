@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-symbols-react@2.0.3...@sb1/ffe-symbols-react@2.0.4) (2023-11-02)
+
+### Bug Fixes
+
+-   **ffe-symbols-react:** oppdater symbol implementasjon ([6f2369d](https://github.com/SpareBank1/designsystem/commit/6f2369def69327cb981ae6b54ee6b503591c357a))
+
 ## [2.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-symbols-react@2.0.2...@sb1/ffe-symbols-react@2.0.3) (2023-10-02)
 
 ### Bug Fixes
