@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-symbols-react@2.0.4...@sb1/ffe-symbols-react@3.0.0) (2023-11-03)
+
+### Bug Fixes
+
+-   **ffe-symbols-react:** legg til typings for symbol ([2a93040](https://github.com/SpareBank1/designsystem/commit/2a93040d0091b434335ced7080f6914916647b78))
+
+### BREAKING CHANGES
+
+-   **ffe-symbols-react:** I forrige versjon som ble feilmarkert som minor.
+    Endringen innebærer at symbolnavn settes via ikon-prop og ikke children-prop.
+
 ## [2.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-symbols-react@2.0.3...@sb1/ffe-symbols-react@2.0.4) (2023-11-02)
 
 ### Bug Fixes
