@@ -1,10 +1,11 @@
 import * as React from 'react';
+import { SymbolName } from './typings/symbolNames.ts';
 
 export interface SymbolProps {
     fill?: boolean;
     size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl';
     weight?: 300 | 400 | 500;
-    icon: string;
+    icon: SymbolName;
     className?: string;
     ariaLabel?: string;
 }
