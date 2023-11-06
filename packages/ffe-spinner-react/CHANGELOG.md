@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner-react@6.0.8...@sb1/ffe-spinner-react@7.0.0) (2023-11-06)
+
+### Bug Fixes
+
+-   **ffe-spinner-react:** legger til loadingText-prop ([030c55e](https://github.com/SpareBank1/designsystem/commit/030c55e84061ffeb205a66e3dc976838fba96bd9))
+
+### BREAKING CHANGES
+
+-   **ffe-spinner-react:** Classname-prop settes nå på div rundt spinner ikon og ikke
+    på selve ikonet.
+
 ## [6.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner-react@6.0.7...@sb1/ffe-spinner-react@6.0.8) (2023-10-19)
 
 **Note:** Version bump only for package @sb1/ffe-spinner-react
