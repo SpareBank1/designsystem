@@ -43,7 +43,7 @@ class FileUpload extends React.Component {
     }
 
     onFileDeleted(event) {
-        this.props.onFileDeleted(this.props.files[event.target.id]);
+        this.props.onFileDeleted(this.props.files[event.currentTarget.id]);
     }
 
     render() {

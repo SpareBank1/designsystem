@@ -48,7 +48,7 @@ describe('<FileUpload/>', () => {
         });
 
         it('should extract and return files when user finishes selecting files', () => {
-            component.find('#file-upload').simulate('change', {
+            component.find('input#file-upload').simulate('change', {
                 target: {
                     files: {
                         filename: {
@@ -59,6 +59,36 @@ describe('<FileUpload/>', () => {
             });
 
             expect(onFilesSelected.calledOnce).toBe(true);
+        });
+
+        it('should remove file from files when delete button is clicked', () => {
+            // Component needs to be mounted for this test because we must render children.
+            component = mount(
+                <FileUpload
+                    id="file-upload"
+                    label="label"
+                    title="title"
+                    infoText="infoText"
+                    uploadTitle="uploadTitle"
+                    uploadMicroText="uploadMicroText"
+                    uploadSubText="uploadSubText"
+                    files={{
+                        fileToDelete: {
+                            name: 'fileToDelete',
+                        },
+                    }}
+                    onFilesSelected={onFilesSelected}
+                    onFileDeleted={onFileDeleted}
+                    onFilesDropped={onFilesDropped}
+                />,
+            );
+            // Do click on span inside button with event listener instead of actual button to catch nested clicks.
+            component
+                .find('.ffe-file-upload__file-item-delete-button-text')
+                .simulate('click');
+            expect(onFileDeleted.calledWith({ name: 'fileToDelete' })).toBe(
+                true,
+            );
         });
     });
 });
