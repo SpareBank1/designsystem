@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [14.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@14.0.4...@sb1/ffe-form-react@14.0.5) (2023-11-07)
+
+### Bug Fixes
+
+-   **ffe-form-react:** fix type for ref for tooltip ([920f65c](https://github.com/SpareBank1/designsystem/commit/920f65c543d54aac97310a4ce079683b2595d49f))
+
 ## [14.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@14.0.3...@sb1/ffe-form-react@14.0.4) (2023-11-03)
 
 **Note:** Version bump only for package @sb1/ffe-form-react

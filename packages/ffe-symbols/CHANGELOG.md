@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-symbols@2.1.0...@sb1/ffe-symbols@2.1.1) (2023-11-07)
+
+### Bug Fixes
+
+-   **ffe-symbols:** endre loading strategy font-display ([5f7fe32](https://github.com/SpareBank1/designsystem/commit/5f7fe32fb211786eb91446c24a0ceccedf63d28f))
+
 # [2.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-symbols@2.0.0...@sb1/ffe-symbols@2.1.0) (2023-09-15)
 
 ### Features
