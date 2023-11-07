@@ -86,7 +86,7 @@ export interface TooltipProps extends React.ComponentProps<'span'> {
     isOpen?: boolean;
     onClick?: (e: React.MouseEvent | undefined) => void;
     tabIndex?: number;
-    ref?: React.ForwardedRef<HTMLButtonElement>;
+    ref?: React.Ref<HTMLButtonElement>;
 }
 
 export interface RadioBlockProps extends React.ComponentProps<'input'> {
