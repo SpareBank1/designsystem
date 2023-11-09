@@ -16,7 +16,7 @@ Komponentene i FFE er delt opp i to NPM-pakker hver. Pakker med `-react` i navne
 
 ## :computer: Kjøre opp designsystemet lokalt
 
-Klon ned repoet, og kjør `npm install`. Dette vil installere alle dependencies for alle pakker, og må kjøres før du kan kjøre noen av de andre kommandoene.
+Klon ned repoet, og kjør `npm install`. Dette vil installere alle avhengigheter for alle pakker, og må kjøres før du kan kjøre noen av de andre kommandoene.
 
 ```bash
 npm start              # Starter en lokal server på localhost:1234
@@ -28,7 +28,7 @@ npm run clean          # Fjern node_modules fra pakkene (ikke root)
 
 ## :sparkles: Bidra!
 
-Vi oppfordrer alle, både rutinerte og ferske, til å opprette issues, sende inn pull requests og kommentere på andres
+Vi oppfordrer alle, både rutinerte og ferske, til å opprette en oppgave (issue), sende inn fletteforespørsel (pull request) og kommentere på andres
 bidrag. Ta en titt på [Bidra-seksjonen](https://design.sparebank1.no/bidra/alle-kan-bidra/) i dokumentasjonen om hvordan du går frem.
 
 ## Licenses
