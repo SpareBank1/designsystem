@@ -17,8 +17,8 @@ const PrimaryButton = props => {
     return (
         <Button
             buttonType="primary"
-            leftIcon={leftIcon && <Symbol icon={leftIcon} size="sm" />}
-            rightIcon={rightIcon && <Symbol icon={rightIcon} size="sm" />}
+            leftIcon={leftIcon && <Symbol icon={leftIcon} size="md" />}
+            rightIcon={rightIcon && <Symbol icon={rightIcon} size="md" />}
             {...rest}
         />
     );

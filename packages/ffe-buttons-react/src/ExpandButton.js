@@ -39,7 +39,7 @@ const ExpandButton = props => {
                 <Symbol
                     className="ffe-button__icon"
                     icon="close"
-                    size="sm"
+                    size="md"
                     weight={300}
                 />
             )}

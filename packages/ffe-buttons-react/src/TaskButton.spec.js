@@ -20,7 +20,7 @@ describe('<TaskButton />', () => {
         const wrapper = getWrapper({ icon: 'add' });
         expect(wrapper.props()).toHaveProperty(
             'leftIcon',
-            <Symbol icon="add" size="sm" />,
+            <Symbol icon="add" size="md" />,
         );
     });
 });

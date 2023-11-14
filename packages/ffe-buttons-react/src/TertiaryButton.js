@@ -16,8 +16,8 @@ const TertiaryButton = props => {
     return (
         <InlineButton
             buttonType="tertiary"
-            leftIcon={leftIcon && <Symbol icon={leftIcon} size="sm" />}
-            rightIcon={rightIcon && <Symbol icon={rightIcon} size="sm" />}
+            leftIcon={leftIcon && <Symbol icon={leftIcon} size="md" />}
+            rightIcon={rightIcon && <Symbol icon={rightIcon} size="md" />}
             {...rest}
         />
     );
