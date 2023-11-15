@@ -21,8 +21,8 @@ export default function ActionButton(props) {
         <Button
             buttonType="action"
             className={classNames(className)}
-            leftIcon={leftIcon && <Symbol icon={leftIcon} size="sm" />}
-            rightIcon={rightIcon && <Symbol icon={rightIcon} size="sm" />}
+            leftIcon={leftIcon && <Symbol icon={leftIcon} size="md" />}
+            rightIcon={rightIcon && <Symbol icon={rightIcon} size="md" />}
             {...rest}
         />
     );
