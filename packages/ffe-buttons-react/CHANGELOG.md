@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [20.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@20.0.5...@sb1/ffe-buttons-react@20.0.6) (2023-11-15)
+
+### Bug Fixes
+
+-   **ffe-buttons-react:** øker størrelsen på ikoner i knapper ([0ac454e](https://github.com/SpareBank1/designsystem/commit/0ac454e4194b37cd8c179fb00b4da45e6902a24a))
+
 ## [20.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@20.0.4...@sb1/ffe-buttons-react@20.0.5) (2023-11-10)
 
 **Note:** Version bump only for package @sb1/ffe-buttons-react
