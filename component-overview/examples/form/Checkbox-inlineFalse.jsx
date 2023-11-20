@@ -1,6 +1,6 @@
 import { Checkbox } from '@sb1/ffe-form-react';
 
-<fieldset className="ffe-fieldset">
+<fieldset className="ffe-input-group">
     <legend className="ffe-form-label">Hva er du interessert i?</legend>
     <Checkbox name="interests" value="sport" inline={false}>
         Sport
