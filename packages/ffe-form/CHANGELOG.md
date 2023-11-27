@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [26.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@25.0.3...@sb1/ffe-form@26.0.0) (2023-11-27)
+
+### Bug Fixes
+
+-   **ffe-form:** Forener input-group css ([6c42cf0](https://github.com/SpareBank1/designsystem/commit/6c42cf0cf023ba4e872026fec2f3a5deab503e32))
+
+### BREAKING CHANGES
+
+-   **ffe-form:** sletter ffe-fieldset
+
 ## [25.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@25.0.2...@sb1/ffe-form@25.0.3) (2023-11-10)
 
 **Note:** Version bump only for package @sb1/ffe-form

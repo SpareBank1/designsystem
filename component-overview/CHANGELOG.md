@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.1.33](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@5.1.32...@sb1/ffe-component-index@5.1.33) (2023-11-27)
+
+### Bug Fixes
+
+-   **component-overview:** Tar ibruk ny input-group ([4b6f379](https://github.com/SpareBank1/designsystem/commit/4b6f379d58edc7633863f2e326ed15d11982f23e))
+
 ## [5.1.32](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@5.1.31...@sb1/ffe-component-index@5.1.32) (2023-11-15)
 
 **Note:** Version bump only for package @sb1/ffe-component-index
