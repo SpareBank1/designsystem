@@ -1,6 +1,5 @@
 .ffe-form-label {
-    margin: 0;
-    padding: @ffe-spacing-xs 0 @ffe-spacing-2xs;
+    padding-bottom: @ffe-spacing-xs;
     display: inline-block;
     position: relative;
     font-family: var(--ffe-g-font);
@@ -11,6 +10,10 @@
     font-stretch: normal;
     line-height: 1.5;
     color: var(--ffe-g-secondary-color);
+
+    .ffe-tooltip--open .ffe-tooltip__text {
+        margin-bottom: 0;
+    }
 
     &--block {
         display: block;

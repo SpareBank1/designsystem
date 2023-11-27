@@ -1,5 +1,6 @@
 .ffe-input-group {
     border: 0;
+    padding: 0 0 @ffe-spacing-lg;
     position: relative;
 
     [aria-invalid='true'] {
@@ -22,40 +23,29 @@
         }
     }
 
-    > *:nth-last-child(1) {
-        margin-bottom: @ffe-spacing-lg;
-    }
+    > * {
+        margin-top: 0;
+        margin-bottom: @ffe-spacing-xs;
 
-    &--message {
-        > *:nth-last-child(1) {
+        &:nth-child(1) {
             margin-bottom: 0;
         }
-
-        > *:nth-last-child(2) {
-            margin-bottom: @ffe-spacing-lg;
-        }
     }
 
+    .ffe-field-message--error {
+        margin: 0;
+        height: 0;
+    }
     &__description {
         margin-bottom: @ffe-spacing-xs;
     }
 
-    .ffe-field-message--error {
-        margin-top: -24px;
-        margin-bottom: 0;
-    }
-
     &--no-extra-margin {
-        > *:nth-last-child(1) {
-            margin-bottom: auto;
-        }
-
-        > *:nth-last-child(2) {
-            margin-bottom: auto;
-        }
+        padding-bottom: 0;
 
         .ffe-field-message--error {
-            margin: @ffe-spacing-2xs 0 @ffe-spacing-xs;
+            margin-bottom: @ffe-spacing-xs;
+            height: initial;
         }
     }
 }
