@@ -1,0 +1,15 @@
+.ffe-feedback {
+    &__thumb {
+        border: none;
+        background: none;
+        cursor: pointer;
+        color: var(--ffe-farge-fjell);
+        margin: 0 @ffe-spacing-xs;
+
+        @media (prefers-color-scheme: dark) {
+            body.native & {
+                color: var(--ffe-farge-vann-70);
+            }
+        }
+    }
+}

@@ -30,6 +30,7 @@ module.exports = {
                 'ffe-decorators-react',
                 'ffe-details-list-react',
                 'ffe-dropdown-react',
+                'ffe-feedback',
                 'ffe-file-upload',
                 'ffe-file-upload-react',
                 'ffe-form',
