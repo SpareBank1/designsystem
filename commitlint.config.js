@@ -31,6 +31,7 @@ module.exports = {
                 'ffe-details-list-react',
                 'ffe-dropdown-react',
                 'ffe-feedback',
+                'ffe-feedback-react',
                 'ffe-file-upload',
                 'ffe-file-upload-react',
                 'ffe-form',
