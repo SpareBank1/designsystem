@@ -1,4 +1,4 @@
-export default [
+export const backgroundColors = [
     'frost-30',
     'sand',
     'sand-70',
@@ -10,6 +10,8 @@ export default [
     'fjell',
     'hvit',
 ];
+
+export const backgroundDarkColors = ['svart', 'natt', 'koksgraa'];
 
 export const removedColors = [
     'blue-cobalt',

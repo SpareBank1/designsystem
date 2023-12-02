@@ -9,7 +9,7 @@ import {
     string,
 } from 'prop-types';
 import classNames from 'classnames';
-import backgroundColors, { removedColors } from './background-colors';
+import { backgroundColors, removedColors } from './background-colors';
 
 function camelCaseToDashCase(str) {
     return str

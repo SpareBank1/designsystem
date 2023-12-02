@@ -1,6 +1,6 @@
 import React from 'react';
 import { GridCol } from '.';
-import backgroundColors from './background-colors';
+import { backgroundColors } from './background-colors';
 
 const defaultProps = {
     children: <p>blah</p>,

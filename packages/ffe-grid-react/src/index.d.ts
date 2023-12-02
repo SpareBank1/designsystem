@@ -21,6 +21,8 @@ type BackgroundColors =
     | 'fjell'
     | 'hvit';
 
+type BackgroundDarkColors = 'svart' | 'natt' | 'koksgraa';
+
 type Margin =
     | '2xs'
     | 'xs'
@@ -47,6 +49,7 @@ type Padding =
 
 export interface GridRowProps extends React.ComponentProps<'div'> {
     background?: BackgroundColors;
+    backgroundDark?: BackgroundDarkColors;
     children: React.ReactNode;
     className?: string;
     element?: string;
