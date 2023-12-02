@@ -5,6 +5,7 @@ import { Label } from '@sb1/ffe-form-react';
 
 () => {
     const backgroundColors = [
+        undefined,
         'frost-30',
         'sand',
         'sand-70',
@@ -16,7 +17,14 @@ import { Label } from '@sb1/ffe-form-react';
         'fjell',
         'hvit',
     ];
+    const backgroundDarkColors = [
+        undefined,
+        'svart',
+        'natt',
+        'koksgraa',
+    ];
     const [bgColor, setBgColor] = useState(backgroundColors[0]);
+    const [bgDarkColor, setBgDarkColor] = useState(backgroundDarkColors[0]);
 
     return (
         <Grid>
@@ -32,13 +40,31 @@ import { Label } from '@sb1/ffe-form-react';
                     >
                         {backgroundColors.map(name => (
                             <option key={name} value={name}>
-                                {name}
+                                {name || 'Ingen farge'}
                             </option>
                         ))}
                     </Dropdown>
                 </GridCol>
             </GridRow>
-            <GridRow background={bgColor}>
+            <GridRow padding="sm">
+                <GridCol sm={12} lg={{ cols: 6, offset: 3 }}>
+                    <Label htmlFor="select-gridrow-bg-dark">
+                        Du kan velge bakgrunnsfarge for mørk fargemodus på grid-raden under her:
+                    </Label>
+                    <Dropdown
+                        id="select-gridrow-bg-dark"
+                        onChange={e => setBgDarkColor(e.target.value)}
+                        value={bgDarkColor}
+                    >
+                        {backgroundDarkColors.map(name => (
+                            <option key={name} value={name}>
+                                {name || 'Ingen farge'}
+                            </option>
+                        ))}
+                    </Dropdown>
+                </GridCol>
+            </GridRow>
+            <GridRow background={bgColor} backgroundDark={bgDarkColor} >
                 <GridCol sm={12} lg={{ cols: 6, offset: 3 }}>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
