@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { SymbolName } from './typings/symbolNames.ts';
+import { SymbolName } from './symbolNames.ts';
 
 export interface SymbolProps {
     fill?: boolean;
