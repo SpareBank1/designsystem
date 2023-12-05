@@ -66,6 +66,7 @@ export interface GridColSize {
 
 export interface GridColProps extends React.ComponentProps<'div'> {
     background?: BackgroundColors;
+    backgroundDark?: BackgroundDarkColors;
     children?: React.ReactNode;
     className?: string;
     element?: React.ReactNode;

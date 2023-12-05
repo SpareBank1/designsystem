@@ -9,19 +9,11 @@ import {
     string,
 } from 'prop-types';
 import classNames from 'classnames';
-import { backgroundColors, removedColors } from './background-colors';
-
-function camelCaseToDashCase(str) {
-    return str
-        .split('')
-        .reduce((previous, current) =>
-            /[A-Z]/.test(current)
-                ? `${previous}-${current.toLowerCase()}`
-                : `${previous}${current}`,
-        );
-}
-
-const MODIFIER_LIST = ['background', 'centerText', 'center'];
+import {
+    backgroundColors,
+    backgroundDarkColors,
+    removedColors,
+} from './background-colors';
 
 const sizeClasses = (size, def) => {
     switch (typeof def) {
@@ -39,13 +31,12 @@ const sizeClasses = (size, def) => {
     }
 };
 
-const modifiers = props =>
-    Object.keys(props)
-        .filter(key => MODIFIER_LIST.indexOf(key) !== -1 && !!props[key])
-        .map(key => `ffe-grid__col--${camelCaseToDashCase(key)}`)
-        .join(' ');
+const centerTextClass = centerText =>
+    centerText ? 'ffe-grid__col--center-text' : null;
 
-const backgroundClass = ({ background }) => {
+const centerClass = center => (center ? 'ffe-grid__col--center' : null);
+
+const backgroundClass = background => {
     if (!background) {
         return null;
     }
@@ -61,6 +52,11 @@ const backgroundClass = ({ background }) => {
         : null;
 };
 
+const backgroundDarkClass = backgroundDark =>
+    backgroundDarkColors.includes(backgroundDark)
+        ? `ffe-grid__col--bg-dark-${backgroundDark}`
+        : null;
+
 export default class GridCol extends Component {
     constructor() {
         super();
@@ -70,20 +66,18 @@ export default class GridCol extends Component {
 
     render() {
         const {
-            children,
+            background,
+            backgroundDark,
             className,
             element: Element,
-            lg,
-            md,
+            centerText,
+            center,
+            children,
             sm,
+            md,
+            lg,
             ...rest
         } = this.props;
-
-        Object.keys(rest).forEach(key => {
-            if (MODIFIER_LIST.includes(key)) {
-                delete rest[key];
-            }
-        });
 
         const classes = [
             'ffe-grid__col',
@@ -91,8 +85,10 @@ export default class GridCol extends Component {
             sizeClasses('lg', lg),
             sizeClasses('md', md),
             sizeClasses('sm', !sm && !lg && !md ? 12 : sm),
-            modifiers(this.props),
-            backgroundClass(this.props),
+            centerTextClass(centerText),
+            centerClass(center),
+            backgroundClass(background),
+            backgroundDarkClass(backgroundDark),
         ]
             .filter(x => x)
             .join(' ');
@@ -111,18 +107,9 @@ GridCol.defaultProps = {
 
 GridCol.propTypes = {
     /** Supported background colors */
-    background: oneOf([
-        'frost-30',
-        'sand',
-        'sand-70',
-        'sand-30',
-        'syrin-70',
-        'syrin-30',
-        'vann',
-        'vann-30',
-        'fjell',
-        'hvit',
-    ]),
+    background: oneOf(backgroundColors),
+    /** Supported dark background colors */
+    backgroundDark: oneOf(backgroundDarkColors),
     /** Any extra classes are attached to the root node, in addition to ffe-grid__col classes */
     className: string,
     /** Specify the DOM element being used to create the GridCol */
