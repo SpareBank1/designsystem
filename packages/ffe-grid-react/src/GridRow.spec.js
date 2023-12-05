@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { GridRow, GridCol } from '.';
-import backgroundColors from './background-colors';
+import { backgroundColors, backgroundDarkColors } from './background-colors';
 
 const defaultProps = {
     children: <p>blah</p>,
@@ -37,6 +37,16 @@ describe('GridRow', () => {
         });
     });
 
+    it('adds correct class for all valid dark background colors', () => {
+        const el = renderShallow();
+        backgroundDarkColors.forEach(backgroundDark => {
+            el.setProps({ backgroundDark });
+            expect(
+                el.hasClass(`ffe-grid__row--bg-dark-${backgroundDark}`),
+            ).toBe(true);
+        });
+    });
+
     it('does not add any background-class for invalid background colors', () => {
         const el = renderShallow();
         console.error = jest.fn();
@@ -46,16 +56,41 @@ describe('GridRow', () => {
         });
     });
 
+    it('does not add any dark background-class for invalid background colors', () => {
+        const el = renderShallow();
+        console.error = jest.fn();
+        ['illegal', 'color values', 'are ignored'].forEach(backgroundDark => {
+            el.setProps({ backgroundDark });
+            expect(
+                el.hasClass(`ffe-grid__row--bg-dark-${backgroundDark}`),
+            ).toBe(false);
+        });
+    });
+
     it('throws for removed background colours', () => {
         expect(() => renderShallow({ background: 'blue-cobalt' })).toThrow(
             'Support for the blue-cobalt background on <GridRow> has been removed, please see the CHANGELOG',
         );
     });
 
-    it('renders coloured rows with extra wrappers', () => {
+    it('renders rows with extra wrappers when background is set', () => {
         backgroundColors.forEach(background => {
             const el = renderShallow({
                 background,
+                children: (
+                    <GridCol lg={12}>
+                        <p>blah</p>
+                    </GridCol>
+                ),
+            });
+            expect(el.childAt(0).hasClass('ffe-grid__row-wrapper')).toBe(true);
+        });
+    });
+
+    it('renders rows with extra wrappers when dark background is set', () => {
+        backgroundDarkColors.forEach(backgroundDark => {
+            const el = renderShallow({
+                backgroundDark,
                 children: (
                     <GridCol lg={12}>
                         <p>blah</p>

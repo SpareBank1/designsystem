@@ -2,10 +2,15 @@ import React from 'react';
 import { node, oneOf, string } from 'prop-types';
 import classNames from 'classnames';
 
-import backgroundColors, { removedColors } from './background-colors';
+import {
+    backgroundColors,
+    backgroundDarkColors,
+    removedColors,
+} from './background-colors';
 
 export default function GridRow({
     background,
+    backgroundDark,
     className,
     children,
     element,
@@ -14,12 +19,16 @@ export default function GridRow({
     ...rest
 }) {
     const hasBackgroundColor = backgroundColors.includes(background);
-    const hasRemovedColor = removedColors.includes(background);
-    const content = hasBackgroundColor ? (
-        <div className="ffe-grid__row-wrapper">{children}</div>
-    ) : (
-        children
+    const hasBackgroundDarkColor = backgroundDarkColors.includes(
+        backgroundDark,
     );
+    const hasRemovedColor = removedColors.includes(background);
+    const content =
+        hasBackgroundColor || hasBackgroundDarkColor ? (
+            <div className="ffe-grid__row-wrapper">{children}</div>
+        ) : (
+            children
+        );
 
     if (hasRemovedColor) {
         throw new Error(
@@ -35,6 +44,9 @@ export default function GridRow({
                 className,
                 'ffe-grid__row',
                 { [`ffe-grid__row--bg-${background}`]: hasBackgroundColor },
+                {
+                    [`ffe-grid__row--bg-dark-${backgroundDark}`]: hasBackgroundDarkColor,
+                },
                 { [`ffe-grid__row--padding-${padding}`]: padding },
                 { [`ffe-grid__row--margin-${margin}`]: margin },
             )}
@@ -47,18 +59,9 @@ export default function GridRow({
 
 GridRow.propTypes = {
     /** Supported background colors */
-    background: oneOf([
-        'frost-30',
-        'sand',
-        'sand-70',
-        'sand-30',
-        'syrin-70',
-        'syrin-30',
-        'vann',
-        'vann-30',
-        'fjell',
-        'hvit',
-    ]),
+    background: oneOf(backgroundColors),
+    /** Supported dark background colors */
+    backgroundDark: oneOf(backgroundDarkColors),
     /** Padding in the top and bottom of the row */
     padding: oneOf([
         '2xs',
