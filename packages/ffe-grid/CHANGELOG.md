@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [14.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@14.0.7...@sb1/ffe-grid@14.1.0) (2023-12-05)
+
+### Features
+
+-   **ffe-grid:** legger til mørk bakgrunnsfarge i GridRow ([be64d63](https://github.com/SpareBank1/designsystem/commit/be64d63ea6ee8e8c7d4d7d1e294b097af1131b5f))
+
 ## [14.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@14.0.6...@sb1/ffe-grid@14.0.7) (2023-10-19)
 
 **Note:** Version bump only for package @sb1/ffe-grid
