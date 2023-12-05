@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@5.1.34...@sb1/ffe-component-index@5.2.0) (2023-12-05)
+
+### Features
+
+-   **component-overview:** tar i bruk ffe-feedback og ffe-feedback-react ([740f253](https://github.com/SpareBank1/designsystem/commit/740f253d1d2f58c14d427bfbd92398ee5ee238e9))
+
 ## [5.1.34](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@5.1.33...@sb1/ffe-component-index@5.1.34) (2023-12-05)
 
 **Note:** Version bump only for package @sb1/ffe-component-index
