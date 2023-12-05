@@ -7,12 +7,16 @@
     "bin": {
         "ffe-icons": "bin/build.js"
     },
+    "files": [
+        "less"
+    ],
     "repository": {
         "type": "git",
         "url": "ssh://git@github.com:SpareBank1/designsystem.git"
     },
     "scripts": {
-        "build": "node bin/build.js",
+        "build:": "",
+        "build:icons": "node bin/build.js",
         "lint": "eslint bin",
         "test": "npm run lint"
     },

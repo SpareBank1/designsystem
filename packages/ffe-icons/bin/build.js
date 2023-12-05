@@ -1,60 +1,48 @@
-#!/usr/bin/env node
-'use strict'; // eslint-disable-line strict
-
-const fs = require('fs');
 const path = require('path');
-const svgstore = require('svgstore');
-const mkdirp = require('mkdirp');
+const fs = require('fs');
+const { makedirs } = require('./utils');
+const { getIconNames } = require('./getIconNames');
+const { getDownloads, downloadAll } = require('./downloadSvgs');
+const {
+    createListOfRemovedIcons,
+    deleteRemovedIconsFiles,
+} = require('./deleteSvg');
 
-const ICONS_PATH = path.join(__dirname, '..', 'icons');
+(async () => {
+    const weights = [300, 500];
+    const sizes = [
+        { name: 'sm', opsz: 20 },
+        { name: 'md', opsz: 24 },
+        { name: 'lg', opsz: 40 },
+        { name: 'xl', opsz: 48 },
+    ];
+    const fill = [0, 1];
 
-// convenience to avoid having file extension in config
-const appendSvgExtension = icons =>
-    icons.map(name => (name.endsWith('.svg') ? name : `${name}.svg`));
+    const iconNames = await getIconNames();
+    const listOfRemovedIcons = await createListOfRemovedIcons(iconNames);
+    let downloads = [];
 
-const options = require('yargs')
-    .config('opts')
-    .options({
-        icons: {
-            default: '**/*.svg',
-            type: 'array',
-            coerce: appendSvgExtension,
-        },
-        projectIcons: {
-            type: 'array',
-            coerce: appendSvgExtension,
-        },
-        dest: {
-            default: 'dist',
-            normalize: true,
-            coerce: path.resolve,
-        },
-    }).argv;
-
-const matchesIcon = icons =>
-    icons.includes('*.svg') || icons.includes('**/*.svg')
-        ? () => true
-        : fileName => icons.includes(path.basename(fileName));
-
-const sprite = svgstore();
-
-fs.readdirSync(ICONS_PATH)
-    .filter(fileName => fileName.match(/\.svg$/))
-    .filter(matchesIcon(options.icons))
-    .forEach(fileName => {
-        const iconPath = path.join(ICONS_PATH, fileName);
-        const iconName = path.basename(fileName, '.svg');
-        sprite.add(iconName, fs.readFileSync(iconPath), 'utf-8');
-    });
-
-if (options.projectIcons) {
-    options.projectIcons.forEach(fileName => {
-        const iconPath = path.join(fileName);
-        const iconName = path.basename(fileName, '.svg');
-        sprite.add(iconName, fs.readFileSync(iconPath), 'utf-8');
-    });
-}
-
-mkdirp.sync(options.dest);
-
-fs.writeFileSync(path.join(options.dest, 'ffe-icons.svg'), sprite.toString());
+    for (const weight of weights) {
+        for (const fillValue of fill) {
+            const type = fillValue === 0 ? 'filled' : 'open';
+            for (const size of sizes) {
+                const dirPath = path.resolve(
+                    __dirname,
+                    `../icons/${weight}/${type}/${size.name}`,
+                );
+                if (!fs.existsSync(dirPath)) {
+                    await makedirs(dirPath);
+                }
+                if (listOfRemovedIcons.length > 0) {
+                    await deleteRemovedIconsFiles(listOfRemovedIcons, dirPath);
+                }
+                downloads = downloads.concat(
+                    getDownloads(iconNames, weight, fillValue, size, dirPath),
+                );
+            }
+        }
+    }
+    console.log('Downloading SVG files...');
+    await downloadAll(downloads);
+    console.log('All done!');
+})();
