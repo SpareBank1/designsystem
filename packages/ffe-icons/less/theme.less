@@ -1,0 +1,14 @@
+:root,
+:host {
+    --ffe-v-icons-size-sm: 20px;
+    --ffe-v-icons-size-md: 24px;
+    --ffe-v-icons-size-lg: 40px;
+    --ffe-v-icons-size-xl: 48px;
+    --ffe-v-icons-default-color: var(--ffe-farge-vann);
+
+    .native & {
+        @media (prefers-color-scheme: dark) {
+            --ffe-v-icons-default-color: var(--ffe-farge-vann-70);
+        }
+    }
+}
