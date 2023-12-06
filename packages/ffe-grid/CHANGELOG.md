@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [14.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@14.1.0...@sb1/ffe-grid@14.2.0) (2023-12-06)
+
+### Features
+
+-   **ffe-grid:** legger til mørk bakgrunnsfarge i GridCol ([e3f451d](https://github.com/SpareBank1/designsystem/commit/e3f451d159c4654e19d975bcc66c38f136794b78))
+
 # [14.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid@14.0.7...@sb1/ffe-grid@14.1.0) (2023-12-05)
 
 ### Features

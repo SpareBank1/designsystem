@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [13.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@13.1.0...@sb1/ffe-grid-react@13.2.0) (2023-12-06)
+
+### Features
+
+-   **ffe-grid-react:** legger til mørk bakgrunnsfarge i GridCol ([caff39a](https://github.com/SpareBank1/designsystem/commit/caff39a23f6c17a63af17f3e534a3cb0fec3f6f0))
+
 # [13.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@13.0.8...@sb1/ffe-grid-react@13.1.0) (2023-12-05)
 
 ### Features
