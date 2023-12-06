@@ -5,6 +5,7 @@ import { Label } from '@sb1/ffe-form-react';
 
 () => {
     const backgroundColors = [
+        undefined,
         'frost-30',
         'sand',
         'sand-70',
@@ -16,23 +17,48 @@ import { Label } from '@sb1/ffe-form-react';
         'fjell',
         'hvit',
     ];
+    const backgroundDarkColors = [
+        undefined,
+        'svart',
+        'natt',
+        'koksgraa',
+    ];
     const [bgColor, setBgColor] = useState(backgroundColors[0]);
+    const [bgDarkColor, setBgDarkColor] = useState(backgroundDarkColors[0]);
 
     return (
         <Grid>
             <GridRow>
                 <GridCol sm={12} lg={{ cols: 6, offset: 3 }}>
-                    <Label htmlFor="select-gridrow-bg">
+                    <Label htmlFor="select-gridcol-bg">
                         Du kan velge bakgrunnsfarge på grid-kolonnen under her:
                     </Label>
                     <Dropdown
-                        id="select-gridrow-bg"
+                        id="select-gridcol-bg"
                         onChange={e => setBgColor(e.target.value)}
                         value={bgColor}
                     >
                         {backgroundColors.map(name => (
                             <option key={name} value={name}>
-                                {name}
+                                {name || 'Ingen farge'}
+                            </option>
+                        ))}
+                    </Dropdown>
+                </GridCol>
+            </GridRow>
+            <GridRow padding="sm">
+                <GridCol sm={12} lg={{ cols: 6, offset: 3 }}>
+                    <Label htmlFor="select-gridcol-bg-dark">
+                        Du kan velge bakgrunnsfarge for mørk fargemodus på grid-kolonnen under her:
+                    </Label>
+                    <Dropdown
+                        id="select-gridcol-bg-dark"
+                        onChange={e => setBgDarkColor(e.target.value)}
+                        value={bgDarkColor}
+                    >
+                        {backgroundDarkColors.map(name => (
+                            <option key={name} value={name}>
+                                {name || 'Ingen farge'}
                             </option>
                         ))}
                     </Dropdown>
@@ -43,6 +69,7 @@ import { Label } from '@sb1/ffe-form-react';
                     sm={12}
                     lg={{ cols: 6, offset: 3 }}
                     background={bgColor}
+                    backgroundDark={bgDarkColor}
                 >
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.

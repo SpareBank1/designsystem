@@ -1,6 +1,6 @@
 import React from 'react';
 import { GridCol } from '.';
-import { backgroundColors } from './background-colors';
+import { backgroundColors, backgroundDarkColors } from './background-colors';
 
 const defaultProps = {
     children: <p>blah</p>,
@@ -65,11 +65,34 @@ describe('GridCol', () => {
         });
     });
 
+    it('sets dark background color class if valid', () => {
+        backgroundDarkColors.forEach(backgroundDark => {
+            const el = renderShallow({ backgroundDark });
+            expect(
+                el.hasClass(`ffe-grid__col--bg-dark-${backgroundDark}`),
+            ).toBe(true);
+        });
+    });
+
     it('does not set background color class if not valid', () => {
         const illegalBackgroundColors = ['ice-cream', 'log("hack")', '123456'];
         illegalBackgroundColors.forEach(background => {
             const el = renderShallow({ background });
             expect(el.hasClass(`ffe-grid__col--bg-${background}`)).toBe(false);
+        });
+    });
+
+    it('does not set dark background color class if not valid', () => {
+        const illegalBackgroundDarkColors = [
+            'ice-cream',
+            'log("hack")',
+            '123456',
+        ];
+        illegalBackgroundDarkColors.forEach(backgroundDark => {
+            const el = renderShallow({ backgroundDark });
+            expect(
+                el.hasClass(`ffe-grid__col--bg-dark-${backgroundDark}`),
+            ).toBe(false);
         });
     });
 
