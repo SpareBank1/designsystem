@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-symbols-react@3.0.1...@sb1/ffe-symbols-react@3.0.2) (2023-12-13)
+
+### Bug Fixes
+
+-   **ffe-symbols-react:** rett import feil med typings ([3b6cdc6](https://github.com/SpareBank1/designsystem/commit/3b6cdc65f1f5dee580c5365c1e7dde60b96af249))
+
 ## [3.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-symbols-react@3.0.0...@sb1/ffe-symbols-react@3.0.1) (2023-11-07)
 
 **Note:** Version bump only for package @sb1/ffe-symbols-react
