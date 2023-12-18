@@ -7,7 +7,8 @@
     "files": [
         "lib",
         "types",
-        "es"
+        "es",
+        "src"
     ],
     "main": "lib/index.js",
     "types": "types/index.d.ts",
@@ -18,7 +19,7 @@
         "url": "ssh://git@github.com:SpareBank1/designsystem.git"
     },
     "scripts": {
-        "build": "node scripts/build.js && ffe-buildtool babel --copy-typedef=gen-src/index.d.ts gen-src",
+        "build": "ffe-buildtool babel",
         "clean": "rimraf gen-src lib es types",
         "lint": "eslint scripts",
         "test": "eslint gen-src"
