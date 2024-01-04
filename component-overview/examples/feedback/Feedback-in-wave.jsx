@@ -5,7 +5,7 @@ import { Grid, GridCol, GridRow } from '@sb1/ffe-grid-react';
 <>
   <Wave color="frost-30" darkmodeColor="natt" />
   <Grid>
-    <GridRow background="frost-30" >
+    <GridRow background="frost-30" backgroundDark='natt' >
       <GridCol sm={{cols: 12}} >
         <Feedback
           language="nb"
