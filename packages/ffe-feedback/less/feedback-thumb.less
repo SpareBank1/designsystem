@@ -3,12 +3,25 @@
         border: none;
         background: none;
         cursor: pointer;
-        color: var(--ffe-farge-fjell);
+        fill: var(--ffe-farge-fjell);
         margin: 0 @ffe-spacing-xs;
 
         @media (prefers-color-scheme: dark) {
             body.native & {
-                color: var(--ffe-farge-vann-70);
+                fill: var(--ffe-farge-vann-70);
+            }
+        }
+
+        .ffe-feedback__thumb-icon--fill {
+            display: none;
+        }
+
+        &:hover {
+            .ffe-feedback__thumb-icon--fill {
+                display: block;
+            }
+            .ffe-feedback__thumb-icon {
+                display: none;
             }
         }
     }
