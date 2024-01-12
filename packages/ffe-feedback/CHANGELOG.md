@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback@1.1.0...@sb1/ffe-feedback@1.2.0) (2024-01-12)
+
+### Features
+
+-   **ffe-feedback:** viser/skjuler tommel-ikon basert på hover-klasse i css ([201c34a](https://github.com/SpareBank1/designsystem/commit/201c34a769f8e0fb7663e6e4103a38475a3b6248))
+
 # 1.1.0 (2023-12-05)
 
 ### Features
