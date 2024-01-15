@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [13.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.17.1...@sb1/ffe-icons@13.0.0) (2024-01-15)
+
+### Features
+
+-   **ffe-icons:** legg til scripts for å hente svger fra material symbols ([03fba30](https://github.com/SpareBank1/designsystem/commit/03fba30d4a48a9bd5edd13c702cb731d1d5b127b))
+
+### BREAKING CHANGES
+
+-   **ffe-icons:** sletter alle gamle svg'er
+
 ## [12.17.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.17.0...@sb1/ffe-icons@12.17.1) (2023-04-11)
 
 ### Bug Fixes
