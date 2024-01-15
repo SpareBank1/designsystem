@@ -18,6 +18,7 @@ jobs:
 
             - name: Install dependencies
               run: npm ci
+              working-directory: packages/ffe-icons
 
             - name: Build icons
               run: npm run build:icons
@@ -29,5 +30,5 @@ jobs:
                   token: ${{ secrets.GITHUB_TOKEN }}
                   commit-message: 'fix(ffe-icons): oppdater ikon SVGer'
                   title: 'feat(ffe-icons): oppdater ikon SVGer'
-                  body: "Oppdaterer SVG'ene i ffe-icons til å passe med de som er tilgjengelige i Material Symbols"
+                  body: "BREAKING CHANGE: Oppdaterer SVG'ene i ffe-icons til å passe med de som er tilgjengelige i Material Symbols"
                   branch: 'auto-update-icons'
