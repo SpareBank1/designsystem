@@ -5,6 +5,7 @@
         cursor: pointer;
         fill: var(--ffe-farge-fjell);
         margin: 0 @ffe-spacing-xs;
+        outline: none; // Remove focus outline
 
         @media (prefers-color-scheme: dark) {
             body.native & {
@@ -16,7 +17,8 @@
             display: none;
         }
 
-        &:hover {
+        &:hover,
+        &:focus {
             .ffe-feedback__thumb-icon--fill {
                 display: block;
             }
