@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [20.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@20.0.2...@sb1/ffe-header@20.0.3) (2024-01-16)
+
+### Bug Fixes
+
+-   **ffe-header:** fjern museo sans som fallback font ([75a5c3e](https://github.com/SpareBank1/designsystem/commit/75a5c3e18b70150e34cf1d4c923c2e7d2735f000))
+
 ## [20.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-header@20.0.1...@sb1/ffe-header@20.0.2) (2023-11-10)
 
 **Note:** Version bump only for package @sb1/ffe-header

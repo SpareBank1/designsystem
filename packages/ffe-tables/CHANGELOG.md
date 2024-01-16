@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [14.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@14.0.1...@sb1/ffe-tables@14.0.2) (2024-01-16)
+
+### Bug Fixes
+
+-   **ffe-tables:** fjern museo sans som fallback font ([f579476](https://github.com/SpareBank1/designsystem/commit/f5794762b543420b3c6fe9dd46a5d8fe99d28d7f))
+
 ## [14.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@14.0.0...@sb1/ffe-tables@14.0.1) (2023-10-19)
 
 **Note:** Version bump only for package @sb1/ffe-tables

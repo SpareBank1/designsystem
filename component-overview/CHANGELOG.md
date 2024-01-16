@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.3.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@5.3.0...@sb1/ffe-component-index@5.3.1) (2024-01-16)
+
+### Bug Fixes
+
+-   **component-overview:** fjern museo sans font som fallback ([c80306e](https://github.com/SpareBank1/designsystem/commit/c80306eb144a36a3cce42537b7f3999d519ca41b))
+
 # [5.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@5.2.5...@sb1/ffe-component-index@5.3.0) (2024-01-16)
 
 ### Features

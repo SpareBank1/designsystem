@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback@1.2.0...@sb1/ffe-feedback@1.2.1) (2024-01-16)
+
+### Bug Fixes
+
+-   **ffe-feedback:** legger til riktig fokus styling på tomlene ([eded64a](https://github.com/SpareBank1/designsystem/commit/eded64a5753c50535e862f368d759ae6e0fa312a))
+
 # [1.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback@1.1.0...@sb1/ffe-feedback@1.2.0) (2024-01-12)
 
 ### Features

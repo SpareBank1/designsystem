@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [27.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@27.1.2...@sb1/ffe-core@27.2.0) (2024-01-16)
+
+### Bug Fixes
+
+-   **ffe-core:** fjern museo sans som fallback font ([146d01e](https://github.com/SpareBank1/designsystem/commit/146d01ecbd95f4df1574ae0265363ef12636fb1b))
+
+### Features
+
+-   **ffe-core:** bruk text-wrap balance på paragrapher og heading ([f454c10](https://github.com/SpareBank1/designsystem/commit/f454c109db85e48075a89f90e6946cbd9f8a6bc1))
+
 ## [27.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@27.1.1...@sb1/ffe-core@27.1.2) (2023-10-19)
 
 ### Bug Fixes

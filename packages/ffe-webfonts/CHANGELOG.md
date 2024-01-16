@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-webfonts@3.0.3...@sb1/ffe-webfonts@4.0.0) (2024-01-16)
+
+### Bug Fixes
+
+-   **ffe-webfonts:** fjern museo sans fonten ([61f7b78](https://github.com/SpareBank1/designsystem/commit/61f7b788d64d90410c46ddcb06a57df6f4677f91))
+
+### BREAKING CHANGES
+
+-   **ffe-webfonts:** fjerner museo sans font filer og css
+
 ## [3.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-webfonts@3.0.2...@sb1/ffe-webfonts@3.0.3) (2022-10-28)
 
 **Note:** Version bump only for package @sb1/ffe-webfonts
