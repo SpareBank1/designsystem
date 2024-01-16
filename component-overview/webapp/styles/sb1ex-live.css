@@ -19,7 +19,7 @@
     background-color: var(--ffe-farge-koksgraa);
     color: var(--ffe-farge-lysvarmgraa);
     white-space: pre-wrap;
-    font-family: 'SpareBank1-medium', 'MuseoSansRounded-700', arial, sans-serif;
+    font-family: 'SpareBank1-medium', arial, sans-serif;
     padding: var(--ffe-spacing-xs);
 }
 
