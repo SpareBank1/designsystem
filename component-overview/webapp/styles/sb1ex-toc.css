@@ -27,7 +27,7 @@
 }
 
 .sb1ex-toc__example-list {
-    font-family: 'SpareBank1-regular', 'MuseoSans-500', arial, sans-serif;
+    font-family: 'SpareBank1-regular', arial, sans-serif;
     line-height: 1.5rem;
     list-style-type: none;
     margin: 0;
@@ -49,7 +49,7 @@
 }
 
 .sb1ex-inpage-nav__list {
-    font-family: 'SpareBank1-regular', 'MuseoSans-500', arial, sans-serif;
+    font-family: 'SpareBank1-regular', arial, sans-serif;
     list-style-type: none;
     margin: 0;
     padding: 0;
