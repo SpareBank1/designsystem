@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [13.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@13.0.0...@sb1/ffe-icons@13.0.1) (2024-01-16)
+
+### Bug Fixes
+
+-   **ffe-icons:** oppdater ikon SVGer ([fde6365](https://github.com/SpareBank1/designsystem/commit/fde6365b02d0d1f18b282a5c29300c18531a846d))
+
 # [13.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@12.17.1...@sb1/ffe-icons@13.0.0) (2024-01-15)
 
 ### Features

@@ -19,7 +19,7 @@
         "url": "ssh://git@github.com:SpareBank1/designsystem.git"
     },
     "scripts": {
-        "build": "lessc fonts-inline.less fonts.css && lessc sb1-fonts-inline.less sb1-fonts.css",
+        "build": "lessc sb1-fonts-inline.less sb1-fonts.css",
         "lint": "ffe-buildtool stylelint *.less",
         "test": "npm run lint"
     },
