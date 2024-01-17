@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback-react@1.2.1...@sb1/ffe-feedback-react@1.2.2) (2024-01-17)
+
+### Bug Fixes
+
+-   **ffe-feedback-react:** fjerner undefined fra typedefinisjon til onclick ([89ac2ec](https://github.com/SpareBank1/designsystem/commit/89ac2ec7f7936700b4345f5ec7a94c21d5f3b461))
+
 ## [1.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback-react@1.2.0...@sb1/ffe-feedback-react@1.2.1) (2024-01-16)
 
 **Note:** Version bump only for package @sb1/ffe-feedback-react
