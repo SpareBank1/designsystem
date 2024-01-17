@@ -11,7 +11,7 @@ export type bgDarkmodeColors = 'svart' | 'natt';
 export interface ContactLink {
     url?: string;
     linkText?: string;
-    onClick?: (e: React.MouseEvent | undefined) => void;
+    onClick?: (e: React.MouseEvent) => void;
 }
 
 export interface FeedbackProps extends React.ComponentProps<'div'> {
