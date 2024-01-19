@@ -1,5 +1,6 @@
 import React from 'react';
-import { render, fireEvent, screen } from '@testing-library/react';
+import { render, fireEvent, screen, wait } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 
 import { AccountSelector } from './AccountSelector';
 
@@ -520,7 +521,7 @@ describe('AccountSelector', () => {
         expect(component.hasClass('testClass')).toBe(true);
     });
 
-    it.only('Should not show account details when hideAccountDetails is set to false', async () => {
+    it('Should not show account details when hideAccountDetails is set to false', async () => {
         const component = render(
             <AccountSelector
                 className="testClass"
@@ -537,5 +538,111 @@ describe('AccountSelector', () => {
         );
 
         expect(component.queryByText(accounts[0].accountNumber)).toBeNull();
+    });
+
+    it('should set a11y status message briefly on element change', async () => {
+        render(
+            <div>
+                <button>Knapp</button>
+                <AccountSelector
+                    id="id"
+                    labelId="labelId"
+                    accounts={accounts}
+                    locale="nb"
+                    onAccountSelected={onAccountSelected}
+                    onReset={onReset}
+                    selectedAccount={selectedAccount}
+                    ariaInvalid={false}
+                />
+            </div>,
+        );
+
+        const input = await screen.findByRole('combobox');
+
+        userEvent.click(input);
+        userEvent.type(input, '{arrowdown}');
+        userEvent.type(input, '{enter}');
+
+        const a11yStatusMessage = await screen.findByRole('status');
+
+        await wait(() => {
+            expect(a11yStatusMessage).toHaveTextContent(
+                'Element Brukskonto er valgt.',
+            );
+        });
+        await wait(() => {
+            expect(a11yStatusMessage).toHaveTextContent('');
+        });
+
+        userEvent.clear(input);
+        userEvent.click(screen.getByText('Knapp'));
+
+        await wait(() => {
+            expect(a11yStatusMessage).toHaveTextContent(
+                'Valgt element har blitt fjernet.',
+            );
+        });
+        await wait(() => {
+            expect(a11yStatusMessage).toHaveTextContent('');
+        });
+    });
+
+    it('should set a11y status message briefly on state change', async () => {
+        render(
+            <div>
+                <button>Knapp</button>
+                <AccountSelector
+                    id="id"
+                    labelId="labelId"
+                    accounts={accounts}
+                    locale="nb"
+                    onAccountSelected={onAccountSelected}
+                    onReset={onReset}
+                    selectedAccount={selectedAccount}
+                    ariaInvalid={false}
+                />
+            </div>,
+        );
+
+        const input = await screen.findByRole('combobox');
+
+        userEvent.click(input);
+
+        const a11yStatusMessage = await screen.findByRole('status');
+
+        await wait(() => {
+            expect(a11yStatusMessage).toHaveTextContent(
+                '4 resultater er tilgjengelig, bruk opp- og nedpiltastene for å navigere. Trykk Enter for å velge.',
+            );
+        });
+        await wait(() => {
+            expect(a11yStatusMessage).toHaveTextContent('');
+        });
+
+        userEvent.type(input, 'spare');
+
+        await wait(() => {
+            expect(a11yStatusMessage).toHaveTextContent(
+                '1 resultat er tilgjengelig, bruk opp- og nedpiltastene for å navigere. Trykk Enter for å velge.',
+            );
+        });
+        await wait(() => {
+            expect(a11yStatusMessage).toHaveTextContent('');
+        });
+
+        userEvent.clear(input);
+        userEvent.type(input, 'ingen');
+
+        await wait(() => {
+            expect(a11yStatusMessage).toHaveTextContent(
+                'Ingen resultater er tilgjengelige.',
+            );
+        });
+        await wait(() => {
+            expect(a11yStatusMessage).toHaveTextContent('');
+        });
+
+        userEvent.click(screen.getByText('Knapp'));
+        expect(a11yStatusMessage).toHaveTextContent('');
     });
 });
