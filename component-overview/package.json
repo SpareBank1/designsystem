@@ -93,6 +93,9 @@
         "react-live": "^2.2.3",
         "react-router-dom": "^5.2.0"
     },
+    "bundledDependencies": [
+        "@sb1/ffe-icons"
+    ],
     "devDependencies": {
         "@rollup/plugin-json": "^4.1.0",
         "acorn": "^8.6.0",
