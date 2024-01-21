@@ -56,6 +56,7 @@ export default class Datepicker extends Component {
 
     componentWillUnmount() {
         this.removeGlobalEventListeners();
+        this.debounceCalendar.cancel();
     }
 
     /* eslint-disable react/no-did-update-set-state */

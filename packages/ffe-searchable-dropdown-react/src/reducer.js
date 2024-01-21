@@ -50,7 +50,6 @@ export const createReducer = ({
                 ...state,
                 isExpanded: true,
                 listToRender,
-                prevResultCount: state.listToRender.length,
                 noMatch,
             };
         }
@@ -69,7 +68,6 @@ export const createReducer = ({
                 ...state,
                 isExpanded: true,
                 inputValue: action.payload.inputValue,
-                prevResultCount: state.listToRender.length,
                 listToRender,
                 highlightedIndex:
                     action.payload.inputValue.trim() === '' ||
@@ -91,7 +89,6 @@ export const createReducer = ({
                 ...state,
                 isExpanded: false,
                 highlightedIndex: -1,
-                prevSelectedItem: state.selectedItem,
                 selectedItem: action.payload.selectedItem,
                 inputValue:
                     action.payload.selectedItem?.[searchAttributes[0]] || '',

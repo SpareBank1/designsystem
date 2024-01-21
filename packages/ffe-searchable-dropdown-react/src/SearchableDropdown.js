@@ -64,8 +64,6 @@ export const SearchableDropdown = ({
         }),
         {
             isExpanded: false,
-            prevResultCount: 0,
-            prevSelectedItem: selectedItem,
             selectedItem,
             highlightedIndex: -1,
             inputValue: selectedItem ? selectedItem[dropdownAttributes[0]] : '',
@@ -87,7 +85,6 @@ export const SearchableDropdown = ({
     );
     const [refs, setRefs] = useState([]);
     const [hasFocus, setHasFocus] = useState(false);
-    const isInitialMountRef = useRef(true);
     const internalRef = useRef();
     const inputRef = innerRef || internalRef;
     const toggleButtonRef = useRef();
@@ -117,15 +114,13 @@ export const SearchableDropdown = ({
     }, [selectedItem, dispatch]);
 
     useSetAllyMessageItemSelection({
+        hasFocus,
+        isExpanded: state.isExpanded,
+        isLoading,
+        locale,
+        resultCount: state.listToRender.length,
         searchAttributes,
         selectedItem: state.selectedItem,
-        prevSelectedItem: state.prevSelectedItem,
-        isInitialMount: isInitialMountRef.current,
-        isExpanded: state.isExpanded,
-        resultCount: state.listToRender.length,
-        prevResultCount: state.prevResultCount,
-        isLoading,
-        hasFocus,
     });
 
     useLayoutEffect(() => {
@@ -145,10 +140,6 @@ export const SearchableDropdown = ({
             shouldFocusInput.current = false;
         }
     });
-
-    useEffect(() => {
-        isInitialMountRef.current = false;
-    }, []);
 
     useEffect(() => {
         dispatch({

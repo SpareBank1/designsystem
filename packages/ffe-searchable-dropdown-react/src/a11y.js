@@ -6,28 +6,7 @@ import {
     getNoResultA11yStatus,
     getResultCountChangedA11yStatus,
 } from './translations';
-
-const debounce = (fn, time) => {
-    let timeoutId;
-
-    function cancel() {
-        if (timeoutId) {
-            clearTimeout(timeoutId);
-        }
-    }
-
-    function wrapper(...args) {
-        cancel();
-        timeoutId = setTimeout(() => {
-            timeoutId = null;
-            fn(...args);
-        }, time);
-    }
-
-    wrapper.cancel = cancel;
-
-    return wrapper;
-};
+import debounce from 'lodash.debounce';
 
 const getStatusDiv = () => {
     const id = 'a11y-status-message';
@@ -73,19 +52,14 @@ const updateA11yStatus = debounce(getA11yMessage => {
     setStatus(getA11yMessage());
 }, 200);
 
-const getItemSelectedMessage = ({ selectedItem, searchAttributes, locale }) => {
-    if (!selectedItem) {
+const getItemSelectedMessage = ({ selectedItemValue, locale }) => {
+    if (!selectedItemValue) {
         return getItemClearedA11yStatus(locale);
     }
-    return getItemSelectedA11yStatus(locale, selectedItem[searchAttributes[0]]);
+    return getItemSelectedA11yStatus(locale, selectedItemValue);
 };
 
-const getStateChangeMessage = ({
-    isExpanded,
-    resultCount,
-    previousResultCount,
-    locale,
-}) => {
+const getStateChangeMessage = ({ isExpanded, resultCount, locale }) => {
     if (!isExpanded) {
         return '';
     }
@@ -94,11 +68,7 @@ const getStateChangeMessage = ({
         return getNoResultA11yStatus(locale);
     }
 
-    if (resultCount !== previousResultCount) {
-        return getResultCountChangedA11yStatus(locale, resultCount);
-    }
-
-    return '';
+    return getResultCountChangedA11yStatus(locale, resultCount);
 };
 
 const getIsLoadingItemsMessage = locale => {
@@ -106,19 +76,17 @@ const getIsLoadingItemsMessage = locale => {
 };
 
 export const useSetAllyMessageItemSelection = ({
-    isInitialMount,
-    selectedItem,
-    prevSelectedItem,
-    searchAttributes,
-    locale,
-    resultCount,
-    previousResultCount,
+    hasFocus,
     isExpanded,
     isLoading,
-    hasFocus,
+    locale,
+    resultCount,
+    searchAttributes,
+    selectedItem,
 }) => {
-    const selectedItemRef = useRef(null);
-    const prevSelectedItemRef = useRef(null);
+    const isInitialMount = useRef(true);
+    const prevSelectedItemValue = useRef(null);
+    const selectedItemValue = selectedItem?.[searchAttributes[0]];
 
     useEffect(() => {
         if (isLoading && hasFocus) {
@@ -128,48 +96,38 @@ export const useSetAllyMessageItemSelection = ({
             return;
         }
 
-        if (isInitialMount) {
+        if (isInitialMount.current) {
+            isInitialMount.current = false;
             return;
         }
 
-        const selectedItemValue = selectedItem?.[searchAttributes[0]];
-        const prevSelectedItemValue = prevSelectedItem?.[searchAttributes[0]];
         const selectedItemHasChanged =
-            selectedItemRef.current !== selectedItemValue &&
-            prevSelectedItemRef.current !== prevSelectedItemValue;
-        if (
-            selectedItemValue !== prevSelectedItemValue &&
-            selectedItemHasChanged
-        ) {
-            selectedItemRef.current = selectedItemValue;
-            prevSelectedItemRef.current = prevSelectedItemValue;
+            selectedItemValue !== prevSelectedItemValue.current;
+        if (selectedItemHasChanged) {
+            prevSelectedItemValue.current = selectedItemValue;
             updateA11yStatus(() => {
-                return getItemSelectedMessage({
-                    selectedItem,
-                    searchAttributes,
-                    isExpanded,
-                    locale,
-                });
+                return getItemSelectedMessage({ selectedItemValue, locale });
             });
         } else {
             updateA11yStatus(() => {
                 return getStateChangeMessage({
                     isExpanded,
                     resultCount,
-                    previousResultCount,
                     locale,
                 });
             });
         }
+
+        return () => {
+            // Cancel debounce before component unmounts
+            updateA11yStatus.cancel();
+            cleanupStatus.cancel();
+        };
     }, [
-        selectedItem,
-        prevSelectedItem,
-        searchAttributes,
-        isInitialMount,
+        selectedItemValue,
         locale,
         isExpanded,
         resultCount,
-        previousResultCount,
         hasFocus,
         isLoading,
     ]);
