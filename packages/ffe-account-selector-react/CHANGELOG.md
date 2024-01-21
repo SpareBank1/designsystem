@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [23.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@23.0.10...@sb1/ffe-account-selector-react@23.0.11) (2024-01-21)
+
+### Bug Fixes
+
+-   **ffe-account-selector-react:** Legg til skjermleser tester ([fbe057d](https://github.com/SpareBank1/designsystem/commit/fbe057d0cb83395010266392051516ff93518f5a))
+
 ## [23.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@23.0.9...@sb1/ffe-account-selector-react@23.0.10) (2024-01-16)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react

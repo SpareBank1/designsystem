@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@7.0.9...@sb1/ffe-datepicker-react@7.0.10) (2024-01-21)
+
+### Bug Fixes
+
+-   **ffe-datepicker-react:** Kanseller debounce før komponent unmount ([ff50b6e](https://github.com/SpareBank1/designsystem/commit/ff50b6e64da10a099cf74f74174162ec83dafa1d))
+
 ## [7.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@7.0.8...@sb1/ffe-datepicker-react@7.0.9) (2024-01-16)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker-react

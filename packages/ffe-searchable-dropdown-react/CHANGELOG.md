@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [17.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@17.0.10...@sb1/ffe-searchable-dropdown-react@17.0.11) (2024-01-21)
+
+### Bug Fixes
+
+-   **ffe-searchable-dropdown-react:** Fiks skjermleser bug og legg til tester ([45da8ee](https://github.com/SpareBank1/designsystem/commit/45da8eeb2b722261d834637f8261c60b4d680575))
+
 ## [17.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@17.0.9...@sb1/ffe-searchable-dropdown-react@17.0.10) (2024-01-16)
 
 **Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react
