@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.3.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@5.3.3...@sb1/ffe-component-index@5.3.4) (2024-01-22)
+
+### Bug Fixes
+
+-   **component-overview:** legg til ffe-icons som bundleddependency ([105435a](https://github.com/SpareBank1/designsystem/commit/105435a49d4abd7b042190500c06949b120996b0))
+
 ## [5.3.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@5.3.2...@sb1/ffe-component-index@5.3.3) (2024-01-21)
 
 **Note:** Version bump only for package @sb1/ffe-component-index

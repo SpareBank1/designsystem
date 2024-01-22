@@ -3,16 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [1.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-sb1-logos@1.1.2...@sb1/ffe-sb1-logos@1.1.3) (2021-02-02)
-
+## [1.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-sb1-logos@1.1.3...@sb1/ffe-sb1-logos@1.1.4) (2024-01-22)
 
 ### Bug Fixes
 
-* **ffe-sb1-logos:** upgrade to hoisted version of handlebars ([d50c06f](https://github.com/SpareBank1/designsystem/commit/d50c06f2eb546dbba64c1b80984647ecb34322bd))
+-   **ffe-sb1-logos:** legg til større versjon av favicon ([73d181f](https://github.com/SpareBank1/designsystem/commit/73d181ffad9ae19f48c47d5179174697a6284637))
 
+## [1.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-sb1-logos@1.1.2...@sb1/ffe-sb1-logos@1.1.3) (2021-02-02)
 
+### Bug Fixes
 
-
+-   **ffe-sb1-logos:** upgrade to hoisted version of handlebars ([d50c06f](https://github.com/SpareBank1/designsystem/commit/d50c06f2eb546dbba64c1b80984647ecb34322bd))
 
 ## [1.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-sb1-logos@1.1.1...@sb1/ffe-sb1-logos@1.1.2) (2019-02-18)
 
