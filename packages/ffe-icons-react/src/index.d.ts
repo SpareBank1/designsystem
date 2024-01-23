@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 export interface IconProps {
-    filePath: string;
+    fileUrl: string;
     className?: string;
     ariaLabel?: string;
     size: 'sm' | 'md' | 'lg' | 'xl';

@@ -5,7 +5,7 @@ const getWrapper = props => shallow(<Icon {...props} />);
 
 describe('Icon', () => {
     it('renders without crashing and with right class', () => {
-        const wrapper = getWrapper({ filePath: '<svg></svg>' });
+        const wrapper = getWrapper({ fileUrl: '<svg></svg>' });
         expect(wrapper.exists()).toBe(true);
         expect(wrapper.hasClass('ffe-icons')).toBe(true);
     });
@@ -19,7 +19,7 @@ describe('Icon', () => {
     });
     it('applies additional CSS classes when provided', () => {
         const wrapper = getWrapper({
-            filePath: '<svg></svg>',
+            fileUrl: '<svg></svg>',
             size: 'md',
             className: 'my-class',
         });

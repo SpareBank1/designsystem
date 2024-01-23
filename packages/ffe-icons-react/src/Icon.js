@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import { string, oneOf } from 'prop-types';
 
 const Icon = props => {
-    const { filePath, className, ariaLabel, size, ...rest } = props;
+    const { fileUrl, className, ariaLabel, size, ...rest } = props;
 
     return (
         <span
@@ -11,7 +11,7 @@ const Icon = props => {
             aria-label={ariaLabel}
             aria-hidden={!ariaLabel}
             className={classNames('ffe-icons', `ffe-icons--${size}`, className)}
-            style={{ maskImage: `url(${filePath})` }}
+            style={{ maskImage: `url(${fileUrl})` }}
             {...rest}
         />
     );
@@ -22,8 +22,8 @@ Icon.defaultProps = {
 };
 
 Icon.propTypes = {
-    /** The path to the svg-file */
-    filePath: string.isRequired,
+    /** The path to the svg-file og base64 string */
+    fileUrl: string.isRequired,
     /** Additional classnames */
     className: string,
     /** Aria label, if ariaLabel is hull it'll sett aria-hidden to true */
