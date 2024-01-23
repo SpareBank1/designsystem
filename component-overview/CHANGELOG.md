@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.3.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@5.3.4...@sb1/ffe-component-index@5.3.5) (2024-01-23)
+
+### Bug Fixes
+
+-   **component-overview:** fiks ikon eksempler ([9713ac4](https://github.com/SpareBank1/designsystem/commit/9713ac4a8f32c8834e6205e987f64a59a7d5b770))
+-   **component-overview:** fiks ikon eksempler ([9b3de01](https://github.com/SpareBank1/designsystem/commit/9b3de0161a28cb1014e25b27a0688686cbb00b59))
+
 ## [5.3.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@5.3.3...@sb1/ffe-component-index@5.3.4) (2024-01-22)
 
 ### Bug Fixes

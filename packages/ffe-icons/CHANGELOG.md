@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [13.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@13.0.1...@sb1/ffe-icons@13.0.2) (2024-01-23)
+
+### Bug Fixes
+
+-   **ffe-icons:** fikser feil som gjør at filled og open havner i feil mappe ([9c9fa2d](https://github.com/SpareBank1/designsystem/commit/9c9fa2d69fb88b09f38139d4cb747272fe062e2f))
+
 ## [13.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@13.0.0...@sb1/ffe-icons@13.0.1) (2024-01-16)
 
 ### Bug Fixes

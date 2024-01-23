@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [9.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@8.0.0...@sb1/ffe-icons-react@9.0.0) (2024-01-23)
+
+### Bug Fixes
+
+-   **ffe-icons-react:** endre propnavn fra filePath til fileUrl ([1a2d722](https://github.com/SpareBank1/designsystem/commit/1a2d722f20f4fc7da77ca0e2ce21afdf1e88955d))
+
+### BREAKING CHANGES
+
+-   **ffe-icons-react:** endrer navn på prop
+
 # [8.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@7.3.6...@sb1/ffe-icons-react@8.0.0) (2024-01-16)
 
 ### Features
