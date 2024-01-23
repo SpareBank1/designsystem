@@ -24,7 +24,7 @@ const {
 
     for (const weight of weights) {
         for (const fillValue of fill) {
-            const type = fillValue === 0 ? 'filled' : 'open';
+            const type = fillValue === 1 ? 'filled' : 'open';
             for (const size of sizes) {
                 const dirPath = path.resolve(
                     __dirname,
