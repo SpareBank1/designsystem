@@ -11,6 +11,7 @@ import { Grid, GridCol, GridRow } from '@sb1/ffe-grid-react';
           language="nb"
           onThumbClick={console.log}
           onFeedbackSend={console.log}
+          headingLevel={2}
         />
       </GridCol>
     </GridRow>

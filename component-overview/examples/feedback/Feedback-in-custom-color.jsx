@@ -6,4 +6,5 @@ import Feedback from '@sb1/ffe-feedback-react';
   bgDarkmodeColor="natt"
   onThumbClick={console.log}
   onFeedbackSend={console.log}
+  headingLevel={2}
 />

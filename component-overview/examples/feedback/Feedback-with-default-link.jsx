@@ -7,4 +7,5 @@ import Feedback from '@sb1/ffe-feedback-react';
   contactLink={{
     onClick: () => console.log('Contact link clicked'),
   }}
+  headingLevel={2}
 />

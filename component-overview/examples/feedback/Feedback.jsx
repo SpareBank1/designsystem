@@ -4,4 +4,5 @@ import Feedback from '@sb1/ffe-feedback-react';
   language="nb"
   onThumbClick={console.log}
   onFeedbackSend={console.log}
+  headingLevel={2}
 />
