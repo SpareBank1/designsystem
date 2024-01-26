@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import { bool, oneOf, node, string } from 'prop-types';
 
 const makeHeading = level => {
-    const Heading = props => {
+    const Heading = React.forwardRef((props, ref) => {
         const {
             children,
             className,
@@ -23,6 +23,7 @@ const makeHeading = level => {
         return (
             <H
                 {...rest}
+                ref={ref}
                 className={classNames(
                     headingClass,
                     { [`${headingClass}--error`]: error },
@@ -36,7 +37,7 @@ const makeHeading = level => {
                 {children}
             </H>
         );
-    };
+    });
 
     Heading.propTypes = {
         children: node.isRequired,
