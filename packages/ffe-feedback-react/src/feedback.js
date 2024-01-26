@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import { flushSync } from 'react-dom';
 import { Heading2 } from '@sb1/ffe-core-react';
 import { Animation } from './animation';
 import { func, oneOf, shape, string } from 'prop-types';
@@ -15,6 +16,8 @@ export const Feedback = ({
     bgDarkmodeColor,
     contactLink,
 }) => {
+    const feedbackSentRef = useRef();
+    const expandedRef = useRef();
     const [feedbackThumbClicked, setFeedbackThumbClicked] = useState();
     const [expanded, setExpanded] = useState(false);
     const [feedbackSent, setFeedbackSent] = useState(false);
@@ -26,12 +29,18 @@ export const Feedback = ({
 
     const handleThumbClicked = thumb => {
         setFeedbackThumbClicked(thumb);
-        setExpanded(!expanded);
+        flushSync(() => {
+            setExpanded(prevState => !prevState);
+        });
+        expandedRef.current.focus();
         onThumbClick(thumb);
     };
 
     const handleFeedbackSent = feedbackText => {
-        setFeedbackSent(true);
+        flushSync(() => {
+            setFeedbackSent(true);
+        });
+        feedbackSentRef.current.focus();
         onFeedbackSend(feedbackText);
     };
 
@@ -39,7 +48,7 @@ export const Feedback = ({
         return (
             <div className={feedbackClassnames}>
                 <div className="ffe-feedback__content">
-                    <Heading2 lookLike={4}>
+                    <Heading2 lookLike={4} ref={feedbackSentRef} tabIndex={-1}>
                         {i18n[language].FEEDBACK_SENT_HEADING}
                     </Heading2>
                     <Animation />
@@ -52,15 +61,11 @@ export const Feedback = ({
         return (
             <div className={feedbackClassnames}>
                 <div className="ffe-feedback__content">
-                    {feedbackThumbClicked === Thumbs.UP ? (
-                        <Heading2 lookLike={5}>
-                            {i18n[language].FEEDBACK_GOOD}
-                        </Heading2>
-                    ) : (
-                        <Heading2 lookLike={5}>
-                            {i18n[language].FEEDBACK_IMPROVE}
-                        </Heading2>
-                    )}
+                    <Heading2 lookLike={5} ref={expandedRef} tabIndex={-1}>
+                        {feedbackThumbClicked === Thumbs.UP
+                            ? i18n[language].FEEDBACK_GOOD
+                            : i18n[language].FEEDBACK_IMPROVE}
+                    </Heading2>
                     <FeedbackExpanded
                         language={language}
                         onSend={handleFeedbackSent}
