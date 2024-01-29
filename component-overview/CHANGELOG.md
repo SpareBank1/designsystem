@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.3.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@5.3.5...@sb1/ffe-component-index@5.3.6) (2024-01-29)
+
+### Bug Fixes
+
+-   **component-overview:** fjerner bundleddependencies siden det ikke funket ([e315e6b](https://github.com/SpareBank1/designsystem/commit/e315e6bda11121e3868fbec06a13080943297ea5))
+
 ## [5.3.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@5.3.4...@sb1/ffe-component-index@5.3.5) (2024-01-23)
 
 ### Bug Fixes

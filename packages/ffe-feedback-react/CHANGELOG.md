@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback-react@1.2.2...@sb1/ffe-feedback-react@1.2.3) (2024-01-29)
+
+### Bug Fixes
+
+-   **ffe-feedback-react:** focus managment ([19526f1](https://github.com/SpareBank1/designsystem/commit/19526f13fdf8ecc6456444028b969c4dd66dfa6b))
+
 ## [1.2.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback-react@1.2.1...@sb1/ffe-feedback-react@1.2.2) (2024-01-17)
 
 ### Bug Fixes

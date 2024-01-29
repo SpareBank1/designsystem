@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [13.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@13.0.2...@sb1/ffe-icons@13.0.3) (2024-01-29)
+
+### Bug Fixes
+
+-   **ffe-icons:** rett opp i bug der filled havnet i open folder og motsatt ([4fe3e97](https://github.com/SpareBank1/designsystem/commit/4fe3e9780419ad86763504f2237176a6eb29bdd6))
+
 ## [13.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@13.0.1...@sb1/ffe-icons@13.0.2) (2024-01-23)
 
 ### Bug Fixes
