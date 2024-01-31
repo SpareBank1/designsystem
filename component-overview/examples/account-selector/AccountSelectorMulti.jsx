@@ -62,6 +62,10 @@ import { Label } from '@sb1/ffe-form-react';
             : setSelectedAccounts(accounts);
     };
 
+    const onReset = () => {
+        setValue('');
+        setSelectedAccounts([]);
+    };
     return (
         <>
             <Label htmlFor="account-selector-multi">Velg konto</Label>
@@ -77,6 +81,7 @@ import { Label } from '@sb1/ffe-form-react';
                 onSelectAll={onSelectAll}
                 onBlur={onBlur}
                 onFocus={onFocus}
+                onReset={onReset}
             />
         </>
     );
