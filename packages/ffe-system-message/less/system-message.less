@@ -45,80 +45,110 @@
 
     &--error&--coloredbg {
         background-color: var(--ffe-v-system-message-variant-bg-color);
+
         .native & {
             @media (prefers-color-scheme: dark) {
                 background-color: var(--ffe-v-system-message-error-bg-color);
             }
         }
     }
+
     &--error {
         background-color: var(--ffe-v-system-message-error-bg-color);
 
         .ffe-system-message__icon {
             background: var(--ffe-v-system-message-error-icon-bg-color);
-            color: var(--ffe-farge-hvit);
+
+            > .ffe-icons {
+                color: var(--ffe-farge-hvit);
+            }
         }
     }
 
     &--info&--coloredbg {
         background-color: var(--ffe-v-system-message-variant-bg-color);
+
         .native & {
             @media (prefers-color-scheme: dark) {
                 background-color: var(--ffe-v-system-message-info-bg-color);
             }
         }
     }
+
     &--info {
         background-color: var(--ffe-v-system-message-info-bg-color);
 
         .ffe-system-message__icon {
             background: var(--ffe-v-system-message-info-icon-bg-color);
-            color: var(--ffe-farge-hvit);
+
+            > .ffe-icons {
+                color: var(--ffe-farge-hvit);
+            }
         }
     }
 
     &--news&--coloredbg {
         background-color: var(--ffe-v-system-message-variant-bg-color);
         color: var(--ffe-farge-svart);
+
         .native & {
             @media (prefers-color-scheme: dark) {
                 background-color: var(--ffe-v-system-message-news-bg-color);
                 color: var(--ffe-farge-hvit);
             }
         }
+
         .ffe-system-message__icon {
             background: var(--ffe-v-system-message-news-icon-color);
-            color: var(--ffe-farge-hvit);
+
+            > .ffe-icons {
+                color: var(--ffe-farge-hvit);
+            }
+
             .native & {
                 @media (prefers-color-scheme: dark) {
                     background: var(--ffe-farge-hvit);
-                    color: var(--ffe-v-system-message-news-icon-color);
+
+                    > .ffe-icons {
+                        color: var(--ffe-v-system-message-news-icon-color);
+                    }
                 }
             }
         }
     }
+
     &--news {
         background-color: var(--ffe-v-system-message-news-bg-color);
         color: var(--ffe-farge-hvit);
+
         .ffe-system-message__icon {
             background: var(--ffe-farge-hvit);
-            color: var(--ffe-v-system-message-news-icon-color);
+
+            > .ffe-icons {
+                color: var(--ffe-v-system-message-news-icon-color);
+            }
         }
     }
 
     &--success&--coloredbg {
         background-color: var(--ffe-v-system-message-variant-bg-color);
+
         .native & {
             @media (prefers-color-scheme: dark) {
                 background: var(--ffe-v-system-message-success-bg-color);
             }
         }
     }
+
     &--success {
         background-color: var(--ffe-v-system-message-success-bg-color);
+
         .ffe-system-message__icon {
             background: var(--ffe-v-system-message-news-icon-bg-color);
-            color: var(--ffe-farge-hvit);
+
+            > .ffe-icons {
+                color: var(--ffe-farge-hvit);
+            }
         }
     }
 }
@@ -169,18 +199,26 @@
         box-sizing: border-box;
         color: var(--ffe-v-system-message-close-button-color);
 
-        &:hover {
-            color: var(--ffe-v-system-message-close-button-color-hover);
+        > .ffe-icons {
+            color: var(--ffe-v-system-message-close-button-color);
+
+            &:hover {
+                color: var(--ffe-v-system-message-close-button-color-hover);
+            }
         }
+
         &:focus {
             border: 2px solid
                 var(--ffe-v-system-message-close-button-border-color-focus);
         }
+
         .ffe-system-message-wrapper--news & {
             color: var(--ffe-farge-hvit);
+
             &:hover {
                 color: var(--ffe-farge-lysvarmgraa);
             }
+
             &:focus {
                 border: 2px solid var(--ffe-farge-hvit);
             }
