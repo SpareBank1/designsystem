@@ -93,13 +93,18 @@
         transition: all @ffe-transition-duration @ffe-ease;
         color: var(--ffe-g-primary-color);
 
+        > .ffe-icons {
+            color: var(--ffe-g-primary-color);
+        }
         &--hidden {
             display: none;
         }
 
         &:hover {
             border-color: var(--ffe-g-primary-color);
-            color: var(--ffe-v-searchable-dropdown-icon-hover-color);
+            > .ffe-icons {
+                color: var(--ffe-v-searchable-dropdown-icon-hover-color);
+            }
         }
 
         &:focus {

@@ -29,7 +29,7 @@
         "@sb1/ffe-core-react": "^7.2.0",
         "@sb1/ffe-form": "^26.0.1",
         "@sb1/ffe-spinner-react": "^7.0.1",
-        "@sb1/ffe-symbols-react": "^3.0.2",
+        "@sb1/ffe-icons-react": "^9.0.0",
         "classnames": "^2.3.1",
         "compute-scroll-into-view": "^1.0.17",
         "lodash.debounce": "^4.0.8",
