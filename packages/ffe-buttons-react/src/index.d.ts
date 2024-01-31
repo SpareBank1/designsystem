@@ -11,8 +11,8 @@ export type BaseButtonProps = {
     ariaLoadingMessage?: string;
     disabled?: boolean;
     isLoading?: boolean;
-    leftIcon?: string;
-    rightIcon?: string;
+    leftIcon?: HTMLElement | React.ElementType;
+    rightIcon?: HTMLElement | React.ElementType;
 } & MinimalBaseButtonProps;
 
 type ActionButtonProps = BaseButtonProps;
@@ -54,13 +54,13 @@ export type ShortcutButtonProps = {
 export type TaskButtonProps = {
     children?: React.ReactNode;
     disabled?: boolean;
-    icon: string;
+    icon: HTMLElement | React.ElementType;
 } & MinimalBaseButtonProps;
 
 export type TertiaryButtonProps = {
     children?: React.ReactNode;
-    leftIcon?: string;
-    rightIcon?: string;
+    leftIcon?: HTMLElement | React.ElementType;
+    rightIcon?: HTMLElement | React.ElementType;
 } & MinimalBaseButtonProps;
 
 type NoInfer<T> = [T][T extends any ? 0 : never];

@@ -58,13 +58,13 @@ const BaseButton = props => {
                 {leftIcon &&
                     React.cloneElement(leftIcon, {
                         className: 'ffe-button__icon ffe-button__icon--left',
-                        weight: 300,
+                        size: 'md',
                     })}
                 {children}
                 {rightIcon &&
                     React.cloneElement(rightIcon, {
                         className: 'ffe-button__icon ffe-button__icon--right',
-                        weight: 300,
+                        size: 'md',
                     })}
             </span>
             {supportsSpinner && isLoading && (

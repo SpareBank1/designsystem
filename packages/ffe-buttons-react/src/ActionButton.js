@@ -10,7 +10,6 @@ import {
     elementType,
 } from 'prop-types';
 import classNames from 'classnames';
-import Symbol from '@sb1/ffe-symbols-react';
 
 import Button from './BaseButton';
 
@@ -21,8 +20,8 @@ export default function ActionButton(props) {
         <Button
             buttonType="action"
             className={classNames(className)}
-            leftIcon={leftIcon && <Symbol icon={leftIcon} size="md" />}
-            rightIcon={rightIcon && <Symbol icon={rightIcon} size="md" />}
+            leftIcon={leftIcon}
+            rightIcon={rightIcon}
             {...rest}
         />
     );
@@ -43,8 +42,8 @@ ActionButton.propTypes = {
     innerRef: oneOfType([func, shape({ current: object })]),
     /** Shows a loader if true */
     isLoading: bool,
-    /** Name of Icon shown to the left of the label */
-    leftIcon: string,
-    /** Name of Icon shown to the right of the label */
-    rightIcon: string,
+    /** Icon shown to the left of the label */
+    leftIcon: node,
+    /** Icon shown to the right of the label */
+    rightIcon: node,
 };
