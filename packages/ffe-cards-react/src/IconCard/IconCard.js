@@ -29,7 +29,6 @@ const IconCard = props => {
                     'ffe-icon-card__icon',
                     icon.props.className,
                 ),
-                weight: 300,
             })}
             <div className="ffe-icon-card__body">
                 {typeof children === 'function'
