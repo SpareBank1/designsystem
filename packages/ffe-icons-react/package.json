@@ -25,7 +25,8 @@
         "test": "ffe-buildtool jest"
     },
     "dependencies": {
-        "prop-types": "^15.7.2"
+        "prop-types": "^15.7.2",
+        "@sb1/ffe-icons": "^13.0.3"
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.5.0",
