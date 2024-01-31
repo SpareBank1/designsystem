@@ -57,7 +57,11 @@
         border-bottom: 1px solid transparent;
     }
 
-    &:hover {
+    .ffe-inline-button__icon {
+        color: var(--ffe-v-button-primary-color);
+    }
+
+    &:hover .ffe-inline-button__icon {
         color: var(--ffe-v-button-primary-color-hover);
     }
 
@@ -73,7 +77,12 @@
     margin: 0;
     align-items: center;
 
-    &:hover {
+    .ffe-inline-button__icon {
+        color: var(--ffe-v-button-primary-color);
+        transition: transform @ffe-transition-duration @ffe-ease-in-out-back;
+    }
+    &:hover .ffe-inline-button__icon,
+    &:hover .ffe-inline-button__label {
         color: var(--ffe-v-button-primary-color-hover);
     }
 }
@@ -84,6 +93,10 @@
     flex-wrap: wrap;
     padding: @ffe-spacing-xs (@ffe-spacing-sm + 1);
     border: 2px solid transparent;
+
+    .ffe-inline-button__icon {
+        color: var(--ffe-v-button-tertiary-color);
+    }
 
     .ffe-inline-button__label {
         &::after {
@@ -114,6 +127,9 @@
     &:hover {
         color: var(--ffe-v-button-tertiary-color-hover);
 
+        .ffe-inline-button__icon {
+            color: var(--ffe-v-button-tertiary-color-hover);
+        }
         .native & {
             @media (prefers-color-scheme: dark) {
                 color: @ffe-farge-hvit;
@@ -126,9 +142,6 @@
     margin-bottom: -2px;
     will-change: transform, opacity;
 
-    .ffe-inline-button--expand & {
-        transition: transform @ffe-transition-duration @ffe-ease-in-out-back;
-    }
     .ffe-inline-button--expanded & {
         transform: rotateZ(180deg);
     }
