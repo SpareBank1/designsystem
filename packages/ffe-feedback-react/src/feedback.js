@@ -1,14 +1,15 @@
 import React, { useState, useRef } from 'react';
 import { flushSync } from 'react-dom';
-import { Heading2 } from '@sb1/ffe-core-react';
 import { Animation } from './animation';
 import { func, oneOf, shape, string } from 'prop-types';
 import i18n from './i18n/i18n';
 import FeedbackThumbs, { Thumbs } from './feedback-thumbs';
 import classNames from 'classnames';
 import FeedbackExpanded from './feedback-expanded';
+import { v4 as uuid } from 'uuid';
 
 export const Feedback = ({
+    headingLevel,
     language,
     onThumbClick,
     onFeedbackSend,
@@ -21,6 +22,7 @@ export const Feedback = ({
     const [feedbackThumbClicked, setFeedbackThumbClicked] = useState();
     const [expanded, setExpanded] = useState(false);
     const [feedbackSent, setFeedbackSent] = useState(false);
+    const headingId = useRef(uuid()).current;
 
     const feedbackClassnames = classNames('ffe-feedback', {
         [`ffe-feedback--bg-${bgColor}`]: bgColor,
@@ -48,9 +50,15 @@ export const Feedback = ({
         return (
             <div className={feedbackClassnames}>
                 <div className="ffe-feedback__content">
-                    <Heading2 lookLike={4} ref={feedbackSentRef} tabIndex={-1}>
-                        {i18n[language].FEEDBACK_SENT_HEADING}
-                    </Heading2>
+                    {React.createElement(
+                        `h${headingLevel}`,
+                        {
+                            ref: feedbackSentRef,
+                            tabIndex: -1,
+                            className: 'ffe-h4',
+                        },
+                        i18n[language].FEEDBACK_SENT_HEADING,
+                    )}
                     <Animation />
                 </div>
             </div>
@@ -61,11 +69,13 @@ export const Feedback = ({
         return (
             <div className={feedbackClassnames}>
                 <div className="ffe-feedback__content">
-                    <Heading2 lookLike={5} ref={expandedRef} tabIndex={-1}>
-                        {feedbackThumbClicked === Thumbs.UP
+                    {React.createElement(
+                        `h${headingLevel}`,
+                        { ref: expandedRef, tabIndex: -1, className: 'ffe-h5' },
+                        feedbackThumbClicked === Thumbs.UP
                             ? i18n[language].FEEDBACK_GOOD
-                            : i18n[language].FEEDBACK_IMPROVE}
-                    </Heading2>
+                            : i18n[language].FEEDBACK_IMPROVE,
+                    )}
                     <FeedbackExpanded
                         language={language}
                         onSend={handleFeedbackSent}
@@ -80,12 +90,15 @@ export const Feedback = ({
     return (
         <div className={feedbackClassnames}>
             <div className="ffe-feedback__content">
-                <Heading2 id="feedback-heading" lookLike={4}>
-                    {i18n[language].FEEDBACK_NOT_SENT_HEADING}
-                </Heading2>
+                {React.createElement(
+                    `h${headingLevel}`,
+                    { id: headingId, className: 'ffe-h4' },
+                    i18n[language].FEEDBACK_NOT_SENT_HEADING,
+                )}
                 <FeedbackThumbs
                     onClick={handleThumbClicked}
                     language={language}
+                    headingId={headingId}
                 />
             </div>
         </div>
@@ -95,6 +108,7 @@ export const Feedback = ({
 export default Feedback;
 
 Feedback.propTypes = {
+    headingLevel: oneOf([1, 2, 3, 4, 5, 6]).isRequired,
     language: oneOf(['nb', 'nn', 'en']),
     onThumbClick: func.isRequired,
     onFeedbackSend: func.isRequired,

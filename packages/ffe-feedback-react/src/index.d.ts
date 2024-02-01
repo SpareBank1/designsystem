@@ -15,6 +15,7 @@ export interface ContactLink {
 }
 
 export interface FeedbackProps extends React.ComponentProps<'div'> {
+    headingLevel: 1 | 2 | 3 | 4 | 5 | 6;
     language?: 'nb' | 'nn' | 'en';
     onThumbClick: (thumb: ThumbType) => void;
     onFeedbackSend: (feedbackText: string) => void;
