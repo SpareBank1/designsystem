@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback-react@1.2.3...@sb1/ffe-feedback-react@2.0.0) (2024-02-02)
+
+### Features
+
+-   **ffe-feedback-react:** add headingLevel prop ([438328e](https://github.com/SpareBank1/designsystem/commit/438328e669a5ee6d8b7f1fa24d7293670914e91c))
+
+### BREAKING CHANGES
+
+-   **ffe-feedback-react:** headingLevel is now required
+
 ## [1.2.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback-react@1.2.2...@sb1/ffe-feedback-react@1.2.3) (2024-01-29)
 
 ### Bug Fixes

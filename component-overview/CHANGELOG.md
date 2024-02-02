@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.4.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@5.3.6...@sb1/ffe-component-index@5.4.0) (2024-02-02)
+
+### Features
+
+-   **component-overview:** added headingLevel on feedback ([5acfa3e](https://github.com/SpareBank1/designsystem/commit/5acfa3ea479f8989c7d7f109961d98a1a774a12c))
+
 ## [5.3.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@5.3.5...@sb1/ffe-component-index@5.3.6) (2024-01-29)
 
 ### Bug Fixes
