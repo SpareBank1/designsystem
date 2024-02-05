@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@10.0.2...@sb1/ffe-accordion@10.0.3) (2024-02-05)
+
+### Bug Fixes
+
+-   **ffe-accordion:** word-break content ([97d8ca8](https://github.com/SpareBank1/designsystem/commit/97d8ca8a6810a20e58bba9e91a130992836d1715))
+
 ## [10.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@10.0.1...@sb1/ffe-accordion@10.0.2) (2024-01-16)
 
 **Note:** Version bump only for package @sb1/ffe-accordion

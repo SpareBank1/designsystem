@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@7.2.0...@sb1/ffe-core-react@7.2.1) (2024-02-05)
+
+**Note:** Version bump only for package @sb1/ffe-core-react
+
 # [7.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@7.1.5...@sb1/ffe-core-react@7.2.0) (2024-01-29)
 
 ### Features

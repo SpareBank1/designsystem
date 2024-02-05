@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [17.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@17.0.2...@sb1/ffe-cards@17.0.3) (2024-02-05)
+
+### Bug Fixes
+
+-   **ffe-cards:** word break in texts ([ba3aef9](https://github.com/SpareBank1/designsystem/commit/ba3aef92508d990664ad8d9562ab5b6cb0444f42))
+
 ## [17.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@17.0.1...@sb1/ffe-cards@17.0.2) (2024-01-16)
 
 **Note:** Version bump only for package @sb1/ffe-cards

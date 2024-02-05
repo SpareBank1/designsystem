@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-buttons",
-    "version": "18.0.3",
+    "version": "18.0.4",
     "license": "MIT",
     "author": "SpareBank1",
     "files": [
@@ -15,7 +15,7 @@
         "test": "npm run lint"
     },
     "dependencies": {
-        "@sb1/ffe-core": "^27.2.0"
+        "@sb1/ffe-core": "^27.2.1"
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.5.0"

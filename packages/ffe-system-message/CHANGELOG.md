@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@8.0.2...@sb1/ffe-system-message@8.0.3) (2024-02-05)
+
+### Bug Fixes
+
+-   **ffe-system-message:** word-break content ([4ba3f1a](https://github.com/SpareBank1/designsystem/commit/4ba3f1a0ef85a6bd3c6a3e52d50ad6e8b56c8e6e))
+
 ## [8.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@8.0.1...@sb1/ffe-system-message@8.0.2) (2024-01-16)
 
 **Note:** Version bump only for package @sb1/ffe-system-message
