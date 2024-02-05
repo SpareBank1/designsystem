@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [27.3.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@27.2.1...@sb1/ffe-core@27.3.0) (2024-02-05)
+
+### Bug Fixes
+
+-   **ffe-core:** word-break content ([8383122](https://github.com/SpareBank1/designsystem/commit/8383122dd00a656d78dc8df7fcf7fabd013dc707))
+
+### Features
+
+-   **ffe-core:** bruk text-wrap pretty på paragrapher ([1a76de7](https://github.com/SpareBank1/designsystem/commit/1a76de7abf24c7a83d227c255e1e73ddd8c1bacc))
+
 ## [27.2.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@27.2.0...@sb1/ffe-core@27.2.1) (2024-02-05)
 
 ### Bug Fixes
