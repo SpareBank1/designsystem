@@ -48,13 +48,15 @@
 
 .ffe-inline-button--back {
     color: var(--ffe-v-button-primary-color);
-    line-height: 24px;
+    line-height: 1.5rem;
     padding: @ffe-spacing-xs @ffe-spacing-md @ffe-spacing-xs @ffe-spacing-2xl;
     outline: none;
 
     .ffe-inline-button__label {
         transition: all @ffe-transition-duration @ffe-ease;
         border-bottom: 1px solid transparent;
+        word-break: break-word;
+        text-align: left;
     }
 
     &:hover {
