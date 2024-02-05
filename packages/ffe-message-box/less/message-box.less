@@ -2,6 +2,13 @@
     text-align: center;
     font-family: var(--ffe-g-font);
 
+    .ffe-body-paragraph,
+    .ffe-link-text,
+    &__title {
+        word-break: break-word;
+        hyphens: auto;
+    }
+
     .ffe-body-paragraph {
         .native & {
             @media (prefers-color-scheme: dark) {
