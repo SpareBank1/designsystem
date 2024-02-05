@@ -197,6 +197,8 @@
     margin-bottom: @ffe-spacing-xs;
     margin-top: 0;
     text-wrap: balance;
+    word-break: break-word;
+    hyphens: auto;
 
     &--error {
         color: var(--ffe-g-error-color);
@@ -461,4 +463,18 @@
             margin: 0;
         }
     }
+}
+
+.ffe-body-text,
+.ffe-body-paragraph,
+.ffe-lead-paragraph,
+.ffe-sub-lead-paragraph,
+.ffe-link-text,
+.ffe-strong-text,
+.ffe-em-text,
+.ffe-pre-text,
+.ffe-small-text,
+ffe-micro-text {
+    word-break: break-word;
+    hyphens: auto;
 }
