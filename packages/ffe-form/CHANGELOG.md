@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [26.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@26.0.3...@sb1/ffe-form@26.0.4) (2024-02-07)
+
+### Bug Fixes
+
+-   **ffe-form:** add word-break in label ([ec40eef](https://github.com/SpareBank1/designsystem/commit/ec40eef7b09dfcc2eaf30a4e47221c2b15f944a7)), closes [#1758](https://github.com/SpareBank1/designsystem/issues/1758)
+-   **ffe-form:** add word-break in radio-button ([df86dab](https://github.com/SpareBank1/designsystem/commit/df86dab6ac00f4cdcb5d83e6981841a614af7dca)), closes [#1762](https://github.com/SpareBank1/designsystem/issues/1762)
+
 ## [26.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@26.0.2...@sb1/ffe-form@26.0.3) (2024-02-05)
 
 **Note:** Version bump only for package @sb1/ffe-form
