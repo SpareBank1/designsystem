@@ -39,6 +39,7 @@ import { IconCard } from '@sb1/ffe-cards-react';
                 icon={<Symbol ariaLabel="hus" icon="house" />}
                 id={loan.house}
                 style={activeTabId === loan.house ? spacing : displayNone}
+                role="tabpanel"
             >
                 {({ Title, Subtext }) => (
                     <>
@@ -52,6 +53,7 @@ import { IconCard } from '@sb1/ffe-cards-react';
                 icon={<Symbol ariaLabel="bil" icon="directions_car" />}
                 id={loan.car}
                 style={activeTabId === loan.car ? spacing : displayNone}
+                role="tabpanel"
             >
                 {({ Title, Subtext }) => (
                     <>
