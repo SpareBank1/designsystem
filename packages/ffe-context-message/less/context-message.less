@@ -150,7 +150,6 @@
     &__close-button {
         flex: 0 0 auto;
         cursor: pointer;
-        color: var(--ffe-v-context-message-close-button-color);
         border: 2px solid transparent;
         box-sizing: border-box;
         padding-top: @ffe-spacing-xs;
@@ -160,14 +159,16 @@
         height: 3rem;
         width: 3rem;
 
-        &:hover {
-            color: var(--ffe-v-context-message-close-button-color-hover);
-        }
-
         &:focus {
             border: 2px solid
                 var(--ffe-v-context-message-close-button-border-color-focus);
             border-radius: 5px;
+        }
+        .ffe-icons {
+            color: var(--ffe-v-context-message-close-button-color);
+            &:hover {
+                color: var(--ffe-v-context-message-close-button-color-hover);
+            }
         }
     }
 
@@ -387,5 +388,19 @@
         .ffe-context-message-content__icon-span {
             color: var(--ffe-farge-hvit);
         }
+    }
+}
+
+.ffe-icons.ffe-context-message-content__icon-span--small {
+    display: block;
+    @media (min-width: @breakpoint-sm) {
+        display: none;
+    }
+}
+
+.ffe-icons.ffe-context-message-content__icon-span--large {
+    display: none;
+    @media (min-width: @breakpoint-sm) {
+        display: block;
     }
 }
