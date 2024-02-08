@@ -10,12 +10,11 @@ import {
     elementType,
 } from 'prop-types';
 import Button from './BaseButton';
-import Symbol from '@sb1/ffe-symbols-react';
 
 const TaskButton = ({ icon, ...rest }) => (
     <Button
         buttonType="task"
-        leftIcon={<Symbol icon={icon} size="md" />}
+        leftIcon={<div aria-hidden="true">{icon}</div>}
         {...rest}
     />
 );
@@ -29,8 +28,8 @@ TaskButton.propTypes = {
     disabled: bool,
     /** The rendered element, like an `<a />` or `<Link />` */
     element: oneOfType([func, string, elementType]),
-    /** Name of Task icon, shown to the left of the label */
-    icon: string.isRequired,
+    /** icon element shown to the left of the label */
+    icon: node,
     /** Ref-setting function, or ref created by useRef, passed to the button element */
     innerRef: oneOfType([func, shape({ current: object })]),
 };
