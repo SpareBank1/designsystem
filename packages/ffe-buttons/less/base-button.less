@@ -71,6 +71,10 @@
     background-color: var(--ffe-v-button-action-color);
     color: var(--ffe-v-button-text-color);
 
+    .ffe-button__icon {
+        color: var(--ffe-v-button-text-color);
+    }
+
     .native & {
         @media (prefers-color-scheme: dark) {
             border: 2px solid transparent;
@@ -89,6 +93,10 @@
     background-color: var(--ffe-v-button-primary-color);
     color: var(--ffe-v-button-text-color);
 
+    .ffe-button__icon {
+        color: var(--ffe-v-button-text-color);
+    }
+
     &:focus {
         background-color: var(--ffe-v-button-primary-color);
     }
@@ -105,6 +113,10 @@
     border: solid 2px var(--ffe-v-button-secondary-border-color);
     color: var(--ffe-v-button-secondary-color);
 
+    .ffe-button__icon {
+        color: var(--ffe-v-button-secondary-color);
+    }
+
     &:active,
     &:focus,
     &:visited {
@@ -120,6 +132,10 @@
         background-color: var(--ffe-v-button-secondary-color);
         border-color: var(--ffe-v-button-secondary-color);
         color: var(--ffe-v-button-secondary-color-bg);
+
+        .ffe-button__icon {
+            color: var(--ffe-v-button-secondary-color-bg);
+        }
         .native & {
             @media (prefers-color-scheme: dark) {
                 background-color: var(--ffe-v-button-secondary-border-color);
@@ -152,9 +168,17 @@
     transition: all @ffe-transition-duration @ffe-ease;
     width: auto;
 
+    .ffe-button__icon > .ffe-icons {
+        color: var(--ffe-v-button-task-primary-color);
+    }
+
     &:hover {
         color: var(--ffe-v-button-task-text-color-hover);
         box-shadow: none;
+
+        .ffe-button__icon > .ffe-icons {
+            color: var(--ffe-v-button-primary-color-text);
+        }
     }
 
     &:focus {
@@ -216,13 +240,13 @@
     }
 
     .ffe-button--expand & {
-        fill: var(--ffe-v-button-task-primary-color);
+        color: var(--ffe-v-button-task-primary-color);
     }
     .ffe-button--expand:hover & {
-        fill: @ffe-farge-hvit;
+        color: @ffe-farge-hvit;
         .native & {
             @media (prefers-color-scheme: dark) {
-                fill: @ffe-farge-svart;
+                color: @ffe-farge-svart;
             }
         }
     }
