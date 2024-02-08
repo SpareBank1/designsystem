@@ -28,12 +28,22 @@
         justify-content: center;
         align-items: center;
 
-        &-icon {
+        .ffe-base-selector &-icon {
             color: var(--ffe-g-primary-color);
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    color: var(--ffe-g-primary-color);
+                }
+            }
         }
 
-        &-icon--invalid {
+        .ffe-base-selector &-icon--invalid {
             color: var(--ffe-g-error-color);
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    color: var(--ffe-g-error-color);
+                }
+            }
         }
     }
 
@@ -51,8 +61,13 @@
         justify-content: center;
         align-items: center;
 
-        &-icon {
+        .ffe-base-selector &-icon {
             color: var(--ffe-g-primary-color);
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    color: var(--ffe-g-primary-color);
+                }
+            }
         }
     }
 
