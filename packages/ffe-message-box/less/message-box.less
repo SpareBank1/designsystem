@@ -142,19 +142,31 @@
         border: 2px solid var(--ffe-v-message-box-info-icon-color);
     }
 
-    &--tips &__icon {
-        border-color: var(--ffe-v-message-box-tips-icon-color);
-        color: var(--ffe-v-message-box-tips-icon-color);
+    &--tips {
+        .ffe-message-box__icon {
+            border-color: var(--ffe-v-message-box-tips-icon-color);
+        }
+        .ffe-icons {
+            color: var(--ffe-v-message-box-tips-icon-color);
+        }
     }
 
-    &--error &__icon {
-        border-color: var(--ffe-v-message-box-error-icon-color);
-        color: var(--ffe-v-message-box-error-icon-color);
+    &--error {
+        .ffe-message-box__icon {
+            border-color: var(--ffe-v-message-box-error-icon-color);
+        }
+        .ffe-icons {
+            color: var(--ffe-v-message-box-error-icon-color);
+        }
     }
 
-    &--success &__icon {
-        border-color: var(--ffe-v-message-box-success-icon-color);
-        color: var(--ffe-v-message-box-success-icon-color);
+    &--success {
+        .ffe-message-box__icon {
+            border-color: var(--ffe-v-message-box-success-icon-color);
+        }
+        .ffe-icons {
+            color: var(--ffe-v-message-box-success-icon-color);
+        }
     }
 
     @media print {
