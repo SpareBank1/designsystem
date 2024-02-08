@@ -1,4 +1,4 @@
-import Symbol from '@sb1/ffe-symbols-react';
+import { Icon } from '@sb1/ffe-icons-react';
 import classNames from 'classnames';
 import equal from 'deep-equal';
 import PropTypes from 'prop-types';
@@ -91,7 +91,7 @@ class SortableTable extends Component {
                 onClick={this.tableHeaderClicked.bind(this, column.key)}
             >
                 {column.header}
-                <Symbol
+                <Icon
                     className={classNames(
                         'icon',
                         'ffe-sortable-table__sort-arrow',
@@ -101,7 +101,7 @@ class SortableTable extends Component {
                                 this.state.descending,
                         },
                     )}
-                    icon="arrow_drop_down"
+                    fileUrl="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxwYXRoIGQ9Ik00NjAuODA4LTM5My4wNCAzMzQuNzYzLTUxOS4wODRxLTIuNjA4LTIuNjA4LTQuMTA4LTUuODI0LTEuNS0zLjIxNy0xLjUtNi44OTMgMC03LjM1MiA0Ljk3Mi0xMi43NzUgNC45NzEtNS40MjMgMTMuMTA1LTUuNDIzaDI2NS41MzZxOC4xMzQgMCAxMy4xMDUgNS40NzUgNC45NzIgNS40NzYgNC45NzIgMTIuNzc2IDAgMS44MjYtNS42MTYgMTIuNjcyTDQ5OS4xOTItMzkzLjAzOXEtNC4zNDYgNC4zNDYtOC45ODUgNi4zNDYtNC42NCAyLTEwLjIwNyAyLTUuNTY3IDAtMTAuMjA3LTItNC42MzktMi04Ljk4NS02LjM0N1oiLz48L3N2Zz4="
                     size="md"
                 />
             </span>
