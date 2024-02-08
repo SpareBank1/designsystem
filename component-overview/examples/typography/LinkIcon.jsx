@@ -1,6 +1,14 @@
-import { LinkIcon } from '@sb1/ffe-core-react';
-import Symbol from '@sb1/ffe-symbols-react';
+import {LinkIcon} from '@sb1/ffe-core-react';
+import {Icon } from '@sb1/ffe-icons-react';
 
-<LinkIcon href="https://www.sparebank1.no">
-    <Symbol ariaLabel="chat" icon="chat" />
-</LinkIcon>
+() => {
+    const chatIcon = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxwYXRoIGQ9Im0yNDEuNTM5LTI2MC4wMDEtODAuMDc2IDgwLjA3NnEtMTcuMDc3IDE3LjA3Ni0zOS4yNjkgNy43My0yMi4xOTMtOS4zNDYtMjIuMTkzLTMzLjY1M3YtNTgxLjg0M3EwLTMwLjMwOCAyMS01MS4zMDh0NTEuMzA4LTIxaDYxNS4zODJxMzAuMzA4IDAgNTEuMzA4IDIxdDIxIDUxLjMwOHY0NTUuMzgycTAgMzAuMzA4LTIxIDUxLjMwOHQtNTEuMzA4IDIxSDI0MS41MzlaTTIxNi4wMDEtMzIwaDU3MS42OXE0LjYxNiAwIDguNDYzLTMuODQ2IDMuODQ2LTMuODQ3IDMuODQ2LTguNDYzdi00NTUuMzgycTAtNC42MTYtMy44NDYtOC40NjMtMy44NDctMy44NDYtOC40NjMtMy44NDZIMTcyLjMwOXEtNC42MTYgMC04LjQ2MyAzLjg0Ni0zLjg0NiAzLjg0Ny0zLjg0NiA4LjQ2M3Y1MjMuMDc2TDIxNi4wMDEtMzIwWk0xNjAtMzIwdi00ODBWLTMyMFptMTIwLTkwLjAwMWgyNDBxMTIuNzY5IDAgMjEuMzg0LTguNjE1VDU0OS45OTktNDQwcTAtMTIuNzY5LTguNjE1LTIxLjM4NFQ1MjAtNDY5Ljk5OUgyODBxLTEyLjc2OSAwLTIxLjM4NCA4LjYxNVQyNTAuMDAxLTQ0MHEwIDEyLjc2OSA4LjYxNSAyMS4zODRUMjgwLTQxMC4wMDFabTAtMTIwaDQwMHExMi43NjkgMCAyMS4zODQtOC42MTVUNzA5Ljk5OS01NjBxMC0xMi43NjktOC42MTUtMjEuMzg0VDY4MC01ODkuOTk5SDI4MHEtMTIuNzY5IDAtMjEuMzg0IDguNjE1VDI1MC4wMDEtNTYwcTAgMTIuNzY5IDguNjE1IDIxLjM4NFQyODAtNTMwLjAwMVptMC0xMjBoNDAwcTEyLjc2OSAwIDIxLjM4NC04LjYxNVQ3MDkuOTk5LTY4MHEwLTEyLjc2OS04LjYxNS0yMS4zODRUNjgwLTcwOS45OTlIMjgwcS0xMi43NjkgMC0yMS4zODQgOC42MTVUMjUwLjAwMS02ODBxMCAxMi43NjkgOC42MTUgMjEuMzg0VDI4MC02NTAuMDAxWiIvPjwvc3ZnPg=="
+
+    return (<>
+        <LinkIcon href="https://www.sparebank1.no">
+            <Icon ariaLabel="chat" fileUrl={chatIcon} size="md"/>
+        </LinkIcon>
+    </>)
+}
+
+
