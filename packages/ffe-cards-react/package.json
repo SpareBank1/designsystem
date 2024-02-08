@@ -30,7 +30,7 @@
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.5.0",
-        "@sb1/ffe-symbols-react": "^3.0.2",
+        "@sb1/ffe-icons-react": "^9.0.0",
         "react": "^16.9.0",
         "react-dom": "^16.9.0"
     },
