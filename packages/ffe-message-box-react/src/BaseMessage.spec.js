@@ -1,9 +1,9 @@
 import React from 'react';
 import BaseMessage from './BaseMessage';
-import Symbol from '@sb1/ffe-symbols-react';
+import { Icon } from '@sb1/ffe-icons-react';
 const defaultProps = {
     type: 'info',
-    icon: <Symbol icon="priority_high" />,
+    icon: <Icon fileUrl="priority_high" />,
 };
 const getWrapper = props =>
     shallow(<BaseMessage {...defaultProps} {...props} />);
