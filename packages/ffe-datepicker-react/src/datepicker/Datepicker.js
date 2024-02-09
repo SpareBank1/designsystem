@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { bool, func, oneOfType, shape, string } from 'prop-types';
+import { bool, func, oneOfType, shape, string, PropTypes } from 'prop-types';
 import classNames from 'classnames';
 import { v4 as uuid } from 'uuid';
 import Calendar from '../calendar';
@@ -292,6 +292,7 @@ export default class Datepicker extends Component {
             onChange,
             value,
             fullWidth,
+            innerRef,
         } = this.props;
         const { minDate, maxDate } = this.state;
 
@@ -349,6 +350,10 @@ export default class Datepicker extends Component {
                             onChange={evt => onChange(evt.target.value)}
                             onKeyDown={this.onInputKeydown}
                             ref={c => {
+                                if (innerRef) {
+                                    innerRef.current = c;
+                                }
+
                                 this.dateInputRef = c;
                             }}
                             value={value}
@@ -399,6 +404,7 @@ Datepicker.defaultProps = {
     keepDisplayStateOnError: false,
     onValidationComplete: () => {},
     fullWidth: false,
+    innerRef: undefined,
 };
 
 Datepicker.propTypes = {
@@ -407,6 +413,9 @@ Datepicker.propTypes = {
     calendarAbove: bool,
     hideErrors: bool,
     onValidationComplete: func,
+    innerRef:
+        PropTypes.oneOfType([func, shape({ current: PropTypes.any })]) ||
+        undefined,
     inputProps: shape({
         className: string,
         id: string,
