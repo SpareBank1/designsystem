@@ -10,7 +10,7 @@ import {
     object,
 } from 'prop-types';
 import classNames from 'classnames';
-import Symbol from '@sb1/ffe-symbols-react';
+import { Icon } from '@sb1/ffe-icons-react';
 import acceptedLocales from './locale/accepted-locales';
 import texts from './locale/texts';
 import { v4 as uuid } from 'uuid';
@@ -43,7 +43,8 @@ const ContextMessage = ({
     const container = useRef(null);
     const _headerElementId = useRef(headerElementId || uuid());
     const _contentElementId = useRef(contentElementId || uuid());
-
+    const closeIcon =
+        'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjAiPjxwYXRoIGQ9Ik00ODAtNDQyLjg0NyAzMDkuMDc2LTI3MS45MjRxLTguMzA3IDguMzA4LTE3Ljg4NCA4LTkuNTc2LS4zMDctMTguMjY4LTktOC42OTMtOC42OTItOC42OTMtMTguNTc2dDguNjkzLTE4LjU3Nkw0NDIuODQ3LTQ4MCAyNzEuOTI0LTY1MC45MjRxLTguMzA4LTguMzA3LTgtMTguMzg0LjMwNy0xMC4wNzYgOS0xOC43NjggOC42OTItOC42OTMgMTguNTc2LTguNjkzdDE4LjU3NiA4LjY5M0w0ODAtNTE3LjE1M2wxNzAuOTI0LTE3MC45MjNxOC4zMDctOC4zMDggMTguMzg0LTguNSAxMC4wNzYtLjE5MyAxOC43NjggOC41IDguNjkzIDguNjkyIDguNjkzIDE4LjU3NnQtOC42OTMgMTguNTc2TDUxNy4xNTMtNDgwbDE3MC45MjMgMTcwLjkyNHE4LjMwOCA4LjMwNyA4LjUgMTcuODg0LjE5MyA5LjU3Ni04LjUgMTguMjY4LTguNjkyIDguNjkzLTE4LjU3NiA4LjY5M3QtMTguNTc2LTguNjkzTDQ4MC00NDIuODQ3WiIvPjwvc3ZnPg==';
     const handleClose = event => {
         container.current.style.height = `${container.current.offsetHeight}px`;
         setTimeout(() => {
@@ -118,7 +119,7 @@ const ContextMessage = ({
                     onClick={handleClose}
                     type="button"
                 >
-                    <Symbol icon="close" weight={300} size="sm" />
+                    <Icon fileUrl={closeIcon} weight={300} size="sm" />
                 </button>
             )}
         </div>

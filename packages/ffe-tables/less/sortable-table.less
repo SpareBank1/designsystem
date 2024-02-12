@@ -18,8 +18,8 @@
                 }
             }
 
-            .ffe-sortable-table__sort-arrow {
-                fill: var(--ffe-v-table-sortable-arrow-fill);
+            .ffe-sortable-table__sort-arrow.ffe-icons {
+                color: var(--ffe-v-table-sortable-header-hover);
             }
         }
 
@@ -46,6 +46,9 @@
         color: var(--ffe-v-table-sortable-arrow-fill);
         transition: transform @ffe-transition-duration @ffe-ease-in-out-back;
 
+        &.ffe-icons {
+            color: var(--ffe-v-table-sortable-arrow-fill);
+        }
         &--descending {
             transform: rotate(180deg);
         }

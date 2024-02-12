@@ -3,7 +3,7 @@ import { object, bool, func, string as stringType } from 'prop-types';
 import FileItem from './FileItem';
 import classNames from 'classnames';
 import { SecondaryButton } from '@sb1/ffe-buttons-react';
-import Symbol from '@sb1/ffe-symbols-react';
+import { Icon } from '@sb1/ffe-icons-react';
 
 class FileUpload extends React.Component {
     constructor(props) {
@@ -63,6 +63,9 @@ class FileUpload extends React.Component {
             accept,
         } = this.props;
 
+        const downloadIcon =
+            'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjAiPjxwYXRoIGQ9Ik00NzkuOC0zNTcuNTM5cS02LjQzMSAwLTExLjk2MS0yLjMwOC01LjUzMS0yLjMwNy0xMC4xNDYtNi45MjNMMzM1LjMwOS00ODkuMTUzcS03LjkyMy03LjgzMi03LjgwNy0xOC4zMzguMTE1LTEwLjUwNyA4LjMyOS0xOC44MTUgOC43ODYtOC4zMDcgMTguODYyLTguMTE1IDEwLjA3Ny4xOTIgMTguMzg1IDguNWw4MC45MjMgODEuOTIzdi0zMjYuMDAxcTAtMTEuMDY5IDcuNDA0LTE4LjUzNCA3LjQwNS03LjQ2NiAxOC4zODQtNy40NjYgMTAuOTggMCAxOC41OTUgNy40NjYgNy42MTUgNy40NjUgNy42MTUgMTguNTM0djMyNi4wMDFsODEuOTIzLTgxLjkyM3E3LjU5LTcuOTIzIDE4LjAyNi03LjgwOCAxMC40MzUuMTE2IDE5LjIyMSA4LjQyMyA4LjIxNCA4LjMwOCA4LjAyMSAxOC41NzctLjE5MiAxMC4yNjktOC40OTkgMTguNTc2TDUwMi4zMDctMzY2Ljc3cS01LjAxNSA0LjYxNi0xMC41NDYgNi45MjMtNS41MyAyLjMwOC0xMS45NjEgMi4zMDhaTTI3Ni4wMjUtMjEyLjAwMXEtMjcuMDI0IDAtNDUuNTI0LTE4LjY1dC0xOC41LTQ1LjY1OHYtMzQuNDYxcTAtMTEuMDY5IDcuNDA1LTE4LjUzNCA3LjQwNS03LjQ2NSAxOC4zODQtNy40NjUgMTAuOTggMCAxOC41OTUgNy40NjVRMjY0LTMyMS44MzkgMjY0LTMxMC43N3YzNC40NjFxMCA0LjYxNiAzLjg0NiA4LjQ2MyAzLjg0NyAzLjg0NiA4LjQ2MyAzLjg0Nmg0MDcuMzgycTQuNjE2IDAgOC40NjMtMy44NDYgMy44NDYtMy44NDcgMy44NDYtOC40NjN2LTM0LjQ2MXEwLTExLjA2OSA3LjQwNS0xOC41MzQgNy40MDQtNy40NjUgMTguMzg0LTcuNDY1IDEwLjk3OSAwIDE4LjU5NCA3LjQ2NSA3LjYxNiA3LjQ2NSA3LjYxNiAxOC41MzR2MzQuNDYxcTAgMjcuMDA4LTE4LjY2MiA0NS42NTgtMTguNjYyIDE4LjY1LTQ1LjY4NiAxOC42NUgyNzYuMDI1WiIvPjwvc3ZnPg==';
+
         return (
             <div className="ffe-file-upload">
                 <div className="ffe-file-upload__title">{title}</div>
@@ -114,7 +117,7 @@ class FileUpload extends React.Component {
                             {uploadMicroText}
                         </div>
                         <SecondaryButton
-                            leftIcon={<Symbol icon="download" size="sm" />}
+                            leftIcon={<Icon fileUrl={downloadIcon} size="sm" />}
                             onClick={this.triggerUploadFileNativeHandler}
                             id={`${id}-button`}
                         >

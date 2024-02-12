@@ -9,15 +9,14 @@ import {
     elementType,
 } from 'prop-types';
 import InlineButton from './InlineBaseButton';
-import Symbol from '@sb1/ffe-symbols-react';
 
 const TertiaryButton = props => {
     const { leftIcon, rightIcon, ...rest } = props;
     return (
         <InlineButton
             buttonType="tertiary"
-            leftIcon={leftIcon && <Symbol icon={leftIcon} size="md" />}
-            rightIcon={rightIcon && <Symbol icon={rightIcon} size="md" />}
+            leftIcon={leftIcon}
+            rightIcon={rightIcon}
             {...rest}
         />
     );
@@ -32,10 +31,10 @@ TertiaryButton.propTypes = {
     element: oneOfType([func, string, elementType]),
     /** Ref-setting function, or ref created by useRef, passed to the button element */
     innerRef: oneOfType([func, shape({ current: object })]),
-    /** Name of icon shown to the left of the label */
-    leftIcon: string,
-    /** Name of icon shown to the right of the label */
-    rightIcon: string,
+    /** Icon shown to the left of the label */
+    leftIcon: node,
+    /** Icon shown to the right of the label */
+    rightIcon: node,
 };
 
 export default TertiaryButton;

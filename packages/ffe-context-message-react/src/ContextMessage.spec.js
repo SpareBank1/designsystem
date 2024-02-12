@@ -1,5 +1,5 @@
 import React from 'react';
-import Symbol from '@sb1/ffe-symbols-react';
+import { Icon } from '@sb1/ffe-icons-react';
 
 import {
     ContextErrorMessage,
@@ -14,7 +14,7 @@ const defaultProps = {
     children: <p>content</p>,
     messageType: 'tips',
     role: 'group',
-    icon: <Symbol ariaLabel="info" icon="info_i" />,
+    icon: <Icon fileUrl="info" />,
 };
 
 const getShallowWrapper = props =>
@@ -91,24 +91,22 @@ describe('<ContextMessage />', () => {
 
     it('renders with context icon', () => {
         const wrapper = getMountedWrapper({});
-        const el = wrapper.find(Symbol);
-        expect(el).toHaveLength(1);
-        expect(el.hasClass('ffe-context-message-content__icon-span')).toBe(
-            true,
-        );
+        expect(
+            wrapper.find('ffe-context-message-content__icon-span--small'),
+        ).toBeTruthy();
+        expect(
+            wrapper.find('ffe-context-message-content__icon-span--large'),
+        ).toBeTruthy();
     });
 
     it('lets consumer add extra classes to icon', () => {
         const wrapper = getMountedWrapper({
             icon: (
-                <Symbol
-                    icon="info_i"
-                    className="extra-extra-read-all-about-it"
-                />
+                <Icon icon="info_i" className="extra-extra-read-all-about-it" />
             ),
         });
 
-        const el = wrapper.find(Symbol);
+        const el = wrapper.find(Icon);
 
         expect(el.hasClass('ffe-context-message-content__icon-span')).toBe(
             true,
@@ -128,7 +126,7 @@ describe('<ContextMessage />', () => {
 
     it('renders without close button by default', () => {
         const wrapper = getMountedWrapper({
-            icon: <Symbol ariaLabel="info" icon="info_i" />,
+            icon: <Icon fileUrl="info" />,
         });
         expect(
             wrapper.find('.ffe-context-message-content__close-button').exists(),

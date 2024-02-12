@@ -1,11 +1,11 @@
 import React from 'react';
 
 import StippledCard from './StippledCard';
-import Symbol from '@sb1/ffe-symbols-react';
+import { Icon } from '@sb1/ffe-icons-react';
 import { Text } from '../components';
 
 const getWrapper = props =>
-    shallow(<StippledCard img={<Symbol icon="monitoring" />} {...props} />);
+    shallow(<StippledCard img={<Icon fileUrl="monitoring" />} {...props} />);
 const children = <div>Hello world</div>;
 
 describe('StippledCard', () => {

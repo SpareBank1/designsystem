@@ -10,15 +10,14 @@ import {
     elementType,
 } from 'prop-types';
 import Button from './BaseButton';
-import Symbol from '@sb1/ffe-symbols-react';
 
 const PrimaryButton = props => {
     const { leftIcon, rightIcon, ...rest } = props;
     return (
         <Button
             buttonType="primary"
-            leftIcon={leftIcon && <Symbol icon={leftIcon} size="md" />}
-            rightIcon={rightIcon && <Symbol icon={rightIcon} size="md" />}
+            leftIcon={leftIcon}
+            rightIcon={rightIcon}
             {...rest}
         />
     );
@@ -39,10 +38,10 @@ PrimaryButton.propTypes = {
     innerRef: oneOfType([func, shape({ current: object })]),
     /** Shows a loader if true */
     isLoading: bool,
-    /** Name of icon shown to the left of the label */
-    leftIcon: string,
-    /** Name of icon shown to the right of the label */
-    rightIcon: string,
+    /** Icon shown to the left of the label */
+    leftIcon: node,
+    /** Icon shown to the right of the label */
+    rightIcon: node,
 };
 
 export default PrimaryButton;
