@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-grid",
-    "version": "14.2.3",
+    "version": "14.2.4",
     "description": "A grid component for use within the FFE framework",
     "keywords": [
         "ffe"
@@ -19,10 +19,10 @@
         "test": "npm run lint"
     },
     "dependencies": {
-        "@sb1/ffe-core": "^27.3.0"
+        "@sb1/ffe-core": "^27.3.1"
     },
     "devDependencies": {
-        "@sb1/ffe-buildtool": "^0.5.0"
+        "@sb1/ffe-buildtool": "^0.5.1"
     },
     "publishConfig": {
         "access": "public"

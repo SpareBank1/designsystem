@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-core-react",
-    "version": "7.2.2",
+    "version": "7.2.3",
     "description": "React components for ffe-core components",
     "keywords": [
         "ffe"
@@ -28,12 +28,12 @@
         "test:watch": "ffe-buildtool jest --watch"
     },
     "dependencies": {
-        "@sb1/ffe-core": "^27.3.0",
+        "@sb1/ffe-core": "^27.3.1",
         "classnames": "^2.3.1",
         "prop-types": "^15.7.2"
     },
     "devDependencies": {
-        "@sb1/ffe-buildtool": "^0.5.0",
+        "@sb1/ffe-buildtool": "^0.5.1",
         "eslint": "^5.9.0",
         "react": "^16.9.0",
         "react-dom": "^16.9.0"

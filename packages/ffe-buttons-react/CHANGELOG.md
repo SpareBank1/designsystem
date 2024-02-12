@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [21.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@20.0.10...@sb1/ffe-buttons-react@21.0.0) (2024-02-12)
+
+### chore
+
+-   **ffe-buttons-react:** use ffe-icons-react instad og ffe-symbols-react ([ecbaec0](https://github.com/SpareBank1/designsystem/commit/ecbaec06bf936e9dbff626ec78e3520831481cba))
+
+### BREAKING CHANGES
+
+-   **ffe-buttons-react:** Endring krever nå at man sender med element og ikke string navn på ikon
+
 ## [20.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@20.0.9...@sb1/ffe-buttons-react@20.0.10) (2024-02-05)
 
 **Note:** Version bump only for package @sb1/ffe-buttons-react

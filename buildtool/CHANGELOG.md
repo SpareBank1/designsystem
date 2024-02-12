@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buildtool@0.5.0...@sb1/ffe-buildtool@0.5.1) (2024-02-12)
+
+### Bug Fixes
+
+-   **buildtool:** fix babel plugin error ([bce83d8](https://github.com/SpareBank1/designsystem/commit/bce83d8c6b0b578af9382ddbdc8b8e47e27a4fab))
+
 # [0.5.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buildtool@0.4.1...@sb1/ffe-buildtool@0.5.0) (2022-10-28)
 
 ### Features

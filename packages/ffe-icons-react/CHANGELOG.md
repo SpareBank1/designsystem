@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@9.0.0...@sb1/ffe-icons-react@9.0.1) (2024-02-12)
+
+### Reverts
+
+-   Revert "docs(ffe-icons-react): erstatter innholdet i readme med deprecation notice" ([eacf9ec](https://github.com/SpareBank1/designsystem/commit/eacf9ecd6680d4c3cdc83c9c399362a09e2c2636))
+
 # [9.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@8.0.0...@sb1/ffe-icons-react@9.0.0) (2024-01-23)
 
 ### Bug Fixes
