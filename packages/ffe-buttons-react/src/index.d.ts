@@ -54,13 +54,13 @@ export type ShortcutButtonProps = {
 export type TaskButtonProps = {
     children?: React.ReactNode;
     disabled?: boolean;
-    icon: HTMLElement | React.ElementType;
+    icon: React.ReactNode;
 } & MinimalBaseButtonProps;
 
 export type TertiaryButtonProps = {
     children?: React.ReactNode;
-    leftIcon?: HTMLElement | React.ElementType;
-    rightIcon?: HTMLElement | React.ElementType;
+    leftIcon?: React.ReactNode;
+    rightIcon?: React.ReactNode;
 } & MinimalBaseButtonProps;
 
 type NoInfer<T> = [T][T extends any ? 0 : never];
