@@ -9,4 +9,4 @@ export interface IconProps {
 
 declare class Icon extends React.Component<IconProps, any> {}
 
-export default Icon;
+export { Icon };
