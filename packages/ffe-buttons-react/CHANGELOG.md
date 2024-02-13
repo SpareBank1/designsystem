@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [21.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@21.0.0...@sb1/ffe-buttons-react@21.0.1) (2024-02-13)
+
+### Bug Fixes
+
+-   **ffe-buttons-react:** types on icons ([b3c2e59](https://github.com/SpareBank1/designsystem/commit/b3c2e59d15d4bcde0cc8674aa612e7b6e8439bf1))
+
 # [21.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@20.0.10...@sb1/ffe-buttons-react@21.0.0) (2024-02-12)
 
 ### chore
