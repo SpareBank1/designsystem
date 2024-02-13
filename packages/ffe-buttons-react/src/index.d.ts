@@ -11,8 +11,8 @@ export type BaseButtonProps = {
     ariaLoadingMessage?: string;
     disabled?: boolean;
     isLoading?: boolean;
-    leftIcon?: HTMLElement | React.ElementType;
-    rightIcon?: HTMLElement | React.ElementType;
+    leftIcon?: React.ReactNode;
+    rightIcon?: React.ReactNode;
 } & MinimalBaseButtonProps;
 
 type ActionButtonProps = BaseButtonProps;
