@@ -8,6 +8,7 @@
         "ffe-icons": "bin/build.js"
     },
     "files": [
+        "icons",
         "less"
     ],
     "repository": {
