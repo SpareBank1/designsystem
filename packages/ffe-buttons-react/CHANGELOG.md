@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [21.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@21.0.2...@sb1/ffe-buttons-react@21.0.3) (2024-02-14)
+
+### Bug Fixes
+
+-   **ffe-buttons-react:** possible to add extra classes to inline expand button ([8816e02](https://github.com/SpareBank1/designsystem/commit/8816e0222a7f96909ae87b85a3ef5002f66b2ee5))
+
 ## [21.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons-react@21.0.1...@sb1/ffe-buttons-react@21.0.2) (2024-02-13)
 
 ### Bug Fixes

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [26.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@26.0.5...@sb1/ffe-form@26.0.6) (2024-02-14)
+
+### Bug Fixes
+
+-   **ffe-form:** make dropdown arrow smaller ([613b881](https://github.com/SpareBank1/designsystem/commit/613b881605b015dbac231fcd6ff5a31f2b0ac74c))
+
 ## [26.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@26.0.4...@sb1/ffe-form@26.0.5) (2024-02-12)
 
 **Note:** Version bump only for package @sb1/ffe-form

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@8.0.5...@sb1/ffe-context-message@8.0.6) (2024-02-14)
+
+### Bug Fixes
+
+-   **ffe-context-message:** alltid bruk liten ikon på condensed versonen ([3dad047](https://github.com/SpareBank1/designsystem/commit/3dad047ff240224e5c38d63a3094f7f4a056e72f))
+
 ## [8.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@8.0.4...@sb1/ffe-context-message@8.0.5) (2024-02-12)
 
 **Note:** Version bump only for package @sb1/ffe-context-message
