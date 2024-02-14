@@ -20,7 +20,11 @@ describe('<InlineExpandButton />', () => {
         expect(wrapper.props()).toHaveProperty('aria-label', 'some label');
     });
     it('add ffe-inline-button--expanded class when expanded', () => {
-        const wrapper = getWrapper({ isExpanded: true });
+        const wrapper = getWrapper({
+            isExpanded: true,
+            className: 'extra-class',
+        });
         expect(wrapper.hasClass('ffe-inline-button--expanded')).toBe(true);
+        expect(wrapper.hasClass('extra-class')).toBe(true);
     });
 });
