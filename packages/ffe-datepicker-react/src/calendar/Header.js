@@ -1,6 +1,6 @@
 import React from 'react';
 import { func, number, object, string } from 'prop-types';
-import Symbol from '@sb1/ffe-symbols-react';
+import { Icon } from '@sb1/ffe-icons-react';
 
 export default function Header(props) {
     const {
@@ -15,6 +15,12 @@ export default function Header(props) {
         nextMonthButtonElement,
     } = props;
 
+    const arrowBackIosIcon =
+        'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxwYXRoIGQ9Im0xMjcuMzg0LTQ4MCAzMDEuMzA4IDMwMS4zMDhxMTEuOTIzIDExLjkyMyAxMS42MTUgMjguMDc3LS4zMDggMTYuMTUzLTEyLjIzMSAyOC4wNzYtMTEuOTIyIDExLjkyMy0yOC4wNzYgMTEuOTIzdC0yOC4wNzYtMTEuOTIzTDY1LjA3OC00MjguNzdRNTQuMjMtNDM5LjYxNiA0OS00NTMuMDc3IDQzLjc3LTQ2Ni41MzkgNDMuNzctNDgwcTAtMTMuNDYxIDUuMjMtMjYuOTIzIDUuMjMxLTEzLjQ2MSAxNi4wNzgtMjQuMzA3bDMwNi44NDYtMzA2Ljg0NnExMS45MjItMTEuOTIzIDI4LjM4NC0xMS42MTYgMTYuNDYxLjMwOCAyOC4zODQgMTIuMjMxIDExLjkyMyAxMS45MjMgMTEuOTIzIDI4LjA3NiAwIDE2LjE1NC0xMS45MjMgMjguMDc3TDEyNy4zODQtNDgwWiIvPjwvc3ZnPg==';
+
+    const arrowForwardIosIcon =
+        'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxwYXRoIGQ9Ik01OTMuMjMyLTQ4MCAyOTEuOTI0LTc4MS4zMDhxLTExLjkyMy0xMS45MjMtMTEuNjE2LTI4LjM4NC4zMDgtMTYuNDYyIDEyLjIzMS0yOC4zODQgMTEuOTIzLTExLjkyMyAyOC4zODQtMTEuOTIzdDI4LjM4NCAxMS45MjNMNjU1LjUzOC01MzEuMjNxMTAuODQ2IDEwLjg0NiAxNi4wNzcgMjQuMzA3IDUuMjMgMTMuNDYyIDUuMjMgMjYuOTIzIDAgMTMuNDYxLTUuMjMgMjYuOTIzLTUuMjMxIDEzLjQ2MS0xNi4wNzcgMjQuMzA3TDM0OC42OTItMTIxLjkyNHEtMTEuOTIzIDExLjkyMy0yOC4wNzcgMTEuNjE2LTE2LjE1My0uMzA4LTI4LjA3Ni0xMi4yMzEtMTEuOTIzLTExLjkyMy0xMS45MjMtMjguMzg0dDExLjkyMy0yOC4zODRMNTkzLjIzMi00ODBaIi8+PC9zdmc+';
+
     return (
         <div className="ffe-calendar__header">
             <div className="ffe-calendar__header-inner-wrapper">
@@ -26,8 +32,8 @@ export default function Header(props) {
                     ref={prevMonthButtonElement}
                     tabIndex={-1}
                 >
-                    <Symbol
-                        icon="arrow_back_ios"
+                    <Icon
+                        fileUrl={arrowBackIosIcon}
                         size="md"
                         className="ffe-calendar__icon-prev"
                     />
@@ -50,8 +56,8 @@ export default function Header(props) {
                     ref={nextMonthButtonElement}
                     tabIndex={-1}
                 >
-                    <Symbol
-                        icon="arrow_forward_ios"
+                    <Icon
+                        fileUrl={arrowForwardIosIcon}
                         size="md"
                         className="ffe-calendar__icon-next"
                     />
