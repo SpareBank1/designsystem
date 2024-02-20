@@ -6,15 +6,15 @@
         border: 2px solid var(--ffe-v-tooltip-border-color);
         color: var(--ffe-v-tooltip-icon-color);
         cursor: help;
-        height: 25px;
+        height: 1.2rem;
+        aspect-ratio: 1;
         margin: 0 0 @ffe-spacing-2xs @ffe-spacing-sm;
         padding: 0;
         transition: border-color @ffe-transition-duration @ffe-ease;
-        width: 25px;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
+        display: grid;
+        place-items: center;
         font-family: sans-serif;
+        line-height: 1;
         font-size: var(--ffe-fontsize-button);
 
         > span {
