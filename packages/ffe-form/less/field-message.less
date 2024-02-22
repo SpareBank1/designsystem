@@ -2,7 +2,9 @@
     font-family: var(--ffe-g-font);
     color: var(--ffe-v-input-color);
     margin: @ffe-spacing-2xs 0 @ffe-spacing-xs;
-    display: block;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-column-gap: @ffe-spacing-2xs;
     font-size: var(--ffe-fontsize-body-text);
 
     &[aria-hidden='true'] {
@@ -10,18 +12,14 @@
     }
 
     &__icon {
+        place-self: center;
         background-color: var(--ffe-v-info-message-icon-color);
         border-radius: 50%;
-        padding: 3px;
         width: 18px;
         height: 18px;
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        margin-right: @ffe-spacing-2xs;
-        vertical-align: text-top;
-        text-align: center;
-        font-family: arial, sans-serif;
     }
 
     .ffe-icons {
