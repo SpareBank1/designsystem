@@ -18,7 +18,8 @@
 
     &__content {
         width: 100%;
-        display: inline-block;
+        display: inline-grid;
+        grid-template-columns: auto 1fr;
         position: relative;
         border: 2px solid var(--ffe-radio-block-border-color);
         border-radius: var(--ffe-g-border-radius);
@@ -27,9 +28,11 @@
         background-color: var(--ffe-v-input-bg-color);
 
         &::before {
+            place-self: center;
+            grid-column: 1/2;
+            grid-row: 1/2;
             content: '';
             left: 20px;
-            top: 10px;
             z-index: 1;
             background-color: var(--ffe-v-input-bg-color);
             border: 2px solid var(--ffe-radio-block-border-color);
@@ -42,6 +45,8 @@
     }
 
     &__header {
+        grid-column: 2/3;
+        grid-row: 1/2;
         display: block;
         padding: @ffe-spacing-xs @ffe-spacing-3xl @ffe-spacing-xs;
         border-bottom: thin solid var(--ffe-radio-block-border-color);
@@ -50,6 +55,8 @@
     }
 
     &__wrapper {
+        grid-column: 2/3;
+        grid-row: 2/2;
         padding: @ffe-spacing-sm @ffe-spacing-sm @ffe-spacing-lg;
         cursor: auto;
 
