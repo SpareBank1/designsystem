@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [27.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@26.0.6...@sb1/ffe-form@27.0.0) (2024-02-22)
+
+### Bug Fixes
+
+-   **ffe-form:** center checkbox ([d4e057d](https://github.com/SpareBank1/designsystem/commit/d4e057dd4321f1c331840b416fd59f35ee39d413))
+-   **ffe-form:** center radio buttons ([92654ab](https://github.com/SpareBank1/designsystem/commit/92654ab500b7ffa5eed7c29345a24f54f33398f2))
+-   **ffe-form:** zoom fieldmessage ([dd3b3ee](https://github.com/SpareBank1/designsystem/commit/dd3b3ee3ccc509109680dd8e479ee791689edc6f))
+-   **ffe-form:** zoom radio block ([3ec06d1](https://github.com/SpareBank1/designsystem/commit/3ec06d1ce8acf289dd2645c7950b9d99331c91fb))
+-   **ffe-form:** zoom radio switch ([a8a0ac3](https://github.com/SpareBank1/designsystem/commit/a8a0ac3c534d1c32d231964d8635327c94d93a09))
+-   **ffe-form:** zoom tooltip ([6873e43](https://github.com/SpareBank1/designsystem/commit/6873e43cafdb54c53b03fb1456ee04f0a2dc7870))
+
+### BREAKING CHANGES
+
+-   **ffe-form:** Markup has changed
+
 ## [26.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@26.0.5...@sb1/ffe-form@26.0.6) (2024-02-14)
 
 ### Bug Fixes

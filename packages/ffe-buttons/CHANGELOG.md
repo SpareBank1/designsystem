@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [18.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@18.0.6...@sb1/ffe-buttons@18.0.7) (2024-02-22)
+
+### Bug Fixes
+
+-   **ffe-buttons:** align icons center inline buttons ([259694c](https://github.com/SpareBank1/designsystem/commit/259694c265a5939c00f8f436355ea5a5cf9e20cc))
+-   **ffe-buttons:** wrap buttons in buttongroup ([7a95ca9](https://github.com/SpareBank1/designsystem/commit/7a95ca92f55d55eb7f749799d9f8390b12924117))
+-   **ffe-buttons:** zoom spinner base button ([6a1c7af](https://github.com/SpareBank1/designsystem/commit/6a1c7afbe9dca4cd976383b0096b852b3dc2ff02))
+
 ## [18.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@18.0.5...@sb1/ffe-buttons@18.0.6) (2024-02-12)
 
 **Note:** Version bump only for package @sb1/ffe-buttons

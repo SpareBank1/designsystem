@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [15.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@14.0.16...@sb1/ffe-form-react@15.0.0) (2024-02-22)
+
+### Bug Fixes
+
+-   **ffe-form-react:** center checkbox ([90a12e4](https://github.com/SpareBank1/designsystem/commit/90a12e4c006638308fd222776d545755ae71cfe7))
+
+### BREAKING CHANGES
+
+-   **ffe-form-react:** Markup has changed
+
 ## [14.0.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@14.0.15...@sb1/ffe-form-react@14.0.16) (2024-02-14)
 
 **Note:** Version bump only for package @sb1/ffe-form-react
