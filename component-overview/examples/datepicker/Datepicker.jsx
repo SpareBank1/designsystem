@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import Datepicker from '@sb1/ffe-datepicker-react';
 
 () => {
     const [date, setDate] = useState('01.01.2016');
+    const innerRef = useRef(date); //Optional ref to the input element
 
     return (
         <Datepicker
@@ -13,6 +14,7 @@ import Datepicker from '@sb1/ffe-datepicker-react';
             minDate="01.01.2016"
             onChange={setDate}
             value={date}
+            innerRef={innerRef}
         />
     );
 }
