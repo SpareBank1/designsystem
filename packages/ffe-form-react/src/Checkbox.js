@@ -30,7 +30,11 @@ const Checkbox = React.forwardRef((props, ref) => {
                 children(labelProps)
             ) : (
                 // eslint-disable-next-line jsx-a11y/label-has-for
-                <label {...labelProps}>{!hiddenLabel && children}</label>
+                <label {...labelProps}>
+                    <span className="ffe-checkbox__content">
+                        {!hiddenLabel && children}
+                    </span>
+                </label>
             )}
         </Fragment>
     );
