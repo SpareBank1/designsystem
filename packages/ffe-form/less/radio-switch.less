@@ -1,10 +1,13 @@
 .ffe-radio-switch {
-    padding: 6px @ffe-spacing-sm 6px @ffe-spacing-2xl;
+    padding: 6px @ffe-spacing-sm;
+    grid-template-columns: auto 1fr;
+    grid-column-gap: @ffe-spacing-xs;
     position: relative;
     background-color: var(--ffe-v-input-bg-color);
     border: 2px solid var(--ffe-g-border-color);
     border-radius: 22px;
-    display: inline-block;
+    display: inline-grid;
+    place-items: center;
     min-width: 100px;
     text-align: left;
     color: var(--ffe-v-radio-button-label-color);
@@ -26,7 +29,6 @@
         width: 20px;
         height: 20px;
         border-radius: 50%;
-        position: absolute;
         pointer-events: none;
     }
 
