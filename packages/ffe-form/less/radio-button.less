@@ -2,7 +2,8 @@
     word-break: break-all;
     font-family: var(--ffe-g-font);
     font-variant-numeric: tabular-nums;
-    display: block;
+    display: flex;
+    align-items: center;
     position: relative;
     color: var(--ffe-g-text-color);
     cursor: pointer;
@@ -13,14 +14,13 @@
     padding-top: 1px;
     -webkit-tap-highlight-color: fade(@ffe-farge-vann, 15%);
 
-    &--inline {
-        display: inline-block;
+    &--inline,
+    &--with-tooltip {
+        display: inline-flex;
         margin-right: @ffe-spacing-md;
     }
 
     &--with-tooltip {
-        display: inline-block;
-        margin-right: @ffe-spacing-md;
         margin-bottom: 0;
     }
 
@@ -49,17 +49,20 @@
         margin-top: @ffe-spacing-2xs;
     }
 
-    &::before {
+    &::before,
+    &::after {
         content: '';
-        background-color: @ffe-farge-hvit;
-        border: 10px solid @ffe-farge-hvit;
         width: 20px;
         height: 20px;
         border-radius: 50%;
-        position: absolute;
         pointer-events: none;
+        position: absolute;
         left: 0;
-        top: 2px;
+    }
+
+    &::before {
+        background-color: @ffe-farge-hvit;
+        border: 10px solid @ffe-farge-hvit;
         transition: all @ffe-transition-duration @ffe-ease;
         .native & {
             @media (prefers-color-scheme: dark) {
@@ -70,15 +73,7 @@
     }
 
     &::after {
-        content: '';
         border: 2px solid var(--ffe-g-border-color);
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        position: absolute;
-        left: 0;
-        top: 2px;
-        pointer-events: none;
         transition: all @ffe-transition-duration @ffe-ease;
     }
 
