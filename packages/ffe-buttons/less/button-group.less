@@ -22,8 +22,7 @@
     .ffe-button,
     .ffe-inline-button {
         justify-content: center;
-        margin: 0 auto @ffe-spacing-xs;
-        align-self: center;
+        margin: 0 0 @ffe-spacing-xs;
     }
 
     &--thin {
@@ -31,11 +30,11 @@
     }
 
     &--inline {
+        align-items: center;
         .ffe-button,
         .ffe-inline-button {
             display: inline;
-            margin: 0 0 @ffe-spacing-xs @ffe-spacing-xs;
-            width: auto;
+            width: fit-content;
         }
     }
 
@@ -43,15 +42,12 @@
         display: inline-flex;
         flex-direction: row;
         width: auto;
+        flex-wrap: wrap;
+        gap: @ffe-spacing-xs @ffe-spacing-sm;
 
         .ffe-button,
         .ffe-inline-button {
-            margin: 0 0 @ffe-spacing-xs @ffe-spacing-sm;
             width: auto;
-
-            &:first-child {
-                margin: 0 0 @ffe-spacing-xs;
-            }
         }
     }
 }
