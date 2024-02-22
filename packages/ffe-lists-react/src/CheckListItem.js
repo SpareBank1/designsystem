@@ -29,7 +29,7 @@ const CheckListItem = props => {
                     ariaLabel="hake"
                 />
             )}
-            {rest.children}
+            <div className="ffe-check-list__item-content">{rest.children}</div>
         </li>
     );
 };
