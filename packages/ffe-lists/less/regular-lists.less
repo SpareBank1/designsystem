@@ -121,10 +121,15 @@
 }
 
 .ffe-check-list__item {
+    --line-height: 1.5em;
+
     margin-top: @ffe-spacing-sm;
     position: relative;
-    line-height: 1.5em;
-    padding-left: 2em;
+    line-height: var(--line-height);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: var(--line-height) 1fr;
+    grid-column-gap: 1.5em;
 
     .native & {
         @media (prefers-color-scheme: dark) {
@@ -135,10 +140,9 @@
 
 .ffe-check-list {
     &__icon {
-        margin-right: @ffe-spacing-sm;
-        position: absolute;
-        left: 0;
-
+        grid-column: 1/2;
+        grid-row: 1/2;
+        place-self: center;
         &--check.ffe-icons {
             color: var(--ffe-v-lists-check-list-check-icon-color);
         }
@@ -153,10 +157,10 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
+            gap: @ffe-spacing-xs;
 
             .ffe-check-list__item {
                 flex: 1 0 auto;
-                display: block;
                 width: 40%;
             }
         }
@@ -178,4 +182,9 @@
             &:extend(.ffe-strong-text);
         }
     }
+}
+
+.ffe-check-list__item-content {
+    grid-column: 2/3;
+    grid-row: 1/-1;
 }
