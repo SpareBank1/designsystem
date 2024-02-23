@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [14.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@13.0.5...@sb1/ffe-lists@14.0.0) (2024-02-23)
+
+### Bug Fixes
+
+-   **ffe-lists:** fix zoom ([1a04fde](https://github.com/SpareBank1/designsystem/commit/1a04fdec4ed2de9b7f38a30a20ffdcff304bd401))
+
+### BREAKING CHANGES
+
+-   **ffe-lists:** new markup
+
 ## [13.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@13.0.4...@sb1/ffe-lists@13.0.5) (2024-02-12)
 
 **Note:** Version bump only for package @sb1/ffe-lists

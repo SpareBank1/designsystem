@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [16.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@15.0.0...@sb1/ffe-form-react@16.0.0) (2024-02-23)
+
+### Bug Fixes
+
+-   **ffe-form-react:** align radio button in top when element breaks ([10572b3](https://github.com/SpareBank1/designsystem/commit/10572b3432cc8e282c807c59fe8653b2dcaa6ffc))
+
+### BREAKING CHANGES
+
+-   **ffe-form-react:** new markup
+
 # [15.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@14.0.16...@sb1/ffe-form-react@15.0.0) (2024-02-22)
 
 ### Bug Fixes

@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [28.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@27.0.0...@sb1/ffe-form@28.0.0) (2024-02-23)
+
+### Bug Fixes
+
+-   **ffe-form:** align radio/checboxes in top when element breaks ([54c052a](https://github.com/SpareBank1/designsystem/commit/54c052ac1e5ad8991877172272e2015711f2b42c))
+-   **ffe-form:** focus visible on focus styles radio block and radio switch ([2f10405](https://github.com/SpareBank1/designsystem/commit/2f104058aa0db6843bd62a65722ecc8a56bd9262))
+-   **ffe-form:** make toggle switch handle text zoom ([448916b](https://github.com/SpareBank1/designsystem/commit/448916bcd95417317a426909c829f13b7096692d))
+
+### BREAKING CHANGES
+
+-   **ffe-form:** new markup
+
 # [27.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@26.0.6...@sb1/ffe-form@27.0.0) (2024-02-22)
 
 ### Bug Fixes

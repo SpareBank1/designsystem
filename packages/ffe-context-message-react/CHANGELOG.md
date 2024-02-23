@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@9.0.12...@sb1/ffe-context-message-react@9.0.13) (2024-02-23)
+
+### Bug Fixes
+
+-   **ffe-context-message-react:** feil ikon i ContextInfoMessage-compact ([c87ae5f](https://github.com/SpareBank1/designsystem/commit/c87ae5f3f70651730c86cb37fec556af210ba2e3))
+
 ## [9.0.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@9.0.11...@sb1/ffe-context-message-react@9.0.12) (2024-02-14)
 
 **Note:** Version bump only for package @sb1/ffe-context-message-react

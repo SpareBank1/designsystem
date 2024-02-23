@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@7.0.11...@sb1/ffe-lists-react@8.0.0) (2024-02-23)
+
+### Bug Fixes
+
+-   **ffe-lists-react:** fix zooming issue ([76dd60f](https://github.com/SpareBank1/designsystem/commit/76dd60ffc78c844f35f9600c247cc674bdaa8cdb))
+
+### BREAKING CHANGES
+
+-   **ffe-lists-react:** new markup
+
 ## [7.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@7.0.10...@sb1/ffe-lists-react@7.0.11) (2024-02-13)
 
 **Note:** Version bump only for package @sb1/ffe-lists-react
