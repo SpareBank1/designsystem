@@ -3,7 +3,7 @@ import { node, string } from 'prop-types';
 import classNames from 'classnames';
 
 const StylizedNumberedListItem = props => {
-    const { className, ...rest } = props;
+    const { className, children, ...rest } = props;
     return (
         <li
             className={classNames(
@@ -11,7 +11,11 @@ const StylizedNumberedListItem = props => {
                 className,
             )}
             {...rest}
-        />
+        >
+            <div className="ffe-stylized-numbered-list__item-content">
+                {children}
+            </div>
+        </li>
     );
 };
 
