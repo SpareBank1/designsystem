@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [9.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@8.0.0...@sb1/ffe-lists-react@9.0.0) (2024-02-23)
+
+### Bug Fixes
+
+-   **ffe-lists-react:** fix zoom stylized numbered list ([aaca981](https://github.com/SpareBank1/designsystem/commit/aaca981a7812fc6415d3947bc7e792012a9f7283))
+
+### BREAKING CHANGES
+
+-   **ffe-lists-react:** New markup
+
 # [8.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@7.0.11...@sb1/ffe-lists-react@8.0.0) (2024-02-23)
 
 ### Bug Fixes
