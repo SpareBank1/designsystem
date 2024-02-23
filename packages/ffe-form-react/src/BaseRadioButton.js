@@ -55,7 +55,7 @@ class BaseRadioButton extends Component {
                     {...labelProps}
                     className={labelClasses}
                 >
-                    {children}
+                    <span className="ffe-radio-input__content">{children}</span>
                 </label>
                 {tooltip && <Tooltip {...tooltipProps}>{tooltip}</Tooltip>}
             </Fragment>

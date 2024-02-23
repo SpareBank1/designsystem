@@ -1,4 +1,7 @@
 .ffe-checkbox {
+    --line-height: 1.15rem;
+
+    line-height: var(--line-height);
     display: grid;
     grid-column-gap: @ffe-spacing-sm;
     align-items: center;
@@ -12,9 +15,11 @@
     -webkit-tap-highlight-color: fade(@ffe-farge-vann, 15%);
     color: var(--ffe-v-input-color);
     grid-template-columns: auto 1fr;
+    grid-template-rows: var(--line-height) 1fr;
 
     .ffe-checkbox__content {
         grid-column: 2/3;
+        grid-row: 1/-1;
     }
 
     &--no-margin {
@@ -32,7 +37,7 @@
         place-self: center;
         content: '';
         grid-column: 1/2;
-        grid-row: 1/-1;
+        grid-row: 1/2;
     }
 
     &::before {
