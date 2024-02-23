@@ -37,6 +37,8 @@
     &__switch {
         position: relative;
         margin: 0 @ffe-spacing-sm;
+        display: flex;
+        align-items: center;
 
         .ffe-toggle-switch--hide-on-off & {
             margin: 0;
@@ -49,7 +51,6 @@
             height: 30px;
             background: var(--ffe-g-border-color);
             border-radius: 15px;
-            z-index: 1;
             left: auto;
             right: 0;
             transition: background 0.4s @ffe-ease,
@@ -62,12 +63,9 @@
             width: 24px;
             height: 24px;
             background: @ffe-farge-hvit;
-            border-radius: 13px;
+            border-radius: 50%;
             position: absolute;
-            z-index: 2;
-            left: auto;
-            right: 29px;
-            top: 3px;
+            left: 2px;
             transition: transform @ffe-transition-duration @ffe-ease-in-out-back;
 
             .native & {
@@ -89,7 +87,7 @@
     }
 
     &__input:checked + &__label &__switch::after {
-        transform: translateX(26px);
+        transform: translateX(27px);
     }
 
     &__input:checked + &__label &__switch::before {
