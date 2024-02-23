@@ -9,6 +9,8 @@
     margin-top: @ffe-spacing-md;
     width: 100%;
     transition: width @ffe-transition-duration @ffe-ease-in-out-back;
+    overflow-wrap: anywhere;
+    hyphens: auto;
 
     &__content,
     &__header {
@@ -56,7 +58,7 @@
 
     &__wrapper {
         grid-column: 2/3;
-        grid-row: 2/2;
+        grid-row: 2/3;
         padding: @ffe-spacing-sm @ffe-spacing-sm @ffe-spacing-lg;
         cursor: auto;
 

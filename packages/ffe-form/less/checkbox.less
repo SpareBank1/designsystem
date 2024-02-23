@@ -16,11 +16,8 @@
     color: var(--ffe-v-input-color);
     grid-template-columns: auto 1fr;
     grid-template-rows: var(--line-height) 1fr;
-
-    .ffe-checkbox__content {
-        grid-column: 2/3;
-        grid-row: 1/-1;
-    }
+    overflow-wrap: anywhere;
+    hyphens: auto;
 
     &--no-margin {
         margin-top: 0;
@@ -66,6 +63,11 @@
         width: 6px;
         transition: height @ffe-transition-duration @ffe-ease;
     }
+}
+
+.ffe-checkbox__content {
+    grid-column: 2/3;
+    grid-row: 1/-1;
 }
 
 .ffe-hidden-checkbox {
