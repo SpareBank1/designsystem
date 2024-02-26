@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [28.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@28.0.1...@sb1/ffe-form@28.0.2) (2024-02-26)
+
+### Bug Fixes
+
+-   **ffe-form:** overflow-wrap: anywhere radio/checkboxes ([c0e1bd4](https://github.com/SpareBank1/designsystem/commit/c0e1bd45adb80240f9d0021368d207b1a4ca950f))
+
 ## [28.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@28.0.0...@sb1/ffe-form@28.0.1) (2024-02-26)
 
 ### Bug Fixes
