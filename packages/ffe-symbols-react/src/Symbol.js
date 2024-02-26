@@ -25,7 +25,7 @@ export const Symbol = props => {
 
 Symbol.defaultProps = {
     fill: false,
-    weight: 400,
+    weight: 300,
 };
 
 Symbol.propTypes = {
@@ -34,9 +34,9 @@ Symbol.propTypes = {
     /** The name of the icon that should be shown */
     icon: string.isRequired,
     /** Size of the icon, default is the closest defined font-size */
-    size: oneOf(['xs', 'sm', 'md', 'lg', 'xl', '2xl']),
+    size: oneOf(['sm', 'md', 'lg', 'xl']),
     /** Symbols stroke weight. This can affect overall size of symbol, 400 is default */
-    weight: oneOf([300, 400, 500]),
+    weight: oneOf([300, 500]),
     /** Additional classnames */
     className: string,
     /** Aria label text. If null/undefined, aria-hidden is automatically set to true */

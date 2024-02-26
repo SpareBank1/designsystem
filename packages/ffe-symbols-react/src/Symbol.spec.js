@@ -11,9 +11,9 @@ describe('<Symbol />', () => {
     });
     it('renders filled symbol correctly', () => {
         const wrapper = getWrapper();
-        expect(wrapper.hasClass('ffe-symbol--400')).toBe(true);
+        expect(wrapper.hasClass('ffe-symbol--300')).toBe(true);
         const filled = getWrapper({ fill: true });
-        expect(filled.hasClass('ffe-symbol--filled-400')).toBe(true);
+        expect(filled.hasClass('ffe-symbol--filled-300')).toBe(true);
     });
     it('set correct symbol weight', () => {
         const wrapper = getWrapper({ weight: 500 });
