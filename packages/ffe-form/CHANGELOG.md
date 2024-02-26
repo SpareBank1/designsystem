@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [28.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@28.0.0...@sb1/ffe-form@28.0.1) (2024-02-26)
+
+### Bug Fixes
+
+-   **ffe-form:** add progressive enhancements for hyphens ([07e29f0](https://github.com/SpareBank1/designsystem/commit/07e29f0db8c95d893f6a2f132134b5b7a66598bb))
+
 # [28.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@27.0.0...@sb1/ffe-form@28.0.0) (2024-02-23)
 
 ### Bug Fixes

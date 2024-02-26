@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [17.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@17.0.6...@sb1/ffe-cards@17.0.7) (2024-02-26)
+
+### Bug Fixes
+
+-   **ffe-cards:** use `break-all` to wrap words ([5d67780](https://github.com/SpareBank1/designsystem/commit/5d677800b1b64fde6ed8d694b7256de46feee40f))
+
 ## [17.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@17.0.5...@sb1/ffe-cards@17.0.6) (2024-02-14)
 
 ### Bug Fixes

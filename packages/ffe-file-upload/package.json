@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-file-upload",
-    "version": "10.0.12",
+    "version": "10.0.13",
     "description": "File upload module",
     "license": "MIT",
     "author": "SpareBank 1",
@@ -16,8 +16,8 @@
         "test": "npm run lint"
     },
     "dependencies": {
-        "@sb1/ffe-core": "^27.3.1",
-        "@sb1/ffe-form": "^28.0.0"
+        "@sb1/ffe-core": "^27.3.2",
+        "@sb1/ffe-form": "^28.0.1"
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.5.1"

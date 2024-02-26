@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@8.0.6...@sb1/ffe-context-message@8.0.7) (2024-02-26)
+
+### Bug Fixes
+
+-   **ffe-context-message:** use `break-all` to wrap words ([ad8b47a](https://github.com/SpareBank1/designsystem/commit/ad8b47abbf32b3de824dece17a4125434b95190b))
+
 ## [8.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@8.0.5...@sb1/ffe-context-message@8.0.6) (2024-02-14)
 
 ### Bug Fixes

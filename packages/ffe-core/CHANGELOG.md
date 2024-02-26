@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [27.3.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@27.3.1...@sb1/ffe-core@27.3.2) (2024-02-26)
+
+### Bug Fixes
+
+-   **ffe-core:** use `break-all` to wrap words ([81836f6](https://github.com/SpareBank1/designsystem/commit/81836f65ead9528dabf8bf881cadbd47429efb80))
+
 ## [27.3.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@27.3.0...@sb1/ffe-core@27.3.1) (2024-02-12)
 
 **Note:** Version bump only for package @sb1/ffe-core

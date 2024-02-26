@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@9.0.3...@sb1/ffe-icons-react@9.0.4) (2024-02-26)
+
+### Bug Fixes
+
+-   **ffe-icons-react:** add webkit to support android browser ([8c9e969](https://github.com/SpareBank1/designsystem/commit/8c9e9697874c1075f7cdb60a8add655811a5a106))
+
 ## [9.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@9.0.2...@sb1/ffe-icons-react@9.0.3) (2024-02-13)
 
 ### Bug Fixes
