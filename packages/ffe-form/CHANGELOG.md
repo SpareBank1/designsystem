@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [28.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@28.0.2...@sb1/ffe-form@28.0.3) (2024-02-26)
+
+### Bug Fixes
+
+-   **ffe-form:** to much padding-left ([fccfaf8](https://github.com/SpareBank1/designsystem/commit/fccfaf8758da727d0d0a7a26ec772d56913352c1))
+
 ## [28.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@28.0.1...@sb1/ffe-form@28.0.2) (2024-02-26)
 
 ### Bug Fixes

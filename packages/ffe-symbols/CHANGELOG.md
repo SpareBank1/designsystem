@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-symbols@2.1.2...@sb1/ffe-symbols@3.0.0) (2024-02-26)
+
+### Bug Fixes
+
+-   **ffe-symbols:** fjern weight 400 og størrelsene xs og 2xl ([e0c79f6](https://github.com/SpareBank1/designsystem/commit/e0c79f63e41c705c72a5e4cd435ed912d886a9b5))
+
+### BREAKING CHANGES
+
+-   **ffe-symbols:** fjerner fontene for weight 400 og styling for xs og 2xl
+
 ## [2.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-symbols@2.1.1...@sb1/ffe-symbols@2.1.2) (2024-02-12)
 
 **Note:** Version bump only for package @sb1/ffe-symbols

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.4.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@5.4.13...@sb1/ffe-component-index@5.4.14) (2024-02-26)
+
+### Bug Fixes
+
+-   **component-overview:** fjerner 2 størrelser og weights i symbols eksempler ([9a1c995](https://github.com/SpareBank1/designsystem/commit/9a1c995b8eee2d9ac876c905d14e84071b324888))
+
 ## [5.4.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@5.4.12...@sb1/ffe-component-index@5.4.13) (2024-02-26)
 
 **Note:** Version bump only for package @sb1/ffe-component-index

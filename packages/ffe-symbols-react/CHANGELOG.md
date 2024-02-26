@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-symbols-react@3.0.3...@sb1/ffe-symbols-react@4.0.0) (2024-02-26)
+
+### Bug Fixes
+
+-   **ffe-symbols-react:** fjern weight 400 og størrelsene xs og 2xl ([829570e](https://github.com/SpareBank1/designsystem/commit/829570e71186a08016d80c5294de0579dbff3446))
+
+### BREAKING CHANGES
+
+-   **ffe-symbols-react:** Fjerner 400 som weight og størrelsene xs og 2xl fra Symbol-komponenten.
+
 ## [3.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-symbols-react@3.0.2...@sb1/ffe-symbols-react@3.0.3) (2024-02-12)
 
 **Note:** Version bump only for package @sb1/ffe-symbols-react
