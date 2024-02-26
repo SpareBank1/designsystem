@@ -11,7 +11,10 @@ const Icon = props => {
             aria-label={ariaLabel}
             aria-hidden={!ariaLabel}
             className={classNames('ffe-icons', `ffe-icons--${size}`, className)}
-            style={{ maskImage: `url(${fileUrl})` }}
+            style={{
+                maskImage: `url(${fileUrl})`,
+                WebkitMaskImage: `url(${fileUrl})`,
+            }}
             {...rest}
         />
     );
