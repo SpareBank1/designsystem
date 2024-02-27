@@ -26,6 +26,7 @@ export interface DatepickerProps {
     value: string;
     keepDisplayStateOnError?: boolean;
     fullWidth?: boolean;
+    innerRef?: React.Ref<HTMLInputElement>;
 }
 
 declare class Datepicker extends React.Component<DatepickerProps, any> {}
