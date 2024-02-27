@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [28.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@28.0.3...@sb1/ffe-form@28.0.4) (2024-02-27)
+
+### Bug Fixes
+
+-   **ffe-form:** gap between icon and label text should be 8 px in radio/checkbox ([d8ccfbf](https://github.com/SpareBank1/designsystem/commit/d8ccfbf1185926bf3e0378a9a521607ba5c83294))
+
 ## [28.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@28.0.2...@sb1/ffe-form@28.0.3) (2024-02-26)
 
 ### Bug Fixes
