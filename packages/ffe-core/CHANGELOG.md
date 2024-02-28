@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [27.3.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@27.3.2...@sb1/ffe-core@27.3.3) (2024-02-28)
+
+### Bug Fixes
+
+-   **ffe-core:** use overflow-wrap:anywhere with word-break:normal ([261246b](https://github.com/SpareBank1/designsystem/commit/261246b3f5ff8c3fad0dbf06bb700fdf34120aa9))
+
 ## [27.3.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@27.3.1...@sb1/ffe-core@27.3.2) (2024-02-26)
 
 ### Bug Fixes

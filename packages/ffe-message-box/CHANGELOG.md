@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@12.0.6...@sb1/ffe-message-box@12.0.7) (2024-02-28)
+
+### Bug Fixes
+
+-   **ffe-message-box:** use overflow-wrap:anywhere with word-break:normal ([90baeb3](https://github.com/SpareBank1/designsystem/commit/90baeb36117dd136299dce89896ba1f77837cf93))
+
 ## [12.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@12.0.5...@sb1/ffe-message-box@12.0.6) (2024-02-26)
 
 ### Bug Fixes

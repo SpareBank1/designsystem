@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [28.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@28.0.4...@sb1/ffe-form@28.0.5) (2024-02-28)
+
+### Bug Fixes
+
+-   **ffe-form:** use overflow-wrap:anywhere with word-break:normal ([401e3b7](https://github.com/SpareBank1/designsystem/commit/401e3b78789eb8316f228d44bdd5158d223ae70b))
+
 ## [28.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@28.0.3...@sb1/ffe-form@28.0.4) (2024-02-27)
 
 ### Bug Fixes

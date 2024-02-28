@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@10.0.6...@sb1/ffe-accordion@10.0.7) (2024-02-28)
+
+### Bug Fixes
+
+-   **ffe-accordion:** use overflow-wrap:anywhere with word-break:normal ([00fa761](https://github.com/SpareBank1/designsystem/commit/00fa761012084eb89a8577a26be1e8fc4ae2a558))
+
 ## [10.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@10.0.5...@sb1/ffe-accordion@10.0.6) (2024-02-26)
 
 ### Bug Fixes
