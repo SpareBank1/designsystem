@@ -14,7 +14,6 @@
     color: var(--ffe-v-tabs-primary-color);
     padding: @ffe-spacing-xs @ffe-spacing-md;
     border-radius: 40px;
-    white-space: nowrap;
     border: 2px solid transparent;
     margin: @ffe-spacing-2xs;
     font-family: var(--ffe-g-font);
@@ -28,6 +27,7 @@
     flex: none;
     order: 0;
     flex-grow: 1;
+    overflow-wrap: anywhere;
 
     &::after {
         content: '';
