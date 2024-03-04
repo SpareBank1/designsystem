@@ -112,9 +112,7 @@ const ContextMessage = ({
             </div>
             {showCloseButton && (
                 <button
-                    aria-label={`${
-                        texts[locale].FFE_CONTEXT_MESSAGE_CLOSE
-                    } ${headerText || ''}`}
+                    aria-label={`${texts[locale].close} ${headerText || ''}`}
                     className="ffe-context-message-content__close-button"
                     onClick={handleClose}
                     type="button"

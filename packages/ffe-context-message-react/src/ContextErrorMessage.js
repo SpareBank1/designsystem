@@ -1,11 +1,12 @@
 import React from 'react';
 import { number, node, string, bool, oneOf, func, object } from 'prop-types';
 import acceptedLocales from './locale/accepted-locales';
+import texts from './locale/texts';
 import ContextMessage from './ContextMessage';
 import { ContextMessageIcon } from './ContextMessageIcon';
 
 const ContextErrorMessage = props => {
-    const { alert, ...rest } = props;
+    const { alert, locale, ...rest } = props;
 
     const priorityHighIconSmall =
         'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjAiPjxwYXRoIGQ9Ik00NzkuNzg4LTE4Ny4wOHEtMjEuNTM3IDAtMzYuNjYyLTE1LjMzN3QtMTUuMTI1LTM2Ljg3NHEwLTIxLjUzNyAxNS4zMzctMzYuNjYyIDE1LjMzNy0xNS4xMjQgMzYuODc0LTE1LjEyNCAyMS41MzcgMCAzNi42NjIgMTUuMzM3dDE1LjEyNSAzNi44NzRxMCAyMS41MzctMTUuMzM3IDM2LjY2MS0xNS4zMzcgMTUuMTI1LTM2Ljg3NCAxNS4xMjVabS0uMDYyLTE5Ni4xNTFxLTE5LjM0MSAwLTMyLjg0LTEzLjcwOS0xMy41LTEzLjcwOS0xMy41LTMyLjk2di0zMTYuNjg1cTAtMTkuMjUxIDEzLjc3NC0zMi43OTQgMTMuNzczLTEzLjU0MiAzMy4xMTQtMTMuNTQyIDE5LjM0MSAwIDMyLjg0IDEzLjcwOSAxMy41IDEzLjcwOSAxMy41IDMyLjk2djMxNi42ODVxMCAxOS4yNTEtMTMuNzc0IDMyLjc5NC0xMy43NzMgMTMuNTQyLTMzLjExNCAxMy41NDJaIi8+PC9zdmc+';
@@ -16,14 +17,14 @@ const ContextErrorMessage = props => {
     return (
         <ContextMessage
             {...rest}
+            locale={locale}
             messageType="error"
-            aria-label="Feilmelding"
             role={alert ? 'alert' : 'group'}
+            aria-label={texts[locale].error.ariaLabel}
             icon={
                 <ContextMessageIcon
                     smallIconUrl={priorityHighIconSmall}
                     largeIconUrl={priorityHighIconLarge}
-                    ariaLabel="Utropstegn"
                 />
             }
         />
@@ -43,7 +44,7 @@ ContextErrorMessage.propTypes = {
     header: string,
     /** ID for the header container */
     headerElementId: string,
-    /** Decides the language of the aria-label for the close icon */
+    /** Decides the language */
     locale: oneOf(acceptedLocales),
     /** Callback for when the context message has been closed (after the animation) */
     onClose: func,
