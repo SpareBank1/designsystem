@@ -40,13 +40,13 @@ export default class Datepicker extends Component {
         this.globalClickHandler = this.globalClickHandler.bind(this);
         this.escKeyHandler = this.escKeyHandler.bind(this);
         this.datePickedHandler = this.datePickedHandler.bind(this);
-        this.divBlurHandler = this.divBlurHandler.bind(this);
         this.onInputKeydown = this.onInputKeydown.bind(this);
         this.onInputBlur = this.onInputBlur.bind(this);
         this.onError = this.onError.bind(this);
     }
 
     buttonRef = React.createRef();
+    dateInputRef = this.props.innerRef ?? React.createRef();
 
     debounceCalendar = debounce(value => {
         if (value !== this.state.lastValidDate && validateDate(value)) {
@@ -216,16 +216,6 @@ export default class Datepicker extends Component {
         evt.nativeEvent.__datepickerID = this.datepickerId;
     }
 
-    divBlurHandler(evt) {
-        const isBluringWithDisplayDatePickerFalse =
-            evt.target === this.dateInputRef._input &&
-            evt.currentTarget === this._datepickerNode &&
-            !this.state.displayDatePicker;
-        if (isBluringWithDisplayDatePickerFalse) {
-            this.removeGlobalEventListeners();
-        }
-    }
-
     datePickedHandler(date) {
         this.props.onChange(date);
         this.props.onValidationComplete(date);
@@ -292,8 +282,8 @@ export default class Datepicker extends Component {
             onChange,
             value,
             fullWidth,
-            innerRef,
         } = this.props;
+
         const { minDate, maxDate } = this.state;
 
         if (this.state.ariaInvalid && !inputProps['aria-describedby']) {
@@ -349,13 +339,7 @@ export default class Datepicker extends Component {
                             onBlur={this.onInputBlur}
                             onChange={evt => onChange(evt.target.value)}
                             onKeyDown={this.onInputKeydown}
-                            ref={c => {
-                                if (innerRef) {
-                                    innerRef.current = c;
-                                }
-
-                                this.dateInputRef = c;
-                            }}
+                            ref={this.dateInputRef}
                             value={value}
                             fullWidth={fullWidth}
                             language={language}
@@ -377,7 +361,6 @@ export default class Datepicker extends Component {
                             minDate={minDate}
                             onDatePicked={this.datePickedHandler}
                             selectedDate={this.state.calendarActiveDate}
-                            onBlurHandler={this.blurHandler}
                             ref={c => {
                                 this.datepickerCalendar = c;
                             }}
@@ -404,7 +387,6 @@ Datepicker.defaultProps = {
     keepDisplayStateOnError: false,
     onValidationComplete: () => {},
     fullWidth: false,
-    innerRef: undefined,
 };
 
 Datepicker.propTypes = {

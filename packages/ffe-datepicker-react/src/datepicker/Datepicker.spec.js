@@ -496,7 +496,7 @@ describe('<Datepicker />', () => {
             });
 
             const renderedWrapper = wrapper.instance();
-            expect(renderedWrapper.dateInputRef._input).toBeTruthy();
+            expect(renderedWrapper.dateInputRef).toBeTruthy();
             expect(renderedWrapper._datepickerNode).toBeTruthy();
             expect(renderedWrapper.datepickerCalendar).toBeFalsy();
             renderedWrapper.openCalendar();
