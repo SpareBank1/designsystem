@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { func, string, number, node, oneOf, bool } from 'prop-types';
 import classNames from 'classnames';
 import { Icon } from '@sb1/ffe-icons-react';
+import texts from './texts';
 
 class SystemMessage extends Component {
     constructor() {
@@ -69,7 +70,7 @@ class SystemMessage extends Component {
                     </span>
                     <p className="ffe-system-message__content">{children}</p>
                     <button
-                        aria-label={locale === 'en' ? 'Close' : 'Lukk'}
+                        aria-label={texts[locale].close}
                         className="ffe-system-message__close"
                         onClick={this.close}
                         type="button"
