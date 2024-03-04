@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [28.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@28.0.5...@sb1/ffe-form@28.0.6) (2024-03-04)
+
+### Bug Fixes
+
+-   **ffe-form:** fix tooltip heigth ([09ae671](https://github.com/SpareBank1/designsystem/commit/09ae671d2a52993c39a806c664c24bff2fef6c8e))
+
 ## [28.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@28.0.4...@sb1/ffe-form@28.0.5) (2024-02-28)
 
 ### Bug Fixes
