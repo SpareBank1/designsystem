@@ -8,6 +8,7 @@ export interface MessageBoxProps
     title?: React.ReactNode;
     titleElement?: string;
     onColoredBg?: boolean;
+    locale?: 'nb' | 'nn' | 'en';
 }
 
 export interface ErrorMessageBoxProps extends MessageBoxProps {
