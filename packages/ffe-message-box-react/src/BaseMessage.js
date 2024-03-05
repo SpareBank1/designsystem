@@ -11,6 +11,8 @@ const BaseMessage = props => {
         children,
         className = '',
         onColoredBg,
+        ariaLabel,
+        role,
         ...rest
     } = props;
 
@@ -22,7 +24,8 @@ const BaseMessage = props => {
                 { 'ffe-message-box--coloredbg': onColoredBg },
                 className,
             )}
-            role="group"
+            aria-label={ariaLabel}
+            role={role}
             {...rest}
         >
             <span className="ffe-message-box__icon">
@@ -61,10 +64,13 @@ BaseMessage.propTypes = {
     type: oneOf(['success', 'error', 'tips', 'info']).isRequired,
     /* Adds alternative styling for better contrast on certain backgrounds */
     onColoredBg: bool,
+    ariaLabel: string,
+    role: oneOf(['alert', 'group']),
 };
 
 BaseMessage.defaultProps = {
     titleElement: 'h2',
     onColoredBg: false,
+    role: 'group',
 };
 export default BaseMessage;
