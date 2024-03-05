@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.1.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@7.1.8...@sb1/ffe-datepicker-react@7.1.9) (2024-03-05)
+
+### Bug Fixes
+
+-   **ffe-datepicker-react:** innerRef was not set ([6e6e5f5](https://github.com/SpareBank1/designsystem/commit/6e6e5f55f5d6e76d2330af6d9f7757bcfacc2af4))
+
 ## [7.1.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker-react@7.1.7...@sb1/ffe-datepicker-react@7.1.8) (2024-03-04)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker-react

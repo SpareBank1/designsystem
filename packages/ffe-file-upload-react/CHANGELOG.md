@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.0.28](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload-react@10.0.27...@sb1/ffe-file-upload-react@10.0.28) (2024-03-05)
+
+**Note:** Version bump only for package @sb1/ffe-file-upload-react
+
 ## [10.0.27](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload-react@10.0.26...@sb1/ffe-file-upload-react@10.0.27) (2024-03-04)
 
 **Note:** Version bump only for package @sb1/ffe-file-upload-react

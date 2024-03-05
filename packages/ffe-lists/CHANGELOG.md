@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [15.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@15.0.2...@sb1/ffe-lists@15.0.3) (2024-03-05)
+
+### Bug Fixes
+
+-   **ffe-lists:** tekst-overflow i lister ([684b48f](https://github.com/SpareBank1/designsystem/commit/684b48ff895305c785d862d6477c1db08c47b001))
+
 ## [15.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@15.0.1...@sb1/ffe-lists@15.0.2) (2024-02-28)
 
 **Note:** Version bump only for package @sb1/ffe-lists

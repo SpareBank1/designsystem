@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [18.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@18.0.10...@sb1/ffe-buttons@18.0.11) (2024-03-05)
+
+### Bug Fixes
+
+-   **ffe-buttons:** tekst-overflow i inline knapper ([5b6dd12](https://github.com/SpareBank1/designsystem/commit/5b6dd12c2a7883229e961b625090ef6786c1fb18))
+
 ## [18.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@18.0.9...@sb1/ffe-buttons@18.0.10) (2024-02-28)
 
 **Note:** Version bump only for package @sb1/ffe-buttons

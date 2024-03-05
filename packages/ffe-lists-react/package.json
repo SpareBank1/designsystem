@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-lists-react",
-    "version": "9.0.2",
+    "version": "9.0.3",
     "description": "React implementation of ffe-lists",
     "license": "MIT",
     "author": "SpareBank 1",
@@ -26,7 +26,7 @@
     },
     "dependencies": {
         "@sb1/ffe-icons-react": "^9.0.4",
-        "@sb1/ffe-lists": "^15.0.2",
+        "@sb1/ffe-lists": "^15.0.3",
         "classnames": "^2.3.1",
         "prop-types": "^15.7.2"
     },

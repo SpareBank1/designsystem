@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.0.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@10.0.13...@sb1/ffe-message-box-react@10.0.14) (2024-03-05)
+
+### Bug Fixes
+
+-   **ffe-message-box-react:** add misssing locale to ts type ([d04f0fc](https://github.com/SpareBank1/designsystem/commit/d04f0fc677968991c15882627edec9d5aea5ac3f))
+-   **ffe-message-box-react:** use translations from locale ([7667d91](https://github.com/SpareBank1/designsystem/commit/7667d913ca8666d17b93ecf3b43d6bde7082fc9b))
+
 ## [10.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@10.0.12...@sb1/ffe-message-box-react@10.0.13) (2024-02-28)
 
 **Note:** Version bump only for package @sb1/ffe-message-box-react

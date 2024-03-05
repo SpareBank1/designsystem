@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@8.0.15...@sb1/ffe-system-message-react@8.0.16) (2024-03-05)
+
+### Bug Fixes
+
+-   **ffe-system-message-react:** use locale for translations ([a2c2df6](https://github.com/SpareBank1/designsystem/commit/a2c2df6bc36b79ffbb231e8d7fe494c3ea709eb6))
+
 ## [8.0.15](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@8.0.14...@sb1/ffe-system-message-react@8.0.15) (2024-02-28)
 
 **Note:** Version bump only for package @sb1/ffe-system-message-react

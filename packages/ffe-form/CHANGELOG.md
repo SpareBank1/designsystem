@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [28.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@28.0.6...@sb1/ffe-form@28.0.7) (2024-03-05)
+
+### Bug Fixes
+
+-   **ffe-form:** tekst-overflow i fieldmessage ([9d00eb1](https://github.com/SpareBank1/designsystem/commit/9d00eb125193368dda0064bddce8fb7cfb4f5443))
+-   **ffe-form:** tooltip wraps on next line ([0280527](https://github.com/SpareBank1/designsystem/commit/0280527cec129ea6df06a960b6532c941814ce20))
+
 ## [28.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@28.0.5...@sb1/ffe-form@28.0.6) (2024-03-04)
 
 ### Bug Fixes
