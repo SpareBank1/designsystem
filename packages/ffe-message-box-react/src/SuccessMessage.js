@@ -12,13 +12,7 @@ const SuccessMessage = ({ locale, ...rest }) => {
         <BaseMessage
             type="success"
             ariaLabel={texts[locale].success.ariaLabel}
-            icon={
-                <Icon
-                    fileUrl={checkIcon}
-                    ariaLabel={texts[locale].success.icon}
-                    size="xl"
-                />
-            }
+            icon={<Icon fileUrl={checkIcon} size="xl" />}
             {...rest}
         />
     );
