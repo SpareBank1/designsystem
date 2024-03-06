@@ -1,9 +1,47 @@
-const nb = {};
-const nn = {};
-const en = {};
-
-nb.FFE_CONTEXT_MESSAGE_CLOSE = 'Lukk';
-nn.FFE_CONTEXT_MESSAGE_CLOSE = 'Lukk';
-en.FFE_CONTEXT_MESSAGE_CLOSE = 'Close';
+const nb = {
+    close: 'Lukk',
+    error: {
+        ariaLabel: 'Feilmelding',
+    },
+    info: {
+        ariaLabel: 'Infomelding',
+    },
+    success: {
+        ariaLabel: 'Suksessmelding',
+    },
+    tip: {
+        ariaLabel: 'Tipsmelding',
+    },
+};
+const nn = {
+    close: 'Lukk',
+    error: {
+        ariaLabel: 'Feilmelding',
+    },
+    info: {
+        ariaLabel: 'Infomelding',
+    },
+    success: {
+        ariaLabel: 'Suksessmelding',
+    },
+    tip: {
+        ariaLabel: 'Tipsmelding',
+    },
+};
+const en = {
+    close: 'Close',
+    error: {
+        ariaLabel: 'Error message',
+    },
+    info: {
+        ariaLabel: 'Info message',
+    },
+    success: {
+        ariaLabel: 'Success message',
+    },
+    tip: {
+        ariaLabel: 'Tip message',
+    },
+};
 
 export default { nb, nn, en };

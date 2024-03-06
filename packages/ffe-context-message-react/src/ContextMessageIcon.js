@@ -6,13 +6,11 @@ export const ContextMessageIcon = ({ smallIconUrl, largeIconUrl }) => {
     return (
         <>
             <Icon
-                ariaLabel="Utropstegn"
                 fileUrl={smallIconUrl}
                 className="ffe-context-message-content__icon-span ffe-context-message-content__icon-span--small"
                 size="sm"
             />
             <Icon
-                ariaLabel="Utropstegn"
                 fileUrl={largeIconUrl}
                 className="ffe-context-message-content__icon-span ffe-context-message-content__icon-span--large"
                 size="lg"
@@ -24,5 +22,4 @@ export const ContextMessageIcon = ({ smallIconUrl, largeIconUrl }) => {
 ContextMessageIcon.propTypes = {
     smallIconUrl: string.isRequired,
     largeIconUrl: string.isRequired,
-    ariaLabel: string.isRequired,
 };
