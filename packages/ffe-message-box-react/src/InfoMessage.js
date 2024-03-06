@@ -11,13 +11,7 @@ const InfoMessage = ({ locale, ...rest }) => {
         <BaseMessage
             type="info"
             ariaLabel={texts[locale].info.ariaLabel}
-            icon={
-                <Icon
-                    ariaLabel={texts[locale].info.icon}
-                    fileUrl={infoIcon}
-                    size="xl"
-                />
-            }
+            icon={<Icon fileUrl={infoIcon} size="xl" />}
             {...rest}
         />
     );

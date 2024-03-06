@@ -14,13 +14,7 @@ const ErrorMessage = props => {
         <BaseMessage
             type="error"
             ariaLabel={texts[locale].error.ariaLabel}
-            icon={
-                <Icon
-                    fileUrl={priorityHighIcon}
-                    ariaLabel={texts[locale].error.icon}
-                    size="xl"
-                />
-            }
+            icon={<Icon fileUrl={priorityHighIcon} size="xl" />}
             role={alert ? 'alert' : 'group'}
             {...rest}
         />

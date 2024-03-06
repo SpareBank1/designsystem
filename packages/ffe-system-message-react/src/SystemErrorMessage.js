@@ -15,13 +15,7 @@ export default function SystemErrorMessage(props) {
             modifier="error"
             aria-label={texts[locale].error.ariaLabel}
             locale={locale}
-            icon={
-                <Icon
-                    ariaLabel={texts[locale].error.icon}
-                    fileUrl={priorityHighIconSmall}
-                    size="sm"
-                />
-            }
+            icon={<Icon fileUrl={priorityHighIconSmall} size="sm" />}
             role={alert ? 'alert' : 'group'}
             {...rest}
         />

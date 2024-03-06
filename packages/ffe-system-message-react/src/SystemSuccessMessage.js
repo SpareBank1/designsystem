@@ -12,13 +12,7 @@ export default function SystemSuccessMessage({ locale, ...rest }) {
             modifier="success"
             aria-label={texts[locale].success.ariaLabel}
             locale={locale}
-            icon={
-                <Icon
-                    ariaLabel={texts[locale].success.icon}
-                    size="sm"
-                    fileUrl={checkIconSmall}
-                />
-            }
+            icon={<Icon size="sm" fileUrl={checkIconSmall} />}
             {...rest}
         />
     );
