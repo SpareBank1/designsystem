@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.0.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@9.0.15...@sb1/ffe-context-message-react@9.0.16) (2024-03-06)
+
+### Bug Fixes
+
+-   **ffe-context-message-react:** translations of aria labels ([b19e6be](https://github.com/SpareBank1/designsystem/commit/b19e6be2c4a901b47af8083c6780676ebc761f23))
+
 ## [9.0.15](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message-react@9.0.14...@sb1/ffe-context-message-react@9.0.15) (2024-02-28)
 
 **Note:** Version bump only for package @sb1/ffe-context-message-react

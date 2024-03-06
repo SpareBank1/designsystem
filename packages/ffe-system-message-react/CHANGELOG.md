@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.17](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@8.0.16...@sb1/ffe-system-message-react@8.0.17) (2024-03-06)
+
+### Bug Fixes
+
+-   **ffe-system-message-react:** remove aria-label on icon ([c6c2720](https://github.com/SpareBank1/designsystem/commit/c6c27201028077cc9c21f9ae83010669c5317459))
+
 ## [8.0.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@8.0.15...@sb1/ffe-system-message-react@8.0.16) (2024-03-05)
 
 ### Bug Fixes
