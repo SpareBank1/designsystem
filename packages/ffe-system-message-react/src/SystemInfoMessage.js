@@ -12,13 +12,7 @@ export default function SystemInfoMessage({ locale, ...rest }) {
             modifier="info"
             aria-label={texts[locale].info.ariaLabel}
             locale={locale}
-            icon={
-                <Icon
-                    ariaLabel={texts[locale].info.icon}
-                    size="sm"
-                    fileUrl={infoIconSmall}
-                />
-            }
+            icon={<Icon size="sm" fileUrl={infoIconSmall} />}
             {...rest}
         />
     );
