@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-tables-react",
-    "version": "8.0.14",
+    "version": "8.0.15",
     "description": "React implementation of ffe-tables",
     "license": "MIT",
     "author": "SpareBank 1",
@@ -26,7 +26,7 @@
     },
     "dependencies": {
         "@sb1/ffe-icons-react": "^9.0.4",
-        "@sb1/ffe-tables": "^14.0.7",
+        "@sb1/ffe-tables": "^14.0.8",
         "classnames": "^2.3.1",
         "deep-equal": "^1.0.1",
         "memoize-one": "^5.0.0",

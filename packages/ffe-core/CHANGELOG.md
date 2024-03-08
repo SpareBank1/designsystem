@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [27.3.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@27.3.3...@sb1/ffe-core@27.3.4) (2024-03-08)
+
+### Bug Fixes
+
+-   **ffe-core:** add missing css custom props to theme.less ([fb9e78f](https://github.com/SpareBank1/designsystem/commit/fb9e78f00981792a0e6182cd625846b5c2864af0))
+
 ## [27.3.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@27.3.2...@sb1/ffe-core@27.3.3) (2024-02-28)
 
 ### Bug Fixes
