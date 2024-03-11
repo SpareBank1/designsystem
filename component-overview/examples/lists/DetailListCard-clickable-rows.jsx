@@ -1,0 +1,12 @@
+import { DetailListCard, DetailListCardItem } from '@sb1/ffe-lists-react';
+import { Icon } from '@sb1/ffe-icons-react';
+import { LinkText } from '@sb1/ffe-core-react';
+import { PrimaryButton } from '@sb1/ffe-buttons-react';
+
+<DetailListCard>
+    <DetailListCardItem label="Kontonavn" value="Daglig konto"/>
+    <DetailListCardItem label="Kontotype" value="Brukskonto" />
+    <DetailListCardItem label="Kontonummer" value={<><LinkText>1234 56 78912</LinkText> <Icon fileUrl="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjAiPjxwYXRoIGQ9Ik0zNjIuMzA4LTI2MC4wMDFxLTI3LjAwOCAwLTQ1LjY1Ny0xOC42NS0xOC42NS0xOC42NS0xOC42NS00NS42NTh2LTQ1NS4zODJxMC0yNy4wMDggMTguNjUtNDUuNjU4IDE4LjY0OS0xOC42NSA0NS42NTctMTguNjVoMzU5LjM4M3EyNy4wMDcgMCA0NS42NTcgMTguNjUgMTguNjUgMTguNjUgMTguNjUgNDUuNjU4djQ1NS4zODJxMCAyNy4wMDgtMTguNjUgNDUuNjU4LTE4LjY1IDE4LjY1LTQ1LjY1NyAxOC42NUgzNjIuMzA4Wm0wLTUxLjk5OWgzNTkuMzgzcTQuNjE1IDAgOC40NjItMy44NDYgMy44NDYtMy44NDcgMy44NDYtOC40NjN2LTQ1NS4zODJxMC00LjYxNi0zLjg0Ni04LjQ2My0zLjg0Ny0zLjg0Ni04LjQ2Mi0zLjg0NkgzNjIuMzA4cS00LjYxNiAwLTguNDYyIDMuODQ2LTMuODQ3IDMuODQ3LTMuODQ3IDguNDYzdjQ1NS4zODJxMCA0LjYxNiAzLjg0NyA4LjQ2MyAzLjg0NiAzLjg0NiA4LjQ2MiAzLjg0NlpNMjM4LjMwOS0xMzYuMDAzcS0yNy4wMDcgMC00NS42NTctMTguNjUtMTguNjUtMTguNjUtMTguNjUtNDUuNjU3di00ODEuMzgycTAtMTEuMDY5IDcuNDA1LTE4LjUzNCA3LjQwNC03LjQ2NSAxOC4zODQtNy40NjUgMTAuOTc5IDAgMTguNTk1IDcuNDY1IDcuNjE1IDcuNDY1IDcuNjE1IDE4LjUzNHY0ODEuMzgycTAgNC42MTYgMy44NDYgOC40NjIgMy44NDcgMy44NDcgOC40NjIgMy44NDdoMzg1LjM4MnExMS4wNjkgMCAxOC41MzQgNy40MDQgNy40NjYgNy40MDUgNy40NjYgMTguMzg0IDAgMTAuOTgtNy40NjYgMTguNTk1LTcuNDY1IDcuNjE1LTE4LjUzNCA3LjYxNUgyMzguMzA5Wk0zNDkuOTk5LTMxMlYtNzkyLTMxMloiLz48L3N2Zz4=" size="sm"></Icon></>}/>
+    <DetailListCardItem label="Kontoeier" value="Ola veldiglangtmellomnavn Nordmann" />
+    <DetailListCardItem label="Tilfeldig knapp" value={<PrimaryButton>Tilfeldig</PrimaryButton>} />
+</DetailListCard>
