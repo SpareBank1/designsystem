@@ -10,6 +10,8 @@ import DescriptionList from './DescriptionList';
 import DescriptionListMultiCol from './DescriptionListMultiCol';
 import DescriptionListTerm from './DescriptionListTerm';
 import DescriptionListDescription from './DescriptionListDescription';
+import DetailListCard from './DetailListCard';
+import DetailListCardItem from './DetailListCardItem';
 
 export {
     BulletList,
@@ -24,6 +26,8 @@ export {
     DescriptionListMultiCol,
     DescriptionListTerm,
     DescriptionListDescription,
+    DetailListCard,
+    DetailListCardItem,
 };
 
 export default BulletList;
