@@ -21,9 +21,11 @@
             margin-top: 2px;
         }
 
-        &:hover {
-            border-color: var(--ffe-v-checkbox-selected-color);
-            color: var(--ffe-v-tooltip-icon-color);
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                border-color: var(--ffe-v-checkbox-selected-color);
+                color: var(--ffe-v-tooltip-icon-color);
+            }
         }
 
         &:focus {

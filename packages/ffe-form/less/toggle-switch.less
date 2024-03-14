@@ -74,13 +74,14 @@
                 }
             }
         }
+        @media (hover: hover) and (pointer: fine) {
+            .ffe-toggle-switch__label:hover &::before {
+                background: @ffe-farge-moerkgraa;
 
-        .ffe-toggle-switch__label:hover &::before {
-            background: @ffe-farge-moerkgraa;
-
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    background: @ffe-farge-lysgraa;
+                .native & {
+                    @media (prefers-color-scheme: dark) {
+                        background: @ffe-farge-lysgraa;
+                    }
                 }
             }
         }
@@ -100,8 +101,10 @@
         }
     }
 
-    &__input:checked + &__label:hover &__switch::before {
-        background: var(--ffe-g-secondary-color);
+    @media (hover: hover) and (pointer: fine) {
+        &__input:checked + &__label:hover &__switch::before {
+            background: var(--ffe-g-secondary-color);
+        }
     }
 
     &__input:focus:not(:focus-visible) + &__label &__switch::before {

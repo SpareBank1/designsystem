@@ -74,8 +74,10 @@
         }
     }
 
-    &:hover {
-        --ffe-radio-block-border-color: var(--ffe-g-primary-color);
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            --ffe-radio-block-border-color: var(--ffe-g-primary-color);
+        }
     }
 
     .ffe-fieldset--error & {

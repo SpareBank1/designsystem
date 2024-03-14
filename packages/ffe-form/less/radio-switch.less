@@ -64,9 +64,10 @@
         background-color: var(--ffe-g-secondary-color);
         color: var(--ffe-v-input-bg-color);
     }
-
-    &:hover + .ffe-radio-switch {
-        border-color: var(--ffe-g-secondary-color);
+    @media (hover: hover) and (pointer: fine) {
+        &:hover + .ffe-radio-switch {
+            border-color: var(--ffe-g-secondary-color);
+        }
     }
 
     &:focus-visible + .ffe-radio-switch {

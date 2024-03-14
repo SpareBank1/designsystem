@@ -90,15 +90,25 @@
 }
 
 .ffe-radio-input {
+    @media (hover: hover) and (pointer: fine) {
+        &:hover + .ffe-radio-button::before {
+            outline: none;
+        }
+    }
+
     &:checked + .ffe-radio-button::before,
-    &:hover + .ffe-radio-button::before,
     &:focus + .ffe-radio-button::before,
     &:active + .ffe-radio-button::before {
         outline: none;
     }
 
-    &:checked + .ffe-radio-button::after,
-    &:hover + .ffe-radio-button::after {
+    @media (hover: hover) and (pointer: fine) {
+        &:hover + .ffe-radio-button::after {
+            border-color: var(--ffe-g-primary-color);
+        }
+    }
+
+    &:checked + .ffe-radio-button::after {
         border-color: var(--ffe-g-primary-color);
     }
 
@@ -129,9 +139,14 @@
         box-shadow: none;
     }
 
-    [aria-invalid='true'] &:hover + .ffe-radio-button::after,
     [aria-invalid='true'] &:checked + .ffe-radio-button::after {
         border-color: var(--ffe-g-error-color);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        [aria-invalid='true'] &:hover + .ffe-radio-button::after {
+            border-color: var(--ffe-g-error-color);
+        }
     }
 }
 
