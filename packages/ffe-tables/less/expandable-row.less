@@ -3,8 +3,10 @@
         cursor: pointer;
         position: relative;
 
-        &:hover {
-            background-color: var(--ffe-v-table-expandable-row-hover);
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                background-color: var(--ffe-v-table-expandable-row-hover);
+            }
         }
 
         &:focus {

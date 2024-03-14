@@ -4,7 +4,18 @@
     cursor: pointer;
     padding: @ffe-spacing-xs @ffe-spacing-sm @ffe-spacing-xs @ffe-spacing-md;
 
-    &:hover,
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            background: var(--ffe-g-primary-color);
+            color: var(--ffe-v-accountselector-option-primary-color);
+
+            & .ffe-account-suggestion-single__details,
+            & .ffe-account-suggestion-single__name {
+                color: var(--ffe-v-accountselector-option-primary-color);
+            }
+        }
+    }
+
     &--highlighted {
         background: var(--ffe-g-primary-color);
         color: var(--ffe-v-accountselector-option-primary-color);

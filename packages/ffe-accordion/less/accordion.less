@@ -31,15 +31,18 @@
         outline: none;
         color: var(--ffe-v-accordion-primary-color);
 
-        &:hover {
-            .ffe-accordion-item__heading-icon {
-                transition: fill @ffe-transition-duration @ffe-ease;
-                color: var(--ffe-v-accordion-secondary-color);
-            }
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                .ffe-accordion-item__heading-icon {
+                    transition: fill @ffe-transition-duration @ffe-ease;
+                    color: var(--ffe-v-accordion-secondary-color);
+                }
 
-            .ffe-accordion-item__heading-icon-wrapper {
-                transition: background-color @ffe-transition-duration @ffe-ease;
-                background-color: var(--ffe-v-accordion-primary-color);
+                .ffe-accordion-item__heading-icon-wrapper {
+                    transition: background-color @ffe-transition-duration
+                        @ffe-ease;
+                    background-color: var(--ffe-v-accordion-primary-color);
+                }
             }
         }
 
@@ -96,13 +99,16 @@
             &__heading-icon {
                 color: var(--ffe-v-accordion-primary-color);
             }
-            &:hover {
-                .ffe-accordion-item__heading-icon {
-                    color: var(--ffe-v-accordion-secondary-color);
-                }
 
-                .ffe-accordion-item__heading-icon-wrapper {
-                    background-color: var(--ffe-v-accordion-primary-color);
+            @media (hover: hover) and (pointer: fine) {
+                &:hover {
+                    .ffe-accordion-item__heading-icon {
+                        color: var(--ffe-v-accordion-secondary-color);
+                    }
+
+                    .ffe-accordion-item__heading-icon-wrapper {
+                        background-color: var(--ffe-v-accordion-primary-color);
+                    }
                 }
             }
         }

@@ -75,9 +75,13 @@
         border-bottom: 1px solid var(--ffe-v-context-message-link-color);
         color: var(--ffe-v-context-message-link-color);
 
-        &:hover {
-            border-bottom-color: var(--ffe-v-context-message-link-color-hover);
-            color: var(--ffe-v-context-message-link-color-hover);
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                border-bottom-color: var(
+                    --ffe-v-context-message-link-color-hover
+                );
+                color: var(--ffe-v-context-message-link-color-hover);
+            }
         }
 
         &:visited {
@@ -165,8 +169,12 @@
         }
         .ffe-icons {
             color: var(--ffe-v-context-message-close-button-color);
-            &:hover {
-                color: var(--ffe-v-context-message-close-button-color-hover);
+            @media (hover: hover) and (pointer: fine) {
+                &:hover {
+                    color: var(
+                        --ffe-v-context-message-close-button-color-hover
+                    );
+                }
             }
         }
     }

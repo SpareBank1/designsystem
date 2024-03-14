@@ -54,9 +54,21 @@
         padding: @ffe-spacing @ffe-spacing-sm;
         cursor: pointer;
 
-        &:hover,
-        &--highlighted,
-        &--highlighted:hover {
+        @media (hover: hover) and (pointer: fine) {
+            &:hover,
+            &--highlighted:hover {
+                background: var(--ffe-g-primary-color);
+                color: var(--ffe-farge-hvit);
+
+                .ffe-searchable-dropdown__list-item-body-details {
+                    .ffe-micro-text {
+                        color: var(--ffe-farge-lysgraa);
+                    }
+                }
+            }
+        }
+
+        &--highlighted {
             background: var(--ffe-g-primary-color);
             color: var(--ffe-farge-hvit);
 
@@ -100,10 +112,12 @@
             display: none;
         }
 
-        &:hover {
-            border-color: var(--ffe-g-primary-color);
-            > .ffe-icons {
-                color: var(--ffe-v-searchable-dropdown-icon-hover-color);
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                border-color: var(--ffe-g-primary-color);
+                > .ffe-icons {
+                    color: var(--ffe-v-searchable-dropdown-icon-hover-color);
+                }
             }
         }
 
@@ -111,9 +125,11 @@
             border: 2px solid var(--ffe-g-primary-color);
         }
 
-        .ffe-input-field:focus ~ &:hover {
-            border-color: transparent;
-            box-shadow: 0 0 0 2px var(--ffe-g-primary-color);
+        @media (hover: hover) and (pointer: fine) {
+            .ffe-input-field:focus ~ &:hover {
+                border-color: transparent;
+                box-shadow: 0 0 0 2px var(--ffe-g-primary-color);
+            }
         }
 
         &-icon {
@@ -138,14 +154,25 @@
         &__list-item-body {
             color: var(--ffe-farge-hvit);
 
-            &:hover,
-            &--highlighted,
-            &--highlighted:hover {
+            &--highlighted {
                 color: var(--ffe-farge-svart);
 
                 .ffe-searchable-dropdown__list-item-body-details {
                     .ffe-micro-text {
                         color: var(--ffe-farge-svart);
+                    }
+                }
+            }
+
+            @media (hover: hover) and (pointer: fine) {
+                &:hover,
+                &--highlighted:hover {
+                    color: var(--ffe-farge-svart);
+
+                    .ffe-searchable-dropdown__list-item-body-details {
+                        .ffe-micro-text {
+                            color: var(--ffe-farge-svart);
+                        }
                     }
                 }
             }

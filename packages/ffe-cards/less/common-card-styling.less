@@ -32,9 +32,14 @@
     }
 
     &:focus,
-    &:active,
-    &:hover {
+    &:active {
         border-color: var(--ffe-g-primary-color);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            border-color: var(--ffe-g-primary-color);
+        }
     }
 
     @media (min-width: @breakpoint-md) {

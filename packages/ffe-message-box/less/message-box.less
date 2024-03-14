@@ -20,9 +20,11 @@
         border-bottom: 1px solid var(--ffe-v-message-box-link-color);
         color: var(--ffe-v-message-box-link-color);
 
-        &:hover {
-            border-bottom-color: var(--ffe-v-message-box-link-color-hover);
-            color: var(--ffe-v-message-box-link-color-hover);
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                border-bottom-color: var(--ffe-v-message-box-link-color-hover);
+                color: var(--ffe-v-message-box-link-color-hover);
+            }
         }
 
         &:visited {

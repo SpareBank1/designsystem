@@ -6,8 +6,10 @@
         display: block;
     }
 
-    &:hover {
-        color: var(--ffe-g-primary-color);
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            color: var(--ffe-g-primary-color);
+        }
     }
 
     &__field {
@@ -47,10 +49,15 @@
         border-bottom-right-radius: 4px;
         transition: all @ffe-transition-duration @ffe-ease;
 
-        &:hover,
         &:focus,
         &:active {
             border-color: var(--ffe-v-datepicker-border-hover-color);
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                border-color: var(--ffe-v-datepicker-border-hover-color);
+            }
         }
 
         .ffe-dateinput__field:focus + &:hover {

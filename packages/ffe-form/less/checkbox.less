@@ -78,14 +78,16 @@
     height: 0;
 
     &:checked + .ffe-checkbox::before,
-    &:hover + .ffe-checkbox::before,
     &:focus + .ffe-checkbox::before,
     &:active + .ffe-checkbox::before {
         outline: none;
     }
 
-    &:hover + .ffe-checkbox::before {
-        border-color: var(--ffe-v-checkbox-color);
+    @media (hover: hover) and (pointer: fine) {
+        &:hover + .ffe-checkbox::before {
+            outline: none;
+            border-color: var(--ffe-v-checkbox-color);
+        }
     }
 
     &:focus + .ffe-checkbox::before {

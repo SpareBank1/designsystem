@@ -41,10 +41,16 @@
         border-radius: 4px;
 
         &:focus,
-        &:hover,
         &:active {
             box-shadow: 0 0 0 2px var(--ffe-v-datepicker-bg-color),
                 0 0 0 4px var(--ffe-v-datepicker-border-hover-color);
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                box-shadow: 0 0 0 2px var(--ffe-v-datepicker-bg-color),
+                    0 0 0 4px var(--ffe-v-datepicker-border-hover-color);
+            }
         }
     }
 
@@ -128,14 +134,17 @@
             border: 1px solid var(--ffe-v-datepicker-date-color-today);
         }
 
-        &:hover,
         &:focus {
             border: 2px solid var(--ffe-v-datepicker-border-hover-color);
             color: var(--ffe-v-datepicker-date-color-hover);
+            outline: none;
         }
 
-        &:focus {
-            outline: none;
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                border: 2px solid var(--ffe-v-datepicker-border-hover-color);
+                color: var(--ffe-v-datepicker-date-color-hover);
+            }
         }
 
         &--focus {
@@ -147,8 +156,10 @@
             background: var(--ffe-v-datepicker-border-hover-color);
             color: var(--ffe-v-datepicker-bg-color);
 
-            &:hover {
-                color: var(--ffe-v-datepicker-bg-color);
+            @media (hover: hover) and (pointer: fine) {
+                &:hover {
+                    color: var(--ffe-v-datepicker-bg-color);
+                }
             }
         }
 
@@ -160,10 +171,16 @@
         &--disabled {
             color: var(--ffe-v-datepicker-date-color-disabled);
 
-            &:focus,
-            &:hover {
+            &:focus {
                 border: 2px solid var(--ffe-v-datepicker-date-color-disabled);
                 color: var(--ffe-v-datepicker-date-color-disabled);
+            }
+            @media (hover: hover) and (pointer: fine) {
+                &:hover {
+                    border: 2px solid
+                        var(--ffe-v-datepicker-date-color-disabled);
+                    color: var(--ffe-v-datepicker-date-color-disabled);
+                }
             }
         }
 
