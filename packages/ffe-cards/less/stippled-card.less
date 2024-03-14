@@ -13,7 +13,13 @@
     padding: @ffe-spacing-md;
     gap: @ffe-spacing-sm;
 
-    &:hover,
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            border-style: solid;
+            box-shadow: none;
+        }
+    }
+
     &:focus,
     &:active {
         border-style: solid;
