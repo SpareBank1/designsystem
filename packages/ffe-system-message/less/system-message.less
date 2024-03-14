@@ -18,11 +18,13 @@
             border-bottom: 1px solid var(--ffe-v-system-message-link-color);
             color: var(--ffe-v-system-message-link-color);
 
-            &:hover {
-                border-bottom-color: var(
-                    --ffe-v-system-message-link-color-hover
-                );
-                color: var(--ffe-v-system-message-link-color-hover);
+            @media (hover: hover) and (pointer: fine) {
+                &:hover {
+                    border-bottom-color: var(
+                        --ffe-v-system-message-link-color-hover
+                    );
+                    color: var(--ffe-v-system-message-link-color-hover);
+                }
             }
 
             &:visited {
@@ -203,8 +205,10 @@
         > .ffe-icons {
             color: var(--ffe-v-system-message-close-button-color);
 
-            &:hover {
-                color: var(--ffe-v-system-message-close-button-color-hover);
+            @media (hover: hover) and (pointer: fine) {
+                &:hover {
+                    color: var(--ffe-v-system-message-close-button-color-hover);
+                }
             }
         }
 
@@ -216,8 +220,10 @@
         .ffe-system-message-wrapper--news & {
             color: var(--ffe-farge-hvit);
 
-            &:hover {
-                color: var(--ffe-farge-lysvarmgraa);
+            @media (hover: hover) and (pointer: fine) {
+                &:hover {
+                    color: var(--ffe-farge-lysvarmgraa);
+                }
             }
 
             &:focus {
