@@ -150,9 +150,32 @@
             margin-right: @ffe-spacing-sm;
         }
 
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                color: var(--ffe-v-fileupload-btn-delete-color-hover);
+
+                ~ .ffe-file-upload__file-item-filename {
+                    text-decoration: underline;
+                }
+
+                ~ .ffe-file-upload__file-item-error-info
+                    > .ffe-file-upload__file-item-error-filename {
+                    text-decoration: underline;
+                }
+
+                ~ .ffe-file-upload__file-item-stencil-info
+                    > .ffe-file-upload__file-item-stencil-info-filename {
+                    text-decoration: underline;
+                }
+
+                .ffe-file-upload__file-item-delete-button-text {
+                    text-decoration: underline;
+                }
+            }
+        }
+
         &:active,
-        &:focus,
-        &:hover {
+        &:focus {
             color: var(--ffe-v-fileupload-btn-delete-color-hover);
 
             ~ .ffe-file-upload__file-item-filename {
