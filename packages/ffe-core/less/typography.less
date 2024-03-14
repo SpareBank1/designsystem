@@ -299,10 +299,12 @@
     line-height: 1em;
     transition: all @ffe-transition-duration @ffe-ease;
 
-    &:hover {
-        border-bottom-color: var(--ffe-g-link-color-hover);
-        color: var(--ffe-g-link-color-hover);
-        text-decoration: none;
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            border-bottom-color: var(--ffe-g-link-color-hover);
+            color: var(--ffe-g-link-color-hover);
+            text-decoration: none;
+        }
     }
 
     &:visited {
@@ -339,9 +341,13 @@
     border: 2px solid transparent;
     outline: 0;
     padding: @ffe-spacing-2xs;
-    &:hover {
-        fill: var(--ffe-g-link-icon-color-hover);
+
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            fill: var(--ffe-g-link-icon-color-hover);
+        }
     }
+
     &:focus {
         box-shadow: 0 0 0 2px var(--ffe-g-link-icon-color-focus);
     }
