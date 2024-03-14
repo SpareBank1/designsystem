@@ -22,7 +22,12 @@
     overflow: hidden;
     display: flex;
 
-    &:hover,
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            .highlighted();
+        }
+    }
+
     &--highlighted {
         .highlighted();
     }
@@ -77,7 +82,12 @@
 .native & {
     @media (prefers-color-scheme: dark) {
         .ffe-account-suggestion-multi {
-            &:hover,
+            @media (hover: hover) and (pointer: fine) {
+                &:hover {
+                    background: var(--ffe-g-primary-color);
+                }
+            }
+
             &--highlighted {
                 background: var(--ffe-g-primary-color);
             }
