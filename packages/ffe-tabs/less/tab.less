@@ -58,9 +58,11 @@
         overflow: unset;
     }
 
-    &:hover {
-        color: var(--ffe-v-tabs-secondary-color);
-        background-color: var(--ffe-v-tabs-tab-hover-color);
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            color: var(--ffe-v-tabs-secondary-color);
+            background-color: var(--ffe-v-tabs-tab-hover-color);
+        }
     }
 
     &--selected,
@@ -69,8 +71,10 @@
         color: var(--ffe-v-tabs-secondary-color);
         z-index: 2;
 
-        &:hover {
-            background-color: var(--ffe-v-tabs-tab-active-hover-color);
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                background-color: var(--ffe-v-tabs-tab-active-hover-color);
+            }
         }
     }
 
