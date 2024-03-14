@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [18.0.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@18.0.13...@sb1/ffe-buttons@18.0.14) (2024-03-14)
+
+### Bug Fixes
+
+-   **ffe-buttons:** hovering styles only when using pointer/mouse ([56bcbdb](https://github.com/SpareBank1/designsystem/commit/56bcbdbcb44975540c4afd4e1dd2d788b23294ac))
+
 ## [18.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@18.0.12...@sb1/ffe-buttons@18.0.13) (2024-03-13)
 
 ### Bug Fixes

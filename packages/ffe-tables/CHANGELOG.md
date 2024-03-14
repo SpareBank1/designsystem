@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [14.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@14.0.8...@sb1/ffe-tables@14.0.9) (2024-03-14)
+
+### Bug Fixes
+
+-   **ffe-tables:** hovering styles only when using pointer/mouse ([1aa5aad](https://github.com/SpareBank1/designsystem/commit/1aa5aad602e83dbe15ebc6dacd1f3c78b2001239))
+
 ## [14.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@14.0.7...@sb1/ffe-tables@14.0.8) (2024-03-08)
 
 **Note:** Version bump only for package @sb1/ffe-tables

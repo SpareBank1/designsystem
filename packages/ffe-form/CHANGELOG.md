@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [28.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@28.0.9...@sb1/ffe-form@28.0.10) (2024-03-14)
+
+### Bug Fixes
+
+-   **ffe-form:** hovering styles only when using pointer/mouse ([b4f5eb5](https://github.com/SpareBank1/designsystem/commit/b4f5eb5afdb41847bb7993f726bde312f6acc135))
+
 ## [28.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@28.0.8...@sb1/ffe-form@28.0.9) (2024-03-13)
 
 **Note:** Version bump only for package @sb1/ffe-form

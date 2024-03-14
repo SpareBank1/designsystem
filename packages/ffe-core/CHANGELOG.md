@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [27.3.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@27.3.4...@sb1/ffe-core@27.3.5) (2024-03-14)
+
+### Bug Fixes
+
+-   **ffe-core:** hovering styles only when using pointer/mouse ([f2a3753](https://github.com/SpareBank1/designsystem/commit/f2a37536d68197913f07c960ccd26aa67140c9db))
+
 ## [27.3.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@27.3.3...@sb1/ffe-core@27.3.4) (2024-03-08)
 
 ### Bug Fixes

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@8.0.9...@sb1/ffe-context-message@8.0.10) (2024-03-14)
+
+### Bug Fixes
+
+-   **ffe-context-message:** hovering styles only when using pointer/mouse ([c744d0e](https://github.com/SpareBank1/designsystem/commit/c744d0e93ff911f92246bc4f1e2d69848e4ded3f))
+
 ## [8.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-context-message@8.0.8...@sb1/ffe-context-message@8.0.9) (2024-03-08)
 
 **Note:** Version bump only for package @sb1/ffe-context-message

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@12.0.8...@sb1/ffe-message-box@12.0.9) (2024-03-14)
+
+### Bug Fixes
+
+-   **ffe-message-box:** hovering styles only when using pointer/mouse ([74e7357](https://github.com/SpareBank1/designsystem/commit/74e73574138e62d8395e5982887f001791b444de))
+
 ## [12.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@12.0.7...@sb1/ffe-message-box@12.0.8) (2024-03-08)
 
 **Note:** Version bump only for package @sb1/ffe-message-box

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.0.22](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload@10.0.21...@sb1/ffe-file-upload@10.0.22) (2024-03-14)
+
+### Bug Fixes
+
+-   **ffe-file-upload:** hovering styles only when using pointer/mouse ([cbbb373](https://github.com/SpareBank1/designsystem/commit/cbbb3733abe5769443994e82a673056472476949))
+
 ## [10.0.21](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-file-upload@10.0.20...@sb1/ffe-file-upload@10.0.21) (2024-03-13)
 
 **Note:** Version bump only for package @sb1/ffe-file-upload

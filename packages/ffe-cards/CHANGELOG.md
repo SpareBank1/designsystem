@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [17.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@17.0.9...@sb1/ffe-cards@17.0.10) (2024-03-14)
+
+### Bug Fixes
+
+-   **ffe-cards:** hovering styles only when using pointer/mouse ([3d04cca](https://github.com/SpareBank1/designsystem/commit/3d04ccaa37ac7d17a2d9345a36799e062de71bbf))
+
 ## [17.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@17.0.8...@sb1/ffe-cards@17.0.9) (2024-03-08)
 
 **Note:** Version bump only for package @sb1/ffe-cards

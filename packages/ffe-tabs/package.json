@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-tabs",
-    "version": "13.1.10",
+    "version": "13.1.11",
     "license": "MIT",
     "author": "SpareBank1",
     "files": [
@@ -15,7 +15,7 @@
         "test": "npm run lint"
     },
     "dependencies": {
-        "@sb1/ffe-core": "^27.3.4"
+        "@sb1/ffe-core": "^27.3.5"
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.5.1"

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@10.0.8...@sb1/ffe-accordion@10.0.9) (2024-03-14)
+
+### Bug Fixes
+
+-   **ffe-accordion:** hovering styles only when using pointer/mouse ([1e77004](https://github.com/SpareBank1/designsystem/commit/1e77004e153c5add97539b6f30b3f4fa9772fde8))
+
 ## [10.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion@10.0.7...@sb1/ffe-accordion@10.0.8) (2024-03-08)
 
 **Note:** Version bump only for package @sb1/ffe-accordion

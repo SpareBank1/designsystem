@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.0.22](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@12.0.21...@sb1/ffe-datepicker@12.0.22) (2024-03-14)
+
+### Bug Fixes
+
+-   **ffe-datepicker:** hovering styles only when using pointer/mouse ([010d540](https://github.com/SpareBank1/designsystem/commit/010d540e19daa3ea0774414e85dcd5d59beaa82c))
+
 ## [12.0.21](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@12.0.20...@sb1/ffe-datepicker@12.0.21) (2024-03-13)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker

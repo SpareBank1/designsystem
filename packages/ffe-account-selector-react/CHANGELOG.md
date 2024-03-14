@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [23.0.31](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@23.0.30...@sb1/ffe-account-selector-react@23.0.31) (2024-03-14)
+
+### Bug Fixes
+
+-   **ffe-account-selector-react:** hovering styles only when using pointer/mouse ([b9666b3](https://github.com/SpareBank1/designsystem/commit/b9666b325ee668d56ca2d688ea88d856f7031cd8))
+
 ## [23.0.30](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@23.0.29...@sb1/ffe-account-selector-react@23.0.30) (2024-03-13)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
