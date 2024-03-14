@@ -17,7 +17,17 @@
             display: none;
         }
 
-        &:hover,
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                .ffe-feedback__thumb-icon--fill {
+                    display: block;
+                }
+                .ffe-feedback__thumb-icon {
+                    display: none;
+                }
+            }
+        }
+
         &:focus {
             .ffe-feedback__thumb-icon--fill {
                 display: block;
