@@ -7,19 +7,22 @@
         border-radius: 4px 4px 0 0;
         padding-top: 2px;
 
-        &:hover {
-            cursor: pointer;
-            color: var(--ffe-v-table-sortable-header-hover);
-            border-color: inherit;
-            user-select: none;
-            .native & {
-                @media (prefers-color-scheme: dark) {
-                    border-color: var(--ffe-v-table-sortable-header-hover);
-                }
-            }
-
-            .ffe-sortable-table__sort-arrow.ffe-icons {
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                cursor: pointer;
                 color: var(--ffe-v-table-sortable-header-hover);
+                border-color: inherit;
+                user-select: none;
+
+                .native & {
+                    @media (prefers-color-scheme: dark) {
+                        border-color: var(--ffe-v-table-sortable-header-hover);
+                    }
+                }
+
+                .ffe-sortable-table__sort-arrow.ffe-icons {
+                    color: var(--ffe-v-table-sortable-header-hover);
+                }
             }
         }
 
