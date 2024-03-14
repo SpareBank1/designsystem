@@ -63,13 +63,15 @@
         color: var(--ffe-v-button-primary-color);
     }
 
-    &:hover .ffe-inline-button__icon {
-        color: var(--ffe-v-button-primary-color-hover);
-    }
+    @media (hover: hover) and (pointer: fine) {
+        &:hover .ffe-inline-button__icon {
+            color: var(--ffe-v-button-primary-color-hover);
+        }
 
-    &:hover .ffe-inline-button__label {
-        color: var(--ffe-v-button-secondary-color-hover);
-        border-bottom-color: var(--ffe-v-button-secondary-color-hover);
+        &:hover .ffe-inline-button__label {
+            color: var(--ffe-v-button-secondary-color-hover);
+            border-bottom-color: var(--ffe-v-button-secondary-color-hover);
+        }
     }
 }
 
@@ -83,9 +85,11 @@
         color: var(--ffe-v-button-primary-color);
         transition: transform @ffe-transition-duration @ffe-ease-in-out-back;
     }
-    &:hover .ffe-inline-button__icon,
-    &:hover .ffe-inline-button__label {
-        color: var(--ffe-v-button-primary-color-hover);
+    @media (hover: hover) and (pointer: fine) {
+        &:hover .ffe-inline-button__icon,
+        &:hover .ffe-inline-button__label {
+            color: var(--ffe-v-button-primary-color-hover);
+        }
     }
 }
 
@@ -126,15 +130,17 @@
         border-color: transparent;
     }
 
-    &:hover {
-        color: var(--ffe-v-button-tertiary-color-hover);
-
-        .ffe-inline-button__icon {
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
             color: var(--ffe-v-button-tertiary-color-hover);
-        }
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-farge-hvit;
+
+            .ffe-inline-button__icon {
+                color: var(--ffe-v-button-tertiary-color-hover);
+            }
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    color: @ffe-farge-hvit;
+                }
             }
         }
     }

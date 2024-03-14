@@ -85,8 +85,10 @@
         background-color: var(--ffe-v-button-action-color);
     }
 
-    &:hover {
-        background-color: var(--ffe-v-button-action-color-hover);
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            background-color: var(--ffe-v-button-action-color-hover);
+        }
     }
 }
 
@@ -102,8 +104,10 @@
         background-color: var(--ffe-v-button-primary-color);
     }
 
-    &:hover {
-        background-color: var(--ffe-v-button-primary-color-hover);
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            background-color: var(--ffe-v-button-primary-color-hover);
+        }
     }
 }
 
@@ -129,19 +133,23 @@
         }
     }
 
-    &:hover {
-        background-color: var(--ffe-v-button-secondary-color);
-        border-color: var(--ffe-v-button-secondary-color);
-        color: var(--ffe-v-button-secondary-color-bg);
-
-        .ffe-button__icon {
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            background-color: var(--ffe-v-button-secondary-color);
+            border-color: var(--ffe-v-button-secondary-color);
             color: var(--ffe-v-button-secondary-color-bg);
-        }
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                background-color: var(--ffe-v-button-secondary-border-color);
-                border-color: var(--ffe-v-button-secondary-border-color);
+
+            .ffe-button__icon {
                 color: var(--ffe-v-button-secondary-color-bg);
+            }
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    background-color: var(
+                        --ffe-v-button-secondary-border-color
+                    );
+                    border-color: var(--ffe-v-button-secondary-border-color);
+                    color: var(--ffe-v-button-secondary-color-bg);
+                }
             }
         }
     }
@@ -172,12 +180,14 @@
         color: var(--ffe-v-button-task-primary-color);
     }
 
-    &:hover {
-        color: var(--ffe-v-button-task-text-color-hover);
-        box-shadow: none;
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            color: var(--ffe-v-button-task-text-color-hover);
+            box-shadow: none;
 
-        .ffe-button__icon > .ffe-icons {
-            color: var(--ffe-v-button-primary-color-text);
+            .ffe-button__icon > .ffe-icons {
+                color: var(--ffe-v-button-primary-color-text);
+            }
         }
     }
 
@@ -215,9 +225,14 @@
         will-change: transform;
     }
 
-    .ffe-button--shortcut:focus &,
-    .ffe-button--shortcut:hover & {
+    .ffe-button--shortcut:focus & {
         transform: translateX(12px);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        .ffe-button--shortcut:hover & {
+            transform: translateX(12px);
+        }
     }
 
     .ffe-button--task & {
@@ -242,19 +257,24 @@
     .ffe-button--expand & {
         color: var(--ffe-v-button-task-primary-color);
     }
-    .ffe-button--expand:hover & {
-        color: @ffe-farge-hvit;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: @ffe-farge-svart;
+    @media (hover: hover) and (pointer: fine) {
+        .ffe-button--expand:hover & {
+            color: @ffe-farge-hvit;
+
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    color: @ffe-farge-svart;
+                }
             }
         }
     }
 
-    .ffe-button--task:hover & {
-        border-color: var(--ffe-v-button-primary-color);
-        background-color: var(--ffe-v-button-primary-color);
-        color: var(--ffe-v-button-primary-color-text);
+    @media (hover: hover) and (pointer: fine) {
+        .ffe-button--task:hover & {
+            border-color: var(--ffe-v-button-primary-color);
+            background-color: var(--ffe-v-button-primary-color);
+            color: var(--ffe-v-button-primary-color-text);
+        }
     }
 }
 
