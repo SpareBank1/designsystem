@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner-react@7.0.8...@sb1/ffe-spinner-react@7.0.9) (2024-03-15)
+
+### Bug Fixes
+
+-   **ffe-spinner-react:** locale for translating aria label ([76bd776](https://github.com/SpareBank1/designsystem/commit/76bd776e0178a3604ccc0df5e80c3a8bcd1defda))
+
 ## [7.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner-react@7.0.7...@sb1/ffe-spinner-react@7.0.8) (2024-03-14)
 
 **Note:** Version bump only for package @sb1/ffe-spinner-react
