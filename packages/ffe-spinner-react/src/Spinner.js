@@ -1,8 +1,16 @@
 import React from 'react';
-import { bool, string, node } from 'prop-types';
+import { bool, string, node, oneOf } from 'prop-types';
 import classNames from 'classnames';
+import texts from './texts';
 
-const Spinner = ({ className, immediate, large, loadingText, ...rest }) => (
+const Spinner = ({
+    className,
+    immediate,
+    large,
+    loadingText,
+    locale,
+    ...rest
+}) => (
     <div aria-live="assertive" className={className} {...rest}>
         <span
             className={classNames(
@@ -11,7 +19,7 @@ const Spinner = ({ className, immediate, large, loadingText, ...rest }) => (
                 { 'ffe-loading-spinner--large': large },
             )}
             role="img"
-            aria-label="Vennligst vent"
+            aria-label={texts[locale].ariaLabel}
             aria-hidden={!!loadingText}
         />
         {loadingText}
@@ -23,11 +31,14 @@ Spinner.propTypes = {
     immediate: bool,
     large: bool,
     loadingText: node,
+    /** 'nb', 'nn', or 'en' */
+    locale: oneOf(['en', 'nb', 'nn']),
 };
 
 Spinner.defaultProps = {
     immediate: false,
     large: false,
+    locale: 'nb',
 };
 
 export default Spinner;
