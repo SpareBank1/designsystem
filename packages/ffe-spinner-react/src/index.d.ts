@@ -5,6 +5,7 @@ export interface SpinnerProps extends React.ComponentProps<'span'> {
     immediate?: boolean;
     large?: boolean;
     loadingText: React.ReactNode;
+    locale?: 'en' | 'nb' | 'nn';
 }
 
 declare class Spinner extends React.Component<SpinnerProps, any> {}
