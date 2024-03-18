@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.4.25](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@5.4.24...@sb1/ffe-component-index@5.4.25) (2024-03-18)
+
+### Bug Fixes
+
+-   **component-overview:** legger til fungerende ikon i eksempel på secondarybutton ([d447d89](https://github.com/SpareBank1/designsystem/commit/d447d8927be310f463bb01377f9a11a5cc1287c0))
+
 ## [5.4.24](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@5.4.23...@sb1/ffe-component-index@5.4.24) (2024-03-15)
 
 **Note:** Version bump only for package @sb1/ffe-component-index
