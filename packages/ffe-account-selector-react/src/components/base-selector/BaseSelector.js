@@ -264,13 +264,9 @@ class BaseSelector extends Component {
 
 BaseSelector.propTypes = {
     suggestions: arrayOf(object).isRequired,
-    suggestionFilter: func.isRequired,
-    onSelect: func.isRequired,
     value: string.isRequired,
     locale: Locale.isRequired,
-    shouldHideSuggestionsOnSelect: bool.isRequired,
     shouldSelectHighlightedOnTab: bool.isRequired,
-    shouldHideSuggestionsOnBlur: bool.isRequired,
     shouldHideSuggestionsOnReset: bool.isRequired,
     shouldShowSuggestionsOnFocus: bool,
     onSuggestionSelect: func.isRequired,
@@ -298,7 +294,6 @@ BaseSelector.defaultProps = {
     onSuggestionListChange: Function.prototype,
     ariaInvalid: false,
     placeholder: '',
-    value: '',
     shouldShowSuggestionsOnFocus: true,
     highCapacity: false,
 };
