@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner-react@7.0.9...@sb1/ffe-spinner-react@7.0.10) (2024-03-20)
+
+### Bug Fixes
+
+-   **ffe-spinner-react:** gjør loadingText optional i typings ([24efaaf](https://github.com/SpareBank1/designsystem/commit/24efaaf4bc921bb4fcef4ecdb56f0b54928471a6))
+
 ## [7.0.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner-react@7.0.8...@sb1/ffe-spinner-react@7.0.9) (2024-03-15)
 
 ### Bug Fixes
