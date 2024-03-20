@@ -3,7 +3,7 @@
     background-color: var(--ffe-v-input-bg-color);
     background-size: 24px 24px;
     background-repeat: no-repeat;
-    background-position: ~'calc(100% - 9px) 50%';
+    background-position: calc(100% - 6px) 50%;
     border: 2px solid var(--ffe-g-border-color);
     border-radius: var(--ffe-g-border-radius);
     color: var(--ffe-v-input-color);
@@ -35,19 +35,7 @@
     &:active {
         border-color: var(--ffe-v-input-bg-color);
         box-shadow: 0 0 0 2px var(--ffe-g-primary-color);
-        background-image: url('data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3Asvg%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20x%3D%220%22%20y%3D%220%22%20viewBox%3D%220%200%201000%201000%22%20width%3D%2218%22%20height%3D%2218%22%20xml%3Aspace%3D%22preserve%22%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%23002776%22%20d%3D%22M111.1%20228.6c19.2%200%2038.4%207.3%2053%2022l336.7%20336.7%20334.5-334.5c29.3-29.3%2076.8-29.3%20106.1%200%2029.3%2029.3%2029.3%2076.8%200%20106.1L553.8%20746.3c-29.3%2029.3-76.8%2029.3-106.1%200L58.1%20356.6c-29.3-29.3-29.3-76.8%200-106.1C72.7%20235.9%2091.9%20228.6%20111.1%20228.6z%22%20%2F%3E%0A%3C%2Fsvg%3E%0A');
         outline: none;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                background-image: url('data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3Asvg%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20x%3D%220%22%20y%3D%220%22%20viewBox%3D%220%200%201000%201000%22%20width%3D%2218%22%20height%3D%2218%22%20xml%3Aspace%3D%22preserve%22%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M111.1%20228.6c19.2%200%2038.4%207.3%2053%2022l336.7%20336.7%20334.5-334.5c29.3-29.3%2076.8-29.3%20106.1%200%2029.3%2029.3%2029.3%2076.8%200%20106.1L553.8%20746.3c-29.3%2029.3-76.8%2029.3-106.1%200L58.1%20356.6c-29.3-29.3-29.3-76.8%200-106.1C72.7%20235.9%2091.9%20228.6%20111.1%20228.6z%22%20%2F%3E%0A%3C%2Fsvg%3E%0A');
-            }
-        }
-    }
-
-    &:-moz-focusring {
-        color: transparent;
-        text-shadow: 0 0 0 var(--ffe-farge-svart);
-        transition: color 0ms;
     }
 
     &:focus::-ms-value {
