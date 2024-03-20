@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [28.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@28.0.10...@sb1/ffe-form@28.0.11) (2024-03-20)
+
+### Bug Fixes
+
+-   **ffe-form:** farge på chevron ved focus ([2ecfe3d](https://github.com/SpareBank1/designsystem/commit/2ecfe3dd27021fafac5db0e277fdf164b3786382))
+-   **ffe-form:** farge på chevron ved focus og darkmode ([0b4da2d](https://github.com/SpareBank1/designsystem/commit/0b4da2d294a5d6025f304dd39b8742cd79eab2d8))
+-   **ffe-form:** fikser styling på dropdown chevron ([b1a5eed](https://github.com/SpareBank1/designsystem/commit/b1a5eed0ec9e479413f44b30106dd4e28a340788))
+-   **ffe-form:** fjern annen chevron ved focus ([eb9e7ed](https://github.com/SpareBank1/designsystem/commit/eb9e7ed27c94d873e544824dae8d8264ef372b8a))
+
 ## [28.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@28.0.9...@sb1/ffe-form@28.0.10) (2024-03-14)
 
 ### Bug Fixes
