@@ -45,7 +45,7 @@ const InputField = props => {
         if (isSuggestionsShowing) {
             onBlur();
         } else {
-            e.currentTarget.previousElementSibling.focus();
+            e.currentTarget.parentNode.firstElementChild.focus();
             onFocus();
         }
     };

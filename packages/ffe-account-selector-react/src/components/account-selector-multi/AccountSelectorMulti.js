@@ -141,11 +141,14 @@ class AccountSelectorMulti extends React.Component {
 
     render() {
         const {
+            id,
             noMatches,
-            onAccountSelected,
             locale,
             value,
             highCapacity,
+            onChange,
+            onFocus,
+            onReset,
         } = this.props;
         return (
             <div
@@ -153,18 +156,19 @@ class AccountSelectorMulti extends React.Component {
                 onKeyDown={this.onKeyDown}
             >
                 <BaseSelector
+                    id={id}
+                    value={value ?? ''}
+                    onChange={onChange}
+                    onFocus={onFocus}
+                    onReset={onReset}
                     renderSuggestion={account => this.renderSuggestion(account)}
                     renderNoMatches={() => (
                         <AccountNoMatch value={noMatches} locale={locale} />
                     )}
                     suggestionDetails={this.renderSuggestionDetails()}
-                    shouldHideSuggestionsOnSelect={false}
                     shouldSelectHighlightedOnTab={false}
-                    shouldHideSuggestionsOnBlur={false}
                     shouldHideSuggestionsOnReset={true}
                     onSuggestionSelect={this.onSuggestionSelect}
-                    suggestionFilter={accountFilter}
-                    onSelect={onAccountSelected}
                     locale={locale}
                     onSuggestionListChange={height => {
                         this.setState({ suggestionListHeight: height });
@@ -173,7 +177,6 @@ class AccountSelectorMulti extends React.Component {
                     ref={element => {
                         this.baseRef = element;
                     }}
-                    {...this.props}
                     onBlur={e => this.onBlur(e)}
                     highCapacity={highCapacity}
                 />
@@ -215,6 +218,7 @@ AccountSelectorMulti.propTypes = {
     onChange: func,
     onFocus: func,
     onBlur: func.isRequired,
+    onReset: func,
     onSelectAll: func,
     /**
      * Array of objects:

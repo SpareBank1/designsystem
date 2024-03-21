@@ -18,14 +18,11 @@ function propsBaseSelector(_suggestions = suggestions()) {
     return {
         suggestions: _suggestions,
         suggestionFilter: () => () => true,
-        onSelect: () => {},
         renderSuggestion: () => <h1>hei</h1>,
         onSuggestionSelect: suggestion => {},
         value: '',
         locale: 'nb',
-        shouldHideSuggestionsOnSelect: true,
         shouldSelectHighlightedOnTab: true,
-        shouldHideSuggestionsOnBlur: true,
         shouldHideSuggestionsOnReset: true,
         id: 'account-selector',
     };
@@ -115,14 +112,9 @@ describe('<BaseSelector> methods', () => {
     });
 
     it('should not hide suggestions when suggestion is empty', () => {
-        const onSelectSpy = jest.fn();
-        const component = mountBaseSelector({
-            onSelect: onSelectSpy,
-            shouldHideSuggestionsOnSelect: false,
-        }).instance();
+        const component = mountBaseSelector().instance();
 
         component.props.onSuggestionSelect(null);
-        expect(onSelectSpy).not.toHaveBeenCalled();
         expect(component.state.showSuggestions).toBe(false);
     });
 
