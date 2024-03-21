@@ -162,7 +162,7 @@ export const SearchableDropdown = ({
     const handleContainerFocus = e => {
         const isFocusInside =
             containerRef.current.contains(e.target) ||
-            e.__isEventFromFFESearchableDropdown;
+            e.__eventFromFFESearchableDropdownId === id;
 
         if (!isFocusInside) {
             dispatch({
@@ -187,7 +187,7 @@ export const SearchableDropdown = ({
      */
     function addFlagOnEventHandler(event) {
         // eslint-disable-next-line no-param-reassign
-        event.nativeEvent.__isEventFromFFESearchableDropdown = true;
+        event.nativeEvent.__eventFromFFESearchableDropdownId = id;
     }
 
     const handleKeyDown = event => {
