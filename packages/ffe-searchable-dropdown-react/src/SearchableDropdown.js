@@ -154,31 +154,31 @@ export const SearchableDropdown = ({
         }
     }, [state.isExpanded, onOpen, onClose]);
 
-    /**
-     * Because of changes in event handling between react v16 and v17, the check for the
-     * event flag will only work in react v17. Therefore, we also check Element.contains()
-     * to keep react v16 compatibility.
-     */
-    const handleContainerFocus = e => {
-        const isFocusInside =
-            containerRef.current.contains(e.target) ||
-            e.__eventFromFFESearchableDropdownId === id;
-
-        if (!isFocusInside) {
-            dispatch({
-                type: stateChangeTypes.FocusMovedOutSide,
-            });
-        }
-    };
-
     useEffect(() => {
+        /**
+         * Because of changes in event handling between react v16 and v17, the check for the
+         * event flag will only work in react v17. Therefore, we also check Element.contains()
+         * to keep react v16 compatibility.
+         */
+        const handleContainerFocus = e => {
+            const isFocusInside =
+                containerRef.current.contains(e.target) ||
+                e.__eventFromFFESearchableDropdownId === id;
+
+            if (!isFocusInside) {
+                dispatch({
+                    type: stateChangeTypes.FocusMovedOutSide,
+                });
+            }
+        };
+
         document.addEventListener('mousedown', handleContainerFocus);
         document.addEventListener('focusin', handleContainerFocus);
         return () => {
             document.removeEventListener('mousedown', handleContainerFocus);
             document.removeEventListener('focusin', handleContainerFocus);
         };
-    }, []);
+    }, [id]);
 
     /**
      * Adds a flag on the event so that handleContainerFocus()
