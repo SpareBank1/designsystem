@@ -32,6 +32,18 @@ export interface DescriptionListProps extends BaseListProps {
     horizontal?: boolean;
 }
 
+export interface DetailListCardItemProps
+    extends React.ComponentPropsWithoutRef<'div'> {
+    label: NonNullable<React.ReactNode>;
+    value: NonNullable<React.ReactNode>;
+}
+
+export interface DetailListCard extends React.ComponentPropsWithoutRef<'dl'> {
+    children:
+        | NonNullable<React.ReactNode>
+        | ((props: DetailListCardItemProps) => NonNullable<React.ReactNode>);
+}
+
 declare class BulletList extends React.Component<
     BulletListProps & React.ComponentProps<'ul'>,
     any

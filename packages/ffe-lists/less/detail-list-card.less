@@ -1,0 +1,65 @@
+.ffe-detail-list-card {
+    background-color: var(--ffe-v-detail-list-card-background-color);
+    border-radius: var(--ffe-v-detail-list-card-border-radius);
+    font-family: var(--ffe-g-font);
+    font-variant-numeric: tabular-nums;
+    container-type: inline-size;
+
+    &__item:not(:last-child) {
+        border-bottom: 1px solid var(--ffe-v-detail-list-card-border-color);
+    }
+
+    &__item {
+        padding: var(--ffe-spacing-sm);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--ffe-spacing-xs);
+        overflow-wrap: anywhere;
+        text-wrap: balance;
+
+        &:is(button) {
+            background-color: transparent;
+            border: 0;
+            width: 100%;
+            color: inherit;
+        }
+
+        &:is(a) {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        &:is(:first-child) {
+            border-radius: var(--ffe-v-detail-list-card-border-radius)
+                var(--ffe-v-detail-list-card-border-radius) 0 0;
+        }
+
+        &:is(:last-child) {
+            border-radius: 0 0 var(--ffe-v-detail-list-card-border-radius)
+                var(--ffe-v-detail-list-card-border-radius);
+        }
+
+        &-label {
+            font-family: var(--ffe-g-font-heading-small);
+            color: var(--ffe-g-secondary-color);
+        }
+
+        &-value {
+            margin: 0; // Removes the default dd-element margin when it breaks to a new line
+            display: flex;
+            align-items: center;
+
+            & > a,
+            & > button {
+                min-width: 24px; // Secures a minimal size for clickable area in WCAG
+            }
+        }
+
+        @container (width < 299px) {
+            flex-direction: column;
+            align-items: normal;
+        }
+    }
+}
