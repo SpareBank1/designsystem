@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.4.30](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@5.4.29...@sb1/ffe-component-index@5.4.30) (2024-03-25)
+
+### Bug Fixes
+
+-   **component-overview:** legg til detailListCard eksempler ([707a822](https://github.com/SpareBank1/designsystem/commit/707a82294d12ed38a7897980e686f73032a3cbea))
+
 ## [5.4.29](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@5.4.28...@sb1/ffe-component-index@5.4.29) (2024-03-22)
 
 **Note:** Version bump only for package @sb1/ffe-component-index

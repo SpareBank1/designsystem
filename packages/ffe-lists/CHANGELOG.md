@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [15.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@15.0.5...@sb1/ffe-lists@15.1.0) (2024-03-25)
+
+### Features
+
+-   **ffe-lists:** legg til detailListCard komponent styling ([ba78958](https://github.com/SpareBank1/designsystem/commit/ba789586b53ef1b027870c32279da220ff0eb7f9))
+
 ## [15.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists@15.0.4...@sb1/ffe-lists@15.0.5) (2024-03-14)
 
 **Note:** Version bump only for package @sb1/ffe-lists

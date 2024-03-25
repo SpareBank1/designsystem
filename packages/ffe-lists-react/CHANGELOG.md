@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [9.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@9.0.5...@sb1/ffe-lists-react@9.1.0) (2024-03-25)
+
+### Features
+
+-   **ffe-lists-react:** legg til DetailListCard og DetailListCardItem komponent ([39ed3ad](https://github.com/SpareBank1/designsystem/commit/39ed3adf5a9b2d4dab845375a59ee3a185dfc581))
+
 ## [9.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@9.0.4...@sb1/ffe-lists-react@9.0.5) (2024-03-14)
 
 **Note:** Version bump only for package @sb1/ffe-lists-react
