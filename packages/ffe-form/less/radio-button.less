@@ -1,5 +1,7 @@
 .ffe-radio-button {
     --line-height: 1.15rem;
+    --outer-circle-color: var(--ffe-g-border-color);
+    --inner-circle-color: transparent;
 
     line-height: var(--line-height);
     overflow-wrap: anywhere;
@@ -58,95 +60,62 @@
     &::before,
     &::after {
         content: '';
-        width: 20px;
-        height: 20px;
         border-radius: 50%;
         pointer-events: none;
         left: 0;
         grid-column: 1/2;
         grid-row: 1/2;
+        transition: all @ffe-transition-duration @ffe-ease;
+        place-self: center;
     }
 
     &::before {
-        background-color: @ffe-farge-hvit;
-        border: 10px solid @ffe-farge-hvit;
-        transition: all @ffe-transition-duration @ffe-ease;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                background-color: @ffe-farge-svart;
-                border-color: @ffe-farge-svart;
-            }
-        }
+        background-color: var(--inner-circle-color);
+        width: 60%;
+        aspect-ratio: 1;
     }
 
     &::after {
-        border: 2px solid var(--ffe-g-border-color);
-        transition: all @ffe-transition-duration @ffe-ease;
-    }
-
-    [aria-invalid='true'] &::after {
-        border-color: var(--ffe-g-error-color);
+        border: 2px solid var(--outer-circle-color);
+        width: 20px;
+        height: 20px;
     }
 }
 
 .ffe-radio-input {
-    @media (hover: hover) and (pointer: fine) {
-        &:hover + .ffe-radio-button::before {
-            outline: none;
-        }
-    }
-
-    &:checked + .ffe-radio-button::before,
-    &:focus + .ffe-radio-button::before,
-    &:active + .ffe-radio-button::before {
+    &:where(:checked, :focus, :active, :hover) + .ffe-radio-button::before {
         outline: none;
     }
 
     @media (hover: hover) and (pointer: fine) {
-        &:hover + .ffe-radio-button::after {
-            border-color: var(--ffe-g-primary-color);
+        &:hover + .ffe-radio-button {
+            --outer-circle-color: var(--ffe-g-primary-color);
         }
     }
 
-    &:checked + .ffe-radio-button::after {
-        border-color: var(--ffe-g-primary-color);
+    &:checked + .ffe-radio-button {
+        --inner-circle-color: var(--ffe-g-primary-color);
     }
 
-    &:checked + .ffe-radio-button::before {
-        background-color: var(--ffe-g-primary-color);
-        border: 5px solid @ffe-farge-hvit;
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                background-color: @ffe-farge-vann-30;
-                border-color: @ffe-farge-svart;
-            }
-        }
-    }
+    &:focus-visible + .ffe-radio-button::after {
+        --background-color: @ffe-farge-hvit;
 
-    &:focus + .ffe-radio-button::after {
-        box-shadow: 0 0 0 3px @ffe-farge-hvit,
+        box-shadow: 0 0 0 3px var(--background-color),
             0 0 0 5px var(--ffe-g-primary-color);
 
         .native & {
             @media (prefers-color-scheme: dark) {
-                box-shadow: 0 0 0 3px @ffe-farge-svart,
-                    0 0 0 5px @ffe-farge-hvit;
+                --background-color: @ffe-farge-svart;
             }
         }
     }
 
-    &:focus:not(:focus-visible) + .ffe-radio-button::after {
-        box-shadow: none;
+    &[aria-invalid='true'] + .ffe-radio-button {
+        --outer-circle-color: var(--ffe-g-error-color);
     }
 
-    [aria-invalid='true'] &:checked + .ffe-radio-button::after {
-        border-color: var(--ffe-g-error-color);
-    }
-
-    @media (hover: hover) and (pointer: fine) {
-        [aria-invalid='true'] &:hover + .ffe-radio-button::after {
-            border-color: var(--ffe-g-error-color);
-        }
+    &:checked[aria-invalid='true'] + .ffe-radio-button {
+        --inner-circle-color: var(--ffe-g-error-color);
     }
 }
 
