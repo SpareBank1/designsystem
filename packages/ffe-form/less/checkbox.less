@@ -1,5 +1,7 @@
 .ffe-checkbox {
     --line-height: 1.15rem;
+    --square-color: var(--ffe-v-checkbox-color);
+    --checkmark-color: transparent;
 
     line-height: var(--line-height);
     display: grid;
@@ -35,15 +37,14 @@
         content: '';
         grid-column: 1/2;
         grid-row: 1/2;
+        transition: all @ffe-transition-duration @ffe-ease;
     }
 
     &::before {
-        border: solid 2px var(--ffe-v-checkbox-color);
+        border: solid 2px var(--square-color);
         border-radius: var(--ffe-g-border-radius);
         height: 20px;
         width: 20px;
-        transition: all @ffe-transition-duration @ffe-ease;
-        background-color: var(--ffe-v-input-bg-color);
     }
 
     &--hidden-label {
@@ -58,10 +59,10 @@
 
     &::after {
         transform: scaleX(-1) rotate(180deg + -45deg);
-        border-right: 3px solid transparent;
-        border-top: 3px solid transparent;
+        border-right: 3px solid var(--checkmark-color);
+        border-top: 3px solid var(--checkmark-color);
         width: 6px;
-        transition: height @ffe-transition-duration @ffe-ease;
+        height: 11px;
     }
 }
 
@@ -77,39 +78,27 @@
     width: 0;
     height: 0;
 
-    &:checked + .ffe-checkbox::before,
-    &:focus + .ffe-checkbox::before,
-    &:active + .ffe-checkbox::before {
+    &:where(:checked, :focus, :active, :hover) + .ffe-checkbox::before {
         outline: none;
     }
 
     @media (hover: hover) and (pointer: fine) {
-        &:hover + .ffe-checkbox::before {
-            outline: none;
-            border-color: var(--ffe-v-checkbox-color);
+        &:hover + .ffe-checkbox {
+            --square-color: var(--ffe-v-checkbox-selected-color);
         }
     }
 
-    &:focus + .ffe-checkbox::before {
+    &:focus-visible + .ffe-checkbox::before {
         box-shadow: 0 0 0 3px var(--ffe-v-input-bg-color),
             0 0 0 5px var(--ffe-v-checkbox-focus-outline-color);
     }
 
-    &:focus:not(:focus-visible) + .ffe-checkbox::before {
-        box-shadow: none;
+    &:checked + .ffe-checkbox {
+        --square-color: var(--ffe-v-checkbox-selected-color);
+        --checkmark-color: var(--ffe-v-checkbox-marker-color);
     }
 
-    &:checked + .ffe-checkbox::before {
-        border-color: var(--ffe-v-checkbox-selected-color);
-        background-color: var(--ffe-v-input-bg-color);
-    }
-
-    &:checked + .ffe-checkbox::after {
-        border-color: var(--ffe-v-checkbox-marker-color);
-        height: 11px;
-    }
-
-    &[aria-invalid='true'] + .ffe-checkbox::before {
-        border-color: var(--ffe-g-error-color);
+    &[aria-invalid='true'] + .ffe-checkbox {
+        --square-color: var(--ffe-g-error-color);
     }
 }
