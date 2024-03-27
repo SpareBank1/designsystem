@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.5.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@5.4.31...@sb1/ffe-component-index@5.5.0) (2024-03-27)
+
+### Features
+
+-   **component-overview:** added invalid radio button example ([73507d8](https://github.com/SpareBank1/designsystem/commit/73507d876e1df372247f460b9875a4a46ee1d4d0))
+
 ## [5.4.31](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@5.4.30...@sb1/ffe-component-index@5.4.31) (2024-03-27)
 
 **Note:** Version bump only for package @sb1/ffe-component-index

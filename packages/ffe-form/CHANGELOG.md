@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [28.0.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@28.0.11...@sb1/ffe-form@28.0.12) (2024-03-27)
+
+### Bug Fixes
+
+-   **ffe-form:** fixed invalid radio buttons styles ([be16c44](https://github.com/SpareBank1/designsystem/commit/be16c44be74ef39073ec2206b987f9d25a24cc9a))
+
 ## [28.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@28.0.10...@sb1/ffe-form@28.0.11) (2024-03-20)
 
 ### Bug Fixes
