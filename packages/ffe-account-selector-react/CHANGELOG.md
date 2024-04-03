@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [23.0.38](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@23.0.37...@sb1/ffe-account-selector-react@23.0.38) (2024-04-03)
+
+### Bug Fixes
+
+-   **ffe-account-selector-react:** fix button styling ([729de3c](https://github.com/SpareBank1/designsystem/commit/729de3c870894626776257354c5030418f067a46))
+
 ## [23.0.37](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@23.0.36...@sb1/ffe-account-selector-react@23.0.37) (2024-03-27)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
