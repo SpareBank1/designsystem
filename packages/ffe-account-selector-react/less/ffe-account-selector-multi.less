@@ -34,16 +34,16 @@
             --ffe-v-accountselector-dropdown-statusbar-background-color
         );
         color: var(--ffe-v-accountselector-text-color);
-        height: 60px;
         display: flex;
+        justify-content: space-between;
         align-items: center;
         width: 100%;
         border-bottom-left-radius: 2px;
         border-bottom-right-radius: 2px;
         font-family: var(--ffe-g-font);
-    }
 
-    &__selection-status {
-        width: 100%;
+        .ffe-button {
+            flex-shrink: 0;
+        }
     }
 }
