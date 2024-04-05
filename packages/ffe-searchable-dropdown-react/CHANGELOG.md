@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [17.0.38](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@17.0.37...@sb1/ffe-searchable-dropdown-react@17.0.38) (2024-04-05)
+
+**Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react
+
 ## [17.0.37](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-searchable-dropdown-react@17.0.36...@sb1/ffe-searchable-dropdown-react@17.0.37) (2024-03-27)
 
 **Note:** Version bump only for package @sb1/ffe-searchable-dropdown-react
