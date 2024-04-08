@@ -9,7 +9,7 @@ const {
 } = require('./deleteSvg');
 
 (async () => {
-    const weights = [300, 500];
+    const weights = [300, 400, 500];
     const sizes = [
         { name: 'sm', opsz: 20 },
         { name: 'md', opsz: 24 },
