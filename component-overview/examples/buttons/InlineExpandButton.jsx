@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { InlineExpandButton } from '@sb1/ffe-buttons-react';
-import Collapse from '@sb1/ffe-collapse-react';
+import { Collapse } from '@sb1/ffe-collapse-react';
 import { Paragraph } from '@sb1/ffe-core-react';
 
 () => {
