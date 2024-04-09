@@ -1,3 +1,18 @@
-.ffe-collapse-transition {
-    transition: height @ffe-transition-duration @ffe-ease;
+.ffe-collapse {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows var(--ffe-transition-duration)
+        var(--ffe-ease);
+}
+
+.ffe-collapse--hidden {
+    visibility: hidden;
+}
+
+.ffe-collapse--open {
+    grid-template-rows: 1fr;
+}
+
+.ffe-collapse__inner {
+    overflow: hidden;
 }
