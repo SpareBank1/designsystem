@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [28.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@28.0.12...@sb1/ffe-form@28.0.13) (2024-04-09)
+
+### Bug Fixes
+
+-   **ffe-form:** fix spacing between checkboxes and radio buttons ([e327c42](https://github.com/SpareBank1/designsystem/commit/e327c42decca2414aab86f200dc23b0a0d65460e))
+
 ## [28.0.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@28.0.11...@sb1/ffe-form@28.0.12) (2024-03-27)
 
 ### Bug Fixes

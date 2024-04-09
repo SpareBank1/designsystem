@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-sb1-logos@1.1.4...@sb1/ffe-sb1-logos@1.1.5) (2024-04-09)
+
+### Bug Fixes
+
+-   **ffe-sb1-logos:** cropper vekk whitespace internt i favicon ([cd61f47](https://github.com/SpareBank1/designsystem/commit/cd61f47c6761e7f5705cf84a89b1231d1cee3bba))
+
 ## [1.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-sb1-logos@1.1.3...@sb1/ffe-sb1-logos@1.1.4) (2024-01-22)
 
 ### Bug Fixes
