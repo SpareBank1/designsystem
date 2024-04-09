@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { bool, func, node, string } from 'prop-types';
 import { v4 as uuid } from 'uuid';
 import { Icon } from '@sb1/ffe-icons-react';
-import Collapse from '@sb1/ffe-collapse-react';
+import { Collapse } from '@sb1/ffe-collapse-react';
 import classNames from 'classnames';
 
 const AccordionItem = ({
