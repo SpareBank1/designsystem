@@ -47,7 +47,7 @@
         cursor: pointer;
         border-top-right-radius: 4px;
         border-bottom-right-radius: 4px;
-        transition: all @ffe-transition-duration @ffe-ease;
+        transition: all var(--ffe-transition-duration) var(--ffe-ease);
 
         &:focus,
         &:active {
@@ -69,7 +69,7 @@
     &__icon {
         vertical-align: middle;
         color: var(--ffe-v-datepicker-icon-color);
-        transition: color @ffe-transition-duration @ffe-ease;
+        transition: color var(--ffe-transition-duration) var(--ffe-ease);
 
         .ffe-datepicker__button:hover & {
             color: var(--ffe-v-datepicker-icon-color-hover);
