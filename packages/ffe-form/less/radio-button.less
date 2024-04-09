@@ -1,7 +1,7 @@
 .ffe-radio-button {
-    --line-height: 1.15rem;
+    --line-height: 1.5rem;
     --outer-circle-color: var(--ffe-g-border-color);
-    --inner-circle-color: transparent;
+    --inner-circle-color: var(--ffe-v-input-bg-color);
 
     line-height: var(--line-height);
     overflow-wrap: anywhere;
@@ -12,7 +12,6 @@
     position: relative;
     color: var(--ffe-g-text-color);
     cursor: pointer;
-    margin: 0 0 @ffe-spacing-xs 0;
     transition: width @ffe-transition-duration @ffe-ease-in-out-back;
     text-align: left;
     padding-left: 0;
@@ -20,12 +19,12 @@
     -webkit-tap-highlight-color: fade(@ffe-farge-vann, 15%);
     grid-template-columns: auto 1fr;
     grid-template-rows: var(--line-height) 1fr;
-    grid-column-gap: @ffe-spacing-xs;
+    grid-column-gap: var(--ffe-spacing-xs);
 
     &--inline,
     &--with-tooltip {
         display: inline-grid;
-        margin-right: @ffe-spacing-md;
+        margin-right: var(--ffe-spacing-md);
     }
 
     &--with-tooltip {
@@ -38,7 +37,7 @@
         width: 25px;
         position: absolute;
         right: 0;
-        margin-top: @ffe-spacing-xs;
+        margin-top: var(--ffe-spacing-xs);
 
         & .ffe-tooltip__icon {
             margin: 0;
@@ -48,13 +47,13 @@
     &__tooltip-text.ffe-tooltip__text {
         &:extend(.ffe-small-text);
 
-        margin-left: @ffe-spacing-lg;
+        margin-left: var(--ffe-spacing-lg);
         margin-top: 0;
         margin-bottom: 0;
     }
 
     &__tooltip-text.ffe-tooltip__text--active {
-        margin-top: @ffe-spacing-2xs;
+        margin-top: var(--ffe-spacing-2xs);
     }
 
     &::before,
@@ -82,6 +81,11 @@
     }
 }
 
+.ffe-radio-input + .ffe-radio-button {
+    padding: var(--ffe-spacing-xs) 0;
+    margin-bottom: 0;
+}
+
 .ffe-radio-input {
     &:where(:checked, :focus, :active, :hover) + .ffe-radio-button::before {
         outline: none;
@@ -98,14 +102,14 @@
     }
 
     &:focus-visible + .ffe-radio-button::after {
-        --background-color: @ffe-farge-hvit;
+        --background-color: var(--ffe-farge-hvit);
 
         box-shadow: 0 0 0 3px var(--background-color),
             0 0 0 5px var(--ffe-g-primary-color);
 
         .native & {
             @media (prefers-color-scheme: dark) {
-                --background-color: @ffe-farge-svart;
+                --background-color: var(--ffe-farge-svart);
             }
         }
     }
