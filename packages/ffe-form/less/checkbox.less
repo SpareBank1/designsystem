@@ -1,13 +1,13 @@
 .ffe-checkbox {
-    --line-height: 1.15rem;
+    --line-height: 1.5rem;
     --square-color: var(--ffe-v-checkbox-color);
+    --square-background-color: var(--ffe-v-input-bg-color);
     --checkmark-color: transparent;
 
     line-height: var(--line-height);
     display: grid;
-    grid-column-gap: @ffe-spacing-xs;
+    grid-column-gap: var(--ffe-spacing-xs);
     align-items: center;
-    margin: @ffe-spacing-xs 0;
     cursor: pointer;
     transition: width @ffe-transition-duration @ffe-ease;
     font-family: var(--ffe-g-font);
@@ -28,7 +28,7 @@
 
     &--inline {
         display: inline-grid;
-        margin-right: @ffe-spacing-sm;
+        margin-right: var(--ffe-spacing-sm);
     }
 
     &::before,
@@ -41,6 +41,7 @@
     }
 
     &::before {
+        background: var(--square-background-color);
         border: solid 2px var(--square-color);
         border-radius: var(--ffe-g-border-radius);
         height: 20px;
@@ -64,6 +65,11 @@
         width: 6px;
         height: 11px;
     }
+}
+
+.ffe-hidden-checkbox + .ffe-checkbox {
+    padding: var(--ffe-spacing-xs) 0;
+    margin-bottom: 0;
 }
 
 .ffe-checkbox__content {
