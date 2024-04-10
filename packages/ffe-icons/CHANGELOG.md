@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [13.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@13.1.0...@sb1/ffe-icons@13.2.0) (2024-04-10)
+
+### Features
+
+-   **ffe-icons:** Ruller tilbake "legg til 400 variant og nye ikoner" ([0af46ed](https://github.com/SpareBank1/designsystem/commit/0af46ed4fc3813554460438ac12d55bb1d585293))
+
 # [13.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@13.0.5...@sb1/ffe-icons@13.1.0) (2024-04-08)
 
 ### Features
