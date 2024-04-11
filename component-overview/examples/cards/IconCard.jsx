@@ -1,6 +1,6 @@
 import { IconCard } from '@sb1/ffe-cards-react';
 import { Icon } from '@sb1/ffe-icons-react';
-import savingsIconXlarge from '@sb1/ffe-icons/icons/300/open/xl/savings.svg';
+import savingsIconXlarge from '@sb1/ffe-icons/icons/open/300/xl/savings.svg';
 
 () => {
     return (

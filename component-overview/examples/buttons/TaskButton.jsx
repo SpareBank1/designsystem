@@ -1,6 +1,6 @@
 import { TaskButton, ButtonGroup } from '@sb1/ffe-buttons-react';
 import { Icon } from '@sb1/ffe-icons-react';
-import addIcon from '@sb1/ffe-icons/icons/300/open/md/add.svg';
+import addIcon from '@sb1/ffe-icons/icons/open/300/md/add.svg';
 
 () => {
     return (

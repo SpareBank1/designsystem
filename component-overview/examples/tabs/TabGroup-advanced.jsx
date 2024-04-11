@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { Tab, TabGroup } from '@sb1/ffe-tabs-react';
 import { Icon } from '@sb1/ffe-icons-react';
 import { IconCard } from '@sb1/ffe-cards-react';
-import bilIcon from '@sb1/ffe-icons/icons/300/open/md/directions_car.svg';
-import husIcon from '@sb1/ffe-icons/icons/300/open/md/house.svg';
+import bilIcon from '@sb1/ffe-icons/icons/open/300/md/directions_car.svg';
+import husIcon from '@sb1/ffe-icons/icons/open/300/md/house.svg';
 
 () => {
     const displayNone = {

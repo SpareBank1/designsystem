@@ -1,6 +1,6 @@
 import { ActionButton, ButtonGroup } from '@sb1/ffe-buttons-react';
 import { Icon } from '@sb1/ffe-icons-react';
-import checkIcon from '@sb1/ffe-icons/icons/300/open/md/check.svg';
+import checkIcon from '@sb1/ffe-icons/icons/open/300/md/check.svg';
 
 () => {
     return (
