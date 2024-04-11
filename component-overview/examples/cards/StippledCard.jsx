@@ -1,7 +1,7 @@
 import React from "react";
 import { StippledCard } from '@sb1/ffe-cards-react';
 import { Icon } from '@sb1/ffe-icons-react';
-import monitoringIconXlarge from '@sb1/ffe-icons/icons/300/open/xl/monitoring.svg';
+import monitoringIconXlarge from '@sb1/ffe-icons/icons/open/300/xl/monitoring.svg';
 
 () => {
     return (

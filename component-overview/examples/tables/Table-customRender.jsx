@@ -1,8 +1,8 @@
 import Table from '@sb1/ffe-tables-react';
 import { TertiaryButton } from '@sb1/ffe-buttons-react';
 import { Icon } from '@sb1/ffe-icons-react';
-import checkIcon from '@sb1/ffe-icons/icons/300/open/md/check.svg';
-import closeIcon from '@sb1/ffe-icons/icons/300/open/md/close.svg';
+import checkIcon from '@sb1/ffe-icons/icons/open/300/md/check.svg';
+import closeIcon from '@sb1/ffe-icons/icons/open/300/md/close.svg';
 
 () => {
         const generateCheckbox = value => {
