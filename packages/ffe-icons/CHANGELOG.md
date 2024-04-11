@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [14.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@13.2.0...@sb1/ffe-icons@14.0.0) (2024-04-11)
+
+### Bug Fixes
+
+-   **ffe-icons:** endrer mappe struktur på svg filer ([a19df15](https://github.com/SpareBank1/designsystem/commit/a19df1534135f167876ec50cf0e4913b5026a379))
+
+### BREAKING CHANGES
+
+-   **ffe-icons:** Endret mappe struktur, nå er open/filled første mappe under icons og ikke weight
+    filled ikonene har nå kun 1 tilgjengelig weight
+
 # [13.2.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons@13.1.0...@sb1/ffe-icons@13.2.0) (2024-04-10)
 
 ### Features
