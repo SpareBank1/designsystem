@@ -8,7 +8,7 @@ const fs = require('fs/promises');
 const generateDownloadUrl = (iconName, fill, weight, size) => {
     let style = `wght${weight}${fill === 0 ? '' : 'fill1'}`;
     if (fill === 0 && weight === 400) {
-        style = 'default'; // Can technically be removed since we're not supporting the standard value of 400 font weight. But keeping it in to make sure nothing break if we decide to add it later
+        style = 'default';
     }
     return `https://fonts.gstatic.com/s/i/short-term/release/materialsymbolsrounded/${iconName}/${style}/${size}px.svg`;
 };

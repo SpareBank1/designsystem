@@ -25,11 +25,13 @@ const {
     for (const weight of weights) {
         for (const fillValue of fill) {
             const type = fillValue === 1 ? 'filled' : 'open';
+
             for (const size of sizes) {
-                const dirPath = path.resolve(
-                    __dirname,
-                    `../icons/${weight}/${type}/${size.name}`,
-                );
+                let folderPath = `../icons/${type}/${weight}/${size.name}`;
+                if (type === 'filled') {
+                    folderPath = `../icons/${type}/${size.name}`;
+                }
+                const dirPath = path.resolve(__dirname, folderPath);
                 if (!fs.existsSync(dirPath)) {
                     await makedirs(dirPath);
                 }
