@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.5.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@5.5.6...@sb1/ffe-component-index@5.5.7) (2024-04-11)
+
+### Bug Fixes
+
+-   **component-overview:** oppdater svg paths ([361ec9f](https://github.com/SpareBank1/designsystem/commit/361ec9f658710ecbb3c0b6393c66560adf84f4a7))
+
 ## [5.5.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@5.5.5...@sb1/ffe-component-index@5.5.6) (2024-04-11)
 
 **Note:** Version bump only for package @sb1/ffe-component-index
