@@ -1,14 +1,14 @@
 .ffe-input-field {
     display: block;
-    height: 45px;
-    padding: 0 @ffe-spacing-sm;
+    height: 2.8125rem;
+    padding: 0 var(--ffe-spacing-sm);
     font-family: var(--ffe-g-font);
     font-variant-numeric: tabular-nums;
     background-color: var(--ffe-v-input-bg-color);
     color: var(--ffe-v-input-color);
     border-radius: var(--ffe-g-border-radius);
     border: 2px solid var(--ffe-g-border-color);
-    transition: all @ffe-transition-duration @ffe-ease;
+    transition: all var(--ffe-transition-duration) var(--ffe-ease);
     width: 100%;
     font-size: var(--ffe-fontsize-form-input);
 
@@ -61,7 +61,7 @@
         padding: 0;
         display: inline-block;
         height: 2em;
-        transition: all @ffe-transition-duration @ffe-ease;
+        transition: all var(--ffe-transition-duration) var(--ffe-ease);
 
         .native & {
             @media (prefers-color-scheme: dark) {
