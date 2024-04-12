@@ -70,6 +70,7 @@ declare class AccountSelectorMulti<
 
 export interface BaseSelectorProps<T> {
     suggestions: Array<T>;
+    renderSuggestion: (suggestion: T) => React.ReactNode;
     value: string;
     locale: 'nb' | 'nn' | 'en';
     shouldSelectHighlightedOnTab: boolean;
@@ -82,6 +83,7 @@ export interface BaseSelectorProps<T> {
     onReset?: () => void;
     onFocus?: () => void;
     onSuggestionListChange?: (height: number) => void;
+    renderNoMatches?: () => React.ReactNode;
     placeholder?: string;
     ariaInvalid?: boolean;
     suggestionsHeightMax?: number;
