@@ -1,6 +1,5 @@
 .ffe-input-group {
     border: 0;
-    padding: 0 0 @ffe-spacing-lg;
     position: relative;
 
     [aria-invalid='true'] {
@@ -25,7 +24,7 @@
 
     > * {
         margin-top: 0;
-        margin-bottom: @ffe-spacing-xs;
+        margin-bottom: var(--ffe-spacing-xs);
 
         &:nth-child(1) {
             margin-bottom: 0;
@@ -34,18 +33,22 @@
 
     .ffe-field-message--error {
         margin: 0;
-        height: 0;
     }
+
     &__description {
-        margin-bottom: @ffe-spacing-xs;
+        margin-bottom: var(--ffe-spacing-xs);
     }
 
     &--no-extra-margin {
         padding-bottom: 0;
 
         .ffe-field-message--error {
-            margin-bottom: @ffe-spacing-xs;
+            margin-bottom: var(--ffe-spacing-xs);
             height: initial;
         }
+    }
+
+    &__field-message {
+        min-height: 1lh;
     }
 }
