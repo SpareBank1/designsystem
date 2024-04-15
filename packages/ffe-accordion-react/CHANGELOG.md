@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [11.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@11.0.18...@sb1/ffe-accordion-react@11.1.0) (2024-04-15)
+
+### Features
+
+-   **ffe-accordion-react:** use new version Collapse ([79027a3](https://github.com/SpareBank1/designsystem/commit/79027a3bfdc8e729927506f27b969f66c83f9399))
+
 ## [11.0.18](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@11.0.17...@sb1/ffe-accordion-react@11.0.18) (2024-04-11)
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react

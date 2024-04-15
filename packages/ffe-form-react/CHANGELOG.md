@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [16.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@16.0.16...@sb1/ffe-form-react@16.1.0) (2024-04-15)
+
+### Features
+
+-   **ffe-form-react:** use new version Collapse ([66ea03b](https://github.com/SpareBank1/designsystem/commit/66ea03b54f12554baaed0414b2922e00ab96ad62))
+
 ## [16.0.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@16.0.15...@sb1/ffe-form-react@16.0.16) (2024-04-11)
 
 **Note:** Version bump only for package @sb1/ffe-form-react
