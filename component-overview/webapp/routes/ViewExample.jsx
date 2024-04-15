@@ -27,7 +27,7 @@ const ViewExample = ({ history, exampleId, example }) => {
 
     return (
         <LiveProvider code={example.code} scope={example.scope} theme={theme}>
-            <div
+            <main
                 className={classNames({
                     'sb1ex-page': true,
                     'sb1ex-page--with-nav-overlay': showOverlayMenu,
@@ -62,7 +62,7 @@ const ViewExample = ({ history, exampleId, example }) => {
                     <LivePreview className="sb1ex-live__preview" />
                     <LiveError className="sb1ex-live__error" />
                 </div>
-            </div>
+            </main>
         </LiveProvider>
     );
 };
