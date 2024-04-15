@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Collapse from '@sb1/ffe-collapse-react';
+import { Collapse } from '@sb1/ffe-collapse-react';
 import { ExpandButton } from '@sb1/ffe-buttons-react';
 
 () => {

@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { bool, func, node, string, number } from 'prop-types';
 import classNames from 'classnames';
-import Collapse from '@sb1/ffe-collapse-react';
+import { Collapse } from '@sb1/ffe-collapse-react';
 import { v4 as uuid } from 'uuid';
 
 const Tooltip = React.forwardRef(

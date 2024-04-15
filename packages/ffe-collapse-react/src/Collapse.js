@@ -1,82 +1,53 @@
-import React, { useRef, useState, useEffect } from 'react';
-import { string, bool, func, object } from 'prop-types';
+import React, { useRef, useEffect, useState } from 'react';
+import { string, bool, func, node } from 'prop-types';
 import classNames from 'classnames';
 
-const Collapse = ({ className, style, isOpen, onRest, ...rest }) => {
-    const content = useRef();
-    const [height, setHeight] = useState(() => (isOpen ? 'auto' : '0'));
-    const [overflow, setOverflow] = useState(() =>
-        isOpen ? 'visible' : 'hidden',
-    );
-    const [visibility, setVisibility] = useState(() =>
-        isOpen ? 'visible' : 'hidden',
-    );
+export const Collapse = React.forwardRef(
+    ({ className, isOpen, onRest, children, ...rest }, ref) => {
+        const internalRef = useRef();
+        const collapse = ref ?? internalRef;
+        const [isHidden, setIsHidden] = useState(!isOpen);
 
-    const setExpanded = () => {
-        setHeight('auto');
-        setOverflow('visible');
-    };
-
-    const setCollapsed = () => {
-        setVisibility('hidden');
-    };
-
-    useEffect(() => {
-        if (content.current) {
-            if (isOpen && height !== 'auto') {
-                setHeight(`${content.current.scrollHeight}px`);
-                setVisibility('visible');
-            } else if (!isOpen && height !== '0') {
-                setHeight(`${content.current.scrollHeight}px`);
-                window.requestAnimationFrame(() =>
-                    setTimeout(() => {
-                        setHeight('0');
-                        setOverflow('hidden');
-                    }),
-                );
-            }
-        }
-    }, [isOpen, height]);
-
-    const onTransitionEnd = e => {
-        if (e.target === content.current && e.propertyName === 'height') {
+        useEffect(() => {
             if (isOpen) {
-                setExpanded();
-            } else {
-                setCollapsed();
+                setIsHidden(false);
             }
-            if (onRest) {
-                onRest();
-            }
-        }
-    };
+        }, [isOpen]);
 
-    const mergedStyles = {
-        ...style,
-        willChange: 'height',
-        height,
-        overflow,
-        visibility,
-    };
-
-    return (
-        <div
-            {...rest}
-            ref={content}
-            style={mergedStyles}
-            className={classNames('ffe-collapse-transition', className)}
-            onTransitionEnd={onTransitionEnd}
-        />
-    );
-};
+        return (
+            <div
+                {...rest}
+                ref={collapse}
+                className={classNames('ffe-collapse', className, {
+                    'ffe-collapse--open': isOpen,
+                    'ffe-collapse--hidden': isHidden,
+                })}
+                onTransitionEnd={e => {
+                    if (
+                        e.target === collapse.current &&
+                        e.propertyName === 'grid-template-rows'
+                    ) {
+                        if (onRest) {
+                            onRest();
+                        }
+                        if (!isOpen) {
+                            setIsHidden(true);
+                        }
+                    }
+                }}
+            >
+                <div className="ffe-collapse__inner">{children}</div>
+            </div>
+        );
+    },
+);
 
 Collapse.displayName = 'Collapse';
 
 Collapse.propTypes = {
     className: string,
-    style: object,
     isOpen: bool,
     onRest: func,
+    /** The content to appear when expanded */
+    children: node.isRequired,
 };
-
-export default Collapse;
