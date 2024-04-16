@@ -1,5 +1,5 @@
 .ffe-file-upload {
-    margin-top: @ffe-spacing-2xl;
+    margin-top: var(--ffe-spacing-2xl);
     display: grid;
     max-width: 400px;
     grid-template-columns: 1fr;
@@ -23,22 +23,22 @@
     &__info-section {
         .ffe-body-text();
 
-        margin-bottom: @ffe-spacing-md;
+        margin-bottom: var(--ffe-spacing-md);
         grid-row: 2;
 
         @media (min-width: @breakpoint-md) {
-            margin-right: @ffe-spacing-md;
+            margin-right: var(--ffe-spacing-md);
             margin-bottom: 0;
             grid-column: 1;
         }
     }
 
     &__info-section-text {
-        margin-bottom: @ffe-spacing-sm;
+        margin-bottom: var(--ffe-spacing-sm);
     }
 
     &__file-items-section {
-        margin-top: @ffe-spacing-sm;
+        margin-top: var(--ffe-spacing-sm);
         line-height: 2.1875rem;
         grid-row: 4;
 
@@ -54,16 +54,16 @@
     }
 
     &__upload-section {
-        height: 150px;
+        min-height: 150px;
         background-color: var(--ffe-v-fileupload-bgcolor);
         border-radius: 10px;
         text-align: center;
-        padding: @ffe-spacing-2xs;
+        padding: var(--ffe-spacing-2xs);
         grid-row: 3;
 
         @media (min-width: @breakpoint-md) {
             margin-top: 0;
-            height: 220px;
+            min-height: 220px;
             width: 280px;
             padding: 0;
             grid-row: 2;
@@ -76,9 +76,9 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 140px;
-        margin: @ffe-spacing-2xs;
-        padding: 0 @ffe-spacing-lg;
+        min-height: 140px;
+        margin: var(--ffe-spacing-2xs);
+        padding: var(--ffe-spacing-2xs) var(--ffe-spacing-lg);
         border: 2px dashed var(--ffe-v-fileupload-bordercolor);
         border-radius: 10px;
         position: relative;
@@ -88,7 +88,7 @@
 
         @media (min-width: @breakpoint-md) {
             width: 270px;
-            height: 210px;
+            min-height: 210px;
             right: 0;
             bottom: 0;
         }
@@ -103,7 +103,7 @@
         font-family: var(--ffe-g-font-heading-small);
         font-size: var(--ffe-fontsize-h5);
         color: var(--ffe-g-heading-color);
-        margin-bottom: @ffe-spacing-xs;
+        margin-bottom: var(--ffe-spacing-xs);
         display: none;
 
         @media (min-width: @breakpoint-md) {
@@ -124,7 +124,7 @@
     &__upload-section-subtext {
         .ffe-small-text();
 
-        margin-top: @ffe-spacing-xs;
+        margin-top: var(--ffe-spacing-xs);
     }
 
     &__file-item-delete-icon {
@@ -132,7 +132,7 @@
     }
 
     &__file-item-delete-button {
-        padding-top: @ffe-spacing-2xs;
+        padding-top: var(--ffe-spacing-2xs);
         margin-left: auto;
         background-color: transparent;
         border: none;
@@ -147,7 +147,7 @@
         align-items: center;
 
         @media (min-width: @breakpoint-md) {
-            margin-right: @ffe-spacing-sm;
+            margin-right: var(--ffe-spacing-sm);
         }
 
         @media (hover: hover) and (pointer: fine) {
@@ -220,7 +220,7 @@
     &__file-item-stencil-info-filename {
         .ffe-micro-text();
 
-        margin-top: @ffe-spacing-2xs;
+        margin-top: var(--ffe-spacing-2xs);
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -252,7 +252,7 @@
         border-radius: 50%;
         width: 18px;
         height: 18px;
-        margin-right: @ffe-spacing-2xs;
+        margin-right: var(--ffe-spacing-2xs);
         padding: 3px;
         font-family: arial, sans-serif;
         display: inline-flex;
