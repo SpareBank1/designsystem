@@ -1,12 +1,14 @@
 import { InfoMessage } from '@sb1/ffe-message-box-react';
 import { Paragraph } from '@sb1/ffe-core-react';
 import { Icon } from '@sb1/ffe-icons-react';
-import shoppingCartIcon from '@sb1/ffe-icons/icons/open/300/lg/shopping_cart.svg';
 
 () => {
 
+    const shoppingCartIcon = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iNDAiPjxwYXRoIGQ9Ik0yODkuMzk3LTk4LjEwNHEtMjcuNTQgMC00Ni42NzMtMTkuMzUtMTkuMTMzLTE5LjM0OS0xOS4xMzMtNDYuOTk2IDAtMjcuNjQ2IDE5LjI3MS00Ni44NTUgMTkuMjcxLTE5LjIwOCA0Ni44MDctMTkuMjA4dDQ2LjgwNSAxOS4zNXExOS4yNjkgMTkuMzUgMTkuMjY5IDQ2Ljk5NiAwIDI3LjY0Ny0xOS4zNDkgNDYuODU1LTE5LjM1IDE5LjIwOC00Ni45OTcgMTkuMjA4Wm0zODcuNjkyIDBxLTI3LjU0MSAwLTQ2LjY3NC0xOS4zNS0xOS4xMzMtMTkuMzQ5LTE5LjEzMy00Ni45OTYgMC0yNy42NDYgMTkuMjcxLTQ2Ljg1NSAxOS4yNzEtMTkuMjA4IDQ2LjgwOC0xOS4yMDggMjcuNTM2IDAgNDYuODA1IDE5LjM1dDE5LjI2OSA0Ni45OTZxMCAyNy42NDctMTkuMzUgNDYuODU1dC00Ni45OTYgMTkuMjA4Wk0yMzUuMzMzLTc0MC4xNTVsMTA4LjE1NCAyMjUuODQ4aDI3Ni40ODdxMy40NjIgMCA2LjI4Mi0xLjczMSAyLjgyMS0xLjczMSA0LjQ4OC00LjgwOGwxMTQuNzQzLTIwOC41MzlxMi4zMDgtNC4yMzEuMzg1LTcuNS0xLjkyMy0zLjI3LTYuNTM5LTMuMjdoLTUwNFptLTI0Ljk3NC01MC4yNTVoNTU1LjAwMnEyNC41MjQgMCAzNy4wOTMgMjEuMDkgMTIuNTcgMjEuMDkuNzc1IDQyLjg1OUw2NzguNTUzLTUwMC41OTdxLTkuOTM5IDE2LjgyNy0yNS43NiAyNi42ODYtMTUuODIxIDkuODU4LTM0LjMzIDkuODU4SDMyNGwtNTIuMjU3IDk2LjI1N3EtMi44MiA0LjYxNi0uMDY0IDEwLjAwMSAyLjc1NyA1LjM4NSA4LjUyNyA1LjM4NWg0MzguMTAxcTEwLjY5OSAwIDE3LjkxMyA3LjI0OSA3LjIxNSA3LjI1IDcuMjE1IDE4dC03LjIxNSAxNy44NzhxLTcuMjE0IDcuMTI4LTE3LjkxMyA3LjEyOGgtNDMzLjY0cS0zOC41MTIgMC01Ni4zOTctMjguODg0LTE3Ljg4NC0yOC44ODUtLjI2OS02MS4zNzFsNjEuOTQ5LTExMi4zNi0xNDkuMzMzLTMxNC45NzRIOTAuNDExcS0xMC42OTggMC0xNy45MTMtNy4yNS03LjIxNS03LjI0OS03LjIxNS0xNy45OTl0Ny4yMTUtMTcuODc4cTcuMjE1LTcuMTI4IDE3LjkxMy03LjEyOGg2Mi42NDFxOS40NDYgMCAxNi45MjQgNC42NDd0MTEuNDA5IDEzLjA3MWwyOC45NzQgNjEuODcxWm0xMzMuMTI4IDI3Ni4xMDNoMjgzLjc5NS0yODMuNzk1WiIvPjwvc3ZnPg=="
+
     return (<>
-        <InfoMessage title="Handlevognen din er tom" icon={<Icon ariaLabel="handlevogn" fileUrl={shoppingCartIcon} size="lg" />}>
+
+        <InfoMessage title="Handlevognen din er tom" icon={<Icon ariaLabel="handlevogn" fileUrl={shoppingCartIcon} size="md" />}>
             <Paragraph>Du har ingenting i handlevognen din.</Paragraph>
         </InfoMessage>
     </>)
