@@ -123,16 +123,18 @@ const InputGroup = ({
 
             {modifiedChildren}
 
-            {typeof fieldMessage === 'string' && (
-                <ErrorFieldMessage element="p" id={fieldMessageId}>
-                    {fieldMessage}
-                </ErrorFieldMessage>
-            )}
-            {React.isValidElement(fieldMessage) &&
-                React.cloneElement(fieldMessage, {
-                    id: fieldMessageId,
-                })}
-            {fieldMessageReturn}
+            <div className="ffe-input-group__field-message">
+                {typeof fieldMessage === 'string' && (
+                    <ErrorFieldMessage element="p" id={fieldMessageId}>
+                        {fieldMessage}
+                    </ErrorFieldMessage>
+                )}
+                {React.isValidElement(fieldMessage) &&
+                    React.cloneElement(fieldMessage, {
+                        id: fieldMessageId,
+                    })}
+                {fieldMessageReturn}
+            </div>
         </div>
     );
 };
