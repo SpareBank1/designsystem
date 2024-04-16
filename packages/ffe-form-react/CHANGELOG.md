@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [16.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@16.1.0...@sb1/ffe-form-react@16.1.1) (2024-04-16)
+
+### Bug Fixes
+
+-   **ffe-form-react:** make place for fieldmessage under input group ([9de7d45](https://github.com/SpareBank1/designsystem/commit/9de7d4540f4cd5bc5a7499977100094bfc353c80))
+
 # [16.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@16.0.16...@sb1/ffe-form-react@16.1.0) (2024-04-15)
 
 ### Features

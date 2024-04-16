@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [29.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@28.0.13...@sb1/ffe-form@29.0.0) (2024-04-16)
+
+### Bug Fixes
+
+-   **ffe-form:** fiks farge og størrelse på radio-knapp ([089b0af](https://github.com/SpareBank1/designsystem/commit/089b0afe4da01578446be19e8d8c2d15f1eaa16a))
+-   **ffe-form:** make place for fieldmessage under input group ([81a59ed](https://github.com/SpareBank1/designsystem/commit/81a59ed98e7c3efb5855405893d58aef1cfb0e88))
+
+### BREAKING CHANGES
+
+-   **ffe-form:** New markup
+
 ## [28.0.13](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@28.0.12...@sb1/ffe-form@28.0.13) (2024-04-09)
 
 ### Bug Fixes
