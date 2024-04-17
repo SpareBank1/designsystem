@@ -1,6 +1,6 @@
 /* eslint jsx-a11y/no-static-element-interactions:0 */
 import React from 'react';
-import { bool, number } from 'prop-types';
+import { bool, func, number } from 'prop-types';
 import { Scrollbars } from 'react-custom-scrollbars-2';
 
 import SuggestionList from './SuggestionList';
@@ -72,6 +72,7 @@ SuggestionListContainer.propTypes = {
     highlightedIndex: number.isRequired,
     heightMax: number,
     autoHeight: bool,
+    renderSuggestion: func.isRequired,
 };
 
 SuggestionListContainer.defaultProps = {
