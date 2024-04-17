@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-account-selector-react",
-    "version": "23.0.45",
+    "version": "23.0.46",
     "description": "Selector for bank accounts with autocomplete.",
     "keywords": [
         "ffe"

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-webfonts@5.0.0...@sb1/ffe-webfonts@5.0.1) (2024-04-17)
+
+### Bug Fixes
+
+-   **ffe-webfonts:** fjerner ting fra package.json files som ikke lenger finnes ([90dcf76](https://github.com/SpareBank1/designsystem/commit/90dcf76f33b60fec032bdd95bb925d823de72a04))
+
 # [5.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-webfonts@4.0.1...@sb1/ffe-webfonts@5.0.0) (2024-04-15)
 
 ### Bug Fixes
