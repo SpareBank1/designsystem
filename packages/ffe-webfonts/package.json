@@ -6,8 +6,6 @@
     "author": "SpareBank 1",
     "files": [
         "fonts",
-        "fonts.css",
-        "fonts.less",
         "sb1-fonts.css",
         "sb1-fonts.less",
         "LICENSE-fonts.md",
