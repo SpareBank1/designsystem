@@ -41,7 +41,6 @@ import { InputGroup } from '@sb1/ffe-form-react';
                 onAccountSelected={val => setSelectedAccount(val)}
                 onReset={() => setSelectedAccount(null)}
                 selectedAccount={selectedAccount}
-                ariaInvalid={false}
             />
         </InputGroup>
     );

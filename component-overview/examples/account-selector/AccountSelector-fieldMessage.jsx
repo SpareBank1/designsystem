@@ -4,9 +4,10 @@ import { InputGroup } from '@sb1/ffe-form-react';
 
 () => {
     const [selectedAccount, setSelectedAccount] = useState();
+
     const label1 = 'label1';
     return (
-        <InputGroup label="Velg konto" extraMargin={false} labelId={label1}>
+        <InputGroup label="Velg konto" extraMargin={false} labelId={label1} fieldMessage="Dette feltet er obligatorisk">
             <AccountSelector
                 accounts={[
                     {
@@ -33,29 +34,10 @@ import { InputGroup } from '@sb1/ffe-form-react';
                         currencyCode: 'NOK',
                         balance: 0,
                     },
-                    {
-                        accountNumber: '1234 56 789102',
-                        name: 'Brukskonto2',
-                        currencyCode: 'NOK',
-                        balance: 13337,
-                    },
-                    {
-                        accountNumber: '2234 56 789102',
-                        name: 'Sparekonto1',
-                        currencyCode: 'NOK',
-                        balance: 109236,
-                    },
-                    {
-                        accountNumber: '1253 47 789102',
-                        name: 'Sparekonto2',
-                        currencyCode: 'NOK',
-                        balance: 0,
-                    },
                 ]}
                 id="account-selector-single"
                 locale="nb"
                 labelledById={label1}
-                postListElement={<span>Some text describing the list</span>}
                 onAccountSelected={val => setSelectedAccount(val)}
                 onReset={() => setSelectedAccount(null)}
                 selectedAccount={selectedAccount}
