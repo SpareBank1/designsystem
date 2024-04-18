@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [29.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@29.0.1...@sb1/ffe-form@29.0.2) (2024-04-18)
+
+### Bug Fixes
+
+-   **ffe-form:** fixer fontskaleringsbugg dropdown og input ([6c0cf3e](https://github.com/SpareBank1/designsystem/commit/6c0cf3efe18fb438d4a6be19f42b5c3418918756))
+
 ## [29.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@29.0.0...@sb1/ffe-form@29.0.1) (2024-04-18)
 
 **Note:** Version bump only for package @sb1/ffe-form
