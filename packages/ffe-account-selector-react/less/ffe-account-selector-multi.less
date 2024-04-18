@@ -1,5 +1,3 @@
-@details-height: 32px;
-
 .ffe-account-selector-multi-container {
     /*
      * Disables margin collapse, which allows styling based on
@@ -12,24 +10,26 @@
     @import 'base-selector';
     @import 'account-suggestion-multi';
 
+    --details-height: var(--ffe-spacing-lg);
+
     position: relative;
     display: block;
 
     &--with-space-for-details {
-        margin-bottom: @details-height;
+        margin-bottom: var(--details-height);
     }
 
     &__details {
-        padding: @ffe-spacing-2xs;
+        padding: var(--ffe-spacing-2xs);
         color: var(--ffe-v-accountselector-text-color);
-        min-height: @details-height;
+        min-height: var(--details-height);
         display: flex;
         justify-content: space-between;
     }
 
     &__dropdown-statusbar {
         border: 1px solid var(--ffe-g-border-color);
-        padding: @ffe-spacing-xs;
+        padding: var(--ffe-spacing-xs);
         background: var(
             --ffe-v-accountselector-dropdown-statusbar-background-color
         );

@@ -31,9 +31,9 @@ export const AccountSelector = ({
     inputProps,
     formatAccountNumber,
     ariaInvalid,
-    withSpaceForDetails,
     onOpen,
     onClose,
+    ...rest
 }) => {
     return (
         <BaseAccountSelector
@@ -44,7 +44,7 @@ export const AccountSelector = ({
             locale={locale}
             listElementBody={listElementBody}
             postListElement={postListElement}
-            ariaInvalid={ariaInvalid}
+            ariaInvalid={ariaInvalid ?? rest['aria-invalid']}
             selectedAccount={selectedAccount}
             onOpen={onOpen}
             onClose={onClose}
@@ -56,7 +56,6 @@ export const AccountSelector = ({
             allowCustomAccount={allowCustomAccount}
             onReset={onReset}
             formatAccountNumber={formatAccountNumber}
-            withSpaceForDetails={withSpaceForDetails}
         >
             {props => <SearchableDropdown {...props} />}
         </BaseAccountSelector>
@@ -110,7 +109,7 @@ AccountSelector.propTypes = {
     /** Default true. */
     formatAccountNumber: bool,
     /** Sets aria-invalid on input field  */
-    ariaInvalid: oneOfType([string, bool]).isRequired,
+    ariaInvalid: oneOfType([string, bool]),
     /** Defines if you should save space for account details that is shown when an account is selected */
     withSpaceForDetails: bool,
     onClose: func,
