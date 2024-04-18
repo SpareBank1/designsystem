@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-tabs-react",
-    "version": "8.0.15",
+    "version": "8.0.16",
     "license": "MIT",
     "author": "SpareBank 1",
     "files": [
@@ -24,7 +24,7 @@
         "test:watch": "ffe-buildtool jest --watch"
     },
     "dependencies": {
-        "@sb1/ffe-tabs": "^13.1.11",
+        "@sb1/ffe-tabs": "^13.1.12",
         "classnames": "^2.3.1",
         "prop-types": "^15.7.2"
     },

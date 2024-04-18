@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [27.3.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@27.3.5...@sb1/ffe-core@27.3.6) (2024-04-18)
+
+### Bug Fixes
+
+-   **ffe-core:** same line-height(margin) on <SmallText/> independent of element ([436d82f](https://github.com/SpareBank1/designsystem/commit/436d82faaf9b8029c3b056f54b4e994cf8806c2c))
+
 ## [27.3.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@27.3.4...@sb1/ffe-core@27.3.5) (2024-03-14)
 
 ### Bug Fixes
