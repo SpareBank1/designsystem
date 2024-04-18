@@ -18,10 +18,9 @@
 
     font-family: var(--ffe-g-font);
     font-variant-numeric: tabular-nums;
-    height: 45px;
-    padding: 0 @ffe-spacing-lg 0 @ffe-spacing-sm;
-    line-height: 20px;
-    transition: all @ffe-transition-duration @ffe-ease;
+    height: 2.8125rem;
+    padding: 0 var(--ffe-spacing-lg) 0 var(--ffe-spacing-sm);
+    transition: all var(--ffe-transition-duration) var(--ffe-ease);
     width: 100%;
     font-size: var(--ffe-fontsize-form-dropdown);
 
@@ -39,11 +38,11 @@
     }
 
     &:focus::-ms-value {
-        background: @ffe-farge-hvit;
+        background: var(--ffe-farge-hvit);
         color: var(--ffe-v-input-color);
         .native & {
             @media (prefers-color-scheme: dark) {
-                background: @ffe-farge-koksgraa;
+                background: var(--ffe-farge-koksgraa);
             }
         }
     }
