@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [24.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@23.0.48...@sb1/ffe-account-selector-react@24.0.0) (2024-04-19)
+
+### Bug Fixes
+
+-   **ffe-account-selector-react:** fixer field message ([a9a6212](https://github.com/SpareBank1/designsystem/commit/a9a6212d79f46811086801c86f8c40e59c19c641))
+
+### BREAKING CHANGES
+
+-   **ffe-account-selector-react:** AccountSelector sin ariaInvalid er ikke lenger required.
+    withSpaceForDetails prop er fjernet
+
 ## [23.0.48](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@23.0.47...@sb1/ffe-account-selector-react@23.0.48) (2024-04-18)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react
