@@ -1,28 +1,18 @@
-@details-height: 32px;
-
-.ffe-account-selector-single-container {
-    /*
-     * Disables margin collapse, which allows styling based on
-     * withSpaceForDetails even when AccountSelector is wrapped in InputGroup
-     */
-    padding: 0.05px;
-}
-
 .ffe-account-selector-single {
     @import 'account-suggestion-single';
 
     position: relative;
     display: block;
 
-    &--with-space-for-details {
-        margin-bottom: @details-height;
-    }
-
     &__details {
-        padding: @ffe-spacing-2xs;
+        padding: var(--ffe-spacing-2xs) var(--ffe-spacing-2xs) 0;
         color: var(--ffe-v-accountselector-text-color);
-        min-height: @details-height;
+        min-height: calc(1lh);
         display: flex;
         justify-content: space-between;
+    }
+
+    &__details--invalid-empty {
+        display: none;
     }
 }

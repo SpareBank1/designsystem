@@ -42,7 +42,6 @@ import { InputGroup } from '@sb1/ffe-form-react';
                 selectedAccount={selectedAccount}
                 allowCustomAccount={true}
                 labelledById={label2}
-                ariaInvalid={false}
             />
         </InputGroup>
     );

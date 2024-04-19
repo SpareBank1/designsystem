@@ -48,7 +48,6 @@ return (
         selectedAccount={selectedAccount}
         hideAccountDetails={true}
         labelledById={label2}
-        ariaInvalid={false}
     />
 </InputGroup>
 );

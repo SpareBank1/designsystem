@@ -59,7 +59,6 @@ import { SmallText } from '@sb1/ffe-core-react';
                 selectedAccount={selectedAccount}
                 labelledById={label5}
                 listElementBody={CustomListElementBody}
-                ariaInvalid={false}
             />
         </InputGroup>
     )

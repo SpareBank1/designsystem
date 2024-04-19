@@ -52,7 +52,6 @@ export const BaseAccountSelector = ({
     inputProps,
     formatAccountNumber = true,
     ariaInvalid,
-    withSpaceForDetails = true,
     onOpen,
     onClose,
     children,
@@ -127,53 +126,45 @@ export const BaseAccountSelector = ({
         : accounts;
 
     return (
-        <div className="ffe-account-selector-single-container">
-            <div
-                className={classNames(
-                    'ffe-account-selector-single',
-                    {
-                        'ffe-account-selector-single--with-space-for-details':
-                            !selectedAccount && withSpaceForDetails,
-                    },
-                    className,
-                )}
-                id={`${id}-account-selector-container`}
-            >
-                {children({
-                    id,
-                    labelledById,
-                    inputProps: {
-                        ...inputProps,
-                        onChange: onInputChange,
-                    },
-                    dropdownAttributes,
-                    postListElement,
-                    dropdownList,
-                    noMatch: customNoMatch,
-                    formatter,
-                    onChange: handleAccountSelected,
-                    searchAttributes: ['name', 'accountNumber'],
-                    locale,
-                    listElementBody: listElementBody || AccountSuggestionSingle,
-                    ariaInvalid,
-                    searchMatcher: searchMatcherIgnoringAccountNumberFormatting,
-                    selectedItem: selectedAccount,
-                    onOpen,
-                    onClose,
-                })}
-                {!hideAccountDetails && selectedAccount && (
-                    <AccountDetails
-                        account={selectedAccount}
-                        locale={locale}
-                        showBalance={
-                            showBalance &&
-                            ['string', 'number'].includes(
-                                typeof selectedAccount.balance,
-                            )
-                        }
-                    />
-                )}
-            </div>
+        <div
+            className={classNames('ffe-account-selector-single', className)}
+            id={`${id}-account-selector-container`}
+        >
+            {children({
+                id,
+                labelledById,
+                inputProps: {
+                    ...inputProps,
+                    onChange: onInputChange,
+                },
+                dropdownAttributes,
+                postListElement,
+                dropdownList,
+                noMatch: customNoMatch,
+                formatter,
+                onChange: handleAccountSelected,
+                searchAttributes: ['name', 'accountNumber'],
+                locale,
+                listElementBody: listElementBody || AccountSuggestionSingle,
+                ariaInvalid,
+                searchMatcher: searchMatcherIgnoringAccountNumberFormatting,
+                selectedItem: selectedAccount,
+                onOpen,
+                onClose,
+            })}
+            {!hideAccountDetails && (
+                <AccountDetails
+                    ariaInvalid={ariaInvalid}
+                    account={selectedAccount}
+                    locale={locale}
+                    showBalance={
+                        showBalance &&
+                        ['string', 'number'].includes(
+                            typeof selectedAccount?.balance,
+                        )
+                    }
+                />
+            )}
         </div>
     );
 };
@@ -225,11 +216,9 @@ BaseAccountSelector.propTypes = {
     /** Props passed to the input field */
     inputProps: shape(),
     /** Sets aria-invalid on input field  */
-    ariaInvalid: oneOfType([string, bool]).isRequired,
+    ariaInvalid: oneOfType([string, bool]),
     /** Default true. */
     formatAccountNumber: bool,
-    /** Defines if you should save space for account details that is shown when an account is selected */
-    withSpaceForDetails: bool,
     /** Prop passed to the dropdown list */
     onClose: func,
     /** Prop passed to the dropdown list */

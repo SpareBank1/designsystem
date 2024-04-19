@@ -42,7 +42,6 @@ return (
         selectedAccount={selectedAccount}
         showBalance
         labelledById={label2}
-        ariaInvalid={false}
     />
 </InputGroup>
 );
