@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [18.0.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@18.0.15...@sb1/ffe-buttons@18.0.16) (2024-04-23)
+
+### Bug Fixes
+
+-   **ffe-buttons:** use overflow-wrap:normal instead og overflow-wrap:anywhere ([eafed8f](https://github.com/SpareBank1/designsystem/commit/eafed8ff679e4347aa68162bd24ca788d730ec63))
+
 ## [18.0.15](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@18.0.14...@sb1/ffe-buttons@18.0.15) (2024-04-18)
 
 **Note:** Version bump only for package @sb1/ffe-buttons

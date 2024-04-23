@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@9.1.4...@sb1/ffe-lists-react@9.1.5) (2024-04-23)
+
+### Bug Fixes
+
+-   **ffe-lists-react:** export DetailListCard component in ts and rename its interface ([0b3306f](https://github.com/SpareBank1/designsystem/commit/0b3306fca7987218d66d452adea5b77e9b0b59af))
+
 ## [9.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@9.1.3...@sb1/ffe-lists-react@9.1.4) (2024-04-18)
 
 **Note:** Version bump only for package @sb1/ffe-lists-react
