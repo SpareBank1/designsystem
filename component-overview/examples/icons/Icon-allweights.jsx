@@ -8,9 +8,9 @@ import { Icon } from "@sb1/ffe-icons-react";
 
     return (
         <>
-            <Icon fileUrl={house300} size="md" ariaLabel="hus ikon" />
-            <Icon fileUrl={house400} size="md" ariaLabel="hus ikon" />
-            <Icon fileUrl={house500} size="md" ariaLabel="hus ikon" />
+            <Icon fileUrl={house300} size="md" ariaLabel="hus" />
+            <Icon fileUrl={house400} size="md" ariaLabel="hus" />
+            <Icon fileUrl={house500} size="md" ariaLabel="hus" />
         </>
     );
 }
