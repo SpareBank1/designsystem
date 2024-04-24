@@ -1,5 +1,11 @@
 .ffe-phone-number {
     &__input-group {
+        @media (min-width: @breakpoint-sm) {
+            display: flex;
+        }
+    }
+
+    &__country-code &__input-group {
         display: flex;
     }
 
@@ -11,13 +17,20 @@
             white-space: nowrap;
             margin-right: @ffe-spacing-xs;
         }
+
+        @media (max-width: (@breakpoint-sm - 1)) {
+            margin-bottom: var(--ffe-spacing-sm);
+        }
     }
 
     &__country-code-input {
-        max-width: 60px;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
-        margin-right: @ffe-spacing-sm;
+
+        @media (min-width: @breakpoint-sm) {
+            max-width: 4rem;
+            margin-right: var(--ffe-spacing-sm);
+        }
     }
 
     &__plus {
@@ -30,6 +43,8 @@
         border-right: 0;
         transition: all @ffe-transition-duration @ffe-ease;
         color: var(--ffe-v-input-color);
+        display: flex;
+        align-items: center;
     }
 
     &__number {
