@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner-react@7.0.11...@sb1/ffe-spinner-react@7.1.0) (2024-04-24)
+
+### Features
+
+-   **ffe-spinner-react:** spinner on colored background ([63f46a6](https://github.com/SpareBank1/designsystem/commit/63f46a63269cb3e61c28378a41dbefa9f98f059c))
+
 ## [7.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner-react@7.0.10...@sb1/ffe-spinner-react@7.0.11) (2024-04-18)
 
 **Note:** Version bump only for package @sb1/ffe-spinner-react

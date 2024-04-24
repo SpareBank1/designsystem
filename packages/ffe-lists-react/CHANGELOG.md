@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.1.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@9.1.5...@sb1/ffe-lists-react@9.1.6) (2024-04-24)
+
+### Bug Fixes
+
+-   **ffe-lists-react:** export DetailListCardItem and fix its Props ([5dbebfb](https://github.com/SpareBank1/designsystem/commit/5dbebfb8911da6e4f3264321e29b8a395d567ad4))
+
 ## [9.1.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-lists-react@9.1.4...@sb1/ffe-lists-react@9.1.5) (2024-04-23)
 
 ### Bug Fixes

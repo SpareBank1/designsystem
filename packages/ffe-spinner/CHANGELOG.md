@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.1.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner@5.0.16...@sb1/ffe-spinner@5.1.0) (2024-04-24)
+
+### Features
+
+-   **ffe-spinner:** spinner on colored background ([4c5be0f](https://github.com/SpareBank1/designsystem/commit/4c5be0f24bac30d353c2d75bf8ddba01bdddd532))
+
 ## [5.0.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner@5.0.15...@sb1/ffe-spinner@5.0.16) (2024-04-18)
 
 **Note:** Version bump only for package @sb1/ffe-spinner
