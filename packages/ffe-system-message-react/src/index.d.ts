@@ -1,12 +1,11 @@
 import * as React from 'react';
 
-export interface SystemMessageProps {
+export interface SystemMessageProps
+    extends React.ComponentPropsWithoutRef<'div'> {
     animationLengthMs?: number;
-    children: React.ReactNode;
-    className?: string;
     icon?: React.ReactNode;
     locale?: 'en' | 'nb' | 'nn';
-    onClose?: (e: React.MouseEvent | undefined) => void;
+    onClose?: React.MouseEventHandler<HTMLButtonElement>;
     onColoredBg?: boolean;
 }
 
