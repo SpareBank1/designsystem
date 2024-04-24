@@ -11,6 +11,8 @@
 // Styleguide ffe-spinner
 
 .ffe-loading-spinner {
+    --color: var(--ffe-g-primary-color);
+
     display: inline-block;
     vertical-align: middle;
 
@@ -19,10 +21,10 @@
         display: inline-block;
         width: 20px;
         height: 20px;
-        border: 3px solid var(--ffe-g-primary-color);
+        border: 3px solid var(--color);
         border-top-color: transparent;
         border-radius: 50%;
-        animation: spindindust 1s linear infinite;
+        animation: spin 1s linear infinite;
 
         /*
             Avoid 'flashing' spinners - don't display spinner until some time has passed
@@ -30,7 +32,7 @@
         visibility: hidden;
         animation-delay: 500ms;
 
-        @keyframes spindindust {
+        @keyframes spin {
             0% {
                 visibility: visible;
                 transform: rotate(0);
@@ -55,5 +57,9 @@
     &--immediate::before {
         visibility: visible;
         animation-delay: 0ms;
+    }
+
+    &--on-colored-bg {
+        --color: var(--ffe-farge-hvit);
     }
 }
