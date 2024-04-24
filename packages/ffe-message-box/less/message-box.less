@@ -41,8 +41,8 @@
     }
 
     &__box {
-        padding: @ffe-spacing-xl @ffe-spacing-lg;
-        border-radius: @ffe-spacing-xs;
+        padding: var(--ffe-spacing-xl) var(--ffe-spacing-lg);
+        border-radius: var(--ffe-spacing-xs);
         color: var(--ffe-farge-svart);
         .native & {
             @media (prefers-color-scheme: dark) {
@@ -105,8 +105,8 @@
 
     &__title {
         color: var(--ffe-farge-svart);
-        font-size: 18px;
-        margin-bottom: @ffe-spacing-sm;
+        font-size: var(--ffe-fontsize-h5);
+        margin-bottom: var(--ffe-spacing-sm);
         margin-top: 0;
         .native & {
             @media (prefers-color-scheme: dark) {
@@ -117,7 +117,7 @@
     }
 
     &__list {
-        padding-left: @ffe-spacing-sm;
+        padding-left: var(--ffe-spacing-sm);
         margin: 0;
         line-height: 2;
         text-align: left;
