@@ -93,6 +93,10 @@ declare class DescriptionListDescription extends React.Component<
     any
 > {}
 declare class DetailListCard extends React.Component<
-    DescriptionListProps & React.ComponentProps<'dl'>,
+    DetailListCardProps & React.ComponentPropsWithoutRef<'dl'>,
+    any
+> {}
+declare class DetailListCardItem extends React.Component<
+    DetailListCardItemProps & React.ComponentPropsWithoutRef<'div'>,
     any
 > {}
