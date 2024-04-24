@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [24.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@24.0.2...@sb1/ffe-account-selector-react@24.0.3) (2024-04-24)
+
+### Bug Fixes
+
+-   **ffe-account-selector-react:** fixer centering av alternativer ([8067d1b](https://github.com/SpareBank1/designsystem/commit/8067d1b875b0a8af35b35cecae1c87fe7d0c3aa0))
+
 ## [24.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@24.0.1...@sb1/ffe-account-selector-react@24.0.2) (2024-04-24)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react

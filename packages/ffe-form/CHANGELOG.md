@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [29.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@29.0.3...@sb1/ffe-form@29.0.4) (2024-04-24)
+
+### Bug Fixes
+
+-   **ffe-form:** stabler telefon-inputs over hverandre på små skjermer ([8d1aa41](https://github.com/SpareBank1/designsystem/commit/8d1aa414f1513d9e2690f82894c49cdde4227edd))
+
 ## [29.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@29.0.2...@sb1/ffe-form@29.0.3) (2024-04-23)
 
 **Note:** Version bump only for package @sb1/ffe-form
