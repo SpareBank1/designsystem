@@ -1,12 +1,10 @@
 import * as React from 'react';
 
-export interface SpinnerProps extends React.ComponentProps<'span'> {
-    className?: string;
+export interface SpinnerProps extends React.ComponentPropsWithoutRef<'div'> {
     immediate?: boolean;
     large?: boolean;
     loadingText?: React.ReactNode;
     locale?: 'en' | 'nb' | 'nn';
-    onColoredBg?: boolean;
 }
 
 declare class Spinner extends React.Component<SpinnerProps, any> {}
