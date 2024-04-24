@@ -9,12 +9,14 @@ const Spinner = ({
     large,
     loadingText,
     locale,
+    onColoredBg,
     ...rest
 }) => (
     <div aria-live="assertive" className={className} {...rest}>
         <span
             className={classNames(
                 'ffe-loading-spinner',
+                { 'ffe-loading-spinner--on-colored-bg': onColoredBg },
                 { 'ffe-loading-spinner--immediate': immediate },
                 { 'ffe-loading-spinner--large': large },
             )}
@@ -33,6 +35,8 @@ Spinner.propTypes = {
     loadingText: node,
     /** 'nb', 'nn', or 'en' */
     locale: oneOf(['en', 'nb', 'nn']),
+    /** Adds alternative styling for better contrast on certain backgrounds */
+    onColoredBg: bool,
 };
 
 Spinner.defaultProps = {
