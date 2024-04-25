@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [14.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@14.0.10...@sb1/ffe-tables@14.0.11) (2024-04-25)
+
+### Bug Fixes
+
+-   **ffe-tables:** td and th should not wrap ([997c33b](https://github.com/SpareBank1/designsystem/commit/997c33b9a461394ed9f694aef2f3c24134fc3d7f))
+
 ## [14.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables@14.0.9...@sb1/ffe-tables@14.0.10) (2024-04-18)
 
 **Note:** Version bump only for package @sb1/ffe-tables

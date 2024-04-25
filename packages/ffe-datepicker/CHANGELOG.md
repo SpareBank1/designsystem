@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.0.32](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@12.0.31...@sb1/ffe-datepicker@12.0.32) (2024-04-25)
+
+### Bug Fixes
+
+-   **ffe-datepicker:** fix text zoom ([ca319a7](https://github.com/SpareBank1/designsystem/commit/ca319a7a4d2ee3b3ef9dbfbe2b86bf8673b8433e))
+
 ## [12.0.31](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-datepicker@12.0.30...@sb1/ffe-datepicker@12.0.31) (2024-04-25)
 
 **Note:** Version bump only for package @sb1/ffe-datepicker
