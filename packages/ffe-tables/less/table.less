@@ -1,6 +1,6 @@
 .ffe-table {
     font-family: 'SpareBank1-regular', arial, sans-serif;
-    margin: @ffe-spacing-sm 0;
+    margin: var(--ffe-spacing-sm) 0;
     min-width: 100%;
     text-align: left;
     border-collapse: collapse;
@@ -26,9 +26,14 @@
         }
     }
 
-    &__footer {
-        .ffe-strong-text();
+    &__footer,
+    &__heading {
+        font-family: var(--ffe-g-font-strong);
+        font-variant-numeric: tabular-nums;
+        font-weight: normal;
+    }
 
+    &__footer {
         .ffe-table__row {
             border-bottom: none;
         }
@@ -37,22 +42,39 @@
     &__row {
         border-bottom: 1px solid var(--ffe-v-table-row-bordercolor);
         display: block;
-        padding: @ffe-spacing-xs 0;
+        padding: var(--ffe-spacing-xs) 0;
 
         @media (min-width: @breakpoint-md) {
             display: table-row;
         }
     }
 
-    &__heading {
-        .ffe-strong-text();
+    &__heading,
+    &__cell {
+        overflow-wrap: normal;
+    }
 
+    &__heading {
         color: var(--ffe-v-table-heading-color);
         text-align: left;
 
         @media (min-width: @breakpoint-md) {
             display: table-cell;
-            padding: @ffe-spacing-xs;
+            padding: var(--ffe-spacing-xs);
+        }
+    }
+
+    &__cell {
+        display: block;
+        padding: 0 var(--ffe-spacing-2xs);
+
+        &--top {
+            vertical-align: top;
+        }
+
+        @media (min-width: @breakpoint-md) {
+            display: table-cell;
+            padding: var(--ffe-spacing-sm) var(--ffe-spacing-xs);
         }
     }
 
@@ -65,27 +87,13 @@
         }
     }
 
-    &__cell {
-        display: block;
-        padding: 0 @ffe-spacing-2xs;
-
-        &--top {
-            vertical-align: top;
-        }
-
-        @media (min-width: @breakpoint-md) {
-            display: table-cell;
-            padding: @ffe-spacing-sm @ffe-spacing-xs;
-        }
-    }
-
     &--condensed {
         font-size: 0.875rem;
 
         .ffe-table__heading,
         .ffe-table__cell {
             @media (min-width: @breakpoint-md) {
-                padding: @ffe-spacing-xs;
+                padding: var(--ffe-spacing-xs);
             }
         }
     }
@@ -94,7 +102,7 @@
         display: block;
         max-width: none;
         vertical-align: top;
-        margin-bottom: @ffe-spacing-sm;
+        margin-bottom: var(--ffe-spacing-sm);
         color: var(--ffe-v-table-content-color);
 
         &--text-right {
