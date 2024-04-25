@@ -1,8 +1,11 @@
 .ffe-chart-donut {
-    height: 200px;
+    display: grid;
+    width: fit-content;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    place-items: center;
     position: relative;
     text-align: left;
-    width: 200px;
 
     &--first {
         stroke: var(--ffe-v-chart-donut-first-color);
@@ -12,27 +15,19 @@
         stroke: var(--ffe-v-chart-donut-last-color);
     }
 
-    &__circle {
-        height: 100%;
-        margin: 0 auto;
-        position: absolute;
-        width: 100%;
+    &__circle,
+    &__description {
+        grid-column: 1/1;
+        grid-row: 1/1;
+    }
 
-        @media (min-width: @breakpoint-md) {
-            margin: inherit;
-            width: 200px;
-        }
+    &__circle {
+        width: 12.5rem;
+        aspect-ratio: 1;
     }
 
     &__description {
-        left: calc(~'50% - 75px');
-        position: absolute;
-        top: 60px;
-        width: 150px;
-
-        @media (min-width: @breakpoint-md) {
-            left: 25px;
-        }
+        z-index: 1;
     }
 
     &__name {
@@ -41,31 +36,35 @@
     }
 
     &__fractions {
-        display: flex;
-        justify-content: space-around;
+        display: grid;
+        grid-template-columns: auto 1px auto;
+        grid-template-rows: auto auto;
+        grid-column-gap: var(--ffe-spacing-xs);
+        &:after {
+            grid-column: 2/3;
+            grid-row: 1/2;
+            display: flex;
+            background: var(--ffe-v-chart-donut-text-color);
+            height: 1lh;
+            content: '';
+        }
     }
 
     &__fraction {
-        > .ffe-chart-donut__amount {
-            color: var(--ffe-v-chart-donut-text-color);
-            text-align: center;
-        }
+        display: grid;
+        place-items: center;
+    }
 
-        &:last-child {
-            > .ffe-chart-donut__type {
-                padding-left: 20px;
-            }
+    .ffe-chart-donut__amount {
+        color: var(--ffe-v-chart-donut-text-color);
+    }
 
-            > .ffe-chart-donut__amount {
-                border-left: 1px solid var(--ffe-farge-graa);
-                padding-left: 20px;
-
-                .native & {
-                    @media (prefers-color-scheme: dark) {
-                        color: var(--ffe-v-chart-donut-text-color);
-                    }
-                }
-            }
-        }
+    &__fraction:first-of-type {
+        grid-column: 1/2;
+        grid-row: 1/3;
+    }
+    &__fraction:last-of-type {
+        grid-column: 3/4;
+        grid-row: 1/3;
     }
 }
