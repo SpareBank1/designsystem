@@ -1,8 +1,9 @@
 .ffe-calendar {
     border: solid 2px var(--ffe-g-border-color);
     border-radius: var(--ffe-g-border-radius);
-    padding: @ffe-spacing-2xs;
+    padding: var(--ffe-spacing-2xs);
     background: var(--ffe-farge-hvit);
+    overflow-y: auto;
     .native & {
         @media (prefers-color-scheme: dark) {
             background-color: var(--ffe-farge-svart);
@@ -11,10 +12,10 @@
 
     &--datepicker {
         position: absolute;
-        top: 55px;
+        transform: translateY(var(--ffe-spacing-xs));
         left: 0;
         z-index: 9999;
-        width: 320px;
+        width: fit-content;
 
         &--above {
             top: inherit;
@@ -25,12 +26,13 @@
 
     &__header {
         text-align: center;
-        padding: @ffe-spacing-sm @ffe-spacing-2xs @ffe-spacing-2xs;
+        padding: var(--ffe-spacing-sm) var(--ffe-spacing-2xs)
+            var(--ffe-spacing-2xs);
         width: 100%;
     }
 
     &__month {
-        padding-right: @ffe-spacing-xs;
+        padding-right: var(--ffe-spacing-xs);
     }
 
     &__month-nav {
@@ -57,20 +59,16 @@
     &__icon-prev,
     &__icon-next {
         color: var(--ffe-v-datepicker-icon-color);
-        vertical-align: middle;
     }
 
-    &__next {
-        width: 25px;
-        height: 25px;
-    }
-
+    &__next,
     &__previous {
-        width: 25px;
-        height: 25px;
+        height: 1.5625rem;
+        aspect-ratio: 1;
     }
 
     &__month-nav-icon {
+        display: block;
         height: 2em;
         width: 2em;
         fill: var(--ffe-v-datepicker-icon-color);
@@ -94,11 +92,11 @@
     &__grid {
         width: 100%;
         border-spacing: 0.5em 0;
-        color: @ffe-black;
+        color: var(--ffe-farge-svart);
 
         &:focus {
             outline: none;
-            box-shadow: 0 0 0 2px @ffe-farge-vann;
+            box-shadow: 0 0 0 2px var(--ffe-farge-vann);
             border-radius: 4px;
         }
     }
@@ -111,7 +109,7 @@
     }
 
     &__day {
-        padding: @ffe-spacing-2xs 0;
+        padding: var(--ffe-spacing-2xs) 0;
         text-align: center;
         outline: none;
     }
@@ -121,12 +119,12 @@
 
         font-size: 1rem;
         background-color: var(--ffe-v-datepicker-bg-color);
-        width: 35px;
-        height: 35px;
+        width: 2.1875rem;
+        aspect-ratio: 1;
         color: var(--ffe-v-datepicker-date-color);
         border-radius: 4px;
         display: inline-block;
-        line-height: 2.1875rem;
+        line-height: 2.1875;
         border: 2px solid transparent;
         cursor: pointer;
 
