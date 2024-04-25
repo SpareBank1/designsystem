@@ -1,5 +1,5 @@
-import Accordion from './Accordion';
-import AccordionItem from './AccordionItem';
+import { Accordion } from './Accordion';
+import { AccordionItem } from './AccordionItem';
 import React from 'react';
 import { fireEvent, render, screen } from '@testing-library/react';
 

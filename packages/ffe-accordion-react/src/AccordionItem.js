@@ -1,11 +1,12 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState, useContext } from 'react';
 import { bool, func, node, string } from 'prop-types';
 import { v4 as uuid } from 'uuid';
 import { Icon } from '@sb1/ffe-icons-react';
 import { Collapse } from '@sb1/ffe-collapse-react';
 import classNames from 'classnames';
+import { AccordionContext } from './AccordionContext';
 
-const AccordionItem = ({
+export const AccordionItem = ({
     children,
     heading,
     defaultOpen,
@@ -13,13 +14,14 @@ const AccordionItem = ({
     className,
     onToggleOpen = Function.prototype,
     ariaLabel,
-    ...accordionProps
+    ...rest
 }) => {
     const [isExpanded, setIsExpanded] = useState(defaultOpen);
     const [isAnimating, setIsAnimating] = useState(false);
     const [isFocused, setFocus] = useState(false);
     const buttonId = useRef(uuid());
     const contentId = useRef(uuid());
+    const { headingLevel } = useContext(AccordionContext);
 
     const expandMoreIcon =
         'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxwYXRoIGQ9Ik00ODAtMzczLjUzOXEtNy4yMzEgMC0xMy40NjEtMi4zMDgtNi4yMzEtMi4zMDgtMTEuODQ2LTcuOTIzTDI3NC45MjQtNTYzLjUzOXEtOC4zMDgtOC4zMDctOC41LTIwLjg4NC0uMTkzLTEyLjU3NyA4LjUtMjEuMjY5IDguNjkyLTguNjkyIDIxLjA3Ni04LjY5MnQyMS4wNzYgOC42OTJMNDgwLTQ0Mi43NjhsMTYyLjkyNC0xNjIuOTI0cTguMzA3LTguMzA3IDIwLjg4NC04LjUgMTIuNTc2LS4xOTIgMjEuMjY4IDguNSA4LjY5MyA4LjY5MiA4LjY5MyAyMS4wNzcgMCAxMi4zODQtOC42OTMgMjEuMDc2TDUwNS4zMDctMzgzLjc3cS01LjYxNSA1LjYxNS0xMS44NDYgNy45MjMtNi4yMyAyLjMwOC0xMy40NjEgMi4zMDhaIi8+PC9zdmc+';
@@ -39,8 +41,6 @@ const AccordionItem = ({
         }
     };
 
-    const { headingLevel, forwardedRef, ...rest } = accordionProps;
-
     const collapseHidden = !isExpanded && !isAnimating;
 
     const H = `h${headingLevel}`;
@@ -57,7 +57,6 @@ const AccordionItem = ({
                 <button
                     type="button"
                     id={buttonId.current}
-                    ref={forwardedRef}
                     aria-expanded={isExpanded ? 'true' : 'false'}
                     aria-controls={contentId.current}
                     aria-label={ariaLabel}
@@ -116,7 +115,3 @@ AccordionItem.propTypes = {
     /** aria-label for the button */
     ariaLabel: string,
 };
-
-export default React.forwardRef((props, ref) => {
-    return <AccordionItem {...props} forwardedRef={ref} />;
-});
