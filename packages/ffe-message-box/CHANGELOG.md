@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@12.0.10...@sb1/ffe-message-box@12.0.11) (2024-04-25)
+
+### Bug Fixes
+
+-   **ffe-message-box:** change title font size to rem from px ([100bf1f](https://github.com/SpareBank1/designsystem/commit/100bf1fd7b39ebbbc85644699c8f70bbdef24e6f))
+
 ## [12.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box@12.0.9...@sb1/ffe-message-box@12.0.10) (2024-04-18)
 
 **Note:** Version bump only for package @sb1/ffe-message-box

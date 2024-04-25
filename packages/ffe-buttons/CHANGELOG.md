@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [18.0.17](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@18.0.16...@sb1/ffe-buttons@18.0.17) (2024-04-25)
+
+### Bug Fixes
+
+-   **ffe-buttons:** remove overflow wrap anywhere ([d796228](https://github.com/SpareBank1/designsystem/commit/d796228a7d804c5c55bf8b674b3e31b2bc9e6ba3))
+
 ## [18.0.16](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buttons@18.0.15...@sb1/ffe-buttons@18.0.16) (2024-04-23)
 
 ### Bug Fixes

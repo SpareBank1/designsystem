@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-account-selector-react",
-    "version": "24.0.3",
+    "version": "24.0.4",
     "description": "Selector for bank accounts with autocomplete.",
     "keywords": [
         "ffe"
@@ -29,11 +29,11 @@
         "test:watch": "ffe-buildtool jest --watch"
     },
     "dependencies": {
-        "@sb1/ffe-form": "^29.0.4",
-        "@sb1/ffe-form-react": "^16.1.5",
+        "@sb1/ffe-form": "^29.0.5",
+        "@sb1/ffe-form-react": "^16.1.6",
         "@sb1/ffe-formatters": "^4.1.1",
         "@sb1/ffe-icons-react": "^9.0.7",
-        "@sb1/ffe-searchable-dropdown-react": "^17.0.48",
+        "@sb1/ffe-searchable-dropdown-react": "^17.0.49",
         "@sb1/ffe-spinner-react": "^7.1.0",
         "classnames": "^2.3.1",
         "prop-types": "^15.7.2",
