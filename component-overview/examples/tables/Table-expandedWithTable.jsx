@@ -1,14 +1,15 @@
 import Table from '@sb1/ffe-tables-react';
+import { formatNumber } from '@sb1/ffe-formatters';
 
 () => {
     const data = [
         {
             id: 0,
             year: '2022',
-            sum: '13545',
-            avdrag: '6570.50',
-            renterGebyrer: '6973',
-            restgjeld: '67812.72',
+            sum: formatNumber(13545, { decimals: 2 }),
+            avdrag: formatNumber(6570.50, { decimals: 2 }),
+            renterGebyrer: formatNumber(6973, { decimals: 2}),
+            restgjeld: formatNumber(67812.72, { decimals: 2 }),
             expand: true,
         }
     ];
@@ -28,27 +29,27 @@ import Table from '@sb1/ffe-tables-react';
         { key: 'renterGebyrer', header: 'Rente + gebyrer' },
     ]
 
-    subData = [
+    const subData = [
         {
             id: 0,
             month: 'Juni',
-            sum: '1935',
-            avdrag: '6570.50',
-            renterGebyrer: '6973',
+            sum: formatNumber(1935, { decimals: 2 }),
+            avdrag: formatNumber(6570.50, { decimals: 2 }),
+            renterGebyrer: formatNumber(6973, { decimals: 2 }),
         },
         {
             id: 1,
             month: 'Juli',
-            sum: '1935',
-            avdrag: '6570.50',
-            renterGebyrer: '6973',
+            sum: formatNumber(1935, { decimals: 2 }),
+            avdrag: formatNumber(6570.50, { decimals: 2 }),
+            renterGebyrer: formatNumber(6973, { decimals: 2 }),
         },
         {
             id: 2,
             month: 'August',
-            sum: '1935',
-            avdrag: '6570.50',
-            renterGebyrer: '6973',
+            sum: formatNumber(1935, { decimals: 2 }),
+            avdrag: formatNumber(6570.50, { decimals: 2 }),
+            renterGebyrer: formatNumber(6973, { decimals: 2 }),
         }
     ]
     // Rader uten address vil ikke kunne ekspanderes fordi funksjonen returnerer falsy

@@ -1,6 +1,7 @@
 import Table from '@sb1/ffe-tables-react';
 import { TertiaryButton } from '@sb1/ffe-buttons-react';
 import { Icon } from '@sb1/ffe-icons-react';
+import { formatNumber } from '@sb1/ffe-formatters';
 
 () => {
 
@@ -36,14 +37,6 @@ import { Icon } from '@sb1/ffe-icons-react';
         </TertiaryButton>
     );
 
-    const formatNumber = num =>
-        Number(
-            num
-                .toString()
-                .replace(/\s/g, '')
-                .replace(/,/g, '.'),
-        );
-
     const data = [
         {
             id: 0,
@@ -51,7 +44,7 @@ import { Icon } from '@sb1/ffe-icons-react';
             email: 'ola@normann.no',
             address: 'Gateveien 2',
             age: 23,
-            networth: '12 693 005,93',
+            networth: 12693005.93,
             button: <Button>poke</Button>,
         },
         {
@@ -59,7 +52,7 @@ import { Icon } from '@sb1/ffe-icons-react';
             name: 'Sivert Svenska',
             email: 'sivert@svenska.se',
             age: 45,
-            networth: '9 005,93',
+            networth: 9005.93,
             button: <Button>poke</Button>,
         },
         {
@@ -68,7 +61,7 @@ import { Icon } from '@sb1/ffe-icons-react';
             email: 'daniel@dansk.dk',
             address: <Button>legg til adresse</Button>,
             age: 39,
-            networth: '8 693 005,93',
+            networth: 8693005.93,
             button: <Button>poke</Button>,
         },
         {
@@ -77,27 +70,23 @@ import { Icon } from '@sb1/ffe-icons-react';
             email: 'lilleole@gmail.com',
             address: <Button>legg til adresse</Button>,
             age: 9,
-            networth: '23,12',
+            networth: 23.12,
             button: <Button>poke</Button>,
         },
     ].map(d => ({
-        syntetic: d.age > 18 && formatNumber(d.networth) > 10000,
+        syntetic: d.age > 18 && d.networth > 10000,
         ...d,
     }));
 
-    const currencyCompare = (a, b) => formatNumber(a) - formatNumber(b);
+    const currencyCompare = (a, b) => a - b;
 
     const ageSum = data
         .map(e => e.age)
-        .reduce((total, num) => {
-            return total + num;
-        });
+        .reduce((total, num) => total + num);
 
     const networthSum = data
-        .map(e => formatNumber(e.networth))
-        .reduce((total, num) => {
-            return total + num;
-        });
+        .map(e => e.networth)
+        .reduce((total, num) => total + num);
 
     const columnsAdvanced = [
         { key: 'name', header: 'Navn', footer: 'Gjennomsnitt' },
@@ -129,7 +118,7 @@ import { Icon } from '@sb1/ffe-icons-react';
                 return (
                     <>
                         {props.cells.age > 18 &&
-                        formatNumber(props.cells.networth) > 10000
+                        props.cells.networth > 10000
                             ? 'voksen, formue > 10000'
                             : ''}
                     </>
@@ -163,7 +152,6 @@ import { Icon } from '@sb1/ffe-icons-react';
             cellRender: (value, col, props) => {
                 return (
                     <>
-                        {' '}
                         {value
                             ? generateCheckbox(value)
                             : generateCheckbox(false)}
@@ -174,10 +162,16 @@ import { Icon } from '@sb1/ffe-icons-react';
         {
             key: 'networth',
             header: 'Formue',
-            footer: '5 348 760,23',
+            footer: 5348760.23,
             alignRight: true,
             compare: currencyCompare,
-
+            cellRender: (value, col, props) => {
+                return (
+                    <>
+                        {formatNumber(value, { decimals: 2 })}
+                    </>
+                );
+            },
             columnFooterRender: (
                 value,
                 dataWindow,
@@ -189,7 +183,7 @@ import { Icon } from '@sb1/ffe-icons-react';
                 return (
                     <th key={tdPorps.key} {...tdPorps}>
                         <span {...spanProps}>
-                            {Number(networthSum / 4).toFixed(2)}
+                            {formatNumber(networthSum / data.length, { decimals: 2 })}
                         </span>
                     </th>
                 );
@@ -264,7 +258,7 @@ import { Icon } from '@sb1/ffe-icons-react';
                             <td className="ffe-table__cell" />
                             <th className="ffe-table__cell" data-th="Formue">
                                 <span className="ffe-table__content ffe-table__content--text-right">
-                                    {networthSum}
+                                    {formatNumber(networthSum, { decimals: 2 })}
                                 </span>
                             </th>
                             <td className="ffe-table__cell" data-th="Poke">

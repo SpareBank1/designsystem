@@ -1,7 +1,9 @@
 import Table from '@sb1/ffe-tables-react';
 import { TertiaryButton } from '@sb1/ffe-buttons-react';
+import { formatNumber } from '@sb1/ffe-formatters';
 
 () => {
+
     const Button = ({ children }) => (
         // stopPropagation hindrer at raden ekspanderer/kollapser når vi trykker på knappen
         <TertiaryButton onClick={e => e.stopPropagation()}>
@@ -16,7 +18,7 @@ import { TertiaryButton } from '@sb1/ffe-buttons-react';
             email: 'ola@normann.no',
             address: 'Gateveien 2',
             age: 23,
-            networth: '12 693 005,93',
+            networth: formatNumber(12693005.93, { decimals: 2 }),
             button: <Button>poke</Button>,
         },
         {
@@ -24,7 +26,7 @@ import { TertiaryButton } from '@sb1/ffe-buttons-react';
             name: 'Sivert Svenska',
             email: 'sivert@svenska.se',
             age: 45,
-            networth: '9 005,93',
+            networth: formatNumber(9005.93, { decimals: 2 }),
             button: <Button>poke</Button>,
         },
         {
@@ -33,7 +35,7 @@ import { TertiaryButton } from '@sb1/ffe-buttons-react';
             email: 'daniel@dansk.dk',
             address: <Button>legg til adresse</Button>,
             age: 39,
-            networth: '8 693 005,93',
+            networth: formatNumber(8693005.93, { decimals: 2 }),
             button: <Button>poke</Button>,
         },
         {
@@ -46,15 +48,7 @@ import { TertiaryButton } from '@sb1/ffe-buttons-react';
             button: <Button>poke</Button>,
         },
     ];
-
-    const formatNumber = num =>
-        Number(
-            num
-                .toString()
-                .replace(/\s/g, '')
-                .replace(/,/g, '.'),
-        );
-    const currencyCompare = (a, b) => formatNumber(a) - formatNumber(b);
+    const currencyCompare = (a, b) => a.replace(/[\s.,]+/g, '') - b.replace(/[\s.,]+/g, '');
 
     const columns = [
         { key: 'name', header: 'Navn', footer: 'Gjennomsnitt' },
