@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [11.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@11.1.1...@sb1/ffe-accordion-react@11.1.2) (2024-04-26)
+
+### Bug Fixes
+
+-   **ffe-accordion-react:** use context for accordion item props ([361a8e7](https://github.com/SpareBank1/designsystem/commit/361a8e7ea7d924ab3c69603c9bb8e149aaa13718))
+
 ## [11.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@11.1.0...@sb1/ffe-accordion-react@11.1.1) (2024-04-18)
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react

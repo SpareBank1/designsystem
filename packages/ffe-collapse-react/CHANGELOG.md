@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-collapse-react@3.0.1...@sb1/ffe-collapse-react@3.0.2) (2024-04-26)
+
+### Bug Fixes
+
+-   **ffe-collapse-react:** remove overflow hidden when expanden ([7c08b69](https://github.com/SpareBank1/designsystem/commit/7c08b698aa1a473639b60008a9cc96e56c3ac848))
+
 ## [3.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-collapse-react@3.0.0...@sb1/ffe-collapse-react@3.0.1) (2024-04-18)
 
 **Note:** Version bump only for package @sb1/ffe-collapse-react
