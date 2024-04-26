@@ -7,12 +7,51 @@ export const Collapse = React.forwardRef(
         const internalRef = useRef();
         const collapse = ref ?? internalRef;
         const [isHidden, setIsHidden] = useState(!isOpen);
+        const [overflowVisible, setOverflowVisible] = useState(!!isOpen);
 
         useEffect(() => {
-            if (isOpen) {
-                setIsHidden(false);
-            }
-        }, [isOpen]);
+            const _collapse = collapse;
+            const handleTransition = startOrEnd => e => {
+                if (
+                    e.target === collapse.current &&
+                    e.propertyName === 'grid-template-rows'
+                ) {
+                    setIsHidden(!isOpen);
+                    if (startOrEnd === 'start') {
+                        setOverflowVisible(false);
+                    } else {
+                        if (isOpen) {
+                            setOverflowVisible(true);
+                        }
+                        if (onRest) {
+                            onRest();
+                        }
+                    }
+                }
+            };
+
+            const handleTransitionStart = handleTransition('start');
+            const handleTransitionEnd = handleTransition('end');
+
+            _collapse.current.addEventListener(
+                'transitionstart',
+                handleTransitionStart,
+            );
+            _collapse.current.addEventListener(
+                'transitionend',
+                handleTransitionEnd,
+            );
+            return () => {
+                _collapse.current.removeEventListener(
+                    'transitionstart',
+                    handleTransitionStart,
+                );
+                _collapse.current.removeEventListener(
+                    'transitionend',
+                    handleTransitionEnd,
+                );
+            };
+        }, [collapse, isOpen, onRest]);
 
         return (
             <div
@@ -22,21 +61,14 @@ export const Collapse = React.forwardRef(
                     'ffe-collapse--open': isOpen,
                     'ffe-collapse--hidden': isHidden,
                 })}
-                onTransitionEnd={e => {
-                    if (
-                        e.target === collapse.current &&
-                        e.propertyName === 'grid-template-rows'
-                    ) {
-                        if (onRest) {
-                            onRest();
-                        }
-                        if (!isOpen) {
-                            setIsHidden(true);
-                        }
-                    }
-                }}
             >
-                <div className="ffe-collapse__inner">{children}</div>
+                <div
+                    className={classNames('ffe-collapse__inner', {
+                        'ffe-collapse__inner--visible': overflowVisible,
+                    })}
+                >
+                    {children}
+                </div>
             </div>
         );
     },
