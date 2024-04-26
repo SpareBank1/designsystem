@@ -23,7 +23,7 @@ import { formatNumber } from '@sb1/ffe-formatters';
         },
         {
             id: 1,
-            name: 'Sivert Svenska',
+            name: 'Sivert Svensk',
             email: 'sivert@svenska.se',
             age: 45,
             networth: formatNumber(9005.93, { decimals: 2 }),

@@ -10,7 +10,7 @@ import Table from '@sb1/ffe-tables-react';
         },
         {
             id: 1,
-            name: 'Sivert Svenska',
+            name: 'Sivert Svensk',
             email: 'sivert@svenska.se',
             info: 'mer spennende info',
             defaultExpanded: true,
