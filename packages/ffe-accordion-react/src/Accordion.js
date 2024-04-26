@@ -1,21 +1,20 @@
 import React from 'react';
 import { node, oneOf, string } from 'prop-types';
 import classNames from 'classnames';
+import { AccordionProvider } from './AccordionContext';
 
-const Accordion = ({ children, headingLevel, className, ...rest }) => {
+export const Accordion = ({ children, headingLevel, className, ...rest }) => {
     return (
-        <div
-            className={classNames(className, 'ffe-accordion')}
-            role="group"
-            aria-label="Trekkspillmeny"
-            {...rest}
-        >
-            {React.Children.map(children, (child, index) => {
-                return React.cloneElement(child, {
-                    headingLevel,
-                });
-            })}
-        </div>
+        <AccordionProvider headingLevel={headingLevel}>
+            <div
+                className={classNames(className, 'ffe-accordion')}
+                role="group"
+                aria-label="Trekkspillmeny"
+                {...rest}
+            >
+                {children}
+            </div>
+        </AccordionProvider>
     );
 };
 
@@ -27,5 +26,3 @@ Accordion.propTypes = {
     /** Class assigned the container */
     className: string,
 };
-
-export default Accordion;
