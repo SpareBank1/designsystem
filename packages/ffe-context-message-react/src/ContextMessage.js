@@ -22,20 +22,20 @@ import { v4 as uuid } from 'uuid';
  * Please use one of the four versions exported from this package.
  */
 const ContextMessage = ({
-    animationLengthMs,
-    onClose,
+    animationLengthMs = 300,
+    onClose = () => {},
     icon,
     headerText,
-    compact,
+    compact = false,
     messageType,
-    style,
-    showCloseButton,
-    headerElement,
+    style = {},
+    showCloseButton = false,
+    headerElement = 'h2',
     headerElementId,
     contentElementId,
     children,
     className,
-    locale,
+    locale = 'nb',
     onColoredBg,
     ...rest
 }) => {
@@ -153,14 +153,4 @@ ContextMessage.propTypes = {
     style: object,
     /* Adds alternative styling for better contrast on certain backgrounds */
     onColoredBg: bool,
-};
-
-ContextMessage.defaultProps = {
-    animationLengthMs: 300,
-    compact: false,
-    headerElement: 'h2',
-    locale: 'nb',
-    onClose: () => {},
-    showCloseButton: false,
-    style: {},
 };

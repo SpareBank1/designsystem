@@ -5,7 +5,7 @@ import texts from './locale/texts';
 import { oneOf } from 'prop-types';
 import acceptedLocales from './locale/accepted-locales';
 
-const ContextTipsMessage = ({ locale, ...rest }) => {
+const ContextTipsMessage = ({ locale = 'nb', ...rest }) => {
     const lightbulbIconSmall =
         'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjAiPjxwYXRoIGQ9Ik00NzkuNzg4LTExMi45MjRxLTI3LjA5NSAwLTQ2LjU1Ny0xOC42NS0xOS40NjEtMTguNjUtMjEuMzg1LTQ1LjY1N2gxMzYuMzA4cS0xLjkyNCAyNy4zMDctMjEuNTk3IDQ1LjgwNy0xOS42NzQgMTguNS00Ni43NjkgMTguNVpNMzcyLjI4My0yNDAuNjE3cS0xMS4wNTIgMC0xOC42NjctNy40MDUtNy42MTUtNy40MDQtNy42MTUtMTguMzg0IDAtMTAuOTc5IDcuNDUzLTE4LjU5NSA3LjQ1NC03LjYxNSAxOC41MDYtNy42MTVoMjE1Ljc1N3ExMS4wNTIgMCAxOC42NjcgNy40MDUgNy42MTUgNy40MDUgNy42MTUgMTguMzg0dC03LjQ1MyAxOC41OTVxLTcuNDU0IDcuNjE1LTE4LjUwNiA3LjYxNUgzNzIuMjgzWm0tNDUuMTI5LTExNS4zODRxLTU1Ljg0NS0zNi4wNzctODUuNDk5LTk0LjYxNVEyMTIuMDAxLTUwOS4xNTQgMjEyLjAwMS01NzZxMC0xMTEuOTIyIDc4LjAzOC0xODkuOTYxUTM2OC4wNzgtODQzLjk5OSA0ODAtODQzLjk5OXExMTEuOTIyIDAgMTg5Ljk2MSA3OC4wMzhRNzQ3Ljk5OS02ODcuOTIyIDc0Ny45OTktNTc2cTAgNjYuODQ2LTI5LjY1NCAxMjUuMzg0dC04NS40OTkgOTQuNjE1SDMyNy4xNTRaTTM0NC00MDhoMjcycTM4LTMxIDU5LTc1dDIxLTkzcTAtOTAuMzI3LTYyLjc2OS0xNTMuMTY0UTU3MC40NjItNzkyIDQ4MC4yMzEtNzkyVDMyNy03MjkuMTY0UTI2NC02NjYuMzI3IDI2NC01NzZxMCA0OSAyMSA5M3Q1OSA3NVptMTM2IDBaIi8+PC9zdmc+';
 
@@ -27,10 +27,6 @@ const ContextTipsMessage = ({ locale, ...rest }) => {
             }
         />
     );
-};
-
-ContextTipsMessage.defaultProps = {
-    locale: 'nb',
 };
 
 ContextTipsMessage.propTypes = {
