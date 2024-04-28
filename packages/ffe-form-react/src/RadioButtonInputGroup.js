@@ -8,7 +8,7 @@ const RadioButtonInputGroup = props => {
     const {
         children,
         className,
-        extraMargin,
+        extraMargin = true,
         description,
         fieldMessage,
         inline,
@@ -119,10 +119,6 @@ RadioButtonInputGroup.propTypes = {
      * set
      * */
     tooltip: oneOfType([node, string]),
-};
-
-RadioButtonInputGroup.defaultProps = {
-    extraMargin: true,
 };
 
 export default RadioButtonInputGroup;

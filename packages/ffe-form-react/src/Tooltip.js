@@ -9,7 +9,7 @@ const Tooltip = React.forwardRef(
         {
             isOpen,
             'aria-controls': ariaControls,
-            'aria-label': ariaLabel,
+            'aria-label': ariaLabel = 'Vis hjelpetekst',
             children,
             className,
             onClick,
@@ -83,10 +83,6 @@ Tooltip.propTypes = {
     onClick: func,
     /** Sets the tabIndex of the tooltip button. */
     tabIndex: number,
-};
-
-Tooltip.defaultProps = {
-    'aria-label': 'Vis hjelpetekst',
 };
 
 export default Tooltip;

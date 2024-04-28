@@ -22,10 +22,10 @@ class BaseRadioButton extends Component {
             children,
             checked,
             className,
-            labelProps,
+            labelProps = {},
             selectedValue,
             tooltip,
-            tooltipProps,
+            tooltipProps = {},
             value,
             innerRef,
             ...inputProps
@@ -62,11 +62,6 @@ class BaseRadioButton extends Component {
         );
     }
 }
-
-BaseRadioButton.defaultProps = {
-    labelProps: {},
-    tooltipProps: {},
-};
 
 BaseRadioButton.propTypes = {
     /** Whether or not the radio button is selected */

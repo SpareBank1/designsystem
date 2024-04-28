@@ -69,10 +69,14 @@ describe('<RadioButtonInputGroup />', () => {
         it('renders if set and label is set', () => {
             const wrapper = getWrapper({ label: 'yes', tooltip: 'Tip big!' });
             expect(
+                wrapper.find('button[aria-label="Vis hjelpetekst"]').length,
+            ).toEqual(1);
+            expect(
                 wrapper
-                    .find('ForwardRef[aria-label="Vis hjelpetekst"]')
-                    .exists(),
-            ).toBe(true);
+                    .find('.ffe-collapse__inner')
+                    .at(0)
+                    .text(),
+            ).toEqual('Tip big!');
         });
         it('does not render if set and label is not set', () => {
             const wrapper = getWrapper({
@@ -91,20 +95,28 @@ describe('<RadioButtonInputGroup />', () => {
         it('renders as a Tooltip if string', () => {
             const wrapper = getWrapper({ tooltip: 'such tooltip' });
             expect(
+                wrapper.find('button[aria-label="Vis hjelpetekst"]').length,
+            ).toEqual(1);
+            expect(
                 wrapper
-                    .find('ForwardRef[aria-label="Vis hjelpetekst"]')
-                    .prop('children'),
-            ).toBe('such tooltip');
+                    .find('.ffe-collapse__inner')
+                    .at(0)
+                    .text(),
+            ).toEqual('such tooltip');
         });
         it('renders as a Tooltip if Tooltip', () => {
             const wrapper = getWrapper({
                 tooltip: <Tooltip>such tooltip</Tooltip>,
             });
             expect(
+                wrapper.find('button[aria-label="Vis hjelpetekst"]').length,
+            ).toEqual(1);
+            expect(
                 wrapper
-                    .find('ForwardRef[aria-label="Vis hjelpetekst"]')
-                    .prop('children'),
-            ).toBe('such tooltip');
+                    .find('.ffe-collapse__inner')
+                    .at(0)
+                    .text(),
+            ).toEqual('such tooltip');
         });
     });
     describe('description', () => {
@@ -119,10 +131,14 @@ describe('<RadioButtonInputGroup />', () => {
                 ),
             });
             expect(
+                wrapper.find('button[aria-label="Vis hjelpetekst"]').length,
+            ).toEqual(1);
+            expect(
                 wrapper
-                    .find('ForwardRef[aria-label="Vis hjelpetekst"]')
-                    .prop('children'),
-            ).toBe('Description text as Tooltip component');
+                    .find('.ffe-collapse__inner')
+                    .at(0)
+                    .text(),
+            ).toEqual('Description text as Tooltip component');
         });
     });
     describe('fieldMessage', () => {

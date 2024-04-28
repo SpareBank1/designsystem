@@ -14,20 +14,21 @@ export default class PhoneNumber extends React.Component {
     render() {
         const {
             number,
-            countryCode,
-            onCountryCodeChange,
-            onNumberChange,
-            onCountryCodeBlur,
-            onNumberBlur,
+            countryCode = '47',
+            onCountryCodeChange = () => {},
+            onNumberChange = () => {},
+            onCountryCodeBlur = () => {},
+            onNumberBlur = () => {},
             disabled,
             countryCodeFieldMessage,
             numberFieldMessage,
             countryCodeAndNumberFieldMessage,
             className,
-            extraMargin,
+            extraMargin = true,
             countryCodeRef,
             numberRef,
-            isMobileNumber,
+            isMobileNumber = false,
+            locale = 'nb',
         } = this.props;
 
         let fieldMessage;
@@ -47,11 +48,7 @@ export default class PhoneNumber extends React.Component {
 
         const supportedLocales = ['nb', 'nn', 'en'];
         const text =
-            i18n[
-                supportedLocales.indexOf(this.props.locale) !== -1
-                    ? this.props.locale
-                    : 'nb'
-            ];
+            i18n[supportedLocales.indexOf(locale) !== -1 ? locale : 'nb'];
 
         return (
             <div
@@ -154,8 +151,6 @@ export default class PhoneNumber extends React.Component {
     }
 }
 
-const noop = () => {};
-
 PhoneNumber.propTypes = {
     number: string,
     countryCode: string,
@@ -187,15 +182,4 @@ PhoneNumber.propTypes = {
     numberRef: oneOfType([func, shape({ current: object })]),
     /** If True label is changed from "Phone number" to "Mobile number" */
     isMobileNumber: bool,
-};
-
-PhoneNumber.defaultProps = {
-    countryCode: '47',
-    locale: 'nb',
-    onCountryCodeChange: noop,
-    onNumberChange: noop,
-    onCountryCodeBlur: noop,
-    onNumberBlur: noop,
-    extraMargin: true,
-    isMobileNumber: false,
 };
