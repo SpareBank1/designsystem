@@ -14,7 +14,7 @@ class SystemMessage extends Component {
     }
 
     close(event) {
-        const { animationLengthMs, onClose } = this.props;
+        const { animationLengthMs, onClose = f => f } = this.props;
         const self = this._self;
         self.style.height = `${self.offsetHeight}px`;
         setTimeout(() => {
@@ -30,11 +30,11 @@ class SystemMessage extends Component {
 
     render() {
         const {
-            animationLengthMs,
+            animationLengthMs = 300,
             children,
             className,
             icon,
-            locale,
+            locale = 'nb',
             modifier,
             onColoredBg,
             ...rest
@@ -85,12 +85,6 @@ class SystemMessage extends Component {
         );
     }
 }
-
-SystemMessage.defaultProps = {
-    animationLengthMs: 300,
-    locale: 'nb',
-    onClose: f => f,
-};
 
 SystemMessage.propTypes = {
     animationLengthMs: number,
