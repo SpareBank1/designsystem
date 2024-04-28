@@ -45,6 +45,7 @@ export default class Datepicker extends Component {
         this.onError = this.onError.bind(this);
     }
 
+    language = this.props.language ?? 'nb';
     buttonRef = React.createRef();
     dateInputRef = this.props.innerRef ?? React.createRef();
 
@@ -83,16 +84,16 @@ export default class Datepicker extends Component {
     }
 
     onError(type) {
-        const { language, onError } = this.props;
+        const { onError } = this.props;
 
-        const errorText = i18n[language][type];
+        const errorText = i18n[this.language][type];
         return onError ? onError(type, errorText) : errorText;
     }
 
     validateDateIntervals() {
         this.setState((prevState, props) => {
             let nextState = {};
-            const { onChange, value, onValidationComplete } = props;
+            const { onChange, value, onValidationComplete = () => {} } = props;
 
             const error = type => {
                 const errorMessage = this.onError(type);
@@ -278,10 +279,9 @@ export default class Datepicker extends Component {
             hideErrors,
             inputProps = {},
             label,
-            language,
             onChange,
             value,
-            fullWidth,
+            fullWidth = false,
         } = this.props;
 
         const { minDate, maxDate } = this.state;
@@ -324,7 +324,9 @@ export default class Datepicker extends Component {
                             ? `ffe-datepicker-label-${this.datepickerId}`
                             : undefined
                     }
-                    aria-label={label ? undefined : i18n[language].CHOOSE_DATE}
+                    aria-label={
+                        label ? undefined : i18n[this.language].CHOOSE_DATE
+                    }
                     className={datepickerClassName}
                     onClick={this.addFlagOnClickEventClickHandler}
                     ref={c => {
@@ -342,12 +344,12 @@ export default class Datepicker extends Component {
                             ref={this.dateInputRef}
                             value={value}
                             fullWidth={fullWidth}
-                            language={language}
+                            language={this.language}
                         />
                         <CalendarButton
                             onClick={this.calendarButtonClickHandler}
                             value={value}
-                            language={language}
+                            language={this.language}
                             buttonRef={this.buttonRef}
                         />
                     </div>
@@ -356,7 +358,7 @@ export default class Datepicker extends Component {
                         <Calendar
                             calendarClassName={calendarClassName}
                             escKeyHandler={this.escKeyHandler}
-                            language={language}
+                            language={this.language}
                             maxDate={maxDate}
                             minDate={minDate}
                             onDatePicked={this.datePickedHandler}
@@ -381,13 +383,6 @@ export default class Datepicker extends Component {
         );
     }
 }
-
-Datepicker.defaultProps = {
-    language: 'nb',
-    keepDisplayStateOnError: false,
-    onValidationComplete: () => {},
-    fullWidth: false,
-};
 
 Datepicker.propTypes = {
     'aria-invalid': string,
