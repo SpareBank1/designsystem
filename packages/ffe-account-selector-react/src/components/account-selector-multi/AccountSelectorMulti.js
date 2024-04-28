@@ -55,11 +55,17 @@ class AccountSelectorMulti extends React.Component {
     }
 
     onSuggestionSelect(suggestion) {
-        const { onAccountSelected, selectedAccounts, accounts } = this.props;
+        const {
+            onAccountSelected,
+            selectedAccounts = [],
+            accounts,
+        } = this.props;
         if (suggestion) {
             if (suggestion.id === allAccountsElement.id) {
                 const allSelected = selectedAccounts.length === accounts.length;
-                this.props.onSelectAll(!allSelected);
+                if (this.props.onSelectAll) {
+                    this.props.onSelectAll(!allSelected);
+                }
                 return;
             }
             onAccountSelected(suggestion);
@@ -67,7 +73,7 @@ class AccountSelectorMulti extends React.Component {
     }
 
     renderSuggestion(account) {
-        const { locale, selectedAccounts, accounts } = this.props;
+        const { locale, selectedAccounts = [], accounts } = this.props;
         const isSelected = selectedAccounts.filter(
             a => a.accountNumber === account.accountNumber,
         );
@@ -102,7 +108,7 @@ class AccountSelectorMulti extends React.Component {
     renderSuggestionDetails(listHeight) {
         if (this.baseRef) {
             let statusText;
-            const { selectedAccounts, isLoading } = this.props;
+            const { selectedAccounts = [], isLoading = false } = this.props;
             if (selectedAccounts.length === 0) {
                 statusText = txt[this.props.locale].NO_ACCOUNTS_SELECTED;
             } else if (selectedAccounts.length === 1) {
@@ -188,13 +194,6 @@ class AccountSelectorMulti extends React.Component {
         );
     }
 }
-
-AccountSelectorMulti.defaultProps = {
-    onSelectAll: () => {},
-    selectedAccounts: [],
-    showSelectAllOption: false,
-    isLoading: false,
-};
 
 AccountSelectorMulti.propTypes = {
     /**

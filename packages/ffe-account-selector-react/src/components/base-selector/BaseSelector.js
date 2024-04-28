@@ -21,9 +21,13 @@ class BaseSelector extends Component {
     }
 
     _onSuggestionListChange() {
-        setTimeout(() => {
-            this.props.onSuggestionListChange(this.getSuggestionListHeight());
-        });
+        if (this.props.onSuggestionListChange) {
+            setTimeout(() => {
+                this.props.onSuggestionListChange(
+                    this.getSuggestionListHeight(),
+                );
+            });
+        }
     }
 
     getSuggestionListHeight() {
@@ -49,7 +53,9 @@ class BaseSelector extends Component {
             this.setState(
                 { showSuggestions: true, highlightedSuggestionIndex: -1 },
                 () => {
-                    this.props.onChange(val);
+                    if (this.props.onChange) {
+                        this.props.onChange(val);
+                    }
                     this._onSuggestionListChange();
                 },
             );
@@ -57,7 +63,7 @@ class BaseSelector extends Component {
     }
 
     onFocus() {
-        const { shouldShowSuggestionsOnFocus, onFocus } = this.props;
+        const { shouldShowSuggestionsOnFocus = true, onFocus } = this.props;
         this.showOrHideSuggestions(shouldShowSuggestionsOnFocus, onFocus);
     }
 
@@ -192,16 +198,16 @@ class BaseSelector extends Component {
     render() {
         const {
             value,
-            placeholder,
+            placeholder = '',
             suggestionsHeightMax,
-            ariaInvalid,
+            ariaInvalid = false,
             id,
             name,
             suggestions,
             onSuggestionSelect,
             readOnly,
             locale,
-            highCapacity,
+            highCapacity = false,
         } = this.props;
         const {
             showSuggestions,
@@ -285,19 +291,6 @@ BaseSelector.propTypes = {
     name: string,
     readOnly: bool,
     highCapacity: bool,
-};
-
-BaseSelector.defaultProps = {
-    onChange: Function.prototype,
-    onBlur: Function.prototype,
-    onClick: Function.prototype,
-    onFocus: Function.prototype,
-    onReset: Function.prototype,
-    onSuggestionListChange: Function.prototype,
-    ariaInvalid: false,
-    placeholder: '',
-    shouldShowSuggestionsOnFocus: true,
-    highCapacity: false,
 };
 
 export default BaseSelector;

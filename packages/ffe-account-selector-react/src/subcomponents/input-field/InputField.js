@@ -18,17 +18,17 @@ const InputField = props => {
         id,
         placeholder,
         isSuggestionsShowing,
-        ariaInvalid,
+        ariaInvalid = false,
         onClick,
-        inputFieldRef,
+        inputFieldRef = () => {},
         highlightedIndex,
         suggestionListId,
         name,
-        readOnly,
+        readOnly = false,
         locale,
         value,
-        onBlur,
-        onFocus,
+        onBlur = () => {},
+        onFocus = () => {},
         onChange,
         onReset,
     } = props;
@@ -141,14 +141,6 @@ InputField.propTypes = {
     suggestionListId: string,
     name: string,
     locale: Locale.isRequired,
-};
-
-InputField.defaultProps = {
-    onBlur: () => {},
-    onFocus: () => {},
-    inputFieldRef: () => {},
-    ariaInvalid: false,
-    readOnly: false,
 };
 
 export default InputField;

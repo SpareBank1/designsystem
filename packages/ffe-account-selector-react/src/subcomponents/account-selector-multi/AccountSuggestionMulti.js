@@ -5,7 +5,7 @@ import { Checkbox } from '@sb1/ffe-form-react';
 import { accountFormatter, balanceWithCurrency } from '../../util/format';
 import { Account, Locale } from '../../util/types';
 
-function AccountSuggestionMulti({ account, locale, selected }) {
+function AccountSuggestionMulti({ account, locale, selected = false }) {
     const { accountNumber, balance, name, currencyCode } = account;
     const hasBalance = balance !== null;
     return (
@@ -40,10 +40,6 @@ AccountSuggestionMulti.propTypes = {
     account: Account.isRequired,
     locale: Locale.isRequired,
     selected: bool.isRequired,
-};
-
-AccountSuggestionMulti.defaultProps = {
-    selected: false,
 };
 
 export default AccountSuggestionMulti;
