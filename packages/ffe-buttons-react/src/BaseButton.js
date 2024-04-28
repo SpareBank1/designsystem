@@ -17,11 +17,11 @@ import classNames from 'classnames';
  */
 const BaseButton = props => {
     const {
-        ariaLoadingMessage,
+        ariaLoadingMessage = 'Vennligst vent',
         buttonType,
         children,
         className,
-        element: Element,
+        element: Element = 'button',
         innerRef,
         isLoading,
         leftIcon,
@@ -104,11 +104,6 @@ BaseButton.propTypes = {
     rightIcon: node,
     /** Called when button is clicked if not loading or disabled */
     onClick: func,
-};
-
-BaseButton.defaultProps = {
-    ariaLoadingMessage: 'Vennligst vent',
-    element: 'button',
 };
 
 export default BaseButton;
