@@ -26,7 +26,7 @@ class DefaultTable extends Component {
     }
 
     renderTableHeaders() {
-        const { columns, headerRender } = this.props;
+        const { columns = [], headerRender } = this.props;
 
         if (!columns.length) {
             return null;
@@ -71,7 +71,7 @@ class DefaultTable extends Component {
     }
 
     getData() {
-        const { data, offset, limit } = this.props;
+        const { data = [], offset = 0, limit = 0 } = this.props;
         if (!offset && !limit) {
             return data;
         }
@@ -192,13 +192,6 @@ DefaultTable.propTypes = {
     headerRender: PropTypes.func,
     footerRender: PropTypes.func,
     className: PropTypes.string,
-};
-
-DefaultTable.defaultProps = {
-    columns: [],
-    data: [],
-    offset: 0,
-    limit: 0,
 };
 
 export default DefaultTable;
