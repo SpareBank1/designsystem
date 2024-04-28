@@ -2,7 +2,7 @@ import React from 'react';
 import { bool, func } from 'prop-types';
 import classNames from 'classnames';
 
-const HamburgerButton = ({ isOpen, onToggle }) => {
+const HamburgerButton = ({ isOpen = false, onToggle }) => {
     const cns = classNames({
         'sb1ex-hamburger-button': true,
         'sb1ex-hamburger-button--expanded': isOpen,
@@ -26,10 +26,6 @@ const HamburgerButton = ({ isOpen, onToggle }) => {
 HamburgerButton.propTypes = {
     isOpen: bool,
     onToggle: func.isRequired,
-};
-
-HamburgerButton.defaultProps = {
-    isOpen: false,
 };
 
 export default HamburgerButton;
