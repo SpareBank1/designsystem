@@ -9,7 +9,12 @@ import {
 } from '@sb1/ffe-buttons-react';
 import { func, oneOf, shape, string } from 'prop-types';
 
-const FeedbackExpanded = ({ language, onSend, onCancel, contactLink }) => {
+const FeedbackExpanded = ({
+    language = 'nb',
+    onSend,
+    onCancel,
+    contactLink = null,
+}) => {
     const [feedbackText, setFeedbackText] = useState('');
     const [fieldMessage, setFieldMessage] = useState(undefined);
 
@@ -88,9 +93,4 @@ FeedbackExpanded.propTypes = {
         linkText: string,
         onClick: func,
     }),
-};
-
-FeedbackExpanded.defaultProps = {
-    language: 'nb',
-    contactLink: null,
 };

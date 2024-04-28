@@ -8,7 +8,7 @@ export const Thumbs = {
     DOWN: 'THUMB_DOWN',
 };
 
-const FeedbackThumbs = ({ language, onClick, headingId }) => {
+const FeedbackThumbs = ({ language = 'nb', onClick, headingId }) => {
     return (
         <div>
             <button
@@ -41,8 +41,4 @@ FeedbackThumbs.propTypes = {
     language: oneOf(['nb', 'nn', 'en']),
     onClick: func.isRequired,
     headingId: string.isRequired,
-};
-
-FeedbackThumbs.defaultProps = {
-    language: 'nb',
 };
