@@ -2,11 +2,9 @@ import React from 'react';
 import classNames from 'classnames';
 import { string, node, oneOfType, func, elementType } from 'prop-types';
 
-const ComponentBase = ({ className, element: Element, ...rest }) => (
+const ComponentBase = ({ className, element: Element = 'p', ...rest }) => (
     <Element className={classNames(className)} {...rest} />
 );
-
-ComponentBase.defaultProps = { element: 'p' };
 
 ComponentBase.propTypes = {
     className: string,
