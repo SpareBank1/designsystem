@@ -5,10 +5,10 @@ import texts from './texts';
 
 const Spinner = ({
     className,
-    immediate,
-    large,
+    immediate = false,
+    large = false,
     loadingText,
-    locale,
+    locale = 'nb',
     onColoredBg,
     ...rest
 }) => (
@@ -37,12 +37,6 @@ Spinner.propTypes = {
     locale: oneOf(['en', 'nb', 'nn']),
     /** Adds alternative styling for better contrast on certain backgrounds */
     onColoredBg: bool,
-};
-
-Spinner.defaultProps = {
-    immediate: false,
-    large: false,
-    locale: 'nb',
 };
 
 export default Spinner;
