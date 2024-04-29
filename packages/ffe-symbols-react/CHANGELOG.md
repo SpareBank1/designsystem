@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-symbols-react@4.0.0...@sb1/ffe-symbols-react@5.0.0) (2024-04-29)
+
+### Bug Fixes
+
+-   **ffe-symbols-react:** remove default props ([6f8529d](https://github.com/SpareBank1/designsystem/commit/6f8529ddeb432cda43cd08d2917dd28f2a673917))
+
+### Documentation
+
+-   **ffe-symbols-react:** this package has been deprecated ([970906a](https://github.com/SpareBank1/designsystem/commit/970906a22848052d9802cf9b7a5c773a001ad629))
+
+### BREAKING CHANGES
+
+-   **ffe-symbols-react:** This package has been deprecated.
+    Please use @sb1/ffe-icons and @sb1/ffe-icons-react.
+
 # [4.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-symbols-react@3.0.3...@sb1/ffe-symbols-react@4.0.0) (2024-02-26)
 
 ### Bug Fixes

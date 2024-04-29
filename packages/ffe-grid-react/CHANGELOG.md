@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [13.2.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@13.2.9...@sb1/ffe-grid-react@13.2.10) (2024-04-29)
+
+### Bug Fixes
+
+-   **ffe-grid-react:** remove default props ([f735573](https://github.com/SpareBank1/designsystem/commit/f73557368d5b3604babf98a7a540bbd33afb3f8d))
+
 ## [13.2.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@13.2.8...@sb1/ffe-grid-react@13.2.9) (2024-04-18)
 
 **Note:** Version bump only for package @sb1/ffe-grid-react

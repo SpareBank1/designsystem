@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [24.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@24.0.6...@sb1/ffe-account-selector-react@24.0.7) (2024-04-29)
+
+### Bug Fixes
+
+-   **ffe-account-selector-react:** remove default props ([d5cce9f](https://github.com/SpareBank1/designsystem/commit/d5cce9f4d84d2ea14141e794a07085eeba205b7a))
+
 ## [24.0.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-account-selector-react@24.0.5...@sb1/ffe-account-selector-react@24.0.6) (2024-04-29)
 
 **Note:** Version bump only for package @sb1/ffe-account-selector-react

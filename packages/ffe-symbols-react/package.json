@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-symbols-react",
-    "version": "4.0.0",
+    "version": "5.0.0",
     "description": "React-komponenter for Material Symbols tilpasset Sb1 sine behov",
     "main": "lib/index.js",
     "module": "es/index.js",

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.35](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback-react@2.0.34...@sb1/ffe-feedback-react@2.0.35) (2024-04-29)
+
+### Bug Fixes
+
+-   **ffe-feedback-react:** remove default props ([9e20404](https://github.com/SpareBank1/designsystem/commit/9e204043763ab7e291d981b9ac52bdcb676c12b1))
+
 ## [2.0.34](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback-react@2.0.33...@sb1/ffe-feedback-react@2.0.34) (2024-04-29)
 
 **Note:** Version bump only for package @sb1/ffe-feedback-react

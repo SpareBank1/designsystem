@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-details-list-react",
-    "version": "4.0.21",
+    "version": "4.0.22",
     "license": "MIT",
     "author": "SpareBank 1",
     "files": [
@@ -25,8 +25,8 @@
         "test:watch": "ffe-buildtool jest --watch"
     },
     "dependencies": {
-        "@sb1/ffe-grid": "^14.2.9",
-        "@sb1/ffe-grid-react": "^13.2.9",
+        "@sb1/ffe-grid": "^14.2.10",
+        "@sb1/ffe-grid-react": "^13.2.10",
         "classnames": "^2.3.1"
     },
     "devDependencies": {

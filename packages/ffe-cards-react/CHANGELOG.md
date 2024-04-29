@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [13.0.21](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@13.0.20...@sb1/ffe-cards-react@13.0.21) (2024-04-29)
+
+### Bug Fixes
+
+-   **ffe-cards-react:** remove default props ([5c3b12f](https://github.com/SpareBank1/designsystem/commit/5c3b12ff38452f3fd4286322bece57938141cebf))
+
 ## [13.0.20](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@13.0.19...@sb1/ffe-cards-react@13.0.20) (2024-04-18)
 
 **Note:** Version bump only for package @sb1/ffe-cards-react

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [27.3.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@27.3.6...@sb1/ffe-core@27.3.7) (2024-04-29)
+
+### Bug Fixes
+
+-   **ffe-core:** tvinger default font-size i safari til 16px ([270113f](https://github.com/SpareBank1/designsystem/commit/270113ffad7b482a394bcf30a6fae3bf63a347be))
+
 ## [27.3.6](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core@27.3.5...@sb1/ffe-core@27.3.6) (2024-04-18)
 
 ### Bug Fixes

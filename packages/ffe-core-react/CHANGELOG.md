@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.2.9](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@7.2.8...@sb1/ffe-core-react@7.2.9) (2024-04-29)
+
+### Bug Fixes
+
+-   **ffe-core-react:** remove default props ([36b8852](https://github.com/SpareBank1/designsystem/commit/36b8852d30a937ba57876ff6ff163763ec3402dc))
+
 ## [7.2.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@7.2.7...@sb1/ffe-core-react@7.2.8) (2024-04-18)
 
 **Note:** Version bump only for package @sb1/ffe-core-react

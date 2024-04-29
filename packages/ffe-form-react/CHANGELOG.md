@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [17.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@16.1.8...@sb1/ffe-form-react@17.0.0) (2024-04-29)
+
+### Bug Fixes
+
+-   **ffe-form-react:** accessibility issue when using hidden label in checkbox ([412c649](https://github.com/SpareBank1/designsystem/commit/412c6494db0aaa99f68042624d13e8eea8b9618e))
+-   **ffe-form-react:** remove default props ([02ecec9](https://github.com/SpareBank1/designsystem/commit/02ecec9075be3a792c46545be9e954ce9b628090))
+
+### BREAKING CHANGES
+
+-   **ffe-form-react:** children is now required also when using hiddenLabel.
+    When hiddenLabel is set to true children will just be visible to screen readers.
+
 ## [16.1.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@16.1.7...@sb1/ffe-form-react@16.1.8) (2024-04-29)
 
 **Note:** Version bump only for package @sb1/ffe-form-react

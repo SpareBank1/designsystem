@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.22](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@8.0.21...@sb1/ffe-tables-react@8.0.22) (2024-04-29)
+
+### Bug Fixes
+
+-   **ffe-tables-react:** remove default props ([7c99844](https://github.com/SpareBank1/designsystem/commit/7c998443cef66610c45799190689c4f9d413f456))
+
 ## [8.0.21](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-tables-react@8.0.20...@sb1/ffe-tables-react@8.0.21) (2024-04-25)
 
 **Note:** Version bump only for package @sb1/ffe-tables-react

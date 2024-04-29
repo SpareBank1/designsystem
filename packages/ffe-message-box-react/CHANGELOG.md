@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.0.23](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@10.0.22...@sb1/ffe-message-box-react@10.0.23) (2024-04-29)
+
+### Bug Fixes
+
+-   **ffe-message-box-react:** remove default props ([562fac3](https://github.com/SpareBank1/designsystem/commit/562fac349b2726a86611e365b5c5ab46c6ea04dd))
+
 ## [10.0.22](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-message-box-react@10.0.21...@sb1/ffe-message-box-react@10.0.22) (2024-04-25)
 
 **Note:** Version bump only for package @sb1/ffe-message-box-react

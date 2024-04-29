@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.25](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@8.0.24...@sb1/ffe-system-message-react@8.0.25) (2024-04-29)
+
+### Bug Fixes
+
+-   **ffe-system-message-react:** remove default props ([bd320d8](https://github.com/SpareBank1/designsystem/commit/bd320d866b93beef633ef61100cea8c04aeed51f))
+
 ## [8.0.24](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message-react@8.0.23...@sb1/ffe-system-message-react@8.0.24) (2024-04-24)
 
 ### Bug Fixes

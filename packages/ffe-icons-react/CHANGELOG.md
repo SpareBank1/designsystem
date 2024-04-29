@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.0.8](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@9.0.7...@sb1/ffe-icons-react@9.0.8) (2024-04-29)
+
+### Bug Fixes
+
+-   **ffe-icons-react:** remove default props ([46edd46](https://github.com/SpareBank1/designsystem/commit/46edd467fb9297e95bcdace0da2f04f822841002))
+
 ## [9.0.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-icons-react@9.0.6...@sb1/ffe-icons-react@9.0.7) (2024-04-11)
 
 **Note:** Version bump only for package @sb1/ffe-icons-react
