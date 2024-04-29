@@ -33,23 +33,28 @@ export const Collapse = React.forwardRef(
             const handleTransitionStart = handleTransition('start');
             const handleTransitionEnd = handleTransition('end');
 
-            _collapse.current.addEventListener(
-                'transitionstart',
-                handleTransitionStart,
-            );
-            _collapse.current.addEventListener(
-                'transitionend',
-                handleTransitionEnd,
-            );
-            return () => {
-                _collapse.current.removeEventListener(
+            if (_collapse.current) {
+                _collapse.current.addEventListener(
                     'transitionstart',
                     handleTransitionStart,
                 );
-                _collapse.current.removeEventListener(
+                _collapse.current.addEventListener(
                     'transitionend',
                     handleTransitionEnd,
                 );
+            }
+
+            return () => {
+                if (_collapse.current) {
+                    _collapse.current.removeEventListener(
+                        'transitionstart',
+                        handleTransitionStart,
+                    );
+                    _collapse.current.removeEventListener(
+                        'transitionend',
+                        handleTransitionEnd,
+                    );
+                }
             };
         }, [collapse, isOpen, onRest]);
 
