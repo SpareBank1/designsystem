@@ -16,8 +16,8 @@ const ExpandButton = props => {
     const {
         children,
         className,
-        closeLabel,
-        element: Element,
+        closeLabel = 'Lukk',
+        element: Element = 'button',
         innerRef,
         isExpanded,
         ...rest
@@ -65,11 +65,6 @@ ExpandButton.propTypes = {
     isExpanded: bool.isRequired,
     /** Use to listen for clicks and toggle the `isExpanded` property together with whatever it is you're expanding. */
     onClick: func.isRequired,
-};
-
-ExpandButton.defaultProps = {
-    closeLabel: 'Lukk',
-    element: 'button',
 };
 
 export default ExpandButton;

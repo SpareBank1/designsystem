@@ -11,9 +11,9 @@ const BaseFieldMessage = props => {
     const {
         children,
         className,
-        element: Element,
+        element: Element = 'div',
         type,
-        role,
+        role = 'status',
         ...rest
     } = props;
 
@@ -82,11 +82,6 @@ const BaseFieldMessage = props => {
             {children}
         </Element>
     );
-};
-
-BaseFieldMessage.defaultProps = {
-    element: 'div',
-    role: 'status',
 };
 
 BaseFieldMessage.propTypes = {

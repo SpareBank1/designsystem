@@ -51,7 +51,7 @@ class SuggestionListContainer extends React.Component {
     };
 
     render() {
-        const { heightMax, autoHeight } = this.props;
+        const { heightMax = 300, autoHeight = true } = this.props;
         return (
             <div
                 className="ffe-base-selector__suggestion-container"
@@ -84,11 +84,6 @@ SuggestionListContainer.propTypes = {
     heightMax: number,
     autoHeight: bool,
     renderSuggestion: func.isRequired,
-};
-
-SuggestionListContainer.defaultProps = {
-    heightMax: 300,
-    autoHeight: true,
 };
 
 export default SuggestionListContainer;

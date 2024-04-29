@@ -2,16 +2,12 @@ import React from 'react';
 import { oneOf } from 'prop-types';
 import BaseFieldMessage from './BaseFieldMessage';
 
-const ErrorFieldMessage = props => {
-    return <BaseFieldMessage {...props} type="error" />;
+const ErrorFieldMessage = ({ role = 'alert', ...rest }) => {
+    return <BaseFieldMessage role={role} {...rest} type="error" />;
 };
 
 ErrorFieldMessage.propTypes = {
     role: oneOf(['status', 'alert', 'none']),
-};
-
-ErrorFieldMessage.defaultProps = {
-    role: 'alert',
 };
 
 export default ErrorFieldMessage;

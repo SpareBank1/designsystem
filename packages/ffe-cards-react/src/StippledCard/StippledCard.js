@@ -15,7 +15,7 @@ import { Text, Title, Subtext, CardName } from '../components';
 
 const StippledCard = ({
     className,
-    element: Element,
+    element: Element = 'a',
     children,
     img,
     condensed,
@@ -45,10 +45,6 @@ const StippledCard = ({
             </div>
         </Element>
     );
-};
-
-StippledCard.defaultProps = {
-    element: 'a',
 };
 
 StippledCard.propTypes = {

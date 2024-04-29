@@ -4,7 +4,7 @@ import { string, bool } from 'prop-types';
 
 import ComponentBase from './ComponentBase';
 
-const Title = ({ className, overflowEllipsis, ...rest }) => (
+const Title = ({ className, overflowEllipsis = false, ...rest }) => (
     <ComponentBase
         className={classNames(
             'ffe-card-body__title',
@@ -16,8 +16,6 @@ const Title = ({ className, overflowEllipsis, ...rest }) => (
         {...rest}
     />
 );
-
-Title.defaultProps = { overflowEllipsis: false };
 
 Title.propTypes = {
     className: string,

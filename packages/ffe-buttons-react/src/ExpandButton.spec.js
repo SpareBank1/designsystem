@@ -42,9 +42,7 @@ describe('<ExpandButton />', () => {
         });
         it('uses the default aria-label property on the button', () => {
             const wrapper = getWrapper({ isExpanded: true });
-            expect(wrapper.prop('aria-label')).toBe(
-                ExpandButton.defaultProps.closeLabel,
-            );
+            expect(wrapper.prop('aria-label')).toBe('Lukk');
         });
     });
 });

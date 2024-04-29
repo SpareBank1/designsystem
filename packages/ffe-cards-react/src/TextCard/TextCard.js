@@ -5,7 +5,13 @@ import { string, func, node, oneOfType, bool, elementType } from 'prop-types';
 import * as components from '../components';
 
 const TextCard = props => {
-    const { className, leftAlign, element: Element, children, ...rest } = props;
+    const {
+        className,
+        leftAlign,
+        element: Element = 'a',
+        children,
+        ...rest
+    } = props;
 
     return (
         <Element

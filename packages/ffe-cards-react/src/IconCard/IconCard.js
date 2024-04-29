@@ -9,7 +9,7 @@ const IconCard = props => {
         className,
         icon,
         condensed,
-        element: Element,
+        element: Element = 'a',
         children,
         ...rest
     } = props;
@@ -37,10 +37,6 @@ const IconCard = props => {
             </div>
         </Element>
     );
-};
-
-IconCard.defaultProps = {
-    element: 'a',
 };
 
 IconCard.propTypes = {

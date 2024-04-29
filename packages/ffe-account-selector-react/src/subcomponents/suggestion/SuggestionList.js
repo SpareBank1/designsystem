@@ -9,9 +9,9 @@ export default function SuggestionList(props) {
         suggestions,
         highlightedIndex,
         renderSuggestion,
-        renderNoMatches,
+        renderNoMatches = () => {},
         id,
-        isLoading,
+        isLoading = false,
     } = props;
     return isLoading ? (
         <Spinner center={true} large={true} />
@@ -46,9 +46,4 @@ SuggestionList.propTypes = {
     renderNoMatches: func,
     id: string.isRequired,
     isLoading: bool,
-};
-
-SuggestionList.defaultProps = {
-    renderNoMatches: () => {},
-    isLoading: false,
 };

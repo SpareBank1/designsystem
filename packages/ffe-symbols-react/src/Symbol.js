@@ -3,7 +3,15 @@ import { string, bool, oneOf } from 'prop-types';
 import classNames from 'classnames';
 
 export const Symbol = props => {
-    const { className, size, weight, fill, ariaLabel, icon, ...rest } = props;
+    const {
+        className,
+        size,
+        weight = 300,
+        fill = false,
+        ariaLabel,
+        icon,
+        ...rest
+    } = props;
 
     return (
         <span
@@ -21,11 +29,6 @@ export const Symbol = props => {
             {icon}
         </span>
     );
-};
-
-Symbol.defaultProps = {
-    fill: false,
-    weight: 300,
 };
 
 Symbol.propTypes = {

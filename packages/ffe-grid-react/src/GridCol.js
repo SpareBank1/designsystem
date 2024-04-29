@@ -69,7 +69,7 @@ export default class GridCol extends Component {
             background,
             backgroundDark,
             className,
-            element: Element,
+            element: Element = 'div',
             centerText,
             center,
             children,
@@ -100,10 +100,6 @@ export default class GridCol extends Component {
         );
     }
 }
-
-GridCol.defaultProps = {
-    element: 'div',
-};
 
 GridCol.propTypes = {
     /** Supported background colors */

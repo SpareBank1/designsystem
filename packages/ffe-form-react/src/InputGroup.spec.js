@@ -51,13 +51,18 @@ describe('<InputGroup>', () => {
     });
 
     it('renders a Tooltip if a string is passed as tooltip prop', () => {
-        const wrapper = getWrapper({ tooltip: 'custom tooltip' });
-
+        const wrapper = mount(
+            <InputGroup {...defaultProps} tooltip="custom tooltip" />,
+        );
+        expect(
+            wrapper.find('button[aria-label="Vis hjelpetekst"]').length,
+        ).toEqual(1);
         expect(
             wrapper
-                .find('ForwardRef[aria-label="Vis hjelpetekst"]')
-                .prop('children'),
-        ).toBe('custom tooltip');
+                .find('.ffe-collapse__inner')
+                .at(0)
+                .text(),
+        ).toEqual('custom tooltip');
     });
 
     it('renders an ErrorFieldMessage and sets aria-invalid and aria-describedby if a string is passed as fieldMessage', () => {
@@ -81,18 +86,21 @@ describe('<InputGroup>', () => {
     });
 
     it('renders a Tooltip if passed as tooltip prop', () => {
-        const wrapper = getWrapper({
-            tooltip: <Tooltip>Tooltip text</Tooltip>,
-        });
-
+        const wrapper = mount(
+            <InputGroup
+                {...defaultProps}
+                tooltip={<Tooltip>Tooltip text</Tooltip>}
+            />,
+        );
         expect(
-            wrapper.find('ForwardRef[aria-label="Vis hjelpetekst"]').exists(),
-        ).toBe(true);
+            wrapper.find('button[aria-label="Vis hjelpetekst"]').length,
+        ).toEqual(1);
         expect(
             wrapper
-                .find('ForwardRef[aria-label="Vis hjelpetekst"]')
-                .prop('children'),
-        ).toBe('Tooltip text');
+                .find('.ffe-collapse__inner')
+                .at(0)
+                .text(),
+        ).toEqual('Tooltip text');
     });
 
     it('renders a ErrorFieldMessage and sets aria-invalid and aria-describedby if passed as fieldMessage prop', () => {

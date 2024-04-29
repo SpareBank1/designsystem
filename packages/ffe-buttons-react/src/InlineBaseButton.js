@@ -20,7 +20,7 @@ const InlineBaseButton = props => {
         buttonType,
         children,
         className,
-        element: Element,
+        element: Element = 'button',
         innerRef,
         leftIcon,
         rightIcon,
@@ -72,10 +72,6 @@ InlineBaseButton.propTypes = {
     leftIcon: node,
     /** Icon shown to the right of the label */
     rightIcon: node,
-};
-
-InlineBaseButton.defaultProps = {
-    element: 'button',
 };
 
 export default InlineBaseButton;

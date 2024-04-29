@@ -16,6 +16,7 @@ class ToggleSwitch extends React.Component {
             onText,
             offText,
             id,
+            value = 'on',
             ...rest
         } = this.props;
 
@@ -39,6 +40,7 @@ class ToggleSwitch extends React.Component {
                     className="ffe-toggle-switch__input"
                     type="checkbox"
                     id={id || this.id}
+                    value={value}
                     {...rest}
                 />
                 <label
@@ -99,12 +101,6 @@ ToggleSwitch.propTypes = {
     id: string,
     /** Override the value attribute of the input with a custom one */
     value: string,
-};
-
-ToggleSwitch.defaultProps = {
-    value: 'on',
-    locale: 'nb',
-    hideOnOff: false,
 };
 
 export default ToggleSwitch;

@@ -3,15 +3,11 @@ import { func, node, oneOfType, string, elementType } from 'prop-types';
 import classNames from 'classnames';
 
 const LinkIcon = props => {
-    const { className, element: Element, ...rest } = props;
+    const { className, element: Element = 'a', ...rest } = props;
 
     return (
         <Element className={classNames('ffe-link-icon', className)} {...rest} />
     );
-};
-
-LinkIcon.defaultProps = {
-    element: 'a',
 };
 
 LinkIcon.propTypes = {

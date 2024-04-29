@@ -49,11 +49,11 @@ export default function SuggestionList(props) {
         suggestions,
         highlightedIndex,
         renderSuggestion,
-        renderNoMatches,
+        renderNoMatches = () => {},
         id,
-        isLoading,
-        height,
-        itemSize,
+        isLoading = false,
+        height = 300,
+        itemSize = 55,
     } = props;
     return isLoading ? (
         <Spinner center={true} large={true} />
@@ -107,11 +107,4 @@ SuggestionList.propTypes = {
     refList: object,
     height: number,
     itemSize: number,
-};
-
-SuggestionList.defaultProps = {
-    renderNoMatches: () => {},
-    isLoading: false,
-    height: 300,
-    itemSize: 55,
 };

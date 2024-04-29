@@ -4,7 +4,7 @@ import { v4 as hash } from 'uuid';
 import classNames from 'classnames';
 
 const Checkbox = React.forwardRef((props, ref) => {
-    const { children, hiddenLabel, inline, noMargins, ...rest } = props;
+    const { children, hiddenLabel, inline = true, noMargins, ...rest } = props;
 
     const id = props.id || `checkbox-${hash()}`;
     const labelProps = {
@@ -50,10 +50,6 @@ Checkbox.propTypes = {
     inline: bool,
     /** The label for the checkbox */
     children: oneOfType([node, func]),
-};
-
-Checkbox.defaultProps = {
-    inline: true,
 };
 
 export default Checkbox;

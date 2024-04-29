@@ -10,7 +10,7 @@ import memoize from 'memoize-one';
 class SortableTable extends Component {
     constructor(props) {
         super(props);
-        const { sortBy, descending } = props;
+        const { sortBy, descending = false } = props;
         this.state = {
             sortBy,
             descending,
@@ -18,7 +18,7 @@ class SortableTable extends Component {
     }
 
     sort = (columns, data, sortBy, descending) => {
-        const { onSort } = this.props;
+        const { onSort = () => {} } = this.props;
         const tableData = sortData(columns, data, sortBy, descending);
         onSort({
             sortBy,
@@ -192,11 +192,6 @@ SortableTable.propTypes = {
     headerRender: PropTypes.func,
     footerRender: PropTypes.func,
     className: PropTypes.string,
-};
-
-SortableTable.defaultProps = {
-    descending: false,
-    onSort: () => {},
 };
 
 export default SortableTable;

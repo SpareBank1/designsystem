@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import { string, oneOf } from 'prop-types';
 
 const Icon = props => {
-    const { fileUrl, className, ariaLabel, size, ...rest } = props;
+    const { fileUrl, className, ariaLabel, size = 'md', ...rest } = props;
 
     return (
         <span
@@ -18,10 +18,6 @@ const Icon = props => {
             {...rest}
         />
     );
-};
-
-Icon.defaultProps = {
-    size: 'md',
 };
 
 Icon.propTypes = {

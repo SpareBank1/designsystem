@@ -9,7 +9,7 @@ const ImageCard = props => {
         className,
         imageSrc,
         imageAltText,
-        element: Element,
+        element: Element = 'a',
         children,
         ...rest
     } = props;
@@ -31,10 +31,6 @@ const ImageCard = props => {
             </div>
         </Element>
     );
-};
-
-ImageCard.defaultProps = {
-    element: 'a',
 };
 
 ImageCard.propTypes = {

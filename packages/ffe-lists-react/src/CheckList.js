@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import { node, oneOf, string } from 'prop-types';
 
-const CheckList = ({ className, columns, ...rest }) => (
+const CheckList = ({ className, columns = 1, ...rest }) => (
     <ul
         role="list"
         className={classNames(
@@ -20,10 +20,6 @@ CheckList.propTypes = {
     /** Any extra classes */
     className: string,
     columns: oneOf([1, 2, '1', '2']),
-};
-
-CheckList.defaultProps = {
-    columns: 1,
 };
 
 export default CheckList;

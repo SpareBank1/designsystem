@@ -6,13 +6,13 @@ const BaseMessage = props => {
     const {
         type,
         title,
-        titleElement,
+        titleElement = 'h2',
         icon,
         children,
         className = '',
-        onColoredBg,
+        onColoredBg = false,
         ariaLabel,
-        role,
+        role = 'group',
         ...rest
     } = props;
 
@@ -68,9 +68,4 @@ BaseMessage.propTypes = {
     role: oneOf(['alert', 'group']),
 };
 
-BaseMessage.defaultProps = {
-    titleElement: 'h2',
-    onColoredBg: false,
-    role: 'group',
-};
 export default BaseMessage;

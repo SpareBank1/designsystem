@@ -10,12 +10,12 @@ import { v4 as uuid } from 'uuid';
 
 export const Feedback = ({
     headingLevel,
-    language,
+    language = 'nb',
     onThumbClick,
     onFeedbackSend,
     bgColor,
     bgDarkmodeColor,
-    contactLink,
+    contactLink = null,
 }) => {
     const feedbackSentRef = useRef();
     const expandedRef = useRef();
@@ -121,9 +121,4 @@ Feedback.propTypes = {
         linkText: string,
         onClick: func,
     }),
-};
-
-Feedback.defaultProps = {
-    language: 'nb',
-    contactLink: null,
 };

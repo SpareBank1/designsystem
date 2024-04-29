@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import { oneOfType, node, func, string, elementType } from 'prop-types';
 
 const CardBase = React.forwardRef((props, ref) => {
-    const { className, element: Element, children, ...rest } = props;
+    const { className, element: Element = 'a', children, ...rest } = props;
     return (
         <Element
             className={classNames('ffe-card-base', className)}
@@ -14,10 +14,6 @@ const CardBase = React.forwardRef((props, ref) => {
         </Element>
     );
 });
-
-CardBase.defaultProps = {
-    element: 'a',
-};
 
 CardBase.propTypes = {
     className: string,
