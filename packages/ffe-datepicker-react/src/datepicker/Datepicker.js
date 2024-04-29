@@ -219,7 +219,9 @@ export default class Datepicker extends Component {
 
     datePickedHandler(date) {
         this.props.onChange(date);
-        this.props.onValidationComplete(date);
+        if (this.props.onValidationComplete) {
+            this.props.onValidationComplete(date);
+        }
         this.removeGlobalEventListeners();
         this.setState(
             {
@@ -366,6 +368,7 @@ export default class Datepicker extends Component {
                             ref={c => {
                                 this.datepickerCalendar = c;
                             }}
+                            focusOnMount={true}
                         />
                     )}
                 </div>

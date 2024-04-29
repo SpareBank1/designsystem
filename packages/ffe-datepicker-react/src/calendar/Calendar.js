@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { func, string } from 'prop-types';
+import { func, string, bool } from 'prop-types';
 import { v4 as uuid } from 'uuid';
 import ClickableDate from './ClickableDate';
 import NonClickableDate from './NonClickableDate';
@@ -179,6 +179,7 @@ export default class Calendar extends Component {
                 language={this.props.language}
                 dateButtonRef={date.isFocus ? this.clickableDateRef : undefined}
                 isFocusingHeader={this.state.isFocusingHeader}
+                focusOnMount={this.props.focusOnMount}
             />
         );
     }
@@ -295,4 +296,5 @@ Calendar.propTypes = {
     onBlurHandler: func,
     onDatePicked: func.isRequired,
     selectedDate: string,
+    focusOnMount: bool,
 };
