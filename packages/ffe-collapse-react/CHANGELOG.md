@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-collapse-react@3.0.2...@sb1/ffe-collapse-react@3.0.3) (2024-04-29)
+
+### Bug Fixes
+
+-   **ffe-collapse-react:** check if ref exist before removing event listener ([58bc672](https://github.com/SpareBank1/designsystem/commit/58bc67296d7ae6d4f561530cafc7ad9667a6ed4c))
+
 ## [3.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-collapse-react@3.0.1...@sb1/ffe-collapse-react@3.0.2) (2024-04-26)
 
 ### Bug Fixes
