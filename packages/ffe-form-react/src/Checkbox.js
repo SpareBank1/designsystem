@@ -1,44 +1,57 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { bool, node, string, func, oneOfType } from 'prop-types';
-import { v4 as hash } from 'uuid';
+import { v4 as uuid } from 'uuid';
 import classNames from 'classnames';
 
-const Checkbox = React.forwardRef((props, ref) => {
-    const { children, hiddenLabel, inline = true, noMargins, ...rest } = props;
+const Checkbox = React.forwardRef(
+    (
+        {
+            children,
+            hiddenLabel,
+            inline = true,
+            noMargins,
+            id = `checkbox-${uuid()}`,
+            ...rest
+        },
+        ref,
+    ) => {
+        const labelProps = {
+            className: classNames({
+                'ffe-checkbox': true,
+                'ffe-checkbox--inline': inline,
+                'ffe-checkbox--no-margin': noMargins,
+                'ffe-checkbox--hidden-label': hiddenLabel,
+            }),
+            htmlFor: id,
+        };
 
-    const id = props.id || `checkbox-${hash()}`;
-    const labelProps = {
-        className: classNames({
-            'ffe-checkbox': true,
-            'ffe-checkbox--inline': inline,
-            'ffe-checkbox--no-margin': noMargins,
-            'ffe-checkbox--hidden-label': hiddenLabel,
-        }),
-        htmlFor: id,
-    };
-
-    return (
-        <Fragment>
-            <input
-                ref={ref}
-                className="ffe-hidden-checkbox"
-                id={id}
-                type="checkbox"
-                {...rest}
-            />
-            {typeof children === 'function' ? (
-                children(labelProps)
-            ) : (
-                // eslint-disable-next-line jsx-a11y/label-has-for
-                <label {...labelProps}>
-                    <span className="ffe-checkbox__content">
-                        {!hiddenLabel && children}
-                    </span>
-                </label>
-            )}
-        </Fragment>
-    );
-});
+        return (
+            <>
+                <input
+                    ref={ref}
+                    className="ffe-hidden-checkbox"
+                    id={id}
+                    type="checkbox"
+                    {...rest}
+                />
+                {typeof children === 'function' ? (
+                    children(labelProps)
+                ) : (
+                    // eslint-disable-next-line jsx-a11y/label-has-for
+                    <label {...labelProps}>
+                        <span
+                            className={classNames('ffe-checkbox__content', {
+                                'ffe-screenreader-only': hiddenLabel,
+                            })}
+                        >
+                            {children}
+                        </span>
+                    </label>
+                )}
+            </>
+        );
+    },
+);
 
 Checkbox.propTypes = {
     /** Removes vertical margins from the checkbox */
@@ -49,7 +62,7 @@ Checkbox.propTypes = {
     id: string,
     inline: bool,
     /** The label for the checkbox */
-    children: oneOfType([node, func]),
+    children: oneOfType([node, func]).isRequired,
 };
 
 export default Checkbox;

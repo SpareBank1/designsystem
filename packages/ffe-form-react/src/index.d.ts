@@ -1,13 +1,13 @@
 import * as React from 'react';
 
 export interface CheckboxProps
-    extends Omit<React.ComponentProps<'input'>, 'children'> {
+    extends Omit<React.ComponentPropsWithoutRef<'input'>, 'children'> {
     noMargins?: boolean;
     hiddenLabel?: boolean;
     id?: string;
     inline?: boolean;
     children?:
-        | React.ReactNode
+        | NonNullable<React.ReactNode>
         | ((labelProps: {
               className: string;
               htmlFor: string;
