@@ -12,7 +12,9 @@ import classNames from 'classnames';
 
 export default class ClickableDate extends Component {
     componentDidMount() {
-        this.focusIfNeeded();
+        if (this.props.focusOnMount) {
+            this.focusIfNeeded();
+        }
     }
 
     componentDidUpdate() {
@@ -92,4 +94,5 @@ ClickableDate.propTypes = {
     language: string.isRequired,
     dateButtonRef: object,
     isFocusingHeader: bool.isRequired,
+    focusOnMount: bool,
 };
