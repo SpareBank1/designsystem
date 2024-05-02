@@ -9,9 +9,10 @@
 
 .ffe-system-message-wrapper {
     color: var(--ffe-farge-svart);
-    transition: height @ffe-transition-duration @ffe-ease-in-out-back;
+    transition: height var(--ffe-transition-duration)
+        var(--ffe-ease-in-out-back);
     overflow: hidden;
-    border-radius: @ffe-spacing-xs;
+    border-radius: var(--ffe-spacing-xs);
 
     &:not(&--news) {
         .ffe-link-text {
@@ -171,7 +172,7 @@
         display: inline-flex;
         height: 2rem;
         width: 2rem;
-        margin-right: @ffe-spacing-sm;
+        margin-right: var(--ffe-spacing-sm);
         align-items: center;
         justify-content: center;
     }
@@ -198,7 +199,7 @@
         align-self: flex-start;
         width: 3rem;
         height: 3rem;
-        padding-top: @ffe-spacing-xs;
+        padding-top: var(--ffe-spacing-xs);
         box-sizing: border-box;
         color: var(--ffe-v-system-message-close-button-color);
 
@@ -228,6 +229,18 @@
 
             &:focus {
                 border: 2px solid var(--ffe-farge-hvit);
+            }
+        }
+    }
+}
+
+.ffe-system-message-wrapper--info,
+.ffe-system-message-wrapper--success,
+.ffe-system-message-wrapper--error {
+    .ffe-system-message__content {
+        .native & {
+            @media (prefers-color-scheme: dark) {
+                color: var(--ffe-farge-svart);
             }
         }
     }
