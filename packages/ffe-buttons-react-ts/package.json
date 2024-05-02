@@ -1,0 +1,45 @@
+{
+    "name": "@sb1/ffe-buttons-react-ts",
+    "version": "1.0.0",
+    "description": "React implementation of ffe-buttons",
+    "keywords": [
+        "ffe"
+    ],
+    "license": "MIT",
+    "author": "SpareBank 1",
+    "files": [
+        "build"
+    ],
+    "main": "src/index.ts",
+    "sideEffects": false,
+    "repository": {
+        "type": "git",
+        "url": "ssh://git@github.com:SpareBank1/designsystem.git"
+    },
+    "scripts": {
+        "build": "ffe-buildtool tsc",
+        "lint": "eslint src/ --ext ts,tsx",
+        "test": "ffe-buildtool jest",
+        "test:watch": "ffe-buildtool jest --watch"
+    },
+    "dependencies": {
+        "@sb1/ffe-buttons": "^18.0.18",
+        "@sb1/ffe-icons-react": "^9.0.8",
+        "@types/enzyme": "^3.10.18",
+        "@types/react": "^16.9.0",
+        "@types/react-dom": "^16.9.0",
+        "classnames": "^2.3.1"
+    },
+    "devDependencies": {
+        "@sb1/ffe-buildtool": "^0.5.1",
+        "eslint": "^8.57.0",
+        "react": "^16.9.0",
+        "react-dom": "^16.9.0"
+    },
+    "peerDependencies": {
+        "react": ">=16.9.0"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
+}
