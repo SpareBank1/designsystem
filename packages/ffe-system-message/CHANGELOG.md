@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@8.0.11...@sb1/ffe-system-message@8.0.12) (2024-05-02)
+
+### Bug Fixes
+
+-   **ffe-system-message:** darkmode styling for list ([2f884fc](https://github.com/SpareBank1/designsystem/commit/2f884fc4d59d57e287f720c68e93f90b7f394de3))
+
 ## [8.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-system-message@8.0.10...@sb1/ffe-system-message@8.0.11) (2024-04-29)
 
 **Note:** Version bump only for package @sb1/ffe-system-message
