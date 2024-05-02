@@ -1,18 +1,21 @@
 {
-    "extends": ["../.eslintrc"],
-    "overrides": [
-        {
-            "files": ["examples/**/*.jsx"],
-            "globals": {
-	        "React": false
-	    },
-	    "rules": {
-	        "no-unused-expressions": "off",
-	        "no-unused-vars": "warn",
-	        "react/react-in-jsx-scope": "off",
-	        "react/jsx-boolean-value": "warn",
-	        "react/prop-types": "off"
-	    }
-        }
-    ]
+  "extends": [
+    "../.eslintrc"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "examples/**/*.jsx"
+      ],
+      "globals": {
+        "React": false
+      },
+      "rules": {
+        "no-unused-expressions": "off",
+        "no-unused-vars": "warn",
+        "react/react-in-jsx-scope": "off",
+        "react/jsx-boolean-value": "warn"
+      }
+    }
+  ]
 }

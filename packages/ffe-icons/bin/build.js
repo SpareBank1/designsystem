@@ -21,11 +21,13 @@ const {
     const iconNames = await getIconNames();
     const listOfRemovedIcons = await createListOfRemovedIcons(iconNames);
     let downloads = [];
-
+    // eslint-disable-next-line no-unused-vars
     for (const weight of weights) {
+        // eslint-disable-next-line no-unused-vars
         for (const fillValue of fill) {
             const type = fillValue === 1 ? 'filled' : 'open';
 
+            // eslint-disable-next-line no-unused-vars
             for (const size of sizes) {
                 let folderPath = `../icons/${type}/${weight}/${size.name}`;
                 if (type === 'filled') {

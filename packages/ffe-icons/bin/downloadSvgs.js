@@ -22,6 +22,7 @@ const getDownloads = (iconNames, weight, fill, size, dirPath) => {
     if (!iconNames || !weight || !size || fill === undefined) {
         throw new Error('iconNames, weight, fill or size is not provided');
     }
+    // eslint-disable-next-line no-unused-vars
     for (const icon of iconNames) {
         const safeIconName = icon; // Fix for icons that has a number as the first character - which is not valid const name
         downloads.push({
@@ -56,11 +57,12 @@ const download = async downloadElement => {
 
 /* Function: downloadAll
     Takes all the downloads, and apply the download function to each of them.
-    Also let you set if you want to ignore existing files, this is on by default. 
+    Also let you set if you want to ignore existing files, this is on by default.
 */
 const downloadAll = async (downloads, { ignoreExisting = true } = {}) => {
     let allDownloads = [];
     if (ignoreExisting) {
+        // eslint-disable-next-line no-unused-vars
         for (const file of downloads) {
             const fileAlreadyExists = await fileExists(
                 `${file.filePath}/${file.fileName}`,

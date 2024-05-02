@@ -3,6 +3,7 @@ const babelCommand = require('./commands/babelCommand');
 const copyfileCommand = require('./commands/copyfileCommand');
 const jestCommand = require('./commands/jestCommand');
 const stylelintCommand = require('./commands/stylelintCommand');
+const tscCommand = require('./commands/tscCommand');
 
 const program = new Command();
 
@@ -35,7 +36,7 @@ program
 
 program
     .command('babel-watch')
-    .description('continously compile code with babel')
+    .description('continuously compile code with babel')
     .argument('[source]', 'directory with source code', 'src')
     .option('--es <esDir>', 'where to output es modules', 'es')
     .action((source, options) => {
@@ -64,6 +65,13 @@ program
     .allowUnknownOption()
     .action((options, { args }) => {
         stylelintCommand(args);
+    });
+
+program
+    .command('tsc')
+    .description('compile code with babel')
+    .action((options, { args }) => {
+        tscCommand(args);
     });
 
 program.parse(process.argv);
