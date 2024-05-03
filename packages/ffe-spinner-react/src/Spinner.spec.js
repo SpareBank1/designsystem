@@ -1,40 +1,42 @@
 import React from 'react';
 import Spinner from '.';
+import { render, screen } from '@testing-library/react';
 
-const getWrapper = props => shallow(<Spinner {...props} />);
+const renderSpinner = props => render(<Spinner {...props} />);
 
 describe('<Spinner />', () => {
-    it('renders without exploding', () => {
-        const wrapper = getWrapper();
-        expect(wrapper.exists()).toBe(true);
-        expect(wrapper.is('div')).toBe(true);
-        expect(wrapper.find('span').exists()).toBe(true);
-    });
     it('renders classes correctly', () => {
-        const wrapper = getWrapper({ className: 'test-class' });
-        expect(wrapper.find('span').hasClass('ffe-loading-spinner')).toBe(true);
-        expect(wrapper.hasClass('test-class')).toBe(true);
+        renderSpinner({ className: 'test-class' });
+        const spinner = screen.getByRole('img');
+        const spinnerContainer = screen.getByTestId('spinner-container');
+
+        expect(spinnerContainer.classList.contains('test-class'));
+        expect(spinner.classList.contains('ffe-loading-spinner')).toBeTruthy();
     });
     it('renders a large spinner', () => {
-        const wrapper = getWrapper({ large: true });
+        renderSpinner({ large: true });
+        const spinner = screen.getByRole('img');
         expect(
-            wrapper.find('span').hasClass('ffe-loading-spinner--large'),
-        ).toBe(true);
+            spinner.classList.contains('ffe-loading-spinner--large'),
+        ).toBeTruthy();
     });
     it('passes props correctly', () => {
-        const wrapper = getWrapper({ id: 'test-id' });
-        expect(wrapper.prop('id')).toBe('test-id');
+        renderSpinner({ id: 'test-id' });
+        const spinnerContainer = screen.getByTestId('spinner-container');
+        expect(spinnerContainer.getAttribute('id')).toBe('test-id');
     });
     it('aria-hidden is set to false by default', () => {
-        const wrapper = getWrapper();
-        expect(wrapper.find('span').prop('aria-hidden')).toBe(false);
+        renderSpinner();
+        const spinner = screen.getByRole('img');
+        expect(spinner.getAttribute('aria-hidden')).toBe('false');
     });
     it('aria-hidden set to true when loadingText set', () => {
-        const wrapper = getWrapper({ loadingText: 'test' });
-        expect(wrapper.find('span').prop('aria-hidden')).toBe(true);
+        renderSpinner({ loadingText: 'test' });
+        expect(screen.queryByRole('img')).not.toBeInTheDocument();
     });
     it('set loadingText correctly', () => {
-        const wrapper = getWrapper({ loadingText: <p>Text</p> });
-        expect(wrapper.find('p').exists()).toBe(true);
+        renderSpinner({ loadingText: <p>Text</p> });
+        const p = screen.getByTestId('spinner-container').querySelector('p');
+        expect(p.textContent).toBe('Text');
     });
 });

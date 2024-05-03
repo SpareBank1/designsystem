@@ -12,7 +12,12 @@ const Spinner = ({
     onColoredBg,
     ...rest
 }) => (
-    <div aria-live="assertive" className={className} {...rest}>
+    <div
+        aria-live="assertive"
+        className={className}
+        {...rest}
+        data-testid="spinner-container"
+    >
         <span
             className={classNames(
                 'ffe-loading-spinner',
