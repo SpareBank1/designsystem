@@ -1,3 +1,4 @@
+/* stylelint-disable selector-class-pattern */
 html,
 body,
 .sb1ex-app-container {
@@ -13,3 +14,4 @@ body {
 :root {
     --sb1ex-page-bg: var(--ffe-farge-hvit);
 }
+/* stylelint-enable selector-class-pattern */

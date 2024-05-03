@@ -1,3 +1,4 @@
+/* stylelint-disable selector-class-pattern */
 .sb1ex-header {
     color: var(--ffe-farge-fjell);
     padding: var(--ffe-spacing-xs) var(--ffe-spacing-sm);
@@ -5,7 +6,7 @@
     justify-content: space-between;
     align-items: center;
 
-    @media (min-width: 1296px) {
+    @media (width >= 1296px) {
         padding: var(--ffe-spacing-xs) 0;
     }
 }
@@ -24,3 +25,4 @@
         }
     }
 }
+/* stylelint-enable selector-class-pattern */

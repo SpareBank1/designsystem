@@ -27,10 +27,7 @@
         position: absolute;
         background: transparent;
         border-radius: 1.5rem;
-        top: -5px;
-        left: -5px;
-        right: -5px;
-        bottom: -5px;
+        inset: -5px;
         box-shadow: 0 0 0 2px @ffe-farge-vann;
         transition: opacity @ffe-transition-duration @ffe-ease;
 
@@ -256,6 +253,7 @@
     .ffe-button--expand & {
         color: var(--ffe-v-button-task-primary-color);
     }
+
     @media (hover: hover) and (pointer: fine) {
         .ffe-button--expand:hover & {
             color: @ffe-farge-hvit;
@@ -278,12 +276,9 @@
 }
 
 .ffe-button__spinner {
-    bottom: 0;
-    left: 0;
+    inset: 0;
     opacity: 0;
     position: absolute;
-    right: 0;
-    top: 0;
     transform: translateY(24px);
     transition: all @ffe-transition-duration @ffe-ease;
     visibility: hidden;
@@ -298,7 +293,7 @@
 
     &::after {
         animation: 1s linear infinite button-loading-spin;
-        border: 3px solid currentColor;
+        border: 3px solid currentcolor;
         border-radius: 50%;
         border-top-color: transparent;
         content: '';

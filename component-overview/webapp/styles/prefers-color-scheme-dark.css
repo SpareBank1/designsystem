@@ -1,3 +1,4 @@
+/* stylelint-disable selector-class-pattern */
 @media (prefers-color-scheme: dark) {
     body.regard-color-scheme-preference {
         color: var(--ffe-farge-hvit);
@@ -16,3 +17,4 @@
         }
     }
 }
+/* stylelint-enable selector-class-pattern */

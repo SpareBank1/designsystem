@@ -64,6 +64,7 @@
         background-color: var(--ffe-g-secondary-color);
         color: var(--ffe-v-input-bg-color);
     }
+
     @media (hover: hover) and (pointer: fine) {
         &:hover + .ffe-radio-switch {
             border-color: var(--ffe-g-secondary-color);
@@ -71,7 +72,8 @@
     }
 
     &:focus-visible + .ffe-radio-switch {
-        box-shadow: 0 0 0 3px var(--ffe-v-input-bg-color),
+        box-shadow:
+            0 0 0 3px var(--ffe-v-input-bg-color),
             0 0 0 5px var(--ffe-v-checkbox-focus-outline-color);
     }
 

@@ -44,13 +44,15 @@
 
         &:focus,
         &:active {
-            box-shadow: 0 0 0 2px var(--ffe-v-datepicker-bg-color),
+            box-shadow:
+                0 0 0 2px var(--ffe-v-datepicker-bg-color),
                 0 0 0 4px var(--ffe-v-datepicker-border-hover-color);
         }
 
         @media (hover: hover) and (pointer: fine) {
             &:hover {
-                box-shadow: 0 0 0 2px var(--ffe-v-datepicker-bg-color),
+                box-shadow:
+                    0 0 0 2px var(--ffe-v-datepicker-bg-color),
                     0 0 0 4px var(--ffe-v-datepicker-border-hover-color);
             }
         }
@@ -162,7 +164,8 @@
         }
 
         &--focus&--selected {
-            box-shadow: 0 0 0 2px var(--ffe-v-datepicker-bg-color),
+            box-shadow:
+                0 0 0 2px var(--ffe-v-datepicker-bg-color),
                 0 0 0 4px var(--ffe-v-datepicker-border-hover-color);
         }
 
@@ -173,6 +176,7 @@
                 border: 2px solid var(--ffe-v-datepicker-date-color-disabled);
                 color: var(--ffe-v-datepicker-date-color-disabled);
             }
+
             @media (hover: hover) and (pointer: fine) {
                 &:hover {
                     border: 2px solid
