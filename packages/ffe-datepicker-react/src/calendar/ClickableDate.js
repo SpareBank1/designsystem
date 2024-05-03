@@ -47,15 +47,8 @@ export default class ClickableDate extends Component {
     }
 
     render() {
-        const {
-            date,
-            headers,
-            onClick,
-            language,
-            dateButtonRef,
-            month,
-            year,
-        } = this.props;
+        const { date, headers, onClick, language, dateButtonRef, month, year } =
+            this.props;
 
         const monthName = language === 'en' ? month : month.toLowerCase();
 

@@ -63,7 +63,8 @@ export const AccordionItem = ({
                     className={classNames(
                         'ffe-accordion-item__heading-button',
                         {
-                            'ffe-accordion-item__heading-button--open': isExpanded,
+                            'ffe-accordion-item__heading-button--open':
+                                isExpanded,
                         },
                     )}
                     onClick={handleOnClick}

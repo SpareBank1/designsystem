@@ -70,12 +70,8 @@ describe('<BaseRadioButton />', () => {
 
     describe('id', () => {
         it('is unique across instances', () => {
-            const oneId = getWrapper()
-                .find('input')
-                .prop('id');
-            const anotherId = getWrapper()
-                .find('input')
-                .prop('id');
+            const oneId = getWrapper().find('input').prop('id');
+            const anotherId = getWrapper().find('input').prop('id');
 
             expect(oneId).not.toBe(anotherId);
         });
@@ -104,12 +100,9 @@ describe('<BaseRadioButton />', () => {
             expect(
                 wrapper.find('button[aria-label="Vis hjelpetekst"]').length,
             ).toEqual(1);
-            expect(
-                wrapper
-                    .find('.ffe-collapse__inner')
-                    .at(0)
-                    .text(),
-            ).toEqual('Tip generously');
+            expect(wrapper.find('.ffe-collapse__inner').at(0).text()).toEqual(
+                'Tip generously',
+            );
         });
         it('does not add the correct class if not present', () => {
             const wrapper = getWrapper({ tooltip: undefined });

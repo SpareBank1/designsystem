@@ -15,7 +15,8 @@ function AccountDetails({ account, locale, showBalance = true, ariaInvalid }) {
                 'ffe-small-text',
                 'ffe-account-selector-single__details',
                 {
-                    'ffe-account-selector-single__details--invalid-empty': isInvalidWithNoAccount,
+                    'ffe-account-selector-single__details--invalid-empty':
+                        isInvalidWithNoAccount,
                 },
             )}
         >

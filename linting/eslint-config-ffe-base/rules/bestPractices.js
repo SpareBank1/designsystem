@@ -1,16 +1,16 @@
 module.exports = {
-    'rules': {
+    rules: {
         // Require Camelcase
         // http://eslint.org/docs/rules/camelcase
-        'camelcase': 2,
+        camelcase: 2,
 
         // Enforce or Disallow Semicolons
         // http://eslint.org/docs/rules/semi
-        'semi': [ 2, 'always' ],
+        semi: [2, 'always'],
 
         // Require Following Curly Brace Conventions
         // http://eslint.org/docs/rules/curly
-        'curly': [ 2, 'all' ],
+        curly: [2, 'all'],
 
         // Require space before/after arrow function’s arrow
         // http://eslint.org/docs/rules/arrow-spacing
@@ -18,7 +18,7 @@ module.exports = {
 
         // Disallows multiple blank lines
         // http://eslint.org/docs/rules/no-multiple-empty-lines
-        'no-multiple-empty-lines': [ 2, { 'max': 3, 'maxEOF': 1 } ],
+        'no-multiple-empty-lines': [2, { max: 3, maxEOF: 1 }],
 
         // Disallow new For Side Effects
         // http://eslint.org/docs/rules/no-new
@@ -30,19 +30,19 @@ module.exports = {
 
         // Enforce spacing before and after keywords
         // http://eslint.org/docs/rules/keyword-spacing
-        'keyword-spacing': [ 2, { 'before': true, 'after': true } ],
+        'keyword-spacing': [2, { before: true, after: true }],
 
         // Disallow a space before function parenthesis
         // http://eslint.org/docs/rules/space-before-function-paren
-        'space-before-function-paren': [ 2, 'never' ],
+        'space-before-function-paren': [2, 'never'],
 
         // Require a space before blocks
         // http://eslint.org/docs/rules/space-before-blocks
-        'space-before-blocks': [ 2, 'always' ],
+        'space-before-blocks': [2, 'always'],
 
         // Require dot notation
         // http://eslint.org/docs/rules/dot-notation
-        'dot-notation': [ 2, { 'allowKeywords': true } ],
+        'dot-notation': [2, { allowKeywords: true }],
 
         // enforces return statements in callbacks of array's methods. This does not effect arrow functions.
         // http://eslint.org/docs/rules/array-callback-return
@@ -50,7 +50,7 @@ module.exports = {
 
         // require the use of === and !==
         // http://eslint.org/docs/rules/eqeqeq
-        'eqeqeq': [ 2, 'allow-null' ],
+        eqeqeq: [2, 'allow-null'],
 
         // make sure for-in loops have an if statement
         // http://eslint.org/docs/rules/guard-for-in
@@ -82,7 +82,7 @@ module.exports = {
 
         // disallow use of assignment in return statement
         // http://eslint.org/docs/rules/no-return-assign
-        'no-return-assign': [ 2, 'always' ],
+        'no-return-assign': [2, 'always'],
 
         // disallow comparisons where both sides are exactly the same
         // http://eslint.org/docs/rules/no-self-compare
@@ -110,7 +110,7 @@ module.exports = {
 
         // require immediate function invocation to be wrapped in parentheses
         // http://eslint.org/docs/rules/wrap-iife.html
-        'wrap-iife': [ 2, 'outside' ],
+        'wrap-iife': [2, 'outside'],
 
         // disallow deletion of variables
         // http://eslint.org/docs/rules/no-delete-var
@@ -130,6 +130,6 @@ module.exports = {
 
         // disallow use of variables before they are defined
         // http://eslint.org/docs/rules/no-use-before-define
-        'no-use-before-define': 2
-    }
+        'no-use-before-define': 2,
+    },
 };

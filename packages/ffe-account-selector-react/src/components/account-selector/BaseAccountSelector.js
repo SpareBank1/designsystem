@@ -66,19 +66,19 @@ export const BaseAccountSelector = ({
      * This matcher function closely resembles the default one of SearchableDropdown,
      * but it ignores all spaces and periods so that account number formatting won't mess with the search.
      */
-    const searchMatcherIgnoringAccountNumberFormatting = (
-        searchString,
-        searchAttributes,
-    ) => item => {
-        const cleanString = value =>
-            `${value}`
-                .replace(/(\s|\.)/g, '') // Remove all spaces and periods
-                .toLowerCase();
-        const cleanedSearchString = cleanString(searchString);
-        return searchAttributes.some(searchAttribute =>
-            cleanString(item[searchAttribute]).includes(cleanedSearchString),
-        );
-    };
+    const searchMatcherIgnoringAccountNumberFormatting =
+        (searchString, searchAttributes) => item => {
+            const cleanString = value =>
+                `${value}`
+                    .replace(/(\s|\.)/g, '') // Remove all spaces and periods
+                    .toLowerCase();
+            const cleanedSearchString = cleanString(searchString);
+            return searchAttributes.some(searchAttribute =>
+                cleanString(item[searchAttribute]).includes(
+                    cleanedSearchString,
+                ),
+            );
+        };
     const onInputChange = event => {
         setInputValue(event.target.value);
         if (inputProps?.onChange) {

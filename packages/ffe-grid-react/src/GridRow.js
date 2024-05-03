@@ -19,9 +19,8 @@ export default function GridRow({
     ...rest
 }) {
     const hasBackgroundColor = backgroundColors.includes(background);
-    const hasBackgroundDarkColor = backgroundDarkColors.includes(
-        backgroundDark,
-    );
+    const hasBackgroundDarkColor =
+        backgroundDarkColors.includes(backgroundDark);
     const hasRemovedColor = removedColors.includes(background);
     const content =
         hasBackgroundColor || hasBackgroundDarkColor ? (
@@ -45,7 +44,8 @@ export default function GridRow({
                 'ffe-grid__row',
                 { [`ffe-grid__row--bg-${background}`]: hasBackgroundColor },
                 {
-                    [`ffe-grid__row--bg-dark-${backgroundDark}`]: hasBackgroundDarkColor,
+                    [`ffe-grid__row--bg-dark-${backgroundDark}`]:
+                        hasBackgroundDarkColor,
                 },
                 { [`ffe-grid__row--padding-${padding}`]: padding },
                 { [`ffe-grid__row--margin-${margin}`]: margin },

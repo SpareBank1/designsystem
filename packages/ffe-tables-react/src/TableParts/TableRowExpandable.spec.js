@@ -87,13 +87,9 @@ describe('<TableRowExpandable>', () => {
 
     it('should render expanded content', () => {
         wrapper.setState({ expanded: true });
-        expect(
-            wrapper
-                .find('td')
-                .last()
-                .find('p')
-                .text(),
-        ).toBe('The cake is a lie');
+        expect(wrapper.find('td').last().find('p').text()).toBe(
+            'The cake is a lie',
+        );
         expect(
             wrapper
                 .find('tr')
@@ -101,10 +97,7 @@ describe('<TableRowExpandable>', () => {
                 .hasClass('ffe-table__row-expandable-content--expanded'),
         ).toBe(true);
         expect(
-            wrapper
-                .find('tr')
-                .last()
-                .hasClass('ffe-table__row--collapsed'),
+            wrapper.find('tr').last().hasClass('ffe-table__row--collapsed'),
         ).toBe(false);
     });
 
@@ -144,17 +137,11 @@ describe('<TableRowExpandable>', () => {
     });
 
     it('should set the correct aria attributes on tr', () => {
-        expect(
-            renderedWrapper
-                .find('tr')
-                .first()
-                .prop('aria-expanded'),
-        ).toBe('false');
-        expect(
-            renderedWrapper
-                .find('tr')
-                .last()
-                .prop('aria-hidden'),
-        ).toBe('true');
+        expect(renderedWrapper.find('tr').first().prop('aria-expanded')).toBe(
+            'false',
+        );
+        expect(renderedWrapper.find('tr').last().prop('aria-hidden')).toBe(
+            'true',
+        );
     });
 });

@@ -22,6 +22,7 @@
         "build": "ffe-buildtool babel",
         "clean": "rimraf gen-src lib es types",
         "lint": "eslint src",
+        "lint:fix": "eslint src --fix",
         "test": "ffe-buildtool jest"
     },
     "dependencies": {

@@ -10,10 +10,10 @@ const TableFooter = ({ columns, footerRender, dataWindow }) => {
         }
 
         const className = classNames(
-            {'ffe-table--hide-sm': column.hideOnMobile},
-            {'ffe-table--hide-md': column.hideOnSmallTablet},
-            {'ffe-table--hide-lg': column.hideOnTablet},
-            {'ffe-table--hide-xlg': column.hideOnDesktop},
+            { 'ffe-table--hide-sm': column.hideOnMobile },
+            { 'ffe-table--hide-md': column.hideOnSmallTablet },
+            { 'ffe-table--hide-lg': column.hideOnTablet },
+            { 'ffe-table--hide-xlg': column.hideOnDesktop },
         );
 
         let dataTh = '';
@@ -29,22 +29,28 @@ const TableFooter = ({ columns, footerRender, dataWindow }) => {
         const tdProps = {
             className: classNames(
                 'ffe-table__cell',
-                {'ffe-table__cell--top': column.alignTop},
+                { 'ffe-table__cell--top': column.alignTop },
                 className,
             ),
             'data-th': dataTh,
-            key: index
-        }
-
-        const spanProps = {
-            className: classNames(
-                'ffe-table__content',
-                {'ffe-table__content--text-right': column.alignRight}
-            )
+            key: index,
         };
 
-        if (typeof column.columnFooterRender === "function") {
-            return column.columnFooterRender(column.footer, dataWindow, tdProps, spanProps, columns, index);
+        const spanProps = {
+            className: classNames('ffe-table__content', {
+                'ffe-table__content--text-right': column.alignRight,
+            }),
+        };
+
+        if (typeof column.columnFooterRender === 'function') {
+            return column.columnFooterRender(
+                column.footer,
+                dataWindow,
+                tdProps,
+                spanProps,
+                columns,
+                index,
+            );
         }
 
         return (
@@ -60,18 +66,16 @@ const TableFooter = ({ columns, footerRender, dataWindow }) => {
         );
     });
 
-    const trProps = {className: "ffe-table__row", children: footerContent};
+    const trProps = { className: 'ffe-table__row', children: footerContent };
 
-    const trDefault =
-        <tr {...trProps}/>
+    const trDefault = <tr {...trProps} />;
 
-    const footerRendered = typeof footerRender === "function" ? footerRender(trProps, columns) : trDefault;
+    const footerRendered =
+        typeof footerRender === 'function'
+            ? footerRender(trProps, columns)
+            : trDefault;
 
-    return (
-        <tfoot className="ffe-table__footer">
-            {footerRendered}
-        </tfoot>
-    );
+    return <tfoot className="ffe-table__footer">{footerRendered}</tfoot>;
 };
 
 TableFooter.propTypes = {
@@ -88,7 +92,7 @@ TableFooter.propTypes = {
         }),
     ),
     footerRender: PropTypes.func,
-    dataWindow: PropTypes.array
+    dataWindow: PropTypes.array,
 };
 
 export default TableFooter;

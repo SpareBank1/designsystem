@@ -11,86 +11,95 @@ const FileItem = ({ file, onFileDeleted, cancelText, deleteText }) => {
 
     return (
         <li>
-            {// File is loading
-            !file.document && !file.error && (
-                <div className="ffe-file-upload__file-item-stencil">
-                    <button
-                        type="button"
-                        id={file.name}
-                        className="ffe-file-upload__file-item-delete-button"
-                        onClick={onFileDeleted}
-                    >
-                        <span className="ffe-file-upload__file-item-delete-button-text">
-                            {cancelText}
-                        </span>
-                        <Icon
-                            fileUrl={closeIcon}
-                            size="md"
-                            className="ffe-file-upload__file-item-delete-icon"
-                        />
-                    </button>
-                    <div className="ffe-file-upload__file-item-stencil-info">
-                        <div className="ffe-file-upload__file-item-stencil-info-background" />
-                        <div className="ffe-file-upload__file-item-stencil-info-filename">
+            {
+                // File is loading
+                !file.document && !file.error && (
+                    <div className="ffe-file-upload__file-item-stencil">
+                        <button
+                            type="button"
+                            id={file.name}
+                            className="ffe-file-upload__file-item-delete-button"
+                            onClick={onFileDeleted}
+                        >
+                            <span className="ffe-file-upload__file-item-delete-button-text">
+                                {cancelText}
+                            </span>
+                            <Icon
+                                fileUrl={closeIcon}
+                                size="md"
+                                className="ffe-file-upload__file-item-delete-icon"
+                            />
+                        </button>
+                        <div className="ffe-file-upload__file-item-stencil-info">
+                            <div className="ffe-file-upload__file-item-stencil-info-background" />
+                            <div className="ffe-file-upload__file-item-stencil-info-filename">
+                                {file.name}
+                            </div>
+                        </div>
+                    </div>
+                )
+            }
+            {
+                // File finished loading without error
+                file.document && !file.error && (
+                    <div className="ffe-file-upload__file-item-loaded">
+                        <button
+                            type="button"
+                            id={file.name}
+                            className="ffe-file-upload__file-item-delete-button"
+                            onClick={onFileDeleted}
+                        >
+                            <span className="ffe-file-upload__file-item-delete-button-text">
+                                {deleteText}
+                            </span>
+                            <Icon
+                                fileUrl={closeIcon}
+                                size="md"
+                                className="ffe-file-upload__file-item-delete-icon"
+                            />
+                        </button>
+                        <div className="ffe-file-upload__file-item-filename">
                             {file.name}
                         </div>
                     </div>
-                </div>
-            )}
-            {// File finished loading without error
-            file.document && !file.error && (
-                <div className="ffe-file-upload__file-item-loaded">
-                    <button
-                        type="button"
-                        id={file.name}
-                        className="ffe-file-upload__file-item-delete-button"
-                        onClick={onFileDeleted}
+                )
+            }
+            {
+                // File has error
+                file.error && (
+                    <div
+                        className="ffe-file-upload__file-item-error"
+                        role="alert"
                     >
-                        <span className="ffe-file-upload__file-item-delete-button-text">
-                            {deleteText}
-                        </span>
-                        <Icon
-                            fileUrl={closeIcon}
-                            size="md"
-                            className="ffe-file-upload__file-item-delete-icon"
-                        />
-                    </button>
-                    <div className="ffe-file-upload__file-item-filename">
-                        {file.name}
-                    </div>
-                </div>
-            )}
-            {// File has error
-            file.error && (
-                <div className="ffe-file-upload__file-item-error" role="alert">
-                    <div className="ffe-file-upload__file-item-error-icon">
-                        <Icon fileUrl={exclamationIcon} size="sm" />
-                    </div>
-                    <button
-                        type="button"
-                        id={file.name}
-                        className="ffe-file-upload__file-item-delete-button"
-                        onClick={onFileDeleted}
-                    >
-                        <span className="ffe-file-upload__file-item-delete-button-text">
-                            {deleteText}
-                        </span>
-                        <Icon
-                            fileUrl={closeIcon}
-                            size="md"
-                            className="ffe-file-upload__file-item-delete-icon"
-                        />
-                    </button>
-                    <div className="ffe-file-upload__file-item-error-info">
-                        <div className="ffe-file-upload__file-item-error-filename">
-                            {file.name}
+                        <div className="ffe-file-upload__file-item-error-icon">
+                            <Icon fileUrl={exclamationIcon} size="sm" />
                         </div>
-                        <div className="ffe-file-upload__file-item-error-message">
-                            {file.error}
+                        <button
+                            type="button"
+                            id={file.name}
+                            className="ffe-file-upload__file-item-delete-button"
+                            onClick={onFileDeleted}
+                        >
+                            <span className="ffe-file-upload__file-item-delete-button-text">
+                                {deleteText}
+                            </span>
+                            <Icon
+                                fileUrl={closeIcon}
+                                size="md"
+                                className="ffe-file-upload__file-item-delete-icon"
+                            />
+                        </button>
+                        <div className="ffe-file-upload__file-item-error-info">
+                            <div className="ffe-file-upload__file-item-error-filename">
+                                {file.name}
+                            </div>
+                            <div className="ffe-file-upload__file-item-error-message">
+                                {file.error}
+                            </div>
                         </div>
                     </div>
-                </div>
-            )}
+                )
+            }
         </li>
     );
 };

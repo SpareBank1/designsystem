@@ -9,6 +9,7 @@
         "build": "ffe-buildtool babel && cp src/symbolNames.ts types/symbolNames.ts",
         "watch": "ffe-buildtool babel-watch",
         "lint": "eslint src",
+        "lint:fix": "eslint src --fix",
         "test": "ffe-buildtool jest",
         "test:watch": "ffe-buildtool jest --watch"
     },

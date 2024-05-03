@@ -13,7 +13,8 @@ const ListItemBody = ({ item, dropdownAttributes, isHighlighted }) => {
     return (
         <div
             className={classnames('ffe-searchable-dropdown__list-item-body', {
-                'ffe-searchable-dropdown__list-item-body--highlighted': isHighlighted,
+                'ffe-searchable-dropdown__list-item-body--highlighted':
+                    isHighlighted,
             })}
         >
             {title}

@@ -1,12 +1,12 @@
 module.exports = {
-    'rules': {
+    rules: {
         // Treat var as Block Scoped
         // http://eslint.org/docs/rules/block-scoped-var
         'block-scoped-var': 2,
 
         // Enforce linebreak style
         // http://eslint.org/docs/rules/linebreak-style
-        'linebreak-style': [ 2, 'unix' ],
+        'linebreak-style': [2, 'unix'],
 
         // Disallow Use of caller/callee
         // http://eslint.org/docs/rules/no-caller
@@ -14,7 +14,7 @@ module.exports = {
 
         // disallow assignment in conditional expressions
         // http://eslint.org/docs/rules/no-cond-assign
-        'no-cond-assign': [ 2, 'always' ],
+        'no-cond-assign': [2, 'always'],
 
         // Disallow Empty Block Statements
         // http://eslint.org/docs/rules/no-empty
@@ -27,7 +27,6 @@ module.exports = {
         // disallow use of eval()-like methods
         // http://eslint.org/docs/rules/no-implied-eval
         'no-implied-eval': 2,
-
 
         // Disallow Extending of Native Objects
         // http://eslint.org/docs/rules/no-extend-native
@@ -63,7 +62,7 @@ module.exports = {
 
         // Disallow Unused Variables
         // http://eslint.org/docs/rules/no-unused-vars
-        'no-unused-vars': [ 2, { 'vars': 'all', 'args': 'none' } ],
+        'no-unused-vars': [2, { vars: 'all', args: 'none' }],
 
         // No with Statements
         // http://eslint.org/docs/rules/no-with
@@ -71,7 +70,7 @@ module.exports = {
 
         // Strict Mode Directives
         // http://eslint.org/docs/rules/strict
-        'strict': 2,
+        strict: 2,
 
         // ensure that the results of typeof are compared against a valid string
         // http://eslint.org/docs/rules/valid-typeof
@@ -99,7 +98,7 @@ module.exports = {
 
         // disallow unnecessary parentheses
         // http://eslint.org/docs/rules/no-extra-parens
-        'no-extra-parens': [ 2, 'functions' ],
+        'no-extra-parens': [2, 'functions'],
 
         // disallow overwriting functions written as function declarations
         // http://eslint.org/docs/rules/no-func-assign
@@ -169,7 +168,7 @@ module.exports = {
         // disallow reassignment of function parameters
         // disallow parameter object manipulation
         // http://eslint.org/docs/rules/no-param-reassign
-        'no-param-reassign': [2, { 'props': true }],
+        'no-param-reassign': [2, { props: true }],
 
         // disallow declaring the same variable more then once
         // http://eslint.org/docs/rules/no-redeclare
@@ -177,6 +176,6 @@ module.exports = {
 
         // disallow debugger statements
         //http://eslint.org/docs/rules/no-debugger
-        'no-debugger' : 2
-    }
+        'no-debugger': 2,
+    },
 };

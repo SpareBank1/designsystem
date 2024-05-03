@@ -222,7 +222,7 @@ describe('SearchableDropdown', () => {
         ).toBeInTheDocument();
     });
 
-    it('should open and close', function() {
+    it('should open and close', function () {
         render(
             <SearchableDropdown
                 id="id"

@@ -3,11 +3,7 @@ import { node, string } from 'prop-types';
 import classNames from 'classnames';
 
 export default function EmphasizedText(props) {
-    const {
-        children,
-        className,
-        ...rest
-    } = props;
+    const { children, className, ...rest } = props;
 
     return (
         <em className={classNames('ffe-em-text', className)} {...rest}>

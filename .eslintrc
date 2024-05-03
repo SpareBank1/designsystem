@@ -1,5 +1,5 @@
 {
-    "extends": ["./linting/eslint-config-ffe/index.js", "prettier"],
+    "extends": ["./linting/eslint-config-ffe/index.js", "plugin:prettier/recommended"],
     "parser": "@typescript-eslint/parser",
     "plugins": ["@typescript-eslint"],
     "settings": {

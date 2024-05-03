@@ -8,7 +8,9 @@ export function accountFilter(query = '') {
         if (account.name.toLowerCase().includes(nameQuery)) {
             return true;
         } else if (
-            String(account.accountNumber).replace(COMMON_SEPARATORS, '').includes(accountNumberQuery)
+            String(account.accountNumber)
+                .replace(COMMON_SEPARATORS, '')
+                .includes(accountNumberQuery)
         ) {
             return true;
         }
