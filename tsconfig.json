@@ -2,6 +2,7 @@
     "compilerOptions": {
         "skipLibCheck": true,
         "esModuleInterop": true,
+        "moduleResolution": "node",
         "strict": true,
         "jsx": "react",
         "lib": ["dom", "es2019"]
