@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-icons-react",
-    "version": "9.0.9",
+    "version": "9.0.10",
     "description": "React-komponenter for ffe-icons",
     "license": "MIT",
     "author": "SpareBank 1",
@@ -30,7 +30,7 @@
         "prop-types": "^15.7.2"
     },
     "devDependencies": {
-        "@sb1/ffe-buildtool": "^0.5.2",
+        "@sb1/ffe-buildtool": "^0.5.3",
         "eslint": "^8.57.0",
         "react": "^16.9.0",
         "react-dom": "^16.9.0",

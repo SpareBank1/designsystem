@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [13.2.12](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@13.2.11...@sb1/ffe-grid-react@13.2.12) (2024-05-03)
+
+**Note:** Version bump only for package @sb1/ffe-grid-react
+
 ## [13.2.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-grid-react@13.2.10...@sb1/ffe-grid-react@13.2.11) (2024-05-03)
 
 **Note:** Version bump only for package @sb1/ffe-grid-react
