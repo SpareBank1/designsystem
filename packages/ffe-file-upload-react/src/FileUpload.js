@@ -13,9 +13,8 @@ class FileUpload extends React.Component {
         this.onFilesDropped = this.onFilesDropped.bind(this);
         this.onFileDeleted = this.onFileDeleted.bind(this);
         this.setFileInputElement = this.setFileInputElement.bind(this);
-        this.triggerUploadFileNativeHandler = this.triggerUploadFileNativeHandler.bind(
-            this,
-        );
+        this.triggerUploadFileNativeHandler =
+            this.triggerUploadFileNativeHandler.bind(this);
 
         this.state = { hover: false };
     }
@@ -105,8 +104,8 @@ class FileUpload extends React.Component {
                         className={classNames(
                             'ffe-file-upload__upload-section-border',
                             {
-                                'ffe-file-upload__upload-section-border--hover': this
-                                    .state.hover,
+                                'ffe-file-upload__upload-section-border--hover':
+                                    this.state.hover,
                             },
                         )}
                     >

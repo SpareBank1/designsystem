@@ -114,7 +114,8 @@ const InputField = props => {
                     className={classNames(
                         'ffe-base-selector__expand-button-icon',
                         {
-                            'ffe-base-selector__expand-button-icon--invalid': ariaInvalid,
+                            'ffe-base-selector__expand-button-icon--invalid':
+                                ariaInvalid,
                         },
                     )}
                 />

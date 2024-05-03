@@ -6,8 +6,7 @@ const columns = [
     { key: 'id', header: 'Employee-id' },
     {
         key: 'rand',
-        header:
-            'A random number with thousand separator needs a custom compare',
+        header: 'A random number with thousand separator needs a custom compare',
         compare: (a, b) => a.replace(/\s/g, '') - b.replace(/\s/g, ''),
     },
 ];

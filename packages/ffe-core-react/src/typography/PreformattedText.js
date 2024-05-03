@@ -3,11 +3,7 @@ import { node, string } from 'prop-types';
 import classNames from 'classnames';
 
 export default function PreformattedText(props) {
-    const {
-        children,
-        className,
-        ...rest
-    } = props;
+    const { children, className, ...rest } = props;
 
     return (
         <pre className={classNames('ffe-pre-text', className)} {...rest}>

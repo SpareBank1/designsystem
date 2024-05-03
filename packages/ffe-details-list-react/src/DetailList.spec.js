@@ -82,18 +82,12 @@ describe('<Detail />', () => {
 
     it('provides its children with its index and the number of children provided', () => {
         const wrapper = getWrapper();
-        expect(
-            wrapper
-                .find('div[childCount]')
-                .first()
-                .prop('childCount'),
-        ).toBe(2);
-        expect(
-            wrapper
-                .find('div[childCount]')
-                .last()
-                .prop('childCount'),
-        ).toBe(2);
+        expect(wrapper.find('div[childCount]').first().prop('childCount')).toBe(
+            2,
+        );
+        expect(wrapper.find('div[childCount]').last().prop('childCount')).toBe(
+            2,
+        );
 
         wrapper.setProps({ children: <div /> });
 

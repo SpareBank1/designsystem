@@ -26,12 +26,7 @@ describe('<InputGroup>', () => {
 
     it('renders a Label if a string passed from the label prop', () => {
         const wrapper = getWrapper({ label: 'custom label' });
-        expect(
-            wrapper
-                .find('Label')
-                .dive()
-                .text(),
-        ).toMatch(/custom label/);
+        expect(wrapper.find('Label').dive().text()).toMatch(/custom label/);
     });
 
     it('renders a Label with htmlFor set to the same generated value of the children input id', () => {
@@ -57,12 +52,9 @@ describe('<InputGroup>', () => {
         expect(
             wrapper.find('button[aria-label="Vis hjelpetekst"]').length,
         ).toEqual(1);
-        expect(
-            wrapper
-                .find('.ffe-collapse__inner')
-                .at(0)
-                .text(),
-        ).toEqual('custom tooltip');
+        expect(wrapper.find('.ffe-collapse__inner').at(0).text()).toEqual(
+            'custom tooltip',
+        );
     });
 
     it('renders an ErrorFieldMessage and sets aria-invalid and aria-describedby if a string is passed as fieldMessage', () => {
@@ -95,12 +87,9 @@ describe('<InputGroup>', () => {
         expect(
             wrapper.find('button[aria-label="Vis hjelpetekst"]').length,
         ).toEqual(1);
-        expect(
-            wrapper
-                .find('.ffe-collapse__inner')
-                .at(0)
-                .text(),
-        ).toEqual('Tooltip text');
+        expect(wrapper.find('.ffe-collapse__inner').at(0).text()).toEqual(
+            'Tooltip text',
+        );
     });
 
     it('renders a ErrorFieldMessage and sets aria-invalid and aria-describedby if passed as fieldMessage prop', () => {

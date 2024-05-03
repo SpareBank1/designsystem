@@ -11,7 +11,7 @@ describe('format currency', () => {
 
     test('show decimals for moneys which are not whole', () => {
         expect(formatCurrency('999.99')).toBe(`kr${NON_BREAKING_SPACE}999,99`);
-        expect(formatCurrency(1234.90)).toBe(
+        expect(formatCurrency(1234.9)).toBe(
             `kr${NON_BREAKING_SPACE}1${NON_BREAKING_SPACE}234,90`,
         );
     });

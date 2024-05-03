@@ -13,7 +13,7 @@ const TableRow = props => {
         expandable,
         expanded,
         rowRender,
-        rowIndex
+        rowIndex,
     } = props;
 
     const expandableProps = expandable && {
@@ -34,7 +34,7 @@ const TableRow = props => {
                 tdClasses={classNames(
                     {
                         'ffe-table__cell--collapsed':
-                        column.key === 'expandIcon',
+                            column.key === 'expandIcon',
                     },
                     { 'ffe-table--hide-sm': column.hideOnMobile },
                     { 'ffe-table--hide-md': column.hideOnSmallTablet },
@@ -42,28 +42,25 @@ const TableRow = props => {
                     { 'ffe-table--hide-xlg': column.hideOnDesktop },
                 )}
             >
-                {column.cellRender ? column.cellRender(cells[column.key],column, props, index) : cells[column.key]}
+                {column.cellRender
+                    ? column.cellRender(cells[column.key], column, props, index)
+                    : cells[column.key]}
             </TableCell>
         );
     });
 
-    const trprops = {className: classNames('ffe-table__row', trClasses),
+    const trprops = {
+        className: classNames('ffe-table__row', trClasses),
         ...expandableProps,
         onClick: onClick,
-        children: rowContent
+        children: rowContent,
     };
 
-    if( typeof rowRender  === 'function'){
+    if (typeof rowRender === 'function') {
         return rowRender(trprops, props, rowIndex);
     }
 
-    return (
-        <tr
-            {...trprops}
-        >
-            {rowContent}
-        </tr>
-    );
+    return <tr {...trprops}>{rowContent}</tr>;
 };
 
 TableRow.propTypes = {
@@ -78,7 +75,7 @@ TableRow.propTypes = {
             hideOnSmallTablet: PropTypes.bool,
             hideOnTablet: PropTypes.bool,
             key: PropTypes.string,
-            cellRender: PropTypes.func
+            cellRender: PropTypes.func,
         }),
     ).isRequired,
     expandable: PropTypes.bool,
@@ -89,7 +86,7 @@ TableRow.propTypes = {
     footerRender: PropTypes.func,
     onKeyDown: PropTypes.func,
     trClasses: PropTypes.string,
-    rowIndex: PropTypes.number
+    rowIndex: PropTypes.number,
 };
 
 export default TableRow;

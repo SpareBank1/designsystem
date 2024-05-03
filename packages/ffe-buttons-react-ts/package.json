@@ -19,6 +19,7 @@
     "scripts": {
         "build": "ffe-buildtool tsc",
         "lint": "eslint src/ --ext ts,tsx",
+        "lint:fix": "eslint src --ext ts,tsx --fix",
         "test": "ffe-buildtool jest",
         "test:watch": "ffe-buildtool jest --watch"
     },

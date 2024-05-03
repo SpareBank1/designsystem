@@ -121,12 +121,7 @@ describe('<Table />', () => {
         });
 
         it('renders header content as <th /> content', () => {
-            expect(
-                wrapper
-                    .find('th')
-                    .first()
-                    .text(),
-            ).toBe(columns[0].header);
+            expect(wrapper.find('th').first().text()).toBe(columns[0].header);
         });
     });
 
@@ -140,13 +135,9 @@ describe('<Table />', () => {
         });
 
         it('renders the footer content inside <tfoot />', () => {
-            expect(
-                wrapper
-                    .find('tfoot')
-                    .find('td')
-                    .first()
-                    .text(),
-            ).toBe('Sum alder');
+            expect(wrapper.find('tfoot').find('td').first().text()).toBe(
+                'Sum alder',
+            );
         });
 
         it('does not render <tfoot /> unless footer is present in columns', () => {
@@ -231,37 +222,21 @@ describe('<Table />', () => {
         });
 
         it('renders a <tfoot /> tr has custom props', () => {
-            const propKeyProp = wrapper
-                .find('tfoot tr')
-                .first()
-                .props();
+            const propKeyProp = wrapper.find('tfoot tr').first().props();
             expect(propKeyProp).toHaveProperty('data-abc', 'aaa123');
             expect(
-                wrapper
-                    .find('tfoot tr')
-                    .first()
-                    .render()
-                    .attr('data-abc'),
+                wrapper.find('tfoot tr').first().render().attr('data-abc'),
             ).toBe('aaa123');
         });
 
         it('renders a <tfoot />, triggers tr onClick method', () => {
-            wrapper
-                .find('tfoot tr')
-                .first()
-                .simulate('click');
+            wrapper.find('tfoot tr').first().simulate('click');
             expect(mockCallback.mock.calls.length).toBe(1);
         });
 
         it('renders a <tfoot /> that has two identical rows, the second row has array notation', () => {
-            const tr0html = wrapper
-                .find('tfoot tr')
-                .at(0)
-                .html();
-            const tr1html = wrapper
-                .find('tfoot tr')
-                .at(1)
-                .html();
+            const tr0html = wrapper.find('tfoot tr').at(0).html();
+            const tr1html = wrapper.find('tfoot tr').at(1).html();
             expect(tr1html).toBe(tr0html);
         });
 
@@ -335,40 +310,21 @@ describe('<Table />', () => {
         });
 
         it('renders a <thead /> tr has custom props', () => {
-            const propKeyProp = wrapper
-                .find('thead tr')
-                .first()
-                .props();
+            const propKeyProp = wrapper.find('thead tr').first().props();
             expect(propKeyProp).toHaveProperty('data-abc', 'aaa123');
             expect(
-                wrapper
-                    .find('thead tr')
-                    .first()
-                    .render()
-                    .attr('data-abc'),
+                wrapper.find('thead tr').first().render().attr('data-abc'),
             ).toBe('aaa123');
         });
 
         it('renders a <thead />, triggers tr onClick method', () => {
-            wrapper
-                .find('thead')
-                .find('tr')
-                .first()
-                .simulate('click');
+            wrapper.find('thead').find('tr').first().simulate('click');
             expect(mockCallback.mock.calls.length).toBe(1);
         });
 
         it('renders a <thead /> that has two identical rows, the second row has array notation', () => {
-            const tr0html = wrapper
-                .find('thead')
-                .find('tr')
-                .at(0)
-                .html();
-            const tr1html = wrapper
-                .find('thead')
-                .find('tr')
-                .at(1)
-                .html();
+            const tr0html = wrapper.find('thead').find('tr').at(0).html();
+            const tr1html = wrapper.find('thead').find('tr').at(1).html();
             expect(tr1html).toBe(tr0html);
         });
 
@@ -499,20 +455,12 @@ describe('<Table />', () => {
                 .props();
             expect(propKeyProp).toHaveProperty('data-my-prop', '12345');
             expect(
-                wrapper
-                    .find('tbody tr')
-                    .first()
-                    .render()
-                    .attr('data-my-prop'),
+                wrapper.find('tbody tr').first().render().attr('data-my-prop'),
             ).toBe('12345');
         });
 
         it('renders a <tbody />, triggers tr onClick method', () => {
-            wrapper
-                .find('tbody')
-                .find('tr')
-                .first()
-                .simulate('click');
+            wrapper.find('tbody').find('tr').first().simulate('click');
             expect(mockCallback.mock.calls.length).toBe(1);
         });
 
@@ -591,12 +539,9 @@ describe('<Table />', () => {
 
         it('renders content of each cell', () => {
             const wrapper = render(<Table columns={columns} data={data} />);
-            expect(
-                wrapper
-                    .find('td .ffe-table__content')
-                    .first()
-                    .text(),
-            ).toBe(data[0].name);
+            expect(wrapper.find('td .ffe-table__content').first().text()).toBe(
+                data[0].name,
+            );
         });
 
         it('adds column heading to data-th property of each cell', () => {
@@ -605,12 +550,9 @@ describe('<Table />', () => {
             expect(wrapper.find('[data-th="Navn"]')).toHaveLength(
                 columns.length,
             );
-            expect(
-                wrapper
-                    .find('td')
-                    .first()
-                    .prop('data-th'),
-            ).toBe(columns[0].header);
+            expect(wrapper.find('td').first().prop('data-th')).toBe(
+                columns[0].header,
+            );
         });
 
         it('render screen reader only caption', () => {

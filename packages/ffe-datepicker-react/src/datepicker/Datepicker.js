@@ -28,15 +28,12 @@ export default class Datepicker extends Component {
 
         this.openCalendar = this.openCalendar.bind(this);
         this.closeCalendar = this.closeCalendar.bind(this);
-        this.closeCalendarSetInputFocus = this.closeCalendarSetInputFocus.bind(
-            this,
-        );
-        this.calendarButtonClickHandler = this.calendarButtonClickHandler.bind(
-            this,
-        );
-        this.addFlagOnClickEventClickHandler = this.addFlagOnClickEventClickHandler.bind(
-            this,
-        );
+        this.closeCalendarSetInputFocus =
+            this.closeCalendarSetInputFocus.bind(this);
+        this.calendarButtonClickHandler =
+            this.calendarButtonClickHandler.bind(this);
+        this.addFlagOnClickEventClickHandler =
+            this.addFlagOnClickEventClickHandler.bind(this);
         this.globalClickHandler = this.globalClickHandler.bind(this);
         this.escKeyHandler = this.escKeyHandler.bind(this);
         this.datePickedHandler = this.datePickedHandler.bind(this);
@@ -289,9 +286,8 @@ export default class Datepicker extends Component {
         const { minDate, maxDate } = this.state;
 
         if (this.state.ariaInvalid && !inputProps['aria-describedby']) {
-            inputProps[
-                'aria-describedby'
-            ] = `date-input-validation-${this.datepickerId}`;
+            inputProps['aria-describedby'] =
+                `date-input-validation-${this.datepickerId}`;
         }
 
         const calendarClassName = classNames(

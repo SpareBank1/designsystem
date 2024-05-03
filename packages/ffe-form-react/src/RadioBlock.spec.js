@@ -19,12 +19,8 @@ describe('<RadioBlock />', () => {
     });
     describe('id', () => {
         it('is unique across instances', () => {
-            const oneId = getWrapper()
-                .find('input')
-                .prop('id');
-            const anotherId = getWrapper()
-                .find('input')
-                .prop('id');
+            const oneId = getWrapper().find('input').prop('id');
+            const anotherId = getWrapper().find('input').prop('id');
 
             expect(oneId).not.toBe(anotherId);
         });

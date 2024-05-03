@@ -24,6 +24,7 @@
         "build": "ffe-buildtool babel",
         "watch": "ffe-buildtool babel-watch",
         "lint": "eslint src",
+        "lint:fix": "eslint src --fix",
         "test": "jest",
         "test:watch": "jest --watch"
     },

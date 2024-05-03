@@ -10,9 +10,8 @@ class SuggestionListContainer extends React.Component {
 
     constructor(props) {
         super(props);
-        this.refHighlightedSuggestion = this.refHighlightedSuggestion.bind(
-            this,
-        );
+        this.refHighlightedSuggestion =
+            this.refHighlightedSuggestion.bind(this);
     }
 
     refHighlightedSuggestion(suggestionEl) {

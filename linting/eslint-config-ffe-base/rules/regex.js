@@ -1,5 +1,5 @@
 module.exports = {
-    'rules': {
+    rules: {
         // disallow control characters in regular expressions
         // http://eslint.org/docs/rules/no-control-regex
         'no-control-regex': 2,
@@ -14,6 +14,6 @@ module.exports = {
 
         // disallow multiple spaces in a regular expression literal
         // http://eslint.org/docs/rules/no-regex-spaces
-        'no-regex-spaces': 2
-    }
+        'no-regex-spaces': 2,
+    },
 };

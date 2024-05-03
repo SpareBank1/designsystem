@@ -1,5 +1,5 @@
 module.exports = {
-    'rules': {
+    rules: {
         // disallow modifying variables that are declared using const
         // http://eslint.org/docs/rules/no-const-assign
         'no-const-assign': 2,
@@ -62,6 +62,6 @@ module.exports = {
 
         // If a default import is requested, this rule will report if there is no default export in the imported module.
         // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/default.md
-        'import/default': 2
-    }
+        'import/default': 2,
+    },
 };
