@@ -1,9 +1,10 @@
 import React from 'react';
 import BulletList from './BulletList';
 import BulletListItem from './BulletListItem';
+import { render, screen } from '@testing-library/react';
 
-const getWrapper = props =>
-    shallow(
+const renderBulletList = props =>
+    render(
         <BulletList {...props}>
             <BulletListItem>Firstly</BulletListItem>
             <BulletListItem>Secondly</BulletListItem>
@@ -12,25 +13,26 @@ const getWrapper = props =>
 
 describe('<BulletList>', () => {
     it('renders without exploding', () => {
-        const wrapper = getWrapper();
-        expect(wrapper.exists()).toBe(true);
-        expect(wrapper.is('ul')).toBe(true);
+        renderBulletList();
+        expect(screen.getByRole('list')).toBeInTheDocument();
     });
     it('has the correct class', () => {
-        const wrapper = getWrapper({ className: 'test-class' });
-        expect(wrapper.hasClass('ffe-bullet-list')).toBe(true);
-        expect(wrapper.hasClass('test-class')).toBe(true);
+        renderBulletList({ className: 'test-class' });
+        const list = screen.getByRole('list');
+        expect(list.classList.contains('ffe-bullet-list')).toBeTruthy();
+        expect(list.classList.contains('test-class')).toBeTruthy();
     });
     it('passes props', () => {
-        const wrapper = getWrapper({ id: 'that-id' });
-        expect(wrapper.prop('id')).toBe('that-id');
-        expect(wrapper.html()).toContain('Firstly');
+        renderBulletList({ id: 'that-id' });
+        const list = screen.getByRole('list');
+        expect(list.getAttribute('id')).toBe('that-id');
+        expect(list.innerHTML).toContain('Firstly');
     });
     it('renders condensed modifier', () => {
-        const modifierClass = 'ffe-bullet-list--condensed';
-        expect(getWrapper().hasClass(modifierClass)).toBe(false);
-        expect(getWrapper({ condensed: true }).hasClass(modifierClass)).toBe(
-            true,
-        );
+        renderBulletList({ condensed: true });
+        const condensedList = screen.getByRole('list');
+        expect(
+            condensedList.classList.contains('ffe-bullet-list--condensed'),
+        ).toBeTruthy();
     });
 });

@@ -1,6 +1,7 @@
 import React from 'react';
-
 import ChartDonut from '../src';
+
+import { render } from '@testing-library/react';
 
 const defaultProps = {
     firstLabel: 'Foo',
@@ -9,53 +10,29 @@ const defaultProps = {
     percentage: 42,
 };
 
-const renderShallow = (props = {}) =>
-    shallow(<ChartDonut {...defaultProps} {...props} />);
-
 describe('ChartDonut', () => {
     it('renders two SVGs', () => {
-        const el = renderShallow();
-
-        expect(el.find('svg')).toHaveLength(2);
+        const { container } = render(<ChartDonut {...defaultProps} />);
+        expect(container.querySelectorAll('svg')).toHaveLength(2);
     });
 
     it('renders html for the name of the circle', () => {
-        const el = renderShallow();
-
-        expect(el.find('.ffe-chart-donut__name')).toHaveLength(1);
-        expect(el.find('.ffe-chart-donut__name').text()).toBe('Baz');
+        const { container } = render(<ChartDonut {...defaultProps} />);
+        const name = container.querySelector('.ffe-chart-donut__name');
+        expect(name.textContent).toBe('Baz');
     });
 
     it('renders html for the labels and their percentages', () => {
-        const el = renderShallow();
-
-        expect(el.find('.ffe-chart-donut__type')).toHaveLength(2);
-        expect(el.find('.ffe-chart-donut__amount')).toHaveLength(2);
-
-        expect(
-            el
-                .find('.ffe-chart-donut__type')
-                .at(0)
-                .text(),
-        ).toBe('Foo');
-        expect(
-            el
-                .find('.ffe-chart-donut__amount')
-                .at(0)
-                .text(),
-        ).toMatch(/58/);
-
-        expect(
-            el
-                .find('.ffe-chart-donut__type')
-                .at(1)
-                .text(),
-        ).toBe('Bar');
-        expect(
-            el
-                .find('.ffe-chart-donut__amount')
-                .at(1)
-                .text(),
-        ).toMatch(/42/);
+        const { container } = render(<ChartDonut {...defaultProps} />);
+        const [typeFoo, typeBar] = container.querySelectorAll(
+            '.ffe-chart-donut__type',
+        );
+        const [amountFoo, amountBar] = container.querySelectorAll(
+            '.ffe-chart-donut__amount',
+        );
+        expect(typeFoo.textContent).toBe('Foo');
+        expect(amountFoo.textContent).toMatch(/58/);
+        expect(typeBar.textContent).toBe('Bar');
+        expect(amountBar.textContent).toMatch(/42/);
     });
 });

@@ -1,9 +1,10 @@
 import React from 'react';
 import CheckList from './CheckList';
 import CheckListItem from './CheckListItem';
-import { Icon } from '@sb1/ffe-icons-react';
-const getWrapper = props =>
-    shallow(
+import { render, screen } from '@testing-library/react';
+
+const renderCheckList = props =>
+    render(
         <CheckList {...props}>
             <CheckListItem>Firstly</CheckListItem>
             <CheckListItem>Secondly</CheckListItem>
@@ -12,43 +13,57 @@ const getWrapper = props =>
 
 describe('<CheckList>', () => {
     it('renders without exploding', () => {
-        const wrapper = getWrapper();
-        expect(wrapper.exists()).toBe(true);
-        expect(wrapper.is('ul')).toBe(true);
+        renderCheckList();
+        expect(screen.getByRole('list')).toBeInTheDocument();
     });
     it('has the correct class', () => {
-        const wrapper = getWrapper({ className: 'test-class' });
-        expect(wrapper.hasClass('ffe-check-list')).toBe(true);
-        expect(wrapper.hasClass('test-class')).toBe(true);
+        renderCheckList({ className: 'test-class' });
+        const list = screen.getByRole('list');
+        expect(list.classList.contains('ffe-check-list')).toBeTruthy();
+        expect(list.classList.contains('test-class')).toBeTruthy();
     });
     it('passes props', () => {
-        const wrapper = getWrapper({ id: 'that-id' });
-        expect(wrapper.prop('id')).toBe('that-id');
-        expect(wrapper.html()).toContain('Firstly');
+        renderCheckList({ id: 'that-id' });
+        const list = screen.getByRole('list');
+        expect(list.getAttribute('id')).toBe('that-id');
+        expect(list.innerHTML).toContain('Firstly');
     });
     it('sets the correct class when columns prop is 2', () => {
-        const wrapper = getWrapper({ columns: 2 });
-        expect(wrapper.hasClass('ffe-check-list--two-columns')).toBe(true);
-        wrapper.setProps({ columns: '2' });
-        expect(wrapper.hasClass('ffe-check-list--two-columns')).toBe(true);
+        renderCheckList({ columns: 2 });
+        const list = screen.getByRole('list');
+        expect(list.classList.contains('ffe-check-list--two-columns')).toBe(
+            true,
+        );
     });
     it('only supports 1 and 2 columns', () => {
-        const wrapper = getWrapper({ columns: 3 });
-        expect(wrapper.hasClass('ffe-check-list--two-columns')).toBe(false);
-        wrapper.setProps({ columns: 1 });
-        expect(wrapper.hasClass('ffe-check-list--two-columns')).toBe(false);
+        renderCheckList({ columns: 3 });
+        const list = screen.getByRole('list');
+        expect(list.classList.contains('ffe-check-list--two-columns')).toBe(
+            false,
+        );
     });
 });
 
 describe('<CheckListItem />', () => {
-    it('render correct icon based on isCross value', () => {
-        const wrapper = shallow(<CheckListItem>An item</CheckListItem>);
-        expect(wrapper.find(Icon).hasClass('ffe-check-list__icon--check')).toBe(
+    it('render correct icon isCross false', () => {
+        render(<CheckListItem>An item</CheckListItem>);
+        const icon = screen.getByRole('img');
+        expect(icon.classList.contains('ffe-check-list__icon--cross')).toBe(
+            false,
+        );
+        expect(icon.classList.contains('ffe-check-list__icon--check')).toBe(
             true,
         );
-        wrapper.setProps({ isCross: true });
-        expect(wrapper.find(Icon).hasClass('ffe-check-list__icon--cross')).toBe(
+    });
+
+    it('render correct icon isCross true', () => {
+        render(<CheckListItem isCross={true}>An item</CheckListItem>);
+        const icon = screen.getByRole('img');
+        expect(icon.classList.contains('ffe-check-list__icon--cross')).toBe(
             true,
+        );
+        expect(icon.classList.contains('ffe-check-list__icon--check')).toBe(
+            false,
         );
     });
 });

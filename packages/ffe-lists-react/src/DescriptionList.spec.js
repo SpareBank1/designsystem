@@ -2,9 +2,10 @@ import React from 'react';
 import DescriptionList from './DescriptionList';
 import DescriptionListTerm from './DescriptionListTerm';
 import DescriptionListDescription from './DescriptionListDescription';
+import { render } from '@testing-library/react';
 
-const getWrapper = props =>
-    shallow(
+const renderDescriptionList = props =>
+    render(
         <DescriptionList {...props}>
             <DescriptionListTerm>Porsche</DescriptionListTerm>
             <DescriptionListDescription>
@@ -19,31 +20,83 @@ const getWrapper = props =>
 
 describe('<DescriptionList>', () => {
     it('renders without exploding', () => {
-        const wrapper = getWrapper();
-        expect(wrapper.exists()).toBe(true);
-        expect(wrapper.is('dl')).toBe(true);
+        const { container } = renderDescriptionList();
+        expect(container.querySelector('dl')).toBeTruthy();
     });
     it('has the correct class', () => {
-        const wrapper = getWrapper({ className: 'test-class' });
-        expect(wrapper.hasClass('ffe-description-list')).toBe(true);
-        expect(wrapper.hasClass('test-class')).toBe(true);
+        const { container } = renderDescriptionList({
+            className: 'test-class',
+        });
+        const dl = container.querySelector('dl');
+
+        expect(dl.classList.contains('ffe-description-list')).toBe(true);
+        expect(dl.classList.contains('test-class')).toBe(true);
     });
     it('sets the correct class for modifier props', () => {
-        const wrapper = getWrapper();
-        expect(wrapper.hasClass('ffe-description-list--md')).toBe(false);
-        expect(wrapper.hasClass('ffe-description-list--lg')).toBe(false);
+        const { container, rerender } = render(
+            <DescriptionList>
+                <DescriptionListTerm>Porsche</DescriptionListTerm>
+                <DescriptionListDescription>
+                    German car maker
+                </DescriptionListDescription>
+            </DescriptionList>,
+        );
 
-        wrapper.setProps({ medium: true, large: false });
-        expect(wrapper.hasClass('ffe-description-list--md')).toBe(true);
-        expect(wrapper.hasClass('ffe-description-list--lg')).toBe(false);
+        expect(
+            container
+                .querySelector('dl')
+                .classList.contains('ffe-description-list--md'),
+        ).toBe(false);
+        expect(
+            container
+                .querySelector('dl')
+                .classList.contains('ffe-description-list--lg'),
+        ).toBe(false);
 
-        wrapper.setProps({ medium: false, large: true });
-        expect(wrapper.hasClass('ffe-description-list--md')).toBe(false);
-        expect(wrapper.hasClass('ffe-description-list--lg')).toBe(true);
+        rerender(
+            <DescriptionList medium={true} large={false}>
+                <DescriptionListTerm>Porsche</DescriptionListTerm>
+                <DescriptionListDescription>
+                    German car maker
+                </DescriptionListDescription>
+            </DescriptionList>,
+        );
+
+        expect(
+            container
+                .querySelector('dl')
+                .classList.contains('ffe-description-list--md'),
+        ).toBe(true);
+        expect(
+            container
+                .querySelector('dl')
+                .classList.contains('ffe-description-list--lg'),
+        ).toBe(false);
+
+        rerender(
+            <DescriptionList medium={false} large={true}>
+                <DescriptionListTerm>Porsche</DescriptionListTerm>
+                <DescriptionListDescription>
+                    German car maker
+                </DescriptionListDescription>
+            </DescriptionList>,
+        );
+
+        expect(
+            container
+                .querySelector('dl')
+                .classList.contains('ffe-description-list--md'),
+        ).toBe(false);
+        expect(
+            container
+                .querySelector('dl')
+                .classList.contains('ffe-description-list--lg'),
+        ).toBe(true);
     });
     it('passes props', () => {
-        const wrapper = getWrapper({ id: 'that-id' });
-        expect(wrapper.prop('id')).toBe('that-id');
-        expect(wrapper.html()).toContain('Porsche');
+        const { container } = renderDescriptionList({ id: 'that-id' });
+        const dl = container.querySelector('dl');
+        expect(dl.getAttribute('id')).toBe('that-id');
+        expect(dl.innerHTML).toContain('Porsche');
     });
 });

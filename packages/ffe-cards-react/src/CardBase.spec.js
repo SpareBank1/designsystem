@@ -1,32 +1,22 @@
 import React from 'react';
-
 import CardBase from './CardBase';
-
-const getWrapper = props => shallow(<CardBase {...props} />);
-const children = <div>Hello world</div>;
+import { render, screen, within } from '@testing-library/react';
 
 describe('CardBase', () => {
     it('should render an a element with correct class and children inside', () => {
-        const wrapper = getWrapper({ children });
-
-        expect(wrapper.find('a').exists()).toBe(true);
-        expect(wrapper.hasClass('ffe-card-base')).toBe(true);
-        expect(
-            wrapper
-                .find('.ffe-card-base')
-                .children()
-                .first()
-                .getElement(),
-        ).toEqual(children);
+        render(
+            <CardBase href="#">
+                <div>Hello world</div>
+            </CardBase>,
+        );
+        const link = screen.getByRole('link');
+        expect(link.classList.contains('ffe-card-base')).toBeTruthy();
+        expect(within(link).getByText('Hello world')).toBeInTheDocument();
     });
 
     it('should render my custom element and custom class', () => {
-        const wrapper = getWrapper({
-            className: 'my-custom-class',
-            element: 'article',
-        });
-
-        expect(wrapper.find('article').exists()).toBe(true);
-        expect(wrapper.hasClass('my-custom-class')).toBe(true);
+        render(<CardBase element="article" className="my-custom-class" />);
+        const article = screen.getByRole('article');
+        expect(article.classList.contains('my-custom-class')).toBeTruthy();
     });
 });

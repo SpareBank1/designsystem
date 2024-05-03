@@ -1,17 +1,17 @@
 import React from 'react';
-import { shallow } from 'enzyme';
 import DetailListCard from './DetailListCard';
 import DetailListCardItem from './DetailListCardItem';
+import { render, screen } from '@testing-library/react';
 
-const getWrapper = props =>
-    shallow(
+const renderDetailListCard = props =>
+    render(
         <DetailListCard {...props}>
             <DetailListCardItem label="Test Label" value="Test Value" />
         </DetailListCard>,
     );
 
-const getDetailListCardItemWrapper = props =>
-    shallow(
+const renderDetailListCardItem = props =>
+    render(
         <DetailListCardItem
             label="Kontonummer"
             value="1234 45 12345"
@@ -21,56 +21,64 @@ const getDetailListCardItemWrapper = props =>
 
 describe('<DetailListCard />', () => {
     it('renders without exploding', () => {
-        const wrapper = getWrapper();
-        expect(wrapper.is('dl')).toBe(true);
+        const { container } = renderDetailListCard();
+        expect(container.querySelector('dl')).toBeTruthy();
     });
     it('add classNames correctly', () => {
-        const wrapper = getWrapper({ className: 'test-class' });
-        expect(wrapper.hasClass('ffe-detail-list-card')).toBe(true);
-        expect(wrapper.hasClass('test-class')).toBe(true);
+        const { container } = renderDetailListCard({ className: 'test-class' });
+        expect(container.querySelector('dl')).toBeTruthy();
+        const dl = container.querySelector('dl');
+
+        expect(dl.classList.contains('ffe-detail-list-card')).toBe(true);
+        expect(dl.classList.contains('test-class')).toBe(true);
     });
 });
 
 describe('<DetailListCard />', () => {
     it('renders without exploding', () => {
-        const wrapper = getDetailListCardItemWrapper();
-        expect(wrapper.is('div')).toBe(true);
-        expect(wrapper.hasClass('ffe-detail-list-card__item')).toBe(true);
+        const { container } = renderDetailListCardItem();
+        expect(
+            container.querySelector('.ffe-detail-list-card__item'),
+        ).toBeTruthy();
     });
     it('adds additional classNames correctly', () => {
-        const wrapper = getDetailListCardItemWrapper({
+        const { container } = renderDetailListCardItem({
             className: 'test-class',
         });
-        expect(wrapper.hasClass('test-class')).toBe(true);
+        expect(
+            container
+                .querySelector('.ffe-detail-list-card__item')
+                .classList.contains('test-class'),
+        ).toBeTruthy();
     });
 
     it('adds additional props correctly', () => {
-        const wrapper = getDetailListCardItemWrapper({ id: 'test-id' });
-        expect(wrapper.prop('id')).toBe('test-id');
+        const { container } = renderDetailListCardItem({
+            id: 'test-id',
+        });
+        expect(
+            container
+                .querySelector('.ffe-detail-list-card__item')
+                .getAttribute('id'),
+        ).toEqual('test-id');
     });
     it('renders correct label content', () => {
-        const wrapper = getDetailListCardItemWrapper();
-        expect(
-            wrapper.find('dt').hasClass('ffe-detail-list-card__item-label'),
-        ).toBe(true);
-        const wrapper2 = getDetailListCardItemWrapper({
+        const { container } = renderDetailListCardItem({
             label: <span>Test Label</span>,
         });
-        expect(wrapper2.find('dt').contains(<span>Test Label</span>)).toBe(
-            true,
-        );
+        const dt = container.querySelector('dt');
+        expect(
+            dt.classList.contains('ffe-detail-list-card__item-label'),
+        ).toBeTruthy();
+        expect(dt.innerHTML).toEqual('<span>Test Label</span>');
     });
 
     it('renders correct value content', () => {
-        const wrapper = getDetailListCardItemWrapper();
+        renderDetailListCardItem({ value: <span>Test Value</span> });
+        const dd = screen.getByRole('definition');
         expect(
-            wrapper.find('dd').hasClass('ffe-detail-list-card__item-value'),
-        ).toBe(true);
-        const wrapper2 = getDetailListCardItemWrapper({
-            value: <span>Test Value</span>,
-        });
-        expect(wrapper2.find('dd').contains(<span>Test Value</span>)).toBe(
-            true,
-        );
+            dd.classList.contains('ffe-detail-list-card__item-value'),
+        ).toBeTruthy();
+        expect(dd.innerHTML).toEqual('<span>Test Value</span>');
     });
 });

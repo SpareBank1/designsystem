@@ -1,9 +1,10 @@
 import React from 'react';
 import StylizedNumberedList from './StylizedNumberedList';
 import StylizedNumberedListItem from './StylizedNumberedListItem';
+import { render, screen } from '@testing-library/react';
 
-const getWrapper = props =>
-    shallow(
+const renderStylizedNumberedList = props =>
+    render(
         <StylizedNumberedList {...props}>
             <StylizedNumberedListItem>Firstly</StylizedNumberedListItem>
             <StylizedNumberedListItem>Secondly</StylizedNumberedListItem>
@@ -12,18 +13,21 @@ const getWrapper = props =>
 
 describe('<StylizedNumberedList>', () => {
     it('renders without exploding', () => {
-        const wrapper = getWrapper();
-        expect(wrapper.exists()).toBe(true);
-        expect(wrapper.is('ol')).toBe(true);
+        renderStylizedNumberedList();
+        expect(screen.getByRole('list')).toBeInTheDocument();
     });
     it('has the correct class', () => {
-        const wrapper = getWrapper({ className: 'test-class' });
-        expect(wrapper.hasClass('ffe-stylized-numbered-list')).toBe(true);
-        expect(wrapper.hasClass('test-class')).toBe(true);
+        renderStylizedNumberedList({ className: 'test-class' });
+        const list = screen.getByRole('list');
+        expect(
+            list.classList.contains('ffe-stylized-numbered-list'),
+        ).toBeTruthy();
+        expect(list.classList.contains('test-class')).toBeTruthy();
     });
     it('passes props', () => {
-        const wrapper = getWrapper({ id: 'that-id' });
-        expect(wrapper.prop('id')).toBe('that-id');
-        expect(wrapper.html()).toContain('Firstly');
+        renderStylizedNumberedList({ id: 'that-id' });
+        const list = screen.getByRole('list');
+        expect(list.getAttribute('id')).toBe('that-id');
+        expect(list.innerHTML).toContain('Firstly');
     });
 });

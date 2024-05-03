@@ -1,77 +1,104 @@
 import React from 'react';
-
 import ImageCard from './ImageCard';
-import { Text } from '../components';
+import { render, screen, within } from '@testing-library/react';
 
-const getWrapper = props =>
-    shallow(
-        <ImageCard
-            {...props}
-            imageURL="random/path"
-            imageAltText="Image alt text"
-        />,
-    );
 const children = <div>Hello world</div>;
 
 describe('ImageCard', () => {
-    it('should render correct class and contain a div with image class', () => {
-        const wrapper = getWrapper();
-
-        expect(wrapper.hasClass('ffe-image-card')).toBe(true);
+    it('should render correct class and contain an element with image class', () => {
+        render(
+            <ImageCard
+                href="#"
+                imageAltText="Image alt text"
+                imageSrc="random/path"
+            >
+                {children}
+            </ImageCard>,
+        );
+        const link = screen.getByRole('link');
+        expect(link.classList.contains('ffe-image-card')).toBeTruthy();
         expect(
-            wrapper.find('div.ffe-image-card__image-container').exists(),
-        ).toBe(true);
+            link.querySelector('.ffe-image-card__image-container'),
+        ).toBeTruthy();
     });
 
     it('should render image and overlay alongside each other', () => {
-        const wrapper = getWrapper();
-
-        const imageEl = wrapper.find('.ffe-image-card__image-container');
+        render(
+            <ImageCard
+                href="#"
+                imageAltText="Image alt text"
+                imageSrc="random/path"
+            >
+                {children}
+            </ImageCard>,
+        );
+        const link = screen.getByRole('link');
+        const imageEl = link.querySelector('.ffe-image-card__image-container');
         expect(
-            imageEl
-                .children()
-                .first()
-                .hasClass('ffe-image-card__image-overlay'),
-        ).toBe(true);
-
-        expect(
-            imageEl
-                .children()
-                .last()
-                .hasClass('ffe-image-card__image'),
-        ).toBe(true);
+            imageEl.querySelector('.ffe-image-card__image-overlay'),
+        ).toBeTruthy();
+        expect(imageEl.querySelector('.ffe-image-card__image')).toBeTruthy();
     });
 
     it('should set alt text on image correctly', () => {
-        const wrapper = getWrapper();
-        const imageEl = wrapper.find('.ffe-image-card__image');
-        expect(imageEl.prop('alt')).toBe('Image alt text');
+        render(
+            <ImageCard
+                href="#"
+                imageAltText="Image alt text"
+                imageSrc="random/path"
+            >
+                {children}
+            </ImageCard>,
+        );
+        const link = screen.getByRole('link');
+        const image = within(link).getByRole('img');
+        expect(image.getAttribute('alt')).toBe('Image alt text');
     });
-    it('should render children inside a div with body class', () => {
-        const wrapper = getWrapper({ children });
-
-        expect(
-            wrapper
-                .find('.ffe-image-card__body')
-                .children()
-                .first()
-                .getElement(),
-        ).toEqual(children);
+    it('should render children inside an element with body class', () => {
+        render(
+            <ImageCard
+                href="#"
+                imageAltText="Image alt text"
+                imageSrc="random/path"
+            >
+                {children}
+            </ImageCard>,
+        );
+        const link = screen.getByRole('link');
+        const body = link.querySelector('.ffe-image-card__body');
+        expect(body.textContent).toBe('Hello world');
     });
 
     it('should render children as a function', () => {
-        const wrapper = getWrapper({
-            children: Components => (
-                <Components.Text>Hello world</Components.Text>
-            ),
-        });
-
-        expect(wrapper.find(Text).exists()).toBe(true);
+        render(
+            <ImageCard
+                href="#"
+                imageAltText="Image alt text"
+                imageSrc="random/path"
+                children={Components => (
+                    <Components.Text>Hello world</Components.Text>
+                )}
+            />,
+        );
+        const link = screen.getByRole('link');
+        const p = link.querySelector('p');
+        expect(p.classList.contains('ffe-card-body__text')).toBeTruthy();
+        expect(p.textContent).toEqual('Hello world');
     });
 
     it('should render my custom class', () => {
-        const wrapper = getWrapper({ className: 'my-custom-class' });
-
-        expect(wrapper.hasClass('my-custom-class')).toBe(true);
+        render(
+            <ImageCard
+                href="#"
+                imageAltText="Image alt text"
+                imageSrc="random/path"
+                className="my-custom-class"
+            >
+                {children}
+            </ImageCard>,
+        );
+        const link = screen.getByRole('link');
+        expect(link.classList.contains('ffe-image-card')).toBeTruthy();
+        expect(link.classList.contains('my-custom-class')).toBeTruthy();
     });
 });
