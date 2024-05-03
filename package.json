@@ -51,7 +51,6 @@
         "react-dom": "^16.9.0",
         "regenerator-runtime": "^0.13.2",
         "rimraf": "^3.0.2",
-        "stylelint-config-prettier": "^9.0.3",
         "typescript": "^5.4.3"
     }
 }

@@ -1,3 +1,4 @@
+/* stylelint-disable selector-class-pattern */
 .sb1ex-live__preview,
 .sb1ex-live__editor,
 .sb1ex-live__error {
@@ -7,7 +8,7 @@
 .sb1ex-live__preview {
     padding: var(--ffe-spacing-xs) var(--ffe-spacing-sm);
 
-    @media (min-width: 1296px) {
+    @media (width >= 1296px) {
         padding: var(--ffe-spacing-xs) 0;
     }
 }
@@ -32,3 +33,4 @@
 .sb1ex-live__id {
     padding-top: var(--ffe-spacing-sm);
 }
+/* stylelint-enable selector-class-pattern */

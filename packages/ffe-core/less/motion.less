@@ -1,6 +1,11 @@
 // Timing functions
-@ffe-ease-in-out-back: cubic-bezier(.46, -0.265, .48, 1.38); // For transforming or moving smaller elements (rotate, translate etc)
-@ffe-ease: cubic-bezier(.25, .1, .25, 1); // For transitioning properties that does not involve placement or shape (colors, opacity etc)
+
+// For transforming or moving smaller elements (rotate, translate etc)
+@ffe-ease-in-out-back: cubic-bezier(0.46, -0.265, 0.48, 1.38);
+// For transitioning properties that does not involve placement or shape (colors, opacity etc)
+@ffe-ease: cubic-bezier(0.25, 0.1, 0.25, 1);
 
 // Transition duration
-@ffe-transition-duration: .2s; // Default transition duration for smaller elements
+
+// Default transition duration for smaller elements
+@ffe-transition-duration: 0.2s;

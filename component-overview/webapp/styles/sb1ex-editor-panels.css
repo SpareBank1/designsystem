@@ -1,8 +1,9 @@
+/* stylelint-disable selector-class-pattern */
 .sb1ex-editor-panels {
     color: var(--ffe-farge-svart);
     padding: var(--ffe-spacing-xs) var(--ffe-spacing-sm) var(--ffe-spacing-2xl);
 
-    @media (min-width: 1296px) {
+    @media (width >= 1296px) {
         padding: var(--ffe-spacing-xs) 0 var(--ffe-spacing-2xl);
     }
 }
@@ -31,3 +32,4 @@
         }
     }
 }
+/* stylelint-enable selector-class-pattern */

@@ -99,11 +99,9 @@
         .ffe-description-list__description {
             flex: 80% 0 0;
             max-width: 80%;
-        }
-
-        .ffe-description-list__description
-            + .ffe-description-list__description {
-            margin-left: 20%;
+            & + .ffe-description-list__description {
+                margin-left: 20%;
+            }
         }
     }
 }

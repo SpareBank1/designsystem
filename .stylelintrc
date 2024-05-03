@@ -1,6 +1,5 @@
 {
     "extends": [
         "./buildtool/config/stylelint.config",
-        "stylelint-config-prettier"
     ]
 }
