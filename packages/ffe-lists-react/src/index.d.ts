@@ -38,7 +38,8 @@ export interface DetailListCardItemProps
     value: NonNullable<React.ReactNode>;
 }
 
-export interface DetailListCardProps extends React.ComponentPropsWithoutRef<'dl'> {
+export interface DetailListCardProps
+    extends React.ComponentPropsWithoutRef<'dl'> {
     children:
         | NonNullable<React.ReactNode>
         | ((props: DetailListCardItemProps) => NonNullable<React.ReactNode>);
