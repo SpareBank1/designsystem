@@ -3,24 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/eslint-config-ffe@8.1.3...@sb1/eslint-config-ffe@8.1.4) (2024-05-03)
+
+**Note:** Version bump only for package @sb1/eslint-config-ffe
+
 ## [8.1.3](https://github.com/SpareBank1/designsystem/compare/@sb1/eslint-config-ffe@8.1.2...@sb1/eslint-config-ffe@8.1.3) (2021-12-07)
 
 **Note:** Version bump only for package @sb1/eslint-config-ffe
 
-
-
-
-
 ## [8.1.2](https://github.com/SpareBank1/designsystem/compare/@sb1/eslint-config-ffe@8.1.1...@sb1/eslint-config-ffe@8.1.2) (2020-07-29)
-
 
 ### Bug Fixes
 
-* **eslint-config-ffe:** temporarily disable role props check ([502a486](https://github.com/SpareBank1/designsystem/commit/502a486d5114d4994144dc52fb1982ba3412ebb8)), closes [#912](https://github.com/SpareBank1/designsystem/issues/912) [#912](https://github.com/SpareBank1/designsystem/issues/912)
-
-
-
-
+-   **eslint-config-ffe:** temporarily disable role props check ([502a486](https://github.com/SpareBank1/designsystem/commit/502a486d5114d4994144dc52fb1982ba3412ebb8)), closes [#912](https://github.com/SpareBank1/designsystem/issues/912) [#912](https://github.com/SpareBank1/designsystem/issues/912)
 
 ## [8.1.1](https://github.com/SpareBank1/designsystem/compare/@sb1/eslint-config-ffe@8.1.0...@sb1/eslint-config-ffe@8.1.1) (2020-03-11)
 

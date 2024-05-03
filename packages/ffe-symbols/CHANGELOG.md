@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-symbols@3.0.0...@sb1/ffe-symbols@4.0.0) (2024-05-03)
+
+### Documentation
+
+-   **ffe-symbols:** this package has been deprecated ([dc0ef29](https://github.com/SpareBank1/designsystem/commit/dc0ef29aa69e642c8005a8d41a94b60fa825169a))
+
+### BREAKING CHANGES
+
+-   **ffe-symbols:** This package has been deprecated.
+    Please use @sb1/ffe-icons and @sb1/ffe-icons-react.
+
 # [3.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-symbols@2.1.2...@sb1/ffe-symbols@3.0.0) (2024-02-26)
 
 ### Bug Fixes
