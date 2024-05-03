@@ -2,9 +2,10 @@ import React from 'react';
 import DescriptionListMultiCol from './DescriptionListMultiCol';
 import DescriptionListTerm from './DescriptionListTerm';
 import DescriptionListDescription from './DescriptionListDescription';
+import { render } from '@testing-library/react';
 
-const getWrapper = props =>
-    shallow(
+const renderDescriptionListMultiCol = props =>
+    render(
         <DescriptionListMultiCol {...props}>
             <DescriptionListTerm>Porsche</DescriptionListTerm>
             <DescriptionListDescription>
@@ -19,32 +20,40 @@ const getWrapper = props =>
 
 describe('<DescriptionListMultiCol>', () => {
     it('renders without exploding', () => {
-        const wrapper = getWrapper();
-        expect(wrapper.exists()).toBe(true);
-        expect(wrapper.is('dl')).toBe(true);
+        const { container } = renderDescriptionListMultiCol();
+        expect(container.querySelector('dl')).toBeTruthy();
     });
     it('has the correct class', () => {
-        const wrapper = getWrapper({ className: 'test-class' });
-        expect(wrapper.hasClass('ffe-description-list-multicol')).toBe(true);
-        expect(wrapper.hasClass('test-class')).toBe(true);
+        const { container } = renderDescriptionListMultiCol({
+            className: 'test-class',
+        });
+        const dl = container.querySelector('dl');
+
+        expect(dl.classList.contains('ffe-description-list-multicol')).toBe(
+            true,
+        );
+        expect(dl.classList.contains('test-class')).toBe(true);
     });
     it('passes props', () => {
-        const wrapper = getWrapper({ id: 'that-id' });
-        expect(wrapper.prop('id')).toBe('that-id');
-        expect(wrapper.html()).toContain('Porsche');
+        const { container } = renderDescriptionListMultiCol({ id: 'that-id' });
+        const dl = container.querySelector('dl');
+        expect(dl.getAttribute('id')).toBe('that-id');
+        expect(dl.innerHTML).toContain('Porsche');
     });
     it('wraps pairs in `div`', () => {
-        const wrapper = getWrapper();
-        expect(
-            wrapper
-                .find('.ffe-description-list-multicol__avoid-break')
-                .every('div'),
-        ).toBe(true);
+        const { container } = renderDescriptionListMultiCol({ id: 'that-id' });
+        const dl = container.querySelector('dl');
+        const tagNames = Array.from(
+            dl.querySelectorAll('.ffe-description-list-multicol__avoid-break'),
+        ).map(elem => elem.tagName);
+        expect(tagNames).toEqual(['DIV', 'DIV']);
     });
     it('supports several columns', () => {
-        const wrapper = getWrapper();
+        const { container } = renderDescriptionListMultiCol({ id: 'that-id' });
+        const dl = container.querySelector('dl');
         expect(
-            wrapper.find('.ffe-description-list-multicol__avoid-break'),
-        ).toHaveLength(2);
+            dl.querySelectorAll('.ffe-description-list-multicol__avoid-break')
+                .length,
+        ).toBe(2);
     });
 });
