@@ -42,7 +42,7 @@ export interface AccountSelectorProps<T extends Account = Account> {
 }
 
 declare class AccountSelector<
-    T extends Account = Account
+    T extends Account = Account,
 > extends React.Component<AccountSelectorProps<T>> {}
 
 export interface AccountSelectorMultiProps<T extends Account = Account> {
@@ -64,7 +64,7 @@ export interface AccountSelectorMultiProps<T extends Account = Account> {
 }
 
 declare class AccountSelectorMulti<
-    T extends Account = Account
+    T extends Account = Account,
 > extends React.Component<AccountSelectorMultiProps<T>, any> {}
 
 export interface BaseSelectorProps<T> {

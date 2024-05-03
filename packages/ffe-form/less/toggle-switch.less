@@ -53,8 +53,7 @@
             border-radius: 15px;
             left: auto;
             right: 0;
-            transition:
-                background 0.4s @ffe-ease,
+            transition: background 0.4s @ffe-ease,
                 box-shadow @ffe-transition-duration @ffe-ease;
         }
 
@@ -120,14 +119,12 @@
     }
 
     &__input:focus + &__label &__switch::before {
-        box-shadow:
-            0 0 0 3px @ffe-farge-hvit,
+        box-shadow: 0 0 0 3px @ffe-farge-hvit,
             0 0 0 5px var(--ffe-g-primary-color);
 
         .native & {
             @media (prefers-color-scheme: dark) {
-                box-shadow:
-                    0 0 0 3px @ffe-farge-svart,
+                box-shadow: 0 0 0 3px @ffe-farge-svart,
                     0 0 0 5px @ffe-farge-hvit;
             }
         }

@@ -1,63 +1,36 @@
-<!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<style>
-html {
-  box-sizing: border-box;
-}
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-body {
-  color: #262626;
-  background-color: #fff;
-  font-family: sans-serif;
-  font-size: 12px;
-}
-.sb1-logos-preview {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+    <head>
+        <meta charset='utf-8' />
+        <style>
+            html { box-sizing: border-box; } *, *:before, *:after { box-sizing:
+            inherit; } body { color: #262626; background-color: #fff;
+            font-family: sans-serif; font-size: 12px; } .sb1-logos-preview {
+            display: flex; flex-wrap: wrap; max-width: 1200px; margin: 0 auto; }
+            .sb1-logo { padding: 1em 2em 3em 2em; flex-basis: 50%; display:
+            flex; flex-direction: column; } @media (min-width: 768px) {
+            .sb1-logo { flex-basis: 20%; } } .sb1-logo__link { margin-bottom:
+            auto; } .sb1-logo__image { max-width: 100%; }
+        </style>
+    </head>
+    <body>
 
-.sb1-logo {
-  padding: 1em 2em 3em 2em;
-  flex-basis: 50%;
-  display: flex;
-  flex-direction: column;
-}
-
-@media (min-width: 768px) {
- .sb1-logo {
-   flex-basis: 20%;
-  }
-}
-
-.sb1-logo__link {
-  margin-bottom: auto;
-}
-
-.sb1-logo__image {
-  max-width: 100%;
-}
-</style>
-</head>
-<body>
-
-<div class="sb1-logos-preview">
-  {{#each logos}}
-  <div class="sb1-logo">
-      <a class="sb1-logo__link" href="{{file}}">
-        <img alt="{{name}}" src="{{file}}" class="sb1-logo__image">
-      </a>
-      <p>
-        <strong>{{bank}}</strong> ({{code}})<br>
-        {{file}}
-      </p>
-  </div>
-  {{/each}}
-</div>
-</body>
+        <div class='sb1-logos-preview'>
+            {{#each logos}}
+                <div class='sb1-logo'>
+                    <a class='sb1-logo__link' href='{{file}}'>
+                        <img
+                            alt='{{name}}'
+                            src='{{file}}'
+                            class='sb1-logo__image'
+                        />
+                    </a>
+                    <p>
+                        <strong>{{bank}}</strong>
+                        ({{code}})<br />
+                        {{file}}
+                    </p>
+                </div>
+            {{/each}}
+        </div>
+    </body>
 </html>
