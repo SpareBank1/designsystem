@@ -4,8 +4,8 @@ const path = require('path');
 /* Function: createListOfRemovedIcons
     Creates and returns an array of all the filenames of svg-files that exist,
     but are no longer mentioned in the Material Symbols Codepoints.
-    
-    Since we know all the different subfolder / variations of the icons contain the same iconnames, 
+
+    Since we know all the different subfolder / variations of the icons contain the same iconnames,
     we only need to check 1 folder.
 */
 const createListOfRemovedIcons = async iconNames => {
@@ -37,9 +37,10 @@ const deleteSvgFile = async fileName => {
 
 /* Function: deleteRemovedIconsFiles
    Loop through the list of fileNames that should be deleted in a specific directory
-   and call the delete function. 
+   and call the delete function.
 */
 const deleteRemovedIconsFiles = async (listOfRemovedIcons, directory) => {
+    // eslint-disable-next-line no-unused-vars
     for (const fileName of listOfRemovedIcons) {
         const filePath = path.join(directory, fileName);
         await deleteSvgFile(filePath);

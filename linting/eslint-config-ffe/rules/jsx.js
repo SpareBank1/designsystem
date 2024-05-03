@@ -84,10 +84,6 @@ module.exports = {
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/self-closing-comp.md
         'react/self-closing-comp': [2],
 
-        // Prevent missing props validation in a React component definition
-        // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prop-types.md
-        'react/prop-types': [2],
-
         // Prevent breaking rules of hooks
         // https://reactjs.org/docs/hooks-rules.html
         'react-hooks/rules-of-hooks': 'error',

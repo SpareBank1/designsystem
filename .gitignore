@@ -10,6 +10,7 @@ dist/
 packages/*/lib/
 tmp/
 es/
+build/
 types/
 
 # Editors

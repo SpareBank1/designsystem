@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`createBabelArgs cjs only 1`] = `
-Array [
-  Array [
+[
+  [
     "--package",
     "@babel/core",
     "--package",
@@ -22,8 +22,8 @@ Array [
 `;
 
 exports[`createBabelArgs esm only 1`] = `
-Array [
-  Array [
+[
+  [
     "--package",
     "@babel/core",
     "--package",
@@ -43,8 +43,8 @@ Array [
 `;
 
 exports[`createBabelArgs minimal args 1`] = `
-Array [
-  Array [
+[
+  [
     "--package",
     "@babel/core",
     "--package",
@@ -60,7 +60,7 @@ Array [
     "esDir",
     "sourceDir",
   ],
-  Array [
+  [
     "--package",
     "@babel/core",
     "--package",
@@ -80,8 +80,8 @@ Array [
 `;
 
 exports[`createBabelArgs with watch 1`] = `
-Array [
-  Array [
+[
+  [
     "--package",
     "@babel/core",
     "--package",

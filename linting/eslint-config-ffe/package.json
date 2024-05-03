@@ -20,11 +20,11 @@
     "@sb1/eslint-config-ffe-base": "^3.0.4"
   },
   "devDependencies": {
-    "eslint": "^5.9.0",
-    "eslint-plugin-import": "^2.20.1",
-    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint": "^8.57.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
     "eslint-plugin-react": "^7.0.0",
-    "eslint-plugin-react-hooks": "^2.0.1"
+    "eslint-plugin-react-hooks": "^4.6.2"
   },
   "peerDependencies": {
     "eslint": "*",

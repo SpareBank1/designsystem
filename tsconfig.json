@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "strict": true,
+        "jsx": "react",
+        "lib": ["dom", "es2019"]
+    }
+}
