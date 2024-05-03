@@ -10,7 +10,18 @@
     "files": [
         "build"
     ],
-    "main": "src/index.ts",
+    "main": "./build/cjs/lib.js",
+    "module": "./build/esm/lib.js",
+    "types": "index.d.ts",
+    "exports": {
+        "./*": {
+            "types": "./build/types/*.d.ts",
+            "require": "./build/lib/*.js",
+            "import": "./build/es/*.js",
+            "default": "./build/es/*.js"
+        },
+        "./package.json": "./package.json"
+    },
     "sideEffects": false,
     "repository": {
         "type": "git",
