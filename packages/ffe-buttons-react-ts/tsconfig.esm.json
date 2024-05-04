@@ -1,9 +1,8 @@
 {
     "extends": "../../tsconfig.json",
     "compilerOptions": {
-        "outDir": "./build/es",
+        "outDir": "./es",
         "module": "esnext"
     },
-    "include": ["src/**/*"],
-    "exclude": ["node_modules", "src/**/*.spec.ts", "src/**/*.spec.tsx"]
+    "exclude": ["node_modules", "src/**/*.spec.ts*"]
 }
