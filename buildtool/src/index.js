@@ -4,6 +4,7 @@ const copyfileCommand = require('./commands/copyfileCommand');
 const jestCommand = require('./commands/jestCommand');
 const stylelintCommand = require('./commands/stylelintCommand');
 const tscCommand = require('./commands/tscCommand');
+const tscWatchCommand = require('./commands/tscWatchCommand');
 
 const program = new Command();
 
@@ -69,9 +70,15 @@ program
 
 program
     .command('tsc')
-    .description('compile code with babel')
+    .description('compile code with tsc')
     .action((options, { args }) => {
         tscCommand(args);
+    });
+program
+    .command('tsc-watch')
+    .description('continuously compile code with tsc')
+    .action((options, { args }) => {
+        tscWatchCommand(args);
     });
 
 program.parse(process.argv);
