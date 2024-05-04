@@ -1,27 +1,25 @@
 import React, { ElementType, ForwardedRef, ReactElement } from 'react';
-import { AnyComponent } from './types';
+import { fixedForwardRef } from './fixedForwardRef';
+import { ComponentAsPropParams } from './types';
 import classNames from 'classnames';
 
-export type BaseButtonProps<As extends ElementType> = React.ComponentProps<
-    typeof AnyComponent<As>
-> & {
-    ariaLoadingMessage?: string;
-    buttonType: 'action' | 'primary' | 'secondary' | 'shortcut' | 'task';
-    isDisabled?: boolean;
-    isLoading?: boolean;
-    leftIcon?: ReactElement;
-    rightIcon?: ReactElement;
-    onClick?: (event: React.SyntheticEvent) => void;
-};
-
-export type Instance<TInstance extends {}> = TInstance & {
-    save(fn: (err: Error) => void): void;
-};
-
-export function BaseButton<As extends ElementType>(
+export type BaseButtonProps<As extends ElementType = 'button'> =
+    ComponentAsPropParams<As> & {
+        ariaLoadingMessage?: string;
+        buttonType: 'action' | 'primary' | 'secondary' | 'shortcut' | 'task';
+        isDisabled?: boolean;
+        isLoading?: boolean;
+        leftIcon?: ReactElement;
+        rightIcon?: ReactElement;
+    };
+/**
+ * Internal component
+ * @ignore
+ */
+function BaseButtonWithForwardRef<As extends ElementType>(
     props: BaseButtonProps<As>,
     ref: ForwardedRef<any>,
-): React.JSX.Element {
+) {
     const {
         as: Comp = 'button',
         buttonType,
@@ -49,7 +47,6 @@ export function BaseButton<As extends ElementType>(
                 { 'ffe-button--loading': isLoading && supportsSpinner },
                 className,
             )}
-            ref={ref}
             onClick={event => {
                 if (isLoading && supportsSpinner) {
                     event.preventDefault();
@@ -59,6 +56,7 @@ export function BaseButton<As extends ElementType>(
                 }
             }}
             {...rest}
+            ref={ref}
         >
             <span className="ffe-button__label">
                 {leftIcon &&
@@ -83,3 +81,5 @@ export function BaseButton<As extends ElementType>(
         </Comp>
     );
 }
+
+export const BaseButton = fixedForwardRef(BaseButtonWithForwardRef);

@@ -1,21 +1,20 @@
 import React from 'react';
-import { ActionButton, ActionButtonProps } from './ActionButton';
 import { render, screen } from '@testing-library/react';
+import { PrimaryButton, PrimaryButtonProps } from './PrimaryButton';
 
 const defaultProps = { children: 'Click me' };
-const renderActionButton = (props?: ActionButtonProps) =>
-    render(<ActionButton {...defaultProps} {...props} />);
+const renderPrimaryButton = (props?: PrimaryButtonProps) =>
+    render(<PrimaryButton {...defaultProps} {...props} />);
 
-describe('<ActionButton />', () => {
+describe('<PrimaryButton />', () => {
     it('renders without exploding', () => {
-        renderActionButton();
+        renderPrimaryButton();
         const button = screen.getByRole('button');
         expect(button.classList.contains('ffe-button')).toBeTruthy();
-        expect(button.classList.contains('ffe-button--action')).toBeTruthy();
+        expect(button.classList.contains('ffe-button--primary')).toBeTruthy();
     });
-
     it('passes on any prop', () => {
-        renderActionButton({
+        renderPrimaryButton({
             'aria-label': 'some label',
         });
         const button = screen.getByRole('button');
@@ -24,7 +23,7 @@ describe('<ActionButton />', () => {
 
     it('sets ref correctly', () => {
         const ref = React.createRef<HTMLButtonElement>();
-        renderActionButton({
+        renderPrimaryButton({
             ref,
         });
         const button = screen.getByRole('button');

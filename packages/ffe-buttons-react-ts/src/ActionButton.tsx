@@ -1,22 +1,17 @@
-import React, { ElementType, ForwardedRef, useRef } from 'react';
+import React, { ElementType, ForwardedRef } from 'react';
 import { BaseButton, BaseButtonProps } from './BaseButton';
+import { fixedForwardRef } from './fixedForwardRef';
 
-export type ActionButtonProps<As extends ElementType> = Omit<
+export type ActionButtonProps<As extends ElementType = 'button'> = Omit<
     BaseButtonProps<As>,
     'buttonType'
 >;
 
-export function ActionButton<As extends ElementType>(
+function ActionButtonWithForwardRef<As extends ElementType>(
     props: ActionButtonProps<As>,
     ref: ForwardedRef<any>,
-): React.JSX.Element {
-    // eslint-disable-next-line no-unused-vars
-    const { ref: _, ...rest } = props;
-    return <BaseButton buttonType="action" {...rest} ref={ref} />;
+) {
+    return <BaseButton {...props} ref={ref} buttonType="action" />;
 }
 
-export function App() {
-    const ref = useRef<HTMLAnchorElement>(null);
-
-    return <ActionButton as="a" ref={ref} leftIcon={<div>icon her</div>} />;
-}
+export const ActionButton = fixedForwardRef(ActionButtonWithForwardRef);

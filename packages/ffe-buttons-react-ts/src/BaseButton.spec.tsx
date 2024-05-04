@@ -1,85 +1,69 @@
 import React from 'react';
 import { BaseButton, BaseButtonProps } from './BaseButton';
-import { shallow } from 'enzyme';
+import { render, screen } from '@testing-library/react';
+import { Optional } from './types';
 
 const defaultProps = {
     children: 'Click me',
     buttonType: 'action' as const,
 };
-const getWrapper = (props?: BaseButtonProps<'button'>) =>
-    shallow(<BaseButton {...defaultProps} {...props} />);
+const renderBaseButton = (props?: Optional<BaseButtonProps, 'buttonType'>) =>
+    render(<BaseButton {...defaultProps} {...props} />);
 
 describe('<BaseButton />', () => {
-    it('renders without exploding', () => {
-        const wrapper = getWrapper();
-        expect(wrapper.exists()).toBe(true);
-    });
-
     it('renders the correct classes', () => {
-        const wrapper = getWrapper();
-        expect(wrapper.hasClass('ffe-button')).toBe(true);
+        renderBaseButton({ className: 'custom-class' });
+        const button = screen.getByRole('button');
 
-        wrapper.setProps({ className: 'custom-class', buttonType: 'action' });
-
-        expect(wrapper.hasClass('ffe-button--action')).toBe(true);
-        expect(wrapper.hasClass('custom-class')).toBe(true);
+        expect(button.classList.contains('ffe-button')).toBeTruthy();
+        expect(button.classList.contains('ffe-button--action')).toBeTruthy();
+        expect(button.classList.contains('custom-class')).toBeTruthy();
     });
+
     it('renders the correct label', () => {
-        const wrapper = getWrapper();
-        expect(wrapper.text()).toBe('Click me');
-
-        wrapper.setProps({ children: 'Press me' });
-        expect(wrapper.text()).toBe('Press me');
+        renderBaseButton();
+        const button = screen.getByRole('button');
+        expect(button.textContent).toBe('Click me');
     });
-    it('renders left icon if set', () => {
-        const wrapper = getWrapper();
-        expect(wrapper.find('.ffe-button__icon--left').exists()).toBe(false);
 
-        wrapper.setProps({ leftIcon: <svg /> });
-        expect(wrapper.find('.ffe-button__icon--left').exists()).toBe(true);
+    it('renders icons', () => {
+        renderBaseButton({ leftIcon: <svg />, rightIcon: <svg /> });
+        const button = screen.getByRole('button');
+        expect(button.querySelector('.ffe-button__icon--left')).toBeTruthy();
+        expect(button.querySelector('.ffe-button__icon--right')).toBeTruthy();
     });
-    it('renders right icon if set', () => {
-        const wrapper = getWrapper();
-        expect(wrapper.find('.ffe-button__icon--right').exists()).toBe(false);
 
-        wrapper.setProps({ rightIcon: <svg /> });
-        expect(wrapper.find('.ffe-button__icon--right').exists()).toBe(true);
-    });
-    it('renders the specified dom node', () => {
-        const wrapper = shallow(<BaseButton {...defaultProps} as="a" />);
-        expect(wrapper.is('a')).toBe(true);
+    it('renders the specified component', () => {
+        render(<BaseButton {...defaultProps} as="a" href="#" />);
+        const link = screen.getByRole('link');
+        expect(link).toBeInTheDocument();
     });
 
     describe('when loading', () => {
         it('sets the correct class', () => {
-            const wrapper = getWrapper({
-                buttonType: 'primary',
-                isLoading: true,
-            });
-            expect(wrapper.hasClass('ffe-button--loading')).toBe(true);
+            renderBaseButton({ isLoading: true });
+            const button = screen.getByRole('button');
+            expect(button.classList.contains('ffe-button')).toBeTruthy();
+            expect(
+                button.classList.contains('ffe-button--loading'),
+            ).toBeTruthy();
         });
-        it('sets the correct aria tags', () => {
-            const wrapper = getWrapper({
-                buttonType: 'primary',
-                isLoading: true,
-            });
-            expect(wrapper.prop('aria-busy')).toBe(true);
+
+        it('sets the correct aria attributes', () => {
+            renderBaseButton({ isLoading: true });
+            const button = screen.getByRole('button');
+            expect(button.getAttribute('aria-busy')).toBe('true');
+            expect(button.getAttribute('aria-disabled')).toBe('true');
         });
-        it('disables the button', () => {
-            const wrapper = getWrapper({
-                buttonType: 'primary',
-                isLoading: true,
-            });
-            expect(wrapper.prop('aria-disabled')).toBe(true);
-        });
+
         it('does nothing for unsupported button type', () => {
-            const wrapper = getWrapper({
-                buttonType: 'shortcut',
-                isLoading: true,
-            });
-            expect(wrapper.hasClass('ffe-button--loading')).toBe(false);
-            expect(wrapper.prop('aria-busy')).toBe(false);
-            expect(wrapper.prop('aria-disabled')).toBe(false);
+            renderBaseButton({ isLoading: true, buttonType: 'shortcut' });
+            const button = screen.getByRole('button');
+            expect(
+                button.classList.contains('ffe-button--loading'),
+            ).toBeFalsy();
+            expect(button.getAttribute('aria-busy')).toBe('false');
+            expect(button.getAttribute('aria-disabled')).toBe('false');
         });
     });
 });
