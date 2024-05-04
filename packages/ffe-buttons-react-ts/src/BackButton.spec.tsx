@@ -1,30 +1,31 @@
 import React from 'react';
-import { ActionButton, ActionButtonProps } from './ActionButton';
 import { render, screen } from '@testing-library/react';
+import { BackButton, BackButtonProps } from './BackButton';
 
 const defaultProps = { children: 'Click me' };
-const renderActionButton = (props?: ActionButtonProps) =>
-    render(<ActionButton {...defaultProps} {...props} />);
+const renderBackButton = (props?: BackButtonProps) =>
+    render(<BackButton {...defaultProps} {...props} />);
 
-describe('<ActionButton />', () => {
+describe('<BackButton />', () => {
     it('renders without exploding', () => {
-        renderActionButton();
+        renderBackButton();
         const button = screen.getByRole('button');
-        expect(button.classList.contains('ffe-button')).toBeTruthy();
-        expect(button.classList.contains('ffe-button--action')).toBeTruthy();
+        expect(button.classList.contains('ffe-inline-button')).toBeTruthy();
+        expect(
+            button.classList.contains('ffe-inline-button--back'),
+        ).toBeTruthy();
     });
 
     it('passes on any prop', () => {
-        renderActionButton({
+        renderBackButton({
             'aria-label': 'some label',
         });
         const button = screen.getByRole('button');
         expect(button.getAttribute('aria-label')).toEqual('some label');
     });
-
     it('sets ref correctly', () => {
         const ref = React.createRef<HTMLButtonElement>();
-        renderActionButton({
+        renderBackButton({
             ref,
         });
         const button = screen.getByRole('button');
