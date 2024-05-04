@@ -8,20 +8,13 @@
     "license": "MIT",
     "author": "SpareBank 1",
     "files": [
-        "build"
+        "lib",
+        "es",
+        "types"
     ],
-    "main": "./build/cjs/lib.js",
-    "module": "./build/esm/lib.js",
-    "types": "index.d.ts",
-    "exports": {
-        "./*": {
-            "types": "./build/types/*.d.ts",
-            "require": "./build/lib/*.js",
-            "import": "./build/es/*.js",
-            "default": "./build/es/*.js"
-        },
-        "./package.json": "./package.json"
-    },
+    "main": "lib/index.js",
+    "module": "es/index.js",
+    "types": "types/index.d.ts",
     "sideEffects": false,
     "repository": {
         "type": "git",
