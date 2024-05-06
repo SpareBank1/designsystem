@@ -1,5 +1,5 @@
 import React from 'react';
-import StippledCard from './StippledCard';
+import { StippledCard } from './StippledCard';
 import { Icon } from '@sb1/ffe-icons-react';
 import { render, screen, within } from '@testing-library/react';
 
@@ -10,7 +10,10 @@ describe('StippledCard', () => {
         render(
             <StippledCard
                 href="#"
-                img={{ element: <Icon fileUrl="monitoring" />, type: 'icon' }}
+                img={{
+                    element: <Icon fileUrl="monitoring" size="md" />,
+                    type: 'icon',
+                }}
             >
                 {children}
             </StippledCard>,
@@ -25,7 +28,10 @@ describe('StippledCard', () => {
             <StippledCard
                 href="#"
                 condensed={true}
-                img={{ element: <Icon fileUrl="monitoring" />, type: 'icon' }}
+                img={{
+                    element: <Icon fileUrl="monitoring" size="md" />,
+                    type: 'icon',
+                }}
             >
                 {children}
             </StippledCard>,
@@ -41,7 +47,10 @@ describe('StippledCard', () => {
         render(
             <StippledCard
                 href="#"
-                img={{ element: <Icon fileUrl="monitoring" />, type: 'icon' }}
+                img={{
+                    element: <Icon fileUrl="monitoring" size="md" />,
+                    type: 'icon',
+                }}
                 children={Components => (
                     <Components.Text>Hello world</Components.Text>
                 )}
@@ -49,15 +58,18 @@ describe('StippledCard', () => {
         );
         const link = screen.getByRole('link');
         const p = link.querySelector('p');
-        expect(p.classList.contains('ffe-card-body__text')).toBeTruthy();
-        expect(p.textContent).toEqual('Hello world');
+        expect(p?.classList.contains('ffe-card-body__text')).toBeTruthy();
+        expect(p?.textContent).toEqual('Hello world');
     });
 
     it('should render my custom class', () => {
         render(
             <StippledCard
                 href="#"
-                img={{ element: <Icon fileUrl="monitoring" />, type: 'icon' }}
+                img={{
+                    element: <Icon fileUrl="monitoring" size="md" />,
+                    type: 'icon',
+                }}
                 className="my-custom-class"
             >
                 {children}
@@ -66,5 +78,23 @@ describe('StippledCard', () => {
         const link = screen.getByRole('link');
         expect(link.classList.contains('ffe-stippled-card')).toBeTruthy();
         expect(link.classList.contains('my-custom-class')).toBeTruthy();
+    });
+
+    it('should set ref', () => {
+        const ref = React.createRef<HTMLAnchorElement>();
+        render(
+            <StippledCard
+                href="#"
+                img={{
+                    element: <Icon fileUrl="monitoring" size="md" />,
+                    type: 'icon',
+                }}
+                ref={ref}
+            >
+                {children}
+            </StippledCard>,
+        );
+        const link = screen.getByRole('link');
+        expect(link).toBe(ref.current);
     });
 });

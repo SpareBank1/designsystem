@@ -1,5 +1,5 @@
 import React from 'react';
-import TextCard from './TextCard';
+import { TextCard } from './TextCard';
 import { render, screen } from '@testing-library/react';
 
 const children = <div>Hello world</div>;
@@ -22,8 +22,8 @@ describe('TextCard', () => {
         );
         const link = screen.getByRole('link');
         const p = link.querySelector('p');
-        expect(p.classList.contains('ffe-card-body__text')).toBeTruthy();
-        expect(p.textContent).toEqual('Hello world');
+        expect(p?.classList.contains('ffe-card-body__text')).toBeTruthy();
+        expect(p?.textContent).toEqual('Hello world');
     });
 
     it('should render my custom class', () => {
@@ -35,5 +35,16 @@ describe('TextCard', () => {
         const link = screen.getByRole('link');
         expect(link.classList.contains('ffe-text-card')).toBeTruthy();
         expect(link.classList.contains('my-custom-class')).toBeTruthy();
+    });
+
+    it('should set ref', () => {
+        const ref = React.createRef<HTMLAnchorElement>();
+        render(
+            <TextCard href="#" ref={ref}>
+                {children}
+            </TextCard>,
+        );
+        const link = screen.getByRole('link');
+        expect(link).toBe(ref.current);
     });
 });
