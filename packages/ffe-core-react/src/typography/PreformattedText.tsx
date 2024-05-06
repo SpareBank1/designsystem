@@ -1,8 +1,10 @@
 import React from 'react';
-import { node, string } from 'prop-types';
 import classNames from 'classnames';
 
-export default function PreformattedText(props) {
+export interface PreformattedTextProps
+    extends React.ComponentPropsWithoutRef<'pre'> {}
+
+export function PreformattedText(props: PreformattedTextProps) {
     const { children, className, ...rest } = props;
 
     return (
@@ -11,8 +13,3 @@ export default function PreformattedText(props) {
         </pre>
     );
 }
-
-PreformattedText.propTypes = {
-    children: node.isRequired,
-    className: string,
-};

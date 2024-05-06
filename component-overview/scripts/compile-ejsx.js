@@ -25,12 +25,7 @@ const compileFile = fname =>
         )
         .then(writeToFile(getOutputFileName(fname)));
 
-Promise.all(
-    process.argv
-        .slice(2)
-        .map(path.normalize)
-        .map(compileFile),
-)
+Promise.all(process.argv.slice(2).map(path.normalize).map(compileFile))
     .then(createExampleModule(path.resolve('gen-src', 'examples')))
     .then(writeToFile(getOutputFileName('examples/index.js')));
 //.then(res => console.log(res))
