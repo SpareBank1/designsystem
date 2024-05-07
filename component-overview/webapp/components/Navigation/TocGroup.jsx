@@ -45,7 +45,7 @@ export default function TocGroup({ group, level = 1, focusable = true }) {
                                 className="sb1ex-toc____example-list-item"
                             >
                                 <LinkText
-                                    element={Link}
+                                    as={Link}
                                     to={`/${leaf.value.key}`}
                                     {...conditionalTabIndex}
                                 >
