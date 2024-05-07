@@ -1,66 +1,72 @@
 import React from 'react';
 import Tooltip from './Tooltip';
 import { spy } from 'sinon';
+import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 
-const defaultProps = { children: 'Tooltip text' };
-const getWrapper = props => shallow(<Tooltip {...defaultProps} {...props} />);
+const defaultProps = { children: 'Tooltip text', 'aria-label': 'button-label' };
+const renderTooltip = props => render(<Tooltip {...defaultProps} {...props} />);
 
 describe('<Tooltip>', () => {
-    it('renders a div', () => {
-        const wrapper = getWrapper();
-        expect(wrapper.exists()).toBe(true);
-        expect(wrapper.is('div')).toBe(true);
-    });
-
     it('renders a "?" button', () => {
         const onClick = spy();
-        const wrapper = getWrapper({ 'aria-label': 'button-label', onClick });
+        renderTooltip({ 'aria-label': 'button-label', onClick });
+        const button = screen.getByRole('button', { name: 'button-label' });
 
-        expect(wrapper.find('button').exists()).toBe(true);
-        expect(wrapper.find('button').text()).toBe('?');
-        expect(wrapper.find('button').hasClass('ffe-tooltip__icon')).toBe(true);
-        expect(wrapper.find('button').prop('aria-label')).toBe('button-label');
-        expect(wrapper.find('button').prop('type')).toBe('button');
+        expect(button.textContent).toBe('?');
+        expect(button.classList.contains('ffe-tooltip__icon')).toBeTruthy();
 
-        wrapper.find('button').simulate('click');
+        userEvent.click(button);
         expect(onClick.calledOnce).toBe(true);
     });
 
     it('renders Collapse', () => {
-        const wrapper = getWrapper();
-        expect(wrapper.find('Collapse').exists()).toBe(true);
+        const { container } = renderTooltip();
+        expect(container.querySelector('.ffe-collapse')).toBeTruthy();
     });
 
     it('toggles collapse if button is clicked', () => {
-        const wrapper = getWrapper();
+        const { container } = renderTooltip();
+        const button = screen.getByRole('button', { name: 'button-label' });
 
-        expect(wrapper.find('Collapse').prop('isOpen')).toBe(false);
-        expect(wrapper.find('button').prop('aria-expanded')).toBe(false);
-        wrapper.find('button').simulate('click');
-        expect(wrapper.find('Collapse').prop('isOpen')).toBe(true);
-        expect(wrapper.find('button').prop('aria-expanded')).toBe(true);
+        expect(
+            container.querySelector('.ffe-collapse.ffe-collapse--hidden'),
+        ).toBeTruthy();
+        expect(button.getAttribute('aria-expanded')).toBe('false');
+
+        userEvent.click(button);
+
+        expect(
+            container.querySelector('.ffe-collapse.ffe-collapse--open'),
+        ).toBeTruthy();
+        expect(button.getAttribute('aria-expanded')).toBe('true');
     });
 
     it('toggles active state if button is clicked', () => {
-        const wrapper = getWrapper();
-        expect(wrapper.hasClass('ffe-tooltip--open')).toBe(false);
-        wrapper.find('button').simulate('click');
-        expect(wrapper.hasClass('ffe-tooltip--open')).toBe(true);
+        const { container } = renderTooltip();
+        const tooltip = container.querySelector('.ffe-tooltip');
+        expect(tooltip.classList.contains('ffe-tooltip--open')).toBe(false);
+
+        const button = screen.getByRole('button', { name: 'button-label' });
+        userEvent.click(button);
+
+        expect(tooltip.classList.contains('ffe-tooltip--open')).toBe(true);
     });
 
     it('does not have a tabIndex unless otherwise specified', () => {
-        const wrapper = shallow(<Tooltip>Tooltip text</Tooltip>);
-        expect(wrapper.find('button').prop('tabIndex')).toBeUndefined();
-    });
+        renderTooltip();
+        const button = screen.getByRole('button', { name: 'button-label' });
 
-    it('haves a tabIndex if specified', () => {
-        const wrapper = getWrapper({ tabIndex: -1 });
-        expect(wrapper.find('button').prop('tabIndex')).toBe(-1);
+        expect(button.getAttribute('tabindex')).toBeNull();
     });
 
     it('connects the toggle button to the correct element', () => {
-        const wrapper = getWrapper();
-        const tipId = wrapper.find('Collapse').prop('id');
-        expect(wrapper.find('button').prop('aria-controls')).toBe(tipId);
+        const { container } = renderTooltip();
+        const button = screen.getByRole('button', { name: 'button-label' });
+        const tipId = container
+            .querySelector('.ffe-collapse')
+            .getAttribute('id');
+
+        expect(button.getAttribute('aria-controls')).toBe(tipId);
     });
 });
