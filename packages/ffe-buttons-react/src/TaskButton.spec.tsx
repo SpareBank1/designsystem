@@ -28,9 +28,16 @@ describe('<TaskButton />', () => {
 
     it('sends icon prop on as leftIcon prop', () => {
         renderTaskButton({
-            icon: <Icon ariaLabel="icon" fileUrl="fileUrl" size="md" />,
+            icon: (
+                <Icon
+                    ariaLabel="icon"
+                    fileUrl="fileUrl"
+                    size="md"
+                    data-testid="icon"
+                />
+            ),
         });
-        const icon = screen.getByRole('img');
+        const icon = screen.getByTestId('icon');
         expect(icon.getAttribute('style')).toContain('fileUrl');
     });
 });

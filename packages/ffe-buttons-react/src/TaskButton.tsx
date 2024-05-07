@@ -14,11 +14,14 @@ function TaskButtonWithForwardRef<As extends ElementType>(
     props: TaskButtonProps<As>,
     ref: ForwardedRef<any>,
 ) {
+    const propWithRef = { ...props, ref };
+    const { icon, ...rest } = propWithRef;
+
     return (
         <BaseButton
-            leftIcon={props.icon}
-            {...props}
-            ref={ref}
+            leftIcon={<div aria-hidden="true">{icon}</div>}
+            {...rest}
+            ref={propWithRef.ref}
             buttonType="task"
         />
     );
