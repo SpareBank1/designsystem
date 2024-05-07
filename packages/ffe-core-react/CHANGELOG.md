@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@8.0.0...@sb1/ffe-core-react@8.0.1) (2024-05-07)
+
+### Bug Fixes
+
+-   **ffe-core-react:** children optional in wave ([02afd12](https://github.com/SpareBank1/designsystem/commit/02afd128ac68d3e4f660c903dcc401bb285e1ac4))
+
 # [8.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@7.2.11...@sb1/ffe-core-react@8.0.0) (2024-05-07)
 
 ### Features
