@@ -20,8 +20,8 @@ export type ComponentAsPropParams<As extends ElementType> = {
 export type Optional<T, K extends keyof T> = Pick<Partial<T>, K> & Omit<T, K>;
 
 export interface CardRenderProps {
-    CardName: React.ElementType<CardNameProps>;
-    Title: React.ElementType<TitleProps>;
-    Subtext: React.ElementType<SubtextProps>;
-    Text: React.ElementType<TextProps>;
+    CardName: React.ElementType<CardNameProps<React.ElementType>>;
+    Title: React.ElementType<TitleProps<React.ElementType>>;
+    Subtext: React.ElementType<SubtextProps<React.ElementType>>;
+    Text: React.ElementType<TextProps<React.ElementType>>;
 }
