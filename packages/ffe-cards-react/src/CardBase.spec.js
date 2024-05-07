@@ -19,4 +19,39 @@ describe('CardBase', () => {
         const article = screen.getByRole('article');
         expect(article.classList.contains('my-custom-class')).toBeTruthy();
     });
+    it('should set bgColor-prop correctly', () => {
+        render(<CardBase href="#" element="a" bgColor="frost-30" />);
+        const link = screen.getByRole('link');
+        expect(
+            link.classList.contains('ffe-card-base--bg-frost-30'),
+        ).toBeTruthy();
+    });
+    it('should set bgDarkmodeColor-prop correctly', () => {
+        render(<CardBase href="#" element="a" bgDarkmodeColor="natt" />);
+        const link = screen.getByRole('link');
+        expect(
+            link.classList.contains('ffe-card-base--dm-bg-natt'),
+        ).toBeTruthy();
+    });
+    it('should set shadow-prop correctly', () => {
+        render(<CardBase href="#" element="a" shadow={true} />);
+        const link = screen.getByRole('link');
+        expect(
+            link.classList.contains('ffe-card-base--box-shadow'),
+        ).toBeTruthy();
+    });
+    it('should set noMargin-prop correctly', () => {
+        render(<CardBase href="#" element="a" noMargin={true} />);
+        const link = screen.getByRole('link');
+        expect(
+            link.classList.contains('ffe-card-base--no-margin'),
+        ).toBeTruthy();
+    });
+    it('should set textCenter-prop correctly', () => {
+        render(<CardBase href="#" element="a" textCenter={true} />);
+        const link = screen.getByRole('link');
+        expect(
+            link.classList.contains('ffe-card-base--text-center'),
+        ).toBeTruthy();
+    });
 });
