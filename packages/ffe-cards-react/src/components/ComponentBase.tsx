@@ -8,7 +8,7 @@ export type ComponentBaseProps<As extends ElementType = 'p'> = {
     'as'
 >;
 
-export function ComponentBase<As extends ElementType = 'p'>(
+export function ComponentBase<As extends ElementType>(
     props: ComponentBaseProps<As>,
 ) {
     const { as: Comp = 'p', ...rest } = props;
