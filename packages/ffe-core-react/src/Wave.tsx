@@ -29,7 +29,7 @@ export interface WaveProps {
     darkmodeColor?: ColorDarkMode;
     /** Set the background color of wave container in darkmode */
     bgDarkmodeColor?: ColorDarkMode;
-    children: React.ReactNode;
+    children?: React.ReactNode;
 }
 
 export function Wave({
