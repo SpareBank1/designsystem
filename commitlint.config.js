@@ -17,7 +17,6 @@ module.exports = {
                 'ffe-account-selector-react',
                 'ffe-buttons',
                 'ffe-buttons-react',
-                'ffe-buttons-react-ts',
                 'ffe-cards',
                 'ffe-cards-react',
                 'ffe-chart-donut-react',
