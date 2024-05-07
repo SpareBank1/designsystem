@@ -11,7 +11,7 @@ export type StippledCardProps<As extends ElementType = 'a'> = Omit<
     /** Smaller icon and less space */
     condensed?: boolean;
     /** Image to be rendered*/
-    img: {
+    img?: {
         element: ReactNode;
         type: 'icon' | 'custom';
     };
