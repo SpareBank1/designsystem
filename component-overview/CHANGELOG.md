@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.6.19](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@5.6.18...@sb1/ffe-component-index@5.6.19) (2024-05-07)
+
+### Bug Fixes
+
+-   **component-overview:** legg til ikke-klikkbart baseCard eksempel ([3d3312a](https://github.com/SpareBank1/designsystem/commit/3d3312a149a73ec77ca83b805b3b117b90ffc830))
+
 ## [5.6.18](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@5.6.17...@sb1/ffe-component-index@5.6.18) (2024-05-03)
 
 **Note:** Version bump only for package @sb1/ffe-component-index

@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [18.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@17.0.14...@sb1/ffe-cards@18.0.0) (2024-05-07)
+
+### Bug Fixes
+
+-   **ffe-cards:** endrer basecard kort ([ccba494](https://github.com/SpareBank1/designsystem/commit/ccba4943d8bd01e381550d1c92dd6bc1de34584a))
+
+### BREAKING CHANGES
+
+-   **ffe-cards:** endrer basecard styling
+
 ## [17.0.14](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards@17.0.13...@sb1/ffe-cards@17.0.14) (2024-05-03)
 
 **Note:** Version bump only for package @sb1/ffe-cards
