@@ -12,7 +12,7 @@ import { Icon } from '@sb1/ffe-icons-react';
                     <>
                         <CardName>CardName</CardName>
                         <Title>Tittel</Title>
-                        <Subtext element="span">Subtext er grå</Subtext>
+                        <Subtext as="span">Subtext er grå</Subtext>
                         <Text>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -27,7 +27,7 @@ import { Icon } from '@sb1/ffe-icons-react';
                     <>
                         <CardName>CardName</CardName>
                         <Title>Tittel</Title>
-                        <Subtext element="span">Subtext er grå</Subtext>
+                        <Subtext as="span">Subtext er grå</Subtext>
                         <Text>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -338,7 +338,7 @@ import { Icon } from '@sb1/ffe-icons-react';
                     <>
                         <CardName>CardName</CardName>
                         <Title>Tittel</Title>
-                        <Subtext element="span">Subtext er grå</Subtext>
+                        <Subtext as="span">Subtext er grå</Subtext>
                         <Text>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
