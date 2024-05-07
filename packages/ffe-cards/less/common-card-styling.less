@@ -8,37 +8,38 @@
     border-radius: var(--ffe-v-cards-common-card-border-radius);
     transition: border-color 0.2s;
     outline: none;
-    cursor: pointer;
     width: 100%;
     text-decoration: none;
+
     .native & {
         @media (prefers-color-scheme: dark) {
-            box-shadow: 0 0 0 1px
-                var(--ffe-v-cards-common-card-box-shadow-color);
             color: var(--ffe-farge-hvit);
         }
     }
 
-    &:visited {
-        .native & {
-            @media (prefers-color-scheme: dark) {
-                color: var(--ffe-farge-hvit);
+    &:is(a, button) {
+        cursor: pointer;
+        &:visited {
+            .native & {
+                @media (prefers-color-scheme: dark) {
+                    color: var(--ffe-farge-hvit);
+                }
             }
         }
-    }
 
-    &:focus {
-        box-shadow: 0 0 0 2px var(--ffe-g-primary-color);
-    }
+        &:focus {
+            box-shadow: 0 0 0 2px var(--ffe-g-primary-color);
+        }
 
-    &:focus,
-    &:active {
-        border-color: var(--ffe-g-primary-color);
-    }
-
-    @media (hover: hover) and (pointer: fine) {
-        &:hover {
+        &:focus,
+        &:active {
             border-color: var(--ffe-g-primary-color);
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                border-color: var(--ffe-g-primary-color);
+            }
         }
     }
 

@@ -3,6 +3,61 @@
 .ffe-card-base {
     .common-card-styling();
 
-    display: block;
-    padding: 0;
+    --ffe-card-base-background-color: var(
+        --ffe-v-cards-common-card-background-color
+    );
+
+    background: var(--ffe-card-base-background-color);
+    padding: var(--ffe-spacing-sm);
+    box-shadow: none; // Overwrite common-card-styling
+
+    &--bg-sand-30 {
+        --ffe-card-base-background-color: var(--ffe-farge-sand-30);
+    }
+
+    &--bg-sand-70 {
+        --ffe-card-base-background-color: var(--ffe-farge-sand-70);
+    }
+
+    &--bg-frost-30 {
+        --ffe-card-base-background-color: var(--ffe-farge-frost-30);
+    }
+
+    &--bg-syrin-30 {
+        --ffe-card-base-background-color: var(--ffe-farge-syrin-30);
+    }
+
+    &--bg-syrin-70 {
+        --ffe-card-base-background-color: var(--ffe-farge-syrin-70);
+    }
+
+    &--box-shadow {
+        box-shadow: 0 1px 4px 0 var(--ffe-v-cards-common-card-box-shadow-color);
+    }
+
+    &--no-margin {
+        margin: 0;
+    }
+
+    &--text-center {
+        text-align: center;
+    }
+}
+
+.native & {
+    @media (prefers-color-scheme: dark) {
+        .ffe-card-base {
+            &--dm-bg-svart {
+                --ffe-card-base-background-color: var(--ffe-farge-svart);
+            }
+
+            &--dm-bg-natt {
+                --ffe-card-base-background-color: var(--ffe-farge-natt);
+            }
+
+            &--dm-bg-koksgraa {
+                --ffe-card-base-background-color: var(--ffe-farge-koksgraa);
+            }
+        }
+    }
 }
