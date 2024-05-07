@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [15.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@15.0.0...@sb1/ffe-cards-react@15.0.1) (2024-05-07)
+
+### Bug Fixes
+
+-   **ffe-cards-react:** fix types ([82abf50](https://github.com/SpareBank1/designsystem/commit/82abf507a9e7682adf99860675b8f839fa35663e))
+
 # [15.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@14.0.0...@sb1/ffe-cards-react@15.0.0) (2024-05-07)
 
 ### Features
