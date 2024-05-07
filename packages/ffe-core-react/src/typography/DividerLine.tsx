@@ -1,10 +1,10 @@
 import React from 'react';
-import { string } from 'prop-types';
 import classNames from 'classnames';
 
-export default function DividerLine(props) {
-    const { className, ...rest } = props;
+export interface DividerLineProps
+    extends React.ComponentPropsWithoutRef<'hr'> {}
 
+export function DividerLine({ className, ...rest }: DividerLineProps) {
     return (
         <hr
             className={classNames('ffe-divider-line', className)}
@@ -14,7 +14,3 @@ export default function DividerLine(props) {
         />
     );
 }
-
-DividerLine.propTypes = {
-    className: string,
-};
