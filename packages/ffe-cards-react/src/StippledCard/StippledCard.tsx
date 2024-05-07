@@ -1,4 +1,4 @@
-import React, { ElementType, ForwardedRef, ReactElement } from 'react';
+import React, { ElementType, ForwardedRef, ReactNode } from 'react';
 import { fixedForwardRef } from '../fixedForwardRef';
 import { ComponentAsPropParams, CardRenderProps } from '../types';
 import classNames from 'classnames';
@@ -12,7 +12,7 @@ export type StippledCardProps<As extends ElementType = 'a'> = Omit<
     condensed?: boolean;
     /** Image to be rendered*/
     img: {
-        element: ReactElement;
+        element: ReactNode;
         type: 'icon' | 'custom';
     };
     children:

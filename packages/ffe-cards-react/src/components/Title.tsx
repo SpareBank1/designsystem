@@ -6,7 +6,7 @@ import { ComponentBase, ComponentBaseProps } from './ComponentBase';
 export type TitleProps<As extends ElementType = 'p'> =
     ComponentBaseProps<As> & {
         /** Disable wrapping and hide overflow with ellipsis */
-        overflowEllipsis: boolean;
+        overflowEllipsis?: boolean;
     };
 
 export function Title<As extends ElementType>(props: TitleProps<As>) {
