@@ -1,5 +1,5 @@
 import React from 'react';
-import IconCard from './IconCard';
+import { IconCard } from './IconCard';
 import { Icon } from '@sb1/ffe-icons-react';
 import { render, screen } from '@testing-library/react';
 
@@ -40,8 +40,8 @@ describe('IconCard', () => {
         );
         const link = screen.getByRole('link');
         const icon = link.querySelector('.ffe-icons');
-        expect(icon.classList.contains('ffe-icon-card__icon')).toBe(true);
-        expect(icon.classList.contains('my-custom-class')).toBe(true);
+        expect(icon?.classList.contains('ffe-icon-card__icon')).toBe(true);
+        expect(icon?.classList.contains('my-custom-class')).toBe(true);
     });
 
     it('should add modifying classes when modifiers are given', () => {
@@ -73,8 +73,8 @@ describe('IconCard', () => {
         );
         const link = screen.getByRole('link');
         const p = link.querySelector('p');
-        expect(p.classList.contains('ffe-card-body__text')).toBeTruthy();
-        expect(p.textContent).toEqual('Hello world');
+        expect(p?.classList.contains('ffe-card-body__text')).toBeTruthy();
+        expect(p?.textContent).toEqual('Hello world');
     });
 
     it('should render my custom class', () => {
@@ -90,5 +90,20 @@ describe('IconCard', () => {
         const link = screen.getByRole('link');
         expect(link.classList.contains('ffe-icon-card')).toBeTruthy();
         expect(link.classList.contains('my-custom-class')).toBeTruthy();
+    });
+
+    it('should set ref', () => {
+        const ref = React.createRef<HTMLAnchorElement>();
+        render(
+            <IconCard
+                href="#"
+                icon={<Icon fileUrl={savingsIconXlarge} size="xl" />}
+                ref={ref}
+            >
+                {children}
+            </IconCard>,
+        );
+        const link = screen.getByRole('link');
+        expect(link).toBe(ref.current);
     });
 });

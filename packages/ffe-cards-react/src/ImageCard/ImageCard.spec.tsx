@@ -1,5 +1,5 @@
 import React from 'react';
-import ImageCard from './ImageCard';
+import { ImageCard } from './ImageCard';
 import { render, screen, within } from '@testing-library/react';
 
 const children = <div>Hello world</div>;
@@ -35,9 +35,9 @@ describe('ImageCard', () => {
         const link = screen.getByRole('link');
         const imageEl = link.querySelector('.ffe-image-card__image-container');
         expect(
-            imageEl.querySelector('.ffe-image-card__image-overlay'),
+            imageEl?.querySelector('.ffe-image-card__image-overlay'),
         ).toBeTruthy();
-        expect(imageEl.querySelector('.ffe-image-card__image')).toBeTruthy();
+        expect(imageEl?.querySelector('.ffe-image-card__image')).toBeTruthy();
     });
 
     it('should set alt text on image correctly', () => {
@@ -66,7 +66,7 @@ describe('ImageCard', () => {
         );
         const link = screen.getByRole('link');
         const body = link.querySelector('.ffe-image-card__body');
-        expect(body.textContent).toBe('Hello world');
+        expect(body?.textContent).toBe('Hello world');
     });
 
     it('should render children as a function', () => {
@@ -82,8 +82,8 @@ describe('ImageCard', () => {
         );
         const link = screen.getByRole('link');
         const p = link.querySelector('p');
-        expect(p.classList.contains('ffe-card-body__text')).toBeTruthy();
-        expect(p.textContent).toEqual('Hello world');
+        expect(p?.classList.contains('ffe-card-body__text')).toBeTruthy();
+        expect(p?.textContent).toEqual('Hello world');
     });
 
     it('should render my custom class', () => {
@@ -100,5 +100,21 @@ describe('ImageCard', () => {
         const link = screen.getByRole('link');
         expect(link.classList.contains('ffe-image-card')).toBeTruthy();
         expect(link.classList.contains('my-custom-class')).toBeTruthy();
+    });
+
+    it('should set ref', () => {
+        const ref = React.createRef<HTMLAnchorElement>();
+        render(
+            <ImageCard
+                href="#"
+                imageAltText="Image alt text"
+                imageSrc="random/path"
+                ref={ref}
+            >
+                {children}
+            </ImageCard>,
+        );
+        const link = screen.getByRole('link');
+        expect(link).toBe(ref.current);
     });
 });
