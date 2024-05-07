@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-core",
-    "version": "27.3.9",
+    "version": "27.3.10",
     "description": "Rammeverk for Felles Front End",
     "license": "MIT",
     "author": "SpareBank 1",
@@ -22,7 +22,7 @@
         "build": "./scripts/build.js tokens.config.js && ./scripts/build-custom-mq.js less/breakpoints.less css/custom-media-queries.css && tsc gen-src/index.ts --declaration --outDir lib"
     },
     "devDependencies": {
-        "@sb1/ffe-buildtool": "^0.5.3",
+        "@sb1/ffe-buildtool": "^0.6.0",
         "case": "^1.5.5",
         "less": "^4.1.2",
         "postcss": "^8.3.6",

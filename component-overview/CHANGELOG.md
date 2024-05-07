@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@5.6.19...@sb1/ffe-component-index@6.0.0) (2024-05-07)
+
+### Features
+
+-   **ffe-core-react:** rewrite core as ts ([1117c70](https://github.com/SpareBank1/designsystem/commit/1117c70b4c36eda05d8d5e938b3c59f9b9ebfb06))
+
+### BREAKING CHANGES
+
+-   **ffe-core-react:** new props
+
 ## [5.6.19](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@5.6.18...@sb1/ffe-component-index@5.6.19) (2024-05-07)
 
 ### Bug Fixes

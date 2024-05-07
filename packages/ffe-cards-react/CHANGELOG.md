@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [15.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@14.0.0...@sb1/ffe-cards-react@15.0.0) (2024-05-07)
+
+### Features
+
+-   **ffe-cards-react:** rewrite in ts ([9355e77](https://github.com/SpareBank1/designsystem/commit/9355e7751d569f3c03a4aaaf7bba91cb97076f62))
+
+### BREAKING CHANGES
+
+-   **ffe-cards-react:** different props
+
 # [14.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-cards-react@13.0.23...@sb1/ffe-cards-react@14.0.0) (2024-05-07)
 
 ### Bug Fixes

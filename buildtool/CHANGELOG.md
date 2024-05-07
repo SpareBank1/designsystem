@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buildtool@0.5.3...@sb1/ffe-buildtool@0.6.0) (2024-05-07)
+
+### Features
+
+-   **ffe-buttons-react:** use typescript ([946d225](https://github.com/SpareBank1/designsystem/commit/946d225af2d194e3a9b46f69490652a7c53fe190))
+
+### BREAKING CHANGES
+
+-   **ffe-buttons-react:** No more manuel types so be aware. Generics are now inferred.
+
 ## [0.5.3](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-buildtool@0.5.2...@sb1/ffe-buildtool@0.5.3) (2024-05-03)
 
 **Note:** Version bump only for package @sb1/ffe-buildtool

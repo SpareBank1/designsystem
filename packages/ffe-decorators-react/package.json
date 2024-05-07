@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-decorators-react",
-    "version": "3.0.15",
+    "version": "3.0.16",
     "description": "",
     "keywords": [
         "ffe"
@@ -27,7 +27,7 @@
         "test:watch": "ffe-buildtool jest --watch"
     },
     "devDependencies": {
-        "@sb1/ffe-buildtool": "^0.5.3",
+        "@sb1/ffe-buildtool": "^0.6.0",
         "eslint": "^8.57.0",
         "mock-raf": "^1.0.0",
         "react": "^16.9.0",

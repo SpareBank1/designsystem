@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@7.2.11...@sb1/ffe-core-react@8.0.0) (2024-05-07)
+
+### Features
+
+-   **ffe-core-react:** rewrite core as ts ([1117c70](https://github.com/SpareBank1/designsystem/commit/1117c70b4c36eda05d8d5e938b3c59f9b9ebfb06))
+
+### BREAKING CHANGES
+
+-   **ffe-core-react:** new props
+
 ## [7.2.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@7.2.10...@sb1/ffe-core-react@7.2.11) (2024-05-03)
 
 **Note:** Version bump only for package @sb1/ffe-core-react
