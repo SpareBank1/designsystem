@@ -16,7 +16,7 @@ type ColorDarkMode = 'svart' | 'natt';
 
 export interface WaveProps {
     /** Adds additional class */
-    className: string;
+    className?: string;
     /** Sets the mask-position property, setting a px/rem value will move the starting position of the wave */
     position?: string;
     /** Rotate the wave 180 degrees :*/
