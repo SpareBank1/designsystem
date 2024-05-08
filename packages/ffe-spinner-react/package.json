@@ -17,16 +17,15 @@
         "url": "ssh://git@github.com:SpareBank1/designsystem.git"
     },
     "scripts": {
-        "build": "ffe-buildtool babel",
-        "watch": "ffe-buildtool babel-watch",
+        "build": "ffe-buildtool tsc",
+        "watch": "ffe-buildtool tsc-watch",
         "lint": "eslint src",
         "lint:fix": "eslint src --fix",
         "test": "ffe-buildtool jest",
         "test:watch": "ffe-buildtool jest --watch"
     },
     "dependencies": {
-        "@sb1/ffe-spinner": "^5.1.4",
-        "prop-types": "^15.7.2"
+        "@sb1/ffe-spinner": "^5.1.4"
     },
     "devDependencies": {
         "@sb1/ffe-buildtool": "^0.6.0",

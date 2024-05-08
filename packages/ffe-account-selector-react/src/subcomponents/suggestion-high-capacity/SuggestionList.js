@@ -1,4 +1,4 @@
-import Spinner from '@sb1/ffe-spinner-react';
+import { Spinner } from '@sb1/ffe-spinner-react';
 import {
     arrayOf,
     bool,
