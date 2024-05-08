@@ -53,4 +53,4 @@ export default {
     CHOSEN_DATE: 'chosen date is',
     DATE_FORMAT: 'dd.mm.yyyy',
     CALENDAR_LABEL: 'Calendar',
-};
+} as const;

@@ -1,12 +1,16 @@
-import React, { Component } from 'react';
-import { string, func, object } from 'prop-types';
+import React from 'react';
 import { Icon } from '@sb1/ffe-icons-react';
 import { validateDate } from '../util/dateUtil';
 import i18n from '../i18n/i18n';
 
-export default class Button extends Component {
-    render() {
-        const { value, language, onClick, buttonRef } = this.props;
+export interface ButtonProps {
+    value: string;
+    language: 'nn' | 'en' | 'nb';
+    onClick: React.MouseEventHandler<HTMLButtonElement>;
+}
+
+export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+    ({ value, language, onClick }, ref) => {
         const buttonLabel = validateDate(value)
             ? `${i18n[language].CHANGE_DATE}, ${i18n[language].CHOSEN_DATE} ${value}`
             : i18n[language].CHOOSE_DATE;
@@ -15,7 +19,7 @@ export default class Button extends Component {
 
         return (
             <button
-                ref={buttonRef}
+                ref={ref}
                 onClick={onClick}
                 className="ffe-datepicker__button"
                 aria-label={buttonLabel}
@@ -29,12 +33,5 @@ export default class Button extends Component {
                 />
             </button>
         );
-    }
-}
-
-Button.propTypes = {
-    value: string.isRequired,
-    language: string.isRequired,
-    onClick: func.isRequired,
-    buttonRef: object.isRequired,
-};
+    },
+);
