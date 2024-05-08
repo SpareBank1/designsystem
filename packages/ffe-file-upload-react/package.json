@@ -1,6 +1,6 @@
 {
     "name": "@sb1/ffe-file-upload-react",
-    "version": "10.0.48",
+    "version": "10.0.49",
     "description": "Upload file button with validation and list of uploaded files.",
     "keywords": [
         "ffe"
@@ -30,8 +30,8 @@
     },
     "dependencies": {
         "@sb1/ffe-buttons-react": "^22.0.1",
-        "@sb1/ffe-file-upload": "^10.0.36",
-        "@sb1/ffe-form": "^29.0.10",
+        "@sb1/ffe-file-upload": "^10.0.37",
+        "@sb1/ffe-form": "^29.0.11",
         "@sb1/ffe-icons-react": "^9.0.11",
         "classnames": "^2.3.1"
     },

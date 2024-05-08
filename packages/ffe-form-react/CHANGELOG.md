@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [18.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@17.0.4...@sb1/ffe-form-react@18.0.0) (2024-05-08)
+
+### Features
+
+-   **ffe-collapse-react:** rewrite with ts ([fbaf68f](https://github.com/SpareBank1/designsystem/commit/fbaf68ff21b24c962943f5da69fe16a08cf964bc))
+
+### BREAKING CHANGES
+
+-   **ffe-collapse-react:** manuel types remoed
+
 ## [17.0.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form-react@17.0.3...@sb1/ffe-form-react@17.0.4) (2024-05-07)
 
 **Note:** Version bump only for package @sb1/ffe-form-react

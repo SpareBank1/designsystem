@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.2](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@8.0.1...@sb1/ffe-core-react@8.0.2) (2024-05-08)
+
+### Bug Fixes
+
+-   **ffe-core-react:** className in Wave should be optional ([729c7f4](https://github.com/SpareBank1/designsystem/commit/729c7f41814afa6315bfed8cd67686913126294a))
+
 ## [8.0.1](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-core-react@8.0.0...@sb1/ffe-core-react@8.0.1) (2024-05-07)
 
 ### Bug Fixes

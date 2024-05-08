@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@11.1.7...@sb1/ffe-accordion-react@12.0.0) (2024-05-08)
+
+### Features
+
+-   **ffe-accordion-react:** rewrite in ts ([263547e](https://github.com/SpareBank1/designsystem/commit/263547e28b9cd828467166ee0b49468631038f63))
+
+### BREAKING CHANGES
+
+-   **ffe-accordion-react:** manuel types did not match actual types
+
 ## [11.1.7](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-accordion-react@11.1.6...@sb1/ffe-accordion-react@11.1.7) (2024-05-07)
 
 **Note:** Version bump only for package @sb1/ffe-accordion-react

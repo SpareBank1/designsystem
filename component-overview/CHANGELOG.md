@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@6.0.5...@sb1/ffe-component-index@7.0.0) (2024-05-08)
+
+### Features
+
+-   **ffe-spinner-react:** rewrite in ts ([dd3d6c9](https://github.com/SpareBank1/designsystem/commit/dd3d6c98b0b648277a6788761f1bc62639af2a80))
+
+### BREAKING CHANGES
+
+-   **ffe-spinner-react:** default export -> named export
+
 ## [6.0.5](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-component-index@6.0.4...@sb1/ffe-component-index@6.0.5) (2024-05-07)
 
 **Note:** Version bump only for package @sb1/ffe-component-index

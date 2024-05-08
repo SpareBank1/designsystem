@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.41](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback-react@2.0.40...@sb1/ffe-feedback-react@2.0.41) (2024-05-08)
+
+**Note:** Version bump only for package @sb1/ffe-feedback-react
+
 ## [2.0.40](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-feedback-react@2.0.39...@sb1/ffe-feedback-react@2.0.40) (2024-05-07)
 
 **Note:** Version bump only for package @sb1/ffe-feedback-react

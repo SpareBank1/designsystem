@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [29.0.11](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@29.0.10...@sb1/ffe-form@29.0.11) (2024-05-08)
+
+### Bug Fixes
+
+-   **ffe-form:** legger tilbake bakgrunnsfarge på radioknapp ([91f6450](https://github.com/SpareBank1/designsystem/commit/91f6450b5debe3ebb77ef5d7e5a17027124f7312))
+
 ## [29.0.10](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-form@29.0.9...@sb1/ffe-form@29.0.10) (2024-05-07)
 
 **Note:** Version bump only for package @sb1/ffe-form

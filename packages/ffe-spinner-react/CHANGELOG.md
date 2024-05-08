@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.0.0](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner-react@7.1.4...@sb1/ffe-spinner-react@8.0.0) (2024-05-08)
+
+### Features
+
+-   **ffe-spinner-react:** rewrite in ts ([dd3d6c9](https://github.com/SpareBank1/designsystem/commit/dd3d6c98b0b648277a6788761f1bc62639af2a80))
+
+### BREAKING CHANGES
+
+-   **ffe-spinner-react:** default export -> named export
+
 ## [7.1.4](https://github.com/SpareBank1/designsystem/compare/@sb1/ffe-spinner-react@7.1.3...@sb1/ffe-spinner-react@7.1.4) (2024-05-07)
 
 **Note:** Version bump only for package @sb1/ffe-spinner-react
